@@ -1718,16 +1718,16 @@
   "cuando": "2026-09-28T23:02:18.479Z"
  },
  "ww3s5p": {
-  "archivo": "fotos-notas/ww3s5p.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "Empresarios de Malvinas participan de una rueda de negocios en Chile",
   "enlace": "https://www.ambito.com/informacion-general/empresarios-malvinas-y-chile-se-reunen-punta-arenas-plena-tension-argentina-n6327611",
   "imagenOriginal": "https://media.ambito.com/p/32fad1a3e3fdd2b44bc6b1a994f89a6c/adjuntos/239/imagenes/043/669/0043669325/1200x675/smart/punta-arenas-1500-x-1000.png",
   "razon": "Muestra una vista general clara del puerto y la ciudad de Punta Arenas sin textos superpuestos ni marcas de medios.",
-  "cuando": "2026-09-28T23:02:18.479Z"
+  "cuando": "2026-09-28T23:02:18.479Z",
+  "intentado": true,
+  "borrada": true
  },
  "17j3wna": {
   "intentado": true,
@@ -2467,5 +2467,24 @@
   "imagenOriginal": "https://cdnartic.ar/rAyWFRGD2JqH4FSEbnNPjsqrOcs=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/09/milani.webp",
   "razon": "Tiene excelente nitidez, encuadre cerrado sobre el protagonista y no presenta marcas de agua ni menores.",
   "cuando": "2026-09-29T23:31:48.166Z"
+ },
+ "1vzdxxe": {
+  "archivo": "fotos-notas/1vzdxxe.jpg",
+  "medio": "El Destape",
+  "credito": "Foto: El Destape",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Banco Central compra dólares pero las reservas caen",
+  "enlace": "https://www.eldestapeweb.com/economia/banco-central-hizo-mayor-compra-divisas-mes-reservas-bajaron-2026929203531",
+  "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/052026/1778505428401.webp?&cw=1600&ch=900",
+  "razon": "La foto C muestra claramente el edificio del Banco Central con la bandera argentina sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-09-30T00:01:45.851Z"
+ },
+ "709xqq": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Procesan a un exsocio de Martín Menem y a dos exinterventores de OSPRERA",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-09-30T00:01:45.851Z"
  }
 }

@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T23:50:11.083Z",
+  "generado": "2026-09-30T00:03:04.919Z",
   "notas": [
     {
       "id": "repaso20260929noche",
@@ -130,14 +130,13 @@
       }
     },
     {
-      "id": "9ul7an",
-      "titulo": "El Banco Central compra setenta millones pero bajan las reservas",
-      "copete": "La autoridad monetaria sumó divisas en el mercado oficial, aunque el nivel mensual se encamina a ser el más bajo del año. En paralelo, las reservas brutas cayeron por debajo de los 47.500 millones de dólares.",
-      "cuerpo": "El Banco Central de la República Argentina compró 70 millones de dólares en el mercado oficial, la cifra más alta del mes, pero las reservas internacionales perforaron el piso de 47.500 millones y se ubicaron en 47.482 millones de dólares, según informaron las fuentes oficiales.\n\nCon esta adquisición, la entidad acumuló 313 millones de dólares en septiembre, un monto que deja al noveno mes del año como el periodo con menor nivel de compras de todo 2026. La caída de las reservas brutas, que retrocedieron 494 millones de dólares en la misma jornada, respondió a pagos a organismos internacionales y a movimientos financieros de fin de mes.\n\nComo contexto previo, la semana pasada el Senado y el oficialismo avanzaron en la aprobación de la reforma de la carta orgánica del organismo financiero.",
-      "guion": "El Banco Central compra setenta millones pero bajan las reservas",
+      "id": "1vzdxxe",
+      "titulo": "El Banco Central compra dólares pero las reservas caen",
+      "copete": "La autoridad monetaria adquirió 70 millones de dólares en el mercado oficial, la mayor cifra del mes. Sin embargo, las reservas brutas retrocedieron 494 millones por pagos a organismos internacionales.",
+      "cuerpo": "El Banco Central compró este martes 70 millones de dólares en el mercado oficial, la mayor cifra para una sola jornada en lo que va del mes, aunque las reservas brutas sufrieron una baja de 494 millones y se ubicaron en 47.482 millones, según informó iProfesional. El descenso se debió a pagos a organismos internacionales por 140 millones de dólares y a movimientos operativos habituales de cierre de mes. Con esta operación, el saldo acumulado de compras durante septiembre llegó a 313 millones.\n\nEn la misma jornada, el precio del dólar mayorista bajó a 1.522 pesos, mientras que la cotización minorista en el Banco Nación se mantuvo en 1.545 pesos. Además, el riesgo país descendió hasta los 607 puntos básicos, de acuerdo con los datos difundidos por el sector financiero.",
+      "guion": "El Banco Central compra dólares pero las reservas caen",
       "seccion": "Economía",
       "medios": [
-        "Infobae",
         "Perfil",
         "El Destape",
         "iProfesional",
@@ -145,88 +144,92 @@
         "C5N",
         "Noticias Argentinas (NA)"
       ],
-      "enlace": "https://www.infobae.com/economia/2026/09/29/el-banco-central-acelero-la-compra-de-dolares-pero-cerraria-septiembre-con-el-menor-nivel-de-adquisiciones-del-ano/",
+      "enlace": "https://www.iprofesional.com/finanzas/465528-bcra-compro-mayor-cantidad-de-dolares-del-mes-pero-cayeron-las-reservas",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T20:40:31.000Z",
+      "fecha": "2026-09-29T21:02:00.000Z",
       "sinFecha": false,
-      "visto": "2026-09-29T22:01:11.253Z",
-      "relevancia": 79,
+      "visto": "2026-09-30T00:01:12.712Z",
+      "relevancia": 83,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Banco Central compró 70 millones de dólares este martes.",
-        "Las reservas internacionales cayeron a 47.482 millones de dólares.",
-        "Septiembre acumula 313 millones de dólares adquiridos por la entidad.",
-        "La baja respondió a pagos a organismos y movimientos de fin de mes."
+        "El Banco Central compró 70 millones de dólares en el mercado oficial.",
+        "Las reservas brutas cayeron en 494 millones y llegaron a 47.482 millones.",
+        "La baja respondió a pagos a organismos internacionales y movimientos de fin de mes.",
+        "El saldo comprador de septiembre acumuló 313 millones de dólares."
       ],
       "seSabe": [
-        "El Banco Central adquirió 70 millones de dólares en la última rueda.",
-        "Las reservas brutas sufrieron una baja de 494 millones de dólares.",
-        "El total acumulado en septiembre llega a 313 millones de dólares."
+        "El Banco Central adquirió 70 millones de dólares en el mercado oficial.",
+        "Las reservas brutas sufrieron una caída de 494 millones de dólares.",
+        "Se realizaron pagos al BID y al Club por 140 millones de dólares.",
+        "El saldo mensual de compras acumuló 313 millones de dólares."
       ],
-      "textoRedes": "El Banco Central compró 70 millones de dólares pero las reservas cayeron por debajo de los 47.500 millones de dólares. Septiembre se encamina a cerrar como el mes con menor nivel de adquisiciones del año para la autoridad monetaria.",
+      "noConfirmado": [
+        "Los detalles operativos exactos sobre la totalidad de los movimientos bancarios de fin de mes."
+      ],
+      "textoRedes": "El Banco Central compró 70 millones de dólares en el mercado oficial, la mayor cifra del mes, pero las reservas brutas cayeron 494 millones debido a pagos a organismos internacionales y movimientos de fin de mes.",
       "etiquetas": [
         "Banco Central",
         "reservas",
-        "dólares",
+        "dólar",
         "mercado cambiario"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/29/el-banco-central-acelero-la-compra-de-dolares-pero-cerraria-septiembre-con-el-menor-nivel-de-adquisiciones-del-ano/",
-          "fecha": "2026-09-29T20:40:31.000Z",
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/finanzas/465528-bcra-compro-mayor-cantidad-de-dolares-del-mes-pero-cayeron-las-reservas",
+          "fecha": "2026-09-29T21:02:00.000Z",
           "oficial": false,
-          "aporte": "Informó el monto diario de compra y el acumulado mensual del Banco Central."
+          "aporte": "Informó las cifras de compras de dólares, la caída de reservas, los motivos del descenso y los valores de las cotizaciones."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/el-banco-central-realizo-la-mayor-compra-de-dolares-del-mes-pero-no-pudo-evitar-una-nueva-caida-de-las-reservas-a40.phtml",
+          "fecha": "2026-09-29T22:40:44.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el ritmo de compras se desaceleró en septiembre y marcó el menor nivel desde el inicio del programa."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/banco-central-hizo-mayor-compra-divisas-mes-reservas-bajaron-2026929203531",
+          "fecha": "2026-09-29T23:35:31.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la compra de 70 millones de dólares y la caída de las reservas internacionales."
         },
         {
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/finanzas/el-bcra-realizo-la-mayor-compra-del-mes-pero-las-reservas-cayeron-novena-rueda-consecutiva-n6328158",
           "fecha": "2026-09-29T21:27:00.000Z",
           "oficial": false,
-          "aporte": "Detalló la caída de las reservas brutas y los motivos vinculados a pagos."
+          "aporte": "Aportó el saldo mensual de compras por 313 millones de dólares y el detalle de la baja por la suba del oro."
         },
         {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/finanzas/465528-bcra-compro-mayor-cantidad-de-dolares-del-mes-pero-cayeron-las-reservas",
-          "fecha": "2026-09-29T21:02:00.000Z",
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/el-banco-central-logro-su-mayor-compra-dolares-del-mes-pero-no-pudo-frenar-la-caida-las-reservas-n250266",
+          "fecha": "2026-09-29T22:27:00.000Z",
           "oficial": false,
-          "aporte": "Confirmó la adquisición de 70 millones de dólares y la baja de reservas."
+          "aporte": "Indicó la adquisición de divisas y la novena jornada consecutiva de caída de reservas."
         },
         {
           "medio": "Noticias Argentinas (NA)",
           "enlace": "https://noticiasargentinas.com/economia/el-banco-central-hizo-la-mayor-compra-de-divisas-en-el-mes-pero-las-reservas-bajaron_a6abc228baeec850fb271f799",
-          "fecha": "2026-09-29T21:22:14.000Z",
+          "fecha": "2026-09-29T21:22:14.281Z",
           "oficial": false,
-          "aporte": "Precisó el número final de las reservas al perforar los 47.500 millones."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1iqwljr",
-          "titulo": "Milei celebró la aprobación de la reforma de la carta orgánica del Banco Central: \"Comienza el fin de la inflación\"",
-          "fecha": "2026-09-24T21:44:04.000Z",
-          "ruta": "/nota/milei-celebro-la-aprobacion-de-la-reforma-de-la-carta-organica-del-1iqwljr"
-        },
-        {
-          "id": "bsna1",
-          "titulo": "El Senado aprobó con cambios la reforma de la Carta Orgánica del Banco Central",
-          "fecha": "2026-09-24T20:17:00.000Z",
-          "ruta": "/nota/el-senado-aprobo-con-cambios-la-reforma-de-la-carta-organica-del-bsna1"
+          "aporte": "No aportó información adicional en su resumen."
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
+        "porque": "Lo contaron seis medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-banco-central-compra-setenta-millones-pero-bajan-las-reservas",
+      "slug": "el-banco-central-compra-dolares-pero-las-reservas-caen",
       "foto": {
-        "archivo": "fotos-notas/9ul7an.jpg",
-        "credito": "Foto: Ámbito"
+        "archivo": "fotos-notas/1vzdxxe.jpg",
+        "credito": "Foto: El Destape"
       }
     },
     {
@@ -296,6 +299,7 @@
       "guion": "La cuenta corriente de la balanza de pagos cierra con superávit",
       "seccion": "Economía",
       "medios": [
+        "Clarín",
         "El Eco de Tandil",
         "Perfil",
         "TN (Todo Noticias)",
@@ -477,11 +481,11 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Nueva",
+        "La Verdad",
         "El Marplatense",
         "Infobae",
         "Clarín",
-        "iProfesional",
-        "La Verdad"
+        "iProfesional"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/09/29/la-corte-suprema-anulo-la-absolucion-a-cesar-milani-y-ordeno-revisar-el-fallo-por-la-muerte-del-soldado-ledo/",
       "teniaImagenLaFuente": true,
@@ -1071,6 +1075,97 @@
       }
     },
     {
+      "id": "709xqq",
+      "titulo": "Procesan a un exsocio de Martín Menem y a dos exinterventores de OSPRERA",
+      "copete": "El juez federal Sebastián Casanello dictó el procesamiento de Sergio Aguirre y de dos exinterventores de la obra social rural en una causa por contrataciones irregulares y embargos millonarios.",
+      "cuerpo": "El juez federal Sebastián Casanello procesó a Sergio Aguirre, exsocio de Martín Menem, y a dos exinterventores de la Obra Social del Personal Rural y Estibadores de la República Argentina por negociaciones incompatibles con la función pública y administración fraudulenta. El magistrado trabó un embargo de mil millones de pesos sobre los bienes de los imputados.\n\nLa pesquisa apunta a la contratación de la firma HTECH, fundada por Aguirre en abril de 2024 sin antecedentes ni empleados previos. La empresa cobró millones por servicios informáticos a la entidad, que se encuentra intervenida por el Gobierno desde 2024.\n\nEl contrato inicial fue firmado por la primera interventora, Virginia Montero, y luego su sucesor, Marcelo Petroni, lo renovó y amplió. A comienzos de septiembre, la Cámara Federal anuló el allanamiento a Montero y los embargos previos.",
+      "guion": "Procesan a un exsocio de Martin Menem y a dos exinterventores de OSPRERA",
+      "seccion": "Política",
+      "medios": [
+        "La Nación",
+        "El Eco de Tandil",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://tn.com.ar/politica/2026/09/29/procesaron-a-un-exsocio-de-martin-menem-y-a-dos-exinterventores-en-una-causa-por-presunta-corrupcion-en-osprera/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T16:33:39.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:01:12.712Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El juez Sebastián Casanello procesó a Sergio Aguirre y a dos exinterventores de OSPRERA.",
+        "La causa investiga contrataciones irregulares de la firma HTECH por servicios informáticos.",
+        "El magistrado trabó un embargo de mil millones de pesos sobre los bienes de los acusados.",
+        "La Cámara Federal anuló pruebas y embargos previos a principios de septiembre."
+      ],
+      "seSabe": [
+        "El juez Sebastián Casanello dictó el procesamiento de Sergio Aguirre y de los exinterventores Virginia Montero y Marcelo Petroni, según las fuentes.",
+        "La investigación se centra en los contratos de la empresa HTECH con la obra social.",
+        "La Cámara Federal anuló parte de las medidas de prueba y los embargos anteriores a principios de septiembre."
+      ],
+      "noConfirmado": [
+        "Existen diferencias en las fuentes sobre el monto exacto del desvío cuestionado, ya que algunas mencionan 247 millones de pesos y otras se centran en los pagos cobrados por la firma."
+      ],
+      "textoRedes": "El juez federal Sebastián Casanello procesó a un exsocio de Martín Menem y a dos exinterventores de OSPRERA en una causa por contrataciones irregulares y embargos millonarios.",
+      "etiquetas": [
+        "OSPRERA",
+        "Corrupcion",
+        "Justicia Federal",
+        "Sebastian Casanello",
+        "Martin Menem"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/09/29/procesaron-a-un-exsocio-de-martin-menem-y-a-dos-exinterventores-en-una-causa-por-presunta-corrupcion-en-osprera/",
+          "fecha": "2026-09-29T16:33:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló los nombres de los procesados, los cargos, los delitos y el funcionamiento de la empresa investigada."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/procesaron-a-un-exsocio-de-martin-menem-y-a-dos-exinterventores-nombrados-por-el-gobierno-en-la-obra-nid29092026/",
+          "fecha": "2026-09-29T22:02:38.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el presunto desvío de 247 millones de pesos."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/procesaron-a-un-exsocio-de-menem-por-un-desvio-de-fondos-en-osprera",
+          "fecha": "2026-09-29T22:23:51.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre los dos individuos beneficiados por la maniobra."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/procesaron-al-exsocio-de-martin-menem-y-a-dos-exinterventores-de-osprera-por-presunta-corrupcion.phtml",
+          "fecha": "2026-09-29T23:24:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los nombres de Virginia Montero y Marcelo Petroni junto a los embargos millonarios."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/procesaron-a-un-exsocio-de-martin-menem-por-un-desvio-de-fondos-en-la-obra-social-de-los-peones-rurales_a6abc006a12f3a9893c289cbc",
+          "fecha": "2026-09-29T19:43:33.975Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional en el resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "procesan-a-un-exsocio-de-martin-menem-y-a-dos-exinterventores-de"
+    },
+    {
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "copete": "La Subsecretaría de Turismo local presenta propuestas en la Ciudad Autónoma de Buenos Aires y recibe un reconocimiento internacional.",
@@ -1582,8 +1677,8 @@
         "La Nación",
         "Ámbito",
         "Noticias Argentinas (NA)",
-        "Zona Norte Diario",
-        "La Verdad"
+        "La Verdad",
+        "Zona Norte Diario"
       ],
       "enlace": "https://www.ambito.com/politica/adrian-ravier-defendio-el-control-fronteras-y-hablo-posibles-terroristas-los-expulsados-n6327951",
       "teniaImagenLaFuente": true,
@@ -2370,6 +2465,73 @@
       }
     },
     {
+      "id": "2e3etr",
+      "titulo": "Cierran más de doscientos locales de juguetes en un año por la crisis",
+      "copete": "La caída del consumo y el aumento de costos impactan en el sector juguetero. La cámara empresaria advierte sobre la competencia de importados y el contrabando.",
+      "cuerpo": "Entre los casos recientes figura el cese de operaciones de la tradicional cadena Tío Mario, ubicada en la avenida Pueyrredón, tras casi treinta años de actividad.\n\nEl dirigente detalló que los comercios enfrentan una fuerte presión por el incremento en los alquileres, los servicios y los salarios, lo que lleva a muchos a volcarse a la venta digital para liquidar mercadería. Asimismo, advirtió que el treinta por ciento del mercado corresponde a contrabando y cuestionó el impacto de la desregulación en las compras al exterior.\n\nActualmente, el territorio nacional cuenta con 2.800 establecimientos activos que intentan sostener sus estructuras frente a este escenario complejo.",
+      "guion": "Cierran más de doscientos locales de juguetes en un año por la crisis",
+      "seccion": "Economía",
+      "medios": [
+        "Minuto Uno",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T12:26:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T23:01:10.965Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Más de 200 jugueterías cerraron en un año.",
+        "El sector sufre caída del consumo y suba de costos.",
+        "El treinta por ciento del mercado es contrabando.",
+        "Subsisten 2.800 comercios en todo el país."
+      ],
+      "seSabe": [
+        "Cerraron más de 200 jugueterías en el último año según la Cámara Argentina de la Industria del Juguete.",
+        "La cadena Tío Mario cerró su local de avenida Pueyrredón tras casi tres décadas.",
+        "El país cuenta actualmente con 2.800 jugueterías.",
+        "El 30 por ciento del mercado del juguete es de contrabando según el sector."
+      ],
+      "textoRedes": "La industria juguetería atraviesa una crisis con más de doscientos locales cerrados en un año debido a la caída del consumo, el aumento de costos y la competencia de productos importados, según informó la cámara del sector.",
+      "etiquetas": [
+        "Jugueterías",
+        "Crisis",
+        "Consumo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
+          "fecha": "2026-09-29T12:26:40.000Z",
+          "oficial": false,
+          "aporte": "Detalló el cierre de la cadena Tío Mario, datos de la cámara empresaria sobre cierres de locales y denunció contrabando."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/crisis-economica-mas-300-jugueterias-cerraron-o-pasaron-comercio-online-n6328099",
+          "fecha": "2026-09-29T20:40:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la transformación del sector se debe al consumo, compras externas y canales digitales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "cierran-mas-de-doscientos-locales-de-juguetes-en-un-ano-por-la-crisis",
+      "foto": {
+        "archivo": "fotos-notas/2e3etr.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
+    },
+    {
       "id": "4p0z63",
       "titulo": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta",
       "copete": "El Comando de Prevención Rural sancionó al conductor de un tractor en el paraje La Esperanza. La medida responde a los daños que la maquinaria pesada causa en los caminos tras las lluvias.",
@@ -2561,12 +2723,12 @@
         "QZ Noticias (Mar del Plata)",
         "El Día",
         "0221",
+        "Infoeme",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
         "Ámbito",
         "Zona Norte Diario",
-        "Agencia DIB",
-        "El Eco de Tandil",
-        "Infoeme"
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/informacion-general/la-provincia-buenos-aires-crea-un-programa-que-estudiantes-secundarios-se-formen-oficios-n6327786",
       "teniaImagenLaFuente": true,
@@ -2820,9 +2982,9 @@
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "Mi8 (Canal 8 Mar del Plata)",
         "La Nueva",
-        "La Verdad",
         "Crónica"
       ],
       "enlace": "https://noticiasargentinas.com/economia/una-pareja-de-jubilados-que-alquila-necesito-mas-de--2-5-millones-para-vivir-en-agosto_a6abb838b12f3a9893c1662be",
@@ -2996,7 +3158,6 @@
         "Infobae",
         "La Nación",
         "Ámbito",
-        "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -3004,12 +3165,13 @@
         "C5N",
         "Canal 26",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "QZ Noticias (Mar del Plata)",
         "Mi8 (Canal 8 Mar del Plata)",
+        "Doble Amarilla",
+        "Clarín",
         "Crónica",
-        "La Nueva",
-        "La Verdad",
-        "Doble Amarilla"
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/29/designaron-a-adolfo-cambiaso-como-embajador-internacional-del-deporte-argentino/",
       "teniaImagenLaFuente": true,
@@ -3180,13 +3342,13 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Brújula 24",
         "InfoRegión",
         "ANDigital",
         "Crónica",
         "La Nueva",
         "Diputados Bonaerenses",
-        "A24",
-        "La Brújula 24"
+        "A24"
       ],
       "enlace": "https://www.clarin.com/economia/luis-caputo-kicillof-anticristo-kirchnerismo-infierno-visto_0_t8mAjylcj2.html",
       "teniaImagenLaFuente": true,
@@ -3295,6 +3457,7 @@
         "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
+        "Clarín",
         "La Nación",
         "Bichos de Campo",
         "TN (Todo Noticias)",
@@ -3312,11 +3475,12 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
+        "La Brújula 24",
         "La Tecla",
+        "Infoeme",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Infobae",
-        "Infoeme"
+        "Infobae"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-corte-revoco-el-fallo-que-declaraba-inconstitucional-la-derogacion-de-la-ley-de-tierras_a6abc0d42aeec850fb26e90c9",
       "teniaImagenLaFuente": true,
@@ -3401,10 +3565,11 @@
       "seccion": "Política",
       "medios": [
         "LU9 Mar del Plata",
-        "Ecos Diarios (Necochea)",
+        "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
         "Agencia DIB",
-        "El Eco de Tandil"
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://dib.com.ar/sociedad/los-establecimientos-bonaerenses-que-garantizan-el-aborto-legal-se-triplicaron-seis-anos-n56095",
       "teniaImagenLaFuente": true,
@@ -3499,9 +3664,9 @@
         "Crónica",
         "El Día",
         "0221",
-        "La Página Millonaria",
+        "Doble Amarilla",
         "Bolavip Argentina",
-        "Doble Amarilla"
+        "La Página Millonaria"
       ],
       "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
       "teniaImagenLaFuente": true,
@@ -3632,7 +3797,6 @@
         "QZ Noticias (Mar del Plata)",
         "Ámbito",
         "TN (Todo Noticias)",
-        "El Cronista",
         "El Destape",
         "A24",
         "Radio Mitre",
@@ -3640,6 +3804,7 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
+        "La Verdad",
         "La Opinión",
         "ANDigital",
         "Minuto Uno",
@@ -3652,7 +3817,7 @@
         "La Brújula 24",
         "Agencia DIB",
         "Perfil",
-        "La Verdad"
+        "El Cronista"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
       "teniaImagenLaFuente": true,
@@ -4336,13 +4501,13 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "La Tecla",
+        "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "La Nueva",
         "Radio Mitre",
         "Agencia DIB",
-        "Crónica",
-        "La Verdad"
+        "Crónica"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-cae-y-se-acerca-a-los-600-puntos_a6abbd7d312f3a9893c2280a8",
       "teniaImagenLaFuente": true,
@@ -5148,7 +5313,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 6,
-      "humedad": 91,
+      "humedad": 92,
       "viento": 19,
       "rumbo": "SO",
       "cielo": "Nublado",
@@ -5536,6 +5701,12 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
+      "id": "10ybc9u",
+      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "fr44g3",
       "titulo": null,
       "seccion": "Automovilismo",
@@ -5560,9 +5731,9 @@
       "motivo": "necesita ojo humano: \"niña\""
     },
     {
-      "id": "10ybc9u",
-      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
-      "seccion": "Política",
+      "id": "ww3s5p",
+      "titulo": "Histórico desafío a la Argentina: 40 empresas de las…",
+      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
@@ -5578,18 +5749,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "7ci1iq",
-      "titulo": "El Gobierno le dio dos semanas al Reino Unido para frenar…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1iitoa4",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "1u3nefi",
       "titulo": "Causa Maradona: expectativa por la nueva declaración de…",
       "seccion": "Argentina",
@@ -5600,6 +5759,18 @@
       "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "1yygidx",
+      "titulo": "Por el pase de Lomónaco: otro revés del TAS para…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1iitoa4",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "nlwd45",
@@ -5614,12 +5785,6 @@
       "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "rya21n",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "1ogz9mz",
       "titulo": null,
       "seccion": "Argentina",
@@ -5630,12 +5795,6 @@
       "titulo": "Horacio Marín, CEO de YPF: “La producción de petróleo va a…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "e8lrci",
-      "titulo": "Pádel: agresión a dos jugadores y torneo suspendido en La…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "iyupy7",
