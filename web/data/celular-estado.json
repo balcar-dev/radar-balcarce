@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T14:05:45.607Z",
- "portada": 54,
- "archivo": 619,
+ "generado": "2026-09-30T14:31:54.445Z",
+ "portada": 57,
+ "archivo": 620,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-09-30T14:05:45.655Z",
+  "generado": "2026-09-30T14:31:54.482Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-09-30T10:36:23.764Z"
    },
    {
@@ -114,19 +114,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1h321lc",
-      "titulo": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
-      "seccion": "Economía"
-     },
-     {
-      "id": "122dsf6",
-      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
-      "seccion": "Fútbol"
+      "id": "616lop",
+      "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
+      "seccion": "Agro"
      },
      {
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1j6ui2n",
+      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -137,7 +137,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 54,
     "notas": [
      {
       "id": "y9vwef",
@@ -145,19 +145,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "616lop",
-      "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
-      "seccion": "Agro"
+      "id": "122dsf6",
+      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+      "seccion": "Fútbol"
      },
      {
       "id": "wabor5",
       "titulo": "Proponen mayores exigencias para radares viales y anular multas irregulares",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "12rp30w",
+      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+      "seccion": "Cultura y agenda"
      }
     ]
    }

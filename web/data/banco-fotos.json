@@ -2371,16 +2371,16 @@
   "cuando": "2026-09-29T20:31:42.192Z"
  },
  "224geo": {
-  "archivo": "fotos-notas/224geo.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "Diputados discute proyectos sobre endeudamiento familiar",
   "enlace": "https://www.ambito.com/politica/vence-el-plazo-dictaminar-morosidad-oficialismo-y-oposicion-negocian-contrarreloj-n6327524",
   "imagenOriginal": "https://media.ambito.com/p/077a8d7d883643981f33f3304fd31685/adjuntos/239/imagenes/043/672/0043672845/1200x675/smart/diputados-plenario.jpg",
   "razon": "La IA había preferido la de Noticias Argentinas (NA), pero no se puede usar (marca de agua, otro medio o un menor) (Logo de Noticias Argentinas (NA) abajo a la izquierda): se usa Ámbito en su lugar, aunque no sea la ideal.",
-  "cuando": "2026-09-29T20:31:42.192Z"
+  "cuando": "2026-09-29T20:31:42.192Z",
+  "intentado": true,
+  "borrada": true
  },
  "1qzorkr": {
   "medio": "Minuto Uno",
@@ -2969,5 +2969,29 @@
   "imagenOriginal": "https://bichosdecampo.com/wp-content/uploads/2026/09/acuerdo-carne-a-Japon.jpeg",
   "razon": "Muestra claramente a funcionarios e integrantes de la delegación diplomática exhibiendo las banderas de Argentina y Japón, ilustrando perfectamente el acuerdo de apertura del mercado.",
   "cuando": "2026-09-30T14:04:03.103Z"
+ },
+ "qglhlg": {
+  "archivo": "fotos-notas/qglhlg.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La inversión real cae un 5,4 por ciento anual en agosto",
+  "enlace": "https://www.c5n.com/economia/la-inversion-cayo-54-agosto-y-acumula-una-baja-79-lo-que-va-del-ano-n250321",
+  "imagenOriginal": "https://media.c5n.com/p/dd0e9460ff6fb159be87e334c1534ebb/adjuntos/326/imagenes/000/396/0000396465/1200x675/smart/milei-caputo.jpg",
+  "razon": "La foto B muestra a las principales figuras políticas en una reunión oficial sin marcas de agua ni menores reconocibles, siendo adecuada para ilustrar una nota de economía.",
+  "cuando": "2026-09-30T14:31:42.818Z"
+ },
+ "1ijifkt": {
+  "archivo": "fotos-notas/1ijifkt.jpg",
+  "medio": "Sendero Regional",
+  "credito": "Foto: Sendero Regional",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Ernesto Povilaitis Giovazzino asume la presidencia del Puerto de Quequén",
+  "enlace": "https://www.senderomultimedios.com.ar/ernesto-povilaitis-giovazzino-fue-designado-formalmente-como-presidente-de-puerto-quequen/",
+  "imagenOriginal": "https://www.senderomultimedios.com.ar/wp-content/uploads/2026/09/povilaitis-1-696x522.webp",
+  "razon": "Es la foto con mejor encuadre, nitidez y sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-09-30T14:31:42.818Z"
  }
 }
