@@ -644,6 +644,22 @@ export function placaUtiles({ grupos = [] }) {
   ${pie()}`);
 }
 
+// ------------------------------------------------- una lista con rótulo
+
+/**
+ * Una placa de lista con el diseño de la agenda y los útiles: rótulo y título
+ * en el color de la pieza, filas con raya fina y el pie de siempre. Sirve para
+ * los resúmenes (resultados del fútbol, novedades de IA, descuentos del día).
+ * `filas` = [{ rotulo?, principal, secundario? }].
+ */
+export function placaLista({ rotulo: kicker, titulo, filas = [], color = COLORES.rojo }) {
+  const cab = cabecera(kicker, titulo, { color });
+  return lienzo(`
+  ${cab.svg}
+  ${listaDeFilas(filas.slice(0, 5), { desde: cab.hasta + 70, hasta: Y_PIE - 20, colorRotulo: color })}
+  ${pie()}`);
+}
+
 // ------------------------------------------------------ un día como hoy
 
 const COLOR_EFEMERIDE = COLOR_SECCION['Cultura y agenda'];
