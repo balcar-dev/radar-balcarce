@@ -56,7 +56,7 @@ export const COLOR = {
   Fútbol: '#15803D',
   Deportes: '#0F766E',
   Automovilismo: '#B45309',
-  Agro: '#4D7C0F',
+  Agro: '#5A6B0A',
   'Cultura y agenda': '#9D2C8F',
   Economía: '#8A6500',
   Tecnología: '#0B6FB8',

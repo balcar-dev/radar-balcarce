@@ -53,7 +53,7 @@ compartir:
 | Fútbol | `#15803D` |
 | Deportes | `#0F766E` |
 | Automovilismo | `#B45309` |
-| Agro | `#4D7C0F` |
+| Agro | `#5A6B0A` |
 | Economía | `#8A6500` |
 | Cultura y agenda | `#9D2C8F` |
 | Tecnología | `#0B6FB8` |

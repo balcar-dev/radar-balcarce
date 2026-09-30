@@ -357,37 +357,41 @@ que esta tabla diga lo mismo que el código.
 | Fútbol | #15803D | Fútbol y el resumen de los lunes |
 | Deportes | #0F766E | Deportes |
 | Automovilismo | #B45309 | Automovilismo y Fangio |
-| Agro | #4D7C0F | Agro y campo |
+| Agro | #5A6B0A | Agro y campo |
 | Economía | #8A6500 | Economía, los descuentos de hoy y "Tu plata" |
 | Cultura y agenda | #9D2C8F | Cultura, la agenda, "Un día como hoy" y "Tu nota" |
 | Tecnología | #0B6FB8 | Tecnología y las novedades de IA |
 | Argentina | #4B5563 | Lo nacional que no es de otra sección |
 | Región | #4B5563 | Lo de otras ciudades de la zona (el mismo gris que Argentina) |
 | Feriados | #1E3A6E | Feriados y fechas patrias; sólo esas piezas |
-| Clima | #0E7490 | El clima de la mañana, el de la noche y el aviso |
-| Farmacias | #13804A | La farmacia de turno |
-| Reclamos | #B23A1C | Participá con reclamos |
+| Clima | #4A5D8F | El clima de la mañana, el de la noche y el aviso |
+| Farmacias | #C13F6E | La farmacia de turno |
+| WhatsApp | #0F5132 | La franja del número de WhatsApp en las piezas de participar (en el sitio, el botón sigue rojo) |
 <!-- COLORES:FIN -->
+
+**Colores reservados** (elegidos el 30/09 para que, cuando nazca una sección o una pieza nueva, ya tenga
+un color notorio y distinto de todos; están en `COLORES_RESERVADOS`, `reels/placa.mjs`): violeta `#7C3AED`,
+fucsia `#C0258F` y celeste `#0A7C99`. Se estrena el primero libre y se lo pasa a la
+tabla de arriba. "Participá con reclamos" usa el color de Balcarce.
 
 **Reglas de uso**
 
 1. **Una pieza, un color.** El rótulo y el rasgo grande de la pieza (el año, el
    porcentaje, la franja) llevan el color de su sección; el resto, tinta sobre papel.
-2. **El color lo da lo que se cuenta**, no el día ni la hora: un resumen del fútbol es
-   verde, uno de IA es azul, una efeméride es violeta, un feriado es azul oscuro.
+2. **El color lo da lo que se cuenta**, no el día ni la hora: una novedad de IA es azul, una efeméride es violeta, un feriado es azul oscuro.
 3. **El repaso lleva el rojo de la marca** en su rótulo, y cada nota de la lista lleva el
    color de su propia sección. (Hasta el 30/09 el repaso rotaba un color por día de la
    semana, sin significado: se saca.)
-4. **Lo que pide una acción va en tinta**, no en un color de sección: la franja del
-   WhatsApp es negra con letras blancas, porque el verde ya quiere decir Fútbol o
-   Farmacia.
+4. **La franja del número de WhatsApp va en verde** (`WhatsApp`, con letras blancas), el único
+   verde que no es de una sección: se reconoce por el número, el rótulo "Escribinos por
+   WhatsApp" y la forma de la franja. En el sitio el botón es rojo, como los demás
+   (decisión del 30/09).
 5. **Nunca un color inventado:** una pieza sin sección usa la tinta.
 6. **Todos los colores se leen sobre el papel** (contraste de 4,5 o más) y con letras
    blancas encima.
-7. **Confusión conocida:** la farmacia comparte el verde de Fútbol. Se distinguen por la
-   forma de la pieza (la tarjeta de la farmacia lleva una cruz y su borde), no por el
-   color; si molesta, se cambia acá y en el código. (El clima era el verde azulado de
-   Deportes y no se leía sobre el papel: el 30/09 pasó a un cian propio.)
+7. **Todos se distinguen entre sí** (30/09): una prueba mide la distancia de color (OKLab) entre cada par y exige
+   0,06 o más; el verde de Fútbol y el verde bosque de la franja de WhatsApp se separan además por
+   el rótulo y la forma. La farmacia dejó el verde (era el de Fútbol) y pasó a un rosa.
 
 **El diseño de una placa** (rediseño del 30/09): fondo papel; rótulo chico en mayúsculas
 con el color de la pieza, a la altura de las filas 250 a 300; el cuerpo usa **toda la

@@ -53,13 +53,13 @@ export const COLORES = {
   climaEtiqueta: '#A9C2D9',
   climaSuave: '#C9D6E2',
   sol: '#F2A93B',
-  farmacia: '#13804A',
+  farmacia: '#C13F6E',
 };
 
 // Cada sección tiene su color, siempre el mismo: el de la web (--s-* de
 // web/app/globals.css, 27/09). Son oscuros: se leen como texto sobre el papel
 // y llevan texto blanco encima (pruebas/titulos-colores.test.mjs controla que
-// coincidan con la web). Clima, Farmacias, Reclamos y Feriados no son
+// coincidan con la web). Clima, Farmacias, Feriados y WhatsApp no son
 // secciones: son el acento de su pieza (la palabra que se dice en el subtítulo).
 export const COLOR_SECCION = {
   Balcarce: '#B91C1C',
@@ -68,21 +68,26 @@ export const COLOR_SECCION = {
   Fútbol: '#15803D',
   Deportes: '#0F766E',
   Automovilismo: '#B45309',
-  Agro: '#4D7C0F',
+  Agro: '#5A6B0A',
   'Cultura y agenda': '#9D2C8F',
   Argentina: '#4B5563',
   Región: '#4B5563',
   // El clima era el verde azulado de Deportes y no se leía sobre el papel (contraste 4,2):
   // desde el 30/09 es un cian propio y más oscuro (CRITERIO-REDES.md § 8).
-  Clima: '#0E7490',
-  Farmacias: '#13804A',
+  Clima: '#4A5D8F',
+  Farmacias: '#C13F6E',
   Economía: '#8A6500',
   Tecnología: '#0B6FB8',
   // El azul oscuro de las fechas patrias y los feriados (30/09): institucional y
   // distinto del azul de Tecnología, que es más claro y más vivo.
   Feriados: '#1E3A6E',
-  Reclamos: '#B23A1C',
+  // La franja del número de WhatsApp en las piezas de participar (30/09): verde, letras blancas.
+  WhatsApp: '#0F5132',
 };
+
+// Colores ya elegidos y guardados para secciones o piezas futuras (30/09): nadie más los usa.
+// Al estrenar uno se lo pasa a COLOR_SECCION y a la tabla de CRITERIO-REDES.md § 8.
+export const COLORES_RESERVADOS = ['#7C3AED', '#C0258F', '#0A7C99'];
 
 /** El color de una sección, o la tinta si no tiene (nunca un color inventado). */
 export const colorDeSeccion = (seccion) => COLOR_SECCION[seccion] ?? COLORES.tinta;

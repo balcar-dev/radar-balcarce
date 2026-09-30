@@ -50,5 +50,33 @@ test('cada color de sección se lee sobre el papel y con letras blancas encima',
 
 test('el criterio dice que el repaso lleva el rojo de la marca y que la acción va en tinta', () => {
   assert.match(criterio, /El repaso lleva el rojo de la marca/);
-  assert.match(criterio, /franja del\s+WhatsApp es negra/);
+  assert.match(criterio, /franja del número de WhatsApp va en verde/);
+});
+
+// La distancia de color (OKLab): que ningún par parezca el mismo color (30/09).
+const aLineal = (c) => { c /= 255; return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
+const oklab = (hex) => {
+  const n = parseInt(hex.slice(1), 16);
+  const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map(aLineal);
+  const l = Math.cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b);
+  const m = Math.cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b);
+  const s = Math.cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
+  return [0.2104542553 * l + 0.793617785 * m - 0.0040720468 * s, 1.9779984951 * l - 2.428592205 * m + 0.4505937099 * s, 0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s];
+};
+const distancia = (x, y) => Math.hypot(...oklab(x).map((v, i) => v - oklab(y)[i]));
+
+test('los colores de las piezas se distinguen entre sí, reservados incluidos', async () => {
+  const { COLORES_RESERVADOS } = await import('../reels/placa.mjs');
+  assert.ok(COLORES_RESERVADOS.length >= 3);
+  const todos = { ...COLOR_SECCION };
+  delete todos.Región; // es el mismo gris que Argentina a propósito
+  COLORES_RESERVADOS.forEach((h, i) => { todos[`Reservado ${i + 1}`] = h; });
+
+  const nombres = Object.keys(todos);
+  for (let i = 0; i < nombres.length; i += 1) for (let j = i + 1; j < nombres.length; j += 1) {
+    assert.ok(distancia(todos[nombres[i]], todos[nombres[j]]) >= 0.06, `${nombres[i]} y ${nombres[j]} se parecen demasiado`);
+  }
+  for (const h of COLORES_RESERVADOS) {
+    assert.ok(contraste(h, COLORES.papel) >= 4.5 && contraste(h, '#FFFFFF') >= 4.5, `el reservado ${h} no se lee`);
+  }
 });
