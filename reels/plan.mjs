@@ -12,7 +12,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
+import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, COLOR_SECCION, COLORES } from './placa.mjs';
 import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { enlaceDeNota } from '../redes/elegir.mjs';
@@ -25,7 +25,7 @@ import {
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import { nombreDeEvento } from '../web/lib/eventos.js';
 import {
-  PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, colorDelDia, piezasPublicadasHoy, historiasQueSobran,
+  PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, piezasPublicadasHoy, historiasQueSobran,
 } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
@@ -427,9 +427,9 @@ export function planDelDia(datos, {
       // cada una con el color de su sección, y el nombre del podcast en el color del día.
       svg: placaRepaso({
         titulo: ronda.titulo, momento: ronda.momento, fecha: fechaLarga(fecha), segundos: repaso.segundos,
-        notas: elegidas.map((n) => ({ seccion: n.seccion, titulo: n.titulo })), color: colorDelDia(),
+        notas: elegidas.map((n) => ({ seccion: n.seccion, titulo: n.titulo })), color: COLORES.rojo,
       }),
-      acento: colorDelDia(),
+      acento: COLORES.rojo,
     });
   });
 
@@ -450,9 +450,9 @@ export function planDelDia(datos, {
       seccion: 'Balcarce', guion: repasoNoche.guion, momento: podcastNoche.momento, indicacion: INDICACIONES[podcastNoche.momento],
       svg: placaRepaso({
         titulo: podcastNoche.titulo, momento: podcastNoche.momento, fecha: fechaLarga(fecha), segundos: repasoNoche.segundos,
-        notas: notasNoche.map((n) => ({ seccion: n.seccion, titulo: n.titulo })), color: colorDelDia(),
+        notas: notasNoche.map((n) => ({ seccion: n.seccion, titulo: n.titulo })), color: COLORES.rojo,
       }),
-      acento: colorDelDia(),
+      acento: COLORES.rojo,
     });
   }
 

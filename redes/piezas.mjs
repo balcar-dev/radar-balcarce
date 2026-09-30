@@ -126,24 +126,7 @@ export const NOMBRES_DE_PODCAST = PODCASTS.map((p) => p.nombre);
  *  agenda sale de la agenda publicada (web/data/agenda.json, reels/plan.mjs). */
 const SOLO_EN_LA_PC = [];
 
-/**
- * El color de los podcasts de cada día. Los tres del día llevan el mismo, y
- * cambia de un día al otro: en la grilla de Instagram no se ven todos iguales
- * y se nota de un vistazo de qué día es cada uno. Salen de la paleta de las
- * secciones de la web. Índice 0 = domingo, como Date#getDay().
- */
-export const COLORES_DEL_DIA = [
-  '#B04A86', // domingo   · magenta
-  '#C7381C', // lunes     · el rojo de la marca
-  '#1E6E4F', // martes    · verde
-  '#2563A8', // miércoles · azul
-  '#E08A16', // jueves    · ámbar
-  '#6D4BA0', // viernes   · violeta
-  '#16615B', // sábado    · verde azulado
-];
-
-/** El color del día en Balcarce. */
-export const colorDelDia = (fecha = new Date()) => COLORES_DEL_DIA[diaSemanaAR(fecha)];
+// Desde el 30/09 el repaso lleva siempre el rojo de la marca (CRITERIO-REDES.md § 8): ya no rota un color por día.
 
 /** Lo que identifica a una pieza en el libro: el día y el nombre. */
 export const claveDePieza = (nombre, fecha = new Date()) => `${diaAR(fecha)}/${nombre}`;

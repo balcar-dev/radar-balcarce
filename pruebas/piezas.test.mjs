@@ -645,30 +645,11 @@ test('la primera corrida después de la hora de cada pieza la encuentra en venta
   }
 });
 
-// ------------------------------------------- un color por día para los podcasts
+// ------------------------------------------- el repaso lleva el rojo de la marca
 
-import { colorDelDia, COLORES_DEL_DIA } from '../redes/piezas.mjs';
-
-test('hay siete colores distintos, uno por día de la semana', () => {
-  assert.equal(COLORES_DEL_DIA.length, 7);
-  assert.equal(new Set(COLORES_DEL_DIA).size, 7);
-  for (const c of COLORES_DEL_DIA) assert.match(c, /^#[0-9A-F]{6}$/i);
-});
-
-test('el color cambia de un día al otro y es el mismo todo el día', () => {
-  const lunes = [ '08:00', '15:00', '23:30' ].map((h) => colorDelDia(new Date(`2026-09-21T${h}:00-03:00`)));
-  assert.equal(new Set(lunes).size, 1, 'el color cambió dentro del mismo día');
-  const semana = [21, 22, 23, 24, 25, 26, 27].map((d) => colorDelDia(new Date(`2026-09-${d}T12:00:00-03:00`)));
-  assert.equal(new Set(semana).size, 7, 'dos días de la misma semana comparten color');
-});
-
-test('el color del día se cuenta con la hora de Balcarce, no la de UTC', () => {
-  // 23:30 del lunes en Balcarce ya es martes en UTC.
-  assert.equal(colorDelDia(new Date('2026-09-21T23:30:00-03:00')), COLORES_DEL_DIA[1]);
-});
-
-test('los podcasts del plan usan el color del día', async () => {
+test('los podcasts del plan llevan el rojo de la marca, no un color rotativo', async () => {
   const fs = await import('node:fs');
   const plan = fs.readFileSync(new URL('../reels/plan.mjs', import.meta.url), 'utf8');
-  assert.equal((plan.match(/color: colorDelDia\(\)/g) ?? []).length, 2, 'los dos tipos de podcast deben usar colorDelDia()');
+  assert.equal((plan.match(/color: COLORES.rojo/g) ?? []).length, 2, 'los dos tipos de podcast usan el rojo de la marca');
+  assert.ok(!/colorDelDia|COLORES_DEL_DIA/.test(plan));
 });

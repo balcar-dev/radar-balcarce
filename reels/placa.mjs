@@ -397,7 +397,7 @@ export function placaClima(opciones) {
   // Se arma a tamaño completo; si con el aviso o el pronóstico no entra antes
   // de la firma, se achica todo un poco (nunca se corta ni se superpone).
   let armada = null;
-  for (const k of [1, 0.9, 0.8, 0.7]) {
+  for (const k of [1.3, 1.2, 1.1, 1, 0.9, 0.8, 0.7]) {
     armada = armarClima(opciones, k);
     if (armada.fin <= FIN_CONTENIDO) break;
   }
@@ -408,7 +408,7 @@ function armarClima({
   temp, cielo, max, min, fecha, sensacion = null, viento = null, rumbo = '', esDeDia = true,
   kicker = 'Hoy en Balcarce', etiqueta = 'El clima ahora', cajas = [], aviso = null, pronostico = null,
 }, k = 1) {
-  const cab = cabecera(kicker, fecha);
+  const cab = cabecera(kicker, fecha, { color: COLOR_SECCION.Clima });
   const x0 = 64;
   const ancho = ANCHO - x0 * 2;
   const adentro = x0 + 48;
@@ -448,7 +448,7 @@ function armarClima({
     const tit = repartir(c.titulo, [{ tam: 24, max: 1 }, { tam: 21, max: 1 }, { tam: 19, max: 1 }], anchoCaja - 48, 'sans');
     return `<rect x="${x}" y="${yCajas}" width="${anchoCaja}" height="${altoCaja}" rx="22" fill="${COLORES.climaCaja}"/>
   <text x="${x + 26}" y="${yCajas + m(52)}" font-family="${TEXTO}" font-size="${tit.tam}" font-weight="700" fill="${COLORES.climaEtiqueta}">${esc(tit.lineas[0])}</text>
-  <text x="${x + 26}" y="${yCajas + m(128)}" font-family="${TEXTO}" font-size="${m(50)}" font-weight="700" fill="#FFFFFF">${esc(c.valor)}${c.secundario != null ? ` <tspan font-weight="400" fill="${COLORES.climaSuave}">${esc(c.secundario)}</tspan>` : ''}</text>`;
+  <text x="${x + 26}" y="${yCajas + m(128)}" font-family="${TEXTO}" font-size="${Math.min(50, m(50))}" font-weight="700" fill="#FFFFFF">${esc(c.valor)}${c.secundario != null ? ` <tspan font-weight="400" fill="${COLORES.climaSuave}">${esc(c.secundario)}</tspan>` : ''}</text>`;
   }).join('\n  ')}`);
   y = bottom + hueco;
 
@@ -471,13 +471,9 @@ function armarClima({
     svg: lienzo(`
   ${cab.svg}
   ${partes.join('\n  ')}
-  ${firmaAlPie()}`),
+  ${pie()}`),
   };
 }
-
-/** La firma centrada al pie de las historias de servicio. */
-const firmaAlPie = () => `${firma({ x: ANCHO / 2, y: 1522, tam: 48, ancla: 'middle' })}
-  <text x="${ANCHO / 2}" y="1568" text-anchor="middle" font-family="${TEXTO}" font-size="26" font-weight="500" fill="${COLORES.gris}">radarbalcarce.com</text>`;
 
 // ------------------------------------------------------------- la farmacia
 
@@ -510,7 +506,7 @@ export function comoNombrePropio(s = '') {
 export function placaFarmacia(opciones) {
   // Con tres farmacias o direcciones largas se achica, nunca se superpone con la firma.
   let armada = null;
-  for (const k of [1, 0.88, 0.76, 0.66]) {
+  for (const k of [1.4, 1.3, 1.2, 1.1, 1, 0.88, 0.76, 0.66]) {
     armada = armarFarmacia(opciones, k);
     if (armada.fin <= FIN_CONTENIDO) break;
   }
@@ -524,7 +520,7 @@ function armarFarmacia({
   const doble = lista.length > 1;
   const m = (v) => Math.round(v * k);
   const fecha = [diaConTilde(diaSemana), dia, mes ? `de ${MESES[mes - 1]}` : ''].filter(Boolean).join(' ');
-  const cab = cabecera('Hoy en Balcarce', fecha);
+  const cab = cabecera('Hoy en Balcarce', fecha, { color: COLORES.farmacia });
   const x0 = 64;
   const ancho = ANCHO - x0 * 2;
   const adentro = x0 + 48;
@@ -570,7 +566,7 @@ function armarFarmacia({
   ${rotulo(doble ? 'Farmacias de turno' : 'Farmacia de turno', { x: adentro + 108, y: top + 100, color: verde, tam: 30 })}
   ${bloques}
   ${hasta ? `<text x="${x0 + 8}" y="${yHasta}" font-family="${TEXTO}" font-size="${m(36)}" font-weight="500" fill="${COLORES.gris}">${esc(hasta)}</text>` : ''}
-  ${firmaAlPie()}`),
+  ${pie()}`),
   };
 }
 
@@ -611,7 +607,7 @@ function listaDeFilas(filas, { desde, hasta, colorRotulo }) {
   }).join('\n  ');
 }
 
-const COLOR_UTILES = '#8C2D18';
+const COLOR_UTILES = COLORES.rojo;
 const COLOR_AGENDA = COLOR_SECCION['Cultura y agenda'];
 
 /** La agenda del fin de semana (los jueves). Cuatro eventos como máximo: en
@@ -646,7 +642,7 @@ export function placaUtiles({ grupos = [] }) {
       anterior = g.categoria;
     }
   }
-  const cab = cabecera('Teléfonos útiles', 'Guardalos en el celular');
+  const cab = cabecera('Teléfonos útiles', 'Guardalos en el celular', { color: COLOR_UTILES });
   return lienzo(`
   ${cab.svg}
   ${listaDeFilas(filas, { desde: cab.hasta + 70, hasta: Y_PIE - 20, colorRotulo: COLOR_UTILES })}
@@ -663,9 +659,70 @@ export function placaUtiles({ grupos = [] }) {
  */
 export function placaLista({ rotulo: kicker, titulo, filas = [], color = COLORES.rojo }) {
   const cab = cabecera(kicker, titulo, { color });
+  if (filas.some((f) => f.rasgo)) return placaConRasgo({ cab, filas: filas.slice(0, 3), color });
   return lienzo(`
   ${cab.svg}
   ${listaDeFilas(filas.slice(0, 5), { desde: cab.hasta + 70, hasta: Y_PIE - 20, colorRotulo: color })}
+  ${pie()}`);
+}
+
+/**
+ * Una lista donde cada fila lleva un rasgo grande a la izquierda (el 20% del
+ * descuento, el resultado del partido): el rasgo con el color de la pieza, el
+ * rótulo, lo principal y el detalle a la derecha. `filas` = [{ rasgo, rotulo,
+ * principal, secundario }]. Hasta tres filas.
+ */
+function placaConRasgo({ cab, filas, color }) {
+  const disponible = ANCHO - MARGEN * 2;
+  const xTexto = MARGEN + 400;
+  const paso = Math.min(282, Math.floor((Y_PIE - 40 - (cab.hasta + 70)) / Math.max(1, filas.length)));
+  let y = cab.hasta + 70 + 50;
+  const cuerpo = filas.map((f, i) => {
+    const rasgo = String(f.rasgo);
+    const tamRasgo = rasgo.length <= 3 ? 190 : rasgo.length <= 5 ? 150 : 110;
+    const r = f.secundario ? envolverAncho(f.secundario, 36, ANCHO - MARGEN - xTexto, 'sans').slice(0, 3) : [];
+    const principal = repartir(f.principal ?? '', [{ tam: 54, max: 1 }, { tam: 46, max: 1 }, { tam: 40, max: 1 }, { tam: 40, max: 2 }], ANCHO - MARGEN - xTexto);
+    const svg = `<rect x="${MARGEN}" y="${y - 50}" width="${disponible}" height="${i === 0 ? 3 : 2}" fill="${i === 0 ? COLORES.tinta : COLORES.linea}"/>
+  ${renglones([rasgo], { y: y + 130, tam: tamRasgo, color, espaciado: -6 })}
+  ${f.rotulo ? rotulo(f.rotulo, { x: xTexto, y: y + 40, color, tam: 22 }) : ''}
+  ${renglones(principal.lineas, { x: xTexto, y: y + 105, tam: principal.tam, interlinea: Math.round(principal.tam * 1.06), espaciado: -1 })}
+  ${renglones(r, { x: xTexto, y: y + 105 + (principal.lineas.length - 1) * Math.round(principal.tam * 1.06) + 56, tam: 36, interlinea: 47, familia: TEXTO, peso: 500, color: COLORES.gris })}`;
+    y += paso;
+    return svg;
+  });
+  return lienzo(`
+  ${cab.svg}
+  ${cuerpo.join('\n  ')}
+  ${pie()}`);
+}
+
+// ------------------------------------------------------ participá
+
+/**
+ * Las piezas para invitar a participar (IDEAS 18): una pregunta grande, la
+ * franja verde con el número de WhatsApp y dos renglones de pie. La franja es
+ * el único verde que no es de una sección (CRITERIO-REDES.md § 8).
+ */
+export function placaParticipa({
+  rotulo: kicker, pregunta, pie1 = '', pie2 = '', color = COLOR_SECCION.Balcarce,
+  numero = '2266 51-1612', etiqueta = 'Escribinos por WhatsApp',
+}) {
+  const disponible = ANCHO - MARGEN * 2;
+  // El primer cuerpo donde ninguna palabra se sale del ancho (una palabra larga como "emprendimiento" no se parte).
+  const escalones = [132, 116, 100, 88, 76].map((tam) => ({ tam, max: 5 }));
+  const entra = (e) => pregunta.split(/s+/).every((w) => anchoAproximado(w, e.tam, 'serif') <= disponible);
+  const p = repartir(pregunta, [escalones.find(entra) ?? escalones.at(-1)], disponible);
+  const inter = Math.round(p.tam * 1.04);
+  const yPregunta = 470;
+  const yFranja = yPregunta + (p.lineas.length - 1) * inter + 150;
+  const extra = [pie1, pie2].filter(Boolean).flatMap((t, i) => envolverAncho(t, 46, disponible, 'sans').map((l) => ({ l, i })));
+  return lienzo(`
+  ${rotulo(kicker, { y: 300, color })}
+  ${renglones(p.lineas, { y: yPregunta, tam: p.tam, interlinea: inter, espaciado: -2 })}
+  <rect x="${MARGEN}" y="${yFranja}" width="${disponible}" height="210" rx="28" fill="${COLOR_SECCION.WhatsApp}"/>
+  <text x="${MARGEN + 44}" y="${yFranja + 62}" font-family="${TEXTO}" font-size="28" font-weight="700" letter-spacing="4" fill="#FFFFFF" fill-opacity="0.8">${esc(etiqueta.toUpperCase())}</text>
+  <text x="${MARGEN + 44}" y="${yFranja + 164}" font-family="${TEXTO}" font-size="92" font-weight="700" letter-spacing="-1" fill="#FFFFFF">${esc(numero)}</text>
+  ${extra.map(({ l, i }, n) => `<text x="${MARGEN}" y="${yFranja + 300 + n * 62}" font-family="${TEXTO}" font-size="46" font-weight="${i === 0 ? 600 : 500}" fill="${i === 0 ? COLORES.tinta : COLORES.gris}">${esc(l)}</text>`).join('\n  ')}
   ${pie()}`);
 }
 
