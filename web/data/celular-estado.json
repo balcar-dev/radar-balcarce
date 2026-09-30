@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T20:02:11.164Z",
- "portada": 63,
+ "generado": "2026-09-30T20:31:41.574Z",
+ "portada": 61,
  "archivo": 649,
- "esperandoCuerpo": 5,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-09-30T20:02:11.195Z",
+  "generado": "2026-09-30T20:31:41.617Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
      {
       "id": "2uqvxt",
@@ -155,8 +155,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1vqwmji",
-      "titulo": "Cristian Giuliano y Desirée Fraiz sobresalen en el Rally Mar y Sierras MTB",
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
       "seccion": "Deportes"
      },
      {
@@ -193,13 +193,18 @@
      "id": "76r67w",
      "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
      "cuando": "2026-09-30T18:26:44.078Z"
+    },
+    {
+     "id": "1h3b7f0",
+     "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
+     "cuando": "2026-09-30T20:04:06.971Z"
     }
    ],
    "cola": [
     {
-     "id": "1h3b7f0",
-     "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
-     "seccion": "Cultura y agenda",
+     "id": "5evpzb",
+     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+     "seccion": "Deportes",
      "marcada": false
     },
     {
@@ -213,16 +218,10 @@
      "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
      "seccion": "Cultura y agenda",
      "marcada": false
-    },
-    {
-     "id": "5evpzb",
-     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-     "seccion": "Deportes",
-     "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-09-30T19:56:44.078Z",
+   "cupo": 0,
+   "proximoDesde": "2026-09-30T21:34:06.971Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

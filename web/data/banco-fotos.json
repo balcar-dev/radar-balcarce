@@ -1530,16 +1530,16 @@
   "cuando": "2026-09-28T20:38:20.647Z"
  },
  "1oe0iax": {
-  "archivo": "fotos-notas/1oe0iax.jpg",
   "medio": "Radio Gabal (FM 104.1)",
-  "credito": "Foto: Radio Gabal (FM 104.1)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El PJ local cuestiona el sumario a una investigadora del INTA",
   "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-pj-de-balcarce-expreso-su-apoyo-a-virginia-aparicio-y-cuestiono-el-sumario-en-su-contra",
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/septiembre/Aranaga%20Franganillo%20PJ.png",
   "razon": "Es la única opción disponible, cuenta con buena nitidez y no tiene marca de agua del medio.",
-  "cuando": "2026-09-28T21:34:10.724Z"
+  "cuando": "2026-09-28T21:34:10.724Z",
+  "intentado": true,
+  "borrada": true
  },
  "cx4j4n": {
   "medio": "Olé",
@@ -3334,5 +3334,17 @@
   "imagenOriginal": "https://n2.cdnartic.ar/syexW4VTMsvilBQd2Mp-0QtgcX4=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://elmarplatensecdn.eleco.com.ar/media/2026/09/fifa.webp",
   "razon": "Es la única foto de buena calidad que ilustra claramente el tema de las Eliminatorias y el Mundial 2030 sin marcas de agua sobreimpresas ni menores reconocibles.",
   "cuando": "2026-09-30T20:01:59.851Z"
+ },
+ "1ugpk62": {
+  "archivo": "fotos-notas/1ugpk62.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Toyota obtiene el primer RIGI automotriz y proyecta fabricar autos eléctricos",
+  "enlace": "https://www.clarin.com/economia/toyota-obtuvo-primer-rigi-automotriz-invertira-us-1300-millones-fabricar-vehiculos-electricos_0_XhHa3tAZx6.html",
+  "imagenOriginal": "https://www.clarin.com/img/2024/09/15/w2HziQDxh_2000x1500__1.jpg",
+  "razon": "La foto A muestra una vista aérea ideal de la planta automotriz sin marcas de agua ni menores, mientras que la foto B tiene una zócalo con el logo de Noticias Argentinas.",
+  "cuando": "2026-09-30T20:31:38.404Z"
  }
 }
