@@ -1097,18 +1097,29 @@
   "cuando": "2026-09-28T16:32:46.335Z"
  },
  "15o4k9f": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/15o4k9f.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Tecnopapa, el evento que reunirá a toda la cadena productiva del país, ya tiene fecha",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-09-28T16:32:46.335Z"
+  "enlace": "https://eldiariobalcarce.com.ar/tecnopapa-el-evento-que-reunira-a-toda-la-cadena-productiva-del-pais-ya-tiene-fecha-196",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-09-28-12-32-25tecnopapa_balcarce.jpg",
+  "razon": "Tiene excelente nitidez, encuadre adecuado al evento agropecuario, sin marcas de agua ni menores visibles.",
+  "cuando": "2026-09-30T02:01:39.938Z"
  },
  "1vmofxd": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1vmofxd.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Ludovic Péron / Wikimedia Commons (CC BY-SA 3.0)",
+  "licencia": "CC BY-SA 3.0",
+  "autor": "Ludovic Péron",
+  "origen": "wikimedia",
   "titulo": "Messi discute con un futbolista uruguayo tras la derrota de Inter Miami",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-09-28T16:32:46.335Z"
+  "enlace": "https://commons.wikimedia.org/wiki/File:Suisse_vs_Argentine_-_Granit_Xhaka_%26_Lionel_Messi.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Suisse_vs_Argentine_-_Granit_Xhaka_%26_Lionel_Messi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Lionel Messi\" de Wikimedia Commons (CC BY-SA 3.0).",
+  "cuando": "2026-09-30T02:01:39.938Z"
  },
  "v1mupk": {
   "intentado": true,
@@ -1486,16 +1497,16 @@
   "borrada": true
  },
  "1ylr7j3": {
-  "archivo": "fotos-notas/1ylr7j3.jpg",
   "medio": "Canal 26",
-  "credito": "Foto: Canal 26",
   "licencia": null,
   "origen": "medio",
   "titulo": "Copetonas celebra su fiesta de mate y tortas fritas",
   "enlace": "https://www.canal26.com/turismo/2026/09/28/copetonas-el-pueblo-bonaerense-que-nacio-con-el-tren-celebra-una-fiesta-de-mate-y-tortas-fritas-con-entrada-gratis/",
   "imagenOriginal": "https://www.canal26.com/resizer/v2/GQHIAPCEU5FITAHLKORZOKXO3Y.png?auth=47a23e8c730c148d30f9cf1f16b740b4ad44b5f3b2c582ece9f82ca8a5714c8d&height=630&width=1200&quality=70&smart=true",
   "razon": "Tiene buena nitidez, encuadre adecuado y no presenta marcas de agua ni menores reconocibles.",
-  "cuando": "2026-09-30T01:31:10.308Z"
+  "cuando": "2026-09-30T01:31:10.308Z",
+  "intentado": true,
+  "borrada": true
  },
  "1xiyc3w": {
   "archivo": "fotos-notas/1xiyc3w.jpg",
@@ -2538,11 +2549,16 @@
   "cuando": "2026-09-30T00:31:27.275Z"
  },
  "jul48u": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/jul48u.webp",
+  "medio": "News Balcarce (FM 91.7)",
+  "credito": "Foto: News Balcarce (FM 91.7)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Pampa Dúo toca el 17 de octubre en el Teatro Municipal",
-  "razon": "sin fotos para comparar",
-  "cuando": "2026-09-30T00:31:27.275Z"
+  "enlace": "https://newsbalcarce.com.ar/?p=30891",
+  "imagenOriginal": "https://newsbalcarce.com.ar/wp-content/uploads/GIMENEZ-LOBATO-PAMPA-DUO.webp",
+  "razon": "Es la única foto disponible, tiene buen encuadre de los músicos y no presenta marcas ni menores.",
+  "cuando": "2026-09-30T02:01:39.938Z"
  },
  "1o1dlqq": {
   "intentado": true,
@@ -2623,5 +2639,41 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/tiene-38-anos-dejo-santa-fe-y-construyo-su-propia-casa-de-barro-en-cordoba-con-materiales-reciclados-foto-youtube-cronicas-del-cambio-A7L456DLXRCERD5KAI5HK552HE.png?auth=1f7ad7334bfe2695175734b3138bacd6d1327aca20599d6459c35963d50ecc42&width=1023",
   "razon": "La foto B muestra claramente la casa construida con parabrisas y a la artista, sin marcas de medios ni menores.",
   "cuando": "2026-09-30T01:31:10.308Z"
+ },
+ "1fpyvha": {
+  "archivo": "fotos-notas/1fpyvha.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno recibe un nuevo lote de aviones caza F-16 en Córdoba",
+  "enlace": "https://www.lanacion.com.ar/politica/otros-seis-aviones-cazas-f-16-llegaron-a-rio-cuarto-y-se-suman-a-la-fuerza-aerea-nid29092026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/la-argentina-incorporo-nuevos-aviones-caza-f-16-76GRELPA5VHOJIABHDLWDXNUXE.jpeg?auth=80e7dadb59bad73e625c8e9c3b1e2b9b85628882ce618814c0855c90ed5ee3be&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto B muestra un avión caza F-16 completo de frente con gran nitidez y sin marcas ni menores.",
+  "cuando": "2026-09-30T02:01:39.938Z"
+ },
+ "h7o4xt": {
+  "archivo": "fotos-notas/h7o4xt.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44945-cambareri-cuestiono-el-ajuste-en-el-inta-y-defendio-a-virginia-aparicio-es-muy-grave-lo-que-esta-pasando/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65890.png",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y encuadre adecuado, sin marcas de agua ni menores.",
+  "cuando": "2026-09-30T02:01:39.938Z"
+ },
+ "y8awi1": {
+  "archivo": "fotos-notas/y8awi1.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Leandro Paredes visita el predio de la AFA y ratifica su deseo de seguir en la Selección",
+  "enlace": "https://www.clarin.com/deportes/leandro-paredes-entrenamiento-seleccion-hablo-scaloni-futuro-mediocampista-scaloneta_0_ylnahgeqxN.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/09/29/MnrWqrSRZ_2000x1500__1.jpg",
+  "razon": "Muestra claramente a Leandro Paredes junto a Lionel Scaloni en el predio de la AFA, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-09-30T02:01:39.938Z"
  }
 }
