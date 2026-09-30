@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T18:02:17.426Z",
- "portada": 57,
- "archivo": 637,
- "esperandoCuerpo": 5,
+ "generado": "2026-09-30T18:25:07.833Z",
+ "portada": 61,
+ "archivo": 642,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-09-30T18:02:17.466Z",
+  "generado": "2026-09-30T18:25:07.874Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-09-30T18:06:28.052Z"
    },
    {
     "nombre": "farmacia",
@@ -105,8 +105,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 49,
+    "salio": "2026-09-30T18:06:28.052Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1j6ui2n",
@@ -137,27 +137,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
      {
-      "id": "h36tlu",
-      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
-      "seccion": "Balcarce"
+      "id": "2uqvxt",
+      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
+      "seccion": "Fútbol"
      },
      {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes"
+     },
+     {
+      "id": "v2h1r4",
+      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
+      "seccion": "Balcarce"
      },
      {
       "id": "616lop",
       "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
       "seccion": "Agro"
-     },
-     {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -184,6 +184,12 @@
     {
      "id": "76r67w",
      "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "103siit",
+     "titulo": "Bomberos vende los últimos números de la rifa anual",
      "seccion": "Balcarce",
      "marcada": false
     },
