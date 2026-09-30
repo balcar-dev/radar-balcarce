@@ -1,6 +1,6 @@
 # Ideas para que el medio tenga alcance de verdad
 
-*Actualizado el 29/09/2026.* Ideas para discutir, no tareas: ninguna está
+*Actualizado el 29/09/2026 (noche).* Ideas para discutir, no tareas: ninguna está
 decidida. Cada cosa vive en un solo lugar: lo que ya se decidió hacer y lo que
 falta del sistema está en `PENDIENTES.md` (por ejemplo, servir las tipografías
 desde el propio sitio, A9); lo que ya se hizo, en `docs/historico/HISTORIA.md`;
@@ -47,6 +47,11 @@ repasó el 29/09: es para discutirlo juntos, no una decisión.
 | 27 | Contenido | **Cortes programados** | Agua, luz y tránsito, del municipio y las cooperativas (las alertas del clima ya salen) | Medio | Medio |
 | 28 | Contenido | **Automovilismo como marca propia** | Una nota semanal sobre pilotos balcarceños en cualquier categoría: un nicho que nadie cubre, con público asegurado por Fangio | Medio | Medio |
 | 29 | Voz | **Un nombre para cada locutor** | Ponerles nombre a la locutora y al locutor para que se sientan cercanos, no "la voz de Gemini". Las dos voces en una misma pieza se probaron y se descartaron (abajo) | Bajo | Bajo |
+| 30 | Contenido | **Resumen del fútbol, lunes, nota propia** | Hernán, 29/09: cada lunes, una nota propia con los resultados de la Primera y de las copas que se jueguen. Antes de aplicarlo hay que analizar de dónde salen los resultados (fuente verificada, no de memoria) y cómo se verifica una nota de puros números | Alto | Medio |
+| 31 | Contenido | **Cultura y Tecnología con identidad** | Hernán, 29/09: más resúmenes propios, hablar de la IA en positivo y cubrir los anuncios grandes (Anthropic, OpenAI, Tesla, SpaceX) y lo de interés general. Ya hay fuentes verificadas (informe del 29/09: El Destape, C5N, MDZ, Perfil tecnología; Perfil, Clarín cultura) | Alto | Medio |
+| 32 | Video | **Reels animados que explican** | Hernán, 29/09: animaciones de ciencia, tecnología y economía doméstica. Hoy los videos son placas con voz; esto pide un diseño propio de escenas. Para el mes que viene, con los reels e historias nuevas | Medio | Alto |
+| 33 | Contenido | **Un día como hoy y las fechas patrias** | Investigación del 29/09 en `docs/historico/`: fuentes que andan (Wikipedia, Wikidata, feriados) y una lista curada de 16 fechas patrias con datos y citas. Se arma una semana antes para revisar y aprobar | Alto | Medio |
+| 34 | Contenido | **Descuentos de todos los bancos y billeteras** | Hernán, 29/09: no sólo Cuenta DNI: MODO, Galicia, Nación, Santander y el resto. Cuenta DNI tiene datos públicos y los de Balcarce; los demás casi no publican datos leíbles: hay que buscar una fuente que junte muchos | Alto | Alto |
 | 30 | Contenido | **Cine, libro y música de la semana** | Siempre el mismo día. Cine argentino (datos de TMDB o Wikidata), aniversarios de autores. De un autor muerto hace menos de 70 años no se copian fragmentos: se recomienda y, como mucho, una cita corta. Cuando haya criterio sobre el tono | Bajo | Medio |
 | 31 | Contenido | **"El vecino que…"** | Una persona o un comercio del pueblo por semana, con una foto que mandan ellos. Alimenta la guía comercial | Medio | Medio |
 | 32 | Sistema | **Panel de salud del sistema** | Ver de un vistazo si algo se cayó sin abrir tres workflows (el vigilante ya avisa casi todo por WhatsApp) | Bajo | Medio |
