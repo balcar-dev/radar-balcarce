@@ -538,10 +538,28 @@ function frenar(nota, s) {
   nota.motivo = `${s.motivo} (visto al reescribir)`;
 }
 
+const NEGACION_DEL_TITULO = /niega algo en el t[ií]tulo/;
+
+/**
+ * La revisión del título y la bajada, sin la queja de que "la fuente niega algo
+ * en el título y el texto nuevo no" cuando la nota entera (con el cuerpo) sí lo
+ * dice. Esa negación se busca en toda la nota desde el 28/09, pero el título y
+ * la bajada se revisan con el cuerpo vacío, así que la queja volvía siempre y
+ * tiraba notas buenas (29/09: dos de las ocho que esperaban cuerpo).
+ */
+export function sinNegacionQueEstaEnElCuerpo(cabeza, completo) {
+  const esLaNegacion = (p) => p.tipo === 'negacion' && NEGACION_DEL_TITULO.test(p.detalle);
+  if (completo.problemas.some(esLaNegacion)) return cabeza;
+  const problemas = cabeza.problemas.filter((p) => !esLaNegacion(p));
+  return { ok: problemas.length === 0, problemas };
+}
+
 /** El motivo de un rechazo del verificador, en una línea corta: el tipo de
- *  cada problema y el primero, recortado. Nunca el texto entero. */
+ *  cada problema y el primero, recortado. Nunca el texto entero, ni la frase
+ *  copiada que trae el detalle de una copia (va a Gemini en la corrección, pero
+ *  el motivo queda en web/data/intentos-ia.json, que es público). */
 export function motivoCorto(problemas = []) {
-  const primero = String(problemas[0]?.detalle ?? '').replace(/\s+/g, ' ').slice(0, 100);
+  const primero = String(problemas[0]?.detalle ?? '').replace(/\s*\("[^"]*"\)/g, '').replace(/\s+/g, ' ').slice(0, 100);
   return `${resumirProblemas(problemas)}${primero ? `: ${primero}` : ''}`;
 }
 
@@ -1135,7 +1153,7 @@ export async function reescribirAutomaticas(notas, {
     const evaluar = (respuesta) => {
       const x = { ...respuesta, ...arreglarEscritura(respuesta, { hoy: new Date(Number(ahora)) }).nuevo };
       const control = comprobar(x);
-      const cabeza = comprobar({ ...x, cuerpo: '' });
+      const cabeza = sinNegacionQueEstaEnElCuerpo(comprobar({ ...x, cuerpo: '' }), control);
       if (!cabeza.ok) return { ok: false, problemas: control.problemas, motivo: `título o bajada: ${motivoCorto(cabeza.problemas)}` };
       if (control.ok && tieneCuerpo(x)) return { ok: true, r: x, sacadas: [] };
       const depurado = control.ok ? { cuerpo: x.cuerpo, sacadas: [] } : depurarCuerpo(fuente, x);

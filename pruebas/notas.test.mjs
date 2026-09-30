@@ -117,6 +117,22 @@ test('el automovilismo le gana a deportes', () => {
   assert.equal(clasificar(n), 'Automovilismo');
 });
 
+test('"goleó" no hace fútbol a una nota de rugby (29/09: Pato Naranja salió en Fútbol y en las redes)', () => {
+  const rugby = nota({
+    titulo: 'Pato Naranja goleó a Pampas y quedó entre los cuatro mejores',
+    cuerpo: 'El equipo de rugby de Campo de Pato superó 99 a 12 a Pampas de Dolores por el Torneo Desarrollo.',
+  });
+  assert.equal(clasificar(rugby), 'Deportes');
+  // Aunque venga de un feed de deportes.
+  assert.equal(clasificar({ ...rugby, seccionFuente: 'Deportes' }), 'Deportes');
+  // El fútbol de verdad sigue en Fútbol, aunque también nombre a otro deporte.
+  const futbol = nota({ titulo: 'Ferroviarios goleó a Unión en la Liga Balcarceña', cuerpo: 'El club también tiene hockey.' });
+  assert.equal(clasificar(futbol), 'Fútbol');
+  assert.equal(clasificar(nota({ titulo: 'Boca Juniors goleó a Racing Club', cuerpo: 'Tres goles en la Bombonera.' })), 'Fútbol');
+  // Y lo que sólo dice "goleó", sin otro deporte, también.
+  assert.equal(clasificar(nota({ titulo: 'Alvarado goleó y sigue puntero', cuerpo: 'Ganó 4 a 0 en Mar del Plata.' })), 'Fútbol');
+});
+
 test('gana la palabra más específica, no la primera regla de la lista', () => {
   // "La Exposición Rural de Palermo" salió publicada en Cultura porque
   // "exposición" está en esa regla y Cultura se evalúa antes que Agro.

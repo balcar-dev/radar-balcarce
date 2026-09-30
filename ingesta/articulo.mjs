@@ -57,6 +57,8 @@ export function decodificar(texto = '', { desconocidas = null } = {}) {
 function limpiar(html) {
   return decodificar(String(html).replace(/<[^>]+>/g, ' '), { desconocidas: ' ' })
     .replace(/\s+/g, ' ')
+    // "<strong>Calle 18</strong>, entre" dejaba "Calle 18 , entre".
+    .replace(/ ([,.;:])/g, '$1')
     .trim();
 }
 
@@ -79,14 +81,30 @@ const sinBloquesDeRuido = (html) => String(html ?? '')
   .replace(/<(script|style|nav|header|footer|aside|form|noscript|svg|figure|figcaption)[\s\S]*?<\/\1>/gi, ' ');
 
 /**
+ * Una lista de la nota (<ul> u <ol>), como un párrafo: los puntos separados
+ * por punto y coma. Es donde los medios ponen las calles de un corte, los
+ * requisitos de un trámite o los horarios (29/09: cada calle tenía menos de 50
+ * letras y el corte de luz salió sin las calles). Una lista de enlaces ("Te
+ * puede interesar", las relacionadas) no es la nota: se saltea.
+ */
+function textoDeLista(html) {
+  const puntos = [...String(html).matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)].map((m) => m[1]);
+  if (!puntos.length) return '';
+  const conEnlace = puntos.filter((p) => /<a\s/i.test(p)).length;
+  if (conEnlace * 2 >= puntos.length) return '';
+  return puntos.map(limpiar).filter(Boolean).map((t) => t.replace(/[.;]+$/, '')).join('; ').concat('.');
+}
+
+/**
  * El tramo de párrafos seguidos con más texto de la página: la nota. Los
- * párrafos cortos o de ruido no cuentan, pero tampoco cortan el tramo.
+ * párrafos cortos o de ruido no cuentan, pero tampoco cortan el tramo. Una
+ * lista de texto en el medio de la nota cuenta como un párrafo (textoDeLista).
  */
 function tramoPrincipal(html) {
   const tramos = [];
   let actual = null;
-  for (const m of html.matchAll(/<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/gi)) {
-    const t = limpiar(m[1]);
+  for (const m of html.matchAll(/<(ul|ol)\b[^>]*>[\s\S]*?<\/\1>|<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/gi)) {
+    const t = m[1] ? textoDeLista(m[0]) : limpiar(m[2]);
     if (t.length < 50 || RUIDO.test(t) || NECROLOGICA.test(t)) continue;
     const inicio = m.index;
     if (!actual || inicio - actual.fin > SALTO_MAXIMO) {
@@ -109,6 +127,8 @@ function parrafosDeAtom(xml) {
   if (!m) return null;
   const html = decodificar(m[1].replace(/<!\[CDATA\[|\]\]>/g, ''));
   return sinBloquesDeRuido(html)
+    // Una lista de texto, en un solo renglón (textoDeLista).
+    .replace(/<(ul|ol)\b[^>]*>[\s\S]*?<\/\1>/gi, (lista) => `\n${textoDeLista(lista)}\n`)
     .replace(/<(br|\/p|\/div|\/h\d|\/li|\/blockquote)[^>]*>/gi, '\n')
     .split('\n')
     .map(limpiar)

@@ -218,19 +218,25 @@ function citasDe(texto) {
 
 // ----------------------------------------------------------------- la copia
 
-/** ¿Cuántas palabras seguidas copió del original? */
-function tramoCopiado(original, nuevo) {
+/** El tramo más largo copiado del original: { largo, frase } (la frase, en las palabras normalizadas). */
+function copiaMasLarga(original, nuevo) {
   const a = palabras(original);
   const b = palabras(nuevo);
   let mejor = 0;
+  let desde = 0;
   for (let i = 0; i < b.length; i += 1) {
     for (let j = 0; j < a.length; j += 1) {
       let k = 0;
       while (i + k < b.length && j + k < a.length && b[i + k] === a[j + k]) k += 1;
-      if (k > mejor) mejor = k;
+      if (k > mejor) { mejor = k; desde = i; }
     }
   }
-  return mejor;
+  return { largo: mejor, frase: b.slice(desde, desde + mejor).join(' ') };
+}
+
+/** ¿Cuántas palabras seguidas copió del original? */
+function tramoCopiado(original, nuevo) {
+  return copiaMasLarga(original, nuevo).largo;
 }
 
 // ------------------------------------------------------------------ el juicio
@@ -712,14 +718,15 @@ export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null,
     agregar('repite', 'el cuerpo repite el copete en vez de desarrollarlo');
   }
 
-  // 8. Copiar no es reescribir.
-  const copiado = Math.max(
-    tramoCopiado(origen, nuevo?.titulo ?? ''),
-    tramoCopiado(origen, nuevo?.copete ?? ''),
-    tramoCopiado(origen, nuevo?.cuerpo ?? ''),
-  );
-  if (copiado > LIMITES.copiaMaxima) {
-    agregar('copia', `copia ${copiado} palabras seguidas del original`);
+  // 8. Copiar no es reescribir. El detalle dice QUÉ se copió (29/09): va en el
+  // pedido de corrección del segundo intento, y sin la frase la IA no sabía
+  // cuál rehacer (siete notas por día se quedaban sin cuerpo así).
+  const copia = [nuevo?.titulo, nuevo?.copete, nuevo?.cuerpo]
+    .map((t) => copiaMasLarga(origen, t ?? ''))
+    .reduce((a, b) => (b.largo > a.largo ? b : a), { largo: 0, frase: '' });
+  if (copia.largo > LIMITES.copiaMaxima) {
+    const muestra = copia.frase.split(' ').slice(0, 14).join(' ');
+    agregar('copia', `copia ${copia.largo} palabras seguidas del original ("${muestra}${copia.largo > 14 ? '…' : ''}"): decilo con otras palabras`);
   }
 
   // 9. El estilo de lo que se escribe nuevo (28/09, del repaso editorial de lo

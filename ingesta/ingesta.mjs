@@ -573,14 +573,36 @@ function clasificarPorPalabras(nota) {
   // Un feed de deportes (Radio Gabal, Clarín, La Nación) trae de todo: lo que
   // es fútbol va a Fútbol (27/09).
   if (s === 'Deportes' && esDeFutbol(nota)) return 'Fútbol';
+  // Y lo que nombra otro deporte y del fútbol sólo tiene palabras que usa
+  // cualquier deporte ("goleó", "arquero"), a Deportes (29/09).
+  if (s === 'Fútbol' && nombraOtroDeporte(nota) && !esDeFutbol(nota)) return 'Deportes';
   return s;
 }
 
 const REGLA_FUTBOL = REGLAS_SECCION.find((r) => r.seccion === 'Fútbol');
-/** ¿Es fútbol? Con una palabra firme del fútbol en el título o el comienzo. */
+
+// Las palabras del fútbol que también usan otros deportes. Solas, con otro
+// deporte nombrado, no hacen fútbol: "Pato Naranja goleó a Pampas" era rugby y
+// salió en Fútbol, porque "goleó" le ganaba a "rugby" por el orden de las
+// reglas y, si ganaba Deportes, "goleó" la volvía a pasar a Fútbol (29/09).
+const DE_CUALQUIER_DEPORTE = new Set(['goleó', 'goleo', 'gol', 'goles', 'penal', 'arquero', 'delantero',
+  'director técnico', 'ascenso', 'primera división', 'primera division']);
+const OTROS_DEPORTES = ['rugby', 'hockey', 'básquet', 'basquet', 'vóley', 'voley', 'maxivoley', 'handball',
+  'hándbol', 'handbol', 'pádel', 'padel', 'las leonas', 'los pumas', 'waterpolo'];
+
+/** ¿Nombra un deporte que no es el fútbol, en el título o el comienzo? */
+function nombraOtroDeporte(nota) {
+  const texto = normalizar(`${nota.titulo} ${String(nota.cuerpo ?? '').slice(0, 600)}`);
+  return OTROS_DEPORTES.some((p) => contiene(texto, p));
+}
+
+/** ¿Es fútbol? Con una palabra firme del fútbol en el título o el comienzo;
+ *  si nombra otro deporte, con una que no use cualquier deporte. */
 function esDeFutbol(nota) {
   const texto = normalizar(`${nota.titulo} ${String(nota.cuerpo ?? '').slice(0, 300)}`);
-  return (REGLA_FUTBOL?.palabras ?? []).some((p) => !PALABRAS_DEBILES.has(p) && contiene(texto, p));
+  const firmes = (REGLA_FUTBOL?.palabras ?? []).filter((p) => !PALABRAS_DEBILES.has(p) && contiene(texto, p));
+  if (!firmes.length) return false;
+  return !nombraOtroDeporte(nota) || firmes.some((p) => !DE_CUALQUIER_DEPORTE.has(p));
 }
 
 function clasificarSinFutbol(nota) {

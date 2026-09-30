@@ -83,7 +83,7 @@ libro de redes real del 24 y 25/09).
 ### 4. Cómo se agrega una regla
 
 1. Escribirla en este documento, en la tabla de su tema, con **el número
-   siguiente** (hoy, 84), aunque vaya en otra tabla: los números no se
+   siguiente** (hoy, 87), aunque vaya en otra tabla: los números no se
    reordenan.
 2. Escribir la prueba en el archivo del área (la tabla de abajo dice cuál) o en
    uno nuevo con un nombre que diga qué cuida.
@@ -172,7 +172,7 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 63 | **Una nota que nunca salió no se estrena si el hecho tiene más de 12 horas** (28/09, `llegaTarde`): de 140 notas del 25 al 28/09, 40 salieron con el hecho de más de un día. Lo que ya salió sigue su curso; lo que publicó una persona, también. | Prueba: `archivo.test.mjs` |
 | 65 | **Una nota tiene una sola fecha, y puede envejecer pero nunca rejuvenecer** (28/09, `fechaReal`, `fechaDeLaNota`): sin hora de la fuente, la primera vez que se vio (`web/data/vistas.json`); con hora, la más vieja conocida. Un medio que "actualiza" su nota no la devuelve a la tapa. | Prueba: `archivo.test.mjs` ("la fecha más vieja manda") |
 | 66 | **Una nota ya publicada no pierde su página por el cupo ni por los medios** (28/09, `pierdeLaPagina`): sale de las listas mientras espera, pero el enlace compartido sigue andando. Sí la pierde por rojo o por un amarillo de contenido. | Prueba: `arreglos-28-09.test.mjs` |
-| 68 | **La IA sólo reescribe lo que va a salir solo** (28/09, Hernán: "no reescribir cosas que requieran una habilitación a mano"): sólo las notas en verde, sin decisión de una persona y sin retirar a mano (`retiradas.json`). Amarillo y rojo no gastan cupo de redacción; la lectura con IA sí las lee, porque es la que decide el color. | Prueba: `reescritura.test.mjs` ("no toca una nota que no es verde", "no gasta un pedido en una nota retirada a mano") |
+| 68 | **La IA sólo reescribe lo que va a salir solo** (28/09, Hernán: "no reescribir cosas que requieran una habilitación a mano"): sólo las notas en verde, sin decisión de una persona y sin retirar a mano (`retiradas.json`). Amarillo y rojo no gastan cupo de redacción; la lectura con IA sí las lee, porque es la que decide el color. **Excepción desde el 29/09** (Hernán pidió "resúmenes nuestros" para decidir desde el celular): el borrador que la IA escribe para lo que espera a una persona, que no se publica solo, sólo con la clave gratis, un intento y hasta 30 por día (`BORRADORES_AUTOMATICOS`, `panel/celular-datos.mjs`; con `porDia: 0` se apaga). Rojo, nunca. | Prueba: `reescritura.test.mjs` ("no toca una nota que no es verde", "no gasta un pedido en una nota retirada a mano"), `celular.test.mjs` |
 | 69 | **No se junta información sin sentido** (28/09, Hernán): los lunes, en la nube, `retiradas.json` pierde las de más de 7 días que la ingesta ya no trae (`podarRetiradas`, `web/lib/archivo.js`), y el panel no guarda lo que esperó a una persona (pendiente) más de 7 días (`DIAS_DE_PENDIENTES`, `panel/notas.mjs`). Pasada una semana, una nota ya no se puede estrenar. | Prueba: `archivo.test.mjs` ("las retiradas de más de una semana…"), `panel-seguridad.test.mjs` ("lo que espera a una persona…") |
 | 70 | **Arreglos de la auditoría del 28/09**: lo de la zona conserva la página aunque lo cuente un solo medio (`deLaZona` en la nota publicada y en `tieneRespaldo`); la foto de una nota retirada a mano o que ya no está en ningún lado se borra de `web/public/fotos-notas/` (`podarFotos`); el panel de la PC no reescribe solo con IA (sólo la nube); `reels/voz.mjs` corre sola sólo con su nombre exacto. | Prueba: `auditoria-28-09.test.mjs` |
 | 71 | **Decisiones de Hernán sobre la auditoría (28/09)**: los policiales de la zona entran (con el mismo semáforo); "hospital" e "investigación" ya no frenan, y una muerte o un herido frenan sólo en Policiales, Balcarce, lo de acá o de la zona y lo de un solo medio (`amarilloMuerte`, `laMuerteFrena`); la verificación BAJA es sólo por acusaciones o, con un solo medio, por lo sin confirmar del hecho central; la negación se busca en toda la nota y acepta los verbos que niegan; un nombre escrito de otra forma en la fuente (EE.UU., ONU) no es inventado (`EQUIVALENCIAS`); la IA dice qué le importa a Balcarce sólo si la fuente lo dice. | Prueba: `auditoria-28-09.test.mjs`, `editor.test.mjs` |
@@ -188,6 +188,7 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 81 | **Lo retirado por una persona se puede volver a publicar durante 30 días, y nunca vuelve solo (29/09)**: la corrida guarda la nota como estaba (la papelera, en la caché de Actions, no en el repositorio público) y vuelve a su página, con la misma dirección, sólo si una persona la aprueba de nuevo DESPUÉS de retirarla y ya no está retirada. Que deje de estar en `retiradas.json` no alcanza: se poda sola los lunes (regla 69) (`papeleraAlDia`, `panel/celular-datos.mjs`). | Prueba: `celular.test.mjs` |
 | 82 | **El celular pregunta antes de lo que no se deshace fácil, y dice qué va a pasar (29/09)**: mandar a las redes (con las reglas de Facebook de verdad), sacarla de la cola, retirar (con el motivo), descartar, volver a publicar y publicar un cuerpo corto; el foco queda en "Cancelar" (`PREGUNTAS`, `preguntaRedes`, `web/public/panel/textos.js`). El 29/09 se mandó una nota a las redes con un toque de más y salió en Facebook. | Prueba: `celular-app.test.mjs` |
 | 83 | **Lo que el celular dice que va a contar un repaso lo elige la misma función que arma el video (29/09)**: `repasosDelDia` (`redes/repasos.mjs`), que usan `reels/plan.mjs` y la previa del celular (`previaDelDia`, `redes/previa.mjs`). Un repaso que pasó su hora sin salir no muestra notas. | Prueba: `previa-redes.test.mjs` |
+| 86 | **El verificador no tira una nota buena por cómo la revisa** (29/09): la negación del título de la fuente se busca en toda la nota también cuando se revisan el título y la bajada, que se revisan con el cuerpo vacío (`sinNegacionQueEstaEnElCuerpo`, `reels/reescritura.mjs`: dos de las ocho notas que esperaban cuerpo, Gaudio y la Federación Agraria, se caían por eso). Y cuando la IA copia, el pedido de corrección le dice qué frase copió (el motivo público de `intentos-ia.json`, no). | Prueba: `redaccion-29-09.test.mjs` |
 
 ### Qué se trae y qué es de Balcarce
 
@@ -216,6 +217,8 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 61 | **Un medio de Balcarce que copia una noticia de afuera no la vuelve "de Balcarce"**: si la cuentan también medios de afuera y ningún medio de acá nombra a Balcarce, es de afuera (`historiaDeAca`). | Prueba: `cruce-coherente.test.mjs`, `copia-de-afuera.test.mjs` |
 | 62 | **Lo que se lee de la página de un medio sin feed toma la fecha real de la nota**, y lo de más de 72 horas no se trae (`HORAS_DE_UNA_NOTA_NUEVA`). | Prueba: `criterios-extranjero-zona.test.mjs` |
 | 64 | **Lo de un medio de acá que no nombra nada de acá espera a la IA** (28/09, `mencionaAca`): mientras la lectura con IA ande y la nota nunca haya salido, no sale sola sin ficha (pasó con un referéndum de Suiza que copió una radio de acá). | Prueba: `copia-de-afuera.test.mjs` |
+| 84 | **Una lista de la nota llega a la IA** (29/09): las calles de un corte, los requisitos de un trámite, los horarios, puestos en `<ul>` u `<ol>`, se leen como un párrafo (`textoDeLista`, `ingesta/articulo.mjs`); una lista de enlaces ("Te puede interesar") no. Cada calle tenía menos de 50 letras y el corte de luz del 30/09 salió sin las calles ("distintas arterias de la ciudad"). | Prueba: `redaccion-29-09.test.mjs` |
+| 85 | **"Goleó" no hace fútbol a otro deporte** (29/09): con otro deporte nombrado (rugby, hockey, básquet, vóley…), las palabras que usa cualquier deporte ("goleó", "gol", "arquero", "penal"…) no alcanzan para Fútbol (`DE_CUALQUIER_DEPORTE`, `nombraOtroDeporte`, `ingesta/ingesta.mjs`). "Pato Naranja goleó a Pampas", de rugby, salió en Fútbol y en la cola de Facebook. | Prueba: `notas.test.mjs` |
 
 ### Las redes (detalle en `docs/07-REDES.md`)
 
@@ -290,6 +293,8 @@ qué documento cuenta ese tema.
 | `auditar-redes.test.mjs` | 21 | Comparar el libro de redes con lo que Meta tiene de verdad | Redes |
 | `auditoria-28-09.test.mjs` | 15 | Los arreglos y las decisiones de la auditoría del 28/09 (reglas 70 y 71): la zona conserva la página, fotos sin nota se borran, el panel no reescribe solo, policiales de la zona, cuándo frena una muerte, la verificación BAJA, el modelo de IA en un solo lugar | Varias |
 | `buzon.test.mjs` | 4 | Los cuatro tipos del buzón y sus reglas (el reclamo nunca de un solo lado) | Panel |
+| `celular-app.test.mjs` | 14 | La app del panel del celular: lo que escribe es lo que acepta la web, el cliente de GitHub, que exista todo lo que importa, los textos que explican cada motivo y cada pregunta, la hora de Balcarce | Panel |
+| `celular.test.mjs` | 23 | El sobre cifrado (un sobre por nota), las decisiones del celular, lo que va para decidir, los borradores automáticos, la papelera (nunca vuelve sola), las redes que aprueba una persona | Panel |
 | `checkout-main.test.mjs` | 3 | Los workflows que publican bajan la última `main` | Infraestructura |
 | `clima.test.mjs` | 19 | El dibujo de cada cielo (de noche no hay sol) y cuándo avisar helada, granizo o viento | Web / Redes |
 | `comercial.test.mjs` | 31 | La base de comercios: fichas, teléfonos, fusión sin pisar lo cargado a mano, vigencia | Comercial (`COMERCIAL.md`) |
@@ -324,7 +329,7 @@ qué documento cuenta ese tema.
 | `lectura-ia.test.mjs` | 23 | La lectura con IA: perfil, listas cerradas, topes, Groq, repetidas, nunca destraba | Selección |
 | `meta-tiempo.test.mjs` | 3 | Los pedidos a Meta tienen tiempo máximo | Redes |
 | `notas-propias.test.mjs` | 24 | La nota del dólar (sólo si se movió 2 %) y los repasos de los podcasts | Web |
-| `notas.test.mjs` | 55 | Semáforo, puntaje, secciones, medios que pide lo de afuera, cupos, limpieza del texto | Selección |
+| `notas.test.mjs` | 56 | Semáforo, puntaje, secciones ("goleó" no hace fútbol a otro deporte), medios que pide lo de afuera, cupos, limpieza del texto | Selección |
 | `panel-seguridad.test.mjs` | 17 | Control de origen, qué se deja probar, que no publique a Vercel, poda de decisiones | Panel |
 | `panel.test.mjs` | 16 | Avisos, campos editables que llegan a la web, sincronización con GitHub | Panel |
 | `pedir-clima-tiempo.test.mjs` | 3 | El pedido del clima en el navegador no se traba | Web |
@@ -336,7 +341,9 @@ qué documento cuenta ese tema.
 | `plan-vacio.test.mjs` | 1 | El plan no se cae con la lista vacía (25/09) | Redes |
 | `portada.test.mjs` | 17 | Lo que ve el lector en la portada: sin fuente arriba, horas, orden, repetidas, farmacia sin botones, `/clima` | Web |
 | `presentacion-celular.test.mjs` | 6 | El sitio en el celular: menú en una fila, tarjetas, farmacia, tipografía | Web |
+| `previa-redes.test.mjs` | 4 | La pestaña Redes del celular: el cronograma, qué cuenta cada repaso (la misma función que el plan de los videos) y la cola de Facebook | Redes / Panel |
 | `propuestas.test.mjs` | 12 | Los mensajes comerciales por WhatsApp | Comercial |
+| `redaccion-29-09.test.mjs` | 3 | La auditoría de la redacción del 29/09: la negación se busca en toda la nota, las listas de la nota llegan a la IA, la corrección dice qué frase se copió | Redacción |
 | `redes-arreglos.test.mjs` | 16 | Cinco errores de redes del 28/09, una prueba por arreglo | Redes |
 | `redes-criterio.test.mjs` | 29 | El criterio de redes: identidad, voz, saludos por horario, auditoría de voz | Redes |
 | `redes.test.mjs` | 53 | Qué se publica en Facebook e Instagram, tokens, claves, podcasts | Redes |
