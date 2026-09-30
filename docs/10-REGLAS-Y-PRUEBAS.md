@@ -83,7 +83,7 @@ libro de redes real del 24 y 25/09).
 ### 4. Cómo se agrega una regla
 
 1. Escribirla en este documento, en la tabla de su tema, con **el número
-   siguiente** (hoy, 87), aunque vaya en otra tabla: los números no se
+   siguiente** (hoy, 89), aunque vaya en otra tabla: los números no se
    reordenan.
 2. Escribir la prueba en el archivo del área (la tabla de abajo dice cuál) o en
    uno nuevo con un nombre que diga qué cuida.
@@ -188,6 +188,8 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 81 | **Lo retirado por una persona se puede volver a publicar durante 30 días, y nunca vuelve solo (29/09)**: la corrida guarda la nota como estaba (la papelera, en la caché de Actions, no en el repositorio público) y vuelve a su página, con la misma dirección, sólo si una persona la aprueba de nuevo DESPUÉS de retirarla y ya no está retirada. Que deje de estar en `retiradas.json` no alcanza: se poda sola los lunes (regla 69) (`papeleraAlDia`, `panel/celular-datos.mjs`). | Prueba: `celular.test.mjs` |
 | 82 | **El celular pregunta antes de lo que no se deshace fácil, y dice qué va a pasar (29/09)**: mandar a las redes (con las reglas de Facebook de verdad), sacarla de la cola, retirar (con el motivo), descartar, volver a publicar y publicar un cuerpo corto; el foco queda en "Cancelar" (`PREGUNTAS`, `preguntaRedes`, `web/public/panel/textos.js`). El 29/09 se mandó una nota a las redes con un toque de más y salió en Facebook. | Prueba: `celular-app.test.mjs` |
 | 83 | **Lo que el celular dice que va a contar un repaso lo elige la misma función que arma el video (29/09)**: `repasosDelDia` (`redes/repasos.mjs`), que usan `reels/plan.mjs` y la previa del celular (`previaDelDia`, `redes/previa.mjs`). Un repaso que pasó su hora sin salir no muestra notas. | Prueba: `previa-redes.test.mjs` |
+| 87 | **Los tres repasos cuentan cuatro notas y ninguno repite** (30/09, Hernán: la misma nota salió en el de la tarde y en el de la noche, y uno tenía 3 y otro 4): `PIEZAS.notasPorPodcast` = 4 para los tres; ninguno cuenta una nota ni un tema que ya contó otro repaso de hoy o de los dos días anteriores; la noche cuenta lo que dejó el día y no se contó, sin piso de relevancia. Un repaso cuya hora pasó sin salir no se lleva notas (`repasosDelDia`, `redes/repasos.mjs`). | Prueba: `previa-redes.test.mjs`, `historias-largas.test.mjs`, `piezas.test.mjs` |
+| 88 | **Todo lo que se dice es de su parte del día** (30/09, Hernán): cada pieza sale sólo dentro de su franja (mañana hasta las 12:59, tarde hasta las 18:59, noche desde las 19: `VENTANAS`, `redes/piezas.mjs`; el repaso de la mañana podía salir a las 15 diciendo "buen día"). El clima de la noche dice "Cómo sigue el clima esta noche" y la mínima de esta noche, que es la del pronóstico de mañana (la de hoy ya pasó). | Prueba: `piezas.test.mjs`, `contrato.test.mjs`, `redes-criterio.test.mjs` |
 | 86 | **El verificador no tira una nota buena por cómo la revisa** (29/09): la negación del título de la fuente se busca en toda la nota también cuando se revisan el título y la bajada, que se revisan con el cuerpo vacío (`sinNegacionQueEstaEnElCuerpo`, `reels/reescritura.mjs`: dos de las ocho notas que esperaban cuerpo, Gaudio y la Federación Agraria, se caían por eso). Y cuando la IA copia, el pedido de corrección le dice qué frase copió (el motivo público de `intentos-ia.json`, no). | Prueba: `redaccion-29-09.test.mjs` |
 
 ### Qué se trae y qué es de Balcarce

@@ -27,7 +27,7 @@ export const NOMBRES_DE_PIEZAS = {
   noticia2: 'El repaso de la tarde',
   agenda: 'La agenda del fin de semana',
   farmacia: 'La farmacia de turno',
-  'clima-noche': 'Cómo sigue el día (el clima de la noche)',
+  'clima-noche': 'Cómo sigue el clima esta noche',
   podcast: 'El repaso del día',
 };
 

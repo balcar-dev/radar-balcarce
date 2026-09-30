@@ -362,16 +362,16 @@ ni reels de una sola nota: dichas de a una sonaban raras.
 1. Sólo las que pueden salir solas (`sePuedeSola`): ni roja, ni Política ni
    Policiales, con cuerpo, que no sea nota propia, y **de Balcarce**
    (`esParaLasRedes`, la misma regla que Facebook).
-2. **Mañana y tarde:** relevancia 62 o más, **3 notas**, sin repetir lo que ya
-   se contó en un podcast de hoy o de los dos días anteriores
-   (`notasContadasEnPodcasts`). La tarde no repite las de la mañana.
-3. **Noche:** hasta **4 notas**, las más fuertes, sin piso de relevancia; puede
-   repetir lo de la mañana y la tarde (es el repaso del día), pero no lo de días
-   anteriores.
+2. **Los tres, 4 notas** (30/09; eran 3 a la mañana y a la tarde), y **ninguno
+   repite** una nota ni un tema que ya contó otro repaso de hoy o de los dos días
+   anteriores (`notasContadasEnPodcasts`, `repasosDelDia` en `redes/repasos.mjs`).
+3. **Mañana y tarde:** relevancia 62 o más. **Noche:** lo que dejó el día y
+   todavía no se contó, sin piso de relevancia. Un día flojo, un repaso sale con
+   las notas nuevas que haya (hasta 2).
 4. El mismo hecho contado por dos medios cuenta una vez (`mismoTema`: comparten
    una palabra rara de siete letras o más; más estricto que el `temaParecido`
    de Facebook, a propósito).
-5. Primero una nota por sección, para que no sean tres del mismo evento; si
+5. Primero una nota por sección, para que no sean cuatro del mismo evento; si
    sobra lugar, se completa por puntaje.
 6. **Con menos de 2 notas, ese podcast no sale** (el contrato lo marca como
    "falta" y el vigilante aclara "si ese día no había notas para contar, es

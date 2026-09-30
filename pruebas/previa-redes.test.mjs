@@ -65,7 +65,20 @@ test('qué cuenta cada repaso: lo que contó si salió; nada si ya no sale; si n
   assert.deepEqual(porNombre.podcast.notas.map((n) => n.id), delPlan.podcast.notas.map((n) => n.id));
   assert.ok(porNombre.podcast.notas.length >= 2);
   assert.ok(!porNombre.podcast.notas.some((n) => ['e', 'f'].includes(n.id)), 'ni Política ni Policiales en un repaso');
+  assert.ok(!porNombre.podcast.notas.some((n) => ['b', 'c'].includes(n.id)), 'la noche no repite lo que contó la tarde (30/09)');
   assert.ok(porNombre.podcast.segundos > 0);
+});
+
+test('los tres repasos cuentan cuatro notas cada uno y ninguno repite (30/09, Hernán)', () => {
+  const temas = ['mercado', 'biblioteca', 'hospital', 'cooperadora', 'autódromo', 'bomberos', 'polideportivo', 'carnaval', 'geriátrico', 'terminal', 'cementerio', 'balneario'];
+  const secciones = ['Balcarce', 'Cultura y agenda', 'Deportes', 'Agro'];
+  // Títulos sin palabras largas en común: si no, son "el mismo tema" y cuentan una vez.
+  const notas = temas.map((t, i) => nota(`t${i}`, `El ${t} abre hoy`, secciones[i % secciones.length], 95 - i * 3));
+  const r = repasosDelDia(notas, { libro: {}, fecha: new Date('2026-09-29T12:00:00Z') });
+  const ids = ['noticia1', 'noticia2', 'podcast'].map((nombre) => r[nombre].notas.map((n) => n.id));
+  ids.forEach((lista) => assert.equal(lista.length, 4));
+  assert.equal(new Set(ids.flat()).size, 12, 'se repitió una nota entre repasos');
+  for (const nombre of ['noticia1', 'noticia2', 'podcast']) assert.ok(r[nombre].segundos <= 55, `${nombre}: ${r[nombre].segundos} s`);
 });
 
 test('la cola de Facebook: lo que marcó una persona primero, sin lo que ya salió ni lo viejo; con las reglas para el celular', () => {

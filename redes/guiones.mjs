@@ -276,7 +276,9 @@ export function guionClima(clima, _turno, { fecha = new Date(), direccion } = {}
 
 /**
  * El segundo pase del clima (20:00): no repite el de la mañana, mira para
- * adelante. Saludo de noche, cierre de noche, nunca "buen día".
+ * adelante. Saludo de noche, cierre de noche, nunca "buen día". La mínima de
+ * esta noche es la de mañana (la de la madrugada): la de hoy casi siempre ya
+ * pasó a la mañana temprano (30/09).
  */
 export function guionClimaNoche(clima, { fecha = new Date(), direccion } = {}) {
   const s = semillaDe('clima-noche', fecha);
@@ -284,6 +286,7 @@ export function guionClimaNoche(clima, { fecha = new Date(), direccion } = {}) {
   const c = clima.ahora;
   const hoy = clima.dias[0];
   const manana = clima.dias[1];
+  const minNoche = (manana ?? hoy).min;
   const partes = [
     v(SALUDOS.noche, 'saludo'),
     v([
@@ -295,24 +298,24 @@ export function guionClimaNoche(clima, { fecha = new Date(), direccion } = {}) {
   ];
   let conToque = false;
 
-  if (hoy.min <= 2) {
+  if (minNoche <= 2) {
     conToque = true;
     partes.push(v([
-      `Se viene una noche muy fría, con mínima de ${hoy.min} y riesgo de helada. Abrigate bien.`,
-      `Esta noche puede helar: la mínima baja hasta ${hoy.min}.`,
+      `Se viene una noche muy fría, con mínima de ${minNoche} y riesgo de helada. Abrigate bien.`,
+      `Esta noche puede helar: la mínima baja hasta ${minNoche}.`,
     ], 'minima'));
-  } else if (hoy.min <= 8) {
+  } else if (minNoche <= 8) {
     conToque = true;
     partes.push(v([
-      `Esta noche refresca fuerte, baja hasta ${hoy.min}.`,
-      `La noche viene fresca: la mínima llega a ${hoy.min}.`,
-      `Hoy refresca bastante, hasta ${hoy.min} grados.`,
+      `Esta noche refresca fuerte, baja hasta ${minNoche}.`,
+      `La noche viene fresca: la mínima llega a ${minNoche}.`,
+      `Para la madrugada se esperan ${minNoche} grados.`,
     ], 'minima'));
   } else {
     partes.push(v([
-      `Esta noche la mínima va a ser de ${hoy.min} grados.`,
-      `Para la noche, mínima de ${hoy.min}.`,
-      `Hoy la mínima llega a ${hoy.min} grados.`,
+      `Esta noche la mínima va a ser de ${minNoche} grados.`,
+      `Para la noche, mínima de ${minNoche}.`,
+      `La madrugada no baja de ${minNoche} grados.`,
     ], 'minima'));
   }
 
@@ -347,7 +350,7 @@ export function guionClimaNoche(clima, { fecha = new Date(), direccion } = {}) {
     }
   }
 
-  if (hoy.min <= 8) {
+  if (minNoche <= 8) {
     partes.push(v(['Buen momento para un mate caliente.', 'Buena noche para quedarse bajo techo.'], 'toque'));
   } else if (!conToque) {
     partes.push(v(['Una noche tranquila para descansar.', 'Buena noche para salir a tomar el fresco.'], 'toque'));

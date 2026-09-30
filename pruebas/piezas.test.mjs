@@ -345,8 +345,13 @@ test('a cada hora toca lo que corresponde', () => {
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('07:35'), libro })), ['clima-manana']);
   // El clima de la mañana sigue valiendo hasta las 11:30.
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('10:05'), libro })), ['clima-manana', 'noticia1']);
-  // El reel de las 15:00 sigue valiendo hasta las 20:00.
-  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('19:05'), libro })), ['noticia2', 'farmacia']);
+  // El reel de las 15:00 vale hasta las 19:00, lo que dura la tarde: a las 19:05
+  // ya diría "buenas tardes" de noche (30/09).
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('18:35'), libro })), ['noticia2']);
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('19:05'), libro })), ['farmacia']);
+  // El de la mañana, hasta las 13:00.
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('12:50'), libro })).includes('noticia1'), true);
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('13:05'), libro })).includes('noticia1'), false);
   // La farmacia de las 19:00 todavía está en su ventana (hasta las 21:00): si no salió, toca.
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('20:35'), libro })), ['farmacia', 'clima-noche', 'podcast']);
 });
@@ -412,12 +417,8 @@ test('una nota contada en un podcast no vuelve a un podcast de otro día, mientr
   // Cuatro días después ya no cuenta (fuera de la ventana de `dias`).
   const cuatroDiasDespues = new Date('2026-09-25T10:00:00-03:00');
   assert.ok(!notasContadasEnPodcasts(libro, cuatroDiasDespues, 3).has('mccain'));
-  // El podcast de la NOCHE del mismo lunes sí puede repasar lo que contó el
-  // de la mañana (es el repaso del día entero): con incluirHoy: false no cuenta.
-  assert.ok(!notasContadasEnPodcasts(libro, LUNES('20:00'), 3, { incluirHoy: false }).has('mccain'));
-  // Pero el podcast de la mañana del día SIGUIENTE, con incluirHoy: false
-  // (busca sólo lo de antes), también la ve como ya contada.
-  assert.ok(notasContadasEnPodcasts(libro, martes, 3, { incluirHoy: false }).has('mccain'));
+  // Y el de la NOCHE del mismo lunes tampoco la repite (30/09: antes podía).
+  assert.ok(notasContadasEnPodcasts(libro, LUNES('20:00')).has('mccain'));
 });
 
 

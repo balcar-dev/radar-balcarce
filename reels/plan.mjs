@@ -288,12 +288,15 @@ export function planDelDia(datos, {
   }
 
   // Segundo pase: de noche, cuando la gente ya está en casa y lo que
-  // importa es cómo amanece mañana.
+  // importa es cómo amanece mañana. "Cómo sigue el clima esta noche" y no "cómo
+  // sigue el día": a las 20 el día ya pasó (30/09, Hernán). La mínima de esta
+  // noche es la de mañana: el pronóstico da una por día y la de mañana es la
+  // de la madrugada; la de hoy casi siempre ya pasó.
   if (datos.clima && tocaHoy('clima-noche')) {
     const hoy = climaHoy;
     const manana = climaManana;
     piezas.push({
-      tipo: 'historia', hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el día',
+      tipo: 'historia', hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el clima esta noche',
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaNoche(datos.clima),
       momento: 'noche', indicacion: INDICACIONES.noche,
@@ -307,12 +310,12 @@ export function planDelDia(datos, {
         rumbo: c.rumbo ?? '',
         max: hoy.max,
         min: hoy.min,
-        fecha: 'Cómo sigue el día',
+        fecha: 'Cómo sigue el clima esta noche',
         kicker: 'Esta noche en Balcarce',
         etiqueta: 'Ahora',
         pronostico: manana ? { titulo: 'Mañana', texto: pronosticoDe(manana) } : null,
         cajas: [
-          { titulo: 'ESTA NOCHE', valor: `${hoy.min}°`, secundario: 'mín.' },
+          { titulo: 'ESTA NOCHE', valor: `${(manana ?? hoy).min}°`, secundario: 'mín.' },
           ...(manana ? [cajaDeDia(manana, 'MAÑANA')] : []),
           ...(datos.clima.dias[2] ? [cajaDeDia(datos.clima.dias[2])] : []),
         ],
@@ -395,9 +398,9 @@ export function planDelDia(datos, {
   const hechas = piezasPublicadasHoy(libro, fecha);
 
   // Tres podcasts por día en vez de noticias sueltas (24/09: una noticia sola
-  // dicha en voz alta sonaba rara). Mañana y tarde cuentan tres notas de temas
-  // distintos, sin repetir entre sí; el de la noche repasa lo más fuerte del
-  // día. Cada uno lleva su lista de notas con el enlace en el texto del posteo,
+  // dicha en voz alta sonaba rara). Los tres cuentan cuatro notas de temas
+  // distintos, sin repetir entre sí (30/09); el de la noche, lo que dejó el día
+  // y no se contó. Cada uno lleva su lista de notas con el enlace en el texto del posteo,
   // y sin nombrar la fuente. Cada podcast se sube también como historia.
   // La lista (nombre, título, momento, hora) es una sola: PODCASTS, en
   // redes/piezas.mjs. Cada uno habla como corresponde a su hora: el saludo, el
@@ -430,12 +433,11 @@ export function planDelDia(datos, {
     });
   });
 
-  // El podcast de la noche: el repaso de lo más fuerte del día. Sale cuando la
+  // El podcast de la noche: el repaso de lo que dejó el día. Sale cuando la
   // gente ya vio todo y quiere el resumen. Si ese día no hay al menos dos
   // noticias para repasar, no se arma.
   // También con presupuesto: el del 25/09 (4 notas, 62,7 s) dejó sin historia a las dos redes.
-  // Puede repasar lo que ya contó el podcast de la mañana o el de la tarde
-  // DE HOY (es el repaso del día entero), pero no lo de días anteriores.
+  // Desde el 30/09 no repite lo que ya contaron el de la mañana o el de la tarde.
   const repasoNoche = repasos[podcastNoche.nombre];
   if (repasoNoche) {
     const notasNoche = repasoNoche.notas;

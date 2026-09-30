@@ -6,47 +6,49 @@
 // repaso si saliera ahora. Sin dependencias: se prueba sin nada instalado.
 //
 // Las reglas de fondo (nada de Política ni Policiales, sólo lo de Balcarce, temas
-// distintos, sin repetir lo que se contó en los últimos días, el presupuesto de
-// 55 segundos) están en redes/elegir.mjs.
+// distintos, el presupuesto de 55 segundos) están en redes/elegir.mjs.
 
-import { elegirParaPodcast, repasoConPresupuesto } from './elegir.mjs';
-import { PODCASTS, piezasPublicadasHoy, notasContadasEnPodcasts } from './piezas.mjs';
+import { elegirParaPodcast, repasoConPresupuesto, REGLAS_PIEZAS } from './elegir.mjs';
+import {
+  PODCASTS, piezasPublicadasHoy, notasContadasEnPodcasts, ventanaDe,
+} from './piezas.mjs';
 import { PIEZAS } from '../ingesta/criterio.mjs';
+import { minutoDelDiaAR, minutosDeHora } from '../ingesta/zona.mjs';
+
+/** ¿Ya pasó la hora de este repaso (su ventana)? Si no salió, hoy ya no sale. */
+const yaPasoSuHora = (ronda, fecha) => minutoDelDiaAR(fecha) >= minutosDeHora(ronda.hora) + ventanaDe(ronda.nombre);
 
 /**
  * Los repasos que todavía no salieron hoy, con sus notas: { nombre:
  * repasoConPresupuesto(...) } (guion, notas, segundos…). `publicables` son las
  * notas que pueden entrar (lo ya publicado en la web), de más a menos relevantes.
  *
- * El de la mañana y el de la tarde cuentan tres notas de temas distintos, sin
- * repetir entre sí ni lo contado en los últimos días. El de la noche repasa lo
- * más fuerte del día: puede repetir lo de la mañana o la tarde de hoy, no lo de
- * días anteriores, y no pide relevancia mínima. Un repaso de menos de dos notas
- * no sale.
+ * Los tres cuentan cuatro notas de temas distintos (PIEZAS.notasPorPodcast), y
+ * ninguno repite una nota ni un tema que ya contó otro repaso de hoy o de los dos
+ * días anteriores (30/09, Hernán: la misma nota salió en el de la tarde y en el de
+ * la noche). El de la noche repasa lo que dejó el día y todavía no se contó, sin
+ * piso de relevancia. Con menos notas, el repaso sale con las que haya; con
+ * menos de dos, no sale. Un repaso cuya hora ya pasó sin salir no se lleva
+ * notas: quedan para los que siguen.
  */
 export function repasosDelDia(publicables = [], { libro = null, fecha = new Date() } = {}) {
   const hechas = piezasPublicadasHoy(libro, fecha);
   const contadas = notasContadasEnPodcasts(libro, fecha);
+  // Lo ya contado se excluye por la nota y por el tema: otra nota del mismo
+  // partido tampoco vuelve a salir.
+  const yaContadas = publicables.filter((n) => contadas.has(n.id));
   const libres = publicables.filter((n) => !contadas.has(n.id));
-  const [manana, tarde, noche] = PODCASTS;
   const salida = {};
-  const yaContadas = [];
-  for (const ronda of [manana, tarde]) {
-    if (hechas.has(ronda.nombre)) continue;
+  for (const ronda of PODCASTS) {
+    if (hechas.has(ronda.nombre) || yaPasoSuHora(ronda, fecha)) continue;
+    const reglas = ronda.momento === 'noche' ? { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 } : REGLAS_PIEZAS;
     const repaso = repasoConPresupuesto(
-      elegirParaPodcast(libres, { cuantas: PIEZAS.notasPorPodcast, excluir: yaContadas }), { momento: ronda.momento, fecha },
+      elegirParaPodcast(libres, { cuantas: PIEZAS.notasPorPodcast, excluir: yaContadas }, reglas),
+      { momento: ronda.momento, fecha },
     );
     if (!repaso) continue;
     yaContadas.push(...repaso.notas);
     salida[ronda.nombre] = repaso;
   }
-  const contadasAntes = notasContadasEnPodcasts(libro, fecha, 3, { incluirHoy: false });
-  const delDia = elegirParaPodcast(
-    publicables.filter((n) => !contadasAntes.has(n.id)),
-    { cuantas: PIEZAS.notasPodcastNoche },
-    { relevanciaParaPodcast: 0 },
-  );
-  const repasoNoche = repasoConPresupuesto(delDia, { momento: noche.momento, fecha });
-  if (repasoNoche && !hechas.has(noche.nombre)) salida[noche.nombre] = repasoNoche;
   return salida;
 }

@@ -45,14 +45,20 @@ export const VENTANA_MINUTOS = 120;
  * Lo que sí caduca (el clima "de hoy" de la mañana) se deja más corto, para no
  * publicar viejo. El aviso de clima tiene la suya (VENTANA_AVISO, más abajo).
  */
+// Cada pieza sale dentro de su parte del día (30/09, Hernán: "que siempre lo que
+// se diga tenga en cuenta si es mañana, tarde o noche"): el saludo, el cierre y
+// lo que dice son los de su hora (momentoDeHora: mañana hasta las 12:59, tarde
+// hasta las 18:59, noche desde las 19), así que una pieza de la mañana no puede
+// salir a las 14 diciendo "buen día". Si se le pasa la franja, ese día no sale.
 const VENTANAS = {
   'clima-manana': 240, // 7:30 → 11:30
-  noticia1: 300,       // 10:00 → 15:00
-  noticia2: 300,       // 15:00 → 20:00
+  noticia1: 180,       // 10:00 → 13:00 (hasta el 30/09, hasta las 15)
+  noticia2: 240,       // 15:00 → 19:00 (hasta el 30/09, hasta las 20)
   farmacia: 300,       // 19:00 → 24:00
   'clima-noche': 240,  // 20:00 → 24:00
   podcast: 210,        // 20:30 → 24:00
-  utiles: 300,         // 11:00 → 16:00
+  utiles: 120,         // 11:00 → 13:00 (hasta el 30/09, hasta las 16)
+  agenda: 60,          // 18:00 → 19:00, los jueves
 };
 
 /**
@@ -257,15 +263,12 @@ const PIEZAS_DE_PODCAST = new Set(NOMBRES_DE_PODCAST);
  * que un repaso no vuelva a contar la misma historia mientras siga siendo
  * noticia. Sin esto, una nota local con puntaje alto se repetía en el
  * podcast de la mañana, el de la tarde y el de la noche de tres días
- * seguidos (27/09, Hernán: "veo de nuevo la nota de McCain").
- *
- * `incluirHoy = false` arranca la cuenta ayer: lo sirve el podcast de la
- * noche, que sí puede repasar lo que ya contaron el de la mañana o el de la
- * tarde DE HOY (es el repaso del día entero), pero no lo de días anteriores.
+ * seguidos (27/09, Hernán: "veo de nuevo la nota de McCain"). Cuenta también
+ * lo de hoy: desde el 30/09 el repaso de la noche tampoco repite lo que contaron
+ * el de la mañana o el de la tarde.
  */
-export function notasContadasEnPodcasts(libro, fecha = new Date(), dias = 3, { incluirHoy = true } = {}) {
-  const arranca = incluirHoy ? 0 : 1;
-  const dentro = new Set(Array.from({ length: dias }, (_, i) => diaAR(new Date(fecha.getTime() - (i + arranca) * 86400e3))));
+export function notasContadasEnPodcasts(libro, fecha = new Date(), dias = 3) {
+  const dentro = new Set(Array.from({ length: dias }, (_, i) => diaAR(new Date(fecha.getTime() - i * 86400e3))));
   return new Set(
     Object.entries(libro?.instagram ?? {})
       .filter(([clave]) => {

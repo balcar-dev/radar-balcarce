@@ -802,8 +802,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Facebook: horas de vida de una nota para salir | 8 | `FACEBOOK.edadMaximaHoras` |
 | Facebook: horas sin repetir un tema | 24 | `FACEBOOK.horasSinRepetirTema` |
 | Podcasts: relevancia mínima | 62 | `PIEZAS.relevanciaPodcast` |
-| Podcast de la mañana y de la tarde: notas | 3 | `PIEZAS.notasPorPodcast` |
-| Podcast de la noche: notas | 4 | `PIEZAS.notasPodcastNoche` |
+| Podcasts (los tres repasos): notas | 4 | `PIEZAS.notasPorPodcast` |
 | Podcast: notas mínimas para que salga | 2 | `PIEZAS.notasMinimasPodcast` |
 | Contrato del día: posteos de notas, como máximo | 5 | `CONTRATO_DIARIO.posteosPorDia` |
 | Contrato del día: reels (los tres podcasts) | 3 | `CONTRATO_DIARIO.reelsPorDia` |

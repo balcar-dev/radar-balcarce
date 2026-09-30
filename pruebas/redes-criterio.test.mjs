@@ -46,7 +46,7 @@ import { planDelDia } from '../reels/plan.mjs';
 // historias-largas.test.mjs), y el de la noche con las notas que elige el plan.
 const guionRepaso = (notas, opciones) => repasoConPresupuesto(notas, { ...opciones, presupuesto: Infinity })?.guion ?? null;
 const guionPodcast = (notas, { fecha } = {}) => repasoConPresupuesto(
-  elegirParaPodcast(notas, { cuantas: criterio.PIEZAS.notasPodcastNoche }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 }),
+  elegirParaPodcast(notas, { cuantas: criterio.PIEZAS.notasPorPodcast }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 }),
   { momento: 'noche', fecha },
 )?.guion ?? null;
 
@@ -498,6 +498,19 @@ test('el pie de un reel lleva radarbalcarce.com escrito y nunca la frase de la v
 
 // --------------------------------------------------- el plan completo
 
+test('el clima de la noche dice la mínima de esta noche (la de mañana temprano), no la de hoy, que ya pasó (30/09)', () => {
+  const clima = {
+    ahora: { temp: 12, cielo: 'Despejado', esDeDia: false, viento: 10 },
+    dias: [{ fecha: '2026-09-29', max: 14, min: 9, lluvia: 0 }, { fecha: '2026-09-30', max: 13, min: 3, lluvia: 0 }],
+  };
+  for (let d = 1; d <= 7; d += 1) {
+    const g = guionClimaNoche(clima, { fecha: new Date(`2026-10-0${d}T23:00:00Z`) });
+    assert.match(g, /\b3\b/, g);
+    assert.ok(!/\b9\b/.test(g), `dijo la mínima de hoy: ${g}`);
+    assert.ok(!/\bhoy\b/i.test(g), `a la noche no se habla de "hoy": ${g}`);
+  }
+});
+
 test('todas las piezas del plan hablan según su horario y cumplen el criterio', () => {
   const hoy = fechaEnBalcarce().dia; // el día de Balcarce, no el del servidor (UTC)
   const datos = {
@@ -505,7 +518,11 @@ test('todas las piezas del plan hablan según su horario y cumplen el criterio',
     farmacias: { turnos: [{ ...TURNO_DOS, dia: hoy }] },
     notas: Array.from({ length: 14 }, (_, i) => nota(`p${i}`, `Nota número ${['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce'][i]} del día en ${['la plaza', 'el museo', 'el club', 'la escuela', 'el hospital', 'la ruta', 'el parque', 'el teatro', 'la feria', 'el puerto', 'la biblioteca', 'el barrio', 'el campo', 'el centro'][i]}`, ['Balcarce', 'Deportes', 'Servicios', 'Cultura y agenda', 'Agro', 'Salud', 'Economía'][i % 7], { relevancia: 95 - i })),
   };
-  const { piezas } = planDelDia(datos);
+  // A las 9 de la mañana: los tres repasos todavía no pasaron su hora (uno que ya
+  // la pasó sin salir no se arma: 30/09).
+  const { anio, mes } = fechaEnBalcarce();
+  const nueve = new Date(`${anio}-${String(mes).padStart(2, '0')}-${String(hoy).padStart(2, '0')}T09:00:00-03:00`);
+  const { piezas } = planDelDia(datos, { fecha: nueve });
   const porNombre = Object.fromEntries(piezas.map((p) => [p.nombre, p]));
   for (const nombre of ['clima-manana', 'clima-noche', 'farmacia', 'noticia1', 'noticia2', 'podcast']) {
     assert.ok(porNombre[nombre], `el plan no armó ${nombre}`);

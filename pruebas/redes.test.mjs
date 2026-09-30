@@ -338,7 +338,7 @@ function guionRepaso(notas, opciones) {
 
 /** El podcast de la noche: elige las notas como el plan y arma el guion con su presupuesto. */
 function guionPodcast(notas, { fecha } = {}) {
-  const elegidas = elegirParaPodcast(notas, { cuantas: PIEZAS.notasPodcastNoche }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 });
+  const elegidas = elegirParaPodcast(notas, { cuantas: PIEZAS.notasPorPodcast }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 });
   return repasoConPresupuesto(elegidas, { momento: 'noche', fecha })?.guion ?? null;
 }
 
@@ -409,10 +409,10 @@ test('"Balcarce" no alcanza para decir que dos notas son lo mismo', () => {
   );
 });
 
-test('el podcast de la mañana o de la tarde cuenta tres notas como máximo', () => {
+test('cada podcast cuenta cuatro notas como máximo (30/09: eran tres a la mañana y a la tarde)', () => {
   const temas = ['mercado', 'biblioteca', 'hospital', 'cooperadora', 'autódromo', 'bomberos', 'polideportivo', 'carnaval'];
   const notas = temas.map((t, i) => n(`x${i}`, `El ${t} abre hoy`, 'Balcarce', 90 - i));
-  assert.equal(elegirParaPodcast(notas).length, 3);
+  assert.equal(elegirParaPodcast(notas).length, 4);
 });
 
 test('el podcast repasa los titulares del día y no inventa nada', () => {
