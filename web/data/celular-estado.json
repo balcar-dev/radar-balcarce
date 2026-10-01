@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T18:06:13.456Z",
- "portada": 61,
- "archivo": 729,
+ "generado": "2026-10-01T18:35:04.830Z",
+ "portada": 66,
+ "archivo": 734,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-01T18:06:13.492Z",
+  "generado": "2026-10-01T18:35:04.862Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-01T18:09:10.520Z"
    },
    {
     "nombre": "agenda",
@@ -115,8 +115,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 48,
+    "salio": "2026-10-01T18:09:10.520Z",
+    "segundos": null,
     "notas": [
      {
       "id": "367tdt",
@@ -150,24 +150,24 @@
     "segundos": 52,
     "notas": [
      {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "iheoi7",
       "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
       "seccion": "Fútbol"
      },
      {
-      "id": "1ckhubg",
-      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
       "seccion": "Deportes"
      },
      {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -195,7 +195,14 @@
      "cuando": "2026-10-01T17:03:32.167Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "alddw5",
+     "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 1,
    "proximoDesde": "2026-10-01T18:33:32.167Z",
    "porDia": 5,
