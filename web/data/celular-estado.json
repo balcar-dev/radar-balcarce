@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T17:32:44.313Z",
- "portada": 55,
- "archivo": 724,
- "esperandoCuerpo": 10,
+ "generado": "2026-10-01T18:06:13.456Z",
+ "portada": 61,
+ "archivo": 729,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-01T17:32:44.350Z",
+  "generado": "2026-10-01T18:06:13.492Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -114,29 +114,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 50,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "367tdt",
+      "titulo": "Lionel Messi compra el Club Deportivo Eldense de España",
+      "seccion": "Fútbol"
+     },
      {
       "id": "15i90co",
       "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
       "seccion": "Balcarce"
      },
      {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "iheoi7",
-      "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "1sko7lj",
       "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
       "seccion": "Deportes"
+     },
+     {
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -147,27 +147,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 52,
     "notas": [
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "id": "iheoi7",
+      "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1ckhubg",
+      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
+      "seccion": "Deportes"
      },
      {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -195,14 +195,7 @@
      "cuando": "2026-10-01T17:03:32.167Z"
     }
    ],
-   "cola": [
-    {
-     "id": "1dbyjp1",
-     "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-     "seccion": "Balcarce",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 1,
    "proximoDesde": "2026-10-01T18:33:32.167Z",
    "porDia": 5,
