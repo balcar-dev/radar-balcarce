@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T23:20:42.887Z",
+  "generado": "2026-10-01T23:31:35.219Z",
   "notas": [
     {
       "id": "12mca8c",
@@ -73,6 +73,7 @@
       "medios": [
         "Clarín",
         "Infobae",
+        "Olé",
         "El Día"
       ],
       "enlace": "https://www.clarin.com/deportes/conocio-trailer-pelicula-documental-paso-carlos-bilardo-sevilla-comienzos-decada-90_0_tjCErOixQY.html",
@@ -80,7 +81,7 @@
       "fecha": "2026-10-01T20:03:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T22:01:24.337Z",
-      "relevancia": 68,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -367,11 +368,11 @@
       "copete": "El banco de desarrollo aprobó dos préstamos destinados a financiar obras de modernización en la red subterránea porteña y la transformación de la Ruta 40 en San Juan.",
       "cuerpo": "El banco de desarrollo de América Latina y el Caribe aprobó dos préstamos por un total de 305 millones de dólares destinados a obras de infraestructura en Buenos Aires y San Juan.\n\nEl financiamiento incluye 145 millones de dólares para la primera etapa de modernización de la Línea B de subterráneos, que contempla la adquisición de 29 formaciones nuevas y mejoras eléctricas con garantía de la Nación. Otros 160 millones de dólares se asignan al Programa de Conectividad para la Integración Regional en San Juan para convertir 50 kilómetros de la Ruta 40 en una autopista de doble calzada.",
       "guion": "La CAF aprueba créditos por 305 millones de dólares para subte y ruta.",
-      "seccion": "Política",
+      "seccion": "Argentina",
       "medios": [
         "Infobae",
-        "El Cronista",
         "Perfil",
+        "El Cronista",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/01/la-caf-aprobo-creditos-por-usd-305-millones-para-la-linea-b-de-subte-y-la-ruta-40-en-san-juan/",
@@ -672,8 +673,8 @@
       "guion": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
       "seccion": "Política",
       "medios": [
-        "El Eco de Tandil",
         "Perfil",
+        "El Eco de Tandil",
         "Infobae",
         "Radio Mitre"
       ],
@@ -682,7 +683,7 @@
       "fecha": "2026-10-01T17:50:05.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T21:38:14.044Z",
-      "relevancia": 43,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3254,7 +3255,6 @@
       "guion": "Lionel Messi compra el Club Deportivo Eldense de España",
       "seccion": "Fútbol",
       "medios": [
-        "Olé",
         "Clarín",
         "0223 (Mar del Plata)",
         "La Nación",
@@ -3264,6 +3264,7 @@
         "Página/12",
         "A24",
         "TyC Sports",
+        "Olé",
         "Crónica",
         "Radio Mitre",
         "Canal 26",
@@ -3560,8 +3561,8 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Ámbito",
         "Noticias Agropecuarias",
+        "Ámbito",
         "La Nueva",
         "La Nación",
         "Infocampo",
@@ -4067,11 +4068,14 @@
       "seccion": "Economía",
       "medios": [
         "Agencia DIB",
+        "La Nación",
         "Infobae",
         "Ámbito",
         "Perfil",
         "El Destape",
         "C5N",
+        "La Voz del Pueblo",
+        "Crónica",
         "Clarín"
       ],
       "enlace": "https://www.ambito.com/economia/el-gobierno-mantiene-los-subsidios-la-luz-y-el-gas-octubre-y-aplica-subas-debajo-del-25-n6328745",
@@ -4601,9 +4605,7 @@
         "TN (Todo Noticias)",
         "El Destape",
         "TyC Sports",
-        "Olé",
         "Radio Mitre",
-        "Doble Amarilla",
         "Bolavip Argentina",
         "La Capital (Rosario)"
       ],
@@ -4831,8 +4833,8 @@
       "guion": "Milei impulsa la inteligencia artificial con menos regulación en el país",
       "seccion": "Tecnología",
       "medios": [
-        "Ámbito",
-        "Diario Popular"
+        "Diario Popular",
+        "Ámbito"
       ],
       "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
       "teniaImagenLaFuente": true,
@@ -5629,10 +5631,10 @@
     "Cultura y agenda",
     "Deportes",
     "Economía",
+    "Argentina",
     "Política",
     "Fútbol",
     "Tecnología",
-    "Argentina",
     "Agro",
     "Automovilismo"
   ],
@@ -5662,10 +5664,10 @@
     "ahora": {
       "temp": 7,
       "sensacion": 3,
-      "humedad": 77,
+      "humedad": 79,
       "viento": 14,
       "rumbo": "SO",
-      "cielo": "Mayormente despejado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": false
     },
     "dias": [
@@ -6037,6 +6039,12 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
+      "id": "1772fhd",
+      "titulo": "El Municipio explicó por qué intervino ante la venta de…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "1vy0a0a",
       "titulo": null,
       "seccion": "Policiales",
@@ -6077,12 +6085,6 @@
       "titulo": "También en Europa: Villarruel llegó a España para…",
       "seccion": "Política",
       "motivo": "parece promoción, no noticia: \"participá del\""
-    },
-    {
-      "id": "1y6p08i",
-      "titulo": "Un vuelo a Israel aterrizó de emergencia en Arabia: un…",
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"apuñalado\""
     },
     {
       "id": "1j0dp81",
@@ -6145,5 +6147,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 9
+  "esperandoCuerpo": 8
 }
