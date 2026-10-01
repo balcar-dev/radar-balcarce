@@ -262,18 +262,12 @@ test('16b · con el token muerto no se insiste con la historia', async () => {
 
 const conUtiles = (fecha, estado = {}) => cronogramaDelDia(AR(fecha), { estado }).some((p) => p.nombre === 'utiles');
 
-test('16c · los útiles tocan el día que rota: viernes 25/09 sí; martes 29/09 no; lunes 28/09 sí', () => {
-  assert.equal(diaRotativoDeUtiles(AR('2026-09-25')), 5);
-  assert.equal(conUtiles('2026-09-25'), true, 'el viernes 25/09 tocaba (el reloj lo dijo desde las 11)');
-  assert.equal(conUtiles('2026-09-28'), true, 'la semana siguiente le toca al lunes');
-  assert.equal(conUtiles('2026-09-29'), false, 'el martes ya no');
-  for (const d of ['2026-09-21', '2026-09-22', '2026-09-23', '2026-09-24', '2026-09-26', '2026-09-27']) assert.equal(conUtiles(d), false, d);
-  // Sólo un día de lunes a viernes por semana; rota: martes 6/10, miércoles 14/10, jueves 22/10.
-  assert.equal(conUtiles('2026-10-06'), true);
-  assert.equal(conUtiles('2026-10-14'), true);
-  assert.equal(conUtiles('2026-10-22'), true);
+test('16c · los útiles tocan los sábados, fijos (1/10: antes rotaban de lunes a viernes)', () => {
+  assert.equal(diaRotativoDeUtiles(AR('2026-09-25')), 6);
+  assert.equal(conUtiles('2026-09-26'), true, 'sábado 26/09: sí');
+  assert.equal(conUtiles('2026-10-03'), true, 'y el sábado siguiente');
+  for (const d of ['2026-09-21', '2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25', '2026-09-27', '2026-09-28', '2026-09-29']) assert.equal(conUtiles(d), false, d);
 });
-
 test('16c · una sola fuente: el reloj, `toca` del panel y ingesta/utiles.mjs dicen lo mismo, todos los días', () => {
   const utiles = horariosDe({}).find((h) => h.id === 'utiles');
   for (let d = 0; d < 60; d += 1) {
@@ -282,17 +276,17 @@ test('16c · una sola fuente: el reloj, `toca` del panel y ingesta/utiles.mjs di
     assert.equal(toca(utiles, f, { estado: {} }), reloj, `toca() vs reloj el ${f.toISOString()}`);
     assert.equal(tocaHoy(f), reloj, `tocaHoy() vs reloj el ${f.toISOString()}`);
   }
-  assert.equal(diaDeEstaSemana(AR('2026-09-23')), 'viernes', 'el panel muestra el mismo día que el reloj');
+  assert.equal(diaDeEstaSemana(AR('2026-09-23')), 'sábado', 'el panel muestra el mismo día que el reloj');
 });
 
 test('16c · si Hernán fija el día a mano en el panel, manda ese: ni rota ni suma el rotativo', () => {
   const estado = { horarios: { utiles: { dias: [2] } } }; // martes
   assert.equal(conUtiles('2026-09-29', estado), true, 'martes 29/09 fijado a mano');
-  assert.equal(conUtiles('2026-09-25', estado), false, 'el viernes rotativo ya no cuenta');
+  assert.equal(conUtiles('2026-09-26', estado), false, 'el sábado fijo ya no cuenta');
   assert.equal(toca(horariosDe(estado).find((h) => h.id === 'utiles'), AR('2026-09-29'), { estado }), true);
   // Apagada, no toca ningún día.
   const apagada = { horarios: { utiles: { activa: false } } };
-  assert.equal(conUtiles('2026-09-25', apagada), false);
+  assert.equal(conUtiles('2026-09-26', apagada), false);
 });
 
 const DATOS = (dia) => ({
@@ -303,10 +297,11 @@ const DATOS = (dia) => ({
 
 test('16c · el plan arma la historia de útiles el día que toca y no el que no toca; lo que dice el reloj, el plan lo arma', () => {
   const armadas = (fecha, estado = {}) => planDelDia(DATOS(AR(fecha).getDate()), { fecha: AR(fecha), estado }).piezas.filter((p) => p.tipo === 'historia' && !p.fueraDeTecho).map((p) => p.nombre);
-  assert.ok(armadas('2026-09-25').includes('utiles'), 'viernes 25/09: sí');
+  assert.ok(armadas('2026-09-26').includes('utiles'), 'sábado 26/09: sí');
+  assert.ok(!armadas('2026-09-25').includes('utiles'), 'viernes 25/09: no');
   assert.ok(!armadas('2026-09-29').includes('utiles'), 'martes 29/09: no');
   assert.ok(armadas('2026-09-29', { horarios: { utiles: { dias: [2] } } }).includes('utiles'), 'martes fijado a mano: sí');
-  const util = planDelDia(DATOS(25), { fecha: AR('2026-09-25'), estado: {} }).piezas.find((p) => p.nombre === 'utiles');
+  const util = planDelDia(DATOS(26), { fecha: AR('2026-09-26'), estado: {} }).piezas.find((p) => p.nombre === 'utiles');
   assert.ok(util.svg && util.guion && util.acento, 'la pieza está completa (antes se caía con ReferenceError por un color perdido)');
 
   // Todo lo que el reloj espera de las historias fijas, el plan lo tiene armado.
@@ -344,16 +339,16 @@ test('16d · en el plan, el día no pasa de 8 historias: con aviso grave y agend
   const notas = Array.from({ length: 10 }, (_, i) => ({
     id: `q${i}`, seccion: ['Balcarce', 'Deportes', 'Servicios', 'Agro', 'Salud'][i % 5], relevancia: 90 - i, semaforo: 'verde', local: true, temas: [], guion: true, titulo: `${TEMAS[i]} en la zona`, copete: '',
   }));
-  const datos = DATOS(25);
+  const datos = DATOS(26); // sábado: los útiles son fijos los sábados (1/10)
   datos.notas = notas;
-  const sinAviso = planDelDia(datos, { fecha: AR('2026-09-25', '09:00'), estado: SIN_PARTICIPA }).piezas;
+  const sinAviso = planDelDia(datos, { fecha: AR('2026-09-26', '09:00'), estado: SIN_PARTICIPA }).piezas;
   assert.ok(sinAviso.find((p) => p.nombre === 'utiles') && !sinAviso.find((p) => p.nombre === 'utiles').fueraDeTecho);
   const cuenta = (piezas) => new Set(piezas.filter((p) => !p.fueraDeTecho && (p.tipo === 'historia' || p.tipo === 'reel')).map((p) => p.nombre)).size;
   assert.equal(cuenta(sinAviso), 7);
 
   // Con un aviso grave, sin agenda, son 8 y entra todo.
-  const conAviso = { ...datos, clima: { ...datos.clima, dias: [{ fecha: '2026-09-25', max: 20, min: -6, lluvia: 30, codigo: 3, viento: 15 }, datos.clima.dias[1]] } };
-  const plan = planDelDia(conAviso, { fecha: AR('2026-09-25', '09:00'), estado: SIN_PARTICIPA }).piezas;
+  const conAviso = { ...datos, clima: { ...datos.clima, dias: [{ fecha: '2026-09-26', max: 20, min: -6, lluvia: 30, codigo: 3, viento: 15 }, { ...datos.clima.dias[1], fecha: '2026-09-27' }] } };
+  const plan = planDelDia(conAviso, { fecha: AR('2026-09-26', '09:00'), estado: SIN_PARTICIPA }).piezas;
   const aviso = plan.find((p) => p.nombre.startsWith('aviso'));
   assert.ok(aviso, 'el aviso de helada fuerte sale');
   assert.equal(aviso.fueraDeTecho, undefined);

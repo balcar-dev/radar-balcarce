@@ -238,11 +238,11 @@ test('el reloj de Meta va por red: que falte todo en Facebook no toca a Instagra
 
 test('los semanales van aparte: los teléfonos útiles no cuentan en las 6 historias', () => {
   // Buscar un día en que la rotación ponga los útiles.
-  const dias = ['2026-09-21', '2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25'];
+  const dias = ['2026-09-21', '2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25', '2026-09-26'];
   const conUtiles = dias.find((d) => piezasDelContrato(d).some((p) => p.semanal));
-  assert.ok(conUtiles, 'algún día de lunes a viernes tiene los útiles');
+  assert.equal(conUtiles, '2026-09-26', 'los útiles salen los sábados');
   const libro = libroCompleto(conUtiles);
-  libro.instagram[`${conUtiles}/utiles`] = { cuando: UTC(conUtiles, '11:02'), mediaId: 'U', nombre: 'utiles', tipo: 'STORIES' };
+  libro.instagram[`${conUtiles}/utiles`] = { cuando: UTC(conUtiles, '17:02'), mediaId: 'U', nombre: 'utiles', tipo: 'STORIES' };
   const c = contratoDelDia({ libro, fecha: conUtiles, ahora: AR(conUtiles, '23:50') }).instagram;
   assert.equal(c.historias.salieron, 6);
   assert.equal(c.semanales.find((s) => s.nombre === 'utiles').estado, 'salio');

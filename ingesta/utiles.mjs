@@ -62,11 +62,11 @@ const SEMANA_MS = 7 * DIA_MS;
  * Se ancla al lunes de la semana (hora de Balcarce), así que no cambia si se
  * consulta cualquier día de la misma semana, y varía de una semana a la otra.
  */
-export function diaRotativoDeUtiles(fecha = new Date()) {
-  const medianoche = new Date(`${diaAR(fecha)}T00:00:00Z`).getTime();
-  const diasDesdeElLunes = (diaSemanaAR(fecha) + 6) % 7; // domingo=0 → 6, lunes=1 → 0…
-  const semanas = Math.floor((medianoche - diasDesdeElLunes * DIA_MS) / SEMANA_MS);
-  return [1, 2, 3, 4, 5][semanas % 5];
+/** El día de los teléfonos útiles: el sábado (1/10/2026, Hernán: "lo dejamos fijo el día sábado a las 17"). Antes rotaban de lunes a viernes. */
+export const DIA_DE_LOS_UTILES = 6;
+
+export function diaRotativoDeUtiles() {
+  return DIA_DE_LOS_UTILES;
 }
 
 /**

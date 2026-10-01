@@ -144,7 +144,7 @@ para la siguiente. Si no toca nada, la corrida termina en segundos.
 | Aviso de clima (`aviso-helada`, `aviso-granizo`, `aviso-viento`) | historia | 7:00 | 22:00 | Sólo si hay un aviso grave, hoy o mañana |
 | Clima de la mañana (`clima-manana`) | historia | 7:00 | 11:00 | Todos |
 | Podcast de la mañana (`noticia1`) | reel + historia | 10:00 | 15:00 | Todos, con 2 notas o más |
-| Teléfonos útiles (`utiles`) | historia | 12:00 | 13:00 | Un día hábil por semana, rota solo |
+| Teléfonos útiles (`utiles`) | historia | 17:00 | 18:00 | Los sábados, fijo |
 | Podcast de la tarde (`noticia2`) | reel + historia | 15:00 | 20:00 | Todos, con 2 notas o más |
 | Agenda del fin de semana (`agenda`) | historia | 12:00 | 13:00 | Jueves, si hay eventos en los próximos 4 días |
 | Farmacia de turno (`farmacia`) | historia | 19:00 | 24:00 | Todos |
@@ -157,8 +157,8 @@ para la siguiente. Si no toca nada, la corrida termina en segundos.
   (`redes/piezas.mjs`). Las ventanas, `VENTANAS` (2 horas si una pieza no tiene
   la suya, `VENTANA_MINUTOS`). Ninguna cruza la medianoche: si la ventana se
   cierra sin que salga, esa pieza se pierde por hoy.
-- **Los útiles rotan** de lunes a viernes, un día distinto cada semana
-  (`diaRotativoDeUtiles`, `ingesta/utiles.mjs`, aplicada por `toca` de
+- **Los útiles salen los sábados a las 17:00**, fijos (1/10/2026; antes rotaban de lunes a viernes:
+  `diaRotativoDeUtiles`, `ingesta/utiles.mjs`, aplicada por `toca` de
   `panel/horarios.mjs`, la única que decide qué día sale cada pieza).
 - **El aviso de clima** sale apenas se detecta: `avisoDeClima` toma el primero
   de gravedad alta de `avisosDelClima` (`ingesta/alertas.mjs`): helada de −2° o

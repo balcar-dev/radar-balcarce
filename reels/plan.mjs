@@ -214,7 +214,7 @@ export function planDelDia(datos, {
   // pieza está apagada o hoy no le toca, directamente no se arma.
   const cuando = horariosConfigurados(estado);
   // `toca` (panel/horarios.mjs) es la MISMA función que usa el reloj de Redes:
-  // los teléfonos útiles salen el día que rotan, o el que fijó el panel.
+  // los teléfonos útiles salen los sábados, o el día que fijó el panel.
   const tocaHoy = (id) => forzar.includes(id) || toca(cuando[id], fecha, { estado });
 
   // --- El aviso de clima: la única pieza que no espera su horario ---------
@@ -349,7 +349,7 @@ export function planDelDia(datos, {
     });
   }
 
-  // Números útiles: una vez por semana, día variable (ingesta/utiles.mjs
+  // Números útiles: una vez por semana, los sábados (ingesta/utiles.mjs
   // decide cuál). No es noticia ni clima: es contenido de utilidad pura, así
   // que no compite por cupo de reel ni tiene por qué salir todos los días.
   if (tocaHoy('utiles')) {
@@ -357,7 +357,7 @@ export function planDelDia(datos, {
       .map((categoria) => ({ categoria, items: NUMEROS.filter((n) => n.categoria === categoria) }));
     piezas.push({
       tipo: 'historia', hora: cuando.utiles.hora, nombre: 'utiles',
-      titulo: 'Teléfonos útiles de Balcarce', motivo: 'una vez por semana, día variable',
+      titulo: 'Teléfonos útiles de Balcarce', motivo: 'una vez por semana, los sábados',
       // No hay sección Servicios desde el 27/09: lo práctico de acá va a
       // Balcarce (CLAUDE.md, "Las secciones son once").
       seccion: 'Balcarce',

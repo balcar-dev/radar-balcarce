@@ -57,7 +57,7 @@ const VENTANAS = {
   farmacia: 300,       // 19:00 → 24:00
   'clima-noche': 240,  // 20:00 → 24:00
   podcast: 180,        // 21:00 → 24:00
-  utiles: 60,          // 12:00 → 13:00 (hasta el 29/09, hasta las 16)
+  utiles: 60,          // 17:00 → 18:00, los sábados
   agenda: 60,          // 12:00 → 13:00, los jueves
   feriado: 240,        // 8:00 → 12:00, los feriados
   'participa-noticias': 60, 'participa-evento': 60, 'participa-reclamos': 60, 'participa-nota': 60, // 12:00 → 13:00

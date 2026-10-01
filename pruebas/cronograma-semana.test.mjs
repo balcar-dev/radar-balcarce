@@ -29,14 +29,15 @@ test('el horario que acordaron el 1/10: clima 7, feriado 8, efeméride 9, repaso
   assert.deepEqual([lunes['clima-manana'], lunes.efemeride, lunes.noticia1, lunes['participa-noticias'], lunes.noticia2, lunes.farmacia, lunes['clima-noche'], lunes.podcast],
     ['07:00', '09:00', '10:00', '12:00', '15:00', '19:00', '20:00', '21:00']);
   assert.equal(horas('2026-10-12').feriado, '08:00');
-  assert.equal(horas('2026-10-06').utiles, '12:00', 'los útiles, al mediodía');
+  assert.equal(horas('2026-10-10').utiles, '17:00', 'los útiles, los sábados a las 17');
+  assert.equal(horas('2026-10-06').utiles, undefined, 'y no los martes');
   assert.equal(horas('2026-10-08').agenda, '12:00', 'la agenda del jueves, al mediodía');
 });
 
-test('los audios por día: ocho o nueve, nunca más del cupo (martes, con los útiles, es el más cargado)', () => {
+test('los audios por día: siete, ocho o nueve (el feriado, con participá, es el más cargado), nunca más del cupo', () => {
   const por = Object.fromEntries(semana.map((d) => [d.fecha, d.audios]));
   assert.deepEqual(por, {
-    '2026-10-05': 8, '2026-10-06': 9, '2026-10-07': 8, '2026-10-08': 8, '2026-10-09': 8, '2026-10-10': 7, '2026-10-11': 7, '2026-10-12': 9,
+    '2026-10-05': 8, '2026-10-06': 8, '2026-10-07': 8, '2026-10-08': 8, '2026-10-09': 8, '2026-10-10': 8, '2026-10-11': 7, '2026-10-12': 9,
   });
   for (const d of semana) assert.ok(d.audios <= CUPO_DE_VOZ_POR_DIA, d.fecha);
 });
@@ -59,7 +60,7 @@ test('las piezas fijas (armadas de antemano) no gastan audio ese día', () => {
   const s = cronogramaDeLaSemana('2026-10-05', 8, { conEfemeride: true, fijas });
   const por = Object.fromEntries(s.map((d) => [d.fecha, d.audios]));
   assert.deepEqual(por, {
-    '2026-10-05': 7, '2026-10-06': 8, '2026-10-07': 7, '2026-10-08': 8, '2026-10-09': 7, '2026-10-10': 7, '2026-10-11': 7, '2026-10-12': 8,
+    '2026-10-05': 7, '2026-10-06': 7, '2026-10-07': 7, '2026-10-08': 8, '2026-10-09': 7, '2026-10-10': 8, '2026-10-11': 7, '2026-10-12': 8,
   });
   assert.ok(Math.max(...Object.values(por)) <= 8, 'con las de participá fijas, nunca más de 8 audios por día');
   assert.match(textoDelCronograma(s), /fija, sin voz nueva/);

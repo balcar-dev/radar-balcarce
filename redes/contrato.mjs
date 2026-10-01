@@ -53,7 +53,7 @@ export const REDES_DEL_CONTRATO = [
 export { PODCASTS };
 
 /** Las de fábrica, por si el cronograma no las trae. */
-const HORAS_FIJAS = { 'clima-manana': '07:00', farmacia: '19:00', 'clima-noche': '20:00', utiles: '12:00' };
+const HORAS_FIJAS = { 'clima-manana': '07:00', farmacia: '19:00', 'clima-noche': '20:00', utiles: '17:00' };
 const ETIQUETAS_FIJAS = {
   'clima-manana': 'clima mañana', farmacia: 'farmacia', 'clima-noche': 'clima noche', utiles: 'teléfonos útiles',
 };

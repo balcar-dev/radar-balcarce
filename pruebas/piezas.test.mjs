@@ -284,25 +284,12 @@ test('el cronograma del día trae las fijas y los tres podcasts, sin historias s
   assert.equal(c.find((p) => p.nombre === 'podcast').tipo, 'reel');
 });
 
-test('los teléfonos útiles salen un día hábil por semana, y rotan de una semana a la otra', () => {
-  // No siempre el mismo día: se probó una semana y salía siempre martes, y
-  // se pidió que cambiara. diaRotativoDeUtiles ya dice qué día es esta
-  // semana; alcanza con probar que el cronograma lo respeta y que otro día
-  // de la misma semana no lo tiene.
-  const unLunes = LUNES('12:00');
-  const diaDeEstaSemana = diaRotativoDeUtiles(unLunes);
-  const otroDiaHabil = new Date(unLunes);
-  otroDiaHabil.setDate(otroDiaHabil.getDate() + ((diaDeEstaSemana === 1 ? 2 : 1)));
-
-  const conElDiaQueToca = new Date(unLunes);
-  conElDiaQueToca.setDate(conElDiaQueToca.getDate() + (diaDeEstaSemana - 1));
-  assert.ok(nombres(cronogramaDelDia(conElDiaQueToca)).includes('utiles'));
-  assert.ok(!nombres(cronogramaDelDia(otroDiaHabil)).includes('utiles'));
-
-  // Y de una semana a la siguiente, el día cambia.
-  const semanaQueViene = new Date(unLunes);
-  semanaQueViene.setDate(semanaQueViene.getDate() + 7);
-  assert.notEqual(diaRotativoDeUtiles(semanaQueViene), diaDeEstaSemana);
+test('los teléfonos útiles salen los sábados, fijos (1/10: antes rotaban de lunes a viernes)', () => {
+  const sabado = (d) => new Date(`2026-${d}T12:00:00-03:00`);
+  for (const d of ['09-26', '10-03', '10-10', '10-17', '10-24']) assert.ok(nombres(cronogramaDelDia(sabado(d))).includes('utiles'), `sábado ${d}`);
+  for (const d of ['09-21', '09-22', '09-23', '09-24', '09-25', '09-27', '10-04']) assert.ok(!nombres(cronogramaDelDia(sabado(d))).includes('utiles'), `no el ${d}`);
+  assert.equal(diaRotativoDeUtiles(LUNES('12:00')), 6);
+  assert.equal(cronogramaDelDia(sabado('10-03')).find((p) => p.nombre === 'utiles').hora, '17:00');
 });
 
 test('si alguien fija el día de los útiles a mano en el panel, eso manda y no rota', () => {

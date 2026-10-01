@@ -184,7 +184,7 @@ Lo común a todas:
 - **Mal:** "Ferroviarios ganó (Resumen hecho con IA). Fuente: Puntonueve.
   https://puntonueve.com/…"
 
-### Teléfonos útiles · 12:00, un día hábil por semana · 8 a 20 segundos
+### Teléfonos útiles · 17:00, los sábados · 8 a 20 segundos
 
 - **Para qué:** que tengan a mano los números que sirven.
 - **Cómo se arma:** saludo de su hora, qué números son (emergencias, hospital, comisaría,

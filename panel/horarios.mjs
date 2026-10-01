@@ -64,14 +64,11 @@ export const HISTORIAS_FIJAS = [
   {
     id: 'utiles',
     nombre: 'Teléfonos útiles',
-    porQue: 'Una vez por semana, al mediodía. No es noticia: es para que lo guarden en el celular.',
+    porQue: 'Una vez por semana, los sábados a la tarde. No es noticia: es para que lo guarden en el celular.',
     activa: true,
-    hora: '12:00',
-    // Este [2] no decide nada: si nadie fija los días desde el panel, rotan
-    // solos, de lunes a viernes, un día distinto cada semana, en GitHub y en
-    // la PC por igual (`toca`, más abajo, con diaRotativoDeUtiles de
-    // ingesta/utiles.mjs). Si alguien los fija, mandan los que se guardaron.
-    dias: [2],
+    hora: '17:00',
+    // Fijo, los sábados (1/10/2026). Si alguien lo cambia desde el panel (`estado.horarios.utiles.dias`), manda lo que se guardó.
+    dias: [6],
   },
 ];
 
@@ -129,9 +126,9 @@ export function guardarHorario(estado, { id, activa, hora, dias }) {
  * el plan que arma los videos (reels/plan.mjs) usan esta misma función, así que
  * no puede pasar que uno diga "toca" y el otro no arme nada (PENDIENTES 16c).
  *
- * Los teléfonos útiles rotan solos, de lunes a viernes, un día distinto cada
- * semana (`diaRotativoDeUtiles`). Si alguien fija los días a mano desde el
- * panel (`estado.horarios.utiles.dias`), manda eso.
+ * Los teléfonos útiles salen fijos los sábados (`diaRotativoDeUtiles`). Si
+ * alguien fija los días a mano desde el panel (`estado.horarios.utiles.dias`),
+ * manda eso.
  *
  * El día es el de Balcarce, no el de la máquina: en GitHub el reloj es UTC.
  */
