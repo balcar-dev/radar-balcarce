@@ -520,8 +520,8 @@ anteriores cuenta las historias por el libro y lo dice.
   pero el público no veía los posteos ni los reels de Facebook.
 - **El usuario del sistema** `publicador-radar`, con la página (Contenido y
   Estadísticas), el Instagram (Contenido y Estadísticas) y la app. Su token
-  **no vence** y es el secreto `META_TOKEN`. Le faltan `read_insights` e
-  `instagram_manage_insights` para las estadísticas (`PENDIENTES.md`).
+  **no vence** y es el secreto `META_TOKEN`. Ya tiene `read_insights` e
+  `instagram_manage_insights` (verificado el 1/10/2026): las estadísticas de Meta andan.
 - **Por qué todo lo de Instagram es video:** la API no acepta una imagen que no
   esté en una dirección pública, y no se alojan archivos sueltos; el video sí
   se le entrega directo. La única foto es el espejo, porque su tarjeta ya está

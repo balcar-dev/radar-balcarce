@@ -41,7 +41,7 @@ export function nombreDeReferente(host) {
   let h = String(host ?? '').trim().toLowerCase();
   if (!h) return 'directo';
   h = h.replace(/^(www|m|l|lm|mobile|web)\./, '');
-  if (/^radarbalcarce\.com$/.test(h)) return null; // navegar dentro del sitio no es una fuente
+  if (h === 'radarbalcarce.com' || h.endsWith('.pages.dev')) return null; // navegar dentro del sitio (o de su copia de pruebas) no es una fuente
   if (/^google\.[a-z.]+$/.test(h) || h === 'com.google.android.googlequicksearchbox') return 'google.com';
   if (h === 't.co' || h === 'twitter.com') return 'x.com';
   if (h === 'lnkd.in') return 'linkedin.com';

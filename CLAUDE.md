@@ -38,7 +38,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 92.)
+próxima regla es la 93.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -164,6 +164,7 @@ próxima regla es la 92.)
 | El verificador o los arreglos que no inventan | `ingesta/verificar.mjs` (`verificar`, `arreglarEscritura`, `diceEnVivo`) |
 | Cuándo una nota pierde su página | `pierdeLaPagina` (`web/lib/archivo.js`), `tieneRespaldo` (`web/lib/cuerpo.js`) |
 | Sacar o corregir una nota sin el celular | `web/data/retiradas.json` / `web/data/correcciones.json` (motivo, cuándo y quién) |
+| Las estadísticas (pestaña Números del panel del celular) | `redes/estadisticas.mjs` (mide) y `redes/estadisticas-detalle.mjs` (el detalle diario de Cloudflare: horas, notas, de dónde llegan, aparatos, países → `web/data/estadisticas.json`), `web/public/panel/numeros.js` (lo que se muestra) |
 | El panel del celular | `web/public/panel/` (la app), `panel/celular-datos.mjs` (lo que decide y lo que recibe), `panel/cifrado.mjs`, `panel/celular.mjs` y `panel/reescribir-una.mjs` (el pedido a la IA), `.github/workflows/panel.yml` |
 | "Un día como hoy" y los feriados | `ingesta/efemerides.mjs` (candidatas y puntaje), `ingesta/generar-efemerides.mjs` (la corrida mensual), `ingesta/efemerides-curadas.json` (fechas patrias y de Balcarce), pestaña Fechas del panel (`web/public/panel/fechas.js`); `docs/13-EFEMERIDES.md` |
 | La firma de las notas | `quienEscribio`, `firmaCorta` (`web/components/metadatos.js`) |
@@ -189,8 +190,8 @@ próxima regla es la 92.)
 - **Todo lo demás:** `radarbalcarce@gmail.com` (Cloudflare, cron-job.org, Google/Gemini,
   Meta, Instagram, Search Console, Tailscale; Vercel, apagado).
 - **Meta:** app "Radar Balcarce Publicador" (ID 2302218363874399), usuario del sistema
-  `publicador-radar`, token sin vencimiento en `META_TOKEN` (le faltan `read_insights` e
-  `instagram_manage_insights`). Página de Facebook "Radar Balcarce", ID para la API
+  `publicador-radar`, token sin vencimiento en `META_TOKEN` (con `read_insights` e
+  `instagram_manage_insights`: las estadísticas de Meta andan). Página de Facebook "Radar Balcarce", ID para la API
   **1254237411116171** (`PAGINA_DE_FACEBOOK`, `redes/meta.mjs`). Instagram
   `@radarbalcarce`. WhatsApp del medio: 2266 51-1612.
 - Secretos, workflows, costos y vencimientos: `docs/08-INFRAESTRUCTURA.md`.

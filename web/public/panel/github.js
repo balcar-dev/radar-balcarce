@@ -27,6 +27,8 @@ export const ARCHIVOS = {
   candidatas: 'web/data/efemerides-candidatas.json',
   feriados: 'web/data/feriados-piezas.json',
   elegidas: 'web/data/efemerides-elegidas.json',
+  estadisticas: 'web/data/estadisticas.json',
+  produccion: 'web/data/notas-por-dia.json',
 };
 
 export class ErrorDeGitHub extends Error {

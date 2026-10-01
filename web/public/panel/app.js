@@ -21,6 +21,7 @@ import {
   explicarMotivo, motivoCorto, explicarFicha, estadoSinCuerpo, PESTANAS, PREGUNTAS, preguntaRedes, comoSalenLosPosteos,
   REGLAS_FACEBOOK, proximoPosteo, estadoDePieza, horaEnBalcarce, hoyEnBalcarce,
 } from './textos.js';
+import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 
 const $ = (s) => document.querySelector(s);
 const app = $('#app');
@@ -284,7 +285,7 @@ function pestanas() {
   const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
   const items = [
     ['esperan', 'Esperan', esperan], ['sin-cuerpo', 'Sin cuerpo', sinCuerpo],
-    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', '◷'], ['fechas', 'Fechas', '▦'], ['mas', 'Más', '⋯'],
+    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', '◷'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
   ];
   nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${E.pestana === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
   nav.hidden = false;
@@ -313,6 +314,7 @@ function vistaLista() {
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
   else if (E.pestana === 'fechas') vistaFechas();
+  else if (E.pestana === 'numeros') vistaNumeros();
   else vistaMas();
 }
 
@@ -419,6 +421,39 @@ function vistaRedes() {
     ${cola.length ? `<ol class="lista-simple">${cola.map((n) => `<li>${n.marcada ? '<span class="marca">→ la mandó una persona</span> ' : ''}${chip(n.seccion)}${esc(n.titulo ?? tituloDe(n.id) ?? '')}</li>`).join('')}</ol>
       <p class="ayuda">Sale la primera de la cola cuando toca. Para mandar otra, abrila en Publicadas y tocá "Mandar también a las redes".</p>`
     : `<p class="estado">No hay notas en la cola. Entran solas las de Balcarce con relevancia alta, y las que manda una persona, de las últimas ${reglas.edadMaximaHoras} horas.</p>`}`;
+}
+
+// ------------------------------------------------------------------ los números
+
+/** Trae lo que necesita la pestaña (la primera vez que se abre): el detalle de las visitas, la producción, el archivo y las corridas. */
+async function abrirNumeros() {
+  app.innerHTML = '<div class="girando"></div><p class="vacio">Juntando los números…</p>';
+  try {
+    const c = E.cliente;
+    const traerCorridas = async (w) => { try { return resumenDeCorridas(await c.corridas(w)); } catch { return null; } };
+    const [estadisticas, produccion, archivo, actualizar, redes, vigilancia] = await Promise.all([
+      leerSiHay(c, ARCHIVOS.estadisticas, { puntos: [], dias: {} }), leerSiHay(c, ARCHIVOS.produccion, { dias: {} }),
+      E.archivo ? Promise.resolve(E.archivo) : leerSiHay(c, ARCHIVOS.archivo, { notas: [] }).then((j) => j.notas ?? []),
+      traerCorridas('actualizar.yml'), traerCorridas('redes.yml'), traerCorridas('vigilancia.yml'),
+    ]);
+    E.archivo = archivo;
+    E.numeros = { estadisticas, produccion, corridas: { actualizar, redes, vigilancia } };
+    vistaNumeros();
+  } catch (e) {
+    aviso(explicarError(e), { ms: 9000 });
+    app.innerHTML = '<p class="problemas">No se pudieron traer los números.</p><button class="boton" type="button" data-pestana="numeros">Probar de nuevo</button>';
+  }
+}
+
+function vistaNumeros() {
+  pestanas();
+  $('#recargar').hidden = false;
+  if (!E.numeros) { abrirNumeros(); return; }
+  const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
+  app.innerHTML = htmlDeNumeros({
+    ...E.numeros, indice: indiceDeNotas(E.portada?.notas, E.archivo), libro: E.libro, rango: E.rangoNumeros ?? 7, hoy: diaDeBalcarce(),
+    enlace: enlaceDeNota, espera: { esperan: listasDeEsperan().sinDecidir.length, sinCuerpo }, haceCuanto,
+  }) + queEs('numeros');
 }
 
 // ------------------------------------------------------------------ las fechas
@@ -820,6 +855,7 @@ document.addEventListener('click', async (ev) => {
   const por = E.nombre;
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
   if (accion === 'cerrar-aviso') $('#aviso').hidden = true;
+  else if (accion === 'rango-numeros') { E.rangoNumeros = Number(el.dataset.rango); vistaNumeros(); }
   else if (accion === 'sub-fechas') { E.subfechas = el.dataset.sub; vistaFechas(); }
   else if (accion === 'abrir-dia') { E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'abrir-feriado') { E.feriado = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
@@ -912,6 +948,7 @@ document.addEventListener('click', async (ev) => {
 
 $('#recargar').addEventListener('click', async () => {
   app.innerHTML = '<div class="girando"></div>';
+  E.numeros = null;
   try { await cargar({ archivo: !!E.archivo }); vistaLista(); } catch (e) { aviso(explicarError(e)); vistaLista(); }
 });
 

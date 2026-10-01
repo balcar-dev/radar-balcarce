@@ -457,7 +457,7 @@ borrar publicaciones; aceptar términos; pagar.
 | Qué | Dónde | Cuándo |
 |---|---|---|
 | Cargar o cambiar una clave o un token (`META_TOKEN`, las de Gemini, `GROQ_API_KEY`, Cloudflare, WhatsApp) | GitHub → Settings → Secrets and variables → Actions; en la PC, el `.env` | Cuando se crea, vence o se filtra |
-| Regenerar `META_TOKEN` con los permisos de estadísticas (`read_insights`, `instagram_manage_insights`, además de todos los de ahora) | Meta Business → usuario del sistema `publicador-radar` | Pendiente |
+| Regenerar `META_TOKEN` con los permisos de estadísticas (`read_insights`, `instagram_manage_insights`, además de todos los de ahora) | Meta Business → usuario del sistema `publicador-radar` | Hecho (1/10/2026) |
 | Renovar el token de GitHub de cron-job.org y pegarlo en todos los trabajos | GitHub (`balcardev@gmail.com`) y cron-job.org | Antes del 21/09/2027 |
 | Renovar el dominio | DonWeb | Antes del 21/09/2027 |
 | Borrar o editar un posteo, una historia o un reel (un duplicado, una nota retirada) | Las apps de Facebook e Instagram | Cuando haga falta |

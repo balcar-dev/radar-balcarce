@@ -28,7 +28,6 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 
 | # | Qué | Quién |
 |---|---|---|
-| 5 | **Permisos de estadísticas de Meta**: regenerar el token de `publicador-radar` con los permisos de ahora **más** `read_insights` e `instagram_manage_insights` y reemplazar `META_TOKEN`. Probar con Actions → "Prueba de estadísticas". Sin eso no se pueden comparar las variantes de las redes | Los dos |
 | 6 | **Decidir si Política y Policiales esperan a una persona también en la web.** Hoy, en la web, salen solas si el semáforo da verde; en las redes siempre esperan (y ahora se aprueban desde el celular). Si se decide que esperen, es una regla nueva al final de `semaforo` (`ingesta/ingesta.mjs`) | Los dos |
 | 7 | **Biografías a mano desde el celular**: en Instagram, el enlace, la categoría, el botón de contacto (WhatsApp 2266 51-1612) y las historias destacadas | Los dos |
 | 8 | **Borrar el proyecto de Vercel** y limpiar el DNS que quedó (también `radar-balcarce.vercel.app`). Está apagado desde el 25/09 | Los dos |
