@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T03:31:25.364Z",
- "portada": 57,
- "archivo": 687,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-01T04:01:41.424Z",
+ "portada": 64,
+ "archivo": 689,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-01T03:31:25.386Z",
+  "generado": "2026-10-01T04:01:41.467Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -88,13 +88,44 @@
     "segundos": 55,
     "notas": [
      {
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "x9mmdo",
+      "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "18xuulv",
+      "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
+      "seccion": "Fútbol"
+     }
+    ]
+   },
+   {
+    "nombre": "noticia2",
+    "titulo": "El repaso de la tarde",
+    "hora": "15:00",
+    "voz": "locutora",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 52,
+    "notas": [
+     {
       "id": "5evpzb",
       "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
       "seccion": "Deportes"
      },
      {
-      "id": "18xuulv",
-      "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
+      "id": "2uqvxt",
+      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol"
      },
      {
@@ -110,44 +141,13 @@
     ]
    },
    {
-    "nombre": "noticia2",
-    "titulo": "El repaso de la tarde",
-    "hora": "15:00",
-    "voz": "locutora",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 44,
-    "notas": [
-     {
-      "id": "2uqvxt",
-      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
-     }
-    ]
-   },
-   {
     "nombre": "podcast",
     "titulo": "El repaso del día",
     "hora": "20:30",
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
      {
       "id": "1fgr8xb",
@@ -155,18 +155,18 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "12rp30w",
-      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "h7o4xt",
-      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
-      "seccion": "Agro"
+      "id": "1xow9qi",
+      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
+      "seccion": "Deportes"
      },
      {
-      "id": "1dqm02n",
-      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
      }
     ]
@@ -175,6 +175,12 @@
   "facebook": {
    "hoy": [],
    "cola": [
+    {
+     "id": "x9mmdo",
+     "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
     {
      "id": "g8dncb",
      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",

@@ -3756,15 +3756,35 @@
   "origen": "ninguna",
   "titulo": "La Selección Argentina suma cinco nuevos debutantes bajo la dirección de Scaloni",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T02:31:22.513Z",
-  "intentos": 1
+  "cuando": "2026-10-01T04:01:29.757Z",
+  "intentos": 2
  },
  "5p0wce": {
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Pepa Brizuela canta el himno antes del partido de la Selección",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T02:31:22.513Z",
+  "cuando": "2026-10-01T04:01:29.757Z",
+  "intentos": 2
+ },
+ "x9mmdo": {
+  "archivo": "fotos-notas/x9mmdo.jpg",
+  "medio": "Córdoba Competición",
+  "credito": "Foto: Córdoba Competición",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
+  "enlace": "https://cordobacompeticion.com/nacionales/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad/",
+  "imagenOriginal": "https://i0.wp.com/cordobacompeticion.com/wp-content/uploads/2026/09/800565904_17908493001525537_6219574179350373234_n.jpg?resize=660%2C330&ssl=1",
+  "razon": "Es la única opción disponible y muestra al piloto siendo entrevistado, sin marcas de agua del medio ni menores de edad reconocibles.",
+  "cuando": "2026-10-01T04:01:29.757Z"
+ },
+ "1mz151q": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Un argentino cae prisionero en Ucrania tras sumarse al ejército ruso",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-01T04:01:29.757Z",
   "intentos": 1
  }
 }
