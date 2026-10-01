@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T12:05:26.632Z",
- "portada": 49,
- "archivo": 696,
+ "generado": "2026-10-01T12:34:47.297Z",
+ "portada": 50,
+ "archivo": 700,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-01T12:05:26.668Z",
+  "generado": "2026-10-01T12:34:47.336Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -88,36 +88,10 @@
     "segundos": 55,
     "notas": [
      {
-      "id": "6xex85",
-      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1fqh4sy",
-      "titulo": "Aymeric Laporte califica a la Argentina de antif\\u00futbol tras la final",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "c0hkeg",
-      "titulo": "El Círculo de Educadores recibe un ciclo de charlas sobre salud en la adultez",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "id": "bvb4v9",
+      "titulo": "Irene Feingold clasifica al Torneo Nacional de Gimnasia Artística",
       "seccion": "Deportes"
-     }
-    ]
-   },
-   {
-    "nombre": "noticia2",
-    "titulo": "El repaso de la tarde",
-    "hora": "15:00",
-    "voz": "locutora",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 50,
-    "notas": [
+     },
      {
       "id": "m212r6",
       "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
@@ -129,9 +103,35 @@
       "seccion": "Balcarce"
      },
      {
+      "id": "1fqh4sy",
+      "titulo": "Aymeric Laporte califica a la Argentina de antif\\u00futbol tras la final",
+      "seccion": "Fútbol"
+     }
+    ]
+   },
+   {
+    "nombre": "noticia2",
+    "titulo": "El repaso de la tarde",
+    "hora": "15:00",
+    "voz": "locutora",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 52,
+    "notas": [
+     {
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
+     },
+     {
       "id": "q7x46o",
       "titulo": "La UBA sigue entre las diez mejores de la región y el sistema sufre caídas",
       "seccion": "Argentina"
+     },
+     {
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "seccion": "Balcarce"
      },
      {
       "id": "1h3xtmz",
@@ -147,12 +147,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 48,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
+      "id": "1a2z04a",
+      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+      "seccion": "Automovilismo"
      },
      {
       "id": "11di7ig",
@@ -173,29 +173,29 @@
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
-    {
-     "id": "c0hkeg",
-     "titulo": "El Círculo de Educadores recibe un ciclo de charlas sobre salud en la adultez",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
+   "hoy": [
     {
      "id": "m212r6",
      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
+     "cuando": "2026-10-01T12:06:50.587Z"
+    }
+   ],
+   "cola": [
     {
      "id": "ff9n91",
      "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
      "seccion": "Balcarce",
      "marcada": false
+    },
+    {
+     "id": "1ckhubg",
+     "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
+     "seccion": "Deportes",
+     "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-09-30T21:34:06.971Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-01T13:36:50.587Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
