@@ -260,15 +260,16 @@ const fechaReal = (n) => (n.cuando === 'sin fecha en la fuente'
 // reescritura para no gastar cuota en lo que no va a salir.
 let sacadasPorLaIA = new Set();
 let repetidasFuera = new Set();
-// Las parejas de notas que la IA confirmó que cuentan el mismo hecho con otras palabras (1/10): [[idA, idB], …].
-let parejasConfirmadas = [];
+// Las parejas de notas que la IA confirmó que cuentan el mismo hecho con otras palabras (1/10): [[idA, idB], …]. Se
+// preguntan más abajo, con los títulos ya escritos; acá van las que se confirmaron antes (fichas.json).
+const confirmadasDe = (pares = {}) => Object.entries(pares).filter(([, v]) => v).map(([k]) => k.split('|'));
+let parejasConfirmadas = confirmadasDe(leerJson(FICHAS, {}).repetidas?.pares);
 if (enLaNube) {
   try {
     const {
       leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, unirGrupos, LECTURA,
     } = await import('../../ingesta/lectura-ia.mjs');
-    const { claveClasificacion, claveGroq } = await import('../../reels/claves.mjs');
-    const { confirmarParejas } = await import('../../ingesta/lectura-ia.mjs');
+    const { claveClasificacion } = await import('../../reels/claves.mjs');
     const { exigirMedios, aplicarCupos, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
     const fichasAntes = leerJson(FICHAS, {});
     const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
@@ -308,27 +309,6 @@ if (enLaNube) {
         console.log(`  repetidas: falló el pedido (${e.message}); quedan los grupos de antes`);
       }
     }
-    // Las repetidas con otras palabras (1/10, Hernán: dos notas de la Cooperativa y dos del RENAPER): la IA de
-    // arriba mira cien notas juntas y a veces no las junta. Acá se le pregunta sólo por las parejas sospechosas
-    // (misma sección, poco tiempo de diferencia, algo de parecido en el título) y se guarda lo que contestó
-    // (fichas.repetidas.pares) para no volver a preguntar. Las confirmadas se fusionan más abajo.
-    const vigentesAntes = [...(anterior.notas ?? []), ...(archivoAnterior.notas ?? [])].filter((n) => vigenteEnPortada(n));
-    const poolDeParejas = [...new Map([...vigentesAntes, ...candidatas].map((n) => [n.id, n])).values()];
-    try {
-      const idsDelPool = new Set(poolDeParejas.map((n) => n.id));
-      rep.pares = Object.fromEntries(Object.entries(rep.pares ?? {}).filter(([k]) => k.split('|').every((id) => idsDelPool.has(id))));
-      const sospechosas = parejasSospechosas(poolDeParejas, { decididas: rep.pares });
-      if (sospechosas.length && clave && (rep.paresPedidosHoy ?? 0) < 40) {
-        rep.paresPedidosHoy = (rep.paresPedidosHoy ?? 0) + 1;
-        const r = await confirmarParejas(sospechosas, { clave, claveRespaldo: claveGroq() });
-        rep.pares = { ...rep.pares, ...r };
-        for (const p of sospechosas.filter((x) => r[x.clave])) console.log(`    misma noticia (IA): ${p.a.titulo} / ${p.b.titulo}`);
-        console.log(`  parejas: ${sospechosas.length} preguntadas, ${sospechosas.filter((x) => r[x.clave]).length} son la misma noticia`);
-      }
-    } catch (e) {
-      console.log(`  parejas: falló el pedido (${e.message}); se vuelve a probar en la próxima corrida`);
-    }
-    parejasConfirmadas = Object.entries(rep.pares ?? {}).filter(([, v]) => v).map(([k]) => k.split('|'));
     fichas.repetidas = rep;
     // Queda la que ya está publicada (en la portada anterior o en el archivo,
     // todavía vigente en la portada, HORAS_EN_PORTADA): si no, desaparece de la
@@ -732,6 +712,38 @@ const { papelera, restaurar } = enLaNube
   : { papelera: {}, restaurar: [] };
 if (restaurar.length) console.log(`  papelera: ${restaurar.length} nota(s) vuelven a publicarse (una persona las volvió a aprobar)`);
 const conPaginaHoy = [...deLaIngesta, ...propias];
+// Las repetidas con otras palabras (1/10, Hernán: dos notas de la Cooperativa y dos del RENAPER). Los títulos de las
+// fuentes no se parecen; recién con los títulos ya escritos se nota. La IA de la lectura (mira cien notas juntas) a veces
+// no las junta: acá se le pregunta sólo por las parejas sospechosas (misma sección, poco tiempo de diferencia, algo de
+// parecido) y se guarda lo que contestó (fichas.json, repetidas.pares) para no volver a preguntar.
+if (enLaNube) {
+  try {
+    const { confirmarParejas, comoFichasJson } = await import('../../ingesta/lectura-ia.mjs');
+    const { claveClasificacion, claveGroq } = await import('../../reels/claves.mjs');
+    const fich = leerJson(FICHAS, {});
+    const rep = fich.repetidas ?? { dia: fich.dia, pedidosHoy: 0, grupos: [] };
+    const pedidosHoy = rep.dia === fich.dia ? (rep.paresPedidosHoy ?? 0) : 0;
+    const pool = [...new Map([...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id) && vigenteEnPortada(a)), ...conPaginaHoy].map((n) => [n.id, n])).values()];
+    const idsDelPool = new Set(pool.map((n) => n.id));
+    const guardadas = Object.fromEntries(Object.entries(rep.pares ?? {}).filter(([k]) => k.split('|').every((id) => idsDelPool.has(id))));
+    const sospechosas = parejasSospechosas(pool, { decididas: guardadas });
+    let pares = guardadas;
+    let pedidos = pedidosHoy;
+    if (sospechosas.length && claveClasificacion() && pedidosHoy < 40) {
+      pedidos += 1;
+      const r = await confirmarParejas(sospechosas, { clave: claveClasificacion(), claveRespaldo: claveGroq() });
+      pares = { ...guardadas, ...r };
+      for (const p of sospechosas.filter((x) => r[x.clave])) console.log(`    misma noticia (IA): ${p.a.titulo} / ${p.b.titulo}`);
+      console.log(`  parejas: ${sospechosas.length} preguntadas, ${sospechosas.filter((x) => r[x.clave]).length} son la misma noticia`);
+    }
+    if (JSON.stringify(pares) !== JSON.stringify(rep.pares ?? {}) || pedidos !== (rep.paresPedidosHoy ?? 0)) {
+      fs.writeFileSync(FICHAS, comoFichasJson({ ...fich, repetidas: { ...rep, pares, paresPedidosHoy: pedidos } }), 'utf8');
+    }
+    parejasConfirmadas = confirmadasDe(pares);
+  } catch (e) {
+    console.log(`  parejas: falló el pedido (${e.message}); se vuelve a probar en la próxima corrida`);
+  }
+}
 const fusion = repetidasConOtraDireccion(
   [...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id)), ...conPaginaHoy],
   {

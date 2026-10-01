@@ -145,8 +145,10 @@ test('confirmarParejas: Gemini primero, Groq si falla, y sólo vale lo que conte
 
 test('generar-datos pregunta por las parejas sospechosas y las fusiona, sin gastar de más', () => {
   const g = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
-  assert.match(g, /parejasSospechosas\(poolDeParejas, \{ decididas: rep\.pares \}\)/);
-  assert.match(g, /\(rep\.paresPedidosHoy \?\? 0\) < 40/);
+  assert.match(g, /parejasSospechosas\(pool, \{ decididas: guardadas \}\)/);
+  assert.match(g, /pedidosHoy < 40/);
+  // Se pregunta con los títulos ya escritos (después de armar las notas) y justo antes de fusionar.
+  assert.ok(g.indexOf('parejasSospechosas(pool') > g.indexOf('const conPaginaHoy') && g.indexOf('parejasSospechosas(pool') < g.indexOf('const fusion = repetidasConOtraDireccion('));
   assert.match(g, /confirmadas: parejasConfirmadas/);
   assert.match(g, /sumarFuentesDeParejas\(deLaIngesta, parejasConfirmadas\)/);
 });
