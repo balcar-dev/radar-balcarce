@@ -18,7 +18,7 @@ import {
 } from './fechas.js';
 import { crearLlaves, abrir } from './cifrado.js';
 import {
-  explicarMotivo, motivoCorto, explicarFicha, estadoSinCuerpo, PESTANAS, PREGUNTAS, preguntaRedes, comoSalenLosPosteos,
+  explicarMotivo, motivoCorto, explicarFicha, estadoSinCuerpo, explicarMotivoSinCuerpo, PESTANAS, PREGUNTAS, preguntaRedes, comoSalenLosPosteos,
   REGLAS_FACEBOOK, proximoPosteo, estadoDePieza, horaEnBalcarce, hoyEnBalcarce,
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
@@ -335,9 +335,11 @@ function vistaSinCuerpo(cuando) {
     <h1>Esperan cuerpo</h1>
     ${queEs('sin-cuerpo')}
     <p class="estado">${esc(cuando)}</p>
-    ${E.esperando.length ? E.esperando.map((n) => {
+    ${E.esperando.length ? [...E.esperando].sort((a, b) => (b.fuentes?.length ?? 0) - (a.fuentes?.length ?? 0)).map((n) => {
     const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: E.intentosMaximos, conCuerpo: !!E.correcciones.notas?.[n.id]?.cuerpo });
-    return tarjeta(n, { tipo: 'sin-cuerpo', extra: `<span class="est ${e.clase}">${esc(e.texto)}</span>` });
+    const medios = n.fuentes?.length ?? 0;
+    const porQue = e.clase === 'mal' ? explicarMotivoSinCuerpo(n.motivo) : '';
+    return tarjeta(n, { tipo: 'sin-cuerpo', extra: `<span class="est ${e.clase}">${medios > 1 ? `${medios} medios la cuentan · ` : ''}${esc(e.texto)}</span>${porQue ? `<span class="meta">${esc(porQue)}</span>` : ''}` });
   }).join('') : '<p class="vacio">Todas tienen cuerpo.</p>'}`;
 }
 
@@ -646,6 +648,7 @@ function vistaNota(tipo, id) {
   const c = E.correcciones.notas?.[id];
   let cuerpo = '';
   let acciones = '';
+  let extra = '';
   if (tipo === 'pendiente') {
     const conDetalle = !!(n.resumen || n.fuentes?.length);
     cuerpo = `
@@ -659,17 +662,23 @@ function vistaNota(tipo, id) {
         ? `<p class="estado">La aprobaste ${esc(haceCuanto(d.cuando))}: sale en la próxima actualización.</p><button type="button" class="boton" data-accion="deshacer" data-id="${esc(id)}">Deshacer (vuelve a esperar)</button>`
         : `<p class="estado">La descartaste ${esc(haceCuanto(d.cuando))}${d.por ? ` (${esc(d.por)})` : ''}.</p><button type="button" class="boton principal" data-accion="deshacer" data-id="${esc(id)}">Volver a traerla</button>`;
     } else {
-      acciones = `<button type="button" class="boton principal" data-accion="escribir" data-tipo="pendiente" data-id="${esc(id)}">Escribirla con IA</button>
+      extra = cajaDeBorrador('pendiente', id);
+      acciones = `<button type="button" class="boton principal ancho" data-accion="publicar-ia" data-tipo="pendiente" data-id="${esc(id)}">Publicar</button>
+        <button type="button" class="boton" data-accion="escribir" data-tipo="pendiente" data-id="${esc(id)}">Escribirla con IA para revisarla</button>
         <button type="button" class="boton" data-accion="a-mano" data-tipo="pendiente" data-id="${esc(id)}">Escribirla a mano</button>
         <button type="button" class="boton peligro" data-accion="descartar" data-id="${esc(id)}">Descartar</button>`;
     }
   } else if (tipo === 'sin-cuerpo') {
     const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: E.intentosMaximos, conCuerpo: !!c?.cuerpo });
+    const porQue = !c?.cuerpo ? explicarMotivoSinCuerpo(n.motivo) : '';
+    extra = c?.cuerpo ? '' : cajaDeBorrador('sin-cuerpo', id);
     cuerpo = `<p class="est ${e.clase}">${esc(e.texto)}</p>
+      ${n.fuentes?.length > 1 ? `<p class="estado">La cuentan ${esc(n.fuentes.length)} medios.</p>` : ''}${porQue ? `<p class="problemas">${esc(porQue)}</p>` : ''}
       <h2>Lo que dice la fuente</h2><div class="texto-nota"><p>${esc(n.copete ?? '')}</p></div>
       ${c?.cuerpo ? `<h2>El cuerpo que se escribió</h2>${textoDeLaNota({ copete: c.copete ?? n.copete, cuerpo: c.cuerpo })}` : ''}
       ${fuentesConResumen(n)}`;
-    acciones = `<button type="button" class="boton principal" data-accion="escribir" data-tipo="sin-cuerpo" data-id="${esc(id)}">Escribir con IA ahora</button>
+    acciones = `${c?.cuerpo ? '' : `<button type="button" class="boton principal ancho" data-accion="publicar-ia" data-tipo="sin-cuerpo" data-id="${esc(id)}">Publicar</button>`}
+      <button type="button" class="boton${c?.cuerpo ? ' principal' : ''}" data-accion="escribir" data-tipo="sin-cuerpo" data-id="${esc(id)}">Escribir con IA para revisarla</button>
       <button type="button" class="boton" data-accion="a-mano" data-tipo="sin-cuerpo" data-id="${esc(id)}">${c?.cuerpo ? 'Corregir el cuerpo' : 'Escribir a mano'}</button>`;
   } else if (tipo === 'retirada') {
     cuerpo = `<div class="caja">La retiró ${esc(n.por ?? 'una persona')} ${esc(haceCuanto(n.retirada))}${n.motivo ? `. Motivo: ${esc(n.motivo)}` : ''}. Ya no tiene página en la web.</div>
@@ -697,13 +706,27 @@ function vistaNota(tipo, id) {
     <p>${chip(c?.seccion ?? n.seccion)}<span class="meta">${esc(haceCuanto(n.fecha))}</span></p>
     <h1>${esc(c?.titulo ?? n.titulo ?? 'Nota sensible')}</h1>
     ${cuerpo}
+    ${extra}
     <div class="botones">${acciones}</div>`;
   window.scrollTo(0, 0);
 }
 
 // ------------------------------------------------------ el borrador de la IA
 
-async function pedirALaIA(tipo, id, pedido) {
+/**
+ * El borrador que escribió la IA y todavía no se publicó: no se pierde si se vuelve
+ * atrás. Mientras la app esté abierta se guarda acá; si ya se cerró, se puede buscar
+ * el último que quedó (cifrado, sólo para este celular) en GitHub.
+ */
+function cajaDeBorrador(tipo, id) {
+  const g = E.borradoresIA?.[id];
+  const datos = `data-tipo="${esc(tipo)}" data-id="${esc(id)}"`;
+  return `<div class="caja">${g
+    ? `<p>Hay un borrador que escribió la IA ${esc(haceCuanto(new Date(g.cuando).toISOString()))}. No se perdió.</p><button type="button" class="boton ancho" data-accion="ver-borrador" ${datos}>Ver el borrador</button>`
+    : `<button type="button" class="boton ancho" data-accion="borrador-guardado" ${datos}>¿Ya la había escrito la IA? Buscar su último borrador</button>`}</div>`;
+}
+
+async function pedirALaIA(tipo, id, pedido, { publicar = false } = {}) {
   $('#pestanas').hidden = true;
   const titulo = buscar(tipo, id)?.titulo ?? '';
   app.innerHTML = `<div class="girando"></div><p class="vacio">La IA está escribiendo <strong>${esc(titulo)}</strong>.<br>Tarda un minuto: GitHub baja las fuentes, escribe y verifica.</p>`;
@@ -723,6 +746,17 @@ async function pedirALaIA(tipo, id, pedido) {
     const sobre = json.borradores?.[id];
     const borrador = sobre && Date.parse(sobre.cuando) >= desde - 120000 ? await abrir(sobre, E.llaves) : null;
     if (!borrador) throw new Error('No pude abrir el borrador en este celular. Si recién lo registraste, probá de nuevo.');
+    (E.borradoresIA ??= {})[id] = { b: borrador, cuando: Date.now() };
+    // "Publicar" = que la escriba y salga. Sólo si el verificador no marcó nada; si marcó algo, se la muestra a quien decide.
+    if (publicar && borrador.ok && borrador.texto && !(borrador.problemas ?? []).length) {
+      const t = borrador.texto;
+      const seccion = borrador.seccion ?? buscar(tipo, id)?.seccion ?? '';
+      await guardarTexto(tipo, id, { titulo: t.titulo, copete: t.copete, cuerpo: t.cuerpo, seccion }, {
+        deIA: true, extras: t, redes: null, seccionAntes: seccion, cuerpoAntes: '',
+      });
+      return;
+    }
+    if (publicar) aviso('La IA la escribió, pero el verificador marcó algo: revisala antes de publicar.', { ms: 9000 });
     vistaBorrador(tipo, id, borrador);
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
@@ -892,6 +926,21 @@ document.addEventListener('click', async (ev) => {
       titulo: 'Pedirle a la IA que la escriba', texto: 'Tarda un minuto. No se publica nada hasta que lo revises.', si: 'Escribir', conPedido: 'Algo para pedirle (opcional): "que sea corta", "que empiece por el horario"…',
     });
     if (r.ok) pedirALaIA(tipo, id, r.texto);
+  } else if (accion === 'publicar-ia') {
+    const r = await preguntar({
+      titulo: '¿Publicarla?', texto: 'La IA la escribe (tarda un minuto) y el verificador la controla contra las fuentes. Si no encuentra problemas, sale sola en la próxima actualización. Si encuentra algo, te la muestra para que decidas.', si: 'Sí, publicarla',
+    });
+    if (r.ok) pedirALaIA(tipo, id, '', { publicar: true });
+  } else if (accion === 'ver-borrador') {
+    const g = E.borradoresIA?.[id];
+    if (g) vistaBorrador(tipo, id, g.b);
+  } else if (accion === 'borrador-guardado') {
+    try {
+      const { json } = await E.cliente.leer(ARCHIVOS.borradores);
+      const sobre = json.borradores?.[id];
+      const b = sobre && E.llaves ? await abrir(sobre, E.llaves) : null;
+      if (b) { (E.borradoresIA ??= {})[id] = { b, cuando: Date.parse(sobre.cuando) || Date.now() }; vistaBorrador(tipo, id, b); } else aviso('No hay un borrador guardado de esta nota para este celular.');
+    } catch (e) { aviso(explicarError(e), { ms: 9000 }); }
   } else if (accion === 'pedir-reescribir' || accion === 'otra-version') {
     const r = await preguntar({
       titulo: 'Pedir otra versión', texto: 'Tarda un minuto. No cambia nada en la web hasta que la guardes.', si: 'Pedirla', conPedido: '¿Qué cambiar? (opcional)',

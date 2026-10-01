@@ -532,6 +532,8 @@ function notaPublicada(n) {
         // Cuántas veces la IA ya lo intentó (de MAXIMO_DE_INTENTOS): el celular
         // dice si todavía puede salir sola (29/09).
         intentos: intentos[n.id]?.intentos ?? 0,
+        // Por qué el verificador rechazó el último intento (copia, relleno, un número que no coincide…): el celular lo explica (1/10).
+        motivo: String(intentos[n.id]?.motivo ?? '').slice(0, 200),
       });
     }
     return null;

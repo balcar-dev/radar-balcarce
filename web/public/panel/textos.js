@@ -103,9 +103,25 @@ export function estadoSinCuerpo({ intentos = 0, maximo = 3, conCuerpo = false } 
   return { texto: 'La IA la escribe sola en la próxima actualización.', clase: 'espera' };
 }
 
+/**
+ * Por qué el verificador rechazó el último intento de la IA, en castellano (el
+ * motivo viene de intentos-ia.json: "cuerpo: 2 problemas (relleno, copia): …").
+ */
+export function explicarMotivoSinCuerpo(motivo = '') {
+  const m = String(motivo ?? '');
+  if (!m || /^con cuerpo/.test(m)) return '';
+  const partes = [];
+  if (/copia/.test(m)) partes.push('copió demasiadas palabras seguidas de la fuente (no se puede copiar)');
+  if (/relleno/.test(m)) partes.push('usó frases de relleno sin datos');
+  if (/numero/.test(m)) partes.push('un número no coincidía con lo que dicen las fuentes');
+  if (/nombre/.test(m)) partes.push('un nombre no coincidía con las fuentes');
+  if (/palabras/.test(m) && !partes.length) partes.push('el cuerpo quedó demasiado corto');
+  return partes.length ? `El verificador rechazó el último intento: la IA ${partes.join(' y ')}.` : `El verificador rechazó el último intento (${m.slice(0, 120)}).`;
+}
+
 /** Lo que explica cada pestaña, arriba de la lista. */
 export const PESTANAS = {
-  esperan: 'Notas que el sistema no publica solo: tocan un tema delicado, son de afuera y poco contadas, o no se pudieron verificar bien. Cada una trae por qué espera y lo que contó cada medio. La IA no las escribe sola: si querés publicar una, se la pedís (y la revisás antes) o la escribís vos. Si no, la descartás.',
+  esperan: 'Notas que el sistema no publica solo: tocan un tema delicado, son de afuera y poco contadas, o no se pudieron verificar bien. Cada una trae por qué espera y lo que contó cada medio. Para publicar una tocás "Publicar": la IA la escribe, el verificador la controla y sale; si el verificador marca algo, te la muestra para que decidas. También podés pedirla para revisarla antes o escribirla vos. Si no, la descartás.',
   'sin-cuerpo': 'Notas que SÍ salen solas, pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola en las próximas actualizaciones (hasta tres veces); si lo logra, salen sin que hagas nada. Si querés que salga ya, escribila con la IA o a mano.',
   publicadas: 'Lo que está en la web. "En la portada" son las de las últimas 36 horas; las más viejas siguen teniendo su página en el archivo (180 días). Desde acá se corrige, se cambia de sección, se reescribe con IA, se manda a las redes o se retira.',
   fechas: 'Armar con anticipación "Un día como hoy" y los feriados. En Efemérides, cada día trae sus 20 mejores candidatas, ordenadas por un puntaje de partida: elegís una principal, marcás cuáles "Sí" van y cuáles son "Opcional", y con "No" descartás; cada una trae el enlace a su nota. Lo que elegís queda guardado y sirve para afinar el criterio. Los feriados llevan un enfoque ya armado con sus datos y sus fuentes: lo aprobás o pedís cambios. Nada sale solo ni gasta audio hasta que se arme la pieza.',
