@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T17:01:54.327Z",
- "portada": 57,
- "archivo": 723,
- "esperandoCuerpo": 9,
+ "generado": "2026-10-01T17:32:44.313Z",
+ "portada": 55,
+ "archivo": 724,
+ "esperandoCuerpo": 10,
  "redes": {
-  "generado": "2026-10-01T17:01:54.364Z",
+  "generado": "2026-10-01T17:32:44.350Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,12 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
       "id": "15i90co",
       "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "iheoi7",
@@ -132,11 +137,6 @@
       "id": "1sko7lj",
       "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
       "seccion": "Deportes"
-     },
-     {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -147,11 +147,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
      {
-      "id": "1ckhubg",
-      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
       "seccion": "Deportes"
      },
      {
@@ -163,11 +168,6 @@
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "jzu6k",
-      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -188,18 +188,23 @@
      "id": "1sko7lj",
      "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
      "cuando": "2026-10-01T15:25:55.233Z"
+    },
+    {
+     "id": "15i90co",
+     "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
+     "cuando": "2026-10-01T17:03:32.167Z"
     }
    ],
    "cola": [
     {
-     "id": "15i90co",
-     "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
+     "id": "1dbyjp1",
+     "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
      "seccion": "Balcarce",
      "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-01T16:55:55.233Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-01T18:33:32.167Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

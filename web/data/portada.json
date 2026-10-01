@@ -1,6 +1,93 @@
 {
-  "generado": "2026-10-01T17:01:54.327Z",
+  "generado": "2026-10-01T17:32:44.313Z",
   "notas": [
+    {
+      "id": "1a9rnj4",
+      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+      "copete": "El secretario de Gobierno, Ricardo Stoppani, repasó la labor local en seguridad. Anunció la ampliación del sistema de vigilancia y el aporte a las fuerzas.",
+      "cuerpo": "El secretario de Gobierno municipal, Ricardo Stoppani, repasó el trabajo local en materia de seguridad y anticipó que Balcarce llegará a las 250 cámaras de monitoreo el próximo año. Actualmente, el distrito cuenta con unas 180 cámaras operativas y ya se incorporan herramientas de inteligencia artificial al sistema, según informó en una entrevista con un medio local.\n\nEn cuanto al funcionamiento cotidiano, Stoppani detalló que la comuna destina aportes económicos mensuales para el mantenimiento logístico, combustible, reparaciones y equipamiento de las distintas fuerzas policiales. Asimismo, reconoció que existe escasez de personal y móviles para cubrir el cuadrante que va desde la calle 79 hasta El Cruce.\n\nRespecto a los hechos delictivos previos que motivaron reclamos a la Nación, el funcionario destacó que se incrementaron los operativos de control en la Ruta Nacional 226 con la colaboración de Gendarmería.",
+      "guion": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T17:31:17.133Z",
+      "sinFecha": true,
+      "visto": "2026-10-01T17:31:17.133Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "rutas"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
+        "El Centro de Monitoreo cuenta actualmente con unas 180 cámaras operativas.",
+        "La comuna realiza aportes económicos mensuales para la logística y el combustible policial.",
+        "Se reforzaron los controles de seguridad sobre la Ruta Nacional 226."
+      ],
+      "seSabe": [
+        "El municipio de Balcarce destina fondos para el funcionamiento de las fuerzas policiales según informó el secretario de Gobierno, Ricardo Stoppani.",
+        "El Centro de Monitoreo local suma herramientas de inteligencia artificial a su infraestructura.",
+        "Se intensificaron los operativos de control en la Ruta Nacional 226."
+      ],
+      "noConfirmado": [
+        "No se detalló el monto exacto de los aportes económicos que el municipio entrega a las fuerzas policiales.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El municipio anticipó que Balcarce llegará a 250 cámaras de monitoreo el próximo año y repasó los aportes económicos destinados a las fuerzas de seguridad.",
+      "etiquetas": [
+        "seguridad",
+        "camaras de monitoreo",
+        "ricardo stoppani",
+        "municipio",
+        "ruta 226",
+        "policia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el funcionamiento de la seguridad local, los aportes a la policía y la ampliación de cámaras de monitoreo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1bmz4t7",
+          "titulo": "Spinelli habló sobre una posible candidatura: “Ya llegará el momento de los nombres”",
+          "fecha": "2026-09-20T20:33:31.000Z",
+          "ruta": "/nota/spinelli-hablo-sobre-una-posible-candidatura-ya-llegara-el-momento-de-1bmz4t7"
+        },
+        {
+          "id": "1vt533g",
+          "titulo": "El paraje rural El Solcito atrae visitantes con su almacén histórico",
+          "fecha": "2026-10-01T12:45:00.000Z",
+          "ruta": "/nota/el-paraje-rural-el-solcito-atrae-visitantes-con-su-almacen-historico-1vt533g"
+        },
+        {
+          "id": "jul3w9",
+          "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
+          "fecha": "2026-09-29T12:08:15.000Z",
+          "ruta": "/nota/infraccionan-a-un-tractor-en-caminos-rurales-tras-las-lluvias-jul3w9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-municipio-anticipa-que-el-centro-de-monitoreo-suma-camaras",
+      "foto": {
+        "archivo": "fotos-notas/1a9rnj4.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
     {
       "id": "jzu6k",
       "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
@@ -58,71 +145,9 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "joven-mendocino-busca-empleo-tras-prohibirle-la-venta-callejera"
-    },
-    {
-      "id": "swyxjn",
-      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
-      "copete": "Nahuel González Salvo y el dúo Bajo Fondo se presentan el domingo en la Casa del Bicentenario con entrada libre y gratuita. Habrá un buffet solidario a beneficio de Protección a la Infancia.",
-      "cuerpo": "La Casa del Bicentenario será escenario de un encuentro musical el próximo domingo desde las 19.30. La propuesta combina canciones, rock nacional, tango, folklore y textos, con la participación de Nahuel González Salvo y el dúo Bajo Fondo.\n\nLa actividad cuenta con la organización de la Subsecretaría de Cultura y Educación en la sede situada sobre la avenida Favaloro 785. El acceso será libre y gratuito para toda la comunidad.\n\nDurante el desarrollo del evento funcionará un buffet cuyos fondos recaudados se destinarán a la institución Protección a la Infancia.",
-      "guion": "La Casa del Bicentenario recibe un concierto benéfico",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T16:01:27.818Z",
-      "sinFecha": true,
-      "visto": "2026-10-01T17:01:14.036Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Concierto de Nahuel González Salvo y Bajo Fondo el domingo a las 19.30.",
-        "Organiza la Subsecretaría de Cultura y Educación en avenida Favaloro 785.",
-        "Buffet a beneficio de Protección a la Infancia.",
-        "Entrada libre y gratuita."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Este domingo desde las 19.30 la Casa del Bicentenario ofrece un concierto solidario con Nahuel González Salvo y Bajo Fondo. La entrada es libre y gratuita y habrá un buffet a beneficio de Protección a la Infancia.",
-      "etiquetas": [
-        "concierto",
-        "solidaridad",
-        "Casa del Bicentenario",
-        "Protección a la Infancia",
-        "Cultura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la programación musical, los artistas participantes, el horario, el lugar y el fin solidario del evento."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "119oqdp",
-          "titulo": "La Sociedad de Protección a la Infancia realiza Voces por la Infancia",
-          "fecha": "2026-09-27T18:30:42.064Z",
-          "ruta": "/nota/la-sociedad-de-proteccion-a-la-infancia-realiza-voces-por-la-infancia-119oqdp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-casa-del-bicentenario-recibe-un-concierto-benefico",
+      "slug": "joven-mendocino-busca-empleo-tras-prohibirle-la-venta-callejera",
       "foto": {
-        "archivo": "fotos-notas/swyxjn.jpg",
+        "archivo": "fotos-notas/jzu6k.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
     },
@@ -407,6 +432,93 @@
       "slug": "concejales-proponen-crear-un-registro-municipal-de-acompanantes"
     },
     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "copete": "Un móvil del Registro Nacional de las Personas llega a la ciudad para realizar trámites. El operativo incluye jornadas gratuitas en el Concejo Deliberante y en la Sociedad Rural.",
+      "cuerpo": "El Registro Nacional de las Personas despliega un operativo documentario en Balcarce con un vehículo equipado. La primera atención se realiza el jueves 8 de octubre, de 10 a 15, en el recinto del Honorable Concejo Deliberante, donde los vecinos pueden gestionar el DNI sin costo.\n\nEl servicio continúa el viernes 9 y el sábado 10 de octubre en el predio ferial de la Sociedad Rural, situado en la intersección de la Ruta 55 y la calle 79, en coincidencia con la Fiesta Nacional del Postre. En esas dos jornadas se tramitan tanto documentos de identidad de forma gratuita como pasaportes que requieren el pago de un arancel.",
+      "guion": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-01T14:33:59.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T15:23:10.187Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Llega a Balcarce un móvil documentario del RENAPER.",
+        "El jueves 8 de octubre atiende gratis en el Concejo.",
+        "El viernes 9 y sábado 10 funciona en la Sociedad Rural.",
+        "Los pasaportes tienen costo y el DNI es gratuito."
+      ],
+      "seSabe": [
+        "El móvil del RENAPER atiende en el Concejo Deliberante el jueves 8 de octubre de 10 a 15 horas.",
+        "Los trámites de DNI en el Concejo son gratuitos.",
+        "El operativo sigue el viernes 9 y el sábado 10 de octubre en la Sociedad Rural durante la Fiesta Nacional del Postre.",
+        "En la Sociedad Rural se pueden gestionar DNI gratis y pasaportes pagos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un móvil del RENAPER llega a Balcarce para realizar trámites de DNI y pasaporte. Habrá atención gratuita en el Concejo Deliberante y en la Sociedad Rural durante la Fiesta Nacional del Postre.",
+      "etiquetas": [
+        "RENAPER",
+        "Balcarce",
+        "DNI",
+        "Fiesta Nacional del Postre",
+        "Sociedad Rural",
+        "Concejo Deliberante"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
+          "fecha": "2026-10-01T14:33:59.000Z",
+          "oficial": false,
+          "aporte": "Informó el cronograma, los horarios y las ubicaciones del móvil del RENAPER en Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1yu9ytn",
+          "titulo": "El oficialismo defiende su rechazo a convocar a Virginia Aparicio en comisión",
+          "fecha": "2026-09-30T20:53:48.000Z",
+          "ruta": "/nota/el-oficialismo-defiende-su-rechazo-a-convocar-a-virginia-aparicio-en-1yu9ytn"
+        },
+        {
+          "id": "1xzookf",
+          "titulo": "Fernando Gray anuncia exención impositiva total para jubilados",
+          "fecha": "2026-09-29T15:47:00.000Z",
+          "ruta": "/nota/fernando-gray-anuncia-exencion-impositiva-total-para-jubilados-1xzookf"
+        },
+        {
+          "id": "8zhfqv",
+          "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
+          "fecha": "2026-09-29T14:01:11.480Z",
+          "ruta": "/nota/el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria-8zhfqv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-renaper-instala-un-movil-en-balcarce-para-tramitar-dni",
+      "foto": {
+        "archivo": "fotos-notas/1dbyjp1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "1sko7lj",
       "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
       "copete": "El próximo domingo desde las 9 se realiza una clínica de longcasting en el predio de calles 9 y 120. La actividad didáctica cuenta con la presencia de la medallista mundial Rocío Lemmo y el campeón argentino Julio Piñero.",
@@ -421,7 +533,7 @@
       "fecha": "2026-10-01T14:11:37.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T14:31:27.626Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -481,6 +593,7 @@
       "medios": [
         "La Nación",
         "Clarín",
+        "Perfil",
         "El Cronista",
         "Noticias Argentinas (NA)",
         "Ámbito"
@@ -490,7 +603,7 @@
       "fecha": "2026-10-01T14:07:24.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T15:23:10.187Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -556,6 +669,65 @@
         "archivo": "fotos-notas/we53o0.jpg",
         "credito": "Foto: La Nación"
       }
+    },
+    {
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "copete": "El deportista local jugará el Campeonato Argentino de Selecciones Mayores Ascenso B. La competencia nacional se desarrollará en Mendoza del 15 al 18 de octubre.",
+      "cuerpo": "El jugador Mateo Raimondi fue convocado para integrar el plantel del seleccionado de la Asociación Amateur Marplatense de Hockey en el Campeonato Argentino de Selecciones Mayores Ascenso B. El certamen se disputará del 15 al 18 de octubre en la ciudad mendocina de San Rafael, bajo la organización de la Confederación Argentina de Hockey.\n\nRaimondi se desempeña como volante por la izquierda en el plantel superior de MDQ 06 Hockey Club y forma parte de la lista de veinte deportistas elegidos. El conjunto regional buscará obtener el ascenso directo a la Zona A durante la competencia.",
+      "guion": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "seccion": "Deportes",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/mateo-raimondi-fue-convocado-para-disputar-el-campeonato-argentino-de-selecciones/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-01T14:00:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T14:11:16.401Z",
+      "relevancia": 74,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Mateo Raimondi fue convocado al seleccionado marplatense",
+        "El torneo se jugará en San Rafael del 15 al 18 de octubre",
+        "El equipo busca el ascenso a la Zona A",
+        "El deportista se desempeña como volante en MDQ 06"
+      ],
+      "seSabe": [
+        "Mateo Raimondi integra la lista de veinte convocados de la Asociación Amateur Marplatense de Hockey",
+        "El torneo se jugará del 15 al 18 de octubre en San Rafael, Mendoza",
+        "El seleccionado busca el ascenso directo a la Zona A"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El deportista Mateo Raimondi fue convocado para disputar el Campeonato Argentino de Selecciones Mayores Ascenso B con el equipo marplatense. El torneo se jugará del 15 al 18 de octubre en San Rafael, Mendoza.",
+      "etiquetas": [
+        "Mateo Raimondi",
+        "hockey",
+        "Campeonato Argentino",
+        "MDQ 06",
+        "San Rafael"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/mateo-raimondi-fue-convocado-para-disputar-el-campeonato-argentino-de-selecciones/",
+          "fecha": "2026-10-01T14:00:12.000Z",
+          "oficial": false,
+          "aporte": "Informó la convocatoria de Mateo Raimondi al seleccionado de hockey y los detalles del torneo nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "mateo-raimondi-integra-el-seleccionado-marplatense-de-hockey"
     },
     {
       "id": "1mknzh0",
@@ -774,6 +946,7 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -1042,14 +1215,16 @@
       "guion": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Municipalidad de Balcarce"
+        "Puntonueve (FM 100.9)",
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/01/bajo-fondo-y-nahuel-gonzalez-salvo-el-domingo-en-cultura/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T11:48:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 74,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1224,6 +1399,7 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -1232,7 +1408,7 @@
       "fecha": "2026-10-01T11:20:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1291,13 +1467,15 @@
       "guion": "El ERAS convoca a audiencia pública para debatir la nueva tarifa de AySA",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
         "Infobae",
         "Ámbito",
         "TN (Todo Noticias)",
+        "El Destape",
         "Crónica",
         "Diario Popular",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "InfoRegión",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.ambito.com/economia/el-eras-convoco-audiencia-publica-tratar-la-actualizacion-tarifas-aysa-n6328740",
       "teniaImagenLaFuente": true,
@@ -1498,6 +1676,7 @@
         "La Nación",
         "Infobae",
         "Ámbito",
+        "El Cronista",
         "iProfesional",
         "Noticias Argentinas (NA)",
         "El Marplatense"
@@ -1657,90 +1836,6 @@
       "foto": {
         "archivo": "fotos-notas/q7x46o.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "17z7wso",
-      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
-      "copete": "La vuelta de las categorías nacionales al autódromo Juan Manuel Fangio generó un impacto económico estimado en 2.700 millones de pesos en la ciudad, según informó la Municipalidad.",
-      "cuerpo": "El regreso de las competencias nacionales al autódromo Juan Manuel Fangio produjo un movimiento económico estimado en 2.700 millones de pesos en Balcarce. De acuerdo con la subsecretaria de Turismo, Rosario Tufró, la cifra reúne los consumos en comercios, estaciones de servicio, gastronomía, alojamientos y entradas. El arribo de visitantes comenzó el miércoles previo al fin de semana.\n\nEl sector de alojamientos registró una capacidad completa en hoteles y alquileres temporarios, lo que llevó a vecinos a ofrecer habitaciones de sus viviendas con asesoramiento municipal.\n\nDesde el área de Turismo evaluaron positivamente la experiencia y señalaron que la actividad representa una oportunidad para la ciudad si se logra sostener una agenda de acontecimientos de convocatoria similar.",
-      "guion": "El automovilismo deja un movimiento de 2.700 millones",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T09:01:07.409Z",
-      "sinFecha": true,
-      "visto": "2026-10-01T09:01:07.409Z",
-      "relevancia": 61,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El regreso del automovilismo generó unos 2.700 millones de pesos en la economía local.",
-        "El dato fue informado por la subsecretaria de Turismo, Rosario Tufró.",
-        "La capacidad hotelera estuvo completa y vecinos ofrecieron habitaciones particulares.",
-        "El arribo de visitantes a la ciudad comenzó el miércoles previo a las competencias."
-      ],
-      "seSabe": [
-        "El movimiento económico en Balcarce alcanzó unos 2.700 millones de pesos, según la Municipalidad.",
-        "La subsecretaria de Turismo, Rosario Tufró, informó que la llegada de visitantes comenzó el miércoles.",
-        "El sector hotelero y los alquileres temporarios completaron su capacidad.",
-        "Vecinos ofrecieron habitaciones de sus viviendas ante la demanda de alojamiento."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio generó un movimiento económico estimado en 2.700 millones de pesos en Balcarce, con impacto en el comercio, la gastronomía y los alojamientos.",
-      "etiquetas": [
-        "autodromo",
-        "juan manuel fangio",
-        "turismo",
-        "economia",
-        "automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó el movimiento económico estimado de 2.700 millones y los detalles de ocupación hotelera y consumo local."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "p8h86x",
-          "titulo": "El automovilismo nacional genera un intenso movimiento vehicular",
-          "fecha": "2026-09-27T16:27:29.000Z",
-          "ruta": "/nota/el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular-p8h86x"
-        },
-        {
-          "id": "p7nd3j",
-          "titulo": "Balcarce palpita el regreso del automovilismo nacional",
-          "fecha": "2026-09-26T01:13:28.000Z",
-          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
-        },
-        {
-          "id": "4v2vga",
-          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
-          "fecha": "2026-09-24T13:34:15.000Z",
-          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-automovilismo-deja-un-movimiento-de-2-700-millones",
-      "foto": {
-        "archivo": "fotos-notas/17z7wso.jpg",
-        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -2092,12 +2187,12 @@
         "Diario La Vanguardia",
         "Clarín",
         "TN (Todo Noticias)",
+        "Todo Agro",
         "Infobae",
         "Bichos de Campo",
         "Noticias Agropecuarias",
         "La Noticia 1",
-        "Infocampo",
-        "Todo Agro"
+        "Infocampo"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44956-dirigentes-de-faa-de-balcarce-participaron-del-112-congreso-anual-de-la-entidad-en-rosario/",
       "teniaImagenLaFuente": true,
@@ -2433,6 +2528,7 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
+        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
         "TyC Sports",
@@ -2498,6 +2594,93 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "aymeric-laporte-califica-a-la-argentina-de-antif-u00futbol-tras-la"
+    },
+    {
+      "id": "17z7wso",
+      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
+      "copete": "La vuelta de las categorías nacionales al autódromo Juan Manuel Fangio generó un impacto económico estimado en 2.700 millones de pesos en la ciudad, según informó la Municipalidad.",
+      "cuerpo": "El regreso de las competencias nacionales al autódromo Juan Manuel Fangio produjo un movimiento económico estimado en 2.700 millones de pesos en Balcarce. De acuerdo con la subsecretaria de Turismo, Rosario Tufró, la cifra reúne los consumos en comercios, estaciones de servicio, gastronomía, alojamientos y entradas. El arribo de visitantes comenzó el miércoles previo al fin de semana.\n\nEl sector de alojamientos registró una capacidad completa en hoteles y alquileres temporarios, lo que llevó a vecinos a ofrecer habitaciones de sus viviendas con asesoramiento municipal.\n\nDesde el área de Turismo evaluaron positivamente la experiencia y señalaron que la actividad representa una oportunidad para la ciudad si se logra sostener una agenda de acontecimientos de convocatoria similar.",
+      "guion": "El automovilismo deja un movimiento de 2.700 millones",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T21:35:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T09:01:07.409Z",
+      "relevancia": 79,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El regreso del automovilismo generó unos 2.700 millones de pesos en la economía local.",
+        "El dato fue informado por la subsecretaria de Turismo, Rosario Tufró.",
+        "La capacidad hotelera estuvo completa y vecinos ofrecieron habitaciones particulares.",
+        "El arribo de visitantes a la ciudad comenzó el miércoles previo a las competencias."
+      ],
+      "seSabe": [
+        "El movimiento económico en Balcarce alcanzó unos 2.700 millones de pesos, según la Municipalidad.",
+        "La subsecretaria de Turismo, Rosario Tufró, informó que la llegada de visitantes comenzó el miércoles.",
+        "El sector hotelero y los alquileres temporarios completaron su capacidad.",
+        "Vecinos ofrecieron habitaciones de sus viviendas ante la demanda de alojamiento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio generó un movimiento económico estimado en 2.700 millones de pesos en Balcarce, con impacto en el comercio, la gastronomía y los alojamientos.",
+      "etiquetas": [
+        "autodromo",
+        "juan manuel fangio",
+        "turismo",
+        "economia",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó el movimiento económico estimado de 2.700 millones y los detalles de ocupación hotelera y consumo local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p8h86x",
+          "titulo": "El automovilismo nacional genera un intenso movimiento vehicular",
+          "fecha": "2026-09-27T16:27:29.000Z",
+          "ruta": "/nota/el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular-p8h86x"
+        },
+        {
+          "id": "p7nd3j",
+          "titulo": "Balcarce palpita el regreso del automovilismo nacional",
+          "fecha": "2026-09-26T01:13:28.000Z",
+          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-automovilismo-deja-un-movimiento-de-2-700-millones",
+      "foto": {
+        "archivo": "fotos-notas/17z7wso.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
     },
     {
       "id": "1ivau49",
@@ -3078,147 +3261,6 @@
       }
     },
     {
-      "id": "gd6n9s",
-      "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-      "copete": "El informe climático para la primera semana de octubre anticipa precipitaciones reducidas en la mayor parte del área productiva, acompañadas por altas temperaturas iniciales y un posterior ingreso de vientos polares con heladas.",
-      "cuerpo": "La Bolsa de Cereales de Buenos Aires informó que la primera semana de octubre comenzará con precipitaciones escasas en la mayor parte de la región agrícola. El reporte detalló que las lluvias fuertes se concentrarán en el norte del área y en el Litoral Fluvial, con un foco superior a los 150 milímetros en Misiones.\n\nAl inicio del período, los vientos del trópico generarán temperaturas máximas superiores a los 30 grados, con registros de hasta 40 grados en varias zonas. Según indicó la perspectiva agroclimática, luego arribarán vientos polares que provocarán un marcado descenso térmico, con riesgo de heladas generales y localizadas en el oeste y el sudeste de la región pampeana.",
-      "guion": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Noticias Agropecuarias"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/09/30/se-esperan-lluvias-escasas-en-la-mayor-parte-de-la-region-agricola-durante-la-primera-semana-de-octubre/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T18:42:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T21:01:04.723Z",
-      "relevancia": 26,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lluvias escasas en gran parte de la región agrícola entre el 1 y el 7 de octubre.",
-        "Tormentas intensas concentradas en el norte y el Litoral Fluvial.",
-        "Altas temperaturas iniciales con registros superiores a 30 grados.",
-        "Ingreso de vientos polares con descenso térmico y riesgo de heladas."
-      ],
-      "seSabe": [
-        "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 1 al 7 de octubre.",
-        "Se prevén lluvias escasas en la mayor parte del área productiva.",
-        "Habrá tormentas intensas en el norte del área agrícola y Misiones.",
-        "Se registrará un descenso térmico con heladas tras el paso de vientos polares."
-      ],
-      "textoRedes": "El informe climático para la primera semana de octubre anticipa lluvias escasas en gran parte de la región agrícola, temperaturas elevadas iniciales y un posterior ingreso de vientos polares con riesgo de heladas.",
-      "etiquetas": [
-        "clima",
-        "Bolsa de Cereales",
-        "heladas",
-        "lluvias"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/09/30/se-esperan-lluvias-escasas-en-la-mayor-parte-de-la-region-agricola-durante-la-primera-semana-de-octubre/",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "oficial": false,
-          "aporte": "Detalló el pronóstico completo de lluvias, temperaturas y heladas para la primera semana de octubre según la Bolsa de Cereales."
-        },
-        {
-          "medio": "Noticias Agropecuarias",
-          "enlace": "https://www.noticiasagropecuarias.com/2026/09/30/proximos-dias-con-lluvias-escasas-en-gran-parte-de-la-region-agricola/",
-          "fecha": "2026-09-30T20:17:47.000Z",
-          "oficial": false,
-          "aporte": "Aportó la previsión de tormentas fuertes en el norte y la posterior llegada de una ola de frío."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region",
-      "foto": {
-        "archivo": "fotos-notas/gd6n9s.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "n3x306",
-      "titulo": "Milei impulsa la inteligencia artificial con menos regulación en el país",
-      "copete": "El Gobierno busca atraer inversiones tecnológicas y construir centros de datos en la Patagonia. El proyecto oficial prevé empresas operadas por agentes de inteligencia artificial bajo ciertas condiciones legales.",
-      "cuerpo": "El presidente Javier Milei busca posicionar a Argentina como un destino para el desarrollo de inteligencia artificial mediante un esquema con menor intervención regulatoria. Ante la ONU, el mandatario ratificó la decisión de no regular de manera preventiva esta tecnología y comparó los temores actuales con la llegada de internet.\n\nLa estrategia oficial apunta a atraer inversiones para instalar centros de datos en la Patagonia. Además, el ministro de Desregulación, Federico Sturzenegger, impulsa una iniciativa para permitir el funcionamiento de empresas operadas por agentes de inteligencia artificial, las cuales deberán contar con una persona física que asuma la responsabilidad legal final.\n\nDistintos especialistas advirtieron sobre los riesgos legales y sociales vinculados a estas medidas. En tanto, Brasil y Chile se mantienen por delante en infraestructura tecnológica regional.",
-      "guion": "Milei impulsa la inteligencia artificial con menos regulación en el país",
-      "seccion": "Tecnología",
-      "medios": [
-        "Ámbito",
-        "Diario Popular"
-      ],
-      "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T18:24:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T01:01:10.175Z",
-      "relevancia": 32,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Milei promueve a Argentina como polo de inteligencia artificial sin regulación preventiva.",
-        "El plan contempla atraer inversiones para construir centros de datos en la Patagonia.",
-        "El proyecto prevé empresas operadas por agentes de IA con un responsable legal humano.",
-        "Especialistas y sectores de la oposición expresaron cuestionamientos sobre los riesgos."
-      ],
-      "seSabe": [
-        "El presidente Javier Milei anunció ante la ONU que no habrá regulación preventiva para la inteligencia artificial.",
-        "El ministro Federico Sturzenegger confirmó modificaciones al proyecto original de empresas operadas por agentes de IA.",
-        "El Gobierno promueve a la Patagonia para la instalación de centros de datos."
-      ],
-      "noConfirmado": [
-        "Todavía falta la aprobación del proyecto en el Congreso nacional.",
-        "No se detallaron los montos específicos de las inversiones extranjeras previstas."
-      ],
-      "textoRedes": "El Gobierno busca posicionar a Argentina como un polo de inteligencia artificial con una estrategia de desregulación, incentivos para centros de datos en la Patagonia y proyectos para empresas operadas por agentes de IA.",
-      "etiquetas": [
-        "Inteligencia artificial",
-        "Gobierno nacional",
-        "Javier Milei",
-        "Federico Sturzenegger",
-        "Tecnología",
-        "Inversiones"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
-          "fecha": "2026-09-30T18:24:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los anuncios presidenciales en la ONU, el proyecto de empresas de IA y los cuestionamientos de expertos."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/javier-milei-promociona-argentina-como-un-refugio-reglas-la-inteligencia-artificial-n6328706",
-          "fecha": "2026-10-01T00:41:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el enfoque sobre la estrategia de desregulación y los centros de datos en la Patagonia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "milei-impulsa-la-inteligencia-artificial-con-menos-regulacion-en-el",
-      "foto": {
-        "archivo": "fotos-notas/n3x306.jpg",
-        "credito": "Foto: Diario Popular"
-      }
-    },
-    {
       "id": "6xex85",
       "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
       "copete": "La vigesimosegunda edición del tradicional encuentro gastronómico se realizará del 9 al 12 de octubre en la Sociedad Rural. Por primera vez durará cuatro jornadas y tendrá entrada libre y gratuita.",
@@ -3226,6 +3268,7 @@
       "guion": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "El Diario Balcarce",
         "La Noticia 1"
       ],
@@ -4087,148 +4130,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "jovenes-de-balcarce-participan-del-tradicional-encuentro-diocesano"
-    },
-    {
-      "id": "1h321lc",
-      "titulo": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
-      "copete": "El Ejecutivo nacional actualizó los valores de referencia para el ingreso de vehículos híbridos y eléctricos sin arancel. La medida busca incorporar modelos de última tecnología y ampliar la oferta.",
-      "cuerpo": "El Gobierno nacional elevó los valores de referencia para importar vehículos eléctricos e híbridos sin pagar arancel, a través de la publicación del Decreto 1128/2026 en el Boletín Oficial. La actualización fijó un tope de USD 35.000 por unidad FOB para los automóviles eléctricos puros, mientras que para los híbridos convencionales y enchufables el límite subió a USD 18.000. Por su parte, los modelos mild hybrid conservan el umbral previo de USD 16.000.\n\nLa revisión responde al incremento de precios de las unidades más recientes y apunta a incorporar estándares actuales de seguridad y equipamiento tecnológico. El cambio alcanza tanto a empresas con producción local como a importadores que operan dentro del esquema de arancel cero.\n\nDurante los primeros siete meses de 2026 los patentamientos de este segmento alcanzaron 48.320 unidades, lo que representa un aumento interanual del 322%. Del total de cupos asignados por 100.000 unidades en las convocatorias previas, ya ingresaron al país 68.792 rodados.",
-      "guion": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
-      "seccion": "Economía",
-      "medios": [
-        "LU9 Mar del Plata",
-        "Infobae",
-        "El Cronista",
-        "C5N",
-        "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Clarín",
-        "Radio Mitre",
-        "Ecos Diarios (Necochea)"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/30/el-gobierno-elevo-a-usd-35000-el-tope-para-importar-autos-electricos-sin-arancel/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T11:17:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T12:57:58.335Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Decreto 1128/2026 fija nuevos topes para importar vehículos sin arancel.",
-        "Los autos eléctricos puros tienen un límite de USD 35.000 por unidad FOB.",
-        "Los híbridos convencionales y enchufables pueden ingresar hasta USD 18.000.",
-        "Los patentamientos crecieron 322% en los primeros siete meses de 2026."
-      ],
-      "seSabe": [
-        "El Gobierno modificó el régimen de importación de vehículos mediante el Decreto 1128/2026.",
-        "El nuevo tope FOB para autos eléctricos puros sin arancel es de USD 35.000.",
-        "Los híbridos convencionales y enchufables tienen un límite de USD 18.000 FOB.",
-        "Los vehículos mild hybrid mantienen el tope de USD 16.000 FOB.",
-        "Entre enero y julio de 2026 se patentaron 48.320 unidades híbridas y eléctricas.",
-        "El esquema de arancel cero asignó 100.000 unidades en total, con un ingreso de 68.792 vehículos."
-      ],
-      "textoRedes": "El Gobierno nacional elevó a 35.000 dólares el tope FOB para importar autos eléctricos puros sin arancel mediante el Decreto 1128/2026. La medida también actualiza los límites para vehículos híbridos y busca ampliar la oferta de tecnología en el mercado.",
-      "etiquetas": [
-        "autos eléctricos",
-        "importación",
-        "aranceles",
-        "Gobierno nacional",
-        "Boletín Oficial",
-        "vehículos híbridos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/30/el-gobierno-elevo-a-usd-35000-el-tope-para-importar-autos-electricos-sin-arancel/",
-          "fecha": "2026-09-30T11:17:45.000Z",
-          "oficial": false,
-          "aporte": "Detalló los nuevos topes para importar autos eléctricos e híbridos y las cifras de patentamientos."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/el-gobierno-elevo-el-tope-importar-autos-electricos-arancel-n250309",
-          "fecha": "2026-09-30T11:53:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que los precios de los automóviles bajaron 29% frente al resto de la economía entre enero de 2024 y junio de 2026."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-aumento-el-valor-tope-para-importar-autos-electricos-e-hibridos-sin-arancel_a6abcf3e2129df45908d2b32c",
-          "fecha": "2026-09-30T11:38:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la publicación del Decreto 1128/2026 en el Boletín Oficial."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-eleva-a-35-mil-dolares-el-tope-para-importar-autos",
-      "foto": {
-        "archivo": "fotos-notas/1h321lc.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "1mz151q",
-      "titulo": "Un argentino cae prisionero en Ucrania tras sumarse al ejército ruso",
-      "copete": "Ibrahim Roberto Yamil tiene 37 años y fue capturado en el conflicto bélico. Asegura que le prometieron dinero y advierte sobre los peligros.",
-      "cuerpo": "El argentino Ibrahim Roberto Yamil, de 37 años, fue capturado como prisionero en Ucrania tras haberse incorporado a las fuerzas armadas de Rusia. Su situación se conoció a través de un video grabado desde la cárcel y difundido por el programa ucraniano \"Quiero Vivir\", donde advirtió que la realidad es muy distinta a lo prometido.\n\nYamil relató que aceptó sumarse luego de ver una oferta en redes sociales para realizar tareas logísticas a cambio de una suma de dinero que nunca recibió.\n\nTras la difusión del caso, la Cancillería argentina emitió un comunicado el martes para advertir sobre los riesgos del alistamiento voluntario en fuerzas extranjeras. El organismo señaló un incremento de casos de fallecimientos, desapariciones y situaciones de vulnerabilidad entre los ciudadanos que responden a este tipo de convocatorias.",
-      "guion": "Un argentino cae prisionero en Ucrania tras sumarse al ejército ruso.",
-      "seccion": "Argentina",
-      "medios": [
-        "Clarín",
-        "Perfil"
-      ],
-      "enlace": "https://www.clarin.com/sociedad/hablo-argentino-pelear-rusia-cayo-prisionero-ucrania-mandan-morir-parece_0_kC8Ix1Pzd0.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T05:08:34.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T04:01:15.862Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": "Hernán",
-      "publicadaCuando": "2026-10-01T03:41:39.303Z",
-      "temas": [],
-      "como": "publicada",
-      "noConfirmado": [
-        "El monto exacto de dinero ofrecido, ya que Yamil mencionó 20.000 dólares y el programa ucraniano habló de 10.000 dólares."
-      ],
-      "textoRedes": "Un argentino de 37 años fue capturado prisionero en Ucrania tras sumarse al ejército ruso y la Cancillería emitió una alerta.",
-      "etiquetas": [
-        "Ucrania",
-        "Rusia",
-        "Argentina",
-        "Cancillería",
-        "prisionero"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/sociedad/hablo-argentino-pelear-rusia-cayo-prisionero-ucrania-mandan-morir-parece_0_kC8Ix1Pzd0.html",
-          "fecha": "2026-09-30T05:08:34.000Z",
-          "oficial": false,
-          "aporte": "Detalló el testimonio del argentino prisionero, su relato sobre las promesas incumplidas y el comunicado de la Cancillería."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/internacional/el-argentino-que-fue-contratado-por-rusia-para-luchar-en-ucrania-y-cayo-prisionero-conto-su-terrible-experiencia-la-verdad.phtml",
-          "fecha": "2026-09-30T07:45:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la edad de Ibrahim Roberto Yamil, el monto de dinero mencionado y la grabación desde la cárcel de Ucrania."
-        }
-      ],
-      "slug": "un-argentino-cae-prisionero-en-ucrania-tras-sumarse-al-ejercito-ruso",
-      "foto": {
-        "archivo": "fotos-notas/1mz151q.jpg",
-        "credito": "Foto: Clarín"
-      }
     }
   ],
   "secciones": [
@@ -4238,8 +4139,8 @@
     "Deportes",
     "Cultura y agenda",
     "Argentina",
-    "Automovilismo",
     "Fútbol",
+    "Automovilismo",
     "Política",
     "Tecnología"
   ],
@@ -4248,13 +4149,33 @@
       "nombre": "El hospital",
       "ranura": "hospital",
       "cuantas": 3
+    },
+    {
+      "nombre": "El autódromo",
+      "ranura": "autodromo",
+      "cuantas": 2
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 2
+    },
+    {
+      "nombre": "Las rutas",
+      "ranura": "rutas",
+      "cuantas": 2
+    },
+    {
+      "nombre": "Fangio",
+      "ranura": "fangio",
+      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 10,
       "sensacion": 4,
-      "humedad": 64,
+      "humedad": 65,
       "viento": 28,
       "rumbo": "SO",
       "cielo": "Nublado",
@@ -4266,7 +4187,7 @@
         "dia": "jue",
         "max": 10,
         "min": 7,
-        "lluvia": 8,
+        "lluvia": 14,
         "codigo": 51,
         "viento": 30,
         "milimetros": 0,
@@ -4277,7 +4198,7 @@
         "dia": "vie",
         "max": 13,
         "min": 7,
-        "lluvia": 50,
+        "lluvia": 62,
         "codigo": 51,
         "viento": 23,
         "milimetros": 0,
@@ -4299,7 +4220,7 @@
         "dia": "dom",
         "max": 20,
         "min": 7,
-        "lluvia": 8,
+        "lluvia": 12,
         "codigo": 3,
         "viento": 18,
         "milimetros": 0,
@@ -4609,12 +4530,6 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
-      "id": "1swrham",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "1ei2dt4",
       "titulo": null,
       "seccion": "Policiales",
@@ -4627,16 +4542,22 @@
       "motivo": "necesita ojo humano: \"imputado\""
     },
     {
-      "id": "1n70nnq",
+      "id": "1swrham",
       "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"un bebé\", en lo que contaron otros medios (visto al reescribir)"
     },
     {
       "id": "15zn3v4",
       "titulo": "¿Se terminó la fiesta? La pelea entre Mazzacane y el Museo…",
       "seccion": "Automovilismo",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "1ip1o6l",
+      "titulo": "Javier Milei está reunido con Emmanuel Macron en el…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "1htl2lu",
@@ -4649,6 +4570,12 @@
       "titulo": "Tensión en el estadio de Newell’s tras los festejos de…",
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "3noxlf",
+      "titulo": "La ANMAT prohibió una serie de productos de limpieza por…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
       "id": "8hswff",
@@ -4669,22 +4596,16 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "3noxlf",
-      "titulo": "La ANMAT prohibió una serie de productos de limpieza por…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"publicidad\""
+      "id": "1n70nnq",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "10ybc9u",
       "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "qy7mv0",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1dolyhk",
@@ -4699,5 +4620,5 @@
       "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
-  "esperandoCuerpo": 9
+  "esperandoCuerpo": 10
 }

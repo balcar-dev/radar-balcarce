@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T17:01:54.327Z",
+ "generado": "2026-10-01T17:32:44.313Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -42,6 +42,43 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"cer\" y la fuente no"
+  },
+  {
+   "id": "6jbdxb",
+   "titulo": "Irene Feingold clasificó al Torneo Nacional",
+   "copete": "La gimnasta de UP Gimnasia Artística Irene Feingold logró la clasificación al Torneo Nacional de Gimnasia Artística, luego de completar las tres instancias clasificatorias. Finalizó en el noveno puesto del ranking general de la categoría Nivel 4 de Mayores, resultado que le…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-01T11:54:27.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/01/irene-feingold-clasifico-al-torneo-nacional/",
+     "fecha": "2026-10-01T11:54:27.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/irene-feingold-clasifico-al-torneo-nacional-de-gimnasia-artistica/",
+     "fecha": "2026-10-01T12:11:45.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo"
+  },
+  {
+   "id": "c0hkeg",
+   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
+   "copete": "Con motivo de la conmemoración del Día Internacional de las Personas Mayores -celebrado cada 1 de octubre-, la ciudad se prepara para vivir una tarde dedicada de lleno al cuidado y la calidad de vida en la adultez. El encuentro tendrá lugar mañan",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T11:52:38.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
+     "fecha": "2026-10-01T11:52:38.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo"
   },
   {
    "id": "1uw5a9s",
@@ -109,22 +146,32 @@
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/el-vicepresidente-de-donald-trump-viene-a-argentina-en-noviembre-politica-y-economia_1790870340",
      "fecha": "2026-10-01T16:03:00.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-1-14-17-0-el-vicepresidente-de-ee-uu-visitara-la-argentina-en-noviembre-para-reunirse-con-milei",
+     "fecha": "2026-10-01T17:21:41.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/el-vicepresidente-de-estados-unidos-visitara-la-argentina-en-noviembre",
+     "fecha": "2026-10-01T17:30:00.000Z"
     }
    ],
    "intentos": 3,
    "motivo": "cuerpo: 2 problemas (relleno, copia): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 30 palabras"
   },
   {
-   "id": "1jiov2o",
-   "titulo": "El agro liquidó u$s3.228 millones en septiembre y alcanzó el tercer mejor registro en 25 años",
+   "id": "8y333p",
+   "titulo": "Ingresaron US$ 3.228 millones: por el maíz, la liquidación del agro creció 17% en septiembre",
    "copete": "Las empresas agroexportadoras liquidaron US$ 3.228 millones durante septiembre de 2026, un 17% más que en agosto, según informaron este jueves la Cámara de la Industria Aceitera de la República Argentina (CIARA) y el Centro de Exportadores de Cereales (CEC). De acuerdo con las…",
    "seccion": "Agro",
-   "fecha": "2026-10-01T11:00:52.000Z",
+   "fecha": "2026-10-01T11:35:29.000Z",
    "fuentes": [
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/el-agro-liquido-us3228-millones-septiembre-y-alcanzo-el-tercer-mejor-registro-25-anos-n6328761",
-     "fecha": "2026-10-01T11:00:52.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/rural/ingresaron-us-3228-millones-maiz-liquidacion-agro-crecio-17-septiembre_0_hUXzJTEnne.html",
+     "fecha": "2026-10-01T11:35:29.000Z"
     },
     {
      "medio": "LU9 Mar del Plata",
@@ -137,19 +184,14 @@
      "fecha": "2026-10-01T13:09:30.000Z"
     },
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/rural/ingresaron-us-3228-millones-maiz-liquidacion-agro-crecio-17-septiembre_0_hUXzJTEnne.html",
-     "fecha": "2026-10-01T11:35:29.000Z"
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/el-agro-liquido-us3228-millones-septiembre-y-alcanzo-el-tercer-mejor-registro-25-anos-n6328761",
+     "fecha": "2026-10-01T12:28:26.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/economia/la-liquidacion-del-agro-crecio-17--en-septiembre-y-aporto-us-3-229-millones_a6abe3fec8419983d42516a54",
      "fecha": "2026-10-01T12:34:41.274Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-1-10-31-0-el-sector-agroexportador-liquido-3-228-millones-de-dolares-durante-septiembre",
-     "fecha": "2026-10-01T16:37:02.000Z"
     },
     {
      "medio": "El Eco de Tandil",
@@ -160,42 +202,15 @@
      "medio": "Noticias Agropecuarias",
      "enlace": "https://www.noticiasagropecuarias.com/2026/10/01/la-liquidacion-de-divisas-del-agro-alcanzo-3-228-mill-dol-en-septiembre/",
      "fecha": "2026-10-01T11:52:56.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 108 palabras"
-  },
-  {
-   "id": "c0hkeg",
-   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
-   "copete": "Con motivo de la conmemoración del Día Internacional de las Personas Mayores -celebrado cada 1 de octubre-, la ciudad se prepara para vivir una tarde dedicada de lleno al cuidado y la calidad de vida en la adultez. El encuentro tendrá lugar mañan",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T11:52:38.000Z",
-   "fuentes": [
+    },
     {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-     "fecha": "2026-10-01T11:52:38.000Z"
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-1-10-31-0-el-sector-agroexportador-liquido-3-228-millones-de-dolares-durante-septiembre",
+     "fecha": "2026-10-01T14:23:51.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "con cuerpo"
-  },
-  {
-   "id": "6jbdxb",
-   "titulo": "Irene Feingold clasificó al Torneo Nacional",
-   "copete": "La gimnasta de UP Gimnasia Artística Irene Feingold logró la clasificación al Torneo Nacional de Gimnasia Artística, luego de completar las tres instancias clasificatorias. Finalizó en el noveno puesto del ranking general de la categoría Nivel 4 de Mayores, resultado que le…",
-   "seccion": "Deportes",
-   "fecha": "2026-10-01T11:54:27.000Z",
-   "fuentes": [
-    {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/01/irene-feingold-clasifico-al-torneo-nacional/",
-     "fecha": "2026-10-01T11:54:27.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo"
+   "motivo": "título o bajada: 3 problemas (numero): el titulo dice 3.000 y la fuente no lo dice"
   },
   {
    "id": "1h0pc9p",
@@ -243,6 +258,37 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 93 palabras"
+  },
+  {
+   "id": "au1bse",
+   "titulo": "Efecto cosecha y exportaciones récord: la liquidación de divisas de septiembre fue la mayor del año",
+   "copete": "El presidente de la Cámara de la Industria Aceitera de la República Argentina y el Centro de Exportadores de Cereales (CIARA-CEC) , Gustavo Idígoras , fue contundente este miércoles durante el desarrollo del 5° Congreso Internacional de Maíz . “El maíz es la estrella del año, la…",
+   "seccion": "Agro",
+   "fecha": "2026-10-01T11:36:19.000Z",
+   "fuentes": [
+    {
+     "medio": "Infocampo",
+     "enlace": "https://www.infocampo.com.ar/efecto-cosecha-y-exportaciones-record-la-liquidacion-de-divisas-de-septiembre-fue-la-mayor-del-ano/",
+     "fecha": "2026-10-01T11:36:19.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/campo/por-los-embarques-de-maiz-en-septiembre-crecio-un-17-la-liquidacion-de-divisas-por-exportaciones-de-nid01102026/",
+     "fecha": "2026-10-01T12:57:26.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/campo/2026/10/01/la-agroindustria-liquido-divisas-por-us3220-millones-en-septiembre-y-acumula-mas-de-us22270-en-lo-que-va-del-ano/",
+     "fecha": "2026-10-01T11:39:23.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/en-septiembre-crecio-un-17-la-liquidacion-de-divisas-por-exportaciones-de-granos-y-oleaginosas/",
+     "fecha": "2026-10-01T13:47:10.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 3.000 y la fuente no lo dice"
   },
   {
    "id": "zv8yz3",
