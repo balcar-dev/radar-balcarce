@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T07:01:38.836Z",
+  "generado": "2026-10-01T07:31:13.517Z",
   "notas": [
     {
       "id": "f3bef7",
@@ -204,10 +204,7 @@
       "seccion": "Política",
       "medios": [
         "Puntonueve (FM 100.9)",
-        "El Diario Balcarce",
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "El Diario Balcarce"
       ],
       "enlace": "https://puntonueve.com.ar/martinez-explico-por-que-el-oficialismo-no-recibio-a-virginia-aparicio-en-la-comision-de-salud/",
       "teniaImagenLaFuente": false,
@@ -1294,7 +1291,7 @@
       "fecha": "2026-09-30T19:10:37.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T02:31:07.465Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1885,8 +1882,8 @@
         "El Marplatense",
         "El Eco de Tandil",
         "Bolavip Argentina",
-        "La Capital (Rosario)",
-        "La Nueva"
+        "La Nueva",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.elmarplatense.com/argentina-uruguay-y-paraguay-jugaran-las-eliminatorias-rumbo-al-mundial-2030",
       "teniaImagenLaFuente": true,
@@ -1979,6 +1976,7 @@
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
+        "TyC Sports",
         "Crónica",
         "La Nueva"
       ],
@@ -2980,7 +2978,6 @@
         "Minuto Uno",
         "C5N",
         "Noticias Argentinas (NA)",
-        "El Día",
         "0221",
         "La Opinión",
         "La Voz del Pueblo",
@@ -2989,6 +2986,7 @@
         "La Nueva",
         "Clarín",
         "Agencia DIB",
+        "El Día",
         "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/economia/2026/09/30/el-gobierno-volvio-a-postergar-un-mes-el-aumento-de-impuestos-que-se-trasladan-a-los-precios-de-la-nafta-y-el-gasoil/",
@@ -3231,12 +3229,12 @@
         "Infobrisas (Radio Brisas)",
         "Agrositio",
         "Agroempresario",
-        "El Economista",
         "Ámbito",
         "El Día",
         "Agencia DIB",
         "Radio Mitre",
         "Crónica",
+        "El Economista",
         "Todo Agro",
         "Noticias Agropecuarias",
         "A24",
@@ -3859,12 +3857,12 @@
       "guion": "El Banco Central compra dólares pero las reservas caen",
       "seccion": "Economía",
       "medios": [
+        "Ámbito",
         "La Nación",
         "Perfil",
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "Ámbito",
         "C5N",
         "Noticias Argentinas (NA)"
       ],
@@ -4196,8 +4194,8 @@
     "ahora": {
       "temp": 8,
       "sensacion": 3,
-      "humedad": 83,
-      "viento": 22,
+      "humedad": 81,
+      "viento": 23,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
@@ -4600,28 +4598,16 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "1d7e9tl",
-      "titulo": "Escándalo en el ascenso: hizo gestos racistas, no lo…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"detenido\""
+      "id": "dehy97",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "o4j8b1",
       "titulo": "El Gobierno denunció los vuelos ilegales entre las Islas…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1hddw4w",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "11a41j5",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "50rj2r",
@@ -4636,5 +4622,5 @@
       "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 3
 }
