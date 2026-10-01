@@ -115,6 +115,8 @@ export async function armarReel({
   // 6): la locutora o el locutor. No se cambia por variable de entorno ni hay otra
   // de respaldo; una pieza sin voz en el reparto lanza.
   vozGemini = vozDePieza(nombre),
+  // La función que habla: la de Gemini; las pruebas pasan una falsa (sin red ni cupo).
+  hablar = decirGemini,
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);
@@ -139,7 +141,7 @@ export async function armarReel({
   const vozUsada = 'gemini';
   let voz;
   try {
-    voz = await decirGemini(texto, mp3, {
+    voz = await hablar(texto, mp3, {
       voz: vozGemini,
       // El estilo de siempre más el del momento del día (mañana, tarde o noche).
       indicacion: componerIndicacion(indicacion),
