@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T07:31:13.517Z",
- "portada": 54,
- "archivo": 688,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-01T07:41:55.538Z",
+ "portada": 45,
+ "archivo": 690,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-01T07:31:13.548Z",
+  "generado": "2026-10-01T07:41:55.571Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -88,24 +88,24 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "z3c4f",
-      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "18xuulv",
       "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
       "seccion": "Fútbol"
      },
      {
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
+     },
+     {
       "id": "1a2z04a",
       "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1fbewyl",
+      "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
+      "seccion": "Agro"
      }
     ]
    },
@@ -116,26 +116,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
-     {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
-     },
      {
       "id": "2uqvxt",
       "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol"
      },
      {
-      "id": "1fgr8xb",
-      "titulo": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
      },
      {
-      "id": "11di7ig",
-      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
      }
     ]
@@ -147,26 +147,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 30,
     "notas": [
      {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "id": "1vchyon",
+      "titulo": "Racing compra el terreno lindante al predio Juan Carlos Gentile",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1xow9qi",
-      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
      },
      {
       "id": "1gv3zir",
       "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1dqm02n",
+      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
       "seccion": "Balcarce"
      }
     ]
