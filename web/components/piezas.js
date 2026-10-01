@@ -9,6 +9,7 @@ import {
   datosSeccion, nombreCorto, cuando, partirFecha, whatsapp, MAIL, WHATSAPP,
 } from '@/lib/datos';
 import { comoNombre } from '@/lib/texto';
+import { fechaLarga, fechaCorta } from '@/lib/tiempo';
 import { nombreDeEvento } from '@/lib/eventos';
 import { enlaceDeLlamada } from '@/lib/farmacias';
 
@@ -220,6 +221,27 @@ export function FilaNota({ nota }) {
       <div className="col-hora"><Hace nota={nota} className="meta" /></div>
       <div style={{ flexGrow: 1 }}>
         <Hace nota={nota} className="meta cuando-movil" />
+        <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
+      </div>
+    </div>
+  );
+}
+
+/** La fecha exacta de una nota, en hora de Balcarce: para quien la lee otro día. Estática: no se recalcula como el "hace 2 h". */
+export function FechaExacta({ nota, className = 'meta fecha-exacta' }) {
+  const texto = fechaLarga(nota?.fecha);
+  if (!texto) return null;
+  return <time className={className} dateTime={new Date(nota.fecha).toISOString()}>{texto}</time>;
+}
+
+/** Una nota de "Antes en esta sección": con su fecha exacta y no con un "hace 3 días" que cambia. */
+export function FilaAntes({ nota }) {
+  const texto = fechaCorta(nota.fecha);
+  return (
+    <div className="fila-nota">
+      <div className="col-hora"><time className="meta" dateTime={new Date(nota.fecha).toISOString()}>{texto}</time></div>
+      <div style={{ flexGrow: 1 }}>
+        <time className="meta cuando-movil" dateTime={new Date(nota.fecha).toISOString()}>{texto}</time>
         <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
       </div>
     </div>

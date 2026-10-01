@@ -1,8 +1,8 @@
 import {
-  obtenerDatos, porRanura, nombreCorto, ordenarPortada, SECCIONES, proximosEventos,
+  obtenerDatos, porRanura, nombreCorto, ordenarPortada, SECCIONES, proximosEventos, notasDeAntes, DIAS_DE_ANTES,
 } from '@/lib/datos';
 import {
-  Etiqueta, FilaNota, Cierre, Invitacion, Evento, Hace,
+  Etiqueta, FilaNota, FilaAntes, Cierre, Invitacion, Evento, Hace,
 } from '@/components/piezas';
 import { ImagenDestacada } from '@/components/imagen-destacada';
 import { notFound } from 'next/navigation';
@@ -81,6 +81,8 @@ export default function PaginaSeccion({ params }) {
   // una noticia (no va al feed ni al sitemap de noticias), y la nota del
   // medio que lo anuncia ya está en la lista. Así no sale dos veces.
   const eventos = s.ranura === 'cultura' && pagina === 1 ? proximosEventos().slice(0, 4) : [];
+  // Una sección con pocas notas nuevas no tiene que verse vacía: debajo, lo de los últimos días, con su fecha (1/10).
+  const antes = pagina === 1 ? notasDeAntes(s.nombre, { enSeccion: todas }) : [];
 
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
@@ -128,6 +130,17 @@ export default function PaginaSeccion({ params }) {
         <div style={{ marginTop: 28 }}>
           {resto.map((n) => <FilaNota nota={n} key={n.id} />)}
         </div>
+      )}
+
+      {antes.length > 0 && (
+        <section style={{ marginTop: 34 }} aria-label={`Antes en ${nombreCorto(s.nombre)}`}>
+          <div className="titulo-seccion" style={{ marginBottom: 6 }}>
+            <span className="barra" style={{ background: s.color }} />
+            <h2 style={{ fontSize: 20 }}>Antes en {nombreCorto(s.nombre)}</h2>
+            <span className="meta">últimos {DIAS_DE_ANTES} días</span>
+          </div>
+          {antes.map((n) => <FilaAntes nota={n} key={n.id} />)}
+        </section>
       )}
 
       {paginas > 1 && (

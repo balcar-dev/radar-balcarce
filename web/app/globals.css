@@ -345,6 +345,9 @@ main { padding: 24px 0 10px; }
   color: var(--suave); text-transform: uppercase;
 }
 .chapa-nota { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+/* La fecha exacta de la nota, para quien la lee otro día (1/10). */
+.fecha-de-la-nota { margin: 8px 0 0; }
+.fecha-exacta { font-size: 13.5px; color: var(--suave, #6B6F6C); }
 .chapa-nota .punto { color: #C9C4B6; }
 
 /* La placa que reemplaza a la foto: nunca se usa la imagen del medio de

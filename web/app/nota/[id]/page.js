@@ -2,7 +2,7 @@ import {
   obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos, tieneTarjetaPropia,
 } from '@/lib/datos';
 import {
-  Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace, PlacaSeccion,
+  Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace, FechaExacta, PlacaSeccion,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import FuentesDeLaNota from '@/components/verificacion';
@@ -91,6 +91,7 @@ export default function PaginaNota({ params }) {
           <Etiqueta seccion={n.seccion} />
           <Hace nota={n} />
         </div>
+        <p className="fecha-de-la-nota"><FechaExacta nota={n} /></p>
 
         <h1>{n.titulo}</h1>
         {n.copete && <p className="copete">{n.copete}</p>}
