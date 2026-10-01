@@ -114,7 +114,7 @@ export async function auditarLote(lote, { clave, fetchFn = fetch, modelo = MODEL
     method: 'POST',
     // La clave va en el encabezado, nunca en la dirección (docs/10-REGLAS-Y-PRUEBAS.md, regla 16).
     headers: { 'content-type': 'application/json', authorization: `Bearer ${clave}` },
-    body: JSON.stringify({ model: modelo, messages: [{ role: 'user', content: pedidoDeAuditoria(lote) }], response_format: { type: 'json_object' }, temperature: 0 }),
+    body: JSON.stringify({ model: modelo, messages: [{ role: 'user', content: pedidoDeAuditoria(lote) }], response_format: { type: 'json_object' }, temperature: 0, reasoning_effort: 'low', max_completion_tokens: 3000 }),
     signal: AbortSignal.timeout(90_000),
   });
   if (!res.ok) {
