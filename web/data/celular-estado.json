@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T15:31:38.587Z",
- "portada": 54,
- "archivo": 717,
- "esperandoCuerpo": 10,
+ "generado": "2026-10-01T16:02:09.370Z",
+ "portada": 53,
+ "archivo": 718,
+ "esperandoCuerpo": 11,
  "redes": {
-  "generado": "2026-10-01T15:31:38.623Z",
+  "generado": "2026-10-01T16:02:09.413Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-01T13:35:03.428Z"
    },
    {
@@ -83,7 +83,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-01T13:35:03.428Z",
     "segundos": null,
     "notas": [
@@ -129,13 +129,13 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1b5bal2",
-      "titulo": "Pablo Quirno pide a los empresarios inversiones y destaca la apertura comercial",
-      "seccion": "Economía"
+      "id": "1mknzh0",
+      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "id": "15i90co",
+      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
       "seccion": "Balcarce"
      }
     ]
@@ -147,27 +147,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "seccion": "Deportes"
-     },
      {
       "id": "m212r6",
       "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1vtyc1y",
-      "titulo": "Evacuan la estación Constitución por un incendio en una escalera mecánica",
-      "seccion": "Argentina"
+      "id": "1ckhubg",
+      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
+      "seccion": "Deportes"
      },
      {
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -191,18 +191,6 @@
     }
    ],
    "cola": [
-    {
-     "id": "1dbyjp1",
-     "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1sjcoqr",
-     "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-     "seccion": "Deportes",
-     "marcada": false
-    },
     {
      "id": "dwvi75",
      "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
