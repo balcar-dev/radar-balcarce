@@ -193,3 +193,15 @@ test('el turno cambia a las 8:30, pero la web NO lo dice en la tarjeta ni en la 
     assert.ok(!/termina a las 8:30|hasta-cuando/.test(texto), `${archivo} vuelve a decir hasta qué hora está de turno`);
   }
 });
+test('"JUEVES 1/10": el Colegio a veces escribe el día con el mes y esos turnos no se pueden perder (1/10/2026)', () => {
+  // Texto real de colbalcarce.com del 1/10: el cronograma de septiembre y, seguido, el de octubre con "1/10" y "2/10".
+  const texto = 'SEPTIEMBRE, 2026 SEPTIEMBRE 2026 VIERNES 25 VUOTTO SABADO 26 DEL CERRO - SAN JOSE PLAZA DOMINGO 27 GALINDO - NORTE '
+    + 'LUNES 28 MEDRANO - DEL PATIO MARTES 29 BENITES MIERCOLES 30 MARIOLI OCTUBRE 2026 JUEVES 1/10 VUOTTO VIERNES 2/10 SAN JOSE PLAZA '
+    + 'SABADO 3 GALINDO - NORTE DOMINGO 4 MEDRANO - SANTA INES - DEL PATIO LUNES 5 BENITES';
+  const { turnos } = parsearCronograma(texto);
+  const del = (fecha) => turnos.find((t) => t.fecha === fecha);
+  assert.deepEqual(del('2026-10-01')?.farmacias, ['VUOTTO']);
+  assert.deepEqual(del('2026-10-02')?.farmacias, ['SAN JOSE PLAZA']);
+  assert.deepEqual(del('2026-10-03')?.farmacias, ['GALINDO', 'NORTE']);
+  assert.deepEqual(del('2026-09-30')?.farmacias, ['MARIOLI'], 'la última de septiembre no se come el encabezado de octubre');
+});

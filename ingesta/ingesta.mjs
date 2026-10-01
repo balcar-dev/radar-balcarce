@@ -1024,7 +1024,9 @@ export function parsearCronograma(texto, directorio = {}) {
   // página publica dos cronogramas seguidos y, sin eso, la última farmacia
   // del mes se leía como "MARIOLI OCTUBRE 2026".
   const turnos = [];
-  const re = new RegExp(`(${DIAS_RE})\\s+(\\d{1,2})\\s+([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9'’.\\- ]*?)(?=\\s+(?:${DIAS_RE})\\s+\\d|\\s+(?:${MESES.join('|')})\\s*,?\\s*20|\\s+Recordamos|\\s+Turnos|\\s*$)`, 'gi');
+  // El Colegio escribe a veces "JUEVES 1/10" (con el mes) y no "JUEVES 1": el 1/10 y el 2/10 se
+  // perdían y octubre arrancaba el 3 sin farmacia de turno (1/10/2026). La barra y el mes se ignoran.
+  const re = new RegExp(`(${DIAS_RE})\\s+(\\d{1,2})(?:\\s*/\\s*\\d{1,2})?\\s+([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9'’.\\- ]*?)(?=\\s+(?:${DIAS_RE})\\s+\\d|\\s+(?:${MESES.join('|')})\\s*,?\\s*20|\\s+Recordamos|\\s+Turnos|\\s*$)`, 'gi');
   // La página publica el cronograma del mes y el arranque del siguiente, uno
   // detrás del otro y sin repetir el encabezado. Cuando el número de día
   // vuelve para atrás (…29, 30, 3, 4) es que empezó el mes que viene, y esos
