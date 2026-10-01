@@ -1597,5 +1597,14 @@
       "red": "instagram",
       "notaId": "ff9n91"
     }
+  },
+  "problemas": {
+    "2026-10-01/noticia2/instagram/reel": {
+      "pieza": "noticia2",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-01T18:06:02.345Z"
+    }
   }
 }
