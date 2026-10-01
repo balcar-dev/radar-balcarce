@@ -720,6 +720,33 @@ export const FUENTES_NACIONALES = [
     temas: ['tecnologia', 'ia'],
     nota: 'Medio de tecnología en castellano (no es argentino). La edición argentina (xataka.com.ar/feed) da 404.',
   },
+  // Más Tecnología (1/10, Hernán: "sigue vacía, llenarla de IA, robots, SpaceX y ciencia"). Sin medios de
+  // España (decisión del 27/09): FayerWayer es de Chile y escribe para toda Latinoamérica; Agencia CyTA
+  // es la agencia de noticias científicas de la Fundación Instituto Leloir (Argentina).
+  {
+    id: 'fayerwayer',
+    nombre: 'FayerWayer',
+    medio: 'FayerWayer',
+    url: 'https://www.fayerwayer.com/feed',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 11,
+    temas: ['tecnologia', 'ia'],
+    nota: 'Tecnología, IA, robots y espacio en castellano latinoamericano (Chile). Probado el 1/10: 36 notas, la última de hace minutos.',
+  },
+  {
+    id: 'agenciacyta',
+    nombre: 'Agencia CyTA',
+    medio: 'Agencia CyTA',
+    url: 'https://www.agenciacyta.org.ar/feed/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 12,
+    temas: ['tecnologia', 'ciencia'],
+    nota: 'Ciencia argentina (Fundación Instituto Leloir). Sale poco (unas pocas notas por mes): suma, no alcanza sola.',
+  },
   // Agro: la papa, la carne y el clima de la pampa húmeda. INTA es organismo
   // público y Balcarce tiene una de sus estaciones más grandes.
   {
@@ -992,7 +1019,9 @@ export const REGLAS_SECCION = [
       'ia', 'chatgpt', 'openai', 'gemini', 'claude', 'copilot', 'chatbot', 'machine learning',
       'modelo de lenguaje', 'robot', 'robots', 'robótica', 'robotica',
       'ciberataque', 'ciberdelito', 'hackeo', 'software', 'startup', 'semiconductores',
-      'smartphone', 'nvidia', 'inteligencia artificial generativa'],
+      'smartphone', 'nvidia', 'inteligencia artificial generativa',
+      // Espacio y ciencia (1/10): SpaceX, la NASA y los cohetes; enteras, sin "luna" ni "marte" sueltas.
+      'spacex', 'starship', 'humanoide', 'telescopio espacial', 'exoplaneta', 'astronomía', 'astronomia', 'cohete espacial'],
   },
 ];
 

@@ -2,7 +2,7 @@
 
 *Este documento lo escribe `node ingesta/listar-fuentes.mjs` a partir del código. No se edita a mano: una prueba controla que diga lo mismo que `ingesta/fuentes.mjs` y `ingesta/fuentes-cruce.mjs`. Para sumar, sacar o apagar una fuente se toca una de esas dos listas y se vuelve a correr el programa.*
 
-Hoy: **233 feeds activos de 102 medios** (251 configurados).
+Hoy: **235 feeds activos de 104 medios** (253 configurados).
 
 ## Cómo se usan
 
@@ -111,7 +111,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | Realpolitik | Realpolitik · general | La Plata | RSS | — | 10 |  | sí | https://www.realpolitik.com.ar/rss |
 | Zona Norte Diario | Zona Norte Diario · general | San Isidro / zona norte | RSS | — | 10 |  | sí | https://www.zonanortediario.com.ar/feed/ |
 
-## Nacionales (169 feeds activos de 56 medios)
+## Nacionales (171 feeds activos de 58 medios)
 
 | Medio | Feed | Ciudad | Cómo se lee | Sección fija | Peso | Oficial | Activa | Dirección |
 |---|---|---|---|---|---|---|---|---|
@@ -119,6 +119,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | A24 | A24 · politica | CABA | RSS | Política | 8 |  | sí | https://www.a24.com/rss/pages/politica.xml |
 | A24 | A24 · previsional | CABA | RSS | Economía | 8 |  | sí | https://www.a24.com/rss/pages/Previsional.xml |
 | A24 | A24 · sociedad | CABA | RSS | — | 8 |  | sí | https://www.a24.com/rss/pages/actualidad.xml |
+| Agencia CyTA | Agencia CyTA | nacional | RSS | Tecnología | 12 |  | sí | https://www.agenciacyta.org.ar/feed/ |
 | Agroempresario | Agroempresario · índice de noticias | CABA | índice de noticias | Agro | 8 |  | sí | https://agroempresario.com/news-sitemap.xml/ |
 | Agrositio | Agrositio · destacadas | CABA | RSS | Agro | 8 |  | sí | https://www.agrositio.com.ar/rss/rss.php?area=destacadas |
 | Agrositio | Agrositio · granos | CABA | RSS | Agro | 8 |  | sí | https://www.agrositio.com.ar/rss/rss.php?area=granos |
@@ -184,6 +185,7 @@ Cuentan como un medio más cuando cuentan lo mismo que los demás; solos, sólo 
 | ESPN Argentina | ESPN Argentina · Fórmula 1 | CABA | RSS | Automovilismo | 8 |  | sí | https://www.espn.com.ar/espn/rss/f1/news |
 | ESPN Argentina | ESPN Argentina · general | CABA | RSS | Deportes | 8 |  | sí | https://www.espn.com.ar/espn/rss/news |
 | ESPN Argentina | ESPN Argentina · rugby | CABA | RSS | Deportes | 8 |  | sí | https://www.espn.com.ar/espn/rss/rugby/news |
+| FayerWayer | FayerWayer | nacional | RSS | Tecnología | 11 |  | sí | https://www.fayerwayer.com/feed |
 | Google | Google · blog en castellano | CABA | RSS | Tecnología | 8 |  | sí | https://blog.google/intl/es-419/rss/ |
 | Google DeepMind | Google DeepMind | CABA | RSS | Tecnología | 8 |  | sí | https://deepmind.google/blog/rss.xml |
 | Hipertextual | Hipertextual | nacional | RSS | Tecnología | 11 |  | apagada | https://hipertextual.com/feed |
