@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T22:31:33.173Z",
+ "generado": "2026-10-01T23:02:02.495Z",
  "portada": 69,
- "archivo": 742,
+ "archivo": 744,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-01T22:31:33.214Z",
+  "generado": "2026-10-01T23:02:02.533Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -63,7 +63,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -147,13 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
@@ -168,6 +163,11 @@
       "id": "iheoi7",
       "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1a2z04a",
+      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+      "seccion": "Automovilismo"
      }
     ]
    }
@@ -200,14 +200,7 @@
      "cuando": "2026-10-01T18:36:31.248Z"
     }
    ],
-   "cola": [
-    {
-     "id": "1dbyjp1",
-     "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-     "seccion": "Balcarce",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 0,
    "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,
