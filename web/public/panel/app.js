@@ -495,8 +495,9 @@ function listaDeDias() {
   const el = E.fechas.elegidas;
   const bloques = semanas(dias).map((s) => '<h2>Semana del ' + esc(etiquetaCorta(s.lunes)) + '</h2>' + s.dias.map((d) => {
     const e = el.dias?.[d];
-    const est = estadoDelDia(e);
-    const principal = e?.principal ? (e.detalle?.[e.principal]?.titulo ?? '') : '';
+    const prop = !e ? cand.dias[d].propuesta : null;
+    const est = prop?.principal ? { texto: '◔ Propuesta automática: falta aprobarla', clase: 'espera' } : estadoDelDia(e);
+    const principal = e?.principal ? (e.detalle?.[e.principal]?.titulo ?? '') : (prop?.principal ? (cand.dias[d].candidatas.find((c) => c.id === prop.principal)?.titulo ?? '') : '');
     return '<button type="button" class="tarjeta" data-accion="abrir-dia" data-dia="' + esc(d) + '"><div><strong>' + esc(etiquetaCorta(d)) + '</strong> <span class="est ' + est.clase + '">' + esc(est.texto) + '</span></div>' +
       (principal ? '<div class="meta">' + esc(principal) + '</div>' : '<div class="meta">' + (cand.dias[d].candidatas?.length ?? 0) + ' candidatas</div>') + '</button>';
   }).join('')).join('');
@@ -506,7 +507,9 @@ function listaDeDias() {
 function vistaDia() {
   const d = E.dia;
   const cand = E.fechas.candidatas?.dias?.[d]?.candidatas ?? [];
-  const b = E.borrador ?? borradorDe(E.fechas.elegidas.dias?.[d]);
+  // Si nadie armó el día, arranca con la propuesta automática (ingesta/efemerides-propuesta.mjs): se aprueba o se cambia.
+  const propuesta = E.fechas.elegidas.dias?.[d] ? null : (E.fechas.candidatas?.dias?.[d]?.propuesta ?? null);
+  const b = E.borrador ?? borradorDe(E.fechas.elegidas.dias?.[d] ?? propuesta);
   E.borrador = b;
   const estilos = [...new Set(cand.map((c) => c.estilo))];
   const visibles = E.filtroEstilo ? cand.filter((c) => c.estilo === E.filtroEstilo) : cand;
@@ -521,11 +524,13 @@ function vistaDia() {
     return '<div class="cand ' + (rol ?? '') + '">' +
       '<div>' + chipEstilo(c.estilo) + '<span class="meta">' + [c.anio, haceTexto(c.hace), c.importancia ? c.importancia + ' idiomas' : '', c.puntaje + ' pts'].filter(Boolean).map(esc).join(' · ') + '</span></div>' +
       '<div class="texto">' + esc(c.texto) + '</div>' + (marcas ? '<div class="marcas">' + marcas + '</div>' : '') + datos +
+      (propuesta?.motivos?.[c.id] ? '<div class="meta"><strong>Por qué se propone:</strong> ' + esc(propuesta.motivos[c.id]) + '</div>' : '') +
       (c.fuente ? '<div class="meta">' + esc(c.fuente) + '</div>' : '') +
       (enlace ? '<a class="ver-nota" href="' + esc(enlace) + '" target="_blank" rel="noopener">Ver la nota en Wikipedia ↗</a>' : '') +
       '<div class="roles">' + ROLES.map(([r, texto]) => boton(r, texto)).join('') + '</div></div>';
   }).join('');
   app.innerHTML = '<button type="button" class="boton" data-accion="volver-fechas">← Los días</button><h1>' + esc(etiquetaLarga(d)) + '</h1>' +
+    (propuesta?.principal ? '<p class="problemas">Esta es una <strong>propuesta automática</strong>: ya viene armada con una principal y tres que la acompañan. Cambiala si querés y guardá el día para aprobarla.</p>' : '') +
     '<p class="ayuda">Elegí <strong>una principal</strong>; las que <strong>sí</strong> van; las <strong>opcionales</strong> pueden ir si hace falta; con <strong>no</strong> descartás. Tocá "Ver la nota" para leerla. Lo que elijas queda guardado para afinar el criterio: nada sale solo.</p>' +
     filtros + (tarjetas || '<p class="vacio">No hay candidatas de ese estilo.</p>') +
     '<div class="barra-guardar"><button type="button" class="boton principal ancho" data-accion="guardar-dia">Guardar el día</button></div>';

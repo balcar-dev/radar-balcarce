@@ -38,7 +38,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 93.)
+próxima regla es la 94.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).

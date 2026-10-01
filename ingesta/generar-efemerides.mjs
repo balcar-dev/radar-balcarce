@@ -20,6 +20,7 @@ import {
   parsearPortal, especialesDelDia, candidatasDelDia, lasMejores, curadasDelDia, leerCuradas, piezasDeFeriados,
   marcasDe, ANIO_DE_REFERENCIA, RE_PAGINA_GENERICA, IDIOMAS_FIGURA_MUNDIAL, IDIOMAS_ARGENTINO_CONOCIDO, mismoHecho, PUNTAJE_MINIMO,
 } from './efemerides.mjs';
+import { proponerDias } from './efemerides-propuesta.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const UA = 'RadarBalcarce/0.1 (https://radarbalcarce.com; radarbalcarce@gmail.com)';
@@ -177,6 +178,9 @@ async function main() {
     resultado[c.iso] = { diaSemana: c.semana, candidatas: lasMejores(todas) };
     process.stdout.write(c.iso + ': ' + todas.length + ' candidatas (' + resultado[c.iso].candidatas.length + ' en la lista)\n');
   }
+  // La propuesta automática de cada día (una principal y tres que la acompañan), para que en el panel sólo se apruebe o se cambie.
+  const propuestas = proponerDias(resultado);
+  for (const [iso, p] of Object.entries(propuestas)) resultado[iso].propuesta = p;
   const salida = { generado: new Date().toISOString(), anioDeReferencia: ANIO_DE_REFERENCIA, desde: args.desde ?? '2026-10-05', dias };
   const renglones = Object.entries(resultado).map(([k, v]) => `${JSON.stringify(k)}:${JSON.stringify(v)}`).join(',\n');
   fs.writeFileSync(path.join(RAIZ, 'web', 'data', 'efemerides-candidatas.json'),

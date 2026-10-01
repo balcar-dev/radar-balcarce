@@ -119,8 +119,8 @@ export const RE_DIA_MUNDIAL_OFICIAL = /\b(Naciones Unidas|ONU|UNESCO|OMS|Organiz
 
 // ------------------------------------------------------------- las marcas
 
-const RE_VIOLENCIA = /\b(asesin\w*|mata|matan|matar|mat[oó]|mataron|matanza|fusil\w*|golpe de estado|guerra|batalla|atentado|bombard\w*|masacre|secuestr\w*|desaparecid\w*|tortur\w*|genocid\w*|terroris\w*|ejecut\w*|linch\w*|explosi[oó]n|incendio|naufrag\w*|accidente|tragedia|v[ií]ctimas?|represi[oó]n|dictadura|crimen|homicid\w*|suicid\w*|c[aá]rcel|condenad\w*|invasi[oó]n|combate|sublevaci\w*|mot[ií]n|derrocad\w*|epidemia|peste|inundaci\w*|ahogad\w*|terremoto|huracan\w*|hurac[aá]n|tsunami|erupci[oó]n|hambruna|arrasad\w*|tormenta de|damnificad\w*|ca[ií]da del avi[oó]n)\b/i;
-const RE_POLITICA = /\b(presidente|presidencia|gobernador|ministro|elecci\w*|golpe|peronis\w*|per[oó]n|evita|kirchner\w*|radical|senador|diputad\w*|congreso|gobierno|asume|decreto|constituci[oó]n|sindicat\w*|partido|pol[ií]tic[oa]s?)\b/i;
+const RE_VIOLENCIA = /\b(prueba nuclear|ensayo nuclear|bomba at[oó]mica|bomba nuclear|bombas?|misil\w*|detonaci\w*|armas? nucleares?|asesin\w*|mata|matan|matar|mat[oó]|mataron|matanza|fusil\w*|golpe de estado|guerra|batalla|atentado|bombard\w*|masacre|secuestr\w*|desaparecid\w*|tortur\w*|genocid\w*|terroris\w*|ejecut\w*|linch\w*|explosi[oó]n|incendio|naufrag\w*|accidente|tragedia|v[ií]ctimas?|represi[oó]n|dictadura|crimen|homicid\w*|suicid\w*|c[aá]rcel|condenad\w*|invasi[oó]n|combate|sublevaci\w*|mot[ií]n|derrocad\w*|epidemia|peste|inundaci\w*|ahogad\w*|terremoto|huracan\w*|hurac[aá]n|tsunami|erupci[oó]n|hambruna|arrasad\w*|tormenta de|damnificad\w*|ca[ií]da del avi[oó]n)\b/i;
+const RE_POLITICA = /\b(Corte Suprema|ministra de la Corte|ministro de la Corte|vicepresiden\w*|presidente|presidencia|gobernador|ministro|elecci\w*|golpe|peronis\w*|per[oó]n|evita|kirchner\w*|radical|senador|diputad\w*|congreso|gobierno|asume|decreto|constituci[oó]n|sindicat\w*|partido|pol[ií]tic[oa]s?)\b/i;
 const RE_RELIGION = /\b(papa [A-Z]\w+|el papa|iglesia|obispo|enc[ií]clica|cardenal|cat[oó]lic\w*|conc[ií]lio|bula)\b/i;
 const RE_MENORES = /\b(ni[ñn]os?|ni[ñn]as?|menores?|adolescentes?|chicos?|chicas?)\b/i;
 
@@ -131,12 +131,32 @@ export function marcasDe(texto = '', anio = null) {
   if (RE_POLITICA.test(texto)) marcas.push('política');
   if (RE_MENORES.test(texto)) marcas.push('menores');
   if (RE_RELIGION.test(texto)) marcas.push('religión');
-  if (/^(Nace|Nacimiento)\b/i.test(texto) && anio && anio >= 1930) marcas.push('puede estar vivo');
+  if (/^[^\p{L}]*(Nace|Nacimiento)\b/iu.test(texto) && anio && anio >= 1930) marcas.push('puede estar vivo');
   return marcas;
 }
 
+/**
+ * ¿Habla de Balcarce, la ciudad, o de Fangio y lo suyo? "Balcarce" también es un
+ * apellido: la Revuelta de los Restauradores fue "contra el Gobierno de Juan Ramón
+ * Balcarce" y sumaba 96 puntos como si fuera de acá (1/10/2026). Es el apellido
+ * cuando lo precede un nombre propio ("Juan Ramón Balcarce") o un título o "contra"
+ * ("el gobernador Balcarce", "contra Balcarce"); es la ciudad en "en Balcarce",
+ * "de Balcarce", "partido de Balcarce".
+ */
+const NO_ES_NOMBRE = /^(En|El|La|Los|Las|Un|Una|De|Del|Desde|Hacia|Hoy|Se|Es|Por|Con|Sobre|Entre|Hasta|Tras|Para|Al|A|Y|Nace|Muere|Parte|Llega|Ciudad|Partido|Municipalidad|Autódromo|Museo|Localidad|Pueblo|Club|Escuela|Hospital|Estación|Fundación)$/;
+const TITULO_DE_APELLIDO = /^(contra|general|gobernador|coronel|virrey|doctor|dr\.|don|presidente|familia|brigadier|capit[aá]n)$/i;
+export function esDeBalcarce(texto = '') {
+  if (/\b(Fangio|Napaleof\w*|Ramos Otero)\b/i.test(texto)) return true;
+  for (const m of String(texto).matchAll(/(?:^|[^\p{L}\d])(?:(\S+)\s+)?Balcarce(?![\p{L}\d])/gu)) {
+    const antes = (m[1] ?? '').replace(/[,;:()"«»]+$/g, '');
+    const apellido = TITULO_DE_APELLIDO.test(antes) || (/^[A-ZÁÉÍÓÚÑ]/.test(antes) && !NO_ES_NOMBRE.test(antes));
+    if (!apellido) return true;
+  }
+  return false;
+}
+
 const ESTILOS = [
-  ['balcarce', /(Balcarce|Fangio|Napaleof\w*|Ramos Otero)/i],
+  // (Balcarce se decide aparte, antes de este orden: esDeBalcarce)
   ['muerte', /^(Muere|Fallece|Fallecimiento|Se suicida|Muerte)\b/i],
   ['nacimiento', /^(Nace|Nacimiento)\b/i],
   ['campo', /\b(agro\w*|campo|rural\w*|papas|ganader\w*|cosecha|inta|trigo|soja|gaucho|estancia|tambo|agricultor\w*)\b/i],
@@ -148,6 +168,7 @@ const ESTILOS = [
 
 /** El estilo de una efeméride: histórico, nacimiento, ciencia, cultura… */
 export function estiloDe(texto = '') {
+  if (esDeBalcarce(texto)) return 'balcarce';
   for (const [estilo, re] of ESTILOS) if (re.test(texto)) return estilo;
   return 'historia';
 }
@@ -161,7 +182,11 @@ export const NOMBRE_DE_ESTILO = {
 // ------------------------------------------------------------ el puntaje
 
 const BONO_POR_ESTILO = { fundacion: 6, ciencia: 8, cultura: 7, deporte: 5, campo: 6, nacimiento: 4, muerte: -12, historia: 0, balcarce: 30, curioso: 6 };
-const PISTA_DE_CURIOSO = /\b(primer\w*|invent\w*|patente|lanz\w*|estren\w*|fundaci\w*|inaugur\w*|descubr\w*|r[eé]cord)\b/i;
+const RE_CAMPO_Y_FIERROS = /\b(INTA|aut[oó]dromo|automovilismo|la papa|las papas|papa semilla|Turismo Carretera)\b/i;
+const RE_NECESITA_CONTEXTO = /\b(imperio|imperial|dinast\w*|califa\w*|conc[ií]lio|tratado de|reino de|emperador|rey|reina|papado|c[oó]nclave|virreinato de|ducado|monarqu\w*)\b/i;
+/** Un texto con muchos nombres propios (más de seis, sin contar la primera palabra) cuesta explicarlo en 30 segundos. */
+const muchosNombres = (t = '') => (t.slice(1).match(/(?<=[\s(])[A-ZÁÉÍÓÚÑ][\p{L}]{2,}/gu) ?? []).length > 6;
+const PISTA_DE_CURIOSO =/\b(primer\w*|invent\w*|patente|lanz\w*|estren\w*|fundaci\w*|inaugur\w*|descubr\w*|r[eé]cord)\b/i;
 
 /**
  * Cuánto vale una candidata: lo de Balcarce y lo redondo (25, 50, 100 años)
@@ -182,8 +207,13 @@ export function puntuar({ origen, estilo, texto, anio, marcas = [], nacional = t
     else if (hace > 0 && hace % 10 === 0) p += 3;
   }
   if (RE_ARGENTINA.test(texto)) p += 12;
-  if (/\b(Balcarce|Fangio)\b/i.test(texto)) p += 25;
+  if (esDeBalcarce(texto)) p += 25;
   else if (/\b(Mar del Plata|Tandil|Necochea|Lober[ií]a)\b/i.test(texto)) p += 8;
+  // Lo del campo y los fierros de acá (papa, INTA, autódromo): identidad de Balcarce, aunque no diga la palabra.
+  if (RE_CAMPO_Y_FIERROS.test(texto)) p += 6;
+  // Lo que necesita contexto para entenderse (imperios, dinastías, tratados) no sirve en 30 segundos; lo argentino se salva.
+  if (RE_NECESITA_CONTEXTO.test(texto) && !RE_ARGENTINA.test(texto)) p -= 8;
+  if (muchosNombres(texto)) p -= 5;
   if (marcas.includes('política')) p -= 25;
   if (marcas.includes('puede estar vivo')) p -= 12;
   if (marcas.includes('religión')) p -= 15;
@@ -219,7 +249,8 @@ const corto = (t, max = 100) => {
 export function candidatasDelDia(dia, fuentes = {}) {
   const todas = [];
   const sumar = (c) => {
-    const texto = c.texto.trim();
+    // Sin los signos que a veces quedan al principio (": Nace en Córdoba…"): rompían el reconocimiento de nacimientos.
+    const texto = c.texto.trim().replace(/^[^\p{L}¿¡"«]+/u, '');
     if (!texto) return;
     const estilo = c.estilo ?? estiloDe(texto);
     const marcas = c.marcas ?? marcasDe(texto, c.anio);

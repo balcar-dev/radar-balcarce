@@ -103,6 +103,28 @@ ordena bien, o si un estilo casi nunca se elige. Ese análisis lo hace Claude
 sobre `efemerides-elegidas.json`, y lo que salga se anota acá y en
 `ingesta/efemerides.mjs`.
 
+## La propuesta automática (1/10)
+
+Cada día de `efemerides-candidatas.json` trae una `propuesta`: una principal, tres "sí" que la
+acompañan, dos "opcional" y los "no" (lo político, lo religioso y lo que puede estar vivo). La
+arma `ingesta/efemerides-propuesta.mjs` al generar las candidatas, y el panel la muestra ya
+marcada, con el motivo de cada una, para aprobarla o cambiarla ("Guardar el día" la aprueba).
+
+- **Cuatro lugares, no las cuatro de más puntaje:** la principal (la mejor), una argentina, una
+  de ciencia o del mundo y una curiosa. Dentro del día no se repite el estilo si hay de dónde elegir.
+- **Variedad entre días:** la principal pierde 12 puntos si repite el estilo de ayer y 5 el de anteayer.
+- **Una fecha patria curada habla sola:** ese día no hay combo.
+- **"Balcarce" es la ciudad o es un apellido** (`esDeBalcarce`): la Revuelta de los Restauradores,
+  "contra el Gobierno de Juan Ramón Balcarce", ya no suma como si fuera de acá.
+- **Señales nuevas del puntaje:** +6 por lo del campo y los fierros (INTA, autódromo, la papa),
+  −8 por lo que pide contexto (imperios, dinastías, tratados) si no es argentino, −5 por exceso de
+  nombres propios. Bombas, pruebas nucleares, Corte Suprema y vicepresidencia, marcadas.
+- **Falta:** la foto libre y la distancia a Balcarce (Wikidata), el gancho de una frase con IA y los
+  niveles A, B y C (sólo la principal lleva reel). Está en `PENDIENTES.md` 0c e `IDEAS.md` 42.
+
+La propuesta es un punto de partida: es por reglas, no entiende un texto, y a veces propone algo
+flojo (una compañía de aviación holandesa de principal). Para eso está la persona que aprueba.
+
 ## Reglas que no se negocian
 
 - Nada de política partidaria ni de personas conflictivas: ante la duda, esa
