@@ -39,7 +39,19 @@ function titulo(nombre) {
  * El día, pieza por pieza.
  * @returns {{ fecha: string, etiqueta: string, feriado: string|null, piezas: object[], audios: number }}
  */
+/**
+ * Las piezas fijas que se piden por la línea de comandos: "participa-nota" (vale siempre) o
+ * "participa-nota:2026-10-02:2026-10-15" (vale en ese rango, como en reels/fijas/vigencia.json).
+ */
+export function leerFijas(texto = '') {
+  return String(texto).split(',').map((x) => x.trim()).filter(Boolean).map((x) => {
+    const [nombre, desde, hasta] = x.split(':');
+    return desde && hasta ? { nombre, desde, hasta } : nombre;
+  });
+}
+
 export function cronogramaDelDiaConVoz(iso, { conEfemeride = false, fijas = [] } = {}) {
+  const esFija = (nombre) => fijas.some((f) => (typeof f === 'string' ? f === nombre : f.nombre === nombre && iso >= f.desde && iso <= f.hasta));
   const cuando = new Date(`${iso}T15:00:00Z`);
   const [a, m, d] = iso.split('-').map(Number);
   const feriado = feriadoDelDia(cuando);
@@ -47,7 +59,7 @@ export function cronogramaDelDiaConVoz(iso, { conEfemeride = false, fijas = [] }
   // "Un día como hoy" sale todos los días a las 9:00, sin moverse ni sacarse (1/10, Hernán); el feriado sale antes, a las 8:00.
   if (conEfemeride && !piezas.some((p) => p.nombre === 'efemeride')) piezas = [...piezas, { nombre: 'efemeride', tipo: 'reel', hora: HORA_EFEMERIDE }];
   piezas = piezas.sort((x, y) => x.hora.localeCompare(y.hora)).map((p) => ({
-    ...p, titulo: titulo(p.nombre), voz: nombreDeVoz(p.nombre), fija: fijas.includes(p.nombre),
+    ...p, titulo: titulo(p.nombre), voz: nombreDeVoz(p.nombre), fija: esFija(p.nombre),
   }));
   return {
     fecha: iso, etiqueta: `${DIAS[new Date(Date.UTC(a, m - 1, d, 12)).getUTCDay()]} ${d} de ${MESES[m - 1]}`,
@@ -77,6 +89,6 @@ export function textoDelCronograma(semana) {
 
 if (process.argv[1] && process.argv[1].endsWith('cronograma-semana.mjs')) {
   const arg = (n, d = '') => (process.argv.find((a) => a.startsWith(`--${n}=`)) ?? `--${n}=${d}`).slice(n.length + 3);
-  const semana = cronogramaDeLaSemana(arg('desde', diaAR()), Number(arg('dias', '7')), { conEfemeride: process.argv.includes('--con-efemeride'), fijas: arg('fijas').split(',').filter(Boolean) });
+  const semana = cronogramaDeLaSemana(arg('desde', diaAR()), Number(arg('dias', '7')), { conEfemeride: process.argv.includes('--con-efemeride'), fijas: leerFijas(arg('fijas')) });
   console.log(textoDelCronograma(semana));
 }

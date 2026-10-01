@@ -2,7 +2,7 @@
 process.env.TZ = 'America/Argentina/Buenos_Aires';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cronogramaDeLaSemana, cronogramaDelDiaConVoz, textoDelCronograma, CUPO_DE_VOZ_POR_DIA } from '../redes/cronograma-semana.mjs';
+import { cronogramaDeLaSemana, cronogramaDelDiaConVoz, textoDelCronograma, CUPO_DE_VOZ_POR_DIA, leerFijas } from '../redes/cronograma-semana.mjs';
 
 const semana = cronogramaDeLaSemana('2026-10-05', 8, { conEfemeride: true });
 
@@ -67,4 +67,13 @@ test('las piezas fijas (armadas de antemano) no gastan audio ese día', () => {
   });
   assert.ok(Math.max(...Object.values(por)) <= 8, 'con las de participá fijas, nunca más de 8 audios por día');
   assert.match(textoDelCronograma(s), /fija, sin voz nueva/);
+});
+
+test('las fijas con rango valen sólo dentro de su vigencia (como reels/fijas/vigencia.json)', () => {
+  const fijas = leerFijas('participa-nota:2026-10-02:2026-10-15,participa-noticias');
+  assert.deepEqual(fijas, [{ nombre: 'participa-nota', desde: '2026-10-02', hasta: '2026-10-15' }, 'participa-noticias']);
+  const fija = (iso) => cronogramaDelDiaConVoz(iso, { fijas }).piezas.find((p) => p.nombre.startsWith('participa'))?.fija;
+  assert.equal(fija('2026-10-09'), true, 'viernes dentro de la vigencia');
+  assert.equal(fija('2026-10-16'), false, 'viernes pasada la vigencia: vuelve a gastar voz');
+  assert.equal(fija('2026-10-05'), true, 'participa-noticias, sin rango, vale siempre');
 });

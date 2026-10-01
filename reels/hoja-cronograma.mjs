@@ -9,7 +9,7 @@
 
 import path from 'node:path';
 import { aPng, COLORES, COLOR_SECCION, anchoAproximado } from './placa.mjs';
-import { cronogramaDeLaSemana, CUPO_DE_VOZ_POR_DIA } from '../redes/cronograma-semana.mjs';
+import { cronogramaDeLaSemana, CUPO_DE_VOZ_POR_DIA, leerFijas } from '../redes/cronograma-semana.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
 
 const ANCHO = 1080;
@@ -114,7 +114,7 @@ export function hojaDelCronograma(semana, { titulo = 'Cronograma de las redes' }
 if (process.argv[1] && process.argv[1].endsWith('hoja-cronograma.mjs')) {
   const arg = (n, d = '') => (process.argv.find((a) => a.startsWith(`--${n}=`)) ?? `--${n}=${d}`).slice(n.length + 3);
   const semana = cronogramaDeLaSemana(arg('desde', diaAR()), Number(arg('dias', '7')), {
-    conEfemeride: process.argv.includes('--con-efemeride'), fijas: arg('fijas').split(',').filter(Boolean),
+    conEfemeride: process.argv.includes('--con-efemeride'), fijas: leerFijas(arg('fijas')),
   });
   const salida = path.resolve(arg('salida', 'reels/salida/cronograma.png'));
   await aPng(hojaDelCronograma(semana), salida);

@@ -9,7 +9,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { cronogramaDeLaSemana, CUPO_DE_VOZ_POR_DIA } from '../redes/cronograma-semana.mjs';
+import { cronogramaDeLaSemana, CUPO_DE_VOZ_POR_DIA, leerFijas } from '../redes/cronograma-semana.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
 
 /** El nombre corto de cada pieza, para la grilla de la semana. */
@@ -240,7 +240,7 @@ export function paginaDelCronograma(semana) {
 if (process.argv[1] && process.argv[1].endsWith('cronograma-html.mjs')) {
   const arg = (n, d = '') => (process.argv.find((a) => a.startsWith(`--${n}=`)) ?? `--${n}=${d}`).slice(n.length + 3);
   const semana = cronogramaDeLaSemana(arg('desde', diaAR()), Number(arg('dias', '7')), {
-    conEfemeride: process.argv.includes('--con-efemeride'), fijas: arg('fijas').split(',').filter(Boolean),
+    conEfemeride: process.argv.includes('--con-efemeride'), fijas: leerFijas(arg('fijas')),
   });
   const salida = path.resolve(arg('salida', 'reels/salida/cronograma.html'));
   fs.mkdirSync(path.dirname(salida), { recursive: true });
