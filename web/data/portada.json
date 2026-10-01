@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T19:33:44.058Z",
+  "generado": "2026-10-01T19:53:34.953Z",
   "notas": [
     {
       "id": "repaso20261001tarde",
@@ -162,11 +162,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44968-el-campeon-nacional-kevin-gomez-compartio-su-historia-y-un-mensaje-de-superacion-con-alumnos-de-la-escuela-n-8/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T18:01:03.074Z",
       "sinFecha": true,
       "visto": "2026-10-01T18:01:03.074Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -229,96 +229,6 @@
       }
     },
     {
-      "id": "1b6nw50",
-      "titulo": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
-      "copete": "El equipo de Rodolfo Arruabarrena enfrenta a Unión el viernes desde las 21.30 en la Bombonera por el Torneo Clausura. El entrenador cuenta con Leo Flores y Sebastián Villa, pero sufre la baja de Tomás Belmonte.",
-      "cuerpo": "Boca recibe a Unión el viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura. El entrenador Rodolfo Arruabarrena incluye a Leo Flores en la nómina de citados luego de su debut con la Selección Argentina frente a Bolivia. Además, Sebastián Villa integra el plantel tras superar un cuadro febril y Facundo Herrera regresa luego de recuperarse de un golpe.\n\nEn contrapartida, el cuerpo técnico sufre la baja de Tomás Belmonte, quien sufre una rotura de meniscos y afrontará una intervención quirúrgica en las próximas horas, por lo cual se perderá el resto de la competencia en esta temporada.",
-      "guion": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
-      "seccion": "Fútbol",
-      "medios": [
-        "Olé",
-        "Doble Amarilla",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T17:52:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T19:01:14.770Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera.",
-        "Leo Flores integra los convocados tras su paso por la Selección Argentina.",
-        "Sebastián Villa y Facundo Herrera están a disposición del cuerpo técnico.",
-        "Tomás Belmonte se rompió los meniscos y será intervenido quirúrgicamente."
-      ],
-      "seSabe": [
-        "Boca juega contra Unión este viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura.",
-        "Leo Flores forma parte de los convocados de Rodolfo Arruabarrena tras jugar para la Selección Argentina.",
-        "Sebastián Villa integra la nómina luego de superar un estado febril.",
-        "Facundo Herrera está convocado tras recuperarse de un golpe.",
-        "Tomás Belmonte queda fuera del partido por una rotura de meniscos."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó si Leo Flores será titular o suplente.",
-        "No se detalló el tiempo exacto que demandará la recuperación postoperatoria de Tomás Belmonte."
-      ],
-      "textoRedes": "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera por el Torneo Clausura con Leo Flores entre los convocados y la baja de Tomás Belmonte por lesión.",
-      "etiquetas": [
-        "Torneo Clausura",
-        "Unión",
-        "Rodolfo Arruabarrena",
-        "Leo Flores",
-        "Tomás Belmonte"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
-          "fecha": "2026-10-01T17:52:44.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de los convocados, el regreso de Leo Flores y las situaciones de Sebastián Villa, Facundo Herrera y Tomás Belmonte."
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/liga-/con-el-regreso-de-flores-y-la-lesion-de-belmonte--boca-confirmo-los-convocados-para-recibir-a-union_a6abe99ee969b40318bea6a93",
-          "fecha": "2026-10-01T18:15:01.000Z",
-          "oficial": false,
-          "aporte": "Aportó información sobre el contexto del partido ante Unión en el Torneo Clausura."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/boca/boca-hoy-volvio-flores-los-convocados-ante-union-y-mas",
-          "fecha": "2026-10-01T18:36:46.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la baja de Tomás Belmonte por lesión en los meniscos y la lista brindada por el entrenador."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1bvtscb",
-          "titulo": "La lista de convocados de Boca sin Enner Valencia para el clásico con San Lorenzo",
-          "fecha": "2026-09-19T16:32:12.000Z",
-          "ruta": "/nota/la-lista-de-convocados-de-boca-sin-enner-valencia-para-el-clasico-con-1bvtscb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "boca-recibe-a-union-con-la-presencia-de-leo-flores-en-la-lista",
-      "foto": {
-        "archivo": "fotos-notas/1b6nw50.jpg",
-        "credito": "Foto: Olé"
-      }
-    },
-    {
       "id": "1onf826",
       "titulo": "Tomás Belmonte sufre la rotura de meniscos y se pierde el resto del año en Boca",
       "copete": "El mediocampista se lesionó la rodilla derecha durante el entrenamiento y pasará por el quirófano. El cuerpo técnico pierde a una pieza clave para el cierre de la temporada.",
@@ -332,7 +242,9 @@
         "Infobae",
         "TN (Todo Noticias)",
         "TyC Sports",
-        "Bolavip Argentina"
+        "Minuto Uno",
+        "Bolavip Argentina",
+        "Vavel Argentina"
       ],
       "enlace": "https://www.clarin.com/deportes/golpe-boca-toto-belmonte-rompio-meniscos-vasco-arruabarrena-pierde-hombre-clave-mediocampo_0_da22O4ON5s.html",
       "teniaImagenLaFuente": true,
@@ -517,15 +429,17 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T17:31:17.133Z",
       "sinFecha": true,
       "visto": "2026-10-01T17:31:17.133Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "rutas"
+      ],
       "como": "automatica",
       "claves": [
         "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
@@ -735,6 +649,7 @@
         "La Nación",
         "TN (Todo Noticias)",
         "A24",
+        "C5N",
         "El Día"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/01/el-riesgo-pais-vuelve-a-superar-los-630-puntos-mientras-las-acciones-argentinas-bajan-hasta-6-en-wall-street/",
@@ -742,7 +657,7 @@
       "fecha": "2026-10-01T16:53:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T18:31:03.487Z",
-      "relevancia": 73,
+      "relevancia": 83,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -830,11 +745,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44966-el-drama-de-ticiano-le-prohibieron-vender-alfajores-en-la-calle-y-ahora-suena-con-conseguir-un-trabajo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T16:31:02.291Z",
       "sinFecha": true,
       "visto": "2026-10-01T16:31:02.291Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -965,100 +880,94 @@
       }
     },
     {
-      "id": "147id0",
-      "titulo": "La Obra Social de las Fuerzas Armadas paga su deuda total",
-      "copete": "La Obra Social de las Fuerzas Armadas canceló el pasivo total con prestadores y comenzó a regularizar los reintegros. La entidad asume la atención médica plena desde este jueves.",
-      "cuerpo": "El organismo asumió la atención médica plena del personal militar y sus familias desde este jueves 1 de octubre.\n\nEl desembolso se concretó tras meses de restricciones en el sistema sanitario heredado del extinto Instituto de Obra Social de las Fuerzas Armadas (IOSFA), disuelto mediante el DNU 88/2026. Aquella medida dividió la cobertura en dos nuevas entidades para el sector militar y las fuerzas de seguridad. Según fuentes oficiales, el Tesoro Nacional aportó 160 millones de pesos para destrabar la liquidación final.\n\nLa crisis financiera había provocado cortes en las prestaciones y dificultades para mantener los convenios con clínicas y profesionales. Con la cancelación del pasivo, la administración apunta a recomponer los acuerdos y normalizar el servicio en todo el país.",
-      "guion": "La Obra Social de las Fuerzas Armadas paga su deuda total",
-      "seccion": "Argentina",
+      "id": "1b6nw50",
+      "titulo": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
+      "copete": "El equipo de Rodolfo Arruabarrena enfrenta a Unión el viernes desde las 21.30 en la Bombonera por el Torneo Clausura. El entrenador cuenta con Leo Flores y Sebastián Villa, pero sufre la baja de Tomás Belmonte.",
+      "cuerpo": "Boca recibe a Unión el viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura. El entrenador Rodolfo Arruabarrena incluye a Leo Flores en la nómina de citados luego de su debut con la Selección Argentina frente a Bolivia. Además, Sebastián Villa integra el plantel tras superar un cuadro febril y Facundo Herrera regresa luego de recuperarse de un golpe.\n\nEn contrapartida, el cuerpo técnico sufre la baja de Tomás Belmonte, quien sufre una rotura de meniscos y afrontará una intervención quirúrgica en las próximas horas, por lo cual se perderá el resto de la competencia en esta temporada.",
+      "guion": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
+      "seccion": "Fútbol",
       "medios": [
-        "Infobae",
-        "El Cronista",
-        "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)"
+        "Olé",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "El Gráfico"
       ],
-      "enlace": "https://www.cronista.com/economia-politica/osfa-el-gobierno-anuncio-que-pago-la-totalidad-de-la-deuda-y-reactivara-las-prestaciones/",
+      "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T15:34:08.000Z",
+      "fecha": "2026-10-01T15:30:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-01T18:01:03.074Z",
-      "relevancia": 63,
+      "visto": "2026-10-01T19:01:14.770Z",
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La OSFA saldó una deuda superior a los 200.000 millones de pesos con prestadores médicos.",
-        "El organismo asumió la atención plena del personal militar y sus familias desde este jueves.",
-        "El Tesoro Nacional aportó 160 millones de pesos para completar la liquidación del ex-IOSFA."
+        "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera.",
+        "Leo Flores integra los convocados tras su paso por la Selección Argentina.",
+        "Sebastián Villa y Facundo Herrera están a disposición del cuerpo técnico.",
+        "Tomás Belmonte se rompió los meniscos y será intervenido quirúrgicamente."
       ],
       "seSabe": [
-        "La Obra Social de las Fuerzas Armadas canceló la totalidad de la deuda con prestadores, según fuentes oficiales.",
-        "El organismo inició la regularización de los reintegros pendientes a los afiliados.",
-        "El Tesoro Nacional cubrió 160 millones de pesos para finalizar la liquidación del extinto IOSFA.",
-        "La OSFA asume la atención médica plena del personal militar y sus familias desde este jueves 1 de octubre.",
-        "La disolución del IOSFA y la creación de la OSFA se dispusieron mediante el DNU 88/2026."
+        "Boca juega contra Unión este viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura.",
+        "Leo Flores forma parte de los convocados de Rodolfo Arruabarrena tras jugar para la Selección Argentina.",
+        "Sebastián Villa integra la nómina luego de superar un estado febril.",
+        "Facundo Herrera está convocado tras recuperarse de un golpe.",
+        "Tomás Belmonte queda fuera del partido por una rotura de meniscos."
       ],
       "noConfirmado": [
-        "La forma en que las Fuerzas de Seguridad tramitarán su parte del pasivo pendiente con el Estado Nacional.",
-        "Los detalles operativos sobre la recomposición total de los convenios con los prestadores en cada distrito."
+        "Todavía no se informó si Leo Flores será titular o suplente.",
+        "No se detalló el tiempo exacto que demandará la recuperación postoperatoria de Tomás Belmonte."
       ],
-      "textoRedes": "La Obra Social de las Fuerzas Armadas canceló la totalidad de su deuda con prestadores y comenzó a regularizar los reintegros a los afiliados.",
+      "textoRedes": "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera por el Torneo Clausura con Leo Flores entre los convocados y la baja de Tomás Belmonte por lesión.",
       "etiquetas": [
-        "OSFA",
-        "Fuerzas Armadas",
-        "salud",
-        "deuda",
-        "Gobierno nacional"
+        "Torneo Clausura",
+        "Unión",
+        "Rodolfo Arruabarrena",
+        "Leo Flores",
+        "Tomás Belmonte"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/osfa-el-gobierno-anuncio-que-pago-la-totalidad-de-la-deuda-y-reactivara-las-prestaciones/",
-          "fecha": "2026-10-01T15:34:08.000Z",
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
+          "fecha": "2026-10-01T17:52:44.000Z",
           "oficial": false,
-          "aporte": "Confirmó el pago total de la deuda con prestadores y el inicio de los reintegros a afiliados."
+          "aporte": "Informó los detalles de los convocados, el regreso de Leo Flores y las situaciones de Sebastián Villa, Facundo Herrera y Tomás Belmonte."
         },
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/01/osfa-anuncio-que-comenzara-a-cancelar-la-deuda-y-asumira-la-atencion-medica-de-las-fuerzas-armadas/",
-          "fecha": "2026-10-01T17:07:57.000Z",
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/liga-/con-el-regreso-de-flores-y-la-lesion-de-belmonte--boca-confirmo-los-convocados-para-recibir-a-union_a6abe99ee969b40318bea6a93",
+          "fecha": "2026-10-01T18:15:01.000Z",
           "oficial": false,
-          "aporte": "Anunció el inicio de la atención médica plena del personal militar y sus familias."
+          "aporte": "Aportó información sobre el contexto del partido ante Unión en el Torneo Clausura."
         },
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/osfa-asume-la-atencion-medica-de-las-fuerzas-armadas-e-inicia-el-proceso-del-pago-de-la-deuda-de-la-obra-social-_a6abe74ed8419983d42587f2b",
-          "fecha": "2026-10-01T15:46:27.123Z",
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/boca/boca-hoy-volvio-flores-los-convocados-ante-union-y-mas",
+          "fecha": "2026-10-01T18:36:46.000Z",
           "oficial": false,
-          "aporte": "No aportó información adicional al no registrar resumen."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/01/109902-el-ministerio-de-defensa-confirma-que-osfa-asume-la-atencion-medica-de-las-fuerzas-armadas",
-          "fecha": "2026-10-01T18:00:27.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no registrar resumen."
+          "aporte": "Confirmó la baja de Tomás Belmonte por lesión en los meniscos y la lista brindada por el entrenador."
         }
       ],
       "antecedentes": [
         {
-          "id": "5hhuva",
-          "titulo": "El Ministerio de Economía renueva la totalidad de los vencimientos de deuda",
-          "fecha": "2026-09-28T20:23:00.000Z",
-          "ruta": "/nota/el-ministerio-de-economia-renueva-la-totalidad-de-los-vencimientos-de-5hhuva"
+          "id": "1bvtscb",
+          "titulo": "La lista de convocados de Boca sin Enner Valencia para el clásico con San Lorenzo",
+          "fecha": "2026-09-19T16:32:12.000Z",
+          "ruta": "/nota/la-lista-de-convocados-de-boca-sin-enner-valencia-para-el-clasico-con-1bvtscb"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
+        "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-obra-social-de-las-fuerzas-armadas-paga-su-deuda-total",
+      "slug": "boca-recibe-a-union-con-la-presencia-de-leo-flores-en-la-lista",
       "foto": {
-        "archivo": "fotos-notas/147id0.jpg",
-        "credito": "Foto: El Cronista"
+        "archivo": "fotos-notas/1b6nw50.jpg",
+        "credito": "Foto: Olé"
       }
     },
     {
@@ -2385,63 +2294,6 @@
       }
     },
     {
-      "id": "1ckhubg",
-      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
-      "copete": "El Club Amigos Unidos albergó un certamen amistoso de gimnasia rítmica. Participaron delegaciones locales y de otras ciudades de la zona en los niveles E y D.",
-      "cuerpo": "El gimnasio del Club Amigos Unidos albergó un certamen amistoso de gimnasia rítmica que reunió a deportistas de la región. La competencia estuvo destinada a las categorías E y D.\n\nDe acuerdo con la organización a cargo de Gimnasia Rítmica Balcarce, las actividades incluyeron exhibiciones y permitieron sumar experiencia. De las presentaciones formaron parte representaciones provenientes de Miramar y Mar del Plata, junto con el CEF 119 local y la entidad organizadora.",
-      "guion": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
-      "seccion": "Deportes",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/balcarce-fue-sede-de-un-encuentro-de-gimnasia-ritmica",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T11:46:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T12:31:19.544Z",
-      "relevancia": 72,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Club Amigos Unidos fue sede del certamen zonal.",
-        "Participaron gimnastas de los niveles E y D.",
-        "Hubo delegaciones de Mar del Plata, Miramar y Balcarce."
-      ],
-      "seSabe": [
-        "Gimnasia Rítmica Balcarce organizó el torneo amistoso.",
-        "El evento se desarrollo en las instalaciones del Club Amigos Unidos.",
-        "Participaron deportistas de UTA Mar del Plata, Sociedad de Fomento Peralta Ramos, Gimnasia Rítmica Miramar, CEF 119 Balcarce y Rítmica Balcarce."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Club Amigos Unidos fue escenario de un torneo amistoso de gimnasia rítmica con delegaciones locales y de la zona.",
-      "etiquetas": [
-        "gimnasia rítmica",
-        "Club Amigos Unidos",
-        "CEF 119",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/balcarce-fue-sede-de-un-encuentro-de-gimnasia-ritmica",
-          "fecha": "2026-10-01T11:46:17.000Z",
-          "oficial": false,
-          "aporte": "Detalló el desarrollo del torneo amistoso de gimnasia rítmica en el Club Amigos Unidos y las instituciones participantes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-club-amigos-unidos-recibe-un-torneo-zonal-de-gimnasia-ritmica"
-    },
-    {
       "id": "1fp0ktu",
       "titulo": "El Ministerio de Desarrollo Agrario analiza la situación de la cadena ovina",
       "copete": "La Provincia encabeza un nuevo encuentro de la Mesa Ovina para revisar las políticas del sector. Detallan cifras de producción, infraestructura de faena y nuevas líneas de financiamiento.",
@@ -2677,6 +2529,7 @@
         "Ecos Diarios (Necochea)",
         "Ámbito",
         "Clarín",
+        "Perfil",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
         "Noticias Agropecuarias",
@@ -2922,6 +2775,7 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
+        "Canal 26",
         "Noticias Argentinas (NA)",
         "El Marplatense"
       ],
@@ -2998,6 +2852,7 @@
         "El Cronista",
         "Perfil",
         "Minuto Uno",
+        "C5N",
         "Crónica",
         "Canal 26",
         "Diario Popular",
@@ -3005,8 +2860,8 @@
         "El Día",
         "0221",
         "Infobae",
-        "Infórmese Primero (FM 104.9)",
-        "El Diario Balcarce"
+        "El Diario Balcarce",
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://www.infobae.com/educacion/2026/10/01/ranking-qs-regional-la-uba-sigue-liderando-en-el-pais-pero-argentina-registra-la-mayor-caida-de-america-latina/",
       "teniaImagenLaFuente": true,
@@ -3082,90 +2937,6 @@
       "foto": {
         "archivo": "fotos-notas/q7x46o.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "17z7wso",
-      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
-      "copete": "La vuelta de las categorías nacionales al autódromo Juan Manuel Fangio generó un impacto económico estimado en 2.700 millones de pesos en la ciudad, según informó la Municipalidad.",
-      "cuerpo": "El regreso de las competencias nacionales al autódromo Juan Manuel Fangio produjo un movimiento económico estimado en 2.700 millones de pesos en Balcarce. De acuerdo con la subsecretaria de Turismo, Rosario Tufró, la cifra reúne los consumos en comercios, estaciones de servicio, gastronomía, alojamientos y entradas. El arribo de visitantes comenzó el miércoles previo al fin de semana.\n\nEl sector de alojamientos registró una capacidad completa en hoteles y alquileres temporarios, lo que llevó a vecinos a ofrecer habitaciones de sus viviendas con asesoramiento municipal.\n\nDesde el área de Turismo evaluaron positivamente la experiencia y señalaron que la actividad representa una oportunidad para la ciudad si se logra sostener una agenda de acontecimientos de convocatoria similar.",
-      "guion": "El automovilismo deja un movimiento de 2.700 millones",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T09:01:07.409Z",
-      "sinFecha": true,
-      "visto": "2026-10-01T09:01:07.409Z",
-      "relevancia": 61,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El regreso del automovilismo generó unos 2.700 millones de pesos en la economía local.",
-        "El dato fue informado por la subsecretaria de Turismo, Rosario Tufró.",
-        "La capacidad hotelera estuvo completa y vecinos ofrecieron habitaciones particulares.",
-        "El arribo de visitantes a la ciudad comenzó el miércoles previo a las competencias."
-      ],
-      "seSabe": [
-        "El movimiento económico en Balcarce alcanzó unos 2.700 millones de pesos, según la Municipalidad.",
-        "La subsecretaria de Turismo, Rosario Tufró, informó que la llegada de visitantes comenzó el miércoles.",
-        "El sector hotelero y los alquileres temporarios completaron su capacidad.",
-        "Vecinos ofrecieron habitaciones de sus viviendas ante la demanda de alojamiento."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio generó un movimiento económico estimado en 2.700 millones de pesos en Balcarce, con impacto en el comercio, la gastronomía y los alojamientos.",
-      "etiquetas": [
-        "autodromo",
-        "juan manuel fangio",
-        "turismo",
-        "economia",
-        "automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó el movimiento económico estimado de 2.700 millones y los detalles de ocupación hotelera y consumo local."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "p8h86x",
-          "titulo": "El automovilismo nacional genera un intenso movimiento vehicular",
-          "fecha": "2026-09-27T16:27:29.000Z",
-          "ruta": "/nota/el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular-p8h86x"
-        },
-        {
-          "id": "p7nd3j",
-          "titulo": "Balcarce palpita el regreso del automovilismo nacional",
-          "fecha": "2026-09-26T01:13:28.000Z",
-          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
-        },
-        {
-          "id": "4v2vga",
-          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
-          "fecha": "2026-09-24T13:34:15.000Z",
-          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-automovilismo-deja-un-movimiento-de-2-700-millones",
-      "foto": {
-        "archivo": "fotos-notas/17z7wso.jpg",
-        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -3413,12 +3184,12 @@
         "Diario La Vanguardia",
         "Clarín",
         "TN (Todo Noticias)",
+        "Todo Agro",
         "Infobae",
         "Bichos de Campo",
         "Noticias Agropecuarias",
         "La Noticia 1",
-        "Infocampo",
-        "Todo Agro"
+        "Infocampo"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44956-dirigentes-de-faa-de-balcarce-participaron-del-112-congreso-anual-de-la-entidad-en-rosario/",
       "teniaImagenLaFuente": true,
@@ -3823,6 +3594,93 @@
       "slug": "aymeric-laporte-califica-a-la-argentina-de-antif-u00futbol-tras-la"
     },
     {
+      "id": "17z7wso",
+      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
+      "copete": "La vuelta de las categorías nacionales al autódromo Juan Manuel Fangio generó un impacto económico estimado en 2.700 millones de pesos en la ciudad, según informó la Municipalidad.",
+      "cuerpo": "El regreso de las competencias nacionales al autódromo Juan Manuel Fangio produjo un movimiento económico estimado en 2.700 millones de pesos en Balcarce. De acuerdo con la subsecretaria de Turismo, Rosario Tufró, la cifra reúne los consumos en comercios, estaciones de servicio, gastronomía, alojamientos y entradas. El arribo de visitantes comenzó el miércoles previo al fin de semana.\n\nEl sector de alojamientos registró una capacidad completa en hoteles y alquileres temporarios, lo que llevó a vecinos a ofrecer habitaciones de sus viviendas con asesoramiento municipal.\n\nDesde el área de Turismo evaluaron positivamente la experiencia y señalaron que la actividad representa una oportunidad para la ciudad si se logra sostener una agenda de acontecimientos de convocatoria similar.",
+      "guion": "El automovilismo deja un movimiento de 2.700 millones",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T21:35:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T09:01:07.409Z",
+      "relevancia": 79,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El regreso del automovilismo generó unos 2.700 millones de pesos en la economía local.",
+        "El dato fue informado por la subsecretaria de Turismo, Rosario Tufró.",
+        "La capacidad hotelera estuvo completa y vecinos ofrecieron habitaciones particulares.",
+        "El arribo de visitantes a la ciudad comenzó el miércoles previo a las competencias."
+      ],
+      "seSabe": [
+        "El movimiento económico en Balcarce alcanzó unos 2.700 millones de pesos, según la Municipalidad.",
+        "La subsecretaria de Turismo, Rosario Tufró, informó que la llegada de visitantes comenzó el miércoles.",
+        "El sector hotelero y los alquileres temporarios completaron su capacidad.",
+        "Vecinos ofrecieron habitaciones de sus viviendas ante la demanda de alojamiento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio generó un movimiento económico estimado en 2.700 millones de pesos en Balcarce, con impacto en el comercio, la gastronomía y los alojamientos.",
+      "etiquetas": [
+        "autodromo",
+        "juan manuel fangio",
+        "turismo",
+        "economia",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó el movimiento económico estimado de 2.700 millones y los detalles de ocupación hotelera y consumo local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p8h86x",
+          "titulo": "El automovilismo nacional genera un intenso movimiento vehicular",
+          "fecha": "2026-09-27T16:27:29.000Z",
+          "ruta": "/nota/el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular-p8h86x"
+        },
+        {
+          "id": "p7nd3j",
+          "titulo": "Balcarce palpita el regreso del automovilismo nacional",
+          "fecha": "2026-09-26T01:13:28.000Z",
+          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-automovilismo-deja-un-movimiento-de-2-700-millones",
+      "foto": {
+        "archivo": "fotos-notas/17z7wso.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "u8j0ja",
       "titulo": "La agencia DIB renueva autoridades y suma un estudio para podcast",
       "copete": "La agencia de noticias Diarios Bonaerenses renovó su conducción en una asamblea realizada en La Plata. Gonzalo Julián Irazoqui seguirá al frente de la presidencia.",
@@ -4007,83 +3865,6 @@
       }
     },
     {
-      "id": "1lfoejz",
-      "titulo": "Leo Nardini expone la gestión de Malvinas Argentinas en un foro internacional",
-      "copete": "El intendente de Malvinas Argentinas expuso sobre el desarrollo urbano del distrito en un encuentro internacional desarrollado en Pilar. Presentó los proyectos de infraestructura y firmó un acuerdo de cooperación.",
-      "cuerpo": "El intendente de Malvinas Argentinas, Leo Nardini, participó de un foro internacional sobre desarrollo urbano sostenible realizado el 28 y 29 de septiembre en el Campus IAE de la localidad de Pilar. El evento reunió a referentes de gobiernos locales, universidades y empresas.\n\nDurante su exposición en el panel sobre distritos competitivos, el jefe comunal detalló los alcances del Distrito Malvinas y del Plan Nueva Ciudad. Ambas iniciativas apuntan a concentrar obras de infraestructura, espacios verdes, cultura y actividades económicas.\n\nEn el cierre de las jornadas, el municipio suscribió una carta de adhesión junto a otras entidades para fomentar la cooperación sectorial. \"Es una gran oportunidad para mostrar nuestra experiencia\", expresó Nardini sobre su participación.",
-      "guion": "Leo Nardini expone la gestión de Malvinas Argentinas en un foro internacional",
-      "seccion": "Política",
-      "medios": [
-        "La Noticia 1",
-        "Página/12",
-        "La Tecla",
-        "Zona Norte Diario",
-        "Crónica"
-      ],
-      "enlace": "https://www.latecla.info/170081-nardini-mostro-su-gestion-en-el-encuentro-ciudades-y-ecosistemas-para-el-bien-comun-2026-2030",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T19:46:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T21:31:04.804Z",
-      "relevancia": 68,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El intendente Leo Nardini participó de un foro internacional en Pilar.",
-        "Expuso sobre el Distrito Malvinas y el Plan Nueva Ciudad.",
-        "El municipio firmó una carta de adhesión para impulsar el desarrollo urbano sostenible."
-      ],
-      "seSabe": [
-        "El encuentro internacional se realizó el 28 y 29 de septiembre en el Campus IAE de Pilar.",
-        "Participaron representantes de gobiernos, instituciones académicas y empresas.",
-        "Malvinas Argentinas firmó una carta de adhesión para promover la cooperación sectorial."
-      ],
-      "textoRedes": "El intendente de Malvinas Argentinas, Leo Nardini, expuso sobre la gestión local y el proyecto Distrito Malvinas en un encuentro internacional de desarrollo urbano realizado en Pilar.",
-      "etiquetas": [
-        "Leo Nardini",
-        "Malvinas Argentinas",
-        "Desarrollo Urbano",
-        "Pilar",
-        "Infraestructura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Tecla",
-          "enlace": "https://www.latecla.info/170081-nardini-mostro-su-gestion-en-el-encuentro-ciudades-y-ecosistemas-para-el-bien-comun-2026-2030",
-          "fecha": "2026-09-30T19:46:00.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación de Leo Nardini en el encuentro Ciudades y Ecosistemas para el Bien Común 2026-2030 en Pilar."
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/09/30/nardini-presento-distrito-malvinas-en-el-encuentro-internacional-ciudades-y-ecosistemas-para-el-bien-comun-2026-2030/",
-          "fecha": "2026-09-30T21:23:58.000Z",
-          "oficial": false,
-          "aporte": "Detalló la presentación sobre la experiencia de gestión y el Distrito Malvinas."
-        },
-        {
-          "medio": "Zona Norte Diario",
-          "enlace": "https://www.zonanortediario.com.ar/30/09/2026/nardini-presento-el-proyecto-distrito-malvinas-en-un-encuentro-internacional-sobre-desarrollo-urbano/",
-          "fecha": "2026-09-30T20:07:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el Plan Nueva Ciudad, los participantes y la firma de la carta de adhesión."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "leo-nardini-expone-la-gestion-de-malvinas-argentinas-en-un-foro",
-      "foto": {
-        "archivo": "fotos-notas/1lfoejz.jpg",
-        "credito": "Foto: Zona Norte Diario"
-      }
-    },
-    {
       "id": "ph5y3i",
       "titulo": "El INTA detalla las tres verduras para sembrar desde el primero de octubre",
       "copete": "El Instituto Nacional de Tecnología Agropecuaria recomienda cultivar rabanito, zapallito y pepino en el arranque de la temporada de primavera y verano. Cada hortaliza presenta plazos específicos de desarrollo y recolección.",
@@ -4091,6 +3872,7 @@
       "guion": "El INTA detalla las tres verduras para sembrar desde el primero de octubre",
       "seccion": "Agro",
       "medios": [
+        "Ámbito",
         "TN (Todo Noticias)",
         "Radio Mitre"
       ],
@@ -4099,7 +3881,7 @@
       "fecha": "2026-09-30T18:58:35.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T22:31:18.689Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4147,79 +3929,6 @@
       "foto": {
         "archivo": "fotos-notas/ph5y3i.jpg",
         "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "n3x306",
-      "titulo": "Milei impulsa la inteligencia artificial con menos regulación en el país",
-      "copete": "El Gobierno busca atraer inversiones tecnológicas y construir centros de datos en la Patagonia. El proyecto oficial prevé empresas operadas por agentes de inteligencia artificial bajo ciertas condiciones legales.",
-      "cuerpo": "El presidente Javier Milei busca posicionar a Argentina como un destino para el desarrollo de inteligencia artificial mediante un esquema con menor intervención regulatoria. Ante la ONU, el mandatario ratificó la decisión de no regular de manera preventiva esta tecnología y comparó los temores actuales con la llegada de internet.\n\nLa estrategia oficial apunta a atraer inversiones para instalar centros de datos en la Patagonia. Además, el ministro de Desregulación, Federico Sturzenegger, impulsa una iniciativa para permitir el funcionamiento de empresas operadas por agentes de inteligencia artificial, las cuales deberán contar con una persona física que asuma la responsabilidad legal final.\n\nDistintos especialistas advirtieron sobre los riesgos legales y sociales vinculados a estas medidas. En tanto, Brasil y Chile se mantienen por delante en infraestructura tecnológica regional.",
-      "guion": "Milei impulsa la inteligencia artificial con menos regulación en el país",
-      "seccion": "Tecnología",
-      "medios": [
-        "Ámbito",
-        "Diario Popular"
-      ],
-      "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T18:24:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T01:01:10.175Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Milei promueve a Argentina como polo de inteligencia artificial sin regulación preventiva.",
-        "El plan contempla atraer inversiones para construir centros de datos en la Patagonia.",
-        "El proyecto prevé empresas operadas por agentes de IA con un responsable legal humano.",
-        "Especialistas y sectores de la oposición expresaron cuestionamientos sobre los riesgos."
-      ],
-      "seSabe": [
-        "El presidente Javier Milei anunció ante la ONU que no habrá regulación preventiva para la inteligencia artificial.",
-        "El ministro Federico Sturzenegger confirmó modificaciones al proyecto original de empresas operadas por agentes de IA.",
-        "El Gobierno promueve a la Patagonia para la instalación de centros de datos."
-      ],
-      "noConfirmado": [
-        "Todavía falta la aprobación del proyecto en el Congreso nacional.",
-        "No se detallaron los montos específicos de las inversiones extranjeras previstas."
-      ],
-      "textoRedes": "El Gobierno busca posicionar a Argentina como un polo de inteligencia artificial con una estrategia de desregulación, incentivos para centros de datos en la Patagonia y proyectos para empresas operadas por agentes de IA.",
-      "etiquetas": [
-        "Inteligencia artificial",
-        "Gobierno nacional",
-        "Javier Milei",
-        "Federico Sturzenegger",
-        "Tecnología",
-        "Inversiones"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
-          "fecha": "2026-09-30T18:24:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los anuncios presidenciales en la ONU, el proyecto de empresas de IA y los cuestionamientos de expertos."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/javier-milei-promociona-argentina-como-un-refugio-reglas-la-inteligencia-artificial-n6328706",
-          "fecha": "2026-10-01T00:41:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el enfoque sobre la estrategia de desregulación y los centros de datos en la Patagonia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "milei-impulsa-la-inteligencia-artificial-con-menos-regulacion-en-el",
-      "foto": {
-        "archivo": "fotos-notas/n3x306.jpg",
-        "credito": "Foto: Diario Popular"
       }
     },
     {
@@ -5095,80 +4804,74 @@
       "slug": "jovenes-de-balcarce-participan-del-tradicional-encuentro-diocesano"
     },
     {
-      "id": "1h321lc",
-      "titulo": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
-      "copete": "El Ejecutivo nacional actualizó los valores de referencia para el ingreso de vehículos híbridos y eléctricos sin arancel. La medida busca incorporar modelos de última tecnología y ampliar la oferta.",
-      "cuerpo": "El Gobierno nacional elevó los valores de referencia para importar vehículos eléctricos e híbridos sin pagar arancel, a través de la publicación del Decreto 1128/2026 en el Boletín Oficial. La actualización fijó un tope de USD 35.000 por unidad FOB para los automóviles eléctricos puros, mientras que para los híbridos convencionales y enchufables el límite subió a USD 18.000. Por su parte, los modelos mild hybrid conservan el umbral previo de USD 16.000.\n\nLa revisión responde al incremento de precios de las unidades más recientes y apunta a incorporar estándares actuales de seguridad y equipamiento tecnológico. El cambio alcanza tanto a empresas con producción local como a importadores que operan dentro del esquema de arancel cero.\n\nDurante los primeros siete meses de 2026 los patentamientos de este segmento alcanzaron 48.320 unidades, lo que representa un aumento interanual del 322%. Del total de cupos asignados por 100.000 unidades en las convocatorias previas, ya ingresaron al país 68.792 rodados.",
-      "guion": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
+      "id": "t8noy6",
+      "titulo": "Luis Caputo se reúne con el ministro de Economía de Francia en París",
+      "copete": "El titular de Economía mantuvo un encuentro reservado con su par francés y el embajador argentino en el inicio de la Argentina Week en Europa.",
+      "cuerpo": "El ministro de Economía, Luis Caputo, concretó un encuentro reservado en París junto a su par francés, Roland Lescure, y el embajador argentino en ese país, Ian Sielecki.\n\nLa conversación giró en torno a la expansión de los capitales de origen francés en territorio argentino y al apoyo político brindado por la nación europea en las tratativas con el Fondo Monetario Internacional.\n\nLa cita se dio en el arranque de la Argentina Week encabezada por Javier Milei, espacio mediante el cual la administración nacional apunta a captar nuevos desembolsos y robustecer lazos económicos.",
+      "guion": "Luis Caputo se reúne con el ministro de Economía de Francia en París",
       "seccion": "Economía",
       "medios": [
-        "LU9 Mar del Plata",
-        "Infobae",
+        "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
         "C5N",
-        "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Clarín",
         "Radio Mitre",
-        "Ecos Diarios (Necochea)"
+        "Noticias Argentinas (NA)"
       ],
-      "enlace": "https://www.infobae.com/economia/2026/09/30/el-gobierno-elevo-a-usd-35000-el-tope-para-importar-autos-electricos-sin-arancel/",
+      "enlace": "https://noticiasargentinas.com/economia/caputo-se-reunio-con-el-ministro-de-economia-de-francia_a6abd8d6bc5ebcb5a82b539b6",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T11:17:45.000Z",
+      "fecha": "2026-09-30T09:50:00.000Z",
       "sinFecha": false,
-      "visto": "2026-09-30T12:57:58.335Z",
-      "relevancia": 64,
+      "visto": "2026-10-01T01:01:10.175Z",
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Decreto 1128/2026 fija nuevos topes para importar vehículos sin arancel.",
-        "Los autos eléctricos puros tienen un límite de USD 35.000 por unidad FOB.",
-        "Los híbridos convencionales y enchufables pueden ingresar hasta USD 18.000.",
-        "Los patentamientos crecieron 322% en los primeros siete meses de 2026."
+        "Luis Caputo mantuvo un encuentro con Roland Lescure en París.",
+        "Participó el embajador argentino Ian Sielecki.",
+        "Dialogaron sobre inversiones francesas y apoyo ante el FMI.",
+        "La reunión se enmarca en la Argentina Week."
       ],
       "seSabe": [
-        "El Gobierno modificó el régimen de importación de vehículos mediante el Decreto 1128/2026.",
-        "El nuevo tope FOB para autos eléctricos puros sin arancel es de USD 35.000.",
-        "Los híbridos convencionales y enchufables tienen un límite de USD 18.000 FOB.",
-        "Los vehículos mild hybrid mantienen el tope de USD 16.000 FOB.",
-        "Entre enero y julio de 2026 se patentaron 48.320 unidades híbridas y eléctricas.",
-        "El esquema de arancel cero asignó 100.000 unidades en total, con un ingreso de 68.792 vehículos."
+        "Luis Caputo se reunió con Roland Lescure e Ian Sielecki en París.",
+        "Dialogaron sobre inversiones y el respaldo francés en negociaciones con el FMI.",
+        "El encuentro forma parte de la Argentina Week."
       ],
-      "textoRedes": "El Gobierno nacional elevó a 35.000 dólares el tope FOB para importar autos eléctricos puros sin arancel mediante el Decreto 1128/2026. La medida también actualiza los límites para vehículos híbridos y busca ampliar la oferta de tecnología en el mercado.",
+      "noConfirmado": [
+        "Los detalles específicos sobre montos de futuras inversiones o plazos de concreción."
+      ],
+      "textoRedes": "El ministro Luis Caputo se reunió en París con su par francés Roland Lescure y el embajador Ian Sielecki en el inicio de la Argentina Week para atraer inversiones y repasar el apoyo del país europeo.",
       "etiquetas": [
-        "autos eléctricos",
-        "importación",
-        "aranceles",
-        "Gobierno nacional",
-        "Boletín Oficial",
-        "vehículos híbridos"
+        "Luis Caputo",
+        "Francia",
+        "Economia",
+        "Argentina Week",
+        "Inversiones"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/30/el-gobierno-elevo-a-usd-35000-el-tope-para-importar-autos-electricos-sin-arancel/",
-          "fecha": "2026-09-30T11:17:45.000Z",
-          "oficial": false,
-          "aporte": "Detalló los nuevos topes para importar autos eléctricos e híbridos y las cifras de patentamientos."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/el-gobierno-elevo-el-tope-importar-autos-electricos-arancel-n250309",
-          "fecha": "2026-09-30T11:53:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que los precios de los automóviles bajaron 29% frente al resto de la economía entre enero de 2024 y junio de 2026."
-        },
-        {
           "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-aumento-el-valor-tope-para-importar-autos-electricos-e-hibridos-sin-arancel_a6abcf3e2129df45908d2b32c",
-          "fecha": "2026-09-30T11:38:00.000Z",
+          "enlace": "https://noticiasargentinas.com/economia/caputo-se-reunio-con-el-ministro-de-economia-de-francia_a6abd8d6bc5ebcb5a82b539b6",
+          "fecha": "2026-09-30T22:35:00.000Z",
           "oficial": false,
-          "aporte": "Confirmó la publicación del Decreto 1128/2026 en el Boletín Oficial."
+          "aporte": "Informó sobre los temas centrales del encuentro y el respaldo del país europeo ante el FMI."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/30/luis-caputo-se-reunio-con-el-ministro-de-economia-de-francia-para-impulsar-inversiones-y-fortalecer-el-vinculo-economico/",
+          "fecha": "2026-10-01T00:12:48.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la reunión se dio al comienzo de la Argentina Week encabezada por Javier Milei."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/caputo-se-reunio-con-el-ministro-de-economia-frances-y-destaco-el-respaldo-a-la-argentina-ante-el-fmi/",
+          "fecha": "2026-09-30T23:01:31.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el Gobierno busca aprovechar el evento para profundizar vínculos económicos y atraer inversiones."
         }
       ],
       "verificacion": {
@@ -5176,10 +4879,10 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-gobierno-eleva-a-35-mil-dolares-el-tope-para-importar-autos",
+      "slug": "luis-caputo-se-reune-con-el-ministro-de-economia-de-francia-en-paris",
       "foto": {
-        "archivo": "fotos-notas/1h321lc.jpg",
-        "credito": "Foto: Infobae"
+        "archivo": "fotos-notas/t8noy6.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     }
   ],
@@ -5189,10 +4892,10 @@
     "Fútbol",
     "Tecnología",
     "Economía",
-    "Argentina",
     "Agro",
     "Deportes",
     "Cultura y agenda",
+    "Argentina",
     "Automovilismo"
   ],
   "temas": [
@@ -5202,17 +4905,32 @@
       "cuantas": 3
     },
     {
+      "nombre": "El autódromo",
+      "ranura": "autodromo",
+      "cuantas": 2
+    },
+    {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
+      "cuantas": 2
+    },
+    {
+      "nombre": "Las rutas",
+      "ranura": "rutas",
+      "cuantas": 2
+    },
+    {
+      "nombre": "Fangio",
+      "ranura": "fangio",
       "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 10,
-      "sensacion": 5,
+      "sensacion": 4,
       "humedad": 61,
-      "viento": 25,
+      "viento": 24,
       "rumbo": "SO",
       "cielo": "Parcialmente nublado",
       "esDeDia": true
@@ -5548,12 +5266,6 @@
   },
   "pendientes": [
     {
-      "id": "1kl2omw",
-      "titulo": "\"Mi nombre condenado socialmente\", la reflexión de Nito…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1i1430m",
       "titulo": null,
       "seccion": "Policiales",
@@ -5564,6 +5276,12 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "1kl2omw",
+      "titulo": "\"Mi nombre condenado socialmente\", la reflexión de Nito…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1vy0a0a",
@@ -5608,10 +5326,10 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1y7q2x8",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Economía",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
+      "id": "1n70nnq",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1htl2lu",
@@ -5638,16 +5356,16 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "1y7q2x8",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Economía",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "1bk6bvf",
       "titulo": null,
       "seccion": "Tecnología",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "1n70nnq",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "10ybc9u",
