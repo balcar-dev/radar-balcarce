@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T14:16:07.734Z",
- "portada": 54,
- "archivo": 708,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-01T14:32:40.687Z",
+ "portada": 56,
+ "archivo": 712,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-01T14:16:07.784Z",
+  "generado": "2026-10-01T14:32:40.728Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-01T10:36:04.243Z"
    },
    {
@@ -116,26 +116,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "1vtyc1y",
+      "titulo": "Evacuan la estación Constitución por un incendio en una escalera mecánica",
+      "seccion": "Argentina"
+     },
+     {
+      "id": "1sko7lj",
+      "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
+      "seccion": "Deportes"
+     },
      {
       "id": "m212r6",
       "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1neicxo",
-      "titulo": "El Gobierno mantiene los subsidios a la luz y el gas y aplica subas tarifarias",
-      "seccion": "Economía"
-     },
-     {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1h3xtmz",
-      "titulo": "Boca vence a River sobre el final y queda segundo en el torneo",
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
      }
     ]
@@ -147,13 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "dxrhun",
-      "titulo": "Franco Colapinto asume su error en Bakú y encara el Gran Premio de Malasia",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "1ckhubg",
       "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
@@ -165,9 +160,14 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-      "seccion": "Fútbol"
+      "id": "1fbewyl",
+      "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
+      "seccion": "Agro"
+     },
+     {
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -187,8 +187,8 @@
    ],
    "cola": [
     {
-     "id": "1sjcoqr",
-     "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+     "id": "1sko7lj",
+     "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
      "seccion": "Deportes",
      "marcada": false
     },
