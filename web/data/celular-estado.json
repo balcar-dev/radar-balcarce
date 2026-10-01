@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T15:24:13.234Z",
+ "generado": "2026-10-01T15:31:38.587Z",
  "portada": 54,
- "archivo": 716,
+ "archivo": 717,
  "esperandoCuerpo": 10,
  "redes": {
-  "generado": "2026-10-01T15:24:13.270Z",
+  "generado": "2026-10-01T15:31:38.623Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -183,15 +183,14 @@
      "id": "ff9n91",
      "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
      "cuando": "2026-10-01T13:38:34.741Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1sko7lj",
      "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
-     "seccion": "Deportes",
-     "marcada": false
-    },
+     "cuando": "2026-10-01T15:25:55.233Z"
+    }
+   ],
+   "cola": [
     {
      "id": "1dbyjp1",
      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
@@ -217,8 +216,8 @@
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-01T15:08:34.741Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-01T16:55:55.233Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

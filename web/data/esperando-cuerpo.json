@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T15:24:13.234Z",
+ "generado": "2026-10-01T15:31:38.587Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -60,6 +60,11 @@
      "fecha": "2026-10-01T14:47:24.000Z"
     },
     {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/el-vicepresidente-de-estados-unidos-visitara-el-pais-en-noviembre-y-se-define-su-agenda-nid01102026/",
+     "fecha": "2026-10-01T15:27:18.000Z"
+    },
+    {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/politica/2026/10/01/el-vicepresidente-de-estados-unidos-visitara-la-argentina-en-noviembre-y-se-reunira-con-milei/",
      "fecha": "2026-10-01T14:32:27.000Z"
@@ -75,7 +80,7 @@
      "fecha": "2026-10-01T14:45:09.000Z"
     }
    ],
-   "intentos": 2
+   "intentos": 3
   },
   {
    "id": "6jbdxb",
@@ -140,11 +145,6 @@
      "fecha": "2026-10-01T12:57:26.000Z"
     },
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/rural/ingresaron-us-3228-millones-maiz-liquidacion-agro-crecio-17-septiembre_0_hUXzJTEnne.html",
-     "fecha": "2026-10-01T11:35:29.000Z"
-    },
-    {
      "medio": "Infocampo",
      "enlace": "https://www.infocampo.com.ar/efecto-cosecha-y-exportaciones-record-la-liquidacion-de-divisas-de-septiembre-fue-la-mayor-del-ano/",
      "fecha": "2026-10-01T11:36:19.000Z"
@@ -173,6 +173,11 @@
      "medio": "Noticias Agropecuarias",
      "enlace": "https://www.noticiasagropecuarias.com/2026/10/01/la-liquidacion-de-divisas-del-agro-alcanzo-3-228-mill-dol-en-septiembre/",
      "fecha": "2026-10-01T11:52:56.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/rural/ingresaron-us-3228-millones-maiz-liquidacion-agro-crecio-17-septiembre_0_hUXzJTEnne.html",
+     "fecha": "2026-10-01T11:35:29.000Z"
     }
    ],
    "intentos": 3
@@ -208,31 +213,26 @@
    "intentos": 1
   },
   {
-   "id": "1kz57sk",
-   "titulo": "Causa Malvinas: EE.UU. llamó a desescalar la tensión entre Argentina y Gran Bretaña",
-   "copete": "El embajador de Estados Unidos ante las Naciones Unidas, Mike Waltz , aseguró que Washington buscaría desescalar una eventual crisis entre la Argentina y el Reino Unido por las Islas Malvinas antes de evaluar cualquier otro tipo de intervención. El funcionario de la…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-01T13:37:17.000Z",
+   "id": "wcnatb",
+   "titulo": "Karina Milei se reunió con representantes de empresas francesas que ampliarán sus inversiones en la Argentina",
+   "copete": "La secretaria General de la Presidencia, Karina Milei , se reunió en París con representantes de las empresas francesas Eramet y Huttopia , que anunciaron nuevos proyectos de inversión y expansión en la Argentina. Se trata de una ampliación de US$350 millones para la producción…",
+   "seccion": "Economía",
+   "fecha": "2026-10-01T13:40:00.000Z",
    "fuentes": [
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/politica/causa-malvinas-eeuu-llamo-desescalar-tension-argentina-gran-bretana_0_49dhYOBmXK.html",
-     "fecha": "2026-10-01T13:37:17.000Z"
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/politica/karina-milei-se-reunio-representantes-empresas-francesas-que-ampliaran-sus-inversiones-la-argentina-n6328874",
+     "fecha": "2026-10-01T13:40:00.000Z"
     },
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/01/estados-unidos-les-pidio-a-la-argentina-y-al-reino-unido-que-bajen-la-tension-por-malvinas/",
-     "fecha": "2026-10-01T14:23:50.000Z"
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/karina-milei-se-reunio-empresas-francesas-que-proyectan-ampliar-inversiones-argentina-n250437",
+     "fecha": "2026-10-01T13:59:00.000Z"
     },
     {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-1-11-36-0-estados-unidos-les-pidio-a-la-argentina-y-al-reino-unido-que-bajen-la-tension-por-malvinas",
-     "fecha": "2026-10-01T14:47:05.000Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/01/estados-unidos-pidio-bajar-la-tension-entre-argentina-y-reino-unido-por-malvinas-n523356/",
-     "fecha": "2026-10-01T15:09:34.000Z"
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/politica/2026/10/01/karina-milei-mantuvo-reuniones-con-empresas-francesas-que-amplian-sus-proyectos-de-inversion-en-argentina/",
+     "fecha": "2026-10-01T14:04:31.000Z"
     }
    ],
    "intentos": 1
