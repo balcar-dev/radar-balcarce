@@ -201,6 +201,7 @@ const NOMBRES_DE_PIEZAS = {
   'participa-evento': 'Tu evento',
   'participa-reclamos': 'Tu reclamo',
   'participa-nota': 'Tu nota',
+  feriado: 'El feriado',
 };
 const nombreDePieza = (n) => NOMBRES_DE_PIEZAS[n] ?? (n ? String(n) : 'Pieza');
 const tipoDeVideo = (t) => (t === 'REELS' ? 'reel' : 'historia');

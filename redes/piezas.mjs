@@ -59,6 +59,7 @@ const VENTANAS = {
   podcast: 210,        // 20:30 → 24:00
   utiles: 120,         // 11:00 → 13:00 (hasta el 29/09, hasta las 16)
   agenda: 60,          // 18:00 → 19:00, los jueves
+  feriado: 180,        // 9:00 → 12:00, los feriados
   'participa-noticias': 60, 'participa-evento': 60, 'participa-reclamos': 60, 'participa-nota': 60, // 12:00 → 13:00
 };
 
@@ -161,7 +162,7 @@ export { diaRotativoDeUtiles };
 
 /** Las historias extras (no están en el contrato de las seis), de la que se
  *  sacaría primero a la que menos importa. */
-export const EXTRAS_DE_HISTORIAS = ['utiles', 'agenda', 'participa-noticias', 'participa-evento', 'participa-reclamos', 'participa-nota'];
+export const EXTRAS_DE_HISTORIAS = ['utiles', 'agenda', 'participa-noticias', 'participa-evento', 'participa-reclamos', 'participa-nota', 'feriado'];
 
 /**
  * Qué historias sobran para que el día no pase el techo (CONTRATO_DIARIO

@@ -30,6 +30,7 @@ export const NOMBRES_DE_PIEZAS = {
   'participa-evento': 'Tu evento o emprendimiento',
   'participa-reclamos': 'Tu reclamo',
   'participa-nota': 'Tu nota',
+  feriado: 'El feriado',
   farmacia: 'La farmacia de turno',
   'clima-noche': 'Cómo sigue el clima esta noche',
   podcast: 'El repaso del día',

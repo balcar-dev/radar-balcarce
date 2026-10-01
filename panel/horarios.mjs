@@ -10,6 +10,7 @@
 
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
 import { PIEZAS_PARTICIPA } from '../redes/participa.mjs';
+import { feriadoDelDia } from '../redes/feriado.mjs';
 import { diaSemanaAR } from '../ingesta/zona.mjs';
 
 // Los días de la semana como los devuelve Date#getDay(): 0 es domingo.
@@ -74,6 +75,12 @@ export const HISTORIAS_FIJAS = [
   },
 ];
 
+// El feriado: un hueco reservado a las 9:00 que sólo se usa los días de feriado (redes/feriado.mjs).
+HISTORIAS_FIJAS.push({
+  id: 'feriado', nombre: 'El feriado', porQue: 'Los días de feriado, a la mañana: qué se conmemora, con datos verificados. Reserva su hueco aparte de lo demás.',
+  activa: true, hora: '09:00', dias: TODOS,
+});
+
 // Las piezas de participá (30/09): una historia con voz a las 12:00, cuatro días por semana.
 for (const [id, p] of Object.entries(PIEZAS_PARTICIPA)) {
   HISTORIAS_FIJAS.push({
@@ -130,6 +137,7 @@ export function guardarHorario(estado, { id, activa, hora, dias }) {
  */
 export function toca(horario, cuando = new Date(), { estado = null } = {}) {
   if (horario.activa === false) return false;
+  if (horario.id === 'feriado') return !!feriadoDelDia(cuando);
   const dia = diaSemanaAR(cuando);
   const aMano = estado?.horarios?.utiles?.dias;
   if (horario.id === 'utiles' && !aMano) return dia === diaRotativoDeUtiles(cuando);

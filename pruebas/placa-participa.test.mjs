@@ -57,3 +57,32 @@ test('el guion de participá saluda, hace la pregunta y manda al número de la p
     assert.ok(!/\d{4}/.test(g), 'el número no se lee en voz alta');
   }
 });
+
+// ---- el feriado: un hueco reservado a las 9:00 (30/09)
+import { feriadoDelDia, guionFeriado } from '../redes/feriado.mjs';
+
+const FERIADOS = { feriados: [
+  { fecha: '2026-10-12', nombre: 'Día del Respeto a la Diversidad Cultural', datos: [{ texto: 'Recuerda la llegada de Colón, en 1492.' }] },
+  { fecha: '2026-12-08', nombre: 'Inmaculada Concepción', datos: [] },
+  { fecha: '2026-12-25', nombre: 'Navidad', datos: [{ texto: 'Se celebra el 25 de diciembre.' }] },
+] };
+
+test('el feriado sale a las 9:00 los días de feriado, junto a participá, y no los otros días', () => {
+  const dia = (f) => cronogramaDelDia(new Date(`${f}T12:00:00-03:00`)).filter((p) => p.nombre === 'feriado').map((p) => p.hora);
+  for (const f of ['2026-10-12', '2026-11-23', '2026-12-08', '2026-12-25', '2027-01-01']) assert.deepEqual(dia(f), ['09:00'], f);
+  for (const f of ['2026-10-05', '2026-10-09', '2026-11-20']) assert.deepEqual(dia(f), [], f);
+});
+
+test('un feriado sin datos verificados no sale, y uno que el panel pidió cambiar tampoco', () => {
+  const dia = (f) => new Date(`${f}T12:00:00-03:00`);
+  assert.equal(feriadoDelDia(dia('2026-10-12'), { feriados: FERIADOS, elegidas: {} })?.nombre, 'Día del Respeto a la Diversidad Cultural');
+  assert.equal(feriadoDelDia(dia('2026-12-08'), { feriados: FERIADOS, elegidas: {} }), null, 'sin datos, no se publica');
+  assert.equal(feriadoDelDia(dia('2026-12-25'), { feriados: FERIADOS, elegidas: { feriados: { '2026-12-25': { estado: 'cambiar' } } } }), null);
+  assert.equal(feriadoDelDia(dia('2026-12-25'), { feriados: FERIADOS, elegidas: { feriados: { '2026-12-25': { estado: 'aprobada' } } } })?.nombre, 'Navidad');
+});
+
+test('el guion del feriado dice sólo lo que está en los datos verificados', () => {
+  const g = guionFeriado(FERIADOS.feriados[0], { fecha: new Date('2026-10-12T12:00:00-03:00') });
+  assert.match(g, /Hoy.*feriado.*Diversidad Cultural/);
+  assert.match(g, /Colón, en 1492/);
+});

@@ -12,8 +12,9 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, placaParticipa, COLOR_SECCION, COLORES } from './placa.mjs';
+import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, placaParticipa, placaEfemeride, COLOR_FERIADO, COLOR_SECCION, COLORES } from './placa.mjs';
 import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa } from '../redes/participa.mjs';
+import { feriadoDelDia, fechaDeFeriado, datosParaContar, guionFeriado } from '../redes/feriado.mjs';
 import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { enlaceDeNota } from '../redes/elegir.mjs';
@@ -376,6 +377,21 @@ export function planDelDia(datos, {
       momento: momentoDeHora(cuando.agenda.hora), indicacion: INDICACIONES[momentoDeHora(cuando.agenda.hora)],
       svg: placaAgenda({ eventos: deLaAgenda }),
       acento: '#6D4BA0',
+    });
+  }
+
+  // El feriado (30/09): el hueco de las 9:00 de los días de feriado. Los datos vienen con su fuente.
+  if (tocaHoy('feriado')) {
+    const f = feriadoDelDia(fecha);
+    const momento = momentoDeHora(cuando.feriado.hora);
+    piezas.push({
+      tipo: 'historia', hora: cuando.feriado.hora, nombre: 'feriado',
+      titulo: f.nombre, motivo: 'hoy es feriado',
+      seccion: 'Argentina',
+      guion: guionFeriado(f, { fecha, momento }),
+      momento, indicacion: INDICACIONES[momento],
+      svg: placaEfemeride({ rotulo: `Feriado · ${fechaDeFeriado(f.fecha)}`, titulo: f.nombre, cuerpo: datosParaContar(f).join(' '), color: COLOR_FERIADO }),
+      acento: COLOR_FERIADO,
     });
   }
 
