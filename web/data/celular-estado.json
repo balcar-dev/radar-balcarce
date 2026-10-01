@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T11:32:25.948Z",
- "portada": 45,
- "archivo": 692,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-01T12:05:26.632Z",
+ "portada": 49,
+ "archivo": 696,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-01T11:32:25.980Z",
+  "generado": "2026-10-01T12:05:26.668Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,12 +85,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "1fqh4sy",
@@ -98,14 +98,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "11di7ig",
-      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
+      "id": "c0hkeg",
+      "titulo": "El Círculo de Educadores recibe un ciclo de charlas sobre salud en la adultez",
       "seccion": "Balcarce"
      },
      {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -116,21 +116,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 50,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "ff9n91",
+      "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "q7x46o",
+      "titulo": "La UBA sigue entre las diez mejores de la región y el sistema sufre caídas",
+      "seccion": "Argentina"
      },
      {
       "id": "1h3xtmz",
       "titulo": "Boca vence a River sobre el final y queda segundo en el torneo",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
      }
     ]
@@ -142,16 +147,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 25,
+    "segundos": 47,
     "notas": [
      {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "11di7ig",
+      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
       "seccion": "Balcarce"
      },
      {
-      "id": "1dqm02n",
-      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
       "seccion": "Balcarce"
      }
     ]
@@ -159,7 +174,26 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "c0hkeg",
+     "titulo": "El Círculo de Educadores recibe un ciclo de charlas sobre salud en la adultez",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "m212r6",
+     "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "ff9n91",
+     "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-09-30T21:34:06.971Z",
    "porDia": 5,

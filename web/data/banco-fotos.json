@@ -1980,16 +1980,16 @@
   "intentos": 3
  },
  "1edzkza": {
-  "archivo": "fotos-notas/1edzkza.jpg",
   "medio": "Crónica",
-  "credito": "Foto: Crónica",
   "licencia": null,
   "origen": "medio",
   "titulo": "Caputo descarta volatilidad cambiaria para 2027 y apunta contra Kicillof",
   "enlace": "https://www.cronica.com.ar/politica/luis-caputo-se-refirio-a-la-volatilidad-del-dolar-en-2027-nos-preparamos/",
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1653/1653223/69f3add977d82_600_315!.jpg?s=e686b17b231d1bf9fb1ab1e4d36a9eda&d=1777518000",
   "razon": "Es la única opción disponible, cuenta con buena nitidez y no presenta marcas de medios ni menores de edad.",
-  "cuando": "2026-09-29T14:33:00.432Z"
+  "cuando": "2026-09-29T14:33:00.432Z",
+  "intentado": true,
+  "borrada": true
  },
  "1bm6ntn": {
   "archivo": "fotos-notas/1bm6ntn.jpg",
@@ -3846,5 +3846,61 @@
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-ministro-de-economia-luis-caputo-en-la-IBFMT4I2JVCZHCRDGSEWNEWM5E.jpg?auth=0f7747fd1aa2a4e270599703dec838f8568bdb8759b39f859474848740d03a79&width=1200&height=800&quality=70&smart=true",
   "razon": "Tiene un plano más cercano y mejor nitidez del orador, sin marcas agregadas ni menores reconocibles.",
   "cuando": "2026-10-01T11:32:12.365Z"
+ },
+ "c0hkeg": {
+  "archivo": "fotos-notas/c0hkeg.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Círculo de Educadores recibe un ciclo de charlas sobre salud en la adultez",
+  "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-01-11-52-38Taller_adultos_mayores__9_1.jpg",
+  "razon": "Es la única foto disponible, muestra claramente el ciclo de charlas y no tiene marcas ni menores.",
+  "cuando": "2026-10-01T12:04:00.712Z"
+ },
+ "m212r6": {
+  "archivo": "fotos-notas/m212r6.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+  "enlace": "https://balcarce.gob.ar/2026/10/01/bajo-fondo-y-nahuel-gonzalez-salvo-el-domingo-en-cultura/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2024/04/casa-cultura-balcarce-compressed.jpg",
+  "razon": "Es la única opción disponible, posee buena calidad de imagen, sin menores ni marcas de agua agregadas.",
+  "cuando": "2026-10-01T12:04:00.712Z"
+ },
+ "bvb4v9": {
+  "archivo": "fotos-notas/bvb4v9.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Irene Feingold clasifica al Torneo Nacional de Gimnasia Artística",
+  "enlace": "https://balcarce.gob.ar/2026/10/01/irene-feingold-clasifico-al-torneo-nacional/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-01-at-8.18.42-AM.jpeg",
+  "razon": "La foto B muestra a la gimnasta completa con mejor encuadre y sin marcas de agua.",
+  "cuando": "2026-10-01T12:04:00.712Z"
+ },
+ "ff9n91": {
+  "archivo": "fotos-notas/ff9n91.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
+  "enlace": "https://balcarce.gob.ar/2026/10/01/el-hospital-incorporo-una-nueva-mesa-de-cirugia-hidraulica/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-09-29-at-12.12.56-PM-1.jpeg",
+  "razon": "Es la única foto disponible, tiene buen encuadre de la nueva mesa de cirugía y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-01T12:04:00.712Z"
+ },
+ "q7x46o": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La UBA sigue entre las diez mejores de la región y el sistema sufre caídas",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-01T12:04:00.712Z",
+  "intentos": 1
  }
 }
