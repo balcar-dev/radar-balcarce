@@ -118,7 +118,7 @@ export async function auditarLote(lote, { clave, fetchFn = fetch, modelo = MODEL
     signal: AbortSignal.timeout(90_000),
   });
   if (!res.ok) {
-    const detalle = (await res.text().catch(() => '')).replace(/s+/g, ' ').slice(0, 200);
+    const detalle = String(await (res.text?.() ?? '')).replace(/\s+/g, ' ').slice(0, 200);
     const e = new Error(`Groq HTTP ${res.status}${detalle ? `: ${detalle}` : ''}`);
     e.status = res.status;
     throw e;
