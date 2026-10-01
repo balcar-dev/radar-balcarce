@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T02:03:25.835Z",
+ "generado": "2026-10-01T02:31:28.342Z",
  "portada": 66,
- "archivo": 685,
- "esperandoCuerpo": 8,
+ "archivo": 687,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-01T02:03:25.859Z",
+  "generado": "2026-10-01T02:31:28.380Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -202,12 +202,6 @@
    ],
    "cola": [
     {
-     "id": "idl5dq",
-     "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-     "seccion": "Fútbol",
-     "marcada": false
-    },
-    {
      "id": "g8dncb",
      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
      "seccion": "Balcarce",
@@ -223,6 +217,12 @@
      "id": "1ivau49",
      "titulo": "Cristian Méndez realiza una gira de payadas en Gran Canaria",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "idl5dq",
+     "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+     "seccion": "Fútbol",
      "marcada": false
     }
    ],

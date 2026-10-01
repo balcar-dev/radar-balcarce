@@ -3750,5 +3750,21 @@
   "razon": "Groq también falló: HTTP 413 (se probó una foto libre de \"Nicolás Paz\" en Wikimedia Commons, sin resultado)",
   "cuando": "2026-10-01T02:01:28.238Z",
   "intentos": 1
+ },
+ "1n1thyd": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Selección Argentina suma cinco nuevos debutantes bajo la dirección de Scaloni",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-01T02:31:22.513Z",
+  "intentos": 1
+ },
+ "5p0wce": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Pepa Brizuela canta el himno antes del partido de la Selección",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-01T02:31:22.513Z",
+  "intentos": 1
  }
 }
