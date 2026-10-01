@@ -1,33 +1,9 @@
 {
-  "avisos": {},
+  "avisos": {
+    "falla-Redes": "2026-10-01T13:30:16.314Z"
+  },
   "importantes": {
     "avisadas": {
-      "15jd9hb": {
-        "cuando": "2026-09-27T19:30:37.626Z",
-        "titulo": "Hernán Palazzo gana en el regreso del TC Pick Up",
-        "temas": [
-          "autodromo",
-          "tc-pick-up",
-          "fangio"
-        ]
-      },
-      "1gnqz6n": {
-        "cuando": "2026-09-28T04:00:15.117Z",
-        "titulo": "El Autódromo Juan Manuel Fangio reabre sus puertas tras quince años",
-        "temas": [
-          "autodromo",
-          "fangio"
-        ]
-      },
-      "zezsk3": {
-        "cuando": "2026-09-28T09:00:17.072Z",
-        "titulo": "Sancionan a Werner, Canapino y Ciantini en el TC Pick Up",
-        "temas": [
-          "autodromo",
-          "tc-pick-up",
-          "fangio"
-        ]
-      },
       "4p0z63": {
         "cuando": "2026-09-29T14:30:17.074Z",
         "titulo": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta",
@@ -52,6 +28,13 @@
         "cuando": "2026-09-30T15:30:16.939Z",
         "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
         "temas": []
+      },
+      "ff9n91": {
+        "cuando": "2026-10-01T13:30:16.314Z",
+        "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
+        "temas": [
+          "hospital"
+        ]
       }
     }
   },
