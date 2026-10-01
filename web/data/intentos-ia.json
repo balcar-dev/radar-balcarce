@@ -398,6 +398,11 @@
   "ultimo": "2026-09-28T21:32:25.756Z",
   "motivo": "con cuerpo"
  },
+ "15i90co": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T15:01:58.180Z",
+  "motivo": "con cuerpo"
+ },
  "15jd9hb": {
   "intentos": 3,
   "ultimo": "2026-09-28T05:01:21.722Z",
@@ -930,6 +935,11 @@
   "intentos": 3,
   "ultimo": "2026-09-29T17:31:36.442Z",
   "motivo": "sin material"
+ },
+ "1dbyjp1": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T15:01:58.180Z",
+  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2420 (line 28 column 13)"
  },
  "1dcnv04": {
   "intentos": 2,
@@ -2215,6 +2225,11 @@
   "intentos": 1,
   "ultimo": "2026-10-01T01:29:00.290Z",
   "motivo": "con cuerpo"
+ },
+ "1uw5a9s": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T15:01:58.180Z",
+  "motivo": "cuerpo: 2 problemas (numero, copia): el cuerpo dice 10 y la fuente no lo dice; sin esas oraciones quedan 38 palabras"
  },
  "1uw9vax": {
   "intentos": 3,
