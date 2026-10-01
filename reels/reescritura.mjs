@@ -844,6 +844,10 @@ export function previasDeLaPortada(notas) {
  *  Andrés no quieren gastar de más en una nota que no da. */
 export const MAXIMO_DE_INTENTOS = REESCRITURA.intentosMaximos;
 
+/** Cuántos intentos tiene una nota: los de siempre y, si la cuentan muchos medios, uno o dos más (1/10). */
+export const intentosMaximosPara = (fuentes = 0, base = MAXIMO_DE_INTENTOS) => base
+  + (fuentes >= REESCRITURA.fuentesParaDosIntentosExtra ? 2 : fuentes >= REESCRITURA.fuentesParaUnIntentoExtra ? 1 : 0);
+
 /**
  * El tope de notas por día que se le piden a la IA (27/09). Con la clave de
  * la lectura con IA cargada aparte, la redacción tiene la clave gratis para
@@ -1052,7 +1056,7 @@ export async function reescribirAutomaticas(notas, {
     intentos[nota.id] = {
       intentos: n, ultimo: new Date(Number(ahora)).toISOString(), motivo: String(porque).slice(0, 160), ...extra,
     };
-    if (porque !== 'con cuerpo' && !extra.baja && n >= maximoDeIntentos) {
+    if (porque !== 'con cuerpo' && !extra.baja && n >= intentosMaximosPara(origenesDe(nota).length, maximoDeIntentos)) {
       registro(`  sin cuerpo después de ${n} intentos, no se publica · nota ${nota.id} · ${String(porque).slice(0, 120)}`);
     }
   };
@@ -1110,7 +1114,7 @@ export async function reescribirAutomaticas(notas, {
     if (anterior?.baja && origenesDe(nota).length <= (anterior.fuentes ?? 0)) { frenada(nota, FRENO_POR_VERIFICACION); continue; }
 
     // El tope de intentos por nota: tres corridas y no más.
-    if ((intentos[nota.id]?.intentos ?? 0) >= maximoDeIntentos) { cuenta.agotadas += 1; continue; }
+    if ((intentos[nota.id]?.intentos ?? 0) >= intentosMaximosPara(origenesDe(nota).length, maximoDeIntentos)) { cuenta.agotadas += 1; continue; }
 
     // El texto completo de la nota original (o de otra fuente que contó lo
     // mismo), para que el cuerpo salga de hechos reales y no de rellenar. Y

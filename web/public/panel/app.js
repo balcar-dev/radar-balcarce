@@ -337,7 +337,7 @@ function vistaSinCuerpo(cuando) {
     ${queEs('sin-cuerpo')}
     <p class="estado">${esc(cuando)}</p>
     ${E.esperando.length ? [...E.esperando].sort((a, b) => (b.fuentes?.length ?? 0) - (a.fuentes?.length ?? 0)).map((n) => {
-    const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: E.intentosMaximos, conCuerpo: !!E.correcciones.notas?.[n.id]?.cuerpo });
+    const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: n.maximo ?? E.intentosMaximos, conCuerpo: !!E.correcciones.notas?.[n.id]?.cuerpo });
     const medios = n.fuentes?.length ?? 0;
     const porQue = e.clase === 'mal' ? explicarMotivoSinCuerpo(n.motivo) : '';
     return tarjeta(n, { tipo: 'sin-cuerpo', extra: `<span class="est ${e.clase}">${medios > 1 ? `${medios} medios la cuentan · ` : ''}${esc(e.texto)}</span>${porQue ? `<span class="meta">${esc(porQue)}</span>` : ''}` });
@@ -715,7 +715,7 @@ function vistaNota(tipo, id) {
         <button type="button" class="boton peligro" data-accion="descartar" data-id="${esc(id)}">Descartar</button>`;
     }
   } else if (tipo === 'sin-cuerpo') {
-    const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: E.intentosMaximos, conCuerpo: !!c?.cuerpo });
+    const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: n.maximo ?? E.intentosMaximos, conCuerpo: !!c?.cuerpo });
     const porQue = !c?.cuerpo ? explicarMotivoSinCuerpo(n.motivo) : '';
     extra = c?.cuerpo ? '' : cajaDeBorrador('sin-cuerpo', id);
     cuerpo = `<p class="est ${e.clase}">${esc(e.texto)}</p>

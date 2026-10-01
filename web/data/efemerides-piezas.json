@@ -1,0 +1,105 @@
+{
+  "generado": "2026-10-01",
+  "nota": "Vista previa de la primera semana de 'Un día como hoy' (5 al 11/10/2026): lo que se leería, quién lo lee y cómo se vería. Nada sale solo todavía. Los guiones son borradores escritos con los datos verificados; los 'verificar' son datos que no vienen del archivo y hay que confirmar con una segunda fuente antes de publicar.",
+  "hora": "09:00",
+  "dias": {
+    "2026-10-05": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1i57sj5", "anio": 1922, "titulo": "Nace José Froilán González",
+        "cuerpo": "Piloto argentino de Fórmula 1. En 1951 le dio a Ferrari su primera victoria en la categoría.",
+        "verificar": ["Ganó el Gran Premio de Gran Bretaña de 1951 con Ferrari, la primera victoria de la marca en la Fórmula 1"]
+      },
+      "ademas": [
+        { "id": "1hs282c", "anio": 1962, "texto": "The Beatles editan su primer sencillo, \"Love Me Do\"" },
+        { "id": "tyf8sp", "anio": 1906, "texto": "Se funda el pueblo bonaerense de Darregueira" },
+        { "id": "rmmasj", "anio": null, "texto": "Día Nacional del Ave" }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 104 años, nació José Froilán González, uno de los grandes pilotos argentinos de Fórmula 1. En 1951, al volante de un Ferrari, ganó el Gran Premio de Gran Bretaña: fue la primera victoria de Ferrari en la categoría. Y además, un día como hoy: en 1962 The Beatles editaron su primer sencillo, Love Me Do; en 1906 se fundó el pueblo bonaerense de Darregueira; y hoy se celebra el Día Nacional del Ave. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-06": {
+      "voz": "locutora",
+      "principal": {
+        "id": "b3q5fq", "anio": null, "titulo": "Día del Circo Criollo",
+        "cuerpo": "En honor a Pepe Podestá. Con su familia llevó al circo las historias del gaucho.",
+        "verificar": ["Que de la familia Podestá y el circo criollo nace buena parte del teatro argentino (pantomima de Juan Moreira, 1884)"]
+      },
+      "ademas": [
+        { "id": "qy4hct", "anio": 1887, "texto": "Nace Le Corbusier, el arquitecto de la Casa Curutchet, en La Plata" },
+        { "id": "yavvb", "anio": 1990, "texto": "Se lanza la sonda Ulysses para estudiar el Sol" },
+        { "id": "1ffggwt", "anio": 2006, "texto": "Muere el cineasta Eduardo Mignogna" }
+      ],
+      "guion": "Buen día, Balcarce. Hoy es el Día del Circo Criollo, en honor a Pepe Podestá. Con su familia llevó al circo las historias del gaucho, y ahí empezó buena parte del teatro argentino. Y además, un día como hoy: en 1887 nació Le Corbusier, el arquitecto de la Casa Curutchet, en La Plata; en 1990 se lanzó la sonda Ulysses para estudiar el Sol; y en 2006 murió el cineasta Eduardo Mignogna. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-07": {
+      "voz": "locutora",
+      "principal": {
+        "id": "nqlcth", "anio": 1939, "titulo": "Nace Enrique Pinti",
+        "cuerpo": "Actor, humorista, director teatral y dramaturgo. Precursor del stand up teatral en la Argentina.",
+        "verificar": []
+      },
+      "ademas": [
+        { "id": "9raiv4", "anio": 1958, "texto": "La NASA crea el proyecto Mercurio" },
+        { "id": "jjlp7c", "anio": 1901, "texto": "Nace en Gualeguay el poeta Carlos Mastronardi" },
+        { "id": "s65t5g", "anio": 1734, "texto": "Se consagra el Templo de San Ignacio, en Buenos Aires" }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1939, nació Enrique Pinti, actor, humorista, director teatral y dramaturgo, precursor del stand up teatral en la Argentina. Y además, un día como hoy: en 1958 la NASA creó el proyecto Mercurio, su primer programa para llevar personas al espacio; en 1901 nació en Gualeguay el poeta Carlos Mastronardi; y en 1734 se consagró en Buenos Aires el Templo de San Ignacio. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-08": {
+      "voz": "locutora",
+      "principal": {
+        "id": "7m7786", "anio": 1944, "titulo": "Día del Trabajador Rural",
+        "cuerpo": "Se recuerda el Estatuto del Peón, que marcó el comienzo de la protección legal del trabajador rural.",
+        "verificar": []
+      },
+      "ademas": [
+        { "id": "g4gcgi", "anio": 1927, "texto": "Muere Ricardo Güiraldes, autor de Don Segundo Sombra" },
+        { "id": "vbds4f", "anio": 1927, "texto": "Nace César Milstein, Premio Nobel de Medicina" },
+        { "id": "1qljtq4", "anio": 1898, "texto": "Aparece en Buenos Aires la revista Caras y Caretas" }
+      ],
+      "guion": "Buen día, Balcarce. Hoy es el Día del Trabajador Rural, en recuerdo del Estatuto del Peón de 1944, que marcó el comienzo de la protección legal de quienes trabajan en el campo. En una zona como la nuestra, es un día que se siente cerca. Y además, un día como hoy: en 1927 murió Ricardo Güiraldes, autor de Don Segundo Sombra; ese mismo año nació César Milstein, Premio Nobel de Medicina; y en 1898 apareció en Buenos Aires la revista Caras y Caretas. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-09": {
+      "voz": "locutora",
+      "principal": {
+        "id": "yr86pe", "anio": 1974, "titulo": "Se crea la UNICEN",
+        "cuerpo": "La Universidad Nacional del Centro de la Provincia de Buenos Aires, con sede en Tandil, en nuestra región.",
+        "verificar": ["Creada por la ley 20.753 el 9/10/1974; empezó a funcionar en 1975 (por eso se dice 'se crea')"]
+      },
+      "ademas": [
+        { "id": "12oz350", "anio": 1604, "texto": "Se observa la supernova más reciente de la Vía Láctea" },
+        { "id": "z2e6kf", "anio": 1972, "texto": "Se funda Tolhuin, en Tierra del Fuego" },
+        { "id": "27b5c8", "anio": null, "texto": "Día del Técnico de Laboratorio" }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1974, se creó la Universidad Nacional del Centro de la Provincia de Buenos Aires, la UNICEN, con sede en Tandil, en nuestra región. Y además, un día como hoy: en 1604 se observó la supernova más reciente de la Vía Láctea; en 1972 se fundó la localidad de Tolhuin, en Tierra del Fuego; y hoy es el Día del Técnico de Laboratorio. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-10": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1363pli", "anio": 1856, "titulo": "Muere Vicente López y Planes",
+        "cuerpo": "Autor de la letra del Himno Nacional Argentino.",
+        "verificar": []
+      },
+      "ademas": [
+        { "id": "1hjfqrq", "anio": 1813, "texto": "Nace el compositor italiano Giuseppe Verdi" },
+        { "id": "hjsrw", "anio": 1927, "texto": "Se inaugura en Córdoba la Fábrica Militar de Aviones" },
+        { "id": "53ykxi", "anio": 1925, "texto": "Se inaugura en Buenos Aires el monumento a Leandro N. Alem" }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1856, murió Vicente López y Planes, el autor de la letra del Himno Nacional Argentino. Y además, un día como hoy: en 1813 nació el compositor italiano Giuseppe Verdi; en 1927 se inauguró en Córdoba la Fábrica Militar de Aviones; y en 1925 se inauguró en Buenos Aires el monumento a Leandro N. Alem. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-11": {
+      "voz": "locutora",
+      "principal": {
+        "id": "d4a4dg", "anio": 1904, "titulo": "Nace Tita Merello",
+        "cuerpo": "Actriz y cantante, ícono del tango y del cine argentino.",
+        "verificar": []
+      },
+      "ademas": [
+        { "id": "khxv7j", "anio": 1830, "texto": "Chopin interpreta en Varsovia su Concierto para piano n.º 1" },
+        { "id": "16xc5q8", "anio": 1878, "texto": "Día Nacional de la Patagonia" },
+        { "id": "4vy00k", "anio": 1894, "texto": "Nace el boxeador Luis Ángel Firpo" }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1904, nació Tita Merello, actriz y cantante, ícono del tango y del cine argentino. Y además, un día como hoy: en 1830 Chopin interpretó en Varsovia su Concierto para piano número uno; hoy es el Día Nacional de la Patagonia, por la creación de su gobernación en 1878; y en 1894 nació el boxeador Luis Ángel Firpo. Un día como hoy, en Radar Balcarce."
+    }
+  }
+}

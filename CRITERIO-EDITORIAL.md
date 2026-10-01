@@ -766,6 +766,8 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Palabras seguidas copiadas del original, como máximo | 12 | `COPIA_MAXIMA` |
 | Palabras sin tilde para dar un texto por escrito sin tildes (con menos, se les pone la tilde) | 3 | `ESTILO.palabrasSinTilde` |
 | Intentos de la IA por nota | 3 | `REESCRITURA.intentosMaximos` |
+| Medios que la cuentan para un intento más de la IA | 5 | `REESCRITURA.fuentesParaUnIntentoExtra` |
+| Medios que la cuentan para dos intentos más de la IA | 8 | `REESCRITURA.fuentesParaDosIntentosExtra` |
 | Días que se recuerdan los intentos | 7 | `REESCRITURA.diasDeIntentos` |
 | Palabras de resumen mínimas sin texto completo | 60 | `REESCRITURA.palabrasMinimasDeMaterial` |
 | Notas que se le piden a la IA por corrida | 40 | `REESCRITURA.porCorrida` |

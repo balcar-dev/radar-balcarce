@@ -56,7 +56,7 @@ const SUB_Y = 1660;
 // cosa ni la otra.
 const CARPETA_FUENTES = '../marca/fuentes';
 
-function armarAss(carteles, { acento = '#E8A33C', retardo = 0 } = {}) {
+export function armarAss(carteles, { acento = '#E8A33C', retardo = 0 } = {}) {
   const lineas = [];
   for (const c of carteles) {
     for (let i = 0; i < c.palabras.length; i += 1) {

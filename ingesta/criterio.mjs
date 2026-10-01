@@ -92,6 +92,11 @@ export const RELLENO = [
 /** Cómo trabaja la IA con cada nota. */
 export const REESCRITURA = {
   intentosMaximos: 3,
+  // Una nota que cuentan muchos medios y todavía no logró cuerpo merece más intentos
+  // (1/10, Hernán: "si la cuentan 12 medios tiene lógica"): un intento más desde
+  // `fuentesParaUnIntentoExtra` medios y dos más desde `fuentesParaDosIntentosExtra`.
+  fuentesParaUnIntentoExtra: 5,
+  fuentesParaDosIntentosExtra: 8,
   diasDeIntentos: 7,
   palabrasMinimasDeMaterial: 60,
   porCorrida: 40,

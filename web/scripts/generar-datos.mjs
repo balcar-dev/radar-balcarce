@@ -60,7 +60,7 @@ import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana 
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import {
   reescribirAutomaticas, previasDeLaPortada, extrasParaLaWeb, sinExtras, CAMPOS_EXTRA, podarIntentos, fuentesConsultadasDeOrigenes,
-  MAXIMO_DE_INTENTOS,
+  MAXIMO_DE_INTENTOS, intentosMaximosPara,
 } from '../../reels/reescritura.mjs';
 import { TEMAS, MOTIVO_COTIZACION, REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { tieneCuerpo } from '../lib/cuerpo.js';
@@ -534,6 +534,8 @@ function notaPublicada(n) {
         intentos: intentos[n.id]?.intentos ?? 0,
         // Por qué el verificador rechazó el último intento (copia, relleno, un número que no coincide…): el celular lo explica (1/10).
         motivo: String(intentos[n.id]?.motivo ?? '').slice(0, 200),
+        // Cuántos intentos tiene esta nota: una muy contada tiene más (criterio.mjs, REESCRITURA).
+        maximo: intentosMaximosPara((n.origenes ?? []).length),
       });
     }
     return null;

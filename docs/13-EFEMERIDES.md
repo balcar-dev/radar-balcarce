@@ -125,6 +125,20 @@ marcada, con el motivo de cada una, para aprobarla o cambiarla ("Guardar el día
 La propuesta es un punto de partida: es por reglas, no entiende un texto, y a veces propone algo
 flojo (una compañía de aviación holandesa de principal). Para eso está la persona que aprueba.
 
+## Criterios que se sumaron el 1/10 (Hernán)
+
+- **Si hay dudas, no se usa.** Cada principal y cada "sí" se verifica contra una fuente independiente (tres
+  verificadores con búsqueda en la web, 1/10): lo que sale mal o no se confirma no entra como principal ni
+  como "sí" (`--errores=` de `combinar-auditorias.mjs`). Lo que está bien pero con mal redactado (por ejemplo
+  "se anuncia" el Nobel, no "recibe") queda con un aviso ⚠ en el motivo.
+- **Famosos que ya murieron:** la marca "puede estar vivo" del feed se equivoca con ellos; se revisan contra
+  otras fuentes y entran (`--ya-murieron=`). Una persona que fue menor en el hecho pero hoy es adulta o murió
+  (el debut de Maradona a los 15) no es un problema.
+- **Nada de fundaciones de empresas o ciudades de afuera**, ni política o economía de otros países.
+- **La pieza del día** (nota + reel/historia con voz, a las 9:00, en el hueco del feriado): una principal con
+  su placa y "Además, un día como hoy" con las otras tres (`reels/previa-efemerides.mjs`, vista previa sin voz
+  de la primera semana; datos en `web/data/efemerides-piezas.json`). Todavía no sale nada solo.
+
 ## Reglas que no se negocian
 
 - Nada de política partidaria ni de personas conflictivas: ante la duda, esa

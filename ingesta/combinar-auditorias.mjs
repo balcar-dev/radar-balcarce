@@ -149,6 +149,14 @@ function main() {
   const validos = new Set(Object.values(j.dias).flatMap((d) => (d.candidatas ?? []).map((c) => c.id)));
   const auditorias = archivos.map((f) => leerAuditoria(fs.readFileSync(f, 'utf8'), validos));
   const propuestas = combinarMes(j.dias, { auditorias, riesgo: auditorias.length - 1, errores: lista('errores'), yaMurieron: lista('ya-murieron') });
+  // --avisos=archivo.json: { id: "lo que hay que corregir al escribirla" } (lo que dejó la verificación): queda en el motivo.
+  const rutaAvisos = (args.find((a) => a.startsWith('--avisos=')) ?? '').slice(9);
+  const avisos = rutaAvisos ? JSON.parse(fs.readFileSync(rutaAvisos, 'utf8')) : {};
+  for (const p of Object.values(propuestas)) {
+    for (const id of [p.principal, ...(p.si ?? []), ...(p.opcionales ?? [])]) {
+      if (id && avisos[id]) p.motivos[id] = `${p.motivos[id] ?? ''} ⚠ ${avisos[id]}`.trim();
+    }
+  }
   for (const [fecha, p] of Object.entries(propuestas)) j.dias[fecha].propuesta = p;
   const { dias, ...meta } = j;
   const renglones = Object.entries(dias).map(([k, v]) => `${JSON.stringify(k)}:${JSON.stringify(v)}`).join(',\n');
