@@ -24,6 +24,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import * as criterio from '../ingesta/criterio.mjs';
+import { HISTORIAS_FIJAS } from '../panel/horarios.mjs';
 import {
   leerCriterioRedes, RUTA_CRITERIO_REDES, MEDIO, SITIO, SITIO_DICHO, VOCES, REPARTO, vozDePieza, INDICACION_BASE, INDICACIONES,
   opcionesDeVoz, componerIndicacion, momentoDeHora, MOMENTOS,
@@ -131,6 +132,8 @@ test('cada pieza tiene siempre la misma voz, según el reparto del documento (28
   const esperado = {
     'clima-manana': 'locutora', noticia1: 'locutor', noticia2: 'locutora', farmacia: 'locutor',
     'clima-noche': 'locutora', podcast: 'locutor', utiles: 'locutor', agenda: 'locutora', aviso: 'locutor',
+    // Faltaban (1/10): sin voz en el reparto, el feriado y las cuatro de participá no se armaban.
+    feriado: 'locutora', 'participa-noticias': 'locutora', 'participa-evento': 'locutor', 'participa-reclamos': 'locutora', 'participa-nota': 'locutor',
   };
   assert.deepEqual(REPARTO, esperado);
   for (const [pieza, quien] of Object.entries(esperado)) {
@@ -144,6 +147,8 @@ test('cada pieza tiene siempre la misma voz, según el reparto del documento (28
   assert.throws(() => vozDePieza('pieza-nueva'), /no tiene voz en el reparto/);
   // Y todas las piezas fijas del plan (redes/piezas.mjs) tienen su voz.
   for (const p of PODCASTS) assert.ok(REPARTO[p.nombre], `el podcast ${p.nombre} no tiene voz`);
+  // Y toda pieza que el plan puede armar: las fijas del panel (clima, farmacia, útiles, agenda, feriado, participá…).
+  for (const h of HISTORIAS_FIJAS) assert.ok(REPARTO[h.id], `la pieza fija ${h.id} no tiene voz en el reparto: no se armaría`);
 });
 
 test('ni las voces ni el estilo están escritos en el código (sólo en CRITERIO-REDES.md)', () => {

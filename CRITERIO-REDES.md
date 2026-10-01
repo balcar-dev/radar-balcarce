@@ -294,6 +294,11 @@ clima-noche: locutora
 podcast: locutor
 utiles: locutor
 agenda: locutora
+feriado: locutora
+participa-noticias: locutora
+participa-evento: locutor
+participa-reclamos: locutora
+participa-nota: locutor
 aviso: locutor
 <!-- VOZ:REPARTO:FIN -->
 
