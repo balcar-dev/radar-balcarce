@@ -627,3 +627,18 @@ fallaron al bajar `ffmpeg` (GitHub contestó 504). Después Instagram rechazó t
 panel) baja el video del artefacto `piezas-<corrida>` que "Redes" guarda tres días y lo sube con
 `redes/reintentar.mjs`, sin pedir la voz de nuevo (cupo: 10 audios por día). Comparte el candado `redes`.
 
+
+## Piezas fijas: armadas de antemano y reutilizadas (1/10/2026)
+
+Mientras el cupo de voz sea el gratis (10 audios por día), las piezas que no cambian se arman UNA vez y
+se reutilizan dos semanas: **las cuatro de participá** (lunes noticias, martes evento, miércoles reclamos,
+viernes nota). Cuestan un audio la primera vez y después ninguno: el día de una semana normal baja a 7 u 8
+audios (`redes/cronograma-semana.mjs` y `reels/hoja-cronograma.mjs` lo dibujan).
+
+- Se arman con el workflow **"Fijar piezas"** (`fijar-piezas.yml`): `piezas`, `desde` (primer día en que
+  valen) y `dias` (14). Gasta un audio por pieza: conviene un día de poco uso y de a dos.
+- Quedan en `reels/fijas/` (el video) con su vigencia en `reels/fijas/vigencia.json`.
+- El plan (`reels/plan.mjs`) usa la fija si vale hoy (`fijaVigente`) y no pide la voz; pasada la vigencia
+  vuelve solo a armarla con voz. `--sin-fijas` fuerza armarla de cero; `--incluir=` pide una pieza que hoy no toca.
+- Cuando vuelva la clave paga, se deja que venzan y listo.
+

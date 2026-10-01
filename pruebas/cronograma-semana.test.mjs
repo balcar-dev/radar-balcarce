@@ -44,3 +44,14 @@ test('el texto marca cuánto sobra del cupo', () => {
   assert.match(t, /Un día como hoy \(nueva\)/);
   assert.match(t, /FERIADO/);
 });
+
+test('las piezas fijas (armadas de antemano) no gastan audio ese día', () => {
+  const fijas = ['participa-noticias', 'participa-evento', 'participa-reclamos', 'participa-nota'];
+  const s = cronogramaDeLaSemana('2026-10-05', 8, { conEfemeride: true, fijas });
+  const por = Object.fromEntries(s.map((d) => [d.fecha, d.audios]));
+  assert.deepEqual(por, {
+    '2026-10-05': 7, '2026-10-06': 8, '2026-10-07': 7, '2026-10-08': 8, '2026-10-09': 7, '2026-10-10': 7, '2026-10-11': 7, '2026-10-12': 7,
+  });
+  assert.ok(Math.max(...Object.values(por)) <= 8, 'con las de participá fijas, nunca más de 8 audios por día');
+  assert.match(textoDelCronograma(s), /fija, sin voz nueva/);
+});

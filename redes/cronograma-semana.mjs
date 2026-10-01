@@ -4,7 +4,7 @@
 // (10 por día). Usa las mismas funciones que el reloj (`cronogramaDelDia`), así que lo que
 // muestra es lo que pasaría.
 //
-//   node redes/cronograma-semana.mjs [--desde=2026-10-05] [--dias=8] [--con-efemeride] [--sin-avisos]
+//   node redes/cronograma-semana.mjs [--desde=2026-10-05] [--dias=8] [--con-efemeride] [--fijas=a,b]
 //
 // "Un día como hoy" todavía no está en el reloj: con --con-efemeride se suma a las 9:00 (en los
 // días de feriado la reemplaza el feriado) para ver cómo quedaría. Sin dependencias.
@@ -39,7 +39,7 @@ function titulo(nombre) {
  * El día, pieza por pieza.
  * @returns {{ fecha: string, etiqueta: string, feriado: string|null, piezas: object[], audios: number }}
  */
-export function cronogramaDelDiaConVoz(iso, { conEfemeride = false } = {}) {
+export function cronogramaDelDiaConVoz(iso, { conEfemeride = false, fijas = [] } = {}) {
   const cuando = new Date(`${iso}T15:00:00Z`);
   const [a, m, d] = iso.split('-').map(Number);
   const feriado = feriadoDelDia(cuando);
@@ -47,11 +47,12 @@ export function cronogramaDelDiaConVoz(iso, { conEfemeride = false } = {}) {
   // El feriado y "Un día como hoy" comparten las 9:00: ese día sale el feriado.
   if (conEfemeride && !feriado) piezas = [...piezas, { nombre: 'efemeride', tipo: 'reel', hora: HORA_EFEMERIDE }];
   piezas = piezas.sort((x, y) => x.hora.localeCompare(y.hora)).map((p) => ({
-    ...p, titulo: titulo(p.nombre), voz: nombreDeVoz(p.nombre),
+    ...p, titulo: titulo(p.nombre), voz: nombreDeVoz(p.nombre), fija: fijas.includes(p.nombre),
   }));
   return {
     fecha: iso, etiqueta: `${DIAS[new Date(Date.UTC(a, m - 1, d, 12)).getUTCDay()]} ${d} de ${MESES[m - 1]}`,
-    feriado: feriado?.nombre ?? null, piezas, audios: piezas.length,
+    // Una pieza fija (armada de antemano, reels/fijas.mjs) no gasta voz ese día.
+    feriado: feriado?.nombre ?? null, piezas, audios: piezas.filter((p) => !p.fija).length,
   };
 }
 
@@ -68,7 +69,7 @@ export function textoDelCronograma(semana) {
     const estado = d.audios > CUPO_DE_VOZ_POR_DIA ? '⚠ SE PASA' : d.audios === CUPO_DE_VOZ_POR_DIA ? 'justo' : `sobran ${CUPO_DE_VOZ_POR_DIA - d.audios}`;
     l.push(`## ${d.etiqueta[0].toUpperCase()}${d.etiqueta.slice(1)}${d.feriado ? ` · FERIADO: ${d.feriado}` : ''}`, '');
     l.push('| Hora | Pieza | Tipo | Voz |', '|---|---|---|---|');
-    for (const p of d.piezas) l.push(`| ${p.hora} | ${p.titulo}${p.nombre === 'efemeride' ? ' (nueva)' : ''} | ${p.tipo === 'reel' ? 'reel (y también historia)' : 'historia'} | ${p.voz} |`);
+    for (const p of d.piezas) l.push(`| ${p.hora} | ${p.titulo}${p.nombre === 'efemeride' ? ' (nueva)' : ''} | ${p.tipo === 'reel' ? 'reel (y también historia)' : 'historia'} | ${p.voz}${p.fija ? ' · fija, sin voz nueva' : ''} |`);
     l.push('', `Audios del día: **${d.audios} de ${CUPO_DE_VOZ_POR_DIA}** (${estado}).`, '');
   }
   return `${l.join('\n')}\n`;
@@ -76,6 +77,6 @@ export function textoDelCronograma(semana) {
 
 if (process.argv[1] && process.argv[1].endsWith('cronograma-semana.mjs')) {
   const arg = (n, d = '') => (process.argv.find((a) => a.startsWith(`--${n}=`)) ?? `--${n}=${d}`).slice(n.length + 3);
-  const semana = cronogramaDeLaSemana(arg('desde', diaAR()), Number(arg('dias', '7')), { conEfemeride: process.argv.includes('--con-efemeride') });
+  const semana = cronogramaDeLaSemana(arg('desde', diaAR()), Number(arg('dias', '7')), { conEfemeride: process.argv.includes('--con-efemeride'), fijas: arg('fijas').split(',').filter(Boolean) });
   console.log(textoDelCronograma(semana));
 }
