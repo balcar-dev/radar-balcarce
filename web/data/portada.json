@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T06:01:10.628Z",
+  "generado": "2026-10-01T06:31:04.944Z",
   "notas": [
     {
       "id": "f3bef7",
@@ -366,7 +366,7 @@
       "fecha": "2026-09-30T23:09:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T00:31:14.348Z",
-      "relevancia": 79,
+      "relevancia": 87,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1121,6 +1121,83 @@
       "slug": "estudiantes-del-colegio-santa-rosa-de-lima-visitan-el-municipio"
     },
     {
+      "id": "1lfoejz",
+      "titulo": "Leo Nardini expone la gestión de Malvinas Argentinas en un foro internacional",
+      "copete": "El intendente de Malvinas Argentinas expuso sobre el desarrollo urbano del distrito en un encuentro internacional desarrollado en Pilar. Presentó los proyectos de infraestructura y firmó un acuerdo de cooperación.",
+      "cuerpo": "El intendente de Malvinas Argentinas, Leo Nardini, participó de un foro internacional sobre desarrollo urbano sostenible realizado el 28 y 29 de septiembre en el Campus IAE de la localidad de Pilar. El evento reunió a referentes de gobiernos locales, universidades y empresas.\n\nDurante su exposición en el panel sobre distritos competitivos, el jefe comunal detalló los alcances del Distrito Malvinas y del Plan Nueva Ciudad. Ambas iniciativas apuntan a concentrar obras de infraestructura, espacios verdes, cultura y actividades económicas.\n\nEn el cierre de las jornadas, el municipio suscribió una carta de adhesión junto a otras entidades para fomentar la cooperación sectorial. \"Es una gran oportunidad para mostrar nuestra experiencia\", expresó Nardini sobre su participación.",
+      "guion": "Leo Nardini expone la gestión de Malvinas Argentinas en un foro internacional",
+      "seccion": "Política",
+      "medios": [
+        "La Noticia 1",
+        "Página/12",
+        "Crónica",
+        "La Tecla",
+        "Zona Norte Diario"
+      ],
+      "enlace": "https://www.latecla.info/170081-nardini-mostro-su-gestion-en-el-encuentro-ciudades-y-ecosistemas-para-el-bien-comun-2026-2030",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T19:46:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T21:31:04.804Z",
+      "relevancia": 75,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El intendente Leo Nardini participó de un foro internacional en Pilar.",
+        "Expuso sobre el Distrito Malvinas y el Plan Nueva Ciudad.",
+        "El municipio firmó una carta de adhesión para impulsar el desarrollo urbano sostenible."
+      ],
+      "seSabe": [
+        "El encuentro internacional se realizó el 28 y 29 de septiembre en el Campus IAE de Pilar.",
+        "Participaron representantes de gobiernos, instituciones académicas y empresas.",
+        "Malvinas Argentinas firmó una carta de adhesión para promover la cooperación sectorial."
+      ],
+      "textoRedes": "El intendente de Malvinas Argentinas, Leo Nardini, expuso sobre la gestión local y el proyecto Distrito Malvinas en un encuentro internacional de desarrollo urbano realizado en Pilar.",
+      "etiquetas": [
+        "Leo Nardini",
+        "Malvinas Argentinas",
+        "Desarrollo Urbano",
+        "Pilar",
+        "Infraestructura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170081-nardini-mostro-su-gestion-en-el-encuentro-ciudades-y-ecosistemas-para-el-bien-comun-2026-2030",
+          "fecha": "2026-09-30T19:46:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la participación de Leo Nardini en el encuentro Ciudades y Ecosistemas para el Bien Común 2026-2030 en Pilar."
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/30/nardini-presento-distrito-malvinas-en-el-encuentro-internacional-ciudades-y-ecosistemas-para-el-bien-comun-2026-2030/",
+          "fecha": "2026-09-30T21:23:58.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación sobre la experiencia de gestión y el Distrito Malvinas."
+        },
+        {
+          "medio": "Zona Norte Diario",
+          "enlace": "https://www.zonanortediario.com.ar/30/09/2026/nardini-presento-el-proyecto-distrito-malvinas-en-un-encuentro-internacional-sobre-desarrollo-urbano/",
+          "fecha": "2026-09-30T20:07:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el Plan Nueva Ciudad, los participantes y la firma de la carta de adhesión."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "leo-nardini-expone-la-gestion-de-malvinas-argentinas-en-un-foro",
+      "foto": {
+        "archivo": "fotos-notas/1lfoejz.jpg",
+        "credito": "Foto: Zona Norte Diario"
+      }
+    },
+    {
       "id": "1xow9qi",
       "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
       "copete": "La Cámara de Diputados bonaerense distinguirá al profesor balcarceño por su trayectoria en el deporte adaptado y su participación en citas paralímpicas internacionales.",
@@ -1599,107 +1676,6 @@
       "slug": "la-fiesta-nacional-del-postre-se-extiende-a-cuatro-dias-en-octubre"
     },
     {
-      "id": "6sldfi",
-      "titulo": "La Justicia suspende las elecciones en la UTA y pasa los comicios para diciembre",
-      "copete": "La Cámara Nacional de Apelaciones del Trabajo postergó los comicios sindicales previstos para octubre. La medida responde a cuestionamientos en los padrones y el proceso electoral.",
-      "cuerpo": "La Sala I de la Cámara Nacional de Apelaciones del Trabajo suspendió las elecciones de autoridades en la Unión Tranviarios Automotor (UTA), que iban a realizarse el miércoles 7 y el jueves 8 de octubre. El tribunal dispuso que los comicios se desarrollen el jueves 17 y el viernes 18 de diciembre de 2026.\n\nLa medida judicial se dictó a partir de una presentación de la Lista Negra contra la conducción gremial. Según el fallo, la oposición denunció alteraciones en los padrones y la falta de garantías necesarias para la votación.\n\nLa Justicia ordenó retrotraer el proceso electoral hasta la instancia de presentación de listas y avales para subsanar las irregularidades detectadas. La Junta Electoral Central deberá comunicar la reprogramación en las próximas horas.",
-      "guion": "La Justicia suspende las elecciones en la UTA y pasa los comicios para diciembre",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "El Eco de Tandil",
-        "La Nación",
-        "El Destape",
-        "Ámbito",
-        "Noticias Argentinas (NA)",
-        "Radio 10 Mar del Plata (FM 105.5)"
-      ],
-      "enlace": "https://www.eldestapeweb.com/politica/justicia-postergo-elecciones-uta-2026930151444",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T18:14:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T23:31:16.076Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Cámara Nacional de Apelaciones del Trabajo suspendió las elecciones de la UTA.",
-        "Los comicios estaban previstos para el 7 y 8 de octubre y pasaron a diciembre.",
-        "El tribunal ordenó retrotraer el proceso hasta la presentación de listas y avales.",
-        "La medida responde a una presentación de la Lista Negra por fallas en los padrones."
-      ],
-      "seSabe": [
-        "La Cámara Nacional de Apelaciones del Trabajo suspendió las elecciones de la UTA.",
-        "Los nuevos comicios se realizarán el 17 y 18 de diciembre de 2026.",
-        "El tribunal ordenó retrotraer el proceso hasta la presentación de listas y avales.",
-        "El planteo judicial fue impulsado por la Lista Negra."
-      ],
-      "textoRedes": "La Justicia suspendió las elecciones de la UTA previstas para octubre y fijó los nuevos comicios para el 17 y 18 de diciembre tras una presentación opositora por fallas en los padrones.",
-      "etiquetas": [
-        "UTA",
-        "elecciones",
-        "sindicato",
-        "Justicia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/politica/justicia-postergo-elecciones-uta-2026930151444",
-          "fecha": "2026-09-30T18:14:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los plazos, el fallo de la Cámara y las nuevas fechas de votación."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/la-justicia-postergo-los-comicios-de-la-union-tranviarios-automotor",
-          "fecha": "2026-09-30T22:58:14.000Z",
-          "oficial": false,
-          "aporte": "Informó la suspensión de los comicios por un fallo judicial."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-justicia-postergo-las-elecciones-la-uta-y-el-oficialismo-nego-las-supuestas-irregularidades-n6328624",
-          "fecha": "2026-09-30T21:57:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó la denuncia opositora sobre la alteración del padrón electoral."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/la-justicia-postergo-la-eleccion-de-la-uta-el-gremio-de-los-colectiveros-tras-detectar-nid30092026/",
-          "fecha": "2026-09-30T18:50:03.000Z",
-          "oficial": false,
-          "aporte": "Precisó que la resolución fue dictada este miércoles por la Sala I."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/la-justicia-postergo-las-elecciones-de-la-uta-previstas-para-el-7-y-8-de-octubre_a6abd68dbc5ebcb5a82aeca69",
-          "fecha": "2026-09-30T19:59:52.322Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional."
-        },
-        {
-          "medio": "Radio 10 Mar del Plata (FM 105.5)",
-          "enlace": "https://radio10mardelplata.com.ar/la-justicia-suspendio-las-elecciones-de-la-uta-y-fijo-una-nueva-fecha-para-diciembre/",
-          "fecha": "2026-09-30T19:45:22.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el planteo judicial fue impulsado por la Lista Negra."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-justicia-suspende-las-elecciones-en-la-uta-y-pasa-los-comicios",
-      "foto": {
-        "archivo": "fotos-notas/6sldfi.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
-    {
       "id": "repaso20260930tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: ACTC, Rosario Central y capacitaciones",
@@ -2077,85 +2053,6 @@
       "foto": {
         "archivo": "fotos-notas/i4muk4.jpg",
         "credito": "Foto: El Marplatense"
-      }
-    },
-    {
-      "id": "1mlqyxs",
-      "titulo": "Proponen anular fotomultas provinciales sin homologación",
-      "copete": "Un proyecto legislativo busca endurecer los controles sobre los radares viales en la provincia de Buenos Aires. La iniciativa contempla la anulación de infracciones labradas por equipos irregulares.",
-      "cuerpo": "La iniciativa del bloque de la Coalición Cívica prevé la anulación de las infracciones labradas por equipos que no cumplan con la normativa vigente.\n\nEl texto exige homologaciones y verificaciones metrológicas con una periodicidad máxima de seis meses, además de la creación de un registro público con la ubicación y las autorizaciones de cada dispositivo. También establece la obligación de colocar cartelería visible al menos quinientos metros antes de cada control y otorga un plazo de noventa días a la Dirección Provincial de Política y Seguridad Vial para la adecuación de los cinemómetros.",
-      "guion": "Proponen anular fotomultas provinciales sin homologación",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia",
-        "InfoGEI",
-        "La Verdad",
-        "Diputados Bonaerenses"
-      ],
-      "enlace": "https://infogei.ar/proponen-anular-las-fotomultas-que-no-cumplan-con-las-nuevas-reglas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T14:45:20.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T22:31:18.689Z",
-      "relevancia": 38,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Impulsan un proyecto para modificar las reglas de los radares viales en la provincia.",
-        "Exigen homologaciones semestrales, cartelería preventiva y un registro público de equipos.",
-        "Proponen anular las multas labradas por dispositivos que no cumplan con los requisitos."
-      ],
-      "seSabe": [
-        "El diputado Andrés De Leo presentó el proyecto en la Cámara de Diputados bonaerense.",
-        "La iniciativa exige cartelería a quinientos metros del punto de medición.",
-        "Se otorgan noventa días para adecuar los equipos ya instalados."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó el tratamiento legislativo que tendrá la iniciativa."
-      ],
-      "etiquetas": [
-        "fotomultas",
-        "radares",
-        "seguridad vial",
-        "Legislatura bonaerense",
-        "Andrés De Leo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "InfoGEI",
-          "enlace": "https://infogei.ar/proponen-anular-las-fotomultas-que-no-cumplan-con-las-nuevas-reglas/",
-          "fecha": "2026-09-30T14:45:20.000Z",
-          "oficial": false,
-          "aporte": "Detalló los puntos principales del proyecto de ley sobre radares viales."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44951-buscan-modificar-las-reglas-para-la-instalacion-y-funcionamiento-de-radares/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Reprodujo la información sobre la presentación del proyecto de la Coalición Cívica."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wabor5",
-          "titulo": "Proponen mayores exigencias para radares viales y anular multas irregulares",
-          "fecha": "2026-09-30T13:31:15.123Z",
-          "ruta": "/nota/proponen-mayores-exigencias-para-radares-viales-y-anular-multas-wabor5"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "proponen-anular-fotomultas-provinciales-sin-homologacion",
-      "foto": {
-        "archivo": "fotos-notas/1mlqyxs.jpg",
-        "credito": "Foto: Diario La Vanguardia"
       }
     },
     {
@@ -4301,7 +4198,7 @@
       "fecha": "2026-09-29T19:32:25.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T17:01:10.363Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4387,7 +4284,7 @@
     "ahora": {
       "temp": 7,
       "sensacion": 3,
-      "humedad": 85,
+      "humedad": 84,
       "viento": 21,
       "rumbo": "SO",
       "cielo": "Nublado",
@@ -4433,10 +4330,10 @@
         "max": 20,
         "min": 7,
         "lluvia": 4,
-        "codigo": 3,
+        "codigo": 2,
         "viento": 18,
         "milimetros": 0,
-        "cielo": "Nublado"
+        "cielo": "Parcialmente nublado"
       }
     ],
     "fuente": "Open-Meteo"
