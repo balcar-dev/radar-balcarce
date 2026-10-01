@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T23:32:07.634Z",
- "portada": 80,
- "archivo": 675,
+ "generado": "2026-10-01T00:02:08.771Z",
+ "portada": 74,
+ "archivo": 678,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-09-30T23:32:07.695Z",
+  "generado": "2026-10-01T00:02:08.812Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -74,7 +74,7 @@
     "voz": "locutor",
     "ventana": 210,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-09-30T23:35:09.088Z"
    }
   ],
   "repasos": [
@@ -146,8 +146,8 @@
     "hora": "20:30",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 44,
+    "salio": "2026-09-30T23:35:09.088Z",
+    "segundos": null,
     "notas": [
      {
       "id": "h36tlu",
@@ -214,9 +214,9 @@
      "marcada": false
     },
     {
-     "id": "z3c4f",
-     "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-     "seccion": "Balcarce",
+     "id": "idl5dq",
+     "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+     "seccion": "Fútbol",
      "marcada": false
     },
     {
