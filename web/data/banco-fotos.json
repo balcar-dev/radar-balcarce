@@ -3124,16 +3124,16 @@
   "cuando": "2026-09-30T17:02:40.115Z"
  },
  "1fgr8xb": {
-  "archivo": "fotos-notas/1fgr8xb.jpg",
   "medio": "Crónica",
-  "credito": "Foto: Crónica",
   "licencia": null,
   "origen": "medio",
   "titulo": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
   "enlace": "https://www.cronica.com.ar/depo/actualidad/river-se-prepara-para-una-venta-millonaria-atletico-de-madrid-apunta-a-su-joya-del-arco-como-el-sucesor-de-jan-oblak/",
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1715/1715427/6abd31ea348bd_600_315!.jpg?s=d85b97526f5034db9f79730cd61f6dea&d=1790784388",
   "razon": "La foto B muestra al arquero Santiago Beltrán con indumentaria de arquero y de frente con mejor expresión, sin marcas ni menores.",
-  "cuando": "2026-09-30T17:02:40.115Z"
+  "cuando": "2026-09-30T17:02:40.115Z",
+  "intentado": true,
+  "borrada": true
  },
  "qsc6ig": {
   "archivo": "fotos-notas/qsc6ig.jpg",
@@ -4074,5 +4074,25 @@
   "imagenOriginal": "https://media.ambito.com/p/02e6c7385ccb2e13a517a40714c42aba/adjuntos/239/imagenes/043/630/0043630196/1200x675/smart/aysa.jpg",
   "razon": "La foto A muestra claramente el edificio y el tanque de AySA junto a la bandera argentina, sin marcas de agua agregadas ni menores de edad, lo que la hace ideal para la nota.",
   "cuando": "2026-10-01T14:08:41.956Z"
+ },
+ "1sjcoqr": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+  "razon": "La única foto disponible tiene una marca de agua superpuesta de un fotógrafo en la esquina inferior izquierda. (se probó una foto libre de \"Mateo Raimondi\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-01T14:15:44.639Z",
+  "intentos": 1
+ },
+ "3i24zc": {
+  "archivo": "fotos-notas/3i24zc.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Empresas francesas anuncian millonarias inversiones en el país",
+  "enlace": "https://www.c5n.com/politica/karina-milei-se-reunio-empresas-francesas-que-proyectan-ampliar-inversiones-argentina-n250437",
+  "imagenOriginal": "https://media.c5n.com/p/4f3e2ff7812355439cafd04cf9fecf26/adjuntos/326/imagenes/000/401/0000401333/1200x675/smart/karina-milei-paris.jpg",
+  "razon": "Es la foto más nítida, muestra claramente a todos los protagonistas del evento con buen encuadre y no tiene marcas de agua agregadas ni menores.",
+  "cuando": "2026-10-01T14:15:44.639Z"
  }
 }

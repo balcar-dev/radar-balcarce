@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T14:09:00.396Z",
+ "generado": "2026-10-01T14:16:07.734Z",
  "portada": 54,
- "archivo": 707,
+ "archivo": 708,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-01T14:09:00.428Z",
+  "generado": "2026-10-01T14:16:07.784Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,27 +116,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "1neicxo",
-      "titulo": "El Gobierno mantiene los subsidios a la luz y el gas y aplica subas tarifarias",
-      "seccion": "Economía"
-     },
      {
       "id": "m212r6",
       "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda"
      },
      {
+      "id": "1neicxo",
+      "titulo": "El Gobierno mantiene los subsidios a la luz y el gas y aplica subas tarifarias",
+      "seccion": "Economía"
+     },
+     {
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "seccion": "Deportes"
+     },
+     {
       "id": "1h3xtmz",
       "titulo": "Boca vence a River sobre el final y queda segundo en el torneo",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1ckhubg",
-      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
-      "seccion": "Deportes"
      }
     ]
    },
@@ -147,8 +147,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "dxrhun",
+      "titulo": "Franco Colapinto asume su error en Bakú y encara el Gran Premio de Malasia",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1ckhubg",
+      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
+      "seccion": "Deportes"
+     },
      {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
@@ -158,16 +168,6 @@
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1fbewyl",
-      "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
-      "seccion": "Agro"
      }
     ]
    }
@@ -186,6 +186,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "1sjcoqr",
+     "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+     "seccion": "Deportes",
+     "marcada": false
+    },
     {
      "id": "dwvi75",
      "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
