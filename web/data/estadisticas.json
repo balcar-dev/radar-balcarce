@@ -489,6 +489,53 @@
         "vistas": 81,
         "interacciones": 4
       }
+    },
+    {
+      "cuando": "2026-10-01T12:00:23.277Z",
+      "web": {
+        "u12": {
+          "visitas": 10,
+          "vistas": 18
+        },
+        "a12": {
+          "visitas": 31,
+          "vistas": 61
+        },
+        "u24": {
+          "visitas": 41,
+          "vistas": 79
+        },
+        "a24": {
+          "visitas": 100,
+          "vistas": 300
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 23
+          },
+          {
+            "camino": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0",
+            "vistas": 10
+          },
+          {
+            "camino": "/nota/bomberos-gestiona-una-unidad-de-traslado-para-capacitaciones-76r67w",
+            "vistas": 6
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 3,
+        "vistas": 631,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 47,
+        "alcance": 2,
+        "vistas": 3,
+        "interacciones": 1
+      }
     }
   ]
 }
