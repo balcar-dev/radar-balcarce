@@ -59,5 +59,19 @@ test('npm run auditar-fotos existe y la auditoría no importa nada de afuera de 
   const p = JSON.parse(fs.readFileSync(path.join(RAIZ, 'package.json'), 'utf8'));
   assert.equal(p.scripts['auditar-fotos'], 'node ingesta/auditar-fotos.mjs');
   const f = fs.readFileSync(path.join(RAIZ, 'ingesta/auditar-fotos.mjs'), 'utf8');
-  for (const m of f.matchAll(/^import .* from '([^']+)'/gm)) assert.match(m[1], /^node:/, m[1]);
+  for (const m of f.matchAll(/^import .* from '([^']+)'/gm)) assert.match(m[1], /^(node:|\.\/)/, m[1]);
+});
+
+test('la página para mirar las fotos muestra qué dijo la IA y las candidatas, y escapa lo que viene de afuera', async () => {
+  const { htmlDeAuditoria } = await import('../ingesta/auditar-fotos.mjs');
+  const html = htmlDeAuditoria([{
+    nota: { titulo: 'Nota <b>rara</b>', seccion: 'Balcarce', ruta: '/nota/x' }, motivo: 'menor',
+    entrada: { razon: 'La única foto incluye menores de edad reconocibles.' },
+    candidatas: [{ medio: 'Radio Gabal', enlace: 'https://a/b', imagen: 'https://a/foto.jpg' }, { medio: 'Otro', enlace: 'https://c', imagen: null, error: 'HTTP 404' }],
+  }], { dias: 3 });
+  assert.match(html, /Nota &lt;b&gt;rara&lt;\/b&gt;/);
+  assert.match(html, /regla firme/);
+  assert.match(html, /La IA dijo: La única foto incluye menores/);
+  assert.match(html, /<img src="https:\/\/a\/foto\.jpg"/);
+  assert.match(html, /Otro: HTTP 404/);
 });

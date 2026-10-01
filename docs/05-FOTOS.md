@@ -317,6 +317,9 @@ los tres créditos viejos de Wikimedia.
 
     npm run auditar-fotos            las notas de los últimos 3 días
     npm run auditar-fotos -- --dias=7
+    npm run auditar-fotos -- --html      además arma reels/salida/fotos-sin-foto.html
+
+Con `--html` arma una página (`reels/salida/fotos-sin-foto.html`, sólo en la PC, no se sube) con cada nota sin foto, lo que dijo la IA y las fotos que tenían sus fuentes, para ver con los ojos si la decisión fue buena. Puede mostrar menores: es para revisar, no para compartir.
 
 Lee `web/data/banco-fotos.json`, `portada.json` y `archivo.json` (`ingesta/auditar-fotos.mjs`, no gasta cupo de IA
 y no toca nada) y muestra: el porcentaje de notas con foto, por sección, y por qué no la tiene cada una de
@@ -326,3 +329,7 @@ propia, Policiales sin fuente oficial) no se tocan; los demás (falla de la IA, 
 fuente no trae imagen, no ilustra) son los que se pueden mejorar. El primer resultado (1/10): 86 % de las
 notas con foto en tres días; la causa principal de las que no, los menores reconocibles (12 de 25).
 
+
+### Groq (sondeo del 1/10)
+
+La clave gratis de Groq (`redes/sondear-groq.mjs`, workflow "Sondear Groq", a mano) ve cuatro modelos de texto: `openai/gpt-oss-120b`, `openai/gpt-oss-20b` y `qwen/qwen3.8-27b` (1.000 pedidos por día y 8.000 tokens por minuto cada uno) y `allam-2-7b` (7.000 por día, 6.000 por minuto; está pensado para árabe). **El único que acepta imágenes es `qwen/qwen3.8-27b`**: los gpt-oss rechazan las imágenes. Por eso no hay un segundo modelo de visión de respaldo en Groq, y con 8.000 tokens por minuto una comparación con varias fotos puede dar 413 o 429.

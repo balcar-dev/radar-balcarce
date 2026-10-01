@@ -2,6 +2,8 @@
 //
 //   npm run auditar-fotos            (las notas de los últimos 3 días)
 //   npm run auditar-fotos -- --dias=7
+//   npm run auditar-fotos -- --html          además arma reels/salida/fotos-sin-foto.html: cada nota sin foto con las
+//                                            fotos candidatas de sus fuentes, para ver si la decisión fue buena
 //
 // No toca nada y no gasta cupo de IA: lee web/data/banco-fotos.json (lo que se
 // decidió de cada nota), web/data/portada.json y web/data/archivo.json. Sirve
@@ -16,6 +18,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { candidatasDeNota } from './fotos.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 
@@ -122,13 +125,36 @@ export function resumenDelBanco(banco = {}) {
   return r;
 }
 
+const esc = (x) => String(x ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/**
+ * La página para mirar con los ojos (a mano, en la PC): por cada nota sin foto, qué dijo la IA y las fotos
+ * que tenían sus fuentes. `items`: [{ nota, motivo, entrada, candidatas: [{ medio, enlace, imagen, error }] }].
+ * Las fotos se muestran desde el medio de origen y nunca se guardan; la página es para revisar, no para compartir
+ * (puede haber menores en las fotos de los descartes).
+ */
+export function htmlDeAuditoria(items = [], { dias = 3 } = {}) {
+  const tarjetas = items.map(({ nota, motivo, entrada, candidatas = [] }) => `
+  <article>
+    <h2><a href="https://radarbalcarce.com${esc(nota.ruta ?? '')}">${esc(nota.titulo)}</a></h2>
+    <p class="m"><b>${esc(nota.seccion)}</b> · ${esc(MOTIVOS[motivo])}${MOTIVOS_FIRMES.has(motivo) && !/firme/.test(MOTIVOS[motivo]) ? ' (regla firme)' : ''}</p>
+    ${entrada?.razon ? `<p class="r">La IA dijo: ${esc(entrada.razon)}</p>` : ''}
+    <div class="fotos">${candidatas.length ? candidatas.map((c) => c.imagen
+    ? `<figure><a href="${esc(c.enlace)}"><img src="${esc(c.imagen)}" loading="lazy" alt=""></a><figcaption>${esc(c.medio)}</figcaption></figure>`
+    : `<figure class="sin"><figcaption>${esc(c.medio)}: ${esc(c.error ?? 'la página no declara una foto')}</figcaption></figure>`).join('') : '<p class="r">No hay fuentes con enlace para buscar fotos.</p>'}</div>
+  </article>`).join('');
+  return `<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Notas sin foto</title>
+<style>body{font:15px/1.4 system-ui,sans-serif;max-width:980px;margin:24px auto;padding:0 16px;background:#f6f5f2;color:#1c1b19}h1{font-size:22px}article{background:#fff;border:1px solid #e4e1da;padding:14px 16px;margin:14px 0;border-radius:6px}h2{font-size:17px;margin:0 0 4px}.m{margin:2px 0;color:#6b6860}.r{margin:4px 0;font-style:italic}.fotos{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}figure{margin:0;width:230px}figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block}figcaption{font-size:12px;color:#6b6860;margin-top:3px}.sin{width:230px;background:#eee;padding:8px;border-radius:4px}a{color:#1d4ed8}</style>
+<h1>Notas sin foto de los últimos ${dias} días (${items.length})</h1><p>Para revisar, no para compartir: puede haber menores en las fotos de los descartes.</p>${tarjetas}</html>`;
+}
+
 const leerJson = (f, defecto) => {
   try { return JSON.parse(fs.readFileSync(path.join(RAIZ, f), 'utf8')); } catch { return defecto; }
 };
 const barra = (pct) => '█'.repeat(Math.round(pct / 5)).padEnd(20, '░');
 const titulo = (t) => console.log(`\n\x1b[1m${t}\x1b[0m\n`);
 
-function main() {
+async function main() {
   const dias = Number((process.argv.find((a) => a.startsWith('--dias=')) ?? '--dias=3').split('=')[1]) || 3;
   const portada = leerJson('web/data/portada.json', { notas: [] }).notas ?? [];
   const archivo = leerJson('web/data/archivo.json', { notas: [] }).notas ?? [];
@@ -162,9 +188,23 @@ function main() {
     if (motivo === 'otra' && entrada?.razon) console.log(`        "${String(entrada.razon).slice(0, 110)}"`);
   }
 
+  if (process.argv.includes('--html')) {
+    const items = [];
+    for (const x of a.sinFoto) {
+      if (x.motivo === 'borrada' || x.motivo === 'policiales') continue;
+      items.push({ ...x, candidatas: await candidatasDeNota(x.nota).catch(() => []) });
+    }
+    const destino = path.join(RAIZ, 'reels', 'salida', 'fotos-sin-foto.html');
+    fs.mkdirSync(path.dirname(destino), { recursive: true });
+    fs.writeFileSync(destino, htmlDeAuditoria(items, { dias }));
+    console.log(`
+  Para mirar las fotos: ${destino}
+`);
+  }
+
   const b = resumenDelBanco(banco);
   titulo('EL BANCO ENTERO (desde que existe)');
   console.log(`  ${b.entradas} notas probadas: ${b.conFoto} con foto, ${b.borradas} con foto podada, ${b.descartadas} descartadas por la IA, ${b.fallas} por una falla (${b.agotadas} ya sin más intentos).\n`);
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) await main();
