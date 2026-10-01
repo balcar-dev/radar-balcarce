@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T23:02:02.495Z",
+ "generado": "2026-10-01T23:20:42.887Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,6 +13,11 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/01/irene-feingold-clasifico-al-torneo-nacional/",
      "fecha": "2026-10-01T11:54:27.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/irene-feingold-clasifico-al-torneo-nacional-de-gimnasia-artistica/",
+     "fecha": "2026-10-01T12:11:45.000Z"
     },
     {
      "medio": "Infórmese Primero (FM 104.9)",
@@ -124,6 +129,23 @@
     }
    ],
    "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "1772fhd",
+   "titulo": "El Municipio explicó por qué intervino ante la venta de alfajores en la vía pública",
+   "copete": "",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T23:01:24.163Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/el-municipio-explico-por-que-intervino-ante-la-venta-de-alfajores-en-la-via-publica-837",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 3
   },

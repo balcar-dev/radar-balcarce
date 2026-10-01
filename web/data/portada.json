@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T23:02:02.495Z",
+  "generado": "2026-10-01T23:20:42.887Z",
   "notas": [
     {
       "id": "12mca8c",
@@ -12,11 +12,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44970-paro-docente-en-balcarce-la-adhesion-llego-al-84-en-los-turnos-manana-y-tarde/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T23:01:24.163Z",
       "sinFecha": true,
       "visto": "2026-10-01T23:01:24.163Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -64,68 +64,6 @@
       }
     },
     {
-      "id": "1772fhd",
-      "titulo": "Inspección General detalla el operativo por venta ambulante",
-      "copete": "El área de Inspección General explicó la intervención realizada ante un joven que ofrecía alfajores en la vía pública. El funcionario a cargo señaló que el procedimiento respondió a reclamos comerciales.",
-      "cuerpo": "El responsable de Inspección General, Mauricio Aguilar, explicó el procedimiento realizado ante un joven de 21 años que ofrecía alfajores de maicena en la avenida Primera Junta y avenida San Martín. El funcionario indicó que la intervención se originó a partir de reclamos de comerciantes locales sobre cuestiones sanitarias y bromatológicas.\n\nEl caso se viralizó luego de que el vendedor denunciara en redes sociales que personal comunal le había prohibido continuar con la actividad en la vía pública. Aguilar aclaró que no se labró ningún acta ni infracción y que sólo se trató de una comunicación verbal.\n\nDesde el área municipal señalaron que los interesados en comercializar productos alimenticios pueden iniciar el trámite para obtener una Pequeña Unidad Productiva Alimenticia. El funcionario indicó que el asesoramiento es gratuito y permite ofrecer la mercadería en comercios locales.",
-      "guion": "Inspección General detalla el operativo por venta ambulante",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-municipio-explico-por-que-intervino-ante-la-venta-de-alfajores-en-la-via-publica-837",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T22:31:16.582Z",
-      "sinFecha": true,
-      "visto": "2026-10-01T23:01:24.163Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El municipio intervino tras denuncias de comerciantes locales.",
-        "No se labraron actas ni infracciones al joven vendedor.",
-        "El área ofrece asesoramiento gratuito para habilitar Pequeñas Unidades Productivas Alimenticias."
-      ],
-      "seSabe": [
-        "El procedimiento municipal se originó por una denuncia de comerciantes, según el responsable de Inspección General, Mauricio Aguilar.",
-        "No se confeccionó ninguna infracción ni acta al vendedor, de acuerdo con el funcionario.",
-        "El municipio ofrece el trámite de Pequeña Unidad Productiva Alimenticia para comercializar alimentos."
-      ],
-      "noConfirmado": [
-        "No se especificó la fecha exacta en la que ocurrió el episodio en la vía pública.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Inspección General informó que el operativo ante un joven que vendía alfajores en la vía pública respondió a reclamos de comerciantes y aclaró que no se labraron infracciones.",
-      "etiquetas": [
-        "Inspeccion General",
-        "venta ambulante",
-        "alimentos",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-municipio-explico-por-que-intervino-ante-la-venta-de-alfajores-en-la-via-publica-837",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló las razones de la intervención municipal ante la venta ambulante de alfajores."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "inspeccion-general-detalla-el-operativo-por-venta-ambulante",
-      "foto": {
-        "archivo": "fotos-notas/1772fhd.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "kemwz0",
       "titulo": "Publican el tráiler del documental sobre Carlos Bilardo en el Sevilla",
       "copete": "Dieron a conocer el avance de la película sobre la etapa del entrenador argentino en el fútbol español durante la temporada 1992-1993. El proyecto se basa en un libro del periodista Roberto Arrocha y ya comenzó su rodaje.",
@@ -133,8 +71,8 @@
       "guion": "Publican el tráiler del documental sobre Carlos Bilardo en el Sevilla",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Infobae",
         "Clarín",
+        "Infobae",
         "El Día"
       ],
       "enlace": "https://www.clarin.com/deportes/conocio-trailer-pelicula-documental-paso-carlos-bilardo-sevilla-comienzos-decada-90_0_tjCErOixQY.html",
@@ -142,7 +80,7 @@
       "fecha": "2026-10-01T20:03:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T22:01:24.337Z",
-      "relevancia": 78,
+      "relevancia": 68,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -193,88 +131,6 @@
       "foto": {
         "archivo": "fotos-notas/kemwz0.jpg",
         "credito": "Foto: Clarín"
-      }
-    },
-    {
-      "id": "16vloik",
-      "titulo": "La desigualdad de ingresos baja pero el sector más rico gana trece veces más",
-      "copete": "El Indec informó que la disparidad en los sueldos se redujo frente al inicio del año. Sin embargo, el sector de mayores recursos superó ampliamente al de menores ingresos durante el segundo trimestre.",
-      "cuerpo": "La disparidad en el reparto de fondos mostró una baja entre abril y junio en comparación con los tres primeros meses del año, según informó el Instituto Nacional de Estadística y Censos. El coeficiente de Gini alcanzó 0,428, lo que representa una disminución frente al 0,442 previo, aunque superó el registro del mismo período del año pasado.\n\nEl relevamiento oficial indicó que el sector de la población con entradas más altas percibe trece veces mós dinero que el grupo con recursos más bajos.",
-      "guion": "La desigualdad de ingresos baja pero el sector más rico gana trece veces más",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/01/la-desigualdad-bajo-en-el-segundo-trimestre-pero-el-10-mas-rico-gana-13-veces-mas-que-el-sector-con-menos-recursos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T20:03:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T22:01:24.337Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Indec ubicó el coeficiente de Gini en 0,428 durante el segundo trimestre.",
-        "La disparidad disminuyó frente al arranque del año pero superó el nivel interanual.",
-        "El sector más rico percibe trece veces más que el grupo de menores recursos."
-      ],
-      "seSabe": [
-        "El coeficiente de Gini se situó en 0,428 según el informe oficial del Indec.",
-        "El sector más alto de la escala gana trece veces más que el segmento con menores recursos.",
-        "El ingreso per cápita familiar promedio alcanzó 688.496 pesos en el período."
-      ],
-      "textoRedes": "El Indec informó que la disparidad en los ingresos bajó durante el segundo trimestre pero el sector más rico gana trece veces más que el grupo con menos recursos.",
-      "etiquetas": [
-        "Indec",
-        "desigualdad",
-        "ingresos",
-        "poblacion"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/01/la-desigualdad-bajo-en-el-segundo-trimestre-pero-el-10-mas-rico-gana-13-veces-mas-que-el-sector-con-menos-recursos/",
-          "fecha": "2026-10-01T20:03:37.000Z",
-          "oficial": false,
-          "aporte": "Aportó las cifras principales del informe del Indec sobre distribución de ingresos."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/la-desigualdad-tuvo-una-leve-baja-pero-el-10--mas-rico-gana-13-veces-mas-que-el-mas-pobre_a6abebd4c8419983d426361f3",
-          "fecha": "2026-10-01T21:03:44.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el indicador se conoció tras la difusión de la suba de la pobreza."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-1-17-16-0-la-otra-grieta-el-10-mas-rico-de-la-poblacion-gana-13-veces-mas-que-el-de-menos-recursos",
-          "fecha": "2026-10-01T21:58:38.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la concentracion de recursos retrocedió frente al inicio del año."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "kbhdgj",
-          "titulo": "El INDEC informa un incremento en la desigualdad durante el segundo trimestre",
-          "fecha": "2026-10-01T19:31:00.000Z",
-          "ruta": "/nota/el-indec-informa-un-incremento-en-la-desigualdad-durante-el-segundo-kbhdgj"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-desigualdad-de-ingresos-baja-pero-el-sector-mas-rico-gana-trece",
-      "foto": {
-        "archivo": "fotos-notas/16vloik.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -506,6 +362,86 @@
       }
     },
     {
+      "id": "1ooelqh",
+      "titulo": "CAF aprueba créditos por 305 millones de dólares para subte y ruta",
+      "copete": "El banco de desarrollo aprobó dos préstamos destinados a financiar obras de modernización en la red subterránea porteña y la transformación de la Ruta 40 en San Juan.",
+      "cuerpo": "El banco de desarrollo de América Latina y el Caribe aprobó dos préstamos por un total de 305 millones de dólares destinados a obras de infraestructura en Buenos Aires y San Juan.\n\nEl financiamiento incluye 145 millones de dólares para la primera etapa de modernización de la Línea B de subterráneos, que contempla la adquisición de 29 formaciones nuevas y mejoras eléctricas con garantía de la Nación. Otros 160 millones de dólares se asignan al Programa de Conectividad para la Integración Regional en San Juan para convertir 50 kilómetros de la Ruta 40 en una autopista de doble calzada.",
+      "guion": "La CAF aprueba créditos por 305 millones de dólares para subte y ruta.",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "El Cronista",
+        "Perfil",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/01/la-caf-aprobo-creditos-por-usd-305-millones-para-la-linea-b-de-subte-y-la-ruta-40-en-san-juan/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T18:50:28.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T23:20:15.003Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La CAF aprobó préstamos por 305 millones de dólares el 1 de octubre de 2026.",
+        "Destinan 145 millones para modernizar la Línea B del subte en Buenos Aires.",
+        "Otorgan 160 millones para transformar 50 kilómetros de la Ruta 40 en San Juan."
+      ],
+      "seSabe": [
+        "El directorio de la CAF aprobó dos préstamos por USD 305 millones el 1 de octubre de 2026.",
+        "El crédito para Buenos Aires asciende a USD 145 millones con garantía de la Nación.",
+        "El financiamiento para San Juan es de USD 160 millones para infraestructura vial en la Ruta 40."
+      ],
+      "textoRedes": "La CAF aprobó préstamos por 305 millones de dólares para modernizar la Línea B de subte en Buenos Aires y transformar tramos de la Ruta 40 en San Juan en autopista.",
+      "etiquetas": [
+        "CAF",
+        "subte",
+        "Ruta 40",
+        "San Juan",
+        "Buenos Aires",
+        "créditos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/01/la-caf-aprobo-creditos-por-usd-305-millones-para-la-linea-b-de-subte-y-la-ruta-40-en-san-juan/",
+          "fecha": "2026-10-01T18:50:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló los montos totales, los objetivos de las obras en la Línea B y la Ruta 40, y las proyecciones de empleo y reducción de tiempos."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/credito-aprobado-para-la-linea-b-el-plan-para-reemplazar-trenes-y-aumentar-capacidad/",
+          "fecha": "2026-10-01T19:34:49.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el crédito de USD 145 millones para la Ciudad de Buenos Aires con garantía de la Nación para la Línea B."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/caf-aprobo-un-credito-por-us-145-millones-para-mejorar-la-linea-b-de-subte-a40.phtml",
+          "fecha": "2026-10-01T22:40:36.000Z",
+          "oficial": false,
+          "aporte": "Aportó la información sobre la conversión de 50 kilómetros de la Ruta 40 en San Juan."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/la-caf-aprobo-us-145-millones-para-modernizar-la-linea-b-del-subte_a6abed37d8419983d4266feff",
+          "fecha": "2026-10-01T21:52:31.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación del directorio de la CAF para el proyecto de la Línea B porteña."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "caf-aprueba-creditos-por-305-millones-de-dolares-para-subte-y-ruta"
+    },
+    {
       "id": "repaso20261001tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: Lionel Messi y acompañantes terapéuticos",
@@ -568,7 +504,11 @@
           "externo": true
         }
       ],
-      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-lionel-messi-y-acompanantes"
+      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-lionel-messi-y-acompanantes",
+      "foto": {
+        "archivo": "fotos-notas/collage-repaso20261001tarde.jpg",
+        "credito": "Fotos: TN (Todo Noticias), Acción 5 (Balcarce) y Municipalidad de Balcarce"
+      }
     },
     {
       "id": "15c2xr1",
@@ -1007,15 +947,17 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T17:31:17.133Z",
       "sinFecha": true,
       "visto": "2026-10-01T17:31:17.133Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "rutas"
+      ],
       "como": "automatica",
       "claves": [
         "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
@@ -1191,72 +1133,6 @@
       }
     },
     {
-      "id": "swyxjn",
-      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
-      "copete": "Nahuel González Salvo y el dúo Bajo Fondo se presentan el domingo en la Casa del Bicentenario con entrada libre y gratuita. Habrá un buffet solidario a beneficio de Protección a la Infancia.",
-      "cuerpo": "La Casa del Bicentenario será escenario de un encuentro musical el próximo domingo desde las 19.30. La propuesta combina canciones, rock nacional, tango, folklore y textos, con la participación de Nahuel González Salvo y el dúo Bajo Fondo.\n\nLa actividad cuenta con la organización de la Subsecretaría de Cultura y Educación en la sede situada sobre la avenida Favaloro 785. El acceso será libre y gratuito para toda la comunidad.\n\nDurante el desarrollo del evento funcionará un buffet cuyos fondos recaudados se destinarán a la institución Protección a la Infancia.",
-      "guion": "La Casa del Bicentenario recibe un concierto benéfico",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T17:01:14.036Z",
-      "sinFecha": true,
-      "visto": "2026-10-01T17:01:14.036Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Concierto de Nahuel González Salvo y Bajo Fondo el domingo a las 19.30.",
-        "Organiza la Subsecretaría de Cultura y Educación en avenida Favaloro 785.",
-        "Buffet a beneficio de Protección a la Infancia.",
-        "Entrada libre y gratuita."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Este domingo desde las 19.30 la Casa del Bicentenario ofrece un concierto solidario con Nahuel González Salvo y Bajo Fondo. La entrada es libre y gratuita y habrá un buffet a beneficio de Protección a la Infancia.",
-      "etiquetas": [
-        "concierto",
-        "solidaridad",
-        "Casa del Bicentenario",
-        "Protección a la Infancia",
-        "Cultura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la programación musical, los artistas participantes, el horario, el lugar y el fin solidario del evento."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "119oqdp",
-          "titulo": "La Sociedad de Protección a la Infancia realiza Voces por la Infancia",
-          "fecha": "2026-09-27T18:30:42.064Z",
-          "ruta": "/nota/la-sociedad-de-proteccion-a-la-infancia-realiza-voces-por-la-infancia-119oqdp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-casa-del-bicentenario-recibe-un-concierto-benefico",
-      "foto": {
-        "archivo": "fotos-notas/swyxjn.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
       "id": "34t457",
       "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
       "copete": "El indicador financiero sube un 4,3% y alcanza las 633 unidades. Las acciones argentinas registran pérdidas de hasta el 6% en el mercado externo.",
@@ -1268,6 +1144,7 @@
         "Perfil",
         "TN (Todo Noticias)",
         "A24",
+        "Crónica",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -1366,11 +1243,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44966-el-drama-de-ticiano-le-prohibieron-vender-alfajores-en-la-calle-y-ahora-suena-con-conseguir-un-trabajo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T16:31:02.291Z",
       "sinFecha": true,
       "visto": "2026-10-01T16:31:02.291Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1416,6 +1293,88 @@
       "foto": {
         "archivo": "fotos-notas/jzu6k.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "copete": "La Cooperativa de Electricidad de Balcarce realiza el viernes un corte en el servicio eléctrico por tareas técnicas. La interrupción abarca distintas cuadras del centro.",
+      "cuerpo": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico el viernes 2 de octubre en el horario de 7:30 a 9:00, según informó el área de Redes. La medida responde a tareas de mantenimiento en líneas de baja tensión.\n\nLa interrupción afecta a los usuarios ubicados sobre la calle 16 entre las calles 19 y 21, en ambas veredas, y en la calle 19 desde la avenida Kelly hasta la calle 16.",
+      "guion": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T16:05:14.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T18:31:03.487Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Corte de luz programado para este viernes",
+        "El servicio se interrumpe de 7:30 a 9:00",
+        "Afecta a la calle 16 y la calle 19"
+      ],
+      "seSabe": [
+        "El corte de luz es este viernes de 7:30 a 9:00, según la Cooperativa de Electricidad.",
+        "Las tareas se realizan en líneas de baja tensión.",
+        "El área afectada comprende la calle 16 entre 19 y 21, y la calle 19 desde avenida Kelly hasta calle 16."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico este viernes de 7:30 a 9:00 por tareas en líneas de baja tensión. La interrupción afecta a las calles 16 y 19.",
+      "etiquetas": [
+        "corte de luz",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "servicios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
+          "fecha": "2026-10-01T16:05:14.000Z",
+          "oficial": false,
+          "aporte": "Informó el horario del corte y las calles afectadas."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
+          "fecha": "2026-10-01T17:24:47.272Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha exacta del viernes 2 de octubre."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-corte-del-servicio-electrico-este-viernes-en-un-sector-de-la-ciudad",
+          "fecha": "2026-10-01T16:15:15.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el motivo son trabajos en líneas de baja tensión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1oji07d",
+          "titulo": "Se anuncia corte de energía para este viernes",
+          "fecha": "2026-09-17T20:27:01.000Z",
+          "ruta": "/nota/se-anuncia-corte-de-energia-para-este-viernes-1oji07d"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-cooperativa-de-electricidad-corta-el-suministro-el-viernes",
+      "foto": {
+        "archivo": "fotos-notas/alddw5.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2027,6 +1986,91 @@
       }
     },
     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "copete": "Un móvil del Registro Nacional de las Personas llega a la ciudad para realizar trámites. El operativo incluye jornadas gratuitas en el Concejo Deliberante y en la Sociedad Rural.",
+      "cuerpo": "El Registro Nacional de las Personas despliega un operativo documentario en Balcarce con un vehículo equipado. La primera atención se realiza el jueves 8 de octubre, de 10 a 15, en el recinto del Honorable Concejo Deliberante, donde los vecinos pueden gestionar el DNI sin costo.\n\nEl servicio continúa el viernes 9 y el sábado 10 de octubre en el predio ferial de la Sociedad Rural, situado en la intersección de la Ruta 55 y la calle 79, en coincidencia con la Fiesta Nacional del Postre. En esas dos jornadas se tramitan tanto documentos de identidad de forma gratuita como pasaportes que requieren el pago de un arancel.",
+      "guion": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-01T14:33:59.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T15:23:10.187Z",
+      "relevancia": 74,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Llega a Balcarce un móvil documentario del RENAPER.",
+        "El jueves 8 de octubre atiende gratis en el Concejo.",
+        "El viernes 9 y sábado 10 funciona en la Sociedad Rural.",
+        "Los pasaportes tienen costo y el DNI es gratuito."
+      ],
+      "seSabe": [
+        "El móvil del RENAPER atiende en el Concejo Deliberante el jueves 8 de octubre de 10 a 15 horas.",
+        "Los trámites de DNI en el Concejo son gratuitos.",
+        "El operativo sigue el viernes 9 y el sábado 10 de octubre en la Sociedad Rural durante la Fiesta Nacional del Postre.",
+        "En la Sociedad Rural se pueden gestionar DNI gratis y pasaportes pagos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un móvil del RENAPER llega a Balcarce para realizar trámites de DNI y pasaporte. Habrá atención gratuita en el Concejo Deliberante y en la Sociedad Rural durante la Fiesta Nacional del Postre.",
+      "etiquetas": [
+        "RENAPER",
+        "Balcarce",
+        "DNI",
+        "Fiesta Nacional del Postre",
+        "Sociedad Rural",
+        "Concejo Deliberante"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
+          "fecha": "2026-10-01T14:33:59.000Z",
+          "oficial": false,
+          "aporte": "Informó el cronograma, los horarios y las ubicaciones del móvil del RENAPER en Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1yu9ytn",
+          "titulo": "El oficialismo defiende su rechazo a convocar a Virginia Aparicio en comisión",
+          "fecha": "2026-09-30T20:53:48.000Z",
+          "ruta": "/nota/el-oficialismo-defiende-su-rechazo-a-convocar-a-virginia-aparicio-en-1yu9ytn"
+        },
+        {
+          "id": "1xzookf",
+          "titulo": "Fernando Gray anuncia exención impositiva total para jubilados",
+          "fecha": "2026-09-29T15:47:00.000Z",
+          "ruta": "/nota/fernando-gray-anuncia-exencion-impositiva-total-para-jubilados-1xzookf"
+        },
+        {
+          "id": "8zhfqv",
+          "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
+          "fecha": "2026-09-29T14:01:11.480Z",
+          "ruta": "/nota/el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria-8zhfqv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-renaper-instala-un-movil-en-balcarce-para-tramitar-dni",
+      "foto": {
+        "archivo": "fotos-notas/1dbyjp1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "1uw5a9s",
       "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
       "copete": "El vicepresidente estadounidense JD Vance viajará al país en noviembre para mantener un encuentro con el presidente Javier Milei. Será la primera visita de un funcionario de ese rango en casi una década.",
@@ -2372,6 +2416,65 @@
       }
     },
     {
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "copete": "El deportista local jugará el Campeonato Argentino de Selecciones Mayores Ascenso B. La competencia nacional se desarrollará en Mendoza del 15 al 18 de octubre.",
+      "cuerpo": "El jugador Mateo Raimondi fue convocado para integrar el plantel del seleccionado de la Asociación Amateur Marplatense de Hockey en el Campeonato Argentino de Selecciones Mayores Ascenso B. El certamen se disputará del 15 al 18 de octubre en la ciudad mendocina de San Rafael, bajo la organización de la Confederación Argentina de Hockey.\n\nRaimondi se desempeña como volante por la izquierda en el plantel superior de MDQ 06 Hockey Club y forma parte de la lista de veinte deportistas elegidos. El conjunto regional buscará obtener el ascenso directo a la Zona A durante la competencia.",
+      "guion": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "seccion": "Deportes",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/mateo-raimondi-fue-convocado-para-disputar-el-campeonato-argentino-de-selecciones/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-01T14:00:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T14:11:16.401Z",
+      "relevancia": 74,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Mateo Raimondi fue convocado al seleccionado marplatense",
+        "El torneo se jugará en San Rafael del 15 al 18 de octubre",
+        "El equipo busca el ascenso a la Zona A",
+        "El deportista se desempeña como volante en MDQ 06"
+      ],
+      "seSabe": [
+        "Mateo Raimondi integra la lista de veinte convocados de la Asociación Amateur Marplatense de Hockey",
+        "El torneo se jugará del 15 al 18 de octubre en San Rafael, Mendoza",
+        "El seleccionado busca el ascenso directo a la Zona A"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El deportista Mateo Raimondi fue convocado para disputar el Campeonato Argentino de Selecciones Mayores Ascenso B con el equipo marplatense. El torneo se jugará del 15 al 18 de octubre en San Rafael, Mendoza.",
+      "etiquetas": [
+        "Mateo Raimondi",
+        "hockey",
+        "Campeonato Argentino",
+        "MDQ 06",
+        "San Rafael"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/mateo-raimondi-fue-convocado-para-disputar-el-campeonato-argentino-de-selecciones/",
+          "fecha": "2026-10-01T14:00:12.000Z",
+          "oficial": false,
+          "aporte": "Informó la convocatoria de Mateo Raimondi al seleccionado de hockey y los detalles del torneo nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "mateo-raimondi-integra-el-seleccionado-marplatense-de-hockey"
+    },
+    {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "copete": "La segunda edición de la competencia atlética homenaje al profesor Luis Vildoza se hará el domingo 1 de noviembre. Habrá pruebas de 10 y 5 kilómetros con participación libre y gratuita.",
@@ -2509,7 +2612,11 @@
           "externo": true
         }
       ],
-      "slug": "el-repaso-de-la-manana-en-radar-balcarce-el-hospital-y-fiesta"
+      "slug": "el-repaso-de-la-manana-en-radar-balcarce-el-hospital-y-fiesta",
+      "foto": {
+        "archivo": "fotos-notas/collage-repaso20261001manana.jpg",
+        "credito": "Fotos: Municipalidad de Balcarce, TyC Sports y Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "dwvi75",
@@ -2583,6 +2690,7 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -3019,15 +3127,17 @@
       "guion": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/01/bajo-fondo-y-nahuel-gonzalez-salvo-el-domingo-en-cultura/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T11:48:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 84,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3146,6 +3256,7 @@
       "medios": [
         "Olé",
         "Clarín",
+        "0223 (Mar del Plata)",
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
@@ -3285,6 +3396,7 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -3369,7 +3481,7 @@
       "fecha": "2026-10-01T11:07:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T14:01:13.404Z",
-      "relevancia": 79,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3557,6 +3669,125 @@
       "foto": {
         "archivo": "fotos-notas/1jiov2o.jpg",
         "credito": "Foto: El Eco de Tandil"
+      }
+    },
+    {
+      "id": "1vurlc1",
+      "titulo": "TotalEnergies presenta millonarios proyectos de energía en la Argentina",
+      "copete": "La compañía francesa impulsa planes por unos 10.000 millones de dólares para expandir la extracción de gas y petróleo en Neuquén y Tierra del Fuego.",
+      "cuerpo": "El anuncio estuvo a cargo del presidente y CEO de la firma, Patrick Pouyanné, durante el evento Argentina Week en París. Las iniciativas contemplan desarrollos en Neuquén y un nuevo yacimiento costa afuera en Tierra del Fuego bautizado Alberdi, con una asignación de US$1.500 millones. En territorio neuquino prevén extender la extracción gasífera en Aguada Pichana y explotar crudo en San Roque, un plan estimado en unos US$5.000 millones. Pouyanné vinculó las decisiones empresariales con las reformas oficiales, el Régimen de Incentivo para Grandes Inversiones y la autorización para girar dividendos al exterior.",
+      "guion": "TotalEnergies presenta millonarios proyectos de energía en la Argentina",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Ámbito",
+        "Perfil",
+        "El Cronista",
+        "C5N",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "Infobrisas (Radio Brisas)",
+        "Agroempresario",
+        "El Economista",
+        "Clarín"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/totalenergies-anuncio-proyectos-por-cerca-de-us-10-000-millones-en-la-argentina_a6abe3b418419983d4250d965",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T10:55:58.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T12:31:19.544Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "TotalEnergies anuncia inversiones por unos US$10.000 millones",
+        "Los planes abarcan yacimientos en Neuquén y Tierra del Fuego",
+        "La compañía destaca las reformas y el RIGI para definir los desembolsos"
+      ],
+      "seSabe": [
+        "TotalEnergies anunció proyectos por cerca de US$10.000 millones para gas y petróleo.",
+        "El presidente de la firma se reunió con Javier Milei en París durante el Argentina Week.",
+        "El proyecto costa afuera en Tierra del Fuego se llamará Alberdi e implicará US$1.500 millones."
+      ],
+      "etiquetas": [
+        "TotalEnergies",
+        "Vaca Muerta",
+        "Tierra del Fuego",
+        "Neuquén",
+        "gas",
+        "petróleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/totalenergies-anuncio-proyectos-por-cerca-de-us-10-000-millones-en-la-argentina_a6abe3b418419983d4250d965",
+          "fecha": "2026-10-01T10:55:58.000Z",
+          "oficial": false,
+          "aporte": "Detalló los montos, los proyectos específicos en Tierra del Fuego y Neuquén y la reunión con el Presidente."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/01/la-francesa-totalenergies-anuncio-inversiones-en-argentina-por-cerca-de-usd-10000-millones/",
+          "fecha": "2026-10-01T12:02:26.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presentación de la cartera de proyectos por cerca de US$ 10.000 millones."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/energia/totalenergies-anuncio-inversiones-casi-us10000-millones-y-su-ceo-destaco-poder-girar-dividendos-argentina-n6328790",
+          "fecha": "2026-10-01T11:58:00.000Z",
+          "oficial": false,
+          "aporte": "Vinculó los planes con las reformas del gobierno de Javier Milei."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/energia-y-mineria/totalenergies-anuncio-argentina-week-inversiones-us10000-millones-aplicara-rigi_0_BgsPocL2HY.html",
+          "fecha": "2026-10-01T11:24:37.000Z",
+          "oficial": false,
+          "aporte": "Indicó que se trata de tres proyectos distintos que se presentarán al RIGI."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/totalenergies-prepara-inversiones-millonarias-argentina-proyecta-nuevos-desarrollos-vaca-muerta-tierra-del-fuego-a40.phtml",
+          "fecha": "2026-10-01T11:39:53.000Z",
+          "oficial": false,
+          "aporte": "Destacó el RIGI y la posibilidad de girar dividendos al exterior."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/negocios/totalenergies-anuncio-inversiones-por-us-10000-millones-en-gas-y-petroleo-milei-eligio-el-nombre-de-uno-de-los-proyectos/",
+          "fecha": "2026-10-01T11:30:01.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que el anuncio se realizó en el Argentina Week de París."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/argentina-week-una-empresa-francesa-anuncio-inversiones-us10-mil-millones-n250427",
+          "fecha": "2026-10-01T12:05:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló la llegada de Javier Milei a Francia para encabezar el encuentro."
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/01/109815-totalenergies-anuncio-inversiones-por-us10000-millones",
+          "fecha": "2026-10-01T11:50:28.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 8 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "totalenergies-presenta-millonarios-proyectos-de-energia-en-la",
+      "foto": {
+        "archivo": "fotos-notas/1vurlc1.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -3848,7 +4079,7 @@
       "fecha": "2026-10-01T03:35:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T13:01:13.065Z",
-      "relevancia": 79,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4008,7 +4239,11 @@
           "externo": true
         }
       ],
-      "slug": "el-repaso-de-la-noche-en-radar-balcarce-municipalidad-padel-y-joan"
+      "slug": "el-repaso-de-la-noche-en-radar-balcarce-municipalidad-padel-y-joan",
+      "foto": {
+        "archivo": "fotos-notas/collage-repaso20260930noche.jpg",
+        "credito": "Fotos: Municipalidad de Balcarce y TN (Todo Noticias)"
+      }
     },
     {
       "id": "k6d4hv",
@@ -4090,7 +4325,7 @@
       "fecha": "2026-09-30T23:09:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T00:01:11.911Z",
-      "relevancia": 71,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4377,7 +4612,7 @@
       "fecha": "2026-09-30T22:26:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T00:31:14.348Z",
-      "relevancia": 90,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4519,95 +4754,6 @@
       "foto": {
         "archivo": "fotos-notas/17z7wso.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "u8j0ja",
-      "titulo": "La agencia DIB renueva autoridades y suma un estudio para podcast",
-      "copete": "La agencia de noticias Diarios Bonaerenses renovó su conducción en una asamblea realizada en La Plata. Gonzalo Julián Irazoqui seguirá al frente de la presidencia.",
-      "cuerpo": "Tras el cónclave, los nuevos referentes recorrieron las oficinas remodeladas en la capital bonaerense, donde inauguraron un estudio para grabar podcast con proyección de visitas de figuras provinciales. Además, repasaron el balance anual y recordaron la distinción con un premio Martín Fierro a los medios web en la categoría de mejor sitio de investigación.\n\nLa entidad informativa cuenta con más de tres décadas de trayectoria desde su fundación en 1993, creada para abastecer de contenido propio a los medios de la provincia.",
-      "guion": "La agencia DIB renueva autoridades y suma un estudio para podcast",
-      "seccion": "Argentina",
-      "medios": [
-        "LU9 Mar del Plata",
-        "Agencia DIB",
-        "La Verdad",
-        "NDEN – Noticias de Necochea",
-        "Ecos Diarios (Necochea)",
-        "La Voz del Pueblo",
-        "La Nueva"
-      ],
-      "enlace": "https://dib.com.ar/sociedad/la-agencia-dib-renovo-sus-autoridades-n56148",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T21:05:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T23:01:06.136Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La agencia Diarios Bonaerenses renovó su conducción en La Plata.",
-        "Gonzalo Julián Irazoqui continuará en la presidencia.",
-        "Ramona Maciel asumió como vicepresidenta de la entidad.",
-        "Inauguraron un estudio para podcast en las oficinas remodeladas."
-      ],
-      "seSabe": [
-        "La asamblea de renovación de autoridades se realizó en La Plata.",
-        "Gonzalo Julián Irazoqui sigue como presidente de la agencia.",
-        "Ramona Maciel quedó designada como vicepresidenta.",
-        "Fernando Curas y Enrique Iommi asumieron como directores.",
-        "La agencia inauguró un estudio para grabar podcast en sus oficinas."
-      ],
-      "textoRedes": "La agencia de noticias Diarios Bonaerenses renovó su conducción en una asamblea en La Plata y ratificó a Gonzalo Julián Irazoqui en la presidencia.",
-      "etiquetas": [
-        "Agencia DIB",
-        "La Plata",
-        "autoridades",
-        "periodismo",
-        "provincia de Buenos Aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/la-agencia-dib-renovo-sus-autoridades-n56148",
-          "fecha": "2026-09-30T21:05:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló la renovación de autoridades, los cargos directivos y la inauguración del estudio para podcast."
-        },
-        {
-          "medio": "LU9 Mar del Plata",
-          "enlace": "https://www.lu9mardelplata.com.ar/la-agencia-dib-renovo-sus-autoridades",
-          "fecha": "2026-09-30T22:43:07.000Z",
-          "oficial": false,
-          "aporte": "Informó la asamblea de renovación de autoridades en La Plata."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/la-agencia-dib-renovo-sus-autoridades",
-          "fecha": "2026-09-30T22:12:45.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la continuidad de Gonzalo Julián Irazoqui en la presidencia."
-        },
-        {
-          "medio": "La Voz del Pueblo",
-          "enlace": "https://lavozdelpueblo.com.ar/la-agencia-dib-renovo-sus-autoridades",
-          "fecha": "2026-09-30T22:42:57.000Z",
-          "oficial": false,
-          "aporte": "Precisó la designación de Ramona Maciel como vicepresidenta."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-agencia-dib-renueva-autoridades-y-suma-un-estudio-para-podcast",
-      "foto": {
-        "archivo": "fotos-notas/u8j0ja.jpg",
-        "credito": "Foto: Agencia DIB"
       }
     },
     {
@@ -4813,7 +4959,11 @@
           "externo": true
         }
       ],
-      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y"
+      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y",
+      "foto": {
+        "archivo": "fotos-notas/collage-repaso20260930tarde.jpg",
+        "credito": "Fotos: Wikimedia Commons, Minuto Uno y Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "1gv3zir",
@@ -5354,7 +5504,11 @@
           "externo": true
         }
       ],
-      "slug": "el-repaso-de-la-manana-en-radar-balcarce-caminos-rurales-fernando"
+      "slug": "el-repaso-de-la-manana-en-radar-balcarce-caminos-rurales-fernando",
+      "foto": {
+        "archivo": "fotos-notas/jul3w9.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
     },
     {
       "id": "y9vwef",
@@ -5473,8 +5627,8 @@
   "secciones": [
     "Balcarce",
     "Cultura y agenda",
-    "Economía",
     "Deportes",
+    "Economía",
     "Política",
     "Fútbol",
     "Tecnología",
@@ -5494,6 +5648,11 @@
       "cuantas": 3
     },
     {
+      "nombre": "Las rutas",
+      "ranura": "rutas",
+      "cuantas": 2
+    },
+    {
       "nombre": "Fangio",
       "ranura": "fangio",
       "cuantas": 2
@@ -5503,7 +5662,7 @@
     "ahora": {
       "temp": 7,
       "sensacion": 3,
-      "humedad": 76,
+      "humedad": 77,
       "viento": 14,
       "rumbo": "SO",
       "cielo": "Mayormente despejado",
@@ -5854,6 +6013,12 @@
   },
   "pendientes": [
     {
+      "id": "uh3pmu",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "1kl2omw",
       "titulo": "\"Mi nombre condenado socialmente\", la reflexión de Nito…",
       "seccion": "Balcarce",
@@ -5870,12 +6035,6 @@
       "titulo": "\"No tenemos ningún conflicto con nadie\", aseguró Carli…",
       "seccion": "Automovilismo",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1i1430m",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "1vy0a0a",
@@ -5920,6 +6079,12 @@
       "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
+      "id": "1y6p08i",
+      "titulo": "Un vuelo a Israel aterrizó de emergencia en Arabia: un…",
+      "seccion": "Automovilismo",
+      "motivo": "necesita ojo humano: \"apuñalado\""
+    },
+    {
       "id": "1j0dp81",
       "titulo": null,
       "seccion": "Argentina",
@@ -5930,12 +6095,6 @@
       "titulo": "La Justicia desestimó una denuncia por discursos de odio…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1y7q2x8",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Economía",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "11mi9eu",
@@ -5956,6 +6115,12 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "1y7q2x8",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Economía",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "1bk6bvf",
       "titulo": null,
       "seccion": "Tecnología",
@@ -5972,7 +6137,13 @@
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "1dolyhk",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 9
 }
