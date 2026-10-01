@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T05:02:03.746Z",
- "portada": 56,
+ "generado": "2026-10-01T05:31:16.904Z",
+ "portada": 59,
  "archivo": 690,
- "esperandoCuerpo": 5,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-01T05:02:03.773Z",
+  "generado": "2026-10-01T05:31:16.929Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,12 +85,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes"
+     },
+     {
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "seccion": "Balcarce"
      },
      {
       "id": "18xuulv",
@@ -101,11 +106,6 @@
       "id": "1a2z04a",
       "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "11di7ig",
-      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,27 +116,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
+     },
      {
       "id": "2uqvxt",
       "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol"
      },
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "x9mmdo",
-      "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "id": "11di7ig",
+      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "12rp30w",
+      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -147,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
      {
       "id": "1fgr8xb",
@@ -155,18 +155,18 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "12rp30w",
-      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
-      "seccion": "Cultura y agenda"
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "seccion": "Fútbol"
      },
      {
-      "id": "h7o4xt",
-      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
-      "seccion": "Agro"
+      "id": "1xow9qi",
+      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
+      "seccion": "Deportes"
      },
      {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
      }
     ]
@@ -184,12 +184,6 @@
     {
      "id": "1a2z04a",
      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "x9mmdo",
-     "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
      "seccion": "Automovilismo",
      "marcada": false
     },
