@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T20:39:31.098Z",
- "portada": 65,
+ "generado": "2026-10-01T21:01:52.720Z",
+ "portada": 64,
  "archivo": 740,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-01T20:39:31.134Z",
+  "generado": "2026-10-01T21:01:52.751Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 54,
     "notas": [
      {
       "id": "1vmovug",
@@ -155,19 +155,19 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1b6nw50",
-      "titulo": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
+      "id": "34t457",
+      "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
+      "seccion": "Economía"
+     },
+     {
+      "id": "iheoi7",
+      "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
+      "seccion": "Fútbol"
      }
     ]
    }
