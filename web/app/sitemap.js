@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, obtenerArchivo, temasVivos, SECCIONES, proximosEventos,
+  obtenerDatos, obtenerArchivo, temasVivos, SECCIONES, proximosEventos, notasDeLaSeccion,
 } from '@/lib/datos';
 import { tieneCuerpo } from '@/lib/cuerpo';
 import { cuantasPaginas, direccionDePagina } from '@/lib/paginas';
@@ -41,9 +41,8 @@ export default function sitemap() {
   ];
 
   // Una entrada por página de sección, igual que las que se generan.
-  const conNotas = new Set(notas.map((n) => n.seccion));
-  const secciones = SECCIONES.filter((s) => conNotas.has(s.nombre)).flatMap((s) => {
-    const cuantas = notas.filter((n) => n.seccion === s.nombre).length;
+  const secciones = SECCIONES.filter((s) => notasDeLaSeccion(s.nombre).length > 0).flatMap((s) => {
+    const cuantas = notasDeLaSeccion(s.nombre).length;
     return Array.from({ length: cuantasPaginas(cuantas) }, (_, i) => ({
       url: `${base}${direccionDePagina(s.ranura, i + 1)}`,
       lastModified: ultima,

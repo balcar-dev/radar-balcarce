@@ -1,11 +1,11 @@
-// La fecha exacta de cada nota y "Antes en esta sección" (1/10/2026, Hernán): las secciones no se ven vacías
-// y quien lee una nota otro día ve cuándo salió.
+// La fecha exacta de cada nota y las secciones que guardan todo (1/10/2026, Hernán): las notas no se borran
+// nunca, se ven de a 10 por página, las más nuevas primero; y quien lee una nota otro día ve cuándo salió.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fechaLarga, fechaCorta, partesEnBalcarce } from '../web/lib/tiempo.js';
-import { notasDeAntes, DIAS_DE_ANTES } from '../web/lib/datos.js';
+import { notasDeLaSeccion } from '../web/lib/datos.js';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const leer = (f) => fs.readFileSync(path.join(RAIZ, f), 'utf8');
@@ -29,31 +29,22 @@ const nota = (id, seccion, horasAtras, extra = {}) => ({
 });
 const AHORA = Date.UTC(2026, 9, 1, 18);
 
-test('"Antes": lo de los últimos 7 días de esa sección que no está arriba, lo más nuevo primero', () => {
+test('la sección guarda todo: portada + archivo, lo más nuevo primero, sin repetir ni lo que no tiene página', () => {
+  const portada = [nota('a0', 'Automovilismo', 5), nota('z0', 'Agro', 3)];
   const archivo = [
-    nota('a1', 'Automovilismo', 40), nota('a2', 'Automovilismo', 100), nota('a3', 'Automovilismo', 24 * 8),
+    nota('a0', 'Automovilismo', 5), nota('a1', 'Automovilismo', 40), nota('a2', 'Automovilismo', 24 * 20), nota('a3', 'Automovilismo', 24 * 100),
     nota('b1', 'Agro', 50), nota('a4', 'Automovilismo', 60, { propia: true }), nota('a5', 'Automovilismo', 70, { cuerpo: 'corto' }),
   ];
-  const arriba = [nota('a0', 'Automovilismo', 5)];
-  const r = notasDeAntes('Automovilismo', { archivo, enSeccion: arriba, ahora: AHORA });
-  assert.deepEqual(r.map((n) => n.id), ['a1', 'a2'], 'sin las de otra sección, las de más de 7 días, las propias ni las sin cuerpo');
-  assert.equal(DIAS_DE_ANTES, 7);
+  const r = notasDeLaSeccion('Automovilismo', { archivo, portada });
+  assert.deepEqual(r.map((n) => n.id), ['a0', 'a1', 'a2', 'a3'], 'sin las de otra sección, las propias ni las sin cuerpo; sin límite de días');
 });
 
-test('"Antes" no repite una historia que ya está arriba ni se pasa del tope', () => {
-  const archivo = [nota('x1', 'Agro', 40, { titulo: 'El agro liquidó 3.228 millones de dólares en septiembre' })];
-  const arriba = [nota('x0', 'Agro', 5, { titulo: 'El agro liquidó 3.228 millones de dólares en septiembre y alcanzó el récord' })];
-  assert.deepEqual(notasDeAntes('Agro', { archivo, enSeccion: arriba, ahora: AHORA }), []);
-  const muchas = Array.from({ length: 30 }, (_, i) => nota(`m${i}`, 'Deportes', 30 + i));
-  assert.equal(notasDeAntes('Deportes', { archivo: muchas, ahora: AHORA }).length, 12);
-  assert.equal(notasDeAntes('Deportes', { archivo: muchas, ahora: AHORA, cuantas: 5 }).length, 5);
-});
-
-test('la sección muestra "Antes en…" debajo de lo nuevo y la nota lleva su fecha exacta', () => {
+test('la sección pagina de a 10, muestra la más nueva arriba y no tiene "Antes en" ni agenda', () => {
   const seccion = leer('web/app/seccion/[ranura]/page.js');
-  assert.match(seccion, /notasDeAntes\(s\.nombre, \{ enSeccion: todas \}\)/);
-  assert.match(seccion, /Antes en \{nombreCorto\(s\.nombre\)\}/);
-  assert.match(seccion, /<FilaAntes nota=\{n\} key=\{n\.id\} \/>/);
+  assert.match(seccion, /notasDeLaSeccion\(s\.nombre\)/);
+  assert.doesNotMatch(seccion, /Antes en|notasDeAntes|proximosEventos|Se viene en la agenda/);
+  assert.doesNotMatch(seccion, /últimas 36 horas/);
+  assert.match(seccion, /Más viejas →/);
   const pagina = leer('web/app/nota/[id]/page.js');
   assert.match(pagina, /<FechaExacta nota=\{n\} \/>/);
   const piezas = leer('web/components/piezas.js');

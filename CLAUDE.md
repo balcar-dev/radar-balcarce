@@ -88,7 +88,7 @@ próxima regla es la 94.)
   7 días). Siempre con `motivo`, `cuando` y `por`: sin eso la corrida de la web falla y
   la web se congela. El panel de la PC pisa `web/data/decisiones.json` cada vez que
   guarda.
-- **Las ventanas de tiempo**: la portada y las secciones muestran **36 horas**
+- **Las ventanas de tiempo**: la portada muestra **36 horas** (las secciones guardan todo, 10 por página, lo más nuevo primero)
   (`HORAS_EN_PORTADA`); lo que nunca salió no se estrena si el hecho tiene más de **12**;
   la página dura 180 días (hasta 2.500 notas); lo raspado de más de 72 horas no entra. Los
   números viven en `ingesta/criterio.mjs` **y** en `web/lib/archivo.js`.

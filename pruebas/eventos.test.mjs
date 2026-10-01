@@ -378,11 +378,11 @@ test('una fiesta anual sólo se enlaza cuando hay un evento con fecha confirmada
 
 // ------------------------------------------------------ la web los enlaza
 
-test('la agenda, la portada y la sección Cultura enlazan cada fecha a su página', () => {
+test('la agenda y la portada enlazan cada fecha a su página (la sección Cultura ya no lleva agenda, 1/10)', () => {
   assert.match(leer('web/components/piezas.js'), /evento\.ruta \? <a href=\{evento\.ruta\}>/);
   assert.match(leer('web/app/page.js'), /proximosEventos\(\)\.slice\(0, 3\)/);
   assert.match(leer('web/app/agenda/page.js'), /proximosEventos\(\)/);
-  assert.match(leer('web/app/seccion/[ranura]/page.js'), /s\.ranura === 'cultura'/);
+  assert.doesNotMatch(leer('web/app/seccion/[ranura]/page.js'), /proximosEventos/);
 });
 
 test('la página del evento: canónico propio, botón para agendar, compartir y Event para Google', () => {

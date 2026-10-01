@@ -249,32 +249,20 @@ export const HORAS_PARA_COMPLETAR = HORAS_EN_PORTADA;
 /** Cuántas notas muestra cada sección de la portada. */
 export const NOTAS_POR_SECCION = 3;
 
-/** Hasta cuántos días atrás llega "Antes en esta sección" (1/10, Hernán: "las secciones se ven vacías"). */
-export const DIAS_DE_ANTES = 7;
-
 /**
- * Lo que salió en una sección en los últimos días y ya no entra en las últimas 36 horas: se muestra aparte,
- * con su fecha exacta, para que una sección con pocas notas nuevas no parezca vacía. Sólo notas del archivo
- * con cuerpo y con página, sin repetir una historia con lo que ya está arriba.
+ * Todas las notas de una sección, de la más nueva a la más vieja (1/10/2026, Hernán: "las notas no se
+ * tienen que borrar ni sacar nunca, tienen que estar en cada sección"). Son las de la portada (las que acaban
+ * de salir) y las del archivo, que guarda las que ya salieron de la portada durante 180 días. La portada y las
+ * tapas siguen mostrando sólo lo último; la sección es el lugar donde está todo. Sólo notas con cuerpo, con
+ * respaldo y con fecha: lo que no cumple eso no tiene página ni se ofrece.
  */
-export function notasDeAntes(seccion, { archivo = obtenerArchivo(), enSeccion = [], ahora = Date.now(), cuantas = 12 } = {}) {
-  const ids = new Set(enSeccion.map((n) => n.id));
-  const corte = Number(ahora) - DIAS_DE_ANTES * 86400e3;
-  const vistas = [...enSeccion];
-  const salida = [];
-  const candidatas = archivo
-    .filter((n) => n?.id && n.seccion === seccion && !ids.has(n.id) && !n.sinFecha && !n.propia
-      && tieneCuerpo(n) && tieneRespaldo(n) && new Date(n.fecha).getTime() >= corte)
-    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-  for (const n of candidatas) {
-    if (salida.length >= cuantas) break;
-    if (vistas.some((o) => titularesParecidos(o.titulo, n.titulo))) continue;
-    salida.push(n);
-    vistas.push(n);
-  }
-  return salida;
+export function notasDeLaSeccion(nombre, { archivo = obtenerArchivo(), portada = obtenerDatos().notas } = {}) {
+  const ids = new Set(portada.map((n) => n.id));
+  const deLaPortada = portada.filter((n) => n.seccion === nombre);
+  const delArchivo = archivo.filter((n) => n?.id && !ids.has(n.id) && n.seccion === nombre && !n.sinFecha && !n.propia
+    && tieneCuerpo(n) && tieneRespaldo(n) && Number.isFinite(new Date(n.fecha).getTime()));
+  return [...deLaPortada, ...delArchivo].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 }
-
 /**
  * La tapa entera: la nota grande, cuatro de abajo y los bloques por sección.
  *

@@ -1,4 +1,4 @@
-import { obtenerDatos, porRanura, SECCIONES } from '@/lib/datos';
+import { porRanura, SECCIONES, notasDeLaSeccion } from '@/lib/datos';
 import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
 import { partirRanura, cuantasPaginas } from '@/lib/paginas';
 
@@ -9,10 +9,9 @@ export const contentType = TIPO;
 export const alt = 'Radar Balcarce';
 
 export function generateStaticParams() {
-  const notas = obtenerDatos().notas;
   const params = [];
   for (const s of SECCIONES) {
-    const cuantas = notas.filter((n) => n.seccion === s.nombre).length;
+    const cuantas = notasDeLaSeccion(s.nombre).length;
     if (!cuantas) continue;
     for (let i = 1; i <= cuantasPaginas(cuantas); i += 1) params.push({ ranura: i === 1 ? s.ranura : `${s.ranura}-${i}` });
   }

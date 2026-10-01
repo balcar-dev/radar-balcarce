@@ -1,8 +1,8 @@
 import {
-  obtenerDatos, porRanura, nombreCorto, ordenarPortada, SECCIONES, proximosEventos, notasDeAntes, DIAS_DE_ANTES,
+  porRanura, nombreCorto, SECCIONES, notasDeLaSeccion,
 } from '@/lib/datos';
 import {
-  Etiqueta, FilaNota, FilaAntes, Cierre, Invitacion, Evento, Hace,
+  Etiqueta, FilaNota, Cierre, Invitacion, Hace,
 } from '@/components/piezas';
 import { ImagenDestacada } from '@/components/imagen-destacada';
 import { notFound } from 'next/navigation';
@@ -15,14 +15,13 @@ import { OG_COMUN } from '@/components/metadatos';
 
 // Se generan todas las secciones. Las que hoy no tienen notas salen con un
 // aviso y "noindex" (29/09): la nota enlaza a su sección ("Ver todo →" y las
-// migas) y esa página daba 404 cuando no había notas de la sección en las
-// últimas 36 horas. Una entrada por cada página de las que sí tienen.
+// migas) y esa página daba 404 cuando la sección no tenía notas. Una entrada por cada página de las que sí tienen. Una sección guarda
+// todas sus notas (portada + archivo), las más nuevas primero, de a 10 por página (1/10).
 
 export function generateStaticParams() {
-  const notas = obtenerDatos().notas;
   const params = [];
   for (const s of SECCIONES) {
-    const cuantas = notas.filter((n) => n.seccion === s.nombre).length;
+    const cuantas = notasDeLaSeccion(s.nombre).length;
     const paginas = Math.max(1, cuantasPaginas(cuantas));
     for (let i = 1; i <= paginas; i += 1) {
       params.push({ ranura: i === 1 ? s.ranura : `${s.ranura}-${i}` });
@@ -37,7 +36,7 @@ export function generateMetadata({ params }) {
   if (!s) return {};
 
   const titulo = pagina > 1 ? `${s.nombre} · página ${pagina}` : s.nombre;
-  const delDia = obtenerDatos().notas.filter((n) => n.seccion === s.nombre);
+  const delDia = notasDeLaSeccion(s.nombre);
   const ultimas = delDia.slice(0, 2).map((n) => n.titulo).join(' · ');
   const descripcion = recortarEn(
     `${nombreCorto(s.nombre)} en Balcarce${pagina > 1 ? ` (página ${pagina})` : ''}: ${ultimas || 'las últimas noticias'}.`,
@@ -64,7 +63,7 @@ export default function PaginaSeccion({ params }) {
   const s = porRanura(base);
   if (!s) notFound();
 
-  const todas = obtenerDatos().notas.filter((n) => n.seccion === s.nombre);
+  const todas = notasDeLaSeccion(s.nombre);
   const paginas = Math.max(1, cuantasPaginas(todas.length));
   if (pagina > paginas) notFound();
 
@@ -72,18 +71,10 @@ export default function PaginaSeccion({ params }) {
   // La grande sólo en la primera página, y elegida por puntaje igual que
   // en la portada: en la tercera, destacar una nota vieja sería mentir
   // sobre su importancia.
-  const { principal, resto } = pagina === 1
-    ? ordenarPortada(notas)
-    : { principal: null, resto: notas };
+  // Las más nuevas primero: la destacada es la más nueva de la página, no la de más puntaje.
+  const principal = pagina === 1 ? notas[0] ?? null : null;
+  const resto = pagina === 1 ? notas.slice(1) : notas;
   const direccion = (p) => direccionDePagina(s.ranura, p);
-  // En Cultura y agenda, los próximos eventos van en un bloque aparte, cada
-  // uno enlazado a su página. No se mezclan con las notas: un evento no es
-  // una noticia (no va al feed ni al sitemap de noticias), y la nota del
-  // medio que lo anuncia ya está en la lista. Así no sale dos veces.
-  const eventos = s.ranura === 'cultura' && pagina === 1 ? proximosEventos().slice(0, 4) : [];
-  // Una sección con pocas notas nuevas no tiene que verse vacía: debajo, lo de los últimos días, con su fecha (1/10).
-  const antes = pagina === 1 ? notasDeAntes(s.nombre, { enSeccion: todas }) : [];
-
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
       <Migas pasos={[{ nombre: s.nombre, camino: `/seccion/${s.ranura}` }]} />
@@ -98,7 +89,7 @@ export default function PaginaSeccion({ params }) {
 
       {todas.length === 0 && (
         <p style={{ fontSize: 16, lineHeight: 1.6, color: 'var(--texto)' }}>
-          Hoy no hay notas de {nombreCorto(s.nombre)} en las últimas 36 horas.{' '}
+          Todavía no hay notas de {nombreCorto(s.nombre)}.{' '}
           <a href="/" style={{ color: 'var(--rojo)', fontWeight: 600 }}>Mirá lo último en la portada →</a>
         </p>
       )}
@@ -116,31 +107,10 @@ export default function PaginaSeccion({ params }) {
       </article>
       )}
 
-      {eventos.length > 0 && (
-        <section className="tarjeta" style={{ marginTop: 22, paddingBottom: 8 }}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <h2 style={{ flexGrow: 1, fontSize: 18 }}>Se viene en la agenda</h2>
-            <a href="/agenda" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Toda la agenda →</a>
-          </div>
-          {eventos.map((e) => <Evento evento={e} key={e.id} />)}
-        </section>
-      )}
-
       {resto.length > 0 && (
         <div style={{ marginTop: 28 }}>
           {resto.map((n) => <FilaNota nota={n} key={n.id} />)}
         </div>
-      )}
-
-      {antes.length > 0 && (
-        <section style={{ marginTop: 34 }} aria-label={`Antes en ${nombreCorto(s.nombre)}`}>
-          <div className="titulo-seccion" style={{ marginBottom: 6 }}>
-            <span className="barra" style={{ background: s.color }} />
-            <h2 style={{ fontSize: 20 }}>Antes en {nombreCorto(s.nombre)}</h2>
-            <span className="meta">últimos {DIAS_DE_ANTES} días</span>
-          </div>
-          {antes.map((n) => <FilaAntes nota={n} key={n.id} />)}
-        </section>
       )}
 
       {paginas > 1 && (

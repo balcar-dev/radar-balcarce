@@ -1,15 +1,16 @@
 // Cómo se parte una sección en páginas.
 //
-// Deportes llegó a tener más de sesenta notas en un día. Sesenta seguidas no
-// las recorre nadie y la página tarda en dibujarse, así que se cortan de a
-// quince y las siguientes quedan en /seccion/deportes-2, deportes-3…
+// Una sección guarda todas sus notas (las del archivo de 180 días también) y no se
+// recorren de corrido: se cortan de a diez, las más nuevas primero (1/10, Hernán: "se
+// tienen que ver 10 notas y un botón para pasar de página"). Las siguientes quedan en
+// /seccion/deportes-2, deportes-3…
 //
 // La ranura y el número van pegados en la misma parte de la dirección
 // porque la sección es una ruta dinámica sola: /seccion/[ranura]. Separarlos
 // obligaría a una carpeta más y a duplicar la página.
 
-/** Quince entra en dos o tres pantallas de celular. */
-export const POR_PAGINA = 15;
+/** Diez entra en una o dos pantallas de celular. */
+export const POR_PAGINA = 10;
 
 /**
  * Parte "deportes-3" en { base: 'deportes', pagina: 3 }.

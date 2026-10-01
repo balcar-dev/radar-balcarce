@@ -60,7 +60,7 @@ test('ida y vuelta: la dirección que se genera se vuelve a leer igual', () => {
 
 test('las páginas alcanzan para todas las notas y no sobra ninguna', () => {
   // Deportes llegó a tener más de sesenta notas en un día.
-  for (const cuantas of [1, 14, 15, 16, 60, 61]) {
+  for (const cuantas of [1, 9, 10, 11, 60, 61]) {
     const paginas = cuantasPaginas(cuantas);
     let sumadas = 0;
     for (let i = 1; i <= paginas; i += 1) {
@@ -75,9 +75,10 @@ test('una sección sin notas tiene igual una página', () => {
   assert.equal(cuantasPaginas(0), 1);
 });
 
-test('quince notas entran en una sola página', () => {
-  assert.equal(cuantasPaginas(15), 1);
-  assert.equal(cuantasPaginas(16), 2);
+test('diez notas entran en una sola página', () => {
+  assert.equal(POR_PAGINA, 10);
+  assert.equal(cuantasPaginas(10), 1);
+  assert.equal(cuantasPaginas(11), 2);
 });
 
 

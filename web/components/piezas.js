@@ -210,7 +210,24 @@ export function Hace({ nota, className = 'meta' }) {
   return <time className={className} dateTime={new Date(nota.fecha).toISOString()} data-hace="">{texto}</time>;
 }
 
+/** Pasadas las 36 horas el "hace N" deja de servir: se ve la fecha exacta (1/10, Hernán: que se lea bien otro día). */
+const HORAS_DE_HACE = 36;
+
 export function FilaNota({ nota }) {
+  const ms = new Date(nota.fecha).getTime();
+  const vieja = Number.isFinite(ms) && Date.now() - ms > HORAS_DE_HACE * 3600 * 1000;
+  const fecha = vieja ? fechaCorta(nota.fecha) : null;
+  if (fecha) {
+    return (
+      <div className="fila-nota">
+        <div className="col-hora"><time className="meta" dateTime={new Date(nota.fecha).toISOString()}>{fecha}</time></div>
+        <div style={{ flexGrow: 1 }}>
+          <time className="meta cuando-movil" dateTime={new Date(nota.fecha).toISOString()}>{fecha}</time>
+          <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="fila-nota">
       {/* En escritorio la columna de la hora se reserva SIEMPRE, aunque la
@@ -232,20 +249,6 @@ export function FechaExacta({ nota, className = 'meta fecha-exacta' }) {
   const texto = fechaLarga(nota?.fecha);
   if (!texto) return null;
   return <time className={className} dateTime={new Date(nota.fecha).toISOString()}>{texto}</time>;
-}
-
-/** Una nota de "Antes en esta sección": con su fecha exacta y no con un "hace 3 días" que cambia. */
-export function FilaAntes({ nota }) {
-  const texto = fechaCorta(nota.fecha);
-  return (
-    <div className="fila-nota">
-      <div className="col-hora"><time className="meta" dateTime={new Date(nota.fecha).toISOString()}>{texto}</time></div>
-      <div style={{ flexGrow: 1 }}>
-        <time className="meta cuando-movil" dateTime={new Date(nota.fecha).toISOString()}>{texto}</time>
-        <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
-      </div>
-    </div>
-  );
 }
 
 // ----------------------------------------------------------------- agenda
