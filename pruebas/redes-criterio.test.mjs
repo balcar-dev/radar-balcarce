@@ -133,7 +133,7 @@ test('cada pieza tiene siempre la misma voz, según el reparto del documento (28
     'clima-manana': 'locutora', noticia1: 'locutor', noticia2: 'locutora', farmacia: 'locutor',
     'clima-noche': 'locutora', podcast: 'locutor', utiles: 'locutor', agenda: 'locutora', aviso: 'locutor',
     // Faltaban (1/10): sin voz en el reparto, el feriado y las cuatro de participá no se armaban.
-    feriado: 'locutora', 'participa-noticias': 'locutora', 'participa-evento': 'locutor', 'participa-reclamos': 'locutora', 'participa-nota': 'locutor',
+    feriado: 'locutora', efemeride: 'locutora', 'participa-noticias': 'locutora', 'participa-evento': 'locutor', 'participa-reclamos': 'locutora', 'participa-nota': 'locutor',
   };
   assert.deepEqual(REPARTO, esperado);
   for (const [pieza, quien] of Object.entries(esperado)) {

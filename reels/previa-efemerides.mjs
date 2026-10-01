@@ -27,6 +27,7 @@ const COLOR = COLOR_SECCION['Cultura y agenda'];
 export const RITMO = 2.5;
 const RETARDO = 0.25;
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+const MESES_CORTOS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 
 export const fechaLarga = (iso) => {
@@ -63,7 +64,9 @@ export function placasDelDia(fecha, dia) {
   const f = fechaLarga(fecha);
   const rotulo = `Un día como hoy · ${f.numero} de ${f.mes}`;
   const p = dia.principal;
-  const principal = placaEfemeride({ rotulo, grande: p.anio ? String(p.anio) : '', titulo: p.titulo, cuerpo: p.cuerpo, color: COLOR });
+  // Lo que va en grande: el año. Un "día de…" sin año (el del Circo Criollo) lleva el día, así todas las placas arrancan igual (1/10, Hernán).
+  const grande = p.anio ? String(p.anio) : `${f.numero} ${MESES_CORTOS[MESES.indexOf(f.mes)]}`;
+  const principal = placaEfemeride({ rotulo, grande, titulo: p.titulo, cuerpo: p.cuerpo, color: COLOR });
   const ademas = placaLista({
     rotulo: 'Además, un día como hoy', titulo: `${f.numero} de ${f.mes}`, color: COLOR,
     filas: dia.ademas.map((x) => ({ rotulo: x.anio ? String(x.anio) : 'Hoy', principal: x.texto })),

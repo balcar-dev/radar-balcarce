@@ -295,6 +295,7 @@ podcast: locutor
 utiles: locutor
 agenda: locutora
 feriado: locutora
+efemeride: locutora
 participa-noticias: locutora
 participa-evento: locutor
 participa-reclamos: locutora
