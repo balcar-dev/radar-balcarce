@@ -685,6 +685,17 @@ const propias = [...notasDelDolar(historiaDolar), ...repasos]
   .map((n) => fijarSlug(n, direcciones))
   .filter((n) => tieneCuerpo(n));
 if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);
+// La nota de cada repaso lleva un collage con las fotos de las notas que cuenta (1/10, web/scripts/collage.mjs).
+{
+  const { collageDeRepaso } = await import('./collage.mjs');
+  let conCollage = 0;
+  for (const n of propias) {
+    if (n.propia !== 'repaso' || n.foto) continue;
+    const foto = await collageDeRepaso(n, { banco: bancoDeFotos, carpeta: FOTOS_NOTAS });
+    if (foto) { n.foto = foto; conCollage += 1; }
+  }
+  if (conCollage) console.log(`  repasos con foto (collage): ${conCollage}`);
+}
 
 // La misma noticia con otra dirección (lib/repetidas.js, 29/09): queda una y
 // la dirección de la otra redirige a ésa (fusionadas.json, generar-redirects.mjs).

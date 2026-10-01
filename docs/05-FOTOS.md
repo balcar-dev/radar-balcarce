@@ -340,3 +340,8 @@ La clave gratis de Groq (`redes/sondear-groq.mjs`, workflow "Sondear Groq", a ma
 - **Notas que se juntan**: dos notas que cuentan el mismo hecho con otras palabras se fusionan (regla 94) y las fuentes de las dos se suman antes de buscar la foto, así se compara la foto de todos los medios.
 - **No se vuelve a bajar la elegida**: se guarda la imagen que ya se bajó para compararla (antes, "no se pudo volver a bajar la elegida" dejó sin foto a una nota con nueve fuentes).
 - **Menores**: la IA decide sólo por lo que se ve en la imagen, no por el tema de la nota (una nota "sobre secundarios" no quiere decir que la foto tenga chicos); un adulto a simple vista y quien tiene la cara tapada no cuentan. Sigue valiendo "ante la duda, es menor" para quien se ve chico o no se puede decidir.
+
+### La tapa con fotos y el collage de los repasos (1/10/2026)
+
+- **La tapa** (las cinco postales de la portada, `armarTapa` en `web/lib/datos.js`) prefiere las notas que tienen foto: la principal sale de las que la tienen y las cuatro más nuevas de otras secciones, también. Las que no tienen sólo completan si faltan (con la placa de su sección).
+- **Los repasos** (las notas de cada podcast, `web/lib/notas-propias.js`) llevan un **collage** con las fotos de las notas que cuentan: de dos a cuatro fotos del banco con un borde blanco entre una y otra (`web/scripts/collage.mjs`, con el ffmpeg del proyecto). Con una sola foto se usa tal cual; sin ninguna, queda sin foto. El crédito dice los medios ("Fotos: A, B y C"). Se guarda en `web/public/fotos-notas/collage-<id>.jpg` y la poda lo conserva mientras exista la nota del repaso.

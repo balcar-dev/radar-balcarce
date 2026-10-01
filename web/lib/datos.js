@@ -288,7 +288,11 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
   // Por si acaso: generar-datos ya saca las repetidas de la portada.
   const notas = sinNotasRepetidas(notasSueltas);
   const conHora = notas.filter((n) => !n.sinFecha);
-  const { principal } = ordenarPortada(conHora.length ? conHora : notas);
+  // Las de la tapa llevan foto (1/10, Hernán: "siempre tengan fotos"): se prefiere, entre las elegibles, las que la tienen;
+  // si no hay ninguna, o no alcanzan, se completa con las que no (la placa de su sección).
+  const conFoto = (n) => !!n.foto?.archivo;
+  const elegibles = conHora.length ? conHora : notas;
+  const { principal } = ordenarPortada(elegibles.some(conFoto) ? elegibles.filter(conFoto) : elegibles);
   if (!principal) return { principal: null, secundarias: [], bloques: [] };
 
   const porHora = [...notas].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
@@ -296,12 +300,18 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
   // La más nueva de cada sección (con hora), sin la de la grande.
   const usadas = new Set([principal.seccion]);
   const secundarias = [];
-  for (const n of porHora) {
-    if (secundarias.length === 4) break;
-    if (n.sinFecha || n.id === principal.id || usadas.has(n.seccion)) continue;
-    usadas.add(n.seccion);
-    secundarias.push(n);
+  // Primero las que tienen foto; las que no, sólo si faltan para las cuatro.
+  for (const conLaFoto of [true, false]) {
+    for (const n of porHora) {
+      if (secundarias.length === 4) break;
+      if (n.sinFecha || n.id === principal.id || usadas.has(n.seccion) || secundarias.includes(n)) continue;
+      if (conLaFoto && !conFoto(n)) continue;
+      usadas.add(n.seccion);
+      secundarias.push(n);
+    }
   }
+  // Siempre lo más nuevo primero.
+  secundarias.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
   const enTapa = new Set([principal.id, ...secundarias.map((n) => n.id)]);
   const porSeccion = {};

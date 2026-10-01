@@ -197,3 +197,28 @@ test('Hoy en Balcarce: tres pestañas accesibles, clima primero, y la farmacia s
   const css = leer('web/app/globals.css');
   assert.match(css, /\.pestana-hoy \{[^}]*min-height: 40px;/, 'las pestañas se tocan cómodas con el dedo');
 });
+
+// ------------------------------------------- la tapa lleva fotos (1/10/2026)
+
+test('las cinco de la tapa prefieren las que tienen foto; las sin foto sólo completan si faltan', () => {
+  const ahora = Date.parse('2026-10-01T18:00:00Z');
+  const n = (id, seccion, horas, foto) => ({
+    id, seccion, titulo: `Titular distinto número ${id} de ${seccion}`, fecha: new Date(ahora - horas * 3600e3).toISOString(), relevancia: 50,
+    cuerpo: 'palabra '.repeat(90), ...(foto ? { foto: { archivo: `fotos-notas/${id}.jpg`, credito: 'Foto: X' } } : {}),
+  });
+  const notas = [
+    n('a', 'Balcarce', 1, false), n('b', 'Política', 2, true), n('c', 'Fútbol', 3, true), n('d', 'Economía', 4, true),
+    n('e', 'Agro', 5, true), n('f', 'Deportes', 6, true), n('g', 'Cultura y agenda', 0.5, false),
+  ];
+  const { principal, secundarias } = armarTapa(notas, undefined, { ahora });
+  const cinco = [principal, ...secundarias];
+  assert.equal(cinco.length, 5);
+  assert.ok(cinco.every((x) => x.foto?.archivo), 'las cinco con foto: ' + cinco.map((x) => x.id));
+  // Con pocas fotos, se completa con las que no tienen (nunca queda la tapa corta).
+  const pocas = armarTapa([n('a', 'Balcarce', 1, false), n('b', 'Política', 2, true), n('c', 'Fútbol', 3, false), n('d', 'Economía', 4, false), n('e', 'Agro', 5, false)], undefined, { ahora });
+  assert.equal([pocas.principal, ...pocas.secundarias].length, 5);
+  assert.equal(pocas.principal.id, 'b');
+  // Y las secundarias siguen de la más nueva a la más vieja.
+  const horas = cinco.slice(1).map((x) => Date.parse(x.fecha));
+  assert.deepEqual(horas, [...horas].sort((x, y) => y - x));
+});

@@ -166,7 +166,10 @@ export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retir
       vivas.add(nombre);
     }
   }
-  return { banco: bancoNuevo, borrar: enDisco.filter((f) => !vivas.has(f)) };
+  // Los collages de los repasos (collage-<id>.jpg, web/scripts/collage.mjs) no son de una nota del banco: quedan mientras
+  // exista la nota del repaso.
+  const delRepaso = (f) => f.startsWith('collage-') && quedan.has(f.slice('collage-'.length).replace(/\.\w+$/, ''));
+  return { banco: bancoNuevo, borrar: enDisco.filter((f) => !vivas.has(f) && !delRepaso(f)) };
 }
 
 /** La nota lista para la web: `{archivo, credito}`, o nada si no tiene. */
