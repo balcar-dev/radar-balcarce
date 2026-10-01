@@ -13,6 +13,10 @@
 name: Fijar piezas
 
 on:
+  # Una sola vez, el viernes 2/10/2026 a las 05:30 (hora de Balcarce, ya con el cupo de voz del día
+  # nuevo): arma las dos piezas de participá que faltan. Se puede sacar después de esa fecha.
+  schedule:
+    - cron: '30 8 2 10 *'
   workflow_dispatch:
     inputs:
       piezas:
@@ -40,38 +44,53 @@ jobs:
       contents: write # para guardar los videos en reels/fijas/
     env:
       TZ: America/Argentina/Buenos_Aires
-      PIEZAS: ${{ inputs.piezas }}
-      DESDE: ${{ inputs.desde }}
-      DIAS: ${{ inputs.dias }}
+      # A mano llegan por los datos de entrada; en la corrida programada valen los de abajo.
+      PIEZAS: ${{ inputs.piezas || 'participa-evento,participa-reclamos' }}
+      DESDE: ${{ inputs.desde || '2026-10-06' }}
+      DIAS: ${{ inputs.dias || '14' }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
 
       # Lo que se escribe llega por variables y se valida antes de usarlo.
+      # La corrida programada se repetiría cada 2 de octubre: sólo vale en 2026.
+      - name: Ver si corresponde
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date +%Y)" != "2026" ]; then
+            echo "Esta corrida programada era sólo de 2026: no se hace nada."
+            echo "SEGUIR=false" >> "$GITHUB_ENV"
+          fi
+
       - name: Revisar lo pedido
+        if: env.SEGUIR != 'false'
         run: |
           case "$PIEZAS" in *[!a-z0-9,-]*|"") echo "::error::Las piezas sólo pueden tener letras minúsculas, números, guiones y comas"; exit 1;; esac
           echo "$DESDE" | grep -Eq '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' || { echo "::error::\"desde\" tiene que ser AAAA-MM-DD"; exit 1; }
           echo "$DIAS" | grep -Eq '^[0-9]{1,2}$' || { echo "::error::\"dias\" tiene que ser un número"; exit 1; }
 
       - uses: actions/setup-node@v4
+        if: env.SEGUIR != 'false'
         with:
           node-version: '24'
 
       - name: Instalar
+        if: env.SEGUIR != 'false'
         run: npm ci --no-audit --no-fund
 
       # --incluir: las pide aunque hoy no les toque; --sin-fijas: las arma de cero con la voz.
       - name: Armar las piezas con voz
+        if: env.SEGUIR != 'false'
         run: node reels/plan.mjs --generar "--solo=$PIEZAS" "--incluir=$PIEZAS" --sin-fijas
         env:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
       - name: Guardarlas como fijas
+        if: env.SEGUIR != 'false'
         run: node reels/fijas.mjs "--piezas=$PIEZAS" "--desde=$DESDE" "--dias=$DIAS"
 
       - name: Subir lo guardado
+        if: env.SEGUIR != 'false'
         run: |
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
@@ -96,6 +115,7 @@ jobs:
           fi
 
       - name: Dejar las piezas para escucharlas
+        if: env.SEGUIR != 'false'
         uses: actions/upload-artifact@v4
         with:
           name: piezas-fijas
