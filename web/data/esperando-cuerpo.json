@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T08:01:22.204Z",
+ "generado": "2026-10-01T08:31:14.304Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -35,6 +35,11 @@
      "fecha": "2026-10-01T00:27:00.000Z"
     },
     {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/sociedad/fallecio-peppino-mazzullo-la-historica-voz-de-topo-gigio-a-los-100-anos/",
+     "fecha": "2026-10-01T07:57:00.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/espectaculos/murio-peppino-mazzullo-a-los-100-anso--fue-la-historica-voz-de-topo-gigio_a6abd9b66c5ebcb5a82b752fe",
      "fecha": "2026-09-30T23:44:00.000Z"
@@ -50,14 +55,34 @@
   {
    "id": "17z7wso",
    "titulo": "El regreso del automovilismo generó un movimiento estimado de $2.700 millones",
-   "copete": "",
+   "copete": "La reapertura del Autódromo Juan Manuel Fangio con la presencia de categorías nacionales dejó como uno de sus principales resultados el fuerte movimiento generado en la ciudad. De acuerdo con una estimación realizada por el área de Prensa de la",
    "seccion": "Automovilismo",
-   "fecha": "2026-09-30T22:01:11.084Z",
+   "fecha": "2026-09-30T21:35:29.000Z",
    "fuentes": [
     {
      "medio": "El Diario Balcarce",
      "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
-     "fecha": null
+     "fecha": "2026-09-30T21:35:29.000Z"
+    }
+   ],
+   "intentos": 2
+  },
+  {
+   "id": "jd9ijn",
+   "titulo": "Francisco Cerúndolo remonta ante Van de Zandschulp y resiste en Pekín",
+   "copete": "Pekín, 1 oct (EFE).- El argentino Francisco Cerúndolo (n.22) remontó este jueves ante el neerlandés Botic van de Zandschulp (n.40) por 5-7, 6-4 y 6-3 y avanzó a los octavos de final del Abierto de China, después de salvar once de las trece bolas de rotura que afrontó. El…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-01T08:00:25.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/america/agencias/2026/10/01/francisco-cerundolo-remonta-ante-van-de-zandschulp-y-resiste-en-pekin/",
+     "fecha": "2026-10-01T08:00:25.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/tenis/francisco-cerundolo-remonta-ante-van-de-zandschulp-y-resiste-en-pekin-id763753.html",
+     "fecha": "2026-10-01T08:05:27.000Z"
     }
    ],
    "intentos": 1

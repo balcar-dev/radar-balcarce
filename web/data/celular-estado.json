@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T08:01:22.204Z",
- "portada": 53,
+ "generado": "2026-10-01T08:31:14.304Z",
+ "portada": 51,
  "archivo": 691,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-01T08:01:22.239Z",
+  "generado": "2026-10-01T08:31:14.329Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,8 +85,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "y9vwef",
       "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
@@ -96,11 +101,6 @@
       "id": "1fqh4sy",
       "titulo": "Aymeric Laporte califica a la Argentina de antif\\u00futbol tras la final",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
      },
      {
       "id": "z3c4f",
@@ -155,11 +155,6 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "1gv3zir",
       "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
       "seccion": "Balcarce"
@@ -167,6 +162,11 @@
      {
       "id": "1dqm02n",
       "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
      }
     ]

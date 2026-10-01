@@ -586,8 +586,8 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "17z7wso": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T08:01:11.687Z",
+  "intentos": 2,
+  "ultimo": "2026-10-01T08:31:02.011Z",
   "motivo": "título o bajada: 1 problema (antecedente): el guion usa 2.000, que sale de una nota anterior, como si fuera de hoy"
  },
  "17zxv70": {
@@ -3574,6 +3574,11 @@
   "intentos": 1,
   "ultimo": "2026-09-28T03:02:17.601Z",
   "motivo": "con cuerpo"
+ },
+ "jd9ijn": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T08:31:02.011Z",
+  "motivo": "cuerpo: 4 problemas (antecedente, fecha, repite, copia): el cuerpo usa 2.026, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 75 "
  },
  "jgkb1p": {
   "intentos": 1,
