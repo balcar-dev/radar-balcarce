@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T09:01:28.324Z",
- "portada": 49,
+ "generado": "2026-10-01T09:31:19.949Z",
+ "portada": 34,
  "archivo": 692,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-01T09:01:28.359Z",
+  "generado": "2026-10-01T09:31:19.983Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -88,9 +88,9 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "1fqh4sy",
@@ -98,8 +98,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+      "id": "17z7wso",
+      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
       "seccion": "Automovilismo"
      },
      {
@@ -116,12 +116,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 46,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
+      "id": "5p0wce",
+      "titulo": "La Pepa Brizuela canta el himno antes del partido de la Selección",
+      "seccion": "Fútbol"
      },
      {
       "id": "2uqvxt",
@@ -129,13 +129,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "id": "g8dncb",
+      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
       "seccion": "Balcarce"
      }
     ]
@@ -147,19 +142,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 25,
-    "notas": [
-     {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1dqm02n",
-      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
