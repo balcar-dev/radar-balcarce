@@ -428,6 +428,13 @@
   "ultimo": "2026-09-25T13:00:43.192Z",
   "motivo": "con cuerpo"
  },
+ "15zn3v4": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T16:31:13.369Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "15zqvfd": {
   "intentos": 3,
   "ultimo": "2026-09-27T23:28:56.676Z",
@@ -2501,6 +2508,11 @@
   "ultimo": "2026-09-25T16:30:41.998Z",
   "motivo": "con cuerpo"
  },
+ "1y554vc": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T16:31:13.369Z",
+  "motivo": "cuerpo: 5 problemas (numero): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 61 palabras"
+ },
  "1y62trk": {
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
@@ -3164,9 +3176,9 @@
   "motivo": "con cuerpo"
  },
  "au1bse": {
-  "intentos": 2,
-  "ultimo": "2026-10-01T13:31:11.708Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 99 palabras"
+  "intentos": 3,
+  "ultimo": "2026-10-01T16:31:13.369Z",
+  "motivo": "título o bajada: 2 problemas (numero): el titulo dice 3.000 y la fuente no lo dice"
  },
  "b203ts": {
   "intentos": 1,
@@ -3803,6 +3815,11 @@
  "jzo9l4": {
   "intentos": 1,
   "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
+ },
+ "jzu6k": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T16:31:13.369Z",
   "motivo": "con cuerpo"
  },
  "jzue97": {

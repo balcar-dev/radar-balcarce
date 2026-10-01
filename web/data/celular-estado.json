@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T16:02:09.370Z",
- "portada": 53,
- "archivo": 718,
- "esperandoCuerpo": 11,
+ "generado": "2026-10-01T16:31:36.900Z",
+ "portada": 54,
+ "archivo": 719,
+ "esperandoCuerpo": 12,
  "redes": {
-  "generado": "2026-10-01T16:02:09.413Z",
+  "generado": "2026-10-01T16:31:36.938Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -119,6 +119,11 @@
     "segundos": 52,
     "notas": [
      {
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "iheoi7",
       "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
       "seccion": "Fútbol"
@@ -129,13 +134,8 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1mknzh0",
-      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "15i90co",
-      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
       "seccion": "Balcarce"
      }
     ]
@@ -147,17 +147,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
      {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "seccion": "Deportes"
      },
      {
-      "id": "1ckhubg",
-      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
-      "seccion": "Deportes"
+      "id": "1mknzh0",
+      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "idl5dq",
@@ -165,8 +165,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "id": "15i90co",
+      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
       "seccion": "Balcarce"
      }
     ]
@@ -192,8 +192,14 @@
    ],
    "cola": [
     {
-     "id": "dwvi75",
-     "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
+     "id": "1dbyjp1",
+     "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1sjcoqr",
+     "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
      "seccion": "Deportes",
      "marcada": false
     },
