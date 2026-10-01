@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T13:03:25.306Z",
+ "generado": "2026-10-01T13:32:35.386Z",
  "portada": 50,
  "archivo": 702,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-01T13:03:25.353Z",
+  "generado": "2026-10-01T13:32:35.417Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,27 +85,27 @@
     "voz": "locutor",
     "momento": "en-hora",
     "salio": null,
-    "segundos": 55,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "bvb4v9",
-      "titulo": "Irene Feingold clasifica al Torneo Nacional de Gimnasia Artística",
-      "seccion": "Deportes"
-     },
      {
       "id": "ff9n91",
       "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
       "seccion": "Balcarce"
      },
      {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
       "seccion": "Cultura y agenda"
      },
      {
       "id": "1fqh4sy",
       "titulo": "Aymeric Laporte califica a la Argentina de antif\\u00futbol tras la final",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "dwvi75",
+      "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -116,11 +116,16 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 54,
     "notas": [
      {
-      "id": "z3c4f",
-      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "t1dd2",
+      "titulo": "El Círculo de Educadores recibe charlas de salud y bienestar en la adultez",
       "seccion": "Balcarce"
      },
      {
@@ -129,13 +134,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "id": "1ckhubg",
+      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
       "seccion": "Deportes"
      }
     ]
@@ -147,17 +147,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 54,
     "notas": [
      {
-      "id": "16kemme",
-      "titulo": "Racing Balcarce compra un terreno lindante y amplía su predio",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "11di7ig",
-      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
-      "seccion": "Balcarce"
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
      },
      {
       "id": "idl5dq",
@@ -168,6 +163,11 @@
       "id": "1fbewyl",
       "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
       "seccion": "Agro"
+     },
+     {
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -188,9 +188,21 @@
      "marcada": false
     },
     {
-     "id": "16kemme",
-     "titulo": "Racing Balcarce compra un terreno lindante y amplía su predio",
+     "id": "1v6m62u",
+     "titulo": "El Hospital Fossati completa la meta de incorporar treinta televisores",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "t1dd2",
+     "titulo": "El Círculo de Educadores recibe charlas de salud y bienestar en la adultez",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "dwvi75",
+     "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
+     "seccion": "Deportes",
      "marcada": false
     },
     {

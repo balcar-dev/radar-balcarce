@@ -2520,16 +2520,16 @@
   "cuando": "2026-09-30T01:31:10.308Z"
  },
  "113qesp": {
-  "archivo": "fotos-notas/113qesp.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
   "enlace": "https://www.diariolavanguardia.com/noticias/44949-la-comision-de-salud-no-convocara-a-virginia-aparicio-y-petruccelli-decidio-citarla-a-una-reunion-de-bloque/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65895.png",
   "razon": "Es la única foto disponible, cuenta con buena nitidez, encuadre adecuado y no presenta marcas ni menores.",
-  "cuando": "2026-09-30T00:31:27.275Z"
+  "cuando": "2026-09-30T00:31:27.275Z",
+  "intentado": true,
+  "borrada": true
  },
  "rtk3io": {
   "archivo": "fotos-notas/rtk3io.jpg",
@@ -3484,16 +3484,16 @@
   "cuando": "2026-09-30T22:32:14.496Z"
  },
  "gb1e4h": {
-  "archivo": "fotos-notas/gb1e4h.jpg",
   "medio": "Clarín",
-  "credito": "Foto: Clarín",
   "licencia": null,
   "origen": "medio",
   "titulo": "Andrea Sarnari sigue al frente de la Federación Agraria",
   "enlace": "https://www.clarin.com/rural/reeligieron-andrea-sarnari-presidenta-federacion-agraria-periodo_0_n2GlNmgonO.html",
   "imagenOriginal": "https://www.clarin.com/img/2026/09/29/_RI_oh4cP_2000x1500__1.jpg",
   "razon": "Tiene excelente nitidez, encuadre formal y no presenta marcas de agua ni menores.",
-  "cuando": "2026-09-30T22:32:14.496Z"
+  "cuando": "2026-09-30T22:32:14.496Z",
+  "intentado": true,
+  "borrada": true
  },
  "ph5y3i": {
   "archivo": "fotos-notas/ph5y3i.jpg",
@@ -3724,16 +3724,16 @@
   "cuando": "2026-10-01T01:01:41.134Z"
  },
  "1uvmscz": {
-  "archivo": "fotos-notas/1uvmscz.jpg",
   "medio": "Puntonueve (FM 100.9)",
-  "credito": "Foto: Puntonueve (FM 100.9)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Concejo rechaza recibir a Virginia Aparicio en comisión",
   "enlace": "https://puntonueve.com.ar/martinez-explico-por-que-el-oficialismo-no-recibio-a-virginia-aparicio-en-la-comision-de-salud/",
   "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-30-at-20.27.28-e1790810879573.jpeg",
   "razon": "Es la única opción disponible, cuenta con buena nitidez, encuadre adecuado y no presenta marcas ni menores.",
-  "cuando": "2026-10-01T01:29:11.431Z"
+  "cuando": "2026-10-01T01:29:11.431Z",
+  "intentado": true,
+  "borrada": true
  },
  "saeapr": {
   "intentado": true,
@@ -3896,12 +3896,16 @@
   "cuando": "2026-10-01T12:04:00.712Z"
  },
  "q7x46o": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/q7x46o.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La UBA sigue entre las diez mejores de la región y el sistema sufre caídas",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T12:04:00.712Z",
-  "intentos": 1
+  "enlace": "https://www.infobae.com/educacion/2026/10/01/ranking-qs-regional-la-uba-sigue-liderando-en-el-pais-pero-argentina-registra-la-mayor-caida-de-america-latina/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/NWOAIDCC5NDIXAAV7XTWQQ6LPU.jpg?auth=84b1fb4b0c9b8cfb58e08363b4ec538bdb6b0ee44ac522aac193f63df5caf405&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra la fachada de la facultad con buena calidad y sin menores identificables ni marcas de medios.",
+  "cuando": "2026-10-01T13:32:05.036Z"
  },
  "1ckhubg": {
   "intentado": true,
@@ -3948,16 +3952,16 @@
   "cuando": "2026-10-01T12:33:59.295Z"
  },
  "16kemme": {
-  "archivo": "fotos-notas/16kemme.jpg",
   "medio": "Radio Gabal (FM 104.1)",
-  "credito": "Foto: Radio Gabal (FM 104.1)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Racing Balcarce compra un terreno lindante y amplía su predio",
   "enlace": "https://www.radiogabal.com.ar/index.php/deportes/racing-balcarce-amplia-su-predio-y-proyecta-nuevos-desafios",
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/racing%20balcarce.jpg",
   "razon": "Es la única foto disponible, tiene buena nitidez y no presenta marcas de agua ni menores.",
-  "cuando": "2026-10-01T13:03:02.884Z"
+  "cuando": "2026-10-01T13:03:02.884Z",
+  "intentado": true,
+  "borrada": true
  },
  "1neicxo": {
   "archivo": "fotos-notas/1neicxo.jpg",
@@ -3970,5 +3974,61 @@
   "imagenOriginal": "https://media.ambito.com/p/c7beb28352168d4548c1b23ef10dc897/adjuntos/239/imagenes/043/483/0043483584/1200x675/3258x1963:3278x1983/luz-electricidad-subsidios-tarifas-gas.jpg",
   "razon": "La foto A ilustra claramente los servicios de luz y gas sin marcas de agua ni menores.",
   "cuando": "2026-10-01T13:03:02.884Z"
+ },
+ "dwvi75": {
+  "archivo": "fotos-notas/dwvi75.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
+  "enlace": "https://www.radiogabal.com.ar/index.php/deportes/las-correcaminos-vuelven-a-jugar-el-torneo-sporting-rosa",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/correcaminos.jpg",
+  "razon": "Es la única foto disponible, tiene buena nitidez y muestra al equipo completo sin menores ni marcas de medios.",
+  "cuando": "2026-10-01T13:32:05.036Z"
+ },
+ "1v6m62u": {
+  "archivo": "fotos-notas/1v6m62u.jpg",
+  "medio": "Puntonueve (FM 100.9)",
+  "credito": "Foto: Puntonueve (FM 100.9)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Hospital Fossati completa la meta de incorporar treinta televisores",
+  "enlace": "https://puntonueve.com.ar/la-campana-solidaria-para-incorporar-televisores-al-hospital-fossati-alcanzo-su-objetivo/",
+  "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2026/10/tele.jpg",
+  "razon": "La foto B muestra claramente uno de los televisores instalados en una habitación del hospital Fossati, cumpliendo perfectamente con el objetivo de la nota sin marcas de agua ni menores.",
+  "cuando": "2026-10-01T13:32:05.036Z"
+ },
+ "t1dd2": {
+  "archivo": "fotos-notas/t1dd2.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Círculo de Educadores recibe charlas de salud y bienestar en la adultez",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-ciclo-de-charlas-sobre-salud-y-bienestar-en-la-adultez",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2024/Circulo%20de%20Educadores.jpg",
+  "razon": "Es la única opción disponible, tiene buena nitidez y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-01T13:32:05.036Z"
+ },
+ "tud9go": {
+  "archivo": "fotos-notas/tud9go.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Argentina registra hasta 800 casos anuales de hepatitis C",
+  "enlace": "https://www.eleco.com.ar/nacionales/argentina-registra-entre-700-y-800-casos-de-hepatitis-c-al-ano-la-importancia-de-la-deteccion-temprana",
+  "imagenOriginal": "https://cdnartic.ar/t2ABMcAqALGXYPWkMl58x9tnkZs=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2022/07/hepatitis_1.jpg",
+  "razon": "La foto B ilustra adecuadamente el tema médico sin marcas de agua ni menores, a diferencia de la A que tiene marca.",
+  "cuando": "2026-10-01T13:32:05.036Z"
+ },
+ "6jbdxb": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Irene Feingold clasifica al Torneo Nacional de Gimnasia Artística",
+  "razon": "Todas las fotos disponibles muestran a una menor de edad reconocible, por lo que no pueden ser publicadas. (se probó una foto libre de \"Irene Feingold\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-01T13:32:05.036Z",
+  "intentos": 1
  }
 }
