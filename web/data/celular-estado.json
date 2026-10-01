@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T02:31:28.342Z",
- "portada": 66,
+ "generado": "2026-10-01T03:01:21.449Z",
+ "portada": 65,
  "archivo": 687,
- "esperandoCuerpo": 7,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-01T02:31:28.380Z",
+  "generado": "2026-10-01T03:01:21.486Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-09-30T10:36:23.764Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -23,17 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-09-30T13:01:31.279Z"
-   },
-   {
-    "nombre": "participa-reclamos",
-    "tipo": "historia",
-    "hora": "12:00",
-    "que": "Tu reclamo",
-    "voz": null,
-    "ventana": 60,
-    "momento": "cerrada",
+    "momento": "antes",
     "salio": null
    },
    {
@@ -43,8 +33,18 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-09-30T18:06:28.052Z"
+    "momento": "antes",
+    "salio": null
+   },
+   {
+    "nombre": "agenda",
+    "tipo": "historia",
+    "hora": "18:00",
+    "que": "La agenda del fin de semana",
+    "voz": "locutora",
+    "ventana": 60,
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -53,8 +53,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-09-30T22:04:13.822Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -63,8 +63,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-09-30T23:05:08.174Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -73,8 +73,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 210,
-    "momento": "en-hora",
-    "salio": "2026-09-30T23:35:09.088Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -83,29 +83,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-09-30T13:01:31.279Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 55,
     "notas": [
      {
-      "id": "jul3w9",
-      "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
-      "seccion": "Agro"
-     },
-     {
-      "id": "1pbrz27",
-      "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1o1dlqq",
-      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1hkh8ez",
-      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "18xuulv",
+      "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -114,29 +114,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-09-30T18:06:28.052Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 53,
     "notas": [
      {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo"
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
      },
      {
-      "id": "122dsf6",
-      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+      "id": "2uqvxt",
+      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol"
      },
      {
-      "id": "76r67w",
-      "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
-      "seccion": "Balcarce"
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "1s10vxl",
-      "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
-      "seccion": "Cultura y agenda"
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -145,62 +145,42 @@
     "titulo": "El repaso del día",
     "hora": "20:30",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-09-30T23:35:09.088Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 44,
     "notas": [
      {
-      "id": "h36tlu",
-      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "10xubmm",
-      "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
+      "id": "1fgr8xb",
+      "titulo": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
       "seccion": "Fútbol"
      },
      {
-      "id": "1ivau49",
-      "titulo": "Cristian Méndez realiza una gira de payadas en Gran Canaria",
-      "seccion": "Cultura y agenda"
+      "id": "1xow9qi",
+      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1dqm02n",
+      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "h7o4xt",
+      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
+      "seccion": "Agro"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "y9vwef",
-     "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-     "cuando": "2026-09-30T13:34:06.307Z"
-    },
-    {
-     "id": "1rpzsy3",
-     "titulo": "Tres jugadores locales integran la selección provincial de pádel",
-     "cuando": "2026-09-30T15:04:58.480Z"
-    },
-    {
-     "id": "h36tlu",
-     "titulo": "La Municipalidad recauda millones en una subasta de tierras",
-     "cuando": "2026-09-30T16:35:26.718Z"
-    },
-    {
-     "id": "76r67w",
-     "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
-     "cuando": "2026-09-30T18:26:44.078Z"
-    },
-    {
-     "id": "1h3b7f0",
-     "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
-     "cuando": "2026-09-30T20:04:06.971Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
+    {
+     "id": "z3c4f",
+     "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "g8dncb",
      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
@@ -226,7 +206,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-09-30T21:34:06.971Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
