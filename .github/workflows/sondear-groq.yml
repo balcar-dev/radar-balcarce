@@ -1,0 +1,21 @@
+# Sondea Groq: qué modelos hay, cuáles aceptan imágenes y cuánto cupo tiene cada uno.
+# A mano (Actions → Sondear Groq → Run workflow). Costo: cero (un pedido mínimo por modelo).
+name: Sondear Groq
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sondear:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node redes/sondear-groq.mjs
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
