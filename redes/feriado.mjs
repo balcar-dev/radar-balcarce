@@ -50,6 +50,8 @@ export function datosParaContar(f, maximo = 260) {
 export function guionFeriado(f, { fecha = new Date(), momento = 'manana' } = {}) {
   const s = semillaDe('feriado', fecha);
   const saludo = { manana: ['Buen día, Balcarce.', 'Muy buen día, Balcarce.'], tarde: ['Buenas tardes, Balcarce.'], noche: ['Buenas noches, Balcarce.'] }[momento];
-  const apertura = variante([`Hoy es feriado: ${f.nombre}.`, `Hoy, feriado nacional: ${f.nombre}.`], s, 'apertura');
+  const apertura = f.alcance && f.alcance !== 'nacional'
+    ? `Hoy es feriado en la ${f.alcance}.`
+    : variante([`Hoy es feriado: ${f.nombre}.`, `Hoy, feriado nacional: ${f.nombre}.`], s, 'apertura');
   return [variante(saludo, s, 'saludo'), apertura, ...datosParaContar(f, 220), 'Que tengan un buen feriado.'].join(' ');
 }

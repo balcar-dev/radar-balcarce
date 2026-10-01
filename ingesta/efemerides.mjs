@@ -326,7 +326,15 @@ export function piezasDeFeriados(feriados = [], curadas = leerCuradas(), { desde
       estado: c ? 'propuesta' : 'por definir',
     });
   }
-  return salida;
+  // Los feriados por decreto que la API no trae (la visita del papa, 2026): van con sus datos y su alcance.
+  for (const x of curadas.extraordinarios ?? []) {
+    if (x.fecha < desde || x.fecha > hasta || salida.some((s) => s.fecha === x.fecha)) continue;
+    salida.push({
+      fecha: x.fecha, nombre: x.nombre, tipo: x.tipo, alcance: x.alcance ?? 'nacional', enfoque: x.enfoque ?? null,
+      datos: (x.datos ?? []).map(conEnlace), citas: [], revisaUnaPersona: !!x.revisaUnaPersona, nota: x.nota ?? null, estado: 'propuesta',
+    });
+  }
+  return salida.sort((a, b) => a.fecha.localeCompare(b.fecha));
 }
 
 /**

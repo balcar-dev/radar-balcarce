@@ -154,12 +154,12 @@ test('los feriados: cada uno con su enfoque, sin los puentes, con Carnaval una s
     { fecha: '2026-11-23', tipo: 'trasladable', nombre: 'Día de la Soberanía Nacional (20/11)' },
     { fecha: '2026-12-09', tipo: 'inamovible', nombre: 'Un feriado que no conocemos' },
   ];
-  const p = piezasDeFeriados(api, leerCuradas());
-  assert.deepEqual(p.map((x) => x.fecha), ['2027-02-08', '2026-10-12', '2026-11-23', '2026-12-09']);
-  assert.match(p[1].enfoque, /nombre de la fecha/);
-  assert.ok(p[1].datos.every((d) => /^https?:/.test(d.fuente) || d.fuente === null), 'las fuentes van con su enlace');
-  assert.equal(p[3].estado, 'por definir');
-  assert.equal(p[3].enfoque, null);
+  const p = piezasDeFeriados(api, leerCuradas()).filter((x) => x.tipo !== 'decreto'); // los de decreto, aparte
+  assert.deepEqual(p.map((x) => x.fecha), ['2026-10-12', '2026-11-23', '2026-12-09', '2027-02-08']);
+  assert.match(p[0].enfoque, /nombre de la fecha/);
+  assert.ok(p[0].datos.every((d) => /^https?:/.test(d.fuente) || d.fuente === null), 'las fuentes van con su enlace');
+  assert.equal(p[2].estado, 'por definir');
+  assert.equal(p[2].enfoque, null);
 });
 
 test('el archivo curado dice qué falta confirmar y no trae nada sin fuente', () => {

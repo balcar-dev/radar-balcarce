@@ -86,3 +86,16 @@ test('el guion del feriado dice sólo lo que está en los datos verificados', ()
   assert.match(g, /Hoy.*feriado.*Diversidad Cultural/);
   assert.match(g, /Colón, en 1492/);
 });
+
+test('los feriados por decreto que la API no trae (la visita del papa) salen, con su alcance', async () => {
+  const { piezasDeFeriados, leerCuradas } = await import('../ingesta/efemerides.mjs');
+  const lista = piezasDeFeriados([], leerCuradas(), { desde: '2026-10-01', hasta: '2026-12-31' });
+  const nov9 = lista.find((f) => f.fecha === '2026-11-09');
+  const nov11 = lista.find((f) => f.fecha === '2026-11-11');
+  assert.equal(nov9?.alcance, 'nacional');
+  assert.equal(nov11?.alcance, 'provincia de Buenos Aires', 'el 11 rige en la provincia: alcanza a Balcarce');
+  assert.ok(!lista.some((f) => f.fecha === '2026-11-10'), 'el 10 es sólo de la Ciudad y Córdoba: no es de acá');
+  for (const f of [nov9, nov11]) assert.ok(f.datos.every((d) => d.fuente), 'cada dato con su fuente');
+  const g = guionFeriado(nov11, { fecha: new Date('2026-11-11T12:00:00-03:00') });
+  assert.match(g, /feriado en la provincia de Buenos Aires/);
+});

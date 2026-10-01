@@ -1,5 +1,5 @@
 {
- "generado": "2026-09-30T17:24:00.304Z",
+ "generado": "2026-10-01T01:49:18.243Z",
  "feriados": [
   {
    "fecha": "2026-10-12",
@@ -36,6 +36,48 @@
      "verificada": true
     }
    ],
+   "revisaUnaPersona": false,
+   "nota": null,
+   "estado": "propuesta"
+  },
+  {
+   "fecha": "2026-11-09",
+   "nombre": "Feriado por la visita del papa León XIV",
+   "tipo": "decreto",
+   "alcance": "nacional",
+   "enfoque": "Qué se decretó y por qué, sin opinar sobre la visita.",
+   "datos": [
+    {
+     "texto": "El Decreto 1103/2026, publicado el 28 de septiembre, declaró feriado nacional el lunes 9 de noviembre por la visita del papa León XIV.",
+     "fuente": "https://chequeado.com/el-explicador/visita-del-papa-leon-xiv-cuales-son-los-feriados-del-9-10-y-11-de-noviembre-y-donde-rigen/"
+    },
+    {
+     "texto": "El papa está en la Argentina entre el 8 y el 11 de noviembre.",
+     "fuente": "https://chequeado.com/el-explicador/visita-del-papa-leon-xiv-cuales-son-los-feriados-del-9-10-y-11-de-noviembre-y-donde-rigen/"
+    }
+   ],
+   "citas": [],
+   "revisaUnaPersona": false,
+   "nota": null,
+   "estado": "propuesta"
+  },
+  {
+   "fecha": "2026-11-11",
+   "nombre": "Feriado en la provincia de Buenos Aires por la visita del papa León XIV",
+   "tipo": "decreto",
+   "alcance": "provincia de Buenos Aires",
+   "enfoque": "Qué se decretó y por qué, sin opinar sobre la visita. Alcanza a Balcarce.",
+   "datos": [
+    {
+     "texto": "El Decreto 1103/2026 declaró feriado el miércoles 11 de noviembre sólo en la provincia de Buenos Aires.",
+     "fuente": "https://chequeado.com/el-explicador/visita-del-papa-leon-xiv-cuales-son-los-feriados-del-9-10-y-11-de-noviembre-y-donde-rigen/"
+    },
+    {
+     "texto": "Ese día el papa León XIV celebra una misa en la basílica de Luján, y se esperan entre tres y cuatro millones de personas.",
+     "fuente": "https://chequeado.com/el-explicador/visita-del-papa-leon-xiv-cuales-son-los-feriados-del-9-10-y-11-de-noviembre-y-donde-rigen/"
+    }
+   ],
+   "citas": [],
    "revisaUnaPersona": false,
    "nota": null,
    "estado": "propuesta"
