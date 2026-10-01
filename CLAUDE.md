@@ -30,6 +30,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 
     npm test              las pruebas (correr SIEMPRE antes de commitear)
     npm run auditar       qué está decidiendo el filtro sobre las noticias de hoy
+    npm run auditar-fotos qué notas tienen foto y, de las que no, por qué (no gasta cupo; `-- --dias=7`)
     npm run panel         el panel de la PC (o ARRANCAR.bat)
     node ingesta/listar-fuentes.mjs    rehace FUENTES.md después de tocar una fuente
     cd web && npm run datos && npm run build     regenerar y compilar (en la PC trabaja en "modo PC")

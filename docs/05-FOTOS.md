@@ -310,3 +310,19 @@ entera y la página sólo la encuadra) y revisarla a ojo antes de guardarla (lo
 hace sólo la IA). Hay que alinear el criterio o el código: está en
 `PENDIENTES.md`, con lo de las fotos de chicos en notas amarillas aprobadas y
 los tres créditos viejos de Wikimedia.
+
+---
+
+## Auditar las fotos (1/10/2026)
+
+    npm run auditar-fotos            las notas de los últimos 3 días
+    npm run auditar-fotos -- --dias=7
+
+Lee `web/data/banco-fotos.json`, `portada.json` y `archivo.json` (`ingesta/auditar-fotos.mjs`, no gasta cupo de IA
+y no toca nada) y muestra: el porcentaje de notas con foto, por sección, y por qué no la tiene cada una de
+las demás. Se mide **por nota**, no por entrada del banco: una entrada "borrada" es una foto podada de una
+nota vieja, no una falla. Los motivos que son **reglas firmes** (menor reconocible, marca de agua, nota
+propia, Policiales sin fuente oficial) no se tocan; los demás (falla de la IA, la foto no se pudo bajar, la
+fuente no trae imagen, no ilustra) son los que se pueden mejorar. El primer resultado (1/10): 86 % de las
+notas con foto en tres días; la causa principal de las que no, los menores reconocibles (12 de 25).
+

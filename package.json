@@ -6,7 +6,8 @@
     "test": "node --test \"pruebas/*.test.mjs\"",
     "panel": "node panel/servidor.mjs",
     "ingesta": "node ingesta/ingesta.mjs",
-    "auditar": "node ingesta/auditar.mjs"
+    "auditar": "node ingesta/auditar.mjs",
+    "auditar-fotos": "node ingesta/auditar-fotos.mjs"
   },
   "keywords": [],
   "author": "",
