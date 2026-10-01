@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T05:31:16.904Z",
- "portada": 59,
+ "generado": "2026-10-01T06:01:10.628Z",
+ "portada": 56,
  "archivo": 690,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-01T05:31:16.929Z",
+  "generado": "2026-10-01T06:01:10.660Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,8 +85,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "y9vwef",
       "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
@@ -101,11 +106,6 @@
       "id": "18xuulv",
       "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -124,6 +124,11 @@
       "seccion": "Deportes"
      },
      {
+      "id": "1fgr8xb",
+      "titulo": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "2uqvxt",
       "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol"
@@ -132,11 +137,6 @@
       "id": "11di7ig",
       "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "12rp30w",
-      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -147,13 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 45,
     "notas": [
-     {
-      "id": "1fgr8xb",
-      "titulo": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
-      "seccion": "Fútbol"
-     },
      {
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
@@ -165,8 +160,13 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1dqm02n",
+      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
       "seccion": "Balcarce"
      }
     ]
@@ -185,12 +185,6 @@
      "id": "1a2z04a",
      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
      "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "1ivau49",
-     "titulo": "Cristian Méndez realiza una gira de payadas en Gran Canaria",
-     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
