@@ -1,64 +1,6 @@
 {
-  "generado": "2026-10-01T00:32:09.409Z",
+  "generado": "2026-10-01T01:01:54.937Z",
   "notas": [
-    {
-      "id": "3b4lyp",
-      "titulo": "Tres balcarceños participan del Campeonato Argentino de Pádel en Rosario",
-      "copete": "Ramiro Pinilla, Tomás Queopomel y Matías Fernández Daguerre integran la delegación bonaerense. El certamen nacional se disputa del 10 al 12 de octubre.",
-      "cuerpo": "Tres deportistas locales integran la selección de la provincia de Buenos Aires para competir en el Campeonato Argentino de Categorías Libres, según informó la Federación de Jugadores de Pádel de la provincia de Buenos Aires. La nómada incluye a Ramiro Pinilla en segunda categoría, junto con Tomás Queopomel y Matías Fernández Daguerre en tercera.\n\nLa competencia reunirá a más de quinientas parejas provenientes de distintos puntos del país en las divisionales que van desde segunda hasta séptima.\n\nLa convocatoria de los representantes locales se concretó tras sumar los puntos necesarios en los torneos selectivos disputados durante la actual temporada en Mar del Plata, La Plata y Necochea.",
-      "guion": "Tres balcarceños participan del Campeonato Argentino de Pádel en Rosario",
-      "seccion": "Deportes",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/deportes/14272-3-balcarcenos-estaran-en-el-campeonato-nacional/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T00:31:14.348Z",
-      "sinFecha": true,
-      "visto": "2026-10-01T00:31:14.348Z",
-      "relevancia": 59,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Tres jugadores locales integran la selección bonaerense de pádel",
-        "El certamen nacional se disputa en Rosario del 10 al 12 de octubre",
-        "Participarán más de quinientas parejas de todo el país"
-      ],
-      "seSabe": [
-        "Ramiro Pinilla competirá en segunda categoría y Tomás Queopomel junto a Matías Fernández Daguerre lo harán en tercera",
-        "La convocatoria surge tras sumar puntos en selectivos de Mar del Plata, La Plata y Necochea",
-        "El torneo se jugará los días 10, 11 y 12 de octubre en Rosario",
-        "La organización corresponde a la Federación Santafesina de Pádel"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Tres jugadores de pádel locales fueron convocados por la federación provincial para representar a Buenos Aires en el Campeonato Argentino. El certamen se disputará del 10 al 12 de octubre en la ciudad de Rosario.",
-      "etiquetas": [
-        "pádel",
-        "Rosario",
-        "campeonato nacional",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/deportes/14272-3-balcarcenos-estaran-en-el-campeonato-nacional/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó la convocatoria de los tres jugadores balcarceños al torneo nacional y detalló fechas, categoría y antecedentes de clasificación."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "tres-balcarcenos-participan-del-campeonato-argentino-de-padel-en"
-    },
     {
       "id": "repaso20260930noche",
       "propia": "repaso",
@@ -258,6 +200,7 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
+        "Olé",
         "TyC Sports",
         "Bolavip Argentina"
       ],
@@ -266,7 +209,7 @@
       "fecha": "2026-09-30T23:09:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T00:31:14.348Z",
-      "relevancia": 79,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -495,14 +438,15 @@
       "guion": "Racing adquiere un terreno lindero a su predio en subasta municipal",
       "seccion": "Balcarce",
       "medios": [
-        "El Diario Balcarce"
+        "El Diario Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/racing-futbol-club-adquirio-un-terreno-677",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T22:47:26.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T23:01:06.136Z",
-      "relevancia": 88,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -622,6 +566,85 @@
       }
     },
     {
+      "id": "t8noy6",
+      "titulo": "Luis Caputo se reúne con el ministro de Economía de Francia en París",
+      "copete": "El titular de Economía mantuvo un encuentro reservado con su par francés y el embajador argentino en el inicio de la Argentina Week en Europa.",
+      "cuerpo": "El ministro de Economía, Luis Caputo, concretó un encuentro reservado en París junto a su par francés, Roland Lescure, y el embajador argentino en ese país, Ian Sielecki.\n\nLa conversación giró en torno a la expansión de los capitales de origen francés en territorio argentino y al apoyo político brindado por la nación europea en las tratativas con el Fondo Monetario Internacional.\n\nLa cita se dio en el arranque de la Argentina Week encabezada por Javier Milei, espacio mediante el cual la administración nacional apunta a captar nuevos desembolsos y robustecer lazos económicos.",
+      "guion": "Luis Caputo se reúne con el ministro de Economía de Francia en París",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/caputo-se-reunio-con-el-ministro-de-economia-de-francia_a6abd8d6bc5ebcb5a82b539b6",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T22:35:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T01:01:10.175Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Luis Caputo mantuvo un encuentro con Roland Lescure en París.",
+        "Participó el embajador argentino Ian Sielecki.",
+        "Dialogaron sobre inversiones francesas y apoyo ante el FMI.",
+        "La reunión se enmarca en la Argentina Week."
+      ],
+      "seSabe": [
+        "Luis Caputo se reunió con Roland Lescure e Ian Sielecki en París.",
+        "Dialogaron sobre inversiones y el respaldo francés en negociaciones con el FMI.",
+        "El encuentro forma parte de la Argentina Week."
+      ],
+      "noConfirmado": [
+        "Los detalles específicos sobre montos de futuras inversiones o plazos de concreción."
+      ],
+      "textoRedes": "El ministro Luis Caputo se reunió en París con su par francés Roland Lescure y el embajador Ian Sielecki en el inicio de la Argentina Week para atraer inversiones y repasar el apoyo del país europeo.",
+      "etiquetas": [
+        "Luis Caputo",
+        "Francia",
+        "Economia",
+        "Argentina Week",
+        "Inversiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/caputo-se-reunio-con-el-ministro-de-economia-de-francia_a6abd8d6bc5ebcb5a82b539b6",
+          "fecha": "2026-09-30T22:35:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los temas centrales del encuentro y el respaldo del país europeo ante el FMI."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/30/luis-caputo-se-reunio-con-el-ministro-de-economia-de-francia-para-impulsar-inversiones-y-fortalecer-el-vinculo-economico/",
+          "fecha": "2026-10-01T00:12:48.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la reunión se dio al comienzo de la Argentina Week encabezada por Javier Milei."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/caputo-se-reunio-con-el-ministro-de-economia-frances-y-destaco-el-respaldo-a-la-argentina-ante-el-fmi/",
+          "fecha": "2026-09-30T23:01:31.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el Gobierno busca aprovechar el evento para profundizar vínculos económicos y atraer inversiones."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "luis-caputo-se-reune-con-el-ministro-de-economia-de-francia-en-paris",
+      "foto": {
+        "archivo": "fotos-notas/t8noy6.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1ivau49",
       "titulo": "Cristian Méndez realiza una gira de payadas en Gran Canaria",
       "copete": "El payador balcarceño presenta su arte en España junto a Emanuel Gabotto. El recorrido cultural incluye cuatro actuaciones hasta el 4 de octubre.",
@@ -636,7 +659,7 @@
       "fecha": "2026-09-30T21:35:01.192Z",
       "sinFecha": false,
       "visto": "2026-09-30T23:31:16.076Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -770,6 +793,87 @@
       }
     },
     {
+      "id": "1yu9ytn",
+      "titulo": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
+      "copete": "La concejal oficialista Florencia Martínez sostuvo que aguardan la resolución del sumario que atraviesa la investigadora en el INTA antes de avanzar con una citación formal.",
+      "cuerpo": "La edil oficialista Florencia Martínez explicó los fundamentos de la postura adoptada por el bloque respecto a la investigadora del INTA Virginia Aparicio y señaló que se aguarda la resolución del sumario administrativo que atraviesa en el organismo. La concejal indicó que actualmente se desconocen los motivos del procedimiento y las razones por las cuales el país fue apartado del proyecto SPRINT, aunque aclaró que no se cuestiona la labor científica desarrollada.\n\nPor último, Martínez adelantó que el cuerpo deliberativo podría impulsar un pedido de informes para conocer detalles sobre la situación administrativa de Aparicio dentro de la institución.",
+      "guion": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
+      "seccion": "Política",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T20:53:48.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T22:01:11.084Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El oficialismo justificó la decisión de no convocar formalmente a la investigadora del INTA Virginia Aparicio.",
+        "La concejal Florencia Martínez indicó que Aparicio atraviesa un sumario interno cuyo resultado se prefiere aguardar.",
+        "Concejales de distintos bloques evalúan mantener encuentros individuales con la científica o impulsar un pedido de informes."
+      ],
+      "noConfirmado": [
+        "Todavía no se conoce la resolución oficial del sumario administrativo que pesa sobre la investigadora dentro del INTA.",
+        "No se informaron públicamente los motivos concretos que originaron dicho procedimiento ni la salida del país del proyecto SPRINT.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El oficialismo explicó por qué no acompañó la convocatoria a la investigadora del INTA Virginia Aparicio en el Concejo Deliberante.",
+      "etiquetas": [
+        "Virginia Aparicio",
+        "Concejo Deliberante",
+        "INTA",
+        "Florencia Martínez",
+        "Salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de la concejal Florencia Martínez sobre los motivos del rechazo a la convocatoria de Virginia Aparicio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "25strz",
+          "titulo": "Concejales del oficialismo y LLA rechazan recibir a Virginia Aparicio",
+          "fecha": "2026-09-28T22:16:06.119Z",
+          "ruta": "/nota/concejales-del-oficialismo-y-lla-rechazan-recibir-a-virginia-aparicio-25strz"
+        },
+        {
+          "id": "113qesp",
+          "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+          "fecha": "2026-09-30T00:31:08.568Z",
+          "ruta": "/nota/petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo-113qesp"
+        },
+        {
+          "id": "q6p856",
+          "titulo": "Concejales reciben a Virginia Aparicio de forma independiente",
+          "fecha": "2026-09-28T22:16:06.119Z",
+          "ruta": "/nota/concejales-reciben-a-virginia-aparicio-de-forma-independiente-q6p856"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-oficialismo-explica-el-rechazo-a-la-convocatoria-de-virginia",
+      "foto": {
+        "archivo": "fotos-notas/1yu9ytn.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "vp5l7j",
       "titulo": "Toyota consigue el primer RIGI automotriz para fabricar autos eléctricos",
       "copete": "El Gobierno nacional aprobó un proyecto de la automotriz japonesa por más de 1300 millones de dólares en la provincia de Buenos Aires. Prevé exportar por 1280 millones anuales y generar puestos de trabajo.",
@@ -859,128 +963,6 @@
       "foto": {
         "archivo": "fotos-notas/vp5l7j.jpg",
         "credito": "Foto: El Cronista"
-      }
-    },
-    {
-      "id": "z3c4f",
-      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-      "copete": "Alumnos de tercer y cuarto año del establecimiento educativo concurrieron a la Sala de los Intendentes. Mantuvieron un diálogo con el jefe comunal sobre el funcionamiento de la administración local.",
-      "cuerpo": "El intendente municipal Esteban Reino recibió al mediodía en la Sala de los Intendentes a estudiantes de tercer y cuarto año del Colegio Santa Rosa de Lima.\n\nDurante la reunión, el jefe comunal conversó con los alumnos sobre las tareas que se desarrollan en el ámbito del gobierno local y la vida institucional de la ciudad. La actividad se enmarcó en una propuesta pedagógica para vincular los contenidos escolares con el funcionamiento de las entidades públicas.",
-      "guion": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/alumnos-del-colegio-santa-rosa-de-lima-visitaron-el-municipio/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T19:53:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T21:01:04.723Z",
-      "relevancia": 90,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El intendente Esteban Reino recibió a estudiantes secundarios este miércoles.",
-        "Participaron alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima.",
-        "Acompañaron las docentes Pamela Valle, Mariela Martínez y Claudia Forte.",
-        "El encuentro se realizó en la Sala de los Intendentes."
-      ],
-      "seSabe": [
-        "El intendente municipal Esteban Reino recibió a los estudiantes este miércoles al mediodía, según informó un medio local.",
-        "Participaron alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima junto a las docentes Pamela Valle, Mariela Martínez y Claudia Forte.",
-        "El encuentro tuvo lugar en la Sala de los Intendentes para dialogar sobre la gestión municipal."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima visitaron este miércoles la Sala de los Intendentes y se reunieron con el intendente Esteban Reino para conocer el funcionamiento del municipio.",
-      "etiquetas": [
-        "Estudiantes",
-        "Municipalidad de Balcarce",
-        "Colegio Santa Rosa de Lima",
-        "Esteban Reino"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/alumnos-del-colegio-santa-rosa-de-lima-visitaron-el-municipio/",
-          "fecha": "2026-09-30T19:53:10.000Z",
-          "oficial": false,
-          "aporte": "Informó la visita de los alumnos del Colegio Santa Rosa de Lima al intendente municipal y detalló los nombres de las docentes acompañantes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "estudiantes-del-colegio-santa-rosa-de-lima-visitan-el-municipio"
-    },
-    {
-      "id": "1xow9qi",
-      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
-      "copete": "La Cámara de Diputados bonaerense distinguirá al profesor balcarceño por su trayectoria en el deporte adaptado y su participación en citas paralímpicas internacionales.",
-      "cuerpo": "La Cámara de Diputados de la provincia de Buenos Aires distinguirá al licenciado en Educación Física y profesor balcarceño Agustín Molpeceres por su trayectoria en el deporte adaptado. El reconocimiento oficial pondrá en valor su labor como entrenador y su aporte al desarrollo de los atletas de alto rendimiento.\n\nMolpeceres integró el cuerpo técnico de la Selección Argentina de boccia en los Juegos Paralímpicos de Río de Janeiro hace diez años y repitió su rol en la misma cita ecuménica celebrada en Tokio 2020.\n\nPara el ámbito local, la distinción significa la revalorización de un profesional que llevó su compromiso con la inclusión y la disciplina a escenarios internacionales.",
-      "guion": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-bonaerense-por-su-trayectoria-en-el-deporte-paralimpico/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T19:34:59.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T21:31:04.804Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Distinción de la Cámara de Diputados bonaerense",
-        "Homenaje al profesor balcarceño Agustín Molpeceres",
-        "Valoración de su paso por los Juegos Paralímpicos"
-      ],
-      "seSabe": [
-        "La Cámara de Diputados bonaerense distinguirá a Agustín Molpeceres.",
-        "El reconocimiento destaca su trayectoria en el deporte adaptado.",
-        "Molpeceres integró el cuerpo técnico de la Selección Argentina de boccia en Río de Janeiro y Tokio 2020."
-      ],
-      "noConfirmado": [
-        "No se informó la fecha exacta en la que se realizará la entrega formal de la distinción.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Cámara de Diputados bonaerense distinguirá al profesor balcarceño Agustín Molpeceres por su trayectoria en el deporte adaptado y su paso por los Juegos Paralímpicos.",
-      "etiquetas": [
-        "Agustín Molpeceres",
-        "deporte adaptado",
-        "Legislatura bonaerense",
-        "Balcarce",
-        "boccia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-bonaerense-por-su-trayectoria-en-el-deporte-paralimpico/",
-          "fecha": "2026-09-30T19:34:59.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el reconocimiento legislativo al profesor balcarceño Agustín Molpeceres por su trayectoria en el deporte paralímpico."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "agustin-molpeceres-recibe-un-reconocimiento-legislativo-en-la",
-      "foto": {
-        "archivo": "fotos-notas/1xow9qi.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1146,7 +1128,7 @@
       "fecha": "2026-09-30T18:42:58.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T21:01:04.723Z",
-      "relevancia": 37,
+      "relevancia": 33,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1196,6 +1178,79 @@
       "foto": {
         "archivo": "fotos-notas/gd6n9s.jpg",
         "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
+      "id": "n3x306",
+      "titulo": "Milei impulsa la inteligencia artificial con menos regulación en el país",
+      "copete": "El Gobierno busca atraer inversiones tecnológicas y construir centros de datos en la Patagonia. El proyecto oficial prevé empresas operadas por agentes de inteligencia artificial bajo ciertas condiciones legales.",
+      "cuerpo": "El presidente Javier Milei busca posicionar a Argentina como un destino para el desarrollo de inteligencia artificial mediante un esquema con menor intervención regulatoria. Ante la ONU, el mandatario ratificó la decisión de no regular de manera preventiva esta tecnología y comparó los temores actuales con la llegada de internet.\n\nLa estrategia oficial apunta a atraer inversiones para instalar centros de datos en la Patagonia. Además, el ministro de Desregulación, Federico Sturzenegger, impulsa una iniciativa para permitir el funcionamiento de empresas operadas por agentes de inteligencia artificial, las cuales deberán contar con una persona física que asuma la responsabilidad legal final.\n\nDistintos especialistas advirtieron sobre los riesgos legales y sociales vinculados a estas medidas. En tanto, Brasil y Chile se mantienen por delante en infraestructura tecnológica regional.",
+      "guion": "Milei impulsa la inteligencia artificial con menos regulación en el país",
+      "seccion": "Tecnología",
+      "medios": [
+        "Ámbito",
+        "Diario Popular"
+      ],
+      "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T18:24:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T01:01:10.175Z",
+      "relevancia": 39,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Milei promueve a Argentina como polo de inteligencia artificial sin regulación preventiva.",
+        "El plan contempla atraer inversiones para construir centros de datos en la Patagonia.",
+        "El proyecto prevé empresas operadas por agentes de IA con un responsable legal humano.",
+        "Especialistas y sectores de la oposición expresaron cuestionamientos sobre los riesgos."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei anunció ante la ONU que no habrá regulación preventiva para la inteligencia artificial.",
+        "El ministro Federico Sturzenegger confirmó modificaciones al proyecto original de empresas operadas por agentes de IA.",
+        "El Gobierno promueve a la Patagonia para la instalación de centros de datos."
+      ],
+      "noConfirmado": [
+        "Todavía falta la aprobación del proyecto en el Congreso nacional.",
+        "No se detallaron los montos específicos de las inversiones extranjeras previstas."
+      ],
+      "textoRedes": "El Gobierno busca posicionar a Argentina como un polo de inteligencia artificial con una estrategia de desregulación, incentivos para centros de datos en la Patagonia y proyectos para empresas operadas por agentes de IA.",
+      "etiquetas": [
+        "Inteligencia artificial",
+        "Gobierno nacional",
+        "Javier Milei",
+        "Federico Sturzenegger",
+        "Tecnología",
+        "Inversiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
+          "fecha": "2026-09-30T18:24:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los anuncios presidenciales en la ONU, el proyecto de empresas de IA y los cuestionamientos de expertos."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/javier-milei-promociona-argentina-como-un-refugio-reglas-la-inteligencia-artificial-n6328706",
+          "fecha": "2026-10-01T00:41:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el enfoque sobre la estrategia de desregulación y los centros de datos en la Patagonia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "milei-impulsa-la-inteligencia-artificial-con-menos-regulacion-en-el",
+      "foto": {
+        "archivo": "fotos-notas/n3x306.jpg",
+        "credito": "Foto: Diario Popular"
       }
     },
     {
@@ -1544,6 +1599,7 @@
       "guion": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol",
       "medios": [
+        "Diario La Vanguardia",
         "El Eco de Tandil",
         "Minuto Uno",
         "El Destape",
@@ -1651,63 +1707,6 @@
       }
     },
     {
-      "id": "p5a6md",
-      "titulo": "Social Pato compite en el Torneo Regional Sub-16 de hóckey en Bahía Blanca",
-      "copete": "La categoría Sub-16 del Club Social y Campo de Pato disputa desde el jueves el Torneo Regional de Clubes F en Bahía Blanca. El equipo debutará con dos presentaciones en la jornada inaugural.",
-      "cuerpo": "La categoría Sub-16 del Club Social y Campo de Pato afronta el Torneo Regional de Clubes F en la ciudad de Bahía Blanca, con una agenda de partidos que se extiende desde el jueves 1 hasta el domingo 4 de octubre. El plantel balcarceño cuenta con la dirección técnica de Matías Antonelli y Ana Luz Salvo.\n\nLa actividad para el conjunto local comienza el jueves con dos presentaciones: a las 12.20 se mide ante Comercial de Mar del Plata y a las 20.40 enfrenta a Racing de Chivilcoy. El viernes a las 15.40 disputa el tercer encuentro de la fase inicial frente a Argentino B de Bahía Blanca, mientras que los cruces del fin de semana se definen según los resultados previos.",
-      "guion": "Social Pato compite en el Torneo Regional Sub-16 de hóckey en Bahía Blanca",
-      "seccion": "Deportes",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/deportes/14270-la-sub-16-de-social-pato-jugara-un-regional/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T17:31:09.698Z",
-      "sinFecha": true,
-      "visto": "2026-09-30T17:31:09.698Z",
-      "relevancia": 59,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Sub-16 de Social Pato juega el Regional en Bahía Blanca.",
-        "El torneo se desarrolla del 1 al 4 de octubre.",
-        "El debut es este jueves frente a Comercial y Racing de Chivilcoy."
-      ],
-      "seSabe": [
-        "El equipo participa en el Torneo Regional de Clubes F en Bahía Blanca del 1 al 4 de octubre.",
-        "El cuerpo técnico está formado por Matías Antonelli y Ana Luz Salvo.",
-        "El debut será el jueves a las 12.20 contra Comercial de Mar del Plata."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "hóckey",
-        "Social Pato",
-        "Bahía Blanca",
-        "Torneo Regional",
-        "Sub-16"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/deportes/14270-la-sub-16-de-social-pato-jugara-un-regional/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalles del fixture, cuerpo técnico y plantel para el torneo regional en Bahía Blanca."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "social-pato-compite-en-el-torneo-regional-sub-16-de-hockey-en-bahia"
-    },
-    {
       "id": "1gv3zir",
       "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
       "copete": "La delegación local detalla su trabajo en la atención de reclamos, el asesoramiento por el subsidio de gas y las gestiones para acceder a prestaciones de salud.",
@@ -1772,6 +1771,113 @@
       }
     },
     {
+      "id": "wjjbma",
+      "titulo": "Román Vega sorprende como titular en la Selección Argentina",
+      "copete": "El lateral izquierdo de 22 años que juega en el Zenit de Rusia integra la lista de 28 convocados por Lionel Scaloni. El equipo nacional enfrenta esta noche a Bolivia en Córdoba.",
+      "cuerpo": "El futbolista formado en las inferiores de Argentinos Juniors también registra un paso por el Barcelona B y fue transferido al fútbol ruso en julio de 2025 tras gestiones en las que también había mostrado interés River Plate. Antes de su salto al exterior, acumuló 36 partidos y un gol en el conjunto de La Paternal, además de integrar las selecciones juveniles Sub-20 y Sub-23.\n\nTras el duelo ante los bolivianos, el seleccionado nacional se medirá contra Burkina Faso el sábado 3 de octubre a las 21 y frente a Benín el martes 6 de octubre a las 20, ambos encuentros en el Estadio Monumental.",
+      "guion": "Román Vega sorprende como titular en la Selección Argentina",
+      "seccion": "Fútbol",
+      "medios": [
+        "Minuto Uno",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "TyC Sports",
+        "Radio Mitre",
+        "Doble Amarilla",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.eldestapeweb.com/deportes/quien-roman-vega-tapado-convocatoria-lionel-scaloni-seleccion-argentina-202691517590",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T15:44:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T22:31:18.689Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Román Vega fue convocado por primera vez a la Selección Argentina.",
+        "El lateral izquierdo de 22 años milita en el Zenit de Rusia.",
+        "El equipo nacional juega esta noche ante Bolivia en Córdoba."
+      ],
+      "seSabe": [
+        "Román Vega integra la nómina de 28 jugadores citados por Lionel Scaloni.",
+        "El lateral izquierdo se formó en Argentinos Juniors y pasó por el Barcelona B antes de llegar al Zenit de Rusia.",
+        "La Selección Argentina enfrenta esta noche a las 21 a Bolivia en el Estadio Mario Alberto Kempes.",
+        "El seleccionado jugará también contra Burkina Faso el sábado 3 de octubre y ante Benín el martes 6 de octubre en el Estadio Monumental."
+      ],
+      "textoRedes": "Román Vega fue convocado por Lionel Scaloni y es titular esta noche en la Selección Argentina ante Bolivia en Córdoba. El lateral izquierdo de 22 años juega en el Zenit de Rusia.",
+      "etiquetas": [
+        "Román Vega",
+        "Selección Argentina",
+        "Lionel Scaloni",
+        "Fútbol",
+        "Zenit"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/quien-roman-vega-tapado-convocatoria-lionel-scaloni-seleccion-argentina-202691517590",
+          "fecha": "2026-09-30T15:44:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la convocatoria de Román Vega, su trayectoria en Argentinos Juniors, Barcelona B y Zenit, y el cronograma completo de los amistosos."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/seleccion-argentina/roman-vega-lista-debutantes-scaloni-seleccion-argentina-id763685.html",
+          "fecha": "2026-09-30T22:21:56.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en su resumen."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/quien-es-roman-vega-la-sorpresa-de-lionel-scaloni-en-la-primera-lista-de-la-seleccion-argentina-tras-el-mundial/",
+          "fecha": "2026-09-30T21:47:57.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presencia del lateral izquierdo entre los 28 citados por Lionel Scaloni."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/seleccion/quien-es-roman-vega-la-sorpresa-de-lionel-scaloni-en-la-formacion-de-argentina-contra-bolivia",
+          "fecha": "2026-09-30T21:22:44.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el defensor surgido en La Paternal fue citado por primera vez y es titular ante Bolivia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "x0r3gd",
+          "titulo": "Avanzan las negociaciones para la continuidad de Lionel Scaloni en la selección",
+          "fecha": "2026-09-26T08:16:07.000Z",
+          "ruta": "/nota/avanzan-las-negociaciones-para-la-continuidad-de-lionel-scaloni-en-la-x0r3gd"
+        },
+        {
+          "id": "1xrha3j",
+          "titulo": "Lionel Scaloni compara el inicio de su ciclo con el recambio actual",
+          "fecha": "2026-09-30T06:16:37.000Z",
+          "ruta": "/nota/lionel-scaloni-compara-el-inicio-de-su-ciclo-con-el-recambio-actual-1xrha3j"
+        },
+        {
+          "id": "infbfx",
+          "titulo": "Lionel Scaloni niega contactos para dirigir a River",
+          "fecha": "2026-09-29T17:38:00.000Z",
+          "ruta": "/nota/lionel-scaloni-niega-contactos-para-dirigir-a-river-infbfx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "roman-vega-sorprende-como-titular-en-la-seleccion-argentina",
+      "foto": {
+        "archivo": "fotos-notas/wjjbma.webp",
+        "credito": "Foto: TyC Sports"
+      }
+    },
+    {
       "id": "h36tlu",
       "titulo": "La Municipalidad recauda millones en una subasta de tierras",
       "copete": "Tres parcelas fiscales fueron adjudicadas en un remate oficial. El Club Racing adquirió uno de los espacios y el dinero se destinará al Hospital Municipal.",
@@ -1779,17 +1885,15 @@
       "guion": "La Municipalidad recauda millones en una subasta de tierras",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/09/30/tres-lotes-municipales-fueron-adjudicados-en-una-subasta-publica/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T15:26:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T15:31:12.935Z",
-      "relevancia": 100,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2426,7 +2530,6 @@
       "guion": "Tres jugadores locales integran la selección provincial de padel",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2685,7 +2788,6 @@
       "guion": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
@@ -2695,7 +2797,7 @@
       "fecha": "2026-09-30T13:00:08.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 100,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2735,83 +2837,6 @@
       "slug": "el-equipo-de-futbol-playa-clasifica-a-la-final-bonaerense"
     },
     {
-      "id": "qglhlg",
-      "titulo": "La inversión real cae un 5,4 por ciento anual en agosto",
-      "copete": "La formación de capital sumó 7.515 millones de dólares durante el octavo mes del año. El sector de la construcción y el rubro de maquinaria registraron bajas interanuales.",
-      "cuerpo": "La inversión real alcanzó los 7.515 millones de dólares en agosto y acumuló una contracción de 5,4 por ciento interanual, de acuerdo con el informe difundido por el Centro de Estudios Económicos de Orlando J. Ferreres y Asociados.\n\nAl discriminar por sectores, la adquisición de maquinaria y equipo disminuyó un 4,1 por ciento anual. En ese rubro, los equipos de fabricación nacional retrocedieron un 5,3 por ciento y las compras externas cayeron un 3,1 por ciento, lo que dejó una merma acumulada del 11,4 por ciento en los primeros ocho meses.\n\nPor su parte, el sector de la construcción se contrajo un 7,1 por ciento y marcó el descenso más pronunciado del sector en el cuatrimestre, con un saldo negativo acumulado del 3,6 por ciento. Desde la consultora privada señalaron que el desempeño general mantiene la debilidad aunque la merma interanual se moderó en comparación con los meses previos.",
-      "guion": "La inversión real cae un 5,4 por ciento anual en agosto",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "C5N",
-        "Diario Popular",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/otra-mala-noticia-para-el-gobierno--la-inversion-real-cayo-5-4--en-agosto_a6abcfa65129df45908d3736a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T12:57:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T14:31:03.728Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La inversión real sumó 7.515 millones de dólares en agosto.",
-        "La baja interanual fue de 5,4 por ciento con una merma acumulada del 7,9 por ciento en el año.",
-        "La construcción cayó un 7,1 por ciento y la compra de maquinaria un 4,1 por ciento."
-      ],
-      "seSabe": [
-        "La inversión real alcanzó los 7.515 millones de dólares en agosto.",
-        "La baja interanual fue de 5,4 por ciento según el centro de estudios privados.",
-        "La acumulada de los primeros ocho meses marca una disminución del 7,9 por ciento."
-      ],
-      "textoRedes": "La inversión real alcanzó los 7.515 millones de dólares en agosto y acumuló una baja interanual del 5,4 por ciento según un informe privado.",
-      "etiquetas": [
-        "inversión",
-        "economia",
-        "agosto",
-        "construccion",
-        "maquinaria"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/otra-mala-noticia-para-el-gobierno--la-inversion-real-cayo-5-4--en-agosto_a6abcfa65129df45908d3736a",
-          "fecha": "2026-09-30T12:57:13.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos globales de la inversión, los porcentajes de cada sector y el análisis de la consultora privada."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/la-inversion-cayo-54-agosto-y-acumula-una-baja-79-lo-que-va-del-ano-n250321",
-          "fecha": "2026-09-30T14:24:48.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la cifra de 7.515 millones de dólares para la inversión real de agosto."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/la-inversion-real-cayo-54-agosto-y-acumula-un-retroceso-79-el-ano-n922270",
-          "fecha": "2026-09-30T14:19:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la inversión representó el 18,6 por ciento del PBI y las caídas específicas en construcción y maquinaria."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-inversion-real-cae-un-5-4-por-ciento-anual-en-agosto",
-      "foto": {
-        "archivo": "fotos-notas/qglhlg.jpg",
-        "credito": "Foto: C5N"
-      }
-    },
-    {
       "id": "5evpzb",
       "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
       "copete": "Los atletas tandilenses se impusieron en la distancia principal de quince kilómetros de la prueba atlética organizada por la peña El Fogón.",
@@ -2821,14 +2846,15 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/09/30/cabrera-y-otero-ganaron-la-nocturna-de-napaleofu/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T12:54:26.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 94,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3106,94 +3132,6 @@
       }
     },
     {
-      "id": "10skxuq",
-      "titulo": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "copete": "Un pedido formal ingresado ante el Ministerio de Desarrollo de la Comunidad bonaerense exige expedientes y pólizas sobre las competencias realizadas el último fin de semana en el circuito serrano.",
-      "cuerpo": "Un pedido formal de acceso a la información pública ingresó el martes ante el Ministerio de Desarrollo de la Comunidad bonaerense para conocer las habilitaciones, inspecciones y mecanismos de control del Autódromo Juan Manuel Fangio. La presentación, impulsada por el periodista Julio César Politano, exige copias de los expedientes, resoluciones y dictámenes vinculados con el evento desarrollado durante el fin de semana del 26 y 27 de septiembre.\n\nEl requerimiento apunta a determinar la situación regulatoria de la Municipalidad de Balcarce y de la Comisión Asesora y Fiscalizadora de la ACTC ante la Comisión Provincial de Automovilismo y Motociclismo. Además, solicita las constancias de las pólizas de seguro obligatorio y los antecedentes técnicos de la autorización provisoria otorgada al circuito. El escrito advierte con recurrir a la vía judicial si el Poder Ejecutivo provincial incumple los plazos legales de respuesta.",
-      "guion": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "seccion": "Política",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T11:15:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T12:01:02.331Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Presentan un pedido de acceso a la información pública ante la Provincia.",
-        "Exigen expedientes sobre habilitaciones, inspecciones y seguros del circuito.",
-        "Apunta a determinar las autorizaciones de la Municipalidad y de la fiscalizadora.",
-        "El autódromo había reabierto el último fin de semana tras quince años."
-      ],
-      "seSabe": [
-        "El pedido formal fue presentado el martes 29 de septiembre por el periodista Julio César Politano.",
-        "La solicitud se dirigió al Ministerio de Desarrollo de la Comunidad bonaerense.",
-        "Se reclaman copias de expedientes, resoluciones y comprobantes de seguros de las competencias del 26 y 27 de septiembre.",
-        "El escrito incluye una reserva de acudir a la vía judicial ante la falta de respuesta oficial."
-      ],
-      "noConfirmado": [
-        "La respuesta oficial del gobierno provincial sobre la documentación solicitada.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Presentan un pedido formal ante la Provincia para conocer las habilitaciones, inspecciones y pólizas de seguro del Autódromo Juan Manuel Fangio tras las competencias del último fin de semana.",
-      "etiquetas": [
-        "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "Provincia de Buenos Aires",
-        "CoPAM",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-          "fecha": "2026-09-30T11:15:42.000Z",
-          "oficial": false,
-          "aporte": "Detalló la presentación del pedido de acceso a la información pública sobre las habilitaciones del autódromo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wgq362",
-          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-29T14:55:00.000Z",
-          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
-        },
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "reclaman-a-la-provincia-datos-sobre-las-habilitaciones-del-autodromo",
-      "foto": {
-        "archivo": "fotos-notas/10skxuq.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "1yqjdtm",
       "titulo": "El Gobierno posterga por un mes la suba impositiva en los combustibles",
       "copete": "El Ejecutivo nacional difirió la actualización de los gravámenes al combustible líquido y al dióxido de carbono hasta noviembre. La medida evita un nuevo traslado a los surtidores durante octubre.",
@@ -3214,6 +3152,7 @@
         "El Día",
         "0221",
         "La Opinión",
+        "La Voz del Pueblo",
         "El Eco de Tandil",
         "Crónica",
         "La Nueva",
@@ -3327,12 +3266,12 @@
         "Agrositio",
         "Agroempresario",
         "El Economista",
-        "Todo Agro",
-        "Noticias Agropecuarias",
         "Bichos de Campo",
         "Agencia DIB",
         "Radio Mitre",
         "Crónica",
+        "Todo Agro",
+        "Noticias Agropecuarias",
         "A24",
         "La Capital (Rosario)"
       ],
@@ -3584,7 +3523,7 @@
       "fecha": "2026-09-30T00:54:04.490Z",
       "sinFecha": false,
       "visto": "2026-09-30T02:31:08.479Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3633,8 +3572,8 @@
         "La Verdad de Ayacucho",
         "Solotc",
         "0223 (Mar del Plata)",
-        "Córdoba Competición",
-        "Campeones"
+        "Campeones",
+        "Córdoba Competición"
       ],
       "enlace": "https://www.0223.com.ar/nota/2026-9-29-21-9-0-tras-la-fiesta-en-el-autodromo-juan-manuel-fangio-dura-sancion-a-werner-multa-millonaria-y-largada-desde-el-fondo",
       "teniaImagenLaFuente": true,
@@ -3935,79 +3874,6 @@
       }
     },
     {
-      "id": "v2h1r4",
-      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "copete": "La Universidad Nacional de Mar del Plata dictará una capacitación de un año y medio en el Centro Universitario. La iniciativa busca fortalecer proyectos productivos mediante una modalidad mixta.",
-      "cuerpo": "El Centro Universitario albergará una nueva diplomatura destinada a la creación y gestión de emprendimientos, a cargo de la Universidad Nacional de Mar del Plata. La propuesta se desarrollará a través del programa Puentes y tendrá una duración de un año y medio bajo una modalidad mixta de cursada.\n\nLa iniciativa surge articulada con la Subsecretaría de Producción y Empleo y la Dirección de Juventud. Según explicó Marina Berardo, la oferta apunta a brindar herramientas de planificación a quienes poseen un proyecto en marcha o buscan transformar una idea en una iniciativa productiva.\n\nComo parte del proceso previo, la semana pasada se concretó un taller introductorio que despertó interés entre los asistentes y tendrá continuidad con un nuevo encuentro antes del inicio de la formación principal.",
-      "guion": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T22:23:55.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T16:01:20.946Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Dictará la Universidad Nacional de Mar del Plata",
-        "Duración de un año y medio en el Centro Universitario",
-        "Modalidad mixta orientada a proyectos productivos",
-        "Articulada mediante el programa Puentes"
-      ],
-      "seSabe": [
-        "La capacitación durará un año y medio según la Universidad Nacional de Mar del Plata.",
-        "Las clases presenciales se dictarán en el Centro Universitario.",
-        "La propuesta combina instancias virtuales y presenciales.",
-        "Marina Berardo explicó los detalles del programa desde la Subsecretaría de Producción y Empleo."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta de inicio de la diplomatura.",
-        "No trascendió el cronograma del próximo encuentro del taller introductorio."
-      ],
-      "textoRedes": "Impulsan una diplomatura universitaria de un año y medio para emprendedores en el Centro Universitario con modalidad mixta.",
-      "etiquetas": [
-        "Diplomatura",
-        "Emprendedores",
-        "Universidad Nacional de Mar del Plata",
-        "Centro Universitario",
-        "Producción y Empleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
-          "fecha": "2026-09-30T11:46:08.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la duración, modalidad y sede de la diplomatura, además de las declaraciones del área municipal."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/impulsan-una-diplomatura-para-la-gestion-y-creacion-de-emprendimientos-en-balcarce-907",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en el resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lanzan-una-diplomatura-universitaria-para-emprendedores-locales",
-      "foto": {
-        "archivo": "fotos-notas/v2h1r4.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "repaso20260929tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
@@ -4150,8 +4016,8 @@
       "guion": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
       "seccion": "Fútbol",
       "medios": [
-        "La Nación",
         "Olé",
+        "La Nación",
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
@@ -4387,15 +4253,12 @@
       "seccion": "Agro",
       "medios": [
         "La Noticia 1",
-        "La Nación",
         "Clarín",
+        "Infocampo",
         "Bichos de Campo",
         "TN (Todo Noticias)",
-        "Agroempresario",
-        "Todo Agro",
-        "Noticias Agropecuarias",
-        "Infocampo",
-        "Infobae"
+        "Infobae",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.clarin.com/rural/reeligieron-andrea-sarnari-presidenta-federacion-agraria-periodo_0_n2GlNmgonO.html",
       "teniaImagenLaFuente": true,
@@ -4488,6 +4351,76 @@
       "foto": {
         "archivo": "fotos-notas/gb1e4h.jpg",
         "credito": "Foto: Clarín"
+      }
+    },
+    {
+      "id": "rtk3io",
+      "titulo": "La Federación Agraria pide una ley que termine con las retenciones",
+      "copete": "Su presidenta, Andrea Sarnari, abrió en Rosario el Congreso Anual de la entidad. Reconoció que la baja de alícuotas prevista para 2027 \"alivió un poco\", pero reclamó que el final de los derechos de exportación lo fije el Congreso.",
+      "cuerpo": "La presidenta de la Federación Agraria Argentina (FAA), Andrea Sarnari, reclamó el martes que las retenciones tengan un final establecido por una ley del Congreso. Lo planteó al abrir en Rosario el Congreso Anual de la entidad, con el secretario de Agricultura de la Nación, Sergio Iraeta, y el gobernador de Santa Fe, Maximiliano Pullaro, entre los presentes.\n\nSarnari reconoció que la reducción de alícuotas que el Gobierno fijó a partir de 2027 \"alivió un poco\", pero sostuvo que las medidas transitorias no alcanzan. Definió a las retenciones como \"el peor de los impuestos\" y pidió además una reforma tributaria integral, porque la suma de impuestos nacionales, provinciales y tasas municipales golpea más a los productores chicos.\n\nTambién reclamó crédito acorde a los tiempos de la producción y mejores caminos rurales y rutas, y ratificó el rechazo de la entidad a UPOV 91, el convenio sobre semillas. El miércoles, los federados elegirán a su nuevo presidente.",
+      "guion": null,
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Agroempresario",
+        "Infocampo",
+        "Bichos de Campo",
+        "Todo Agro"
+      ],
+      "enlace": "https://www.infocampo.com.ar/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-sea-por-ley-y-que-no-vuelvan-mas/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T17:11:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-sea-por-ley-y-que-no-vuelvan-mas/",
+          "fecha": "2026-09-29T17:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/que-no-vuelvan-nunca-mas-fuerte-reclamo-de-federacion-agraria-para-poner-fin-a-las-retenciones-por-nid29092026/",
+          "fecha": "2026-09-29T21:37:11.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/121988/federacion-agraria-pidio-una-ley-para-eliminar-las-retenciones-y-reclamo-cambios-en-impuestos-credito-e-infraestructura/",
+          "fecha": "2026-09-30T17:40:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
+          "fecha": "2026-09-29T22:51:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Todo Agro",
+          "enlace": "https://www.todoagro.com.ar/faa-volvio-a-reclamar-el-fin-de-las-retenciones-necesitamos-politicas-publicas-que-contemplen-la-realidad-y-la-escala-de-los-productores/",
+          "fecha": "2026-09-29T21:28:34.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que",
+      "corregidaAMano": true,
+      "cuerpoAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/rtk3io.jpg",
+        "credito": "Foto: Infocampo"
       }
     },
     {
@@ -5301,110 +5234,39 @@
         "archivo": "fotos-notas/c7rwcn.jpg",
         "credito": "Foto: Clarín"
       }
-    },
-    {
-      "id": "e7jcec",
-      "titulo": "La molienda de soja en agosto alcanza el nivel más alto en diez campañas",
-      "copete": "La Secretaría de Agricultura informa que el procesamiento de soja llegó a las 4.252.151 toneladas en agosto de 2026, lo que representa una suba interanual del 8,81% frente al mismo mes del año anterior.",
-      "cuerpo": "La Secretaría de Agricultura, Ganadería y Pesca de la Nación informó que la molienda de soja alcanzó las 4.252.151 toneladas durante agosto de 2026. Este volumen representa el registro más alto para dicho mes en las últimas diez campañas, abarcando el periodo entre 2016 y 2026.\n\nEl relevamiento oficial detalló que el procesamiento creció en 344.212 toneladas en la comparación interanual, ya que en agosto de 2025 se habían procesado 3.907.939 toneladas. Esta variación positiva marcó un incremento del 8,81% en la actividad industrial del sector.",
-      "guion": "La molienda de soja en agosto alcanza el nivel más alto en diez campañas",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Infobrisas (Radio Brisas)",
-        "Agrositio",
-        "Agroempresario",
-        "Noticias Agropecuarias"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248583-la-molienda-de-soja-en-agosto-fue-la-mayor-de-las-ultimas-10-campanas.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T12:47:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T19:01:06.137Z",
-      "relevancia": 54,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La molienda de soja llegó a 4.252.151 toneladas en agosto de 2026.",
-        "Constituye el volumen más alto de las últimas diez campañas.",
-        "Registró un incremento interanual del 8,81% frente a agosto de 2025."
-      ],
-      "seSabe": [
-        "La molienda de soja alcanzó las 4.252.151 toneladas en agosto de 2026, según la Secretaría de Agricultura.",
-        "El volumen procesado superó en 344.212 toneladas al registrado en agosto de 2025.",
-        "La variación interanual positiva fue del 8,81% en la actividad industrial."
-      ],
-      "textoRedes": "La Secretaría de Agricultura informó que la molienda de soja alcanzó las 4.252.151 toneladas en agosto de 2026 y marcó la cifra más alta de las últimas diez campañas con una suba interanual del 8,81%.",
-      "etiquetas": [
-        "soja",
-        "molienda",
-        "agricultura",
-        "industria"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248583-la-molienda-de-soja-en-agosto-fue-la-mayor-de-las-ultimas-10-campanas.html",
-          "fecha": "2026-09-29T12:47:18.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos oficiales sobre el volumen de molienda de soja en agosto de 2026 y la comparación interanual."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/09/29/la-molienda-de-soja-de-agosto-alcanzo-su-nivel-mas-alto-en-10-anos/",
-          "fecha": "2026-09-29T15:28:04.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la información sin aportar datos adicionales."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/09/29/109609-destacan-una-molienda-de-soja-record-durante-agosto",
-          "fecha": "2026-09-29T18:16:22.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la noticia sin sumar información propia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-molienda-de-soja-en-agosto-alcanza-el-nivel-mas-alto-en-diez",
-      "foto": {
-        "archivo": "fotos-notas/e7jcec.jpg",
-        "credito": "Foto: Agrositio"
-      }
     }
   ],
   "secciones": [
-    "Deportes",
     "Balcarce",
     "Agro",
     "Fútbol",
     "Cultura y agenda",
     "Política",
     "Automovilismo",
-    "Argentina",
     "Economía",
-    "Tecnología"
+    "Argentina",
+    "Tecnología",
+    "Deportes"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 5
+      "cuantas": 4
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 5
+      "cuantas": 4
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
+      "cuantas": 2
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
       "cuantas": 2
     }
   ],
@@ -5412,7 +5274,7 @@
     "ahora": {
       "temp": 8,
       "sensacion": 4,
-      "humedad": 78,
+      "humedad": 80,
       "viento": 19,
       "rumbo": "SO",
       "cielo": "Nublado",
@@ -5437,7 +5299,7 @@
         "min": 7,
         "lluvia": 12,
         "codigo": 51,
-        "viento": 28,
+        "viento": 29,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
@@ -5459,7 +5321,7 @@
         "min": 7,
         "lluvia": 98,
         "codigo": 81,
-        "viento": 24,
+        "viento": 22,
         "milimetros": 12,
         "cielo": "Chaparrones fuertes"
       }
@@ -5785,7 +5647,7 @@
       "id": "8i88s7",
       "titulo": "Murió Peppino Mazzullo, la histórica voz de Topo Gigio…",
       "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "1ur5pa4",
@@ -5848,6 +5710,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "zz0z77",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "1pqkrnn",
       "titulo": "En la previa de la visita del Papa, el Gobierno denunció…",
       "seccion": "Argentina",
@@ -5876,18 +5744,6 @@
       "titulo": "Un argentino buscaba trabajo y terminó como prisionero de…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "1o9rp73",
-      "titulo": "La ANMAT prohibió productos de limpieza de una marca en…",
-      "seccion": "Economía",
-      "motivo": "parece promoción, no noticia: \"publicidad\""
-    },
-    {
-      "id": "zz0z77",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "11a41j5",
@@ -5920,12 +5776,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "iejfcw",
-      "titulo": "Juicio por la muerte de Maradona continuará con nueva…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "50rj2r",
       "titulo": null,
       "seccion": "Argentina",
@@ -5942,6 +5792,18 @@
       "titulo": "Habló el argentino que fue a pelear por Rusia pero cayó…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "3noxlf",
+      "titulo": "La ANMAT prohibió una serie de productos de limpieza por…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "ny4zx0",
+      "titulo": "Fuego cruzado entre los acusados por la muerte de Maradona…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
   "esperandoCuerpo": 6

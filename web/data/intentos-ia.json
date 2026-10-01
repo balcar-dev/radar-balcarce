@@ -2877,9 +2877,9 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "8i88s7": {
-  "intentos": 2,
-  "ultimo": "2026-10-01T00:31:23.236Z",
-  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-01T01:01:18.871Z",
+  "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "8pri82": {
   "intentos": 1,
@@ -3755,6 +3755,11 @@
   "ultimo": "2026-09-30T19:31:48.979Z",
   "motivo": "con cuerpo"
  },
+ "n3x306": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T01:01:18.871Z",
+  "motivo": "con cuerpo"
+ },
  "n5ls7m": {
   "intentos": 2,
   "ultimo": "2026-09-29T14:31:43.418Z",
@@ -4219,9 +4224,9 @@
   "motivo": "con cuerpo"
  },
  "t8noy6": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T00:31:23.236Z",
-  "motivo": "título o bajada: 1 problema (relleno): el copete tiene una frase de relleno sin dato: \"en el marco de\""
+  "intentos": 2,
+  "ultimo": "2026-10-01T01:01:18.871Z",
+  "motivo": "con cuerpo"
  },
  "t9vczu": {
   "intentos": 1,
@@ -4434,9 +4439,9 @@
   "motivo": "con cuerpo"
  },
  "wgvbiv": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T00:01:21.680Z",
-  "motivo": "título o bajada: 3 problemas (numero, relleno): el copete dice 80 y la fuente no lo dice"
+  "intentos": 2,
+  "ultimo": "2026-10-01T01:01:18.871Z",
+  "motivo": "título o bajada: 6 problemas (nombre, numero): el titulo nombra a \"diez\" y la fuente no"
  },
  "wh1os8": {
   "intentos": 2,
