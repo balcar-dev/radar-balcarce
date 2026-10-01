@@ -34,7 +34,7 @@ export const HISTORIAS_FIJAS = [
     nombre: 'El clima de la mañana',
     porQue: 'Antes de salir de casa. Es la pieza que más se mira de todas.',
     activa: true,
-    hora: '07:30',
+    hora: '07:00',
     dias: TODOS,
   },
   {
@@ -56,17 +56,17 @@ export const HISTORIAS_FIJAS = [
   {
     id: 'agenda',
     nombre: 'Qué hacer este fin de semana',
-    porQue: 'El jueves, cuando la gente empieza a planear. Sólo sale si hay eventos cargados.',
+    porQue: 'El jueves al mediodía, cuando la gente empieza a planear. Sólo sale si hay eventos cargados.',
     activa: true,
-    hora: '18:00',
+    hora: '12:00',
     dias: [4],
   },
   {
     id: 'utiles',
     nombre: 'Teléfonos útiles',
-    porQue: 'Una vez por semana. No es noticia: es para que lo guarden en el celular.',
+    porQue: 'Una vez por semana, al mediodía. No es noticia: es para que lo guarden en el celular.',
     activa: true,
-    hora: '11:00',
+    hora: '12:00',
     // Este [2] no decide nada: si nadie fija los días desde el panel, rotan
     // solos, de lunes a viernes, un día distinto cada semana, en GitHub y en
     // la PC por igual (`toca`, más abajo, con diaRotativoDeUtiles de
@@ -75,10 +75,10 @@ export const HISTORIAS_FIJAS = [
   },
 ];
 
-// El feriado: un hueco reservado a las 9:00 que sólo se usa los días de feriado (redes/feriado.mjs).
+// El feriado: un hueco reservado a las 8:00 que sólo se usa los días de feriado (redes/feriado.mjs). "Un día como hoy" sale igual a las 9:00.
 HISTORIAS_FIJAS.push({
   id: 'feriado', nombre: 'El feriado', porQue: 'Los días de feriado, a la mañana: qué se conmemora, con datos verificados. Reserva su hueco aparte de lo demás.',
-  activa: true, hora: '09:00', dias: TODOS,
+  activa: true, hora: '08:00', dias: TODOS,
 });
 
 // Las piezas de participá (30/09): una historia con voz a las 12:00, cuatro días por semana.

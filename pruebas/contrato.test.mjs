@@ -58,10 +58,10 @@ test('el contrato tiene los números del criterio: 3 reels, 6 historias (3 + 2 +
   assert.equal(piezas.filter((p) => p.grupo === 'historia-podcast').length, 3);
   assert.equal(piezas.filter((p) => p.grupo === 'clima').length, 2);
   assert.equal(piezas.filter((p) => p.grupo === 'farmacia').length, 1);
-  // Las horas del contrato: podcasts 10:00, 15:00 y 20:30; clima 7:30 y 20:00; farmacia 19:00.
+  // Las horas del contrato: podcasts 10:00, 15:00 y 21:00; clima 7:00 y 20:00; farmacia 19:00.
   const hora = (id) => piezas.find((p) => p.id === id).hora;
-  assert.deepEqual([hora('reel:noticia1'), hora('reel:noticia2'), hora('reel:podcast')], ['10:00', '15:00', '20:30']);
-  assert.deepEqual([hora('historia:clima-manana'), hora('historia:clima-noche'), hora('historia:farmacia')], ['07:30', '20:00', '19:00']);
+  assert.deepEqual([hora('reel:noticia1'), hora('reel:noticia2'), hora('reel:podcast')], ['10:00', '15:00', '21:00']);
+  assert.deepEqual([hora('historia:clima-manana'), hora('historia:clima-noche'), hora('historia:farmacia')], ['07:00', '20:00', '19:00']);
   assert.equal(CONTRATO_DIARIO.posteosPorDia, 5);
 });
 
@@ -91,7 +91,7 @@ test('el 25/09 real: el podcast de la noche salió, su historia no, y el contrat
     assert.deepEqual(red.faltan.map((p) => p.id), ['historia:podcast']);
     // No es "pendiente": el reel ya salió y el reloj no rearma un podcast que salió.
     assert.equal(red.faltan[0].fase, 'no-se-reintenta');
-    assert.equal(red.faltan[0].hora, '20:30');
+    assert.equal(red.faltan[0].hora, '21:00');
     assert.equal(red.completo, false);
   }
   assert.equal(contratoCompleto(c), false);
@@ -105,7 +105,7 @@ test('el 25/09 a las 21: lo que todavía está a tiempo es "pendiente", no "falt
   const c = contratoDelDia({ libro, fecha: '2026-09-25', ahora: AR('2026-09-25', '20:10') });
   assert.deepEqual(c.instagram.pendientes.map((p) => p.id).sort(), ['historia:podcast', 'reel:podcast']);
   assert.deepEqual(c.instagram.faltan, []);
-  assert.ok(c.instagram.pendientes.every((p) => p.fase === 'futura'), 'todavía no era la hora del podcast (20:30)');
+  assert.ok(c.instagram.pendientes.every((p) => p.fase === 'futura'), 'todavía no era la hora del podcast (21:00)');
   assert.equal(c.instagram.completo, true, 'nada vencido falta: el día va bien');
   assert.match(textoContrato(c), /reels 2\/3 \(pendiente: noche\)/);
 });
@@ -221,7 +221,7 @@ test('un día sin reels por falla: 0 de 3, con los tres nombres y horas, y las h
     assert.equal(red.reels.salieron, 0);
     assert.equal(red.historias.salieron, 3, 'quedan clima mañana, farmacia y clima noche');
     assert.equal(red.faltan.length, 6);
-    assert.deepEqual(red.faltan.filter((p) => p.grupo === 'reel').map((p) => [p.etiqueta, p.hora]), [['podcast mañana', '10:00'], ['podcast tarde', '15:00'], ['podcast noche', '20:30']]);
+    assert.deepEqual(red.faltan.filter((p) => p.grupo === 'reel').map((p) => [p.etiqueta, p.hora]), [['podcast mañana', '10:00'], ['podcast tarde', '15:00'], ['podcast noche', '21:00']]);
     assert.ok(red.faltan.every((p) => p.fase === 'vencida'), 'sin reel no hay "no se reintenta": es que nunca salió');
   }
   assert.match(lineaDeRed(c.facebook), /reels 0\/3 \(falta: mañana, tarde, noche\)/);

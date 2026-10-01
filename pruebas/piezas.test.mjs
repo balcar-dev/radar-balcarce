@@ -280,7 +280,7 @@ test('el cronograma del día trae las fijas y los tres podcasts, sin historias s
   assert.deepEqual(nombres(c), [
     'clima-manana', 'noticia1', 'participa-noticias', 'noticia2', 'farmacia', 'clima-noche', 'podcast',
   ]);
-  assert.equal(c.find((p) => p.nombre === 'clima-manana').hora, '07:30');
+  assert.equal(c.find((p) => p.nombre === 'clima-manana').hora, '07:00');
   assert.equal(c.find((p) => p.nombre === 'podcast').tipo, 'reel');
 });
 
@@ -334,16 +334,16 @@ test('la agenda del jueves la arma también GitHub, con la agenda publicada en l
 });
 
 test('los horarios de los podcasts son los que dice docs/07-REDES.md, y no hay historias de una nota', () => {
-  assert.deepEqual(HORAS_REELS, ['10:00', '15:00', '20:30']);
-  assert.deepEqual(PODCASTS.map((p) => [p.nombre, p.hora]), [['noticia1', '10:00'], ['noticia2', '15:00'], ['podcast', '20:30']]);
+  assert.deepEqual(HORAS_REELS, ['10:00', '15:00', '21:00']);
+  assert.deepEqual(PODCASTS.map((p) => [p.nombre, p.hora]), [['noticia1', '10:00'], ['noticia2', '15:00'], ['podcast', '21:00']]);
   // Una noticia sola en una historia sonaba rara (24/09): van dentro de los podcasts.
   assert.ok(!cronogramaDelDia(LUNES('12:00')).some((p) => /^historia\d/.test(p.nombre)));
 });
 
 test('a cada hora toca lo que corresponde', () => {
   const libro = libroNuevo();
-  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('07:35'), libro })), ['clima-manana']);
-  // El clima de la mañana sigue valiendo hasta las 11:30.
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('07:05'), libro })), ['clima-manana']);
+  // El clima de la mañana sigue valiendo hasta las 11:00.
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('10:05'), libro })), ['clima-manana', 'noticia1']);
   // El reel de las 15:00 vale hasta las 19:00, lo que dura la tarde: a las 19:05
   // ya diría "buenas tardes" de noche (29/09).
@@ -353,7 +353,7 @@ test('a cada hora toca lo que corresponde', () => {
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('12:50'), libro })).includes('noticia1'), true);
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('13:05'), libro })).includes('noticia1'), false);
   // La farmacia de las 19:00 todavía está en su ventana (hasta las 21:00): si no salió, toca.
-  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('20:35'), libro })), ['farmacia', 'clima-noche', 'podcast']);
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('21:05'), libro })), ['farmacia', 'clima-noche', 'podcast']);
 });
 
 test('de madrugada no toca nada', () => {
@@ -365,7 +365,7 @@ test('una corrida que llega tarde todavía alcanza, pero no para siempre', () =>
   const libro = libroNuevo();
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('08:50'), libro })), ['clima-manana']);
   assert.deepEqual(slotsQueTocan({ ahora: LUNES('11:40'), libro }).filter((p) => p.nombre === 'clima-manana'), [],
-    'el clima de las 7:30 ya no sirve a las 11:40');
+    'el clima de las 7:00 ya no sirve a las 11:40');
   assert.equal(VENTANA_MINUTOS, 120);
 });
 

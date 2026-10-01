@@ -104,7 +104,7 @@ test('el 25/09 con Meta simulada como la de verdad: encuentra los duplicados y l
   assert.deepEqual(fb.duplicados.map((d) => `${d.tipo} ${d.hora}`).sort(), ['historia 10:08', 'reel 10:08']);
   assert.deepEqual(ig.duplicados.map((d) => `${d.tipo} ${d.hora}`), ['reel 10:07']);
   // (d) el faltante: la historia del podcast de la noche, con la hora que le tocaba
-  assert.ok(inf.discrepancias.some((d) => /Facebook: falta la historia de podcast noche \(era de las 20:30\)/.test(d)));
+  assert.ok(inf.discrepancias.some((d) => /Facebook: falta la historia de podcast noche \(era de las 21:00\)/.test(d)));
   assert.ok(inf.discrepancias.some((d) => /Instagram: falta la historia de podcast noche/.test(d)));
   // (a) y (b): con este libro no hay
   assert.deepEqual(fb.libroSinMeta, []);

@@ -58,7 +58,7 @@ test('el guion de participá saluda, hace la pregunta y manda al número de la p
   }
 });
 
-// ---- el feriado: un hueco reservado a las 9:00 (30/09)
+// ---- el feriado: un hueco reservado a las 8:00 (30/09; el 1/10 pasó de las 9 a las 8: "Un día como hoy" sale a las 9)
 import { feriadoDelDia, guionFeriado } from '../redes/feriado.mjs';
 
 const FERIADOS = { feriados: [
@@ -67,9 +67,9 @@ const FERIADOS = { feriados: [
   { fecha: '2026-12-25', nombre: 'Navidad', datos: [{ texto: 'Se celebra el 25 de diciembre.' }] },
 ] };
 
-test('el feriado sale a las 9:00 los días de feriado, junto a participá, y no los otros días', () => {
+test('el feriado sale a las 8:00 los días de feriado, junto a participá, y no los otros días', () => {
   const dia = (f) => cronogramaDelDia(new Date(`${f}T12:00:00-03:00`)).filter((p) => p.nombre === 'feriado').map((p) => p.hora);
-  for (const f of ['2026-10-12', '2026-11-23', '2026-12-08', '2026-12-25', '2027-01-01']) assert.deepEqual(dia(f), ['09:00'], f);
+  for (const f of ['2026-10-12', '2026-11-23', '2026-12-08', '2026-12-25', '2027-01-01']) assert.deepEqual(dia(f), ['08:00'], f);
   for (const f of ['2026-10-05', '2026-10-09', '2026-11-20']) assert.deepEqual(dia(f), [], f);
 });
 

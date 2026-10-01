@@ -81,7 +81,7 @@ test('cierre del 25/09 tal como fue: falta la historia de la noche', () => {
   const c = cierreDelDia({ fecha: D, ahora: AR(D, '23:30'), libro: REAL, meta: metaQueCuadra() });
   assert.equal(c.ok, false);
   assert.match(c.texto, /^🔎 Cierre del día/);
-  assert.match(c.texto, /Facebook: falta la historia de podcast noche \(era de las 20:30\)/);
+  assert.match(c.texto, /Facebook: falta la historia de podcast noche \(era de las 21:00\)/);
   assert.match(c.texto, /Instagram: falta la historia de podcast noche/);
 });
 

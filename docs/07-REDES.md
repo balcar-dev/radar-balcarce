@@ -142,14 +142,14 @@ para la siguiente. Si no toca nada, la corrida termina en segundos.
 | Pieza (nombre en el libro) | Tipo | Hora | Vale hasta | Qué días |
 |---|---|---|---|---|
 | Aviso de clima (`aviso-helada`, `aviso-granizo`, `aviso-viento`) | historia | 7:00 | 22:00 | Sólo si hay un aviso grave, hoy o mañana |
-| Clima de la mañana (`clima-manana`) | historia | 7:30 | 11:30 | Todos |
+| Clima de la mañana (`clima-manana`) | historia | 7:00 | 11:00 | Todos |
 | Podcast de la mañana (`noticia1`) | reel + historia | 10:00 | 15:00 | Todos, con 2 notas o más |
-| Teléfonos útiles (`utiles`) | historia | 11:00 | 16:00 | Un día hábil por semana, rota solo |
+| Teléfonos útiles (`utiles`) | historia | 12:00 | 13:00 | Un día hábil por semana, rota solo |
 | Podcast de la tarde (`noticia2`) | reel + historia | 15:00 | 20:00 | Todos, con 2 notas o más |
-| Agenda del fin de semana (`agenda`) | historia | 18:00 | 20:00 | Jueves, si hay eventos en los próximos 4 días |
+| Agenda del fin de semana (`agenda`) | historia | 12:00 | 13:00 | Jueves, si hay eventos en los próximos 4 días |
 | Farmacia de turno (`farmacia`) | historia | 19:00 | 24:00 | Todos |
 | Clima de la noche (`clima-noche`) | historia | 20:00 | 24:00 | Todos |
-| Podcast de la noche (`podcast`) | reel + historia | 20:30 | 24:00 | Todos, con 2 notas o más |
+| Podcast de la noche (`podcast`) | reel + historia | 21:00 | 24:00 | Todos, con 2 notas o más |
 
 - Las horas de las historias fijas son las **de fábrica** de `HISTORIAS_FIJAS`
   (`panel/horarios.mjs`): la pestaña Calendario del panel de la PC no llega a
@@ -353,7 +353,7 @@ y lo arma `redes/guiones.mjs`.
 
 Tres por día: **"El repaso de la mañana"** (`noticia1`, 10:00), **"El repaso
 de la tarde"** (`noticia2`, 15:00) y **"El repaso del día"** (`podcast`,
-20:30). La lista es una sola, `PODCASTS` (`redes/piezas.mjs`). No hay historias
+21:00). La lista es una sola, `PODCASTS` (`redes/piezas.mjs`). No hay historias
 ni reels de una sola nota: dichas de a una sonaban raras.
 
 **Qué notas entran** (`elegirParaPodcast`, `redes/elegir.mjs`; números en

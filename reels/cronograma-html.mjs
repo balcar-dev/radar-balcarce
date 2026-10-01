@@ -132,8 +132,10 @@ th, td { padding: 8px 8px; border-bottom: 1px solid var(--linea-suave); text-ali
 thead th { position: sticky; top: 0; background: var(--tarjeta); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
 tbody th { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--gris); white-space: nowrap; }
 tr:last-child th, tr:last-child td { border-bottom: 0; }
-td.hoy { background: color-mix(in srgb, var(--acento) 7%, transparent); }
-.celda { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 8px; font-weight: 600; background: var(--loc-fondo); color: var(--loc-texto); }
+tr.hueco th, tr.hueco td { background: repeating-linear-gradient(135deg, transparent 0 7px, var(--linea-suave) 7px 8px); color: var(--suave); }
+.celda small { font-weight: 500; opacity: .75; }
+td .celda + .celda { margin-top: 4px; }
+.celda { display: flex; width: fit-content; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 8px; font-weight: 600; background: var(--loc-fondo); color: var(--loc-texto); }
 .celda.locutor { background: var(--lor-fondo); color: var(--lor-texto); }
 .celda.fija { box-shadow: inset 0 0 0 2px var(--fija); }
 .pie { color: var(--suave); font-size: 13.5px; display: grid; gap: 4px; }
@@ -159,7 +161,8 @@ td.hoy { background: color-mix(in srgb, var(--acento) 7%, transparent); }
   <section class="dia" id="dia" role="tabpanel" aria-live="polite"></section>
   <section>
     <h3>La semana de un vistazo</h3>
-    <p class="nota">Cada celda es una pieza a esa hora. Ámbar: la dice la locutora. Negro: el locutor. Con borde verde: fija.</p>
+    <p class="nota">De 7 a 21, una fila por hora. Ámbar: la dice la locutora. Negro: el locutor. Con borde verde: fija. Las filas apagadas son horas sin nada.</p>
+    <p class="nota" id="huecos"></p>
     <div class="desplazable"><table id="grilla"></table></div>
   </section>
   <footer class="pie">
@@ -200,15 +203,23 @@ function dia() {
       '<span class="chip ' + p.voz + '">' + (p.voz === 'locutora' ? 'Locutora' : 'Locutor') + '</span></span></li>').join('') + '</ol>';
 }
 function grilla() {
-  const horas = [...new Set(DATOS.dias.flatMap((d) => d.piezas.map((p) => p.hora)))].sort();
-  let t = '<thead><tr><th></th>' + DATOS.dias.map((d, i) => '<th' + '>' + esc(d.corto) + '</th>').join('') + '</tr></thead><tbody>';
+  // Todas las horas de 7 a 21: las filas vacías son los huecos.
+  const horas = Array.from({ length: 15 }, (_, i) => i + 7);
+  const vacias = [];
+  let t = '<thead><tr><th></th>' + DATOS.dias.map((d) => '<th>' + esc(d.corto) + '</th>').join('') + '</tr></thead><tbody>';
   for (const h of horas) {
-    t += '<tr><th scope="row">' + h + '</th>' + DATOS.dias.map((d, i) => {
-      const p = d.piezas.find((x) => x.hora === h);
-      return '<td data-i="' + i + '">' + (p ? '<span class="celda ' + p.voz + (p.fija ? ' fija' : '') + '" title="' + esc(p.titulo) + '">' + esc(p.corto) + '</span>' : '') + '</td>';
+    const prefijo = (h < 10 ? '0' : '') + h + ':';
+    const hay = DATOS.dias.some((d) => d.piezas.some((p) => p.hora.startsWith(prefijo)));
+    if (!hay) vacias.push(h);
+    t += '<tr class="' + (hay ? '' : 'hueco') + '"><th scope="row">' + h + ':00</th>' + DATOS.dias.map((d) => {
+      const ps = d.piezas.filter((x) => x.hora.startsWith(prefijo));
+      return '<td>' + ps.map((p) => '<span class="celda ' + p.voz + (p.fija ? ' fija' : '') + '" title="' + esc(p.titulo) + ' · ' + esc(p.hora) + '">' + esc(p.corto) + (p.hora.slice(3) !== '00' ? ' <small>' + esc(p.hora) + '</small>' : '') + '</span>').join('') + '</td>';
     }).join('') + '</tr>';
   }
   el('grilla').innerHTML = t + '</tbody>';
+  el('huecos').textContent = vacias.length
+    ? 'Horas sin ninguna pieza en toda la semana: ' + vacias.map((h) => h + ':00').join(', ') + '.'
+    : 'Todas las horas de 7 a 21 tienen alguna pieza.';
 }
 function elegir(i) { actual = i; pestanas(); dia(); const b = el('p' + i); if (b) b.focus({ preventScroll: true }); }
 el('pestanas').addEventListener('click', (e) => { const b = e.target.closest('.pestana'); if (b) elegir(Number(b.dataset.i)); });

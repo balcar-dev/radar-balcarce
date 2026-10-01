@@ -51,15 +51,15 @@ export const VENTANA_MINUTOS = 120;
 // hasta las 18:59, noche desde las 19), así que una pieza de la mañana no puede
 // salir a las 14 diciendo "buen día". Si se le pasa la franja, ese día no sale.
 const VENTANAS = {
-  'clima-manana': 240, // 7:30 → 11:30
+  'clima-manana': 240, // 7:00 → 11:00
   noticia1: 180,       // 10:00 → 13:00 (hasta el 29/09, hasta las 15)
   noticia2: 240,       // 15:00 → 19:00 (hasta el 29/09, hasta las 20)
   farmacia: 300,       // 19:00 → 24:00
   'clima-noche': 240,  // 20:00 → 24:00
-  podcast: 210,        // 20:30 → 24:00
-  utiles: 120,         // 11:00 → 13:00 (hasta el 29/09, hasta las 16)
-  agenda: 60,          // 18:00 → 19:00, los jueves
-  feriado: 180,        // 9:00 → 12:00, los feriados
+  podcast: 180,        // 21:00 → 24:00
+  utiles: 60,          // 12:00 → 13:00 (hasta el 29/09, hasta las 16)
+  agenda: 60,          // 12:00 → 13:00, los jueves
+  feriado: 240,        // 8:00 → 12:00, los feriados
   'participa-noticias': 60, 'participa-evento': 60, 'participa-reclamos': 60, 'participa-nota': 60, // 12:00 → 13:00
 };
 
@@ -102,7 +102,7 @@ export function avisoDeClima(clima) {
 export const POR_CORRIDA = 6;
 
 /** Los tres podcasts del día: mañana, tarde y noche. Los usa reels/plan.mjs. */
-export const HORAS_REELS = ['10:00', '15:00', '20:30'];
+export const HORAS_REELS = ['10:00', '15:00', '21:00'];
 
 /**
  * LA lista de los podcasts (28/09: antes estaba repetida en redes/contrato.mjs,

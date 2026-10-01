@@ -13,7 +13,7 @@ import { DIAS, HISTORIAS_FIJAS, horariosDe, guardarHorario, toca } from '../pane
 test('sin nada guardado, salen los valores de fábrica', () => {
   const h = horariosDe({});
   assert.equal(h.length, HISTORIAS_FIJAS.length);
-  assert.equal(h.find((x) => x.id === 'clima-manana').hora, '07:30');
+  assert.equal(h.find((x) => x.id === 'clima-manana').hora, '07:00');
 });
 
 test('lo guardado pisa el valor de fábrica, pero el nombre y el porqué no cambian', () => {

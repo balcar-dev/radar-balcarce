@@ -3,9 +3,9 @@
 // qué salió, qué falta, qué está duplicado y qué todavía está a tiempo.
 //
 //   POR RED (Facebook e Instagram), CADA DÍA, hora de Balcarce:
-//     · 3 reels: los podcasts de la mañana (10:00), la tarde (15:00) y la noche (20:30);
+//     · 3 reels: los podcasts de la mañana (10:00), la tarde (15:00) y el de la última hora (21:00);
 //     · 3 historias, las de esos mismos podcasts;
-//     · 2 historias de clima: la de la mañana (7:30) y la de la noche (20:00);
+//     · 2 historias de clima: la de la mañana (7:00) y la de la noche (20:00);
 //     · 1 historia de la farmacia de turno (19:00);
 //     · hasta 5 posteos de notas: en Facebook, con enlace; en Instagram, el
 //       espejo como foto del feed. Pueden ser menos si no hubo candidatas
@@ -53,7 +53,7 @@ export const REDES_DEL_CONTRATO = [
 export { PODCASTS };
 
 /** Las de fábrica, por si el cronograma no las trae. */
-const HORAS_FIJAS = { 'clima-manana': '07:30', farmacia: '19:00', 'clima-noche': '20:00', utiles: '11:00' };
+const HORAS_FIJAS = { 'clima-manana': '07:00', farmacia: '19:00', 'clima-noche': '20:00', utiles: '12:00' };
 const ETIQUETAS_FIJAS = {
   'clima-manana': 'clima mañana', farmacia: 'farmacia', 'clima-noche': 'clima noche', utiles: 'teléfonos útiles',
 };

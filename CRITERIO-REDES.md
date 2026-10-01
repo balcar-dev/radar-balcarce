@@ -95,7 +95,7 @@ Lo común a todas:
 - Los horarios están en el código (`redes/piezas.mjs`, `panel/horarios.mjs`) y en
   `docs/07-REDES.md`. La pestaña Calendario del panel de la PC no los cambia en GitHub.
 
-### Clima de la mañana · 7:30 · 10 a 20 segundos
+### Clima de la mañana · 7:00 · 10 a 20 segundos
 
 - **Para qué:** que el vecino sepa qué ponerse y si lleva paraguas.
 - **Cómo se arma:** saludo, temperatura de ahora, un comentario según el día (frío,
@@ -136,7 +136,7 @@ Lo común a todas:
 - **Mal:** "Según La Vanguardia, la de turno es DEL PUEBLO." (la fuente y el nombre en
   mayúsculas).
 
-### Los tres repasos (reel e historia) · 10:00, 15:00 y 20:30
+### Los tres repasos (reel e historia) · 10:00, 15:00 y 21:00
 
 - **Para qué:** a la mañana, las notas para arrancar el día; a la tarde, lo que se fue
   sumando; a la noche, lo que dejó el día y todavía no se contó. **Ninguno repite una
@@ -184,7 +184,7 @@ Lo común a todas:
 - **Mal:** "Ferroviarios ganó (Resumen hecho con IA). Fuente: Puntonueve.
   https://puntonueve.com/…"
 
-### Teléfonos útiles · 11:00, un día hábil por semana · 8 a 20 segundos
+### Teléfonos útiles · 12:00, un día hábil por semana · 8 a 20 segundos
 
 - **Para qué:** que tengan a mano los números que sirven.
 - **Cómo se arma:** saludo de su hora, qué números son (emergencias, hospital, comisaría,
@@ -193,7 +193,7 @@ Lo común a todas:
 - **No lleva:** "esta semana" ni "una vez por semana": los teléfonos son siempre los
   mismos.
 
-### La agenda del jueves · 18:00, si hay eventos · 6 a 25 segundos
+### La agenda del jueves · 12:00, si hay eventos · 6 a 25 segundos
 
 - **Para qué:** contar qué se puede hacer en Balcarce estos días.
 - **Cómo se arma:** saludo, cuántas actividades hay, la primera con su día y su lugar,

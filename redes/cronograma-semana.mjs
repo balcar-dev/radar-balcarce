@@ -44,8 +44,8 @@ export function cronogramaDelDiaConVoz(iso, { conEfemeride = false, fijas = [] }
   const [a, m, d] = iso.split('-').map(Number);
   const feriado = feriadoDelDia(cuando);
   let piezas = cronogramaDelDia(cuando);
-  // El feriado y "Un día como hoy" comparten las 9:00: ese día sale el feriado.
-  if (conEfemeride && !feriado) piezas = [...piezas, { nombre: 'efemeride', tipo: 'reel', hora: HORA_EFEMERIDE }];
+  // "Un día como hoy" sale todos los días a las 9:00, sin moverse ni sacarse (1/10, Hernán); el feriado sale antes, a las 8:00.
+  if (conEfemeride) piezas = [...piezas, { nombre: 'efemeride', tipo: 'reel', hora: HORA_EFEMERIDE }];
   piezas = piezas.sort((x, y) => x.hora.localeCompare(y.hora)).map((p) => ({
     ...p, titulo: titulo(p.nombre), voz: nombreDeVoz(p.nombre), fija: fijas.includes(p.nombre),
   }));
