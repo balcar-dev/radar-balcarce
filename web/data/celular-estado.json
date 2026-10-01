@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T07:41:55.538Z",
- "portada": 45,
- "archivo": 690,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-01T08:01:22.204Z",
+ "portada": 53,
+ "archivo": 691,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-01T07:41:55.571Z",
+  "generado": "2026-10-01T08:01:22.239Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,17 +85,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 46,
     "notas": [
      {
-      "id": "18xuulv",
-      "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
-      "seccion": "Fútbol"
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
      },
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
+      "id": "1fqh4sy",
+      "titulo": "Aymeric Laporte califica a la Argentina de antif\\u00futbol tras la final",
+      "seccion": "Fútbol"
      },
      {
       "id": "1a2z04a",
@@ -103,9 +103,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1fbewyl",
-      "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
-      "seccion": "Agro"
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -119,24 +119,24 @@
     "segundos": 53,
     "notas": [
      {
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
+     },
+     {
       "id": "2uqvxt",
       "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol"
      },
      {
+      "id": "11di7ig",
+      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -147,12 +147,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
+    "segundos": 40,
     "notas": [
      {
-      "id": "1vchyon",
-      "titulo": "Racing compra el terreno lindante al predio Juan Carlos Gentile",
-      "seccion": "Fútbol"
+      "id": "1xow9qi",
+      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "seccion": "Balcarce"
      },
      {
       "id": "1gv3zir",
