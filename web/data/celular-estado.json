@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T04:01:41.424Z",
- "portada": 64,
- "archivo": 689,
+ "generado": "2026-10-01T04:31:19.829Z",
+ "portada": 62,
+ "archivo": 690,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-01T04:01:41.467Z",
+  "generado": "2026-10-01T04:31:19.866Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,12 +85,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "x9mmdo",
@@ -98,14 +98,14 @@
       "seccion": "Automovilismo"
      },
      {
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
       "id": "z3c4f",
       "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "18xuulv",
-      "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
-      "seccion": "Fútbol"
      }
     ]
    },
@@ -124,19 +124,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "2uqvxt",
-      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
+      "id": "18xuulv",
+      "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
      },
      {
       "id": "11di7ig",
       "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "h7o4xt",
+      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
+      "seccion": "Agro"
      }
     ]
    },
@@ -147,17 +147,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "2uqvxt",
+      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1fgr8xb",
       "titulo": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
      },
      {
       "id": "1xow9qi",
@@ -165,8 +165,8 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
       "seccion": "Balcarce"
      }
     ]
