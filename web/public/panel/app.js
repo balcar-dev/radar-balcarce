@@ -22,6 +22,7 @@ import {
   REGLAS_FACEBOOK, proximoPosteo, estadoDePieza, horaEnBalcarce, hoyEnBalcarce,
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
+import { htmlDeRevision, contarRevision } from './revision.js';
 import { estadoPorRed, explicarFalloDeRed, problemasDeHoy, NOMBRE_DE_RED, NOMBRE_DE_PARTE } from './redes-estado.js';
 
 const $ = (s) => document.querySelector(s);
@@ -259,6 +260,18 @@ async function cargar({ archivo = false } = {}) {
   E.descartadas = abierto.pendientes ? abierto.pendientes.filter((n) => n.decision) : [];
   E.papelera = abierto.papelera ?? [];
   if (archivo) E.archivo = (await c.leer(ARCHIVOS.archivo)).json.notas ?? [];
+  await cargarRevision();
+}
+
+/** Los hallazgos de la auditoría con IA: un sobre cifrado por nota (ingesta/auditoria-ia.mjs). Si falla, la pestaña sigue sin ellos. */
+async function cargarRevision() {
+  try {
+    const j = await leerSiHay(E.cliente, ARCHIVOS.auditoria, null);
+    const sobres = j?.sobres ?? {};
+    const ids = Object.keys(sobres);
+    const abiertos = (await Promise.all(ids.map(async (id) => { const e = await abrir(sobres[id], E.llaves); return e ? { id, ...e } : null; }))).filter(Boolean);
+    E.revision = { items: abiertos, abierto: !ids.length || abiertos.length > 0, generado: j?.generado ?? null };
+  } catch { E.revision = null; }
 }
 
 const decididaEnElCelular = (id) => E.decisiones.notas?.[id] ?? null;
@@ -286,7 +299,7 @@ function pestanas() {
   const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
   const items = [
     ['esperan', 'Esperan', esperan], ['sin-cuerpo', 'Sin cuerpo', sinCuerpo],
-    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
+    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['revision', 'Revisión', E.revision ? (contarRevision(E.revision.items).graves ? '⚠' : contarRevision(E.revision.items).total || '✓') : '·'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
   ];
   nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${E.pestana === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
   nav.hidden = false;
@@ -314,6 +327,7 @@ function vistaLista() {
   else if (E.pestana === 'sin-cuerpo') vistaSinCuerpo(cuando);
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
+  else if (E.pestana === 'revision') vistaRevision();
   else if (E.pestana === 'fechas') vistaFechas();
   else if (E.pestana === 'numeros') vistaNumeros();
   else vistaMas();
@@ -469,6 +483,18 @@ async function reintentarParte(pieza, red, parte) {
     E.pestana = 'redes';
     vistaLista();
   }
+}
+
+// ------------------------------------------------------------------ la revisión
+
+function vistaRevision() {
+  pestanas();
+  $('#recargar').hidden = false;
+  if (!E.revision) {
+    app.innerHTML = `<h1>Revisión</h1>${queEs('revision')}<p class="vacio">Todavía no hay revisión: aparece después de la primera lectura de la IA.</p>`;
+    return;
+  }
+  app.innerHTML = htmlDeRevision(E.revision, { esc, haceCuanto, chip, enlace: (e) => (e.ruta ? `https://radarbalcarce.com${e.ruta}` : null) }) + queEs('revision');
 }
 
 // ------------------------------------------------------------------ los números

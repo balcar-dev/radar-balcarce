@@ -29,6 +29,7 @@ export const ARCHIVOS = {
   elegidas: 'web/data/efemerides-elegidas.json',
   estadisticas: 'web/data/estadisticas.json',
   produccion: 'web/data/notas-por-dia.json',
+  auditoria: 'web/data/auditoria-ia.json',
 };
 
 export class ErrorDeGitHub extends Error {

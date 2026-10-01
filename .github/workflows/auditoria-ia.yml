@@ -1,0 +1,75 @@
+# Auditoría IA (1/10/2026): lee las notas nuevas de la portada y avisa lo que esté mal (ortografía, texto roto, sección,
+# temas sensibles, afirmaciones sin sostén, títulos que no corresponden). ETAPA 1: sólo avisa; no corrige nada.
+#
+# Los hallazgos van CIFRADOS para el celular a web/data/auditoria-ia.json (el repositorio es público) y se ven en la pestaña
+# "Revisión" del panel; lo grave, además, por WhatsApp. Usa Groq (gpt-oss-20b), con su propio cupo: no toca el de la lectura.
+# Cuánto cuesta y cómo se lee: ingesta/auditoria-ia.mjs y docs/09-PANEL.md.
+#
+# Corre cada hora (el planificador de GitHub no es puntual; no importa) y a mano (Actions → Auditoría IA → Run workflow,
+# con "simular" no guarda ni avisa).
+
+name: Auditoría IA
+
+on:
+  workflow_dispatch:
+    inputs:
+      simular:
+        description: 'Leer y mostrar, sin guardar ni avisar'
+        type: boolean
+        default: false
+  schedule:
+    - cron: '41 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auditoria-ia
+  cancel-in-progress: false
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Leer las notas nuevas
+        run: node redes/auditar-notas.mjs ${{ github.event.inputs.simular == 'true' && '--simular' || '' }}
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+
+      - name: Guardar lo leído
+        if: always() && github.event.inputs.simular != 'true'
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          git add web/data/auditoria-ia.json
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+          else
+            git commit -m "Auditoría IA · $(date '+%d/%m %H:%M')"
+            # El mismo ciclo que "Vigilancia" y "Redes": traer lo de las otras corridas, resolver choques de
+            # web/data/ con lo de esta corrida (en un rebase, "theirs" es el commit propio) y reintentar.
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo guardar la auditoría después de tres intentos"; exit 1; }
+          fi

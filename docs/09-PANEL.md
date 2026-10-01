@@ -551,3 +551,9 @@ Arma con anticipación "Un día como hoy" y los feriados: las 20 mejores candida
   **Reintentar** (workflow `reintentar.yml`: sube de nuevo el video ya armado, **sin gastar voz**; Redes lo guarda
   tres días como artefacto). La pestaña muestra ⚠ si hay fallos hoy.
 
+
+## La pestaña Revisión y la auditoría con IA (1/10/2026)
+
+Cada hora, el workflow "Auditoría IA" (`.github/workflows/auditoria-ia.yml`, `redes/auditar-notas.mjs`, `ingesta/auditoria-ia.mjs`) lee con Groq (`openai/gpt-oss-20b`, su propio cupo: 1.000 pedidos por día y 8.000 tokens por minuto) las notas **automáticas** de la portada de las últimas 12 horas que todavía no leyó (hasta 12 por corrida, de a 3 por pedido, con 25 segundos entre uno y otro por el tope de tokens). Busca ortografía y puntuación, texto roto (escapes, frases cortadas), sección equivocada, tema sensible (un menor o una víctima), afirmaciones sin sostén y títulos que no corresponden.
+
+**Etapa 1: sólo avisa, no corrige nada.** Los hallazgos van **cifrados** para el celular a `web/data/auditoria-ia.json` (un sobre por nota; el repositorio es público) y se ven en la pestaña **Revisión** del panel, lo grave primero; lo grave (sensible o una acusación sin sostén) llega además por WhatsApp. A la vista sólo queda qué nota se leyó (con la huella de su texto) y cuándo. Lo que escribió una persona no se lee. En una semana se mide cuántos hallazgos eran reales; recién entonces se decide si algo de lo mecánico (la ortografía) se corrige solo. A mano: Actions → Auditoría IA → Run workflow (con "simular" no guarda ni avisa). Prueba: `auditoria-ia.test.mjs`.
