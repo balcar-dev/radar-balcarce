@@ -5,7 +5,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { comoNombre, sinTildes } from '../web/lib/texto.js';
 import {
-  POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
+  POR_PAGINA, POSTALES, rangoDePagina, partirRanura, cuantasPaginas, direccionDePagina,
 } from '../web/lib/paginas.js';
 import { cuando, haceCuanto, ordenarPortada, armarTapa } from '../web/lib/datos.js';
 
@@ -60,11 +60,12 @@ test('ida y vuelta: la dirección que se genera se vuelve a leer igual', () => {
 
 test('las páginas alcanzan para todas las notas y no sobra ninguna', () => {
   // Deportes llegó a tener más de sesenta notas en un día.
-  for (const cuantas of [1, 9, 10, 11, 60, 61]) {
+  for (const cuantas of [1, 9, 15, 16, 25, 26, 60, 61]) {
     const paginas = cuantasPaginas(cuantas);
     let sumadas = 0;
-    for (let i = 1; i <= paginas; i += 1) {
-      sumadas += Math.min(POR_PAGINA, cuantas - (i - 1) * POR_PAGINA);
+    for (let p = 1; p <= paginas; p += 1) {
+      const [desde, hasta] = rangoDePagina(p);
+      sumadas += Math.max(0, Math.min(hasta, cuantas) - desde);
     }
     assert.equal(sumadas, cuantas, cuantas + ' notas en ' + paginas + ' páginas');
   }
@@ -75,10 +76,16 @@ test('una sección sin notas tiene igual una página', () => {
   assert.equal(cuantasPaginas(0), 1);
 });
 
-test('diez notas entran en una sola página', () => {
+test('la primera página trae cinco postales y diez en lista; las otras, diez (1/10)', () => {
   assert.equal(POR_PAGINA, 10);
-  assert.equal(cuantasPaginas(10), 1);
-  assert.equal(cuantasPaginas(11), 2);
+  assert.equal(POSTALES, 5);
+  assert.deepEqual(rangoDePagina(1), [0, 15]);
+  assert.deepEqual(rangoDePagina(2), [15, 25]);
+  assert.deepEqual(rangoDePagina(3), [25, 35]);
+  assert.equal(cuantasPaginas(15), 1);
+  assert.equal(cuantasPaginas(16), 2);
+  assert.equal(cuantasPaginas(25), 2);
+  assert.equal(cuantasPaginas(26), 3);
 });
 
 

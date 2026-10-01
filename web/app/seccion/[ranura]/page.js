@@ -1,13 +1,11 @@
 import {
   porRanura, nombreCorto, SECCIONES, notasDeLaSeccion,
 } from '@/lib/datos';
-import {
-  Etiqueta, FilaNota, Cierre, Invitacion, Hace,
-} from '@/components/piezas';
-import { ImagenDestacada } from '@/components/imagen-destacada';
+import { Cierre, Invitacion } from '@/components/piezas';
+import { Postales, FilaConMiniatura } from '@/components/postales';
 import { notFound } from 'next/navigation';
 import {
-  POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
+  POSTALES, rangoDePagina, partirRanura, cuantasPaginas, direccionDePagina,
 } from '@/lib/paginas';
 import { Migas } from '@/components/ficha';
 import { recortarEn } from '@/lib/texto';
@@ -67,13 +65,11 @@ export default function PaginaSeccion({ params }) {
   const paginas = Math.max(1, cuantasPaginas(todas.length));
   if (pagina > paginas) notFound();
 
-  const notas = todas.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
-  // La grande sólo en la primera página, y elegida por puntaje igual que
-  // en la portada: en la tercera, destacar una nota vieja sería mentir
-  // sobre su importancia.
-  // Las más nuevas primero: la destacada es la más nueva de la página, no la de más puntaje.
-  const principal = pagina === 1 ? notas[0] ?? null : null;
-  const resto = pagina === 1 ? notas.slice(1) : notas;
+  const [desde, hasta] = rangoDePagina(pagina);
+  const notas = todas.slice(desde, hasta);
+  // Las cinco más nuevas, en postales, sólo en la primera página; el resto, en lista (1/10).
+  const postales = pagina === 1 ? notas.slice(0, POSTALES) : [];
+  const resto = pagina === 1 ? notas.slice(POSTALES) : notas;
   const direccion = (p) => direccionDePagina(s.ranura, p);
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
@@ -94,22 +90,11 @@ export default function PaginaSeccion({ params }) {
         </p>
       )}
 
-      {principal && (
-      <article className="destacada">
-        {/* El título de abajo ya enlaza a la nota: éste no se anuncia dos veces. */}
-        <a href={principal.ruta} tabIndex={-1} aria-hidden="true"><ImagenDestacada nota={principal} /></a>
-        <div className="chapa-nota" style={{ marginTop: 16 }}>
-          <Etiqueta seccion={principal.seccion} />
-          <Hace nota={principal} />
-        </div>
-        <h2><a href={principal.ruta}>{principal.titulo}</a></h2>
-        {principal.copete && <p>{principal.copete}</p>}
-      </article>
-      )}
+      <Postales notas={postales} />
 
       {resto.length > 0 && (
         <div style={{ marginTop: 28 }}>
-          {resto.map((n) => <FilaNota nota={n} key={n.id} />)}
+          {resto.map((n) => <FilaConMiniatura nota={n} key={n.id} />)}
         </div>
       )}
 

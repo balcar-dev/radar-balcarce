@@ -207,9 +207,12 @@ test('sin foto, la página de la nota lleva la placa de su sección, con su dibu
   // La destacada de una sección o de un tema: su foto con el crédito debajo, o la placa.
   const destacada = leer('web/components/imagen-destacada.js');
   assert.match(destacada, /export function ImagenDestacada[\s\S]*?<PlacaSeccion seccion=\{nota\?\.seccion\} \/>[\s\S]*?<figcaption className="credito-foto">\{nota\.foto\.credito\}<\/figcaption>/);
-  for (const f of ['web/app/seccion/[ranura]/page.js', 'web/app/tema/[ranura]/page.js']) {
-    assert.match(leer(f), /<ImagenDestacada nota=\{principal\} \/>/, f);
-  }
+  assert.match(leer('web/app/tema/[ranura]/page.js'), /<ImagenDestacada nota=\{principal\} \/>/);
+  // La portada y las secciones usan las postales (1/10): la foto con su crédito debajo, o la placa de la sección.
+  const postales = leer('web/components/postales.js');
+  assert.match(postales, /<PlacaSeccion seccion=\{nota\.seccion\} chica \/>/);
+  assert.match(postales, /<p className="postal-credito">\{foto\.credito\}<\/p>/);
+  for (const f of ['web/app/page.js', 'web/app/seccion/[ranura]/page.js']) assert.match(leer(f), /<Postales notas=/, f);
 });
 
 test('el workflow "Actualizar la web" sube banco-fotos.json y las fotos guardadas (28/09: se armaban y se perdían)', () => {

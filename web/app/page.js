@@ -3,13 +3,13 @@ import {
 } from '@/lib/datos';
 import {
   TarjetaBuzon,
-  Etiqueta, TituloSeccion, FilaNota, Evento, Hace,
+  TituloSeccion, FilaNota, Evento,
 } from '@/components/piezas';
+import { Postales } from '@/components/postales';
 import { HoyEnBalcarce } from '@/components/hoy-balcarce';
 import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { metadatosDePagina } from '@/components/metadatos';
-import { recortarEn } from '@/lib/texto';
 
 // El título de la portada dice qué es y de dónde: es lo que se ve en Google.
 // Es la única página con canónico "/": el layout ya no lo pone para todas.
@@ -121,17 +121,9 @@ export default function Portada() {
         </div>
 
         <div className="principal">
-          {principal && (
-            <article className="destacada">
-              <div className="chapa-nota">
-                <Etiqueta seccion={principal.seccion} />
-                <Hace nota={principal} />
-              </div>
-
-              <h2><a href={principal.ruta}>{principal.titulo}</a></h2>
-              {principal.copete && <p>{principal.copete}</p>}
-            </article>
-          )}
+          {/* Las cinco de arriba, como postales: la que arma armarTapa como principal y las
+              cuatro más nuevas de otras secciones, todas parejas (1/10, Hernán). */}
+          <Postales notas={[principal, ...secundarias]} />
           <Aviso slot="apertura" />
           {/* Los temas que se siguen. Una sección agrupa por tipo de
               noticia; un tema, por historia. En un pueblo las historias
@@ -147,24 +139,6 @@ export default function Portada() {
             </nav>
           )}
 
-
-          {secundarias.length > 0 && (
-            <>
-              <div className="separador" />
-              <div className="rejilla-secundarias">
-                {secundarias.map((n) => (
-                  <article key={n.id}>
-                    <div className="chapa-nota">
-                      <Etiqueta seccion={n.seccion} />
-                      <Hace nota={n} />
-                    </div>
-                    <h3><a href={n.ruta}>{n.titulo}</a></h3>
-                    {n.copete && <p>{recortarEn(n.copete, 150)}</p>}
-                  </article>
-                ))}
-              </div>
-            </>
-          )}
 
           {bloques.map(([seccion, notas]) => (
             <section className="bloque-seccion" key={seccion}>
