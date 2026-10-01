@@ -4356,16 +4356,16 @@
   "cuando": "2026-10-01T18:33:46.756Z"
  },
  "1cdfgu2": {
-  "archivo": "fotos-notas/1cdfgu2.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "Lionel Messi compra el Club Deportivo Eldense de España",
   "enlace": "https://www.lanacion.com.ar/deportes/es-oficial-messi-concreto-la-adquisicion-de-un-club-de-la-segunda-division-espanola-nid01102026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/lionel-ATSFWJ6N5ZF4XKJLEZZSMYLSWU.jpg?auth=a718e6cd12185e1ee92b071f51102161013a371b8461e357b0c42822a68bf6e8&width=1200&height=800&quality=70&smart=true",
   "razon": "Es una foto nítida de Messi, sin marcas de agua ni menores reconocibles, con buen encuadre para la nota.",
-  "cuando": "2026-10-01T18:33:46.756Z"
+  "cuando": "2026-10-01T18:33:46.756Z",
+  "intentado": true,
+  "borrada": true
  },
  "34t457": {
   "archivo": "fotos-notas/34t457.jpg",
@@ -4414,5 +4414,29 @@
   "imagenOriginal": "https://www.ole.com.ar/images/2026/10/01/yiRt0av3B_2000x1500__1.jpg",
   "razon": "La foto A muestra a los jugadores entrenando con claridad, sin marcas añadidas ni menores reconocibles, siendo ideal para la nota.",
   "cuando": "2026-10-01T19:01:37.011Z"
+ },
+ "1onf826": {
+  "archivo": "fotos-notas/1onf826.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Tomás Belmonte sufre la rotura de meniscos y se pierde el resto del año en Boca",
+  "enlace": "https://www.clarin.com/deportes/golpe-boca-toto-belmonte-rompio-meniscos-vasco-arruabarrena-pierde-hombre-clave-mediocampo_0_da22O4ON5s.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/01/FK2vb_mby_2000x1500__1.jpg",
+  "razon": "Muestra claramente a Tomás Belmonte en plena acción de partido, con excelente nitidez y encuadre, libre de marcas añadidas y sin menores.",
+  "cuando": "2026-10-01T19:32:21.772Z"
+ },
+ "is08uu": {
+  "archivo": "fotos-notas/is08uu.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Esteban Edul recibe amenazas tras sus análisis arbitrales",
+  "enlace": "https://www.minutouno.com/deportes/hostigamiento-esteban-edul-recibio-casi-300-amenazas-las-polemicas-estudiantes-vs-rosario-central-n6329028",
+  "imagenOriginal": "https://media.minutouno.com/p/f0aac8d249267d980ff128cfae58fb5a/adjuntos/150/imagenes/043/677/0043677826/1200x675/smart/eduk.jpg",
+  "razon": "La foto B muestra claramente al protagonista con mejor encuadre y sin marcas añadidas por el medio.",
+  "cuando": "2026-10-01T19:32:21.772Z"
  }
 }

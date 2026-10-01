@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T19:01:40.518Z",
- "portada": 63,
- "archivo": 734,
- "esperandoCuerpo": 8,
+ "generado": "2026-10-01T19:33:44.058Z",
+ "portada": 65,
+ "archivo": 735,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-01T19:01:40.559Z",
+  "generado": "2026-10-01T19:33:44.102Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
      {
       "id": "alddw5",
@@ -160,14 +160,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "34t457",
-      "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
-      "seccion": "Economía"
-     },
-     {
       "id": "1sjcoqr",
       "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1mknzh0",
+      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
