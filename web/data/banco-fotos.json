@@ -2812,16 +2812,16 @@
   "cuando": "2026-09-30T12:03:42.100Z"
  },
  "zrdt8x": {
-  "archivo": "fotos-notas/zrdt8x.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "Japón abre su mercado a la carne vacuna argentina tras dos décadas",
   "enlace": "https://www.ambito.com/economia/argentina-vuelve-exportar-carne-japon-despues-20-anos-y-se-abre-un-mercado-us3000-millones-n6328292",
   "imagenOriginal": "https://media.ambito.com/p/34ce711a748b8bf2ace83079ff810166/adjuntos/239/imagenes/043/157/0043157066/1200x675/917x333:937x353/frigorifico-carne.jpg",
   "razon": "Es la única foto que ilustra claramente la actividad industrial cárnica sin marcas de agua ni menores, cumpliendo con todos los requisitos editoriales.",
-  "cuando": "2026-09-30T13:32:18.412Z"
+  "cuando": "2026-09-30T13:32:18.412Z",
+  "intentado": true,
+  "borrada": true
  },
  "1h321lc": {
   "archivo": "fotos-notas/1h321lc.jpg",
@@ -3684,12 +3684,16 @@
   "intentos": 1
  },
  "1fqh4sy": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1fqh4sy.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Aymeric Laporte califica a la Argentina de antif\\u00futbol tras la final",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-01T03:01:14.849Z",
-  "intentos": 3
+  "enlace": "https://www.tycsports.com/seleccion-argentina/aymeric-laporte-apunto-contra-argentina-por-el-mundial-y-la-trato-de-antifutbol-id763698.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/09/30/991808/aymeric-laporte_1440x810.webp",
+  "razon": "La foto B muestra claramente al jugador en acción durante el partido contra Argentina, sin marcas de agua de medios ni menores reconocibles.",
+  "cuando": "2026-10-01T21:17:58.617Z"
  },
  "1ac6tw2": {
   "intentado": true,
@@ -4514,5 +4518,53 @@
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1716/1716037/6abeaa55e2dda_600_315!.jpg?s=47629f0dcac3408e47f819ee286fb257&d=1790823600",
   "razon": "Es la única foto sin marcas de agua ni menores reconocibles, con un plano cerrado y claro de la protagonista.",
   "cuando": "2026-10-01T20:38:55.571Z"
+ },
+ "1w64u7p": {
+  "archivo": "fotos-notas/1w64u7p.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Real Madrid pierde con el Hapoel Tel Aviv y profundiza su crisis en Europa",
+  "enlace": "https://www.ole.com.ar/basquet/real-madrid-basquet-facundo-campazzo-gabriel-deck-euroliga-derrotas-hapoel-tel-aviv_0_fkI1o57EhX.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/10/01/Ddj9LLSkp_2000x1500__1.jpg",
+  "razon": "Es la única foto disponible, tiene buena nitidez y cumple con los requisitos de la nota.",
+  "cuando": "2026-10-01T21:17:58.617Z"
+ },
+ "1gkvf0p": {
+  "archivo": "fotos-notas/1gkvf0p.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El consumo de pollo supera por primera vez al de carne vacuna",
+  "enlace": "https://www.eldia.com/la-ciudad/por-primera-vez-en-la-historia-el-consumo-de-pollo-supero-al-de-carne-vacuna-y-la-tendencia-tambien-se-percibe-en-la-plata-la-ciudad_1790887860",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1790888188029.jpg?&cw=1200&ch=630",
+  "razon": "La foto C ilustra bien la carnicería sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-01T21:17:58.617Z"
+ },
+ "gs0rwg": {
+  "archivo": "fotos-notas/gs0rwg.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Científicos descubren 57 nuevas especies marinas frente a la costa",
+  "enlace": "https://www.lanacion.com.ar/sociedad/confirman-el-hallazgo-de-57-nuevas-especies-en-los-canones-submarinos-del-mar-argentino-nid01102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/una-hembra-de-pulpo-incubando-huevos-detras-de-un-CODGPVJD7JBL5I322VIZ46XOVM.jpg?auth=901709c9ef45a9410454b797ace5f3bcbaf4a8d3243636055158100282980938&width=1200&height=800&quality=70&smart=true",
+  "razon": "Muestra claramente una de las nuevas especies marinas descubiertas, tiene gran calidad y no posee marcas de agua ni menores.",
+  "cuando": "2026-10-01T21:17:58.617Z"
+ },
+ "t6wzlv": {
+  "archivo": "fotos-notas/t6wzlv.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Boca presenta su nuevo plan para ampliar la Bombonera a más de 80.000 lugares",
+  "enlace": "https://www.ambito.com/deportes/boca-presento-el-proyecto-ampliar-la-bombonera-tendra-capacidad-mas-80000-espectadores-n6328983",
+  "imagenOriginal": "https://media.ambito.com/p/c666b48c1527e8abbe2acf52d85c08f0/adjuntos/239/imagenes/043/677/0043677797/boca-ampliacion-bombonera.jpeg",
+  "razon": "Muestra claramente el proyecto de ampliación del estadio con excelente nitidez y sin marcas ni menores.",
+  "cuando": "2026-10-01T21:17:58.617Z"
  }
 }

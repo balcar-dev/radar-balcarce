@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T21:01:52.720Z",
- "portada": 64,
- "archivo": 740,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-01T21:18:24.331Z",
+ "portada": 66,
+ "archivo": 743,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-01T21:01:52.751Z",
+  "generado": "2026-10-01T21:18:24.366Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,11 +147,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 47,
     "notas": [
      {
-      "id": "1vmovug",
-      "titulo": "El RENAPER instala un móvil de documentación",
+      "id": "o1vynh",
+      "titulo": "La Cooperativa corta la luz el viernes en un sector",
       "seccion": "Balcarce"
      },
      {
@@ -202,15 +202,15 @@
    ],
    "cola": [
     {
-     "id": "1vmovug",
-     "titulo": "El RENAPER instala un móvil de documentación",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "1mknzh0",
      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1vmovug",
+     "titulo": "El RENAPER instala un móvil de documentación",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
