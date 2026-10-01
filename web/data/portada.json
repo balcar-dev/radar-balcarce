@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T19:53:34.953Z",
+  "generado": "2026-10-01T20:01:22.438Z",
   "notas": [
     {
       "id": "repaso20261001tarde",
@@ -239,10 +239,10 @@
         "Olé",
         "Clarín",
         "0223 (Mar del Plata)",
+        "Minuto Uno",
         "Infobae",
         "TN (Todo Noticias)",
         "TyC Sports",
-        "Minuto Uno",
         "Bolavip Argentina",
         "Vavel Argentina"
       ],
@@ -517,6 +517,7 @@
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
+        "A24",
         "TyC Sports",
         "Olé",
         "Crónica",
@@ -1124,7 +1125,7 @@
       "fecha": "2026-10-01T15:01:12.943Z",
       "sinFecha": false,
       "visto": "2026-10-01T15:01:12.943Z",
-      "relevancia": 98,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1521,6 +1522,7 @@
         "La Nación",
         "Perfil",
         "El Cronista",
+        "Minuto Uno",
         "C5N",
         "Noticias Argentinas (NA)",
         "Clarín",
@@ -3881,7 +3883,7 @@
       "fecha": "2026-09-30T18:58:35.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T22:31:18.689Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4929,7 +4931,7 @@
     "ahora": {
       "temp": 10,
       "sensacion": 4,
-      "humedad": 61,
+      "humedad": 62,
       "viento": 24,
       "rumbo": "SO",
       "cielo": "Parcialmente nublado",
@@ -5332,10 +5334,10 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1htl2lu",
-      "titulo": "La Corte anuló la absolución de Milani y ordenó revisar el…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"homicidio\""
+      "id": "1oytmjq",
+      "titulo": "La Corte Suprema revocó la absolución de César Milani",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "11mi9eu",
@@ -5368,6 +5370,12 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "1qoiem7",
+      "titulo": "A seis meses del tiroteo, secuestraron un arma tras un…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "10ybc9u",
       "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
       "seccion": "Política",
@@ -5392,5 +5400,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 6
 }
