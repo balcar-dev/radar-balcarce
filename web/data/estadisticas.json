@@ -536,6 +536,275 @@
         "vistas": 3,
         "interacciones": 1
       }
+    },
+    {
+      "cuando": "2026-10-01T14:03:15.857Z",
+      "web": {
+        "u12": {
+          "visitas": 10,
+          "vistas": 22
+        },
+        "a12": {
+          "visitas": 32,
+          "vistas": 63
+        },
+        "u24": {
+          "visitas": 42,
+          "vistas": 85
+        },
+        "a24": {
+          "visitas": 46,
+          "vistas": 290
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 25
+          },
+          {
+            "camino": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0",
+            "vistas": 10
+          },
+          {
+            "camino": "/nota/bajo-fondo-y-nahuel-gonzalez-salvo-se-presentan-el-domingo-en-la-casa-m212r6",
+            "vistas": 8
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 3,
+        "vistas": 631,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 50,
+        "alcance": 3,
+        "vistas": 7,
+        "interacciones": 1
+      }
     }
-  ]
+  ],
+  "dias": {
+    "2026-09-29": {
+      "notas": {
+        "1nyo5j6": 16,
+        "tx9q5q": 12,
+        "8ydg1": 11,
+        "f3xat8": 9,
+        "wgq362": 8,
+        "709xqq": 8,
+        "h7o4xt": 8,
+        "1asj6cl": 7,
+        "1fpyvha": 6,
+        "12rp30w": 6,
+        "1qudzsc": 6,
+        "1tgeg0m": 5,
+        "1hkh8ez": 4,
+        "repaso20260929noche": 4,
+        "1j7xy5x": 4,
+        "2e3etr": 4,
+        "113qesp": 4,
+        "14iq63v": 4,
+        "1s56ua": 4,
+        "8213y6": 4,
+        "1pbrz27": 4,
+        "17j3wna": 4,
+        "tttn9w": 3,
+        "1j6ui2n": 3,
+        "1jf1w7c": 3,
+        "105bdce": 3,
+        "1puwvvm": 3,
+        "13cwgql": 3,
+        "riobys": 2,
+        "11jl9w6": 2,
+        "62c0pz": 2,
+        "da6b6d": 2,
+        "1t74fyv": 2,
+        "1acx84s": 2,
+        "1vzdxxe": 2,
+        "4rzvaf": 2,
+        "25strz": 2,
+        "436uz0": 2,
+        "fnl2h5": 2,
+        "1ytgm6c": 2,
+        "15o4k9f": 1,
+        "infbfx": 1
+      },
+      "paginas": {
+        "/": 134,
+        "/seccion/argentina": 3,
+        "/util": 2
+      },
+      "paises": {
+        "AR": 263,
+        "US": 43,
+        "IE": 5,
+        "NL": 4,
+        "SE": 4,
+        "CN": 2,
+        "KR": 2,
+        "DE": 2
+      },
+      "referentes": {
+        "facebook.com": 25,
+        "directo": 15,
+        "google.com": 2
+      },
+      "horas": [
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        39,
+        4,
+        0,
+        4,
+        2,
+        0,
+        23,
+        0,
+        8,
+        0,
+        19,
+        88,
+        5,
+        125
+      ],
+      "visitas": 42,
+      "vistas": 325,
+      "dispositivos": {
+        "mobile": 252,
+        "desktop": 73
+      }
+    },
+    "2026-09-30": {
+      "notas": {
+        "1h3b7f0": 10,
+        "76r67w": 6,
+        "122dsf6": 4,
+        "y9vwef": 3,
+        "h36tlu": 3,
+        "1j6ui2n": 3,
+        "1pbrz27": 3,
+        "1hkh8ez": 2,
+        "1rpzsy3": 2,
+        "1s10vxl": 2,
+        "1a2z04a": 2,
+        "1o1dlqq": 2,
+        "10xubmm": 2,
+        "jul3w9": 2
+      },
+      "paginas": {
+        "/": 19,
+        "/seccion/agro": 4,
+        "/dolar": 2,
+        "/util": 2,
+        "/agenda": 2
+      },
+      "paises": {
+        "US": 45,
+        "AR": 12,
+        "SE": 12,
+        "IE": 3,
+        "CN": 3
+      },
+      "referentes": {
+        "facebook.com": 29,
+        "directo": 8,
+        "google.com": 1
+      },
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        0,
+        2,
+        3,
+        2,
+        9,
+        2,
+        9,
+        4,
+        4,
+        14,
+        0,
+        14,
+        0
+      ],
+      "visitas": 38,
+      "vistas": 75,
+      "dispositivos": {
+        "desktop": 58,
+        "mobile": 17
+      }
+    },
+    "2026-10-01": {
+      "notas": {
+        "m212r6": 8,
+        "6xex85": 2,
+        "ff9n91": 2,
+        "1fqh4sy": 2
+      },
+      "paginas": {
+        "/": 6,
+        "/util": 2
+      },
+      "paises": {
+        "AR": 8,
+        "IE": 7,
+        "US": 7
+      },
+      "referentes": {
+        "facebook.com": 6,
+        "directo": 4
+      },
+      "horas": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        11,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visitas": 10,
+      "vistas": 22,
+      "dispositivos": {
+        "mobile": 12,
+        "desktop": 10
+      }
+    }
+  }
 }
