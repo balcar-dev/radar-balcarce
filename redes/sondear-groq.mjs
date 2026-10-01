@@ -20,5 +20,6 @@ for (const id of modelos) {
     method: 'POST', headers: h,
     body: JSON.stringify({ model: id, max_tokens: 8, messages: [{ role: 'user', content: [{ type: 'text', text: 'di ok' }, { type: 'image_url', image_url: { url: PNG } }] }] }),
   });
-  console.log(`${id}: texto ${texto.status} · imagen ${imagen.status} · pedidos/día ${num(texto, 'x-ratelimit-limit-requests')} (quedan ${num(texto, 'x-ratelimit-remaining-requests')}) · tokens/min ${num(texto, 'x-ratelimit-limit-tokens')} (quedan ${num(texto, 'x-ratelimit-remaining-tokens')})`);
+  const cuerpo = imagen.status === 200 ? '' : ` · imagen dice: ${(await imagen.text()).replace(/s+/g, ' ').slice(0, 220)}`;
+  console.log(`${id}: texto ${texto.status} · imagen ${imagen.status} · pedidos/día ${num(texto, 'x-ratelimit-limit-requests')} (quedan ${num(texto, 'x-ratelimit-remaining-requests')}) · tokens/min ${num(texto, 'x-ratelimit-limit-tokens')} (quedan ${num(texto, 'x-ratelimit-remaining-tokens')})${cuerpo}`);
 }
