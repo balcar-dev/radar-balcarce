@@ -611,3 +611,19 @@ las estadísticas y las auditorías están en su tabla.
 | **La auditoría semanal no corre** | El vigilante avisa si `web/data/auditoria.json` tiene más de 10 días | Correr "Auditoría" a mano (Actions → Auditoría → Run workflow) |
 | **Las medidas de `formatos.mjs` quedaron viejas** (90 días) | La auditoría semanal avisa por WhatsApp | Volver a verificarlas (`FORMATOS.md`) |
 | **Faltan permisos de estadísticas en `META_TOKEN`** | El resumen dice qué le falta | Regenerar el token con `read_insights` e `instagram_manage_insights` (una persona) |
+
+## Lo que no salió y el reintento (1/10/2026)
+
+Antes un fallo de publicación sólo quedaba en el registro de la corrida y en el WhatsApp. Ahora queda en el
+libro (`web/data/redes.json`, `problemas`, con la clave `dia/pieza/red/parte`; parte = reel, historia o
+historia-del-reel; se guardan tres días) y se borra cuando sale (`registrarProblema` y `limpiarProblema`,
+`redes/publicar-piezas.mjs`).
+
+**Caso real del 1/10:** el reel de las 10 se publicó recién a las 10:35, porque las corridas de las 10:04 y 10:05
+fallaron al bajar `ffmpeg` (GitHub contestó 504). Después Instagram rechazó tres veces la historia del reel
+("La subida del video falló (400) Request processing failed") y quedó sin historia, mientras Facebook sí la subió.
+
+**Reintentar sin gastar voz:** el workflow "Reintentar pieza" (`.github/workflows/reintentar.yml`, botón en el
+panel) baja el video del artefacto `piezas-<corrida>` que "Redes" guarda tres días y lo sube con
+`redes/reintentar.mjs`, sin pedir la voz de nuevo (cupo: 10 audios por día). Comparte el candado `redes`.
+

@@ -149,3 +149,18 @@ eligió en el panel: ahí se ven las diferencias de criterio.
 `node ingesta/generar-efemerides.mjs --desde=AAAA-MM-DD --dias=31` tarda unos 10
 minutos la primera vez (mide cuántos idiomas conocen cada tema) y menos de 2 con la
 memoria que deja en la carpeta temporal. Se corre a mano una vez por mes.
+
+## La propuesta por consenso de auditorías (1/10)
+
+Para armar el mes se exportan las candidatas (`ingesta/exportar-efemerides.mjs`) y se le pasan a tres IA con
+enfoques distintos: editor local, audiencia y video, y riesgo y exactitud (la que puede vetar). Cada una
+contesta un renglón por día. `node ingesta/combinar-auditorias.mjs A.txt B.txt RIESGO.txt --errores=ids
+--ya-murieron=ids` las junta (`ingesta/combinar-auditorias.mjs`): una principal vale 5, un "sí" 3 y un
+"opcional" 1; veta la de riesgo o dos que digan "no"; lo que tiene un error de datos no es principal ni "sí";
+una fecha patria habla sola. Escribe `propuesta` en `efemerides-candidatas.json`.
+
+**Ojo:** correr `generar-efemerides.mjs` de nuevo reescribe la propuesta con la de reglas. Si pasa, volver a
+combinar las auditorías. Las auditorías de octubre de 2026 dejaron anotados datos dudosos de varias candidatas
+(el "primer automóvil de 1866", fechas de las sondas Venera, la fecha de fundación del Observatorio de La
+Plata); están marcadas "dato a confirmar" en la revisión del mes.
+

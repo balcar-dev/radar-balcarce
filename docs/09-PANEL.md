@@ -535,3 +535,19 @@ Lo vigilan las pruebas `celular.test.mjs`, `celular-app.test.mjs`,
 ## La pestaña Fechas (30/09)
 
 Arma con anticipación "Un día como hoy" y los feriados: las 20 mejores candidatas de cada día para elegir una principal, y el enfoque de cada feriado para aprobarlo o pedir cambios. Lo elegido queda en `web/data/efemerides-elegidas.json`. Cómo se generan las candidatas y cómo se afina el criterio: `docs/13-EFEMERIDES.md`.
+
+## Publicar, borradores y reintentos (1/10/2026)
+
+- **"Publicar" en Esperan y en Sin cuerpo.** Un solo toque: la IA escribe la nota, el verificador la
+  controla contra las fuentes y, si no marca nada, sale en la próxima actualización. Si marca algo,
+  muestra el texto para decidir. "Escribirla con IA para revisarla" queda para quien quiere leerla antes.
+- **El borrador no se pierde.** Si se vuelve atrás, la nota muestra "Hay un borrador que escribió la IA…";
+  si la app se cerró, "Buscar su último borrador" lo trae de GitHub (cifrado, sólo para ese celular).
+- **Sin cuerpo explica por qué.** Cada nota dice cuántos medios la cuentan, la lista pone arriba las más
+  contadas y, cuando la IA agotó los tres intentos, dice por qué rechazó el verificador (copia de la
+  fuente, relleno, un número o un nombre que no coincide). El motivo viaja en `esperando-cuerpo.json`.
+- **Redes, red por red.** La pestaña Redes parte cada pieza de hoy en reel, historia, Instagram y
+  Facebook (`web/public/panel/redes-estado.js`). Lo que falló muestra el motivo en castellano y un botón
+  **Reintentar** (workflow `reintentar.yml`: sube de nuevo el video ya armado, **sin gastar voz**; Redes lo guarda
+  tres días como artefacto). La pestaña muestra ⚠ si hay fallos hoy.
+

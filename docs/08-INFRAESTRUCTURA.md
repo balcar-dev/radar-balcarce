@@ -92,6 +92,7 @@ celular", que tarda un minuto (`09-PANEL`).
 | **Auditar voz** (`auditar-voz.yml`) | A mano (opcional: `explorar`) | `npm ci`, `reels/auditar-voz.mjs [--explorar]` | `GEMINI_API_KEY_REDES` | Nada | 15 min |
 | **Ver Facebook** (`ver-facebook.yml`) | A mano | `redes/ver-facebook.mjs` | `META_TOKEN` | Nada | 5 min |
 | **Prueba de estadísticas** (`prueba-estadisticas.yml`) | A mano | `redes/estadisticas.mjs` | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN` | Nada | 5 min |
+| **Reintentar pieza** (`reintentar.yml`) | Botón del panel o a mano | `redes/reintentar.mjs` | `META_TOKEN`, `REDES_ACTIVAS` | Nada de voz: sube de nuevo el video que "Redes" guardó tres días | 2 min |
 | **Prueba de Gemini** (`prueba-gemini.yml`) | A mano | `reels/probar-gemini.mjs` (un pedido mínimo) | `GEMINI_API_KEY_REDACCION` | Nada | El de GitHub |
 | **Prueba de WhatsApp** (`prueba-whatsapp.yml`) | A mano | `redes/probar-whatsapp.mjs` (manda un mensaje y muestra la respuesta de CallMeBot, sin la clave ni el teléfono) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | Nada | 5 min |
 

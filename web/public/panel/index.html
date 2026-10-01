@@ -140,6 +140,11 @@
   .barras-valor { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
   .barras-fondo { height: 8px; background: var(--linea); border-radius: 4px; margin-top: 4px; overflow: hidden; }
   .barras .meta, .tile .meta { font-size: 13px; color: var(--suave); }
+  .partes { list-style: none; margin: 6px 0 0; padding: 0; }
+  .partes li { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--linea); }
+  .partes li:first-child { border-top: 0; }
+  .partes .meta { flex-basis: 100%; font-size: 13px; color: var(--suave); }
+  .partes .boton { min-height: 38px; margin-left: auto; }
   .barras-relleno { height: 100%; background: var(--verde); border-radius: 4px; }
   .demo { background: var(--ambar-fondo); color: var(--ambar); text-align: center; font-size: 13px; padding: 6px; }
 </style>

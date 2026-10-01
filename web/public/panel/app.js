@@ -22,6 +22,7 @@ import {
   REGLAS_FACEBOOK, proximoPosteo, estadoDePieza, horaEnBalcarce, hoyEnBalcarce,
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
+import { estadoPorRed, explicarFalloDeRed, problemasDeHoy, NOMBRE_DE_RED, NOMBRE_DE_PARTE } from './redes-estado.js';
 
 const $ = (s) => document.querySelector(s);
 const app = $('#app');
@@ -285,7 +286,7 @@ function pestanas() {
   const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
   const items = [
     ['esperan', 'Esperan', esperan], ['sin-cuerpo', 'Sin cuerpo', sinCuerpo],
-    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', '◷'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
+    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
   ];
   nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${E.pestana === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
   nav.hidden = false;
@@ -414,6 +415,8 @@ function vistaRedes() {
     <p class="estado">${deHoy ? `Las notas de cada repaso se calcularon ${esc(haceCuanto(r.generado))}; lo que ya salió está al día.` : 'Es la previa de ayer: la de hoy se arma en la próxima actualización de la web.'}</p>
     <h2>Hoy</h2>
     <ul class="cronograma">${piezas}</ul>
+    <h2>Qué salió y qué no, red por red</h2>
+    ${seccionPorRed(r, hoy)}
     <h2>Qué cuenta cada repaso</h2>
     ${repasos}
     <h2>Facebook (y su foto en Instagram)</h2>
@@ -423,6 +426,49 @@ function vistaRedes() {
     ${cola.length ? `<ol class="lista-simple">${cola.map((n) => `<li>${n.marcada ? '<span class="marca">→ la mandó una persona</span> ' : ''}${chip(n.seccion)}${esc(n.titulo ?? tituloDe(n.id) ?? '')}</li>`).join('')}</ol>
       <p class="ayuda">Sale la primera de la cola cuando toca. Para mandar otra, abrila en Publicadas y tocá "Mandar también a las redes".</p>`
     : `<p class="estado">No hay notas en la cola. Entran solas las de Balcarce con relevancia alta, y las que manda una persona, de las últimas ${reglas.edadMaximaHoras} horas.</p>`}`;
+}
+
+// ------------------------------------------------- qué salió y qué no, red por red
+
+/** Cada pieza de hoy, partida en reel, historia, Instagram y Facebook, con el motivo si algo falló y un botón para reintentar. */
+function seccionPorRed(r, hoy) {
+  const estados = estadoPorRed({ libro: E.libro, piezas: r.piezas ?? [], dia: hoy });
+  if (!estados.length) return '<p class="estado">Hoy no hay piezas armadas.</p>';
+  const icono = { ok: '✓', mal: '✕', espera: '⏳' };
+  return estados.map(({ pieza, partes }) => `<div class="caja"><h3>${esc(pieza.hora)} · ${esc(pieza.que)}</h3><ul class="partes">${partes.map((p) => `<li>
+      <span>${esc(NOMBRE_DE_RED[p.red])} · ${esc(NOMBRE_DE_PARTE[p.parte])}</span>
+      <span class="est ${p.clase}">${icono[p.clase]} ${esc(p.texto)}</span>
+      ${p.clase === 'mal' ? `<span class="meta">${esc(p.error !== null ? explicarFalloDeRed(p.error) : 'No quedó anotado por qué: pasó su horario sin armarse (o es de antes de que se registraran los fallos). Sin video guardado no se puede reintentar.')}</span>` : ''}
+      ${p.puedeReintentar ? `<button type="button" class="boton" data-accion="reintentar" data-pieza="${esc(pieza.nombre)}" data-red="${esc(p.red)}" data-parte="${esc(p.parte)}">Reintentar</button>` : ''}</li>`).join('')}</ul></div>`).join('');
+}
+
+/** Sube de nuevo una parte que no salió, con el video que ya estaba armado (no gasta voz). */
+async function reintentarParte(pieza, red, parte) {
+  const r = await preguntar({
+    titulo: '¿Reintentar?', texto: `Se vuelve a subir ${NOMBRE_DE_PARTE[parte].toLowerCase()} a ${NOMBRE_DE_RED[red]} con el video que ya estaba armado: no gasta voz. Tarda un par de minutos.`, si: 'Sí, reintentar',
+  });
+  if (!r.ok) return;
+  $('#pestanas').hidden = true;
+  app.innerHTML = '<div class="girando"></div><p class="vacio">Subiéndolo de nuevo…<br>Tarda un par de minutos.</p>';
+  const marca = marcaNueva();
+  try {
+    await E.cliente.disparar('reintentar.yml', { pieza, red, parte, dia: hoyEnBalcarce(), marca });
+    let corrida = null;
+    for (let i = 0; i < 60; i += 1) {
+      await dormir(5000);
+      corrida = corridaConMarca(await E.cliente.corridas('reintentar.yml'), marca);
+      if (corrida?.status === 'completed') break;
+    }
+    if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Mirá en un rato la pestaña Redes.');
+    await cargar({ archivo: !!E.archivo });
+    E.pestana = 'redes';
+    vistaLista();
+    aviso(corrida.conclusion === 'success' ? 'Listo: salió.' : 'Volvió a fallar: abajo se ve el motivo.', { ms: 9000 });
+  } catch (e) {
+    aviso(explicarError(e), { ms: 9000 });
+    E.pestana = 'redes';
+    vistaLista();
+  }
 }
 
 // ------------------------------------------------------------------ los números
@@ -926,6 +972,8 @@ document.addEventListener('click', async (ev) => {
       titulo: 'Pedirle a la IA que la escriba', texto: 'Tarda un minuto. No se publica nada hasta que lo revises.', si: 'Escribir', conPedido: 'Algo para pedirle (opcional): "que sea corta", "que empiece por el horario"…',
     });
     if (r.ok) pedirALaIA(tipo, id, r.texto);
+  } else if (accion === 'reintentar') {
+    reintentarParte(el.dataset.pieza, el.dataset.red, el.dataset.parte);
   } else if (accion === 'publicar-ia') {
     const r = await preguntar({
       titulo: '¿Publicarla?', texto: 'La IA la escribe (tarda un minuto) y el verificador la controla contra las fuentes. Si no encuentra problemas, sale sola en la próxima actualización. Si encuentra algo, te la muestra para que decidas.', si: 'Sí, publicarla',
