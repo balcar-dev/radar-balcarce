@@ -426,6 +426,71 @@ export function aplicarFichas(notas, fichas = {}, { esperarSinFicha = false, yaP
   return { notas: salida, cambios };
 }
 
+// ------------------------------------------------- las parejas sospechosas (1/10)
+
+// Para Groq: gpt-oss-20b, que tiene su propio cupo (1.000 pedidos por día) y deja libre el del 120b,
+// que es el respaldo de la lectura. Es sólo texto.
+const MODELO_GROQ_PAREJAS = 'openai/gpt-oss-20b';
+
+const INSTRUCCION_PAREJAS = `Cada par son dos notas de un medio de Balcarce, publicadas con poco tiempo de diferencia.
+Para cada par decidí si cuentan EXACTAMENTE el mismo hecho: el mismo suceso o la misma noticia, aunque estén escritas con otras palabras o con distinto detalle.
+NO es el mismo hecho si son dos noticias distintas sobre el mismo tema (la pole y la carrera, una práctica y otra, dos partidos), si es un anuncio y su resultado, o si cambia la persona, el lugar, la fecha o la cifra principal.
+Ante la duda, mismo = false.
+Devolvé un objeto JSON {"pares":[{"clave":"…","mismo":true|false}]} con una entrada por cada par, con la clave que se te dio.`;
+
+const pedidoDeParejas = (parejas) => `${INSTRUCCION_PAREJAS}
+
+${JSON.stringify(parejas.map(({ clave, a, b }) => ({
+    clave,
+    a: { titulo: a.titulo, texto: String(a.resumenFuente ?? a.copete ?? '').slice(0, 280), medios: (a.medios ?? []).slice(0, 3), fecha: a.fecha },
+    b: { titulo: b.titulo, texto: String(b.resumenFuente ?? b.copete ?? '').slice(0, 280), medios: (b.medios ?? []).slice(0, 3), fecha: b.fecha },
+  })), null, 1)}`;
+
+/** Lee la respuesta { pares: [{ clave, mismo }] } (o la lista sola) y deja sólo lo válido: { clave: boolean }. */
+export function leerRespuestaDeParejas(texto, validas) {
+  let obj;
+  try { obj = JSON.parse(texto); } catch { throw new Error('la respuesta no es JSON'); }
+  const lista = Array.isArray(obj) ? obj : Array.isArray(obj?.pares) ? obj.pares : (Object.values(obj ?? {}).find(Array.isArray) ?? []);
+  const salida = {};
+  for (const p of lista) if (validas.has(p?.clave) && typeof p.mismo === 'boolean') salida[p.clave] = p.mismo;
+  return salida;
+}
+
+/**
+ * Pregunta por parejas de notas si cuentan el mismo hecho: { clave: true|false } con lo que la IA
+ * contestó (lo que no contestó no está). Gemini primero; si falla o se queda sin cupo, Groq. Lanza
+ * si fallan los dos.
+ */
+export async function confirmarParejas(parejas, { clave, claveRespaldo, fetchFn = fetch } = {}) {
+  if (!parejas.length) return {};
+  const validas = new Set(parejas.map((p) => p.clave));
+  const prompt = pedidoDeParejas(parejas);
+  let falla = null;
+  if (clave) {
+    try {
+      const res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
+        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0 } }),
+        signal: AbortSignal.timeout(60_000),
+      });
+      if (!res.ok) { const e = new Error(`HTTP ${res.status}`); e.status = res.status; throw e; }
+      const j = await res.json();
+      return leerRespuestaDeParejas(j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '', validas);
+    } catch (e) { falla = e; }
+  }
+  if (!claveRespaldo) throw falla ?? new Error('sin clave');
+  const res = await fetchFn('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', authorization: `Bearer ${claveRespaldo}` },
+    body: JSON.stringify({ model: MODELO_GROQ_PAREJAS, messages: [{ role: 'user', content: prompt }], response_format: { type: 'json_object' }, temperature: 0 }),
+    signal: AbortSignal.timeout(60_000),
+  });
+  if (!res.ok) { const e = new Error(`Groq HTTP ${res.status}`); e.status = res.status; throw e; }
+  const j = await res.json();
+  return leerRespuestaDeParejas(j.choices?.[0]?.message?.content ?? '', validas);
+}
+
 // ------------------------------------------------------------ las repetidas
 //
 // La misma noticia contada por tres medios con títulos distintos salía tres

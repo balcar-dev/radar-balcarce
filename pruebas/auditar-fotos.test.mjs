@@ -20,7 +20,7 @@ test('cada caso del banco cae en su motivo', () => {
   assert.equal(motivoDeLaNota(nota('g'), { razon: 'La única imagen disponible es el logotipo del medio y no ilustra la nota.' }), 'logo');
   assert.equal(motivoDeLaNota(nota('h'), { razon: 'Ninguna de las fotos ilustra la muestra de la Escuela de Arte.' }), 'noIlustra');
   assert.equal(motivoDeLaNota(nota('i'), { razon: 'Groq también falló: HTTP 429', intentos: 1 }), 'fallaReintentable');
-  assert.equal(motivoDeLaNota(nota('j'), { razon: 'Groq también falló: HTTP 413', intentos: 3 }), 'fallaAgotada');
+  assert.equal(motivoDeLaNota(nota('j'), { razon: 'Groq también falló: HTTP 413', intentos: 5 }), 'fallaAgotada');
   assert.equal(motivoDeLaNota(nota('k'), { origen: 'error', error: 'no se pudo volver a bajar la elegida', intentos: 1 }), 'fallaReintentable');
   assert.equal(motivoDeLaNota(nota('l'), { razon: 'sin fotos para comparar', intentos: 3 }), 'fuenteSinFoto');
   assert.equal(motivoDeLaNota(nota('m'), { razon: 'algo que nadie previó' }), 'otra');
@@ -50,7 +50,7 @@ test('las reglas firmes son las que dicen CLAUDE.md: menores y marcas de agua', 
 test('el resumen del banco separa lo podado de lo descartado y de lo que falló', () => {
   const r = resumenDelBanco({
     a: { archivo: 'fotos-notas/a.jpg' }, b: { borrada: true }, c: { razon: 'incluye menores de edad reconocibles' },
-    d: { razon: 'Groq también falló: HTTP 429', intentos: 1 }, e: { razon: 'Groq también falló: HTTP 429', intentos: 3 },
+    d: { razon: 'Groq también falló: HTTP 429', intentos: 1 }, e: { razon: 'Groq también falló: HTTP 429', intentos: 5 },
   });
   assert.deepEqual(r, { entradas: 5, conFoto: 1, borradas: 1, descartadas: 1, fallas: 2, agotadas: 1 });
 });

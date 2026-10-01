@@ -180,6 +180,7 @@ test('la letra que elige la IA se entiende aunque no venga sola (29/09: "se sele
 // --------------------------------------------------- la página de la nota
 
 import fs from 'node:fs';
+import path from 'node:path';
 const leer = (f) => fs.readFileSync(new URL(`../${f}`, import.meta.url), 'utf8').replace(/\r\n/g, '\n');
 
 test('la página de la nota muestra la foto sólo si hay, con el crédito en el epígrafe, nunca en la imagen', () => {
@@ -264,4 +265,48 @@ test('elegirFotosNuevas guarda la foto achicada (jpg) y la anota así en el banc
   const { banco, archivos } = await elegirFotosNuevas([nota], { clave: 'g', claveRespaldo: null, fetchFn, achicar: async () => Buffer.from('chica') });
   assert.equal(banco.n9.archivo, 'fotos-notas/n9.jpg', 'una PNG achicada queda como jpg');
   assert.equal(archivos['fotos-notas/n9.jpg'].toString(), 'chica');
+});
+
+// ------------------------------------- el repaso y las fuentes nuevas (1/10/2026)
+
+test('el repaso: una falla que ya se probó tres veces se mira otra vez cada seis horas, dos veces más; con más fuentes, también lo descartado', () => {
+  const ahora = new Date('2026-10-01T18:00:00Z');
+  const hace = (min) => new Date(ahora.getTime() - min * 60_000).toISOString();
+  const falla = (intentos, min) => ({ intentado: true, origen: 'ninguna', razon: 'Groq también falló: HTTP 429', cuando: hace(min), intentos });
+  assert.equal(sePuedeReintentar(falla(3, 90), { ahora }), false, 'todavía no pasaron seis horas');
+  assert.equal(sePuedeReintentar(falla(3, 400), { ahora }), true, 'primer repaso');
+  assert.equal(sePuedeReintentar(falla(4, 400), { ahora }), true, 'segundo repaso');
+  assert.equal(sePuedeReintentar(falla(5, 4000), { ahora }), false, 'ya se rindió');
+  // Lo que descartó la IA (menores, marca) sólo se vuelve a mirar si la nota ganó fuentes desde la última vez.
+  const descartada = { intentado: true, origen: 'ninguna', razon: 'Todas las fotos muestran menores de edad reconocibles', cuando: hace(120), intentos: 1, fuentes: 1 };
+  assert.equal(sePuedeReintentar(descartada, { ahora, fuentes: 1 }), false);
+  assert.equal(sePuedeReintentar(descartada, { ahora, fuentes: 3 }), true, 'se unió con otra nota y tiene dos fuentes más');
+  assert.equal(sePuedeReintentar({ ...descartada, cuando: hace(20) }, { ahora, fuentes: 3 }), false, 'pero no antes de una hora');
+  assert.equal(sePuedeReintentar({ ...descartada, fuentes: undefined }, { ahora, fuentes: 3 }), false, 'sin saber cuántas había, no se adivina');
+});
+
+test('la foto elegida se guarda con la imagen que ya se bajó para compararla, sin volver a bajarla (1/10, la virgen de la tosquera)', async () => {
+  const { elegirFotosNuevas } = await import('../web/scripts/fotos-notas.mjs');
+  const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==', 'base64');
+  let bajadas = 0;
+  const fetchFn = async (url) => {
+    if (/generativelanguage/.test(url)) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'ok', fotos: [{ letra: 'A', tiene_marca: false, menor: false }] }) }] } }] }) };
+    if (/foto\.png/.test(url)) {
+      bajadas += 1;
+      // La segunda vez el medio la rechaza (como pasaba con los medios que no dejan bajarla dos veces).
+      return bajadas === 1 ? { ok: true, headers: { get: () => 'image/png' }, arrayBuffer: async () => png } : { ok: false, status: 403 };
+    }
+    return { ok: true, text: async () => '<meta property="og:image" content="https://medio.com/foto.png">' };
+  };
+  const nota = { id: 'v1', titulo: 'La virgen de la tosquera', seccion: 'Cultura y agenda', fuentesConsultadas: [{ medio: 'Medio', enlace: 'https://medio.com/nota' }] };
+  const { banco, archivos } = await elegirFotosNuevas([nota], { clave: 'k', fetchFn, achicar: async (b) => ({ buffer: b, ext: 'png' }) });
+  assert.equal(bajadas, 1, 'una sola descarga');
+  assert.ok(banco.v1.archivo, JSON.stringify(banco.v1));
+  assert.equal(Object.keys(archivos).length, 1);
+});
+
+test('el criterio de menores de la IA mira lo que se ve, no el tema de la nota (1/10)', () => {
+  const f = fs.readFileSync(path.join(import.meta.dirname, '..', 'ingesta/fotos.mjs'), 'utf8');
+  assert.match(f, /sólo por lo que SE VE en la imagen, no por el tema de la nota/);
+  assert.match(f, /Si dudás si es menor, ponelo en true/, 'ante la duda sigue siendo menor');
 });

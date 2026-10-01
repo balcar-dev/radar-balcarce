@@ -333,3 +333,10 @@ notas con foto en tres días; la causa principal de las que no, los menores reco
 ### Groq (sondeo del 1/10)
 
 La clave gratis de Groq (`redes/sondear-groq.mjs`, workflow "Sondear Groq", a mano) ve cuatro modelos de texto: `openai/gpt-oss-120b`, `openai/gpt-oss-20b` y `qwen/qwen3.8-27b` (1.000 pedidos por día y 8.000 tokens por minuto cada uno) y `allam-2-7b` (7.000 por día, 6.000 por minuto; está pensado para árabe). **El único que acepta imágenes es `qwen/qwen3.8-27b`**: los gpt-oss rechazan las imágenes. Por eso no hay un segundo modelo de visión de respaldo en Groq, y con 8.000 tokens por minuto una comparación con varias fotos puede dar 413 o 429.
+
+### El repaso y las fuentes nuevas (1/10/2026)
+
+- **Reintentos**: una nota que quedó sin foto por una falla (sin cupo de la IA, sin fotos para comparar, no se pudo bajar) se prueba de nuevo a la hora, hasta tres veces; pasadas las tres, un repaso cada 6 horas, dos veces más (`REINTENTOS_DE_FOTO`). Lo que la IA descartó a propósito (menores, marcas) no se vuelve a preguntar... salvo que la nota gane fuentes: el banco guarda cuántas tenía (`fuentes`) y, si ahora tiene más, se mira otra vez.
+- **Notas que se juntan**: dos notas que cuentan el mismo hecho con otras palabras se fusionan (regla 94) y las fuentes de las dos se suman antes de buscar la foto, así se compara la foto de todos los medios.
+- **No se vuelve a bajar la elegida**: se guarda la imagen que ya se bajó para compararla (antes, "no se pudo volver a bajar la elegida" dejó sin foto a una nota con nueve fuentes).
+- **Menores**: la IA decide sólo por lo que se ve en la imagen, no por el tema de la nota (una nota "sobre secundarios" no quiere decir que la foto tenga chicos); un adulto a simple vista y quien tiene la cara tapada no cuentan. Sigue valiendo "ante la duda, es menor" para quien se ve chico o no se puede decidir.

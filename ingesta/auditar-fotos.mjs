@@ -22,8 +22,8 @@ import { candidatasDeNota } from './fotos.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 
-/** Cuántos intentos se le dan a una falla antes de rendirse (web/scripts/fotos-notas.mjs, REINTENTOS_DE_FOTO). */
-export const INTENTOS_MAXIMOS = 3;
+/** Cuántos intentos se le dan a una falla antes de rendirse: 3 y dos repasos más (web/scripts/fotos-notas.mjs, REINTENTOS_DE_FOTO). */
+export const INTENTOS_MAXIMOS = 5;
 
 // Mismo criterio que sePuedeReintentar (web/scripts/fotos-notas.mjs): esto no es una decisión sobre la foto sino una falla.
 const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar)/;

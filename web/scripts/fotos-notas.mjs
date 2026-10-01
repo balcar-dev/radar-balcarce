@@ -19,6 +19,9 @@ import { achicarFoto, fotoParaGuardar } from './achicar-foto.mjs';
 // que también necesita la lectura con IA (comparten GEMINI_API_KEY_CLASIFICACION).
 export const TOPE_POR_CORRIDA = 10;
 
+/** Cuántas fuentes tiene una nota para buscarle la foto. */
+const cuantasFuentes = (n) => (n.fuentesConsultadas?.length || (n.enlace ? 1 : 0));
+
 const EXTENSION = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
 
 /**
@@ -35,7 +38,14 @@ export function elegiblePorSeccion(nota) {
 
 /** Cuántas veces se prueba una nota que quedó sin foto por una falla (no porque la
  *  IA la descartó), y cuánto se espera entre una vez y la otra. */
-export const REINTENTOS_DE_FOTO = { veces: 3, minutosEntreIntentos: 60 };
+export const REINTENTOS_DE_FOTO = {
+  veces: 3,
+  minutosEntreIntentos: 60,
+  // El repaso (1/10, Hernán: "si faltan fotos, un repaso cada tanto"): una falla que ya se probó tres veces se vuelve a
+  // mirar cada tantas horas, hasta `repasos` veces más.
+  horasEntreRepasos: 6,
+  repasos: 2,
+};
 
 // Lo que no es una decisión sobre la foto sino una falla: sin cupo o sin
 // respuesta de la IA, ninguna foto que bajar en ese momento, o la elegida que
@@ -45,12 +55,24 @@ export const REINTENTOS_DE_FOTO = { veces: 3, minutosEntreIntentos: 60 };
 const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar)/;
 
 /** ¿Esta entrada del banco se puede volver a probar ahora? */
-export function sePuedeReintentar(entrada, { ahora = new Date(), reintentos = REINTENTOS_DE_FOTO } = {}) {
+export function sePuedeReintentar(entrada, { ahora = new Date(), reintentos = REINTENTOS_DE_FOTO, fuentes = null } = {}) {
   if (!entrada) return true;
   if (entrada.archivo || entrada.borrada) return false;
+  const intentos = entrada.intentos ?? 1;
+  const pasaron = ahora.getTime() - Date.parse(entrada.cuando ?? 0);
   const falla = entrada.origen === 'error' || !!entrada.error || FALLA.test(String(entrada.razon ?? ''));
-  if (!falla || (entrada.intentos ?? 1) >= reintentos.veces) return false;
-  return ahora.getTime() - Date.parse(entrada.cuando ?? 0) >= reintentos.minutosEntreIntentos * 60_000;
+  if (falla) {
+    if (intentos < reintentos.veces) return pasaron >= reintentos.minutosEntreIntentos * 60_000;
+    // Ya se probó tres veces: un repaso cada tanto, un par de veces más.
+    return intentos < reintentos.veces + reintentos.repasos && pasaron >= reintentos.horasEntreRepasos * 3_600_000;
+  }
+  // Una foto que la IA descartó no se vuelve a preguntar... salvo que ahora la nota tenga más fuentes que cuando se
+  // probó (1/10: dos notas de la misma noticia que se unen suman fotos nuevas para elegir).
+  const antes = entrada.fuentes;
+  if (fuentes != null && antes != null && fuentes > antes && intentos < reintentos.veces + reintentos.repasos) {
+    return pasaron >= reintentos.minutosEntreIntentos * 60_000;
+  }
+  return false;
 }
 
 /**
@@ -75,7 +97,7 @@ export async function elegirFotosNuevas(notas, {
   // HORAS_EN_PORTADA (lib/archivo.js). Las que se reintentan van después de
   // las que nunca se probaron.
   const candidatas = notas
-    .filter((n) => sePuedeReintentar(banco[n.id], { ahora }) && elegiblePorSeccion(n))
+    .filter((n) => sePuedeReintentar(banco[n.id], { ahora, fuentes: cuantasFuentes(n) }) && elegiblePorSeccion(n))
     .sort((a, b) => (Number(!!banco[a.id]) - Number(!!banco[b.id])) || (new Date(b.fecha ?? 0) - new Date(a.fecha ?? 0)));
 
   let procesadas = 0;
@@ -87,16 +109,16 @@ export async function elegirFotosNuevas(notas, {
       const r = await elegirFotoParaNota(n, { clave, claveRespaldo, fetchFn });
       if (!r.elegida) {
         bancoNuevo[n.id] = {
-          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(), intentos,
+          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(), intentos, fuentes: cuantasFuentes(n),
         };
         continue;
       }
       // La comparación ya bajó la imagen para mirarla, pero no la guardó: se
       // vuelve a bajar para quedarse con los bytes de la elegida nada más.
-      const datos = await descargarImagen(r.elegida.imagen, { fetchFn });
+      const datos = r.elegida.datos ?? await descargarImagen(r.elegida.imagen, { fetchFn });
       const ext = EXTENSION[datos?.mime];
       if (!datos || !ext) {
-        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida', intentos };
+        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida', intentos, fuentes: cuantasFuentes(n) };
         continue;
       }
       // Achicada a 1.200 px y JPEG (29/09): la original pesaba hasta 1,8 MB y crecía el

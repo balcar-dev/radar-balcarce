@@ -152,6 +152,12 @@ en un grupo, en un equipo o en segundo plano). Radar Balcarce nunca publica la f
 "menor" en true. Si dudás si es menor, ponelo en true. Chicos de espaldas o tan lejos que no se los reconoce no
 cuentan.
 
+Decidilo sólo por lo que SE VE en la imagen, no por el tema de la nota: que la nota hable de alumnos, de una escuela o
+de un club no quiere decir que la foto tenga menores. Una persona adulta a simple vista (jugadores de un seleccionado
+mayor o de un equipo profesional, funcionarios, docentes, trabajadores, gente de un acto oficial) no es menor, y
+quien tiene la cara tapada (máscara de soldar, casco, barbijo, de espaldas) no se reconoce. Reservá "menor" en true
+para quien se ve claramente chico o adolescente, o para quien de verdad no podés decidir si es adulto.
+
 Regla que no se negocia: "elegida" NUNCA puede ser la letra de una foto a la que vos mismo le pusiste "tiene_marca"
 o "menor" en true, aunque sea la que mejor encuadre o nitidez tenga. Si la mejor foto tiene alguna de las dos, elegí
 la mejor ENTRE LAS QUE NO TIENEN NINGUNA, aunque no sea la ideal: una foto que sirve y no es perfecta vale más que
@@ -215,14 +221,16 @@ function interpretarRespuesta(respuesta, candidatas) {
     const detalle = porLetra.get(obj.elegida)?.detalle;
     const iSinMarca = candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]));
     if (iSinMarca >= 0) {
-      elegida = { ...resultado[iSinMarca], letra: LETRAS[iSinMarca] };
+      elegida = { ...resultado[iSinMarca], letra: LETRAS[iSinMarca], datos: candidatas[iSinMarca].datos };
       razon = `La IA había preferido la de ${medio}, pero no se puede usar (marca de agua, otro medio o un menor)${detalle ? ` (${detalle})` : ''}: se usa ${resultado[iSinMarca].medio} en su lugar, aunque no sea la ideal.`;
     } else {
       razon = `La mejor foto era la de ${medio}, pero no se puede usar (marca de agua, otro medio o un menor)${detalle ? ` (${detalle})` : ''}, y ninguna de las otras sirve: no se elige ninguna.`;
     }
   } else if (letraValida(obj?.elegida)) {
     const i = LETRAS.indexOf(obj.elegida);
-    if (candidatas[i]?.datos) elegida = { ...resultado[i], letra: obj.elegida };
+    // Con la imagen que ya se bajó para compararla: volver a bajarla fallaba (1/10, "la virgen de la tosquera", nueve
+    // fuentes y tres intentos con "no se pudo volver a bajar la elegida").
+    if (candidatas[i]?.datos) elegida = { ...resultado[i], letra: obj.elegida, datos: candidatas[i].datos };
   }
   return { elegida, razon, candidatas: resultado };
 }

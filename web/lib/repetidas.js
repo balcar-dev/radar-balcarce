@@ -56,8 +56,9 @@ const tiempo = (n) => Date.parse(n?.fecha ?? '') || 0;
  * De un grupo de notas que son la misma noticia, la que queda: la que fue a las
  * redes, la que tiene cuerpo, la primera que salió.
  */
-function laQueQueda(grupo, enRedes) {
+function laQueQueda(grupo, enRedes, conFoto = new Set()) {
   return [...grupo].sort((x, y) => (Number(enRedes.has(y.id) || !!y.redes) - Number(enRedes.has(x.id) || !!x.redes))
+    || (Number(conFoto.has(y.id)) - Number(conFoto.has(x.id)))
     || (Number(tieneCuerpo(y)) - Number(tieneCuerpo(x)))
     || (tiempo(x) - tiempo(y))
     || String(x.id).localeCompare(String(y.id)))[0];
@@ -69,7 +70,9 @@ function laQueQueda(grupo, enRedes) {
  * anterior y no es la misma) ni las que fueron a las redes (su enlace circula:
  * se quedan, aunque haya otra igual).
  */
-export function repetidasConOtraDireccion(notas = [], { enRedes = new Set(), umbral = REPETIDAS.umbral, horas = REPETIDAS.horas } = {}) {
+export function repetidasConOtraDireccion(notas = [], {
+  enRedes = new Set(), umbral = REPETIDAS.umbral, horas = REPETIDAS.horas, confirmadas = [], conFoto = new Set(),
+} = {}) {
   const lista = [];
   const vistas = new Set();
   for (const n of notas) {
@@ -86,6 +89,11 @@ export function repetidasConOtraDireccion(notas = [], { enRedes = new Set(), umb
       if (parecido(lista[i].titulo, lista[j].titulo) >= umbral) padre.set(raiz(lista[j].id), raiz(lista[i].id));
     }
   }
+  // Las que la IA confirmó que cuentan el mismo hecho aunque los títulos no se parezcan (1/10: "La Cooperativa corta la luz el
+  // viernes en un sector" y "La Cooperativa de Electricidad corta el suministro el viernes").
+  for (const [a, b] of confirmadas) {
+    if (padre.has(a) && padre.has(b)) padre.set(raiz(b), raiz(a));
+  }
   const grupos = new Map();
   for (const n of lista) {
     const r = raiz(n.id);
@@ -95,7 +103,7 @@ export function repetidasConOtraDireccion(notas = [], { enRedes = new Set(), umb
   const fusion = new Map();
   for (const grupo of grupos.values()) {
     if (grupo.length < 2) continue;
-    const queda = laQueQueda(grupo, enRedes);
+    const queda = laQueQueda(grupo, enRedes, conFoto);
     for (const n of grupo) {
       if (n.id === queda.id || enRedes.has(n.id) || n.redes) continue;
       fusion.set(n.id, queda.id);
@@ -134,4 +142,73 @@ export function redireccionesDeFusionadas(fusionadas, rutaDe) {
     salida.push({ origen: `/nota/${id}`, destino });
   }
   return salida;
+}
+
+// ----------------------------------------------- las repetidas con otras palabras (1/10)
+//
+// Dos notas que cuentan el mismo hecho con títulos distintos no llegan al umbral de parecido
+// (0,8) y la IA de la lectura, que mira cien notas juntas, a veces no las junta: el 1/10 salieron
+// dos de la Cooperativa y dos del RENAPER. Acá se eligen las parejas SOSPECHOSAS (misma sección,
+// poco tiempo de diferencia, algo de parecido) para preguntarle a la IA sólo por ellas.
+
+export const PAREJAS = {
+  /** Desde cuánto parecido de títulos vale la pena preguntar (abajo del umbral de REPETIDAS). */
+  minimo: 0.3,
+  /** Cuántas horas puede haber entre las dos. */
+  horas: 72,
+  /** Cuántas parejas se preguntan por corrida. */
+  porCorrida: 24,
+};
+
+/** La clave de una pareja, igual en cualquier orden. */
+export const clavePareja = (a, b) => [String(a), String(b)].sort().join('|');
+
+/**
+ * Las parejas a preguntar: [{ clave, a, b }] con las notas. No repite las que ya se decidieron
+ * (`decididas`: { clave: true|false }) ni las que ya son la misma por título (esas las junta
+ * repetidasConOtraDireccion), y no toca las notas propias.
+ */
+export function parejasSospechosas(notas = [], {
+  decididas = {}, minimo = PAREJAS.minimo, umbral = REPETIDAS.umbral, horas = PAREJAS.horas, tope = PAREJAS.porCorrida,
+} = {}) {
+  const lista = [];
+  const vistas = new Set();
+  for (const n of notas) {
+    if (!n?.id || n.propia || !n.titulo || !n.seccion || vistas.has(n.id)) continue;
+    vistas.add(n.id);
+    lista.push(n);
+  }
+  const salida = [];
+  for (let i = 0; i < lista.length; i += 1) {
+    for (let j = i + 1; j < lista.length; j += 1) {
+      const [a, b] = [lista[i], lista[j]];
+      if (a.seccion !== b.seccion) continue;
+      if (Math.abs(tiempo(a) - tiempo(b)) > horas * 3600e3) continue;
+      const clave = clavePareja(a.id, b.id);
+      if (clave in decididas) continue;
+      const p = parecido(a.titulo, b.titulo);
+      if (p >= minimo && p < umbral) salida.push({ clave, a, b, p });
+    }
+  }
+  return salida.sort((x, y) => y.p - x.p).slice(0, tope).map(({ clave, a, b }) => ({ clave, a, b }));
+}
+
+/**
+ * A las notas de `notas` que tienen una pareja confirmada, les suma las fuentes de la otra
+ * (`medios` y `fuentesConsultadas`, sin repetir): así la foto se busca en todas las fuentes de la
+ * misma noticia (1/10, Hernán: "usar la foto si se repite en varias fuentes"). Modifica las notas.
+ */
+export function sumarFuentesDeParejas(notas = [], confirmadas = []) {
+  const porId = new Map(notas.map((n) => [n.id, n]));
+  for (const [x, y] of confirmadas) {
+    const [a, b] = [porId.get(x), porId.get(y)];
+    if (!a || !b) continue;
+    for (const [dest, orig] of [[a, b], [b, a]]) {
+      dest.medios = [...new Set([...(dest.medios ?? []), ...(orig.medios ?? [])])];
+      const enlaces = new Set((dest.fuentesConsultadas ?? []).map((f) => f.enlace));
+      const nuevas = (orig.fuentesConsultadas ?? []).filter((f) => f.enlace && !enlaces.has(f.enlace));
+      if (nuevas.length) dest.fuentesConsultadas = [...(dest.fuentesConsultadas ?? []), ...nuevas];
+    }
+  }
+  return notas;
 }
