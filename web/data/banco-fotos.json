@@ -3748,24 +3748,24 @@
   "origen": "ninguna",
   "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T03:31:21.937Z",
-  "intentos": 2
+  "cuando": "2026-10-01T05:01:50.537Z",
+  "intentos": 3
  },
  "1n1thyd": {
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Selección Argentina suma cinco nuevos debutantes bajo la dirección de Scaloni",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T04:01:29.757Z",
-  "intentos": 2
+  "cuando": "2026-10-01T05:01:50.537Z",
+  "intentos": 3
  },
  "5p0wce": {
   "intentado": true,
   "origen": "ninguna",
   "titulo": "La Pepa Brizuela canta el himno antes del partido de la Selección",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T04:01:29.757Z",
-  "intentos": 2
+  "cuando": "2026-10-01T05:01:50.537Z",
+  "intentos": 3
  },
  "x9mmdo": {
   "archivo": "fotos-notas/x9mmdo.jpg",
@@ -3780,12 +3780,16 @@
   "cuando": "2026-10-01T04:01:29.757Z"
  },
  "1mz151q": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1mz151q.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Un argentino cae prisionero en Ucrania tras sumarse al ejército ruso",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-01T04:01:29.757Z",
-  "intentos": 1
+  "enlace": "https://www.clarin.com/sociedad/hablo-argentino-pelear-rusia-cayo-prisionero-ucrania-mandan-morir-parece_0_kC8Ix1Pzd0.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/09/29/cu0CgKY2x_2000x1500__1.jpg",
+  "razon": "Es la única imagen con un encuadre completo y centrado del sujeto, mientras que la opción B es un recorte lateral que no ilustra bien el hecho.",
+  "cuando": "2026-10-01T05:01:50.537Z"
  },
  "f3bef7": {
   "intentado": true,

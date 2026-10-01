@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T04:31:19.829Z",
+  "generado": "2026-10-01T05:02:03.746Z",
   "notas": [
     {
       "id": "1n1thyd",
@@ -19,7 +19,7 @@
       "fecha": "2026-10-01T01:45:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T02:31:07.465Z",
-      "relevancia": 89,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -113,7 +113,7 @@
       "fecha": "2026-10-01T01:38:10.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T04:01:15.862Z",
-      "relevancia": 98,
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -326,95 +326,6 @@
       "foto": {
         "archivo": "fotos-notas/k6d4hv.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "1uvmscz",
-      "titulo": "El Concejo rechaza recibir a Virginia Aparicio en comisión",
-      "copete": "El oficialismo y La Libertad Avanza frenaron la visita de la investigadora del INTA a la Comisión de Salud. Cuatro ediles la recibirán el jueves por fuera del cuerpo.",
-      "cuerpo": "El Honorable Concejo Deliberante de Balcarce debatió la situación de la investigadora del INTA Virginia Aparicio. El bloque oficialista y La Libertad Avanza resolvieron no aceptar por el momento su presencia formal en la Comisión de Salud, al plantear la necesidad de esperar el resultado del sumario administrativo que atraviesa la científica. Desde la oposición cuestionaron la medida y consideraron que el ámbito legislativo resultaba oportuno para escuchar su exposición sobre el Proyecto SPRINT.\n\nLa concejal de Juntos Florencia Martínez aclaró que la postura oficial no descarta una futura citación una vez concluidas las actuaciones administrativas en el organismo nacional.\n\nEn paralelo, agrupaciones políticas, sociales y ambientales organizaron una jornada de visibilización y apoyo a la investigadora para el próximo martes a las 14 frente a la Catedral de Mar del Plata.",
-      "guion": "El Concejo rechaza recibir a Virginia Aparicio en comisión",
-      "seccion": "Política",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/martinez-explico-por-que-el-oficialismo-no-recibio-a-virginia-aparicio-en-la-comision-de-salud/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T23:29:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T01:28:53.354Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "inta"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El oficialismo y La Libertad Avanza frenaron la visita de Virginia Aparicio a la Comisión de Salud.",
-        "Cuatro concejales la recibirán este jueves a las 18 en un encuentro por fuera del cuerpo.",
-        "La concejal Florencia Martínez argumentó que aguardan definiciones del sumario que atraviesa la investigadora.",
-        "Habrá una jornada de apoyo a la científica el próximo martes frente a la Catedral de Mar del Plata."
-      ],
-      "seSabe": [
-        "El oficialismo y La Libertad Avanza rechazaron la convocatoria formal de Virginia Aparicio a la Comisión de Salud, según informó Puntonueve.",
-        "La concejal Florencia Martínez explicó que la decisión responde al sumario administrativo que atraviesa la investigadora en el INTA.",
-        "Cuatro ediles se reunirán con Aparicio este jueves a las 18 de forma independiente, de acuerdo con la información brindada por el medio local.",
-        "El próximo martes a las 14 se hará una actividad de apoyo a la científica frente a la Catedral de Mar del Plata."
-      ],
-      "noConfirmado": [
-        "Todavía no se informaron los motivos específicos por los cuales el INTA se retiró del Proyecto SPRINT ni las circunstancias que originaron el sumario a la investigadora.",
-        "No se formalizaron pedidos de informes al INTA desde el cuerpo deliberativo local.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante de Balcarce debatió la situación de la investigadora del INTA Virginia Aparicio y el oficialismo frenó su llegada a la Comisión de Salud a la espera de definiciones administrativas.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Virginia Aparicio",
-        "INTA",
-        "Salud",
-        "Balcarce",
-        "Proyecto SPRINT"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/martinez-explico-por-que-el-oficialismo-no-recibio-a-virginia-aparicio-en-la-comision-de-salud/",
-          "fecha": "2026-09-30T23:29:21.000Z",
-          "oficial": false,
-          "aporte": "Detalló la negativa del oficialismo a recibir a Virginia Aparicio en la Comisión de Salud y las posturas de los bloques."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ytgm6c",
-          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
-          "fecha": "2026-09-28T21:59:12.000Z",
-          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
-        },
-        {
-          "id": "1yu9ytn",
-          "titulo": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
-          "fecha": "2026-09-30T20:53:48.000Z",
-          "ruta": "/nota/el-oficialismo-explica-el-rechazo-a-la-convocatoria-de-virginia-1yu9ytn"
-        },
-        {
-          "id": "q6p856",
-          "titulo": "Concejales reciben a Virginia Aparicio de forma independiente",
-          "fecha": "2026-09-28T22:16:06.119Z",
-          "ruta": "/nota/concejales-reciben-a-virginia-aparicio-de-forma-independiente-q6p856"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-rechaza-recibir-a-virginia-aparicio-en-comision",
-      "foto": {
-        "archivo": "fotos-notas/1uvmscz.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -631,6 +542,94 @@
       "slug": "lautaro-fernandez-gana-el-campeonato-provincial-de-malambo"
     },
     {
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "copete": "La vigesimosegunda edición del tradicional encuentro gastronómico se realizará del 9 al 12 de octubre en la Sociedad Rural. Por primera vez durará cuatro jornadas y tendrá entrada libre y gratuita.",
+      "cuerpo": "La Fiesta Nacional del Postre se desarrollará del viernes 9 al lunes 12 de octubre de 2026 en el predio de la Sociedad Rural de Balcarce. El evento durará cuatro jornadas por primera vez y trasladará su realización desde julio hacia el fin de semana largo de octubre, con entrada libre y gratuita. La subsecretaria de Turismo, Rosario de Tufró, explicó que la modificación se consensuó con el sector pastelero local.\n\nLa programación incluirá un sector para cafeterías con dos emprendimientos locales, puestos de artesanos y food trucks. El viernes se dedicará a las escuelas y la identidad balcarceña con la participación de la Escuela N 3 y el Museo Histórico Municipal, mientras que desde el sábado comenzarán las clases de cocina al aire libre. La organización confirmó la presencia de los chefs Lulo Patisserie, Rocío Espinillo como madrina, Manbrunense y Chef Sale.\n\nEl encuentro gastronómico coincidirá con una competencia en la sierra organizada por el Grupo GEC, lo que según el área de Turismo incrementará la llegada de visitantes durante el fin de semana largo. La programación completa se presentará oficialmente en los próximos días.",
+      "guion": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-fiesta-del-postre-tendra-cuatro-dias-y-sumara-nuevas-propuestas-735",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-30T23:01:06.136Z",
+      "sinFecha": true,
+      "visto": "2026-09-30T23:01:06.136Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La fiesta se hará del 9 al 12 de octubre en la Sociedad Rural.",
+        "Por primera vez durará cuatro días y será con entrada libre y gratuita.",
+        "Habrá puestos de pasteleros, cafeterías locales, artesanos y food trucks.",
+        "Participarán los chefs Lulo Patisserie, Rocío Espinillo, Manbrunense y Chef Sale."
+      ],
+      "seSabe": [
+        "La vigesimosegunda edición de la Fiesta Nacional del Postre será del 9 al 12 de octubre de 2026 en la Sociedad Rural.",
+        "La celebración durará cuatro jornadas por primera vez y tendrá entrada libre y gratuita, según informaron las fuentes.",
+        "El cambio de fecha desde julio hacia octubre se consensuó con el sector pastelero local, de acuerdo con la subsecretaria de Turismo, Rosario de Tufró.",
+        "La Escuela N 3 y el Museo Histórico Municipal participarán de la jornada educativa del viernes.",
+        "Los chefs invitados serán Lulo Patisserie, Rocío Espinillo, Manbrunense y Chef Sale."
+      ],
+      "noConfirmado": [
+        "El cronograma completo de actividades y horarios detallados de cada presentación todavía no fue presentado oficialmente."
+      ],
+      "textoRedes": "La Fiesta Nacional del Postre se realizará del 9 al 12 de octubre en la Sociedad Rural. Por primera vez durará cuatro días, tendrá entrada libre y gratuita e incluirá nuevas propuestas gastronómicas.",
+      "etiquetas": [
+        "Fiesta Nacional del Postre",
+        "Sociedad Rural",
+        "Turismo",
+        "Balcarce",
+        "gastronomía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-fiesta-del-postre-tendra-cuatro-dias-y-sumara-nuevas-propuestas-735",
+          "fecha": "2026-09-30T20:52:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/balcarce-se-prepara-para-la-fiesta-nacional-del-postre-cuando-sera-y-que-actividades-tendra",
+          "fecha": "2026-09-30T18:17:49.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1h3b7f0",
+          "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
+          "fecha": "2026-09-30T18:17:49.000Z",
+          "ruta": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0"
+        },
+        {
+          "id": "1s10vxl",
+          "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
+          "fecha": "2026-09-30T16:59:57.000Z",
+          "ruta": "/nota/rocio-espinillo-anticipa-su-receta-para-la-fiesta-del-postre-1s10vxl"
+        },
+        {
+          "id": "12rp30w",
+          "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+          "fecha": "2026-09-29T18:01:09.192Z",
+          "ruta": "/nota/edgardo-rios-visita-la-fiesta-nacional-del-postre-12rp30w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-fiesta-nacional-del-postre-se-extiende-a-cuatro-dias-en-octubre"
+    },
+    {
       "id": "g8dncb",
       "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
       "copete": "El club sumó un lote ubicado en la calle 57 entre 14 y 16. La operación se concretó en una subasta pública de tierras comunales.",
@@ -763,6 +762,85 @@
       "foto": {
         "archivo": "fotos-notas/1a2z04a.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
+      }
+    },
+    {
+      "id": "1yu9ytn",
+      "titulo": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
+      "copete": "La concejal oficialista Florencia Martínez sostuvo que aguardan la resolución del sumario que atraviesa la investigadora en el INTA antes de avanzar con una citación formal.",
+      "cuerpo": "La edil oficialista Florencia Martínez explicó los fundamentos de la postura adoptada por el bloque respecto a la investigadora del INTA Virginia Aparicio y señaló que se aguarda la resolución del sumario administrativo que atraviesa en el organismo. La concejal indicó que actualmente se desconocen los motivos del procedimiento y las razones por las cuales el país fue apartado del proyecto SPRINT, aunque aclaró que no se cuestiona la labor científica desarrollada.\n\nPor último, Martínez adelantó que el cuerpo deliberativo podría impulsar un pedido de informes para conocer detalles sobre la situación administrativa de Aparicio dentro de la institución.",
+      "guion": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
+      "seccion": "Política",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-30T22:01:11.084Z",
+      "sinFecha": true,
+      "visto": "2026-09-30T22:01:11.084Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El oficialismo justificó la decisión de no convocar formalmente a la investigadora del INTA Virginia Aparicio.",
+        "La concejal Florencia Martínez indicó que Aparicio atraviesa un sumario interno cuyo resultado se prefiere aguardar.",
+        "Concejales de distintos bloques evalúan mantener encuentros individuales con la científica o impulsar un pedido de informes."
+      ],
+      "noConfirmado": [
+        "Todavía no se conoce la resolución oficial del sumario administrativo que pesa sobre la investigadora dentro del INTA.",
+        "No se informaron públicamente los motivos concretos que originaron dicho procedimiento ni la salida del país del proyecto SPRINT.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El oficialismo explicó por qué no acompañó la convocatoria a la investigadora del INTA Virginia Aparicio en el Concejo Deliberante.",
+      "etiquetas": [
+        "Virginia Aparicio",
+        "Concejo Deliberante",
+        "INTA",
+        "Florencia Martínez",
+        "Salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de la concejal Florencia Martínez sobre los motivos del rechazo a la convocatoria de Virginia Aparicio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "25strz",
+          "titulo": "Concejales del oficialismo y LLA rechazan recibir a Virginia Aparicio",
+          "fecha": "2026-09-28T22:16:06.119Z",
+          "ruta": "/nota/concejales-del-oficialismo-y-lla-rechazan-recibir-a-virginia-aparicio-25strz"
+        },
+        {
+          "id": "113qesp",
+          "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+          "fecha": "2026-09-30T00:31:08.568Z",
+          "ruta": "/nota/petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo-113qesp"
+        },
+        {
+          "id": "q6p856",
+          "titulo": "Concejales reciben a Virginia Aparicio de forma independiente",
+          "fecha": "2026-09-28T22:16:06.119Z",
+          "ruta": "/nota/concejales-reciben-a-virginia-aparicio-de-forma-independiente-q6p856"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-oficialismo-explica-el-rechazo-a-la-convocatoria-de-virginia",
+      "foto": {
+        "archivo": "fotos-notas/1yu9ytn.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -1026,87 +1104,6 @@
       "slug": "nicolas-paz-brilla-y-argentina-derrota-a-bolivia-en-cordoba"
     },
     {
-      "id": "1yu9ytn",
-      "titulo": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
-      "copete": "La concejal oficialista Florencia Martínez sostuvo que aguardan la resolución del sumario que atraviesa la investigadora en el INTA antes de avanzar con una citación formal.",
-      "cuerpo": "La edil oficialista Florencia Martínez explicó los fundamentos de la postura adoptada por el bloque respecto a la investigadora del INTA Virginia Aparicio y señaló que se aguarda la resolución del sumario administrativo que atraviesa en el organismo. La concejal indicó que actualmente se desconocen los motivos del procedimiento y las razones por las cuales el país fue apartado del proyecto SPRINT, aunque aclaró que no se cuestiona la labor científica desarrollada.\n\nPor último, Martínez adelantó que el cuerpo deliberativo podría impulsar un pedido de informes para conocer detalles sobre la situación administrativa de Aparicio dentro de la institución.",
-      "guion": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T20:53:48.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T22:01:11.084Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El oficialismo justificó la decisión de no convocar formalmente a la investigadora del INTA Virginia Aparicio.",
-        "La concejal Florencia Martínez indicó que Aparicio atraviesa un sumario interno cuyo resultado se prefiere aguardar.",
-        "Concejales de distintos bloques evalúan mantener encuentros individuales con la científica o impulsar un pedido de informes."
-      ],
-      "noConfirmado": [
-        "Todavía no se conoce la resolución oficial del sumario administrativo que pesa sobre la investigadora dentro del INTA.",
-        "No se informaron públicamente los motivos concretos que originaron dicho procedimiento ni la salida del país del proyecto SPRINT.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El oficialismo explicó por qué no acompañó la convocatoria a la investigadora del INTA Virginia Aparicio en el Concejo Deliberante.",
-      "etiquetas": [
-        "Virginia Aparicio",
-        "Concejo Deliberante",
-        "INTA",
-        "Florencia Martínez",
-        "Salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó las declaraciones de la concejal Florencia Martínez sobre los motivos del rechazo a la convocatoria de Virginia Aparicio."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "25strz",
-          "titulo": "Concejales del oficialismo y LLA rechazan recibir a Virginia Aparicio",
-          "fecha": "2026-09-28T22:16:06.119Z",
-          "ruta": "/nota/concejales-del-oficialismo-y-lla-rechazan-recibir-a-virginia-aparicio-25strz"
-        },
-        {
-          "id": "113qesp",
-          "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
-          "fecha": "2026-09-30T00:31:08.568Z",
-          "ruta": "/nota/petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo-113qesp"
-        },
-        {
-          "id": "q6p856",
-          "titulo": "Concejales reciben a Virginia Aparicio de forma independiente",
-          "fecha": "2026-09-28T22:16:06.119Z",
-          "ruta": "/nota/concejales-reciben-a-virginia-aparicio-de-forma-independiente-q6p856"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-oficialismo-explica-el-rechazo-a-la-convocatoria-de-virginia",
-      "foto": {
-        "archivo": "fotos-notas/1yu9ytn.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "vp5l7j",
       "titulo": "Toyota consigue el primer RIGI automotriz para fabricar autos eléctricos",
       "copete": "El Gobierno nacional aprobó un proyecto de la automotriz japonesa por más de 1300 millones de dólares en la provincia de Buenos Aires. Prevé exportar por 1280 millones anuales y generar puestos de trabajo.",
@@ -1196,128 +1193,6 @@
       "foto": {
         "archivo": "fotos-notas/vp5l7j.jpg",
         "credito": "Foto: El Cronista"
-      }
-    },
-    {
-      "id": "z3c4f",
-      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-      "copete": "Alumnos de tercer y cuarto año del establecimiento educativo concurrieron a la Sala de los Intendentes. Mantuvieron un diálogo con el jefe comunal sobre el funcionamiento de la administración local.",
-      "cuerpo": "El intendente municipal Esteban Reino recibió al mediodía en la Sala de los Intendentes a estudiantes de tercer y cuarto año del Colegio Santa Rosa de Lima.\n\nDurante la reunión, el jefe comunal conversó con los alumnos sobre las tareas que se desarrollan en el ámbito del gobierno local y la vida institucional de la ciudad. La actividad se enmarcó en una propuesta pedagógica para vincular los contenidos escolares con el funcionamiento de las entidades públicas.",
-      "guion": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/alumnos-del-colegio-santa-rosa-de-lima-visitaron-el-municipio/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T19:53:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T21:01:04.723Z",
-      "relevancia": 90,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El intendente Esteban Reino recibió a estudiantes secundarios este miércoles.",
-        "Participaron alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima.",
-        "Acompañaron las docentes Pamela Valle, Mariela Martínez y Claudia Forte.",
-        "El encuentro se realizó en la Sala de los Intendentes."
-      ],
-      "seSabe": [
-        "El intendente municipal Esteban Reino recibió a los estudiantes este miércoles al mediodía, según informó un medio local.",
-        "Participaron alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima junto a las docentes Pamela Valle, Mariela Martínez y Claudia Forte.",
-        "El encuentro tuvo lugar en la Sala de los Intendentes para dialogar sobre la gestión municipal."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima visitaron este miércoles la Sala de los Intendentes y se reunieron con el intendente Esteban Reino para conocer el funcionamiento del municipio.",
-      "etiquetas": [
-        "Estudiantes",
-        "Municipalidad de Balcarce",
-        "Colegio Santa Rosa de Lima",
-        "Esteban Reino"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/alumnos-del-colegio-santa-rosa-de-lima-visitaron-el-municipio/",
-          "fecha": "2026-09-30T19:53:10.000Z",
-          "oficial": false,
-          "aporte": "Informó la visita de los alumnos del Colegio Santa Rosa de Lima al intendente municipal y detalló los nombres de las docentes acompañantes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "estudiantes-del-colegio-santa-rosa-de-lima-visitan-el-municipio"
-    },
-    {
-      "id": "1xow9qi",
-      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
-      "copete": "La Cámara de Diputados bonaerense distinguirá al profesor balcarceño por su trayectoria en el deporte adaptado y su participación en citas paralímpicas internacionales.",
-      "cuerpo": "La Cámara de Diputados de la provincia de Buenos Aires distinguirá al licenciado en Educación Física y profesor balcarceño Agustín Molpeceres por su trayectoria en el deporte adaptado. El reconocimiento oficial pondrá en valor su labor como entrenador y su aporte al desarrollo de los atletas de alto rendimiento.\n\nMolpeceres integró el cuerpo técnico de la Selección Argentina de boccia en los Juegos Paralímpicos de Río de Janeiro hace diez años y repitió su rol en la misma cita ecuménica celebrada en Tokio 2020.\n\nPara el ámbito local, la distinción significa la revalorización de un profesional que llevó su compromiso con la inclusión y la disciplina a escenarios internacionales.",
-      "guion": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-bonaerense-por-su-trayectoria-en-el-deporte-paralimpico/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T19:34:59.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T21:31:04.804Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Distinción de la Cámara de Diputados bonaerense",
-        "Homenaje al profesor balcarceño Agustín Molpeceres",
-        "Valoración de su paso por los Juegos Paralímpicos"
-      ],
-      "seSabe": [
-        "La Cámara de Diputados bonaerense distinguirá a Agustín Molpeceres.",
-        "El reconocimiento destaca su trayectoria en el deporte adaptado.",
-        "Molpeceres integró el cuerpo técnico de la Selección Argentina de boccia en Río de Janeiro y Tokio 2020."
-      ],
-      "noConfirmado": [
-        "No se informó la fecha exacta en la que se realizará la entrega formal de la distinción.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Cámara de Diputados bonaerense distinguirá al profesor balcarceño Agustín Molpeceres por su trayectoria en el deporte adaptado y su paso por los Juegos Paralímpicos.",
-      "etiquetas": [
-        "Agustín Molpeceres",
-        "deporte adaptado",
-        "Legislatura bonaerense",
-        "Balcarce",
-        "boccia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-bonaerense-por-su-trayectoria-en-el-deporte-paralimpico/",
-          "fecha": "2026-09-30T19:34:59.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el reconocimiento legislativo al profesor balcarceño Agustín Molpeceres por su trayectoria en el deporte paralímpico."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "agustin-molpeceres-recibe-un-reconocimiento-legislativo-en-la",
-      "foto": {
-        "archivo": "fotos-notas/1xow9qi.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1594,7 +1469,7 @@
       "fecha": "2026-09-30T18:42:58.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T21:01:04.723Z",
-      "relevancia": 37,
+      "relevancia": 33,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1647,74 +1522,47 @@
       }
     },
     {
-      "id": "6xex85",
-      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
-      "copete": "La vigesimosegunda edición del tradicional encuentro gastronómico se realizará del 9 al 12 de octubre en la Sociedad Rural. Por primera vez durará cuatro jornadas y tendrá entrada libre y gratuita.",
-      "cuerpo": "La Fiesta Nacional del Postre se desarrollará del viernes 9 al lunes 12 de octubre de 2026 en el predio de la Sociedad Rural de Balcarce. El evento durará cuatro jornadas por primera vez y trasladará su realización desde julio hacia el fin de semana largo de octubre, con entrada libre y gratuita. La subsecretaria de Turismo, Rosario de Tufró, explicó que la modificación se consensuó con el sector pastelero local.\n\nLa programación incluirá un sector para cafeterías con dos emprendimientos locales, puestos de artesanos y food trucks. El viernes se dedicará a las escuelas y la identidad balcarceña con la participación de la Escuela N 3 y el Museo Histórico Municipal, mientras que desde el sábado comenzarán las clases de cocina al aire libre. La organización confirmó la presencia de los chefs Lulo Patisserie, Rocío Espinillo como madrina, Manbrunense y Chef Sale.\n\nEl encuentro gastronómico coincidirá con una competencia en la sierra organizada por el Grupo GEC, lo que según el área de Turismo incrementará la llegada de visitantes durante el fin de semana largo. La programación completa se presentará oficialmente en los próximos días.",
-      "guion": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "id": "1h3b7f0",
+      "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
+      "copete": "La vigesimosegunda edición del tradicional encuentro gastronómico se realizará del 9 al 12 de octubre en la Sociedad Rural, con entrada libre y gratuita y cuatro jornadas de propuestas para toda la familia.",
+      "cuerpo": "Balcarce se prepara para la vigesimosegunda edición de la Fiesta Nacional del Postre, que se desarrollará del 9 al 12 de octubre en el predio de la Sociedad Rural con entrada libre y gratuita. Durante las cuatro jornadas habrá clases magistrales, demostraciones culinarias, concursos y degustaciones.\n\nEl evento contará con la presencia del cocinero Valentín Galdón Ritvo y de la madrina Rocío Espinillo.\n\nLa celebración busca impulsar el movimiento turístico y beneficiar a hoteles, restaurantes y comercios locales. El producto principal del encuentro es el emblemático Postre Balcarce, creado en 1950 por Guillermo Talou a base de pionono, dulce de leche, crema, merengue, nueces y coco rallado.",
+      "guion": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
       "seccion": "Cultura y agenda",
       "medios": [
-        "El Diario Balcarce",
         "La Noticia 1"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-fiesta-del-postre-tendra-cuatro-dias-y-sumara-nuevas-propuestas-735",
+      "enlace": "https://www.lanoticia1.com/noticia/balcarce-se-prepara-para-la-fiesta-nacional-del-postre-cuando-sera-y-que-actividades-tendra",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T18:17:49.000Z",
       "sinFecha": false,
-      "visto": "2026-09-30T23:01:06.136Z",
-      "relevancia": 100,
+      "visto": "2026-09-30T18:31:15.831Z",
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "La fiesta se hará del 9 al 12 de octubre en la Sociedad Rural.",
-        "Por primera vez durará cuatro días y será con entrada libre y gratuita.",
-        "Habrá puestos de pasteleros, cafeterías locales, artesanos y food trucks.",
-        "Participarán los chefs Lulo Patisserie, Rocío Espinillo, Manbrunense y Chef Sale."
-      ],
-      "seSabe": [
-        "La vigesimosegunda edición de la Fiesta Nacional del Postre será del 9 al 12 de octubre de 2026 en la Sociedad Rural.",
-        "La celebración durará cuatro jornadas por primera vez y tendrá entrada libre y gratuita, según informaron las fuentes.",
-        "El cambio de fecha desde julio hacia octubre se consensuó con el sector pastelero local, de acuerdo con la subsecretaria de Turismo, Rosario de Tufró.",
-        "La Escuela N 3 y el Museo Histórico Municipal participarán de la jornada educativa del viernes.",
-        "Los chefs invitados serán Lulo Patisserie, Rocío Espinillo, Manbrunense y Chef Sale."
-      ],
       "noConfirmado": [
-        "El cronograma completo de actividades y horarios detallados de cada presentación todavía no fue presentado oficialmente."
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "La Fiesta Nacional del Postre se realizará del 9 al 12 de octubre en la Sociedad Rural. Por primera vez durará cuatro días, tendrá entrada libre y gratuita e incluirá nuevas propuestas gastronómicas.",
+      "textoRedes": "Balcarce se prepara para la 22ª Fiesta Nacional del Postre, que se realizará del 9 al 12 de octubre en la Sociedad Rural con entrada libre y gratuita y cuatro jornadas de propuestas gastronómicas.",
       "etiquetas": [
-        "Fiesta Nacional del Postre",
+        "Fiesta del Postre",
+        "turismo",
         "Sociedad Rural",
-        "Turismo",
-        "Balcarce",
-        "gastronomía"
+        "gastronomía",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/la-fiesta-del-postre-tendra-cuatro-dias-y-sumara-nuevas-propuestas-735",
-          "fecha": "2026-09-30T20:52:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
         {
           "medio": "La Noticia 1",
           "enlace": "https://www.lanoticia1.com/noticia/balcarce-se-prepara-para-la-fiesta-nacional-del-postre-cuando-sera-y-que-actividades-tendra",
           "fecha": "2026-09-30T18:17:49.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Detalló fechas, lugar, entrada libre y gratuita y presencia de figuras como Galdón Ritvo y Espinillo."
         }
       ],
       "antecedentes": [
-        {
-          "id": "1h3b7f0",
-          "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
-          "fecha": "2026-09-30T18:17:49.000Z",
-          "ruta": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0"
-        },
         {
           "id": "1s10vxl",
           "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
@@ -1726,14 +1574,24 @@
           "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
           "fecha": "2026-09-29T18:01:09.192Z",
           "ruta": "/nota/edgardo-rios-visita-la-fiesta-nacional-del-postre-12rp30w"
+        },
+        {
+          "id": "1nzl1bf",
+          "titulo": "Edgardo Ríos participa en la Fiesta Nacional del Postre",
+          "fecha": "2026-09-29T15:24:50.000Z",
+          "ruta": "/nota/edgardo-rios-participa-en-la-fiesta-nacional-del-postre-1nzl1bf"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "la-fiesta-nacional-del-postre-se-extiende-a-cuatro-dias-en-octubre"
+      "slug": "la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre",
+      "foto": {
+        "archivo": "fotos-notas/1h3b7f0.jpg",
+        "credito": "Foto: La Noticia 1"
+      }
     },
     {
       "id": "6sldfi",
@@ -1995,11 +1853,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44954-zona-fria-el-rol-de-la-defensoria-y-como-asesoran-a-los-vecinos-por-el-subsidio-del-gas/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-30T16:31:19.444Z",
       "sinFecha": true,
       "visto": "2026-09-30T16:31:19.444Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2056,17 +1914,15 @@
       "guion": "La Municipalidad recauda millones en una subasta de tierras",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/09/30/tres-lotes-municipales-fueron-adjudicados-en-una-subasta-publica/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T15:26:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T15:31:12.935Z",
-      "relevancia": 97,
+      "relevancia": 77,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2132,8 +1988,8 @@
         "El Marplatense",
         "El Eco de Tandil",
         "Bolavip Argentina",
-        "La Capital (Rosario)",
-        "La Nueva"
+        "La Nueva",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.elmarplatense.com/argentina-uruguay-y-paraguay-jugaran-las-eliminatorias-rumbo-al-mundial-2030",
       "teniaImagenLaFuente": true,
@@ -2386,11 +2242,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44950-el-hospital-fossati-bajo-presion-mas-demanda-1-124-millones-de-deuda-y-una-fuerte-dependencia-de-fondos-municipales/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-30T13:31:15.123Z",
       "sinFecha": true,
       "visto": "2026-09-30T13:31:15.123Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2520,7 +2376,6 @@
       "guion": "Tres jugadores locales integran la selección provincial de padel",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2532,7 +2387,7 @@
       "fecha": "2026-09-30T13:24:29.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T14:01:11.068Z",
-      "relevancia": 100,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2779,7 +2634,6 @@
       "guion": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
@@ -2789,7 +2643,7 @@
       "fecha": "2026-09-30T13:00:08.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 97,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2971,91 +2825,6 @@
       }
     },
     {
-      "id": "1ijifkt",
-      "titulo": "Ernesto Povilaitis Giovazzino asume la presidencia del Puerto de Quequén",
-      "copete": "El Ejecutivo bonaerense oficializó la llegada del nuevo titular al organismo portuario. La medida lleva la firma del gobernador Axel Kicillof y rige de forma retroactiva desde agosto.",
-      "cuerpo": "El Gobierno de la Provincia de Buenos Aires oficializó la llegada de Ernesto Povilaitis Giovazzino a la conducción del Consorcio de Gestión del Puerto de Quequén. La medida se concretó a través del Decreto 1865/2026, rubricado por el gobernador Axel Kicillof y difundido el 29 de septiembre.\n\nLa normativa determina que el flamante funcionario integra el Directorio en representación del Ejecutivo provincial y que su asunción cuenta con vigencia retroactiva al 25 de agosto. El trámite administrativo se desarrolló en el ámbito del Ministerio de Producción, Ciencia e Innovación Tecnológica bajo las pautas de la Ley Provincial 11.414.\n\nEste cambio en la conducción del ente portuario se produce tras la dimisión de María Jimena López, cuya salida del cargo se aceptó mediante el Decreto 3168/25.",
-      "guion": "Ernesto Povilaitis Giovazzino asume la presidencia del Puerto de Quequén",
-      "seccion": "Política",
-      "medios": [
-        "La Noticia 1",
-        "NDEN – Noticias de Necochea",
-        "Ecos Diarios (Necochea)",
-        "Sendero Regional",
-        "0223 (Mar del Plata)"
-      ],
-      "enlace": "https://elecos.com.ar/ernesto-povilaitis-giovezzino-fue-designado-presidente-del-consorcio-de-gestion-de-puerto-quequen",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T12:12:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T14:31:03.728Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Ejecutivo bonaerense designó a Ernesto Povilaitis Giovazzino en el Puerto de Quequén.",
-        "La medida se formalizó mediante el Decreto 1865/2026 firmado por el gobernador Axel Kicillof.",
-        "El nombramiento tiene vigencia retroactiva al 25 de agosto de este año.",
-        "La designación llega tras la salida de la anterior presidenta, María Jimena López."
-      ],
-      "seSabe": [
-        "Ernesto Povilaitis Giovazzino es el nuevo presidente del Consorcio de Gestión del Puerto de Quequén.",
-        "La designación se estableció mediante el Decreto 1865/2026 con firma del gobernador Axel Kicillof.",
-        "El mandato rige de manera retroactiva desde el 25 de agosto de 2026.",
-        "La vacante se originó tras la renuncia de María Jimena López."
-      ],
-      "textoRedes": "El Gobierno provincial oficializó la designación de Ernesto Povilaitis Giovazzino al frente del Consorcio de Gestión del Puerto de Quequén mediante un decreto firmado por Axel Kicillof.",
-      "etiquetas": [
-        "Puerto de Quequén",
-        "Ernesto Povilaitis Giovazzino",
-        "Axel Kicillof",
-        "Gobierno bonaerense"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/ernesto-povilaitis-giovezzino-fue-designado-presidente-del-consorcio-de-gestion-de-puerto-quequen",
-          "fecha": "2026-09-30T12:12:33.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Sendero Regional",
-          "enlace": "https://www.senderomultimedios.com.ar/ernesto-povilaitis-giovazzino-fue-designado-formalmente-como-presidente-de-puerto-quequen/",
-          "fecha": "2026-09-30T12:36:01.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/puerto-quequen-de-necochea-kicillof-oficializo-a-ernesto-povilaitis-como-presidente-del-consorcio",
-          "fecha": "2026-09-30T13:48:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "NDEN – Noticias de Necochea",
-          "enlace": "https://nden.com.ar/nota/38248/puerto-quequen-kicillof-oficializo-a-ernesto-povilaitis-como-presidente",
-          "fecha": "2026-09-30T12:49:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "ernesto-povilaitis-giovazzino-asume-la-presidencia-del-puerto-de",
-      "foto": {
-        "archivo": "fotos-notas/1ijifkt.jpg",
-        "credito": "Foto: Sendero Regional"
-      }
-    },
-    {
       "id": "11di7ig",
       "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
       "copete": "Más de cuarenta integrantes de comunidades locales viajaron a Necochea para sumarse a la quincuagésima octava edición de la Invasión de Pueblos, un masivo encuentro juvenil.",
@@ -3201,94 +2970,6 @@
       }
     },
     {
-      "id": "10skxuq",
-      "titulo": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "copete": "Un pedido formal ingresado ante el Ministerio de Desarrollo de la Comunidad bonaerense exige expedientes y pólizas sobre las competencias realizadas el último fin de semana en el circuito serrano.",
-      "cuerpo": "Un pedido formal de acceso a la información pública ingresó el martes ante el Ministerio de Desarrollo de la Comunidad bonaerense para conocer las habilitaciones, inspecciones y mecanismos de control del Autódromo Juan Manuel Fangio. La presentación, impulsada por el periodista Julio César Politano, exige copias de los expedientes, resoluciones y dictámenes vinculados con el evento desarrollado durante el fin de semana del 26 y 27 de septiembre.\n\nEl requerimiento apunta a determinar la situación regulatoria de la Municipalidad de Balcarce y de la Comisión Asesora y Fiscalizadora de la ACTC ante la Comisión Provincial de Automovilismo y Motociclismo. Además, solicita las constancias de las pólizas de seguro obligatorio y los antecedentes técnicos de la autorización provisoria otorgada al circuito. El escrito advierte con recurrir a la vía judicial si el Poder Ejecutivo provincial incumple los plazos legales de respuesta.",
-      "guion": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "seccion": "Política",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T11:15:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T12:01:02.331Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Presentan un pedido de acceso a la información pública ante la Provincia.",
-        "Exigen expedientes sobre habilitaciones, inspecciones y seguros del circuito.",
-        "Apunta a determinar las autorizaciones de la Municipalidad y de la fiscalizadora.",
-        "El autódromo había reabierto el último fin de semana tras quince años."
-      ],
-      "seSabe": [
-        "El pedido formal fue presentado el martes 29 de septiembre por el periodista Julio César Politano.",
-        "La solicitud se dirigió al Ministerio de Desarrollo de la Comunidad bonaerense.",
-        "Se reclaman copias de expedientes, resoluciones y comprobantes de seguros de las competencias del 26 y 27 de septiembre.",
-        "El escrito incluye una reserva de acudir a la vía judicial ante la falta de respuesta oficial."
-      ],
-      "noConfirmado": [
-        "La respuesta oficial del gobierno provincial sobre la documentación solicitada.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Presentan un pedido formal ante la Provincia para conocer las habilitaciones, inspecciones y pólizas de seguro del Autódromo Juan Manuel Fangio tras las competencias del último fin de semana.",
-      "etiquetas": [
-        "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "Provincia de Buenos Aires",
-        "CoPAM",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-          "fecha": "2026-09-30T11:15:42.000Z",
-          "oficial": false,
-          "aporte": "Detalló la presentación del pedido de acceso a la información pública sobre las habilitaciones del autódromo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wgq362",
-          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-29T14:55:00.000Z",
-          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
-        },
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "reclaman-a-la-provincia-datos-sobre-las-habilitaciones-del-autodromo",
-      "foto": {
-        "archivo": "fotos-notas/10skxuq.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "1yqjdtm",
       "titulo": "El Gobierno posterga por un mes la suba impositiva en los combustibles",
       "copete": "El Ejecutivo nacional difirió la actualización de los gravámenes al combustible líquido y al dióxido de carbono hasta noviembre. La medida evita un nuevo traslado a los surtidores durante octubre.",
@@ -3303,7 +2984,6 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "iProfesional",
-        "Minuto Uno",
         "C5N",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -3526,7 +3206,11 @@
           "aporte": "Confirmó la edad de Ibrahim Roberto Yamil, el monto de dinero mencionado y la grabación desde la cárcel de Ucrania."
         }
       ],
-      "slug": "un-argentino-cae-prisionero-en-ucrania-tras-sumarse-al-ejercito-ruso"
+      "slug": "un-argentino-cae-prisionero-en-ucrania-tras-sumarse-al-ejercito-ruso",
+      "foto": {
+        "archivo": "fotos-notas/1mz151q.jpg",
+        "credito": "Foto: Clarín"
+      }
     },
     {
       "id": "616lop",
@@ -3553,14 +3237,14 @@
         "Infobrisas (Radio Brisas)",
         "Agrositio",
         "Agroempresario",
-        "El Economista",
-        "Todo Agro",
-        "Noticias Agropecuarias",
         "Ámbito",
         "El Día",
         "Agencia DIB",
         "Radio Mitre",
         "Crónica",
+        "El Economista",
+        "Todo Agro",
+        "Noticias Agropecuarias",
         "A24",
         "La Capital (Rosario)"
       ],
@@ -3979,79 +3663,6 @@
       "foto": {
         "archivo": "fotos-notas/1puwvvm.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "v2h1r4",
-      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "copete": "La Universidad Nacional de Mar del Plata dictará una capacitación de un año y medio en el Centro Universitario. La iniciativa busca fortalecer proyectos productivos mediante una modalidad mixta.",
-      "cuerpo": "El Centro Universitario albergará una nueva diplomatura destinada a la creación y gestión de emprendimientos, a cargo de la Universidad Nacional de Mar del Plata. La propuesta se desarrollará a través del programa Puentes y tendrá una duración de un año y medio bajo una modalidad mixta de cursada.\n\nLa iniciativa surge articulada con la Subsecretaría de Producción y Empleo y la Dirección de Juventud. Según explicó Marina Berardo, la oferta apunta a brindar herramientas de planificación a quienes poseen un proyecto en marcha o buscan transformar una idea en una iniciativa productiva.\n\nComo parte del proceso previo, la semana pasada se concretó un taller introductorio que despertó interés entre los asistentes y tendrá continuidad con un nuevo encuentro antes del inicio de la formación principal.",
-      "guion": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T22:23:55.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T16:01:20.946Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Dictará la Universidad Nacional de Mar del Plata",
-        "Duración de un año y medio en el Centro Universitario",
-        "Modalidad mixta orientada a proyectos productivos",
-        "Articulada mediante el programa Puentes"
-      ],
-      "seSabe": [
-        "La capacitación durará un año y medio según la Universidad Nacional de Mar del Plata.",
-        "Las clases presenciales se dictarán en el Centro Universitario.",
-        "La propuesta combina instancias virtuales y presenciales.",
-        "Marina Berardo explicó los detalles del programa desde la Subsecretaría de Producción y Empleo."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta de inicio de la diplomatura.",
-        "No trascendió el cronograma del próximo encuentro del taller introductorio."
-      ],
-      "textoRedes": "Impulsan una diplomatura universitaria de un año y medio para emprendedores en el Centro Universitario con modalidad mixta.",
-      "etiquetas": [
-        "Diplomatura",
-        "Emprendedores",
-        "Universidad Nacional de Mar del Plata",
-        "Centro Universitario",
-        "Producción y Empleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
-          "fecha": "2026-09-30T11:46:08.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la duración, modalidad y sede de la diplomatura, además de las declaraciones del área municipal."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/impulsan-una-diplomatura-para-la-gestion-y-creacion-de-emprendimientos-en-balcarce-907",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en el resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lanzan-una-diplomatura-universitaria-para-emprendedores-locales",
-      "foto": {
-        "archivo": "fotos-notas/v2h1r4.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -4557,8 +4168,8 @@
         "Infocampo",
         "Bichos de Campo",
         "TN (Todo Noticias)",
-        "Noticias Agropecuarias",
-        "Infobae"
+        "Infobae",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.clarin.com/rural/reeligieron-andrea-sarnari-presidenta-federacion-agraria-periodo_0_n2GlNmgonO.html",
       "teniaImagenLaFuente": true,
@@ -4663,9 +4274,9 @@
       "medios": [
         "La Nación",
         "Agroempresario",
-        "Todo Agro",
         "Infocampo",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Todo Agro"
       ],
       "enlace": "https://www.infocampo.com.ar/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-sea-por-ley-y-que-no-vuelvan-mas/",
       "teniaImagenLaFuente": true,
@@ -4701,16 +4312,16 @@
           "aporte": null
         },
         {
-          "medio": "Todo Agro",
-          "enlace": "https://www.todoagro.com.ar/faa-volvio-a-reclamar-el-fin-de-las-retenciones-necesitamos-politicas-publicas-que-contemplen-la-realidad-y-la-escala-de-los-productores/",
-          "fecha": "2026-09-29T21:28:34.000Z",
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
+          "fecha": "2026-09-29T22:51:16.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "Bichos de Campo",
-          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
-          "fecha": "2026-09-29T22:51:16.000Z",
+          "medio": "Todo Agro",
+          "enlace": "https://www.todoagro.com.ar/faa-volvio-a-reclamar-el-fin-de-las-retenciones-necesitamos-politicas-publicas-que-contemplen-la-realidad-y-la-escala-de-los-productores/",
+          "fecha": "2026-09-29T21:28:34.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4722,77 +4333,6 @@
         "archivo": "fotos-notas/rtk3io.jpg",
         "credito": "Foto: Infocampo"
       }
-    },
-    {
-      "id": "105bdce",
-      "titulo": "Los Pumas juegan ante Australia en julio por el Championship 2027",
-      "copete": "El seleccionado argentino confirma los primeros dos partidos para el Rugby Championship 2027. La serie se juega en julio en territorio australiano como preparación para el Mundial.",
-      "cuerpo": "Los Pumas disputarán los primeros dos partidos del Rugby Championship 2027 frente a Australia como visitantes en el mes de julio. Esta serie marcará el regreso del torneo en su formato tradicional luego de la suspensión durante 2026 y servirá como preparación de cara a la Copa del Mundo que tendrá lugar en Australia ese mismo año. Hasta el momento, las autoridades confirmaron solamente las fechas y sedes de estos dos compromisos iniciales, mientras que el resto del calendario continúa pendiente de definición para completar la competencia internacional.",
-      "guion": "Los Pumas juegan ante Australia en julio por el Championship 2027",
-      "seccion": "Deportes",
-      "medios": [
-        "Infobae",
-        "El Marplatense"
-      ],
-      "enlace": "https://www.elmarplatense.com/los-pumas-ya-tienen-agenda-para-el-rugby-championship-2027",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T17:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T18:01:09.192Z",
-      "relevancia": 47,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Los Pumas enfrentan a Australia en julio de 2027.",
-        "El primer partido será el 10 de julio en Sydney.",
-        "El segundo encuentro se jugará el 17 en Townsville.",
-        "El torneo regresa a su formato tradicional."
-      ],
-      "seSabe": [
-        "Los Pumas jugarán contra Australia el sábado 10 de julio de 2027 en el Allianz Stadium de Sydney.",
-        "El segundo partido será el sábado 17 de julio de 2027 en el Queensland Country Bank Stadium de Townsville.",
-        "El torneo retomará su formato tradicional tras no disputarse en 2026."
-      ],
-      "noConfirmado": [
-        "El resto del calendario de partidos del Rugby Championship 2027 todavía no fue anunciado de manera oficial."
-      ],
-      "textoRedes": "Los Pumas ya tienen confirmados sus primeros dos partidos para el Rugby Championship 2027. El seleccionado argentino enfrentará a Australia en julio como visitante en Sydney y Townsville en el inicio de la temporada mundialista.",
-      "etiquetas": [
-        "Los Pumas",
-        "Rugby Championship",
-        "Australia",
-        "Seleccionado argentino",
-        "Mundial de Rugby"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/los-pumas-ya-tienen-agenda-para-el-rugby-championship-2027",
-          "fecha": "2026-09-29T17:00:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las fechas y sedes de los dos primeros partidos ante Australia y el regreso del formato tradicional."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/09/29/los-pumas-abriran-el-rugby-championship-en-australia-antes-del-mundial-2027/",
-          "fecha": "2026-09-29T17:51:26.000Z",
-          "oficial": false,
-          "aporte": "Informó que los encuentros forman parte de la preparación para la Copa del Mundo 2027."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "los-pumas-juegan-ante-australia-en-julio-por-el-championship-2027",
-      "foto": {
-        "archivo": "fotos-notas/105bdce.jpg",
-        "credito": "Foto: El Marplatense"
-      }
     }
   ],
   "secciones": [
@@ -4801,21 +4341,16 @@
     "Argentina",
     "Balcarce",
     "Agro",
-    "Política",
     "Cultura y agenda",
+    "Política",
     "Economía",
-    "Deportes",
-    "Tecnología"
+    "Tecnología",
+    "Deportes"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 4
-    },
-    {
-      "nombre": "Fangio",
-      "ranura": "fangio",
       "cuantas": 3
     },
     {
@@ -4824,17 +4359,17 @@
       "cuantas": 2
     },
     {
-      "nombre": "El INTA",
-      "ranura": "inta",
+      "nombre": "Fangio",
+      "ranura": "fangio",
       "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 7,
-      "sensacion": 4,
+      "sensacion": 3,
       "humedad": 87,
-      "viento": 17,
+      "viento": 18,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
@@ -5183,16 +4718,22 @@
   },
   "pendientes": [
     {
+      "id": "1ur5pa4",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
+    },
+    {
       "id": "vc4a8l",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "1ur5pa4",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
+      "id": "1bbha80",
+      "titulo": "Un jugador de la Selección argentina fue papá por primera…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"recién nacido\""
     },
     {
       "id": "13cnvur",
@@ -5273,12 +4814,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "bos774",
-      "titulo": "Viajó a Rusia por una supuesta oferta de trabajo y terminó…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "k0mmc0",
       "titulo": null,
       "seccion": "Argentina",
@@ -5291,5 +4826,5 @@
       "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 5
 }

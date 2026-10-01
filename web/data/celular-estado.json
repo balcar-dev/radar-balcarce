@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T04:31:19.829Z",
- "portada": 62,
+ "generado": "2026-10-01T05:02:03.746Z",
+ "portada": 56,
  "archivo": 690,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-01T04:31:19.866Z",
+  "generado": "2026-10-01T05:02:03.773Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,38 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
-    "notas": [
-     {
-      "id": "6xex85",
-      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "x9mmdo",
-      "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "z3c4f",
-      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-      "seccion": "Balcarce"
-     }
-    ]
-   },
-   {
-    "nombre": "noticia2",
-    "titulo": "El repaso de la tarde",
-    "hora": "15:00",
-    "voz": "locutora",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
      {
       "id": "5evpzb",
@@ -129,14 +98,45 @@
       "seccion": "Fútbol"
      },
      {
+      "id": "1a2z04a",
+      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+      "seccion": "Automovilismo"
+     },
+     {
       "id": "11di7ig",
       "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
       "seccion": "Balcarce"
+     }
+    ]
+   },
+   {
+    "nombre": "noticia2",
+    "titulo": "El repaso de la tarde",
+    "hora": "15:00",
+    "voz": "locutora",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 46,
+    "notas": [
+     {
+      "id": "2uqvxt",
+      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
+      "seccion": "Fútbol"
      },
      {
-      "id": "h7o4xt",
-      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
-      "seccion": "Agro"
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "x9mmdo",
+      "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -147,22 +147,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "2uqvxt",
-      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
-      "seccion": "Fútbol"
-     },
      {
       "id": "1fgr8xb",
       "titulo": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
       "seccion": "Fútbol"
      },
      {
-      "id": "1xow9qi",
-      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
-      "seccion": "Deportes"
+      "id": "12rp30w",
+      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "h7o4xt",
+      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
+      "seccion": "Agro"
      },
      {
       "id": "1gv3zir",
@@ -176,12 +176,6 @@
    "hoy": [],
    "cola": [
     {
-     "id": "x9mmdo",
-     "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
      "id": "g8dncb",
      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
      "seccion": "Balcarce",
@@ -190,6 +184,12 @@
     {
      "id": "1a2z04a",
      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
+    {
+     "id": "x9mmdo",
+     "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
      "seccion": "Automovilismo",
      "marcada": false
     },
