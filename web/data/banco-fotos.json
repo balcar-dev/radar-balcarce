@@ -3436,16 +3436,16 @@
   "intentos": 2
  },
  "1yu9ytn": {
-  "archivo": "fotos-notas/1yu9ytn.jpg",
   "medio": "El Diario Balcarce",
-  "credito": "Foto: El Diario Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
   "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-09-30-20-53-48Martinez_sobre_Aparicio.JPG",
   "razon": "Es la única foto disponible, cumple con los requisitos y no tiene marcas ni menores.",
-  "cuando": "2026-09-30T22:01:46.545Z"
+  "cuando": "2026-09-30T22:01:46.545Z",
+  "intentado": true,
+  "borrada": true
  },
  "vp5l7j": {
   "archivo": "fotos-notas/vp5l7j.jpg",
@@ -3792,11 +3792,15 @@
   "cuando": "2026-10-01T05:01:50.537Z"
  },
  "f3bef7": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/f3bef7.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Lautaro Mart\\u00inez marca el primer tanto frente a Bolivia en Córdoba",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T06:01:08.079Z",
-  "intentos": 2
+  "enlace": "https://www.minutouno.com/deportes/asi-fue-el-gol-lautaro-martinez-abrir-el-marcador-bolivia-n6328703",
+  "imagenOriginal": "https://media.minutouno.com/p/5674e91042f60ebd6bfbcf01a7411b64/adjuntos/150/imagenes/043/676/0043676498/gol-lautaro.jpg",
+  "razon": "La foto B muestra claramente el festejo de Lautaro Martínez con buen encuadre y sin marcas de agua superpuestas ni menores reconocibles.",
+  "cuando": "2026-10-01T07:01:25.958Z"
  }
 }

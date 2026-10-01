@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T06:31:04.944Z",
- "portada": 55,
- "archivo": 690,
+ "generado": "2026-10-01T07:01:38.836Z",
+ "portada": 54,
+ "archivo": 688,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-01T06:31:04.969Z",
+  "generado": "2026-10-01T07:01:38.863Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,13 +85,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "6xex85",
-      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
-      "seccion": "Cultura y agenda"
-     },
      {
       "id": "y9vwef",
       "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
@@ -106,6 +101,11 @@
       "id": "18xuulv",
       "titulo": "Nicolás Paz brilla y Argentina derrota a Bolivia en Córdoba",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1a2z04a",
+      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -147,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 49,
     "notas": [
      {
       "id": "idl5dq",
@@ -160,13 +160,13 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
      },
      {
-      "id": "1dqm02n",
-      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
       "seccion": "Balcarce"
      }
     ]
@@ -175,18 +175,6 @@
   "facebook": {
    "hoy": [],
    "cola": [
-    {
-     "id": "g8dncb",
-     "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1a2z04a",
-     "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
     {
      "id": "idl5dq",
      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
