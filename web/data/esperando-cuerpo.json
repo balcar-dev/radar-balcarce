@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T20:29:24.676Z",
+ "generado": "2026-10-01T20:32:24.026Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -79,45 +79,6 @@
    "maximo": 3
   },
   {
-   "id": "18apis6",
-   "titulo": "Norris explica cómo se disculpó con Colapinto y condena las amenazas en redes",
-   "copete": "Lando Norris ha explicado cómo pidió perdón a Franco Colapinto para dejar atrás la polémica por lo ocurrido el pasado fin de semana en Bakú, con un accidente que fue provocado por el argentino y que dejó fuera de carrera a ambos y a Pierre Gasly. El piloto de McLaren reconoció…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-01T12:16:51.000Z",
-   "fuentes": [
-    {
-     "medio": "Motorsport",
-     "enlace": "https://es.motorsport.com/f1/news/norris-explica-disculpas-colapinto-abuso-redes/10860600/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-     "fecha": "2026-10-01T12:16:51.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/deportes/norris-se-disculpo-con-colapinto-tras-sus-criticas",
-     "fecha": "2026-10-01T15:10:03.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"azerbaiyan\", que sale de una nota anterior, como si fuera de hoy",
-   "maximo": 3
-  },
-  {
-   "id": "601ifn",
-   "titulo": "El viernes 9 se realizará el acto central por el “Día del Respeto a la Diversidad Cultural”",
-   "copete": "El próximo viernes 9 de octubre, a las 10 horas, se desarrollará en las instalaciones del Instituto Adventista Balcarce (IAB) el acto central conmemorativo por el “Día del Respeto a la Diversidad Cultural”. La actividad se enmarca en el calendario de actividad docente, que…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T13:22:10.000Z",
-   "fuentes": [
-    {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/01/el-viernes-9-se-realizara-el-acto-central-por-el-dia-del-respeto-a-la-diversidad-cultural/",
-     "fecha": "2026-10-01T13:22:10.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 93 palabras",
-   "maximo": 3
-  },
-  {
    "id": "12pfgxi",
    "titulo": "Bullrich en IDEA: \"No podemos tener la industria caída, la construcción caída, el comercio caído\"",
    "copete": "La senadora nacional de La Libertad Avanza (LLA) Patricia Bullrich volvió a marcar distancia del núcleo duro que rodea a Javier Milei y pidió mayor velocidad en los cambios económicos para que sean palpables en los hogares. Durante su participación en el Coloquio de IDEA, que se…",
@@ -138,10 +99,32 @@
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/politica/bullrich-otra-vez-critica-no-podemos-tener-la-industria-la-construccion-y-el-comercio-caidos-n56176",
      "fecha": "2026-10-01T18:41:00.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/bullrich-otra-vez-critica-no-podemos-tener-la-industria-la-construccion-y-el-comercio-caidos/",
+     "fecha": "2026-10-01T20:27:05.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
+   "intentos": 2,
+   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2468 (line 30 column 8)",
+   "maximo": 3
+  },
+  {
+   "id": "601ifn",
+   "titulo": "El viernes 9 se realizará el acto central por el “Día del Respeto a la Diversidad Cultural”",
+   "copete": "El próximo viernes 9 de octubre, a las 10 horas, se desarrollará en las instalaciones del Instituto Adventista Balcarce (IAB) el acto central conmemorativo por el “Día del Respeto a la Diversidad Cultural”. La actividad se enmarca en el calendario de actividad docente, que…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T13:22:10.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/01/el-viernes-9-se-realizara-el-acto-central-por-el-dia-del-respeto-a-la-diversidad-cultural/",
+     "fecha": "2026-10-01T13:22:10.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 93 palabras",
    "maximo": 3
   },
   {
