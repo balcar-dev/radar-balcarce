@@ -34,6 +34,7 @@ import { sinSecretos } from './whatsapp.mjs';
 import { diaAR, horaAR } from '../ingesta/zona.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
 import { idDeRuta } from '../web/lib/ruta.js';
+import { detalleDeCloudflare } from './estadisticas-detalle.mjs';
 
 const SITIO = 'radarbalcarce.com';
 /** El identificador del sitio que Cloudflare pone en el HTML (data-cf-beacon).
@@ -90,7 +91,7 @@ export function tokenDeCloudflare(env = {}) {
 
 const PARECE_PERMISO = /auth|permission|not authori[sz]ed|access|forbidden|does not have/i;
 
-async function consultar({ query, token, fetchFn }) {
+export async function consultar({ query, token, fetchFn }) {
   let r;
   try {
     r = await fetchFn(GRAPHQL, {
@@ -243,6 +244,7 @@ export async function estadisticasDeMeta({ token, paginaId = PAGINA_ID, ahora = 
  */
 export async function medir({ env = process.env, ahora = new Date(), fetchFn = fetch, log = console.log } = {}) {
   const punto = { cuando: ahora.toISOString() };
+  let dias = null;
   const faltan = [];
   const cuenta = env.CLOUDFLARE_ACCOUNT_ID;
   const { token, nombre } = tokenDeCloudflare(env);
@@ -251,8 +253,12 @@ export async function medir({ env = process.env, ahora = new Date(), fetchFn = f
     faltan.push(`Cloudflare: falta ${!cuenta ? 'el secreto CLOUDFLARE_ACCOUNT_ID' : 'un token (CLOUDFLARE_ANALYTICS_TOKEN)'}`);
   } else {
     const r = await estadisticasDeCloudflare({ cuenta, token, ahora, fetchFn, siteTag: env.CLOUDFLARE_SITE_TAG || null });
-    if (r.ok) punto.web = r.web;
-    else {
+    if (r.ok) {
+      punto.web = r.web;
+      const d = await detalleDeCloudflare({ consultar, cuenta, token, siteTag: r.siteTag, ahora, fetchFn });
+      dias = d.dias;
+      faltan.push(...d.faltan);
+    } else {
       punto.cloudflare = r.sinPermiso ? 'sin-permiso' : 'error';
       faltan.push(r.sinPermiso
         ? `Falta permiso de Analytics en el token de Cloudflare (se probó con ${nombre}): ${r.error}`
@@ -268,7 +274,7 @@ export async function medir({ env = process.env, ahora = new Date(), fetchFn = f
   }
   const limpias = faltan.map((f) => sinSecretos(f, token, env.META_TOKEN, cuenta));
   for (const f of limpias) log(`  (estadísticas) ${f}`);
-  return { punto, faltan: limpias };
+  return { punto, faltan: limpias, dias };
 }
 
 // ---------------------------------------------------------------- el mensaje
@@ -361,9 +367,11 @@ async function main() {
       console.log(`  Meta: página "${v.pagina}", Instagram @${v.instagram ?? '(ninguno)'}; permisos del token: ${v.permisos?.join(', ') || '(Meta no los informa)'}`);
     } catch (e) { console.log(`  Meta: no se pudo verificar el token (${e.message})`); }
   }
-  const { punto, faltan } = await medir({ ahora });
+  const { punto, faltan, dias } = await medir({ ahora });
   console.log('\nLo medido (lo que se guardaría en web/data/estadisticas.json):');
   console.log(JSON.stringify(punto, null, 2));
+  console.log('\nEl detalle por día (lo que iría a `dias`):');
+  console.log(JSON.stringify(dias, null, 1));
   console.log(`\nFaltan ${faltan.length} dato(s)${faltan.length ? ':' : '.'}`);
   for (const f of faltan) console.log(`  - ${f}`);
   const historia = leer(path.join(RAIZ, 'web', 'data', 'estadisticas.json'), { puntos: [] });

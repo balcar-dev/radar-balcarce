@@ -65,6 +65,7 @@ import {
 import {
   medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos,
 } from './estadisticas.mjs';
+import { mezclarDias } from './estadisticas-detalle.mjs';
 
 /**
  * ¿Están prendidas las redes? Es la variable REDES_ACTIVAS de GitHub, que la
@@ -681,7 +682,7 @@ ${c.texto}`);
   let textoStats = '';
   if (probarResumen || tocaMedir(ahora, estado)) {
     console.log('  Midiendo las estadísticas…');
-    const { punto } = await medir({ env: process.env, ahora });
+    const { punto, dias } = await medir({ env: process.env, ahora });
     const turno = turnoDeMedicion(ahora);
     textoStats = textoEstadisticas({
       punto, puntos: historia.puntos, ahora, nombreDeCamino: nombresDeCaminos(portada.notas),
@@ -689,6 +690,7 @@ ${c.texto}`);
     });
     if (!probarResumen && !sinAvisar) {
       historia.puntos = agregarPunto(historia.puntos, punto);
+      if (dias) historia.dias = mezclarDias(historia.dias, dias);
       fs.writeFileSync(ESTADISTICAS, `${JSON.stringify(historia, null, 2)}\n`);
       estado.ultimaMedicion = turno;
       cambio = true;
