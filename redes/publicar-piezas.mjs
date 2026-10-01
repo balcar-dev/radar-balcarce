@@ -31,6 +31,27 @@ const INTENTOS_SECUNDARIA = 3;
 /** Los intentos de la historia de un reel, en cada red, en la misma corrida. */
 export const INTENTOS_HISTORIA = 3;
 
+/**
+ * Lo que no salió y por qué (1/10/2026, Hernán: "entender por qué fallan esas
+ * cosas"). Antes un fallo sólo quedaba en el registro de la corrida y en el
+ * WhatsApp. Ahora queda en el libro (`problemas`), así el panel del celular lo
+ * muestra, lo explica y ofrece reintentarlo. La clave es `dia/pieza/red/parte`,
+ * con parte = reel | historia | historia-del-reel. Se borra cuando sale.
+ */
+export const parteDe = (tipo) => (tipo === 'REELS' ? 'reel' : 'historia');
+export function registrarProblema(libro, clave, { pieza, red, parte, error, ahora = new Date() }) {
+  libro.problemas ??= {};
+  libro.problemas[clave] = { pieza, red, parte, error: String(error ?? '').slice(0, 240), cuando: ahora.toISOString() };
+  // Sólo los últimos tres días: el libro no crece.
+  const limite = diaAR(new Date(ahora.getTime() - 3 * 24 * 3600e3));
+  for (const k of Object.keys(libro.problemas)) if (k.slice(0, 10) < limite) delete libro.problemas[k];
+}
+export function limpiarProblema(libro, clave) {
+  if (!libro?.problemas?.[clave]) return false;
+  delete libro.problemas[clave];
+  return true;
+}
+
 /** ¿Es un podcast? Un reel que cuenta dos notas o más. Cada podcast tiene su
  *  nota en la web (web/lib/notas-propias.js), que enlaza al video: para eso
  *  se guarda en el libro su dirección pública (`permalink`). */
@@ -136,6 +157,7 @@ export async function publicarPiezas({
           // La dirección pública del podcast, para enlazarlo desde su nota en
           // la web. Si Meta todavía no la da, la completa la vuelta siguiente
           // (completarEnlaces).
+          limpiarProblema(libro, `${clave}/${red}/${parteDe(tipo)}`);
           if (esPodcast(libro[rubro][clave])) {
             const url = await buscarEnlace(api, red, r.id);
             if (url) libro[rubro][clave].permalink = url;
@@ -163,12 +185,17 @@ export async function publicarPiezas({
                     mediaId: rh.id, nombre: pieza.nombre, red, notaId: pieza.notaId ?? null,
                   });
                   guardar();
+                  if (limpiarProblema(libro, `${clave}/${red}/historia-del-reel`)) guardar(); // sólo si había un problema anotado
                   log(`             + historia: ${rh.id}`);
                   break;
                 } catch (e) {
                   const ultimo = intentoH === INTENTOS_HISTORIA || e.tokenMuerto;
                   log(`             la historia del reel falló (intento ${intentoH} de ${INTENTOS_HISTORIA})${ultimo ? ', queda igual el reel' : ''}: ${e.message}`);
-                  if (ultimo) break;
+                  if (ultimo) {
+                    registrarProblema(libro, `${clave}/${red}/historia-del-reel`, { pieza: pieza.nombre, red, parte: 'historia-del-reel', error: e.message, ahora });
+                    guardar();
+                    break;
+                  }
                   await esperar(4000 * intentoH);
                 }
               }
@@ -182,7 +209,11 @@ export async function publicarPiezas({
             log('             El token venció o lo revocaron: hay que generar otro.');
             return resultado;
           }
-          if (intento === intentos) resultado.fallos.push({ pieza: pieza.nombre, red, error: e.message });
+          if (intento === intentos) {
+            resultado.fallos.push({ pieza: pieza.nombre, red, error: e.message });
+            registrarProblema(libro, `${clave}/${red}/${parteDe(tipo)}`, { pieza: pieza.nombre, red, parte: parteDe(tipo), error: e.message, ahora });
+            guardar();
+          }
           else await esperar(4000 * intento);
         }
       }

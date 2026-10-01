@@ -1,0 +1,131 @@
+# Reintenta UNA parte de una pieza de redes que no salió (1/10/2026): la historia
+# de un reel que Instagram rechazó, un reel que falló o una historia. Lo dispara el
+# botón "Reintentar" de la pestaña Redes del panel del celular, o se corre a mano
+# (Actions → "Reintentar pieza" → Run workflow).
+#
+# NO vuelve a pedir la voz (el cupo es de 10 audios por día): usa el video que
+# "Redes" armó ese día y guardó como artefacto por tres días (piezas-<corrida>), y
+# sólo lo sube. Si ya pasaron los tres días, dice que no lo encuentra.
+#
+# Necesita META_TOKEN y que REDES_ACTIVAS valga "Si"; sin eso sólo simula.
+# Comparte el candado "redes" con el reloj: nunca dos publicando a la vez.
+name: Reintentar pieza
+
+on:
+  workflow_dispatch:
+    inputs:
+      pieza:
+        description: 'Cuál pieza (por ejemplo noticia1, noticia2, podcast, clima-manana)'
+        type: string
+        required: true
+      red:
+        description: 'En qué red'
+        type: choice
+        options: [instagram, facebook]
+        default: instagram
+      parte:
+        description: 'Qué parte: reel, historia (una historia sola) o historia-del-reel'
+        type: choice
+        options: [historia-del-reel, reel, historia]
+        default: historia-del-reel
+      dia:
+        description: 'Qué día (AAAA-MM-DD). Vacío: hoy'
+        type: string
+        default: ''
+      marca:
+        description: 'Una marca para encontrar esta corrida (la pone el panel)'
+        type: string
+        default: ''
+
+run-name: Reintentar ${{ github.event.inputs.pieza }} · ${{ github.event.inputs.red }} · ${{ github.event.inputs.parte }} ${{ github.event.inputs.marca }}
+
+concurrency:
+  group: redes
+  cancel-in-progress: false
+
+jobs:
+  reintentar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # para guardar el libro de lo publicado
+      actions: read # para bajar el video guardado
+    env:
+      TZ: America/Argentina/Buenos_Aires
+      GH_TOKEN: ${{ github.token }}
+      PIEZA: ${{ github.event.inputs.pieza }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Busca, del más nuevo al más viejo, el artefacto de ese día que trae el video
+      # de la pieza, y lo baja a la carpeta reintento/.
+      - name: Bajar el video que ya se armó
+        env:
+          DIA: ${{ github.event.inputs.dia }}
+        run: |
+          set -e
+          DIA="${DIA:-$(date +%F)}"
+          # Que el nombre de la pieza sea sólo letras, números y guiones: va a un nombre de archivo.
+          case "$PIEZA" in *[!a-zA-Z0-9_-]*|"") echo "Nombre de pieza inválido"; exit 1;; esac
+          mkdir -p reintento
+          encontrado=""
+          for id in $(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" --jq '.artifacts[] | select(.expired==false and (.name|startswith("piezas-"))) | "\(.id)|\(.created_at)"'); do
+            n="${id%%|*}"; creado="${id##*|}"
+            # El día de Balcarce en que se armó.
+            [ "$(date -d "$creado" +%F)" = "$DIA" ] || continue
+            rm -rf /tmp/a && mkdir -p /tmp/a
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$n/zip" > /tmp/a.zip
+            unzip -q -o /tmp/a.zip -d /tmp/a
+            if [ -f "/tmp/a/$PIEZA.mp4" ]; then
+              cp /tmp/a/*.mp4 /tmp/a/piezas.json reintento/ 2>/dev/null || true
+              encontrado="$n"; break
+            fi
+          done
+          if [ -z "$encontrado" ]; then
+            echo "No encuentro el video de $PIEZA del $DIA: se guardan sólo tres días, o esa pieza nunca llegó a armarse (en ese caso la va a armar el reloj en su horario)."
+            exit 1
+          fi
+          echo "Video encontrado en el artefacto $encontrado"
+
+      - name: Reintentar
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
+          RED: ${{ github.event.inputs.red }}
+          PARTE: ${{ github.event.inputs.parte }}
+          DIA: ${{ github.event.inputs.dia }}
+        run: node redes/reintentar.mjs --carpeta=reintento --pieza="$PIEZA" --red="$RED" --parte="$PARTE" --dia="${DIA:-$(date +%F)}"
+
+      - name: Guardar lo publicado
+        if: always()
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          git add web/data/redes.json
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+          else
+            git commit -m "Redes: reintento de $PIEZA · $(date '+%d/%m %H:%M')"
+            # El mismo ciclo que "Redes" (redes.yml): traer lo de las otras corridas,
+            # resolver choques de web/data/ con lo de esta (en un rebase, "theirs" es
+            # el commit propio) y reintentar hasta tres veces.
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo guardar el libro después de tres intentos"; exit 1; }
+          fi

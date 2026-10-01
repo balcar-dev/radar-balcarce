@@ -38,12 +38,15 @@ Elegí, en este orden de interés:
 - **Violencia, guerras, atentados, crímenes, tragedias**; nada con **menores** ni **víctimas**.
 - **Personas que pueden estar vivas** (salvo grandes figuras ya muy consagradas) y cualquier muerte reciente.
 - Hechos **locales de España u otros países** sin importancia mundial ni relación con Argentina (hay muchos y sobran).
+- **Fundaciones de empresas, bancos, aerolíneas o ciudades de otros países**, y política o economía de afuera, aunque sean famosas en muchos idiomas (1/10, Hernán: "no me hace falta la fundación de algo de Holanda"). La fama mundial sólo alcanza para una **persona**, un **descubrimiento, invento o hito de la ciencia o el espacio**, o una **obra o hecho cultural** que conoce cualquiera.
+- **"Balcarce" también es un apellido** (el gobernador Juan Ramón Balcarce, Antonio González Balcarce): eso no es de nuestra ciudad.
 - **Religión** como tema central, y días "de algo" que son de una marca, un gremio o inventados.
 - Lo que sólo entiende un especialista. Si una efeméride necesita mucho contexto para entenderse, no sirve.
 
 ## Lo que hay que hacer
 Para **cada día**, elegí usando **sólo los identificadores [entre corchetes]** de la lista:
-- **1 PRINCIPAL** (la mejor del día).
+- **1 PRINCIPAL** (la mejor del día: la que da para una nota y un video de 30 segundos, con un gancho que se cuente en una frase y una foto posible).
+- Pensá el día como **cuatro lugares**: la principal; una **argentina** (de otro estilo que la principal); una de **ciencia, cultura o del mundo**; y una **curiosa** para cerrar liviano. Que dos días seguidos no abran con el mismo estilo.
 - Hasta **3 SÍ**: buenas, van si no entra la principal o si hace falta una segunda.
 - Hasta **3 OPCIONAL**: sirven pero no son lo mejor.
 - Las que descartarías por algún motivo de la lista de "Qué evitamos": **NO**.
