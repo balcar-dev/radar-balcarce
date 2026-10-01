@@ -118,7 +118,12 @@ export function sinCierreColgado(titulo) {
  * no se puede arreglar sin inventar queda como está (y el verificador lo
  * rechaza si la nota es nueva).
  */
+/** Un escape unicode que quedó escrito sin decodificar (1/10: antif\u00futbol en un título publicado): se decodifica. */
+export const sinEscapes = (texto) => String(texto)
+  .replace(/\\u([0-9a-fA-F]{4})/g, (m, h) => String.fromCharCode(parseInt(h, 16)))
+  .replace(/\\u00f[uú]/g, 'ú');
+
 export function tituloAutomatico(titulo) {
   if (titulo == null) return '';
-  return sinCierreColgado(sinBalcarceAlFinal(sinCierreColgado(sinEtiqueta(String(titulo).trim()))));
+  return sinCierreColgado(sinBalcarceAlFinal(sinCierreColgado(sinEtiqueta(sinEscapes(String(titulo)).trim()))));
 }

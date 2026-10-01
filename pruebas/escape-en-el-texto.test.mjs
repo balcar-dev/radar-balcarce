@@ -16,3 +16,9 @@ test('los escapes unicode que quedaron escritos en el texto (antif + barra-u00fu
   const limpio = arreglarEscritura({ titulo: 'Un título normal con ñ y tildes: más' });
   assert.ok(!limpio.arreglos.some((a) => /escape/.test(a)));
 });
+
+test('tituloAutomatico (el que pasa por todos los títulos publicados) también decodifica el escape', async () => {
+  const { tituloAutomatico } = await import('../web/lib/titulos.js');
+  assert.equal(tituloAutomatico(`Laporte califica a la Argentina de antif${BARRA_U}00futbol`), 'Laporte califica a la Argentina de antifútbol');
+  assert.equal(tituloAutomatico('Un título común'), 'Un título común');
+});
