@@ -1,0 +1,106 @@
+# Arma de antemano piezas con voz y las deja guardadas (reels/fijas/) para reutilizarlas
+# durante dos semanas (1/10/2026, Hernán: "lo de participá se puede armar antes y usar dos
+# semanas el mismo, hasta que volvamos a tener la clave paga"). Mientras valen, el plan las
+# sube tal cual y NO pide la voz: cada una gasta un audio del cupo UNA vez y después cero.
+#
+# A mano: Actions → "Fijar piezas" → Run workflow.
+#   piezas  cuáles, separadas por coma (participa-noticias, participa-evento, participa-reclamos, participa-nota)
+#   desde   el primer día en que valen (AAAA-MM-DD)
+#   dias    cuántos días valen (14 = dos semanas)
+#
+# Gasta un audio por pieza del cupo de voz del día: conviene correrlo un día de poco uso
+# (el sábado o el domingo) y de a dos o tres piezas. Comparte el candado "redes".
+name: Fijar piezas
+
+on:
+  workflow_dispatch:
+    inputs:
+      piezas:
+        description: 'Qué piezas, separadas por coma (por ejemplo participa-noticias,participa-evento)'
+        type: string
+        required: true
+      desde:
+        description: 'Primer día en que valen (AAAA-MM-DD)'
+        type: string
+        required: true
+      dias:
+        description: 'Cuántos días valen'
+        type: string
+        default: '14'
+
+concurrency:
+  group: redes
+  cancel-in-progress: false
+
+jobs:
+  fijar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write # para guardar los videos en reels/fijas/
+    env:
+      TZ: America/Argentina/Buenos_Aires
+      PIEZAS: ${{ inputs.piezas }}
+      DESDE: ${{ inputs.desde }}
+      DIAS: ${{ inputs.dias }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Lo que se escribe llega por variables y se valida antes de usarlo.
+      - name: Revisar lo pedido
+        run: |
+          case "$PIEZAS" in *[!a-z0-9,-]*|"") echo "::error::Las piezas sólo pueden tener letras minúsculas, números, guiones y comas"; exit 1;; esac
+          echo "$DESDE" | grep -Eq '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' || { echo "::error::\"desde\" tiene que ser AAAA-MM-DD"; exit 1; }
+          echo "$DIAS" | grep -Eq '^[0-9]{1,2}$' || { echo "::error::\"dias\" tiene que ser un número"; exit 1; }
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar
+        run: npm ci --no-audit --no-fund
+
+      # --incluir: las pide aunque hoy no les toque; --sin-fijas: las arma de cero con la voz.
+      - name: Armar las piezas con voz
+        run: node reels/plan.mjs --generar "--solo=$PIEZAS" "--incluir=$PIEZAS" --sin-fijas
+        env:
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+
+      - name: Guardarlas como fijas
+        run: node reels/fijas.mjs "--piezas=$PIEZAS" "--desde=$DESDE" "--dias=$DIAS"
+
+      - name: Subir lo guardado
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          git add reels/fijas/
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+          else
+            git commit -m "Piezas fijas: $PIEZAS desde $DESDE ($DIAS días)"
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qvE "^(reels/fijas/|web/data/)" && { echo "Conflicto fuera de reels/fijas: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo subir lo guardado"; exit 1; }
+          fi
+
+      - name: Dejar las piezas para escucharlas
+        uses: actions/upload-artifact@v4
+        with:
+          name: piezas-fijas
+          path: |
+            reels/salida/*.mp4
+            reels/salida/piezas.json
+          if-no-files-found: ignore
+          retention-days: 7

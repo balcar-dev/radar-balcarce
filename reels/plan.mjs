@@ -18,6 +18,8 @@ import { feriadoDelDia, fechaDeFeriado, datosParaContar, guionFeriado } from '..
 import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { enlaceDeNota } from '../redes/elegir.mjs';
+import { fijaVigente } from './fijas.mjs';
+import { diaAR } from '../ingesta/zona.mjs';
 import { repasosDelDia } from '../redes/repasos.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
@@ -191,6 +193,8 @@ function leerDatos() {
 
 export function planDelDia(datos, {
   libro = null, fecha = new Date(), estado = leerEstado(), eventos = null,
+  // Piezas que se piden aunque hoy no les toque (para armarlas de antemano: `--incluir=` y reels/fijas.mjs).
+  forzar = [],
 } = {}) {
   const hoy = fecha.getDate();
   const turno = datos.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
@@ -211,7 +215,7 @@ export function planDelDia(datos, {
   const cuando = horariosConfigurados(estado);
   // `toca` (panel/horarios.mjs) es la MISMA función que usa el reloj de Redes:
   // los teléfonos útiles salen el día que rotan, o el que fijó el panel.
-  const tocaHoy = (id) => toca(cuando[id], fecha, { estado });
+  const tocaHoy = (id) => forzar.includes(id) || toca(cuando[id], fecha, { estado });
 
   // --- El aviso de clima: la única pieza que no espera su horario ---------
   //
@@ -516,7 +520,8 @@ export function planDelDia(datos, {
 
 if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
   const datos = leerDatos();
-  const { piezas } = planDelDia(datos, { libro: leerLibro() });
+  const incluir = (process.argv.find((a) => a.startsWith('--incluir='))?.slice(10) ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+  const { piezas } = planDelDia(datos, { libro: leerLibro(), forzar: incluir });
 
   console.log(`\n\x1b[1mPLAN DEL DÍA · ${fechaLarga()}\x1b[0m`);
   console.log(`  techo: ${REGLAS.reelsPorDia} reels, ${REGLAS.historiasPorDia} historias (hasta ${REGLAS.historiasMaximasPorDia} con los extras)\n`);
@@ -535,13 +540,25 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
     // ffmpeg, que son ochenta megas, y leer el plan del día no. Con el
     // import arriba, las pruebas obligaban a instalarlo en GitHub Actions.
     const { armarReel } = await import('./reel.mjs');
+    // Una pieza armada de antemano (reels/fijas/, vigente hoy) se sube tal cual: no pide la voz de nuevo.
+    // `--sin-fijas` fuerza armarla de cero (para fijar una nueva).
+    const sinFijas = process.argv.includes('--sin-fijas');
     const manifiesto = [];
     console.log('\n\x1b[1mARMANDO LOS VIDEOS\x1b[0m');
-    for (const p of piezas.filter((x) => x.svg && !x.fueraDeTecho
+    for (const p of piezas.filter((x) => x.svg && (!x.fueraDeTecho || incluir.includes(x.nombre))
       && (!solo.length || solo.includes(x.nombre)))) {
       process.stdout.write(`  ${p.nombre}… `);
       try {
-        const r = await armarReel(p, SALIDA);
+        const fija = sinFijas ? null : fijaVigente(p.nombre, diaAR());
+        let r;
+        if (fija) {
+          fs.mkdirSync(SALIDA, { recursive: true });
+          const destino = path.join(SALIDA, `${p.nombre}.mp4`);
+          fs.copyFileSync(fija.ruta, destino);
+          r = { mp4: destino, duracion: fija.duracion ?? 0, historia: null, vozUsada: `fija hasta el ${fija.hasta}, no gasta voz` };
+        } else {
+          r = await armarReel(p, SALIDA);
+        }
         manifiesto.push({
           nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo, notaId: p.notaId ?? null,
           notaIds: p.notaIds ?? [], items: p.items ?? [],
