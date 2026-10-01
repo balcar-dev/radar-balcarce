@@ -1,15 +1,15 @@
 {
- "generado": "2026-10-01T18:35:04.830Z",
- "portada": 66,
+ "generado": "2026-10-01T19:01:40.518Z",
+ "portada": 63,
  "archivo": 734,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-01T18:35:04.862Z",
+  "generado": "2026-10-01T19:01:40.559Z",
   "piezas": [
    {
     "nombre": "clima-manana",
     "tipo": "historia",
-    "hora": "07:30",
+    "hora": "07:00",
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
@@ -27,6 +27,16 @@
     "salio": "2026-10-01T13:35:03.428Z"
    },
    {
+    "nombre": "agenda",
+    "tipo": "historia",
+    "hora": "12:00",
+    "que": "La agenda del fin de semana",
+    "voz": "locutora",
+    "ventana": 60,
+    "momento": "cerrada",
+    "salio": "2026-10-01T18:57:44.493Z"
+   },
+   {
     "nombre": "noticia2",
     "tipo": "reel",
     "hora": "15:00",
@@ -35,16 +45,6 @@
     "ventana": 240,
     "momento": "en-hora",
     "salio": "2026-10-01T18:09:10.520Z"
-   },
-   {
-    "nombre": "agenda",
-    "tipo": "historia",
-    "hora": "18:00",
-    "que": "La agenda del fin de semana",
-    "voz": "locutora",
-    "ventana": 60,
-    "momento": "antes",
-    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -69,10 +69,10 @@
    {
     "nombre": "podcast",
     "tipo": "reel",
-    "hora": "20:30",
+    "hora": "21:00",
     "que": "El repaso del día",
     "voz": "locutor",
-    "ventana": 210,
+    "ventana": 180,
     "momento": "antes",
     "salio": null
    }
@@ -143,11 +143,11 @@
    {
     "nombre": "podcast",
     "titulo": "El repaso del día",
-    "hora": "20:30",
+    "hora": "21:00",
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
      {
       "id": "alddw5",
@@ -160,14 +160,14 @@
       "seccion": "Fútbol"
      },
      {
+      "id": "34t457",
+      "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
+      "seccion": "Economía"
+     },
+     {
       "id": "1sjcoqr",
       "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
       "seccion": "Deportes"
-     },
-     {
-      "id": "1mknzh0",
-      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -193,18 +193,16 @@
      "id": "15i90co",
      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
      "cuando": "2026-10-01T17:03:32.167Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "alddw5",
      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-     "seccion": "Balcarce",
-     "marcada": false
+     "cuando": "2026-10-01T18:36:31.248Z"
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-01T18:33:32.167Z",
+   "cola": [],
+   "cupo": 0,
+   "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

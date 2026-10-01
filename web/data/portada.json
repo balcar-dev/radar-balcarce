@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T18:35:04.830Z",
+  "generado": "2026-10-01T19:01:40.518Z",
   "notas": [
     {
       "id": "repaso20261001tarde",
@@ -74,7 +74,10 @@
       "guion": "Florencia Martínez detalla los motivos para no convocar a Aparicio",
       "seccion": "Política",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/politica/no-es-el-momento-martinez-explico-por-que-no-se-convoco-a-aparicio-a-la-comision-de-salud",
       "teniaImagenLaFuente": true,
@@ -223,6 +226,96 @@
       "foto": {
         "archivo": "fotos-notas/1uwpmsg.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1b6nw50",
+      "titulo": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
+      "copete": "El equipo de Rodolfo Arruabarrena enfrenta a Unión el viernes desde las 21.30 en la Bombonera por el Torneo Clausura. El entrenador cuenta con Leo Flores y Sebastián Villa, pero sufre la baja de Tomás Belmonte.",
+      "cuerpo": "Boca recibe a Unión el viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura. El entrenador Rodolfo Arruabarrena incluye a Leo Flores en la nómina de citados luego de su debut con la Selección Argentina frente a Bolivia. Además, Sebastián Villa integra el plantel tras superar un cuadro febril y Facundo Herrera regresa luego de recuperarse de un golpe.\n\nEn contrapartida, el cuerpo técnico sufre la baja de Tomás Belmonte, quien sufre una rotura de meniscos y afrontará una intervención quirúrgica en las próximas horas, por lo cual se perderá el resto de la competencia en esta temporada.",
+      "guion": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
+      "seccion": "Fútbol",
+      "medios": [
+        "Olé",
+        "Doble Amarilla",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T17:52:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T19:01:14.770Z",
+      "relevancia": 79,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera.",
+        "Leo Flores integra los convocados tras su paso por la Selección Argentina.",
+        "Sebastián Villa y Facundo Herrera están a disposición del cuerpo técnico.",
+        "Tomás Belmonte se rompió los meniscos y será intervenido quirúrgicamente."
+      ],
+      "seSabe": [
+        "Boca juega contra Unión este viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura.",
+        "Leo Flores forma parte de los convocados de Rodolfo Arruabarrena tras jugar para la Selección Argentina.",
+        "Sebastián Villa integra la nómina luego de superar un estado febril.",
+        "Facundo Herrera está convocado tras recuperarse de un golpe.",
+        "Tomás Belmonte queda fuera del partido por una rotura de meniscos."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó si Leo Flores será titular o suplente.",
+        "No se detalló el tiempo exacto que demandará la recuperación postoperatoria de Tomás Belmonte."
+      ],
+      "textoRedes": "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera por el Torneo Clausura con Leo Flores entre los convocados y la baja de Tomás Belmonte por lesión.",
+      "etiquetas": [
+        "Torneo Clausura",
+        "Unión",
+        "Rodolfo Arruabarrena",
+        "Leo Flores",
+        "Tomás Belmonte"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
+          "fecha": "2026-10-01T17:52:44.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de los convocados, el regreso de Leo Flores y las situaciones de Sebastián Villa, Facundo Herrera y Tomás Belmonte."
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/liga-/con-el-regreso-de-flores-y-la-lesion-de-belmonte--boca-confirmo-los-convocados-para-recibir-a-union_a6abe99ee969b40318bea6a93",
+          "fecha": "2026-10-01T18:15:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el contexto del partido ante Unión en el Torneo Clausura."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/boca/boca-hoy-volvio-flores-los-convocados-ante-union-y-mas",
+          "fecha": "2026-10-01T18:36:46.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la baja de Tomás Belmonte por lesión en los meniscos y la lista brindada por el entrenador."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1bvtscb",
+          "titulo": "La lista de convocados de Boca sin Enner Valencia para el clásico con San Lorenzo",
+          "fecha": "2026-09-19T16:32:12.000Z",
+          "ruta": "/nota/la-lista-de-convocados-de-boca-sin-enner-valencia-para-el-clasico-con-1bvtscb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "boca-recibe-a-union-con-la-presencia-de-leo-flores-en-la-lista",
+      "foto": {
+        "archivo": "fotos-notas/1b6nw50.jpg",
+        "credito": "Foto: Olé"
       }
     },
     {
@@ -400,6 +493,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
+        "A24",
+        "C5N",
         "El Día"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/01/el-riesgo-pais-vuelve-a-superar-los-630-puntos-mientras-las-acciones-argentinas-bajan-hasta-6-en-wall-street/",
@@ -407,7 +502,7 @@
       "fecha": "2026-10-01T16:53:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T18:31:03.487Z",
-      "relevancia": 63,
+      "relevancia": 83,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -647,7 +742,7 @@
       "fecha": "2026-10-01T15:34:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T18:01:03.074Z",
-      "relevancia": 73,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1029,13 +1124,13 @@
         "TN (Todo Noticias)",
         "Perfil",
         "A24",
-        "iProfesional",
         "Crónica",
-        "Radio Mitre",
         "Canal 26",
         "El Día",
         "La Nueva",
-        "El Marplatense"
+        "El Marplatense",
+        "iProfesional",
+        "Radio Mitre"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/01/el-vicepresidente-de-los-estados-unidos-jd-vance-visitara-argentina-en-noviembre/",
       "teniaImagenLaFuente": true,
@@ -1276,6 +1371,7 @@
         "Clarín",
         "Perfil",
         "El Cronista",
+        "C5N",
         "Noticias Argentinas (NA)",
         "Ámbito"
       ],
@@ -2159,8 +2255,8 @@
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "InfoRegión",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "InfoRegión"
       ],
       "enlace": "https://www.ambito.com/economia/el-eras-convoco-audiencia-publica-tratar-la-actualizacion-tarifas-aysa-n6328740",
       "teniaImagenLaFuente": true,
@@ -2822,104 +2918,6 @@
         "archivo": "fotos-notas/1neicxo.jpg",
         "credito": "Foto: Ámbito"
       }
-    },
-    {
-      "id": "1n1thyd",
-      "titulo": "La Selección Argentina suma cinco nuevos debutantes bajo la dirección de Scaloni",
-      "copete": "Cinco futbolistas tuvieron su estreno en el amistoso frente a Bolivia disputado en la provincia de Córdoba. La lista total de debutantes desde el inicio del ciclo en 2018 alcanza los setenta jugadores.",
-      "cuerpo": "La Selección Argentina disputó un partido amistoso ante Bolivia el miércoles en la provincia de Córdoba, donde cinco futbolistas sumaron sus primeros minutos con la camiseta albiceleste. El director técnico Lionel Scaloni incluyó en el equipo inicial a Román Vega, mientras que también se produjeron los estrenos de Santiago Simón, Ezequiel Fernández, Valentín Gómez y Leonel Flores. Con estas incorporaciones, la cantidad total de jugadores debutantes desde el comienzo del ciclo en septiembre de 2018 llegó a setenta integrantes.\n\nEl entrenador había iniciado su etapa al frente del seleccionado nacional con una convocatoria que incluyó once apariciones iniciales en el encuentro frente a Guatemala. En los ocho años de gestión, el proceso de renovación se dividió en distintas etapas marcadas por la competencia mundialista.",
-      "guion": "La Selección Argentina suma cinco nuevos debutantes bajo la dirección de Scaloni",
-      "seccion": "Fútbol",
-      "medios": [
-        "Olé",
-        "Diario Popular",
-        "Doble Amarilla",
-        "Bolavip Argentina",
-        "Clarín"
-      ],
-      "enlace": "https://www.dobleamarilla.com.ar/selecciones/vega--simon---equi--fernandez--valentin-gomez-y-leo-flores--los-nuevos-pasajeros-de-la--scaloneta---el-listado-de-los-debutantes-del-ciclo-scaloni-en-la-seleccion-argentina_a6abd8a152e3488d737343bd6",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T01:45:26.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T02:31:07.465Z",
-      "relevancia": 82,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cinco futbolistas debutaron en el amistoso ante Bolivia en Córdoba.",
-        "Román Vega integró el equipo titular en su presentación.",
-        "El listado total de jugadores estrenados alcanza los setenta desde 2018."
-      ],
-      "seSabe": [
-        "Román Vega, Santiago Simón, Ezequiel Fernández, Valentín Gómez y Leonel Flores debutaron en la Selección.",
-        "El encuentro amistoso ante Bolivia se disputó este miércoles en Córdoba.",
-        "La lista de jugadores estrenados por el cuerpo técnico alcanza los setenta desde 2018."
-      ],
-      "textoRedes": "Cinco futbolistas tuvieron su estreno en la Selección Argentina durante el partido amistoso disputado este miércoles ante Bolivia en la provincia de Córdoba.",
-      "etiquetas": [
-        "Selección Argentina",
-        "Lionel Scaloni",
-        "Fútbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/selecciones/vega--simon---equi--fernandez--valentin-gomez-y-leo-flores--los-nuevos-pasajeros-de-la--scaloneta---el-listado-de-los-debutantes-del-ciclo-scaloni-en-la-seleccion-argentina_a6abd8a152e3488d737343bd6",
-          "fecha": "2026-10-01T01:45:26.000Z",
-          "oficial": false,
-          "aporte": "Información general sobre los nuevos convocados."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/roman-vega-simon-valentin-gomez-leo-flores-equi-fernandez-nuevos-debutantes-scaloni-seleccion-argentina_0_eipCTvVbpc.html",
-          "fecha": "2026-10-01T02:01:20.000Z",
-          "oficial": false,
-          "aporte": "Detalles estadísticos sobre los setenta debutantes del ciclo desde 2018."
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/seleccion/argentina-seleccion-bolivia-renovacion-scaloni-debuts_0_wGGVG8boIs.html",
-          "fecha": "2026-10-01T02:02:24.000Z",
-          "oficial": false,
-          "aporte": "Nombres de los cinco futbolistas que tuvieron su estreno."
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/selecciones/vega--simon---equi--fernandez-y-leo-flores--los-nuevos-pasajeros-de-la--scaloneta---el-listado-de-los-debutantes-del-ciclo-scaloni-en-la-seleccion-argentina_a6abd8a152e3488d737343bd6",
-          "fecha": "2026-10-01T01:45:26.000Z",
-          "oficial": false,
-          "aporte": "Datos sobre la titularidad de Román Vega frente a Bolivia en Córdoba."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1xrha3j",
-          "titulo": "Lionel Scaloni compara el inicio de su ciclo con el recambio actual",
-          "fecha": "2026-09-30T06:16:37.000Z",
-          "ruta": "/nota/lionel-scaloni-compara-el-inicio-de-su-ciclo-con-el-recambio-actual-1xrha3j"
-        },
-        {
-          "id": "x0r3gd",
-          "titulo": "Avanzan las negociaciones para la continuidad de Lionel Scaloni en la selección",
-          "fecha": "2026-09-26T08:16:07.000Z",
-          "ruta": "/nota/avanzan-las-negociaciones-para-la-continuidad-de-lionel-scaloni-en-la-x0r3gd"
-        },
-        {
-          "id": "jjldm5",
-          "titulo": "Scaloni sumó seis jugadores del ámbito local a la Selección",
-          "fecha": "2026-09-20T19:33:01.000Z",
-          "ruta": "/nota/scaloni-sumo-seis-jugadores-del-ambito-local-a-la-seleccion-jjldm5"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-argentina-suma-cinco-nuevos-debutantes-bajo-la-direccion"
     },
     {
       "id": "repaso20260930noche",
@@ -3645,84 +3643,6 @@
       }
     },
     {
-      "id": "1yu9ytn",
-      "titulo": "El oficialismo defiende su rechazo a convocar a Virginia Aparicio en comisión",
-      "copete": "La concejal Florencia Martínez explicó que el oficialismo frenó la visita de la investigadora del INTA a la Comisión de Salud porque atraviesa un sumario administrativo.",
-      "cuerpo": "La concejal oficialista Florencia Martínez explicó que la decisión de no convocar a la investigadora Virginia Aparicio a la Comisión de Salud del Concejo Deliberante responde a que atraviesa un sumario en el INTA que estaría próximo a resolverse. La edil indicó que se desconocen los motivos del procedimiento y las razones por las cuales el organismo apartó a la Argentina del proyecto SPRINT. Asimismo, aclaró que no cuestionan la labor científica de Aparicio y señaló que los ediles pueden reunirse con ella de manera individual.\n\nMartínez adelantó además que el Concejo podría impulsar un proyecto de Comunicación para solicitar informes formales sobre el estado del sumario administrativo en la institución.",
-      "guion": "El oficialismo defiende su rechazo a convocar a Virginia Aparicio en comisión.",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T20:53:48.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T08:01:07.560Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El oficialismo justificó la decisión de no convocar a Virginia Aparicio a la Comisión de Salud.",
-        "La concejal Florencia Martínez señaló que la investigadora atraviesa un sumario próximo a resolverse en el INTA.",
-        "La edil aclaró que no cuestionan el trabajo científico y mencionó que ediles la recibirán de forma individual.",
-        "El Concejo evalúa impulsar un pedido de informes para conocer los motivos del procedimiento administrativo."
-      ],
-      "noConfirmado": [
-        "todavía no se conocen públicamente las razones que originaron el sumario administrativo contra la investigadora.",
-        "no existen detalles precisos sobre la fecha exacta de resolución del procedimiento interno en el organismo.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La concejal Florencia Martínez explicó que el oficialismo frenó la convocatoria a Virginia Aparicio en la Comisión de Salud porque la investigadora atraviesa un sumario administrativo en el INTA próximo a resolverse.",
-      "etiquetas": [
-        "Virginia Aparicio",
-        "Concejo Deliberante",
-        "INTA",
-        "Florencia Martínez",
-        "Comision de Salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los fundamentos del oficialismo sobre la situación de la investigadora y el sumario en el INTA."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1uvmscz",
-          "titulo": "El Concejo rechaza recibir a Virginia Aparicio en comisión",
-          "fecha": "2026-09-30T23:29:21.000Z",
-          "ruta": "/nota/el-concejo-rechaza-recibir-a-virginia-aparicio-en-comision-1uvmscz"
-        },
-        {
-          "id": "113qesp",
-          "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
-          "fecha": "2026-09-29T13:17:59.000Z",
-          "ruta": "/nota/petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo-113qesp"
-        },
-        {
-          "id": "v91szb",
-          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
-          "fecha": "2026-09-23T01:50:24.356Z",
-          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-oficialismo-defiende-su-rechazo-a-convocar-a-virginia-aparicio-en"
-    },
-    {
       "id": "vp5l7j",
       "titulo": "Toyota consigue el primer RIGI automotriz para fabricar autos eléctricos",
       "copete": "El Gobierno nacional aprobó un proyecto de la automotriz japonesa por más de 1300 millones de dólares en la provincia de Buenos Aires. Prevé exportar por 1280 millones anuales y generar puestos de trabajo.",
@@ -3828,9 +3748,9 @@
       "medios": [
         "La Noticia 1",
         "Página/12",
-        "Crónica",
         "La Tecla",
-        "Zona Norte Diario"
+        "Zona Norte Diario",
+        "Crónica"
       ],
       "enlace": "https://www.latecla.info/170081-nardini-mostro-su-gestion-en-el-encuentro-ciudades-y-ecosistemas-para-el-bien-comun-2026-2030",
       "teniaImagenLaFuente": true,
@@ -4066,147 +3986,6 @@
       "foto": {
         "archivo": "fotos-notas/ph5y3i.jpg",
         "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "gd6n9s",
-      "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-      "copete": "El informe climático para la primera semana de octubre anticipa precipitaciones reducidas en la mayor parte del área productiva, acompañadas por altas temperaturas iniciales y un posterior ingreso de vientos polares con heladas.",
-      "cuerpo": "La Bolsa de Cereales de Buenos Aires informó que la primera semana de octubre comenzará con precipitaciones escasas en la mayor parte de la región agrícola. El reporte detalló que las lluvias fuertes se concentrarán en el norte del área y en el Litoral Fluvial, con un foco superior a los 150 milímetros en Misiones.\n\nAl inicio del período, los vientos del trópico generarán temperaturas máximas superiores a los 30 grados, con registros de hasta 40 grados en varias zonas. Según indicó la perspectiva agroclimática, luego arribarán vientos polares que provocarán un marcado descenso térmico, con riesgo de heladas generales y localizadas en el oeste y el sudeste de la región pampeana.",
-      "guion": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Noticias Agropecuarias"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/09/30/se-esperan-lluvias-escasas-en-la-mayor-parte-de-la-region-agricola-durante-la-primera-semana-de-octubre/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T18:42:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T21:01:04.723Z",
-      "relevancia": 26,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lluvias escasas en gran parte de la región agrícola entre el 1 y el 7 de octubre.",
-        "Tormentas intensas concentradas en el norte y el Litoral Fluvial.",
-        "Altas temperaturas iniciales con registros superiores a 30 grados.",
-        "Ingreso de vientos polares con descenso térmico y riesgo de heladas."
-      ],
-      "seSabe": [
-        "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 1 al 7 de octubre.",
-        "Se prevén lluvias escasas en la mayor parte del área productiva.",
-        "Habrá tormentas intensas en el norte del área agrícola y Misiones.",
-        "Se registrará un descenso térmico con heladas tras el paso de vientos polares."
-      ],
-      "textoRedes": "El informe climático para la primera semana de octubre anticipa lluvias escasas en gran parte de la región agrícola, temperaturas elevadas iniciales y un posterior ingreso de vientos polares con riesgo de heladas.",
-      "etiquetas": [
-        "clima",
-        "Bolsa de Cereales",
-        "heladas",
-        "lluvias"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/09/30/se-esperan-lluvias-escasas-en-la-mayor-parte-de-la-region-agricola-durante-la-primera-semana-de-octubre/",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "oficial": false,
-          "aporte": "Detalló el pronóstico completo de lluvias, temperaturas y heladas para la primera semana de octubre según la Bolsa de Cereales."
-        },
-        {
-          "medio": "Noticias Agropecuarias",
-          "enlace": "https://www.noticiasagropecuarias.com/2026/09/30/proximos-dias-con-lluvias-escasas-en-gran-parte-de-la-region-agricola/",
-          "fecha": "2026-09-30T20:17:47.000Z",
-          "oficial": false,
-          "aporte": "Aportó la previsión de tormentas fuertes en el norte y la posterior llegada de una ola de frío."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region",
-      "foto": {
-        "archivo": "fotos-notas/gd6n9s.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "n3x306",
-      "titulo": "Milei impulsa la inteligencia artificial con menos regulación en el país",
-      "copete": "El Gobierno busca atraer inversiones tecnológicas y construir centros de datos en la Patagonia. El proyecto oficial prevé empresas operadas por agentes de inteligencia artificial bajo ciertas condiciones legales.",
-      "cuerpo": "El presidente Javier Milei busca posicionar a Argentina como un destino para el desarrollo de inteligencia artificial mediante un esquema con menor intervención regulatoria. Ante la ONU, el mandatario ratificó la decisión de no regular de manera preventiva esta tecnología y comparó los temores actuales con la llegada de internet.\n\nLa estrategia oficial apunta a atraer inversiones para instalar centros de datos en la Patagonia. Además, el ministro de Desregulación, Federico Sturzenegger, impulsa una iniciativa para permitir el funcionamiento de empresas operadas por agentes de inteligencia artificial, las cuales deberán contar con una persona física que asuma la responsabilidad legal final.\n\nDistintos especialistas advirtieron sobre los riesgos legales y sociales vinculados a estas medidas. En tanto, Brasil y Chile se mantienen por delante en infraestructura tecnológica regional.",
-      "guion": "Milei impulsa la inteligencia artificial con menos regulación en el país",
-      "seccion": "Tecnología",
-      "medios": [
-        "Ámbito",
-        "Diario Popular"
-      ],
-      "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T18:24:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T01:01:10.175Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Milei promueve a Argentina como polo de inteligencia artificial sin regulación preventiva.",
-        "El plan contempla atraer inversiones para construir centros de datos en la Patagonia.",
-        "El proyecto prevé empresas operadas por agentes de IA con un responsable legal humano.",
-        "Especialistas y sectores de la oposición expresaron cuestionamientos sobre los riesgos."
-      ],
-      "seSabe": [
-        "El presidente Javier Milei anunció ante la ONU que no habrá regulación preventiva para la inteligencia artificial.",
-        "El ministro Federico Sturzenegger confirmó modificaciones al proyecto original de empresas operadas por agentes de IA.",
-        "El Gobierno promueve a la Patagonia para la instalación de centros de datos."
-      ],
-      "noConfirmado": [
-        "Todavía falta la aprobación del proyecto en el Congreso nacional.",
-        "No se detallaron los montos específicos de las inversiones extranjeras previstas."
-      ],
-      "textoRedes": "El Gobierno busca posicionar a Argentina como un polo de inteligencia artificial con una estrategia de desregulación, incentivos para centros de datos en la Patagonia y proyectos para empresas operadas por agentes de IA.",
-      "etiquetas": [
-        "Inteligencia artificial",
-        "Gobierno nacional",
-        "Javier Milei",
-        "Federico Sturzenegger",
-        "Tecnología",
-        "Inversiones"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/milei-busca-posicionar-argentina-como-un-polo-inteligencia-artificial-menos-regulacion-n922281",
-          "fecha": "2026-09-30T18:24:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los anuncios presidenciales en la ONU, el proyecto de empresas de IA y los cuestionamientos de expertos."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/javier-milei-promociona-argentina-como-un-refugio-reglas-la-inteligencia-artificial-n6328706",
-          "fecha": "2026-10-01T00:41:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el enfoque sobre la estrategia de desregulación y los centros de datos en la Patagonia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "milei-impulsa-la-inteligencia-artificial-con-menos-regulacion-en-el",
-      "foto": {
-        "archivo": "fotos-notas/n3x306.jpg",
-        "credito": "Foto: Diario Popular"
       }
     },
     {
@@ -5031,7 +4810,8 @@
       "seccion": "Balcarce",
       "medios": [
         "El Diario Balcarce",
-        "Infobrisas (Radio Brisas)"
+        "Infobrisas (Radio Brisas)",
+        "Ayacucho al Día"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/fe-mision-y-encuentro-mas-de-40-jovenes-de-balcarce-participaron-de-la-invasion-de-pueblos-850",
       "teniaImagenLaFuente": true,
@@ -5171,21 +4951,16 @@
   "secciones": [
     "Balcarce",
     "Política",
+    "Fútbol",
     "Tecnología",
     "Economía",
     "Argentina",
     "Agro",
     "Deportes",
     "Cultura y agenda",
-    "Fútbol",
     "Automovilismo"
   ],
   "temas": [
-    {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
-      "cuantas": 3
-    },
     {
       "nombre": "El hospital",
       "ranura": "hospital",
@@ -5194,6 +4969,11 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
+      "cuantas": 2
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
       "cuantas": 2
     },
     {
@@ -5210,9 +4990,9 @@
   "clima": {
     "ahora": {
       "temp": 10,
-      "sensacion": 4,
-      "humedad": 65,
-      "viento": 27,
+      "sensacion": 5,
+      "humedad": 60,
+      "viento": 25,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": true
@@ -5222,32 +5002,32 @@
         "fecha": "2026-10-01",
         "dia": "jue",
         "max": 10,
-        "min": 7,
+        "min": 6,
         "lluvia": 14,
         "codigo": 51,
-        "viento": 30,
+        "viento": 29,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-02",
         "dia": "vie",
-        "max": 13,
-        "min": 7,
+        "max": 14,
+        "min": 5,
         "lluvia": 62,
-        "codigo": 51,
-        "viento": 23,
-        "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "codigo": 53,
+        "viento": 22,
+        "milimetros": 1,
+        "cielo": "Llovizna"
       },
       {
         "fecha": "2026-10-03",
         "dia": "sáb",
         "max": 15,
-        "min": 8,
+        "min": 7,
         "lluvia": 99,
         "codigo": 61,
-        "viento": 21,
+        "viento": 20,
         "milimetros": 11,
         "cielo": "Lluvia leve"
       },
@@ -5258,7 +5038,7 @@
         "min": 7,
         "lluvia": 12,
         "codigo": 3,
-        "viento": 18,
+        "viento": 20,
         "milimetros": 0,
         "cielo": "Nublado"
       }
@@ -5554,6 +5334,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "1i1430m",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "vc4a8l",
       "titulo": null,
       "seccion": "Policiales",
@@ -5632,16 +5418,16 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "1n70nnq",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1bk6bvf",
       "titulo": null,
       "seccion": "Tecnología",
       "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
+      "id": "1n70nnq",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "10ybc9u",
