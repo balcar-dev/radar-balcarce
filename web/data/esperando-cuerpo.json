@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T21:38:58.418Z",
+ "generado": "2026-10-01T22:02:34.975Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -37,25 +37,8 @@
      "fecha": "2026-10-01T18:14:23.585Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (antecedente): el cuerpo usa 2, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 114 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "bolu8o",
-   "titulo": "Corte de energía programado para este viernes",
-   "copete": "La Cooperativa de Electricidad de Balcarce informó que este viernes 2 de octubre se realizará un corte programado del suministro eléctrico debido a trabajos en líneas de baja tensión. La interrupción del servicio está prevista entre las 7:30 y las 9:00, y afectará a la mayoría…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T17:24:47.272Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
-     "fecha": "2026-10-01T17:24:47.272Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 56 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 2 problemas (antecedente, promesa): el cuerpo usa 2, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 97 palabras",
    "maximo": 3
   },
   {
@@ -96,6 +79,23 @@
    "maximo": 4
   },
   {
+   "id": "c0hkeg",
+   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
+   "copete": "Con motivo de la conmemoración del Día Internacional de las Personas Mayores -celebrado cada 1 de octubre-, la ciudad se prepara para vivir una tarde dedicada de lleno al cuidado y la calidad de vida en la adultez. El encuentro tendrá lugar mañan",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T11:52:38.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
+     "fecha": "2026-10-01T11:52:38.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
    "id": "601ifn",
    "titulo": "El viernes 9 se realizará el acto central por el “Día del Respeto a la Diversidad Cultural”",
    "copete": "El próximo viernes 9 de octubre, a las 10 horas, se desarrollará en las instalaciones del Instituto Adventista Balcarce (IAB) el acto central conmemorativo por el “Día del Respeto a la Diversidad Cultural”. La actividad se enmarca en el calendario de actividad docente, que…",
@@ -110,6 +110,55 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 93 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "12pfgxi",
+   "titulo": "Bullrich en IDEA: \"No podemos tener la industria caída, la construcción caída, el comercio caído\"",
+   "copete": "La senadora nacional de La Libertad Avanza (LLA) Patricia Bullrich volvió a marcar distancia del núcleo duro que rodea a Javier Milei y pidió mayor velocidad en los cambios económicos para que sean palpables en los hogares. Durante su participación en el Coloquio de IDEA, que se…",
+   "seccion": "Política",
+   "fecha": "2026-10-01T18:34:16.000Z",
+   "fuentes": [
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/bullrich-en-idea-no-podemos-tener-la-industria-caida-la-construccion-caida-el-comercio-caido/",
+     "fecha": "2026-10-01T18:34:16.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/bullrich-otra-vez-critica-no-podemos.html",
+     "fecha": "2026-10-01T18:59:31.871Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/politica/bullrich-otra-vez-critica-no-podemos-tener-la-industria-la-construccion-y-el-comercio-caidos-n56176",
+     "fecha": "2026-10-01T18:41:00.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/bullrich-otra-vez-critica-no-podemos-tener-la-industria-la-construccion-y-el-comercio-caidos/",
+     "fecha": "2026-10-01T20:27:05.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "q7qzpl",
+   "titulo": "Desde Canarias, Cristian Méndez lleva la voz de Balcarce a nuevos escenarios",
+   "copete": "",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-01T12:01:06.332Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/desde-canarias-cristian-mendez-lleva-la-voz-de-balcarce-a-nuevos-escenarios-534",
+     "fecha": null
+    }
+   ],
+   "intentos": 3,
+   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"espana\", que sale de una nota anterior, como si fuera de hoy",
    "maximo": 3
   },
   {

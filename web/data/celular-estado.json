@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T21:38:58.418Z",
- "portada": 62,
- "archivo": 737,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-01T22:02:34.975Z",
+ "portada": 67,
+ "archivo": 741,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-01T21:38:58.460Z",
+  "generado": "2026-10-01T22:02:35.022Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-01T18:09:10.520Z"
    },
    {
@@ -53,7 +53,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -114,7 +114,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-01T18:09:10.520Z",
     "segundos": null,
     "notas": [
@@ -200,14 +200,7 @@
      "cuando": "2026-10-01T18:36:31.248Z"
     }
    ],
-   "cola": [
-    {
-     "id": "1mknzh0",
-     "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 0,
    "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,
