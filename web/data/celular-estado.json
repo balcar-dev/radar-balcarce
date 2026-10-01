@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T15:04:18.168Z",
- "portada": 52,
- "archivo": 713,
- "esperandoCuerpo": 11,
+ "generado": "2026-10-01T15:24:13.234Z",
+ "portada": 54,
+ "archivo": 716,
+ "esperandoCuerpo": 10,
  "redes": {
-  "generado": "2026-10-01T15:04:18.216Z",
+  "generado": "2026-10-01T15:24:13.270Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -119,11 +119,6 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "1vtyc1y",
-      "titulo": "Evacuan la estación Constitución por un incendio en una escalera mecánica",
-      "seccion": "Argentina"
-     },
-     {
       "id": "iheoi7",
       "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
       "seccion": "Fútbol"
@@ -134,9 +129,14 @@
       "seccion": "Deportes"
      },
      {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
+      "id": "1b5bal2",
+      "titulo": "Pablo Quirno pide a los empresarios inversiones y destaca la apertura comercial",
+      "seccion": "Economía"
+     },
+     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -155,19 +155,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1mknzh0",
-      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1vtyc1y",
+      "titulo": "Evacuan la estación Constitución por un incendio en una escalera mecánica",
+      "seccion": "Argentina"
      },
      {
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "15i90co",
-      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -190,6 +190,12 @@
      "id": "1sko7lj",
      "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "1dbyjp1",
+     "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {

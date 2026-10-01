@@ -836,6 +836,11 @@
   "ultimo": "2026-09-29T16:59:49.016Z",
   "motivo": "con cuerpo"
  },
+ "1b5bal2": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T15:23:25.909Z",
+  "motivo": "con cuerpo"
+ },
  "1b7rczz": {
   "intentos": 1,
   "ultimo": "2026-09-27T02:00:40.608Z",
@@ -937,9 +942,9 @@
   "motivo": "sin material"
  },
  "1dbyjp1": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T15:01:58.180Z",
-  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2420 (line 28 column 13)"
+  "intentos": 2,
+  "ultimo": "2026-10-01T15:23:25.909Z",
+  "motivo": "con cuerpo"
  },
  "1dcnv04": {
   "intentos": 2,
@@ -1498,6 +1503,11 @@
   "intentos": 1,
   "ultimo": "2026-09-30T13:01:35.829Z",
   "motivo": "con cuerpo"
+ },
+ "1kz57sk": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T15:23:25.909Z",
+  "motivo": "cuerpo: 3 problemas (antecedente, fecha, copia): el cuerpo usa 23, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 33 palabras"
  },
  "1kzeqjl": {
   "intentos": 1,
@@ -2227,9 +2237,9 @@
   "motivo": "con cuerpo"
  },
  "1uw5a9s": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T15:01:58.180Z",
-  "motivo": "cuerpo: 2 problemas (numero, copia): el cuerpo dice 10 y la fuente no lo dice; sin esas oraciones quedan 38 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-01T15:23:25.909Z",
+  "motivo": "título o bajada: 1 problema (numero): el copete dice 10 y la fuente no lo dice"
  },
  "1uw9vax": {
   "intentos": 3,
@@ -4646,6 +4656,11 @@
  "wbaaus": {
   "intentos": 2,
   "ultimo": "2026-09-27T19:14:11.630Z",
+  "motivo": "con cuerpo"
+ },
+ "we53o0": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T15:23:25.909Z",
   "motivo": "con cuerpo"
  },
  "wgq362": {
