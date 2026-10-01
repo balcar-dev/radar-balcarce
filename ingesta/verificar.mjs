@@ -625,6 +625,9 @@ export function arreglarEscritura(nuevo = {}, { hoy = new Date() } = {}) {
 
   for (const campo of campos) {
     let t = salida[campo];
+    // Un escape que quedó escrito sin decodificar en el texto (1/10: "antif\u00futbol" en un título publicado).
+    const sinEscapes = t.replace(/\\u([0-9a-fA-F]{4})/g, (m, h) => String.fromCharCode(parseInt(h, 16))).replace(/\\u00f[uú]/g, 'ú');
+    if (sinEscapes !== t) { arreglos.push(`${campo}: se decodificó un escape que quedó escrito`); t = sinEscapes; }
     t = t.replace(ESTE_DIA, (m, este, dia) => {
       const i = DIAS_DE_LA_SEMANA.indexOf(sinTildes(dia));
       const esHoy = dia === 'fin de semana' ? (diaDeHoy === 0 || diaDeHoy === 6) : i === diaDeHoy;
