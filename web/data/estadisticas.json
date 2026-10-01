@@ -442,6 +442,53 @@
         "vistas": 14,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-01T00:00:18.238Z",
+      "web": {
+        "u12": {
+          "visitas": 31,
+          "vistas": 61
+        },
+        "a12": {
+          "visitas": 9,
+          "vistas": 218
+        },
+        "u24": {
+          "visitas": 40,
+          "vistas": 279
+        },
+        "a24": {
+          "visitas": 33,
+          "vistas": 117
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 106
+          },
+          {
+            "camino": "/nota/la-provincia-crea-un-programa-para-formar-en-oficios-a-secundarios-tx9q5q",
+            "vistas": 12
+          },
+          {
+            "camino": "/nota/pato-naranja-gana-por-99-a-12-y-queda-entre-los-cuatro-mejores-1nyo5j6",
+            "vistas": 11
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 3,
+        "vistas": 381,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 47,
+        "alcance": 8,
+        "vistas": 81,
+        "interacciones": 4
+      }
     }
   ]
 }
