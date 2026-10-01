@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T16:31:36.900Z",
- "portada": 54,
- "archivo": 719,
- "esperandoCuerpo": 12,
+ "generado": "2026-10-01T17:01:54.327Z",
+ "portada": 57,
+ "archivo": 723,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-01T16:31:36.938Z",
+  "generado": "2026-10-01T17:01:54.364Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -119,9 +119,9 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
+      "id": "15i90co",
+      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
+      "seccion": "Balcarce"
      },
      {
       "id": "iheoi7",
@@ -134,9 +134,9 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce"
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -147,17 +147,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 50,
     "notas": [
      {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "id": "1ckhubg",
+      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
       "seccion": "Deportes"
-     },
-     {
-      "id": "1mknzh0",
-      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
-      "seccion": "Cultura y agenda"
      },
      {
       "id": "idl5dq",
@@ -165,8 +160,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "15i90co",
-      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
+      "id": "1mknzh0",
+      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "jzu6k",
+      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce"
      }
     ]
@@ -192,21 +192,9 @@
    ],
    "cola": [
     {
-     "id": "1dbyjp1",
-     "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+     "id": "15i90co",
+     "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1sjcoqr",
-     "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "1mknzh0",
-     "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
-     "seccion": "Cultura y agenda",
      "marcada": false
     }
    ],
