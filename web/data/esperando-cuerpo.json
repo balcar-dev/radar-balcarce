@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T20:32:24.026Z",
+ "generado": "2026-10-01T20:39:31.098Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -76,38 +76,6 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "12pfgxi",
-   "titulo": "Bullrich en IDEA: \"No podemos tener la industria caída, la construcción caída, el comercio caído\"",
-   "copete": "La senadora nacional de La Libertad Avanza (LLA) Patricia Bullrich volvió a marcar distancia del núcleo duro que rodea a Javier Milei y pidió mayor velocidad en los cambios económicos para que sean palpables en los hogares. Durante su participación en el Coloquio de IDEA, que se…",
-   "seccion": "Política",
-   "fecha": "2026-10-01T18:34:16.000Z",
-   "fuentes": [
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/bullrich-en-idea-no-podemos-tener-la-industria-caida-la-construccion-caida-el-comercio-caido/",
-     "fecha": "2026-10-01T18:34:16.000Z"
-    },
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/bullrich-otra-vez-critica-no-podemos.html",
-     "fecha": "2026-10-01T18:59:31.871Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/politica/bullrich-otra-vez-critica-no-podemos-tener-la-industria-la-construccion-y-el-comercio-caidos-n56176",
-     "fecha": "2026-10-01T18:41:00.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/bullrich-otra-vez-critica-no-podemos-tener-la-industria-la-construccion-y-el-comercio-caidos/",
-     "fecha": "2026-10-01T20:27:05.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2468 (line 30 column 8)",
    "maximo": 3
   },
   {

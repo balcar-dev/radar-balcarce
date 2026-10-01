@@ -205,9 +205,9 @@
   "motivo": "con cuerpo"
  },
  "12pfgxi": {
-  "intentos": 2,
-  "ultimo": "2026-10-01T20:32:04.472Z",
-  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2468 (line 30 column 8)"
+  "intentos": 3,
+  "ultimo": "2026-10-01T20:38:41.688Z",
+  "motivo": "con cuerpo"
  },
  "12rp30w": {
   "intentos": 1,
@@ -3932,6 +3932,11 @@
   "ultimo": "2026-09-27T02:00:40.608Z",
   "motivo": "con cuerpo"
  },
+ "kbhdgj": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T20:38:41.688Z",
+  "motivo": "con cuerpo"
+ },
  "kch30l": {
   "intentos": 2,
   "ultimo": "2026-09-25T14:30:50.886Z",
@@ -5011,6 +5016,11 @@
   "intentos": 3,
   "ultimo": "2026-09-28T10:01:06.910Z",
   "motivo": "Gemini: Bad Unicode escape in JSON at position 84 (line 1 column 85)"
+ },
+ "zdl4xp": {
+  "intentos": 1,
+  "ultimo": "2026-10-01T20:38:41.688Z",
+  "motivo": "con cuerpo"
  },
  "zezsk3": {
   "intentos": 1,
