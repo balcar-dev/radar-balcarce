@@ -117,7 +117,12 @@ export async function auditarLote(lote, { clave, fetchFn = fetch, modelo = MODEL
     body: JSON.stringify({ model: modelo, messages: [{ role: 'user', content: pedidoDeAuditoria(lote) }], response_format: { type: 'json_object' }, temperature: 0 }),
     signal: AbortSignal.timeout(90_000),
   });
-  if (!res.ok) { const e = new Error(`Groq HTTP ${res.status}`); e.status = res.status; throw e; }
+  if (!res.ok) {
+    const detalle = (await res.text().catch(() => '')).replace(/s+/g, ' ').slice(0, 200);
+    const e = new Error(`Groq HTTP ${res.status}${detalle ? `: ${detalle}` : ''}`);
+    e.status = res.status;
+    throw e;
+  }
   const j = await res.json();
   return leerHallazgos(j.choices?.[0]?.message?.content ?? '', new Set(lote.map((n) => n.id)));
 }
