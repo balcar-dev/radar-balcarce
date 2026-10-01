@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T10:31:13.785Z",
- "portada": 47,
+ "generado": "2026-10-01T11:01:18.601Z",
+ "portada": 48,
  "archivo": 692,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-01T10:31:13.818Z",
+  "generado": "2026-10-01T11:01:18.638Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-01T10:36:04.243Z"
    },
    {
     "nombre": "noticia1",
@@ -85,12 +85,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "1fqh4sy",
@@ -98,13 +98,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
      },
      {
-      "id": "11di7ig",
-      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
       "seccion": "Balcarce"
      }
     ]
@@ -116,12 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 51,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
       "seccion": "Deportes"
+     },
+     {
+      "id": "11di7ig",
+      "titulo": "Jóvenes de Balcarce participan del tradicional encuentro diocesano",
+      "seccion": "Balcarce"
      },
      {
       "id": "idl5dq",
@@ -129,9 +134,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
+      "id": "1xow9qi",
+      "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -142,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 25,
+    "segundos": 35,
     "notas": [
      {
       "id": "1gv3zir",
@@ -152,6 +157,11 @@
      {
       "id": "1dqm02n",
       "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
      }
     ]
