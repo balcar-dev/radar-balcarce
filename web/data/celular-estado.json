@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T12:34:47.297Z",
+ "generado": "2026-10-01T13:03:25.306Z",
  "portada": 50,
- "archivo": 700,
- "esperandoCuerpo": 6,
+ "archivo": 702,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-01T12:34:47.336Z",
+  "generado": "2026-10-01T13:03:25.353Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -83,7 +83,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 55,
     "notas": [
@@ -93,14 +93,14 @@
       "seccion": "Deportes"
      },
      {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
-     },
-     {
       "id": "ff9n91",
       "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "m212r6",
+      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "1fqh4sy",
@@ -119,16 +119,6 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "q7x46o",
-      "titulo": "La UBA sigue entre las diez mejores de la región y el sistema sufre caídas",
-      "seccion": "Argentina"
-     },
-     {
       "id": "z3c4f",
       "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
       "seccion": "Balcarce"
@@ -137,6 +127,16 @@
       "id": "1h3xtmz",
       "titulo": "Boca vence a River sobre el final y queda segundo en el torneo",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1a2z04a",
+      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -147,12 +147,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 55,
     "notas": [
      {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
+      "id": "16kemme",
+      "titulo": "Racing Balcarce compra un terreno lindante y amplía su predio",
+      "seccion": "Balcarce"
      },
      {
       "id": "11di7ig",
@@ -165,9 +165,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
-      "seccion": "Balcarce"
+      "id": "1fbewyl",
+      "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
+      "seccion": "Agro"
      }
     ]
    }
@@ -184,6 +184,12 @@
     {
      "id": "ff9n91",
      "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "16kemme",
+     "titulo": "Racing Balcarce compra un terreno lindante y amplía su predio",
      "seccion": "Balcarce",
      "marcada": false
     },

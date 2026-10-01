@@ -1,6 +1,77 @@
 {
-  "generado": "2026-10-01T12:34:47.297Z",
+  "generado": "2026-10-01T13:03:25.306Z",
   "notas": [
+    {
+      "id": "16kemme",
+      "titulo": "Racing Balcarce compra un terreno lindante y amplía su predio",
+      "copete": "La institución deportiva sumó un espacio contiguo a sus instalaciones. La operación se formalizó con la presencia de directivos del club.",
+      "cuerpo": "Racing Balcarce adquirió un terreno contiguo a su predio actual con el objetivo de ampliar sus instalaciones y desarrollar futuros proyectos de infraestructura.\n\nEl lote incorporado se encuentra ubicado sobre la calle 57, entre las arterias 14 y 16, y fue adquirido previamente mediante una subasta pública de tierras comunales, de acuerdo con los registros anteriores de la institución.\n\nDesde la comisión directiva remarcaron que esta incorporación patrimonial permitirá continuar con la planificación a largo plazo para el crecimiento del club y la proyección de actividades destinadas a las próximas generaciones.",
+      "guion": "Racing Balcarce compra un terreno lindante y amplía su predio",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/racing-balcarce-amplia-su-predio-y-proyecta-nuevos-desafios",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T12:01:39.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T13:01:13.065Z",
+      "relevancia": 82,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Racing Balcarce compró un terreno lindante a su predio actual.",
+        "La operación se concretó el miércoles por la mañana con autoridades del club.",
+        "El espacio servirá para ampliar instalaciones y desarrollar nuevos proyectos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Racing Balcarce compró un terreno lindante a su predio actual para ampliar sus instalaciones y desarrollar nuevos proyectos institucionales.",
+      "etiquetas": [
+        "Racing Balcarce",
+        "institución deportiva",
+        "predio",
+        "infraestructura",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/racing-balcarce-amplia-su-predio-y-proyecta-nuevos-desafios",
+          "fecha": "2026-10-01T12:01:39.000Z",
+          "oficial": false,
+          "aporte": "Informó la compra del nuevo terreno, la fecha de la operación y los directivos presentes."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1vchyon",
+          "titulo": "Racing compra el terreno lindante al predio Juan Carlos Gentile",
+          "fecha": "2026-10-01T07:41:40.403Z",
+          "ruta": "/nota/racing-compra-el-terreno-lindante-al-predio-juan-carlos-gentile-1vchyon"
+        },
+        {
+          "id": "g8dncb",
+          "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
+          "fecha": "2026-09-30T22:47:26.000Z",
+          "ruta": "/nota/racing-adquiere-un-terreno-lindero-a-su-predio-en-subasta-municipal-g8dncb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "racing-balcarce-compra-un-terreno-lindante-y-amplia-su-predio",
+      "foto": {
+        "archivo": "fotos-notas/16kemme.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
     {
       "id": "m212r6",
       "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
@@ -194,6 +265,7 @@
       "seccion": "Balcarce",
       "medios": [
         "Puntonueve (FM 100.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/01/el-hospital-incorporo-una-nueva-mesa-de-cirugia-hidraulica/",
@@ -201,7 +273,7 @@
       "fecha": "2026-10-01T11:20:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -253,6 +325,85 @@
       }
     },
     {
+      "id": "1neicxo",
+      "titulo": "El Gobierno mantiene los subsidios a la luz y el gas y aplica subas tarifarias",
+      "copete": "El Ejecutivo nacional prorrogó los descuentos en las boletas de servicios para octubre y fijó incrementos moderados en las distribuidoras del Área Metropolitana de Buenos Aires.",
+      "cuerpo": "La Secretaría de Energía mantuvo en 200 kilovatios hora mensuales el consumo base bonificado de electricidad para los hogares beneficiarios del régimen correspondiente, además de prorrogar una bonificación del 50% en el gas.\n\nEn cuanto a los incrementos, las tarifas de gas registrarán una suba del 2,24% a nivel nacional. Por su parte, las facturas eléctricas de las empresas Edenor y Edesur en el Área Metropolitana de Buenos Aires tendrán un aumento promedio del 1,64%, mientras que el componente de distribución de esas firmas se ajustará un 2,41% y un 2,34% respectivamente, según los porcentajes difundidos por los medios informativos.\n\nEstas medidas se complementan con una bonificación adicional del 25% sobre el consumo base eléctrico y un descuento extraordinario del 24,25% en el gas para los usuarios que cumplan los requisitos.",
+      "guion": "El Gobierno mantiene los subsidios a la luz y el gas y aplica subas tarifarias",
+      "seccion": "Economía",
+      "medios": [
+        "Clarín",
+        "Agencia DIB",
+        "Ámbito"
+      ],
+      "enlace": "https://www.ambito.com/economia/el-gobierno-mantiene-los-subsidios-la-luz-y-el-gas-octubre-y-aplica-subas-debajo-del-25-n6328745",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T11:12:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T13:01:13.065Z",
+      "relevancia": 65,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Prorrogan subsidios a la luz y el gas durante octubre.",
+        "El consumo base bonificado de electricidad se mantiene en 200 kWh.",
+        "Las tarifas de gas aumentan un 2,24% en todo el país.",
+        "Edenor y Edesur aplican subas promedio del 1,64% en sus servicios."
+      ],
+      "textoRedes": "El Gobierno nacional prorrogó los subsidios a la luz y el gas para el mes de octubre y estableció aumentos tarifarios que promedian el 1,64% en la electricidad del AMBA y el 2,24% en el gas.",
+      "etiquetas": [
+        "Tarifas",
+        "Subsidios",
+        "Electricidad",
+        "Gas",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/el-gobierno-mantiene-los-subsidios-la-luz-y-el-gas-octubre-y-aplica-subas-debajo-del-25-n6328745",
+          "fecha": "2026-10-01T11:12:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la prórroga de los descuentos en gas, el mantenimiento del tope eléctrico en 200 kWh y los porcentajes de ajuste en la distribución."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/gobierno-vuelca-subsidios-luz-gas-contener-inflacion-octubre_0_aJ2xB68e3N.html",
+          "fecha": "2026-10-01T12:33:48.000Z",
+          "oficial": false,
+          "aporte": "Precisó los aumentos promedio del 1,64% en Edenor y Edesur y del 2,24% en el gas en todo el país."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/luz-y-gas-suben-las-tarifas-pero-el-gobierno-mantiene-los-subsidios-n56159",
+          "fecha": "2026-10-01T11:47:12.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la continuidad del consumo bonificado de electricidad y la prórroga del descuento en el gas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1x3bvjs",
+          "titulo": "YPF mantiene sus precios y queda cerca de 8% por debajo de las otras petroleras",
+          "fecha": "2026-09-27T23:17:58.537Z",
+          "ruta": "/nota/ypf-mantiene-precios-en-balcarce-y-queda-por-debajo-de-las-privadas-1x3bvjs"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-mantiene-los-subsidios-a-la-luz-y-el-gas-y-aplica-subas",
+      "foto": {
+        "archivo": "fotos-notas/1neicxo.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "1vurlc1",
       "titulo": "TotalEnergies presenta millonarios proyectos de energía en la Argentina",
       "copete": "La compañía francesa impulsa planes por unos 10.000 millones de dólares para expandir la extracción de gas y petróleo en Neuquén y Tierra del Fuego.",
@@ -261,12 +412,13 @@
       "seccion": "Economía",
       "medios": [
         "Infobae",
-        "Ámbito",
         "Clarín",
+        "Ámbito",
         "Perfil",
         "El Cronista",
         "C5N",
         "Noticias Argentinas (NA)",
+        "El Día",
         "Infobrisas (Radio Brisas)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/totalenergies-anuncio-proyectos-por-cerca-de-us-10-000-millones-en-la-argentina_a6abe3b418419983d4250d965",
@@ -375,10 +527,13 @@
       "guion": "La UBA sigue entre las diez mejores de la región y el sistema sufre caídas",
       "seccion": "Argentina",
       "medios": [
+        "La Nación",
         "Minuto Uno",
         "TN (Todo Noticias)",
-        "La Nación",
+        "Clarín",
+        "Crónica",
         "Diario Popular",
+        "El Día",
         "Infobae"
       ],
       "enlace": "https://www.infobae.com/educacion/2026/10/01/ranking-qs-regional-la-uba-sigue-liderando-en-el-pais-pero-argentina-registra-la-mayor-caida-de-america-latina/",
@@ -386,7 +541,7 @@
       "fecha": "2026-10-01T09:31:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -540,6 +695,70 @@
       "foto": {
         "archivo": "fotos-notas/iheoi7.jpg",
         "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
+      "id": "1fbewyl",
+      "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
+      "copete": "El Comando de Prevención Rural sancionó al conductor de un tractor en el paraje La Esperanza. El Municipio advirtió que habrá multas severas para quienes transiten con maquinaria pesada por caminos afectados por el clima.",
+      "cuerpo": "El procedimiento se concretó en el trayecto que conecta la ruta nacional 226 con el almacén de La Brava.\n\nLa Ordenanza Municipal Nº 43/16 establece las normas para circular por la red vial rural y exige respetar los tiempos de aireación posteriores a las precipitaciones.\n\nTras el episodio, el Municipio informó que endurecerá los controles y aplicará multas severas para evitar daños prematuros en la estructura vial provocados por vehículos pesados sobre suelos húmedos.",
+      "guion": "Infraccionan a un tractor por circular en un camino rural reparado",
+      "seccion": "Agro",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44939-infraccionaron-a-un-tractor-por-circular-sobre-un-camino-rural-recien-reparado/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T07:41:40.403Z",
+      "sinFecha": true,
+      "visto": "2026-10-01T07:41:40.403Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sancionaron a un tractor en el paraje La Esperanza.",
+        "El camino había sido recientemente reparado.",
+        "El Municipio aplicará multas severas por circular en malas condiciones climáticas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Comando de Prevención Rural infraccionó a un tractor que circulaba por un camino recientemente reparado en el paraje La Esperanza. El Municipio anunció que endurecerá los controles y aplicará multas severas.",
+      "etiquetas": [
+        "caminos rurales",
+        "Comando de Prevención Rural",
+        "La Esperanza",
+        "infracción"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44939-infraccionaron-a-un-tractor-por-circular-sobre-un-camino-rural-recien-reparado/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la infracción al tractor en el paraje La Esperanza, las declaraciones del Municipio y los detalles de la Ordenanza Municipal Nº 43/16."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4p0z63",
+          "titulo": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta",
+          "fecha": "2026-09-29T12:08:15.000Z",
+          "ruta": "/nota/infraccionan-a-un-tractor-por-circular-en-caminos-rurales-durante-la-4p0z63"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "infraccionan-a-un-tractor-por-circular-en-un-camino-rural-reparado",
+      "foto": {
+        "archivo": "fotos-notas/1fbewyl.jpg",
+        "credito": "Foto: Diario La Vanguardia"
       }
     },
     {
@@ -1022,7 +1241,6 @@
         "La Nación",
         "TN (Todo Noticias)",
         "TyC Sports",
-        "Olé",
         "Radio Mitre",
         "Doble Amarilla",
         "Bolavip Argentina"
@@ -2586,6 +2804,7 @@
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
+        "TyC Sports",
         "Crónica",
         "La Nueva"
       ],
@@ -3060,7 +3279,7 @@
       "fecha": "2026-09-30T13:00:08.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 77,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3100,83 +3319,6 @@
       "slug": "el-equipo-de-futbol-playa-clasifica-a-la-final-bonaerense"
     },
     {
-      "id": "qglhlg",
-      "titulo": "La inversión real cae un 5,4 por ciento anual en agosto",
-      "copete": "La formación de capital sumó 7.515 millones de dólares durante el octavo mes del año. El sector de la construcción y el rubro de maquinaria registraron bajas interanuales.",
-      "cuerpo": "La inversión real alcanzó los 7.515 millones de dólares en agosto y acumuló una contracción de 5,4 por ciento interanual, de acuerdo con el informe difundido por el Centro de Estudios Económicos de Orlando J. Ferreres y Asociados.\n\nAl discriminar por sectores, la adquisición de maquinaria y equipo disminuyó un 4,1 por ciento anual. En ese rubro, los equipos de fabricación nacional retrocedieron un 5,3 por ciento y las compras externas cayeron un 3,1 por ciento, lo que dejó una merma acumulada del 11,4 por ciento en los primeros ocho meses.\n\nPor su parte, el sector de la construcción se contrajo un 7,1 por ciento y marcó el descenso más pronunciado del sector en el cuatrimestre, con un saldo negativo acumulado del 3,6 por ciento. Desde la consultora privada señalaron que el desempeño general mantiene la debilidad aunque la merma interanual se moderó en comparación con los meses previos.",
-      "guion": "La inversión real cae un 5,4 por ciento anual en agosto",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "C5N",
-        "Diario Popular",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/otra-mala-noticia-para-el-gobierno--la-inversion-real-cayo-5-4--en-agosto_a6abcfa65129df45908d3736a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T12:57:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T14:31:03.728Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La inversión real sumó 7.515 millones de dólares en agosto.",
-        "La baja interanual fue de 5,4 por ciento con una merma acumulada del 7,9 por ciento en el año.",
-        "La construcción cayó un 7,1 por ciento y la compra de maquinaria un 4,1 por ciento."
-      ],
-      "seSabe": [
-        "La inversión real alcanzó los 7.515 millones de dólares en agosto.",
-        "La baja interanual fue de 5,4 por ciento según el centro de estudios privados.",
-        "La acumulada de los primeros ocho meses marca una disminución del 7,9 por ciento."
-      ],
-      "textoRedes": "La inversión real alcanzó los 7.515 millones de dólares en agosto y acumuló una baja interanual del 5,4 por ciento según un informe privado.",
-      "etiquetas": [
-        "inversión",
-        "economia",
-        "agosto",
-        "construccion",
-        "maquinaria"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/otra-mala-noticia-para-el-gobierno--la-inversion-real-cayo-5-4--en-agosto_a6abcfa65129df45908d3736a",
-          "fecha": "2026-09-30T12:57:13.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos globales de la inversión, los porcentajes de cada sector y el análisis de la consultora privada."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/la-inversion-cayo-54-agosto-y-acumula-una-baja-79-lo-que-va-del-ano-n250321",
-          "fecha": "2026-09-30T14:24:48.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la cifra de 7.515 millones de dólares para la inversión real de agosto."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/la-inversion-real-cayo-54-agosto-y-acumula-un-retroceso-79-el-ano-n922270",
-          "fecha": "2026-09-30T14:19:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la inversión representó el 18,6 por ciento del PBI y las caídas específicas en construcción y maquinaria."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-inversion-real-cae-un-5-4-por-ciento-anual-en-agosto",
-      "foto": {
-        "archivo": "fotos-notas/qglhlg.jpg",
-        "credito": "Foto: C5N"
-      }
-    },
-    {
       "id": "5evpzb",
       "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
       "copete": "Los atletas tandilenses se impusieron en la distancia principal de quince kilómetros de la prueba atlética organizada por la peña El Fogón.",
@@ -3193,7 +3335,7 @@
       "fecha": "2026-09-30T12:54:26.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 87,
+      "relevancia": 79,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3562,6 +3704,7 @@
         "El Eco de Tandil",
         "Agrositio",
         "Agroempresario",
+        "Todo Agro",
         "Ámbito",
         "Bichos de Campo",
         "El Día",
@@ -3570,7 +3713,6 @@
         "Radio Mitre",
         "Crónica",
         "El Economista",
-        "Todo Agro",
         "Noticias Agropecuarias",
         "A24",
         "La Capital (Rosario)"
@@ -3716,156 +3858,12 @@
         "archivo": "fotos-notas/616lop.jpg",
         "credito": "Foto: Bichos de Campo"
       }
-    },
-    {
-      "id": "1hkh8ez",
-      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
-      "copete": "La seccional provincial del gremio organiza el miércoles una jornada formativa sobre normativas, derechos y trámites laborales. Será en el Salón de Actos del establecimiento secundario número uno.",
-      "cuerpo": "La seccional provincial del gremio dictará el miércoles 30 de septiembre una formación dirigida a trabajadores auxiliares, aspirantes y personas interesadas. La actividad comenzará a las 18 en el espacio de reuniones del establecimiento secundario número uno, conocido como la ex Normal.\n\nDurante el encuentro se abordarán aspectos vinculados con las reglas vigentes, las tareas asignadas, las licencias, los reclamos y los trámites jubilatorios. Además, los organizadores explicarán el funcionamiento de las plataformas digitales del sistema educativo.\n\nSegún informó el medio organizador, la convocatoria surge debido a las dudas frecuentes que plantean los trabajadores y busca ofrecer herramientas prácticas para la vida laboral. La asistencia será optativa y no sumará puntaje.",
-      "guion": "UPCN dicta una capacitación gratuita para auxiliares",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/upcn-ba-realizara-una-capacitacion-para.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T00:54:04.490Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T02:31:08.479Z",
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Jornada de formación este miércoles a las 18",
-        "Encuentro en el edificio de la ex Normal",
-        "Temas sobre derechos, licencias y jubilación",
-        "Actividad abierta y sin puntaje"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "UPCN",
-        "auxiliares",
-        "educación",
-        "capacitación",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/upcn-ba-realizara-una-capacitacion-para.html",
-          "fecha": "2026-09-30T00:54:04.490Z",
-          "oficial": false,
-          "aporte": "Informó sobre la fecha, el horario, el lugar, los temas y las características de la capacitación organizada por el gremio."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "upcn-dicta-una-capacitacion-gratuita-para-auxiliares"
-    },
-    {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "copete": "La categoría penaliza al piloto por una infracción técnica tras la competencia en el autódromo Juan Manuel Fangio. La medida incluye sanciones económicas para su preparador y otros corredores.",
-      "cuerpo": "La comisión fiscalizadora de la ACTC resuelve aplicar sanciones tras la competencia de TC Pick Up y TC Pista Pick Up desarrollada en el autódromo Juan Manuel Fangio. Según informó un medio local, Mariano Werner recibe una multa de veinte millones de pesos y debe largar desde la última posición en su próxima final por infringir el artículo treinta y seis del reglamento técnico referido a la compresión.\n\nEl dinero debe ser depositado en la Fundación Favaloro antes de la siguiente competencia. La misma medida alcanza a Guillermo Pianca, preparador del motor, con diez millones de pesos de multa.\n\nLa categoría cita de forma presencial a Werner para el martes seis de octubre a las quince y a Juan Pablo Alberti a las quince treinta.",
-      "guion": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Solotc",
-        "0223 (Mar del Plata)"
-      ],
-      "enlace": "https://www.0223.com.ar/nota/2026-9-29-21-9-0-tras-la-fiesta-en-el-autodromo-juan-manuel-fangio-dura-sancion-a-werner-multa-millonaria-y-largada-desde-el-fondo",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T00:39:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T01:01:00.516Z",
-      "relevancia": 86,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Werner recibe una multa de veinte millones de pesos y largará desde el fondo.",
-        "El preparador Guillermo Pianca debe pagar diez millones de pesos.",
-        "Canapino recibe un apercibimiento y Dianda una multa de diez millones.",
-        "Werner y Alberti quedan citados para el martes seis de octubre."
-      ],
-      "seSabe": [
-        "Werner recibe una multa de veinte millones de pesos y largará desde el fondo por una infracción técnica.",
-        "El preparador Guillermo Pianca es multado con diez millones de pesos.",
-        "Agustín Canapino recibe un apercibimiento por una maniobra en la largada.",
-        "Marco Dianda debe pagar diez millones de pesos y largar desde el fondo por declaraciones inapropiadas.",
-        "Juan José Suárez largará desde la última posición en serie y final.",
-        "Werner y Juan Pablo Alberti son citados ante la entidad el martes 6 de octubre a las 15 y 15.30."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La ACTC sanciona a Mariano Werner con una multa millonaria y la obligación de largar desde el fondo tras la competencia de TC Pick Up en el autódromo Juan Manuel Fangio.",
-      "etiquetas": [
-        "Automovilismo",
-        "ACTC",
-        "Mariano Werner",
-        "Balcarce",
-        "Autódromo Juan Manuel Fangio"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-9-29-21-9-0-tras-la-fiesta-en-el-autodromo-juan-manuel-fangio-dura-sancion-a-werner-multa-millonaria-y-largada-desde-el-fondo",
-          "fecha": "2026-09-30T00:39:00.000Z",
-          "oficial": false,
-          "aporte": "Detalla las sanciones de la ACTC a pilotos y preparadores tras la competencia en Balcarce."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wgq362",
-          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-29T14:55:00.000Z",
-          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
-        },
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-actc-sanciona-a-mariano-werner-con-multa-y-largada-desde-el-fondo",
-      "foto": {
-        "archivo": "fotos-notas/1j6ui2n.jpg",
-        "credito": "Foto: Adriel anv00 / Wikimedia Commons (CC BY-SA 4.0)"
-      }
     }
   ],
   "secciones": [
+    "Balcarce",
     "Cultura y agenda",
     "Deportes",
-    "Balcarce",
     "Economía",
     "Argentina",
     "Fútbol",
@@ -3878,16 +3876,16 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 3
-    },
-    {
-      "nombre": "Fangio",
-      "ranura": "fangio",
-      "cuantas": 3
+      "cuantas": 2
     },
     {
       "nombre": "El hospital",
       "ranura": "hospital",
+      "cuantas": 2
+    },
+    {
+      "nombre": "Fangio",
+      "ranura": "fangio",
       "cuantas": 2
     }
   ],
@@ -4061,7 +4059,8 @@
           {
             "nombre": "San José de la Plaza",
             "direccion": "Av. Chaves esquina 15",
-            "telefono": null
+            "telefono": null,
+            "fuente": "La Vanguardia"
           }
         ],
         "mes": 10,
@@ -4249,6 +4248,18 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
+      "id": "10qtrc4",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"imputado\""
+    },
+    {
+      "id": "1jsygoi",
+      "titulo": "También en Europa: Villarruel llegó a España para…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"participá del\""
+    },
+    {
       "id": "uwyf91",
       "titulo": "“Mi vida expuesta, mi nombre condenado socialmente”: el…",
       "seccion": "Balcarce",
@@ -4265,12 +4276,6 @@
       "titulo": "Psicólogos de La Plata que atienden por IOMA harán un…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "gd6ing",
-      "titulo": "Quiniela de Córdoba: resultados en VIVO de hoy, martes 29…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "8hswff",
@@ -4297,6 +4302,12 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "ldqze4",
+      "titulo": "Quiniela de Mendoza: resultados en VIVO de hoy, martes 29…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "3noxlf",
       "titulo": "La ANMAT prohibió una serie de productos de limpieza por…",
       "seccion": "Argentina",
@@ -4321,5 +4332,5 @@
       "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
-  "esperandoCuerpo": 6
+  "esperandoCuerpo": 7
 }

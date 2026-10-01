@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T12:34:47.297Z",
+ "generado": "2026-10-01T13:03:25.306Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -30,22 +30,22 @@
      "fecha": "2026-10-01T11:51:45.000Z"
     }
    ],
-   "intentos": 2
+   "intentos": 3
   },
   {
-   "id": "16kemme",
-   "titulo": "Racing Balcarce amplía su predio y proyecta nuevos desafíos",
-   "copete": "La institución concretó la compra de un nuevo espacio que permitirá ampliar sus instalaciones y proyectar futuros proyectos. La operación se formalizó este jueves con la presencia de integrantes de la Comisión Directiva.",
+   "id": "t1dd2",
+   "titulo": "Se realizará un ciclo de charlas sobre salud y bienestar en la adultez",
+   "copete": "La actividad será este viernes 2 de octubre en el Círculo de Educadores, con entrada libre y gratuita y una colecta de alimentos para el Centro de Día Arco Iris.",
    "seccion": "Balcarce",
-   "fecha": "2026-10-01T12:01:39.000Z",
+   "fecha": "2026-10-01T12:48:56.000Z",
    "fuentes": [
     {
      "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/racing-balcarce-amplia-su-predio-y-proyecta-nuevos-desafios",
-     "fecha": "2026-10-01T12:01:39.000Z"
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-ciclo-de-charlas-sobre-salud-y-bienestar-en-la-adultez",
+     "fecha": "2026-10-01T12:48:56.000Z"
     }
    ],
-   "intentos": 0
+   "intentos": 1
   },
   {
    "id": "1h0pc9p",
@@ -63,6 +63,41 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/economia/caputo-el-riesgo-no-es-politico-ni-cambiario-es-perder-la-oportunidad-de-invertir-nid01102026/",
      "fecha": "2026-10-01T11:18:01.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/caputo-aseguro-que-el-unico-riesgo-en-argentina-es-perderse-la-oportunidad-de-invertir/",
+     "fecha": "2026-10-01T12:42:00.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/caputo-ante-inversores-en-paris-argentina-tiene-una-oportunidad-extraordinaria",
+     "fecha": "2026-10-01T12:45:00.000Z"
+    }
+   ],
+   "intentos": 1
+  },
+  {
+   "id": "au1bse",
+   "titulo": "Efecto cosecha y exportaciones récord: la liquidación de divisas de septiembre fue la mayor del año",
+   "copete": "El presidente de la Cámara de la Industria Aceitera de la República Argentina y el Centro de Exportadores de Cereales (CIARA-CEC) , Gustavo Idígoras , fue contundente este miércoles durante el desarrollo del 5° Congreso Internacional de Maíz . “El maíz es la estrella del año, la…",
+   "seccion": "Agro",
+   "fecha": "2026-10-01T11:36:19.000Z",
+   "fuentes": [
+    {
+     "medio": "Infocampo",
+     "enlace": "https://www.infocampo.com.ar/efecto-cosecha-y-exportaciones-record-la-liquidacion-de-divisas-de-septiembre-fue-la-mayor-del-ano/",
+     "fecha": "2026-10-01T11:36:19.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/campo/por-los-embarques-de-maiz-en-septiembre-crecio-un-17-la-liquidacion-de-divisas-por-exportaciones-de-nid01102026/",
+     "fecha": "2026-10-01T12:57:26.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/campo/2026/10/01/la-agroindustria-liquido-divisas-por-us3220-millones-en-septiembre-y-acumula-mas-de-us22270-en-lo-que-va-del-ano/",
+     "fecha": "2026-10-01T11:39:23.000Z"
     }
    ],
    "intentos": 1
