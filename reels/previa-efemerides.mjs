@@ -14,7 +14,8 @@ import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
-import { placaEfemeride, placaLista, aPng, COLOR_SECCION, COLOR_FERIADO } from './placa.mjs';
+import { placaEfemeride, aPng, COLOR_SECCION, COLOR_FERIADO } from './placa.mjs';
+import { COLOR_UN_DIA_COMO_HOY } from './placas-efemeride.mjs';
 import { paraLeer, enCarteles } from './voz.mjs';
 import { armarAss } from './reel.mjs';
 import { vozDePieza } from '../redes/prompt-redes.mjs';
@@ -22,18 +23,14 @@ import { feriadoDelDia, fechaDeFeriado, datosParaContar, guionFeriado } from '..
 
 const correr = promisify(execFile);
 const RAIZ = path.join(import.meta.dirname, '..');
-const COLOR = COLOR_SECCION['Cultura y agenda'];
+import { placasDelDia, fechaLarga } from './placas-efemeride.mjs';
+export { placasDelDia, fechaLarga };
+const COLOR = COLOR_UN_DIA_COMO_HOY;
 /** Palabras por segundo de la voz de Gemini con un texto así (CRITERIO-REDES.md: entre 2,3 y 2,6). */
 export const RITMO = 2.5;
 const RETARDO = 0.25;
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-const MESES_CORTOS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
-
-export const fechaLarga = (iso) => {
-  const [a, m, d] = iso.split('-').map(Number);
-  return { dia: DIAS[new Date(Date.UTC(a, m - 1, d, 12)).getUTCDay()], numero: d, mes: MESES[m - 1] };
-};
 
 /**
  * Las palabras del guion con tiempos calculados por el ritmo de lectura, en el formato de los
@@ -57,21 +54,6 @@ export function palabrasSinteticas(texto, { ritmo = RITMO } = {}) {
 export function momentoDelAdemas(palabras) {
   const i = palabras.findIndex((p, k) => p.texto === 'Y' && /^además/i.test(palabras[k + 1]?.texto ?? ''));
   return i > 0 ? palabras[i].desde : null;
-}
-
-/** Las dos placas de un día (SVG). */
-export function placasDelDia(fecha, dia) {
-  const f = fechaLarga(fecha);
-  const rotulo = `Un día como hoy · ${f.numero} de ${f.mes}`;
-  const p = dia.principal;
-  // Lo que va en grande: el año. Un "día de…" sin año (el del Circo Criollo) lleva el día, así todas las placas arrancan igual (1/10, Hernán).
-  const grande = p.anio ? String(p.anio) : `${f.numero} ${MESES_CORTOS[MESES.indexOf(f.mes)]}`;
-  const principal = placaEfemeride({ rotulo, grande, titulo: p.titulo, cuerpo: p.cuerpo, color: COLOR });
-  const ademas = placaLista({
-    rotulo: 'Además, un día como hoy', titulo: `${f.numero} de ${f.mes}`, color: COLOR,
-    filas: dia.ademas.map((x) => ({ rotulo: x.anio ? String(x.anio) : 'Hoy', principal: x.texto })),
-  });
-  return { principal, ademas };
 }
 
 /** Un video sin voz: la placa principal, después la de "Además", subtítulos encima y una pista de silencio. */

@@ -60,6 +60,7 @@ const VENTANAS = {
   utiles: 60,          // 17:00 → 18:00, los sábados
   agenda: 60,          // 12:00 → 13:00, los jueves
   feriado: 240,        // 8:00 → 12:00, los feriados
+  efemeride: 180,      // 9:00 → 12:00, todos los días que tienen su efeméride preparada
   'participa-noticias': 60, 'participa-evento': 60, 'participa-reclamos': 60, 'participa-nota': 60, // 12:00 → 13:00
 };
 

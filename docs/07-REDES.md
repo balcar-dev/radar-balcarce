@@ -143,6 +143,8 @@ para la siguiente. Si no toca nada, la corrida termina en segundos.
 |---|---|---|---|---|
 | Aviso de clima (`aviso-helada`, `aviso-granizo`, `aviso-viento`) | historia | 7:00 | 22:00 | Sólo si hay un aviso grave, hoy o mañana |
 | Clima de la mañana (`clima-manana`) | historia | 7:00 | 11:00 | Todos |
+| El feriado (`feriado`) | historia | 8:00 | 12:00 | Sólo los feriados, con datos verificados (`redes/feriado.mjs`) |
+| Un día como hoy (`efemeride`) | historia con dos placas | 9:00 | 12:00 | **Todos los días que tienen su entrada preparada** en `web/data/efemerides-piezas.json` (`redes/efemeride.mjs`); sin entrada no sale nada. Fijo: no se mueve ni se saca por el techo de historias |
 | Podcast de la mañana (`noticia1`) | reel + historia | 10:00 | 15:00 | Todos, con 2 notas o más |
 | Teléfonos útiles (`utiles`) | historia | 17:00 | 18:00 | Los sábados, fijo |
 | Podcast de la tarde (`noticia2`) | reel + historia | 15:00 | 20:00 | Todos, con 2 notas o más |
@@ -642,3 +644,27 @@ audios (`redes/cronograma-semana.mjs` y `reels/hoja-cronograma.mjs` lo dibujan).
   vuelve solo a armarla con voz. `--sin-fijas` fuerza armarla de cero; `--incluir=` pide una pieza que hoy no toca.
 - Cuando vuelva la clave paga, se deja que venzan y listo.
 
+
+
+## El cronograma de las redes de un vistazo (1/10/2026)
+
+Horarios acordados con Hernán el 1/10 (todos en `panel/horarios.mjs` y `redes/piezas.mjs`; una prueba los controla):
+
+| Hora | Pieza | Voz |
+|---|---|---|
+| 07:00 | Clima de la mañana | locutora |
+| 08:00 | El feriado (sólo feriados) | locutora |
+| 09:00 | **Un día como hoy**, todos los días | locutora |
+| 10:00 | Repaso de la mañana (reel e historia) | locutor |
+| 12:00 | Participá (lun noticias, mar evento, mié reclamos, vie nota) y la agenda (jueves) | locutora o locutor, según la pieza |
+| 15:00 | Repaso de la tarde (reel e historia) | locutora |
+| 17:00 | Teléfonos útiles, **los sábados** | locutor |
+| 19:00 | Farmacia de turno | locutor |
+| 20:00 | Clima de la noche | locutora |
+| 21:00 | Repaso de la última hora (reel e historia) | locutor |
+
+- **Para verlo:** `node reels/cronograma-html.mjs --desde=AAAA-MM-DD --dias=8 --fijas=participa-noticias,…` arma una página con una pestaña por día y la
+  grilla de 7 a 21 (las horas vacías se ven rayadas); `node reels/hoja-cronograma.mjs` lo dibuja como imagen y `node redes/cronograma-semana.mjs` lo escribe en texto.
+  Los tres usan las mismas funciones que el reloj, así que muestran lo que va a pasar.
+- **Audios por día** (el cupo gratis es de 10): con las cuatro de participá fijas, entre 7 y 8; el feriado, 8. Quedan 2 de margen para un aviso de clima o un reintento.
+- **Un día como hoy** se prepara una semana por vez y se revisa (`PENDIENTES.md` 0c2): cada semana se arma la siguiente, y si nadie toca nada sale como está.

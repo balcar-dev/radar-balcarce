@@ -42,10 +42,13 @@ test('los audios por día: siete, ocho o nueve (el feriado, con participá, es e
   for (const d of semana) assert.ok(d.audios <= CUPO_DE_VOZ_POR_DIA, d.fecha);
 });
 
-test('sin la efeméride, el cronograma es el de hoy del reloj', () => {
-  const hoy = cronogramaDelDiaConVoz('2026-10-05');
-  assert.ok(!hoy.piezas.some((p) => p.nombre === 'efemeride'));
-  assert.equal(hoy.audios, 7);
+test('el reloj trae la efeméride sólo los días que la tienen preparada (web/data/efemerides-piezas.json)', () => {
+  const preparado = cronogramaDelDiaConVoz('2026-10-05');
+  assert.ok(preparado.piezas.some((p) => p.nombre === 'efemeride'), 'el 5/10 está preparada: sale');
+  assert.equal(preparado.audios, 8);
+  const sinPreparar = cronogramaDelDiaConVoz('2026-11-16');
+  assert.ok(!sinPreparar.piezas.some((p) => p.nombre === 'efemeride'), 'un día sin entrada no sale nada');
+  assert.equal(sinPreparar.audios, 7);
 });
 
 test('el texto marca cuánto sobra del cupo', () => {

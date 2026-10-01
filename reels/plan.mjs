@@ -19,6 +19,8 @@ import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../in
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { enlaceDeNota } from '../redes/elegir.mjs';
 import { fijaVigente } from './fijas.mjs';
+import { efemerideDelDia } from '../redes/efemeride.mjs';
+import { placasDelDia, COLOR_UN_DIA_COMO_HOY } from './placas-efemeride.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
 import { repasosDelDia } from '../redes/repasos.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
@@ -397,6 +399,25 @@ export function planDelDia(datos, {
       svg: placaEfemeride({ rotulo: `Feriado · ${fechaDeFeriado(f.fecha)}`, titulo: f.nombre, cuerpo: datosParaContar(f).join(' '), color: COLOR_FERIADO }),
       acento: COLOR_FERIADO,
     });
+  }
+
+  // "Un día como hoy" (1/10): a las 9:00, todos los días que tienen su efeméride preparada (redes/efemeride.mjs).
+  // Es una historia con dos placas (la principal y "Además…") y la voz de la locutora. Nunca se saca por el techo de historias.
+  if (tocaHoy('efemeride')) {
+    const e = efemerideDelDia(fecha);
+    if (e) {
+      const momento = momentoDeHora(cuando.efemeride.hora);
+      const placas = placasDelDia(e.fecha, e);
+      piezas.push({
+        tipo: 'historia', hora: cuando.efemeride.hora, nombre: 'efemeride',
+        titulo: `Un día como hoy: ${e.principal.titulo}`, motivo: 'un día como hoy, todos los días a las 9:00',
+        seccion: 'Cultura y agenda',
+        guion: e.guion,
+        momento, indicacion: INDICACIONES[momento],
+        svg: placas.principal, svg2: placas.ademas,
+        acento: COLOR_UN_DIA_COMO_HOY,
+      });
+    }
   }
 
   // Participá (30/09): al mediodía, una invitación a escribir por WhatsApp; cada día de la

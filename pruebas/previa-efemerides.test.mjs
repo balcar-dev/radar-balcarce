@@ -38,12 +38,13 @@ test('las dos placas se arman con la fecha y los datos del día', () => {
   assert.deepEqual(fechaLarga('2026-10-05'), { dia: 'lunes', numero: 5, mes: 'octubre' });
 });
 
-test('cada día de la vista previa tiene su principal, tres "además" y un guion que los dice', () => {
+test('cada día preparado tiene su principal, dos o tres "además" y un guion que los dice (5 al 18/10)', () => {
   const fechas = Object.keys(datos.dias);
-  assert.deepEqual(fechas, ['2026-10-05', '2026-10-06', '2026-10-07', '2026-10-08', '2026-10-09', '2026-10-10', '2026-10-11']);
+  assert.equal(fechas.length, 14);
+  assert.deepEqual([fechas[0], fechas.at(-1)], ['2026-10-05', '2026-10-18']);
   for (const f of fechas) {
     const d = datos.dias[f];
-    assert.equal(d.ademas.length, 3, f);
+    assert.ok(d.ademas.length >= 2 && d.ademas.length <= 3, `${f}: ${d.ademas.length} en "además"`);
     assert.match(d.guion, /^Buen día, Balcarce\./, `${f}: el saludo`);
     assert.match(d.guion, /Un día como hoy, en Radar Balcarce\.$/, `${f}: el cierre`);
     assert.match(d.guion, /Y además, un día como hoy:/, `${f}: la bisagra`);

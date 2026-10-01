@@ -11,6 +11,7 @@
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
 import { PIEZAS_PARTICIPA } from '../redes/participa.mjs';
 import { feriadoDelDia } from '../redes/feriado.mjs';
+import { efemerideDelDia } from '../redes/efemeride.mjs';
 import { diaSemanaAR } from '../ingesta/zona.mjs';
 
 // Los días de la semana como los devuelve Date#getDay(): 0 es domingo.
@@ -78,6 +79,13 @@ HISTORIAS_FIJAS.push({
   activa: true, hora: '08:00', dias: TODOS,
 });
 
+// "Un día como hoy" (1/10, Hernán: "todos los días, fijo a las 9"): sale cada día que tiene su entrada
+// preparada en web/data/efemerides-piezas.json (redes/efemeride.mjs); sin entrada, ese día no sale nada.
+HISTORIAS_FIJAS.push({
+  id: 'efemeride', nombre: 'Un día como hoy', porQue: 'Todos los días a las 9:00, fijo: la efeméride del día y tres más. Se prepara una semana por vez y se revisa antes.',
+  activa: true, hora: '09:00', dias: TODOS,
+});
+
 // Las piezas de participá (30/09): una historia con voz a las 12:00, cuatro días por semana.
 for (const [id, p] of Object.entries(PIEZAS_PARTICIPA)) {
   HISTORIAS_FIJAS.push({
@@ -135,6 +143,7 @@ export function guardarHorario(estado, { id, activa, hora, dias }) {
 export function toca(horario, cuando = new Date(), { estado = null } = {}) {
   if (horario.activa === false) return false;
   if (horario.id === 'feriado') return !!feriadoDelDia(cuando);
+  if (horario.id === 'efemeride') return !!efemerideDelDia(cuando);
   const dia = diaSemanaAR(cuando);
   const aMano = estado?.horarios?.utiles?.dias;
   if (horario.id === 'utiles' && !aMano) return dia === diaRotativoDeUtiles(cuando);

@@ -110,7 +110,7 @@ export async function recortarParaHistoria(mp4, salida) {
  * @returns ruta del mp4
  */
 export async function armarReel({
-  nombre, svg, guion, acento = '#E8A33C', indicacion = null,
+  nombre, svg, svg2 = null, guion, acento = '#E8A33C', indicacion = null,
   // Cada pieza tiene siempre la misma voz (el reparto de CRITERIO-REDES.md, sección
   // 6): la locutora o el locutor. No se cambia por variable de entorno ni hay otra
   // de respaldo; una pieza sin voz en el reparto lanza.
@@ -123,6 +123,9 @@ export async function armarReel({
   const mp4 = path.join(dir, `${nombre}.mp4`);
 
   await aPng(svg, png);
+  // Con una segunda placa ("Un día como hoy": la principal y después "Además…"), cambia justo cuando la voz dice "Y además".
+  const png2 = svg2 ? path.join(dir, `${nombre}-2.png`) : null;
+  if (png2) await aPng(svg2, png2);
   // Gemini no trae los tiempos de cada palabra: se resuelven alineando el
   // texto con los silencios del audio (alinear.mjs).
   const texto = paraLeer(guion);
@@ -166,12 +169,19 @@ export async function armarReel({
   const ms = Math.round(retardo * 1000);
 
   // La voz, apenas retrasada, y un silencio corto al final.
-  const audio = `[1:a]adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
+
+  const idxCorte = png2 ? voz.palabras.findIndex((p, k) => /^y$/i.test(String(p.texto).replace(/[^\p{L}]/gu, '')) && /^adem[aá]s/i.test(String(voz.palabras[k + 1]?.texto ?? ''))) : -1;
+  const corte = idxCorte > 0 ? voz.palabras[idxCorte].desde + retardo : null;
+  const dosPlacas = Boolean(png2 && corte);
+  const entradas = dosPlacas
+    ? ['-loop', '1', '-t', corte.toFixed(2), '-i', path.basename(png), '-loop', '1', '-t', (total - corte).toFixed(2), '-i', path.basename(png2), '-i', path.basename(mp3)]
+    : ['-loop', '1', '-i', path.basename(png), '-i', path.basename(mp3)];
+  const origen = dosPlacas ? '[0:v][1:v]concat=n=2:v=1:a=0' : '[0:v]null';
+  const audio = `[${dosPlacas ? 2 : 1}:a]adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
 
   await correr(ffmpeg, [
-    '-y', '-loop', '1', '-i', path.basename(png),
-    '-i', path.basename(mp3),
-    '-filter_complex', `[0:v]${filtro}[v];${audio}`,
+    '-y', ...entradas,
+    '-filter_complex', `${origen},${filtro}[v];${audio}`,
     '-map', '[v]', '-map', '[a]',
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p',
     '-c:a', 'aac', '-b:a', '160k', '-ar', '44100',
