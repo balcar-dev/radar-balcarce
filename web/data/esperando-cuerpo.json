@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T21:26:52.774Z",
+ "generado": "2026-10-01T21:38:58.418Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,11 +15,6 @@
      "fecha": "2026-10-01T11:54:27.000Z"
     },
     {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/irene-feingold-clasifico-al-torneo-nacional-de-gimnasia-artistica/",
-     "fecha": "2026-10-01T12:11:45.000Z"
-    },
-    {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/irene-feingold-clasifico-al-torneo.html",
      "fecha": "2026-10-01T17:47:47.821Z"
@@ -27,6 +22,40 @@
    ],
    "intentos": 3,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "1vmovug",
+   "titulo": "El RENAPER realizará trámites de DNI y pasaporte durante tres jornadas",
+   "copete": "Un móvil del Registro Nacional de las Personas (RENAPER) llegará a Balcarce para llevar adelante un operativo especial de documentación, que permitirá a los vecinos realizar trámites vinculados con el DNI y el pasaporte. La actividad comenzará el jueves 8 de octubre, de 10 a 15…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T18:14:23.585Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/el-renaper-realizara-tramites-de-dni-y.html",
+     "fecha": "2026-10-01T18:14:23.585Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (antecedente): el cuerpo usa 2, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 114 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "bolu8o",
+   "titulo": "Corte de energía programado para este viernes",
+   "copete": "La Cooperativa de Electricidad de Balcarce informó que este viernes 2 de octubre se realizará un corte programado del suministro eléctrico debido a trabajos en líneas de baja tensión. La interrupción del servicio está prevista entre las 7:30 y las 9:00, y afectará a la mayoría…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T17:24:47.272Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
+     "fecha": "2026-10-01T17:24:47.272Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 56 palabras",
    "maximo": 3
   },
   {
@@ -65,23 +94,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 4
-  },
-  {
-   "id": "c0hkeg",
-   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
-   "copete": "Con motivo de la conmemoración del Día Internacional de las Personas Mayores -celebrado cada 1 de octubre-, la ciudad se prepara para vivir una tarde dedicada de lleno al cuidado y la calidad de vida en la adultez. El encuentro tendrá lugar mañan",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T11:52:38.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-     "fecha": "2026-10-01T11:52:38.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 3
   },
   {
    "id": "601ifn",
