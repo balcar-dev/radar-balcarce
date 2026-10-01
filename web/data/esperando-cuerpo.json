@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T20:01:22.438Z",
+ "generado": "2026-10-01T20:29:24.676Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,11 +13,6 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/01/irene-feingold-clasifico-al-torneo-nacional/",
      "fecha": "2026-10-01T11:54:27.000Z"
-    },
-    {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/irene-feingold-clasifico-al-torneo-nacional-de-gimnasia-artistica/",
-     "fecha": "2026-10-01T12:11:45.000Z"
     },
     {
      "medio": "Infórmese Primero (FM 104.9)",
@@ -84,6 +79,28 @@
    "maximo": 3
   },
   {
+   "id": "18apis6",
+   "titulo": "Norris explica cómo se disculpó con Colapinto y condena las amenazas en redes",
+   "copete": "Lando Norris ha explicado cómo pidió perdón a Franco Colapinto para dejar atrás la polémica por lo ocurrido el pasado fin de semana en Bakú, con un accidente que fue provocado por el argentino y que dejó fuera de carrera a ambos y a Pierre Gasly. El piloto de McLaren reconoció…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-01T12:16:51.000Z",
+   "fuentes": [
+    {
+     "medio": "Motorsport",
+     "enlace": "https://es.motorsport.com/f1/news/norris-explica-disculpas-colapinto-abuso-redes/10860600/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+     "fecha": "2026-10-01T12:16:51.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/deportes/norris-se-disculpo-con-colapinto-tras-sus-criticas",
+     "fecha": "2026-10-01T15:10:03.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"azerbaiyan\", que sale de una nota anterior, como si fuera de hoy",
+   "maximo": 3
+  },
+  {
    "id": "601ifn",
    "titulo": "El viernes 9 se realizará el acto central por el “Día del Respeto a la Diversidad Cultural”",
    "copete": "El próximo viernes 9 de octubre, a las 10 horas, se desarrollará en las instalaciones del Instituto Adventista Balcarce (IAB) el acto central conmemorativo por el “Día del Respeto a la Diversidad Cultural”. La actividad se enmarca en el calendario de actividad docente, que…",
@@ -98,6 +115,33 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 93 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "12pfgxi",
+   "titulo": "Bullrich en IDEA: \"No podemos tener la industria caída, la construcción caída, el comercio caído\"",
+   "copete": "La senadora nacional de La Libertad Avanza (LLA) Patricia Bullrich volvió a marcar distancia del núcleo duro que rodea a Javier Milei y pidió mayor velocidad en los cambios económicos para que sean palpables en los hogares. Durante su participación en el Coloquio de IDEA, que se…",
+   "seccion": "Política",
+   "fecha": "2026-10-01T18:34:16.000Z",
+   "fuentes": [
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/bullrich-en-idea-no-podemos-tener-la-industria-caida-la-construccion-caida-el-comercio-caido/",
+     "fecha": "2026-10-01T18:34:16.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/bullrich-otra-vez-critica-no-podemos.html",
+     "fecha": "2026-10-01T18:59:31.871Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/politica/bullrich-otra-vez-critica-no-podemos-tener-la-industria-la-construccion-y-el-comercio-caidos-n56176",
+     "fecha": "2026-10-01T18:41:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   },
   {

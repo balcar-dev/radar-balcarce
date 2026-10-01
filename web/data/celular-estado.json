@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T20:01:22.438Z",
- "portada": 61,
- "archivo": 735,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-01T20:29:24.676Z",
+ "portada": 60,
+ "archivo": 736,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-01T20:01:22.477Z",
+  "generado": "2026-10-01T20:29:24.724Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,11 +147,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
      {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "id": "1vmovug",
+      "titulo": "El RENAPER instala un móvil de documentación",
       "seccion": "Balcarce"
      },
      {
@@ -160,14 +160,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "seccion": "Deportes"
-     },
-     {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
      }
     ]
    }
@@ -200,7 +200,20 @@
      "cuando": "2026-10-01T18:36:31.248Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1vmovug",
+     "titulo": "El RENAPER instala un móvil de documentación",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1mknzh0",
+     "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,
