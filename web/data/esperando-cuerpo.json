@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-01T13:32:35.386Z",
+ "generado": "2026-10-01T14:09:00.396Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -18,9 +18,24 @@
    "intentos": 1
   },
   {
+   "id": "t1dd2",
+   "titulo": "Se realizará un ciclo de charlas sobre salud y bienestar en la adultez",
+   "copete": "La actividad será este viernes 2 de octubre en el Círculo de Educadores, con entrada libre y gratuita y una colecta de alimentos para el Centro de Día Arco Iris.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T12:48:56.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-ciclo-de-charlas-sobre-salud-y-bienestar-en-la-adultez",
+     "fecha": "2026-10-01T12:48:56.000Z"
+    }
+   ],
+   "intentos": 2
+  },
+  {
    "id": "1jiov2o",
    "titulo": "El agro liquidó u$s3.228 millones en septiembre y alcanzó el tercer mejor registro en 25 años",
-   "copete": "Las empresas del complejo oleaginoso-cerealero liquidaron US$ 3.228 millones durante septiembre, de acuerdo con el informe difundido por la Cámara de la Industria Aceitera de la República Argentina (CIARA) y el Centro de Exportadores de Cereales (CEC). El monto representó un 17%…",
+   "copete": "En septiembre pasado, la agroexportación registró un ingreso de divisas por US$3228 millones, una suba del 17% respecto de agosto último, según informó hoy la Cámara de la Industria Aceitera y el Centro de Exportadores de Cereales (Ciara-CEC). “Septiembre de 2026 es el tercero…",
    "seccion": "Agro",
    "fecha": "2026-10-01T11:00:52.000Z",
    "fuentes": [
@@ -28,6 +43,16 @@
      "medio": "Ámbito",
      "enlace": "https://www.ambito.com/economia/el-agro-liquido-us3228-millones-septiembre-y-alcanzo-el-tercer-mejor-registro-25-anos-n6328761",
      "fecha": "2026-10-01T11:00:52.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/campo/por-los-embarques-de-maiz-en-septiembre-crecio-un-17-la-liquidacion-de-divisas-por-exportaciones-de-nid01102026/",
+     "fecha": "2026-10-01T12:57:26.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/la-liquidacion-del-agro-crecio-17-en-septiembre-impulsada-por-el-maiz",
+     "fecha": "2026-10-01T13:30:27.000Z"
     },
     {
      "medio": "Ecos Diarios (Necochea)",
@@ -40,12 +65,32 @@
      "fecha": "2026-10-01T11:35:29.000Z"
     },
     {
+     "medio": "Infocampo",
+     "enlace": "https://www.infocampo.com.ar/efecto-cosecha-y-exportaciones-record-la-liquidacion-de-divisas-de-septiembre-fue-la-mayor-del-ano/",
+     "fecha": "2026-10-01T11:36:19.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/campo/2026/10/01/la-agroindustria-liquido-divisas-por-us3220-millones-en-septiembre-y-acumula-mas-de-us22270-en-lo-que-va-del-ano/",
+     "fecha": "2026-10-01T11:39:23.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/la-liquidacion-del-agro-crecio-17--en-septiembre-y-aporto-us-3-229-millones_a6abe3fec8419983d42516a54",
+     "fecha": "2026-10-01T12:34:41.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/en-septiembre-crecio-un-17-la-liquidacion-de-divisas-por-exportaciones-de-granos-y-oleaginosas/",
+     "fecha": "2026-10-01T13:47:10.000Z"
+    },
+    {
      "medio": "Noticias Agropecuarias",
      "enlace": "https://www.noticiasagropecuarias.com/2026/10/01/la-liquidacion-de-divisas-del-agro-alcanzo-3-228-mill-dol-en-septiembre/",
      "fecha": "2026-10-01T11:52:56.000Z"
     }
    ],
-   "intentos": 1
+   "intentos": 2
   },
   {
    "id": "601ifn",
@@ -60,7 +105,7 @@
      "fecha": "2026-10-01T13:22:10.000Z"
     }
    ],
-   "intentos": 1
+   "intentos": 2
   },
   {
    "id": "1h0pc9p",
@@ -91,31 +136,6 @@
     }
    ],
    "intentos": 1
-  },
-  {
-   "id": "au1bse",
-   "titulo": "Efecto cosecha y exportaciones récord: la liquidación de divisas de septiembre fue la mayor del año",
-   "copete": "El presidente de la Cámara de la Industria Aceitera de la República Argentina y el Centro de Exportadores de Cereales (CIARA-CEC) , Gustavo Idígoras , fue contundente este miércoles durante el desarrollo del 5° Congreso Internacional de Maíz . “El maíz es la estrella del año, la…",
-   "seccion": "Agro",
-   "fecha": "2026-10-01T11:36:19.000Z",
-   "fuentes": [
-    {
-     "medio": "Infocampo",
-     "enlace": "https://www.infocampo.com.ar/efecto-cosecha-y-exportaciones-record-la-liquidacion-de-divisas-de-septiembre-fue-la-mayor-del-ano/",
-     "fecha": "2026-10-01T11:36:19.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/campo/por-los-embarques-de-maiz-en-septiembre-crecio-un-17-la-liquidacion-de-divisas-por-exportaciones-de-nid01102026/",
-     "fecha": "2026-10-01T12:57:26.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/campo/2026/10/01/la-agroindustria-liquido-divisas-por-us3220-millones-en-septiembre-y-acumula-mas-de-us22270-en-lo-que-va-del-ano/",
-     "fecha": "2026-10-01T11:39:23.000Z"
-    }
-   ],
-   "intentos": 2
   },
   {
    "id": "zv8yz3",

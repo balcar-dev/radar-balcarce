@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-01T13:32:35.386Z",
- "portada": 50,
- "archivo": 702,
+ "generado": "2026-10-01T14:09:00.396Z",
+ "portada": 54,
+ "archivo": 707,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-01T13:32:35.417Z",
+  "generado": "2026-10-01T14:09:00.428Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-01T13:35:03.428Z"
    },
    {
     "nombre": "noticia2",
@@ -84,8 +84,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 47,
+    "salio": "2026-10-01T13:35:03.428Z",
+    "segundos": null,
     "notas": [
      {
       "id": "ff9n91",
@@ -116,17 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "1neicxo",
+      "titulo": "El Gobierno mantiene los subsidios a la luz y el gas y aplica subas tarifarias",
+      "seccion": "Economía"
+     },
      {
       "id": "m212r6",
       "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "t1dd2",
-      "titulo": "El Círculo de Educadores recibe charlas de salud y bienestar en la adultez",
-      "seccion": "Balcarce"
      },
      {
       "id": "1h3xtmz",
@@ -150,9 +150,9 @@
     "segundos": 54,
     "notas": [
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
+      "id": "1mknzh0",
+      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "idl5dq",
@@ -160,14 +160,14 @@
       "seccion": "Fútbol"
      },
      {
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
       "id": "1fbewyl",
       "titulo": "Infraccionan a un tractor por circular en un camino rural reparado",
       "seccion": "Agro"
-     },
-     {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -178,27 +178,14 @@
      "id": "m212r6",
      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
      "cuando": "2026-10-01T12:06:50.587Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "ff9n91",
      "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1v6m62u",
-     "titulo": "El Hospital Fossati completa la meta de incorporar treinta televisores",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "t1dd2",
-     "titulo": "El Círculo de Educadores recibe charlas de salud y bienestar en la adultez",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
+     "cuando": "2026-10-01T13:38:34.741Z"
+    }
+   ],
+   "cola": [
     {
      "id": "dwvi75",
      "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
@@ -210,10 +197,16 @@
      "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
      "seccion": "Deportes",
      "marcada": false
+    },
+    {
+     "id": "1mknzh0",
+     "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
+     "seccion": "Cultura y agenda",
+     "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-01T13:36:50.587Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-01T15:08:34.741Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
