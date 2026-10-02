@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T15:31:44.244Z",
- "portada": 62,
+ "generado": "2026-10-02T16:01:52.393Z",
+ "portada": 57,
  "archivo": 777,
- "esperandoCuerpo": 2,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-02T15:31:44.282Z",
+  "generado": "2026-10-02T16:01:52.432Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-02T13:06:22.640Z"
    },
    {
@@ -33,7 +33,7 @@
     "que": "Tu nota",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-02T15:05:48.244Z"
    },
    {
@@ -83,7 +83,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-02T13:06:22.640Z",
     "segundos": null,
     "notas": [
@@ -116,13 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "1gt8iio",
-      "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
-      "seccion": "Argentina"
-     },
      {
       "id": "1bheb6v",
       "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
@@ -131,6 +126,11 @@
      {
       "id": "uxgtdx",
       "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      },
      {
@@ -147,13 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
@@ -167,6 +162,11 @@
      {
       "id": "jzu6k",
       "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
       "seccion": "Balcarce"
      }
     ]
@@ -192,14 +192,14 @@
    ],
    "cola": [
     {
-     "id": "uxgtdx",
-     "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
+     "id": "xvt4t1",
+     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "xvt4t1",
-     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+     "id": "uxgtdx",
+     "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
      "seccion": "Balcarce",
      "marcada": false
     },

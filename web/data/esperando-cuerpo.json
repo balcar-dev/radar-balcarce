@@ -1,7 +1,71 @@
 {
- "generado": "2026-10-02T15:31:44.244Z",
+ "generado": "2026-10-02T16:01:52.393Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "xz54n",
+   "titulo": "Milei: “Tenemos el desafío de enlazar la coyuntura con el largo plazo”",
+   "copete": "París, 2 octubre (Enviado especial de NA) – El presidente Javier Milei aseguró que su Gobierno tiene “el desafío de enlazar la coyuntura con el largo plazo” en un discurso al recibir recibe el Premio del Foro Económico de París como \"economista más influyente\". “Tenemos el…",
+   "seccion": "Política",
+   "fecha": "2026-10-02T14:42:03.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/milei---tenemos-el-desafio-de-enlazar-la-coyuntura-con-el-largo-plazo-_a6abfc28cf814a2817c83e9cc",
+     "fecha": "2026-10-02T14:42:03.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
+     "fecha": "2026-10-02T14:56:15.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/javier-milei-refuerza-el-modo-campana-si-logramos-la-reeleccion-el-riesgo-pais-se-va-desplomar-n6329385",
+     "fecha": "2026-10-02T15:12:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/javier-milei-premio-paris-foro-economicoo-viernes-2-octubre-2026",
+     "fecha": "2026-10-02T14:58:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/javier-milei-expone-ante-el-foro-economico-de-paris/",
+     "fecha": "2026-10-02T14:54:48.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (tilde, tildes): el copete dice \"mas\" en vez de \"más\": \"El mandatario participo del Foro Economico de Paris este vie\"",
+   "maximo": 4
+  },
+  {
+   "id": "11e02rs",
+   "titulo": "El riesgo país escala hasta los 650 puntos, el valor más alto del año",
+   "copete": "El riesgo país mantiene la tendencia alcista de la primera rueda de octubre y alcanza su valor más alto del año. El indicador elaborado por JP Morgan trepa 14 unidades y se ubica en los 650 puntos básicos , de acuerdo con las pantallas de Rava. De esa forma, supera los 637 que…",
+   "seccion": "Economía",
+   "fecha": "2026-10-02T14:56:17.000Z",
+   "fuentes": [
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-escala-hasta-los-650-puntos-el-valor-mas-alto-del-ano-nid02102026/",
+     "fecha": "2026-10-02T14:56:17.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano_a6abfc939f814a2817c8518c5",
+     "fecha": "2026-10-02T15:27:23.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano-politica-y-economia_1790955480",
+     "fecha": "2026-10-02T15:41:06.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 50 y la fuente no lo dice",
+   "maximo": 3
+  },
   {
    "id": "1h0pc9p",
    "titulo": "Luis Caputo en Argentina Week París: \"El único riesgo en Argentina es perderse la oportunidad de invertir\"",
@@ -38,33 +102,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 4
-  },
-  {
-   "id": "1x9hqyb",
-   "titulo": "Javier Milei: “Cuando terminen las convulsiones internacionales, el riesgo país volverá a bajar”",
-   "copete": "El Presidente fue distinguido por el Foro Económico de París como \"el economista más influyente\". \"Uno tiene que tomar costos, soportar calumnias e injurias que manchan el honor propio y de la familia, pero uno está escribiendo una página de la historia\", sostuvo en su discurso…",
-   "seccion": "Política",
-   "fecha": "2026-10-02T14:56:15.000Z",
-   "fuentes": [
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
-     "fecha": "2026-10-02T14:56:15.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/javier-milei-refuerza-el-modo-campana-si-logramos-la-reeleccion-el-riesgo-pais-se-va-desplomar-n6329385",
-     "fecha": "2026-10-02T15:12:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/politica/javier-milei-premio-paris-foro-economicoo-viernes-2-octubre-2026",
-     "fecha": "2026-10-02T14:58:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (numero): el copete dice 4.000 y la fuente no lo dice",
-   "maximo": 3
   }
  ]
 }
