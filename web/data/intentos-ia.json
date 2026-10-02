@@ -2563,9 +2563,9 @@
   "motivo": "Gemini: Bad Unicode escape in JSON at position 428 (line 1 column 429)"
  },
  "5cxrkh": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T21:01:25.335Z",
-  "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 71 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-02T21:16:53.506Z",
+  "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 30 palabras"
  },
  "5cywqg": {
   "intentos": 1,
@@ -4058,6 +4058,11 @@
   "ultimo": "2026-09-29T16:31:31.137Z",
   "motivo": "con cuerpo"
  },
+ "trd55d": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T21:16:53.506Z",
+  "motivo": "con cuerpo"
+ },
  "tttn9w": {
   "intentos": 1,
   "ultimo": "2026-09-28T23:01:16.877Z",
@@ -4199,9 +4204,9 @@
   "motivo": "con cuerpo"
  },
  "w3769j": {
-  "intentos": 3,
-  "ultimo": "2026-10-02T20:31:31.976Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 19 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 74 palabras"
+  "intentos": 4,
+  "ultimo": "2026-10-02T21:16:53.506Z",
+  "motivo": "título o bajada: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras"
  },
  "w5bkuh": {
   "intentos": 3,

@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T21:02:26.121Z",
+  "generado": "2026-10-02T21:17:17.865Z",
   "notas": [
     {
       "id": "3cr087",
@@ -70,6 +70,96 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "trd55d",
+      "titulo": "El Banco Central lanza la segunda licitación del FGS para créditos hipotecarios",
+      "copete": "El Banco Central convoca a una nueva subasta por 200.000 millones de pesos para financiar préstamos UVA. La medida amplía el acceso a personas que ya poseen propiedades bajo ciertas condiciones.",
+      "cuerpo": "El Banco Central concretará la segunda subasta del Fondo de Garantía de Sustentabilidad por 200.000 millones de pesos el martes 6 de octubre, entre las 11 y las 15. Los recursos se colocarán en plazos fijos UVA para que las entidades financieras otorguen préstamos destinados a la compra, construcción o refacción de viviendas.\n\nEl cambio principal de esta convocatoria radica en que la iniciativa ya no se limita de manera exclusiva a la primera vivienda. Ahora podrán acceder quienes, aun siendo propietarios, no posean el uso del inmueble, como en casos de herencias parciales o donaciones con usufructo ajeno, según detalló el economista Federico González Rouco.\n\nTras la acreditación de los fondos, las entidades dispondrán de 90 días corridos para volcarlos en créditos y evitar penalizaciones. El programa total prevé alcanzar los dos billones de pesos distribuidos en diez licitaciones para dinamizar el mercado hipotecario.",
+      "guion": "El Banco Central lanza la segunda licitación del FGS para créditos hipotecarios",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-el-gobierno-lanza-la-segunda-licitacion-del-fgs-y-amplia-quienes-podran-nid02102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T19:30:41.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T21:16:48.536Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El Banco Central realizará la segunda licitación del FGS por 200.000 millones de pesos el martes 6 de octubre de 11 a 15, según comunicó la autoridad monetaria.",
+        "Los fondos se destinarán a plazos fijos UVA para otorgar créditos hipotecarios.",
+        "La normativa amplía el alcance a quienes posean partes de inmuebles por herencia o propiedades con usufructo ajeno.",
+        "Los bancos tendrán 90 días corridos para aplicar el dinero en préstamos."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó qué entidades participarán de esta segunda subasta ni el volumen final de ofertas que recibirá el sistema."
+      ],
+      "textoRedes": "El Banco Central convoca a la segunda subasta del FGS por 200.000 millones de pesos para créditos hipotecarios y amplía el acceso a personas con inmuebles en usufructo o herencia.",
+      "etiquetas": [
+        "Banco Central",
+        "creditos hipotecarios",
+        "FGS",
+        "vivienda",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-el-gobierno-lanza-la-segunda-licitacion-del-fgs-y-amplia-quienes-podran-nid02102026/",
+          "fecha": "2026-10-02T19:30:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/02/creditos-hipotecarios-cual-es-el-cambio-clave-que-habilitara-a-mas-familias-a-tomar-prestamos-para-vivienda/",
+          "fecha": "2026-10-02T20:13:21.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/02/el-gobierno-realizara-la-segunda-licitacion-de-plazos-fijos-con-fondos-de-la-anses-para-ampliar-la-oferta-de-creditos-hipotecarios/",
+          "fecha": "2026-10-02T20:19:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/creditos-hipotecarios--fijaron-la-fecha-para-la-segunda-licitacion-de-los--200-000-millones-de-la-anses_a6ac010d9f814a2817c907a3e",
+          "fecha": "2026-10-02T21:06:31.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "clxtth",
+          "titulo": "Créditos hipotecarios: ya son 12 los bancos que bajaron la tasa al 7,5% y otros tres la fijaron por debajo del 7%",
+          "fecha": "2026-09-23T02:59:00.000Z",
+          "ruta": "/nota/creditos-hipotecarios-ya-son-12-los-bancos-que-bajaron-la-tasa-al-7-5-clxtth"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-banco-central-lanza-la-segunda-licitacion-del-fgs-para-creditos",
+      "foto": {
+        "archivo": "fotos-notas/trd55d.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -336,7 +426,7 @@
       "fecha": "2026-10-02T18:10:35.354Z",
       "sinFecha": false,
       "visto": "2026-10-02T20:31:20.420Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -473,7 +563,7 @@
       "fecha": "2026-10-02T18:02:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -553,11 +643,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44978-marcelo-panebianco-y-la-llegada-de-leon-xiv-es-una-invitacion-para-vivir-la-propia-fe/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:31:13.649Z",
       "sinFecha": true,
       "visto": "2026-10-02T17:31:13.649Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -613,6 +703,7 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "News Balcarce (FM 91.7)"
@@ -622,7 +713,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 84,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -635,6 +726,13 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
           "aporte": null
         },
         {
@@ -1162,7 +1260,6 @@
       "guion": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
         "Agencia DIB",
         "La Nación",
         "Infobae",
@@ -1172,7 +1269,9 @@
         "El Cronista",
         "iProfesional",
         "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)"
+        "El Día",
+        "Infobrisas (Radio Brisas)",
+        "El Eco de Tandil"
       ],
       "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
       "teniaImagenLaFuente": true,
@@ -1585,15 +1684,17 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 84,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1667,7 +1768,8 @@
       "seccion": "Policiales",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
@@ -2334,74 +2436,6 @@
       "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
     },
     {
-      "id": "1y25nin",
-      "titulo": "Nicolas Pino pide que el agro forme parte de la agenda internacional",
-      "copete": "El titular de la Sociedad Rural participó del evento Argentina Week en París y remarcaron el peso de las exportaciones hacia Europa.",
-      "cuerpo": "El presidente de la Sociedad Rural Argentina, Nicolás Pino, participó de la Argentina Week en París, un encuentro encabezado por el presidente Javier Milei junto a funcionarios y gobernadores para reunir a referentes públicos y privados.\n\nDurante su intervención, el dirigente rural remarcó que el sector productivo debe integrar la agenda exterior del país y sostuvo que la meta es llegar a los 300 millones de toneladas con mejores condiciones para invertir.\n\nEn cuanto al mercado europeo, las ventas agroindustriales hacia la Unión Europea sumaron USD 1.922 millones en el primer cuatrimestre del Acuerdo Interino de Comercio con el Mercosur, lo que representa un 21% más que el promedio de los últimos tres años. En 2025, ese bloque constituyó el segundo destino de las exportaciones sectoriales detrás de China, con más de USD 6.000 millones.",
-      "guion": "Nicolas Pino pide que el agro forme parte de la agenda internacional",
-      "seccion": "Agro",
-      "medios": [
-        "Infocampo",
-        "Noticias Agropecuarias"
-      ],
-      "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/pino-es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T11:59:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Nicolas Pino participó del Argentina Week en París.",
-        "El dirigente reclamó mejores condiciones para la producción.",
-        "Europa fue el segundo destino exportador en 2025."
-      ],
-      "seSabe": [
-        "Nicolás Pino participó del encuentro en París junto a autoridades nacionales.",
-        "Las exportaciones a la Unión Europea crecieron un 21% en el primer cuatrimestre del acuerdo con el Mercosur, según la Secretaría de Agricultura.",
-        "En 2025 la Unión Europea se ubicó como segundo destino detrás de China."
-      ],
-      "textoRedes": "El presidente de la Sociedad Rural, Nicolás Pino, participó del Argentina Week en París y destacó el rol exportador del agro hacia Europa.",
-      "etiquetas": [
-        "Nicolas Pino",
-        "Sociedad Rural Argentina",
-        "Europa",
-        "agroindustria",
-        "exportaciones",
-        "Paris"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Agropecuarias",
-          "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/pino-es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
-          "fecha": "2026-10-02T11:59:10.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre la participación de Nicolás Pino en el Argentina Week y cifras de exportación."
-        },
-        {
-          "medio": "Infocampo",
-          "enlace": "https://www.infocampo.com.ar/es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
-          "fecha": "2026-10-02T18:29:27.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la información general sobre el encuentro en París y la presencia del titular de la SRA."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "nicolas-pino-pide-que-el-agro-forme-parte-de-la-agenda-internacional",
-      "foto": {
-        "archivo": "fotos-notas/1y25nin.jpg",
-        "credito": "Foto: Infocampo"
-      }
-    },
-    {
       "id": "l415ro",
       "titulo": "Marco Morelli lidera la práctica de Moto3 en Japón",
       "copete": "El piloto argentino marcó el mejor registro en el circuito de Motegi. Su compatriota Valentín Perrone finalizó quinto y ambos avanzaron a la Q2.",
@@ -2566,6 +2600,84 @@
       "slug": "el-gobierno-bonaerense-y-las-distribuidoras-apelan-el-freno-judicial"
     },
     {
+      "id": "1wtp555",
+      "titulo": "Colapinto completa las primeras prácticas en Sepang con foco en el ritmo",
+      "copete": "El piloto argentino afrontó la jornada inicial en Malasia a bordo del Alpine. Trabaja en la durabilidad de los neumáticos y arrastra una sanción para el domingo.",
+      "cuerpo": "En la primera tanda de entrenamientos quedó decimonoveno con un registro de 1:43.391 y en la segunda se ubicó vigesimosegundo, lejos de los tiempos de punta que dominó Charles Leclerc con Ferrari en 1:37.528.\n\nLa actividad en la pista malaya continuar\\u00eó el sábado con la tercera y última práctica a la 1:30 de la madrugada en horario argentino, mientras que la sesión de clasificación se pondrá en marcha a las 5:00.",
+      "guion": "Colapinto completa las primeras prácticas en Sepang con foco en el ritmo",
+      "seccion": "Automovilismo",
+      "medios": [
+        "La Voz del Pueblo",
+        "Córdoba Competición"
+      ],
+      "enlace": "https://cordobacompeticion.com/internacionales/f1/viernes-enfocado-en-ritmo-de-carrera-para-colapinto/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T10:44:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T18:13:38.359Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Colapinto completó el viernes de entrenamientos en Sepang con el Alpine número 43.",
+        "El piloto se enfocó en el ritmo de carrera y finalizó en el fondo de las dos tandas.",
+        "Cargará con una penalización de quince puestos en la grilla de partida del domingo.",
+        "La tercera práctica y la clasificación se desarrollarán este sábado desde la madrugada."
+      ],
+      "seSabe": [
+        "Franco Colapinto completó el viernes su primera jornada en el circuito de Sepang a bordo del Alpine número 43.",
+        "Quedó 19 en la primera práctica con un tiempo de 1:43.391 y 22 en la segunda tanda.",
+        "Charles Leclerc logró el mejor tiempo del viernes con 1:37.528 con su Ferrari.",
+        "El piloto argentino sumará una penalización de 15 puestos para la largada del domingo."
+      ],
+      "noConfirmado": [
+        "Todavía no se definieron las posiciones finales que ocupará en la grilla tras la confirmación de la sanción."
+      ],
+      "textoRedes": "Franco Colapinto completó su primera jornada de entrenamientos en el circuito de Sepang con foco en el ritmo de carrera y arrastrará una penalización para el domingo.",
+      "etiquetas": [
+        "Colapinto",
+        "Sepang",
+        "Gran Premio de Bahrein"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Córdoba Competición",
+          "enlace": "https://cordobacompeticion.com/internacionales/f1/viernes-enfocado-en-ritmo-de-carrera-para-colapinto/",
+          "fecha": "2026-10-02T10:44:12.000Z",
+          "oficial": false,
+          "aporte": "Detalles del rendimiento de Colapinto, tiempos de entrenamientos y penalizaciones."
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/f1-colapinto-completo-los-ensayos-en-malasia-enfocado-en-el-ritmo-de-carrera",
+          "fecha": "2026-10-02T13:26:14.000Z",
+          "oficial": false,
+          "aporte": "Información sobre la primera jornada de actividad de Colapinto en Sepang."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "hrexvi",
+          "titulo": "Colapinto encara 15 puestos de penalización y se enfoca en el ritmo",
+          "fecha": "2026-10-02T01:01:42.000Z",
+          "ruta": "/nota/colapinto-encara-15-puestos-de-penalizacion-y-se-enfoca-en-el-ritmo-hrexvi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "colapinto-completa-las-primeras-practicas-en-sepang-con-foco-en-el",
+      "foto": {
+        "archivo": "fotos-notas/1wtp555.jpg",
+        "credito": "Foto: Liauzh / Wikimedia Commons (CC BY-SA 4.0)"
+      }
+    },
+    {
       "id": "gfh5l8",
       "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "copete": "El gobernador Axel Kicillof firmó el decreto que transfiere un terreno de la ex mina Catriel, ubicado en Sierras Bayas, para el desarrollo de un espacio recreativo y cultural.",
@@ -2725,8 +2837,8 @@
         "Infobae",
         "El Cronista",
         "Noticias Argentinas (NA)",
-        "La Capital (Rosario)",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://noticiasargentinas.com/sociedad/alerta-por-tormentas-y-rafagas-en-el-amba--como-estara-el-tiempo-este-fin-de-semana_a6abf86a1f814a2817c7b0e3c",
       "teniaImagenLaFuente": true,
@@ -3097,7 +3209,6 @@
         "El Eco de Tandil",
         "Agencia DIB",
         "La Noticia 1",
-        "Ámbito",
         "Infobae",
         "La Nación",
         "TN (Todo Noticias)",
@@ -3106,6 +3217,7 @@
         "Perfil",
         "Página/12",
         "A24",
+        "Ámbito",
         "Minuto Uno",
         "C5N",
         "Crónica",
@@ -3699,81 +3811,6 @@
       }
     },
     {
-      "id": "1f6rlk",
-      "titulo": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
-      "copete": "La senadora nacional participó el jueves del Coloquio de IDEA en Mar del Plata. Evitó definir si competirá por la presidencia en 2027 y reclamó que las medidas oficiales lleguen con mayor claridad a los hogares.",
-      "cuerpo": "La senadora nacional Patricia Bullrich participó el jueves en el sexagésimo segundo Coloquio de IDEA en Mar del Plata, donde evitó definir si será candidata a la presidencia en 2027 y puso el foco en la continuidad del proyecto oficialista.\n\nDurante su exposición ante representantes empresarios, la legisladora de La Libertad Avanza reclamó mayor velocidad para que los cambios económicos implementados se reflejen en los hogares. Además, marcó diferencias entre las actividades con alto dinamismo, como el agro y la minería, y sectores como la industria, la construcción y el comercio que atraviesan dificultades.\n\nPor otro lado, la senadora advirtió sobre el impacto del costo argentino y la presión impositiva en la competitividad frente a la región. Al respecto, señaló que no es posible reducir todos los gravámenes de manera inmediata y que se requiere el acompañamiento de las provincias y los municipios.",
-      "guion": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
-      "seccion": "Política",
-      "medios": [
-        "El Eco de Tandil",
-        "Perfil",
-        "Infobae",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T17:50:05.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T21:38:14.044Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Participó este jueves en el Coloquio de IDEA en Mar del Plata.",
-        "Evitó definir una candidatura presidencial de cara a 2027.",
-        "Reclamó mayor velocidad para que los cambios lleguen a las familias.",
-        "Advirtió sobre el impacto del costo argentino en la competitividad."
-      ],
-      "seSabe": [
-        "Patricia Bullrich participó en el 62° Coloquio de IDEA en Mar del Plata.",
-        "La senadora evitó confirmar una candidatura para 2027 y priorizó la continuidad del proyecto político.",
-        "Reclamó mayor velocidad para que las medidas económicas se sientan en los hogares.",
-        "Señaló la necesidad de compatibilizar sectores en crecimiento con industrias y comercios caídos.",
-        "Indicó que la reducción impositiva requiere el acompañamiento de provincias y municipios."
-      ],
-      "noConfirmado": [
-        "Aún no está definido cómo se ordenará la oferta electoral ni las alianzas para 2027."
-      ],
-      "textoRedes": "La senadora Patricia Bullrich participó en el Coloquio de IDEA en Mar del Plata, evitó definir una candidatura para 2027 y reclamó mayor velocidad para que los cambios económicos lleguen a los hogares.",
-      "etiquetas": [
-        "Patricia Bullrich",
-        "IDEA",
-        "Mar del Plata",
-        "Economía",
-        "Elecciones 2027"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
-          "fecha": "2026-10-01T17:50:05.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones de Patricia Bullrich en el Coloquio de IDEA sobre la economía, las elecciones de 2027 y el costo argentino."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/politica/bullrich-volvio-a-marcar-diferencias-y-reclamo-que-los-cambios-economicos-lleguen-a-las-familias",
-          "fecha": "2026-10-01T20:13:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la participación de Patricia Bullrich en el encuentro empresarial en Mar del Plata."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "patricia-bullrich-pide-mayor-velocidad-para-los-cambios-economicos-en",
-      "foto": {
-        "archivo": "fotos-notas/1f6rlk.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
       "copete": "El secretario de Gobierno, Ricardo Stoppani, repasó la labor local en seguridad. Anunció la ampliación del sistema de vigilancia y el aporte a las fuerzas.",
@@ -3924,109 +3961,6 @@
       "foto": {
         "archivo": "fotos-notas/swyxjn.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "34t457",
-      "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
-      "copete": "El indicador financiero sube un 4,3% y alcanza las 633 unidades. Las acciones argentinas registran pérdidas de hasta el 6% en el mercado externo.",
-      "cuerpo": "El indicador de riesgo país supera el jueves 1 de octubre los 630 puntos básicos y se ubica en 633 unidades, lo que representa un incremento del 4,3% frente a la jornada anterior. En paralelo, las acciones argentinas que operan en Wall Street registran caídas de hasta el 6%, mientras que los bonos en dólares recortan hasta un 1,5%.\n\nLas mayores bajas en el mercado bursátil corresponden a los papeles de Telecom, Corporación América, Banco Supervielle y Banco Galicia. En el plano cambiario, el dólar oficial trepa 5 pesos y se vende a 1545 pesos en las pantallas del Banco Nación, al tiempo que los dólares financieros operan con subas de hasta 0,5%.\n\nA principios de semana, el índice financiero había tocado los 642 puntos, el nivel más alto registrado en lo que va del año, según se informó anteriormente.",
-      "guion": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "TN (Todo Noticias)",
-        "Noticias Argentinas (NA)",
-        "La Tecla",
-        "La Verdad",
-        "El Día",
-        "A24",
-        "Radio Mitre",
-        "Crónica",
-        "Clarín",
-        "Perfil",
-        "El Destape"
-      ],
-      "enlace": "https://tn.com.ar/economia/2026/10/01/el-riesgo-pais-vuelve-a-superar-los-630-puntos-mientras-las-acciones-argentinas-bajan-hasta-6-en-wall-street/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T16:53:08.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T18:31:03.487Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El riesgo país trepa a 633 puntos básicos tras un incremento del 4,3%.",
-        "Las acciones argentinas en Wall Street registran caídas de hasta el 6%.",
-        "El dólar oficial sube 5 pesos y cotiza a 1545 pesos en el Banco Nación."
-      ],
-      "seSabe": [
-        "El índice elaborado por JP Morgan se ubica en 633 puntos básicos.",
-        "Las acciones de Telecom, Corporación América, Banco Supervielle y Banco Galicia presentan las mayores bajas.",
-        "El dólar oficial se vende a 1545 pesos."
-      ],
-      "textoRedes": "El riesgo país supera los 630 puntos básicos y se ubica en 633 unidades tras un incremento del 4,3%. En paralelo, las acciones argentinas en Wall Street caen hasta un 6% y el dólar oficial cotiza a 1545 pesos en el Banco Nación.",
-      "etiquetas": [
-        "riesgo pais",
-        "wall street",
-        "acciones argentinas",
-        "dolar oficial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/01/el-riesgo-pais-vuelve-a-superar-los-630-puntos-mientras-las-acciones-argentinas-bajan-hasta-6-en-wall-street/",
-          "fecha": "2026-10-01T16:53:08.000Z",
-          "oficial": false,
-          "aporte": "Detalló los porcentajes de caída de las acciones en Wall Street y las cotizaciones de los dólares financieros y oficial."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/dolar/el-dolar-oficial-muestra-una-leve-suba-y-vuelve-a-su-valor-mas-alto-del-ano-nid01102026/",
-          "fecha": "2026-10-01T17:45:30.000Z",
-          "oficial": false,
-          "aporte": "Informó que el indicador no registraba estos niveles desde hace seis meses y detalló la suba de 26 unidades del JP Morgan."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-vuelve-a-superar-los-630-puntos-y-las-acciones-argentinas-caen-hasta-6-en-wall-street-politica-y-economia_1790878200",
-          "fecha": "2026-10-01T18:13:55.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la suba del dólar oficial y la baja de los bonos en dólares."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1k34j05",
-          "titulo": "El riesgo país supera los 630 puntos y marca el récord de 2026",
-          "fecha": "2026-09-28T15:49:00.000Z",
-          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-marca-el-record-de-2026-1k34j05"
-        },
-        {
-          "id": "1b57l0z",
-          "titulo": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
-          "fecha": "2026-09-27T03:01:00.000Z",
-          "ruta": "/nota/el-riesgo-pais-baja-a-604-puntos-tras-el-repunte-de-los-bonos-1b57l0z"
-        },
-        {
-          "id": "5ddc24",
-          "titulo": "El riesgo país llega a 642 puntos y marca un récord anual",
-          "fecha": "2026-09-25T21:00:10.000Z",
-          "ruta": "/nota/el-riesgo-pais-llega-a-642-puntos-y-marca-un-record-anual-5ddc24"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall",
-      "foto": {
-        "archivo": "fotos-notas/34t457.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -4915,24 +4849,18 @@
         "Infobae",
         "Ámbito",
         "Perfil",
-        "TN (Todo Noticias)",
         "El Cronista",
         "iProfesional",
         "C5N",
         "Crónica",
-        "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
         "La Nueva",
         "La Tecla",
-        "La Voz del Pueblo",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
-        "Agroempresario",
         "Clarín",
-        "El Economista",
-        "A24",
         "Radio Mitre"
       ],
       "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
@@ -5011,8 +4939,8 @@
   ],
   "secciones": [
     "Deportes",
-    "Fútbol",
     "Economía",
+    "Fútbol",
     "Argentina",
     "Balcarce",
     "Cultura y agenda",
@@ -5040,9 +4968,9 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
-      "sensacion": 10,
-      "humedad": 59,
+      "temp": 12,
+      "sensacion": 9,
+      "humedad": 61,
       "viento": 14,
       "rumbo": "N",
       "cielo": "Nublado",
@@ -5395,10 +5323,16 @@
   },
   "pendientes": [
     {
-      "id": "1148srf",
+      "id": "1w06xhx",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
+      "motivo": "necesita ojo humano: \"lesionada\""
+    },
+    {
+      "id": "1c7unm1",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1uabccx",
@@ -5455,16 +5389,16 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "s1fpwb",
-      "titulo": "Se designó al juez suplente que intervendrá en los juicios…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"imputado\""
-    },
-    {
       "id": "18cqk35",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niña\""
+    },
+    {
+      "id": "s1fpwb",
+      "titulo": "Se designó al juez suplente que intervendrá en los juicios…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"imputado\""
     },
     {
       "id": "1ts5hux",
@@ -5477,6 +5411,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"nena\""
+    },
+    {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "1yvhtzv",
@@ -5497,11 +5437,11 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "1c8gy5f",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
+      "id": "imkij7",
+      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 6
 }
