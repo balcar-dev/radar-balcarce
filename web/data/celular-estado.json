@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T14:09:15.077Z",
- "portada": 58,
- "archivo": 774,
+ "generado": "2026-10-02T14:32:22.207Z",
+ "portada": 57,
+ "archivo": 775,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T14:09:15.122Z",
+  "generado": "2026-10-02T14:32:22.249Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -129,14 +129,14 @@
       "seccion": "Argentina"
      },
      {
-      "id": "nlcpnp",
-      "titulo": "OSeBal marca el primer vencimiento de la factura de septiembre",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "1bheb6v",
       "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
       "seccion": "Deportes"
+     },
+     {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -147,8 +147,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
@@ -202,12 +207,6 @@
     {
      "id": "164o14u",
      "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "nlcpnp",
-     "titulo": "OSeBal marca el primer vencimiento de la factura de septiembre",
      "seccion": "Balcarce",
      "marcada": false
     }
