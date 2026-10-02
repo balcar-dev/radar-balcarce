@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T16:32:37.894Z",
- "portada": 62,
- "archivo": 783,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-02T16:51:54.471Z",
+ "portada": 63,
+ "archivo": 785,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-02T16:32:37.941Z",
+  "generado": "2026-10-02T16:51:54.520Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,13 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
-     {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
-     },
      {
       "id": "uxgtdx",
       "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
@@ -134,8 +129,13 @@
       "seccion": "Economía"
      },
      {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "sty1jd",
+      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
       "seccion": "Balcarce"
      }
     ]
@@ -147,13 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
-     {
-      "id": "sty1jd",
-      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
@@ -165,8 +160,8 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "id": "g34tir",
+      "titulo": "Balcarce reúne a la región en el primer encuentro por la comunidad sorda",
       "seccion": "Balcarce"
      }
     ]
@@ -188,15 +183,14 @@
      "id": "164o14u",
      "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
      "cuando": "2026-10-02T15:06:32.699Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "xvt4t1",
      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
+     "cuando": "2026-10-02T16:45:22.855Z"
+    }
+   ],
+   "cola": [
     {
      "id": "uxgtdx",
      "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
@@ -216,8 +210,8 @@
      "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-02T16:36:32.699Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-02T18:15:22.855Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

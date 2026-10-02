@@ -3644,16 +3644,16 @@
   "intentos": 3
  },
  "6sldfi": {
-  "archivo": "fotos-notas/6sldfi.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Justicia suspende las elecciones en la UTA y pasa los comicios para diciembre",
   "enlace": "https://www.lanacion.com.ar/politica/la-justicia-postergo-la-eleccion-de-la-uta-el-gremio-de-los-colectiveros-tras-detectar-nid30092026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/roberto-fernandez-sindicalista-titular-de-de-la-DEQYL54LB5A4TLH5IA2JG3WWE4.JPG?auth=4ff4f4b0ac66bd31fe5e12ed3088ca736bcb2a007d3fab9d9fdb4e8f0fe5bbd7&width=1200&height=800&quality=70&smart=true",
   "razon": "Es la única foto de un protagonista del conflicto sindical (Roberto Fernández) con buena nitidez y encuadre que no tiene marca de agua ni menores.",
-  "cuando": "2026-09-30T23:31:50.592Z"
+  "cuando": "2026-09-30T23:31:50.592Z",
+  "intentado": true,
+  "borrada": true
  },
  "idl5dq": {
   "intentado": true,
@@ -5230,5 +5230,26 @@
   "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/YD6O3PBLZNFXFGFTUGE4S7SSP4.jpg?smart=true&auth=06a5b6f00ec6e0af612daa602361393702608e02e6b6946a6d6526041d36e714&width=1200&height=630",
   "razon": "Es la única foto libre de marcas y menores que ilustra adecuadamente el contexto arquitectónico del Congreso.",
   "cuando": "2026-10-02T16:32:17.971Z"
+ },
+ "jeiawq": {
+  "archivo": "fotos-notas/jeiawq.jpg",
+  "medio": "Infobrisas (Radio Brisas)",
+  "credito": "Foto: Infobrisas (Radio Brisas)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
+  "enlace": "https://www.infobrisas.com/noticias/2026/10/02/110031-ian-sielecki-destaco-el-magnetismo-mundial-de-milei-durante-la-argentina-week-en-paris",
+  "imagenOriginal": "https://infobrisas-s3.cdn.net.ar/s3i233/2026/10/infobrisas/images/02/79/65/2796562_ab976c3b44412b194214520951c3cda3e98c9ba97d1ad89461538b61127884ce/lg.webp?_v=v3-129",
+  "razon": "La foto C muestra claramente a los protagonistas del evento institucional sin marcas de agua agregadas por el medio y sin menores de edad, cumpliendo con todos los requisitos.",
+  "cuando": "2026-10-02T16:49:42.258Z"
+ },
+ "3ugd5n": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Maratón Nacional de Lectura moviliza a millones de chicos",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-02T16:49:42.258Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }
