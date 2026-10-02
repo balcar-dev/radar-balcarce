@@ -1,44 +1,22 @@
 {
- "generado": "2026-10-02T11:33:31.037Z",
+ "generado": "2026-10-02T12:03:14.011Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1bheb6v",
-   "titulo": "Mateo Reimondi fue convocado para jugar un campeonato argentino",
-   "copete": "El joven jugador balcarceño de hockey, Mateo Raimondi, fue convocado para representar a la selección de la Asociación Amateur Marplatense de ese deporte en el Campeonato Argentino de Selecciones Mayores Ascenso “B”.",
+   "id": "1ugi3md",
+   "titulo": "Top Serrano Balcarce clasificó seis equipos a Play Off en Liga Provincial",
+   "copete": "En Olavarría, se disputó la última fecha clasificatoria de la undécima edición de la Liga por Equipos FeBATeM, donde participó la Asociacion Balcarceña de Tenis de Mesa Club Top Serrano, que logró clasificar a los seis equipos presentados. El",
    "seccion": "Deportes",
-   "fecha": "2026-10-02T11:21:07.000Z",
+   "fecha": "2026-10-02T11:59:58.000Z",
    "fuentes": [
     {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/mateo-reimondi-fue-convocado-para-jugar-un-campeonato-argentino",
-     "fecha": "2026-10-02T11:21:07.000Z"
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/top-serrano-balcarce-clasifico-seis-equipos-a-play-off-en-liga-provincial-512",
+     "fecha": "2026-10-02T11:59:58.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 15 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 66 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "or0m21",
-   "titulo": "Franco Colapinto sufrió en el GP de Bahréin: fue sancionado y terminó último en la segunda práctica",
-   "copete": "Franco Colapinto cerró una jornada complicada en el Gran Premio de Bahréin de Fórmula 1 , disputado excepcionalmente en el Circuito Internacional de Sepang, Malasia . El argentino recibió una penalización durante la primera práctica y finalizó en la última posición en la segunda…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-02T09:25:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/deportes/2026/10/02/franco-colapinto-sufrio-en-el-gp-de-bahrein-fue-sancionado-y-termino-ultimo-en-la-segunda-practica/",
-     "fecha": "2026-10-02T09:25:00.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/deportes/franco-colapinto-finalizo-ultimo-la-segunda-practica-del-gran-premio-bahrein-malasia-n922419",
-     "fecha": "2026-10-02T09:30:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (sancion, ultimo, penalizacion, sesion): va con las tildes y la eñe",
+   "motivo": "cuerpo: 3 problemas (fecha, promesa): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 112 palabras",
    "maximo": 3
   },
   {

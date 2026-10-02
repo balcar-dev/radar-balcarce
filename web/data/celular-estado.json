@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T11:33:31.037Z",
+ "generado": "2026-10-02T12:03:14.011Z",
  "portada": 46,
  "archivo": 758,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T11:33:31.064Z",
+  "generado": "2026-10-02T12:03:14.046Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,12 +85,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 40,
+    "segundos": 53,
     "notas": [
      {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
      },
      {
       "id": "1uwpmsg",
@@ -133,7 +138,14 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1bheb6v",
+     "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,

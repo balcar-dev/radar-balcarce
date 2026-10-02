@@ -4725,13 +4725,16 @@
   "fuentes": 2
  },
  "1ojeuju": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1ojeuju.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Tribunal de Disciplina suspende a dos futbolistas por los incidentes en la Supercopa",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-02T02:02:02.572Z",
-  "intentos": 1,
-  "fuentes": 7
+  "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/supercopa-internacional-estudiantes-rosario-central-primera-decision-tribunal-de-disciplina-id763891.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/01/992130/estudiantes-vs-central_1440x810.webp?v=1",
+  "razon": "Es la única foto que ilustra claramente el incidente en los pasillos sin tener marcas de agua agregadas ni menores reconocibles.",
+  "cuando": "2026-10-02T12:02:20.955Z"
  },
  "17xncu1": {
   "archivo": "fotos-notas/17xncu1.jpg",
@@ -4812,16 +4815,16 @@
   "cuando": "2026-10-02T09:31:30.880Z"
  },
  "1qqb00k": {
-  "archivo": "fotos-notas/1qqb00k.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto recibe una penalización de 15 puestos",
   "enlace": "https://www.infobae.com/deportes/2026/10/02/la-razon-por-la-que-franco-colapinto-recibio-otra-sancion-y-largara-desde-el-fondo-en-el-gp-de-bahrein-en-malasia/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/MD564HJ4ZZHJZBAZ6XP4OIDMGE.jpg?auth=af59867fb727d5cbe3c5c94c98c72473d7e09c43e3b36d925f66bf93c7505af2&smart=true&width=1200&height=630&quality=85",
   "razon": "Es la foto más limpia, con excelente nitidez y encuadre del piloto, sin marcas añadidas por el medio ni menores.",
-  "cuando": "2026-10-02T10:31:38.996Z"
+  "cuando": "2026-10-02T10:31:38.996Z",
+  "intentado": true,
+  "borrada": true
  },
  "oa2ef": {
   "archivo": "fotos-notas/oa2ef.jpg",
@@ -4872,15 +4875,36 @@
   "cuando": "2026-10-02T11:17:58.278Z"
  },
  "2vlrbt": {
-  "archivo": "fotos-notas/2vlrbt.jpg",
   "medio": "QZ Noticias (Mar del Plata)",
-  "credito": "Foto: QZ Noticias (Mar del Plata)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Lionel Scaloni recibe a glorias del Turismo Carretera en el predio de la AFA",
   "enlace": "https://www.qznoticias.com/deportes/scaloni-fanatico-del-tc-desde-chico-se-reencontro-con-uno-de-sus-idolos",
   "imagenOriginal": "https://n2.cdnartic.ar/jxcEqn6dDTPLgmsctBVpAizQtiQ=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://qznoticiascdn.eleco.com.ar/media/2026/10/scaloni.webp",
   "razon": "La foto B muestra claramente el encuentro de Lionel Scaloni con las figuras del Turismo Carretera en el predio, sin marcas de agua ni menores.",
-  "cuando": "2026-10-02T11:32:58.387Z"
+  "cuando": "2026-10-02T11:32:58.387Z",
+  "intentado": true,
+  "borrada": true
+ },
+ "1bheb6v": {
+  "archivo": "fotos-notas/1bheb6v.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+  "enlace": "https://www.radiogabal.com.ar/index.php/deportes/mateo-reimondi-fue-convocado-para-jugar-un-campeonato-argentino",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/WhatsApp%20Image%202026-10-01%20at%2010.48.44.jpeg",
+  "razon": "Es la única opción disponible, posee buena nitidez y encuadre del deportista principal sin marcas de agua ni menores reconocibles en primer plano.",
+  "cuando": "2026-10-02T12:02:20.955Z"
+ },
+ "106luxe": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Sebastián Pareja rechaza la reelección de jefes comunales",
+  "razon": "Groq también falló: HTTP 413 (se probó una foto libre de \"Sebastián Pareja\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-02T12:02:20.955Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }
