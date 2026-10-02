@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T01:31:36.664Z",
- "portada": 62,
- "archivo": 747,
+ "generado": "2026-10-02T02:02:20.314Z",
+ "portada": 61,
+ "archivo": 750,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-02T01:31:36.703Z",
+  "generado": "2026-10-02T02:02:20.353Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -200,7 +200,14 @@
      "cuando": "2026-10-01T18:36:31.248Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1j4lf17",
+     "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
+     "seccion": "Automovilismo",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,
