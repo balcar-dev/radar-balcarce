@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T15:03:39.512Z",
+  "generado": "2026-10-02T15:31:44.244Z",
   "notas": [
     {
       "id": "uxgtdx",
@@ -535,7 +535,7 @@
       "fecha": "2026-10-02T12:28:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 94,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -603,7 +603,7 @@
       "fecha": "2026-10-02T12:23:46.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -693,85 +693,6 @@
       }
     },
     {
-      "id": "1b3j5uw",
-      "titulo": "Marcelo Mindlin anticipa proyectos industriales con gas de Vaca Muerta",
-      "copete": "El presidente de Pampa Energía destacó el interés empresario en Francia y señaló planes para fabricar fertilizantes y abastecer centros de datos con gas local.",
-      "cuerpo": "Marcelo Mindlin, presidente de Pampa Energía, aseguró que el país atrae inversiones energéticas y señaló que analizan utilizar gas para proveer electricidad a un centro de procesamiento de datos de inteligencia artificial. Durante su participación en la Argentina Week en París, el directivo indicó que el sector busca agregar valor a los recursos de Vaca Muerta mediante la producción industrial de fertilizantes orientados al mercado agropecuario.\n\nPor otra parte, mencionó que empresas como Pluspetrol ya confirmaron desembolsos por 12.500 millones de dólares. \"Yo prefiero invertir hoy y no esperar a mañana\", expresó el empresario al evaluar el escenario económico actual.",
-      "guion": "Marcelo Mindlin anticipa proyectos industriales con gas de Vaca Muerta",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "El Cronista",
-        "La Nueva"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/02/marcelo-mindlin-destaco-el-interes-por-argentina-en-francia-yo-prefiero-invertir-hoy-no-esperar-a-manana/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T12:06:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T15:01:29.421Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Mindlin destacó el interés empresario durante la Argentina Week en París.",
-        "Analizan usar gas de Vaca Muerta para centros de datos de inteligencia artificial.",
-        "Proyectan una planta para fabricar fertilizantes destinados al agro.",
-        "Mencionó la inversión de Pluspetrol por 12.500 millones de dólares."
-      ],
-      "seSabe": [
-        "Marcelo Mindlin encabeza Pampa Energía.",
-        "El directivo participó en la Argentina Week realizada en París.",
-        "La empresa evalúa un proyecto para utilizar gas en tecnología de inteligencia artificial."
-      ],
-      "noConfirmado": [
-        "Todavía no se detallaron los plazos de ejecución para el centro de datos ni para la planta de fertilizantes."
-      ],
-      "textoRedes": "Marcelo Mindlin destacó el interés inversor en Francia y adelantó que Pampa Energía analiza usar gas para centros de datos de inteligencia artificial y fertilizantes.",
-      "etiquetas": [
-        "Mindlin",
-        "Pampa Energia",
-        "Vaca Muerta",
-        "Inversiones",
-        "Francia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/02/marcelo-mindlin-destaco-el-interes-por-argentina-en-francia-yo-prefiero-invertir-hoy-no-esperar-a-manana/",
-          "fecha": "2026-10-02T12:06:23.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre los proyectos de fertilizantes y centros de datos de inteligencia artificial."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/negocios/la-nueva-apuesta-de-pampa-segun-mindlin-transformar-el-gas-de-vaca-muerta-en-energia-para-la-ia/",
-          "fecha": "2026-10-02T14:35:55.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la participación del empresario en la Argentina Week en París."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-2-11-6-0-de-la-planta-de-urea-a-la-ia-pampa-energia-destaco-nuevas-oportunidades-para-el-gas-de-vaca-muerta",
-          "fecha": "2026-10-02T14:19:28.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las declaraciones de Mindlin acerca del potencial energético de Vaca Muerta."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "marcelo-mindlin-anticipa-proyectos-industriales-con-gas-de-vaca-muerta",
-      "foto": {
-        "archivo": "fotos-notas/1b3j5uw.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "h1ggzr",
       "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
       "copete": "La investigadora dialogó con ediles en un encuentro informal tras ser rechazada su convocatoria oficial. Detalló los alcances del estudio sobre plaguicidas y confirmó que enfrenta un pedido de exoneración.",
@@ -786,7 +707,7 @@
       "fecha": "2026-10-02T12:05:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -865,7 +786,7 @@
       "fecha": "2026-10-02T12:03:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -976,87 +897,74 @@
       "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
     },
     {
-      "id": "ig6fdw",
-      "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-      "copete": "El Ejecutivo nacional presentó en Francia un mecanismo para otorgar la ciudadanía a extranjeros que realicen inversiones. Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
-      "cuerpo": "El Gobierno nacional lanzó en París el Programa de Ciudadanía por Inversión, que comenzará a recibir solicitudes en el último trimestre de 2026. La presentación estuvo a cargo del jefe de Gabinete, Diego Santilli, y el ministro de Economía, Luis Caputo, durante la semana argentina desarrollada en la capital francesa.\n\nLa iniciativa contempla dos opciones para el solicitante principal: un aporte directo de 350.000 dólares al Tesoro Nacional o la suscripción de un título público por 800.000 dólares. El esquema también permite incluir al cónyuge y a los hijos mediante pagos adicionales de 100.000 dólares para mayores de edad y de 25.000 dólares para menores.\n\nLa evaluación de los postulantes quedará a cargo de la Agencia de Programas de Ciudadanía por Inversión. El procedimiento incluirá la intervención de la Secretaría de Inteligencia del Estado, la Unidad de Información Financiera y las carteras de Seguridad y del Interior para verificar antecedentes y el origen de los fondos.",
-      "guion": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-      "seccion": "Argentina",
+      "id": "1201eez",
+      "titulo": "La Unión Industrial de Bahía Blanca celebra su trigésimo cuarto aniversario",
+      "copete": "La Unión Industrial de Bahía Blanca conmemoró 34 años de trayectoria con una jornada que reunió a referentes productivos, legisladores y mandatarios comunales.",
+      "cuerpo": "La Unión Industrial de Bahía Blanca cumplió 34 años y celebró su aniversario con un encuentro en su sede institucional que reunió a referentes del sector productivo, autoridades municipales, legisladores provinciales y representantes del ámbito académico.\n\nEl presidente de la entidad gremial empresaria, Gustavo Elías, destacó la articulación alcanzada con los distintos distritos de la región durante la celebración, de acuerdo con la información difundida. Del evento participaron intendentes bonaerenses, legisladores provinciales, magistrados judiciales y concejales locales.\n\nPreviamente al festejo, la institución sumó a cinco nuevos municipios a su plan de regionalización mediante la firma de convenios orientados a fortalecer el desarrollo productivo conjunto.",
+      "guion": "La Unión Industrial de Bahía Blanca celebra su trigésimo cuarto aniversario",
+      "seccion": "Agro",
       "medios": [
-        "El Eco de Tandil",
-        "La Nación",
-        "Infobae",
-        "Clarín",
-        "Ámbito",
-        "El Cronista",
-        "iProfesional",
-        "C5N",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Tecla",
-        "Infobrisas (Radio Brisas)"
+        "LU9 Mar del Plata",
+        "Ecos Diarios (Necochea)",
+        "La Nueva",
+        "La Brújula 24"
       ],
-      "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
+      "enlace": "https://www.labrujula24.com/notas/2026/10/02/los-34-anos-de-la-uibb-coronamos-la-celebracion-con-una-articulacion-sonada-de-toda-la-region-y-bahia-n523425/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T11:23:44.000Z",
+      "fecha": "2026-10-02T11:09:50.000Z",
       "sinFecha": false,
-      "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 73,
+      "visto": "2026-10-02T15:31:22.023Z",
+      "relevancia": 65,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Ejecutivo nacional presentó el programa en París.",
-        "Las solicitudes se recibirán desde el cuarto trimestre.",
-        "El solicitante principal debe aportar 350.000 dólares o comprar títulos por 800.000 dólares.",
-        "Participan la SIDE, la UIF y los ministerios de Seguridad y del Interior."
+        "La UIBB cumplió 34 años de trayectoria.",
+        "El festejo se realizó en la sede de la entidad.",
+        "Participaron intendentes y legisladores de la región."
       ],
-      "textoRedes": "El Gobierno nacional lanzó en París un programa de ciudadanía por inversión para extranjeros, con aportes al Tesoro y títulos públicos. Las solicitudes se recibirán desde el último trimestre.",
+      "seSabe": [
+        "La Unión Industrial de Bahía Blanca cumplió 34 años.",
+        "El presidente de la entidad es Gustavo Elías.",
+        "Varios municipios se sumaron al plan de regionalización de la UIBB."
+      ],
+      "textoRedes": "La Unión Industrial de Bahía Blanca cumplió 34 años y lo celebró con una jornada que reunió a referentes productivos y mandatarios comunales.",
       "etiquetas": [
-        "Gobierno nacional",
-        "Ciudadanía",
-        "Inversión",
-        "Economía",
-        "París"
+        "Unión Industrial de Bahía Blanca",
+        "aniversario",
+        "industria",
+        "regionalización"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
-          "fecha": "2026-10-02T11:23:44.000Z",
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/02/los-34-anos-de-la-uibb-coronamos-la-celebracion-con-una-articulacion-sonada-de-toda-la-region-y-bahia-n523425/",
+          "fecha": "2026-10-02T11:09:50.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Detalló las declaraciones del presidente de la UIBB y la lista de asistentes al aniversario."
         },
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/02/el-gobierno-lanzo-en-paris-un-programa-para-que-extranjeros-puedan-obtener-ciudadania-y-pasaporte-mediante-inversiones-cuanto-cuesta/",
-          "fecha": "2026-10-02T12:20:29.000Z",
+          "medio": "LU9 Mar del Plata",
+          "enlace": "https://www.lu9mardelplata.com.ar/la-union-industrial-de-bahia-blanca-celebro-34-anos-con-foco-en-la-integracion-regional",
+          "fecha": "2026-10-02T15:11:01.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Reprodujo el discurso institucional del titular de la entidad industrial."
         },
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/lanzan-un-programa-de-ciudadania-por-inversion-cuanto-habra-que-aportar-y-quienes-podran-acceder-nid02102026/",
-          "fecha": "2026-10-02T12:21:43.000Z",
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/uibb-celebro-sus-34-anos-con-foco-en-la-integracion-regional",
+          "fecha": "2026-10-02T15:04:03.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Informó sobre la presencia de referentes productivos y municipales en el festejo."
         },
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/el-gobierno-otorgara-la-ciudadania-argentina-a-los-extranjeros-que-inviertan-en-el-pais-nid02102026/",
-          "fecha": "2026-10-02T12:12:05.000Z",
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-1-21-52-0-los-34-anos-de-la-uibb-coronamos-la-celebracion-con-una-articulacion-sonada-de-toda-la-region-y-bahia-blanca-senalo-gustavo-elias",
+          "fecha": "2026-10-02T15:21:01.000Z",
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/el-gobierno-anuncio-la-puesta-en-marcha-del-programa-de-ciudadania-por-inversion-de-argentina/",
-          "fecha": "2026-10-02T11:27:26.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Transmitió conceptos centrales del aniversario de la cámara empresaria."
         }
       ],
       "verificacion": {
@@ -1064,86 +972,77 @@
         "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-gobierno-lanza-un-programa-de-ciudadania-por-inversion-en-el",
+      "slug": "la-union-industrial-de-bahia-blanca-celebra-su-trigesimo-cuarto",
       "foto": {
-        "archivo": "fotos-notas/ig6fdw.jpg",
-        "credito": "Foto: Infobae"
+        "archivo": "fotos-notas/1201eez.jpg",
+        "credito": "Foto: LU9 Mar del Plata"
       }
     },
     {
-      "id": "gfh5l8",
-      "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
-      "copete": "El gobernador Axel Kicillof firmó el decreto que transfiere un terreno de la ex mina Catriel, ubicado en Sierras Bayas, para el desarrollo de un espacio recreativo y cultural.",
-      "cuerpo": "El gobierno bonaerense oficializó la transferencia de un inmueble fiscal ubicado en Sierras Bayas, en el partido de Olavarría, con el fin de crear un nuevo parque urbano. La medida quedó establecida mediante el Decreto 1534/2026, firmado por el gobernador Axel Kicillof y publicado este viernes en el Boletín Oficial.\n\nEl terreno formaba parte de la mina de arcilla Catriel, una zona de aprovechamiento minero que operaba desde 1968. La Subsecretaría de Minería provincial declaró la caducidad de la concesión y anuló el registro del yacimiento al constatar que se encontraba inactivo y sin posibilidades de explotación futura.\n\nLa solicitud había sido presentada por la intendencia local para impulsar un proyecto turístico, deportivo y cultural. De acuerdo con la normativa oficial, la administración municipal se hará cargo de las tareas de saneamiento ambiental y acondicionamiento del lugar.",
-      "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
-      "seccion": "Argentina",
+      "id": "2esdp2",
+      "titulo": "El Banco Provincia paga los sueldos del sector de juegos de azar",
+      "copete": "El Ejecutivo bonaerense promulgó la normativa que obliga a abonar los haberes de trabajadores de bingos, casinos y apuestas online a través de la entidad pública.",
+      "cuerpo": "El Gobierno de la provincia de Buenos Aires promulgó la Ley 15.627, que establece la obligación para las empresas de bingos, casinos y plataformas de apuestas online de abonar los salarios de sus empleados mediante el Banco de la Provincia de Buenos Aires. La medida rige desde su publicación en el Boletín Oficial y abarca tanto a empleados nuevos como a los que ya se desempeñan en el sector.\n\nLa iniciativa legislativa fue impulsada por el diputado Rubén Eslaiman y recibió la aprobación definitiva en el Senado el pasado 15 de septiembre. La normativa modifica las leyes que regulan el funcionamiento de los casinos, los juegos de azar y el juego online en territorio bonaerense.\n\nLos trabajadores involucrados tienen la alternativa de solicitar de manera expresa percibir sus haberes en otra entidad bancaria si así lo prefieren. Durante el debate legislativo, el autor del proyecto sostuvo que la medida busca consolidar a la institución financiera estatal.",
+      "guion": "El Banco Provincia paga los sueldos del sector de juegos de azar",
+      "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
         "Agencia DIB",
         "Ámbito"
       ],
-      "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
+      "enlace": "https://www.ambito.com/ambito-nacional/los-trabajadores-bingos-casinos-y-juego-online-deberan-cobrar-sus-sueldos-el-banco-provincia-n6329229",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T10:38:00.000Z",
+      "fecha": "2026-10-02T10:37:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 60,
+      "relevancia": 46,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Kicillof firmó el decreto de cesión del predio minero.",
-        "El terreno pertenecía a la ex mina de arcilla Catriel.",
-        "Olavarría destinará el espacio a un parque recreativo y cultural.",
-        "El municipio asumirá los trabajos de remediación ambiental."
+        "El Ejecutivo promulgó la Ley 15.627 sobre haberes del sector.",
+        "Abarca a trabajadores de bingos, casinos y apuestas en línea.",
+        "Los empleados pueden elegir otro banco mediante una solicitud expresa."
       ],
       "seSabe": [
-        "El gobernador Axel Kicillof firmó el Decreto 1534/2026 para desafectar el terreno.",
-        "El predio funcionaba como la mina de arcilla Catriel en Sierras Bayas.",
-        "La Subsecretaría de Minería declaró la caducidad de la concesión por inactividad.",
-        "La Municipalidad de Olavarría solicitó el espacio para un proyecto turístico y recreativo."
+        "El Poder Ejecutivo bonaerense promulgó la Ley 15.627.",
+        "La norma obliga a pagar sueldos de bingos, casinos y juego online a través del Banco Provincia.",
+        "El Senado aprobó la iniciativa el 15 de septiembre tras la autoría del diputado Rubén Eslaiman.",
+        "Los trabajadores pueden solicitar de forma expresa cobrar en otra entidad bancaria."
       ],
-      "textoRedes": "El gobierno bonaerense cedió un terreno de la ex mina Catriel, en Sierras Bayas, para que el municipio de Olavarría construya un parque urbano recreativo, cultural y deportivo. El predio carecía de interés minero y el municipio realizará la remediación ambiental.",
+      "textoRedes": "El Ejecutivo bonaerense promulgó la ley que obliga a pagar los sueldos de los trabajadores de bingos, casinos y apuestas online a través del Banco Provincia.",
       "etiquetas": [
-        "Olavarría",
-        "Sierras Bayas",
-        "Axel Kicillof",
-        "parque urbano",
-        "minería"
+        "Banco Provincia",
+        "juegos de azar",
+        "Casinos",
+        "juego online",
+        "legislación bonaerense"
       ],
       "fuentesConsultadas": [
         {
           "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
-          "fecha": "2026-10-02T10:38:00.000Z",
+          "enlace": "https://www.ambito.com/ambito-nacional/los-trabajadores-bingos-casinos-y-juego-online-deberan-cobrar-sus-sueldos-el-banco-provincia-n6329229",
+          "fecha": "2026-10-02T10:37:00.000Z",
           "oficial": false,
-          "aporte": "Detalló los datos catastrales del predio, los fundamentos del decreto y las firmas de los funcionarios provinciales."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/la-region/la-provincia-desafecto-un-predio-minero-en-sierras-bayas-para-la-creacion-de-un-nuevo-parque-urbano",
-          "fecha": "2026-10-02T12:31:45.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la desafectación del inmueble fiscal en la Reserva Fiscal de Sierras Bayas."
+          "aporte": null
         },
         {
           "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/la-provincia-desafecto-un-predio-minero-sierras-bayas-crear-un-parque-urbano-n56194",
-          "fecha": "2026-10-02T11:50:23.000Z",
+          "enlace": "https://dib.com.ar/sociedad/establecen-que-trabajadores-del-juego-cobren-sus-salarios-el-banco-provincia-n56192",
+          "fecha": "2026-10-02T11:39:55.000Z",
           "oficial": false,
-          "aporte": "Indicó que el municipio asumirá la remediación ambiental para armar el parque urbano."
+          "aporte": null
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-provincia-cede-un-predio-minero-a-olavarria-para-un-parque-urbano",
+      "slug": "el-banco-provincia-paga-los-sueldos-del-sector-de-juegos-de-azar",
       "foto": {
-        "archivo": "fotos-notas/gfh5l8.jpg",
+        "archivo": "fotos-notas/2esdp2.jpg",
         "credito": "Foto: Ámbito"
       }
     },
@@ -1230,15 +1129,17 @@
       "medios": [
         "Clarín",
         "Perfil",
+        "Página/12",
         "C5N",
-        "Crónica"
+        "Crónica",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.c5n.com/politica/javier-milei-emmanuel-macron-reunion-francia-paris-1-octubre-2026",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:06:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 63,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2465,18 +2366,17 @@
         "TN (Todo Noticias)",
         "Perfil",
         "TyC Sports",
-        "Minuto Uno",
         "Radio Mitre",
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "QZ Noticias (Mar del Plata)",
         "Bolavip Argentina",
         "Vavel Argentina",
         "0223 (Mar del Plata)",
         "La Nueva",
-        "Clarín"
+        "Clarín",
+        "Minuto Uno"
       ],
       "enlace": "https://www.clarin.com/deportes/golpe-boca-toto-belmonte-rompio-meniscos-vasco-arruabarrena-pierde-hombre-clave-mediocampo_0_da22O4ON5s.html",
       "teniaImagenLaFuente": true,
@@ -3210,7 +3110,7 @@
       "fecha": "2026-10-01T15:18:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T17:01:14.036Z",
-      "relevancia": 66,
+      "relevancia": 58,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3261,74 +3161,6 @@
       "foto": {
         "archivo": "fotos-notas/1y554vc.jpg",
         "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "zjzrx6",
-      "titulo": "Banco Macro presenta un fondo de inversión para seguir el precio de la soja",
-      "copete": "Macro Fondos lanzó un instrumento financiero destinado al agro que replica la cotización de la oleaginosa sin necesidad de acopiar mercadería. Permite operar en días hábiles y ofrece liquidez.",
-      "cuerpo": "Banco Macro presentó un fondo común de inversión para el sector agropecuario que replica la cotización de la soja sin necesidad de almacenar el grano físico. El instrumento, denominado Fondo Pionero Soja, combina contratos de futuros negociados en el mercado A3 con activos vinculados al dólar para reflejar el precio pizarra y las variaciones cambiarias.\n\nEl producto ofrece liquidez en 24 horas y acepta operaciones hasta las 15 durante las jornadas hábiles, según detalló la entidad. El gerente de Macro Agro, Federico Taffarell, indicó que la herramienta busca ofrecer una alternativa financiera al productor, mientras que el CEO de Macro Fondos, Ricardo Muñoz, destacó que se suma a la familia de opciones disponibles.",
-      "guion": "Banco Macro presenta un fondo de inversión para seguir el precio de la soja",
-      "seccion": "Agro",
-      "medios": [
-        "Infobae",
-        "Ámbito"
-      ],
-      "enlace": "https://www.infobae.com/economia/networking/2026/10/01/banco-macro-lanzo-un-fondo-para-seguir-el-precio-de-la-soja-sin-acopiar-granos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T15:18:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T17:01:14.036Z",
-      "relevancia": 32,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lanzan un fondo para seguir el precio de la soja",
-        "Permite invertir sin necesidad de acopiar granos",
-        "Ofrece liquidez en un plazo de veinticuatro horas"
-      ],
-      "seSabe": [
-        "El Banco Macro lanzó el Fondo Pionero Soja",
-        "La herramienta combina futuros de soja y activos dólar-linked",
-        "El fondo ofrece liquidez en 24 horas y opera hasta las 15 en días hábiles",
-        "Macro Fondos administra más de seis billones de pesos"
-      ],
-      "textoRedes": "Banco Macro lanzó un fondo de inversión para el sector agropecuario que permite seguir la cotización de la soja sin necesidad de almacenar el grano físico y ofrece liquidez en veinticuatro horas.",
-      "etiquetas": [
-        "Banco Macro",
-        "soja",
-        "fondos comunes de inversión",
-        "agro",
-        "Macro Fondos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/networking/2026/10/01/banco-macro-lanzo-un-fondo-para-seguir-el-precio-de-la-soja-sin-acopiar-granos/",
-          "fecha": "2026-10-01T15:18:07.000Z",
-          "oficial": false,
-          "aporte": "Detalló los objetivos del fondo, sus componentes financieros, los detalles operativos y las declaraciones de los directivos."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/campo/banco-macro-lanzo-pionero-soja-un-nuevo-fondo-inversion-pensado-el-n6328965",
-          "fecha": "2026-10-01T16:49:36.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la alternativa de inversión sin grano físico y la liquidez en 24 horas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "banco-macro-presenta-un-fondo-de-inversion-para-seguir-el-precio-de",
-      "foto": {
-        "archivo": "fotos-notas/zjzrx6.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -3575,6 +3407,120 @@
       "foto": {
         "archivo": "fotos-notas/1dbyjp1.jpg",
         "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
+      "id": "1ojeuju",
+      "titulo": "El Tribunal de Disciplina suspende a dos futbolistas por los incidentes en la Supercopa",
+      "copete": "La Asociación del Fútbol Argentino aplicó suspensiones provisorias a Fabricio Iacovich y Agustín Sández. Los clubes tienen cinco días para presentar sus descargos tras los disturbios en Santiago del Estero.",
+      "cuerpo": "El Tribunal de Disciplina de la AFA suspendió de manera provisoria a los futbolistas Fabricio Iacovich, de Estudiantes de La Plata, y Agustín Sández, de Rosario Central, tras los incidentes registrados en la final de la Supercopa Internacional. El partido se disputó el sábado pasado en el estadio Madre de Ciudades, en Santiago del Estero, donde Rosario Central venció por 3 a 1.\n\nEl organismo disciplinario otorgó un plazo de cinco días a ambas instituciones para presentar sus respectivos descargos y convocó a un delegado de la Liga Profesional para que aporte más pruebas sobre los enfrentamientos en la zona de vestuarios. El árbitro Darío Herrera informó las dos expulsiones iniciales y también detalló insultos por parte de dirigentes del club platense hacia el cuerpo arbitral.",
+      "guion": "El Tribunal de Disciplina suspende a dos futbolistas por los incidentes en la Supercopa",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "Doble Amarilla",
+        "La Capital (Rosario)",
+        "La Nueva",
+        "El Gráfico"
+      ],
+      "enlace": "https://www.elgrafico.com.ar/articulo/1053/103108/primeras-medidas-del-tribunal-de-disciplina-sobre-la-final-de-la-supercopa-internacional",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T14:32:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T02:01:24.180Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Suspenden provisionalmente a dos jugadores por la Supercopa Internacional.",
+        "El Tribunal de Disciplina dio cinco días a los clubes para hacer sus descargos.",
+        "Rosario Central venció a Estudiantes por 3 a 1 en Santiago del Estero."
+      ],
+      "seSabe": [
+        "El Tribunal de Disciplina de la AFA suspendió provisoriamente a Fabricio Iacovich y Agustín Sández.",
+        "Los clubes tienen cinco días para presentar sus descargos.",
+        "El partido se disputó el sábado en Santiago del Estero con triunfo de Rosario Central por 3 a 1 sobre Estudiantes."
+      ],
+      "noConfirmado": [
+        "Todavía no se informaron las sanciones definitivas para los jugadores involucrados en la gresca.",
+        "No trascendieron más nombres de futbolistas sancionados más allá de Iacovich y Sández."
+      ],
+      "textoRedes": "El Tribunal de Disciplina de la AFA suspendió provisoriamente a Fabricio Iacovich y Agustín Sández tras los incidentes en la final de la Supercopa Internacional. Los clubes tienen cinco días para presentar sus descargos.",
+      "etiquetas": [
+        "AFA",
+        "Tribunal de Disciplina",
+        "Estudiantes de La Plata",
+        "Rosario Central",
+        "Supercopa Internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Gráfico",
+          "enlace": "https://www.elgrafico.com.ar/articulo/1053/103108/primeras-medidas-del-tribunal-de-disciplina-sobre-la-final-de-la-supercopa-internacional",
+          "fecha": "2026-10-01T14:32:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la suspensión provisional de Sández e Iacovich."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/que-puede-pasar-con-los-jugadores-y-dirigentes-de-estudiantes-y-rosario-central-tras-el-escandalo-en-nid01102026/",
+          "fecha": "2026-10-02T01:23:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/01/se-conocieron-las-primeras-sanciones-de-la-afa-tras-el-escandalo-en-la-definicion-de-la-supercopa-internacional/",
+          "fecha": "2026-10-02T00:27:49.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la final se disputó el sábado."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/supercopa-internacional-estudiantes-rosario-central-primera-decision-tribunal-de-disciplina-id763891.html",
+          "fecha": "2026-10-01T23:25:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/futbol/el-primer-fallo-del-tribunal-disciplina-el-escandalo-central-estudiantes-n922526",
+          "fecha": "2026-10-02T00:33:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló el plazo de cinco días para los descargos de los clubes."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/la-afa-suspendio-a-jugadores-de-estudiantes-y-rosario-central-por-el-escandalo-en-la-supercopa_a6abefdf68419983d426d237e",
+          "fecha": "2026-10-02T01:24:00.000Z",
+          "oficial": false,
+          "aporte": "Aclaró los clubes a los que pertenecen los dos jugadores suspendidos."
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/liga-/el-tribunal-de-disciplina-de-la-afa-suspendio-a-jugadores-de-estudiantes-y-de-rosario-central-tras-el-triste-final-de-la-supercopa-internacional_a6abee85a969b40318bee2d0c",
+          "fecha": "2026-10-01T23:46:32.000Z",
+          "oficial": false,
+          "aporte": "Detalló el resultado del partido y la sede en Santiago del Estero."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-tribunal-de-disciplina-suspende-a-dos-futbolistas-por-los",
+      "foto": {
+        "archivo": "fotos-notas/1ojeuju.jpg",
+        "credito": "Foto: TyC Sports"
       }
     },
     {
@@ -4104,7 +4050,6 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -4114,7 +4059,7 @@
       "fecha": "2026-10-01T13:00:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T13:31:00.229Z",
-      "relevancia": 99,
+      "relevancia": 89,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -4267,6 +4212,101 @@
       "foto": {
         "archivo": "fotos-notas/1n70nnq.jpg",
         "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "is08uu",
+      "titulo": "Esteban Edul recibe amenazas tras sus análisis arbitrales",
+      "copete": "El comentarista de ESPN sufrió un hostigamiento masivo en su teléfono personal luego del partido entre Estudiantes y Rosario Central. El periodista cuestionó el uso del VAR y el nivel del arbitraje nacional.",
+      "cuerpo": "El periodista deportivo Esteban Edul recibió cerca de 300 mensajes y llamados con agresiones en su WhatsApp tras cuestionar el arbitraje y el uso del VAR en el encuentro del sábado pasado entre Estudiantes y Rosario Central. El comentarista de ESPN denunció que su número de teléfono fue filtrado en algún grupo o red social, lo que trasladó los insultos habituales de las plataformas digitales a su línea personal.\n\nEdul señaló que la controversia excedió a los simpatizantes de ambos clubes y abrió un debate sobre las decisiones arbitrales en el fútbol argentino, un ámbito que calificó en su peor momento. Además, recordó que tras aquel partido se produjo una pelea entre futbolistas de los dos planteles.",
+      "guion": "Esteban Edul recibe amenazas tras sus análisis arbitrales",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "El Eco de Tandil",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.infobae.com/deportes/2026/10/01/esteban-edul-recibio-cerca-de-300-mensajes-y-llamados-con-amenazas-tras-la-polemica-por-el-arbitraje-de-estudiantes-rosario-central/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T12:49:49.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T19:31:41.270Z",
+      "relevancia": 38,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El periodista Esteban Edul recibió unos 300 mensajes amenazantes en su WhatsApp.",
+        "El hostigamiento se originó tras sus comentarios sobre el arbitraje del partido entre Estudiantes y Rosario Central.",
+        "El comentarista denunció la filtración de su número de teléfono personal.",
+        "Sostuvo que el arbitraje y el VAR atraviesan su peor momento en el fútbol argentino."
+      ],
+      "noConfirmado": [
+        "No se especificó qué grupo, medio o red social difundió el número de teléfono del comentarista."
+      ],
+      "textoRedes": "El periodista Esteban Edul recibió unos 300 mensajes amenazantes en su WhatsApp tras analizar el arbitraje del partido entre Estudiantes y Rosario Central.",
+      "etiquetas": [
+        "Esteban Edul",
+        "Estudiantes",
+        "Rosario Central",
+        "Árbitros",
+        "VAR",
+        "Fútbol argentino"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/01/esteban-edul-recibio-cerca-de-300-mensajes-y-llamados-con-amenazas-tras-la-polemica-por-el-arbitraje-de-estudiantes-rosario-central/",
+          "fecha": "2026-10-01T12:49:49.000Z",
+          "oficial": false,
+          "aporte": "Detalló la cantidad de mensajes recibidos, la filtración de su teléfono y sus críticas al arbitraje y al VAR."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/hostigamiento-esteban-edul-recibio-casi-300-amenazas-las-polemicas-estudiantes-vs-rosario-central-n6329028",
+          "fecha": "2026-10-01T18:04:03.000Z",
+          "oficial": false,
+          "aporte": "Informó la denuncia del periodista sobre la filtración de su número y sus críticas al uso de la tecnología."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/esteban-edul-denuncio-amenazas-tras-sus-criticas-al-arbitraje-y-al-uso-del-var",
+          "fecha": "2026-10-01T13:50:11.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su publicación."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "repaso20260930tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: ACTC, Rosario Central y capacitaciones",
+          "fecha": "2026-09-30T18:06:28.052Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y-repaso20260930tarde"
+        },
+        {
+          "id": "1cbil57",
+          "titulo": "Hinchas de Newell's y Rosario Central se enfrentan en Rosario",
+          "fecha": "2026-09-30T02:21:20.000Z",
+          "ruta": "/nota/hinchas-de-newell-s-y-rosario-central-se-enfrentan-en-rosario-1cbil57"
+        },
+        {
+          "id": "122dsf6",
+          "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+          "fecha": "2026-09-26T03:00:00.000Z",
+          "ruta": "/nota/rosario-central-genera-polecutemica-en-los-festejos-contra-juan-122dsf6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "esteban-edul-recibe-amenazas-tras-sus-analisis-arbitrales",
+      "foto": {
+        "archivo": "fotos-notas/is08uu.jpg",
+        "credito": "Foto: Minuto Uno"
       }
     },
     {
@@ -4432,6 +4472,7 @@
         "0223 (Mar del Plata)",
         "La Capital (Rosario)",
         "La Nueva",
+        "El Economista",
         "El Día",
         "Crónica",
         "Clarín",
@@ -4744,6 +4785,108 @@
       }
     },
     {
+      "id": "ig6fdw",
+      "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
+      "copete": "El Ejecutivo nacional presentó en Francia un mecanismo para otorgar la ciudadanía a extranjeros que realicen inversiones. Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
+      "cuerpo": "El Gobierno nacional lanzó en París el Programa de Ciudadanía por Inversión, que comenzará a recibir solicitudes en el último trimestre de 2026. La presentación estuvo a cargo del jefe de Gabinete, Diego Santilli, y el ministro de Economía, Luis Caputo, durante la semana argentina desarrollada en la capital francesa.\n\nLa iniciativa contempla dos opciones para el solicitante principal: un aporte directo de 350.000 dólares al Tesoro Nacional o la suscripción de un título público por 800.000 dólares. El esquema también permite incluir al cónyuge y a los hijos mediante pagos adicionales de 100.000 dólares para mayores de edad y de 25.000 dólares para menores.\n\nLa evaluación de los postulantes quedará a cargo de la Agencia de Programas de Ciudadanía por Inversión. El procedimiento incluirá la intervención de la Secretaría de Inteligencia del Estado, la Unidad de Información Financiera y las carteras de Seguridad y del Interior para verificar antecedentes y el origen de los fondos.",
+      "guion": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
+      "seccion": "Argentina",
+      "medios": [
+        "El Eco de Tandil",
+        "La Nación",
+        "Infobae",
+        "Clarín",
+        "Ámbito",
+        "Perfil",
+        "El Cronista",
+        "A24",
+        "iProfesional",
+        "C5N",
+        "Crónica",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Tecla",
+        "La Voz del Pueblo",
+        "El Marplatense",
+        "Infobrisas (Radio Brisas)",
+        "Agroempresario",
+        "El Economista"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T10:55:58.335Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T12:31:07.721Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Ejecutivo nacional presentó el programa en París.",
+        "Las solicitudes se recibirán desde el cuarto trimestre.",
+        "El solicitante principal debe aportar 350.000 dólares o comprar títulos por 800.000 dólares.",
+        "Participan la SIDE, la UIF y los ministerios de Seguridad y del Interior."
+      ],
+      "textoRedes": "El Gobierno nacional lanzó en París un programa de ciudadanía por inversión para extranjeros, con aportes al Tesoro y títulos públicos. Las solicitudes se recibirán desde el último trimestre.",
+      "etiquetas": [
+        "Gobierno nacional",
+        "Ciudadanía",
+        "Inversión",
+        "Economía",
+        "París"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
+          "fecha": "2026-10-02T11:23:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/02/el-gobierno-lanzo-en-paris-un-programa-para-que-extranjeros-puedan-obtener-ciudadania-y-pasaporte-mediante-inversiones-cuanto-cuesta/",
+          "fecha": "2026-10-02T12:20:29.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/lanzan-un-programa-de-ciudadania-por-inversion-cuanto-habra-que-aportar-y-quienes-podran-acceder-nid02102026/",
+          "fecha": "2026-10-02T12:21:43.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-gobierno-otorgara-la-ciudadania-argentina-a-los-extranjeros-que-inviertan-en-el-pais-nid02102026/",
+          "fecha": "2026-10-02T12:12:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/el-gobierno-anuncio-la-puesta-en-marcha-del-programa-de-ciudadania-por-inversion-de-argentina/",
+          "fecha": "2026-10-02T11:27:26.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-lanza-un-programa-de-ciudadania-por-inversion-en-el",
+      "foto": {
+        "archivo": "fotos-notas/ig6fdw.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "9sj5l0",
       "titulo": "ARCA reglamenta los aportes obligatorios para el Fondo de Asistencia Laboral",
       "copete": "La Agencia de Recaudación y Control Aduanero estableció el procedimiento para declarar el Fondo de Asistencia Laboral. Los empleadores privados comenzarán a cumplir con esta obligación a partir de noviembre de 2026.",
@@ -5025,12 +5168,12 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 12,
-      "sensacion": 10,
-      "humedad": 59,
+      "temp": 13,
+      "sensacion": 11,
+      "humedad": 57,
       "viento": 15,
       "rumbo": "N",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Nublado",
       "esDeDia": true
     },
     "dias": [
@@ -5218,7 +5361,7 @@
       }
     ],
     "avisos": [
-      "el cronograma publicado es de septiembre, no del mes en curso",
+      "sólo llega hasta el día 18 de 31: hay que recargarlo",
       "La Vanguardia dice que hoy es San José de la Plaza, el Colegio dice san jose plaza: revisar antes de publicar"
     ]
   },
@@ -5392,6 +5535,12 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "1w06xhx",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"lesionada\""
+    },
+    {
       "id": "1vy0a0a",
       "titulo": null,
       "seccion": "Policiales",
@@ -5452,6 +5601,12 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "4n4kj2",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"nena\""
+    },
+    {
       "id": "1yvhtzv",
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
@@ -5470,17 +5625,11 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1zi52v",
-      "titulo": "La denuncia que lanzó el presidente de Platense a…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "imkij7",
       "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }

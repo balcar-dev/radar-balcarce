@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T15:03:39.512Z",
- "portada": 61,
- "archivo": 776,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-02T15:31:44.244Z",
+ "portada": 62,
+ "archivo": 777,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T15:03:39.550Z",
+  "generado": "2026-10-02T15:31:44.282Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-02T15:05:48.244Z"
    },
    {
     "nombre": "noticia2",
@@ -116,13 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 53,
     "notas": [
-     {
-      "id": "5pxon8",
-      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
-      "seccion": "Economía"
-     },
      {
       "id": "1gt8iio",
       "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
@@ -137,6 +132,11 @@
       "id": "uxgtdx",
       "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "5pxon8",
+      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
+      "seccion": "Economía"
      }
     ]
    },
@@ -183,12 +183,17 @@
      "id": "1knptpr",
      "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
      "cuando": "2026-10-02T13:35:24.696Z"
+    },
+    {
+     "id": "164o14u",
+     "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
+     "cuando": "2026-10-02T15:06:32.699Z"
     }
    ],
    "cola": [
     {
-     "id": "164o14u",
-     "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
+     "id": "uxgtdx",
+     "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
      "seccion": "Balcarce",
      "marcada": false
     },
@@ -205,20 +210,14 @@
      "marcada": false
     },
     {
-     "id": "uxgtdx",
-     "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "1ugi3md",
      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
      "seccion": "Deportes",
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-02T15:05:24.696Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-02T16:36:32.699Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

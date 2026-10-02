@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02T15:03:39.512Z",
+ "generado": "2026-10-02T15:31:44.244Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -38,6 +38,33 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 4
+  },
+  {
+   "id": "1x9hqyb",
+   "titulo": "Javier Milei: “Cuando terminen las convulsiones internacionales, el riesgo país volverá a bajar”",
+   "copete": "El Presidente fue distinguido por el Foro Económico de París como \"el economista más influyente\". \"Uno tiene que tomar costos, soportar calumnias e injurias que manchan el honor propio y de la familia, pero uno está escribiendo una página de la historia\", sostuvo en su discurso…",
+   "seccion": "Política",
+   "fecha": "2026-10-02T14:56:15.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
+     "fecha": "2026-10-02T14:56:15.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/javier-milei-refuerza-el-modo-campana-si-logramos-la-reeleccion-el-riesgo-pais-se-va-desplomar-n6329385",
+     "fecha": "2026-10-02T15:12:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/javier-milei-premio-paris-foro-economicoo-viernes-2-octubre-2026",
+     "fecha": "2026-10-02T14:58:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 4.000 y la fuente no lo dice",
+   "maximo": 3
   }
  ]
 }

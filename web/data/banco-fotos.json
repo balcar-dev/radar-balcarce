@@ -5115,16 +5115,16 @@
   "cuando": "2026-10-02T14:05:27.092Z"
  },
  "1lzo844": {
-  "archivo": "fotos-notas/1lzo844.jpg",
   "medio": "La Verdad",
-  "credito": "Foto: La Verdad",
   "licencia": null,
   "origen": "medio",
   "titulo": "Colapinto afronta penalizaciones en Bahréin y apunta a la carrera",
   "enlace": "https://laverdadonline.com/gp-de-bahrein-colapinto-reconocio-que-el-sabado-esta-perdido-por-las-penalizaciones-e-hizo-foco-en-la-carrera/",
   "imagenOriginal": "https://laverdadonline.com/wp-content/uploads/2026/10/cola.webp",
   "razon": "La foto A tiene una marca de agua sobreimpresa del medio Noticias Argentinas abajo a la izquierda, por lo que se elige la B que está limpia y muestra claramente al protagonista.",
-  "cuando": "2026-10-02T14:32:12.704Z"
+  "cuando": "2026-10-02T14:32:12.704Z",
+  "intentado": true,
+  "borrada": true
  },
  "2apvm8": {
   "medio": "Infobae",
@@ -5158,5 +5158,17 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/ZWN36L32HJDGLOXODKC5YE5T6I.jpg?auth=5ff6fbf5f6e6037e2f841dc3f151095d638d79345d5f0fd1aff9572903dcae37&smart=true&width=1200&height=630&quality=85",
   "razon": "Tiene excelente nitidez y encuadre cerrado sobre el protagonista de la nota, sin marcas de agua ni menores.",
   "cuando": "2026-10-02T15:02:38.683Z"
+ },
+ "1201eez": {
+  "archivo": "fotos-notas/1201eez.jpg",
+  "medio": "LU9 Mar del Plata",
+  "credito": "Foto: LU9 Mar del Plata",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Unión Industrial de Bahía Blanca celebra su trigésimo cuarto aniversario",
+  "enlace": "https://www.lu9mardelplata.com.ar/la-union-industrial-de-bahia-blanca-celebro-34-anos-con-foco-en-la-integracion-regional",
+  "imagenOriginal": "https://cdnartic.ar/2YLTDUZ-aJp15UxKW3_aO-nHLOQ=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://lu9mardelplatacdn.eleco.com.ar/media/2026/10/gustavo_elias.webp",
+  "razon": "La foto B tiene mejor calidad de imagen y brillo general en comparación con las otras, sin marcas ni menores.",
+  "cuando": "2026-10-02T15:31:40.277Z"
  }
 }
