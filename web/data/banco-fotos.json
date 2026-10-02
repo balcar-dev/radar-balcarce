@@ -3180,16 +3180,16 @@
   "cuando": "2026-09-30T18:01:48.288Z"
  },
  "1i6b1ka": {
-  "archivo": "fotos-notas/1i6b1ka.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "El consumo porteño muestra caídas en supermercados y subas en shoppings",
   "enlace": "https://www.ambito.com/economia/el-consumo-caba-profundiza-su-caida-venta-supermercados-cedio-12-interanual-el-segundo-trimestre-n6328457",
   "imagenOriginal": "https://media.ambito.com/p/d8fbdc44efd939ecd80c272f8e96b608/adjuntos/239/imagenes/043/351/0043351574/supermercado.png",
   "razon": "Es la única foto de supermercado limpia de marcas de agua del medio, sin menores de edad y con buena calidad.",
-  "cuando": "2026-09-30T18:01:48.288Z"
+  "cuando": "2026-09-30T18:01:48.288Z",
+  "intentado": true,
+  "borrada": true
  },
  "12mtzuq": {
   "archivo": "fotos-notas/12mtzuq.jpg",
@@ -4775,10 +4775,10 @@
  "13npbde": {
   "intentado": true,
   "origen": "ninguna",
-  "titulo": "Dibu Martínez postula a Nico Paz como sucesor de la camiseta diez de Messi",
+  "titulo": "Dibu Martínez postula a Nico Paz como el heredero de la diez de Messi",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-02T04:02:00.731Z",
-  "intentos": 1,
+  "cuando": "2026-10-02T05:27:49.707Z",
+  "intentos": 2,
   "fuentes": 5
  }
 }

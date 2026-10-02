@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T05:01:48.003Z",
+  "generado": "2026-10-02T05:27:54.485Z",
   "notas": [
     {
       "id": "1j4lf17",
@@ -252,6 +252,68 @@
       "foto": {
         "archivo": "fotos-notas/17xncu1.jpg",
         "credito": "Foto: Solotc"
+      }
+    },
+    {
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
+      "copete": "La adhesión alcanzó el 84% en los turnos mañana y tarde en las escuelas públicas locales. La medida fue convocada por el Frente de Unidad Docente Bonaerense.",
+      "cuerpo": "El paro docente convocado por el Frente de Unidad Docente Bonaerense registró un acatamiento del 84% en los turnos mañana y tarde y del 82% en el vespertino en los establecimientos públicos de Balcarce. La protesta se realiza en demanda de acciones concretas frente a la violencia en las escuelas y por la reapertura de negociaciones paritarias. Liliana Olivera, presidenta de la FEB, afirmó que la participación demuestra el cansancio de los trabajadores ante las agresiones registradas en los edificios educativos de la provincia.",
+      "guion": "El paro docente registra un alto acatamiento",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44970-paro-docente-en-balcarce-la-adhesion-llego-al-84-en-los-turnos-manana-y-tarde/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T23:01:24.163Z",
+      "sinFecha": true,
+      "visto": "2026-10-01T23:01:24.163Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El acatamiento llegó al 84% en los turnos mañana y tarde.",
+        "La medida fue convocada por el Frente de Unidad Docente Bonaerense.",
+        "Los gremios reclaman medidas contra la violencia y negociaciones paritarias."
+      ],
+      "seSabe": [
+        "El paro docente alcanzó el 84% de adhesión en los turnos mañana y tarde en Balcarce.",
+        "La medida fue convocada por el Frente de Unidad Docente Bonaerense.",
+        "Los gremios exigen respuestas ante los episodios de violencia escolar."
+      ],
+      "noConfirmado": [
+        "La evolución futura de las negociaciones paritarias provinciales.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El paro docente registró una adhesión del 84% en los turnos mañana y tarde en las escuelas públicas de Balcarce según los gremios.",
+      "etiquetas": [
+        "paro docente",
+        "Balcarce",
+        "educación",
+        "FUDB"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44970-paro-docente-en-balcarce-la-adhesion-llego-al-84-en-los-turnos-manana-y-tarde/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalla los porcentajes de adhesión al paro docente en Balcarce y los reclamos del sector."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-paro-docente-registra-un-alto-acatamiento",
+      "foto": {
+        "archivo": "fotos-notas/12mca8c.jpg",
+        "credito": "Foto: Diario La Vanguardia"
       }
     },
     {
@@ -1233,17 +1295,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-01T17:31:17.133Z",
       "sinFecha": true,
       "visto": "2026-10-01T17:31:17.133Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
@@ -1330,7 +1390,7 @@
       "fecha": "2026-10-01T17:07:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T21:17:36.919Z",
-      "relevancia": 79,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1497,8 +1557,8 @@
         "A24",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "El Día",
         "La Verdad",
+        "El Día",
         "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/01/el-riesgo-pais-vuelve-a-superar-los-630-puntos-mientras-las-acciones-argentinas-bajan-hasta-6-en-wall-street/",
@@ -1657,11 +1717,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44966-el-drama-de-ticiano-le-prohibieron-vender-alfajores-en-la-calle-y-ahora-suena-con-conseguir-un-trabajo/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-01T16:31:02.291Z",
       "sinFecha": true,
       "visto": "2026-10-01T16:31:02.291Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1907,104 +1967,6 @@
       "foto": {
         "archivo": "fotos-notas/gs0rwg.jpg",
         "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "147id0",
-      "titulo": "La Obra Social de las Fuerzas Armadas paga su deuda total",
-      "copete": "La Obra Social de las Fuerzas Armadas canceló el pasivo total con prestadores y comenzó a regularizar los reintegros. La entidad asume la atención médica plena desde el jueves.",
-      "cuerpo": "El organismo asumió la atención médica plena del personal militar y sus familias desde el jueves 1 de octubre.\n\nEl desembolso se concretó tras meses de restricciones en el sistema sanitario heredado del extinto Instituto de Obra Social de las Fuerzas Armadas (IOSFA), disuelto mediante el DNU 88/2026. Aquella medida dividió la cobertura en dos nuevas entidades para el sector militar y las fuerzas de seguridad. Según fuentes oficiales, el Tesoro Nacional aportó 160 millones de pesos para destrabar la liquidación final.\n\nLa crisis financiera había provocado cortes en las prestaciones y dificultades para mantener los convenios con clínicas y profesionales. Con la cancelación del pasivo, la administración apunta a recomponer los acuerdos y normalizar el servicio en todo el país.",
-      "guion": "La Obra Social de las Fuerzas Armadas paga su deuda total",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "El Cronista",
-        "Perfil",
-        "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)"
-      ],
-      "enlace": "https://www.cronista.com/economia-politica/osfa-el-gobierno-anuncio-que-pago-la-totalidad-de-la-deuda-y-reactivara-las-prestaciones/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T15:34:08.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T18:01:03.074Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La OSFA saldó una deuda superior a los 200.000 millones de pesos con prestadores médicos.",
-        "El organismo asumió la atención plena del personal militar y sus familias desde este jueves.",
-        "El Tesoro Nacional aportó 160 millones de pesos para completar la liquidación del ex-IOSFA."
-      ],
-      "seSabe": [
-        "La Obra Social de las Fuerzas Armadas canceló la totalidad de la deuda con prestadores, según fuentes oficiales.",
-        "El organismo inició la regularización de los reintegros pendientes a los afiliados.",
-        "El Tesoro Nacional cubrió 160 millones de pesos para finalizar la liquidación del extinto IOSFA.",
-        "La OSFA asume la atención médica plena del personal militar y sus familias desde este jueves 1 de octubre.",
-        "La disolución del IOSFA y la creación de la OSFA se dispusieron mediante el DNU 88/2026."
-      ],
-      "noConfirmado": [
-        "La forma en que las Fuerzas de Seguridad tramitarán su parte del pasivo pendiente con el Estado Nacional.",
-        "Los detalles operativos sobre la recomposición total de los convenios con los prestadores en cada distrito."
-      ],
-      "textoRedes": "La Obra Social de las Fuerzas Armadas canceló la totalidad de su deuda con prestadores y comenzó a regularizar los reintegros a los afiliados.",
-      "etiquetas": [
-        "OSFA",
-        "Fuerzas Armadas",
-        "salud",
-        "deuda",
-        "Gobierno nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/osfa-el-gobierno-anuncio-que-pago-la-totalidad-de-la-deuda-y-reactivara-las-prestaciones/",
-          "fecha": "2026-10-01T15:34:08.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el pago total de la deuda con prestadores y el inicio de los reintegros a afiliados."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/01/osfa-anuncio-que-comenzara-a-cancelar-la-deuda-y-asumira-la-atencion-medica-de-las-fuerzas-armadas/",
-          "fecha": "2026-10-01T17:07:57.000Z",
-          "oficial": false,
-          "aporte": "Anunció el inicio de la atención médica plena del personal militar y sus familias."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/osfa-asume-la-atencion-medica-de-las-fuerzas-armadas-e-inicia-el-proceso-del-pago-de-la-deuda-de-la-obra-social-_a6abe74ed8419983d42587f2b",
-          "fecha": "2026-10-01T15:46:27.123Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no registrar resumen."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/01/109902-el-ministerio-de-defensa-confirma-que-osfa-asume-la-atencion-medica-de-las-fuerzas-armadas",
-          "fecha": "2026-10-01T18:00:27.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no registrar resumen."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "5hhuva",
-          "titulo": "El Ministerio de Economía renueva la totalidad de los vencimientos de deuda",
-          "fecha": "2026-09-28T20:23:00.000Z",
-          "ruta": "/nota/el-ministerio-de-economia-renueva-la-totalidad-de-los-vencimientos-de-5hhuva"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-obra-social-de-las-fuerzas-armadas-paga-su-deuda-total",
-      "foto": {
-        "archivo": "fotos-notas/147id0.jpg",
-        "credito": "Foto: El Cronista"
       }
     },
     {
@@ -3519,11 +3481,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T11:52:38.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-01T12:01:06.332Z",
+      "sinFecha": true,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 71,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3533,7 +3495,7 @@
         {
           "medio": "El Diario Balcarce",
           "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-          "fecha": "2026-10-01T11:52:38.000Z",
+          "fecha": null,
           "oficial": false,
           "aporte": null
         }
@@ -3696,20 +3658,20 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "La Nueva",
         "La Brújula 24",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "La Capital (Rosario)",
-        "El Gráfico"
+        "El Día",
+        "El Gráfico",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/confirmado-messi-adquirio-primer-equipo-futbol-profesional-espana-2026101142741",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T11:30:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T18:01:03.074Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3987,8 +3949,8 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Noticias Agropecuarias",
         "Ámbito",
+        "Noticias Agropecuarias",
         "Ecos Diarios (Necochea)",
         "La Nueva",
         "La Nación",
@@ -5173,10 +5135,10 @@
   "secciones": [
     "Automovilismo",
     "Cultura y agenda",
+    "Balcarce",
     "Argentina",
     "Economía",
     "Deportes",
-    "Balcarce",
     "Política",
     "Fútbol",
     "Tecnología",
@@ -5192,11 +5154,6 @@
     {
       "nombre": "El hospital",
       "ranura": "hospital",
-      "cuantas": 2
-    },
-    {
-      "nombre": "Las rutas",
-      "ranura": "rutas",
       "cuantas": 2
     },
     {
@@ -5632,6 +5589,12 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "1c8gy5f",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "1yvhtzv",
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
@@ -5642,12 +5605,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "1c8gy5f",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "xebopq",

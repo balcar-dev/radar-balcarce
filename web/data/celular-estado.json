@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T05:01:48.003Z",
+ "generado": "2026-10-02T05:27:54.485Z",
  "portada": 64,
- "archivo": 754,
+ "archivo": 753,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-02T05:01:48.036Z",
+  "generado": "2026-10-02T05:27:54.517Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,26 +147,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
      },
      {
-      "id": "1a9rnj4",
-      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "jzu6k",
-      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "g8dncb",
       "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1a9rnj4",
+      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
       "seccion": "Balcarce"
      }
     ]
