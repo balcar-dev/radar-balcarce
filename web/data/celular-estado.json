@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T07:01:49.088Z",
- "portada": 62,
+ "generado": "2026-10-02T07:31:27.363Z",
+ "portada": 59,
  "archivo": 754,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T07:01:49.119Z",
+  "generado": "2026-10-02T07:31:27.398Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,13 +85,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
@@ -103,9 +98,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "seccion": "Deportes"
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "vot8hs",
+      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 41,
     "notas": [
      {
       "id": "17z7wso",
@@ -124,19 +124,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
      },
      {
-      "id": "vot8hs",
-      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
-      "seccion": "Cultura y agenda"
+      "id": "g8dncb",
+      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -147,18 +142,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 31,
     "notas": [
-     {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "g8dncb",
-      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",

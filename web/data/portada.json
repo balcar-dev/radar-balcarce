@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T07:01:49.088Z",
+  "generado": "2026-10-02T07:31:27.363Z",
   "notas": [
     {
       "id": "1j4lf17",
@@ -557,7 +557,7 @@
       "fecha": "2026-10-01T19:31:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T20:38:36.988Z",
-      "relevancia": 75,
+      "relevancia": 68,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -628,7 +628,7 @@
       "fecha": "2026-10-01T19:25:45.064Z",
       "sinFecha": false,
       "visto": "2026-10-01T22:01:24.337Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1392,6 +1392,72 @@
       }
     },
     {
+      "id": "swyxjn",
+      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
+      "copete": "Nahuel González Salvo y el dúo Bajo Fondo se presentan el domingo en la Casa del Bicentenario con entrada libre y gratuita. Habrá un buffet solidario a beneficio de Protección a la Infancia.",
+      "cuerpo": "La Casa del Bicentenario será escenario de un encuentro musical el próximo domingo desde las 19.30. La propuesta combina canciones, rock nacional, tango, folklore y textos, con la participación de Nahuel González Salvo y el dúo Bajo Fondo.\n\nLa actividad cuenta con la organización de la Subsecretaría de Cultura y Educación en la sede situada sobre la avenida Favaloro 785. El acceso será libre y gratuito para toda la comunidad.\n\nDurante el desarrollo del evento funcionará un buffet cuyos fondos recaudados se destinarán a la institución Protección a la Infancia.",
+      "guion": "La Casa del Bicentenario recibe un concierto benéfico",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T17:01:14.036Z",
+      "sinFecha": true,
+      "visto": "2026-10-01T17:01:14.036Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Concierto de Nahuel González Salvo y Bajo Fondo el domingo a las 19.30.",
+        "Organiza la Subsecretaría de Cultura y Educación en avenida Favaloro 785.",
+        "Buffet a beneficio de Protección a la Infancia.",
+        "Entrada libre y gratuita."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Este domingo desde las 19.30 la Casa del Bicentenario ofrece un concierto solidario con Nahuel González Salvo y Bajo Fondo. La entrada es libre y gratuita y habrá un buffet a beneficio de Protección a la Infancia.",
+      "etiquetas": [
+        "concierto",
+        "solidaridad",
+        "Casa del Bicentenario",
+        "Protección a la Infancia",
+        "Cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la programación musical, los artistas participantes, el horario, el lugar y el fin solidario del evento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "119oqdp",
+          "titulo": "La Sociedad de Protección a la Infancia realiza Voces por la Infancia",
+          "fecha": "2026-09-27T18:30:42.064Z",
+          "ruta": "/nota/la-sociedad-de-proteccion-a-la-infancia-realiza-voces-por-la-infancia-119oqdp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-casa-del-bicentenario-recibe-un-concierto-benefico",
+      "foto": {
+        "archivo": "fotos-notas/swyxjn.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "13npbde",
       "titulo": "Dibu Martínez postula a Nico Paz como el heredero de la diez de Messi",
       "copete": "El arquero de la Selección argentina dejó un comentario en redes sociales sobre el futuro dueño del dorsal histórico. El entrenador Lionel Scaloni pidió postergar el debate hasta después de la despedida del capitán.",
@@ -1679,88 +1745,6 @@
       "foto": {
         "archivo": "fotos-notas/jzu6k.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "copete": "La Cooperativa de Electricidad de Balcarce realiza el viernes un corte en el servicio eléctrico por tareas técnicas. La interrupción abarca distintas cuadras del centro.",
-      "cuerpo": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico el viernes 2 de octubre en el horario de 7:30 a 9:00, según informó el área de Redes. La medida responde a tareas de mantenimiento en líneas de baja tensión.\n\nLa interrupción afecta a los usuarios ubicados sobre la calle 16 entre las calles 19 y 21, en ambas veredas, y en la calle 19 desde la avenida Kelly hasta la calle 16.",
-      "guion": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T16:05:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T18:31:03.487Z",
-      "relevancia": 93,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Corte de luz programado para este viernes",
-        "El servicio se interrumpe de 7:30 a 9:00",
-        "Afecta a la calle 16 y la calle 19"
-      ],
-      "seSabe": [
-        "El corte de luz es este viernes de 7:30 a 9:00, según la Cooperativa de Electricidad.",
-        "Las tareas se realizan en líneas de baja tensión.",
-        "El área afectada comprende la calle 16 entre 19 y 21, y la calle 19 desde avenida Kelly hasta calle 16."
-      ],
-      "textoRedes": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico este viernes de 7:30 a 9:00 por tareas en líneas de baja tensión. La interrupción afecta a las calles 16 y 19.",
-      "etiquetas": [
-        "corte de luz",
-        "Cooperativa de Electricidad",
-        "Balcarce",
-        "servicios"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
-          "fecha": "2026-10-01T16:05:14.000Z",
-          "oficial": false,
-          "aporte": "Informó el horario del corte y las calles afectadas."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
-          "fecha": "2026-10-01T17:24:47.272Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha exacta del viernes 2 de octubre."
-        },
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-corte-del-servicio-electrico-este-viernes-en-un-sector-de-la-ciudad",
-          "fecha": "2026-10-01T16:15:15.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el motivo son trabajos en líneas de baja tensión."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1oji07d",
-          "titulo": "Se anuncia corte de energía para este viernes",
-          "fecha": "2026-09-17T20:27:01.000Z",
-          "ruta": "/nota/se-anuncia-corte-de-energia-para-este-viernes-1oji07d"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-cooperativa-de-electricidad-corta-el-suministro-el-viernes",
-      "foto": {
-        "archivo": "fotos-notas/alddw5.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2180,91 +2164,6 @@
       "foto": {
         "archivo": "fotos-notas/df6k44.jpg",
         "credito": "Foto: El Eco de Tandil"
-      }
-    },
-    {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "copete": "Un móvil del Registro Nacional de las Personas llega a la ciudad para realizar trámites. El operativo incluye jornadas gratuitas en el Concejo Deliberante y en la Sociedad Rural.",
-      "cuerpo": "El Registro Nacional de las Personas despliega un operativo documentario en Balcarce con un vehículo equipado. La primera atención se realiza el jueves 8 de octubre, de 10 a 15, en el recinto del Honorable Concejo Deliberante, donde los vecinos pueden gestionar el DNI sin costo.\n\nEl servicio continúa el viernes 9 y el sábado 10 de octubre en el predio ferial de la Sociedad Rural, situado en la intersección de la Ruta 55 y la calle 79, en coincidencia con la Fiesta Nacional del Postre. En esas dos jornadas se tramitan tanto documentos de identidad de forma gratuita como pasaportes que requieren el pago de un arancel.",
-      "guion": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T14:33:59.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T15:23:10.187Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Llega a Balcarce un móvil documentario del RENAPER.",
-        "El jueves 8 de octubre atiende gratis en el Concejo.",
-        "El viernes 9 y sábado 10 funciona en la Sociedad Rural.",
-        "Los pasaportes tienen costo y el DNI es gratuito."
-      ],
-      "seSabe": [
-        "El móvil del RENAPER atiende en el Concejo Deliberante el jueves 8 de octubre de 10 a 15 horas.",
-        "Los trámites de DNI en el Concejo son gratuitos.",
-        "El operativo sigue el viernes 9 y el sábado 10 de octubre en la Sociedad Rural durante la Fiesta Nacional del Postre.",
-        "En la Sociedad Rural se pueden gestionar DNI gratis y pasaportes pagos."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un móvil del RENAPER llega a Balcarce para realizar trámites de DNI y pasaporte. Habrá atención gratuita en el Concejo Deliberante y en la Sociedad Rural durante la Fiesta Nacional del Postre.",
-      "etiquetas": [
-        "RENAPER",
-        "Balcarce",
-        "DNI",
-        "Fiesta Nacional del Postre",
-        "Sociedad Rural",
-        "Concejo Deliberante"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
-          "fecha": "2026-10-01T14:33:59.000Z",
-          "oficial": false,
-          "aporte": "Informó el cronograma, los horarios y las ubicaciones del móvil del RENAPER en Balcarce."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1yu9ytn",
-          "titulo": "El oficialismo defiende su rechazo a convocar a Virginia Aparicio en comisión",
-          "fecha": "2026-09-30T20:53:48.000Z",
-          "ruta": "/nota/el-oficialismo-defiende-su-rechazo-a-convocar-a-virginia-aparicio-en-1yu9ytn"
-        },
-        {
-          "id": "1xzookf",
-          "titulo": "Fernando Gray anuncia exención impositiva total para jubilados",
-          "fecha": "2026-09-29T15:47:00.000Z",
-          "ruta": "/nota/fernando-gray-anuncia-exencion-impositiva-total-para-jubilados-1xzookf"
-        },
-        {
-          "id": "8zhfqv",
-          "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
-          "fecha": "2026-09-29T14:01:11.480Z",
-          "ruta": "/nota/el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria-8zhfqv"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-renaper-instala-un-movil-en-balcarce-para-tramitar-dni",
-      "foto": {
-        "archivo": "fotos-notas/1dbyjp1.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2815,65 +2714,6 @@
       }
     },
     {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "copete": "El deportista local jugará el Campeonato Argentino de Selecciones Mayores Ascenso B. La competencia nacional se desarrollará en Mendoza del 15 al 18 de octubre.",
-      "cuerpo": "El jugador Mateo Raimondi fue convocado para integrar el plantel del seleccionado de la Asociación Amateur Marplatense de Hockey en el Campeonato Argentino de Selecciones Mayores Ascenso B. El certamen se disputará del 15 al 18 de octubre en la ciudad mendocina de San Rafael, bajo la organización de la Confederación Argentina de Hockey.\n\nRaimondi se desempeña como volante por la izquierda en el plantel superior de MDQ 06 Hockey Club y forma parte de la lista de veinte deportistas elegidos. El conjunto regional buscará obtener el ascenso directo a la Zona A durante la competencia.",
-      "guion": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/mateo-raimondi-fue-convocado-para-disputar-el-campeonato-argentino-de-selecciones/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T14:00:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T14:11:16.401Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Mateo Raimondi fue convocado al seleccionado marplatense",
-        "El torneo se jugará en San Rafael del 15 al 18 de octubre",
-        "El equipo busca el ascenso a la Zona A",
-        "El deportista se desempeña como volante en MDQ 06"
-      ],
-      "seSabe": [
-        "Mateo Raimondi integra la lista de veinte convocados de la Asociación Amateur Marplatense de Hockey",
-        "El torneo se jugará del 15 al 18 de octubre en San Rafael, Mendoza",
-        "El seleccionado busca el ascenso directo a la Zona A"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El deportista Mateo Raimondi fue convocado para disputar el Campeonato Argentino de Selecciones Mayores Ascenso B con el equipo marplatense. El torneo se jugará del 15 al 18 de octubre en San Rafael, Mendoza.",
-      "etiquetas": [
-        "Mateo Raimondi",
-        "hockey",
-        "Campeonato Argentino",
-        "MDQ 06",
-        "San Rafael"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/mateo-raimondi-fue-convocado-para-disputar-el-campeonato-argentino-de-selecciones/",
-          "fecha": "2026-10-01T14:00:12.000Z",
-          "oficial": false,
-          "aporte": "Informó la convocatoria de Mateo Raimondi al seleccionado de hockey y los detalles del torneo nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "mateo-raimondi-integra-el-seleccionado-marplatense-de-hockey"
-    },
-    {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "copete": "La segunda edición de la competencia atlética homenaje al profesor Luis Vildoza se hará el domingo 1 de noviembre. Habrá pruebas de 10 y 5 kilómetros con participación libre y gratuita.",
@@ -3089,7 +2929,6 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -3099,7 +2938,7 @@
       "fecha": "2026-10-01T13:00:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T13:31:00.229Z",
-      "relevancia": 100,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3612,17 +3451,15 @@
       "guion": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/01/bajo-fondo-y-nahuel-gonzalez-salvo-el-domingo-en-cultura/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T11:48:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 97,
+      "relevancia": 77,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3758,10 +3595,10 @@
         "La Brújula 24",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "La Capital (Rosario)",
         "El Día",
         "Clarín",
-        "El Gráfico",
-        "La Capital (Rosario)"
+        "El Gráfico"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/confirmado-messi-adquirio-primer-equipo-futbol-profesional-espana-2026101142741",
       "teniaImagenLaFuente": true,
@@ -3958,10 +3795,10 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "InfoRegión",
         "El Eco de Tandil",
         "Ámbito",
-        "Crónica",
-        "InfoRegión"
+        "Crónica"
       ],
       "enlace": "https://www.ambito.com/economia/el-eras-convoco-audiencia-publica-tratar-la-actualizacion-tarifas-aysa-n6328740",
       "teniaImagenLaFuente": true,
@@ -4977,117 +4814,6 @@
         "archivo": "fotos-notas/17z7wso.jpg",
         "credito": "Foto: El Diario Balcarce"
       }
-    },
-    {
-      "id": "5p0wce",
-      "titulo": "La Pepa Brizuela canta el himno antes del partido de la Selección",
-      "copete": "El reconocido referente del cuarteto interpreta la canción patria en la previa del amistoso de la Selección argentina frente a Bolivia, en el estadio Mario Alberto Kempes.",
-      "cuerpo": "Javier Carlos \"La Pepa\" Brizuela interpreta el Himno Nacional en la previa del partido amistoso entre la Selección argentina y Bolivia, que se disputa el miércoles desde las 21 en el Estadio Mario Alberto Kempes de Córdoba.\n\nEl artista cordobés, de 37 años de trayectoria en la música, recibió la convocatoria de la Asociación del Fútbol Argentino para participar en la ceremonia de apertura del encuentro internacional.\n\nBrizuela desarrolló gran parte de su camino como vocalista del grupo La Barra y, tras la separación de la banda en septiembre de 2025, continuó su carrera como solista.",
-      "guion": "La Pepa Brizuela canta el himno antes del partido de la Selección",
-      "seccion": "Fútbol",
-      "medios": [
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Radio Mitre",
-        "Minuto Uno",
-        "C5N"
-      ],
-      "enlace": "https://tn.com.ar/show/famosos/2026/09/30/quien-es-la-pepa-brizuela-el-musico-que-cantara-el-himno-de-argentina-antes-del-partido-contra-bolivia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T19:10:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T02:31:07.465Z",
-      "relevancia": 74,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Pepa Brizuela interpreta el Himno Nacional en el partido de la Selección.",
-        "El encuentro amistoso ante Bolivia se juega este miércoles en Córdoba.",
-        "El músico cordobés cuenta con 37 años de trayectoria en la música."
-      ],
-      "seSabe": [
-        "Javier Carlos Brizuela canta el himno en el amistoso entre Argentina y Bolivia.",
-        "El partido se disputa este miércoles a las 21 en el Estadio Mario Alberto Kempes de Córdoba.",
-        "La convocatoria fue realizada por la AFA.",
-        "El músico transita su etapa solista tras el final de La Barra en 2025."
-      ],
-      "textoRedes": "El cantante cordobés Javier La Pepa Brizuela interpreta el Himno Nacional antes del amistoso entre la Selección argentina y Bolivia en el estadio Mario Alberto Kempes.",
-      "etiquetas": [
-        "Selección Argentina",
-        "La Pepa Brizuela",
-        "Córdoba"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/show/famosos/2026/09/30/quien-es-la-pepa-brizuela-el-musico-que-cantara-el-himno-de-argentina-antes-del-partido-contra-bolivia/",
-          "fecha": "2026-09-30T19:10:37.000Z",
-          "oficial": false,
-          "aporte": "Detalles del partido amistoso y la trayectoria musical de Javier Brizuela."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/asi-sono-el-himno-nacional-el-amistoso-la-seleccion-argentina-y-bolivia-n6328688",
-          "fecha": "2026-10-01T00:04:00.000Z",
-          "oficial": false,
-          "aporte": "Informacion sobre el calendario de partidos de la Selección argentina."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/30/que-hizo-nico-paz-durante-el-himno-argentino-en-la-previa-del-amistoso-de-la-seleccion-ante-bolivia/",
-          "fecha": "2026-10-01T00:16:22.000Z",
-          "oficial": false,
-          "aporte": "Mencion sobre el encuentro en el estadio Mario Alberto Kempes."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/quien-es-la-pepa-brizuela-el-artista-que-cantara-el-himno-antes-de-argentina-vs-bolivia-id763624.html",
-          "fecha": "2026-10-01T00:04:30.000Z",
-          "oficial": false,
-          "aporte": "Registro de cobertura sin contenido adicional."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/quien-es-la-pepa-brizuela-el-referente-del-cuarteto-que-cantara-el-himno-argentina-bolivia-n6328644",
-          "fecha": "2026-09-30T22:05:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmacion de la convocatoria por parte de la AFA."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/ratingcero/quien-es-javier-brizuela-el-historico-referente-del-cuarteto-que-canto-el-himno-la-seleccion-n250405",
-          "fecha": "2026-10-01T00:09:00.000Z",
-          "oficial": false,
-          "aporte": "Datos sobre la edad y la trayectoria solista del cantante."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/quien-es-javier-la-pepa-brizuela-el-artista-que-canto-el-himno-de-argentina-antes-del-amistoso-contra-bolivia/",
-          "fecha": "2026-10-01T00:15:18.000Z",
-          "oficial": false,
-          "aporte": "Confirmacion de la interpretacion del himno este miércoles."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/emotivo--asi-sono-el-himno-nacional-argentino-en-cordoba_a6abda88cc5ebcb5a82b93ebb",
-          "fecha": "2026-10-01T00:48:00.000Z",
-          "oficial": false,
-          "aporte": "Contexto del partido como primer amistoso tras el Mundial 2026."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-pepa-brizuela-canta-el-himno-antes-del-partido-de-la-seleccion",
-      "foto": {
-        "archivo": "fotos-notas/5p0wce.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
     }
   ],
   "secciones": [
@@ -5122,10 +4848,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 5,
-      "sensacion": 3,
-      "humedad": 95,
-      "viento": 4,
+      "temp": 7,
+      "sensacion": 5,
+      "humedad": 90,
+      "viento": 5,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
@@ -5134,46 +4860,46 @@
       {
         "fecha": "2026-10-02",
         "dia": "vie",
-        "max": 15,
-        "min": 5,
+        "max": 14,
+        "min": 7,
         "lluvia": 44,
-        "codigo": 51,
-        "viento": 25,
-        "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "codigo": 55,
+        "viento": 26,
+        "milimetros": 2,
+        "cielo": "Llovizna intensa"
       },
       {
         "fecha": "2026-10-03",
         "dia": "sáb",
         "max": 15,
-        "min": 8,
+        "min": 7,
         "lluvia": 96,
-        "codigo": 61,
-        "viento": 23,
-        "milimetros": 9,
-        "cielo": "Lluvia leve"
+        "codigo": 80,
+        "viento": 21,
+        "milimetros": 12,
+        "cielo": "Chaparrones"
       },
       {
         "fecha": "2026-10-04",
         "dia": "dom",
-        "max": 20,
-        "min": 7,
+        "max": 19,
+        "min": 8,
         "lluvia": 10,
-        "codigo": 51,
-        "viento": 19,
+        "codigo": 3,
+        "viento": 21,
         "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-05",
         "dia": "lun",
         "max": 21,
-        "min": 10,
+        "min": 9,
         "lluvia": 57,
-        "codigo": 51,
-        "viento": 16,
-        "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "codigo": 55,
+        "viento": 25,
+        "milimetros": 2,
+        "cielo": "Llovizna intensa"
       }
     ],
     "fuente": "Open-Meteo"
@@ -5475,7 +5201,7 @@
   },
   "pendientes": [
     {
-      "id": "uh3pmu",
+      "id": "1q3o7sk",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
@@ -5535,6 +5261,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "1yzsbq1",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "3edpjs",
       "titulo": "La Justicia desestimó una denuncia por discursos de odio…",
       "seccion": "Política",
@@ -5563,6 +5295,12 @@
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "imkij7",
+      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 2
