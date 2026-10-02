@@ -38,10 +38,15 @@ test('las dos placas se arman con la fecha y los datos del día', () => {
   assert.deepEqual(fechaLarga('2026-10-05'), { dia: 'lunes', numero: 5, mes: 'octubre' });
 });
 
-test('cada día preparado tiene su principal, dos o tres "además" y un guion que los dice (5 al 18/10)', () => {
+test('cada día preparado tiene su principal, dos o tres "además" y un guion que los dice (2 al 4/10, 5 al 18/10 y 19 al 31/10)', () => {
   const fechas = Object.keys(datos.dias);
-  assert.equal(fechas.length, 14);
-  assert.deepEqual([fechas[0], fechas.at(-1)], ['2026-10-05', '2026-10-18']);
+  assert.equal(fechas.length, 30);
+  assert.deepEqual([fechas[0], fechas.at(-1)], ['2026-10-02', '2026-10-31']);
+  // Lo armado el 2/10 (2 al 4 y 19 al 31) no sale solo hasta que una persona lo apruebe; lo revisado (5 al 18) sí.
+  for (const f of fechas) {
+    const sinRevisar = f < '2026-10-05' || f > '2026-10-18';
+    assert.equal(datos.dias[f].sale === false, sinRevisar, `${f}: sale`);
+  }
   for (const f of fechas) {
     const d = datos.dias[f];
     assert.ok(d.ademas.length >= 2 && d.ademas.length <= 3, `${f}: ${d.ademas.length} en "además"`);

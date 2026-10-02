@@ -47,6 +47,6 @@ test('por semana, de lunes a domingo', () => {
 test('el mes de candidatas del repositorio se exporta entero, sin puntajes', () => {
   const { dias } = JSON.parse(fs.readFileSync(new URL('../web/data/efemerides-candidatas.json', import.meta.url), 'utf8'));
   const t = textoDeDias(dias);
-  assert.equal((t.match(/^### 2026-/gm) ?? []).length, 31);
+  assert.equal((t.match(/^### 2026-/gm) ?? []).length, 34);
   assert.ok(Object.values(dias).every((d) => d.candidatas.every((c) => t.includes(`[${c.id}]`))), 'todas las candidatas están');
 });
