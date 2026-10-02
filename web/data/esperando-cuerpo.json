@@ -1,23 +1,38 @@
 {
- "generado": "2026-10-02T16:08:17.992Z",
+ "generado": "2026-10-02T16:32:37.894Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "11e02rs",
-   "titulo": "El riesgo país escala hasta los 650 puntos, el valor más alto del año",
-   "copete": "El riesgo país mantiene la tendencia alcista de la primera rueda de octubre y alcanza su valor más alto del año. El indicador elaborado por JP Morgan trepa 14 unidades y se ubica en los 650 puntos básicos , de acuerdo con las pantallas de Rava. De esa forma, supera los 637 que…",
+   "id": "1nbnjir",
+   "titulo": "El riesgo país sube 7% en dos días y llega a 650 puntos, el nivel más alto en once meses",
+   "copete": "El riesgo país mantiene la tendencia alcista de la primera rueda de octubre y alcanza su valor más alto del año. El indicador elaborado por JP Morgan trepa 14 unidades y se ubica en los 650 puntos básicos (+2,2%) , de acuerdo con las pantallas de Rava. De esa forma, supera los…",
    "seccion": "Economía",
-   "fecha": "2026-10-02T14:56:17.000Z",
+   "fecha": "2026-10-02T15:24:32.000Z",
    "fuentes": [
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-escala-hasta-los-650-puntos-el-valor-mas-alto-del-ano-nid02102026/",
-     "fecha": "2026-10-02T14:56:17.000Z"
-    },
     {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/economia/riesgo-pais-sube-7-dias-llega-650-puntos-nivel-alto-once-meses_0_mZ4cRAV94q.html",
      "fecha": "2026-10-02T15:24:32.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-escala-hasta-los-650-puntos-el-valor-mas-alto-del-ano-nid02102026/",
+     "fecha": "2026-10-02T16:11:53.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/economia/despues-discurso-milei-riesgo-pais-llega-maximo-ano-2026102125317",
+     "fecha": "2026-10-02T15:53:00.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/economia/el-riesgo-pais-escala-a-650-puntos-basicos-y-alcanza-un-nuevo-maximo-en-el-ano-a40.phtml",
+     "fecha": "2026-10-02T15:26:23.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/riesgo-pais-record-ano-650-puntos/",
+     "fecha": "2026-10-02T15:48:38.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -30,45 +45,72 @@
      "fecha": "2026-10-02T15:41:06.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 50 y la fuente no lo dice",
-   "maximo": 3
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (antecedente): el cuerpo usa 10, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 79 palabras",
+   "maximo": 4
   },
   {
-   "id": "1fs15g0",
-   "titulo": "Murió Ricardo Soulé, el líder de Vox Dei y una leyenda del rock argentino, creador de Presente y La Biblia",
-   "copete": "Murió Ricardo Soulé, prócer del rock nacional y fundador de Vox Dei. El músico estaba internado en un sanatorio de Quilmes. El el creador de himnos que marcaron a fuego la historia del rock argentino había publicado un comunicado en sus redes sociales el 11 de septiembre…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-02T15:31:55.000Z",
+   "id": "w3769j",
+   "titulo": "Balcarce presentó la 22ª Fiesta Nacional del Postre: Cuatro días de sabores, espectáculos y propuestas para toda la familia",
+   "copete": "El lanzamiento se realizó en la Casa del Bicentenario, encabezado por el intendente Esteban Reino y la subsecretaria de Turismo, Rosario Tufró, junto a productores y emprendedores locales. La celebración tendrá lugar del viernes 9 al lunes 12 de octubre, en el predio de la…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-02T16:12:36.000Z",
    "fuentes": [
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/espectaculos/murio-ricardo-soule-lider-vox-dei-leyenda-rock-argentino-creador-presente-biblia_0_BXZFQjybPv.html",
-     "fecha": "2026-10-02T15:31:55.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/espectaculos/musica/biblia-vox-dei-gran-obra-ricardo-soule-marco-dia-rock-argentino-hizo-contacto-dios_0_RZTJFvwTwg.html",
-     "fecha": "2026-10-02T15:34:57.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/musica/noticias/2026/10/02/murio-ricardo-soule-el-poeta-de-vox-dei-que-convirtio-la-biblia-en-rock/",
-     "fecha": "2026-10-02T15:40:40.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/ratingcero/murio-ricardo-soule-lider-vox-dei-y-pionero-del-rock-nacional-n250573",
-     "fecha": "2026-10-02T15:55:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/murio-ricardo-soule-el-alma-de-vox-dei-y-pionero-del-rock-nacional/",
-     "fecha": "2026-10-02T15:40:14.000Z"
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/02/balcarce-presento-la-22a-fiesta-nacional-del-postre-cuatro-dias-de-sabores-espectaculos-y-propuestas-para-toda-la-familia/",
+     "fecha": "2026-10-02T16:12:36.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (numero): el cuerpo dice 0 y la fuente no lo dice; sin esas oraciones quedan 72 palabras",
+   "motivo": "cuerpo: 1 problema (copia): copia 16 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 83 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "zdl4xp",
+   "titulo": "Argentina será local en Zárate durante la próxima Ventana FIBA",
+   "copete": "La Selección Argentina ya tiene sede confirmada para sus dos compromisos como local por la quinta ventana de los Clasificatorios de las Américas rumbo a la Copa del Mundo FIBA 2027. El equipo nacional recibirá a Bahamas el jueves 26 de noviembre y a Canadá el domingo 29, ambos…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-01T19:36:04.000Z",
+   "fuentes": [
+    {
+     "medio": "Básquet Plus",
+     "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
+     "fecha": "2026-10-01T19:46:22.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/basquet/zarate-localia-argentina-basquet-noviembre-eliminatorias-bahamas-canada_0_RcstTHNoRV.html",
+     "fecha": "2026-10-02T14:40:35.000Z"
+    },
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/deportes/argentina-jugara-en-zarate-ante-bahamas-y-canada-por-las-eliminatorias-al-mundial-2027",
+     "fecha": "2026-10-01T20:36:58.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/argentina-jugara-ante-bahamas-y-canada-en-zarate-por-los-clasificatorios-fiba",
+     "fecha": "2026-10-02T12:28:42.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/01/109923-la-seleccion-argentina-de-basquet-jugara-las-proximas-ventanas-fiba-en-zarate",
+     "fecha": "2026-10-01T19:36:04.000Z"
+    },
+    {
+     "medio": "Pick and Roll",
+     "enlace": "https://pickandroll.com.ar/argentina-recibira-a-bahamas-y-canada-en-zarate-por-la-quinta-ventana/",
+     "fecha": "2026-10-01T21:31:07.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-2-7-31-0-por-que-la-seleccion-argentina-recibira-a-bahamas-y-canada-en-zarate",
+     "fecha": "2026-10-02T10:45:20.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
    "maximo": 4
   },
   {

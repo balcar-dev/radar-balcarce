@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T16:08:17.992Z",
- "portada": 58,
- "archivo": 779,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-02T16:32:37.894Z",
+ "portada": 62,
+ "archivo": 783,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-02T16:08:18.031Z",
+  "generado": "2026-10-02T16:32:37.941Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,8 +116,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
+     },
      {
       "id": "uxgtdx",
       "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
@@ -129,13 +134,8 @@
       "seccion": "Economía"
      },
      {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      }
     ]
@@ -147,21 +147,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "sty1jd",
+      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "seccion": "Balcarce"
+     },
      {
       "id": "jzu6k",
       "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce"
      },
      {
-      "id": "g34tir",
-      "titulo": "Balcarce reúne a la región en el primer encuentro por la comunidad sorda",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1a9rnj4",
-      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
       "seccion": "Balcarce"
      }
     ]
