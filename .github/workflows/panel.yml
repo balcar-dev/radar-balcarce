@@ -17,14 +17,14 @@ on:
   workflow_dispatch:
     inputs:
       accion:
-        description: 'Qué hacer (escribir)'
+        description: 'Qué hacer (escribir o pista)'
         required: true
         default: escribir
       id:
         description: 'La nota'
         required: true
       pedido:
-        description: 'Lo que pidió la persona (opcional; queda a la vista en GitHub)'
+        description: 'Lo que pidió la persona, o el texto de la pista (queda a la vista en GitHub)'
         required: false
         default: ''
       marca:

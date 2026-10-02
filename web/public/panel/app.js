@@ -23,6 +23,7 @@ import {
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
+import { htmlDeFormulario, htmlDeInforme } from './pistas.js';
 import { estadoPorRed, explicarFalloDeRed, problemasDeHoy, NOMBRE_DE_RED, NOMBRE_DE_PARTE } from './redes-estado.js';
 
 const $ = (s) => document.querySelector(s);
@@ -299,7 +300,7 @@ function pestanas() {
   const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
   const items = [
     ['esperan', 'Esperan', esperan], ['sin-cuerpo', 'Sin cuerpo', sinCuerpo],
-    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['revision', 'Revisión', E.revision ? (contarRevision(E.revision.items).graves ? '⚠' : contarRevision(E.revision.items).total || '✓') : '·'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
+    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['pistas', 'Pistas', '✎'], ['revision', 'Revisión', E.revision ? (contarRevision(E.revision.items).graves ? '⚠' : contarRevision(E.revision.items).total || '✓') : '·'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
   ];
   nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${E.pestana === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
   nav.hidden = false;
@@ -327,6 +328,7 @@ function vistaLista() {
   else if (E.pestana === 'sin-cuerpo') vistaSinCuerpo(cuando);
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
+  else if (E.pestana === 'pistas') vistaPistas();
   else if (E.pestana === 'revision') vistaRevision();
   else if (E.pestana === 'fechas') vistaFechas();
   else if (E.pestana === 'numeros') vistaNumeros();
@@ -483,6 +485,47 @@ async function reintentarParte(pieza, red, parte) {
     E.pestana = 'redes';
     vistaLista();
   }
+}
+
+// ------------------------------------------------------------------ las pistas
+
+function vistaPistas() {
+  pestanas();
+  $('#recargar').hidden = true;
+  const apps = { esc, haceCuanto, chip };
+  app.innerHTML = htmlDeFormulario({ texto: E.pista?.texto ?? '' }, apps) + (E.pista?.informe ? htmlDeInforme(E.pista.informe, apps) : '') + queEs('pistas');
+}
+
+/** Manda la pista a la nube (workflow "Panel del celular") y muestra el informe cuando vuelve, cifrado para este celular. */
+async function investigarPista() {
+  const texto = ($('#texto-pista')?.value ?? '').trim();
+  if (texto.length < 20) { aviso('Pegá el texto de la pista (al menos una frase).'); return; }
+  E.pista = { texto, informe: null };
+  $('#pestanas').hidden = true;
+  app.innerHTML = '<div class="girando"></div><p class="vacio">Investigando la pista…<br>Tarda un minuto: GitHub busca qué medios lo cubrieron y compara los títulos.</p>';
+  const marca = marcaNueva();
+  const id = `pista${marca}`;
+  const desde = Date.now();
+  try {
+    await E.cliente.disparar('panel.yml', { accion: 'pista', id, pedido: texto, marca });
+    let corrida = null;
+    for (let i = 0; i < 72; i += 1) {
+      await dormir(5000);
+      corrida = corridaConMarca(await E.cliente.corridas('panel.yml'), marca);
+      if (corrida?.status === 'completed') break;
+    }
+    if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Probá de nuevo en un rato.');
+    if (corrida.conclusion !== 'success') throw new Error('La corrida de GitHub falló. Mirá "Panel del celular" en GitHub → Actions.');
+    const { json } = await E.cliente.leer(ARCHIVOS.borradores);
+    const sobre = json.borradores?.[id];
+    const informe = sobre && Date.parse(sobre.cuando) >= desde - 120000 ? await abrir(sobre, E.llaves) : null;
+    if (!informe) throw new Error('No pude abrir el informe en este celular. Si recién lo registraste, probá de nuevo.');
+    E.pista = { texto, informe };
+  } catch (e) {
+    aviso(explicarError(e), { ms: 9000 });
+  }
+  vistaPistas();
+  window.scrollTo(0, 0);
 }
 
 // ------------------------------------------------------------------ la revisión
@@ -966,6 +1009,7 @@ document.addEventListener('click', async (ev) => {
   const por = E.nombre;
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
   if (accion === 'cerrar-aviso') $('#aviso').hidden = true;
+  else if (accion === 'investigar-pista') investigarPista();
   else if (accion === 'rango-numeros') { E.rangoNumeros = Number(el.dataset.rango); vistaNumeros(); }
   else if (accion === 'sub-fechas') { E.subfechas = el.dataset.sub; vistaFechas(); }
   else if (accion === 'abrir-dia') { E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }

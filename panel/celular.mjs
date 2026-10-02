@@ -3,6 +3,7 @@
 // el celular dispara con la llave de quien lo usa.
 //
 //   node panel/celular.mjs escribir --id=abc123 [--pedido="más corta"]
+//   node panel/celular.mjs pista --id=pista1a2b3c4d --pedido="el texto de la pista"   (1/10: el informe de una pista, ingesta/pistas.mjs)
 //
 // Busca la nota (lo que espera a una persona, en la caché de Actions que deja
 // "Actualizar la web"; lo publicado o lo que espera cuerpo, en web/data/), la
@@ -20,6 +21,7 @@ import { leerJson } from '../ingesta/json.mjs';
 import { reescribirUna, notaDesdeLoPublicado } from './reescribir-una.mjs';
 import { cerrar, leerLlaves } from './cifrado.mjs';
 import { PEDIDO_MAXIMO } from '../reels/reescritura.mjs';
+import { investigarPista, PISTA } from '../ingesta/pistas.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const DATOS = path.join(RAIZ, 'web', 'data');
@@ -63,15 +65,30 @@ async function main() {
   const [accion] = process.argv.slice(2);
   const opcion = (n) => process.argv.find((a) => a.startsWith(`--${n}=`))?.slice(n.length + 3) ?? '';
   const id = opcion('id').trim();
-  const pedido = opcion('pedido').replace(/\s+/g, ' ').trim().slice(0, PEDIDO_MAXIMO);
-  if (accion !== 'escribir' || !idValido(id)) {
-    console.log('Uso: node panel/celular.mjs escribir --id=<nota> [--pedido="…"]');
+  const pedido = opcion('pedido').replace(/\s+/g, ' ').trim().slice(0, accion === 'pista' ? PISTA.maximoDeTexto : PEDIDO_MAXIMO);
+  if (!['escribir', 'pista'].includes(accion) || !idValido(id)) {
+    console.log('Uso: node panel/celular.mjs escribir --id=<nota> [--pedido="…"]  ·  node panel/celular.mjs pista --id=<pista…> --pedido="…"');
     process.exit(1);
   }
   const llaves = leerLlaves(leerJson(ARCHIVO_LLAVES, null));
   if (!llaves.length) {
     console.log('No hay ningún celular registrado (web/data/celular-llaves.json): no hay a quién mandarle el borrador.');
     process.exit(1);
+  }
+
+  if (accion === 'pista') {
+    // Lo nuestro, para ver si ya lo tenemos: la portada, el archivo y lo que trajo la ingesta.
+    const notas = [
+      ...(leerJson(NOTAS_EN_CACHE, null)?.notas ?? []),
+      ...(leerJson(path.join(DATOS, 'portada.json'), null)?.notas ?? []),
+      ...(leerJson(path.join(DATOS, 'archivo.json'), null)?.notas ?? []),
+    ];
+    const informe = await investigarPista(pedido, { notas });
+    const guardado = conBorrador(leerJson(ARCHIVO_BORRADORES, null), id, cerrar({ id, tipo: 'pista', ...informe }, llaves));
+    fs.writeFileSync(ARCHIVO_BORRADORES, `${JSON.stringify(guardado, null, 1)}\n`, 'utf8');
+    // Al registro, nada de la pista: sólo si se pudo investigar.
+    console.log(informe.ok ? `Informe de la pista listo (${id}).` : `La pista ${id} no se investigó (el motivo va cifrado al celular).`);
+    return;
   }
 
   const encontrada = buscarNota(id, {
