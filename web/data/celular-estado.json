@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T04:02:04.522Z",
- "portada": 65,
+ "generado": "2026-10-02T04:31:32.235Z",
+ "portada": 64,
  "archivo": 754,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-02T04:02:04.556Z",
+  "generado": "2026-10-02T04:31:32.269Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 54,
     "notas": [
      {
       "id": "1j4lf17",
@@ -93,19 +93,19 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "13npbde",
-      "titulo": "Dibu Martínez postula a Nico Paz como sucesor de la camiseta diez de Messi",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "12mca8c",
-      "titulo": "El paro docente registra un alto acatamiento",
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      },
      {
-      "id": "vot8hs",
-      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
-      "seccion": "Cultura y agenda"
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 48,
     "notas": [
      {
       "id": "17z7wso",
@@ -124,18 +124,18 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
       "seccion": "Balcarce"
      },
      {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-      "seccion": "Fútbol"
+      "id": "vot8hs",
+      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "g8dncb",
-      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
      }
     ]
@@ -147,11 +147,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 43,
     "notas": [
      {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "id": "g8dncb",
+      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
       "seccion": "Balcarce"
      },
      {
