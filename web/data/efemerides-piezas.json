@@ -1,21 +1,18 @@
 {
   "generado": "2026-10-02",
-  "nota": "Un día como hoy: lo que se lee, quién lo lee y cómo se ve, preparado una semana por vez (5 al 18/10/2026 revisados; 2 al 4/10 y 19 al 31/10 armados el 2/10 y sin revisar, con \"sale\": false hasta que se aprueben). Todos los días a las 9:00, con la locutora. Si nadie toca nada, sale como está; una entrada con \"sale\": false se saca. Los guiones están escritos con los datos verificados; los 'verificar' son datos que no vienen del archivo y hay que confirmar con una segunda fuente.",
+  "nota": "Un día como hoy: lo que se lee, quién lo lee y cómo se ve, preparado una semana por vez (5 al 18/10/2026 revisados; 2 al 4/10 y 19 al 31/10 armados el 2/10 y sin revisar, con \"sale\": false hasta que se aprueben). Todos los días a las 9:00, con la locutora. Si nadie toca nada, sale como está; una entrada con \"sale\": false se saca. Los guiones están escritos con hechos de fecha confirmada: en los días armados el 2/10 (2 al 4 y 19 al 31) no quedó ningún dato a confirmar.",
   "hora": "09:00",
   "dias": {
     "2026-10-02": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1ogcuex",
         "anio": 1869,
         "titulo": "Nace Mahatma Gandhi",
         "cuerpo": "Líder del movimiento por la independencia de la India, que defendió la no violencia. Hoy es el Día Internacional de la No Violencia.",
-        "verificar": [
-          "Nació el 2/10/1869 en Porbandar (India)",
-          "El 2/10 es el Día Internacional de la No Violencia (ONU) y en Argentina el Día Nacional de la No Violencia (ley 27.092)"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -24,9 +21,9 @@
           "texto": "El HMS Beagle, con Charles Darwin a bordo, llega a Falmouth al terminar su vuelta al mundo"
         },
         {
-          "id": "10r8xv0",
-          "anio": 1925,
-          "texto": "William Taynton, un joven ayudante, es la primera persona que aparece en una televisión"
+          "id": "j4qltq",
+          "anio": 1955,
+          "texto": "Se apaga definitivamente la ENIAC, una de las primeras computadoras electrónicas"
         },
         {
           "id": "tl42fn",
@@ -34,32 +31,29 @@
           "texto": "Día Nacional del Recolector de Residuos"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1869, nació Mahatma Gandhi, el líder de la independencia de la India, que defendió la no violencia. Por eso hoy es el Día Internacional de la No Violencia. Y además, un día como hoy: en 1836 el Beagle, con Charles Darwin a bordo, llegó a Falmouth al terminar su vuelta al mundo; en 1925 William Taynton fue la primera persona que apareció en una televisión; y hoy es el Día Nacional del Recolector de Residuos. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1869, nació Mahatma Gandhi, el líder de la independencia de la India, que defendió la no violencia. Por eso hoy es el Día Internacional de la No Violencia. Y además, un día como hoy: en 1836 el Beagle, con Charles Darwin a bordo, llegó a Falmouth, en Inglaterra, al terminar su vuelta al mundo; en 1955 se apagó para siempre la ENIAC, una de las primeras computadoras electrónicas; y hoy es el Día Nacional del Recolector de Residuos. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-03": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
-        "id": "1ajyx2g",
-        "anio": 1849,
-        "titulo": "Encuentran a Edgar Allan Poe, delirando, en una taberna",
-        "cuerpo": "El escritor estadounidense, maestro del cuento de misterio, fue hallado en Baltimore muy enfermo. Murió cuatro días después.",
-        "verificar": [
-          "Hallado el 3/10/1849 en Ryan's Tavern (Baltimore) y muerto el 7/10",
-          "Es una fecha triste: si se prefiere algo más liviano, reemplazar por Godoy Cruz"
-        ]
+        "id": "1m8hvqu",
+        "anio": 1931,
+        "titulo": "Se inaugura el palacio de la Legislatura porteña",
+        "cuerpo": "En Buenos Aires se inaugura el lujoso palacio del Concejo Deliberante, hoy Legislatura de la Ciudad, construido con mármoles. Hace 95 años.",
+        "verificar": []
       },
       "ademas": [
+        {
+          "id": "1mtc0kr",
+          "anio": 1903,
+          "texto": "Se funda Cipolletti, en Río Negro"
+        },
         {
           "id": "gsnhis",
           "anio": 1959,
           "texto": "Se inaugura el estadio Feliciano Gambarte, de Godoy Cruz, en Mendoza"
-        },
-        {
-          "id": "urqxf6",
-          "anio": 1778,
-          "texto": "El capitán James Cook llega a Alaska"
         },
         {
           "id": "5r3url",
@@ -67,40 +61,37 @@
           "texto": "Día del Odontólogo"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1849, en Baltimore, encontraron al escritor Edgar Allan Poe, maestro del cuento de misterio, delirando en una taberna. Murió cuatro días después. Y además, un día como hoy: en 1778 el capitán James Cook llegó a Alaska; en 1959 se inauguró en Mendoza el estadio Feliciano Gambarte, de Godoy Cruz; y hoy es el Día del Odontólogo. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 95 años, en 1931, se inauguró en Buenos Aires el lujoso palacio del Concejo Deliberante, hoy Legislatura de la Ciudad. Y además, un día como hoy: en 1903 se fundó Cipolletti, en Río Negro; en 1959 se inauguró en Mendoza el estadio Feliciano Gambarte, del club Godoy Cruz; y hoy es el Día del Odontólogo. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-04": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
-        "id": "1onz2dq",
-        "anio": 2009,
-        "titulo": "Fallece Mercedes Sosa",
-        "cuerpo": "La Negra, la voz más grande del folklore argentino, murió en Buenos Aires a los 74 años.",
-        "verificar": [
-          "Murió el 4/10/2009 en Buenos Aires, a los 74 años (nació el 9/7/1935)",
-          "Es un hecho triste; la alternativa liviana es Virginia Luque"
-        ]
+        "id": "9dljlt",
+        "anio": 1582,
+        "titulo": "Diez días que desaparecieron del calendario",
+        "cuerpo": "Se decreta el calendario gregoriano: la noche del jueves 4 de octubre dio paso al viernes 15. Es el calendario que usamos hoy.",
+        "verificar": []
       },
       "ademas": [
+        {
+          "id": "1v3vxg6",
+          "anio": 1915,
+          "texto": "Nace Silvina Bullrich, escritora argentina"
+        },
         {
           "id": "p802n7",
           "anio": 1927,
           "texto": "Nace Virginia Luque, actriz y cantante argentina"
         },
         {
-          "id": "1v3vxg6",
-          "anio": 1915,
-          "texto": "Nace la escritora argentina Silvina Bullrich"
-        },
-        {
-          "id": "19d88cd",
-          "anio": 2011,
-          "texto": "Sale a la venta el iPhone 4S, un día antes de la muerte de Steve Jobs"
+          "id": "1onz2dq",
+          "anio": 2009,
+          "texto": "Fallece Mercedes Sosa, la cantante"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 2009, murió Mercedes Sosa, la Negra, la voz más grande del folklore argentino. Tenía 74 años. Y además, un día como hoy: en 1915 nació la escritora Silvina Bullrich; en 1927 nació la actriz y cantante Virginia Luque; y en 2011 salió a la venta el iPhone 4S, un día antes de la muerte de Steve Jobs. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1582, se decretó el calendario gregoriano, el que usamos hasta hoy: la noche del jueves 4 de octubre dio paso al viernes 15, y diez días desaparecieron del calendario. Y además, un día como hoy: en 1915 nació la escritora argentina Silvina Bullrich; en 1927 nació la actriz y cantante Virginia Luque; y en 2009 murió Mercedes Sosa, la Negra, una de las grandes voces del folklore argentino. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-05": {
       "voz": "locutora",
@@ -499,92 +490,79 @@
     "2026-10-19": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "15jfqt5",
         "anio": 1928,
         "titulo": "Aparece Patoruzú",
         "cuerpo": "El cacique tehuelche de la historieta nace en una tira del diario Crítica, creado por Dante Quinterno.",
-        "verificar": [
-          "Primera aparición el 19/10/1928 en el diario Crítica, como personaje secundario"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
-          "id": "qrnqfu",
-          "anio": 2007,
-          "texto": "Soda Stereo comienza la gira de regreso \"Me Verás Volver\""
-        },
-        {
-          "id": "ictkbw",
-          "anio": 2011,
-          "texto": "Google lanza Android 4.0, que unifica celulares y tabletas"
+          "id": "dpuy28",
+          "anio": 2025,
+          "texto": "En París se produce un robo en la Galería de Apolo del museo del Louvre"
         },
         {
           "id": "fgl9ri",
           "anio": 1937,
-          "texto": "Muere el cirujano argentino Pedro Chutró"
+          "texto": "Fallece el cirujano argentino Pedro Chutró"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1928, apareció por primera vez Patoruzú, el cacique tehuelche de la historieta argentina, en una tira del diario Crítica creada por Dante Quinterno. Y además, un día como hoy: en 2007 Soda Stereo comenzó su gira de regreso, Me Verás Volver; en 2011 Google lanzó Android 4.0, que unificó celulares y tabletas; y en 1937 murió el cirujano argentino Pedro Chutró. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1928, apareció por primera vez Patoruzú, el cacique tehuelche de la historieta argentina, en una tira del diario Crítica creada por Dante Quinterno. Y además, un día como hoy: en 1937 murió en Buenos Aires el prestigioso cirujano argentino Pedro Chutró; y en 2025, hace un año, se produjo un robo en la Galería de Apolo del museo del Louvre, en París. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-20": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "b5bw01",
         "anio": 1976,
         "titulo": "Maradona debuta en Primera",
         "cuerpo": "Diego Maradona, con 15 años, debuta con Argentinos Juniors. Hace 50 años.",
-        "verificar": [
-          "Debut el 20/10/1976 contra Talleres de Córdoba, diez días antes de cumplir 16",
-          "Era menor en ese momento, pero hoy es adulto y fallecido: no es identificar a un menor"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
           "id": "13mujg6",
           "anio": 1938,
-          "texto": "Nace César Isella, músico y compositor folklórico"
+          "texto": "Nace César Isella, músico y compositor folklórico argentino"
         },
         {
-          "id": "h2l3sg",
-          "anio": 2007,
-          "texto": "Soda Stereo da su segundo concierto de regreso en River, ante unas 70.000 personas"
+          "id": "oye8c9",
+          "anio": 1910,
+          "texto": "Es botado en Belfast el RMS Olympic, barco gemelo del Titanic"
         },
         {
-          "id": "1hemo8z",
-          "anio": 1906,
-          "texto": "Se funda en Rosario el club Central Córdoba"
+          "id": "1rd9106",
+          "anio": 2004,
+          "texto": "Se anuncia Ubuntu, el sistema operativo de Canonical y Mark Shuttleworth"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, hace 50 años, en 1976, un pibe de 15 llamado Diego Maradona debutó en Primera con Argentinos Juniors. Y además, un día como hoy: en 1938 nació el músico folklórico César Isella; en 1906 se fundó en Rosario el club Central Córdoba; y en 2007 Soda Stereo dio su segundo concierto de regreso en River, ante unas 70 mil personas. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 50 años, en 1976, un pibe de 15 llamado Diego Maradona debutó en Primera con Argentinos Juniors. Y además, un día como hoy: en 1910 se botó en Belfast el RMS Olympic, el barco gemelo del Titanic; en 1938 nació el músico folklórico César Isella; y en 2004 se anunció Ubuntu, el sistema operativo de Mark Shuttleworth. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-21": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "syqx1y",
         "anio": 1921,
         "titulo": "Se funda el Radio Club Argentino",
         "cuerpo": "Nace la entidad de los radioaficionados, ligada a los comienzos de la radio en el país. Hoy es su día.",
-        "verificar": [
-          "Fundado el 21/10/1921 (LU4AA)",
-          "El Día del Radioaficionado se celebra desde 1950"
-        ]
+        "verificar": []
       },
       "ademas": [
-        {
-          "id": "10t5bkt",
-          "anio": 1982,
-          "texto": "Gabriel García Márquez es declarado Premio Nobel de Literatura"
-        },
         {
           "id": "igx9nb",
           "anio": 1833,
           "texto": "Nace Alfred Nobel, el inventor sueco que creó los premios"
+        },
+        {
+          "id": "10t5bkt",
+          "anio": 1982,
+          "texto": "Gabriel García Márquez es declarado Premio Nobel de Literatura"
         },
         {
           "id": "1aaahvr",
@@ -597,15 +575,13 @@
     "2026-10-22": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1j4gpdb",
         "anio": 1854,
         "titulo": "Se funda Chivilcoy",
         "cuerpo": "La ciudad bonaerense, hoy cabecera del partido del mismo nombre, cumple 172 años.",
-        "verificar": [
-          "Fundación el 22/10/1854"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -614,9 +590,9 @@
           "texto": "Nace Sarah Bernhardt, la gran actriz francesa"
         },
         {
-          "id": "jtn1kx",
-          "anio": 1975,
-          "texto": "La sonda soviética Venera 9 se posa en Venus y envía las primeras fotos de su superficie"
+          "id": "46uec2",
+          "anio": 1854,
+          "texto": "Fallece el general José María Paz, destacado militar argentino"
         },
         {
           "id": "oylxwp",
@@ -624,53 +600,43 @@
           "texto": "Microsoft lanza Windows 7"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1854, se fundó Chivilcoy, la ciudad bonaerense que cumple 172 años. Y además, un día como hoy: en 1844 nació Sarah Bernhardt, la gran actriz francesa; en 1975 la sonda soviética Venera 9 se posó en Venus y envió las primeras fotos de su superficie; y en 2009 Microsoft lanzó Windows 7. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1854, se fundó Chivilcoy, la ciudad bonaerense que cumple 172 años. Y además, un día como hoy: en 1844 nació Sarah Bernhardt, la gran actriz francesa; en 1854, el mismo año de Chivilcoy, murió el general argentino José María Paz; y en 2009 Microsoft lanzó Windows 7. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-23": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "tcoqyz",
         "anio": 1947,
         "titulo": "Houssay, Nobel de Medicina",
         "cuerpo": "Bernardo Houssay se convierte en el primer latinoamericano con un Nobel científico.",
-        "verificar": [
-          "Se anunció el 23/10/1947 (la ceremonia fue en diciembre)",
-          "Primer latinoamericano con un Nobel de ciencias"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
-          "id": "f6vsrm",
-          "anio": 1730,
-          "texto": "Se funda San Antonio de Areco, cuna de la tradición gaucha"
+          "id": "1l16n9m",
+          "anio": 1951,
+          "texto": "Nace Charly García, músico y compositor argentino de rock"
         },
         {
           "id": "p335i4",
           "anio": 1869,
           "texto": "Se funda la villa bonaerense de General Pinto"
-        },
-        {
-          "id": "hyjk8t",
-          "anio": 1730,
-          "texto": "Se funda la Bajada del Paraná, la actual ciudad de Paraná"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1947, se anunció que Bernardo Houssay ganaba el Premio Nobel de Medicina: fue el primer latinoamericano en recibir un Nobel científico. Y además, un día como hoy: en 1730 se fundó San Antonio de Areco, cuna de la tradición gaucha; en 1730 también se fundó la Bajada del Paraná, la actual ciudad de Paraná; y en 1869 se fundó la villa bonaerense de General Pinto. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1947, se anunció que Bernardo Houssay ganaba el Premio Nobel de Medicina: fue el primer latinoamericano en recibir un Nobel científico. Y además, un día como hoy: en 1869 se fundó la villa bonaerense de General Pinto; y en 1951, hace 75 años, nació Charly García, músico, compositor y una de las grandes figuras del rock argentino. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-24": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1irwou",
         "anio": 1985,
         "titulo": "Argentinos Juniors, campeón de la Libertadores",
         "cuerpo": "En Asunción, el Bicho gana por primera vez la Copa Libertadores de América. Hace 41 años.",
-        "verificar": [
-          "Final jugada en Asunción el 24/10/1985 contra América de Cali (en penales)"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -694,15 +660,13 @@
     "2026-10-25": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "14fd4fw",
         "anio": 2001,
         "titulo": "Windows XP sale a la venta",
         "cuerpo": "El sistema de Microsoft con el prado verde de fondo de pantalla cumple 25 años.",
-        "verificar": [
-          "Salió a la venta el 25/10/2001 (el texto del feed estaba mal armado: se reescribió)"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -714,28 +678,20 @@
           "id": "o57kcb",
           "anio": 2009,
           "texto": "U2 da el primer concierto en vivo por YouTube"
-        },
-        {
-          "id": "s7w27v",
-          "anio": 1864,
-          "texto": "Una ley bonaerense crea 45 nuevos partidos al sur y al oeste de la provincia"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, hace 25 años, en 2001, salió a la venta Windows XP, el sistema de Microsoft del prado verde en la pantalla. Y además, un día como hoy: en 1864 una ley bonaerense creó 45 nuevos partidos al sur y al oeste de la provincia; en 1938 murió la poeta Alfonsina Storni; y en 2009 U2 dio el primer concierto en vivo por YouTube. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 25 años, en 2001, salió a la venta Windows XP, el sistema de Microsoft del prado verde en la pantalla. Y además, un día como hoy: en 1938 murió la poeta argentina Alfonsina Storni, autora de obras como Languidez y Ocre; y en 2009 U2 dio el primer concierto en vivo por YouTube, parte de su gira 360. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-26": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1n5pcpy",
         "anio": 1965,
         "titulo": "Parte la primera expedición argentina al Polo Sur",
         "cuerpo": "Desde la base General Belgrano, en la Antártida, sale la columna que lideró el coronel Jorge Edgar Leal.",
-        "verificar": [
-          "Jefe: Jorge Edgar LEAL (el feed dice \"Legal\", está mal)",
-          "Fecha de partida 26/10/1965 desde la base General Belgrano"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -759,15 +715,13 @@
     "2026-10-27": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "oosgp",
         "anio": 1970,
         "titulo": "Leloir, Nobel de Química",
         "cuerpo": "Luis Federico Leloir, científico argentino, gana el Nobel de Química.",
-        "verificar": [
-          "Se ANUNCIÓ el 27/10/1970; la entrega fue el 10/12. Por eso el guion dice \"se anunció\""
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -776,30 +730,23 @@
           "texto": "Nace James Cook, el navegante y cartógrafo británico"
         },
         {
-          "id": "1g2ty4n",
-          "anio": 1492,
-          "texto": "Cristóbal Colón llega a la isla de Cuba"
-        },
-        {
-          "id": "149ikvc",
-          "anio": 1990,
-          "texto": "Astrónomos descubren una galaxia 60 veces mayor que la Vía Láctea"
+          "id": "b8ttg9",
+          "anio": 1974,
+          "texto": "Nace Elena Roger, cantante y actriz argentina"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1970, se anunció que el científico argentino Luis Federico Leloir ganaba el Premio Nobel de Química. Y además, un día como hoy: en 1492 Cristóbal Colón llegó a la isla de Cuba; en 1728 nació el navegante James Cook; y en 1990 astrónomos descubrieron una galaxia 60 veces mayor que la Vía Láctea. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1970, se anunció que el científico argentino Luis Federico Leloir ganaba el Premio Nobel de Química. Y además, un día como hoy: en 1728 nació el navegante y cartógrafo británico James Cook; y en 1974 nació en Buenos Aires la cantante y actriz Elena Roger. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-28": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "v1k0qx",
         "anio": 1951,
         "titulo": "Fangio, campeón del mundo por primera vez",
         "cuerpo": "El balcarceño Juan Manuel Fangio gana su primer título de Fórmula 1. Hace 75 años.",
-        "verificar": [
-          "Campeón en el Gran Premio de España (Pedralbes) del 28/10/1951, con Alfa Romeo"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -808,32 +755,30 @@
           "texto": "La NASA lanza el satélite NPP para observar el clima de la Tierra"
         },
         {
-          "id": "1lx6zz4",
-          "anio": 1930,
-          "texto": "Pablo Picasso gana el primer premio internacional de pintura Carnegie"
+          "id": "adrisb",
+          "anio": 1955,
+          "texto": "Nace Bill Gates, fundador de Microsoft"
+        },
+        {
+          "id": "zvk806",
+          "anio": 1979,
+          "texto": "Nace Jawed Karim, cofundador de YouTube"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, hace 75 años, en 1951, nuestro Juan Manuel Fangio, el chueco de Balcarce, ganó su primer campeonato mundial de Fórmula 1. Y además, un día como hoy: en 1930 Pablo Picasso ganó el primer premio internacional de pintura Carnegie; y en 2011 la NASA lanzó el satélite NPP para observar el clima de la Tierra. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 75 años, en 1951, nuestro Juan Manuel Fangio, el chueco de Balcarce, ganó su primer campeonato mundial de Fórmula 1. Y además, un día como hoy: en 1955 nació Bill Gates, el fundador de Microsoft; en 1979 nació Jawed Karim, cofundador de YouTube; y en 2011 la NASA lanzó el satélite NPP para observar el clima de la Tierra. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-29": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "18kokcb",
         "anio": 1969,
         "titulo": "Se inaugura la Base Marambio",
         "cuerpo": "La base antártica argentina, hoy una de las más importantes del continente, cumple 57 años.",
-        "verificar": [
-          "Inaugurada el 29/10/1969 en la isla Marambio (Seymour)"
-        ]
+        "verificar": []
       },
       "ademas": [
-        {
-          "id": "1q4gkie",
-          "anio": 1969,
-          "texto": "Se envía el primer mensaje por ARPANET, el antecesor de Internet"
-        },
         {
           "id": "1s7sdwj",
           "anio": 1787,
@@ -843,22 +788,25 @@
           "id": "18zslbc",
           "anio": 1920,
           "texto": "Nace la actriz argentina Hilda Bernard"
+        },
+        {
+          "id": "1px7nk8",
+          "anio": 1945,
+          "texto": "Jean-Paul Sartre pronuncia en París la conferencia \"El existencialismo es un humanismo\""
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1969, se inauguró la Base Marambio, en la Antártida, hoy una de las bases argentinas más importantes. Y además, un día como hoy: en 1787 Mozart estrenó en Praga su ópera Don Giovanni; en 1920 nació la actriz argentina Hilda Bernard; y en 1969 se envió el primer mensaje por ARPANET, el antecesor de Internet. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1969, se inauguró la Base Marambio, en la Antártida, hoy una de las bases argentinas más importantes. Y además, un día como hoy: en 1787 Mozart estrenó en Praga su ópera Don Giovanni; en 1920 nació la actriz argentina Hilda Bernard; y en 1945 Jean-Paul Sartre dio en París su conferencia El existencialismo es un humanismo. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-30": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "4t54z5",
         "anio": 1921,
         "titulo": "La Selección gana su primer Sudamericano",
         "cuerpo": "Argentina se consagra campeona por primera vez en el Campeonato Sudamericano de fútbol, el antecesor de la Copa América.",
-        "verificar": [
-          "Resultado final del Sudamericano 1921 (Argentina campeona, con la última fecha el 30/10)"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -867,14 +815,14 @@
           "texto": "Nace Diego Armando Maradona"
         },
         {
+          "id": "14ekfon",
+          "anio": 2001,
+          "texto": "Michael Jackson publica \"Invincible\", su último álbum de estudio en vida"
+        },
+        {
           "id": "1ah5z2o",
           "anio": null,
           "texto": "Día Nacional de la Educación Física"
-        },
-        {
-          "id": "14ekfon",
-          "anio": 2001,
-          "texto": "Michael Jackson publica \"Invincible\", su último álbum de estudio"
         }
       ],
       "guion": "Buen día, Balcarce. Un día como hoy, en 1921, la Selección Argentina ganó por primera vez el Campeonato Sudamericano de fútbol, el antecesor de la Copa América. Y además, un día como hoy: en 1960 nació Diego Armando Maradona; en 2001 Michael Jackson publicó Invincible, su último álbum de estudio; y hoy es el Día Nacional de la Educación Física. Un día como hoy, en Radar Balcarce."
@@ -882,15 +830,13 @@
     "2026-10-31": {
       "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: armado por Claude el 2/10, a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
+      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "pyyddg",
         "anio": 1512,
         "titulo": "Se inauguran los frescos de la Capilla Sixtina",
         "cuerpo": "Se presentan al público los frescos del techo pintados por Miguel Ángel, en Roma.",
-        "verificar": [
-          "El 31/10/1512 (víspera de Todos los Santos) se descubrió la bóveda"
-        ]
+        "verificar": []
       },
       "ademas": [
         {
@@ -899,17 +845,12 @@
           "texto": "Miguel Ángel termina \"El Juicio Final\" en la misma capilla"
         },
         {
-          "id": "792x3r",
-          "anio": 1760,
-          "texto": "Nace Hokusai, el pintor japonés de \"La gran ola\""
-        },
-        {
           "id": "115lc9j",
           "anio": 1925,
           "texto": "Muere José Ingenieros, psiquiatra y escritor argentino"
         }
       ],
-      "guion": "Buen día, Balcarce. Un día como hoy, en 1512, se inauguraron en Roma los frescos del techo de la Capilla Sixtina, pintados por Miguel Ángel. Y además, un día como hoy: en 1541 Miguel Ángel terminó El Juicio Final en la misma capilla; en 1760 nació Hokusai, el pintor japonés de La gran ola; y en 1925 murió José Ingenieros, psiquiatra y escritor argentino, autor de El hombre mediocre. Un día como hoy, en Radar Balcarce."
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1512, se inauguraron en Roma los frescos del techo de la Capilla Sixtina, pintados por Miguel Ángel. Y además, un día como hoy: en 1541 Miguel Ángel terminó en esa misma capilla El Juicio Final; y en 1925 murió José Ingenieros, psiquiatra y escritor argentino, autor de El hombre mediocre. Un día como hoy, en Radar Balcarce."
     }
   }
 }
