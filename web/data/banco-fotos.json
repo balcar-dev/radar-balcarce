@@ -4732,5 +4732,44 @@
   "cuando": "2026-10-02T02:02:02.572Z",
   "intentos": 1,
   "fuentes": 7
+ },
+ "17xncu1": {
+  "archivo": "fotos-notas/17xncu1.jpg",
+  "medio": "Solotc",
+  "credito": "Foto: Solotc",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Scaloni expresa su fanatismo por el Turismo Carretera y por Ford",
+  "enlace": "https://www.solotc.com.ar/pasion-lionel-scaloni-ford-turismo-carretera/",
+  "imagenOriginal": "https://www.solotc.com.ar/wp-content/uploads/2026/10/Scaloni-De-Benedictis.webp",
+  "razon": "Es la única imagen completa que muestra el contexto del encuentro (los tres protagonistas y el auto de TC), mientras que la opción B está recortada y no ilustra bien el hecho.",
+  "cuando": "2026-10-02T02:31:25.026Z"
+ },
+ "1kl2omw": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Nito Lezcano reflexiona sobre su sobreseimiento tras una denuncia penal",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-02T02:31:25.026Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "1n70nnq": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Servicio Meteorológico Nacional anticipa lluvias superiores a lo normal",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-02T02:31:25.026Z",
+  "intentos": 1,
+  "fuentes": 5
+ },
+ "1bk6bvf": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "WhatsApp incorpora controles parentales para regular la actividad de los adolescentes",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-02T02:31:25.026Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }
