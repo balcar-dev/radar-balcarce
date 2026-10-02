@@ -1,7 +1,29 @@
 {
- "generado": "2026-10-02T00:07:54.762Z",
+ "generado": "2026-10-02T00:32:27.139Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "o1vynh",
+   "titulo": "Se realizará un corte del servicio eléctrico este viernes en un sector de la ciudad",
+   "copete": "La Cooperativa de Electricidad de Balcarce informó que este viernes 2 de octubre se realizará un corte programado del suministro eléctrico debido a trabajos en líneas de baja tensión. La interrupción del servicio está prevista entre las 7:30 y las 9:00, y afectará a la mayoría…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T16:15:15.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-corte-del-servicio-electrico-este-viernes-en-un-sector-de-la-ciudad",
+     "fecha": "2026-10-01T16:15:15.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
+     "fecha": "2026-10-01T17:24:47.272Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
   {
    "id": "1vmovug",
    "titulo": "El RENAPER realizará trámites de DNI y pasaporte durante tres jornadas",
@@ -57,23 +79,6 @@
    "maximo": 4
   },
   {
-   "id": "c0hkeg",
-   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
-   "copete": "Con motivo de la conmemoración del Día Internacional de las Personas Mayores -celebrado cada 1 de octubre-, la ciudad se prepara para vivir una tarde dedicada de lleno al cuidado y la calidad de vida en la adultez. El encuentro tendrá lugar mañan",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T11:52:38.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-     "fecha": "2026-10-01T11:52:38.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
    "id": "601ifn",
    "titulo": "El viernes 9 se realizará el acto central por el “Día del Respeto a la Diversidad Cultural”",
    "copete": "El próximo viernes 9 de octubre, a las 10 horas, se desarrollará en las instalaciones del Instituto Adventista Balcarce (IAB) el acto central conmemorativo por el “Día del Respeto a la Diversidad Cultural”. La actividad se enmarca en el calendario de actividad docente, que…",
@@ -119,6 +124,23 @@
     }
    ],
    "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "c0hkeg",
+   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
+   "copete": "",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-01T12:01:06.332Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 3
   },
