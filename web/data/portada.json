@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T04:31:32.235Z",
+  "generado": "2026-10-02T05:01:48.003Z",
   "notas": [
     {
       "id": "1j4lf17",
@@ -16,7 +16,7 @@
       "fecha": "2026-10-02T01:39:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T02:01:24.180Z",
-      "relevancia": 96,
+      "relevancia": 86,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1233,15 +1233,17 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T17:31:17.133Z",
       "sinFecha": true,
       "visto": "2026-10-01T17:31:17.133Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "rutas"
+      ],
       "como": "automatica",
       "claves": [
         "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
@@ -1418,6 +1420,71 @@
       }
     },
     {
+      "id": "13npbde",
+      "titulo": "Dibu Martínez postula a Nico Paz como el heredero de la diez de Messi",
+      "copete": "El arquero de la Selección argentina dejó un comentario en redes sociales sobre el futuro dueño del dorsal histórico. El entrenador Lionel Scaloni pidió postergar el debate hasta después de la despedida del capitán.",
+      "cuerpo": "El arquero Damián Martínez candidateó a Nicolás Paz para heredar la camiseta número 10 de la Selección argentina mediante un comentario en la red social Instagram.\n\nEl gesto generó repercusión entre los hinchas en la previa del partido de despedida de Lionel Messi, programado para el martes 6 de octubre en el estadio Monumental frente a Benín. La Asociación del Fútbol Argentino informó la semana pasada que las entradas para ese encuentro se agotaron en pocas horas.\n\nLa postura del guardameta contrasta con la declaración del director técnico Lionel Scaloni, quien indicó que el debate sobre el sucesor del dorsal más pesado no debe darse hasta después de la salida definitiva del capitán.",
+      "guion": "Dibu Martínez postula a Nico Paz como el heredero de la diez de Messi.",
+      "seccion": "Fútbol",
+      "medios": [
+        "Minuto Uno",
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Radio Mitre",
+        "El Gráfico"
+      ],
+      "enlace": "https://www.elgrafico.com.ar/articulo/1116/103110/%C2%BFnuevo-numero-10%3F-dibu-martinez-candidateo-a-un-companiero-para-heredar-la-camiseta-de-messi",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T17:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T04:01:21.634Z",
+      "relevancia": 82,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "El Gráfico",
+          "enlace": "https://www.elgrafico.com.ar/articulo/1116/103110/%C2%BFnuevo-numero-10%3F-dibu-martinez-candidateo-a-un-companiero-para-heredar-la-camiseta-de-messi",
+          "fecha": "2026-10-01T17:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/nuevo-numero-10-el-llamativo-comentario-dibu-martinez-la-antesala-la-despedida-lionel-messi-n6329222",
+          "fecha": "2026-10-02T03:22:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/01/nuevo-numero-10-el-mensaje-de-dibu-martinez-a-nico-paz-que-sorprendio-a-los-hinchas-de-la-seleccion/",
+          "fecha": "2026-10-01T23:40:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/seleccion-argentina/nuevo-numero-10-el-comentario-de-dibu-martinez-que-sorprendio-en-las-redes-id763916.html",
+          "fecha": "2026-10-02T02:00:11.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/el-guino-de-dibu-martinez-a-un-jugador-de-la-seleccion-argentina-para-ser-el-nuevo-10-tras-la-despedida-de-lionel-messi/",
+          "fecha": "2026-10-02T02:50:18.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "dibu-martinez-postula-a-nico-paz-como-sucesor-de-la-camiseta-diez-de",
+      "corregidaAMano": true
+    },
+    {
       "id": "34t457",
       "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
       "copete": "El indicador financiero sube un 4,3% y alcanza las 633 unidades. Las acciones argentinas registran pérdidas de hasta el 6% en el mercado externo.",
@@ -1426,7 +1493,6 @@
       "seccion": "Economía",
       "medios": [
         "La Nación",
-        "Perfil",
         "TN (Todo Noticias)",
         "A24",
         "Crónica",
@@ -1534,7 +1600,7 @@
       "fecha": "2026-10-01T16:32:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T02:31:16.612Z",
-      "relevancia": 98,
+      "relevancia": 91,
       "local": true,
       "publicadaPor": "Hernán",
       "publicadaCuando": "2026-10-02T02:14:14.007Z",
@@ -1591,11 +1657,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44966-el-drama-de-ticiano-le-prohibieron-vender-alfajores-en-la-calle-y-ahora-suena-con-conseguir-un-trabajo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T16:31:02.291Z",
       "sinFecha": true,
       "visto": "2026-10-01T16:31:02.291Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2098,7 +2164,7 @@
       "fecha": "2026-10-01T15:01:12.943Z",
       "sinFecha": false,
       "visto": "2026-10-01T15:01:12.943Z",
-      "relevancia": 88,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2144,27 +2210,28 @@
       "slug": "concejales-proponen-crear-un-registro-municipal-de-acompanantes"
     },
     {
-      "id": "189q8rb",
-      "titulo": "El Fondo Monetario pide que el crecimiento económico argentino llegue a todos los sectores",
-      "copete": "El FMI advirtió que la mejora económica debe distribuirse de manera equitativa. Fue tras la misión técnica que evaluó las cuentas del país en busca de un desembolso de US$800 millones.",
-      "cuerpo": "El Fondo Monetario Internacional señaló el jueves que resulta fundamental que el crecimiento económico del país se expanda hacia otros rubros más allá de la energía, la minería y la agricultura. La directora de Comunicaciones del organismo, Julie Kozack, explicó en una conferencia de prensa en Washington que las conversaciones actuales con el Gobierno buscan consolidar la estabilización alcanzada y extenderla a toda la economía.\n\nLa postura se conoció tras la conclusión de una misión técnica que evaluó las cuentas nacionales durante diez días en Buenos Aires para cumplir con la tercera revisión del programa. El equipo examinó los datos financieros y mantuvo reuniones con funcionarios y actores sociales para redactar un informe que el Directorio Ejecutivo analizará próximamente.\n\nEsa evaluación técnica podría derivar en la liberación de un desembolso de US$800 millones. Por otra parte, la vocera del organismo reconoció que las negociaciones también abordan el impacto de la baja en la recaudación impositiva y la necesidad de lograr más inversiones y creación de empleo.",
-      "guion": "El Fondo Monetario pide que el crecimiento económico argentino llegue a todos los sectores",
+      "id": "df6k44",
+      "titulo": "El FMI pide extender el crecimiento económico a los trabajadores",
+      "copete": "La vocera del organismo internacional remarcó los avances en la baja de la inflación y la acumulación de reservas, pero advirtió sobre la necesidad de repartir los beneficios de la expansión.",
+      "cuerpo": "La vocera del organismo, Julie Kozack, señaló en una conferencia de prensa en Washington que la expansión actual se concentró fuertemente en agricultura, minería y energía.\n\nLa funcionaria resaltó los avances significativos en la restauración de la estabilidad macroeconómica, con una gran caída de la inflación, disciplina fiscal y fortalecimiento de las reservas internacionales. Asimismo, indicó que una misión técnica visitó Buenos Aires entre el 21 y el 29 de septiembre para avanzar en la tercera revisión del programa del Servicio Ampliado del FMI, cuyas conversaciones continuarán en las próximas semanas.",
+      "guion": "El FMI pide extender el crecimiento económico a los trabajadores",
       "seccion": "Economía",
       "medios": [
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Nación",
+        "Ámbito",
         "Página/12",
-        "El Día",
         "Clarín",
+        "El Día",
         "A24"
       ],
-      "enlace": "https://www.clarin.com/economia/fmi-advirtio-importante-crecimiento-amplie-distribuya-forma-equitativa_0_eO07smY52s.html",
+      "enlace": "https://www.ambito.com/economia/el-fmi-advirtio-al-gobierno-que-es-importante-ampliar-el-crecimiento-los-sectores-rezagados-y-los-trabajadores-n6328916",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T15:00:15.000Z",
+      "fecha": "2026-10-01T15:00:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-02T00:01:14.528Z",
+      "visto": "2026-10-01T22:31:16.582Z",
       "relevancia": 72,
       "local": false,
       "publicadaPor": null,
@@ -2172,65 +2239,62 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El FMI pidió que la mejora económica se distribuya en forma equitativa.",
-        "Una misión técnica evaluó las cuentas del país durante diez días en Buenos Aires.",
-        "El organismo analiza un informe que podría liberar un desembolso de US$800 millones.",
-        "La vocera Julie Kozack advirtió sobre la caída en la recaudación impositiva."
+        "El FMI pidió que el crecimiento económico alcance a más sectores y trabajadores.",
+        "La vocera Julie Kozack destacó la baja de la inflación y la acumulación de reservas.",
+        "Una misión técnica visitó Buenos Aires entre el 21 y el 29 de septiembre.",
+        "Las negociaciones para la tercera revisión del programa continúan en las próximas semanas."
       ],
       "seSabe": [
-        "La directora de Comunicaciones del FMI, Julie Kozack, brindó una conferencia de prensa en Washington.",
-        "Una misión técnica encabezada por Joyce Wang concluyó una visita de diez días en Buenos Aires.",
-        "El organismo y el Gobierno discuten cómo consolidar la estabilidad y ampliar el crecimiento a otros sectores.",
-        "El informe técnico se elevará al Directorio Ejecutivo para su aprobación final.",
-        "Un resultado favorable habilitaría un desembolso de US$800 millones."
+        "El FMI advirtió que el crecimiento actual se concentra en energía, minería y agricultura.",
+        "Una misión técnica del organismo visitó Buenos Aires entre el 21 y el 29 de septiembre.",
+        "La portavoz Julie Kozack destacó la baja de la inflación y el superávit fiscal."
       ],
       "noConfirmado": [
-        "Todavía no se informó si el Gobierno alcanzará las metas fiscales o de reservas en esta tercera revisión.",
-        "No trascendió la fecha exacta en la que el Directorio Ejecutivo votará la aprobación del informe."
+        "Todavía no se alcanzó un acuerdo a nivel de personal técnico para la tercera revisión del programa."
       ],
-      "textoRedes": "El FMI advirtió que el crecimiento económico del país debe ampliarse a más sectores y distribuirse de forma equitativa. Fue tras la misión técnica que evaluó las cuentas para un posible desembolso.",
+      "textoRedes": "El Fondo Monetario Internacional advirtió que el crecimiento económico debe extenderse a más sectores productivos y alcanzar de manera equitativa a los trabajadores.",
       "etiquetas": [
         "FMI",
-        "Economía",
-        "Gobierno nacional",
-        "Desembolso",
-        "Inflación"
+        "economia",
+        "inflacion",
+        "reservas",
+        "gobierno"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/fmi-advirtio-importante-crecimiento-amplie-distribuya-forma-equitativa_0_eO07smY52s.html",
-          "fecha": "2026-10-01T15:00:15.000Z",
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/el-fmi-advirtio-al-gobierno-que-es-importante-ampliar-el-crecimiento-los-sectores-rezagados-y-los-trabajadores-n6328916",
+          "fecha": "2026-10-01T15:00:00.000Z",
           "oficial": false,
-          "aporte": "Detalló los dichos de la directora de Comunicaciones del FMI, Julie Kozack, sobre la misión técnica en Buenos Aires y la necesidad de ampliar el crecimiento económico."
+          "aporte": "Aportó las declaraciones de la vocera Julie Kozack sobre la necesidad de ampliar el crecimiento económico y los detalles de la misión técnica."
         },
         {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/economia/el-fmi-advirtio-que-es-importante-que-el-crecimiento-se-amplie-y-se-distribuya-forma-equitativa-n56178",
-          "fecha": "2026-10-01T19:29:00.000Z",
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/el-fmi-advirtio-que-el-crecimiento-en-argentina-debe-llegar-a-mas-sectores-y-trabajadores",
+          "fecha": "2026-10-01T21:52:24.000Z",
           "oficial": false,
-          "aporte": "Mencionó la referencia de Julie Kozack a la reciente misión técnica del organismo en Buenos Aires y la caída del crecimiento."
+          "aporte": "Reprodujo la advertencia del organismo sobre el crecimiento económico y los sectores rezagados."
         },
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/el-fmi-reconocio-sus-inquietudes-por-el-crecimiento-de-la-economia-argentina-y-hablo-de-una-nid01102026/",
-          "fecha": "2026-10-01T15:02:39.000Z",
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/el-fmi-respaldo-el-rumbo-economico-de-milei-pero-pidio-que-el-crecimiento-tambien-alcance-a-los-trabajadores.phtml",
+          "fecha": "2026-10-01T16:34:21.000Z",
           "oficial": false,
-          "aporte": "Informó sobre las declaraciones del FMI desde Washington en torno a las conversaciones con el Gobierno sobre el crecimiento económico."
+          "aporte": "Confirmó las declaraciones de la portavoz sobre la baja de la inflación y la acumulación de reservas."
         },
         {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/01/crecimiento-para-pocos/",
-          "fecha": "2026-10-01T22:47:49.000Z",
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/nuevo-respaldo-del-fmi-al-programa-economico_a6abe69d98419983d42572940",
+          "fecha": "2026-10-01T15:18:42.848Z",
           "oficial": false,
-          "aporte": "Indicó el reconocimiento del organismo sobre las inquietudes en la economía y su planteo de distribuir el crecimiento de manera equitativa entre los trabajadores."
+          "aporte": "No aportó información adicional al no incluir resumen."
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/economia/el-fmi-le-advirtio-al-gobierno-la-necesidad-que-el-crecimiento-se-amplie-y-se-distribuya-forma-equitativa-n1602265",
-          "fecha": "2026-10-01T16:16:00.000Z",
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/el-fmi-pide-que-el-crecimiento-economico-argentino-se-extienda-a-mas-sectores-y-alcance-a-los-trabajadores-politica-y-economia_1790869500",
+          "fecha": "2026-10-01T15:55:59.000Z",
           "oficial": false,
-          "aporte": "Aportó detalles sobre las negociaciones en curso y las advertencias acerca de la caída en la recaudación impositiva y la necesidad de inversiones y empleo."
+          "aporte": "No aportó información adicional al no incluir resumen."
         }
       ],
       "verificacion": {
@@ -2238,10 +2302,10 @@
         "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-fondo-monetario-pide-que-el-crecimiento-economico-argentino-llegue",
+      "slug": "el-fmi-pide-extender-el-crecimiento-economico-a-los-trabajadores",
       "foto": {
-        "archivo": "fotos-notas/189q8rb.jpg",
-        "credito": "Foto: Clarín"
+        "archivo": "fotos-notas/df6k44.jpg",
+        "credito": "Foto: El Eco de Tandil"
       }
     },
     {
@@ -2350,13 +2414,13 @@
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Día",
         "La Voz del Pueblo",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "El Eco de Tandil",
         "iProfesional",
         "Clarín",
+        "El Día",
         "La Nueva",
         "Ecos Diarios (Necochea)"
       ],
@@ -3455,11 +3519,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T12:01:06.332Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T11:52:38.000Z",
+      "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3469,7 +3533,7 @@
         {
           "medio": "El Diario Balcarce",
           "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-          "fecha": null,
+          "fecha": "2026-10-01T11:52:38.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3637,8 +3701,8 @@
         "La Brújula 24",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "El Gráfico",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "El Gráfico"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/confirmado-messi-adquirio-primer-equipo-futbol-profesional-espana-2026101142741",
       "teniaImagenLaFuente": true,
@@ -3923,8 +3987,8 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Ámbito",
         "Noticias Agropecuarias",
+        "Ámbito",
         "Ecos Diarios (Necochea)",
         "La Nueva",
         "La Nación",
@@ -4913,7 +4977,7 @@
       "fecha": "2026-09-30T18:58:35.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T22:31:18.689Z",
-      "relevancia": 53,
+      "relevancia": 46,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5104,97 +5168,6 @@
         "archivo": "fotos-notas/collage-repaso20260930tarde.jpg",
         "credito": "Fotos: Wikimedia Commons, Minuto Uno y Radio Gabal (FM 104.1)"
       }
-    },
-    {
-      "id": "1b6nw50",
-      "titulo": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
-      "copete": "El equipo de Rodolfo Arruabarrena enfrenta a Unión el viernes desde las 21.30 en la Bombonera por el Torneo Clausura. El entrenador cuenta con Leo Flores y Sebastián Villa, pero sufre la baja de Tomás Belmonte.",
-      "cuerpo": "Boca recibe a Unión el viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura. El entrenador Rodolfo Arruabarrena incluye a Leo Flores en la nómina de citados luego de su debut con la Selección Argentina frente a Bolivia. Además, Sebastián Villa integra el plantel tras superar un cuadro febril y Facundo Herrera regresa luego de recuperarse de un golpe.\n\nEn contrapartida, el cuerpo técnico sufre la baja de Tomás Belmonte, quien sufre una rotura de meniscos y afrontará una intervención quirúrgica en las próximas horas, por lo cual se perderá el resto de la competencia en esta temporada.",
-      "guion": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
-      "seccion": "Fútbol",
-      "medios": [
-        "Olé",
-        "Doble Amarilla",
-        "Bolavip Argentina",
-        "El Gráfico"
-      ],
-      "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T16:47:49.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T19:01:14.770Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera.",
-        "Leo Flores integra los convocados tras su paso por la Selección Argentina.",
-        "Sebastián Villa y Facundo Herrera están a disposición del cuerpo técnico.",
-        "Tomás Belmonte se rompió los meniscos y será intervenido quirúrgicamente."
-      ],
-      "seSabe": [
-        "Boca juega contra Unión este viernes a las 21.30 en la Bombonera por la undécima fecha del Torneo Clausura.",
-        "Leo Flores forma parte de los convocados de Rodolfo Arruabarrena tras jugar para la Selección Argentina.",
-        "Sebastián Villa integra la nómina luego de superar un estado febril.",
-        "Facundo Herrera está convocado tras recuperarse de un golpe.",
-        "Tomás Belmonte queda fuera del partido por una rotura de meniscos."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó si Leo Flores será titular o suplente.",
-        "No se detalló el tiempo exacto que demandará la recuperación postoperatoria de Tomás Belmonte."
-      ],
-      "textoRedes": "Boca enfrenta a Unión este viernes a las 21.30 en la Bombonera por el Torneo Clausura con Leo Flores entre los convocados y la baja de Tomás Belmonte por lesión.",
-      "etiquetas": [
-        "Torneo Clausura",
-        "Unión",
-        "Rodolfo Arruabarrena",
-        "Leo Flores",
-        "Tomás Belmonte"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/boca-juniors/lista-concentrados-boca-jugar-union-lonel-flores_0_bfRrfMvGbB.html",
-          "fecha": "2026-10-01T17:52:44.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de los convocados, el regreso de Leo Flores y las situaciones de Sebastián Villa, Facundo Herrera y Tomás Belmonte."
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/liga-/con-el-regreso-de-flores-y-la-lesion-de-belmonte--boca-confirmo-los-convocados-para-recibir-a-union_a6abe99ee969b40318bea6a93",
-          "fecha": "2026-10-01T18:15:01.000Z",
-          "oficial": false,
-          "aporte": "Aportó información sobre el contexto del partido ante Unión en el Torneo Clausura."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/boca/boca-hoy-volvio-flores-los-convocados-ante-union-y-mas",
-          "fecha": "2026-10-01T18:36:46.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la baja de Tomás Belmonte por lesión en los meniscos y la lista brindada por el entrenador."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1bvtscb",
-          "titulo": "La lista de convocados de Boca sin Enner Valencia para el clásico con San Lorenzo",
-          "fecha": "2026-09-19T16:32:12.000Z",
-          "ruta": "/nota/la-lista-de-convocados-de-boca-sin-enner-valencia-para-el-clasico-con-1bvtscb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "boca-recibe-a-union-con-la-presencia-de-leo-flores-en-la-lista",
-      "foto": {
-        "archivo": "fotos-notas/1b6nw50.jpg",
-        "credito": "Foto: Olé"
-      }
     }
   ],
   "secciones": [
@@ -5222,6 +5195,11 @@
       "cuantas": 2
     },
     {
+      "nombre": "Las rutas",
+      "ranura": "rutas",
+      "cuantas": 2
+    },
+    {
       "nombre": "Fangio",
       "ranura": "fangio",
       "cuantas": 2
@@ -5230,9 +5208,9 @@
   "clima": {
     "ahora": {
       "temp": 6,
-      "sensacion": 3,
-      "humedad": 90,
-      "viento": 10,
+      "sensacion": 4,
+      "humedad": 89,
+      "viento": 9,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
@@ -5243,7 +5221,7 @@
         "dia": "vie",
         "max": 15,
         "min": 5,
-        "lluvia": 62,
+        "lluvia": 44,
         "codigo": 51,
         "viento": 25,
         "milimetros": 0,
@@ -5254,7 +5232,7 @@
         "dia": "sáb",
         "max": 15,
         "min": 8,
-        "lluvia": 99,
+        "lluvia": 96,
         "codigo": 61,
         "viento": 23,
         "milimetros": 9,
@@ -5265,7 +5243,7 @@
         "dia": "dom",
         "max": 20,
         "min": 7,
-        "lluvia": 12,
+        "lluvia": 10,
         "codigo": 51,
         "viento": 19,
         "milimetros": 0,
@@ -5276,7 +5254,7 @@
         "dia": "lun",
         "max": 21,
         "min": 10,
-        "lluvia": 29,
+        "lluvia": 57,
         "codigo": 51,
         "viento": 16,
         "milimetros": 0,
@@ -5654,12 +5632,6 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "1c8gy5f",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1yvhtzv",
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
@@ -5672,11 +5644,17 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "1c8gy5f",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "xebopq",
       "titulo": "“Le tengo miedo”: Cecilia Milone denunció a Nito A",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denunció\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 3
 }

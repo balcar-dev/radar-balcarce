@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T04:31:32.235Z",
+ "generado": "2026-10-02T05:01:48.003Z",
  "portada": 64,
  "archivo": 754,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-02T04:31:32.269Z",
+  "generado": "2026-10-02T05:01:48.036Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,27 +85,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "1j4lf17",
-      "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "alddw5",
       "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      },
      {
+      "id": "1j4lf17",
+      "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "13npbde",
+      "titulo": "Dibu Martínez postula a Nico Paz como el heredero de la diez de Messi",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "1sjcoqr",
       "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
       "seccion": "Deportes"
-     },
-     {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-      "seccion": "Fútbol"
      }
     ]
    },
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 46,
     "notas": [
      {
       "id": "17z7wso",
@@ -129,14 +129,14 @@
       "seccion": "Balcarce"
      },
      {
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "vot8hs",
       "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -147,11 +147,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 43,
+    "segundos": 52,
     "notas": [
      {
-      "id": "g8dncb",
-      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
      },
      {
@@ -162,6 +162,11 @@
      {
       "id": "jzu6k",
       "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "g8dncb",
+      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
       "seccion": "Balcarce"
      }
     ]
