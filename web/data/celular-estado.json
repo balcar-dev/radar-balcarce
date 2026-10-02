@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T03:01:24.646Z",
+ "generado": "2026-10-02T03:32:11.824Z",
  "portada": 64,
  "archivo": 753,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-02T03:01:24.673Z",
+  "generado": "2026-10-02T03:32:11.861Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,17 +85,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
      {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "16vloik",
-      "titulo": "La desigualdad de ingresos baja pero el sector más rico gana trece veces más",
-      "seccion": "Economía"
      },
      {
       "id": "kemwz0",
@@ -106,6 +101,11 @@
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -116,17 +116,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 47,
     "notas": [
      {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-      "seccion": "Fútbol"
+      "id": "17z7wso",
+      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
+      "seccion": "Automovilismo"
      },
      {
       "id": "vot8hs",
       "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "g8dncb",
+      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
+      "seccion": "Balcarce"
      },
      {
       "id": "1gv3zir",
