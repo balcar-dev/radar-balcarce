@@ -1,6 +1,70 @@
 {
-  "generado": "2026-10-02T22:32:41.603Z",
+  "generado": "2026-10-02T23:02:04.003Z",
   "notas": [
+    {
+      "id": "1917p5s",
+      "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
+      "copete": "Diferentes dependencias de seguridad registran inconvenientes en sus teléfonos fijos. Las autoridades habilitan vías alternativas y recuerdan las líneas de emergencia.",
+      "cuerpo": "La Estación de Policía Comunal y el Comando de Prevención Rural informan fallas técnicas en sus vías de comunicación telefónica.\n\nLa dependencia comunal detalla que los aparatos 2266-424013 y 2266-423527 no funcionan momentáneamente. Por su parte, el CPR reporta la inhabilitación del número fijo 2266-420947.\n\nAnte esta situación, el CPR activa el contacto 2266-678490 exclusivo para recibir mensajes o audios en su guardia. Las autoridades solicitan utilizar los servicios del 911 o el 103 frente a cualquier urgencia mientras continúan las reparaciones.",
+      "guion": "Varias líneas de la Policía local interrumpen su servicio habitual",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/varias-lineas-de-la-policia-estan-fuera-de-servicio-como-comunicarse-ante-una-emergencia",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T22:30:06.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T23:01:19.357Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Fallas en los teléfonos de la Policía Comunal y el CPR",
+        "Habilitan un número alternativo para mensajes en la guardia rural",
+        "Recuerdan la disponibilidad del 911 y el 103 para emergencias"
+      ],
+      "seSabe": [
+        "La Estación de Policía Comunal tiene fuera de servicio los números 2266-424013 y 2266-423527, según informó el organismo.",
+        "El Comando de Prevención Rural indicó que el teléfono fijo 2266-420947 se encuentra inhabilitado.",
+        "El CPR habilitó el número 2266-678490 para recibir mensajes y audios.",
+        "Las líneas de emergencia 911 y 103 continúan operativas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Diferentes dependencias de la Policía local registran inconvenientes en sus teléfonos fijos. Las autoridades habilitan vías alternativas para la atención y recuerdan la disponibilidad de las líneas de emergencia.",
+      "etiquetas": [
+        "Policia",
+        "Comunal",
+        "CPR",
+        "telefonos",
+        "emergencias",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/varias-lineas-de-la-policia-estan-fuera-de-servicio-como-comunicarse-ante-una-emergencia",
+          "fecha": "2026-10-02T22:30:06.000Z",
+          "oficial": false,
+          "aporte": "Informó la interrupción de líneas telefónicas en dependencias policiales y detalló números alternativos y de emergencia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "varias-lineas-de-la-policia-local-interrumpen-su-servicio-habitual",
+      "foto": {
+        "archivo": "fotos-notas/1917p5s.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
     {
       "id": "1n4tus5",
       "titulo": "Sandra Pettovello desplaza a la subsecretaria de Trabajo y designa a un nuevo funcionario",
@@ -11,9 +75,11 @@
       "medios": [
         "Infobae",
         "La Nación",
+        "Clarín",
         "Ámbito",
         "El Destape",
-        "iProfesional"
+        "iProfesional",
+        "El Día"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/sandra-pettovello-desplazo-a-la-subsecretaria-de-trabajo-claudia-testa/",
       "teniaImagenLaFuente": true,
@@ -166,85 +232,6 @@
       }
     },
     {
-      "id": "1jzjpi7",
-      "titulo": "La Provincia y las distribuidoras apelan el freno judicial a la suba de la luz",
-      "copete": "El gobierno bonaerense y las cuatro grandes empresas recurrieron la cautelar que había suspendido los incrementos en las tarifas. El expediente pasó a la Cámara de Mar del Plata.",
-      "cuerpo": "El gobierno de la Provincia de Buenos Aires y las cuatro principales distribuidoras energéticas recurrieron el fallo judicial que había frenado los aumentos tarifarios y ordenado volver al cuadro anterior. La medida original había suspendido las subas de entre el 1,5% y el 3,5% aplicadas desde el 1 de julio mediante una resolución del ministerio de Infraestructura provincial, tras un amparo presentado por la Defensoría del Pueblo bonaerense a cargo de Guido Lorenzino.\n\nPor su parte, la administración provincial acudió a los tribunales a través de la Fiscalía de Estado, mientras que las empresas EDEN, EDEA, EDES y EDELAP cuestionaron distintos puntos de la resolución y reclamaron que el recurso tenga efecto suspensivo.",
-      "guion": "La Provincia y las distribuidoras apelan el freno judicial a la suba de la luz",
-      "seccion": "Economía",
-      "medios": [
-        "Agencia DIB",
-        "La Tecla",
-        "La Verdad"
-      ],
-      "enlace": "https://www.latecla.info/170150-la-provincia-apelo-la-cautelar-que-freno-los-aumentos-de-luz",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T19:59:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 65,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El gobierno bonaerense y las distribuidoras apelaron la cautelar sobre la luz.",
-        "La medida había frenado los incrementos aplicados desde julio.",
-        "El expediente pasó a la Cámara de Apelación de Mar del Plata."
-      ],
-      "seSabe": [
-        "La Provincia y las empresas EDEN, EDEA, EDES y EDELAP presentaron recursos de apelación.",
-        "El amparo inicial había sido promovido por la Defensoría del Pueblo bonaerense.",
-        "El juez Agustín López Coppola derivó el planteo a la Cámara de Mar del Plata."
-      ],
-      "noConfirmado": [
-        "El impacto financiero final sobre el servicio que advierten las empresas distribuidoras.",
-        "La decisión que tomará la Cámara de Apelación en lo Contencioso Administrativo de Mar del Plata."
-      ],
-      "textoRedes": "El gobierno bonaerense y las cuatro grandes distribuidoras de electricidad apelaron la medida cautelar que había frenado los aumentos tarifarios aplicados desde julio.",
-      "etiquetas": [
-        "tarifas",
-        "luz",
-        "provincia de buenos aires",
-        "justicia",
-        "aumentos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Tecla",
-          "enlace": "https://www.latecla.info/170150-la-provincia-apelo-la-cautelar-que-freno-los-aumentos-de-luz",
-          "fecha": "2026-10-02T19:59:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que la Provincia y las cuatro grandes distribuidoras apelaron la medida cautelar."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/economia/la-provincia-apelo-la-cautelar-que-suspendio-el-aumento-la-electricidad-la-plata-y-el-interior-n56209",
-          "fecha": "2026-10-02T20:03:29.000Z",
-          "oficial": false,
-          "aporte": "Detalló los argumentos de la Provincia, los porcentajes de aumento y el paso del expediente a Mar del Plata."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/la-provincia-apelo-la-cautelar-que-suspendio-el-aumento-de-la-electricidad-en-la-plata-y-el-interior/",
-          "fecha": "2026-10-02T20:35:51.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la apelación conjunta de la Provincia y las empresas prestadoras del servicio."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-provincia-y-las-distribuidoras-apelan-el-freno-judicial-a-la-suba",
-      "foto": {
-        "archivo": "fotos-notas/1jzjpi7.jpg",
-        "credito": "Foto: La Tecla"
-      }
-    },
-    {
       "id": "8cknxd",
       "titulo": "Juan Gil Navarro frena una función de teatro por el uso de celulares",
       "copete": "El actor detuvo la presentación de Misery en un escenario porteño para reclamar respeto a los espectadores. Cuestionó las distracciones con los aparatos móviles durante la función.",
@@ -262,7 +249,7 @@
       "fecha": "2026-10-02T19:49:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 73,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -341,7 +328,8 @@
       "seccion": "Automovilismo",
       "medios": [
         "Infobae",
-        "TyC Sports"
+        "TyC Sports",
+        "Radio Mitre"
       ],
       "enlace": "https://www.tycsports.com/automovilismo/verstappen-agradecio-los-elogios-de-colapinto-tras-su-accidente-en-baku-los-que-compiten-en-f1-no-son-mis-enemigos-id764060.html",
       "teniaImagenLaFuente": true,
@@ -405,8 +393,8 @@
       "guion": "Dos consorcios compiten en la licitación para construir la Linea F",
       "seccion": "Argentina",
       "medios": [
-        "La Nación",
         "Infobae",
+        "La Nación",
         "El Cronista",
         "Perfil",
         "A24",
@@ -414,6 +402,7 @@
         "C5N",
         "Crónica",
         "Radio Mitre",
+        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Ámbito"
@@ -785,6 +774,87 @@
       }
     },
     {
+      "id": "ydwxhf",
+      "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+      "copete": "Un acumulado de 25 milímetros en la franja central del país redujo a la mitad los lotes trigueros regulares y reactivó las sembradoras de maíz.",
+      "cuerpo": "Las precipitaciones registradas en la última semana en la franja central del país acumularon un promedio de 25 milímetros y permitieron recortar a la mitad los lotes de trigo en estado regular, que pasaron del 15% al 7% del total regional según la Bolsa de Comercio de Rosario.\n\nEl relevamiento detalló que la superficie afectada bajó de unas 250.000 a 120.000 hectáreas, mientras que el agua caída destrabó las tareas para cubrir las 750.000 hectáreas pendientes de maíz y llevó el avance de la siembra al 65%. Septiembre había cerrado con un promedio de 31,5 milímetros tras concentrar el 80% del total mensual en estos siete días, revirtiendo parcialmente el déficit hídrico previo que motivaba pronósticos de precipitaciones escasas a fines de septiembre.\n\nEl impacto de las tormentas muestra marcadas diferencias geográficas, ya que el este y el centro-este previenen rindes de hasta 50 quintales por hectárea, en contraste con el noroeste bonaerense y el sudeste cordobés, donde los cultivos sufrieron daños por heladas tempranas y mermas de hasta el 60% en el rendimiento.",
+      "guion": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Agrositio"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T17:03:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T23:01:19.357Z",
+      "relevancia": 39,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cayeron 25 milímetros en promedio en la franja central del país.",
+        "Los lotes trigueros regulares se redujeron del 15% al 7%.",
+        "La siembra de maíz alcanzó un 65% de cobertura tras reactivarse las labores.",
+        "El noroeste bonaerense registra mermas de hasta el 60% por la sequía previa y las heladas."
+      ],
+      "seSabe": [
+        "Las precipitaciones acumuladas en la última semana alcanzaron un promedio de 25 milímetros en la región central, según informó la Bolsa de Comercio de Rosario.",
+        "La superficie de trigo en condición regular cayó del 15% (250.000 hectáreas) al 7% (120.000 hectáreas).",
+        "Las recargas de agua permitieron reactivar la siembra de maíz, que alcanzó una cobertura global del 65%.",
+        "Septiembre cerró con un promedio de 31,5 milímetros tras recibir en la última semana el 80% del agua acumulada en el mes."
+      ],
+      "noConfirmado": [
+        "El grado de recuperación real que podrán alcanzar las plantas en los distritos más afectados como General Villegas y General Pinto.",
+        "El techo productivo definitivo en los lotes del oeste regional tras el impacto de las heladas y la escasez hídrica previa."
+      ],
+      "textoRedes": "Las precipitaciones acumuladas en la última semana en la franja central del país redujeron a la mitad los lotes trigueros en estado regular y permitieron reactivar la siembra de maíz.",
+      "etiquetas": [
+        "lluvias",
+        "trigo",
+        "maíz",
+        "Bolsa de Comercio de Rosario",
+        "región núcleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+          "fecha": "2026-10-02T17:03:25.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos detallados sobre el impacto de las lluvias en el trigo y el maíz, los porcentajes de afectación y las proyecciones por zonas."
+        },
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248642-alivio-para-el-trigo-y-las-siembras-que-se-retoman-tras-los-25-mm-que-recibio-la-region-en-los-ultimos-7-dias.html",
+          "fecha": "2026-10-02T17:51:54.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el registro de 25 milímetros en la región y la reducción de los lotes regulares de trigo al 7% según la Bolsa de Comercio de Rosario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "gd6n9s",
+          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+          "fecha": "2026-09-30T18:42:58.000Z",
+          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz",
+      "foto": {
+        "archivo": "fotos-notas/ydwxhf.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1akpidg",
       "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
       "copete": "Alumnas de la institución obsequiaron una producción artística que formó parte de una muestra local. El intendente Esteban Reino recibió la pieza.",
@@ -850,6 +920,7 @@
         "Infobae",
         "Perfil",
         "Crónica",
+        "Canal 26",
         "Noticias Argentinas (NA)",
         "Punto Noticias"
       ],
@@ -2687,161 +2758,6 @@
       }
     },
     {
-      "id": "46zq6i",
-      "titulo": "El gobierno bonaerense y las distribuidoras apelan el freno judicial al aumento de la luz",
-      "copete": "La Provincia y las cuatro principales empresas prestatarias recurrieron el fallo que había congelado las subas tarifarias. La decisión ahora está en manos de la Cámara de Apelación.",
-      "cuerpo": "El gobierno de Axel Kicillof y las principales empresas distribuidoras de energía eléctrica apelaron el fallo judicial que había frenado los aumentos tarifarios en territorio bonaerense.\n\nLa disputa judicial comenzó tras la aplicación de la Resolución N° 585/2026 del Ministerio de Infraestructura, que autorizó incrementos de entre el 1,5% y el 3,5% a partir del 1 de julio.\n\nCon la nueva apelación, las compañías buscan que el recurso tenga efecto suspensivo para re aplicar los valores cuestionados mientras se define la cuestión de fondo, mientras que la administración provincial cuestiona la obligatoriedad de convocar a audiencias para este tipo de actualizaciones.",
-      "guion": "El gobierno bonaerense y las distribuidoras apelan el freno judicial al aumento de la luz",
-      "seccion": "Política",
-      "medios": [
-        "Noticias Argentinas (NA)",
-        "Qué Digital",
-        "La Tecla",
-        "ANDigital",
-        "El Marplatense"
-      ],
-      "enlace": "https://quedigital.com.ar/judiciales/el-gobierno-provincial-y-edea-apelaron-el-freno-judicial-al-aumento-de-la-luz/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T11:38:03.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T20:31:20.420Z",
-      "relevancia": 46,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El gobierno provincial y las distribuidoras apelaron la medida cautelar.",
-        "La causa pasó a la Cámara de Apelación de Mar del Plata.",
-        "El amparo original cuestionó la falta de audiencias públicas."
-      ],
-      "seSabe": [
-        "El gobierno provincial y las empresas EDEN, EDEA, EDES y EDELAP apelaron la cautelar.",
-        "La medida afecta los incrementos de entre el 1,5% y el 3,5% autorizados por la Resolución N° 585/2026.",
-        "El expediente quedó radicado en la Cámara de Apelación en lo Contencioso Administrativo de Mar del Plata."
-      ],
-      "noConfirmado": [
-        "Todavía no se resolvió si la apelación tendrá efecto suspensivo para volver a cobrar las tarifas con aumento."
-      ],
-      "textoRedes": "El gobierno bonaerense y las distribuidoras eléctricas apelaron el fallo judicial que había frenado los aumentos tarifarios en la provincia.",
-      "etiquetas": [
-        "tarifa electrica",
-        "aumento de la luz",
-        "EDEA",
-        "gobierno provincial",
-        "Justicia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Qué Digital",
-          "enlace": "https://quedigital.com.ar/judiciales/el-gobierno-provincial-y-edea-apelaron-el-freno-judicial-al-aumento-de-la-luz/",
-          "fecha": "2026-10-02T11:38:03.000Z",
-          "oficial": false,
-          "aporte": "Informó que el gobierno provincial y las distribuidoras apelaron la medida cautelar."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-bonaerense-y-las-distribuidoras-apelaron-la-cautelar-que-freno-los-aumentos-de-luz_a6ac0073df814a2817c8eaec7",
-          "fecha": "2026-10-02T20:18:14.000Z",
-          "oficial": false,
-          "aporte": "Detalló los argumentos legales, las empresas involucradas y el traslado del expediente a Mar del Plata."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1h4s1ka",
-          "titulo": "Orden judicial para frenar el aumento de la tarifa de electricidad en la Provincia",
-          "fecha": "2026-09-18T23:00:07.000Z",
-          "ruta": "/nota/orden-judicial-para-frenar-el-aumento-de-la-tarifa-de-electricidad-en-1h4s1ka"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-bonaerense-y-las-distribuidoras-apelan-el-freno-judicial"
-    },
-    {
-      "id": "1wtp555",
-      "titulo": "Colapinto completa las primeras prácticas en Sepang con foco en el ritmo",
-      "copete": "El piloto argentino afrontó la jornada inicial en Malasia a bordo del Alpine. Trabaja en la durabilidad de los neumáticos y arrastra una sanción para el domingo.",
-      "cuerpo": "En la primera tanda de entrenamientos quedó decimonoveno con un registro de 1:43.391 y en la segunda se ubicó vigesimosegundo, lejos de los tiempos de punta que dominó Charles Leclerc con Ferrari en 1:37.528.\n\nLa actividad en la pista malaya continuar\\u00eó el sábado con la tercera y última práctica a la 1:30 de la madrugada en horario argentino, mientras que la sesión de clasificación se pondrá en marcha a las 5:00.",
-      "guion": "Colapinto completa las primeras prácticas en Sepang con foco en el ritmo",
-      "seccion": "Automovilismo",
-      "medios": [
-        "La Voz del Pueblo",
-        "Córdoba Competición"
-      ],
-      "enlace": "https://cordobacompeticion.com/internacionales/f1/viernes-enfocado-en-ritmo-de-carrera-para-colapinto/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T10:44:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T18:13:38.359Z",
-      "relevancia": 67,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Colapinto completó el viernes de entrenamientos en Sepang con el Alpine número 43.",
-        "El piloto se enfocó en el ritmo de carrera y finalizó en el fondo de las dos tandas.",
-        "Cargará con una penalización de quince puestos en la grilla de partida del domingo.",
-        "La tercera práctica y la clasificación se desarrollarán este sábado desde la madrugada."
-      ],
-      "seSabe": [
-        "Franco Colapinto completó el viernes su primera jornada en el circuito de Sepang a bordo del Alpine número 43.",
-        "Quedó 19 en la primera práctica con un tiempo de 1:43.391 y 22 en la segunda tanda.",
-        "Charles Leclerc logró el mejor tiempo del viernes con 1:37.528 con su Ferrari.",
-        "El piloto argentino sumará una penalización de 15 puestos para la largada del domingo."
-      ],
-      "noConfirmado": [
-        "Todavía no se definieron las posiciones finales que ocupará en la grilla tras la confirmación de la sanción."
-      ],
-      "textoRedes": "Franco Colapinto completó su primera jornada de entrenamientos en el circuito de Sepang con foco en el ritmo de carrera y arrastrará una penalización para el domingo.",
-      "etiquetas": [
-        "Colapinto",
-        "Sepang",
-        "Gran Premio de Bahrein"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Córdoba Competición",
-          "enlace": "https://cordobacompeticion.com/internacionales/f1/viernes-enfocado-en-ritmo-de-carrera-para-colapinto/",
-          "fecha": "2026-10-02T10:44:12.000Z",
-          "oficial": false,
-          "aporte": "Detalles del rendimiento de Colapinto, tiempos de entrenamientos y penalizaciones."
-        },
-        {
-          "medio": "La Voz del Pueblo",
-          "enlace": "https://lavozdelpueblo.com.ar/f1-colapinto-completo-los-ensayos-en-malasia-enfocado-en-el-ritmo-de-carrera",
-          "fecha": "2026-10-02T13:26:14.000Z",
-          "oficial": false,
-          "aporte": "Información sobre la primera jornada de actividad de Colapinto en Sepang."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "hrexvi",
-          "titulo": "Colapinto encara 15 puestos de penalización y se enfoca en el ritmo",
-          "fecha": "2026-10-02T01:01:42.000Z",
-          "ruta": "/nota/colapinto-encara-15-puestos-de-penalizacion-y-se-enfoca-en-el-ritmo-hrexvi"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "colapinto-completa-las-primeras-practicas-en-sepang-con-foco-en-el",
-      "foto": {
-        "archivo": "fotos-notas/1wtp555.jpg",
-        "credito": "Foto: Liauzh / Wikimedia Commons (CC BY-SA 4.0)"
-      }
-    },
-    {
       "id": "gfh5l8",
       "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "copete": "El gobernador Axel Kicillof firmó el decreto que transfiere un terreno de la ex mina Catriel, ubicado en Sierras Bayas, para el desarrollo de un espacio recreativo y cultural.",
@@ -2859,7 +2775,7 @@
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 70,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2938,7 +2854,7 @@
       "fecha": "2026-10-02T10:37:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 76,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3295,6 +3211,7 @@
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
+        "La Capital (Rosario)",
         "Clarín"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/duro-panorama-de-la-iglesia-al-papa-lo-espera-una-argentina-en-crisis-con-una-gran-cantidad-de-hermanos-muy-pobres/",
@@ -3404,6 +3321,7 @@
         "iProfesional",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Brújula 24",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -3879,6 +3797,81 @@
       "foto": {
         "archivo": "fotos-notas/1uwpmsg.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1f6rlk",
+      "titulo": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
+      "copete": "La senadora nacional participó el jueves del Coloquio de IDEA en Mar del Plata. Evitó definir si competirá por la presidencia en 2027 y reclamó que las medidas oficiales lleguen con mayor claridad a los hogares.",
+      "cuerpo": "La senadora nacional Patricia Bullrich participó el jueves en el sexagésimo segundo Coloquio de IDEA en Mar del Plata, donde evitó definir si será candidata a la presidencia en 2027 y puso el foco en la continuidad del proyecto oficialista.\n\nDurante su exposición ante representantes empresarios, la legisladora de La Libertad Avanza reclamó mayor velocidad para que los cambios económicos implementados se reflejen en los hogares. Además, marcó diferencias entre las actividades con alto dinamismo, como el agro y la minería, y sectores como la industria, la construcción y el comercio que atraviesan dificultades.\n\nPor otro lado, la senadora advirtió sobre el impacto del costo argentino y la presión impositiva en la competitividad frente a la región. Al respecto, señaló que no es posible reducir todos los gravámenes de manera inmediata y que se requiere el acompañamiento de las provincias y los municipios.",
+      "guion": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
+      "seccion": "Política",
+      "medios": [
+        "El Eco de Tandil",
+        "Perfil",
+        "Infobae",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T17:50:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T21:38:14.044Z",
+      "relevancia": 24,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Participó este jueves en el Coloquio de IDEA en Mar del Plata.",
+        "Evitó definir una candidatura presidencial de cara a 2027.",
+        "Reclamó mayor velocidad para que los cambios lleguen a las familias.",
+        "Advirtió sobre el impacto del costo argentino en la competitividad."
+      ],
+      "seSabe": [
+        "Patricia Bullrich participó en el 62° Coloquio de IDEA en Mar del Plata.",
+        "La senadora evitó confirmar una candidatura para 2027 y priorizó la continuidad del proyecto político.",
+        "Reclamó mayor velocidad para que las medidas económicas se sientan en los hogares.",
+        "Señaló la necesidad de compatibilizar sectores en crecimiento con industrias y comercios caídos.",
+        "Indicó que la reducción impositiva requiere el acompañamiento de provincias y municipios."
+      ],
+      "noConfirmado": [
+        "Aún no está definido cómo se ordenará la oferta electoral ni las alianzas para 2027."
+      ],
+      "textoRedes": "La senadora Patricia Bullrich participó en el Coloquio de IDEA en Mar del Plata, evitó definir una candidatura para 2027 y reclamó mayor velocidad para que los cambios económicos lleguen a los hogares.",
+      "etiquetas": [
+        "Patricia Bullrich",
+        "IDEA",
+        "Mar del Plata",
+        "Economía",
+        "Elecciones 2027"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
+          "fecha": "2026-10-01T17:50:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Patricia Bullrich en el Coloquio de IDEA sobre la economía, las elecciones de 2027 y el costo argentino."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/bullrich-volvio-a-marcar-diferencias-y-reclamo-que-los-cambios-economicos-lleguen-a-las-familias",
+          "fecha": "2026-10-01T20:13:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la participación de Patricia Bullrich en el encuentro empresarial en Mar del Plata."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "patricia-bullrich-pide-mayor-velocidad-para-los-cambios-economicos-en",
+      "foto": {
+        "archivo": "fotos-notas/1f6rlk.jpg",
+        "credito": "Foto: Perfil"
       }
     },
     {
@@ -4632,6 +4625,101 @@
       }
     },
     {
+      "id": "is08uu",
+      "titulo": "Esteban Edul recibe amenazas tras sus análisis arbitrales",
+      "copete": "El comentarista de ESPN sufrió un hostigamiento masivo en su teléfono personal luego del partido entre Estudiantes y Rosario Central. El periodista cuestionó el uso del VAR y el nivel del arbitraje nacional.",
+      "cuerpo": "El periodista deportivo Esteban Edul recibió cerca de 300 mensajes y llamados con agresiones en su WhatsApp tras cuestionar el arbitraje y el uso del VAR en el encuentro del sábado pasado entre Estudiantes y Rosario Central. El comentarista de ESPN denunció que su número de teléfono fue filtrado en algún grupo o red social, lo que trasladó los insultos habituales de las plataformas digitales a su línea personal.\n\nEdul señaló que la controversia excedió a los simpatizantes de ambos clubes y abrió un debate sobre las decisiones arbitrales en el fútbol argentino, un ámbito que calificó en su peor momento. Además, recordó que tras aquel partido se produjo una pelea entre futbolistas de los dos planteles.",
+      "guion": "Esteban Edul recibe amenazas tras sus análisis arbitrales",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "El Eco de Tandil",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.infobae.com/deportes/2026/10/01/esteban-edul-recibio-cerca-de-300-mensajes-y-llamados-con-amenazas-tras-la-polemica-por-el-arbitraje-de-estudiantes-rosario-central/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T12:49:49.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T19:31:41.270Z",
+      "relevancia": 38,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El periodista Esteban Edul recibió unos 300 mensajes amenazantes en su WhatsApp.",
+        "El hostigamiento se originó tras sus comentarios sobre el arbitraje del partido entre Estudiantes y Rosario Central.",
+        "El comentarista denunció la filtración de su número de teléfono personal.",
+        "Sostuvo que el arbitraje y el VAR atraviesan su peor momento en el fútbol argentino."
+      ],
+      "noConfirmado": [
+        "No se especificó qué grupo, medio o red social difundió el número de teléfono del comentarista."
+      ],
+      "textoRedes": "El periodista Esteban Edul recibió unos 300 mensajes amenazantes en su WhatsApp tras analizar el arbitraje del partido entre Estudiantes y Rosario Central.",
+      "etiquetas": [
+        "Esteban Edul",
+        "Estudiantes",
+        "Rosario Central",
+        "Árbitros",
+        "VAR",
+        "Fútbol argentino"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/01/esteban-edul-recibio-cerca-de-300-mensajes-y-llamados-con-amenazas-tras-la-polemica-por-el-arbitraje-de-estudiantes-rosario-central/",
+          "fecha": "2026-10-01T12:49:49.000Z",
+          "oficial": false,
+          "aporte": "Detalló la cantidad de mensajes recibidos, la filtración de su teléfono y sus críticas al arbitraje y al VAR."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/hostigamiento-esteban-edul-recibio-casi-300-amenazas-las-polemicas-estudiantes-vs-rosario-central-n6329028",
+          "fecha": "2026-10-01T18:04:03.000Z",
+          "oficial": false,
+          "aporte": "Informó la denuncia del periodista sobre la filtración de su número y sus críticas al uso de la tecnología."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/esteban-edul-denuncio-amenazas-tras-sus-criticas-al-arbitraje-y-al-uso-del-var",
+          "fecha": "2026-10-01T13:50:11.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su publicación."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "repaso20260930tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: ACTC, Rosario Central y capacitaciones",
+          "fecha": "2026-09-30T18:06:28.052Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y-repaso20260930tarde"
+        },
+        {
+          "id": "1cbil57",
+          "titulo": "Hinchas de Newell's y Rosario Central se enfrentan en Rosario",
+          "fecha": "2026-09-30T02:21:20.000Z",
+          "ruta": "/nota/hinchas-de-newell-s-y-rosario-central-se-enfrentan-en-rosario-1cbil57"
+        },
+        {
+          "id": "122dsf6",
+          "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+          "fecha": "2026-09-26T03:00:00.000Z",
+          "ruta": "/nota/rosario-central-genera-polecutemica-en-los-festejos-contra-juan-122dsf6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "esteban-edul-recibe-amenazas-tras-sus-analisis-arbitrales",
+      "foto": {
+        "archivo": "fotos-notas/is08uu.jpg",
+        "credito": "Foto: Minuto Uno"
+      }
+    },
+    {
       "id": "1vt533g",
       "titulo": "El Solcito atrae visitantes con su almacén histórico y costillar a la estaca",
       "copete": "Un pequeño paraje rural ubicado a menos de dos horas de viaje por la Ruta Nacional 226 ofrece almuerzos caseros, construcciones antiguas y un entorno serrano ideal para descansar.",
@@ -4707,118 +4795,18 @@
         "archivo": "fotos-notas/c0hkeg.jpg",
         "credito": "Foto: El Diario Balcarce"
       }
-    },
-    {
-      "id": "ig6fdw",
-      "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-      "copete": "El Ejecutivo nacional presentó en Francia un mecanismo para otorgar la ciudadanía a extranjeros que realicen inversiones. Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
-      "cuerpo": "El Gobierno nacional lanzó en París el Programa de Ciudadanía por Inversión, que comenzará a recibir solicitudes en el último trimestre de 2026. La presentación estuvo a cargo del jefe de Gabinete, Diego Santilli, y el ministro de Economía, Luis Caputo, durante la semana argentina desarrollada en la capital francesa.\n\nLa iniciativa contempla dos opciones para el solicitante principal: un aporte directo de 350.000 dólares al Tesoro Nacional o la suscripción de un título público por 800.000 dólares. El esquema también permite incluir al cónyuge y a los hijos mediante pagos adicionales de 100.000 dólares para mayores de edad y de 25.000 dólares para menores.\n\nLa evaluación de los postulantes quedará a cargo de la Agencia de Programas de Ciudadanía por Inversión. El procedimiento incluirá la intervención de la Secretaría de Inteligencia del Estado, la Unidad de Información Financiera y las carteras de Seguridad y del Interior para verificar antecedentes y el origen de los fondos.",
-      "guion": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-      "seccion": "Argentina",
-      "medios": [
-        "Diputados Bonaerenses",
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "El Cronista",
-        "iProfesional",
-        "C5N",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "La Tecla",
-        "El Marplatense",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Clarín",
-        "Radio Mitre"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T10:55:58.335Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Ejecutivo nacional presentó el programa en París.",
-        "Las solicitudes se recibirán desde el cuarto trimestre.",
-        "El solicitante principal debe aportar 350.000 dólares o comprar títulos por 800.000 dólares.",
-        "Participan la SIDE, la UIF y los ministerios de Seguridad y del Interior."
-      ],
-      "textoRedes": "El Gobierno nacional lanzó en París un programa de ciudadanía por inversión para extranjeros, con aportes al Tesoro y títulos públicos. Las solicitudes se recibirán desde el último trimestre.",
-      "etiquetas": [
-        "Gobierno nacional",
-        "Ciudadanía",
-        "Inversión",
-        "Economía",
-        "París"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
-          "fecha": "2026-10-02T11:23:44.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/02/el-gobierno-lanzo-en-paris-un-programa-para-que-extranjeros-puedan-obtener-ciudadania-y-pasaporte-mediante-inversiones-cuanto-cuesta/",
-          "fecha": "2026-10-02T12:20:29.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/lanzan-un-programa-de-ciudadania-por-inversion-cuanto-habra-que-aportar-y-quienes-podran-acceder-nid02102026/",
-          "fecha": "2026-10-02T12:21:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/el-gobierno-otorgara-la-ciudadania-argentina-a-los-extranjeros-que-inviertan-en-el-pais-nid02102026/",
-          "fecha": "2026-10-02T12:12:05.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/el-gobierno-anuncio-la-puesta-en-marcha-del-programa-de-ciudadania-por-inversion-de-argentina/",
-          "fecha": "2026-10-02T11:27:26.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-lanza-un-programa-de-ciudadania-por-inversion-en-el",
-      "foto": {
-        "archivo": "fotos-notas/ig6fdw.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
+    "Balcarce",
     "Política",
     "Deportes",
-    "Economía",
     "Cultura y agenda",
     "Automovilismo",
     "Argentina",
-    "Balcarce",
-    "Fútbol",
     "Agro",
+    "Economía",
+    "Fútbol",
     "Policiales"
   ],
   "temas": [
@@ -4842,9 +4830,9 @@
     "ahora": {
       "temp": 10,
       "sensacion": 7,
-      "humedad": 77,
+      "humedad": 85,
       "viento": 16,
-      "rumbo": "NE",
+      "rumbo": "N",
       "cielo": "Llovizna leve",
       "esDeDia": false
     },
@@ -5303,6 +5291,12 @@
       "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
+      "id": "4hbo6t",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
+    },
+    {
       "id": "1yvhtzv",
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
@@ -5313,6 +5307,12 @@
       "titulo": "Resultados de Quini 6 hoy: controlá tu boleta del…",
       "seccion": "Argentina",
       "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "6gb1qq",
+      "titulo": "¿Qué puede aportar el Campo argentino al mundo? La…",
+      "seccion": "Agro",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "imkij7",

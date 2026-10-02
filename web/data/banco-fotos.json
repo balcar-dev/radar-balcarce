@@ -5497,8 +5497,8 @@
   "origen": "ninguna",
   "titulo": "Doce equipos compiten en un nuevo torneo de vóley",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-02T22:01:42.755Z",
-  "intentos": 2,
+  "cuando": "2026-10-02T23:01:55.869Z",
+  "intentos": 3,
   "fuentes": 1
  },
  "18ifkne": {
@@ -5667,16 +5667,16 @@
   "cuando": "2026-10-02T22:32:19.259Z"
  },
  "11e02rs": {
-  "archivo": "fotos-notas/11e02rs.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "El riesgo país llega a 655 puntos y marca su valor más alto del año",
   "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-escala-hasta-los-650-puntos-el-valor-mas-alto-del-ano-nid02102026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-riesgo-pais-alcanzo-un-nuevo-valor-maximo-del-LY4A62K2NNDT5NRDSQ7I4T35IY.jpg?auth=5b800bc4939882b2a1d3792cd429b3fdf98c8b3cff8b9791687d1fed4b243fd6&width=1200&height=800&quality=70&smart=true",
   "razon": "Es la única foto sin marcas de agua ni menores, con excelente nitidez y encuadre para la nota económica.",
-  "cuando": "2026-10-02T22:32:19.259Z"
+  "cuando": "2026-10-02T22:32:19.259Z",
+  "intentado": true,
+  "borrada": true
  },
  "cmitva": {
   "archivo": "fotos-notas/cmitva.jpg",
@@ -5689,5 +5689,29 @@
   "imagenOriginal": "https://media.dib.com.ar/p/279656dae5e3110a11b8ce776dbed01f/adjuntos/377/imagenes/100/058/0100058600/1200x675/smart/vacas-lecheras.jpeg",
   "razon": "La foto A muestra claramente ganado lechero con excelente nitidez y encuadre, sin marcas ni menores.",
   "cuando": "2026-10-02T22:32:19.259Z"
+ },
+ "1917p5s": {
+  "archivo": "fotos-notas/1917p5s.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/varias-lineas-de-la-policia-estan-fuera-de-servicio-como-comunicarse-ante-una-emergencia",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/Estacion%20de%20Policia%20Comunal.jpeg",
+  "razon": "Tiene buen encuadre y nitidez, ilustra perfectamente el hecho sin personas visibles y no tiene marcas ni menores.",
+  "cuando": "2026-10-02T23:01:55.869Z"
+ },
+ "ydwxhf": {
+  "archivo": "fotos-notas/ydwxhf.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+  "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/las-lluvias-recientes-en-la-region-nucleo-aportaron-la-humedad-clave-que-necesitaban-los-lotes-de-trigo-para-sostener-su-potencial-foto-bcr-PIVJ256QG5AEBFNN3OESXOE57E.jpg?auth=5ad47c6f62aa976cf8c3c72cb09ec5412c21f5aff8870580871a6220f611efc7&width=1023",
+  "razon": "La foto A muestra claramente el cultivo de trigo con gotas de lluvia, ideal para ilustrar el alivio por las precipitaciones, sin marcas ni menores.",
+  "cuando": "2026-10-02T23:01:55.869Z"
  }
 }

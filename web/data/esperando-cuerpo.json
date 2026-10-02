@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02T22:32:41.603Z",
+ "generado": "2026-10-02T23:02:04.003Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -38,23 +38,6 @@
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras",
    "maximo": 4
-  },
-  {
-   "id": "1917p5s",
-   "titulo": "Varias líneas de la Policía están fuera de servicio: cómo comunicarse ante una emergencia",
-   "copete": "Desde la Estación de Policía Comunal y el Comando de Prevención Rural de Balcarce informaron inconvenientes en sus líneas telefónicas habituales. Ante emergencias, solicitaron comunicarse al 911 o al 103.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-02T22:30:06.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/varias-lineas-de-la-policia-estan-fuera-de-servicio-como-comunicarse-ante-una-emergencia",
-     "fecha": "2026-10-02T22:30:06.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (comunicacion, numeros, atencion): va con las tildes y la eñe donde",
-   "maximo": 3
   },
   {
    "id": "zdl4xp",
@@ -102,88 +85,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 4
-  },
-  {
-   "id": "1a6zyt9",
-   "titulo": "Murió el exministro de la Corte Suprema Augusto César Belluscio",
-   "copete": "A los 96 años, murió Augusto Belluscio , el último sobreviviente de la Corte Suprema de Justicia que refundó Raúl Alfonsín en 1993 con el regreso de la democracia. Se trata del último de los jueces que dejaron firme la histórica sentencia contra los excomandantes que lideraron…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-02T15:33:39.000Z",
-   "fuentes": [
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/breaking-news/murio-el-exministro-de-la-corte-suprema-augusto-cesar-belluscio.phtml",
-     "fecha": "2026-10-02T15:33:39.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/politica/murio-el-juez-augusto-belluscio-el-ultimo-de-los-integrantes-de-la-corte-del-regreso-a-la-democracia-nid02102026/",
-     "fecha": "2026-10-02T20:11:01.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/02/murio-augusto-belluscio-exjuez-de-la-corte-suprema/",
-     "fecha": "2026-10-02T16:06:32.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/politica/murio-augusto-belluscio-exjuez-corte-1983-2005-2026102154625",
-     "fecha": "2026-10-02T18:46:25.000Z"
-    },
-    {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/02/murio-augusto-belluscio-exjuez-de-la-corte-suprema/",
-     "fecha": "2026-10-02T17:51:14.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/politica/murio-augusto-belluscio-historico-ex-juez-la-corte-suprema-n1602658",
-     "fecha": "2026-10-02T16:24:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/murio-el-exjuez-la-corte-suprema-augusto-belluscio-n250590",
-     "fecha": "2026-10-02T18:28:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/murio-augusto-cesar-belluscio-exministro-corte-suprema/",
-     "fecha": "2026-10-02T17:51:02.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/politica/2026/10/02/murio-augusto-cesar-belluscio-a-los-96-anos-quien-era-el-historico-exjuez-de-la-corte-suprema/",
-     "fecha": "2026-10-02T16:35:59.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/la-corte-suprema-expreso-su-pesar-por-la-muerte-de-augusto-cesar-belluscio_a6ac009c8f814a2817c8f2a2d",
-     "fecha": "2026-10-02T19:46:37.000Z"
-    },
-    {
-     "medio": "La Tecla",
-     "enlace": "https://www.latecla.info/170147-a-los-96-anos-murio-augusto-belluscio-ex-juez-de-la-corte-suprema",
-     "fecha": "2026-10-02T16:10:00.000Z"
-    },
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/murio-augusto-belluscio-exjuez-de-la-corte-suprema-y-referente-del-derecho-de-familia",
-     "fecha": "2026-10-02T20:45:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/judiciales/2026/10/02/el-ex-juez-de-la-corte-suprema-augusto-belluscio-murio-a-los-96-anos/",
-     "fecha": "2026-10-02T15:55:12.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/politica/murio-augusto-belluscio-historico-exjuez-corte-suprema_0_LetbgZX11I.html",
-     "fecha": "2026-10-02T15:41:32.000Z"
-    }
-   ],
-   "intentos": 5,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"augusto\", \"belluscio\" y el cuerpo no los explica; sin esas oraciones quedan 106 palabras",
-   "maximo": 5
   },
   {
    "id": "1gofphd",
@@ -275,6 +176,11 @@
      "fecha": "2026-10-02T18:45:00.000Z"
     },
     {
+     "medio": "Ecos Diarios (Necochea)",
+     "enlace": "https://elecos.com.ar/murio-ricardo-soule-el-musico-que-paso-de-la-reserva-de-quilmes-a-hacer-historia-con-vox-dei",
+     "fecha": "2026-10-02T22:18:59.000Z"
+    },
+    {
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/sociedad/adios-ricardo-soule-leyenda-la-era-fundacional-del-rock-nacional-n56204",
      "fecha": "2026-10-02T18:21:00.000Z"
@@ -298,11 +204,6 @@
      "medio": "El Destape",
      "enlace": "https://www.eldestapeweb.com/cultura/murio-ricardo-soule-cantante-vox-dei-76-anos-202610213646",
      "fecha": "2026-10-02T16:06:00.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/musica/murio-ricardo-soule-fundador-de-vox-dei-y-pionero-del-rock-nacional.phtml",
-     "fecha": "2026-10-02T17:49:00.000Z"
     },
     {
      "medio": "Página/12",
@@ -420,6 +321,11 @@
      "fecha": "2026-10-02T16:24:00.000Z"
     },
     {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/musica/murio-ricardo-soule-fundador-de-vox-dei-y-pionero-del-rock-nacional.phtml",
+     "fecha": "2026-10-02T15:49:06.000Z"
+    },
+    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/espectaculos/murio-ricardo-soule-lider-de-vox-dei-y-leyenda-del-rock-argentino/",
      "fecha": "2026-10-02T16:33:30.000Z"
@@ -450,6 +356,93 @@
    "maximo": 5
   },
   {
+   "id": "1a6zyt9",
+   "titulo": "Murió el exministro de la Corte Suprema Augusto César Belluscio",
+   "copete": "A los 96 años, murió Augusto Belluscio , el último sobreviviente de la Corte Suprema de Justicia que refundó Raúl Alfonsín en 1993 con el regreso de la democracia. Se trata del último de los jueces que dejaron firme la histórica sentencia contra los excomandantes que lideraron…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-02T15:33:39.000Z",
+   "fuentes": [
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/breaking-news/murio-el-exministro-de-la-corte-suprema-augusto-cesar-belluscio.phtml",
+     "fecha": "2026-10-02T15:33:39.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/murio-el-juez-augusto-belluscio-el-ultimo-de-los-integrantes-de-la-corte-del-regreso-a-la-democracia-nid02102026/",
+     "fecha": "2026-10-02T20:11:01.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/02/murio-augusto-belluscio-exjuez-de-la-corte-suprema/",
+     "fecha": "2026-10-02T16:06:32.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/politica/murio-augusto-belluscio-exjuez-corte-1983-2005-2026102154625",
+     "fecha": "2026-10-02T18:46:25.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/02/murio-augusto-belluscio-exjuez-de-la-corte-suprema/",
+     "fecha": "2026-10-02T17:51:14.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/politica/murio-augusto-belluscio-historico-ex-juez-la-corte-suprema-n1602658",
+     "fecha": "2026-10-02T16:24:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/murio-el-exjuez-la-corte-suprema-augusto-belluscio-n250590",
+     "fecha": "2026-10-02T18:28:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/murio-augusto-cesar-belluscio-exministro-corte-suprema/",
+     "fecha": "2026-10-02T17:51:02.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/politica/2026/10/02/murio-augusto-cesar-belluscio-a-los-96-anos-quien-era-el-historico-exjuez-de-la-corte-suprema/",
+     "fecha": "2026-10-02T16:35:59.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/murio-augusto-belluscio-historico-juez-la-corte-suprema-n922652",
+     "fecha": "2026-10-02T22:37:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/la-corte-suprema-expreso-su-pesar-por-la-muerte-de-augusto-cesar-belluscio_a6ac009c8f814a2817c8f2a2d",
+     "fecha": "2026-10-02T19:46:37.293Z"
+    },
+    {
+     "medio": "La Tecla",
+     "enlace": "https://www.latecla.info/170147-a-los-96-anos-murio-augusto-belluscio-ex-juez-de-la-corte-suprema",
+     "fecha": "2026-10-02T16:10:00.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/murio-augusto-belluscio-exjuez-de-la-corte-suprema-y-referente-del-derecho-de-familia",
+     "fecha": "2026-10-02T20:45:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/judiciales/2026/10/02/el-ex-juez-de-la-corte-suprema-augusto-belluscio-murio-a-los-96-anos/",
+     "fecha": "2026-10-02T15:55:12.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/murio-augusto-belluscio-historico-exjuez-corte-suprema_0_LetbgZX11I.html",
+     "fecha": "2026-10-02T15:41:32.000Z"
+    }
+   ],
+   "intentos": 5,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"augusto\", \"belluscio\" y el cuerpo no los explica; sin esas oraciones quedan 106 palabras",
+   "maximo": 5
+  },
+  {
    "id": "1qnkumc",
    "titulo": "Milei cerró su gira en Francia: “Argentina se dirige nuevamente a paso firme hacia el futuro”",
    "copete": "El presidente Javier Milei cerró hoy su gira por Francia en el marco de la Argentina Week París con un acto realizado en uno de los salones de la Torre Eiffel, donde afirmó que la Argentina se encuentra frente a “un cambio de página respecto a sus últimos 100 años de historia”…",
@@ -464,12 +457,12 @@
     {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
-     "fecha": "2026-10-02T22:22:37.000Z"
+     "fecha": "2026-10-02T22:53:56.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
-     "fecha": "2026-10-02T22:22:37.000Z"
+     "fecha": "2026-10-02T22:53:56.000Z"
     },
     {
      "medio": "La Nueva",
@@ -487,9 +480,41 @@
      "fecha": "2026-10-02T22:07:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 3 problemas (antecedente, fecha, nombre): el cuerpo usa 2, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 68 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (nombre): el cuerpo nombra a \"estado\" y la fuente no; sin esas oraciones quedan 64 palabras",
    "maximo": 4
+  },
+  {
+   "id": "11e02rs",
+   "titulo": "El riesgo país llegó a 655 puntos y alcanzó su valor más alto del año",
+   "copete": "El riesgo país mantuvo la tendencia alcista de la primera rueda de octubre y alcanzó su valor más alto del año . Este movimiento ocurrió en un contexto internacional desfavorable para la deuda soberana. El indicador elaborado por JP Morgan trepó 19 unidades y se ubicó en los 655…",
+   "seccion": "Economía",
+   "fecha": "2026-10-02T15:31:22.023Z",
+   "fuentes": [
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-escala-hasta-los-650-puntos-el-valor-mas-alto-del-ano-nid02102026/",
+     "fecha": "2026-10-02T16:11:53.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-riesgo-pais-continua-la-escalada-y-trepo-hasta-650-puntos-el-valor-mas-alto-del-ano",
+     "fecha": "2026-10-02T21:02:55.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano_a6abfc939f814a2817c8518c5",
+     "fecha": "2026-10-02T21:10:00.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano-politica-y-economia_1790955480",
+     "fecha": "2026-10-02T20:20:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
   },
   {
    "id": "gdwukq",
@@ -519,8 +544,8 @@
      "fecha": "2026-10-02T15:09:49.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (derogacion, oposicion, sesion, Camara, gestion): va con las tildes",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (sesion, derogacion, oposicion, Camara, gestion): va con las tildes",
    "maximo": 3
   }
  ]
