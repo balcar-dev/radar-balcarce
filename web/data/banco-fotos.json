@@ -4048,16 +4048,16 @@
   "intentos": 1
  },
  "dxrhun": {
-  "archivo": "fotos-notas/dxrhun.jpg",
   "medio": "Página/12",
-  "credito": "Foto: Página/12",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto asume su error en Bakú y encara el Gran Premio de Malasia",
   "enlace": "https://www.pagina12.com.ar/2026/10/01/colapinto-hablo-del-incidente-con-gasly-y-norris-un-error-simple-con-consecuencias-grandes/",
   "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/HT46DUJNXNHJVCYKWYQHBODKEA.jpeg?smart=true&auth=e8551c78446fbff8b3d68ed7e240d292253feaa8d5e6bb5829ba298b32667dd6&width=1200&height=630",
   "razon": "La foto B muestra claramente a Franco Colapinto en conferencia junto a otro piloto, con buen encuadre y sin marcas agregadas ni menores.",
-  "cuando": "2026-10-01T14:08:41.956Z"
+  "cuando": "2026-10-01T14:08:41.956Z",
+  "intentado": true,
+  "borrada": true
  },
  "1vt533g": {
   "archivo": "fotos-notas/1vt533g.jpg",
@@ -4906,5 +4906,53 @@
   "cuando": "2026-10-02T12:02:20.955Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "g34tir": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Balcarce reúne a la comunidad sorda en su primer encuentro regional",
+  "razon": "La única foto disponible incluye menores de edad reconocibles.",
+  "cuando": "2026-10-02T12:31:43.398Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "xvt4t1": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+  "razon": "La única foto disponible muestra un collage con varias personas, incluyendo posibles menores y personal, pero no es apta directamente según los criterios establecidos.",
+  "cuando": "2026-10-02T12:31:43.398Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "y1kgx4": {
+  "archivo": "fotos-notas/y1kgx4.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Fiorella Cacace detalla la labor de los escribanos",
+  "enlace": "https://eldiariobalcarce.com.ar/confianza-seguridad-y-nuevos-comienzos-fiorella-cacace-hablo-sobre-el-oficio-de-escribano-946",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-02-12-3-2CACCE_2.jpg",
+  "razon": "Es la única opción disponible, muestra a los protagonistas de la nota con buena nitidez y sin marcas de agua ni menores.",
+  "cuando": "2026-10-02T12:31:43.398Z"
+ },
+ "1ugi3md": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+  "razon": "La única foto disponible incluye a un menor de edad reconocible, por lo que no puede ser seleccionada.",
+  "cuando": "2026-10-02T12:31:43.398Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "ig6fdw": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-02T12:31:43.398Z",
+  "intentos": 1,
+  "fuentes": 5
  }
 }

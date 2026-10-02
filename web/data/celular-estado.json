@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T12:03:14.011Z",
- "portada": 46,
- "archivo": 758,
+ "generado": "2026-10-02T12:32:05.272Z",
+ "portada": 53,
+ "archivo": 762,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T12:03:14.046Z",
+  "generado": "2026-10-02T12:32:05.293Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,13 +85,39 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 40,
     "notas": [
+     {
+      "id": "y1kgx4",
+      "titulo": "Fiorella Cacace detalla la labor de los escribanos",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1ugi3md",
+      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+      "seccion": "Deportes"
+     },
      {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
       "seccion": "Automovilismo"
      },
+     {
+      "id": "xvt4t1",
+      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+      "seccion": "Balcarce"
+     }
+    ]
+   },
+   {
+    "nombre": "noticia2",
+    "titulo": "El repaso de la tarde",
+    "hora": "15:00",
+    "voz": "locutora",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 39,
+    "notas": [
      {
       "id": "1bheb6v",
       "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
@@ -105,24 +131,19 @@
     ]
    },
    {
-    "nombre": "noticia2",
-    "titulo": "El repaso de la tarde",
-    "hora": "15:00",
-    "voz": "locutora",
-    "momento": "antes",
-    "salio": null,
-    "segundos": null,
-    "notas": []
-   },
-   {
     "nombre": "podcast",
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 46,
     "notas": [
+     {
+      "id": "g34tir",
+      "titulo": "Balcarce reúne a la comunidad sorda en su primer encuentro regional",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
@@ -137,17 +158,35 @@
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "1bheb6v",
      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+     "cuando": "2026-10-02T12:04:52.139Z"
+    }
+   ],
+   "cola": [
+    {
+     "id": "y1kgx4",
+     "titulo": "Fiorella Cacace detalla la labor de los escribanos",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1ugi3md",
+     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "xvt4t1",
+     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-01T20:06:31.248Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-02T13:34:52.139Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
