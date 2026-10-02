@@ -1,44 +1,7 @@
 {
- "generado": "2026-10-02T16:01:52.393Z",
+ "generado": "2026-10-02T16:08:17.992Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "xz54n",
-   "titulo": "Milei: “Tenemos el desafío de enlazar la coyuntura con el largo plazo”",
-   "copete": "París, 2 octubre (Enviado especial de NA) – El presidente Javier Milei aseguró que su Gobierno tiene “el desafío de enlazar la coyuntura con el largo plazo” en un discurso al recibir recibe el Premio del Foro Económico de París como \"economista más influyente\". “Tenemos el…",
-   "seccion": "Política",
-   "fecha": "2026-10-02T14:42:03.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/milei---tenemos-el-desafio-de-enlazar-la-coyuntura-con-el-largo-plazo-_a6abfc28cf814a2817c83e9cc",
-     "fecha": "2026-10-02T14:42:03.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
-     "fecha": "2026-10-02T14:56:15.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/javier-milei-refuerza-el-modo-campana-si-logramos-la-reeleccion-el-riesgo-pais-se-va-desplomar-n6329385",
-     "fecha": "2026-10-02T15:12:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/politica/javier-milei-premio-paris-foro-economicoo-viernes-2-octubre-2026",
-     "fecha": "2026-10-02T14:58:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/javier-milei-expone-ante-el-foro-economico-de-paris/",
-     "fecha": "2026-10-02T14:54:48.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (tilde, tildes): el copete dice \"mas\" en vez de \"más\": \"El mandatario participo del Foro Economico de Paris este vie\"",
-   "maximo": 4
-  },
   {
    "id": "11e02rs",
    "titulo": "El riesgo país escala hasta los 650 puntos, el valor más alto del año",
@@ -52,6 +15,11 @@
      "fecha": "2026-10-02T14:56:17.000Z"
     },
     {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/economia/riesgo-pais-sube-7-dias-llega-650-puntos-nivel-alto-once-meses_0_mZ4cRAV94q.html",
+     "fecha": "2026-10-02T15:24:32.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano_a6abfc939f814a2817c8518c5",
      "fecha": "2026-10-02T15:27:23.000Z"
@@ -62,9 +30,46 @@
      "fecha": "2026-10-02T15:41:06.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (numero): el guion dice 50 y la fuente no lo dice",
+   "intentos": 2,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 50 y la fuente no lo dice",
    "maximo": 3
+  },
+  {
+   "id": "1fs15g0",
+   "titulo": "Murió Ricardo Soulé, el líder de Vox Dei y una leyenda del rock argentino, creador de Presente y La Biblia",
+   "copete": "Murió Ricardo Soulé, prócer del rock nacional y fundador de Vox Dei. El músico estaba internado en un sanatorio de Quilmes. El el creador de himnos que marcaron a fuego la historia del rock argentino había publicado un comunicado en sus redes sociales el 11 de septiembre…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-02T15:31:55.000Z",
+   "fuentes": [
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/espectaculos/murio-ricardo-soule-lider-vox-dei-leyenda-rock-argentino-creador-presente-biblia_0_BXZFQjybPv.html",
+     "fecha": "2026-10-02T15:31:55.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/espectaculos/musica/biblia-vox-dei-gran-obra-ricardo-soule-marco-dia-rock-argentino-hizo-contacto-dios_0_RZTJFvwTwg.html",
+     "fecha": "2026-10-02T15:34:57.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/musica/noticias/2026/10/02/murio-ricardo-soule-el-poeta-de-vox-dei-que-convirtio-la-biblia-en-rock/",
+     "fecha": "2026-10-02T15:40:40.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/ratingcero/murio-ricardo-soule-lider-vox-dei-y-pionero-del-rock-nacional-n250573",
+     "fecha": "2026-10-02T15:55:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/murio-ricardo-soule-el-alma-de-vox-dei-y-pionero-del-rock-nacional/",
+     "fecha": "2026-10-02T15:40:14.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (numero): el cuerpo dice 0 y la fuente no lo dice; sin esas oraciones quedan 72 palabras",
+   "maximo": 4
   },
   {
    "id": "1h0pc9p",
