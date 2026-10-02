@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T21:17:17.865Z",
+ "generado": "2026-10-02T21:31:38.121Z",
  "portada": 61,
  "archivo": 810,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-02T21:17:17.906Z",
+  "generado": "2026-10-02T21:31:38.155Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -202,15 +202,15 @@
    ],
    "cola": [
     {
-     "id": "1akpidg",
-     "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "3cr087",
      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "1akpidg",
+     "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],

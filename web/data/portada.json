@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T21:17:17.865Z",
+  "generado": "2026-10-02T21:31:38.121Z",
   "notas": [
     {
       "id": "3cr087",
@@ -243,10 +243,10 @@
       "guion": "La cadena de panaderías Pandanés cierra sus locales y despide personal",
       "seccion": "Economía",
       "medios": [
-        "Ámbito",
         "Infobae",
         "El Destape",
-        "iProfesional"
+        "iProfesional",
+        "Ámbito"
       ],
       "enlace": "https://www.iprofesional.com/negocios/465800-cadena-de-panaderias-pandanes-cerro-todos-sus-locales-y-pedira-la-quiebra",
       "teniaImagenLaFuente": true,
@@ -322,11 +322,12 @@
       "medios": [
         "Infobae",
         "La Nación",
-        "Ámbito",
         "El Cronista",
         "A24",
         "iProfesional",
+        "Ámbito",
         "C5N",
+        "Radio Mitre",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.cronista.com/economia-politica/avanza-la-linea-f-del-subte-dos-consorcios-compiten-para-su-construccion/",
@@ -643,11 +644,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44978-marcelo-panebianco-y-la-llegada-de-leon-xiv-es-una-invitacion-para-vivir-la-propia-fe/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-02T17:31:13.649Z",
       "sinFecha": true,
       "visto": "2026-10-02T17:31:13.649Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -703,7 +704,6 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "News Balcarce (FM 91.7)"
@@ -713,7 +713,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 94,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -726,13 +726,6 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
-          "fecha": "2026-10-02T20:21:48.000Z",
-          "oficial": false,
           "aporte": null
         },
         {
@@ -969,6 +962,7 @@
       "seccion": "Fútbol",
       "medios": [
         "TN (Todo Noticias)",
+        "TyC Sports",
         "Olé",
         "Minuto Uno",
         "Noticias Argentinas (NA)",
@@ -1163,96 +1157,6 @@
       }
     },
     {
-      "id": "ce0pxp",
-      "titulo": "Caputo descarta una devaluación y defiende el rumbo económico",
-      "copete": "El ministro de Economía habló ante empresarios en Mar del Plata. Explicó que el aumento del riesgo país responde a un escenario externo adverso y ratificó la continuidad de las medidas vigentes.",
-      "cuerpo": "El ministro de Economía, Luis Caputo, descartó recurrir a una devaluación para generar competitividad y ratificó la continuidad del plan económico actual. Durante su exposición en el cierre del 62° Coloquio de IDEA en Mar del Plata, entrevistado por el presidente del Grupo Galicia, Fabián Kon, el funcionario sostuvo que la suba del riesgo país responde a un escenario internacional adverso y afirmó que en cualquier otro momento el país no habría resistido la situación.",
-      "guion": "Caputo descarta una devaluación y defiende el rumbo económico",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "Clarín",
-        "A24"
-      ],
-      "enlace": "https://www.clarin.com/economia/coloquio-idea-caputo-riesgo-pais-parte-shock-externo-brutal-cualquier-contexto-argentina-durado-minutos_0_YVPvNr8cV6.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T16:24:51.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Luis Caputo participó del 62° Coloquio de IDEA en Mar del Plata.",
-        "El ministro descartó una devaluación para buscar competitividad.",
-        "El riesgo país alcanzó los 655 puntos básicos, el nivel más alto del año.",
-        "El funcionario atribuyó el incremento financiero a un contexto internacional desfavorable."
-      ],
-      "noConfirmado": [
-        "No se informaron precisiones sobre nuevas medidas fiscales específicas para los próximos meses."
-      ],
-      "textoRedes": "El ministro de Economía, Luis Caputo, descartó una devaluación y atribuyó la suba del riesgo país a un contexto internacional adverso durante su exposición en el Coloquio de IDEA en Mar del Plata.",
-      "etiquetas": [
-        "Luis Caputo",
-        "Coloquio de IDEA",
-        "Economía",
-        "Riesgo país",
-        "Mar del Plata"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/coloquio-idea-caputo-riesgo-pais-parte-shock-externo-brutal-cualquier-contexto-argentina-durado-minutos_0_YVPvNr8cV6.html",
-          "fecha": "2026-10-02T16:24:51.000Z",
-          "oficial": false,
-          "aporte": "Detalló la entrevista a Luis Caputo en el Coloquio de IDEA a cargo de Fabián Kon."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/02/caputo-hablo-ante-los-empresarios-de-idea-descarto-devaluar-y-anticipo-el-plan-economico-si-milei-es-reelecto/",
-          "fecha": "2026-10-02T20:41:15.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación del ministro de Economía en el encuentro empresarial en Mar del Plata."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/caputo-pidio-tiempo-a-los-empresarios-y-postergo-la-reforma-tributaria-para-despues-de-2031-nid02102026/",
-          "fecha": "2026-10-02T20:17:42.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el riesgo país subió a 655 puntos básicos, el registro más alto del año."
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/caputo-defendio-el-rumbo-economico-y-atribuyo-el-alza-del-riesgo-pais-un-brutal-shock-externo-n1602678",
-          "fecha": "2026-10-02T18:22:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el funcionario se encontraba en París y vinculó la suba del indicador al contexto internacional."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1h0pc9p",
-          "titulo": "Luis Caputo asegura en París que el único riesgo local es no invertir",
-          "fecha": "2026-10-01T10:30:35.000Z",
-          "ruta": "/nota/luis-caputo-asegura-en-paris-que-el-unico-riesgo-local-es-no-invertir-1h0pc9p"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "caputo-descarta-una-devaluacion-y-defiende-el-rumbo-economico",
-      "foto": {
-        "archivo": "fotos-notas/ce0pxp.jpg",
-        "credito": "Foto: A24"
-      }
-    },
-    {
       "id": "jeiawq",
       "titulo": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
       "copete": "El embajador Ian Sielecki valoró los anuncios financieros logrados durante la Argentina Week en París. Del encuentro participaron el presidente Javier Milei, ministros y gobernadores.",
@@ -1268,8 +1172,10 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "iProfesional",
+        "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Día",
+        "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil"
       ],
@@ -1353,7 +1259,6 @@
       "seccion": "Política",
       "medios": [
         "TN (Todo Noticias)",
-        "Ámbito",
         "C5N",
         "Crónica",
         "Radio Mitre",
@@ -1684,17 +1589,15 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 100,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1768,8 +1671,7 @@
       "seccion": "Policiales",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Puntonueve (FM 100.9)"
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
@@ -2436,6 +2338,69 @@
       "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
     },
     {
+      "id": "1y25nin",
+      "titulo": "Nicolás Pino pide mayor protagonismo del agro en la agenda internacional",
+      "copete": "El titular de la Sociedad Rural Argentina participa del encuentro Argentina Week en París y remarca el potencial exportador del sector hacia Europa.",
+      "cuerpo": "El presidente de la Sociedad Rural Argentina, Nicolás Pino, participa en París del encuentro Argentina Week junto a referentes del sector público y privado.\n\nEl referente rural afirmó que la producción nacional puede llegar a los 300 millones de toneladas si existen condiciones para invertir y exportar. Además, mencionó que la Unión Europea representó el segundo destino para las ventas agroindustriales durante 2025, superando los 6.000 millones de dólares.\n\nEn esa línea, el titular de la entidad reclamó mejoras en infraestructura, previsibilidad y la eliminación de los derechos de exportación para sostener el crecimiento productivo.",
+      "guion": "Nicolás Pino pide mayor protagonismo del agro en la agenda internacional",
+      "seccion": "Agro",
+      "medios": [
+        "Infocampo",
+        "Noticias Agropecuarias"
+      ],
+      "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/pino-es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T11:59:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T21:31:11.510Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Nicolás Pino participa del evento Argentina Week en París.",
+        "El dirigente afirmó que el sector puede alcanzar 300 millones de toneladas.",
+        "La Unión Europea fue el segundo destino exportador durante 2025."
+      ],
+      "seSabe": [
+        "Nicolás Pino participa de la Argentina Week en París.",
+        "La Unión Europea fue el segundo destino de las exportaciones agroindustriales argentinas en 2025 con más de 6.000 millones de dólares, según los datos informados.",
+        "Las ventas hacia la UE alcanzaron 1.922 millones de dólares en el primer cuatrimestre del Acuerdo Interino de Comercio con el Mercosur."
+      ],
+      "textoRedes": "Nicolás Pino participa de la Argentina Week en París y destaca el rol exportador del sector agropecuario ante mercados internacionales.",
+      "etiquetas": [
+        "Sociedad Rural Argentina",
+        "Nicolás Pino",
+        "exportaciones",
+        "Unión Europea",
+        "Paris"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Agropecuarias",
+          "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/pino-es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
+          "fecha": "2026-10-02T11:59:10.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles de la participación de Nicolás Pino en París y las cifras de exportación hacia la Unión Europea."
+        },
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
+          "fecha": "2026-10-02T18:29:27.000Z",
+          "oficial": false,
+          "aporte": "Informó la presencia del titular de la Sociedad Rural Argentina en el encuentro Argentina Week junto al sector público y privado."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "nicolas-pino-pide-mayor-protagonismo-del-agro-en-la-agenda"
+    },
+    {
       "id": "l415ro",
       "titulo": "Marco Morelli lidera la práctica de Moto3 en Japón",
       "copete": "El piloto argentino marcó el mejor registro en el circuito de Motegi. Su compatriota Valentín Perrone finalizó quinto y ambos avanzaron a la Q2.",
@@ -2827,105 +2792,6 @@
       }
     },
     {
-      "id": "owx45w",
-      "titulo": "El Servicio Meteorológico anuncia tormentas y ráfagas para el fin de semana en el AMBA",
-      "copete": "El Servicio Meteorológico Nacional anticipa un fin de semana inestable en el Área Metropolitana de Buenos Aires. El sábado llegarán las precipitaciones y ráfagas, mientras que el domingo se espera una mejora en las condiciones.",
-      "cuerpo": "El Servicio Meteorológico Nacional pronosticó un fin de semana marcado por la inestabilidad en el Área Metropolitana de Buenos Aires, con lluvias previstas para el sábado y una paulatina mejoría hacia el domingo. Para este viernes se registra nubosidad en aumento y temperaturas que oscilan entre los 8 y los 18 grados, con ráfagas del sector norte de hasta 50 kilómetros por hora hacia la noche.\n\nEl momento más complejo del fenómeno se registrará durante el sábado, cuando habrá chaparrones y tormentas aisladas desde la madrugada con una temperatura máxima estimada en 19 grados. El panorama cambiará el domingo con cielo despejado a parcialmente cubierto, sin precipitaciones, una mínima de 10 grados y una tarde que alcanzará los 20 grados.",
-      "guion": "El Servicio Meteorológico anuncia tormentas y ráfagas para el fin de semana en el AMBA",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "El Cronista",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "La Capital (Rosario)"
-      ],
-      "enlace": "https://noticiasargentinas.com/sociedad/alerta-por-tormentas-y-rafagas-en-el-amba--como-estara-el-tiempo-este-fin-de-semana_a6abf86a1f814a2817c7b0e3c",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T10:31:25.989Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T20:01:21.999Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Servicio Meteorológico Nacional anticipa tormentas para el sábado en el AMBA",
-        "El viernes culminará con ráfagas del sector norte de hasta 50 kilómetros por hora",
-        "El domingo mejorarán las condiciones con cielo despejado y marcas térmicas agradables"
-      ],
-      "seSabe": [
-        "El Servicio Meteorológico Nacional pronosticó chaparrones y tormentas aisladas para el sábado en el AMBA",
-        "El viernes presenta temperaturas entre 8 y 18 grados con ráfagas hacia la noche",
-        "El domingo se registrará una mejora climática con temperaturas de hasta 20 grados sin precipitaciones"
-      ],
-      "textoRedes": "El Servicio Meteorológico Nacional anticipa un fin de semana inestable en el Área Metropolitana de Buenos Aires con tormentas para el sábado y una mejora en las condiciones hacia el domingo.",
-      "etiquetas": [
-        "servicio meteorológico nacional",
-        "tiempo",
-        "AMBA",
-        "pronóstico",
-        "tormentas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/sociedad/alerta-por-tormentas-y-rafagas-en-el-amba--como-estara-el-tiempo-este-fin-de-semana_a6abf86a1f814a2817c7b0e3c",
-          "fecha": "2026-10-02T10:31:25.989Z",
-          "oficial": false,
-          "aporte": "Detalló el pronóstico completo para el fin de semana en el AMBA con temperaturas y ráfagas."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/sociedad/2026/10/02/el-pronostico-del-tiempo-en-el-amba-cuando-llegan-las-tormentas-y-como-seguira-el-fin-de-semana/",
-          "fecha": "2026-10-02T10:58:21.000Z",
-          "oficial": false,
-          "aporte": "Aportó los valores térmicos iniciales para la jornada del viernes."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/lluvias-y-tormentas-en-buenos-aires-cuando-llegan-y-como-estara-el-fin-de-semana/",
-          "fecha": "2026-10-02T12:45:17.804Z",
-          "oficial": false,
-          "aporte": "No registró contenido disponible en su resumen."
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/la-ciudad/fin-semana-inestable-rosario-cuando-llegan-las-lluvias-y-las-tormentas-n10284457.html",
-          "fecha": "2026-10-02T12:46:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las precipitaciones para el sábado y la mejora dominical."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/interes-general/alerta-por-la-llegada-de-un-frente-frio-con-tormentas-nevadas-y-rafagas-de-viento-de-hasta-80-kmh",
-          "fecha": "2026-10-02T18:02:47.000Z",
-          "oficial": false,
-          "aporte": "No registró contenido disponible en su resumen."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1sj7dfp",
-          "titulo": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
-          "fecha": "2026-09-26T03:01:00.000Z",
-          "ruta": "/nota/emiten-alerta-amarilla-por-tormentas-y-lluvias-en-varias-provincias-1sj7dfp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-servicio-meteorologico-anuncia-tormentas-y-rafagas-para-el-fin-de",
-      "foto": {
-        "archivo": "fotos-notas/owx45w.jpg",
-        "credito": "Foto: El Cronista"
-      }
-    },
-    {
       "id": "1egbk71",
       "titulo": "Javier Milei cumple su última jornada en Francia y regresa al país",
       "copete": "El presidente finaliza su agenda en París este viernes con un reconocimiento económico y el cierre de la Argentina Week. Su vuelta está programada para el sábado por la mañana.",
@@ -3125,7 +2991,7 @@
       "fecha": "2026-10-02T09:29:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T11:01:22.221Z",
-      "relevancia": 43,
+      "relevancia": 36,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3811,6 +3677,81 @@
       }
     },
     {
+      "id": "1f6rlk",
+      "titulo": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
+      "copete": "La senadora nacional participó el jueves del Coloquio de IDEA en Mar del Plata. Evitó definir si competirá por la presidencia en 2027 y reclamó que las medidas oficiales lleguen con mayor claridad a los hogares.",
+      "cuerpo": "La senadora nacional Patricia Bullrich participó el jueves en el sexagésimo segundo Coloquio de IDEA en Mar del Plata, donde evitó definir si será candidata a la presidencia en 2027 y puso el foco en la continuidad del proyecto oficialista.\n\nDurante su exposición ante representantes empresarios, la legisladora de La Libertad Avanza reclamó mayor velocidad para que los cambios económicos implementados se reflejen en los hogares. Además, marcó diferencias entre las actividades con alto dinamismo, como el agro y la minería, y sectores como la industria, la construcción y el comercio que atraviesan dificultades.\n\nPor otro lado, la senadora advirtió sobre el impacto del costo argentino y la presión impositiva en la competitividad frente a la región. Al respecto, señaló que no es posible reducir todos los gravámenes de manera inmediata y que se requiere el acompañamiento de las provincias y los municipios.",
+      "guion": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
+      "seccion": "Política",
+      "medios": [
+        "El Eco de Tandil",
+        "Perfil",
+        "Infobae",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T17:50:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T21:38:14.044Z",
+      "relevancia": 24,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Participó este jueves en el Coloquio de IDEA en Mar del Plata.",
+        "Evitó definir una candidatura presidencial de cara a 2027.",
+        "Reclamó mayor velocidad para que los cambios lleguen a las familias.",
+        "Advirtió sobre el impacto del costo argentino en la competitividad."
+      ],
+      "seSabe": [
+        "Patricia Bullrich participó en el 62° Coloquio de IDEA en Mar del Plata.",
+        "La senadora evitó confirmar una candidatura para 2027 y priorizó la continuidad del proyecto político.",
+        "Reclamó mayor velocidad para que las medidas económicas se sientan en los hogares.",
+        "Señaló la necesidad de compatibilizar sectores en crecimiento con industrias y comercios caídos.",
+        "Indicó que la reducción impositiva requiere el acompañamiento de provincias y municipios."
+      ],
+      "noConfirmado": [
+        "Aún no está definido cómo se ordenará la oferta electoral ni las alianzas para 2027."
+      ],
+      "textoRedes": "La senadora Patricia Bullrich participó en el Coloquio de IDEA en Mar del Plata, evitó definir una candidatura para 2027 y reclamó mayor velocidad para que los cambios económicos lleguen a los hogares.",
+      "etiquetas": [
+        "Patricia Bullrich",
+        "IDEA",
+        "Mar del Plata",
+        "Economía",
+        "Elecciones 2027"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
+          "fecha": "2026-10-01T17:50:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Patricia Bullrich en el Coloquio de IDEA sobre la economía, las elecciones de 2027 y el costo argentino."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/bullrich-volvio-a-marcar-diferencias-y-reclamo-que-los-cambios-economicos-lleguen-a-las-familias",
+          "fecha": "2026-10-01T20:13:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la participación de Patricia Bullrich en el encuentro empresarial en Mar del Plata."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "patricia-bullrich-pide-mayor-velocidad-para-los-cambios-economicos-en",
+      "foto": {
+        "archivo": "fotos-notas/1f6rlk.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
       "copete": "El secretario de Gobierno, Ricardo Stoppani, repasó la labor local en seguridad. Anunció la ampliación del sistema de vigilancia y el aporte a las fuerzas.",
@@ -4038,10 +3979,10 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "Agroempresario",
         "Agrositio",
         "Infocampo",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248623-las-exportaciones-agroindustriales-a-la-ue-crecieron-21-en-valor-tras-el-acuerdo-con-el-mercosur.html",
       "teniaImagenLaFuente": true,
@@ -4555,9 +4496,9 @@
     {
       "id": "repaso20261001manana",
       "propia": "repaso",
-      "titulo": "El repaso de la mañana en Radar Balcarce: el hospital, Aymeric Laporte y Las Correcaminos",
-      "copete": "Radar Balcarce publicó a las 10:35 de este jueves 1 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la mañana del jueves 1, en el orden en que salieron en el audio.\n\nEl Hospital Municipal incorpora una nueva mesa de cirugía. El centro asistencial sumó un equipo hidráulico adquirido por leasing. Cuenta con desplazamiento longitudinal y permite utilizar sistemas de diagnóstico por imágenes en el quirófano.\n\nAymeric Laporte califica a la Argentina de antifútbol tras la final. El defensor español cuestionó el estilo de juego de la Albiceleste y la permisividad arbitrajista en la definición del Mundial que ganó su selección.\n\nLas Correcaminos participan en el torneo de basquet Sporting Rosa. El equipo femenino de la Escuela Municipal juega el sábado y el domingo en Mar del Plata. La competencia incluye una campaña de concientización sobre el cáncer de mama.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "titulo": "El repaso de la mañana en Radar Balcarce: el hospital y Las Correcaminos",
+      "copete": "Radar Balcarce publicó a las 10:35 de este jueves 1 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 2 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
+      "cuerpo": "Estas son las 2 notas que se contaron en el repaso de la mañana del jueves 1, en el orden en que salieron en el audio.\n\nEl Hospital Municipal incorpora una nueva mesa de cirugía. El centro asistencial sumó un equipo hidráulico adquirido por leasing. Cuenta con desplazamiento longitudinal y permite utilizar sistemas de diagnóstico por imágenes en el quirófano.\n\nLas Correcaminos participan en el torneo de basquet Sporting Rosa. El equipo femenino de la Escuela Municipal juega el sábado y el domingo en Mar del Plata. La competencia incluye una campaña de concientización sobre el cáncer de mama.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Balcarce",
       "local": true,
@@ -4573,24 +4514,18 @@
       "temas": [],
       "etiquetas": [
         "el hospital",
-        "Aymeric Laporte",
         "Las Correcaminos"
       ],
       "como": "automatica",
       "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
       "notasDelRepaso": [
         "ff9n91",
-        "1fqh4sy",
         "dwvi75"
       ],
       "enlacesEnTexto": [
         {
           "texto": "El Hospital Municipal incorpora una nueva mesa de cirugía",
           "href": "/nota/el-hospital-municipal-incorpora-una-nueva-mesa-de-cirugia-ff9n91"
-        },
-        {
-          "texto": "Aymeric Laporte califica a la Argentina de antifútbol tras la final",
-          "href": "/nota/aymeric-laporte-califica-a-la-argentina-de-antif-u00futbol-tras-la-1fqh4sy"
         },
         {
           "texto": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
@@ -4612,7 +4547,7 @@
       "slug": "el-repaso-de-la-manana-en-radar-balcarce-el-hospital-y-fiesta",
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261001manana.jpg",
-        "credito": "Fotos: Municipalidad de Balcarce, TyC Sports y Radio Gabal (FM 104.1)"
+        "credito": "Fotos: Municipalidad de Balcarce y Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -4970,7 +4905,7 @@
     "ahora": {
       "temp": 12,
       "sensacion": 9,
-      "humedad": 61,
+      "humedad": 63,
       "viento": 14,
       "rumbo": "N",
       "cielo": "Nublado",
@@ -5323,16 +5258,10 @@
   },
   "pendientes": [
     {
-      "id": "1w06xhx",
+      "id": "1148srf",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"lesionada\""
-    },
-    {
-      "id": "1c7unm1",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"herido\""
     },
     {
       "id": "1uabccx",
@@ -5390,9 +5319,9 @@
     },
     {
       "id": "18cqk35",
-      "titulo": null,
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niña\""
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "s1fpwb",
@@ -5413,12 +5342,6 @@
       "motivo": "necesita ojo humano: \"nena\""
     },
     {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
-    },
-    {
       "id": "1yvhtzv",
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
@@ -5429,19 +5352,7 @@
       "titulo": "Resultados de Quini 6 hoy: controlá tu boleta del…",
       "seccion": "Argentina",
       "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "6gb1qq",
-      "titulo": "¿Qué puede aportar el Campo argentino al mundo? La…",
-      "seccion": "Agro",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "imkij7",
-      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 6
+  "esperandoCuerpo": 8
 }
