@@ -3576,16 +3576,16 @@
   "intentos": 2
  },
  "g8dncb": {
-  "archivo": "fotos-notas/g8dncb.jpg",
   "medio": "El Diario Balcarce",
-  "credito": "Foto: El Diario Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
   "enlace": "https://eldiariobalcarce.com.ar/racing-futbol-club-adquirio-un-terreno-677",
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-09-30-22-47-26Racing_FC.jpg",
   "razon": "Es la única foto disponible, tiene buena nitidez y no presenta marcas de agua ni menores.",
-  "cuando": "2026-09-30T23:02:27.201Z"
+  "cuando": "2026-09-30T23:02:27.201Z",
+  "intentado": true,
+  "borrada": true
  },
  "u8j0ja": {
   "archivo": "fotos-notas/u8j0ja.jpg",
@@ -4858,5 +4858,17 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/10/02/-GaQ0w7ZJ_2000x1500__1.jpg",
   "razon": "La foto A muestra con claridad un auto de competición en pista, sin marcas de agua de los medios ni menores, y con excelente composición e iluminación.",
   "cuando": "2026-10-02T11:01:45.037Z"
+ },
+ "1t295vx": {
+  "archivo": "fotos-notas/1t295vx.jpg",
+  "medio": "Página/12",
+  "credito": "Foto: Página/12",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Colapinto inicia con complicaciones y suma penalizaciones en Bahréin",
+  "enlace": "https://www.pagina12.com.ar/2026/10/02/colapinto-tuvo-un-flojo-arranque-en-las-practicas-libres-en-bahrein/",
+  "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/7BP7PGS7DVEB7I6IFWENB3CLQI.jpg?smart=true&auth=fe39c94ae08ff021897f62c0b1a1f4a4dce5bb1387381b0a2b8fb5f0fdec9387&width=1200&height=630",
+  "razon": "Tiene mejor encuadre y nitidez, mostrando claramente al piloto y el auto sin marcas añadidas ni menores.",
+  "cuando": "2026-10-02T11:17:58.278Z"
  }
 }

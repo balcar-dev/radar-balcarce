@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T11:02:10.412Z",
- "portada": 54,
+ "generado": "2026-10-02T11:18:01.900Z",
+ "portada": 52,
  "archivo": 758,
- "esperandoCuerpo": 0,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-02T11:02:10.445Z",
+  "generado": "2026-10-02T11:18:01.931Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 53,
     "notas": [
      {
       "id": "alddw5",
@@ -98,14 +98,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "13npbde",
-      "titulo": "Dibu Martínez postula a Nico Paz como el heredero de la diez de Messi",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "1sjcoqr",
       "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,18 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 46,
     "notas": [
-     {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-      "seccion": "Fútbol"
-     },
      {
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
@@ -136,6 +126,11 @@
      {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "jzu6k",
+      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce"
      }
     ]
