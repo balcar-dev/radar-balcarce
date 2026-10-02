@@ -1874,5 +1874,13 @@
       "notaId": "y1kgx4"
     }
   },
-  "problemas": {}
+  "problemas": {
+    "2026-10-02/noticia2/instagram/reel": {
+      "pieza": "noticia2",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-02T18:05:37.187Z"
+    }
+  }
 }
