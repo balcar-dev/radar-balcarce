@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T05:31:24.693Z",
+  "generado": "2026-10-02T06:01:29.789Z",
   "notas": [
     {
       "id": "1j4lf17",
@@ -969,7 +969,7 @@
       "fecha": "2026-10-01T17:50:05.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T21:38:14.044Z",
-      "relevancia": 39,
+      "relevancia": 32,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1045,6 +1045,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Nueva",
         "Bolavip Argentina",
         "Vavel Argentina",
@@ -1055,7 +1056,7 @@
       "fecha": "2026-10-01T17:41:22.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T19:31:41.270Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1162,7 +1163,7 @@
       "fecha": "2026-10-01T17:36:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T18:01:03.074Z",
-      "relevancia": 67,
+      "relevancia": 60,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1233,15 +1234,17 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T17:31:17.133Z",
       "sinFecha": true,
       "visto": "2026-10-01T17:31:17.133Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "rutas"
+      ],
       "como": "automatica",
       "claves": [
         "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
@@ -1655,11 +1658,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44966-el-drama-de-ticiano-le-prohibieron-vender-alfajores-en-la-calle-y-ahora-suena-con-conseguir-un-trabajo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T16:31:02.291Z",
       "sinFecha": true,
       "visto": "2026-10-01T16:31:02.291Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3491,11 +3494,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T12:01:06.332Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T11:52:38.000Z",
+      "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3505,7 +3508,7 @@
         {
           "medio": "El Diario Balcarce",
           "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-          "fecha": null,
+          "fecha": "2026-10-01T11:52:38.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3959,8 +3962,8 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Ámbito",
         "Noticias Agropecuarias",
+        "Ámbito",
         "Ecos Diarios (Necochea)",
         "La Nueva",
         "La Nación",
@@ -4324,6 +4327,47 @@
       "foto": {
         "archivo": "fotos-notas/1neicxo.jpg",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "x9mmdo",
+      "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
+      "copete": "El piloto bonaerense analizó su rendimiento en el autódromo de Balcarce tras competir en la categoría de camionetas. Ya se prepara para la próxima fecha en San Nicolás.",
+      "cuerpo": "El piloto Otto Fritzler destacó el trazado balcarceño tras completar un destacado desempeño en las competencias de TC Pick Up. El deportista encabeza la tabla de posiciones del torneo de camionetas y ya focaliza su preparación en la competencia de Turismo Carretera programada para el fin de semana en San Nicolás.\n\nEn cuanto a la actividad en el circuito local, las categorías del Zonal del Atlántico competirán en el autódromo Juan M. Fangio durante el fin de semana largo del 10 al 12 de octubre de 2026, según se informó anteriormente.",
+      "guion": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up.",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Córdoba Competición",
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://cordobacompeticion.com/nacionales/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T01:38:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T04:01:15.862Z",
+      "relevancia": 44,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "tc-pick-up"
+      ],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Córdoba Competición",
+          "enlace": "https://cordobacompeticion.com/nacionales/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad/",
+          "fecha": "2026-10-01T01:38:10.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "balcarce-tiene-algo-especial-es-un-autodromo-de-verdad",
+      "corregidaAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/x9mmdo.jpg",
+        "credito": "Foto: Córdoba Competición"
       }
     },
     {
@@ -5118,11 +5162,16 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 3
+      "cuantas": 4
     },
     {
       "nombre": "El hospital",
       "ranura": "hospital",
+      "cuantas": 2
+    },
+    {
+      "nombre": "Las rutas",
+      "ranura": "rutas",
       "cuantas": 2
     },
     {
@@ -5135,8 +5184,8 @@
     "ahora": {
       "temp": 6,
       "sensacion": 4,
-      "humedad": 90,
-      "viento": 8,
+      "humedad": 92,
+      "viento": 7,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
