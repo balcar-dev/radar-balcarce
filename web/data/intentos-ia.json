@@ -704,8 +704,8 @@
   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1a6zyt9": {
-  "intentos": 3,
-  "ultimo": "2026-10-02T17:31:21.949Z",
+  "intentos": 4,
+  "ultimo": "2026-10-02T18:01:29.109Z",
   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1a9rnj4": {
@@ -731,6 +731,11 @@
  "1acx84s": {
   "intentos": 1,
   "ultimo": "2026-09-28T17:32:02.999Z",
+  "motivo": "con cuerpo"
+ },
+ "1aekavp": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T18:01:29.109Z",
   "motivo": "con cuerpo"
  },
  "1agrxxu": {
@@ -1109,6 +1114,11 @@
   "ultimo": "2026-09-28T03:02:17.601Z",
   "motivo": "con cuerpo"
  },
+ "1gofphd": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T18:01:29.109Z",
+  "motivo": "con cuerpo"
+ },
  "1gry8t4": {
   "intentos": 3,
   "ultimo": "2026-09-26T04:30:43.593Z",
@@ -1150,8 +1160,8 @@
   "motivo": "con cuerpo"
  },
  "1h4tr1q": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T13:31:34.509Z",
+  "intentos": 2,
+  "ultimo": "2026-10-02T18:01:29.109Z",
   "motivo": "con cuerpo"
  },
  "1h8sxxo": {
@@ -1513,6 +1523,11 @@
   "ultimo": "2026-09-27T10:30:39.936Z",
   "motivo": "sin material"
  },
+ "1myrpca": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T18:01:29.109Z",
+  "motivo": "cuerpo: 2 problemas (fecha, copia): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 48 palabras"
+ },
  "1mzcxyt": {
   "intentos": 1,
   "ultimo": "2026-09-27T04:00:39.936Z",
@@ -1696,11 +1711,6 @@
  "1pjzhm6": {
   "intentos": 3,
   "ultimo": "2026-09-27T23:55:10.141Z",
-  "motivo": "con cuerpo"
- },
- "1plbwti": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T18:00:42.946Z",
   "motivo": "con cuerpo"
  },
  "1pnog3i": {
@@ -1967,6 +1977,11 @@
   "ultimo": "2026-09-27T11:00:48.560Z",
   "motivo": "sin material"
  },
+ "1u612sk": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T18:01:29.109Z",
+  "motivo": "con cuerpo"
+ },
  "1u77oxv": {
   "intentos": 1,
   "ultimo": "2026-09-27T02:30:43.835Z",
@@ -2031,11 +2046,6 @@
   "intentos": 1,
   "ultimo": "2026-10-01T13:31:11.708Z",
   "motivo": "con cuerpo"
- },
- "1vag0df": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T18:00:42.946Z",
-  "motivo": "título o bajada: 2 problemas (acusacion): el titulo afirma un delito sin atribuirlo a nadie: \"Difunden un nuevo video sobre un presunto abuso "
  },
  "1vazzob": {
   "intentos": 3,
@@ -2332,6 +2342,11 @@
   "ultimo": "2026-10-02T14:31:54.377Z",
   "motivo": "con cuerpo"
  },
+ "2ctmyu": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T18:01:29.109Z",
+  "motivo": "con cuerpo"
+ },
  "2e3etr": {
   "intentos": 1,
   "ultimo": "2026-09-29T23:01:19.663Z",
@@ -2465,11 +2480,6 @@
  "4aj9uy": {
   "intentos": 1,
   "ultimo": "2026-09-27T18:30:50.246Z",
-  "motivo": "con cuerpo"
- },
- "4eacyw": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T18:00:42.946Z",
   "motivo": "con cuerpo"
  },
  "4f9rqx": {
@@ -2752,6 +2762,11 @@
   "ultimo": "2026-09-30T22:31:30.288Z",
   "motivo": "con cuerpo"
  },
+ "9599gy": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T18:01:29.109Z",
+  "motivo": "con cuerpo"
+ },
  "9817ym": {
   "intentos": 1,
   "ultimo": "2026-09-27T03:30:39.535Z",
@@ -2924,11 +2939,6 @@
   "ultimo": "2026-09-29T15:31:28.481Z",
   "motivo": "con cuerpo"
  },
- "ca1vya": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T18:00:42.946Z",
-  "motivo": "con cuerpo"
- },
  "caurxr": {
   "intentos": 1,
   "ultimo": "2026-09-28T17:32:02.999Z",
@@ -3052,11 +3062,6 @@
  "e9anvw": {
   "intentos": 1,
   "ultimo": "2026-09-27T12:31:15.920Z",
-  "motivo": "con cuerpo"
- },
- "eh85l": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T18:00:42.946Z",
   "motivo": "con cuerpo"
  },
  "em0phg": {
@@ -3684,11 +3689,6 @@
   "ultimo": "2026-09-29T14:03:38.532Z",
   "motivo": "con cuerpo"
  },
- "olm1yc": {
-  "intentos": 2,
-  "ultimo": "2026-09-25T18:00:42.946Z",
-  "motivo": "título o bajada: 4 problemas (numero, antecedente): el titulo dice 10 y la fuente no lo dice"
- },
  "oofnbp": {
   "intentos": 1,
   "ultimo": "2026-09-27T12:31:15.920Z",
@@ -4144,9 +4144,9 @@
   "motivo": "con cuerpo"
  },
  "w3769j": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T16:31:25.113Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 16 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 83 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-02T18:01:29.109Z",
+  "motivo": "título o bajada: 1 problema (copia): copia 15 palabras seguidas del original: decilo con otras palabras"
  },
  "w5bkuh": {
   "intentos": 3,

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T17:32:14.359Z",
- "portada": 64,
- "archivo": 788,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-02T18:02:56.711Z",
+ "portada": 55,
+ "archivo": 794,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-02T17:32:14.392Z",
+  "generado": "2026-10-02T18:02:56.755Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -114,9 +114,9 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
      {
       "id": "1v6m62u",
@@ -124,19 +124,19 @@
       "seccion": "Balcarce"
      },
      {
+      "id": "1knptpr",
+      "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1akpidg",
+      "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "18bbdzh",
       "titulo": "Caputo promete una reforma tributaria para 2031 y proyecta crecimiento",
       "seccion": "Economía"
-     },
-     {
-      "id": "5pxon8",
-      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
-      "seccion": "Economía"
-     },
-     {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
      }
     ]
    },
@@ -147,26 +147,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 46,
     "notas": [
+     {
+      "id": "5pxon8",
+      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
+      "seccion": "Economía"
+     },
+     {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce"
+     },
      {
       "id": "sty1jd",
       "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
       "seccion": "Balcarce"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "swyxjn",
-      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "jzu6k",
-      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      }
     ]
@@ -197,26 +197,14 @@
    ],
    "cola": [
     {
-     "id": "h1ggzr",
-     "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
-     "seccion": "Agro",
+     "id": "1akpidg",
+     "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
      "id": "gzpel6",
      "titulo": "La carrera Luis Vildoza suma inscripciones presenciales",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "y1kgx4",
-     "titulo": "Fiorella Cacace detalla la labor de los escribanos",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "1ugi3md",
-     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
      "seccion": "Deportes",
      "marcada": false
     }

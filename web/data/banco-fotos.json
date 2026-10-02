@@ -5244,13 +5244,16 @@
   "cuando": "2026-10-02T16:49:42.258Z"
  },
  "3ugd5n": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/3ugd5n.jpg",
+  "medio": "InfoRegión",
+  "credito": "Foto: InfoRegión",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La Maratón Nacional de Lectura moviliza a millones de chicos",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-02T16:49:42.258Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://www.inforegion.com.ar/2026/10/02/maraton-de-lectura-en-las-escuelas-de-todo-el-pais/",
+  "imagenOriginal": "https://www.inforegion.com.ar/wp-content/uploads/2021/08/libros1200.jpg",
+  "razon": "Se seleccionó la foto C porque no tiene marcas de agua ni menores de edad reconocibles, y muestra claramente libros, ideales para la temática de lectura.",
+  "cuando": "2026-10-02T18:02:26.094Z"
  },
  "18bbdzh": {
   "archivo": "fotos-notas/18bbdzh.jpg",
@@ -5299,5 +5302,61 @@
   "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-02-at-11.28.36-AM.jpeg",
   "razon": "Es la única opción disponible y muestra claramente el evento (Carrera Luis Vildoza) con un buen encuadre de los corredores bajo el arco, sin marcas de agua del medio ni menores identificables.",
   "cuando": "2026-10-02T17:32:05.304Z"
+ },
+ "1u612sk": {
+  "archivo": "fotos-notas/1u612sk.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Club de Leones dona nuevos equipos al Hospital Municipal",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44974-nueva-contribucion-del-club-de-leones-al-hospital-municipal-de-balcarce/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65927.png",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-02T18:02:26.094Z"
+ },
+ "1akpidg": {
+  "archivo": "fotos-notas/1akpidg.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
+  "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-02-at-1.44.26-PM.jpeg",
+  "razon": "Es la única opción disponible, posee buena nitidez y muestra claramente a los estudiantes entregando la obra.",
+  "cuando": "2026-10-02T18:02:26.094Z"
+ },
+ "1gofphd": {
+  "intentado": true,
+  "origen": "medio",
+  "cuando": "2026-10-02T18:02:26.094Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 1,
+  "fuentes": 6
+ },
+ "1aekavp": {
+  "archivo": "fotos-notas/1aekavp.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Rubén Darío Insúa pide una marcha para que Lionel Messi juegue el Mundial 2030",
+  "enlace": "https://tn.com.ar/deportes/futbol/2026/10/02/ruben-dario-insua-sorprendio-con-una-inesperada-propuesta-sobre-messi-convencerlo-para-que-juegue-el-mundial-2030/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-df8ff3a2e3f61790953394182-1790953626.jpg?auth=2eadb9d0c24a39ab150742840cb8aa595a5ed809d65f1f16ae068ffa0f7f3cba&width=1023",
+  "razon": "La foto A no tiene marcas ni menores y muestra claramente al protagonista de la nota y a Messi.",
+  "cuando": "2026-10-02T18:02:26.094Z"
+ },
+ "2ctmyu": {
+  "archivo": "fotos-notas/2ctmyu.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Banco Nación y ROSGAN organizan el Gran Remate Aniversario",
+  "enlace": "https://www.clarin.com/rural/banco-nacion-rosgan-impulsan-gran-remate-aniversario-fuerza-expoagro_0_plG22VIu7g.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/02/WBi1g94CA_2000x1500__1.jpg",
+  "razon": "La foto A muestra claramente el evento de remate con buen encuadre y sin marcas añadidas ni menores reconocibles.",
+  "cuando": "2026-10-02T18:02:26.094Z"
  }
 }
