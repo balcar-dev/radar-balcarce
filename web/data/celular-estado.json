@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T13:05:41.107Z",
- "portada": 54,
- "archivo": 768,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-02T13:32:19.541Z",
+ "portada": 49,
+ "archivo": 770,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-02T13:05:41.152Z",
+  "generado": "2026-10-02T13:32:19.583Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-02T13:06:22.640Z"
    },
    {
     "nombre": "participa-nota",
@@ -84,28 +84,28 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 47,
+    "salio": "2026-10-02T13:06:22.640Z",
+    "segundos": null,
     "notas": [
-     {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "xvt4t1",
-      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
-      "seccion": "Balcarce"
-     },
      {
       "id": "y1kgx4",
       "titulo": "Fiorella Cacace detalla la labor de los escribanos",
       "seccion": "Cultura y agenda"
      },
      {
+      "id": "1ugi3md",
+      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+      "seccion": "Deportes"
+     },
+     {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "xvt4t1",
+      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,26 +116,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 53,
     "notas": [
      {
-      "id": "1ugi3md",
-      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+      "id": "1knptpr",
+      "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
       "seccion": "Deportes"
      },
      {
-      "id": "1ebac9m",
-      "titulo": "Un balcarceño le propone casamiento a su pareja frente a Robbie Williams",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "ig6fdw",
-      "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-      "seccion": "Argentina"
+      "id": "5pxon8",
+      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
+      "seccion": "Economía"
      },
      {
       "id": "alddw5",
       "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
       "seccion": "Balcarce"
      }
     ]
@@ -147,13 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 46,
     "notas": [
-     {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
@@ -182,26 +177,14 @@
    ],
    "cola": [
     {
-     "id": "xvt4t1",
-     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "y1kgx4",
-     "titulo": "Fiorella Cacace detalla la labor de los escribanos",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "1ugi3md",
-     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+     "id": "1knptpr",
+     "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
      "seccion": "Deportes",
      "marcada": false
     },
     {
-     "id": "1ebac9m",
-     "titulo": "Un balcarceño le propone casamiento a su pareja frente a Robbie Williams",
+     "id": "xvt4t1",
+     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
      "seccion": "Balcarce",
      "marcada": false
     }

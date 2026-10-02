@@ -3612,16 +3612,16 @@
   "cuando": "2026-09-30T23:02:27.201Z"
  },
  "k6d4hv": {
-  "archivo": "fotos-notas/k6d4hv.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "Dirigentes locales participan del Congreso Anual de la Federación Agraria",
   "enlace": "https://www.diariolavanguardia.com/noticias/44956-dirigentes-de-faa-de-balcarce-participaron-del-112-congreso-anual-de-la-entidad-en-rosario/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65905.png",
   "razon": "La foto tiene buen encuadre y nitidez, muestra claramente a los dirigentes locales en el congreso sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-09-30T23:31:50.592Z"
+  "cuando": "2026-09-30T23:31:50.592Z",
+  "intentado": true,
+  "borrada": true
  },
  "1a2z04a": {
   "archivo": "fotos-notas/1a2z04a.jpg",
@@ -4863,16 +4863,16 @@
   "cuando": "2026-10-02T11:01:45.037Z"
  },
  "1t295vx": {
-  "archivo": "fotos-notas/1t295vx.jpg",
   "medio": "Página/12",
-  "credito": "Foto: Página/12",
   "licencia": null,
   "origen": "medio",
   "titulo": "Colapinto inicia con complicaciones y suma penalizaciones en Bahréin",
   "enlace": "https://www.pagina12.com.ar/2026/10/02/colapinto-tuvo-un-flojo-arranque-en-las-practicas-libres-en-bahrein/",
   "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/7BP7PGS7DVEB7I6IFWENB3CLQI.jpg?smart=true&auth=fe39c94ae08ff021897f62c0b1a1f4a4dce5bb1387381b0a2b8fb5f0fdec9387&width=1200&height=630",
   "razon": "Tiene mejor encuadre y nitidez, mostrando claramente al piloto y el auto sin marcas añadidas ni menores.",
-  "cuando": "2026-10-02T11:17:58.278Z"
+  "cuando": "2026-10-02T11:17:58.278Z",
+  "intentado": true,
+  "borrada": true
  },
  "2vlrbt": {
   "medio": "QZ Noticias (Mar del Plata)",
@@ -4947,13 +4947,16 @@
   "fuentes": 1
  },
  "ig6fdw": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/ig6fdw.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-02T12:31:43.398Z",
-  "intentos": 1,
-  "fuentes": 5
+  "enlace": "https://www.infobae.com/economia/2026/10/02/el-gobierno-lanzo-en-paris-un-programa-para-que-extranjeros-puedan-obtener-ciudadania-y-pasaporte-mediante-inversiones-cuanto-cuesta/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/W2QXLTVZ7NGSLDRQZDCWXXAZ4I.jpg?auth=7fc12c55d3a1cf3979d28aedf794bba43ec2cf74db08eca21292b99f1995e54b&smart=true&width=1200&height=630&quality=85",
+  "razon": "Tiene excelente encuadre y nitidez de los funcionarios, sin marcas de agua ni menores visibles.",
+  "cuando": "2026-10-02T13:31:50.426Z"
  },
  "1ebac9m": {
   "archivo": "fotos-notas/1ebac9m.jpg",
@@ -5026,5 +5029,26 @@
   "imagenOriginal": "https://media.c5n.com/p/57f875ca38d24fc4553c04612c4d1bbe/adjuntos/326/imagenes/000/401/0000401424/1200x675/smart/javier-milei-y-emmanuel-macron.jpg",
   "razon": "Tiene excelente nitidez, encuadre formal claro del hecho institucional y está libre de marcas de agua y menores.",
   "cuando": "2026-10-02T13:04:11.065Z"
+ },
+ "164o14u": {
+  "archivo": "fotos-notas/164o14u.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
+  "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/ChatGPT-Image-2-oct-2026-09_55_19-a.m-1.png",
+  "razon": "Tiene buena nitidez, encuadre adecuado y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-02T13:31:50.426Z"
+ },
+ "1knptpr": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
+  "razon": "La única foto disponible incluye menores de edad reconocibles, por lo que no puede ser publicada.",
+  "cuando": "2026-10-02T13:31:50.426Z",
+  "intentos": 1,
+  "fuentes": 1
  }
 }
