@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T18:15:57.339Z",
+  "generado": "2026-10-02T18:31:55.984Z",
   "notas": [
     {
       "id": "repaso20261002tarde",
@@ -80,11 +80,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44978-marcelo-panebianco-y-la-llegada-de-leon-xiv-es-una-invitacion-para-vivir-la-propia-fe/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:31:13.649Z",
       "sinFecha": true,
       "visto": "2026-10-02T17:31:13.649Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -191,6 +191,82 @@
       }
     },
     {
+      "id": "6cucid",
+      "titulo": "Halliburton ratifica que no operará en las Islas Malvinas",
+      "copete": "La firma de servicios petroleros confirmó ante el gobierno argentino que no participará del proyecto Sea Lion ni en tareas hidrocarburíferas en el archipiêcuteLago.",
+      "cuerpo": "La firma internacional Halliburton ratificó que no formará parte del proyecto Sea Lion ni realizará actividades de exploración o extracción de hidrocarburos en las Islas Malvinas. La decisión responde a un requerimiento de la Cancillería argentina ante las gestiones diplomáticas y legales desplegadas durante septiembre.\n\nLa filial local de la compañía ya había comunicado el pasado 5 de septiembre su postura de no intervenir en los yacimientos insulares. La medida oficial forma parte de una serie de notificaciones enviadas a unas 180 empresas globales para advertirles que trabajar en la zona prohibiría su operación en Vaca Muerta.",
+      "guion": "Halliburton ratifica que no operará en las Islas Malvinas",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "El Marplatense"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/02/una-de-las-mayores-empresas-globales-de-servicios-petroleros-ratifico-que-no-operara-en-malvinas-ni-en-sea-lion/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T17:14:03.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T18:31:19.096Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Halliburton descartó trabajar en el proyecto Sea Lion en Malvinas.",
+        "La decisión responde a un requerimiento de la Cancillería argentina.",
+        "La filial local ya había notificado su postura el 5 de septiembre.",
+        "Otras firmas globales adoptaron medidas similares en septiembre."
+      ],
+      "seSabe": [
+        "Halliburton ratificó que no operará en Malvinas ni en Sea Lion.",
+        "La filial local ya había notificado su postura el 5 de septiembre.",
+        "La Cancillería envió unas 180 notificaciones a empresas petroleras."
+      ],
+      "textoRedes": "La empresa Halliburton ratificó ante el gobierno argentino que no participará del proyecto Sea Lion ni en actividades hidrocarburíferas en las Islas Malvinas.",
+      "etiquetas": [
+        "Halliburton",
+        "Malvinas",
+        "Sea Lion",
+        "Cancilleria",
+        "petroleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/02/una-de-las-mayores-empresas-globales-de-servicios-petroleros-ratifico-que-no-operara-en-malvinas-ni-en-sea-lion/",
+          "fecha": "2026-10-02T17:14:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló la notificación de Halliburton y las medidas de la Cancillería contra las petroleras."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/halliburton-confirmo-que-no-participara-de-proyectos-petroleros-en-malvinas",
+          "fecha": "2026-10-02T18:27:19.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la empresa estadounidense no participa en la exploración en Malvinas ni en Sea Lion."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1x8o7wh",
+          "titulo": "Milei anunció sanciones a empresas que operen en Malvinas y la construcción de una base naval",
+          "fecha": "2026-09-04T09:05:53.000Z",
+          "ruta": "/nota/milei-anuncio-sanciones-a-empresas-que-operen-en-malvinas-y-la-1x8o7wh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "halliburton-ratifica-que-no-operara-en-las-islas-malvinas",
+      "foto": {
+        "archivo": "fotos-notas/6cucid.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "1akpidg",
       "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
       "copete": "Alumnas de la institución obsequiaron una producción artística que formó parte de una muestra local. El intendente Esteban Reino recibió la pieza.",
@@ -226,6 +302,114 @@
       "foto": {
         "archivo": "fotos-notas/1akpidg.jpg",
         "credito": "Foto: Municipalidad de Balcarce"
+      }
+    },
+    {
+      "id": "1pq0gh4",
+      "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
+      "copete": "La funcionaria nacional lideró un encuentro en Francia junto a catorce firmas pesqueras. El objetivo principal consistió en incrementar las ventas de langostinos y vieiras.",
+      "cuerpo": "La secretaria general de la Presidencia, Karina Milei, dirigió en la capital francesa una jornada comercial orientada a potenciar la colocación de productos pesqueros nacionales. El evento reunió a catorce compañías del sector con compradores europeos para fomentar la comercialización directa de langostinos y vieiras.\n\nLa estrategia contó con la intervención del titular de PromArgentina, Diego Sucalesca, además de diversas entidades vinculadas a la actividad marítima y diplomática. Durante el año pasado, los envíos internacionales de langostinos aportaron mil millones de dólares a la economía nacional.",
+      "guion": "Karina Milei encabeza ronda de negocios en París por la pesca",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "Perfil",
+        "Crónica",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T16:57:20.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T18:31:19.096Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Participaron catorce empresas pesqueras nacionales y compradores franceses.",
+        "La comitiva estuvo encabezada por la secretaria general de la Presidencia.",
+        "Buscan incrementar las ventas de langostinos y vieiras hacia Europa.",
+        "Las exportaciones de langostinos sumaron mil millones de dólares en 2025."
+      ],
+      "seSabe": [
+        "Karina Milei lideró el encuentro en París este viernes.",
+        "La actividad se denominó Argentina B2B Week.",
+        "Catorce empresas nacionales participaron de las reuniones.",
+        "Diego Sucalesca acompañó a la funcionaria nacional."
+      ],
+      "noConfirmado": [
+        "No se informaron los montos totales proyectados de los nuevos contratos comerciales."
+      ],
+      "textoRedes": "Karina Milei encabezó en París una ronda de negocios para ampliar las exportaciones de langostinos y vieiras con catorce empresas argentinas.",
+      "etiquetas": [
+        "Karina Milei",
+        "París",
+        "exportaciones",
+        "pesca",
+        "langostinos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
+          "fecha": "2026-10-02T16:57:20.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la ronda B2B Week y los datos sobre el mercado francés."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/02/karina-milei-encabezo-una-ronda-de-negocios-en-francia-para-impulsar-exportaciones-de-langostinos-y-vieiras/",
+          "fecha": "2026-10-02T17:32:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló la participación de las catorce empresas exportadoras de productos pesqueros."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-impulsar-las-exportaciones-argentinas-de-langostinos-y-vieiras.phtml",
+          "fecha": "2026-10-02T17:49:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó la cifra de mil millones de dólares generada por las exportaciones de langostinos en 2025."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-las-ventas-de-langostinos-y-vieiras/",
+          "fecha": "2026-10-02T17:44:06.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la presencia de Diego Sucalesca y el rol de PromArgentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "oa2ef",
+          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
+          "fecha": "2026-10-02T09:29:30.000Z",
+          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
+        },
+        {
+          "id": "wcnatb",
+          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
+          "fecha": "2026-10-01T13:40:00.000Z",
+          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
+        },
+        {
+          "id": "19iwenp",
+          "titulo": "Karina Milei habló tras la reunión por la visita de León XIV y aseguró que \"el Papa es de todos los argentinos\"",
+          "fecha": "2026-09-22T23:31:00.000Z",
+          "ruta": "/nota/karina-milei-hablo-tras-la-reunion-por-la-visita-de-leon-xiv-y-19iwenp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca",
+      "foto": {
+        "archivo": "fotos-notas/1pq0gh4.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -401,70 +585,6 @@
       }
     },
     {
-      "id": "g34tir",
-      "titulo": "Balcarce reúne a la región en el primer encuentro por la comunidad sorda",
-      "copete": "El Complejo Polideportivo Municipal albergó una jornada de integración con más de cincuenta participantes de la zona. La propuesta incluyó actividades recreativas y un almuerzo coordinado por áreas municipales.",
-      "cuerpo": "El Complejo Polideportivo Municipal recibió a más de cincuenta asistentes en el primer encuentro regional destinado a la comunidad sorda. La jornada contó con la presencia de referentes de Mar del Plata, Miramar y Balcarce, entre otras localidades.\n\nParticiparon la Asociación de Sordos de Mar del Plata, la Escuela Especial N° 515 de General Pueyrredón y la Escuela Especial N° 501 de General Alvarado. Por el ámbito local asistió Silvina Goycoechea, referente de la Asociación de Sordos, y Maximiliano Godoy por la entidad marplatense.\n\nLa propuesta incluyó juegos y propuestas recreativas coordinadas por docentes. El almuerzo estuvo a cargo de la Escuela Municipal de Deporte Adaptado, bajo la coordinación de Omar Arreguito.",
-      "guion": "Balcarce reúne a la región en el primer encuentro por la comunidad sorda",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/balcarce-fue-sede-del-primer-encuentro-regional-por-el-dia-internacional-del-sordo-905",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T16:06:53.634Z",
-      "sinFecha": true,
-      "visto": "2026-10-02T16:06:53.634Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Complejo Polideportivo Municipal fue sede del encuentro regional.",
-        "Participaron más de cincuenta asistentes de la zona.",
-        "Hubo representantes de instituciones de Balcarce, Mar del Plata y Miramar."
-      ],
-      "seSabe": [
-        "La actividad se desarrolló en el Complejo Polideportivo Municipal según informó una fuente periodística.",
-        "Participaron más de cincuenta personas de distintas localidades.",
-        "La organización estuvo a cargo de la Escuela Municipal de Deporte Adaptado."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "Comunidad Sorda",
-        "Polideportivo Municipal",
-        "Deporte Adaptado",
-        "Integración"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/balcarce-fue-sede-del-primer-encuentro-regional-por-el-dia-internacional-del-sordo-905",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro regional por el Día Internacional del Sordo realizado en el Complejo Polideportivo Municipal."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "f3xat8",
-          "titulo": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
-          "fecha": "2026-09-29T15:03:40.000Z",
-          "ruta": "/nota/el-complejo-polideportivo-aloja-un-encuentro-regional-por-el-dia-del-f3xat8"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "balcarce-reune-a-la-region-en-el-primer-encuentro-por-la-comunidad"
-    },
-    {
       "id": "jeiawq",
       "titulo": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
       "copete": "El embajador Ian Sielecki valoró los anuncios financieros logrados durante la Argentina Week en París. Del encuentro participaron el presidente Javier Milei, ministros y gobernadores.",
@@ -477,6 +597,7 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "Noticias Argentinas (NA)",
+        "El Día",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil"
       ],
@@ -680,114 +801,6 @@
       }
     },
     {
-      "id": "1msbvcb",
-      "titulo": "Pichetto y Massot presentan cautelar contra el DNU de tierras",
-      "copete": "Los diputados de Encuentro Federal recurrieron a la Justicia para frenar la derogación de la normativa. Buscan evitar que se concreten compras de inmuebles rurales por parte de extranjeros.",
-      "cuerpo": "Los diputados nacionales Miguel Ángel Pichetto y Nicolás Massot, integrantes del bloque Encuentro Federal, presentaron una medida cautelar ante el fuero Contencioso Administrativo contra el Estado Nacional. El escrito judicial pide la suspensión del artículo 154 del DNU 70/2023, que había eliminado los topes para la adquisición de hectáreas rurales por parte de extranjeros.\n\nLa acción se instrumenta después de que la Corte Suprema anulara un fallo previo de la Cámara Federal de Apelaciones de La Plata y emitiera una aclaración sobre su resolución en una causa iniciada por el Centro de Ex Combatientes Islas Malvinas (CECIM).",
-      "guion": "Pichetto y Massot presentan cautelar contra el DNU de tierras",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "Ámbito",
-        "Minuto Uno",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.minutouno.com/politica/pichetto-y-massot-presentaron-una-cautelar-contra-el-articulo-del-dnu-70-que-deroga-la-ley-tierras-n6329355",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T14:15:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T17:01:31.019Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Diputados de Encuentro Federal recurren a la Justicia contra el DNU 70.",
-        "Buscan suspender el artículo que eliminó límites para la compra de tierras por extranjeros.",
-        "La presentación ingresó en el fuero Contencioso Administrativo."
-      ],
-      "noConfirmado": [
-        "Todavía no se dictó una resolución judicial sobre la medida cautelar presentada por los legisladores.",
-        "No se detallaron los plazos en los que el fuero Contencioso Administrativo se expedirá al respecto."
-      ],
-      "textoRedes": "Los diputados Miguel Ángel Pichetto y Nicolás Massot presentaron una medida cautelar para frenar la derogación de la Ley de Tierras y evitar compras de extranjeros.",
-      "etiquetas": [
-        "Diputados",
-        "Justicia",
-        "DNU",
-        "Tierras",
-        "Congreso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/pichetto-y-massot-presentaron-una-cautelar-contra-el-articulo-del-dnu-70-que-deroga-la-ley-tierras-n6329355",
-          "fecha": "2026-10-02T14:15:00.000Z",
-          "oficial": false,
-          "aporte": "Detalles de la presentación judicial, declaraciones de Pichetto y contexto del fallo de la Corte."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/02/massot-y-pichetto-presentaron-una-cautelar-para-frenar-la-venta-ilimitada-de-tierras-a-extranjeros/",
-          "fecha": "2026-10-02T16:46:09.000Z",
-          "oficial": false,
-          "aporte": "Confirmación de la autoría de la cautelar por parte de Pichetto y Massot."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/dos-diputados-pidieron-la-justicia-suspender-la-derogacion-la-ley-tierras-n6329420",
-          "fecha": "2026-10-02T16:12:00.000Z",
-          "oficial": false,
-          "aporte": "Precisión sobre el objetivo de evitar derechos adquiridos en compras extranjeras."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/ley-de-tierras-pichetto-y-massot-fueron-a-la-justicia-tras-el-fallo-de-la-corte-y-buscan-frenar-las-compras-de-extranjeros.phtml",
-          "fecha": "2026-10-02T15:57:00.000Z",
-          "oficial": false,
-          "aporte": "Identificación de los legisladores como pertenecientes al bloque Encuentro Federal."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/diputados-de-encuentro-federal-buscan-frenar-compras-de-tierras-por-extranjeros-con-una-medida-cautelar_a6abfc29cf814a2817c83ee4b",
-          "fecha": "2026-10-02T16:52:19.000Z",
-          "oficial": false,
-          "aporte": "Información de agencia sobre la presentación de los diputados."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/02/110025-presentaron-cautelar-para-suspender-el-articulo-que-derogo-la-ley-de-tierras",
-          "fecha": "2026-10-02T15:39:52.000Z",
-          "oficial": false,
-          "aporte": "Sin contenido registrado en el resumen."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pawdnw",
-          "titulo": "La oposición busca una sesión especial en Diputados contra el decreto de tierras",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-oposicion-busca-una-sesion-especial-en-diputados-contra-el-decreto-1pawdnw"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pichetto-y-massot-presentan-cautelar-contra-el-dnu-de-tierras",
-      "foto": {
-        "archivo": "fotos-notas/1msbvcb.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "2ctmyu",
       "titulo": "Banco Nación y ROSGAN organizan el Gran Remate Aniversario",
       "copete": "La subasta ganadera se realizará el 13 de octubre en la ciudad de Rosario con una proyección de más de 12.000 cabezas.",
@@ -858,67 +871,6 @@
       }
     },
     {
-      "id": "1e41jwt",
-      "titulo": "José Luis Pérez se reúne con dirigentes nacionales del peronismo",
-      "copete": "El exintendente balcarceño compartió un almuerzo con referentes del Partido Justicialista Nacional. Conversaron sobre la situación política del país y el escenario partidario actual.",
-      "cuerpo": "El exintendente de Balcarce José Luis Pérez compartió un almuerzo con referentes del justicialismo nacional. Del encuentro participó el exsecretario de la Comisión Agropecuaria partidaria y exministro de Agricultura, quien llegó acompañado por excolaboradores y por el exintendente de General Madariaga, Adrián Mircovich.\n\nDurante la reunión, los dirigentes conversaron acerca del panorama político nacional y provincial. También intercambiaron opiniones sobre la actualidad y los desafíos institucionales del Partido Justicialista en medio de distintos movimientos sectoriales.",
-      "guion": "Jose Luis Perez se reune con dirigentes nacionales del peronismo",
-      "seccion": "Política",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/politica/jose-luis-perez-compartio-un-encuentro-con-dirigentes-del-pj-nacional",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T13:42:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Almuerzo entre dirigentes del peronismo nacional y local",
-        "Participación de referentes de General Madariaga",
-        "Análisis de la actualidad política y partidaria"
-      ],
-      "seSabe": [
-        "José Luis Pérez almorzó con dirigentes del justicialismo nacional en Balcarce",
-        "Participó el exsecretario de la Comisión Agropecuaria del Partido Justicialista y exministro de Agricultura",
-        "Estuvo presente el exintendente de General Madariaga Adrián Mircovich"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El exintendente José Luis Pérez compartió un almuerzo con referentes del justicialismo nacional para analizar la situación política y los desafíos del partido.",
-      "etiquetas": [
-        "José Luis Pérez",
-        "Partido Justicialista",
-        "Política",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/politica/jose-luis-perez-compartio-un-encuentro-con-dirigentes-del-pj-nacional",
-          "fecha": "2026-10-02T13:42:44.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro político entre José Luis Pérez y dirigentes del justicialismo nacional en Balcarce."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "jose-luis-perez-se-reune-con-dirigentes-nacionales-del-peronismo",
-      "foto": {
-        "archivo": "fotos-notas/1e41jwt.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
       "id": "164o14u",
       "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "copete": "La institución donó una bomba de infusión y un oxímetro para el centro de salud local. Los elementos se adquirieron con fondos recaudados en la última edición del Desafío de los Leones.",
@@ -927,16 +879,14 @@
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 100,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1010,14 +960,16 @@
       "seccion": "Policiales",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
+        "Puntonueve (FM 100.9)",
+        "El Diario Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:10:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1393,14 +1345,14 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "Clarín",
         "Ámbito",
         "Perfil",
         "El Cronista",
         "A24",
         "Noticias Argentinas (NA)",
         "El Día",
-        "Infobrisas (Radio Brisas)"
+        "Infobrisas (Radio Brisas)",
+        "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/glencore-anuncio-una-inversion-de-us4000-millones-para-desarrollar-agua-rica-en-catamarca-nid02102026/",
       "teniaImagenLaFuente": true,
@@ -1586,7 +1538,6 @@
       "seccion": "Agro",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
         "Diario La Vanguardia"
       ],
@@ -1595,7 +1546,7 @@
       "fecha": "2026-10-02T12:05:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 100,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2734,7 +2685,6 @@
       "seccion": "Economía",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Agencia DIB",
         "Infobae",
         "Ámbito",
         "Perfil",
@@ -2746,6 +2696,7 @@
         "La Verdad",
         "El Eco de Tandil",
         "A24",
+        "Agencia DIB",
         "La Nueva",
         "La Capital (Rosario)",
         "Ecos Diarios (Necochea)",
@@ -3391,7 +3342,8 @@
       "guion": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44966-el-drama-de-ticiano-le-prohibieron-vender-alfajores-en-la-calle-y-ahora-suena-con-conseguir-un-trabajo/",
       "teniaImagenLaFuente": true,
@@ -3444,6 +3396,87 @@
       "foto": {
         "archivo": "fotos-notas/jzu6k.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "copete": "La Cooperativa de Electricidad de Balcarce realiza el viernes un corte en el servicio eléctrico por tareas técnicas. La interrupción abarca distintas cuadras del centro.",
+      "cuerpo": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico el viernes 2 de octubre en el horario de 7:30 a 9:00, según informó el área de Redes. La medida responde a tareas de mantenimiento en líneas de baja tensión.\n\nLa interrupción afecta a los usuarios ubicados sobre la calle 16 entre las calles 19 y 21, en ambas veredas, y en la calle 19 desde la avenida Kelly hasta la calle 16.",
+      "guion": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T16:05:14.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T18:31:03.487Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Corte de luz programado para este viernes",
+        "El servicio se interrumpe de 7:30 a 9:00",
+        "Afecta a la calle 16 y la calle 19"
+      ],
+      "seSabe": [
+        "El corte de luz es este viernes de 7:30 a 9:00, según la Cooperativa de Electricidad.",
+        "Las tareas se realizan en líneas de baja tensión.",
+        "El área afectada comprende la calle 16 entre 19 y 21, y la calle 19 desde avenida Kelly hasta calle 16."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico este viernes de 7:30 a 9:00 por tareas en líneas de baja tensión. La interrupción afecta a las calles 16 y 19.",
+      "etiquetas": [
+        "corte de luz",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "servicios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
+          "fecha": "2026-10-01T16:05:14.000Z",
+          "oficial": false,
+          "aporte": "Informó el horario del corte y las calles afectadas."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
+          "fecha": "2026-10-01T17:24:47.272Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha exacta del viernes 2 de octubre."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-corte-del-servicio-electrico-este-viernes-en-un-sector-de-la-ciudad",
+          "fecha": "2026-10-01T16:15:15.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el motivo son trabajos en líneas de baja tensión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1oji07d",
+          "titulo": "Se anuncia corte de energía para este viernes",
+          "fecha": "2026-09-17T20:27:01.000Z",
+          "ruta": "/nota/se-anuncia-corte-de-energia-para-este-viernes-1oji07d"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-cooperativa-de-electricidad-corta-el-suministro-el-viernes",
+      "foto": {
+        "archivo": "fotos-notas/alddw5.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -3578,6 +3611,284 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "concejales-proponen-crear-un-registro-municipal-de-acompanantes"
+    },
+    {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "copete": "Un móvil del Registro Nacional de las Personas llega a la ciudad para realizar trámites. El operativo incluye jornadas gratuitas en el Concejo Deliberante y en la Sociedad Rural.",
+      "cuerpo": "El Registro Nacional de las Personas despliega un operativo documentario en Balcarce con un vehículo equipado. La primera atención se realiza el jueves 8 de octubre, de 10 a 15, en el recinto del Honorable Concejo Deliberante, donde los vecinos pueden gestionar el DNI sin costo.\n\nEl servicio continúa el viernes 9 y el sábado 10 de octubre en el predio ferial de la Sociedad Rural, situado en la intersección de la Ruta 55 y la calle 79, en coincidencia con la Fiesta Nacional del Postre. En esas dos jornadas se tramitan tanto documentos de identidad de forma gratuita como pasaportes que requieren el pago de un arancel.",
+      "guion": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-01T14:33:59.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T15:23:10.187Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Llega a Balcarce un móvil documentario del RENAPER.",
+        "El jueves 8 de octubre atiende gratis en el Concejo.",
+        "El viernes 9 y sábado 10 funciona en la Sociedad Rural.",
+        "Los pasaportes tienen costo y el DNI es gratuito."
+      ],
+      "seSabe": [
+        "El móvil del RENAPER atiende en el Concejo Deliberante el jueves 8 de octubre de 10 a 15 horas.",
+        "Los trámites de DNI en el Concejo son gratuitos.",
+        "El operativo sigue el viernes 9 y el sábado 10 de octubre en la Sociedad Rural durante la Fiesta Nacional del Postre.",
+        "En la Sociedad Rural se pueden gestionar DNI gratis y pasaportes pagos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un móvil del RENAPER llega a Balcarce para realizar trámites de DNI y pasaporte. Habrá atención gratuita en el Concejo Deliberante y en la Sociedad Rural durante la Fiesta Nacional del Postre.",
+      "etiquetas": [
+        "RENAPER",
+        "Balcarce",
+        "DNI",
+        "Fiesta Nacional del Postre",
+        "Sociedad Rural",
+        "Concejo Deliberante"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
+          "fecha": "2026-10-01T14:33:59.000Z",
+          "oficial": false,
+          "aporte": "Informó el cronograma, los horarios y las ubicaciones del móvil del RENAPER en Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1yu9ytn",
+          "titulo": "El oficialismo defiende su rechazo a convocar a Virginia Aparicio en comisión",
+          "fecha": "2026-09-30T20:53:48.000Z",
+          "ruta": "/nota/el-oficialismo-defiende-su-rechazo-a-convocar-a-virginia-aparicio-en-1yu9ytn"
+        },
+        {
+          "id": "1xzookf",
+          "titulo": "Fernando Gray anuncia exención impositiva total para jubilados",
+          "fecha": "2026-09-29T15:47:00.000Z",
+          "ruta": "/nota/fernando-gray-anuncia-exencion-impositiva-total-para-jubilados-1xzookf"
+        },
+        {
+          "id": "8zhfqv",
+          "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
+          "fecha": "2026-09-29T14:01:11.480Z",
+          "ruta": "/nota/el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria-8zhfqv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-renaper-instala-un-movil-en-balcarce-para-tramitar-dni",
+      "foto": {
+        "archivo": "fotos-notas/1dbyjp1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
+      "id": "1uw5a9s",
+      "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
+      "copete": "El vicepresidente estadounidense JD Vance viajará al país en noviembre para mantener un encuentro con el presidente Javier Milei. Será la primera visita de un funcionario de ese rango en casi una década.",
+      "cuerpo": "El vicepresidente de los Estados Unidos, JD Vance, llegará a la Argentina durante el mes de noviembre para mantener un encuentro con el presidente Javier Milei, según confirmaron fuentes oficiales. El viaje se concretará tras el pedido de la administración estadounidense y formará parte de una recorrida regional.\n\nEl encuentro bilateral se realizará en la Casa Rosada. La última vez que un vicepresidente estadounidense visitó el país ocurrió en abril de 2017, cuando Mike Pence llegó al territorio nacional y mantuvo una audiencia con el entonces mandatario Mauricio Macri en la Quinta de Olivos.\n\nDesde el Gobierno aclararon que todavía no se definieron la fecha exacta, el lugar preciso ni el programa detallado para la estadía del funcionario republicano.",
+      "guion": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "A24",
+        "Ámbito",
+        "Minuto Uno",
+        "C5N",
+        "Radio Mitre",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "El Eco de Tandil",
+        "iProfesional",
+        "Clarín",
+        "El Día",
+        "La Nueva",
+        "Crónica",
+        "Agencia DIB",
+        "La Voz del Pueblo",
+        "Ecos Diarios (Necochea)"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/01/el-vicepresidente-de-los-estados-unidos-jd-vance-visitara-argentina-en-noviembre/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T14:24:51.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T18:01:03.074Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "Todavía no se precisó la fecha exacta de la llegada.",
+        "No se difundieron los detalles ni la agenda definitiva del encuentro."
+      ],
+      "textoRedes": "El vicepresidente de Estados Unidos, JD Vance, visitará la Argentina en noviembre para mantener una reunión con el presidente Javier Milei en la Casa Rosada. Será la primera visita de un funcionario de ese rango en casi una década, aunque aún resta definir la fecha exacta.",
+      "etiquetas": [
+        "Estados Unidos",
+        "JD Vance",
+        "Javier Milei",
+        "Casa Rosada",
+        "Política internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/01/el-vicepresidente-de-los-estados-unidos-jd-vance-visitara-argentina-en-noviembre/",
+          "fecha": "2026-10-01T14:24:51.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la llegada de JD Vance en noviembre y que se reunirá con Javier Milei."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/el-vicepresidente-de-estados-unidos-visitara-el-pais-en-noviembre-y-se-define-su-agenda-nid01102026/",
+          "fecha": "2026-10-01T17:35:27.000Z",
+          "oficial": false,
+          "aporte": "Aportó que se trata de un viaje oficial a Buenos Aires."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/el-vicepresidente-de-estados-unidos-jd-vance-visitara-la-argentina-en-noviembre",
+          "fecha": "2026-10-01T17:40:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/jd-vance-visitara-la-argentina-en-noviembre-y-se-reunira-con-javier-milei",
+          "fecha": "2026-10-01T14:47:24.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/el-vicepresidente-los-estados-unidos-james-d-vance-visitara-la-argentina-noviembre-n6328941",
+          "fecha": "2026-10-01T16:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/vicepresidente-donald-trump-visitara-argentina-fin-ano_0_5iJMRgTxOY.html",
+          "fecha": "2026-10-01T15:41:52.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/01/el-vicepresidente-de-estados-unidos-visitara-la-argentina-en-noviembre-y-se-reunira-con-milei/",
+          "fecha": "2026-10-01T14:32:27.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la reunión se llevará a cabo en la Casa Rosada."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/javier-milei-recibira-en-noviembre-a-jd-vance-el-vicepresidente-de-los-estados-unidos.phtml",
+          "fecha": "2026-10-01T14:48:01.000Z",
+          "oficial": false,
+          "aporte": "Indicó que todavía no hay un programa definitivo para la estadía."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/el-vicepresidente-estados-unidos-visitara-la-argentina-antes-fin-ano-n1602268",
+          "fecha": "2026-10-01T16:20:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/politica/465681-vicepresidente-de-eeuu-visitara-la-argentina-en-noviembre-y-se-reunira-con-milei",
+          "fecha": "2026-10-01T15:15:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/el-vicepresidente-de-estados-unidos-visitara-argentina-en-noviembre/",
+          "fecha": "2026-10-01T17:49:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/internacionales/el-vicepresidente-de-estados-unidos-jd-vance-visitara-la-argentina-en-noviembre-para-reunirse-con-javier-milei/",
+          "fecha": "2026-10-01T15:52:49.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/10/01/oficial-y-confirmado-el-vicepresidente-de-estados-unidos-visitara-argentina-y-se-supo-cuando-sera-el-encuentro-con-milei/",
+          "fecha": "2026-10-01T14:45:09.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/el-vicepresidente-de-donald-trump-viene-a-argentina-en-noviembre-politica-y-economia_1790870340",
+          "fecha": "2026-10-01T16:33:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-1-14-17-0-el-vicepresidente-de-ee-uu-visitara-la-argentina-en-noviembre-para-reunirse-con-milei",
+          "fecha": "2026-10-01T17:21:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/el-vicepresidente-de-estados-unidos-visitara-la-argentina-en-noviembre",
+          "fecha": "2026-10-01T17:30:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kz57sk",
+          "titulo": "Estados Unidos busca bajar la tensión diplomática por las Malvinas",
+          "fecha": "2026-09-28T03:00:00.000Z",
+          "ruta": "/nota/estados-unidos-busca-bajar-la-tension-diplomatica-por-las-malvinas-1kz57sk"
+        },
+        {
+          "id": "11nk8l",
+          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 16 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-vicepresidente-de-estados-unidos-visita-la-argentina-en-noviembre",
+      "foto": {
+        "archivo": "fotos-notas/1uw5a9s.jpg",
+        "credito": "Foto: Infobae"
+      }
     },
     {
       "id": "1sko7lj",
@@ -3754,58 +4065,6 @@
       }
     },
     {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "copete": "El deportista local fue convocado para disputar el Campeonato Argentino de Selecciones Mayores Ascenso B en Mendoza. El certamen se jugará del 15 al 18 de este mes.",
-      "cuerpo": "El jugador balcarceño Mateo Raimondi fue convocado para integrar la selección de la Asociación Amateur Marplatense de hockey con vistas al Campeonato Argentino de Selecciones Mayores Ascenso B.\n\nEl plantel marplatense se compone de 20 deportistas que buscarán el ascenso directo a la zona A, reservado para los finalistas. Raimondi se desempeña desde hace varios años como volante por la izquierda en la primera división del MDQ 06 Hockey Club.",
-      "guion": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/mateo-reimondi-fue-convocado-para-jugar-un-campeonato-argentino",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T14:00:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T12:01:29.911Z",
-      "relevancia": 72,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "Mateo Raimondi",
-        "hockey",
-        "Asociación Amateur Marplatense",
-        "San Rafael",
-        "Mendoza",
-        "MDQ 06"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/mateo-reimondi-fue-convocado-para-jugar-un-campeonato-argentino",
-          "fecha": "2026-10-02T11:21:07.000Z",
-          "oficial": false,
-          "aporte": "Aportó la convocatoria de Mateo Raimondi al seleccionado marplatense de hockey y los detalles del torneo nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "mateo-raimondi-integra-la-seleccion-marplatense-de-hockey-para-el",
-      "foto": {
-        "archivo": "fotos-notas/1bheb6v.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "copete": "La segunda edición de la competencia atlética homenaje al profesor Luis Vildoza se hará el domingo 1 de noviembre. Habrá pruebas de 10 y 5 kilómetros con participación libre y gratuita.",
@@ -3947,69 +4206,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261001manana.jpg",
         "credito": "Fotos: Municipalidad de Balcarce, TyC Sports y Radio Gabal (FM 104.1)"
-      }
-    },
-    {
-      "id": "dwvi75",
-      "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
-      "copete": "El equipo femenino de la Escuela Municipal juega el sábado y el domingo en Mar del Plata. La competencia incluye una campaña de concientización sobre el cáncer de mama.",
-      "cuerpo": "El cronograma para el conjunto balcarceño comienza el sábado a las 9.30 frente a Sporting Rosa y continúa a las 13.30 ante Las Pepas de San Clemente. La inauguración oficial, con la presentación de los planteles y una charla preventiva, está programada para las 16.30.\n\nLas actividades siguen el domingo con las definiciones por zonas, los partidos finales, un concurso de triples y la ceremonia de premiación.",
-      "guion": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
-      "seccion": "Deportes",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/las-correcaminos-vuelven-a-jugar-el-torneo-sporting-rosa",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T13:13:24.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T13:31:00.229Z",
-      "relevancia": 57,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El equipo de la Escuela Municipal compite en Mar del Plata.",
-        "Los partidos se juegan el sábado 3 y el domingo 4 de octubre.",
-        "El certamen promueve la concientización sobre el cáncer de mama."
-      ],
-      "seSabe": [
-        "El equipo femenino de la Escuela Municipal de Balcarce participa en el torneo Sporting Rosa",
-        "La competencia se realiza el sábado 3 y el domingo 4 de octubre en Mar del Plata",
-        "El sábado a las 9.30 juegan contra Sporting Rosa y a las 13.30 ante Las Pepas de San Clemente",
-        "El domingo se disputan las definiciones, el torneo de triples y la premiación"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Las Correcaminos participan este fin de semana en el torneo de básquet Sporting Rosa en Mar del Plata, con partidos y actividades de concientización sobre el cáncer de mama.",
-      "etiquetas": [
-        "Las Correcaminos",
-        "basquet",
-        "Escuela Municipal",
-        "Sporting Rosa",
-        "Mar del Plata"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/las-correcaminos-vuelven-a-jugar-el-torneo-sporting-rosa",
-          "fecha": "2026-10-01T13:13:24.000Z",
-          "oficial": false,
-          "aporte": "Detalló la participación de Las Correcaminos en el torneo Sporting Rosa, el cronograma de partidos y las actividades de concientización."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "las-correcaminos-participan-en-el-torneo-de-basquet-sporting-rosa",
-      "foto": {
-        "archivo": "fotos-notas/dwvi75.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -4170,203 +4366,6 @@
       }
     },
     {
-      "id": "1fp0ktu",
-      "titulo": "El Ministerio de Desarrollo Agrario analiza la situación de la cadena ovina",
-      "copete": "La Provincia encabeza un nuevo encuentro de la Mesa Ovina para revisar las políticas del sector. Detallan cifras de producción, infraestructura de faena y nuevas líneas de financiamiento.",
-      "cuerpo": "El ministro de Desarrollo Agrario bonaerense, Javier Rodríguez, encabezó una nueva reunión de la Mesa Ovina Provincial para evaluar la situación del sector y repasar las políticas vigentes.\n\nDurante el encuentro, el funcionario informó que el territorio provincial cuenta con 1.542.772 cabezas ovinas distribuidas en 20.326 unidades productivas. Asimismo, indicó que la cantidad de frigoríficos ovinos pasó de 15 en 2019 a 29 en 2025 para reducir las distancias de traslado.\n\nEn cuanto al financiamiento, el ministerio mantiene líneas a tasa cero y valor producto destinadas a capital de trabajo y mejoras de infraestructura intrapredial.",
-      "guion": "El Ministerio de Desarrollo Agrario analiza la situación de la cadena ovina",
-      "seccion": "Agro",
-      "medios": [
-        "La Verdad",
-        "Infocampo"
-      ],
-      "enlace": "https://laverdadonline.com/rodriguez-duplicamos-la-cantidad-de-frigorificos-en-la-provincia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T11:45:36.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T14:31:27.626Z",
-      "relevancia": 26,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El ministro Javier Rodríguez lideró la Mesa Ovina Provincial.",
-        "La Provincia cuenta con 1.542.772 cabezas ovinas y 20.326 unidades productivas.",
-        "Los frigoríficos ovinos aumentaron de 15 en 2019 a 29 en 2025.",
-        "El ministerio ofrece financiamiento a tasa cero para capital de trabajo e infraestructura."
-      ],
-      "seSabe": [
-        "El ministro de Desarrollo Agrario, Javier Rodríguez, encabezó la reunión de la Mesa Ovina Provincial.",
-        "La provincia de Buenos Aires registra 1.542.772 cabezas ovinas y 20.326 unidades productivas.",
-        "La cantidad de frigoríficos ovinos pasó de 15 en 2019 a 29 en 2025.",
-        "El ministerio mantiene líneas de financiamiento a tasa cero y valor producto."
-      ],
-      "textoRedes": "El Ministerio de Desarrollo Agrario bonaerense encabezó un nuevo encuentro de la Mesa Ovina Provincial para repasar las políticas del sector, las cifras de producción y las herramientas de financiamiento disponibles.",
-      "etiquetas": [
-        "ovinos",
-        "ministro"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/rodriguez-duplicamos-la-cantidad-de-frigorificos-en-la-provincia/",
-          "fecha": "2026-10-01T11:45:36.000Z",
-          "oficial": false,
-          "aporte": "Detalló las estadísticas de producción, el incremento de frigoríficos ovinos y las líneas de financiamiento vigentes."
-        },
-        {
-          "medio": "Infocampo",
-          "enlace": "https://www.infocampo.com.ar/la-carne-ovina-tambien-quiere-tener-su-boom-en-buenos-aires-se-duplico-la-cantidad-de-frigorificos/",
-          "fecha": "2026-10-01T14:26:45.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la realización del encuentro de la Mesa Ovina Provincial encabezado por el ministro Javier Rodríguez."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-ministerio-de-desarrollo-agrario-analiza-la-situacion-de-la-cadena",
-      "foto": {
-        "archivo": "fotos-notas/1fp0ktu.jpg",
-        "credito": "Foto: Infocampo"
-      }
-    },
-    {
-      "id": "1jiov2o",
-      "titulo": "El complejo agroexportador liquida 3.228 millones de dólares en septiembre",
-      "copete": "Las empresas del sector cerealero y oleaginoso alcanzaron una suba del 17% frente a agosto. El acumulado de los primeros nueve meses llegó a 22.275 millones de dólares.",
-      "cuerpo": "Las empresas del sector cerealero y oleaginoso concretaron operaciones por 3.228 millones de dólares durante septiembre.\n\nEl total acumulado entre enero y septiembre llegó a 22.275 millones de dólares, un 22 por ciento por debajo del mismo período del año pasado. Desde las cámaras empresarias detallaron que el resultado constituyó el tercer mejor registro para un noveno mes en los últimos veinticinco años.\n\nEl crecimiento estuvo impulsado principalmente por el complejo maicero, a partir de un flujo continuo de embarques y de ventas de los productores hacia las firmas exportadoras. Las entidades aclararon que no realizaron una comparación interanual con septiembre de 2025 debido a la vigencia del decreto gubernamental que suspendió temporalmente los derechos de exportación en aquel período.",
-      "guion": "El complejo agroexportador liquida 3.228 millones de dólares en septiembre",
-      "seccion": "Agro",
-      "medios": [
-        "LU9 Mar del Plata",
-        "Ámbito",
-        "Clarín",
-        "Perfil",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "Noticias Agropecuarias",
-        "Ecos Diarios (Necochea)",
-        "La Nueva",
-        "Infórmese Primero (FM 104.9)",
-        "El Cronista",
-        "Crónica",
-        "Diario Popular",
-        "El Día",
-        "La Capital (Rosario)",
-        "La Nación",
-        "TN (Todo Noticias)",
-        "Infocampo",
-        "La Verdad"
-      ],
-      "enlace": "https://www.ambito.com/economia/el-agro-liquido-us3228-millones-septiembre-y-alcanzo-el-tercer-mejor-registro-25-anos-n6328761",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T11:00:52.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T18:31:03.487Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Las agroexportadoras liquidaron u$s 3.228 millones en septiembre",
-        "El monto creció 17% frente a agosto según CIARA y el CEC",
-        "El acumulado anual de los primeros nueve meses llegó a u$s 22.275 millones"
-      ],
-      "seSabe": [
-        "Las agroexportadoras liquidaron u$s 3.228 millones en septiembre",
-        "El ingreso superó en 17% a agosto",
-        "El acumulado de nueve meses alcanzó u$s 22.275 millones",
-        "El sector del maíz lideró el movimiento comercial del mes"
-      ],
-      "noConfirmado": [
-        "No se realizaron comparaciones interanuales con septiembre de 2025 por condiciones excepcionales previas de la normativa impositiva"
-      ],
-      "textoRedes": "Las empresas agroexportadoras liquidaron u$s 3.228 millones en septiembre y marcaron una suba del 17% frente al mes previo impulsadas por el maíz.",
-      "etiquetas": [
-        "agro",
-        "exportaciones",
-        "divisas",
-        "ciara",
-        "cec",
-        "maiz"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/el-agro-liquido-us3228-millones-septiembre-y-alcanzo-el-tercer-mejor-registro-25-anos-n6328761",
-          "fecha": "2026-10-01T11:00:52.000Z",
-          "oficial": false,
-          "aporte": "Aportó la cifra mensual, el porcentaje de suba, el acumulado anual, el rol del maíz y la aclaración sobre el decreto 2025"
-        },
-        {
-          "medio": "LU9 Mar del Plata",
-          "enlace": "https://www.lu9mardelplata.com.ar/agroexportadoras-liquidaron-us-3228-millones-en-septiembre-el-tercero-mas-alto-de-la-serie-de-25-anos",
-          "fecha": "2026-10-01T16:44:06.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el monto mensual de liquidación y el porcentaje de aumento respecto a agosto"
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/el-complejo-agroexportador-liquido-us-3228-millones-en-septiembre",
-          "fecha": "2026-10-01T13:09:30.000Z",
-          "oficial": false,
-          "aporte": "Detalló el informe de las entidades del complejo oleaginoso-cerealero"
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/rural/ingresaron-us-3228-millones-maiz-liquidacion-agro-crecio-17-septiembre_0_hUXzJTEnne.html",
-          "fecha": "2026-10-01T11:35:29.000Z",
-          "oficial": false,
-          "aporte": "Precisó el ingreso acumulado a nueve meses y el puesto histórico de septiembre en 25 años"
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/la-liquidacion-del-agro-crecio-17--en-septiembre-y-aporto-us-3-229-millones_a6abe3fec8419983d42516a54",
-          "fecha": "2026-10-01T12:34:41.274Z",
-          "oficial": false,
-          "aporte": "Sin información adicional en el resumen"
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/la-liquidacion-del-agro-crecio-17-en-septiembre-impulsada-por-el-maiz",
-          "fecha": "2026-10-01T13:30:27.000Z",
-          "oficial": false,
-          "aporte": "Sin información adicional en el resumen"
-        },
-        {
-          "medio": "Noticias Agropecuarias",
-          "enlace": "https://www.noticiasagropecuarias.com/2026/10/01/la-liquidacion-de-divisas-del-agro-alcanzo-3-228-mill-dol-en-septiembre/",
-          "fecha": "2026-10-01T11:52:56.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el porcentaje de incremento mensual y la serie histórica"
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-1-10-31-0-el-sector-agroexportador-liquido-3-228-millones-de-dolares-durante-septiembre",
-          "fecha": "2026-10-01T14:23:51.000Z",
-          "oficial": false,
-          "aporte": "Señaló que las entidades firmantes representan el 48% de las exportaciones del país"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 12 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-complejo-agroexportador-liquida-3-228-millones-de-dolares-en",
-      "foto": {
-        "archivo": "fotos-notas/1jiov2o.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
-    },
-    {
       "id": "ig6fdw",
       "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
       "copete": "El Ejecutivo nacional presentó en Francia un mecanismo para otorgar la ciudadanía a extranjeros que realicen inversiones. Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
@@ -4385,7 +4384,6 @@
         "iProfesional",
         "C5N",
         "Crónica",
-        "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -4396,8 +4394,9 @@
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
         "Agroempresario",
+        "El Economista",
         "Clarín",
-        "El Economista"
+        "Radio Mitre"
       ],
       "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
       "teniaImagenLaFuente": true,
@@ -4483,10 +4482,10 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "InfoRegión",
+        "Noticias Agropecuarias",
         "El Día",
         "Canal 26",
-        "Infobae",
-        "Noticias Agropecuarias"
+        "Infobae"
       ],
       "enlace": "https://noticiasargentinas.com/sociedad/el-servicio-meteorologico-nacional-anticipa--lluvias-superiores-a-lo-normal--para-octubre--noviembre-y-diciembre-de-2026_a6abe67518419983d4256c83f",
       "teniaImagenLaFuente": true,
@@ -4662,10 +4661,10 @@
     "Balcarce",
     "Deportes",
     "Economía",
+    "Argentina",
     "Política",
     "Agro",
     "Policiales",
-    "Argentina",
     "Cultura y agenda",
     "Automovilismo",
     "Fútbol"
@@ -4689,10 +4688,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 15,
-      "sensacion": 11,
-      "humedad": 49,
-      "viento": 18,
+      "temp": 14,
+      "sensacion": 10,
+      "humedad": 50,
+      "viento": 17,
       "rumbo": "N",
       "cielo": "Nublado",
       "esDeDia": true
@@ -5044,22 +5043,28 @@
   },
   "pendientes": [
     {
-      "id": "1f8yrdr",
-      "titulo": "FNP 2026: parte del cronograma ya fue confirmado",
-      "seccion": "Cultura y agenda",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1uabccx",
+      "id": "1w06xhx",
       "titulo": null,
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"lesionada\""
     },
     {
       "id": "app0yh",
       "titulo": "Javier Milei volvió a atacar a Lula y respaldó a Flávio…",
       "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "1vy0a0a",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "1uabccx",
+      "titulo": null,
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1t477sv",
@@ -5080,8 +5085,8 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "1b8kq9d",
-      "titulo": "Milei se reunió con Macron en París: los anuncios clave",
+      "id": "1ajugpk",
+      "titulo": "Milei llegó a Francia para reunirse con Macron y…",
       "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
     },
@@ -5098,16 +5103,16 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "1l7b8nt",
-      "titulo": "Nito Lezcano relató lo que atravesó tras una denuncia…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "4n4kj2",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"nena\""
+    },
+    {
+      "id": "1gbi1d2",
+      "titulo": "Fuerte gesto: Lula cierra su campaña con la bandera de…",
+      "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "s1fpwb",
@@ -5140,9 +5145,9 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1zi52v",
-      "titulo": "La denuncia que lanzó el presidente de Platense a…",
-      "seccion": "Fútbol",
+      "id": "imkij7",
+      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
+      "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],

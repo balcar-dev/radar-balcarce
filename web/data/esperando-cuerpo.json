@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02T18:15:57.339Z",
+ "generado": "2026-10-02T18:31:55.984Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -87,6 +87,16 @@
      "fecha": "2026-10-02T16:01:00.000Z"
     },
     {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/adios-ricardo-soule-leyenda-la-era-fundacional-del-rock-nacional-n56204",
+     "fecha": "2026-10-02T18:21:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/murio-ricardo-soule-fundador-vox-dei-y-una-figura-clave-del-rock-argentino-n6329463",
+     "fecha": "2026-10-02T17:07:00.000Z"
+    },
+    {
      "medio": "Ámbito",
      "enlace": "https://www.ambito.com/espectaculos/de-que-murio-ricardo-soule-cantante-y-fundador-vox-dei-n6329435",
      "fecha": "2026-10-02T16:24:00.000Z"
@@ -109,7 +119,7 @@
     {
      "medio": "Perfil",
      "enlace": "https://www.perfil.com/noticias/musica/murio-ricardo-soule-fundador-de-vox-dei-y-pionero-del-rock-nacional.phtml",
-     "fecha": "2026-10-02T15:49:06.000Z"
+     "fecha": "2026-10-02T17:49:00.000Z"
     },
     {
      "medio": "TyC Sports",
@@ -187,6 +197,11 @@
      "fecha": "2026-10-02T16:11:45.000Z"
     },
     {
+     "medio": "La Capital (Rosario)",
+     "enlace": "https://www.lacapital.com.ar/zoom/murio-ricardo-soule-referente-del-rock-argentino-y-lider-vox-dei-n10284511.html",
+     "fecha": "2026-10-02T17:59:00.000Z"
+    },
+    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/espectaculos/musica/biblia-vox-dei-gran-obra-ricardo-soule-marco-dia-rock-argentino-hizo-contacto-dios_0_RZTJFvwTwg.html",
      "fecha": "2026-10-02T15:34:57.000Z"
@@ -200,16 +215,6 @@
      "medio": "Ámbito",
      "enlace": "https://www.ambito.com/espectaculos/de-que-murio-murio-ricardo-soule-cantante-y-fundador-vox-dei-n6329435",
      "fecha": "2026-10-02T16:24:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/murio-ricardo-soule-fundador-vox-dei-y-una-figura-clave-del-rock-argentino-n6329463",
-     "fecha": "2026-10-02T17:07:00.000Z"
-    },
-    {
-     "medio": "La Capital (Rosario)",
-     "enlace": "https://www.lacapital.com.ar/zoom/murio-ricardo-soule-referente-del-rock-argentino-y-lider-vox-dei-n10284511.html",
-     "fecha": "2026-10-02T17:59:00.000Z"
     }
    ],
    "intentos": 5,
@@ -335,12 +340,32 @@
     {
      "medio": "Bolavip Argentina",
      "enlace": "https://bolavip.com/ar/apuestas/pronosticos/defensa-y-justicia-vs-san-lorenzo-03-10-2026",
-     "fecha": "2026-10-02T17:45:00.000Z"
+     "fecha": "2026-10-02T18:29:43.000Z"
+    },
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/futbolargentino/alineaciones-de-defensa-y-justicia-y-san-lorenzo-por-la-liga-profesional-formaciones-probables",
+     "fecha": "2026-10-02T18:28:33.000Z"
+    },
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/futbolargentino/defensa-y-justicia-vs-san-lorenzo-en-vivo-donde-ver-por-tv-y-streaming-online-por-la-fecha-11-de-la-liga-profesional",
+     "fecha": "2026-10-02T18:28:29.000Z"
+    },
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/futbolargentino/defensa-y-justicia-vs-san-lorenzo-en-vivo-donde-ver-por-tv-y-streaming-online-por-la-fecha-11-de-la-liga-profesional",
+     "fecha": "2026-10-02T18:14:49.000Z"
+    },
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/futbolargentino/alineaciones-de-defensa-y-justicia-y-san-lorenzo-por-la-liga-profesional-formaciones-probables",
+     "fecha": "2026-10-02T18:13:13.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"boedo\" y la fuente no",
-   "maximo": 4
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (copia): copia 16 palabras seguidas del original: decilo con otras palabras",
+   "maximo": 5
   }
  ]
 }

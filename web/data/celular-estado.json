@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T18:15:57.339Z",
- "portada": 60,
- "archivo": 795,
+ "generado": "2026-10-02T18:31:55.984Z",
+ "portada": 58,
+ "archivo": 796,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-02T18:15:57.371Z",
+  "generado": "2026-10-02T18:31:56.023Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -160,9 +160,9 @@
       "seccion": "Economía"
      },
      {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce"
      },
      {
       "id": "sty1jd",
@@ -193,15 +193,14 @@
      "id": "xvt4t1",
      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
      "cuando": "2026-10-02T16:45:22.855Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "h1ggzr",
      "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
-     "seccion": "Agro",
-     "marcada": false
-    },
+     "cuando": "2026-10-02T18:18:09.517Z"
+    }
+   ],
+   "cola": [
     {
      "id": "1akpidg",
      "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
@@ -227,8 +226,8 @@
      "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-02T18:15:22.855Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-02T19:48:09.517Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
