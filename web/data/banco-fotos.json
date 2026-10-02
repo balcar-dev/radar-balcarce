@@ -4920,13 +4920,14 @@
   "fuentes": 1
  },
  "xvt4t1": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
-  "razon": "La única foto disponible muestra un collage con varias personas, incluyendo posibles menores y personal, pero no es apta directamente según los criterios establecidos.",
-  "cuando": "2026-10-02T12:31:43.398Z",
-  "intentos": 1,
-  "fuentes": 1
+  "archivo": "fotos-notas/xvt4t1.jpg",
+  "medio": "Municipalidad Balcarce",
+  "credito": "Foto: Municipalidad Balcarce",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-02T19:10:42.998Z",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-02-at-8.10.58-AM-1536x1152.jpeg"
  },
  "y1kgx4": {
   "archivo": "fotos-notas/y1kgx4.jpg",
@@ -5292,16 +5293,16 @@
   "cuando": "2026-10-02T17:32:05.304Z"
  },
  "gzpel6": {
-  "archivo": "fotos-notas/gzpel6.jpg",
   "medio": "Municipalidad de Balcarce",
-  "credito": "Foto: Municipalidad de Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "La carrera Luis Vildoza suma inscripciones presenciales",
   "enlace": "https://balcarce.gob.ar/2026/10/02/se-suma-la-opcion-de-inscripcion-presencial-para-la-luis-vildoza/",
   "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-02-at-11.28.36-AM.jpeg",
   "razon": "Es la única opción disponible y muestra claramente el evento (Carrera Luis Vildoza) con un buen encuadre de los corredores bajo el arco, sin marcas de agua del medio ni menores identificables.",
-  "cuando": "2026-10-02T17:32:05.304Z"
+  "cuando": "2026-10-02T17:32:05.304Z",
+  "intentado": true,
+  "borrada": true
  },
  "1u612sk": {
   "medio": "Diario La Vanguardia",
@@ -5420,5 +5421,39 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2FDdF3gjMc5Kg.jpg%3F212009?auth=9d516456659460b6765aee17d39e3ed012b799ceeebee85759d61675a703948b&width=1023",
   "razon": "Es la mejor foto institucional del evento, con excelente encuadre y nitidez de Luis Caputo hablando en el estrado del Coloquio de IDEA, sin marcas de agua ni menores.",
   "cuando": "2026-10-02T19:01:56.321Z"
+ },
+ "9599gy": {
+  "archivo": "fotos-notas/9599gy.jpg",
+  "medio": "Radio Gabal",
+  "credito": "Foto: Radio Gabal",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-02T19:08:42.507Z",
+  "imagenOriginal": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeTvwqqVqBGR6HL-sE13IvT6z7aPvzRcRuQHUrjzF5G6SrPkMiIW9SHfk&s=10"
+ },
+ "1t2w69h": {
+  "archivo": "fotos-notas/1t2w69h.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Diego Santilli cuestiona a Kicillof y defiende el rumbo económico",
+  "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/en-idea-santilli-se-metio-en-la-campana-politica-kicillof-es-el-mejor-jefe-de-campana-de-milei-foto-clarin-maxi-failla-CWOMYWGWNNDMZNZZLZQ6K4BERI.jpg?auth=1c9ab9c1a6b2097527281514ca8b5977372636c824c2afba4749b8172e650b5b&width=1023",
+  "razon": "La foto C muestra un primer plano claro de Diego Santilli sin marcas de agua sobreimpresas ni menores.",
+  "cuando": "2026-10-02T19:32:21.648Z"
+ },
+ "1artfui": {
+  "archivo": "fotos-notas/1artfui.jpg",
+  "medio": "Diario Conurbano",
+  "credito": "Foto: Diario Conurbano",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Almirante Brown organiza Una Noche en los Museos el sábado",
+  "enlace": "https://diarioconurbano.com.ar/principal/este-sabado-llega-una-noche-en-los-museos-a-brown-con-descuentos-en-gastronomia/",
+  "imagenOriginal": "https://diarioconurbano.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-02-at-11.21.15.jpeg",
+  "razon": "La foto A muestra el interior del museo histórico sin personas reconocibles ni menores, ideal para ilustrar la nota cultural.",
+  "cuando": "2026-10-02T19:32:21.648Z"
  }
 }
