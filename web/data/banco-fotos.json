@@ -4746,22 +4746,28 @@
   "cuando": "2026-10-02T02:31:25.026Z"
  },
  "1kl2omw": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1kl2omw.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Nito Lezcano reflexiona sobre su sobreseimiento tras una denuncia penal",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-02T05:01:36.674Z",
-  "intentos": 3,
-  "fuentes": 3
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/mi-nombre-condenado-socialmente-la-reflexion-de-nito-lezcano-tras-atravesar-una-denuncia",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Nito.jpg",
+  "razon": "Es la única foto sin marcas ni menores, con excelente nitidez y primer plano del protagonista.",
+  "cuando": "2026-10-02T11:01:45.037Z"
  },
  "1n70nnq": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1n70nnq.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Servicio Meteorológico Nacional anticipa lluvias superiores a lo normal",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-02T05:01:36.674Z",
-  "intentos": 3,
-  "fuentes": 5
+  "enlace": "https://www.perfil.com/noticias/nea/el-nino-el-smn-anticipo-lluvias-superiores-a-lo-normal-para-octubre-noviembre-y-diciembre-de-2026.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2026/10/01/trim/1140/641/01-10-2026-el-nino-smn-pronostico-trimestral-2338815.jpg",
+  "razon": "Es la mejor foto libre de marcas y menores, con excelente nitidez y encuadre para ilustrar el clima lluvioso.",
+  "cuando": "2026-10-02T11:01:45.037Z"
  },
  "1bk6bvf": {
   "intentado": true,
@@ -4816,5 +4822,41 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/MD564HJ4ZZHJZBAZ6XP4OIDMGE.jpg?auth=af59867fb727d5cbe3c5c94c98c72473d7e09c43e3b36d925f66bf93c7505af2&smart=true&width=1200&height=630&quality=85",
   "razon": "Es la foto más limpia, con excelente nitidez y encuadre del piloto, sin marcas añadidas por el medio ni menores.",
   "cuando": "2026-10-02T10:31:38.996Z"
+ },
+ "oa2ef": {
+  "archivo": "fotos-notas/oa2ef.jpg",
+  "medio": "Crónica",
+  "credito": "Foto: Crónica",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
+  "enlace": "https://www.cronica.com.ar/politica/karina-milei-visito-junto-a-gobernadores-el-mercado-frances-donde-llegan-los-productos-argentinos/",
+  "imagenOriginal": "https://www.cronica.com.ar/files/image/1716/1716183/6abf8122ecc2d_600_315!.jpg?s=a8e2dcb0ecb96b0195e0c53f70cc32f5&d=1790910000",
+  "razon": "Es la única foto sin marca de agua superpuesta ni menores, con buena nitidez y encuadre adecuado.",
+  "cuando": "2026-10-02T11:01:45.037Z"
+ },
+ "tjhvbt": {
+  "archivo": "fotos-notas/tjhvbt.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno busca el apoyo de los gobernadores para la reforma electoral",
+  "enlace": "https://tn.com.ar/politica/2026/10/02/el-gobierno-refuerza-el-vinculo-con-los-gobernadores-y-busca-apoyos-para-avanzar-con-la-reforma-electoral/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/mientras-javier-milei-agradecio-a-los-gobernadores-por-su-apoyo-en-el-congreso-diego-santilli-busco-profundizar-el-dialogo-para-avanzar-con-los-acuerdos-electorales-para-el-proximo-ano-foto-presidencia-NICDZWR4WRDMRED5DY4GOIMJOA.jpg?auth=0d5d2d2a4e7232edf807a7c133667c0a49e8a21459b337a6d761549cf4d86c6c&width=1023",
+  "razon": "Muestra claramente al grupo de gobernadores y funcionarios reunidos para el tema político de la nota, con buena nitidez y sin marcas ni menores.",
+  "cuando": "2026-10-02T11:01:45.037Z"
+ },
+ "hrexvi": {
+  "archivo": "fotos-notas/hrexvi.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Colapinto encara 15 puestos de penalización y se enfoca en el ritmo",
+  "enlace": "https://www.clarin.com/deportes/f1-gp-bahrein-colapinto-vivo-horarios-primeras-practicas-malasia-ver-formula-1_0_XlmUpEmJH9.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/02/-GaQ0w7ZJ_2000x1500__1.jpg",
+  "razon": "La foto A muestra con claridad un auto de competición en pista, sin marcas de agua de los medios ni menores, y con excelente composición e iluminación.",
+  "cuando": "2026-10-02T11:01:45.037Z"
  }
 }
