@@ -630,6 +630,53 @@
         "vistas": 109,
         "interacciones": 11
       }
+    },
+    {
+      "cuando": "2026-10-02T12:00:20.184Z",
+      "web": {
+        "u12": {
+          "visitas": 13,
+          "vistas": 34
+        },
+        "a12": {
+          "visitas": 25,
+          "vistas": 254
+        },
+        "u24": {
+          "visitas": 38,
+          "vistas": 288
+        },
+        "a24": {
+          "visitas": 41,
+          "vistas": 79
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 80
+          },
+          {
+            "camino": "/seccion/balcarce",
+            "vistas": 32
+          },
+          {
+            "camino": "/nota/concejales-proponen-crear-un-registro-municipal-de-acompanantes-15i90co",
+            "vistas": 17
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 4,
+        "vistas": 520,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 55,
+        "alcance": 4,
+        "vistas": 5,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -807,44 +854,50 @@
         "1sko7lj": 12,
         "1vmovug": 11,
         "m212r6": 8,
+        "repaso20261001tarde": 5,
         "o1vynh": 4,
+        "iheoi7": 4,
         "24cp9v": 4,
+        "1mknzh0": 4,
         "1lfoejz": 4,
         "15c2xr1": 3,
-        "repaso20261001tarde": 3,
         "1dbyjp1": 2,
         "6xex85": 2,
+        "34t457": 2,
+        "ff9n91": 2,
+        "1a2z04a": 2,
         "11di7ig": 2,
         "367tdt": 2,
-        "ff9n91": 2,
-        "1yu9ytn": 2,
-        "1fqh4sy": 2
+        "1j4lf17": 2,
+        "1fqh4sy": 2,
+        "1yu9ytn": 2
       },
       "paginas": {
-        "/": 70,
-        "/seccion/balcarce": 30,
+        "/": 80,
+        "/seccion/balcarce": 32,
         "/seccion/tecnologia": 10,
-        "/seccion/automovilismo": 8,
-        "/seccion/cultura": 8,
         "/farmacias": 8,
+        "/seccion/cultura": 8,
+        "/seccion/automovilismo": 8,
         "/seccion/economia": 6,
         "/seccion/politica": 5,
         "/seccion/deportes": 4,
         "/seccion/agro": 4,
+        "/seccion/argentina": 2,
         "/seccion/balcarce-2": 2,
         "/seccion/futbol": 2,
         "/util": 2,
         "/agenda": 2
       },
       "paises": {
-        "AR": 222,
-        "US": 24,
-        "IE": 10,
-        "SE": 2
+        "AR": 238,
+        "US": 34,
+        "IE": 12,
+        "SE": 4
       },
       "referentes": {
-        "facebook.com": 16,
-        "directo": 12
+        "facebook.com": 24,
+        "directo": 15
       },
       "horas": [
         0,
@@ -868,15 +921,58 @@
         44,
         12,
         2,
+        26,
+        0,
+        4
+      ],
+      "visitas": 39,
+      "vistas": 288,
+      "dispositivos": {
+        "desktop": 203,
+        "mobile": 85
+      }
+    },
+    "2026-10-02": {
+      "notas": {},
+      "paginas": {
+        "/": 4
+      },
+      "paises": {
+        "AR": 4
+      },
+      "visitas": 2,
+      "vistas": 4,
+      "horas": [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0
       ],
-      "visitas": 28,
-      "vistas": 258,
       "dispositivos": {
-        "desktop": 198,
-        "mobile": 60
+        "mobile": 4
+      },
+      "referentes": {
+        "directo": 2
       }
     }
   }
