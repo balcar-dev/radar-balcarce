@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T16:51:54.471Z",
- "portada": 63,
- "archivo": 785,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-02T17:02:06.287Z",
+ "portada": 62,
+ "archivo": 786,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T16:51:54.520Z",
+  "generado": "2026-10-02T17:02:06.348Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,8 +116,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
+     },
      {
       "id": "uxgtdx",
       "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
@@ -129,13 +134,8 @@
       "seccion": "Economía"
      },
      {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "sty1jd",
-      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      }
     ]
@@ -147,8 +147,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "sty1jd",
+      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1uwpmsg",
       "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
@@ -160,8 +165,8 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "g34tir",
-      "titulo": "Balcarce reúne a la región en el primer encuentro por la comunidad sorda",
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
       "seccion": "Balcarce"
      }
     ]

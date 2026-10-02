@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02T16:51:54.471Z",
+ "generado": "2026-10-02T17:02:06.287Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -45,8 +45,8 @@
      "fecha": "2026-10-02T15:55:12.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 68 palabras",
+   "intentos": 2,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 6 y la fuente no lo dice",
    "maximo": 4
   },
   {
@@ -90,43 +90,6 @@
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-2-7-31-0-por-que-la-seleccion-argentina-recibira-a-bahamas-y-canada-en-zarate",
      "fecha": "2026-10-02T10:45:20.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 4
-  },
-  {
-   "id": "1h0pc9p",
-   "titulo": "Luis Caputo en Argentina Week París: \"El único riesgo en Argentina es perderse la oportunidad de invertir\"",
-   "copete": "Desde París, Francia - El ministro de Economía, Luis Caputo , fue el primer orador de la jornada de hoy de Argentina Week en esta ciudad, titulada “La transformación argentina, oportunidades de inversión”. Caputo, como viene haciendo últimamente, hizo referencia a los riesgos…",
-   "seccion": "Economía",
-   "fecha": "2026-10-01T10:30:35.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/01/luis-caputo-en-argentina-week-paris-el-unico-riesgo-en-argentina-es-perderse-la-oportunidad-de-invertir/",
-     "fecha": "2026-10-01T10:30:35.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/caputo-el-riesgo-no-es-politico-ni-cambiario-es-perder-la-oportunidad-de-invertir-nid01102026/",
-     "fecha": "2026-10-01T11:18:01.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/economia/luis-caputo-el-argentina-week-paris-el-unico-riesgo-es-perderse-la-oportunidad-invertir-n250442",
-     "fecha": "2026-10-01T15:34:00.000Z"
-    },
-    {
-     "medio": "Punto Noticias",
-     "enlace": "https://puntonoticias.com/caputo-el-riesgo-no-esta-en-las-elecciones-sino-en-perderse-la-oportunidad-de-invertir-en-argentina/",
-     "fecha": "2026-10-01T19:26:28.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/caputo-aseguro-que-el-unico-riesgo-en-argentina-es-perderse-la-oportunidad-de-invertir/",
-     "fecha": "2026-10-01T12:42:00.000Z"
     }
    ],
    "intentos": 1,
