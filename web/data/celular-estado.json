@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T02:31:43.848Z",
- "portada": 66,
+ "generado": "2026-10-02T03:01:24.646Z",
+ "portada": 64,
  "archivo": 753,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-02T02:31:43.891Z",
+  "generado": "2026-10-02T03:01:24.673Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-01T10:36:04.243Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -23,18 +23,18 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-01T13:35:03.428Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "agenda",
+    "nombre": "participa-nota",
     "tipo": "historia",
     "hora": "12:00",
-    "que": "La agenda del fin de semana",
-    "voz": "locutora",
+    "que": "Tu nota",
+    "voz": "locutor",
     "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-01T18:57:44.493Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -43,8 +43,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-01T18:09:10.520Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -53,8 +53,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-01T22:04:59.467Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -63,8 +63,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-01T23:04:39.641Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -73,8 +73,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-02T00:05:07.832Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -83,29 +83,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-01T13:35:03.428Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 52,
     "notas": [
      {
-      "id": "ff9n91",
-      "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
+      "id": "1j4lf17",
+      "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "16vloik",
+      "titulo": "La desigualdad de ingresos baja pero el sector más rico gana trece veces más",
+      "seccion": "Economía"
+     },
+     {
+      "id": "kemwz0",
+      "titulo": "Publican el tráiler del documental sobre Carlos Bilardo en el Sevilla",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "6xex85",
-      "titulo": null,
-      "seccion": null
-     },
-     {
-      "id": "1fqh4sy",
-      "titulo": "Aymeric Laporte califica a la Argentina de antifútbol tras la final",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "dwvi75",
-      "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
-      "seccion": "Deportes"
      }
     ]
    },
@@ -114,29 +114,24 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-01T18:09:10.520Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 45,
     "notas": [
      {
-      "id": "367tdt",
-      "titulo": "Lionel Messi compra el Club Deportivo Eldense de España",
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
      },
      {
-      "id": "15i90co",
-      "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1sko7lj",
-      "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "m212r6",
-      "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
+      "id": "vot8hs",
+      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -145,61 +140,25 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-02T00:05:07.832Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 31,
     "notas": [
      {
-      "id": "1mknzh0",
-      "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
-      "seccion": "Cultura y agenda"
+      "id": "1a9rnj4",
+      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+      "seccion": "Balcarce"
      },
      {
-      "id": "34t457",
-      "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
-      "seccion": "Economía"
-     },
-     {
-      "id": "iheoi7",
-      "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
+      "id": "jzu6k",
+      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "seccion": "Balcarce"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "m212r6",
-     "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
-     "cuando": "2026-10-01T12:06:50.587Z"
-    },
-    {
-     "id": "ff9n91",
-     "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
-     "cuando": "2026-10-01T13:38:34.741Z"
-    },
-    {
-     "id": "1sko7lj",
-     "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
-     "cuando": "2026-10-01T15:25:55.233Z"
-    },
-    {
-     "id": "15i90co",
-     "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
-     "cuando": "2026-10-01T17:03:32.167Z"
-    },
-    {
-     "id": "alddw5",
-     "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-     "cuando": "2026-10-01T18:36:31.248Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "1j4lf17",
@@ -208,7 +167,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
