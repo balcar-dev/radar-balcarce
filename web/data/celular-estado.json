@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T03:32:11.824Z",
- "portada": 64,
- "archivo": 753,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-02T04:02:04.522Z",
+ "portada": 65,
+ "archivo": 754,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-02T03:32:11.861Z",
+  "generado": "2026-10-02T04:02:04.556Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 50,
     "notas": [
      {
       "id": "1j4lf17",
@@ -93,19 +93,19 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "kemwz0",
-      "titulo": "Publican el tráiler del documental sobre Carlos Bilardo en el Sevilla",
-      "seccion": "Cultura y agenda"
+      "id": "13npbde",
+      "titulo": "Dibu Martínez postula a Nico Paz como sucesor de la camiseta diez de Messi",
+      "seccion": "Fútbol"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
       "seccion": "Balcarce"
      },
      {
-      "id": "idl5dq",
-      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
-      "seccion": "Fútbol"
+      "id": "vot8hs",
+      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 50,
     "notas": [
      {
       "id": "17z7wso",
@@ -124,18 +124,18 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "vot8hs",
-      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
-      "seccion": "Cultura y agenda"
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "idl5dq",
+      "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
+      "seccion": "Fútbol"
      },
      {
       "id": "g8dncb",
       "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1gv3zir",
-      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
       "seccion": "Balcarce"
      }
     ]
@@ -147,8 +147,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 37,
     "notas": [
+     {
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
