@@ -139,5 +139,25 @@ export function diasArmados(dias = [], elegidas = {}) {
   return dias.filter((d) => elegidas.dias?.[d]?.principal).length;
 }
 
+/** Qué se armó de un día (lo mismo que calcula redes/efemeride.mjs): una decisión vale sólo sobre eso. */
+export const huellaDelDia = (d) => `${d?.principal?.id ?? ''}|${(d?.ademas ?? []).map((x) => x?.id ?? '').join('+')}|${String(d?.guion ?? '').length}`;
+
+/**
+ * Cómo está un día armado, para la lista y para el día: { texto, clase, sale }. `d` es la entrada de efemerides-piezas.json y
+ * `decision` lo que se decidió en el panel (elegidas.piezas[dia]). Una decisión vieja (se rearmó el día después) no cuenta.
+ */
+export function estadoDeDiaArmado(d, decision) {
+  if (!d?.guion || !d?.principal?.titulo || !(d?.ademas ?? []).length) return { texto: '✕ Incompleto: no sale', clase: 'mal', sale: false };
+  const vale = decision && decision.huella === huellaDelDia(d) ? decision.estado : null;
+  if (vale === 'aprobada') return { texto: '✓ Aprobado: sale a las 9:00', clase: 'ok', sale: true };
+  if (vale === 'sacada') return { texto: '✕ Sacado: no sale', clase: 'mal', sale: false };
+  if (vale === 'cambiar') return { texto: '✎ Pediste cambios: no sale hasta rearmarlo', clase: 'espera', sale: false };
+  if (d.sale === false) return { texto: '◔ Sin revisar: no sale hasta que lo apruebes', clase: 'espera', sale: false };
+  return { texto: '✓ Sale como está', clase: 'ok', sale: true };
+}
+
+/** Una decisión que ya no vale porque después se rearmó el día. */
+export const decisionVencida = (d, decision) => !!decision && decision.huella !== huellaDelDia(d);
+
 /** El estado de un feriado en lo que se guardó: 'aprobada', 'cambiar' o null. */
 export const estadoDeFeriado = (elegidas, fecha) => elegidas?.feriados?.[fecha]?.estado ?? null;

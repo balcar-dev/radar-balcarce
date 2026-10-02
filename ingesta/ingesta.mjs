@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA, AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN,
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
@@ -671,7 +671,7 @@ export function mediosMinimosDe(seccion, nota = {}) {
 }
 
 /** Cuántos medios distintos cuentan esta nota. */
-const cuantosMedios = (nota) => new Set((nota?.medios ?? [nota?.medio]).filter(Boolean)).size;
+export const cuantosMedios = (nota) => new Set((nota?.medios ?? [nota?.medio]).filter(Boolean)).size;
 
 /** El comienzo del motivo con que espera lo de afuera que cuentan pocos medios. */
 export const MOTIVO_POCO_CONTADA = 'de afuera y poco contada';
@@ -692,7 +692,9 @@ const motivoPocoContada = (medios, seccion, minimo) => `${MOTIVO_POCO_CONTADA} (
  * y el texto completo de una página trae "seguinos en" y "suscribite" en
  * cualquier nota.
  */
-export function semaforoDelTexto(textoCrudo, { soloMenores = false, conMuerte = true } = {}) {
+export function semaforoDelTexto(textoCrudo, {
+  soloMenores = false, conMuerte = true, deAca = false, corroborada = false,
+} = {}) {
   const texto = normalizar(String(textoCrudo ?? ''));
   if (!texto) return null;
   for (const p of REGLAS_SEMAFORO.rojo) {
@@ -701,6 +703,9 @@ export function semaforoDelTexto(textoCrudo, { soloMenores = false, conMuerte = 
   // En un texto entero (el artículo completo, el cuerpo que escribió la IA)
   // sólo frena lo que cuida a chicos y víctimas: ver AMARILLO_MENORES.
   for (const p of soloMenores ? AMARILLO_MENORES : REGLAS_SEMAFORO.amarillo) {
+    // Lo de acá espera menos (2/10): ver AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA.
+    if (deAca && AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA.includes(p)) continue;
+    if (corroborada && AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN.includes(p)) continue;
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
   }
   if (!soloMenores && conMuerte) {
@@ -720,11 +725,16 @@ export function laMuerteFrena(nota = {}, seccion = nota.seccion, medios = cuanto
     || medios < 2;
 }
 
+/** ¿Se le sueltan las palabras de AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA a esta nota? Si es de acá; y en Política, una denuncia contada por un solo
+ *  medio ("Denuncian al intendente…") sigue esperando: sólo se suelta si la confirma una fuente oficial o dos medios. */
+export const aflojaParaLoDeAca = (nota, seccion, corroborada) => esDeAca(nota) && (seccion !== 'Política' || corroborada);
+
 /** El color de una nota recién leída: { color, motivo }. El puntaje no entra
  *  (desde el 27/09 lo de afuera se mide en medios, no en puntaje). */
 function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
+  const corroborada = !!nota.oficial || medios >= 2;
   const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`, {
-    conMuerte: laMuerteFrena(nota, seccion, medios),
+    conMuerte: laMuerteFrena(nota, seccion, medios), deAca: aflojaParaLoDeAca(nota, seccion, corroborada), corroborada: esDeAca(nota) && corroborada,
   });
   if (sensible?.color === 'rojo') return sensible;
   // Lo que no se publica nunca (las listas de sepelios, Hernán 27/09). Sólo

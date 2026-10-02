@@ -10,11 +10,11 @@
 
 import {
   crearCliente, ARCHIVOS, SECCIONES, ErrorDeGitHub, marcaNueva, corridaConMarca,
-  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado,
+  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza,
 } from './github.js';
 import {
   ESTILOS, COLOR_DE_ESTILO, ROLES, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
-  haceTexto, marcaLegible, diasArmados, estadoDeFeriado,
+  haceTexto, marcaLegible, diasArmados, estadoDeFeriado, estadoDeDiaArmado, huellaDelDia, decisionVencida,
 } from './fechas.js';
 import { crearLlaves, abrir } from './cifrado.js';
 import {
@@ -24,7 +24,9 @@ import {
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
 import { htmlDeFormulario, htmlDeInforme } from './pistas.js';
-import { notasSinFoto, htmlDeFotos, htmlDeUnaNotaSinFoto, urlDeFotoValida, creditoDeFoto } from './fotos.js';
+import {
+  notasSinFoto, htmlDeFotos, htmlDeUnaNotaSinFoto, urlDeFotoValida, creditoDeFoto, motivoDeFoto, MOTIVOS_DE_FOTO,
+} from './fotos.js';
 import { estadoPorRed, explicarFalloDeRed, problemasDeHoy, NOMBRE_DE_RED, NOMBRE_DE_PARTE } from './redes-estado.js';
 
 const $ = (s) => document.querySelector(s);
@@ -87,7 +89,7 @@ const E = {
   portada: null, esperando: [], intentosMaximos: 3, pendientes: null, descartadas: [], papelera: [], publicos: [],
   decisiones: { notas: {}, redes: {} }, correcciones: { notas: {} }, archivo: null, estadoCel: null, libro: {},
   // La pestaña Fechas (se carga la primera vez que se abre).
-  fechas: null, subfechas: 'efemerides', dia: null, borrador: null, filtroEstilo: null, feriado: null,
+  fechas: null, subfechas: 'piezas', pieza: null, dia: null, borrador: null, filtroEstilo: null, feriado: null,
   // Lo que se está haciendo en la nube sin trabar el panel (la IA escribiendo, una foto sumándose): { [id]: { clase, estado, … } }.
   trabajos: {}, banco: null, publicadasTodas: false, scrollLista: null, restaurar: null,
 };
@@ -350,32 +352,61 @@ function vistaLista() {
   if (E.restaurar != null) { const y = E.restaurar; E.restaurar = null; requestAnimationFrame(() => window.scrollTo(0, y)); }
 }
 
-/** Las notas que salen solas pero todavía no tienen cuerpo, con cuántas veces se intentó y por qué falló. */
-function tarjetasSinCuerpo(sinCuerpo) {
-  if (!sinCuerpo.length) return '<p class="vacio">Todas tienen cuerpo.</p>';
-  return [...sinCuerpo].sort((a, b) => (b.fuentes?.length ?? 0) - (a.fuentes?.length ?? 0)).map((n) => {
-    const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: n.maximo ?? E.intentosMaximos, conCuerpo: !!E.correcciones.notas?.[n.id]?.cuerpo });
-    const medios = n.fuentes?.length ?? 0;
-    const porQue = e.clase === 'mal' ? explicarMotivoSinCuerpo(n.motivo) : '';
-    return tarjeta(n, { tipo: 'sin-cuerpo', extra: `<span class="est ${e.clase}">${medios > 1 ? `${medios} medios la cuentan · ` : ''}${esc(e.texto)}</span>${porQue ? `<span class="meta">${esc(porQue)}</span>` : ''}` });
-  }).join('');
+/** Si la nota va a tener foto cuando se publique, y si no, por qué (2/10, Hernán: "saber si la nota que uno revisa va a tener o no foto"). */
+function fotoDeLaNota(n) {
+  const entrada = E.banco?.[n.id];
+  if (E.trabajos[n.id]?.clase === 'foto' && E.trabajos[n.id].estado === 'listo') return { clase: 'ok', corto: '📷 foto sumada', largo: 'Ya se le sumó una foto: sale con ella cuando se publique.' };
+  if (entrada?.archivo || n.foto?.archivo) return { clase: 'ok', corto: '📷 Va con foto', largo: `Tiene foto${entrada?.credito ? ` (${entrada.credito})` : ''}: sale con ella cuando se publique.` };
+  const motivo = motivoDeFoto(n, entrada);
+  // Todavía no se le buscó: se busca al publicarla, con las fotos de sus fuentes.
+  if (motivo === 'sinProbar') return { clase: 'espera', corto: '📷 Foto: se busca al publicarla', largo: 'Todavía no se le buscó foto: se la busca cuando se publica, entre las fotos de sus fuentes. Si no hay una que sirva, queda sin foto y podés sumarle una desde la pestaña Fotos.' };
+  const m = MOTIVOS_DE_FOTO[motivo];
+  return { clase: m.firme ? 'mal' : 'espera', corto: '🚫 Sin foto', largo: `Hoy saldría sin foto. ${m.texto}` };
 }
 
-/** "Esperan": lo que espera a una persona y, abajo, lo que sale solo pero todavía no tiene cuerpo (2/10: una sola pestaña, y cada nota dice por qué no salió). */
+/** Por qué una nota todavía no salió, en una frase que se entienda, y qué falta para que salga. */
+function porQueNoSalio(n, tipo) {
+  if (tipo === 'sin-cuerpo') {
+    const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: n.maximo ?? E.intentosMaximos, conCuerpo: !!E.correcciones.notas?.[n.id]?.cuerpo });
+    const medios = n.fuentes?.length ?? 0;
+    return {
+      etiqueta: 'Falta el cuerpo', clase: e.clase === 'mal' ? 'mal' : 'espera',
+      porque: `La nota está bien para salir, pero la IA todavía no logró escribir un cuerpo que pase el verificador contra las fuentes${medios > 1 ? ` (la cuentan ${medios} medios)` : ''}. ${e.texto}`,
+      detalle: explicarMotivoSinCuerpo(n.motivo),
+      queHacer: e.clase === 'mal' ? 'Se agotaron los intentos: escribila con IA o a mano para que salga.' : 'La IA lo reintenta sola. Si es importante, tocá "Publicar" para que la escriba ahora.',
+    };
+  }
+  return {
+    etiqueta: 'Necesita tu OK', clase: 'espera',
+    porque: `No sale sola: ${motivoCorto(n.motivo)}.`,
+    detalle: '',
+    queHacer: 'Abrila: decidí si se publica, se escribe con IA o se descarta.',
+  };
+}
+
+/**
+ * "Esperan": una sola lista de todo lo que todavía no salió, sea porque necesita tu OK o porque le falta el cuerpo (2/10, Hernán: "tienen
+ * que ser solo uno… muchas veces no entiendo por qué no salen"). Cada nota dice, con todas las letras, por qué no salió, qué falta y si
+ * va a tener foto.
+ */
 function vistaEsperan(cuando) {
   const { sinDecidir, aprobadas, descartadas } = listasDeEsperan();
   const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo);
-  const conMotivo = (n) => `<span class="motivo">${esc(motivoCorto(n.motivo))}</span>`;
+  const items = [
+    ...sinDecidir.map((n) => ({ n, tipo: 'pendiente' })),
+    ...sinCuerpo.map((n) => ({ n, tipo: 'sin-cuerpo' })),
+  ].sort((a, b) => (Date.parse(b.n.fecha) || 0) - (Date.parse(a.n.fecha) || 0));
+  const tarjetaDe = ({ n, tipo }) => {
+    const p = porQueNoSalio(n, tipo);
+    const f = fotoDeLaNota(n);
+    return tarjeta(n, { tipo, extra: `<span class="est ${p.clase}"><strong>${esc(p.etiqueta)}</strong> · ${esc(p.porque)}</span><span class="est ${f.clase}">${esc(f.corto)}</span>` });
+  };
+  const aOk = items.filter((x) => x.tipo === 'pendiente').length;
   app.innerHTML = `
     <h1>Esperan</h1>
     ${queEs('esperan')}
-    <p class="estado">${esc(cuando)} ${E.pendientes ? '' : 'El detalle de cada nota todavía no llegó cifrado para este celular: llega en la próxima actualización de la web (cada media hora). Mientras tanto se ve la lista corta.'}</p>
-    <h2>Esperan a una persona (${sinDecidir.length})</h2>
-    <p class="estado">No salen solas: cada una dice por qué.</p>
-    ${sinDecidir.length ? sinDecidir.map((n) => tarjeta(n, { tipo: 'pendiente', extra: conMotivo(n) })).join('') : '<p class="vacio">No hay nada esperando.</p>'}
-    <h2>Salen solas, pero todavía no tienen cuerpo (${sinCuerpo.length})</h2>
-    ${queEs('sin-cuerpo')}
-    ${tarjetasSinCuerpo(sinCuerpo)}
+    <p class="estado">${esc(cuando)} <strong>${items.length}</strong> notas todavía no salieron: <strong>${aOk}</strong> necesitan tu OK y <strong>${items.length - aOk}</strong> esperan que la IA escriba su cuerpo. ${E.pendientes ? '' : 'El detalle de las que esperan tu OK todavía no llegó cifrado para este celular: llega en la próxima actualización (cada media hora).'}</p>
+    ${items.length ? items.map(tarjetaDe).join('') : '<p class="vacio">No hay nada esperando.</p>'}
     ${aprobadas.length ? `<h2>Aprobadas (salen en la próxima actualización)</h2>${aprobadas.map((n) => tarjeta(n, { tipo: 'pendiente' })).join('')}` : ''}
     ${descartadas.length ? `<h2>Descartadas (se pueden volver a traer)</h2>${descartadas.map((n) => tarjeta(n, { tipo: 'pendiente' })).join('')}` : ''}`;
 }
@@ -441,7 +472,9 @@ function vistaFotos() {
 }
 
 function vistaFoto(id) {
-  const item = resumenDeFotos().items.find((x) => x.nota.id === id);
+  const espera = buscar('pendiente', id) ?? buscar('sin-cuerpo', id);
+  const item = resumenDeFotos().items.find((x) => x.nota.id === id)
+    ?? (espera && !E.banco?.[id]?.archivo ? { nota: espera, motivo: motivoDeFoto(espera, E.banco?.[id]), entrada: E.banco?.[id] ?? null } : null);
   if (!item) { aviso('Esa nota ya tiene foto o ya no está en la lista.'); vistaLista(); return; }
   $('#pestanas').hidden = true;
   app.innerHTML = htmlDeUnaNotaSinFoto(item, { esc, chip, haceCuanto });
@@ -677,10 +710,10 @@ async function abrirFechas() {
   app.innerHTML = '<div class="girando"></div><p class="vacio">Trayendo las fechas…</p>';
   try {
     const c = E.cliente;
-    const [candidatas, feriados, elegidas] = await Promise.all([
-      leerSiHay(c, ARCHIVOS.candidatas, null), leerSiHay(c, ARCHIVOS.feriados, null), leerSiHay(c, ARCHIVOS.elegidas, { dias: {}, feriados: {} }),
+    const [candidatas, feriados, elegidas, piezas] = await Promise.all([
+      leerSiHay(c, ARCHIVOS.candidatas, null), leerSiHay(c, ARCHIVOS.feriados, null), leerSiHay(c, ARCHIVOS.elegidas, { dias: {}, feriados: {} }), leerSiHay(c, ARCHIVOS.piezas, null),
     ]);
-    E.fechas = { candidatas, feriados, elegidas: { dias: {}, feriados: {}, ...elegidas } };
+    E.fechas = { candidatas, feriados, piezas, elegidas: { dias: {}, feriados: {}, piezas: {}, ...elegidas } };
     vistaFechas();
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
@@ -694,12 +727,13 @@ function vistaFechas() {
   pestanas();
   $('#recargar').hidden = false;
   if (!E.fechas) { abrirFechas(); return; }
+  if (E.pieza) { vistaPieza(); return; }
   if (E.dia) { vistaDia(); return; }
   if (E.feriado) { vistaFeriado(); return; }
   const sub = (id, texto) => '<button type="button" data-accion="sub-fechas" data-sub="' + id + '" aria-current="' + (E.subfechas === id) + '">' + texto + '</button>';
   app.innerHTML = '<h1>Fechas</h1>' + queEs('fechas') +
-    '<div class="sub">' + sub('efemerides', 'Efemérides') + sub('feriados', 'Feriados') + '</div>' +
-    (E.subfechas === 'efemerides' ? listaDeDias() : listaDeFeriados());
+    '<div class="sub">' + sub('piezas', 'Mes armado') + sub('efemerides', 'Candidatas') + sub('feriados', 'Feriados') + '</div>' +
+    (E.subfechas === 'piezas' ? listaDePiezas() : E.subfechas === 'efemerides' ? listaDeDias() : listaDeFeriados());
 }
 
 function listaDeDias() {
@@ -779,6 +813,88 @@ function vistaFeriado() {
     '<div class="botones"><button type="button" class="boton principal" data-accion="aprobar-feriado">Aprobar el enfoque</button><button type="button" class="boton" data-accion="cambiar-feriado">Pedir cambios</button></div>';
 }
 
+// ------------------------------------------------- el mes armado ("Un día como hoy")
+
+/** Los días armados (web/data/efemerides-piezas.json) desde hoy, por semana, con su estado: lo que realmente va a salir a las 9:00. */
+function listaDePiezas() {
+  const piezas = E.fechas.piezas?.dias ?? {};
+  const el = E.fechas.elegidas;
+  const hoy = hoyEnBalcarce();
+  const dias = Object.keys(piezas).filter((d) => d >= hoy).sort();
+  if (!dias.length) return '<p class="vacio">No hay días armados desde hoy. Se arman de a una o dos semanas.</p>';
+  const estados = Object.fromEntries(dias.map((d) => [d, estadoDeDiaArmado(piezas[d], el.piezas?.[d])]));
+  const salen = dias.filter((d) => estados[d].sale).length;
+  const esperan = dias.filter((d) => estados[d].clase === 'espera').length;
+  // Los huecos: días sin entrada entre hoy y el último armado (ese día no sale nada).
+  const huecos = [];
+  for (let d = hoy; d <= dias[dias.length - 1]; d = new Date(Date.parse(`${d}T12:00:00Z`) + 864e5).toISOString().slice(0, 10)) if (!piezas[d]) huecos.push(d);
+  const bloques = semanas(dias).map((s) => `<h2>Semana del ${esc(etiquetaCorta(s.lunes))}</h2>${s.dias.map((d) => {
+    const e = estados[d];
+    const p = piezas[d];
+    return `<button type="button" class="tarjeta" data-accion="abrir-pieza" data-dia="${esc(d)}"><div><strong>${esc(etiquetaCorta(d))}</strong> <span class="est ${e.clase}">${esc(e.texto)}</span></div>
+      <div class="titulo">${esc(p.principal?.titulo ?? '')}</div>
+      <div class="meta">${esc((p.ademas ?? []).length)} más: ${esc((p.ademas ?? []).map((x) => x.anio ?? '').filter(Boolean).join(', '))}${decisionVencida(p, el.piezas?.[d]) ? ' · se rearmó después de tu decisión' : ''}</div></button>`;
+  }).join('')}`).join('');
+  return `<p class="estado"><strong>${salen}</strong> de ${dias.length} días salen como están${esperan ? `; <strong>${esperan}</strong> esperan tu visto bueno` : ''}. Tocá un día para ver todo lo que cuenta la pieza y aprobarlo, sacarlo o pedir cambios.</p>
+    ${huecos.length ? `<div class="problemas"><strong>Sin armar (ese día no sale nada):</strong> ${huecos.map((d) => esc(etiquetaCorta(d))).join(', ')}.</div>` : ''}
+    ${bloques}`;
+}
+
+/** Un día armado, entero: lo que cuenta la locutora, los datos y las decisiones. */
+function vistaPieza() {
+  const dia = E.pieza;
+  const d = E.fechas.piezas?.dias?.[dia];
+  if (!d) { E.pieza = null; vistaFechas(); return; }
+  const decision = E.fechas.elegidas.piezas?.[dia];
+  const e = estadoDeDiaArmado(d, decision);
+  const yaPaso = dia < hoyEnBalcarce();
+  const verificar = (d.principal?.verificar ?? []).filter(Boolean);
+  const ademas = (d.ademas ?? []).map((x) => `<li>${x.anio ? `<strong>${esc(x.anio)}</strong> · ` : ''}${esc(x.texto)}</li>`).join('');
+  app.innerHTML = `<button type="button" class="boton" data-accion="volver-fechas">← El mes</button>
+    <h1>${esc(etiquetaLarga(dia))}</h1>
+    <p class="est ${e.clase}">${esc(e.texto)}</p>
+    ${decision && !decisionVencida(d, decision) ? `<p class="estado">${esc(decision.por ?? '')} · ${esc(decision.estado === 'aprobada' ? 'lo aprobó' : decision.estado === 'sacada' ? 'lo sacó' : 'pidió cambios')}${decision.comentario ? `: ${esc(decision.comentario)}` : ''}</p>` : ''}
+    ${decisionVencida(d, decision) ? '<p class="problemas">Este día se rearmó después de tu decisión: la anterior ya no vale. Mirá lo nuevo y decidí de nuevo.</p>' : ''}
+    <div class="caja"><h3>La principal</h3>
+      <p><strong>${d.principal.anio ? `${esc(d.principal.anio)} · ` : ''}${esc(d.principal.titulo)}</strong></p>
+      <p>${esc(d.principal.cuerpo ?? '')}</p>
+      ${verificar.length ? `<p class="meta">Datos que cuenta:</p><ul class="lista-simple">${verificar.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>
+    <h2>Y además, un día como hoy</h2>
+    <ul class="lista-simple">${ademas}</ul>
+    <h2>Lo que dice la locutora (a las 9:00)</h2>
+    <div class="texto-nota"><p class="cuerpo">${esc(d.guion)}</p></div>
+    ${d.revision ? `<p class="ayuda">${esc(d.revision)}</p>` : ''}
+    ${yaPaso ? '<p class="estado">Este día ya pasó.</p>' : `<div class="botones">
+      <button type="button" class="boton principal" data-accion="aprobar-pieza">Aprobar el día</button>
+      <button type="button" class="boton" data-accion="cambiar-pieza">Pedir cambios</button>
+      <button type="button" class="boton peligro" data-accion="sacar-pieza">Sacar el día</button>
+      <button type="button" class="boton" data-accion="armar-con-candidatas" data-dia="${esc(dia)}">Elegir otras candidatas</button></div>
+      <p class="ayuda">"Aprobar" lo deja salir ese día a las 9:00. "Pedir cambios" y "Elegir otras candidatas" lo frenan hasta que se rearme (se lo contás a Claude y te lo deja listo). "Sacar" lo descarta: ese día no sale nada.</p>`}`;
+  window.scrollTo(0, 0);
+}
+
+/** Aprobar, sacar o pedir cambios de un día armado: queda en efemerides-elegidas.json (piezas) y el 9:00 lo respeta (redes/efemeride.mjs). */
+async function decidirPieza(accion) {
+  const dia = E.pieza;
+  const d = E.fechas.piezas?.dias?.[dia];
+  if (!d) return;
+  const estado = { 'aprobar-pieza': 'aprobada', 'sacar-pieza': 'sacada', 'cambiar-pieza': 'cambiar' }[accion];
+  let comentario = '';
+  if (accion === 'aprobar-pieza') {
+    if (!(await preguntar({ titulo: '¿Aprobar el día?', texto: 'Sale ese día a las 9:00 con la locutora, tal cual está.', si: 'Sí, aprobarlo' })).ok) return;
+  } else {
+    const r = await preguntar(accion === 'sacar-pieza'
+      ? { titulo: '¿Sacar el día?', texto: 'Ese día no sale nada. Queda anotado el motivo.', si: 'Sí, sacarlo', conMotivo: '¿Por qué?' }
+      : { titulo: 'Pedir cambios', texto: 'Contame qué cambiarías. El día no sale hasta que se rearme.', si: 'Guardar', conMotivo: '¿Qué cambiarías?' });
+    if (!r.ok) return;
+    comentario = r.texto;
+  }
+  guardarFechas((j) => conDecisionDePieza(j, dia, { estado, comentario, huella: huellaDelDia(d), por: E.nombre }), `decide el día ${dia} de Un día como hoy`, () => {
+    E.pieza = null; vistaFechas();
+    aviso({ aprobada: 'Aprobado: sale ese día a las 9:00.', sacada: 'Sacado: ese día no sale nada.', cambiar: 'Anotado: ese día no sale hasta que lo rearmemos.' }[estado]);
+  });
+}
+
 async function guardarFechas(cambiarJson, mensaje, listo) {
   try {
     app.innerHTML = '<div class="girando"></div><p class="vacio">Guardando en GitHub…</p>';
@@ -797,7 +913,7 @@ async function guardarFechas(cambiarJson, mensaje, listo) {
 const MENU_MAS = [
   ['pistas', 'Pistas', '✎', 'Pegá un dato o un tuit y mirá si lo cubrieron los medios.'],
   ['revision', 'Revisión', '✓', 'Lo que la IA marcó en las notas ya publicadas (ortografía, texto roto, temas sensibles).'],
-  ['fechas', 'Fechas', '▦', 'Un día como hoy y los feriados: armarlos con anticipación.'],
+  ['fechas', 'Fechas', '▦', 'Un día como hoy: el mes armado para aprobar, rearmar o sacar; y los feriados.'],
   ['numeros', 'Números', '▮', 'Visitas, producción y crecimiento de las redes.'],
 ];
 const EN_MAS = new Set(MENU_MAS.map(([id]) => id));
@@ -868,6 +984,13 @@ function listaDeProblemas(b, motivo = null) {
   return `<div class="problemas"><strong>Revisá esto antes de publicar</strong> (el verificador lo marcó contra las fuentes):<ul>${problemas.map((p) => `<li>${esc(p)}</li>`).join('')}</ul></div>`;
 }
 
+/** La caja "Foto" de una nota que espera: si va a tener foto cuando se publique y, si no, por qué y cómo arreglarlo. */
+function cajaDeFoto(n) {
+  const f = fotoDeLaNota(n);
+  const puede = f.clase !== 'ok' && !MOTIVOS_DE_FOTO[motivoDeFoto(n, E.banco?.[n.id])]?.firme;
+  return `<div class="caja"><strong>Foto:</strong> <span class="est ${f.clase}">${esc(f.largo)}</span>${puede ? `<button type="button" class="boton ancho" data-accion="buscar-foto" data-id="${esc(n.id)}">Buscarle una foto</button>` : ''}</div>`;
+}
+
 function vistaNota(tipo, id) {
   const n = buscar(tipo, id);
   if (!n) { aviso('Esa nota ya no está en la lista.'); vistaLista(); return; }
@@ -880,7 +1003,8 @@ function vistaNota(tipo, id) {
   if (tipo === 'pendiente') {
     const conDetalle = !!(n.resumen || n.fuentes?.length);
     cuerpo = `
-      <div class="caja aviso-motivo"><strong>Por qué espera:</strong> ${esc(explicarMotivo(n.motivo))}</div>
+      <div class="caja aviso-motivo"><strong>Por qué no salió:</strong> ${esc(explicarMotivo(n.motivo))}</div>
+      ${cajaDeFoto(n)}
       ${n.ficha ? `<div class="caja"><strong>Lo que anotó la IA al leerla:</strong> ${esc(explicarFicha(n.ficha))}</div>` : ''}
       ${!conDetalle ? '<p class="problemas">El detalle de esta nota llega cifrado en la próxima actualización de la web. Igual se le puede pedir a la IA que la escriba.</p>' : ''}
       ${n.resumen ? `<h2>Lo que dice la fuente principal</h2><div class="texto-nota"><p>${esc(n.resumen)}</p></div>` : ''}
@@ -900,8 +1024,9 @@ function vistaNota(tipo, id) {
     const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: n.maximo ?? E.intentosMaximos, conCuerpo: !!c?.cuerpo });
     const porQue = !c?.cuerpo ? explicarMotivoSinCuerpo(n.motivo) : '';
     extra = c?.cuerpo ? '' : cajaDeBorrador('sin-cuerpo', id);
-    cuerpo = `<p class="est ${e.clase}">${esc(e.texto)}</p>
+    cuerpo = `<div class="caja aviso-motivo"><strong>Por qué no salió:</strong> la nota está bien para salir, pero la IA todavía no logró escribir un cuerpo que pase el verificador contra las fuentes. <span class="est ${e.clase}">${esc(e.texto)}</span></div>
       ${n.fuentes?.length > 1 ? `<p class="estado">La cuentan ${esc(n.fuentes.length)} medios.</p>` : ''}${porQue ? `<p class="problemas">${esc(porQue)}</p>` : ''}
+      ${c?.cuerpo ? '' : cajaDeFoto(n)}
       <h2>Lo que dice la fuente</h2><div class="texto-nota"><p>${esc(n.copete ?? '')}</p></div>
       ${c?.cuerpo ? `<h2>El cuerpo que se escribió</h2>${textoDeLaNota({ copete: c.copete ?? n.copete, cuerpo: c.cuerpo })}` : ''}
       ${fuentesConResumen(n)}`;
@@ -1141,7 +1266,7 @@ document.addEventListener('click', async (ev) => {
   const el = ev.target.closest('[data-pestana],[data-abrir],[data-accion]');
   if (!el || el.closest('dialog')) return;
   const { id, tipo } = el.dataset;
-  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.borrador = null; E.restaurar = null; vistaLista(); window.scrollTo(0, 0); return; }
+  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.pieza = null; E.borrador = null; E.restaurar = null; vistaLista(); window.scrollTo(0, 0); return; }
   if (el.dataset.abrir === 'foto') { E.scrollLista = window.scrollY; vistaFoto(id); return; }
   if (el.dataset.abrir) { E.scrollLista = window.scrollY; vistaNota(el.dataset.abrir, id); return; }
   const accion = el.dataset.accion;
@@ -1151,16 +1276,26 @@ document.addEventListener('click', async (ev) => {
   else if (accion === 'investigar-pista') investigarPista();
   else if (accion === 'rango-numeros') { E.rangoNumeros = Number(el.dataset.rango); vistaNumeros(); }
   else if (accion === 'sub-fechas') { E.subfechas = el.dataset.sub; vistaFechas(); }
+  else if (accion === 'abrir-pieza') { E.pieza = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
+  else if (accion === 'armar-con-candidatas') { E.pieza = null; E.subfechas = 'efemerides'; E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }
+  else if (accion === 'aprobar-pieza' || accion === 'sacar-pieza' || accion === 'cambiar-pieza') decidirPieza(accion);
+  else if (accion === 'buscar-foto') { E.scrollLista = E.scrollLista ?? window.scrollY; vistaFoto(id); }
   else if (accion === 'abrir-dia') { E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'abrir-feriado') { E.feriado = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
-  else if (accion === 'volver-fechas') { E.dia = null; E.feriado = null; E.borrador = null; if (!E.fechas) E.fechas = null; vistaFechas(); window.scrollTo(0, 0); }
+  else if (accion === 'volver-fechas') { E.dia = null; E.feriado = null; E.pieza = null; E.borrador = null; if (!E.fechas) E.fechas = null; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'filtro-estilo') { E.filtroEstilo = el.dataset.estilo || null; vistaDia(); }
   else if (accion === 'marcar') { E.borrador = marcarEn(E.borrador, id, el.dataset.rol); const y = window.scrollY; vistaDia(); window.scrollTo(0, y); }
   else if (accion === 'guardar-dia') {
     const dia = E.dia;
     const cand = E.fechas.candidatas?.dias?.[dia]?.candidatas ?? [];
     const eleccion = eleccionDeDia(E.borrador, cand, por);
-    guardarFechas((j) => conEleccionDeDia(j, dia, eleccion), 'arma ' + dia + ' de Un día como hoy', () => {
+    // Si eligió otra principal que la del día armado, ese día queda con cambios pedidos: no sale hasta rearmarlo.
+    const armado = E.fechas.piezas?.dias?.[dia];
+    const cambia = !!armado && !!eleccion.principal && eleccion.principal !== armado.principal?.id;
+    guardarFechas((j) => {
+      const x = conEleccionDeDia(j, dia, eleccion);
+      return cambia ? conDecisionDePieza(x, dia, { estado: 'cambiar', comentario: 'Eligió otra principal en las candidatas', huella: huellaDelDia(armado), por }) : x;
+    }, 'arma ' + dia + ' de Un día como hoy', () => {
       E.dia = null; E.borrador = null; vistaFechas(); aviso(eleccion.principal ? 'Guardado. Ese día ya tiene su principal.' : 'Guardado, pero todavía falta elegir la principal.');
     });
   } else if (accion === 'aprobar-feriado' || accion === 'cambiar-feriado') {

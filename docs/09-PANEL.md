@@ -574,8 +574,11 @@ que sea consistente para el uso diario". Qué cambió (`web/public/panel/app.js`
 - **Cinco pestañas.** La barra tenía nueve y se partía en dos filas (la grilla era de siete). Quedan las de todos los días: **Esperan**,
   **Publicadas**, **Fotos**, **Redes** y **Más**. Pistas, Revisión, Fechas y Números son tarjetas en Más (`MENU_MAS`), cada una con un
   "← Más" para volver; Más muestra ⚠ si la Revisión tiene algo grave.
-- **Esperan es una sola lista con dos partes**: "Esperan a una persona" y "Salen solas, pero todavía no tienen cuerpo". Cada nota sigue
-  diciendo por qué no salió (el motivo corto, o cuántas veces lo intentó la IA y por qué falló).
+- **Esperan es UNA sola lista** (Hernán: "tienen que ser solo uno… muchas veces no entiendo por qué no salen"): lo que necesita tu OK y
+  lo que sale solo pero espera su cuerpo, juntos y lo más nuevo primero. Cada nota dice con todas las letras **por qué no salió**
+  ("Necesita tu OK · No sale sola: Acusa a alguien" o "Falta el cuerpo · la IA todavía no logró escribir uno que pase el verificador, lo
+  intentó 1 de 3 veces"), **qué falta** y **si va a tener foto** (`fotoDeLaNota`: "Va con foto", "se busca al publicarla" o "Sin foto" con el
+  motivo, y desde la nota un botón "Buscarle una foto").
 - **Publicadas muestra sólo las últimas 24 horas**, lo más nuevo primero (`HORAS_EN_PUBLICADAS`). "Ver también las anteriores" suma el
   resto de la portada (36 horas); "Cargar el archivo" trae hasta 180 días; el buscador mira todo lo cargado.
 - **La IA escribe en segundo plano.** Pedirle una nota ya no traba la pantalla con una ruedita: vuelve a la lista y la nota queda marcada
@@ -591,3 +594,8 @@ que sea consistente para el uso diario". Qué cambió (`web/public/panel/app.js`
   12 MB), la achica como las del banco y la anota en `web/data/fotos-manuales.json`. `generar-datos.mjs` suma ese archivo al banco
   (manda sobre el banco, y sólo si la foto está en disco), así "Actualizar la web" nunca pisa lo que sumó una persona. Sale en la web en la
   próxima actualización. Pruebas: `pruebas/fotos-panel.test.mjs`.
+- **Fechas → Mes armado** (2/10, Hernán: "¿dónde vemos todo el mes armado en el panel, para rearmar, sumar o descartar?"): lista, por semana, los
+  días ya armados de "Un día como hoy" (`web/data/efemerides-piezas.json`) tal como van a salir a las 9:00, con su estado (sale como está,
+  sin revisar, aprobado, sacado, con cambios pedidos), los huecos sin armar, y cada día entero (principal, además, lo que dice la
+  locutora). Se **aprueba**, se **saca** o se **piden cambios** (con motivo); "Elegir otras candidatas" abre las candidatas del día y frena el
+  día hasta rearmarlo. Las decisiones valen sólo sobre lo aprobado (huella): regla 97. Pruebas: `efemerides-aprobacion.test.mjs`.

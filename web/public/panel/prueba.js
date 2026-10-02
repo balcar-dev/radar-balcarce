@@ -50,6 +50,7 @@ const PAPELERA = [
 
 export function clienteDePrueba() {
   const hoy = hoyEnBalcarce();
+  const diaMas = (n) => new Date(Date.parse(`${hoy}T12:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
   const archivos = {
     'web/data/portada.json': {
       generado: hace(12),
@@ -93,7 +94,14 @@ export function clienteDePrueba() {
         { fecha: '2026-12-08', nombre: 'Día de la Inmaculada Concepción de María', tipo: 'inamovible', estado: 'propuesta', enfoque: 'Sobrio y corto: el dogma de 1854.', datos: [], citas: [], revisaUnaPersona: false },
       ],
     },
-    'web/data/efemerides-elegidas.json': { dias: {}, feriados: {} },
+    'web/data/efemerides-elegidas.json': { dias: {}, feriados: {}, piezas: {} },
+    'web/data/efemerides-piezas.json': {
+      generado: hoy, dias: {
+        [diaMas(1)]: { voz: 'locutora', principal: { id: 'c1', anio: 1901, titulo: 'Nace el poeta Carlos Mastronardi', cuerpo: 'Poeta y ensayista argentino.', verificar: [] }, ademas: [{ id: 'c2', anio: 1952, texto: 'Se patenta el código de barras' }], guion: 'Buen día, Balcarce. Un día como hoy, en 1901, nació el poeta Carlos Mastronardi. Y además, un día como hoy: en 1952 se patentó el código de barras. Un día como hoy, en Radar Balcarce.' },
+        [diaMas(2)]: { sale: false, revision: 'sin revisar', voz: 'locutora', principal: { id: 'c5', anio: 1876, titulo: 'Fundación del pueblo de Balcarce', cuerpo: 'Se fundó San José de Balcarce.', verificar: [] }, ademas: [{ id: 'c6', anio: 1949, texto: 'Balcarce es declarada ciudad' }], guion: 'Buen día, Balcarce. Un día como hoy se fundó el pueblo. Un día como hoy, en Radar Balcarce.' },
+        [diaMas(4)]: { sale: false, voz: 'locutora', principal: { id: 'c9', anio: 1900, titulo: 'Otro día', cuerpo: 'Texto.', verificar: [] }, ademas: [{ id: 'c8', anio: 1950, texto: 'Algo más' }], guion: 'Guion corto.' },
+      },
+    },
     'web/data/celular-llaves.json': { llaves: [] },
     'web/data/celular-borradores.json': { version: 1, borradores: {} },
     'web/data/archivo.json': { notas: [] },

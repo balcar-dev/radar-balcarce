@@ -31,6 +31,7 @@ export const ARCHIVOS = {
   produccion: 'web/data/notas-por-dia.json',
   auditoria: 'web/data/auditoria-ia.json',
   banco: 'web/data/banco-fotos.json',
+  piezas: 'web/data/efemerides-piezas.json',
 };
 
 export class ErrorDeGitHub extends Error {
@@ -70,7 +71,7 @@ export function formatear(ruta, json) {
   if (ruta === ARCHIVOS.correcciones || ruta === ARCHIVOS.retiradas) return comoRenglones(json, ['notas']);
   if (ruta === ARCHIVOS.decisiones) return comoRenglones(json, ['notas', 'redes']);
   // Un día o un feriado por renglón: el historial dice qué se decidió cuándo.
-  if (ruta === ARCHIVOS.elegidas) return comoRenglones(json, ['dias', 'feriados']);
+  if (ruta === ARCHIVOS.elegidas) return comoRenglones(json, ['dias', 'feriados', 'piezas']);
   return `${JSON.stringify(json, null, 1)}\n`;
 }
 
@@ -207,14 +208,21 @@ export function conCorreccion(json, id, campos, { motivo, por, deIA = false }) {
 
 /** Lo que se eligió para un día de "Un día como hoy" (panel/fechas.js arma `eleccion`). */
 export function conEleccionDeDia(json, dia, eleccion) {
-  const j = { dias: {}, feriados: {}, ...json };
+  const j = { dias: {}, feriados: {}, piezas: {}, ...json };
   j.dias = { ...j.dias, [dia]: eleccion };
+  return j;
+}
+
+/** La decisión sobre un día ya armado de "Un día como hoy" (2/10): aprobada, sacada, o con cambios pedidos. `huella` dice sobre qué armado vale. */
+export function conDecisionDePieza(json, dia, { estado, comentario = '', huella, por }) {
+  const j = { dias: {}, feriados: {}, piezas: {}, ...json };
+  j.piezas = { ...j.piezas, [dia]: { estado, ...(comentario ? { comentario } : {}), huella, por, cuando: hoyISO() } };
   return j;
 }
 
 /** La decisión sobre el enfoque de un feriado: aprobado, o con cambios pedidos. */
 export function conDecisionDeFeriado(json, fecha, { estado, comentario = '', por }) {
-  const j = { dias: {}, feriados: {}, ...json };
+  const j = { dias: {}, feriados: {}, piezas: {}, ...json };
   j.feriados = { ...j.feriados, [fecha]: { estado, ...(comentario ? { comentario } : {}), por, cuando: hoyISO() } };
   return j;
 }

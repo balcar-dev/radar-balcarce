@@ -32,7 +32,7 @@ import {
   verificar, verificarExtras, resumirProblemas, depurarCuerpo, arreglarEscritura,
 } from '../ingesta/verificar.mjs';
 import { guionNoticia } from '../redes/guiones.mjs';
-import { semaforoDelTexto, laMuerteFrena } from '../ingesta/ingesta.mjs';
+import { semaforoDelTexto, laMuerteFrena, esDeAca, aflojaParaLoDeAca, cuantosMedios } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { ZONA } from '../ingesta/zona.mjs';
 import { traerTexto } from '../ingesta/articulo.mjs';
@@ -514,8 +514,14 @@ export function semaforoDeLaReescritura(nota, escrito = null) {
   ];
   let peor = null;
   const conMuerte = laMuerteFrena(nota ?? {});
+  // Lo de acá espera menos (2/10): lo mismo que en el semáforo de la ingesta.
+  const corroboradaPorOtros = !!nota?.oficial || cuantosMedios(nota) >= 2;
+  const deAca = aflojaParaLoDeAca(nota ?? {}, nota?.seccion, corroboradaPorOtros);
+  const corroborada = esDeAca(nota ?? {}) && corroboradaPorOtros;
   for (const [donde, texto, soloMenores] of partes) {
-    const s = semaforoDelTexto(texto, { soloMenores, conMuerte });
+    const s = semaforoDelTexto(texto, {
+      soloMenores, conMuerte, deAca, corroborada,
+    });
     if (!s) continue;
     const conDonde = { color: s.color, motivo: `${s.motivo}, en ${donde}` };
     if (s.color === 'rojo') return conDonde;

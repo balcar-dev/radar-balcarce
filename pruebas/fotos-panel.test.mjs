@@ -164,13 +164,15 @@ test('el panel tiene cinco pestañas de todos los días y lo demás vive en "Má
   assert.match(app, /EN_MAS\.has\(E\.pestana\)/);
 });
 
-test('Esperan trae las dos listas (a una persona y sin cuerpo), cada una con su porqué', () => {
+test('Esperan es UNA sola lista: cada nota dice por qué no salió, qué falta y si va a tener foto', () => {
   const app = leer('web/public/panel/app.js');
-  assert.match(app, /Esperan a una persona \(\$\{sinDecidir\.length\}\)/);
-  assert.match(app, /Salen solas, pero todavía no tienen cuerpo/);
-  assert.match(app, /if \(E\.pestana === 'sin-cuerpo'\) E\.pestana = 'esperan';/);
-  assert.match(app, /explicarMotivoSinCuerpo\(n\.motivo\)/);
-  assert.match(app, /motivoCorto\(n\.motivo\)/);
+  assert.ok(app.includes("...sinDecidir.map((n) => ({ n, tipo: 'pendiente' }))"));
+  assert.ok(app.includes("...sinCuerpo.map((n) => ({ n, tipo: 'sin-cuerpo' }))"), 'una sola lista con las dos');
+  assert.ok(!app.includes('Esperan a una persona (') && !app.includes('Salen solas, pero todavía no tienen cuerpo'), 'ya no hay dos secciones');
+  assert.ok(app.includes("if (E.pestana === 'sin-cuerpo') E.pestana = 'esperan';"));
+  for (const texto of ['Necesita tu OK', 'Falta el cuerpo', 'explicarMotivoSinCuerpo(n.motivo)', 'motivoCorto(n.motivo)', 'Hoy saldría sin foto']) assert.ok(app.includes(texto), texto);
+  assert.ok(app.includes('fotoDeLaNota(n)'), 'la tarjeta dice si va a tener foto');
+  assert.ok(app.includes('cajaDeFoto(n)'), 'y la nota que se revisa también');
 });
 
 test('Publicadas muestra las últimas 24 horas, lo más nuevo primero, y el buscador mira todo', () => {

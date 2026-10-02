@@ -17,6 +17,7 @@ import path from 'node:path';
 import { diaAR } from '../ingesta/zona.mjs';
 
 const RUTA = path.join(import.meta.dirname, '..', 'web', 'data', 'efemerides-piezas.json');
+const RUTA_ELEGIDAS = path.join(import.meta.dirname, '..', 'web', 'data', 'efemerides-elegidas.json');
 export const HORA_EFEMERIDE = '09:00';
 
 /** Lo preparado (el archivo entero) o null. */
@@ -24,23 +25,43 @@ export function leerEfemerides(ruta = RUTA) {
   try { return JSON.parse(fs.readFileSync(ruta, 'utf8')); } catch { return null; }
 }
 
-/** Una entrada tiene lo mínimo para salir: título, guion y las tres de "Además". */
-export function entradaCompleta(d) {
-  return Boolean(d?.guion && d?.principal?.titulo && Array.isArray(d?.ademas) && d.ademas.length > 0 && d.sale !== false);
+/** Lo que decidieron Hernán y Andrés sobre cada día armado, desde la pestaña Fechas del panel (`piezas` de efemerides-elegidas.json). */
+export function leerDecisiones(ruta = RUTA_ELEGIDAS) {
+  try { return JSON.parse(fs.readFileSync(ruta, 'utf8'))?.piezas ?? {}; } catch { return {}; }
+}
+
+/**
+ * Qué se armó, para que una decisión valga sólo sobre eso (2/10): si después se rearma el día (otra principal, otro guion), la
+ * aprobación vieja ya no cuenta y vuelve a esperar. El panel calcula lo mismo (web/public/panel/fechas.js, huellaDelDia).
+ */
+export const huellaDelDia = (d) => `${d?.principal?.id ?? ''}|${(d?.ademas ?? []).map((x) => x?.id ?? '').join('+')}|${String(d?.guion ?? '').length}`;
+
+/**
+ * Una entrada tiene lo mínimo para salir: título, guion y las de "Además"; y no está sacada. Si una persona la aprobó en el panel
+ * (y lo aprobado es lo que hay), sale aunque diga `"sale": false`; si la sacó o pidió cambios, no sale.
+ */
+export function entradaCompleta(d, decision = null) {
+  const completa = Boolean(d?.guion && d?.principal?.titulo && Array.isArray(d?.ademas) && d.ademas.length > 0);
+  if (!completa) return false;
+  const vale = decision && decision.huella === huellaDelDia(d) ? decision.estado : null;
+  if (vale === 'aprobada') return true;
+  if (vale === 'sacada' || vale === 'cambiar') return false;
+  return d.sale !== false;
 }
 
 /**
  * La efeméride de ese día, o null si no está preparada (o se sacó con `sale: false`).
  * @returns {{ fecha: string, voz: string, principal: object, ademas: object[], guion: string } | null}
  */
-export function efemerideDelDia(cuando = new Date(), { datos } = {}) {
+export function efemerideDelDia(cuando = new Date(), { datos, decisiones } = {}) {
   const fecha = diaAR(cuando);
   const d = (datos ?? leerEfemerides())?.dias?.[fecha];
-  return entradaCompleta(d) ? { fecha, voz: 'locutora', ...d } : null;
+  return entradaCompleta(d, (decisiones ?? leerDecisiones())[fecha]) ? { fecha, voz: 'locutora', ...d } : null;
 }
 
 /** Los días que tienen su efeméride lista, de la más próxima a la más lejana (para ver hasta cuándo alcanza). */
-export function diasPreparados({ datos } = {}) {
+export function diasPreparados({ datos, decisiones } = {}) {
   const dias = (datos ?? leerEfemerides())?.dias ?? {};
-  return Object.keys(dias).filter((f) => entradaCompleta(dias[f])).sort();
+  const d = decisiones ?? leerDecisiones();
+  return Object.keys(dias).filter((f) => entradaCompleta(dias[f], d[f])).sort();
 }

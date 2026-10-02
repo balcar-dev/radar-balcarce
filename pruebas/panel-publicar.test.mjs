@@ -38,9 +38,9 @@ test('el borrador de la IA no se pierde al volver atrás', () => {
   assert.match(app, /No se perdió/);
 });
 
-test('Sin cuerpo muestra primero lo que cuentan más medios y por qué falló', () => {
+test('Las notas sin cuerpo dicen cuántos medios las cuentan y por qué falló (en la lista única de Esperan)', () => {
   const app = leer('web/public/panel/app.js');
-  assert.match(app, /sort\(\(a, b\) => \(b\.fuentes\?\.length \?\? 0\) - \(a\.fuentes\?\.length \?\? 0\)\)/);
-  assert.match(app, /medios la cuentan/);
+  assert.ok(app.includes('(la cuentan ${medios} medios)'));
+  assert.ok(app.includes('explicarMotivoSinCuerpo(n.motivo)'));
   assert.match(leer('web/scripts/generar-datos.mjs'), /motivo: String\(intentos\[n\.id\]\?\.motivo/);
 });

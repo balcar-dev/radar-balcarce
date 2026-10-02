@@ -13,7 +13,9 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { REGLAS_SEMAFORO, MOTIVO_COTIZACION } from '../ingesta/fuentes.mjs';
+import {
+  REGLAS_SEMAFORO, MOTIVO_COTIZACION, AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA, AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN,
+} from '../ingesta/fuentes.mjs';
 import { paraPruebas, semaforoDelTexto } from '../ingesta/ingesta.mjs';
 
 const { semaforo, normalizar } = paraPruebas;
@@ -33,11 +35,48 @@ test('cada término de la lista roja, en un titular, da rojo', () => {
   }
 });
 
-test('cada término de la lista amarilla, en un titular, da amarillo', () => {
+test('cada término de la lista amarilla, en un titular, da amarillo (salvo lo que lo de acá suelta, más abajo)', () => {
   for (const termino of REGLAS_SEMAFORO.amarillo) {
+    if (AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA.includes(termino) || AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN.includes(termino)) continue;
     const titulo = `Balcarce: novedades sobre ${termino} en el barrio`;
     assert.equal(colorDe(titulo), 'amarillo', `"${termino}" no pidió ojo humano: ${titulo}`);
   }
+});
+
+// --------------------------------------- lo de Balcarce espera menos (2/10)
+
+const deAca = (titulo, extra = {}) => semaforo({
+  titulo, cuerpo: '', categorias: [], peso: 20, alcance: 'local', local: true, fecha: new Date(), imagen: null, ...extra,
+}, extra.seccion ?? 'Balcarce');
+
+test('"denuncia" suelta en lo de acá ya no espera; en Política sólo si la confirman', () => {
+  for (const t of AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA) {
+    assert.equal(deAca(`Balcarce: novedades sobre ${t} del servicio de agua`).color, 'verde', t);
+    // Un solo medio en Política: sigue esperando.
+    assert.equal(deAca(`Balcarce: novedades sobre ${t} al intendente`, { seccion: 'Política' }).color, 'amarillo', t);
+    // La confirma una fuente oficial o dos medios: sale.
+    assert.equal(deAca(`Balcarce: novedades sobre ${t} al intendente`, { seccion: 'Política', oficial: true }).color, 'verde', t);
+    assert.equal(deAca(`Balcarce: novedades sobre ${t} al intendente`, { seccion: 'Política', medios: ['A', 'B'] }).color, 'verde', t);
+  }
+});
+
+test('"detenido", "acusado" e "imputado" en lo de acá salen sólo con fuente oficial o dos medios', () => {
+  for (const t of AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN) {
+    const titulo = `Balcarce: hay un ${t} por el robo de una moto`;
+    assert.equal(deAca(titulo, { seccion: 'Policiales' }).color, 'amarillo', `un solo medio: ${t}`);
+    assert.equal(deAca(titulo, { seccion: 'Policiales', oficial: true }).color, 'verde', `oficial: ${t}`);
+    assert.equal(deAca(titulo, { seccion: 'Policiales', medios: ['A', 'B'] }).color, 'verde', `dos medios: ${t}`);
+    // Lo de afuera no se afloja nunca por esto.
+    assert.equal(semaforo({ titulo, cuerpo: '', categorias: [], peso: 20, alcance: 'pais', local: false, fecha: new Date(), imagen: null, oficial: true, medios: ['A', 'B'] }, 'Policiales').color, 'amarillo', `de afuera: ${t}`);
+  }
+});
+
+test('lo grave sigue frenando aunque sea de acá y esté confirmado: víctimas, muertes, chicos y lo rojo', () => {
+  for (const t of ['víctima', 'homicidio', 'cadáver', 'baleado', 'adolescente', 'niño', 'menores de edad', 'abusado']) {
+    assert.equal(deAca(`Balcarce: hay un ${t} en el barrio`, { seccion: 'Policiales', oficial: true, medios: ['A', 'B'] }).color, 'amarillo', t);
+  }
+  assert.equal(deAca('Balcarce: una denuncia por grooming', { oficial: true, medios: ['A', 'B'] }).color, 'rojo');
+  assert.equal(deAca('Falleció un vecino en un accidente', { seccion: 'Policiales', oficial: true }).color, 'amarillo');
 });
 
 test('también frena si el término está en el resumen y no en el título', () => {
