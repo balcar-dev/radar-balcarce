@@ -33,7 +33,7 @@ export async function correrAuditoria({
   const notas = portada.notas ?? [];
   const revisadas = estado.revisadas ?? {};
   const paraLeer = notasParaAuditar(notas, { revisadas, ahora: ahora.getTime() });
-  const { hallazgos, leidas, fallas } = paraLeer.length ? await auditarNotas(paraLeer, { clave, fetchFn, dormir }) : { hallazgos: [], leidas: [], fallas: [] };
+  const { hallazgos, leidas, fallas, descartados } = paraLeer.length ? await auditarNotas(paraLeer, { clave, fetchFn, dormir }) : { hallazgos: [], leidas: [], fallas: [], descartados: 0 };
 
   // Lo guardado de las notas que se volvieron a leer se reemplaza; lo demás se queda, salvo lo viejo o lo que ya no está.
   const nuevos = guardarHallazgos({}, { hallazgos, leidas, notas: paraLeer, ahora });
@@ -55,11 +55,25 @@ export async function correrAuditoria({
     const n = paraLeer.find((x) => x.id === id);
     if (n) nuevasRevisadas[id] = huellaDeNota(n);
   }
+  // Los números del día, para afinar el criterio (1/10: "seguí tomando datos"). Sólo conteos: nada de lo que se encontró.
+  const dia = new Date(ahora.getTime() - 3 * 3600e3).toISOString().slice(0, 10);
+  const dias = { ...(estado.contadores?.dias ?? {}) };
+  const hoy = { leidas: 0, hallazgos: 0, graves: 0, descartados: 0, fallas: 0, porTipo: {}, ...(dias[dia] ?? {}) };
+  hoy.leidas += leidas.length;
+  hoy.hallazgos += hallazgos.length;
+  hoy.graves += hallazgos.filter((h) => h.gravedad === 'alta').length;
+  hoy.descartados += descartados ?? 0;
+  hoy.fallas += fallas.length;
+  for (const h of hallazgos) hoy.porTipo[h.tipo] = (hoy.porTipo[h.tipo] ?? 0) + 1;
+  dias[dia] = hoy;
+  const conservar = Object.keys(dias).sort().slice(-14);
+  const contadores = { dias: Object.fromEntries(conservar.map((d) => [d, dias[d]])) };
   return {
-    estado: { version: 1, generado: ahora.toISOString(), revisadas: nuevasRevisadas, cuando, sobres },
+    estado: { version: 1, generado: ahora.toISOString(), revisadas: nuevasRevisadas, cuando, sobres, contadores },
     hallazgos,
     leidas,
     fallas,
+    descartados,
     texto: resumenParaWhatsApp(hallazgos, paraLeer),
   };
 }
@@ -72,10 +86,10 @@ async function main() {
   const estado = leerJson(ARCHIVO, {});
   const llaves = leerLlaves(leerJson(path.join(RAIZ, 'web', 'data', 'celular-llaves.json'), {}));
   const r = await correrAuditoria({ portada, estado, llaves, clave });
-  console.log(`Auditoría: ${r.leidas.length} notas leídas, ${r.hallazgos.length} hallazgos${r.fallas.length ? `, ${r.fallas.length} pedidos fallaron (${[...new Set(r.fallas)].join('; ')})` : ''}.`);
+  console.log(`Auditoría: ${r.leidas.length} notas leídas, ${r.hallazgos.length} hallazgos${r.descartados ? ` (${r.descartados} descartados: la cita no estaba en la nota)` : ''}${r.fallas.length ? `, ${r.fallas.length} pedidos fallaron (${[...new Set(r.fallas)].join('; ')})` : ''}.`);
   for (const h of r.hallazgos) console.log(`  [${h.gravedad}] ${h.tipo}: ${h.detalle}`);
   if (simular) return;
-  if (JSON.stringify(r.estado.revisadas) !== JSON.stringify(estado.revisadas ?? {}) || JSON.stringify(r.estado.cuando) !== JSON.stringify(estado.cuando ?? {})) {
+  if (JSON.stringify(r.estado.revisadas) !== JSON.stringify(estado.revisadas ?? {}) || JSON.stringify(r.estado.cuando) !== JSON.stringify(estado.cuando ?? {}) || r.leidas.length || r.fallas.length) {
     fs.writeFileSync(ARCHIVO, `${JSON.stringify(r.estado)}\n`, 'utf8');
   }
   if (r.texto) {

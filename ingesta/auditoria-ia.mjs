@@ -64,17 +64,18 @@ export function notasParaAuditar(notas = [], { revisadas = {}, ahora = Date.now(
 const INSTRUCCION = `Sos el corrector de Radar Balcarce, un medio digital de Balcarce (Buenos Aires). Te paso notas ya publicadas. Marcá SÓLO lo que de verdad esté mal, con seguridad; si una nota está bien, no la nombres. Un corrector que marca todo se vuelve ruido: nada de preferencias de estilo ni sinónimos.
 
 Tipos de hallazgo ("tipo"):
-- "ortografia": una falta de ortografía, una tilde que falta o sobra, o una puntuación que cambia el sentido.
+- "ortografia": una falta de ortografía objetiva, una tilde que falta o sobra, o una puntuación que cambia el sentido. No son faltas los nombres propios, las formas válidas ni los regionalismos ("suba" es una palabra correcta).
 - "texto-roto": caracteres raros o escapes sin decodificar (como \\u00fa), una frase cortada, una palabra repetida, restos de formato.
 - "seccion": la sección que figura no es la que corresponde. Las secciones son: ${SECCIONES_VALIDAS.join(', ')}. En "sugerencia" poné la correcta.
 - "sensible": el texto identifica o puede identificar a un menor de edad o a una víctima de un delito sexual o de violencia de género (nombre, apodo, escuela, domicilio, parentesco), o publica un dato personal que no debería.
 - "afirmacion": afirma como hecho una acusación, una cifra o una causa que el propio texto no sostiene ni atribuye a nadie.
-- "titulo": el título dice algo que el texto no dice o exagera.
+- "titulo": el título afirma un hecho distinto o más fuerte que el texto. Decir lo mismo con otras palabras ("resto del año" por "resto de la temporada", un sinónimo, una forma más corta) NO es un hallazgo.
 
 "gravedad": "alta" sólo para "sensible" y para acusaciones graves; "media" para sección, afirmación y título; "baja" para ortografía y texto roto.
-"detalle": una frase corta que diga exactamente qué está mal y dónde (citá la palabra o la frase). "sugerencia": cómo quedaría bien, si es corto; si no, vacío.
+"cita": el fragmento EXACTO, copiado letra por letra del título, de la bajada o del texto, donde está el problema (para "seccion" dejalo vacío). Si no podés copiar un fragmento que esté ahí, no hay hallazgo.
+"detalle": una frase corta que diga qué está mal. "sugerencia": cómo quedaría bien (obligatoria para ortografía y texto roto); si no es corto, vacío.
 
-Devolvé sólo un objeto JSON: {"notas":[{"id":"…","hallazgos":[{"tipo":"…","gravedad":"…","detalle":"…","sugerencia":"…"}]}]}. Si no hay nada que marcar en ninguna nota, {"notas":[]}.`;
+Devolvé sólo un objeto JSON: {"notas":[{"id":"…","hallazgos":[{"tipo":"…","gravedad":"…","cita":"…","detalle":"…","sugerencia":"…"}]}]}. Si no hay nada que marcar en ninguna nota, {"notas":[]}.`;
 
 /** El pedido para un lote de notas. */
 export function pedidoDeAuditoria(lote = []) {
@@ -84,19 +85,38 @@ export function pedidoDeAuditoria(lote = []) {
   return `${INSTRUCCION}\n\nNotas:\n${JSON.stringify(notas, null, 1)}`;
 }
 
-/** Lee la respuesta y deja sólo lo válido: [{ id, tipo, gravedad, detalle, sugerencia }]. Lanza si no es JSON. */
-export function leerHallazgos(texto, idsPedidos) {
+const plegar = (x) => String(x ?? '').normalize('NFC').replace(/\s+/g, ' ').trim().toLowerCase();
+
+/** ¿El fragmento que citó la IA está de verdad en la nota? Una IA que inventa la cita está alucinando el error. */
+export function citaEstaEnLaNota(cita, nota) {
+  const c = plegar(cita);
+  if (c.length < 3) return false;
+  return plegar(`${nota?.titulo ?? ''} ${nota?.copete ?? ''} ${nota?.cuerpo ?? ''}`).includes(c);
+}
+
+/**
+ * Lee la respuesta y deja sólo lo válido: { hallazgos: [{ id, tipo, gravedad, cita, detalle, sugerencia }], descartados }. Con
+ * `porId` (id → nota), descarta los que no citan un fragmento que esté en la nota (menos "seccion", que no lo necesita) y las
+ * faltas de ortografía o de texto roto sin la forma correcta. Lanza si no es JSON.
+ */
+export function leerHallazgos(texto, idsPedidos, porId = null) {
   let obj;
   try { obj = JSON.parse(texto); } catch { throw new Error('la respuesta no es JSON'); }
   const lista = Array.isArray(obj) ? obj : Array.isArray(obj?.notas) ? obj.notas : (Object.values(obj ?? {}).find(Array.isArray) ?? []);
   const salida = [];
+  let descartados = 0;
   for (const n of lista) {
     if (!idsPedidos.has(n?.id)) continue;
     for (const h of Array.isArray(n.hallazgos) ? n.hallazgos : []) {
       if (!(h?.tipo in TIPOS) || typeof h.detalle !== 'string' || !h.detalle.trim()) continue;
+      if (porId && h.tipo !== 'seccion') {
+        const sinCorreccion = ['ortografia', 'texto-roto'].includes(h.tipo) && !String(h.sugerencia ?? '').trim();
+        if (!citaEstaEnLaNota(h.cita, porId.get(n.id)) || sinCorreccion) { descartados += 1; continue; }
+      }
       salida.push({
         id: n.id,
         tipo: h.tipo,
+        cita: typeof h.cita === 'string' ? h.cita.trim().slice(0, 200) : '',
         // Lo que dice "alta" sin ser delicado se baja: una sección o una tilde nunca son una alarma.
         gravedad: GRAVEDADES.includes(h.gravedad) ? ((h.gravedad === 'alta' && !['sensible', 'afirmacion'].includes(h.tipo)) ? 'media' : h.gravedad) : 'media',
         detalle: h.detalle.trim().slice(0, 300),
@@ -105,10 +125,11 @@ export function leerHallazgos(texto, idsPedidos) {
     }
   }
   // Una sección "equivocada" tiene que sugerir una sección que exista; si no, no se puede usar.
-  return salida.filter((h) => h.tipo !== 'seccion' || SECCIONES_VALIDAS.includes(h.sugerencia));
+  const validos = salida.filter((h) => h.tipo !== 'seccion' || SECCIONES_VALIDAS.includes(h.sugerencia));
+  return { hallazgos: validos, descartados: descartados + (salida.length - validos.length) };
 }
 
-/** Un pedido a Groq con un lote de notas. Lanza si falla (con `status`). */
+/** Un pedido a Groq con un lote de notas: { hallazgos, descartados }. Lanza si falla (con `status`). */
 export async function auditarLote(lote, { clave, fetchFn = fetch, modelo = MODELO_AUDITORIA } = {}) {
   const res = await fetchFn('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
@@ -124,23 +145,26 @@ export async function auditarLote(lote, { clave, fetchFn = fetch, modelo = MODEL
     throw e;
   }
   const j = await res.json();
-  return leerHallazgos(j.choices?.[0]?.message?.content ?? '', new Set(lote.map((n) => n.id)));
+  return leerHallazgos(j.choices?.[0]?.message?.content ?? '', new Set(lote.map((n) => n.id)), new Map(lote.map((n) => [n.id, n])));
 }
 
 /**
  * Lee todas las notas de a lotes, con una espera entre un pedido y otro. Un lote que falla no frena a los demás y se
  * cuenta aparte (esas notas no se marcan como leídas: se vuelven a intentar en la próxima corrida).
- * Devuelve { hallazgos, leidas: [ids], fallas: [mensajes] }.
+ * Devuelve { hallazgos, leidas: [ids], fallas: [mensajes], descartados }.
  */
 export async function auditarNotas(notas, { clave, fetchFn = fetch, dormir = (s) => new Promise((r) => { setTimeout(r, s * 1000); }), porPedido = AUDITORIA.porPedido } = {}) {
   const hallazgos = [];
   const leidas = [];
   const fallas = [];
+  let descartados = 0;
   for (let i = 0; i < notas.length; i += porPedido) {
     if (i > 0) await dormir(AUDITORIA.esperaEntrePedidos);
     const lote = notas.slice(i, i + porPedido);
     try {
-      hallazgos.push(...await auditarLote(lote, { clave, fetchFn }));
+      const r = await auditarLote(lote, { clave, fetchFn });
+      hallazgos.push(...r.hallazgos);
+      descartados += r.descartados;
       leidas.push(...lote.map((n) => n.id));
     } catch (e) {
       fallas.push(e.message);
@@ -148,7 +172,7 @@ export async function auditarNotas(notas, { clave, fetchFn = fetch, dormir = (s)
       if (e.status === 429 || e.status === 401 || e.status === 403) break;
     }
   }
-  return { hallazgos, leidas, fallas };
+  return { hallazgos, leidas, fallas, descartados };
 }
 
 /**
@@ -164,7 +188,7 @@ export function guardarHallazgos(antes = {}, { hallazgos = [], leidas = [], nota
     const n = porId.get(h.id);
     if (!n) continue;
     const e = salida[h.id] ?? { titulo: n.titulo, ruta: n.ruta ?? null, seccion: n.seccion, cuando: ahora.toISOString(), hallazgos: [] };
-    e.hallazgos.push({ tipo: h.tipo, gravedad: h.gravedad, detalle: h.detalle, sugerencia: h.sugerencia });
+    e.hallazgos.push({ tipo: h.tipo, gravedad: h.gravedad, cita: h.cita ?? '', detalle: h.detalle, sugerencia: h.sugerencia });
     salida[h.id] = e;
   }
   const limite = ahora.getTime() - dias * 86400e3;

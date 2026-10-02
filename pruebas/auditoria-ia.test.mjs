@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   notasParaAuditar, pedidoDeAuditoria, leerHallazgos, auditarLote, auditarNotas, guardarHallazgos, resumenParaWhatsApp, huellaDeNota,
-  MODELO_AUDITORIA, AUDITORIA, SECCIONES_VALIDAS,
+  MODELO_AUDITORIA, AUDITORIA, SECCIONES_VALIDAS, citaEstaEnLaNota,
 } from '../ingesta/auditoria-ia.mjs';
 import { correrAuditoria } from '../redes/auditar-notas.mjs';
 import { abrir, huellaDe } from '../panel/cifrado.mjs';
@@ -54,17 +54,17 @@ test('la respuesta: sólo lo válido; "alta" sólo para lo sensible; una secció
     ] },
     { id: 'zzz', hallazgos: [{ tipo: 'sensible', gravedad: 'alta', detalle: 'de una nota que no pedí' }] },
   ] });
-  const h = leerHallazgos(texto, ids);
+  const { hallazgos: h } = leerHallazgos(texto, ids);
   assert.deepEqual(h.map((x) => `${x.tipo}:${x.gravedad}`), ['sensible:alta', 'ortografia:media', 'seccion:media']);
   assert.throws(() => leerHallazgos('no es json', ids), /no es JSON/);
-  assert.deepEqual(leerHallazgos('{"notas":[]}', ids), []);
+  assert.deepEqual(leerHallazgos('{"notas":[]}', ids), { hallazgos: [], descartados: 0 });
 });
 
 test('el pedido a Groq: gpt-oss-20b, la clave en el encabezado, y el status del error', async () => {
   let visto;
-  const fetchFn = async (url, init) => { visto = { url, init }; return respuestaGroq({ notas: [{ id: 'a', hallazgos: [{ tipo: 'ortografia', gravedad: 'baja', detalle: 'x' }] }] }); };
+  const fetchFn = async (url, init) => { visto = { url, init }; return respuestaGroq({ notas: [{ id: 'a', hallazgos: [{ tipo: 'ortografia', gravedad: 'baja', cita: 'una obra en la plaza principal', detalle: 'x', sugerencia: 'una obra en la Plaza Principal' }] }] }); };
   const h = await auditarLote([nota('a')], { clave: 'SECRETA', fetchFn });
-  assert.equal(h.length, 1);
+  assert.equal(h.hallazgos.length, 1);
   assert.match(visto.url, /api\.groq\.com/);
   assert.ok(!visto.url.includes('SECRETA'));
   assert.equal(visto.init.headers.authorization, 'Bearer SECRETA');
@@ -110,7 +110,7 @@ test('la corrida entera: los hallazgos viajan cifrados para el celular y sólo e
   const publica = publicKey.export({ type: 'spki', format: 'der' }).toString('base64');
   const llaves = [{ huella: huellaDe(publica), nombre: 'Celular', publica, alta: 'x' }];
   const portada = { notas: [nota('a', { titulo: 'La nota con el menor' }), nota('b')] };
-  const fetchFn = async () => respuestaGroq({ notas: [{ id: 'a', hallazgos: [{ tipo: 'sensible', gravedad: 'alta', detalle: 'Nombra a un menor de edad', sugerencia: '' }] }] });
+  const fetchFn = async () => respuestaGroq({ notas: [{ id: 'a', hallazgos: [{ tipo: 'sensible', gravedad: 'alta', cita: 'El intendente anunció una obra', detalle: 'Nombra a un menor de edad', sugerencia: '' }] }] });
   const r = await correrAuditoria({ portada, estado: {}, llaves, clave: 'k', fetchFn, dormir: async () => {}, ahora: new Date(AHORA) });
   assert.deepEqual(r.leidas.sort(), ['a', 'b']);
   assert.match(r.texto, /algo grave/);
@@ -160,4 +160,33 @@ test('el workflow corre cada hora, a mano permite simular, y la pestaña está e
   assert.match(app, /\['revision', 'Revisión'/);
   assert.match(app, /vistaRevision\(\)/);
   assert.match(fs.readFileSync(path.join(RAIZ, 'web/public/panel/sw.js'), 'utf8'), /\/panel\/revision\.js/);
+});
+
+test('una cita que no está en la nota es una alucinación: el hallazgo se descarta y se cuenta; la ortografía sin la forma correcta, también', () => {
+  const n = nota('a', { cuerpo: CUERPO + ' El pibe juega en el club.' });
+  const texto = JSON.stringify({ notas: [{ id: 'a', hallazgos: [
+    { tipo: 'ortografia', gravedad: 'baja', cita: 'esto no figura en ningún lado', detalle: 'falta', sugerencia: 'bien' },
+    { tipo: 'ortografia', gravedad: 'baja', cita: 'El pibe juega en el club', detalle: 'dudoso', sugerencia: '' },
+    { tipo: 'afirmacion', gravedad: 'media', cita: 'EL PIBE  juega en el club', detalle: 'sin sostén', sugerencia: '' },
+    { tipo: 'seccion', gravedad: 'media', cita: '', detalle: 'es de Fútbol', sugerencia: 'Fútbol' },
+  ] }] });
+  const r = leerHallazgos(texto, new Set(['a']), new Map([['a', n]]));
+  assert.deepEqual(r.hallazgos.map((h) => h.tipo), ['afirmacion', 'seccion'], 'la cita se compara sin mayúsculas ni espacios de más');
+  assert.equal(r.descartados, 2);
+  assert.equal(citaEstaEnLaNota('una obra en la plaza', n), true);
+  assert.equal(citaEstaEnLaNota('ab', n), false, 'una cita de dos letras no prueba nada');
+});
+
+test('los números del día quedan guardados (sólo conteos) para afinar el criterio', async () => {
+  const fetchFn = async () => respuestaGroq({ notas: [{ id: 'a', hallazgos: [
+    { tipo: 'ortografia', gravedad: 'baja', cita: 'una obra en la plaza', detalle: 'x', sugerencia: 'y' },
+    { tipo: 'titulo', gravedad: 'media', cita: 'texto que no está', detalle: 'z', sugerencia: '' },
+  ] }] });
+  const portada = { notas: [nota('a')] };
+  const r = await correrAuditoria({ portada, estado: {}, llaves: [], clave: 'k', fetchFn, dormir: async () => {}, ahora: new Date(AHORA) });
+  const dia = r.estado.contadores.dias['2026-10-01'];
+  assert.deepEqual({ leidas: dia.leidas, hallazgos: dia.hallazgos, descartados: dia.descartados, porTipo: dia.porTipo }, { leidas: 1, hallazgos: 1, descartados: 1, porTipo: { ortografia: 1 } });
+  const r2 = await correrAuditoria({ portada: { notas: [nota('b')] }, estado: r.estado, llaves: [], clave: 'k', fetchFn: async () => respuestaGroq({ notas: [] }), dormir: async () => {}, ahora: new Date(AHORA + 3600e3) });
+  assert.equal(r2.estado.contadores.dias['2026-10-01'].leidas, 2, 'se suma al del mismo día');
+  assert.ok(!JSON.stringify(r2.estado.contadores).includes('plaza'), 'ni una palabra de lo encontrado');
 });
