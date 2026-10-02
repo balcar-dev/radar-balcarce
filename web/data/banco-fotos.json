@@ -4608,16 +4608,16 @@
   "cuando": "2026-10-01T22:02:09.301Z"
  },
  "11yeak2": {
-  "archivo": "fotos-notas/11yeak2.jpg",
   "medio": "El Eco de Tandil",
-  "credito": "Foto: El Eco de Tandil",
   "licencia": null,
   "origen": "medio",
   "titulo": "El empleo formal en la construcción baja a nivel nacional",
   "enlace": "https://www.eleco.com.ar/economia/el-empleo-en-la-construccion-es-un-115-por-ciento-menor-al-promedio",
   "imagenOriginal": "https://cdnartic.ar/JLoRtzrk3RkcApYhEi86VgsDdeo=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/06/empleo.webp",
   "razon": "Tiene excelente nitidez y encuadre sobre la construcción, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-01T22:02:09.301Z"
+  "cuando": "2026-10-01T22:02:09.301Z",
+  "intentado": true,
+  "borrada": true
  },
  "df6k44": {
   "archivo": "fotos-notas/df6k44.jpg",
@@ -5304,16 +5304,16 @@
   "cuando": "2026-10-02T17:32:05.304Z"
  },
  "1u612sk": {
-  "archivo": "fotos-notas/1u612sk.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Club de Leones dona nuevos equipos al Hospital Municipal",
   "enlace": "https://www.diariolavanguardia.com/noticias/44974-nueva-contribucion-del-club-de-leones-al-hospital-municipal-de-balcarce/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65927.png",
   "razon": "Es la única opción disponible, cuenta con buena nitidez y no presenta marcas de agua ni menores.",
-  "cuando": "2026-10-02T18:02:26.094Z"
+  "cuando": "2026-10-02T18:02:26.094Z",
+  "intentado": true,
+  "borrada": true
  },
  "1akpidg": {
   "archivo": "fotos-notas/1akpidg.jpg",
@@ -5358,5 +5358,18 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/10/02/WBi1g94CA_2000x1500__1.jpg",
   "razon": "La foto A muestra claramente el evento de remate con buen encuadre y sin marcas añadidas ni menores reconocibles.",
   "cuando": "2026-10-02T18:02:26.094Z"
+ },
+ "1wtp555": {
+  "archivo": "fotos-notas/1wtp555.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Liauzh / Wikimedia Commons (CC BY-SA 4.0)",
+  "licencia": "CC BY-SA 4.0",
+  "autor": "Liauzh",
+  "origen": "wikimedia",
+  "titulo": "Colapinto completa las primeras prácticas en Sepang con foco en el ritmo",
+  "enlace": "https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Alpine_-_Franco_Colapinto_-_FP2.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6c/2025_Singapore_GP_-_Alpine_-_Franco_Colapinto_-_FP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Franco Colapinto\" de Wikimedia Commons (CC BY-SA 4.0).",
+  "cuando": "2026-10-02T18:15:52.145Z"
  }
 }

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T18:02:56.711Z",
- "portada": 55,
- "archivo": 794,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-02T18:15:57.339Z",
+ "portada": 60,
+ "archivo": 795,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-02T18:02:56.755Z",
+  "generado": "2026-10-02T18:15:57.371Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-02T18:07:41.509Z"
    },
    {
     "nombre": "farmacia",
@@ -115,8 +115,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 52,
+    "salio": "2026-10-02T18:07:41.509Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1v6m62u",
@@ -147,26 +147,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "jeiawq",
+      "titulo": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
+      "seccion": "Economía"
+     },
      {
       "id": "5pxon8",
       "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
       "seccion": "Economía"
      },
      {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce"
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
      },
      {
       "id": "sty1jd",
       "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      }
     ]
@@ -197,6 +197,12 @@
    ],
    "cola": [
     {
+     "id": "h1ggzr",
+     "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+     "seccion": "Agro",
+     "marcada": false
+    },
+    {
      "id": "1akpidg",
      "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
      "seccion": "Balcarce",
@@ -205,6 +211,18 @@
     {
      "id": "gzpel6",
      "titulo": "La carrera Luis Vildoza suma inscripciones presenciales",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "y1kgx4",
+     "titulo": "Fiorella Cacace detalla la labor de los escribanos",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1ugi3md",
+     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
      "seccion": "Deportes",
      "marcada": false
     }
