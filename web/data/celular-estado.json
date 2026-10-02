@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T17:02:06.287Z",
- "portada": 62,
- "archivo": 786,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-02T17:32:14.359Z",
+ "portada": 64,
+ "archivo": 788,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-02T17:02:06.348Z",
+  "generado": "2026-10-02T17:32:14.392Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,17 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
      {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
+      "id": "1v6m62u",
+      "titulo": "El Hospital Fossati completa la meta de incorporar treinta televisores",
+      "seccion": "Balcarce"
      },
      {
-      "id": "uxgtdx",
-      "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
-      "seccion": "Balcarce"
+      "id": "18bbdzh",
+      "titulo": "Caputo promete una reforma tributaria para 2031 y proyecta crecimiento",
+      "seccion": "Economía"
      },
      {
       "id": "5pxon8",
@@ -134,9 +134,9 @@
       "seccion": "Economía"
      },
      {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce"
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -160,13 +160,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "jzu6k",
-      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "id": "swyxjn",
+      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
       "seccion": "Balcarce"
      },
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "id": "jzu6k",
+      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce"
      }
     ]
@@ -197,9 +197,15 @@
    ],
    "cola": [
     {
-     "id": "uxgtdx",
-     "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
-     "seccion": "Balcarce",
+     "id": "h1ggzr",
+     "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+     "seccion": "Agro",
+     "marcada": false
+    },
+    {
+     "id": "gzpel6",
+     "titulo": "La carrera Luis Vildoza suma inscripciones presenciales",
+     "seccion": "Deportes",
      "marcada": false
     },
     {

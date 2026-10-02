@@ -490,11 +490,6 @@
   "ultimo": "2026-10-01T22:01:31.409Z",
   "motivo": "con cuerpo"
  },
- "171e36f": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:30:46.959Z",
-  "motivo": "con cuerpo"
- },
  "171hzbz": {
   "intentos": 1,
   "ultimo": "2026-09-28T19:05:34.750Z",
@@ -535,11 +530,6 @@
  "17j3wna": {
   "intentos": 1,
   "ultimo": "2026-09-28T23:31:15.698Z",
-  "motivo": "con cuerpo"
- },
- "17j8a37": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:30:46.959Z",
   "motivo": "con cuerpo"
  },
  "17k72dr": {
@@ -669,11 +659,6 @@
   "ultimo": "2026-09-28T03:02:17.601Z",
   "motivo": "con cuerpo"
  },
- "19iy42g": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:05:21.676Z",
-  "motivo": "con cuerpo"
- },
  "19jah2t": {
   "intentos": 2,
   "ultimo": "2026-09-28T19:50:23.332Z",
@@ -719,9 +704,9 @@
   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1a6zyt9": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T17:01:35.674Z",
-  "motivo": "título o bajada: 2 problemas (numero): el titulo dice 6 y la fuente no lo dice"
+  "intentos": 3,
+  "ultimo": "2026-10-02T17:31:21.949Z",
+  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1a9rnj4": {
   "intentos": 1,
@@ -757,6 +742,11 @@
   "intentos": 1,
   "ultimo": "2026-09-26T04:30:43.593Z",
   "motivo": "con cuerpo"
+ },
+ "1akpidg": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T17:31:21.949Z",
+  "motivo": "título o bajada: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras"
  },
  "1as5wmy": {
   "intentos": 2,
@@ -823,11 +813,6 @@
   "ultimo": "2026-09-27T05:00:43.871Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
- "1c0gr9x": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:30:46.959Z",
-  "motivo": "con cuerpo"
- },
  "1cbil57": {
   "intentos": 1,
   "ultimo": "2026-09-30T11:31:24.348Z",
@@ -879,11 +864,6 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 2
- },
- "1dgdpko": {
-  "intentos": 2,
-  "ultimo": "2026-09-25T17:05:21.676Z",
-  "motivo": "cuerpo: 6 problemas (numero): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 19 palabras"
  },
  "1dhn3xw": {
   "intentos": 1,
@@ -987,6 +967,13 @@
   "ultimo": "2026-10-01T21:38:17.947Z",
   "motivo": "con cuerpo"
  },
+ "1f8yrdr": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T17:31:21.949Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "1f9bhpx": {
   "intentos": 2,
   "ultimo": "2026-09-28T23:31:15.698Z",
@@ -995,11 +982,6 @@
  "1fbewyl": {
   "intentos": 1,
   "ultimo": "2026-10-01T07:41:43.329Z",
-  "motivo": "con cuerpo"
- },
- "1feeb6l": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:30:46.959Z",
   "motivo": "con cuerpo"
  },
  "1fgr8xb": {
@@ -1048,9 +1030,9 @@
   "motivo": "con cuerpo"
  },
  "1fs15g0": {
-  "intentos": 4,
-  "ultimo": "2026-10-02T17:01:35.674Z",
-  "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 5,
+  "ultimo": "2026-10-02T17:31:21.949Z",
+  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1fswowj": {
   "intentos": 1,
@@ -1105,6 +1087,11 @@
  "1gbqyce": {
   "intentos": 1,
   "ultimo": "2026-09-27T02:30:43.835Z",
+  "motivo": "con cuerpo"
+ },
+ "1gdngfe": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T17:31:21.949Z",
   "motivo": "con cuerpo"
  },
  "1ggll4l": {
@@ -1395,11 +1382,6 @@
   "intentos": 1,
   "ultimo": "2026-09-27T10:00:45.205Z",
   "motivo": "con cuerpo"
- },
- "1kcu6a3": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:30:46.959Z",
-  "motivo": "título o bajada: 1 problema (numero): el copete dice 17 y la fuente no lo dice"
  },
  "1knptpr": {
   "intentos": 1,
@@ -1812,11 +1794,6 @@
   "intentos": 1,
   "ultimo": "2026-09-29T21:01:30.027Z",
   "motivo": "con cuerpo"
- },
- "1r41igs": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:05:21.676Z",
-  "motivo": "Gemini: Bad Unicode escape in JSON at position 2424 (line 1 column 2425)"
  },
  "1r5sphv": {
   "intentos": 1,
@@ -2344,11 +2321,6 @@
   "intentos": 1,
   "ultimo": "2026-09-30T20:31:29.279Z",
   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (Federacion, votacion, Ademas, habia, exportacion): va con las tild; sin esas oraciones quedan 148"
- },
- "24vfqp": {
-  "intentos": 3,
-  "ultimo": "2026-09-25T17:30:46.959Z",
-  "motivo": "con cuerpo"
  },
  "25strz": {
   "intentos": 1,
@@ -3256,6 +3228,11 @@
   "ultimo": "2026-09-27T05:00:43.871Z",
   "motivo": "con cuerpo"
  },
+ "gzpel6": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T17:31:21.949Z",
+  "motivo": "con cuerpo"
+ },
  "h1ggzr": {
   "intentos": 3,
   "ultimo": "2026-10-02T14:04:48.969Z",
@@ -3331,11 +3308,6 @@
  "i8u40l": {
   "intentos": 1,
   "ultimo": "2026-09-27T10:30:39.936Z",
-  "motivo": "con cuerpo"
- },
- "ib1bom": {
-  "intentos": 2,
-  "ultimo": "2026-09-25T17:30:46.959Z",
   "motivo": "con cuerpo"
  },
  "ibjk7z": {
@@ -4255,11 +4227,6 @@
   "intentos": 2,
   "ultimo": "2026-10-01T03:31:15.758Z",
   "motivo": "cuerpo: 2 problemas (nombre): el cuerpo nombra a \"turismo\" y la fuente no; sin esas oraciones quedan 46 palabras"
- },
- "xb5kod": {
-  "intentos": 2,
-  "ultimo": "2026-09-25T17:30:46.959Z",
-  "motivo": "con cuerpo"
  },
  "xep2sb": {
   "intentos": 1,
