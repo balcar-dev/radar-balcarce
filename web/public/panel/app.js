@@ -277,14 +277,24 @@ async function cargarRevision() {
     const sobres = j?.sobres ?? {};
     const ids = Object.keys(sobres);
     const abiertos = (await Promise.all(ids.map(async (id) => { const e = await abrir(sobres[id], E.llaves); return e ? { id, ...e } : null; }))).filter(Boolean);
-    E.revision = { items: abiertos, abierto: !ids.length || abiertos.length > 0, generado: j?.generado ?? null };
+    // Lo que corrigió sola (ortografía chica y segura, 2/10): es público y no se cifra; sólo los últimos días.
+    const cambios = await leerSiHay(E.cliente, ARCHIVOS.cambiosIA, null);
+    const desde = Date.now() - 3 * 864e5;
+    const corregidas = Object.entries(cambios?.notas ?? {}).map(([id, e]) => ({ id, ...e })).filter((e) => Date.parse(e.cuando) >= desde);
+    E.revision = { items: abiertos, abierto: !ids.length || abiertos.length > 0, generado: j?.generado ?? null, corregidas };
   } catch { E.revision = null; }
 }
 
 const decididaEnElCelular = (id) => E.decisiones.notas?.[id] ?? null;
-/** Lo de "Esperan", en tres grupos: sin decidir, aprobadas (salen en la próxima actualización) y descartadas. */
+/** Cuánto duran las listas del panel (2/10, Hernán: "así no se acumulan cosas sin sentido"): lo que espera se va a las 48 horas; las publicadas y las retiradas, a las 24. */
+const HORAS_EN_ESPERAN = 48;
+const HORAS_RETIRADAS = 24;
+const dentroDe = (iso, horas) => { const t = Date.parse(iso ?? ''); return !Number.isFinite(t) || t >= Date.now() - horas * 36e5; };
+/** Las notas que salen solas pero esperan su cuerpo, de las últimas 48 horas y sin las que una persona ya completó. */
+const sinCuerpoVigentes = () => E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo && dentroDe(n.fecha, HORAS_EN_ESPERAN));
+/** Lo de "Esperan", en tres grupos: sin decidir, aprobadas (salen en la próxima actualización) y descartadas; sólo lo de las últimas 48 horas. */
 function listasDeEsperan() {
-  const todas = [...(E.pendientes ?? E.publicos), ...E.descartadas];
+  const todas = [...(E.pendientes ?? E.publicos), ...E.descartadas].filter((n) => dentroDe(n.fecha, HORAS_EN_ESPERAN));
   const con = (estado) => todas.filter((n) => decididaEnElCelular(n.id)?.estado === estado);
   return { sinDecidir: todas.filter((n) => !decididaEnElCelular(n.id)), aprobadas: con('publicada'), descartadas: con('descartada') };
 }
@@ -300,9 +310,18 @@ const vueltaAPublicar = (n) => {
 
 // ------------------------------------------------------------------ las listas
 
+/** Los íconos de la barra de abajo (trazos simples, del color del texto). */
+const ICONOS = {
+  esperan: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  publicadas: '<svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h6M9 13h6"/></svg>',
+  fotos: '<svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+  redes: '<svg viewBox="0 0 24 24"><path d="M21 3 10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg>',
+  mas: '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>',
+};
+
 function pestanas() {
   const nav = $('#pestanas');
-  const esperan = listasDeEsperan().sinDecidir.length + E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
+  const esperan = listasDeEsperan().sinDecidir.length + sinCuerpoVigentes().length;
   const hace24 = Date.now() - 24 * 36e5;
   const ultimas = (E.portada?.notas ?? []).filter((n) => !n.propia && (Date.parse(n.fecha) || 0) >= hace24).length;
   const sinFoto = E.banco ? resumenDeFotos().items.length : null;
@@ -312,7 +331,13 @@ function pestanas() {
     ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : '⋯'],
   ];
   const actual = EN_MAS.has(E.pestana) ? 'mas' : E.pestana;
-  nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${actual === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
+  // El globito: rojo si hay algo que atender, gris si es un total, verde si está todo bien; sin globito si no hay nada que mostrar.
+  const globo = (id, n) => {
+    if (n === '·' || n === '⋯' || n === 0 || n === '0') return '';
+    const clase = id === 'fotos' && n === '✓' ? 'ok' : (id === 'publicadas' ? 'suave' : '');
+    return `<span class="numero ${clase}">${n === '◷' ? '' : n}</span>`;
+  };
+  nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${actual === id ? 'aria-current="page"' : ''}><span class="icono">${ICONOS[id]}${n === '◷' ? '' : globo(id, n)}</span>${t}</button>`).join('');
   nav.hidden = false;
 }
 
@@ -326,7 +351,7 @@ function tarjeta(n, { tipo, extra = '' }) {
     d && tipo !== 'retirada' ? `<span class="marca">${{ publicada: '✓ aprobada', descartada: '✕ descartada', bloqueada: '✕ retirada' }[d.estado] ?? ''}</span>` : '',
     enFacebook(n.id) ? '<span class="marca">✓ en Facebook</span>' : (marcadaParaRedes(n.id) ? '<span class="marca">→ en la cola de las redes</span>' : ''),
   ].join('');
-  return `<button type="button" class="tarjeta" data-abrir="${esc(tipo)}" data-id="${esc(n.id)}">
+  return `<button type="button" class="tarjeta" style="--franja:var(--s-${COLOR[E.correcciones.notas?.[n.id]?.seccion ?? n.seccion] ?? 'pais'})" data-abrir="${esc(tipo)}" data-id="${esc(n.id)}">
     <div>${chip(E.correcciones.notas?.[n.id]?.seccion ?? n.seccion)}<span class="meta">${esc(haceCuanto(n.fecha))}</span>${marcas}</div>
     <div class="titulo">${esc(E.correcciones.notas?.[n.id]?.titulo ?? (d?.estado === 'publicada' ? d.titulo : null) ?? n.titulo ?? 'Nota sensible: abrila para ver de qué se trata')}</div>
     ${extra}</button>`;
@@ -371,7 +396,7 @@ function porQueNoSalio(n, tipo) {
     const medios = n.fuentes?.length ?? 0;
     return {
       etiqueta: 'Falta el cuerpo', clase: e.clase === 'mal' ? 'mal' : 'espera',
-      porque: `La nota está bien para salir, pero la IA todavía no logró escribir un cuerpo que pase el verificador contra las fuentes${medios > 1 ? ` (la cuentan ${medios} medios)` : ''}. ${e.texto}`,
+      porque: `La IA todavía no logró escribir un cuerpo que pase el verificador${medios > 1 ? ` (la cuentan ${medios} medios)` : ''}. ${e.texto}`,
       detalle: explicarMotivoSinCuerpo(n.motivo),
       queHacer: e.clase === 'mal' ? 'Se agotaron los intentos: escribila con IA o a mano para que salga.' : 'La IA lo reintenta sola. Si es importante, tocá "Publicar" para que la escriba ahora.',
     };
@@ -391,7 +416,7 @@ function porQueNoSalio(n, tipo) {
  */
 function vistaEsperan(cuando) {
   const { sinDecidir, aprobadas, descartadas } = listasDeEsperan();
-  const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo);
+  const sinCuerpo = sinCuerpoVigentes();
   const items = [
     ...sinDecidir.map((n) => ({ n, tipo: 'pendiente' })),
     ...sinCuerpo.map((n) => ({ n, tipo: 'sin-cuerpo' })),
@@ -416,6 +441,7 @@ const HORAS_EN_PUBLICADAS = 24;
 
 function vistaPublicadas(cuando) {
   const q = E.busqueda.toLowerCase();
+  const retiradas = E.papelera.filter((n) => dentroDe(n.retirada, HORAS_RETIRADAS));
   const enPortada = E.portada?.notas ?? [];
   const deLasFuentes = enPortada.filter((n) => !n.propia);
   const propias = enPortada.length - deLasFuentes.length;
@@ -437,12 +463,12 @@ function vistaPublicadas(cuando) {
     <p class="estado">${esc(alcance)} ${E.publicadasTodas ? '<button type="button" class="boton" data-accion="solo-24">Sólo las últimas 24 horas</button>' : (q ? '' : '<button type="button" class="boton" data-accion="todas-las-publicadas">Ver también las anteriores</button>')}
     ${E.archivo ? '' : '<button type="button" class="boton" data-accion="archivo">Cargar el archivo (para buscar más atrás)</button>'}</p>
     ${lista.map((n) => tarjeta(n, { tipo: 'publicada', extra: E.correcciones.notas?.[n.id] ? '<span class="marca">✎ corregida</span>' : '' })).join('') || '<p class="vacio">Nada con eso.</p>'}
-    <h2 id="retiradas">Retiradas (se pueden volver a publicar)</h2>
-    ${E.papelera.length ? E.papelera.map((n) => tarjeta({ ...n, fecha: n.retirada }, {
+    <h2 id="retiradas">Retiradas en las últimas ${HORAS_RETIRADAS} horas (se pueden volver a publicar)</h2>
+    ${retiradas.length ? retiradas.map((n) => tarjeta({ ...n, fecha: n.retirada }, {
     tipo: 'retirada',
     extra: `<span class="meta">retirada${n.por ? ` por ${esc(n.por)}` : ''}${n.motivo ? `: ${esc(n.motivo)}` : ''}</span>${vueltaAPublicar(n) ? '<span class="marca">↺ vuelve en la próxima actualización</span>' : ''}`,
   })).join('')
-    : `<p class="estado">${E.pendientes ? 'No hay notas retiradas en los últimos 30 días.' : 'La lista de retiradas llega cifrada con la próxima actualización de la web.'}</p>`}`;
+    : `<p class="estado">${E.pendientes ? `No hay notas retiradas en las últimas ${HORAS_RETIRADAS} horas.` : 'La lista de retiradas llega cifrada con la próxima actualización de la web.'}</p>`}`;
   $('#buscar').addEventListener('input', (ev) => {
     E.busqueda = ev.target.value;
     clearTimeout(vistaPublicadas.t);
@@ -925,7 +951,7 @@ function vistaMas() {
   const avisoDe = { revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
   app.innerHTML = `
     <h1>Más</h1>
-    ${MENU_MAS.map(([id, nombre, icono, que]) => `<button type="button" class="tarjeta" data-pestana="${id}"><div><strong>${icono} ${esc(nombre)}</strong>${avisoDe[id] ? ` <span class="marca${rev?.graves && id === 'revision' ? ' mal' : ''}">${esc(avisoDe[id])}</span>` : ''}</div><div class="meta">${esc(que)}</div></button>`).join('')}
+    ${MENU_MAS.map(([id, nombre, icono, que]) => `<button type="button" class="tarjeta" data-pestana="${id}"><div class="menu-item"><span class="menu-icono">${icono}</span><div><div class="titulo">${esc(nombre)}${avisoDe[id] ? ` <span class="marca${rev?.graves && id === 'revision' ? ' mal' : ''}">${esc(avisoDe[id])}</span>` : ''}</div><div class="meta">${esc(que)}</div></div><span class="flecha">›</span></div></button>`).join('')}
     <div class="botones">
       <button type="button" class="boton ancho" data-accion="actualizar-web">Actualizar la web ahora</button>
       <a class="boton ancho enlace-boton" href="https://radarbalcarce.com" target="_blank" rel="noopener">Abrir la web</a>
@@ -938,13 +964,13 @@ function vistaMas() {
       <p>Arriba, las notas que el sistema no publica solo. Cada una dice por qué espera y qué hay que mirar, y qué contó cada medio (con el enlace a la nota original). La IA no las escribe sola: si querés publicar una, tocás "Publicar" (la IA la escribe en un minuto, la verifica y sale) o "Escribirla con IA para revisarla" (te muestra el texto para corregir antes de publicar), o la escribís a mano. Mientras la IA escribe podés seguir con otra nota: la lista marca "la IA la está escribiendo" y "borrador listo". "Descartar" la saca de la lista; queda en "Descartadas", al final, por si te equivocaste.</p>
       <p>Abajo, las notas que salen solas pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola, hasta ${esc(E.intentosMaximos)} veces, en las próximas actualizaciones; si lo logra, se publican sin que hagas nada. Cada una dice cuántas veces lo intentó y, si falló, por qué. Si una es importante y querés que salga ya, escribila con la IA o a mano.</p></details>
     <details><summary>Publicadas: corregir, cambiar de sección, reescribir</summary>
-      <p>Muestra las últimas 24 horas. "Ver también las anteriores" suma el resto de la portada (36 horas) y, con "Cargar el archivo", las más viejas (hasta 180 días); el buscador mira todo lo cargado. "Editar" cambia el título, la bajada, el cuerpo o la sección. "Reescribir con IA" le pide una versión nueva (podés decirle qué cambiar) y te la muestra antes de guardar. La dirección de la nota no cambia nunca.</p></details>
+      <p>Muestra las últimas 24 horas (y las retiradas de las últimas 24 horas). "Ver también las anteriores" suma el resto de la portada (36 horas) y, con "Cargar el archivo", las más viejas (hasta 180 días); el buscador mira todo lo cargado. "Editar" cambia el título, la bajada, el cuerpo o la sección. "Reescribir con IA" le pide una versión nueva (podés decirle qué cambiar) y te la muestra antes de guardar. La dirección de la nota no cambia nunca.</p></details>
     <details><summary>Fotos: dejar todas las notas con foto</summary>
       <p>Lista las notas de la portada sin foto y por qué. Las que se pueden arreglar traen enlaces para buscarle una (Google Imágenes, Wikimedia Commons, las páginas de sus fuentes). Cuando la encontrás, copiás la dirección de la imagen, la pegás con su crédito y la nube la baja, la achica y la guarda. Las reglas firmes (menores, marcas de agua de otro medio, Policiales sin fuente oficial) no se saltean: por eso pide que confirmes que la foto no tiene marca de otro medio ni menores reconocibles.</p></details>
     <details><summary>Mandar una nota a Facebook e Instagram</summary>
       <p>Solas, a Facebook van sólo notas de Balcarce con relevancia alta. Con "Mandar también a las redes" una persona puede mandar cualquier nota publicada, también de Política o Policiales. Antes te pregunta. Sale en la próxima vuelta de las redes: ${esc(comoSalenLosPosteos(reglas))}. Mientras no salga, se puede sacar de la cola; una vez publicada, sólo se borra a mano en Facebook e Instagram.</p></details>
     <details><summary>Retirar y volver a publicar</summary>
-      <p>"Retirar de la web" la saca de la portada y su página deja de existir en la próxima actualización. No se borra: queda en "Retiradas" (al final de Publicadas) durante 30 días, y "Volver a publicar" la trae de nuevo con la misma dirección. Si ya había salido en Facebook o Instagram, allá hay que borrarla a mano.</p></details>
+      <p>"Retirar de la web" la saca de la portada y su página deja de existir en la próxima actualización. No se borra: queda en "Retiradas" (al final de Publicadas) 24 horas, y "Volver a publicar" la trae de nuevo con la misma dirección. Si ya había salido en Facebook o Instagram, allá hay que borrarla a mano.</p></details>
     <details><summary>La pestaña Redes</summary>
       <p>El cronograma de hoy (qué pieza sale a qué hora, con qué voz, y si ya salió), qué notas contaría cada repaso si saliera ahora y los posteos de Facebook. Lo que contaría un repaso puede cambiar hasta su hora: si entra una nota nueva o si retirás una.</p></details>
     <details><summary>Instalar el panel como app</summary>
@@ -989,6 +1015,16 @@ function cajaDeFoto(n) {
   const f = fotoDeLaNota(n);
   const puede = f.clase !== 'ok' && !MOTIVOS_DE_FOTO[motivoDeFoto(n, E.banco?.[n.id])]?.firme;
   return `<div class="caja"><strong>Foto:</strong> <span class="est ${f.clase}">${esc(f.largo)}</span>${puede ? `<button type="button" class="boton ancho" data-accion="buscar-foto" data-id="${esc(n.id)}">Buscarle una foto</button>` : ''}</div>`;
+}
+
+/** Lo que más se hace con una nota, siempre a la vista abajo (2/10: sin tener que bajar hasta el final para decidir). */
+function barraDeAcciones(tipo, id, d) {
+  const datos = `data-tipo="${esc(tipo)}" data-id="${esc(id)}"`;
+  let botones = '';
+  if (tipo === 'pendiente' && !d) botones = `<button type="button" class="boton peligro" data-accion="descartar" ${datos}>Descartar</button><button type="button" class="boton principal" data-accion="publicar-ia" ${datos}>Publicar</button>`;
+  else if (tipo === 'sin-cuerpo' && !E.correcciones.notas?.[id]?.cuerpo) botones = `<button type="button" class="boton" data-accion="escribir" ${datos}>Escribir con IA</button><button type="button" class="boton principal" data-accion="publicar-ia" ${datos}>Publicar</button>`;
+  else if (tipo === 'publicada' && d?.estado !== 'bloqueada') botones = `<button type="button" class="boton peligro" data-accion="retirar" ${datos}>Retirar</button><button type="button" class="boton principal" data-accion="a-mano" data-tipo="publicada" data-id="${esc(id)}">Editar</button>`;
+  return botones ? `<div class="espacio-barra"></div><div class="barra-acciones">${botones}</div>` : '';
 }
 
 function vistaNota(tipo, id) {
@@ -1062,7 +1098,7 @@ function vistaNota(tipo, id) {
     <h1>${esc(c?.titulo ?? n.titulo ?? 'Nota sensible')}</h1>
     ${cuerpo}
     ${extra}
-    <div class="botones">${acciones}</div>`;
+    <div class="botones">${acciones}</div>${barraDeAcciones(tipo, id, d)}`;
   window.scrollTo(0, 0);
 }
 

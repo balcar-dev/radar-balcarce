@@ -599,3 +599,13 @@ que sea consistente para el uso diario". Qué cambió (`web/public/panel/app.js`
   sin revisar, aprobado, sacado, con cambios pedidos), los huecos sin armar, y cada día entero (principal, además, lo que dice la
   locutora). Se **aprueba**, se **saca** o se **piden cambios** (con motivo); "Elegir otras candidatas" abre las candidatas del día y frena el
   día hasta rearmarlo. Las decisiones valen sólo sobre lo aprobado (huella): regla 97. Pruebas: `efemerides-aprobacion.test.mjs`.
+- **Las listas se limpian solas** (Hernán: "así no se acumulan cosas sin sentido"): **Publicadas** muestra las últimas 24 horas; **Retiradas**,
+  las de las últimas 24 horas (después ya no se ven ni se pueden volver a publicar desde el panel); **Esperan**, lo de las últimas 48 horas
+  (`HORAS_EN_ESPERAN`, `HORAS_RETIRADAS`, `HORAS_EN_PUBLICADAS`, en `app.js`).
+- **Revisión dice qué encontró y qué corrigió**: arriba, "Qué hizo la IA" (encontró N cosas: corrigió X solas y dejó Y para que mires); después,
+  "Corregido solo" (cada falta de ortografía con su «antes → después», que ya está en la web) y "Para que mires" (lo delicado, que la IA nunca
+  corrige sola). Regla 98.
+- **Rediseño visual** (2/10): cinco pestañas con ícono y un globito con el número, una sola jerarquía de botones (el principal en rojo, el
+  que borra en rojo suave, los demás de contorno, con un ícono por lo que hacen), tarjetas con la franja de color de su sección, "¿Qué es
+  esto?" como una píldora, y en cada nota una **barra de acciones fija abajo** (Publicar/Descartar, Escribir con IA/Publicar, Editar/Retirar)
+  para decidir sin bajar hasta el final. El CSS nuevo va al final de `index.html`, marcado "REDISEÑO DEL 2/10".

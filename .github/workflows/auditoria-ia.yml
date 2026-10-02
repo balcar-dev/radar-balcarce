@@ -1,5 +1,6 @@
 # Auditoría IA (1/10/2026): lee las notas nuevas de la portada y avisa lo que esté mal (ortografía, texto roto, sección,
-# temas sensibles, afirmaciones sin sostén, títulos que no corresponden). ETAPA 1: sólo avisa; no corrige nada.
+# temas sensibles, afirmaciones sin sostén, títulos que no corresponden). Avisa; lo único que corrige solo (desde el 2/10) es la
+# ortografía chica y segura, y lo anota en web/data/correcciones-auditoria.json (la web lo aplica al armar cada nota).
 #
 # Los hallazgos van CIFRADOS para el celular a web/data/auditoria-ia.json (el repositorio es público) y se ven en la pestaña
 # "Revisión" del panel; lo grave, además, por WhatsApp. Usa Groq (gpt-oss-20b), con su propio cupo: no toca el de la lectura.
@@ -53,6 +54,7 @@ jobs:
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
           git add web/data/auditoria-ia.json
+          [ -e web/data/correcciones-auditoria.json ] && git add web/data/correcciones-auditoria.json
           if git diff --cached --quiet; then
             echo "Nada nuevo que guardar."
           else

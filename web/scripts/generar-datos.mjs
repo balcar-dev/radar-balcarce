@@ -70,7 +70,7 @@ import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson,
-  idsRetiradosAMano, correccionesAMano, conCorreccion, fechaDeLaNota, llegaTarde,
+  idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
@@ -136,6 +136,8 @@ const DIAS_DE_VISTAS = 7;
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 // Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
 const CORRECCIONES = correccionesAMano(leerJson(path.join(AQUI, '..', 'data', 'correcciones.json'), null));
+// Lo que corrigió sola la auditoría con IA (ortografía chica y segura, 2/10): web/data/correcciones-auditoria.json, lo escribe sólo "Auditoría IA".
+const CAMBIOS_AUDITORIA = cambiosDeLaAuditoria(leerJson(path.join(AQUI, '..', 'data', 'correcciones-auditoria.json'), null));
 // El panel del celular (29/09, panel/celular-datos.mjs): lo que decidió una
 // persona desde el celular (aprobar, descartar, retirar) y lo que marcó para que
 // también vaya a Facebook e Instagram. Lo escribe sólo el celular.
@@ -519,7 +521,7 @@ function notaPublicada(n) {
   }, direcciones);
   // Lo corregido a mano manda (web/data/correcciones.json), y va antes de
   // mirar el cuerpo: el cuerpo también se puede escribir ahí (27/09).
-  const corregida = conCorreccion(nota, CORRECCIONES);
+  const corregida = conCambiosDeLaAuditoria(conCorreccion(nota, CORRECCIONES), CAMBIOS_AUDITORIA);
   // Lo que no se publica nunca (las listas de sepelios), mirado en el texto
   // FINAL: el título de la fuente puede ser otro y el texto venir del panel,
   // escrito con una página que traía las necrológicas pegadas (27/09). Tampoco

@@ -32,6 +32,7 @@ export const ARCHIVOS = {
   auditoria: 'web/data/auditoria-ia.json',
   banco: 'web/data/banco-fotos.json',
   piezas: 'web/data/efemerides-piezas.json',
+  cambiosIA: 'web/data/correcciones-auditoria.json',
 };
 
 export class ErrorDeGitHub extends Error {

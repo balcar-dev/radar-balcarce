@@ -104,6 +104,38 @@ export function correccionesAMano(json) {
 }
 
 /**
+ * Lo que corrigió sola la auditoría con IA (2/10, ingesta/auditoria-ia.mjs, ETAPA 2): pares "antes → después" de una falta de
+ * ortografía chica, de web/data/correcciones-auditoria.json. Devuelve Map id → [{ campo, antes, despues }]; archivo vacío o roto, ninguna.
+ */
+export function cambiosDeLaAuditoria(json) {
+  const salida = new Map();
+  const notas = json && typeof json === 'object' ? json.notas : null;
+  if (!notas || typeof notas !== 'object') return salida;
+  for (const [id, e] of Object.entries(notas)) {
+    const cambios = (Array.isArray(e?.cambios) ? e.cambios : [])
+      .filter((c) => ['titulo', 'copete', 'cuerpo'].includes(c?.campo) && typeof c.antes === 'string' && c.antes && typeof c.despues === 'string' && c.despues);
+    if (cambios.length) salida.set(id, cambios);
+  }
+  return salida;
+}
+
+/**
+ * Aplica esos pares al texto de la nota. Sólo si el fragmento está UNA vez en el campo: si el texto cambió (se reescribió, lo corrigió
+ * una persona), el par ya no calza y no se hace nada. A diferencia de `conCorreccion`, no marca la nota como revisada por la redacción:
+ * nadie de la redacción la revisó.
+ */
+export function conCambiosDeLaAuditoria(nota, cambios) {
+  const lista = nota?.id ? cambios?.get(nota.id) : null;
+  if (!lista) return nota;
+  const salida = { ...nota };
+  for (const c of lista) {
+    const texto = salida[c.campo];
+    if (typeof texto === 'string' && texto.split(c.antes).length === 2) salida[c.campo] = texto.replace(c.antes, () => c.despues);
+  }
+  return salida;
+}
+
+/**
  * Aplica la corrección a mano de una nota, si la tiene, y la marca: la firma
  * dice "Revisada por la redacción" (CRITERIO-EDITORIAL.md § 10, "cargada o
  * corregida por una persona"; quienEscribio, components/metadatos.js). El

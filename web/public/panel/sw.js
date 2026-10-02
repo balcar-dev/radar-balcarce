@@ -4,7 +4,7 @@
 // no hay red usa la guardada. Nunca guarda nada de GitHub: las notas y la llave
 // no pasan por acá.
 
-const CACHE = 'radar-panel-8';
+const CACHE = 'radar-panel-9';
 const ARCHIVOS = ['/panel/', '/panel/app.js', '/panel/github.js', '/panel/cifrado.js', '/panel/textos.js', '/panel/fechas.js', '/panel/numeros.js', '/panel/redes-estado.js', '/panel/revision.js', '/panel/pistas.js', '/panel/fotos.js', '/panel/manifest.webmanifest'];
 
 self.addEventListener('install', (ev) => {

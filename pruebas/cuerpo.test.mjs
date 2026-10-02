@@ -307,7 +307,7 @@ test('lo que quedó publicado con el cuerpo vacío se vuelve a pedir', async () 
 test('generar-datos no publica una nota automática sin cuerpo y cuenta las que esperan', () => {
   const g = leer('web/scripts/generar-datos.mjs');
   // La corrección a mano va antes: el cuerpo también se puede escribir ahí (27/09).
-  assert.match(g, /const corregida = conCorreccion\(nota, CORRECCIONES\);/);
+  assert.match(g, /const corregida = conCambiosDeLaAuditoria\(conCorreccion\(nota, CORRECCIONES\), CAMBIOS_AUDITORIA\);/);
   assert.match(g, /if \(!humana && !tieneCuerpo\(corregida\)\) \{/);
   assert.match(g, /esperandoCuerpo: esperandoCuerpo\.length/);
   assert.match(g, /intentos,\n?\s*\}\);/, 'la reescritura recibe los intentos');

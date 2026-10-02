@@ -1,7 +1,7 @@
 // La auditoría con IA de lo que ya salió (1/10/2026, Hernán: "que lea cada tanto lo nuevo y audite que estén bien las
 // secciones, los criterios, la ortografía").
 //
-// ETAPA 1: sólo AVISA. No corrige nada ni toca ninguna nota: cada tanto lee las notas nuevas de la portada y le pide a
+// ETAPA 1: AVISA. Lo delicado no se corrige solo ni se toca ninguna nota (desde el 2/10, la ortografía chica y segura sí: ver ETAPA 2, abajo): cada tanto lee las notas nuevas de la portada y le pide a
 // una IA (Groq, gpt-oss-20b: su propio cupo, aparte del 120b que es el respaldo de la lectura) que marque lo que esté
 // mal. Los hallazgos viajan cifrados al panel del celular (el repositorio es público y un hallazgo puede decir "esta nota
 // parece identificar a un menor") y los graves, además, por WhatsApp. En una semana se ve cuántos eran reales; recién ahí
@@ -205,4 +205,63 @@ export function resumenParaWhatsApp(hallazgos = [], notas = []) {
     return `• ${String(porId.get(id)?.titulo ?? id).slice(0, 70)}: ${TIPOS[h.tipo]}`;
   });
   return `Radar Balcarce · la revisión con IA marcó ${graves.length === 1 ? 'algo grave' : `${graves.length} cosas graves`} en notas ya publicadas:\n${lineas.join('\n')}\nMirá la pestaña Revisión del panel.`;
+}
+
+// ------------------------------------------------------------------ ETAPA 2: lo mecánico se corrige solo (2/10)
+//
+// Hernán (2/10): "la revisión tendría que decir qué encontró mal y qué corrigió". Sólo se corrige solo una falta de ortografía
+// chica, segura y verificable: la IA cita el fragmento exacto, da cómo queda bien, el cambio es de unas pocas letras, no toca
+// ningún número, no es sólo de mayúsculas (nombres propios y estilo) y el fragmento aparece UNA vez en la nota. Lo demás (sección,
+// sensible, afirmación, título, texto roto) sigue siendo un aviso para una persona. El cambio no se mete en el texto de la nota
+// sino en web/data/correcciones-auditoria.json (pares "antes → después", que escribe sólo la Auditoría IA) y la web lo aplica al
+// armar cada nota (web/lib/archivo.js, conCambiosDeLaAuditoria): si el texto cambia, el par ya no calza y no hace nada. No marca la
+// nota como "revisada por la redacción": nadie de la redacción la revisó.
+
+export const CORRECCION_AUTOMATICA = { citaMaxima: 60, cambioMaximo: 3, diasGuardados: 190 };
+
+/** Cuántas letras hay que cambiar para pasar de una a la otra (Levenshtein). */
+export function distanciaDeEdicion(a, b) {
+  const x = [...String(a)];
+  const y = [...String(b)];
+  let previa = Array.from({ length: y.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= x.length; i += 1) {
+    const actual = [i];
+    for (let j = 1; j <= y.length; j += 1) actual[j] = Math.min(previa[j] + 1, actual[j - 1] + 1, previa[j - 1] + (x[i - 1] === y[j - 1] ? 0 : 1));
+    previa = actual;
+  }
+  return previa[y.length];
+}
+
+const numerosDe = (t) => (String(t).match(/\d+/g) ?? []).join(',');
+
+/**
+ * El cambio que se puede hacer solo para este hallazgo, o null: { campo, antes, despues }. Sólo ortografía; ver arriba por qué.
+ * `nota` es la de la portada (titulo, copete, cuerpo).
+ */
+export function cambioMecanico(h, nota) {
+  if (h?.tipo !== 'ortografia') return null;
+  const antes = String(h.cita ?? '').trim();
+  const despues = String(h.sugerencia ?? '').trim();
+  if (!antes || !despues || antes === despues || antes.length > CORRECCION_AUTOMATICA.citaMaxima || despues.length > CORRECCION_AUTOMATICA.citaMaxima + 20) return null;
+  if (/[\n\r]/.test(despues) || antes.toLowerCase() === despues.toLowerCase()) return null;
+  if (numerosDe(antes) !== numerosDe(despues)) return null;
+  if (distanciaDeEdicion(antes, despues) > CORRECCION_AUTOMATICA.cambioMaximo) return null;
+  const donde = ['titulo', 'copete', 'cuerpo'].filter((c) => String(nota?.[c] ?? '').includes(antes));
+  const veces = donde.reduce((s, c) => s + String(nota[c]).split(antes).length - 1, 0);
+  return donde.length === 1 && veces === 1 ? { campo: donde[0], antes, despues } : null;
+}
+
+/** El libro de lo corregido solo: { notas: { id: { titulo, ruta, seccion, cuando, cambios: [{ campo, antes, despues }] } } }, con lo nuevo y sin lo viejo. */
+export function conCambiosGuardados(libro = {}, cambios = [], notas = [], ahora = new Date()) {
+  const porId = new Map(notas.map((n) => [n.id, n]));
+  const salida = { notas: { ...(libro?.notas ?? {}) } };
+  for (const c of cambios) {
+    const n = porId.get(c.id);
+    const antes = salida.notas[c.id] ?? { titulo: n?.titulo ?? '', ruta: n?.ruta ?? null, seccion: n?.seccion ?? '', cambios: [] };
+    if (antes.cambios.some((x) => x.campo === c.campo && x.antes === c.antes)) continue;
+    salida.notas[c.id] = { ...antes, cuando: ahora.toISOString(), cambios: [...antes.cambios, { campo: c.campo, antes: c.antes, despues: c.despues }] };
+  }
+  const limite = ahora.getTime() - CORRECCION_AUTOMATICA.diasGuardados * 86400e3;
+  salida.notas = Object.fromEntries(Object.entries(salida.notas).filter(([, e]) => Date.parse(e.cuando) >= limite));
+  return salida;
 }
