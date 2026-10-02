@@ -1,6 +1,67 @@
 {
-  "generado": "2026-10-02T13:32:19.541Z",
+  "generado": "2026-10-02T14:09:15.077Z",
   "notas": [
+    {
+      "id": "1e41jwt",
+      "titulo": "José Luis Pérez se reúne con dirigentes nacionales del peronismo",
+      "copete": "El exintendente balcarceño compartió un almuerzo con referentes del Partido Justicialista Nacional. Conversaron sobre la situación política del país y el escenario partidario actual.",
+      "cuerpo": "El exintendente de Balcarce José Luis Pérez compartió un almuerzo con referentes del justicialismo nacional. Del encuentro participó el exsecretario de la Comisión Agropecuaria partidaria y exministro de Agricultura, quien llegó acompañado por excolaboradores y por el exintendente de General Madariaga, Adrián Mircovich.\n\nDurante la reunión, los dirigentes conversaron acerca del panorama político nacional y provincial. También intercambiaron opiniones sobre la actualidad y los desafíos institucionales del Partido Justicialista en medio de distintos movimientos sectoriales.",
+      "guion": "Jose Luis Perez se reune con dirigentes nacionales del peronismo",
+      "seccion": "Política",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/politica/jose-luis-perez-compartio-un-encuentro-con-dirigentes-del-pj-nacional",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T13:42:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T14:01:24.441Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Almuerzo entre dirigentes del peronismo nacional y local",
+        "Participación de referentes de General Madariaga",
+        "Análisis de la actualidad política y partidaria"
+      ],
+      "seSabe": [
+        "José Luis Pérez almorzó con dirigentes del justicialismo nacional en Balcarce",
+        "Participó el exsecretario de la Comisión Agropecuaria del Partido Justicialista y exministro de Agricultura",
+        "Estuvo presente el exintendente de General Madariaga Adrián Mircovich"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El exintendente José Luis Pérez compartió un almuerzo con referentes del justicialismo nacional para analizar la situación política y los desafíos del partido.",
+      "etiquetas": [
+        "José Luis Pérez",
+        "Partido Justicialista",
+        "Política",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/jose-luis-perez-compartio-un-encuentro-con-dirigentes-del-pj-nacional",
+          "fecha": "2026-10-02T13:42:44.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el encuentro político entre José Luis Pérez y dirigentes del justicialismo nacional en Balcarce."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "jose-luis-perez-se-reune-con-dirigentes-nacionales-del-peronismo",
+      "foto": {
+        "archivo": "fotos-notas/1e41jwt.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
     {
       "id": "164o14u",
       "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
@@ -223,45 +284,160 @@
       }
     },
     {
-      "id": "1h4tr1q",
-      "titulo": "Un ladrón entra a robar a un comercio pero escapa por la alarma",
-      "copete": "Un delincuente rompió el vidrio de una casa de repuestos en la madrugada del viernes. Activó la alarma al intentar sustraer herramientas y huyó del lugar.",
-      "cuerpo": "Un delincuente ingresó a un local de repuestos ubicado sobre la calle Chacabuco, entre 11 y 13, durante la madrugada de este viernes cerca de las 4:15. El ladrón rompió un vidrio laminado de cuatro por cuatro metros para entrar al establecimiento, propiedad de la familia Salvio.\n\nEl individuo intentó llevarse herramientas y alcanzó a robar algunos objetos antes de escapar rápidamente al activarse el sistema de seguridad. Personal policial acudió al negocio para efectuar peritajes y revisar registros de cámaras de seguridad con el fin de identificar al autor.",
-      "guion": "Un ladrón entra a robar a un comercio pero escapa por la alarma",
-      "seccion": "Policiales",
+      "id": "1gt8iio",
+      "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
+      "copete": "El arzobispo de Buenos Aires describió a la Argentina afectada por la pobreza y la polarización política. Lo expresó en la previa de la tradicional caminata a Luján y de la llegada de León XIV.",
+      "cuerpo": "El arzobispo de Buenos Aires, Jorge García Cuerva, afirmó que la visita del papa León XIV encontrará a una Argentina golpeada por la pobreza, la intolerancia y la división política. El prelado realizó estas declaraciones tras una misa en la Catedral Metropolitana, en la antesala de la 52ª Peregrinación Juvenil a Luján.\n\nEl recorrido abarca unos 60 kilómetros y finaliza el domingo 4 con la misa central a las 7 frente al templo. La organización cuenta con más de 20.000 voluntarios y la coordinación entre la Iglesia y diferentes niveles de gobierno.\n\nEl pontífice estará en el país entre el 8 y el 11 de noviembre, con actividades en Buenos Aires, Córdoba y Luján. Su agenda incluye una misa multitudinaria en Palermo el lunes 9 y otra celebración frente a la Basílica el miércoles 11 de noviembre.",
+      "guion": "García Cuerva advierte sobre la crisis social antes de la visita papal",
+      "seccion": "Argentina",
       "medios": [
-        "Puntonueve (FM 100.9)"
+        "La Nación",
+        "Ámbito",
+        "Infobae",
+        "Clarín",
+        "TN (Todo Noticias)",
+        "Perfil"
       ],
-      "enlace": "https://puntonueve.com.ar/la-alarma-puso-en-fuga-a-delincuentes-durante-un-intento-de-robo/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T13:03:14.000Z",
+      "enlace": "https://www.infobae.com/politica/2026/10/02/duro-panorama-de-la-iglesia-al-papa-lo-espera-una-argentina-en-crisis-con-una-gran-cantidad-de-hermanos-muy-pobres/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T12:46:03.000Z",
       "sinFecha": false,
-      "visto": "2026-10-02T13:31:18.688Z",
+      "visto": "2026-10-02T14:01:24.441Z",
+      "relevancia": 88,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Jorge García Cuerva describió una Argentina afectada por la crisis y la polarización.",
+        "La Peregrinación Juvenil a Luján se realiza este fin de semana con más de 20.000 voluntarios.",
+        "El papa León XIV visita el país entre el 8 y el 11 de noviembre de 2026.",
+        "La agenda papal incluye actividades en Buenos Aires, Córdoba y Luján."
+      ],
+      "seSabe": [
+        "El arzobispo de Buenos Aires brindó declaraciones sobre el escenario social del país.",
+        "La peregrinación a Luján recorre 60 kilómetros desde Liniers hasta la Basílica.",
+        "La misa central de la caminata es el domingo a las 7.",
+        "El viaje oficial de León XIV a la Argentina se programó del 8 al 11 de noviembre."
+      ],
+      "noConfirmado": [
+        "La cantidad exacta de asistentes que participarán en las misas y actividades del Papa en noviembre.",
+        "El impacto logístico definitivo en los municipios involucrados durante la visita papal."
+      ],
+      "textoRedes": "El arzobispo Jorge García Cuerva advirtió sobre la situación social del país en la previa de la caminata a Luján y del arribo del papa León XIV, previsto para noviembre.",
+      "etiquetas": [
+        "Jorge García Cuerva",
+        "Papa León XIV",
+        "Peregrinación a Luján",
+        "Argentina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/02/duro-panorama-de-la-iglesia-al-papa-lo-espera-una-argentina-en-crisis-con-una-gran-cantidad-de-hermanos-muy-pobres/",
+          "fecha": "2026-10-02T12:46:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones del arzobispo sobre la pobreza y la organización de la peregrinación a Luján."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/garcia-cuerva-dijo-que-el-papa-se-va-a-encontrar-con-una-argentina-en-crisis-y-con-un-porcentaje-nid02102026/",
+          "fecha": "2026-10-02T13:58:13.000Z",
+          "oficial": false,
+          "aporte": "Remarcó la necesidad de un mensaje de unidad y esperanza frente a la división interna."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/jorge-garcia-cuerva-la-visita-leon-xiv-se-va-encontrar-una-argentina-herida-y-dividida-n6329315",
+          "fecha": "2026-10-02T13:35:00.000Z",
+          "oficial": false,
+          "aporte": "Advirtió sobre la crisis económica y los niveles de confrontación de cara a noviembre."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/papa-encontrara-argentina-dividida-gran-cantidad-hermanos-pobres-duro-diagnostico-iglesia-visita-leon-xiv_0_USTyPt9eXl.html",
+          "fecha": "2026-10-02T13:24:14.000Z",
+          "oficial": false,
+          "aporte": "Ubicó las declaraciones en la previa de la peregrinación hacia la Basílica."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/politica/2026/10/02/fuerte-mensaje-del-arzobispo-jorge-garcia-cuerva-el-papa-se-va-a-encontrar-con-una-argentina-en-crisis-y-dividida-por-la-grieta/",
+          "fecha": "2026-10-02T13:11:14.000Z",
+          "oficial": false,
+          "aporte": "Describió al país golpeado por la crisis pero con capacidad de resiliencia según el prelado."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/antes-de-la-llegada-de-leon-xiv-garcia-cuerva-hablo-de-una-argentina-herida-por-la-pobreza-y-la-grieta.phtml",
+          "fecha": "2026-10-02T13:40:12.000Z",
+          "oficial": false,
+          "aporte": "Aportó la cifra de pobreza del 32,3% registrada en el primer semestre de 2026."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "garcia-cuerva-advierte-sobre-la-crisis-social-antes-de-la-visita-papal",
+      "foto": {
+        "archivo": "fotos-notas/1gt8iio.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "nlcpnp",
+      "titulo": "OSeBal marca el primer vencimiento de la factura de septiembre",
+      "copete": "La prestataria recuerda las alternativas de pago disponibles para los usuarios y detalla que no habrá recargos para quienes abonen en la segunda fecha.",
+      "cuerpo": "OSeBal indicó que este viernes 2 de octubre finaliza el plazo para el primer vencimiento del período de septiembre. Desde la empresa señalaron que aquellos usuarios que paguen en la segunda fecha no tendrán que abonar intereses.\n\nLa boleta digital se obtiene en el sitio web oficial completando los datos de partida y período. Los pagos pueden efectuarse en la sede comercial situada en la calle 17 número 495.\n\nAsimismo, las opciones habilitadas comprenden medios electrónicos como Cuenta DNI, Mercado Pago, Link y Pago Mis Cuentas, además de redes de cobranza extrabancaria como Ripsa, Provincia NET, Pago Fácil y Pronto Pago.",
+      "guion": "OSeBal marca el primer vencimiento de la factura de septiembre",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-viernes-vence-la-factura-de-septiembre-de-osebal",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T12:36:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T14:01:24.441Z",
       "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "El primer vencimiento de la factura de septiembre opera este viernes 2 de octubre.",
+        "El segundo vencimiento no contempla recargos por intereses.",
+        "La boleta se puede descargar de manera online en el sitio web de la empresa.",
+        "Hay múltiples canales de pago presenciales y electrónicos habilitados."
+      ],
       "noConfirmado": [
-        "La identidad del autor del delito",
-        "El inventario exacto de los elementos sustraidos",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Un delincuente rompió un vidrio para entrar a robar a una casa de repuestos en la calle Chacabuco. El sistema de alarma se activó, lo que obligó al ladrón a escapar con pocos elementos.",
       "etiquetas": [
-        "Robo",
-        "Comercio",
-        "Policia",
-        "Balcarce"
+        "OSeBal",
+        "factura",
+        "Balcarce",
+        "pagos"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/la-alarma-puso-en-fuga-a-delincuentes-durante-un-intento-de-robo/",
-          "fecha": "2026-10-02T13:03:14.000Z",
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-viernes-vence-la-factura-de-septiembre-de-osebal",
+          "fecha": "2026-10-02T12:36:16.000Z",
           "oficial": false,
-          "aporte": "Detalles del intento de robo, ubicación, horario, daños y testimonio del propietario"
+          "aporte": "Detalló las fechas de vencimiento, la modalidad para descargar la boleta online y los canales de pago habilitados."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "n5lm6f",
+          "titulo": "Dólar blue hoy: a cuánto cotiza este viernes 25 de septiembre",
+          "fecha": "2026-09-25T07:00:08.000Z",
+          "ruta": "/nota/dolar-blue-hoy-a-cuanto-cotiza-este-viernes-25-de-septiembre-n5lm6f"
         }
       ],
       "verificacion": {
@@ -269,7 +445,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "un-ladron-entra-a-robar-a-un-comercio-pero-escapa-por-la-alarma"
+      "slug": "osebal-marca-el-primer-vencimiento-de-la-factura-de-septiembre",
+      "foto": {
+        "archivo": "fotos-notas/nlcpnp.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "xvt4t1",
@@ -279,14 +459,16 @@
       "guion": "Renuevan la carteleria del Geoparque Pun Antu",
       "seccion": "Balcarce",
       "medios": [
-        "Municipalidad de Balcarce"
+        "Radio Gabal (FM 104.1)",
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/se-puso-en-valor-la-carteleria-del-geocircuito-del-geoparque-pun-antu/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T12:28:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 84,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -338,22 +520,23 @@
       "guion": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
       "seccion": "Economía",
       "medios": [
-        "Infobae",
+        "Ámbito",
         "La Nación",
-        "Clarín",
+        "Infobae",
         "Perfil",
         "El Cronista",
         "A24",
         "Noticias Argentinas (NA)",
         "El Día",
-        "Infobrisas (Radio Brisas)"
+        "Infobrisas (Radio Brisas)",
+        "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/glencore-anuncio-una-inversion-de-us4000-millones-para-desarrollar-agua-rica-en-catamarca-nid02102026/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T12:23:46.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 83,
+      "relevancia": 90,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -443,6 +626,210 @@
       }
     },
     {
+      "id": "h1ggzr",
+      "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+      "copete": "La investigadora dialogó con ediles en un encuentro informal tras ser rechazada su convocatoria oficial. Detalló los alcances del estudio sobre plaguicidas y confirmó que enfrenta un pedido de exoneración.",
+      "cuerpo": "Durante el encuentro, la científica detalló los resultados del proyecto internacional SPRINT sobre la exposición simultánea a más de 200 plaguicidas en diferentes matrices ambientales y biológicas de la Argentina, y remarcó la necesidad de contar con controles efectivos en las aplicaciones agropecuarias.\n\nEn la segunda parte del intercambio, la especialista abordó su situación administrativa en el INTA y confirmó que el expediente continúa bajo secreto, aunque pesa sobre ella un pedido de exoneración. Según indicó, otros integrantes del equipo de trabajo también fueron alcanzados por medidas disciplinarias en el marco del mismo sumario.",
+      "guion": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-hablo-ante-concejales-sprint-sus-resultados-y-el-proceso-que-atraviesa-en-el-inta-405",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T12:05:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T14:01:24.441Z",
+      "relevancia": 88,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo",
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Virginia Aparicio expuso ante los concejales en un encuentro informal.",
+        "La científica detalló los resultados del proyecto internacional SPRINT sobre plaguicidas.",
+        "Confirmó que enfrenta un pedido de exoneración en el sumario administrativo del INTA.",
+        "El expediente del organismo nacional continúa bajo secreto."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La investigadora Virginia Aparicio expuso ante concejales sobre el proyecto SPRINT y su situación administrativa en el INTA.",
+      "etiquetas": [
+        "Virginia Aparicio",
+        "INTA",
+        "plaguicidas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-hablo-ante-concejales-sprint-sus-resultados-y-el-proceso-que-atraviesa-en-el-inta-405",
+          "fecha": "2026-10-02T12:05:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la exposición informal de Virginia Aparicio ante concejales, los resultados del proyecto SPRINT y la confirmación del pedido de exoneración en el INTA."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        },
+        {
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
+        },
+        {
+          "id": "1ytgm6c",
+          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "virginia-aparicio-expone-ante-concejales-sobre-sprint-y-su-situacion",
+      "foto": {
+        "archivo": "fotos-notas/h1ggzr.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "y1kgx4",
+      "titulo": "Fiorella Cacace detalla la labor de los escribanos",
+      "copete": "La integrante del Colegio de Escribanos explica los pilares de la profesión en la ciudad, el acceso a la actividad y la importancia de la seguridad jurídica.",
+      "cuerpo": "Según indicó, su función consiste en articular un vínculo directo entre los matriculados locales y la Delegación regional para atender distintas inquietudes.\n\nCacace explicó que los fedatarios otorgan fe pública para brindar validez legal y seguridad jurídica en contratos. Sobre su inserción laboral, detalló que accedió al ejercicio mediante una adscripción junto a su padre, aunque también existen concursos para registros vacantes. Además, mencionó la incorporación de los jóvenes profesionales Alejandro Delledonne, Sol Togni, Valeria Delledonne, Matías Trivigno y Natacha Cefaratti. Por último, señaló que el movimiento de la actividad notarial está ligado al contexto económico del país.",
+      "guion": "Fiorella Cacace detalla la labor de los escribanos",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/confianza-seguridad-y-nuevos-comienzos-fiorella-cacace-hablo-sobre-el-oficio-de-escribano-946",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T12:03:02.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T12:31:07.721Z",
+      "relevancia": 88,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La escribana Fiorella Cacace explicó los detalles de la actividad notarial en Balcarce.",
+        "Indicó que su rol vincula a los profesionales locales con la Delegación Mar del Plata.",
+        "Mencionó la incorporación de nuevos profesionales jóvenes en los últimos años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La escribana Fiorella Cacace explicó detalles sobre la labor profesional, el vínculo con la Delegación regional y la importancia de la seguridad jurídica en la actividad notarial.",
+      "etiquetas": [
+        "Fiorella Cacace",
+        "escribanos",
+        "Balcarce",
+        "Colegio de Escribanos",
+        "entrevista"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/confianza-seguridad-y-nuevos-comienzos-fiorella-cacace-hablo-sobre-el-oficio-de-escribano-946",
+          "fecha": "2026-10-02T12:03:02.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la labor notarial, el rol en la Delegación regional y la situación de la actividad en Balcarce."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "fiorella-cacace-detalla-la-labor-de-los-escribanos",
+      "foto": {
+        "archivo": "fotos-notas/y1kgx4.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1ugi3md",
+      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+      "copete": "La Asociación Balcarceña de Tenis de Mesa logró meter a todos sus representantes en la fase decisiva de la Liga Provincial FeBATeM tras disputar la última fecha en Olavarría.",
+      "cuerpo": "La Asociación Balcarceña de Tenis de Mesa clasificó a sus seis conjuntos a la instancia de Play Off en la undécima edición de la Liga Provincial por Equipos FeBATeM, tras competir en la última fecha desarrollada en el Centro de Exposiciones Municipales de Olavarría. El certamen contó con la organización de la entidad local de esa disciplina y la fiscalización de la subcomisión correspondiente.\n\nEn la primera división, el plantel integrado por Ignacio Bianchini, Nicolás Bianchini, Joaquín Alvarez y Francisco Crimaldi terminó segundo en la tabla general. Por su parte, el equipo de segunda división formado por Alfonso Arislur, Fabián Bianchini, Fausto Bosatta, Sergio Novaro y Fernando Della Valle finalizó en el primer puesto. En tercera división, el conjunto compuesto por Felipe Costa, Joaquín Kuch, Fausto Gómez y Fausto Bosatta obtuvo la máxima ubicación general.\n\nDentro de la cuarta división, el equipo A con Lucía Berruet, Pedro Orieta y Cristóbal Barbieri culminó en la primera posición, mientras que el bloque B integrado por Roberto Zabala, Enzo Giménez, Nazareno Ramírez, Andrés Astrada y Nahuel Morante se ubicó sexto. En quinta división, el plantel de Santino Duarte, Pedro Rodríguez Curate, Santiago Ibañez, Alan Ibañez y Sergio Feingold concluyó en el segundo lugar de la tabla.",
+      "guion": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/top-serrano-balcarce-clasifico-seis-equipos-a-play-off-en-liga-provincial-512",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T11:59:58.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T12:31:07.721Z",
+      "relevancia": 88,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Top Serrano metió a sus seis equipos en los Play Off provinciales.",
+        "La última fecha clasificatoria se disputó en Olavarría.",
+        "Las finales provinciales serán en el Polideportivo de Santa Clara del Mar.",
+        "Los encuentros decisivos se jugarán el 31 de octubre y el 1 de noviembre."
+      ],
+      "seSabe": [
+        "Según informó un medio local, Top Serrano Balcarce clasificó a sus seis equipos a los Play Off de la Liga Provincial FeBATeM.",
+        "La última fecha clasificatoria se disputó en el Centro de Exposiciones Municipales de Olavarría.",
+        "La organización estuvo a cargo de la Asociación de Tenis de Mesa de Olavarría con fiscalización de FeBATeM.",
+        "Los Play Off se realizarán los días 31 de octubre y 1 de noviembre en el Polideportivo de Santa Clara del Mar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Top Serrano Balcarce clasificó a sus seis equipos a los Play Off de la Liga Provincial por Equipos FeBATeM tras disputar la última fecha en Olavarría. Las finales se jugarán en Santa Clara del Mar.",
+      "etiquetas": [
+        "Tenis de mesa",
+        "Top Serrano",
+        "Liga Provincial",
+        "Balcarce",
+        "Deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/top-serrano-balcarce-clasifico-seis-equipos-a-play-off-en-liga-provincial-512",
+          "fecha": "2026-10-02T11:59:58.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados y la conformación de los seis equipos de Top Serrano Balcarce clasificados a los Play Off provinciales de tenis de mesa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1f9bhpx",
+          "titulo": "Top Serrano clasifica sus seis equipos a los Play Off provinciales",
+          "fecha": "2026-09-28T15:56:41.169Z",
+          "ruta": "/nota/top-serrano-clasifica-sus-seis-equipos-a-los-play-off-provinciales-1f9bhpx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
+    },
+    {
       "id": "ig6fdw",
       "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
       "copete": "El Ejecutivo nacional presentó en Francia un mecanismo para otorgar la ciudadanía a extranjeros que realicen inversiones. Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
@@ -452,13 +839,13 @@
       "medios": [
         "La Nación",
         "El Eco de Tandil",
-        "Ámbito",
         "Infobae",
-        "Clarín",
+        "Ámbito",
         "El Cronista",
         "C5N",
         "Noticias Argentinas (NA)",
-        "El Día"
+        "La Tecla",
+        "Clarín"
       ],
       "enlace": "https://noticiasargentinas.com/economia/argentina-lanzo-en-paris-su-programa-de-ciudadania-por-inversion_a6abf9319f814a2817c7cc497",
       "teniaImagenLaFuente": true,
@@ -550,7 +937,7 @@
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 70,
+      "relevancia": 60,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -684,6 +1071,79 @@
       }
     },
     {
+      "id": "1qitrjt",
+      "titulo": "La menor oferta de hacienda presiona a la industria frigorífica",
+      "copete": "La faena vacuna cae casi un 10% en los primeros ocho meses del año, según un informe sectorial. Las empresas exportadoras aumentan su actividad, mientras las orientadas al mercado interno sufren fuertes caídas.",
+      "cuerpo": "La industria frigorífica procesó 8,13 millones de vacunos entre enero y agosto, lo que representa una baja de casi el 10% frente a igual período de 2025, de acuerdo con un informe de Rosgan. La caída afecta con mayor fuerza a los establecimientos orientados al mercado interno, cuya actividad se redujo un 17% con unos 4,94 millones de animales faenados. En contraste, las 44 firmas con cupos de exportación incrementaron su faena un 4% interanual al alcanzar los 3,19 millones de cabezas, sostenidas por mejores valores internacionales que en agosto promediaron los USD 5.556 por tonelada.\n\nEn el mercado doméstico, el precio promedio de los cortes vacunos se ubicó en agosto en $18.533 por kilo según el INDEC, con un incremento nominal del 16% en el año frente a una inflación acumulada del 33,5%. La pérdida de poder adquisitivo provocó una merma de más de 4,5 kilos en el consumo per cápita anual, parte del cual fue reemplazado por pollo y cerdo.",
+      "guion": "La menor oferta de hacienda presiona a la industria frigorífica",
+      "seccion": "Agro",
+      "medios": [
+        "Infocampo",
+        "Noticias Agropecuarias"
+      ],
+      "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/la-menor-oferta-de-hacienda-presiona-a-la-industria-frigorifica/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T09:45:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T14:01:24.441Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La faena vacuna acumuló una caída de casi el 10% entre enero y agosto.",
+        "Las empresas exportadoras subieron su actividad un 4% interanual.",
+        "Los frigoríficos del mercado interno sufrieron una baja del 17%.",
+        "El consumo per cápita de carne vacuna bajó más de 4,5 kilos en un año."
+      ],
+      "seSabe": [
+        "La industria frigorífica faenó 8,13 millones de vacunos entre enero y agosto.",
+        "Las empresas exportadoras procesaron 3,19 millones de cabezas, un 4% más que en 2025.",
+        "El resto de la industria procesó 4,94 millones de animales, un 17% menos.",
+        "El valor promedio de exportación llegó a USD 5.556 por tonelada en agosto.",
+        "El precio promedio de la carne vacuna fue de $18.533 por kilo en agosto, según el INDEC."
+      ],
+      "noConfirmado": [
+        "No existen estadísticas oficiales que permitan determinar con precisión el destino exacto de la producción de cada establecimiento."
+      ],
+      "textoRedes": "La faena vacuna cayó casi un 10% entre enero y agosto y profundiza la brecha entre los frigoríficos exportadores y los del mercado interno, según un informe sectorial.",
+      "etiquetas": [
+        "industria frigorifica",
+        "hacienda",
+        "carne vacuna",
+        "exportaciones",
+        "consumo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Agropecuarias",
+          "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/la-menor-oferta-de-hacienda-presiona-a-la-industria-frigorifica/",
+          "fecha": "2026-10-02T09:45:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe de Rosgan sobre faena, exportaciones, precios internacionales y consumo."
+        },
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/la-industria-frigorifica-se-parte-en-dos-exportadores-sostienen-la-faena-pero-los-consumeros-sufren/",
+          "fecha": "2026-10-02T13:52:35.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo el mismo informe sobre la situación de la industria frigorífica."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-menor-oferta-de-hacienda-presiona-a-la-industria-frigorifica",
+      "foto": {
+        "archivo": "fotos-notas/1qitrjt.jpg",
+        "credito": "Foto: Noticias Agropecuarias"
+      }
+    },
+    {
       "id": "oa2ef",
       "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
       "copete": "La secretaria general de la Presidencia y un grupo de mandatarios provinciales visitaron el mercado de Rungis para observar la distribución de mercadería argentina en Europa.",
@@ -773,6 +1233,94 @@
       }
     },
     {
+      "id": "106luxe",
+      "titulo": "Sebastián Pareja rechaza la reelección de jefes comunales",
+      "copete": "El titular provincial de La Libertad Avanza encabezó un plenario en Mar del Plata con referentes de la Quinta Sección. Aseguró que el espacio se opone a la continuidad indefinida de los intendentes.",
+      "cuerpo": "El presidente de La Libertad Avanza bonaerense, Sebastián Pareja, encabezó un encuentro político en Mar del Plata junto a dirigentes de los veintisiete distritos de la Quinta Sección Electoral. Durante la actividad, desarrollada el jueves por la tarde, el referente partidario rechazó cualquier alternativa que permita la continuidad indefinida de los jefes comunales en sus cargos. \n\nEl plenario contó con la presencia del diputado nacional Alejandro Carrancio, el titular del cuerpo deliberativo marplatense Emiliano Recalt y el coordinador seccional Mariano Valiante. También asistieron los senadores provinciales Gonzalo Cabezas y Cecilia Martínez, además de la diputada Sofía Pomponio. \n\nLos dirigentes analizaron las realidades de los municipios y coordinaron una agenda común para la región orientada a replicar las políticas nacionales.",
+      "guion": "Sebastián Pareja rechaza la reelección de jefes comunales",
+      "seccion": "Política",
+      "medios": [
+        "El Eco de Tandil",
+        "Diputados Bonaerenses",
+        "Letra P",
+        "Zona Norte Diario",
+        "La Tecla"
+      ],
+      "enlace": "https://www.zonanortediario.com.ar/01/10/2026/sebastian-pareja-en-mar-del-plata-no-debe-haber-reeleccion-de-intendentes-en-la-provincia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T02:33:15.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T12:01:29.911Z",
+      "relevancia": 75,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sebastián Pareja lideró un encuentro libertario en Mar del Plata.",
+        "Participaron dirigentes de los veintisiete distritos de la Quinta Sección Electoral.",
+        "El espacio político se manifestó en contra de la reelección indefinida de intendentes."
+      ],
+      "seSabe": [
+        "Sebastián Pareja encabeza La Libertad Avanza en la provincia de Buenos Aires.",
+        "El plenario se realizó el jueves por la tarde en Mar del Plata con representantes de la Quinta Sección.",
+        "Participaron legisladores provinciales y nacionales, concejales y referentes zonales."
+      ],
+      "noConfirmado": [
+        "Todavía no se detallaron las acciones concretas que tomará el espacio legislativo respecto al debate sobre los mandatos comunales."
+      ],
+      "textoRedes": "El titular de La Libertad Avanza bonaerense, Sebastián Pareja, encabezó un plenario en Mar del Plata junto a referentes de la Quinta Sección Electoral y ratificó la postura del espacio en contra de la reelección indefinida de los intendentes.",
+      "etiquetas": [
+        "La Libertad Avanza",
+        "Sebastian Pareja",
+        "Quinta Seccion Electoral",
+        "Mar del Plata",
+        "intendentes",
+        "politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Zona Norte Diario",
+          "enlace": "https://www.zonanortediario.com.ar/01/10/2026/sebastian-pareja-en-mar-del-plata-no-debe-haber-reeleccion-de-intendentes-en-la-provincia/",
+          "fecha": "2026-10-02T02:33:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló los nombres de los dirigentes presentes, el horario del encuentro y las declaraciones principales de Sebastián Pareja."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/sebastian-pareja-ratifico-el-rechazo-de-la-libertad-avanza-a-la-reeleccion-indefinida-de-intendentes",
+          "fecha": "2026-10-02T11:51:57.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el plenario del partido libertario en Mar del Plata encabezado por Sebastián Pareja."
+        },
+        {
+          "medio": "Diputados Bonaerenses",
+          "enlace": "https://diputadosbsas.com.ar/pareja-rechazar-relecciones-indefinidas/",
+          "fecha": "2026-10-02T10:30:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la realización del encuentro partidario de la Quinta sección electoral enfocado en las reelecciones."
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.lateclamardelplata.com.ar/66551-pareja-rechazo-la-reeleccion-de-intendentes-y-dijo-que-santilli-es-el-candidato-a-gobernador-de-lla",
+          "fecha": "2026-10-02T11:42:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en el resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "sebastian-pareja-rechaza-la-reeleccion-de-jefes-comunales",
+      "foto": {
+        "archivo": "fotos-notas/106luxe.jpg",
+        "credito": "Foto: Zona Norte Diario"
+      }
+    },
+    {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
       "copete": "El titular de la ACTC aseguró que las categorías de la entidad no volverán a correr en el autódromo local. El conflicto se centra en diferencias con el Museo Fangio por un predio lindero.",
@@ -788,7 +1336,7 @@
       "fecha": "2026-10-02T01:39:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T02:01:24.180Z",
-      "relevancia": 86,
+      "relevancia": 79,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1095,8 +1643,8 @@
         "La Nueva",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
-        "Pick and Roll",
-        "Básquet Plus"
+        "Básquet Plus",
+        "Pick and Roll"
       ],
       "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
       "teniaImagenLaFuente": true,
@@ -1170,6 +1718,7 @@
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "Infobae",
+        "Clarín",
         "Ámbito",
         "Perfil",
         "El Cronista",
@@ -1177,11 +1726,10 @@
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "La Verdad",
         "A24",
         "La Nueva",
         "La Capital (Rosario)",
-        "Clarín"
+        "La Verdad"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/01/la-desigualdad-bajo-en-el-segundo-trimestre-pero-el-10-mas-rico-gana-13-veces-mas-que-el-sector-con-menos-recursos/",
       "teniaImagenLaFuente": true,
@@ -1345,12 +1893,12 @@
       "guion": "La CAF aprueba créditos por 305 millones de dólares para subte y ruta.",
       "seccion": "Argentina",
       "medios": [
+        "Clarín",
         "Infobae",
         "Perfil",
         "El Cronista",
         "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Clarín"
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/01/la-caf-aprobo-creditos-por-usd-305-millones-para-la-linea-b-de-subte-y-la-ruta-40-en-san-juan/",
       "teniaImagenLaFuente": true,
@@ -1655,17 +2203,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-01T17:31:17.133Z",
       "sinFecha": true,
       "visto": "2026-10-01T17:31:17.133Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
@@ -1732,6 +2278,72 @@
       }
     },
     {
+      "id": "swyxjn",
+      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
+      "copete": "Nahuel González Salvo y el dúo Bajo Fondo se presentan el domingo en la Casa del Bicentenario con entrada libre y gratuita. Habrá un buffet solidario a beneficio de Protección a la Infancia.",
+      "cuerpo": "La Casa del Bicentenario será escenario de un encuentro musical el próximo domingo desde las 19.30. La propuesta combina canciones, rock nacional, tango, folklore y textos, con la participación de Nahuel González Salvo y el dúo Bajo Fondo.\n\nLa actividad cuenta con la organización de la Subsecretaría de Cultura y Educación en la sede situada sobre la avenida Favaloro 785. El acceso será libre y gratuito para toda la comunidad.\n\nDurante el desarrollo del evento funcionará un buffet cuyos fondos recaudados se destinarán a la institución Protección a la Infancia.",
+      "guion": "La Casa del Bicentenario recibe un concierto benéfico",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T17:01:14.036Z",
+      "sinFecha": true,
+      "visto": "2026-10-01T17:01:14.036Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Concierto de Nahuel González Salvo y Bajo Fondo el domingo a las 19.30.",
+        "Organiza la Subsecretaría de Cultura y Educación en avenida Favaloro 785.",
+        "Buffet a beneficio de Protección a la Infancia.",
+        "Entrada libre y gratuita."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Este domingo desde las 19.30 la Casa del Bicentenario ofrece un concierto solidario con Nahuel González Salvo y Bajo Fondo. La entrada es libre y gratuita y habrá un buffet a beneficio de Protección a la Infancia.",
+      "etiquetas": [
+        "concierto",
+        "solidaridad",
+        "Casa del Bicentenario",
+        "Protección a la Infancia",
+        "Cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44964-musica-y-solidaridad-la-casa-del-bicentenario-sera-escenario-de-un-concierto-a-beneficio-de-proteccion-a-la-infancia/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la programación musical, los artistas participantes, el horario, el lugar y el fin solidario del evento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "119oqdp",
+          "titulo": "La Sociedad de Protección a la Infancia realiza Voces por la Infancia",
+          "fecha": "2026-09-27T18:30:42.064Z",
+          "ruta": "/nota/la-sociedad-de-proteccion-a-la-infancia-realiza-voces-por-la-infancia-119oqdp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-casa-del-bicentenario-recibe-un-concierto-benefico",
+      "foto": {
+        "archivo": "fotos-notas/swyxjn.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "34t457",
       "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
       "copete": "El indicador financiero sube un 4,3% y alcanza las 633 unidades. Las acciones argentinas registran pérdidas de hasta el 6% en el mercado externo.",
@@ -1743,10 +2355,10 @@
         "TN (Todo Noticias)",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "La Verdad",
         "El Día",
         "A24",
-        "Radio Mitre"
+        "Radio Mitre",
+        "La Verdad"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/01/el-riesgo-pais-vuelve-a-superar-los-630-puntos-mientras-las-acciones-argentinas-bajan-hasta-6-en-wall-street/",
       "teniaImagenLaFuente": true,
@@ -1838,7 +2450,8 @@
       "guion": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "El Diario Balcarce"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44966-el-drama-de-ticiano-le-prohibieron-vender-alfajores-en-la-calle-y-ahora-suena-con-conseguir-un-trabajo/",
       "teniaImagenLaFuente": true,
@@ -1891,87 +2504,6 @@
       "foto": {
         "archivo": "fotos-notas/jzu6k.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "copete": "La Cooperativa de Electricidad de Balcarce realiza el viernes un corte en el servicio eléctrico por tareas técnicas. La interrupción abarca distintas cuadras del centro.",
-      "cuerpo": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico el viernes 2 de octubre en el horario de 7:30 a 9:00, según informó el área de Redes. La medida responde a tareas de mantenimiento en líneas de baja tensión.\n\nLa interrupción afecta a los usuarios ubicados sobre la calle 16 entre las calles 19 y 21, en ambas veredas, y en la calle 19 desde la avenida Kelly hasta la calle 16.",
-      "guion": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T16:05:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T18:31:03.487Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Corte de luz programado para este viernes",
-        "El servicio se interrumpe de 7:30 a 9:00",
-        "Afecta a la calle 16 y la calle 19"
-      ],
-      "seSabe": [
-        "El corte de luz es este viernes de 7:30 a 9:00, según la Cooperativa de Electricidad.",
-        "Las tareas se realizan en líneas de baja tensión.",
-        "El área afectada comprende la calle 16 entre 19 y 21, y la calle 19 desde avenida Kelly hasta calle 16."
-      ],
-      "textoRedes": "La Cooperativa de Electricidad de Balcarce realiza un corte programado del servicio eléctrico este viernes de 7:30 a 9:00 por tareas en líneas de baja tensión. La interrupción afecta a las calles 16 y 19.",
-      "etiquetas": [
-        "corte de luz",
-        "Cooperativa de Electricidad",
-        "Balcarce",
-        "servicios"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/corte-de-energia-programado-para-este-viernes-5/",
-          "fecha": "2026-10-01T16:05:14.000Z",
-          "oficial": false,
-          "aporte": "Informó el horario del corte y las calles afectadas."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
-          "fecha": "2026-10-01T17:24:47.272Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha exacta del viernes 2 de octubre."
-        },
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-corte-del-servicio-electrico-este-viernes-en-un-sector-de-la-ciudad",
-          "fecha": "2026-10-01T16:15:15.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el motivo son trabajos en líneas de baja tensión."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1oji07d",
-          "titulo": "Se anuncia corte de energía para este viernes",
-          "fecha": "2026-09-17T20:27:01.000Z",
-          "ruta": "/nota/se-anuncia-corte-de-energia-para-este-viernes-1oji07d"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-cooperativa-de-electricidad-corta-el-suministro-el-viernes",
-      "foto": {
-        "archivo": "fotos-notas/alddw5.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2104,6 +2636,7 @@
         "Infobae",
         "El Cronista",
         "Perfil",
+        "A24",
         "Noticias Argentinas (NA)",
         "Infobrisas (Radio Brisas)"
       ],
@@ -2200,10 +2733,10 @@
       "seccion": "Agro",
       "medios": [
         "La Nación",
-        "Infocampo",
         "Bichos de Campo",
-        "Agroempresario",
-        "Agrositio"
+        "Agrositio",
+        "Infocampo",
+        "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248623-las-exportaciones-agroindustriales-a-la-ue-crecieron-21-en-valor-tras-el-acuerdo-con-el-mercosur.html",
       "teniaImagenLaFuente": true,
@@ -2339,14 +2872,15 @@
       "guion": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
       "seccion": "Balcarce",
       "medios": [
+        "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44961-buscan-crear-un-registro-municipal-de-acompanantes-terapeuticos-en-balcarce/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T15:01:12.943Z",
-      "sinFecha": true,
+      "sinFecha": false,
       "visto": "2026-10-01T15:01:12.943Z",
-      "relevancia": 63,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2489,91 +3023,6 @@
       "foto": {
         "archivo": "fotos-notas/189q8rb.jpg",
         "credito": "Foto: Clarín"
-      }
-    },
-    {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "copete": "Un móvil del Registro Nacional de las Personas llega a la ciudad para realizar trámites. El operativo incluye jornadas gratuitas en el Concejo Deliberante y en la Sociedad Rural.",
-      "cuerpo": "El Registro Nacional de las Personas despliega un operativo documentario en Balcarce con un vehículo equipado. La primera atención se realiza el jueves 8 de octubre, de 10 a 15, en el recinto del Honorable Concejo Deliberante, donde los vecinos pueden gestionar el DNI sin costo.\n\nEl servicio continúa el viernes 9 y el sábado 10 de octubre en el predio ferial de la Sociedad Rural, situado en la intersección de la Ruta 55 y la calle 79, en coincidencia con la Fiesta Nacional del Postre. En esas dos jornadas se tramitan tanto documentos de identidad de forma gratuita como pasaportes que requieren el pago de un arancel.",
-      "guion": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T14:33:59.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T15:23:10.187Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Llega a Balcarce un móvil documentario del RENAPER.",
-        "El jueves 8 de octubre atiende gratis en el Concejo.",
-        "El viernes 9 y sábado 10 funciona en la Sociedad Rural.",
-        "Los pasaportes tienen costo y el DNI es gratuito."
-      ],
-      "seSabe": [
-        "El móvil del RENAPER atiende en el Concejo Deliberante el jueves 8 de octubre de 10 a 15 horas.",
-        "Los trámites de DNI en el Concejo son gratuitos.",
-        "El operativo sigue el viernes 9 y el sábado 10 de octubre en la Sociedad Rural durante la Fiesta Nacional del Postre.",
-        "En la Sociedad Rural se pueden gestionar DNI gratis y pasaportes pagos."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un móvil del RENAPER llega a Balcarce para realizar trámites de DNI y pasaporte. Habrá atención gratuita en el Concejo Deliberante y en la Sociedad Rural durante la Fiesta Nacional del Postre.",
-      "etiquetas": [
-        "RENAPER",
-        "Balcarce",
-        "DNI",
-        "Fiesta Nacional del Postre",
-        "Sociedad Rural",
-        "Concejo Deliberante"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/operativo-de-documentacion-el-renaper-realizara-tramites-gratuitos-en-balcarce/",
-          "fecha": "2026-10-01T14:33:59.000Z",
-          "oficial": false,
-          "aporte": "Informó el cronograma, los horarios y las ubicaciones del móvil del RENAPER en Balcarce."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1yu9ytn",
-          "titulo": "El oficialismo defiende su rechazo a convocar a Virginia Aparicio en comisión",
-          "fecha": "2026-09-30T20:53:48.000Z",
-          "ruta": "/nota/el-oficialismo-defiende-su-rechazo-a-convocar-a-virginia-aparicio-en-1yu9ytn"
-        },
-        {
-          "id": "1xzookf",
-          "titulo": "Fernando Gray anuncia exención impositiva total para jubilados",
-          "fecha": "2026-09-29T15:47:00.000Z",
-          "ruta": "/nota/fernando-gray-anuncia-exencion-impositiva-total-para-jubilados-1xzookf"
-        },
-        {
-          "id": "8zhfqv",
-          "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
-          "fecha": "2026-09-29T14:01:11.480Z",
-          "ruta": "/nota/el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria-8zhfqv"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-renaper-instala-un-movil-en-balcarce-para-tramitar-dni",
-      "foto": {
-        "archivo": "fotos-notas/1dbyjp1.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2842,6 +3291,7 @@
       "guion": "Pan American Energy invierte mil doscientos millones de dólares en Chubut",
       "seccion": "Economía",
       "medios": [
+        "La Nación",
         "Perfil",
         "El Cronista",
         "Minuto Uno",
@@ -2923,6 +3373,58 @@
       }
     },
     {
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "copete": "El deportista local fue convocado para disputar el Campeonato Argentino de Selecciones Mayores Ascenso B en Mendoza. El certamen se jugará del 15 al 18 de este mes.",
+      "cuerpo": "El jugador balcarceño Mateo Raimondi fue convocado para integrar la selección de la Asociación Amateur Marplatense de hockey con vistas al Campeonato Argentino de Selecciones Mayores Ascenso B.\n\nEl plantel marplatense se compone de 20 deportistas que buscarán el ascenso directo a la zona A, reservado para los finalistas. Raimondi se desempeña desde hace varios años como volante por la izquierda en la primera división del MDQ 06 Hockey Club.",
+      "guion": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/mateo-reimondi-fue-convocado-para-jugar-un-campeonato-argentino",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T14:00:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T12:01:29.911Z",
+      "relevancia": 82,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Mateo Raimondi",
+        "hockey",
+        "Asociación Amateur Marplatense",
+        "San Rafael",
+        "Mendoza",
+        "MDQ 06"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/mateo-reimondi-fue-convocado-para-jugar-un-campeonato-argentino",
+          "fecha": "2026-10-02T11:21:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó la convocatoria de Mateo Raimondi al seleccionado marplatense de hockey y los detalles del torneo nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "mateo-raimondi-integra-la-seleccion-marplatense-de-hockey-para-el",
+      "foto": {
+        "archivo": "fotos-notas/1bheb6v.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
       "copete": "La segunda edición de la competencia atlética homenaje al profesor Luis Vildoza se hará el domingo 1 de noviembre. Habrá pruebas de 10 y 5 kilómetros con participación libre y gratuita.",
@@ -2938,7 +3440,7 @@
       "fecha": "2026-10-01T13:39:47.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T14:01:13.404Z",
-      "relevancia": 77,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3067,6 +3569,69 @@
       }
     },
     {
+      "id": "dwvi75",
+      "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
+      "copete": "El equipo femenino de la Escuela Municipal juega el sábado y el domingo en Mar del Plata. La competencia incluye una campaña de concientización sobre el cáncer de mama.",
+      "cuerpo": "El cronograma para el conjunto balcarceño comienza el sábado a las 9.30 frente a Sporting Rosa y continúa a las 13.30 ante Las Pepas de San Clemente. La inauguración oficial, con la presentación de los planteles y una charla preventiva, está programada para las 16.30.\n\nLas actividades siguen el domingo con las definiciones por zonas, los partidos finales, un concurso de triples y la ceremonia de premiación.",
+      "guion": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/las-correcaminos-vuelven-a-jugar-el-torneo-sporting-rosa",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T13:13:24.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T13:31:00.229Z",
+      "relevancia": 57,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El equipo de la Escuela Municipal compite en Mar del Plata.",
+        "Los partidos se juegan el sábado 3 y el domingo 4 de octubre.",
+        "El certamen promueve la concientización sobre el cáncer de mama."
+      ],
+      "seSabe": [
+        "El equipo femenino de la Escuela Municipal de Balcarce participa en el torneo Sporting Rosa",
+        "La competencia se realiza el sábado 3 y el domingo 4 de octubre en Mar del Plata",
+        "El sábado a las 9.30 juegan contra Sporting Rosa y a las 13.30 ante Las Pepas de San Clemente",
+        "El domingo se disputan las definiciones, el torneo de triples y la premiación"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las Correcaminos participan este fin de semana en el torneo de básquet Sporting Rosa en Mar del Plata, con partidos y actividades de concientización sobre el cáncer de mama.",
+      "etiquetas": [
+        "Las Correcaminos",
+        "basquet",
+        "Escuela Municipal",
+        "Sporting Rosa",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/las-correcaminos-vuelven-a-jugar-el-torneo-sporting-rosa",
+          "fecha": "2026-10-01T13:13:24.000Z",
+          "oficial": false,
+          "aporte": "Detalló la participación de Las Correcaminos en el torneo Sporting Rosa, el cronograma de partidos y las actividades de concientización."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "las-correcaminos-participan-en-el-torneo-de-basquet-sporting-rosa",
+      "foto": {
+        "archivo": "fotos-notas/dwvi75.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
       "id": "1v6m62u",
       "titulo": "El Hospital Fossati completa la meta de incorporar treinta televisores",
       "copete": "Una campaña solidaria reunió los fondos necesarios para sumar treinta televisores al Hospital Municipal Felipe Fossati. Las autoridades confirmaron que finalizó la etapa de recolección de donaciones.",
@@ -3075,7 +3640,6 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -3085,7 +3649,7 @@
       "fecha": "2026-10-01T13:00:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T13:31:00.229Z",
-      "relevancia": 99,
+      "relevancia": 89,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3158,10 +3722,10 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "InfoRegión",
-        "Noticias Agropecuarias",
         "El Día",
         "Canal 26",
-        "Infobae"
+        "Infobae",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://noticiasargentinas.com/sociedad/el-servicio-meteorologico-nacional-anticipa--lluvias-superiores-a-lo-normal--para-octubre--noviembre-y-diciembre-de-2026_a6abe67518419983d4256c83f",
       "teniaImagenLaFuente": true,
@@ -3328,6 +3892,92 @@
       }
     },
     {
+      "id": "10qtrc4",
+      "titulo": "Allanamiento policial deja un imputado por robos comerciales",
+      "copete": "La Policía secuestró elementos robados y notificó de la imputación a un joven tras un procedimiento en calle 10. La investigación lo vincula con hechos en dos locales de la avenida Gonzales Chaves.",
+      "cuerpo": "Personal de la Estación de Policía Comunal y de la Sub DDI concretó un allanamiento en un domicilio situado en calle 10 entre 1 y 3. La medida judicial fue autorizada por el Juzgado de Garantías N.º 4, a cargo del juez Juan Tapia.\n\nDurante el procedimiento, los efectivos secuestraron objetos que habían sido denunciados como robados en el comercio África, ubicado en avenida Gonzales Chaves y calle 5. Según la información policial, el sospechoso usaba al momento del operativo prendas que habrían sido empleadas en el asalto.\n\nLa investigación también lo vincula con otro episodio similar registrado en una frutería de avenida Gonzales Chaves y calle 3. De acuerdo con la acusación, en ambos casos el autor habría ingresado tras romper las vidrieras.",
+      "guion": "Allanamiento policial deja un imputado por robos comerciales.",
+      "seccion": "Policiales",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/allanaron-una-vivienda-y-secuestraron-elementos-vinculados-a-dos-robos-en-comercios",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T12:30:57.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T02:31:16.612Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-02T02:11:25.975Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "Allanamiento en calle 10 entre 1 y 3.",
+        "Secuestro de elementos del comercio África.",
+        "Un joven quedó imputado por dos hechos."
+      ],
+      "noConfirmado": [
+        "No se informó la identidad del joven imputado.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Allanaron una vivienda en calle 10 y notificaron a un joven imputado por robar en dos comercios de la avenida Gonzales Chaves tras romper las vidrieras.",
+      "etiquetas": [
+        "policiales",
+        "allanamiento",
+        "robos",
+        "comercios",
+        "policia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/allanaron-una-vivienda-y-secuestraron-elementos-vinculados-a-dos-robos-en-comercios",
+          "fecha": "2026-10-01T12:30:57.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el allanamiento policial, el secuestro de elementos y la imputación del joven por dos robos comerciales."
+        }
+      ],
+      "slug": "allanamiento-policial-deja-un-imputado-por-robos-comerciales"
+    },
+    {
+      "id": "c0hkeg",
+      "titulo": "Organizan una jornada abierta sobre salud y bienestar para adultos mayores",
+      "copete": "El encuentro se realiza el viernes desde las 15:00 en el Círculo de Educadores. Habrá charlas de especialistas y se pide un alimento no perecedero para colaborar con una institución local.",
+      "cuerpo": "El Círculo de Educadores, situado en la Calle 24 N.º 824, alberga el viernes a partir de las 15:00 horas una jornada sobre calidad de vida en la adultez organizada por el Taller de Estimulación Cognitiva Integral.\n\nEl cronograma incluye exposiciones de la dermatóloga Lucila Alonso sobre cuidado de la piel, la terapista ocupacional Jimena Scarpati acerca de prevención de caídas, la nutricionista Florencia Bianchini sobre alimentación y cerebro, y la kinesióloga Verónica Méndez sobre alteraciones del equilibrio y la marcha. Entre las charlas se prevé un intervalo a cargo del Club de Leones Balcarce.\n\nLa asistencia es abierta y gratuita, aunque los organizadores solicitan la donación de un alimento no perecedero destinado al Centro de Día Arco Iris.",
+      "guion": "Organizan una jornada abierta sobre salud y bienestar para adultos mayores.",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T11:52:38.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T12:01:06.332Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
+          "fecha": "2026-10-01T11:52:38.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "el-circulo-de-educadores-recibe-un-ciclo-de-charlas-sobre-salud-en-la",
+      "corregidaAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/c0hkeg.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "m212r6",
       "titulo": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "copete": "La Casa del Bicentenario recibirá el domingo un espectáculo musical gratuito organizado por el municipio. Habrá clásicos del rock nacional y la presentación será a beneficio de Protección a la Infancia.",
@@ -3335,17 +3985,15 @@
       "guion": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/01/bajo-fondo-y-nahuel-gonzalez-salvo-el-domingo-en-cultura/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-01T11:48:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T12:01:06.332Z",
-      "relevancia": 89,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3467,8 +4115,10 @@
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
+        "El Cronista",
         "El Destape",
         "Página/12",
+        "A24",
         "TyC Sports",
         "Olé",
         "Crónica",
@@ -3477,14 +4127,13 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "Bolavip Argentina",
-        "La Capital (Rosario)",
-        "La Nueva",
         "El Día",
-        "A24",
+        "Bolavip Argentina",
         "Clarín",
         "El Gráfico",
-        "La Brújula 24"
+        "La Capital (Rosario)",
+        "La Brújula 24",
+        "La Nueva"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/confirmado-messi-adquirio-primer-equipo-futbol-profesional-espana-2026101142741",
       "teniaImagenLaFuente": true,
@@ -3685,8 +4334,8 @@
         "La Nueva",
         "La Nación",
         "TN (Todo Noticias)",
-        "La Verdad",
-        "Infocampo"
+        "Infocampo",
+        "La Verdad"
       ],
       "enlace": "https://www.ambito.com/economia/el-agro-liquido-us3228-millones-septiembre-y-alcanzo-el-tercer-mejor-registro-25-anos-n6328761",
       "teniaImagenLaFuente": true,
@@ -3806,8 +4455,8 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Marplatense",
-        "iProfesional",
-        "Ámbito"
+        "Ámbito",
+        "iProfesional"
       ],
       "enlace": "https://www.ambito.com/economia/arca-reglamento-el-fal-como-y-cuando-deberan-aportar-los-empleadores-n6328741",
       "teniaImagenLaFuente": true,
@@ -4045,59 +4694,18 @@
         "archivo": "fotos-notas/1neicxo.jpg",
         "credito": "Foto: Ámbito"
       }
-    },
-    {
-      "id": "x9mmdo",
-      "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
-      "copete": "El piloto bonaerense analizó su rendimiento en el autódromo de Balcarce tras competir en la categoría de camionetas. Ya se prepara para la próxima fecha en San Nicolás.",
-      "cuerpo": "El piloto Otto Fritzler destacó el trazado balcarceño tras completar un destacado desempeño en las competencias de TC Pick Up. El deportista encabeza la tabla de posiciones del torneo de camionetas y ya focaliza su preparación en la competencia de Turismo Carretera programada para el fin de semana en San Nicolás.\n\nEn cuanto a la actividad en el circuito local, las categorías del Zonal del Atlántico competirán en el autódromo Juan M. Fangio durante el fin de semana largo del 10 al 12 de octubre de 2026, según se informó anteriormente.",
-      "guion": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Córdoba Competición",
-        "Acción 5 (Balcarce)"
-      ],
-      "enlace": "https://cordobacompeticion.com/nacionales/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T01:38:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T04:01:15.862Z",
-      "relevancia": 44,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "tc-pick-up"
-      ],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "Córdoba Competición",
-          "enlace": "https://cordobacompeticion.com/nacionales/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad/",
-          "fecha": "2026-10-01T01:38:10.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "balcarce-tiene-algo-especial-es-un-autodromo-de-verdad",
-      "corregidaAMano": true,
-      "foto": {
-        "archivo": "fotos-notas/x9mmdo.jpg",
-        "credito": "Foto: Córdoba Competición"
-      }
     }
   ],
   "secciones": [
+    "Política",
     "Balcarce",
     "Deportes",
-    "Policiales",
-    "Economía",
     "Argentina",
-    "Automovilismo",
+    "Economía",
     "Agro",
     "Cultura y agenda",
-    "Política",
+    "Automovilismo",
+    "Policiales",
     "Fútbol"
   ],
   "temas": [
@@ -4105,24 +4713,14 @@
       "nombre": "El hospital",
       "ranura": "hospital",
       "cuantas": 3
-    },
-    {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
-      "cuantas": 2
-    },
-    {
-      "nombre": "Las rutas",
-      "ranura": "rutas",
-      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 11,
       "sensacion": 8,
-      "humedad": 67,
-      "viento": 13,
+      "humedad": 64,
+      "viento": 14,
       "rumbo": "N",
       "cielo": "Nublado",
       "esDeDia": true
@@ -4474,7 +5072,13 @@
   },
   "pendientes": [
     {
-      "id": "uh3pmu",
+      "id": "1q3o7sk",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "vc4a8l",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
@@ -4486,10 +5090,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "vc4a8l",
+      "id": "1vy0a0a",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "1swrham",
@@ -4502,12 +5106,6 @@
       "titulo": "Javier Milei volvió a atacar a Lula y respaldó a Flávio…",
       "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "1vy0a0a",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "1t477sv",
@@ -4534,10 +5132,22 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "1c9ovac",
-      "titulo": "Quiniela Santa Fe HOY: resultados EN VIVO del miércoles 30…",
+      "id": "1b8kq9d",
+      "titulo": "Milei se reunió con Macron en París: los anuncios clave",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "18cqk35",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
       "seccion": "Argentina",
       "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "1l7b8nt",
+      "titulo": "Nito Lezcano relató lo que atravesó tras una denuncia…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1yvhtzv",
@@ -4556,19 +5166,7 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1zi52v",
-      "titulo": "La denuncia que lanzó el presidente de Platense a…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "imkij7",
-      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }

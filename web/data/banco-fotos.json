@@ -4899,13 +4899,16 @@
   "cuando": "2026-10-02T12:02:20.955Z"
  },
  "106luxe": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/106luxe.jpg",
+  "medio": "Zona Norte Diario",
+  "credito": "Foto: Zona Norte Diario",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Sebastián Pareja rechaza la reelección de jefes comunales",
-  "razon": "Groq también falló: HTTP 413 (se probó una foto libre de \"Sebastián Pareja\" en Wikimedia Commons, sin resultado)",
-  "cuando": "2026-10-02T12:02:20.955Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://www.zonanortediario.com.ar/01/10/2026/sebastian-pareja-en-mar-del-plata-no-debe-haber-reeleccion-de-intendentes-en-la-provincia/",
+  "imagenOriginal": "https://www.zonanortediario.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-01-at-7.28.49-PM.jpeg",
+  "razon": "Es la única foto con buen encuadre y nitidez de los protagonistas que no tiene marcas añadidas ni menores de edad.",
+  "cuando": "2026-10-02T14:05:27.092Z"
  },
  "g34tir": {
   "intentado": true,
@@ -5050,5 +5053,65 @@
   "cuando": "2026-10-02T13:31:50.426Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "1e41jwt": {
+  "archivo": "fotos-notas/1e41jwt.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "José Luis Pérez se reúne con dirigentes nacionales del peronismo",
+  "enlace": "https://www.radiogabal.com.ar/index.php/politica/jose-luis-perez-compartio-un-encuentro-con-dirigentes-del-pj-nacional",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Reunion%20perez%20y%20just.jpeg",
+  "razon": "Es la única opción disponible, cumple con los requisitos de nitidez y encuadre, y no tiene marcas de agua ni menores.",
+  "cuando": "2026-10-02T14:05:27.092Z"
+ },
+ "1gt8iio": {
+  "archivo": "fotos-notas/1gt8iio.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
+  "enlace": "https://www.perfil.com/noticias/politica/antes-de-la-llegada-de-leon-xiv-garcia-cuerva-hablo-de-una-argentina-herida-por-la-pobreza-y-la-grieta.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2026/08/07/trim/1140/641/jorge-garcia-cuerva-marcha-de-san-cayetano-2026-2300002.jpg",
+  "razon": "Tiene excelente nitidez, primer plano limpio sin menores y sin marcas añadidas por el medio.",
+  "cuando": "2026-10-02T14:05:27.092Z"
+ },
+ "nlcpnp": {
+  "archivo": "fotos-notas/nlcpnp.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "OSeBal marca el primer vencimiento de la factura de septiembre",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-viernes-vence-la-factura-de-septiembre-de-osebal",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2025/Frente_Aguas_1.jpg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-02T14:05:27.092Z"
+ },
+ "h1ggzr": {
+  "archivo": "fotos-notas/h1ggzr.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+  "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-hablo-ante-concejales-sprint-sus-resultados-y-el-proceso-que-atraviesa-en-el-inta-405",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-02-12-5-0A_TAPA_2.jpg",
+  "razon": "Es la única opción disponible, posee buena nitidez y no tiene marcas ni menores.",
+  "cuando": "2026-10-02T14:05:27.092Z"
+ },
+ "1qitrjt": {
+  "archivo": "fotos-notas/1qitrjt.jpg",
+  "medio": "Noticias Agropecuarias",
+  "credito": "Foto: Noticias Agropecuarias",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La menor oferta de hacienda presiona a la industria frigorífica",
+  "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/la-menor-oferta-de-hacienda-presiona-a-la-industria-frigorifica/",
+  "imagenOriginal": "https://www.noticiasagropecuarias.com/wp-content/uploads/2024/01/FRIGORIFICOS.png",
+  "razon": "Es la única imagen que ilustra el hecho (la industria frigorífica) sin mostrar personas, cumpliendo el requisito de no tener gente, y no presenta marcas de agua ni logos superpuestos.",
+  "cuando": "2026-10-02T14:05:27.092Z"
  }
 }

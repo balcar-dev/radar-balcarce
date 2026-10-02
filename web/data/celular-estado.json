@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T13:32:19.541Z",
- "portada": 49,
- "archivo": 770,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-02T14:09:15.077Z",
+ "portada": 58,
+ "archivo": 774,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T13:32:19.583Z",
+  "generado": "2026-10-02T14:09:15.122Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-02T10:04:01.422Z"
    },
    {
@@ -116,27 +116,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 55,
     "notas": [
-     {
-      "id": "1knptpr",
-      "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
-      "seccion": "Deportes"
-     },
      {
       "id": "5pxon8",
       "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
       "seccion": "Economía"
      },
      {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "id": "1gt8iio",
+      "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
+      "seccion": "Argentina"
+     },
+     {
+      "id": "nlcpnp",
+      "titulo": "OSeBal marca el primer vencimiento de la factura de septiembre",
       "seccion": "Balcarce"
      },
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
-      "seccion": "Balcarce"
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -155,13 +155,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1a9rnj4",
-      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+      "id": "jzu6k",
+      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce"
      },
      {
-      "id": "jzu6k",
-      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "id": "1a9rnj4",
+      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
       "seccion": "Balcarce"
      }
     ]
@@ -173,24 +173,47 @@
      "id": "1bheb6v",
      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
      "cuando": "2026-10-02T12:04:52.139Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1knptpr",
      "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
-     "seccion": "Deportes",
-     "marcada": false
-    },
+     "cuando": "2026-10-02T13:35:24.696Z"
+    }
+   ],
+   "cola": [
     {
      "id": "xvt4t1",
      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
      "seccion": "Balcarce",
      "marcada": false
+    },
+    {
+     "id": "y1kgx4",
+     "titulo": "Fiorella Cacace detalla la labor de los escribanos",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1ugi3md",
+     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "164o14u",
+     "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "nlcpnp",
+     "titulo": "OSeBal marca el primer vencimiento de la factura de septiembre",
+     "seccion": "Balcarce",
+     "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-02T13:34:52.139Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-02T15:05:24.696Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
