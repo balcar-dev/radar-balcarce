@@ -3764,12 +3764,16 @@
   "intentos": 3
  },
  "5p0wce": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/5p0wce.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La Pepa Brizuela canta el himno antes del partido de la Selección",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-01T05:01:50.537Z",
-  "intentos": 3
+  "enlace": "https://www.minutouno.com/deportes/asi-sono-el-himno-nacional-el-amistoso-la-seleccion-argentina-y-bolivia-n6328688",
+  "imagenOriginal": "https://media.minutouno.com/p/7509f06e583fe96f4a6520529f5561ca/adjuntos/150/imagenes/043/676/0043676376/himno.jpg",
+  "razon": "Es la foto de mejor encuadre y nitidez relacionada con la nota sobre La Pepa Brizuela cantando el himno, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-02T00:01:46.097Z"
  },
  "x9mmdo": {
   "archivo": "fotos-notas/x9mmdo.jpg",
@@ -4659,5 +4663,29 @@
   "cuando": "2026-10-01T23:20:33.803Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "b68hv9": {
+  "archivo": "fotos-notas/b68hv9.jpg",
+  "medio": "El Destape",
+  "credito": "Foto: El Destape",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El EAAF identifica los restos de un desaparecido en 1977",
+  "enlace": "https://www.eldestapeweb.com/sociedad/identificaron-cuerpo-carlos-simon-poblete-desaparecido-cordoba-1977-2026101204557",
+  "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1790897216469.jpg?&cw=1600&ch=900",
+  "razon": "Es la única foto con excelente nitidez y encuadre que no posee marcas de agua superpuestas ni menores de edad.",
+  "cuando": "2026-10-02T00:01:46.097Z"
+ },
+ "189q8rb": {
+  "archivo": "fotos-notas/189q8rb.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Fondo Monetario pide que el crecimiento económico argentino llegue a todos los sectores",
+  "enlace": "https://www.clarin.com/economia/fmi-advirtio-importante-crecimiento-amplie-distribuya-forma-equitativa_0_eO07smY52s.html",
+  "imagenOriginal": "https://www.clarin.com/img/2025/09/30/pi-UMHCM4_2000x1500__1.jpg",
+  "razon": "La foto A muestra claramente a los actores principales relacionados con la temática económica sin marcas de agua ni menores, con buena nitidez y encuadre.",
+  "cuando": "2026-10-02T00:01:46.097Z"
  }
 }
