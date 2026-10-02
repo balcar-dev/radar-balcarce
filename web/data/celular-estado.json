@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T19:33:24.693Z",
- "portada": 61,
- "archivo": 799,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-02T20:01:54.004Z",
+ "portada": 62,
+ "archivo": 800,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-02T19:33:24.738Z",
+  "generado": "2026-10-02T20:01:54.047Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,12 +147,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 51,
     "notas": [
      {
-      "id": "1h348rv",
-      "titulo": "Caputo anticipa una reforma impositiva para 2031 en el Coloquio de IDEA",
-      "seccion": "Economía"
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
      },
      {
       "id": "zdkvaa",
@@ -160,13 +160,13 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
+      "id": "5pxon8",
+      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
+      "seccion": "Economía"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      }
     ]
@@ -217,12 +217,6 @@
      "id": "y1kgx4",
      "titulo": "Fiorella Cacace detalla la labor de los escribanos",
      "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "1ugi3md",
-     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
-     "seccion": "Deportes",
      "marcada": false
     }
    ],
