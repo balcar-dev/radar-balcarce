@@ -3392,16 +3392,16 @@
   "borrada": true
  },
  "1lfoejz": {
-  "archivo": "fotos-notas/1lfoejz.jpg",
   "medio": "Zona Norte Diario",
-  "credito": "Foto: Zona Norte Diario",
   "licencia": null,
   "origen": "medio",
   "titulo": "Leo Nardini expone la gestión de Malvinas Argentinas en un foro internacional",
   "enlace": "https://www.zonanortediario.com.ar/30/09/2026/nardini-presento-el-proyecto-distrito-malvinas-en-un-encuentro-internacional-sobre-desarrollo-urbano/",
   "imagenOriginal": "https://www.zonanortediario.com.ar/wp-content/uploads/2026/09/image-182-scaled.png",
   "razon": "Muestra mejor la exposición sobre la gestión con una diapositiva clara, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-09-30T21:31:43.793Z"
+  "cuando": "2026-09-30T21:31:43.793Z",
+  "intentado": true,
+  "borrada": true
  },
  "1xow9qi": {
   "archivo": "fotos-notas/1xow9qi.jpg",
@@ -4804,5 +4804,17 @@
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/franco-colapinto-hizo-su-debut-en-el-circuito-de-SV5DWWG4VJGK7DQIZY444D4CTM.JPG?auth=12b0385da157a654eb188660446dc27349e03dd055fb92cf64e0dc5b26eeb73e&width=1200&height=675&quality=70&smart=true",
   "razon": "La foto B muestra el auto de frente con gran nitidez y encuadre limpio, sin marcas añadidas ni menores.",
   "cuando": "2026-10-02T09:31:30.880Z"
+ },
+ "1qqb00k": {
+  "archivo": "fotos-notas/1qqb00k.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto recibe una penalización de 15 puestos",
+  "enlace": "https://www.infobae.com/deportes/2026/10/02/la-razon-por-la-que-franco-colapinto-recibio-otra-sancion-y-largara-desde-el-fondo-en-el-gp-de-bahrein-en-malasia/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/MD564HJ4ZZHJZBAZ6XP4OIDMGE.jpg?auth=af59867fb727d5cbe3c5c94c98c72473d7e09c43e3b36d925f66bf93c7505af2&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la foto más limpia, con excelente nitidez y encuadre del piloto, sin marcas añadidas por el medio ni menores.",
+  "cuando": "2026-10-02T10:31:38.996Z"
  }
 }

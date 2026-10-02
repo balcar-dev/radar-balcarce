@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T10:01:33.097Z",
- "portada": 58,
+ "generado": "2026-10-02T10:31:51.573Z",
+ "portada": 56,
  "archivo": 755,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-02T10:01:33.129Z",
+  "generado": "2026-10-02T10:31:51.605Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-02T10:04:01.422Z"
    },
    {
     "nombre": "noticia1",
@@ -85,12 +85,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 48,
     "notas": [
      {
-      "id": "1j4lf17",
-      "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
+      "id": "1qqb00k",
+      "titulo": "Franco Colapinto recibe una penalización de 15 puestos",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce"
      },
      {
       "id": "13npbde",
@@ -98,14 +103,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "vot8hs",
-      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
-      "seccion": "Cultura y agenda"
+      "id": "1sjcoqr",
+      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -116,17 +116,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "1j4lf17",
+      "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce"
+     },
      {
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
       "seccion": "Fútbol"
      },
      {
-      "id": "g8dncb",
-      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
-      "seccion": "Balcarce"
+      "id": "vot8hs",
+      "titulo": "Lautaro Fernández gana el campeonato provincial de malambo",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -137,8 +147,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "g8dncb",
+      "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
