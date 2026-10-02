@@ -121,6 +121,7 @@ export function explicarMotivoSinCuerpo(motivo = '') {
 
 /** Lo que explica cada pestaña, arriba de la lista. */
 export const PESTANAS = {
+  fotos: 'Las notas de la portada que no tienen foto, por qué no la tienen y dónde buscarle una. Hay reglas firmes que no se saltean (nunca la foto reconocible de un menor o de una víctima, nunca una marca de agua de otro medio, Policiales sólo con foto oficial); lo demás se puede arreglar sumando una foto con su crédito. La nube la baja, la achica y la guarda; sale en la próxima actualización de la web.',
   esperan: 'Notas que el sistema no publica solo: tocan un tema delicado, son de afuera y poco contadas, o no se pudieron verificar bien. Cada una trae por qué espera y lo que contó cada medio. Para publicar una tocás "Publicar": la IA la escribe, el verificador la controla y sale; si el verificador marca algo, te la muestra para que decidas. También podés pedirla para revisarla antes o escribirla vos. Si no, la descartás.',
   'sin-cuerpo': 'Notas que SÍ salen solas, pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola en las próximas actualizaciones (hasta tres veces); si lo logra, salen sin que hagas nada. Si querés que salga ya, escribila con la IA o a mano.',
   publicadas: 'Lo que está en la web. "En la portada" son las de las últimas 36 horas; las más viejas siguen teniendo su página en el archivo (180 días). Desde acá se corrige, se cambia de sección, se reescribe con IA, se manda a las redes o se retira.',

@@ -54,8 +54,10 @@ export function clienteDePrueba() {
     'web/data/portada.json': {
       generado: hace(12),
       notas: [
-        { id: 'p1', titulo: 'El Concejo aprueba el presupuesto 2027', copete: 'La ordenanza prevé obras de cloacas en tres barrios y más fondos para salud.', cuerpo: CUERPO, seccion: 'Política', fecha: hace(90), slug: 'el-concejo-aprueba-el-presupuesto-2027', guion: 'x', fuentesConsultadas: [{ medio: 'Un medio de Balcarce', enlace: 'https://example.com/a' }] },
-        { id: 'p2', titulo: 'Ferroviarios gana el clásico y queda puntero', copete: 'Ganó 2 a 1 en el estadio de la Liga.', cuerpo: CUERPO, seccion: 'Fútbol', fecha: hace(200), slug: 'ferroviarios-gana-el-clasico', guion: 'x' },
+        { id: 'p1', titulo: 'El Concejo aprueba el presupuesto 2027', copete: 'La ordenanza prevé obras de cloacas en tres barrios y más fondos para salud.', cuerpo: CUERPO, seccion: 'Política', fecha: hace(90), slug: 'el-concejo-aprueba-el-presupuesto-2027', guion: 'x', foto: { archivo: 'fotos-notas/p1.jpg', credito: 'Foto: Un medio de Balcarce' }, fuentesConsultadas: [{ medio: 'Un medio de Balcarce', enlace: 'https://example.com/a' }] },
+        { id: 'p2', titulo: 'Ferroviarios gana el clásico y queda puntero', copete: 'Ganó 2 a 1 en el estadio de la Liga.', cuerpo: CUERPO, seccion: 'Fútbol', fecha: hace(200), slug: 'ferroviarios-gana-el-clasico', guion: 'x', foto: { archivo: 'fotos-notas/p2.jpg', credito: 'Foto: Liga' } },
+        { id: 'p4', titulo: 'Jugadoras locales compiten en un torneo de básquet en Mar del Plata', copete: 'Las categorías U13 y U15 viajaron a un torneo internacional.', cuerpo: CUERPO, seccion: 'Deportes', fecha: hace(300), slug: 'jugadoras-locales-compiten', guion: 'x', fuentesConsultadas: [{ medio: 'Municipalidad de Balcarce', enlace: 'https://example.com/m' }] },
+        { id: 'p5', titulo: 'Un choque en la ruta 55 de ayer', copete: 'Dos heridos.', cuerpo: CUERPO, seccion: 'Policiales', fecha: hace(1800), slug: 'un-choque-en-la-ruta-55', guion: 'x', foto: { archivo: 'fotos-notas/p5.jpg', credito: 'Foto: Bomberos' } },
         { id: 'p3', titulo: 'La Cooperativa anuncia un corte de luz para el miércoles', copete: 'Será de 8 a 12 en el barrio Norte por trabajos en la red.', cuerpo: CUERPO, seccion: 'Balcarce', fecha: hace(40), slug: 'la-cooperativa-anuncia-un-corte-de-luz', guion: 'x' },
       ],
       pendientes: [{ id: 'e1', titulo: null, seccion: 'Policiales', motivo: 'necesita ojo humano: "detenido"' }, { id: 'e3', titulo: 'Sortean dos entradas para el recital del sábado en el Club', seccion: 'Cultura y agenda', motivo: 'parece promoción, no noticia: "sorteo"' }],
@@ -67,6 +69,7 @@ export function clienteDePrueba() {
         { id: 's2', titulo: 'Abre la inscripción a los talleres culturales de octubre', copete: 'La Casa de la Cultura abre la inscripción a los talleres de octubre.', seccion: 'Cultura y agenda', fecha: hace(400), intentos: 3, fuentes: [{ medio: 'Municipalidad de Balcarce', enlace: 'https://example.com/g' }] },
       ],
     },
+    'web/data/banco-fotos.json': { p4: { intentado: true, origen: 'gemini', razon: 'La única foto disponible incluye menores de edad reconocibles, por lo que no se puede usar.', cuando: hace(100), intentos: 1 } },
     'web/data/celular-decisiones.json': { notas: { e2: { estado: 'descartada', por: 'Prueba', cuando: hace(200), motivo: 'descartada desde el celular' } }, redes: {} },
     'web/data/correcciones.json': { notas: {} },
     'web/data/retiradas.json': { notas: {} },

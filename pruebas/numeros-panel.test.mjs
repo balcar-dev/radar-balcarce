@@ -249,7 +249,7 @@ test('la pestaña está conectada: panel, caché del service worker y textos', (
   assert.match(app, /from '\.\/numeros\.js'/);
   assert.match(leer('web/public/panel/sw.js'), /\/panel\/numeros\.js/);
   assert.match(leer('web/public/panel/textos.js'), /numeros:/);
-  assert.match(leer('web/public/panel/index.html'), /repeat\(7, 1fr\)/);
+  assert.match(leer('web/public/panel/index.html'), /repeat\(5, 1fr\)/);
 });
 
 test('el panel no manda a nadie nada de afuera: numeros.js no carga nada ni usa la red', () => {

@@ -39,7 +39,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 95.)
+próxima regla es la 96.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -167,6 +167,7 @@ próxima regla es la 95.)
 | Sacar o corregir una nota sin el celular | `web/data/retiradas.json` / `web/data/correcciones.json` (motivo, cuándo y quién) |
 | Las estadísticas (pestaña Números del panel del celular) | `redes/estadisticas.mjs` (mide) y `redes/estadisticas-detalle.mjs` (el detalle diario de Cloudflare: horas, notas, de dónde llegan, aparatos, países → `web/data/estadisticas.json`), `web/public/panel/numeros.js` (lo que se muestra) |
 | La auditoría con IA de lo ya publicado (pestaña Revisión del panel; sólo avisa) | `ingesta/auditoria-ia.mjs` (qué lee y qué busca), `redes/auditar-notas.mjs`, `.github/workflows/auditoria-ia.yml`, `web/public/panel/revision.js` |
+| Las notas sin foto del panel (pestaña Fotos: por qué, dónde buscarla y sumarla a mano) | `web/public/panel/fotos.js`, `web/scripts/foto-manual.mjs`, `web/data/fotos-manuales.json` (lo escribe sólo "Panel del celular"), `accion=foto` de `panel.yml` |
 | Las pistas del panel (pegar un tuit y ver quién lo cubrió) | `ingesta/pistas.mjs`, `web/public/panel/pistas.js`, `panel/celular.mjs` (acción `pista`) |
 | El panel del celular | `web/public/panel/` (la app), `panel/celular-datos.mjs` (lo que decide y lo que recibe), `panel/cifrado.mjs`, `panel/celular.mjs` y `panel/reescribir-una.mjs` (el pedido a la IA), `.github/workflows/panel.yml` |
 | "Un día como hoy" y los feriados | `ingesta/efemerides.mjs` (candidatas y puntaje), `ingesta/generar-efemerides.mjs` (la corrida mensual), `ingesta/efemerides-curadas.json` (fechas patrias y de Balcarce), pestaña Fechas del panel (`web/public/panel/fechas.js`); `docs/13-EFEMERIDES.md` |

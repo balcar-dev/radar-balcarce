@@ -131,6 +131,10 @@ Generate new token (el panel tiene el enlace directo):
 
 ### Las pestañas
 
+> **Desde el 2/10/2026 la barra de abajo tiene cinco pestañas** (Esperan, Publicadas, Fotos, Redes y Más): la de Sin cuerpo
+> pasó adentro de Esperan, y Pistas, Revisión, Fechas y Números se abren desde Más. La tabla de abajo describe cada cosa; lo que cambió
+> está en "El panel reordenado", al final de este documento.
+
 Cada pestaña tiene arriba un "¿Qué es esto?" que la explica, y "Más" explica
 todo el panel.
 
@@ -561,3 +565,29 @@ Cada hora, el workflow "Auditoría IA" (`.github/workflows/auditoria-ia.yml`, `r
 ## La pestaña Pistas (1/10/2026)
 
 Se pega un dato o parte de una noticia que se vio en una red (un tuit, un mensaje) y la nube investiga si ya lo cubrieron los medios (`ingesta/pistas.mjs`, `web/public/panel/pistas.js`). Etapa 1: **el informe**, no una nota. El celular dispara "Panel del celular" con `accion=pista`; la nube (1) saca con Gemini la afirmación central y hasta tres búsquedas (sin la IA, los nombres propios y las frases entre comillas), (2) busca cada una en **Google Noticias** (sólo para contar qué medios la publicaron y cuándo: no es una fuente de texto), dejando los títulos que hablan de lo buscado, (3) mira qué tenemos nosotros en la portada, el archivo y la ingesta, y (4) compara los títulos: qué confirman y qué parece exagerado. El informe vuelve cifrado, por el mismo camino que los borradores. Lo delicado (la lista del semáforo rojo: menores, víctimas) **no se investiga**: el texto de la pista queda a la vista en GitHub. **Una nota que nazca de una pista entra con relevancia alta** (`PISTA.relevancia`, 95). Etapa 2, pendiente (PENDIENTES 0j): el borrador con las fuentes, para aprobar en "Esperan". Prueba: `pistas.test.mjs`.
+
+## El panel reordenado (2/10/2026)
+
+Hernán: "esta un poco feo, pensando en que yo tengo que ver las notas, volver, salir, ver si se escriben, si se aceptan o se rechazan;
+que sea consistente para el uso diario". Qué cambió (`web/public/panel/app.js`, `fotos.js`):
+
+- **Cinco pestañas.** La barra tenía nueve y se partía en dos filas (la grilla era de siete). Quedan las de todos los días: **Esperan**,
+  **Publicadas**, **Fotos**, **Redes** y **Más**. Pistas, Revisión, Fechas y Números son tarjetas en Más (`MENU_MAS`), cada una con un
+  "← Más" para volver; Más muestra ⚠ si la Revisión tiene algo grave.
+- **Esperan es una sola lista con dos partes**: "Esperan a una persona" y "Salen solas, pero todavía no tienen cuerpo". Cada nota sigue
+  diciendo por qué no salió (el motivo corto, o cuántas veces lo intentó la IA y por qué falló).
+- **Publicadas muestra sólo las últimas 24 horas**, lo más nuevo primero (`HORAS_EN_PUBLICADAS`). "Ver también las anteriores" suma el
+  resto de la portada (36 horas); "Cargar el archivo" trae hasta 180 días; el buscador mira todo lo cargado.
+- **La IA escribe en segundo plano.** Pedirle una nota ya no traba la pantalla con una ruedita: vuelve a la lista y la nota queda marcada
+  "la IA la está escribiendo…" y después "borrador listo"; al terminar sale un aviso con el botón "Ver el borrador". Con "Publicar", si el
+  verificador no marcó nada, se publica sola (`E.trabajos`, `trabajoDeIA`, `guardarTexto` con `silencioso`).
+- **Después de decidir se vuelve al mismo lugar de la lista** (`E.scrollLista` / `E.restaurar`), no al principio: la nota aprobada o
+  descartada baja y la siguiente ocupa su lugar.
+- **Fotos** (pestaña nueva): las notas de la portada sin foto, el motivo (`motivoDeFoto`, el mismo criterio que `npm run auditar-fotos`,
+  una prueba los compara) y si es una regla firme (menores, marca de agua, Policiales sin fuente oficial) o se puede arreglar. Cada una
+  trae enlaces de búsqueda armados con el título (Google Imágenes con permiso de uso, Wikimedia Commons) y las páginas de sus fuentes.
+  Para **sumar una foto** se pega la dirección de la imagen y su crédito y se tilda que no tiene marca de otro medio ni menores: el
+  workflow "Panel del celular" (`accion=foto`) corre `web/scripts/foto-manual.mjs`, que la baja (sólo https, JPG/PNG/WebP, hasta
+  12 MB), la achica como las del banco y la anota en `web/data/fotos-manuales.json`. `generar-datos.mjs` suma ese archivo al banco
+  (manda sobre el banco, y sólo si la foto está en disco), así "Actualizar la web" nunca pisa lo que sumó una persona. Sale en la web en la
+  próxima actualización. Pruebas: `pruebas/fotos-panel.test.mjs`.

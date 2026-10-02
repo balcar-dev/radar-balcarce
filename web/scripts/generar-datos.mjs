@@ -566,7 +566,12 @@ const deLaIngesta = (ultima.notas ?? [])
 // Elegir fotos NUEVAS es sólo en la nube (gasta cupo de IA); poner las que YA
 // están en el banco, siempre (28/09): correr esto en la PC dejaba portada.json
 // sin ninguna foto.
-let bancoDeFotos = leerJson(BANCO_FOTOS, {});
+// Las fotos que sumó una persona desde la pestaña Fotos del panel (2/10, web/scripts/foto-manual.mjs) mandan sobre las del
+// banco: las anota sólo el workflow "Panel del celular" y así no chocan con esta corrida. Sólo si el archivo está en disco.
+const FOTOS_MANUALES = path.join(AQUI, '..', 'data', 'fotos-manuales.json');
+const fotosManuales = Object.fromEntries(Object.entries(leerJson(FOTOS_MANUALES, {}))
+  .filter(([, f]) => f?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(f.archivo)))));
+let bancoDeFotos = { ...leerJson(BANCO_FOTOS, {}), ...fotosManuales };
 // Si dos notas son la misma noticia, la foto se busca en las fuentes de las dos (1/10).
 sumarFuentesDeParejas(deLaIngesta, parejasConfirmadas);
 if (enLaNube) {

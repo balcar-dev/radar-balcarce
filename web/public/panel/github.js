@@ -30,6 +30,7 @@ export const ARCHIVOS = {
   estadisticas: 'web/data/estadisticas.json',
   produccion: 'web/data/notas-por-dia.json',
   auditoria: 'web/data/auditoria-ia.json',
+  banco: 'web/data/banco-fotos.json',
 };
 
 export class ErrorDeGitHub extends Error {

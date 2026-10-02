@@ -24,6 +24,7 @@ import {
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
 import { htmlDeFormulario, htmlDeInforme } from './pistas.js';
+import { notasSinFoto, htmlDeFotos, htmlDeUnaNotaSinFoto, urlDeFotoValida, creditoDeFoto } from './fotos.js';
 import { estadoPorRed, explicarFalloDeRed, problemasDeHoy, NOMBRE_DE_RED, NOMBRE_DE_PARTE } from './redes-estado.js';
 
 const $ = (s) => document.querySelector(s);
@@ -87,11 +88,13 @@ const E = {
   decisiones: { notas: {}, redes: {} }, correcciones: { notas: {} }, archivo: null, estadoCel: null, libro: {},
   // La pestaña Fechas (se carga la primera vez que se abre).
   fechas: null, subfechas: 'efemerides', dia: null, borrador: null, filtroEstilo: null, feriado: null,
+  // Lo que se está haciendo en la nube sin trabar el panel (la IA escribiendo, una foto sumándose): { [id]: { clase, estado, … } }.
+  trabajos: {}, banco: null, publicadasTodas: false, scrollLista: null, restaurar: null,
 };
 
-function aviso(texto, { conActualizar = false, ms = 7000 } = {}) {
+function aviso(texto, { conActualizar = false, ms = 7000, ver = null } = {}) {
   const a = $('#aviso');
-  a.innerHTML = `${esc(texto)}${conActualizar ? '<br><button type="button" data-accion="actualizar-web">Actualizar la web ahora</button>' : ''}<button type="button" class="cerrar" data-accion="cerrar-aviso" aria-label="Cerrar">✕</button>`;
+  a.innerHTML = `${esc(texto)}${conActualizar ? '<br><button type="button" data-accion="actualizar-web">Actualizar la web ahora</button>' : ''}${ver ? `<br><button type="button" data-accion="ver-borrador" data-tipo="${esc(ver.tipo)}" data-id="${esc(ver.id)}">Ver el borrador</button>` : ''}<button type="button" class="cerrar" data-accion="cerrar-aviso" aria-label="Cerrar">✕</button>`;
   a.hidden = false;
   clearTimeout(aviso.t);
   aviso.t = setTimeout(() => { a.hidden = true; }, conActualizar ? 14000 : ms);
@@ -244,9 +247,9 @@ async function abrirPrivado(sobre) {
 
 async function cargar({ archivo = false } = {}) {
   const c = E.cliente;
-  const [portada, esperando, privado, decisiones, correcciones, estadoCel, libro] = await Promise.all([
+  const [portada, esperando, privado, decisiones, correcciones, estadoCel, libro, banco] = await Promise.all([
     c.leer(ARCHIVOS.portada), c.leer(ARCHIVOS.esperando), leerSiHay(c, ARCHIVOS.pendientes, null),
-    c.leer(ARCHIVOS.decisiones), c.leer(ARCHIVOS.correcciones), leerSiHay(c, ARCHIVOS.estado, null), leerSiHay(c, ARCHIVOS.libro, {}),
+    c.leer(ARCHIVOS.decisiones), c.leer(ARCHIVOS.correcciones), leerSiHay(c, ARCHIVOS.estado, null), leerSiHay(c, ARCHIVOS.libro, {}), leerSiHay(c, ARCHIVOS.banco, {}),
   ]);
   E.portada = portada.json;
   E.esperando = esperando.json.notas ?? [];
@@ -255,6 +258,7 @@ async function cargar({ archivo = false } = {}) {
   E.correcciones = { notas: {}, ...correcciones.json };
   E.estadoCel = estadoCel;
   E.libro = libro ?? {};
+  E.banco = banco ?? {};
   E.publicos = E.portada.pendientes ?? [];
   const abierto = await abrirPrivado(privado);
   E.pendientes = abierto.pendientes ? abierto.pendientes.filter((n) => !n.decision) : null;
@@ -296,13 +300,17 @@ const vueltaAPublicar = (n) => {
 
 function pestanas() {
   const nav = $('#pestanas');
-  const esperan = listasDeEsperan().sinDecidir.length;
-  const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
+  const esperan = listasDeEsperan().sinDecidir.length + E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
+  const hace24 = Date.now() - 24 * 36e5;
+  const ultimas = (E.portada?.notas ?? []).filter((n) => !n.propia && (Date.parse(n.fecha) || 0) >= hace24).length;
+  const sinFoto = E.banco ? resumenDeFotos().items.length : null;
+  const rev = E.revision ? contarRevision(E.revision.items) : null;
   const items = [
-    ['esperan', 'Esperan', esperan], ['sin-cuerpo', 'Sin cuerpo', sinCuerpo],
-    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['pistas', 'Pistas', '✎'], ['revision', 'Revisión', E.revision ? (contarRevision(E.revision.items).graves ? '⚠' : contarRevision(E.revision.items).total || '✓') : '·'], ['fechas', 'Fechas', '▦'], ['numeros', 'Números', '▮'], ['mas', 'Más', '⋯'],
+    ['esperan', 'Esperan', esperan], ['publicadas', 'Publicadas', ultimas], ['fotos', 'Fotos', sinFoto === null ? '·' : (sinFoto || '✓')],
+    ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : '⋯'],
   ];
-  nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${E.pestana === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
+  const actual = EN_MAS.has(E.pestana) ? 'mas' : E.pestana;
+  nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${actual === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
   nav.hidden = false;
 }
 
@@ -310,7 +318,9 @@ const queEs = (pestana) => `<details class="que-es"><summary>¿Qué es esto?</su
 
 function tarjeta(n, { tipo, extra = '' }) {
   const d = decididaEnElCelular(n.id);
+  const trabajo = E.trabajos[n.id]?.clase === 'ia' ? { escribiendo: '<span class="marca espera">✎ la IA la está escribiendo…</span>', publicando: '<span class="marca espera">✎ publicándola…</span>', listo: '<span class="marca">✎ borrador listo: abrila para revisarlo</span>', fallo: '<span class="marca mal">⚠ la IA no pudo escribirla</span>' }[E.trabajos[n.id].estado] ?? '' : '';
   const marcas = [
+    trabajo,
     d && tipo !== 'retirada' ? `<span class="marca">${{ publicada: '✓ aprobada', descartada: '✕ descartada', bloqueada: '✕ retirada' }[d.estado] ?? ''}</span>` : '',
     enFacebook(n.id) ? '<span class="marca">✓ en Facebook</span>' : (marcadaParaRedes(n.id) ? '<span class="marca">→ en la cola de las redes</span>' : ''),
   ].join('');
@@ -321,11 +331,12 @@ function tarjeta(n, { tipo, extra = '' }) {
 }
 
 function vistaLista() {
+  if (E.pestana === 'sin-cuerpo') E.pestana = 'esperan';
   pestanas();
   $('#recargar').hidden = false;
   const cuando = E.portada?.generado ? `La web se armó ${haceCuanto(E.portada.generado)}.` : '';
   if (E.pestana === 'esperan') vistaEsperan(cuando);
-  else if (E.pestana === 'sin-cuerpo') vistaSinCuerpo(cuando);
+  else if (E.pestana === 'fotos') vistaFotos();
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
   else if (E.pestana === 'pistas') vistaPistas();
@@ -333,47 +344,67 @@ function vistaLista() {
   else if (E.pestana === 'fechas') vistaFechas();
   else if (E.pestana === 'numeros') vistaNumeros();
   else vistaMas();
+  // Un botón para volver a "Más" desde lo que se abre desde ahí (las fechas tienen el suyo cuando hay un día abierto).
+  if (EN_MAS.has(E.pestana) && !E.dia && !E.feriado) app.insertAdjacentHTML('afterbegin', '<button type="button" class="boton volver-mas" data-pestana="mas">← Más</button>');
+  // Volver a donde se estaba: después de abrir una nota, aprobarla o descartarla, la lista sigue en el mismo lugar.
+  if (E.restaurar != null) { const y = E.restaurar; E.restaurar = null; requestAnimationFrame(() => window.scrollTo(0, y)); }
 }
 
-function vistaEsperan(cuando) {
-  const { sinDecidir, aprobadas, descartadas } = listasDeEsperan();
-  const conMotivo = (n) => `<span class="motivo">${esc(motivoCorto(n.motivo))}</span>`;
-  app.innerHTML = `
-    <h1>Esperan a una persona</h1>
-    ${queEs('esperan')}
-    <p class="estado">${esc(cuando)} ${E.pendientes ? '' : 'El detalle de cada nota todavía no llegó cifrado para este celular: llega en la próxima actualización de la web (cada media hora). Mientras tanto se ve la lista corta.'}</p>
-    ${sinDecidir.length ? sinDecidir.map((n) => tarjeta(n, { tipo: 'pendiente', extra: conMotivo(n) })).join('') : '<p class="vacio">No hay nada esperando.</p>'}
-    ${aprobadas.length ? `<h2>Aprobadas (salen en la próxima actualización)</h2>${aprobadas.map((n) => tarjeta(n, { tipo: 'pendiente' })).join('')}` : ''}
-    ${descartadas.length ? `<h2>Descartadas (se pueden volver a traer)</h2>${descartadas.map((n) => tarjeta(n, { tipo: 'pendiente' })).join('')}` : ''}`;
-}
-
-function vistaSinCuerpo(cuando) {
-  app.innerHTML = `
-    <h1>Esperan cuerpo</h1>
-    ${queEs('sin-cuerpo')}
-    <p class="estado">${esc(cuando)}</p>
-    ${E.esperando.length ? [...E.esperando].sort((a, b) => (b.fuentes?.length ?? 0) - (a.fuentes?.length ?? 0)).map((n) => {
+/** Las notas que salen solas pero todavía no tienen cuerpo, con cuántas veces se intentó y por qué falló. */
+function tarjetasSinCuerpo(sinCuerpo) {
+  if (!sinCuerpo.length) return '<p class="vacio">Todas tienen cuerpo.</p>';
+  return [...sinCuerpo].sort((a, b) => (b.fuentes?.length ?? 0) - (a.fuentes?.length ?? 0)).map((n) => {
     const e = estadoSinCuerpo({ intentos: n.intentos ?? 0, maximo: n.maximo ?? E.intentosMaximos, conCuerpo: !!E.correcciones.notas?.[n.id]?.cuerpo });
     const medios = n.fuentes?.length ?? 0;
     const porQue = e.clase === 'mal' ? explicarMotivoSinCuerpo(n.motivo) : '';
     return tarjeta(n, { tipo: 'sin-cuerpo', extra: `<span class="est ${e.clase}">${medios > 1 ? `${medios} medios la cuentan · ` : ''}${esc(e.texto)}</span>${porQue ? `<span class="meta">${esc(porQue)}</span>` : ''}` });
-  }).join('') : '<p class="vacio">Todas tienen cuerpo.</p>'}`;
+  }).join('');
 }
+
+/** "Esperan": lo que espera a una persona y, abajo, lo que sale solo pero todavía no tiene cuerpo (2/10: una sola pestaña, y cada nota dice por qué no salió). */
+function vistaEsperan(cuando) {
+  const { sinDecidir, aprobadas, descartadas } = listasDeEsperan();
+  const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo);
+  const conMotivo = (n) => `<span class="motivo">${esc(motivoCorto(n.motivo))}</span>`;
+  app.innerHTML = `
+    <h1>Esperan</h1>
+    ${queEs('esperan')}
+    <p class="estado">${esc(cuando)} ${E.pendientes ? '' : 'El detalle de cada nota todavía no llegó cifrado para este celular: llega en la próxima actualización de la web (cada media hora). Mientras tanto se ve la lista corta.'}</p>
+    <h2>Esperan a una persona (${sinDecidir.length})</h2>
+    <p class="estado">No salen solas: cada una dice por qué.</p>
+    ${sinDecidir.length ? sinDecidir.map((n) => tarjeta(n, { tipo: 'pendiente', extra: conMotivo(n) })).join('') : '<p class="vacio">No hay nada esperando.</p>'}
+    <h2>Salen solas, pero todavía no tienen cuerpo (${sinCuerpo.length})</h2>
+    ${queEs('sin-cuerpo')}
+    ${tarjetasSinCuerpo(sinCuerpo)}
+    ${aprobadas.length ? `<h2>Aprobadas (salen en la próxima actualización)</h2>${aprobadas.map((n) => tarjeta(n, { tipo: 'pendiente' })).join('')}` : ''}
+    ${descartadas.length ? `<h2>Descartadas (se pueden volver a traer)</h2>${descartadas.map((n) => tarjeta(n, { tipo: 'pendiente' })).join('')}` : ''}`;
+}
+
+/** Las horas que cubre la lista de "Publicadas" por defecto (2/10, Hernán: "sólo las últimas 24 horas, así son menos y es más fácil empezar a mirar"). */
+const HORAS_EN_PUBLICADAS = 24;
 
 function vistaPublicadas(cuando) {
   const q = E.busqueda.toLowerCase();
   const enPortada = E.portada?.notas ?? [];
-  const deLasFuentes = enPortada.filter((n) => !n.propia).length;
-  const propias = enPortada.length - deLasFuentes;
-  const todas = [...enPortada, ...(E.archivo ?? []).filter((a) => !enPortada.some((n) => n.id === a.id))];
-  const lista = todas.filter((n) => !n.propia && (!q || `${n.titulo} ${n.seccion}`.toLowerCase().includes(q))).slice(0, 80);
+  const deLasFuentes = enPortada.filter((n) => !n.propia);
+  const propias = enPortada.length - deLasFuentes.length;
+  const desde = Date.now() - HORAS_EN_PUBLICADAS * 36e5;
+  const ultimas = deLasFuentes.filter((n) => (Date.parse(n.fecha) || 0) >= desde);
+  const todas = [...enPortada, ...(E.archivo ?? []).filter((a) => !enPortada.some((n) => n.id === a.id))].filter((n) => !n.propia);
+  // Buscando, se busca en todo lo que está cargado; sin buscar, sólo lo de las últimas 24 horas (o todo, si se pidió).
+  const base = q || E.publicadasTodas ? todas : ultimas;
+  const lista = base.filter((n) => !q || `${n.titulo} ${n.seccion}`.toLowerCase().includes(q)).sort((a, b) => (Date.parse(b.fecha) || 0) - (Date.parse(a.fecha) || 0)).slice(0, 80);
   const enArchivo = E.estadoCel?.archivo;
+  const alcance = q ? `Buscando en ${todas.length} notas${E.archivo ? ' (portada y archivo)' : ' de la portada'}.`
+    : E.publicadasTodas ? `Mostrando todas: ${todas.length} notas${E.archivo ? ' (portada y archivo)' : ' de la portada (36 horas)'}.`
+      : 'Mostrando sólo las últimas 24 horas.';
   app.innerHTML = `
     <h1>Publicadas</h1>
     ${queEs('publicadas')}
-    <p class="estado">${esc(cuando)} <strong>${deLasFuentes}</strong> en la portada (las de las últimas 36 horas)${propias ? `, más ${propias} del sitio (el dólar y los repasos, que no se editan desde acá)` : ''}${enArchivo ? ` · <strong>${enArchivo}</strong> con página en el archivo (hasta 180 días)` : ''}.</p>
-    <input type="search" id="buscar" placeholder="Buscar por título o sección" value="${esc(E.busqueda)}" aria-label="Buscar">
-    <p class="estado">${E.archivo ? `Buscando también en el archivo: ${todas.length} notas.` : '<button type="button" class="boton" data-accion="archivo">Buscar también en el archivo</button>'}</p>
+    <p class="estado">${esc(cuando)} <strong>${ultimas.length}</strong> en las últimas ${HORAS_EN_PUBLICADAS} horas (${deLasFuentes.length} en la portada, que muestra 36)${propias ? `, más ${propias} del sitio (el dólar y los repasos, que no se editan desde acá)` : ''}${enArchivo ? ` · <strong>${enArchivo}</strong> con página en el archivo (hasta 180 días)` : ''}.</p>
+    <input type="search" id="buscar" placeholder="Buscar por título o sección (en todo el archivo)" value="${esc(E.busqueda)}" aria-label="Buscar">
+    <p class="estado">${esc(alcance)} ${E.publicadasTodas ? '<button type="button" class="boton" data-accion="solo-24">Sólo las últimas 24 horas</button>' : (q ? '' : '<button type="button" class="boton" data-accion="todas-las-publicadas">Ver también las anteriores</button>')}
+    ${E.archivo ? '' : '<button type="button" class="boton" data-accion="archivo">Cargar el archivo (para buscar más atrás)</button>'}</p>
     ${lista.map((n) => tarjeta(n, { tipo: 'publicada', extra: E.correcciones.notas?.[n.id] ? '<span class="marca">✎ corregida</span>' : '' })).join('') || '<p class="vacio">Nada con eso.</p>'}
     <h2 id="retiradas">Retiradas (se pueden volver a publicar)</h2>
     ${E.papelera.length ? E.papelera.map((n) => tarjeta({ ...n, fecha: n.retirada }, {
@@ -386,6 +417,72 @@ function vistaPublicadas(cuando) {
     clearTimeout(vistaPublicadas.t);
     vistaPublicadas.t = setTimeout(() => { vistaLista(); const b = $('#buscar'); b.focus(); b.setSelectionRange(b.value.length, b.value.length); }, 250);
   });
+}
+
+// ------------------------------------------------------------------ las fotos
+
+/** Las notas de la portada sin foto, con el porqué y dónde buscarla (fotos.js). Para sumarla, la nube la baja y la guarda (foto-manual.mjs). */
+function resumenDeFotos() {
+  const notas = (E.portada?.notas ?? []).filter((n) => !n.propia);
+  const items = notasSinFoto(notas, E.banco ?? {});
+  return { items, total: notas.length, conFoto: notas.length - items.length };
+}
+
+function vistaFotos() {
+  pestanas();
+  $('#recargar').hidden = false;
+  const { items, total, conFoto } = resumenDeFotos();
+  const marcas = {};
+  for (const [id, t] of Object.entries(E.trabajos)) {
+    if (t.clase !== 'foto') continue;
+    marcas[id] = { escribiendo: '<span class="marca espera">⏳ sumando la foto…</span>', listo: '<span class="marca">✓ foto sumada: sale en la próxima actualización</span>', fallo: `<span class="marca mal">⚠ no se pudo sumar${t.motivo ? `: ${esc(t.motivo)}` : ''}</span>` }[t.estado] ?? '';
+  }
+  app.innerHTML = htmlDeFotos({ items, total, conFoto, marcas }, { esc, chip, haceCuanto }) + queEs('fotos');
+}
+
+function vistaFoto(id) {
+  const item = resumenDeFotos().items.find((x) => x.nota.id === id);
+  if (!item) { aviso('Esa nota ya tiene foto o ya no está en la lista.'); vistaLista(); return; }
+  $('#pestanas').hidden = true;
+  app.innerHTML = htmlDeUnaNotaSinFoto(item, { esc, chip, haceCuanto });
+  window.scrollTo(0, 0);
+  $('#form-foto').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    sumarFoto(id, { url: $('#f-url').value.trim(), credito: $('#f-credito').value, confirmo: $('#f-ok').checked });
+  });
+}
+
+/** Le pide a la nube que baje la foto y la guarde, sin trabar el panel: la marca queda en la lista de Fotos. */
+async function sumarFoto(id, { url, credito, confirmo }) {
+  if (!urlDeFotoValida(url)) { aviso('Pegá la dirección de la imagen: tiene que empezar con https://'); return; }
+  if (!creditoDeFoto(credito)) { aviso('Falta el crédito: quién sacó la foto o de dónde es.'); return; }
+  if (!confirmo) { aviso('Tildá la confirmación: sin marca de otro medio y sin menores reconocibles.'); return; }
+  const r = await preguntar({
+    titulo: '¿Sumar esta foto?', texto: `Se baja, se achica y sale en la nota con el crédito “${creditoDeFoto(credito)}”. Tarda un par de minutos y se ve en la web en la próxima actualización.`, si: 'Sí, sumarla',
+  });
+  if (!r.ok) return;
+  E.trabajos[id] = { clase: 'foto', estado: 'escribiendo', desde: Date.now() };
+  E.restaurar = E.scrollLista ?? null;
+  vistaLista();
+  aviso('Pedido: la nube está sumando la foto. Podés seguir con otra nota.');
+  const marca = marcaNueva();
+  try {
+    await E.cliente.disparar('panel.yml', { accion: 'foto', id, pedido: url, credito: creditoDeFoto(credito).replace(/^Foto:\s*/, ''), marca });
+    let corrida = null;
+    for (let i = 0; i < 72; i += 1) {
+      await dormir(5000);
+      corrida = corridaConMarca(await E.cliente.corridas('panel.yml'), marca);
+      if (corrida?.status === 'completed') break;
+    }
+    if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado.');
+    if (corrida.conclusion !== 'success') throw new Error('la nube no pudo bajar esa imagen (¿es la dirección de la imagen y no la de la página? ¿pesa mucho?). El motivo está en GitHub → Actions → "Panel del celular"');
+    E.trabajos[id] = { clase: 'foto', estado: 'listo' };
+    aviso('Foto sumada: sale en la web en la próxima actualización.', { conActualizar: true });
+  } catch (e) {
+    E.trabajos[id] = { clase: 'foto', estado: 'fallo', motivo: String(e?.message ?? e).slice(0, 160) };
+    aviso(`No se pudo sumar la foto: ${explicarError(e)}`, { ms: 12000 });
+  }
+  if (enUnaLista()) vistaLista();
 }
 
 function vistaRedes() {
@@ -693,11 +790,26 @@ async function guardarFechas(cambiarJson, mensaje, listo) {
   }
 }
 
+/**
+ * Lo que no se usa todos los días y salió de la barra de abajo (2/10: la barra tenía 9 pestañas y se partía en dos filas):
+ * [id, nombre, ícono, para qué sirve]. Cada una se abre desde "Más" y trae su botón para volver.
+ */
+const MENU_MAS = [
+  ['pistas', 'Pistas', '✎', 'Pegá un dato o un tuit y mirá si lo cubrieron los medios.'],
+  ['revision', 'Revisión', '✓', 'Lo que la IA marcó en las notas ya publicadas (ortografía, texto roto, temas sensibles).'],
+  ['fechas', 'Fechas', '▦', 'Un día como hoy y los feriados: armarlos con anticipación.'],
+  ['numeros', 'Números', '▮', 'Visitas, producción y crecimiento de las redes.'],
+];
+const EN_MAS = new Set(MENU_MAS.map(([id]) => id));
+
 function vistaMas() {
   const a = leerAjustes();
   const reglas = reglasFb();
+  const rev = E.revision ? contarRevision(E.revision.items) : null;
+  const avisoDe = { revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
   app.innerHTML = `
     <h1>Más</h1>
+    ${MENU_MAS.map(([id, nombre, icono, que]) => `<button type="button" class="tarjeta" data-pestana="${id}"><div><strong>${icono} ${esc(nombre)}</strong>${avisoDe[id] ? ` <span class="marca${rev?.graves && id === 'revision' ? ' mal' : ''}">${esc(avisoDe[id])}</span>` : ''}</div><div class="meta">${esc(que)}</div></button>`).join('')}
     <div class="botones">
       <button type="button" class="boton ancho" data-accion="actualizar-web">Actualizar la web ahora</button>
       <a class="boton ancho enlace-boton" href="https://radarbalcarce.com" target="_blank" rel="noopener">Abrir la web</a>
@@ -705,13 +817,14 @@ function vistaMas() {
     <p class="estado">Entraste como <strong>${esc(a?.nombre ?? E.nombre)}</strong>. Cada decisión queda en GitHub con tu nombre.</p>
     <h2>Cómo funciona</h2>
     <details><summary>¿Cuándo se ve en la web lo que hago acá?</summary>
-      <p>Todo lo que hacés acá (aprobar, corregir, retirar, deshacer) se guarda al instante en GitHub y sale en la web en la próxima actualización, que es cada media hora. Si no querés esperar, tocá "Actualizar la web ahora": tarda unos 8 minutos.</p></details>
+      <p>Todo lo que hacés acá (aprobar, corregir, retirar, deshacer, sumar una foto) se guarda al instante en GitHub y sale en la web en la próxima actualización, que es cada media hora. Si no querés esperar, tocá "Actualizar la web ahora": tarda unos 8 minutos.</p></details>
     <details><summary>Esperan: publicar o descartar</summary>
-      <p>Son las notas que el sistema no publica solo. Cada una dice por qué espera y qué hay que mirar, y qué contó cada medio (con el enlace a la nota original). La IA no las escribe sola: si querés publicar una, tocás "Escribirla con IA" (tarda un minuto y te muestra el texto para corregir antes de publicar) o la escribís a mano. "Descartar" la saca de la lista; queda en "Descartadas", al final, por si te equivocaste.</p></details>
-    <details><summary>Sin cuerpo: ¿salen solas?</summary>
-      <p>Sí. Son notas que salen solas, pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola, hasta ${esc(E.intentosMaximos)} veces, en las próximas actualizaciones; si lo logra, se publican sin que hagas nada. Cada una dice cuántas veces lo intentó. Si una es importante y querés que salga ya, escribila con la IA o a mano.</p></details>
+      <p>Arriba, las notas que el sistema no publica solo. Cada una dice por qué espera y qué hay que mirar, y qué contó cada medio (con el enlace a la nota original). La IA no las escribe sola: si querés publicar una, tocás "Publicar" (la IA la escribe en un minuto, la verifica y sale) o "Escribirla con IA para revisarla" (te muestra el texto para corregir antes de publicar), o la escribís a mano. Mientras la IA escribe podés seguir con otra nota: la lista marca "la IA la está escribiendo" y "borrador listo". "Descartar" la saca de la lista; queda en "Descartadas", al final, por si te equivocaste.</p>
+      <p>Abajo, las notas que salen solas pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola, hasta ${esc(E.intentosMaximos)} veces, en las próximas actualizaciones; si lo logra, se publican sin que hagas nada. Cada una dice cuántas veces lo intentó y, si falló, por qué. Si una es importante y querés que salga ya, escribila con la IA o a mano.</p></details>
     <details><summary>Publicadas: corregir, cambiar de sección, reescribir</summary>
-      <p>"Editar" cambia el título, la bajada, el cuerpo o la sección. "Reescribir con IA" le pide una versión nueva (podés decirle qué cambiar) y te la muestra antes de guardar. La dirección de la nota no cambia nunca. "En la portada" son las de las últimas 36 horas; las más viejas siguen con su página en el archivo, y se buscan con "Buscar también en el archivo".</p></details>
+      <p>Muestra las últimas 24 horas. "Ver también las anteriores" suma el resto de la portada (36 horas) y, con "Cargar el archivo", las más viejas (hasta 180 días); el buscador mira todo lo cargado. "Editar" cambia el título, la bajada, el cuerpo o la sección. "Reescribir con IA" le pide una versión nueva (podés decirle qué cambiar) y te la muestra antes de guardar. La dirección de la nota no cambia nunca.</p></details>
+    <details><summary>Fotos: dejar todas las notas con foto</summary>
+      <p>Lista las notas de la portada sin foto y por qué. Las que se pueden arreglar traen enlaces para buscarle una (Google Imágenes, Wikimedia Commons, las páginas de sus fuentes). Cuando la encontrás, copiás la dirección de la imagen, la pegás con su crédito y la nube la baja, la achica y la guarda. Las reglas firmes (menores, marcas de agua de otro medio, Policiales sin fuente oficial) no se saltean: por eso pide que confirmes que la foto no tiene marca de otro medio ni menores reconocibles.</p></details>
     <details><summary>Mandar una nota a Facebook e Instagram</summary>
       <p>Solas, a Facebook van sólo notas de Balcarce con relevancia alta. Con "Mandar también a las redes" una persona puede mandar cualquier nota publicada, también de Política o Policiales. Antes te pregunta. Sale en la próxima vuelta de las redes: ${esc(comoSalenLosPosteos(reglas))}. Mientras no salga, se puede sacar de la cola; una vez publicada, sólo se borra a mano en Facebook e Instagram.</p></details>
     <details><summary>Retirar y volver a publicar</summary>
@@ -816,6 +929,8 @@ function vistaNota(tipo, id) {
          ${fb ? '' : `<button type="button" class="boton" data-accion="redes" data-id="${esc(id)}">${marcadaParaRedes(id) ? 'Sacar de la cola de las redes' : 'Mandar también a las redes'}</button>`}
          <button type="button" class="boton peligro" data-accion="retirar" data-id="${esc(id)}">Retirar de la web</button>`;
   }
+  const tr = E.trabajos[id];
+  if (tr?.clase === 'ia') extra = `<div class="caja">${{ escribiendo: '✎ La IA la está escribiendo: tarda un minuto. Podés volver a la lista y seguir con otra: te aviso.', publicando: '✎ Se está publicando.', listo: '✎ La IA ya escribió un borrador: abajo está el botón para verlo.', fallo: `⚠ La IA no pudo escribirla: ${esc(tr.motivo ?? '')}` }[tr.estado] ?? ''}</div>${extra}`;
   app.innerHTML = `
     <button type="button" class="boton" data-accion="volver">← Volver</button>
     <p>${chip(c?.seccion ?? n.seccion)}<span class="meta">${esc(haceCuanto(n.fecha))}</span></p>
@@ -841,10 +956,22 @@ function cajaDeBorrador(tipo, id) {
     : `<button type="button" class="boton ancho" data-accion="borrador-guardado" ${datos}>¿Ya la había escrito la IA? Buscar su último borrador</button>`}</div>`;
 }
 
-async function pedirALaIA(tipo, id, pedido, { publicar = false } = {}) {
-  $('#pestanas').hidden = true;
+/**
+ * Le pide a la IA que escriba una nota, SIN trabar el panel (2/10, Hernán: "ver las notas, volver, salir, ver si se escriben…"):
+ * vuelve a la lista, la nota queda marcada "la IA la está escribiendo", y cuando termina avisa y la marca pasa a "borrador listo".
+ * Si se pidió "Publicar" y el verificador no marcó nada, sale sola (en la próxima actualización).
+ */
+function pedirALaIA(tipo, id, pedido, { publicar = false } = {}) {
+  if (E.trabajos[id]?.clase === 'ia' && E.trabajos[id].estado === 'escribiendo') { aviso('La IA ya la está escribiendo.'); return; }
   const titulo = buscar(tipo, id)?.titulo ?? '';
-  app.innerHTML = `<div class="girando"></div><p class="vacio">La IA está escribiendo <strong>${esc(titulo)}</strong>.<br>Tarda un minuto: GitHub baja las fuentes, escribe y verifica.</p>`;
+  E.trabajos[id] = { clase: 'ia', estado: 'escribiendo', tipo, titulo, desde: Date.now() };
+  E.restaurar = E.scrollLista ?? null;
+  vistaLista();
+  aviso(`La IA está escribiendo “${titulo}”. Tarda un minuto: podés seguir con otra nota, te aviso cuando esté.`, { ms: 9000 });
+  trabajoDeIA(tipo, id, pedido, { publicar, titulo });
+}
+
+async function trabajoDeIA(tipo, id, pedido, { publicar, titulo }) {
   const marca = marcaNueva();
   const desde = Date.now();
   try {
@@ -866,18 +993,25 @@ async function pedirALaIA(tipo, id, pedido, { publicar = false } = {}) {
     if (publicar && borrador.ok && borrador.texto && !(borrador.problemas ?? []).length) {
       const t = borrador.texto;
       const seccion = borrador.seccion ?? buscar(tipo, id)?.seccion ?? '';
+      E.trabajos[id] = { clase: 'ia', estado: 'publicando', tipo, titulo };
       await guardarTexto(tipo, id, { titulo: t.titulo, copete: t.copete, cuerpo: t.cuerpo, seccion }, {
-        deIA: true, extras: t, redes: null, seccionAntes: seccion, cuerpoAntes: '',
+        deIA: true, extras: t, redes: null, seccionAntes: seccion, cuerpoAntes: '', silencioso: true,
       });
+      delete E.trabajos[id];
+      if (enUnaLista()) vistaLista();
       return;
     }
-    if (publicar) aviso('La IA la escribió, pero el verificador marcó algo: revisala antes de publicar.', { ms: 9000 });
-    vistaBorrador(tipo, id, borrador);
+    E.trabajos[id] = { clase: 'ia', estado: 'listo', tipo, titulo };
+    aviso(publicar ? `La IA escribió “${titulo}”, pero el verificador marcó algo: revisala antes de publicar.` : `Lista la nota “${titulo}”: tocá para revisarla.`, { ver: { tipo, id }, ms: 20000 });
   } catch (e) {
-    aviso(explicarError(e), { ms: 9000 });
-    vistaNota(tipo, id);
+    E.trabajos[id] = { clase: 'ia', estado: 'fallo', tipo, titulo, motivo: explicarError(e) };
+    aviso(`No se pudo escribir “${titulo}”: ${explicarError(e)}`, { ms: 12000 });
   }
+  if (enUnaLista()) vistaLista();
 }
+
+/** ¿Se está viendo una lista (y no una nota o un borrador)? La barra de pestañas sólo está a la vista en las listas. */
+const enUnaLista = () => !$('#pestanas').hidden;
 
 /** Editar un texto (el de la IA, o el que ya tiene la nota) y decidir. */
 function vistaBorrador(tipo, id, b = null) {
@@ -942,7 +1076,7 @@ const aprobada = ({ titulo, copete, cuerpo }, { deIA, por, motivo = null, extras
 });
 
 async function guardarTexto(tipo, id, campos, {
-  deIA, extras, redes, seccionAntes, cuerpoAntes,
+  deIA, extras, redes, seccionAntes, cuerpoAntes, silencioso = false,
 }) {
   if (!campos.titulo || !campos.copete) { aviso('Faltan el título o la bajada.'); return; }
   // Con menos de 70 palabras una nota automática no sale sola: se avisa si se
@@ -953,7 +1087,7 @@ async function guardarTexto(tipo, id, campos, {
   const por = E.nombre;
   const n = buscar(tipo, id) ?? {};
   try {
-    app.innerHTML = '<div class="girando"></div><p class="vacio">Guardando en GitHub…</p>';
+    if (!silencioso) app.innerHTML = '<div class="girando"></div><p class="vacio">Guardando en GitHub…</p>';
     if (tipo === 'pendiente' || tipo === 'retirada') {
       const motivo = tipo === 'retirada' ? 'vuelta a publicar desde el celular' : null;
       await E.cliente.guardar(ARCHIVOS.decisiones, (j) => {
@@ -975,12 +1109,14 @@ async function guardarTexto(tipo, id, campos, {
       if (redes !== null && redes !== marcadaParaRedes(id)) await E.cliente.guardar(ARCHIVOS.decisiones, (j) => conRedes(j, id, por, redes), `Panel del celular: ${por} manda una nota a las redes`);
     }
     await cargar({ archivo: !!E.archivo });
-    if (tipo === 'publicada' || tipo === 'retirada') E.pestana = 'publicadas';
-    vistaLista();
+    if (!silencioso && (tipo === 'publicada' || tipo === 'retirada')) E.pestana = 'publicadas';
+    if (!silencioso) E.restaurar = E.scrollLista ?? null;
+    if (!silencioso || enUnaLista()) vistaLista();
     aviso(tipo === 'retirada' ? 'Vuelve a la web en la próxima actualización, con la misma dirección.' : 'Listo. Sale en la web en la próxima actualización (cada media hora).', { conActualizar: true });
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
-    vistaBorrador(tipo, id, { texto: campos, ok: true, problemas: [] });
+    if (!silencioso) vistaBorrador(tipo, id, { texto: campos, ok: true, problemas: [] });
+    else (E.trabajos[id] = { clase: 'ia', estado: 'fallo', tipo, motivo: explicarError(e) });
   }
 }
 
@@ -989,10 +1125,12 @@ async function guardarYVolver(pasos, listo) {
     app.innerHTML = '<div class="girando"></div><p class="vacio">Guardando en GitHub…</p>';
     for (const [ruta, cambiar, mensaje] of pasos) await E.cliente.guardar(ruta, cambiar, mensaje);
     await cargar({ archivo: !!E.archivo });
+    E.restaurar = E.scrollLista ?? null;
     vistaLista();
     aviso(listo, { conActualizar: true });
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
+    E.restaurar = E.scrollLista ?? null;
     vistaLista();
   }
 }
@@ -1003,8 +1141,9 @@ document.addEventListener('click', async (ev) => {
   const el = ev.target.closest('[data-pestana],[data-abrir],[data-accion]');
   if (!el || el.closest('dialog')) return;
   const { id, tipo } = el.dataset;
-  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.borrador = null; vistaLista(); window.scrollTo(0, 0); return; }
-  if (el.dataset.abrir) { vistaNota(el.dataset.abrir, id); return; }
+  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.borrador = null; E.restaurar = null; vistaLista(); window.scrollTo(0, 0); return; }
+  if (el.dataset.abrir === 'foto') { E.scrollLista = window.scrollY; vistaFoto(id); return; }
+  if (el.dataset.abrir) { E.scrollLista = window.scrollY; vistaNota(el.dataset.abrir, id); return; }
   const accion = el.dataset.accion;
   const por = E.nombre;
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
@@ -1035,7 +1174,10 @@ document.addEventListener('click', async (ev) => {
     guardarFechas((j) => conDecisionDeFeriado(j, fecha, { estado: accion === 'aprobar-feriado' ? 'aprobada' : 'cambiar', comentario, por }), 'decide un feriado', () => {
       E.feriado = null; vistaFechas(); aviso(accion === 'aprobar-feriado' ? 'Aprobado.' : 'Anotado: lo cambiamos.');
     });
-  } else if (accion === 'volver') vistaLista();
+  } else if (accion === 'volver') { E.restaurar = E.scrollLista ?? null; vistaLista(); }
+  else if (accion === 'volver-fotos') { E.restaurar = E.scrollLista ?? null; vistaLista(); }
+  else if (accion === 'todas-las-publicadas') { E.publicadasTodas = true; vistaLista(); }
+  else if (accion === 'solo-24') { E.publicadasTodas = false; vistaLista(); }
   else if (accion === 'volver-nota') vistaNota(tipo, id);
   else if (accion === 'escribir') {
     const r = await preguntar({

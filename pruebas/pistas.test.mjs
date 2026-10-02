@@ -133,6 +133,6 @@ test('el panel manda la pista a "Panel del celular" y la nube la guarda cifrada 
   const cel = fs.readFileSync(path.join(RAIZ, 'panel/celular.mjs'), 'utf8');
   assert.match(cel, /accion === 'pista'/);
   assert.match(cel, /cerrar\(\{ id, tipo: 'pista', \.\.\.informe \}, llaves\)/);
-  assert.match(fs.readFileSync(path.join(RAIZ, '.github/workflows/panel.yml'), 'utf8'), /escribir o pista/);
+  assert.match(fs.readFileSync(path.join(RAIZ, '.github/workflows/panel.yml'), 'utf8'), /escribir, pista o foto/);
   assert.match(fs.readFileSync(path.join(RAIZ, 'web/public/panel/sw.js'), 'utf8'), /\/panel\/pistas\.js/);
 });

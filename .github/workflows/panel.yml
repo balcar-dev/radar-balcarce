@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
     inputs:
       accion:
-        description: 'Qué hacer (escribir o pista)'
+        description: 'Qué hacer (escribir, pista o foto)'
         required: true
         default: escribir
       id:
@@ -25,6 +25,10 @@ on:
         required: true
       pedido:
         description: 'Lo que pidió la persona, o el texto de la pista (queda a la vista en GitHub)'
+        required: false
+        default: ''
+      credito:
+        description: 'Sólo para accion=foto: el crédito de la foto (queda a la vista en GitHub)'
         required: false
         default: ''
       marca:
@@ -65,6 +69,7 @@ jobs:
           restore-keys: cruce-
 
       - name: Escribir con IA
+        if: inputs.accion != 'foto'
         # Lo que manda el celular va por variables de entorno y nunca pegado en
         # el comando: así un texto con comillas no puede ejecutar nada.
         run: node panel/celular.mjs "$ACCION" "--id=$NOTA" "--pedido=$PEDIDO"
@@ -76,11 +81,24 @@ jobs:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
           GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
 
+      # La foto que sumó una persona desde la pestaña Fotos (2/10): la baja, la achica y la anota en web/data/fotos-manuales.json.
+      - name: Instalar (para achicar la foto)
+        if: inputs.accion == 'foto'
+        run: npm ci --no-audit --no-fund
+      - name: Sumar la foto
+        if: inputs.accion == 'foto'
+        run: node web/scripts/foto-manual.mjs "--id=$NOTA"
+        env:
+          NOTA: ${{ inputs.id }}
+          FOTO_URL: ${{ inputs.pedido }}
+          FOTO_CREDITO: ${{ inputs.credito }}
+          FOTO_POR: ${{ github.actor }}
+
       - name: Guardar el borrador
         run: |
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
-          git add web/data/celular-borradores.json
+          for f in web/data/celular-borradores.json web/data/fotos-manuales.json web/public/fotos-notas; do [ -e "$f" ] && git add -- "$f"; done
           if git diff --cached --quiet; then
             echo "Nada nuevo que guardar."
             exit 0
