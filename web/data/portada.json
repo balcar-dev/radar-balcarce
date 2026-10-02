@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T09:31:34.121Z",
+  "generado": "2026-10-02T10:01:33.097Z",
   "notas": [
     {
       "id": "7j6ynn",
@@ -9,7 +9,6 @@
       "guion": "Franco Colapinto arranca con penalizaciones y prácticas difíciles en Malasia",
       "seccion": "Automovilismo",
       "medios": [
-        "La Nación",
         "TN (Todo Noticias)",
         "Canal 26"
       ],
@@ -18,7 +17,7 @@
       "fecha": "2026-10-02T09:08:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T09:31:23.063Z",
-      "relevancia": 79,
+      "relevancia": 77,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -439,10 +438,10 @@
       "guion": "Publican el tráiler del documental sobre Carlos Bilardo en el Sevilla",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Clarín",
         "Infobae",
         "Olé",
         "C5N",
+        "Clarín",
         "El Día"
       ],
       "enlace": "https://www.clarin.com/deportes/conocio-trailer-pelicula-documental-paso-carlos-bilardo-sevilla-comienzos-decada-90_0_tjCErOixQY.html",
@@ -450,7 +449,7 @@
       "fecha": "2026-10-01T20:03:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T22:01:24.337Z",
-      "relevancia": 65,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -668,6 +667,7 @@
       "guion": "El INDEC informa un incremento en la desigualdad durante el segundo trimestre",
       "seccion": "Economía",
       "medios": [
+        "Clarín",
         "Agencia DIB",
         "Ámbito",
         "Página/12",
@@ -739,11 +739,11 @@
       "guion": "La CAF aprueba créditos por 305 millones de dólares para subte y ruta.",
       "seccion": "Argentina",
       "medios": [
-        "Clarín",
         "Infobae",
         "Perfil",
         "El Cronista",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Clarín"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/01/la-caf-aprobo-creditos-por-usd-305-millones-para-la-linea-b-de-subte-y-la-ruta-40-en-san-juan/",
       "teniaImagenLaFuente": true,
@@ -1056,7 +1056,6 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "Bolavip Argentina",
         "Vavel Argentina",
         "La Nueva",
@@ -1472,7 +1471,7 @@
       "fecha": "2026-10-01T16:53:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-01T18:31:03.487Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1794,6 +1793,104 @@
       }
     },
     {
+      "id": "147id0",
+      "titulo": "La Obra Social de las Fuerzas Armadas paga su deuda total",
+      "copete": "La Obra Social de las Fuerzas Armadas canceló el pasivo total con prestadores y comenzó a regularizar los reintegros. La entidad asume la atención médica plena desde el jueves.",
+      "cuerpo": "El organismo asumió la atención médica plena del personal militar y sus familias desde el jueves 1 de octubre.\n\nEl desembolso se concretó tras meses de restricciones en el sistema sanitario heredado del extinto Instituto de Obra Social de las Fuerzas Armadas (IOSFA), disuelto mediante el DNU 88/2026. Aquella medida dividió la cobertura en dos nuevas entidades para el sector militar y las fuerzas de seguridad. Según fuentes oficiales, el Tesoro Nacional aportó 160 millones de pesos para destrabar la liquidación final.\n\nLa crisis financiera había provocado cortes en las prestaciones y dificultades para mantener los convenios con clínicas y profesionales. Con la cancelación del pasivo, la administración apunta a recomponer los acuerdos y normalizar el servicio en todo el país.",
+      "guion": "La Obra Social de las Fuerzas Armadas paga su deuda total",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "El Cronista",
+        "Perfil",
+        "Noticias Argentinas (NA)",
+        "Infobrisas (Radio Brisas)"
+      ],
+      "enlace": "https://www.cronista.com/economia-politica/osfa-el-gobierno-anuncio-que-pago-la-totalidad-de-la-deuda-y-reactivara-las-prestaciones/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T15:34:08.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T18:01:03.074Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La OSFA saldó una deuda superior a los 200.000 millones de pesos con prestadores médicos.",
+        "El organismo asumió la atención plena del personal militar y sus familias desde este jueves.",
+        "El Tesoro Nacional aportó 160 millones de pesos para completar la liquidación del ex-IOSFA."
+      ],
+      "seSabe": [
+        "La Obra Social de las Fuerzas Armadas canceló la totalidad de la deuda con prestadores, según fuentes oficiales.",
+        "El organismo inició la regularización de los reintegros pendientes a los afiliados.",
+        "El Tesoro Nacional cubrió 160 millones de pesos para finalizar la liquidación del extinto IOSFA.",
+        "La OSFA asume la atención médica plena del personal militar y sus familias desde este jueves 1 de octubre.",
+        "La disolución del IOSFA y la creación de la OSFA se dispusieron mediante el DNU 88/2026."
+      ],
+      "noConfirmado": [
+        "La forma en que las Fuerzas de Seguridad tramitarán su parte del pasivo pendiente con el Estado Nacional.",
+        "Los detalles operativos sobre la recomposición total de los convenios con los prestadores en cada distrito."
+      ],
+      "textoRedes": "La Obra Social de las Fuerzas Armadas canceló la totalidad de su deuda con prestadores y comenzó a regularizar los reintegros a los afiliados.",
+      "etiquetas": [
+        "OSFA",
+        "Fuerzas Armadas",
+        "salud",
+        "deuda",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/osfa-el-gobierno-anuncio-que-pago-la-totalidad-de-la-deuda-y-reactivara-las-prestaciones/",
+          "fecha": "2026-10-01T15:34:08.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el pago total de la deuda con prestadores y el inicio de los reintegros a afiliados."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/01/osfa-anuncio-que-comenzara-a-cancelar-la-deuda-y-asumira-la-atencion-medica-de-las-fuerzas-armadas/",
+          "fecha": "2026-10-01T17:07:57.000Z",
+          "oficial": false,
+          "aporte": "Anunció el inicio de la atención médica plena del personal militar y sus familias."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/osfa-asume-la-atencion-medica-de-las-fuerzas-armadas-e-inicia-el-proceso-del-pago-de-la-deuda-de-la-obra-social-_a6abe74ed8419983d42587f2b",
+          "fecha": "2026-10-01T15:46:27.123Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/01/109902-el-ministerio-de-defensa-confirma-que-osfa-asume-la-atencion-medica-de-las-fuerzas-armadas",
+          "fecha": "2026-10-01T18:00:27.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5hhuva",
+          "titulo": "El Ministerio de Economía renueva la totalidad de los vencimientos de deuda",
+          "fecha": "2026-09-28T20:23:00.000Z",
+          "ruta": "/nota/el-ministerio-de-economia-renueva-la-totalidad-de-los-vencimientos-de-5hhuva"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-obra-social-de-las-fuerzas-armadas-paga-su-deuda-total",
+      "foto": {
+        "archivo": "fotos-notas/147id0.jpg",
+        "credito": "Foto: El Cronista"
+      }
+    },
+    {
       "id": "1y554vc",
       "titulo": "Las exportaciones agroindustriales aumentan 21 por ciento a la Unión Europea",
       "copete": "Las ventas nacionales al bloque europeo sumaron 1922 millones de dólares en el primer cuatrimestre de vigencia del acuerdo con el Mercosur.",
@@ -1996,28 +2093,26 @@
       "slug": "concejales-proponen-crear-un-registro-municipal-de-acompanantes"
     },
     {
-      "id": "df6k44",
-      "titulo": "El FMI pide extender el crecimiento económico a los trabajadores",
-      "copete": "La vocera del organismo internacional remarcó los avances en la baja de la inflación y la acumulación de reservas, pero advirtió sobre la necesidad de repartir los beneficios de la expansión.",
-      "cuerpo": "La vocera del organismo, Julie Kozack, señaló en una conferencia de prensa en Washington que la expansión actual se concentró fuertemente en agricultura, minería y energía.\n\nLa funcionaria resaltó los avances significativos en la restauración de la estabilidad macroeconómica, con una gran caída de la inflación, disciplina fiscal y fortalecimiento de las reservas internacionales. Asimismo, indicó que una misión técnica visitó Buenos Aires entre el 21 y el 29 de septiembre para avanzar en la tercera revisión del programa del Servicio Ampliado del FMI, cuyas conversaciones continuarán en las próximas semanas.",
-      "guion": "El FMI pide extender el crecimiento económico a los trabajadores",
+      "id": "189q8rb",
+      "titulo": "El Fondo Monetario pide que el crecimiento económico argentino llegue a todos los sectores",
+      "copete": "El FMI advirtió que la mejora económica debe distribuirse de manera equitativa. Fue tras la misión técnica que evaluó las cuentas del país en busca de un desembolso de US$800 millones.",
+      "cuerpo": "El Fondo Monetario Internacional señaló el jueves que resulta fundamental que el crecimiento económico del país se expanda hacia otros rubros más allá de la energía, la minería y la agricultura. La directora de Comunicaciones del organismo, Julie Kozack, explicó en una conferencia de prensa en Washington que las conversaciones actuales con el Gobierno buscan consolidar la estabilización alcanzada y extenderla a toda la economía.\n\nLa postura se conoció tras la conclusión de una misión técnica que evaluó las cuentas nacionales durante diez días en Buenos Aires para cumplir con la tercera revisión del programa. El equipo examinó los datos financieros y mantuvo reuniones con funcionarios y actores sociales para redactar un informe que el Directorio Ejecutivo analizará próximamente.\n\nEsa evaluación técnica podría derivar en la liberación de un desembolso de US$800 millones. Por otra parte, la vocera del organismo reconoció que las negociaciones también abordan el impacto de la baja en la recaudación impositiva y la necesidad de lograr más inversiones y creación de empleo.",
+      "guion": "El Fondo Monetario pide que el crecimiento económico argentino llegue a todos los sectores",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Nación",
-        "Ámbito",
         "Página/12",
         "Clarín",
         "El Día",
         "A24"
       ],
-      "enlace": "https://www.ambito.com/economia/el-fmi-advirtio-al-gobierno-que-es-importante-ampliar-el-crecimiento-los-sectores-rezagados-y-los-trabajadores-n6328916",
+      "enlace": "https://www.clarin.com/economia/fmi-advirtio-importante-crecimiento-amplie-distribuya-forma-equitativa_0_eO07smY52s.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T15:00:00.000Z",
+      "fecha": "2026-10-01T15:00:15.000Z",
       "sinFecha": false,
-      "visto": "2026-10-01T22:31:16.582Z",
+      "visto": "2026-10-02T00:01:14.528Z",
       "relevancia": 72,
       "local": false,
       "publicadaPor": null,
@@ -2025,62 +2120,65 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El FMI pidió que el crecimiento económico alcance a más sectores y trabajadores.",
-        "La vocera Julie Kozack destacó la baja de la inflación y la acumulación de reservas.",
-        "Una misión técnica visitó Buenos Aires entre el 21 y el 29 de septiembre.",
-        "Las negociaciones para la tercera revisión del programa continúan en las próximas semanas."
+        "El FMI pidió que la mejora económica se distribuya en forma equitativa.",
+        "Una misión técnica evaluó las cuentas del país durante diez días en Buenos Aires.",
+        "El organismo analiza un informe que podría liberar un desembolso de US$800 millones.",
+        "La vocera Julie Kozack advirtió sobre la caída en la recaudación impositiva."
       ],
       "seSabe": [
-        "El FMI advirtió que el crecimiento actual se concentra en energía, minería y agricultura.",
-        "Una misión técnica del organismo visitó Buenos Aires entre el 21 y el 29 de septiembre.",
-        "La portavoz Julie Kozack destacó la baja de la inflación y el superávit fiscal."
+        "La directora de Comunicaciones del FMI, Julie Kozack, brindó una conferencia de prensa en Washington.",
+        "Una misión técnica encabezada por Joyce Wang concluyó una visita de diez días en Buenos Aires.",
+        "El organismo y el Gobierno discuten cómo consolidar la estabilidad y ampliar el crecimiento a otros sectores.",
+        "El informe técnico se elevará al Directorio Ejecutivo para su aprobación final.",
+        "Un resultado favorable habilitaría un desembolso de US$800 millones."
       ],
       "noConfirmado": [
-        "Todavía no se alcanzó un acuerdo a nivel de personal técnico para la tercera revisión del programa."
+        "Todavía no se informó si el Gobierno alcanzará las metas fiscales o de reservas en esta tercera revisión.",
+        "No trascendió la fecha exacta en la que el Directorio Ejecutivo votará la aprobación del informe."
       ],
-      "textoRedes": "El Fondo Monetario Internacional advirtió que el crecimiento económico debe extenderse a más sectores productivos y alcanzar de manera equitativa a los trabajadores.",
+      "textoRedes": "El FMI advirtió que el crecimiento económico del país debe ampliarse a más sectores y distribuirse de forma equitativa. Fue tras la misión técnica que evaluó las cuentas para un posible desembolso.",
       "etiquetas": [
         "FMI",
-        "economia",
-        "inflacion",
-        "reservas",
-        "gobierno"
+        "Economía",
+        "Gobierno nacional",
+        "Desembolso",
+        "Inflación"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/el-fmi-advirtio-al-gobierno-que-es-importante-ampliar-el-crecimiento-los-sectores-rezagados-y-los-trabajadores-n6328916",
-          "fecha": "2026-10-01T15:00:00.000Z",
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/fmi-advirtio-importante-crecimiento-amplie-distribuya-forma-equitativa_0_eO07smY52s.html",
+          "fecha": "2026-10-01T15:00:15.000Z",
           "oficial": false,
-          "aporte": "Aportó las declaraciones de la vocera Julie Kozack sobre la necesidad de ampliar el crecimiento económico y los detalles de la misión técnica."
+          "aporte": "Detalló los dichos de la directora de Comunicaciones del FMI, Julie Kozack, sobre la misión técnica en Buenos Aires y la necesidad de ampliar el crecimiento económico."
         },
         {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/el-fmi-advirtio-que-el-crecimiento-en-argentina-debe-llegar-a-mas-sectores-y-trabajadores",
-          "fecha": "2026-10-01T21:52:24.000Z",
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/economia/el-fmi-advirtio-que-es-importante-que-el-crecimiento-se-amplie-y-se-distribuya-forma-equitativa-n56178",
+          "fecha": "2026-10-01T19:29:00.000Z",
           "oficial": false,
-          "aporte": "Reprodujo la advertencia del organismo sobre el crecimiento económico y los sectores rezagados."
+          "aporte": "Mencionó la referencia de Julie Kozack a la reciente misión técnica del organismo en Buenos Aires y la caída del crecimiento."
         },
         {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/el-fmi-respaldo-el-rumbo-economico-de-milei-pero-pidio-que-el-crecimiento-tambien-alcance-a-los-trabajadores.phtml",
-          "fecha": "2026-10-01T16:34:21.000Z",
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-fmi-reconocio-sus-inquietudes-por-el-crecimiento-de-la-economia-argentina-y-hablo-de-una-nid01102026/",
+          "fecha": "2026-10-01T15:02:39.000Z",
           "oficial": false,
-          "aporte": "Confirmó las declaraciones de la portavoz sobre la baja de la inflación y la acumulación de reservas."
+          "aporte": "Informó sobre las declaraciones del FMI desde Washington en torno a las conversaciones con el Gobierno sobre el crecimiento económico."
         },
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/nuevo-respaldo-del-fmi-al-programa-economico_a6abe69d98419983d42572940",
-          "fecha": "2026-10-01T15:18:42.848Z",
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/10/01/crecimiento-para-pocos/",
+          "fecha": "2026-10-01T22:47:49.000Z",
           "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
+          "aporte": "Indicó el reconocimiento del organismo sobre las inquietudes en la economía y su planteo de distribuir el crecimiento de manera equitativa entre los trabajadores."
         },
         {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/el-fmi-pide-que-el-crecimiento-economico-argentino-se-extienda-a-mas-sectores-y-alcance-a-los-trabajadores-politica-y-economia_1790869500",
-          "fecha": "2026-10-01T15:55:59.000Z",
+          "medio": "A24",
+          "enlace": "https://www.a24.com/economia/el-fmi-le-advirtio-al-gobierno-la-necesidad-que-el-crecimiento-se-amplie-y-se-distribuya-forma-equitativa-n1602265",
+          "fecha": "2026-10-01T16:16:00.000Z",
           "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
+          "aporte": "Aportó detalles sobre las negociaciones en curso y las advertencias acerca de la caída en la recaudación impositiva y la necesidad de inversiones y empleo."
         }
       ],
       "verificacion": {
@@ -2088,10 +2186,10 @@
         "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-fmi-pide-extender-el-crecimiento-economico-a-los-trabajadores",
+      "slug": "el-fondo-monetario-pide-que-el-crecimiento-economico-argentino-llegue",
       "foto": {
-        "archivo": "fotos-notas/df6k44.jpg",
-        "credito": "Foto: El Eco de Tandil"
+        "archivo": "fotos-notas/189q8rb.jpg",
+        "credito": "Foto: Clarín"
       }
     },
     {
@@ -3150,78 +3248,6 @@
       "slug": "allanamiento-policial-deja-un-imputado-por-robos-comerciales"
     },
     {
-      "id": "18apis6",
-      "titulo": "Norris detalla su disculpa a Colapinto y repudia las agresiones digitales",
-      "copete": "El piloto británico contó que se comunicó con el argentino para dejar atrás el choque del fin de semana pasado y rechazó las amenazas recibidas en internet.",
-      "cuerpo": "Lando Norris explicó cómo se comunicó con Franco Colapinto para dejar atrás la polémica generada por el choque del fin de semana pasado. El incidente, provocado por el argentino, dejó fuera de la competencia a ambos corredores y a Pierre Gasly.\n\nEl deportista británico señaló que decidió hacer pública su disculpa a través de las plataformas digitales para frenar el impacto del ruido mediático. Además, repudió las agresiones que circularon en la red.\n\nPor último, remarcó el vínculo cordial que sostiene con el pilarense fuera de los circuitos. \"Me gusta mucho Franco, es un tipo muy agradable\", afirmó, y añadió que suelen charlar durante las caminatas y los desfiles.",
-      "guion": "Norris detalla su disculpa a Colapinto y repudia las agresiones digitales",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Motorsport",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://es.motorsport.com/f1/news/norris-explica-disculpas-colapinto-abuso-redes/10860600/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T12:16:51.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T20:32:00.608Z",
-      "relevancia": 67,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lando Norris explicó los detalles de su pedido de disculpas a Franco Colapinto.",
-        "El piloto británico rechazó las amenazas difundidas en redes sociales.",
-        "Ambos pilotos protagonizaron un choque el fin de semana pasado junto a Pierre Gasly.",
-        "Norris destacó que mantiene una buena relación personal con el argentino fuera de las pistas."
-      ],
-      "noConfirmado": [
-        "No se especificaron los detalles exactos sobre el tenor de las amenazas recibidas en las redes sociales."
-      ],
-      "textoRedes": "Lando Norris detalló cómo se disculpó con Franco Colapinto tras el choque del fin de semana pasado y rechazó las amenazas recibidas en internet.",
-      "etiquetas": [
-        "Lando Norris",
-        "Franco Colapinto",
-        "Redes sociales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Motorsport",
-          "enlace": "https://es.motorsport.com/f1/news/norris-explica-disculpas-colapinto-abuso-redes/10860600/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-          "fecha": "2026-10-01T12:16:51.000Z",
-          "oficial": false,
-          "aporte": "Explicó que pidió perdón a Colapinto por el accidente en el que también participó Pierre Gasly y condenó las amenazas en redes."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/deportes/norris-se-disculpo-con-colapinto-tras-sus-criticas",
-          "fecha": "2026-10-01T15:10:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló que hizo pública su disculpa por el ruido mediático y destacó su buena relación fuera de la pista con el piloto."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1vuh3vs",
-          "titulo": "Lando Norris le pide disculpas a Franco Colapinto tras Bakú",
-          "fecha": "2026-09-28T10:03:48.000Z",
-          "ruta": "/nota/lando-norris-le-pide-disculpas-a-franco-colapinto-tras-baku-1vuh3vs"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "norris-detalla-su-disculpa-a-colapinto-y-repudia-las-agresiones",
-      "foto": {
-        "archivo": "fotos-notas/18apis6.jpg",
-        "credito": "Foto: Motorsport"
-      }
-    },
-    {
       "id": "c0hkeg",
       "titulo": "Organizan una jornada abierta sobre salud y bienestar para adultos mayores",
       "copete": "El encuentro se realiza el viernes desde las 15:00 en el Círculo de Educadores. Habrá charlas de especialistas y se pide un alimento no perecedero para colaborar con una institución local.",
@@ -3325,8 +3351,8 @@
       "guion": "El Ministerio de Desarrollo Agrario analiza la situación de la cadena ovina",
       "seccion": "Agro",
       "medios": [
-        "Infocampo",
-        "La Verdad"
+        "La Verdad",
+        "Infocampo"
       ],
       "enlace": "https://laverdadonline.com/rodriguez-duplicamos-la-cantidad-de-frigorificos-en-la-provincia/",
       "teniaImagenLaFuente": true,
@@ -3392,7 +3418,6 @@
       "seccion": "Fútbol",
       "medios": [
         "Diario La Vanguardia",
-        "Clarín",
         "0223 (Mar del Plata)",
         "La Nación",
         "Infobae",
@@ -3412,6 +3437,7 @@
         "La Capital (Rosario)",
         "La Nueva",
         "El Día",
+        "Clarín",
         "El Gráfico",
         "La Brújula 24"
       ],
@@ -3827,9 +3853,9 @@
         "Noticias Argentinas (NA)",
         "Infobrisas (Radio Brisas)",
         "Agroempresario",
+        "El Economista",
         "Clarín",
-        "El Día",
-        "El Economista"
+        "El Día"
       ],
       "enlace": "https://noticiasargentinas.com/economia/totalenergies-anuncio-proyectos-por-cerca-de-us-10-000-millones-en-la-argentina_a6abe3b418419983d4250d965",
       "teniaImagenLaFuente": true,
@@ -4182,6 +4208,47 @@
       "foto": {
         "archivo": "fotos-notas/1neicxo.jpg",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "x9mmdo",
+      "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
+      "copete": "El piloto bonaerense analizó su rendimiento en el autódromo de Balcarce tras competir en la categoría de camionetas. Ya se prepara para la próxima fecha en San Nicolás.",
+      "cuerpo": "El piloto Otto Fritzler destacó el trazado balcarceño tras completar un destacado desempeño en las competencias de TC Pick Up. El deportista encabeza la tabla de posiciones del torneo de camionetas y ya focaliza su preparación en la competencia de Turismo Carretera programada para el fin de semana en San Nicolás.\n\nEn cuanto a la actividad en el circuito local, las categorías del Zonal del Atlántico competirán en el autódromo Juan M. Fangio durante el fin de semana largo del 10 al 12 de octubre de 2026, según se informó anteriormente.",
+      "guion": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up.",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Córdoba Competición",
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://cordobacompeticion.com/nacionales/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T01:38:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T04:01:15.862Z",
+      "relevancia": 44,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "tc-pick-up"
+      ],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Córdoba Competición",
+          "enlace": "https://cordobacompeticion.com/nacionales/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad/",
+          "fecha": "2026-10-01T01:38:10.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "balcarce-tiene-algo-especial-es-un-autodromo-de-verdad",
+      "corregidaAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/x9mmdo.jpg",
+        "credito": "Foto: Córdoba Competición"
       }
     },
     {
@@ -4661,93 +4728,6 @@
         "archivo": "fotos-notas/1fqh4sy.jpg",
         "credito": "Foto: TyC Sports"
       }
-    },
-    {
-      "id": "17z7wso",
-      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
-      "copete": "La vuelta de las categorías nacionales al autódromo Juan Manuel Fangio generó un impacto económico estimado en 2.700 millones de pesos en la ciudad, según informó la Municipalidad.",
-      "cuerpo": "El regreso de las competencias nacionales al autódromo Juan Manuel Fangio produjo un movimiento económico estimado en 2.700 millones de pesos en Balcarce. De acuerdo con la subsecretaria de Turismo, Rosario Tufró, la cifra reúne los consumos en comercios, estaciones de servicio, gastronomía, alojamientos y entradas. El arribo de visitantes comenzó el miércoles previo al fin de semana.\n\nEl sector de alojamientos registró una capacidad completa en hoteles y alquileres temporarios, lo que llevó a vecinos a ofrecer habitaciones de sus viviendas con asesoramiento municipal.\n\nDesde el área de Turismo evaluaron positivamente la experiencia y señalaron que la actividad representa una oportunidad para la ciudad si se logra sostener una agenda de acontecimientos de convocatoria similar.",
-      "guion": "El automovilismo deja un movimiento de 2.700 millones",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T21:35:29.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T09:01:07.409Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El regreso del automovilismo generó unos 2.700 millones de pesos en la economía local.",
-        "El dato fue informado por la subsecretaria de Turismo, Rosario Tufró.",
-        "La capacidad hotelera estuvo completa y vecinos ofrecieron habitaciones particulares.",
-        "El arribo de visitantes a la ciudad comenzó el miércoles previo a las competencias."
-      ],
-      "seSabe": [
-        "El movimiento económico en Balcarce alcanzó unos 2.700 millones de pesos, según la Municipalidad.",
-        "La subsecretaria de Turismo, Rosario Tufró, informó que la llegada de visitantes comenzó el miércoles.",
-        "El sector hotelero y los alquileres temporarios completaron su capacidad.",
-        "Vecinos ofrecieron habitaciones de sus viviendas ante la demanda de alojamiento."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio generó un movimiento económico estimado en 2.700 millones de pesos en Balcarce, con impacto en el comercio, la gastronomía y los alojamientos.",
-      "etiquetas": [
-        "autodromo",
-        "juan manuel fangio",
-        "turismo",
-        "economia",
-        "automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-regreso-del-automovilismo-genero-un-movimiento-estimado-de-2700-millones-en-balcarce-741",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó el movimiento económico estimado de 2.700 millones y los detalles de ocupación hotelera y consumo local."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "p8h86x",
-          "titulo": "El automovilismo nacional genera un intenso movimiento vehicular",
-          "fecha": "2026-09-27T16:27:29.000Z",
-          "ruta": "/nota/el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular-p8h86x"
-        },
-        {
-          "id": "p7nd3j",
-          "titulo": "Balcarce palpita el regreso del automovilismo nacional",
-          "fecha": "2026-09-26T01:13:28.000Z",
-          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
-        },
-        {
-          "id": "4v2vga",
-          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
-          "fecha": "2026-09-24T13:34:15.000Z",
-          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-automovilismo-deja-un-movimiento-de-2-700-millones",
-      "foto": {
-        "archivo": "fotos-notas/17z7wso.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
     }
   ],
   "secciones": [
@@ -4773,20 +4753,15 @@
       "nombre": "El hospital",
       "ranura": "hospital",
       "cuantas": 2
-    },
-    {
-      "nombre": "Fangio",
-      "ranura": "fangio",
-      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 7,
       "sensacion": 5,
-      "humedad": 93,
-      "viento": 2,
-      "rumbo": "SE",
+      "humedad": 92,
+      "viento": 3,
+      "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": true
     },
@@ -5181,12 +5156,6 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "3edpjs",
-      "titulo": "La Justicia desestimó una denuncia por discursos de odio…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "pqplav",

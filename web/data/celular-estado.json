@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T09:31:34.121Z",
+ "generado": "2026-10-02T10:01:33.097Z",
  "portada": 58,
  "archivo": 755,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-02T09:31:34.152Z",
+  "generado": "2026-10-02T10:01:33.129Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -116,13 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 41,
+    "segundos": 37,
     "notas": [
-     {
-      "id": "17z7wso",
-      "titulo": "El automovilismo deja un movimiento de 2.700 millones",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "idl5dq",
       "titulo": "Amigos Unidos organiza la décima edición de Que ruede la redonda",
@@ -159,14 +154,7 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [
-    {
-     "id": "1j4lf17",
-     "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
-     "seccion": "Automovilismo",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 5,
    "proximoDesde": "2026-10-01T20:06:31.248Z",
    "porDia": 5,
