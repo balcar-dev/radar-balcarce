@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T12:32:05.272Z",
- "portada": 53,
- "archivo": 762,
+ "generado": "2026-10-02T13:05:41.107Z",
+ "portada": 54,
+ "archivo": 768,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T12:32:05.293Z",
+  "generado": "2026-10-02T13:05:41.152Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -83,29 +83,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 40,
+    "segundos": 47,
     "notas": [
+     {
+      "id": "1bheb6v",
+      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "xvt4t1",
+      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+      "seccion": "Balcarce"
+     },
      {
       "id": "y1kgx4",
       "titulo": "Fiorella Cacace detalla la labor de los escribanos",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1ugi3md",
-      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
-      "seccion": "Deportes"
-     },
-     {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "xvt4t1",
-      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,16 +116,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 39,
+    "segundos": 48,
     "notas": [
      {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
+      "id": "1ugi3md",
+      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
       "seccion": "Deportes"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "1ebac9m",
+      "titulo": "Un balcarceño le propone casamiento a su pareja frente a Robbie Williams",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "ig6fdw",
+      "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
+      "seccion": "Argentina"
+     },
+     {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      }
     ]
@@ -137,11 +147,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 52,
     "notas": [
      {
-      "id": "g34tir",
-      "titulo": "Balcarce reúne a la comunidad sorda en su primer encuentro regional",
+      "id": "1dbyjp1",
+      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
      },
      {
@@ -167,6 +182,12 @@
    ],
    "cola": [
     {
+     "id": "xvt4t1",
+     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
      "id": "y1kgx4",
      "titulo": "Fiorella Cacace detalla la labor de los escribanos",
      "seccion": "Cultura y agenda",
@@ -179,8 +200,8 @@
      "marcada": false
     },
     {
-     "id": "xvt4t1",
-     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+     "id": "1ebac9m",
+     "titulo": "Un balcarceño le propone casamiento a su pareja frente a Robbie Williams",
      "seccion": "Balcarce",
      "marcada": false
     }

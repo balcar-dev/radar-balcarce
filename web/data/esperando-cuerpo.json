@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02T12:32:05.272Z",
+ "generado": "2026-10-02T13:05:41.107Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,8 +15,8 @@
      "fecha": "2026-10-02T12:05:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 91 caracteres, el máximo es 90",
+   "intentos": 2,
+   "motivo": "cuerpo: 3 problemas (fecha, relleno, copia): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 52 palabras",
    "maximo": 3
   },
   {
