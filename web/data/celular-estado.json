@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T11:18:01.900Z",
- "portada": 52,
+ "generado": "2026-10-02T11:33:31.037Z",
+ "portada": 46,
  "archivo": 758,
- "esperandoCuerpo": 1,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-02T11:18:01.931Z",
+  "generado": "2026-10-02T11:33:31.064Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,26 +85,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 40,
     "notas": [
-     {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1j4lf17",
       "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
       "seccion": "Automovilismo"
      },
      {
-      "id": "1sjcoqr",
-      "titulo": "Mateo Raimondi integra el seleccionado marplatense de hockey",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
      }
     ]
@@ -116,13 +106,18 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": null,
+    "notas": []
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "21:00",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 31,
     "notas": [
-     {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1a9rnj4",
       "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
@@ -134,16 +129,6 @@
       "seccion": "Balcarce"
      }
     ]
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "21:00",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": null,
-    "notas": []
    }
   ],
   "facebook": {
