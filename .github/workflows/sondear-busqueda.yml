@@ -1,0 +1,22 @@
+# Sondea si Gemini puede buscar en internet con las claves gratis (las "Pistas" del panel, 1/10/2026).
+# A mano (Actions → Sondear búsqueda → Run workflow). Costo: un pedido por clave.
+name: Sondear búsqueda
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sondear:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node redes/sondear-busqueda.mjs
+        env:
+          GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+          GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
