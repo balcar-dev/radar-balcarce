@@ -1,46 +1,7 @@
 {
- "generado": "2026-10-02T00:32:27.139Z",
+ "generado": "2026-10-02T01:31:36.664Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "o1vynh",
-   "titulo": "Se realizará un corte del servicio eléctrico este viernes en un sector de la ciudad",
-   "copete": "La Cooperativa de Electricidad de Balcarce informó que este viernes 2 de octubre se realizará un corte programado del suministro eléctrico debido a trabajos en líneas de baja tensión. La interrupción del servicio está prevista entre las 7:30 y las 9:00, y afectará a la mayoría…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T16:15:15.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-realizara-un-corte-del-servicio-electrico-este-viernes-en-un-sector-de-la-ciudad",
-     "fecha": "2026-10-01T16:15:15.000Z"
-    },
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/corte-de-energia-programado-para-este.html",
-     "fecha": "2026-10-01T17:24:47.272Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "1vmovug",
-   "titulo": "El RENAPER realizará trámites de DNI y pasaporte durante tres jornadas",
-   "copete": "Un móvil del Registro Nacional de las Personas (RENAPER) llegará a Balcarce para llevar adelante un operativo especial de documentación, que permitirá a los vecinos realizar trámites vinculados con el DNI y el pasaporte. La actividad comenzará el jueves 8 de octubre, de 10 a 15…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T18:14:23.585Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/el-renaper-realizara-tramites-de-dni-y.html",
-     "fecha": "2026-10-01T18:14:23.585Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 2 problemas (antecedente, promesa): el cuerpo usa 2, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 97 palabras",
-   "maximo": 3
-  },
   {
    "id": "1h0pc9p",
    "titulo": "Luis Caputo en Argentina Week París: \"El único riesgo en Argentina es perderse la oportunidad de invertir\"",
@@ -79,20 +40,20 @@
    "maximo": 4
   },
   {
-   "id": "601ifn",
-   "titulo": "El viernes 9 se realizará el acto central por el “Día del Respeto a la Diversidad Cultural”",
-   "copete": "El próximo viernes 9 de octubre, a las 10 horas, se desarrollará en las instalaciones del Instituto Adventista Balcarce (IAB) el acto central conmemorativo por el “Día del Respeto a la Diversidad Cultural”. La actividad se enmarca en el calendario de actividad docente, que…",
+   "id": "c0hkeg",
+   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
+   "copete": "Con motivo de la conmemoración del Día Internacional de las Personas Mayores -celebrado cada 1 de octubre-, la ciudad se prepara para vivir una tarde dedicada de lleno al cuidado y la calidad de vida en la adultez. El encuentro tendrá lugar mañan",
    "seccion": "Balcarce",
-   "fecha": "2026-10-01T13:22:10.000Z",
+   "fecha": "2026-10-01T11:52:38.000Z",
    "fuentes": [
     {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/01/el-viernes-9-se-realizara-el-acto-central-por-el-dia-del-respeto-a-la-diversidad-cultural/",
-     "fecha": "2026-10-01T13:22:10.000Z"
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
+     "fecha": "2026-10-01T11:52:38.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 93 palabras",
+   "intentos": 1,
+   "motivo": "con cuerpo",
    "maximo": 3
   },
   {
@@ -124,23 +85,6 @@
     }
    ],
    "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "c0hkeg",
-   "titulo": "\"Queremos promover una vejez activa, saludable y acompañada\"",
-   "copete": "",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-01T12:01:06.332Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/queremos-promover-una-vejez-activa-saludable-y-acompanada-300",
-     "fecha": null
-    }
-   ],
-   "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 3
   },
