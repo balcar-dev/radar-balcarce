@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T14:32:22.207Z",
- "portada": 57,
- "archivo": 775,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-02T15:03:39.512Z",
+ "portada": 61,
+ "archivo": 776,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-02T14:32:22.249Z",
+  "generado": "2026-10-02T15:03:39.550Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "Tu nota",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 54,
     "notas": [
      {
       "id": "5pxon8",
@@ -134,8 +134,8 @@
       "seccion": "Deportes"
      },
      {
-      "id": "alddw5",
-      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "id": "uxgtdx",
+      "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
       "seccion": "Balcarce"
      }
     ]
@@ -150,8 +150,8 @@
     "segundos": 53,
     "notas": [
      {
-      "id": "1dbyjp1",
-      "titulo": "El RENAPER instala un móvil en Balcarce para tramitar DNI",
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
       "seccion": "Balcarce"
      },
      {
@@ -160,13 +160,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "jzu6k",
-      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "id": "1a9rnj4",
+      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
       "seccion": "Balcarce"
      },
      {
-      "id": "1a9rnj4",
-      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+      "id": "jzu6k",
+      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
       "seccion": "Balcarce"
      }
     ]
@@ -187,6 +187,12 @@
    ],
    "cola": [
     {
+     "id": "164o14u",
+     "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
      "id": "xvt4t1",
      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
      "seccion": "Balcarce",
@@ -199,15 +205,15 @@
      "marcada": false
     },
     {
-     "id": "1ugi3md",
-     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
-     "seccion": "Deportes",
+     "id": "uxgtdx",
+     "titulo": "Bomberos dicta capacitaciones sobre prevención de animales venenosos",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "164o14u",
-     "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-     "seccion": "Balcarce",
+     "id": "1ugi3md",
+     "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],
