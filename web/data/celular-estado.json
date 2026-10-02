@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T00:02:28.039Z",
- "portada": 68,
- "archivo": 746,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-02T00:07:54.762Z",
+ "portada": 71,
+ "archivo": 747,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-02T00:02:28.072Z",
+  "generado": "2026-10-02T00:07:54.805Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,8 +147,13 @@
     "voz": "locutor",
     "momento": "en-hora",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "alddw5",
+      "titulo": "La Cooperativa de Electricidad corta el suministro el viernes",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1mknzh0",
       "titulo": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
@@ -163,11 +168,6 @@
       "id": "iheoi7",
       "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1a2z04a",
-      "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-      "seccion": "Automovilismo"
      }
     ]
    }
