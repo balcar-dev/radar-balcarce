@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T23:02:04.003Z",
+  "generado": "2026-10-02T23:31:59.775Z",
   "notas": [
     {
       "id": "1917p5s",
@@ -75,10 +75,13 @@
       "medios": [
         "Infobae",
         "La Nación",
-        "Clarín",
         "Ámbito",
+        "Clarín",
         "El Destape",
         "iProfesional",
+        "Radio Mitre",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
         "El Día"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/sandra-pettovello-desplazo-a-la-subsecretaria-de-trabajo-claudia-testa/",
@@ -175,7 +178,7 @@
       "fecha": "2026-10-02T20:21:19.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -239,8 +242,10 @@
       "guion": "Juan Gil Navarro frena una función de teatro por el uso de celulares",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Clarín",
         "TN (Todo Noticias)",
         "A24",
+        "C5N",
         "Crónica",
         "Infobae"
       ],
@@ -249,7 +254,7 @@
       "fecha": "2026-10-02T19:49:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 63,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -383,6 +388,84 @@
       "foto": {
         "archivo": "fotos-notas/kg0imu.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "vguosy",
+      "titulo": "La cadena de panaderías Pandanés cierra sus locales y despide personal",
+      "copete": "La firma de panaderías dejó de operar este viernes tras un concurso preventivo. La medida afectó a más de un centenar de trabajadores y la empresa pedirá la quiebra.",
+      "cuerpo": "La cadena de panaderías Pandanés cesó sus operaciones este viernes 2 de octubre y solicitará su quiebra ante la Justicia, según informaron distintas fuentes periodísticas. El cierre total de las sucursales dejó sin empleo a entre 120 y 150 trabajadores, quienes recibieron la notificación durante la madrugada a través de un mensaje de texto. La firma argumentó que se quedó sin fondos para continuar con la actividad comercial.\n\nLa compañía había recurrido al concurso preventivo el 26 de noviembre de 2025, un proceso que fue abierto el 11 de diciembre con un pasivo declarado de 1.218,9 millones de pesos. Durante los meses previos, la empresa intentó reordenar su estructura mediante la reducción de gastos, la renegociación de alquileres y el cierre paulatino de algunos comercios, aunque no logró revertir la cada en las ventas.",
+      "guion": "La cadena de panaderías Pandanés cierra sus locales y despide personal",
+      "seccion": "Economía",
+      "medios": [
+        "Clarín",
+        "Infobae",
+        "El Destape",
+        "iProfesional",
+        "Ámbito"
+      ],
+      "enlace": "https://www.iprofesional.com/negocios/465800-cadena-de-panaderias-pandanes-cerro-todos-sus-locales-y-pedira-la-quiebra",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T19:20:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T21:01:16.545Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "La cadena Pandanés cerró sus sucursales este viernes 2 de octubre de 2026.",
+        "Los trabajadores recibieron la desvinculación por WhatsApp durante la madrugada.",
+        "La empresa había iniciado un concurso preventivo a fines de 2025 con un pasivo millonario."
+      ],
+      "textoRedes": "La cadena de panaderías Pandanés cerró sus locales este viernes y dejará de operar tras un concurso preventivo. La medida afectó a más de un centenar de trabajadores que recibieron el aviso por la madrugada.",
+      "etiquetas": [
+        "Pandanés",
+        "panaderias",
+        "quiebra",
+        "concurso preventivo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/negocios/465800-cadena-de-panaderias-pandanes-cerro-todos-sus-locales-y-pedira-la-quiebra",
+          "fecha": "2026-10-02T19:20:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre el cierre de sucursales, la cantidad de despedidos, el pasivo y los antecedentes del concurso."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/negocios/cerro-famosa-cadena-panaderias-la-persiana-20-locales-despidio-su-personal-y-pedira-la-quiebra-n6329529",
+          "fecha": "2026-10-02T20:15:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que la decisión afectó a unos 120 trabajadores y que el aviso se realizó por WhatsApp."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/02/una-reconocida-cadena-de-panaderias-cerro-todos-sus-locales-despidio-150-empleados-y-pedira-la-quiebra/",
+          "fecha": "2026-10-02T19:42:22.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los datos sobre el cese de operaciones y la cifra de 150 empleados."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/pandanes-cerro-locales-despidio-150-trabajadores-2026102174217",
+          "fecha": "2026-10-02T20:42:17.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el cierre de 25 sucursales y la cantidad de trabajadores desvinculados."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-cadena-de-panaderias-pandanes-cierra-sus-locales-y-despide-personal",
+      "foto": {
+        "archivo": "fotos-notas/vguosy.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -721,11 +804,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44978-marcelo-panebianco-y-la-llegada-de-leon-xiv-es-una-invitacion-para-vivir-la-propia-fe/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-02T17:31:13.649Z",
       "sinFecha": true,
       "visto": "2026-10-02T17:31:13.649Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -774,73 +857,71 @@
       }
     },
     {
-      "id": "ydwxhf",
-      "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-      "copete": "Un acumulado de 25 milímetros en la franja central del país redujo a la mitad los lotes trigueros regulares y reactivó las sembradoras de maíz.",
-      "cuerpo": "Las precipitaciones registradas en la última semana en la franja central del país acumularon un promedio de 25 milímetros y permitieron recortar a la mitad los lotes de trigo en estado regular, que pasaron del 15% al 7% del total regional según la Bolsa de Comercio de Rosario.\n\nEl relevamiento detalló que la superficie afectada bajó de unas 250.000 a 120.000 hectáreas, mientras que el agua caída destrabó las tareas para cubrir las 750.000 hectáreas pendientes de maíz y llevó el avance de la siembra al 65%. Septiembre había cerrado con un promedio de 31,5 milímetros tras concentrar el 80% del total mensual en estos siete días, revirtiendo parcialmente el déficit hídrico previo que motivaba pronósticos de precipitaciones escasas a fines de septiembre.\n\nEl impacto de las tormentas muestra marcadas diferencias geográficas, ya que el este y el centro-este previenen rindes de hasta 50 quintales por hectárea, en contraste con el noroeste bonaerense y el sudeste cordobés, donde los cultivos sufrieron daños por heladas tempranas y mermas de hasta el 60% en el rendimiento.",
-      "guion": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-      "seccion": "Agro",
+      "id": "6cucid",
+      "titulo": "Halliburton ratifica que no operará en las Islas Malvinas",
+      "copete": "La firma de servicios petroleros confirmó ante el gobierno argentino que no participará del proyecto Sea Lion ni en tareas hidrocarburíferas en el archipiêcuteLago.",
+      "cuerpo": "La firma internacional Halliburton ratificó que no formará parte del proyecto Sea Lion ni realizará actividades de exploración o extracción de hidrocarburos en las Islas Malvinas. La decisión responde a un requerimiento de la Cancillería argentina ante las gestiones diplomáticas y legales desplegadas durante septiembre.\n\nLa filial local de la compañía ya había comunicado el pasado 5 de septiembre su postura de no intervenir en los yacimientos insulares. La medida oficial forma parte de una serie de notificaciones enviadas a unas 180 empresas globales para advertirles que trabajar en la zona prohibiría su operación en Vaca Muerta.",
+      "guion": "Halliburton ratifica que no operará en las Islas Malvinas",
+      "seccion": "Economía",
       "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
+        "La Nación",
+        "Infobae",
+        "A24",
+        "iProfesional",
+        "El Marplatense"
       ],
-      "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+      "enlace": "https://www.infobae.com/politica/2026/10/02/una-de-las-mayores-empresas-globales-de-servicios-petroleros-ratifico-que-no-operara-en-malvinas-ni-en-sea-lion/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T17:03:25.000Z",
+      "fecha": "2026-10-02T17:14:03.000Z",
       "sinFecha": false,
-      "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 39,
+      "visto": "2026-10-02T18:31:19.096Z",
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Cayeron 25 milímetros en promedio en la franja central del país.",
-        "Los lotes trigueros regulares se redujeron del 15% al 7%.",
-        "La siembra de maíz alcanzó un 65% de cobertura tras reactivarse las labores.",
-        "El noroeste bonaerense registra mermas de hasta el 60% por la sequía previa y las heladas."
+        "Halliburton descartó trabajar en el proyecto Sea Lion en Malvinas.",
+        "La decisión responde a un requerimiento de la Cancillería argentina.",
+        "La filial local ya había notificado su postura el 5 de septiembre.",
+        "Otras firmas globales adoptaron medidas similares en septiembre."
       ],
       "seSabe": [
-        "Las precipitaciones acumuladas en la última semana alcanzaron un promedio de 25 milímetros en la región central, según informó la Bolsa de Comercio de Rosario.",
-        "La superficie de trigo en condición regular cayó del 15% (250.000 hectáreas) al 7% (120.000 hectáreas).",
-        "Las recargas de agua permitieron reactivar la siembra de maíz, que alcanzó una cobertura global del 65%.",
-        "Septiembre cerró con un promedio de 31,5 milímetros tras recibir en la última semana el 80% del agua acumulada en el mes."
+        "Halliburton ratificó que no operará en Malvinas ni en Sea Lion.",
+        "La filial local ya había notificado su postura el 5 de septiembre.",
+        "La Cancillería envió unas 180 notificaciones a empresas petroleras."
       ],
-      "noConfirmado": [
-        "El grado de recuperación real que podrán alcanzar las plantas en los distritos más afectados como General Villegas y General Pinto.",
-        "El techo productivo definitivo en los lotes del oeste regional tras el impacto de las heladas y la escasez hídrica previa."
-      ],
-      "textoRedes": "Las precipitaciones acumuladas en la última semana en la franja central del país redujeron a la mitad los lotes trigueros en estado regular y permitieron reactivar la siembra de maíz.",
+      "textoRedes": "La empresa Halliburton ratificó ante el gobierno argentino que no participará del proyecto Sea Lion ni en actividades hidrocarburíferas en las Islas Malvinas.",
       "etiquetas": [
-        "lluvias",
-        "trigo",
-        "maíz",
-        "Bolsa de Comercio de Rosario",
-        "región núcleo"
+        "Halliburton",
+        "Malvinas",
+        "Sea Lion",
+        "Cancilleria",
+        "petroleo"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
-          "fecha": "2026-10-02T17:03:25.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/02/una-de-las-mayores-empresas-globales-de-servicios-petroleros-ratifico-que-no-operara-en-malvinas-ni-en-sea-lion/",
+          "fecha": "2026-10-02T17:14:03.000Z",
           "oficial": false,
-          "aporte": "Aportó los datos detallados sobre el impacto de las lluvias en el trigo y el maíz, los porcentajes de afectación y las proyecciones por zonas."
+          "aporte": "Detalló la notificación de Halliburton y las medidas de la Cancillería contra las petroleras."
         },
         {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248642-alivio-para-el-trigo-y-las-siembras-que-se-retoman-tras-los-25-mm-que-recibio-la-region-en-los-ultimos-7-dias.html",
-          "fecha": "2026-10-02T17:51:54.000Z",
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/halliburton-confirmo-que-no-participara-de-proyectos-petroleros-en-malvinas",
+          "fecha": "2026-10-02T18:27:19.000Z",
           "oficial": false,
-          "aporte": "Confirmó el registro de 25 milímetros en la región y la reducción de los lotes regulares de trigo al 7% según la Bolsa de Comercio de Rosario."
+          "aporte": "Confirmó que la empresa estadounidense no participa en la exploración en Malvinas ni en Sea Lion."
         }
       ],
       "antecedentes": [
         {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
+          "id": "1x8o7wh",
+          "titulo": "Milei anunció sanciones a empresas que operen en Malvinas y la construcción de una base naval",
+          "fecha": "2026-09-04T09:05:53.000Z",
+          "ruta": "/nota/milei-anuncio-sanciones-a-empresas-que-operen-en-malvinas-y-la-1x8o7wh"
         }
       ],
       "verificacion": {
@@ -848,10 +929,10 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz",
+      "slug": "halliburton-ratifica-que-no-operara-en-las-islas-malvinas",
       "foto": {
-        "archivo": "fotos-notas/ydwxhf.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
+        "archivo": "fotos-notas/6cucid.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -862,7 +943,6 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "News Balcarce (FM 91.7)"
@@ -872,7 +952,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 94,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -885,13 +965,6 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
-          "fecha": "2026-10-02T20:21:48.000Z",
-          "oficial": false,
           "aporte": null
         },
         {
@@ -1130,6 +1203,7 @@
       "medios": [
         "La Nación",
         "Clarín",
+        "Ecos Diarios (Necochea)",
         "TN (Todo Noticias)",
         "Página/12",
         "TyC Sports",
@@ -1327,96 +1401,6 @@
       }
     },
     {
-      "id": "ce0pxp",
-      "titulo": "Caputo descarta una devaluación y defiende el rumbo económico",
-      "copete": "El ministro de Economía habló ante empresarios en Mar del Plata. Explicó que el aumento del riesgo país responde a un escenario externo adverso y ratificó la continuidad de las medidas vigentes.",
-      "cuerpo": "El ministro de Economía, Luis Caputo, descartó recurrir a una devaluación para generar competitividad y ratificó la continuidad del plan económico actual. Durante su exposición en el cierre del 62° Coloquio de IDEA en Mar del Plata, entrevistado por el presidente del Grupo Galicia, Fabián Kon, el funcionario sostuvo que la suba del riesgo país responde a un escenario internacional adverso y afirmó que en cualquier otro momento el país no habría resistido la situación.",
-      "guion": "Caputo descarta una devaluación y defiende el rumbo económico",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Clarín",
-        "A24"
-      ],
-      "enlace": "https://www.clarin.com/economia/coloquio-idea-caputo-riesgo-pais-parte-shock-externo-brutal-cualquier-contexto-argentina-durado-minutos_0_YVPvNr8cV6.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T16:24:51.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Luis Caputo participó del 62° Coloquio de IDEA en Mar del Plata.",
-        "El ministro descartó una devaluación para buscar competitividad.",
-        "El riesgo país alcanzó los 655 puntos básicos, el nivel más alto del año.",
-        "El funcionario atribuyó el incremento financiero a un contexto internacional desfavorable."
-      ],
-      "noConfirmado": [
-        "No se informaron precisiones sobre nuevas medidas fiscales específicas para los próximos meses."
-      ],
-      "textoRedes": "El ministro de Economía, Luis Caputo, descartó una devaluación y atribuyó la suba del riesgo país a un contexto internacional adverso durante su exposición en el Coloquio de IDEA en Mar del Plata.",
-      "etiquetas": [
-        "Luis Caputo",
-        "Coloquio de IDEA",
-        "Economía",
-        "Riesgo país",
-        "Mar del Plata"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/coloquio-idea-caputo-riesgo-pais-parte-shock-externo-brutal-cualquier-contexto-argentina-durado-minutos_0_YVPvNr8cV6.html",
-          "fecha": "2026-10-02T16:24:51.000Z",
-          "oficial": false,
-          "aporte": "Detalló la entrevista a Luis Caputo en el Coloquio de IDEA a cargo de Fabián Kon."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/02/caputo-hablo-ante-los-empresarios-de-idea-descarto-devaluar-y-anticipo-el-plan-economico-si-milei-es-reelecto/",
-          "fecha": "2026-10-02T20:41:15.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación del ministro de Economía en el encuentro empresarial en Mar del Plata."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/caputo-pidio-tiempo-a-los-empresarios-y-postergo-la-reforma-tributaria-para-despues-de-2031-nid02102026/",
-          "fecha": "2026-10-02T20:17:42.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el riesgo país subió a 655 puntos básicos, el registro más alto del año."
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/caputo-defendio-el-rumbo-economico-y-atribuyo-el-alza-del-riesgo-pais-un-brutal-shock-externo-n1602678",
-          "fecha": "2026-10-02T18:22:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el funcionario se encontraba en París y vinculó la suba del indicador al contexto internacional."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1h0pc9p",
-          "titulo": "Luis Caputo asegura en París que el único riesgo local es no invertir",
-          "fecha": "2026-10-01T10:30:35.000Z",
-          "ruta": "/nota/luis-caputo-asegura-en-paris-que-el-unico-riesgo-local-es-no-invertir-1h0pc9p"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "caputo-descarta-una-devaluacion-y-defiende-el-rumbo-economico",
-      "foto": {
-        "archivo": "fotos-notas/ce0pxp.jpg",
-        "credito": "Foto: A24"
-      }
-    },
-    {
       "id": "1aekavp",
       "titulo": "Rubén Darío Insúa pide una marcha para que Lionel Messi juegue el Mundial 2030",
       "copete": "El director técnico de San Lorenzo propuso realizar una movilización general para que el capitán argentino participe en la próxima Copa del Mundo. La despedida de la Selección será el martes en el Monumental.",
@@ -1495,92 +1479,6 @@
       }
     },
     {
-      "id": "cmitva",
-      "titulo": "La producción lechera bonaerense crece mientras la facturación cae",
-      "copete": "La producción de leche y las exportaciones crecen a nivel nacional, pero los tambos bonaerenses sufren una caída en la facturación y el cierre de establecimientos. La cuenca Mar y Sierras, que incluye a Balcarce, lidera el rendimiento productivo.",
-      "cuerpo": "La actividad lechera bonaerense atraviesa un escenario dispar marcado por el incremento en el volumen elaborado y las ventas al exterior, pero con una merma sostenida en los ingresos y en la cantidad de establecimientos activos.\n\nDe acuerdo con la Secretaría de Agricultura, Ganadería y Pesca, la elaboración nacional trepó 4,5% entre enero y agosto frente al mismo lapso del año previo hasta alcanzar 7.515 millones de litros, mientras que el consumo interno sumó 4% y las exportaciones totalizaron 2.086 millones de litros equivalentes por 1.130 millones de dólares. A pesar de estos registros positivos, un informe del Observatorio de la Cadena Láctea Argentina indicó que la facturación promedio de los tambos retrocedió 10% interanual en agosto en pesos constantes y acumula una baja de 10,7% en el año, impulsada por un valor percibido por el productor que descendió 17,8%.\n\nEsta situación impacta en la rentabilidad y en la continuidad de los establecimientos. A nivel nacional, el parque letrero se redujo de 10.063 unidades a fines de 2023 a 8.745 en agosto, lo que significa una merma de 13,1%, al tiempo que en la provincia de Buenos Aires la contracción interanual rondó el 4,5%. En este contexto, la cuenca Mar y Sierras, que abarca a distritos como Balcarce, Tandil, Azul y Necochea, se mantiene al tope del ranking productivo con un promedio de 5.884 litros diarios por establecimiento en agosto, superando la media nacional de 3.898 litros.",
-      "guion": "La producción lechera bonaerense crece mientras la facturación cae",
-      "seccion": "Agro",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Ecos Diarios (Necochea)",
-        "La Verdad",
-        "Agencia DIB"
-      ],
-      "enlace": "https://dib.com.ar/economia/tambos-mayor-produccion-pero-menor-facturacion-y-cierre-establecimientos-n56198",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T14:49:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 67,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La producción lechera nacional creció 4,5% entre enero y agosto.",
-        "La facturación de los tambos cayó 10% interanual en agosto.",
-        "El país perdió 13,1% de los tambos desde finales de 2023.",
-        "La cuenca Mar y Sierras, que incluye a Balcarce, lidera el rendimiento productivo."
-      ],
-      "seSabe": [
-        "La producción de leche creció 4,5% entre enero y agosto, según la Secretaría de Agricultura, Ganadería y Pesca.",
-        "Las exportaciones sumaron 2.086 millones de litros equivalentes por 1.130 millones de dólares, de acuerdo con el mismo organismo.",
-        "La facturación de los tambos promedio cayó 10% interanual en agosto, según el Observatorio de la Cadena Láctea Argentina.",
-        "El país cuenta con 8.745 tambos frente a los 10.063 que registraba a fines de 2023, según datos relevados por Agencia DIB.",
-        "La cuenca Mar y Sierras produjo 5.884 litros diarios por establecimiento en agosto."
-      ],
-      "textoRedes": "La lechería bonaerense atraviesa un escenario dispar con mayor producción y exportaciones en alza, pero con una caída en la facturación de los tambos y cierre de establecimientos. La cuenca Mar y Sierras, que incluye a Balcarce, se destaca por su alto rendimiento diario.",
-      "etiquetas": [
-        "Lechería",
-        "Producción",
-        "Tambos",
-        "Balcarce",
-        "Mar y Sierras"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/economia/tambos-mayor-produccion-pero-menor-facturacion-y-cierre-establecimientos-n56198",
-          "fecha": "2026-10-02T14:49:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos nacionales de producción, exportación, facturación, rentabilidad, caída de tambos y el rendimiento de la cuenca Mar y Sierras."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/la-produccion-lechera-crece-mientras.html",
-          "fecha": "2026-10-02T14:57:57.427Z",
-          "oficial": false,
-          "aporte": "Coincidió en la descripción general de la situación lechera provincial."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/la-produccion-lechera-alcanza-niveles-record-pero-los-tambos-enfrentan-una-fuerte-caida-en-su-rentabilidad",
-          "fecha": "2026-10-02T15:29:23.000Z",
-          "oficial": false,
-          "aporte": "Aportó mención sobre la caída en el número de tambos y la heterogeneidad del sector."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/tambos-mayor-produccion-pero-menor-facturacion-y-cierre-de-establecimientos/",
-          "fecha": "2026-10-02T15:33:48.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el diagnóstico de realidades heterogéneas en la lechería bonaerense y nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-produccion-lechera-bonaerense-crece-mientras-la-facturacion-cae",
-      "foto": {
-        "archivo": "fotos-notas/cmitva.jpg",
-        "credito": "Foto: Agencia DIB"
-      }
-    },
-    {
       "id": "cfal5n",
       "titulo": "Milei afirma que el riesgo país baja tras las convulsiones",
       "copete": "El presidente Javier Milei recibió una distinción en el Foro Económico de París y ratificó la continuidad del equilibrio fiscal. Aseguró que el indicador financiero retomará la baja al finalizar la inestabilidad internacional.",
@@ -1595,7 +1493,8 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Nueva",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.cronica.com.ar/politica/javier-milei-expone-ante-el-foro-economico-de-paris/",
       "teniaImagenLaFuente": true,
@@ -1721,7 +1620,7 @@
       "fecha": "2026-10-02T14:22:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 55,
+      "relevancia": 51,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1919,17 +1818,15 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 100,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2003,8 +1900,7 @@
       "seccion": "Policiales",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Puntonueve (FM 100.9)"
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
@@ -2671,6 +2567,71 @@
       "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
     },
     {
+      "id": "1y25nin",
+      "titulo": "Nicolás Pino pide que el sector agropecuario integre la agenda internacional",
+      "copete": "El titular de la Sociedad Rural Argentina participa de un encuentro en París junto a autoridades nacionales y referentes privados. Destacó el rol exportador hacia Europa y reclamó mejores condiciones para producir.",
+      "cuerpo": "El presidente de la Sociedad Rural Argentina, Nicolás Pino, participa del foro Argentina Week en París, un evento que reúne a funcionarios nacionales y referentes del sector privado. El dirigente remarcó la relevancia de incluir al campo en la estrategia global del país para potenciar la producción y las inversiones.\n\nDurante su intervención, el referente rural indicó que el país posee capacidad para llegar a los 300 millones de toneladas. Asimismo, señaló que la Unión Europea se posicionó en 2025 como el segundo mercado para las ventas agroindustriales externas con más de USD 6.000 millones, detrás de China.\n\nPara sostener este crecimiento, el titular de la entidad rural solicitó mejoras en logística e infraestructura, mayor previsibilidad y la eliminación de los derechos de exportación.",
+      "guion": "Nicolás Pino pide que el sector agropecuario integre la agenda internacional",
+      "seccion": "Agro",
+      "medios": [
+        "Infocampo",
+        "Noticias Agropecuarias"
+      ],
+      "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/pino-es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T11:59:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T23:31:25.587Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Nicolás Pino participa del foro Argentina Week en París.",
+        "El titular de la SRA pidió incluir al campo en la agenda global.",
+        "La Unión Europea concentró más de USD 6.000 millones en exportaciones durante 2025.",
+        "Reclamó infraestructura, previsibilidad y quitar retenciones."
+      ],
+      "seSabe": [
+        "Nicolás Pino participa de la Argentina Week en París.",
+        "La Unión Europea fue el segundo destino de las exportaciones agroindustriales en 2025.",
+        "Las ventas al mercado europeo alcanzaron USD 1.922 millones en el primer cuatrimestre del acuerdo con el Mercosur.",
+        "El sector rural pide la eliminación de los derechos de exportación."
+      ],
+      "textoRedes": "El titular de la Sociedad Rural Argentina, Nicolás Pino, participa del foro Argentina Week en París y pidió que el campo forme parte de la agenda internacional del país para potenciar las exportaciones y la producción.",
+      "etiquetas": [
+        "Nicolás Pino",
+        "Sociedad Rural Argentina",
+        "Argentina Week",
+        "exportaciones",
+        "agro"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Agropecuarias",
+          "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/pino-es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
+          "fecha": "2026-10-02T11:59:10.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la participación de Nicolás Pino en París y las cifras de exportación a Europa."
+        },
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
+          "fecha": "2026-10-02T18:29:27.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo el encuentro del sector agropecuario y político en Francia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "nicolas-pino-pide-que-el-sector-agropecuario-integre-la-agenda"
+    },
+    {
       "id": "l415ro",
       "titulo": "Marco Morelli lidera la práctica de Moto3 en Japón",
       "copete": "El piloto argentino marcó el mejor registro en el circuito de Motegi. Su compatriota Valentín Perrone finalizó quinto y ambos avanzaron a la Q2.",
@@ -2765,17 +2726,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
-        "Infoeme",
         "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB"
+        "Agencia DIB",
+        "Infoeme"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 63,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2836,77 +2797,6 @@
       }
     },
     {
-      "id": "2esdp2",
-      "titulo": "El Banco Provincia paga los sueldos del sector de juegos de azar",
-      "copete": "El Ejecutivo bonaerense promulgó la normativa que obliga a abonar los haberes de trabajadores de bingos, casinos y apuestas online a través de la entidad pública.",
-      "cuerpo": "El Gobierno de la provincia de Buenos Aires promulgó la Ley 15.627, que establece la obligación para las empresas de bingos, casinos y plataformas de apuestas online de abonar los salarios de sus empleados mediante el Banco de la Provincia de Buenos Aires. La medida rige desde su publicación en el Boletín Oficial y abarca tanto a empleados nuevos como a los que ya se desempeñan en el sector.\n\nLa iniciativa legislativa fue impulsada por el diputado Rubén Eslaiman y recibió la aprobación definitiva en el Senado el pasado 15 de septiembre. La normativa modifica las leyes que regulan el funcionamiento de los casinos, los juegos de azar y el juego online en territorio bonaerense.\n\nLos trabajadores involucrados tienen la alternativa de solicitar de manera expresa percibir sus haberes en otra entidad bancaria si así lo prefieren. Durante el debate legislativo, el autor del proyecto sostuvo que la medida busca consolidar a la institución financiera estatal.",
-      "guion": "El Banco Provincia paga los sueldos del sector de juegos de azar",
-      "seccion": "Economía",
-      "medios": [
-        "0221",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "El Eco de Tandil",
-        "Ámbito",
-        "Agencia DIB"
-      ],
-      "enlace": "https://www.ambito.com/ambito-nacional/los-trabajadores-bingos-casinos-y-juego-online-deberan-cobrar-sus-sueldos-el-banco-provincia-n6329229",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T10:37:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Ejecutivo promulgó la Ley 15.627 sobre haberes del sector.",
-        "Abarca a trabajadores de bingos, casinos y apuestas en línea.",
-        "Los empleados pueden elegir otro banco mediante una solicitud expresa."
-      ],
-      "seSabe": [
-        "El Poder Ejecutivo bonaerense promulgó la Ley 15.627.",
-        "La norma obliga a pagar sueldos de bingos, casinos y juego online a través del Banco Provincia.",
-        "El Senado aprobó la iniciativa el 15 de septiembre tras la autoría del diputado Rubén Eslaiman.",
-        "Los trabajadores pueden solicitar de forma expresa cobrar en otra entidad bancaria."
-      ],
-      "textoRedes": "El Ejecutivo bonaerense promulgó la ley que obliga a pagar los sueldos de los trabajadores de bingos, casinos y apuestas online a través del Banco Provincia.",
-      "etiquetas": [
-        "Banco Provincia",
-        "juegos de azar",
-        "Casinos",
-        "juego online",
-        "legislación bonaerense"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/ambito-nacional/los-trabajadores-bingos-casinos-y-juego-online-deberan-cobrar-sus-sueldos-el-banco-provincia-n6329229",
-          "fecha": "2026-10-02T10:37:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/establecen-que-trabajadores-del-juego-cobren-sus-salarios-el-banco-provincia-n56192",
-          "fecha": "2026-10-02T11:39:55.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-banco-provincia-paga-los-sueldos-del-sector-de-juegos-de-azar",
-      "foto": {
-        "archivo": "fotos-notas/2esdp2.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "1egbk71",
       "titulo": "Javier Milei cumple su última jornada en Francia y regresa al país",
       "copete": "El presidente finaliza su agenda en París este viernes con un reconocimiento económico y el cierre de la Argentina Week. Su vuelta está programada para el sábado por la mañana.",
@@ -2916,11 +2806,11 @@
       "medios": [
         "La Nación",
         "Perfil",
-        "Página/12",
         "C5N",
         "Crónica",
-        "La Brújula 24",
-        "Clarín"
+        "Clarín",
+        "Página/12",
+        "La Brújula 24"
       ],
       "enlace": "https://www.c5n.com/politica/javier-milei-emmanuel-macron-reunion-francia-paris-1-octubre-2026",
       "teniaImagenLaFuente": true,
@@ -3196,7 +3086,6 @@
         "El Cronista",
         "El Destape",
         "Perfil",
-        "Página/12",
         "A24",
         "Ámbito",
         "Minuto Uno",
@@ -3207,12 +3096,13 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Verdad",
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
-        "La Capital (Rosario)",
-        "Clarín"
+        "Clarín",
+        "Página/12",
+        "La Verdad",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/duro-panorama-de-la-iglesia-al-papa-lo-espera-una-argentina-en-crisis-con-una-gran-cantidad-de-hermanos-muy-pobres/",
       "teniaImagenLaFuente": true,
@@ -3321,12 +3211,11 @@
         "iProfesional",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
-        "El Día",
-        "La Brújula 24",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "La Brújula 24"
       ],
       "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
       "teniaImagenLaFuente": true,
@@ -3558,6 +3447,82 @@
       }
     },
     {
+      "id": "zdl4xp",
+      "titulo": "La selección argentina de básquet juega en Zárate la Ventana FIBA",
+      "copete": "El combinado nacional disputará dos encuentros en noviembre en el Espacio DAM. La Confederación Argentina de Básquet trasladó la localía desde Mar del Plata por cuestiones logísticas.",
+      "cuerpo": "La selección argentina de básquet disputará sus próximos dos compromisos de local en el Espacio DAM de Zárate, según informó la Confederación Argentina de Básquet. El equipo que dirige Pablo Prigioni se enfrentará a Bahamas el jueves 26 de noviembre y a Canadá el domingo 29 por la quinta ventana de los clasificatorios rumbo a la Copa del Mundo de Qatar 2027.\n\nEn mayo, la entidad madre del básquet nacional había comunicado que el Polideportivo Islas Malvinas de Mar del Plata albergaría estos encuentros. Sin embargo, la organización modificó la planificación original hacia el distrito bonaerense debido a motivos logísticos vinculados al traslado y la preparación del plantel.\n\nEl conjunto nacional afrontará esta instancia con un historial de seis victorias y dos caídas dentro del Grupo F. Las localidades para presenciar ambos partidos se conseguirán próximamente mediante la plataforma digital basquet.id.",
+      "guion": "La selección argentina de básquet juega en Zárate la Ventana FIBA",
+      "seccion": "Deportes",
+      "medios": [
+        "Olé",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Infobrisas (Radio Brisas)",
+        "Básquet Plus",
+        "Pick and Roll",
+        "La Nueva"
+      ],
+      "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-01T19:36:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-01T20:38:36.988Z",
+      "relevancia": 70,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El equipo nacional será local en el Espacio DAM de Zárate en noviembre.",
+        "Enfrentará a Bahamas el jueves 26 y a Canadá el domingo 29.",
+        "El cambio de sede desde Mar del Plata responde a cuestiones logísticas.",
+        "Las entradas están próximas a anunciarse en la plataforma basquet.id."
+      ],
+      "seSabe": [
+        "La Confederación Argentina de Básquet trasladó la localía a Zárate.",
+        "Los partidos se jugarán el 26 y 29 de noviembre en el Espacio DAM.",
+        "El equipo es dirigido por Pablo Prigioni.",
+        "Argentina suma seis triunfos y dos derrotas en el Grupo F."
+      ],
+      "noConfirmado": [
+        "Todavía no se anunciaron los precios ni la fecha exacta de venta de las entradas."
+      ],
+      "etiquetas": [
+        "selección argentina de básquet",
+        "Ventana FIBA",
+        "Zárate",
+        "Copa del Mundo 2027",
+        "Confederación Argentina de Básquet"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Básquet Plus",
+          "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
+          "fecha": "2026-10-01T19:46:22.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la selección será local en Zárate y jugará en el Espacio DAM."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/argentina-jugara-en-zarate-ante-bahamas-y-canada-por-las-eliminatorias-al-mundial-2027",
+          "fecha": "2026-10-01T20:36:38.000Z",
+          "oficial": false,
+          "aporte": "Detalló las fechas de los partidos, el cambio de sede respecto a Mar del Plata y la venta de entradas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-seleccion-argentina-de-basquet-juega-en-zarate-la-ventana-fiba",
+      "foto": {
+        "archivo": "fotos-notas/zdl4xp.jpg",
+        "credito": "Foto: QZ Noticias (Mar del Plata)"
+      }
+    },
+    {
       "id": "16vloik",
       "titulo": "La desigualdad de ingresos baja pero el sector más rico gana trece veces más",
       "copete": "El Indec informó que la disparidad en los sueldos se redujo frente al inicio del año. Sin embargo, el sector de mayores recursos superó ampliamente al de menores ingresos durante el segundo trimestre.",
@@ -3572,7 +3537,6 @@
         "Página/12",
         "C5N",
         "Noticias Argentinas (NA)",
-        "La Verdad",
         "El Eco de Tandil",
         "Ámbito",
         "A24",
@@ -3581,7 +3545,8 @@
         "La Capital (Rosario)",
         "Ecos Diarios (Necochea)",
         "Clarín",
-        "Crónica"
+        "Crónica",
+        "La Verdad"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/01/la-desigualdad-bajo-en-el-segundo-trimestre-pero-el-10-mas-rico-gana-13-veces-mas-que-el-sector-con-menos-recursos/",
       "teniaImagenLaFuente": true,
@@ -3797,81 +3762,6 @@
       "foto": {
         "archivo": "fotos-notas/1uwpmsg.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "1f6rlk",
-      "titulo": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
-      "copete": "La senadora nacional participó el jueves del Coloquio de IDEA en Mar del Plata. Evitó definir si competirá por la presidencia en 2027 y reclamó que las medidas oficiales lleguen con mayor claridad a los hogares.",
-      "cuerpo": "La senadora nacional Patricia Bullrich participó el jueves en el sexagésimo segundo Coloquio de IDEA en Mar del Plata, donde evitó definir si será candidata a la presidencia en 2027 y puso el foco en la continuidad del proyecto oficialista.\n\nDurante su exposición ante representantes empresarios, la legisladora de La Libertad Avanza reclamó mayor velocidad para que los cambios económicos implementados se reflejen en los hogares. Además, marcó diferencias entre las actividades con alto dinamismo, como el agro y la minería, y sectores como la industria, la construcción y el comercio que atraviesan dificultades.\n\nPor otro lado, la senadora advirtió sobre el impacto del costo argentino y la presión impositiva en la competitividad frente a la región. Al respecto, señaló que no es posible reducir todos los gravámenes de manera inmediata y que se requiere el acompañamiento de las provincias y los municipios.",
-      "guion": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
-      "seccion": "Política",
-      "medios": [
-        "El Eco de Tandil",
-        "Perfil",
-        "Infobae",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T17:50:05.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T21:38:14.044Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Participó este jueves en el Coloquio de IDEA en Mar del Plata.",
-        "Evitó definir una candidatura presidencial de cara a 2027.",
-        "Reclamó mayor velocidad para que los cambios lleguen a las familias.",
-        "Advirtió sobre el impacto del costo argentino en la competitividad."
-      ],
-      "seSabe": [
-        "Patricia Bullrich participó en el 62° Coloquio de IDEA en Mar del Plata.",
-        "La senadora evitó confirmar una candidatura para 2027 y priorizó la continuidad del proyecto político.",
-        "Reclamó mayor velocidad para que las medidas económicas se sientan en los hogares.",
-        "Señaló la necesidad de compatibilizar sectores en crecimiento con industrias y comercios caídos.",
-        "Indicó que la reducción impositiva requiere el acompañamiento de provincias y municipios."
-      ],
-      "noConfirmado": [
-        "Aún no está definido cómo se ordenará la oferta electoral ni las alianzas para 2027."
-      ],
-      "textoRedes": "La senadora Patricia Bullrich participó en el Coloquio de IDEA en Mar del Plata, evitó definir una candidatura para 2027 y reclamó mayor velocidad para que los cambios económicos lleguen a los hogares.",
-      "etiquetas": [
-        "Patricia Bullrich",
-        "IDEA",
-        "Mar del Plata",
-        "Economía",
-        "Elecciones 2027"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/patricia-bullrich-en-idea-hablo-de-2027-y-reclamo-mayor-velocidad-para-que-los-cambios-lleguen-a-las-familias.phtml",
-          "fecha": "2026-10-01T17:50:05.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones de Patricia Bullrich en el Coloquio de IDEA sobre la economía, las elecciones de 2027 y el costo argentino."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/politica/bullrich-volvio-a-marcar-diferencias-y-reclamo-que-los-cambios-economicos-lleguen-a-las-familias",
-          "fecha": "2026-10-01T20:13:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la participación de Patricia Bullrich en el encuentro empresarial en Mar del Plata."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "patricia-bullrich-pide-mayor-velocidad-para-los-cambios-economicos-en",
-      "foto": {
-        "archivo": "fotos-notas/1f6rlk.jpg",
-        "credito": "Foto: Perfil"
       }
     },
     {
@@ -4102,10 +3992,10 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "Agroempresario",
         "Agrositio",
         "Infocampo",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248623-las-exportaciones-agroindustriales-a-la-ue-crecieron-21-en-valor-tras-el-acuerdo-con-el-mercosur.html",
       "teniaImagenLaFuente": true,
@@ -4305,7 +4195,7 @@
       "fecha": "2026-10-01T14:00:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T12:01:29.911Z",
-      "relevancia": 72,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4803,10 +4693,10 @@
     "Deportes",
     "Cultura y agenda",
     "Automovilismo",
-    "Argentina",
-    "Agro",
     "Economía",
+    "Argentina",
     "Fútbol",
+    "Agro",
     "Policiales"
   ],
   "temas": [
@@ -4830,10 +4720,10 @@
     "ahora": {
       "temp": 10,
       "sensacion": 7,
-      "humedad": 85,
-      "viento": 16,
+      "humedad": 86,
+      "viento": 17,
       "rumbo": "N",
-      "cielo": "Llovizna leve",
+      "cielo": "Nublado",
       "esDeDia": false
     },
     "dias": [
@@ -5183,28 +5073,16 @@
   },
   "pendientes": [
     {
-      "id": "1w06xhx",
+      "id": "1148srf",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"lesionada\""
-    },
-    {
-      "id": "1c7unm1",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"herido\""
     },
     {
       "id": "1uabccx",
       "titulo": null,
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "1f8yrdr",
-      "titulo": "FNP 2026: parte del cronograma ya fue confirmado",
-      "seccion": "Cultura y agenda",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "1gbi1d2",
@@ -5219,10 +5097,10 @@
       "motivo": "necesita ojo humano: \"homicidio\""
     },
     {
-      "id": "1ba54ng",
-      "titulo": "Ordenaron detener al líder de la barra de Racing: la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "id": "4xscfj",
+      "titulo": "Victoria Villarruel viajó a Madrid junto a senadores para…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "1swrham",
@@ -5261,34 +5139,16 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "1gkbdh0",
-      "titulo": "A cuatro días de las elecciones en Brasil, Milei volvió a…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "1ba54ng",
+      "titulo": "Ordenaron detener al líder de la barra de Racing: la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "1yg85wu",
+      "id": "fd2y4d",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
-    },
-    {
-      "id": "1ts5hux",
-      "titulo": "Buscan que toda la publicidad creada con Inteligencia…",
-      "seccion": "Tecnología",
-      "motivo": "parece promoción, no noticia: \"publicidad\""
-    },
-    {
-      "id": "4n4kj2",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"nena\""
-    },
-    {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
+      "motivo": "necesita ojo humano: \"muerte\""
     },
     {
       "id": "4hbo6t",
@@ -5297,28 +5157,28 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
+      "id": "1yg85wu",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herido\""
+    },
+    {
+      "id": "4n4kj2",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"nena\""
+    },
+    {
+      "id": "1b80a9j",
+      "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
       "id": "1yvhtzv",
       "titulo": "Una emblemática librería denunció que buscan expropiarla…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "ol2gg1",
-      "titulo": "Resultados de Quini 6 hoy: controlá tu boleta del…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "6gb1qq",
-      "titulo": "¿Qué puede aportar el Campo argentino al mundo? La…",
-      "seccion": "Agro",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "imkij7",
-      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 8

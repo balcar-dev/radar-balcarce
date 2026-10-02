@@ -1816,9 +1816,9 @@
   "motivo": "con cuerpo"
  },
  "1qnkumc": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T23:01:27.757Z",
-  "motivo": "cuerpo: 1 problema (nombre): el cuerpo nombra a \"estado\" y la fuente no; sin esas oraciones quedan 64 palabras"
+  "intentos": 3,
+  "ultimo": "2026-10-02T23:31:37.042Z",
+  "motivo": "cuerpo: 5 problemas (antecedente, fecha, nombre, relleno): el cuerpo usa 2, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 52 pa"
  },
  "1qqb00k": {
   "intentos": 1,
@@ -2303,8 +2303,8 @@
   "motivo": "con cuerpo"
  },
  "1y25nin": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T21:31:16.436Z",
+  "intentos": 3,
+  "ultimo": "2026-10-02T23:31:37.042Z",
   "motivo": "con cuerpo"
  },
  "1y2896y": {
@@ -3249,9 +3249,9 @@
   "motivo": "con cuerpo"
  },
  "gdwukq": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T23:01:27.757Z",
-  "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (sesion, derogacion, oposicion, Camara, gestion): va con las tildes"
+  "intentos": 3,
+  "ultimo": "2026-10-02T23:31:37.042Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 64 palabras"
  },
  "gdzgb": {
   "intentos": 1,
@@ -3923,6 +3923,11 @@
   "intentos": 1,
   "ultimo": "2026-09-30T14:31:22.980Z",
   "motivo": "con cuerpo"
+ },
+ "qh4l57": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T23:31:37.042Z",
+  "motivo": "título o bajada: 1 problema (tilde): el copete dice \"mas\" en vez de \"más\": \"La cotizacion de la oleaginosa trepo un 12 por ciento durant\""
  },
  "qixyvq": {
   "intentos": 2,

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T23:02:04.003Z",
- "portada": 61,
- "archivo": 817,
+ "generado": "2026-10-02T23:31:59.775Z",
+ "portada": 60,
+ "archivo": 818,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-02T23:02:04.042Z",
+  "generado": "2026-10-02T23:31:59.816Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-02T23:04:35.557Z"
    },
    {
     "nombre": "podcast",
@@ -202,6 +202,12 @@
    ],
    "cola": [
     {
+     "id": "1917p5s",
+     "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
      "id": "1akpidg",
      "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
      "seccion": "Balcarce",
@@ -211,12 +217,6 @@
      "id": "3cr087",
      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "1917p5s",
-     "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],
