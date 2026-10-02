@@ -129,6 +129,11 @@
   "ultimo": "2026-10-02T00:07:47.098Z",
   "motivo": "con cuerpo"
  },
+ "11jis8k": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"legislatura\" y la fuente no; sin esas oraciones quedan 114 palabras"
+ },
  "11jl9w6": {
   "intentos": 1,
   "ultimo": "2026-09-29T14:03:38.532Z",
@@ -612,6 +617,11 @@
   "ultimo": "2026-09-28T10:54:07.014Z",
   "motivo": "con cuerpo"
  },
+ "18ifkne": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "con cuerpo"
+ },
  "18ijfw7": {
   "intentos": 1,
   "ultimo": "2026-09-27T03:30:39.535Z",
@@ -841,6 +851,11 @@
  "1cqpdyc": {
   "intentos": 1,
   "ultimo": "2026-09-27T10:30:39.936Z",
+  "motivo": "con cuerpo"
+ },
+ "1ctsl0u": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
   "motivo": "con cuerpo"
  },
  "1d5l8dl": {
@@ -1581,6 +1596,11 @@
  "1nyo5j6": {
   "intentos": 1,
   "ultimo": "2026-09-29T16:31:31.137Z",
+  "motivo": "con cuerpo"
+ },
+ "1nz8gwo": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
   "motivo": "con cuerpo"
  },
  "1nzl1bf": {
@@ -2447,6 +2467,11 @@
   "ultimo": "2026-09-29T00:31:00.500Z",
   "motivo": "cuerpo: 4 problemas (numero): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 63 palabras"
  },
+ "3cr087": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "título o bajada: 1 problema (numero): el copete dice 0 y la fuente no lo dice"
+ },
  "3i24zc": {
   "intentos": 1,
   "ultimo": "2026-10-01T14:12:21.113Z",
@@ -2480,6 +2505,11 @@
  "436uz0": {
   "intentos": 1,
   "ultimo": "2026-09-29T22:31:15.416Z",
+  "motivo": "con cuerpo"
+ },
+ "46zq6i": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
   "motivo": "con cuerpo"
  },
  "4aj9uy": {
@@ -2828,9 +2858,9 @@
   "motivo": "sin material"
  },
  "a5lojb": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T20:01:34.480Z",
-  "motivo": "título o bajada: 1 problema (numero): el copete dice 0 y la fuente no lo dice"
+  "intentos": 2,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "con cuerpo"
  },
  "aabc5v": {
   "intentos": 1,
@@ -2943,6 +2973,11 @@
   "intentos": 1,
   "ultimo": "2026-09-28T17:32:02.999Z",
   "motivo": "con cuerpo"
+ },
+ "ce0pxp": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 50 y la fuente no lo dice; sin esas oraciones quedan 40 palabras"
  },
  "cfal5n": {
   "intentos": 1,
@@ -3505,6 +3540,11 @@
   "ultimo": "2026-09-28T23:31:15.698Z",
   "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original; sin esas oraciones quedan 25 palabras"
  },
+ "l415ro": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "con cuerpo"
+ },
  "levx4q": {
   "intentos": 1,
   "ultimo": "2026-09-27T03:00:47.961Z",
@@ -3559,6 +3599,11 @@
   "intentos": 3,
   "ultimo": "2026-09-26T04:00:50.275Z",
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"camara\", que sale de una nota anterior, como si fuera de hoy"
+ },
+ "n09ogo": {
+  "intentos": 1,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 55 palabras"
  },
  "n3bhr": {
   "intentos": 1,
@@ -4139,9 +4184,9 @@
   "motivo": "con cuerpo"
  },
  "w3769j": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T18:01:29.109Z",
-  "motivo": "título o bajada: 1 problema (copia): copia 15 palabras seguidas del original: decilo con otras palabras"
+  "intentos": 3,
+  "ultimo": "2026-10-02T20:31:31.976Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 19 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 74 palabras"
  },
  "w5bkuh": {
   "intentos": 3,
