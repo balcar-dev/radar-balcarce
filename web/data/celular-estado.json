@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T07:31:27.363Z",
+ "generado": "2026-10-02T08:01:30.398Z",
  "portada": 59,
  "archivo": 754,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-02T07:31:27.398Z",
+  "generado": "2026-10-02T08:01:30.431Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
       "id": "1j4lf17",
@@ -98,8 +98,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
       "seccion": "Balcarce"
      },
      {
@@ -116,12 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 41,
+    "segundos": 50,
     "notas": [
      {
       "id": "17z7wso",
       "titulo": "El automovilismo deja un movimiento de 2.700 millones",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "seccion": "Balcarce"
      },
      {
       "id": "idl5dq",
