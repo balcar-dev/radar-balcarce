@@ -5502,16 +5502,16 @@
   "fuentes": 1
  },
  "18ifkne": {
-  "archivo": "fotos-notas/18ifkne.jpg",
   "medio": "Agencia DIB",
-  "credito": "Foto: Agencia DIB",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Provincia desafecta un predio minero en Olavarría",
   "enlace": "https://dib.com.ar/sociedad/la-provincia-desafecto-un-predio-minero-sierras-bayas-crear-un-parque-urbano-n56194",
   "imagenOriginal": "https://media.dib.com.ar/p/9c694910b4a376a3844b5f93fceb7008/adjuntos/377/imagenes/100/058/0100058587/1200x675/smart/sierras-bayas.jpg",
   "razon": "Es la foto con mejor encuadre y nitidez, sin menores ni marcas de agua agregadas.",
-  "cuando": "2026-10-02T20:32:43.480Z"
+  "cuando": "2026-10-02T20:32:43.480Z",
+  "intentado": true,
+  "borrada": true
  },
  "l415ro": {
   "archivo": "fotos-notas/l415ro.jpg",
@@ -5533,5 +5533,65 @@
   "cuando": "2026-10-02T20:32:43.480Z",
   "intentos": 1,
   "fuentes": 2
+ },
+ "3cr087": {
+  "archivo": "fotos-notas/3cr087.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
+  "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-02-20-21-19Rocío_Lemmo.jpg",
+  "razon": "La foto tiene buena calidad, muestra claramente a la deportista con los trofeos y no tiene marcas de agua ni menores de edad.",
+  "cuando": "2026-10-02T21:01:55.022Z"
+ },
+ "vguosy": {
+  "archivo": "fotos-notas/vguosy.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La cadena de panaderías Pandanés cierra sus locales y despide personal",
+  "enlace": "https://www.ambito.com/negocios/cerro-famosa-cadena-panaderias-la-persiana-20-locales-despidio-su-personal-y-pedira-la-quiebra-n6329529",
+  "imagenOriginal": "https://media.ambito.com/p/a541515c4f8029df71b57bed6648f01b/adjuntos/239/imagenes/043/680/0043680873/1200x675/smart/pan-danes.jpg",
+  "razon": "La foto B muestra claramente el frente del local de Pandanés con los carteles de reclamo pegados por los empleados, sin personas reconocibles ni menores, y sin marcas añadidas.",
+  "cuando": "2026-10-02T21:01:55.022Z"
+ },
+ "n09ogo": {
+  "archivo": "fotos-notas/n09ogo.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
+  "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera-foto-reuters-CU2Y7XTYANBJFAXV63K7PDLHKE.jpg?auth=bfabb25e5b2932eb3cbeb1ea70897f9f3e20f394a0324848dc5f81d2c12bff54&width=1023",
+  "razon": "Es la foto más limpia, con buena nitidez y encuadre del protagonista, sin marcas de agua agregadas ni menores.",
+  "cuando": "2026-10-02T21:01:55.022Z"
+ },
+ "ce0pxp": {
+  "archivo": "fotos-notas/ce0pxp.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Caputo descarta una devaluación y defiende el rumbo económico",
+  "enlace": "https://www.a24.com/politica/caputo-defendio-el-rumbo-economico-y-atribuyo-el-alza-del-riesgo-pais-un-brutal-shock-externo-n1602678",
+  "imagenOriginal": "https://media.a24.com/p/1f303501de26ffa03f4303b891b03205/adjuntos/296/imagenes/009/785/0009785781/1200x675/smart/luis-caputo.jpg",
+  "razon": "Es la única foto limpia de buena calidad, encuadre correcto del ministro hablando en conferencia sin personas irreconocibles ni marcas superpuestas.",
+  "cuando": "2026-10-02T21:01:55.022Z"
+ },
+ "1y25nin": {
+  "archivo": "fotos-notas/1y25nin.jpg",
+  "medio": "Infocampo",
+  "credito": "Foto: Infocampo",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Nicolas Pino pide que el agro forme parte de la agenda internacional",
+  "enlace": "https://www.infocampo.com.ar/es-importante-que-el-agro-sea-parte-de-la-agenda-con-la-que-argentina-se-muestra-al-mundo/",
+  "imagenOriginal": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/pino-en-franci.png",
+  "razon": "La foto B muestra claramente a Nicolás Pino posando de cuerpo entero sin marcas de agua ni menores, siendo ideal para ilustrar la nota.",
+  "cuando": "2026-10-02T21:01:55.022Z"
  }
 }
