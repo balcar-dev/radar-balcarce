@@ -677,6 +677,53 @@
         "vistas": 5,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-03T00:00:16.530Z",
+      "web": {
+        "u12": {
+          "visitas": 41,
+          "vistas": 104
+        },
+        "a12": {
+          "visitas": 13,
+          "vistas": 34
+        },
+        "u24": {
+          "visitas": 54,
+          "vistas": 138
+        },
+        "a24": {
+          "visitas": 35,
+          "vistas": 272
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 34
+          },
+          {
+            "camino": "/nota/el-club-de-leones-entrega-nuevos-equipos-al-hospital-municipal-164o14u",
+            "vistas": 16
+          },
+          {
+            "camino": "/seccion/policiales",
+            "vistas": 12
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 5,
+        "vistas": 520,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 62,
+        "alcance": 14,
+        "vistas": 76,
+        "interacciones": 3
+      }
     }
   ],
   "dias": {
@@ -933,15 +980,40 @@
       }
     },
     "2026-10-02": {
-      "notas": {},
+      "notas": {
+        "164o14u": 16,
+        "h1ggzr": 9,
+        "xvt4t1": 4,
+        "1qk6uan": 4,
+        "a0bbpp": 3,
+        "b68hv9": 3,
+        "1ugi3md": 2,
+        "18bbdzh": 2,
+        "1a9rnj4": 2,
+        "1v6m62u": 2,
+        "kbhdgj": 2,
+        "y1kgx4": 2,
+        "1j4lf17": 2
+      },
       "paginas": {
-        "/": 4
+        "/": 24,
+        "/seccion/policiales": 12,
+        "/seccion/automovilismo": 4,
+        "/farmacias": 4,
+        "/seccion/balcarce": 4,
+        "/util": 4,
+        "/seccion/economia": 2,
+        "/seccion/politica": 1
       },
       "paises": {
-        "AR": 4
+        "AR": 59,
+        "US": 33,
+        "SE": 10,
+        "IE": 4,
+        "KR": 2
       },
-      "visitas": 2,
-      "vistas": 4,
+      "visitas": 43,
+      "vistas": 108,
       "horas": [
         0,
         4,
@@ -953,14 +1025,14 @@
         0,
         0,
         0,
+        10,
+        51,
+        18,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        21,
+        2,
+        2,
         0,
         0,
         0,
@@ -969,10 +1041,12 @@
         0
       ],
       "dispositivos": {
-        "mobile": 4
+        "mobile": 73,
+        "desktop": 35
       },
       "referentes": {
-        "directo": 2
+        "facebook.com": 34,
+        "directo": 9
       }
     }
   }
