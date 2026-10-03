@@ -91,6 +91,7 @@ import {
   repetidasConOtraDireccion, conFusionadas, parejasSospechosas, sumarFuentesDeParejas,
 } from '../lib/repetidas.js';
 import { diceEnVivo } from '../../ingesta/verificar.mjs';
+import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -114,6 +115,8 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 // nota propia del dólar y su comparación con días anteriores
 // (lib/notas-propias.js). Va versionado, como intentos-ia.json.
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
+// La Fórmula 1 (ingesta/f1.mjs, 3/10): calendario, resultado y campeonato de Jolpica, y cuándo salió cada nota.
+const F1_JSON = path.join(AQUI, '..', 'data', 'f1.json');
 // Las fichas de la lectura con IA, que decide desde el 27/09 (ingesta/lectura-ia.mjs).
 const FICHAS = path.join(AQUI, '..', 'data', 'fichas.json');
 // El banco de fotos (28/09, scripts/fotos-notas.mjs): qué nota ya se probó,
@@ -678,6 +681,21 @@ if (!historiaAntes || JSON.stringify(historiaDolar) !== JSON.stringify(historiaA
   fs.writeFileSync(HISTORIA_DOLAR, comoHistoriaJson(historiaDolar), 'utf8');
 }
 
+// La Fórmula 1 (ingesta/f1.mjs): horarios en hora argentina los días del Gran Premio y el resultado
+// al terminar. Se consulta Jolpica sólo en la nube; si la API falla queda lo último guardado.
+const f1Antes = leerJson(F1_JSON, null);
+let f1Datos = f1Antes;
+if (enLaNube) {
+  try { f1Datos = await traerF1({ antes: f1Antes }); } catch (e) { console.log(`  F1: no se pudo consultar (${e.message}); queda lo guardado`); }
+}
+let notasF1 = [];
+try {
+  const { notas, fechas } = notasDeF1(f1Datos ?? {});
+  notasF1 = notas;
+  if (f1Datos) f1Datos = { ...f1Datos, notas: fechas };
+} catch (e) { console.log(`  F1: no se pudo armar la nota (${e.message})`); }
+if (enLaNube && f1Datos && JSON.stringify(f1Datos) !== JSON.stringify(f1Antes)) fs.writeFileSync(F1_JSON, comoF1Json(f1Datos), 'utf8');
+
 // Las notas con página, para contar cada podcast: lo de esta corrida y el
 // archivo, sin lo que se acaba de retirar. Un repaso que ya no se puede armar
 // (una de sus notas se retiró) también se retira.
@@ -688,7 +706,7 @@ const conPagina = new Map([
 const { notas: repasos, noSeArman } = notasDeRepasos(libroRedes, conPagina, { catalogo: TEMAS });
 for (const id of noSeArman) retiradas.add(id);
 // La regla de cuerpo vale también para lo propio (lib/cuerpo.js).
-const propias = [...notasDelDolar(historiaDolar), ...repasos]
+const propias = [...notasDelDolar(historiaDolar), ...notasF1, ...repasos]
   .map((n) => fijarSlug(n, direcciones))
   .filter((n) => tieneCuerpo(n));
 if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);

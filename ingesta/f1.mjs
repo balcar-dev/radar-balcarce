@@ -1,0 +1,489 @@
+// La Fórmula 1 como nota propia de Automovilismo (2/10/2026, Hernán): cuando hay
+// Gran Premio, los horarios en hora argentina y, al terminar, el resultado.
+// Balcarce es la ciudad de Fangio y Franco Colapinto es argentino.
+//
+// Dos notas por Gran Premio, armadas con plantilla a partir de datos abiertos
+// de Jolpica (api.jolpi.ca, la continuación de Ergast; sin clave):
+//
+//   · "F1: horarios del Gran Premio de X": desde el jueves de esa semana hasta
+//     3 horas después de la largada. Práctica, clasificación, sprint (si hay) y
+//     carrera, en hora argentina (UTC-3), con el día de la semana y la fecha.
+//   · "F1: así fue el Gran Premio de X": cuando la API ya tiene el resultado
+//     (hasta 4 días después). Podio, Colapinto, primero en la parrilla, vuelta
+//     rápida y el campeonato (los 5 primeros).
+//
+// No hay IA ni adjetivos: sólo lo que dice la API, con la fuente citada. Si la
+// API falla no se rompe nada: se sigue con lo último guardado (web/data/f1.json)
+// o no hay nota. Todo lo de acá es de una entrada y una salida; lo único con red
+// es `traerF1`, que recibe el `fetch` para poder probarlo con respuestas de
+// ejemplo. SIN dependencias.
+
+const API = 'https://api.jolpi.ca/ergast/f1';
+const ZONA = 'America/Argentina/Buenos_Aires';
+const DIA_MS = 24 * 3600 * 1000;
+const HORA_MS = 3600 * 1000;
+
+export const FUENTE_F1 = { medio: 'Jolpica F1 (datos abiertos)', enlace: 'https://github.com/jolpica/jolpica-f1' };
+export const FIRMA_F1 = 'Nota de Radar Balcarce armada con los datos abiertos de Jolpica F1.';
+/** Como una nota de afuera normal: no le gana a lo de Balcarce en la tapa. */
+export const RELEVANCIA_F1 = 58;
+/** La nota de horarios se muestra hasta tantas horas después de la largada. */
+export const HORAS_HORARIOS_DESPUES = 3;
+/** La carrera "terminó" para ir a buscar el resultado a partir de tantas horas. */
+export const HORAS_PARA_BUSCAR_RESULTADO = 1.5;
+/** El resultado se cuenta hasta tantos días después de la carrera. */
+export const DIAS_DEL_RESULTADO = 4;
+/** Cada cuántas horas se vuelve a pedir el calendario. */
+export const HORAS_ENTRE_CALENDARIOS = 6;
+
+const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+const PAISES = {
+  Australia: 'Australia', China: 'China', Japan: 'Japón', USA: 'Estados Unidos', Canada: 'Canadá', Monaco: 'Mónaco',
+  Spain: 'España', Austria: 'Austria', UK: 'Gran Bretaña', 'United Kingdom': 'Gran Bretaña', Belgium: 'Bélgica', Hungary: 'Hungría',
+  Netherlands: 'Países Bajos', Italy: 'Italia', Azerbaijan: 'Azerbaiyán', Singapore: 'Singapur', Mexico: 'México', Brazil: 'Brasil',
+  Qatar: 'Qatar', UAE: 'Abu Dabi', Bahrain: 'Baréin', 'Saudi Arabia': 'Arabia Saudita', Malaysia: 'Malasia', Portugal: 'Portugal',
+  France: 'Francia', Germany: 'Alemania', Turkey: 'Turquía', Argentina: 'Argentina', Korea: 'Corea', India: 'India', Russia: 'Rusia',
+};
+
+const NOMBRES_ES = {
+  'Australian Grand Prix': 'Australia', 'Chinese Grand Prix': 'China', 'Japanese Grand Prix': 'Japón', 'Miami Grand Prix': 'Miami',
+  'Canadian Grand Prix': 'Canadá', 'Monaco Grand Prix': 'Mónaco', 'Barcelona Grand Prix': 'Barcelona', 'Austrian Grand Prix': 'Austria',
+  'British Grand Prix': 'Gran Bretaña', 'Belgian Grand Prix': 'Bélgica', 'Hungarian Grand Prix': 'Hungría', 'Dutch Grand Prix': 'los Países Bajos',
+  'Italian Grand Prix': 'Italia', 'Spanish Grand Prix': 'España', 'Azerbaijan Grand Prix': 'Azerbaiyán', 'Singapore Grand Prix': 'Singapur',
+  'United States Grand Prix': 'Estados Unidos', 'Mexico City Grand Prix': 'la Ciudad de México', 'Mexican Grand Prix': 'México',
+  'Brazilian Grand Prix': 'Brasil', 'São Paulo Grand Prix': 'San Pablo', 'Las Vegas Grand Prix': 'Las Vegas', 'Qatar Grand Prix': 'Qatar',
+  'Abu Dhabi Grand Prix': 'Abu Dabi', 'Bahrain Grand Prix': 'Baréin', 'Saudi Arabian Grand Prix': 'Arabia Saudita',
+};
+
+/** "Gran Premio de Azerbaiyán", a partir del nombre en inglés de la API. Lo que
+ *  no conocemos se deja como lo dice la API, sin inventar. */
+export function nombreDelGranPremio(raceName = '') {
+  const n = String(raceName).trim();
+  if (NOMBRES_ES[n]) return `Gran Premio de ${NOMBRES_ES[n]}`;
+  const en = n.match(/^(.+) Grand Prix in (.+)$/);
+  if (en) {
+    const a = NOMBRES_ES[`${en[1]} Grand Prix`] ?? PAISES[en[1]] ?? en[1];
+    const b = PAISES[en[2]] ?? en[2];
+    return `Gran Premio de ${a} en ${b}`;
+  }
+  const simple = n.match(/^(.+) Grand Prix$/);
+  return simple ? `Gran Premio de ${PAISES[simple[1]] ?? simple[1]}` : n || 'Gran Premio';
+}
+
+// ------------------------------------------------------------ las horas
+
+/** El día en Balcarce, "2026-10-04". */
+export const diaAR = (fecha) => new Intl.DateTimeFormat('en-CA', { timeZone: ZONA }).format(new Date(fecha));
+
+/** "04:00", en Balcarce. */
+export function horaAR(fecha) {
+  const p = new Intl.DateTimeFormat('en-GB', { timeZone: ZONA, hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date(fecha));
+  const v = (t) => p.find((x) => x.type === t)?.value ?? '00';
+  return `${String(Number(v('hour')) % 24).padStart(2, '0')}:${v('minute')}`;
+}
+
+/** El instante de un { date, time } de Jolpica (UTC). Null si no se entiende. */
+export function instante(d) {
+  if (!d?.date || !/^\d{4}-\d{2}-\d{2}$/.test(d.date)) return null;
+  const hora = /^\d{2}:\d{2}(:\d{2})?Z?$/.test(d.time ?? '') ? d.time.replace(/Z$/, '') : null;
+  if (!hora) return null; // sin hora no hay horario que dar
+  const t = new Date(`${d.date}T${hora.length === 5 ? `${hora}:00` : hora}Z`);
+  return Number.isNaN(t.getTime()) ? null : t.toISOString();
+}
+
+const diaDeLaSemana = (dia) => new Date(`${dia}T12:00:00Z`).getUTCDay();
+const sumarDias = (dia, n) => new Date(new Date(`${dia}T12:00:00Z`).getTime() + n * DIA_MS).toISOString().slice(0, 10);
+/** "domingo 4 de octubre". */
+export const diaLargo = (dia) => `${DIAS[diaDeLaSemana(dia)]} ${Number(dia.slice(8, 10))} de ${MESES[Number(dia.slice(5, 7)) - 1]}`;
+/** "domingo 4". */
+export const diaCorto = (dia) => `${DIAS[diaDeLaSemana(dia)]} ${Number(dia.slice(8, 10))}`;
+
+/** "Domingo 4 de octubre, 04:00" -> las partes en hora argentina. */
+export const enHoraArgentina = (iso) => ({ dia: diaAR(iso), hora: horaAR(iso) });
+
+const SESIONES = [
+  ['FirstPractice', 'Práctica libre 1'],
+  ['SecondPractice', 'Práctica libre 2'],
+  ['ThirdPractice', 'Práctica libre 3'],
+  ['SprintQualifying', 'Clasificación sprint'],
+  ['SprintShootout', 'Clasificación sprint'],
+  ['Sprint', 'Sprint'],
+  ['Qualifying', 'Clasificación'],
+];
+
+/** Las sesiones de una carrera del calendario, en orden y en UTC:
+ *  [{ clave, nombre, inicio }], la carrera al final. */
+export function sesionesDeLaCarrera(carrera = {}) {
+  const lista = [];
+  for (const [clave, nombre] of SESIONES) {
+    const inicio = instante(carrera[clave]);
+    if (inicio) lista.push({ clave, nombre, inicio });
+  }
+  const largada = instante(carrera);
+  if (largada) lista.push({ clave: 'Race', nombre: 'Carrera', inicio: largada });
+  return lista.sort((a, b) => a.inicio.localeCompare(b.inicio));
+}
+
+// ---------------------------------------------------- qué datos guardamos
+
+const entero = (x) => (Number.isFinite(Number(x)) ? Number(x) : null);
+const nombreDePiloto = (d) => [d?.givenName, d?.familyName].filter(Boolean).join(' ');
+const esColapinto = (d) => d?.driverId === 'colapinto';
+
+/** El calendario como lo guardamos: sólo lo que usan las notas. */
+export function resumirCalendario(json) {
+  const tabla = json?.MRData?.RaceTable;
+  if (!tabla || !Array.isArray(tabla.Races)) return null;
+  const carreras = tabla.Races.map((r) => {
+    const largada = instante(r);
+    const ronda = entero(r.round);
+    if (!largada || ronda == null || !r.raceName) return null;
+    const sesiones = sesionesDeLaCarrera(r).map(({ clave, nombre, inicio }) => ({ clave, nombre, inicio }));
+    return {
+      ronda,
+      nombre: r.raceName,
+      circuito: r.Circuit?.circuitName ?? null,
+      localidad: r.Circuit?.Location?.locality ?? null,
+      pais: r.Circuit?.Location?.country ?? null,
+      largada,
+      sesiones,
+    };
+  }).filter(Boolean);
+  if (!carreras.length) return null;
+  return { temporada: entero(tabla.season), carreras };
+}
+
+/** El resultado de una carrera como lo guardamos. */
+export function resumirResultado(json) {
+  const carrera = json?.MRData?.RaceTable?.Races?.[0];
+  const filas = carrera?.Results;
+  if (!carrera || !Array.isArray(filas) || !filas.length) return null;
+  const largada = instante(carrera);
+  const ronda = entero(carrera.round);
+  if (!largada || ronda == null) return null;
+  const fila = (f) => ({
+    posicion: entero(f.position),
+    posicionTexto: f.positionText ?? null,
+    piloto: nombreDePiloto(f.Driver),
+    colapinto: esColapinto(f.Driver),
+    equipo: f.Constructor?.name ?? null,
+    numero: f.number ?? null,
+    parrilla: entero(f.grid),
+    vueltas: entero(f.laps),
+    estado: f.status ?? null,
+    tiempo: f.Time?.time ?? null,
+    vueltaRapida: f.FastestLap?.Time?.time ? { vuelta: entero(f.FastestLap.lap), tiempo: f.FastestLap.Time.time, rango: entero(f.FastestLap.rank) } : null,
+  });
+  return {
+    temporada: entero(carrera.season),
+    ronda,
+    nombre: carrera.raceName,
+    circuito: carrera.Circuit?.circuitName ?? null,
+    localidad: carrera.Circuit?.Location?.locality ?? null,
+    pais: carrera.Circuit?.Location?.country ?? null,
+    largada,
+    filas: filas.map(fila).filter((f) => f.piloto),
+  };
+}
+
+/** La clasificación del campeonato de pilotos, completa. */
+export function resumirClasificacion(json) {
+  const lista = json?.MRData?.StandingsTable?.StandingsLists?.[0];
+  const filas = lista?.DriverStandings;
+  if (!lista || !Array.isArray(filas) || !filas.length) return null;
+  return {
+    temporada: entero(lista.season),
+    ronda: entero(lista.round),
+    filas: filas.map((f) => ({
+      posicion: entero(f.position),
+      piloto: nombreDePiloto(f.Driver),
+      colapinto: esColapinto(f.Driver),
+      equipo: f.Constructors?.at(-1)?.name ?? null,
+      numero: f.Driver?.permanentNumber ?? null,
+      puntos: Number(f.points),
+      victorias: entero(f.wins),
+    })).filter((f) => f.piloto && Number.isFinite(f.puntos)),
+  };
+}
+
+/** De la lista de pilotos de la temporada, ¿corre Colapinto? */
+export function resumirPilotos(json) {
+  const lista = json?.MRData?.DriverTable?.Drivers;
+  if (!Array.isArray(lista) || !lista.length) return null;
+  const c = lista.find(esColapinto);
+  return { temporada: entero(json.MRData.DriverTable.season), colapinto: c ? { piloto: nombreDePiloto(c), numero: c.permanentNumber ?? null } : null };
+}
+
+// ------------------------------------------------------------ la red
+
+const ESPERA_MS = 15000;
+const pedir = async (fetchFn, ruta, resumir) => {
+  try {
+    const r = await fetchFn(`${API}/${ruta}`, { cache: 'no-store', signal: AbortSignal.timeout(ESPERA_MS) });
+    if (!r.ok) return null;
+    return resumir(await r.json());
+  } catch {
+    return null; // caída, colgada o respuesta rota: se sigue con lo guardado
+  }
+};
+
+/** La carrera de la que hay que ocuparse ahora: la que empezó hace menos de
+ *  DIAS_DEL_RESULTADO o la próxima, la más cercana. */
+export function carreraEnCurso(calendario, ahora = new Date()) {
+  const t = new Date(ahora).getTime();
+  const lista = calendario?.carreras ?? [];
+  const reciente = lista.filter((c) => Date.parse(c.largada) <= t && t - Date.parse(c.largada) <= DIAS_DEL_RESULTADO * DIA_MS).at(-1);
+  if (reciente) return reciente;
+  return lista.find((c) => Date.parse(c.largada) > t && Date.parse(c.largada) - t <= 7 * DIA_MS) ?? null;
+}
+
+/**
+ * Pone al día lo guardado (`antes`, el contenido de web/data/f1.json o null).
+ * Pide a Jolpica sólo lo que hace falta y, si algo falla, deja lo que había.
+ * Nunca tira: devuelve siempre un objeto.
+ */
+export async function traerF1({ antes = null, fetchFn = fetch, ahora = new Date() } = {}) {
+  const previo = antes && typeof antes === 'object' ? antes : {};
+  const hoy = new Date(ahora);
+  const f1 = {
+    consultado: previo.consultado ?? null,
+    calendario: previo.calendario ?? null,
+    pilotos: previo.pilotos ?? null,
+    resultado: previo.resultado ?? null,
+    clasificacion: previo.clasificacion ?? null,
+    notas: previo.notas ?? {},
+  };
+  // El calendario, cada 6 horas (o si no lo teníamos o es de otra temporada).
+  const viejo = !f1.calendario || !previo.calendarioCuando
+    || hoy - new Date(previo.calendarioCuando) >= HORAS_ENTRE_CALENDARIOS * HORA_MS
+    || f1.calendario.temporada !== Number(diaAR(hoy).slice(0, 4));
+  f1.calendarioCuando = previo.calendarioCuando ?? null;
+  if (viejo) {
+    const cal = await pedir(fetchFn, 'current.json?limit=100', resumirCalendario);
+    if (cal) { f1.calendario = cal; f1.calendarioCuando = hoy.toISOString(); f1.consultado = hoy.toISOString(); }
+  }
+  const carrera = carreraEnCurso(f1.calendario, hoy);
+  if (!carrera) return f1;
+  // Si Colapinto corre esta temporada: una vez, mientras no lo sepamos.
+  if (!f1.pilotos || f1.pilotos.temporada !== f1.calendario.temporada) {
+    const p = await pedir(fetchFn, 'current/drivers.json?limit=100', resumirPilotos);
+    if (p) f1.pilotos = p;
+  }
+  // El resultado, desde un rato después de la largada, hasta tenerlo completo.
+  const paso = hoy - Date.parse(carrera.largada);
+  if (paso >= HORAS_PARA_BUSCAR_RESULTADO * HORA_MS) {
+    const tieneResultado = f1.resultado?.ronda === carrera.ronda && f1.resultado?.temporada === f1.calendario.temporada;
+    const tieneClasif = f1.clasificacion?.ronda === carrera.ronda;
+    if (!tieneResultado) {
+      const r = await pedir(fetchFn, 'current/last/results.json?limit=100', resumirResultado);
+      if (r && r.ronda === carrera.ronda) f1.resultado = r;
+    }
+    if (!tieneClasif) {
+      const c = await pedir(fetchFn, 'current/driverstandings.json?limit=100', resumirClasificacion);
+      if (c && c.ronda === carrera.ronda) f1.clasificacion = c;
+    }
+  }
+  return f1;
+}
+
+// ------------------------------------------------------------ las notas
+
+/** Desde cuándo y hasta cuándo se muestra la nota de horarios de una carrera:
+ *  desde el jueves de esa semana (00:00 de Balcarce; o el primer día de
+ *  actividad, si fuera antes) hasta 3 horas después de la largada. */
+export function ventanaDeHorarios(carrera) {
+  const dia = diaAR(carrera.largada);
+  const retroceso = (diaDeLaSemana(dia) - 4 + 7) % 7; // días desde el jueves
+  let desde = sumarDias(dia, -retroceso);
+  const primera = carrera.sesiones?.[0]?.inicio;
+  if (primera && diaAR(primera) < desde) desde = diaAR(primera);
+  return {
+    desde: new Date(`${desde}T03:00:00Z`).toISOString(), // 00:00 de Balcarce (UTC-3)
+    hasta: new Date(Date.parse(carrera.largada) + HORAS_HORARIOS_DESPUES * HORA_MS).toISOString(),
+  };
+}
+
+const idHorarios = (temporada, ronda) => `f1horarios${temporada}r${ronda}`;
+const idResultado = (temporada, ronda) => `f1resultado${temporada}r${ronda}`;
+
+/** "Franco Colapinto (Alpine F1 Team, número 43)" o null si no corre. */
+function datoDeColapinto(f1, carrera) {
+  const piloto = f1?.pilotos?.colapinto;
+  if (!piloto || f1.pilotos.temporada !== f1.calendario?.temporada) return null;
+  const equipo = f1.clasificacion?.filas?.find((f) => f.colapinto)?.equipo
+    ?? f1.resultado?.filas?.find((f) => f.colapinto)?.equipo ?? null;
+  return { ...piloto, equipo, carrera };
+}
+
+const lugar = (c) => [c.circuito, c.localidad && c.pais ? `${c.localidad}, ${PAISES[c.pais] ?? c.pais}` : (c.pais ? (PAISES[c.pais] ?? c.pais) : null)].filter(Boolean).join(', ');
+
+const baseDeLaNota = ({ id, tipo, titulo, copete, cuerpo, fecha, etiquetas }) => ({
+  id,
+  propia: 'f1',
+  tipoF1: tipo,
+  titulo,
+  copete,
+  cuerpo,
+  guion: null,
+  seccion: 'Automovilismo',
+  local: false,
+  relevancia: RELEVANCIA_F1,
+  medios: [FUENTE_F1.medio],
+  enlace: FUENTE_F1.enlace,
+  fuentesConsultadas: [FUENTE_F1],
+  teniaImagenLaFuente: false,
+  fecha,
+  sinFecha: false,
+  visto: fecha,
+  publicadaPor: null,
+  publicadaCuando: fecha,
+  temas: [],
+  etiquetas,
+  como: 'automatica',
+  firma: FIRMA_F1,
+});
+
+/** La nota de horarios de una carrera, o null si falta algo para armarla. */
+export function notaDeHorarios(carrera, { colapinto = null, fecha } = {}) {
+  if (!carrera?.sesiones?.length || !carrera.largada || !fecha) return null;
+  const nombre = nombreDelGranPremio(carrera.nombre);
+  const temporada = Number(diaAR(carrera.largada).slice(0, 4));
+  const largada = enHoraArgentina(carrera.largada);
+  const porDia = new Map();
+  for (const s of carrera.sesiones) {
+    const { dia, hora } = enHoraArgentina(s.inicio);
+    if (!porDia.has(dia)) porDia.set(dia, []);
+    porDia.get(dia).push(`${s.nombre.toLowerCase()} a las ${hora}`);
+  }
+  const unir = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} y ${xs.at(-1)}`);
+  const sprint = carrera.sesiones.some((s) => s.clave === 'Sprint');
+  const dias = [...porDia.entries()].map(([dia, xs]) => `${diaLargo(dia).replace(/^./, (c) => c.toUpperCase())}: ${unir(xs)}.`);
+
+  const p1 = `El ${nombre} de la temporada ${temporada} de la Fórmula 1 se corre en ${lugar(carrera)}. `
+    + `La carrera largará el ${diaLargo(largada.dia)} a las ${largada.hora}, hora argentina.${sprint ? ' El fin de semana incluye carrera sprint.' : ''}`;
+  const p2 = `Los horarios de todas las sesiones, en hora de Argentina (UTC-3):\n\n${dias.join('\n\n')}`;
+  const p3 = [
+    colapinto
+      ? `El argentino ${colapinto.piloto} figura entre los pilotos de la temporada ${temporada}${colapinto.equipo ? ` con ${colapinto.equipo}` : ''}${colapinto.numero ? `, con el número ${colapinto.numero}` : ''}.`
+      : null,
+    'Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo de Fórmula 1.',
+    'Los horarios son los que publica el calendario oficial según los datos abiertos de Jolpica F1 y pueden cambiar; los consultamos de nuevo cada pocas horas.',
+  ].filter(Boolean).join(' ');
+
+  const titulo = `F1: horarios del ${nombre}, en hora argentina`;
+  return baseDeLaNota({
+    id: idHorarios(temporada, carrera.ronda),
+    tipo: 'horarios',
+    titulo,
+    copete: `La carrera del ${nombre} es el ${diaLargo(largada.dia)} a las ${largada.hora} de Argentina. Todos los horarios del fin de semana.`,
+    cuerpo: [p1, p2, p3].join('\n\n'),
+    fecha,
+    etiquetas: ['Fórmula 1', 'F1', 'Gran Premio', nombre, ...(colapinto ? ['Franco Colapinto'] : [])],
+  });
+}
+
+/** Los decimales, con coma. */
+const coma = (t) => String(t).replace('.', ',');
+
+/** La nota con el resultado de la carrera, o null si falta algo. `clasificacion`
+ *  puede faltar (todavía no la actualizó la API): ahí se cuenta sin campeonato. */
+export function notaDeResultado(resultado, { clasificacion = null, colapinto = null, fecha } = {}) {
+  if (!resultado?.filas?.length || !fecha) return null;
+  const podio = resultado.filas.filter((f) => f.posicion != null && f.posicion <= 3).sort((a, b) => a.posicion - b.posicion);
+  if (podio.length < 3) return null;
+  const nombre = nombreDelGranPremio(resultado.nombre);
+  const [primero, segundo, tercero] = podio;
+  const dia = diaAR(resultado.largada);
+  const eq = (f) => (f.equipo ? ` (${f.equipo})` : '');
+
+  const p1 = `${primero.piloto}${eq(primero)} ganó el ${nombre} de la Fórmula 1, que se corrió el ${diaLargo(dia)} en ${lugar(resultado)}`
+    + `${primero.tiempo ? `, con un tiempo de ${coma(primero.tiempo)}` : ''}${primero.vueltas ? `, tras ${primero.vueltas} vueltas` : ''}. `
+    + `El podio lo completaron ${segundo.piloto}${eq(segundo)}${segundo.tiempo ? `, a ${coma(segundo.tiempo.replace(/^\+/, ''))} segundos` : ''}, y ${tercero.piloto}${eq(tercero)}${tercero.tiempo ? `, a ${coma(tercero.tiempo.replace(/^\+/, ''))} segundos` : ''}.`;
+
+  const diez = resultado.filas.filter((f) => f.posicion != null && f.posicion >= 4 && f.posicion <= 10).sort((a, b) => a.posicion - b.posicion);
+  const pDiez = diez.length ? `Del cuarto al décimo puesto terminaron, en ese orden: ${diez.map((f) => f.piloto).join(', ')}.` : null;
+
+  const fc = resultado.filas.find((f) => f.colapinto);
+  let pCol = null;
+  if (fc) {
+    const sal = fc.parrilla ? `, que había largado desde el puesto ${fc.parrilla}` : '';
+    if (fc.posicionTexto === 'R') {
+      pCol = `El argentino Franco Colapinto${fc.equipo ? `, con ${fc.equipo}` : ''}${sal}, no terminó la carrera: según los datos oficiales abandonó${fc.vueltas != null ? ` tras completar ${fc.vueltas} vueltas` : ''}.`;
+    } else if (fc.posicionTexto === 'D') {
+      pCol = `El argentino Franco Colapinto${fc.equipo ? `, con ${fc.equipo}` : ''}, fue descalificado de la carrera.`;
+    } else {
+      pCol = `El argentino Franco Colapinto${fc.equipo ? `, con ${fc.equipo}` : ''}${sal}, terminó en el puesto ${fc.posicion}${fc.tiempo && !/^\+?\d+ Lap/i.test(fc.estado ?? '') ? ` (${fc.tiempo.startsWith('+') ? `a ${coma(fc.tiempo.slice(1))} segundos del ganador` : fc.tiempo})` : ''}.`;
+    }
+  } else if (colapinto) {
+    pCol = 'Franco Colapinto no figura en la clasificación final de esta carrera en los datos oficiales.';
+  }
+
+  const pole = resultado.filas.find((f) => f.parrilla === 1);
+  const rapida = resultado.filas.filter((f) => f.vueltaRapida?.rango === 1)[0];
+  const pDatos = [
+    pole ? `${pole.piloto}${eq(pole)} salió desde el primer puesto de la parrilla.` : null,
+    rapida ? `La vuelta rápida fue de ${rapida.piloto}${eq(rapida)}, con ${coma(rapida.vueltaRapida.tiempo)}${rapida.vueltaRapida.vuelta ? ` en la vuelta ${rapida.vueltaRapida.vuelta}` : ''}.` : null,
+  ].filter(Boolean).join(' ');
+
+  let pCamp = null;
+  if (clasificacion?.ronda === resultado.ronda && clasificacion.filas?.length >= 5) {
+    const top = clasificacion.filas.slice(0, 5);
+    pCamp = `Así quedó el campeonato de pilotos después de la fecha ${resultado.ronda}: ${top.map((f) => `${f.posicion}º ${f.piloto}, ${String(f.puntos).replace('.', ',')} puntos`).join('; ')}.`;
+    const cc = clasificacion.filas.find((f) => f.colapinto);
+    if (cc && cc.posicion > 5) pCamp += ` Franco Colapinto es ${cc.posicion}º con ${String(cc.puntos).replace('.', ',')} puntos.`;
+  }
+  const pFuente = 'Los datos son los resultados oficiales según Jolpica F1 (datos abiertos). Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo.';
+
+  const titulo = `F1: así fue el ${nombre}, con ${primero.piloto} en lo más alto del podio`;
+  return baseDeLaNota({
+    id: idResultado(resultado.temporada ?? Number(dia.slice(0, 4)), resultado.ronda),
+    tipo: 'resultado',
+    titulo,
+    copete: `${primero.piloto} ganó, ${segundo.piloto} fue segundo y ${tercero.piloto} tercero.${fc ? ` Así le fue a Colapinto.` : ''} El resultado completo y cómo está el campeonato.`,
+    cuerpo: [p1, pDiez, pCol, pDatos, pCamp, pFuente].filter(Boolean).join('\n\n'),
+    fecha,
+    etiquetas: ['Fórmula 1', 'F1', 'Gran Premio', nombre, 'resultados', ...(fc || colapinto ? ['Franco Colapinto'] : [])],
+  });
+}
+
+/**
+ * Las notas de F1 que corresponde mostrar ahora, a partir de lo guardado.
+ * Devuelve { notas, fechas }: `fechas` es el mapa id -> cuándo se vio por
+ * primera vez (hay que guardarlo en f1.json: una nota tiene una sola fecha y
+ * nunca rejuvenece).
+ */
+export function notasDeF1(f1, { ahora = new Date() } = {}) {
+  const t = new Date(ahora).getTime();
+  const fechas = { ...(f1?.notas ?? {}) };
+  const notas = [];
+  const carreras = f1?.calendario?.carreras ?? [];
+  const temporada = f1?.calendario?.temporada;
+  if (!carreras.length || !temporada) return { notas, fechas };
+  const datoCol = (carrera) => datoDeColapinto(f1, carrera);
+  for (const carrera of carreras) {
+    const { desde, hasta } = ventanaDeHorarios(carrera);
+    if (t >= Date.parse(desde) && t <= Date.parse(hasta)) {
+      const id = idHorarios(temporada, carrera.ronda);
+      const fecha = fechas[id] ?? new Date(t).toISOString();
+      const nota = notaDeHorarios(carrera, { colapinto: datoCol(carrera), fecha });
+      if (nota) { notas.push(nota); fechas[id] = fecha; }
+    }
+  }
+  const r = f1?.resultado;
+  if (r?.temporada === temporada && r.filas?.length) {
+    const paso = t - Date.parse(r.largada);
+    if (paso >= 0 && paso <= DIAS_DEL_RESULTADO * DIA_MS) {
+      const id = idResultado(temporada, r.ronda);
+      const fecha = fechas[id] ?? new Date(t).toISOString();
+      const carrera = carreras.find((c) => c.ronda === r.ronda);
+      const nota = notaDeResultado(r, { clasificacion: f1.clasificacion, colapinto: datoCol(carrera), fecha });
+      if (nota) { notas.push(nota); fechas[id] = fecha; }
+    }
+  }
+  return { notas, fechas };
+}
+
+/** El texto de web/data/f1.json. */
+export const comoF1Json = (f1) => `${JSON.stringify(f1, null, 1)}\n`;

@@ -264,6 +264,7 @@ abajo), y lo que corre en GitHub, acá.
 | `banco-fotos.json` | El banco de fotos | "Actualizar la web" |
 | `dolar-historia.json` | La cotización de las 11 de cada día hábil (60 días) | "Actualizar la web" |
 | `esperando-cuerpo.json` | Las notas que esperan cuerpo, con sus fuentes | "Actualizar la web" |
+| `f1.json` | La Fórmula 1: calendario, resultado y campeonato de Jolpica, y cuándo salió cada nota (`ingesta/f1.mjs`) | "Actualizar la web" |
 | `fichas.json` | Las fichas de la lectura con IA y los grupos de repetidas | "Actualizar la web" |
 | `fusionadas.json` | Las repetidas con otra dirección y la nota a la que redirige cada una | "Actualizar la web" |
 | `intentos-ia.json` | Cuántas veces se pidió cada nota a Gemini y por qué falló | "Actualizar la web" |
