@@ -5330,11 +5330,10 @@
  },
  "1gofphd": {
   "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Luis Caputo pide confianza a los empresarios y descarta devaluar",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-03T03:31:36.539Z",
-  "intentos": 3,
+  "origen": "medio",
+  "cuando": "2026-10-03T10:01:13.934Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 4,
   "fuentes": 6
  },
  "1aekavp": {

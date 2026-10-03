@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T09:31:32.755Z",
- "portada": 51,
+ "generado": "2026-10-03T10:01:34.017Z",
+ "portada": 50,
  "archivo": 830,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-03T09:31:32.789Z",
+  "generado": "2026-10-03T10:01:34.041Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -89,7 +89,7 @@
     "notas": [
      {
       "id": "ei8drx",
-      "titulo": "Max Verstappen consigue la pole position y Franco Colapinto larga vigesimoprimero",
+      "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
       "seccion": "Automovilismo"
      },
      {
@@ -119,14 +119,14 @@
     "segundos": 53,
     "notas": [
      {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
-     },
-     {
       "id": "2qj2kn",
       "titulo": "Designan los árbitros para el inicio de la fase Clausura",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
      },
      {
       "id": "j3xrez",
