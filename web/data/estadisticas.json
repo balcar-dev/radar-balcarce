@@ -724,6 +724,53 @@
         "vistas": 76,
         "interacciones": 3
       }
+    },
+    {
+      "cuando": "2026-10-03T12:00:18.660Z",
+      "web": {
+        "u12": {
+          "visitas": 10,
+          "vistas": 20
+        },
+        "a12": {
+          "visitas": 41,
+          "vistas": 104
+        },
+        "u24": {
+          "visitas": 51,
+          "vistas": 124
+        },
+        "a24": {
+          "visitas": 38,
+          "vistas": 288
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 25
+          },
+          {
+            "camino": "/nota/el-club-de-leones-entrega-nuevos-equipos-al-hospital-municipal-164o14u",
+            "vistas": 16
+          },
+          {
+            "camino": "/seccion/policiales",
+            "vistas": 12
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 5,
+        "vistas": 487,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 63,
+        "alcance": 7,
+        "vistas": 13,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -902,39 +949,39 @@
         "1vmovug": 11,
         "m212r6": 8,
         "repaso20261001tarde": 5,
-        "o1vynh": 4,
+        "1lfoejz": 4,
         "iheoi7": 4,
+        "o1vynh": 4,
         "24cp9v": 4,
         "1mknzh0": 4,
-        "1lfoejz": 4,
         "15c2xr1": 3,
-        "1dbyjp1": 2,
-        "6xex85": 2,
+        "11di7ig": 2,
+        "367tdt": 2,
         "34t457": 2,
         "ff9n91": 2,
         "1a2z04a": 2,
-        "11di7ig": 2,
-        "367tdt": 2,
+        "1yu9ytn": 2,
+        "1dbyjp1": 2,
         "1j4lf17": 2,
         "1fqh4sy": 2,
-        "1yu9ytn": 2
+        "6xex85": 2
       },
       "paginas": {
         "/": 80,
         "/seccion/balcarce": 32,
         "/seccion/tecnologia": 10,
+        "/seccion/automovilismo": 8,
         "/farmacias": 8,
         "/seccion/cultura": 8,
-        "/seccion/automovilismo": 8,
         "/seccion/economia": 6,
         "/seccion/politica": 5,
         "/seccion/deportes": 4,
         "/seccion/agro": 4,
         "/seccion/argentina": 2,
-        "/seccion/balcarce-2": 2,
         "/seccion/futbol": 2,
         "/util": 2,
-        "/agenda": 2
+        "/agenda": 2,
+        "/seccion/balcarce-2": 2
       },
       "paises": {
         "AR": 238,
@@ -983,17 +1030,21 @@
       "notas": {
         "164o14u": 16,
         "h1ggzr": 9,
+        "zdkvaa": 7,
         "xvt4t1": 4,
         "1qk6uan": 4,
+        "144x64h": 4,
         "a0bbpp": 3,
         "b68hv9": 3,
-        "1ugi3md": 2,
-        "18bbdzh": 2,
         "1a9rnj4": 2,
+        "18bbdzh": 2,
         "1v6m62u": 2,
         "kbhdgj": 2,
         "y1kgx4": 2,
-        "1j4lf17": 2
+        "1ugi3md": 2,
+        "1917p5s": 2,
+        "1j4lf17": 2,
+        "2qj2kn": 2
       },
       "paginas": {
         "/": 24,
@@ -1006,14 +1057,14 @@
         "/seccion/politica": 1
       },
       "paises": {
-        "AR": 59,
-        "US": 33,
-        "SE": 10,
+        "AR": 61,
+        "US": 44,
+        "SE": 12,
         "IE": 4,
         "KR": 2
       },
-      "visitas": 43,
-      "vistas": 108,
+      "visitas": 52,
+      "vistas": 123,
       "horas": [
         0,
         4,
@@ -1036,17 +1087,60 @@
         0,
         0,
         0,
+        13,
+        2,
+        0
+      ],
+      "dispositivos": {
+        "mobile": 83,
+        "desktop": 40
+      },
+      "referentes": {
+        "facebook.com": 43,
+        "directo": 9
+      }
+    },
+    "2026-10-03": {
+      "horas": [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0
       ],
-      "dispositivos": {
-        "mobile": 73,
-        "desktop": 35
-      },
+      "visitas": 1,
+      "vistas": 5,
       "referentes": {
-        "facebook.com": 34,
-        "directo": 9
+        "directo": 1
+      },
+      "paises": {
+        "US": 5
+      },
+      "dispositivos": {
+        "desktop": 5
+      },
+      "notas": {},
+      "paginas": {
+        "/": 5
       }
     }
   }
