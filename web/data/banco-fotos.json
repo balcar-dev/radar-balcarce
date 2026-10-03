@@ -5991,15 +5991,15 @@
   "fuentes": 1
  },
  "fjrow3": {
-  "archivo": "fotos-notas/fjrow3.jpg",
   "medio": "La Brújula 24",
-  "credito": "Foto: La Brújula 24",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto apuesta a remontar desde el fondo en Baréin",
   "enlace": "https://www.labrujula24.com/notas/2026/10/03/colapinto-optimista-pese-a-largar-21-en-el-gp-de-malasia-se-puede-remontar-n523603/",
   "imagenOriginal": "https://www.labrujula24.com/wp-content/uploads/2026/10/colapo1-1000x600.jpg",
   "razon": "La foto B es clara, muestra bien al piloto sin marcas de agua añadidas por el medio, a diferencia de la A que incluye un inset circular.",
-  "cuando": "2026-10-03T11:31:31.187Z"
+  "cuando": "2026-10-03T11:31:31.187Z",
+  "intentado": true,
+  "borrada": true
  }
 }

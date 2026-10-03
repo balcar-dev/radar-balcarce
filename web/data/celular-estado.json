@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T11:31:36.456Z",
- "portada": 51,
+ "generado": "2026-10-03T11:58:08.883Z",
+ "portada": 49,
  "archivo": 832,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-03T11:31:36.491Z",
+  "generado": "2026-10-03T11:58:08.902Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 54,
     "notas": [
      {
       "id": "h1ggzr",
@@ -93,18 +93,18 @@
       "seccion": "Agro"
      },
      {
+      "id": "1y5m4fa",
+      "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
+      "seccion": "Automovilismo"
+     },
+     {
       "id": "n09ogo",
       "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
       "seccion": "Fútbol"
      },
      {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
-     },
-     {
-      "id": "sty1jd",
-      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      }
     ]
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 41,
+    "segundos": 29,
     "notas": [
      {
       "id": "2qj2kn",
@@ -124,14 +124,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
-      "seccion": "Balcarce"
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
      }
     ]
    },
@@ -142,8 +137,24 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 52,
+    "notas": [
+     {
+      "id": "1kfxthk",
+      "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "sty1jd",
+      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {

@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T11:31:36.456Z",
+  "generado": "2026-10-03T11:58:08.883Z",
   "notas": [
     {
       "id": "1kfxthk",
@@ -63,14 +63,15 @@
       "seccion": "Automovilismo",
       "medios": [
         "TN (Todo Noticias)",
-        "Crónica"
+        "Crónica",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/03/franco-colapinto-mostro-optimismo-para-el-gp-de-bahrein-pese-a-las-sanciones-que-recibio-se-puede-remontar/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T09:58:52.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T11:01:20.961Z",
-      "relevancia": 77,
+      "relevancia": 87,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -153,11 +154,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-03T03:01:28.393Z",
       "sinFecha": true,
       "visto": "2026-10-03T03:01:28.393Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -375,16 +376,14 @@
       "guion": "Mariano Werner recibe millonaria multa y sanción deportiva",
       "seccion": "Automovilismo",
       "medios": [
-        "El Destape",
-        "Solotc",
-        "Campeones"
+        "El Destape"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/tc-pick-up-duras-sanciones-recibio-mariano-werner-final-balcarce-2026102205050",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T23:50:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T00:01:34.330Z",
-      "relevancia": 84,
+      "relevancia": 77,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -468,7 +467,7 @@
       "fecha": "2026-10-02T22:58:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 32,
+      "relevancia": 25,
       "local": false,
       "deLaZona": true,
       "publicadaPor": "Hernán",
@@ -753,74 +752,6 @@
       }
     },
     {
-      "id": "1c7unm1",
-      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
-      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
-      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
-      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T20:17:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T02:27:16.419Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": "Hernán",
-      "publicadaCuando": "2026-10-03T01:52:56.014Z",
-      "temas": [],
-      "como": "publicada",
-      "claves": [
-        "El STM y el municipio acordaron mejoras laborales y salariales.",
-        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
-        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
-        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
-      ],
-      "seSabe": [
-        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
-        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
-        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
-        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
-        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
-      ],
-      "noConfirmado": [
-        "Resta definir la fecha exacta de implementación del aumento para conductores."
-      ],
-      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
-      "etiquetas": [
-        "Sindicato de Trabajadores Municipales",
-        "Departamento Ejecutivo",
-        "Ministerio de Trabajo",
-        "plus",
-        "salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
-          "fecha": "2026-10-02T20:17:04.000Z",
-          "oficial": false,
-          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
-          "fecha": "2026-10-02T22:25:49.318Z",
-          "oficial": false,
-          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
-        }
-      ],
-      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
-      "foto": {
-        "archivo": "fotos-notas/1c7unm1.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "8cknxd",
       "titulo": "Juan Gil Navarro frena una función de teatro por el uso de celulares",
       "copete": "El actor detuvo la presentación de Misery en un escenario porteño para reclamar respeto a los espectadores. Cuestionó las distracciones con los aparatos móviles durante la función.",
@@ -1084,79 +1015,6 @@
       }
     },
     {
-      "id": "1qnkumc",
-      "titulo": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones",
-      "copete": "El presidente completó su agenda en París con un evento en la Torre Eiffel. En su discurso ante inversores, aseguró que el país encara un nuevo rumbo económico y ratificó el equilibrio fiscal.",
-      "cuerpo": "El presidente Javier Milei completó este viernes su visita a Francia con un acto oficial en un salón de la Torre Eiffel, en el marco del cierre de la Argentina Week París. La ceremonia comenzó con la entonación del Himno Nacional Argentino y reunió a inversores y actores económicos globales.\n\nDurante su exposición, el mandatario aseguró que el país transita un cambio histórico y remarcó la intención de replicar estos encuentros en otros escenarios internacionales para promover el talento nacional y atraer capitales.",
-      "guion": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones.",
-      "seccion": "Política",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Noticias Argentinas (NA)",
-        "La Voz del Pueblo",
-        "La Nueva",
-        "InfoRegión",
-        "La Capital (Rosario)"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T18:50:40.275Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
-          "fecha": "2026-10-02T18:50:40.275Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
-          "fecha": "2026-10-02T22:53:56.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Voz del Pueblo",
-          "enlace": "https://lavozdelpueblo.com.ar/milei-finalizo-su-visita-a-francia-con-un-acto-en-la-torre-eiffel",
-          "fecha": "2026-10-02T23:52:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-2-16-23-0-milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro",
-          "fecha": "2026-10-02T19:32:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/10/02/milei-cerro-su-gira-por-francia-y-aseguro-que-argentina-avanza-a-paso-firme-hacia-el-futuro/",
-          "fecha": "2026-10-02T20:27:35.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/politica/la-argentina-se-dirige-nuevamente-paso-firme-el-futuro-dijo-milei-al-cerrar-su-visita-francia-n10284574.html",
-          "fecha": "2026-10-02T22:07:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso",
-      "corregidaAMano": true
-    },
-    {
       "id": "1nz8gwo",
       "titulo": "Doce equipos compiten en un nuevo torneo de vóley",
       "copete": "La Escuela Municipal de Vóley organizó una competencia con catorce partidos en el gimnasio de la Escuela Primaria Nº 13. Participaron planteles de Amigos Unidos y Ferroviarios.",
@@ -1305,8 +1163,8 @@
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "Infobae",
-        "InfoRegión"
+        "InfoRegión",
+        "Infobae"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/10/02/revisaran-el-sobreseimiento-de-luis-caputo-por-la-emision-del-bono-a-100-anos/",
       "teniaImagenLaFuente": true,
@@ -1691,87 +1549,6 @@
       }
     },
     {
-      "id": "ydwxhf",
-      "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-      "copete": "Un acumulado de 25 milímetros en la franja central del país redujo a la mitad los lotes trigueros regulares y reactivó las sembradoras de maíz.",
-      "cuerpo": "Las precipitaciones registradas en la última semana en la franja central del país acumularon un promedio de 25 milímetros y permitieron recortar a la mitad los lotes de trigo en estado regular, que pasaron del 15% al 7% del total regional según la Bolsa de Comercio de Rosario.\n\nEl relevamiento detalló que la superficie afectada bajó de unas 250.000 a 120.000 hectáreas, mientras que el agua caída destrabó las tareas para cubrir las 750.000 hectáreas pendientes de maíz y llevó el avance de la siembra al 65%. Septiembre había cerrado con un promedio de 31,5 milímetros tras concentrar el 80% del total mensual en estos siete días, revirtiendo parcialmente el déficit hídrico previo que motivaba pronósticos de precipitaciones escasas a fines de septiembre.\n\nEl impacto de las tormentas muestra marcadas diferencias geográficas, ya que el este y el centro-este previenen rindes de hasta 50 quintales por hectárea, en contraste con el noroeste bonaerense y el sudeste cordobés, donde los cultivos sufrieron daños por heladas tempranas y mermas de hasta el 60% en el rendimiento.",
-      "guion": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T17:03:25.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 32,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cayeron 25 milímetros en promedio en la franja central del país.",
-        "Los lotes trigueros regulares se redujeron del 15% al 7%.",
-        "La siembra de maíz alcanzó un 65% de cobertura tras reactivarse las labores.",
-        "El noroeste bonaerense registra mermas de hasta el 60% por la sequía previa y las heladas."
-      ],
-      "seSabe": [
-        "Las precipitaciones acumuladas en la última semana alcanzaron un promedio de 25 milímetros en la región central, según informó la Bolsa de Comercio de Rosario.",
-        "La superficie de trigo en condición regular cayó del 15% (250.000 hectáreas) al 7% (120.000 hectáreas).",
-        "Las recargas de agua permitieron reactivar la siembra de maíz, que alcanzó una cobertura global del 65%.",
-        "Septiembre cerró con un promedio de 31,5 milímetros tras recibir en la última semana el 80% del agua acumulada en el mes."
-      ],
-      "noConfirmado": [
-        "El grado de recuperación real que podrán alcanzar las plantas en los distritos más afectados como General Villegas y General Pinto.",
-        "El techo productivo definitivo en los lotes del oeste regional tras el impacto de las heladas y la escasez hídrica previa."
-      ],
-      "textoRedes": "Las precipitaciones acumuladas en la última semana en la franja central del país redujeron a la mitad los lotes trigueros en estado regular y permitieron reactivar la siembra de maíz.",
-      "etiquetas": [
-        "lluvias",
-        "trigo",
-        "maíz",
-        "Bolsa de Comercio de Rosario",
-        "región núcleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
-          "fecha": "2026-10-02T17:03:25.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos detallados sobre el impacto de las lluvias en el trigo y el maíz, los porcentajes de afectación y las proyecciones por zonas."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248642-alivio-para-el-trigo-y-las-siembras-que-se-retoman-tras-los-25-mm-que-recibio-la-region-en-los-ultimos-7-dias.html",
-          "fecha": "2026-10-02T17:51:54.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el registro de 25 milímetros en la región y la reducción de los lotes regulares de trigo al 7% según la Bolsa de Comercio de Rosario."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz",
-      "foto": {
-        "archivo": "fotos-notas/ydwxhf.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "1akpidg",
       "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
       "copete": "Alumnas de la institución obsequiaron una producción artística que formó parte de una muestra local. El intendente Esteban Reino recibió la pieza.",
@@ -1779,10 +1556,8 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
@@ -1790,7 +1565,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 97,
+      "relevancia": 77,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1806,23 +1581,9 @@
           "aporte": null
         },
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
-          "fecha": "2026-10-02T20:21:48.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Infórmese Primero (FM 104.9)",
           "enlace": "http://www.informeseprimero.com.ar/2026/10/la-escuela-de-arte-entrego-al-municipio.html",
           "fecha": "2026-10-02T18:08:04.743Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44981-una-obra-de-la-escuela-de-arte-se-incorpora-al-patrimonio-de-la-municipalidad/",
-          "fecha": null,
           "oficial": false,
           "aporte": null
         }
@@ -2061,11 +1822,12 @@
       "guion": "Caputo anticipa una reforma impositiva para 2031 en el Coloquio de IDEA",
       "seccion": "Economía",
       "medios": [
-        "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
         "Perfil",
         "TN (Todo Noticias)",
         "Canal 26",
+        "QZ Noticias (Mar del Plata)",
+        "Agroempresario",
         "El Día"
       ],
       "enlace": "https://www.qznoticias.com/la-ciudad/caputo-anticipo-una-reforma-tributaria-y-prometio-seguir-bajando-impuestos",
@@ -2073,7 +1835,7 @@
       "fecha": "2026-10-02T16:43:59.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:01:28.926Z",
-      "relevancia": 70,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2171,11 +1933,11 @@
         "Página/12",
         "TyC Sports",
         "Olé",
-        "Minuto Uno",
         "C5N",
         "Noticias Argentinas (NA)",
         "La Verdad",
         "La Voz del Pueblo",
+        "Minuto Uno",
         "La Nueva"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
@@ -2291,18 +2053,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44976-balcarce-y-su-apuesta-al-turismo-somos-un-destino-que-la-gente-busca-cada-vez-mas/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-02T16:31:18.468Z",
       "sinFecha": true,
       "visto": "2026-10-02T16:31:18.468Z",
-      "relevancia": 71,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "La Fiesta Nacional del Postre se desarrollará durante el próximo fin de semana largo.",
@@ -2628,6 +2387,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "El Eco de Tandil",
         "La Nueva"
       ],
@@ -2755,7 +2515,7 @@
       "fecha": "2026-10-02T14:22:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 48,
+      "relevancia": 44,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2953,19 +2713,18 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
-        "El Diario Balcarce"
+        "El Diario Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 97,
+      "relevancia": 77,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3041,8 +2800,7 @@
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
-        "El Diario Balcarce",
-        "Puntonueve (FM 100.9)"
+        "El Diario Balcarce"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
@@ -3795,6 +3553,79 @@
       }
     },
     {
+      "id": "1qitrjt",
+      "titulo": "La menor oferta de hacienda presiona a la industria frigorífica",
+      "copete": "La faena vacuna cae casi un 10% en los primeros ocho meses del año, según un informe sectorial. Las empresas exportadoras aumentan su actividad, mientras las orientadas al mercado interno sufren fuertes caídas.",
+      "cuerpo": "La industria frigorífica procesó 8,13 millones de vacunos entre enero y agosto, lo que representa una baja de casi el 10% frente a igual período de 2025, de acuerdo con un informe de Rosgan. La caída afecta con mayor fuerza a los establecimientos orientados al mercado interno, cuya actividad se redujo un 17% con unos 4,94 millones de animales faenados. En contraste, las 44 firmas con cupos de exportación incrementaron su faena un 4% interanual al alcanzar los 3,19 millones de cabezas, sostenidas por mejores valores internacionales que en agosto promediaron los USD 5.556 por tonelada.\n\nEn el mercado doméstico, el precio promedio de los cortes vacunos se ubicó en agosto en $18.533 por kilo según el INDEC, con un incremento nominal del 16% en el año frente a una inflación acumulada del 33,5%. La pérdida de poder adquisitivo provocó una merma de más de 4,5 kilos en el consumo per cápita anual, parte del cual fue reemplazado por pollo y cerdo.",
+      "guion": "La menor oferta de hacienda presiona a la industria frigorífica",
+      "seccion": "Agro",
+      "medios": [
+        "Noticias Agropecuarias",
+        "Infocampo"
+      ],
+      "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/la-menor-oferta-de-hacienda-presiona-a-la-industria-frigorifica/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T09:45:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T14:01:24.441Z",
+      "relevancia": 24,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La faena vacuna acumuló una caída de casi el 10% entre enero y agosto.",
+        "Las empresas exportadoras subieron su actividad un 4% interanual.",
+        "Los frigoríficos del mercado interno sufrieron una baja del 17%.",
+        "El consumo per cápita de carne vacuna bajó más de 4,5 kilos en un año."
+      ],
+      "seSabe": [
+        "La industria frigorífica faenó 8,13 millones de vacunos entre enero y agosto.",
+        "Las empresas exportadoras procesaron 3,19 millones de cabezas, un 4% más que en 2025.",
+        "El resto de la industria procesó 4,94 millones de animales, un 17% menos.",
+        "El valor promedio de exportación llegó a USD 5.556 por tonelada en agosto.",
+        "El precio promedio de la carne vacuna fue de $18.533 por kilo en agosto, según el INDEC."
+      ],
+      "noConfirmado": [
+        "No existen estadísticas oficiales que permitan determinar con precisión el destino exacto de la producción de cada establecimiento."
+      ],
+      "textoRedes": "La faena vacuna cayó casi un 10% entre enero y agosto y profundiza la brecha entre los frigoríficos exportadores y los del mercado interno, según un informe sectorial.",
+      "etiquetas": [
+        "industria frigorifica",
+        "hacienda",
+        "carne vacuna",
+        "exportaciones",
+        "consumo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Agropecuarias",
+          "enlace": "https://www.noticiasagropecuarias.com/2026/10/02/la-menor-oferta-de-hacienda-presiona-a-la-industria-frigorifica/",
+          "fecha": "2026-10-02T09:45:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe de Rosgan sobre faena, exportaciones, precios internacionales y consumo."
+        },
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/la-industria-frigorifica-se-parte-en-dos-exportadores-sostienen-la-faena-pero-los-consumeros-sufren/",
+          "fecha": "2026-10-02T13:52:35.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo el mismo informe sobre la situación de la industria frigorífica."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-menor-oferta-de-hacienda-presiona-a-la-industria-frigorifica",
+      "foto": {
+        "archivo": "fotos-notas/1qitrjt.jpg",
+        "credito": "Foto: Noticias Agropecuarias"
+      }
+    },
+    {
       "id": "1gt8iio",
       "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
       "copete": "El arzobispo de Buenos Aires describió a la Argentina afectada por la pobreza y la polarización política. Lo expresó en la previa de la tradicional caminata a Luján y de la llegada de León XIV.",
@@ -3821,12 +3652,12 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Verdad",
+        "InfoRegión",
         "ANDigital",
         "El Marplatense",
         "El Eco de Tandil",
         "Clarín",
         "Crónica",
-        "InfoRegión",
         "La Capital (Rosario)",
         "La Brújula 24"
       ],
@@ -3927,7 +3758,6 @@
       "guion": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
       "seccion": "Economía",
       "medios": [
-        "Agencia DIB",
         "La Nación",
         "Infobae",
         "Ámbito",
@@ -3943,6 +3773,7 @@
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
+        "Agencia DIB",
         "La Brújula 24"
       ],
       "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
@@ -4113,7 +3944,6 @@
       "guion": "La filial local de Federación Agraria respalda la reelección de Sarnari",
       "seccion": "Agro",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/respaldo-la-reeleccion-de-andrea-sarnari-la-filial-local-de-federacion-agraria-argentina-57",
@@ -4121,7 +3951,7 @@
       "fecha": "2026-10-02T00:27:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 81,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4255,15 +4085,10 @@
     "Deportes",
     "Cultura y agenda",
     "Argentina",
-    "Agro",
-    "Economía"
+    "Economía",
+    "Agro"
   ],
   "temas": [
-    {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
-      "cuantas": 2
-    },
     {
       "nombre": "Las rutas",
       "ranura": "rutas",
@@ -4274,7 +4099,7 @@
     "ahora": {
       "temp": 10,
       "sensacion": 7,
-      "humedad": 97,
+      "humedad": 98,
       "viento": 18,
       "rumbo": "N",
       "cielo": "Llovizna leve",
@@ -4630,10 +4455,10 @@
   },
   "pendientes": [
     {
-      "id": "1w06xhx",
+      "id": "1148srf",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"lesionada\""
+      "motivo": "necesita ojo humano: \"herido\""
     },
     {
       "id": "vguosy",
@@ -4646,6 +4471,12 @@
       "titulo": "La Cámpora busca por ley regular las apuestas online en la…",
       "seccion": "Política",
       "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "13ygrbn",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1t477sv",
@@ -4690,12 +4521,6 @@
       "motivo": "necesita ojo humano: \"nena\""
     },
     {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
-    },
-    {
       "id": "1muu13g",
       "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
       "seccion": "Agro",
@@ -4718,12 +4543,6 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herido\""
-    },
-    {
-      "id": "imkij7",
-      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 0
