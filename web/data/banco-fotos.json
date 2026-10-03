@@ -4244,16 +4244,16 @@
   "cuando": "2026-10-01T17:01:39.620Z"
  },
  "1xl1em": {
-  "archivo": "fotos-notas/1xl1em.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "El FMI dialoga con el Gobierno por la tercera revisión del acuerdo y un desembolso",
   "enlace": "https://www.lanueva.com/nota/2026-10-1-12-37-0-el-fmi-le-pidio-al-gobierno-que-el-crecimiento-economico-se-amplie-a-mas-sectores-y-genere-empleo",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1790869311796.jpg?&cw=600&ch=365",
   "razon": "La foto D muestra claramente a los actores involucrados en el diálogo económico con buena nitidez y encuadre, sin marcas añadidas ni menores.",
-  "cuando": "2026-10-01T17:01:39.620Z"
+  "cuando": "2026-10-01T17:01:39.620Z",
+  "intentado": true,
+  "borrada": true
  },
  "1y554vc": {
   "archivo": "fotos-notas/1y554vc.jpg",
@@ -5795,13 +5795,16 @@
   "cuando": "2026-10-03T02:01:33.018Z"
  },
  "1gbi1d2": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1gbi1d2.jpg",
+  "medio": "El Destape",
+  "credito": "Foto: El Destape",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Lula muestra una remera con la leyenda de Malvinas en su cierre de campaña",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-03T03:01:41.912Z",
-  "intentos": 2,
-  "fuentes": 14
+  "enlace": "https://www.eldestapeweb.com/politica/fuerte-gesto-lula-cierra-campana-bandera-malvinas-argentinas-2026102142358",
+  "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1790961530757.jpg?&cw=1600&ch=900",
+  "razon": "Se seleccionó la foto A porque muestra claramente el hecho sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-03T04:31:26.926Z"
  },
  "1qu785s": {
   "intentado": true,
@@ -5817,8 +5820,8 @@
   "origen": "ninguna",
   "titulo": "Messi llega a Disney+ en una nueva serie animada de fantasía",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-03T03:01:41.912Z",
-  "intentos": 2,
+  "cuando": "2026-10-03T04:31:26.926Z",
+  "intentos": 3,
   "fuentes": 4
  },
  "1c7unm1": {
@@ -5865,5 +5868,14 @@
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65935.png",
   "razon": "Es la única opción disponible y muestra el hecho completo (la entrega de la obra) sin marcas de agua del medio ni menores de edad reconocibles.",
   "cuando": "2026-10-03T04:01:40.293Z"
+ },
+ "5z6802": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Gobierno pide sostener el rumbo económico y los empresarios reclaman medidas",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-03T04:31:26.926Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }

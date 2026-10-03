@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T04:01:42.709Z",
- "portada": 56,
+ "generado": "2026-10-03T04:31:47.242Z",
+ "portada": 54,
  "archivo": 828,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-03T04:01:42.746Z",
+  "generado": "2026-10-03T04:31:47.282Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,9 +98,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-      "seccion": "Fútbol"
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
      },
      {
       "id": "sty1jd",
@@ -116,12 +116,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 52,
     "notas": [
      {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "seccion": "Fútbol"
      },
      {
       "id": "j3xrez",
@@ -129,13 +129,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "12mca8c",
-      "titulo": "El paro docente registra un alto acatamiento",
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
       "seccion": "Balcarce"
      }
     ]
@@ -147,26 +147,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 39,
     "notas": [
+     {
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "seccion": "Balcarce"
+     },
      {
       "id": "swyxjn",
       "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "jzu6k",
-      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1o0cdfx",
-      "titulo": "La Escuela de Arte dona una producción propia al patrimonio municipal",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      }
     ]
@@ -185,12 +175,6 @@
      "id": "2qj2kn",
      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
      "seccion": "Fútbol",
-     "marcada": false
-    },
-    {
-     "id": "3cr087",
-     "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
-     "seccion": "Deportes",
      "marcada": false
     }
    ],
