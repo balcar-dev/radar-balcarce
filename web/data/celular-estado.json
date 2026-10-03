@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T04:31:47.242Z",
- "portada": 54,
- "archivo": 828,
+ "generado": "2026-10-03T05:01:37.077Z",
+ "portada": 56,
+ "archivo": 826,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-03T04:31:47.282Z",
+  "generado": "2026-10-03T05:01:37.113Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,9 +98,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "seccion": "Fútbol"
      },
      {
       "id": "sty1jd",
@@ -116,12 +116,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 48,
     "notas": [
      {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-      "seccion": "Fútbol"
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
      },
      {
       "id": "j3xrez",
@@ -129,13 +129,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
       "seccion": "Balcarce"
      },
      {
-      "id": "12mca8c",
-      "titulo": "El paro docente registra un alto acatamiento",
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
       "seccion": "Balcarce"
      }
     ]
@@ -147,16 +147,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 39,
+    "segundos": 29,
     "notas": [
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "1o0cdfx",
+      "titulo": "La Escuela de Arte dona una producción propia al patrimonio municipal",
       "seccion": "Balcarce"
      },
      {
-      "id": "swyxjn",
-      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      }
     ]
