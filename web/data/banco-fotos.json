@@ -5547,16 +5547,16 @@
   "cuando": "2026-10-02T21:01:55.022Z"
  },
  "vguosy": {
-  "archivo": "fotos-notas/vguosy.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "La cadena de panaderías Pandanés cierra sus locales y despide personal",
   "enlace": "https://www.ambito.com/negocios/cerro-famosa-cadena-panaderias-la-persiana-20-locales-despidio-su-personal-y-pedira-la-quiebra-n6329529",
   "imagenOriginal": "https://media.ambito.com/p/a541515c4f8029df71b57bed6648f01b/adjuntos/239/imagenes/043/680/0043680873/1200x675/smart/pan-danes.jpg",
   "razon": "La foto B muestra claramente el frente del local de Pandanés con los carteles de reclamo pegados por los empleados, sin personas reconocibles ni menores, y sin marcas añadidas.",
-  "cuando": "2026-10-02T21:01:55.022Z"
+  "cuando": "2026-10-02T21:01:55.022Z",
+  "intentado": true,
+  "borrada": true
  },
  "n09ogo": {
   "archivo": "fotos-notas/n09ogo.jpg",
@@ -5728,15 +5728,27 @@
   "cuando": "2026-10-03T00:03:12.659Z"
  },
  "1qnkumc": {
-  "archivo": "fotos-notas/1qnkumc.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "Javier Milei termina su gira en Francia y destaca el futuro económico del país",
   "enlace": "https://www.lanueva.com/nota/2026-10-2-16-23-0-milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1790969531136.jpg?&cw=600&ch=365",
   "razon": "La foto C muestra claramente al presidente disertando en el atril con buen encuadre y sin marcas de agua ni menores.",
-  "cuando": "2026-10-03T00:03:12.659Z"
+  "cuando": "2026-10-03T00:03:12.659Z",
+  "intentado": true,
+  "borrada": true
+ },
+ "132m0y1": {
+  "archivo": "fotos-notas/132m0y1.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Messi sigue la goleada del Eldense desde una notebook",
+  "enlace": "https://www.lanueva.com/nota/2026-10-2-20-24-0-bajo-la-mirada-de-su-nuevo-dueno-leo-messi-el-eldense-goleo-en-el-ascenso-espanol",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1790983560166.jpg?&cw=600&ch=365",
+  "razon": "La foto A tiene una marca de agua de Noticias Argentinas, por lo que se elige la B que ilustra el hecho sin marcas de terceros.",
+  "cuando": "2026-10-03T00:31:50.706Z"
  }
 }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03T00:03:23.392Z",
+ "generado": "2026-10-03T00:31:53.561Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -37,6 +37,48 @@
    ],
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras",
+   "maximo": 4
+  },
+  {
+   "id": "11e02rs",
+   "titulo": "El riesgo país llegó a 655 puntos y alcanzó su valor más alto del año",
+   "copete": "El riesgo país mantuvo la tendencia alcista de la primera rueda de octubre y alcanzó su valor más alto del año . Este movimiento ocurrió en un contexto internacional desfavorable para la deuda soberana. El indicador elaborado por JP Morgan trepó 19 unidades y se ubicó en los 655…",
+   "seccion": "Economía",
+   "fecha": "2026-10-02T15:31:22.023Z",
+   "fuentes": [
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-escala-hasta-los-650-puntos-el-valor-mas-alto-del-ano-nid02102026/",
+     "fecha": "2026-10-02T16:11:53.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-riesgo-pais-continua-la-escalada-y-trepo-hasta-650-puntos-el-valor-mas-alto-del-ano",
+     "fecha": "2026-10-02T21:02:55.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/finanzas/los-bonos-dolares-anotan-mayoria-bajas-y-el-riesgo-pais-alcanza-los-650-puntos-n6329363",
+     "fecha": "2026-10-02T22:10:00.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/economia/el-riesgo-pais-trepo-650-puntos-y-marco-un-nuevo-maximo-2026-n922656",
+     "fecha": "2026-10-02T23:25:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano_a6abfc939f814a2817c8518c5",
+     "fecha": "2026-10-02T21:10:00.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano-politica-y-economia_1790955480",
+     "fecha": "2026-10-02T20:21:01.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 4
   },
   {
@@ -206,11 +248,6 @@
      "fecha": "2026-10-02T16:06:00.000Z"
     },
     {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/02/ricardo-soule-espiritu-en-libertad/",
-     "fecha": "2026-10-02T20:58:58.000Z"
-    },
-    {
      "medio": "TyC Sports",
      "enlace": "https://www.tycsports.com/al-angulo/murio-ricardo-soule-el-musico-que-paso-de-la-reserva-de-quilmes-a-hacer-historia-con-vox-dei-id764010.html",
      "fecha": "2026-10-02T17:28:37.000Z"
@@ -349,6 +386,11 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/espectaculos/figuras-del-mundo-de-la-musica-despidieron-a-ricardo-soule-el-fundador-de-vox-dei-que-murio-a-los-76-nid02102026/",
      "fecha": "2026-10-02T19:10:33.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/02/ricardo-soule-espiritu-en-libertad/",
+     "fecha": "2026-10-02T20:58:58.000Z"
     }
    ],
    "intentos": 5,
@@ -415,7 +457,7 @@
     {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/la-corte-suprema-expreso-su-pesar-por-la-muerte-de-augusto-cesar-belluscio_a6ac009c8f814a2817c8f2a2d",
-     "fecha": "2026-10-02T19:46:37.000Z"
+     "fecha": "2026-10-02T19:46:37.293Z"
     },
     {
      "medio": "La Tecla",
@@ -441,6 +483,53 @@
    "intentos": 5,
    "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"augusto\", \"belluscio\" y el cuerpo no los explica; sin esas oraciones quedan 106 palabras",
    "maximo": 5
+  },
+  {
+   "id": "1qnkumc",
+   "titulo": "Milei cerró su gira en Francia: “Argentina se dirige nuevamente a paso firme hacia el futuro”",
+   "copete": "El presidente Javier Milei cerró hoy su gira por Francia en el marco de la Argentina Week París con un acto realizado en uno de los salones de la Torre Eiffel, donde afirmó que la Argentina se encuentra frente a “un cambio de página respecto a sus últimos 100 años de historia”…",
+   "seccion": "Política",
+   "fecha": "2026-10-02T18:50:40.275Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
+     "fecha": "2026-10-02T18:50:40.275Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
+     "fecha": "2026-10-02T22:53:56.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
+     "fecha": "2026-10-02T22:53:56.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-2-16-23-0-milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro",
+     "fecha": "2026-10-02T19:32:31.000Z"
+    },
+    {
+     "medio": "La Voz del Pueblo",
+     "enlace": "https://lavozdelpueblo.com.ar/milei-finalizo-su-visita-a-francia-con-un-acto-en-la-torre-eiffel",
+     "fecha": "2026-10-02T23:52:53.000Z"
+    },
+    {
+     "medio": "InfoRegión",
+     "enlace": "https://www.inforegion.com.ar/2026/10/02/milei-cerro-su-gira-por-francia-y-aseguro-que-argentina-avanza-a-paso-firme-hacia-el-futuro/",
+     "fecha": "2026-10-02T20:27:35.000Z"
+    },
+    {
+     "medio": "La Capital (Rosario)",
+     "enlace": "https://www.lacapital.com.ar/politica/la-argentina-se-dirige-nuevamente-paso-firme-el-futuro-dijo-milei-al-cerrar-su-visita-francia-n10284574.html",
+     "fecha": "2026-10-02T22:07:00.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "con cuerpo",
+   "maximo": 4
   },
   {
    "id": "gdwukq",
@@ -504,7 +593,7 @@
     {
      "medio": "Bolavip Argentina",
      "enlace": "https://bolavip.com/ar/futbolargentino/alineaciones-de-atletico-tucuman-y-barracas-central-por-la-torneo-clausura-formaciones-probables",
-     "fecha": "2026-10-02T21:47:19.000Z"
+     "fecha": "2026-10-02T23:07:11.000Z"
     },
     {
      "medio": "Bolavip Argentina",
@@ -515,6 +604,28 @@
    "intentos": 4,
    "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 33 palabras",
    "maximo": 4
+  },
+  {
+   "id": "qh4l57",
+   "titulo": "El precio de la soja en el mercado local es el más alto en tres años",
+   "copete": "Buenos Aires, 2 octubre (NA) - El mercado de la soja en la Argentina atraviesa su período más dinámico en años. Durante el mes de septiembre, la cotización de la oleaginosa en la plaza local pegó un salto del 12% respecto de los valores promedio del año, lo que la posicionó en…",
+   "seccion": "Agro",
+   "fecha": "2026-10-02T22:06:31.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-precio-de-la-soja-en-el-mercado-local-es-el-mas-alto-en-tres-anos_a6ac021f6f814a2817c940c9c",
+     "fecha": "2026-10-02T22:06:31.000Z"
+    },
+    {
+     "medio": "Ecos Diarios (Necochea)",
+     "enlace": "https://elecos.com.ar/la-soja-alcanza-su-precio-mas-alto-en-tres-anos-y-desafia-la-tendencia-internacional",
+     "fecha": "2026-10-02T22:37:39.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (promesa): el título dice 3 y el cuerpo no lo explica; sin esas oraciones quedan 138 palabras",
+   "maximo": 3
   }
  ]
 }
