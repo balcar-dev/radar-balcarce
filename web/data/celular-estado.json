@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T05:01:37.077Z",
- "portada": 56,
+ "generado": "2026-10-03T05:31:25.742Z",
+ "portada": 55,
  "archivo": 826,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-03T05:01:37.113Z",
+  "generado": "2026-10-03T05:31:25.785Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -93,13 +93,13 @@
       "seccion": "Agro"
      },
      {
-      "id": "n09ogo",
-      "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
-      "seccion": "Fútbol"
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
      },
      {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "id": "n09ogo",
+      "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
       "seccion": "Fútbol"
      },
      {
@@ -116,12 +116,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 52,
     "notas": [
      {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "seccion": "Fútbol"
      },
      {
       "id": "j3xrez",
@@ -129,13 +129,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "12mca8c",
-      "titulo": "El paro docente registra un alto acatamiento",
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      },
      {
-      "id": "1uwpmsg",
-      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
       "seccion": "Balcarce"
      }
     ]
@@ -147,19 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 29,
-    "notas": [
-     {
-      "id": "1o0cdfx",
-      "titulo": "La Escuela de Arte dona una producción propia al patrimonio municipal",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {

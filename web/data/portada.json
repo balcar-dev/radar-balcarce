@@ -1,63 +1,6 @@
 {
-  "generado": "2026-10-03T05:01:37.077Z",
+  "generado": "2026-10-03T05:31:25.742Z",
   "notas": [
-    {
-      "id": "1o0cdfx",
-      "titulo": "La Escuela de Arte dona una producción propia al patrimonio municipal",
-      "copete": "Alumnas de la institución entregaron una pieza visual que integró la muestra por los 150 años de Balcarce. El intendente Esteban Reino recibió el trabajo junto a funcionarios locales.",
-      "cuerpo": "Una producción confeccionada por estudiantes de la Escuela de Arte Astor Piazzolla pasó a integrar el patrimonio expositivo del municipio. La entrega se concretó el viernes, con la participación de la directora del establecimiento educativo, Gloria Álvarez, el intendente Esteban Reino y la directora de Juventud, Dolores Cerviño.\n\nLa pieza había formado parte de la exhibición titulada Grabando la memoria de Balcarce, la cual se desarrolló durante septiembre en el Palacio Municipal por el aniversario 150 de la ciudad.",
-      "guion": "La Escuela de Arte dona una producción propia al patrimonio municipal",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44981-una-obra-de-la-escuela-de-arte-se-incorpora-al-patrimonio-de-la-municipalidad/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-03T04:01:27.756Z",
-      "sinFecha": true,
-      "visto": "2026-10-03T04:01:27.756Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Una obra de la Escuela de Arte Astor Piazzolla se suma al patrimonio municipal",
-        "La entrega se concretó el viernes durante los festejos por los 150 años de la ciudad",
-        "La pieza integró la muestra Grabando la memoria de Balcarce en el Palacio Municipal",
-        "El intendente Esteban Reino recibió el trabajo junto a funcionarios locales"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Una producción de la Escuela de Arte Astor Piazzolla se sumó al patrimonio de la Municipalidad. La entrega se concretó el viernes y la pieza formó parte de la muestra por los 150 años de la ciudad.",
-      "etiquetas": [
-        "Escuela de Arte",
-        "Patrimonio municipal",
-        "Esteban Reino",
-        "150 aniversario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44981-una-obra-de-la-escuela-de-arte-se-incorpora-al-patrimonio-de-la-municipalidad/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó la incorporación de una obra de la Escuela de Arte al patrimonio municipal y detalló a los participantes del acto"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-escuela-de-arte-dona-una-produccion-propia-al-patrimonio-municipal",
-      "foto": {
-        "archivo": "fotos-notas/1o0cdfx.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
     {
       "id": "j3xrez",
       "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
@@ -297,7 +240,9 @@
       "guion": "Mariano Werner recibe millonaria multa y sanción deportiva",
       "seccion": "Automovilismo",
       "medios": [
-        "El Destape"
+        "El Destape",
+        "Campeones",
+        "Solotc"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/tc-pick-up-duras-sanciones-recibio-mariano-werner-final-balcarce-2026102205050",
       "teniaImagenLaFuente": true,
@@ -511,6 +456,7 @@
         "Clarín",
         "El Destape",
         "Perfil",
+        "Página/12",
         "A24",
         "iProfesional",
         "Ámbito",
@@ -519,8 +465,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
-        "Página/12"
+        "El Día"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/sandra-pettovello-desplazo-a-la-subsecretaria-de-trabajo-claudia-testa/",
       "teniaImagenLaFuente": true,
@@ -670,6 +615,74 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:17:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 90,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
+      ],
+      "seSabe": [
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
+      ],
+      "noConfirmado": [
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
+      ],
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
+      "etiquetas": [
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
+          "oficial": false,
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
+        }
+      ],
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
+      "foto": {
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1239,11 +1252,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44978-marcelo-panebianco-y-la-llegada-de-leon-xiv-es-una-invitacion-para-vivir-la-propia-fe/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:31:13.649Z",
       "sinFecha": true,
       "visto": "2026-10-02T17:31:13.649Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1319,7 +1332,7 @@
       "fecha": "2026-10-02T17:23:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": "Hernán",
       "publicadaCuando": "2026-10-03T01:54:15.049Z",
@@ -1471,7 +1484,7 @@
       "fecha": "2026-10-02T17:07:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1545,6 +1558,87 @@
       }
     },
     {
+      "id": "ydwxhf",
+      "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+      "copete": "Un acumulado de 25 milímetros en la franja central del país redujo a la mitad los lotes trigueros regulares y reactivó las sembradoras de maíz.",
+      "cuerpo": "Las precipitaciones registradas en la última semana en la franja central del país acumularon un promedio de 25 milímetros y permitieron recortar a la mitad los lotes de trigo en estado regular, que pasaron del 15% al 7% del total regional según la Bolsa de Comercio de Rosario.\n\nEl relevamiento detalló que la superficie afectada bajó de unas 250.000 a 120.000 hectáreas, mientras que el agua caída destrabó las tareas para cubrir las 750.000 hectáreas pendientes de maíz y llevó el avance de la siembra al 65%. Septiembre había cerrado con un promedio de 31,5 milímetros tras concentrar el 80% del total mensual en estos siete días, revirtiendo parcialmente el déficit hídrico previo que motivaba pronósticos de precipitaciones escasas a fines de septiembre.\n\nEl impacto de las tormentas muestra marcadas diferencias geográficas, ya que el este y el centro-este previenen rindes de hasta 50 quintales por hectárea, en contraste con el noroeste bonaerense y el sudeste cordobés, donde los cultivos sufrieron daños por heladas tempranas y mermas de hasta el 60% en el rendimiento.",
+      "guion": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Agrositio"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T17:03:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T23:01:19.357Z",
+      "relevancia": 32,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cayeron 25 milímetros en promedio en la franja central del país.",
+        "Los lotes trigueros regulares se redujeron del 15% al 7%.",
+        "La siembra de maíz alcanzó un 65% de cobertura tras reactivarse las labores.",
+        "El noroeste bonaerense registra mermas de hasta el 60% por la sequía previa y las heladas."
+      ],
+      "seSabe": [
+        "Las precipitaciones acumuladas en la última semana alcanzaron un promedio de 25 milímetros en la región central, según informó la Bolsa de Comercio de Rosario.",
+        "La superficie de trigo en condición regular cayó del 15% (250.000 hectáreas) al 7% (120.000 hectáreas).",
+        "Las recargas de agua permitieron reactivar la siembra de maíz, que alcanzó una cobertura global del 65%.",
+        "Septiembre cerró con un promedio de 31,5 milímetros tras recibir en la última semana el 80% del agua acumulada en el mes."
+      ],
+      "noConfirmado": [
+        "El grado de recuperación real que podrán alcanzar las plantas en los distritos más afectados como General Villegas y General Pinto.",
+        "El techo productivo definitivo en los lotes del oeste regional tras el impacto de las heladas y la escasez hídrica previa."
+      ],
+      "textoRedes": "Las precipitaciones acumuladas en la última semana en la franja central del país redujeron a la mitad los lotes trigueros en estado regular y permitieron reactivar la siembra de maíz.",
+      "etiquetas": [
+        "lluvias",
+        "trigo",
+        "maíz",
+        "Bolsa de Comercio de Rosario",
+        "región núcleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+          "fecha": "2026-10-02T17:03:25.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos detallados sobre el impacto de las lluvias en el trigo y el maíz, los porcentajes de afectación y las proyecciones por zonas."
+        },
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248642-alivio-para-el-trigo-y-las-siembras-que-se-retoman-tras-los-25-mm-que-recibio-la-region-en-los-ultimos-7-dias.html",
+          "fecha": "2026-10-02T17:51:54.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el registro de 25 milímetros en la región y la reducción de los lotes regulares de trigo al 7% según la Bolsa de Comercio de Rosario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "gd6n9s",
+          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+          "fecha": "2026-09-30T18:42:58.000Z",
+          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz",
+      "foto": {
+        "archivo": "fotos-notas/ydwxhf.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1akpidg",
       "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
       "copete": "Alumnas de la institución obsequiaron una producción artística que formó parte de una muestra local. El intendente Esteban Reino recibió la pieza.",
@@ -1552,8 +1646,10 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
+        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
@@ -1561,7 +1657,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 84,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1577,9 +1673,23 @@
           "aporte": null
         },
         {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Infórmese Primero (FM 104.9)",
           "enlace": "http://www.informeseprimero.com.ar/2026/10/la-escuela-de-arte-entrego-al-municipio.html",
           "fecha": "2026-10-02T18:08:04.743Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44981-una-obra-de-la-escuela-de-arte-se-incorpora-al-patrimonio-de-la-municipalidad/",
+          "fecha": null,
           "oficial": false,
           "aporte": null
         }
@@ -1716,11 +1826,11 @@
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
         "Punto Noticias",
-        "La Nueva",
-        "La Verdad"
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/economia/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al--temor-a-volver-al-infierno-_a6abfdbe3f814a2817c8806de",
       "teniaImagenLaFuente": true,
@@ -2293,6 +2403,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "La Nueva"
       ],
       "enlace": "https://www.cronica.com.ar/politica/javier-milei-expone-ante-el-foro-economico-de-paris/",
@@ -2419,7 +2530,7 @@
       "fecha": "2026-10-02T14:22:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 44,
+      "relevancia": 48,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2617,15 +2728,17 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 77,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2700,7 +2813,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
@@ -2986,10 +3100,10 @@
         "Perfil",
         "El Cronista",
         "Noticias Argentinas (NA)",
-        "El Día",
         "Infobrisas (Radio Brisas)",
         "A24",
-        "Clarín"
+        "Clarín",
+        "El Día"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/glencore-anuncio-una-inversion-de-us4000-millones-para-desarrollar-agua-rica-en-catamarca-nid02102026/",
       "teniaImagenLaFuente": true,
@@ -3095,9 +3209,9 @@
       "medios": [
         "Infobae",
         "Perfil",
+        "El Cronista",
         "Página/12",
-        "La Nueva",
-        "El Cronista"
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/02/marcelo-mindlin-destaco-el-interes-por-argentina-en-francia-yo-prefiero-invertir-hoy-no-esperar-a-manana/",
       "teniaImagenLaFuente": true,
@@ -3381,17 +3495,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
-        "Ámbito",
-        "Agencia DIB",
+        "Infoeme",
         "El Eco de Tandil",
-        "Infoeme"
+        "Ámbito",
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 59,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3461,9 +3575,9 @@
       "medios": [
         "0221",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB",
-        "El Eco de Tandil"
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/los-trabajadores-bingos-casinos-y-juego-online-deberan-cobrar-sus-sueldos-el-banco-provincia-n6329229",
       "teniaImagenLaFuente": true,
@@ -3520,6 +3634,117 @@
       "foto": {
         "archivo": "fotos-notas/2esdp2.jpg",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "1egbk71",
+      "titulo": "Javier Milei cumple su última jornada en Francia y regresa al país",
+      "copete": "El presidente finaliza su agenda en París el viernes con un reconocimiento económico y el cierre de la Argentina Week. Su vuelta está programada para el sábado por la mañana.",
+      "cuerpo": "El presidente Javier Milei concluye el viernes su agenda oficial en la capital francesa con una última serie de actividades antes de emprender el vuelo de regreso hacia la Ciudad de Buenos Aires, con arribo estipulado para el sábado a las 10 de la mañana. Durante su estadía, el mandatario mantuvo un encuentro bilateral con su par Emmanuel Macron en el Palacio del Elíseo y participó de la iniciativa Argentina Week.",
+      "guion": "Javier Milei cumple su última jornada en Francia y regresa al país",
+      "seccion": "Política",
+      "medios": [
+        "La Nación",
+        "Perfil",
+        "Página/12",
+        "C5N",
+        "Crónica",
+        "Clarín",
+        "La Brújula 24"
+      ],
+      "enlace": "https://www.c5n.com/politica/javier-milei-emmanuel-macron-reunion-francia-paris-1-octubre-2026",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T10:06:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T13:01:28.488Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El presidente cierra su agenda en París este viernes.",
+        "Recibe una distinción del Foro Económico de París.",
+        "El regreso a Buenos Aires está previsto para el sábado por la mañana."
+      ],
+      "noConfirmado": [
+        "El horario exacto del acto de cierre de la Argentina Week quedó sujeto a confirmación durante la jornada del viernes."
+      ],
+      "textoRedes": "El presidente Javier Milei finaliza este viernes su visita oficial a París con una distinción económica y el cierre de la Argentina Week, con regreso previsto para el sábado por la mañana.",
+      "etiquetas": [
+        "Javier Milei",
+        "Francia",
+        "Paris",
+        "Argentina Week",
+        "Gira presidencial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/javier-milei-emmanuel-macron-reunion-francia-paris-1-octubre-2026",
+          "fecha": "2026-10-02T10:06:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el cronograma de las actividades del viernes, la reunión con Macron y los datos del vuelo de regreso."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-presidente-recibe-hoy-premio-foro-economico-cierra-argentina-paris-week_0_cZX6NOTIIi.html",
+          "fecha": "2026-10-02T11:25:45.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la distinción que otorga el Foro Económico de París."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/javier-milei-recibe-el-premio-economista-mas-influyente-del-foro-economico-de-paris.phtml",
+          "fecha": "2026-10-02T12:39:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la participación en la Argentina Week y los encuentros con empresarios y gobernadores."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/javier-milei-visita-francia-viernes-2-octubre-2026",
+          "fecha": "2026-10-02T12:04:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato sobre el anuncio de inversiones de la empresa TotalEnergies."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/milei-cierra-su-visita-a-paris-con-un-premio-y-un-evento-final-de-la-argentina-week/",
+          "fecha": "2026-10-02T12:05:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los detalles del cierre de la gira y el horario de llegada a la Argentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "16j11u4",
+          "titulo": "Javier Milei viaja a Francia con trece gobernadores aliados",
+          "fecha": "2026-09-24T05:25:47.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-francia-con-trece-gobernadores-aliados-16j11u4"
+        },
+        {
+          "id": "1ejaor8",
+          "titulo": "Javier Milei promete crecimiento y pide paciencia ante empresarios en Mar del Plata",
+          "fecha": "2026-09-28T13:11:25.000Z",
+          "ruta": "/nota/javier-milei-promete-crecimiento-y-pide-paciencia-ante-empresarios-en-1ejaor8"
+        },
+        {
+          "id": "l0rwb4",
+          "titulo": "Javier Milei cuestiona a la ONU en su discurso",
+          "fecha": "2026-09-24T01:00:00.000Z",
+          "ruta": "/nota/milei-en-la-onu-llamo-a-la-organizacion-una-casta-de-parasitos-y-l0rwb4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "javier-milei-cumple-su-ultima-jornada-en-francia-y-regresa-al-pais",
+      "foto": {
+        "archivo": "fotos-notas/1egbk71.jpg",
+        "credito": "Foto: C5N"
       }
     },
     {
@@ -3685,91 +3910,6 @@
       }
     },
     {
-      "id": "1jejg3m",
-      "titulo": "Diputados convoca a una sesión para definir el futuro del DNU",
-      "copete": "La oposición fijó para el 15 de octubre un encuentro en la Cámara baja para intentar la derogación del megadecreto presidencial, tras una decisión de la Corte Suprema.",
-      "cuerpo": "La Cámara de Diputados fijará para el quince de octubre una sesión especial impulsada por sectores opositores con la intenci/on de revocar el decreto de necesidad y urgencia 70 de dos mil veintitrés. El llamado surge a raíz de una sentencia de la Corte Suprema que repuso un apartado sobre propiedad de tierras. Como la Cámara alta desaprobó la medida en marzo del año pasado, un voto negativo en la baja dejaría sin efecto la norma.\n\nLa eventual anulaci/on haría regresar normativas previas, entre ellas las reglas sobre alquileres, las condiciones de las obras sociales, las prepagas y el comercio exterior.",
-      "guion": "Diputados convoca a una sesión para definir el futuro del DNU",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "Radio Mitre",
-        "Canal 26",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.lanacion.com.ar/politica/las-regulaciones-que-volverian-a-regir-si-diputados-rechaza-el-dnu-7023-nid01102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T06:11:52.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T16:31:18.468Z",
-      "relevancia": 71,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La oposición busca derogar el DNU en la Cámara baja",
-        "La sesión especial tendrá lugar el 15 de octubre",
-        "El Senado ya había rechazado la medida en marzo de 2024"
-      ],
-      "seSabe": [
-        "La Cámara de Diputados tendrá una sesión especial el 15 de octubre",
-        "La Corte Suprema restituyó un artículo vinculado a la venta de tierras",
-        "El Senado rechazó el DNU en marzo de 2024"
-      ],
-      "noConfirmado": [
-        "Todavía no se conoce el resultado de la votación en la Cámara baja",
-        "No se detallaron los apoyos exactos con los que cuenta la iniciativa opositora"
-      ],
-      "etiquetas": [
-        "Diputados",
-        "DNU",
-        "Corte Suprema"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/las-regulaciones-que-volverian-a-regir-si-diputados-rechaza-el-dnu-7023-nid01102026/",
-          "fecha": "2026-10-02T06:11:52.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el fallo de la Corte Suprema, la derogación y el impacto en diversas leyes."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/que-leyes-volverian-a-regir-si-diputados-deroga-el-dnu-70-de-javier-milei",
-          "fecha": "2026-10-02T15:08:17.000Z",
-          "oficial": false,
-          "aporte": "Aportó la fecha del 15 de octubre para la sesión especial en Diputados."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/02/que-leyes-volverian-a-regir-si-diputados-deroga-el-dnu-70-de-javier-milei/",
-          "fecha": "2026-10-02T14:39:39.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la convocatoria opositora para debatir la desregulación económica."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/las-normas-que-volverian-a-regir-si-diputados-deroga-el-dnu-70-en-la-sesion-del-15-de-octubre/",
-          "fecha": "2026-10-02T16:09:43.000Z",
-          "oficial": false,
-          "aporte": "Señaló el antecedente del rechazo del Senado en marzo de 2024."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diputados-convoca-a-una-sesion-para-definir-el-futuro-del-dnu",
-      "foto": {
-        "archivo": "fotos-notas/1jejg3m.jpg",
-        "credito": "Foto: Radio Mitre"
-      }
-    },
-    {
       "id": "1gt8iio",
       "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
       "copete": "El arzobispo de Buenos Aires describió a la Argentina afectada por la pobreza y la polarización política. Lo expresó en la previa de la tradicional caminata a Luján y de la llegada de León XIV.",
@@ -3785,6 +3925,7 @@
         "El Cronista",
         "El Destape",
         "Perfil",
+        "Página/12",
         "A24",
         "Ámbito",
         "Minuto Uno",
@@ -3795,15 +3936,14 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Brújula 24",
+        "La Verdad",
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
-        "Clarín",
-        "Página/12",
         "El Eco de Tandil",
-        "La Verdad",
-        "La Capital (Rosario)",
-        "La Brújula 24"
+        "Clarín",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/duro-panorama-de-la-iglesia-al-papa-lo-espera-una-argentina-en-crisis-con-una-gran-cantidad-de-hermanos-muy-pobres/",
       "teniaImagenLaFuente": true,
@@ -3914,11 +4054,11 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Brújula 24",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "La Brújula 24"
+        "El Eco de Tandil"
       ],
       "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
       "teniaImagenLaFuente": true,
@@ -4088,6 +4228,7 @@
       "guion": "La filial local de Federación Agraria respalda la reelección de Sarnari",
       "seccion": "Agro",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/respaldo-la-reeleccion-de-andrea-sarnari-la-filial-local-de-federacion-agraria-argentina-57",
@@ -4095,7 +4236,7 @@
       "fecha": "2026-10-02T00:27:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 78,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4282,82 +4423,6 @@
       }
     },
     {
-      "id": "zdl4xp",
-      "titulo": "La selección argentina de básquet juega en Zárate la Ventana FIBA",
-      "copete": "El combinado nacional disputará dos encuentros en noviembre en el Espacio DAM. La Confederación Argentina de Básquet trasladó la localía desde Mar del Plata por cuestiones logísticas.",
-      "cuerpo": "La selección argentina de básquet disputará sus próximos dos compromisos de local en el Espacio DAM de Zárate, según informó la Confederación Argentina de Básquet. El equipo que dirige Pablo Prigioni se enfrentará a Bahamas el jueves 26 de noviembre y a Canadá el domingo 29 por la quinta ventana de los clasificatorios rumbo a la Copa del Mundo de Qatar 2027.\n\nEn mayo, la entidad madre del básquet nacional había comunicado que el Polideportivo Islas Malvinas de Mar del Plata albergaría estos encuentros. Sin embargo, la organización modificó la planificación original hacia el distrito bonaerense debido a motivos logísticos vinculados al traslado y la preparación del plantel.\n\nEl conjunto nacional afrontará esta instancia con un historial de seis victorias y dos caídas dentro del Grupo F. Las localidades para presenciar ambos partidos se conseguirán próximamente mediante la plataforma digital basquet.id.",
-      "guion": "La selección argentina de básquet juega en Zárate la Ventana FIBA",
-      "seccion": "Deportes",
-      "medios": [
-        "Olé",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Infobrisas (Radio Brisas)",
-        "Básquet Plus",
-        "Pick and Roll",
-        "La Nueva"
-      ],
-      "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T19:36:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T20:38:36.988Z",
-      "relevancia": 70,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El equipo nacional será local en el Espacio DAM de Zárate en noviembre.",
-        "Enfrentará a Bahamas el jueves 26 y a Canadá el domingo 29.",
-        "El cambio de sede desde Mar del Plata responde a cuestiones logísticas.",
-        "Las entradas están próximas a anunciarse en la plataforma basquet.id."
-      ],
-      "seSabe": [
-        "La Confederación Argentina de Básquet trasladó la localía a Zárate.",
-        "Los partidos se jugarán el 26 y 29 de noviembre en el Espacio DAM.",
-        "El equipo es dirigido por Pablo Prigioni.",
-        "Argentina suma seis triunfos y dos derrotas en el Grupo F."
-      ],
-      "noConfirmado": [
-        "Todavía no se anunciaron los precios ni la fecha exacta de venta de las entradas."
-      ],
-      "etiquetas": [
-        "selección argentina de básquet",
-        "Ventana FIBA",
-        "Zárate",
-        "Copa del Mundo 2027",
-        "Confederación Argentina de Básquet"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Básquet Plus",
-          "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
-          "fecha": "2026-10-01T19:46:22.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la selección será local en Zárate y jugará en el Espacio DAM."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/deportes/argentina-jugara-en-zarate-ante-bahamas-y-canada-por-las-eliminatorias-al-mundial-2027",
-          "fecha": "2026-10-01T20:36:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló las fechas de los partidos, el cambio de sede respecto a Mar del Plata y la venta de entradas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-argentina-de-basquet-juega-en-zarate-la-ventana-fiba",
-      "foto": {
-        "archivo": "fotos-notas/zdl4xp.jpg",
-        "credito": "Foto: QZ Noticias (Mar del Plata)"
-      }
-    },
-    {
       "id": "repaso20261001tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: Lionel Messi y acompañantes terapéuticos",
@@ -4502,93 +4567,6 @@
         "archivo": "fotos-notas/1uwpmsg.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "1a9rnj4",
-      "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
-      "copete": "El secretario de Gobierno, Ricardo Stoppani, repasó la labor local en seguridad. Anunció la ampliación del sistema de vigilancia y el aporte a las fuerzas.",
-      "cuerpo": "El secretario de Gobierno municipal, Ricardo Stoppani, repasó el trabajo local en materia de seguridad y anticipó que Balcarce llegará a las 250 cámaras de monitoreo el próximo año. Actualmente, el distrito cuenta con unas 180 cámaras operativas y ya se incorporan herramientas de inteligencia artificial al sistema, según informó en una entrevista con un medio local.\n\nEn cuanto al funcionamiento cotidiano, Stoppani detalló que la comuna destina aportes económicos mensuales para el mantenimiento logístico, combustible, reparaciones y equipamiento de las distintas fuerzas policiales. Asimismo, reconoció que existe escasez de personal y móviles para cubrir el cuadrante que va desde la calle 79 hasta El Cruce.\n\nRespecto a los hechos delictivos previos que motivaron reclamos a la Nación, el funcionario destacó que se incrementaron los operativos de control en la Ruta Nacional 226 con la colaboración de Gendarmería.",
-      "guion": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T17:31:17.133Z",
-      "sinFecha": true,
-      "visto": "2026-10-01T17:31:17.133Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Stoppani anticipó que Balcarce llegará a 250 cámaras de vigilancia el año próximo.",
-        "El Centro de Monitoreo cuenta actualmente con unas 180 cámaras operativas.",
-        "La comuna realiza aportes económicos mensuales para la logística y el combustible policial.",
-        "Se reforzaron los controles de seguridad sobre la Ruta Nacional 226."
-      ],
-      "seSabe": [
-        "El municipio de Balcarce destina fondos para el funcionamiento de las fuerzas policiales según informó el secretario de Gobierno, Ricardo Stoppani.",
-        "El Centro de Monitoreo local suma herramientas de inteligencia artificial a su infraestructura.",
-        "Se intensificaron los operativos de control en la Ruta Nacional 226."
-      ],
-      "noConfirmado": [
-        "No se detalló el monto exacto de los aportes económicos que el municipio entrega a las fuerzas policiales.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El municipio anticipó que Balcarce llegará a 250 cámaras de monitoreo el próximo año y repasó los aportes económicos destinados a las fuerzas de seguridad.",
-      "etiquetas": [
-        "seguridad",
-        "camaras de monitoreo",
-        "ricardo stoppani",
-        "municipio",
-        "ruta 226",
-        "policia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44967-stoppani-hablo-de-seguridad-y-anticipo-que-balcarce-llegara-a-250-camaras-de-monitoreo/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló el funcionamiento de la seguridad local, los aportes a la policía y la ampliación de cámaras de monitoreo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1bmz4t7",
-          "titulo": "Spinelli habló sobre una posible candidatura: “Ya llegará el momento de los nombres”",
-          "fecha": "2026-09-20T20:33:31.000Z",
-          "ruta": "/nota/spinelli-hablo-sobre-una-posible-candidatura-ya-llegara-el-momento-de-1bmz4t7"
-        },
-        {
-          "id": "1vt533g",
-          "titulo": "El paraje rural El Solcito atrae visitantes con su almacén histórico",
-          "fecha": "2026-10-01T12:45:00.000Z",
-          "ruta": "/nota/el-paraje-rural-el-solcito-atrae-visitantes-con-su-almacen-historico-1vt533g"
-        },
-        {
-          "id": "jul3w9",
-          "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
-          "fecha": "2026-09-29T12:08:15.000Z",
-          "ruta": "/nota/infraccionan-a-un-tractor-en-caminos-rurales-tras-las-lluvias-jul3w9"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-municipio-anticipa-que-el-centro-de-monitoreo-suma-camaras",
-      "foto": {
-        "archivo": "fotos-notas/1a9rnj4.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
     }
   ],
   "secciones": [
@@ -4600,15 +4578,10 @@
     "Deportes",
     "Cultura y agenda",
     "Argentina",
-    "Economía",
-    "Agro"
+    "Agro",
+    "Economía"
   ],
   "temas": [
-    {
-      "nombre": "Las rutas",
-      "ranura": "rutas",
-      "cuantas": 3
-    },
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
@@ -4618,16 +4591,21 @@
       "nombre": "El hospital",
       "ranura": "hospital",
       "cuantas": 2
+    },
+    {
+      "nombre": "Las rutas",
+      "ranura": "rutas",
+      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 8,
       "sensacion": 6,
-      "humedad": 95,
-      "viento": 10,
-      "rumbo": "NO",
-      "cielo": "Nublado",
+      "humedad": 96,
+      "viento": 12,
+      "rumbo": "N",
+      "cielo": "Llovizna leve",
       "esDeDia": false
     },
     "dias": [
@@ -4974,16 +4952,10 @@
   },
   "pendientes": [
     {
-      "id": "1lm809e",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "1148srf",
+      "id": "1w06xhx",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
+      "motivo": "necesita ojo humano: \"lesionada\""
     },
     {
       "id": "vguosy",
@@ -5046,8 +5018,8 @@
       "motivo": "necesita ojo humano: \"nena\""
     },
     {
-      "id": "1b243ok",
-      "titulo": "Quiniela Nacional: resultado del sorteo de la Vespertina…",
+      "id": "1h0f4mq",
+      "titulo": "Quiniela de Santa Fe: resultado del sorteo de la…",
       "seccion": "Argentina",
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
@@ -5070,10 +5042,34 @@
       "motivo": "necesita ojo humano: \"herido\""
     },
     {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
+    },
+    {
       "id": "1b80a9j",
       "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
       "seccion": "Política",
       "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "6gb1qq",
+      "titulo": "¿Qué puede aportar el Campo argentino al mundo? La…",
+      "seccion": "Agro",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "imkij7",
+      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1vj3yud",
+      "titulo": "Vecinos de Ringuelet denuncian desbordes cloacales desde…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 4
