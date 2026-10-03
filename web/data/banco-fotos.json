@@ -6164,13 +6164,15 @@
   "enlace": "https://www.eleco.com.ar/la-ciudad/la-ruta-226-y-un-tramo-urbano-marcado-por-graves-accidentes-y-dos-muertes-en-poco-mas-de-un-ano"
  },
  "1oy5t8d": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
-  "razon": "La única foto disponible incluye menores de edad reconocibles, por lo que no puede ser publicada.",
-  "cuando": "2026-10-03T16:31:30.405Z",
-  "intentos": 1,
-  "fuentes": 1
+  "archivo": "fotos-notas/1oy5t8d.jpg",
+  "medio": "Puntonueve (FM 100.9)",
+  "credito": "Foto: Puntonueve (FM 100.9)",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-03T18:45:27.694Z",
+  "imagenOriginal": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+  "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/"
  },
  "wjdq6r": {
   "archivo": "fotos-notas/wjdq6r.jpg",
@@ -6219,5 +6221,40 @@
   "imagenOriginal": "https://n2.cdnartic.ar/jHEn31pzZOTux-wMFLJipNv3HJo=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://qznoticiascdn.eleco.com.ar/media/2026/10/burkina.webp",
   "razon": "Es la única foto limpia sin marcas de agua ni menores reconocibles, con buena calidad y que ilustra adecuadamente a los protagonistas de la selección.",
   "cuando": "2026-10-03T18:46:07.794Z"
+ },
+ "1t477sv": {
+  "archivo": "fotos-notas/1t477sv.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-03T18:45:01.173Z",
+  "imagenOriginal": "https://www.diariolavanguardia.com/noticias/44972-balcarce-los-robos-aumentaron-un-32-5-mientras-bajaron-los-delitos-sexuales-y-vinculados-a-drogas/",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44972-balcarce-los-robos-aumentaron-un-32-5-mientras-bajaron-los-delitos-sexuales-y-vinculados-a-drogas/"
+ },
+ "1sxk7mg": {
+  "archivo": "fotos-notas/1sxk7mg.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Producir una hectárea de papa Spunta demanda más de 15 mil dólares",
+  "enlace": "https://eldiariobalcarce.com.ar/producir-papa-spunta-cuesta-mas-de-us-15000-por-hectarea-y-el-costo-aumento-315-en-un-ano-461",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-09-07-11-44-51costo_producir_papa.jpg",
+  "razon": "Es la única foto disponible, tiene buena nitidez y no contiene marcas ni menores.",
+  "cuando": "2026-10-03T19:01:41.650Z"
+ },
+ "qqa24c": {
+  "archivo": "fotos-notas/qqa24c.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto busca la remontada desde el fondo en Bahréin",
+  "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/03/con-confianza-en-el-ritmo-el-mensaje-de-franco-colapinto-en-la-previa-a-la-carrera-del-gp-de-bahrein/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/a-remar-el-mensaje-de-franco-colapinto-en-la-previa-a-la-carrera-del-gran-premio-de-bahrein-foto-instagram-francolapinto-3FD7XVA7RJCDZHYYBX7XBTVR3M.jpg?auth=ed50568485e795530433223279452472110988441112c7c5ba8eab818f2e55d5&width=1023",
+  "razon": "La foto A muestra a Franco Colapinto en primer plano con excelente nitidez y sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-03T19:01:41.650Z"
  }
 }
