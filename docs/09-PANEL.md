@@ -609,3 +609,19 @@ que sea consistente para el uso diario". Qué cambió (`web/public/panel/app.js`
   que borra en rojo suave, los demás de contorno, con un ícono por lo que hacen), tarjetas con la franja de color de su sección, "¿Qué es
   esto?" como una píldora, y en cada nota una **barra de acciones fija abajo** (Publicar/Descartar, Escribir con IA/Publicar, Editar/Retirar)
   para decidir sin bajar hasta el final. El CSS nuevo va al final de `index.html`, marcado "REDISEÑO DEL 2/10".
+
+## Pistas abiertas (3/10/2026)
+
+Hernán: "que yo te tire datos o links, que quede abierta la investigación y ver si aparece en algún medio, tengamos o no la fuente".
+- **Pegar un dato, un tuit o un enlace** (Más → Pistas). La nube (workflow "Panel del celular", `accion=pista`) investiga qué medios la cubrieron
+  en Google Noticias (sólo cuenta quién y cuándo), qué tenemos nosotros y, con IA, qué confirman o exageran los títulos. Si trae enlaces de una
+  página, suma su título y bajada (`enriquecerConEnlaces`); los de redes (X, Facebook, Instagram) no se pueden leer y el informe lo dice.
+- **Queda abierta** en `web/data/pistas.json` (una pista por renglón; `panel/pistas-libro.mjs`): el texto, las búsquedas, el nivel de cobertura, los
+  nombres de los medios y el historial son públicos (el texto ya viajaba como dato del workflow); **el informe viaja cifrado** para los celulares.
+- **Se vuelve a mirar sola cada tres horas, 14 días** (workflow "Pistas", `panel/revisar-pistas.mjs`). Si la cobertura sube de nivel (de sin
+  cobertura a un medio, a cubierta, a muy cubierta) o ya la publicamos nosotros, queda marcada **● Novedad** (en la lista, en Más y en la
+  barra de abajo) y avisa por WhatsApp (sólo "la pista X tiene novedades", sin el texto). Los matices con IA se piden sólo cuando sube de nivel.
+- En cada pista: **Volver a mirar ahora** (dispara el workflow "Pistas" con su id), **Archivar / Reabrir 14 días** y **Hacer la nota**, que todavía
+  no anda: necesita una API de búsqueda con texto (Tavily, `TAVILY_API_KEY` en GitHub). Cuando esté, el borrador pasa por el verificador de siempre y
+  entra a Esperan con `PISTA.relevancia` (95).
+- Pistas de menores o víctimas no se investigan (la lista del semáforo rojo). Prueba: `pistas-abiertas.test.mjs`.
