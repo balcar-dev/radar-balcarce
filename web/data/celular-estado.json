@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T21:01:39.819Z",
- "portada": 55,
+ "generado": "2026-10-03T21:31:38.504Z",
+ "portada": 56,
  "archivo": 855,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-03T21:01:39.857Z",
+  "generado": "2026-10-03T21:31:38.540Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,8 +147,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 34,
+    "segundos": 42,
     "notas": [
+     {
+      "id": "1y13u38",
+      "titulo": "Ignacio Fain logra la pole en San Nicolás y corta la sequia de Torino",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "ule632",
       "titulo": "El organizador confirma el amistoso entre la Argentina y Burkina Faso",
@@ -173,18 +178,16 @@
      "id": "1l5htn5",
      "titulo": "Vecinas renuevan espacios públicos y plazas",
      "cuando": "2026-10-03T17:03:20.427Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1xritdf",
      "titulo": "Colegiales recibe los Play Off del Torneo Clausura de Preliga",
-     "seccion": "Fútbol",
-     "marcada": false
+     "cuando": "2026-10-03T21:03:27.339Z"
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-03T18:33:20.427Z",
+   "cola": [],
+   "cupo": 2,
+   "proximoDesde": "2026-10-03T22:33:27.339Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
