@@ -4839,16 +4839,16 @@
   "cuando": "2026-10-02T11:01:45.037Z"
  },
  "tjhvbt": {
-  "archivo": "fotos-notas/tjhvbt.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno busca el apoyo de los gobernadores para la reforma electoral",
   "enlace": "https://tn.com.ar/politica/2026/10/02/el-gobierno-refuerza-el-vinculo-con-los-gobernadores-y-busca-apoyos-para-avanzar-con-la-reforma-electoral/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/mientras-javier-milei-agradecio-a-los-gobernadores-por-su-apoyo-en-el-congreso-diego-santilli-busco-profundizar-el-dialogo-para-avanzar-con-los-acuerdos-electorales-para-el-proximo-ano-foto-presidencia-NICDZWR4WRDMRED5DY4GOIMJOA.jpg?auth=0d5d2d2a4e7232edf807a7c133667c0a49e8a21459b337a6d761549cf4d86c6c&width=1023",
   "razon": "Muestra claramente al grupo de gobernadores y funcionarios reunidos para el tema político de la nota, con buena nitidez y sin marcas ni menores.",
-  "cuando": "2026-10-02T11:01:45.037Z"
+  "cuando": "2026-10-02T11:01:45.037Z",
+  "intentado": true,
+  "borrada": true
  },
  "hrexvi": {
   "archivo": "fotos-notas/hrexvi.jpg",
@@ -6310,5 +6310,17 @@
   "cuando": "2026-10-03T22:01:35.332Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "1gq0pia": {
+  "archivo": "fotos-notas/1gq0pia.jpg",
+  "medio": "Puntonueve (FM 100.9)",
+  "credito": "Foto: Puntonueve (FM 100.9)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Liga Balcarceña suspende toda la fecha del fútbol local",
+  "enlace": "https://puntonueve.com.ar/se-postergo-en-su-totalidad-la-fecha-del-futbol-local/",
+  "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-31-at-18.33.59-e1785535077780.jpeg",
+  "razon": "Es la única foto disponible, no tiene marcas ni menores, y sirve para ilustrar el estado de la cancha.",
+  "cuando": "2026-10-03T22:31:38.686Z"
  }
 }
