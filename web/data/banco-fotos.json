@@ -4668,16 +4668,16 @@
   "cuando": "2026-10-02T01:31:33.067Z"
  },
  "b68hv9": {
-  "archivo": "fotos-notas/b68hv9.jpg",
   "medio": "El Destape",
-  "credito": "Foto: El Destape",
   "licencia": null,
   "origen": "medio",
   "titulo": "El EAAF identifica los restos de un desaparecido en 1977",
   "enlace": "https://www.eldestapeweb.com/sociedad/identificaron-cuerpo-carlos-simon-poblete-desaparecido-cordoba-1977-2026101204557",
   "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1790897216469.jpg?&cw=1600&ch=900",
   "razon": "Es la única foto con excelente nitidez y encuadre que no posee marcas de agua superpuestas ni menores de edad.",
-  "cuando": "2026-10-02T00:01:46.097Z"
+  "cuando": "2026-10-02T00:01:46.097Z",
+  "intentado": true,
+  "borrada": true
  },
  "189q8rb": {
   "archivo": "fotos-notas/189q8rb.jpg",
@@ -6046,5 +6046,17 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2025/Bomberos_cuartel_23-10.jpeg",
   "razon": "Muestra claramente los vehículos del cuartel de bomberos y no tiene marcas de agua ni menores.",
   "cuando": "2026-10-03T13:31:51.899Z"
+ },
+ "1l5htn5": {
+  "archivo": "fotos-notas/1l5htn5.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Vecinas renuevan espacios públicos y plazas",
+  "enlace": "https://eldiariobalcarce.com.ar/detras-de-cada-plaza-tres-historias-de-trabajo-esfuerzo-y-companerismo-722",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-03-12-50-5Espacios_verdes__2_.JPG",
+  "razon": "Es la única opción disponible, cumple con los requisitos y no tiene marcas ni menores reconocibles.",
+  "cuando": "2026-10-03T14:01:44.037Z"
  }
 }

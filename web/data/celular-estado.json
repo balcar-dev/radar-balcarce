@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T13:32:42.080Z",
- "portada": 48,
+ "generado": "2026-10-03T14:01:49.677Z",
+ "portada": 51,
  "archivo": 836,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T13:32:42.112Z",
+  "generado": "2026-10-03T14:01:49.712Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-03T10:03:36.671Z"
    },
    {
@@ -116,12 +116,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 33,
+    "segundos": 48,
     "notas": [
      {
       "id": "1aekavp",
       "titulo": "Rubén Darío Insúa pide una marcha para que Lionel Messi juegue el Mundial 2030",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "seccion": "Balcarce"
      },
      {
       "id": "1gdngfe",
@@ -137,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 35,
     "notas": [
      {
       "id": "1a6c23d",
@@ -148,32 +158,21 @@
       "id": "1kfxthk",
       "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "174qhq6",
-      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "seccion": "Balcarce"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "16ml7pn",
      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
-     "seccion": "Balcarce",
-     "marcada": false
+     "cuando": "2026-10-03T13:34:29.368Z"
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-02T19:48:09.517Z",
+   "cola": [],
+   "cupo": 4,
+   "proximoDesde": "2026-10-03T15:04:29.368Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T13:32:42.080Z",
+  "generado": "2026-10-03T14:01:49.677Z",
   "notas": [
     {
       "id": "1a6c23d",
@@ -218,6 +218,65 @@
       }
     },
     {
+      "id": "1l5htn5",
+      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "copete": "Un grupo de mujeres lleva adelante tareas de mantenimiento y pintura en diferentes paseos y plazas de la ciudad para recuperar su aspecto.",
+      "cuerpo": "Diversos espacios públicos y plazas de la ciudad experimentan una transformación mediante tareas cotidianas de cuidado y mantenimiento llevadas adelante por vecinas. Las labores comprenden la puesta a punto de canteros que se encontraban vacíos, la recuperación del color en las pérgolas y la pintura de bancos en los paseos urbanos. Estas acciones permiten devolver el aspecto óptimo a los lugares de encuentro y recreación que utilizan habitualmente los habitantes del distrito.",
+      "guion": "Vecinas renuevan espacios públicos y plazas",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/detras-de-cada-plaza-tres-historias-de-trabajo-esfuerzo-y-companerismo-722",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T12:50:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T14:01:19.408Z",
+      "relevancia": 88,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Trabajos de mantenimiento en espacios públicos",
+        "Puesta a punto de canteros y pintura de bancos",
+        "Recuperación de plazas en la ciudad"
+      ],
+      "seSabe": [
+        "Vecinas realizan tareas de mantenimiento en espacios públicos de Balcarce",
+        "Los trabajos incluyen pintura de bancos y recuperación de canteros"
+      ],
+      "noConfirmado": [
+        "No se detallan los nombres de las personas involucradas ni los barrios específicos donde se desarrollan las tareas",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Vecinas de la ciudad llevan adelante tareas de mantenimiento, pintura de bancos y recuperación de canteros en diferentes plazas y espacios públicos.",
+      "etiquetas": [
+        "plazas",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/detras-de-cada-plaza-tres-historias-de-trabajo-esfuerzo-y-companerismo-722",
+          "fecha": "2026-10-03T12:50:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló las tareas de mantenimiento y cuidado cotidiano que realizan vecinas en plazas y espacios públicos de Balcarce."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "vecinas-renuevan-espacios-publicos-y-plazas",
+      "foto": {
+        "archivo": "fotos-notas/1l5htn5.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "174qhq6",
       "titulo": "Cortan las líneas fijas de la Policía y del CPR",
       "copete": "Las dependencias de seguridad locales sufren interrupciones en sus teléfonos habituales. Las autoridades habilitan vías alternativas para la atención de urgencias.",
@@ -228,11 +287,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44983-fuera-de-servicio-los-telefonos-de-la-policia-comunal-y-del-cpr-en-balcarce/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T12:31:09.453Z",
       "sinFecha": true,
       "visto": "2026-10-03T12:31:09.453Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -418,11 +477,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T03:01:28.393Z",
       "sinFecha": true,
       "visto": "2026-10-03T03:01:28.393Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -488,6 +547,85 @@
       "foto": {
         "archivo": "fotos-notas/j3xrez.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "copete": "Se definieron los jueces que dirigirán los encuentros del torneo local en su duela inicial. Los partidos se jugarán entre Balcarce y San Manuel.",
+      "cuerpo": "La Asociación de Bomberos Voluntarios y la Copa Challenger Alejandro Mascareño dan nombre al Torneo Oficial 2026, que el fin de semana pone en marcha su fase Clausura con la participación de doce equipos locales en primera división, Reserva, fútbol femenino e inferiores. Según informó una fuente local, los encuentros se llevarán a cabo en canchas de Balcarce y San Manuel bajo el arbitraje de jueces pertenecientes a UADA y SADRA Atlántica.",
+      "guion": "Designan los árbitros para el inicio de la fase Clausura",
+      "seccion": "Fútbol",
+      "medios": [
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://accion5.com/oficial-estan-los-arbitros-para-la-primera-fecha-del-clausura/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T00:57:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T01:31:17.303Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "bomberos"
+      ],
+      "como": "automatica",
+      "seSabe": [
+        "Los partidos se disputarán en canchas de Balcarce y San Manuel.",
+        "Los jueces pertenecen a UADA y SADRA Atlántica.",
+        "El certamen lleva el nombre Copa 75º Aniversario Asociación Bomberos Voluntarios y Copa Challenger Alejandro Mascareño."
+      ],
+      "noConfirmado": [
+        "No se informaron detalles sobre las recaudaciones estimadas para esta jornada inicial.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se conocieron los árbitros y el cronograma de partidos para la primera fecha de la fase Clausura del torneo oficial de fútbol que se jugará en Balcarce y San Manuel.",
+      "etiquetas": [
+        "arbitros",
+        "clausura",
+        "balcarce",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Acción 5 (Balcarce)",
+          "enlace": "https://accion5.com/oficial-estan-los-arbitros-para-la-primera-fecha-del-clausura/",
+          "fecha": "2026-10-03T00:57:01.000Z",
+          "oficial": false,
+          "aporte": "Informó el cronograma completo de designaciones arbitrales para la primera fecha del torneo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1pig8zv",
+          "titulo": "Asoma el Clausura 2026",
+          "fecha": "2026-09-18T22:17:49.080Z",
+          "ruta": "/nota/liga-balcarcena-asoma-el-clausura-2026-1pig8zv"
+        },
+        {
+          "id": "76r67w",
+          "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
+          "fecha": "2026-09-30T17:35:31.000Z",
+          "ruta": "/nota/bomberos-gestiona-una-unidad-de-traslado-para-capacitaciones-76r67w"
+        },
+        {
+          "id": "103siit",
+          "titulo": "Bomberos vende los últimos números de la rifa anual",
+          "fecha": "2026-09-30T17:17:02.000Z",
+          "ruta": "/nota/bomberos-vende-los-ultimos-numeros-de-la-rifa-anual-103siit"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "designan-los-arbitros-para-el-inicio-de-la-fase-clausura",
+      "foto": {
+        "archivo": "fotos-notas/2qj2kn.jpg",
+        "credito": "Foto: Acción 5 (Balcarce)"
       }
     },
     {
@@ -707,7 +845,6 @@
       "seccion": "Política",
       "medios": [
         "Agencia DIB",
-        "Minuto Uno",
         "Infobae",
         "Clarín",
         "La Nación",
@@ -717,6 +854,7 @@
         "A24",
         "iProfesional",
         "Ámbito",
+        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Canal 26",
@@ -814,11 +952,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T21:01:16.545Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:21:19.000Z",
+      "sinFecha": false,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -872,6 +1010,74 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:17:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 83,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
+      ],
+      "seSabe": [
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
+      ],
+      "noConfirmado": [
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
+      ],
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
+      "etiquetas": [
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
+          "oficial": false,
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
+        }
+      ],
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
+      "foto": {
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1138,6 +1344,79 @@
       }
     },
     {
+      "id": "1qnkumc",
+      "titulo": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones",
+      "copete": "El presidente completó su agenda en París con un evento en la Torre Eiffel. En su discurso ante inversores, aseguró que el país encara un nuevo rumbo económico y ratificó el equilibrio fiscal.",
+      "cuerpo": "El presidente Javier Milei completó este viernes su visita a Francia con un acto oficial en un salón de la Torre Eiffel, en el marco del cierre de la Argentina Week París. La ceremonia comenzó con la entonación del Himno Nacional Argentino y reunió a inversores y actores económicos globales.\n\nDurante su exposición, el mandatario aseguró que el país transita un cambio histórico y remarcó la intención de replicar estos encuentros en otros escenarios internacionales para promover el talento nacional y atraer capitales.",
+      "guion": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones.",
+      "seccion": "Política",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "La Voz del Pueblo",
+        "InfoRegión",
+        "La Nueva",
+        "La Capital (Rosario)"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T18:50:40.275Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:01:13.420Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
+          "fecha": "2026-10-02T18:50:40.275Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
+          "fecha": "2026-10-02T22:53:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/milei-finalizo-su-visita-a-francia-con-un-acto-en-la-torre-eiffel",
+          "fecha": "2026-10-02T23:52:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/10/02/milei-cerro-su-gira-por-francia-y-aseguro-que-argentina-avanza-a-paso-firme-hacia-el-futuro/",
+          "fecha": "2026-10-02T20:27:35.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-2-16-23-0-milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro",
+          "fecha": "2026-10-02T19:32:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/politica/la-argentina-se-dirige-nuevamente-paso-firme-el-futuro-dijo-milei-al-cerrar-su-visita-francia-n10284574.html",
+          "fecha": "2026-10-02T22:07:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso",
+      "corregidaAMano": true
+    },
+    {
       "id": "1nz8gwo",
       "titulo": "Doce equipos compiten en un nuevo torneo de vóley",
       "copete": "La Escuela Municipal de Vóley organizó una competencia con catorce partidos en el gimnasio de la Escuela Primaria Nº 13. Participaron planteles de Amigos Unidos y Ferroviarios.",
@@ -1282,8 +1561,8 @@
       "guion": "La Cámara de Casación revisa el sobreseimiento del ministro Luis Caputo",
       "seccion": "Política",
       "medios": [
-        "Minuto Uno",
         "Perfil",
+        "Minuto Uno",
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -1431,16 +1710,16 @@
         "El Destape",
         "Perfil",
         "A24",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "La Tecla",
         "Clarín",
         "Radio Mitre",
         "Minuto Uno",
         "Ámbito",
         "C5N",
-        "Página/12"
+        "Página/12",
+        "El Día",
+        "Diario Popular"
       ],
       "enlace": "https://www.eldestapeweb.com/politica/fuerte-gesto-lula-cierra-campana-bandera-malvinas-argentinas-2026102142358",
       "teniaImagenLaFuente": true,
@@ -1762,6 +2041,7 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -1773,7 +2053,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 97,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1786,6 +2066,13 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
           "aporte": null
         },
         {
@@ -2156,11 +2443,11 @@
         "Olé",
         "C5N",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "La Voz del Pueblo",
-        "Minuto Uno",
         "La Nueva",
-        "Clarín",
-        "La Verdad"
+        "Minuto Uno",
+        "Clarín"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
       "teniaImagenLaFuente": true,
@@ -2275,15 +2562,18 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44976-balcarce-y-su-apuesta-al-turismo-somos-un-destino-que-la-gente-busca-cada-vez-mas/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T16:31:18.468Z",
       "sinFecha": true,
       "visto": "2026-10-02T16:31:18.468Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
       "como": "automatica",
       "claves": [
         "La Fiesta Nacional del Postre se desarrollará durante el próximo fin de semana largo.",
@@ -2602,8 +2892,8 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "TyC Sports",
-        "Diario Popular",
-        "Diario Conurbano"
+        "Diario Conurbano",
+        "Diario Popular"
       ],
       "enlace": "https://diarioconurbano.com.ar/principal/este-sabado-llega-una-noche-en-los-museos-a-brown-con-descuentos-en-gastronomia/",
       "teniaImagenLaFuente": true,
@@ -2754,7 +3044,7 @@
       "fecha": "2026-10-02T13:42:44.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 67,
+      "relevancia": 59,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2808,18 +3098,19 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
+        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
-        "El Diario Balcarce",
-        "Diario La Vanguardia"
+        "El Diario Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 69,
+      "relevancia": 89,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2894,14 +3185,15 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:10:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 93,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3568,93 +3860,6 @@
       "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
     },
     {
-      "id": "l415ro",
-      "titulo": "Marco Morelli lidera la práctica de Moto3 en Japón",
-      "copete": "El piloto argentino marcó el mejor registro en el circuito de Motegi. Su compatriota Valentín Perrone finalizó quinto y ambos avanzaron a la Q2.",
-      "cuerpo": "El piloto Marco Morelli registró el mejor tiempo en la práctica de Moto3 el viernes en el Circuito Internacional de Motegi, en Japón, con una marca de 1:55.280 a bordo de su KTM.\n\nPor su parte, el otro representante nacional, Valentín Perrone, finalizó en la quinta posición con un tiempo de 1:55.412. De esta manera, ambos deportistas aseguraron su clasificación directa a la Q2 tras quedar separados por apenas 132 milésimas.\n\nLa carrera de la categoría se disputará el sábado a partir de las 23 horas de Argentina en el trazado japonés, donde buscarán definir sus lugares de partida.",
-      "guion": "Marco Morelli lidera la práctica de Moto3 en Japón",
-      "seccion": "Automovilismo",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Olé",
-        "Minuto Uno"
-      ],
-      "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/02/un-argentino-dio-la-sorpresa-y-se-quedo-con-el-mejor-tiempo-en-la-practica-de-la-categoria-moto3-en-el-gp-de-japon/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T11:47:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T20:31:20.420Z",
-      "relevancia": 56,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Marco Morelli marcó el mejor tiempo en la práctica de Moto3 en Japón con un registro de 1:55.280.",
-        "Valentín Perrone finalizó en la quinta ubicación a poca distancia de su compatriota.",
-        "Ambos pilotos argentinos aseguraron su clasificación directa a la Q2.",
-        "La competencia principal se largará este sábado a las 23 horas de Argentina."
-      ],
-      "textoRedes": "Marco Morelli marcó el mejor tiempo en la práctica de Moto3 en Japón y Valentín Perrone terminó quinto. Ambos argentinos avanzaron de manera directa a la Q2 y correrán este sábado.",
-      "etiquetas": [
-        "Moto3",
-        "Marco Morelli",
-        "Valentin Perrone",
-        "Japon",
-        "Motegi"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/02/un-argentino-dio-la-sorpresa-y-se-quedo-con-el-mejor-tiempo-en-la-practica-de-la-categoria-moto3-en-el-gp-de-japon/",
-          "fecha": "2026-10-02T11:47:06.000Z",
-          "oficial": false,
-          "aporte": "Informó el tiempo de Marco Morelli, la posición de Valentín Perrone y los detalles de la clasificación a la Q2."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/enorme-performance-marco-morelli-sorprendio-japon-y-fue-el-mas-rapido-moto3-n6329446",
-          "fecha": "2026-10-02T16:36:48.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el registro de la práctica en Motegi y la ubicación de ambos pilotos."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/quien-es-marco-morelli-el-argentino-que-sorprendio-en-moto3-con-el-mejor-tiempo-en-el-gran-premio-de-japon/",
-          "fecha": "2026-10-02T13:58:11.000Z",
-          "oficial": false,
-          "aporte": "Aportó la diferencia de tiempo entre los dos argentinos y su pase a la Q2."
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/autos/moto3-japon-vistio-celeste-blanco-marco-morelli-hizo-mejor-viernes-ano_0_nN0MVcoo7K.html",
-          "fecha": "2026-10-02T19:46:16.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la actividad correspondió a la 16ª ronda de la categoría."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1uamvkq",
-          "titulo": "Diego Ciantini marca el mejor tiempo en el último entrenamiento",
-          "fecha": "2026-09-26T16:39:24.000Z",
-          "ruta": "/nota/diego-ciantini-marca-el-mejor-tiempo-en-el-ultimo-entrenamiento-en-1uamvkq"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "marco-morelli-lidera-la-practica-de-moto3-en-japon",
-      "foto": {
-        "archivo": "fotos-notas/l415ro.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
-    },
-    {
       "id": "gfh5l8",
       "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "copete": "El gobernador Axel Kicillof firmó el decreto que transfiere un terreno de la ex mina Catriel, ubicado en Sierras Bayas, para el desarrollo de un espacio recreativo y cultural.",
@@ -3918,6 +4123,11 @@
   ],
   "temas": [
     {
+      "nombre": "Bomberos Voluntarios",
+      "ranura": "bomberos",
+      "cuantas": 2
+    },
+    {
       "nombre": "Las rutas",
       "ranura": "rutas",
       "cuantas": 2
@@ -3925,10 +4135,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 11,
-      "sensacion": 8,
-      "humedad": 95,
-      "viento": 21,
+      "temp": 12,
+      "sensacion": 9,
+      "humedad": 93,
+      "viento": 20,
       "rumbo": "N",
       "cielo": "Llovizna leve",
       "esDeDia": true
@@ -4283,16 +4493,16 @@
   },
   "pendientes": [
     {
-      "id": "sc5iea",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+      "id": "36p9t0",
+      "titulo": "Este martes Rufino viajará a la India para iniciar un…",
+      "seccion": "Balcarce",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "1148srf",
+      "id": "1w06xhx",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
+      "motivo": "necesita ojo humano: \"lesionada\""
     },
     {
       "id": "vguosy",
@@ -4305,6 +4515,12 @@
       "titulo": "La Cámpora busca por ley regular las apuestas online en la…",
       "seccion": "Política",
       "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "t9c46j",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "13ygrbn",
@@ -4355,6 +4571,12 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "13we5yd",
+      "titulo": "Brasil vota, Argentina observa: qué puede cambiar ante un…",
+      "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "4n4kj2",
       "titulo": null,
       "seccion": "Argentina",
@@ -4385,16 +4607,22 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
+    },
+    {
       "id": "1yg85wu",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herido\""
     },
     {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
+      "id": "imkij7",
+      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 1
