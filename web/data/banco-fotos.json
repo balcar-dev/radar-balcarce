@@ -5330,10 +5330,11 @@
  },
  "1gofphd": {
   "intentado": true,
-  "origen": "medio",
-  "cuando": "2026-10-02T18:02:26.094Z",
-  "error": "no se pudo volver a bajar la elegida",
-  "intentos": 1,
+  "origen": "ninguna",
+  "titulo": "Luis Caputo pide confianza a los empresarios y descarta devaluar",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-03T02:27:34.193Z",
+  "intentos": 2,
   "fuentes": 6
  },
  "1aekavp": {
@@ -5819,5 +5820,26 @@
   "cuando": "2026-10-03T02:01:33.018Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "1c7unm1": {
+  "archivo": "fotos-notas/1c7unm1.jpg",
+  "medio": "Puntonueve (FM 100.9)",
+  "credito": "Foto: Puntonueve (FM 100.9)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+  "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+  "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2025/02/Municipalidad-Licitaciones.jpg",
+  "razon": "Es la única imagen que muestra el edificio municipal completo con un encuadre estable y nítido, identificando claramente el lugar de los hechos.",
+  "cuando": "2026-10-03T02:27:34.193Z"
+ },
+ "13mffec": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Cámpora presenta un proyecto para regular las apuestas online",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-03T02:27:34.193Z",
+  "intentos": 1,
+  "fuentes": 7
  }
 }
