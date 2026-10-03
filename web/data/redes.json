@@ -882,6 +882,20 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-02/podcast": {
+      "cuando": "2026-10-03T00:07:43.238Z",
+      "mediaId": "17960665287234022",
+      "nombre": "podcast",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": [
+        "144x64h",
+        "1917p5s",
+        "zdkvaa",
+        "1bheb6v"
+      ],
+      "permalink": "https://www.instagram.com/reel/DeAu_-Gkujh/"
     }
   },
   "facebookVideos": {
@@ -1447,6 +1461,20 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-02/podcast": {
+      "cuando": "2026-10-03T00:08:49.553Z",
+      "mediaId": "1303856792305545",
+      "nombre": "podcast",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": [
+        "144x64h",
+        "1917p5s",
+        "zdkvaa",
+        "1bheb6v"
+      ],
+      "permalink": "https://www.facebook.com/reel/1303856792305545/"
     }
   },
   "instagramFeed": {
@@ -1963,15 +1991,21 @@
       "nombre": "noticia2",
       "red": "facebook",
       "notaId": "1v6m62u"
+    },
+    "instagram/2026-10-02/podcast": {
+      "cuando": "2026-10-03T00:08:15.578Z",
+      "mediaId": "18110721851032284",
+      "nombre": "podcast",
+      "red": "instagram",
+      "notaId": null
+    },
+    "facebook/2026-10-02/podcast": {
+      "cuando": "2026-10-03T00:09:22.244Z",
+      "mediaId": "1086952634240824",
+      "nombre": "podcast",
+      "red": "facebook",
+      "notaId": null
     }
   },
-  "problemas": {
-    "2026-10-02/podcast/instagram/reel": {
-      "pieza": "podcast",
-      "red": "instagram",
-      "parte": "reel",
-      "error": "La subida del video falló (400) Request processing failed",
-      "cuando": "2026-10-03T00:05:48.931Z"
-    }
-  }
+  "problemas": {}
 }
