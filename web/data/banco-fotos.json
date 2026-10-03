@@ -5894,22 +5894,29 @@
   "cuando": "2026-10-03T06:02:01.523Z"
  },
  "ekwjoy": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/ekwjoy.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Balcarce expone sus atractivos turísticos en la trigésima Feria Internacional de Turismo",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-03T06:02:01.523Z",
-  "intentos": 1,
-  "fuentes": 1
+  "enlace": "https://eldiariobalcarce.com.ar/balcarce-mostro-su-propuesta-turistica-en-la-30a-feria-internacional-de-turismo-157",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-02-20-17-49Feria_de_Turismo__5_.jpeg",
+  "razon": "Es la única opción disponible y muestra el contexto del evento (FIT) sin marcas de agua del medio ni menores de edad.",
+  "cuando": "2026-10-03T07:31:46.354Z"
  },
  "11jis8k": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/11jis8k.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Gobierno de la Ciudad de Buenos Aires from Ciudad Autónoma de Buenos Aires, Argentina / Wikimedia Commons (CC BY 2.0)",
+  "licencia": "CC BY 2.0",
+  "autor": "Gobierno de la Ciudad de Buenos Aires from Ciudad Autónoma de Buenos Aires, Argentina",
+  "origen": "wikimedia",
   "titulo": "Guillermo Montenegro vuelve a la intendencia de General Pueyrredon",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-03T06:02:01.523Z",
-  "intentos": 1,
-  "fuentes": 26
+  "enlace": "https://commons.wikimedia.org/wiki/File:Guillermo_Montenegro_habl%C3%B3_con_los_medios_luego_de_la_reuni%C3%B3n_de_gabinete_(6842145821).jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Guillermo_Montenegro_habl%C3%B3_con_los_medios_luego_de_la_reuni%C3%B3n_de_gabinete_%286842145821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Guillermo Montenegro\" de Wikimedia Commons (CC BY 2.0).",
+  "cuando": "2026-10-03T07:31:46.354Z"
  },
  "1ftwyte": {
   "intentado": true,
