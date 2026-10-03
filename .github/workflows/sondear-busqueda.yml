@@ -20,3 +20,6 @@ jobs:
         env:
           GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
           GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+      - run: node redes/sondear-tavily.mjs
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
