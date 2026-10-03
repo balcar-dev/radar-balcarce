@@ -4304,16 +4304,16 @@
   "cuando": "2026-10-01T18:05:34.206Z"
  },
  "24cp9v": {
-  "archivo": "fotos-notas/24cp9v.jpg",
   "medio": "LU9 Mar del Plata",
-  "credito": "Foto: LU9 Mar del Plata",
   "licencia": null,
   "origen": "medio",
   "titulo": "Maximiliano Abad pide reglas claras frente a los riesgos de la inteligencia artificial",
   "enlace": "https://www.lu9mardelplata.com.ar/desde-madrid-abad-advirtio-sobre-los-riesgos-de-la-ia-y-reclamo-reglas-claras-para-aprovechar-su-potencial",
   "imagenOriginal": "https://cdnartic.ar/-tIkjrP_p6zLP89fdXrGszdavT8=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://lu9mardelplatacdn.eleco.com.ar/media/2026/10/maximiliano_abad_junto_al_rey_de_espana_felipe_vi.webp",
   "razon": "La foto A ofrece excelente nitidez y encuadre sin marcas de agua superpuestas ni menores reconocibles.",
-  "cuando": "2026-10-01T18:05:34.206Z"
+  "cuando": "2026-10-01T18:05:34.206Z",
+  "intentado": true,
+  "borrada": true
  },
  "367tdt": {
   "archivo": "fotos-notas/367tdt.jpg",
@@ -5877,5 +5877,44 @@
   "cuando": "2026-10-03T04:31:26.926Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "zh5e4x": {
+  "archivo": "fotos-notas/zh5e4x.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Hospital Municipal suma una nueva mesa quirúrgica",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44963-el-fossati-incorporo-una-nueva-mesa-de-cirugia-para-el-area-quirurgica/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65914.png",
+  "razon": "Es la única imagen que muestra la mesa quirúrgica completa, permitiendo identificar claramente el hecho de la nota, sin marcas de agua ni personas.",
+  "cuando": "2026-10-03T06:02:01.523Z"
+ },
+ "ekwjoy": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Balcarce expone sus atractivos turísticos en la trigésima Feria Internacional de Turismo",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-03T06:02:01.523Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "11jis8k": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Guillermo Montenegro vuelve a la intendencia de General Pueyrredon",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-03T06:02:01.523Z",
+  "intentos": 1,
+  "fuentes": 26
+ },
+ "1ftwyte": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Franco Colapinto penaliza quince puestos en la grilla por un cambio de motor",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-03T06:02:01.523Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T05:31:25.742Z",
- "portada": 55,
- "archivo": 826,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-03T06:02:26.798Z",
+ "portada": 58,
+ "archivo": 829,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-03T05:31:25.785Z",
+  "generado": "2026-10-03T06:02:26.823Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -93,13 +93,13 @@
       "seccion": "Agro"
      },
      {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
-     },
-     {
       "id": "n09ogo",
       "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
       "seccion": "Fútbol"
      },
      {
@@ -116,21 +116,21 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-      "seccion": "Fútbol"
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
+     },
+     {
+      "id": "zh5e4x",
+      "titulo": "El Hospital Municipal suma una nueva mesa quirúrgica",
+      "seccion": "Balcarce"
      },
      {
       "id": "j3xrez",
       "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      },
      {
@@ -147,8 +147,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 29,
+    "notas": [
+     {
+      "id": "1o0cdfx",
+      "titulo": "La Escuela de Arte dona una producción propia al patrimonio municipal",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
