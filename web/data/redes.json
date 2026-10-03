@@ -1965,5 +1965,13 @@
       "notaId": "1v6m62u"
     }
   },
-  "problemas": {}
+  "problemas": {
+    "2026-10-02/podcast/instagram/reel": {
+      "pieza": "podcast",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-03T00:05:48.931Z"
+    }
+  }
 }
