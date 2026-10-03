@@ -295,6 +295,17 @@ test('lo que ya se reescribió CON cuerpo no se vuelve a pedir, aunque el texto 
   assert.equal(pedidos.length, 0);
 });
 
+test('lo ya escrito que dice "como se había informado" se reusa si tenía antecedentes (Caputo, 2/10): no vuelve a esperar cuerpo', async () => {
+  const previas = { n1: {
+    titulo: bueno.titulo, copete: bueno.copete, guion: bueno.guion, deIA: true,
+    cuerpo: `${CUERPO} Como se había informado el 1 de octubre, el funcionario ya había expuesto ante inversores.`,
+    antecedentes: [{ id: 'a1', titulo: 'El funcionario expuso ante inversores', fecha: '2026-10-01T10:30:35.000Z' }],
+  } };
+  const { r, pedidos } = await correr([], { previas });
+  assert.ok(r.n1, 'la revalidación tiró una nota buena porque no le pasó los antecedentes');
+  assert.equal(pedidos.length, 0);
+});
+
 test('lo que quedó publicado con el cuerpo vacío se vuelve a pedir', async () => {
   const previas = { n1: { titulo: bueno.titulo, copete: bueno.copete, cuerpo: '', guion: bueno.guion, deIA: true } };
   const { r, pedidos } = await correr([bueno], { previas });

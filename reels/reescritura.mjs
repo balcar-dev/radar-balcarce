@@ -1091,7 +1091,8 @@ export async function reescribirAutomaticas(notas, {
       // los datos ya se compararon contra el texto completo cuando se escribió,
       // y ese texto no se vuelve a bajar en cada corrida.
       const control = verificar(
-        { titulo: nota.titulo, resumen: nota.resumenFuente },
+        // Con los antecedentes con que se escribió: sin ellos, "como se había informado" se tomaba por relleno y una nota buena volvía a "esperando cuerpo" (2/10, Caputo).
+        { titulo: nota.titulo, resumen: nota.resumenFuente, antecedentes: textoDeAntecedentes(cacheada.antecedentes ?? []) },
         {
           titulo: cacheada.titulo, copete: cacheada.copete, guion: cacheada.guion, cuerpo: cacheada.cuerpo,
         },
