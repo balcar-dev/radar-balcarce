@@ -34,6 +34,7 @@ export const ARCHIVOS = {
   piezas: 'web/data/efemerides-piezas.json',
   cambiosIA: 'web/data/correcciones-auditoria.json',
   pistas: 'web/data/pistas.json',
+  notasDePistas: 'web/data/notas-de-pistas.json',
   contactosPublicos: 'ingesta/contactos-agenda.json',
   contactosCelular: 'web/data/contactos-celular.json',
 };
@@ -75,6 +76,8 @@ export function formatear(ruta, json) {
   if (ruta === ARCHIVOS.correcciones || ruta === ARCHIVOS.retiradas) return comoRenglones(json, ['notas']);
   if (ruta === ARCHIVOS.decisiones) return comoRenglones(json, ['notas', 'redes']);
   // Un día o un feriado por renglón: el historial dice qué se decidió cuándo.
+  // Una nota de pista por renglón (3/10): el historial de git dice qué se publicó cuándo.
+  if (ruta === ARCHIVOS.notasDePistas) return comoRenglones(json, ['notas']);
   // Una pista por renglón (2/10): el historial de git dice qué cambió cuándo.
   if (ruta === ARCHIVOS.pistas) return comoRenglones({ version: 1, ...json }, ['pistas']).replace('{"pistas"', '{"version":1,"pistas"');
   // Un contacto (o una anotación) por renglón, cada uno en su sobre cifrado (3/10).
@@ -221,6 +224,38 @@ export function conEleccionDeDia(json, dia, eleccion) {
   return j;
 }
 
+/** En qué puede quedar una pista (igual que RESULTADOS de panel/pistas-libro.mjs). */
+export const RESULTADOS_DE_PISTA = {
+  confirmada: 'Se confirmó: la cubrieron medios',
+  desmentida: 'Se desmintió o era falsa',
+  'sin-novedad': 'Sin novedades: no pasó nada',
+  publicada: 'Salió como nota nuestra',
+  descartada: 'La descartamos',
+};
+
+/** Una nota nacida de una pista, ya revisada por una persona (web/lib/notas-de-pistas.js la lee). Lleva motivo, cuándo y quién. */
+export function conNotaDePista(json, id, { titulo, copete, cuerpo, seccion, fuentes, por, motivo }) {
+  const j = { notas: {}, ...json };
+  j.notas = { ...j.notas, [id]: { titulo, copete, cuerpo, seccion, fuentes, pista: id, motivo, cuando: hoyISO(), por } };
+  return j;
+}
+
+/** Sacar de la web una nota de una pista: queda anotada con quién y por qué, y deja de armarse. */
+export function conNotaDePistaRetirada(json, id, { por, motivo }) {
+  const e = json?.notas?.[id];
+  return e ? { ...json, notas: { ...json.notas, [id]: { ...e, retirada: { cuando: hoyISO(), por, motivo } } } } : json;
+}
+
+/** Cerrar una pista diciendo en qué quedó (y, si salió como nota nuestra, el enlace). Queda archivada, con su renglón en el seguimiento. */
+export function conPistaResultado(json, id, { tipo, comentario = '', ruta = null }) {
+  const p = json?.pistas?.[id];
+  if (!p || !(tipo in RESULTADOS_DE_PISTA)) return json;
+  const ahora = hoyISO();
+  const resultado = { tipo, cuando: ahora, ...(comentario ? { comentario: String(comentario).slice(0, 200) } : {}), ...(ruta ? { ruta } : {}) };
+  const renglon = { cuando: ahora, texto: `Cerrada: ${RESULTADOS_DE_PISTA[tipo]}${comentario ? ` (${String(comentario).slice(0, 80)})` : ''}` };
+  return { ...json, pistas: { ...json.pistas, [id]: { ...p, estado: 'archivada', archivada: ahora, resultado, novedad: false, seguimiento: [...(p.seguimiento ?? []), renglon].slice(-40) } } };
+}
+
 /** Una pista ya mirada deja de ser una novedad (la apaga el celular al abrirla). */
 export function conPistaSinNovedad(json, id) {
   const p = json?.pistas?.[id];
@@ -270,3 +305,6 @@ export function haceCuanto(iso, ahora = Date.now()) {
 
 /** Cuántas palabras tiene un texto (el cuerpo pide 70 para salir solo). */
 export const palabras = (t) => String(t ?? '').trim().split(/\s+/).filter(Boolean).length;
+
+/** El id de la nota que sale de una pista (igual que idDeNotaDePista de web/lib/notas-de-pistas.js: una prueba controla que digan lo mismo). */
+export const idDeNotaDePista = (idPista) => `np${String(idPista ?? '').replace(/[^a-z0-9]/gi, '').toLowerCase().replace(/^pista/, '').slice(0, 16)}`;

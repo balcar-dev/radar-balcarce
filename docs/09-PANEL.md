@@ -621,9 +621,8 @@ Hernán: "que yo te tire datos o links, que quede abierta la investigación y ve
 - **Se vuelve a mirar sola cada tres horas, 14 días** (workflow "Pistas", `panel/revisar-pistas.mjs`). Si la cobertura sube de nivel (de sin
   cobertura a un medio, a cubierta, a muy cubierta) o ya la publicamos nosotros, queda marcada **● Novedad** (en la lista, en Más y en la
   barra de abajo) y avisa por WhatsApp (sólo "la pista X tiene novedades", sin el texto). Los matices con IA se piden sólo cuando sube de nivel.
-- En cada pista: **Volver a mirar ahora** (dispara el workflow "Pistas" con su id), **Archivar / Reabrir 14 días** y **Hacer la nota**, que todavía
-  no anda: necesita una API de búsqueda con texto (Tavily, `TAVILY_API_KEY` en GitHub). Cuando esté, el borrador pasa por el verificador de siempre y
-  entra a Esperan con `PISTA.relevancia` (95).
+- En cada pista: **Volver a mirar ahora** (dispara el workflow "Pistas" con su id), **Cerrar: ¿en qué quedó?**, **Reabrir 14 días** y **Hacer la nota**
+  (ver abajo).
 - Pistas de menores o víctimas no se investigan (la lista del semáforo rojo). Prueba: `pistas-abiertas.test.mjs`.
 
 ## Contactos en el celular (3/10/2026)
@@ -641,3 +640,20 @@ PC (que estaba apagada). Ahora, en **Más → Contactos** (`web/public/panel/con
   nunca va en claro** en el repositorio público: cada contacto propio y cada anotación es un sobre cifrado para los celulares registrados, uno por
   renglón (`web/data/contactos-celular.json`; el celular cierra el sobre con `cerrar` de `cifrado.js`, que usa el mismo formato que el de la nube). Un
   celular que se registra después no ve lo guardado antes (como en el resto del panel). Prueba: `contactos-panel.test.mjs`.
+
+### Hacer la nota y el seguimiento de cada pista (3/10/2026)
+
+- **Hacer la nota** (`panel/nota-de-pista.mjs`, acción `nota-pista` de "Panel del celular"): la nube busca en internet con **Tavily**
+  (`ingesta/busqueda.mjs`, clave `TAVILY_API_KEY` en GitHub; trae el texto de cada página, sin las redes ni lo que trae poco texto, y una sola
+  página por sitio) las notas de los medios que hablan de lo mismo, y escribe un borrador con el **mismo camino que "Escribir con IA"**: el criterio
+  editorial, los arreglos que no inventan y el verificador contra el texto de esas fuentes (`panel/reescribir-una.mjs`). Una pista que toca la lista
+  roja (menores, víctimas) no se escribe. El borrador llega **cifrado** al celular con la lista de fuentes para abrirlas; se revisa, se edita y
+  **"Publicar como nota propia"** la guarda en `web/data/notas-de-pistas.json` (con motivo, cuándo y quién) y **cierra la pista** como "Salió como nota
+  nuestra" con el enlace. Hace falta un cuerpo de 70 palabras o más.
+- **La nota** (`web/lib/notas-de-pistas.js`, que lee `generar-datos.mjs` como las demás notas propias, `propia: 'pista'`): relevancia 95, con sus fuentes
+  en "Fuentes", y la firma "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron X e Y y revisada por la redacción" (CRITERIO-EDITORIAL § 10:
+  lo escribió la IA y lo revisó una persona). Una entrada sin motivo, cuándo y quién, sin fuentes con enlace, con cuerpo corto o con una sección que no
+  existe se saltea sin romper a las otras. **Retirar la nota** desde la pista la marca `retirada` y deja de armarse.
+- **Seguimiento: en qué quedó cada pista.** Cada pista lleva su **seguimiento** (cuándo se empezó, cada novedad de cobertura, que se escribió un borrador,
+  la nota, cómo se cerró) y su **resultado**: *se confirmó*, *se desmintió o era falsa*, *sin novedades*, *salió como nota nuestra* o *la descartamos*, con un
+  comentario opcional. Se ve en el detalle de la pista y en la lista ("En qué quedó: …"). Reabrir la pista conserva todo. Pruebas: `nota-de-pista.test.mjs`.

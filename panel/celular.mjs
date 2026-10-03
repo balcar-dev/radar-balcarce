@@ -22,7 +22,8 @@ import { reescribirUna, notaDesdeLoPublicado } from './reescribir-una.mjs';
 import { cerrar, leerLlaves } from './cifrado.mjs';
 import { PEDIDO_MAXIMO } from '../reels/reescritura.mjs';
 import { investigarPista, enriquecerConEnlaces, PISTA } from '../ingesta/pistas.mjs';
-import { conPista, comoRenglones as pistasComoRenglones } from './pistas-libro.mjs';
+import { conPista, conSeguimiento, comoRenglones as pistasComoRenglones } from './pistas-libro.mjs';
+import { escribirNotaDePista } from './nota-de-pista.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const DATOS = path.join(RAIZ, 'web', 'data');
@@ -69,7 +70,7 @@ async function main() {
   const opcion = (n) => process.argv.find((a) => a.startsWith(`--${n}=`))?.slice(n.length + 3) ?? '';
   const id = opcion('id').trim();
   const pedido = opcion('pedido').replace(/\s+/g, ' ').trim().slice(0, accion === 'pista' ? PISTA.maximoDeTexto : PEDIDO_MAXIMO);
-  if (!['escribir', 'pista'].includes(accion) || !idValido(id)) {
+  if (!['escribir', 'pista', 'nota-pista'].includes(accion) || !idValido(id)) {
     console.log('Uso: node panel/celular.mjs escribir --id=<nota> [--pedido="…"]  ·  node panel/celular.mjs pista --id=<pista…> --pedido="…"');
     process.exit(1);
   }
@@ -97,6 +98,23 @@ async function main() {
     if (informe.ok) fs.writeFileSync(ARCHIVO_PISTAS, pistasComoRenglones(conPista(leerJson(ARCHIVO_PISTAS, { pistas: {} }), id, { texto: conEnlaces, informe, sobre })), 'utf8');
     // Al registro, nada de la pista: sólo si se pudo investigar.
     console.log(informe.ok ? `Informe de la pista listo (${id}).` : `La pista ${id} no se investigó (el motivo va cifrado al celular).`);
+    return;
+  }
+
+  if (accion === 'nota-pista') {
+    // "Hacer la nota" de una pista guardada (3/10): busca las notas de los medios con su texto y escribe un borrador, cifrado para el celular.
+    const libro = leerJson(ARCHIVO_PISTAS, { pistas: {} });
+    const pista = libro.pistas?.[id];
+    const archivo = leerJson(path.join(DATOS, 'archivo.json'), { notas: [] }).notas ?? [];
+    const r = pista ? await escribirNotaDePista({ ...pista, id }, { archivo }) : { ok: false, motivo: 'No encontré la pista.', problemas: [], fuentes: [] };
+    const borrador = { id, tipo: 'nota-pista', ...r };
+    const archivoBorradores = conBorrador(leerJson(ARCHIVO_BORRADORES, null), `nota-${id}`, cerrar(borrador, llaves));
+    fs.writeFileSync(ARCHIVO_BORRADORES, `${JSON.stringify(archivoBorradores, null, 1)}\n`, 'utf8');
+    if (pista) {
+      const texto = r.texto ? `Se escribió un borrador con ${r.medios} ${r.medios === 1 ? 'fuente' : 'fuentes'}${r.ok ? '' : ' (con avisos del verificador)'}` : 'Se intentó escribir la nota: no se pudo';
+      fs.writeFileSync(ARCHIVO_PISTAS, pistasComoRenglones(conSeguimiento(libro, id, texto)), 'utf8');
+    }
+    console.log(borrador.ok ? `Borrador de la nota de la pista listo (${id}).` : `La nota de la pista ${id} no salió limpia (el detalle va cifrado al celular).`);
     return;
   }
 

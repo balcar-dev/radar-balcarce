@@ -10,7 +10,7 @@
 
 import {
   crearCliente, ARCHIVOS, SECCIONES, ErrorDeGitHub, marcaNueva, corridaConMarca,
-  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza, conPistaSinNovedad, conPistaEstado,
+  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza, conPistaSinNovedad, conPistaEstado, conPistaResultado, conNotaDePista, conNotaDePistaRetirada, idDeNotaDePista,
 } from './github.js';
 import {
   ESTILOS, COLOR_DE_ESTILO, ROLES, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
@@ -23,7 +23,7 @@ import {
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
-import { htmlDeFormulario, htmlDeLista, htmlDeUnaPista } from './pistas.js';
+import { htmlDeFormulario, htmlDeLista, htmlDeUnaPista, htmlDeCerrarPista } from './pistas.js';
 import {
   armarContactos, htmlDeContactos, htmlDeUnContacto, htmlDeFormularioContacto, htmlDeCola, colaDeEnvio, contactoPropio, conHistorial, enlaceWhatsApp, enlaceMail,
 } from './contactos.js';
@@ -742,6 +742,7 @@ function vistaPistas() {
   $('#recargar').hidden = false;
   const apps = { esc, haceCuanto, chip };
   if (!E.pistasLibro) { app.innerHTML = '<div class="girando"></div>'; cargarPistas().then(() => { if (E.pestana === 'pistas') vistaPistas(); }); return; }
+  if (E.cerrandoPista && E.pistasLibro.pistas?.[E.cerrandoPista]) { app.innerHTML = htmlDeCerrarPista({ id: E.cerrandoPista, pista: E.pistasLibro.pistas[E.cerrandoPista] }, apps); return; }
   if (E.pistaAbierta) { vistaUnaPista(); return; }
   app.innerHTML = htmlDeFormulario({ texto: E.pista?.texto ?? '' }, apps) + htmlDeLista(E.pistasLibro, apps) + queEs('pistas');
 }
@@ -793,6 +794,43 @@ async function investigarPista() {
   }
   vistaPistas();
   window.scrollTo(0, 0);
+}
+
+/** Las fuentes de las que escribió la IA, para que quien revisa pueda abrirlas (en "Fuentes" de la nota quedan estas mismas). */
+function fuentesDelBorrador(b) {
+  const f = b?.fuentes ?? [];
+  if (!f.length) return '';
+  return `<div class="caja"><strong>Escrita con ${f.length} ${f.length === 1 ? 'fuente' : 'fuentes'}:</strong><ul class="lista-simple">${f.map((x) => `<li><a href="${esc(x.enlace)}" target="_blank" rel="noopener noreferrer">${esc(x.medio)} ↗</a></li>`).join('')}</ul>
+    <p class="meta">Abrilas y comprobá que lo central esté en ellas. Con una sola fuente, pensalo dos veces.</p></div>`;
+}
+
+/** "Hacer la nota": la nube busca en internet las notas de los medios con su texto y escribe un borrador; se abre acá para revisarlo. */
+async function hacerNotaDePista(id) {
+  $('#pestanas').hidden = true;
+  app.innerHTML = '<div class="girando"></div><p class="vacio">Buscando las notas de los medios y escribiendo…<br>Tarda uno o dos minutos: GitHub busca en internet, lee las fuentes, escribe y verifica contra ellas.</p>';
+  const marca = marcaNueva();
+  const desde = Date.now();
+  try {
+    await E.cliente.disparar('panel.yml', { accion: 'nota-pista', id, pedido: '', marca });
+    await esperarCorrida('panel.yml', marca, { intentos: 90 });
+    const { json } = await E.cliente.leer(ARCHIVOS.borradores);
+    const sobre = json.borradores?.[`nota-${id}`];
+    const borrador = sobre && Date.parse(sobre.cuando) >= desde - 120000 ? await abrir(sobre, E.llaves) : null;
+    await cargarPistas();
+    if (!borrador) throw new Error('No pude abrir el borrador en este celular. Si recién lo registraste, probá de nuevo.');
+    if (!borrador.texto) {
+      aviso(borrador.motivo ?? 'No se pudo escribir la nota.', { ms: 12000 });
+      E.pistaAbierta = id;
+      vistaPistas();
+      return;
+    }
+    (E.borradoresIA ??= {})[`nota-${id}`] = { b: borrador, cuando: Date.now() };
+    vistaBorrador('nota-pista', id, borrador);
+  } catch (e) {
+    aviso(explicarError(e), { ms: 9000 });
+    E.pistaAbierta = id;
+    vistaPistas();
+  }
 }
 
 /** "Volver a mirar ahora": la nube repite las búsquedas de esa pista (workflow "Pistas") y se recarga el libro. */
@@ -1312,8 +1350,9 @@ function vistaBorrador(tipo, id, b = null) {
   const t = b?.texto ?? { titulo: c.titulo ?? n.titulo ?? '', copete: c.copete ?? n.copete ?? '', cuerpo: c.cuerpo ?? n.cuerpo ?? '' };
   const seccion = c.seccion ?? n.seccion ?? b?.seccion ?? '';
   const deIA = !!b?.texto;
-  const boton = { pendiente: 'Publicar', 'sin-cuerpo': 'Publicar con este cuerpo', retirada: 'Volver a publicar' }[tipo] ?? 'Guardar';
+  const boton = { pendiente: 'Publicar', 'sin-cuerpo': 'Publicar con este cuerpo', retirada: 'Volver a publicar', 'nota-pista': 'Publicar como nota propia' }[tipo] ?? 'Guardar';
   const explicacion = {
+    'nota-pista': 'La IA la escribió con el texto de las notas de los medios que ves abajo. Si la publicás sale como nota propia de Radar Balcarce, con esas fuentes y la firma "escrita con IA y revisada por la redacción".',
     publicada: 'Los cambios se ven en la web en la próxima actualización. La dirección de la nota no cambia.',
     retirada: 'Vuelve a la web con este texto en la próxima actualización, con la misma dirección.',
   }[tipo] ?? 'Revisalo y corregí lo que haga falta: se publica recién cuando tocás el botón de abajo.';
@@ -1324,6 +1363,7 @@ function vistaBorrador(tipo, id, b = null) {
     ${b && !b.ok && !b.texto ? `<p class="problemas">${esc(b.motivo ?? 'La IA no pudo escribirla.')}</p>` : ''}
     ${deIA ? listaDeProblemas(b, n.motivo) : ''}
     ${b?.sacadas ? `<p class="estado">El verificador sacó ${esc(b.sacadas)} oración(es) con datos que no estaban en las fuentes.</p>` : ''}
+    ${tipo === 'nota-pista' ? fuentesDelBorrador(b) : ''}
     <form id="form-texto">
       <label for="t-titulo">Título <span class="ayuda" id="c-titulo"></span></label>
       <input type="text" id="t-titulo" value="${esc(t.titulo)}" maxlength="120">
@@ -1337,7 +1377,7 @@ function vistaBorrador(tipo, id, b = null) {
       <p class="ayuda">Si no la marcás, sale sólo en la web. Si la marcás, antes te pregunta.</p>` : ''}
       <div class="botones">
         <button type="submit" class="boton principal">${boton}</button>
-        ${deIA ? `<button type="button" class="boton" data-accion="otra-version" data-tipo="${esc(tipo)}" data-id="${esc(id)}">Pedir otra versión</button>` : ''}
+        ${deIA && tipo !== 'nota-pista' ? `<button type="button" class="boton" data-accion="otra-version" data-tipo="${esc(tipo)}" data-id="${esc(id)}">Pedir otra versión</button>` : ''}
       </div>
     </form>`;
   const contar = () => {
@@ -1373,6 +1413,7 @@ async function guardarTexto(tipo, id, campos, {
   if (!campos.titulo || !campos.copete) { aviso('Faltan el título o la bajada.'); return; }
   // Con menos de 70 palabras una nota automática no sale sola: se avisa si se
   // aprueba o se completa una, o si se tocó el cuerpo (no por cambiar la sección).
+  if (tipo === 'nota-pista' && palabras(campos.cuerpo) < 70) { aviso('Hace falta un cuerpo de 70 palabras o más para que la nota salga.', { ms: 9000 }); return; }
   const corto = palabras(campos.cuerpo) < 70 && (tipo !== 'publicada' || campos.cuerpo !== cuerpoAntes);
   if (corto && !(await preguntar(PREGUNTAS.publicarCorto)).ok) return;
   if (redes && !marcadaParaRedes(id) && !(await preguntar(preguntaRedes(reglasFb()))).ok) return;
@@ -1380,7 +1421,9 @@ async function guardarTexto(tipo, id, campos, {
   const n = buscar(tipo, id) ?? {};
   try {
     if (!silencioso) app.innerHTML = '<div class="girando"></div><p class="vacio">Guardando en GitHub…</p>';
-    if (tipo === 'pendiente' || tipo === 'retirada') {
+    if (tipo === 'nota-pista') {
+      await publicarNotaDePista(id, campos, por);
+    } else if (tipo === 'pendiente' || tipo === 'retirada') {
       const motivo = tipo === 'retirada' ? 'vuelta a publicar desde el celular' : null;
       await E.cliente.guardar(ARCHIVOS.decisiones, (j) => {
         let x = conDecision(j, id, aprobada(campos, { deIA, por, motivo, extras }));
@@ -1401,13 +1444,13 @@ async function guardarTexto(tipo, id, campos, {
       if (redes !== null && redes !== marcadaParaRedes(id)) await E.cliente.guardar(ARCHIVOS.decisiones, (j) => conRedes(j, id, por, redes), `Panel del celular: ${por} manda una nota a las redes`);
     }
     await cargar({ archivo: !!E.archivo });
-    const texto = tipo === 'retirada' ? 'Vuelve a la web en la próxima actualización, con la misma dirección.' : (tipo === 'publicada' ? 'Los cambios se ven en la web en la próxima actualización.' : 'Se mandó a publicar: sale en la web en la próxima actualización.');
+    const texto = tipo === 'nota-pista' ? 'Sale en la web como nota propia de Radar Balcarce, con sus fuentes, en la próxima actualización. La pista quedó cerrada como "Salió como nota nuestra".' : tipo === 'retirada' ? 'Vuelve a la web en la próxima actualización, con la misma dirección.' : (tipo === 'publicada' ? 'Los cambios se ven en la web en la próxima actualización.' : 'Se mandó a publicar: sale en la web en la próxima actualización.');
     if (silencioso) {
       if (enUnaLista()) vistaLista();
       aviso(texto, { conActualizar: true });
     } else {
       if (tipo === 'publicada' || tipo === 'retirada') E.pestana = 'publicadas';
-      vistaResultado({ titulo: tipo === 'retirada' ? 'Vuelve a publicarse' : (tipo === 'publicada' ? 'Cambios guardados' : 'Publicada'), texto });
+      vistaResultado({ titulo: tipo === 'nota-pista' ? 'Nota publicada' : tipo === 'retirada' ? 'Vuelve a publicarse' : (tipo === 'publicada' ? 'Cambios guardados' : 'Publicada'), texto });
     }
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
@@ -1446,6 +1489,19 @@ function vistaResultado({ titulo, texto, conActualizar = true }) {
 
 /** "Descartada. Queda en…" → "Descartada" (el título de la pantalla de resultado). */
 const tituloDelResultado = (texto) => String(texto).split(/[.:]/)[0].slice(0, 60);
+
+/** Publica la nota de una pista (queda en web/data/notas-de-pistas.json) y cierra la pista: salió como nota nuestra, con el enlace. */
+async function publicarNotaDePista(id, campos, por) {
+  const b = E.borradoresIA?.[`nota-${id}`]?.b;
+  const fuentes = (b?.fuentes ?? []).map((f) => ({ medio: f.medio, enlace: f.enlace, fecha: f.fecha ?? null }));
+  if (!fuentes.length) throw new Error('El borrador no tiene fuentes: pedí hacer la nota de nuevo.');
+  await E.cliente.guardar(ARCHIVOS.notasDePistas, (j) => conNotaDePista(j, id, {
+    titulo: campos.titulo, copete: campos.copete, cuerpo: campos.cuerpo, seccion: campos.seccion, fuentes, por, motivo: 'nota escrita con IA a partir de una pista y revisada desde el celular',
+  }), `Panel del celular: ${por} publica una nota de una pista`);
+  E.pistasLibro = await E.cliente.guardar(ARCHIVOS.pistas, (j) => conPistaResultado(j, id, { tipo: 'publicada', ruta: `/nota/${idDeNotaDePista(id)}` }), `Panel del celular: ${por} cierra una pista`);
+  E.pestana = 'pistas';
+  E.pistaAbierta = id;
+}
 
 async function guardarYVolver(pasos, listo) {
   try {
@@ -1503,8 +1559,8 @@ document.addEventListener('click', async (ev) => {
     if (accion === 'cola-enviado' && !(await anotarContacto(id, { contactado: true }))) return;
     E.cola.indice += 1;
     vistaContactos();
-  } else if (accion === 'abrir-pista') { E.pistaAbierta = id; vistaPistas(); }
-  else if (accion === 'volver-pistas') { E.pistaAbierta = null; vistaPistas(); window.scrollTo(0, 0); }
+  } else if (accion === 'abrir-pista') { E.cerrandoPista = null; E.pistaAbierta = id; vistaPistas(); }
+  else if (accion === 'volver-pistas') { E.cerrandoPista = null; E.pistaAbierta = null; vistaPistas(); window.scrollTo(0, 0); }
   else if (accion === 'mirar-pista') mirarPista(id);
   else if (accion === 'archivar-pista' || accion === 'reabrir-pista') {
     const nuevo = accion === 'archivar-pista' ? 'archivada' : 'abierta';
@@ -1513,8 +1569,23 @@ document.addEventListener('click', async (ev) => {
       aviso(nuevo === 'archivada' ? 'Archivada: ya no se vuelve a mirar.' : 'Reabierta: se vuelve a mirar 14 días más.');
     } catch (e) { aviso(explicarError(e), { ms: 9000 }); }
     vistaPistas();
-  } else if (accion === 'nota-de-pista') {
-    aviso('Todavía no: hacer la nota con el texto real de las fuentes necesita una clave de búsqueda (Tavily) que falta cargar en GitHub.', { ms: 12000 });
+  } else if (accion === 'nota-de-pista') hacerNotaDePista(id);
+  else if (accion === 'cerrar-pista') { E.cerrandoPista = id; vistaPistas(); window.scrollTo(0, 0); }
+  else if (accion === 'resultado-pista') {
+    const comentario = ($('#comentario-pista')?.value ?? '').trim();
+    try {
+      E.pistasLibro = await E.cliente.guardar(ARCHIVOS.pistas, (j) => conPistaResultado(j, id, { tipo: el.dataset.resultado, comentario }), `Panel del celular: ${E.nombre} cierra una pista`);
+      aviso('Anotado: queda en el seguimiento de la pista.');
+    } catch (e) { aviso(explicarError(e), { ms: 9000 }); }
+    E.cerrandoPista = null; E.pistaAbierta = id; vistaPistas(); window.scrollTo(0, 0);
+  } else if (accion === 'retirar-nota-pista') {
+    const r = await preguntar({ titulo: '¿Retirar la nota?', texto: 'Se saca de la web en la próxima actualización. La pista queda como estaba, con su seguimiento.', si: 'Sí, retirarla', conMotivo: '¿Por qué?' });
+    if (r.ok) {
+      try {
+        await E.cliente.guardar(ARCHIVOS.notasDePistas, (j) => conNotaDePistaRetirada(j, id, { por: E.nombre, motivo: r.texto }), `Panel del celular: ${E.nombre} retira una nota de una pista`);
+        aviso('Retirada: sale de la web en la próxima actualización.', { conActualizar: true });
+      } catch (e) { aviso(explicarError(e), { ms: 9000 }); }
+    }
   }
   else if (accion === 'rango-numeros') { E.rangoNumeros = Number(el.dataset.rango); vistaNumeros(); }
   else if (accion === 'sub-fechas') { E.subfechas = el.dataset.sub; vistaFechas(); }
@@ -1558,7 +1629,7 @@ document.addEventListener('click', async (ev) => {
   else if (accion === 'volver-fotos') { E.restaurar = E.scrollLista ?? null; vistaLista(); }
   else if (accion === 'todas-las-publicadas') { E.publicadasTodas = true; vistaLista(); }
   else if (accion === 'solo-24') { E.publicadasTodas = false; vistaLista(); }
-  else if (accion === 'volver-nota') vistaNota(tipo, id);
+  else if (accion === 'volver-nota') { if (tipo === 'nota-pista') { E.pestana = 'pistas'; E.pistaAbierta = id; vistaLista(); } else vistaNota(tipo, id); }
   else if (accion === 'escribir') {
     const r = await preguntar({
       titulo: 'Pedirle a la IA que la escriba', texto: 'Tarda un minuto. No se publica nada hasta que lo revises.', si: 'Escribir', conPedido: 'Algo para pedirle (opcional): "que sea corta", "que empiece por el horario"…',

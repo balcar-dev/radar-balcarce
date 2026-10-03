@@ -37,6 +37,15 @@ export function cobertura(p) {
 
 const ESTADOS = { abierta: 'Abierta', archivada: 'Archivada', vencida: 'Vencida (14 días sin novedades)' };
 
+/** En qué quedó una pista cerrada (los mismos que RESULTADOS de panel/pistas-libro.mjs). */
+export const RESULTADOS = {
+  confirmada: 'Se confirmó: la cubrieron medios',
+  desmentida: 'Se desmintió o era falsa',
+  'sin-novedad': 'Sin novedades: no pasó nada',
+  publicada: 'Salió como nota nuestra',
+  descartada: 'La descartamos',
+};
+
 /**
  * La lista de pistas guardadas: las abiertas primero (las que tienen novedad arriba de todo), después las archivadas y vencidas.
  * `libro`: lo que dice web/data/pistas.json ({ pistas: { id: {…} } }).
@@ -47,7 +56,7 @@ export function htmlDeLista(libro, { esc, haceCuanto }) {
   const fila = (p) => `<button type="button" class="tarjeta" data-accion="abrir-pista" data-id="${esc(p.id)}">
       <div>${p.novedad ? '<span class="marca">● Novedad</span>' : ''}<span class="meta">${esc(ESTADOS[p.estado] ?? p.estado)} · creada ${esc(fecha(p.creada, haceCuanto))}</span></div>
       <div class="titulo">${esc(p.afirmacion || p.texto)}</div>
-      <span class="est ${p.total >= 2 ? 'ok' : 'espera'}">${esc(cobertura(p))}</span>
+      <span class="est ${p.resultado ? (p.resultado.tipo === 'publicada' || p.resultado.tipo === 'confirmada' ? 'ok' : 'espera') : (p.total >= 2 ? 'ok' : 'espera')}">${esc(p.resultado ? `En qué quedó: ${RESULTADOS[p.resultado.tipo] ?? p.resultado.tipo}` : cobertura(p))}</span>
       <span class="meta">Última mirada ${esc(fecha(p.ultimaRevision, haceCuanto))}${p.teniamos ? ' · ya la tenemos nosotros' : ''}</span></button>`;
   const abiertas = todas.filter((p) => p.estado === 'abierta').sort((a, b) => Number(!!b.novedad) - Number(!!a.novedad) || Date.parse(b.creada) - Date.parse(a.creada));
   const otras = todas.filter((p) => p.estado !== 'abierta').sort((a, b) => Date.parse(b.creada) - Date.parse(a.creada));
@@ -73,13 +82,16 @@ export function htmlDeUnaPista({ id, pista, informe }, apps) {
     <h1>${esc(pista.afirmacion || pista.texto)}</h1>
     <p class="est ${abierta ? 'ok' : 'espera'}">${esc(ESTADOS[pista.estado] ?? pista.estado)} · ${esc(cobertura(pista))} · última mirada ${esc(fecha(pista.ultimaRevision, haceCuanto))}</p>
     ${abierta ? '<p class="ayuda">Se vuelve a mirar sola cada tres horas, hasta 14 días después de crearla. Si un medio la empieza a cubrir, te avisa por WhatsApp.</p>' : ''}
+    ${htmlDeResultado(pista, apps)}
+    ${htmlDeSeguimiento(pista.seguimiento, apps)}
     ${htmlDeHistorial(pista.historial, apps)}
     ${informe ? htmlDeInforme(informe, apps) : '<p class="problemas">Este celular todavía no puede abrir el informe: se registró después. Tocá "Volver a mirar" y llega cifrado para este celular.</p>'}
     ${informe?.noLeidos?.length ? `<p class="problemas">No pude leer ${esc(informe.noLeidos.join(', '))}: las redes no dejan leer sus enlaces. Si querés que cuente, pegá el texto.</p>` : ''}
     <div class="botones">
       <button type="button" class="boton" data-accion="mirar-pista" data-id="${esc(id)}">Volver a mirar ahora</button>
       <button type="button" class="boton" data-accion="nota-de-pista" data-id="${esc(id)}">Hacer la nota</button>
-      ${abierta ? `<button type="button" class="boton peligro" data-accion="archivar-pista" data-id="${esc(id)}">Archivar</button>` : `<button type="button" class="boton" data-accion="reabrir-pista" data-id="${esc(id)}">Reabrir 14 días</button>`}
+      ${abierta ? `<button type="button" class="boton" data-accion="cerrar-pista" data-id="${esc(id)}">Cerrar: ¿en qué quedó?</button>` : `<button type="button" class="boton" data-accion="reabrir-pista" data-id="${esc(id)}">Reabrir 14 días</button>`}
+      ${pista.resultado?.tipo === 'publicada' && pista.resultado.ruta ? `<button type="button" class="boton peligro" data-accion="retirar-nota-pista" data-id="${esc(id)}">Retirar la nota de la web</button>` : ''}
     </div>`;
 }
 
@@ -103,4 +115,29 @@ export function htmlDeInforme(i, { esc, haceCuanto, chip }) {
     ${(i.consultas ?? []).length ? `<p class="meta">Se buscó: ${(i.consultas ?? []).map((c) => `“${esc(c)}”`).join(', ')}.</p>` : ''}
     ${medios ? `<ul class="hallazgos">${medios}</ul>` : ''}${matices}${nuestras}
     <p class="meta">Lo busca una IA en Google Noticias y compara títulos: no leyó las notas. Antes de publicar nada, mirá las fuentes.</p></div>`;
+}
+
+/** Lo que quedó resuelto de una pista cerrada: en qué quedó, cuándo y la nota, si salió una. */
+export function htmlDeResultado(p, { esc, haceCuanto }) {
+  const r = p.resultado;
+  if (!r) return '';
+  return `<div class="caja"><strong>En qué quedó:</strong> ${esc(RESULTADOS[r.tipo] ?? r.tipo)} <span class="meta">· ${esc(fecha(r.cuando, haceCuanto))}</span>
+    ${r.comentario ? `<p>${esc(r.comentario)}</p>` : ''}${r.ruta ? `<p><a href="https://radarbalcarce.com${esc(r.ruta)}" target="_blank" rel="noopener">Ver la nota en la web ↗</a></p>` : ''}</div>`;
+}
+
+/** El seguimiento de una pista, de lo más nuevo a lo más viejo: cuándo se empezó, qué pasó y cómo se cerró. */
+export function htmlDeSeguimiento(seguimiento = [], { esc, haceCuanto }) {
+  if (!seguimiento.length) return '';
+  return `<h2>Seguimiento</h2><ul class="lista-simple">${[...seguimiento].reverse().slice(0, 12).map((s) => `<li><span class="meta">${esc(fecha(s.cuando, haceCuanto))}</span> ${esc(s.texto)}</li>`).join('')}</ul>`;
+}
+
+/** Cerrar una pista: elegir en qué quedó, con un comentario opcional. */
+export function htmlDeCerrarPista({ id, pista }, { esc }) {
+  return `<button type="button" class="boton" data-accion="abrir-pista" data-id="${esc(id)}">← Volver a la pista</button>
+    <h1>¿En qué quedó?</h1>
+    <p class="estado">${esc(pista.afirmacion || pista.texto)}</p>
+    <p class="ayuda">Quedan anotadas la fecha y la respuesta en el seguimiento de la pista. Se puede reabrir.</p>
+    <label for="comentario-pista">Un comentario (opcional)</label>
+    <textarea id="comentario-pista" rows="2" maxlength="200" placeholder="Por ejemplo: lo desmintió el municipio"></textarea>
+    <div class="botones">${Object.entries(RESULTADOS).filter(([k]) => k !== 'publicada').map(([k, texto]) => `<button type="button" class="boton" data-accion="resultado-pista" data-id="${esc(id)}" data-resultado="${esc(k)}">${esc(texto)}</button>`).join('')}</div>`;
 }

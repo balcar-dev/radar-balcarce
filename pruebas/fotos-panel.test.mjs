@@ -242,7 +242,7 @@ test('la pantalla de resultado dice qué pasó, cuándo se ve y deja seguir con 
   assert.ok(app.includes('Siguiente nota (quedan ${sig.cuantas})'));
   assert.ok(app.includes('La decisión ya quedó guardada en GitHub'));
   assert.ok(app.includes("vistaResultado({ titulo: tituloDelResultado(listo), texto: listo });"), 'descartar, retirar y deshacer terminan ahí');
-  assert.ok(app.includes("titulo: tipo === 'retirada' ? 'Vuelve a publicarse'"), 'publicar también');
+  assert.ok(app.includes("titulo: tipo === 'nota-pista' ? 'Nota publicada' : tipo === 'retirada' ? 'Vuelve a publicarse'"), 'publicar también');
   assert.ok(!app.includes("aviso(listo, { conActualizar: true });"), 'ya no se queda en la misma lista con un aviso que se va');
   assert.ok(app.includes('data-accion="foto-de-fuente"') || leer('web/public/panel/fotos.js').includes('data-accion=\\"foto-de-fuente\\"') || leer('web/public/panel/fotos.js').includes('data-accion="foto-de-fuente"'));
   assert.match(htmlDeUnaNotaSinFoto({ nota: { id: 'a1', titulo: 'T', seccion: 'Balcarce', fecha: '2026-10-02T10:00:00Z', fuentesConsultadas: [{ medio: 'Municipalidad', enlace: 'https://balcarce.gob.ar/a' }] }, motivo: 'otra', entrada: null }, apps), /Usar la foto de Municipalidad/);

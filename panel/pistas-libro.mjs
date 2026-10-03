@@ -16,7 +16,19 @@ export const PISTAS_ABIERTAS = {
   historial: 30,
 };
 
+/** En qué puede quedar una pista (2/10, Hernán: "ir haciendo un seguimiento en qué quedó cada pista"). */
+export const RESULTADOS = {
+  confirmada: 'Se confirmó: la cubrieron medios',
+  desmentida: 'Se desmintió o era falsa',
+  'sin-novedad': 'Sin novedades: no pasó nada',
+  publicada: 'Salió como nota nuestra',
+  descartada: 'La descartamos',
+};
+
 const dia = 864e5;
+const SEGUIMIENTO_MAXIMO = 40;
+
+const conRenglon = (p, texto, ahora) => ({ ...p, seguimiento: [...(p.seguimiento ?? []), { cuando: ahora.toISOString(), texto: String(texto).slice(0, 200) }].slice(-SEGUIMIENTO_MAXIMO) });
 
 /** Una pista nueva (o la misma, vuelta a investigar) con su informe: `sobre` es el informe ya cifrado. */
 export function conPista(libro, id, { texto, informe, sobre, ahora = new Date() }) {
@@ -34,9 +46,18 @@ export function conPista(libro, id, { texto, informe, sobre, ahora = new Date() 
     teniamos: (informe.nuestras ?? []).length > 0,
     novedad: false,
     historial: [...(antes?.historial ?? []), { cuando: ahora.toISOString(), total: informe.total ?? 0, nivel: informe.nivel ?? 'sin-cobertura' }].slice(-PISTAS_ABIERTAS.historial),
+    seguimiento: antes?.seguimiento ?? [],
+    ...(antes?.resultado ? { resultado: antes.resultado } : {}),
+    ...(antes?.nota ? { nota: antes.nota } : {}),
     sobre,
   };
-  return podar({ version: 1, pistas: { ...(libro?.pistas ?? {}), [id]: registro } }, ahora);
+  const conInicio = antes ? registro : conRenglon(registro, `Se empezó a seguir: ${cobertura(informe)}`, ahora);
+  return podar({ version: 1, pistas: { ...(libro?.pistas ?? {}), [id]: conInicio } }, ahora);
+}
+
+function cobertura(informe) {
+  const n = informe.total ?? 0;
+  return n ? `${n} ${n === 1 ? 'medio' : 'medios'}` : 'sin cobertura todavía';
 }
 
 /** Los ids de las pistas que hay que volver a mirar ahora: abiertas, de menos de `dias` días. */
@@ -50,7 +71,7 @@ export function pistasParaRevisar(libro, ahora = new Date()) {
  * Lo que salió de volver a mirar una pista. `informe`/`sobre` sólo se reemplazan si hay algo nuevo (si no, el celular sigue viendo el
  * informe que ya tenía, con sus matices); el historial y la fecha de la última mirada se actualizan siempre.
  */
-export function conRevision(libro, id, { informe, sobre = null, novedad = false, ahora = new Date() }) {
+export function conRevision(libro, id, { informe, sobre = null, novedad = false, motivo = '', ahora = new Date() }) {
   const p = libro?.pistas?.[id];
   if (!p) return libro;
   const cambio = novedad || (informe.total ?? 0) !== p.total;
@@ -66,7 +87,8 @@ export function conRevision(libro, id, { informe, sobre = null, novedad = false,
     ...(cambio && sobre ? { sobre } : {}),
     historial: cambio ? [...(p.historial ?? []), { cuando: ahora.toISOString(), total: informe.total ?? 0, nivel: informe.nivel ?? p.nivel }].slice(-PISTAS_ABIERTAS.historial) : (p.historial ?? []),
   };
-  return podar({ ...libro, pistas: { ...libro.pistas, [id]: nueva } }, ahora);
+  const conRenglonNuevo = novedad && motivo ? conRenglon(nueva, `Novedad: ${motivo}`, ahora) : nueva;
+  return podar({ ...libro, pistas: { ...libro.pistas, [id]: conRenglonNuevo } }, ahora);
 }
 
 /** Después de mirarla: ya no es una novedad. */
@@ -107,4 +129,22 @@ export function avisoDePistas(novedades = []) {
   if (!novedades.length) return '';
   const lineas = novedades.slice(0, 4).map((n) => `• ${String(n.afirmacion ?? '').slice(0, 80)}: ${n.motivo}`);
   return `Radar Balcarce · ${novedades.length === 1 ? 'una pista tiene novedades' : `${novedades.length} pistas tienen novedades`}:\n${lineas.join('\n')}\nMirá la pestaña Pistas del panel.`;
+}
+
+/** Anota algo en el seguimiento de una pista (se hizo el borrador, salió la nota…). */
+export function conSeguimiento(libro, id, texto, ahora = new Date()) {
+  const p = libro?.pistas?.[id];
+  return p ? { ...libro, pistas: { ...libro.pistas, [id]: conRenglon(p, texto, ahora) } } : libro;
+}
+
+/**
+ * Cerrar una pista diciendo en qué quedó: queda archivada con su resultado (RESULTADOS) y, si salió como nota nuestra, el enlace a esa nota.
+ * El motivo es opcional ("lo desmintió el municipio").
+ */
+export function conResultado(libro, id, { tipo, comentario = '', ruta = null }, ahora = new Date()) {
+  const p = libro?.pistas?.[id];
+  if (!p || !(tipo in RESULTADOS)) return libro;
+  const resultado = { tipo, cuando: ahora.toISOString(), ...(comentario ? { comentario: String(comentario).slice(0, 200) } : {}), ...(ruta ? { ruta } : {}) };
+  const cerrada = conRenglon({ ...p, estado: 'archivada', archivada: ahora.toISOString(), resultado, novedad: false }, `Cerrada: ${RESULTADOS[tipo]}${comentario ? ` (${String(comentario).slice(0, 80)})` : ''}`, ahora);
+  return { ...libro, pistas: { ...libro.pistas, [id]: cerrada } };
 }

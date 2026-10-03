@@ -155,7 +155,7 @@ test('el panel: la lista pone las novedades arriba, escapa lo que viene de afuer
   assert.match(h, /ya la tenemos nosotros/);
   assert.match(htmlDeLista({ pistas: {} }, apps), /Todavía no hay pistas guardadas/);
   const una = htmlDeUnaPista({ id: 'b', pista: { ...libro.pistas.b, historial: [{ cuando: '2026-10-02T10:00:00Z', total: 1 }, { cuando: '2026-10-03T10:00:00Z', total: 3 }] }, informe: null }, apps);
-  for (const a of ['mirar-pista', 'nota-de-pista', 'archivar-pista', 'volver-pistas']) assert.match(una, new RegExp(`data-accion="${a}"`));
+  for (const a of ['mirar-pista', 'nota-de-pista', 'cerrar-pista', 'volver-pistas']) assert.match(una, new RegExp(`data-accion="${a}"`));
   assert.match(una, /Cómo fue cambiando/);
   assert.match(una, /todavía no puede abrir el informe/);
   assert.match(htmlDeUnaPista({ id: 'c', pista: libro.pistas.c, informe: null }, apps), /data-accion="reabrir-pista"/);

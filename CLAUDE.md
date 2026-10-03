@@ -118,7 +118,7 @@ próxima regla es la 99.)
   `GEMINI_API_KEY_REDACCION` (redactar), `GEMINI_API_KEY_REDES` (las voces; respaldo de la
   redacción sólo con 429), `GEMINI_API_KEY_CLASIFICACION` (lectura con IA y fotos; último
   respaldo de la redacción) y `GROQ_API_KEY` (respaldo de la lectura y las fotos; no sirve
-  para redactar). **El cupo de voz es de 10 audios por día**: si se acaba, la pieza no
+  para redactar). Aparte, `TAVILY_API_KEY` (búsqueda en internet con texto, sólo para las Pistas). **El cupo de voz es de 10 audios por día**: si se acaba, la pieza no
   sale (nunca con otra voz). Una clave rechazada (401/402/403) no gasta los intentos de
   una nota. Modelo de texto: `gemini-flash-lite-latest`; de voz, `gemini-3.8-flash-tts`
   con dos voces propias que **vencen el 29/09/2027** (`CRITERIO-REDES.md` § 6). La
@@ -169,7 +169,8 @@ próxima regla es la 99.)
 | La auditoría con IA de lo ya publicado (pestaña Revisión del panel; avisa y corrige sola sólo la ortografía chica y segura, regla 98) | `ingesta/auditoria-ia.mjs` (qué lee, qué busca y `cambioMecanico`), `redes/auditar-notas.mjs`, `.github/workflows/auditoria-ia.yml`, `web/public/panel/revision.js`, `web/data/correcciones-auditoria.json` (lo escribe sólo la auditoría), `conCambiosDeLaAuditoria` (`web/lib/archivo.js`) |
 | Las notas sin foto del panel (pestaña Fotos: por qué, dónde buscarla y sumarla a mano) | `web/public/panel/fotos.js`, `web/scripts/foto-manual.mjs`, `web/data/fotos-manuales.json` (lo escribe sólo "Panel del celular"), `accion=foto` de `panel.yml` |
 | Los contactos del celular (instituciones y propios, a quién se le escribió; cifrado) | `web/public/panel/contactos.js`, `web/public/panel/cifrado.js` (`cerrar`), `web/data/contactos-celular.json`, `ingesta/contactos-agenda.json` (público) |
-| Las pistas del panel (pegar un tuit o un enlace; quedan abiertas y se vuelven a mirar cada 3 horas) | `ingesta/pistas.mjs`, `panel/pistas-libro.mjs`, `panel/revisar-pistas.mjs`, `.github/workflows/pistas.yml`, `web/data/pistas.json`, `web/public/panel/pistas.js`, `panel/celular.mjs` (acción `pista`) |
+| Las pistas del panel (pegar un tuit o un enlace; quedan abiertas, se vuelven a mirar cada 3 horas y se sigue en qué quedó cada una) | `ingesta/pistas.mjs`, `panel/pistas-libro.mjs`, `panel/revisar-pistas.mjs`, `.github/workflows/pistas.yml`, `web/data/pistas.json`, `web/public/panel/pistas.js`, `panel/celular.mjs` (acciones `pista` y `nota-pista`) |
+| Hacer una nota propia de una pista (búsqueda con texto en internet, Tavily) | `ingesta/busqueda.mjs`, `panel/nota-de-pista.mjs`, `web/lib/notas-de-pistas.js`, `web/data/notas-de-pistas.json` (lo escribe sólo el celular) |
 | El panel del celular | `web/public/panel/` (la app), `panel/celular-datos.mjs` (lo que decide y lo que recibe), `panel/cifrado.mjs`, `panel/celular.mjs` y `panel/reescribir-una.mjs` (el pedido a la IA), `.github/workflows/panel.yml` |
 | "Un día como hoy" y los feriados (el mes armado se aprueba, se saca o se frena en la pestaña Fechas → Mes armado: `redes/efemeride.mjs`, regla 97) | `ingesta/efemerides.mjs` (candidatas y puntaje), `ingesta/generar-efemerides.mjs` (la corrida mensual), `ingesta/efemerides-curadas.json` (fechas patrias y de Balcarce), pestaña Fechas del panel (`web/public/panel/fechas.js`); `docs/13-EFEMERIDES.md` |
 | La firma de las notas | `quienEscribio`, `firmaCorta` (`web/components/metadatos.js`) |

@@ -277,7 +277,7 @@ test('la nota de F1 es propia: firma como el sitio, no entra sola a las redes y 
 test('generar-datos arma las notas de F1 como propias y el workflow guarda f1.json', () => {
   const g = fs.readFileSync(path.join(RAIZ, 'web', 'scripts', 'generar-datos.mjs'), 'utf8');
   assert.match(g, /notasDeF1/);
-  assert.match(g, /\.\.\.notasDelDolar\(historiaDolar\), \.\.\.notasF1, \.\.\.repasos/);
+  assert.match(g, /\.\.\.notasDelDolar\(historiaDolar\), \.\.\.notasF1, \.\.\.notasDePistas\(leerJson\(NOTAS_DE_PISTAS, null\)\), \.\.\.repasos/);
   const wf = fs.readFileSync(path.join(RAIZ, '.github', 'workflows', 'actualizar.yml'), 'utf8');
   assert.match(wf, /web\/data\/f1\.json/);
 });

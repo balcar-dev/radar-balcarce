@@ -38,7 +38,7 @@ export async function pasadaDePistas({
     const pista = actual.pistas[id];
     const r = await revisarPista(pista, { clave, fetchFn, notas, ahora, ...(buscar ? { buscar } : {}) });
     const sobre = r.novedad || r.informe.total !== pista.total ? cerrar({ id, tipo: 'pista', ...r.informe }, llaves) : null;
-    actual = conRevision(actual, id, { informe: r.informe, sobre, novedad: r.novedad, ahora });
+    actual = conRevision(actual, id, { informe: r.informe, sobre, novedad: r.novedad, motivo: r.motivo, ahora });
     revisadas.push(id);
     if (r.novedad) novedades.push({ id, afirmacion: pista.afirmacion, motivo: r.motivo });
   }

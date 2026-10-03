@@ -92,6 +92,7 @@ import {
 } from '../lib/repetidas.js';
 import { diceEnVivo } from '../../ingesta/verificar.mjs';
 import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
+import { notasDePistas } from '../lib/notas-de-pistas.js';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -115,6 +116,8 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 // nota propia del dólar y su comparación con días anteriores
 // (lib/notas-propias.js). Va versionado, como intentos-ia.json.
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
+// Las notas que nacieron de una pista y aprobó una persona desde el celular (3/10, web/lib/notas-de-pistas.js): las escribe el celular, ningún workflow las toca.
+const NOTAS_DE_PISTAS = path.join(AQUI, '..', 'data', 'notas-de-pistas.json');
 // La Fórmula 1 (ingesta/f1.mjs, 3/10): calendario, resultado y campeonato de Jolpica, y cuándo salió cada nota.
 const F1_JSON = path.join(AQUI, '..', 'data', 'f1.json');
 // Las fichas de la lectura con IA, que decide desde el 27/09 (ingesta/lectura-ia.mjs).
@@ -706,7 +709,7 @@ const conPagina = new Map([
 const { notas: repasos, noSeArman } = notasDeRepasos(libroRedes, conPagina, { catalogo: TEMAS });
 for (const id of noSeArman) retiradas.add(id);
 // La regla de cuerpo vale también para lo propio (lib/cuerpo.js).
-const propias = [...notasDelDolar(historiaDolar), ...notasF1, ...repasos]
+const propias = [...notasDelDolar(historiaDolar), ...notasF1, ...notasDePistas(leerJson(NOTAS_DE_PISTAS, null)), ...repasos]
   .map((n) => fijarSlug(n, direcciones))
   .filter((n) => tieneCuerpo(n));
 if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);
