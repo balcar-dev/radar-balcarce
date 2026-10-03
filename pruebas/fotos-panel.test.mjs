@@ -120,7 +120,8 @@ test('sumarFoto no guarda nada si no es una imagen, si el sitio contesta mal, si
   const opciones = { achicar: async () => null, carpeta: path.join(dir, 'fotos'), archivo: path.join(dir, 'm.json') };
   const base = { id: 'abc123', url: 'https://balcarce.gob.ar/f.jpg', credito: 'Municipalidad' };
   try {
-    await assert.rejects(sumarFoto(base, { ...opciones, fetchFn: respuesta(Buffer.from('<html>'), { tipo: 'text/html' }) }), /no es una foto/);
+    await assert.rejects(sumarFoto(base, { ...opciones, fetchFn: respuesta(Buffer.from('<html>'), { tipo: 'text/html' }) }), /No encontré una foto en esa página/);
+    await assert.rejects(sumarFoto(base, { ...opciones, fetchFn: respuesta(Buffer.from('algo'), { tipo: 'application/pdf' }) }), /no es una foto/);
     await assert.rejects(sumarFoto(base, { ...opciones, fetchFn: respuesta(JPG, { estado: 403 }) }), /contestó 403/);
     await assert.rejects(sumarFoto({ ...base, credito: '  ' }, { ...opciones, fetchFn: respuesta(JPG) }), /crédito/);
     await assert.rejects(sumarFoto({ ...base, url: 'http://sitio.com/a.jpg' }, { ...opciones, fetchFn: respuesta(JPG) }), /https/);
@@ -202,4 +203,47 @@ test('sumar una foto desde el panel exige crédito, la confirmación de las regl
   assert.match(app, /titulo: '¿Sumar esta foto\?'/);
   assert.match(app, /ARCHIVOS\.banco/);
   assert.match(leer('web/public/panel/github.js'), /banco: 'web\/data\/banco-fotos\.json'/);
+});
+
+// ---------------------------------------------------------------- un enlace de una página: la nube busca su foto
+
+import { imagenDeLaPagina } from '../web/scripts/foto-manual.mjs';
+
+test('la foto principal de una página sale de og:image, después twitter:image, después image_src', () => {
+  const base = 'https://medio.com.ar/nota/algo';
+  assert.equal(imagenDeLaPagina('<head><meta property="og:image" content="https://cdn.medio.com.ar/a.jpg"><meta name="twitter:image" content="https://cdn.medio.com.ar/b.jpg"></head>', base), 'https://cdn.medio.com.ar/a.jpg');
+  assert.equal(imagenDeLaPagina('<meta name="twitter:image" content="/img/b.jpg?x=1&amp;y=2">', base), 'https://medio.com.ar/img/b.jpg?x=1&y=2', 'relativa y con &amp;');
+  assert.equal(imagenDeLaPagina('<link rel="image_src" href="https://cdn.medio.com.ar/c.jpg">', base), 'https://cdn.medio.com.ar/c.jpg');
+  assert.equal(imagenDeLaPagina('<meta content="https://cdn.medio.com.ar/d.jpg" property="og:image">', base), 'https://cdn.medio.com.ar/d.jpg', 'el orden de los atributos da igual');
+  assert.equal(imagenDeLaPagina('<meta property="og:image" content="http://inseguro.com/a.jpg">', base), null, 'sólo https');
+  assert.equal(imagenDeLaPagina('<html><body>nada</body></html>', base), null);
+  assert.equal(imagenDeLaPagina('', base), null);
+});
+
+test('sumarFoto con el enlace de una página baja su foto principal y anota la página', async () => {
+  const dir = carpetaTemporal();
+  try {
+    const html = '<meta property="og:image" content="https://cdn.medio.com.ar/foto.jpg">';
+    const pedidos = [];
+    const fetchFn = async (url) => {
+      pedidos.push(url);
+      return url.endsWith('foto.jpg') ? respuesta(JPG)() : { ok: true, status: 200, headers: { get: () => 'text/html; charset=utf-8' }, text: async () => html, arrayBuffer: async () => Buffer.from(html) };
+    };
+    const e = await sumarFoto({ id: 'abc123', url: 'https://medio.com.ar/nota/algo', credito: 'Medio', por: 'Hernán' }, { fetchFn, achicar: async () => null, carpeta: path.join(dir, 'f'), archivo: path.join(dir, 'm.json') });
+    assert.deepEqual(pedidos, ['https://medio.com.ar/nota/algo', 'https://cdn.medio.com.ar/foto.jpg']);
+    assert.equal(e.enlace, 'https://medio.com.ar/nota/algo');
+    assert.equal(e.credito, 'Foto: Medio');
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('la pantalla de resultado dice qué pasó, cuándo se ve y deja seguir con la siguiente nota', () => {
+  const app = leer('web/public/panel/app.js');
+  assert.ok(app.includes('function vistaResultado({ titulo, texto, conActualizar = true })'));
+  assert.ok(app.includes('Siguiente nota (quedan ${sig.cuantas})'));
+  assert.ok(app.includes('La decisión ya quedó guardada en GitHub'));
+  assert.ok(app.includes("vistaResultado({ titulo: tituloDelResultado(listo), texto: listo });"), 'descartar, retirar y deshacer terminan ahí');
+  assert.ok(app.includes("titulo: tipo === 'retirada' ? 'Vuelve a publicarse'"), 'publicar también');
+  assert.ok(!app.includes("aviso(listo, { conActualizar: true });"), 'ya no se queda en la misma lista con un aviso que se va');
+  assert.ok(app.includes('data-accion="foto-de-fuente"') || leer('web/public/panel/fotos.js').includes('data-accion=\\"foto-de-fuente\\"') || leer('web/public/panel/fotos.js').includes('data-accion="foto-de-fuente"'));
+  assert.match(htmlDeUnaNotaSinFoto({ nota: { id: 'a1', titulo: 'T', seccion: 'Balcarce', fecha: '2026-10-02T10:00:00Z', fuentesConsultadas: [{ medio: 'Municipalidad', enlace: 'https://balcarce.gob.ar/a' }] }, motivo: 'otra', entrada: null }, apps), /Usar la foto de Municipalidad/);
 });

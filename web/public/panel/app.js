@@ -1028,6 +1028,7 @@ function barraDeAcciones(tipo, id, d) {
 }
 
 function vistaNota(tipo, id) {
+  E.notaActual = id;
   const n = buscar(tipo, id);
   if (!n) { aviso('Esa nota ya no está en la lista.'); vistaLista(); return; }
   $('#pestanas').hidden = true;
@@ -1270,10 +1271,14 @@ async function guardarTexto(tipo, id, campos, {
       if (redes !== null && redes !== marcadaParaRedes(id)) await E.cliente.guardar(ARCHIVOS.decisiones, (j) => conRedes(j, id, por, redes), `Panel del celular: ${por} manda una nota a las redes`);
     }
     await cargar({ archivo: !!E.archivo });
-    if (!silencioso && (tipo === 'publicada' || tipo === 'retirada')) E.pestana = 'publicadas';
-    if (!silencioso) E.restaurar = E.scrollLista ?? null;
-    if (!silencioso || enUnaLista()) vistaLista();
-    aviso(tipo === 'retirada' ? 'Vuelve a la web en la próxima actualización, con la misma dirección.' : 'Listo. Sale en la web en la próxima actualización (cada media hora).', { conActualizar: true });
+    const texto = tipo === 'retirada' ? 'Vuelve a la web en la próxima actualización, con la misma dirección.' : (tipo === 'publicada' ? 'Los cambios se ven en la web en la próxima actualización.' : 'Se mandó a publicar: sale en la web en la próxima actualización.');
+    if (silencioso) {
+      if (enUnaLista()) vistaLista();
+      aviso(texto, { conActualizar: true });
+    } else {
+      if (tipo === 'publicada' || tipo === 'retirada') E.pestana = 'publicadas';
+      vistaResultado({ titulo: tipo === 'retirada' ? 'Vuelve a publicarse' : (tipo === 'publicada' ? 'Cambios guardados' : 'Publicada'), texto });
+    }
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
     if (!silencioso) vistaBorrador(tipo, id, { texto: campos, ok: true, problemas: [] });
@@ -1281,14 +1286,43 @@ async function guardarTexto(tipo, id, campos, {
   }
 }
 
+/** La siguiente nota que espera (para seguir sin volver a la lista), sin la que se acaba de resolver. */
+function siguienteEnEsperan(excluirId) {
+  if (E.pestana !== 'esperan') return null;
+  const { sinDecidir } = listasDeEsperan();
+  const todas = [
+    ...sinDecidir.map((n) => ({ n, tipo: 'pendiente' })),
+    ...sinCuerpoVigentes().map((n) => ({ n, tipo: 'sin-cuerpo' })),
+  ].filter((x) => x.n.id !== excluirId).sort((a, b) => (Date.parse(b.n.fecha) || 0) - (Date.parse(a.n.fecha) || 0));
+  return todas.length ? { ...todas[0], cuantas: todas.length } : null;
+}
+
+/**
+ * Lo que se ve después de publicar, descartar o retirar (2/10, Hernán: "es como que sigue estando en el mismo panel y no sé si se mandó o
+ * no"): una pantalla que dice QUÉ pasó, CUÁNDO se ve en la web y deja seguir con la siguiente nota.
+ */
+function vistaResultado({ titulo, texto, conActualizar = true }) {
+  $('#pestanas').hidden = true;
+  const sig = siguienteEnEsperan(E.notaActual);
+  app.innerHTML = `<div class="resultado"><div class="resultado-icono">✓</div><h1>${esc(titulo)}</h1><p>${esc(texto)}</p>
+    ${conActualizar ? '<p class="estado">La decisión ya quedó guardada en GitHub. La web se actualiza sola cada media hora: en ese rato lo ves en radarbalcarce.com. Si no querés esperar, tocá "Actualizar la web ahora" (tarda unos 8 minutos).</p>' : ''}</div>
+    <div class="botones">
+      ${sig ? `<button type="button" class="boton principal" data-abrir="${esc(sig.tipo)}" data-id="${esc(sig.n.id)}">Siguiente nota (quedan ${sig.cuantas})</button>` : ''}
+      <button type="button" class="boton${sig ? '' : ' principal'}" data-accion="volver-lista-resultado">Volver a la lista</button>
+      ${conActualizar ? '<button type="button" class="boton" data-accion="actualizar-web">Actualizar la web ahora</button>' : ''}
+    </div>`;
+  window.scrollTo(0, 0);
+}
+
+/** "Descartada. Queda en…" → "Descartada" (el título de la pantalla de resultado). */
+const tituloDelResultado = (texto) => String(texto).split(/[.:]/)[0].slice(0, 60);
+
 async function guardarYVolver(pasos, listo) {
   try {
     app.innerHTML = '<div class="girando"></div><p class="vacio">Guardando en GitHub…</p>';
     for (const [ruta, cambiar, mensaje] of pasos) await E.cliente.guardar(ruta, cambiar, mensaje);
     await cargar({ archivo: !!E.archivo });
-    E.restaurar = E.scrollLista ?? null;
-    vistaLista();
-    aviso(listo, { conActualizar: true });
+    vistaResultado({ titulo: tituloDelResultado(listo), texto: listo });
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
     E.restaurar = E.scrollLista ?? null;
@@ -1304,7 +1338,7 @@ document.addEventListener('click', async (ev) => {
   const { id, tipo } = el.dataset;
   if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.pieza = null; E.borrador = null; E.restaurar = null; vistaLista(); window.scrollTo(0, 0); return; }
   if (el.dataset.abrir === 'foto') { E.scrollLista = window.scrollY; vistaFoto(id); return; }
-  if (el.dataset.abrir) { E.scrollLista = window.scrollY; vistaNota(el.dataset.abrir, id); return; }
+  if (el.dataset.abrir) { if (!el.closest('.resultado, .botones')) E.scrollLista = window.scrollY; vistaNota(el.dataset.abrir, id); return; }
   const accion = el.dataset.accion;
   const por = E.nombre;
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
@@ -1315,7 +1349,10 @@ document.addEventListener('click', async (ev) => {
   else if (accion === 'abrir-pieza') { E.pieza = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'armar-con-candidatas') { E.pieza = null; E.subfechas = 'efemerides'; E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'aprobar-pieza' || accion === 'sacar-pieza' || accion === 'cambiar-pieza') decidirPieza(accion);
-  else if (accion === 'buscar-foto') { E.scrollLista = E.scrollLista ?? window.scrollY; vistaFoto(id); }
+  else if (accion === 'foto-de-fuente') {
+    const medio = el.dataset.medio || 'la fuente';
+    sumarFoto(id, { url: el.dataset.url, credito: medio, confirmo: !!$('#f-ok')?.checked });
+  } else if (accion === 'buscar-foto') { E.scrollLista = E.scrollLista ?? window.scrollY; vistaFoto(id); }
   else if (accion === 'abrir-dia') { E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'abrir-feriado') { E.feriado = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'volver-fechas') { E.dia = null; E.feriado = null; E.pieza = null; E.borrador = null; if (!E.fechas) E.fechas = null; vistaFechas(); window.scrollTo(0, 0); }
@@ -1345,7 +1382,7 @@ document.addEventListener('click', async (ev) => {
     guardarFechas((j) => conDecisionDeFeriado(j, fecha, { estado: accion === 'aprobar-feriado' ? 'aprobada' : 'cambiar', comentario, por }), 'decide un feriado', () => {
       E.feriado = null; vistaFechas(); aviso(accion === 'aprobar-feriado' ? 'Aprobado.' : 'Anotado: lo cambiamos.');
     });
-  } else if (accion === 'volver') { E.restaurar = E.scrollLista ?? null; vistaLista(); }
+  } else if (accion === 'volver' || accion === 'volver-lista-resultado') { E.restaurar = E.scrollLista ?? null; vistaLista(); }
   else if (accion === 'volver-fotos') { E.restaurar = E.scrollLista ?? null; vistaLista(); }
   else if (accion === 'todas-las-publicadas') { E.publicadasTodas = true; vistaLista(); }
   else if (accion === 'solo-24') { E.publicadasTodas = false; vistaLista(); }

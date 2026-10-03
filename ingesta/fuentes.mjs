@@ -896,6 +896,10 @@ export const SECCIONES_QUE_NO_ENTRAN = [
 // enfermedad) para no sacar algo que no es horóscopo.
 export const TITULO_HOROSCOPO = /horoscopo|numeros? de la suerte|prediccion(es)? para (tu|cada) signo|los astros anticipan|que le espera a cada signo/;
 
+// La quiniela, la lotería y sus pozos no son noticia (Hernán, 2/10: "no hay que ni analizar la nota, a no ser que algún balcarceño gane
+// una suma grande"). Se mira el título, sin tildes; si la nota nombra algo de Balcarce, entra y se lee como cualquier otra.
+export const TITULO_LOTERIA = /quiniela|loteria|\bloto\b|quini ?6|\bbrinco\b|telekino|tombola|resultados? del sorteo|numeros? ganadores|pozo (millonario|acumulado|de \$)|ganador(es)? del pozo|sorteo (de la |del )?(loto|quini|brinco|telebingo)|telebingo/;
+
 // Lo que hace que una nota de una sección de otro país igual le importe a un
 // argentino. Sólo en el título, palabras enteras.
 export const CONEXION_ARGENTINA = ['argentina', 'argentino', 'argentinos', 'argentinas',

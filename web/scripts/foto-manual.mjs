@@ -21,12 +21,44 @@ const EXTENSION = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp
 
 export const idValido = (id) => /^[a-z0-9]{3,20}$/.test(String(id ?? ''));
 
-/** Baja la imagen. Lanza un Error con el motivo, en castellano, si no se puede. */
-export async function bajarImagen(url, { fetchFn = fetch } = {}) {
+/**
+ * La foto principal de una página (2/10, "dejar poner links y que la busque"): `og:image`, después `twitter:image`, después `image_src`.
+ * Devuelve la dirección completa o null.
+ */
+export function imagenDeLaPagina(html, base) {
+  const texto = String(html ?? '').slice(0, 400_000);
+  const metas = texto.match(/<(?:meta|link)\b[^>]*>/gi) ?? [];
+  const valor = (etiqueta, claves) => {
+    const clave = (etiqueta.match(/\b(?:property|name|rel)\s*=\s*["']([^"']+)["']/i) ?? [])[1]?.toLowerCase();
+    if (!claves.includes(clave)) return null;
+    return (etiqueta.match(/\b(?:content|href)\s*=\s*["']([^"']+)["']/i) ?? [])[1] ?? null;
+  };
+  for (const claves of [['og:image', 'og:image:url', 'og:image:secure_url'], ['twitter:image', 'twitter:image:src'], ['image_src']]) {
+    for (const m of metas) {
+      const v = valor(m, claves);
+      if (!v) continue;
+      try {
+        const u = new URL(v.replace(/&amp;/g, '&'), base);
+        if (urlDeFotoValida(u.href)) return u.href;
+      } catch { /* sigue con la próxima */ }
+    }
+  }
+  return null;
+}
+
+/** Baja la imagen (o, si es una página, su foto principal). Lanza un Error con el motivo, en castellano, si no se puede. */
+export async function bajarImagen(url, { fetchFn = fetch, dePagina = false } = {}) {
   if (!urlDeFotoValida(url)) throw new Error('La dirección de la imagen no sirve (tiene que empezar con https://).');
   const res = await fetchFn(url, { signal: AbortSignal.timeout(20000), headers: { 'user-agent': 'Mozilla/5.0 (compatible; RadarBalcarceBot/1.0)' } });
   if (!res.ok) throw new Error(`El sitio contestó ${res.status} al bajar la imagen.`);
   const mime = String(res.headers.get('content-type') ?? '').split(';')[0].trim().toLowerCase();
+  if (mime === 'text/html' && !dePagina) {
+    const html = res.text ? await res.text() : Buffer.from(await res.arrayBuffer()).toString('utf8');
+    const imagen = imagenDeLaPagina(html, url);
+    if (!imagen) throw new Error('No encontré una foto en esa página: copiá la dirección de la imagen misma.');
+    const r = await bajarImagen(imagen, { fetchFn, dePagina: true });
+    return { ...r, deLaPagina: url };
+  }
   if (!EXTENSION[mime]) throw new Error(`Eso no es una foto que sirva (${mime || 'sin tipo'}): tiene que ser JPG, PNG o WebP. Copiá la dirección de la imagen, no la de la página.`);
   const bytes = Buffer.from(await res.arrayBuffer());
   if (bytes.length > TAMANO_MAXIMO) throw new Error('La imagen pesa demasiado (más de 12 MB).');
@@ -43,7 +75,7 @@ export async function sumarFoto({ id, url, credito, por, ahora = new Date() }, {
   if (!idValido(id)) throw new Error('La nota no es válida.');
   const cred = creditoDeFoto(credito);
   if (!cred) throw new Error('Falta el crédito de la foto.');
-  const { bytes, ext } = await bajarImagen(url, { fetchFn });
+  const { bytes, ext, deLaPagina } = await bajarImagen(url, { fetchFn });
   const guardar = await fotoParaGuardar(bytes, ext, achicar ? { achicar } : {});
   const nombre = `${id}.${guardar.ext}`;
   fs.mkdirSync(carpeta, { recursive: true });
@@ -51,7 +83,7 @@ export async function sumarFoto({ id, url, credito, por, ahora = new Date() }, {
   const libro = fs.existsSync(archivo) ? JSON.parse(fs.readFileSync(archivo, 'utf8')) : {};
   const entrada = {
     archivo: `fotos-notas/${nombre}`, medio: cred.replace(/^Foto:\s*/, ''), credito: cred, licencia: null, origen: 'manual',
-    por: String(por ?? '').slice(0, 30), cuando: ahora.toISOString(), imagenOriginal: String(url).trim().slice(0, 500),
+    por: String(por ?? '').slice(0, 30), cuando: ahora.toISOString(), imagenOriginal: String(url).trim().slice(0, 500), ...(deLaPagina ? { enlace: String(deLaPagina).slice(0, 500) } : {}),
   };
   fs.writeFileSync(archivo, `${JSON.stringify(conFotoManual(libro, id, entrada), null, 1)}\n`, 'utf8');
   return entrada;

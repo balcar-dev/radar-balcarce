@@ -265,6 +265,17 @@
   .menu-item .flecha { color: var(--suave); font-size: 24px; }
 
   /* La revisión: lo corregido y lo que falta mirar. */
+  /* Más parecido a la página: los títulos con serif (la página usa Source Serif 4; acá no se puede cargar nada de afuera, así que Georgia), el logo con "Balcarce" en rojo. */
+  :root { --f-titulo: Georgia, "Source Serif 4", "Times New Roman", serif; }
+  h1, .tarjeta .titulo, .resultado h1 { font-family: var(--f-titulo); font-weight: 800; }
+  .barra .logo { font-family: var(--f-titulo); font-size: 20px; font-weight: 800; letter-spacing: -.01em; }
+  .barra .logo span { color: #FF6A4D; }
+  .barra { border-bottom: 3px solid var(--rojo); }
+  .resultado { text-align: center; padding: 28px 8px 8px; }
+  .resultado-icono { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 14px; border-radius: 50%; background: var(--verde-fondo); color: var(--verde); font-size: 42px; font-weight: 700; }
+  .resultado h1 { margin-bottom: 10px; }
+  .resultado p { font-size: 16px; }
+  .botones .boton[data-accion="foto-de-fuente"] { grid-column: 1 / -1; }
   .hallazgo.ok { border-left-color: var(--verde); }
   .hallazgo .antes { text-decoration: line-through; color: var(--rojo); }
   .hallazgo .despues { color: var(--verde); font-weight: 650; }
@@ -275,7 +286,7 @@
 </head>
 <body>
 <header class="barra">
-  <strong>Radar Balcarce</strong><span class="etiqueta">Panel</span>
+  <strong class="logo">Radar <span>Balcarce</span></strong><span class="etiqueta">Panel</span>
   <span class="espacio"></span>
   <button type="button" id="recargar" hidden aria-label="Volver a cargar">Recargar</button>
 </header>

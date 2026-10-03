@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, AMARILLO_QUE_SE_SUELTA_EN_LO_DE_ACA, AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN,
-  MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO,
+  MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO, TITULO_LOTERIA,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
@@ -417,6 +417,8 @@ function mencionaBalcarce(nota) {
  * Los medios de Balcarce nunca pasan por acá (V2.2, 27/09).
  */
 function motivoDeDescarte(nota, fuente = {}) {
+  // La quiniela y la lotería no se analizan, ni de un medio de acá, salvo que la nota nombre algo de Balcarce (2/10).
+  if (TITULO_LOTERIA.test(normalizar(nota.titulo ?? '')) && !mencionaBalcarce(nota)) return 'lotería o quiniela: sólo si gana alguien de Balcarce';
   if (fuente.alcance === 'local') return null;
   // El horóscopo se cuela por URLs que no dicen "horoscopo" en ningún tramo
   // (28/09: Canal 26 y El Día lo traían como "tendencias" e "información

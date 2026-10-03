@@ -133,15 +133,17 @@ export function htmlDeUnaNotaSinFoto({ nota, motivo, entrada }, { esc, chip, hac
     <h2>Dónde buscar una</h2>
     <p class="meta">Se busca: “${esc(b.consulta)}”</p>
     <div class="botones">${b.enlaces.map((e) => `<a class="boton enlace-boton" href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">${esc(e.texto)} ↗</a>`).join('')}</div>
-    ${b.fuentes.length ? `<p class="meta">Las páginas de sus fuentes (a veces la foto está ahí y no se pudo bajar sola):</p><ul class="lista-simple">${b.fuentes.map((f) => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer">${esc(f.medio)} ↗</a></li>`).join('')}</ul>` : ''}
-    <h2>Sumar la foto</h2>
-    <p class="ayuda">Cuando encuentres una: mantené apretada la imagen en el navegador, elegí “Copiar dirección de la imagen” y pegala acá. La nube la baja, la achica y la guarda con su crédito. Sale en la web en la próxima actualización.</p>
+    <h2>Usar la foto de una fuente</h2>
+    <p class="ayuda">Cada fuente de la nota tiene su foto principal: tocá “Usar la foto de…” y la nube la baja, la achica y la guarda con el crédito del medio. Antes tildá la confirmación de abajo.</p>
+    ${b.fuentes.length ? `<div class="botones">${b.fuentes.map((f) => `<a class="boton enlace-boton" href="${esc(f.url)}" target="_blank" rel="noopener noreferrer">Ver la nota de ${esc(f.medio)} ↗</a><button type="button" class="boton principal" data-accion="foto-de-fuente" data-id="${esc(nota.id)}" data-url="${esc(f.url)}" data-medio="${esc(f.medio)}">Usar la foto de ${esc(f.medio)}</button>`).join('')}</div>` : '<p class="meta">Esta nota no tiene fuentes con enlace.</p>'}
+    <label class="check"><input type="checkbox" id="f-ok"> Confirmo que la foto no tiene marca de agua ni el nombre de otro medio pegado encima, y que no se reconoce a un menor ni a una víctima.</label>
+    <h2>O pegar un enlace</h2>
+    <p class="ayuda">Pegá el enlace de <strong>cualquier nota o foto</strong> (de la página o de la imagen misma): si es una página, la nube busca su foto principal. Sale en la web en la próxima actualización.</p>
     <form id="form-foto">
-      <label for="f-url">Dirección de la imagen (empieza con https://)</label>
+      <label for="f-url">Enlace de la nota o de la imagen (empieza con https://)</label>
       <input type="text" id="f-url" inputmode="url" autocomplete="off" placeholder="https://…/foto.jpg">
       <label for="f-credito">Crédito (quién sacó la foto o de dónde es)</label>
       <input type="text" id="f-credito" maxlength="${CREDITO_MAXIMO}" placeholder="Municipalidad de Balcarce">
-      <label class="check"><input type="checkbox" id="f-ok"> Confirmo que la foto no tiene marca de agua ni el nombre de otro medio pegado encima, y que no se reconoce a un menor ni a una víctima.</label>
       <div class="botones"><button type="submit" class="boton principal ancho">Sumar la foto</button></div>
     </form>`;
 }
