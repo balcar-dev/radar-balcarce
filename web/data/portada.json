@@ -1,68 +1,6 @@
 {
-  "generado": "2026-10-03T19:01:48.574Z",
+  "generado": "2026-10-03T19:22:30.576Z",
   "notas": [
-    {
-      "id": "1sxk7mg",
-      "titulo": "Producir una hectárea de papa Spunta demanda más de 15 mil dólares",
-      "copete": "Un relevamiento sectorial detalla el impacto de los costos en el cultivo de papa fresca, con subas interanuales que alcanzan el 31,5% por tonelada.",
-      "cuerpo": "Producir una hectárea de papa Spunta requirió una inversión estimada de US$ 15.484 durante el mes pasado, según un informe elaborado por el portal Argenpapa con datos de productores del sudeste bonaerense. El relevamiento toma como referencia un rendimiento de 45 toneladas por hectárea, lo que ubica el costo en unos US$ 344,09 por tonelada. \n\nEl valor representa un incremento frente a los US$ 11.773 por hectárea calculados el año anterior, traduciendo una suba del 31,5% por tonelada producida. Entre los principales componentes, la semilla insume US$ 2.390 por hectárea y el riego otros US$ 2.389, mientras que el transporte y la comercialización demandan US$ 4.885.",
-      "guion": "Producir una hectárea de papa Spunta demanda más de 15 mil dólares",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/producir-papa-spunta-cuesta-mas-de-us-15000-por-hectarea-y-el-costo-aumento-315-en-un-ano-461",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-03T19:01:26.822Z",
-      "sinFecha": true,
-      "visto": "2026-10-03T19:01:26.822Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Producir una hectárea de papa Spunta cuesta US$ 15.484, según Argenpapa.",
-        "El costo por tonelada se ubica en US$ 344,09 tomando un rendimiento de 45 toneladas.",
-        "La suba interanual por tonelada alcanza el 31,5% en comparación con el año pasado."
-      ],
-      "seSabe": [
-        "El costo de producción por hectárea asciende a US$ 15.484, según Argenpapa.",
-        "El valor por tonelada se calcula en US$ 344,09 para un rendimiento de 45 toneladas.",
-        "La comercialización y el flete representan el 31,55% del costo final."
-      ],
-      "noConfirmado": [
-        "No se informaron los precios de venta definitivos en el mercado mayorista.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un relevamiento sectorial indica que producir una hectárea de papa Spunta requiere una inversión estimada de US$ 15.484, reflejando un incremento del 31,5% por tonelada en un año.",
-      "etiquetas": [
-        "papa Spunta",
-        "Argenpapa",
-        "costos de produccion",
-        "sudeste bonaerense"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/producir-papa-spunta-cuesta-mas-de-us-15000-por-hectarea-y-el-costo-aumento-315-en-un-ano-461",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los costos de producción, rendimiento y componentes de la papa Spunta según un informe de Argenpapa."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "producir-una-hectarea-de-papa-spunta-demanda-mas-de-15-mil-dolares",
-      "foto": {
-        "archivo": "fotos-notas/1sxk7mg.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
     {
       "id": "f1parrilla2026r16",
       "propia": "f1",
@@ -932,6 +870,7 @@
       "guion": "Caputo descarta la recesión y asegura que la economía crece",
       "seccion": "Economía",
       "medios": [
+        "Agencia DIB",
         "Ámbito",
         "Minuto Uno",
         "Infobae",
@@ -1095,7 +1034,9 @@
       "medios": [
         "0223 (Mar del Plata)",
         "Bolavip Argentina",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Ámbito",
+        "TN (Todo Noticias)"
       ],
       "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
       "teniaImagenLaFuente": true,
@@ -1151,6 +1092,20 @@
           "fecha": "2026-10-03T11:22:44.000Z",
           "oficial": false,
           "aporte": "Señaló el trabajo previo realizado y el provecho de las rectas del circuito"
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/03/con-confianza-en-el-ritmo-el-mensaje-de-franco-colapinto-en-la-previa-a-la-carrera-del-gp-de-bahrein/",
+          "fecha": "2026-10-03T16:52:48.000Z",
+          "oficial": false,
+          "aporte": "Detalló la sanción de 15 posiciones, el puesto 15 en la clasificación y las declaraciones completas del piloto."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/el-mensaje-franco-colapinto-la-previa-la-carrera-del-gp-bahrein-con-confianza-el-ritmo-n6329742",
+          "fecha": "2026-10-03T18:51:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la ciudad de origen del piloto y su objetivo de buscar un buen domingo en la carrera."
         }
       ],
       "antecedentes": [
@@ -2018,7 +1973,7 @@
       "fecha": "2026-10-02T19:19:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T20:31:20.420Z",
-      "relevancia": 66,
+      "relevancia": 58,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4092,17 +4047,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
+        "Infoeme",
         "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB",
-        "Infoeme"
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 51,
+      "relevancia": 55,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4309,7 +4264,6 @@
     }
   ],
   "secciones": [
-    "Agro",
     "Automovilismo",
     "Balcarce",
     "Cultura y agenda",
@@ -4318,7 +4272,8 @@
     "Política",
     "Deportes",
     "Economía",
-    "Fútbol"
+    "Fútbol",
+    "Agro"
   ],
   "temas": [
     {
@@ -4334,10 +4289,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
-      "sensacion": 11,
-      "humedad": 86,
-      "viento": 15,
+      "temp": 14,
+      "sensacion": 12,
+      "humedad": 84,
+      "viento": 13,
       "rumbo": "NO",
       "cielo": "Nublado",
       "esDeDia": true
@@ -4728,12 +4683,6 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "4qbbyg",
-      "titulo": "Tensión en Malvinas: los isleños reclaman que se impongan…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "t9c46j",
       "titulo": null,
       "seccion": "Balcarce",
@@ -4744,6 +4693,12 @@
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "4qbbyg",
+      "titulo": "Tensión en Malvinas: los isleños reclaman que se impongan…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1it0an3",
