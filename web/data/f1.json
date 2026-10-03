@@ -819,8 +819,240 @@
  },
  "resultado": null,
  "clasificacion": null,
+ "parrilla": {
+  "temporada": 2026,
+  "ronda": 16,
+  "nombre": "Bahrain Grand Prix in Malaysia",
+  "circuito": "Sepang International Circuit",
+  "localidad": "Kuala Lumpur",
+  "pais": "Malaysia",
+  "largada": "2026-10-04T07:00:00.000Z",
+  "filas": [
+   {
+    "posicion": 1,
+    "piloto": "Max Verstappen",
+    "colapinto": false,
+    "equipo": "Red Bull",
+    "numero": "3",
+    "q1": "1:36.477",
+    "q2": "1:35.696",
+    "q3": "1:35.130"
+   },
+   {
+    "posicion": 2,
+    "piloto": "Lewis Hamilton",
+    "colapinto": false,
+    "equipo": "Ferrari",
+    "numero": "44",
+    "q1": "1:36.595",
+    "q2": "1:36.032",
+    "q3": "1:35.428"
+   },
+   {
+    "posicion": 3,
+    "piloto": "Isack Hadjar",
+    "colapinto": false,
+    "equipo": "Red Bull",
+    "numero": "6",
+    "q1": "1:36.898",
+    "q2": "1:36.192",
+    "q3": "1:35.558"
+   },
+   {
+    "posicion": 4,
+    "piloto": "Andrea Kimi Antonelli",
+    "colapinto": false,
+    "equipo": "Mercedes",
+    "numero": "12",
+    "q1": "1:37.041",
+    "q2": "1:35.959",
+    "q3": "1:35.631"
+   },
+   {
+    "posicion": 5,
+    "piloto": "Charles Leclerc",
+    "colapinto": false,
+    "equipo": "Ferrari",
+    "numero": "16",
+    "q1": "1:36.730",
+    "q2": "1:35.970",
+    "q3": "1:35.666"
+   },
+   {
+    "posicion": 6,
+    "piloto": "Lando Norris",
+    "colapinto": false,
+    "equipo": "McLaren",
+    "numero": "1",
+    "q1": "1:37.092",
+    "q2": "1:36.173",
+    "q3": "1:35.757"
+   },
+   {
+    "posicion": 7,
+    "piloto": "Oscar Piastri",
+    "colapinto": false,
+    "equipo": "McLaren",
+    "numero": "81",
+    "q1": "1:36.852",
+    "q2": "1:36.020",
+    "q3": "1:35.762"
+   },
+   {
+    "posicion": 8,
+    "piloto": "George Russell",
+    "colapinto": false,
+    "equipo": "Mercedes",
+    "numero": "63",
+    "q1": "1:37.264",
+    "q2": "1:36.245",
+    "q3": "1:35.871"
+   },
+   {
+    "posicion": 9,
+    "piloto": "Pierre Gasly",
+    "colapinto": false,
+    "equipo": "Alpine F1 Team",
+    "numero": "10",
+    "q1": "1:37.174",
+    "q2": "1:36.410",
+    "q3": "1:37.210"
+   },
+   {
+    "posicion": 10,
+    "piloto": "Gabriel Bortoleto",
+    "colapinto": false,
+    "equipo": "Audi",
+    "numero": "5",
+    "q1": "1:37.106",
+    "q2": "1:36.814",
+    "q3": "1:37.673"
+   },
+   {
+    "posicion": 11,
+    "piloto": "Liam Lawson",
+    "colapinto": false,
+    "equipo": "RB F1 Team",
+    "numero": "30",
+    "q1": "1:37.332",
+    "q2": "1:37.023",
+    "q3": null
+   },
+   {
+    "posicion": 12,
+    "piloto": "Fernando Alonso",
+    "colapinto": false,
+    "equipo": "Aston Martin",
+    "numero": "14",
+    "q1": "1:37.721",
+    "q2": "1:37.220",
+    "q3": null
+   },
+   {
+    "posicion": 13,
+    "piloto": "Carlos Sainz",
+    "colapinto": false,
+    "equipo": "Williams",
+    "numero": "55",
+    "q1": "1:37.651",
+    "q2": "1:37.527",
+    "q3": null
+   },
+   {
+    "posicion": 14,
+    "piloto": "Lance Stroll",
+    "colapinto": false,
+    "equipo": "Aston Martin",
+    "numero": "18",
+    "q1": "1:37.729",
+    "q2": "1:37.566",
+    "q3": null
+   },
+   {
+    "posicion": 15,
+    "piloto": "Franco Colapinto",
+    "colapinto": true,
+    "equipo": "Alpine F1 Team",
+    "numero": "43",
+    "q1": "1:37.179",
+    "q2": null,
+    "q3": null
+   },
+   {
+    "posicion": 16,
+    "piloto": "Arvid Lindblad",
+    "colapinto": false,
+    "equipo": "RB F1 Team",
+    "numero": "41",
+    "q1": "1:37.883",
+    "q2": null,
+    "q3": null
+   },
+   {
+    "posicion": 17,
+    "piloto": "Nico Hülkenberg",
+    "colapinto": false,
+    "equipo": "Audi",
+    "numero": "27",
+    "q1": "1:37.970",
+    "q2": null,
+    "q3": null
+   },
+   {
+    "posicion": 18,
+    "piloto": "Oliver Bearman",
+    "colapinto": false,
+    "equipo": "Haas F1 Team",
+    "numero": "87",
+    "q1": "1:37.980",
+    "q2": null,
+    "q3": null
+   },
+   {
+    "posicion": 19,
+    "piloto": "Esteban Ocon",
+    "colapinto": false,
+    "equipo": "Haas F1 Team",
+    "numero": "31",
+    "q1": "1:38.233",
+    "q2": null,
+    "q3": null
+   },
+   {
+    "posicion": 20,
+    "piloto": "Alexander Albon",
+    "colapinto": false,
+    "equipo": "Williams",
+    "numero": "23",
+    "q1": "1:38.600",
+    "q2": null,
+    "q3": null
+   },
+   {
+    "posicion": 21,
+    "piloto": "Valtteri Bottas",
+    "colapinto": false,
+    "equipo": "Cadillac F1 Team",
+    "numero": "77",
+    "q1": "1:38.611",
+    "q2": null,
+    "q3": null
+   },
+   {
+    "posicion": 22,
+    "piloto": "Sergio Pérez",
+    "colapinto": false,
+    "equipo": "Cadillac F1 Team",
+    "numero": "11",
+    "q1": "1:38.933",
+    "q2": null,
+    "q3": null
+   }
+  ]
+ },
  "notas": {
-  "f1horarios2026r16": "2026-10-03T17:38:44.401Z"
+  "f1horarios2026r16": "2026-10-03T17:38:44.401Z",
+  "f1parrilla2026r16": "2026-10-03T18:46:11.912Z"
  },
  "calendarioCuando": "2026-10-03T17:38:44.007Z"
 }

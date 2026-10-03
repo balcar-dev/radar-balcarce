@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T18:31:13.752Z",
- "portada": 56,
- "archivo": 850,
+ "generado": "2026-10-03T18:46:12.764Z",
+ "portada": 57,
+ "archivo": 852,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T18:31:13.778Z",
+  "generado": "2026-10-03T18:46:12.797Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,8 +147,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 34,
+    "notas": [
+     {
+      "id": "ule632",
+      "titulo": "El organizador confirma el amistoso entre la Argentina y Burkina Faso",
+      "seccion": "Argentina"
+     },
+     {
+      "id": "1a6c23d",
+      "titulo": "La Ultra Trail Tierras del Diablo abre los últimos cupos",
+      "seccion": "Deportes"
+     }
+    ]
    }
   ],
   "facebook": {
