@@ -5398,9 +5398,7 @@
   "cuando": "2026-10-02T18:31:48.058Z"
  },
  "zdkvaa": {
-  "archivo": "fotos-notas/zdkvaa.jpg",
   "medio": "Wikimedia Commons",
-  "credito": "Foto: Drew de F Fawkes / Wikimedia Commons (CC BY 2.0)",
   "licencia": "CC BY 2.0",
   "autor": "Drew de F Fawkes",
   "origen": "wikimedia",
@@ -5408,7 +5406,9 @@
   "enlace": "https://commons.wikimedia.org/wiki/File:Robbie_Williams,_Roundhouse,_London_(Apple_Music_Festival)_(29312824603).jpg",
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/91/Robbie_Williams%2C_Roundhouse%2C_London_%28Apple_Music_Festival%29_%2829312824603%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Robbie Williams\" de Wikimedia Commons (CC BY 2.0).",
-  "cuando": "2026-10-02T19:01:56.321Z"
+  "cuando": "2026-10-02T19:01:56.321Z",
+  "intentado": true,
+  "borrada": true
  },
  "1h348rv": {
   "archivo": "fotos-notas/1h348rv.jpg",
@@ -5956,5 +5956,29 @@
   "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/RUBAHWAHN5G5DIN7DS3NZCWAP4.jpg?smart=true&auth=67534f97b562e105117b77102d4bbfda6997c519c737915c32bcbf39e8025114&width=1200&height=630",
   "razon": "Muestra claramente a los dos protagonistas de la nota (Max Verstappen y Franco Colapinto) en primeros planos nítidos y sin marcas ni menores.",
   "cuando": "2026-10-03T09:31:26.540Z"
+ },
+ "1iyw6rv": {
+  "archivo": "fotos-notas/1iyw6rv.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto termina quince en la clasificación y penaliza en Bahréin",
+  "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/02/tras-la-sancion-de-la-fia-colapinto-tendra-la-ultima-practica-en-sepang-y-se-prepara-para-la-clasificacion-del-gp-de-bahrein/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/foto-efe-ZBFFL26NWZAKNMZFNC2VPBZXME.jpg?auth=e86e7905dcd87cd8333e8f95849995c531e938aeeaf46eb3050b996647add0b4&width=1023",
+  "razon": "La foto A muestra al auto de manera clara, con excelente nitidez y sin marcas agregadas ni menores.",
+  "cuando": "2026-10-03T11:01:38.576Z"
+ },
+ "1y5m4fa": {
+  "archivo": "fotos-notas/1y5m4fa.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
+  "enlace": "https://tn.com.ar/deportes/2026/10/03/franco-colapinto-mostro-optimismo-para-el-gp-de-bahrein-pese-a-las-sanciones-que-recibio-se-puede-remontar/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-067a7f215f361791020591772-1791020773.jpg?auth=e49b252f60c8789b7590dfa8f9938e0ef8614a7b31dcc650bc69ee71832970ba&width=1023",
+  "razon": "La foto A muestra a Franco Colapinto con excelente nitidez y encuadre, sin marcas agregadas por el medio ni menores.",
+  "cuando": "2026-10-03T11:01:38.576Z"
  }
 }
