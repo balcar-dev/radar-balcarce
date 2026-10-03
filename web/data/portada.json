@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T14:31:37.187Z",
+  "generado": "2026-10-03T15:03:15.872Z",
   "notas": [
     {
       "id": "1a6c23d",
@@ -61,6 +61,89 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "la-ultra-trail-tierras-del-diablo-abre-los-ultimos-cupos"
+    },
+    {
+      "id": "o99ioz",
+      "titulo": "Lionel Messi juega su partido despedida en el Monumental",
+      "copete": "El capitán de la selección argentina cierra su etapa en el equipo nacional el martes frente a Benín. El encuentro en Buenos Aires tiene localidades agotadas y un homenaje especial de la AFA.",
+      "cuerpo": "Lionel Messi disputa el martes 6 de octubre su último encuentro con la camiseta de la selección argentina frente a Benín. El partido amistoso de fecha FIFA comienza a las 20 en el estadio Monumental de Buenos Aires y cuenta con entradas agotadas.\n\nLa Asociación del Fútbol Argentina prepara un homenaje con la presencia de campeones del mundo de Qatar 2022.\n\nComo se informó a principios de mes, el evento genera un fuerte movimiento de viajes hacia Buenos Aires y un festival organizado por la AFA en Ciudad Universitaria con pantallas gigantes y espectáculos musicales.",
+      "guion": "Lionel Messi juega su partido despedida en el Monumental",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Ecos Diarios (Necochea)"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/futbol/cuando-es-el-partido-despedida-de-messi-nid03102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T13:24:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T15:01:37.047Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lionel Messi juega su despedida de la selección el martes 6 de octubre",
+        "El partido amistoso ante Benín se disputa en el estadio Monumental a las 20",
+        "Las localidades para el encuentro están completamente agotadas",
+        "La AFA organiza un homenaje con la participación de campeones del mundo"
+      ],
+      "textoRedes": "Lionel Messi disputa su partido despedida de la selección argentina este martes a las 20 en el estadio Monumental frente a Benín. El encuentro amistoso cuenta con localidades agotadas y un homenaje organizado por la AFA con campeones del mundo.",
+      "etiquetas": [
+        "Lionel Messi",
+        "Seleccion Argentina",
+        "AFA",
+        "Estadio Monumental",
+        "Benin"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/cuando-es-el-partido-despedida-de-messi-nid03102026/",
+          "fecha": "2026-10-03T13:24:05.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el partido despedida ante Benín, el horario, el estadio, el estado de las entradas y los dichos de Claudio Tapia."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/lionel-messi-se-despide-de-la-seleccion-argentina-cuando-es-su-ultimo-partido",
+          "fecha": "2026-10-03T13:54:20.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el anuncio del retiro de Lionel Messi de la selección nacional tras más de dos décadas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "iheoi7",
+          "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
+          "fecha": "2026-10-01T09:00:00.000Z",
+          "ruta": "/nota/el-partido-despedida-de-messi-dispara-la-demanda-de-viajes-hacia-iheoi7"
+        },
+        {
+          "id": "7bv4jl",
+          "titulo": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
+          "fecha": "2026-09-30T12:37:20.000Z",
+          "ruta": "/nota/la-afa-organiza-un-fan-fest-para-la-despedida-de-lionel-messi-7bv4jl"
+        },
+        {
+          "id": "8pri82",
+          "titulo": "Roma no cede a Dybala y a Molina para la despedida de Messi",
+          "fecha": "2026-09-29T19:15:41.000Z",
+          "ruta": "/nota/roma-no-cede-a-dybala-y-a-molina-para-la-despedida-de-messi-8pri82"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lionel-messi-juega-su-partido-despedida-en-el-monumental",
+      "foto": {
+        "archivo": "fotos-notas/o99ioz.jpg",
+        "credito": "Foto: La Nación"
+      }
     },
     {
       "id": "16ml7pn",
@@ -344,62 +427,78 @@
       }
     },
     {
-      "id": "1vuvl5f",
-      "titulo": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
-      "copete": "El combinado africano sufre problemas logísticos y la negativa de varios jugadores a viajar. Ante esto, afronta el amistoso de esta noche en el Monumental con un plantel de emergencia.",
-      "cuerpo": "La selección de Burkina Faso enfrenta a la Argentina esta noche a las 21:00 en el estadio Monumental, tras atravesar inconvenientes logísticos y una huelga de futbolistas de su plantel principal.\n\nEl vuelo inicial de la delegación quedó cancelado el 30 de septiembre y el equipo quedó varado en Marruecos. Según indicó el medio Faso Sports, los jugadores mayores se negaron a viajar en protesta por las condiciones económicas ofrecidas por la organización para el partido.\n\nAnte la falta de futbolistas, el cuerpo técnico sumó de urgencia a integrantes del seleccionado Sub-23 tras suspender un compromiso ante Mali. Finalmente, un vuelo especial partió desde Casablanca en la noche del viernes con el plantel alternativo rumbo a Buenos Aires.",
-      "guion": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
-      "seccion": "Fútbol",
+      "id": "17lpda8",
+      "titulo": "Caputo descarta la recesión y asegura que la economía crece",
+      "copete": "El ministro de Economía hizo un balance en París tras el evento Argentina Week. Afirmó que la actividad avanza a un ritmo menor y defendió los compromisos financieros anunciados.",
+      "cuerpo": "El ministro de Economía, Luis Caputo, aseguró que la economía nacional mantiene una tendencia de crecimiento a pesar de avanzar a un ritmo menor al esperado y descartó una recesión técnica. Las declaraciones se concretaron en la embajada argentina en París, tras concluir el evento Argentina Week.\n\nDurante las tres jornadas que duró la actividad en territorio europeo, el embajador argentino en Francia, Ian Sielecki, informó que se anunciaron compromisos de inversión por 27 mil millones de dólares. Ante los cuestionamientos sobre los indicadores oficiales que reflejan una retracción en la actividad y una suba de la pobreza, Caputo argumentó que el estimador mensual exhibe una volatilidad atribuible a cuestiones de medición y no a una caída generalizada.",
+      "guion": "Caputo descarta la recesión y asegura que la economía crece",
+      "seccion": "Economía",
       "medios": [
-        "TN (Todo Noticias)",
-        "Canal 26"
+        "Ámbito",
+        "Minuto Uno"
       ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/escandalo-antes-del-amistoso-organizado-por-la-afa-jugadores-de-burkina-faso-se-negaron-a-viajar-a-argentina/",
+      "enlace": "https://www.ambito.com/economia/luis-caputo-la-esta-creciendo-solo-que-un-ritmo-mas-bajo-no-estamos-recesion-n6329657",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T11:34:10.000Z",
+      "fecha": "2026-10-03T12:30:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-03T13:01:19.534Z",
-      "relevancia": 69,
+      "visto": "2026-10-03T15:01:37.047Z",
+      "relevancia": 56,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El amistoso se juega esta noche a las 21:00 en el Monumental.",
-        "Burkina Faso afronta el partido con un plantel integrado por juveniles Sub-23.",
-        "El vuelo inicial de la delegación se había cancelado el 30 de septiembre."
+        "Luis Caputo afirmó que la economía crece a menor ritmo pero rechazó una recesión.",
+        "El balance se realizó en París tras el evento Argentina Week.",
+        "El embajador Ian Sielecki anunció inversiones por 27 mil millones de dólares.",
+        "El ministro cuestionó la medición oficial del EMAE y defendió los datos de tendencia."
       ],
       "seSabe": [
-        "El partido entre Argentina y Burkina Faso se disputa esta noche a las 21:00 en el Monumental.",
-        "La delegación burkinesa partió en un vuelo especial desde Casablanca en la noche del viernes.",
-        "El cuerpo técnico convocó a jugadores Sub-23 para completar el plantel."
+        "El ministro de Economía Luis Caputo brindó declaraciones a la prensa en París al término del Argentina Week.",
+        "El embajador argentino en Francia, Ian Sielecki, anunció inversiones por 27 mil millones de dólares durante las jornadas.",
+        "El funcionario nacional descartó que el país se encuentre en una etapa recesiva.",
+        "Caputo atribuyó la desaceleración del EMAE a problemas de medición metodológica."
       ],
       "noConfirmado": [
-        "No se especificó la cantidad exacta de futbolistas de la selección mayor que se negaron a viajar."
+        "No se detalló el impacto temporal específico de los anuncios financieros en las economías regionales."
       ],
-      "textoRedes": "La selección de Burkina Faso llega al país con un plantel de emergencia y jugadores Sub-23 para enfrentar esta noche a Argentina en el Monumental tras sufrir problemas logísticos y la negativa de varios futbolistas a viajar.",
+      "textoRedes": "El ministro de Economía Luis Caputo aseguró desde París que la economía crece a menor ritmo y descartó una recesión técnica, al tiempo que defendió los anuncios de inversión obtenidos durante el evento Argentina Week.",
       "etiquetas": [
-        "Seleccion Argentina",
-        "Burkina Faso",
-        "amistoso",
-        "Estadio Monumental",
-        "futbol"
+        "Luis Caputo",
+        "Economía",
+        "Argentina Week",
+        "Inversiones",
+        "Francia"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/escandalo-antes-del-amistoso-organizado-por-la-afa-jugadores-de-burkina-faso-se-negaron-a-viajar-a-argentina/",
-          "fecha": "2026-10-03T11:34:10.000Z",
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/luis-caputo-la-esta-creciendo-solo-que-un-ritmo-mas-bajo-no-estamos-recesion-n6329657",
+          "fecha": "2026-10-03T12:30:00.000Z",
           "oficial": false,
-          "aporte": "Detalló el conflicto económico denunciado por Faso Sports y la convocatoria de emergencia de los jugadores Sub-23."
+          "aporte": "Detalló las declaraciones de Luis Caputo sobre la economía, los anuncios de inversión en París y la postura frente a los datos del INDEC."
         },
         {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/deportes/2026/10/03/caos-en-burkina-faso-antes-del-amistoso-en-la-argentina-negativas-bajas-y-llamados-de-ultimo-momento/",
-          "fecha": "2026-10-03T12:50:00.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/luis-caputo-nego-que-la-este-recesion-crece-lento-n6329682",
+          "fecha": "2026-10-03T13:55:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre la cancelación del vuelo y la modificación en el traslado del plantel africano."
+          "aporte": "Confirmó el diálogo del ministro de Economía con la prensa en Francia y el reconocimiento de un crecimiento a velocidad más baja."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "t8noy6",
+          "titulo": "Luis Caputo se reúne con el ministro de Economía de Francia en París",
+          "fecha": "2026-09-30T01:38:30.000Z",
+          "ruta": "/nota/luis-caputo-se-reune-con-el-ministro-de-economia-de-francia-en-paris-t8noy6"
+        },
+        {
+          "id": "11ahvrq",
+          "titulo": "Milei niega que la economía entre en recesión",
+          "fecha": "2026-09-27T23:57:00.000Z",
+          "ruta": "/nota/javier-milei-defendio-su-programa-y-nego-que-la-economia-vaya-a-11ahvrq"
         }
       ],
       "verificacion": {
@@ -407,10 +506,199 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-seleccion-de-burkina-faso-llega-al-pais-con-suplentes-para",
+      "slug": "caputo-descarta-la-recesion-y-asegura-que-la-economia-crece",
       "foto": {
-        "archivo": "fotos-notas/1vuvl5f.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
+        "archivo": "fotos-notas/17lpda8.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "fjrow3",
+      "titulo": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
+      "copete": "El piloto argentino de Alpine parte el domingo desde el puesto 21 en el circuito tras recibir una penalización de 15 lugares en la grilla.",
+      "cuerpo": "El piloto argentino Franco Colapinto afronta el domingo un desafío en el Gran Premio de Baréin 2026.\n\nA pesar de partir desde la parte posterior, el corredor se mostró optimista luego de guardar juegos de neumáticos y contar con un motor nuevo para la competencia. En declaraciones brindadas a la prensa tras la clasificación del sábado, explicó que la traza cuenta con frenadas marcadas y rectas extensas que favorecen los sobrepasos durante la prueba.\n\nLa grilla de partida tiene a Max Verstappen de Red Bull en la primera colocación.",
+      "guion": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
+      "seccion": "Automovilismo",
+      "medios": [
+        "0223 (Mar del Plata)",
+        "Bolavip Argentina",
+        "La Brújula 24"
+      ],
+      "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T10:28:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T15:01:37.047Z",
+      "relevancia": 77,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto compite este domingo en el Gran Premio de Baréin",
+        "El argentino penalizó quince puestos y larga desde el vigesimoprimer lugar",
+        "El piloto guardó juegos de neumáticos y cuenta con motor nuevo para avanzar",
+        "Max Verstappen encabeza la grilla de partida con Red Bull"
+      ],
+      "seSabe": [
+        "Franco Colapinto compite este domingo en el Gran Premio de Baréin 2026",
+        "El piloto argentino de Alpine larga desde el puesto 21",
+        "La penalización acumulada fue de quince posiciones",
+        "El corredor guardó diferentes compuestos de neumáticos para la estrategia",
+        "Max Verstappen parte desde la pole position con Red Bull"
+      ],
+      "noConfirmado": [
+        "El rendimiento final del monoplaza durante las vueltas de la competencia"
+      ],
+      "textoRedes": "Franco Colapinto compite este domingo en el Gran Premio de Baréin desde el vigesimoprimer puesto. El piloto argentino sufrió una penalización de quince lugares, pero confía en avanzar con estrategia de neumáticos y motor nuevo.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Barein"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
+          "fecha": "2026-10-03T10:28:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló la penalización, la estrategia de neumáticos y las declaraciones del piloto"
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-3-8-57-0-franco-colapinto-penultimo-en-barein-pero-optimista-la-razon-por-la-que-confia-en-remontar",
+          "fecha": "2026-10-03T12:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el puesto de partida y la sanción de quince lugares"
+        },
+        {
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/03/colapinto-optimista-pese-a-largar-21-en-el-gp-de-malasia-se-puede-remontar-n523603/",
+          "fecha": "2026-10-03T11:22:44.000Z",
+          "oficial": false,
+          "aporte": "Señaló el trabajo previo realizado y el provecho de las rectas del circuito"
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1y5m4fa",
+          "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
+          "fecha": "2026-09-29T20:00:31.000Z",
+          "ruta": "/nota/franco-colapinto-larga-penultimo-en-bahrein-y-apuesta-a-remontar-1y5m4fa"
+        },
+        {
+          "id": "ei8drx",
+          "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
+          "fecha": "2026-10-03T01:00:00.000Z",
+          "ruta": "/nota/max-verstappen-consigue-la-pole-position-y-franco-colapinto-larga-ei8drx"
+        },
+        {
+          "id": "1ftwyte",
+          "titulo": "Franco Colapinto penaliza quince puestos en la grilla por un cambio de motor",
+          "fecha": "2026-10-02T18:03:01.000Z",
+          "ruta": "/nota/franco-colapinto-penaliza-quince-puestos-en-la-grilla-por-un-cambio-1ftwyte"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-busca-la-remontada-en-el-gran-premio-de-barein"
+    },
+    {
+      "id": "1gjqsjm",
+      "titulo": "ARCA recibe datos de cuentas de argentinos en Estados Unidos",
+      "copete": "El fisco estadounidense informa a la Agencia de Recaudación sobre cuentas e ingresos de residentes nacionales. El mecanismo excluye saldos y movimientos detallados.",
+      "cuerpo": "El fisco de Estados Unidos informa a la Agencia de Recaudación y Control Aduanero sobre cuentas e ingresos de residentes argentinos en entidades financieras norteamericanas. El convenio, en vigencia desde 2023, contempla el envío automático de datos identificatorios, intereses y dividendos.\n\nEl sistema excluye la remisión automática de saldos y movimientos detallados de las cuentas. Si el organismo argentino requiriera información adicional sobre una cuenta específica, debe iniciar un pedido puntual por los canales de cooperación tributaria bilateral.",
+      "guion": "ARCA recibe datos de cuentas de argentinos en Estados Unidos",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Canal 26",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/03/acuerdo-fatca-que-informacion-recibe-arca-sobre-las-cuentas-de-argentinos-en-estados-unidos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T04:14:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T15:01:37.047Z",
+      "relevancia": 49,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El fisco estadounidense informa sobre cuentas de argentinos.",
+        "El convenio rige desde el año 2023.",
+        "Quedan excluidos los saldos y movimientos detallados."
+      ],
+      "seSabe": [
+        "El acuerdo Fatca rige entre Argentina y Estados Unidos.",
+        "El IRS transfiere datos de cuentas e ingresos a ARCA.",
+        "El mecanismo no incluye saldos ni movimientos."
+      ],
+      "textoRedes": "El fisco estadounidense informa a ARCA sobre cuentas e ingresos de residentes argentinos en entidades financieras norteamericanas a través del acuerdo Fatca.",
+      "etiquetas": [
+        "ARCA",
+        "Estados Unidos",
+        "cuentas bancarias",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/03/acuerdo-fatca-que-informacion-recibe-arca-sobre-las-cuentas-de-argentinos-en-estados-unidos/",
+          "fecha": "2026-10-03T04:14:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló el funcionamiento, los datos incluidos y las exclusiones del acuerdo Fatca entre Argentina y Estados Unidos."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/10/03/cuentas-de-argentinos-en-estados-unidos-que-datos-recibe-arca-y-cuales-no-revela-el-acuerdo-fatca/",
+          "fecha": "2026-10-03T10:22:41.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que los datos de cuentas y carteras de inversión llegan automáticamente a ARCA."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/acuerdo-fatca-que-datos-recibe-arca-cuentas-argentinos-estados-unidos-n6329681",
+          "fecha": "2026-10-03T13:35:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el convenio permite identificar cuentas e ingresos pero excluye saldos y movimientos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1uw5a9s",
+          "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
+          "fecha": "2026-10-01T14:24:51.000Z",
+          "ruta": "/nota/el-vicepresidente-de-estados-unidos-visita-la-argentina-en-noviembre-1uw5a9s"
+        },
+        {
+          "id": "1ckhubg",
+          "titulo": "El Club Amigos Unidos recibe un torneo zonal de gimnasia rítmica",
+          "fecha": "2026-10-01T11:46:17.000Z",
+          "ruta": "/nota/el-club-amigos-unidos-recibe-un-torneo-zonal-de-gimnasia-ritmica-1ckhubg"
+        },
+        {
+          "id": "11nk8l",
+          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "arca-recibe-datos-de-cuentas-de-argentinos-en-estados-unidos",
+      "foto": {
+        "archivo": "fotos-notas/1gjqsjm.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -422,14 +710,15 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
+        "Bolavip Argentina",
         "Infobae",
+        "TyC Sports",
         "Minuto Uno",
-        "Radio Mitre",
-        "Bolavip Argentina"
+        "Radio Mitre"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/futbol/rodolfo-arruabarrena-tras-boca-vs-union-el-cuidado-a-leonel-flores-y-un-posible-desgarro-de-alan-nid03102026/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T03:56:00.000Z",
+      "fecha": "2026-10-03T03:15:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T14:31:20.698Z",
       "relevancia": 81,
@@ -835,12 +1124,13 @@
       "fecha": "2026-10-02T22:58:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 25,
+      "relevancia": 26,
       "local": false,
       "deLaZona": true,
       "publicadaPor": "Hernán",
       "publicadaCuando": "2026-10-03T01:51:45.009Z",
       "temas": [
+        "hospital",
         "rutas"
       ],
       "como": "publicada",
@@ -888,29 +1178,29 @@
       "seccion": "Política",
       "medios": [
         "Agencia DIB",
-        "Minuto Uno",
         "Infobae",
-        "Clarín",
         "La Nación",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "iProfesional",
         "Ámbito",
-        "Crónica",
+        "El Destape",
+        "iProfesional",
+        "Clarín",
+        "El Día",
         "Radio Mitre",
         "Canal 26",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día"
+        "Crónica",
+        "Diario Popular",
+        "Perfil",
+        "A24",
+        "Página/12",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/sandra-pettovello-desplazo-a-la-subsecretaria-de-trabajo-claudia-testa/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T21:52:12.000Z",
+      "fecha": "2026-10-02T21:10:32.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 71,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1063,10 +1353,10 @@
       "guion": "Juan Gil Navarro frena una función de teatro por el uso de celulares",
       "seccion": "Cultura y agenda",
       "medios": [
-        "TN (Todo Noticias)",
-        "Crónica",
         "A24",
         "Infobae",
+        "TN (Todo Noticias)",
+        "Crónica",
         "Clarín",
         "C5N",
         "Radio Mitre",
@@ -1077,7 +1367,7 @@
       "fecha": "2026-10-02T19:49:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1155,8 +1445,8 @@
       "guion": "Verstappen agradece los elogios de Colapinto tras el choque en Bakú",
       "seccion": "Automovilismo",
       "medios": [
-        "Infobae",
         "TyC Sports",
+        "Infobae",
         "Radio Mitre"
       ],
       "enlace": "https://www.tycsports.com/automovilismo/verstappen-agradecio-los-elogios-de-colapinto-tras-su-accidente-en-baku-los-que-compiten-en-f1-no-son-mis-enemigos-id764060.html",
@@ -1164,7 +1454,7 @@
       "fecha": "2026-10-02T19:48:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:01:17.356Z",
-      "relevancia": 70,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1214,6 +1504,96 @@
       }
     },
     {
+      "id": "trd55d",
+      "titulo": "El Banco Central lanza la segunda licitación del FGS para créditos hipotecarios",
+      "copete": "El Banco Central convoca a una nueva subasta por 200.000 millones de pesos para financiar préstamos UVA. La medida amplía el acceso a personas que ya poseen propiedades bajo ciertas condiciones.",
+      "cuerpo": "El Banco Central concretará la segunda subasta del Fondo de Garantía de Sustentabilidad por 200.000 millones de pesos el martes 6 de octubre, entre las 11 y las 15. Los recursos se colocarán en plazos fijos UVA para que las entidades financieras otorguen préstamos destinados a la compra, construcción o refacción de viviendas.\n\nEl cambio principal de esta convocatoria radica en que la iniciativa ya no se limita de manera exclusiva a la primera vivienda. Ahora podrán acceder quienes, aun siendo propietarios, no posean el uso del inmueble, como en casos de herencias parciales o donaciones con usufructo ajeno, según detalló el economista Federico González Rouco.\n\nTras la acreditación de los fondos, las entidades dispondrán de 90 días corridos para volcarlos en créditos y evitar penalizaciones. El programa total prevé alcanzar los dos billones de pesos distribuidos en diez licitaciones para dinamizar el mercado hipotecario.",
+      "guion": "El Banco Central lanza la segunda licitación del FGS para créditos hipotecarios",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-el-gobierno-lanza-la-segunda-licitacion-del-fgs-y-amplia-quienes-podran-nid02102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T19:19:47.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T21:16:48.536Z",
+      "relevancia": 52,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El Banco Central realizará la segunda licitación del FGS por 200.000 millones de pesos el martes 6 de octubre de 11 a 15, según comunicó la autoridad monetaria.",
+        "Los fondos se destinarán a plazos fijos UVA para otorgar créditos hipotecarios.",
+        "La normativa amplía el alcance a quienes posean partes de inmuebles por herencia o propiedades con usufructo ajeno.",
+        "Los bancos tendrán 90 días corridos para aplicar el dinero en préstamos."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó qué entidades participarán de esta segunda subasta ni el volumen final de ofertas que recibirá el sistema."
+      ],
+      "textoRedes": "El Banco Central convoca a la segunda subasta del FGS por 200.000 millones de pesos para créditos hipotecarios y amplía el acceso a personas con inmuebles en usufructo o herencia.",
+      "etiquetas": [
+        "Banco Central",
+        "creditos hipotecarios",
+        "FGS",
+        "vivienda",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/creditos-hipotecarios-el-gobierno-lanza-la-segunda-licitacion-del-fgs-y-amplia-quienes-podran-nid02102026/",
+          "fecha": "2026-10-02T19:30:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/02/creditos-hipotecarios-cual-es-el-cambio-clave-que-habilitara-a-mas-familias-a-tomar-prestamos-para-vivienda/",
+          "fecha": "2026-10-02T20:13:21.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/02/el-gobierno-realizara-la-segunda-licitacion-de-plazos-fijos-con-fondos-de-la-anses-para-ampliar-la-oferta-de-creditos-hipotecarios/",
+          "fecha": "2026-10-02T20:19:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/creditos-hipotecarios--fijaron-la-fecha-para-la-segunda-licitacion-de-los--200-000-millones-de-la-anses_a6ac010d9f814a2817c907a3e",
+          "fecha": "2026-10-02T21:06:31.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "clxtth",
+          "titulo": "Créditos hipotecarios: ya son 12 los bancos que bajaron la tasa al 7,5% y otros tres la fijaron por debajo del 7%",
+          "fecha": "2026-09-23T02:59:00.000Z",
+          "ruta": "/nota/creditos-hipotecarios-ya-son-12-los-bancos-que-bajaron-la-tasa-al-7-5-clxtth"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-banco-central-lanza-la-segunda-licitacion-del-fgs-para-creditos",
+      "foto": {
+        "archivo": "fotos-notas/trd55d.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1ctsl0u",
       "titulo": "Dos consorcios compiten en la licitación para construir la Línea F",
       "copete": "El Gobierno de la Ciudad abrió los sobres con las propuestas técnicas para la obra de la Línea F. La inversión estimada alcanza los US$1.350 millones y los trabajos comenzarán a principios de 2027.",
@@ -1221,27 +1601,27 @@
       "guion": "Dos consorcios compiten en la licitación para construir la Linea F",
       "seccion": "Argentina",
       "medios": [
-        "Infobae",
         "La Nación",
         "El Cronista",
+        "Noticias Argentinas (NA)",
+        "Ámbito",
         "A24",
+        "Infobae",
         "iProfesional",
         "C5N",
-        "Crónica",
         "Radio Mitre",
-        "Canal 26",
+        "Perfil",
+        "Crónica",
         "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "ANDigital",
-        "Ámbito",
-        "Perfil"
+        "Canal 26",
+        "ANDigital"
       ],
       "enlace": "https://www.cronista.com/economia-politica/avanza-la-linea-f-del-subte-dos-consorcios-compiten-para-su-construccion/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T19:19:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T20:31:20.420Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1326,19 +1706,20 @@
       "guion": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones.",
       "seccion": "Política",
       "medios": [
-        "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
-        "La Voz del Pueblo",
-        "InfoRegión",
         "La Nueva",
-        "La Capital (Rosario)"
+        "InfoRegión",
+        "Clarín",
+        "El Día",
+        "La Capital (Rosario)",
+        "La Voz del Pueblo"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T18:50:40.275Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1353,16 +1734,9 @@
           "aporte": null
         },
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
-          "fecha": "2026-10-02T22:53:56.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Voz del Pueblo",
-          "enlace": "https://lavozdelpueblo.com.ar/milei-finalizo-su-visita-a-francia-con-un-acto-en-la-torre-eiffel",
-          "fecha": "2026-10-02T23:52:53.000Z",
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-2-16-23-0-milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro",
+          "fecha": "2026-10-02T19:32:31.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1374,9 +1748,16 @@
           "aporte": null
         },
         {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-2-16-23-0-milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro",
-          "fecha": "2026-10-02T19:32:31.000Z",
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/javier-milei-cerro-gira-paris-coctel-torre-eiffel-gobernadores-empresarios-musica-clasica_0_ApNCbEWYvI.html",
+          "fecha": "2026-10-02T20:12:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/javier-milei-cerro-su-gira-en-paris-con-un-evento-en-la-torre-eiffel-ante-empresarios-y-regresa-al-pais-este-sabado-politica-y-economia_1790978040",
+          "fecha": "2026-10-02T21:54:43.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1384,6 +1765,13 @@
           "medio": "La Capital (Rosario)",
           "enlace": "https://www.lacapital.com.ar/politica/la-argentina-se-dirige-nuevamente-paso-firme-el-futuro-dijo-milei-al-cerrar-su-visita-francia-n10284574.html",
           "fecha": "2026-10-02T22:07:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/milei-finalizo-su-visita-a-francia-con-un-acto-en-la-torre-eiffel",
+          "fecha": "2026-10-02T23:52:53.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -1536,20 +1924,20 @@
       "guion": "La Cámara de Casación revisa el sobreseimiento del ministro Luis Caputo",
       "seccion": "Política",
       "medios": [
-        "Perfil",
-        "Minuto Uno",
-        "Crónica",
-        "Diario Popular",
+        "Infobae",
         "Noticias Argentinas (NA)",
+        "Perfil",
+        "Diario Popular",
         "InfoRegión",
-        "Infobae"
+        "Crónica",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/10/02/revisaran-el-sobreseimiento-de-luis-caputo-por-la-emision-del-bono-a-100-anos/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:53:13.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T01:31:17.303Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1681,20 +2069,20 @@
       "guion": "Lula muestra una remera con la leyenda de Malvinas en su cierre de campaña.",
       "seccion": "Argentina",
       "medios": [
-        "TN (Todo Noticias)",
         "El Destape",
-        "Perfil",
-        "A24",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Tecla",
+        "TN (Todo Noticias)",
         "Clarín",
         "Radio Mitre",
         "Minuto Uno",
         "Ámbito",
         "C5N",
+        "Perfil",
+        "A24",
         "Página/12",
-        "El Día"
+        "El Día",
+        "La Tecla",
+        "Diario Popular",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.eldestapeweb.com/politica/fuerte-gesto-lula-cierra-campana-bandera-malvinas-argentinas-2026102142358",
       "teniaImagenLaFuente": true,
@@ -1842,8 +2230,8 @@
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
-        "La Nación",
         "Noticias Argentinas (NA)",
+        "La Nación",
         "El Marplatense",
         "La Capital (Rosario)",
         "El Día"
@@ -1927,88 +2315,6 @@
       }
     },
     {
-      "id": "ydwxhf",
-      "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-      "copete": "Un acumulado de 25 milímetros en la franja central del país redujo a la mitad los lotes trigueros regulares y reactivó las sembradoras de maíz.",
-      "cuerpo": "Las precipitaciones registradas en la última semana en la franja central del país acumularon un promedio de 25 milímetros y permitieron recortar a la mitad los lotes de trigo en estado regular, que pasaron del 15% al 7% del total regional según la Bolsa de Comercio de Rosario.\n\nEl relevamiento detalló que la superficie afectada bajó de unas 250.000 a 120.000 hectáreas, mientras que el agua caída destrabó las tareas para cubrir las 750.000 hectáreas pendientes de maíz y llevó el avance de la siembra al 65%. Septiembre había cerrado con un promedio de 31,5 milímetros tras concentrar el 80% del total mensual en estos siete días, revirtiendo parcialmente el déficit hídrico previo que motivaba pronósticos de precipitaciones escasas a fines de septiembre.\n\nEl impacto de las tormentas muestra marcadas diferencias geográficas, ya que el este y el centro-este previenen rindes de hasta 50 quintales por hectárea, en contraste con el noroeste bonaerense y el sudeste cordobés, donde los cultivos sufrieron daños por heladas tempranas y mermas de hasta el 60% en el rendimiento.",
-      "guion": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Agrositio"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T17:03:25.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 46,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cayeron 25 milímetros en promedio en la franja central del país.",
-        "Los lotes trigueros regulares se redujeron del 15% al 7%.",
-        "La siembra de maíz alcanzó un 65% de cobertura tras reactivarse las labores.",
-        "El noroeste bonaerense registra mermas de hasta el 60% por la sequía previa y las heladas."
-      ],
-      "seSabe": [
-        "Las precipitaciones acumuladas en la última semana alcanzaron un promedio de 25 milímetros en la región central, según informó la Bolsa de Comercio de Rosario.",
-        "La superficie de trigo en condición regular cayó del 15% (250.000 hectáreas) al 7% (120.000 hectáreas).",
-        "Las recargas de agua permitieron reactivar la siembra de maíz, que alcanzó una cobertura global del 65%.",
-        "Septiembre cerró con un promedio de 31,5 milímetros tras recibir en la última semana el 80% del agua acumulada en el mes."
-      ],
-      "noConfirmado": [
-        "El grado de recuperación real que podrán alcanzar las plantas en los distritos más afectados como General Villegas y General Pinto.",
-        "El techo productivo definitivo en los lotes del oeste regional tras el impacto de las heladas y la escasez hídrica previa."
-      ],
-      "textoRedes": "Las precipitaciones acumuladas en la última semana en la franja central del país redujeron a la mitad los lotes trigueros en estado regular y permitieron reactivar la siembra de maíz.",
-      "etiquetas": [
-        "lluvias",
-        "trigo",
-        "maíz",
-        "Bolsa de Comercio de Rosario",
-        "región núcleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
-          "fecha": "2026-10-02T17:03:25.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos detallados sobre el impacto de las lluvias en el trigo y el maíz, los porcentajes de afectación y las proyecciones por zonas."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248642-alivio-para-el-trigo-y-las-siembras-que-se-retoman-tras-los-25-mm-que-recibio-la-region-en-los-ultimos-7-dias.html",
-          "fecha": "2026-10-02T17:51:54.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el registro de 25 milímetros en la región y la reducción de los lotes regulares de trigo al 7% según la Bolsa de Comercio de Rosario."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz",
-      "foto": {
-        "archivo": "fotos-notas/ydwxhf.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "1akpidg",
       "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
       "copete": "Alumnas de la institución obsequiaron una producción artística que formó parte de una muestra local. El intendente Esteban Reino recibió la pieza.",
@@ -2079,19 +2385,19 @@
       "guion": "Karina Milei encabeza ronda de negocios en París por la pesca",
       "seccion": "Argentina",
       "medios": [
-        "Infobae",
-        "Perfil",
-        "Crónica",
-        "Canal 26",
         "Noticias Argentinas (NA)",
-        "Punto Noticias"
+        "Infobae",
+        "Crónica",
+        "Perfil",
+        "Punto Noticias",
+        "Canal 26"
       ],
       "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T16:57:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:31:19.096Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2192,15 +2498,15 @@
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
         "Ámbito",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
         "C5N",
         "Crónica",
-        "Noticias Argentinas (NA)",
-        "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
-        "Punto Noticias",
-        "La Nueva",
         "0223 (Mar del Plata)",
-        "La Verdad"
+        "Punto Noticias",
+        "La Verdad",
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al--temor-a-volver-al-infierno-_a6abfdbe3f814a2817c8806de",
       "teniaImagenLaFuente": true,
@@ -2291,109 +2597,6 @@
       "slug": "luis-caputo-pide-confianza-a-los-empresarios-y-descarta-devaluar"
     },
     {
-      "id": "1h348rv",
-      "titulo": "Caputo anticipa una reforma impositiva para 2031 en el Coloquio de IDEA",
-      "copete": "El ministro de Economía brindó un mensaje grabado en el cierre del encuentro en Mar del Plata. Prometió recortes de tributos y analizó la suba del riesgo país.",
-      "cuerpo": "El ministro de Economía, Luis Caputo, aseguró que la administración nacional continuará con la baja de tributos y regulaciones y proyectó una reforma para simplificar el sistema tributario después de 2031. El funcionario participó el viernes en la jornada final del 62º Coloquio de IDEA mediante una entrevista grabada de 19 minutos desde el Palacio de Hacienda, ya que no pudo trasladarse a Mar del Plata.\n\nEn relación con el incremento del riesgo país, el titular del Palacio de Hacienda indicó que un porcentaje se origina en factores internacionales y el resto obedece al temor sectorial a un retorno a medidas pasadas. Asimismo, cuestionó los gravámenes establecidos por provincias y municipios al calificarlos como los más distorsivos para la actividad productiva.",
-      "guion": "Caputo anticipa una reforma impositiva para 2031 en el Coloquio de IDEA",
-      "seccion": "Economía",
-      "medios": [
-        "Diputados Bonaerenses",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "Canal 26",
-        "QZ Noticias (Mar del Plata)",
-        "Agroempresario",
-        "El Día"
-      ],
-      "enlace": "https://www.qznoticias.com/la-ciudad/caputo-anticipo-una-reforma-tributaria-y-prometio-seguir-bajando-impuestos",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T16:43:59.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T19:01:28.926Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El ministro de Economía habló en el cierre del 62º Coloquio de IDEA.",
-        "Anunció una reforma para simplificar el sistema tributario después de 2031.",
-        "Atribuyó la suba del riesgo país a un contexto externo y al temor político.",
-        "Cuestionó los impuestos aplicados por las provincias y los municipios."
-      ],
-      "seSabe": [
-        "El ministro de Economía, Luis Caputo, participó en el 62º Coloquio de IDEA con un mensaje grabado.",
-        "La entrevista se proyectó en la jornada de cierre del encuentro empresarial en Mar del Plata.",
-        "El funcionario anticipó una reforma tributaria para después de 2031.",
-        "Atribuyó parte del aumento del riesgo país a factores internacionales."
-      ],
-      "textoRedes": "El ministro de Economía, Luis Caputo, anticipó una reforma tributaria para después de 2031 y prometió continuar con la baja de tributos durante su participación en el 62º Coloquio de IDEA.",
-      "etiquetas": [
-        "Luis Caputo",
-        "Coloquio de IDEA",
-        "Reforma tributaria",
-        "Economía",
-        "Mar del Plata"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/la-ciudad/caputo-anticipo-una-reforma-tributaria-y-prometio-seguir-bajando-impuestos",
-          "fecha": "2026-10-02T16:43:59.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones sobre el riesgo país, impuestos provinciales y previsibilidad."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/caputo-pidio-tiempo-a-los-empresarios-y-postergo-la-reforma-tributaria-para-despues-de-2031-nid02102026/",
-          "fecha": "2026-10-02T16:48:21.000Z",
-          "oficial": false,
-          "aporte": "Informó la duración de la entrevista y que se grabó en el Palacio de Hacienda."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/en-idea-caputo-prometio-una-reforma-tributaria-para-2031-a40.phtml",
-          "fecha": "2026-10-02T17:01:26.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la defensa del RIGI y la proyección de crecimiento por veinte años."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/02/ante-los-empresarios-de-idea-luis-caputo-prometio-una-reforma-tributaria-para-2031/",
-          "fecha": "2026-10-02T17:09:03.000Z",
-          "oficial": false,
-          "aporte": "Señaló la promesa de la reforma tributaria para 2031 y la calma ante el riesgo país."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/10/02/luis-caputo-anticipo-una-reforma-tributaria-despues-de-2031-y-explico-que-pasara-con-los-impuestos/",
-          "fecha": "2026-10-02T18:44:57.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el mensaje se emitió el viernes en Mar del Plata."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "18bbdzh",
-          "titulo": "Caputo promete una reforma tributaria para 2031 y proyecta crecimiento",
-          "fecha": "2026-10-02T16:34:37.000Z",
-          "ruta": "/nota/caputo-promete-una-reforma-tributaria-para-2031-y-proyecta-crecimiento-18bbdzh"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "caputo-anticipa-una-reforma-impositiva-para-2031-en-el-coloquio-de",
-      "foto": {
-        "archivo": "fotos-notas/1h348rv.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "n09ogo",
       "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
       "copete": "El exdelantero confirmó mediante sus redes sociales que tendrá su encuentro homenaje en el estadio de Boca. A cinco años de su retiro profesional, todavía resta definir la fecha y el horario.",
@@ -2404,17 +2607,17 @@
         "Diario La Vanguardia",
         "La Nación",
         "TN (Todo Noticias)",
-        "Página/12",
-        "TyC Sports",
-        "Olé",
-        "C5N",
-        "Noticias Argentinas (NA)",
-        "La Verdad",
-        "La Voz del Pueblo",
-        "La Nueva",
         "Minuto Uno",
+        "Olé",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "TyC Sports",
         "Clarín",
-        "Ecos Diarios (Necochea)"
+        "Página/12",
+        "Ecos Diarios (Necochea)",
+        "La Voz del Pueblo",
+        "C5N",
+        "La Verdad"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
       "teniaImagenLaFuente": true,
@@ -2515,6 +2718,110 @@
       "slug": "carlos-tevez-anuncia-su-partido-de-despedida-en-la-bombonera",
       "foto": {
         "archivo": "fotos-notas/n09ogo.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
+      "id": "1h348rv",
+      "titulo": "Caputo anticipa una reforma impositiva para 2031 en el Coloquio de IDEA",
+      "copete": "El ministro de Economía brindó un mensaje grabado en el cierre del encuentro en Mar del Plata. Prometió recortes de tributos y analizó la suba del riesgo país.",
+      "cuerpo": "El ministro de Economía, Luis Caputo, aseguró que la administración nacional continuará con la baja de tributos y regulaciones y proyectó una reforma para simplificar el sistema tributario después de 2031. El funcionario participó el viernes en la jornada final del 62º Coloquio de IDEA mediante una entrevista grabada de 19 minutos desde el Palacio de Hacienda, ya que no pudo trasladarse a Mar del Plata.\n\nEn relación con el incremento del riesgo país, el titular del Palacio de Hacienda indicó que un porcentaje se origina en factores internacionales y el resto obedece al temor sectorial a un retorno a medidas pasadas. Asimismo, cuestionó los gravámenes establecidos por provincias y municipios al calificarlos como los más distorsivos para la actividad productiva.",
+      "guion": "Caputo anticipa una reforma impositiva para 2031 en el Coloquio de IDEA",
+      "seccion": "Economía",
+      "medios": [
+        "Diputados Bonaerenses",
+        "QZ Noticias (Mar del Plata)",
+        "El Cronista",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "Canal 26",
+        "El Día"
+      ],
+      "enlace": "https://www.qznoticias.com/la-ciudad/caputo-anticipo-una-reforma-tributaria-y-prometio-seguir-bajando-impuestos",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T16:34:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T19:01:28.926Z",
+      "relevancia": 70,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El ministro de Economía habló en el cierre del 62º Coloquio de IDEA.",
+        "Anunció una reforma para simplificar el sistema tributario después de 2031.",
+        "Atribuyó la suba del riesgo país a un contexto externo y al temor político.",
+        "Cuestionó los impuestos aplicados por las provincias y los municipios."
+      ],
+      "seSabe": [
+        "El ministro de Economía, Luis Caputo, participó en el 62º Coloquio de IDEA con un mensaje grabado.",
+        "La entrevista se proyectó en la jornada de cierre del encuentro empresarial en Mar del Plata.",
+        "El funcionario anticipó una reforma tributaria para después de 2031.",
+        "Atribuyó parte del aumento del riesgo país a factores internacionales."
+      ],
+      "textoRedes": "El ministro de Economía, Luis Caputo, anticipó una reforma tributaria para después de 2031 y prometió continuar con la baja de tributos durante su participación en el 62º Coloquio de IDEA.",
+      "etiquetas": [
+        "Luis Caputo",
+        "Coloquio de IDEA",
+        "Reforma tributaria",
+        "Economía",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-ciudad/caputo-anticipo-una-reforma-tributaria-y-prometio-seguir-bajando-impuestos",
+          "fecha": "2026-10-02T16:43:59.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones sobre el riesgo país, impuestos provinciales y previsibilidad."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/caputo-pidio-tiempo-a-los-empresarios-y-postergo-la-reforma-tributaria-para-despues-de-2031-nid02102026/",
+          "fecha": "2026-10-02T16:48:21.000Z",
+          "oficial": false,
+          "aporte": "Informó la duración de la entrevista y que se grabó en el Palacio de Hacienda."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/en-idea-caputo-prometio-una-reforma-tributaria-para-2031-a40.phtml",
+          "fecha": "2026-10-02T17:01:26.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la defensa del RIGI y la proyección de crecimiento por veinte años."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/02/ante-los-empresarios-de-idea-luis-caputo-prometio-una-reforma-tributaria-para-2031/",
+          "fecha": "2026-10-02T17:09:03.000Z",
+          "oficial": false,
+          "aporte": "Señaló la promesa de la reforma tributaria para 2031 y la calma ante el riesgo país."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/10/02/luis-caputo-anticipo-una-reforma-tributaria-despues-de-2031-y-explico-que-pasara-con-los-impuestos/",
+          "fecha": "2026-10-02T18:44:57.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el mensaje se emitió el viernes en Mar del Plata."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18bbdzh",
+          "titulo": "Caputo promete una reforma tributaria para 2031 y proyecta crecimiento",
+          "fecha": "2026-10-02T16:34:37.000Z",
+          "ruta": "/nota/caputo-promete-una-reforma-tributaria-para-2031-y-proyecta-crecimiento-18bbdzh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "caputo-anticipa-una-reforma-impositiva-para-2031-en-el-coloquio-de",
+      "foto": {
+        "archivo": "fotos-notas/1h348rv.jpg",
         "credito": "Foto: TN (Todo Noticias)"
       }
     },
@@ -2692,9 +2999,9 @@
       "guion": "Rubén Darío Insúa pide una marcha para que Lionel Messi juegue el Mundial 2030",
       "seccion": "Fútbol",
       "medios": [
-        "Infobae",
         "TN (Todo Noticias)",
         "Olé",
+        "Infobae",
         "Radio Mitre",
         "Doble Amarilla"
       ],
@@ -2703,7 +3010,7 @@
       "fecha": "2026-10-02T15:11:57.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 82,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2765,6 +3072,139 @@
       }
     },
     {
+      "id": "1vbxjbh",
+      "titulo": "El riesgo país trepa a 650 puntos y marca un récord anual",
+      "copete": "El indicador financiero que elabora el JP Morgan avanza un 2,2% en la segunda jornada de octubre. La plaza local opera en baja y el dólar minorista cotiza a $1.495 para la compra.",
+      "cuerpo": "En paralelo, el S&P Merval baja un 0,3% en pesos hasta los 2.749.983,130 puntos, mientras los títulos soberanos y los ADRs operan mayoritariamente en terreno negativo.\n\nEl comportamiento alcista responde a un escenario externo más exigente y a la incertidumbre política local de cara al ciclo electoral, según detallan los informes financieros. Días atrás, el indicador se ubicaba en torno a los 633 puntos básicos tras registrar variaciones a la baja y al alza durante la última semana de septiembre.\n\nPor su parte, el segmento mayorista opera en los $1.523,5 por unidad.",
+      "guion": "El riesgo país trepa a 650 puntos y marca un récord anual",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "El Destape",
+        "Perfil",
+        "La Nación",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "Crónica",
+        "El Eco de Tandil",
+        "Diario Popular"
+      ],
+      "enlace": "https://www.perfil.com/noticias/economia/el-riesgo-pais-escala-a-650-puntos-basicos-y-alcanza-un-nuevo-maximo-en-el-ano-a40.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T14:50:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T22:01:17.356Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El índice financiero que elabora el JP Morgan sube un 2,2% respecto al jueves, según los datos de mercado.",
+        "El valor máximo anterior del año había sido alcanzado en marzo, cuando llegó a los 637 puntos.",
+        "Las reservas del Banco Central se ubican por encima de los 48.000 millones de dólares."
+      ],
+      "noConfirmado": [
+        "La cifra exacta de 655 puntos básicos mencionada por un despacho contrastaba con los 650 puntos registrados por las pantallas del sector."
+      ],
+      "textoRedes": "El riesgo país alcanza los 650 puntos básicos tras trepar un 2,2% en el inicio de octubre y marca un nuevo récord en lo que va del año, en una jornada con mayoría de bajas en la plaza bursátil.",
+      "etiquetas": [
+        "riesgo pais",
+        "economia",
+        "dolar",
+        "mercados"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/el-riesgo-pais-escala-a-650-puntos-basicos-y-alcanza-un-nuevo-maximo-en-el-ano-a40.phtml",
+          "fecha": "2026-10-02T15:26:23.000Z",
+          "oficial": false,
+          "aporte": "Detalló los valores del riesgo país, las cotizaciones bursátiles, el dólar y los factores económicos de la suba."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/el-riesgo-pais-continua-la-escalada-y-trepo-hasta-650-puntos-el-valor-mas-alto-del-ano",
+          "fecha": "2026-10-02T21:02:55.000Z",
+          "oficial": false,
+          "aporte": "Indicó el incremento de 14 unidades y el valor previo de marzo."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-escala-hasta-los-650-puntos-el-valor-mas-alto-del-ano-nid02102026/",
+          "fecha": "2026-10-02T16:11:53.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el indicador se ubica en los 650 puntos básicos según las pantallas de Rava."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/despues-discurso-milei-riesgo-pais-llega-maximo-ano-2026102125317",
+          "fecha": "2026-10-02T15:53:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la caída de los bonos tras un discurso del jefe de Estado."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/finanzas/465786-riesgo-pais-llego-650-puntos-volvio-niveles-noviembre-2025",
+          "fecha": "2026-10-02T20:26:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló la incertidumbre sobre reservas y acceso a dólares en la plaza local."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/riesgo-pais-record-ano-650-puntos/",
+          "fecha": "2026-10-02T15:48:38.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el índice establece una nueva marca máxima anual tras sumar otra jornada en alza."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano_a6abfc939f814a2817c8518c5",
+          "fecha": "2026-10-02T21:10:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el indicador continúa con su escalada en la fecha."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-trepa-al-valor-mas-alto-del-ano-politica-y-economia_1790955480",
+          "fecha": "2026-10-02T20:20:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "34t457",
+          "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
+          "fecha": "2026-10-01T16:53:08.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
+        },
+        {
+          "id": "1k34j05",
+          "titulo": "El riesgo país supera los 630 puntos y marca el récord de 2026",
+          "fecha": "2026-09-28T15:49:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-marca-el-record-de-2026-1k34j05"
+        },
+        {
+          "id": "1b57l0z",
+          "titulo": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
+          "fecha": "2026-09-27T03:01:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-baja-a-604-puntos-tras-el-repunte-de-los-bonos-1b57l0z"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 8 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-riesgo-pais-trepa-a-650-puntos-y-marca-un-record-anual",
+      "foto": {
+        "archivo": "fotos-notas/1vbxjbh.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "cmitva",
       "titulo": "La producción lechera bonaerense crece mientras la facturación cae",
       "copete": "La producción de leche y las exportaciones crecen a nivel nacional, pero los tambos bonaerenses sufren una caída en la facturación y el cierre de establecimientos. La cuenca Mar y Sierras, que incluye a Balcarce, lidera el rendimiento productivo.",
@@ -2782,7 +3222,7 @@
       "fecha": "2026-10-02T14:49:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 60,
+      "relevancia": 52,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2851,82 +3291,6 @@
       }
     },
     {
-      "id": "1artfui",
-      "titulo": "Almirante Brown organiza Una Noche en los Museos el sábado",
-      "copete": "El municipio bonaerense realiza el sábado una nueva edición de Una Noche en los Museos con visitas a espacios culturales y rebajas en locales gastronómicos.",
-      "cuerpo": "El Municipio de Almirante Brown organiza Una Noche en los Museos el sábado 3 de octubre, en el horario de 18 a 21.30. La propuesta incluye la apertura de museos, centros históricos y muestras artísticas en diferentes localidades del distrito, como Adrogué, José Mármol, Longchamps, Burzaco, Ministro Rivadavia y Glew.\n\nAdemás de las visitas culturales, los vecinos acceden a un 20 por ciento de descuento en las compras realizadas en los locales gastronómicos adheridos a la jornada.",
-      "guion": "Almirante Brown organiza Una Noche en los Museos el sábado",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "TyC Sports",
-        "Diario Popular",
-        "Diario Conurbano"
-      ],
-      "enlace": "https://diarioconurbano.com.ar/principal/este-sabado-llega-una-noche-en-los-museos-a-brown-con-descuentos-en-gastronomia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T14:22:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 40,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se realiza el sábado 3 de octubre de 18 a 21.30",
-        "Participan espacios culturales de varias localidades",
-        "Ofrecen un 20 por ciento de descuento en gastronomía"
-      ],
-      "seSabe": [
-        "El evento se llama Una Noche en los Museos y se realiza en Almirante Brown",
-        "La jornada es el sábado 3 de octubre de 18 a 21.30",
-        "Hay un 20 por ciento de descuento en locales gastronómicos adheridos",
-        "Participan espacios de Adrogué, José Mármol, Longchamps, Burzaco, Ministro Rivadavia y Glew",
-        "La iniciativa fue anunciada por el municipio e invitó Mariano Cascallares"
-      ],
-      "textoRedes": "Almirante Brown realiza Una Noche en los Museos este sábado de 18 a 21.30 con visitas a espacios culturales y descuentos en gastronomía.",
-      "etiquetas": [
-        "Almirante Brown",
-        "Cultura",
-        "Museos",
-        "Gastronomía"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario Conurbano",
-          "enlace": "https://diarioconurbano.com.ar/principal/este-sabado-llega-una-noche-en-los-museos-a-brown-con-descuentos-en-gastronomia/",
-          "fecha": "2026-10-02T14:22:38.000Z",
-          "oficial": false,
-          "aporte": "Informó todos los detalles sobre el evento cultural, horarios, espacios participantes y descuentos gastronómicos."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/primera-nacional/argentina-campeonato-primera-nacional-2026-san-telmo-vs-almirante-brown-fecha-32-id764043.html",
-          "fecha": "2026-10-02T18:30:17.000Z",
-          "oficial": false,
-          "aporte": "No aportó información en el resumen proporcionado."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/sururbano/nueva-edicion-una-noche-los-museos-almirante-brown-n922642",
-          "fecha": "2026-10-02T18:57:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información en el resumen proporcionado."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "almirante-brown-organiza-una-noche-en-los-museos-el-sabado",
-      "foto": {
-        "archivo": "fotos-notas/1artfui.jpg",
-        "credito": "Foto: Diario Conurbano"
-      }
-    },
-    {
       "id": "2ctmyu",
       "titulo": "Banco Nación y ROSGAN organizan el Gran Remate Aniversario",
       "copete": "La subasta ganadera se realizará el 13 de octubre en la ciudad de Rosario con una proyección de más de 12.000 cabezas.",
@@ -2942,7 +3306,7 @@
       "fecha": "2026-10-02T14:06:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 28,
+      "relevancia": 24,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3424,119 +3788,6 @@
       }
     },
     {
-      "id": "5pxon8",
-      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
-      "copete": "La minera invertirá 4000 millones de dólares en Catamarca tras la aprobación del proyecto para ingresar al RIGI. Las obras comenzarán en noviembre de 2027.",
-      "cuerpo": "El presidente Javier Milei y el director ejecutivo de Glencore, Gary Nagle, anunciaron en París un acuerdo para desarrollar el proyecto minero Agua Rica, ubicado en la provincia de Catamarca. La iniciativa contempla una inversión estimada en 4000 millones de dólares y fue aprobada para ingresar al Régimen de Incentivo para Grandes Inversiones.\n\nDurante los primeros dos años, la compañía prevé desembolsar 771 millones de dólares.\n\nEl proyecto tendrá un potencial de producción anual de 200.000 toneladas de cobre destinadas a la exportación. En materia de empleo, la construcción demandará hasta 3500 puestos de trabajo, y la etapa operativa contará con 1250 empleos directos y 3750 indirectos.",
-      "guion": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "El Cronista",
-        "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)",
-        "A24",
-        "Clarín",
-        "El Día"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/glencore-anuncio-una-inversion-de-us4000-millones-para-desarrollar-agua-rica-en-catamarca-nid02102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T12:23:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 65,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Inversión de 4000 millones de dólares en Catamarca.",
-        "Aprobación para ingresar al Régimen de Incentivo para Grandes Inversiones.",
-        "Inicio de obras previsto para noviembre de 2027.",
-        "Producción estimada de 200.000 toneladas de cobre por año."
-      ],
-      "seSabe": [
-        "El presidente Javier Milei y el director ejecutivo de Glencore, Gary Nagle, anunciaron el acuerdo en París.",
-        "El proyecto Agua Rica ingresará al Régimen de Incentivo para Grandes Inversiones, según informó Presidencia.",
-        "La inversión total estimada es de 4000 millones de dólares.",
-        "La producción anual alcanzará las 200.000 toneladas de cobre para exportación."
-      ],
-      "textoRedes": "La minera Glencore invertirá 4000 millones de dólares para desarrollar el proyecto minero Agua Rica en Catamarca tras ingresar al RIGI.",
-      "etiquetas": [
-        "Glencore",
-        "Agua Rica",
-        "Catamarca",
-        "RIGI",
-        "mineria"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/glencore-anuncio-una-inversion-de-us4000-millones-para-desarrollar-agua-rica-en-catamarca-nid02102026/",
-          "fecha": "2026-10-02T12:23:46.000Z",
-          "oficial": false,
-          "aporte": "Detalles de la inversión, plazos de ejecución, estimaciones de producción y destinos de exportación."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/milei-glencore-anunciaron-inversion-us4000-millones-desarrollar-proyecto-minero-agua-rica-a40.phtml",
-          "fecha": "2026-10-02T12:36:15.000Z",
-          "oficial": false,
-          "aporte": "Aprobación para ingresar al RIGI y fecha estimada de inicio de obras."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/negocios/otro-rigi-llega-de-paris-glencore-invertira-us-4000-millones-en-uno-de-los-mayores-proyectos-de-cobre/",
-          "fecha": "2026-10-02T12:39:10.000Z",
-          "oficial": false,
-          "aporte": "Confirmación de la aprobación del Comité Evaluador."
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/economia/milei-y-glencore-anunciaron-una-inversion-us4000-millones-argentina-donde-sera-y-que-produciran-n1602563",
-          "fecha": "2026-10-02T12:42:00.000Z",
-          "oficial": false,
-          "aporte": "Anuncio del avance del proyecto en París y potencial exportador."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/milei-y-glencore-anunciaron-en-paris-el-desarrollo-de-agua-rica_a6abfa7b4f814a2817c7fc6bf",
-          "fecha": "2026-10-02T12:50:17.000Z",
-          "oficial": false,
-          "aporte": "Monto de la inversión de capital estimada en US$4000 millones."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/02/109992-milei-y-glencore-anunciaron-en-paris-el-desarrollo-de-agua-rica",
-          "fecha": "2026-10-02T12:41:50.000Z",
-          "oficial": false,
-          "aporte": "Sin contenido informativo en el resumen."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "9oermg",
-          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
-          "fecha": "2026-09-25T00:30:34.751Z",
-          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "glencore-anuncia-una-inversion-millonaria-para-desarrollar-agua-rica",
-      "foto": {
-        "archivo": "fotos-notas/5pxon8.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
       "id": "1b3j5uw",
       "titulo": "Marcelo Mindlin anticipa proyectos industriales con gas de Vaca Muerta",
       "copete": "El presidente de Pampa Energía destacó el interés empresario en Francia y señaló planes para fabricar fertilizantes y abastecer centros de datos con gas local.",
@@ -3545,17 +3796,17 @@
       "seccion": "Economía",
       "medios": [
         "Infobae",
-        "Perfil",
+        "La Nueva",
         "El Cronista",
-        "Página/12",
-        "La Nueva"
+        "Perfil",
+        "Página/12"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/02/marcelo-mindlin-destaco-el-interes-por-argentina-en-francia-yo-prefiero-invertir-hoy-no-esperar-a-manana/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T12:06:23.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T15:01:29.421Z",
-      "relevancia": 64,
+      "relevancia": 54,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3825,93 +4076,6 @@
       "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
     },
     {
-      "id": "l415ro",
-      "titulo": "Marco Morelli lidera la práctica de Moto3 en Japón",
-      "copete": "El piloto argentino marcó el mejor registro en el circuito de Motegi. Su compatriota Valentín Perrone finalizó quinto y ambos avanzaron a la Q2.",
-      "cuerpo": "El piloto Marco Morelli registró el mejor tiempo en la práctica de Moto3 el viernes en el Circuito Internacional de Motegi, en Japón, con una marca de 1:55.280 a bordo de su KTM.\n\nPor su parte, el otro representante nacional, Valentín Perrone, finalizó en la quinta posición con un tiempo de 1:55.412. De esta manera, ambos deportistas aseguraron su clasificación directa a la Q2 tras quedar separados por apenas 132 milésimas.\n\nLa carrera de la categoría se disputará el sábado a partir de las 23 horas de Argentina en el trazado japonés, donde buscarán definir sus lugares de partida.",
-      "guion": "Marco Morelli lidera la práctica de Moto3 en Japón",
-      "seccion": "Automovilismo",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Olé",
-        "Minuto Uno"
-      ],
-      "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/02/un-argentino-dio-la-sorpresa-y-se-quedo-con-el-mejor-tiempo-en-la-practica-de-la-categoria-moto3-en-el-gp-de-japon/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T11:47:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T20:31:20.420Z",
-      "relevancia": 56,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Marco Morelli marcó el mejor tiempo en la práctica de Moto3 en Japón con un registro de 1:55.280.",
-        "Valentín Perrone finalizó en la quinta ubicación a poca distancia de su compatriota.",
-        "Ambos pilotos argentinos aseguraron su clasificación directa a la Q2.",
-        "La competencia principal se largará este sábado a las 23 horas de Argentina."
-      ],
-      "textoRedes": "Marco Morelli marcó el mejor tiempo en la práctica de Moto3 en Japón y Valentín Perrone terminó quinto. Ambos argentinos avanzaron de manera directa a la Q2 y correrán este sábado.",
-      "etiquetas": [
-        "Moto3",
-        "Marco Morelli",
-        "Valentin Perrone",
-        "Japon",
-        "Motegi"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/02/un-argentino-dio-la-sorpresa-y-se-quedo-con-el-mejor-tiempo-en-la-practica-de-la-categoria-moto3-en-el-gp-de-japon/",
-          "fecha": "2026-10-02T11:47:06.000Z",
-          "oficial": false,
-          "aporte": "Informó el tiempo de Marco Morelli, la posición de Valentín Perrone y los detalles de la clasificación a la Q2."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/enorme-performance-marco-morelli-sorprendio-japon-y-fue-el-mas-rapido-moto3-n6329446",
-          "fecha": "2026-10-02T16:36:48.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el registro de la práctica en Motegi y la ubicación de ambos pilotos."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/quien-es-marco-morelli-el-argentino-que-sorprendio-en-moto3-con-el-mejor-tiempo-en-el-gran-premio-de-japon/",
-          "fecha": "2026-10-02T13:58:11.000Z",
-          "oficial": false,
-          "aporte": "Aportó la diferencia de tiempo entre los dos argentinos y su pase a la Q2."
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/autos/moto3-japon-vistio-celeste-blanco-marco-morelli-hizo-mejor-viernes-ano_0_nN0MVcoo7K.html",
-          "fecha": "2026-10-02T19:46:16.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la actividad correspondió a la 16ª ronda de la categoría."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1uamvkq",
-          "titulo": "Diego Ciantini marca el mejor tiempo en el último entrenamiento",
-          "fecha": "2026-09-26T16:39:24.000Z",
-          "ruta": "/nota/diego-ciantini-marca-el-mejor-tiempo-en-el-ultimo-entrenamiento-en-1uamvkq"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "marco-morelli-lidera-la-practica-de-moto3-en-japon",
-      "foto": {
-        "archivo": "fotos-notas/l415ro.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
-    },
-    {
       "id": "gfh5l8",
       "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "copete": "El gobernador Axel Kicillof firmó el decreto que transfiere un terreno de la ex mina Catriel, ubicado en Sierras Bayas, para el desarrollo de un espacio recreativo y cultural.",
@@ -3919,17 +4083,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
-        "Infoeme",
-        "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB"
+        "Agencia DIB",
+        "El Eco de Tandil",
+        "Infoeme"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 55,
+      "relevancia": 51,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4062,24 +4226,338 @@
         "archivo": "fotos-notas/1qitrjt.jpg",
         "credito": "Foto: Noticias Agropecuarias"
       }
+    },
+    {
+      "id": "1jejg3m",
+      "titulo": "Diputados convoca a una sesión para definir el futuro del DNU",
+      "copete": "La oposición fijó para el 15 de octubre un encuentro en la Cámara baja para intentar la derogación del megadecreto presidencial, tras una decisión de la Corte Suprema.",
+      "cuerpo": "La Cámara de Diputados fijará para el quince de octubre una sesión especial impulsada por sectores opositores con la intenci/on de revocar el decreto de necesidad y urgencia 70 de dos mil veintitrés. El llamado surge a raíz de una sentencia de la Corte Suprema que repuso un apartado sobre propiedad de tierras. Como la Cámara alta desaprobó la medida en marzo del año pasado, un voto negativo en la baja dejaría sin efecto la norma.\n\nLa eventual anulaci/on haría regresar normativas previas, entre ellas las reglas sobre alquileres, las condiciones de las obras sociales, las prepagas y el comercio exterior.",
+      "guion": "Diputados convoca a una sesión para definir el futuro del DNU",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "El Eco de Tandil",
+        "Radio Mitre",
+        "Canal 26",
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/politica/las-regulaciones-que-volverian-a-regir-si-diputados-rechaza-el-dnu-7023-nid01102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T06:11:52.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T16:31:18.468Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La oposición busca derogar el DNU en la Cámara baja",
+        "La sesión especial tendrá lugar el 15 de octubre",
+        "El Senado ya había rechazado la medida en marzo de 2024"
+      ],
+      "seSabe": [
+        "La Cámara de Diputados tendrá una sesión especial el 15 de octubre",
+        "La Corte Suprema restituyó un artículo vinculado a la venta de tierras",
+        "El Senado rechazó el DNU en marzo de 2024"
+      ],
+      "noConfirmado": [
+        "Todavía no se conoce el resultado de la votación en la Cámara baja",
+        "No se detallaron los apoyos exactos con los que cuenta la iniciativa opositora"
+      ],
+      "etiquetas": [
+        "Diputados",
+        "DNU",
+        "Corte Suprema"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/las-regulaciones-que-volverian-a-regir-si-diputados-rechaza-el-dnu-7023-nid01102026/",
+          "fecha": "2026-10-02T06:11:52.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el fallo de la Corte Suprema, la derogación y el impacto en diversas leyes."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/que-leyes-volverian-a-regir-si-diputados-deroga-el-dnu-70-de-javier-milei",
+          "fecha": "2026-10-02T15:08:17.000Z",
+          "oficial": false,
+          "aporte": "Aportó la fecha del 15 de octubre para la sesión especial en Diputados."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/02/que-leyes-volverian-a-regir-si-diputados-deroga-el-dnu-70-de-javier-milei/",
+          "fecha": "2026-10-02T14:39:39.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la convocatoria opositora para debatir la desregulación económica."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/las-normas-que-volverian-a-regir-si-diputados-deroga-el-dnu-70-en-la-sesion-del-15-de-octubre/",
+          "fecha": "2026-10-02T16:09:43.000Z",
+          "oficial": false,
+          "aporte": "Señaló el antecedente del rechazo del Senado en marzo de 2024."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "diputados-convoca-a-una-sesion-para-definir-el-futuro-del-dnu",
+      "foto": {
+        "archivo": "fotos-notas/1jejg3m.jpg",
+        "credito": "Foto: Radio Mitre"
+      }
+    },
+    {
+      "id": "ei8drx",
+      "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
+      "copete": "El neerlandêcutez dominó la clasificación en el circuito de Sepang. El piloto argentino sufrió inconvenientes con los neumáticos y penalizó quince posiciones en la grilla.",
+      "cuerpo": "El piloto de Red Bull superó a Lewis Hamilton, quien finalizó segundo con su Ferrari en el circuito de Sepang, de acuerdo con la información de los medios especializados.\n\nPor su parte, Franco Colapinto no logró superar la segunda ronda clasificatoria tras registrar problemas con los neumáticos. Aunque terminó en la decimoquinta colocación, el argentino arrastraba quince puestos de sanción por distintas penalidades, por lo que arrancará en el vigesimoprimer lugar de la grilla para la fecha 16 del campeonato mundial.",
+      "guion": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
+      "seccion": "Automovilismo",
+      "medios": [
+        "La Nación",
+        "El Eco de Tandil",
+        "QZ Noticias (Mar del Plata)",
+        "TN (Todo Noticias)",
+        "Bolavip Argentina",
+        "Canal 26",
+        "A24",
+        "El Día",
+        "Infobae",
+        "TyC Sports",
+        "Radio Mitre",
+        "C5N",
+        "Olé",
+        "Crónica",
+        "Minuto Uno",
+        "Perfil",
+        "0221",
+        "La Tecla",
+        "Página/12",
+        "Ámbito",
+        "El Marplatense",
+        "Noticias Argentinas (NA)",
+        "La Verdad",
+        "Diario Popular",
+        "Doble Amarilla",
+        "Clarín",
+        "La Brújula 24",
+        "La Capital (Rosario)",
+        "El Gráfico",
+        "LU9 Mar del Plata"
+      ],
+      "enlace": "https://www.cronica.com.ar/depo/polideportivo/max-verstappen/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T05:20:23.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T09:31:16.973Z",
+      "relevancia": 97,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Max Verstappen logró el mejor tiempo en la clasificación con un registro de 1m35s130.",
+        "Lewis Hamilton terminó en la segunda posición con el auto de Ferrari.",
+        "Franco Colapinto quedó fuera en la Q2 y largará en el fondo de la grilla por penalizaciones."
+      ],
+      "noConfirmado": [
+        "Existen discrepancias entre las fuentes respecto a la denominación oficial del Gran Premio, ya que algunas publicaciones lo ubican en Malasia y otras en Bahréin."
+      ],
+      "textoRedes": "Max Verstappen se quedó con la pole position en la Fórmula 1 tras marcar el mejor tiempo en la clasificación. Por su parte, Franco Colapinto sufrió inconvenientes con los neumáticos, no pasó la Q2 y largará en el vigesimoprimer puesto debido a diversas penalizaciones.",
+      "etiquetas": [
+        "Formula 1",
+        "Max Verstappen",
+        "Franco Colapinto",
+        "Gran Premio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/polideportivo/max-verstappen/",
+          "fecha": "2026-10-03T09:01:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló la ubicación final de Colapinto, los problemas de neumáticos y el grilla completa."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/02/antes-de-la-clasificacion-de-la-formula-1-franco-colapinto-tendra-la-ultima-practica-libre-en-malasia-hora-tv-y-todo-lo-que-hay-que-saber/",
+          "fecha": "2026-10-03T09:22:31.000Z",
+          "oficial": false,
+          "aporte": "Indicó el tiempo de 1m35s130 logrado por Verstappen en la Q3."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/f1-hora-y-donde-ver-en-vivo-la-clasificacion-de-colapinto-en-el-gp-de-malasia-id763611.html",
+          "fecha": "2026-10-03T09:19:14.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en el resumen recibido."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/franco-colapinto-largara-21-en-el-gp-de-bahrein-y-max-verstappen-hizo-la-pole-en-sepang/",
+          "fecha": "2026-10-03T09:23:55.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el circuito de Sepang en Malasia y la segunda posición de Hamilton."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-3-2-41-0-en-vivo-con-colapinto-se-realiza-la-clasificacion-del-gran-premio-de-barein",
+          "fecha": "2026-10-03T09:23:39.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la competencia corresponde a la fecha 16 del campeonato mundial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        },
+        {
+          "id": "zd48ar",
+          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "ruta": "/nota/el-respaldo-de-juan-pablo-montoya-a-franco-colapinto-en-la-formula-1-zd48ar"
+        },
+        {
+          "id": "g2u3l1",
+          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "max-verstappen-consigue-la-pole-position-y-franco-colapinto-larga",
+      "foto": {
+        "archivo": "fotos-notas/ei8drx.jpg",
+        "credito": "Foto: Radio Mitre"
+      }
+    },
+    {
+      "id": "1artfui",
+      "titulo": "Almirante Brown organiza Una Noche en los Museos el sábado",
+      "copete": "El municipio bonaerense realiza el sábado una nueva edición de Una Noche en los Museos con visitas a espacios culturales y rebajas en locales gastronómicos.",
+      "cuerpo": "El Municipio de Almirante Brown organiza Una Noche en los Museos el sábado 3 de octubre, en el horario de 18 a 21.30. La propuesta incluye la apertura de museos, centros históricos y muestras artísticas en diferentes localidades del distrito, como Adrogué, José Mármol, Longchamps, Burzaco, Ministro Rivadavia y Glew.\n\nAdemás de las visitas culturales, los vecinos acceden a un 20 por ciento de descuento en las compras realizadas en los locales gastronómicos adheridos a la jornada.",
+      "guion": "Almirante Brown organiza Una Noche en los Museos el sábado",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "0223 (Mar del Plata)",
+        "QZ Noticias (Mar del Plata)",
+        "Minuto Uno",
+        "Clarín",
+        "El Destape",
+        "Canal 26",
+        "Infocampo",
+        "TN (Todo Noticias)",
+        "Página/12",
+        "Diario Popular",
+        "Crónica",
+        "El Cronista",
+        "La Capital (Rosario)",
+        "Diario Conurbano",
+        "TyC Sports",
+        "NDEN – Noticias de Necochea",
+        "Perfil",
+        "Mi8 (Canal 8 Mar del Plata)"
+      ],
+      "enlace": "https://diarioconurbano.com.ar/principal/este-sabado-llega-una-noche-en-los-museos-a-brown-con-descuentos-en-gastronomia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T03:03:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T19:31:27.167Z",
+      "relevancia": 60,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Se realiza el sábado 3 de octubre de 18 a 21.30",
+        "Participan espacios culturales de varias localidades",
+        "Ofrecen un 20 por ciento de descuento en gastronomía"
+      ],
+      "seSabe": [
+        "El evento se llama Una Noche en los Museos y se realiza en Almirante Brown",
+        "La jornada es el sábado 3 de octubre de 18 a 21.30",
+        "Hay un 20 por ciento de descuento en locales gastronómicos adheridos",
+        "Participan espacios de Adrogué, José Mármol, Longchamps, Burzaco, Ministro Rivadavia y Glew",
+        "La iniciativa fue anunciada por el municipio e invitó Mariano Cascallares"
+      ],
+      "textoRedes": "Almirante Brown realiza Una Noche en los Museos este sábado de 18 a 21.30 con visitas a espacios culturales y descuentos en gastronomía.",
+      "etiquetas": [
+        "Almirante Brown",
+        "Cultura",
+        "Museos",
+        "Gastronomía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario Conurbano",
+          "enlace": "https://diarioconurbano.com.ar/principal/este-sabado-llega-una-noche-en-los-museos-a-brown-con-descuentos-en-gastronomia/",
+          "fecha": "2026-10-02T14:22:38.000Z",
+          "oficial": false,
+          "aporte": "Informó todos los detalles sobre el evento cultural, horarios, espacios participantes y descuentos gastronómicos."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/primera-nacional/argentina-campeonato-primera-nacional-2026-san-telmo-vs-almirante-brown-fecha-32-id764043.html",
+          "fecha": "2026-10-02T18:30:17.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en el resumen proporcionado."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/sururbano/nueva-edicion-una-noche-los-museos-almirante-brown-n922642",
+          "fecha": "2026-10-02T18:57:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en el resumen proporcionado."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "almirante-brown-organiza-una-noche-en-los-museos-el-sabado",
+      "foto": {
+        "archivo": "fotos-notas/1artfui.jpg",
+        "credito": "Foto: Diario Conurbano"
+      }
     }
   ],
   "secciones": [
     "Deportes",
-    "Balcarce",
     "Fútbol",
+    "Balcarce",
+    "Economía",
     "Automovilismo",
     "Policiales",
     "Política",
     "Cultura y agenda",
     "Argentina",
-    "Agro",
-    "Economía"
+    "Agro"
   ],
   "temas": [
     {
       "nombre": "Bomberos Voluntarios",
       "ranura": "bomberos",
+      "cuantas": 2
+    },
+    {
+      "nombre": "El hospital",
+      "ranura": "hospital",
       "cuantas": 2
     },
     {
@@ -4092,8 +4570,8 @@
     "ahora": {
       "temp": 12,
       "sensacion": 9,
-      "humedad": 95,
-      "viento": 20,
+      "humedad": 96,
+      "viento": 19,
       "rumbo": "N",
       "cielo": "Llovizna",
       "esDeDia": true
@@ -4472,16 +4950,10 @@
       "motivo": "necesita ojo humano: \"homicidio\""
     },
     {
-      "id": "4xscfj",
-      "titulo": "Victoria Villarruel viajó a Madrid junto a senadores para…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"participá del\""
-    },
-    {
-      "id": "1b8kq9d",
-      "titulo": "Milei se reunió con Macron en París: los anuncios clave",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "4qbbyg",
+      "titulo": "Tensión en Malvinas: los isleños reclaman que se impongan…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1ei2dt4",
@@ -4490,28 +4962,10 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "4qbbyg",
-      "titulo": "Tensión en Malvinas: los isleños reclaman que se impongan…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "13ygrbn",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "k4yhj9",
-      "titulo": "PAE avanza con el primer RIGI para petróleo convencional…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "y344f3",
-      "titulo": "Acuerdo Mercosur-UE: las exportaciones agroindustriales a…",
-      "seccion": "Agro",
-      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "1it0an3",
@@ -4520,28 +4974,16 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "1ba54ng",
+      "titulo": "Ordenaron detener al líder de la barra de Racing: la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "13we5yd",
       "titulo": "Brasil vota, Argentina observa: qué puede cambiar ante un…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "4n4kj2",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"nena\""
-    },
-    {
-      "id": "1muu13g",
-      "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "e0z3c",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1b80a9j",
@@ -4550,29 +4992,53 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "4hbo6t",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
       "id": "1yg85wu",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herido\""
     },
     {
-      "id": "imkij7",
-      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
-      "seccion": "Economía",
+      "id": "4hbo6t",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
+    },
+    {
+      "id": "1ptx1j7",
+      "titulo": "Se filtraron detalles estremecedores de la denuncia contra…",
+      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "y5jdmd",
+      "titulo": "Las exportaciones agroindustriales a la Unión Europea…",
+      "seccion": "Agro",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "gzrk1u",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1y25nin",
       "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
       "seccion": "Agro",
       "motivo": "parece promoción, no noticia: \"participá del\""
+    },
+    {
+      "id": "1muu13g",
+      "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "cc9vyx",
+      "titulo": "Milei se reunió con Macron y visitó la tumba de Napoleón",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 3
 }

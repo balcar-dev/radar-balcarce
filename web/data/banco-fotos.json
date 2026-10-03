@@ -5469,16 +5469,16 @@
   "cuando": "2026-10-02T20:01:47.179Z"
  },
  "a5lojb": {
-  "archivo": "fotos-notas/a5lojb.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "Messi cambia de rival para su posible despedida con la Selección",
   "enlace": "https://www.lanueva.com/nota/2026-10-2-16-49-0-sorpresa-con-messi-cambia-el-rival-para-su-ultimo-partido-con-argentina",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1790970648930.jpg?&cw=600&ch=365",
   "razon": "La foto B es idéntica en calidad pero no tiene la marca de agua del medio que sí aparece en la A.",
-  "cuando": "2026-10-02T20:32:43.480Z"
+  "cuando": "2026-10-02T20:32:43.480Z",
+  "intentado": true,
+  "borrada": true
  },
  "1ctsl0u": {
   "archivo": "fotos-notas/1ctsl0u.jpg",
@@ -6070,5 +6070,41 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/EYR6MRK5FBCODJI7HWDA7F2V6U.JPG?auth=e051ab32ac4fa25ab921c446595802e260cf48e224cb02545ded67fef306a16a&smart=true&width=1200&height=630&quality=85",
   "razon": "Es la foto con mejor encuadre y nitidez de un protagonista del partido, libre de marcas de agua o menores.",
   "cuando": "2026-10-03T14:31:31.857Z"
+ },
+ "o99ioz": {
+  "archivo": "fotos-notas/o99ioz.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Messi juega su partido despedida en el Monumental",
+  "enlace": "https://www.lanacion.com.ar/deportes/futbol/cuando-es-el-partido-despedida-de-messi-nid03102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/leo-messi-fue-la-bandera-del-futbol-de-la-GMEU4Y4O65B3TBS2GFO5OXCXTI.JPG?auth=b21241fab76cef94554424b163692ec4100520c78b5f1fae012bce5591ca927d&width=1200&height=800&quality=70&smart=true",
+  "razon": "Es la única foto disponible, cuenta con excelente nitidez y encuadre, y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-03T15:02:39.217Z"
+ },
+ "17lpda8": {
+  "archivo": "fotos-notas/17lpda8.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Caputo descarta la recesión y asegura que la economía crece",
+  "enlace": "https://www.ambito.com/economia/luis-caputo-la-esta-creciendo-solo-que-un-ritmo-mas-bajo-no-estamos-recesion-n6329657",
+  "imagenOriginal": "https://media.ambito.com/p/9ff43a86f3a4f0a3be9aaf469ec7a462/adjuntos/239/imagenes/043/679/0043679422/1200x675/448x287:468x307/caputo-y-santilli-paris.jpeg",
+  "razon": "La foto A muestra claramente el hecho institucional sin marcas de agua ni menores, mientras que la B es un plano demasiado cerrado.",
+  "cuando": "2026-10-03T15:02:39.217Z"
+ },
+ "1gjqsjm": {
+  "archivo": "fotos-notas/1gjqsjm.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "ARCA recibe datos de cuentas de argentinos en Estados Unidos",
+  "enlace": "https://www.infobae.com/economia/2026/10/03/acuerdo-fatca-que-informacion-recibe-arca-sobre-las-cuentas-de-argentinos-en-estados-unidos/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/OXC7MM5DRNAVNOY47HGIHNV6ZA.png?auth=26762260ad735996c6b24368890850b3b3d4b08a3a683080996450a57abdcfb8&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A muestra claramente el logo de ARCA y documentación relacionada de manera limpia, sin marcas de agua ni menores, siendo ideal para ilustrar la nota.",
+  "cuando": "2026-10-03T15:02:39.217Z"
  }
 }
