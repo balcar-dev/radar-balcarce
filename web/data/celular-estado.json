@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T22:01:43.207Z",
+ "generado": "2026-10-03T22:23:49.304Z",
  "portada": 56,
  "archivo": 856,
- "esperandoCuerpo": 1,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-03T22:01:43.244Z",
+  "generado": "2026-10-03T22:23:49.334Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-03T22:04:28.893Z"
    },
    {
     "nombre": "clima-noche",
@@ -147,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 42,
+    "segundos": 47,
     "notas": [
      {
       "id": "1y13u38",
@@ -155,9 +155,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "ule632",
-      "titulo": "El organizador confirma el amistoso entre la Argentina y Burkina Faso",
-      "seccion": "Argentina"
+      "id": "100y8h1",
+      "titulo": "River rechaza el pedido de la AFA y cobra el alquiler del Monumental",
+      "seccion": "Fútbol"
      },
      {
       "id": "1a6c23d",

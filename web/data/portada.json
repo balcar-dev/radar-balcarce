@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T22:01:43.207Z",
+  "generado": "2026-10-03T22:23:49.304Z",
   "notas": [
     {
       "id": "100y8h1",
@@ -11,6 +11,7 @@
       "medios": [
         "Clarín",
         "LU9 Mar del Plata",
+        "Ecos Diarios (Necochea)",
         "La Página Millonaria"
       ],
       "enlace": "https://lapaginamillonaria.com/seleccion-argentina/no-lo-resignara-pese-al-pedido-de-la-afa-cuanto-dinero-recauda-river-por-el-alquiler-del-monumental-a-la-seleccion-argentina",
@@ -18,7 +19,7 @@
       "fecha": "2026-10-03T20:41:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T22:01:21.842Z",
-      "relevancia": 79,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -179,11 +180,11 @@
       "guion": "Ignacio Fain logra la pole en San Nicolas y corta la sequia de Torino",
       "seccion": "Automovilismo",
       "medios": [
+        "Campeones",
         "TyC Sports",
         "La Brújula 24",
         "Solotc",
-        "Olé",
-        "Campeones"
+        "Olé"
       ],
       "enlace": "https://campeones.com.ar/tc-en-san-nicolas-fain-logro-su-1a-pole-y-corto-una-sequia-de-3-anos-para-torino/",
       "teniaImagenLaFuente": true,
@@ -194,7 +195,9 @@
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "autodromo"
+      ],
       "como": "automatica",
       "claves": [
         "Ignacio Fain marca el mejor tiempo en San Nicolás con 1m26s047.",
@@ -759,6 +762,89 @@
       }
     },
     {
+      "id": "1oy5t8d",
+      "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "copete": "El titular de la UCR Nacional mantuvo un encuentro con el intendente y referentes locales en el Comité partidario. Conversaron sobre la agenda política y la presencia en el territorio.",
+      "cuerpo": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino, funcionarios municipales y militantes en el Comité local de la Unión Cívica Radical, según informó un medio local. Durante el encuentro, los dirigentes conversaron sobre la actualidad política, los desafíos nacionales y el trabajo territorial del partido.\n\nChiarella asumió la conducción partidaria el 12 de diciembre de 2025 y actualmente también se desempeña como intendente de la ciudad santafesina de Venado Tuerto.",
+      "guion": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T15:25:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T16:31:17.843Z",
+      "relevancia": 90,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Leonel Chiarella visitó el Comité local de la UCR en Balcarce",
+        "Mantuvo una reunión con el intendente Esteban Reino y dirigentes",
+        "Abordaron temas de actualidad política y el rol territorial del partido"
+      ],
+      "seSabe": [
+        "Leonel Chiarella visitó Balcarce",
+        "El titular de la UCR Nacional se reunió con Esteban Reino y militantes radicales",
+        "El encuentro se realizó en el Comité local de la UCR"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino y referentes locales del radicalismo en el Comité partidario para analizar la agenda política.",
+      "etiquetas": [
+        "Leonel Chiarella",
+        "Esteban Reino",
+        "UCR",
+        "Balcarce",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+          "fecha": "2026-10-03T15:25:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la visita de Leonel Chiarella a Balcarce, su reunión con Esteban Reino y el encuentro con dirigentes radicales en el Comité local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kt5uyq",
+          "titulo": "Esteban Reino destaca el impacto económico tras la reapertura del autódromo",
+          "fecha": "2026-09-30T12:59:12.000Z",
+          "ruta": "/nota/esteban-reino-destaca-el-impacto-economico-tras-la-reapertura-del-1kt5uyq"
+        },
+        {
+          "id": "repaso20260929tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
+          "fecha": "2026-09-29T19:46:57.548Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-corte-de-luz-esteban-reino-y-repaso20260929tarde"
+        },
+        {
+          "id": "tttn9w",
+          "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+          "fecha": "2026-09-28T20:45:35.000Z",
+          "ruta": "/nota/esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo-tttn9w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "leonel-chiarella-visita-balcarce-y-se-reune-con-esteban-reino",
+      "foto": {
+        "archivo": "fotos-notas/1oy5t8d.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "wjdq6r",
       "titulo": "Dal Poggetto advierte que el país se encarece en moneda extranjera",
       "copete": "La directora de Eco Go señaló que el dólar oficial superó los 1500 pesos y el paralelo ronda los 1560 pesos. Además, advirtió sobre el freno en la actividad y la inflación en dólares.",
@@ -845,7 +931,8 @@
       "guion": "Roban dinero y celulares en una sucursal del supermercado Frutimar",
       "seccion": "Policiales",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/en-solo-tres-meses-la-misma-sucursal-de.html",
       "teniaImagenLaFuente": true,
@@ -1181,11 +1268,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44983-fuera-de-servicio-los-telefonos-de-la-policia-comunal-y-del-cpr-en-balcarce/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T12:31:09.453Z",
       "sinFecha": true,
       "visto": "2026-10-03T12:31:09.453Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1329,76 +1416,6 @@
       "foto": {
         "archivo": "fotos-notas/17lpda8.jpg",
         "credito": "Foto: Ámbito"
-      }
-    },
-    {
-      "id": "1vuvl5f",
-      "titulo": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
-      "copete": "El combinado africano sufre problemas logísticos y la negativa de varios jugadores a viajar. Ante esto, afronta el amistoso de esta noche en el Monumental con un plantel de emergencia.",
-      "cuerpo": "La selección de Burkina Faso enfrenta a la Argentina esta noche a las 21:00 en el estadio Monumental, tras atravesar inconvenientes logísticos y una huelga de futbolistas de su plantel principal.\n\nEl vuelo inicial de la delegación quedó cancelado el 30 de septiembre y el equipo quedó varado en Marruecos. Según indicó el medio Faso Sports, los jugadores mayores se negaron a viajar en protesta por las condiciones económicas ofrecidas por la organización para el partido.\n\nAnte la falta de futbolistas, el cuerpo técnico sumó de urgencia a integrantes del seleccionado Sub-23 tras suspender un compromiso ante Mali. Finalmente, un vuelo especial partió desde Casablanca en la noche del viernes con el plantel alternativo rumbo a Buenos Aires.",
-      "guion": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
-      "seccion": "Fútbol",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Canal 26"
-      ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/escandalo-antes-del-amistoso-organizado-por-la-afa-jugadores-de-burkina-faso-se-negaron-a-viajar-a-argentina/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T11:34:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T13:01:19.534Z",
-      "relevancia": 59,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El amistoso se juega esta noche a las 21:00 en el Monumental.",
-        "Burkina Faso afronta el partido con un plantel integrado por juveniles Sub-23.",
-        "El vuelo inicial de la delegación se había cancelado el 30 de septiembre."
-      ],
-      "seSabe": [
-        "El partido entre Argentina y Burkina Faso se disputa esta noche a las 21:00 en el Monumental.",
-        "La delegación burkinesa partió en un vuelo especial desde Casablanca en la noche del viernes.",
-        "El cuerpo técnico convocó a jugadores Sub-23 para completar el plantel."
-      ],
-      "noConfirmado": [
-        "No se especificó la cantidad exacta de futbolistas de la selección mayor que se negaron a viajar."
-      ],
-      "textoRedes": "La selección de Burkina Faso llega al país con un plantel de emergencia y jugadores Sub-23 para enfrentar esta noche a Argentina en el Monumental tras sufrir problemas logísticos y la negativa de varios futbolistas a viajar.",
-      "etiquetas": [
-        "Seleccion Argentina",
-        "Burkina Faso",
-        "amistoso",
-        "Estadio Monumental",
-        "futbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/escandalo-antes-del-amistoso-organizado-por-la-afa-jugadores-de-burkina-faso-se-negaron-a-viajar-a-argentina/",
-          "fecha": "2026-10-03T11:34:10.000Z",
-          "oficial": false,
-          "aporte": "Detalló el conflicto económico denunciado por Faso Sports y la convocatoria de emergencia de los jugadores Sub-23."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/deportes/2026/10/03/caos-en-burkina-faso-antes-del-amistoso-en-la-argentina-negativas-bajas-y-llamados-de-ultimo-momento/",
-          "fecha": "2026-10-03T12:50:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la cancelación del vuelo y la modificación en el traslado del plantel africano."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-de-burkina-faso-llega-al-pais-con-suplentes-para",
-      "foto": {
-        "archivo": "fotos-notas/1vuvl5f.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -1996,7 +2013,6 @@
       "seccion": "Política",
       "medios": [
         "Infobae",
-        "Clarín",
         "La Nación",
         "El Destape",
         "Perfil",
@@ -2010,6 +2026,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "iProfesional",
+        "Clarín",
         "El Día",
         "Agencia DIB"
       ],
@@ -2103,11 +2120,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T21:01:16.545Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:21:19.000Z",
+      "sinFecha": false,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2161,6 +2178,74 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:17:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
+      ],
+      "seSabe": [
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
+      ],
+      "noConfirmado": [
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
+      ],
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
+      "etiquetas": [
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
+          "oficial": false,
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
+        }
+      ],
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
+      "foto": {
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2809,6 +2894,7 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2820,7 +2906,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 89,
+      "relevancia": 99,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2833,6 +2919,13 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
           "aporte": null
         },
         {
@@ -2862,116 +2955,6 @@
       "foto": {
         "archivo": "fotos-notas/1akpidg.jpg",
         "credito": "Foto: Municipalidad de Balcarce"
-      }
-    },
-    {
-      "id": "1pq0gh4",
-      "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-      "copete": "La funcionaria nacional lideró un encuentro en Francia junto a catorce firmas pesqueras. El objetivo principal consistió en incrementar las ventas de langostinos y vieiras.",
-      "cuerpo": "La secretaria general de la Presidencia, Karina Milei, dirigió en la capital francesa una jornada comercial orientada a potenciar la colocación de productos pesqueros nacionales. El evento reunió a catorce compañías del sector con compradores europeos para fomentar la comercialización directa de langostinos y vieiras.\n\nLa estrategia contó con la intervención del titular de PromArgentina, Diego Sucalesca, además de diversas entidades vinculadas a la actividad marítima y diplomática. Durante el año pasado, los envíos internacionales de langostinos aportaron mil millones de dólares a la economía nacional.",
-      "guion": "Karina Milei encabeza ronda de negocios en París por la pesca",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "Canal 26",
-        "Noticias Argentinas (NA)",
-        "Punto Noticias",
-        "Crónica"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T16:57:20.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T18:31:19.096Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Participaron catorce empresas pesqueras nacionales y compradores franceses.",
-        "La comitiva estuvo encabezada por la secretaria general de la Presidencia.",
-        "Buscan incrementar las ventas de langostinos y vieiras hacia Europa.",
-        "Las exportaciones de langostinos sumaron mil millones de dólares en 2025."
-      ],
-      "seSabe": [
-        "Karina Milei lideró el encuentro en París este viernes.",
-        "La actividad se denominó Argentina B2B Week.",
-        "Catorce empresas nacionales participaron de las reuniones.",
-        "Diego Sucalesca acompañó a la funcionaria nacional."
-      ],
-      "noConfirmado": [
-        "No se informaron los montos totales proyectados de los nuevos contratos comerciales."
-      ],
-      "textoRedes": "Karina Milei encabezó en París una ronda de negocios para ampliar las exportaciones de langostinos y vieiras con catorce empresas argentinas.",
-      "etiquetas": [
-        "Karina Milei",
-        "París",
-        "exportaciones",
-        "pesca",
-        "langostinos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de la ronda B2B Week y los datos sobre el mercado francés."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/02/karina-milei-encabezo-una-ronda-de-negocios-en-francia-para-impulsar-exportaciones-de-langostinos-y-vieiras/",
-          "fecha": "2026-10-02T17:32:02.000Z",
-          "oficial": false,
-          "aporte": "Detalló la participación de las catorce empresas exportadoras de productos pesqueros."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-impulsar-las-exportaciones-argentinas-de-langostinos-y-vieiras.phtml",
-          "fecha": "2026-10-02T17:49:49.000Z",
-          "oficial": false,
-          "aporte": "Aportó la cifra de mil millones de dólares generada por las exportaciones de langostinos en 2025."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-las-ventas-de-langostinos-y-vieiras/",
-          "fecha": "2026-10-02T17:44:06.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la presencia de Diego Sucalesca y el rol de PromArgentina."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "oa2ef",
-          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
-          "fecha": "2026-10-02T09:29:30.000Z",
-          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
-        },
-        {
-          "id": "wcnatb",
-          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
-          "fecha": "2026-10-01T13:40:00.000Z",
-          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
-        },
-        {
-          "id": "19iwenp",
-          "titulo": "Karina Milei habló tras la reunión por la visita de León XIV y aseguró que \"el Papa es de todos los argentinos\"",
-          "fecha": "2026-09-22T23:31:00.000Z",
-          "ruta": "/nota/karina-milei-hablo-tras-la-reunion-por-la-visita-de-leon-xiv-y-19iwenp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca",
-      "foto": {
-        "archivo": "fotos-notas/1pq0gh4.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -3588,8 +3571,10 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
+        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
         "El Diario Balcarce"
       ],
@@ -3598,7 +3583,7 @@
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 69,
+      "relevancia": 89,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -4508,9 +4493,9 @@
     "Argentina",
     "Cultura y agenda",
     "Policiales",
+    "Política",
     "Economía",
     "Deportes",
-    "Política",
     "Agro"
   ],
   "temas": [
@@ -4518,6 +4503,11 @@
       "nombre": "Las rutas",
       "ranura": "rutas",
       "cuantas": 3
+    },
+    {
+      "nombre": "El autódromo",
+      "ranura": "autodromo",
+      "cuantas": 2
     },
     {
       "nombre": "Bomberos Voluntarios",
@@ -4529,7 +4519,7 @@
     "ahora": {
       "temp": 11,
       "sensacion": 10,
-      "humedad": 91,
+      "humedad": 93,
       "viento": 5,
       "rumbo": "N",
       "cielo": "Despejado",
@@ -4885,16 +4875,22 @@
   },
   "pendientes": [
     {
+      "id": "36p9t0",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
+    },
+    {
+      "id": "1w06xhx",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"lesionada\""
+    },
+    {
       "id": "18f33km",
       "titulo": null,
       "seccion": "Automovilismo",
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "1148srf",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
     },
     {
       "id": "1v0rcd7",
@@ -4909,18 +4905,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "fvq4zq",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "1ei2dt4",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
       "id": "t9c46j",
       "titulo": null,
       "seccion": "Balcarce",
@@ -4933,10 +4917,16 @@
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "4xscfj",
-      "titulo": "Victoria Villarruel viajó a Madrid junto a senadores para…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"participá del\""
+      "id": "fvq4zq",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "1ei2dt4",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "4qbbyg",
@@ -4945,16 +4935,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "4xscfj",
+      "titulo": "Victoria Villarruel viajó a Madrid junto a senadores para…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"participá del\""
+    },
+    {
       "id": "13we5yd",
       "titulo": "Brasil vota, Argentina observa: qué puede cambiar ante un…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "4hbo6t",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
     },
     {
       "id": "4n4kj2",
@@ -4975,22 +4965,16 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "1yg85wu",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herido\""
+    },
+    {
       "id": "1muu13g",
       "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1b80a9j",
-      "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"publicidad\""
-    },
-    {
-      "id": "11l2lck",
-      "titulo": "Victoria Villarruel volvió a diferenciarse de Javier Milei…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "1y25nin",
@@ -4999,11 +4983,11 @@
       "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
-      "id": "1yg85wu",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
+      "id": "1b80a9j",
+      "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 3
 }
