@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T16:31:36.504Z",
+ "generado": "2026-10-03T17:01:46.628Z",
  "portada": 56,
- "archivo": 845,
- "esperandoCuerpo": 2,
+ "archivo": 847,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T16:31:36.539Z",
+  "generado": "2026-10-03T17:01:46.658Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 48,
     "notas": [
      {
       "id": "17lpda8",
@@ -129,13 +129,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "174qhq6",
-      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
       "seccion": "Balcarce"
      },
      {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
       "seccion": "Balcarce"
      }
     ]
@@ -147,17 +147,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 28,
+    "segundos": 33,
     "notas": [
-     {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1a6c23d",
       "titulo": "La Ultra Trail Tierras del Diablo abre los últimos cupos",
       "seccion": "Deportes"
+     },
+     {
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -170,7 +170,14 @@
      "cuando": "2026-10-03T13:34:29.368Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1l5htn5",
+     "titulo": "Vecinas renuevan espacios públicos y plazas",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 4,
    "proximoDesde": "2026-10-03T15:04:29.368Z",
    "porDia": 5,
