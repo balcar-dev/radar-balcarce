@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T11:58:08.883Z",
+  "generado": "2026-10-03T12:01:21.255Z",
   "notas": [
     {
       "id": "1kfxthk",
@@ -64,14 +64,46 @@
       "medios": [
         "TN (Todo Noticias)",
         "Crónica",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nación",
+        "Clarín",
+        "El Eco de Tandil",
+        "LU9 Mar del Plata",
+        "QZ Noticias (Mar del Plata)",
+        "Infobae",
+        "El Destape",
+        "Perfil",
+        "Página/12",
+        "Ámbito",
+        "TyC Sports",
+        "C5N",
+        "Radio Mitre",
+        "Canal 26",
+        "Diario Popular",
+        "La Nueva",
+        "0221",
+        "La Brújula 24",
+        "La Tecla",
+        "La Verdad",
+        "El Marplatense",
+        "La Verdad de Ayacucho",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "A24",
+        "Olé",
+        "Minuto Uno",
+        "Solotc",
+        "Córdoba Competición",
+        "La Capital (Rosario)",
+        "0223 (Mar del Plata)"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/03/franco-colapinto-mostro-optimismo-para-el-gp-de-bahrein-pese-a-las-sanciones-que-recibio-se-puede-remontar/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T09:58:52.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T11:01:20.961Z",
-      "relevancia": 87,
+      "relevancia": 97,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1323,7 +1355,7 @@
       "fecha": "2026-10-02T17:23:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": "Hernán",
       "publicadaCuando": "2026-10-03T01:54:15.049Z",
@@ -1558,7 +1590,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "News Balcarce (FM 91.7)"
+        "News Balcarce (FM 91.7)",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
       "teniaImagenLaFuente": true,
@@ -1586,6 +1619,13 @@
           "fecha": "2026-10-02T18:08:04.743Z",
           "oficial": false,
           "aporte": null
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44981-una-obra-de-la-escuela-de-arte-se-incorpora-al-patrimonio-de-la-municipalidad/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la entrega de una obra de la Escuela de Arte al patrimonio municipal y los nombres de las autoras y autoridades presentes."
         }
       ],
       "slug": "la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la",
@@ -1722,9 +1762,9 @@
         "Noticias Argentinas (NA)",
         "La Verdad",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Qué Digital",
         "Punto Noticias",
-        "La Nueva"
+        "La Nueva",
+        "Qué Digital"
       ],
       "enlace": "https://noticiasargentinas.com/economia/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al--temor-a-volver-al-infierno-_a6abfdbe3f814a2817c8806de",
       "teniaImagenLaFuente": true,
@@ -3421,7 +3461,7 @@
       "fecha": "2026-10-02T11:59:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 71,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3482,17 +3522,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
-        "Infoeme",
         "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB"
+        "Agencia DIB",
+        "Infoeme"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 55,
+      "relevancia": 51,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
