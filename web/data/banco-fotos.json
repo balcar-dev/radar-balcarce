@@ -5970,16 +5970,16 @@
   "borrada": true
  },
  "1y5m4fa": {
-  "archivo": "fotos-notas/1y5m4fa.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
   "enlace": "https://tn.com.ar/deportes/2026/10/03/franco-colapinto-mostro-optimismo-para-el-gp-de-bahrein-pese-a-las-sanciones-que-recibio-se-puede-remontar/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-067a7f215f361791020591772-1791020773.jpg?auth=e49b252f60c8789b7590dfa8f9938e0ef8614a7b31dcc650bc69ee71832970ba&width=1023",
   "razon": "La foto A muestra a Franco Colapinto con excelente nitidez y encuadre, sin marcas agregadas por el medio ni menores.",
-  "cuando": "2026-10-03T11:01:38.576Z"
+  "cuando": "2026-10-03T11:01:38.576Z",
+  "intentado": true,
+  "borrada": true
  },
  "1kfxthk": {
   "intentado": true,
@@ -6106,5 +6106,37 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/OXC7MM5DRNAVNOY47HGIHNV6ZA.png?auth=26762260ad735996c6b24368890850b3b3d4b08a3a683080996450a57abdcfb8&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto A muestra claramente el logo de ARCA y documentación relacionada de manera limpia, sin marcas de agua ni menores, siendo ideal para ilustrar la nota.",
   "cuando": "2026-10-03T15:02:39.217Z"
+ },
+ "7ml7lj": {
+  "archivo": "fotos-notas/7ml7lj.jpg",
+  "medio": "La Página Millonaria",
+  "credito": "Foto: La Página Millonaria",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Maximiliano Salas sufre la rotura de ligamentos y se pierde el año",
+  "enlace": "https://lapaginamillonaria.com/river-plate/maxi-salas-sufrio-una-rotura-de-ligamentos-cruzados-de-la-rodilla-izquierda-en-independiente-rivadavia-de-mendoza",
+  "imagenOriginal": "https://media.lapaginamillonaria.com/wp-content/uploads/sites/15/2026/10/03113904/maxi-salas-5-1200x740.webp",
+  "razon": "Es la única foto limpia sin marcas de agua de medios ni elementos televisivos, con excelente nitidez y encuadre del jugador.",
+  "cuando": "2026-10-03T15:31:45.021Z"
+ },
+ "la3bje": {
+  "archivo": "fotos-notas/la3bje.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Flavio Briatore felicita a Franco Colapinto tras la clasificación en Bahréin",
+  "enlace": "https://radiomitre.cienradios.com/deportes/la-reaccion-de-flavio-briatore-tras-la-clasificacion-de-franco-colapinto-en-el-gp-de-bahrein/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/HCYUQPKSAVBD5GK3VHE25AW7YE.png?smart=true&auth=edcfd7bedc2691e3f857611b013e88e7388150fdd9cac838fca2d1ccbf08a217&width=1200&height=630",
+  "razon": "La foto B muestra claramente a Flavio Briatore junto a Franco Colapinto, identificando el hecho de manera directa, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-03T15:31:45.021Z"
+ },
+ "16s62sc": {
+  "intentado": true,
+  "origen": "medio",
+  "cuando": "2026-10-03T15:31:45.021Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 1,
+  "fuentes": 2
  }
 }
