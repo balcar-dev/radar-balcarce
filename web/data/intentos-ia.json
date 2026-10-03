@@ -1836,9 +1836,9 @@
   "motivo": "con cuerpo"
  },
  "1qu785s": {
-  "intentos": 1,
-  "ultimo": "2026-10-03T00:41:54.550Z",
-  "motivo": "título o bajada: 4 problemas (tilde, fecha, tildes): el titulo dice \"mas\" en vez de \"más\": \"El riesgo pais sube y alcanza su valor mas alto del año\""
+  "intentos": 2,
+  "ultimo": "2026-10-03T01:01:33.310Z",
+  "motivo": "título o bajada: 1 problema (numero): el guion dice 50 y la fuente no lo dice"
  },
  "1qudzsc": {
   "intentos": 1,
@@ -2222,6 +2222,11 @@
   "ultimo": "2026-09-28T03:47:07.289Z",
   "motivo": "con cuerpo"
  },
+ "1wdslpn": {
+  "intentos": 1,
+  "ultimo": "2026-10-03T01:01:33.310Z",
+  "motivo": "título o bajada: 1 problema (largo): el titulo tiene 95 caracteres, el máximo es 90"
+ },
  "1we22a0": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:30:38.780Z",
@@ -2436,6 +2441,11 @@
   "intentos": 1,
   "ultimo": "2026-09-30T03:01:27.096Z",
   "motivo": "con cuerpo"
+ },
+ "2qj2kn": {
+  "intentos": 1,
+  "ultimo": "2026-10-03T01:01:33.310Z",
+  "motivo": "título o bajada: 6 problemas (antecedente, fecha): el titulo usa \"liga\", que sale de una nota anterior, como si fuera de hoy"
  },
  "2qvaod": {
   "intentos": 3,
@@ -3970,8 +3980,8 @@
   "motivo": "con cuerpo"
  },
  "r3wxcb": {
-  "intentos": 1,
-  "ultimo": "2026-10-03T00:41:54.550Z",
+  "intentos": 2,
+  "ultimo": "2026-10-03T01:01:33.310Z",
   "motivo": "con cuerpo"
  },
  "r9x4zp": {

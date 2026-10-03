@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T00:42:16.923Z",
+  "generado": "2026-10-03T01:02:10.132Z",
   "notas": [
     {
       "id": "repaso20261002noche",
@@ -302,12 +302,13 @@
       "guion": "Sandra Pettovello desplaza a la subsecretaria de Trabajo y designa a un nuevo funcionario",
       "seccion": "Política",
       "medios": [
-        "Infobae",
         "La Nación",
         "Agencia DIB",
+        "Infobae",
         "Clarín",
         "El Destape",
         "Perfil",
+        "A24",
         "iProfesional",
         "Ámbito",
         "Crónica",
@@ -322,7 +323,7 @@
       "fecha": "2026-10-02T21:52:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 83,
+      "relevancia": 88,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1365,7 +1366,7 @@
       "id": "n09ogo",
       "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
       "copete": "El exdelantero confirmó mediante sus redes sociales que tendrá su encuentro homenaje en el estadio de Boca. A cinco años de su retiro profesional, todavía resta definir la fecha y el horario.",
-      "cuerpo": "El exdelantero indicó que el evento se llevará a cabo en el escenario donde desarrolló gran parte de su carrera y se prevé que ocurra hacia finales de 2026.\n\nEn su etapa con la institución boquense, Tevez participó en 279 partidos, marcó 94 goles y obtuvo la Copa Libertadores y la Copa Intercontinental en 2003, la Copa Sudamericana en 2004 y siete títulos locales. Su trayectoria profesional incluyó pasos por Corinthians, West Ham, los dos clubes de Manchester, Juventus y Shanghái Shenhua.\n\nTras collar los botines en 2021, el deportista incursionó como director técnico y condujo a Rosario Central, Independiente y Talleres de Córdoba. Por el momento, la organización no informó el día exacto ni la franja horaria en que se jugará el partido.",
+      "cuerpo": "El exdelantero indicó que el evento se llevará a cabo en el escenario donde desarrolló gran parte de su carrera y se prevé que ocurra hacia finales de 2026.\n\nEn su etapa con la institución boquense, Tevez participó en 279 partidos, marcó 94 goles y obtuvo la Copa Libertadores y la Copa Intercontinental en 2003, la Copa Sudamericana en 2004 y siete títulos locales. Su trayectoria profesional incluyó pasos por Corinthians, West Ham, los dos clubes de Manchester, Juventus y Shanghái Shenhua.\n\nTras colgar los botines en 2021, el deportista incursionó como director técnico y condujo a Rosario Central, Independiente y Talleres de Córdoba. Por el momento, la organización no informó el día exacto ni la franja horaria en que se jugará el partido.",
       "guion": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
       "seccion": "Fútbol",
       "medios": [
@@ -1378,6 +1379,7 @@
         "TyC Sports",
         "Olé",
         "Minuto Uno",
+        "C5N",
         "Noticias Argentinas (NA)",
         "La Nueva",
         "La Voz del Pueblo"
@@ -1387,7 +1389,7 @@
       "fecha": "2026-10-02T16:35:10.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 73,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1658,8 +1660,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Ecos Diarios (Necochea)",
-        "Agencia DIB",
-        "La Verdad"
+        "La Verdad",
+        "Agencia DIB"
       ],
       "enlace": "https://dib.com.ar/economia/tambos-mayor-produccion-pero-menor-facturacion-y-cierre-establecimientos-n56198",
       "teniaImagenLaFuente": true,
@@ -2224,7 +2226,8 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/jovenes-balcarcenas-participaron-de-un-encuentro-internacional-de-basquet/",
       "teniaImagenLaFuente": true,
@@ -2265,6 +2268,13 @@
           "fecha": "2026-10-02T13:09:35.000Z",
           "oficial": true,
           "aporte": "Informó la participación de las categorías U13 y U15 en el torneo internacional de Mar del Plata con detalles del plantel y cuerpo técnico."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/deportes/14283-jovenes-balcarcenas-actuaron-en-un-encuentro-internacional/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la participación de las categorías U-13 y U-15 de la Escuela Municipal de Básquet en un torneo en Mar del Plata con detalle de sedes, entrenadores y jugadoras."
         }
       ],
       "antecedentes": [
@@ -2546,8 +2556,8 @@
         "Infobae",
         "Perfil",
         "El Cronista",
-        "La Nueva",
-        "Página/12"
+        "Página/12",
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/02/marcelo-mindlin-destaco-el-interes-por-argentina-en-francia-yo-prefiero-invertir-hoy-no-esperar-a-manana/",
       "teniaImagenLaFuente": true,
@@ -2918,17 +2928,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
+        "Infoeme",
         "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB",
-        "Infoeme"
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 59,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3001,8 +3011,8 @@
         "Página/12",
         "C5N",
         "Crónica",
-        "Clarín",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Clarín"
       ],
       "enlace": "https://www.c5n.com/politica/javier-milei-emmanuel-macron-reunion-francia-paris-1-octubre-2026",
       "teniaImagenLaFuente": true,
@@ -3262,6 +3272,102 @@
       }
     },
     {
+      "id": "jeiawq",
+      "titulo": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
+      "copete": "El embajador Ian Sielecki valoró los anuncios financieros logrados durante la Argentina Week en París. Del encuentro participaron el presidente Javier Milei, ministros y gobernadores.",
+      "cuerpo": "El embajador argentino en Francia, Ian Sielecki, destacó anuncios de inversión por 27.000 millones de dólares durante la realización de la Argentina Week en París. El diplomático explicó a través de una publicación que las jornadas posicionaron al país ante empresarios europeos y atribuyó los resultados a la gestión macroeconómica.\n\nLa agenda de actividades abarcó dos días y medio con diez eventos, donde participaron el presidente Javier Milei, trece gobernadores y funcionarios nacionales. La sesión central reunió a unos 500 directivos en la sede de la OCDE, con la presencia del ministro de Economía, Luis Caputo. Entre los desembolsos confirmados, Total presentó proyectos por 10.000 millones de dólares en Neuquén y Tierra del Fuego, mientras que Pluspetrol y GyP destinaron 12.400 millones para Vaca Muerta.\n\nAdemás, Eramet proyectó 350 millones para litio en Salta, PAE y SNF comunicaron 1.200 millones para Chubut, y Glencore informó 4.000 millones para Catamarca. Por la noche, Milei y el mandatario francés Emmanuel Macron mantuvieron un encuentro bilateral en el Palacio del Elíseo.",
+      "guion": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
+      "seccion": "Economía",
+      "medios": [
+        "Agencia DIB",
+        "La Nación",
+        "Infobae",
+        "Ámbito",
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "A24",
+        "iProfesional",
+        "Radio Mitre",
+        "Noticias Argentinas (NA)",
+        "La Brújula 24",
+        "ANDigital",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T03:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T16:49:02.882Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El embajador Ian Sielecki destacó inversiones por 27.000 millones de dólares en París.",
+        "Participaron el presidente Javier Milei, trece gobernadores y empresarios.",
+        "Se anunciaron desembolsos energéticos y mineros para distintas provincias."
+      ],
+      "seSabe": [
+        "El embajador Ian Sielecki informó sobre compromisos financieros por 27.000 millones de dólares en París.",
+        "La delegación nacional estuvo integrada por el presidente Javier Milei, trece gobernadores y funcionarios.",
+        "Empresas como Total, Pluspetrol, Eramet y Glencore detallaron montos destinados a proyectos productivos."
+      ],
+      "textoRedes": "El embajador argentino en Francia, Ian Sielecki, destacó anuncios de inversión por 27.000 millones de dólares tras la realización de la Argentina Week en París con participación de mandatarios y empresarios.",
+      "etiquetas": [
+        "Inversiones",
+        "Francia",
+        "Javier Milei",
+        "Economía",
+        "París"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
+          "fecha": "2026-10-02T15:58:17.000Z",
+          "oficial": false,
+          "aporte": "Detalló los montos de inversión, las empresas involucradas y las actividades de la delegación oficial en París."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/argentina-week-el-embajador-francia-senalo-que-los-anuncios-inversion-alcanzaron-los-us27000-millones-n6329440",
+          "fecha": "2026-10-02T16:34:00.000Z",
+          "oficial": false,
+          "aporte": "Celebró las inversiones anunciadas y remarcó la importancia de la seriedad macroeconómica."
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/02/110031-ian-sielecki-destaco-el-magnetismo-mundial-de-milei-durante-la-argentina-week-en-paris",
+          "fecha": "2026-10-02T16:25:15.000Z",
+          "oficial": false,
+          "aporte": "Registró la cobertura del evento sin aportar texto adicional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "9oermg",
+          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
+          "fecha": "2026-09-25T00:30:34.751Z",
+          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-embajador-en-francia-destaca-inversiones-por-veintisiete-mil",
+      "foto": {
+        "archivo": "fotos-notas/jeiawq.jpg",
+        "credito": "Foto: Infobrisas (Radio Brisas)"
+      }
+    },
+    {
       "id": "1gt8iio",
       "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
       "copete": "El arzobispo de Buenos Aires describió a la Argentina afectada por la pobreza y la polarización política. Lo expresó en la previa de la tradicional caminata a Luján y de la llegada de León XIV.",
@@ -3289,20 +3395,20 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Brújula 24",
+        "La Verdad",
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
         "Clarín",
-        "La Verdad",
-        "La Capital (Rosario)",
-        "La Brújula 24"
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/duro-panorama-de-la-iglesia-al-papa-lo-espera-una-argentina-en-crisis-con-una-gran-cantidad-de-hermanos-muy-pobres/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T03:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3384,102 +3490,6 @@
       "foto": {
         "archivo": "fotos-notas/1gt8iio.jpg",
         "credito": "Foto: Perfil"
-      }
-    },
-    {
-      "id": "jeiawq",
-      "titulo": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
-      "copete": "El embajador Ian Sielecki valoró los anuncios financieros logrados durante la Argentina Week en París. Del encuentro participaron el presidente Javier Milei, ministros y gobernadores.",
-      "cuerpo": "El embajador argentino en Francia, Ian Sielecki, destacó anuncios de inversión por 27.000 millones de dólares durante la realización de la Argentina Week en París. El diplomático explicó a través de una publicación que las jornadas posicionaron al país ante empresarios europeos y atribuyó los resultados a la gestión macroeconómica.\n\nLa agenda de actividades abarcó dos días y medio con diez eventos, donde participaron el presidente Javier Milei, trece gobernadores y funcionarios nacionales. La sesión central reunió a unos 500 directivos en la sede de la OCDE, con la presencia del ministro de Economía, Luis Caputo. Entre los desembolsos confirmados, Total presentó proyectos por 10.000 millones de dólares en Neuquén y Tierra del Fuego, mientras que Pluspetrol y GyP destinaron 12.400 millones para Vaca Muerta.\n\nAdemás, Eramet proyectó 350 millones para litio en Salta, PAE y SNF comunicaron 1.200 millones para Chubut, y Glencore informó 4.000 millones para Catamarca. Por la noche, Milei y el mandatario francés Emmanuel Macron mantuvieron un encuentro bilateral en el Palacio del Elíseo.",
-      "guion": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
-      "seccion": "Economía",
-      "medios": [
-        "Agencia DIB",
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "A24",
-        "iProfesional",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "ANDigital",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "La Brújula 24"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T03:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T16:49:02.882Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El embajador Ian Sielecki destacó inversiones por 27.000 millones de dólares en París.",
-        "Participaron el presidente Javier Milei, trece gobernadores y empresarios.",
-        "Se anunciaron desembolsos energéticos y mineros para distintas provincias."
-      ],
-      "seSabe": [
-        "El embajador Ian Sielecki informó sobre compromisos financieros por 27.000 millones de dólares en París.",
-        "La delegación nacional estuvo integrada por el presidente Javier Milei, trece gobernadores y funcionarios.",
-        "Empresas como Total, Pluspetrol, Eramet y Glencore detallaron montos destinados a proyectos productivos."
-      ],
-      "textoRedes": "El embajador argentino en Francia, Ian Sielecki, destacó anuncios de inversión por 27.000 millones de dólares tras la realización de la Argentina Week en París con participación de mandatarios y empresarios.",
-      "etiquetas": [
-        "Inversiones",
-        "Francia",
-        "Javier Milei",
-        "Economía",
-        "París"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
-          "fecha": "2026-10-02T15:58:17.000Z",
-          "oficial": false,
-          "aporte": "Detalló los montos de inversión, las empresas involucradas y las actividades de la delegación oficial en París."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/argentina-week-el-embajador-francia-senalo-que-los-anuncios-inversion-alcanzaron-los-us27000-millones-n6329440",
-          "fecha": "2026-10-02T16:34:00.000Z",
-          "oficial": false,
-          "aporte": "Celebró las inversiones anunciadas y remarcó la importancia de la seriedad macroeconómica."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/02/110031-ian-sielecki-destaco-el-magnetismo-mundial-de-milei-durante-la-argentina-week-en-paris",
-          "fecha": "2026-10-02T16:25:15.000Z",
-          "oficial": false,
-          "aporte": "Registró la cobertura del evento sin aportar texto adicional."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "9oermg",
-          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
-          "fecha": "2026-09-25T00:30:34.751Z",
-          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-embajador-en-francia-destaca-inversiones-por-veintisiete-mil",
-      "foto": {
-        "archivo": "fotos-notas/jeiawq.jpg",
-        "credito": "Foto: Infobrisas (Radio Brisas)"
       }
     },
     {
@@ -3638,82 +3648,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261001noche.jpg",
         "credito": "Fotos: La Nación, TN (Todo Noticias) y Acción 5 (Balcarce)"
-      }
-    },
-    {
-      "id": "zdl4xp",
-      "titulo": "La selección argentina de básquet juega en Zárate la Ventana FIBA",
-      "copete": "El combinado nacional disputará dos encuentros en noviembre en el Espacio DAM. La Confederación Argentina de Básquet trasladó la localía desde Mar del Plata por cuestiones logísticas.",
-      "cuerpo": "La selección argentina de básquet disputará sus próximos dos compromisos de local en el Espacio DAM de Zárate, según informó la Confederación Argentina de Básquet. El equipo que dirige Pablo Prigioni se enfrentará a Bahamas el jueves 26 de noviembre y a Canadá el domingo 29 por la quinta ventana de los clasificatorios rumbo a la Copa del Mundo de Qatar 2027.\n\nEn mayo, la entidad madre del básquet nacional había comunicado que el Polideportivo Islas Malvinas de Mar del Plata albergaría estos encuentros. Sin embargo, la organización modificó la planificación original hacia el distrito bonaerense debido a motivos logísticos vinculados al traslado y la preparación del plantel.\n\nEl conjunto nacional afrontará esta instancia con un historial de seis victorias y dos caídas dentro del Grupo F. Las localidades para presenciar ambos partidos se conseguirán próximamente mediante la plataforma digital basquet.id.",
-      "guion": "La selección argentina de básquet juega en Zárate la Ventana FIBA",
-      "seccion": "Deportes",
-      "medios": [
-        "Olé",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Infobrisas (Radio Brisas)",
-        "Básquet Plus",
-        "Pick and Roll",
-        "La Nueva"
-      ],
-      "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T19:36:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T20:38:36.988Z",
-      "relevancia": 70,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El equipo nacional será local en el Espacio DAM de Zárate en noviembre.",
-        "Enfrentará a Bahamas el jueves 26 y a Canadá el domingo 29.",
-        "El cambio de sede desde Mar del Plata responde a cuestiones logísticas.",
-        "Las entradas están próximas a anunciarse en la plataforma basquet.id."
-      ],
-      "seSabe": [
-        "La Confederación Argentina de Básquet trasladó la localía a Zárate.",
-        "Los partidos se jugarán el 26 y 29 de noviembre en el Espacio DAM.",
-        "El equipo es dirigido por Pablo Prigioni.",
-        "Argentina suma seis triunfos y dos derrotas en el Grupo F."
-      ],
-      "noConfirmado": [
-        "Todavía no se anunciaron los precios ni la fecha exacta de venta de las entradas."
-      ],
-      "etiquetas": [
-        "selección argentina de básquet",
-        "Ventana FIBA",
-        "Zárate",
-        "Copa del Mundo 2027",
-        "Confederación Argentina de Básquet"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Básquet Plus",
-          "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
-          "fecha": "2026-10-01T19:46:22.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la selección será local en Zárate y jugará en el Espacio DAM."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/deportes/argentina-jugara-en-zarate-ante-bahamas-y-canada-por-las-eliminatorias-al-mundial-2027",
-          "fecha": "2026-10-01T20:36:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló las fechas de los partidos, el cambio de sede respecto a Mar del Plata y la venta de entradas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-argentina-de-basquet-juega-en-zarate-la-ventana-fiba",
-      "foto": {
-        "archivo": "fotos-notas/zdl4xp.jpg",
-        "credito": "Foto: QZ Noticias (Mar del Plata)"
       }
     },
     {
@@ -4410,279 +4344,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "la-subsecretaria-de-deporte-abre-las-inscripciones-para-la-carrera"
-    },
-    {
-      "id": "repaso20261001manana",
-      "propia": "repaso",
-      "titulo": "El repaso de la mañana en Radar Balcarce: el hospital y Las Correcaminos",
-      "copete": "Radar Balcarce publicó a las 10:35 de este jueves 1 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 2 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 2 notas que se contaron en el repaso de la mañana del jueves 1, en el orden en que salieron en el audio.\n\nEl Hospital Municipal incorpora una nueva mesa de cirugía. El centro asistencial sumó un equipo hidráulico adquirido por leasing. Cuenta con desplazamiento longitudinal y permite utilizar sistemas de diagnóstico por imágenes en el quirófano.\n\nLas Correcaminos participan en el torneo de basquet Sporting Rosa. El equipo femenino de la Escuela Municipal juega el sábado y el domingo en Mar del Plata. La competencia incluye una campaña de concientización sobre el cáncer de mama.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-01T13:35:03.428Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T13:35:03.428Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-01T13:35:03.428Z",
-      "temas": [],
-      "etiquetas": [
-        "el hospital",
-        "Las Correcaminos"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "ff9n91",
-        "dwvi75"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "El Hospital Municipal incorpora una nueva mesa de cirugía",
-          "href": "/nota/el-hospital-municipal-incorpora-una-nueva-mesa-de-cirugia-ff9n91"
-        },
-        {
-          "texto": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
-          "href": "/nota/las-correcaminos-participan-en-el-torneo-de-basquet-sporting-rosa-dwvi75"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/Dd9By6DiBxU/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/1654870962731775/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-manana-en-radar-balcarce-el-hospital-y-fiesta",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261001manana.jpg",
-        "credito": "Fotos: Municipalidad de Balcarce y Radio Gabal (FM 104.1)"
-      }
-    },
-    {
-      "id": "1v6m62u",
-      "titulo": "El Hospital Fossati completa la meta de incorporar treinta televisores",
-      "copete": "Una campaña solidaria reunió los fondos necesarios para sumar treinta televisores al Hospital Municipal Felipe Fossati. Las autoridades confirmaron que finalizó la etapa de recolección de donaciones.",
-      "cuerpo": "La campaña solidaria impulsada por Cristina Díaz y Ana Albanese, con el respaldo de la Fundación Donde Quiero Estar, alcanzó la meta de incorporar treinta televisores de 32 pulgadas para el Hospital Municipal Felipe Fossati.\n\nLos aparatos serán distribuidos en las habitaciones de internación y en el área de Hemoterapia del centro asistencial. Desde el establecimiento indicaron que, al cumplirse el objetivo previsto, concluyó la recepción de aportes económicos para este proyecto.\n\nEl paso siguiente consistirá en colocar los dispositivos de manera gradual, según la planificación técnica del edificio sanitario.",
-      "guion": "El Hospital Fossati completa la meta de incorporar treinta televisores",
-      "seccion": "Balcarce",
-      "medios": [
-        "News Balcarce (FM 91.7)",
-        "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
-        "El Diario Balcarce",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://balcarce.gob.ar/2026/10/01/se-alcanzo-el-objetivo-de-incorporar-30-televisores-al-hospital-fossati/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T13:00:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T13:31:00.229Z",
-      "relevancia": 99,
-      "local": true,
-      "oficial": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "hospital"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Reunieron los recursos para adquirir treinta televisores de 32 pulgadas.",
-        "Los equipos se instalarán en las habitaciones y en Hemoterapia.",
-        "El hospital informó que ya no se necesitan más donaciones para la iniciativa.",
-        "La colocación de los aparatos se hará de forma gradual."
-      ],
-      "textoRedes": "Una campaña solidaria impulsada por Cristina Díaz y Ana Albanese reunió los fondos para incorporar treinta televisores al Hospital Municipal Felipe Fossati. Desde el centro asistencial informaron que ya no se necesitan más donaciones.",
-      "etiquetas": [
-        "Hospital Fossati",
-        "donación",
-        "televisores"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/10/01/se-alcanzo-el-objetivo-de-incorporar-30-televisores-al-hospital-fossati/",
-          "fecha": "2026-10-01T13:00:56.000Z",
-          "oficial": true,
-          "aporte": "Informó que se alcanzó el objetivo de la campaña para sumar treinta televisores y que finalizó la recepción de donaciones."
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/la-campana-solidaria-para-incorporar-televisores-al-hospital-fossati-alcanzo-su-objetivo/",
-          "fecha": "2026-10-01T13:12:42.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el alcance de la meta solidaria impulsada por Cristina Díaz y Ana Albanese junto a la Fundación Donde Quiero Estar."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1dqm02n",
-          "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
-          "fecha": "2026-09-30T13:31:15.123Z",
-          "ruta": "/nota/el-hospital-fossati-afronta-una-deuda-millonaria-de-obras-sociales-1dqm02n"
-        },
-        {
-          "id": "ff9n91",
-          "titulo": "El Hospital Municipal incorpora una nueva mesa de cirugía",
-          "fecha": "2026-10-01T11:20:17.000Z",
-          "ruta": "/nota/el-hospital-municipal-incorpora-una-nueva-mesa-de-cirugia-ff9n91"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-hospital-fossati-completa-la-meta-de-incorporar-treinta-televisores",
-      "foto": {
-        "archivo": "fotos-notas/1v6m62u.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
-      "id": "is08uu",
-      "titulo": "Esteban Edul recibe amenazas tras sus análisis arbitrales",
-      "copete": "El comentarista de ESPN sufrió un hostigamiento masivo en su teléfono personal luego del partido entre Estudiantes y Rosario Central. El periodista cuestionó el uso del VAR y el nivel del arbitraje nacional.",
-      "cuerpo": "El periodista deportivo Esteban Edul recibió cerca de 300 mensajes y llamados con agresiones en su WhatsApp tras cuestionar el arbitraje y el uso del VAR en el encuentro del sábado pasado entre Estudiantes y Rosario Central. El comentarista de ESPN denunció que su número de teléfono fue filtrado en algún grupo o red social, lo que trasladó los insultos habituales de las plataformas digitales a su línea personal.\n\nEdul señaló que la controversia excedió a los simpatizantes de ambos clubes y abrió un debate sobre las decisiones arbitrales en el fútbol argentino, un ámbito que calificó en su peor momento. Además, recordó que tras aquel partido se produjo una pelea entre futbolistas de los dos planteles.",
-      "guion": "Esteban Edul recibe amenazas tras sus análisis arbitrales",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "El Eco de Tandil",
-        "Minuto Uno"
-      ],
-      "enlace": "https://www.infobae.com/deportes/2026/10/01/esteban-edul-recibio-cerca-de-300-mensajes-y-llamados-con-amenazas-tras-la-polemica-por-el-arbitraje-de-estudiantes-rosario-central/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T12:49:49.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T19:31:41.270Z",
-      "relevancia": 38,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El periodista Esteban Edul recibió unos 300 mensajes amenazantes en su WhatsApp.",
-        "El hostigamiento se originó tras sus comentarios sobre el arbitraje del partido entre Estudiantes y Rosario Central.",
-        "El comentarista denunció la filtración de su número de teléfono personal.",
-        "Sostuvo que el arbitraje y el VAR atraviesan su peor momento en el fútbol argentino."
-      ],
-      "noConfirmado": [
-        "No se especificó qué grupo, medio o red social difundió el número de teléfono del comentarista."
-      ],
-      "textoRedes": "El periodista Esteban Edul recibió unos 300 mensajes amenazantes en su WhatsApp tras analizar el arbitraje del partido entre Estudiantes y Rosario Central.",
-      "etiquetas": [
-        "Esteban Edul",
-        "Estudiantes",
-        "Rosario Central",
-        "Árbitros",
-        "VAR",
-        "Fútbol argentino"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/01/esteban-edul-recibio-cerca-de-300-mensajes-y-llamados-con-amenazas-tras-la-polemica-por-el-arbitraje-de-estudiantes-rosario-central/",
-          "fecha": "2026-10-01T12:49:49.000Z",
-          "oficial": false,
-          "aporte": "Detalló la cantidad de mensajes recibidos, la filtración de su teléfono y sus críticas al arbitraje y al VAR."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/hostigamiento-esteban-edul-recibio-casi-300-amenazas-las-polemicas-estudiantes-vs-rosario-central-n6329028",
-          "fecha": "2026-10-01T18:04:03.000Z",
-          "oficial": false,
-          "aporte": "Informó la denuncia del periodista sobre la filtración de su número y sus críticas al uso de la tecnología."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/deportes/esteban-edul-denuncio-amenazas-tras-sus-criticas-al-arbitraje-y-al-uso-del-var",
-          "fecha": "2026-10-01T13:50:11.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en su publicación."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "repaso20260930tarde",
-          "titulo": "El repaso de la tarde en Radar Balcarce: ACTC, Rosario Central y capacitaciones",
-          "fecha": "2026-09-30T18:06:28.052Z",
-          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y-repaso20260930tarde"
-        },
-        {
-          "id": "1cbil57",
-          "titulo": "Hinchas de Newell's y Rosario Central se enfrentan en Rosario",
-          "fecha": "2026-09-30T02:21:20.000Z",
-          "ruta": "/nota/hinchas-de-newell-s-y-rosario-central-se-enfrentan-en-rosario-1cbil57"
-        },
-        {
-          "id": "122dsf6",
-          "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
-          "fecha": "2026-09-26T03:00:00.000Z",
-          "ruta": "/nota/rosario-central-genera-polecutemica-en-los-festejos-contra-juan-122dsf6"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "esteban-edul-recibe-amenazas-tras-sus-analisis-arbitrales",
-      "foto": {
-        "archivo": "fotos-notas/is08uu.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
-    },
-    {
-      "id": "1vt533g",
-      "titulo": "El Solcito atrae visitantes con su almacén histórico y costillar a la estaca",
-      "copete": "Un pequeño paraje rural ubicado a menos de dos horas de viaje por la Ruta Nacional 226 ofrece almuerzos caseros, construcciones antiguas y un entorno serrano ideal para descansar.",
-      "cuerpo": "El paraje El Solcito cuenta con 40 habitantes y 13 casas dispersas en el partido de Tandil, a menos de dos horas de viaje en auto desde Mar del Plata por la Ruta Nacional 226 según informó un medio regional.\n\nEl poblado conserva además el edificio del Club Deportivo El Solcito y las antiguas vías inhabilitadas del Ferrocarril del Sud.\n\nLa propuesta turística se completa con una escasa señal de telefonía celular que facilita la desconexión total. Debido a la alta demanda durante los fines de semana, se recomienda efectuar reservas anticipadas para almorzar.",
-      "guion": "El Solcito atrae visitantes con su almacén histórico y costillar a la estaca.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "0223 (Mar del Plata)"
-      ],
-      "enlace": "https://www.0223.com.ar/nota/2026-10-1-9-45-0-a-dos-horas-de-mar-del-plata-el-pueblo-de-40-habitantes-ideal-para-descansar-que-es-furor-por-su-costillar-a-la-estaca",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-01T12:45:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-01T14:01:13.404Z",
-      "relevancia": 18,
-      "local": false,
-      "deLaZona": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-1-9-45-0-a-dos-horas-de-mar-del-plata-el-pueblo-de-40-habitantes-ideal-para-descansar-que-es-furor-por-su-costillar-a-la-estaca",
-          "fecha": "2026-10-01T12:45:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "el-paraje-rural-el-solcito-atrae-visitantes-con-su-almacen-historico",
-      "corregidaAMano": true,
-      "foto": {
-        "archivo": "fotos-notas/1vt533g.jpg",
-        "credito": "Foto: 0223 (Mar del Plata)"
-      }
     }
   ],
   "secciones": [
@@ -4702,25 +4363,15 @@
       "nombre": "El autódromo",
       "ranura": "autodromo",
       "cuantas": 2
-    },
-    {
-      "nombre": "El hospital",
-      "ranura": "hospital",
-      "cuantas": 2
-    },
-    {
-      "nombre": "Las rutas",
-      "ranura": "rutas",
-      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 9,
       "sensacion": 5,
-      "humedad": 88,
-      "viento": 21,
-      "rumbo": "NE",
+      "humedad": 92,
+      "viento": 23,
+      "rumbo": "N",
       "cielo": "Nublado",
       "esDeDia": false
     },
@@ -5185,5 +4836,5 @@
       "motivo": "necesita ojo humano: \"herido\""
     }
   ],
-  "esperandoCuerpo": 10
+  "esperandoCuerpo": 13
 }

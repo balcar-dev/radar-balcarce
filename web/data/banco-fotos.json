@@ -3984,16 +3984,16 @@
   "cuando": "2026-10-01T13:03:02.884Z"
  },
  "dwvi75": {
-  "archivo": "fotos-notas/dwvi75.jpg",
   "medio": "Radio Gabal (FM 104.1)",
-  "credito": "Foto: Radio Gabal (FM 104.1)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Las Correcaminos participan en el torneo de basquet Sporting Rosa",
   "enlace": "https://www.radiogabal.com.ar/index.php/deportes/las-correcaminos-vuelven-a-jugar-el-torneo-sporting-rosa",
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/correcaminos.jpg",
   "razon": "Es la única foto disponible, tiene buena nitidez y muestra al equipo completo sin menores ni marcas de medios.",
-  "cuando": "2026-10-01T13:32:05.036Z"
+  "cuando": "2026-10-01T13:32:05.036Z",
+  "intentado": true,
+  "borrada": true
  },
  "1v6m62u": {
   "archivo": "fotos-notas/1v6m62u.jpg",
@@ -5050,10 +5050,10 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
-  "razon": "La única foto disponible incluye menores de edad reconocibles, por lo que no puede ser publicada.",
-  "cuando": "2026-10-02T13:31:50.426Z",
-  "intentos": 1,
-  "fuentes": 1
+  "razon": "La foto A muestra a menores de edad reconocibles y la foto B es ilegible y tiene marca de agua.",
+  "cuando": "2026-10-03T01:02:05.347Z",
+  "intentos": 2,
+  "fuentes": 2
  },
  "1e41jwt": {
   "archivo": "fotos-notas/1e41jwt.jpg",

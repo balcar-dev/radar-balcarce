@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03T00:42:16.923Z",
+ "generado": "2026-10-03T01:02:10.132Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -33,6 +33,70 @@
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras",
    "maximo": 3
+  },
+  {
+   "id": "2qj2kn",
+   "titulo": "Están los árbitros para la primera fecha del ‘Clausura’",
+   "copete": "Se conocieron este viernes las designaciones arbitrales correspondientes a la disputa de la 1ª fecha de la fase “Clausura” del Torneo Oficial 2026 , “Copa 75º Aniversario Asociación Bomberos Voluntarios” y “Copa Challenger Alejandro Mascareño”, y que protagonizan 12 equipos…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-03T00:57:01.000Z",
+   "fuentes": [
+    {
+     "medio": "Acción 5 (Balcarce)",
+     "enlace": "https://accion5.com/oficial-estan-los-arbitros-para-la-primera-fecha-del-clausura/",
+     "fecha": "2026-10-03T00:57:01.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 6 problemas (antecedente, fecha): el titulo usa \"liga\", que sale de una nota anterior, como si fuera de hoy",
+   "maximo": 3
+  },
+  {
+   "id": "zdl4xp",
+   "titulo": "Argentina será local en Zárate durante la próxima Ventana FIBA",
+   "copete": "La Selección Argentina ya tiene sede confirmada para sus dos compromisos como local por la quinta ventana de los Clasificatorios de las Américas rumbo a la Copa del Mundo FIBA 2027. El equipo nacional recibirá a Bahamas el jueves 26 de noviembre y a Canadá el domingo 29, ambos…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-01T19:36:04.000Z",
+   "fuentes": [
+    {
+     "medio": "Básquet Plus",
+     "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
+     "fecha": "2026-10-01T19:46:22.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/basquet/zarate-localia-argentina-basquet-noviembre-eliminatorias-bahamas-canada_0_RcstTHNoRV.html",
+     "fecha": "2026-10-02T14:40:35.000Z"
+    },
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/deportes/argentina-jugara-en-zarate-ante-bahamas-y-canada-por-las-eliminatorias-al-mundial-2027",
+     "fecha": "2026-10-01T20:36:58.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/argentina-jugara-ante-bahamas-y-canada-en-zarate-por-los-clasificatorios-fiba",
+     "fecha": "2026-10-02T12:28:42.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/01/109923-la-seleccion-argentina-de-basquet-jugara-las-proximas-ventanas-fiba-en-zarate",
+     "fecha": "2026-10-01T19:36:04.000Z"
+    },
+    {
+     "medio": "Pick and Roll",
+     "enlace": "https://pickandroll.com.ar/argentina-recibira-a-bahamas-y-canada-en-zarate-por-la-quinta-ventana/",
+     "fecha": "2026-10-01T21:31:07.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-2-7-31-0-por-que-la-seleccion-argentina-recibira-a-bahamas-y-canada-en-zarate",
+     "fecha": "2026-10-02T10:45:20.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 4
   },
   {
    "id": "1gofphd",
@@ -72,9 +136,9 @@
      "fecha": "2026-10-02T17:22:58.000Z"
     },
     {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-2-13-51-0-caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al-temor-a-volver-al-infierno",
-     "fecha": "2026-10-03T00:32:50.000Z"
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al-temor-a-volver-al-infierno/",
+     "fecha": "2026-10-02T19:53:05.000Z"
     },
     {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
@@ -92,9 +156,9 @@
      "fecha": "2026-10-02T18:47:07.000Z"
     },
     {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al-temor-a-volver-al-infierno/",
-     "fecha": "2026-10-02T19:53:05.000Z"
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-2-13-51-0-caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al-temor-a-volver-al-infierno",
+     "fecha": "2026-10-02T16:55:10.000Z"
     }
    ],
    "intentos": 1,
@@ -151,7 +215,7 @@
     {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/musica/noticias/2026/10/02/murio-ricardo-soule-el-poeta-de-vox-dei-que-convirtio-la-biblia-en-rock/",
-     "fecha": "2026-10-02T15:40:40.000Z"
+     "fecha": "2026-10-02T18:15:17.000Z"
     },
     {
      "medio": "El Destape",
@@ -204,6 +268,11 @@
      "fecha": "2026-10-02T15:59:00.000Z"
     },
     {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/02/murio-ricardo-soule-fundador-de-vox-dei-y-figura-esencial-del-rock-argentino-n523526/",
+     "fecha": "2026-10-02T16:29:19.000Z"
+    },
+    {
      "medio": "La Tecla",
      "enlace": "https://www.latecla.info/170146-murio-ricardo-soule-lider-de-vox-dei",
      "fecha": "2026-10-02T15:58:00.000Z"
@@ -234,6 +303,11 @@
      "fecha": "2026-10-02T16:11:45.000Z"
     },
     {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/espectaculos/musica/biblia-vox-dei-gran-obra-ricardo-soule-marco-dia-rock-argentino-hizo-contacto-dios_0_RZTJFvwTwg.html",
+     "fecha": "2026-10-02T15:34:57.000Z"
+    },
+    {
      "medio": "C5N",
      "enlace": "https://www.c5n.com/ratingcero/murio-ricardo-soule-lider-vox-dei-y-pionero-del-rock-nacional-n250573",
      "fecha": "2026-10-02T15:55:00.000Z"
@@ -259,11 +333,6 @@
      "fecha": "2026-10-02T15:49:06.000Z"
     },
     {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/02/murio-ricardo-soule-fundador-de-vox-dei-y-figura-esencial-del-rock-argentino-n523526/",
-     "fecha": "2026-10-02T16:29:19.000Z"
-    },
-    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/espectaculos/murio-ricardo-soule-lider-de-vox-dei-y-leyenda-del-rock-argentino/",
      "fecha": "2026-10-02T16:33:30.000Z"
@@ -287,6 +356,11 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/espectaculos/figuras-del-mundo-de-la-musica-despidieron-a-ricardo-soule-el-fundador-de-vox-dei-que-murio-a-los-76-nid02102026/",
      "fecha": "2026-10-02T19:10:33.000Z"
+    },
+    {
+     "medio": "Realpolitik",
+     "enlace": "https://realpolitik.com.ar/nota/74516/ricardo-soule-el-hombre-que-demostro-que-dios-tambien-es-rock",
+     "fecha": "2026-10-02T19:48:00.000Z"
     },
     {
      "medio": "Página/12",
@@ -346,8 +420,8 @@
      "fecha": "2026-10-02T20:20:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 4 problemas (tilde, fecha, tildes): el titulo dice \"mas\" en vez de \"más\": \"El riesgo pais sube y alcanza su valor mas alto del año\"",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 5
   },
   {
@@ -534,6 +608,38 @@
    "maximo": 3
   },
   {
+   "id": "1wdslpn",
+   "titulo": "Revisarán el sobreseimiento de Luis Caputo por la emisión del bono a 100 años",
+   "copete": "Buenos Aires, 2 octubre (NA) -- La Sala I de la Cámara Criminal y Correcional Federal aceptó este viernes de manera formal el recurso de casación de la fiscal Eugenia Anzorreguy de Silva en lo que refiere al sobreseimiento del ministro de Economía Luis Caputo por la supuesta…",
+   "seccion": "Política",
+   "fecha": "2026-10-02T17:53:13.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/judiciales/2026/10/02/revisaran-el-sobreseimiento-de-luis-caputo-por-la-emision-del-bono-a-100-anos/",
+     "fecha": "2026-10-02T17:53:13.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/economia/casacion-revisara-el-sobreseimiento-de-luis-caputo-por-el-bono-a-100-anos-a40.phtml",
+     "fecha": "2026-10-02T22:58:10.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/revisaran-el-sobreseimiento-luis-caputo-la-emision-del-bono-100-anos-n922661",
+     "fecha": "2026-10-03T00:39:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/confirmaron-el-sobresemiento-de-caputo-en-la-causa-por-la-emision-de-un-bono-a-100-anos_a6ac0117df814a2817c90930e",
+     "fecha": "2026-10-02T21:23:30.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 95 caracteres, el máximo es 90",
+   "maximo": 3
+  },
+  {
    "id": "5cxrkh",
    "titulo": "Atlético Tucumán vs. Barracas Central: día, horario, canal de TV y cómo ver el partido del Torneo Clausura 2026",
    "copete": "Cuándo y dónde ver el partido entre Atlético Tucumán y Barracas Central por el Torneo Clausura 2026 . El encuentro se jugará a las 17:00 en el estadio Monumental Presidente José Fierro de Tucumán. En esta nota encontrás horario, canal de TV, datos del partido y toda la…",
@@ -562,13 +668,13 @@
     },
     {
      "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/futbolargentino/donde-ver-en-vivo-atletico-tucuman-vs-barracas-central-por-la-fecha-11-del-torneo-clausura-tv-y-streaming-online",
-     "fecha": "2026-10-02T20:29:01.000Z"
+     "enlace": "https://bolavip.com/ar/futbolargentino/alineaciones-de-atletico-tucuman-y-barracas-central-por-la-torneo-clausura-formaciones-probables",
+     "fecha": "2026-10-02T23:07:11.000Z"
     },
     {
      "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/futbolargentino/alineaciones-de-atletico-tucuman-y-barracas-central-por-la-torneo-clausura-formaciones-probables",
-     "fecha": "2026-10-02T20:27:46.000Z"
+     "enlace": "https://bolavip.com/ar/futbolargentino/donde-ver-en-vivo-atletico-tucuman-vs-barracas-central-por-la-fecha-11-del-torneo-clausura-tv-y-streaming-online",
+     "fecha": "2026-10-02T20:29:01.000Z"
     }
    ],
    "intentos": 4,
