@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03T21:31:38.504Z",
+ "generado": "2026-10-03T22:01:43.207Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -60,9 +60,9 @@
      "fecha": "2026-10-03T19:40:54.000Z"
     },
     {
-     "medio": "El Gráfico",
-     "enlace": "https://www.elgrafico.com.ar/articulo/1038/103146/river-goleo-a-un-equipo-del-federal-a-en-un-amistoso",
-     "fecha": "2026-10-03T06:30:00.000Z"
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-2-18-31-0-river-jugara-ante-un-rival-que-tuvo-su-debut-este-ano-en-el-federal-a",
+     "fecha": "2026-10-02T21:47:36.000Z"
     },
     {
      "medio": "0223 (Mar del Plata)",
@@ -70,53 +70,14 @@
      "fecha": "2026-10-03T00:19:00.000Z"
     },
     {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-2-18-31-0-river-jugara-ante-un-rival-que-tuvo-su-debut-este-ano-en-el-federal-a",
-     "fecha": "2026-10-02T21:47:36.000Z"
+     "medio": "El Gráfico",
+     "enlace": "https://www.elgrafico.com.ar/articulo/1038/103146/river-goleo-a-un-equipo-del-federal-a-en-un-amistoso",
+     "fecha": "2026-10-03T06:30:00.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "13f00z",
-   "titulo": "Virginia Aparicio, SPRINT y la investigación que puso a los plaguicidas bajo la lupa",
-   "copete": "El Diario había reflejado en 2023 los resultados de los muestreos realizados en Balcarce y la zona en el marco del proyecto internacional. La investigadora de la EEA Balcarce fue la responsable de la participación argentina. Tres años después, SP",
-   "seccion": "Agro",
-   "fecha": "2026-10-03T12:49:20.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-sprint-y-la-investigacion-que-puso-a-los-plaguicidas-bajo-la-lupa-888",
-     "fecha": "2026-10-03T12:49:20.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 3 problemas (fecha): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 26 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "qqa24c",
-   "titulo": "“Con confianza en el ritmo”: el mensaje de Franco Colapinto en la previa a la carrera del GP de Bahréin",
-   "copete": "Franco Colapinto se prepara para una nueva carrera de la Fórmula 1 en el Gran Premio de Bahréin : el piloto de Alpine largará anteúltimo tras recibir 15 posiciones de penalización entre el premio de Azerbaiyán y este fin de semana. El argentino se mostró confiado por dar vuelta…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-03T16:52:48.000Z",
-   "fuentes": [
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/03/con-confianza-en-el-ritmo-el-mensaje-de-franco-colapinto-en-la-previa-a-la-carrera-del-gp-de-bahrein/",
-     "fecha": "2026-10-03T16:52:48.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/deportes/el-mensaje-franco-colapinto-la-previa-la-carrera-del-gp-bahrein-con-confianza-el-ritmo-n6329742",
-     "fecha": "2026-10-03T18:51:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
   }
  ]
 }
