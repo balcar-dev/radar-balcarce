@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T08:01:26.994Z",
- "portada": 50,
+ "generado": "2026-10-03T08:31:11.864Z",
+ "portada": 49,
  "archivo": 829,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T08:01:27.030Z",
+  "generado": "2026-10-03T08:31:11.887Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -93,13 +93,13 @@
       "seccion": "Agro"
      },
      {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
-     },
-     {
       "id": "n09ogo",
       "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
       "seccion": "Fútbol"
      },
      {
@@ -116,12 +116,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 41,
     "notas": [
      {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-      "seccion": "Fútbol"
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
      },
      {
       "id": "j3xrez",
