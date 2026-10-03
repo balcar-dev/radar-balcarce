@@ -1,5 +1,23 @@
 {
- "generado": "2026-10-03T09:01:24.213Z",
+ "generado": "2026-10-03T12:31:26.026Z",
  "intentosMaximos": 3,
- "notas": []
+ "notas": [
+  {
+   "id": "11z2t0v",
+   "titulo": "De la escuela a la universidad: 84 alumnos de la EP N.º 10 recorrieron la Facultad de Ciencias Agrarias",
+   "copete": "Los estudiantes de la Escuela Primaria N.º 10 “Malvinas Argentinas” participaron de una jornada educativa en la Universidad Nacional de Mar del Plata, donde recorrieron la huerta y los laboratorios y participaron de distintas actividades vinculadas con la producción, elaboración…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-03T02:27:16.419Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/44969-de-la-escuela-a-la-universidad-84-alumnos-de-la-ep-n-10-recorrieron-la-facultad-de-ciencias-agrarias/",
+     "fecha": null
+    }
+   ],
+   "intentos": 2,
+   "motivo": "título o bajada: 2 problemas (numero): el copete dice 80 y la fuente no lo dice",
+   "maximo": 3
+  }
+ ]
 }

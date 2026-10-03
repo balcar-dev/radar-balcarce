@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T12:01:21.255Z",
- "portada": 49,
- "archivo": 831,
- "esperandoCuerpo": 0,
+ "generado": "2026-10-03T12:31:26.026Z",
+ "portada": 43,
+ "archivo": 832,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T12:01:21.273Z",
+  "generado": "2026-10-03T12:31:26.064Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,21 +85,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 55,
     "notas": [
      {
-      "id": "h1ggzr",
-      "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
-      "seccion": "Agro"
-     },
-     {
-      "id": "1y5m4fa",
-      "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
-      "seccion": "Automovilismo"
+      "id": "164o14u",
+      "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
+      "seccion": "Balcarce"
      },
      {
       "id": "n09ogo",
       "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
       "seccion": "Fútbol"
      },
      {
@@ -116,19 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 29,
-    "notas": [
-     {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -143,6 +132,11 @@
       "id": "1kfxthk",
       "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "seccion": "Balcarce"
      },
      {
       "id": "j3xrez",

@@ -1,6 +1,73 @@
 {
-  "generado": "2026-10-03T12:01:21.255Z",
+  "generado": "2026-10-03T12:31:26.026Z",
   "notas": [
+    {
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "copete": "Las dependencias de seguridad locales sufren interrupciones en sus teléfonos habituales. Las autoridades habilitan vías alternativas para la atención de urgencias.",
+      "cuerpo": "Las líneas fijas de la Estación de Policía Comunal y del Comando de Patrullas Rural de Balcarce se encuentran fuera de servicio. Según informó la Policía de la Provincia de Buenos Aires, los números 2266-424013 y 2266-423527 de la comisaría local y el 2266-420947 de la guardia rural están inhabilitados de forma momentánea.\n\nPara comunicarse ante cualquier urgencia, las autoridades solicitaron utilizar las líneas gratuitas 911 o 103. Además, para contactar al Comando de Patrullas Rural se habilitó el número celular 2266-678490 exclusivamente para el envío de mensajes de texto y audios.",
+      "guion": "Cortan las líneas fijas de la Policía y del CPR",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44983-fuera-de-servicio-los-telefonos-de-la-policia-comunal-y-del-cpr-en-balcarce/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-03T12:31:09.453Z",
+      "sinFecha": true,
+      "visto": "2026-10-03T12:31:09.453Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Inhabilitan las líneas fijas de la Policía Comunal y del CPR",
+        "Habilitan el 911 y el 103 para urgencias",
+        "Establecen un número alternativo para mensajes en la zona rural"
+      ],
+      "noConfirmado": [
+        "No se informaron las causas de la falla telefónica.",
+        "No existe una fecha confirmada para el restablecimiento del servicio.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las líneas fijas de la Estación de Policía Comunal y del Comando de Patrullas Rural se encuentran fuera de servicio y habilitan vías alternativas para emergencias en Balcarce.",
+      "etiquetas": [
+        "Policia Comunal",
+        "Comando de Patrullas Rural",
+        "Balcarce",
+        "telefonos",
+        "seguridad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44983-fuera-de-servicio-los-telefonos-de-la-policia-comunal-y-del-cpr-en-balcarce/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló qué líneas fijas de la Policía Comunal y del CPR están inhabilitadas, los números alternativos y las vías de emergencia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1917p5s",
+          "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
+          "fecha": "2026-10-02T22:30:06.000Z",
+          "ruta": "/nota/varias-lineas-de-la-policia-local-interrumpen-su-servicio-habitual-1917p5s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "cortan-las-lineas-fijas-de-la-policia-y-del-cpr",
+      "foto": {
+        "archivo": "fotos-notas/174qhq6.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
     {
       "id": "1kfxthk",
       "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
@@ -53,127 +120,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "boca-derrota-tres-a-cero-a-union-y-estira-su-invicto"
-    },
-    {
-      "id": "1y5m4fa",
-      "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
-      "copete": "El piloto argentino terminó decimoquinto en la clasificación pero arrastra penalizaciones. Confía en el rendimiento del auto para la carrera del domingo.",
-      "cuerpo": "Franco Colapinto finalizó decimoquinto en la sesión de clasificación del Gran Premio de Bahréin de Fórmula 1, aunque su lugar de partida será el penúltimo de la grilla. El piloto de Alpine acumuló quince puestos de sanción debido a modificaciones en la unidad de potencia y a infracciones arrastradas desde la competencia anterior en Azerbaiyán.\n\nA pesar de la penalización, el deportista de veintitrés aós logró avanzar a la segunda ronda de la clasificación y manifestó su confianza para la competencia del domingo. Según explicó, la estrategia incluyó conservar juegos de gomas de distintos compuestos gracias a la certeza de que iniciaría en el fondo.\n\nEl argentino remarcó que el circuito ofrece zonas aptas para los sobrepasos debido a las frenadas exigentes y las rectas prolongadas. Por este motivo, confía en mantener un ritmo similar al demostrado en las prácticas libres para avanzar posiciones durante la carrera principal.",
-      "guion": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
-      "seccion": "Automovilismo",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nación",
-        "Clarín",
-        "El Eco de Tandil",
-        "LU9 Mar del Plata",
-        "QZ Noticias (Mar del Plata)",
-        "Infobae",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "Ámbito",
-        "TyC Sports",
-        "C5N",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "La Nueva",
-        "0221",
-        "La Brújula 24",
-        "La Tecla",
-        "La Verdad",
-        "El Marplatense",
-        "La Verdad de Ayacucho",
-        "Doble Amarilla",
-        "Bolavip Argentina",
-        "A24",
-        "Olé",
-        "Minuto Uno",
-        "Solotc",
-        "Córdoba Competición",
-        "La Capital (Rosario)",
-        "0223 (Mar del Plata)"
-      ],
-      "enlace": "https://tn.com.ar/deportes/2026/10/03/franco-colapinto-mostro-optimismo-para-el-gp-de-bahrein-pese-a-las-sanciones-que-recibio-se-puede-remontar/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T09:58:52.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T11:01:20.961Z",
-      "relevancia": 97,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Colapinto terminó 15° en la clasificación pero arrastra 15 puestos de sancion.",
-        "El piloto de Alpine largará en la penúltima posición de la grilla este domingo.",
-        "El argentino guardó neumáticos y destacó que el circuito favorece los sobrepasos."
-      ],
-      "seSabe": [
-        "Franco Colapinto terminó decimoquinto en la clasificación del GP de Bahréin.",
-        "El piloto argentino penalizó quince posiciones entre el GP anterior y la competencia actual.",
-        "El corredor integra la escudería Alpine."
-      ],
-      "noConfirmado": [
-        "El rendimiento exacto que tendrá el automóvil durante las condiciones de carrera."
-      ],
-      "textoRedes": "Franco Colapinto terminó 15° en la clasificación de Bahréin pero arrastra 15 puestos de penalización y largará penúltimo. El piloto de Alpine se mostró optimista con la estrategia de gomas y confía en remontar este domingo.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Formula 1",
-        "Gran Premio de Bahrein"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/2026/10/03/franco-colapinto-mostro-optimismo-para-el-gp-de-bahrein-pese-a-las-sanciones-que-recibio-se-puede-remontar/",
-          "fecha": "2026-10-03T09:58:52.000Z",
-          "oficial": false,
-          "aporte": "Detalló la posición en la clasificación, las penalizaciones y las declaraciones de Colapinto sobre la estrategia de gomas."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/polideportivo/franco-colapinto-largara-penultimo-en-gp-de-bahrein-de-formula-1-y-aviso-creo-que-podemos-remontar/",
-          "fecha": "2026-10-03T10:32:58.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el piloto compite para la escudería Alpine y largará penúltimo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ei8drx",
-          "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
-          "fecha": "2026-10-03T01:00:00.000Z",
-          "ruta": "/nota/max-verstappen-consigue-la-pole-position-y-franco-colapinto-larga-ei8drx"
-        },
-        {
-          "id": "1ftwyte",
-          "titulo": "Franco Colapinto penaliza quince puestos en la grilla por un cambio de motor",
-          "fecha": "2026-10-02T18:03:01.000Z",
-          "ruta": "/nota/franco-colapinto-penaliza-quince-puestos-en-la-grilla-por-un-cambio-1ftwyte"
-        },
-        {
-          "id": "18tlzl2",
-          "titulo": "The Race ubica último a Franco Colapinto tras Bakú",
-          "fecha": "2026-09-28T20:26:16.000Z",
-          "ruta": "/nota/the-race-ubica-ultimo-a-franco-colapinto-tras-baku-18tlzl2"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-larga-penultimo-en-bahrein-y-apuesta-a-remontar",
-      "foto": {
-        "archivo": "fotos-notas/1y5m4fa.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
     },
     {
       "id": "j3xrez",
@@ -408,7 +354,9 @@
       "guion": "Mariano Werner recibe millonaria multa y sanción deportiva",
       "seccion": "Automovilismo",
       "medios": [
-        "El Destape"
+        "El Destape",
+        "Solotc",
+        "Campeones"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/tc-pick-up-duras-sanciones-recibio-mariano-werner-final-balcarce-2026102205050",
       "teniaImagenLaFuente": true,
@@ -544,70 +492,6 @@
       "slug": "choque-frontal-en-la-ruta-226-deja-tres-heridos"
     },
     {
-      "id": "1917p5s",
-      "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
-      "copete": "Diferentes dependencias de seguridad registran inconvenientes en sus teléfonos fijos. Las autoridades habilitan vías alternativas y recuerdan las líneas de emergencia.",
-      "cuerpo": "La Estación de Policía Comunal y el Comando de Prevención Rural informan fallas técnicas en sus vías de comunicación telefónica.\n\nLa dependencia comunal detalla que los aparatos 2266-424013 y 2266-423527 no funcionan momentáneamente. Por su parte, el CPR reporta la inhabilitación del número fijo 2266-420947.\n\nAnte esta situación, el CPR activa el contacto 2266-678490 exclusivo para recibir mensajes o audios en su guardia. Las autoridades solicitan utilizar los servicios del 911 o el 103 frente a cualquier urgencia mientras continúan las reparaciones.",
-      "guion": "Varias líneas de la Policía local interrumpen su servicio habitual",
-      "seccion": "Balcarce",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/varias-lineas-de-la-policia-estan-fuera-de-servicio-como-comunicarse-ante-una-emergencia",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T22:30:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Fallas en los teléfonos de la Policía Comunal y el CPR",
-        "Habilitan un número alternativo para mensajes en la guardia rural",
-        "Recuerdan la disponibilidad del 911 y el 103 para emergencias"
-      ],
-      "seSabe": [
-        "La Estación de Policía Comunal tiene fuera de servicio los números 2266-424013 y 2266-423527, según informó el organismo.",
-        "El Comando de Prevención Rural indicó que el teléfono fijo 2266-420947 se encuentra inhabilitado.",
-        "El CPR habilitó el número 2266-678490 para recibir mensajes y audios.",
-        "Las líneas de emergencia 911 y 103 continúan operativas."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Diferentes dependencias de la Policía local registran inconvenientes en sus teléfonos fijos. Las autoridades habilitan vías alternativas para la atención y recuerdan la disponibilidad de las líneas de emergencia.",
-      "etiquetas": [
-        "Policia",
-        "Comunal",
-        "CPR",
-        "telefonos",
-        "emergencias",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/varias-lineas-de-la-policia-estan-fuera-de-servicio-como-comunicarse-ante-una-emergencia",
-          "fecha": "2026-10-02T22:30:06.000Z",
-          "oficial": false,
-          "aporte": "Informó la interrupción de líneas telefónicas en dependencias policiales y detalló números alternativos y de emergencia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "varias-lineas-de-la-policia-local-interrumpen-su-servicio-habitual",
-      "foto": {
-        "archivo": "fotos-notas/1917p5s.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
       "id": "1n4tus5",
       "titulo": "Sandra Pettovello desplaza a la subsecretaria de Trabajo y designa a un nuevo funcionario",
       "copete": "La ministra de Capital Humano removió a Claudia Testa de su cargo el viernes y nombró a Mariano Sartoris en su reemplazo dentro de una reestructuración administrativa.",
@@ -712,75 +596,71 @@
       }
     },
     {
-      "id": "3cr087",
-      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
-      "copete": "La deportista local se adjudicó la divisional Damas tras cinco fechas. Organizan una clínica abierta para financiar el viaje a Córdoba.",
-      "cuerpo": "La deportista Rocío Lemmo se adjudicó la categoría Damas en el campeonato de la Zona Centro de longcasting y obtuvo el pasaje directo al certamen nacional.\n\nPara costear los gastos de traslado y alojamiento de cara al Campeonato Nacional que se desarrollará en noviembre en la localidad cordobesa de Las Varillas, el domingo se llevará a cabo una clínica abierta. La actividad se realizará en un campo ubicado en calles 9 y 114, desde las 10 hasta las 15, y los interesados podrán comunicarse al teléfono 2266 520863.\n\nLa temporada de la deportista local incluyó su participación en mayo pasado en el Campeonato Mundial de LongCasting FIPS-M en Italia, donde se consagró subcampeona mundial por equipos con la Selección Argentina.",
-      "guion": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
-      "seccion": "Deportes",
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
       "medios": [
-        "El Diario Balcarce",
-        "Acción 5 (Balcarce)"
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T20:21:19.000Z",
+      "fecha": "2026-10-02T20:17:04.000Z",
       "sinFecha": false,
-      "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 71,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 83,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
       "temas": [],
-      "como": "automatica",
+      "como": "publicada",
       "claves": [
-        "Rocío Lemmo ganó la divisional Damas de la Zona Centro de longcasting.",
-        "La deportista local clasificó al Campeonato Nacional de noviembre en Córdoba.",
-        "Este domingo organizan una clínica abierta en calles 9 y 114 para recaudar fondos."
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
       ],
       "seSabe": [
-        "Rocío Lemmo ganó el torneo de la Zona Centro en la categoría Damas tras cinco fechas, según informó El Diario Balcarce.",
-        "La deportista clasificó al Campeonato Nacional que se hará en noviembre en Las Varillas, Córdoba.",
-        "Este domingo se realizará una clínica de longcasting en el sector de calles 9 y 114, de 10 a 15, para costear los gastos del viaje.",
-        "En mayo, Lemmo fue subcampeona mundial por equipos en Italia con la Selección Argentina."
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
       ],
-      "textoRedes": "Rocío Lemmo ganó el torneo de la Zona Centro de longcasting en la categoría Damas y clasificó al Campeonato Nacional. Este domingo harán una clínica en calles 9 y 114 para costear el viaje a Córdoba.",
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
       "etiquetas": [
-        "Rocío Lemmo",
-        "longcasting",
-        "deportes",
-        "Balcarce",
-        "campeonato"
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-          "fecha": "2026-10-02T20:21:19.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
           "oficial": false,
-          "aporte": "Detalló los resultados del campeonato de Zona Centro, la clasificación al Nacional y la realización de la clínica solidaria."
-        }
-      ],
-      "antecedentes": [
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
+        },
         {
-          "id": "1sko7lj",
-          "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting",
-          "fecha": "2026-10-01T14:11:37.000Z",
-          "ruta": "/nota/rocio-lemmo-encabeza-una-clinica-abierta-de-longcasting-1sko7lj"
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
+          "oficial": false,
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
         }
       ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "rocio-lemmo-gana-el-campeonato-de-zona-centro-de-longcasting-y",
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
       "foto": {
-        "archivo": "fotos-notas/3cr087.jpg",
-        "credito": "Foto: El Diario Balcarce"
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -792,8 +672,8 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "TN (Todo Noticias)",
-        "A24",
         "Crónica",
+        "A24",
         "Infobae",
         "Clarín",
         "C5N",
@@ -1191,6 +1071,7 @@
       "guion": "La Cámara de Casación revisa el sobreseimiento del ministro Luis Caputo",
       "seccion": "Política",
       "medios": [
+        "Minuto Uno",
         "Perfil",
         "Crónica",
         "Diario Popular",
@@ -1581,6 +1462,87 @@
       }
     },
     {
+      "id": "ydwxhf",
+      "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+      "copete": "Un acumulado de 25 milímetros en la franja central del país redujo a la mitad los lotes trigueros regulares y reactivó las sembradoras de maíz.",
+      "cuerpo": "Las precipitaciones registradas en la última semana en la franja central del país acumularon un promedio de 25 milímetros y permitieron recortar a la mitad los lotes de trigo en estado regular, que pasaron del 15% al 7% del total regional según la Bolsa de Comercio de Rosario.\n\nEl relevamiento detalló que la superficie afectada bajó de unas 250.000 a 120.000 hectáreas, mientras que el agua caída destrabó las tareas para cubrir las 750.000 hectáreas pendientes de maíz y llevó el avance de la siembra al 65%. Septiembre había cerrado con un promedio de 31,5 milímetros tras concentrar el 80% del total mensual en estos siete días, revirtiendo parcialmente el déficit hídrico previo que motivaba pronósticos de precipitaciones escasas a fines de septiembre.\n\nEl impacto de las tormentas muestra marcadas diferencias geográficas, ya que el este y el centro-este previenen rindes de hasta 50 quintales por hectárea, en contraste con el noroeste bonaerense y el sudeste cordobés, donde los cultivos sufrieron daños por heladas tempranas y mermas de hasta el 60% en el rendimiento.",
+      "guion": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Agrositio"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T17:03:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T23:01:19.357Z",
+      "relevancia": 32,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cayeron 25 milímetros en promedio en la franja central del país.",
+        "Los lotes trigueros regulares se redujeron del 15% al 7%.",
+        "La siembra de maíz alcanzó un 65% de cobertura tras reactivarse las labores.",
+        "El noroeste bonaerense registra mermas de hasta el 60% por la sequía previa y las heladas."
+      ],
+      "seSabe": [
+        "Las precipitaciones acumuladas en la última semana alcanzaron un promedio de 25 milímetros en la región central, según informó la Bolsa de Comercio de Rosario.",
+        "La superficie de trigo en condición regular cayó del 15% (250.000 hectáreas) al 7% (120.000 hectáreas).",
+        "Las recargas de agua permitieron reactivar la siembra de maíz, que alcanzó una cobertura global del 65%.",
+        "Septiembre cerró con un promedio de 31,5 milímetros tras recibir en la última semana el 80% del agua acumulada en el mes."
+      ],
+      "noConfirmado": [
+        "El grado de recuperación real que podrán alcanzar las plantas en los distritos más afectados como General Villegas y General Pinto.",
+        "El techo productivo definitivo en los lotes del oeste regional tras el impacto de las heladas y la escasez hídrica previa."
+      ],
+      "textoRedes": "Las precipitaciones acumuladas en la última semana en la franja central del país redujeron a la mitad los lotes trigueros en estado regular y permitieron reactivar la siembra de maíz.",
+      "etiquetas": [
+        "lluvias",
+        "trigo",
+        "maíz",
+        "Bolsa de Comercio de Rosario",
+        "región núcleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
+          "fecha": "2026-10-02T17:03:25.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos detallados sobre el impacto de las lluvias en el trigo y el maíz, los porcentajes de afectación y las proyecciones por zonas."
+        },
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248642-alivio-para-el-trigo-y-las-siembras-que-se-retoman-tras-los-25-mm-que-recibio-la-region-en-los-ultimos-7-dias.html",
+          "fecha": "2026-10-02T17:51:54.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el registro de 25 milímetros en la región y la reducción de los lotes regulares de trigo al 7% según la Bolsa de Comercio de Rosario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "gd6n9s",
+          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+          "fecha": "2026-09-30T18:42:58.000Z",
+          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz",
+      "foto": {
+        "archivo": "fotos-notas/ydwxhf.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1akpidg",
       "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
       "copete": "Alumnas de la institución obsequiaron una producción artística que formó parte de una muestra local. El intendente Esteban Reino recibió la pieza.",
@@ -1588,17 +1550,18 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "News Balcarce (FM 91.7)",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 77,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1614,6 +1577,13 @@
           "aporte": null
         },
         {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Infórmese Primero (FM 104.9)",
           "enlace": "http://www.informeseprimero.com.ar/2026/10/la-escuela-de-arte-entrego-al-municipio.html",
           "fecha": "2026-10-02T18:08:04.743Z",
@@ -1625,7 +1595,7 @@
           "enlace": "https://www.diariolavanguardia.com/noticias/44981-una-obra-de-la-escuela-de-arte-se-incorpora-al-patrimonio-de-la-municipalidad/",
           "fecha": null,
           "oficial": false,
-          "aporte": "Detalló la entrega de una obra de la Escuela de Arte al patrimonio municipal y los nombres de las autoras y autoridades presentes."
+          "aporte": null
         }
       ],
       "slug": "la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la",
@@ -1762,9 +1732,9 @@
         "Noticias Argentinas (NA)",
         "La Verdad",
         "Mi8 (Canal 8 Mar del Plata)",
+        "Qué Digital",
         "Punto Noticias",
-        "La Nueva",
-        "Qué Digital"
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/economia/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al--temor-a-volver-al-infierno-_a6abfdbe3f814a2817c8806de",
       "teniaImagenLaFuente": true,
@@ -1977,8 +1947,8 @@
         "Noticias Argentinas (NA)",
         "La Verdad",
         "La Voz del Pueblo",
-        "Minuto Uno",
-        "La Nueva"
+        "La Nueva",
+        "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
       "teniaImagenLaFuente": true,
@@ -2256,8 +2226,7 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Olé",
-        "Radio Mitre",
-        "Radio Gabal (FM 104.1)"
+        "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/02/ruben-dario-insua-sorprendio-con-una-inesperada-propuesta-sobre-messi-convencerlo-para-que-juegue-el-mundial-2030/",
       "teniaImagenLaFuente": true,
@@ -2555,7 +2524,7 @@
       "fecha": "2026-10-02T14:22:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 44,
+      "relevancia": 48,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2685,67 +2654,6 @@
       }
     },
     {
-      "id": "1e41jwt",
-      "titulo": "José Luis Pérez se reúne con dirigentes nacionales del peronismo",
-      "copete": "El exintendente balcarceño compartió un almuerzo con referentes del Partido Justicialista Nacional. Conversaron sobre la situación política del país y el escenario partidario actual.",
-      "cuerpo": "El exintendente de Balcarce José Luis Pérez compartió un almuerzo con referentes del justicialismo nacional. Del encuentro participó el exsecretario de la Comisión Agropecuaria partidaria y exministro de Agricultura, quien llegó acompañado por excolaboradores y por el exintendente de General Madariaga, Adrián Mircovich.\n\nDurante la reunión, los dirigentes conversaron acerca del panorama político nacional y provincial. También intercambiaron opiniones sobre la actualidad y los desafíos institucionales del Partido Justicialista en medio de distintos movimientos sectoriales.",
-      "guion": "Jose Luis Perez se reune con dirigentes nacionales del peronismo",
-      "seccion": "Política",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/politica/jose-luis-perez-compartio-un-encuentro-con-dirigentes-del-pj-nacional",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T13:42:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Almuerzo entre dirigentes del peronismo nacional y local",
-        "Participación de referentes de General Madariaga",
-        "Análisis de la actualidad política y partidaria"
-      ],
-      "seSabe": [
-        "José Luis Pérez almorzó con dirigentes del justicialismo nacional en Balcarce",
-        "Participó el exsecretario de la Comisión Agropecuaria del Partido Justicialista y exministro de Agricultura",
-        "Estuvo presente el exintendente de General Madariaga Adrián Mircovich"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El exintendente José Luis Pérez compartió un almuerzo con referentes del justicialismo nacional para analizar la situación política y los desafíos del partido.",
-      "etiquetas": [
-        "José Luis Pérez",
-        "Partido Justicialista",
-        "Política",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/politica/jose-luis-perez-compartio-un-encuentro-con-dirigentes-del-pj-nacional",
-          "fecha": "2026-10-02T13:42:44.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro político entre José Luis Pérez y dirigentes del justicialismo nacional en Balcarce."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "jose-luis-perez-se-reune-con-dirigentes-nacionales-del-peronismo",
-      "foto": {
-        "archivo": "fotos-notas/1e41jwt.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
       "id": "164o14u",
       "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "copete": "La institución donó una bomba de infusión y un oxímetro para el centro de salud local. Los elementos se adquirieron con fondos recaudados en la última edición del Desafío de los Leones.",
@@ -2753,18 +2661,18 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "News Balcarce (FM 91.7)",
-        "El Diario Balcarce",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 77,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2838,16 +2746,15 @@
       "seccion": "Policiales",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
-        "El Diario Balcarce"
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:10:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3065,7 +2972,7 @@
       "fecha": "2026-10-02T12:28:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 87,
+      "relevancia": 79,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3137,7 +3044,7 @@
       "fecha": "2026-10-02T12:23:46.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3245,7 +3152,7 @@
       "fecha": "2026-10-02T12:06:23.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T15:01:29.421Z",
-      "relevancia": 72,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3308,213 +3215,6 @@
       }
     },
     {
-      "id": "h1ggzr",
-      "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
-      "copete": "La investigadora dialogó con ediles en un encuentro informal tras ser rechazada su convocatoria oficial. Detalló los alcances del estudio sobre plaguicidas y confirmó que enfrenta un pedido de exoneración.",
-      "cuerpo": "Durante el encuentro, la científica detalló los resultados del proyecto internacional SPRINT sobre la exposición simultánea a más de 200 plaguicidas en diferentes matrices ambientales y biológicas de la Argentina, y remarcó la necesidad de contar con controles efectivos en las aplicaciones agropecuarias.\n\nEn la segunda parte del intercambio, la especialista abordó su situación administrativa en el INTA y confirmó que el expediente continúa bajo secreto, aunque pesa sobre ella un pedido de exoneración. Según indicó, otros integrantes del equipo de trabajo también fueron alcanzados por medidas disciplinarias en el marco del mismo sumario.",
-      "guion": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
-      "seccion": "Agro",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "El Diario Balcarce",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-hablo-ante-concejales-sprint-sus-resultados-y-el-proceso-que-atraviesa-en-el-inta-405",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T12:05:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo",
-        "inta"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Virginia Aparicio expuso ante los concejales en un encuentro informal.",
-        "La científica detalló los resultados del proyecto internacional SPRINT sobre plaguicidas.",
-        "Confirmó que enfrenta un pedido de exoneración en el sumario administrativo del INTA.",
-        "El expediente del organismo nacional continúa bajo secreto."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La investigadora Virginia Aparicio expuso ante concejales sobre el proyecto SPRINT y su situación administrativa en el INTA.",
-      "etiquetas": [
-        "Virginia Aparicio",
-        "INTA",
-        "plaguicidas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-hablo-ante-concejales-sprint-sus-resultados-y-el-proceso-que-atraviesa-en-el-inta-405",
-          "fecha": "2026-10-02T12:05:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la exposición informal de Virginia Aparicio ante concejales, los resultados del proyecto SPRINT y la confirmación del pedido de exoneración en el INTA."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "v91szb",
-          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
-          "fecha": "2026-09-23T01:50:24.356Z",
-          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
-        },
-        {
-          "id": "tmpmtz",
-          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
-          "fecha": "2026-09-21T17:19:51.000Z",
-          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
-        },
-        {
-          "id": "1ytgm6c",
-          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
-          "fecha": "2026-09-28T21:59:12.000Z",
-          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "virginia-aparicio-expone-ante-concejales-sobre-sprint-y-su-situacion",
-      "foto": {
-        "archivo": "fotos-notas/h1ggzr.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "y1kgx4",
-      "titulo": "Fiorella Cacace detalla la labor de los escribanos",
-      "copete": "La integrante del Colegio de Escribanos explica los pilares de la profesión en la ciudad, el acceso a la actividad y la importancia de la seguridad jurídica.",
-      "cuerpo": "Según indicó, su función consiste en articular un vínculo directo entre los matriculados locales y la Delegación regional para atender distintas inquietudes.\n\nCacace explicó que los fedatarios otorgan fe pública para brindar validez legal y seguridad jurídica en contratos. Sobre su inserción laboral, detalló que accedió al ejercicio mediante una adscripción junto a su padre, aunque también existen concursos para registros vacantes. Además, mencionó la incorporación de los jóvenes profesionales Alejandro Delledonne, Sol Togni, Valeria Delledonne, Matías Trivigno y Natacha Cefaratti. Por último, señaló que el movimiento de la actividad notarial está ligado al contexto económico del país.",
-      "guion": "Fiorella Cacace detalla la labor de los escribanos",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/confianza-seguridad-y-nuevos-comienzos-fiorella-cacace-hablo-sobre-el-oficio-de-escribano-946",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T12:03:02.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La escribana Fiorella Cacace explicó los detalles de la actividad notarial en Balcarce.",
-        "Indicó que su rol vincula a los profesionales locales con la Delegación Mar del Plata.",
-        "Mencionó la incorporación de nuevos profesionales jóvenes en los últimos años."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La escribana Fiorella Cacace explicó detalles sobre la labor profesional, el vínculo con la Delegación regional y la importancia de la seguridad jurídica en la actividad notarial.",
-      "etiquetas": [
-        "Fiorella Cacace",
-        "escribanos",
-        "Balcarce",
-        "Colegio de Escribanos",
-        "entrevista"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/confianza-seguridad-y-nuevos-comienzos-fiorella-cacace-hablo-sobre-el-oficio-de-escribano-946",
-          "fecha": "2026-10-02T12:03:02.000Z",
-          "oficial": false,
-          "aporte": "Detalles sobre la labor notarial, el rol en la Delegación regional y la situación de la actividad en Balcarce."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "fiorella-cacace-detalla-la-labor-de-los-escribanos",
-      "foto": {
-        "archivo": "fotos-notas/y1kgx4.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1ugi3md",
-      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
-      "copete": "La Asociación Balcarceña de Tenis de Mesa logró meter a todos sus representantes en la fase decisiva de la Liga Provincial FeBATeM tras disputar la última fecha en Olavarría.",
-      "cuerpo": "La Asociación Balcarceña de Tenis de Mesa clasificó a sus seis conjuntos a la instancia de Play Off en la undécima edición de la Liga Provincial por Equipos FeBATeM, tras competir en la última fecha desarrollada en el Centro de Exposiciones Municipales de Olavarría. El certamen contó con la organización de la entidad local de esa disciplina y la fiscalización de la subcomisión correspondiente.\n\nEn la primera división, el plantel integrado por Ignacio Bianchini, Nicolás Bianchini, Joaquín Alvarez y Francisco Crimaldi terminó segundo en la tabla general. Por su parte, el equipo de segunda división formado por Alfonso Arislur, Fabián Bianchini, Fausto Bosatta, Sergio Novaro y Fernando Della Valle finalizó en el primer puesto. En tercera división, el conjunto compuesto por Felipe Costa, Joaquín Kuch, Fausto Gómez y Fausto Bosatta obtuvo la máxima ubicación general.\n\nDentro de la cuarta división, el equipo A con Lucía Berruet, Pedro Orieta y Cristóbal Barbieri culminó en la primera posición, mientras que el bloque B integrado por Roberto Zabala, Enzo Giménez, Nazareno Ramírez, Andrés Astrada y Nahuel Morante se ubicó sexto. En quinta división, el plantel de Santino Duarte, Pedro Rodríguez Curate, Santiago Ibañez, Alan Ibañez y Sergio Feingold concluyó en el segundo lugar de la tabla.",
-      "guion": "Top Serrano Balcarce clasifica seis equipos a Play Off",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/top-serrano-balcarce-clasifico-seis-equipos-a-play-off-en-liga-provincial-512",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T11:59:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T12:31:07.721Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Top Serrano metió a sus seis equipos en los Play Off provinciales.",
-        "La última fecha clasificatoria se disputó en Olavarría.",
-        "Las finales provinciales serán en el Polideportivo de Santa Clara del Mar.",
-        "Los encuentros decisivos se jugarán el 31 de octubre y el 1 de noviembre."
-      ],
-      "seSabe": [
-        "Según informó un medio local, Top Serrano Balcarce clasificó a sus seis equipos a los Play Off de la Liga Provincial FeBATeM.",
-        "La última fecha clasificatoria se disputó en el Centro de Exposiciones Municipales de Olavarría.",
-        "La organización estuvo a cargo de la Asociación de Tenis de Mesa de Olavarría con fiscalización de FeBATeM.",
-        "Los Play Off se realizarán los días 31 de octubre y 1 de noviembre en el Polideportivo de Santa Clara del Mar."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Top Serrano Balcarce clasificó a sus seis equipos a los Play Off de la Liga Provincial por Equipos FeBATeM tras disputar la última fecha en Olavarría. Las finales se jugarán en Santa Clara del Mar.",
-      "etiquetas": [
-        "Tenis de mesa",
-        "Top Serrano",
-        "Liga Provincial",
-        "Balcarce",
-        "Deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/top-serrano-balcarce-clasifico-seis-equipos-a-play-off-en-liga-provincial-512",
-          "fecha": "2026-10-02T11:59:58.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados y la conformación de los seis equipos de Top Serrano Balcarce clasificados a los Play Off provinciales de tenis de mesa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1f9bhpx",
-          "titulo": "Top Serrano clasifica sus seis equipos a los Play Off provinciales",
-          "fecha": "2026-09-28T15:56:41.169Z",
-          "ruta": "/nota/top-serrano-clasifica-sus-seis-equipos-a-los-play-off-provinciales-1f9bhpx"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
-    },
-    {
       "id": "gfh5l8",
       "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "copete": "El gobernador Axel Kicillof firmó el decreto que transfiere un terreno de la ex mina Catriel, ubicado en Sierras Bayas, para el desarrollo de un espacio recreativo y cultural.",
@@ -3522,17 +3222,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
+        "Infoeme",
         "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB",
-        "Infoeme"
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 51,
+      "relevancia": 55,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3600,6 +3300,7 @@
       "guion": "La menor oferta de hacienda presiona a la industria frigorífica",
       "seccion": "Agro",
       "medios": [
+        "Infobae",
         "Noticias Agropecuarias",
         "Infocampo"
       ],
@@ -3608,7 +3309,7 @@
       "fecha": "2026-10-02T09:45:42.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T14:01:24.441Z",
-      "relevancia": 24,
+      "relevancia": 38,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3975,158 +3676,19 @@
         "archivo": "fotos-notas/1j4lf17.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
       }
-    },
-    {
-      "id": "1hy6wdw",
-      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "copete": "La delegación de Balcarce participó en Rosario del congreso anual de la entidad rural y avaló la continuidad de la presidenta con un amplio respaldo de los congresales.",
-      "cuerpo": "La filial local de la Federación Agraria Argentina respaldó la continuidad de Andrea Sarnari al frente de la entidad tras su reelección en el ciento doceavo Congreso Anual Ordinario llevado a cabo en Rosario. De acuerdo con lo informado por la entidad, la referente obtuvo más del noventa por ciento de los sufragios de los congresales presentes.\n\nLa delegación de Balcarce estuvo representada en el cónclave por el presidente de la filial, Bernardo Menone; el titular de la juventud local, Mauro Filippini; Ricardo Forte, Joaquín Vidal y Abelardo Hansen. Los dirigentes locales participaron en las discusiones de las comisiones de la Juventud y de Semillas y Soberanía Biotecnológica.\n\nDurante el encuentro desarrollado en territorio santafesino, la conducción quedó integrada además por José Luis Careggio como vicepresidente primero y José Luis Volando como vicepresidente segundo. Previamente, en el marco del inicio del congreso, la presidenta había solicitado una normativa legislativa que establezca la finalización de los derechos de exportación.",
-      "guion": "La filial local de Federación Agraria respalda la reelección de Sarnari",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/respaldo-la-reeleccion-de-andrea-sarnari-la-filial-local-de-federacion-agraria-argentina-57",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T00:27:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La filial local participó en Rosario del congreso anual de la entidad rural.",
-        "Andrea Sarnari fue ratificada en la presidencia con más del noventa por ciento de los votos.",
-        "Los representantes de Balcarce integraron las comisiones de trabajo durante el cónclave."
-      ],
-      "seSabe": [
-        "La filial Balcarce participó del Congreso Anual Ordinario de la Federación Agraria Argentina en Rosario.",
-        "Los dirigentes locales respaldaron la reelección de Andrea Sarnari como presidenta de la entidad.",
-        "Sarnari obtuvo más del noventa por ciento de los sufragios de los congresales.",
-        "Bernardo Menone, Mauro Filippini, Ricardo Forte, Joaquín Vidal y Abelardo Hansen integraron la delegación balcarceña."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La filial Balcarce de la Federación Agraria participó en Rosario del congreso anual de la entidad y respaldó por amplia mayoría la reelección de Andrea Sarnari al frente de la conducción rural.",
-      "etiquetas": [
-        "Federación Agraria",
-        "Balcarce",
-        "Andrea Sarnari",
-        "Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/respaldo-la-reeleccion-de-andrea-sarnari-la-filial-local-de-federacion-agraria-argentina-57",
-          "fecha": "2026-10-02T23:03:41.000Z",
-          "oficial": false,
-          "aporte": "Detalló la participación de la filial Balcarce en el congreso de la Federación Agraria y la reelección de Andrea Sarnari."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "rtk3io",
-          "titulo": "La Federación Agraria pide una ley que termine con las retenciones",
-          "fecha": "2026-09-29T17:11:00.000Z",
-          "ruta": "/nota/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-rtk3io"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-filial-local-de-federacion-agraria-respalda-la-reeleccion-de",
-      "foto": {
-        "archivo": "fotos-notas/1hy6wdw.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "repaso20261001noche",
-      "propia": "repaso",
-      "titulo": "El repaso de la noche en Radar Balcarce: carrera, riesgo país y fútbol",
-      "copete": "Radar Balcarce publicó a las 21:05 de este jueves 1 de octubre el repaso de la noche en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la noche del jueves 1, en el orden en que salieron en el audio.\n\nLa Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza. La segunda edición de la competencia atlética homenaje al profesor Luis Vildoza se hará el domingo 1 de noviembre. Habrá pruebas de 10 y 5 kilómetros con participación libre y gratuita.\n\nEl riesgo país supera los 630 puntos y las acciones caen en Wall Street. El indicador financiero sube un 4,3% y alcanza las 633 unidades. Las acciones argentinas registran pérdidas de hasta el 6% en el mercado externo.\n\nEl partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires. Las consultas de vuelos desde Rosario crecen casi un 5000% para el encuentro del 6 de octubre en el Monumental. Las agencias registran alta demanda desde distintos puntos del país y del exterior.\n\nEl Zonal del Atlántico regresa al autódromo local en octubre. Las categorías zonales competirán en el autódromo Juan M. Fangio durante el fin de semana largo del 10 al 12 de octubre.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Cultura y agenda",
-      "local": false,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T00:05:07.832Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T00:05:07.832Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-02T00:05:07.832Z",
-      "temas": [],
-      "etiquetas": [
-        "carrera",
-        "riesgo país",
-        "fútbol",
-        "Zonal del Atlántico"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "1mknzh0",
-        "34t457",
-        "iheoi7",
-        "1a2z04a"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "La Subsecretaría de Deporte abre las inscripciones para la carrera Luis Vildoza",
-          "href": "/nota/la-subsecretaria-de-deporte-abre-las-inscripciones-para-la-carrera-1mknzh0"
-        },
-        {
-          "texto": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
-          "href": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
-        },
-        {
-          "texto": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
-          "href": "/nota/el-partido-despedida-de-messi-dispara-la-demanda-de-viajes-hacia-iheoi7"
-        },
-        {
-          "texto": "El Zonal del Atlántico regresa al autódromo local en octubre",
-          "href": "/nota/el-zonal-del-atlantico-regresa-al-autodromo-local-en-octubre-1a2z04a"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/Dd-J6qQjEi2/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/2319620805442534/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-noche-en-radar-balcarce-carrera-riesgo-pais-y-futbol",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261001noche.jpg",
-        "credito": "Fotos: La Nación, TN (Todo Noticias) y Acción 5 (Balcarce)"
-      }
     }
   ],
   "secciones": [
+    "Balcarce",
     "Fútbol",
     "Automovilismo",
-    "Balcarce",
     "Policiales",
     "Política",
-    "Deportes",
     "Cultura y agenda",
     "Argentina",
-    "Economía",
-    "Agro"
+    "Deportes",
+    "Agro",
+    "Economía"
   ],
   "temas": [
     {
@@ -4140,9 +3702,9 @@
       "temp": 10,
       "sensacion": 7,
       "humedad": 98,
-      "viento": 18,
+      "viento": 20,
       "rumbo": "N",
-      "cielo": "Llovizna leve",
+      "cielo": "Llovizna intensa",
       "esDeDia": true
     },
     "dias": [
@@ -4151,44 +3713,44 @@
         "dia": "sáb",
         "max": 15,
         "min": 8,
-        "lluvia": 97,
-        "codigo": 80,
+        "lluvia": 95,
+        "codigo": 61,
         "viento": 21,
-        "milimetros": 8,
-        "cielo": "Chaparrones"
+        "milimetros": 10,
+        "cielo": "Lluvia leve"
       },
       {
         "fecha": "2026-10-04",
         "dia": "dom",
         "max": 20,
-        "min": 7,
-        "lluvia": 4,
-        "codigo": 3,
-        "viento": 19,
+        "min": 8,
+        "lluvia": 10,
+        "codigo": 51,
+        "viento": 20,
         "milimetros": 0,
-        "cielo": "Nublado"
+        "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-05",
         "dia": "lun",
         "max": 20,
         "min": 10,
-        "lluvia": 41,
-        "codigo": 55,
-        "viento": 23,
-        "milimetros": 2,
-        "cielo": "Llovizna intensa"
+        "lluvia": 47,
+        "codigo": 80,
+        "viento": 21,
+        "milimetros": 3,
+        "cielo": "Chaparrones"
       },
       {
         "fecha": "2026-10-06",
         "dia": "mar",
-        "max": 21,
-        "min": 8,
-        "lluvia": 18,
-        "codigo": 3,
-        "viento": 13,
-        "milimetros": 0,
-        "cielo": "Nublado"
+        "max": 20,
+        "min": 9,
+        "lluvia": 14,
+        "codigo": 51,
+        "viento": 15,
+        "milimetros": 1,
+        "cielo": "Llovizna leve"
       }
     ],
     "fuente": "Open-Meteo"
@@ -4495,10 +4057,10 @@
   },
   "pendientes": [
     {
-      "id": "1148srf",
+      "id": "1w06xhx",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
+      "motivo": "necesita ojo humano: \"lesionada\""
     },
     {
       "id": "vguosy",
@@ -4537,12 +4099,6 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "1ei2dt4",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
       "id": "4qbbyg",
       "titulo": "Tensión en Malvinas: los isleños reclaman que se impongan…",
       "seccion": "Argentina",
@@ -4579,11 +4135,23 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
+    },
+    {
       "id": "1yg85wu",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herido\""
+    },
+    {
+      "id": "imkij7",
+      "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 1
 }
