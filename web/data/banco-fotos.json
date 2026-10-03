@@ -5870,13 +5870,16 @@
   "cuando": "2026-10-03T04:01:40.293Z"
  },
  "5z6802": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/5z6802.jpg",
+  "medio": "LU9 Mar del Plata",
+  "credito": "Foto: LU9 Mar del Plata",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Gobierno pide sostener el rumbo económico y los empresarios reclaman medidas",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-03T04:31:26.926Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://www.lu9mardelplata.com.ar/coloquio-de-idea-santilli-pidio-a-los-empresarios-sostener-el-rumbo-y-apunto-contra-kicillof",
+  "imagenOriginal": "https://cdnartic.ar/ScvYJdrw9lWAm7cRZWovjRLV8qE=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://lu9mardelplatacdn.eleco.com.ar/media/2026/10/diego_santilli.webp",
+  "razon": "La foto B ofrece un encuadre más amplio y mejor nitidez del auditorio y la pantalla que la A, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-03T07:01:45.837Z"
  },
  "zh5e4x": {
   "archivo": "fotos-notas/zh5e4x.jpg",
@@ -5916,5 +5919,17 @@
   "cuando": "2026-10-03T06:02:01.523Z",
   "intentos": 1,
   "fuentes": 2
+ },
+ "bz5n1s": {
+  "archivo": "fotos-notas/bz5n1s.jpg",
+  "medio": "La Página Millonaria",
+  "credito": "Foto: La Página Millonaria",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "River disputa un amistoso matutino frente a Atlético Escobar",
+  "enlace": "https://lapaginamillonaria.com/river-plate/mientras-espera-por-volver-a-jugar-de-manera-oficial-river-realizara-una-practica-contra-atletico-escobar",
+  "imagenOriginal": "https://media.lapaginamillonaria.com/wp-content/uploads/sites/15/2026/10/02163550/Amistoso-River-e1790969772542-1200x740.webp",
+  "razon": "Tiene excelente nitidez, encuadre limpio sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-03T07:01:45.837Z"
  }
 }
