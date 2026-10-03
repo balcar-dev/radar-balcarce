@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T18:01:22.538Z",
+ "generado": "2026-10-03T18:16:42.244Z",
  "portada": 55,
- "archivo": 849,
+ "archivo": 850,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-03T18:01:22.570Z",
+  "generado": "2026-10-03T18:16:42.281Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-03T18:06:57.606Z"
    },
    {
     "nombre": "utiles",
@@ -115,8 +115,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 51,
+    "salio": "2026-10-03T18:06:57.606Z",
+    "segundos": null,
     "notas": [
      {
       "id": "17lpda8",
