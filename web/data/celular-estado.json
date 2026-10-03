@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T16:01:51.764Z",
- "portada": 52,
- "archivo": 842,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-03T16:09:11.874Z",
+ "portada": 54,
+ "archivo": 843,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-03T16:01:51.803Z",
+  "generado": "2026-10-03T16:09:11.909Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,26 +116,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 53,
     "notas": [
-     {
-      "id": "7ml7lj",
-      "titulo": "Maximiliano Salas sufre la rotura de ligamentos y se pierde el año",
-      "seccion": "Fútbol"
-     },
      {
       "id": "17lpda8",
       "titulo": "Caputo descarta la recesión y asegura que la economía crece",
       "seccion": "Economía"
      },
      {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "id": "7ml7lj",
+      "titulo": "Maximiliano Salas sufre la rotura de ligamentos y se pierde el año",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
       "seccion": "Balcarce"
      },
      {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
       "seccion": "Balcarce"
      }
     ]
@@ -147,17 +147,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 33,
+    "segundos": 28,
     "notas": [
+     {
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1a6c23d",
       "titulo": "La Ultra Trail Tierras del Diablo abre los últimos cupos",
       "seccion": "Deportes"
-     },
-     {
-      "id": "174qhq6",
-      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
-      "seccion": "Balcarce"
      }
     ]
    }
