@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T15:31:56.600Z",
+ "generado": "2026-10-03T16:01:51.764Z",
  "portada": 52,
- "archivo": 841,
- "esperandoCuerpo": 0,
+ "archivo": 842,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T15:31:56.644Z",
+  "generado": "2026-10-03T16:01:51.803Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-03T13:04:24.061Z"
    },
    {
@@ -83,7 +83,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-03T13:04:24.061Z",
     "segundos": null,
     "notas": [
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 48,
     "notas": [
      {
       "id": "7ml7lj",
@@ -124,9 +124,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "prgocb",
-      "titulo": "Boca golea a Unión y extiende su invicto en el torneo",
-      "seccion": "Fútbol"
+      "id": "17lpda8",
+      "titulo": "Caputo descarta la recesión y asegura que la economía crece",
+      "seccion": "Economía"
+     },
+     {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "seccion": "Balcarce"
      },
      {
       "id": "1gdngfe",
@@ -142,13 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 33,
     "notas": [
-     {
-      "id": "17lpda8",
-      "titulo": "Caputo descarta la recesión y asegura que la economía crece",
-      "seccion": "Economía"
-     },
      {
       "id": "1a6c23d",
       "titulo": "La Ultra Trail Tierras del Diablo abre los últimos cupos",
@@ -157,11 +157,6 @@
      {
       "id": "174qhq6",
       "titulo": "Cortan las líneas fijas de la Policía y del CPR",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
       "seccion": "Balcarce"
      }
     ]

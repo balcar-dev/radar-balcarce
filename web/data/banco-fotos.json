@@ -5331,9 +5331,9 @@
  "1gofphd": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-03T10:01:13.934Z",
+  "cuando": "2026-10-03T16:01:37.980Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 4,
+  "intentos": 5,
   "fuentes": 6
  },
  "1aekavp": {
@@ -6136,6 +6136,15 @@
   "origen": "medio",
   "cuando": "2026-10-03T15:31:45.021Z",
   "error": "no se pudo volver a bajar la elegida",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "rn1r31": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Alexander Zverev avanza en Pekín y se medirá con Novak Djokovic",
+  "razon": "Ninguna foto sirve: la A no muestra al tenista protagonista de la nota y la B es solo un logotipo institucional.",
+  "cuando": "2026-10-03T16:01:37.980Z",
   "intentos": 1,
   "fuentes": 2
  }
