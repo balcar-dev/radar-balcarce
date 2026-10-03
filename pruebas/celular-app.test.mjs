@@ -123,7 +123,7 @@ test('todo lo que usa la app del celular existe en sus módulos', async () => {
   const app = leer('web/public/panel/app.js');
   for (const [, nombres, archivo] of app.matchAll(/import \{([^}]+)\} from '\.\/([a-z-]+\.js)'/g)) {
     const modulo = await import(`../web/public/panel/${archivo}`);
-    for (const nombre of nombres.split(',').map((s) => s.trim()).filter(Boolean)) {
+    for (const nombre of nombres.split(',').map((s) => s.trim().split(' as ')[0]).filter(Boolean)) {
       assert.ok(nombre in modulo, `app.js importa "${nombre}" de ${archivo}, que no lo exporta`);
     }
   }

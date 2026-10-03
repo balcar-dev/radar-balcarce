@@ -16,7 +16,7 @@ import {
   ESTILOS, COLOR_DE_ESTILO, ROLES, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
   haceTexto, marcaLegible, diasArmados, estadoDeFeriado, estadoDeDiaArmado, huellaDelDia, decisionVencida,
 } from './fechas.js';
-import { crearLlaves, abrir } from './cifrado.js';
+import { crearLlaves, abrir, cerrar as cerrarSobre } from './cifrado.js';
 import {
   explicarMotivo, motivoCorto, explicarFicha, estadoSinCuerpo, explicarMotivoSinCuerpo, PESTANAS, PREGUNTAS, preguntaRedes, comoSalenLosPosteos,
   REGLAS_FACEBOOK, proximoPosteo, estadoDePieza, horaEnBalcarce, hoyEnBalcarce,
@@ -24,6 +24,9 @@ import {
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
 import { htmlDeFormulario, htmlDeLista, htmlDeUnaPista } from './pistas.js';
+import {
+  armarContactos, htmlDeContactos, htmlDeUnContacto, htmlDeFormularioContacto, htmlDeCola, colaDeEnvio, contactoPropio, conHistorial, enlaceWhatsApp, enlaceMail,
+} from './contactos.js';
 import {
   notasSinFoto, htmlDeFotos, htmlDeUnaNotaSinFoto, urlDeFotoValida, creditoDeFoto, motivoDeFoto, MOTIVOS_DE_FOTO,
 } from './fotos.js';
@@ -367,6 +370,7 @@ function vistaLista() {
   else if (E.pestana === 'fotos') vistaFotos();
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
+  else if (E.pestana === 'contactos') vistaContactos();
   else if (E.pestana === 'pistas') vistaPistas();
   else if (E.pestana === 'revision') vistaRevision();
   else if (E.pestana === 'fechas') vistaFechas();
@@ -642,6 +646,86 @@ async function reintentarParte(pieza, red, parte) {
     E.pestana = 'redes';
     vistaLista();
   }
+}
+
+// ------------------------------------------------------------------ los contactos
+
+/** Trae las instituciones (archivo público) y lo privado (contactos propios y a quién se le escribió, cifrado para los celulares). */
+async function cargarContactos() {
+  const [publicos, privado] = await Promise.all([
+    leerSiHay(E.cliente, ARCHIVOS.contactosPublicos, { contactos: [] }), leerSiHay(E.cliente, ARCHIVOS.contactosCelular, { contactos: {} }),
+  ]);
+  const entradas = {};
+  let sinAbrir = 0;
+  await Promise.all(Object.entries(privado.contactos ?? {}).map(async ([clave, sobre]) => {
+    const e = E.llaves ? await abrir(sobre, E.llaves) : null;
+    if (e) entradas[clave] = e; else sinAbrir += 1;
+  }));
+  E.contactos = { publicos: publicos.contactos ?? [], entradas, sinAbrir };
+  E.filtroContactos ??= 'todos';
+}
+
+const listaDeContactos = () => armarContactos({ publicos: E.contactos?.publicos ?? [], entradas: E.contactos?.entradas ?? {} });
+
+function vistaContactos() {
+  pestanas();
+  $('#recargar').hidden = false;
+  if (!E.contactos) { app.innerHTML = '<div class="girando"></div>'; cargarContactos().then(() => { if (E.pestana === 'contactos') vistaContactos(); }).catch((e) => { aviso(explicarError(e), { ms: 9000 }); }); return; }
+  if (E.nuevoContacto) {
+    app.innerHTML = htmlDeFormularioContacto({ esc });
+    $('#form-contacto').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      const nuevo = contactoPropio({
+        nombre: $('#c-nombre').value, rol: $('#c-rol').value, organizacion: $('#c-org').value, whatsapp: $('#c-wa').value, mail: $('#c-mail').value, nota: $('#c-nota').value,
+      });
+      if (!nuevo) { aviso('Falta el nombre.'); return; }
+      try {
+        await guardarContacto(`p-${nuevo.id}`, nuevo);
+        E.nuevoContacto = false;
+        aviso('Contacto guardado (cifrado: sólo lo ven los celulares registrados).');
+      } catch (e) { aviso(explicarError(e), { ms: 9000 }); }
+      vistaContactos();
+    });
+    return;
+  }
+  if (E.cola) { app.innerHTML = htmlDeCola({ cola: E.cola, indice: E.cola.indice }, { esc }); window.scrollTo(0, 0); return; }
+  const lista = listaDeContactos();
+  const uno = E.contactoAbierto ? lista.find((c) => c.id === E.contactoAbierto) : null;
+  if (uno) { app.innerHTML = htmlDeUnContacto(uno, { esc }); window.scrollTo(0, 0); return; }
+  E.contactoAbierto = null;
+  app.innerHTML = htmlDeContactos({ lista, filtro: E.filtroContactos, q: E.busquedaContactos ?? '', sinAbrir: E.contactos.sinAbrir }, { esc }) + queEs('contactos');
+  $('#buscar-contactos').addEventListener('input', (ev) => {
+    E.busquedaContactos = ev.target.value;
+    clearTimeout(vistaContactos.t);
+    vistaContactos.t = setTimeout(() => { vistaContactos(); const b = $('#buscar-contactos'); b.focus(); b.setSelectionRange(b.value.length, b.value.length); }, 250);
+  });
+}
+
+/** Guarda una anotación o un contacto propio: un sobre por renglón, cifrado para todos los celulares registrados (y este). */
+async function guardarContacto(clave, contenido) {
+  const registro = (await E.cliente.leer(ARCHIVOS.llaves)).json.llaves ?? [];
+  const sobre = await cerrarSobre(contenido, registro);
+  if (!sobre) throw new Error('No hay celulares registrados para cifrar.');
+  await E.cliente.guardar(ARCHIVOS.contactosCelular, (j) => ({ version: 1, ...j, contactos: { ...(j.contactos ?? {}), [clave]: sobre } }), `Panel del celular: ${E.nombre} anota un contacto`);
+  E.contactos.entradas[clave] = contenido;
+}
+
+/** Anota a quién se le escribió o quién respondió. */
+async function anotarContacto(id, cambio) {
+  const clave = `h-${id}`;
+  try {
+    await guardarContacto(clave, conHistorial(E.contactos.entradas[clave], id, cambio));
+    return true;
+  } catch (e) { aviso(explicarError(e), { ms: 9000 }); return false; }
+}
+
+/** El mensaje que está escrito en la pantalla (editable) para el contacto, con su enlace de WhatsApp o de correo. */
+function abrirCanal(id, canal) {
+  const c = listaDeContactos().find((x) => x.id === id);
+  if (!c) return;
+  const texto = $('#mensaje-contacto')?.value ?? c.mensaje;
+  const url = canal === 'whatsapp' ? enlaceWhatsApp(c.whatsapp, texto) : enlaceMail(c.mail, texto);
+  if (url) window.open(url, '_blank', 'noopener');
 }
 
 // ------------------------------------------------------------------ las pistas
@@ -981,6 +1065,7 @@ async function guardarFechas(cambiarJson, mensaje, listo) {
  * [id, nombre, ícono, para qué sirve]. Cada una se abre desde "Más" y trae su botón para volver.
  */
 const MENU_MAS = [
+  ['contactos', 'Contactos', '👥', 'Instituciones y personas a quienes pedirles fechas y eventos: escribirles y llevar quién respondió.'],
   ['pistas', 'Pistas', '✎', 'Pegá un dato o un tuit y mirá si lo cubrieron los medios.'],
   ['revision', 'Revisión', '✓', 'Lo que la IA marcó en las notas ya publicadas (ortografía, texto roto, temas sensibles).'],
   ['fechas', 'Fechas', '▦', 'Un día como hoy: el mes armado para aprobar, rearmar o sacar; y los feriados.'],
@@ -1381,7 +1466,7 @@ document.addEventListener('click', async (ev) => {
   const el = ev.target.closest('[data-pestana],[data-abrir],[data-accion]');
   if (!el || el.closest('dialog')) return;
   const { id, tipo } = el.dataset;
-  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.pieza = null; E.borrador = null; E.restaurar = null; vistaLista(); window.scrollTo(0, 0); return; }
+  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.pieza = null; E.borrador = null; E.restaurar = null; E.contactoAbierto = null; E.nuevoContacto = false; E.cola = null; vistaLista(); window.scrollTo(0, 0); return; }
   if (el.dataset.abrir === 'foto') { E.scrollLista = window.scrollY; vistaFoto(id); return; }
   if (el.dataset.abrir) { if (!el.closest('.resultado, .botones')) E.scrollLista = window.scrollY; vistaNota(el.dataset.abrir, id); return; }
   const accion = el.dataset.accion;
@@ -1389,7 +1474,36 @@ document.addEventListener('click', async (ev) => {
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
   if (accion === 'cerrar-aviso') $('#aviso').hidden = true;
   else if (accion === 'investigar-pista') investigarPista();
-  else if (accion === 'abrir-pista') { E.pistaAbierta = id; vistaPistas(); }
+  else if (accion === 'abrir-contacto') { E.contactoAbierto = id; vistaContactos(); }
+  else if (accion === 'volver-contactos') { E.contactoAbierto = null; E.nuevoContacto = false; E.cola = null; vistaContactos(); window.scrollTo(0, 0); }
+  else if (accion === 'filtro-contactos') { E.filtroContactos = el.dataset.filtro; vistaContactos(); }
+  else if (accion === 'nuevo-contacto') { E.nuevoContacto = true; vistaContactos(); window.scrollTo(0, 0); }
+  else if (accion === 'abrir-whatsapp') abrirCanal(id, 'whatsapp');
+  else if (accion === 'abrir-mail') abrirCanal(id, 'mail');
+  else if (accion === 'marcar-enviado' || accion === 'marcar-respondio') {
+    if (await anotarContacto(id, accion === 'marcar-enviado' ? { contactado: true } : { respondio: true })) aviso(accion === 'marcar-enviado' ? 'Anotado: no se le vuelve a escribir hasta dentro de 30 días.' : 'Anotado: respondió.');
+    vistaContactos();
+  } else if (accion === 'borrar-contacto') {
+    if ((await preguntar({ titulo: '¿Borrar este contacto?', texto: 'Se saca de la lista de todos los celulares.', si: 'Sí, borrarlo' })).ok) {
+      try {
+        const c = E.contactos.entradas['p-' + id];
+        await guardarContacto('p-' + id, { ...c, borrado: true });
+        E.contactoAbierto = null;
+        aviso('Borrado.');
+      } catch (e) { aviso(explicarError(e), { ms: 9000 }); }
+      vistaContactos();
+    }
+  } else if (accion === 'cola-contactos') {
+    const cola = colaDeEnvio(listaDeContactos());
+    if (!cola.length) { aviso('No hay a quién escribirle ahora: a todos se les escribió hace menos de 30 días.'); return; }
+    cola.indice = 0;
+    E.cola = cola;
+    vistaContactos();
+  } else if (accion === 'cola-enviado' || accion === 'cola-saltear') {
+    if (accion === 'cola-enviado' && !(await anotarContacto(id, { contactado: true }))) return;
+    E.cola.indice += 1;
+    vistaContactos();
+  } else if (accion === 'abrir-pista') { E.pistaAbierta = id; vistaPistas(); }
   else if (accion === 'volver-pistas') { E.pistaAbierta = null; vistaPistas(); window.scrollTo(0, 0); }
   else if (accion === 'mirar-pista') mirarPista(id);
   else if (accion === 'archivar-pista' || accion === 'reabrir-pista') {

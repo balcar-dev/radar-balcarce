@@ -34,6 +34,8 @@ export const ARCHIVOS = {
   piezas: 'web/data/efemerides-piezas.json',
   cambiosIA: 'web/data/correcciones-auditoria.json',
   pistas: 'web/data/pistas.json',
+  contactosPublicos: 'ingesta/contactos-agenda.json',
+  contactosCelular: 'web/data/contactos-celular.json',
 };
 
 export class ErrorDeGitHub extends Error {
@@ -75,6 +77,8 @@ export function formatear(ruta, json) {
   // Un día o un feriado por renglón: el historial dice qué se decidió cuándo.
   // Una pista por renglón (2/10): el historial de git dice qué cambió cuándo.
   if (ruta === ARCHIVOS.pistas) return comoRenglones({ version: 1, ...json }, ['pistas']).replace('{"pistas"', '{"version":1,"pistas"');
+  // Un contacto (o una anotación) por renglón, cada uno en su sobre cifrado (3/10).
+  if (ruta === ARCHIVOS.contactosCelular) return comoRenglones(json, ['contactos']).replace('{"contactos"', '{"version":1,"contactos"');
   if (ruta === ARCHIVOS.elegidas) return comoRenglones(json, ['dias', 'feriados', 'piezas']);
   return `${JSON.stringify(json, null, 1)}\n`;
 }

@@ -52,3 +52,21 @@ export async function abrir(sobre, { privada, huella }) {
     return null;
   }
 }
+
+/**
+ * Cierra un contenido para varios celulares (el otro lado de `abrir`; el formato es el mismo que `cerrar` de panel/cifrado.mjs): una clave
+ * AES-GCM al azar cifra el texto y se guarda una copia de esa clave, cifrada con la llave pública de cada celular. `llaves`: [{ huella, publica }].
+ * Devuelve el sobre, o null si no hay a quién cifrárselo.
+ */
+export async function cerrar(contenido, llaves = []) {
+  if (!llaves.length) return null;
+  const clave = globalThis.crypto.getRandomValues(new Uint8Array(32));
+  const iv = globalThis.crypto.getRandomValues(new Uint8Array(12));
+  const aes = await sutil().importKey('raw', clave, 'AES-GCM', false, ['encrypt']);
+  const datos = await sutil().encrypt({ name: 'AES-GCM', iv }, aes, new TextEncoder().encode(JSON.stringify(contenido)));
+  const para = await Promise.all(llaves.map(async (l) => {
+    const publica = await sutil().importKey('spki', deBase64(l.publica), { name: 'RSA-OAEP', hash: 'SHA-256' }, false, ['encrypt']);
+    return { llave: l.huella, clave: aBase64(await sutil().encrypt({ name: 'RSA-OAEP' }, publica, clave)) };
+  }));
+  return { version: 1, para, iv: aBase64(iv), datos: aBase64(datos) };
+}

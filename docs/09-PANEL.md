@@ -625,3 +625,19 @@ Hernán: "que yo te tire datos o links, que quede abierta la investigación y ve
   no anda: necesita una API de búsqueda con texto (Tavily, `TAVILY_API_KEY` en GitHub). Cuando esté, el borrador pasa por el verificador de siempre y
   entra a Esperan con `PISTA.relevancia` (95).
 - Pistas de menores o víctimas no se investigan (la lista del semáforo rojo). Prueba: `pistas-abiertas.test.mjs`.
+
+## Contactos en el celular (3/10/2026)
+
+Hernán: "a todos los contactos que tenemos mandarles, estén o no cerca de la fecha; está bueno armarnos una agenda propia de posibles
+contactos". Hasta entonces la base de 43 instituciones (`ingesta/contactos-agenda.json`) y "a quién escribir este mes" sólo vivían en el panel de la
+PC (que estaba apagada). Ahora, en **Más → Contactos** (`web/public/panel/contactos.js`):
+- **Todas las instituciones y los contactos propios**, con cuándo se les escribió y si respondieron; filtros (todos, sin contactar, toca escribir,
+  respondieron, propios) y buscador. Un número compartido (el WhatsApp de Turismo sirve para el Autódromo y las fiestas) cuenta una sola vez.
+- **El mensaje ya escrito** (el mismo de la PC, `mensajeAgenda`), editable; "Abrir WhatsApp" o "Abrir el correo" abren la app con el texto puesto y
+  **lo manda una persona**: nada sale solo. Después, "Ya le mandé el mensaje" y "Respondió" anotan la fecha (no se le escribe de nuevo antes de 30 días).
+- **"Escribirles a todos los que tocan"**: una lista que va de a uno (abrir, mandar, "ya lo mandé", siguiente), con los de temporada primero. Con
+  WhatsApp no se puede mandar en masa sin riesgo de bloqueo: por eso es de a uno, con un toque tuyo.
+- **Contactos propios** (el encargado de turismo de tal lugar, alguien que organiza algo): se suman desde el celular. **Un teléfono de una persona
+  nunca va en claro** en el repositorio público: cada contacto propio y cada anotación es un sobre cifrado para los celulares registrados, uno por
+  renglón (`web/data/contactos-celular.json`; el celular cierra el sobre con `cerrar` de `cifrado.js`, que usa el mismo formato que el de la nube). Un
+  celular que se registra después no ve lo guardado antes (como en el resto del panel). Prueba: `contactos-panel.test.mjs`.

@@ -95,6 +95,12 @@ export function clienteDePrueba() {
       ],
     },
     'web/data/efemerides-elegidas.json': { dias: {}, feriados: {}, piezas: {} },
+    'ingesta/contactos-agenda.json': { contactos: [
+      { id: 'turismo', quien: 'Subsecretaría de Turismo - Municipalidad de Balcarce', rubro: 'municipio', organiza: 'Fiestas, eventos y agenda turística', meses: [2, 7, 8, 10], canales: { whatsapp: '5492266638650', web: 'https://balcarce.gob.ar/events/' }, nota: 'El WhatsApp es el de Turismo.' },
+      { id: 'hets', quien: 'Grupo Hets - Organización de Eventos Deportivos', rubro: 'deportes', organiza: 'Ultra Trail Tierras del Diablo y otras carreras', meses: [8, 10, 12], canales: { telefono: '(02266) 15-475024', web: 'https://example.com/hets' } },
+      { id: 'postre', quien: 'Fiesta Nacional del Postre Balcarce', rubro: 'fiesta', organiza: 'Fiesta Nacional del Postre en la Sociedad Rural', meses: [7, 10], canales: { whatsapp: '5492266638650', mail: 'postre@example.com' } },
+    ] },
+    'web/data/contactos-celular.json': { version: 1, contactos: {} },
     'web/data/pistas.json': { version: 1, pistas: {
       pistaA: { creada: hace(300), texto: 'Cierra la fábrica de lácteos de Balcarce', afirmacion: 'Cierra la fábrica de lácteos de Balcarce', consultas: ['cierra fábrica lácteos Balcarce'], estado: 'abierta', ultimaRevision: hace(60), nivel: 'cubierta', total: 3, mediosVistos: ['Medio A', 'Medio B', 'Medio C'], teniamos: false, novedad: true, historial: [{ cuando: hace(300), total: 0, nivel: 'sin-cobertura' }, { cuando: hace(60), total: 3, nivel: 'cubierta' }] },
       pistaB: { creada: hace(2000), texto: 'Dicen que habrá un recital grande en octubre', afirmacion: 'Habrá un recital grande en octubre', consultas: ['recital grande Balcarce octubre'], estado: 'abierta', ultimaRevision: hace(120), nivel: 'sin-cobertura', total: 0, mediosVistos: [], teniamos: false, novedad: false, historial: [] },
@@ -156,6 +162,10 @@ export function clienteDePrueba() {
           },
           sha: 'x',
         };
+      }
+      if (ruta === 'web/data/celular-llaves.json') {
+        const l = await llavesDePrueba();
+        return { json: { llaves: [{ nombre: 'Celular de prueba', publica: l.publica, huella: l.huella }] }, sha: 'x' };
       }
       if (!(ruta in archivos)) {
         const { ErrorDeGitHub } = await import('./github.js');
