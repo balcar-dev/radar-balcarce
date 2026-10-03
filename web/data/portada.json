@@ -1,6 +1,89 @@
 {
-  "generado": "2026-10-03T10:01:34.017Z",
+  "generado": "2026-10-03T10:31:39.143Z",
   "notas": [
+    {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "copete": "Los trabajos viales sobre la traza que conecta Balcarce con Mar del Plata forman parte del acuerdo firmado en julio. La intervención responde a los reclamos de los automovilistas.",
+      "cuerpo": "Las tareas de pintura y demarcación de la calzada comenzaron en varios sectores de la Ruta Nacional 226, según informó un medio local. La intervención forma parte del plan de mejoras previsto en la concesión vial que entró en vigencia en julio pasado por un período de veinte años.\n\nLos conductores que utilizan habitualmente el corredor reclamaban estas mejoras debido a la falta de señalización adecuada, una dificultad que se acentuaba durante la noche y en momentos de escasa visibilidad.",
+      "guion": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T03:01:28.393Z",
+      "sinFecha": true,
+      "visto": "2026-10-03T03:01:28.393Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "rutas"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Comenzaron los trabajos de pintura y demarcación en la Ruta Nacional 226.",
+        "La nueva concesión vial comenzó en julio y se extenderá por veinte años.",
+        "Las tareas buscan solucionar los problemas de visibilidad nocturna reclamados por los conductores."
+      ],
+      "seSabe": [
+        "La concesión de la Ruta 226 comenzó en julio con un plazo de veinte años, según un medio local.",
+        "Los trabajos iniciales consisten en la demarcación y pintura de la calzada.",
+        "El consorcio a cargo de la gestión está integrado por Concret Nor SA, Marcalba SA, Pose SA y Coarco SA."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Ruta 226",
+        "Balcarce",
+        "Mar del Plata",
+        "transito",
+        "obras viales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "fd2y4d",
+          "titulo": "Choque frontal en la Ruta 226 deja tres heridos",
+          "fecha": "2026-10-02T22:58:21.000Z",
+          "ruta": "/nota/choque-frontal-en-la-ruta-226-deja-tres-heridos-fd2y4d"
+        },
+        {
+          "id": "1a9rnj4",
+          "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
+          "fecha": "2026-10-01T17:31:17.133Z",
+          "ruta": "/nota/el-municipio-anticipa-que-el-centro-de-monitoreo-suma-camaras-1a9rnj4"
+        },
+        {
+          "id": "1vt533g",
+          "titulo": "El Solcito atrae visitantes con su almacén histórico y costillar a la estaca",
+          "fecha": "2026-10-01T12:45:00.000Z",
+          "ruta": "/nota/el-paraje-rural-el-solcito-atrae-visitantes-con-su-almacen-historico-1vt533g"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-concesion-de-la-ruta-226-arranca-con-tareas-de-pintura",
+      "foto": {
+        "archivo": "fotos-notas/j3xrez.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
     {
       "id": "ei8drx",
       "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
@@ -11,6 +94,7 @@
       "medios": [
         "Infobae",
         "La Nación",
+        "Clarín",
         "TyC Sports",
         "Crónica",
         "Radio Mitre",
@@ -18,7 +102,7 @@
       ],
       "enlace": "https://www.cronica.com.ar/depo/polideportivo/max-verstappen/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T09:01:46.000Z",
+      "fecha": "2026-10-03T01:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T09:31:16.973Z",
       "relevancia": 100,
@@ -108,89 +192,6 @@
       "foto": {
         "archivo": "fotos-notas/ei8drx.jpg",
         "credito": "Foto: Radio Mitre"
-      }
-    },
-    {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "copete": "Los trabajos viales sobre la traza que conecta Balcarce con Mar del Plata forman parte del acuerdo firmado en julio. La intervención responde a los reclamos de los automovilistas.",
-      "cuerpo": "Las tareas de pintura y demarcación de la calzada comenzaron en varios sectores de la Ruta Nacional 226, según informó un medio local. La intervención forma parte del plan de mejoras previsto en la concesión vial que entró en vigencia en julio pasado por un período de veinte años.\n\nLos conductores que utilizan habitualmente el corredor reclamaban estas mejoras debido a la falta de señalización adecuada, una dificultad que se acentuaba durante la noche y en momentos de escasa visibilidad.",
-      "guion": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T03:01:28.393Z",
-      "sinFecha": true,
-      "visto": "2026-10-03T03:01:28.393Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Comenzaron los trabajos de pintura y demarcación en la Ruta Nacional 226.",
-        "La nueva concesión vial comenzó en julio y se extenderá por veinte años.",
-        "Las tareas buscan solucionar los problemas de visibilidad nocturna reclamados por los conductores."
-      ],
-      "seSabe": [
-        "La concesión de la Ruta 226 comenzó en julio con un plazo de veinte años, según un medio local.",
-        "Los trabajos iniciales consisten en la demarcación y pintura de la calzada.",
-        "El consorcio a cargo de la gestión está integrado por Concret Nor SA, Marcalba SA, Pose SA y Coarco SA."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "Ruta 226",
-        "Balcarce",
-        "Mar del Plata",
-        "transito",
-        "obras viales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "fd2y4d",
-          "titulo": "Choque frontal en la Ruta 226 deja tres heridos",
-          "fecha": "2026-10-02T22:58:21.000Z",
-          "ruta": "/nota/choque-frontal-en-la-ruta-226-deja-tres-heridos-fd2y4d"
-        },
-        {
-          "id": "1a9rnj4",
-          "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
-          "fecha": "2026-10-01T17:31:17.133Z",
-          "ruta": "/nota/el-municipio-anticipa-que-el-centro-de-monitoreo-suma-camaras-1a9rnj4"
-        },
-        {
-          "id": "1vt533g",
-          "titulo": "El Solcito atrae visitantes con su almacén histórico y costillar a la estaca",
-          "fecha": "2026-10-01T12:45:00.000Z",
-          "ruta": "/nota/el-paraje-rural-el-solcito-atrae-visitantes-con-su-almacen-historico-1vt533g"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-concesion-de-la-ruta-226-arranca-con-tareas-de-pintura",
-      "foto": {
-        "archivo": "fotos-notas/j3xrez.jpg",
-        "credito": "Foto: Diario La Vanguardia"
       }
     },
     {
@@ -501,7 +502,7 @@
       "fecha": "2026-10-02T22:30:06.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -723,6 +724,74 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:17:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 83,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
+      ],
+      "seSabe": [
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
+      ],
+      "noConfirmado": [
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
+      ],
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
+      "etiquetas": [
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
+          "oficial": false,
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
+        }
+      ],
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
+      "foto": {
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -988,6 +1057,79 @@
       }
     },
     {
+      "id": "1qnkumc",
+      "titulo": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones",
+      "copete": "El presidente completó su agenda en París con un evento en la Torre Eiffel. En su discurso ante inversores, aseguró que el país encara un nuevo rumbo económico y ratificó el equilibrio fiscal.",
+      "cuerpo": "El presidente Javier Milei completó este viernes su visita a Francia con un acto oficial en un salón de la Torre Eiffel, en el marco del cierre de la Argentina Week París. La ceremonia comenzó con la entonación del Himno Nacional Argentino y reunió a inversores y actores económicos globales.\n\nDurante su exposición, el mandatario aseguró que el país transita un cambio histórico y remarcó la intención de replicar estos encuentros en otros escenarios internacionales para promover el talento nacional y atraer capitales.",
+      "guion": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones.",
+      "seccion": "Política",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "La Voz del Pueblo",
+        "InfoRegión",
+        "La Nueva",
+        "La Capital (Rosario)"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T18:50:40.275Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:01:13.420Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei-cerro-su-gira-en-francia---argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro-_a6abffc85f814a2817c8cf82f",
+          "fecha": "2026-10-02T18:50:40.275Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/02/desde-paris-luis-caputo-anuncio-la-aprobacion-de-un-nuevo-rigi-por-us12500-millones-en-vaca-muerta/",
+          "fecha": "2026-10-02T22:53:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/milei-finalizo-su-visita-a-francia-con-un-acto-en-la-torre-eiffel",
+          "fecha": "2026-10-02T23:52:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/10/02/milei-cerro-su-gira-por-francia-y-aseguro-que-argentina-avanza-a-paso-firme-hacia-el-futuro/",
+          "fecha": "2026-10-02T20:27:35.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-2-16-23-0-milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-firme-hacia-el-futuro",
+          "fecha": "2026-10-02T19:32:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/politica/la-argentina-se-dirige-nuevamente-paso-firme-el-futuro-dijo-milei-al-cerrar-su-visita-francia-n10284574.html",
+          "fecha": "2026-10-02T22:07:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso",
+      "corregidaAMano": true
+    },
+    {
       "id": "1nz8gwo",
       "titulo": "Doce equipos compiten en un nuevo torneo de vóley",
       "copete": "La Escuela Municipal de Vóley organizó una competencia con catorce partidos en el gimnasio de la Escuela Primaria Nº 13. Participaron planteles de Amigos Unidos y Ferroviarios.",
@@ -1206,6 +1348,86 @@
       "foto": {
         "archivo": "fotos-notas/zdkvaa.jpg",
         "credito": "Foto: Drew de F Fawkes / Wikimedia Commons (CC BY 2.0)"
+      }
+    },
+    {
+      "id": "1wdslpn",
+      "titulo": "La Cámara de Casación revisa el sobreseimiento del ministro Luis Caputo",
+      "copete": "La Sala I aceptó el recurso de la fiscalía sobre la causa por la emisión de un bono a cien años y supuestas omisiones en declaraciones juradas durante la gestión en Finanzas.",
+      "cuerpo": "La Cámara Federal de Casación aceptará revisar el sobreseimiento del ministro de Economía de la Nación, Luis Caputo, según resolvió el viernes la Sala I del tribunal. La medida se toma tras conceder la apelación presentada por la fiscal Eugenia Anzorreguy de Silva.\n\nEl expediente se había abierto por la presunta omisión de declarar vínculos con sociedades beneficiadas y el uso de información privilegiada durante la emisión de un bono a cien años en el Gobierno de Mauricio Macri.\n\nLos jueces Pablo Bertuzzi y Pablo Yadarola declararon admisible el recurso, mientras que Mariano Llorens votó por rechazarlo.",
+      "guion": "La Cámara de Casación revisa el sobreseimiento del ministro Luis Caputo",
+      "seccion": "Política",
+      "medios": [
+        "Perfil",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "InfoRegión",
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/judiciales/2026/10/02/revisaran-el-sobreseimiento-de-luis-caputo-por-la-emision-del-bono-a-100-anos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T17:53:13.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T01:31:17.303Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Cámara Federal de Casación revisará el sobreseimiento de Luis Caputo.",
+        "La Sala I aceptó el recurso de la fiscal Eugenia Anzorreguy de Silva.",
+        "La causa investiga la emisión de un bono a cien años durante la administración de Mauricio Macri."
+      ],
+      "noConfirmado": [
+        "Todavía no se definió el fallo definitivo del máximo tribunal penal sobre la responsabilidad en los hechos investigados."
+      ],
+      "textoRedes": "La Cámara Federal de Casación revisará el sobreseimiento del ministro Luis Caputo tras aceptar el recurso de la fiscalía en la causa por la emisión de un bono a cien años.",
+      "etiquetas": [
+        "Luis Caputo",
+        "Casación",
+        "Economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/judiciales/2026/10/02/revisaran-el-sobreseimiento-de-luis-caputo-por-la-emision-del-bono-a-100-anos/",
+          "fecha": "2026-10-02T17:53:13.000Z",
+          "oficial": false,
+          "aporte": "Informó la aceptación del recurso de casación por parte de la Sala I de la Cámara."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/casacion-revisara-el-sobreseimiento-de-luis-caputo-por-el-bono-a-100-anos-a40.phtml",
+          "fecha": "2026-10-02T22:58:10.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la decisión sobre la apelación de la fiscal Eugenia Anzorreguy de Silva."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/revisaran-el-sobreseimiento-luis-caputo-la-emision-del-bono-100-anos-n922661",
+          "fecha": "2026-10-03T00:39:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto de que el hecho ocurrió durante el gobierno de Mauricio Macri."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/confirmaron-el-sobresemiento-de-caputo-en-la-causa-por-la-emision-de-un-bono-a-100-anos_a6ac0117df814a2817c90930e",
+          "fecha": "2026-10-02T21:23:30.000Z",
+          "oficial": false,
+          "aporte": "Detalló la actuación de la Cámara Criminal y Correccional Federal."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-camara-de-casacion-revisa-el-sobreseimiento-del-ministro-luis",
+      "foto": {
+        "archivo": "fotos-notas/1wdslpn.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1613,6 +1835,7 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "News Balcarce (FM 91.7)",
@@ -1623,7 +1846,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 77,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1636,6 +1859,13 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
           "aporte": null
         },
         {
@@ -2258,7 +2488,11 @@
           "aporte": "Informó sobre el anuncio oficial de la compañía Disney en la convención."
         }
       ],
-      "slug": "messi-llega-a-disney-en-una-nueva-serie-animada-de-fantasia"
+      "slug": "messi-llega-a-disney-en-una-nueva-serie-animada-de-fantasia",
+      "foto": {
+        "archivo": "fotos-notas/1uabccx.jpg",
+        "credito": "Foto: Ludovic Péron / Wikimedia Commons (CC BY-SA 3.0)"
+      }
     },
     {
       "id": "1aekavp",
@@ -2680,18 +2914,19 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
+        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
-        "El Diario Balcarce",
-        "Diario La Vanguardia"
+        "El Diario Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 77,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2767,7 +3002,8 @@
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
-        "El Diario Balcarce"
+        "El Diario Balcarce",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
@@ -3591,117 +3827,6 @@
       }
     },
     {
-      "id": "1egbk71",
-      "titulo": "Javier Milei cumple su última jornada en Francia y regresa al país",
-      "copete": "El presidente finaliza su agenda en París el viernes con un reconocimiento económico y el cierre de la Argentina Week. Su vuelta está programada para el sábado por la mañana.",
-      "cuerpo": "El presidente Javier Milei concluye el viernes su agenda oficial en la capital francesa con una última serie de actividades antes de emprender el vuelo de regreso hacia la Ciudad de Buenos Aires, con arribo estipulado para el sábado a las 10 de la mañana. Durante su estadía, el mandatario mantuvo un encuentro bilateral con su par Emmanuel Macron en el Palacio del Elíseo y participó de la iniciativa Argentina Week.",
-      "guion": "Javier Milei cumple su última jornada en Francia y regresa al país",
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Perfil",
-        "Página/12",
-        "C5N",
-        "Crónica",
-        "Clarín",
-        "La Brújula 24"
-      ],
-      "enlace": "https://www.c5n.com/politica/javier-milei-emmanuel-macron-reunion-francia-paris-1-octubre-2026",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T10:06:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El presidente cierra su agenda en París este viernes.",
-        "Recibe una distinción del Foro Económico de París.",
-        "El regreso a Buenos Aires está previsto para el sábado por la mañana."
-      ],
-      "noConfirmado": [
-        "El horario exacto del acto de cierre de la Argentina Week quedó sujeto a confirmación durante la jornada del viernes."
-      ],
-      "textoRedes": "El presidente Javier Milei finaliza este viernes su visita oficial a París con una distinción económica y el cierre de la Argentina Week, con regreso previsto para el sábado por la mañana.",
-      "etiquetas": [
-        "Javier Milei",
-        "Francia",
-        "Paris",
-        "Argentina Week",
-        "Gira presidencial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/javier-milei-emmanuel-macron-reunion-francia-paris-1-octubre-2026",
-          "fecha": "2026-10-02T10:06:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el cronograma de las actividades del viernes, la reunión con Macron y los datos del vuelo de regreso."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-presidente-recibe-hoy-premio-foro-economico-cierra-argentina-paris-week_0_cZX6NOTIIi.html",
-          "fecha": "2026-10-02T11:25:45.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la distinción que otorga el Foro Económico de París."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/javier-milei-recibe-el-premio-economista-mas-influyente-del-foro-economico-de-paris.phtml",
-          "fecha": "2026-10-02T12:39:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la participación en la Argentina Week y los encuentros con empresarios y gobernadores."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/javier-milei-visita-francia-viernes-2-octubre-2026",
-          "fecha": "2026-10-02T12:04:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el dato sobre el anuncio de inversiones de la empresa TotalEnergies."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/milei-cierra-su-visita-a-paris-con-un-premio-y-un-evento-final-de-la-argentina-week/",
-          "fecha": "2026-10-02T12:05:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó los detalles del cierre de la gira y el horario de llegada a la Argentina."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "16j11u4",
-          "titulo": "Javier Milei viaja a Francia con trece gobernadores aliados",
-          "fecha": "2026-09-24T05:25:47.000Z",
-          "ruta": "/nota/javier-milei-viaja-a-francia-con-trece-gobernadores-aliados-16j11u4"
-        },
-        {
-          "id": "1ejaor8",
-          "titulo": "Javier Milei promete crecimiento y pide paciencia ante empresarios en Mar del Plata",
-          "fecha": "2026-09-28T13:11:25.000Z",
-          "ruta": "/nota/javier-milei-promete-crecimiento-y-pide-paciencia-ante-empresarios-en-1ejaor8"
-        },
-        {
-          "id": "l0rwb4",
-          "titulo": "Javier Milei cuestiona a la ONU en su discurso",
-          "fecha": "2026-09-24T01:00:00.000Z",
-          "ruta": "/nota/milei-en-la-onu-llamo-a-la-organizacion-una-casta-de-parasitos-y-l0rwb4"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "javier-milei-cumple-su-ultima-jornada-en-francia-y-regresa-al-pais",
-      "foto": {
-        "archivo": "fotos-notas/1egbk71.jpg",
-        "credito": "Foto: C5N"
-      }
-    },
-    {
       "id": "1gt8iio",
       "titulo": "García Cuerva advierte sobre la crisis social antes de la visita papal",
       "copete": "El arzobispo de Buenos Aires describió a la Argentina afectada por la pobreza y la polarización política. Lo expresó en la previa de la tradicional caminata a Luján y de la llegada de León XIV.",
@@ -4020,6 +4145,7 @@
       "guion": "La filial local de Federación Agraria respalda la reelección de Sarnari",
       "seccion": "Agro",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/respaldo-la-reeleccion-de-andrea-sarnari-la-filial-local-de-federacion-agraria-argentina-57",
@@ -4027,7 +4153,7 @@
       "fecha": "2026-10-02T00:27:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 78,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4215,8 +4341,8 @@
     }
   ],
   "secciones": [
-    "Automovilismo",
     "Balcarce",
+    "Automovilismo",
     "Fútbol",
     "Policiales",
     "Política",
@@ -4592,16 +4718,10 @@
   },
   "pendientes": [
     {
-      "id": "1lm809e",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "1148srf",
+      "id": "1w06xhx",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
+      "motivo": "necesita ojo humano: \"lesionada\""
     },
     {
       "id": "vguosy",

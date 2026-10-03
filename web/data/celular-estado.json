@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T10:01:34.017Z",
- "portada": 50,
+ "generado": "2026-10-03T10:31:39.143Z",
+ "portada": 52,
  "archivo": 830,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-03T10:01:34.041Z",
+  "generado": "2026-10-03T10:31:39.177Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-03T10:03:36.671Z"
    },
    {
     "nombre": "noticia1",
@@ -119,14 +119,14 @@
     "segundos": 53,
     "notas": [
      {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "1hy6wdw",
       "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
       "seccion": "Agro"
+     },
+     {
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "seccion": "Fútbol"
      },
      {
       "id": "j3xrez",
