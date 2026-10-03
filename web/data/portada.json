@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T06:21:15.629Z",
+  "generado": "2026-10-03T06:31:22.816Z",
   "notas": [
     {
       "id": "1o0cdfx",
@@ -1716,11 +1716,11 @@
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "La Verdad",
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
         "Punto Noticias",
-        "La Nueva"
+        "La Nueva",
+        "La Verdad"
       ],
       "enlace": "https://noticiasargentinas.com/economia/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al--temor-a-volver-al-infierno-_a6abfdbe3f814a2817c8806de",
       "teniaImagenLaFuente": true,
@@ -3382,17 +3382,17 @@
       "guion": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "seccion": "Argentina",
       "medios": [
-        "Infoeme",
         "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB"
+        "Agencia DIB",
+        "Infoeme"
       ],
       "enlace": "https://www.ambito.com/ambito-nacional/el-gobierno-bonaerense-cedio-olavarria-un-predio-minero-crear-un-parque-urbano-n6329231",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T10:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:01:28.488Z",
-      "relevancia": 63,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3712,14 +3712,14 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Brújula 24",
-        "La Verdad",
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
         "El Eco de Tandil",
         "Clarín",
-        "La Capital (Rosario)"
+        "La Verdad",
+        "La Capital (Rosario)",
+        "La Brújula 24"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/duro-panorama-de-la-iglesia-al-papa-lo-espera-una-argentina-en-crisis-con-una-gran-cantidad-de-hermanos-muy-pobres/",
       "teniaImagenLaFuente": true,
@@ -3830,11 +3830,11 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Brújula 24",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "La Brújula 24"
       ],
       "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
       "teniaImagenLaFuente": true,
@@ -4557,20 +4557,20 @@
         "Infórmese Primero (FM 104.9)",
         "Infobae",
         "El Cronista",
-        "Página/12",
         "C5N",
         "Noticias Argentinas (NA)",
-        "La Verdad",
         "El Eco de Tandil",
         "Ámbito",
         "A24",
         "Agencia DIB",
         "Perfil",
         "La Nueva",
+        "Página/12",
         "La Capital (Rosario)",
         "Ecos Diarios (Necochea)",
         "Clarín",
-        "Crónica"
+        "Crónica",
+        "La Verdad"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/01/la-desigualdad-bajo-en-el-segundo-trimestre-pero-el-10-mas-rico-gana-13-veces-mas-que-el-sector-con-menos-recursos/",
       "teniaImagenLaFuente": true,
@@ -4676,8 +4676,8 @@
     "ahora": {
       "temp": 8,
       "sensacion": 5,
-      "humedad": 96,
-      "viento": 16,
+      "humedad": 98,
+      "viento": 15,
       "rumbo": "N",
       "cielo": "Llovizna leve",
       "esDeDia": false
@@ -5050,12 +5050,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "y344f3",
-      "titulo": "Acuerdo Mercosur-UE: las exportaciones agroindustriales a…",
-      "seccion": "Agro",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "1t477sv",
       "titulo": null,
       "seccion": "Policiales",
@@ -5084,6 +5078,12 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "y344f3",
+      "titulo": "Acuerdo Mercosur-UE: las exportaciones agroindustriales a…",
+      "seccion": "Agro",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "4n4kj2",
