@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T20:01:17.236Z",
+  "generado": "2026-10-03T20:31:41.416Z",
   "notas": [
     {
       "id": "f1parrilla2026r16",
@@ -108,6 +108,97 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261003tarde.jpg",
         "credito": "Fotos: Ámbito y Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "wnwtbo",
+      "titulo": "El Reino Unido exige autorización central para nuevos permisos petroleros en Malvinas",
+      "copete": "Londres estableció que cualquier futuro permiso de extracción de hidrocarburos en las Islas Malvinas necesitará el aval directo del secretario de Estado de Asuntos Exteriores británico. La medida coincide con las sanciones y acciones judiciales impulsadas por el gobierno argentino contra las empresas operadoras.",
+      "cuerpo": "El Gobierno del Reino Unido estableció que los futuros permisos para extraer hidrocarburos en las Islas Malvinas exigirán el visto bueno del secretario de Estado de Asuntos Exteriores, según confirmaron fuentes oficiales británicas a través de una respuesta parlamentaria formalizada el primero de octubre. La disposición se originó tras una consulta del lord conservador Moynihan ante el Parlamento británico.\n\nEsta centralización de las autorizaciones ocurre en paralelo a la ofensiva legal y diplomática que lleva adelante la administración de Javier Milei. La Justicia Federal de Río Grande, mediante la jueza Mariel Borruto, ordenó a las compañías Rockhopper Exploration y Navitas Petroleum frenar trabajos vinculados al proyecto petrolero Sea Lion. A principios de septiembre, el Ejecutivo argentino había anunciado un endurecimiento en las penalidades para firmas que operen sin aval nacional en el archipiélago.",
+      "guion": "El Reino Unido exige autorización central para nuevos permisos petroleros en Malvinas",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "La Nación",
+        "El Destape"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/03/el-reino-unido-anuncio-que-las-nuevas-licencias-de-hidrocarburos-en-las-islas-malvinas-requeriran-su-autorizacion-final/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T17:56:39.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T20:31:16.752Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Londres centraliza la aprobación de nuevas licencias petroleras en las islas.",
+        "La medida se formalizó mediante una respuesta parlamentaria a principios de octubre.",
+        "La Justicia argentina mantiene frenadas las obras de las operadoras en la zona."
+      ],
+      "seSabe": [
+        "El gobierno británico confirmó que los permisos futuros de hidrocarburos requerirán el consentimiento de su secretario de Estado de Asuntos Exteriores, según una respuesta parlamentaria del uno de octubre.",
+        "La jueza federal Mariel Borruto ordenó a las empresas Rockhopper Exploration y Navitas Petroleum suspender las labores en el proyecto Sea Lion."
+      ],
+      "noConfirmado": [
+        "No se especificó si el funcionario británico intervino en la aprobación del programa de producción de Sea Lion, dado que opera con licencias anteriores."
+      ],
+      "textoRedes": "El gobierno británico fijó que los futuros permisos de hidrocarburos en Malvinas necesiten el aval de su secretaría de Asuntos Exteriores. La medida se cruza con las restricciones judiciales que la Argentina impuso a las empresas operadoras.",
+      "etiquetas": [
+        "Malvinas",
+        "Reino Unido",
+        "hidrocarburos",
+        "petróleo",
+        "Justicia federal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/03/el-reino-unido-anuncio-que-las-nuevas-licencias-de-hidrocarburos-en-las-islas-malvinas-requeriran-su-autorizacion-final/",
+          "fecha": "2026-10-03T17:56:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló los alcances de la decisión británica, la respuesta parlamentaria y las medidas judiciales argentinas contra las empresas."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/03/malvinas-el-gobierno-britanico-anuncio-que-las-futuras-licencias-de-explotacion-de-petroleo-y-gas-necesitaran-su-autorizacion/",
+          "fecha": "2026-10-03T20:17:40.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la formalización de la medida sobre las licencias de hidrocarburos a través de una respuesta en el Parlamento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "iw7x0c",
+          "titulo": "El Reino Unido respondió el discurso de Milei ante la ONU y rechazó negociar la soberanía de Malvinas sin aval isleño",
+          "fecha": "2026-09-23T20:10:17.000Z",
+          "ruta": "/nota/el-reino-unido-respondio-el-discurso-de-milei-ante-la-onu-y-rechazo-iw7x0c"
+        },
+        {
+          "id": "6cucid",
+          "titulo": "Halliburton ratifica que no operará en las Islas Malvinas",
+          "fecha": "2026-09-28T20:32:34.000Z",
+          "ruta": "/nota/halliburton-ratifica-que-no-operara-en-las-islas-malvinas-6cucid"
+        },
+        {
+          "id": "1x8o7wh",
+          "titulo": "Milei anunció sanciones a empresas que operen en Malvinas y la construcción de una base naval",
+          "fecha": "2026-09-04T09:05:53.000Z",
+          "ruta": "/nota/milei-anuncio-sanciones-a-empresas-que-operen-en-malvinas-y-la-1x8o7wh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-reino-unido-exige-autorizacion-central-para-nuevos-permisos",
+      "foto": {
+        "archivo": "fotos-notas/wnwtbo.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -386,88 +477,6 @@
       }
     },
     {
-      "id": "1oy5t8d",
-      "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
-      "copete": "El titular de la UCR Nacional mantuvo un encuentro con el intendente y referentes locales en el Comité partidario. Conversaron sobre la agenda política y la presencia en el territorio.",
-      "cuerpo": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino, funcionarios municipales y militantes en el Comité local de la Unión Cívica Radical, según informó un medio local. Durante el encuentro, los dirigentes conversaron sobre la actualidad política, los desafíos nacionales y el trabajo territorial del partido.\n\nChiarella asumió la conducción partidaria el 12 de diciembre de 2025 y actualmente también se desempeña como intendente de la ciudad santafesina de Venado Tuerto.",
-      "guion": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
-      "seccion": "Política",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-03T15:25:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T16:31:17.843Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Leonel Chiarella visitó el Comité local de la UCR en Balcarce",
-        "Mantuvo una reunión con el intendente Esteban Reino y dirigentes",
-        "Abordaron temas de actualidad política y el rol territorial del partido"
-      ],
-      "seSabe": [
-        "Leonel Chiarella visitó Balcarce",
-        "El titular de la UCR Nacional se reunió con Esteban Reino y militantes radicales",
-        "El encuentro se realizó en el Comité local de la UCR"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino y referentes locales del radicalismo en el Comité partidario para analizar la agenda política.",
-      "etiquetas": [
-        "Leonel Chiarella",
-        "Esteban Reino",
-        "UCR",
-        "Balcarce",
-        "Politica"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
-          "fecha": "2026-10-03T15:25:10.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la visita de Leonel Chiarella a Balcarce, su reunión con Esteban Reino y el encuentro con dirigentes radicales en el Comité local."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1kt5uyq",
-          "titulo": "Esteban Reino destaca el impacto económico tras la reapertura del autódromo",
-          "fecha": "2026-09-30T12:59:12.000Z",
-          "ruta": "/nota/esteban-reino-destaca-el-impacto-economico-tras-la-reapertura-del-1kt5uyq"
-        },
-        {
-          "id": "repaso20260929tarde",
-          "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
-          "fecha": "2026-09-29T19:46:57.548Z",
-          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-corte-de-luz-esteban-reino-y-repaso20260929tarde"
-        },
-        {
-          "id": "tttn9w",
-          "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
-          "fecha": "2026-09-28T20:45:35.000Z",
-          "ruta": "/nota/esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo-tttn9w"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "leonel-chiarella-visita-balcarce-y-se-reune-con-esteban-reino",
-      "foto": {
-        "archivo": "fotos-notas/1oy5t8d.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "wjdq6r",
       "titulo": "Dal Poggetto advierte que el país se encarece en moneda extranjera",
       "copete": "La directora de Eco Go señaló que el dólar oficial superó los 1500 pesos y el paralelo ronda los 1560 pesos. Además, advirtió sobre el freno en la actividad y la inflación en dólares.",
@@ -547,83 +556,6 @@
       }
     },
     {
-      "id": "1rzdfjj",
-      "titulo": "Mariel Fernández encabeza el congreso provincial peronista",
-      "copete": "La intendenta de Moreno convoca a más de mil mujeres para el próximo martes en San Vicente. El gobernador bonaerense brinda la apertura formal.",
-      "cuerpo": "La intendenta de Moreno y secretaria de las Mujeres del Partido Justicialista provincial, Mariel Fernández, encabeza el martes 6 de octubre el congreso provincial denominado Unidas Triunfaremos. El cónclave se desarrolla en la Quinta de San Vicente y convoca a más de un millar de dirigentas y militantes de todo el territorio bonaerense.\n\nLa apertura formal de la jornada está a cargo del gobernador Axel Kicillof, quien brinda el discurso inaugural ante la concurrencia. Durante el encuentro, las asistentes se nuclean en comisiones de debate para analizar la coyuntura socioeconómica actual.",
-      "guion": "Mariel Fernández encabeza el congreso provincial peronista",
-      "seccion": "Política",
-      "medios": [
-        "Minuto Uno",
-        "El Destape",
-        "C5N",
-        "Crónica"
-      ],
-      "enlace": "https://www.minutouno.com/politica/mariel-fernandez-convoco-masivo-congreso-mujeres-peronistas-la-presencia-axel-kicillof-n6329689",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T14:25:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T17:01:16.126Z",
-      "relevancia": 68,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Mariel Fernández encabeza el congreso el martes 6 de octubre",
-        "El encuentro se realiza en la Quinta de San Vicente",
-        "Axel Kicillof brinda el discurso inaugural",
-        "Participan más de mil mujeres bonaerenses"
-      ],
-      "seSabe": [
-        "El congreso Unidas Triunfaremos se realiza el martes 6 de octubre en San Vicente, según la organización",
-        "La intendente de Moreno encabeza la convocatoria con más de mil asistentes",
-        "El gobernador bonaerense participa de la apertura formal"
-      ],
-      "textoRedes": "Mariel Fernández encabeza el martes 6 de octubre el congreso provincial Unidas Triunfaremos en la Quinta de San Vicente con la presencia de más de mil mujeres y el gobernador Axel Kicillof.",
-      "etiquetas": [
-        "Mariel Fernández",
-        "Axel Kicillof",
-        "Partido Justicialista",
-        "San Vicente",
-        "congreso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/mariel-fernandez-convoco-masivo-congreso-mujeres-peronistas-la-presencia-axel-kicillof-n6329689",
-          "fecha": "2026-10-03T14:25:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló fecha, lugar, consignas del congreso y la presencia de más de mil mujeres."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/unidas-triunfaremos-mariel-fernandez-convoco-al-congreso-mujeres-del-pj-bonaerense-n250644",
-          "fecha": "2026-10-03T15:15:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la presencia del gobernador Axel Kicillof en el encuentro de San Vicente."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/mariel-fernandez-convoca-al-congreso-de-mujeres-del-pj-bonaerense-bajo-el-lema-unidas-triunfaremos/",
-          "fecha": "2026-10-03T16:34:00.000Z",
-          "oficial": false,
-          "aporte": "Ratificó la convocatoria al congreso provincial encabezado por Mariel Fernández."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "mariel-fernandez-encabeza-el-congreso-provincial-peronista",
-      "foto": {
-        "archivo": "fotos-notas/1rzdfjj.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
-    },
-    {
       "id": "15ikzjc",
       "titulo": "Roban dinero y celulares en una sucursal del supermercado Frutimar",
       "copete": "Un ladrón ingresó a la madrugada tras romper un vidrio y se llevó la caja registradora, plata destinada a proveedores y dos teléfonos celulares. El comercio ya había sufrido un hecho de características similares en julio.",
@@ -631,8 +563,7 @@
       "guion": "Roban dinero y celulares en una sucursal del supermercado Frutimar",
       "seccion": "Policiales",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Puntonueve (FM 100.9)"
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/en-solo-tres-meses-la-misma-sucursal-de.html",
       "teniaImagenLaFuente": true,
@@ -968,11 +899,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44983-fuera-de-servicio-los-telefonos-de-la-policia-comunal-y-del-cpr-en-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-03T12:31:09.453Z",
       "sinFecha": true,
       "visto": "2026-10-03T12:31:09.453Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1032,12 +963,13 @@
       "guion": "Caputo descarta la recesión y asegura que la economía crece",
       "seccion": "Economía",
       "medios": [
+        "El Eco de Tandil",
         "Agencia DIB",
         "Ámbito",
-        "Minuto Uno",
         "Infobae",
         "Clarín",
         "A24",
+        "Minuto Uno",
         "La Brújula 24",
         "Letra P"
       ],
@@ -1631,9 +1563,7 @@
       "guion": "Mariano Werner recibe millonaria multa y sanción deportiva",
       "seccion": "Automovilismo",
       "medios": [
-        "El Destape",
-        "Solotc",
-        "Campeones"
+        "El Destape"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/tc-pick-up-duras-sanciones-recibio-mariano-werner-final-balcarce-2026102205050",
       "teniaImagenLaFuente": true,
@@ -1793,10 +1723,10 @@
         "Crónica",
         "Radio Mitre",
         "Canal 26",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
         "iProfesional",
-        "El Día"
+        "El Día",
+        "Diario Popular"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/02/sandra-pettovello-desplazo-a-la-subsecretaria-de-trabajo-claudia-testa/",
       "teniaImagenLaFuente": true,
@@ -1888,11 +1818,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T20:21:19.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-02T21:01:16.545Z",
+      "sinFecha": true,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 71,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1946,74 +1876,6 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1c7unm1",
-      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
-      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
-      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
-      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T20:17:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T02:27:16.419Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": "Hernán",
-      "publicadaCuando": "2026-10-03T01:52:56.014Z",
-      "temas": [],
-      "como": "publicada",
-      "claves": [
-        "El STM y el municipio acordaron mejoras laborales y salariales.",
-        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
-        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
-        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
-      ],
-      "seSabe": [
-        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
-        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
-        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
-        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
-        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
-      ],
-      "noConfirmado": [
-        "Resta definir la fecha exacta de implementación del aumento para conductores."
-      ],
-      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
-      "etiquetas": [
-        "Sindicato de Trabajadores Municipales",
-        "Departamento Ejecutivo",
-        "Ministerio de Trabajo",
-        "plus",
-        "salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
-          "fecha": "2026-10-02T20:17:04.000Z",
-          "oficial": false,
-          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
-          "fecha": "2026-10-02T22:25:49.318Z",
-          "oficial": false,
-          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
-        }
-      ],
-      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
-      "foto": {
-        "archivo": "fotos-notas/1c7unm1.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2110,72 +1972,6 @@
       }
     },
     {
-      "id": "kg0imu",
-      "titulo": "Verstappen agradece los elogios de Colapinto tras el choque en Bakú",
-      "copete": "El tetracampeón de la Fórmula 1 valoró el respaldo del argentino y reflexionó sobre la relación con los demás corredores de la categoría.",
-      "cuerpo": "El piloto neerlandés Max Verstappen reconoció las palabras del argentino Franco Colapinto, quien lo había tomado como ejemplo por su postura ante las equivocaciones de los deportistas nuevos. Verstappen, cuatro veces campeón mundial, explicó que valora el trato respetuoso y que no considera rivales a todos los integrantes de la parrilla.\n\nEl cruce dialéctico se originó luego de la competencia en Azerbaiyán, cuando un despiste del argentino involucró a Pierre Gasly y Lando Norris. Tras ese episodio, Norris había pedido sanciones severas para el sudamericano, aunque posteriormente le envió disculpas reiteradas.",
-      "guion": "Verstappen agradece los elogios de Colapinto tras el choque en Bakú",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infobae",
-        "TyC Sports",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.tycsports.com/automovilismo/verstappen-agradecio-los-elogios-de-colapinto-tras-su-accidente-en-baku-los-que-compiten-en-f1-no-son-mis-enemigos-id764060.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T19:48:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T22:01:17.356Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Verstappen respondió a los dichos de Colapinto.",
-        "El tetracampeón defendió a los pilotos jóvenes.",
-        "El origen estuvo en un incidente en Bakú."
-      ],
-      "seSabe": [
-        "Max Verstappen agradeció públicamente las palabras de Franco Colapinto.",
-        "Lando Norris pidió inicialmente la suspensión del argentino tras el incidente en Bakú.",
-        "Norris le envió disculpas reiteradas a Colapinto tras las declaraciones cruzadas."
-      ],
-      "textoRedes": "Max Verstappen agradeció los elogios de Franco Colapinto tras el incidente en el Gran Premio de Azerbaiyán y reflexionó sobre la relación entre los corredores de la máxima categoría.",
-      "etiquetas": [
-        "Formula 1",
-        "Max Verstappen",
-        "Franco Colapinto"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/verstappen-agradecio-los-elogios-de-colapinto-tras-su-accidente-en-baku-los-que-compiten-en-f1-no-son-mis-enemigos-id764060.html",
-          "fecha": "2026-10-02T19:48:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló los dichos de Verstappen y el contexto del incidente en Bakú con Norris."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/02/verstappen-valoro-los-elogios-de-colapinto-y-apunto-contra-las-criticas-a-los-jovenes-en-la-f1-no-todos-son-mis-enemigos/",
-          "fecha": "2026-10-02T21:56:47.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las repercusiones del episodio y el agradecimiento del piloto neerlandés."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "verstappen-agradece-los-elogios-de-colapinto-tras-el-choque-en-baku",
-      "foto": {
-        "archivo": "fotos-notas/kg0imu.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "1ctsl0u",
       "titulo": "Dos consorcios compiten en la licitación para construir la Línea F",
       "copete": "El Gobierno de la Ciudad abrió los sobres con las propuestas técnicas para la obra de la Línea F. La inversión estimada alcanza los US$1.350 millones y los trabajos comenzarán a principios de 2027.",
@@ -2192,18 +1988,18 @@
         "Crónica",
         "Radio Mitre",
         "Canal 26",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
         "ANDigital",
         "Ámbito",
-        "Perfil"
+        "Perfil",
+        "Diario Popular"
       ],
       "enlace": "https://www.cronista.com/economia-politica/avanza-la-linea-f-del-subte-dos-consorcios-compiten-para-su-construccion/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T19:19:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T20:31:20.420Z",
-      "relevancia": 66,
+      "relevancia": 58,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2647,15 +2443,14 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Agrositio"
+        "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:03:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 38,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2728,7 +2523,6 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2740,7 +2534,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 99,
+      "relevancia": 89,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2753,13 +2547,6 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
-          "fecha": "2026-10-02T20:21:48.000Z",
-          "oficial": false,
           "aporte": null
         },
         {
@@ -2789,6 +2576,116 @@
       "foto": {
         "archivo": "fotos-notas/1akpidg.jpg",
         "credito": "Foto: Municipalidad de Balcarce"
+      }
+    },
+    {
+      "id": "1pq0gh4",
+      "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
+      "copete": "La funcionaria nacional lideró un encuentro en Francia junto a catorce firmas pesqueras. El objetivo principal consistió en incrementar las ventas de langostinos y vieiras.",
+      "cuerpo": "La secretaria general de la Presidencia, Karina Milei, dirigió en la capital francesa una jornada comercial orientada a potenciar la colocación de productos pesqueros nacionales. El evento reunió a catorce compañías del sector con compradores europeos para fomentar la comercialización directa de langostinos y vieiras.\n\nLa estrategia contó con la intervención del titular de PromArgentina, Diego Sucalesca, además de diversas entidades vinculadas a la actividad marítima y diplomática. Durante el año pasado, los envíos internacionales de langostinos aportaron mil millones de dólares a la economía nacional.",
+      "guion": "Karina Milei encabeza ronda de negocios en París por la pesca",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "Perfil",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "Crónica",
+        "Punto Noticias"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T16:57:20.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T18:31:19.096Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Participaron catorce empresas pesqueras nacionales y compradores franceses.",
+        "La comitiva estuvo encabezada por la secretaria general de la Presidencia.",
+        "Buscan incrementar las ventas de langostinos y vieiras hacia Europa.",
+        "Las exportaciones de langostinos sumaron mil millones de dólares en 2025."
+      ],
+      "seSabe": [
+        "Karina Milei lideró el encuentro en París este viernes.",
+        "La actividad se denominó Argentina B2B Week.",
+        "Catorce empresas nacionales participaron de las reuniones.",
+        "Diego Sucalesca acompañó a la funcionaria nacional."
+      ],
+      "noConfirmado": [
+        "No se informaron los montos totales proyectados de los nuevos contratos comerciales."
+      ],
+      "textoRedes": "Karina Milei encabezó en París una ronda de negocios para ampliar las exportaciones de langostinos y vieiras con catorce empresas argentinas.",
+      "etiquetas": [
+        "Karina Milei",
+        "París",
+        "exportaciones",
+        "pesca",
+        "langostinos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
+          "fecha": "2026-10-02T16:57:20.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la ronda B2B Week y los datos sobre el mercado francés."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/02/karina-milei-encabezo-una-ronda-de-negocios-en-francia-para-impulsar-exportaciones-de-langostinos-y-vieiras/",
+          "fecha": "2026-10-02T17:32:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló la participación de las catorce empresas exportadoras de productos pesqueros."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-impulsar-las-exportaciones-argentinas-de-langostinos-y-vieiras.phtml",
+          "fecha": "2026-10-02T17:49:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó la cifra de mil millones de dólares generada por las exportaciones de langostinos en 2025."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-las-ventas-de-langostinos-y-vieiras/",
+          "fecha": "2026-10-02T17:44:06.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la presencia de Diego Sucalesca y el rol de PromArgentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "oa2ef",
+          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
+          "fecha": "2026-10-02T09:29:30.000Z",
+          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
+        },
+        {
+          "id": "wcnatb",
+          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
+          "fecha": "2026-10-01T13:40:00.000Z",
+          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
+        },
+        {
+          "id": "19iwenp",
+          "titulo": "Karina Milei habló tras la reunión por la visita de León XIV y aseguró que \"el Papa es de todos los argentinos\"",
+          "fecha": "2026-09-22T23:31:00.000Z",
+          "ruta": "/nota/karina-milei-hablo-tras-la-reunion-por-la-visita-de-leon-xiv-y-19iwenp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca",
+      "foto": {
+        "archivo": "fotos-notas/1pq0gh4.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -3405,10 +3302,8 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
         "El Diario Balcarce"
       ],
@@ -3417,7 +3312,7 @@
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 89,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -4397,13 +4292,13 @@
   "secciones": [
     "Automovilismo",
     "Balcarce",
-    "Cultura y agenda",
     "Argentina",
+    "Cultura y agenda",
     "Policiales",
-    "Política",
     "Economía",
     "Deportes",
     "Fútbol",
+    "Política",
     "Agro"
   ],
   "temas": [
@@ -4423,9 +4318,9 @@
       "temp": 14,
       "sensacion": 13,
       "humedad": 78,
-      "viento": 9,
+      "viento": 8,
       "rumbo": "NO",
-      "cielo": "Nublado",
+      "cielo": "Mayormente despejado",
       "esDeDia": true
     },
     "dias": [
@@ -4778,16 +4673,10 @@
   },
   "pendientes": [
     {
-      "id": "36p9t0",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
-    },
-    {
-      "id": "1w06xhx",
+      "id": "1148srf",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"lesionada\""
+      "motivo": "necesita ojo humano: \"herido\""
     },
     {
       "id": "1v0rcd7",
@@ -4800,18 +4689,6 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "t9c46j",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "13ygrbn",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "fvq4zq",
@@ -4832,10 +4709,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "15p44cp",
-      "titulo": "André Pierre-Gignac junto a Riquelme viendo a Boca",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"suscribite\""
+      "id": "t9c46j",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "13ygrbn",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "4xscfj",
@@ -4880,12 +4763,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
-    },
-    {
       "id": "1b80a9j",
       "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
       "seccion": "Política",
@@ -4902,6 +4779,12 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herido\""
+    },
+    {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     }
   ],
   "esperandoCuerpo": 3
