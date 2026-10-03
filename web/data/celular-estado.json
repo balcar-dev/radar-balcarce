@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T12:31:26.026Z",
- "portada": 43,
- "archivo": 832,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-03T13:01:41.934Z",
+ "portada": 47,
+ "archivo": 833,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-03T12:31:26.064Z",
+  "generado": "2026-10-03T13:01:41.966Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -83,14 +83,14 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 55,
+    "segundos": 50,
     "notas": [
      {
-      "id": "164o14u",
-      "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-      "seccion": "Balcarce"
+      "id": "h1ggzr",
+      "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+      "seccion": "Agro"
      },
      {
       "id": "n09ogo",
@@ -98,14 +98,14 @@
       "seccion": "Fútbol"
      },
      {
+      "id": "sty1jd",
+      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "2qj2kn",
       "titulo": "Designan los árbitros para el inicio de la fase Clausura",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1gdngfe",
-      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,8 +116,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 30,
+    "notas": [
+     {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
+      "seccion": "Balcarce"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -126,29 +137,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
-    "notas": [
-     {
-      "id": "1kfxthk",
-      "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "174qhq6",
-      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "sty1jd",
-      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
