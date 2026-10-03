@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T18:16:42.244Z",
+  "generado": "2026-10-03T18:31:13.752Z",
   "notas": [
     {
       "id": "repaso20261003tarde",
@@ -332,7 +332,7 @@
       "fecha": "2026-10-03T15:25:10.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T16:31:17.843Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -965,6 +965,76 @@
       }
     },
     {
+      "id": "1vuvl5f",
+      "titulo": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
+      "copete": "El combinado africano sufre problemas logísticos y la negativa de varios jugadores a viajar. Ante esto, afronta el amistoso de esta noche en el Monumental con un plantel de emergencia.",
+      "cuerpo": "La selección de Burkina Faso enfrenta a la Argentina esta noche a las 21:00 en el estadio Monumental, tras atravesar inconvenientes logísticos y una huelga de futbolistas de su plantel principal.\n\nEl vuelo inicial de la delegación quedó cancelado el 30 de septiembre y el equipo quedó varado en Marruecos. Según indicó el medio Faso Sports, los jugadores mayores se negaron a viajar en protesta por las condiciones económicas ofrecidas por la organización para el partido.\n\nAnte la falta de futbolistas, el cuerpo técnico sumó de urgencia a integrantes del seleccionado Sub-23 tras suspender un compromiso ante Mali. Finalmente, un vuelo especial partió desde Casablanca en la noche del viernes con el plantel alternativo rumbo a Buenos Aires.",
+      "guion": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Canal 26"
+      ],
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/escandalo-antes-del-amistoso-organizado-por-la-afa-jugadores-de-burkina-faso-se-negaron-a-viajar-a-argentina/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T11:34:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T13:01:19.534Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El amistoso se juega esta noche a las 21:00 en el Monumental.",
+        "Burkina Faso afronta el partido con un plantel integrado por juveniles Sub-23.",
+        "El vuelo inicial de la delegación se había cancelado el 30 de septiembre."
+      ],
+      "seSabe": [
+        "El partido entre Argentina y Burkina Faso se disputa esta noche a las 21:00 en el Monumental.",
+        "La delegación burkinesa partió en un vuelo especial desde Casablanca en la noche del viernes.",
+        "El cuerpo técnico convocó a jugadores Sub-23 para completar el plantel."
+      ],
+      "noConfirmado": [
+        "No se especificó la cantidad exacta de futbolistas de la selección mayor que se negaron a viajar."
+      ],
+      "textoRedes": "La selección de Burkina Faso llega al país con un plantel de emergencia y jugadores Sub-23 para enfrentar esta noche a Argentina en el Monumental tras sufrir problemas logísticos y la negativa de varios futbolistas a viajar.",
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Burkina Faso",
+        "amistoso",
+        "Estadio Monumental",
+        "futbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/escandalo-antes-del-amistoso-organizado-por-la-afa-jugadores-de-burkina-faso-se-negaron-a-viajar-a-argentina/",
+          "fecha": "2026-10-03T11:34:10.000Z",
+          "oficial": false,
+          "aporte": "Detalló el conflicto económico denunciado por Faso Sports y la convocatoria de emergencia de los jugadores Sub-23."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/10/03/caos-en-burkina-faso-antes-del-amistoso-en-la-argentina-negativas-bajas-y-llamados-de-ultimo-momento/",
+          "fecha": "2026-10-03T12:50:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la cancelación del vuelo y la modificación en el traslado del plantel africano."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-seleccion-de-burkina-faso-llega-al-pais-con-suplentes-para",
+      "foto": {
+        "archivo": "fotos-notas/1vuvl5f.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "fjrow3",
       "titulo": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
       "copete": "El piloto argentino de Alpine parte el domingo desde el puesto 21 en el circuito tras recibir una penalización de 15 lugares en la grilla.",
@@ -1395,9 +1465,7 @@
       "guion": "Mariano Werner recibe millonaria multa y sanción deportiva",
       "seccion": "Automovilismo",
       "medios": [
-        "El Destape",
-        "Solotc",
-        "Campeones"
+        "El Destape"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/tc-pick-up-duras-sanciones-recibio-mariano-werner-final-balcarce-2026102205050",
       "teniaImagenLaFuente": true,
@@ -4373,8 +4441,8 @@
     "ahora": {
       "temp": 13,
       "sensacion": 12,
-      "humedad": 94,
-      "viento": 11,
+      "humedad": 89,
+      "viento": 10,
       "rumbo": "NO",
       "cielo": "Llovizna leve",
       "esDeDia": true
@@ -4383,7 +4451,7 @@
       {
         "fecha": "2026-10-03",
         "dia": "sáb",
-        "max": 15,
+        "max": 14,
         "min": 8,
         "lluvia": 100,
         "codigo": 61,
@@ -4395,7 +4463,7 @@
         "fecha": "2026-10-04",
         "dia": "dom",
         "max": 20,
-        "min": 8,
+        "min": 6,
         "lluvia": 8,
         "codigo": 51,
         "viento": 20,
@@ -4405,8 +4473,8 @@
       {
         "fecha": "2026-10-05",
         "dia": "lun",
-        "max": 20,
-        "min": 10,
+        "max": 21,
+        "min": 8,
         "lluvia": 53,
         "codigo": 80,
         "viento": 21,
@@ -4771,16 +4839,16 @@
       "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
-      "id": "fvq4zq",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "1ei2dt4",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "fvq4zq",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "4qbbyg",
@@ -4849,5 +4917,5 @@
       "motivo": "necesita ojo humano: \"herido\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 1
 }
