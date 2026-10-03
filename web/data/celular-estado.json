@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T17:38:45.074Z",
- "portada": 56,
+ "generado": "2026-10-03T18:01:22.538Z",
+ "portada": 55,
  "archivo": 849,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-03T17:38:45.102Z",
+  "generado": "2026-10-03T18:01:22.570Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -114,7 +114,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 51,
     "notas": [
