@@ -5778,8 +5778,8 @@
   "origen": "ninguna",
   "titulo": "La Cámara de Casación revisa el sobreseimiento del ministro Luis Caputo",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-03T01:32:09.201Z",
-  "intentos": 1,
+  "cuando": "2026-10-03T03:01:41.912Z",
+  "intentos": 2,
   "fuentes": 4
  },
  "1hy6wdw": {
@@ -5799,8 +5799,8 @@
   "origen": "ninguna",
   "titulo": "Lula muestra una remera con la leyenda de Malvinas en su cierre de campaña",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-03T02:01:33.018Z",
-  "intentos": 1,
+  "cuando": "2026-10-03T03:01:41.912Z",
+  "intentos": 2,
   "fuentes": 14
  },
  "1qu785s": {
@@ -5817,8 +5817,8 @@
   "origen": "ninguna",
   "titulo": "Messi llega a Disney+ en una nueva serie animada de fantasía",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-03T02:01:33.018Z",
-  "intentos": 1,
+  "cuando": "2026-10-03T03:01:41.912Z",
+  "intentos": 2,
   "fuentes": 4
  },
  "1c7unm1": {
@@ -5841,5 +5841,17 @@
   "cuando": "2026-10-03T02:27:34.193Z",
   "intentos": 1,
   "fuentes": 7
+ },
+ "j3xrez": {
+  "archivo": "fotos-notas/j3xrez.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65934.png",
+  "razon": "Es la única imagen de la lista, muestra la ruta con buena nitidez y sin marcas de agua ni menores.",
+  "cuando": "2026-10-03T03:01:41.912Z"
  }
 }

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T02:31:34.936Z",
- "portada": 59,
- "archivo": 826,
+ "generado": "2026-10-03T03:01:57.413Z",
+ "portada": 57,
+ "archivo": 827,
  "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-03T02:31:34.972Z",
+  "generado": "2026-10-03T03:01:57.452Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-02T10:04:01.422Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -23,18 +23,8 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-02T13:06:22.640Z"
-   },
-   {
-    "nombre": "participa-nota",
-    "tipo": "historia",
-    "hora": "12:00",
-    "que": "Tu nota",
-    "voz": "locutor",
-    "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-02T15:05:48.244Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -43,8 +33,18 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-02T18:07:41.509Z"
+    "momento": "antes",
+    "salio": null
+   },
+   {
+    "nombre": "utiles",
+    "tipo": "historia",
+    "hora": "17:00",
+    "que": "Los teléfonos útiles",
+    "voz": "locutor",
+    "ventana": 60,
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -53,8 +53,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-02T22:04:27.073Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -63,8 +63,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-02T23:04:35.557Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -73,8 +73,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-03T00:07:43.238Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -83,28 +83,28 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-02T13:06:22.640Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 50,
     "notas": [
      {
-      "id": "y1kgx4",
-      "titulo": "Fiorella Cacace detalla la labor de los escribanos",
-      "seccion": "Cultura y agenda"
+      "id": "h1ggzr",
+      "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+      "seccion": "Agro"
      },
      {
-      "id": "1ugi3md",
-      "titulo": "Top Serrano Balcarce clasifica seis equipos a Play Off",
-      "seccion": "Deportes"
+      "id": "n09ogo",
+      "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
+      "seccion": "Fútbol"
      },
      {
-      "id": "1j4lf17",
-      "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
-      "seccion": "Automovilismo"
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "seccion": "Fútbol"
      },
      {
-      "id": "xvt4t1",
-      "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
+      "id": "sty1jd",
+      "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
       "seccion": "Balcarce"
      }
     ]
@@ -114,29 +114,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-02T18:07:41.509Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 48,
     "notas": [
      {
-      "id": "1v6m62u",
-      "titulo": "El Hospital Fossati completa la meta de incorporar treinta televisores",
+      "id": "1hy6wdw",
+      "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
+      "seccion": "Agro"
+     },
+     {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
       "seccion": "Balcarce"
      },
      {
-      "id": "1knptpr",
-      "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1akpidg",
-      "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
+      "id": "12mca8c",
+      "titulo": "El paro docente registra un alto acatamiento",
       "seccion": "Balcarce"
      },
      {
-      "id": "18bbdzh",
-      "titulo": "Caputo promete una reforma tributaria para 2031 y proyecta crecimiento",
-      "seccion": "Economía"
+      "id": "1uwpmsg",
+      "titulo": "Kevin Gómez visita la Escuela Primaria número 8 y dialoga con los alumnos",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -145,72 +145,41 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-03T00:07:43.238Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 40,
     "notas": [
      {
-      "id": "144x64h",
-      "titulo": "Mariano Werner recibe millonaria multa y sanción deportiva",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1917p5s",
-      "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
+      "id": "swyxjn",
+      "titulo": "La Casa del Bicentenario recibe un concierto benéfico",
       "seccion": "Balcarce"
      },
      {
-      "id": "zdkvaa",
-      "titulo": "Un balcarceño le propone casamiento a su pareja con Robbie Williams en el escenario",
-      "seccion": "Cultura y agenda"
+      "id": "jzu6k",
+      "titulo": "Joven mendocino busca empleo tras prohibirle la venta callejera",
+      "seccion": "Balcarce"
      },
      {
-      "id": "1bheb6v",
-      "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-      "seccion": "Deportes"
+      "id": "1gdngfe",
+      "titulo": "Marcelo Panebianco analiza la visita del papa León XIV",
+      "seccion": "Balcarce"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "1bheb6v",
-     "titulo": "Mateo Raimondi integra la selección marplatense de hockey para el Argentino",
-     "cuando": "2026-10-02T12:04:52.139Z"
-    },
-    {
-     "id": "1knptpr",
-     "titulo": "Jugadoras locales compiten en torneo de básquet en Mar del Plata",
-     "cuando": "2026-10-02T13:35:24.696Z"
-    },
-    {
-     "id": "164o14u",
-     "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-     "cuando": "2026-10-02T15:06:32.699Z"
-    },
-    {
-     "id": "xvt4t1",
-     "titulo": "Renuevan la cartelería del Geoparque Pun Antü",
-     "cuando": "2026-10-02T16:45:22.855Z"
-    },
-    {
-     "id": "h1ggzr",
-     "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
-     "cuando": "2026-10-02T18:18:09.517Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
-    {
-     "id": "144x64h",
-     "titulo": "Mariano Werner recibe millonaria multa y sanción deportiva",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
     {
      "id": "2qj2kn",
      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
      "seccion": "Fútbol",
+     "marcada": false
+    },
+    {
+     "id": "144x64h",
+     "titulo": "Mariano Werner recibe millonaria multa y sanción deportiva",
+     "seccion": "Automovilismo",
      "marcada": false
     },
     {
@@ -226,7 +195,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-02T19:48:09.517Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,

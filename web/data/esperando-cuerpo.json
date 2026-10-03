@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03T02:31:34.936Z",
+ "generado": "2026-10-03T03:01:57.413Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -33,6 +33,53 @@
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras",
    "maximo": 3
+  },
+  {
+   "id": "zdl4xp",
+   "titulo": "Argentina será local en Zárate durante la próxima Ventana FIBA",
+   "copete": "La Selección Argentina ya tiene sede confirmada para sus dos compromisos como local por la quinta ventana de los Clasificatorios de las Américas rumbo a la Copa del Mundo FIBA 2027. El equipo nacional recibirá a Bahamas el jueves 26 de noviembre y a Canadá el domingo 29, ambos…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-01T19:36:04.000Z",
+   "fuentes": [
+    {
+     "medio": "Básquet Plus",
+     "enlace": "https://basquetplus.com/argentina-ventana-fiba-zarate-espacio-dam-bahamas-canada-clasificatorios-mundial",
+     "fecha": "2026-10-01T19:46:22.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/basquet/zarate-localia-argentina-basquet-noviembre-eliminatorias-bahamas-canada_0_RcstTHNoRV.html",
+     "fecha": "2026-10-02T14:40:35.000Z"
+    },
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/deportes/argentina-jugara-en-zarate-ante-bahamas-y-canada-por-las-eliminatorias-al-mundial-2027",
+     "fecha": "2026-10-01T20:36:58.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/argentina-jugara-ante-bahamas-y-canada-en-zarate-por-los-clasificatorios-fiba",
+     "fecha": "2026-10-02T12:28:42.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/01/109923-la-seleccion-argentina-de-basquet-jugara-las-proximas-ventanas-fiba-en-zarate",
+     "fecha": "2026-10-01T19:36:04.000Z"
+    },
+    {
+     "medio": "Pick and Roll",
+     "enlace": "https://pickandroll.com.ar/argentina-recibira-a-bahamas-y-canada-en-zarate-por-la-quinta-ventana/",
+     "fecha": "2026-10-01T21:31:07.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-2-7-31-0-por-que-la-seleccion-argentina-recibira-a-bahamas-y-canada-en-zarate",
+     "fecha": "2026-10-02T10:45:20.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 4
   },
   {
    "id": "1fs15g0",
@@ -152,6 +199,11 @@
      "fecha": "2026-10-02T17:30:38.000Z"
     },
     {
+     "medio": "Realpolitik",
+     "enlace": "https://realpolitik.com.ar/nota/74516/ricardo-soule-el-hombre-que-demostro-que-dios-tambien-es-rock",
+     "fecha": "2026-10-02T19:48:00.000Z"
+    },
+    {
      "medio": "El Marplatense",
      "enlace": "https://www.elmarplatense.com/murio-ricardo-soule-una-leyenda-del-rock-argentino-y-creador-de-la-biblia",
      "fecha": "2026-10-02T16:07:48.000Z"
@@ -225,11 +277,6 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/espectaculos/figuras-del-mundo-de-la-musica-despidieron-a-ricardo-soule-el-fundador-de-vox-dei-que-murio-a-los-76-nid02102026/",
      "fecha": "2026-10-02T19:10:33.000Z"
-    },
-    {
-     "medio": "Realpolitik",
-     "enlace": "https://realpolitik.com.ar/nota/74516/ricardo-soule-el-hombre-que-demostro-que-dios-tambien-es-rock",
-     "fecha": "2026-10-02T19:48:00.000Z"
     },
     {
      "medio": "Página/12",
@@ -379,38 +426,6 @@
    "intentos": 5,
    "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"augusto\", \"belluscio\" y el cuerpo no los explica; sin esas oraciones quedan 106 palabras",
    "maximo": 5
-  },
-  {
-   "id": "gdwukq",
-   "titulo": "Qué leyes volverían a regir si Diputados deroga el DNU 70 de Javier Milei",
-   "copete": "La oposición convocó para el 15 de octubre una sesión especial en la Cámara de Diputados con el objetivo de derogar el decreto de necesidad y urgencia (DNU) 70 /2023 , el megadecreto que Javier Milei firmó al inicio de su gestión y que desreguló amplios sectores de la economía…",
-   "seccion": "Política",
-   "fecha": "2026-10-02T14:39:39.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/politica/2026/10/02/que-leyes-volverian-a-regir-si-diputados-deroga-el-dnu-70-de-javier-milei/",
-     "fecha": "2026-10-02T14:39:39.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/politica/las-normas-que-volverian-a-regir-si-diputados-deroga-el-dnu-70-en-la-sesion-del-15-de-octubre/",
-     "fecha": "2026-10-02T16:09:43.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/economia/2026/10/02/dnu-702023-del-gobierno-que-puede-pasar-si-diputados-lo-rechaza-y-que-leyes-volverian-a-regir/",
-     "fecha": "2026-10-02T22:06:59.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/nacionales/que-leyes-volverian-a-regir-si-diputados-deroga-el-dnu-70-de-javier-milei",
-     "fecha": "2026-10-02T15:09:49.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 64 palabras",
-   "maximo": 3
   },
   {
    "id": "1u612sk",
