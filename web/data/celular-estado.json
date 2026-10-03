@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T17:01:46.628Z",
- "portada": 56,
- "archivo": 847,
+ "generado": "2026-10-03T17:31:42.595Z",
+ "portada": 55,
+ "archivo": 848,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T17:01:46.658Z",
+  "generado": "2026-10-03T17:31:42.631Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,17 +116,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 41,
     "notas": [
      {
       "id": "17lpda8",
       "titulo": "Caputo descarta la recesión y asegura que la economía crece",
       "seccion": "Economía"
-     },
-     {
-      "id": "7ml7lj",
-      "titulo": "Maximiliano Salas sufre la rotura de ligamentos y se pierde el año",
-      "seccion": "Fútbol"
      },
      {
       "id": "j3xrez",
@@ -168,18 +163,16 @@
      "id": "16ml7pn",
      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
      "cuando": "2026-10-03T13:34:29.368Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1l5htn5",
      "titulo": "Vecinas renuevan espacios públicos y plazas",
-     "seccion": "Balcarce",
-     "marcada": false
+     "cuando": "2026-10-03T17:03:20.427Z"
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-03T15:04:29.368Z",
+   "cola": [],
+   "cupo": 3,
+   "proximoDesde": "2026-10-03T18:33:20.427Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
