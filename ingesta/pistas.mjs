@@ -198,3 +198,81 @@ export async function investigarPista(texto, {
     matices: await matices(afirmacion, cobertura.medios, { clave, fetchFn }),
   };
 }
+
+// ------------------------------------------------------------------ PISTAS ABIERTAS (2/10/2026)
+//
+// Hernán: "que yo te tire datos o links, que quede abierta la investigación y ver si aparece en algún medio, tengamos o no la
+// fuente". Una pista se guarda (web/data/pistas.json) y cada tres horas se vuelve a mirar sola (.github/workflows/pistas.yml,
+// panel/revisar-pistas.mjs): si un medio la empieza a cubrir, o si ya la tenemos nosotros, avisa en el panel y por WhatsApp.
+
+const RANGO = { 'sin-cobertura': 0, 'un-medio': 1, cubierta: 2, 'muy-cubierta': 3 };
+export const rangoDeNivel = (n) => RANGO[n] ?? 0;
+
+/** ¿Es una dirección pública que se puede leer? https o http, con nombre de sitio, no una dirección de adentro. */
+function direccionPublica(u) {
+  try {
+    const x = new URL(u);
+    const h = x.hostname.toLowerCase();
+    return /^https?:$/.test(x.protocol) && !x.username && !x.password && h.includes('.') && !/^[\d.]+$/.test(h) && !h.includes(':') && h !== 'localhost' && !/\.(local|internal)$/.test(h);
+  } catch { return false; }
+}
+
+const REDES_QUE_NO_SE_LEEN = /^(?:x\.com|twitter\.com|t\.co|facebook\.com|m\.facebook\.com|instagram\.com|tiktok\.com|fb\.watch)$/;
+
+const metaDe = (html, nombres) => {
+  for (const m of String(html).match(/<meta\b[^>]*>/gi) ?? []) {
+    const clave = (m.match(/\b(?:property|name)\s*=\s*["']([^"']+)["']/i) ?? [])[1]?.toLowerCase();
+    if (nombres.includes(clave)) return decodificar((m.match(/\bcontent\s*=\s*["']([^"']*)["']/i) ?? [])[1]);
+  }
+  return '';
+};
+
+/**
+ * Si la pista trae enlaces, suma el TÍTULO y la bajada de cada página (no su texto: sólo lo que dice la ficha pública) a lo que se busca.
+ * Los enlaces de redes (un tuit, un posteo) no se pueden leer: se avisa, para que se pegue el texto. Devuelve { texto, noLeidos }.
+ */
+export async function enriquecerConEnlaces(texto, { fetchFn = fetch, maximo = 2 } = {}) {
+  const urls = [...new Set(String(texto ?? '').match(/https?:\/\/[^\s)>\]"']+/g) ?? [])].filter(direccionPublica).slice(0, maximo);
+  const lineas = [];
+  const noLeidos = [];
+  for (const u of urls) {
+    const host = new URL(u).hostname.replace(/^www\./, '').toLowerCase();
+    if (REDES_QUE_NO_SE_LEEN.test(host)) { noLeidos.push(host); continue; }
+    try {
+      const res = await fetchFn(u, { signal: AbortSignal.timeout(15_000), headers: { 'user-agent': 'Mozilla/5.0 (compatible; RadarBalcarceBot/1.0)' } });
+      if (!res.ok) { noLeidos.push(host); continue; }
+      const html = String(await res.text()).slice(0, 300_000);
+      const titulo = metaDe(html, ['og:title', 'twitter:title']) || decodificar((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) ?? [])[1]);
+      const bajada = metaDe(html, ['og:description', 'description', 'twitter:description']);
+      if (titulo) lineas.push(`Enlace: ${titulo.slice(0, 200)}${bajada ? ` — ${bajada.slice(0, 300)}` : ''}`);
+      else noLeidos.push(host);
+    } catch { noLeidos.push(host); }
+  }
+  return { texto: [String(texto ?? '').trim(), ...lineas].join('\n').slice(0, PISTA.maximoDeTexto * 2), noLeidos };
+}
+
+/**
+ * Vuelve a mirar una pista ya guardada: las mismas búsquedas, qué cubre hoy y qué tenemos nosotros. Sólo gasta IA (los matices) si la
+ * cobertura subió de nivel. `pista`: { consultas, afirmacion, nivel, total, mediosVistos, teniamos }.
+ * Devuelve { informe, novedad, subio, nuevosMedios, motivo }.
+ */
+export async function revisarPista(pista, {
+  clave = null, fetchFn = fetch, notas = [], ahora = new Date(), buscar = buscarEnGoogleNoticias,
+} = {}) {
+  const consultas = pista.consultas ?? [];
+  const resultados = [];
+  for (const c of consultas) resultados.push(await buscar(c, { fetchFn }));
+  const cobertura = resumirCobertura([soloLosQueHablanDeLoBuscado(resultados, consultas)]);
+  const nuestras = buscarEnNuestras([pista.afirmacion, ...consultas], notas);
+  const subio = rangoDeNivel(cobertura.nivel) > rangoDeNivel(pista.nivel);
+  const vistos = new Set(pista.mediosVistos ?? []);
+  const nuevosMedios = cobertura.medios.map((m) => m.medio).filter((m) => !vistos.has(m));
+  const nosotrosAhora = nuestras.length > 0 && !pista.teniamos;
+  const informe = {
+    ok: true, pedido: pista.texto ?? '', cuando: ahora.toISOString(), relevancia: PISTA.relevancia, afirmacion: pista.afirmacion, consultas, ...cobertura, nuestras,
+    matices: subio ? await matices(pista.afirmacion, cobertura.medios, { clave, fetchFn }) : null,
+  };
+  const motivo = nosotrosAhora ? 'ya la publicamos nosotros'
+    : subio ? `ahora la cubren ${cobertura.total} ${cobertura.total === 1 ? 'medio' : 'medios'}` : '';
+  return { informe, novedad: subio || nosotrosAhora, subio, nuevosMedios, motivo };
+}

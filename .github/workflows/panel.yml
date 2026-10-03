@@ -98,7 +98,7 @@ jobs:
         run: |
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
-          for f in web/data/celular-borradores.json web/data/fotos-manuales.json web/public/fotos-notas; do [ -e "$f" ] && git add -- "$f"; done
+          for f in web/data/celular-borradores.json web/data/pistas.json web/data/fotos-manuales.json web/public/fotos-notas; do [ -e "$f" ] && git add -- "$f"; done
           if git diff --cached --quiet; then
             echo "Nada nuevo que guardar."
             exit 0

@@ -33,6 +33,7 @@ export const ARCHIVOS = {
   banco: 'web/data/banco-fotos.json',
   piezas: 'web/data/efemerides-piezas.json',
   cambiosIA: 'web/data/correcciones-auditoria.json',
+  pistas: 'web/data/pistas.json',
 };
 
 export class ErrorDeGitHub extends Error {
@@ -72,6 +73,8 @@ export function formatear(ruta, json) {
   if (ruta === ARCHIVOS.correcciones || ruta === ARCHIVOS.retiradas) return comoRenglones(json, ['notas']);
   if (ruta === ARCHIVOS.decisiones) return comoRenglones(json, ['notas', 'redes']);
   // Un día o un feriado por renglón: el historial dice qué se decidió cuándo.
+  // Una pista por renglón (2/10): el historial de git dice qué cambió cuándo.
+  if (ruta === ARCHIVOS.pistas) return comoRenglones({ version: 1, ...json }, ['pistas']).replace('{"pistas"', '{"version":1,"pistas"');
   if (ruta === ARCHIVOS.elegidas) return comoRenglones(json, ['dias', 'feriados', 'piezas']);
   return `${JSON.stringify(json, null, 1)}\n`;
 }
@@ -212,6 +215,20 @@ export function conEleccionDeDia(json, dia, eleccion) {
   const j = { dias: {}, feriados: {}, piezas: {}, ...json };
   j.dias = { ...j.dias, [dia]: eleccion };
   return j;
+}
+
+/** Una pista ya mirada deja de ser una novedad (la apaga el celular al abrirla). */
+export function conPistaSinNovedad(json, id) {
+  const p = json?.pistas?.[id];
+  return p ? { ...json, pistas: { ...json.pistas, [id]: { ...p, novedad: false } } } : json;
+}
+
+/** Archivar o reabrir una pista a mano ('abierta' la vuelve a seguir 14 días desde hoy). */
+export function conPistaEstado(json, id, estado) {
+  const p = json?.pistas?.[id];
+  if (!p || !['abierta', 'archivada'].includes(estado)) return json;
+  const ahora = hoyISO();
+  return { ...json, pistas: { ...json.pistas, [id]: { ...p, estado, ...(estado === 'abierta' ? { creada: ahora } : { archivada: ahora }) } } };
 }
 
 /** La decisión sobre un día ya armado de "Un día como hoy" (2/10): aprobada, sacada, o con cambios pedidos. `huella` dice sobre qué armado vale. */

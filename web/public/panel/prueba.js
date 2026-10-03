@@ -95,6 +95,10 @@ export function clienteDePrueba() {
       ],
     },
     'web/data/efemerides-elegidas.json': { dias: {}, feriados: {}, piezas: {} },
+    'web/data/pistas.json': { version: 1, pistas: {
+      pistaA: { creada: hace(300), texto: 'Cierra la fábrica de lácteos de Balcarce', afirmacion: 'Cierra la fábrica de lácteos de Balcarce', consultas: ['cierra fábrica lácteos Balcarce'], estado: 'abierta', ultimaRevision: hace(60), nivel: 'cubierta', total: 3, mediosVistos: ['Medio A', 'Medio B', 'Medio C'], teniamos: false, novedad: true, historial: [{ cuando: hace(300), total: 0, nivel: 'sin-cobertura' }, { cuando: hace(60), total: 3, nivel: 'cubierta' }] },
+      pistaB: { creada: hace(2000), texto: 'Dicen que habrá un recital grande en octubre', afirmacion: 'Habrá un recital grande en octubre', consultas: ['recital grande Balcarce octubre'], estado: 'abierta', ultimaRevision: hace(120), nivel: 'sin-cobertura', total: 0, mediosVistos: [], teniamos: false, novedad: false, historial: [] },
+    } },
     'web/data/efemerides-piezas.json': {
       generado: hoy, dias: {
         [diaMas(1)]: { voz: 'locutora', principal: { id: 'c1', anio: 1901, titulo: 'Nace el poeta Carlos Mastronardi', cuerpo: 'Poeta y ensayista argentino.', verificar: [] }, ademas: [{ id: 'c2', anio: 1952, texto: 'Se patenta el código de barras' }], guion: 'Buen día, Balcarce. Un día como hoy, en 1901, nació el poeta Carlos Mastronardi. Y además, un día como hoy: en 1952 se patentó el código de barras. Un día como hoy, en Radar Balcarce.' },

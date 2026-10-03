@@ -1,0 +1,86 @@
+# Pistas abiertas (2/10/2026, Hernán: "que quede abierta la investigación y ver si aparece en algún medio"): vuelve a mirar las pistas
+# que se pasaron por el panel del celular, cada tres horas y 14 días, y avisa (panel y WhatsApp) si un medio empezó a cubrirlas o si ya
+# las publicamos. También lo dispara el botón "Volver a mirar" de la pestaña Pistas (con el id de esa pista).
+#
+# Lee y escribe web/data/pistas.json; el informe de cada pista viaja CIFRADO para los celulares registrados (el repositorio es público).
+# Qué hace y qué guarda: panel/revisar-pistas.mjs y panel/pistas-libro.mjs. Usa Google Noticias (sólo cuenta quién la cubrió) y, si la
+# cobertura sube de nivel, la Gemini de redacción para los matices de los títulos.
+
+name: Pistas
+run-name: Pistas · ${{ inputs.id }} · ${{ inputs.marca }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: 'Una sola pista (vacío: todas las abiertas)'
+        required: false
+        default: ''
+      marca:
+        description: 'Una marca para que el celular encuentre esta corrida'
+        required: false
+        default: ''
+      simular:
+        description: 'Leer y mostrar, sin guardar ni avisar'
+        type: boolean
+        default: false
+  schedule:
+    - cron: '23 */3 * * *'
+
+permissions:
+  contents: write
+
+# El mismo grupo que "Panel del celular": los dos escriben web/data/pistas.json.
+concurrency:
+  group: panel-celular
+  cancel-in-progress: false
+
+jobs:
+  pistas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Volver a mirar las pistas
+        # Lo que manda el celular va por variables de entorno y nunca pegado en el comando.
+        run: node panel/revisar-pistas.mjs ${{ github.event.inputs.simular == 'true' && '--simular' || '' }} "--id=$PISTA"
+        env:
+          PISTA: ${{ inputs.id }}
+          GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+          GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+
+      - name: Guardar lo que cambió
+        if: always() && github.event.inputs.simular != 'true'
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          [ -e web/data/pistas.json ] && git add web/data/pistas.json
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+          else
+            git commit -m "Pistas · $(date '+%d/%m %H:%M')"
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo guardar las pistas después de tres intentos"; exit 1; }
+          fi

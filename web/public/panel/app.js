@@ -10,7 +10,7 @@
 
 import {
   crearCliente, ARCHIVOS, SECCIONES, ErrorDeGitHub, marcaNueva, corridaConMarca,
-  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza,
+  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza, conPistaSinNovedad, conPistaEstado,
 } from './github.js';
 import {
   ESTILOS, COLOR_DE_ESTILO, ROLES, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
@@ -23,7 +23,7 @@ import {
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
-import { htmlDeFormulario, htmlDeInforme } from './pistas.js';
+import { htmlDeFormulario, htmlDeLista, htmlDeUnaPista } from './pistas.js';
 import {
   notasSinFoto, htmlDeFotos, htmlDeUnaNotaSinFoto, urlDeFotoValida, creditoDeFoto, motivoDeFoto, MOTIVOS_DE_FOTO,
 } from './fotos.js';
@@ -91,7 +91,7 @@ const E = {
   // La pestaña Fechas (se carga la primera vez que se abre).
   fechas: null, subfechas: 'piezas', pieza: null, dia: null, borrador: null, filtroEstilo: null, feriado: null,
   // Lo que se está haciendo en la nube sin trabar el panel (la IA escribiendo, una foto sumándose): { [id]: { clase, estado, … } }.
-  trabajos: {}, banco: null, publicadasTodas: false, scrollLista: null, restaurar: null,
+  trabajos: {}, pistasLibro: null, pistaAbierta: null, banco: null, publicadasTodas: false, scrollLista: null, restaurar: null,
 };
 
 function aviso(texto, { conActualizar = false, ms = 7000, ver = null } = {}) {
@@ -268,6 +268,7 @@ async function cargar({ archivo = false } = {}) {
   E.papelera = abierto.papelera ?? [];
   if (archivo) E.archivo = (await c.leer(ARCHIVOS.archivo)).json.notas ?? [];
   await cargarRevision();
+  await cargarPistas();
 }
 
 /** Los hallazgos de la auditoría con IA: un sobre cifrado por nota (ingesta/auditoria-ia.mjs). Si falla, la pestaña sigue sin ellos. */
@@ -328,7 +329,7 @@ function pestanas() {
   const rev = E.revision ? contarRevision(E.revision.items) : null;
   const items = [
     ['esperan', 'Esperan', esperan], ['publicadas', 'Publicadas', ultimas], ['fotos', 'Fotos', sinFoto === null ? '·' : (sinFoto || '✓')],
-    ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : '⋯'],
+    ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : (pistasConNovedad() ? '●' : '⋯')],
   ];
   const actual = EN_MAS.has(E.pestana) ? 'mas' : E.pestana;
   // El globito: rojo si hay algo que atender, gris si es un total, verde si está todo bien; sin globito si no hay nada que mostrar.
@@ -645,43 +646,86 @@ async function reintentarParte(pieza, red, parte) {
 
 // ------------------------------------------------------------------ las pistas
 
-function vistaPistas() {
-  pestanas();
-  $('#recargar').hidden = true;
-  const apps = { esc, haceCuanto, chip };
-  app.innerHTML = htmlDeFormulario({ texto: E.pista?.texto ?? '' }, apps) + (E.pista?.informe ? htmlDeInforme(E.pista.informe, apps) : '') + queEs('pistas');
+/** Trae las pistas guardadas (web/data/pistas.json, escribe sólo la nube). Si falla, la pestaña sigue sin ellas. */
+async function cargarPistas() {
+  try { E.pistasLibro = await leerSiHay(E.cliente, ARCHIVOS.pistas, { pistas: {} }); } catch { E.pistasLibro = E.pistasLibro ?? { pistas: {} }; }
 }
 
-/** Manda la pista a la nube (workflow "Panel del celular") y muestra el informe cuando vuelve, cifrado para este celular. */
+const pistasConNovedad = () => Object.values(E.pistasLibro?.pistas ?? {}).filter((p) => p.estado === 'abierta' && p.novedad).length;
+
+function vistaPistas() {
+  pestanas();
+  $('#recargar').hidden = false;
+  const apps = { esc, haceCuanto, chip };
+  if (!E.pistasLibro) { app.innerHTML = '<div class="girando"></div>'; cargarPistas().then(() => { if (E.pestana === 'pistas') vistaPistas(); }); return; }
+  if (E.pistaAbierta) { vistaUnaPista(); return; }
+  app.innerHTML = htmlDeFormulario({ texto: E.pista?.texto ?? '' }, apps) + htmlDeLista(E.pistasLibro, apps) + queEs('pistas');
+}
+
+/** Una pista guardada: su informe se abre acá con la llave de este celular; si tenía novedad, se apaga. */
+async function vistaUnaPista() {
+  const id = E.pistaAbierta;
+  const pista = E.pistasLibro?.pistas?.[id];
+  if (!pista) { E.pistaAbierta = null; vistaPistas(); return; }
+  const informe = pista.sobre && E.llaves ? await abrir(pista.sobre, E.llaves) : null;
+  app.innerHTML = htmlDeUnaPista({ id, pista, informe }, { esc, haceCuanto, chip });
+  window.scrollTo(0, 0);
+  if (pista.novedad) {
+    pista.novedad = false;
+    E.cliente.guardar(ARCHIVOS.pistas, (j) => conPistaSinNovedad(j, id), `Panel del celular: ${E.nombre} mira una pista`).catch(() => { pista.novedad = true; });
+  }
+}
+
+/** Espera una corrida del workflow con esa marca; devuelve la corrida terminada o lanza si tardó o falló. */
+async function esperarCorrida(workflow, marca, { intentos = 72, quePaso = 'La corrida de GitHub' } = {}) {
+  let corrida = null;
+  for (let i = 0; i < intentos; i += 1) {
+    await dormir(5000);
+    corrida = corridaConMarca(await E.cliente.corridas(workflow), marca);
+    if (corrida?.status === 'completed') break;
+  }
+  if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Probá de nuevo en un rato.');
+  if (corrida.conclusion !== 'success') throw new Error(`${quePaso} falló. Mirá "${workflow}" en GitHub → Actions.`);
+  return corrida;
+}
+
+/** Manda la pista a la nube (workflow "Panel del celular"): se investiga, queda guardada y abierta, y se abre su informe. */
 async function investigarPista() {
   const texto = ($('#texto-pista')?.value ?? '').trim();
   if (texto.length < 20) { aviso('Pegá el texto de la pista (al menos una frase).'); return; }
-  E.pista = { texto, informe: null };
+  E.pista = { texto };
   $('#pestanas').hidden = true;
-  app.innerHTML = '<div class="girando"></div><p class="vacio">Investigando la pista…<br>Tarda un minuto: GitHub busca qué medios lo cubrieron y compara los títulos.</p>';
+  app.innerHTML = '<div class="girando"></div><p class="vacio">Investigando la pista…<br>Tarda un minuto: GitHub busca qué medios lo cubrieron, compara los títulos y la deja abierta para seguirla.</p>';
   const marca = marcaNueva();
   const id = `pista${marca}`;
-  const desde = Date.now();
   try {
     await E.cliente.disparar('panel.yml', { accion: 'pista', id, pedido: texto, marca });
-    let corrida = null;
-    for (let i = 0; i < 72; i += 1) {
-      await dormir(5000);
-      corrida = corridaConMarca(await E.cliente.corridas('panel.yml'), marca);
-      if (corrida?.status === 'completed') break;
-    }
-    if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Probá de nuevo en un rato.');
-    if (corrida.conclusion !== 'success') throw new Error('La corrida de GitHub falló. Mirá "Panel del celular" en GitHub → Actions.');
-    const { json } = await E.cliente.leer(ARCHIVOS.borradores);
-    const sobre = json.borradores?.[id];
-    const informe = sobre && Date.parse(sobre.cuando) >= desde - 120000 ? await abrir(sobre, E.llaves) : null;
-    if (!informe) throw new Error('No pude abrir el informe en este celular. Si recién lo registraste, probá de nuevo.');
-    E.pista = { texto, informe };
+    await esperarCorrida('panel.yml', marca);
+    await cargarPistas();
+    if (E.pistasLibro.pistas?.[id]) { E.pista = null; E.pistaAbierta = id; }
+    else aviso('La pista no se pudo investigar (puede tocar un tema que no se investiga desde acá). Probá con más detalle.', { ms: 9000 });
   } catch (e) {
     aviso(explicarError(e), { ms: 9000 });
   }
   vistaPistas();
   window.scrollTo(0, 0);
+}
+
+/** "Volver a mirar ahora": la nube repite las búsquedas de esa pista (workflow "Pistas") y se recarga el libro. */
+async function mirarPista(id) {
+  $('#pestanas').hidden = true;
+  app.innerHTML = '<div class="girando"></div><p class="vacio">Volviendo a mirar…<br>La nube repite las búsquedas: tarda un minuto.</p>';
+  const marca = marcaNueva();
+  try {
+    await E.cliente.disparar('pistas.yml', { id, marca });
+    await esperarCorrida('pistas.yml', marca, { quePaso: 'La revisión' });
+    await cargarPistas();
+    aviso('Listo: se volvió a mirar.');
+  } catch (e) {
+    aviso(explicarError(e), { ms: 9000 });
+  }
+  E.pistaAbierta = id;
+  vistaPistas();
 }
 
 // ------------------------------------------------------------------ la revisión
@@ -948,10 +992,11 @@ function vistaMas() {
   const a = leerAjustes();
   const reglas = reglasFb();
   const rev = E.revision ? contarRevision(E.revision.items) : null;
-  const avisoDe = { revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
+  const nPistas = pistasConNovedad();
+  const avisoDe = { pistas: nPistas ? `● ${nPistas} con novedad` : '', revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
   app.innerHTML = `
     <h1>Más</h1>
-    ${MENU_MAS.map(([id, nombre, icono, que]) => `<button type="button" class="tarjeta" data-pestana="${id}"><div class="menu-item"><span class="menu-icono">${icono}</span><div><div class="titulo">${esc(nombre)}${avisoDe[id] ? ` <span class="marca${rev?.graves && id === 'revision' ? ' mal' : ''}">${esc(avisoDe[id])}</span>` : ''}</div><div class="meta">${esc(que)}</div></div><span class="flecha">›</span></div></button>`).join('')}
+    ${MENU_MAS.map(([id, nombre, icono, que]) => `<button type="button" class="tarjeta" data-pestana="${id}"><div class="menu-item"><span class="menu-icono">${icono}</span><div><div class="titulo">${esc(nombre)}${avisoDe[id] ? ` <span class="marca${(rev?.graves && id === 'revision') || (id === 'pistas' && nPistas) ? ' mal' : ''}">${esc(avisoDe[id])}</span>` : ''}</div><div class="meta">${esc(que)}</div></div><span class="flecha">›</span></div></button>`).join('')}
     <div class="botones">
       <button type="button" class="boton ancho" data-accion="actualizar-web">Actualizar la web ahora</button>
       <a class="boton ancho enlace-boton" href="https://radarbalcarce.com" target="_blank" rel="noopener">Abrir la web</a>
@@ -1344,6 +1389,19 @@ document.addEventListener('click', async (ev) => {
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
   if (accion === 'cerrar-aviso') $('#aviso').hidden = true;
   else if (accion === 'investigar-pista') investigarPista();
+  else if (accion === 'abrir-pista') { E.pistaAbierta = id; vistaPistas(); }
+  else if (accion === 'volver-pistas') { E.pistaAbierta = null; vistaPistas(); window.scrollTo(0, 0); }
+  else if (accion === 'mirar-pista') mirarPista(id);
+  else if (accion === 'archivar-pista' || accion === 'reabrir-pista') {
+    const nuevo = accion === 'archivar-pista' ? 'archivada' : 'abierta';
+    try {
+      E.pistasLibro = await E.cliente.guardar(ARCHIVOS.pistas, (j) => conPistaEstado(j, id, nuevo), `Panel del celular: ${E.nombre} ${nuevo === 'archivada' ? 'archiva' : 'reabre'} una pista`);
+      aviso(nuevo === 'archivada' ? 'Archivada: ya no se vuelve a mirar.' : 'Reabierta: se vuelve a mirar 14 días más.');
+    } catch (e) { aviso(explicarError(e), { ms: 9000 }); }
+    vistaPistas();
+  } else if (accion === 'nota-de-pista') {
+    aviso('Todavía no: hacer la nota con el texto real de las fuentes necesita una clave de búsqueda (Tavily) que falta cargar en GitHub.', { ms: 12000 });
+  }
   else if (accion === 'rango-numeros') { E.rangoNumeros = Number(el.dataset.rango); vistaNumeros(); }
   else if (accion === 'sub-fechas') { E.subfechas = el.dataset.sub; vistaFechas(); }
   else if (accion === 'abrir-pieza') { E.pieza = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }

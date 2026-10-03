@@ -21,12 +21,15 @@ import { leerJson } from '../ingesta/json.mjs';
 import { reescribirUna, notaDesdeLoPublicado } from './reescribir-una.mjs';
 import { cerrar, leerLlaves } from './cifrado.mjs';
 import { PEDIDO_MAXIMO } from '../reels/reescritura.mjs';
-import { investigarPista, PISTA } from '../ingesta/pistas.mjs';
+import { investigarPista, enriquecerConEnlaces, PISTA } from '../ingesta/pistas.mjs';
+import { conPista, comoRenglones as pistasComoRenglones } from './pistas-libro.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const DATOS = path.join(RAIZ, 'web', 'data');
 export const ARCHIVO_BORRADORES = path.join(DATOS, 'celular-borradores.json');
 export const ARCHIVO_LLAVES = path.join(DATOS, 'celular-llaves.json');
+// Las pistas que quedan abiertas (2/10): se vuelven a mirar solas (panel/revisar-pistas.mjs).
+export const ARCHIVO_PISTAS = path.join(DATOS, 'pistas.json');
 // La deja "Actualizar la web" (web/scripts/generar-datos.mjs) en la caché de Actions.
 export const NOTAS_EN_CACHE = path.join(RAIZ, '.cache', 'celular-notas.json');
 
@@ -83,9 +86,15 @@ async function main() {
       ...(leerJson(path.join(DATOS, 'portada.json'), null)?.notas ?? []),
       ...(leerJson(path.join(DATOS, 'archivo.json'), null)?.notas ?? []),
     ];
-    const informe = await investigarPista(pedido, { notas });
-    const guardado = conBorrador(leerJson(ARCHIVO_BORRADORES, null), id, cerrar({ id, tipo: 'pista', ...informe }, llaves));
+    // Si trae enlaces, se suma el título y la bajada de cada página (los de redes no se pueden leer: se avisa en el informe).
+    const { texto: conEnlaces, noLeidos } = await enriquecerConEnlaces(pedido);
+    const informe = await investigarPista(conEnlaces, { notas });
+    if (informe.ok && noLeidos.length) informe.noLeidos = noLeidos;
+    const sobre = cerrar({ id, tipo: 'pista', ...informe }, llaves);
+    const guardado = conBorrador(leerJson(ARCHIVO_BORRADORES, null), id, sobre);
     fs.writeFileSync(ARCHIVO_BORRADORES, `${JSON.stringify(guardado, null, 1)}\n`, 'utf8');
+    // Y queda abierta: se vuelve a mirar sola cada tres horas, 14 días (sólo si se pudo investigar).
+    if (informe.ok) fs.writeFileSync(ARCHIVO_PISTAS, pistasComoRenglones(conPista(leerJson(ARCHIVO_PISTAS, { pistas: {} }), id, { texto: conEnlaces, informe, sobre })), 'utf8');
     // Al registro, nada de la pista: sólo si se pudo investigar.
     console.log(informe.ok ? `Informe de la pista listo (${id}).` : `La pista ${id} no se investigó (el motivo va cifrado al celular).`);
     return;
