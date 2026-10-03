@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T14:01:49.677Z",
+  "generado": "2026-10-03T14:31:37.187Z",
   "notas": [
     {
       "id": "1a6c23d",
@@ -287,11 +287,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44983-fuera-de-servicio-los-telefonos-de-la-policia-comunal-y-del-cpr-en-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-03T12:31:09.453Z",
       "sinFecha": true,
       "visto": "2026-10-03T12:31:09.453Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -414,57 +414,102 @@
       }
     },
     {
-      "id": "1kfxthk",
-      "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
-      "copete": "El equipo porteño se impuso en la Bombonera con goles de Di Lollo y Flores. Con este resultado, suma dieciséis partidos sin derrotas y se mantiene en puestos de clasificación.",
-      "cuerpo": "Boca Juniors superó por tres a cero a Unión de Santa Fe en condición de local por la undécima fecha del Torneo Clausura. El marcador se abrió a los veintidós minutos del primer tiempo mediante un tanto de Lautaro Di Lollo, tras un envío detenido de Leandro Paredes.\n\nEn su próxima presentación, el equipo xeneize visitará a Instituto de Córdoba el próximo viernes a partir de las diecinueve y treinta.",
-      "guion": "Boca derrota tres a cero a Unión y estira su invicto",
+      "id": "prgocb",
+      "titulo": "Boca golea a Unión y extiende su invicto en el torneo",
+      "copete": "El conjunto dirigido por Rodolfo Arruabarrena se impuso por 3-0 en La Bombonera con goles de Lautaro Di Lollo y un doblete de Leonel Flores. El técnico pidió cautela y confirmó una lesión muscular de Alan Velasco.",
+      "cuerpo": "Boca superó por 3-0 a Unión de Santa Fe en La Bombonera por la undécima fecha del Torneo Clausura 2026 y estiró su racha invicta a 16 partidos. El marcador se abrió con un tanto de Lautaro Di Lollo y el delantero Leonel Flores amplió la ventaja con dos anotaciones.\n\nTras el encuentro, el entrenador Rodolfo Arruabarrena analizó el rendimiento del plantel y pidió mesura de cara a lo que viene. Además, el director técnico confirmó que Alan Velasco sufrió un posible desgarro tras retirarse a los 15 minutos del complemento y se refirió a la recuperación de Tomás Belmonte, quien fue intervenido quirúrgicamente el viernes por una lesión meniscal.",
+      "guion": "Boca golea a union y extiende su invicto en el torneo",
       "seccion": "Fútbol",
       "medios": [
-        "Diario La Vanguardia"
+        "La Nación",
+        "Infobae",
+        "Minuto Uno",
+        "Radio Mitre",
+        "Bolavip Argentina"
       ],
-      "enlace": "https://www.diariolavanguardia.com/deportes/14286-goleada-3-0-de-boca-ante-union-estirando-su-invicto-a-16-partidos/",
+      "enlace": "https://www.lanacion.com.ar/deportes/futbol/rodolfo-arruabarrena-tras-boca-vs-union-el-cuidado-a-leonel-flores-y-un-posible-desgarro-de-alan-nid03102026/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T11:31:14.619Z",
-      "sinFecha": true,
-      "visto": "2026-10-03T11:31:14.619Z",
-      "relevancia": 59,
-      "local": true,
+      "fecha": "2026-10-03T03:56:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T14:31:20.698Z",
+      "relevancia": 81,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Boca le ganó 3-0 a Unión de Santa Fe en la Bombonera.",
-        "Los goles fueron convertidos por Lautaro Di Lollo y Leonel Flores.",
-        "El equipo acumula dieciséis partidos sin conocer la derrota.",
-        "En la siguiente fecha visitará a Instituto de Córdoba."
+        "Boca venció 3-0 a Unión en La Bombonera.",
+        "Lautaro Di Lollo y Leonel Flores anotaron los goles.",
+        "Alan Velasco sufrió un posible desgarro muscular.",
+        "Tomás Belmonte fue operado con éxito de la rodilla."
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "El tiempo exacto de recuperación que demandará la lesión muscular de Alan Velasco."
       ],
-      "textoRedes": "Boca Juniors le ganó 3-0 a Unión de Santa Fe en la Bombonera con goles de Lautaro Di Lollo y Leonel Flores. Con este resultado, el equipo xeneize estiró su invicto a 16 partidos en el Torneo Clausura.",
+      "textoRedes": "Boca goleó 3-0 a Unión en La Bombonera por la fecha 11 del Torneo Clausura con goles de Lautaro Di Lollo y Leonel Flores. El entrenador Rodolfo Arruabarrena pidió cautela y confirmó un posible desgarro de Alan Velasco.",
       "etiquetas": [
         "Boca Juniors",
-        "Unión de Santa Fe",
+        "Unión",
         "Torneo Clausura",
-        "Fútbol"
+        "Rodolfo Arruabarrena",
+        "Leonel Flores"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/deportes/14286-goleada-3-0-de-boca-ante-union-estirando-su-invicto-a-16-partidos/",
-          "fecha": null,
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/rodolfo-arruabarrena-tras-boca-vs-union-el-cuidado-a-leonel-flores-y-un-posible-desgarro-de-alan-nid03102026/",
+          "fecha": "2026-10-03T03:56:00.000Z",
           "oficial": false,
-          "aporte": "Informó todos los detalles del triunfo de Boca ante Unión y el próximo partido frente a Instituto."
+          "aporte": "Detalló el análisis del entrenador, el doblete de Leonel Flores, la lesión de Alan Velasco y la situación de Tomás Belmonte."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/03/8-frases-del-vasco-arruabarrena-tras-la-goleada-de-boca-de-los-elogios-a-leonel-flores-a-la-figura-que-se-lesiono-ante-union/",
+          "fecha": "2026-10-03T04:48:40.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el resultado de 3-0 y los tres puntos para la tabla de posiciones del torneo."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/boca-rodolfo-arruabarrena-revelo-que-alan-velasco-se-lesiono-n6329673",
+          "fecha": "2026-10-03T12:40:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la salida del mediocampista durante el segundo tiempo y el diagnóstico preliminar."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/arruabarrena-confirmo-que-alan-velasco-se-lesiono-tras-la-goleada-ante-union-que-le-paso/",
+          "fecha": "2026-10-03T13:14:39.000Z",
+          "oficial": false,
+          "aporte": "Precisó que Lautaro Di Lollo abrió el marcador y que Leonel Flores convirtió los otros dos tantos."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/boca/arruabarrena-revelo-que-se-lesiono-alan-velasco-en-la-goleada-ante-union-un-pequeno-desgarro",
+          "fecha": "2026-10-03T10:49:53.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el encuentro se disputó el viernes por la noche en La Bombonera."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1b6nw50",
+          "titulo": "Boca recibe a Unión con la presencia de Leo Flores en la lista",
+          "fecha": "2026-09-15T03:00:00.000Z",
+          "ruta": "/nota/boca-recibe-a-union-con-la-presencia-de-leo-flores-en-la-lista-1b6nw50"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "boca-derrota-tres-a-cero-a-union-y-estira-su-invicto"
+      "slug": "boca-golea-a-union-y-extiende-su-invicto-en-el-torneo",
+      "foto": {
+        "archivo": "fotos-notas/prgocb.jpg",
+        "credito": "Foto: Infobae"
+      }
     },
     {
       "id": "j3xrez",
@@ -477,11 +522,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44980-la-nueva-concesion-de-la-ruta-226-comenzo-con-la-pintura-de-las-lineas-de-demarcacion/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-03T03:01:28.393Z",
       "sinFecha": true,
       "visto": "2026-10-03T03:01:28.393Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -699,9 +744,7 @@
       "guion": "Mariano Werner recibe millonaria multa y sanción deportiva",
       "seccion": "Automovilismo",
       "medios": [
-        "El Destape",
-        "Solotc",
-        "Campeones"
+        "El Destape"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/tc-pick-up-duras-sanciones-recibio-mariano-werner-final-balcarce-2026102205050",
       "teniaImagenLaFuente": true,
@@ -845,6 +888,7 @@
       "seccion": "Política",
       "medios": [
         "Agencia DIB",
+        "Minuto Uno",
         "Infobae",
         "Clarín",
         "La Nación",
@@ -854,7 +898,6 @@
         "A24",
         "iProfesional",
         "Ámbito",
-        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Canal 26",
@@ -952,11 +995,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T20:21:19.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-02T21:01:16.545Z",
+      "sinFecha": true,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 71,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1010,74 +1053,6 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1c7unm1",
-      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
-      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
-      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
-      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T20:17:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T02:27:16.419Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": "Hernán",
-      "publicadaCuando": "2026-10-03T01:52:56.014Z",
-      "temas": [],
-      "como": "publicada",
-      "claves": [
-        "El STM y el municipio acordaron mejoras laborales y salariales.",
-        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
-        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
-        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
-      ],
-      "seSabe": [
-        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
-        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
-        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
-        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
-        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
-      ],
-      "noConfirmado": [
-        "Resta definir la fecha exacta de implementación del aumento para conductores."
-      ],
-      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
-      "etiquetas": [
-        "Sindicato de Trabajadores Municipales",
-        "Departamento Ejecutivo",
-        "Ministerio de Trabajo",
-        "plus",
-        "salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
-          "fecha": "2026-10-02T20:17:04.000Z",
-          "oficial": false,
-          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
-          "fecha": "2026-10-02T22:25:49.318Z",
-          "oficial": false,
-          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
-        }
-      ],
-      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
-      "foto": {
-        "archivo": "fotos-notas/1c7unm1.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1710,6 +1685,7 @@
         "El Destape",
         "Perfil",
         "A24",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Tecla",
         "Clarín",
@@ -1718,8 +1694,7 @@
         "Ámbito",
         "C5N",
         "Página/12",
-        "El Día",
-        "Diario Popular"
+        "El Día"
       ],
       "enlace": "https://www.eldestapeweb.com/politica/fuerte-gesto-lula-cierra-campana-bandera-malvinas-argentinas-2026102142358",
       "teniaImagenLaFuente": true,
@@ -2041,7 +2016,6 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2053,7 +2027,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 100,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2066,13 +2040,6 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
-          "fecha": "2026-10-02T20:21:48.000Z",
-          "oficial": false,
           "aporte": null
         },
         {
@@ -2435,7 +2402,6 @@
       "seccion": "Fútbol",
       "medios": [
         "Diario La Vanguardia",
-        "Ecos Diarios (Necochea)",
         "La Nación",
         "TN (Todo Noticias)",
         "Página/12",
@@ -2447,7 +2413,8 @@
         "La Voz del Pueblo",
         "La Nueva",
         "Minuto Uno",
-        "Clarín"
+        "Clarín",
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
       "teniaImagenLaFuente": true,
@@ -2892,15 +2859,15 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "TyC Sports",
-        "Diario Conurbano",
-        "Diario Popular"
+        "Diario Popular",
+        "Diario Conurbano"
       ],
       "enlace": "https://diarioconurbano.com.ar/principal/este-sabado-llega-una-noche-en-los-museos-a-brown-con-descuentos-en-gastronomia/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T14:22:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T19:31:27.167Z",
-      "relevancia": 48,
+      "relevancia": 40,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2975,7 +2942,7 @@
       "fecha": "2026-10-02T14:06:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 36,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3098,19 +3065,18 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
-        "El Diario Balcarce"
+        "El Diario Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/02/el-club-de-leones-realizo-una-nueva-donacion-al-hospital/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 89,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3185,8 +3151,7 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "Puntonueve (FM 100.9)"
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/intentaron-ingresar-un-local-de.html",
       "teniaImagenLaFuente": true,
@@ -3860,6 +3825,93 @@
       "slug": "top-serrano-balcarce-clasifica-seis-equipos-a-play-off"
     },
     {
+      "id": "l415ro",
+      "titulo": "Marco Morelli lidera la práctica de Moto3 en Japón",
+      "copete": "El piloto argentino marcó el mejor registro en el circuito de Motegi. Su compatriota Valentín Perrone finalizó quinto y ambos avanzaron a la Q2.",
+      "cuerpo": "El piloto Marco Morelli registró el mejor tiempo en la práctica de Moto3 el viernes en el Circuito Internacional de Motegi, en Japón, con una marca de 1:55.280 a bordo de su KTM.\n\nPor su parte, el otro representante nacional, Valentín Perrone, finalizó en la quinta posición con un tiempo de 1:55.412. De esta manera, ambos deportistas aseguraron su clasificación directa a la Q2 tras quedar separados por apenas 132 milésimas.\n\nLa carrera de la categoría se disputará el sábado a partir de las 23 horas de Argentina en el trazado japonés, donde buscarán definir sus lugares de partida.",
+      "guion": "Marco Morelli lidera la práctica de Moto3 en Japón",
+      "seccion": "Automovilismo",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Radio Mitre",
+        "Olé",
+        "Minuto Uno"
+      ],
+      "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/02/un-argentino-dio-la-sorpresa-y-se-quedo-con-el-mejor-tiempo-en-la-practica-de-la-categoria-moto3-en-el-gp-de-japon/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T11:47:06.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T20:31:20.420Z",
+      "relevancia": 56,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Marco Morelli marcó el mejor tiempo en la práctica de Moto3 en Japón con un registro de 1:55.280.",
+        "Valentín Perrone finalizó en la quinta ubicación a poca distancia de su compatriota.",
+        "Ambos pilotos argentinos aseguraron su clasificación directa a la Q2.",
+        "La competencia principal se largará este sábado a las 23 horas de Argentina."
+      ],
+      "textoRedes": "Marco Morelli marcó el mejor tiempo en la práctica de Moto3 en Japón y Valentín Perrone terminó quinto. Ambos argentinos avanzaron de manera directa a la Q2 y correrán este sábado.",
+      "etiquetas": [
+        "Moto3",
+        "Marco Morelli",
+        "Valentin Perrone",
+        "Japon",
+        "Motegi"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/02/un-argentino-dio-la-sorpresa-y-se-quedo-con-el-mejor-tiempo-en-la-practica-de-la-categoria-moto3-en-el-gp-de-japon/",
+          "fecha": "2026-10-02T11:47:06.000Z",
+          "oficial": false,
+          "aporte": "Informó el tiempo de Marco Morelli, la posición de Valentín Perrone y los detalles de la clasificación a la Q2."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/enorme-performance-marco-morelli-sorprendio-japon-y-fue-el-mas-rapido-moto3-n6329446",
+          "fecha": "2026-10-02T16:36:48.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el registro de la práctica en Motegi y la ubicación de ambos pilotos."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/quien-es-marco-morelli-el-argentino-que-sorprendio-en-moto3-con-el-mejor-tiempo-en-el-gran-premio-de-japon/",
+          "fecha": "2026-10-02T13:58:11.000Z",
+          "oficial": false,
+          "aporte": "Aportó la diferencia de tiempo entre los dos argentinos y su pase a la Q2."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/moto3-japon-vistio-celeste-blanco-marco-morelli-hizo-mejor-viernes-ano_0_nN0MVcoo7K.html",
+          "fecha": "2026-10-02T19:46:16.000Z",
+          "oficial": false,
+          "aporte": "Detalló que la actividad correspondió a la 16ª ronda de la categoría."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1uamvkq",
+          "titulo": "Diego Ciantini marca el mejor tiempo en el último entrenamiento",
+          "fecha": "2026-09-26T16:39:24.000Z",
+          "ruta": "/nota/diego-ciantini-marca-el-mejor-tiempo-en-el-ultimo-entrenamiento-en-1uamvkq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "marco-morelli-lidera-la-practica-de-moto3-en-japon",
+      "foto": {
+        "archivo": "fotos-notas/l415ro.jpg",
+        "credito": "Foto: Minuto Uno"
+      }
+    },
+    {
       "id": "gfh5l8",
       "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
       "copete": "El gobernador Axel Kicillof firmó el decreto que transfiere un terreno de la ex mina Catriel, ubicado en Sierras Bayas, para el desarrollo de un espacio recreativo y cultural.",
@@ -4010,103 +4062,6 @@
         "archivo": "fotos-notas/1qitrjt.jpg",
         "credito": "Foto: Noticias Agropecuarias"
       }
-    },
-    {
-      "id": "jeiawq",
-      "titulo": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
-      "copete": "El embajador Ian Sielecki valoró los anuncios financieros logrados durante la Argentina Week en París. Del encuentro participaron el presidente Javier Milei, ministros y gobernadores.",
-      "cuerpo": "El embajador argentino en Francia, Ian Sielecki, destacó anuncios de inversión por 27.000 millones de dólares durante la realización de la Argentina Week en París. El diplomático explicó a través de una publicación que las jornadas posicionaron al país ante empresarios europeos y atribuyó los resultados a la gestión macroeconómica.\n\nLa agenda de actividades abarcó dos días y medio con diez eventos, donde participaron el presidente Javier Milei, trece gobernadores y funcionarios nacionales. La sesión central reunió a unos 500 directivos en la sede de la OCDE, con la presencia del ministro de Economía, Luis Caputo. Entre los desembolsos confirmados, Total presentó proyectos por 10.000 millones de dólares en Neuquén y Tierra del Fuego, mientras que Pluspetrol y GyP destinaron 12.400 millones para Vaca Muerta.\n\nAdemás, Eramet proyectó 350 millones para litio en Salta, PAE y SNF comunicaron 1.200 millones para Chubut, y Glencore informó 4.000 millones para Catamarca. Por la noche, Milei y el mandatario francés Emmanuel Macron mantuvieron un encuentro bilateral en el Palacio del Elíseo.",
-      "guion": "El embajador en Francia destaca inversiones por veintisiete mil millones de dólares",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "A24",
-        "iProfesional",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "ANDigital",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Agencia DIB",
-        "La Brújula 24"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T03:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T16:49:02.882Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El embajador Ian Sielecki destacó inversiones por 27.000 millones de dólares en París.",
-        "Participaron el presidente Javier Milei, trece gobernadores y empresarios.",
-        "Se anunciaron desembolsos energéticos y mineros para distintas provincias."
-      ],
-      "seSabe": [
-        "El embajador Ian Sielecki informó sobre compromisos financieros por 27.000 millones de dólares en París.",
-        "La delegación nacional estuvo integrada por el presidente Javier Milei, trece gobernadores y funcionarios.",
-        "Empresas como Total, Pluspetrol, Eramet y Glencore detallaron montos destinados a proyectos productivos."
-      ],
-      "textoRedes": "El embajador argentino en Francia, Ian Sielecki, destacó anuncios de inversión por 27.000 millones de dólares tras la realización de la Argentina Week en París con participación de mandatarios y empresarios.",
-      "etiquetas": [
-        "Inversiones",
-        "Francia",
-        "Javier Milei",
-        "Economía",
-        "París"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/sielecki-destaco-anuncios-de-inversion-por-us-27-000-millones-durante-la-argentina-week-en-paris_a6abfd388f814a2817c86a36b",
-          "fecha": "2026-10-02T15:58:17.000Z",
-          "oficial": false,
-          "aporte": "Detalló los montos de inversión, las empresas involucradas y las actividades de la delegación oficial en París."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/argentina-week-el-embajador-francia-senalo-que-los-anuncios-inversion-alcanzaron-los-us27000-millones-n6329440",
-          "fecha": "2026-10-02T16:34:00.000Z",
-          "oficial": false,
-          "aporte": "Celebró las inversiones anunciadas y remarcó la importancia de la seriedad macroeconómica."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/02/110031-ian-sielecki-destaco-el-magnetismo-mundial-de-milei-durante-la-argentina-week-en-paris",
-          "fecha": "2026-10-02T16:25:15.000Z",
-          "oficial": false,
-          "aporte": "Registró la cobertura del evento sin aportar texto adicional."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "9oermg",
-          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
-          "fecha": "2026-09-25T00:30:34.751Z",
-          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-embajador-en-francia-destaca-inversiones-por-veintisiete-mil",
-      "foto": {
-        "archivo": "fotos-notas/jeiawq.jpg",
-        "credito": "Foto: Infobrisas (Radio Brisas)"
-      }
     }
   ],
   "secciones": [
@@ -4137,10 +4092,10 @@
     "ahora": {
       "temp": 12,
       "sensacion": 9,
-      "humedad": 93,
+      "humedad": 95,
       "viento": 20,
       "rumbo": "N",
-      "cielo": "Llovizna leve",
+      "cielo": "Llovizna",
       "esDeDia": true
     },
     "dias": [
@@ -4493,22 +4448,10 @@
   },
   "pendientes": [
     {
-      "id": "36p9t0",
-      "titulo": "Este martes Rufino viajará a la India para iniciar un…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1w06xhx",
+      "id": "1148srf",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"lesionada\""
-    },
-    {
-      "id": "vguosy",
-      "titulo": "La cadena de panaderías Pandanés cerró todos sus locales y…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "motivo": "necesita ojo humano: \"herido\""
     },
     {
       "id": "1v0rcd7",
@@ -4521,12 +4464,6 @@
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "13ygrbn",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1t477sv",
@@ -4559,6 +4496,18 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "13ygrbn",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "k4yhj9",
+      "titulo": "PAE avanza con el primer RIGI para petróleo convencional…",
+      "seccion": "Economía",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "y344f3",
       "titulo": "Acuerdo Mercosur-UE: las exportaciones agroindustriales a…",
       "seccion": "Agro",
@@ -4589,28 +4538,22 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1b80a9j",
-      "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"publicidad\""
-    },
-    {
       "id": "e0z3c",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "1b80a9j",
+      "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
       "id": "4hbo6t",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "1yg85wu",
@@ -4623,7 +4566,13 @@
       "titulo": "Inocencia Fiscal: ARCA reglamentó cuándo denunciará y…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 0
 }

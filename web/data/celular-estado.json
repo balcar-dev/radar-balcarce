@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T14:01:49.677Z",
- "portada": 51,
+ "generado": "2026-10-03T14:31:37.187Z",
+ "portada": 50,
  "archivo": 836,
- "esperandoCuerpo": 1,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-03T14:01:49.712Z",
+  "generado": "2026-10-03T14:31:37.223Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -124,14 +124,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "174qhq6",
-      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "seccion": "Balcarce"
+      "id": "prgocb",
+      "titulo": "Boca golea a Unión y extiende su invicto en el torneo",
+      "seccion": "Fútbol"
      },
      {
       "id": "1gdngfe",
@@ -147,7 +142,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 35,
+    "segundos": 47,
     "notas": [
      {
       "id": "1a6c23d",
@@ -155,9 +150,14 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1kfxthk",
-      "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
-      "seccion": "Fútbol"
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "seccion": "Balcarce"
      }
     ]
    }
