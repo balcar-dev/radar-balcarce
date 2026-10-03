@@ -168,7 +168,7 @@ llega igual a su página.
 hábil, de 11 a 18, y todavía no está la de hoy), pide la cotización a
 DolarApi (`traerDolar`, `web/lib/dolar.js`) y la guarda en
 `web/data/dolar-historia.json`. *(En los dos lados)* arma la nota del dólar de
-los días en que se movió (`notasDelDolar`), las de la Fórmula 1 (`notasDeF1`, `ingesta/f1.mjs`: los horarios en hora argentina desde el jueves del Gran Premio hasta 3 horas después de la largada, y "así fue" con podio, Colapinto, vuelta rápida y campeonato hasta 4 días después; datos abiertos de Jolpica, guardados en `web/data/f1.json`; ids `f1horarios2026r16` y `f1resultado2026r16`; si la API falla queda lo último guardado; sin IA ni voz; no van a las redes) y la de cada podcast que figura en
+los días en que se movió (`notasDelDolar`), las de la Fórmula 1 (`notasDeF1`, `ingesta/f1.mjs`: los horarios en hora argentina desde el jueves del Gran Premio hasta 3 horas después de la largada, la clasificación del sábado (la parrilla: pole, primera fila, los diez primeros y Colapinto, desde que termina hasta 3 horas después de la largada; 3/10) y "así fue" con podio, Colapinto, vuelta rápida y campeonato hasta 4 días después; datos abiertos de Jolpica, guardados en `web/data/f1.json`; ids `f1horarios2026r16` y `f1resultado2026r16`; si la API falla queda lo último guardado; sin IA ni voz; no van a las redes) y la de cada podcast que figura en
 el libro de redes (`notasDeRepasos`). Un repaso que ya no se puede armar (una
 de sus notas se retiró) también se retira. Las propias pasan por la misma
 regla de cuerpo. Detalle en "Las notas propias", más abajo.
@@ -317,7 +317,7 @@ Los que no, los sube otro (el panel, otro workflow o una persona).
 | `archivo.json` | Lo que tiene **página**: lo publicado en los últimos 180 días, hasta 2.500 notas, una por renglón | `generar-datos.mjs` (`actualizarArchivo`) | `lib/datos.js` (páginas de notas, tapa, "Seguí leyendo", sitemap), `generar-redirects.mjs`, el panel (antecedentes para la IA), `generar-datos` | Sí |
 | `agenda.json` | Los eventos con página: los que vienen y los que pasaron hace menos de 60 días | `generar-datos.mjs` (`actualizarAgenda`) | `lib/datos.js` (agenda, portada, Cultura, sitemap), `reels/plan.mjs` | Sí |
 | `intentos-ia.json` | Cuántas veces se le pidió cada nota a Gemini y por qué falló (7 días) | `generar-datos.mjs` con `reels/reescritura.mjs` | `generar-datos.mjs` | Sí |
-| `f1.json` | El calendario, el último resultado y el campeonato de Jolpica, y la fecha de cada nota de F1 | `generar-datos.mjs`, **sólo en la nube** | `ingesta/f1.mjs` | Sí |
+| `f1.json` | El calendario, la clasificación del sábado, el último resultado y el campeonato de Jolpica, y la fecha de cada nota de F1 | `generar-datos.mjs`, **sólo en la nube** | `ingesta/f1.mjs` | Sí |
 | `dolar-historia.json` | La cotización de las 11 de cada día hábil, 60 días (`DIAS_DE_HISTORIA`) | `generar-datos.mjs`, **sólo en la nube** | `lib/notas-propias.js`, `reels/plan.mjs` | Sí |
 | `fichas.json` | Lo que leyó la IA de cada nota y los grupos de repetidas | `generar-datos.mjs` con `ingesta/lectura-ia.mjs`, sólo en la nube | `generar-datos.mjs` | Sí |
 | `notas-por-dia.json` | Cuántas notas salieron cada día y en qué sección (400 días) | `generar-datos.mjs` | `redes/vigilar.mjs` (informe de las 21) | Sí |

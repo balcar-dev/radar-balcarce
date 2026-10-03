@@ -31,6 +31,8 @@ export const RELEVANCIA_F1 = 58;
 export const HORAS_HORARIOS_DESPUES = 3;
 /** La carrera "terminó" para ir a buscar el resultado a partir de tantas horas. */
 export const HORAS_PARA_BUSCAR_RESULTADO = 1.5;
+/** Cuánto después de que empieza la clasificación del sábado se busca la parrilla (la clasificación dura una hora). */
+export const HORAS_PARA_BUSCAR_PARRILLA = 1.5;
 /** El resultado se cuenta hasta tantos días después de la carrera. */
 export const DIAS_DEL_RESULTADO = 4;
 /** Cada cuántas horas se vuelve a pedir el calendario. */
@@ -188,6 +190,38 @@ export function resumirResultado(json) {
   };
 }
 
+/**
+ * La clasificación del sábado (la parrilla de largada) como la guardamos (3/10/2026, Hernán: "hoy estaría bueno armar la nota de la
+ * clasificación"): posición, piloto, equipo y los mejores tiempos de la Q1, la Q2 y la Q3. Null si todavía no está completa.
+ */
+export function resumirParrilla(json) {
+  const carrera = json?.MRData?.RaceTable?.Races?.[0];
+  const filas = carrera?.QualifyingResults;
+  if (!carrera || !Array.isArray(filas) || filas.length < 10) return null;
+  const largada = instante(carrera);
+  const ronda = entero(carrera.round);
+  if (!largada || ronda == null) return null;
+  return {
+    temporada: entero(carrera.season),
+    ronda,
+    nombre: carrera.raceName,
+    circuito: carrera.Circuit?.circuitName ?? null,
+    localidad: carrera.Circuit?.Location?.locality ?? null,
+    pais: carrera.Circuit?.Location?.country ?? null,
+    largada,
+    filas: filas.map((f) => ({
+      posicion: entero(f.position),
+      piloto: nombreDePiloto(f.Driver),
+      colapinto: esColapinto(f.Driver),
+      equipo: f.Constructor?.name ?? null,
+      numero: f.number ?? null,
+      q1: f.Q1 || null,
+      q2: f.Q2 || null,
+      q3: f.Q3 || null,
+    })).filter((f) => f.piloto && f.posicion != null),
+  };
+}
+
 /** La clasificación del campeonato de pilotos, completa. */
 export function resumirClasificacion(json) {
   const lista = json?.MRData?.StandingsTable?.StandingsLists?.[0];
@@ -253,6 +287,7 @@ export async function traerF1({ antes = null, fetchFn = fetch, ahora = new Date(
     pilotos: previo.pilotos ?? null,
     resultado: previo.resultado ?? null,
     clasificacion: previo.clasificacion ?? null,
+    parrilla: previo.parrilla ?? null,
     notas: previo.notas ?? {},
   };
   // El calendario, cada 6 horas (o si no lo teníamos o es de otra temporada).
@@ -270,6 +305,14 @@ export async function traerF1({ antes = null, fetchFn = fetch, ahora = new Date(
   if (!f1.pilotos || f1.pilotos.temporada !== f1.calendario.temporada) {
     const p = await pedir(fetchFn, 'current/drivers.json?limit=100', resumirPilotos);
     if (p) f1.pilotos = p;
+  }
+  // La clasificación del sábado: desde un rato después de que empieza hasta la largada, hasta tenerla completa.
+  const clasificatoria = f1.calendario.carreras?.find((c) => c.ronda === carrera.ronda)?.sesiones?.find((x) => x.clave === 'Qualifying');
+  if (clasificatoria && hoy >= Date.parse(clasificatoria.inicio) + HORAS_PARA_BUSCAR_PARRILLA * HORA_MS && hoy < Date.parse(carrera.largada)) {
+    if (f1.parrilla?.ronda !== carrera.ronda || f1.parrilla?.temporada !== f1.calendario.temporada) {
+      const q = await pedir(fetchFn, `current/${carrera.ronda}/qualifying.json?limit=100`, resumirParrilla);
+      if (q && q.ronda === carrera.ronda) f1.parrilla = q;
+    }
   }
   // El resultado, desde un rato después de la largada, hasta tenerlo completo.
   const paso = hoy - Date.parse(carrera.largada);
@@ -307,6 +350,7 @@ export function ventanaDeHorarios(carrera) {
 
 const idHorarios = (temporada, ronda) => `f1horarios${temporada}r${ronda}`;
 const idResultado = (temporada, ronda) => `f1resultado${temporada}r${ronda}`;
+const idParrilla = (temporada, ronda) => `f1parrilla${temporada}r${ronda}`;
 
 /** "Franco Colapinto (Alpine F1 Team, número 43)" o null si no corre. */
 function datoDeColapinto(f1, carrera) {
@@ -386,6 +430,62 @@ export function notaDeHorarios(carrera, { colapinto = null, fecha } = {}) {
 
 /** Los decimales, con coma. */
 const coma = (t) => String(t).replace('.', ',');
+
+/** "1:30.123" → milisegundos (o null). */
+const aMs = (t) => {
+  const m = String(t ?? '').match(/^(?:(\d+):)?(\d+)\.(\d{1,3})$/);
+  return m ? (Number(m[1] ?? 0) * 60 + Number(m[2])) * 1000 + Number(m[3].padEnd(3, '0')) : null;
+};
+
+/** La mejor vuelta de la clasificación de un piloto (la de la última ronda en que giró). */
+const mejorTiempo = (f) => f.q3 ?? f.q2 ?? f.q1 ?? null;
+
+/** Dónde quedó eliminado, o "llegó a la Q3". */
+const hastaDondeLlego = (f) => (f.q3 ? 'llegó a la Q3, la definición por la pole' : (f.q2 ? 'quedó eliminado en la Q2' : 'quedó eliminado en la Q1'));
+
+/**
+ * La nota con cómo largan en la carrera (la clasificación del sábado), o null si falta algo (3/10/2026, Hernán). Sale cuando termina la clasificación
+ * y hasta poco después de la largada; el domingo la reemplaza la del resultado.
+ */
+export function notaDeParrilla(parrilla, { colapinto = null, fecha } = {}) {
+  if (!parrilla?.filas?.length || !fecha) return null;
+  const filas = [...parrilla.filas].sort((a, b) => a.posicion - b.posicion);
+  const [pole, segundo, tercero] = filas;
+  if (!pole || !segundo || !tercero || pole.posicion !== 1) return null;
+  const nombre = nombreDelGranPremio(parrilla.nombre);
+  const largada = enHoraArgentina(parrilla.largada);
+  const eq = (f) => (f.equipo ? ` (${f.equipo})` : '');
+  const t1 = mejorTiempo(pole);
+  const dif = (f) => {
+    const a = aMs(t1);
+    const b = aMs(mejorTiempo(f));
+    return a != null && b != null && b >= a ? ` a ${coma(((b - a) / 1000).toFixed(3))} segundos` : '';
+  };
+
+  const p1 = `${pole.piloto}${eq(pole)} se quedó con la pole position del ${nombre} de la Fórmula 1${t1 ? `, con una vuelta de ${coma(t1)}` : ''}, en la clasificación disputada en ${lugar(parrilla)}. `
+    + `La primera fila la completa ${segundo.piloto}${eq(segundo)}${dif(segundo)}, y en el tercer puesto largará ${tercero.piloto}${eq(tercero)}${dif(tercero)}.`;
+  const p2 = `Así quedó la parrilla de largada de los diez primeros, en ese orden: ${filas.slice(0, 10).map((f) => `${f.posicion}º ${f.piloto}`).join(', ')}.`;
+
+  const fc = filas.find((f) => f.colapinto);
+  let p3 = null;
+  if (fc) {
+    p3 = `El argentino Franco Colapinto${fc.equipo ? `, con ${fc.equipo}` : ''}, largará desde el puesto ${fc.posicion}: ${hastaDondeLlego(fc)}${mejorTiempo(fc) ? `, con ${coma(mejorTiempo(fc))} como mejor tiempo` : ''}.`;
+  } else if (colapinto) {
+    p3 = 'Franco Colapinto no figura en la clasificación de esta carrera en los datos oficiales.';
+  }
+  const p4 = `La carrera se corre el ${diaLargo(largada.dia)} y largará a las ${largada.hora}, hora argentina.`;
+  const p5 = 'Los datos son los resultados oficiales según Jolpica F1 (datos abiertos). Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo.';
+
+  return baseDeLaNota({
+    id: idParrilla(parrilla.temporada ?? Number(diaAR(parrilla.largada).slice(0, 4)), parrilla.ronda),
+    tipo: 'parrilla',
+    titulo: `F1: ${pole.piloto} largará desde la pole en el ${nombre}; así quedó la parrilla`,
+    copete: `${pole.piloto} fue el más rápido de la clasificación, seguido por ${segundo.piloto} y ${tercero.piloto}.${fc ? ' Así quedó Colapinto.' : ''} La carrera es el ${diaLargo(largada.dia)} a las ${largada.hora} de Argentina.`,
+    cuerpo: [p1, p2, p3, p4, p5].filter(Boolean).join('\n\n'),
+    fecha,
+    etiquetas: ['Fórmula 1', 'F1', 'Gran Premio', nombre, 'clasificación', 'pole position', ...(fc || colapinto ? ['Franco Colapinto'] : [])],
+  });
+}
 
 /** La nota con el resultado de la carrera, o null si falta algo. `clasificacion`
  *  puede faltar (todavía no la actualizó la API): ahí se cuenta sin campeonato. */
@@ -468,6 +568,18 @@ export function notasDeF1(f1, { ahora = new Date() } = {}) {
       const id = idHorarios(temporada, carrera.ronda);
       const fecha = fechas[id] ?? new Date(t).toISOString();
       const nota = notaDeHorarios(carrera, { colapinto: datoCol(carrera), fecha });
+      if (nota) { notas.push(nota); fechas[id] = fecha; }
+    }
+  }
+  // La clasificación del sábado: desde que termina hasta 3 horas después de la largada (el domingo la reemplaza el resultado).
+  const q = f1?.parrilla;
+  if (q?.temporada === temporada && q.filas?.length) {
+    const carrera = carreras.find((c) => c.ronda === q.ronda);
+    const clasificatoria = carrera?.sesiones?.find((x) => x.clave === 'Qualifying');
+    if (clasificatoria && t >= Date.parse(clasificatoria.inicio) && t <= Date.parse(carrera.largada) + HORAS_HORARIOS_DESPUES * HORA_MS) {
+      const id = idParrilla(temporada, q.ronda);
+      const fecha = fechas[id] ?? new Date(t).toISOString();
+      const nota = notaDeParrilla(q, { colapinto: datoCol(carrera), fecha });
       if (nota) { notas.push(nota); fechas[id] = fecha; }
     }
   }
