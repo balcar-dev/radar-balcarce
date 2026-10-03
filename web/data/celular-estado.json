@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T13:01:41.934Z",
- "portada": 47,
- "archivo": 833,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-03T13:32:42.080Z",
+ "portada": 48,
+ "archivo": 836,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-03T13:01:41.966Z",
+  "generado": "2026-10-03T13:32:42.112Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-03T13:04:24.061Z"
    },
    {
     "nombre": "noticia2",
@@ -84,8 +84,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 50,
+    "salio": "2026-10-03T13:04:24.061Z",
+    "segundos": null,
     "notas": [
      {
       "id": "h1ggzr",
@@ -116,12 +116,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
+    "segundos": 33,
     "notas": [
      {
-      "id": "j3xrez",
-      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-      "seccion": "Balcarce"
+      "id": "1aekavp",
+      "titulo": "Rubén Darío Insúa pide una marcha para que Lionel Messi juegue el Mundial 2030",
+      "seccion": "Fútbol"
      },
      {
       "id": "1gdngfe",
@@ -137,13 +137,41 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 50,
+    "notas": [
+     {
+      "id": "1a6c23d",
+      "titulo": "La Ultra Trail Tierras del Diablo abre los últimos cupos",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1kfxthk",
+      "titulo": "Boca derrota tres a cero a Unión y estira su invicto",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "j3xrez",
+      "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "16ml7pn",
+     "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-02T19:48:09.517Z",
    "porDia": 5,
