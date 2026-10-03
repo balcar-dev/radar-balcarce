@@ -1,11 +1,11 @@
 {
- "generado": "2026-10-03T19:31:31.521Z",
+ "generado": "2026-10-03T20:01:17.236Z",
  "intentosMaximos": 3,
  "notas": [
   {
    "id": "bz5n1s",
    "titulo": "River goleó en un amistoso ante Atlético Escobar del Federal A",
-   "copete": "River jugará un amistoso contra Atlético Escobar, equipo del Federal A, este sábado por la mañana en el River Camp de Ezeiza. El partido tendrá lugar porque el \"Millonario\" postergó el partido de este fin de semana ante Sarmiento de Junín. La última vez que River jugó un partido…",
+   "copete": "Todas las novedades del Millonario de este sábado 3 de octubre, el día que se mide ante Atlético Escobar en un partido amistoso. Todo lo que el hincha de River tiene que saber este sábado 3 de octubre de 2026, jornada en la que enfrentó a Atlético Escobar. El motivo por el que…",
    "seccion": "Fútbol",
    "fecha": "2026-10-02T20:42:46.000Z",
    "fuentes": [
@@ -13,16 +13,6 @@
      "medio": "TyC Sports",
      "enlace": "https://www.tycsports.com/river-plate/river-amistoso-atletico-escobar-id764091.html",
      "fecha": "2026-10-03T19:03:00.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/river-plate/river-practica-entrenamiento-atletico-escobar-camp_0_0cYz9tL16O.html",
-     "fecha": "2026-10-03T18:01:00.000Z"
-    },
-    {
-     "medio": "0223 (Mar del Plata)",
-     "enlace": "https://www.0223.com.ar/nota/2026-10-2-21-19-0-insolito-river-pidio-la-postergacion-de-la-fecha-y-jugara-un-amistoso-con-un-equipo-del-federal-a",
-     "fecha": "2026-10-03T00:19:00.000Z"
     },
     {
      "medio": "El Destape",
@@ -38,6 +28,11 @@
      "medio": "TyC Sports",
      "enlace": "https://www.tycsports.com/river-plate/historia-atletico-escobar-rival-river-amistoso-id764114.html",
      "fecha": "2026-10-03T17:41:00.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/river-plate/river-practica-entrenamiento-atletico-escobar-camp_0_0cYz9tL16O.html",
+     "fecha": "2026-10-03T18:01:00.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -65,6 +60,11 @@
      "fecha": "2026-10-03T06:30:00.000Z"
     },
     {
+     "medio": "0223 (Mar del Plata)",
+     "enlace": "https://www.0223.com.ar/nota/2026-10-2-21-19-0-insolito-river-pidio-la-postergacion-de-la-fecha-y-jugara-un-amistoso-con-un-equipo-del-federal-a",
+     "fecha": "2026-10-03T00:19:00.000Z"
+    },
+    {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-2-18-31-0-river-jugara-ante-un-rival-que-tuvo-su-debut-este-ano-en-el-federal-a",
      "fecha": "2026-10-02T22:25:12.000Z"
@@ -89,6 +89,28 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 3 problemas (fecha): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 26 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "qqa24c",
+   "titulo": "“Con confianza en el ritmo”: el mensaje de Franco Colapinto en la previa a la carrera del GP de Bahréin",
+   "copete": "Franco Colapinto se prepara para una nueva carrera de la Fórmula 1 en el Gran Premio de Bahréin : el piloto de Alpine largará anteúltimo tras recibir 15 posiciones de penalización entre el premio de Azerbaiyán y este fin de semana. El argentino se mostró confiado por dar vuelta…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-03T16:52:48.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/03/con-confianza-en-el-ritmo-el-mensaje-de-franco-colapinto-en-la-previa-a-la-carrera-del-gp-de-bahrein/",
+     "fecha": "2026-10-03T16:52:48.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/deportes/el-mensaje-franco-colapinto-la-previa-la-carrera-del-gp-bahrein-con-confianza-el-ritmo-n6329742",
+     "fecha": "2026-10-03T18:51:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
    "maximo": 3
   }
  ]

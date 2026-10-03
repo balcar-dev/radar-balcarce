@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T19:31:31.521Z",
+  "generado": "2026-10-03T20:01:17.236Z",
   "notas": [
     {
       "id": "f1parrilla2026r16",
@@ -164,7 +164,7 @@
       "fecha": "2026-10-03T17:01:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T17:31:22.477Z",
-      "relevancia": 47,
+      "relevancia": 37,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -255,7 +255,7 @@
       "fecha": "2026-10-03T16:35:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T18:45:57.785Z",
-      "relevancia": 99,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -465,6 +465,85 @@
       "foto": {
         "archivo": "fotos-notas/1oy5t8d.jpg",
         "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
+      "id": "wjdq6r",
+      "titulo": "Dal Poggetto advierte que el país se encarece en moneda extranjera",
+      "copete": "La directora de Eco Go señaló que el dólar oficial superó los 1500 pesos y el paralelo ronda los 1560 pesos. Además, advirtió sobre el freno en la actividad y la inflación en dólares.",
+      "cuerpo": "La economista y directora ejecutiva de la consultora Eco Go, Marina Dal Poggetto, advirtió que la Argentina se encarece en dólares a raíz de la suba de precios acumulada del 28 por ciento hasta agosto y la cotización fija de la divisa. En declaraciones radiales, indicó que el dólar oficial superó la barrera de los 1500 pesos, mientras que el dólar blue ronda los 1560 pesos en el mercado financiero.\n\nDurante su análisis sobre la actividad económica, la especialista sostuvo que la tasa de inversión experimenta una caída y el consumo no muestra repunte, aunque destacó que sectores como la energía, la minería, el agro y el sistema financiero logran mantener un desempeño positivo. Asimismo, señaló que el Gobierno utiliza anclas cambiarias y tarifarias para contener la inflación con una proyección anual cercana al 30 por ciento.\n\nPor último, la analista puntualizó que el estancamiento general de la actividad productiva comenzó a principios del año pasado, condicionado por los cambios en el consumo y la política monetaria.",
+      "guion": "Dal Poggetto advierte que el país se encarece en moneda extranjera",
+      "seccion": "Economía",
+      "medios": [
+        "El Cronista",
+        "El Destape",
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/dal-poggetto---la-argentina-se-esta-encareciendo-en-dolares-_a6ac116c3bd9cfb5d37efdd51",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T15:07:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T17:01:16.126Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El dólar oficial superó los 1500 pesos y el blue ronda los 1560 pesos.",
+        "La economista Marina Dal Poggetto advirtió sobre la inflación en dólares.",
+        "Señalaron caídas en la inversión y el consumo general.",
+        "Estiman que la inflación anual podría cerrar en torno al 30 por ciento."
+      ],
+      "seSabe": [
+        "El dólar oficial superó los 1500 pesos y el paralelo ronda los 1560 pesos, según el mercado financiero.",
+        "La inflación acumulada hasta agosto alcanzó el 28 por ciento, de acuerdo con las declaraciones de la economista Marina Dal Poggetto.",
+        "Sectores como la energía, la minería, el agro y el sistema financiero mantienen un rumbo positivo, según la consultora Eco Go."
+      ],
+      "noConfirmado": [
+        "No se precisaron datos oficiales definitivos sobre el cierre exacto de la inflación anual proyectada."
+      ],
+      "etiquetas": [
+        "economia",
+        "dolar",
+        "inflacion",
+        "mercado financiero",
+        "Marina Dal Poggetto"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/dal-poggetto---la-argentina-se-esta-encareciendo-en-dolares-_a6ac116c3bd9cfb5d37efdd51",
+          "fecha": "2026-10-03T15:07:46.000Z",
+          "oficial": false,
+          "aporte": "Aportó la evaluación completa de Marina Dal Poggetto sobre la economía, la inflación en dólares y los sectores productivos."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/desfasaje-la-contracara-de-sostener-el-dolar-clavado-segun-la-economista-mas-escuchada-de-la-city/",
+          "fecha": "2026-10-03T16:25:46.000Z",
+          "oficial": false,
+          "aporte": "Aportó los valores actuales del dólar oficial por encima de los 1500 pesos y el blue en 1560 pesos."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-3-13-27-0-economista-asegura-que-la-argentina-se-esta-encareciendo-en-dolares",
+          "fecha": "2026-10-03T16:55:36.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto del reacomodamiento cambiario y las declaraciones radiales de la especialista."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "dal-poggetto-advierte-que-el-pais-se-encarece-en-moneda-extranjera",
+      "foto": {
+        "archivo": "fotos-notas/wjdq6r.jpg",
+        "credito": "Foto: El Cronista"
       }
     },
     {
@@ -1117,9 +1196,7 @@
       "medios": [
         "0223 (Mar del Plata)",
         "Bolavip Argentina",
-        "La Brújula 24",
-        "Ámbito",
-        "TN (Todo Noticias)"
+        "La Brújula 24"
       ],
       "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
       "teniaImagenLaFuente": true,
@@ -1962,7 +2039,7 @@
       "fecha": "2026-10-02T19:49:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 66,
+      "relevancia": 58,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2049,7 +2126,7 @@
       "fecha": "2026-10-02T19:48:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T22:01:17.356Z",
-      "relevancia": 70,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2712,116 +2789,6 @@
       "foto": {
         "archivo": "fotos-notas/1akpidg.jpg",
         "credito": "Foto: Municipalidad de Balcarce"
-      }
-    },
-    {
-      "id": "1pq0gh4",
-      "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-      "copete": "La funcionaria nacional lideró un encuentro en Francia junto a catorce firmas pesqueras. El objetivo principal consistió en incrementar las ventas de langostinos y vieiras.",
-      "cuerpo": "La secretaria general de la Presidencia, Karina Milei, dirigió en la capital francesa una jornada comercial orientada a potenciar la colocación de productos pesqueros nacionales. El evento reunió a catorce compañías del sector con compradores europeos para fomentar la comercialización directa de langostinos y vieiras.\n\nLa estrategia contó con la intervención del titular de PromArgentina, Diego Sucalesca, además de diversas entidades vinculadas a la actividad marítima y diplomática. Durante el año pasado, los envíos internacionales de langostinos aportaron mil millones de dólares a la economía nacional.",
-      "guion": "Karina Milei encabeza ronda de negocios en París por la pesca",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "Canal 26",
-        "Noticias Argentinas (NA)",
-        "Punto Noticias",
-        "Crónica"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T16:57:20.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T18:31:19.096Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Participaron catorce empresas pesqueras nacionales y compradores franceses.",
-        "La comitiva estuvo encabezada por la secretaria general de la Presidencia.",
-        "Buscan incrementar las ventas de langostinos y vieiras hacia Europa.",
-        "Las exportaciones de langostinos sumaron mil millones de dólares en 2025."
-      ],
-      "seSabe": [
-        "Karina Milei lideró el encuentro en París este viernes.",
-        "La actividad se denominó Argentina B2B Week.",
-        "Catorce empresas nacionales participaron de las reuniones.",
-        "Diego Sucalesca acompañó a la funcionaria nacional."
-      ],
-      "noConfirmado": [
-        "No se informaron los montos totales proyectados de los nuevos contratos comerciales."
-      ],
-      "textoRedes": "Karina Milei encabezó en París una ronda de negocios para ampliar las exportaciones de langostinos y vieiras con catorce empresas argentinas.",
-      "etiquetas": [
-        "Karina Milei",
-        "París",
-        "exportaciones",
-        "pesca",
-        "langostinos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-exportaciones-pesqueras_a6abfe19ef814a2817c88f43a",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de la ronda B2B Week y los datos sobre el mercado francés."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/02/karina-milei-encabezo-una-ronda-de-negocios-en-francia-para-impulsar-exportaciones-de-langostinos-y-vieiras/",
-          "fecha": "2026-10-02T17:32:02.000Z",
-          "oficial": false,
-          "aporte": "Detalló la participación de las catorce empresas exportadoras de productos pesqueros."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-impulsar-las-exportaciones-argentinas-de-langostinos-y-vieiras.phtml",
-          "fecha": "2026-10-02T17:49:49.000Z",
-          "oficial": false,
-          "aporte": "Aportó la cifra de mil millones de dólares generada por las exportaciones de langostinos en 2025."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/karina-milei-encabezo-en-paris-una-ronda-de-negocios-para-ampliar-las-ventas-de-langostinos-y-vieiras/",
-          "fecha": "2026-10-02T17:44:06.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la presencia de Diego Sucalesca y el rol de PromArgentina."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "oa2ef",
-          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
-          "fecha": "2026-10-02T09:29:30.000Z",
-          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
-        },
-        {
-          "id": "wcnatb",
-          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
-          "fecha": "2026-10-01T13:40:00.000Z",
-          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
-        },
-        {
-          "id": "19iwenp",
-          "titulo": "Karina Milei habló tras la reunión por la visita de León XIV y aseguró que \"el Papa es de todos los argentinos\"",
-          "fecha": "2026-09-22T23:31:00.000Z",
-          "ruta": "/nota/karina-milei-hablo-tras-la-reunion-por-la-visita-de-leon-xiv-y-19iwenp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca",
-      "foto": {
-        "archivo": "fotos-notas/1pq0gh4.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -4434,8 +4401,8 @@
     "Argentina",
     "Policiales",
     "Política",
-    "Deportes",
     "Economía",
+    "Deportes",
     "Fútbol",
     "Agro"
   ],
@@ -4454,9 +4421,9 @@
   "clima": {
     "ahora": {
       "temp": 14,
-      "sensacion": 12,
-      "humedad": 82,
-      "viento": 12,
+      "sensacion": 13,
+      "humedad": 78,
+      "viento": 9,
       "rumbo": "NO",
       "cielo": "Nublado",
       "esDeDia": true
@@ -4847,12 +4814,6 @@
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "4xscfj",
-      "titulo": "Victoria Villarruel viajó a Madrid junto a senadores para…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"participá del\""
-    },
-    {
       "id": "fvq4zq",
       "titulo": null,
       "seccion": "Argentina",
@@ -4871,10 +4832,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1it0an3",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
+      "id": "15p44cp",
+      "titulo": "André Pierre-Gignac junto a Riquelme viendo a Boca",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"suscribite\""
+    },
+    {
+      "id": "4xscfj",
+      "titulo": "Victoria Villarruel viajó a Madrid junto a senadores para…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "13we5yd",
@@ -4893,6 +4860,12 @@
       "titulo": "PAE avanza con el primer RIGI para petróleo convencional…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "wyoozx",
+      "titulo": "Quiniela Nacional: resultado del sorteo de la Primera de…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "e0z3c",
@@ -4931,5 +4904,5 @@
       "motivo": "necesita ojo humano: \"herido\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 3
 }
