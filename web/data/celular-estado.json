@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T09:01:24.213Z",
- "portada": 50,
- "archivo": 829,
+ "generado": "2026-10-03T09:31:32.755Z",
+ "portada": 51,
+ "archivo": 830,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-03T09:01:24.246Z",
+  "generado": "2026-10-03T09:31:32.789Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,8 +85,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "ei8drx",
+      "titulo": "Max Verstappen consigue la pole position y Franco Colapinto larga vigesimoprimero",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "h1ggzr",
       "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
@@ -95,11 +100,6 @@
      {
       "id": "n09ogo",
       "titulo": "Carlos Tevez anuncia su partido de despedida en La Bombonera",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "2qj2kn",
-      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
       "seccion": "Fútbol"
      },
      {
@@ -116,12 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 41,
+    "segundos": 53,
     "notas": [
      {
       "id": "1hy6wdw",
       "titulo": "La filial local de Federación Agraria respalda la reelección de Sarnari",
       "seccion": "Agro"
+     },
+     {
+      "id": "2qj2kn",
+      "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+      "seccion": "Fútbol"
      },
      {
       "id": "j3xrez",
