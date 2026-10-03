@@ -5759,5 +5759,26 @@
   "cuando": "2026-10-03T00:42:13.375Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "2qj2kn": {
+  "archivo": "fotos-notas/2qj2kn.jpg",
+  "medio": "Acción 5 (Balcarce)",
+  "credito": "Foto: Acción 5 (Balcarce)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+  "enlace": "https://accion5.com/oficial-estan-los-arbitros-para-la-primera-fecha-del-clausura/",
+  "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/DSC_0439.jpg",
+  "razon": "Es la única imagen nítida y con buen encuadre que ilustra claramente el tema de la nota (un árbitro en acción), sin marcas de agua ni menores de edad.",
+  "cuando": "2026-10-03T01:32:09.201Z"
+ },
+ "1wdslpn": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Cámara de Casación revisa el sobreseimiento del ministro Luis Caputo",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-03T01:32:09.201Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }
