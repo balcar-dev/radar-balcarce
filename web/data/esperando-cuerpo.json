@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03T19:22:30.576Z",
+ "generado": "2026-10-03T19:31:31.521Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -45,6 +45,11 @@
      "fecha": "2026-10-02T20:46:00.000Z"
     },
     {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/river/river-hoy-durisima-lesion-de-salas-amistoso-e-importante-avance-en-las-obras",
+     "fecha": "2026-10-03T19:12:45.000Z"
+    },
+    {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/river-plate/river-goleo-a-atletico-escobar-en-un-amistoso-resultado-y-goleadores",
      "fecha": "2026-10-03T19:05:19.000Z"
@@ -55,19 +60,36 @@
      "fecha": "2026-10-03T15:26:27.000Z"
     },
     {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-2-18-31-0-river-jugara-ante-un-rival-que-tuvo-su-debut-este-ano-en-el-federal-a",
-     "fecha": "2026-10-02T21:47:36.000Z"
-    },
-    {
      "medio": "El Gráfico",
      "enlace": "https://www.elgrafico.com.ar/articulo/1038/103146/river-goleo-a-un-equipo-del-federal-a-en-un-amistoso",
      "fecha": "2026-10-03T06:30:00.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-2-18-31-0-river-jugara-ante-un-rival-que-tuvo-su-debut-este-ano-en-el-federal-a",
+     "fecha": "2026-10-02T22:25:12.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "13f00z",
+   "titulo": "Virginia Aparicio, SPRINT y la investigación que puso a los plaguicidas bajo la lupa",
+   "copete": "El Diario había reflejado en 2023 los resultados de los muestreos realizados en Balcarce y la zona en el marco del proyecto internacional. La investigadora de la EEA Balcarce fue la responsable de la participación argentina. Tres años después, SP",
+   "seccion": "Agro",
+   "fecha": "2026-10-03T12:49:20.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-sprint-y-la-investigacion-que-puso-a-los-plaguicidas-bajo-la-lupa-888",
+     "fecha": "2026-10-03T12:49:20.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 3 problemas (fecha): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 26 palabras",
+   "maximo": 3
   }
  ]
 }
