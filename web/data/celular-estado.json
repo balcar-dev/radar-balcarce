@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02T23:31:59.775Z",
- "portada": 60,
+ "generado": "2026-10-03T00:03:23.392Z",
+ "portada": 57,
  "archivo": 818,
- "esperandoCuerpo": 8,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-02T23:31:59.816Z",
+  "generado": "2026-10-03T00:03:23.436Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -145,19 +145,19 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 46,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "144x64h",
+      "titulo": "Mariano Werner recibe millonaria multa y sanción deportiva",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "1917p5s",
       "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "5pxon8",
-      "titulo": "Glencore anuncia una inversión millonaria para desarrollar Agua Rica",
-      "seccion": "Economía"
      },
      {
       "id": "zdkvaa",
@@ -202,14 +202,20 @@
    ],
    "cola": [
     {
-     "id": "1917p5s",
-     "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
-     "seccion": "Balcarce",
+     "id": "144x64h",
+     "titulo": "Mariano Werner recibe millonaria multa y sanción deportiva",
+     "seccion": "Automovilismo",
      "marcada": false
     },
     {
      "id": "1akpidg",
      "titulo": "Estudiantes de la Escuela de Arte entregan una obra al Municipio",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1917p5s",
+     "titulo": "Varias líneas de la Policía local interrumpen su servicio habitual",
      "seccion": "Balcarce",
      "marcada": false
     },
