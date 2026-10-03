@@ -1,6 +1,45 @@
 {
-  "generado": "2026-10-03T17:34:20.873Z",
+  "generado": "2026-10-03T17:38:45.074Z",
   "notas": [
+    {
+      "id": "f1horarios2026r16",
+      "propia": "f1",
+      "tipoF1": "horarios",
+      "titulo": "F1: horarios del Gran Premio de Baréin en Malasia, en hora argentina",
+      "copete": "La carrera del Gran Premio de Baréin en Malasia es el domingo 4 de octubre a las 04:00 de Argentina. Todos los horarios del fin de semana.",
+      "cuerpo": "El Gran Premio de Baréin en Malasia de la temporada 2026 de la Fórmula 1 se corre en Sepang International Circuit, Kuala Lumpur, Malasia. La carrera largará el domingo 4 de octubre a las 04:00, hora argentina.\n\nLos horarios de todas las sesiones, en hora de Argentina (UTC-3):\n\nViernes 2 de octubre: práctica libre 1 a las 01:30 y práctica libre 2 a las 05:00.\n\nSábado 3 de octubre: práctica libre 3 a las 01:30 y clasificación a las 05:00.\n\nDomingo 4 de octubre: carrera a las 04:00.\n\nEl argentino Franco Colapinto figura entre los pilotos de la temporada 2026, con el número 43. Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo de Fórmula 1. Los horarios son los que publica el calendario oficial según los datos abiertos de Jolpica F1 y pueden cambiar; los consultamos de nuevo cada pocas horas.",
+      "guion": null,
+      "seccion": "Automovilismo",
+      "local": false,
+      "relevancia": 58,
+      "medios": [
+        "Jolpica F1 (datos abiertos)"
+      ],
+      "enlace": "https://github.com/jolpica/jolpica-f1",
+      "fuentesConsultadas": [
+        {
+          "medio": "Jolpica F1 (datos abiertos)",
+          "enlace": "https://github.com/jolpica/jolpica-f1"
+        }
+      ],
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-03T17:38:44.401Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T17:38:44.401Z",
+      "publicadaPor": null,
+      "publicadaCuando": "2026-10-03T17:38:44.401Z",
+      "temas": [],
+      "etiquetas": [
+        "Fórmula 1",
+        "F1",
+        "Gran Premio",
+        "Gran Premio de Baréin en Malasia",
+        "Franco Colapinto"
+      ],
+      "como": "automatica",
+      "firma": "Nota de Radar Balcarce armada con los datos abiertos de Jolpica F1.",
+      "slug": "f1-horarios-del-gran-premio-de-barein-en-malasia-en-hora-argentina"
+    },
     {
       "id": "ayjy85",
       "titulo": "Barker y Villa Cacique ofrecen turismo y sierras a dos horas",
@@ -211,6 +250,84 @@
       }
     },
     {
+      "id": "1oy5t8d",
+      "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "copete": "El titular de la UCR Nacional mantuvo un encuentro con el intendente y referentes locales en el Comité partidario. Conversaron sobre la agenda política y la presencia en el territorio.",
+      "cuerpo": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino, funcionarios municipales y militantes en el Comité local de la Unión Cívica Radical, según informó un medio local. Durante el encuentro, los dirigentes conversaron sobre la actualidad política, los desafíos nacionales y el trabajo territorial del partido.\n\nChiarella asumió la conducción partidaria el 12 de diciembre de 2025 y actualmente también se desempeña como intendente de la ciudad santafesina de Venado Tuerto.",
+      "guion": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-03T15:25:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T16:31:17.843Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Leonel Chiarella visitó el Comité local de la UCR en Balcarce",
+        "Mantuvo una reunión con el intendente Esteban Reino y dirigentes",
+        "Abordaron temas de actualidad política y el rol territorial del partido"
+      ],
+      "seSabe": [
+        "Leonel Chiarella visitó Balcarce",
+        "El titular de la UCR Nacional se reunió con Esteban Reino y militantes radicales",
+        "El encuentro se realizó en el Comité local de la UCR"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino y referentes locales del radicalismo en el Comité partidario para analizar la agenda política.",
+      "etiquetas": [
+        "Leonel Chiarella",
+        "Esteban Reino",
+        "UCR",
+        "Balcarce",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+          "fecha": "2026-10-03T15:25:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la visita de Leonel Chiarella a Balcarce, su reunión con Esteban Reino y el encuentro con dirigentes radicales en el Comité local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kt5uyq",
+          "titulo": "Esteban Reino destaca el impacto económico tras la reapertura del autódromo",
+          "fecha": "2026-09-30T12:59:12.000Z",
+          "ruta": "/nota/esteban-reino-destaca-el-impacto-economico-tras-la-reapertura-del-1kt5uyq"
+        },
+        {
+          "id": "repaso20260929tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
+          "fecha": "2026-09-29T19:46:57.548Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-corte-de-luz-esteban-reino-y-repaso20260929tarde"
+        },
+        {
+          "id": "tttn9w",
+          "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+          "fecha": "2026-09-28T20:45:35.000Z",
+          "ruta": "/nota/esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo-tttn9w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "leonel-chiarella-visita-balcarce-y-se-reune-con-esteban-reino"
+    },
+    {
       "id": "wjdq6r",
       "titulo": "Dal Poggetto advierte que el país se encarece en moneda extranjera",
       "copete": "La directora de Eco Go señaló que el dólar oficial superó los 1500 pesos y el paralelo ronda los 1560 pesos. Además, advirtió sobre el freno en la actividad y la inflación en dólares.",
@@ -296,7 +413,8 @@
       "guion": "Roban dinero y celulares en una sucursal del supermercado Frutimar",
       "seccion": "Policiales",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/en-solo-tres-meses-la-misma-sucursal-de.html",
       "teniaImagenLaFuente": true,
@@ -721,11 +839,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44983-fuera-de-servicio-los-telefonos-de-la-policia-comunal-y-del-cpr-en-balcarce/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T12:31:09.453Z",
       "sinFecha": true,
       "visto": "2026-10-03T12:31:09.453Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1555,11 +1673,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T21:01:16.545Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:21:19.000Z",
+      "sinFecha": false,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1613,6 +1731,74 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:17:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 83,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
+      ],
+      "seSabe": [
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
+      ],
+      "noConfirmado": [
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
+      ],
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
+      "etiquetas": [
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
+          "oficial": false,
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
+        }
+      ],
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
+      "foto": {
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2486,6 +2672,7 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2497,7 +2684,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 89,
+      "relevancia": 99,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2510,6 +2697,13 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
           "aporte": null
         },
         {
@@ -2667,12 +2861,12 @@
         "Olé",
         "C5N",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "La Voz del Pueblo",
         "Minuto Uno",
         "La Nueva",
         "Clarín",
-        "Ecos Diarios (Necochea)",
-        "La Verdad"
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
       "teniaImagenLaFuente": true,
@@ -3265,8 +3459,10 @@
       "guion": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
+        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
         "El Diario Balcarce"
       ],
@@ -3275,7 +3471,7 @@
       "fecha": "2026-10-02T13:18:34.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T13:31:18.688Z",
-      "relevancia": 69,
+      "relevancia": 89,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -4253,14 +4449,14 @@
     }
   ],
   "secciones": [
+    "Automovilismo",
     "Cultura y agenda",
     "Policiales",
     "Deportes",
+    "Política",
     "Economía",
     "Balcarce",
-    "Automovilismo",
     "Fútbol",
-    "Política",
     "Argentina",
     "Agro"
   ],
@@ -4636,10 +4832,16 @@
   },
   "pendientes": [
     {
-      "id": "1148srf",
+      "id": "36p9t0",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
+    },
+    {
+      "id": "1w06xhx",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
+      "motivo": "necesita ojo humano: \"lesionada\""
     },
     {
       "id": "1v0rcd7",
@@ -4652,6 +4854,18 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "t9c46j",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "13ygrbn",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "fvq4zq",
@@ -4670,18 +4884,6 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "t9c46j",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "13ygrbn",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "4qbbyg",
@@ -4726,6 +4928,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
+    },
+    {
       "id": "1b80a9j",
       "titulo": "Buscan que toda la publicidad creada por Inteligencia…",
       "seccion": "Política",
@@ -4742,13 +4950,7 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herido\""
-    },
-    {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }

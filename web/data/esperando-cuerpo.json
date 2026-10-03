@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03T17:34:20.873Z",
+ "generado": "2026-10-03T17:38:45.074Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -57,12 +57,29 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-2-18-31-0-river-jugara-ante-un-rival-que-tuvo-su-debut-este-ano-en-el-federal-a",
-     "fecha": "2026-10-02T21:47:36.000Z"
+     "fecha": "2026-10-02T22:25:12.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "13f00z",
+   "titulo": "Virginia Aparicio, SPRINT y la investigación que puso a los plaguicidas bajo la lupa",
+   "copete": "El Diario había reflejado en 2023 los resultados de los muestreos realizados en Balcarce y la zona en el marco del proyecto internacional. La investigadora de la EEA Balcarce fue la responsable de la participación argentina. Tres años después, SP",
+   "seccion": "Agro",
+   "fecha": "2026-10-03T12:49:20.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-sprint-y-la-investigacion-que-puso-a-los-plaguicidas-bajo-la-lupa-888",
+     "fecha": "2026-10-03T12:49:20.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 3 problemas (fecha): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 26 palabras",
+   "maximo": 3
   }
  ]
 }

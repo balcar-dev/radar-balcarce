@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T17:34:20.873Z",
- "portada": 53,
- "archivo": 848,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-03T17:38:45.074Z",
+ "portada": 56,
+ "archivo": 849,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-03T17:34:20.894Z",
+  "generado": "2026-10-03T17:38:45.102Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -116,12 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 41,
+    "segundos": 51,
     "notas": [
      {
       "id": "17lpda8",
       "titulo": "Caputo descarta la recesión y asegura que la economía crece",
       "seccion": "Economía"
+     },
+     {
+      "id": "174qhq6",
+      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
+      "seccion": "Balcarce"
      },
      {
       "id": "j3xrez",
@@ -142,19 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 33,
-    "notas": [
-     {
-      "id": "1a6c23d",
-      "titulo": "La Ultra Trail Tierras del Diablo abre los últimos cupos",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "174qhq6",
-      "titulo": "Cortan las líneas fijas de la Policía y del CPR",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
