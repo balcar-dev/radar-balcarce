@@ -211,3 +211,19 @@ test('lo conectado: la nube hace el borrador, el celular lo publica y la web lo 
   // Sin la clave de la búsqueda ninguna otra cosa se rompe: sólo "Hacer la nota" avisa que falta.
   assert.match(leer('ingesta/busqueda.mjs'), /falta TAVILY_API_KEY/);
 });
+
+test('las tareas del panel corren en segundo plano: una franja con el reloj y el paso de GitHub, sin pantallas bloqueadas (3/10)', () => {
+  const app = leer('web/public/panel/app.js');
+  for (const f of ['function empezarTarea(clave, titulo)', 'function terminarTarea(clave)', 'function dibujarProgreso()', 'async function ponerPaso(clave, corrida)']) assert.ok(app.includes(f), f);
+  assert.ok(app.includes('await E.cliente.pasos(corrida.id)'), 'dice en qué paso va la corrida de GitHub');
+  assert.ok(app.includes("Esperando que GitHub tome el pedido"));
+  assert.ok(app.includes("En la cola de GitHub"));
+  assert.ok(app.includes("empezarTarea(clave, 'Investigando la pista')") && app.includes("empezarTarea(clave, 'Escribiendo la nota de la pista')") && app.includes("empezarTarea(clave, 'Volviendo a mirar la pista')"));
+  assert.ok(!app.includes('Buscando las notas de los medios y escribiendo…'), 'ya no hay una ruedita que trabe todo');
+  assert.ok(app.includes("abrirPista: id"), 'al terminar, un aviso con el botón para abrir la pista');
+  assert.ok(app.includes("{ ver: { tipo: 'nota-pista', id }"), 'y para ver el borrador de la nota');
+  assert.match(leer('web/public/panel/index.html'), /<div id="progreso" class="progreso" hidden aria-live="polite"><\/div>/);
+  assert.match(leer('web/public/panel/github.js'), /async function pasos\(idDeCorrida\)/);
+  const pistas = leer('web/public/panel/pistas.js');
+  assert.ok(pistas.includes("enCurso.nota ? 'Escribiendo la nota…' : 'Hacer la nota'"), 'el botón dice que está en curso y no se aprieta dos veces');
+});

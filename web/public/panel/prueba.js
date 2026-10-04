@@ -189,6 +189,8 @@ export function clienteDePrueba() {
       archivos['web/data/celular-borradores.json'].borradores[inputs.id] = { ...(await cerrarParaPrueba(borrador, await llavesDePrueba())), cuando: new Date().toISOString() };
       this.marca = inputs.marca;
     },
+    async pasos() { return [{ name: 'Las notas de la última actualización', status: 'completed' }, { name: 'Escribir con IA', status: 'in_progress' }, { name: 'Guardar el borrador', status: 'queued' }]; },
+    async subirArchivo() { return undefined; },
     async corridas() { return [{ display_title: `Panel · escribir · ${this.marca}`, status: 'completed', conclusion: 'success' }]; },
   };
 }

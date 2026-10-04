@@ -271,6 +271,14 @@
   .barra .logo { font-family: var(--f-titulo); font-size: 20px; font-weight: 800; letter-spacing: -.01em; }
   .barra .logo span { color: #FF6A4D; }
   .barra { border-bottom: 3px solid var(--rojo); }
+  /* Lo que se está haciendo en la nube: una franja fija bajo la barra, con el reloj y el paso. */
+  .cabecera { position: sticky; top: 0; z-index: 7; }
+  .cabecera .barra { position: static; }
+  .progreso { background: var(--ambar-fondo); color: var(--ambar); border-bottom: 1px solid var(--linea); padding: 8px 16px; font-size: 14px; line-height: 1.35; }
+  .progreso .tarea { display: flex; flex-wrap: wrap; gap: 2px 8px; align-items: baseline; padding: 2px 0; }
+  .progreso .reloj { font-variant-numeric: tabular-nums; font-weight: 700; }
+  .progreso .paso { flex-basis: 100%; font-size: 13px; opacity: .9; }
+  .boton[disabled] { opacity: .55; }
   .resultado { text-align: center; padding: 28px 8px 8px; }
   .resultado-icono { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 14px; border-radius: 50%; background: var(--verde-fondo); color: var(--verde); font-size: 42px; font-weight: 700; }
   .resultado h1 { margin-bottom: 10px; }
@@ -285,11 +293,14 @@
 </style>
 </head>
 <body>
+<div class="cabecera">
 <header class="barra">
   <strong class="logo">Radar <span>Balcarce</span></strong><span class="etiqueta">Panel</span>
   <span class="espacio"></span>
   <button type="button" id="recargar" hidden aria-label="Volver a cargar">Recargar</button>
 </header>
+<div id="progreso" class="progreso" hidden aria-live="polite"></div>
+</div>
 <div id="demo" class="demo" hidden>Modo de prueba: nada de lo que hagas acá se guarda.</div>
 <main id="app"><p class="vacio">Cargando…</p></main>
 <nav class="pestanas" id="pestanas" hidden aria-label="Secciones del panel"></nav>

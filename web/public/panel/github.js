@@ -146,6 +146,12 @@ export function crearCliente({ token, fetchFn = (...a) => fetch(...a) }) {
    * Sube un archivo binario (una foto, ya en base64) como un commit. Si ya existía, lo reemplaza. Lo usa la pestaña Fotos para subir una foto
    * desde el celular: queda en web/public/fotos-notas/ y sale en la próxima actualización de la web.
    */
+  /** Los pasos de una corrida (para decir en cuál va): [{ name, status, conclusion }] del primer trabajo. */
+  async function pasos(idDeCorrida) {
+    const j = await (await pedir(`/repos/${REPO}/actions/runs/${idDeCorrida}/jobs`)).json();
+    return j.jobs?.[0]?.steps ?? [];
+  }
+
   async function subirArchivo(ruta, base64, mensaje) {
     for (let intento = 1; ; intento += 1) {
       let sha;
@@ -163,6 +169,7 @@ export function crearCliente({ token, fetchFn = (...a) => fetch(...a) }) {
     leer,
     guardar,
     subirArchivo,
+    pasos,
     /** ¿Esta llave puede escribir en el repositorio? */
     async puedeEscribir() {
       const j = await (await pedir(`/repos/${REPO}`)).json();

@@ -75,21 +75,22 @@ export function htmlDeHistorial(historial = [], { esc, haceCuanto }) {
  * Una pista abierta entera: su estado, cómo fue cambiando, el informe (ya abierto, o null si este celular no lo pudo abrir) y lo que
  * se puede hacer con ella. `apps`: { esc, haceCuanto, chip }.
  */
-export function htmlDeUnaPista({ id, pista, informe }, apps) {
+export function htmlDeUnaPista({ id, pista, informe, enCurso = {} }, apps) {
   const { esc, haceCuanto } = apps;
   const abierta = pista.estado === 'abierta';
   return `<button type="button" class="boton" data-accion="volver-pistas">← Mis pistas</button>
     <h1>${esc(pista.afirmacion || pista.texto)}</h1>
     <p class="est ${abierta ? 'ok' : 'espera'}">${esc(ESTADOS[pista.estado] ?? pista.estado)} · ${esc(cobertura(pista))} · última mirada ${esc(fecha(pista.ultimaRevision, haceCuanto))}</p>
     ${abierta ? '<p class="ayuda">Se vuelve a mirar sola cada tres horas, hasta 14 días después de crearla. Si un medio la empieza a cubrir, te avisa por WhatsApp.</p>' : ''}
+    ${enCurso.nota ? '<p class="est espera">⏳ La nube está escribiendo la nota: mirá la franja de arriba. Cuando termine, te aviso acá.</p>' : ''}${enCurso.mirar ? '<p class="est espera">⏳ La nube está volviendo a mirar esta pista.</p>' : ''}
     ${htmlDeResultado(pista, apps)}
     ${htmlDeSeguimiento(pista.seguimiento, apps)}
     ${htmlDeHistorial(pista.historial, apps)}
     ${informe ? htmlDeInforme(informe, apps) : '<p class="problemas">Este celular todavía no puede abrir el informe: se registró después. Tocá "Volver a mirar" y llega cifrado para este celular.</p>'}
     ${informe?.noLeidos?.length ? `<p class="problemas">No pude leer ${esc(informe.noLeidos.join(', '))}: las redes no dejan leer sus enlaces. Si querés que cuente, pegá el texto.</p>` : ''}
     <div class="botones">
-      <button type="button" class="boton" data-accion="mirar-pista" data-id="${esc(id)}">Volver a mirar ahora</button>
-      <button type="button" class="boton" data-accion="nota-de-pista" data-id="${esc(id)}">Hacer la nota</button>
+      <button type="button" class="boton" data-accion="mirar-pista" data-id="${esc(id)}" ${enCurso.mirar ? 'disabled' : ''}>${enCurso.mirar ? 'Mirando…' : 'Volver a mirar ahora'}</button>
+      <button type="button" class="boton" data-accion="nota-de-pista" data-id="${esc(id)}" ${enCurso.nota ? 'disabled' : ''}>${enCurso.nota ? 'Escribiendo la nota…' : 'Hacer la nota'}</button>
       ${abierta ? `<button type="button" class="boton" data-accion="cerrar-pista" data-id="${esc(id)}">Cerrar: ¿en qué quedó?</button>` : `<button type="button" class="boton" data-accion="reabrir-pista" data-id="${esc(id)}">Reabrir 14 días</button>`}
       ${pista.resultado?.tipo === 'publicada' && pista.resultado.ruta ? `<button type="button" class="boton peligro" data-accion="retirar-nota-pista" data-id="${esc(id)}">Retirar la nota de la web</button>` : ''}
     </div>`;

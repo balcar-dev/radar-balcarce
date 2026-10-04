@@ -94,12 +94,14 @@ const E = {
   // La pestaña Fechas (se carga la primera vez que se abre).
   fechas: null, subfechas: 'piezas', pieza: null, dia: null, borrador: null, filtroEstilo: null, feriado: null,
   // Lo que se está haciendo en la nube sin trabar el panel (la IA escribiendo, una foto sumándose): { [id]: { clase, estado, … } }.
-  trabajos: {}, pistasLibro: null, pistaAbierta: null, banco: null, publicadasTodas: false, scrollLista: null, restaurar: null,
+  trabajos: {}, tareas: {}, relojDeTareas: null, pistasLibro: null, pistaAbierta: null, banco: null, publicadasTodas: false, scrollLista: null, restaurar: null,
 };
 
-function aviso(texto, { conActualizar = false, ms = 7000, ver = null } = {}) {
+function aviso(texto, {
+  conActualizar = false, ms = 7000, ver = null, abrirPista = null,
+} = {}) {
   const a = $('#aviso');
-  a.innerHTML = `${esc(texto)}${conActualizar ? '<br><button type="button" data-accion="actualizar-web">Actualizar la web ahora</button>' : ''}${ver ? `<br><button type="button" data-accion="ver-borrador" data-tipo="${esc(ver.tipo)}" data-id="${esc(ver.id)}">Ver el borrador</button>` : ''}<button type="button" class="cerrar" data-accion="cerrar-aviso" aria-label="Cerrar">✕</button>`;
+  a.innerHTML = `${esc(texto)}${conActualizar ? '<br><button type="button" data-accion="actualizar-web">Actualizar la web ahora</button>' : ''}${ver ? `<br><button type="button" data-accion="ver-borrador" data-tipo="${esc(ver.tipo)}" data-id="${esc(ver.id)}">Ver el borrador</button>` : ''}${abrirPista ? `<br><button type="button" data-accion="abrir-pista" data-id="${esc(abrirPista)}">Abrir la pista</button>` : ''}<button type="button" class="cerrar" data-accion="cerrar-aviso" aria-label="Cerrar">✕</button>`;
   a.hidden = false;
   clearTimeout(aviso.t);
   aviso.t = setTimeout(() => { a.hidden = true; }, conActualizar ? 14000 : ms);
@@ -377,7 +379,7 @@ function vistaLista() {
   else if (E.pestana === 'numeros') vistaNumeros();
   else vistaMas();
   // Un botón para volver a "Más" desde lo que se abre desde ahí (las fechas tienen el suyo cuando hay un día abierto).
-  if (EN_MAS.has(E.pestana) && !E.dia && !E.feriado) app.insertAdjacentHTML('afterbegin', '<button type="button" class="boton volver-mas" data-pestana="mas">← Más</button>');
+  if (EN_MAS.has(E.pestana) && !E.dia && !E.feriado && !E.pieza && !E.pistaAbierta && !E.cerrandoPista && !E.contactoAbierto && !E.nuevoContacto && !E.cola) app.insertAdjacentHTML('afterbegin', '<button type="button" class="boton volver-mas" data-pestana="mas">← Más</button>');
   // Volver a donde se estaba: después de abrir una nota, aprobarla o descartarla, la lista sigue en el mismo lugar.
   if (E.restaurar != null) { const y = E.restaurar; E.restaurar = null; requestAnimationFrame(() => window.scrollTo(0, y)); }
 }
@@ -800,7 +802,7 @@ async function vistaUnaPista() {
   const pista = E.pistasLibro?.pistas?.[id];
   if (!pista) { E.pistaAbierta = null; vistaPistas(); return; }
   const informe = pista.sobre && E.llaves ? await abrir(pista.sobre, E.llaves) : null;
-  app.innerHTML = htmlDeUnaPista({ id, pista, informe }, { esc, haceCuanto, chip, enlaceDeNota: enlaceDeUnaNotaDePista });
+  app.innerHTML = htmlDeUnaPista({ id, pista, informe, enCurso: { nota: !!E.tareas[`nota-${id}`], mirar: !!E.tareas[`mirar-${id}`] } }, { esc, haceCuanto, chip, enlaceDeNota: enlaceDeUnaNotaDePista });
   window.scrollTo(0, 0);
   if (pista.novedad) {
     pista.novedad = false;
@@ -808,12 +810,56 @@ async function vistaUnaPista() {
   }
 }
 
-/** Espera una corrida del workflow con esa marca; devuelve la corrida terminada o lanza si tardó o falló. */
-async function esperarCorrida(workflow, marca, { intentos = 72, quePaso = 'La corrida de GitHub' } = {}) {
+// ------------------------------------------------------------ las tareas en curso (3/10)
+//
+// Hernán: "sigue siendo medio raro el flujo, no se sabe si está haciendo algo o hay que esperar". Todo lo que se le pide a la nube (investigar una pista,
+// hacer la nota, volver a mirar) corre en segundo plano: el panel no se traba con una ruedita; arriba, bajo la barra, queda una franja con lo que se
+// está haciendo, cuánto lleva y en qué paso va GitHub; al terminar, un aviso con el botón para ver el resultado.
+
+/** Registra una tarea y enciende la franja de arriba. */
+function empezarTarea(clave, titulo) {
+  E.tareas[clave] = { titulo, desde: Date.now(), paso: 'Mandando el pedido a GitHub…' };
+  dibujarProgreso();
+  if (!E.relojDeTareas) E.relojDeTareas = setInterval(dibujarProgreso, 1000);
+}
+
+function terminarTarea(clave) {
+  delete E.tareas[clave];
+  dibujarProgreso();
+  if (!Object.keys(E.tareas).length && E.relojDeTareas) { clearInterval(E.relojDeTareas); E.relojDeTareas = null; }
+}
+
+const reloj = (ms) => { const s = Math.max(0, Math.floor(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
+
+/** La franja "⏳ lo que se está haciendo · 0:42 · paso" bajo la barra de arriba. */
+function dibujarProgreso() {
+  const caja = $('#progreso');
+  if (!caja) return;
+  const tareas = Object.values(E.tareas);
+  caja.hidden = !tareas.length;
+  caja.innerHTML = tareas.map((t) => `<div class="tarea"><span class="reloj">⏳ ${reloj(Date.now() - t.desde)}</span> <strong>${esc(t.titulo)}</strong><span class="paso">${esc(t.paso)}</span></div>`).join('');
+}
+
+/** Lo que dice la franja según en qué va la corrida de GitHub: todavía no aparece, en cola o en qué paso va. */
+async function ponerPaso(clave, corrida) {
+  const t = E.tareas[clave];
+  if (!t) return;
+  if (!corrida) { t.paso = 'Esperando que GitHub tome el pedido…'; return; }
+  if (corrida.status === 'queued') { t.paso = 'En la cola de GitHub (puede haber otra tarea antes)…'; return; }
+  try {
+    const pasos = (await E.cliente.pasos(corrida.id)).filter((p) => !/^(Set up job|Complete job|Post |Run actions\/)/.test(p.name));
+    const i = pasos.findIndex((p) => p.status !== 'completed');
+    t.paso = i >= 0 ? `Paso ${i + 1} de ${pasos.length}: ${pasos[i].name}` : 'Terminando…';
+  } catch { t.paso = 'GitHub está trabajando…'; }
+}
+
+/** Espera una corrida del workflow con esa marca; devuelve la corrida terminada o lanza si tardó o falló. Con `tarea`, va contando en la franja. */
+async function esperarCorrida(workflow, marca, { intentos = 72, quePaso = 'La corrida de GitHub', tarea = null } = {}) {
   let corrida = null;
   for (let i = 0; i < intentos; i += 1) {
-    await dormir(5000);
+    await dormir(i === 0 ? 2500 : 4000);
     corrida = corridaConMarca(await E.cliente.corridas(workflow), marca);
+    if (tarea) await ponerPaso(tarea, corrida);
     if (corrida?.status === 'completed') break;
   }
   if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Probá de nuevo en un rato.');
@@ -821,26 +867,29 @@ async function esperarCorrida(workflow, marca, { intentos = 72, quePaso = 'La co
   return corrida;
 }
 
-/** Manda la pista a la nube (workflow "Panel del celular"): se investiga, queda guardada y abierta, y se abre su informe. */
+/** Manda la pista a la nube (workflow "Panel del celular"): se investiga, queda guardada y abierta; mientras, el panel sigue andando. */
 async function investigarPista() {
   const texto = ($('#texto-pista')?.value ?? '').trim();
   if (texto.length < 20) { aviso('Pegá el texto de la pista (al menos una frase).'); return; }
-  E.pista = { texto };
-  $('#pestanas').hidden = true;
-  app.innerHTML = '<div class="girando"></div><p class="vacio">Investigando la pista…<br>Tarda un minuto: GitHub busca qué medios lo cubrieron, compara los títulos y la deja abierta para seguirla.</p>';
   const marca = marcaNueva();
   const id = `pista${marca}`;
+  const clave = `investigar-${id}`;
+  E.pista = null;
+  empezarTarea(clave, 'Investigando la pista');
+  aviso('Pedido enviado: la nube busca qué medios lo cubrieron. Tarda un minuto; mirá la franja de arriba. Podés seguir usando el panel.', { ms: 9000 });
+  vistaPistas();
   try {
     await E.cliente.disparar('panel.yml', { accion: 'pista', id, pedido: texto, marca });
-    await esperarCorrida('panel.yml', marca);
+    await esperarCorrida('panel.yml', marca, { tarea: clave });
     await cargarPistas();
-    if (E.pistasLibro.pistas?.[id]) { E.pista = null; E.pistaAbierta = id; }
-    else aviso('La pista no se pudo investigar (puede tocar un tema que no se investiga desde acá). Probá con más detalle.', { ms: 9000 });
+    terminarTarea(clave);
+    if (E.pistasLibro.pistas?.[id]) aviso('Lista: la pista quedó abierta y se sigue mirando sola.', { abrirPista: id, ms: 30000 });
+    else aviso('La pista no se pudo investigar (puede tocar un tema que no se investiga desde acá). Probá con más detalle.', { ms: 12000 });
   } catch (e) {
-    aviso(explicarError(e), { ms: 9000 });
+    terminarTarea(clave);
+    aviso(`No se pudo investigar: ${explicarError(e)}`, { ms: 12000 });
   }
-  vistaPistas();
-  window.scrollTo(0, 0);
+  if (enUnaLista() && E.pestana === 'pistas') vistaPistas();
 }
 
 /** Las fuentes de las que escribió la IA, para que quien revisa pueda abrirlas (en "Fuentes" de la nota quedan estas mismas). */
@@ -851,50 +900,61 @@ function fuentesDelBorrador(b) {
     <p class="meta">Abrilas y comprobá que lo central esté en ellas. Con una sola fuente, pensalo dos veces.</p></div>`;
 }
 
-/** "Hacer la nota": la nube busca en internet las notas de los medios con su texto y escribe un borrador; se abre acá para revisarlo. */
-async function hacerNotaDePista(id) {
-  $('#pestanas').hidden = true;
-  app.innerHTML = '<div class="girando"></div><p class="vacio">Buscando las notas de los medios y escribiendo…<br>Tarda uno o dos minutos: GitHub busca en internet, lee las fuentes, escribe y verifica contra ellas.</p>';
+/** "Hacer la nota": la nube busca en internet las notas de los medios con su texto y escribe un borrador, en segundo plano; al terminar avisa. */
+function hacerNotaDePista(id) {
+  const clave = `nota-${id}`;
+  if (E.tareas[clave]) { aviso('Ya se está escribiendo la nota de esta pista: mirá la franja de arriba.'); return; }
+  empezarTarea(clave, 'Escribiendo la nota de la pista');
+  aviso('Pedido enviado: la nube busca en internet, lee las fuentes, escribe y verifica. Tarda 1 o 2 minutos; mirá la franja de arriba. Podés seguir usando el panel.', { ms: 9000 });
+  E.pestana = 'pistas';
+  E.pistaAbierta = id;
+  vistaLista();
+  trabajoNotaDePista(id, clave);
+}
+
+async function trabajoNotaDePista(id, clave) {
   const marca = marcaNueva();
   const desde = Date.now();
   try {
     await E.cliente.disparar('panel.yml', { accion: 'nota-pista', id, pedido: '', marca });
-    await esperarCorrida('panel.yml', marca, { intentos: 90 });
+    await esperarCorrida('panel.yml', marca, { intentos: 90, tarea: clave });
     const { json } = await E.cliente.leer(ARCHIVOS.borradores);
     const sobre = json.borradores?.[`nota-${id}`];
     const borrador = sobre && Date.parse(sobre.cuando) >= desde - 120000 ? await abrir(sobre, E.llaves) : null;
     await cargarPistas();
+    terminarTarea(clave);
     if (!borrador) throw new Error('No pude abrir el borrador en este celular. Si recién lo registraste, probá de nuevo.');
-    if (!borrador.texto) {
-      aviso(borrador.motivo ?? 'No se pudo escribir la nota.', { ms: 12000 });
-      E.pistaAbierta = id;
-      vistaPistas();
-      return;
+    if (!borrador.texto) aviso(borrador.motivo ?? 'No se pudo escribir la nota.', { ms: 15000 });
+    else {
+      (E.borradoresIA ??= {})[`nota-${id}`] = { b: borrador, cuando: Date.now() };
+      aviso(borrador.ok ? 'La nota está lista: revisala y publicala.' : 'La nota está escrita, pero el verificador marcó algo: revisala con cuidado.', { ver: { tipo: 'nota-pista', id }, ms: 60000 });
     }
-    (E.borradoresIA ??= {})[`nota-${id}`] = { b: borrador, cuando: Date.now() };
-    vistaBorrador('nota-pista', id, borrador);
   } catch (e) {
-    aviso(explicarError(e), { ms: 9000 });
-    E.pistaAbierta = id;
-    vistaPistas();
+    terminarTarea(clave);
+    aviso(`No se pudo escribir la nota: ${explicarError(e)}`, { ms: 12000 });
   }
+  if (enUnaLista() && E.pestana === 'pistas') vistaPistas();
 }
 
-/** "Volver a mirar ahora": la nube repite las búsquedas de esa pista (workflow "Pistas") y se recarga el libro. */
+/** "Volver a mirar ahora": la nube repite las búsquedas de esa pista (workflow "Pistas"), en segundo plano, y se recarga el libro. */
 async function mirarPista(id) {
-  $('#pestanas').hidden = true;
-  app.innerHTML = '<div class="girando"></div><p class="vacio">Volviendo a mirar…<br>La nube repite las búsquedas: tarda un minuto.</p>';
+  const clave = `mirar-${id}`;
+  if (E.tareas[clave]) { aviso('Ya se está mirando: mirá la franja de arriba.'); return; }
+  empezarTarea(clave, 'Volviendo a mirar la pista');
+  aviso('Pedido enviado: la nube repite las búsquedas. Tarda un minuto; mirá la franja de arriba.', { ms: 8000 });
+  vistaPistas();
   const marca = marcaNueva();
   try {
     await E.cliente.disparar('pistas.yml', { id, marca });
-    await esperarCorrida('pistas.yml', marca, { quePaso: 'La revisión' });
+    await esperarCorrida('pistas.yml', marca, { quePaso: 'La revisión', tarea: clave });
     await cargarPistas();
-    aviso('Listo: se volvió a mirar.');
+    terminarTarea(clave);
+    aviso('Listo: se volvió a mirar la pista.', { abrirPista: id, ms: 20000 });
   } catch (e) {
-    aviso(explicarError(e), { ms: 9000 });
+    terminarTarea(clave);
+    aviso(`No se pudo volver a mirar: ${explicarError(e)}`, { ms: 12000 });
   }
-  E.pistaAbierta = id;
-  vistaPistas();
+  if (enUnaLista() && E.pestana === 'pistas') vistaPistas();
 }
 
 // ------------------------------------------------------------------ la revisión
@@ -1606,7 +1666,7 @@ document.addEventListener('click', async (ev) => {
     if (accion === 'cola-enviado' && !(await anotarContacto(id, { contactado: true }))) return;
     E.cola.indice += 1;
     vistaContactos();
-  } else if (accion === 'abrir-pista') { E.cerrandoPista = null; E.pistaAbierta = id; vistaPistas(); }
+  } else if (accion === 'abrir-pista') { E.pestana = 'pistas'; E.dia = null; E.feriado = null; E.cerrandoPista = null; E.pistaAbierta = id; vistaPistas(); }
   else if (accion === 'volver-pistas') { E.cerrandoPista = null; E.pistaAbierta = null; vistaPistas(); window.scrollTo(0, 0); }
   else if (accion === 'mirar-pista') mirarPista(id);
   else if (accion === 'archivar-pista' || accion === 'reabrir-pista') {
@@ -1691,7 +1751,7 @@ document.addEventListener('click', async (ev) => {
     });
     if (r.ok) pedirALaIA(tipo, id, '', { publicar: true });
   } else if (accion === 'ver-borrador') {
-    const g = E.borradoresIA?.[id];
+    const g = E.borradoresIA?.[tipo === 'nota-pista' ? `nota-${id}` : id];
     if (g) vistaBorrador(tipo, id, g.b);
   } else if (accion === 'borrador-guardado') {
     try {
