@@ -104,3 +104,15 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 - **Notas repetidas del mismo tema** (ej. robo a Frutimar, medios locales que no salen juntos): juntar varias fuentes en una nota mejor; ajustar bastante y/o revisar por bloques las notas grandes. Hay que volver a hablarlo.
 - Fútbol local: buscar una fuente local (Liga Balcarceña, Regional Amateur) entre los medios de acá.
 - Repasar todas las ideas juntos (`IDEAS.md`).
+
+## Para mañana (5/10) — lo que dejamos listo y lo que falta mirar
+
+- **Mirar que ande lo de hoy en la nube**: (1) la nota de Frutimar que esperaba aprobación debería desaparecer sola tras la próxima corrida de la web (regla 101: `candidatasParaAgrupar`); (2) la corrida de "Pistas" ya puede sacar notas solas con 3 o más medios (`panel/pistas-solas.mjs`): ver en el log de la corrida (Actions → Pistas) las líneas "salió sola" / "no salió, motivo"; (3) el primer "Participá" del 5/10; (4) F1 (carrera del domingo) y fútbol: Hernán los revisa.
+- **Preguntar a Hernán antes de tocar** (la lista roja no se toca sin preguntar): `palabraDelicada` (`ingesta/pistas.mjs`) no frena frases como "una menor de 14 años fue abusada" ni "violaron a una nena": sólo tiene "abuso sexual", "menor de edad", etc. Para las pistas que salen solas conviene ampliarla (menor/nena/nene/chico + abuso/violación). Mientras tanto el semáforo rojo del texto escrito (`semaforoDeLaReescritura`) es la segunda barrera.
+- **Las notas repetidas del mismo tema** (Frutimar): hablarlo con calma. Lo que ya hace falta decidir: juntar versiones en una nota mejor (que se actualice cuando suma un medio), y mostrar los temas grandes por bloques en el panel. Primero mirar en el archivo de la semana cuántos grupos de repetidas hay por día.
+- **Fútbol local**: buscar una fuente local (Liga Balcarceña, Regional Amateur) entre los medios de acá.
+- **Contactos**: seguir buscando y sumando; en unas semanas empezar a mandar mensajes; pensar el enfoque comercial que a la vez dé a conocer el medio.
+- **Vercel**: borrarlo (lo hace Hernán desde vercel.com) y limpiar el DNS.
+- **AdSense**: se registra con `radarbalcarce@gmail.com`.
+- **Repasar todas las ideas juntos** (`IDEAS.md`).
+- Reiniciar el panel de la PC para que use el respaldo en OneDrive (`RESPALDO_CARPETA`).

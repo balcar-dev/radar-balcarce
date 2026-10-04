@@ -204,3 +204,9 @@ fuente.
 3. **Corregir rápido y a la vista.** Un medio que corrige gana más de lo que
    pierde.
 4. **Que el sitio cargue rápido**: no arruinarlo con banners pesados.
+
+## Ideas del 4/10 (de la charla con Hernán)
+
+50. **Juntar varias versiones del mismo hecho en una sola nota mejor** (caso Frutimar: los medios locales no salen todos juntos). Que la nota publicada se actualice cuando suma un medio nuevo, y que el panel muestre los temas grandes por bloques para revisarlos de una vez.
+51. **Enfoque comercial y de difusión con los contactos**: cuando haya una buena agenda de instituciones y comercios, un primer mensaje que ofrezca algo útil (que nos mande su agenda, su aviso) y de paso presente el medio.
+52. **Fútbol local** desde los medios de acá (Liga Balcarceña, Regional Amateur), con el mismo trato para todos los clubes.

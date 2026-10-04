@@ -48,3 +48,20 @@ test('con avisos del verificador, pocos medios o cuerpo corto no sale: la pista 
     assert.equal(r.libro.pistas.p1.estado, 'abierta');
   }
 });
+
+test('una pista que toca menores o víctimas nunca sale sola, aunque la cubran muchos medios (regla del semáforo rojo)', async () => {
+  const delicado = { pistas: { x: { estado: 'abierta', total: 8, afirmacion: 'Abuso sexual de un menor en el pueblo', texto: 'Abuso sexual de un menor en el pueblo', consultas: ['abuso sexual menor'] } } };
+  let buscó = false;
+  const { escribirNotaDePista } = await import('../panel/nota-de-pista.mjs');
+  const r = await sacarPistasSolas({ libro: delicado, escribir: (p, o) => escribirNotaDePista(p, { ...o, buscar: async () => { buscó = true; return []; } }) });
+  assert.deepEqual(r.salieron, []);
+  assert.equal(buscó, false, 'ni siquiera se busca');
+  assert.equal(r.libro.pistas.x.estado, 'abierta');
+});
+
+test('la corrida de pistas sólo intenta salir sola con la clave de búsqueda y no cuando se mira una sola pista', async () => {
+  const fs = await import('node:fs');
+  const t = fs.readFileSync(new URL('../panel/revisar-pistas.mjs', import.meta.url), 'utf8');
+  assert.match(t, /!solo && process\.env\.TAVILY_API_KEY/);
+  assert.match(fs.readFileSync(new URL('../.github/workflows/pistas.yml', import.meta.url), 'utf8'), /TAVILY_API_KEY/);
+});
