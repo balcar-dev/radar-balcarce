@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T11:32:39.667Z",
- "portada": 35,
+ "generado": "2026-10-04T12:01:44.816Z",
+ "portada": 33,
  "archivo": 875,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-04T11:32:39.690Z",
+  "generado": "2026-10-04T12:01:44.842Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -85,13 +85,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "5skk4j",
-      "titulo": "Max Verstappen gana el Gran Premio de Bahréin y Franco Colapinto finaliza decimotercero",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "v0xov9",
       "titulo": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
@@ -106,6 +101,11 @@
       "id": "1l5htn5",
       "titulo": "Vecinas renuevan espacios públicos y plazas",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "16ml7pn",
+      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,19 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 40,
-    "notas": [
-     {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "15z6cto",
-      "titulo": "La Generación 1971 recorre la Facultad de Ciencias Agrarias",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
