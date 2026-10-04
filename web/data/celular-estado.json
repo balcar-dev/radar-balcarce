@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T12:01:44.816Z",
- "portada": 33,
+ "generado": "2026-10-04T12:31:42.883Z",
+ "portada": 31,
  "archivo": 875,
- "esperandoCuerpo": 0,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-04T12:01:44.842Z",
+  "generado": "2026-10-04T12:31:42.911Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-04T12:04:34.965Z"
    },
    {
     "nombre": "noticia1",
@@ -85,12 +85,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 53,
     "notas": [
      {
       "id": "v0xov9",
       "titulo": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "173wsz3",
+      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
+      "seccion": "Balcarce"
      },
      {
       "id": "158gkt0",
@@ -100,11 +105,6 @@
      {
       "id": "1l5htn5",
       "titulo": "Vecinas renuevan espacios públicos y plazas",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
       "seccion": "Balcarce"
      }
     ]
