@@ -42,6 +42,8 @@ const COLOR = {
 };
 const chip = (s) => (s ? `<span class="chip" style="background:var(--s-${COLOR[s] ?? 'pais'})">${esc(s)}</span>` : '');
 const GUARDADO = 'radar-panel';
+/** Los archivos del panel (los mismos que guarda sw.js): "Actualizar el panel" los vuelve a bajar. */
+const ARCHIVOS_DEL_PANEL = ['app.js', 'github.js', 'cifrado.js', 'textos.js', 'fechas.js', 'numeros.js', 'redes-estado.js', 'revision.js', 'pistas.js', 'contactos.js', 'fotos.js', 'index.html'].map((a) => `/panel/${a}`);
 const DEMO = new URLSearchParams(location.search).has('demo');
 const VOCES = { locutora: 'la locutora', locutor: 'el locutor' };
 const enlaceDeNota = (n) => `https://radarbalcarce.com/nota/${n.slug ? `${n.slug}-${n.id}` : n.id}`;
@@ -1230,6 +1232,7 @@ function vistaMas() {
     <div class="botones">
       <button type="button" class="boton ancho" data-accion="actualizar-web">Actualizar la web ahora</button>
       <a class="boton ancho enlace-boton" href="https://radarbalcarce.com" target="_blank" rel="noopener">Abrir la web</a>
+      <button type="button" class="boton ancho" data-accion="actualizar-panel">Actualizar el panel (si algo se ve viejo)</button>
     </div>
     <p class="estado">Entraste como <strong>${esc(a?.nombre ?? E.nombre)}</strong>. Cada decisión queda en GitHub con tu nombre.</p>
     <h2>Cómo funciona</h2>
@@ -1637,7 +1640,16 @@ document.addEventListener('click', async (ev) => {
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
   if (accion === 'cerrar-aviso') $('#aviso').hidden = true;
   else if (accion === 'investigar-pista') investigarPista();
-  else if (accion === 'abrir-contacto') { E.contactoAbierto = id; vistaContactos(); }
+  else if (accion === 'actualizar-panel') {
+    // Baja de nuevo todos los archivos del panel saltéandose la caché del navegador (4/10: Cloudflare los deja 4 horas y el panel se veía viejo) y recarga.
+    aviso('Actualizando el panel…');
+    try {
+      await Promise.all(['/panel/', ...ARCHIVOS_DEL_PANEL].map((a) => fetch(a, { cache: 'reload' })));
+      for (const k of await caches.keys()) await caches.delete(k);
+      for (const r of await navigator.serviceWorker.getRegistrations()) await r.update();
+    } catch { /* se recarga igual */ }
+    location.reload();
+  } else if (accion === 'abrir-contacto') { E.contactoAbierto = id; vistaContactos(); }
   else if (accion === 'volver-contactos') { E.contactoAbierto = null; E.nuevoContacto = false; E.cola = null; vistaContactos(); window.scrollTo(0, 0); }
   else if (accion === 'filtro-contactos') { E.filtroContactos = el.dataset.filtro; vistaContactos(); }
   else if (accion === 'nuevo-contacto') { E.nuevoContacto = true; vistaContactos(); window.scrollTo(0, 0); }

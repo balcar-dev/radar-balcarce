@@ -128,7 +128,13 @@ export function crearCliente({ token, fetchFn = (...a) => fetch(...a) }) {
    */
   async function guardar(ruta, cambiar, mensaje) {
     for (let intento = 1; ; intento += 1) {
-      const { json, sha } = await leer(ruta);
+      // Si el archivo todavía no existe (por ejemplo, el primer día que se aprueba una efeméride), se crea: antes daba "GitHub no encontró el archivo" (4/10).
+      let leido;
+      try { leido = await leer(ruta); } catch (e) {
+        if (!(e instanceof ErrorDeGitHub && e.estado === 404)) throw e;
+        leido = { json: {}, sha: undefined };
+      }
+      const { json, sha } = leido;
       const nuevo = cambiar(json) ?? json;
       try {
         await pedir(`/repos/${REPO}/contents/${ruta}`, {
