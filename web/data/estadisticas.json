@@ -818,6 +818,53 @@
         "vistas": 91,
         "interacciones": 4
       }
+    },
+    {
+      "cuando": "2026-10-04T12:00:20.303Z",
+      "web": {
+        "u12": {
+          "visitas": 53,
+          "vistas": 84
+        },
+        "a12": {
+          "visitas": 42,
+          "vistas": 76
+        },
+        "u24": {
+          "visitas": 95,
+          "vistas": 160
+        },
+        "a24": {
+          "visitas": 51,
+          "vistas": 124
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 39
+          },
+          {
+            "camino": "/nota/la-liga-balcarcena-suspende-toda-la-fecha-del-futbol-local-1gq0pia",
+            "vistas": 13
+          },
+          {
+            "camino": "/nota/vecinas-renuevan-espacios-publicos-y-plazas-1l5htn5",
+            "vistas": 11
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 5,
+        "vistas": 951,
+        "interacciones": 2
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 70,
+        "alcance": 7,
+        "vistas": 7,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -1170,42 +1217,128 @@
         2,
         22,
         12,
+        21,
         0,
-        0,
-        0
+        14
       ],
-      "visitas": 43,
-      "vistas": 81,
+      "visitas": 56,
+      "vistas": 116,
       "referentes": {
-        "facebook.com": 38,
-        "directo": 5
+        "facebook.com": 46,
+        "directo": 10
       },
       "paises": {
-        "US": 48,
-        "AR": 22,
-        "IE": 11
+        "US": 62,
+        "AR": 41,
+        "IE": 13
       },
       "dispositivos": {
-        "mobile": 53,
-        "desktop": 28
+        "mobile": 82,
+        "desktop": 34
       },
       "notas": {
         "1gq0pia": 13,
         "1l5htn5": 11,
+        "1a6c23d": 5,
         "1gdngfe": 5,
+        "ule632": 5,
         "j3xrez": 4,
         "sty1jd": 4,
         "17lpda8": 4,
+        "100y8h1": 4,
         "174qhq6": 3,
         "16ml7pn": 3,
         "2qj2kn": 3,
+        "f1parrilla2026r16": 2,
+        "f1horarios2026r16": 2,
         "1xritdf": 2,
         "n09ogo": 2,
         "15ikzjc": 2,
         "repaso20261003tarde": 1
       },
       "paginas": {
-        "/": 24
+        "/": 35,
+        "/seccion/tecnologia": 4,
+        "/seccion/argentina": 2
+      }
+    },
+    "2026-10-04": {
+      "referentes": {
+        "directo": 40
+      },
+      "notas": {
+        "5skk4j": 3,
+        "np9nneou5k": 2,
+        "8cknxd": 2,
+        "1nz8gwo": 2,
+        "17lpda8": 2,
+        "ogixfx": 2,
+        "repaso20261003manana": 1,
+        "ule632": 1,
+        "f1parrilla2026r16": 1,
+        "1t477sv": 1,
+        "repaso20261003tarde": 1,
+        "1a6c23d": 1,
+        "3cr087": 1,
+        "wjdq6r": 1,
+        "1n4tus5": 1,
+        "futbolresultadosliga20261002": 1,
+        "ayjy85": 1,
+        "15ikzjc": 1,
+        "nm28kh": 1
+      },
+      "paginas": {
+        "/": 9,
+        "/seccion/politica": 2,
+        "/seccion/argentina": 1,
+        "/seccion/economia": 1,
+        "/seccion/cultura": 1,
+        "/farmacias": 1,
+        "/seccion/futbol": 1,
+        "/seccion/balcarce": 1,
+        "/clima": 1,
+        "/seccion/policiales": 1,
+        "/seccion/tecnologia": 1,
+        "/seccion/automovilismo": 1,
+        "/agenda": 1,
+        "/agenda/caminata-rosa-muni24072": 1
+      },
+      "paises": {
+        "CN": 38,
+        "AR": 7,
+        "US": 4
+      },
+      "horas": [
+        4,
+        0,
+        38,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visitas": 40,
+      "vistas": 49,
+      "dispositivos": {
+        "desktop": 42,
+        "mobile": 7
       }
     }
   }
