@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T08:01:27.063Z",
- "portada": 39,
- "archivo": 872,
+ "generado": "2026-10-04T08:20:11.444Z",
+ "portada": 37,
+ "archivo": 873,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-04T08:01:27.089Z",
+  "generado": "2026-10-04T08:20:11.469Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -88,11 +88,6 @@
     "segundos": 46,
     "notas": [
      {
-      "id": "173wsz3",
-      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "nm28kh",
       "titulo": "Lionel Scaloni palpita la despedida de Lionel Messi de la selección",
       "seccion": "Fútbol"
@@ -103,9 +98,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "3cr087",
-      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
-      "seccion": "Deportes"
+      "id": "1l5htn5",
+      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "16ml7pn",
+      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,19 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 42,
-    "notas": [
-     {
-      "id": "1l5htn5",
-      "titulo": "Vecinas renuevan espacios públicos y plazas",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "15z6cto",
-      "titulo": "La Generación 1971 recorre la Facultad de Ciencias Agrarias",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -137,8 +126,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 39,
+    "notas": [
+     {
+      "id": "15z6cto",
+      "titulo": "La Generación 1971 recorre la Facultad de Ciencias Agrarias",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "3cr087",
+      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
+      "seccion": "Deportes"
+     }
+    ]
    }
   ],
   "facebook": {
