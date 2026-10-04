@@ -818,7 +818,219 @@
   }
  },
  "resultado": null,
- "clasificacion": null,
+ "clasificacion": {
+  "temporada": 2026,
+  "ronda": 16,
+  "filas": [
+   {
+    "posicion": 1,
+    "piloto": "Andrea Kimi Antonelli",
+    "colapinto": false,
+    "equipo": "Mercedes",
+    "numero": "12",
+    "puntos": 302,
+    "victorias": 8
+   },
+   {
+    "posicion": 2,
+    "piloto": "George Russell",
+    "colapinto": false,
+    "equipo": "Mercedes",
+    "numero": "63",
+    "puntos": 236,
+    "victorias": 3
+   },
+   {
+    "posicion": 3,
+    "piloto": "Lewis Hamilton",
+    "colapinto": false,
+    "equipo": "Ferrari",
+    "numero": "44",
+    "puntos": 199,
+    "victorias": 1
+   },
+   {
+    "posicion": 4,
+    "piloto": "Lando Norris",
+    "colapinto": false,
+    "equipo": "McLaren",
+    "numero": "1",
+    "puntos": 186,
+    "victorias": 2
+   },
+   {
+    "posicion": 5,
+    "piloto": "Charles Leclerc",
+    "colapinto": false,
+    "equipo": "Ferrari",
+    "numero": "16",
+    "puntos": 179,
+    "victorias": 1
+   },
+   {
+    "posicion": 6,
+    "piloto": "Max Verstappen",
+    "colapinto": false,
+    "equipo": "Red Bull",
+    "numero": "3",
+    "puntos": 163,
+    "victorias": 0
+   },
+   {
+    "posicion": 7,
+    "piloto": "Oscar Piastri",
+    "colapinto": false,
+    "equipo": "McLaren",
+    "numero": "81",
+    "puntos": 120,
+    "victorias": 0
+   },
+   {
+    "posicion": 8,
+    "piloto": "Isack Hadjar",
+    "colapinto": false,
+    "equipo": "Red Bull",
+    "numero": "6",
+    "puntos": 86,
+    "victorias": 0
+   },
+   {
+    "posicion": 9,
+    "piloto": "Liam Lawson",
+    "colapinto": false,
+    "equipo": "Red Bull",
+    "numero": "30",
+    "puntos": 59,
+    "victorias": 0
+   },
+   {
+    "posicion": 10,
+    "piloto": "Pierre Gasly",
+    "colapinto": false,
+    "equipo": "Alpine F1 Team",
+    "numero": "10",
+    "puntos": 41,
+    "victorias": 0
+   },
+   {
+    "posicion": 11,
+    "piloto": "Arvid Lindblad",
+    "colapinto": false,
+    "equipo": "RB F1 Team",
+    "numero": "41",
+    "puntos": 37,
+    "victorias": 0
+   },
+   {
+    "posicion": 12,
+    "piloto": "Franco Colapinto",
+    "colapinto": true,
+    "equipo": "Alpine F1 Team",
+    "numero": "43",
+    "puntos": 27,
+    "victorias": 0
+   },
+   {
+    "posicion": 13,
+    "piloto": "Oliver Bearman",
+    "colapinto": false,
+    "equipo": "Haas F1 Team",
+    "numero": "87",
+    "puntos": 20,
+    "victorias": 0
+   },
+   {
+    "posicion": 14,
+    "piloto": "Gabriel Bortoleto",
+    "colapinto": false,
+    "equipo": "Audi",
+    "numero": "5",
+    "puntos": 10,
+    "victorias": 0
+   },
+   {
+    "posicion": 15,
+    "piloto": "Nico Hülkenberg",
+    "colapinto": false,
+    "equipo": "Audi",
+    "numero": "27",
+    "puntos": 7,
+    "victorias": 0
+   },
+   {
+    "posicion": 16,
+    "piloto": "Esteban Ocon",
+    "colapinto": false,
+    "equipo": "Haas F1 Team",
+    "numero": "31",
+    "puntos": 7,
+    "victorias": 0
+   },
+   {
+    "posicion": 17,
+    "piloto": "Carlos Sainz",
+    "colapinto": false,
+    "equipo": "Williams",
+    "numero": "55",
+    "puntos": 7,
+    "victorias": 0
+   },
+   {
+    "posicion": 18,
+    "piloto": "Alexander Albon",
+    "colapinto": false,
+    "equipo": "Williams",
+    "numero": "23",
+    "puntos": 5,
+    "victorias": 0
+   },
+   {
+    "posicion": 19,
+    "piloto": "Fernando Alonso",
+    "colapinto": false,
+    "equipo": "Aston Martin",
+    "numero": "14",
+    "puntos": 3,
+    "victorias": 0
+   },
+   {
+    "posicion": 20,
+    "piloto": "Yuki Tsunoda",
+    "colapinto": false,
+    "equipo": "RB F1 Team",
+    "numero": "22",
+    "puntos": 1,
+    "victorias": 0
+   },
+   {
+    "posicion": 21,
+    "piloto": "Lance Stroll",
+    "colapinto": false,
+    "equipo": "Aston Martin",
+    "numero": "18",
+    "puntos": 0,
+    "victorias": 0
+   },
+   {
+    "posicion": 22,
+    "piloto": "Valtteri Bottas",
+    "colapinto": false,
+    "equipo": "Cadillac F1 Team",
+    "numero": "77",
+    "puntos": 0,
+    "victorias": 0
+   },
+   {
+    "posicion": 23,
+    "piloto": "Sergio Pérez",
+    "colapinto": false,
+    "equipo": "Cadillac F1 Team",
+    "numero": "11",
+    "puntos": 0,
+    "victorias": 0
+   }
+  ]
+ },
  "parrilla": {
   "temporada": 2026,
   "ronda": 16,
