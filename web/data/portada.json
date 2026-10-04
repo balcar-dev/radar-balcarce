@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T02:14:29.458Z",
+  "generado": "2026-10-04T02:20:00.789Z",
   "notas": [
     {
       "id": "15z6cto",
@@ -250,6 +250,7 @@
       "seccion": "Fútbol",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)",
         "Acción 5 (Balcarce)",
         "Diario La Vanguardia"
       ],
@@ -579,12 +580,13 @@
       "seccion": "Automovilismo",
       "medios": [
         "Ecos Diarios (Necochea)",
+        "Campeones",
         "Página/12",
         "TyC Sports",
         "La Brújula 24",
-        "Campeones",
         "Solotc",
-        "Olé"
+        "Olé",
+        "Córdoba Competición"
       ],
       "enlace": "https://campeones.com.ar/tc-en-san-nicolas-fain-logro-su-1a-pole-y-corto-una-sequia-de-3-anos-para-torino/",
       "teniaImagenLaFuente": true,
@@ -1069,7 +1071,7 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarial y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariall y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció este sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
@@ -1245,6 +1247,90 @@
       }
     },
     {
+      "id": "1oy5t8d",
+      "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "copete": "El titular de la UCR Nacional mantuvo un encuentro con el intendente y referentes locales en el Comité partidario. Conversaron sobre la agenda política y la presencia en el territorio.",
+      "cuerpo": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino, funcionarios municipales y militantes en el Comité local de la Unión Cívica Radical, según informó un medio local. Durante el encuentro, los dirigentes conversaron sobre la actualidad política, los desafíos nacionales y el trabajo territorial del partido.\n\nChiarella asumió la conducción partidaria el 12 de diciembre de 2025 y actualmente también se desempeña como intendente de la ciudad santafesina de Venado Tuerto.",
+      "guion": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T15:25:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T16:31:17.843Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Leonel Chiarella visitó el Comité local de la UCR en Balcarce",
+        "Mantuvo una reunión con el intendente Esteban Reino y dirigentes",
+        "Abordaron temas de actualidad política y el rol territorial del partido"
+      ],
+      "seSabe": [
+        "Leonel Chiarella visitó Balcarce",
+        "El titular de la UCR Nacional se reunió con Esteban Reino y militantes radicales",
+        "El encuentro se realizó en el Comité local de la UCR"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino y referentes locales del radicalismo en el Comité partidario para analizar la agenda política.",
+      "etiquetas": [
+        "Leonel Chiarella",
+        "Esteban Reino",
+        "UCR",
+        "Balcarce",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+          "fecha": "2026-10-03T15:25:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la visita de Leonel Chiarella a Balcarce, su reunión con Esteban Reino y el encuentro con dirigentes radicales en el Comité local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kt5uyq",
+          "titulo": "Esteban Reino destaca el impacto económico tras la reapertura del autódromo",
+          "fecha": "2026-09-30T12:59:12.000Z",
+          "ruta": "/nota/esteban-reino-destaca-el-impacto-economico-tras-la-reapertura-del-1kt5uyq"
+        },
+        {
+          "id": "repaso20260929tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
+          "fecha": "2026-09-29T19:46:57.548Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-corte-de-luz-esteban-reino-y-repaso20260929tarde"
+        },
+        {
+          "id": "tttn9w",
+          "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+          "fecha": "2026-09-28T20:45:35.000Z",
+          "ruta": "/nota/esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo-tttn9w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "leonel-chiarella-visita-balcarce-y-se-reune-con-esteban-reino",
+      "foto": {
+        "archivo": "fotos-notas/1oy5t8d.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "wjdq6r",
       "titulo": "Dal Poggetto advierte que el país se encarece en moneda extranjera",
       "copete": "La directora de Eco Go señaló que el dólar oficial superó los 1500 pesos y el paralelo ronda los 1560 pesos. Además, advirtió sobre el freno en la actividad y la inflación en dólares.",
@@ -1332,7 +1418,8 @@
       "guion": "Roban dinero y celulares en una sucursal del supermercado Frutimar",
       "seccion": "Policiales",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/en-solo-tres-meses-la-misma-sucursal-de.html",
       "teniaImagenLaFuente": true,
@@ -1455,6 +1542,7 @@
       "guion": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-sabado-se-realizara-una-charla-de-bomberos-sobre-la-experiencia-tras-el-terremoto-en-venezuela",
@@ -1462,13 +1550,11 @@
       "fecha": "2026-10-03T13:15:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T13:31:26.513Z",
-      "relevancia": 67,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "bomberos"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "Charla abierta este sábado desde las 17 en el cuartel local",
@@ -1820,6 +1906,119 @@
       "foto": {
         "archivo": "fotos-notas/17lpda8.jpg",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "fjrow3",
+      "titulo": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
+      "copete": "El piloto argentino de Alpine parte el domingo desde el puesto 21 en el circuito tras recibir una penalización de 15 lugares en la grilla.",
+      "cuerpo": "El piloto argentino Franco Colapinto afronta el domingo un desafío en el Gran Premio de Baréin 2026.\n\nA pesar de partir desde la parte posterior, el corredor se mostró optimista luego de guardar juegos de neumáticos y contar con un motor nuevo para la competencia. En declaraciones brindadas a la prensa tras la clasificación del sábado, explicó que la traza cuenta con frenadas marcadas y rectas extensas que favorecen los sobrepasos durante la prueba.\n\nLa grilla de partida tiene a Max Verstappen de Red Bull en la primera colocación.",
+      "guion": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Bolavip Argentina",
+        "0223 (Mar del Plata)",
+        "La Brújula 24"
+      ],
+      "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T10:28:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T15:01:37.047Z",
+      "relevancia": 70,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto compite este domingo en el Gran Premio de Baréin",
+        "El argentino penalizó quince puestos y larga desde el vigesimoprimer lugar",
+        "El piloto guardó juegos de neumáticos y cuenta con motor nuevo para avanzar",
+        "Max Verstappen encabeza la grilla de partida con Red Bull"
+      ],
+      "seSabe": [
+        "Franco Colapinto compite este domingo en el Gran Premio de Baréin 2026",
+        "El piloto argentino de Alpine larga desde el puesto 21",
+        "La penalización acumulada fue de quince posiciones",
+        "El corredor guardó diferentes compuestos de neumáticos para la estrategia",
+        "Max Verstappen parte desde la pole position con Red Bull"
+      ],
+      "noConfirmado": [
+        "El rendimiento final del monoplaza durante las vueltas de la competencia"
+      ],
+      "textoRedes": "Franco Colapinto compite este domingo en el Gran Premio de Baréin desde el vigesimoprimer puesto. El piloto argentino sufrió una penalización de quince lugares, pero confía en avanzar con estrategia de neumáticos y motor nuevo.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Barein"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
+          "fecha": "2026-10-03T10:28:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló la penalización, la estrategia de neumáticos y las declaraciones del piloto"
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-3-8-57-0-franco-colapinto-penultimo-en-barein-pero-optimista-la-razon-por-la-que-confia-en-remontar",
+          "fecha": "2026-10-03T12:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el puesto de partida y la sanción de quince lugares"
+        },
+        {
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/03/colapinto-optimista-pese-a-largar-21-en-el-gp-de-malasia-se-puede-remontar-n523603/",
+          "fecha": "2026-10-03T11:22:44.000Z",
+          "oficial": false,
+          "aporte": "Señaló el trabajo previo realizado y el provecho de las rectas del circuito"
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/03/con-confianza-en-el-ritmo-el-mensaje-de-franco-colapinto-en-la-previa-a-la-carrera-del-gp-de-bahrein/",
+          "fecha": "2026-10-03T16:52:48.000Z",
+          "oficial": false,
+          "aporte": "Detalló la sanción de 15 posiciones, el puesto 15 en la clasificación y las declaraciones completas del piloto."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/el-mensaje-franco-colapinto-la-previa-la-carrera-del-gp-bahrein-con-confianza-el-ritmo-n6329742",
+          "fecha": "2026-10-03T18:51:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la ciudad de origen del piloto y su objetivo de buscar un buen domingo en la carrera."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1y5m4fa",
+          "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
+          "fecha": "2026-09-29T20:00:31.000Z",
+          "ruta": "/nota/franco-colapinto-larga-penultimo-en-bahrein-y-apuesta-a-remontar-1y5m4fa"
+        },
+        {
+          "id": "ei8drx",
+          "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
+          "fecha": "2026-10-03T01:00:00.000Z",
+          "ruta": "/nota/max-verstappen-consigue-la-pole-position-y-franco-colapinto-larga-ei8drx"
+        },
+        {
+          "id": "1ftwyte",
+          "titulo": "Franco Colapinto penaliza quince puestos en la grilla por un cambio de motor",
+          "fecha": "2026-10-02T18:03:01.000Z",
+          "ruta": "/nota/franco-colapinto-penaliza-quince-puestos-en-la-grilla-por-un-cambio-1ftwyte"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-busca-la-remontada-en-el-gran-premio-de-barein",
+      "foto": {
+        "archivo": "fotos-notas/fjrow3.jpg",
+        "credito": "Foto: 0223 (Mar del Plata)"
       }
     },
     {
@@ -2530,11 +2729,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T21:01:16.545Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:21:19.000Z",
+      "sinFecha": false,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2588,6 +2787,74 @@
       "foto": {
         "archivo": "fotos-notas/3cr087.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:17:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
+      ],
+      "seSabe": [
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
+      ],
+      "noConfirmado": [
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
+      ],
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
+      "etiquetas": [
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
+          "oficial": false,
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
+        }
+      ],
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
+      "foto": {
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -3155,14 +3422,15 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Agrositio"
       ],
       "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:03:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 28,
+      "relevancia": 38,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3235,6 +3503,7 @@
       "guion": "Estudiantes de la Escuela de Arte entregan una obra al Municipio.",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -3246,7 +3515,7 @@
       "fecha": "2026-10-02T17:02:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T18:01:15.506Z",
-      "relevancia": 89,
+      "relevancia": 99,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3259,6 +3528,13 @@
           "enlace": "https://balcarce.gob.ar/2026/10/02/la-escuela-de-arte-entrego-al-municipio-una-obra-de-grabando-la-memoria-de-balcarce/",
           "fecha": "2026-10-02T17:02:27.000Z",
           "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnas-de-la-escuela-de-arte-entregaron-una-obra-que-recupera-la-memoria-de-balcarce/",
+          "fecha": "2026-10-02T20:21:48.000Z",
+          "oficial": false,
           "aporte": null
         },
         {
@@ -3399,6 +3675,115 @@
         "archivo": "fotos-notas/1pq0gh4.jpg",
         "credito": "Foto: Infobae"
       }
+    },
+    {
+      "id": "1gofphd",
+      "titulo": "Luis Caputo pide confianza a los empresarios y descarta devaluar",
+      "copete": "El ministro de Economía expuso de forma virtual en el Coloquio de IDEA. Atribuyó el incremento del riesgo país a factores externos y electorales.",
+      "cuerpo": "El ministro de Economía, Luis Caputo, aseguró el viernes 2 de octubre que el incremento del riesgo país se debió a un contexto internacional adverso y al temor ante los comicios previstos para 2027. Durante su participación virtual en el Coloquio de IDEA desde París, el funcionario sostuvo que la variable se ubica en los 600 puntos y pidió un voto de confianza a los empresarios del sector privado.\n\nEl titular del Palacio de Hacienda ratificó el rumbo económico, descartó una devaluación y adelantó que continuarán con la baja de impuestos y regulaciones. Como se había informado el 1 de octubre, el funcionario ya había expuesto ante inversores en la Argentina Week sobre la eliminación del déficit fiscal.",
+      "guion": "Luis Caputo pide confianza a los empresarios y descarta devaluar",
+      "seccion": "Economía",
+      "medios": [
+        "LU9 Mar del Plata",
+        "Ámbito",
+        "C5N",
+        "Noticias Argentinas (NA)",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Qué Digital",
+        "Punto Noticias",
+        "La Nueva",
+        "Crónica",
+        "0223 (Mar del Plata)",
+        "La Verdad",
+        "Ecos Diarios (Necochea)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al--temor-a-volver-al-infierno-_a6abfdbe3f814a2817c8806de",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T16:45:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-02T18:01:15.506Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Luis Caputo participó de manera virtual en el Coloquio de IDEA.",
+        "Atribuyó el riesgo país a un shock externo y al temor electoral.",
+        "El ministro ratificó el rumbo económico y descartó una devaluación."
+      ],
+      "seSabe": [
+        "El ministro de Economía, Luis Caputo, participó de forma virtual en el Coloquio de IDEA 2026.",
+        "Atribuyó la suba del riesgo país a un shock externo y al temor de volver al pasado ante las elecciones de 2027.",
+        "Precisó que el indicador se encuentra en los 600 puntos.",
+        "Ratificó que no habrá devaluación y prometió continuar con la reducción de impuestos."
+      ],
+      "textoRedes": "Luis Caputo pidió confianza a los empresarios durante su participación virtual en el Coloquio de IDEA y atribuyó la suba del riesgo país a un shock externo y al contexto electoral.",
+      "etiquetas": [
+        "Luis Caputo",
+        "Economia",
+        "Coloquio de IDEA",
+        "Riesgo pais"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al--temor-a-volver-al-infierno-_a6abfdbe3f814a2817c8806de",
+          "fecha": "2026-10-02T16:45:31.000Z",
+          "oficial": false,
+          "aporte": "Detalló las causas del riesgo país, las declaraciones sobre las elecciones y la participación virtual desde París."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/luis-caputo-ligo-la-suba-del-riesgo-pais-al-temor-del-volver-al-infierno-n6329459",
+          "fecha": "2026-10-02T16:57:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que ratificó el rumbo económico, rechazó devaluar y prometió reducir la carga impositiva."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/luis-caputo-atribuyo-la-escalada-del-riesgo-pais-al-clima-electoral-temor-volver-al-infierno-n250580",
+          "fecha": "2026-10-02T17:28:00.000Z",
+          "oficial": false,
+          "aporte": "Admitió la suba importante del indicador del JP Morgan."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/luis-caputo-coloquio-idea-riesgo-pais-confianza/",
+          "fecha": "2026-10-02T17:22:58.000Z",
+          "oficial": false,
+          "aporte": "Informó que participó de manera virtual en el Coloquio de IDEA y pidió un voto de confianza al sector privado."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-2-13-51-0-caputo-pidio-confianza-a-los-empresarios-y-atribuyo-la-suba-del-riesgo-pais-al-temor-a-volver-al-infierno",
+          "fecha": "2026-10-02T17:45:31.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en las declaraciones sobre el riesgo país y el contexto internacional."
+        },
+        {
+          "medio": "Qué Digital",
+          "enlace": "https://quedigital.com.ar/politica/coloquio-de-idea-tambien-con-tono-electoral-caputo-hablo-de-temor-a-volver-al-infierno/",
+          "fecha": "2026-10-02T17:50:05.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el discurso de cierre estuvo vinculado a la suba del riesgo país."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1h0pc9p",
+          "titulo": "Luis Caputo asegura en París que el único riesgo local es no invertir",
+          "fecha": "2026-10-01T10:30:35.000Z",
+          "ruta": "/nota/luis-caputo-asegura-en-paris-que-el-unico-riesgo-local-es-no-invertir-1h0pc9p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "luis-caputo-pide-confianza-a-los-empresarios-y-descarta-devaluar"
     },
     {
       "id": "n09ogo",
@@ -3885,8 +4270,8 @@
     "Cultura y agenda",
     "Argentina",
     "Policiales",
-    "Deportes",
     "Política",
+    "Deportes",
     "Agro"
   ],
   "temas": [
@@ -3898,11 +4283,6 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 2
-    },
-    {
-      "nombre": "Bomberos Voluntarios",
-      "ranura": "bomberos",
       "cuantas": 2
     }
   ],
@@ -4330,6 +4710,12 @@
       "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1y25nin",
+      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "1b80a9j",
