@@ -771,6 +771,53 @@
         "vistas": 13,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-04T00:00:20.215Z",
+      "web": {
+        "u12": {
+          "visitas": 42,
+          "vistas": 76
+        },
+        "a12": {
+          "visitas": 10,
+          "vistas": 20
+        },
+        "u24": {
+          "visitas": 52,
+          "vistas": 96
+        },
+        "a24": {
+          "visitas": 54,
+          "vistas": 138
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 24
+          },
+          {
+            "camino": "/nota/la-liga-balcarcena-suspende-toda-la-fecha-del-futbol-local-1gq0pia",
+            "vistas": 13
+          },
+          {
+            "camino": "/nota/vecinas-renuevan-espacios-publicos-y-plazas-1l5htn5",
+            "vistas": 11
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 5,
+        "vistas": 487,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 69,
+        "alcance": 40,
+        "vistas": 91,
+        "interacciones": 4
+      }
     }
   ],
   "dias": {
@@ -1112,35 +1159,53 @@
         0,
         1,
         0,
+        10,
         0,
         0,
         0,
+        12,
+        16,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        2,
+        2,
+        22,
+        12,
         0,
         0,
         0
       ],
-      "visitas": 1,
-      "vistas": 5,
+      "visitas": 43,
+      "vistas": 81,
       "referentes": {
-        "directo": 1
+        "facebook.com": 38,
+        "directo": 5
       },
       "paises": {
-        "US": 5
+        "US": 48,
+        "AR": 22,
+        "IE": 11
       },
       "dispositivos": {
-        "desktop": 5
+        "mobile": 53,
+        "desktop": 28
       },
-      "notas": {},
+      "notas": {
+        "1gq0pia": 13,
+        "1l5htn5": 11,
+        "1gdngfe": 5,
+        "j3xrez": 4,
+        "sty1jd": 4,
+        "17lpda8": 4,
+        "174qhq6": 3,
+        "16ml7pn": 3,
+        "2qj2kn": 3,
+        "1xritdf": 2,
+        "n09ogo": 2,
+        "15ikzjc": 2,
+        "repaso20261003tarde": 1
+      },
       "paginas": {
-        "/": 5
+        "/": 24
       }
     }
   }
