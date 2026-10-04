@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T02:34:57.054Z",
+  "generado": "2026-10-04T02:54:54.353Z",
   "notas": [
     {
       "id": "futbolpartidosliga20261002",
@@ -223,7 +223,11 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-gobierno-recibe-al-titular-de-la-dfc-para-avanzar-en-el-corredor"
+      "slug": "el-gobierno-recibe-al-titular-de-la-dfc-para-avanzar-en-el-corredor",
+      "foto": {
+        "archivo": "fotos-notas/ogixfx.jpg",
+        "credito": "Foto: Noticias Argentinas (NA)"
+      }
     },
     {
       "id": "repaso20261003noche",
@@ -398,84 +402,6 @@
       "foto": {
         "archivo": "fotos-notas/158gkt0.jpg",
         "credito": "Foto: Infórmese Primero (FM 104.9)"
-      }
-    },
-    {
-      "id": "12y59yp",
-      "titulo": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
-      "copete": "El presidente de la AFA replicó el ritual con un grupo de futbolistas en la previa del encuentro contra Burkina Faso en el Estadio Monumental.",
-      "cuerpo": "El presidente de la AFA, Claudio Tapia, compartió una reunión con Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez en la concentración albiceleste. El grupo tomó mates en la oficina mientras observaba por televisión el partido entre Barracas Central y Atlético Tucumán, en la antesala del segundo amistuso de la fecha FIFA.\n\nLa puesta en escena repite la cábala implementada días atrás en Córdoba antes del compromiso frente a Bolivia. La imagen ratifica la relevancia que adquirieron los cuatro jugadores dentro del vestuario como nueva columna vertebral del equipo que conduce Lionel Scaloni.\n\nLa Selección argentina se enfrenta este sábado a Burkina Faso en el Estadio Monumental para continuar con su rodaje futbolístico ante los simpatizantes.",
-      "guion": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
-      "seccion": "Fútbol",
-      "medios": [
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Olé"
-      ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T22:30:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T02:34:42.599Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Claudio Tapia repitió la cábala con cuatro referentes del plantel en la concentración.",
-        "Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez participaron del ritual.",
-        "El seleccionado nacional juega este sábado un amistoso frente a Burkina Faso en el Monumental."
-      ],
-      "seSabe": [
-        "Claudio Tapia posó junto a Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez.",
-        "El grupo compartió mates y vio televisión en la concentración antes del partido.",
-        "La Selección argentina juega este sábado frente a Burkina Faso en el Estadio Monumental."
-      ],
-      "noConfirmado": [
-        "No se informaron otros detalles sobre las actividades previas del plantel en la concentración."
-      ],
-      "textoRedes": "Claudio Tapia replicó una cábala con cuatro referentes del plantel en la previa del partido de la Selección argentina ante Burkina Faso en el Monumental.",
-      "etiquetas": [
-        "Seleccion argentina",
-        "Claudio Tapia",
-        "AFA",
-        "Estadio Monumental",
-        "Burkina Faso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
-          "fecha": "2026-10-03T22:30:12.000Z",
-          "oficial": false,
-          "aporte": "Detalló la reunión de Claudio Tapia y los cuatro futbolistas antes del partido contra Burkina Faso."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/la-nueva-foto-cabala-de-la-seleccion-argentina-con-chiqui-tapia-id764266.html",
-          "fecha": "2026-10-03T23:36:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/seleccion/foto-cabala-tapia-jugadores-seleccion-romero-martinez-fernandez-alvarez_0_lU6FCBJkGx.html",
-          "fecha": "2026-10-03T22:46:39.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "claudio-tapia-comparte-una-cabala-con-cuatro-referentes-de-la",
-      "foto": {
-        "archivo": "fotos-notas/12y59yp.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -756,12 +682,12 @@
       "seccion": "Automovilismo",
       "medios": [
         "Ecos Diarios (Necochea)",
+        "Campeones",
         "Página/12",
         "TyC Sports",
-        "Campeones",
+        "La Brújula 24",
         "Solotc",
         "Olé",
-        "La Brújula 24",
         "Córdoba Competición"
       ],
       "enlace": "https://campeones.com.ar/tc-en-san-nicolas-fain-logro-su-1a-pole-y-corto-una-sequia-de-3-anos-para-torino/",
@@ -1257,7 +1183,7 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariallllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció este sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
@@ -3067,6 +2993,7 @@
         "El Destape",
         "Perfil",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "La Tecla",
         "Clarín",
         "Radio Mitre",
@@ -3221,14 +3148,15 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Agrositio"
       ],
       "enlace": "https://tn.com.ar/campo/2026/10/02/lluvias-clave-en-la-region-nucleo-alivio-para-el-trigo-y-luz-verde-para-completar-la-siembra-de-maiz/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-02T17:03:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-02T23:01:19.357Z",
-      "relevancia": 28,
+      "relevancia": 38,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3589,14 +3517,14 @@
         "Página/12",
         "TyC Sports",
         "Olé",
-        "C5N",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "Minuto Uno",
         "La Nueva",
         "Clarín",
         "Ecos Diarios (Necochea)",
         "La Voz del Pueblo",
-        "La Verdad"
+        "C5N"
       ],
       "enlace": "https://tn.com.ar/deportes/2026/10/02/carlos-tevez-confirmo-que-tendra-su-partido-de-despedida-en-la-bombonera/",
       "teniaImagenLaFuente": true,
@@ -4049,92 +3977,6 @@
         "archivo": "fotos-notas/1aekavp.jpg",
         "credito": "Foto: TN (Todo Noticias)"
       }
-    },
-    {
-      "id": "cmitva",
-      "titulo": "La producción lechera bonaerense crece mientras la facturación cae",
-      "copete": "La producción de leche y las exportaciones crecen a nivel nacional, pero los tambos bonaerenses sufren una caída en la facturación y el cierre de establecimientos. La cuenca Mar y Sierras, que incluye a Balcarce, lidera el rendimiento productivo.",
-      "cuerpo": "La actividad lechera bonaerense atraviesa un escenario dispar marcado por el incremento en el volumen elaborado y las ventas al exterior, pero con una merma sostenida en los ingresos y en la cantidad de establecimientos activos.\n\nDe acuerdo con la Secretaría de Agricultura, Ganadería y Pesca, la elaboración nacional trepó 4,5% entre enero y agosto frente al mismo lapso del año previo hasta alcanzar 7.515 millones de litros, mientras que el consumo interno sumó 4% y las exportaciones totalizaron 2.086 millones de litros equivalentes por 1.130 millones de dólares. A pesar de estos registros positivos, un informe del Observatorio de la Cadena Láctea Argentina indicó que la facturación promedio de los tambos retrocedió 10% interanual en agosto en pesos constantes y acumula una baja de 10,7% en el año, impulsada por un valor percibido por el productor que descendió 17,8%.\n\nEsta situación impacta en la rentabilidad y en la continuidad de los establecimientos. A nivel nacional, el parque letrero se redujo de 10.063 unidades a fines de 2023 a 8.745 en agosto, lo que significa una merma de 13,1%, al tiempo que en la provincia de Buenos Aires la contracción interanual rondó el 4,5%. En este contexto, la cuenca Mar y Sierras, que abarca a distritos como Balcarce, Tandil, Azul y Necochea, se mantiene al tope del ranking productivo con un promedio de 5.884 litros diarios por establecimiento en agosto, superando la media nacional de 3.898 litros.",
-      "guion": "La producción lechera bonaerense crece mientras la facturación cae",
-      "seccion": "Agro",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Agencia DIB",
-        "Ecos Diarios (Necochea)",
-        "La Verdad"
-      ],
-      "enlace": "https://dib.com.ar/economia/tambos-mayor-produccion-pero-menor-facturacion-y-cierre-establecimientos-n56198",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T14:49:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 52,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La producción lechera nacional creció 4,5% entre enero y agosto.",
-        "La facturación de los tambos cayó 10% interanual en agosto.",
-        "El país perdió 13,1% de los tambos desde finales de 2023.",
-        "La cuenca Mar y Sierras, que incluye a Balcarce, lidera el rendimiento productivo."
-      ],
-      "seSabe": [
-        "La producción de leche creció 4,5% entre enero y agosto, según la Secretaría de Agricultura, Ganadería y Pesca.",
-        "Las exportaciones sumaron 2.086 millones de litros equivalentes por 1.130 millones de dólares, de acuerdo con el mismo organismo.",
-        "La facturación de los tambos promedio cayó 10% interanual en agosto, según el Observatorio de la Cadena Láctea Argentina.",
-        "El país cuenta con 8.745 tambos frente a los 10.063 que registraba a fines de 2023, según datos relevados por Agencia DIB.",
-        "La cuenca Mar y Sierras produjo 5.884 litros diarios por establecimiento en agosto."
-      ],
-      "textoRedes": "La lechería bonaerense atraviesa un escenario dispar con mayor producción y exportaciones en alza, pero con una caída en la facturación de los tambos y cierre de establecimientos. La cuenca Mar y Sierras, que incluye a Balcarce, se destaca por su alto rendimiento diario.",
-      "etiquetas": [
-        "Lechería",
-        "Producción",
-        "Tambos",
-        "Balcarce",
-        "Mar y Sierras"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/economia/tambos-mayor-produccion-pero-menor-facturacion-y-cierre-establecimientos-n56198",
-          "fecha": "2026-10-02T14:49:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos nacionales de producción, exportación, facturación, rentabilidad, caída de tambos y el rendimiento de la cuenca Mar y Sierras."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/la-produccion-lechera-crece-mientras.html",
-          "fecha": "2026-10-02T14:57:57.427Z",
-          "oficial": false,
-          "aporte": "Coincidió en la descripción general de la situación lechera provincial."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/la-produccion-lechera-alcanza-niveles-record-pero-los-tambos-enfrentan-una-fuerte-caida-en-su-rentabilidad",
-          "fecha": "2026-10-02T15:29:23.000Z",
-          "oficial": false,
-          "aporte": "Aportó mención sobre la caída en el número de tambos y la heterogeneidad del sector."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/tambos-mayor-produccion-pero-menor-facturacion-y-cierre-de-establecimientos/",
-          "fecha": "2026-10-02T15:33:48.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el diagnóstico de realidades heterogéneas en la lechería bonaerense y nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-produccion-lechera-bonaerense-crece-mientras-la-facturacion-cae",
-      "foto": {
-        "archivo": "fotos-notas/cmitva.jpg",
-        "credito": "Foto: Agencia DIB"
-      }
     }
   ],
   "secciones": [
@@ -4563,6 +4405,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "15p44cp",
+      "titulo": "André Pierre-Gignac junto a Riquelme viendo a Boca",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"suscribite\""
+    },
+    {
       "id": "4xscfj",
       "titulo": "Victoria Villarruel viajó a Madrid junto a senadores para…",
       "seccion": "Política",
@@ -4573,12 +4421,6 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1yg85wu",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herido\""
     },
     {
       "id": "1muu13g",
