@@ -1,0 +1,953 @@
+{
+ "consultado": "2026-10-04T02:29:40.686Z",
+ "equipos": [
+  "9739",
+  "3",
+  "9785",
+  "235",
+  "10060",
+  "4",
+  "5",
+  "11989",
+  "8950",
+  "17702",
+  "8",
+  "19685",
+  "11972",
+  "9",
+  "10",
+  "11",
+  "9744",
+  "2975",
+  "12",
+  "14",
+  "7764",
+  "15",
+  "16",
+  "17",
+  "18",
+  "10158",
+  "19",
+  "7767",
+  "20",
+  "21",
+  "10145",
+  "13913",
+  "22166",
+  "17700",
+  "10146",
+  "9747",
+  "18662",
+  "11963",
+  "21799",
+  "10102",
+  "10152",
+  "18260",
+  "11978",
+  "10154",
+  "19144",
+  "17352",
+  "131651",
+  "5263",
+  "10743",
+  "6756",
+  "10105",
+  "10109",
+  "2636",
+  "18844",
+  "7845",
+  "17814",
+  "18328",
+  "10058",
+  "22521",
+  "11991",
+  "131652",
+  "17706",
+  "10162",
+  "10163"
+ ],
+ "equiposCuando": "2026-10-04T02:29:40.686Z",
+ "partidos": {
+  "liga": [
+   {
+    "id": "401841588",
+    "competencia": "liga",
+    "inicio": "2026-10-02T22:15:00.000Z",
+    "estado": "final",
+    "minuto": "90'+3'",
+    "local": {
+     "id": "11",
+     "nombre": "Independiente",
+     "goles": 1
+    },
+    "visitante": {
+     "id": "2975",
+     "nombre": "Instituto (Córdoba)",
+     "goles": 4
+    },
+    "penales": null,
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Jeremías Lázaro",
+      "minuto": "16'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Maximiliano Meza",
+      "minuto": "22'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Hernán De La Fuente",
+      "minuto": "51'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Matías Gallardo",
+      "minuto": "65'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Alex Luna",
+      "minuto": "80'",
+      "tipo": "gol"
+     }
+    ],
+    "estadio": "Estadio Libertadores de América",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841594",
+    "competencia": "liga",
+    "inicio": "2026-10-03T00:30:00.000Z",
+    "estado": "final",
+    "minuto": "90'+3'",
+    "local": {
+     "id": "5",
+     "nombre": "Boca Juniors",
+     "goles": 3
+    },
+    "visitante": {
+     "id": "20",
+     "nombre": "Unión (Santa Fe)",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Lautaro Di Lollo",
+      "minuto": "22'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Leonel Flores",
+      "minuto": "83'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Leonel Flores",
+      "minuto": "90'+2'",
+      "tipo": "gol"
+     }
+    ],
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841587",
+    "competencia": "liga",
+    "inicio": "2026-10-03T00:30:00.000Z",
+    "estado": "final",
+    "minuto": "90'+7'",
+    "local": {
+     "id": "9744",
+     "nombre": "Independiente Rivadavia",
+     "goles": 1
+    },
+    "visitante": {
+     "id": "9",
+     "nombre": "Gimnasia La Plata",
+     "goles": 1
+    },
+    "penales": null,
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Juan Manuel Elordi",
+      "minuto": "5'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Agustin Colazo",
+      "minuto": "86'",
+      "tipo": "gol"
+     }
+    ],
+    "estadio": "Bautista Gargantini",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841593",
+    "competencia": "liga",
+    "inicio": "2026-10-03T17:45:00.000Z",
+    "estado": "final",
+    "minuto": "90'+2'",
+    "local": {
+     "id": "8950",
+     "nombre": "Defensa y Justicia",
+     "goles": 3
+    },
+    "visitante": {
+     "id": "18",
+     "nombre": "San Lorenzo",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Jeremías Lucco",
+      "minuto": "11'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Héctor Martínez",
+      "minuto": "45'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "David Barbona",
+      "minuto": "45'+3'",
+      "tipo": "gol"
+     }
+    ],
+    "estadio": "Norberto Tomaghello",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841596",
+    "competencia": "liga",
+    "inicio": "2026-10-03T20:00:00.000Z",
+    "estado": "final",
+    "minuto": "90'+5'",
+    "local": {
+     "id": "9785",
+     "nombre": "Atlético Tucumán",
+     "goles": 2
+    },
+    "visitante": {
+     "id": "10060",
+     "nombre": "Barracas Central",
+     "goles": 3
+    },
+    "penales": null,
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Nicolás Laméndola",
+      "minuto": "34'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Enzo Taborda",
+      "minuto": "58'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Nicolás Orsini",
+      "minuto": "75'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Maxi Villa",
+      "minuto": "90'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Nicolás Orsini",
+      "minuto": "90'+3'",
+      "tipo": "gol"
+     }
+    ],
+    "estadio": "Monumental Presidente José Fierro",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841586",
+    "competencia": "liga",
+    "inicio": "2026-10-03T20:00:00.000Z",
+    "estado": "final",
+    "minuto": "90'+3'",
+    "local": {
+     "id": "14",
+     "nombre": "Newell's Old Boys",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "12",
+     "nombre": "Lanús",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Marcelo Bielsa",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841589",
+    "competencia": "liga",
+    "inicio": "2026-10-04T17:45:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "10",
+     "nombre": "Huracán",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "9739",
+     "nombre": "Aldosivi",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Estadio Tomás Adolfo Ducó",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841584",
+    "competencia": "liga",
+    "inicio": "2026-10-04T20:00:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "19",
+     "nombre": "Talleres (Córdoba)",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "4",
+     "nombre": "Belgrano (Córdoba)",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Mario Alberto Kempes",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841597",
+    "competencia": "liga",
+    "inicio": "2026-10-04T22:15:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "3",
+     "nombre": "Argentinos Juniors",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "7767",
+     "nombre": "Tigre",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Diego Armando Maradona",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841591",
+    "competencia": "liga",
+    "inicio": "2026-10-05T00:30:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "19685",
+     "nombre": "Estudiantes de Río Cuarto",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "15",
+     "nombre": "Racing Club",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Ciudad de Río Cuarto Antonio Candini",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841592",
+    "competencia": "liga",
+    "inicio": "2026-10-05T19:45:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "17702",
+     "nombre": "Deportivo Riestra",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "11989",
+     "nombre": "Central Córdoba (Santiago del Estero)",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Guillermo Laza",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841590",
+    "competencia": "liga",
+    "inicio": "2026-10-05T22:00:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "8",
+     "nombre": "Estudiantes de La Plata",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "11972",
+     "nombre": "Gimnasia (Mendoza)",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Estadio Jorge Luis Hirschi",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841585",
+    "competencia": "liga",
+    "inicio": "2026-10-05T22:00:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "21",
+     "nombre": "Vélez Sarsfield",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "7764",
+     "nombre": "Platense",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "José Amalfitani",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   },
+   {
+    "id": "401841595",
+    "competencia": "liga",
+    "inicio": "2026-10-06T00:15:00.000Z",
+    "estado": "programado",
+    "minuto": "0'",
+    "local": {
+     "id": "235",
+     "nombre": "Banfield",
+     "goles": 0
+    },
+    "visitante": {
+     "id": "17",
+     "nombre": "Rosario Central",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [],
+    "estadio": "Florencio Solá",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "torneo-clausura"
+   }
+  ],
+  "copaargentina": [
+   {
+    "id": "401913078",
+    "competencia": "copaargentina",
+    "inicio": "2026-10-02T00:15:00.000Z",
+    "estado": "final",
+    "minuto": "90'+5'",
+    "local": {
+     "id": "7764",
+     "nombre": "Platense",
+     "goles": 1
+    },
+    "visitante": {
+     "id": "8",
+     "nombre": "Estudiantes de La Plata",
+     "goles": 0
+    },
+    "penales": null,
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Gonzalo Lencina",
+      "minuto": "83'",
+      "tipo": "gol"
+     }
+    ],
+    "estadio": "Norberto Tomaghello",
+    "fase": null,
+    "partidoDeLaSerie": null,
+    "torneo": "quarterfinals"
+   }
+  ],
+  "libertadores": [],
+  "sudamericana": []
+ },
+ "diasTraidos": {
+  "liga": {
+   "2026-10-01": "2026-10-04T02:29:40.686Z",
+   "2026-10-04": "2026-10-04T02:29:40.686Z",
+   "2026-10-05": "2026-10-04T02:29:40.686Z",
+   "2026-10-06": "2026-10-04T02:29:40.686Z",
+   "2026-10-07": "2026-10-04T02:29:40.686Z"
+  },
+  "copaargentina": {
+   "2026-10-01": "2026-10-04T02:29:40.686Z",
+   "2026-10-04": "2026-10-04T02:29:40.686Z",
+   "2026-10-05": "2026-10-04T02:29:40.686Z",
+   "2026-10-06": "2026-10-04T02:29:40.686Z",
+   "2026-10-07": "2026-10-04T02:29:40.686Z"
+  },
+  "libertadores": {
+   "2026-10-01": "2026-10-04T02:29:40.686Z",
+   "2026-10-04": "2026-10-04T02:29:40.686Z",
+   "2026-10-05": "2026-10-04T02:29:40.686Z",
+   "2026-10-06": "2026-10-04T02:29:40.686Z",
+   "2026-10-07": "2026-10-04T02:29:40.686Z"
+  },
+  "sudamericana": {
+   "2026-10-01": "2026-10-04T02:29:40.686Z",
+   "2026-10-04": "2026-10-04T02:29:40.686Z",
+   "2026-10-05": "2026-10-04T02:29:40.686Z",
+   "2026-10-06": "2026-10-04T02:29:40.686Z",
+   "2026-10-07": "2026-10-04T02:29:40.686Z"
+  }
+ },
+ "tabla": {
+  "torneo": "Argentine Liga Profesional de Fútbol",
+  "zonas": [
+   {
+    "nombre": "Zona A",
+    "filas": [
+     {
+      "posicion": 1,
+      "equipo": "Instituto (Córdoba)",
+      "pj": 11,
+      "g": 8,
+      "e": 1,
+      "p": 2,
+      "gf": 17,
+      "gc": 8,
+      "dif": 9,
+      "pts": 25
+     },
+     {
+      "posicion": 2,
+      "equipo": "Defensa y Justicia",
+      "pj": 11,
+      "g": 6,
+      "e": 3,
+      "p": 2,
+      "gf": 16,
+      "gc": 11,
+      "dif": 5,
+      "pts": 21
+     },
+     {
+      "posicion": 3,
+      "equipo": "Boca Juniors",
+      "pj": 11,
+      "g": 5,
+      "e": 5,
+      "p": 1,
+      "gf": 17,
+      "gc": 11,
+      "dif": 6,
+      "pts": 20
+     },
+     {
+      "posicion": 4,
+      "equipo": "Vélez Sarsfield",
+      "pj": 10,
+      "g": 5,
+      "e": 5,
+      "p": 0,
+      "gf": 15,
+      "gc": 9,
+      "dif": 6,
+      "pts": 20
+     },
+     {
+      "posicion": 5,
+      "equipo": "Gimnasia (Mendoza)",
+      "pj": 10,
+      "g": 5,
+      "e": 2,
+      "p": 3,
+      "gf": 14,
+      "gc": 9,
+      "dif": 5,
+      "pts": 17
+     },
+     {
+      "posicion": 6,
+      "equipo": "Lanús",
+      "pj": 11,
+      "g": 5,
+      "e": 2,
+      "p": 4,
+      "gf": 13,
+      "gc": 9,
+      "dif": 4,
+      "pts": 17
+     },
+     {
+      "posicion": 7,
+      "equipo": "Newell's Old Boys",
+      "pj": 11,
+      "g": 4,
+      "e": 5,
+      "p": 2,
+      "gf": 11,
+      "gc": 8,
+      "dif": 3,
+      "pts": 17
+     },
+     {
+      "posicion": 8,
+      "equipo": "Independiente",
+      "pj": 11,
+      "g": 5,
+      "e": 2,
+      "p": 4,
+      "gf": 11,
+      "gc": 12,
+      "dif": -1,
+      "pts": 17
+     },
+     {
+      "posicion": 9,
+      "equipo": "Unión (Santa Fe)",
+      "pj": 11,
+      "g": 4,
+      "e": 1,
+      "p": 6,
+      "gf": 17,
+      "gc": 19,
+      "dif": -2,
+      "pts": 13
+     },
+     {
+      "posicion": 10,
+      "equipo": "San Lorenzo",
+      "pj": 11,
+      "g": 3,
+      "e": 2,
+      "p": 6,
+      "gf": 4,
+      "gc": 11,
+      "dif": -7,
+      "pts": 11
+     },
+     {
+      "posicion": 11,
+      "equipo": "Estudiantes de La Plata",
+      "pj": 10,
+      "g": 3,
+      "e": 1,
+      "p": 6,
+      "gf": 10,
+      "gc": 11,
+      "dif": -1,
+      "pts": 10
+     },
+     {
+      "posicion": 12,
+      "equipo": "Deportivo Riestra",
+      "pj": 10,
+      "g": 2,
+      "e": 4,
+      "p": 4,
+      "gf": 8,
+      "gc": 10,
+      "dif": -2,
+      "pts": 10
+     },
+     {
+      "posicion": 13,
+      "equipo": "Platense",
+      "pj": 10,
+      "g": 2,
+      "e": 3,
+      "p": 5,
+      "gf": 9,
+      "gc": 15,
+      "dif": -6,
+      "pts": 9
+     },
+     {
+      "posicion": 14,
+      "equipo": "Talleres (Córdoba)",
+      "pj": 10,
+      "g": 2,
+      "e": 2,
+      "p": 6,
+      "gf": 11,
+      "gc": 17,
+      "dif": -6,
+      "pts": 8
+     },
+     {
+      "posicion": 15,
+      "equipo": "Central Córdoba (Santiago del Estero)",
+      "pj": 10,
+      "g": 2,
+      "e": 2,
+      "p": 6,
+      "gf": 7,
+      "gc": 13,
+      "dif": -6,
+      "pts": 8
+     }
+    ]
+   },
+   {
+    "nombre": "Zona B",
+    "filas": [
+     {
+      "posicion": 1,
+      "equipo": "Argentinos Juniors",
+      "pj": 10,
+      "g": 5,
+      "e": 3,
+      "p": 2,
+      "gf": 13,
+      "gc": 9,
+      "dif": 4,
+      "pts": 18
+     },
+     {
+      "posicion": 2,
+      "equipo": "Rosario Central",
+      "pj": 10,
+      "g": 5,
+      "e": 3,
+      "p": 2,
+      "gf": 11,
+      "gc": 8,
+      "dif": 3,
+      "pts": 18
+     },
+     {
+      "posicion": 3,
+      "equipo": "Independiente Rivadavia",
+      "pj": 11,
+      "g": 5,
+      "e": 3,
+      "p": 3,
+      "gf": 15,
+      "gc": 14,
+      "dif": 1,
+      "pts": 18
+     },
+     {
+      "posicion": 4,
+      "equipo": "Gimnasia La Plata",
+      "pj": 11,
+      "g": 5,
+      "e": 3,
+      "p": 3,
+      "gf": 16,
+      "gc": 16,
+      "dif": 0,
+      "pts": 18
+     },
+     {
+      "posicion": 5,
+      "equipo": "Belgrano (Córdoba)",
+      "pj": 10,
+      "g": 4,
+      "e": 4,
+      "p": 2,
+      "gf": 11,
+      "gc": 7,
+      "dif": 4,
+      "pts": 16
+     },
+     {
+      "posicion": 6,
+      "equipo": "Huracán",
+      "pj": 10,
+      "g": 4,
+      "e": 4,
+      "p": 2,
+      "gf": 10,
+      "gc": 8,
+      "dif": 2,
+      "pts": 16
+     },
+     {
+      "posicion": 7,
+      "equipo": "Sarmiento (Junín)",
+      "pj": 10,
+      "g": 5,
+      "e": 1,
+      "p": 4,
+      "gf": 17,
+      "gc": 16,
+      "dif": 1,
+      "pts": 16
+     },
+     {
+      "posicion": 8,
+      "equipo": "Barracas Central",
+      "pj": 11,
+      "g": 4,
+      "e": 3,
+      "p": 4,
+      "gf": 8,
+      "gc": 9,
+      "dif": -1,
+      "pts": 15
+     },
+     {
+      "posicion": 9,
+      "equipo": "River Plate",
+      "pj": 10,
+      "g": 4,
+      "e": 1,
+      "p": 5,
+      "gf": 13,
+      "gc": 12,
+      "dif": 1,
+      "pts": 13
+     },
+     {
+      "posicion": 10,
+      "equipo": "Atlético Tucumán",
+      "pj": 11,
+      "g": 3,
+      "e": 4,
+      "p": 4,
+      "gf": 9,
+      "gc": 9,
+      "dif": 0,
+      "pts": 13
+     },
+     {
+      "posicion": 11,
+      "equipo": "Tigre",
+      "pj": 10,
+      "g": 3,
+      "e": 3,
+      "p": 4,
+      "gf": 9,
+      "gc": 9,
+      "dif": 0,
+      "pts": 12
+     },
+     {
+      "posicion": 12,
+      "equipo": "Banfield",
+      "pj": 10,
+      "g": 2,
+      "e": 3,
+      "p": 5,
+      "gf": 11,
+      "gc": 16,
+      "dif": -5,
+      "pts": 9
+     },
+     {
+      "posicion": 13,
+      "equipo": "Aldosivi",
+      "pj": 10,
+      "g": 2,
+      "e": 2,
+      "p": 6,
+      "gf": 12,
+      "gc": 16,
+      "dif": -4,
+      "pts": 8
+     },
+     {
+      "posicion": 14,
+      "equipo": "Racing Club",
+      "pj": 10,
+      "g": 2,
+      "e": 2,
+      "p": 6,
+      "gf": 11,
+      "gc": 16,
+      "dif": -5,
+      "pts": 8
+     },
+     {
+      "posicion": 15,
+      "equipo": "Estudiantes de Río Cuarto",
+      "pj": 10,
+      "g": 1,
+      "e": 3,
+      "p": 6,
+      "gf": 5,
+      "gc": 13,
+      "dif": -8,
+      "pts": 6
+     }
+    ]
+   }
+  ]
+ },
+ "tablaCuando": "2026-10-04T02:29:40.686Z",
+ "notas": {
+  "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
+  "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z"
+ }
+}
