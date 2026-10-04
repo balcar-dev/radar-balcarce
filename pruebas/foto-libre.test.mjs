@@ -67,7 +67,7 @@ test('las notas de F1 llevan el circuito para buscarle la foto, y generar-datos 
   assert.equal(notaDeParrilla({ ...carrera, temporada: 2026, filas }, { fecha: '2026-10-03T12:00:00.000Z' }).circuitoF1, 'Sepang International Circuit');
   assert.ok(resumirParrilla);
   const gen = leer('web/scripts/generar-datos.mjs');
-  assert.match(gen, /const lugarDeLaFoto = n\.propia === 'f1' \? n\.circuitoF1 : null;/);
+  assert.ok(gen.includes("const lugarDeLaFoto = n.propia === 'f1' ? n.circuitoF1 : "), 'la F1 usa el circuito (y el fútbol, el estadio)');
   assert.match(gen, /await import\('\.\/foto-libre\.mjs'\)/);
   assert.match(gen, /if \(enLaNube\) \{\n  const \{ buscarFotoLibre, bajarFotoLibre \}/.test(gen.replace(/\r\n/g, '\n')) ? /./ : /if \(enLaNube\)/, 'sólo en la nube');
   assert.match(gen, /no hubo una foto libre buena/);

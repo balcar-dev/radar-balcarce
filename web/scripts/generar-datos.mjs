@@ -92,6 +92,7 @@ import {
 } from '../lib/repetidas.js';
 import { diceEnVivo } from '../../ingesta/verificar.mjs';
 import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
+import { traerFutbol, notasDeFutbol, comoFutbolJson } from '../../ingesta/futbol.mjs';
 import { notasDePistas } from '../lib/notas-de-pistas.js';
 
 const AQUI = import.meta.dirname;
@@ -120,6 +121,8 @@ const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
 const NOTAS_DE_PISTAS = path.join(AQUI, '..', 'data', 'notas-de-pistas.json');
 // La Fórmula 1 (ingesta/f1.mjs, 3/10): calendario, resultado y campeonato de Jolpica, y cuándo salió cada nota.
 const F1_JSON = path.join(AQUI, '..', 'data', 'f1.json');
+// El fútbol (ingesta/futbol.mjs, 3/10): partidos, resultados y tablas de la Liga y las copas, de ESPN, y cuándo salió cada nota.
+const FUTBOL_JSON = path.join(AQUI, '..', 'data', 'futbol.json');
 // Las fichas de la lectura con IA, que decide desde el 27/09 (ingesta/lectura-ia.mjs).
 const FICHAS = path.join(AQUI, '..', 'data', 'fichas.json');
 // El banco de fotos (28/09, scripts/fotos-notas.mjs): qué nota ya se probó,
@@ -699,6 +702,21 @@ try {
 } catch (e) { console.log(`  F1: no se pudo armar la nota (${e.message})`); }
 if (enLaNube && f1Datos && JSON.stringify(f1Datos) !== JSON.stringify(f1Antes)) fs.writeFileSync(F1_JSON, comoF1Json(f1Datos), 'utf8');
 
+// El fútbol (ingesta/futbol.mjs): los partidos de cada fecha con horarios, los resultados y las tablas. Se consulta ESPN sólo en la nube; si falla, queda lo
+// último guardado. Sin IA: sólo datos, con la fuente citada.
+const futbolAntes = leerJson(FUTBOL_JSON, null);
+let futbolDatos = futbolAntes;
+if (enLaNube) {
+  try { futbolDatos = await traerFutbol({ antes: futbolAntes }); } catch (e) { console.log(`  Fútbol: no se pudo consultar (${e.message}); queda lo guardado`); }
+}
+let notasFutbol = [];
+try {
+  const { notas, fechas } = notasDeFutbol(futbolDatos ?? {});
+  notasFutbol = notas;
+  if (futbolDatos) futbolDatos = { ...futbolDatos, notas: fechas };
+} catch (e) { console.log(`  Fútbol: no se pudo armar la nota (${e.message})`); }
+if (enLaNube && futbolDatos && JSON.stringify(futbolDatos) !== JSON.stringify(futbolAntes)) fs.writeFileSync(FUTBOL_JSON, comoFutbolJson(futbolDatos), 'utf8');
+
 // Las notas con página, para contar cada podcast: lo de esta corrida y el
 // archivo, sin lo que se acaba de retirar. Un repaso que ya no se puede armar
 // (una de sus notas se retiró) también se retira.
@@ -709,7 +727,7 @@ const conPagina = new Map([
 const { notas: repasos, noSeArman } = notasDeRepasos(libroRedes, conPagina, { catalogo: TEMAS });
 for (const id of noSeArman) retiradas.add(id);
 // La regla de cuerpo vale también para lo propio (lib/cuerpo.js).
-const propias = [...notasDelDolar(historiaDolar), ...notasF1, ...notasDePistas(leerJson(NOTAS_DE_PISTAS, null)), ...repasos]
+const propias = [...notasDelDolar(historiaDolar), ...notasF1, ...notasFutbol, ...notasDePistas(leerJson(NOTAS_DE_PISTAS, null)), ...repasos]
   .map((n) => fijarSlug(n, direcciones))
   .filter((n) => tieneCuerpo(n));
 if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);
@@ -733,7 +751,7 @@ if (enLaNube) {
   const porLugar = new Map();
   let nuevas = 0;
   for (const n of propias) {
-    const lugarDeLaFoto = n.propia === 'f1' ? n.circuitoF1 : null;
+    const lugarDeLaFoto = n.propia === 'f1' ? n.circuitoF1 : (n.propia === 'futbol' && n.lugarFoto ? `estadio ${n.lugarFoto}` : null);
     if (!lugarDeLaFoto || n.foto) continue;
     const guardada = bancoDeFotos[n.id];
     if (guardada?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(guardada.archivo)))) { n.foto = { archivo: guardada.archivo, credito: guardada.credito }; continue; }
