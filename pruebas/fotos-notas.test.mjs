@@ -207,12 +207,13 @@ test('sin foto, la página de la nota lleva la placa de su sección, con su dibu
   assert.ok(!/<image|href=|https?:/.test(dibujos), 'los dibujos se hacen con trazos, sin imágenes de afuera');
   // La destacada de una sección o de un tema: su foto con el crédito debajo, o la placa.
   const destacada = leer('web/components/imagen-destacada.js');
-  assert.match(destacada, /export function ImagenDestacada[\s\S]*?<PlacaSeccion seccion=\{nota\?\.seccion\} \/>[\s\S]*?<figcaption className="credito-foto">\{nota\.foto\.credito\}<\/figcaption>/);
+  assert.match(destacada, /export function ImagenDestacada[\s\S]*?<PlacaSeccion seccion=\{nota\?\.seccion\} \/>/);
+  assert.ok(!destacada.includes('credito'), 'el crédito de la foto no sale en las portadas, sólo adentro de la nota (4/10)');
   assert.match(leer('web/app/tema/[ranura]/page.js'), /<ImagenDestacada nota=\{principal\} \/>/);
   // La portada y las secciones usan las postales (1/10): la foto con su crédito debajo, o la placa de la sección.
   const postales = leer('web/components/postales.js');
   assert.match(postales, /<PlacaSeccion seccion=\{nota\.seccion\} chica \/>/);
-  assert.match(postales, /<p className="postal-credito">\{foto\.credito\}<\/p>/);
+  assert.ok(!postales.includes('credito'), 'el crédito de la foto no sale en las portadas, sólo adentro de la nota (4/10)');
   for (const f of ['web/app/page.js', 'web/app/seccion/[ranura]/page.js']) assert.match(leer(f), /<Postales notas=/, f);
 });
 

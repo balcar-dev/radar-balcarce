@@ -754,23 +754,30 @@ for (const n of propias) {
 if (enLaNube) {
   const { buscarFotoLibre, bajarFotoLibre } = await import('./foto-libre.mjs');
   const { achicarFoto } = await import('./achicar-foto.mjs');
-  const porLugar = new Map();
+  // Dos notas del mismo lugar (los partidos y los resultados de la misma fecha) no llevan la misma foto (4/10, Hernán): cada una se queda con una que no usó otra.
+  const usadas = new Set();
   let nuevas = 0;
   for (const n of propias) {
     const lugarDeLaFoto = n.propia === 'f1' ? n.circuitoF1 : (n.propia === 'futbol' && n.lugarFoto ? `estadio ${n.lugarFoto}` : null);
     if (!lugarDeLaFoto || n.foto) continue;
     const guardada = bancoDeFotos[n.id];
-    if (guardada?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(guardada.archivo)))) { n.foto = { archivo: guardada.archivo, credito: guardada.credito }; continue; }
+    const repetida = guardada?.imagenOriginal && usadas.has(guardada.imagenOriginal);
+    if (!repetida && guardada?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(guardada.archivo)))) {
+      n.foto = { archivo: guardada.archivo, credito: guardada.credito };
+      if (guardada.imagenOriginal) usadas.add(guardada.imagenOriginal);
+      continue;
+    }
     // Si no hubo una foto buena, la nota sale sin foto y se vuelve a probar a las 6 horas (no cada media hora).
     if (guardada?.intentado && Date.now() - Date.parse(guardada.cuando ?? 0) < 6 * 3600e3) continue;
-    if (!porLugar.has(lugarDeLaFoto)) porLugar.set(lugarDeLaFoto, await buscarFotoLibre(`${lugarDeLaFoto}`));
-    const elegida = porLugar.get(lugarDeLaFoto);
-    const bajada = elegida ? await bajarFotoLibre(elegida, `libre-${n.id}`, { achicar: achicarFoto }) : null;
+    const elegida = await buscarFotoLibre(`${lugarDeLaFoto}`, { excluir: [...usadas] });
+    // Si reemplaza una repetida, lleva otro nombre de archivo (el navegador y Cloudflare guardan el viejo).
+    const bajada = elegida ? await bajarFotoLibre(elegida, repetida ? `libre-${n.id}-${Date.now().toString(36)}` : `libre-${n.id}`, { achicar: achicarFoto }) : null;
     if (bajada) {
       fs.mkdirSync(FOTOS_NOTAS, { recursive: true });
       fs.writeFileSync(path.join(FOTOS_NOTAS, path.basename(bajada.archivo)), bajada.bytes);
       bancoDeFotos = { ...bancoDeFotos, [n.id]: bajada.entrada };
       n.foto = { archivo: bajada.archivo, credito: bajada.entrada.credito };
+      usadas.add(bajada.entrada.imagenOriginal);
       nuevas += 1;
     } else {
       bancoDeFotos = { ...bancoDeFotos, [n.id]: { intentado: true, origen: 'libre', razon: 'no hubo una foto libre buena', cuando: new Date().toISOString() } };
@@ -780,6 +787,13 @@ if (enLaNube) {
     fs.writeFileSync(BANCO_FOTOS, `${JSON.stringify(bancoDeFotos, null, 1)}\n`, 'utf8');
     if (nuevas) console.log(`  fotos libres (Wikimedia Commons) para notas propias: ${nuevas}`);
   }
+}
+
+// Los escudos de los clubes de las notas de fútbol (web/scripts/escudos.mjs): se bajan una vez y quedan en web/public/escudos/. Sólo en la nube.
+if (enLaNube) {
+  const { idsDeEscudos, bajarEscudos } = await import('./escudos.mjs');
+  const bajados = await bajarEscudos(idsDeEscudos(propias), path.join(AQUI, '..', 'public', 'escudos'));
+  if (bajados) console.log(`  escudos de clubes bajados: ${bajados}`);
 }
 
 // La misma noticia con otra dirección (lib/repetidas.js, 29/09): queda una y

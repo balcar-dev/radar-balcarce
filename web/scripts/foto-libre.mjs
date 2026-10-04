@@ -23,9 +23,10 @@ const NO_SIRVE = /logo|map|mapa|diagram|poster|flag|bandera|signature|banner|sta
 
 /**
  * De lo que devolvió Commons, la mejor foto: jpeg, horizontal, de al menos 900 px de ancho, de licencia buena, que no sea un logo ni un mapa; y la
- * que tenga más palabras de la consulta en el nombre del archivo. `paginas`: query.pages. Devuelve { url, pagina, titulo, autor, licencia } o null.
+ * que tenga más palabras de la consulta en el nombre del archivo. `paginas`: query.pages. `excluir`: las fotos (url) que ya usó otra nota: no se repiten (4/10). Devuelve { url, pagina, titulo, autor, licencia } o null.
  */
-export function elegirFotoLibre(paginas = {}, consulta = '') {
+export function elegirFotoLibre(paginas = {}, consulta = '', excluir = []) {
+  const yaUsadas = new Set(excluir);
   const palabras = String(consulta).toLowerCase().split(/\s+/).filter((p) => p.length > 3);
   const candidatas = [];
   for (const p of Object.values(paginas)) {
@@ -35,7 +36,7 @@ export function elegirFotoLibre(paginas = {}, consulta = '') {
     const licencia = i.extmetadata?.LicenseShortName?.value;
     if (!licenciaBuena(licencia)) continue;
     const url = i.thumburl || i.url;
-    if (!url) continue;
+    if (!url || yaUsadas.has(url)) continue;
     const titulo = String(p.title ?? '').replace(/^File:/, '').toLowerCase();
     candidatas.push({
       url, pagina: i.descriptionurl ?? `https://commons.wikimedia.org/wiki/${encodeURIComponent(p.title ?? '')}`, titulo: p.title, licencia: String(licencia).trim(),
@@ -50,7 +51,7 @@ export function elegirFotoLibre(paginas = {}, consulta = '') {
 export const creditoDeCommons = (f) => `Foto: ${f.autor ? `${f.autor} / ` : ''}Wikimedia Commons (${f.licencia})`;
 
 /** Busca en Commons la mejor foto libre para esa consulta. Nunca lanza: sin respuesta, null. */
-export async function buscarFotoLibre(consulta, { fetchFn = fetch } = {}) {
+export async function buscarFotoLibre(consulta, { fetchFn = fetch, excluir = [] } = {}) {
   try {
     const q = new URLSearchParams({
       action: 'query', format: 'json', generator: 'search', gsrnamespace: '6', gsrsearch: String(consulta).slice(0, 200), gsrlimit: '12',
@@ -58,7 +59,7 @@ export async function buscarFotoLibre(consulta, { fetchFn = fetch } = {}) {
     });
     const res = await fetchFn(`${API}?${q}`, { signal: AbortSignal.timeout(25_000), headers: { 'user-agent': AGENTE } });
     if (!res.ok) return null;
-    return elegirFotoLibre((await res.json())?.query?.pages ?? {}, consulta);
+    return elegirFotoLibre((await res.json())?.query?.pages ?? {}, consulta, excluir);
   } catch {
     return null;
   }

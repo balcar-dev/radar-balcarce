@@ -5,6 +5,7 @@ import {
   Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace, FechaExacta, PlacaSeccion,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
+import CuerpoDeFutbol from '@/components/futbol';
 import FuentesDeLaNota from '@/components/verificacion';
 import { OG_COMUN, TARJETA_DEL_SITIO } from '@/components/metadatos';
 import { FichaDeNota, Migas } from '@/components/ficha';
@@ -126,7 +127,9 @@ export default function PaginaNota({ params }) {
         {/* Las notas propias (lib/notas-propias.js) llevan enlaces adentro del
             texto: la del repaso, a cada nota que se contó; la del dólar, a
             /dolar. El cuerpo sigue siendo texto plano. */}
-        {n.cuerpo && parrafosConEnlaces(n.cuerpo, n.enlacesEnTexto).map((pedazos, i) => (
+        {/* Las notas de fútbol (ingesta/futbol.mjs) se dibujan con tablas y escudos; el cuerpo en texto queda para las redes y los buscadores. */}
+        {n.datosFutbol && <CuerpoDeFutbol tipo={n.tipoFutbol} datos={n.datosFutbol} />}
+        {n.cuerpo && !n.datosFutbol && parrafosConEnlaces(n.cuerpo, n.enlacesEnTexto).map((pedazos, i) => (
           <p key={`${i}-${pedazos[0].texto.slice(0, 40)}`} style={{ fontSize: 16, lineHeight: 1.7, marginTop: 16, color: 'var(--texto)' }}>
             {pedazos.map((x, j) => (x.href
               ? <a key={j} href={x.href} style={{ color: 'var(--rojo)', fontWeight: 600 }} {...(x.externo ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{x.texto}</a>

@@ -107,6 +107,9 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 
 ## Para mañana (5/10) — lo que dejamos listo y lo que falta mirar
 
+- **Mirar la maqueta nueva de las notas de fútbol (escudos, tablas) y que las dos notas de la misma fecha tengan fotos distintas** (se ve después de la primera corrida de "Actualizar la web" con el cambio).
+- **F1 y tablas fijas** (idea de Hernán, 4/10): después de cada carrera, una nota con gráficos propios del campeonato de pilotos y de constructores; y una página fija citable ("Tablas") con la F1 y las posiciones de la Liga, que se actualice sola. Falta decidir el diseño y de dónde sale la tabla de F1 (Jolpica ya la tiene).
+
 - **Mirar que ande lo de hoy en la nube**: (1) la nota de Frutimar que esperaba aprobación debería desaparecer sola tras la próxima corrida de la web (regla 101: `candidatasParaAgrupar`); (2) la corrida de "Pistas" ya puede sacar notas solas con 3 o más medios (`panel/pistas-solas.mjs`): ver en el log de la corrida (Actions → Pistas) las líneas "salió sola" / "no salió, motivo"; (3) el primer "Participá" del 5/10; (4) F1 (carrera del domingo) y fútbol: Hernán los revisa.
 - **Preguntar a Hernán antes de tocar** (la lista roja no se toca sin preguntar): `palabraDelicada` (`ingesta/pistas.mjs`) no frena frases como "una menor de 14 años fue abusada" ni "violaron a una nena": sólo tiene "abuso sexual", "menor de edad", etc. Para las pistas que salen solas conviene ampliarla (menor/nena/nene/chico + abuso/violación). Mientras tanto el semáforo rojo del texto escrito (`semaforoDeLaReescritura`) es la segunda barrera.
 - **Las notas repetidas del mismo tema** (Frutimar): hablarlo con calma. Lo que ya hace falta decidir: juntar versiones en una nota mejor (que se actualice cuando suma un medio), y mostrar los temas grandes por bloques en el panel. Primero mirar en el archivo de la semana cuántos grupos de repetidas hay por día.

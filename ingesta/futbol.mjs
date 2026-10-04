@@ -1,6 +1,7 @@
 // El fútbol como notas propias de la sección Fútbol (3/10/2026, Hernán: "fútbol de primera, la Copa Argentina, la Sudamericana y la Libertadores sólo con los
 // equipos argentinos; destacar a todos por igual"). Los datos (partidos, horarios, marcadores, goleadores y tablas) los trae la API pública de ESPN y las notas
-// se arman SIN IA, como la del dólar y la de F1 (ingesta/f1.mjs): sólo hechos, con la fuente citada. Nada de texto de otros medios ni de los escudos.
+// se arman SIN IA, como la del dólar y la de F1 (ingesta/f1.mjs): sólo hechos, con la fuente citada. Nada de texto de otros medios. Los escudos de los clubes
+// (4/10, Hernán: "agregar las banderas de los clubes") sólo adornan la maqueta de la nota (web/components/futbol.js, web/scripts/escudos.mjs).
 //
 // Por cada FECHA de la Liga Profesional (o cada ronda de copa) salen como mucho tres notas:
 //   · "los partidos" con sus horarios en hora argentina (desde un día y medio antes de que empiece, hasta que termina);
@@ -117,7 +118,7 @@ export function resumirTabla(json) {
     const filas = entradas.map((e) => {
       const s = Object.fromEntries((e.stats ?? []).map((x) => [x.name, x.value]));
       return {
-        posicion: entero(s.rank), equipo: String(e.team?.displayName ?? '').trim(), pj: entero(s.gamesPlayed), g: entero(s.wins), e: entero(s.ties), p: entero(s.losses),
+        posicion: entero(s.rank), id: e.team?.id != null ? String(e.team.id) : null, equipo: String(e.team?.displayName ?? '').trim(), pj: entero(s.gamesPlayed), g: entero(s.wins), e: entero(s.ties), p: entero(s.losses),
         gf: entero(s.pointsFor), gc: entero(s.pointsAgainst), dif: entero(s.pointDifferential), pts: entero(s.points),
       };
     }).filter((f) => f.equipo && f.posicion != null && f.pts != null).sort((a, b) => a.posicion - b.posicion);
@@ -249,12 +250,14 @@ const unir = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', '
 const diaYHora = (iso) => `${diaLargo(diaAR(iso)).replace(/^./, (c) => c.toUpperCase())}, ${horaAR(iso)}`;
 
 const baseDeLaNota = ({
-  id, tipo, titulo, copete, cuerpo, fecha, etiquetas, lugarFoto = null, competencia,
+  id, tipo, titulo, copete, cuerpo, fecha, etiquetas, lugarFoto = null, competencia, datos = null,
 }) => ({
   id,
   propia: 'futbol',
   tipoFutbol: tipo,
   competenciaFutbol: competencia,
+  // Lo mismo que dice el cuerpo, ordenado para dibujarlo (tablas y escudos); el cuerpo sigue siendo el texto (redes, buscadores, verificación).
+  datosFutbol: datos,
   // El estadio del primer partido, para buscarle una foto libre (web/scripts/foto-libre.mjs).
   lugarFoto,
   titulo,
@@ -277,6 +280,19 @@ const baseDeLaNota = ({
   etiquetas,
   como: 'automatica',
   firma: FIRMA_FUTBOL,
+});
+
+/** Un partido como lo dibuja la nota: el día y la hora ya escritos, los dos equipos con su id (el escudo) y, si terminó, los goleadores de cada uno. */
+const partidoParaDibujar = (p) => ({
+  dia: diaLargo(diaAR(p.inicio)).replace(/^./, (c) => c.toUpperCase()),
+  hora: horaAR(p.inicio),
+  estado: p.estado,
+  estadio: p.estadio ?? null,
+  fase: faseTexto(p) || null,
+  local: { id: p.local.id, nombre: p.local.nombre, goles: p.local.goles ?? null },
+  visitante: { id: p.visitante.id, nombre: p.visitante.nombre, goles: p.visitante.goles ?? null },
+  penales: p.penales ?? null,
+  goles: (p.goles ?? []).map((g) => ({ equipo: g.equipo, jugador: g.jugador, minuto: g.minuto, tipo: g.tipo })),
 });
 
 const faseTexto = (p) => [p.fase, p.partidoDeLaSerie === 1 ? 'ida' : (p.partidoDeLaSerie === 2 ? 'vuelta' : null)].filter(Boolean).join(', ');
@@ -305,6 +321,7 @@ export function notaDeLosPartidos(competencia, partidos, { fecha } = {}) {
     id: `futbolpartidos${competencia.clave}${sinGuiones(diaAR(primero.inicio))}`,
     tipo: 'partidos',
     competencia: competencia.clave,
+    datos: { partidos: orden.map(partidoParaDibujar) },
     titulo,
     copete: soloUno ? `Juegan ${primero.local.nombre} y ${primero.visitante.nombre} por ${competencia.completo}.` : `Todos los partidos de ${competencia.completo} de la fecha, con horarios en hora argentina.`,
     cuerpo: [intro, lista, pie].filter(Boolean).join('\n\n'),
@@ -349,6 +366,7 @@ export function notaDeLosResultados(competencia, partidos, { fecha } = {}) {
     id: `futbolresultados${competencia.clave}${sinGuiones(diaAR(orden[0].inicio))}`,
     tipo: 'resultados',
     competencia: competencia.clave,
+    datos: { partidos: terminados.map(partidoParaDibujar), faltan: faltan.length, aparte: aparte.length },
     titulo,
     copete: `${terminados.length} ${terminados.length === 1 ? 'partido terminado' : 'partidos terminados'} de ${competencia.completo}${completa ? '' : ' y otros por jugarse'}: marcadores y goleadores.`,
     cuerpo: [intro, ...partes, pendientes, suspendidos, 'Los datos son los resultados oficiales según ESPN.'].filter(Boolean).join('\n\n'),
@@ -370,6 +388,7 @@ export function notaDeLasTablas(competencia, tabla, partidos, { fecha } = {}) {
     id: `futboltabla${competencia.clave}${sinGuiones(diaAR(orden[0].inicio))}`,
     tipo: 'tablas',
     competencia: competencia.clave,
+    datos: { torneo, zonas: tabla.zonas },
     titulo: `${nombre}: así están las tablas después de la fecha del ${rango}`,
     copete: `Posiciones de las dos zonas de la ${competencia.completo} (${torneo}), con puntos, partidos jugados y goles.`,
     cuerpo: [`Así quedaron las posiciones de la ${competencia.completo} (${torneo}) después de los partidos del ${rango}. Los equipos están ordenados como informa ESPN, con los mismos criterios de desempate del torneo:`, ...zonas, 'Los datos son las posiciones oficiales según ESPN.'].join('\n\n'),

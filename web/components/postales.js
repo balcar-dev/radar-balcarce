@@ -2,8 +2,9 @@
 // de arriba de la portada y de cada sección, como fotos con borde blanco, apenas torcidas y con
 // una cinta, sobre un tablero crema. Ninguna es "la principal": son cinco parejas.
 //
-// La foto es la del banco propio, con su crédito debajo (CLAUDE.md, "Las fotos": el crédito
-// nunca va adentro de la imagen); si la nota no tiene, la placa de su sección.
+// La foto es la del banco propio; si la nota no tiene, la placa de su sección. El crédito NO va acá
+// (4/10, Hernán: "la fuente de las fotos no tiene que salir en las portadas, sólo adentro de la nota"):
+// va en el epígrafe de la nota (y nunca adentro de la imagen).
 
 import { Etiqueta, Hace, PlacaSeccion } from '@/components/piezas';
 import { fechaCorta } from '@/lib/tiempo';
@@ -29,7 +30,6 @@ function Postal({ nota, indice }) {
             ? <img src={`/${foto.archivo}`} alt="" width={1200} height={900} decoding="async" loading={indice < 2 ? undefined : 'lazy'} />
             : <PlacaSeccion seccion={nota.seccion} chica />}
         </a>
-        {foto?.credito && <p className="postal-credito">{foto.credito}</p>}
         <div className="chapa-nota postal-chapa">
           <Etiqueta seccion={nota.seccion} />
           <CuandoNota nota={nota} />

@@ -72,7 +72,7 @@ const tablaJson = () => ({ name: 'Argentine Liga Profesional de Fútbol', childr
 test('la tabla se resume por zona, ordenada por posición, y lo incompleto se descarta', () => {
   const t = resumirTabla(tablaJson());
   assert.deepEqual(t.zonas.map((z) => z.nombre), ['Zona A', 'Zona B']);
-  assert.deepEqual(t.zonas[0].filas[0], { posicion: 1, equipo: 'Boca Juniors', pj: 11, g: 5, e: 5, p: 1, gf: 17, gc: 11, dif: 6, pts: 20 });
+  assert.deepEqual(t.zonas[0].filas[0], { posicion: 1, id: null, equipo: 'Boca Juniors', pj: 11, g: 5, e: 5, p: 1, gf: 17, gc: 11, dif: 6, pts: 20 });
   assert.equal(resumirTabla({ children: [] }), null);
   assert.equal(resumirTabla(null), null);
   assert.equal(resumirTabla({ children: [{ name: 'Group A', standings: { entries: [{ team: { displayName: 'X' }, stats: [] }] } }] }), null, 'sin puntos ni posición no sirve');

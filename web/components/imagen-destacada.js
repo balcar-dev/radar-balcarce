@@ -13,7 +13,6 @@ export function ImagenDestacada({ nota }) {
   return (
     <figure style={{ margin: 0 }}>
       <img src={`/${nota.foto.archivo}`} alt="" width={1200} height={675} decoding="async" className="foto-destacada" />
-      {nota.foto.credito && <figcaption className="credito-foto">{nota.foto.credito}</figcaption>}
     </figure>
   );
 }

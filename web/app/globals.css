@@ -957,7 +957,6 @@ footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1
 /* Con menos de cinco, que no queden angostas ni sueltas. */
 .postales[data-n="1"] .postal-1 { grid-column: 2 / span 4; }
 .postales[data-n="2"] .postal, .postales[data-n="4"] .postal { grid-column: span 3; }
-.postal-credito { font-size: 11px; color: var(--suave); font-style: italic; margin: 5px 2px 0; line-height: 1.3; }
 .postal-chapa { margin: 10px 3px 0; }
 .postal h3 { font-size: 19px; line-height: 1.22; font-weight: 700; margin: 9px 3px 0; }
 @media (max-width: 760px) {
@@ -979,3 +978,40 @@ footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1
 .fila-miniatura h3 { margin-top: 5px; }
 @media (min-width: 720px) { .miniatura { flex-basis: 132px; } }
 .fila-miniatura .chapa-nota { margin-top: 2px; }
+
+/* La maqueta de las notas de fútbol (web/components/futbol.js): partidos, resultados y tablas con los escudos de los clubes. */
+.fb { margin-top: 22px; }
+.fb-dia { margin-top: 22px; }
+.fb-dia h2, .fb-zona { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); font-weight: 700; margin: 0 0 8px; }
+.fb-dia ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.fb-partido { background: var(--tarjeta, #fff); border: 1px solid var(--linea, rgba(0, 0, 0, .1)); border-radius: 10px; padding: 12px 14px; }
+.fb-fila { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px; }
+.fb-equipo { display: flex; align-items: center; gap: 9px; min-width: 0; font-weight: 600; font-size: 15px; line-height: 1.25; }
+.fb-equipo img, .fb-sin-escudo { flex: none; width: 28px; height: 28px; object-fit: contain; }
+.fb-equipo-reves { flex-direction: row-reverse; text-align: right; }
+.fb-nombre { min-width: 0; overflow-wrap: anywhere; }
+.fb-hora, .fb-marcador { font-weight: 800; font-size: 18px; text-align: center; font-variant-numeric: tabular-nums; min-width: 56px; }
+.fb-marcador { font-size: 22px; }
+.fb-goles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; margin-top: 8px; font-size: 13px; color: var(--suave); line-height: 1.4; }
+.fb-gol-visitante { grid-column: 2; text-align: right; }
+.fb-solo-movil { display: none; font-weight: 700; }
+.fb-detalle { margin: 6px 0 0; font-size: 12.5px; color: var(--suave); text-align: center; }
+.fb-aviso { margin-top: 16px; font-size: 14px; color: var(--suave); }
+.fb-pie { margin-top: 18px; font-size: 12.5px; color: var(--suave); }
+.fb-tabla-envoltura { margin-top: 22px; overflow-x: auto; }
+.fb-tabla { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.fb-tabla th, .fb-tabla td { padding: 7px 6px; text-align: center; border-bottom: 1px solid var(--linea, rgba(0, 0, 0, .1)); }
+.fb-tabla thead th { font-size: 12px; color: var(--suave); font-weight: 700; }
+.fb-tabla tbody th { text-align: left; font-weight: 600; }
+.fb-tabla th:nth-child(2), .fb-tabla td:nth-child(2) { text-align: left; }
+.fb-tabla .fb-pts { font-weight: 800; }
+@media (max-width: 520px) {
+  .fb-fila { grid-template-columns: 1fr; gap: 6px; }
+  .fb-equipo-reves { flex-direction: row; text-align: left; }
+  .fb-hora, .fb-marcador { order: 2; text-align: left; }
+  .fb-fila > .fb-equipo-reves { order: 3; }
+  .fb-goles { grid-template-columns: 1fr; }
+  .fb-solo-movil { display: inline; }
+  .fb-gol-visitante { grid-column: 1; text-align: left; }
+  .fb-detalle { text-align: left; }
+}
