@@ -12,7 +12,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
-import { CALIDAD_JPEG } from './achicar-foto.mjs';
+import { CALIDAD_JPEG, PESO_MINIMO_DE_UNA_FOTO } from './achicar-foto.mjs';
 
 const correr = promisify(execFile);
 
@@ -52,7 +52,9 @@ async function ffmpegDelProyecto() {
  * Qué fotos usa el collage de un repaso: las de las notas que cuenta (en el orden del audio) que están en el banco y
  * existen en el disco, sin repetir archivo, hasta COLLAGE.maximo. [{ id, archivo, ruta, medio }]
  */
-export function fotosDelRepaso(nota, banco = {}, carpeta, { existe = fs.existsSync, maximo = COLLAGE.maximo } = {}) {
+export function fotosDelRepaso(nota, banco = {}, carpeta, {
+  existe = fs.existsSync, maximo = COLLAGE.maximo, peso = (ruta) => { try { return fs.statSync(ruta).size; } catch { return Infinity; } },
+} = {}) {
   const salida = [];
   const vistos = new Set();
   for (const id of nota?.notasDelRepaso ?? []) {
@@ -60,6 +62,8 @@ export function fotosDelRepaso(nota, banco = {}, carpeta, { existe = fs.existsSy
     if (!b?.archivo || vistos.has(b.archivo)) continue;
     const ruta = path.join(carpeta, path.basename(b.archivo));
     if (!existe(ruta)) continue;
+    // Un logo no entra en el collage (4/10): pesa muy poco.
+    if (peso(ruta) < PESO_MINIMO_DE_UNA_FOTO) continue;
     vistos.add(b.archivo);
     salida.push({ id, archivo: b.archivo, ruta, medio: b.medio ?? null, credito: b.credito ?? null });
     if (salida.length >= maximo) break;

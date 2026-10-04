@@ -94,7 +94,7 @@ test('la lista y la nota de Fotos escapan lo que viene de afuera', () => {
 
 // ---------------------------------------------------------------- sumar la foto (la nube)
 
-const JPG = Buffer.alloc(5000, 7);
+const JPG = Buffer.alloc(12000, 7);
 const respuesta = (cuerpo, { estado = 200, tipo = 'image/jpeg' } = {}) => async () => ({ ok: estado < 400, status: estado, headers: { get: () => tipo }, arrayBuffer: async () => cuerpo });
 const carpetaTemporal = () => fs.mkdtempSync(path.join(os.tmpdir(), 'radar-fm-'));
 
@@ -103,12 +103,12 @@ test('sumarFoto baja la imagen, la guarda con el id de la nota y la anota con su
   try {
     const archivo = path.join(dir, 'manuales.json');
     const e = await sumarFoto({ id: 'abc123', url: 'https://balcarce.gob.ar/f.jpg', credito: 'Municipalidad de Balcarce', por: 'Hernán', ahora: new Date('2026-10-02T15:00:00Z') }, {
-      fetchFn: respuesta(JPG), achicar: async () => Buffer.alloc(1000, 1), carpeta: path.join(dir, 'fotos'), archivo,
+      fetchFn: respuesta(JPG), achicar: async () => Buffer.alloc(8000, 1), carpeta: path.join(dir, 'fotos'), archivo,
     });
     assert.equal(e.archivo, 'fotos-notas/abc123.jpg');
     assert.equal(e.credito, 'Foto: Municipalidad de Balcarce');
     assert.equal(e.origen, 'manual');
-    assert.equal(fs.readFileSync(path.join(dir, 'fotos', 'abc123.jpg')).length, 1000, 'se guarda la achicada');
+    assert.equal(fs.readFileSync(path.join(dir, 'fotos', 'abc123.jpg')).length, 8000, 'se guarda la achicada');
     const libro = JSON.parse(fs.readFileSync(archivo, 'utf8'));
     assert.deepEqual(Object.keys(libro), ['abc123']);
     assert.equal(libro.abc123.imagenOriginal, 'https://balcarce.gob.ar/f.jpg');

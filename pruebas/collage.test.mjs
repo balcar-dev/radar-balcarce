@@ -46,7 +46,7 @@ test('las fotos del repaso: las de las notas que cuenta, en orden, sin repetir, 
 
 test('collageDeRepaso: sin fotos no hay, con una se usa tal cual, con varias se arma una vez y se reutiliza; nunca lanza', async () => {
   const carpeta = fs.mkdtempSync(path.join(os.tmpdir(), 'collage-'));
-  for (const n of ['a', 'b', 'c']) fs.writeFileSync(path.join(carpeta, `${n}.jpg`), 'x');
+  for (const n of ['a', 'b', 'c']) fs.writeFileSync(path.join(carpeta, `${n}.jpg`), Buffer.alloc(8000, 1));
   const banco = Object.fromEntries(['a', 'b', 'c'].map((n) => [n, { archivo: `fotos-notas/${n}.jpg`, medio: `Medio ${n}`, credito: `Foto: Medio ${n}` }]));
   assert.equal(await collageDeRepaso({ id: 'r0', notasDelRepaso: ['x', 'y'] }, { banco, carpeta }), null);
   assert.deepEqual(await collageDeRepaso({ id: 'r1', notasDelRepaso: ['a', 'x'] }, { banco, carpeta }), { archivo: 'fotos-notas/a.jpg', credito: 'Foto: Medio a' });

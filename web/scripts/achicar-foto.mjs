@@ -71,3 +71,9 @@ export async function fotoParaGuardar(original, extOriginal, { achicar = achicar
   if (chica && chica.length < original.length) return { bytes: chica, ext: 'jpg', achicada: true };
   return extOriginal ? { bytes: original, ext: extOriginal, achicada: false } : null;
 }
+
+/**
+ * Lo mínimo que pesa una foto de verdad ya achicada (4/10/2026): un logo o un dibujo plano pesa muy poco (el de La Vanguardia, 3.850 bytes; las fotos
+ * más livianas del banco, 7.000). Por debajo de esto no se guarda ni se usa en un collage.
+ */
+export const PESO_MINIMO_DE_UNA_FOTO = 6000;

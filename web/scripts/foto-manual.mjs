@@ -10,7 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { fotoParaGuardar } from './achicar-foto.mjs';
+import { fotoParaGuardar, PESO_MINIMO_DE_UNA_FOTO } from './achicar-foto.mjs';
 import { urlDeFotoValida, creditoDeFoto } from '../public/panel/fotos.js';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -77,6 +77,8 @@ export async function sumarFoto({ id, url, credito, por, ahora = new Date() }, {
   if (!cred) throw new Error('Falta el crédito de la foto.');
   const { bytes, ext, deLaPagina } = await bajarImagen(url, { fetchFn });
   const guardar = await fotoParaGuardar(bytes, ext, achicar ? { achicar } : {});
+  // Una nota pegada por su enlace trae la imagen que el diario puso para compartir, que a veces es su logo (4/10): un archivo así de liviano no es una foto.
+  if (guardar.bytes.length < PESO_MINIMO_DE_UNA_FOTO) throw new Error('Esa imagen parece un logo o un dibujo, no una foto de la nota. Buscá la foto y copiá la dirección de la imagen misma.');
   const nombre = `${id}.${guardar.ext}`;
   fs.mkdirSync(carpeta, { recursive: true });
   fs.writeFileSync(path.join(carpeta, nombre), guardar.bytes);
