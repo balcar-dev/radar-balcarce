@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T15:01:25.194Z",
- "portada": 33,
- "archivo": 878,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-04T19:32:42.685Z",
+ "portada": 36,
+ "archivo": 883,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-04T15:01:25.215Z",
+  "generado": "2026-10-04T19:32:42.720Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-04T13:04:23.758Z"
    },
    {
@@ -43,8 +43,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
-    "salio": null
+    "momento": "en-hora",
+    "salio": "2026-10-04T18:05:27.712Z"
    },
    {
     "nombre": "farmacia",
@@ -83,7 +83,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-04T13:04:23.758Z",
     "segundos": null,
     "notas": [
@@ -114,9 +114,9 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 55,
+    "momento": "en-hora",
+    "salio": "2026-10-04T18:05:27.712Z",
+    "segundos": null,
     "notas": [
      {
       "id": "o3v7lv",
@@ -142,8 +142,29 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 52,
+    "notas": [
+     {
+      "id": "1nqv1cj",
+      "titulo": "Franco Colapinto protagoniza un cruce radial con su ingeniero por error",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1g4en2j",
+      "titulo": "Movistar cambia las líneas fijas a sistema digital",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "r1j6p6",
+      "titulo": "Casella choca en Posadas tras un toque y una cubierta golpea a un espectador",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "c1nalz",
+      "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -154,7 +175,14 @@
      "cuando": "2026-10-04T13:32:52.898Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1g4en2j",
+     "titulo": "Movistar cambia las líneas fijas a sistema digital",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 4,
    "proximoDesde": "2026-10-04T15:02:52.898Z",
    "porDia": 5,
