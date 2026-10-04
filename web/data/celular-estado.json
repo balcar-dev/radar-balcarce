@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T08:31:06.641Z",
- "portada": 37,
- "archivo": 873,
+ "generado": "2026-10-04T09:01:23.997Z",
+ "portada": 36,
+ "archivo": 872,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-04T08:31:06.656Z",
+  "generado": "2026-10-04T09:01:24.020Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,8 +85,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "173wsz3",
+      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
+      "seccion": "Balcarce"
+     },
      {
       "id": "nm28kh",
       "titulo": "Lionel Scaloni palpita la despedida de Lionel Messi de la selección",
@@ -100,11 +105,6 @@
      {
       "id": "1l5htn5",
       "titulo": "Vecinas renuevan espacios públicos y plazas",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
       "seccion": "Balcarce"
      }
     ]
@@ -126,19 +126,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 39,
-    "notas": [
-     {
-      "id": "15z6cto",
-      "titulo": "La Generación 1971 recorre la Facultad de Ciencias Agrarias",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "3cr087",
-      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
-      "seccion": "Deportes"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
