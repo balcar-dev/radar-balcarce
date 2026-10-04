@@ -108,6 +108,10 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 ## Para mañana (5/10) — lo que dejamos listo y lo que falta mirar
 
 - **Mirar la maqueta nueva de las notas de fútbol (escudos, tablas) y que las dos notas de la misma fecha tengan fotos distintas** (se ve después de la primera corrida de "Actualizar la web" con el cambio).
+- **"Un día como hoy" salió bien (4/10, Hernán): que también sea reel e historia**, y una nota en Cultura y agenda (con foto libre o de archivo, no de stock pago).
+- **Tecnología sigue floja**: buscar fuentes de temas que interesan (IA, robótica, química, espacio, Tesla…) y medir cuántas notas salen por día.
+- **Cada sección de la tapa con 3 notas** (hoy `armarTapa`, `web/lib/datos.js`, muestra una por sección más las del bloque): revisar cuáles quedan con menos y por qué.
+- **Mejorar la sección Argentina** (qué entra, qué sale, cuántas notas).
 - **F1 y tablas fijas** (idea de Hernán, 4/10): después de cada carrera, una nota con gráficos propios del campeonato de pilotos y de constructores; y una página fija citable ("Tablas") con la F1 y las posiciones de la Liga, que se actualice sola. Falta decidir el diseño y de dónde sale la tabla de F1 (Jolpica ya la tiene).
 
 - **Mirar que ande lo de hoy en la nube**: (1) la nota de Frutimar que esperaba aprobación debería desaparecer sola tras la próxima corrida de la web (regla 101: `candidatasParaAgrupar`); (2) la corrida de "Pistas" ya puede sacar notas solas con 3 o más medios (`panel/pistas-solas.mjs`): ver en el log de la corrida (Actions → Pistas) las líneas "salió sola" / "no salió, motivo"; (3) el primer "Participá" del 5/10; (4) F1 (carrera del domingo) y fútbol: Hernán los revisa.
