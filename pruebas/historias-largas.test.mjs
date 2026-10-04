@@ -307,7 +307,9 @@ test('16c · el plan arma la historia de útiles el día que toca y no el que no
   // Todo lo que el reloj espera de las historias fijas, el plan lo tiene armado.
   for (let d = 0; d < 21; d += 1) {
     const f = new Date(AR('2026-09-14').getTime() + d * 86400e3);
-    const fijas = cronogramaDelDia(f).filter((p) => p.tipo === 'historia').map((p) => p.nombre);
+    // La agenda no entra en esta cuenta: sale sólo si hay eventos publicados en esos días (web/data/agenda.json, que cambia solo cada media hora), así que
+    // esta prueba no puede depender de ella (el 4/10, a las 3 de la mañana, se quedó sin eventos y frenó la actualización de la web).
+    const fijas = cronogramaDelDia(f).filter((p) => p.tipo === 'historia' && p.nombre !== 'agenda').map((p) => p.nombre);
     const plan = planDelDia(DATOS(f.getDate()), { fecha: f, estado: {} }).piezas.filter((p) => !p.fueraDeTecho).map((p) => p.nombre);
     for (const n of fijas) assert.ok(plan.includes(n), `${f.toISOString().slice(0, 10)}: el reloj espera ${n} y el plan no la arma`);
   }

@@ -1,12 +1,10 @@
 {
   "generado": "2026-10-02",
-  "nota": "Un día como hoy: lo que se lee, quién lo lee y cómo se ve, preparado una semana por vez (5 al 18/10/2026 revisados; 2 al 4/10 y 19 al 31/10 armados el 2/10 y sin revisar, con \"sale\": false hasta que se aprueben). Todos los días a las 9:00, con la locutora. Si nadie toca nada, sale como está; una entrada con \"sale\": false se saca. Los guiones están escritos con hechos de fecha confirmada: en los días armados el 2/10 (2 al 4 y 19 al 31) no quedó ningún dato a confirmar.",
+  "nota": "Un día como hoy: lo que se lee, quién lo lee y cómo se ve, preparado por tandas (2 al 31/10/2026). Todos los días a las 9:00, con la locutora. Desde el 4/10 todo sale como está, salvo que Hernán o Andrés lo saquen o pidan cambios desde la pestaña Fechas del panel (Más → Fechas → Mes armado). Los guiones están escritos con los datos verificados; los \"verificar\" son datos que no vienen del archivo y hay que confirmar con una segunda fuente.",
   "hora": "09:00",
   "dias": {
     "2026-10-02": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1ogcuex",
         "anio": 1869,
@@ -34,9 +32,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1869, nació Mahatma Gandhi, el líder de la independencia de la India, que defendió la no violencia. Por eso hoy es el Día Internacional de la No Violencia. Y además, un día como hoy: en 1836 el Beagle, con Charles Darwin a bordo, llegó a Falmouth, en Inglaterra, al terminar su vuelta al mundo; en 1955 se apagó para siempre la ENIAC, una de las primeras computadoras electrónicas; y hoy es el Día Nacional del Recolector de Residuos. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-03": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1m8hvqu",
         "anio": 1931,
@@ -64,9 +60,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, hace 95 años, en 1931, se inauguró en Buenos Aires el lujoso palacio del Concejo Deliberante, hoy Legislatura de la Ciudad. Y además, un día como hoy: en 1903 se fundó Cipolletti, en Río Negro; en 1959 se inauguró en Mendoza el estadio Feliciano Gambarte, del club Godoy Cruz; y hoy es el Día del Odontólogo. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-04": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "9dljlt",
         "anio": 1582,
@@ -488,9 +482,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1869, apareció en Buenos Aires el diario La Prensa, fundado por José C. Paz. Y además, un día como hoy: en 1989 se lanzó la misión Galileo rumbo a Júpiter; y en 2007 se inauguró la Línea H del subte porteño. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-19": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "15jfqt5",
         "anio": 1928,
@@ -513,9 +505,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1928, apareció por primera vez Patoruzú, el cacique tehuelche de la historieta argentina, en una tira del diario Crítica creada por Dante Quinterno. Y además, un día como hoy: en 1937 murió en Buenos Aires el prestigioso cirujano argentino Pedro Chutró; y en 2025, hace un año, se produjo un robo en la Galería de Apolo del museo del Louvre, en París. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-20": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "b5bw01",
         "anio": 1976,
@@ -543,9 +533,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, hace 50 años, en 1976, un pibe de 15 llamado Diego Maradona debutó en Primera con Argentinos Juniors. Y además, un día como hoy: en 1910 se botó en Belfast el RMS Olympic, el barco gemelo del Titanic; en 1938 nació el músico folklórico César Isella; y en 2004 se anunció Ubuntu, el sistema operativo de Mark Shuttleworth. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-21": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "syqx1y",
         "anio": 1921,
@@ -573,9 +561,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, hace 105 años, en 1921, se fundó el Radio Club Argentino, la entidad de los radioaficionados. Por eso hoy es su día. Y además, un día como hoy: en 1833 nació Alfred Nobel, el inventor sueco que creó los premios; en 1982 Gabriel García Márquez fue declarado Premio Nobel de Literatura; y en 1992 Mendoza adoptó su bandera actual, basada en la del Ejército de los Andes. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-22": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1j4gpdb",
         "anio": 1854,
@@ -603,9 +589,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1854, se fundó Chivilcoy, la ciudad bonaerense que cumple 172 años. Y además, un día como hoy: en 1844 nació Sarah Bernhardt, la gran actriz francesa; en 1854, el mismo año de Chivilcoy, murió el general argentino José María Paz; y en 2009 Microsoft lanzó Windows 7. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-23": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "tcoqyz",
         "anio": 1947,
@@ -628,9 +612,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1947, se anunció que Bernardo Houssay ganaba el Premio Nobel de Medicina: fue el primer latinoamericano en recibir un Nobel científico. Y además, un día como hoy: en 1869 se fundó la villa bonaerense de General Pinto; y en 1951, hace 75 años, nació Charly García, músico, compositor y una de las grandes figuras del rock argentino. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-24": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1irwou",
         "anio": 1985,
@@ -658,9 +640,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1985, en Asunción, Argentinos Juniors ganó por primera vez la Copa Libertadores de América. Y además, un día como hoy: en 1871 se inauguró el Observatorio Astronómico de Córdoba; en 2006 Taylor Swift publicó su primer álbum; y hoy es el Día del Diseñador Gráfico. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-25": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "14fd4fw",
         "anio": 2001,
@@ -683,9 +663,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, hace 25 años, en 2001, salió a la venta Windows XP, el sistema de Microsoft del prado verde en la pantalla. Y además, un día como hoy: en 1938 murió la poeta argentina Alfonsina Storni, autora de obras como Languidez y Ocre; y en 2009 U2 dio el primer concierto en vivo por YouTube, parte de su gira 360. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-26": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "1n5pcpy",
         "anio": 1965,
@@ -713,9 +691,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1965, partió desde la base General Belgrano, en la Antártida, la primera expedición argentina al Polo Sur, al mando del coronel Jorge Edgar Leal. Y además, un día como hoy: en 1885 Louis Pasteur presentó sus trabajos contra la rabia; en 1920 nació la aviadora Maureen Dunlop de Popp; y en 1928 nació Francisco Solano López, el dibujante de El Eternauta. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-27": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "oosgp",
         "anio": 1970,
@@ -738,9 +714,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1970, se anunció que el científico argentino Luis Federico Leloir ganaba el Premio Nobel de Química. Y además, un día como hoy: en 1728 nació el navegante y cartógrafo británico James Cook; y en 1974 nació en Buenos Aires la cantante y actriz Elena Roger. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-28": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "v1k0qx",
         "anio": 1951,
@@ -768,9 +742,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, hace 75 años, en 1951, nuestro Juan Manuel Fangio, el chueco de Balcarce, ganó su primer campeonato mundial de Fórmula 1. Y además, un día como hoy: en 1955 nació Bill Gates, el fundador de Microsoft; en 1979 nació Jawed Karim, cofundador de YouTube; y en 2011 la NASA lanzó el satélite NPP para observar el clima de la Tierra. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-29": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "18kokcb",
         "anio": 1969,
@@ -798,9 +770,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1969, se inauguró la Base Marambio, en la Antártida, hoy una de las bases argentinas más importantes. Y además, un día como hoy: en 1787 Mozart estrenó en Praga su ópera Don Giovanni; en 1920 nació la actriz argentina Hilda Bernard; y en 1945 Jean-Paul Sartre dio en París su conferencia El existencialismo es un humanismo. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-30": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "4t54z5",
         "anio": 1921,
@@ -828,9 +798,7 @@
       "guion": "Buen día, Balcarce. Un día como hoy, en 1921, la Selección Argentina ganó por primera vez el Campeonato Sudamericano de fútbol, el antecesor de la Copa América. Y además, un día como hoy: en 1960 nació Diego Armando Maradona; en 2001 Michael Jackson publicó Invincible, su último álbum de estudio; y hoy es el Día Nacional de la Educación Física. Un día como hoy, en Radar Balcarce."
     },
     "2026-10-31": {
-      "sale": false,
       "voz": "locutora",
-      "revision": "sin revisar: rearmado por Claude el 2/10 con hechos de fecha confirmada (sin datos a confirmar), a la espera del visto bueno de Hernán. Para que salga, borrar \"sale\": false y \"revision\".",
       "principal": {
         "id": "pyyddg",
         "anio": 1512,

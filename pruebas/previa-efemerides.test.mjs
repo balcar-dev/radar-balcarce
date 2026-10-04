@@ -42,10 +42,10 @@ test('cada día preparado tiene su principal, dos o tres "además" y un guion qu
   const fechas = Object.keys(datos.dias);
   assert.equal(fechas.length, 30);
   assert.deepEqual([fechas[0], fechas.at(-1)], ['2026-10-02', '2026-10-31']);
-  // Lo armado el 2/10 (2 al 4 y 19 al 31) no sale solo hasta que una persona lo apruebe; lo revisado (5 al 18) sí.
+  // Desde el 4/10 (Hernán: "que salgan por defecto a no ser que yo tome alguna acción") todo sale como está: sin "sale: false" ni "revision". Una persona lo saca,
+  // o pide cambios, desde la pestaña Fechas del panel (regla 97).
   for (const f of fechas) {
-    const sinRevisar = f < '2026-10-05' || f > '2026-10-18';
-    assert.equal(datos.dias[f].sale === false, sinRevisar, `${f}: sale`);
+    assert.ok(!('sale' in datos.dias[f]) && !('revision' in datos.dias[f]), `${f}: sale por defecto`);
   }
   for (const f of fechas) {
     const d = datos.dias[f];
