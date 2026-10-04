@@ -26,7 +26,9 @@ const lista = (t) => {
 };
 
 /** La firma: dice que la escribió la IA con lo que publicaron los medios y que la revisó una persona (CRITERIO-EDITORIAL § 10). */
-export const firmaDePista = (medios = []) => `Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron ${lista(medios)} y revisada por la redacción`;
+export const firmaDePista = (medios = [], { automatica = false } = {}) => automatica
+  ? `Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron ${lista(medios)} y controlada contra esas fuentes`
+  : `Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron ${lista(medios)} y revisada por la redacción`;
 
 const esHttps = (u) => /^https?:\/\//.test(String(u ?? ''));
 
@@ -74,7 +76,7 @@ export function notasDePistas(json, { ahora = new Date() } = {}) {
       temas: [],
       etiquetas: Array.isArray(e.etiquetas) ? e.etiquetas.slice(0, 6) : [],
       como: 'publicada',
-      firma: firmaDePista(fuentes.map((f) => f.medio)),
+      firma: firmaDePista(fuentes.map((f) => f.medio), { automatica: e.automatica === true }),
     });
   }
   return salida;

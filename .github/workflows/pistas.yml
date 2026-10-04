@@ -57,6 +57,7 @@ jobs:
           PISTA: ${{ inputs.id }}
           GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
           GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
           WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
 
@@ -66,6 +67,7 @@ jobs:
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
           [ -e web/data/pistas.json ] && git add web/data/pistas.json
+          [ -e web/data/notas-de-pistas.json ] && git add web/data/notas-de-pistas.json
           if git diff --cached --quiet; then
             echo "Nada nuevo que guardar."
           else

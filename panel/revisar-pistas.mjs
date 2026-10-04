@@ -17,6 +17,7 @@ import { revisarPista } from '../ingesta/pistas.mjs';
 import { cerrar, leerLlaves } from './cifrado.mjs';
 import { conRevision, pistasParaRevisar, comoRenglones, avisoDePistas, PISTAS_ABIERTAS } from './pistas-libro.mjs';
 import { leerVariable, claveRedaccion, claveClasificacion } from '../reels/claves.mjs';
+import { sacarPistasSolas } from './pistas-solas.mjs';
 import { enviarWhatsApp } from '../redes/whatsapp.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -57,8 +58,22 @@ async function main() {
   console.log(`Pistas: ${r.revisadas.length} revisadas, ${r.novedades.length} con novedades (se siguen ${PISTAS_ABIERTAS.dias} días).`);
   for (const n of r.novedades) console.log(`  novedad (${n.id}): ${n.motivo}`);
   if (simular) return;
-  fs.writeFileSync(ARCHIVO_PISTAS, comoRenglones(r.libro), 'utf8');
-  const texto = avisoDePistas(r.novedades);
+  // Las que ya cubren tres o más medios y pasan el verificador salen solas como notas propias (4/10, panel/pistas-solas.mjs).
+  let libroFinal = r.libro;
+  const novedadesDeSolas = [];
+  if (!solo && process.env.TAVILY_API_KEY) {
+    const archivoDeNotas = path.join(DATOS, 'notas-de-pistas.json');
+    const s = await sacarPistasSolas({ libro: libroFinal, notas: leerJson(archivoDeNotas, { notas: {} }), archivo: leerJson(path.join(DATOS, 'archivo.json'), { notas: [] }).notas ?? [] });
+    for (const x of s.intentadas) console.log(`  salir sola (${x.id}): no salió, ${x.motivo}`);
+    if (s.salieron.length) {
+      fs.writeFileSync(archivoDeNotas, `${JSON.stringify(s.notas, null, 1)}
+`, 'utf8');
+      libroFinal = s.libro;
+      for (const id of s.salieron) { novedadesDeSolas.push({ id, afirmacion: libroFinal.pistas[id]?.afirmacion, motivo: 'salió sola como nota de Radar Balcarce' }); console.log(`  salió sola (${id})`); }
+    }
+  }
+  fs.writeFileSync(ARCHIVO_PISTAS, comoRenglones(libroFinal), 'utf8');
+  const texto = avisoDePistas([...r.novedades, ...novedadesDeSolas]);
   if (texto) {
     const telefono = leerVariable('WHATSAPP_TELEFONO');
     const apikey = leerVariable('WHATSAPP_APIKEY');
