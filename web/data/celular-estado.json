@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T10:01:32.542Z",
- "portada": 31,
- "archivo": 870,
+ "generado": "2026-10-04T10:31:36.000Z",
+ "portada": 34,
+ "archivo": 872,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-04T10:01:32.571Z",
+  "generado": "2026-10-04T10:31:36.022Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-04T10:03:57.297Z"
    },
    {
     "nombre": "efemeride",
@@ -126,8 +126,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 42,
+    "notas": [
+     {
+      "id": "15z6cto",
+      "titulo": "La Generación 1971 recorre la Facultad de Ciencias Agrarias",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "c1nalz",
+      "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {

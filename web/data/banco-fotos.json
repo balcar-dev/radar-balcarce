@@ -6134,12 +6134,16 @@
   "cuando": "2026-10-03T15:31:45.021Z"
  },
  "16s62sc": {
-  "intentado": true,
+  "archivo": "fotos-notas/16s62sc.jpg",
+  "medio": "La Capital (Rosario)",
+  "credito": "Foto: La Capital (Rosario)",
+  "licencia": null,
   "origen": "medio",
-  "cuando": "2026-10-03T15:31:45.021Z",
-  "error": "no se pudo volver a bajar la elegida",
-  "intentos": 1,
-  "fuentes": 2
+  "titulo": "Franco Colapinto ayuda a Gasly en la clasificación y larga vigesimoprimero en Malasia",
+  "enlace": "https://www.lacapital.com.ar/ovacion/franco-colapinto-hizo-un-buen-sabado-sepang-y-largara-el-fondo-las-penalizaciones-n10284420.html",
+  "imagenOriginal": "https://media.lacapital.com.ar/p/d94afb97c7a25fc5c004fc1c1c35f86b/adjuntos/203/imagenes/103/442/0103442514/1200x675/smart/image-3.jpg",
+  "razon": "La foto B muestra con mayor nitidez y mejor encuadre al monoplaza en la pista, sin marcas de agua ni menores.",
+  "cuando": "2026-10-04T10:31:28.356Z"
  },
  "rn1r31": {
   "archivo": "fotos-notas/rn1r31.jpg",
@@ -6571,5 +6575,29 @@
   "imagenOriginal": "https://media.bolavip.com/wp-content/uploads/sites/18/2026/10/04041700/Hamilton-Colapinto-Sepang-1200x740.webp",
   "razon": "La foto D muestra claramente a Franco Colapinto conversando con Lewis Hamilton en primer plano, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-04T08:20:02.176Z"
+ },
+ "1vb3leq": {
+  "archivo": "fotos-notas/1vb3leq.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Intendentes debaten la división provincial y Balcarce analiza su rol",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44990-otra-vez-sobre-la-mesa-la-division-de-la-provincia-que-lugar-tendria-balcarce-en-una-buenos-aires-sin-el-peso-del-conurbano/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65944.png",
+  "razon": "Es la única foto disponible, tiene buena nitidez y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-04T10:31:28.356Z"
+ },
+ "c1nalz": {
+  "archivo": "fotos-notas/c1nalz.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44986-beto-vuotto-el-legado-de-una-vida-dedicada-al-periodismo/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65940.png",
+  "razon": "La imagen tiene buen encuadre y nitidez, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-04T10:31:28.356Z"
  }
 }
