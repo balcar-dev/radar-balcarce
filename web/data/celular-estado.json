@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T06:01:26.033Z",
- "portada": 43,
- "archivo": 872,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-04T06:31:26.760Z",
+ "portada": 39,
+ "archivo": 871,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-04T06:01:26.063Z",
+  "generado": "2026-10-04T06:31:26.788Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 48,
     "notas": [
      {
       "id": "nm28kh",
@@ -98,14 +98,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "173wsz3",
-      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
-      "seccion": "Balcarce"
+      "id": "158gkt0",
+      "titulo": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
+      "seccion": "Fútbol"
      },
      {
-      "id": "1nz8gwo",
-      "titulo": "Doce equipos compiten en un nuevo torneo de vóley",
-      "seccion": "Deportes"
+      "id": "1l5htn5",
+      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,16 +116,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 40,
     "notas": [
      {
-      "id": "158gkt0",
-      "titulo": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "inwwi9",
-      "titulo": "La Provincia y las distribuidoras apelan el fallo que frenó la suba de la luz",
+      "id": "16ml7pn",
+      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
       "seccion": "Balcarce"
      },
      {
