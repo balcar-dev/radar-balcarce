@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-04T02:29:40.686Z",
+ "consultado": "2026-10-04T14:01:47.387Z",
  "equipos": [
   "9739",
   "3",
@@ -586,6 +586,7 @@
     "filas": [
      {
       "posicion": 1,
+      "id": "2975",
       "equipo": "Instituto (Córdoba)",
       "pj": 11,
       "g": 8,
@@ -598,6 +599,7 @@
      },
      {
       "posicion": 2,
+      "id": "8950",
       "equipo": "Defensa y Justicia",
       "pj": 11,
       "g": 6,
@@ -610,6 +612,7 @@
      },
      {
       "posicion": 3,
+      "id": "5",
       "equipo": "Boca Juniors",
       "pj": 11,
       "g": 5,
@@ -622,6 +625,7 @@
      },
      {
       "posicion": 4,
+      "id": "21",
       "equipo": "Vélez Sarsfield",
       "pj": 10,
       "g": 5,
@@ -634,6 +638,7 @@
      },
      {
       "posicion": 5,
+      "id": "11972",
       "equipo": "Gimnasia (Mendoza)",
       "pj": 10,
       "g": 5,
@@ -646,6 +651,7 @@
      },
      {
       "posicion": 6,
+      "id": "12",
       "equipo": "Lanús",
       "pj": 11,
       "g": 5,
@@ -658,6 +664,7 @@
      },
      {
       "posicion": 7,
+      "id": "14",
       "equipo": "Newell's Old Boys",
       "pj": 11,
       "g": 4,
@@ -670,6 +677,7 @@
      },
      {
       "posicion": 8,
+      "id": "11",
       "equipo": "Independiente",
       "pj": 11,
       "g": 5,
@@ -682,6 +690,7 @@
      },
      {
       "posicion": 9,
+      "id": "20",
       "equipo": "Unión (Santa Fe)",
       "pj": 11,
       "g": 4,
@@ -694,6 +703,7 @@
      },
      {
       "posicion": 10,
+      "id": "18",
       "equipo": "San Lorenzo",
       "pj": 11,
       "g": 3,
@@ -706,6 +716,7 @@
      },
      {
       "posicion": 11,
+      "id": "8",
       "equipo": "Estudiantes de La Plata",
       "pj": 10,
       "g": 3,
@@ -718,6 +729,7 @@
      },
      {
       "posicion": 12,
+      "id": "17702",
       "equipo": "Deportivo Riestra",
       "pj": 10,
       "g": 2,
@@ -730,6 +742,7 @@
      },
      {
       "posicion": 13,
+      "id": "7764",
       "equipo": "Platense",
       "pj": 10,
       "g": 2,
@@ -742,6 +755,7 @@
      },
      {
       "posicion": 14,
+      "id": "19",
       "equipo": "Talleres (Córdoba)",
       "pj": 10,
       "g": 2,
@@ -754,6 +768,7 @@
      },
      {
       "posicion": 15,
+      "id": "11989",
       "equipo": "Central Córdoba (Santiago del Estero)",
       "pj": 10,
       "g": 2,
@@ -771,6 +786,7 @@
     "filas": [
      {
       "posicion": 1,
+      "id": "3",
       "equipo": "Argentinos Juniors",
       "pj": 10,
       "g": 5,
@@ -783,6 +799,7 @@
      },
      {
       "posicion": 2,
+      "id": "17",
       "equipo": "Rosario Central",
       "pj": 10,
       "g": 5,
@@ -795,6 +812,7 @@
      },
      {
       "posicion": 3,
+      "id": "9744",
       "equipo": "Independiente Rivadavia",
       "pj": 11,
       "g": 5,
@@ -807,6 +825,7 @@
      },
      {
       "posicion": 4,
+      "id": "9",
       "equipo": "Gimnasia La Plata",
       "pj": 11,
       "g": 5,
@@ -819,6 +838,7 @@
      },
      {
       "posicion": 5,
+      "id": "4",
       "equipo": "Belgrano (Córdoba)",
       "pj": 10,
       "g": 4,
@@ -831,6 +851,7 @@
      },
      {
       "posicion": 6,
+      "id": "10",
       "equipo": "Huracán",
       "pj": 10,
       "g": 4,
@@ -843,6 +864,7 @@
      },
      {
       "posicion": 7,
+      "id": "10158",
       "equipo": "Sarmiento (Junín)",
       "pj": 10,
       "g": 5,
@@ -855,6 +877,7 @@
      },
      {
       "posicion": 8,
+      "id": "10060",
       "equipo": "Barracas Central",
       "pj": 11,
       "g": 4,
@@ -867,6 +890,7 @@
      },
      {
       "posicion": 9,
+      "id": "16",
       "equipo": "River Plate",
       "pj": 10,
       "g": 4,
@@ -879,6 +903,7 @@
      },
      {
       "posicion": 10,
+      "id": "9785",
       "equipo": "Atlético Tucumán",
       "pj": 11,
       "g": 3,
@@ -891,6 +916,7 @@
      },
      {
       "posicion": 11,
+      "id": "7767",
       "equipo": "Tigre",
       "pj": 10,
       "g": 3,
@@ -903,6 +929,7 @@
      },
      {
       "posicion": 12,
+      "id": "235",
       "equipo": "Banfield",
       "pj": 10,
       "g": 2,
@@ -915,6 +942,7 @@
      },
      {
       "posicion": 13,
+      "id": "9739",
       "equipo": "Aldosivi",
       "pj": 10,
       "g": 2,
@@ -927,6 +955,7 @@
      },
      {
       "posicion": 14,
+      "id": "15",
       "equipo": "Racing Club",
       "pj": 10,
       "g": 2,
@@ -939,6 +968,7 @@
      },
      {
       "posicion": 15,
+      "id": "19685",
       "equipo": "Estudiantes de Río Cuarto",
       "pj": 10,
       "g": 1,
@@ -953,7 +983,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-04T12:31:41.619Z",
+ "tablaCuando": "2026-10-04T14:01:47.387Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z"

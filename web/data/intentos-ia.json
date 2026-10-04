@@ -200,9 +200,9 @@
   "motivo": "título o bajada: 2 problemas (numero): el copete dice 90 y la fuente no lo dice"
  },
  "13v5ojc": {
-  "intentos": 2,
-  "ultimo": "2026-10-04T13:31:13.910Z",
-  "motivo": "título o bajada: 6 problemas (numero, nombre, negacion): el titulo dice 0 y la fuente no lo dice"
+  "intentos": 3,
+  "ultimo": "2026-10-04T14:01:33.670Z",
+  "motivo": "título o bajada: 3 problemas (nombre, negacion): el titulo nombra a \"cerondolo\" y la fuente no"
  },
  "13wsmuu": {
   "intentos": 2,
@@ -2630,11 +2630,6 @@
   "ultimo": "2026-09-29T21:22:09.437Z",
   "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (Energia, generacion, produccion): va con las tildes y la eñe donde"
  },
- "iiw0oc": {
-  "intentos": 1,
-  "ultimo": "2026-09-27T14:00:52.601Z",
-  "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice"
- },
  "iko0b0": {
   "intentos": 1,
   "ultimo": "2026-10-02T13:03:38.642Z",
@@ -2664,6 +2659,11 @@
   "intentos": 1,
   "ultimo": "2026-10-01T19:32:14.960Z",
   "motivo": "con cuerpo"
+ },
+ "izqwm7": {
+  "intentos": 1,
+  "ultimo": "2026-10-04T14:01:33.670Z",
+  "motivo": "semáforo: necesita ojo humano: \"detenido\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "j3rmxt": {
   "intentos": 3,

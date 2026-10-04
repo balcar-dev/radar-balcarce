@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T13:31:41.735Z",
- "portada": 31,
+ "generado": "2026-10-04T14:01:48.821Z",
+ "portada": 35,
  "archivo": 880,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-04T13:31:41.755Z",
+  "generado": "2026-10-04T14:01:48.849Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-04T10:03:57.297Z"
    },
    {
@@ -116,17 +116,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "1p4thhs",
-      "titulo": "Franco Colapinto termina decimotercero en el Gran Premio de Bahréin",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "o3v7lv",
       "titulo": "Balcarce conmemora el Día del Periodista en recuerdo de Héctor Vuotto",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1nqv1cj",
+      "titulo": "Franco Colapinto protagoniza un cruce radial con su ingeniero por error",
+      "seccion": "Automovilismo"
      },
      {
       "id": "inwwi9",
@@ -152,17 +152,16 @@
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "o3v7lv",
      "titulo": "Balcarce conmemora el Día del Periodista en recuerdo de Héctor Vuotto",
-     "seccion": "Cultura y agenda",
-     "marcada": false
+     "cuando": "2026-10-04T13:32:52.898Z"
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-04T00:15:29.941Z",
+   "cola": [],
+   "cupo": 4,
+   "proximoDesde": "2026-10-04T15:02:52.898Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
