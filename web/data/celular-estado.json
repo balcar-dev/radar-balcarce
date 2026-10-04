@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T12:31:42.883Z",
+ "generado": "2026-10-04T13:01:41.009Z",
  "portada": 31,
- "archivo": 875,
+ "archivo": 878,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-04T12:31:42.911Z",
+  "generado": "2026-10-04T13:01:41.039Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -83,7 +83,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 53,
     "notas": [
@@ -93,18 +93,18 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "173wsz3",
-      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "158gkt0",
       "titulo": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
       "seccion": "Fútbol"
      },
      {
-      "id": "1l5htn5",
-      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "id": "1xritdf",
+      "titulo": "Colegiales recibe los Play Off del Torneo Clausura de Preliga",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "173wsz3",
+      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
       "seccion": "Balcarce"
      }
     ]
@@ -126,8 +126,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 41,
+    "notas": [
+     {
+      "id": "inwwi9",
+      "titulo": "La Provincia y las distribuidoras apelan el fallo que frenó las tarifas",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "c1nalz",
+      "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {

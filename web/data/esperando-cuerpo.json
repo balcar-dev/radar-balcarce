@@ -1,22 +1,27 @@
 {
- "generado": "2026-10-04T12:31:42.883Z",
+ "generado": "2026-10-04T13:01:41.009Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "i4xb8",
-   "titulo": "Efemérides 4 de octubre: se cumplen 11 años del primer debate presidencial de la historia argentina",
-   "copete": "El 4 de octubre recuerda el primer debate presidencial argentino de 2015 y reúne otros acontecimientos históricos, nacimientos y fallecimientos ocurridos en esta fecha.",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-04T12:23:08.000Z",
+   "id": "13v5ojc",
+   "titulo": "Francisco Cerúndolo peleó, pero no pudo con Medvedev y se despidió en Pekín",
+   "copete": "Buenos Aires, 4 octubre (NA) -- El ruso Daniil Medvedev selló su pase a las semifinales del China Open 2026 tras tomarse la revancha ante Francisco Cerúndolo, a quien superó en un intenso duelo por 7-6(4) y 6-3 en Pekín. Medvedev, que venía de consagrarse campeón en el ATP de…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-04T11:16:58.000Z",
    "fuentes": [
     {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-4-de-octubre-se-cumplen-11-anos-del-primer-debate-presidencial-de-la-historia-argentina",
-     "fecha": "2026-10-04T12:23:08.000Z"
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/tenis/franciscocerundolo-daniilmedvedev-abiertodechina-pekin_0_3vEkE6r35s.html",
+     "fecha": "2026-10-04T11:16:58.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/cerundolo-peleo-hasta-el-tiebreak-pero-cayo-ante-medvedev-en-pekin_a6ac2439be65aff3a39b24578",
+     "fecha": "2026-10-04T12:31:07.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (copia, promesa): copia 21 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 70 palabras",
+   "motivo": "título o bajada: 4 problemas (numero, nombre, negacion): el copete dice 40 y la fuente no lo dice",
    "maximo": 3
   }
  ]
