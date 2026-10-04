@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T04:01:37.677Z",
- "portada": 50,
+ "generado": "2026-10-04T04:31:22.764Z",
+ "portada": 51,
  "archivo": 871,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-04T04:01:37.703Z",
+  "generado": "2026-10-04T04:31:22.791Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 53,
     "notas": [
      {
       "id": "v0xov9",
@@ -98,8 +98,8 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1l5htn5",
-      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "id": "16ml7pn",
+      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
       "seccion": "Balcarce"
      },
      {
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 50,
     "notas": [
      {
       "id": "158gkt0",
@@ -124,9 +124,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+      "id": "1l5htn5",
+      "titulo": "Vecinas renuevan espacios públicos y plazas",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "3cr087",
+      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
+      "seccion": "Deportes"
      },
      {
       "id": "15z6cto",
