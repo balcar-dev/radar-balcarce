@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T14:32:51.725Z",
- "portada": 34,
- "archivo": 880,
+ "generado": "2026-10-04T15:01:25.194Z",
+ "portada": 33,
+ "archivo": 878,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-04T14:32:51.749Z",
+  "generado": "2026-10-04T15:01:25.215Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-04T12:04:34.965Z"
    },
    {
@@ -116,13 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
-     {
-      "id": "1nqv1cj",
-      "titulo": "Franco Colapinto protagoniza un cruce radial con su ingeniero por error",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "o3v7lv",
       "titulo": "Balcarce conmemora el Día del Periodista en recuerdo de Héctor Vuotto",
