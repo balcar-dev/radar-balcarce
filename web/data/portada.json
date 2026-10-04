@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T10:31:36.000Z",
+  "generado": "2026-10-04T11:01:42.688Z",
   "notas": [
     {
       "id": "1vb3leq",
@@ -125,6 +125,108 @@
       "foto": {
         "archivo": "fotos-notas/c1nalz.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "5skk4j",
+      "titulo": "Max Verstappen gana el Gran Premio de Bahréin y Franco Colapinto finaliza decimotercero",
+      "copete": "El neerlandés logró su primer triunfo del año en el circuito de Sepang. El piloto argentino avanzó desde el fondo y terminó en el puesto 13.",
+      "cuerpo": "Max Verstappen se quedó con el primer puesto en el Gran Premio de Bahréin de Fórmula 1 desarrollado en el circuito de Sepang, en Malasia, tras una competencia condicionada por la lluvia. La segunda colocación quedó en manos de Kimi Antonelli, mientras que Lewis Hamilton completó el podio al finalizar tercero.\n\nPor su parte, Franco Colapinto avanzó en el clasificador a pesar de los inconvenientes estratégicos de la escudería Alpine y concluyó la prueba en el decimotercer lugar. El piloto argentino había partido desde el vigesimoprimer puesto de la grilla tras acumular penalizaciones previas durante el fin de semana.",
+      "guion": "Max Verstappen gana el Gran Premio de Bahréin y Franco Colapinto finaliza decimotercero",
+      "seccion": "Automovilismo",
+      "medios": [
+        "La Nación",
+        "Crónica",
+        "Radio Mitre",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.cronica.com.ar/depo/polideportivo/franco-colapinto-en-vivo-gran-premio-de-bahrein-en-malasia-minuto-a-minuto/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-04T09:27:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-04T11:01:22.322Z",
+      "relevancia": 97,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Max Verstappen obtuvo su primer triunfo de la temporada en Malasia.",
+        "Kimi Antonelli finalizó en el segundo lugar y Lewis Hamilton completó el podio.",
+        "Franco Colapinto remontó posiciones desde el fondo y concluyó decimotercero."
+      ],
+      "seSabe": [
+        "Max Verstappen ganó la carrera en el circuito de Sepang.",
+        "Kimi Antonelli terminó segundo y Lewis Hamilton tercero.",
+        "Franco Colapinto finalizó en el puesto 13."
+      ],
+      "textoRedes": "Max Verstappen se impuso en el Gran Premio de Bahréin de Fórmula 1 en Malasia y consiguió su primera victoria del año. El piloto argentino Franco Colapinto remontó desde el fondo de la grilla y finalizó en el decimotercer lugar tras una carrera atravesada por la lluvia.",
+      "etiquetas": [
+        "Formula 1",
+        "Max Verstappen",
+        "Franco Colapinto",
+        "Malasia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/polideportivo/franco-colapinto-en-vivo-gran-premio-de-bahrein-en-malasia-minuto-a-minuto/",
+          "fecha": "2026-10-04T09:27:18.000Z",
+          "oficial": false,
+          "aporte": "Detalló el podio, la posición de Colapinto y los incidentes de la carrera."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-carrera-del-gran-premio-de-bahrein-en-malasia-de-formula-1-nid04102026/",
+          "fecha": "2026-10-04T10:34:49.000Z",
+          "oficial": false,
+          "aporte": "Proporcionó el orden definitivo de los diez primeros puestos."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/kimi-antonelli-amplio-su-ventaja-a-84-puntos-en-el-gp-de-bahrein-verstappen-gano-y-george-russell-abandono/",
+          "fecha": "2026-10-04T11:00:14.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que se trató de la primera victoria de la temporada para el ganador."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/la-tabla-de-posiciones-de-la-f1-tras-la-victoria-de-verstappen-y-el-abandono-de-russell-en-el-gp-de-barein",
+          "fecha": "2026-10-04T10:26:18.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el rendimiento del piloto neerlandés en el campeonato."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "16fjrrx",
+          "titulo": "Franco Colapinto larga desde el fondo en el Gran Premio de Malasia",
+          "fecha": "2026-10-04T03:00:14.000Z",
+          "ruta": "/nota/franco-colapinto-larga-desde-el-fondo-en-el-gran-premio-de-malasia-16fjrrx"
+        },
+        {
+          "id": "fjrow3",
+          "titulo": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
+          "fecha": "2026-10-03T10:28:42.000Z",
+          "ruta": "/nota/franco-colapinto-busca-la-remontada-en-el-gran-premio-de-barein-fjrow3"
+        },
+        {
+          "id": "ei8drx",
+          "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
+          "fecha": "2026-10-02T05:20:23.000Z",
+          "ruta": "/nota/max-verstappen-consigue-la-pole-position-y-franco-colapinto-larga-ei8drx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "max-verstappen-gana-el-gran-premio-de-bahrein-y-franco-colapinto",
+      "foto": {
+        "archivo": "fotos-notas/5skk4j.jpg",
+        "credito": "Foto: Crónica"
       }
     },
     {
@@ -427,9 +529,9 @@
       "guion": "Lionel Scaloni palpita la despedida de Lionel Messi de la selección",
       "seccion": "Fútbol",
       "medios": [
-        "Olé",
         "TN (Todo Noticias)",
         "TyC Sports",
+        "Olé",
         "C5N",
         "El Gráfico",
         "Doble Amarilla"
@@ -586,6 +688,7 @@
       "seccion": "Fútbol",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)",
         "Acción 5 (Balcarce)",
         "Diario La Vanguardia"
       ],
@@ -594,7 +697,7 @@
       "fecha": "2026-10-03T22:52:18.014Z",
       "sinFecha": false,
       "visto": "2026-10-04T02:13:39.472Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1183,10 +1286,10 @@
       "guion": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
       "seccion": "Fútbol",
       "medios": [
-        "Olé",
         "Clarín",
         "Minuto Uno",
         "TyC Sports",
+        "Olé",
         "C5N",
         "Noticias Argentinas (NA)",
         "Bolavip Argentina",
@@ -1506,7 +1609,7 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariallllllllllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialllllllllllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció el sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
@@ -1577,6 +1680,90 @@
       "foto": {
         "archivo": "fotos-notas/dfadrz.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "1oy5t8d",
+      "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "copete": "El titular de la UCR Nacional mantuvo un encuentro con el intendente y referentes locales en el Comité partidario. Conversaron sobre la agenda política y la presencia en el territorio.",
+      "cuerpo": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino, funcionarios municipales y militantes en el Comité local de la Unión Cívica Radical, según informó un medio local. Durante el encuentro, los dirigentes conversaron sobre la actualidad política, los desafíos nacionales y el trabajo territorial del partido.\n\nChiarella asumió la conducción partidaria el 12 de diciembre de 2025 y actualmente también se desempeña como intendente de la ciudad santafesina de Venado Tuerto.",
+      "guion": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T15:25:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T16:31:17.843Z",
+      "relevancia": 93,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Leonel Chiarella visitó el Comité local de la UCR en Balcarce",
+        "Mantuvo una reunión con el intendente Esteban Reino y dirigentes",
+        "Abordaron temas de actualidad política y el rol territorial del partido"
+      ],
+      "seSabe": [
+        "Leonel Chiarella visitó Balcarce",
+        "El titular de la UCR Nacional se reunió con Esteban Reino y militantes radicales",
+        "El encuentro se realizó en el Comité local de la UCR"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino y referentes locales del radicalismo en el Comité partidario para analizar la agenda política.",
+      "etiquetas": [
+        "Leonel Chiarella",
+        "Esteban Reino",
+        "UCR",
+        "Balcarce",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+          "fecha": "2026-10-03T15:25:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la visita de Leonel Chiarella a Balcarce, su reunión con Esteban Reino y el encuentro con dirigentes radicales en el Comité local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kt5uyq",
+          "titulo": "Esteban Reino destaca el impacto económico tras la reapertura del autódromo",
+          "fecha": "2026-09-30T12:59:12.000Z",
+          "ruta": "/nota/esteban-reino-destaca-el-impacto-economico-tras-la-reapertura-del-1kt5uyq"
+        },
+        {
+          "id": "repaso20260929tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
+          "fecha": "2026-09-29T19:46:57.548Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-corte-de-luz-esteban-reino-y-repaso20260929tarde"
+        },
+        {
+          "id": "tttn9w",
+          "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+          "fecha": "2026-09-28T20:45:35.000Z",
+          "ruta": "/nota/esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo-tttn9w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "leonel-chiarella-visita-balcarce-y-se-reune-con-esteban-reino",
+      "foto": {
+        "archivo": "fotos-notas/1oy5t8d.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1669,7 +1856,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/en-solo-tres-meses-la-misma-sucursal-de.html",
       "teniaImagenLaFuente": true,
@@ -1785,78 +1973,62 @@
       }
     },
     {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
-      "copete": "La Asociación de Bomberos Voluntarios recibe el sábado a la Brigada ARG-13 PUMA. Exponen desde las 17 sobre el trabajo realizado tras el terremoto.",
-      "cuerpo": "El cuartel de Bomberos Voluntarios de Balcarce alberga el sábado 3 de octubre una charla abierta sobre las tareas realizadas tras el terremoto registrado este año en Venezuela. La actividad comienza a las 17 en el salón ubicado en calle 2 N° 580, entre avenida del Valle y 15, organizada por el Club Rotario Balcarce Cerrito.\n\nLa exposición está a cargo de los servidores públicos locales que integran la Brigada ARG-13 PUMA, perteneciente al sistema USAR. Los rescatistas detallan las tareas de emergencia que llevaron adelante en el país caribeño y comparten las vivencias del operativo humanitario.\n\nEl encuentro permite conocer de primera mano el despliegue internacional que cumplió el personal de la institución local en la zona afectada por la catástrofe.",
-      "guion": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+      "id": "173wsz3",
+      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
+      "copete": "Ocho integrantes del cuerpo activo participaron de las tareas de búsqueda y rescate tras la catástrofe. Compartieron su vivencia en un encuentro organizado por el Rotary Club Balcarce Cerrito.",
+      "cuerpo": "Ocho bomberos locales que integraron la Brigada PUMA USAR ARG-13 compartieron su vivencia tras participar en las tareas de asistencia luego del terremoto ocurrido el pasado 24 de junio en Venezuela. El encuentro se desarrolló el sábado por la tarde, con la organización del Rotary Club Balcarce Cerrito.\n\nLa delegación estuvo conformada por el comandante general Fernando Alessio, el subcomandante Federico Mancini, los oficiales auxiliares Sebastián López y Nicolás Cucci, los ayudantes mayores Gonzalo Castrillo, Federico Cattaneo y Santiago Vivas, y el subayudante Lautaro Vignate.\n\nDurante la charla, Alessio explicó que la misión implicó desplegar preparación técnica en escenarios de gran complejidad junto a equipos internacionales. \"Nos preparamos para este tipo de tragedias, aunque no queremos que ocurran\", afirmó el jefe del contingente sobre el desafío de afrontar una catástrofe de esa magnitud.",
+      "guion": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-sabado-se-realizara-una-charla-de-bomberos-sobre-la-experiencia-tras-el-terremoto-en-venezuela",
+      "enlace": "https://puntonueve.com.ar/bomberos-balcarcenos-compartieron-su-experiencia-tras-intervenir-en-el-terremoto-de-venezuela/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T13:15:01.000Z",
       "sinFecha": false,
-      "visto": "2026-10-03T13:31:26.513Z",
-      "relevancia": 67,
+      "visto": "2026-10-04T06:01:11.633Z",
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "bomberos"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "Charla abierta este sábado desde las 17 en el cuartel local",
-        "Exponen integrantes de la Brigada ARG-13 PUMA del sistema USAR",
-        "Detallan el operativo tras el terremoto registrado en Venezuela",
-        "Organiza el Club Rotario Balcarce Cerrito"
+        "Ocho bomberos locales participaron del operativo de rescate en Venezuela.",
+        "Integraron la Brigada PUMA USAR ARG-13 tras el terremoto del 24 de junio.",
+        "Brindaron detalles de la misión en una charla organizada por el Rotary Club Cerrito."
       ],
       "seSabe": [
-        "La charla se realiza este sábado 3 de octubre a las 17",
-        "Tiene lugar en el cuartel de Bomberos Voluntarios, en calle 2 N° 580",
-        "Los disertantes son bomberos locales integrantes de la Brigada ARG-13 PUMA",
-        "La organización corresponde al Club Rotario Balcarce Cerrito"
+        "Ocho bomberos locales integraron la misión de la Brigada PUMA USAR ARG-13 tras el terremoto en Venezuela.",
+        "El encuentro informativo se concretó el sábado por la tarde.",
+        "La organización estuvo a cargo del Rotary Club Balcarce Cerrito."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Bomberos voluntarios brindan este sábado a las 17 una charla en el cuartel sobre su participación en el operativo tras el terremoto en Venezuela. La actividad es organizada por el Club Rotario Balcarce Cerrito.",
+      "textoRedes": "Ocho bomberos locales compartieron su experiencia tras participar en las tareas de rescate y asistencia humanitaria tras el terremoto registrado en Venezuela.",
       "etiquetas": [
-        "Bomberos Voluntarios",
+        "bomberos",
         "Venezuela",
-        "Brigada PUMA",
-        "Club Rotario",
-        "Balcarce"
+        "terremoto",
+        "Rotary Club"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-sabado-se-realizara-una-charla-de-bomberos-sobre-la-experiencia-tras-el-terremoto-en-venezuela",
-          "fecha": "2026-10-03T13:15:01.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/bomberos-balcarcenos-compartieron-su-experiencia-tras-intervenir-en-el-terremoto-de-venezuela/",
+          "fecha": "2026-10-03T22:39:05.000Z",
           "oficial": false,
-          "aporte": "Detalló día, horario, lugar, organizadores y participantes de la charla sobre el operativo en Venezuela."
+          "aporte": "Detalló los nombres de los ocho bomberos participantes, la fecha del terremoto y las declaraciones de Fernando Alessio sobre la misión."
         }
       ],
       "antecedentes": [
         {
-          "id": "76r67w",
-          "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
-          "fecha": "2026-09-30T17:35:31.000Z",
-          "ruta": "/nota/bomberos-gestiona-una-unidad-de-traslado-para-capacitaciones-76r67w"
-        },
-        {
-          "id": "103siit",
-          "titulo": "Bomberos vende los últimos números de la rifa anual",
-          "fecha": "2026-09-30T17:17:02.000Z",
-          "ruta": "/nota/bomberos-vende-los-ultimos-numeros-de-la-rifa-anual-103siit"
-        },
-        {
-          "id": "2qj2kn",
-          "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-          "fecha": "2026-10-03T00:57:01.000Z",
-          "ruta": "/nota/designan-los-arbitros-para-el-inicio-de-la-fase-clausura-2qj2kn"
+          "id": "16ml7pn",
+          "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+          "fecha": "2026-10-03T13:15:01.000Z",
+          "ruta": "/nota/bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela-16ml7pn"
         }
       ],
       "verificacion": {
@@ -1864,11 +2036,7 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela",
-      "foto": {
-        "archivo": "fotos-notas/16ml7pn.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
+      "slug": "bomberos-locales-relatan-su-trabajo-en-el-terremoto-de-venezuela"
     },
     {
       "id": "repaso20261003manana",
@@ -2470,78 +2638,15 @@
         "archivo": "fotos-notas/144x64h.jpg",
         "credito": "Foto: Adriel anv00 / Wikimedia Commons (CC BY-SA 4.0)"
       }
-    },
-    {
-      "id": "fd2y4d",
-      "titulo": "Choque frontal en la Ruta 226 deja tres heridos",
-      "copete": "Una colisión frontal entre dos camionetas en la Ruta 226, a la altura de Tandil, dejó este viernes tres heridos trasladados al hospital municipal. El tramo acumula antecedentes trágicos en el último año.",
-      "cuerpo": "Un choque frontal entre dos camionetas ocurrido este viernes en la Ruta Nacional 226, entre los kilómetros 169 y 170, dejó a tres personas heridas que debieron ser hospitalizadas. El impacto se produjo cuando el conductor de una Ford F-100 intentó esquivar un automóvil Volkswagen Gol cuyo capot se abrió de manera imprevista en plena marcha, lo que provocó que el rodado se cruzara de carril e impactara de frente contra una Ford Ranger. Los ocupantes de ambos vehículos, identificados como Matías Alejandro Risso, Maximiliano Lanestosa y Carlos Ascolani, sufrieron lesiones y fueron derivados al Hospital Santamarina, donde se informó que ninguno presenta riesgo de vida. En el operativo trabajaron efectivos de la Policía Vial, el SAME y bomberos.\n\nEste tramo de la ruta ya había sido escenario de otros episodios graves en poco más de un año. El 18 de septiembre pasado, el motociclista Carlos Lautaro Llanos falleció en el kilómetro 169 tras chocar contra un camión, y anteriormente se registró la muerte de Iván González, además de otros siniestros viales con heridos de consideración.",
-      "guion": "Choque frontal en la Ruta 226 deja tres heridos.",
-      "seccion": "Policiales",
-      "medios": [
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.eleco.com.ar/la-ciudad/la-ruta-226-y-un-tramo-urbano-marcado-por-graves-accidentes-y-dos-muertes-en-poco-mas-de-un-ano",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T22:58:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T02:01:13.420Z",
-      "relevancia": 17,
-      "local": false,
-      "deLaZona": true,
-      "publicadaPor": "Hernán",
-      "publicadaCuando": "2026-10-03T01:51:45.009Z",
-      "temas": [
-        "rutas"
-      ],
-      "como": "publicada",
-      "claves": [
-        "Colisión frontal entre dos camionetas en la Ruta 226",
-        "Tres heridos trasladados al Hospital Santamarina sin riesgo de vida",
-        "Una mala maniobra al esquivar un auto provocó el impacto",
-        "El sector acumula muertes y graves accidentes en poco más de un año"
-      ],
-      "seSabe": [
-        "El choque frontal ocurrió este viernes en la Ruta 226, entre los kilómetros 169 y 170",
-        "Los heridos son Matías Alejandro Risso, Maximiliano Lanestosa y Carlos Ascolani",
-        "Los involucrados fueron asistidos y derivados al Hospital Santamarina",
-        "El tramo suma antecedentes fatales previos, como el de Carlos Lautaro Llanos en septiembre de 2025"
-      ],
-      "noConfirmado": [
-        "La mecánica definitiva del accidente a la espera de las pericias de Policía Científica",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un choque frontal entre dos camionetas en la Ruta 226 dejó tres heridos este viernes. El impacto ocurrió al esquivar un auto que frenó por la apertura de su capot. El tramo registra varios antecedentes trágicos en poco más de un año.",
-      "etiquetas": [
-        "accidente",
-        "Ruta 226",
-        "choque frontal",
-        "Tandil",
-        "heridos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/la-ciudad/la-ruta-226-y-un-tramo-urbano-marcado-por-graves-accidentes-y-dos-muertes-en-poco-mas-de-un-ano",
-          "fecha": "2026-10-02T22:58:21.000Z",
-          "oficial": false,
-          "aporte": "Detalló el choque frontal en la Ruta 226, la identidad de los heridos y los antecedentes viales en el sector de Tandil."
-        }
-      ],
-      "slug": "choque-frontal-en-la-ruta-226-deja-tres-heridos",
-      "foto": {
-        "archivo": "fotos-notas/fd2y4d.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
     }
   ],
   "secciones": [
     "Política",
     "Balcarce",
+    "Automovilismo",
     "Fútbol",
     "Economía",
     "Tecnología",
-    "Automovilismo",
     "Cultura y agenda",
     "Argentina",
     "Policiales",
@@ -2551,20 +2656,15 @@
     {
       "nombre": "Las rutas",
       "ranura": "rutas",
-      "cuantas": 3
-    },
-    {
-      "nombre": "Bomberos Voluntarios",
-      "ranura": "bomberos",
       "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
-      "temp": 9,
-      "sensacion": 7,
-      "humedad": 88,
-      "viento": 11,
+      "temp": 11,
+      "sensacion": 8,
+      "humedad": 81,
+      "viento": 14,
       "rumbo": "O",
       "cielo": "Despejado",
       "esDeDia": true
