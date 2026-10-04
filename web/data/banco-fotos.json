@@ -5645,16 +5645,16 @@
   "cuando": "2026-10-02T22:32:19.259Z"
  },
  "1jzjpi7": {
-  "archivo": "fotos-notas/1jzjpi7.jpg",
   "medio": "La Tecla",
-  "credito": "Foto: La Tecla",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Provincia y las distribuidoras apelan el freno judicial a la suba de la luz",
   "enlace": "https://www.latecla.info/170150-la-provincia-apelo-la-cautelar-que-freno-los-aumentos-de-luz",
   "imagenOriginal": "https://latecla-repos-dw6.aplinews.com/archivos/noticias/fotografias/216300_3.jpg",
   "razon": "Ilustra conceptualmente la temática de tarifas y consumo eléctrico con bombillas sobre facturas, sin marcas de agua ni menores.",
-  "cuando": "2026-10-02T22:32:19.259Z"
+  "cuando": "2026-10-02T22:32:19.259Z",
+  "intentado": true,
+  "borrada": true
  },
  "8cknxd": {
   "archivo": "fotos-notas/8cknxd.jpg",
@@ -6601,16 +6601,16 @@
   "cuando": "2026-10-04T10:31:28.356Z"
  },
  "5skk4j": {
-  "archivo": "fotos-notas/5skk4j.jpg",
   "medio": "Crónica",
-  "credito": "Foto: Crónica",
   "licencia": null,
   "origen": "medio",
   "titulo": "Max Verstappen gana el Gran Premio de Bahréin y Franco Colapinto finaliza decimotercero",
   "enlace": "https://www.cronica.com.ar/depo/polideportivo/franco-colapinto-en-vivo-gran-premio-de-bahrein-en-malasia-minuto-a-minuto/",
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1716/1716933/6ac21e17af4a6_600_315!.jpg?s=536fc4955089a714de696e038419652d&d=1791106774",
   "razon": "Es la única foto limpia sin marcas de agua de medios ni menores reconocibles, con buen encuadre del monoplaza.",
-  "cuando": "2026-10-04T11:01:33.360Z"
+  "cuando": "2026-10-04T11:01:33.360Z",
+  "intentado": true,
+  "borrada": true
  },
  "1kut3gf": {
   "archivo": "fotos-notas/1kut3gf.jpg",
@@ -6716,5 +6716,18 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/el-asesor-ejecutivo-de-la-escuderia-reconocio-que-la-eleccion-de-neumaticos-que-hicieron-para-el-inicio-del-gp-de-bahrein-fue-erronea-foto-briatoreflavioinstagram-B432U2GYS5B6JEMMNB7FAFQJLU.jpg?auth=50e31a2c9ea8779757baea52c99c2905d00bca0e150ea54b2100057d3044e181&width=1023",
   "razon": "La foto A muestra claramente a Flavio Briatore bajo la lluvia con paraguas, sin marcas de agua ni menores, siendo ideal para ilustrar la nota sobre Alpine.",
   "cuando": "2026-10-04T14:20:35.943Z"
+ },
+ "1tckq4a": {
+  "archivo": "fotos-notas/1tckq4a.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Luisalvaz / Wikimedia Commons (CC BY-SA 4.0)",
+  "licencia": "CC BY-SA 4.0",
+  "autor": "Luisalvaz",
+  "origen": "wikimedia",
+  "titulo": "Fito Páez cuestiona a la seguridad en su show",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Fito_P%C3%A1ez_en_el_z%C3%B3calo_de_la_Ciudad_de_M%C3%A9xico_-_001.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Fito_P%C3%A1ez_en_el_z%C3%B3calo_de_la_Ciudad_de_M%C3%A9xico_-_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Fito Páez\" de Wikimedia Commons (CC BY-SA 4.0).",
+  "cuando": "2026-10-04T14:31:45.337Z"
  }
 }
