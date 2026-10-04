@@ -487,7 +487,7 @@ function vistaPublicadas(cuando) {
 
 /** Las notas de la portada sin foto, con el porqué y dónde buscarla (fotos.js). Para sumarla, la nube la baja y la guarda (foto-manual.mjs). */
 function resumenDeFotos() {
-  const notas = (E.portada?.notas ?? []).filter((n) => !n.propia);
+  const notas = (E.portada?.notas ?? []).filter((n) => !n.propia || n.propia === 'pista');
   const items = notasSinFoto(notas, E.banco ?? {});
   return { items, total: notas.length, conFoto: notas.length - items.length };
 }

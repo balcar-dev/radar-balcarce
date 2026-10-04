@@ -41,7 +41,8 @@ export function motivoDeFoto(nota, entrada) {
 /** Las notas de la lista que no tienen foto (ni en la nota ni en el banco), sin las propias del sitio, las más nuevas primero. */
 export function notasSinFoto(notas = [], banco = {}) {
   return notas
-    .filter((n) => n && !n.propia && !n.foto?.archivo && !banco[n.id]?.archivo)
+    // Las propias del sitio (el dólar, los repasos, F1, fútbol) llevan su foto solas; la nota de una pista es de una persona y se le puede sumar una.
+    .filter((n) => n && (!n.propia || n.propia === 'pista') && !n.foto?.archivo && !banco[n.id]?.archivo)
     .sort((a, b) => (Date.parse(b.fecha) || 0) - (Date.parse(a.fecha) || 0))
     .map((nota) => ({ nota, motivo: motivoDeFoto(nota, banco[nota.id]), entrada: banco[nota.id] ?? null }));
 }

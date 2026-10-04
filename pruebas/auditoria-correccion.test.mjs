@@ -147,5 +147,5 @@ test('el rediseño: cinco pestañas con ícono, barra de acciones fija en la not
   assert.match(html, /\.barra-acciones \{ position: fixed;/);
   assert.match(html, /REDISEÑO DEL 2\/10/);
   assert.match(html, /\.pestanas \{ grid-template-columns: repeat\(5, 1fr\)/);
-  assert.match(leer('web/public/panel/sw.js'), /radar-panel-15/);
+  assert.match(leer('web/public/panel/sw.js'), /radar-panel-16/);
 });

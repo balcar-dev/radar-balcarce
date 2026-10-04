@@ -743,6 +743,12 @@ if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).joi
   if (conCollage) console.log(`  repasos con foto (collage): ${conCollage}`);
 }
 
+// Una nota propia que una persona armó (la de una pista) y a la que se le subió una foto desde el celular: la foto está en el banco con el id de la nota.
+for (const n of propias) {
+  const guardada = bancoDeFotos[n.id];
+  if (!n.foto && n.propia === 'pista' && guardada?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(guardada.archivo)))) n.foto = { archivo: guardada.archivo, credito: guardada.credito };
+}
+
 // Las notas propias que no tienen la foto de ninguna fuente (la F1: 3/10, Hernán) llevan una foto libre del lugar, de Wikimedia Commons
 // (web/scripts/foto-libre.mjs): una vez por nota, se guarda en el banco con su crédito y su licencia. Sólo en la nube; si falla, sale sin foto.
 if (enLaNube) {

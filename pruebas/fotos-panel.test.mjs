@@ -265,3 +265,15 @@ test('subir una foto nuestra: se achica en el celular, se guarda en el repositor
   assert.match(leer('web/scripts/generar-datos.mjs'), /fotos-manuales\.json/);
   assert.ok(Object.keys(JSON.parse(leer('web/data/fotos-manuales.json'))).length >= 0, 'el archivo existe');
 });
+
+test('la nota de una pista puede llevar una foto subida desde el celular; el dólar, los repasos, F1 y fútbol llevan la suya solos', () => {
+  const notas = [
+    { id: 'p', titulo: 'De una pista', fecha: '2026-10-03T10:00:00Z', propia: 'pista' },
+    { id: 'f', titulo: 'F1', fecha: '2026-10-03T10:00:00Z', propia: 'f1' },
+    { id: 'g', titulo: 'Fútbol', fecha: '2026-10-03T10:00:00Z', propia: 'futbol' },
+    { id: 'd', titulo: 'Dólar', fecha: '2026-10-03T10:00:00Z', propia: 'dolar' },
+  ];
+  assert.deepEqual(notasSinFoto(notas, {}).map((x) => x.nota.id), ['p']);
+  const gen = leer('web/scripts/generar-datos.mjs');
+  assert.ok(gen.includes("n.propia === 'pista' && guardada?.archivo"), 'generar-datos le pone la foto subida');
+});
