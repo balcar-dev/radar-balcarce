@@ -345,3 +345,9 @@ La clave gratis de Groq (`redes/sondear-groq.mjs`, workflow "Sondear Groq", a ma
 
 - **La tapa** (las cinco postales de la portada, `armarTapa` en `web/lib/datos.js`) prefiere las notas que tienen foto: la principal sale de las que la tienen y las cuatro más nuevas de otras secciones, también. Las que no tienen sólo completan si faltan (con la placa de su sección).
 - **Los repasos** (las notas de cada podcast, `web/lib/notas-propias.js`) llevan un **collage** con las fotos de las notas que cuentan: de dos a cuatro fotos del banco con un borde blanco entre una y otra (`web/scripts/collage.mjs`, con el ffmpeg del proyecto). Con una sola foto se usa tal cual; sin ninguna, queda sin foto. El crédito dice los medios ("Fotos: A, B y C"). Se guarda en `web/public/fotos-notas/collage-<id>.jpg` y la poda lo conserva mientras exista la nota del repaso.
+
+## Fotos libres para las notas propias (3/10/2026)
+
+Las notas armadas con datos (la F1; después el fútbol) no tienen la foto de ninguna fuente. `web/scripts/foto-libre.mjs` les busca en **Wikimedia Commons**
+una foto del lugar (el circuito) con licencia abierta (dominio público, CC0, CC BY, CC BY-SA), la achica y la guarda en el banco con el crédito y la licencia
+(regla 99). La foto de un circuito se busca una vez por nota; las tres notas de un Gran Premio (horarios, clasificación y resultado) llevan la misma.

@@ -725,6 +725,39 @@ if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).joi
   if (conCollage) console.log(`  repasos con foto (collage): ${conCollage}`);
 }
 
+// Las notas propias que no tienen la foto de ninguna fuente (la F1: 3/10, Hernán) llevan una foto libre del lugar, de Wikimedia Commons
+// (web/scripts/foto-libre.mjs): una vez por nota, se guarda en el banco con su crédito y su licencia. Sólo en la nube; si falla, sale sin foto.
+if (enLaNube) {
+  const { buscarFotoLibre, bajarFotoLibre } = await import('./foto-libre.mjs');
+  const { achicarFoto } = await import('./achicar-foto.mjs');
+  const porLugar = new Map();
+  let nuevas = 0;
+  for (const n of propias) {
+    const lugarDeLaFoto = n.propia === 'f1' ? n.circuitoF1 : null;
+    if (!lugarDeLaFoto || n.foto) continue;
+    const guardada = bancoDeFotos[n.id];
+    if (guardada?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(guardada.archivo)))) { n.foto = { archivo: guardada.archivo, credito: guardada.credito }; continue; }
+    // Si no hubo una foto buena, la nota sale sin foto y se vuelve a probar a las 6 horas (no cada media hora).
+    if (guardada?.intentado && Date.now() - Date.parse(guardada.cuando ?? 0) < 6 * 3600e3) continue;
+    if (!porLugar.has(lugarDeLaFoto)) porLugar.set(lugarDeLaFoto, await buscarFotoLibre(`${lugarDeLaFoto}`));
+    const elegida = porLugar.get(lugarDeLaFoto);
+    const bajada = elegida ? await bajarFotoLibre(elegida, `libre-${n.id}`, { achicar: achicarFoto }) : null;
+    if (bajada) {
+      fs.mkdirSync(FOTOS_NOTAS, { recursive: true });
+      fs.writeFileSync(path.join(FOTOS_NOTAS, path.basename(bajada.archivo)), bajada.bytes);
+      bancoDeFotos = { ...bancoDeFotos, [n.id]: bajada.entrada };
+      n.foto = { archivo: bajada.archivo, credito: bajada.entrada.credito };
+      nuevas += 1;
+    } else {
+      bancoDeFotos = { ...bancoDeFotos, [n.id]: { intentado: true, origen: 'libre', razon: 'no hubo una foto libre buena', cuando: new Date().toISOString() } };
+    }
+  }
+  if (nuevas || propias.some((n) => n.circuitoF1 && bancoDeFotos[n.id]?.intentado && !bancoDeFotos[n.id]?.archivo)) {
+    fs.writeFileSync(BANCO_FOTOS, `${JSON.stringify(bancoDeFotos, null, 1)}\n`, 'utf8');
+    if (nuevas) console.log(`  fotos libres (Wikimedia Commons) para notas propias: ${nuevas}`);
+  }
+}
+
 // La misma noticia con otra dirección (lib/repetidas.js, 29/09): queda una y
 // la dirección de la otra redirige a ésa (fusionadas.json, generar-redirects.mjs).
 const FUSIONADAS = path.join(AQUI, '..', 'data', 'fusionadas.json');

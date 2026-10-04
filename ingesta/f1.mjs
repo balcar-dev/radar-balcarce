@@ -363,10 +363,14 @@ function datoDeColapinto(f1, carrera) {
 
 const lugar = (c) => [c.circuito, c.localidad && c.pais ? `${c.localidad}, ${PAISES[c.pais] ?? c.pais}` : (c.pais ? (PAISES[c.pais] ?? c.pais) : null)].filter(Boolean).join(', ');
 
-const baseDeLaNota = ({ id, tipo, titulo, copete, cuerpo, fecha, etiquetas }) => ({
+const baseDeLaNota = ({
+  id, tipo, titulo, copete, cuerpo, fecha, etiquetas, circuito = null,
+}) => ({
   id,
   propia: 'f1',
   tipoF1: tipo,
+  // El circuito, para buscarle una foto libre (web/scripts/foto-libre.mjs).
+  circuitoF1: circuito,
   titulo,
   copete,
   cuerpo,
@@ -420,6 +424,7 @@ export function notaDeHorarios(carrera, { colapinto = null, fecha } = {}) {
   return baseDeLaNota({
     id: idHorarios(temporada, carrera.ronda),
     tipo: 'horarios',
+    circuito: carrera.circuito ?? null,
     titulo,
     copete: `La carrera del ${nombre} es el ${diaLargo(largada.dia)} a las ${largada.hora} de Argentina. Todos los horarios del fin de semana.`,
     cuerpo: [p1, p2, p3].join('\n\n'),
@@ -479,6 +484,7 @@ export function notaDeParrilla(parrilla, { colapinto = null, fecha } = {}) {
   return baseDeLaNota({
     id: idParrilla(parrilla.temporada ?? Number(diaAR(parrilla.largada).slice(0, 4)), parrilla.ronda),
     tipo: 'parrilla',
+    circuito: parrilla.circuito ?? null,
     titulo: `F1: ${pole.piloto} largará desde la pole en el ${nombre}; así quedó la parrilla`,
     copete: `${pole.piloto} fue el más rápido de la clasificación, seguido por ${segundo.piloto} y ${tercero.piloto}.${fc ? ' Así quedó Colapinto.' : ''} La carrera es el ${diaLargo(largada.dia)} a las ${largada.hora} de Argentina.`,
     cuerpo: [p1, p2, p3, p4, p5].filter(Boolean).join('\n\n'),
@@ -540,6 +546,7 @@ export function notaDeResultado(resultado, { clasificacion = null, colapinto = n
   return baseDeLaNota({
     id: idResultado(resultado.temporada ?? Number(dia.slice(0, 4)), resultado.ronda),
     tipo: 'resultado',
+    circuito: resultado.circuito ?? null,
     titulo,
     copete: `${primero.piloto} ganó, ${segundo.piloto} fue segundo y ${tercero.piloto} tercero.${fc ? ` Así le fue a Colapinto.` : ''} El resultado completo y cómo está el campeonato.`,
     cuerpo: [p1, pDiez, pCol, pDatos, pCamp, pFuente].filter(Boolean).join('\n\n'),
