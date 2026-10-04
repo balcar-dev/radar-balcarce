@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03T23:01:55.853Z",
- "portada": 52,
- "archivo": 857,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-04T02:14:29.458Z",
+ "portada": 48,
+ "archivo": 863,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-03T23:01:55.891Z",
+  "generado": "2026-10-04T02:14:29.486Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-03T23:07:01.998Z"
    },
    {
     "nombre": "podcast",
@@ -73,8 +73,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
-    "salio": null
+    "momento": "en-hora",
+    "salio": "2026-10-04T00:06:30.676Z"
    }
   ],
   "repasos": [
@@ -145,9 +145,9 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 51,
+    "momento": "en-hora",
+    "salio": "2026-10-04T00:06:30.676Z",
+    "segundos": null,
     "notas": [
      {
       "id": "100y8h1",

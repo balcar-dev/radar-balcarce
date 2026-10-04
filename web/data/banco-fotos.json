@@ -6274,8 +6274,8 @@
   "origen": "ninguna",
   "titulo": "Colegiales recibe los Play Off del Torneo Clausura de Preliga",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-03T22:23:47.518Z",
-  "intentos": 2,
+  "cuando": "2026-10-04T02:14:16.981Z",
+  "intentos": 3,
   "fuentes": 1
  },
  "1y13u38": {
@@ -6305,11 +6305,11 @@
  "7g8jt7": {
   "intentado": true,
   "origen": "ninguna",
-  "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
-  "razon": "La única foto disponible incluye menores de edad reconocibles, por lo que no puede ser publicada.",
-  "cuando": "2026-10-03T22:01:35.332Z",
-  "intentos": 1,
-  "fuentes": 1
+  "titulo": "El presidente de la UCR Nacional visita Balcarce y se reúne con Reino",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-04T02:14:16.981Z",
+  "intentos": 2,
+  "fuentes": 2
  },
  "1gq0pia": {
   "archivo": "fotos-notas/1gq0pia.jpg",
@@ -6334,5 +6334,57 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/SNMJGZ5TFJGAXO3UUAI7LZOW54.JPG?auth=b9deabc4f2fb83781e6349b2195cacd881197db6157de1f61062c1dc1b36ca57&smart=true&width=1200&height=630&quality=85",
   "razon": "Ambas imágenes muestran la marca OpenAI sin personas ni marcas de agua agregadas, pero la opción A tiene mejor nitidez y encuadre cerrado.",
   "cuando": "2026-10-03T23:01:52.095Z"
+ },
+ "15ikzjc": {
+  "archivo": "fotos-notas/15ikzjc.jpg",
+  "medio": "Radar Balcarce",
+  "credito": "Foto: Radar Balcarce",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-03T23:31:52.713Z",
+  "imagenOriginal": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2NbGthKtL6rC2iD8mPbhc0RC1F_bZf_7B_VN8StQhv-1b0zq1jY_DQeRra2Yq4jfVVG-RsQs8EdTbxe742A5CrNiaPsI4LYNsIzigEP6GX6q5GCdp_I94cco5bR1VqMNEA7PS-WkoxmkOHC88MZYm1JPp6Er9ZFzrhS52b6vWmLn3Dao5C2k2wYhcAs8/s958/robo%20frutimar.jpg"
+ },
+ "15z6cto": {
+  "archivo": "fotos-notas/15z6cto.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Generación 1971 recorre la Facultad de Ciencias Agrarias",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44988-la-generacion-1971-volvio-a-la-facultad-para-reencontrarse-y-conocer-sus-avances/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65942.png",
+  "razon": "Es la única opción disponible, cumple con todos los requisitos de calidad, no tiene marcas de agua agregadas por el medio ni menores de edad.",
+  "cuando": "2026-10-04T02:14:16.981Z"
+ },
+ "ogixfx": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Gobierno recibe al titular de la DFC para avanzar en el corredor bilateral",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-04T02:14:16.981Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "158gkt0": {
+  "archivo": "fotos-notas/158gkt0.jpg",
+  "medio": "Infórmese Primero (FM 104.9)",
+  "credito": "Foto: Infórmese Primero (FM 104.9)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
+  "enlace": "http://www.informeseprimero.com.ar/2026/10/el-mal-estado-de-las-canchas-obligo.html",
+  "imagenOriginal": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8Rx1SXziEk77kaaRSvEi-nMLd9mrwAhKgppMRBdjw9nptxtps4eqZIgOmAFXezhlTrXbCzUtC7PzeKZoLzhFVg0sJdwRIiQ6wLI8Wu-zTiJOYQ5vbJtFuaA5ZhvoqOdy1OFZYLPAydqDnlvTgzS2GFLKZ4wAWLQCYUk2IUkidTMjl1i4Qoh6VC31yluk/w640-h426/DSC_7595.jpg",
+  "razon": "Es la única imagen nítida y con buen encuadre que ilustra el estado de la cancha, sin marcas de agua ni personas.",
+  "cuando": "2026-10-04T02:14:16.981Z"
+ },
+ "tvh0ae": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Chec Bebel Doumbia lidera al juvenil plantel de Burkina Faso ante Argentina",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-04T02:14:16.981Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }
