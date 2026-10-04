@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T06:31:26.760Z",
+  "generado": "2026-10-04T07:01:21.979Z",
   "notas": [
     {
       "id": "futbolpartidosliga20261002",
@@ -1392,7 +1392,7 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariallllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció el sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
@@ -3038,12 +3038,12 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 9,
-      "sensacion": 7,
-      "humedad": 100,
-      "viento": 7,
+      "temp": 8,
+      "sensacion": 6,
+      "humedad": 99,
+      "viento": 11,
       "rumbo": "NO",
-      "cielo": "Mayormente despejado",
+      "cielo": "Nublado",
       "esDeDia": false
     },
     "dias": [
@@ -3064,10 +3064,10 @@
         "max": 21,
         "min": 10,
         "lluvia": 62,
-        "codigo": 63,
-        "viento": 20,
-        "milimetros": 4,
-        "cielo": "Lluvia"
+        "codigo": 81,
+        "viento": 18,
+        "milimetros": 6,
+        "cielo": "Chaparrones fuertes"
       },
       {
         "fecha": "2026-10-06",
@@ -3075,10 +3075,10 @@
         "max": 21,
         "min": 10,
         "lluvia": 27,
-        "codigo": 51,
+        "codigo": 3,
         "viento": 14,
         "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-07",
@@ -3086,10 +3086,10 @@
         "max": 15,
         "min": 11,
         "lluvia": 53,
-        "codigo": 51,
-        "viento": 21,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
+        "codigo": 53,
+        "viento": 18,
+        "milimetros": 4,
+        "cielo": "Llovizna"
       }
     ],
     "fuente": "Open-Meteo"
@@ -3420,12 +3420,6 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "4qbbyg",
-      "titulo": "Tensión en Malvinas: los isleños reclaman que se impongan…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "15p44cp",
       "titulo": "André Pierre-Gignac junto a Riquelme viendo a Boca",
       "seccion": "Fútbol",
@@ -3438,6 +3432,12 @@
       "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
+      "id": "4qbbyg",
+      "titulo": "Tensión en Malvinas: los isleños reclaman que se impongan…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "e0z3c",
       "titulo": null,
       "seccion": "Agro",
@@ -3448,6 +3448,12 @@
       "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "11l2lck",
+      "titulo": "Victoria Villarruel volvió a diferenciarse de Javier Milei…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     }
   ],
   "esperandoCuerpo": 2
