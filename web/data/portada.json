@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T07:31:45.077Z",
+  "generado": "2026-10-04T08:01:27.063Z",
   "notas": [
     {
       "id": "1k2df75",
@@ -17,7 +17,7 @@
       "fecha": "2026-10-04T05:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T07:31:24.612Z",
-      "relevancia": 81,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -244,97 +244,6 @@
         "archivo": "fotos-notas/15z6cto.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "1d1hc0g",
-      "titulo": "La selección argentina golea a Burkina Faso en el Monumental",
-      "copete": "El combinado nacional supera al conjunto africano en un amistoso disputado en el estadio Monumental. Lautaro Martínez alcanza los 42 tantos y se mete en el podio de los máximos goleadores históricos.",
-      "cuerpo": "El seleccionado argentino supera a Burkina Faso en un amistoso internacional en el estadio Monumental. Luego, un gol en contra de Moumoune Diallo estira la ventaja, mientras que Gianluca Prestianni anota el tercero, Nicolás Paz el cuarto y Julián Álvarez el quinto tanto del encuentro.\n\nEl equipo africano afronta el compromiso con un plantel de emergencia debido a inconvenientes logísticos y ausencias de futbolistas, según lo informado en la previa. El próximo martes se llevará a cabo la despedida de Lionel Messi.",
-      "guion": "La selección argentina golea a Burkina Faso en el Monumental",
-      "seccion": "Fútbol",
-      "medios": [
-        "Infobae",
-        "TyC Sports",
-        "Noticias Argentinas (NA)",
-        "La Brújula 24"
-      ],
-      "enlace": "https://noticiasargentinas.com/deportes/la-rafaga-de-goles-para-que-la-seleccion-argentina-golee-a-burkina-faso-en-el-primer-tiempo-_a6ac19ac8bd9cfb5d370c0cf6",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-04T00:54:30.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T05:31:26.943Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Argentina supera a Burkina Faso en el estadio Monumental",
-        "Lautaro Martínez alcanza los 42 goles con la selección",
-        "El marcador final se completa con los tantos de diferentes jugadores",
-        "El próximo martes será la despedida de Lionel Messi"
-      ],
-      "seSabe": [
-        "El partido se disputa en el estadio Monumental",
-        "Lautaro Martínez convierte el primer tanto y llega a 42 goles",
-        "Gianluca Prestianni, Nicolás Paz y Julián Álvarez también convierten goles",
-        "El próximo martes será la despedida de Lionel Messi"
-      ],
-      "noConfirmado": [
-        "Existe diferencia entre las fuentes sobre el resultado final del encuentro, ya que algunas mencionan 6-0 y otras 7-0"
-      ],
-      "etiquetas": [
-        "Seleccion Argentina",
-        "Burkina Faso",
-        "Lautaro Martinez",
-        "Lionel Messi",
-        "Estadio Monumental"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/la-rafaga-de-goles-para-que-la-seleccion-argentina-golee-a-burkina-faso-en-el-primer-tiempo-_a6ac19ac8bd9cfb5d370c0cf6",
-          "fecha": "2026-10-04T00:54:30.000Z",
-          "oficial": false,
-          "aporte": "Detalla el desarrollo de los goles, los minutos y los autores de las jugadas."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/04/lautaro-martinez-se-metio-en-el-podio-de-los-maximos-goleadores-de-la-seleccion-argentina-como-quedo-la-tabla-historica/",
-          "fecha": "2026-10-04T02:04:15.000Z",
-          "oficial": false,
-          "aporte": "Informa que Lautaro Martínez queda entre los tres máximos goleadores históricos."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/lautaro-martinez-al-podio-de-maximos-goleadores-de-la-seleccion-argentina-igualo-a-agueero-id764271.html",
-          "fecha": "2026-10-04T02:05:11.000Z",
-          "oficial": false,
-          "aporte": "No aporta información adicional en su resumen."
-        },
-        {
-          "medio": "La Brújula 24",
-          "enlace": "https://www.labrujula24.com/notas/2026/10/03/lautaro-martinez-se-metio-en-el-podio-de-los-maximos-goleadores-de-la-seleccion-n523718/",
-          "fecha": "2026-10-04T02:13:51.000Z",
-          "oficial": false,
-          "aporte": "Menciona el resultado de 7 goles y la despedida de Lionel Messi para el próximo martes."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1vuvl5f",
-          "titulo": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
-          "fecha": "2026-10-03T11:34:10.000Z",
-          "ruta": "/nota/la-seleccion-de-burkina-faso-llega-al-pais-con-suplentes-para-1vuvl5f"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-argentina-golea-a-burkina-faso-en-el-monumental"
     },
     {
       "id": "repaso20261003noche",
@@ -566,6 +475,7 @@
       "seccion": "Fútbol",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)",
         "Acción 5 (Balcarce)",
         "Diario La Vanguardia"
       ],
@@ -978,10 +888,10 @@
       "seccion": "Automovilismo",
       "medios": [
         "Ecos Diarios (Necochea)",
+        "Campeones",
         "Página/12",
         "TyC Sports",
         "La Brújula 24",
-        "Campeones",
         "Solotc",
         "Olé",
         "Córdoba Competición"
@@ -991,7 +901,7 @@
       "fecha": "2026-10-03T19:57:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T21:31:16.516Z",
-      "relevancia": 85,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1099,7 +1009,7 @@
       "fecha": "2026-10-03T19:50:57.185Z",
       "sinFecha": false,
       "visto": "2026-10-04T06:01:11.633Z",
-      "relevancia": 37,
+      "relevancia": 30,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1660,7 +1570,7 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariallllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció el sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
@@ -1731,6 +1641,90 @@
       "foto": {
         "archivo": "fotos-notas/dfadrz.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "1oy5t8d",
+      "titulo": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "copete": "El titular de la UCR Nacional mantuvo un encuentro con el intendente y referentes locales en el Comité partidario. Conversaron sobre la agenda política y la presencia en el territorio.",
+      "cuerpo": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino, funcionarios municipales y militantes en el Comité local de la Unión Cívica Radical, según informó un medio local. Durante el encuentro, los dirigentes conversaron sobre la actualidad política, los desafíos nacionales y el trabajo territorial del partido.\n\nChiarella asumió la conducción partidaria el 12 de diciembre de 2025 y actualmente también se desempeña como intendente de la ciudad santafesina de Venado Tuerto.",
+      "guion": "Leonel Chiarella visita Balcarce y se reúne con Esteban Reino",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T15:25:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-03T16:31:17.843Z",
+      "relevancia": 93,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Leonel Chiarella visitó el Comité local de la UCR en Balcarce",
+        "Mantuvo una reunión con el intendente Esteban Reino y dirigentes",
+        "Abordaron temas de actualidad política y el rol territorial del partido"
+      ],
+      "seSabe": [
+        "Leonel Chiarella visitó Balcarce",
+        "El titular de la UCR Nacional se reunió con Esteban Reino y militantes radicales",
+        "El encuentro se realizó en el Comité local de la UCR"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente del Comité Nacional de la UCR, Leonel Chiarella, visitó Balcarce y se reunió con el intendente Esteban Reino y referentes locales del radicalismo en el Comité partidario para analizar la agenda política.",
+      "etiquetas": [
+        "Leonel Chiarella",
+        "Esteban Reino",
+        "UCR",
+        "Balcarce",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-y-dirigentes-radicales/",
+          "fecha": "2026-10-03T15:25:10.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la visita de Leonel Chiarella a Balcarce, su reunión con Esteban Reino y el encuentro con dirigentes radicales en el Comité local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kt5uyq",
+          "titulo": "Esteban Reino destaca el impacto económico tras la reapertura del autódromo",
+          "fecha": "2026-09-30T12:59:12.000Z",
+          "ruta": "/nota/esteban-reino-destaca-el-impacto-economico-tras-la-reapertura-del-1kt5uyq"
+        },
+        {
+          "id": "repaso20260929tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
+          "fecha": "2026-09-29T19:46:57.548Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-corte-de-luz-esteban-reino-y-repaso20260929tarde"
+        },
+        {
+          "id": "tttn9w",
+          "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+          "fecha": "2026-09-28T20:45:35.000Z",
+          "ruta": "/nota/esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo-tttn9w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "leonel-chiarella-visita-balcarce-y-se-reune-con-esteban-reino",
+      "foto": {
+        "archivo": "fotos-notas/1oy5t8d.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1939,78 +1933,62 @@
       }
     },
     {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
-      "copete": "La Asociación de Bomberos Voluntarios recibe el sábado a la Brigada ARG-13 PUMA. Exponen desde las 17 sobre el trabajo realizado tras el terremoto.",
-      "cuerpo": "El cuartel de Bomberos Voluntarios de Balcarce alberga el sábado 3 de octubre una charla abierta sobre las tareas realizadas tras el terremoto registrado este año en Venezuela. La actividad comienza a las 17 en el salón ubicado en calle 2 N° 580, entre avenida del Valle y 15, organizada por el Club Rotario Balcarce Cerrito.\n\nLa exposición está a cargo de los servidores públicos locales que integran la Brigada ARG-13 PUMA, perteneciente al sistema USAR. Los rescatistas detallan las tareas de emergencia que llevaron adelante en el país caribeño y comparten las vivencias del operativo humanitario.\n\nEl encuentro permite conocer de primera mano el despliegue internacional que cumplió el personal de la institución local en la zona afectada por la catástrofe.",
-      "guion": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+      "id": "173wsz3",
+      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
+      "copete": "Ocho integrantes del cuerpo activo participaron de las tareas de búsqueda y rescate tras la catástrofe. Compartieron su vivencia en un encuentro organizado por el Rotary Club Balcarce Cerrito.",
+      "cuerpo": "Ocho bomberos locales que integraron la Brigada PUMA USAR ARG-13 compartieron su vivencia tras participar en las tareas de asistencia luego del terremoto ocurrido el pasado 24 de junio en Venezuela. El encuentro se desarrolló el sábado por la tarde, con la organización del Rotary Club Balcarce Cerrito.\n\nLa delegación estuvo conformada por el comandante general Fernando Alessio, el subcomandante Federico Mancini, los oficiales auxiliares Sebastián López y Nicolás Cucci, los ayudantes mayores Gonzalo Castrillo, Federico Cattaneo y Santiago Vivas, y el subayudante Lautaro Vignate.\n\nDurante la charla, Alessio explicó que la misión implicó desplegar preparación técnica en escenarios de gran complejidad junto a equipos internacionales. \"Nos preparamos para este tipo de tragedias, aunque no queremos que ocurran\", afirmó el jefe del contingente sobre el desafío de afrontar una catástrofe de esa magnitud.",
+      "guion": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-sabado-se-realizara-una-charla-de-bomberos-sobre-la-experiencia-tras-el-terremoto-en-venezuela",
+      "enlace": "https://puntonueve.com.ar/bomberos-balcarcenos-compartieron-su-experiencia-tras-intervenir-en-el-terremoto-de-venezuela/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-03T13:15:01.000Z",
       "sinFecha": false,
-      "visto": "2026-10-03T13:31:26.513Z",
-      "relevancia": 67,
+      "visto": "2026-10-04T06:01:11.633Z",
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "bomberos"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "Charla abierta este sábado desde las 17 en el cuartel local",
-        "Exponen integrantes de la Brigada ARG-13 PUMA del sistema USAR",
-        "Detallan el operativo tras el terremoto registrado en Venezuela",
-        "Organiza el Club Rotario Balcarce Cerrito"
+        "Ocho bomberos locales participaron del operativo de rescate en Venezuela.",
+        "Integraron la Brigada PUMA USAR ARG-13 tras el terremoto del 24 de junio.",
+        "Brindaron detalles de la misión en una charla organizada por el Rotary Club Cerrito."
       ],
       "seSabe": [
-        "La charla se realiza este sábado 3 de octubre a las 17",
-        "Tiene lugar en el cuartel de Bomberos Voluntarios, en calle 2 N° 580",
-        "Los disertantes son bomberos locales integrantes de la Brigada ARG-13 PUMA",
-        "La organización corresponde al Club Rotario Balcarce Cerrito"
+        "Ocho bomberos locales integraron la misión de la Brigada PUMA USAR ARG-13 tras el terremoto en Venezuela.",
+        "El encuentro informativo se concretó el sábado por la tarde.",
+        "La organización estuvo a cargo del Rotary Club Balcarce Cerrito."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Bomberos voluntarios brindan este sábado a las 17 una charla en el cuartel sobre su participación en el operativo tras el terremoto en Venezuela. La actividad es organizada por el Club Rotario Balcarce Cerrito.",
+      "textoRedes": "Ocho bomberos locales compartieron su experiencia tras participar en las tareas de rescate y asistencia humanitaria tras el terremoto registrado en Venezuela.",
       "etiquetas": [
-        "Bomberos Voluntarios",
+        "bomberos",
         "Venezuela",
-        "Brigada PUMA",
-        "Club Rotario",
-        "Balcarce"
+        "terremoto",
+        "Rotary Club"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-sabado-se-realizara-una-charla-de-bomberos-sobre-la-experiencia-tras-el-terremoto-en-venezuela",
-          "fecha": "2026-10-03T13:15:01.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/bomberos-balcarcenos-compartieron-su-experiencia-tras-intervenir-en-el-terremoto-de-venezuela/",
+          "fecha": "2026-10-03T22:39:05.000Z",
           "oficial": false,
-          "aporte": "Detalló día, horario, lugar, organizadores y participantes de la charla sobre el operativo en Venezuela."
+          "aporte": "Detalló los nombres de los ocho bomberos participantes, la fecha del terremoto y las declaraciones de Fernando Alessio sobre la misión."
         }
       ],
       "antecedentes": [
         {
-          "id": "76r67w",
-          "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
-          "fecha": "2026-09-30T17:35:31.000Z",
-          "ruta": "/nota/bomberos-gestiona-una-unidad-de-traslado-para-capacitaciones-76r67w"
-        },
-        {
-          "id": "103siit",
-          "titulo": "Bomberos vende los últimos números de la rifa anual",
-          "fecha": "2026-09-30T17:17:02.000Z",
-          "ruta": "/nota/bomberos-vende-los-ultimos-numeros-de-la-rifa-anual-103siit"
-        },
-        {
-          "id": "2qj2kn",
-          "titulo": "Designan los árbitros para el inicio de la fase Clausura",
-          "fecha": "2026-10-03T00:57:01.000Z",
-          "ruta": "/nota/designan-los-arbitros-para-el-inicio-de-la-fase-clausura-2qj2kn"
+          "id": "16ml7pn",
+          "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+          "fecha": "2026-10-03T13:15:01.000Z",
+          "ruta": "/nota/bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela-16ml7pn"
         }
       ],
       "verificacion": {
@@ -2018,11 +1996,7 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela",
-      "foto": {
-        "archivo": "fotos-notas/16ml7pn.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
+      "slug": "bomberos-locales-relatan-su-trabajo-en-el-terremoto-de-venezuela"
     },
     {
       "id": "repaso20261003manana",
@@ -2802,11 +2776,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-02T21:01:16.545Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-02T20:21:19.000Z",
+      "sinFecha": false,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2863,96 +2837,71 @@
       }
     },
     {
-      "id": "8cknxd",
-      "titulo": "Juan Gil Navarro frena una función de teatro por el uso de celulares",
-      "copete": "El actor detuvo la presentación de Misery en un escenario porteño para reclamar respeto a los espectadores. Cuestionó las distracciones con los aparatos móviles durante la función.",
-      "cuerpo": "El actor Juan Gil Navarro protagonizó un momento de tensión en el Teatro Metropolitan al recriminar públicamente al público por el uso constante de teléfonos móviles durante la representación de la obra Misery. Al terminar la función, el artista tomó el micrófono y cuestionó que abonar una entrada permita incumplir las normas de convivencia en la sala.\n\nDurante su descargo, el protagonista exigió que los asistentes mantengan los aparatos apagados y eviten tomar fotografías con flash.\n\nEl episodio quedó registrado en un video que circuló en las redes sociales y generó diversas reacciones entre los usuarios. Las palabras del intérprete recibieron el apoyo de una parte de los presentes en la sala mediante aplausos.",
-      "guion": "Juan Gil Navarro frena una función de teatro por el uso de celulares",
-      "seccion": "Cultura y agenda",
+      "id": "1c7unm1",
+      "titulo": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales",
+      "copete": "El Sindicato de Trabajadores Municipales acordó con el Ejecutivo mejoras salariales, pluses y regímenes de guardia registrados ante la cartera laboral bonaerense.",
+      "cuerpo": "Entre los puntos principales, el adicional para conductores de vehículos pesados, camiones, maquinarias y ambulancias se duplicará del 2,5% al 5% y será presupuestado para 2027. Por otra parte, se proyecta incorporar días por estrés para sectores críticos como Emergencias, UTI, quirófano y Minoridad, y se instrumentará la recuperación progresiva de la jornada de 48 horas para enfermeros, mucamas y camilleros que ingresaron después de 2018, mediante un pago individual mensual desde enero.\n\nLa secretaria general del STM, Xoana Martínez, valoró las gestiones conjuntas y la atención permanente a los reclamos del personal en un escenario macroeconómico complejo.",
+      "guion": "El sindicato municipal y el municipio alcanzan nuevos acuerdos laborales.",
+      "seccion": "Balcarce",
       "medios": [
-        "TN (Todo Noticias)",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "A24",
-        "Infobae",
-        "Clarín",
-        "C5N",
-        "Radio Mitre",
-        "Minuto Uno"
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)"
       ],
-      "enlace": "https://www.a24.com/primiciasya/la-furia-juan-gil-navarro-medio-una-funcion-teatro-n1602737",
+      "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T19:49:00.000Z",
+      "fecha": "2026-10-02T20:17:04.000Z",
       "sinFecha": false,
-      "visto": "2026-10-02T22:31:21.578Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "visto": "2026-10-03T02:27:16.419Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-03T01:52:56.014Z",
       "temas": [],
-      "como": "automatica",
+      "como": "publicada",
       "claves": [
-        "Juan Gil Navarro frenó una función en el Teatro Metropolitan.",
-        "El actor recriminó al público por el uso constante de celulares.",
-        "La obra Misery se presenta en la calle Corrientes junto a Julia Calvo.",
-        "El descargo del artista se viralizó en las redes sociales."
+        "El STM y el municipio acordaron mejoras laborales y salariales.",
+        "Los convenios fueron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de choferes subirá al cinco por ciento y el de Zoonosis al ocho.",
+        "Se implementará la recuperación progresiva de la jornada de 48 horas en salud."
+      ],
+      "seSabe": [
+        "El sindicato y el Ejecutivo llegaron a nuevos entendimientos laborales.",
+        "Los acuerdos quedaron registrados en el Ministerio de Trabajo provincial.",
+        "El plus de conductores pasará del 2,5% al 5% y se presupuestará para 2027.",
+        "El plus de guardia de Zoonosis subirá del 6% al 8% desde noviembre.",
+        "Se acordó gestionar días por estrés en áreas críticas y recuperar las 48 horas para personal de salud ingresado después de 2018."
       ],
       "noConfirmado": [
-        "No se especificó la fecha exacta en la que se grabó el video del reclamo del actor."
+        "Resta definir la fecha exacta de implementación del aumento para conductores."
       ],
-      "textoRedes": "Juan Gil Navarro frenó una función de la obra Misery en el Teatro Metropolitan para reclamar al público por el uso de celulares en la sala.",
+      "textoRedes": "El Sindicato de Trabajadores Municipales y el Ejecutivo alcanzaron nuevos acuerdos que incluyen mejoras en pluses salariales, regímenes de guardia y condiciones laborales para distintas áreas de la administración.",
       "etiquetas": [
-        "Juan Gil Navarro",
-        "Teatro",
-        "Misery",
-        "Celulares"
+        "Sindicato de Trabajadores Municipales",
+        "Departamento Ejecutivo",
+        "Ministerio de Trabajo",
+        "plus",
+        "salud"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/primiciasya/la-furia-juan-gil-navarro-medio-una-funcion-teatro-n1602737",
-          "fecha": "2026-10-02T19:49:00.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/plus-guardias-y-mejoras-salariales-los-nuevos-acuerdos-alcanzados-por-el-stm/",
+          "fecha": "2026-10-02T20:17:04.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Detalló los convenios logrados, los porcentajes de los pluses, las áreas alcanzadas y las declaraciones de la secretaria general."
         },
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/videos/show/famosos/2026/10/02/juan-gil-navarro-estallo-de-bronca-por-el-uso-de-celulares-en-plena-funcion-es-profundamente-molesto/",
-          "fecha": "2026-10-02T22:03:15.000Z",
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/nuevos-acuerdos-entre-el-stm-y-el.html",
+          "fecha": "2026-10-02T22:25:49.318Z",
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/show/famosos/2026/07/01/julia-calvo-y-juan-gil-navarro-generan-tension-y-suspenso-en-la-version-teatral-de-misery/",
-          "fecha": "2026-10-02T22:02:26.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/diarioshow/farandula/juan-gil-navarro-se-enojo-con-el-publico-en-plena-obra-de-teatro-pagar-no-da-derecho/",
-          "fecha": "2026-10-02T21:33:16.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/teleshow/2026/10/02/el-enojo-de-juan-gil-navarro-desde-el-escenario-pagar-no-da-derecho-a-hacer-lo-que-uno-quiere/",
-          "fecha": "2026-10-02T20:40:34.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Indicó el registro de los nuevos compromisos gremiales ante el Ministerio de Trabajo."
         }
       ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "juan-gil-navarro-frena-una-funcion-de-teatro-por-el-uso-de-celulares",
+      "slug": "el-sindicato-municipal-y-el-municipio-alcanzan-nuevos-acuerdos",
       "foto": {
-        "archivo": "fotos-notas/8cknxd.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
+        "archivo": "fotos-notas/1c7unm1.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     }
   ],
@@ -2965,8 +2914,8 @@
     "Cultura y agenda",
     "Argentina",
     "Policiales",
-    "Deportes",
-    "Política"
+    "Política",
+    "Deportes"
   ],
   "temas": [
     {
@@ -2978,19 +2927,14 @@
       "nombre": "El autódromo",
       "ranura": "autodromo",
       "cuantas": 2
-    },
-    {
-      "nombre": "Bomberos Voluntarios",
-      "ranura": "bomberos",
-      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
       "temp": 8,
       "sensacion": 6,
-      "humedad": 99,
-      "viento": 10,
+      "humedad": 100,
+      "viento": 9,
       "rumbo": "NO",
       "cielo": "Nublado",
       "esDeDia": false
@@ -3405,5 +3349,5 @@
       "motivo": "parece promoción, no noticia: \"participá del\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 2
 }

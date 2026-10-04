@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T07:31:45.077Z",
+ "generado": "2026-10-04T08:01:27.063Z",
  "portada": 39,
  "archivo": 872,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-04T07:31:45.104Z",
+  "generado": "2026-10-04T08:01:27.089Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,17 +85,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 46,
     "notas": [
+     {
+      "id": "173wsz3",
+      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
+      "seccion": "Balcarce"
+     },
      {
       "id": "nm28kh",
       "titulo": "Lionel Scaloni palpita la despedida de Lionel Messi de la selección",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "1y13u38",
-      "titulo": "Ignacio Fain logra la pole en San Nicolás y corta la sequia de Torino",
-      "seccion": "Automovilismo"
      },
      {
       "id": "158gkt0",
@@ -103,9 +103,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1l5htn5",
-      "titulo": "Vecinas renuevan espacios públicos y plazas",
-      "seccion": "Balcarce"
+      "id": "3cr087",
+      "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -116,16 +116,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 42,
     "notas": [
      {
-      "id": "1k2df75",
-      "titulo": "Colapinto termina decimoquinto en la clasificación y largará penúltimo",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+      "id": "1l5htn5",
+      "titulo": "Vecinas renuevan espacios públicos y plazas",
       "seccion": "Balcarce"
      },
      {
