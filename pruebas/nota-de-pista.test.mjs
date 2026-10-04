@@ -202,7 +202,9 @@ test('lo conectado: la nube hace el borrador, el celular lo publica y la web lo 
   assert.ok(app.includes("accion === 'resultado-pista'"));
   const gen = leer('web/scripts/generar-datos.mjs');
   assert.match(gen, /notasDePistas\(leerJson\(NOTAS_DE_PISTAS, null\)\)/);
-  assert.deepEqual(JSON.parse(leer('web/data/notas-de-pistas.json')).notas, {}, 'el archivo existe (el celular necesita uno para guardar)');
+  // El archivo existe (el celular necesita uno para guardar) y es un libro de notas; lo que tenga lo escriben las personas, así que la
+  // prueba no puede esperarlo vacío (el 3/10 una nota publicada desde el celular la hizo fallar y la web quedó sin actualizarse una hora).
+  assert.equal(typeof JSON.parse(leer('web/data/notas-de-pistas.json')).notas, 'object');
   assert.match(leer('web/public/panel/github.js'), /notasDePistas: 'web\/data\/notas-de-pistas\.json'/);
   // Sin la clave de la búsqueda ninguna otra cosa se rompe: sólo "Hacer la nota" avisa que falta.
   assert.match(leer('ingesta/busqueda.mjs'), /falta TAVILY_API_KEY/);

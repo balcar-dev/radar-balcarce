@@ -135,7 +135,7 @@ test('el HTML escapa lo que viene de afuera y trae los botones para escribir y a
 });
 
 test('lo conectado: archivos, cifrado, un sobre por renglón, el menú Más y el service worker', () => {
-  assert.deepEqual(JSON.parse(leer('web/data/contactos-celular.json')).contactos, {}, 'el archivo existe (el celular necesita un archivo para guardar)');
+  assert.equal(typeof JSON.parse(leer('web/data/contactos-celular.json')).contactos, 'object', 'el archivo existe (el celular necesita un archivo para guardar); lo que tenga lo escriben las personas');
   const gh = leer('web/public/panel/github.js');
   assert.match(gh, /contactosPublicos: 'ingesta\/contactos-agenda\.json'/);
   assert.match(gh, /contactosCelular: 'web\/data\/contactos-celular\.json'/);
