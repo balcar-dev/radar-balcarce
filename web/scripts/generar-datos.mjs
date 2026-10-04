@@ -278,7 +278,7 @@ let parejasConfirmadas = confirmadasDe(leerJson(FICHAS, {}).repetidas?.pares);
 if (enLaNube) {
   try {
     const {
-      leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, unirGrupos, LECTURA,
+      leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, unirGrupos, candidatasParaAgrupar, LECTURA,
     } = await import('../../ingesta/lectura-ia.mjs');
     const { claveClasificacion } = await import('../../reels/claves.mjs');
     const { exigirMedios, aplicarCupos, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
@@ -301,7 +301,7 @@ if (enLaNube) {
     // cuenta lo mismo, al juntarlas llega a los que pide su sección y puede
     // salir. Antes quedaba frenado antes de poder juntarse, y lo nacional
     // desaparecía (27/09). Van en dos pedidos: con todo junto la IA ve peor.
-    const candidatas = conFichas.filter((n) => n.semaforo === 'verde');
+    const candidatas = candidatasParaAgrupar(conFichas);
     const deUnMedio = conFichas.filter((n) => n.semaforo === 'amarillo' && String(n.motivo ?? '').startsWith(MOTIVO_POCO_CONTADA));
     const claveDeLaLista = [...candidatas, ...deUnMedio].map((n) => n.id).sort().join(',');
     const hoy = fichas.dia;

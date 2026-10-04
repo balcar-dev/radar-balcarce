@@ -512,6 +512,19 @@ export const ESQUEMA_REPETIDAS = {
   items: { type: 'OBJECT', properties: { ids: { type: 'ARRAY', items: { type: 'STRING' } } }, required: ['ids'] },
 };
 
+/**
+ * Las notas que la IA mira juntas para ver si cuentan lo mismo: las que pueden
+ * salir solas (verde) y también las que esperan a una persona (amarillo, salvo
+ * las de afuera con pocos medios, que van en otro pedido). Antes sólo se miraban
+ * las verdes: la nota de otro medio sobre el robo a Frutimar quedó esperando
+ * aprobación al lado de la que ya estaba publicada, y aprobarla las duplicaba (4/10).
+ * Las rojas nunca se juntan con nada.
+ */
+export function candidatasParaAgrupar(notas = []) {
+  return notas.filter((n) => n.semaforo === 'verde'
+    || (n.semaforo === 'amarillo' && !String(n.motivo ?? '').startsWith('de afuera y poco contada')));
+}
+
 /** Un pedido: los grupos de ids que cuentan el mismo hecho. Lanza si falla. */
 export async function agruparRepetidas(notas, { clave, fetchFn = fetch } = {}) {
   const lista = notas.map((n) => ({
