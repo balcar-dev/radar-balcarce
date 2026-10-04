@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T05:01:20.834Z",
- "portada": 47,
- "archivo": 869,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-04T05:31:40.132Z",
+ "portada": 42,
+ "archivo": 870,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-04T05:01:20.860Z",
+  "generado": "2026-10-04T05:31:40.160Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 46,
     "notas": [
      {
       "id": "nm28kh",
@@ -98,8 +98,8 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "16ml7pn",
-      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+      "id": "1l5htn5",
+      "titulo": "Vecinas renuevan espacios públicos y plazas",
       "seccion": "Balcarce"
      },
      {
@@ -116,7 +116,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
      {
       "id": "158gkt0",
@@ -124,8 +124,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1l5htn5",
-      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "id": "16ml7pn",
+      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
       "seccion": "Balcarce"
      },
      {
