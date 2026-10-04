@@ -5798,16 +5798,16 @@
   "cuando": "2026-10-03T02:01:33.018Z"
  },
  "1gbi1d2": {
-  "archivo": "fotos-notas/1gbi1d2.jpg",
   "medio": "El Destape",
-  "credito": "Foto: El Destape",
   "licencia": null,
   "origen": "medio",
   "titulo": "Lula muestra una remera con la leyenda de Malvinas en su cierre de campaña",
   "enlace": "https://www.eldestapeweb.com/politica/fuerte-gesto-lula-cierra-campana-bandera-malvinas-argentinas-2026102142358",
   "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1790961530757.jpg?&cw=1600&ch=900",
   "razon": "Se seleccionó la foto A porque muestra claramente el hecho sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-03T04:31:26.926Z"
+  "cuando": "2026-10-03T04:31:26.926Z",
+  "intentado": true,
+  "borrada": true
  },
  "1qu785s": {
   "intentado": true,
@@ -6680,5 +6680,29 @@
   "cuando": "2026-10-04T13:01:31.823Z",
   "intentos": 1,
   "fuentes": 2
+ },
+ "1lt70u7": {
+  "archivo": "fotos-notas/1lt70u7.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto cuestiona la estrategia de Alpine en la Fórmula 1",
+  "enlace": "https://www.minutouno.com/deportes/franco-colapinto-no-disimulo-su-enojo-la-estrategia-bahrein-la-peor-decision-n6329855",
+  "imagenOriginal": "https://media.minutouno.com/p/789136f3b8bb3c940267ac6fc2398a9d/adjuntos/150/imagenes/043/681/0043681734/franco-colapinto-malasia.jpg",
+  "razon": "La foto B ofrece un plano medio claro y nítido de Franco Colapinto sin marcas de agua ni menores, ideal para ilustrar la nota.",
+  "cuando": "2026-10-04T13:31:33.669Z"
+ },
+ "o3v7lv": {
+  "archivo": "fotos-notas/o3v7lv.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Balcarce conmemora el Día del Periodista en recuerdo de Héctor Vuotto",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/se-celebra-este-domingo-el-dia-del-periodista-balcarceno-en-homenaje-a-hector-beto-vuotto",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2024/beto.jpg",
+  "razon": "Es la única opción disponible, posee buena nitidez y encuadre, y no presenta marcas ni menores.",
+  "cuando": "2026-10-04T13:31:33.669Z"
  }
 }
