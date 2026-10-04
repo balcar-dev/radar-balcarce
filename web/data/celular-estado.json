@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T11:01:42.688Z",
+ "generado": "2026-10-04T11:32:39.667Z",
  "portada": 35,
- "archivo": 873,
+ "archivo": 875,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-04T11:01:42.713Z",
+  "generado": "2026-10-04T11:32:39.690Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 53,
     "notas": [
      {
       "id": "5skk4j",
@@ -93,19 +93,19 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "nm28kh",
-      "titulo": "Lionel Scaloni palpita la despedida de Lionel Messi de la selección",
+      "id": "v0xov9",
+      "titulo": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "173wsz3",
-      "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
-      "seccion": "Balcarce"
      },
      {
       "id": "158gkt0",
       "titulo": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1l5htn5",
+      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,11 +116,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 42,
+    "segundos": 40,
     "notas": [
      {
-      "id": "1l5htn5",
-      "titulo": "Vecinas renuevan espacios públicos y plazas",
+      "id": "16ml7pn",
+      "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
       "seccion": "Balcarce"
      },
      {
