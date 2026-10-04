@@ -6358,13 +6358,15 @@
   "cuando": "2026-10-04T02:14:16.981Z"
  },
  "ogixfx": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "El Gobierno recibe al titular de la DFC para avanzar en el corredor bilateral",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-04T02:14:16.981Z",
-  "intentos": 1,
-  "fuentes": 3
+  "archivo": "fotos-notas/ogixfx.jpg",
+  "medio": "Noticias Argentinas (NA)",
+  "credito": "Foto: Noticias Argentinas (NA)",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-04T02:45:39.138Z",
+  "imagenOriginal": "https://noticiasargentinas.com/politica/estados-unidos-enviara-una-mision-a-argentina-para-avanzar-con-inversiones-por-hasta-us-7-000-millones_a6ac1a4e4bd9cfb5d370db8d7",
+  "enlace": "https://noticiasargentinas.com/politica/estados-unidos-enviara-una-mision-a-argentina-para-avanzar-con-inversiones-por-hasta-us-7-000-millones_a6ac1a4e4bd9cfb5d370db8d7"
  },
  "158gkt0": {
   "archivo": "fotos-notas/158gkt0.jpg",
@@ -6490,5 +6492,29 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/chiqui-tapia-poso-junto-a-cuti-romero-enzo-fernandez-julian-alvarez-y-lisandro-martinez-foto-tapiachiqui-en-x-BXP4R7MN65ADBCH766QJ6Q2RNA.jpg?auth=cde0f0ac030e34cb75683fc183857887089cbe69c4aa973acf5799eb3f3c62ea&width=1023",
   "razon": "Tiene mejor nitidez y encuadre que las demás, sin marcas ni menores.",
   "cuando": "2026-10-04T02:34:52.777Z"
+ },
+ "nm28kh": {
+  "archivo": "fotos-notas/nm28kh.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Scaloni palpita la despedida de Lionel Messi de la selección",
+  "enlace": "https://www.ole.com.ar/seleccion/lionel-scaloni-tecnico-seleccion-argentina-amistoso-burkina-faso_0_H8Ldegba5t.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/10/03/LnAu7Au4J_2000x1500__1.jpg",
+  "razon": "Es la única foto de buena calidad que muestra a Scaloni de cuerpo entero sin marcas agregadas ni menores reconocibles.",
+  "cuando": "2026-10-04T03:04:40.679Z"
+ },
+ "v0xov9": {
+  "archivo": "fotos-notas/v0xov9.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
+  "enlace": "https://www.ole.com.ar/seleccion/seleccion-argentina-franco-mastantuono_0_BFEYKYby4F.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/10/03/ajw786W-a_2000x1500__1.jpg",
+  "razon": "Tiene excelente nitidez, encuadre limpio sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-04T03:04:40.679Z"
  }
 }
