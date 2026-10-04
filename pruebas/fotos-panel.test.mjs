@@ -66,9 +66,9 @@ test('busquedasDeFoto: enlaces armados con el título, "Balcarce" si la nota es 
   assert.deepEqual(b.fuentes, [{ medio: 'Municipalidad', url: 'https://balcarce.gob.ar/a' }]);
 });
 
-test('la dirección de la foto: sólo https de un sitio de verdad', () => {
-  for (const ok of ['https://balcarce.gob.ar/foto.jpg', 'https://upload.wikimedia.org/a/b.png?x=1']) assert.ok(urlDeFotoValida(ok), ok);
-  for (const mal of ['http://balcarce.gob.ar/foto.jpg', 'javascript:alert(1)', 'https://localhost/a.jpg', 'https://127.0.0.1/a.jpg', 'https://10.0.0.1/a.jpg', 'https://usuario:clave@sitio.com/a.jpg', 'https://sitio/a.jpg', 'no es una dirección', '', null]) assert.ok(!urlDeFotoValida(mal), String(mal));
+test('la dirección de la foto: http o https de un sitio de verdad (muchos medios chicos siguen en http)', () => {
+  for (const ok of ['https://balcarce.gob.ar/foto.jpg', 'https://upload.wikimedia.org/a/b.png?x=1', 'http://informesep.com.ar/nota/1']) assert.ok(urlDeFotoValida(ok), ok);
+  for (const mal of ['ftp://balcarce.gob.ar/foto.jpg', 'javascript:alert(1)', 'https://localhost/a.jpg', 'https://127.0.0.1/a.jpg', 'https://10.0.0.1/a.jpg', 'https://usuario:clave@sitio.com/a.jpg', 'https://sitio/a.jpg', 'no es una dirección', '', null]) assert.ok(!urlDeFotoValida(mal), String(mal));
 });
 
 test('el crédito va como "Foto: …", sin repetir el prefijo y con tope', () => {
@@ -124,7 +124,7 @@ test('sumarFoto no guarda nada si no es una imagen, si el sitio contesta mal, si
     await assert.rejects(sumarFoto(base, { ...opciones, fetchFn: respuesta(Buffer.from('algo'), { tipo: 'application/pdf' }) }), /no es una foto/);
     await assert.rejects(sumarFoto(base, { ...opciones, fetchFn: respuesta(JPG, { estado: 403 }) }), /contestó 403/);
     await assert.rejects(sumarFoto({ ...base, credito: '  ' }, { ...opciones, fetchFn: respuesta(JPG) }), /crédito/);
-    await assert.rejects(sumarFoto({ ...base, url: 'http://sitio.com/a.jpg' }, { ...opciones, fetchFn: respuesta(JPG) }), /https/);
+    await assert.rejects(sumarFoto({ ...base, url: 'ftp://sitio.com/a.jpg' }, { ...opciones, fetchFn: respuesta(JPG) }), /http o https/);
     await assert.rejects(sumarFoto({ ...base, id: '../etc' }, { ...opciones, fetchFn: respuesta(JPG) }), /no es válida/);
     await assert.rejects(bajarImagen('https://sitio.com/a.jpg', { fetchFn: respuesta(Buffer.alloc(13 * 1024 * 1024)) }), /pesa demasiado/);
     assert.ok(!fs.existsSync(opciones.archivo), 'sin foto no hay libro');
@@ -215,7 +215,8 @@ test('la foto principal de una página sale de og:image, después twitter:image,
   assert.equal(imagenDeLaPagina('<meta name="twitter:image" content="/img/b.jpg?x=1&amp;y=2">', base), 'https://medio.com.ar/img/b.jpg?x=1&y=2', 'relativa y con &amp;');
   assert.equal(imagenDeLaPagina('<link rel="image_src" href="https://cdn.medio.com.ar/c.jpg">', base), 'https://cdn.medio.com.ar/c.jpg');
   assert.equal(imagenDeLaPagina('<meta content="https://cdn.medio.com.ar/d.jpg" property="og:image">', base), 'https://cdn.medio.com.ar/d.jpg', 'el orden de los atributos da igual');
-  assert.equal(imagenDeLaPagina('<meta property="og:image" content="http://inseguro.com/a.jpg">', base), null, 'sólo https');
+  assert.equal(imagenDeLaPagina('<meta property="og:image" content="http://medio-chico.com/a.jpg">', base), 'http://medio-chico.com/a.jpg', 'muchos medios chicos siguen en http');
+  assert.equal(imagenDeLaPagina('<meta property="og:image" content="http://localhost/a.jpg">', base), null, 'una dirección de adentro, nunca');
   assert.equal(imagenDeLaPagina('<html><body>nada</body></html>', base), null);
   assert.equal(imagenDeLaPagina('', base), null);
 });
@@ -246,4 +247,21 @@ test('la pantalla de resultado dice qué pasó, cuándo se ve y deja seguir con 
   assert.ok(!app.includes("aviso(listo, { conActualizar: true });"), 'ya no se queda en la misma lista con un aviso que se va');
   assert.ok(app.includes('data-accion="foto-de-fuente"') || leer('web/public/panel/fotos.js').includes('data-accion=\\"foto-de-fuente\\"') || leer('web/public/panel/fotos.js').includes('data-accion="foto-de-fuente"'));
   assert.match(htmlDeUnaNotaSinFoto({ nota: { id: 'a1', titulo: 'T', seccion: 'Balcarce', fecha: '2026-10-02T10:00:00Z', fuentesConsultadas: [{ medio: 'Municipalidad', enlace: 'https://balcarce.gob.ar/a' }] }, motivo: 'otra', entrada: null }, apps), /Usar la foto de Municipalidad/);
+});
+
+// ---------------------------------------------------------------- subir una foto nuestra desde el celular (3/10)
+
+test('subir una foto nuestra: se achica en el celular, se guarda en el repositorio y queda anotada sin fuente salvo que se escriba un crédito', () => {
+  const app = leer('web/public/panel/app.js');
+  assert.ok(app.includes('async function subirFotoPropia(id)'));
+  assert.ok(app.includes('async function achicarEnElCelular(archivo'));
+  assert.ok(app.includes("E.cliente.subirArchivo(`web/public/fotos-notas/${id}.jpg`, base64"));
+  assert.ok(app.includes("credito: credito ? `Foto: ${credito}` : null"), 'sin crédito por defecto');
+  assert.ok(app.includes("Tildá la confirmación: sin marca de otro medio y sin menores reconocibles."));
+  assert.match(htmlDeUnaNotaSinFoto({ nota: { id: 'a1', titulo: 'T', seccion: 'Balcarce', fecha: '2026-10-02T10:00:00Z' }, motivo: 'otra', entrada: null }, apps), /type="file" id="f-archivo" accept="image\/\*"/);
+  const gh = leer('web/public/panel/github.js');
+  assert.match(gh, /async function subirArchivo\(ruta, base64, mensaje\)/);
+  assert.match(gh, /fotosManuales: 'web\/data\/fotos-manuales\.json'/);
+  assert.match(leer('web/scripts/generar-datos.mjs'), /fotos-manuales\.json/);
+  assert.ok(Object.keys(JSON.parse(leer('web/data/fotos-manuales.json'))).length >= 0, 'el archivo existe');
 });

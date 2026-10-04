@@ -172,7 +172,9 @@ test('el panel muestra el seguimiento, en qué quedó, cómo cerrar y cada acci�
   assert.ok(s.indexOf('Novedad') < s.indexOf('Se empezó'), 'lo más nuevo primero');
   assert.equal(htmlDeSeguimiento([], apps), '');
   assert.match(htmlDeResultado(pista, apps), /Salió como nota nuestra/);
-  assert.match(htmlDeResultado(pista, apps), /href="https:\/\/radarbalcarce\.com\/nota\/np1"/);
+  assert.match(htmlDeResultado(pista, { ...apps, enlaceDeNota: (ruta) => `https://radarbalcarce.com${ruta}-con-titular` }), /href="https:\/\/radarbalcarce\.com\/nota\/np1-con-titular"/);
+  assert.match(htmlDeResultado(pista, apps), /Todavía no está en la web/, 'sin la dirección armada, no se muestra un enlace que no anda');
+  assert.ok(!/href="[^"]*\/nota\/np1"/.test(htmlDeResultado(pista, apps)));
   assert.equal(htmlDeResultado({}, apps), '');
   const cerrar = htmlDeCerrarPista({ id: 'p1', pista }, apps);
   for (const k of ['confirmada', 'desmentida', 'sin-novedad', 'descartada']) assert.match(cerrar, new RegExp(`data-resultado="${k}"`));

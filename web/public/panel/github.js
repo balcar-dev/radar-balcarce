@@ -35,6 +35,7 @@ export const ARCHIVOS = {
   cambiosIA: 'web/data/correcciones-auditoria.json',
   pistas: 'web/data/pistas.json',
   notasDePistas: 'web/data/notas-de-pistas.json',
+  fotosManuales: 'web/data/fotos-manuales.json',
   contactosPublicos: 'ingesta/contactos-agenda.json',
   contactosCelular: 'web/data/contactos-celular.json',
 };
@@ -141,9 +142,27 @@ export function crearCliente({ token, fetchFn = (...a) => fetch(...a) }) {
     }
   }
 
+  /**
+   * Sube un archivo binario (una foto, ya en base64) como un commit. Si ya existía, lo reemplaza. Lo usa la pestaña Fotos para subir una foto
+   * desde el celular: queda en web/public/fotos-notas/ y sale en la próxima actualización de la web.
+   */
+  async function subirArchivo(ruta, base64, mensaje) {
+    for (let intento = 1; ; intento += 1) {
+      let sha;
+      try { sha = (await (await pedir(`/repos/${REPO}/contents/${ruta}?ref=${RAMA}`)).json()).sha; } catch (e) { if (!(e instanceof ErrorDeGitHub && e.estado === 404)) throw e; }
+      try {
+        await pedir(`/repos/${REPO}/contents/${ruta}`, { metodo: 'PUT', cuerpo: { message: mensaje, content: base64, ...(sha ? { sha } : {}), branch: RAMA } });
+        return;
+      } catch (e) {
+        if (!(e instanceof ErrorDeGitHub) || ![409, 422].includes(e.estado) || intento >= 3) throw e;
+      }
+    }
+  }
+
   return {
     leer,
     guardar,
+    subirArchivo,
     /** ¿Esta llave puede escribir en el repositorio? */
     async puedeEscribir() {
       const j = await (await pedir(`/repos/${REPO}`)).json();
@@ -308,3 +327,8 @@ export const palabras = (t) => String(t ?? '').trim().split(/\s+/).filter(Boolea
 
 /** El id de la nota que sale de una pista (igual que idDeNotaDePista de web/lib/notas-de-pistas.js: una prueba controla que digan lo mismo). */
 export const idDeNotaDePista = (idPista) => `np${String(idPista ?? '').replace(/[^a-z0-9]/gi, '').toLowerCase().replace(/^pista/, '').slice(0, 16)}`;
+
+/** La foto de una nota, subida desde el celular o armada en la nube (web/data/fotos-manuales.json; generar-datos la suma al banco). Sin crédito si no se escribió. */
+export function conFotoManual(json, id, entrada) {
+  return { ...(json ?? {}), [id]: entrada };
+}

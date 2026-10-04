@@ -48,7 +48,7 @@ export function imagenDeLaPagina(html, base) {
 
 /** Baja la imagen (o, si es una página, su foto principal). Lanza un Error con el motivo, en castellano, si no se puede. */
 export async function bajarImagen(url, { fetchFn = fetch, dePagina = false } = {}) {
-  if (!urlDeFotoValida(url)) throw new Error('La dirección de la imagen no sirve (tiene que empezar con https://).');
+  if (!urlDeFotoValida(url)) throw new Error('La dirección de la imagen no sirve (tiene que ser un enlace de internet, con http o https).');
   const res = await fetchFn(url, { signal: AbortSignal.timeout(20000), headers: { 'user-agent': 'Mozilla/5.0 (compatible; RadarBalcarceBot/1.0)' } });
   if (!res.ok) throw new Error(`El sitio contestó ${res.status} al bajar la imagen.`);
   const mime = String(res.headers.get('content-type') ?? '').split(';')[0].trim().toLowerCase();

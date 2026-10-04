@@ -10,7 +10,7 @@
 
 import {
   crearCliente, ARCHIVOS, SECCIONES, ErrorDeGitHub, marcaNueva, corridaConMarca,
-  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza, conPistaSinNovedad, conPistaEstado, conPistaResultado, conNotaDePista, conNotaDePistaRetirada, idDeNotaDePista,
+  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado, conDecisionDePieza, conPistaSinNovedad, conPistaEstado, conPistaResultado, conNotaDePista, conNotaDePistaRetirada, idDeNotaDePista, conFotoManual,
 } from './github.js';
 import {
   ESTILOS, COLOR_DE_ESTILO, ROLES, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
@@ -516,9 +516,49 @@ function vistaFoto(id) {
   });
 }
 
+/** Achica una foto en el celular: JPEG de hasta 1.200 px de ancho, como las del banco. Devuelve el base64 (sin el encabezado). */
+async function achicarEnElCelular(archivo, { ancho = 1200, calidad = 0.82 } = {}) {
+  const imagen = await createImageBitmap(archivo);
+  const escala = Math.min(1, ancho / imagen.width);
+  const lienzo = document.createElement('canvas');
+  lienzo.width = Math.round(imagen.width * escala);
+  lienzo.height = Math.round(imagen.height * escala);
+  lienzo.getContext('2d').drawImage(imagen, 0, 0, lienzo.width, lienzo.height);
+  const blob = await new Promise((ok) => { lienzo.toBlob(ok, 'image/jpeg', calidad); });
+  if (!blob) throw new Error('No pude achicar la foto.');
+  const bytes = new Uint8Array(await blob.arrayBuffer());
+  let s = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(s);
+}
+
+/** Sube una foto nuestra desde el celular: se achica acá, se guarda en el repositorio y queda anotada SIN fuente (salvo que se escriba un crédito). */
+async function subirFotoPropia(id) {
+  const archivo = $('#f-archivo')?.files?.[0];
+  if (!archivo) { aviso('Elegí primero la foto (tocá "Elegir archivo").'); return; }
+  if (!$('#f-ok')?.checked) { aviso('Tildá la confirmación: sin marca de otro medio y sin menores reconocibles.'); return; }
+  const credito = ($('#f-credito-propio')?.value ?? '').replace(/\s+/g, ' ').trim().replace(/^foto:\s*/i, '').slice(0, 80);
+  E.trabajos[id] = { clase: 'foto', estado: 'escribiendo', desde: Date.now() };
+  aviso('Subiendo la foto…');
+  try {
+    const base64 = await achicarEnElCelular(archivo);
+    await E.cliente.subirArchivo(`web/public/fotos-notas/${id}.jpg`, base64, `Panel del celular: ${E.nombre} sube la foto de una nota`);
+    await E.cliente.guardar(ARCHIVOS.fotosManuales, (j) => conFotoManual(j, id, {
+      archivo: `fotos-notas/${id}.jpg`, medio: credito || null, credito: credito ? `Foto: ${credito}` : null, licencia: null, origen: 'subida', por: E.nombre, cuando: new Date().toISOString(),
+    }), `Panel del celular: ${E.nombre} anota la foto de una nota`);
+    E.trabajos[id] = { clase: 'foto', estado: 'listo' };
+    E.restaurar = E.scrollLista ?? null;
+    vistaLista();
+    aviso(`Foto subida${credito ? '' : ' (sin fuente)'}: sale en la web en la próxima actualización.`, { conActualizar: true });
+  } catch (e) {
+    E.trabajos[id] = { clase: 'foto', estado: 'fallo', motivo: String(e?.message ?? e).slice(0, 160) };
+    aviso(`No se pudo subir la foto: ${explicarError(e)}`, { ms: 12000 });
+  }
+}
+
 /** Le pide a la nube que baje la foto y la guarde, sin trabar el panel: la marca queda en la lista de Fotos. */
 async function sumarFoto(id, { url, credito, confirmo }) {
-  if (!urlDeFotoValida(url)) { aviso('Pegá la dirección de la imagen: tiene que empezar con https://'); return; }
+  if (!urlDeFotoValida(url)) { aviso('El enlace no sirve: pegá la dirección completa de la nota o de la imagen (empieza con http:// o https://).', { ms: 9000 }); return; }
   if (!creditoDeFoto(credito)) { aviso('Falta el crédito: quién sacó la foto o de dónde es.'); return; }
   if (!confirmo) { aviso('Tildá la confirmación: sin marca de otro medio y sin menores reconocibles.'); return; }
   const r = await preguntar({
@@ -747,13 +787,20 @@ function vistaPistas() {
   app.innerHTML = htmlDeFormulario({ texto: E.pista?.texto ?? '' }, apps) + htmlDeLista(E.pistasLibro, apps) + queEs('pistas');
 }
 
+/** "/nota/np123" → la dirección completa de la nota, con su titular, si la web ya la armó (portada o archivo); si no, null. */
+function enlaceDeUnaNotaDePista(ruta) {
+  const id = String(ruta ?? '').split('/').pop();
+  const n = (E.portada?.notas ?? []).find((x) => x.id === id) ?? (E.archivo ?? []).find((x) => x.id === id);
+  return n ? enlaceDeNota(n) : null;
+}
+
 /** Una pista guardada: su informe se abre acá con la llave de este celular; si tenía novedad, se apaga. */
 async function vistaUnaPista() {
   const id = E.pistaAbierta;
   const pista = E.pistasLibro?.pistas?.[id];
   if (!pista) { E.pistaAbierta = null; vistaPistas(); return; }
   const informe = pista.sobre && E.llaves ? await abrir(pista.sobre, E.llaves) : null;
-  app.innerHTML = htmlDeUnaPista({ id, pista, informe }, { esc, haceCuanto, chip });
+  app.innerHTML = htmlDeUnaPista({ id, pista, informe }, { esc, haceCuanto, chip, enlaceDeNota: enlaceDeUnaNotaDePista });
   window.scrollTo(0, 0);
   if (pista.novedad) {
     pista.novedad = false;
@@ -1592,6 +1639,7 @@ document.addEventListener('click', async (ev) => {
   else if (accion === 'abrir-pieza') { E.pieza = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'armar-con-candidatas') { E.pieza = null; E.subfechas = 'efemerides'; E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'aprobar-pieza' || accion === 'sacar-pieza' || accion === 'cambiar-pieza') decidirPieza(accion);
+  else if (accion === 'subir-foto') subirFotoPropia(id);
   else if (accion === 'foto-de-fuente') {
     const medio = el.dataset.medio || 'la fuente';
     sumarFoto(id, { url: el.dataset.url, credito: medio, confirmo: !!$('#f-ok')?.checked });

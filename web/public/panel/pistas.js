@@ -118,11 +118,11 @@ export function htmlDeInforme(i, { esc, haceCuanto, chip }) {
 }
 
 /** Lo que quedó resuelto de una pista cerrada: en qué quedó, cuándo y la nota, si salió una. */
-export function htmlDeResultado(p, { esc, haceCuanto }) {
+export function htmlDeResultado(p, { esc, haceCuanto, enlaceDeNota = null }) {
   const r = p.resultado;
   if (!r) return '';
   return `<div class="caja"><strong>En qué quedó:</strong> ${esc(RESULTADOS[r.tipo] ?? r.tipo)} <span class="meta">· ${esc(fecha(r.cuando, haceCuanto))}</span>
-    ${r.comentario ? `<p>${esc(r.comentario)}</p>` : ''}${r.ruta ? `<p><a href="https://radarbalcarce.com${esc(r.ruta)}" target="_blank" rel="noopener">Ver la nota en la web ↗</a></p>` : ''}</div>`;
+    ${r.comentario ? `<p>${esc(r.comentario)}</p>` : ''}${r.ruta ? htmlDelEnlaceDeLaNota(r.ruta, { esc, enlaceDeNota }) : ''}</div>`;
 }
 
 /** El seguimiento de una pista, de lo más nuevo a lo más viejo: cuándo se empezó, qué pasó y cómo se cerró. */
@@ -140,4 +140,16 @@ export function htmlDeCerrarPista({ id, pista }, { esc }) {
     <label for="comentario-pista">Un comentario (opcional)</label>
     <textarea id="comentario-pista" rows="2" maxlength="200" placeholder="Por ejemplo: lo desmintió el municipio"></textarea>
     <div class="botones">${Object.entries(RESULTADOS).filter(([k]) => k !== 'publicada').map(([k, texto]) => `<button type="button" class="boton" data-accion="resultado-pista" data-id="${esc(id)}" data-resultado="${esc(k)}">${esc(texto)}</button>`).join('')}</div>`;
+}
+
+/**
+ * El enlace a la nota que salió de una pista. La dirección de una nota lleva su titular ("titular-en-guiones-id") y eso se sabe recién cuando la web
+ * la arma: por eso el celular la busca en lo ya publicado (`enlaceDeNota` devuelve la dirección completa o null). Mientras no esté, dice que sale en la
+ * próxima actualización en vez de mostrar un enlace que no anda (3/10: el enlace sin titular daba "no encontrada").
+ */
+export function htmlDelEnlaceDeLaNota(ruta, { esc, enlaceDeNota = null }) {
+  const url = enlaceDeNota ? enlaceDeNota(ruta) : null;
+  return url
+    ? `<p><a href="${esc(url)}" target="_blank" rel="noopener">Ver la nota en la web ↗</a></p>`
+    : '<p class="meta">Todavía no está en la web: sale en la próxima actualización (cada media hora). Después acá aparece el enlace.</p>';
 }

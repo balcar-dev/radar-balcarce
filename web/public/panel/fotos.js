@@ -84,11 +84,11 @@ export function busquedasDeFoto(nota) {
   return { consulta, enlaces, fuentes };
 }
 
-/** ¿Es una dirección que la nube puede bajar? Sólo https, con un nombre de sitio, y no una dirección de adentro. */
+/** ¿Es una dirección que la nube puede bajar? https o http (muchos medios chicos siguen en http), con un nombre de sitio, y no una dirección de adentro. */
 export function urlDeFotoValida(url) {
   let u;
   try { u = new URL(String(url ?? '').trim()); } catch { return false; }
-  if (u.protocol !== 'https:' || u.username || u.password) return false;
+  if (!/^https?:$/.test(u.protocol) || u.username || u.password) return false;
   const h = u.hostname.toLowerCase();
   if (!h.includes('.') || h === 'localhost' || h.endsWith('.local') || h.endsWith('.internal')) return false;
   if (/^[\d.]+$/.test(h) || h.includes(':')) return false;
@@ -137,10 +137,16 @@ export function htmlDeUnaNotaSinFoto({ nota, motivo, entrada }, { esc, chip, hac
     <p class="ayuda">Cada fuente de la nota tiene su foto principal: tocá “Usar la foto de…” y la nube la baja, la achica y la guarda con el crédito del medio. Antes tildá la confirmación de abajo.</p>
     ${b.fuentes.length ? `<div class="botones">${b.fuentes.map((f) => `<a class="boton enlace-boton" href="${esc(f.url)}" target="_blank" rel="noopener noreferrer">Ver la nota de ${esc(f.medio)} ↗</a><button type="button" class="boton principal" data-accion="foto-de-fuente" data-id="${esc(nota.id)}" data-url="${esc(f.url)}" data-medio="${esc(f.medio)}">Usar la foto de ${esc(f.medio)}</button>`).join('')}</div>` : '<p class="meta">Esta nota no tiene fuentes con enlace.</p>'}
     <label class="check"><input type="checkbox" id="f-ok"> Confirmo que la foto no tiene marca de agua ni el nombre de otro medio pegado encima, y que no se reconoce a un menor ni a una víctima.</label>
+    <h2>Subir una foto nuestra</h2>
+    <p class="ayuda">Una foto sacada por nosotros (o que tenemos permiso de usar): se achica en el celular y queda <strong>sin fuente</strong> salvo que escribas un crédito. Vale la misma confirmación de arriba.</p>
+    <input type="file" id="f-archivo" accept="image/*">
+    <label for="f-credito-propio">Crédito (opcional; si lo dejás vacío no lleva)</label>
+    <input type="text" id="f-credito-propio" maxlength="${CREDITO_MAXIMO}" placeholder="Foto: Hernán Gerace">
+    <div class="botones"><button type="button" class="boton" data-accion="subir-foto" data-id="${esc(nota.id)}">Subir la foto</button></div>
     <h2>O pegar un enlace</h2>
     <p class="ayuda">Pegá el enlace de <strong>cualquier nota o foto</strong> (de la página o de la imagen misma): si es una página, la nube busca su foto principal. Sale en la web en la próxima actualización.</p>
     <form id="form-foto">
-      <label for="f-url">Enlace de la nota o de la imagen (empieza con https://)</label>
+      <label for="f-url">Enlace de la nota o de la imagen</label>
       <input type="text" id="f-url" inputmode="url" autocomplete="off" placeholder="https://…/foto.jpg">
       <label for="f-credito">Crédito (quién sacó la foto o de dónde es)</label>
       <input type="text" id="f-credito" maxlength="${CREDITO_MAXIMO}" placeholder="Municipalidad de Balcarce">
