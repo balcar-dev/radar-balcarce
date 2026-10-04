@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T02:20:00.789Z",
+  "generado": "2026-10-04T02:22:59.893Z",
   "notas": [
     {
       "id": "15z6cto",
@@ -689,6 +689,7 @@
       "id": "f1parrilla2026r16",
       "propia": "f1",
       "tipoF1": "parrilla",
+      "circuitoF1": "Sepang International Circuit",
       "titulo": "F1: Max Verstappen largará desde la pole en el Gran Premio de Baréin en Malasia; así quedó la parrilla",
       "copete": "Max Verstappen fue el más rápido de la clasificación, seguido por Lewis Hamilton y Isack Hadjar. Así quedó Colapinto. La carrera es el domingo 4 de octubre a las 04:00 de Argentina.",
       "cuerpo": "Max Verstappen (Red Bull) se quedó con la pole position del Gran Premio de Baréin en Malasia de la Fórmula 1, con una vuelta de 1:35,130, en la clasificación disputada en Sepang International Circuit, Kuala Lumpur, Malasia. La primera fila la completa Lewis Hamilton (Ferrari) a 0,298 segundos, y en el tercer puesto largará Isack Hadjar (Red Bull) a 0,428 segundos.\n\nAsí quedó la parrilla de largada de los diez primeros, en ese orden: 1º Max Verstappen, 2º Lewis Hamilton, 3º Isack Hadjar, 4º Andrea Kimi Antonelli, 5º Charles Leclerc, 6º Lando Norris, 7º Oscar Piastri, 8º George Russell, 9º Pierre Gasly, 10º Gabriel Bortoleto.\n\nEl argentino Franco Colapinto, con Alpine F1 Team, largará desde el puesto 15: quedó eliminado en la Q1, con 1:37,179 como mejor tiempo.\n\nLa carrera se corre el domingo 4 de octubre y largará a las 04:00, hora argentina.\n\nLos datos son los resultados oficiales según Jolpica F1 (datos abiertos). Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo.",
@@ -724,7 +725,11 @@
       ],
       "como": "automatica",
       "firma": "Nota de Radar Balcarce armada con los datos abiertos de Jolpica F1.",
-      "slug": "f1-max-verstappen-largara-desde-la-pole-en-el-gran-premio-de-barein"
+      "slug": "f1-max-verstappen-largara-desde-la-pole-en-el-gran-premio-de-barein",
+      "foto": {
+        "archivo": "fotos-notas/libre-f1parrilla2026r16.jpg",
+        "credito": "Foto: Leminhel / Wikimedia Commons (CC BY-SA 3.0)"
+      }
     },
     {
       "id": "repaso20261003tarde",
@@ -798,6 +803,7 @@
       "id": "f1horarios2026r16",
       "propia": "f1",
       "tipoF1": "horarios",
+      "circuitoF1": "Sepang International Circuit",
       "titulo": "F1: horarios del Gran Premio de Baréin en Malasia, en hora argentina",
       "copete": "La carrera del Gran Premio de Baréin en Malasia es el domingo 4 de octubre a las 04:00 de Argentina. Todos los horarios del fin de semana.",
       "cuerpo": "El Gran Premio de Baréin en Malasia de la temporada 2026 de la Fórmula 1 se corre en Sepang International Circuit, Kuala Lumpur, Malasia. La carrera largará el domingo 4 de octubre a las 04:00, hora argentina.\n\nLos horarios de todas las sesiones, en hora de Argentina (UTC-3):\n\nViernes 2 de octubre: práctica libre 1 a las 01:30 y práctica libre 2 a las 05:00.\n\nSábado 3 de octubre: práctica libre 3 a las 01:30 y clasificación a las 05:00.\n\nDomingo 4 de octubre: carrera a las 04:00.\n\nEl argentino Franco Colapinto figura entre los pilotos de la temporada 2026, con el número 43. Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo de Fórmula 1. Los horarios son los que publica el calendario oficial según los datos abiertos de Jolpica F1 y pueden cambiar; los consultamos de nuevo cada pocas horas.",
@@ -831,7 +837,11 @@
       ],
       "como": "automatica",
       "firma": "Nota de Radar Balcarce armada con los datos abiertos de Jolpica F1.",
-      "slug": "f1-horarios-del-gran-premio-de-barein-en-malasia-en-hora-argentina"
+      "slug": "f1-horarios-del-gran-premio-de-barein-en-malasia-en-hora-argentina",
+      "foto": {
+        "archivo": "fotos-notas/libre-f1horarios2026r16.jpg",
+        "credito": "Foto: Leminhel / Wikimedia Commons (CC BY-SA 3.0)"
+      }
     },
     {
       "id": "ayjy85",
@@ -1071,7 +1081,7 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariall y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció este sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
@@ -1426,7 +1436,7 @@
       "fecha": "2026-10-03T14:21:12.980Z",
       "sinFecha": false,
       "visto": "2026-10-03T16:08:50.140Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1906,119 +1916,6 @@
       "foto": {
         "archivo": "fotos-notas/17lpda8.jpg",
         "credito": "Foto: Ámbito"
-      }
-    },
-    {
-      "id": "fjrow3",
-      "titulo": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
-      "copete": "El piloto argentino de Alpine parte el domingo desde el puesto 21 en el circuito tras recibir una penalización de 15 lugares en la grilla.",
-      "cuerpo": "El piloto argentino Franco Colapinto afronta el domingo un desafío en el Gran Premio de Baréin 2026.\n\nA pesar de partir desde la parte posterior, el corredor se mostró optimista luego de guardar juegos de neumáticos y contar con un motor nuevo para la competencia. En declaraciones brindadas a la prensa tras la clasificación del sábado, explicó que la traza cuenta con frenadas marcadas y rectas extensas que favorecen los sobrepasos durante la prueba.\n\nLa grilla de partida tiene a Max Verstappen de Red Bull en la primera colocación.",
-      "guion": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Bolavip Argentina",
-        "0223 (Mar del Plata)",
-        "La Brújula 24"
-      ],
-      "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T10:28:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T15:01:37.047Z",
-      "relevancia": 70,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Franco Colapinto compite este domingo en el Gran Premio de Baréin",
-        "El argentino penalizó quince puestos y larga desde el vigesimoprimer lugar",
-        "El piloto guardó juegos de neumáticos y cuenta con motor nuevo para avanzar",
-        "Max Verstappen encabeza la grilla de partida con Red Bull"
-      ],
-      "seSabe": [
-        "Franco Colapinto compite este domingo en el Gran Premio de Baréin 2026",
-        "El piloto argentino de Alpine larga desde el puesto 21",
-        "La penalización acumulada fue de quince posiciones",
-        "El corredor guardó diferentes compuestos de neumáticos para la estrategia",
-        "Max Verstappen parte desde la pole position con Red Bull"
-      ],
-      "noConfirmado": [
-        "El rendimiento final del monoplaza durante las vueltas de la competencia"
-      ],
-      "textoRedes": "Franco Colapinto compite este domingo en el Gran Premio de Baréin desde el vigesimoprimer puesto. El piloto argentino sufrió una penalización de quince lugares, pero confía en avanzar con estrategia de neumáticos y motor nuevo.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Formula 1",
-        "Gran Premio de Barein"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/formula-1/franco-colapinto-es-optimista-para-la-carrera-del-gp-de-barein-se-puede-remontar",
-          "fecha": "2026-10-03T10:28:42.000Z",
-          "oficial": false,
-          "aporte": "Detalló la penalización, la estrategia de neumáticos y las declaraciones del piloto"
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-3-8-57-0-franco-colapinto-penultimo-en-barein-pero-optimista-la-razon-por-la-que-confia-en-remontar",
-          "fecha": "2026-10-03T12:00:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el puesto de partida y la sanción de quince lugares"
-        },
-        {
-          "medio": "La Brújula 24",
-          "enlace": "https://www.labrujula24.com/notas/2026/10/03/colapinto-optimista-pese-a-largar-21-en-el-gp-de-malasia-se-puede-remontar-n523603/",
-          "fecha": "2026-10-03T11:22:44.000Z",
-          "oficial": false,
-          "aporte": "Señaló el trabajo previo realizado y el provecho de las rectas del circuito"
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/03/con-confianza-en-el-ritmo-el-mensaje-de-franco-colapinto-en-la-previa-a-la-carrera-del-gp-de-bahrein/",
-          "fecha": "2026-10-03T16:52:48.000Z",
-          "oficial": false,
-          "aporte": "Detalló la sanción de 15 posiciones, el puesto 15 en la clasificación y las declaraciones completas del piloto."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/el-mensaje-franco-colapinto-la-previa-la-carrera-del-gp-bahrein-con-confianza-el-ritmo-n6329742",
-          "fecha": "2026-10-03T18:51:00.000Z",
-          "oficial": false,
-          "aporte": "Informó la ciudad de origen del piloto y su objetivo de buscar un buen domingo en la carrera."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1y5m4fa",
-          "titulo": "Franco Colapinto larga penúltimo en Bahréin y apuesta a remontar",
-          "fecha": "2026-09-29T20:00:31.000Z",
-          "ruta": "/nota/franco-colapinto-larga-penultimo-en-bahrein-y-apuesta-a-remontar-1y5m4fa"
-        },
-        {
-          "id": "ei8drx",
-          "titulo": "Max Verstappen consigue la pole positión y Franco Colapinto larga vigesimoprimero",
-          "fecha": "2026-10-03T01:00:00.000Z",
-          "ruta": "/nota/max-verstappen-consigue-la-pole-position-y-franco-colapinto-larga-ei8drx"
-        },
-        {
-          "id": "1ftwyte",
-          "titulo": "Franco Colapinto penaliza quince puestos en la grilla por un cambio de motor",
-          "fecha": "2026-10-02T18:03:01.000Z",
-          "ruta": "/nota/franco-colapinto-penaliza-quince-puestos-en-la-grilla-por-un-cambio-1ftwyte"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-busca-la-remontada-en-el-gran-premio-de-barein",
-      "foto": {
-        "archivo": "fotos-notas/fjrow3.jpg",
-        "credito": "Foto: 0223 (Mar del Plata)"
       }
     },
     {
@@ -2729,11 +2626,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-02T20:21:19.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-02T21:01:16.545Z",
+      "sinFecha": true,
       "visto": "2026-10-02T21:01:16.545Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4710,12 +4607,6 @@
       "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1y25nin",
-      "titulo": "Pino: “Es importante que el agro sea parte de la agenda…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "1b80a9j",
