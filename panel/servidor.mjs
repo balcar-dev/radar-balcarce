@@ -35,6 +35,7 @@ import {
 } from './notas.mjs';
 import { crearSincronizador, ejecutarGit } from './sincronizar.mjs';
 import { respaldar } from './respaldo.mjs';
+import { leerVariable } from '../reels/claves.mjs';
 import { origenPermitido, probarUrlPermitida } from './seguridad.mjs';
 import {
   nuevoEventoManual, publicarEvento, despublicarEvento, eventosParaLaWeb, estadoDeContactos, enlaceEnLaWeb,
@@ -89,7 +90,7 @@ const sincronizador = crearSincronizador({
 // de esta PC); si no, respaldos/ junto al proyecto. Ver panel/respaldo.mjs.
 const hacerRespaldo = () => {
   try {
-    respaldar({ destino: process.env.RESPALDO_CARPETA ?? path.join(AQUI, '..', 'respaldos') });
+    respaldar({ destino: leerVariable('RESPALDO_CARPETA') ?? path.join(AQUI, '..', 'respaldos') });
   } catch (e) {
     console.error('  no se pudo hacer el respaldo:', e.message);
   }

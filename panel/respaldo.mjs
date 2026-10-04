@@ -22,6 +22,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { leerVariable } from '../reels/claves.mjs';
 
 const AQUI = import.meta.dirname;
 const ORIGEN = path.join(AQUI, 'datos');
@@ -66,7 +67,7 @@ export function respaldar({ origen = ORIGEN, destino, fecha = new Date(), guarda
 }
 
 if (process.argv[1]?.endsWith('respaldo.mjs')) {
-  const destino = process.argv[2] ?? process.env.RESPALDO_CARPETA ?? path.join(AQUI, '..', 'respaldos');
+  const destino = process.argv[2] ?? leerVariable('RESPALDO_CARPETA') ?? path.join(AQUI, '..', 'respaldos');
   const r = respaldar({ destino });
   console.log(`  Respaldo hecho: ${r.archivos} archivos en ${r.carpeta}`);
   if (r.borradas.length) console.log(`  Copias viejas borradas: ${r.borradas.join(', ')}`);

@@ -38,9 +38,9 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 |---|---|---|
 | 6 | **Decidir si Política y Policiales esperan a una persona también en la web.** Hoy, en la web, salen solas si el semáforo da verde; en las redes siempre esperan (y ahora se aprueban desde el celular). Si se decide que esperen, es una regla nueva al final de `semaforo` (`ingesta/ingesta.mjs`) | Los dos |
 | 7 | **Biografías a mano desde el celular**: en Instagram, el enlace, la categoría, el botón de contacto (WhatsApp 2266 51-1612) y las historias destacadas | Los dos |
-| 8 | **Borrar el proyecto de Vercel** y limpiar el DNS que quedó (también `radar-balcarce.vercel.app`). Está apagado desde el 25/09 | Los dos |
+| 8 | **Borrar el proyecto de Vercel** y limpiar el DNS que quedó (también `radar-balcarce.vercel.app`). Está apagado desde el 25/09 | Los dos | (Hernán: "bórralo"; no tengo acceso, se hace desde vercel.com con la cuenta de radarbalcarce) | Hernán |
 | 9 | **Google AdSense**: abrir la cuenta (pide datos fiscales) y pedir la revisión; después, `ads.txt` con el ID de editor (`PUBLICIDAD.md`) | Los dos |
-| 10 | **`RESPALDO_CARPETA`** del panel de la PC a una carpeta de Drive u OneDrive: si se rompe el disco, se pierde el historial editorial de la PC | Hernán |
+| 10 | ~~`RESPALDO_CARPETA`~~ **hecho 4/10**: el respaldo del panel de la PC va a `C:/Users/herna/OneDrive/RadarBalcarce-respaldo` (en el `.env`; se nota al reiniciar el panel) | — |
 | 11 | **La clave paga de Gemini** (suspendida por Google el 29/09): decidir si se reactiva o se deja. Si se reactiva, separar el proyecto RadarBalcarce de los otros (comparten la facturación) y ponerle el límite de USD 10 por mes. Las voces viven en el proyecto de la clave de redes: si esa clave cambia de proyecto, hay que crearlas de nuevo | Los dos |
 | 12 | **Las variantes de las redes** (informe del 29/09): decidir si se prueba el titular fuerte al principio del repaso (unos 26 segundos en vez de 45) y el reel de una sola nota para lo más importante del día. Conviene tener antes las estadísticas (punto 5) | Los dos |
 | 13 | **Las efemérides "Un día como hoy"**: decidir hora, voz y sección. Fuentes ya probadas (Wikipedia, Wikidata, feriados, clima histórico de Open-Meteo; `IDEAS.md`). Ojo: una pieza más con voz no entra en el cupo gratis de 10 audios por día | Los dos |
@@ -94,3 +94,13 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
   números, cuando la analítica de Cloudflare tenga un par de semanas.
 - **El panel de la PC**: con el del celular andando, decidir si se deja como respaldo
   (agenda a mano, avisos, buzón, fuentes) o si esas funciones pasan también al celular.
+
+## Anotado el 4/10 (respuestas de Hernán)
+
+- Contactos: seguir sumando; en unas semanas empezar a mandar mensajes; pensar un enfoque comercial que también dé a conocer el medio.
+- AdSense: registrarlo con `radarbalcarce@gmail.com`.
+- Claves en texto plano ya borradas; Facebook revisado y ok.
+- Pistas cubiertas por 3 o más medios y sin avisos del verificador: que salgan solas (por diseñar).
+- **Notas repetidas del mismo tema** (ej. robo a Frutimar, medios locales que no salen juntos): juntar varias fuentes en una nota mejor; ajustar bastante y/o revisar por bloques las notas grandes. Hay que volver a hablarlo.
+- Fútbol local: buscar una fuente local (Liga Balcarceña, Regional Amateur) entre los medios de acá.
+- Repasar todas las ideas juntos (`IDEAS.md`).
