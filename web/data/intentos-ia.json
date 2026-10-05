@@ -130,8 +130,8 @@
   "motivo": "con cuerpo"
  },
  "12tbmrp": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T21:32:25.306Z",
+  "intentos": 2,
+  "ultimo": "2026-10-05T22:01:36.128Z",
   "motivo": "sin material"
  },
  "12y59yp": {
@@ -225,6 +225,11 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
+ },
+ "15ngrmw": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T22:01:36.128Z",
+  "motivo": "con cuerpo"
  },
  "15rj0a4": {
   "intentos": 1,
@@ -397,6 +402,11 @@
   "intentos": 1,
   "ultimo": "2026-09-29T00:31:00.500Z",
   "motivo": "con cuerpo"
+ },
+ "18upwel": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T22:01:36.128Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 43 palabras"
  },
  "18wjidj": {
   "intentos": 1,
@@ -801,11 +811,6 @@
   "ultimo": "2026-09-30T22:31:30.288Z",
   "motivo": "con cuerpo"
  },
- "1hhocwa": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T22:01:14.632Z",
-  "motivo": "con cuerpo"
- },
  "1hiaakh": {
   "intentos": 1,
   "ultimo": "2026-10-05T01:41:31.894Z",
@@ -1188,11 +1193,6 @@
   "ultimo": "2026-09-29T23:31:21.178Z",
   "motivo": "con cuerpo"
  },
- "1py2fu3": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T22:01:14.632Z",
-  "motivo": "con cuerpo"
- },
  "1q0vfmx": {
   "intentos": 1,
   "ultimo": "2026-09-30T19:01:33.516Z",
@@ -1282,6 +1282,11 @@
   "intentos": 1,
   "ultimo": "2026-10-01T14:31:46.688Z",
   "motivo": "con cuerpo"
+ },
+ "1stssa7": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T22:01:36.128Z",
+  "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"lionel\", \"messi\" y el cuerpo no los explica; sin esas oraciones quedan 99 palabras"
  },
  "1swrham": {
   "intentos": 1,
@@ -2065,9 +2070,9 @@
   "motivo": "con cuerpo"
  },
  "afx3aq": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T21:32:25.306Z",
-  "motivo": "cuerpo: 2 problemas (tildes, promesa): el texto está escrito sin tildes (television, transmision, habia): va con las tildes y la eñe donde ; sin esas oraciones "
+  "intentos": 2,
+  "ultimo": "2026-10-05T22:01:36.128Z",
+  "motivo": "con cuerpo"
  },
  "alddw5": {
   "intentos": 1,
@@ -2133,11 +2138,6 @@
   "intentos": 1,
   "ultimo": "2026-10-04T10:31:20.690Z",
   "motivo": "con cuerpo"
- },
- "c3ytde": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T22:01:14.632Z",
-  "motivo": "título o bajada: 1 problema (numero): el guion dice 8 y la fuente no lo dice"
  },
  "c7rwcn": {
   "intentos": 2,
@@ -2369,11 +2369,6 @@
   "ultimo": "2026-10-04T13:01:15.747Z",
   "motivo": "con cuerpo"
  },
- "ip1dkb": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T22:01:14.632Z",
-  "motivo": "con cuerpo"
- },
  "irc0sr": {
   "intentos": 1,
   "ultimo": "2026-10-04T23:31:41.471Z",
@@ -2473,11 +2468,6 @@
   "intentos": 3,
   "ultimo": "2026-09-30T21:31:14.712Z",
   "motivo": "título o bajada: 4 problemas (nombre, numero): el titulo nombra a \"diez\" y la fuente no"
- },
- "kzqlp8": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T22:01:14.632Z",
-  "motivo": "con cuerpo"
  },
  "l2vtqk": {
   "intentos": 1,
@@ -3083,13 +3073,18 @@
   "motivo": "con cuerpo"
  },
  "z08pph": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T21:32:25.306Z",
-  "motivo": "cuerpo: 2 problemas (antecedente, copia): el cuerpo usa 20, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 92 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-05T22:01:36.128Z",
+  "motivo": "con cuerpo"
  },
  "z3c4f": {
   "intentos": 1,
   "ultimo": "2026-09-30T21:01:16.156Z",
+  "motivo": "con cuerpo"
+ },
+ "z5u242": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T22:01:36.128Z",
   "motivo": "con cuerpo"
  },
  "z8w3og": {

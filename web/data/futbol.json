@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-05T21:33:46.543Z",
+ "consultado": "2026-10-05T22:02:23.035Z",
  "equipos": [
   "9739",
   "3",
@@ -468,8 +468,8 @@
     "id": "401841592",
     "competencia": "liga",
     "inicio": "2026-10-05T19:45:00.000Z",
-    "estado": "en-juego",
-    "minuto": "90'+2'",
+    "estado": "final",
+    "minuto": "90'+4'",
     "local": {
      "id": "17702",
      "nombre": "Deportivo Riestra",
@@ -504,8 +504,8 @@
     "id": "401841590",
     "competencia": "liga",
     "inicio": "2026-10-05T22:00:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "4'",
     "local": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",
@@ -527,8 +527,8 @@
     "id": "401841585",
     "competencia": "liga",
     "inicio": "2026-10-05T22:00:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "2'",
     "local": {
      "id": "21",
      "nombre": "Vélez Sarsfield",

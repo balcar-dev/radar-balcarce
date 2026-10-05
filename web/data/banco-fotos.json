@@ -7016,16 +7016,16 @@
   "fuentes": 1
  },
  "9lbni": {
-  "archivo": "fotos-notas/9lbni.jpg",
   "medio": "Bolavip Argentina",
-  "credito": "Foto: Bolavip Argentina",
   "licencia": null,
   "origen": "medio",
   "titulo": "El capitán de Benín analiza el cruce contra la Selección",
   "enlace": "https://bolavip.com/ar/seleccion/el-capitan-de-benin-picante-antes-de-la-despedida-de-messi-los-argentinos-juegan-sucio",
   "imagenOriginal": "https://media.bolavip.com/wp-content/uploads/sites/18/2026/10/04190200/Steve-Mounie-capitan-de-la-Seleccion-de-Benin-1200x740.webp",
   "razon": "La foto C muestra al capitán de Benín de cuerpo entero en plena acción con excelente nitidez y sin marcas agregadas.",
-  "cuando": "2026-10-05T14:06:30.670Z"
+  "cuando": "2026-10-05T14:06:30.670Z",
+  "intentado": true,
+  "borrada": true
  },
  "e5jokd": {
   "archivo": "fotos-notas/e5jokd.jpg",
@@ -7600,16 +7600,16 @@
   "cuando": "2026-10-05T21:33:05.141Z"
  },
  "1w8kl7g": {
-  "archivo": "fotos-notas/1w8kl7g.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "El riesgo país cae y los activos financieros suben tras la elección en Brasil",
   "enlace": "https://www.lanacion.com.ar/economia/tras-el-triunfo-de-bolsonaro-en-brasil-baja-el-riesgo-pais-y-rebotan-las-acciones-argentinas-en-el-nid05102026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-triunfo-de-flavio-bolsonaro-en-brasil-impacta-5FBEJ3JMLBHVLM2IKTLALFGMGI.jpg?auth=d7280f447035796e581877851bfc45060e29d33fe812b43771d7bcfee8da6785&width=1200&height=800&quality=70&smart=true",
   "razon": "La foto B muestra billetes relacionados con la economía y mercados sin marcas de agua ni menores, ilustrando perfectamente el tema financiero.",
-  "cuando": "2026-10-05T21:33:05.141Z"
+  "cuando": "2026-10-05T21:33:05.141Z",
+  "intentado": true,
+  "borrada": true
  },
  "18ct4d0": {
   "archivo": "fotos-notas/18ct4d0.jpg",
@@ -7622,5 +7622,47 @@
   "imagenOriginal": "https://www.agrositio.com.ar/imagenesweb/contenidos/og_248662_81036398.jpg",
   "razon": "La foto A muestra claramente una recorrida de campo con especialistas explicando sobre las variedades de soja, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-05T21:33:05.141Z"
+ },
+ "z08pph": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Fabio Santana canta el himno nacional en la despedida de Lionel Messi",
+  "razon": "Groq también falló: HTTP 413 (se probó una foto libre de \"Fabio Santana\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-05T22:02:07.484Z",
+  "intentos": 1,
+  "fuentes": 4
+ },
+ "15ngrmw": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Argentina, Chile, Uruguay y Brasil compiten por organizar el Mundial de Rugby 2035",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-05T22:02:07.484Z",
+  "intentos": 1,
+  "fuentes": 4
+ },
+ "z5u242": {
+  "archivo": "fotos-notas/z5u242.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Messi juega su último partido con la Selección ante Benín",
+  "enlace": "https://www.ole.com.ar/messi/lionelmessi-fanfest-estadiomonumental-seleccionargentina-ciudaduniversitaria-argentina-benin-policiadelaciudad_0_yORrNMhJ5S.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/06/02/SbkQhq-cH_2000x1500__1.jpg",
+  "razon": "Es la única foto nítida de Messi en primer plano sin marcas de agua ni menores.",
+  "cuando": "2026-10-05T22:02:07.484Z"
+ },
+ "afx3aq": {
+  "archivo": "fotos-notas/afx3aq.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lando Norris comete un error bajo el Auto de Seguridad en Malasia",
+  "enlace": "https://www.infobae.com/deportes/2026/10/05/la-burla-contra-lando-norris-tras-una-peligrosa-maniobra-durante-el-gp-de-barein-de-la-f1-que-pasa-si-ahora-sale-a-hablar-colapinto/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/3KMZW55AZVHKNJNVAHIDEOPIU4.jpg?auth=d9433a3f5d3c8864a1ee6eca91308afee7d439bdd3979c00911660f2cd05a175&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A muestra claramente la acción en pista y no tiene marcas de agua agregadas por el medio ni menores identificables.",
+  "cuando": "2026-10-05T22:02:07.484Z"
  }
 }
