@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T22:36:19.614Z",
- "portada": 55,
- "archivo": 939,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-05T23:04:08.613Z",
+ "portada": 56,
+ "archivo": 940,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-05T22:36:19.640Z",
+  "generado": "2026-10-05T23:04:08.648Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 50,
     "notas": [
      {
       "id": "uzokxq",
@@ -165,8 +165,8 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "z08pph",
-      "titulo": "Fabio Santana canta el himno nacional en la despedida de Lionel Messi",
+      "id": "18upwel",
+      "titulo": "Prestianni y Mastantuono integran la lista de finalistas del Golden Boy",
       "seccion": "Fútbol"
      },
      {
@@ -212,8 +212,8 @@
    ],
    "cola": [
     {
-     "id": "uzokxq",
-     "titulo": "Impulsan un banco municipal de elementos de fisiatría",
+     "id": "1pofkpj",
+     "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
      "seccion": "Balcarce",
      "marcada": false
     }
