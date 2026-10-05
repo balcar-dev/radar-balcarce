@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T16:02:07.215Z",
+ "generado": "2026-10-05T16:32:39.593Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,8 +15,8 @@
      "fecha": "2026-10-05T15:48:46.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 51 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 2 problemas (numero, copia): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 45 palabras",
    "maximo": 3
   },
   {
@@ -47,6 +47,11 @@
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/economia/2026/10/05/alquileres-en-caba-el-40-de-los-hogares-de-menores-ingresos-destina-mas-de-la-mitad-de-su-sueldo-a-la-vivienda/",
      "fecha": "2026-10-05T11:34:53.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/economia/el-alquiler-un-dos-ambientes-representa-la-mitad-los-ingresos-del-40-los-hogares-menores-ingresos-n6330148",
+     "fecha": "2026-10-05T16:09:56.000Z"
     },
     {
      "medio": "iProfesional",

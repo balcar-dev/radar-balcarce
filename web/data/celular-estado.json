@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T16:02:07.215Z",
- "portada": 46,
- "archivo": 916,
+ "generado": "2026-10-05T16:32:39.593Z",
+ "portada": 48,
+ "archivo": 920,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T16:02:07.235Z",
+  "generado": "2026-10-05T16:32:39.623Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -129,6 +129,11 @@
     "segundos": 55,
     "notas": [
      {
+      "id": "1vnue0q",
+      "titulo": "El Auto Club Balcarce confirma el cronograma para el Zonal",
+      "seccion": "Automovilismo"
+     },
+     {
       "id": "1njgnul",
       "titulo": "Campo de Pato gana el torneo regional y asciende en hockey",
       "seccion": "Deportes"
@@ -137,11 +142,6 @@
       "id": "cn09w9",
       "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1vnue0q",
-      "titulo": "El Auto Club Balcarce confirma el cronograma para el Zonal",
-      "seccion": "Automovilismo"
      },
      {
       "id": "wb8pre",
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "bmbmep",
-      "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
-      "seccion": "Argentina"
-     },
      {
       "id": "9lbni",
       "titulo": "El capitán de Benín analiza el cruce contra la Selección",
@@ -178,6 +173,11 @@
       "id": "lomklr",
       "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
       "seccion": "Deportes"
+     },
+     {
+      "id": "e5jokd",
+      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "seccion": "Balcarce"
      }
     ]
    }

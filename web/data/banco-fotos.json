@@ -7204,9 +7204,9 @@
  "18ymt3o": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-05T15:07:45.201Z",
+  "cuando": "2026-10-05T16:32:00.717Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 1,
+  "intentos": 2,
   "fuentes": 3
  },
  "q7d6xn": {
@@ -7231,13 +7231,16 @@
   "cuando": "2026-10-05T15:07:45.201Z"
  },
  "1k1mxar": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1k1mxar.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Gobierno se reúne con la Iglesia para debatir políticas sobre discapacidad",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-05T15:07:45.201Z",
-  "intentos": 1,
-  "fuentes": 8
+  "enlace": "https://tn.com.ar/politica/2026/10/05/antes-de-la-visita-del-papa-al-cottolengo-el-gobierno-recibe-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad-2/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2FTNS305102026132019885694810.jpg%3F395039?auth=22b9f62896e09ceae04013e3c15d5021e48f4cdce63193676ce19e3c379dad51&width=1023",
+  "razon": "Es la única foto que ilustra claramente la reunión entre el gobierno/iglesia sobre discapacidad, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-05T16:32:00.717Z"
  },
  "1vnue0q": {
   "archivo": "fotos-notas/1vnue0q.jpg",
@@ -7319,5 +7322,53 @@
   "cuando": "2026-10-05T16:01:54.434Z",
   "intentos": 1,
   "fuentes": 3
+ },
+ "1v130vb": {
+  "archivo": "fotos-notas/1v130vb.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Xoana Martínez defiende el acuerdo paritario y detalla los puntos del sector municipal",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44998-xoana-martinez-defendio-el-acuerdo-paritario-municipal-hay-que-trabajar-mucho-para-conseguir-todo-lo-que-se-ha-logrado/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65953.png",
+  "razon": "Tiene buen encuadre y nitidez, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-05T16:32:00.717Z"
+ },
+ "w7y7kg": {
+  "archivo": "fotos-notas/w7y7kg.jpg",
+  "medio": "Argenpapa",
+  "credito": "Foto: Argenpapa",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Convocan a productores de papa locales a completar el censo provincial",
+  "enlace": "https://www.argenpapa.com.ar/noticia/17885-argentina-convocan-a-los-productores-de-papa-del-sudeste-bonaerense-a-participar-del-censo-hortifloricola-2026",
+  "imagenOriginal": "https://www.argenpapa.com.ar/images/noticias/1791216230_big.jpg",
+  "razon": "Es la única foto disponible, tiene buena nitidez y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-05T16:32:00.717Z"
+ },
+ "swbc0d": {
+  "archivo": "fotos-notas/swbc0d.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Las acciones argentinas suben en Wall Street por las elecciones en Brasil",
+  "enlace": "https://radiomitre.cienradios.com/economia/tras-las-elecciones-en-brasil-las-acciones-argentinas-suben-hasta-un-56-en-wall-street/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/R3UKUS6RDFEIXI4JYMGKKMQDAA.jpg?smart=true&auth=20b4dfd7be5606432b1a0761fbf3aa88b1e82e46e692e5df71e3c7a5eed95e35&width=1200&height=630",
+  "razon": "Es la mejor foto que ilustra la temática financiera y bursátil de Wall Street de manera clara, sin marcas agregadas de medios ni menores de edad.",
+  "cuando": "2026-10-05T16:32:00.717Z"
+ },
+ "axo0gz": {
+  "archivo": "fotos-notas/axo0gz.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lucas Zelarayán revela una charla de una hora y media con Messi",
+  "enlace": "https://www.tycsports.com/gaming/la-anecdota-de-una-figura-del-futbol-argentino-con-messi-yo-queria-una-foto-y-me-hizo-pasar-a-su-casa-id764446.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/05/993061/lionel-messi-getty-images_1440x810.webp",
+  "razon": "Ambas fotos son de Lionel Messi, pero la B tiene mejor nitidez, encuadre y una actitud más expresiva para la nota, sin marcas de agua ni menores.",
+  "cuando": "2026-10-05T16:32:00.717Z"
  }
 }
