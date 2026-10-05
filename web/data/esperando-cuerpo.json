@@ -1,7 +1,41 @@
 {
- "generado": "2026-10-05T15:32:19.622Z",
+ "generado": "2026-10-05T15:53:35.875Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "5u4znt",
+   "titulo": "Se realizará una nueva Campaña raee en Plaza Libertad",
+   "copete": "El área de Espacios Públicos, Ambiente y Servicios Generales llevará adelante una nueva jornada de la Campaña de Recolección de Residuos de Aparatos Eléctricos y Electrónicos (RAEE). La actividad se realizará el miércoles 14 de octubre, en horario de 8 a 13, en plaza Libertad…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-05T15:48:46.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/05/se-realizara-una-nueva-campana-raee-en-plaza-libertad/",
+     "fecha": "2026-10-05T15:48:46.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 67 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1kia0yd",
+   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
+   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-05T11:59:56.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
+     "fecha": "2026-10-05T11:59:56.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo corto (58 palabras)",
+   "maximo": 3
+  },
   {
    "id": "r2tg83",
    "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
@@ -18,48 +52,6 @@
    "intentos": 3,
    "motivo": "sin material",
    "maximo": 3
-  },
-  {
-   "id": "16q21ih",
-   "titulo": "Martín Fierro de la Música 2026: los nominados y todos los detalles de la primera edición",
-   "copete": "La música argentina suma una nueva entrega de premios y ya están definidos sus protagonistas. El domingo 4 de octubre se conocieron los nominados a los Martín Fierro de la Música 2026 , que tendrán su primera ceremonia el próximo miércoles 14. La nómina reúne a algunas de las…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-05T11:15:00.000Z",
-   "fuentes": [
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
-     "fecha": "2026-10-05T11:15:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/espectaculos/martin-fierro-musica-2026-uno-uno-la-lista-nominados-n6330133",
-     "fecha": "2026-10-05T14:13:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/martin-fierro-de-la-musica-2026-todos-los-artistas-que-competiran-en-la-primera-edicion/",
-     "fecha": "2026-10-05T15:03:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/diarioshow/farandula/martin-fierro-de-la-musica-2026-la-lista-completa-de-nominados/",
-     "fecha": "2026-10-05T14:30:32.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/espectaculos/todos-los-nominados-a-los-martin-fierro-de-la-musica-2026_a6ac3a0b5efa9665a6c1d6dd5",
-     "fecha": "2026-10-05T13:05:00.000Z"
-    },
-    {
-     "medio": "La Tecla",
-     "enlace": "https://www.latecla.info/170180-martin-fierro-de-la-musica-tini-lali-y-maria-becerra-encabezan-la-primera-gala",
-     "fecha": "2026-10-05T12:15:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 3 problemas (numero, nombre): el titulo dice 0 y la fuente no lo dice",
-   "maximo": 4
   },
   {
    "id": "1rqm2xx",
@@ -84,8 +76,8 @@
      "fecha": "2026-10-05T14:14:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 91 caracteres, el máximo es 90",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (promesa): el título dice 40 y el cuerpo no lo explica; sin esas oraciones quedan 157 palabras",
    "maximo": 3
   }
  ]

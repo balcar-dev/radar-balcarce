@@ -1,6 +1,68 @@
 {
-  "generado": "2026-10-05T15:32:19.622Z",
+  "generado": "2026-10-05T15:53:35.875Z",
   "notas": [
+    {
+      "id": "gepu85",
+      "titulo": "Aconcagua presenta una plataforma para registrar labores de papa por Telegram",
+      "copete": "La herramienta digital busca simplificar la carga de datos en el campo y generar órdenes de trabajo, documentación e indicadores de sustentabilidad.",
+      "cuerpo": "La plataforma tecnológica desarrollada por Aconcagua permite registrar las labores del cultivo de papa a través de un bot de Telegram. Según explicó Santiago Cardoso, el sistema apunta a facilitar la tarea cotidiana del productor mediante una dinámica sencilla.\n\nEl procedimiento abarca la carga de información sobre lotes, riegos, siembras, fertilizaciones y cosechas. A partir de esos registros, la herramienta genera órdenes de trabajo que pueden compartirse por correo electrónico, SMS o WhatsApp.\n\nAdemás, el software incluye módulos orientados a auditorías, sustentabilidad, trazabilidad de transportes y un asistente de inteligencia artificial para consultar datos de la campaña.",
+      "guion": "Aconcagua presenta una plataforma para registrar labores de papa por Telegram",
+      "seccion": "Agro",
+      "medios": [
+        "Argenpapa"
+      ],
+      "enlace": "https://www.argenpapa.com.ar/noticia/17884-argentina-aconcagua-propone-simplificar-el-registro-de-labores-y-la-trazabilidad-en-la-produccion-de-papa",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T15:52:36.644Z",
+      "sinFecha": true,
+      "visto": "2026-10-05T15:52:36.644Z",
+      "relevancia": 26,
+      "local": false,
+      "deLaZona": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Permite registrar labores de papa mediante Telegram",
+        "Facilita la confección de órdenes de trabajo",
+        "Incluye módulos de sustentabilidad y trazabilidad"
+      ],
+      "seSabe": [
+        "Aconcagua desarrolló una plataforma para registrar labores de cultivo mediante Telegram, según informó Argenpapa.",
+        "Santiago Cardoso explicó que el sistema abarca lotes, riegos, siembras y cosechas.",
+        "La herramienta genera órdenes de trabajo, documentación para auditorías e indicadores de sustentabilidad."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Aconcagua desarrolló una plataforma que permite registrar las labores del cultivo de papa mediante Telegram para simplificar la gestión y generar documentación.",
+      "etiquetas": [
+        "Aconcagua",
+        "papa",
+        "tecnología",
+        "producción"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Argenpapa",
+          "enlace": "https://www.argenpapa.com.ar/noticia/17884-argentina-aconcagua-propone-simplificar-el-registro-de-labores-y-la-trazabilidad-en-la-produccion-de-papa",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el funcionamiento de la plataforma de Aconcagua para el registro de labores agrícolas mediante Telegram."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "aconcagua-presenta-una-plataforma-para-registrar-labores-de-papa-por",
+      "foto": {
+        "archivo": "fotos-notas/gepu85.jpg",
+        "credito": "Foto: Argenpapa"
+      }
+    },
     {
       "id": "1vnue0q",
       "titulo": "El Auto Club Balcarce confirma el cronograma para el Zonal",
@@ -9,7 +71,14 @@
       "guion": "El Auto Club Balcarce confirma el cronograma para el Zonal",
       "seccion": "Automovilismo",
       "medios": [
-        "Acción 5 (Balcarce)"
+        "Acción 5 (Balcarce)",
+        "Radio Gabal (FM 104.1)",
+        "News Balcarce (FM 91.7)",
+        "Infórmese Primero (FM 104.9)",
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia",
+        "QZ Noticias (Mar del Plata)",
+        "El Diario Balcarce"
       ],
       "enlace": "https://accion5.com/zonal-en-balcarce-los-horarios-de-las-dos-jornadas-completas/",
       "teniaImagenLaFuente": true,
@@ -84,6 +153,159 @@
       }
     },
     {
+      "id": "yqqsx9",
+      "titulo": "Los bonos y acciones argentinas suben y el riesgo país cae",
+      "copete": "Los títulos soberanos y las acciones de empresas locales registran fuertes subas en la jornada financiera. El indicador de JP Morgan desciende tras el impacto de los mercados en Brasil.",
+      "cuerpo": "Los papeles de empresas argentinas muestran avances de hasta el 7%, impulsados por el clima financiero en Brasil tras el resultado electoral de la primera vuelta presidencial.\n\nEntre las principales subas de la jornada se destacan Mercado Libre con un 6,5%, BBVA con un 6,2%, Macro con un 5,7% y Central Puerto con un 5,4%. En las semanas previas, la tensión global y los datos adversos de la economía local habían llevado al indicador a rozar las 400 unidades en julio y a superar los 630 puntos a principios de mes, según se había informado.\n\nEl ministro de Economía, Luis Caputo, había señalado la semana pasada desde París, en el marco del Argentina Week, que parte de la volatilidad previa respondía a un anticipado clima electoral.",
+      "guion": "Los bonos y acciones argentinas suben y el riesgo país cae",
+      "seccion": "Economía",
+      "medios": [
+        "Clarín",
+        "iProUP"
+      ],
+      "enlace": "https://www.clarin.com/economia/medio-euforia-mercados-brasil-suben-bonos-acciones-argentinas-baja-riesgo-pais_0_RVMQHQnSsL.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T14:25:38.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T15:52:36.644Z",
+      "relevancia": 55,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El indicador de JP Morgan desciende a 614 puntos, según Clarín.",
+        "Las acciones argentinas avanzan hasta un 7% en la jornada financiera.",
+        "El ministro de Economía, Luis Caputo, declaró la semana pasada en París que la volatilidad respondía al clima electoral."
+      ],
+      "noConfirmado": [
+        "No se informaron detalles sobre el impacto sectorial específico en el plano local."
+      ],
+      "textoRedes": "Los bonos y acciones argentinas suben con fuerza y el indicador de JP Morgan baja a 614 puntos tras el impacto financiero de los mercados de Brasil.",
+      "etiquetas": [
+        "riesgo pais",
+        "acciones argentinas",
+        "economia",
+        "mercados",
+        "jp morgan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/medio-euforia-mercados-brasil-suben-bonos-acciones-argentinas-baja-riesgo-pais_0_RVMQHQnSsL.html",
+          "fecha": "2026-10-05T14:25:38.000Z",
+          "oficial": false,
+          "aporte": "Detalló la caída del riesgo país a 614 puntos, las subas de las acciones argentinas y las declaraciones del ministro Luis Caputo."
+        },
+        {
+          "medio": "iProUP",
+          "enlace": "https://www.iproup.com/finanzas/72068-efecto-brasil-en-argentina-cae-el-riesgo-pais-y-suben-bonos-y-merval",
+          "fecha": "2026-10-05T14:39:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional sobre el hecho."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "34t457",
+          "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
+          "fecha": "2026-10-01T16:53:08.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
+        },
+        {
+          "id": "1b57l0z",
+          "titulo": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
+          "fecha": "2026-09-27T03:01:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-baja-a-604-puntos-tras-el-repunte-de-los-bonos-1b57l0z"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "los-bonos-y-acciones-argentinas-suben-y-el-riesgo-pais-cae",
+      "foto": {
+        "archivo": "fotos-notas/yqqsx9.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
+      "id": "1tprlf6",
+      "titulo": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
+      "copete": "La entidad financiera oficial presentó una herramienta comercial con bonificaciones en créditos y reintegros para sostener plantillas de personal y promover el empleo formal.",
+      "cuerpo": "El Banco Nación presentó una propuesta comercial destinada a PyMEs y grandes compañías que utilicen el Fondo de Asistencia Laboral, una herramienta impulsada por el Gobierno Nacional para promover el empleo formal. La iniciativa incluye un reintegro total de la comisión de administración del fondo hasta el 31 de diciembre de 2027, según informaron las fuentes.\n\nPara los empleados que acrediten sus haberes en el banco, el esquema contempla una rebaja de 5 puntos porcentuales en préstamos personales Plan Sueldo.",
+      "guion": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
+      "seccion": "Agro",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "Agrositio"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T14:24:39.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T15:52:36.644Z",
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Banco Nación lanzó beneficios para empresas que utilicen el Fondo de Asistencia Laboral.",
+        "Incluye el reintegro total de la comisión de administración hasta diciembre de 2027.",
+        "Ofrece tasas preferenciales y bonificaciones en préstamos personales para empleados."
+      ],
+      "seSabe": [
+        "El Banco Nación lanzó una propuesta comercial vinculada al Fondo de Asistencia Laboral.",
+        "Hay un reintegro del 100 por ciento en la comisión de administración hasta el 31 de diciembre de 2027.",
+        "Se otorgan bonificaciones de hasta 3 puntos en financiamiento y de 5 puntos en préstamos personales Plan Sueldo."
+      ],
+      "textoRedes": "El Banco Nación lanzó una propuesta comercial con beneficios en créditos y reintegros para las empresas que implementen el Fondo de Asistencia Laboral.",
+      "etiquetas": [
+        "Banco Nacion",
+        "FAL",
+        "PyMEs",
+        "empleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
+          "fecha": "2026-10-05T14:24:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló los porcentajes de bonificación en créditos, préstamos y el reintegro de la comisión de administración."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-banco-nacion-ofrece-financiamiento-preferencial-y-beneficios-a-empresas-que-lo-elijan-para-el-fal_a6ac3b51befa9665a6c200aae",
+          "fecha": "2026-10-05T14:32:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el lanzamiento de la propuesta comercial para PyMEs y grandes compañías."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "2ctmyu",
+          "titulo": "Banco Nación y ROSGAN organizan el Gran Remate Aniversario",
+          "fecha": "2026-10-02T14:06:41.000Z",
+          "ruta": "/nota/banco-nacion-y-rosgan-organizan-el-gran-remate-aniversario-2ctmyu"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-banco-nacion-lanza-beneficios-financieros-para-empresas-que",
+      "foto": {
+        "archivo": "fotos-notas/1tprlf6.jpg",
+        "credito": "Foto: Agrositio"
+      }
+    },
+    {
       "id": "wb8pre",
       "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
       "copete": "La carrera de la Facultad de Ciencias Agrarias obtuvo una nueva certificación de la CONEAU por seis años. El proceso evaluó planes de estudio, infraestructura y el desempeño de toda la comunidad universitaria.",
@@ -153,8 +375,8 @@
       "seccion": "Política",
       "medios": [
         "El Eco de Tandil",
-        "Agencia DIB",
-        "La Verdad"
+        "La Verdad",
+        "Agencia DIB"
       ],
       "enlace": "https://dib.com.ar/politica/carlos-bianco-si-queres-ganar-una-eleccion-la-pureza-ideologica-no-alcanza-n56246",
       "teniaImagenLaFuente": true,
@@ -237,102 +459,6 @@
       "slug": "carlos-bianco-pide-ampliar-el-espacio-politico-para-las-elecciones"
     },
     {
-      "id": "504ym0",
-      "titulo": "Milei reúne al Gabinete para ordenar la agenda legislativa",
-      "copete": "El presidente encabeza el encuentro desde las 10 en la Casa Rosada. Analiza el viaje a París y el escenario electoral en Brasil.",
-      "cuerpo": "El presidente Javier Milei encabeza este lunes una reunión de Gabinete en el Salón Eva Perón de la Casa Rosada. El mandatario llegó a las 9.18 tras su regreso de París, donde participó de la Argentina Week, y comparte los detalles de ese viaje con sus funcionarios.\n\nEl encuentro pone el foco en la agenda legislativa para lo que resta del año, con la reforma electoral para eliminar las primarias y el Presupuesto 2027 como prioridades. Además, el jefe de Gabinete, Diego Santilli, coordinará reuniones individuales con los trece gobernadores que participaron en actividades en Francia para conseguir respaldo parlamentario.\n\nLa administración libertaria analiza también el escenario regional tras el resultado de los comicios presidenciales en Brasil, donde Flávio Bolsonaro y Luiz Inácio Lula da Silva irán a un balotaje el 25 de octubre.",
-      "guion": "Milei reúne al Gabinete para ordenar la agenda legislativa",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "El Marplatense"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/tras-su-regreso-de-paris--milei-reune-al-gabinete-con-las-elecciones-de-brasil-y-la-agenda-legislativa-como-eje_a6ac392caefa9665a6c1b6701",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T13:45:30.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T14:31:15.507Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Milei lidera la reunión de Gabinete en la Casa Rosada.",
-        "El oficialismo debate la reforma electoral y el Presupuesto 2027.",
-        "El Gobierno analiza el balotaje presidencial en Brasil previsto para el 25 de octubre."
-      ],
-      "seSabe": [
-        "El presidente Javier Milei encabeza este lunes una reunión de Gabinete en el Salón Eva Perón.",
-        "El mandatario llegó a la Casa Rosada a las 9.18 tras su viaje a París.",
-        "El jefe de Gabinete Diego Santilli mantendrá encuentros individuales con trece gobernadores.",
-        "El balotaje en Brasil entre Flávio Bolsonaro y Luiz Inácio Lula da Silva será el 25 de octubre."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó si el presidente Javier Milei viajará a Brasil antes del balotaje."
-      ],
-      "textoRedes": "El presidente Javier Milei encabeza una reunión de Gabinete en la Casa Rosada para definir la agenda legislativa, la reforma electoral y analizar el escenario político tras las elecciones en Brasil.",
-      "etiquetas": [
-        "Javier Milei",
-        "Gabinete nacional",
-        "agenda legislativa",
-        "reforma electoral",
-        "Brasil"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/tras-su-regreso-de-paris--milei-reune-al-gabinete-con-las-elecciones-de-brasil-y-la-agenda-legislativa-como-eje_a6ac392caefa9665a6c1b6701",
-          "fecha": "2026-10-05T13:45:30.000Z",
-          "oficial": false,
-          "aporte": "Aportó los horarios de llegada del presidente, el lugar de la reunión de Gabinete y los detalles de la agenda legislativa."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/05/tras-el-triunfo-de-bolsonaro-en-brasil-milei-reune-al-gabinete-para-ordenar-la-agenda-legislativa-y-avanzar-con-la-reforma-electoral/",
-          "fecha": "2026-10-05T13:55:28.000Z",
-          "oficial": false,
-          "aporte": "Aportó información sobre el regreso de Javier Milei y los detalles compartidos sobre su viaje a París en la Argentina Week."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/milei-reune-al-gabinete-y-acelera-la-agenda-legislativa",
-          "fecha": "2026-10-05T14:30:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos sobre el resultado de la primera vuelta en Brasil y la fecha del balotaje presidencial."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1i07zda",
-          "titulo": "Milei sigue las elecciones en Brasil y respalda a Bolsonaro",
-          "fecha": "2026-10-04T12:32:17.978Z",
-          "ruta": "/nota/milei-sigue-las-elecciones-en-brasil-y-respalda-a-bolsonaro-1i07zda"
-        },
-        {
-          "id": "wobiyk",
-          "titulo": "Javier Milei celebra el triunfo electoral de Flávio Bolsonaro en Brasil",
-          "fecha": "2026-10-05T11:00:34.000Z",
-          "ruta": "/nota/javier-milei-celebra-el-triunfo-electoral-de-flavio-bolsonaro-en-wobiyk"
-        },
-        {
-          "id": "1pq0gh4",
-          "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "ruta": "/nota/karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca-1pq0gh4"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "milei-reune-al-gabinete-para-ordenar-la-agenda-legislativa"
-    },
-    {
       "id": "d9vaq",
       "titulo": "La Provincia refuerza el Fondo Municipal y Balcarce espera fondos",
       "copete": "El Gobierno bonaerense destinó $1.368 millones para reforzar el FEFIM. Balcarce figura entre los distritos que podrían recibir una nueva transferencia según el Coeficiente Único de Distribución.",
@@ -405,10 +531,11 @@
       "guion": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
       "seccion": "Argentina",
       "medios": [
-        "Infobae",
         "Ámbito",
+        "Infobae",
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
+        "El Día",
         "El Marplatense"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/05/malvinas-caen-casi-20-las-acciones-de-la-petrolera-que-busca-extraer-crudo-con-el-proyecto-sea-lion/",
@@ -641,11 +768,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44992-ticiano-conto-su-historia-y-encontro-una-oportunidad-fue-recibido-por-reino-y-sera-incorporado-a-un-programa-de-emprendedores/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T13:01:23.078Z",
       "sinFecha": true,
       "visto": "2026-10-05T13:01:23.078Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -704,15 +831,15 @@
       "guion": "Chascomús reúne a los fanáticos de Chevrolet en su vigésimo encuentro",
       "seccion": "Automovilismo",
       "medios": [
-        "Agencia DIB",
-        "La Verdad"
+        "La Verdad",
+        "Agencia DIB"
       ],
       "enlace": "https://dib.com.ar/adn-bonaerense/chascomus-ch-chevrolet-encuentro-fierreros-orillas-la-laguna-n56241",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T12:54:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:31:24.148Z",
-      "relevancia": 53,
+      "relevancia": 57,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -832,82 +959,6 @@
       }
     },
     {
-      "id": "173ttfz",
-      "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
-      "copete": "Las categorías zonales volverán a correr el fin de semana en el autódromo local. Utilizarán una traza reducida que incluye sectores históricos y las nuevas modificaciones.",
-      "cuerpo": "El automovilismo regional regresa al autódromo Juan Manuel Fangio durante el próximo fin de semana con la presentación de las categorías del Zonal del Atlántico, según informó un medio local. Los competidores transitarán por un trazado reducido que incluirá la tradicional curva La Olla, el paso por debajo del puente y la curva 6 modificada, para luego ingresar directamente a la variante Juan Manuel Bordeu sin pasar por la chicana del circuito largo.\n\nEsta nueva competencia llega luego de la reinauguración del escenario balcarceño y del paso del TC Pick Up a fines de septiembre, según se había informado.",
-      "guion": "El Zonal del Atlántico compite en el circuito chico del Fangio",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Radio Gabal (FM 104.1)",
-        "Acción 5 (Balcarce)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/el-zonal-del-atlantico-correra-en-el-circuito-chico-del-fangio-y-utilizara-la-variante-juan-manuel-bordeu",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T12:12:09.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T12:31:16.062Z",
-      "relevancia": 80,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se especificaron los horarios de las pruebas ni el valor de las entradas para el público"
-      ],
-      "textoRedes": "El Zonal del Atlántico volverá a correr el próximo fin de semana en el autódromo Juan Manuel Fangio con una configuración reducida que incluirá sectores históricos y la variante Juan Manuel Bordeu.",
-      "etiquetas": [
-        "automovilismo",
-        "Zonal del Atlántico",
-        "autódromo Juan Manuel Fangio",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/el-zonal-del-atlantico-correra-en-el-circuito-chico-del-fangio-y-utilizara-la-variante-juan-manuel-bordeu",
-          "fecha": "2026-10-05T12:12:09.000Z",
-          "oficial": false,
-          "aporte": "Detalló el circuito reducido que utilizará el Zonal del Atlántico en el autódromo Juan Manuel Fangio"
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "lcvlqf",
-          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
-          "fecha": "2026-09-24T17:08:37.000Z",
-          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
-        },
-        {
-          "id": "1a2z04a",
-          "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
-          "fecha": "2026-09-30T22:43:24.000Z",
-          "ruta": "/nota/el-zonal-del-atlantico-regresa-al-autodromo-local-en-octubre-1a2z04a"
-        },
-        {
-          "id": "1qw83fy",
-          "titulo": "Solicitan datos sobre las autorizaciones del autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-30T16:29:33.000Z",
-          "ruta": "/nota/solicitan-datos-sobre-las-autorizaciones-del-autodromo-juan-manuel-1qw83fy"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-zonal-del-atlantico-compite-en-el-circuito-chico-del-fangio",
-      "foto": {
-        "archivo": "fotos-notas/173ttfz.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
       "id": "1ulp23j",
       "titulo": "Santiago Mangoni finaliza en el puesto veintiséis en San Nicolás",
       "copete": "El piloto local completó una nueva fecha del Turismo Carretera en el autódromo nicoleño a bordo de su Chevrolet. La competencia coronó a Ignacio Faín y ya quedó la mira puesta en la cita del 25 de octubre en Rosario.",
@@ -916,7 +967,21 @@
       "seccion": "Automovilismo",
       "medios": [
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Puntonueve (FM 100.9)",
+        "Diario La Vanguardia",
+        "Campeones",
+        "El Destape",
+        "Página/12",
+        "TyC Sports",
+        "El Día",
+        "El Marplatense",
+        "Solotc",
+        "Olé",
+        "Córdoba Competición",
+        "Clarín",
+        "Ecos Diarios (Necochea)",
+        "La Brújula 24",
+        "La Verdad"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/habra-que-trabajar-para-la-proxima-mangoni-y-el-balance-de-su-fecha-en-san-nicolas",
       "teniaImagenLaFuente": true,
@@ -974,6 +1039,7 @@
         "Perfil",
         "Página/12",
         "C5N",
+        "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -1158,6 +1224,7 @@
       "guion": "El Hospital Municipal registra problemas en sus líneas telefónicas",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -1167,7 +1234,7 @@
       "fecha": "2026-10-05T11:40:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T12:01:25.478Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1266,7 +1333,7 @@
       "fecha": "2026-10-05T11:31:40.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T14:31:15.507Z",
-      "relevancia": 39,
+      "relevancia": 43,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1316,6 +1383,107 @@
       "foto": {
         "archivo": "fotos-notas/1tivdmf.jpg",
         "credito": "Foto: Noticias Agropecuarias"
+      }
+    },
+    {
+      "id": "16q21ih",
+      "titulo": "Los premios Martín Fierro de la Música anuncian su primera gala",
+      "copete": "La entidad periodística de la televisión y la radiofonía nacional estrena una premiación dedicada a la industria discográfica. La ceremonia inaugural se realizará el miércoles 14 de octubre en el distrito porteño.",
+      "cuerpo": "La Asociación de Periodistas de la Televisión y la Radiofonía Argentinas dio a conocer el domingo 4 de octubre la nómina de nominados para la entrega inaugural de los premios Martín Fierro de la Música 2026. La ceremonia se realizará el miércoles 14 de octubre, desde las 19, en el complejo Tango Porteño de la Ciudad de Buenos Aires.\n\nLa entidad organizadora, presidida por Luis Ventura, reunirá a referentes de diferentes generaciones de la escena nacional. La conducción principal de la gala estará a cargo de Hernán Drago y Edith Hermida, mientras que Nara Ferragut, Daniel Gómez Rinaldi, El Polaco y Rocío Marengo recibirán a las figuras en la alfombra roja.\n\nEl encuentro contará con presentaciones musicales en vivo y homenajes a la trayectoria de distintos artistas. Entre los nominados que competirán en esta primera edición figuran Tini Stoessel, Lali Espósito, María Becerra, Cazzu, Fito Páez, Babasónicos y Tan Biónica, entre otros referentes de diversos géneros.",
+      "guion": "Los premios Martin Fierro de la Música anuncian su primera gala",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Minuto Uno",
+        "A24",
+        "C5N",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "La Tecla"
+      ],
+      "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T11:15:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T15:52:36.644Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Se conocieron los nominados a la primera edición de los premios.",
+        "La ceremonia inaugural será el miércoles 14 de octubre en Tango Porteño.",
+        "APTRA encabeza la organización del evento con la presidencia de Luis Ventura.",
+        "Hernán Drago y Edith Hermida estarán al frente de la conducción."
+      ],
+      "textoRedes": "APTRA dio a conocer los nominados para la primera edición de los premios Martín Fierro de la Música, que se celebrarán el próximo miércoles 14 de octubre en la Ciudad de Buenos Aires con la conducción de Hernán Drago y Edith Hermida.",
+      "etiquetas": [
+        "Martin Fierro de la Musica",
+        "premios",
+        "musica argentina",
+        "APTRA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
+          "fecha": "2026-10-05T11:15:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles completos de la ceremonia, nominados principales, autoridades de APTRA, conductores y ubicación."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/martin-fierro-musica-2026-uno-uno-la-lista-nominados-n6330133",
+          "fecha": "2026-10-05T14:13:00.000Z",
+          "oficial": false,
+          "aporte": "Anuncio general sobre la celebración de la primera edición y la presencia de figuras nacionales."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/ratingcero/martin-fierro-la-musica-2026-la-lista-completa-los-nominados-n250769",
+          "fecha": "2026-10-05T15:26:00.000Z",
+          "oficial": false,
+          "aporte": "Mención de María Becerra, Lali y Tini como las artistas con más nominaciones, además de shows y homenajes."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/martin-fierro-de-la-musica-2026-todos-los-artistas-que-competiran-en-la-primera-edicion/",
+          "fecha": "2026-10-05T15:03:00.000Z",
+          "oficial": false,
+          "aporte": "Información sobre la fecha de anuncio de nominados y el día de la ceremonia."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/diarioshow/farandula/martin-fierro-de-la-musica-2026-la-lista-completa-de-nominados/",
+          "fecha": "2026-10-05T14:30:32.000Z",
+          "oficial": false,
+          "aporte": "Confirmación del estreno de la edición dedicada exclusivamente a la música para el 14 de octubre."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/espectaculos/todos-los-nominados-a-los-martin-fierro-de-la-musica-2026_a6ac3a0b5efa9665a6c1d6dd5",
+          "fecha": "2026-10-05T13:05:00.000Z",
+          "oficial": false,
+          "aporte": "Datos sobre la entidad organizadora, APTRA, y la fecha de publicación de las nominaciones."
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170180-martin-fierro-de-la-musica-tini-lali-y-maria-becerra-encabezan-la-primera-gala",
+          "fecha": "2026-10-05T12:15:00.000Z",
+          "oficial": false,
+          "aporte": "Fuente registrada sin texto disponible."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "los-premios-martin-fierro-de-la-musica-anuncian-su-primera-gala",
+      "foto": {
+        "archivo": "fotos-notas/16q21ih.jpg",
+        "credito": "Foto: A24"
       }
     },
     {
@@ -1596,11 +1764,11 @@
       "seccion": "Argentina",
       "medios": [
         "El Cronista",
-        "La Nueva",
         "La Tecla",
         "InfoRegión",
         "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)"
+        "Mi8 (Canal 8 Mar del Plata)",
+        "La Nueva"
       ],
       "enlace": "https://www.cronista.com/internacionales/pedro-sanchez-adelanta-las-elecciones-en-espana-tras-el-fracaso-de-sus-leyes-para-regular-la-vivienda/",
       "teniaImagenLaFuente": true,
@@ -1692,10 +1860,9 @@
       "seccion": "Economía",
       "medios": [
         "Radio Gabal (FM 104.1)",
-        "El Eco de Tandil",
         "Ámbito",
-        "iProfesional",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
         "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/economia/arca-cambia-la-forma-presentar-el-impuesto-las-ganancias-cuando-sera-obligatorio-el-nuevo-sistema-n6330022",
@@ -1703,7 +1870,7 @@
       "fecha": "2026-10-05T08:25:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T12:31:16.062Z",
-      "relevancia": 80,
+      "relevancia": 76,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1828,9 +1995,9 @@
       "guion": "El capitán de Benín analiza el cruce contra la Selección",
       "seccion": "Fútbol",
       "medios": [
-        "Minuto Uno",
         "TN (Todo Noticias)",
         "A24",
+        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Bolavip Argentina"
@@ -1840,7 +2007,7 @@
       "fecha": "2026-10-05T03:32:28.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T12:31:16.062Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1921,6 +2088,7 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)",
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Acción 5 (Balcarce)"
@@ -2121,18 +2289,20 @@
       "guion": "Bomberos controlan un principio de incendio en un edificio",
       "seccion": "Policiales",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
         "El Diario Balcarce",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Municipalidad de Balcarce",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/principio-de-incendio-movilizo-dos.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-04T21:50:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T05:01:19.118Z",
-      "relevancia": 73,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2264,7 +2434,6 @@
       "guion": "Scott Bessent abre la puerta a un nuevo rescate financiero para la Argentina",
       "seccion": "Política",
       "medios": [
-        "El Eco de Tandil",
         "La Nación",
         "Ámbito",
         "Perfil",
@@ -2275,6 +2444,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "La Nueva",
         "C5N"
       ],
@@ -2384,6 +2554,7 @@
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
@@ -2393,8 +2564,7 @@
         "Agencia DIB",
         "Radio Mitre",
         "El Día",
-        "La Nueva",
-        "La Verdad"
+        "La Nueva"
       ],
       "enlace": "https://www.ambito.com/economia/las-ventas-minoristas-pyme-subieron-apenas-03-septiembre-y-acumulan-una-caida-del-21-anual-n6329896",
       "teniaImagenLaFuente": true,
@@ -2791,12 +2961,12 @@
       "guion": "Dibu Martínez revela su deseo de jugar en Mar del Plata",
       "seccion": "Fútbol",
       "medios": [
-        "Minuto Uno",
         "A24",
         "Ámbito",
         "C5N",
         "Noticias Argentinas (NA)",
-        "Doble Amarilla"
+        "Doble Amarilla",
+        "Minuto Uno"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/selecciones/dibu-martinez-hablo-del-legado-de-messi-y-confeso-donde-le-gustaria-jugar-en-argentina_a6ac25797aa20c9061099c717",
       "teniaImagenLaFuente": true,
@@ -2958,7 +3128,10 @@
       "guion": "La Provincia y las distribuidoras apelan el fallo que frenó las tarifas",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "InfoRegión",
+        "InfoGEI",
+        "El Día"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44987-kicillof-apelo-el-fallo-que-habia-frenado-los-aumentos-de-las-tarifas-electricas-en-la-provincia/",
       "teniaImagenLaFuente": true,
@@ -3024,10 +3197,9 @@
         "Olé",
         "Noticias Argentinas (NA)",
         "QZ Noticias (Mar del Plata)",
-        "Clarín",
-        "La Nueva",
         "0223 (Mar del Plata)",
-        "El Gráfico"
+        "Clarín",
+        "La Nueva"
       ],
       "enlace": "https://www.tycsports.com/seleccion-argentina/dibu-martinez-estuvo-en-el-tc-y-desafio-a-scaloni-a-una-carrera-id764328.html",
       "teniaImagenLaFuente": true,
@@ -3226,14 +3398,11 @@
         "Radio Mitre",
         "Diario La Vanguardia",
         "LU9 Mar del Plata",
-        "Motorsport",
         "La Nación",
         "El Destape",
-        "Perfil",
         "Página/12",
         "A24",
         "TyC Sports",
-        "Canal 26",
         "Noticias Argentinas (NA)",
         "0221",
         "La Tecla",
@@ -3245,21 +3414,21 @@
         "Doble Amarilla",
         "Bolavip Argentina",
         "Olé",
-        "Minuto Uno",
+        "0223 (Mar del Plata)",
+        "Córdoba Competición",
         "Crónica",
         "Campeones",
         "El Día",
         "La Brújula 24",
-        "0223 (Mar del Plata)",
         "La Voz del Pueblo",
         "Ecos Diarios (Necochea)",
-        "Córdoba Competición",
         "La Verdad",
-        "La Capital (Rosario)",
+        "Perfil",
         "C5N",
         "La Nueva",
         "Clarín",
-        "El Gráfico"
+        "El Gráfico",
+        "Minuto Uno"
       ],
       "enlace": "https://radiomitre.cienradios.com/deportes/el-insolito-malentendido-entre-franco-colapinto-y-su-ingeniero-durante-la-bandera-roja-en-el-gp-de-bahrein/",
       "teniaImagenLaFuente": true,
@@ -3342,6 +3511,7 @@
       "guion": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia",
         "La Noticia 1"
       ],
@@ -3463,36 +3633,26 @@
     }
   ],
   "secciones": [
-    "Automovilismo",
     "Agro",
+    "Automovilismo",
+    "Economía",
     "Política",
     "Argentina",
     "Balcarce",
-    "Economía",
+    "Cultura y agenda",
     "Policiales",
     "Fútbol",
     "Deportes"
   ],
-  "temas": [
-    {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
-      "cuantas": 2
-    },
-    {
-      "nombre": "Fangio",
-      "ranura": "fangio",
-      "cuantas": 2
-    }
-  ],
+  "temas": [],
   "clima": {
     "ahora": {
       "temp": 18,
-      "sensacion": 15,
+      "sensacion": 16,
       "humedad": 64,
-      "viento": 23,
+      "viento": 22,
       "rumbo": "NO",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Mayormente despejado",
       "esDeDia": true
     },
     "dias": [
@@ -3501,7 +3661,7 @@
         "dia": "lun",
         "max": 19,
         "min": 10,
-        "lluvia": 47,
+        "lluvia": 79,
         "codigo": 51,
         "viento": 24,
         "milimetros": 1,
@@ -3512,7 +3672,7 @@
         "dia": "mar",
         "max": 21,
         "min": 8,
-        "lluvia": 20,
+        "lluvia": 18,
         "codigo": 51,
         "viento": 14,
         "milimetros": 0,
@@ -3523,7 +3683,7 @@
         "dia": "mié",
         "max": 16,
         "min": 11,
-        "lluvia": 51,
+        "lluvia": 82,
         "codigo": 51,
         "viento": 21,
         "milimetros": 1,
@@ -3534,7 +3694,7 @@
         "dia": "jue",
         "max": 13,
         "min": 8,
-        "lluvia": 46,
+        "lluvia": 65,
         "codigo": 51,
         "viento": 25,
         "milimetros": 0,
@@ -3845,18 +4005,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "ytw2ea",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"nena\""
-    },
-    {
-      "id": "18wjidj",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "bgbapg",
       "titulo": null,
       "seccion": "Balcarce",
@@ -3887,5 +4035,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 4
 }

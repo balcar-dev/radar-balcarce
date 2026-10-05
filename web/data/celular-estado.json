@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T15:32:19.622Z",
- "portada": 42,
- "archivo": 911,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-05T15:53:35.875Z",
+ "portada": 44,
+ "archivo": 915,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-05T15:32:19.648Z",
+  "generado": "2026-10-05T15:53:35.902Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -139,14 +139,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "9lbni",
-      "titulo": "El capitán de Benín analiza el cruce contra la Selección",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "wb8pre",
       "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
       "seccion": "Agro"
+     },
+     {
+      "id": "bmbmep",
+      "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
+      "seccion": "Argentina"
      }
     ]
    },
@@ -157,17 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
      {
-      "id": "bmbmep",
-      "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
-      "seccion": "Argentina"
-     },
-     {
-      "id": "2umrmg",
-      "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
-      "seccion": "Economía"
+      "id": "9lbni",
+      "titulo": "El capitán de Benín analiza el cruce contra la Selección",
+      "seccion": "Fútbol"
      },
      {
       "id": "199raki",
@@ -178,6 +173,11 @@
       "id": "lomklr",
       "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
       "seccion": "Deportes"
+     },
+     {
+      "id": "e5jokd",
+      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -193,15 +193,14 @@
      "id": "173ttfz",
      "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
      "cuando": "2026-10-05T13:45:25.339Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "cn09w9",
      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
+     "cuando": "2026-10-05T15:34:17.868Z"
+    }
+   ],
+   "cola": [
     {
      "id": "wb8pre",
      "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
@@ -209,8 +208,8 @@
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-05T15:15:25.339Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-05T17:04:17.868Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
