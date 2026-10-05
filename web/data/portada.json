@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T06:31:33.721Z",
+  "generado": "2026-10-05T06:51:34.059Z",
   "notas": [
     {
       "id": "1u6ny2m",
@@ -1454,7 +1454,8 @@
         "TyC Sports",
         "Olé",
         "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Nueva",
+        "El Gráfico"
       ],
       "enlace": "https://www.tycsports.com/seleccion-argentina/dibu-martinez-estuvo-en-el-tc-y-desafio-a-scaloni-a-una-carrera-id764328.html",
       "teniaImagenLaFuente": true,
@@ -2658,6 +2659,85 @@
       }
     },
     {
+      "id": "12y59yp",
+      "titulo": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
+      "copete": "El presidente de la AFA replicó el ritual con un grupo de futbolistas en la previa del encuentro contra Burkina Faso en el Estadio Monumental.",
+      "cuerpo": "El presidente de la AFA, Claudio Tapia, compartió una reunión con Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez en la concentración albiceleste. El grupo tomó mates en la oficina mientras observaba por televisión el partido entre Barracas Central y Atlético Tucumán, en la antesala del segundo amistuso de la fecha FIFA.\n\nLa puesta en escena repite la cábala implementada días atrás en Córdoba antes del compromiso frente a Bolivia. La imagen ratifica la relevancia que adquirieron los cuatro jugadores dentro del vestuario como nueva columna vertebral del equipo que conduce Lionel Scaloni.\n\nLa Selección argentina se enfrenta el sábado a Burkina Faso en el Estadio Monumental para continuar con su rodaje futbolístico ante los simpatizantes.",
+      "guion": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Olé",
+        "El Día"
+      ],
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T22:30:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-04T02:34:42.599Z",
+      "relevancia": 64,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Claudio Tapia repitió la cábala con cuatro referentes del plantel en la concentración.",
+        "Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez participaron del ritual.",
+        "El seleccionado nacional juega este sábado un amistoso frente a Burkina Faso en el Monumental."
+      ],
+      "seSabe": [
+        "Claudio Tapia posó junto a Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez.",
+        "El grupo compartió mates y vio televisión en la concentración antes del partido.",
+        "La Selección argentina juega este sábado frente a Burkina Faso en el Estadio Monumental."
+      ],
+      "noConfirmado": [
+        "No se informaron otros detalles sobre las actividades previas del plantel en la concentración."
+      ],
+      "textoRedes": "Claudio Tapia replicó una cábala con cuatro referentes del plantel en la previa del partido de la Selección argentina ante Burkina Faso en el Monumental.",
+      "etiquetas": [
+        "Seleccion argentina",
+        "Claudio Tapia",
+        "AFA",
+        "Estadio Monumental",
+        "Burkina Faso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
+          "fecha": "2026-10-03T22:30:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló la reunión de Claudio Tapia y los cuatro futbolistas antes del partido contra Burkina Faso."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/seleccion-argentina/la-nueva-foto-cabala-de-la-seleccion-argentina-con-chiqui-tapia-id764266.html",
+          "fecha": "2026-10-03T23:36:43.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/foto-cabala-tapia-jugadores-seleccion-romero-martinez-fernandez-alvarez_0_lU6FCBJkGx.html",
+          "fecha": "2026-10-03T22:46:39.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "claudio-tapia-comparte-una-cabala-con-cuatro-referentes-de-la",
+      "foto": {
+        "archivo": "fotos-notas/12y59yp.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1xritdf",
       "titulo": "Colegiales recibe los Play Off del Torneo Clausura de Preliga",
       "copete": "El predio alberga el domingo la definición del fútbol infantil balcarceño. El ganador jugará la final contra Ferro Rojo.",
@@ -2848,11 +2928,11 @@
   "clima": {
     "ahora": {
       "temp": 11,
-      "sensacion": 8,
+      "sensacion": 7,
       "humedad": 70,
-      "viento": 13,
+      "viento": 14,
       "rumbo": "NO",
-      "cielo": "Nublado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": false
     },
     "dias": [
@@ -3215,12 +3295,6 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herido\""
-    },
-    {
-      "id": "131s1b3",
-      "titulo": "Kicillof se reunió con martilleros para avanzar en una…",
-      "seccion": "Política",
-      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
     },
     {
       "id": "1qu9thp",
