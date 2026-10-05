@@ -246,11 +246,6 @@
   "baja": true,
   "fuentes": 1
  },
- "15o4k9f": {
-  "intentos": 2,
-  "ultimo": "2026-09-28T13:31:08.881Z",
-  "motivo": "sin material"
- },
  "15rj0a4": {
   "intentos": 1,
   "ultimo": "2026-10-02T10:31:28.893Z",
@@ -1383,6 +1378,11 @@
   "ultimo": "2026-09-29T15:01:44.178Z",
   "motivo": "con cuerpo"
  },
+ "1ulp23j": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T13:31:26.775Z",
+  "motivo": "con cuerpo"
+ },
  "1uvmscz": {
   "intentos": 1,
   "ultimo": "2026-10-01T01:29:00.290Z",
@@ -2142,6 +2142,11 @@
   "ultimo": "2026-10-02T22:31:30.494Z",
   "motivo": "con cuerpo"
  },
+ "cn09w9": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T13:31:26.775Z",
+  "motivo": "con cuerpo"
+ },
  "cx4j4n": {
   "intentos": 1,
   "ultimo": "2026-09-28T21:32:25.756Z",
@@ -2151,6 +2156,11 @@
   "intentos": 1,
   "ultimo": "2026-10-02T16:31:25.113Z",
   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
+ "d9vaq": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T13:31:26.775Z",
+  "motivo": "con cuerpo"
  },
  "da6b6d": {
   "intentos": 1,
@@ -2544,9 +2554,9 @@
   "motivo": "con cuerpo"
  },
  "o0t9h2": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T13:03:48.838Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 15 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 120 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-05T13:31:26.775Z",
+  "motivo": "con cuerpo"
  },
  "o1vynh": {
   "intentos": 3,
@@ -2709,9 +2719,9 @@
   "motivo": "con cuerpo"
  },
  "r2tg83": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T13:03:48.838Z",
-  "motivo": "título o bajada: 2 problemas (antecedente, fecha): el copete usa \"lunes\", que sale de una nota anterior, como si fuera de hoy"
+  "intentos": 2,
+  "ultimo": "2026-10-05T13:31:26.775Z",
+  "motivo": "sin material"
  },
  "r3lz6t": {
   "intentos": 3,

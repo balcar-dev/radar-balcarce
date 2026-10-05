@@ -1388,12 +1388,16 @@
   "cuando": "2026-09-28T19:15:30.947Z"
  },
  "ujkaqh": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/ujkaqh.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-09-30T05:01:11.389Z",
-  "intentos": 3
+  "enlace": "https://www.lanacion.com.ar/economia/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-confirmado-nid17092026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/cual-el-monto-de-la-puam-de-SDWWUL7BWVHR7FLURGKFVZDO7I.png?auth=c32c3ff4253063d03860dbcf1404385211d147b6307e32bd55b9ad020b6b359d&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto A muestra claramente a un jubilado con un bastón y billetes de pesos argentinos, ilustrando perfectamente el tema de la PUAM y jubilaciones, sin marcas de agua ni menores.",
+  "cuando": "2026-10-05T13:31:57.737Z"
  },
  "17pc5cx": {
   "archivo": "fotos-notas/17pc5cx.webp",
@@ -5537,16 +5541,16 @@
   "fuentes": 2
  },
  "3cr087": {
-  "archivo": "fotos-notas/3cr087.jpg",
   "medio": "El Diario Balcarce",
-  "credito": "Foto: El Diario Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "Rocío Lemmo gana el campeonato de Zona Centro de longcasting y clasifica al Nacional",
   "enlace": "https://eldiariobalcarce.com.ar/rocio-lemmo-campeona-de-zona-centro-y-clasificada-al-nacional-de-longcasting-412",
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-02-20-21-19Rocío_Lemmo.jpg",
   "razon": "La foto tiene buena calidad, muestra claramente a la deportista con los trofeos y no tiene marcas de agua ni menores de edad.",
-  "cuando": "2026-10-02T21:01:55.022Z"
+  "cuando": "2026-10-02T21:01:55.022Z",
+  "intentado": true,
+  "borrada": true
  },
  "vguosy": {
   "medio": "Ámbito",
@@ -6931,16 +6935,16 @@
   "fuentes": 1
  },
  "1d4do2p": {
-  "archivo": "fotos-notas/1d4do2p.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "El capitán de Benín acusa a los futbolistas sudamericanos",
   "enlace": "https://www.lanueva.com/nota/2026-10-5-7-55-0-el-capitan-de-benin-acuso-a-los-futbolistas-sudamericanos-de-provocadores-en-la-previa-de-la-despedida-de-messi",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791197995752.jpg?&cw=600&ch=365",
   "razon": "La foto B es la única sin marca de agua del medio.",
-  "cuando": "2026-10-05T11:32:53.389Z"
+  "cuando": "2026-10-05T11:32:53.389Z",
+  "intentado": true,
+  "borrada": true
  },
  "1ni344u": {
   "archivo": "fotos-notas/1ni344u.jpg",
@@ -7067,5 +7071,53 @@
   "imagenOriginal": "https://www.cronista.com/resizer/v2/IJDRLQSPZBHWZOH2QPZQ3ABBYY.png?auth=24e1134d64a90a36b0d481b19098fb179d79593ec9d16783dfa9050a9b0b7ec1&height=630&width=1200&quality=70&smart=true",
   "razon": "Tiene excelente nitidez, encuadre limpio sin gente alrededor y sin marcas de agua ni menores.",
   "cuando": "2026-10-05T13:06:12.755Z"
+ },
+ "d9vaq": {
+  "archivo": "fotos-notas/d9vaq.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Provincia refuerza el Fondo Municipal y Balcarce espera fondos",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44995-balcarce-podria-verse-beneficiado-por-una-nueva-transferencia-del-fefim-a-los-municipios-bonaerenses/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65949.png",
+  "razon": "Es la única foto disponible, tiene buena nitidez, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-05T13:31:57.737Z"
+ },
+ "cn09w9": {
+  "archivo": "fotos-notas/cn09w9.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
+  "enlace": "https://balcarce.gob.ar/2026/10/05/solo-por-2-meses/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2025/11/ARBAL-INFORMA-.jpg",
+  "razon": "Es la única opción disponible, cuenta con buena calidad y no tiene marcas de agua ni menores.",
+  "cuando": "2026-10-05T13:31:57.737Z"
+ },
+ "1ulp23j": {
+  "archivo": "fotos-notas/1ulp23j.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Santiago Mangoni finaliza en el puesto veintiséis en San Nicolás",
+  "enlace": "https://www.radiogabal.com.ar/index.php/deportes/habra-que-trabajar-para-la-proxima-mangoni-y-el-balance-de-su-fecha-en-san-nicolas",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/mangoni%20tc%20san%20nivolas.jpg",
+  "razon": "Es la única foto disponible, cuenta con buen encuadre y nitidez del auto, y no presenta marcas de medios ni menores.",
+  "cuando": "2026-10-05T13:31:57.737Z"
+ },
+ "o0t9h2": {
+  "archivo": "fotos-notas/o0t9h2.jpg",
+  "medio": "La Tecla",
+  "credito": "Foto: La Tecla",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Oficializan la designación de Gabriel Felizia en Mar del Plata",
+  "enlace": "https://www.lateclamardelplata.com.ar/66590-bahia-bristol-se-oficializo-a-felizia-al-frente-de-la-nueva-unidad",
+  "imagenOriginal": "https://lateclamdq-repos-dw6.aplinews.com/archivos/noticias/fotografias/94481_3.jpg",
+  "razon": "La foto A muestra claramente al funcionario designado, Gabriel Felizia, en el lugar de los hechos y sin marcas de agua ni menores.",
+  "cuando": "2026-10-05T13:31:57.737Z"
  }
 }

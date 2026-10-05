@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-05T13:07:15.640Z",
+ "generado": "2026-10-05T13:32:26.682Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1kia0yd",
-   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
-   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-05T11:59:56.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
-     "fecha": "2026-10-05T11:59:56.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo corto (58 palabras)",
-   "maximo": 3
-  },
   {
    "id": "r2tg83",
    "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
@@ -32,35 +15,8 @@
      "fecha": "2026-10-05T12:45:56.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (antecedente, fecha): el copete usa \"lunes\", que sale de una nota anterior, como si fuera de hoy",
-   "maximo": 3
-  },
-  {
-   "id": "o0t9h2",
-   "titulo": "Bahía Bristol: se oficializó a Felizia al frente d",
-   "copete": "La designación de Gabriel Felizia al frente de la Unidad de Coordinación Bahía Bristol ya había sido anunciada, pero recién quedó oficializada con su publicación en el Boletín Oficial de la provincia de Buenos Aires. La medida fue formalizada por el Ministerio de Gobierno…",
-   "seccion": "Política",
-   "fecha": "2026-10-05T11:29:00.000Z",
-   "fuentes": [
-    {
-     "medio": "La Tecla",
-     "enlace": "https://www.lateclamardelplata.com.ar/66590-bahia-bristol-se-oficializo-a-felizia-al-frente-de-la-nueva-unidad",
-     "fecha": "2026-10-05T11:29:00.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/politica/mar-del-plata-designaron-al-titular-la-unidad-coordinacion-bahia-bristol-n56243",
-     "fecha": "2026-10-05T12:40:58.000Z"
-    },
-    {
-     "medio": "Mi8 (Canal 8 Mar del Plata)",
-     "enlace": "https://mi8.com.ar/oficializan-la-designacion-de-gabriel-felizia-al-frente-de-la-unidad-bahia-bristol-con-cago-de-director-provincial/",
-     "fecha": "2026-10-05T12:50:42.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 15 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 120 palabras",
+   "intentos": 2,
+   "motivo": "sin material",
    "maximo": 3
   }
  ]

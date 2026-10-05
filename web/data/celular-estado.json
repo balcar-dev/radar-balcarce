@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T13:07:15.640Z",
- "portada": 32,
- "archivo": 896,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-05T13:32:26.682Z",
+ "portada": 35,
+ "archivo": 899,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-05T13:07:15.667Z",
+  "generado": "2026-10-05T13:32:26.700Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-05T13:06:26.103Z"
    },
    {
     "nombre": "participa-noticias",
@@ -94,9 +94,14 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 51,
+    "salio": "2026-10-05T13:06:26.103Z",
+    "segundos": null,
     "notas": [
+     {
+      "id": "1ni344u",
+      "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
+      "seccion": "Balcarce"
+     },
      {
       "id": "c1nalz",
       "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
@@ -108,14 +113,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1d4do2p",
-      "titulo": "El capitán de Benín acusa a los futbolistas sudamericanos",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "2umrmg",
-      "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
-      "seccion": "Economía"
+      "id": "r3lz6t",
+      "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -129,19 +129,19 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "1ni344u",
-      "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-      "seccion": "Balcarce"
+      "id": "2umrmg",
+      "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
+      "seccion": "Economía"
+     },
+     {
+      "id": "9lbni",
+      "titulo": "El capitán de Benín analiza el cruce contra la Selección",
+      "seccion": "Fútbol"
      },
      {
       "id": "199raki",
       "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "r3lz6t",
-      "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
-      "seccion": "Deportes"
      },
      {
       "id": "lomklr",
@@ -157,8 +157,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 39,
+    "notas": [
+     {
+      "id": "cn09w9",
+      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "e5jokd",
+      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -180,6 +191,12 @@
      "id": "r3lz6t",
      "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "cn09w9",
+     "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
