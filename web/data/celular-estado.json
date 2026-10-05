@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T12:32:17.605Z",
- "portada": 31,
- "archivo": 892,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-05T13:07:15.640Z",
+ "portada": 32,
+ "archivo": 896,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T12:32:17.629Z",
+  "generado": "2026-10-05T13:07:15.667Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -93,15 +93,10 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 51,
     "notas": [
-     {
-      "id": "1ni344u",
-      "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-      "seccion": "Balcarce"
-     },
      {
       "id": "c1nalz",
       "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
@@ -113,9 +108,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "r3lz6t",
-      "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
-      "seccion": "Deportes"
+      "id": "1d4do2p",
+      "titulo": "El capitán de Benín acusa a los futbolistas sudamericanos",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "2umrmg",
+      "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
+      "seccion": "Economía"
      }
     ]
    },
@@ -126,17 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "1ni344u",
+      "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
+      "seccion": "Balcarce"
+     },
      {
       "id": "199raki",
       "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",
       "seccion": "Balcarce"
      },
      {
-      "id": "vqv317",
-      "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
-      "seccion": "Balcarce"
+      "id": "r3lz6t",
+      "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
+      "seccion": "Deportes"
      },
      {
       "id": "lomklr",
@@ -169,12 +174,6 @@
      "id": "173ttfz",
      "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
      "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "vqv317",
-     "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
-     "seccion": "Balcarce",
      "marcada": false
     },
     {
