@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T05:01:36.095Z",
+ "generado": "2026-10-05T05:31:35.465Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -17,28 +17,6 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 2 problemas (nombre): el cuerpo nombra a \"radio\" y la fuente no; sin esas oraciones quedan 66 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "zdjcx4",
-   "titulo": "Ni Colombia, Argentina ni Chile: las dos únicas economías de Latinoamérica que superan la riqueza de Elon Musk",
-   "copete": "La fortuna de Elon Musk supera el tamaño de las economías de Colombia, Argentina, Chile y otros países de América Latina; solo Brasil y México registran un producto interno bruto superior a su patrimonio . La comparación expone la dimensión alcanzada por el empresario, cuya…",
-   "seccion": "Tecnología",
-   "fecha": "2026-10-04T17:06:56.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/tecno/2026/10/04/ni-colombia-argentina-ni-chile-las-dos-unicas-economias-de-latinoamerica-que-superan-la-riqueza-de-elon-musk/",
-     "fecha": "2026-10-04T17:06:56.000Z"
-    },
-    {
-     "medio": "FayerWayer",
-     "enlace": "https://www.fayerwayer.com/internet/2026/10/04/dos-naciones-de-latinoamerica-superan-en-riqueza-a-elon-musk-adivinas-cuales-son/",
-     "fecha": "2026-10-04T17:54:21.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   }
  ]
