@@ -1,6 +1,68 @@
 {
-  "generado": "2026-10-05T04:01:42.286Z",
+  "generado": "2026-10-05T04:31:28.834Z",
   "notas": [
+    {
+      "id": "1u6ny2m",
+      "titulo": "Ladrones roban herramientas de un local de repuestos",
+      "copete": "Delincuentes rompieron un vidrio para entrar a un comercio de la calle Chacabuco. La activación de la alarma frustró el robo mayor, pero alcanzaron a llevarse herramientas.",
+      "cuerpo": "Según informó una fuente consultada, al menos un delincuente rompió un vidrio y logró ingresar al establecimiento perteneciente a Pichi Salvio.\n\nLa activación del sistema de alarma obligó a los responsables a escapar rápidamente del lugar. Antes de la huida, habrían alcanzado a sustraer algunas herramientas del interior.\n\nPersonal policial concurrió al sitio para realizar las primeras actuaciones. La investigación sigue en curso para reunir elementos que permitan identificar a los autores del episodio.",
+      "guion": "Ladrones roban herramientas de un local de repuestos",
+      "seccion": "Policiales",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44979-intentaron-robar-en-un-local-de-repuestos-pero-la-alarma-frustro-el-ingreso/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T04:01:14.961Z",
+      "sinFecha": true,
+      "visto": "2026-10-05T04:01:14.961Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ocurrió en un comercio de repuestos de calle Chacabuco, entre 11 y 13",
+        "Un delincuente rompió un vidrio y entró tras activarse la alarma",
+        "Sustrajeron herramientas del local perteneciente a Pichi Salvio",
+        "Personal policial intervino en el lugar y avanza la investigación"
+      ],
+      "seSabe": [
+        "El hecho se registró en un comercio de la calle Chacabuco, entre 11 y 13",
+        "El local pertenece a Pichi Salvio y se dedica a la venta de repuestos",
+        "Los delincuentes rompieron un vidrio para ingresar",
+        "La alarma se activó y los ladrones escaparon",
+        "Personal policial acudió al lugar para realizar actuaciones"
+      ],
+      "noConfirmado": [
+        "No se confirmó la cantidad exacta de personas que participaron del hecho",
+        "No se especificó la totalidad de los elementos sustraídos",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Delincuentes robaron herramientas de un local de repuestos en la calle Chacabuco tras romper un vidrio. La alarma se activó y la policía investiga el hecho.",
+      "etiquetas": [
+        "policiales",
+        "robo",
+        "repuestos",
+        "policia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44979-intentaron-robar-en-un-local-de-repuestos-pero-la-alarma-frustro-el-ingreso/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el robo en el local de repuestos, la ubicación, la intervención policial y los faltantes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "ladrones-roban-herramientas-de-un-local-de-repuestos"
+    },
     {
       "id": "1bsbkco",
       "titulo": "Gimnastas locales logran la clasificación a torneos nacionales y regionales",
@@ -60,68 +122,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "gimnastas-locales-logran-la-clasificacion-a-torneos-nacionales-y"
-    },
-    {
-      "id": "1u6ny2m",
-      "titulo": "Ladrones roban herramientas de un local de repuestos",
-      "copete": "Delincuentes rompieron un vidrio para entrar a un comercio de la calle Chacabuco. La activación de la alarma frustró el robo mayor, pero alcanzaron a llevarse herramientas.",
-      "cuerpo": "Según informó una fuente consultada, al menos un delincuente rompió un vidrio y logró ingresar al establecimiento perteneciente a Pichi Salvio.\n\nLa activación del sistema de alarma obligó a los responsables a escapar rápidamente del lugar. Antes de la huida, habrían alcanzado a sustraer algunas herramientas del interior.\n\nPersonal policial concurrió al sitio para realizar las primeras actuaciones. La investigación sigue en curso para reunir elementos que permitan identificar a los autores del episodio.",
-      "guion": "Ladrones roban herramientas de un local de repuestos",
-      "seccion": "Policiales",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44979-intentaron-robar-en-un-local-de-repuestos-pero-la-alarma-frustro-el-ingreso/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T01:41:23.600Z",
-      "sinFecha": true,
-      "visto": "2026-10-05T04:01:14.961Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ocurrió en un comercio de repuestos de calle Chacabuco, entre 11 y 13",
-        "Un delincuente rompió un vidrio y entró tras activarse la alarma",
-        "Sustrajeron herramientas del local perteneciente a Pichi Salvio",
-        "Personal policial intervino en el lugar y avanza la investigación"
-      ],
-      "seSabe": [
-        "El hecho se registró en un comercio de la calle Chacabuco, entre 11 y 13",
-        "El local pertenece a Pichi Salvio y se dedica a la venta de repuestos",
-        "Los delincuentes rompieron un vidrio para ingresar",
-        "La alarma se activó y los ladrones escaparon",
-        "Personal policial acudió al lugar para realizar actuaciones"
-      ],
-      "noConfirmado": [
-        "No se confirmó la cantidad exacta de personas que participaron del hecho",
-        "No se especificó la totalidad de los elementos sustraídos",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Delincuentes robaron herramientas de un local de repuestos en la calle Chacabuco tras romper un vidrio. La alarma se activó y la policía investiga el hecho.",
-      "etiquetas": [
-        "policiales",
-        "robo",
-        "repuestos",
-        "policia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44979-intentaron-robar-en-un-local-de-repuestos-pero-la-alarma-frustro-el-ingreso/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el robo en el local de repuestos, la ubicación, la intervención policial y los faltantes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "ladrones-roban-herramientas-de-un-local-de-repuestos"
     },
     {
       "id": "repaso20261004noche",
@@ -349,7 +349,7 @@
       "fecha": "2026-10-04T21:12:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -425,6 +425,7 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Nueva"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/el-secretario-del-tesoro-de-eeuu-abrio-la-puerta-a-un-nuevo-rescate-a-milei-podriamos-volver-a-nid04102026/",
@@ -650,7 +651,6 @@
         "TN (Todo Noticias)",
         "C5N",
         "Crónica",
-        "El Día",
         "La Nueva",
         "InfoRegión",
         "Punto Noticias",
@@ -1138,7 +1138,7 @@
       "fecha": "2026-10-04T16:03:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T19:31:15.414Z",
-      "relevancia": 81,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1249,7 +1249,7 @@
       "fecha": "2026-10-04T16:02:37.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T01:41:23.600Z",
-      "relevancia": 46,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1323,7 +1323,7 @@
       "fecha": "2026-10-04T14:03:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T19:31:15.414Z",
-      "relevancia": 82,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2638,6 +2638,85 @@
       }
     },
     {
+      "id": "12y59yp",
+      "titulo": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
+      "copete": "El presidente de la AFA replicó el ritual con un grupo de futbolistas en la previa del encuentro contra Burkina Faso en el Estadio Monumental.",
+      "cuerpo": "El presidente de la AFA, Claudio Tapia, compartió una reunión con Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez en la concentración albiceleste. El grupo tomó mates en la oficina mientras observaba por televisión el partido entre Barracas Central y Atlético Tucumán, en la antesala del segundo amistuso de la fecha FIFA.\n\nLa puesta en escena repite la cábala implementada días atrás en Córdoba antes del compromiso frente a Bolivia. La imagen ratifica la relevancia que adquirieron los cuatro jugadores dentro del vestuario como nueva columna vertebral del equipo que conduce Lionel Scaloni.\n\nLa Selección argentina se enfrenta el sábado a Burkina Faso en el Estadio Monumental para continuar con su rodaje futbolístico ante los simpatizantes.",
+      "guion": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Olé",
+        "El Día"
+      ],
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-03T22:30:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-04T02:34:42.599Z",
+      "relevancia": 64,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Claudio Tapia repitió la cábala con cuatro referentes del plantel en la concentración.",
+        "Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez participaron del ritual.",
+        "El seleccionado nacional juega este sábado un amistoso frente a Burkina Faso en el Monumental."
+      ],
+      "seSabe": [
+        "Claudio Tapia posó junto a Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez.",
+        "El grupo compartió mates y vio televisión en la concentración antes del partido.",
+        "La Selección argentina juega este sábado frente a Burkina Faso en el Estadio Monumental."
+      ],
+      "noConfirmado": [
+        "No se informaron otros detalles sobre las actividades previas del plantel en la concentración."
+      ],
+      "textoRedes": "Claudio Tapia replicó una cábala con cuatro referentes del plantel en la previa del partido de la Selección argentina ante Burkina Faso en el Monumental.",
+      "etiquetas": [
+        "Seleccion argentina",
+        "Claudio Tapia",
+        "AFA",
+        "Estadio Monumental",
+        "Burkina Faso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
+          "fecha": "2026-10-03T22:30:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló la reunión de Claudio Tapia y los cuatro futbolistas antes del partido contra Burkina Faso."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/seleccion-argentina/la-nueva-foto-cabala-de-la-seleccion-argentina-con-chiqui-tapia-id764266.html",
+          "fecha": "2026-10-03T23:36:43.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/foto-cabala-tapia-jugadores-seleccion-romero-martinez-fernandez-alvarez_0_lU6FCBJkGx.html",
+          "fecha": "2026-10-03T22:46:39.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "claudio-tapia-comparte-una-cabala-con-cuatro-referentes-de-la",
+      "foto": {
+        "archivo": "fotos-notas/12y59yp.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1xritdf",
       "titulo": "Colegiales recibe los Play Off del Torneo Clausura de Preliga",
       "copete": "El predio alberga el domingo la definición del fútbol infantil balcarceño. El ganador jugará la final contra Ferro Rojo.",
@@ -2738,7 +2817,7 @@
       "fecha": "2026-10-03T20:09:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T22:01:21.842Z",
-      "relevancia": 72,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2813,121 +2892,105 @@
       }
     },
     {
-      "id": "1y13u38",
-      "titulo": "Ignacio Fain logra la pole en San Nicolás y corta la sequia de Torino",
-      "copete": "El piloto santafesino se queda con el mejor tiempo en el autódromo bonaerense y le otorga a la marca su primera posición de privilegio con el modelo de nueva generación.",
-      "cuerpo": "Ignacio Fain domina la clasificación de la duodécima fecha del Turismo Carretera en el autódromo de San Nicolás y marca 1m26s047 a bordo de su Torino.\n\nOtto Fritzler se ubica segundo a 0s216 con un Mercedes-Benz, mientras que Julián Santero completa los tres primeros puestos a 0s232 con un BMW. La actividad continuará el domingo con la realización de las series clasificatorias a partir de las 10:55, sobre un recorrido de seis vueltas.",
-      "guion": "Ignacio Fain logra la pole en San Nicolas y corta la sequia de Torino",
-      "seccion": "Automovilismo",
+      "id": "tvh0ae",
+      "titulo": "Chec Bebel Doumbia lidera al juvenil plantel de Burkina Faso ante Argentina",
+      "copete": "El seleccionado africano enfrenta a la Argentina con un plantel de emergencia integrado mayormente por juveniles y con el mediocampista Chec Bebel Doumbia como única figura profesional en Europa.",
+      "cuerpo": "El mediocampista Chec Bebel Doumbia se perfila como la principal figura del seleccionado de Burkina Faso para disputar el amistoso frente a la Selección argentina en el estadio Monumental. El plantel africano llegó al país con una delegación alternativa compuesta mayormente por jugadores juveniles y futbolistas de la categoría Sub-23.\n\nLa conformación del equipo visitante sufrió modificaciones de último momento debido a un conflicto interno. Los deportistas se negaron a viajar tras enterarse de un itinerario de veinticinco horas en clase turista desde Marruecos y por desacuerdos vinculados al pago de premios.\n\nAnte la negativa de varios referentes, el entrenador Amir Abdou debió convocar juveniles para completar la lista. Doumbia, de dieciocho años, es la excepción al militar en el fútbol europeo, tras su paso por el Genoa italiano y su cesión actual al Rapid Bucarest de Rumania.",
+      "guion": "Chec Bebel Doumbia lidera al juvenil plantel de Burkina Faso ante Argentina",
+      "seccion": "Fútbol",
       "medios": [
-        "Clarín",
-        "El Eco de Tandil",
-        "Campeones",
-        "El Destape",
-        "Página/12",
-        "TyC Sports",
-        "La Brújula 24",
-        "La Verdad",
-        "Solotc",
-        "Olé",
-        "Ecos Diarios (Necochea)",
-        "Córdoba Competición"
+        "TN (Todo Noticias)",
+        "C5N",
+        "Radio Mitre",
+        "Canal 26"
       ],
-      "enlace": "https://campeones.com.ar/tc-en-san-nicolas-fain-logro-su-1a-pole-y-corto-una-sequia-de-3-anos-para-torino/",
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/quien-es-chec-bebel-doumbia-el-unico-futbolista-profesional-de-burkina-faso-que-viajo-para-el-amistoso-con-la-seleccion-argentina/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T19:57:35.000Z",
+      "fecha": "2026-10-03T20:06:36.000Z",
       "sinFecha": false,
-      "visto": "2026-10-03T21:31:16.516Z",
-      "relevancia": 70,
+      "visto": "2026-10-04T02:13:39.472Z",
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "Ignacio Fain marca el mejor tiempo en San Nicolás con 1m26s047.",
-        "Torino consigue su primera pole con el modelo de nueva generación.",
-        "Otto Fritzler y Julián Santero completan los tres primeros lugares."
+        "Chec Bebel Doumbia es la única figura con experiencia en Europa en la delegación visitante.",
+        "El plantel africano sufrió bajas y formó una delegación de emergencia con juveniles.",
+        "Los futbolistas se negaron inicialmente a viajar por demoras, un largo vuelo y reclamos de premios.",
+        "El encuentro amistoso se disputa en el estadio Monumental."
       ],
       "seSabe": [
-        "Ignacio Fain se queda con la pole position en la duodécima fecha del Turismo Carretera.",
-        "Torino logra su primera pole desde Posadas 2023.",
-        "Otto Fritzler finaliza segundo y Julián Santero tercero en la clasificación."
+        "Chec Bebel Doumbia tiene 18 años y se desempeña como mediocampista central.",
+        "El pase del juvenil pertenece al Genoa de Italia y juega a préstamo en el Rapid Bucarest de Rumania.",
+        "El plantel visitante afronta el encuentro con una delegación alternativa tras la negativa de varios profesionales a viajar."
       ],
+      "noConfirmado": [
+        "No se detalló la formación inicial que presentará el conjunto visitante para el encuentro.",
+        "No trascendieron los montos específicos del reclamo por premios realizado por los futbolistas."
+      ],
+      "textoRedes": "El mediocampista Chec Bebel Doumbia encabeza al juvenil plantel de Burkina Faso que enfrenta a la Selección argentina en el Monumental tras un viaje conflictivo.",
       "etiquetas": [
-        "Turismo Carretera",
-        "San Nicolás",
-        "Ignacio Fain",
-        "Torino"
+        "Seleccion Argentina",
+        "Burkina Faso",
+        "Chec Bebel Doumbia",
+        "Amistoso",
+        "Futbol"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Campeones",
-          "enlace": "https://campeones.com.ar/tc-en-san-nicolas-fain-logro-su-1a-pole-y-corto-una-sequia-de-3-anos-para-torino/",
-          "fecha": "2026-10-03T19:57:35.000Z",
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/quien-es-chec-bebel-doumbia-el-unico-futbolista-profesional-de-burkina-faso-que-viajo-para-el-amistoso-con-la-seleccion-argentina/",
+          "fecha": "2026-10-03T20:06:36.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó la biografía de Chec Bebel Doumbia y detalles del conflicto en el plantel."
         },
         {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/ignacio-fain-logro-su-primera-pole-en-el-turismo-carretera-en-san-nicolas-id764227.html",
-          "fecha": "2026-10-03T20:12:36.000Z",
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/tiene-18-anos-y-fue-dirigido-un-ex-boca-quien-es-el-unico-profesional-burkina-faso-la-seleccion-argentina-n250673",
+          "fecha": "2026-10-03T23:45:00.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó datos sobre la llegada de la delegación y la sede del partido en el Monumental."
         },
         {
-          "medio": "La Brújula 24",
-          "enlace": "https://www.labrujula24.com/notas/2026/10/03/turismo-carretera-en-san-nicolas-fain-logro-su-primera-pole-position-n523698/",
-          "fecha": "2026-10-03T21:02:20.000Z",
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/quien-es-chec-bebel-doumbia-el-unico-jugador-profesional-de-burkina-faso-que-enfrentara-a-la-seleccion-argentina/",
+          "fecha": "2026-10-03T23:50:24.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó la edad y la trayectoria europea del mediocampista."
         },
         {
-          "medio": "Solotc",
-          "enlace": "https://www.solotc.com.ar/tc-san-nicolas-fain-gano-clasificacion-fecha-12-2026/",
-          "fecha": "2026-10-03T19:57:56.000Z",
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/10/03/lo-dirigio-un-ex-boca-y-tiene-18-anos-quien-es-chec-bebel-doumbia-el-unico-futbolista-profesional-de-burkina-faso-que-jugara-contra-argentina/",
+          "fecha": "2026-10-03T23:07:52.000Z",
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/autos/tc-san-nicolas-logro-pole-segunda-fecha-copa-oro_0_OdeXCtPU1Q.html",
-          "fecha": "2026-10-03T20:04:32.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Aportó detalles sobre el caótico viaje y la convocatoria de jugadores juveniles de urgencia."
         }
       ],
       "antecedentes": [
         {
-          "id": "sty1jd",
-          "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
-          "fecha": "2026-10-02T16:31:18.468Z",
-          "ruta": "/nota/la-fiesta-nacional-del-postre-anticipa-su-vigesima-segunda-edicion-sty1jd"
+          "id": "ule632",
+          "titulo": "El organizador confirma el amistoso entre la Argentina y Burkina Faso",
+          "fecha": "2026-10-03T16:35:41.000Z",
+          "ruta": "/nota/el-organizador-confirma-el-amistoso-entre-la-argentina-y-burkina-faso-ule632"
         },
         {
-          "id": "1j4lf17",
-          "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
-          "fecha": "2026-10-02T01:39:50.000Z",
-          "ruta": "/nota/hugo-mazzacane-descarta-el-regreso-del-turismo-carretera-a-balcarce-1j4lf17"
-        },
-        {
-          "id": "x9mmdo",
-          "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
-          "fecha": "2026-10-01T01:38:10.000Z",
-          "ruta": "/nota/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad-x9mmdo"
+          "id": "1vuvl5f",
+          "titulo": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
+          "fecha": "2026-10-03T11:34:10.000Z",
+          "ruta": "/nota/la-seleccion-de-burkina-faso-llega-al-pais-con-suplentes-para-1vuvl5f"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
+        "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "ignacio-fain-logra-la-pole-en-san-nicolas-y-corta-la-sequia-de-torino",
+      "slug": "chec-bebel-doumbia-lidera-al-juvenil-plantel-de-burkina-faso-ante",
       "foto": {
-        "archivo": "fotos-notas/1y13u38.jpg",
-        "credito": "Foto: Campeones"
+        "archivo": "fotos-notas/tvh0ae.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2996,100 +3059,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261003tarde.jpg",
         "credito": "Fotos: Ámbito y Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "v0xov9",
-      "titulo": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
-      "copete": "El delantero de la Fiorentina convirtió en el 7-0 ante Burkina Faso en el Monumental y habló sobre la exigencia de los hinchas.",
-      "cuerpo": "El delantero Franco Mastantuono convirtió su primer tanto con la camiseta de la Selección Argentina mayor en la goleada por 7-0 frente a Burkina Faso en el Estadio Monumental. Tras el encuentro amistoso disputado por una nueva fecha FIFA, el atacante de la Fiorentina se refirió a las cuestionamientos recibidos en los últimos tiempos.\n\nAdemás, admitió que se generaron altas expectativas en torno a su figura tras su salto al fútbol europeo.",
-      "guion": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
-      "seccion": "Fútbol",
-      "medios": [
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Olé",
-        "C5N",
-        "Noticias Argentinas (NA)",
-        "Bolavip Argentina",
-        "Minuto Uno",
-        "El Gráfico",
-        "Clarín"
-      ],
-      "enlace": "https://www.ole.com.ar/seleccion/seleccion-argentina-franco-mastantuono_0_BFEYKYby4F.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T18:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T03:04:30.573Z",
-      "relevancia": 74,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Mastantuono convirtió su primer gol con la Selección mayor.",
-        "Fue en la victoria por 7 a 0 frente a Burkina Faso en el Monumental.",
-        "El delantero se refirió a las críticas y reconoció la exigencia de los hinchas."
-      ],
-      "seSabe": [
-        "La Selección Argentina goleó 7-0 a Burkina Faso en el Estadio Monumental.",
-        "Franco Mastantuono convirtió su primer tanto con la camiseta celeste y blanca.",
-        "El delantero de la Fiorentina reconoció que existen altas exigencias sobre su rendimiento."
-      ],
-      "textoRedes": "Franco Mastantuono convirtió su primer gol con la Selección Argentina en el 7-0 ante Burkina Faso y habló sobre la exigencia de los hinchas tras la goleada en el Monumental.",
-      "etiquetas": [
-        "Selección Argentina",
-        "Franco Mastantuono",
-        "Fútbol",
-        "Burkina Faso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/seleccion/seleccion-argentina-franco-mastantuono_0_BFEYKYby4F.html",
-          "fecha": "2026-10-04T02:18:18.000Z",
-          "oficial": false,
-          "aporte": "Detalló el debut goleador de Mastantuono y sus declaraciones tras el partido."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/la-reflexion-de-mastantuono-tras-su-primer-gol-con-la-seleccion-argentina-la-gente-es-muy-exigente-conmigo-id764283.html",
-          "fecha": "2026-10-04T02:35:41.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/deportes/franco-mastantuono-su-primer-gol-la-argentina-la-gente-es-bastante-exigente-conmigo-y-muchas-veces-son-duros-n250683",
-          "fecha": "2026-10-04T03:00:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el debut goleador y el descargo del jugador tras el encuentro."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/franco-mastantuono-sobre-las-criticas---la-gente-es-muy-exigente-conmigo-_a6ac1bcd1bd9cfb5d3711f4df",
-          "fecha": "2026-10-04T02:56:40.000Z",
-          "oficial": false,
-          "aporte": "Aportó el dato sobre el club europeo del jugador y sus declaraciones textuales."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/seleccion/franco-mastantuono-les-respondio-a-sus-criticos-tras-su-primer-gol-en-la-seleccion-argentina-son-duros-conmigo",
-          "fecha": "2026-10-04T02:20:40.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el partido se jugó en el Monumental y fue un amistoso de fecha FIFA."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "mastantuono-marca-su-primer-gol-con-la-seleccion-y-responde-a-las",
-      "foto": {
-        "archivo": "fotos-notas/v0xov9.jpg",
-        "credito": "Foto: Olé"
       }
     },
     {
@@ -3177,144 +3146,11 @@
         "archivo": "fotos-notas/ayjy85.jpg",
         "credito": "Foto: 0223 (Mar del Plata)"
       }
-    },
-    {
-      "id": "1t477sv",
-      "titulo": "El distrito registra un aumento del 32,5% en los robos durante el año pasado",
-      "copete": "El Sistema Nacional de Información Criminal difundió las estadísticas de delitos de 2025 en el distrito. Hubo subas en hurtos y lesiones, mientras bajaron los casos de drogas y abusos.",
-      "cuerpo": "Los robos en el distrito aumentaron un 32,5% durante 2025 al contabilizar 240 hechos frente a los 181 registrados en 2024, según los datos oficiales del Sistema Nacional de Información Criminal (SNIC). La tasa local se ubicó en 492,9 cada 100.000 habitantes, por debajo del promedio provincial.\n\nEl informe elaborado por el Ministerio de Seguridad de la Nación también registró subas en los hurtos, que pasaron de 273 a 289 casos, y en las lesiones dolosas, que treparon de 206 a 241 víctimas. En materia de homicidios dolosos, el distrito mantuvo un solo caso, igual que el período anterior.\n\nEn contrapartida, los delitos contra la integridad sexual disminuyeron un 45,7% hasta los 25 hechos, mientras que las causas vinculadas a la Ley de Estupefacientes cayeron un 36% con 375 registros. El documento oficial advierte sobre modificaciones metodológicas en la provincia que limitan las comparaciones estrictas.",
-      "guion": "El distrito registra un aumento del 32,5% en los robos durante el año pasado.",
-      "seccion": "Policiales",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44972-balcarce-los-robos-aumentaron-un-32-5-mientras-bajaron-los-delitos-sexuales-y-vinculados-a-drogas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T16:21:22.484Z",
-      "sinFecha": true,
-      "visto": "2026-10-03T16:21:22.484Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "Hernán",
-      "publicadaCuando": "2026-10-03T16:08:44.091Z",
-      "temas": [],
-      "como": "publicada",
-      "claves": [
-        "Los robos subieron un 32,5% y alcanzaron los 240 hechos en 2025.",
-        "Los hurtos y las lesiones dolosas también mostraron incrementos interanuales.",
-        "Los delitos sexuales bajaron un 45,7% y los casos de drogas cayeron un 36%.",
-        "El distrito mantuvo un solo homicidio doloso durante todo el año."
-      ],
-      "seSabe": [
-        "El distrito contabilizó 240 robos durante 2025 según el SNIC.",
-        "Los hurtos pasaron de 273 a 289 casos en el período analizado.",
-        "Las lesiones dolosas subieron de 206 a 241 víctimas.",
-        "Los delitos contra la integridad sexual bajaron de 46 a 25 hechos."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Sistema Nacional de Información Criminal difundió las estadísticas de delitos de 2025 en el distrito. Hubo subas en robos, hurtos y lesiones, mientras bajaron los casos de drogas y abusos sexuales.",
-      "etiquetas": [
-        "estadisticas",
-        "delitos",
-        "SNIC"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44972-balcarce-los-robos-aumentaron-un-32-5-mientras-bajaron-los-delitos-sexuales-y-vinculados-a-drogas/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó el informe completo del Sistema Nacional de Información Criminal con las estadísticas de delitos en el distrito durante 2025."
-        }
-      ],
-      "slug": "el-distrito-registra-un-aumento-del-32-5-en-los-robos-durante-el-ano",
-      "foto": {
-        "archivo": "fotos-notas/1t477sv.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "dfadrz",
-      "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialllllllllllllllllllllllllllllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
-      "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció el sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
-      "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "seccion": "Tecnología",
-      "medios": [
-        "Infobae",
-        "Ecos Diarios (Necochea)",
-        "Perfil",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.infobae.com/tecno/2026/10/03/lider-de-seguridad-de-openai-renuncia-y-critica-la-cultura-de-la-empresa-el-rumbo-actual-es-inaceptable/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T16:13:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T23:01:29.192Z",
-      "relevancia": 54,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "David Robinson dejó su puesto en OpenAI tras redactar informes de seguridad.",
-        "Cuestionó la cultura del sector y advirtió sobre riesgos en sistemas avanzados.",
-        "La empresa respondió que prioriza la protección y pausa entrenamientos si es necesario."
-      ],
-      "seSabe": [
-        "David Robinson renunció a su cargo en OpenAI.",
-        "Publicó sus críticas en la revista The Atlantic este sábado.",
-        "Trabajó en el equipo de Safety Systems de la compañía.",
-        "OpenAI afirmó que frena lanzamientos o entrenamientos cuando lo considera necesario."
-      ],
-      "textoRedes": "Renunció el jefe de informes de seguridad de OpenAI y criticó la cultura empresaria de la compañía. Advirtió que la industria de la inteligencia artificial no actúa con suficiente cuidado ante sistemas cada vez más avanzados.",
-      "etiquetas": [
-        "OpenAI",
-        "Inteligencia Artificial",
-        "Seguridad",
-        "Tecnología"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/tecno/2026/10/03/lider-de-seguridad-de-openai-renuncia-y-critica-la-cultura-de-la-empresa-el-rumbo-actual-es-inaceptable/",
-          "fecha": "2026-10-03T16:13:18.000Z",
-          "oficial": false,
-          "aporte": "Detalló los motivos de la renuncia de David Robinson, su paso por el área de seguridad entre 2024 y 2026 y las críticas publicadas en The Atlantic."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/renuncio-el-lider-de-seguridad-de-openai-y-advirtio-que-el-rumbo-actual-es-inaceptable",
-          "fecha": "2026-10-03T21:46:53.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el anuncio de la dimisión se produjo este sábado y aportó el enfoque sobre el manejo de la inteligencia artificial."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/tecnologia/renuncio-un-referente-de-seguridad-de-openai-y-cuestiono-el-rumbo-de-la-empresa-es-inaceptable.phtml",
-          "fecha": "2026-10-03T22:01:20.000Z",
-          "oficial": false,
-          "aporte": "Aportó que Robinson trabajó durante tres años y medio en la compañía a cargo de informes sobre modelos avanzados."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "renuncia-un-alto-responsable-de-seguridad-en-openai-por-desacuerdos",
-      "foto": {
-        "archivo": "fotos-notas/dfadrz.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
-    "Deportes",
     "Policiales",
+    "Deportes",
     "Automovilismo",
     "Economía",
     "Fútbol",
@@ -3324,19 +3160,13 @@
     "Tecnología",
     "Cultura y agenda"
   ],
-  "temas": [
-    {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
-      "cuantas": 2
-    }
-  ],
+  "temas": [],
   "clima": {
     "ahora": {
-      "temp": 11,
-      "sensacion": 8,
-      "humedad": 61,
-      "viento": 12,
+      "temp": 12,
+      "sensacion": 9,
+      "humedad": 60,
+      "viento": 11,
       "rumbo": "O",
       "cielo": "Parcialmente nublado",
       "esDeDia": false
@@ -3703,6 +3533,12 @@
       "motivo": "necesita ojo humano: \"herido\""
     },
     {
+      "id": "131s1b3",
+      "titulo": "Kicillof se reunió con martilleros para avanzar en una…",
+      "seccion": "Política",
+      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
+    },
+    {
       "id": "1qu9thp",
       "titulo": null,
       "seccion": "Policiales",
@@ -3719,6 +3555,12 @@
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "15m9ao1",
+      "titulo": "Tandil reclamó obras urgentes en la Ruta 226 en el…",
+      "seccion": "Argentina",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "1l8a3bd",
@@ -3749,12 +3591,6 @@
       "titulo": "Lula mostró una remera con la frase “Las Malvinas son…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "10oe8ed",
-      "titulo": "Angel de Brito apuntó contra Mario Pergolini tras faltar a…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "9vsgi3",

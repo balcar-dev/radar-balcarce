@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T04:01:42.286Z",
+ "generado": "2026-10-05T04:31:28.834Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -25,8 +25,8 @@
      "fecha": null
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 4 problemas (numero, antecedente, repite): el cuerpo dice 4 y la fuente no lo dice; sin esas oraciones quedan 51 palabras",
    "maximo": 3
   },
   {

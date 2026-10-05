@@ -254,6 +254,13 @@
   "ultimo": "2026-09-28T05:01:21.722Z",
   "motivo": "con cuerpo"
  },
+ "15m9ao1": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T04:31:15.998Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "15o4k9f": {
   "intentos": 2,
   "ultimo": "2026-09-28T13:31:08.881Z",
@@ -1528,11 +1535,6 @@
   "ultimo": "2026-09-30T00:01:19.604Z",
   "motivo": "con cuerpo"
  },
- "1w27oo6": {
-  "intentos": 3,
-  "ultimo": "2026-09-28T04:31:05.531Z",
-  "motivo": "con cuerpo"
- },
  "1w64u7p": {
   "intentos": 1,
   "ultimo": "2026-10-01T21:17:43.060Z",
@@ -1606,9 +1608,9 @@
   "motivo": "con cuerpo"
  },
  "1xzp9qx": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T04:01:26.099Z",
-  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-05T04:31:15.998Z",
+  "motivo": "cuerpo: 4 problemas (numero, antecedente, repite): el cuerpo dice 4 y la fuente no lo dice; sin esas oraciones quedan 51 palabras"
  },
  "1y13u38": {
   "intentos": 3,
