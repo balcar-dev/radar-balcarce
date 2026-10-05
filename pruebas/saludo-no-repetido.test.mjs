@@ -52,3 +52,29 @@ test('después del saludo, la pieza no repite Balcarce: clima, farmacia, agenda 
     }
   }
 });
+
+// ------------------------------------------------ todas las piezas con voz (5/10: "es para corregir en todos los audios")
+
+import { revisarTexto, guionUtiles, repiteBalcarceAlPrincipio } from '../redes/guiones.mjs';
+import { guionFeriado } from '../redes/feriado.mjs';
+import { guionParticipa } from '../redes/participa.mjs';
+
+test('la regla de no repetir Balcarce al principio la controla la revisión de texto de toda pieza con voz', () => {
+  assert.ok(repiteBalcarceAlPrincipio('Buen día, Balcarce. Así amanece Balcarce: 18 grados.'));
+  assert.ok(!repiteBalcarceAlPrincipio('Buen día, Balcarce. Así amanece: 18 grados. En Balcarce hace calor.'));
+  assert.ok(!repiteBalcarceAlPrincipio('Buen día. Te lo cuenta Radar Balcarce.'), '"Radar Balcarce" no cuenta');
+  assert.ok(revisarTexto('Buen día, Balcarce. Así amanece Balcarce: 18 grados. Radar Balcarce.', { tipo: 'voz', momento: 'manana' }).some((p) => /repite "Balcarce"/.test(p)));
+  assert.ok(!revisarTexto('Buen día, Balcarce. Así amanece: 18 grados. Radar Balcarce.', { tipo: 'voz', momento: 'manana' }).some((p) => /repite "Balcarce"/.test(p)));
+});
+
+test('útiles, feriado y participá tampoco repiten Balcarce al principio, ningún día', () => {
+  for (let d = 0; d < 90; d += 1) {
+    const fecha = new Date(Date.UTC(2026, 9, 1 + d, 15));
+    const casos = {
+      útiles: guionUtiles({ fecha, momento: 'manana' }),
+      feriado: guionFeriado({ nombre: 'Día de la Soberanía Nacional', alcance: 'nacional', fecha: '2026-11-23' }, { fecha, momento: 'manana' }),
+    };
+    for (const id of ['participa-noticias', 'participa-evento', 'participa-reclamos', 'participa-nota']) casos[id] = guionParticipa(id, { fecha, momento: 'manana' });
+    for (const [que, texto] of Object.entries(casos)) assert.ok(!repiteBalcarceAlPrincipio(texto), `${que} (${fecha.toISOString().slice(0, 10)}): ${texto.slice(0, 120)}`);
+  }
+});

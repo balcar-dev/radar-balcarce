@@ -59,3 +59,19 @@ export function espejosPendientes({ notas = [], libro = {}, ahora = new Date(), 
     .sort(([, a], [, b]) => new Date(a.cuando) - new Date(b.cuando))
     .map(([id]) => porId.get(id));
 }
+
+/**
+ * Las publicaciones de Instagram que están repetidas: el mismo texto dos veces o más en las últimas `horas`. Es lo que vigila el vigilante (5/10/2026: cuatro copias de
+ * un posteo). Devuelve [{ titulo, copias, ids }].
+ */
+export function copiasRepetidas(medias = [], { ahora = new Date(), horas = 48 } = {}) {
+  const desde = new Date(ahora).getTime() - horas * 3600e3;
+  const grupos = new Map();
+  for (const m of medias ?? []) {
+    const clave = llano(m?.caption).slice(0, 80);
+    if (clave.length < 20 || (m?.timestamp && Date.parse(m.timestamp) < desde)) continue;
+    if (!grupos.has(clave)) grupos.set(clave, []);
+    grupos.get(clave).push(m);
+  }
+  return [...grupos.values()].filter((g) => g.length > 1).map((g) => ({ titulo: String(g[0].caption).split('\n')[0].slice(0, 90), copias: g.length, ids: g.map((x) => x.id) }));
+}

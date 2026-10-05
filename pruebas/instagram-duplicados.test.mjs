@@ -107,3 +107,41 @@ test('el espejo de Facebook a Instagram mira si ya salió, antes de reintentar y
   assert.match(c, /Meta contestó con un error pero lo publicó/);
   assert.match(c, /esLimiteDeMeta\(e\.message, e\.codigo\)/);
 });
+
+// ------------------------------------------------ el vigilante busca las copias
+
+import { copiasRepetidas } from '../redes/espejo.mjs';
+import { evaluar } from '../redes/vigilar.mjs';
+
+test('se encuentran las copias repetidas en Instagram (mismo texto, últimas 48 horas) y no se confunden notas distintas', () => {
+  const medias = [
+    { id: '1', caption: PIE, timestamp: '2026-10-05T18:50:00+0000' },
+    { id: '2', caption: PIE, timestamp: '2026-10-05T19:20:00+0000' },
+    { id: '3', caption: `${PIE}\n#otro`, timestamp: '2026-10-05T19:50:00+0000' },
+    { id: '4', caption: 'Otra noticia distinta de Balcarce que salió una sola vez en el día', timestamp: '2026-10-05T17:00:00+0000' },
+    { id: '5', caption: PIE, timestamp: '2026-09-20T10:00:00+0000' },
+  ];
+  const r = copiasRepetidas(medias, { ahora: AHORA });
+  assert.equal(r.length, 1);
+  assert.equal(r[0].copias, 3);
+  assert.deepEqual(r[0].ids, ['1', '2', '3']);
+  assert.match(r[0].titulo, /^Vecinos reclaman soluciones/);
+  assert.deepEqual(copiasRepetidas([], { ahora: AHORA }), []);
+});
+
+test('el vigilante avisa grave si Instagram tiene copias repetidas, y dice qué hacer', () => {
+  const hace = (min) => new Date(AHORA.getTime() - min * 60000).toISOString();
+  const corrida = (min) => ({ createdAt: hace(min), conclusion: 'success', status: 'completed' });
+  const o = {
+    ahora: AHORA, web: { estado: 200, actualizado: hace(20) }, www: { redirige: true },
+    corridas: { 'Actualizar la web': [corrida(20)], Redes: [corrida(10)], 'Cloudflare Pages': [corrida(18)] },
+    libro: { instagram: {}, facebook: {} },
+    copiasEnInstagram: [{ titulo: 'Vecinos reclaman soluciones por el difícil tránsito', copias: 4, ids: ['1', '2', '3', '4'] }],
+  };
+  const p = evaluar(o).find((x) => x.clave === 'instagram-copias');
+  assert.ok(p, 'avisa');
+  assert.equal(p.nivel, 'alta');
+  assert.match(p.texto, /4 copias/);
+  assert.match(p.texto, /borrá las demás a mano/);
+  assert.equal(evaluar({ ...o, copiasEnInstagram: [] }).find((x) => x.clave === 'instagram-copias'), undefined);
+});

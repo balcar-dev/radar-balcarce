@@ -2,7 +2,7 @@
 
 *Este documento lo escribe `node ingesta/listar-fuentes.mjs` a partir del código. No se edita a mano: una prueba controla que diga lo mismo que `ingesta/fuentes.mjs` y `ingesta/fuentes-cruce.mjs`. Para sumar, sacar o apagar una fuente se toca una de esas dos listas y se vuelve a correr el programa.*
 
-Hoy: **235 feeds activos de 104 medios** (253 configurados).
+Hoy: **236 feeds activos de 105 medios** (254 configurados).
 
 ## Cómo se usan
 
@@ -19,11 +19,12 @@ Hoy: **235 feeds activos de 104 medios** (253 configurados).
 7. **"Sección fija"**: el feed ya viene separado por tema y se le cree (salvo Tecnología, que se confirma con el título).
 8. **"Cómo se lee"**: RSS o Atom (la lista de notas del medio), índice de noticias (el que cada sitio arma para Google, trae todo el día) o la página misma cuando el medio no tiene feed.
 
-## De Balcarce (12 feeds activos de 8 medios)
+## De Balcarce (13 feeds activos de 9 medios)
 
 | Medio | Feed | Ciudad | Cómo se lee | Sección fija | Peso | Oficial | Activa | Dirección |
 |---|---|---|---|---|---|---|---|---|
 | Acción 5 (Balcarce) | Acción 5 | Balcarce | RSS | — | 28 |  | sí | https://accion5.com/feed/ |
+| Ahora Balcarce | Ahora Balcarce | Balcarce | RSS | — | 28 |  | sí | http://ahorabalcarce.com.ar/feed/ |
 | Diario La Vanguardia | La Vanguardia | Balcarce | página (se lee el HTML) | — | 28 |  | sí | https://www.diariolavanguardia.com/ |
 | El Diario Balcarce | El Diario Balcarce | Balcarce | página (se lee el HTML) | — | 28 |  | sí | https://eldiariobalcarce.com.ar/ |
 | Infórmese Primero (FM 104.9) | Infórmese Primero | Balcarce | Atom | — | 30 |  | sí | http://feeds.feedburner.com/informeseprimero |

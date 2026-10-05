@@ -147,6 +147,18 @@ export const FUENTES = [
     nota: 'Medio de deportes de Balcarce (30/09). Es el que más escribe de la Liga Balcarceña: 16 de las 55 notas más recientes de Google Noticias sobre la Liga.',
   },
   {
+    id: 'ahorabalcarce',
+    nombre: 'Ahora Balcarce',
+    medio: 'Ahora Balcarce',
+    // Sólo anda con http: con https no contesta (probado el 5/10).
+    url: 'http://ahorabalcarce.com.ar/feed/',
+    tipo: 'rss',
+    alcance: 'local',
+    peso: 28,
+    temas: ['balcarce', 'local'],
+    nota: 'Portal digital de Balcarce (5/10, Hernán: "se están leyendo todos los medios conocidos de Balcarce?"). Feed de WordPress con notas de la semana. No estaba en la lista.',
+  },
+  {
     id: 'lavanguardia',
     nombre: 'La Vanguardia',
     medio: 'Diario La Vanguardia',

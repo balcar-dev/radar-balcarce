@@ -64,9 +64,9 @@ test('las 13 fuentes nuevas están bien formadas y pesan poco', () => {
   }
 });
 
-test('el total de fuentes es el que dicen los documentos (61 en fuentes.mjs, más las del cruce)', async () => {
+test('el total de fuentes es el que dicen los documentos (62 en fuentes.mjs, más las del cruce)', async () => {
   const { FUENTES_CRUCE } = await import('../ingesta/fuentes-cruce.mjs');
-  assert.equal(TODAS_LAS_FUENTES.length - FUENTES_CRUCE.length, 61); // 58 y Acción 5 (30/09); FayerWayer y Agencia CyTA (1/10)
+  assert.equal(TODAS_LAS_FUENTES.length - FUENTES_CRUCE.length, 62); // 58 y Acción 5 (30/09); FayerWayer y Agencia CyTA (1/10); Ahora Balcarce (5/10)
   assert.ok(FUENTES_CRUCE.length >= 100, 'las del cruce de medios (27/09)');
   assert.ok(FUENTES_CRUCE.every((f) => f.alcance && f.medio && f.url && f.peso), 'cada una con alcance, medio, dirección y peso');
 });

@@ -512,6 +512,13 @@ export const MEDIOS_QUE_NO_SE_NOMBRAN = [
 const escapar = (t) => t.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
 const RE_MEDIOS = new RegExp(`(?<![\\p{L}\\p{N}])(${MEDIOS_QUE_NO_SE_NOMBRAN.map(escapar).join('|')})(?![\\p{L}\\p{N}])`, 'iu');
 
+/** ¿Las dos primeras frases dicen "Balcarce" (sin contar "Radar Balcarce")? "Buen día, Balcarce. Así amanece Balcarce…" suena a repetición. */
+export function repiteBalcarceAlPrincipio(texto) {
+  const frases = String(texto).match(/[^.?!]+[.?!]/g)?.slice(0, 2) ?? [];
+  const dice = (f) => /balcarce/i.test(f.replace(/radar\s+balcarce/gi, ''));
+  return frases.length === 2 && dice(frases[0]) && dice(frases[1]);
+}
+
 /**
  * Revisa un texto contra las reglas de CRITERIO-REDES.md sección 4. `tipo` es
  * 'voz' (lo que dice la locutora) o 'texto' (un posteo o un pie: lleva la
@@ -532,6 +539,7 @@ export function revisarTexto(texto, { tipo = 'voz', momento } = {}) {
 
   if (tipo === 'voz') {
     mal(!t.includes('Radar Balcarce'), 'no nombra a "Radar Balcarce"');
+    mal(repiteBalcarceAlPrincipio(t), 'repite "Balcarce" en las dos primeras frases');
     mal(/[!¡]/.test(t), 'tiene signos de exclamación');
     mal(/radarbalcarce|\.com\b/i.test(t), 'escribe la dirección en vez de decirla');
     mal(/punto com/i.test(t) && !/Radar Balcarce punto com/i.test(t), 'dice "punto com" sin "Radar Balcarce" adelante');

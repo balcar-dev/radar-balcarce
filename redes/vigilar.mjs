@@ -57,6 +57,8 @@ import {
   consultarMeta, informeDelDia, textoCierre, lineaDeCierreCompleto, textoInforme,
 } from './auditar-redes.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
+import { crearCliente, PAGINA_DE_FACEBOOK } from './meta.mjs';
+import { copiasRepetidas } from './espejo.mjs';
 import { VOCES } from './prompt-redes.mjs';
 import {
   importantesAAvisar, textoImportantes, anotarImportantes, pendientesAAvisar, textoPendientes,
@@ -206,7 +208,7 @@ const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) 
  */
 export function evaluar({
   ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
-  redesActivas = true, claves = [], voces = null,
+  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [],
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -275,6 +277,12 @@ export function evaluar({
       const fecha = new Intl.DateTimeFormat('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date(t));
       de(`vence-voz-${quien}`, dias <= 7 ? 'alta' : 'media', `${dias > 0 ? `Faltan ${dias} día(s): la` : 'YA VENCIÓ la'} voz ${cual} vence el ${fecha}. ${arreglo}; si vence, las piezas que dice dejan de salir.`);
     }
+  }
+
+  // --- publicaciones repetidas en Instagram (5/10/2026: cuatro copias del mismo posteo; la API no deja borrarlas, hay que hacerlo a mano)
+  if (copiasEnInstagram?.length) {
+    const lista = copiasEnInstagram.slice(0, 3).map((c) => `"${c.titulo}" (${c.copias} copias)`).join('; ');
+    de('instagram-copias', 'alta', `Instagram tiene publicaciones repetidas: ${lista}. Dejá una y borrá las demás a mano desde el celular: el sistema no puede borrarlas.`);
   }
 
   // --- las corridas de GitHub
@@ -630,8 +638,17 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
       corridas[nombre] = lista;
     }
   }
+  // Lo último que hay en el feed de Instagram, para encontrar copias repetidas. Si Meta no contesta, no se avisa nada (no es un problema de la web).
+  let copiasEnInstagram = [];
+  if (env.META_TOKEN) {
+    try {
+      const api = crearCliente({ token: env.META_TOKEN, paginaId: PAGINA_DE_FACEBOOK });
+      copiasEnInstagram = copiasRepetidas(await api.publicacionesRecientesDeInstagram({ limite: 50 }), { ahora });
+    } catch { /* sin datos */ }
+  }
   const { claves, voces } = await revisarClaves({ env });
   return {
+    copiasEnInstagram,
     ahora,
     web: { estado: inicio?.status ?? 0, actualizado: portada?.ok ? actualizado : null },
     www: www ? { redirige: [301, 302, 307, 308].includes(www.status) } : null,
