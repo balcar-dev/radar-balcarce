@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, ordenarPortada, porTema, nombreDeTema,
+  obtenerDatos, ordenarPortada, porTema, nombreDeTema, ranurasDeTemasParaArmar,
 } from '@/lib/datos';
 import {
   Etiqueta, FilaNota, Cierre, Invitacion, Hace,
@@ -14,7 +14,7 @@ import { OG_COMUN } from '@/components/metadatos';
 // las historias duran meses y la gente quiere saber cómo siguió aquello que
 // leyó en marzo.
 export function generateStaticParams() {
-  return (obtenerDatos().temas ?? []).map((t) => ({ ranura: t.ranura }));
+  return ranurasDeTemasParaArmar();
 }
 
 export function generateMetadata({ params }) {

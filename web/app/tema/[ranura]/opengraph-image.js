@@ -1,4 +1,4 @@
-import { obtenerDatos, nombreDeTema } from '@/lib/datos';
+import { ranurasDeTemasParaArmar, nombreDeTema } from '@/lib/datos';
 import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
 
 export const dynamic = 'force-static';
@@ -7,7 +7,7 @@ export const contentType = TIPO;
 export const alt = 'Radar Balcarce';
 
 export function generateStaticParams() {
-  return (obtenerDatos().temas ?? []).map((t) => ({ ranura: t.ranura }));
+  return ranurasDeTemasParaArmar();
 }
 
 export default function Imagen({ params }) {

@@ -480,3 +480,13 @@ export function partirFecha(texto) {
     iso: `${m[1]}-${m[2]}-${m[3]}`,
   };
 }
+
+/**
+ * Las páginas de los temas que se generan. Next (output: export) no acepta una ruta dinámica sin ninguna página: si no hay ningún tema vivo,
+ * `generateStaticParams` devolvía [] y fallaba el armado de todo el sitio (4/10/2026). Con ninguno, queda una dirección de relleno que nadie enlaza
+ * y que da "no encontrada" (no es un tema).
+ */
+export function ranurasDeTemasParaArmar() {
+  const ranuras = (obtenerDatos().temas ?? []).map((t) => t.ranura);
+  return (ranuras.length ? ranuras : ['ninguno']).map((ranura) => ({ ranura }));
+}
