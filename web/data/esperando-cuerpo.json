@@ -1,22 +1,22 @@
 {
- "generado": "2026-10-05T11:33:04.105Z",
+ "generado": "2026-10-05T12:05:02.026Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "vqv317",
-   "titulo": "Lunes con cielo mayormente nublado y posibles lluvias",
-   "copete": "La jornada se presentará fresca, con una temperatura máxima cercana a los 19°C. Durante el día podrían registrarse lluvias débiles y aisladas.",
+   "id": "1kia0yd",
+   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
+   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
    "seccion": "Balcarce",
-   "fecha": "2026-10-05T11:23:01.000Z",
+   "fecha": "2026-10-05T11:59:56.000Z",
    "fuentes": [
     {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/clima-lunes-con-cielo-mayormente-nublado-y-posibles-lluvias",
-     "fecha": "2026-10-05T11:23:01.000Z"
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
+     "fecha": "2026-10-05T11:59:56.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "sin material",
+   "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 37 palabras",
    "maximo": 3
   },
   {
@@ -32,8 +32,30 @@
      "fecha": "2026-10-05T11:20:43.000Z"
     }
    ],
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 106 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "2dauj9",
+   "titulo": "Argentina, a pique en desempeño industrial",
+   "copete": "La industria argentina registró el cuarto peor desempeño entre 84 países , de acuerdo con una comparación de datos de la Organización de las Naciones Unidas para el Desarrollo Industrial (Onudi). En julio de 2026, la producción manufacturera local se ubicó 11,2% por debajo del…",
+   "seccion": "Economía",
+   "fecha": "2026-10-05T10:40:31.000Z",
+   "fuentes": [
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/argentina-a-pique-en-desempeno-industrial/",
+     "fecha": "2026-10-05T10:40:31.000Z"
+    },
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/economia-politica/la-industria-argentina-registro-el-cuarto-peor-desempeno-desde-2023-que-paises-la-superaron/",
+     "fecha": "2026-10-05T11:40:00.000Z"
+    }
+   ],
    "intentos": 1,
-   "motivo": "sin material",
+   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"matias\" y la fuente no",
    "maximo": 3
   }
  ]

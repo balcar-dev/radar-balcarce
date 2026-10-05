@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T11:33:04.105Z",
- "portada": 27,
- "archivo": 887,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-05T12:05:02.026Z",
+ "portada": 28,
+ "archivo": 889,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T11:33:04.135Z",
+  "generado": "2026-10-05T12:05:02.049Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -95,11 +95,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 39,
+    "segundos": 49,
     "notas": [
+     {
+      "id": "1ni344u",
+      "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
+      "seccion": "Balcarce"
+     },
      {
       "id": "c1nalz",
       "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "vqv317",
+      "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
       "seccion": "Balcarce"
      },
      {
@@ -132,7 +142,20 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1ni344u",
+     "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "vqv317",
+     "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-05T01:05:20.177Z",
    "porDia": 5,
