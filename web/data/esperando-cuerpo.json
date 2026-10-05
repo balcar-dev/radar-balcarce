@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T19:02:18.195Z",
+ "generado": "2026-10-05T21:33:50.328Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,6 +13,11 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/05/se-realizara-una-nueva-campana-raee-en-plaza-libertad/",
      "fecha": "2026-10-05T15:48:46.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/nueva-jornada-de-recoleccion-de-residuos-electricos-y-electronicos-en-plaza-libertad/",
+     "fecha": "2026-10-05T19:50:00.000Z"
     },
     {
      "medio": "Infórmese Primero (FM 104.9)",
@@ -30,6 +35,67 @@
    "maximo": 3
   },
   {
+   "id": "1kia0yd",
+   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
+   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-05T11:59:56.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
+     "fecha": "2026-10-05T11:59:56.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo corto (58 palabras)",
+   "maximo": 3
+  },
+  {
+   "id": "afx3aq",
+   "titulo": "La burla contra Lando Norris tras una peligrosa maniobra durante el GP de Baréin de la F1: “Qué pasa si ahora sale a hablar Colapinto”",
+   "copete": "Lando Norris protagonizó una de las escenas más impactantes del Gran Premio de Baréin , disputado en Malasia, después de salirse de la pista durante la parte final tras la salida del Auto de Seguridad que lo hizo perder posiciones, pero que casi provoca un accidente con su…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-05T12:29:34.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/05/la-burla-contra-lando-norris-tras-una-peligrosa-maniobra-durante-el-gp-de-barein-de-la-f1-que-pasa-si-ahora-sale-a-hablar-colapinto/",
+     "fecha": "2026-10-05T12:29:34.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/deportes/la-picante-burla-contra-lando-norris-la-f1-una-maniobra-peligrosa-si-sale-hablar-colapinto-n6330276",
+     "fecha": "2026-10-05T19:22:00.000Z"
+    },
+    {
+     "medio": "La Capital (Rosario)",
+     "enlace": "https://www.lacapital.com.ar/ovacion/que-pasa-si-ahora-sale-hablar-colapinto-la-burla-contra-norris-una-transmision-la-f1-n10284979.html",
+     "fecha": "2026-10-05T19:05:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (tildes, promesa): el texto está escrito sin tildes (television, transmision, habia): va con las tildes y la eñe donde ; sin esas oraciones ",
+   "maximo": 3
+  },
+  {
+   "id": "r2tg83",
+   "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
+   "copete": "La unidad atenderá de 7 a 12 horas sobre calle 11, entre 18 y 20, con servicios de castración y vacunación antirrábica para perros y gatos.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-05T12:45:56.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/zoonosis-permanecera-toda-la-semana-en-inmediaciones-de-la-escuela-de-arte-2",
+     "fecha": "2026-10-05T12:45:56.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
    "id": "1k1mxar",
    "titulo": "La Iglesia destacó la reunión con el Gobierno por la situación en discapacidad, pero advirtió: “Los gestos solos no alcanzan”",
    "copete": "Previo a la visita del papa León XIV al Cottolengo Don Orione, el Gobierno recibió a la Iglesia para defender sus políticas sobre discapacidad. La reunión se realizó en el Ministerio de Salud, entre funcionarios del área y autoridades de la Conferencia Episcopal Argentina (CEA)…",
@@ -40,11 +106,6 @@
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/politica/2026/10/05/antes-de-la-visita-del-papa-al-cottolengo-el-gobierno-recibe-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad-2/",
      "fecha": "2026-10-05T16:12:13.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/la-iglesia-valoro-la-reunion-el-gobierno-discapacidad-pero-reclamo-medidas-concretas-n6330253",
-     "fecha": "2026-10-05T18:15:00.000Z"
     },
     {
      "medio": "El Destape",
@@ -83,11 +144,6 @@
     },
     {
      "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/discapacidad--la-iglesia-valoro-la-reunion-con-el-gobierno--pero-exigio-soluciones-concretas-para-el-sector_a6ac3d246efa9665a6c23cda8",
-     "fecha": "2026-10-05T18:03:13.305Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad--antes-de-la-visita-del-papa_a6ac3980defa9665a6c1c17fd",
      "fecha": "2026-10-05T12:35:34.277Z"
     },
@@ -95,11 +151,6 @@
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-politica-y-economia_1791206280",
      "fecha": "2026-10-05T13:34:04.000Z"
-    },
-    {
-     "medio": "Punto Noticias",
-     "enlace": "https://puntonoticias.com/discapacidad-la-iglesia-valoro-la-reunion-con-el-gobierno-pero-exigio-soluciones-concretas-para-el-sector/",
-     "fecha": "2026-10-05T18:44:29.000Z"
     },
     {
      "medio": "El Eco de Tandil",
@@ -117,47 +168,47 @@
    "maximo": 5
   },
   {
-   "id": "r2tg83",
-   "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
-   "copete": "La unidad atenderá de 7 a 12 horas sobre calle 11, entre 18 y 20, con servicios de castración y vacunación antirrábica para perros y gatos.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-05T12:45:56.000Z",
+   "id": "z08pph",
+   "titulo": "El cantante que interpretará el himno nacional en la despedida de Messi",
+   "copete": "El excombatiente en Malvinas, Fabio Santana, será el encargado de entonar e interpretar la letra del himno nacional argentino en el partido contra Benín, en lo que será la despedida de Lionel Messi de la Selección. El oriundo de La Matanza anunció la noticia en un video en sus…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-05T19:08:04.405Z",
    "fuentes": [
     {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/zoonosis-permanecera-toda-la-semana-en-inmediaciones-de-la-escuela-de-arte-2",
-     "fecha": "2026-10-05T12:45:56.000Z"
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/el-cantante-que-interpretara-el-himno-nacional-en-la-despedida-de-messi_a6ac3e9dbefa9665a6c26da6f",
+     "fecha": "2026-10-05T19:08:04.405Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-5-16-43-0-el-excombatiente-de-la-guerra-de-malvinas-que-interpretara-el-himno-nacional-en-la-despedida-de-messi",
+     "fecha": "2026-10-05T20:39:54.000Z"
+    },
+    {
+     "medio": "0221",
+     "enlace": "https://www.0221.com.ar/deportes/un-excombatiente-cantara-el-himno-la-despedida-lionel-messi-la-seleccion-argentina-n135326",
+     "fecha": "2026-10-05T21:16:00.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "sin material",
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (antecedente, copia): el cuerpo usa 20, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 92 palabras",
    "maximo": 3
   },
   {
-   "id": "1b2dm83",
-   "titulo": "Las acciones argentinas en Wall Street se disparan hasta 8 %, reaccionan los bonos y cae el riesgo país",
-   "copete": "La sorpresa electoral en Brasil provoca fuertes subas en activos financieros del país vecino y genera un efecto contagio en los bonos y las acciones locales. El riesgo país cae y rebotan las acciones. ¿Qué variables sigue mirando el mercado y cuáles son las perspectivas para la…",
-   "seccion": "Economía",
-   "fecha": "2026-10-05T15:53:43.000Z",
+   "id": "12tbmrp",
+   "titulo": "Buen desempeño local en la cuarta edición del MTB Series MDQ",
+   "copete": "La cuarta edición del MTB Series MDQ se desarrolló en el exigente circuito de la Sierra de los Difuntos, en la Estancia Rincón Grande, ubicada sobre la Ruta 226, kilómetro 28,5, dentro del partido de General Pueyrredón. La competencia, considerada la más importante del sudeste…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-05T19:21:20.000Z",
    "fuentes": [
     {
-     "medio": "El Cronista",
-     "enlace": "https://www.cronista.com/finanzas-mercados/las-acciones-argentinas-en-wall-street-se-disparan-hasta-8-reaccionan-los-bonos-y-cae-el-riesgo-pais/",
-     "fecha": "2026-10-05T15:53:43.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/tras-el-triunfo-de-bolsonaro-en-brasil-baja-el-riesgo-pais-y-rebotan-las-acciones-argentinas-en-el-nid05102026/",
-     "fecha": "2026-10-05T18:21:37.000Z"
-    },
-    {
-     "medio": "iProfesional",
-     "enlace": "https://www.iprofesional.com/finanzas/465928-cae-el-riesgo-pais-y-rebotan-las-acciones-argentinas-luego-del-triunfo-de-bolsonaro",
-     "fecha": "2026-10-05T18:19:00.000Z"
+     "medio": "Ecos Diarios (Necochea)",
+     "enlace": "https://elecos.com.ar/buen-desempeno-local-en-la-cuarta-edicion-del-mtb-series-mdq",
+     "fecha": "2026-10-05T19:21:20.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "intentos": 1,
+   "motivo": "sin material",
    "maximo": 3
   }
  ]

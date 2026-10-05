@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T19:02:18.195Z",
- "portada": 53,
- "archivo": 931,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-05T21:33:50.328Z",
+ "portada": 57,
+ "archivo": 935,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-05T19:02:18.231Z",
+  "generado": "2026-10-05T21:33:50.367Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 49,
     "notas": [
      {
-      "id": "1j1tq9m",
-      "titulo": "Boca aguarda la definición de la sede para la revancha frente a Vasco da Gama",
-      "seccion": "Fútbol"
+      "id": "uzokxq",
+      "titulo": "Impulsan un banco municipal de elementos de fisiatría",
+      "seccion": "Balcarce"
      },
      {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-      "seccion": "Balcarce"
+      "id": "af0k0y",
+      "titulo": "Tobías Andrada recibe el alta médica y vuelve a entrenar en River",
+      "seccion": "Fútbol"
      },
      {
       "id": "wb8pre",
@@ -214,6 +214,12 @@
     {
      "id": "uzokxq",
      "titulo": "Impulsan un banco municipal de elementos de fisiatría",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1pofkpj",
+     "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
      "seccion": "Balcarce",
      "marcada": false
     },
