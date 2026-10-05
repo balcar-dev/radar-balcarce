@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T13:32:26.682Z",
- "portada": 35,
- "archivo": 899,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-05T14:07:50.183Z",
+ "portada": 37,
+ "archivo": 902,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-05T13:32:26.700Z",
+  "generado": "2026-10-05T14:07:50.221Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-05T10:03:57.311Z"
    },
    {
@@ -178,21 +178,14 @@
      "id": "1ni344u",
      "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
      "cuando": "2026-10-05T12:07:12.505Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "173ttfz",
      "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "r3lz6t",
-     "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
-     "seccion": "Deportes",
-     "marcada": false
-    },
+     "cuando": "2026-10-05T13:45:25.339Z"
+    }
+   ],
+   "cola": [
     {
      "id": "cn09w9",
      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
@@ -200,8 +193,8 @@
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-05T13:37:12.505Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-05T15:15:25.339Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
