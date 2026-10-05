@@ -1,4 +1,4 @@
-import { obtenerEvento, todosLosEventos } from '@/lib/datos';
+import { obtenerEvento, todosLosEventos, paramsNoVacios } from '@/lib/datos';
 import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
 import { parteDeEvento, nombreDeEvento } from '@/lib/eventos';
 
@@ -12,7 +12,7 @@ export const alt = 'Radar Balcarce · Agenda';
 
 export function generateStaticParams() {
   const params = todosLosEventos().map((e) => ({ id: parteDeEvento(e) }));
-  return params.length ? params : [{ id: 'sin-eventos' }];
+  return paramsNoVacios(params, { id: 'sin-eventos' });
 }
 
 export default function Imagen({ params }) {

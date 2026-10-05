@@ -487,6 +487,14 @@ export function partirFecha(texto) {
  * y que da "no encontrada" (no es un tema).
  */
 export function ranurasDeTemasParaArmar() {
-  const ranuras = (obtenerDatos().temas ?? []).map((t) => t.ranura);
-  return (ranuras.length ? ranuras : ['ninguno']).map((ranura) => ({ ranura }));
+  return paramsNoVacios((obtenerDatos().temas ?? []).map((t) => ({ ranura: t.ranura })), { ranura: 'ninguno' });
+}
+
+/**
+ * Las páginas que Next tiene que armar para una ruta dinámica. Con la exportación estática (output: export) una lista VACÍA corta el armado de todo el sitio
+ * ("is missing generateStaticParams()"): pasó el 4/10/2026 con los temas y la web quedó 10 horas sin actualizarse. Todo `generateStaticParams` de web/app
+ * pasa por acá (una prueba lo controla): si no hay nada, queda una sola página de relleno que nadie enlaza y que da "no encontrada".
+ */
+export function paramsNoVacios(lista, relleno) {
+  return Array.isArray(lista) && lista.length ? lista : [relleno];
 }

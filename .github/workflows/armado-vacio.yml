@@ -1,0 +1,50 @@
+# Arma el sitio entero con datos vacíos o a medias (web/scripts/armado-vacio.mjs).
+#
+# "Actualizar la web" estuvo 10 horas sin publicar (4/10/2026) porque no había ningún tema vivo: una ruta dinámica sin páginas corta el armado de todo el
+# sitio. Eso sólo se ve cuando los datos del día quedan de una forma rara. Esta prueba fabrica esas formas (sin temas, sin agenda, sin notas en la portada,
+# sin ningún archivo) y arma el sitio con cada una, así un cambio de código que las rompe se descubre cuando se sube y no de noche, con la web congelada.
+#
+# Corre cuando se toca el código de la web y una vez por semana; no corre con los datos que escribe la nube (web/data).
+
+name: Armado con datos vacíos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/app/**'
+      - 'web/components/**'
+      - 'web/lib/**'
+      - 'web/scripts/armado-vacio.mjs'
+      - 'web/package.json'
+      - 'web/package-lock.json'
+      - 'web/next.config.mjs'
+      - 'reels/marca/**'
+      - '.github/workflows/armado-vacio.yml'
+  schedule:
+    - cron: '17 9 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: armado-vacio
+  cancel-in-progress: true
+
+jobs:
+  armar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Instalar (web)
+        working-directory: web
+        run: npm ci --no-audit --no-fund
+      - name: Armar el sitio con datos vacíos o a medias
+        working-directory: web
+        run: node scripts/armado-vacio.mjs

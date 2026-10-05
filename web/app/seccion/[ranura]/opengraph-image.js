@@ -1,4 +1,4 @@
-import { porRanura, SECCIONES, notasDeLaSeccion } from '@/lib/datos';
+import { porRanura, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
 import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
 import { partirRanura, cuantasPaginas } from '@/lib/paginas';
 
@@ -15,7 +15,7 @@ export function generateStaticParams() {
     if (!cuantas) continue;
     for (let i = 1; i <= cuantasPaginas(cuantas); i += 1) params.push({ ranura: i === 1 ? s.ranura : `${s.ranura}-${i}` });
   }
-  return params;
+  return paramsNoVacios(params, { ranura: 'ninguna' });
 }
 
 export default function Imagen({ params }) {

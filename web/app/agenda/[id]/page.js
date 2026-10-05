@@ -1,4 +1,4 @@
-import { obtenerEvento, todosLosEventos, proximosEventos } from '@/lib/datos';
+import { obtenerEvento, todosLosEventos, proximosEventos, paramsNoVacios } from '@/lib/datos';
 import { Etiqueta, Evento, Cierre, Invitacion } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import { PieConFuentes } from '@/components/verificacion';
@@ -24,7 +24,7 @@ export function generateStaticParams() {
   const params = todosLosEventos().map((e) => ({ id: parteDeEvento(e) }));
   // Con la exportación estática, una lista vacía rompe la compilación. Si no
   // hay ningún evento, se arma una sola página que da 404.
-  return params.length ? params : [{ id: 'sin-eventos' }];
+  return paramsNoVacios(params, { id: 'sin-eventos' });
 }
 
 const mayuscula = (t) => (t ? t[0].toUpperCase() + t.slice(1) : t);

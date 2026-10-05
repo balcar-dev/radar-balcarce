@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos, tieneTarjetaPropia,
+  obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos, tieneTarjetaPropia, paramsNoVacios,
 } from '@/lib/datos';
 import {
   Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace, FechaExacta, PlacaSeccion,
@@ -21,7 +21,7 @@ export function generateStaticParams() {
   // El parámetro es "titular-en-guiones-id". Ver lib/ruta.js. Van todas las
   // que tienen página, no sólo las de la portada: una nota que sale de la
   // portada no puede dejar un enlace roto en Facebook (lib/archivo.js).
-  return todasLasNotas().map((n) => ({ id: parteDeNota(n) }));
+  return paramsNoVacios(todasLasNotas().map((n) => ({ id: parteDeNota(n) })), { id: 'sin-notas' });
 }
 
 /**

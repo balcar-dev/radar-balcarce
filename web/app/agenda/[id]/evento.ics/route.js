@@ -1,4 +1,4 @@
-import { obtenerEvento, todosLosEventos } from '@/lib/datos';
+import { obtenerEvento, todosLosEventos, paramsNoVacios } from '@/lib/datos';
 import { parteDeEvento, icsDeEvento } from '@/lib/eventos';
 import { enlace, DOMINIO } from '@/lib/sitio';
 
@@ -9,7 +9,7 @@ export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   const params = todosLosEventos().map((e) => ({ id: parteDeEvento(e) }));
-  return params.length ? params : [{ id: 'sin-eventos' }];
+  return paramsNoVacios(params, { id: 'sin-eventos' });
 }
 
 export async function GET(_pedido, { params }) {

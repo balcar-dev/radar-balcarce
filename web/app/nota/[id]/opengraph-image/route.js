@@ -1,4 +1,4 @@
-import { obtenerNota, notasConImagen } from '@/lib/datos';
+import { obtenerNota, notasConImagen, paramsNoVacios } from '@/lib/datos';
 import { tarjeta, fotoParaInstagram } from '@/lib/tarjeta';
 import { FOTO_EN_ENLACE } from '@/lib/tarjeta-diseno';
 import { parteDeNota } from '@/lib/ruta';
@@ -14,7 +14,7 @@ export const dynamic = 'force-static';
 export function generateStaticParams() {
   // Las de la portada y las archivadas que salieron en las redes: ver
   // notasConImagen en lib/datos.js.
-  return notasConImagen().map((n) => ({ id: parteDeNota(n) }));
+  return paramsNoVacios(notasConImagen().map((n) => ({ id: parteDeNota(n) })), { id: 'sin-notas' });
 }
 
 export async function GET(_pedido, { params }) {

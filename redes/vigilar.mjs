@@ -85,6 +85,14 @@ export const TEXTO_REDES_APAGADAS = 'Las redes están apagadas (la variable REDE
  *  problema. Los podcasts no están: dependen de que haya notas para contar. */
 export const PIEZAS_FIJAS = ['clima-manana', 'farmacia', 'clima-noche'];
 
+/** Qué quiere decir que falle cada paso de "Actualizar la web", dicho para una persona. */
+export const QUE_SIGNIFICA_EL_PASO = {
+  'Probar que nada se rompió': 'Una prueba automática falló: por seguridad la web NO se actualiza hasta que se arregle (hay que abrir la corrida en GitHub Actions y ver cuál).',
+  'Compilar el sitio': 'El sitio no compila con los datos de esta vuelta: la web sigue con lo último bueno pero no se actualiza (hay que ver el error en GitHub Actions).',
+  'Buscar noticias y armar los datos': 'No se pudieron armar los datos de esta vuelta: la web sigue con lo último bueno.',
+  'Revisar que el SEO siga en pie': 'Falta algo del SEO en el HTML (título, descripción o tarjeta): la web no se actualiza hasta arreglarlo.',
+};
+
 export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
   minutosSinReloj: 100,        // el reloj de redes corre cada 30
@@ -278,7 +286,11 @@ export function evaluar({
     if (!ultima) continue;
     const fallas = terminadas.slice(0, 5).filter((r) => r.conclusion === 'failure').length;
     if (ultima.conclusion === 'failure') {
-      de(`falla-${nombre}`, fallas >= 3 ? 'alta' : 'media', `"${nombre}" falló en su última corrida (${fallas} de las últimas ${Math.min(5, terminadas.length)}).`);
+      // Con dos seguidas ya es 'alta' (en la web son 60 minutos sin publicar), y se dice qué paso falló y qué significa.
+      const seguidas = terminadas.findIndex((r) => r.conclusion !== 'failure');
+      const enFila = seguidas < 0 ? terminadas.length : seguidas;
+      const queSignifica = QUE_SIGNIFICA_EL_PASO[ultima.paso] ? ` ${QUE_SIGNIFICA_EL_PASO[ultima.paso]}` : '';
+      de(`falla-${nombre}`, enFila >= 2 || fallas >= 3 ? 'alta' : 'media', `"${nombre}" falló en su última corrida${ultima.paso ? `, en el paso "${ultima.paso}"` : ''} (${enFila} seguidas; ${fallas} de las últimas ${Math.min(5, terminadas.length)}).${queSignifica}`);
     }
   }
 
@@ -604,7 +616,16 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
       });
       if (!r?.ok) continue;
       const j = await r.json();
-      const lista = (j.workflow_runs ?? []).map((x) => ({ conclusion: x.conclusion, status: x.status, createdAt: x.created_at }));
+      const lista = (j.workflow_runs ?? []).map((x) => ({ id: x.id, conclusion: x.conclusion, status: x.status, createdAt: x.created_at }));
+      // Si la última terminada falló, qué paso fue ("Probar que nada se rompió", "Compilar el sitio"…): el aviso lo dice y no hay que abrir GitHub para enterarse.
+      const falla = lista.find((x) => x.status === 'completed' && x.conclusion !== 'cancelled' && x.conclusion !== 'skipped');
+      if (falla?.conclusion === 'failure') {
+        const jr = await pedir(`https://api.github.com/repos/${repo}/actions/runs/${falla.id}/jobs`, { headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' } });
+        if (jr?.ok) {
+          const jobs = (await jr.json()).jobs ?? [];
+          falla.paso = jobs.flatMap((job) => job.steps ?? []).find((s) => s.conclusion === 'failure')?.name ?? null;
+        }
+      }
       const nombre = { 'actualizar.yml': 'Actualizar la web', 'redes.yml': 'Redes', 'cloudflare-deploy.yml': 'Cloudflare Pages' }[archivo];
       corridas[nombre] = lista;
     }

@@ -1,6 +1,5 @@
 import {
-  porRanura, nombreCorto, SECCIONES, notasDeLaSeccion,
-} from '@/lib/datos';
+  porRanura, nombreCorto, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
 import { Cierre, Invitacion } from '@/components/piezas';
 import { Postales, FilaConMiniatura } from '@/components/postales';
 import { notFound } from 'next/navigation';
@@ -25,7 +24,7 @@ export function generateStaticParams() {
       params.push({ ranura: i === 1 ? s.ranura : `${s.ranura}-${i}` });
     }
   }
-  return params;
+  return paramsNoVacios(params, { ranura: 'ninguna' });
 }
 
 export function generateMetadata({ params }) {

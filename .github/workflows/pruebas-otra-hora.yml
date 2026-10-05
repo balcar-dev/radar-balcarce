@@ -1,0 +1,39 @@
+# Corre las pruebas "como si fuera" otra hora y otra fecha (pruebas/hora-falsa.mjs).
+#
+# Entre el 3 y el 4/10/2026 dos pruebas que dependían del reloj o de la fecha dejaron "Actualizar la web" 3 horas y media sin publicar (una prueba que falla congela la web
+# a propósito). Ninguna prueba tendría que fallar según la hora a la que se corre: esta vuelta lo comprueba cada semana con varias horas (madrugada, de día, cambio de mes
+# y de año) y avisa si alguna se vuelve frágil.
+
+name: Pruebas con otra hora
+
+on:
+  schedule:
+    - cron: '43 8 * * 1'
+  workflow_dispatch:
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Instalar
+        run: npm ci --no-audit --no-fund
+      - name: Instalar (web)
+        working-directory: web
+        run: npm ci --no-audit --no-fund
+      - name: Probar con cinco horas y fechas distintas
+        run: |
+          fallo=0
+          for hora in 2027-01-03T03:10:00Z 2027-01-06T17:30:00Z 2027-01-09T23:50:00Z 2027-01-31T23:30:00Z 2027-12-31T22:00:00Z; do
+            echo "=== como si fuera $hora"
+            HORA_FALSA=$hora node --import ./pruebas/hora-falsa.mjs --test "pruebas/*.test.mjs" || fallo=1
+          done
+          exit $fallo
