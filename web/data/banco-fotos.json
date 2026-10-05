@@ -7191,5 +7191,52 @@
   "imagenOriginal": "https://www.noticiasagropecuarias.com/wp-content/uploads/2025/04/ILLINOIS-MAICES.png",
   "razon": "Muestra claramente las espigas de maíz afectadas y no presenta marcas de agua ni menores.",
   "cuando": "2026-10-05T14:32:09.082Z"
+ },
+ "1v95lep": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Medvedev queda descalificado en Pekín y Djokovic avanza a la final",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-05T15:07:45.201Z",
+  "intentos": 1,
+  "fuentes": 5
+ },
+ "18ymt3o": {
+  "intentado": true,
+  "origen": "medio",
+  "cuando": "2026-10-05T15:07:45.201Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "q7d6xn": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "ANSES aplica un aumento del 1,66% y paga un bono a jubilados",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-05T15:07:45.201Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "bmbmep": {
+  "archivo": "fotos-notas/bmbmep.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
+  "enlace": "https://www.infobae.com/economia/2026/10/05/se-desploman-casi-20-las-acciones-de-la-petrolera-rockhopper-tras-ratificar-su-proyecto-en-malvinas/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/PDSIRKS5WBFKBFE6KQLOS4YY7A.png?auth=4ca8f710f937c6cf3225529cd2b35a9d845a17ccb2435a149f68a2797739f990&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la foto con mejor encuadre y nitidez de la plataforma petrolera, sin marcas de agua ni menores, y muestra claramente al proyecto Sea Lion.",
+  "cuando": "2026-10-05T15:07:45.201Z"
+ },
+ "1k1mxar": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Gobierno se reúne con la Iglesia para debatir políticas sobre discapacidad",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-05T15:07:45.201Z",
+  "intentos": 1,
+  "fuentes": 8
  }
 }

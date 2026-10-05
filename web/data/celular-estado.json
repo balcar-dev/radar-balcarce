@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T14:32:23.789Z",
- "portada": 37,
- "archivo": 905,
+ "generado": "2026-10-05T15:11:50.045Z",
+ "portada": 41,
+ "archivo": 910,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T14:32:23.812Z",
+  "generado": "2026-10-05T15:11:50.067Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-05T12:06:18.739Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Participá: mandanos noticias",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -126,17 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 48,
     "notas": [
      {
       "id": "cn09w9",
       "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "2umrmg",
-      "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
-      "seccion": "Economía"
      },
      {
       "id": "9lbni",
@@ -147,6 +142,11 @@
       "id": "wb8pre",
       "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
       "seccion": "Agro"
+     },
+     {
+      "id": "1v95lep",
+      "titulo": "Medvedev queda descalificado en Pekín y Djokovic avanza a la final",
+      "seccion": "Argentina"
      }
     ]
    },
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "2umrmg",
+      "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
+      "seccion": "Economía"
+     },
      {
       "id": "199raki",
       "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",

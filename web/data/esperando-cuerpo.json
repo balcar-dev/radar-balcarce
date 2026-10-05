@@ -1,7 +1,24 @@
 {
- "generado": "2026-10-05T14:32:23.789Z",
+ "generado": "2026-10-05T15:11:50.045Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1vnue0q",
+   "titulo": "Zonal en Balcarce: los horarios de las dos jornadas completas",
+   "copete": "Confirmó el Auto Club Balcarce los horarios de actividad previstos para la vuelta del Zonal del Atlántico a Balcarce, en este caso, disputando otra de las de las fechas definitorias para el Turismo Special de la Costa, Monomarca Fiat y TC2000 y Promocional del Atlántico…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-05T14:42:56.000Z",
+   "fuentes": [
+    {
+     "medio": "Acción 5 (Balcarce)",
+     "enlace": "https://accion5.com/zonal-en-balcarce-los-horarios-de-las-dos-jornadas-completas/",
+     "fecha": "2026-10-05T14:42:56.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
+  },
   {
    "id": "r2tg83",
    "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
@@ -22,7 +39,7 @@
   {
    "id": "16q21ih",
    "titulo": "Martín Fierro de la Música 2026: los nominados y todos los detalles de la primera edición",
-   "copete": "Buenos Aires, 5 octubre (NA) -- La Asociación de Periodistas de la Televisión y la Radiofonía Argentinas suma una nueva premiación a su larga lista de reconocimientos y este domingo se dieron a conocer los nominados a la primera edición de los Martín Fierro de Música 2026, que…",
+   "copete": "Los Martín Fierro tendrán una importante novedad este año con el estreno de una edición dedicada exclusivamente a la música. La primera ceremonia se realizará el miércoles 14 de octubre y reunirá a grandes figuras de la escena nacional, con artistas de distintos estilos y…",
    "seccion": "Cultura y agenda",
    "fecha": "2026-10-05T11:15:00.000Z",
    "fuentes": [
@@ -37,6 +54,11 @@
      "fecha": "2026-10-05T14:13:00.000Z"
     },
     {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/diarioshow/farandula/martin-fierro-de-la-musica-2026-la-lista-completa-de-nominados/",
+     "fecha": "2026-10-05T14:30:32.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/espectaculos/todos-los-nominados-a-los-martin-fierro-de-la-musica-2026_a6ac3a0b5efa9665a6c1d6dd5",
      "fecha": "2026-10-05T13:05:00.000Z"
@@ -47,41 +69,9 @@
      "fecha": "2026-10-05T12:15:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (nombre): el copete nombra a \"capital\" y la fuente no",
-   "maximo": 3
-  },
-  {
-   "id": "bmbmep",
-   "titulo": "Malvinas: caen casi 20% las acciones de la petrolera que busca extraer crudo con el proyecto Sea Lion",
-   "copete": "Las acciones de la petrolera británica Rockhopper volvían a caer con fuerza este lunes en Londres, en medio de la disputa por el proyecto de explotación Sea Lion en las Islas Malvinas . Las acciones de Rockhopper Exploration , que mantiene sus planes a pesar de las sanciones…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-05T13:10:22.000Z",
-   "fuentes": [
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/economia/2026/10/05/malvinas-caen-casi-20-las-acciones-de-la-petrolera-que-busca-extraer-crudo-con-el-proyecto-sea-lion/",
-     "fecha": "2026-10-05T13:10:22.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/05/se-desploman-casi-20-las-acciones-de-la-petrolera-rockhopper-tras-ratificar-su-proyecto-en-malvinas/",
-     "fecha": "2026-10-05T13:28:45.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/la-petrolera-rockhopper-se-desploma-casi-20--en-londres-tras-ratificar-avance-de-sea-lion-en-malvinas_a6ac3a5d3efa9665a6c1e0ea2",
-     "fecha": "2026-10-05T13:20:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/america/agencias/2026/10/05/acciones-de-rockhopper-caen-con-fuerza-tras-retirarse-halliburton-de-proyecto-en-malvinas/",
-     "fecha": "2026-10-05T13:17:48.000Z"
-    }
-   ],
    "intentos": 2,
-   "motivo": "cuerpo: 3 problemas (numero, relleno): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 37 palabras",
-   "maximo": 3
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"martin\", \"fierro\" y el cuerpo no los explica; sin esas oraciones quedan 111 palabras",
+   "maximo": 4
   }
  ]
 }
