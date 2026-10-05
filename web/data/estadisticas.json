@@ -912,6 +912,53 @@
         "vistas": 72,
         "interacciones": 5
       }
+    },
+    {
+      "cuando": "2026-10-05T12:00:18.894Z",
+      "web": {
+        "u12": {
+          "visitas": 10,
+          "vistas": 65
+        },
+        "a12": {
+          "visitas": 8,
+          "vistas": 58
+        },
+        "u24": {
+          "visitas": 18,
+          "vistas": 123
+        },
+        "a24": {
+          "visitas": 95,
+          "vistas": 160
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 39
+          },
+          {
+            "camino": "/nota/liga-profesional-los-partidos-de-la-fecha-del-2-al-5-de-octubre-con-futbolpartidosliga20261002",
+            "vistas": 16
+          },
+          {
+            "camino": "/seccion/futbol",
+            "vistas": 14
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 5,
+        "vistas": 645,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 76,
+        "alcance": 5,
+        "vistas": 11,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -1311,25 +1358,30 @@
     },
     "2026-10-04": {
       "referentes": {
-        "directo": 41,
-        "facebook.com": 7
+        "directo": 42,
+        "facebook.com": 11,
+        "google.com": 1
       },
       "notas": {
+        "futbolpartidosliga20261002": 16,
+        "futbolresultadosliga20261002": 7,
+        "np9nneou5k": 7,
+        "1nqv1cj": 7,
         "1d1hc0g": 4,
+        "repaso20261003noche": 4,
         "5skk4j": 3,
         "inwwi9": 3,
         "v0xov9": 3,
-        "1nqv1cj": 2,
-        "8cknxd": 2,
-        "futbolpartidosliga20261002": 2,
-        "futbolresultadosliga20261002": 2,
         "173wsz3": 2,
-        "np9nneou5k": 2,
+        "5j1h5s": 2,
+        "1rfl2n3": 2,
+        "i031u3": 2,
         "1nz8gwo": 2,
         "ogixfx": 2,
         "158gkt0": 2,
-        "repaso20261003noche": 2,
         "17lpda8": 2,
+        "8cknxd": 2,
+        "5mn9v7": 2,
         "3cr087": 1,
         "1t477sv": 1,
         "f1parrilla2026r16": 1,
@@ -1344,14 +1396,14 @@
         "ule632": 1
       },
       "paginas": {
-        "/": 36,
-        "/seccion/futbol": 7,
-        "/seccion/tecnologia": 3,
+        "/": 41,
+        "/seccion/futbol": 15,
+        "/seccion/tecnologia": 9,
         "/clima": 3,
         "/seccion/politica": 2,
         "/seccion/automovilismo": 1,
-        "/seccion/cultura": 1,
         "/farmacias": 1,
+        "/seccion/cultura": 1,
         "/seccion/economia": 1,
         "/agenda/caminata-rosa-muni24072": 1,
         "/seccion/argentina": 1,
@@ -1360,10 +1412,11 @@
         "/agenda": 1
       },
       "paises": {
-        "AR": 51,
+        "AR": 102,
         "CN": 38,
-        "US": 15,
-        "IE": 3
+        "US": 20,
+        "IE": 3,
+        "SE": 2
       },
       "horas": [
         4,
@@ -1387,16 +1440,60 @@
         0,
         0,
         0,
+        38,
+        18,
+        2
+      ],
+      "visitas": 54,
+      "vistas": 165,
+      "dispositivos": {
+        "mobile": 101,
+        "desktop": 64
+      }
+    },
+    "2026-10-05": {
+      "referentes": {
+        "directo": 4
+      },
+      "paises": {
+        "US": 10
+      },
+      "dispositivos": {
+        "desktop": 5,
+        "mobile": 2
+      },
+      "notas": {},
+      "paginas": {
+        "/": 7
+      },
+      "visitas": 4,
+      "vistas": 7,
+      "horas": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0
-      ],
-      "visitas": 48,
-      "vistas": 107,
-      "dispositivos": {
-        "desktop": 57,
-        "mobile": 50
-      }
+      ]
     }
   }
 }
