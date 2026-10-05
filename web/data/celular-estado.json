@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T16:32:39.593Z",
- "portada": 48,
- "archivo": 920,
+ "generado": "2026-10-05T17:02:11.877Z",
+ "portada": 50,
+ "archivo": 923,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T16:32:39.623Z",
+  "generado": "2026-10-05T17:02:11.904Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,12 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
      {
       "id": "9lbni",
       "titulo": "El capitán de Benín analiza el cruce contra la Selección",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "2umrmg",
+      "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
+      "seccion": "Economía"
      },
      {
       "id": "199raki",
@@ -173,11 +178,6 @@
       "id": "lomklr",
       "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
       "seccion": "Deportes"
-     },
-     {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce"
      }
     ]
    }

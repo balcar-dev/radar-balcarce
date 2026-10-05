@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T16:32:39.593Z",
+ "generado": "2026-10-05T17:02:11.877Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -20,6 +20,88 @@
    "maximo": 3
   },
   {
+   "id": "1k1mxar",
+   "titulo": "La Iglesia destacó la reunión con el Gobierno por la situación en discapacidad, pero advirtió: “Los gestos solos no alcanzan”",
+   "copete": "Previo a la visita del papa León XIV al Cottolengo Don Orione, el Gobierno recibió a la Iglesia para defender sus políticas sobre discapacidad. La reunión se realizó en el Ministerio de Salud, entre funcionarios del área y autoridades de la Conferencia Episcopal Argentina (CEA)…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-05T12:04:27.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/05/antes-de-la-visita-del-papa-al-cottolengo-el-gobierno-recibe-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad-2/",
+     "fecha": "2026-10-05T16:12:13.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/politica/gobierno-convoca-conferencia-episcopal-antes-visita-papa-2026105122246",
+     "fecha": "2026-10-05T15:22:00.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/politica/ante-la-llegada-de-leo-xiv-el-gobierno-convoco-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad.phtml",
+     "fecha": "2026-10-05T14:42:00.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/05/discapacidad-el-gobierno-busca-tender-puentes-con-la-iglesia-antes-de-la-visita-del-papa/",
+     "fecha": "2026-10-05T14:54:52.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/politica/el-ministerio-salud-recibe-la-iglesia-los-reclamos-discapacidad-n1603300",
+     "fecha": "2026-10-05T15:59:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/politica/el-ministerio-salud-recibe-la-iglesia-los-reclamos-discapacidad-n1603300",
+     "fecha": "2026-10-05T15:59:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/gobierno-iglesia-reunion-discapacidad-visita-papa-leon-xiv-5-octubre-2026",
+     "fecha": "2026-10-05T13:37:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/gobierno-convoca-iglesia-discapacidad-visita-papa/",
+     "fecha": "2026-10-05T15:46:40.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-se-reune-con-la-iglesia-para-tratar-las-politicas-de-discapacidad-en-el-marco-de-la-visita-del-papa-leon-xiv-al-cottolengo/",
+     "fecha": "2026-10-05T15:37:01.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/antes-la-visita-del-papa-el-gobierno-convoco-la-iglesia-dialogar-discapacidad-n923044",
+     "fecha": "2026-10-05T13:57:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad--antes-de-la-visita-del-papa_a6ac3980defa9665a6c1c17fd",
+     "fecha": "2026-10-05T12:35:34.277Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-politica-y-economia_1791206280",
+     "fecha": "2026-10-05T13:34:04.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/nacionales/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa",
+     "fecha": "2026-10-05T13:56:47.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-5-9-55-0-el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-leon-xiv",
+     "fecha": "2026-10-05T13:11:17.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 5
+  },
+  {
    "id": "r2tg83",
    "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
    "copete": "La unidad atenderá de 7 a 12 horas sobre calle 11, entre 18 y 20, con servicios de castración y vacunación antirrábica para perros y gatos.",
@@ -34,38 +116,6 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "1rqm2xx",
-   "titulo": "Alquileres en CABA: el 40% de los hogares de menores ingresos destina más de la mitad de su sueldo a la vivienda",
-   "copete": "El alquiler, las expensas y los servicios ocupan una porción cada vez mayor del presupuesto de los hogares porteños y dejan menos margen para el resto de los consumos. En particular, el 40% de los hogares de menores ingresos de la Ciudad de Buenos Aires destina en promedio más…",
-   "seccion": "Economía",
-   "fecha": "2026-10-05T11:34:53.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/05/alquileres-en-caba-el-40-de-los-hogares-de-menores-ingresos-destina-mas-de-la-mitad-de-su-sueldo-a-la-vivienda/",
-     "fecha": "2026-10-05T11:34:53.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/economia/el-alquiler-un-dos-ambientes-representa-la-mitad-los-ingresos-del-40-los-hogares-menores-ingresos-n6330148",
-     "fecha": "2026-10-05T16:09:56.000Z"
-    },
-    {
-     "medio": "iProfesional",
-     "enlace": "https://www.iprofesional.com/economia/465908-caba-el-40-de-los-hogares-pobres-gasta-mas-de-la-mitad-en-alquiler",
-     "fecha": "2026-10-05T14:53:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/economia/alquileres-caba-4-cada-10-hogares-menores-ingresos-destinan-mas-la-mitad-su-sueldo-la-vivienda-n250760",
-     "fecha": "2026-10-05T14:14:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 93 caracteres, el máximo es 90",
    "maximo": 3
   }
  ]

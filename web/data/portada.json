@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T16:32:39.593Z",
+  "generado": "2026-10-05T17:02:11.877Z",
   "notas": [
     {
       "id": "1v130vb",
@@ -12,17 +12,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44998-xoana-martinez-defendio-el-acuerdo-paritario-municipal-hay-que-trabajar-mucho-para-conseguir-todo-lo-que-se-ha-logrado/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-05T16:31:22.668Z",
       "sinFecha": true,
       "visto": "2026-10-05T16:31:22.668Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "hospital"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "Xoana Martínez defendió la paritaria municipal y destacó aumentos por encima de la inflación.",
@@ -326,9 +324,9 @@
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "Diario La Vanguardia",
         "QZ Noticias (Mar del Plata)",
-        "El Diario Balcarce"
+        "El Diario Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://accion5.com/zonal-en-balcarce-los-horarios-de-las-dos-jornadas-completas/",
       "teniaImagenLaFuente": true,
@@ -616,9 +614,10 @@
       "guion": "Carlos Bianco pide ampliar el espacio político para las elecciones",
       "seccion": "Política",
       "medios": [
-        "El Eco de Tandil",
         "Agencia DIB",
-        "La Verdad"
+        "El Día",
+        "La Verdad",
+        "El Eco de Tandil"
       ],
       "enlace": "https://dib.com.ar/politica/carlos-bianco-si-queres-ganar-una-eleccion-la-pureza-ideologica-no-alcanza-n56246",
       "teniaImagenLaFuente": true,
@@ -711,11 +710,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44995-balcarce-podria-verse-beneficiado-por-una-nueva-transferencia-del-fefim-a-los-municipios-bonaerenses/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T13:31:16.447Z",
       "sinFecha": true,
       "visto": "2026-10-05T13:31:16.447Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -853,6 +852,142 @@
       "slug": "campo-de-pato-gana-el-torneo-regional-y-asciende-en-hockey"
     },
     {
+      "id": "1tdaagh",
+      "titulo": "Boca pierde a Alan Velasco por un desgarro en el aductor",
+      "copete": "El mediocampista ofensivo sufre una lesión muscular tras el último encuentro y se pierde los próximos compromisos del equipo dirigido por Rodolfo Arruabarrena. El chileno Carlos Palacios se perfila como su reemplazante.",
+      "cuerpo": "El plantel Xeneize sufre una baja sensible de cara a la definición de la temporada tras confirmarse la lesión del volante Alan Velasco. El futbolista padece un desgarro en el aductor de la pierna izquierda, sufrido luego de la victoria ante Unión, según informó el cuerpo técnico.\n\nEl entrenador Rodolfo Arruabarrena pierde a una pieza fundamental para afrontar la doble competencia y la Copa Sudamericana. Ante este panorama, el chileno Carlos Palacios asoma como el principal candidato para ocupar su lugar en el mediocampo durante los próximos partidos del equipo.",
+      "guion": "Boca pierde a Alan Velasco por un desgarro en el aductor",
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno",
+        "Canal 26",
+        "Diario Popular",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.tycsports.com/boca-juniors/desgarro-alan-velasco-oportunidad-carlos-palacios-flechita-para-arriba-boca-id764389.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T13:15:20.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T17:01:18.834Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Alan Velasco sufre un desgarro en el aductor izquierdo",
+        "El mediocampista se perderá varios encuentros de la temporada",
+        "Carlos Palacios se perfila como el reemplazante ideal",
+        "El equipo afronta instancias decisivas en la Copa Sudamericana"
+      ],
+      "noConfirmado": [
+        "No hay precisiones exactas sobre el tiempo total de recuperación, aunque se estima una ausencia de al menos dos semanas o cinco partidos"
+      ],
+      "textoRedes": "Boca sufre la baja de Alan Velasco por un desgarro en el aductor de la pierna izquierda y el cuerpo técnico analiza alternativas para reemplazarlo en la recta final de la temporada.",
+      "etiquetas": [
+        "Alan Velasco",
+        "Rodolfo Arruabarrena",
+        "Carlos Palacios",
+        "Copa Sudamericana",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/desgarro-alan-velasco-oportunidad-carlos-palacios-flechita-para-arriba-boca-id764389.html",
+          "fecha": "2026-10-05T13:15:20.000Z",
+          "oficial": false,
+          "aporte": "Detalló la lesión de Alan Velasco y las declaraciones de Rodolfo Arruabarrena sobre Carlos Palacios."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/05/dura-noticia-para-boca-se-confirmo-la-lesion-de-alan-velasco-y-podria-perderse-la-ida-ante-vasco-da-gama/",
+          "fecha": "2026-10-05T16:03:12.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la baja del mediocampista por un desgarro en el aductor izquierdo."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/alan-velasco-desgarro-boca-pierde-3-partidos-variantes-vasco-arruabarrena-2026105104931",
+          "fecha": "2026-10-05T13:49:31.000Z",
+          "oficial": false,
+          "aporte": "Informó la cantidad de partidos que se perdería el jugador."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/baja-sensible-en-boca-se-confirmo-el-desgarro-de-alan-velasco.phtml",
+          "fecha": "2026-10-05T15:26:38.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que la lesión ocurrió durante el partido contra Unión."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/boca-alan-velasco-desgarro-aductor-baja-arruabarrena-id764418.html",
+          "fecha": "2026-10-05T16:13:11.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/boca-juniors/lesion-desgarro-alan-velasco-tiempo-afuera-boca_0_Rxp370J6pS.html",
+          "fecha": "2026-10-05T14:44:46.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/mala-noticia-boca-se-confirmo-la-lesion-alan-velasco-y-sera-una-baja-clave-n6330214",
+          "fecha": "2026-10-05T16:37:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el Xeneize pierde a una pieza clave para la recta final."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/10/05/alarma-en-boca-la-lesion-de-alan-velasco-que-complica-a-arruabarrena-antes-de-enfrentar-a-vasco-da-gama/",
+          "fecha": "2026-10-05T16:59:35.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el futbolista estará inactivo durante varias semanas."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/futbol/se-confirmo-el-desgarro-velasco-y-se-perdera-la-ida-vasco-da-gama-la-copa-sudamericana-quien-sera-el-reemplazante-n923041",
+          "fecha": "2026-10-05T13:18:00.000Z",
+          "oficial": false,
+          "aporte": "Anotó que Palacios pica en punta para reemplazar al lesionado."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/boca/4-opciones-para-un-puesto-arruabarrena-define-al-reemplazante-alan-velasco-en-el-equipo-titular-de-boca",
+          "fecha": "2026-10-05T14:59:38.000Z",
+          "oficial": false,
+          "aporte": "Agregó que la ausencia abarcaría al menos cinco encuentros de la seguidilla."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/boca/boca-hoy-se-desgarro-velasco-las-opciones-para-arruabarrena-y-mas",
+          "fecha": "2026-10-05T16:10:08.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "boca-pierde-a-alan-velasco-por-un-desgarro-en-el-aductor",
+      "foto": {
+        "archivo": "fotos-notas/1tdaagh.jpg",
+        "credito": "Foto: TyC Sports"
+      }
+    },
+    {
       "id": "bmbmep",
       "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
       "copete": "Los títulos de la petrolera británica retroceden en la bolsa londinense este lunes. La firma ratificó su continuidad en el yacimiento de Malvinas a pesar de la salida de contratistas.",
@@ -864,6 +999,7 @@
         "TN (Todo Noticias)",
         "Ámbito",
         "Noticias Argentinas (NA)",
+        "El Día",
         "El Marplatense"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/05/malvinas-caen-casi-20-las-acciones-de-la-petrolera-que-busca-extraer-crudo-con-el-proyecto-sea-lion/",
@@ -1167,7 +1303,7 @@
       "fecha": "2026-10-05T12:54:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:31:24.148Z",
-      "relevancia": 43,
+      "relevancia": 47,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1340,126 +1476,106 @@
       }
     },
     {
-      "id": "1k1mxar",
-      "titulo": "El Gobierno se reúne con la Iglesia para debatir políticas sobre discapacidad",
-      "copete": "Funcionarios nacionales y autoridades de la Conferencia Episcopal Argentina analizan la situación del sector. El encuentro se realiza antes de la visita del papa León XIV al Cottolengo Don Orione.",
-      "cuerpo": "El Ministerio de Salud recibió a representantes de la Conferencia Episcopal Argentina para debatir sobre la situación de las personas con discapacidad, sus familias y las instituciones del sector. La reunión comenzó a las 11.00 en la cartera sanitaria en la antesala de la visita que el papa León XIV realizará el próximo mes al Cottolengo Don Orione.\n\nPor parte del Gobierno participó el jefe de Gabinete del Ministerio, Roberto Olivieri Pinto, junto a funcionarios del área.\n\nEl encuentro antecede al debate legislativo sobre el proyecto oficialista titulado Ley de Fortalecimiento, Sostenibilidad y Eficiencia permanente del sistema de Discapacidad. La propuesta cosechó 42 firmas en un plenario de comisiones de Diputados para reemplazar la emergencia que vence a fin de año, mientras que la oposición reunió 36 firmas para prorrogarla.",
-      "guion": "El Gobierno se reúne con la Iglesia para debatir políticas sobre discapacidad",
-      "seccion": "Argentina",
+      "id": "ialwkh",
+      "titulo": "Benín enfrenta a la Selección y advierte que competirá",
+      "copete": "El arquero del seleccionado africano, Marcel Dandjinou, palpitó el último encuentro de Lionel Messi en el país. Afirmó que buscará frenar al capitán y descartó inconvenientes en la estadía.",
+      "cuerpo": "El arquero del conjunto visitante, Marcel Dandjinou, se refirió al cruce y aseguró que el plantel buscará competir con la máxima seriedad.\n\nAdemás, sostuvo que intentará atajar cualquier remate, incluso un penal en los minutos finales, y descartó que la delegación haya sufrido problemas de agua o luz durante su estadía en Buenos Aires.\n\nComo se informó previamente, las localidades para el evento organizado por la Asociación del Fútbol Argentino se agotaron de forma virtual en pocas horas.",
+      "guion": "Benín enfrenta a la Selección y advierte que competirá",
+      "seccion": "Fútbol",
       "medios": [
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "C5N",
-        "Crónica",
-        "Radio Mitre",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "El Eco de Tandil",
-        "TN (Todo Noticias)"
+        "QZ Noticias (Mar del Plata)",
+        "Minuto Uno",
+        "TN (Todo Noticias)",
+        "Crónica"
       ],
-      "enlace": "https://tn.com.ar/politica/2026/10/05/antes-de-la-visita-del-papa-al-cottolengo-el-gobierno-recibe-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad-2/",
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/05/el-arquero-de-benin-desafio-a-lionel-messi-antes-de-su-despedida-y-advirtio-no-estamos-aca-para-hacer-turismo/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T12:04:27.000Z",
+      "fecha": "2026-10-05T11:59:50.000Z",
       "sinFecha": false,
-      "visto": "2026-10-05T15:01:21.016Z",
-      "relevancia": 73,
+      "visto": "2026-10-05T17:01:18.834Z",
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Reunión entre el Ministerio de Salud y la Conferencia Episcopal",
-        "Encuentro previo a la visita del papa León XIV al Cottolengo Don Orione",
-        "Debate sobre el proyecto oficial para reemplazar la emergencia en discapacidad"
+        "La Selección argentina juega este martes ante Benín en el Monumental.",
+        "El arquero Marcel Dandjinou afirmó que su equipo competirá sin concesiones.",
+        "El plantel visitante descartó problemas con los servicios durante su estadía.",
+        "Las entradas para la despedida del capitán se agotaron de forma anticipada."
       ],
       "seSabe": [
-        "La reunión se realiza desde las 11.00 en la sede del Ministerio de Salud",
-        "Participan el funcionario Roberto Olivieri Pinto y autoridades eclesiásticas",
-        "El proyecto oficialista reunió 42 firmas en comisiones de Diputados"
+        "El partido se jugará este martes en el estadio Monumental.",
+        "Marcel Dandjinou es el arquero titular del seleccionado de Benín.",
+        "El plantel visitante descartó inconvenientes durante su estadía en Buenos Aires."
       ],
-      "noConfirmado": [
-        "La fecha exacta del próximo mes en que el papa León XIV visitará el Cottolengo Don Orione"
-      ],
-      "textoRedes": "Funcionarios nacionales y autoridades de la Iglesia se reúnen para debatir políticas sobre discapacidad antes de la visita del papa León XIV al Cottolengo Don Orione.",
+      "textoRedes": "El arquero de Benín, Marcel Dandjinou, palpitó el último partido de Lionel Messi en el país y aseguró que el seleccionado africano buscará competir sin concesiones en el estadio Monumental.",
       "etiquetas": [
-        "Gobierno",
-        "Iglesia",
-        "Discapacidad",
-        "Ministerio de Salud",
-        "Papa León XIV",
-        "Diputados"
+        "Seleccion Argentina",
+        "Lionel Messi",
+        "Benin",
+        "Marcel Dandjinou",
+        "Estadio Monumental"
       ],
       "fuentesConsultadas": [
         {
           "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/05/antes-de-la-visita-del-papa-al-cottolengo-el-gobierno-recibe-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad-2/",
-          "fecha": "2026-10-05T12:04:27.000Z",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/05/el-arquero-de-benin-desafio-a-lionel-messi-antes-de-su-despedida-y-advirtio-no-estamos-aca-para-hacer-turismo/",
+          "fecha": "2026-10-05T11:59:50.000Z",
           "oficial": false,
-          "aporte": "Detalla la hora de inicio, los funcionarios presentes y los ejes del proyecto de ley oficialista sobre discapacidad."
+          "aporte": "Detalló las declaraciones del arquero Marcel Dandjinou sobre el partido y el rechazo a los supuestos problemas de servicios."
         },
         {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa",
-          "fecha": "2026-10-05T13:55:46.000Z",
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/no-estamos-para-hacer-turismo-la-advertencia-del-arquero-de-benin-antes-de-jugar-con-argentina",
+          "fecha": "2026-10-05T16:29:38.000Z",
           "oficial": false,
-          "aporte": "Informa la convocatoria del Ministerio de Salud a la Conferencia Episcopal Argentina."
+          "aporte": "Confirmó las declaraciones del guardameta sobre las expectativas del plantel visitante para el amistoso."
         },
         {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/05/discapacidad-el-gobierno-busca-tender-puentes-con-la-iglesia-antes-de-la-visita-del-papa/",
-          "fecha": "2026-10-05T14:54:52.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/la-desafiante-frase-del-arquero-benin-antes-jugar-argentina-no-estamos-hacer-turismo-n6330102",
+          "fecha": "2026-10-05T13:07:00.000Z",
           "oficial": false,
-          "aporte": "Menciona que el papa León XIV recorrerá el Cottolengo Don Orione."
+          "aporte": "Informó sobre los elogios del arquero hacia el capitán del seleccionado nacional."
         },
         {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/gobierno-iglesia-reunion-discapacidad-visita-papa-leon-xiv-5-octubre-2026",
-          "fecha": "2026-10-05T13:37:00.000Z",
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/seleccionargentina/arquero-benin-messi-penal-dandjinou-despedida-seleccion-argentina/",
+          "fecha": "2026-10-05T16:02:21.000Z",
           "oficial": false,
-          "aporte": "Confirma que la reunión se lleva a cabo este lunes."
+          "aporte": "Aportó precisiones sobre la postura competitiva del conjunto africano en la previa del encuentro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "o99ioz",
+          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
+          "fecha": "2026-10-03T13:24:05.000Z",
+          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
         },
         {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/antes-la-visita-del-papa-el-gobierno-convoco-la-iglesia-dialogar-discapacidad-n923044",
-          "fecha": "2026-10-05T13:57:00.000Z",
-          "oficial": false,
-          "aporte": "Registra la participación de funcionarios de Salud y autoridades eclesiásticas."
+          "id": "7bv4jl",
+          "titulo": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
+          "fecha": "2026-09-30T12:37:20.000Z",
+          "ruta": "/nota/la-afa-organiza-un-fan-fest-para-la-despedida-de-lionel-messi-7bv4jl"
         },
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad--antes-de-la-visita-del-papa_a6ac3980defa9665a6c1c17fd",
-          "fecha": "2026-10-05T12:35:34.000Z",
-          "oficial": false,
-          "aporte": "Aporta que el encuentro aborda el cuidado, acompañamiento e inclusión en discapacidad."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-politica-y-economia_1791206280",
-          "fecha": "2026-10-05T13:34:04.000Z",
-          "oficial": false,
-          "aporte": "No aportó información relevante por registrarse sin resumen."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-5-9-55-0-el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-leon-xiv",
-          "fecha": "2026-10-05T13:11:17.000Z",
-          "oficial": false,
-          "aporte": "Señala que la convocatoria ocurre antes de la visita papal."
+          "id": "1s5n48z",
+          "titulo": "Se agotan las entradas para el partido de despedida de Lionel Messi",
+          "fecha": "2026-09-24T23:25:00.000Z",
+          "ruta": "/nota/se-agotan-las-entradas-para-el-partido-de-despedida-de-lionel-messi-1s5n48z"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron 8 medios independientes.",
+        "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-gobierno-se-reune-con-la-iglesia-para-debatir-politicas-sobre",
+      "slug": "benin-enfrenta-a-la-seleccion-y-advierte-que-competira",
       "foto": {
-        "archivo": "fotos-notas/1k1mxar.jpg",
+        "archivo": "fotos-notas/ialwkh.jpg",
         "credito": "Foto: TN (Todo Noticias)"
       }
     },
@@ -1637,6 +1753,95 @@
       }
     },
     {
+      "id": "1rqm2xx",
+      "titulo": "El cuarenta por ciento de los hogares porteños destina gran parte del sueldo al alquiler",
+      "copete": "Un informe revela que los gastos de vivienda absorben más de la mitad de los ingresos en los sectores de menores recursos en Buenos Aires. Además, muchas familias recurren a deudas para cubrir compras básicas.",
+      "cuerpo": "El cuarenta por ciento de los hogares con menores ingresos en la Ciudad de Buenos Aires destina más de la mitad de sus recursos a pagar el alquiler, según un trabajo difundido por el Consejo Económico y Social porteño y Fundar. El análisis detalla que los gastos fijos como la vivienda, las expensas y los servicios desplazan a otros consumos cotidianos.\n\nEn paralelo, el relevamiento indica que más de la mitad de las familias que contrajeron deudas en el último semestre lo hicieron para afrontar necesidades elementales, como la alimentación y el pago del alquiler. Los valores de referencia muestran que un departamento de dos ambientes ronda los 890.000 pesos, mientras que una unidad de tres supera los 1,1 millones de pesos mensuales.\n\nFrente a este escenario, la administración local impulsa la reconversión de inmuebles del microcentro que antes funcionaban como oficinas para transformarlos en viviendas y ampliar la oferta habitacional en zonas que perdieron movimiento tras la pandemia.",
+      "guion": "El cuarenta por ciento de los hogares porteños destina gran parte del sueldo al alquiler",
+      "seccion": "Economía",
+      "medios": [
+        "Minuto Uno",
+        "Infobae",
+        "iProfesional",
+        "C5N"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/05/alquileres-en-caba-el-40-de-los-hogares-de-menores-ingresos-destina-mas-de-la-mitad-de-su-sueldo-a-la-vivienda/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T11:34:53.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T17:01:18.834Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El 40% de los sectores de menores ingresos gasta más de la mitad del sueldo en alquiler.",
+        "Un departamento de dos ambientes cuesta casi $890.000 en la Ciudad de Buenos Aires.",
+        "Más de la mitad de las familias endeudadas pidió créditos para alimentos y vivienda.",
+        "El Consejo Económico y Social y Fundar elaboraron el relevamiento."
+      ],
+      "noConfirmado": [
+        "No se detalló el universo total de familias alcanzadas por las deudas relevadas en el último semestre."
+      ],
+      "textoRedes": "Un informe revela que el cuarenta por ciento de los hogares de menores ingresos en la Ciudad de Buenos Aires destina más de la mitad de su sueldo al alquiler. Además, creció la cantidad de familias que se endeudan para comprar alimentos.",
+      "etiquetas": [
+        "alquileres",
+        "vivienda",
+        "Ciudad de Buenos Aires",
+        "economia",
+        "deudas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/05/alquileres-en-caba-el-40-de-los-hogares-de-menores-ingresos-destina-mas-de-la-mitad-de-su-sueldo-a-la-vivienda/",
+          "fecha": "2026-10-05T11:34:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló los porcentajes de ingresos destinados al alquiler y los valores promedio de los departamentos."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/el-alquiler-un-dos-ambientes-representa-la-mitad-los-ingresos-del-40-los-hogares-mas-pobres-n6330148",
+          "fecha": "2026-10-05T16:09:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que más de la mitad de las familias endeudadas pidió préstamos para alimentos y alquiler."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/economia/465908-caba-el-40-de-los-hogares-pobres-gasta-mas-de-la-mitad-en-alquiler",
+          "fecha": "2026-10-05T14:53:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó que cuatro de cada diez hogares de menores recursos destinan más de la mitad de sus recursos a un dos ambientes."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/alquileres-caba-4-cada-10-hogares-menores-ingresos-destinan-mas-la-mitad-su-sueldo-la-vivienda-n250760",
+          "fecha": "2026-10-05T14:14:00.000Z",
+          "oficial": false,
+          "aporte": "Identificó al Consejo Económico y Social y a Fundar como los autores del informe sobre gastos."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/el-alquiler-un-dos-ambientes-representa-la-mitad-los-ingresos-del-40-los-hogares-menores-ingresos-n6330148",
+          "fecha": "2026-10-05T16:09:56.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-cuarenta-por-ciento-de-los-hogares-portenos-destina-gran-parte-del",
+      "foto": {
+        "archivo": "fotos-notas/1rqm2xx.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "1tivdmf",
       "titulo": "Registran una baja de la chicharrita en las cinco regiones del país",
       "copete": "El último informe de la Red Nacional de Monitoreo indica una caída en la abundancia del insecto durante la segunda quincena de septiembre. Los especialistas insisten en mantener los controles.",
@@ -1789,12 +1994,13 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "El Eco de Tandil",
-        "Minuto Uno",
-        "A24",
+        "Ámbito",
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "La Tecla"
+        "La Tecla",
+        "A24",
+        "Minuto Uno"
       ],
       "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
       "teniaImagenLaFuente": true,
@@ -2161,6 +2367,7 @@
       "medios": [
         "El Cronista",
         "La Tecla",
+        "La Verdad",
         "InfoRegión",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -2257,6 +2464,8 @@
       "medios": [
         "Radio Gabal (FM 104.1)",
         "Ámbito",
+        "iProfesional",
+        "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
         "Agencia DIB"
@@ -2266,7 +2475,7 @@
       "fecha": "2026-10-05T08:25:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T12:31:16.062Z",
-      "relevancia": 76,
+      "relevancia": 80,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2391,9 +2600,9 @@
       "guion": "El capitán de Benín analiza el cruce contra la Selección",
       "seccion": "Fútbol",
       "medios": [
+        "Minuto Uno",
         "TN (Todo Noticias)",
         "A24",
-        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Bolavip Argentina"
@@ -2946,6 +3155,7 @@
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
@@ -2955,8 +3165,7 @@
         "Agencia DIB",
         "Radio Mitre",
         "El Día",
-        "La Nueva",
-        "La Verdad"
+        "La Nueva"
       ],
       "enlace": "https://www.ambito.com/economia/las-ventas-minoristas-pyme-subieron-apenas-03-septiembre-y-acumulan-una-caida-del-21-anual-n6329896",
       "teniaImagenLaFuente": true,
@@ -3471,6 +3680,7 @@
         "Olé",
         "Noticias Argentinas (NA)",
         "La Opinión",
+        "QZ Noticias (Mar del Plata)",
         "Clarín",
         "La Nueva",
         "0223 (Mar del Plata)"
@@ -3480,7 +3690,7 @@
       "fecha": "2026-10-04T12:54:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 90,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3917,21 +4127,15 @@
     "Cultura y agenda",
     "Policiales"
   ],
-  "temas": [
-    {
-      "nombre": "El hospital",
-      "ranura": "hospital",
-      "cuantas": 2
-    }
-  ],
+  "temas": [],
   "clima": {
     "ahora": {
       "temp": 19,
-      "sensacion": 17,
-      "humedad": 61,
+      "sensacion": 18,
+      "humedad": 59,
       "viento": 20,
       "rumbo": "NO",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Nublado",
       "esDeDia": true
     },
     "dias": [
@@ -4290,28 +4494,28 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "thzghe",
+      "titulo": "Paro de subtes: amenazan con medida de fuerza gremial este…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "bgbapg",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "1xdn33s",
+      "id": "eaedz2",
       "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "1pr5cdn",
       "titulo": "Murió la actriz Zulema Galperín, reconocida por sus…",
       "seccion": "Cultura y agenda",
       "motivo": "parece promoción, no noticia: \"publicidad\""
-    },
-    {
-      "id": "thzghe",
-      "titulo": "Paro de subtes: amenazan con medida de fuerza gremial este…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "h9pxr0",
