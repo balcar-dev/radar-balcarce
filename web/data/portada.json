@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T07:02:38.836Z",
+  "generado": "2026-10-05T07:33:08.024Z",
   "notas": [
     {
       "id": "1u6ny2m",
@@ -736,6 +736,7 @@
         "La Nación",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
+        "La Noticia 1",
         "Ámbito",
         "Infobae",
         "TN (Todo Noticias)",
@@ -743,9 +744,9 @@
         "Crónica",
         "El Día",
         "La Nueva",
+        "InfoRegión",
         "Punto Noticias",
-        "Radio Mitre",
-        "InfoRegión"
+        "Radio Mitre"
       ],
       "enlace": "https://www.ambito.com/economia/las-ventas-minoristas-pyme-subieron-apenas-03-septiembre-y-acumulan-una-caida-del-21-anual-n6329896",
       "teniaImagenLaFuente": true,
@@ -1096,6 +1097,121 @@
       "foto": {
         "archivo": "fotos-notas/1camy15.jpg",
         "credito": "Foto: Clarín"
+      }
+    },
+    {
+      "id": "r1j6p6",
+      "titulo": "Casella choca en Posadas tras un toque y una cubierta golpea a un espectador",
+      "copete": "El piloto uruguayo protagonizó un fuerte accidente en la octava fecha del TCR South America en Posadas. Su vehículo despistó tras un contacto y un neumático voló hacia el público.",
+      "cuerpo": "Casella recibió un toque de Camilo Trappa, perdió el control de su unidad y chocó contra las defensas de contención de neumáticos. Tras el impacto, uno de los elementos de protección salió despedido y alcanzó a una persona que observaba la competencia detrás del alambrado. Según informó la cobertura oficial, el deportista uruguayo no sufrió lesiones y la prueba debió ser neutralizada con el ingreso del auto de seguridad.\n\nLos comisarios deportivos analizaron la maniobra y determinaron que el argentino fue responsable del incidente, por lo que le aplicaron un recargo de diez segundos que lo relegó del quinto al decimosexto puesto. La competencia consagró ganador a Néstor Girolami, con Leonel Pernía en el segundo lugar y Raphael Reis en el tercero.",
+      "guion": "Casella choca en Posadas tras un toque y una cubierta golpea a un espectador",
+      "seccion": "Automovilismo",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Minuto Uno",
+        "Radio Mitre"
+      ],
+      "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/04/susto-en-el-tcr-un-piloto-recibio-un-toque-perdio-el-control-del-auto-y-protagonizo-un-fuerte-choque/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-04T16:03:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-04T19:31:15.414Z",
+      "relevancia": 74,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo"
+      ],
+      "como": "automatica",
+      "seSabe": [
+        "Juan Manuel Casella protagonizó un choque en la primera carrera del TCR South America en Posadas.",
+        "El incidente se produjo tras un contacto con Camilo Trappa cuando faltaban nueve minutos para el cierre.",
+        "Un neumático impactó contra un espectador al otro lado del alambrado.",
+        "El piloto uruguayo no sufrió lesiones.",
+        "Camilo Trappa fue sancionado con diez segundos de recargo y finalizó decimosexto.",
+        "Néstor Girolami ganó la competencia, secundado por Leonel Pernía y Raphael Reis."
+      ],
+      "noConfirmado": [
+        "No se informó el estado de salud de la persona alcanzada por el neumático."
+      ],
+      "textoRedes": "Juan Manuel Casella protagonizó un fuerte accidente en la primera carrera del TCR South America en Posadas tras un toque con Camilo Trappa. Un neumático salió despedido e impactó a un espectador, aunque el piloto no sufrió lesiones.",
+      "etiquetas": [
+        "Automovilismo",
+        "TCR South America",
+        "Juan Manuel Casella",
+        "Camilo Trappa",
+        "Posadas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/04/susto-en-el-tcr-un-piloto-recibio-un-toque-perdio-el-control-del-auto-y-protagonizo-un-fuerte-choque/",
+          "fecha": "2026-10-04T16:03:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo del accidente, la sanción a Trappa, el podio y la reacción del piloto uruguayo."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/fuerte-accidente-en-el-tcr-south-america-una-rueda-salio-despedida-y-golpeo-a-un-espectador-nid04102026/",
+          "fecha": "2026-10-04T17:58:40.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la ubicación del evento en el Autódromo Rosamonte de Posadas, Misiones."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/04/video-el-impactante-accidente-en-el-tcr-south-america-que-provoco-que-un-neumatico-golpeara-un-espectador/",
+          "fecha": "2026-10-04T17:52:33.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el hecho ocurrió durante la Final 1 y correspondió a la octava fecha del campeonato."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/el-impactante-video-de-un-accidente-en-el-tcr-south-america-una-persona-termino-herida-id764332.html",
+          "fecha": "2026-10-04T16:55:08.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido informativo en el resumen."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/se-despisto-en-el-circuito-una-rueda-salio-volando-y-golpeo-a-un-espectador-en-la-carrera-del-tcr/",
+          "fecha": "2026-10-04T18:54:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos generales sobre el despiste tras el contacto con Camilo Trappa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1y13u38",
+          "titulo": "Ignacio Fain logra la pole en San Nicolás y corta la sequia de Torino",
+          "fecha": "2026-10-03T19:57:35.000Z",
+          "ruta": "/nota/ignacio-fain-logra-la-pole-en-san-nicolas-y-corta-la-sequia-de-torino-1y13u38"
+        },
+        {
+          "id": "sty1jd",
+          "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+          "fecha": "2026-10-02T16:31:18.468Z",
+          "ruta": "/nota/la-fiesta-nacional-del-postre-anticipa-su-vigesima-segunda-edicion-sty1jd"
+        },
+        {
+          "id": "1j4lf17",
+          "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
+          "fecha": "2026-10-02T01:39:50.000Z",
+          "ruta": "/nota/hugo-mazzacane-descarta-el-regreso-del-turismo-carretera-a-balcarce-1j4lf17"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "casella-choca-en-posadas-tras-un-toque-y-una-cubierta-golpea-a-un",
+      "foto": {
+        "archivo": "fotos-notas/r1j6p6.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2415,6 +2531,7 @@
       "seccion": "Fútbol",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia",
         "Acción 5 (Balcarce)"
       ],
@@ -2542,68 +2659,6 @@
       "foto": {
         "archivo": "fotos-notas/irc0sr.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1gq0pia",
-      "titulo": "La Liga Balcarceña suspende toda la fecha del fútbol local",
-      "copete": "La Liga Balcarceña de Fútbol postergó los encuentros previstos para el fin de semana. La decisión se tomó tras constatar el estado de los terrenos y los accesos por las precipitaciones.",
-      "cuerpo": "La Liga Balcarceña de Fútbol suspendió en su totalidad la programación futbolística prevista para el fin de semana debido a las precipitaciones registradas en las últimas horas. Según informó la entidad, se realizó un recorrido por los distintos escenarios y se constató que los terrenos de juego y los accesos presentan serias dificultades.\n\nDesde la organización explicaron que la humedad acumulada durante la noche impidió que las canchas lograran secarse adecuadamente. Además, señalaron que no era viable disputar una parte de la jornada porque los encuentros pendientes hubieran recargado el calendario del próximo fin de semana.\n\nLa reprogramación de los partidos será informada próximamente por las autoridades de la Liga.",
-      "guion": "La Liga Balcarceña suspende toda la fecha del fútbol local",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/se-postergo-en-su-totalidad-la-fecha-del-futbol-local/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-03T22:24:54.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T22:31:21.682Z",
-      "relevancia": 59,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se suspendió toda la fecha del fútbol local",
-        "La medida responde al estado de las canchas por el agua caída",
-        "Afecta a los encuentros programados para el fin de semana",
-        "La nueva programación se informará próximamente"
-      ],
-      "seSabe": [
-        "La Liga Balcarceña de Fútbol suspendió todos los partidos del fin de semana",
-        "La decisión se basó en el estado de las canchas y los accesos tras las precipitaciones",
-        "La nueva fecha de los encuentros será informada más adelante por la entidad"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Liga Balcarceña de Fútbol suspendió todos los partidos previstos para este fin de semana debido al estado de las canchas y los accesos tras las precipitaciones registradas en las últimas horas.",
-      "etiquetas": [
-        "Liga Balcarceña de Fútbol",
-        "fútbol local",
-        "suspensión",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/se-postergo-en-su-totalidad-la-fecha-del-futbol-local/",
-          "fecha": "2026-10-03T22:24:54.000Z",
-          "oficial": false,
-          "aporte": "Informó la suspensión total de la fecha del fútbol local debido al estado de las canchas por el agua caída."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-liga-balcarcena-suspende-toda-la-fecha-del-futbol-local",
-      "foto": {
-        "archivo": "fotos-notas/1gq0pia.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2797,57 +2852,57 @@
   "clima": {
     "ahora": {
       "temp": 11,
-      "sensacion": 7,
-      "humedad": 71,
-      "viento": 14,
-      "rumbo": "NO",
-      "cielo": "Nublado",
+      "sensacion": 8,
+      "humedad": 65,
+      "viento": 12,
+      "rumbo": "O",
+      "cielo": "Parcialmente nublado",
       "esDeDia": false
     },
     "dias": [
       {
         "fecha": "2026-10-05",
         "dia": "lun",
-        "max": 19,
-        "min": 11,
+        "max": 20,
+        "min": 10,
         "lluvia": 47,
         "codigo": 53,
-        "viento": 25,
+        "viento": 28,
         "milimetros": 1,
         "cielo": "Llovizna"
       },
       {
         "fecha": "2026-10-06",
         "dia": "mar",
-        "max": 21,
-        "min": 11,
+        "max": 20,
+        "min": 9,
         "lluvia": 20,
         "codigo": 51,
-        "viento": 13,
+        "viento": 16,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-07",
         "dia": "mié",
-        "max": 17,
-        "min": 12,
+        "max": 16,
+        "min": 11,
         "lluvia": 51,
         "codigo": 51,
-        "viento": 20,
+        "viento": 23,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-08",
         "dia": "jue",
-        "max": 14,
-        "min": 10,
+        "max": 11,
+        "min": 9,
         "lluvia": 46,
-        "codigo": 51,
-        "viento": 23,
-        "milimetros": 2,
-        "cielo": "Llovizna leve"
+        "codigo": 80,
+        "viento": 24,
+        "milimetros": 15,
+        "cielo": "Chaparrones"
       }
     ],
     "fuente": "Open-Meteo"
@@ -3166,22 +3221,10 @@
       "motivo": "necesita ojo humano: \"herido\""
     },
     {
-      "id": "1qu9thp",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
       "id": "h9pxr0",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niña\""
-    },
-    {
-      "id": "15m9ao1",
-      "titulo": "Tandil reclamó obras urgentes en la Ruta 226 en el…",
-      "seccion": "Argentina",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "7fpjzu",
@@ -3200,6 +3243,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "15m9ao1",
+      "titulo": "Tandil reclamó obras urgentes en la Ruta 226 en el…",
+      "seccion": "Argentina",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "gzrk1u",
