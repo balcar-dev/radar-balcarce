@@ -313,8 +313,19 @@ export function crearCliente({
     return { pagina: p.nombre, enlace: p.enlace, instagram: p.instagramUsuario, instagramId: p.instagramId, permisos };
   }
 
+  /**
+   * Lo último que hay publicado en el feed de Instagram (texto, hora y dirección). Sin efectos: sólo pregunta. Sirve para comprobar si algo ya salió antes de
+   * volver a publicarlo: el 5/10/2026 Meta contestó "Application request limit reached" pero igual publicó, y el reintento de cada vuelta subió cuatro copias.
+   */
+  async function publicacionesRecientesDeInstagram({ limite = 25 } = {}) {
+    const p = await pagina();
+    if (!p.instagramId) return [];
+    const j = await pedir(`${p.instagramId}/media`, { conToken: p.tokenPagina, params: { fields: 'id,caption,timestamp,media_type,permalink', limit: limite } });
+    return Array.isArray(j?.data) ? j.data : [];
+  }
+
   return {
     pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook,
-    enlaceDePublicacion, verificar,
+    enlaceDePublicacion, publicacionesRecientesDeInstagram, verificar,
   };
 }

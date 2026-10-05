@@ -58,13 +58,22 @@ test('el plan arma la pieza con las dos placas, el guion y su voz', () => {
   const p = planDelDia(DATOS_PLAN, { fecha: A('2026-10-05'), estado: {}, eventos: [], libro: libroNuevo() }).piezas.find((x) => x.nombre === 'efemeride');
   assert.ok(p, 'el plan la trae');
   assert.equal(p.hora, '09:00');
-  assert.equal(p.tipo, 'historia');
+  assert.equal(p.tipo, 'reel', 'es un reel (5/10, Hernán): y como todo reel se sube también como historia (redes/publicar-piezas.mjs)');
   assert.ok(p.svg.includes('1922') && p.svg2.includes('Darregueira'));
   assert.match(p.guion, /Y además, un día como hoy:/);
   assert.equal(p.momento, 'manana');
   assert.equal(p.fueraDeTecho, undefined);
   const sin = planDelDia(DATOS_PLAN, { fecha: A('2030-01-01'), estado: {}, eventos: [], libro: libroNuevo() }).piezas;
   assert.ok(!sin.some((x) => x.nombre === 'efemeride'));
+});
+
+test('la efeméride como reel no saca a ningún podcast del techo de reels ni deja de contar como historia', () => {
+  const piezas = planDelDia(DATOS_PLAN, { fecha: A('2026-10-05'), estado: {}, eventos: [], libro: libroNuevo() }).piezas;
+  const reels = piezas.filter((x) => x.tipo === 'reel');
+  assert.ok(reels.some((x) => x.nombre === 'efemeride'));
+  for (const r of reels) assert.equal(r.fueraDeTecho, undefined, `${r.nombre} se sacó por el techo`);
+  assert.match(fs.readFileSync(path.join(RAIZ, 'reels', 'plan.mjs'), 'utf8'), /p\.tipo === 'reel' && NOMBRES_DE_PODCAST\.includes\(p\.nombre\)/, 'el techo de reels cuenta sólo los podcasts');
+  assert.match(fs.readFileSync(path.join(RAIZ, 'reels', 'plan.mjs'), 'utf8'), /p.nombre === 'efemeride'/, 'y la efeméride cuenta para el techo de historias');
 });
 
 test('nunca se saca por el techo de historias, ni siquiera un día de feriado cargado', () => {

@@ -18,6 +18,7 @@
 import { anotar } from './elegir.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
 import { claveDePieza, piezasQueTocan, tipoInstagram, pieDePieza } from './piezas.mjs';
+import { posteoYaPublicado } from './espejo.mjs';
 
 /** Cómo se llama cada red en el libro y qué método del cliente la publica. */
 const REDES = {
@@ -147,6 +148,23 @@ export async function publicarPiezas({
       log(`  ${nombre} · ${etiqueta} · ${pieza.nombre} · ${pieza.titulo}`);
       const intentos = i === 0 ? 1 : INTENTOS_SECUNDARIA;
       let hecho = false;
+
+      // Un reel de Instagram que ya salió aunque Meta contestó con un error (5/10/2026, cuatro copias de un posteo): antes de volver a subirlo se mira si ya está.
+      const yaEstaEnInstagram = async () => {
+        if (red !== 'instagram' || tipo !== 'REELS' || typeof api.publicacionesRecientesDeInstagram !== 'function') return null;
+        try { return posteoYaPublicado(await api.publicacionesRecientesDeInstagram(), pieDePieza(pieza), { ahora }); } catch { return null; }
+      };
+      const huboFalla = Boolean(libro.problemas?.[`${clave}/${red}/${parteDe(tipo)}`]);
+      if (huboFalla) {
+        const ya = await yaEstaEnInstagram();
+        if (ya) {
+          anotar(libro, rubro, clave, { mediaId: ya.id, nombre: pieza.nombre, tipo, notaId: pieza.notaId ?? null, notaIds: pieza.notaIds ?? [] });
+          limpiarProblema(libro, `${clave}/${red}/${parteDe(tipo)}`);
+          guardar();
+          log(`             el reel ya estaba publicado (${ya.id}), no se repite`);
+          continue;
+        }
+      }
 
       for (let intento = 1; intento <= intentos && !hecho; intento += 1) {
         try {

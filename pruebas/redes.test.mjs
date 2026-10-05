@@ -303,7 +303,7 @@ test('el mensaje de Instagram es el mismo que Facebook: con el enlace y sin la f
   // nota, el crédito al final (conCreditoDeFoto, 28/09).
   const publicar = fs.readFileSync(new URL('../redes/publicar.mjs', import.meta.url), 'utf8');
   // El crédito va sólo si la imagen lleva la foto: los dos leen FOTO_EN_INSTAGRAM.
-  assert.match(publicar, /pie: FOTO_EN_INSTAGRAM \? conCreditoDeFoto\(mensajeDeNota\(nota, SITIO\), nota\) : mensajeDeNota\(nota, SITIO\)/);
+  assert.match(publicar, /const pie = FOTO_EN_INSTAGRAM \? conCreditoDeFoto\(mensajeDeNota\(nota, SITIO\), nota\) : mensajeDeNota\(nota, SITIO\);[\s\S]*?publicarFotoEnInstagram\(\{ imagenUrl: imagenDeNota\(nota, SITIO\), pie \}\)/);
   assert.match(fs.readFileSync(new URL('../web/app/nota/[id]/instagram.png/route.js', import.meta.url), 'utf8'), /foto: FOTO_EN_INSTAGRAM \?/);
   // Facebook sigue sin nombrar a nadie: su imagen (la del enlace) no lleva la foto.
   assert.match(publicar, /publicarEnFacebook\(\{ mensaje: mensajeDeNota\(nota, SITIO\), enlace \}\)/);

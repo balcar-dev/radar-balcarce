@@ -541,7 +541,7 @@ test('todas las piezas del plan hablan según su horario y cumplen el criterio',
     assert.match(p.guion, empiezaCon[momento], nombre);
   }
   for (const p of piezas.filter((x) => x.tipo === 'reel')) {
-    for (const i of p.items) assert.match(i.enlace, /^https:\/\/radarbalcarce\.com\/nota\//);
+    for (const i of p.items ?? []) assert.match(i.enlace, /^https:\/\/radarbalcarce\.com\/nota\//);
   }
   assert.equal(new Set(['noticia1', 'noticia2', 'podcast'].map((n) => porNombre[n].guion.split('.')[0])).size, 3, 'los tres podcasts saludan igual');
 });

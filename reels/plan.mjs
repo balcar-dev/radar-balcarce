@@ -402,14 +402,15 @@ export function planDelDia(datos, {
   }
 
   // "Un día como hoy" (1/10): a las 9:00, todos los días que tienen su efeméride preparada (redes/efemeride.mjs).
-  // Es una historia con dos placas (la principal y "Además…") y la voz de la locutora. Nunca se saca por el techo de historias.
+  // Es un REEL con dos placas (la principal y "Además…") y la voz de la locutora, y como todo reel se sube también como historia (5/10, Hernán: "las efemérides
+  // tienen que ser reel e historia"). Es el mismo audio y el mismo video: no gasta voz de más. No cuenta en el techo de los tres reels de los podcasts ni se saca por el de historias.
   if (tocaHoy('efemeride')) {
     const e = efemerideDelDia(fecha);
     if (e) {
       const momento = momentoDeHora(cuando.efemeride.hora);
       const placas = placasDelDia(e.fecha, e);
       piezas.push({
-        tipo: 'historia', hora: cuando.efemeride.hora, nombre: 'efemeride',
+        tipo: 'reel', hora: cuando.efemeride.hora, nombre: 'efemeride',
         titulo: `Un día como hoy: ${e.principal.titulo}`, motivo: 'un día como hoy, todos los días a las 9:00',
         seccion: 'Cultura y agenda',
         guion: e.guion,
@@ -516,7 +517,8 @@ export function planDelDia(datos, {
   }
 
   // El techo: si hay más reels de los permitidos, se van los de menos motivo.
-  const reels = piezas.filter((p) => p.tipo === 'reel');
+  // Sólo los podcasts cuentan para el techo: "Un día como hoy" es un reel más, aparte.
+  const reels = piezas.filter((p) => p.tipo === 'reel' && NOMBRES_DE_PODCAST.includes(p.nombre));
   if (reels.length > REGLAS.reelsPorDia) {
     reels.slice(REGLAS.reelsPorDia).forEach((p) => { p.fueraDeTecho = true; });
   }
@@ -526,7 +528,7 @@ export function planDelDia(datos, {
   // salido. Si se pasa, se dejan de armar los extras: primero los teléfonos
   // útiles, después la agenda. Las del contrato y los avisos nunca se sacan.
   const historiasDelDia = [
-    ...piezas.filter((p) => p.tipo === 'historia' || NOMBRES_DE_PODCAST.includes(p.nombre)).map((p) => p.nombre),
+    ...piezas.filter((p) => p.tipo === 'historia' || p.nombre === 'efemeride' || NOMBRES_DE_PODCAST.includes(p.nombre)).map((p) => p.nombre),
     ...NOMBRES_DE_PODCAST.filter((n) => hechas.has(n)),
   ];
   for (const nombre of historiasQueSobran(historiasDelDia, REGLAS.historiasMaximasPorDia)) {

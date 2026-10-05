@@ -196,7 +196,7 @@ export function guionClima(clima, _turno, { fecha = new Date(), direccion } = {}
     v([
       `Arrancamos con ${c.temp} grados.`,
       `Ahora hay ${c.temp} grados.`,
-      `Así amanece Balcarce: ${c.temp} grados.`,
+      `Así amanece: ${c.temp} grados.`,
       `De momento, ${c.temp} grados.`,
     ], 'apertura'),
   ];
@@ -379,9 +379,9 @@ export function guionFarmacia(turno, { fecha = new Date(), direccion, momento = 
   return unir([
     variante(SALUDOS[momento], s, 'saludo'),
     variante([
-      `Si esta noche necesitás una farmacia en Balcarce, ${cual}.`,
+      `Si esta noche necesitás una farmacia, ${cual}.`,
       `Por si hace falta una farmacia esta noche, ${cual}.`,
-      `Para esta noche, en Balcarce, ${cual}.`,
+      `Para esta noche, ${cual}.`,
     ], s, 'apertura'),
     variante([
       'Guardá el dato, que te puede salvar una madrugada.',
@@ -426,9 +426,9 @@ export function guionAgenda(eventos, { fecha = new Date(), direccion, momento = 
   return unir([
     variante(SALUDOS[momento], s, 'saludo'),
     variante([
-      `Hay ${cuantas} en Balcarce estos días.`,
-      `Estos días en Balcarce hay ${cuantas}.`,
-      `Para estos días, ${cuantas} en Balcarce.`,
+      `Hay ${cuantas} estos días.`,
+      `Estos días hay ${cuantas}.`,
+      `Para estos días, ${cuantas}.`,
     ], s, 'apertura'),
     `${primero.nombre}, el ${primero.cuando}${primero.lugar ? `, en ${primero.lugar}` : ''}.`,
     // La última frase es la firma: dice dónde está la agenda completa.
@@ -447,7 +447,7 @@ const INTROS = {
   ],
   tarde: [
     'Repasamos lo que fue pasando hoy.',
-    'Un repaso de lo que se viene comentando en Balcarce.',
+    'Un repaso de lo que se viene comentando.',
     'Vamos con las novedades de la tarde.',
     'Esto es lo que se fue sumando desde la mañana.',
   ],
@@ -455,7 +455,7 @@ const INTROS = {
     `Este es el repaso de este ${dia}.`,
     `Cerramos este ${dia} con lo más fuerte del día.`,
     `Repasamos lo que dejó este ${dia}.`,
-    `Así se va este ${dia} en Balcarce.`,
+    `Así se va este ${dia}.`,
   ],
 };
 

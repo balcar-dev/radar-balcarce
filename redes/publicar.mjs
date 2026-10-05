@@ -16,7 +16,7 @@ import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken, PAGINA_DE_FACEBOOK } from './meta.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
-import { espejosPendientes } from './espejo.mjs';
+import { espejosPendientes, esLimiteDeMeta, posteoYaPublicado, ESPEJO } from './espejo.mjs';
 import { FOTO_EN_INSTAGRAM } from '../web/lib/tarjeta-diseno.js';
 import {
   elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, estaActivo,
@@ -76,15 +76,41 @@ async function facebook() {
    *  intento en el posteo de Facebook: se reintenta en las vueltas siguientes
    *  (espejosPendientes) hasta un tope. */
   async function espejar(nota, enlace) {
-    try {
-      // Con la foto de la nota en la tarjeta, su crédito va al pie (conCreditoDeFoto).
-      const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO), nota) : mensajeDeNota(nota, SITIO) });
-      anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo, enlace });
+    // Con la foto de la nota en la tarjeta, su crédito va al pie (conCreditoDeFoto).
+    const pie = FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO), nota) : mensajeDeNota(nota, SITIO);
+    const anotarSalio = (id) => {
+      anotar(libro, 'instagramFeed', nota.id, { mediaId: id, titulo: nota.titulo, enlace });
+      if (libro.facebook[nota.id]) delete libro.facebook[nota.id].espejoDespuesDe;
       fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+    };
+    // ¿Ya está en Instagram? Se mira cuando ya hubo un intento que falló (5/10/2026: Meta dijo "límite de pedidos" pero publicó, y cada vuelta subió otra copia).
+    const yaSalio = async () => {
+      try { return posteoYaPublicado(await api.publicacionesRecientesDeInstagram(), pie); } catch { return null; }
+    };
+    const f = libro.facebook[nota.id];
+    if ((f?.intentosEspejo ?? 0) > 0 || f?.espejoDespuesDe) {
+      const ya = await yaSalio();
+      if (ya) { anotarSalio(ya.id); console.log(`             + Instagram: ya estaba publicado (${ya.id}), no se repite`); return; }
+    }
+    try {
+      const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie });
+      anotarSalio(ri.id);
       console.log(`             + Instagram: ${ri.id}`);
     } catch (e) {
+      // Un error de Meta no siempre quiere decir que no se publicó: se mira antes de dar el intento por perdido.
+      const ya = await yaSalio();
+      if (ya) {
+        anotarSalio(ya.id);
+        console.log(`             + Instagram: Meta contestó con un error pero lo publicó (${ya.id}); queda anotado`);
+        return;
+      }
       if (libro.facebook[nota.id]) {
-        libro.facebook[nota.id].intentosEspejo = (libro.facebook[nota.id].intentosEspejo ?? 0) + 1;
+        if (esLimiteDeMeta(e.message, e.codigo)) {
+          // Un límite de pedidos no es un intento fallido del posteo: se espera un rato en vez de insistir cada media hora.
+          libro.facebook[nota.id].espejoDespuesDe = new Date(Date.now() + ESPEJO.minutosTrasUnLimite * 60000).toISOString();
+        } else {
+          libro.facebook[nota.id].intentosEspejo = (libro.facebook[nota.id].intentosEspejo ?? 0) + 1;
+        }
         fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
       }
       console.error(`             Instagram (feed) falló, queda sólo en Facebook (se reintenta): ${sinToken(e.message, token)}`);
