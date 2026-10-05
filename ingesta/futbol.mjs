@@ -301,29 +301,39 @@ const nombreDeLaCompetencia = (c) => c.nombre;
 /** Un partido en una línea para la nota de los partidos: "Sábado 3 de octubre, 17:00: Boca vs Racing (Estadio)". */
 const lineaDelPartido = (p) => `${diaYHora(p.inicio)}: ${p.local.nombre} vs ${p.visitante.nombre}${p.estadio ? ` (${p.estadio})` : ''}${faseTexto(p) ? `, ${faseTexto(p)}` : ''}.`;
 
-/** La nota con los partidos de una fecha, con sus horarios en hora argentina. */
+/** Los partidos que ya no se van a jugar hoy (terminados, postergados, cancelados o suspendidos): no van en la nota de lo que falta. */
+const NO_FALTAN = ['final', 'postergado', 'cancelado', 'suspendido'];
+
+/**
+ * La nota con los partidos de una fecha que TODAVÍA NO SE JUGARON, con sus horarios en hora argentina. Lo ya jugado va en la nota de los resultados: así las dos
+ * notas no se contradicen (4/10, Hernán: una decía los partidos y otra los resultados de los mismos). Cuando se jugó todo, esta nota deja de salir.
+ * La dirección (el id) es siempre la del primer partido de la fecha, aunque ya se haya jugado.
+ */
 export function notaDeLosPartidos(competencia, partidos, { fecha } = {}) {
   if (!partidos?.length || !fecha) return null;
-  const orden = [...partidos].sort((a, b) => a.inicio.localeCompare(b.inicio));
+  const todos = [...partidos].sort((a, b) => a.inicio.localeCompare(b.inicio));
+  const orden = todos.filter((p) => !NO_FALTAN.includes(p.estado));
+  if (!orden.length) return null;
+  const yaSeJugo = todos.some((p) => p.estado === 'final');
   const [primero] = orden;
   const rango = rangoDeDias(orden[0].inicio, orden.at(-1).inicio);
   const nombre = nombreDeLaCompetencia(competencia);
   const soloUno = orden.length === 1;
   const titulo = soloUno
     ? `${nombre}: ${primero.local.nombre} y ${primero.visitante.nombre} juegan el ${diaLargo(diaAR(primero.inicio))} a las ${horaAR(primero.inicio)}`
-    : `${nombre}: los partidos de la fecha del ${rango}, con horarios`;
+    : (yaSeJugo ? `${nombre}: lo que falta de la fecha del ${rango}, con horarios` : `${nombre}: los partidos de la fecha del ${rango}, con horarios`);
   const intro = soloUno
     ? `${primero.local.nombre} y ${primero.visitante.nombre} se enfrentan el ${diaLargo(diaAR(primero.inicio))} a las ${horaAR(primero.inicio)}, hora argentina${faseTexto(primero) ? `, por ${faseTexto(primero).replace(/^./, (c) => c.toLowerCase())}` : ''}${primero.estadio ? `, en el estadio ${primero.estadio}` : ''}, por ${competencia.completo}${competencia.soloArgentinos ? ' (aquí se cuentan sólo los equipos argentinos)' : ''}.`
-    : `Estos son los partidos de ${competencia.completo} del ${rango}${competencia.soloArgentinos ? ', sólo los de equipos argentinos' : ''}, con sus horarios en hora argentina (UTC-3), en el orden en que se juegan:`;
+    : `Estos son los partidos de ${competencia.completo} ${yaSeJugo ? 'que todavía faltan jugarse, ' : ''}del ${rango}${competencia.soloArgentinos ? ', sólo los de equipos argentinos' : ''}, con sus horarios en hora argentina (UTC-3), en el orden en que se juegan:`;
   const lista = soloUno ? null : orden.map(lineaDelPartido).join('\n\n');
   const pie = 'Los horarios son los que informa ESPN y pueden cambiar; los consultamos de nuevo cada pocas horas. Después de cada partido sumamos el resultado en otra nota.';
   return baseDeLaNota({
-    id: `futbolpartidos${competencia.clave}${sinGuiones(diaAR(primero.inicio))}`,
+    id: `futbolpartidos${competencia.clave}${sinGuiones(diaAR(todos[0].inicio))}`,
     tipo: 'partidos',
     competencia: competencia.clave,
     datos: { partidos: orden.map(partidoParaDibujar) },
     titulo,
-    copete: soloUno ? `Juegan ${primero.local.nombre} y ${primero.visitante.nombre} por ${competencia.completo}.` : `Todos los partidos de ${competencia.completo} de la fecha, con horarios en hora argentina.`,
+    copete: soloUno ? `Juegan ${primero.local.nombre} y ${primero.visitante.nombre} por ${competencia.completo}.` : (yaSeJugo ? `Los partidos de ${competencia.completo} que faltan de la fecha, con horarios en hora argentina. Lo ya jugado está en la nota de los resultados.` : `Todos los partidos de ${competencia.completo} de la fecha, con horarios en hora argentina.`),
     cuerpo: [intro, lista, pie].filter(Boolean).join('\n\n'),
     fecha,
     lugarFoto: primero.estadio ?? null,

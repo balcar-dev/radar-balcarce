@@ -95,8 +95,8 @@ export const SALUDOS = {
 /** El deseo humano con el que cierra cada franja del día. */
 export const CIERRES_HUMANOS = {
   manana: [
-    'Que tengan un buen día.',
-    'Que sea un buen día para todos.',
+    'Que tengan una linda mañana.',
+    'Que sea una jornada liviana para todos.',
     'Que tengan una linda jornada.',
     'Que el día les sea leve.',
   ],
@@ -109,7 +109,7 @@ export const CIERRES_HUMANOS = {
   noche: [
     'Que descansen.',
     'Que descansen, y hasta mañana.',
-    'Que tengan una buena noche.',
+    'Que tengan un lindo descanso.',
     'A descansar, que mañana seguimos.',
   ],
 };
@@ -263,7 +263,7 @@ export function guionClima(clima, _turno, { fecha = new Date(), direccion } = {}
   if (!conToque && hoy.max >= 16 && hoy.max < 28) {
     partes.push(v([
       'Un día lindo para salir a caminar.',
-      'Buen día para aprovechar afuera.',
+      'Un lindo momento para aprovechar afuera.',
       'Pinta un día tranquilo.',
     ], 'toque'));
   }
@@ -351,9 +351,9 @@ export function guionClimaNoche(clima, { fecha = new Date(), direccion } = {}) {
   }
 
   if (minNoche <= 8) {
-    partes.push(v(['Buen momento para un mate caliente.', 'Buena noche para quedarse bajo techo.'], 'toque'));
+    partes.push(v(['Buen momento para un mate caliente.', 'Ideal para quedarse bajo techo.'], 'toque'));
   } else if (!conToque) {
-    partes.push(v(['Una noche tranquila para descansar.', 'Buena noche para salir a tomar el fresco.'], 'toque'));
+    partes.push(v(['Una noche tranquila para descansar.', 'Una noche para salir a tomar el fresco.'], 'toque'));
   }
 
   partes.push(cierre(s, 'noche', { conDireccion: diceLaDireccion(s, { forzar: direccion }) }));

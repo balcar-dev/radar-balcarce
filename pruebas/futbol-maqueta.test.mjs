@@ -27,9 +27,9 @@ const PARTIDOS = [
 test('las notas de fútbol llevan sus datos ordenados para dibujarlos, con los ids de los equipos (el escudo)', () => {
   const p = notaDeLosPartidos(liga, PARTIDOS, { fecha: '2026-10-02T12:00:00Z' });
   assert.equal(p.tipoFutbol, 'partidos');
-  assert.equal(p.datosFutbol.partidos.length, 2);
-  assert.deepEqual(p.datosFutbol.partidos[0].local, { id: '11', nombre: 'Independiente', goles: 1 });
-  assert.equal(p.datosFutbol.partidos[0].dia, 'Viernes 2 de octubre');
+  assert.equal(p.datosFutbol.partidos.length, 1, 'sólo lo que falta jugarse');
+  assert.deepEqual(p.datosFutbol.partidos[0].local, { id: '5', nombre: 'Racing Club', goles: 1 });
+  assert.equal(p.datosFutbol.partidos[0].dia, 'Sábado 3 de octubre');
   assert.match(p.datosFutbol.partidos[0].hora, /^\d{2}:\d{2}$/);
   const r = notaDeLosResultados(liga, PARTIDOS, { fecha: '2026-10-02T12:00:00Z' });
   assert.equal(r.datosFutbol.partidos.length, 1, 'sólo los terminados');
@@ -47,7 +47,8 @@ test('la tabla guarda las zonas con el id de cada equipo', () => {
 
 test('los escudos que hay que bajar salen de los partidos y las tablas, sin repetir ni aceptar ids raros', () => {
   const p = notaDeLosPartidos(liga, PARTIDOS, { fecha: '2026-10-02T12:00:00Z' });
-  assert.deepEqual(idsDeEscudos([p, { datosFutbol: { partidos: [{ local: { id: '../x' }, visitante: { id: '11' } }] } }, { titulo: 'sin datos' }]).sort(), ['11', '2975', '4', '5']);
+  const r = notaDeLosResultados(liga, PARTIDOS, { fecha: '2026-10-02T12:00:00Z' });
+  assert.deepEqual(idsDeEscudos([p, r, { datosFutbol: { partidos: [{ local: { id: '../x' }, visitante: { id: '11' } }] } }, { titulo: 'sin datos' }]).sort(), ['11', '2975', '4', '5']);
 });
 
 test('los escudos se bajan una vez, sólo si son un PNG de verdad, y un fallo no rompe nada', async () => {

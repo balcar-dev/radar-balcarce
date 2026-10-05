@@ -130,6 +130,21 @@ test('la nota de los partidos lista a todos en el orden en que se juegan, con la
   assert.match(uno.cuerpo, /sólo los equipos argentinos/);
 });
 
+test('la nota de los partidos sólo trae lo que falta jugarse, para no contradecir a la de los resultados (4/10); con todo jugado, deja de salir', () => {
+  const jugado = P('1', '2026-10-02T22:15:00Z', 'final', 'Independiente', 1, 'Instituto (Córdoba)', 4);
+  const enJuego = P('2', '2026-10-03T20:00:00Z', 'en-juego', 'Boca Juniors', 1, 'Racing Club', 0);
+  const falta = P('3', '2026-10-04T20:00:00Z', 'programado', 'Platense', null, 'Central Córdoba', null);
+  const postergado = P('4', '2026-10-04T22:00:00Z', 'postergado', 'Lanús', null, 'Talleres', null);
+  const n = notaDeLosPartidos(LIGA, [jugado, enJuego, falta, postergado], { fecha: FECHA });
+  assert.equal(n.id, 'futbolpartidosliga20261002', 'la dirección es la de siempre: la del primer partido de la fecha, aunque ya se jugó');
+  assert.equal(n.datosFutbol.partidos.length, 2);
+  assert.ok(!n.cuerpo.includes('Independiente') && !n.cuerpo.includes('Lanús'), 'ni lo jugado ni lo postergado');
+  assert.ok(n.cuerpo.includes('Boca Juniors vs Racing Club') && n.cuerpo.includes('Platense vs Central Córdoba'));
+  assert.match(n.titulo, /^Liga Profesional: lo que falta de la fecha del 3 al 4 de octubre, con horarios$/);
+  assert.match(n.cuerpo, /que todavía faltan jugarse/);
+  assert.equal(notaDeLosPartidos(LIGA, [jugado, postergado], { fecha: FECHA }), null, 'sin nada por jugarse no hay nota de partidos');
+});
+
 test('la nota de los resultados cuenta sólo lo terminado, con goleadores, y dice lo que falta; un partido en juego no es un resultado', () => {
   const terminado = P('1', '2026-10-03T17:45:00Z', 'final', 'Defensa y Justicia', 3, 'San Lorenzo', 0, { goles: [{ equipo: 'local', jugador: 'Jeremías Lucco', minuto: "11'", tipo: 'gol' }, { equipo: 'local', jugador: 'Héctor Martínez', minuto: "45'", tipo: 'gol' }, { equipo: 'local', jugador: 'David Barbona', minuto: "45'+3'", tipo: 'de penal' }] });
   const sinGoles = P('2', '2026-10-03T20:00:00Z', 'final', "Newell's Old Boys", 0, 'Lanús', 0);
