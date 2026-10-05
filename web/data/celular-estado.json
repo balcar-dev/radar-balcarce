@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04T23:33:52.690Z",
- "portada": 39,
- "archivo": 890,
+ "generado": "2026-10-05T00:05:31.241Z",
+ "portada": 40,
+ "archivo": 891,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-04T23:33:52.727Z",
+  "generado": "2026-10-05T00:05:31.270Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -140,9 +140,9 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 50,
+    "segundos": 48,
     "notas": [
      {
       "id": "1rfl2n3",
@@ -150,14 +150,14 @@
       "seccion": "Automovilismo"
      },
      {
+      "id": "r1j6p6",
+      "titulo": "Casella choca en Posadas tras un toque y una cubierta golpea a un espectador",
+      "seccion": "Automovilismo"
+     },
+     {
       "id": "irc0sr",
       "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1nqv1cj",
-      "titulo": "Franco Colapinto protagoniza un cruce radial con su ingeniero por error",
-      "seccion": "Automovilismo"
      },
      {
       "id": "1g4en2j",
@@ -178,18 +178,16 @@
      "id": "1g4en2j",
      "titulo": "Movistar cambia las líneas fijas a sistema digital",
      "cuando": "2026-10-04T19:34:27.708Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "irc0sr",
      "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
-     "seccion": "Balcarce",
-     "marcada": false
+     "cuando": "2026-10-04T23:35:20.177Z"
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-04T21:04:27.708Z",
+   "cola": [],
+   "cupo": 2,
+   "proximoDesde": "2026-10-05T01:05:20.177Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

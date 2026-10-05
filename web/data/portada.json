@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T23:33:52.690Z",
+  "generado": "2026-10-05T00:05:31.241Z",
   "notas": [
     {
       "id": "i9he7u",
@@ -9,8 +9,8 @@
       "guion": "La venta de autos usados sube nueve por ciento en septiembre",
       "seccion": "Economía",
       "medios": [
-        "Clarín",
         "Ecos Diarios (Necochea)",
+        "Clarín",
         "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/economia/venta-autos-usados-quebro-tendencia-salto-9-septiembre_0_gDsuIYF1wa.html",
@@ -18,7 +18,7 @@
       "fecha": "2026-10-04T22:19:24.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 63,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -163,7 +163,6 @@
       "seccion": "Fútbol",
       "medios": [
         "Infobae",
-        "Doble Amarilla",
         "La Página Millonaria"
       ],
       "enlace": "https://lapaginamillonaria.com/river-plate/tobias-goytia-joya-de-river-anoto-para-la-seleccion-argentina-sub-17-vs-tanzania-en-la-vertex-cup",
@@ -171,7 +170,7 @@
       "fecha": "2026-10-04T21:12:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -246,7 +245,7 @@
       "fecha": "2026-10-04T20:31:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -541,6 +540,7 @@
         "C5N",
         "Crónica",
         "Radio Mitre",
+        "El Día",
         "La Nueva",
         "InfoRegión"
       ],
@@ -813,6 +813,89 @@
       "slug": "el-arzobispo-de-lujan-advierte-que-la-mayor-division-nacional-es-la"
     },
     {
+      "id": "1camy15",
+      "titulo": "Argentina firma un acuerdo global para aplicar inteligencia artificial a la ciencia",
+      "copete": "El país se sumó este domingo a una iniciativa internacional encabezada por Estados Unidos en Japón para acelerar la investigación científica mediante sistemas avanzados.",
+      "cuerpo": "La Argentina firmó este domingo una declaración internacional junto a Estados Unidos y otras 15 naciones para aplicar sistemas avanzados de inteligencia artificial en la investigación científica. El documento, llamado Visión de Kioto para una Edad Dorada de la Ciencia, se presentó en Japón durante el Science and Technology in Society Forum.\n\nLa propuesta contempla modificar los mecanismos tradicionales de financiamiento para combinar subsidios con fondos rápidos y premios. También busca incorporar tecnología avanzada a los procesos científicos y potenciar la formación de estudiantes y jóvenes investigadores mediante becas y doctorados conjuntos.",
+      "guion": "Argentina firma un acuerdo global para aplicar inteligencia artificial a la ciencia",
+      "seccion": "Tecnología",
+      "medios": [
+        "Clarín",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.clarin.com/mundo/argentina-firmo-estados-unidos-acuerdo-impulsar-inteligencia-artificial-ciencia_0_kDIQBdiwvJ.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-04T17:15:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T00:01:23.567Z",
+      "relevancia": 48,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Argentina firmó el acuerdo este domingo.",
+        "La iniciativa fue impulsada por Estados Unidos.",
+        "El documento se presentó en Japón durante un foro científico.",
+        "Participan 17 países en total."
+      ],
+      "textoRedes": "La Argentina firmó este domingo una declaración internacional impulsada por Estados Unidos para acelerar la investigación científica mediante el uso de sistemas avanzados de inteligencia artificial.",
+      "etiquetas": [
+        "Argentina",
+        "Estados Unidos",
+        "Inteligencia Artificial",
+        "Ciencia",
+        "Tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/mundo/argentina-firmo-estados-unidos-acuerdo-impulsar-inteligencia-artificial-ciencia_0_kDIQBdiwvJ.html",
+          "fecha": "2026-10-04T17:15:26.000Z",
+          "oficial": false,
+          "aporte": "Informó la firma del acuerdo de inteligencia artificial aplicada a la ciencia."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/04/la-argentina-se-sumo-a-un-acuerdo-liderado-por-eeuu-para-impulsar-el-uso-de-la-inteligencia-artificial-en-la-ciencia/",
+          "fecha": "2026-10-04T22:59:44.000Z",
+          "oficial": false,
+          "aporte": "Informó la firma del acuerdo de inteligencia artificial aplicada a la ciencia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1cvxek6",
+          "titulo": "Daza analiza el mercado laboral de Estados Unidos y lo compara",
+          "fecha": "2026-10-03T19:50:57.185Z",
+          "ruta": "/nota/daza-analiza-el-mercado-laboral-de-estados-unidos-y-lo-compara-1cvxek6"
+        },
+        {
+          "id": "1gjqsjm",
+          "titulo": "ARCA recibe datos de cuentas de argentinos en Estados Unidos",
+          "fecha": "2026-10-03T04:14:46.000Z",
+          "ruta": "/nota/arca-recibe-datos-de-cuentas-de-argentinos-en-estados-unidos-1gjqsjm"
+        },
+        {
+          "id": "1uw5a9s",
+          "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
+          "fecha": "2026-10-01T14:24:51.000Z",
+          "ruta": "/nota/el-vicepresidente-de-estados-unidos-visita-la-argentina-en-noviembre-1uw5a9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "argentina-firma-un-acuerdo-global-para-aplicar-inteligencia",
+      "foto": {
+        "archivo": "fotos-notas/1camy15.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "1rfl2n3",
       "titulo": "Emiliano Martínez visita el Turismo Carretera y desafía a Scaloni",
       "copete": "El arquero de la selección argentina acompañó a su hermano Alejandro en San Nicolás. Allí recibió un casco con los colores albicelestes y retó a una competencia al entrenador nacional.",
@@ -821,6 +904,7 @@
       "seccion": "Automovilismo",
       "medios": [
         "Clarín",
+        "0223 (Mar del Plata)",
         "Infobae",
         "TyC Sports",
         "Olé",
@@ -1143,8 +1227,8 @@
       "id": "repaso20261004manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: fútbol, Liga Balcarceña de Fútbol y Colegiales",
-      "copete": "Radar Balcarce publicó a las 10:04 de este domingo 4 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la mañana del domingo 4, en el orden en que salieron en el audio.\n\nMastantuono marca su primer gol con la Selección y responde a las críticas. El delantero de la Fiorentina convirtió en el 7-0 ante Burkina Faso en el Monumental y habló sobre la exigencia de los hinchas.\n\nLa Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas. La Liga Balcarceña de Fútbol postergó todos los encuentros previstos para este fin de semana debido a las malas condiciones de los terrenos de juego y de los accesos a los predios deportivos.\n\nColegiales recibe los Play Off del Torneo Clausura de Preliga. El predio alberga el domingo la definición del fútbol infantil balcarceño. El ganador jugará la final contra Ferro Rojo.\n\nBomberos locales relatan su trabajo en el terremoto de Venezuela. Ocho integrantes del cuerpo activo participaron de las tareas de búsqueda y rescate tras la catástrofe. Compartieron su vivencia en un encuentro organizado por el Rotary Club Balcarce Cerrito.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "copete": "Radar Balcarce publicó a las 10:04 de este domingo 4 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
+      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la mañana del domingo 4, en el orden en que salieron en el audio.\n\nMastantuono marca su primer gol con la Selección y responde a las críticas. El delantero de la Fiorentina convirtió en el 7-0 ante Burkina Faso en el Monumental y habló sobre la exigencia de los hinchas.\n\nLa Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas. La Liga Balcarceña de Fútbol postergó todos los encuentros previstos para este fin de semana debido a las malas condiciones de los terrenos de juego y de los accesos a los predios deportivos.\n\nColegiales recibe los Play Off del Torneo Clausura de Preliga. El predio alberga el domingo la definición del fútbol infantil balcarceño. El ganador jugará la final contra Ferro Rojo.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Balcarce",
       "local": true,
@@ -1161,16 +1245,14 @@
       "etiquetas": [
         "fútbol",
         "Liga Balcarceña de Fútbol",
-        "Colegiales",
-        "Bomberos"
+        "Colegiales"
       ],
       "como": "automatica",
       "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
       "notasDelRepaso": [
         "v0xov9",
         "158gkt0",
-        "1xritdf",
-        "173wsz3"
+        "1xritdf"
       ],
       "enlacesEnTexto": [
         {
@@ -1184,10 +1266,6 @@
         {
           "texto": "Colegiales recibe los Play Off del Torneo Clausura de Preliga",
           "href": "/nota/colegiales-recibe-los-play-off-del-torneo-clausura-de-preliga-1xritdf"
-        },
-        {
-          "texto": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
-          "href": "/nota/bomberos-locales-relatan-su-trabajo-en-el-terremoto-de-venezuela-173wsz3"
         }
       ],
       "destacados": [
@@ -1364,7 +1442,7 @@
       "fecha": "2026-10-04T11:46:24.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T12:01:17.606Z",
-      "relevancia": 87,
+      "relevancia": 80,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1858,7 +1936,7 @@
             "visitante": {
               "id": "7767",
               "nombre": "Tigre",
-              "goles": 0
+              "goles": 1
             },
             "penales": null,
             "goles": [
@@ -1872,6 +1950,12 @@
                 "equipo": "local",
                 "jugador": "Gastón Verón",
                 "minuto": "42'",
+                "tipo": "gol"
+              },
+              {
+                "equipo": "visitante",
+                "jugador": "Jerónimo Domina",
+                "minuto": "57'",
                 "tipo": "gol"
               }
             ]
@@ -2713,11 +2797,11 @@
         "Clarín",
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
+        "Campeones",
         "El Destape",
         "Página/12",
         "TyC Sports",
         "La Brújula 24",
-        "Campeones",
         "Solotc",
         "Olé",
         "Córdoba Competición"
@@ -3127,7 +3211,7 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariallllllllllllllllllllllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialllllllllllllllllllllllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció el sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
@@ -3610,13 +3694,13 @@
         "Perfil",
         "Minuto Uno",
         "Diario Popular",
-        "El Día",
         "La Verdad",
         "El Eco de Tandil",
         "Clarín",
         "La Brújula 24",
         "A24",
-        "Letra P"
+        "Letra P",
+        "El Día"
       ],
       "enlace": "https://www.ambito.com/economia/luis-caputo-la-esta-creciendo-solo-que-un-ritmo-mas-bajo-no-estamos-recesion-n6329657",
       "teniaImagenLaFuente": true,
@@ -3701,8 +3785,8 @@
     "Balcarce",
     "Automovilismo",
     "Argentina",
-    "Cultura y agenda",
     "Tecnología",
+    "Cultura y agenda",
     "Policiales",
     "Deportes"
   ],
@@ -3715,9 +3799,9 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
+      "temp": 12,
       "sensacion": 10,
-      "humedad": 67,
+      "humedad": 69,
       "viento": 9,
       "rumbo": "O",
       "cielo": "Despejado",
@@ -4121,6 +4205,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "h9pxr0",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niña\""
+    },
+    {
       "id": "17hpmfy",
       "titulo": null,
       "seccion": "Balcarce",
@@ -4131,12 +4221,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "h9pxr0",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niña\""
     },
     {
       "id": "8maxy0",

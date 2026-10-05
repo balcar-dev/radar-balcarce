@@ -1,7 +1,41 @@
 {
- "generado": "2026-10-04T23:33:52.690Z",
+ "generado": "2026-10-05T00:05:31.241Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "lomklr",
+   "titulo": "Longcasting: con campeones y referentes, se realizó la clínica",
+   "copete": "Una novedosa y concurrida propuesta social y deportiva se desplegó el pasado domingo en nuestra ciudad, precisamente en un sector de la periferia y dirigida al público en general. Se trató de la primera clínica de longcasting , la disciplina deportiva derivada de la pesca que…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-04T23:40:07.000Z",
+   "fuentes": [
+    {
+     "medio": "Acción 5 (Balcarce)",
+     "enlace": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/",
+     "fecha": "2026-10-04T23:40:07.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
+  },
+  {
+   "id": "1bgww42",
+   "titulo": "La Sub 16 de Campo de Pato campeonas y con ascenso incluido",
+   "copete": "Las jugadoras del Club Social y Campo de Pato superaron 2-1 a Comercial de Mar del Plata en la final y se consagraron campeonas del Torneo Regional de Clubes F. Además, lograron el ascenso al Regional E.",
+   "seccion": "Deportes",
+   "fecha": "2026-10-04T23:41:55.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/hockey-la-sub-16-de-campo-de-pato-campeonas-y-con-ascenso-incluido",
+     "fecha": "2026-10-04T23:41:55.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (division, Ademas, institucion, proxima, segun): va con las tildes ; sin esas oraciones quedan 85 ",
+   "maximo": 3
+  },
   {
    "id": "3r4c2k",
    "titulo": "Cayó delincuente de frondoso prontuario tras robar en una panadería",
@@ -18,43 +52,6 @@
    "intentos": 3,
    "motivo": "semáforo: necesita ojo humano: \"detenido\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 3
-  },
-  {
-   "id": "oy2pg",
-   "titulo": "Senado: Gobierno busca votos para eliminar las PASO pero enfrenta resistencias en sus aliados",
-   "copete": "El Gobierno nacional intensifica las gestiones en el Senado para lograr la suspensión de las PASO, un objetivo que se encuentra con obstáculos significativos debido a la resistencia de bloques aliados. A pesar de las negociaciones encabezadas por el jefe de Gabinete, Diego…",
-   "seccion": "Política",
-   "fecha": "2026-10-04T11:37:54.151Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/-domingo-edita-marote--senado-gobierno-busca-votos-para-eliminar-las-paso-pero-enfrenta-resistencias-en-sus-aliados_a6ac17849bd9cfb5d37052f82",
-     "fecha": "2026-10-04T11:37:54.151Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/nacionales/el-gobierno-busca-votos-en-el-senado-para-eliminar-las-paso-ante-la-resistencia-de-aliados",
-     "fecha": "2026-10-04T14:18:17.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/el-gobierno-busca-votos-eliminar-las-paso-resistencias-sus-aliados-n922940",
-     "fecha": "2026-10-04T18:22:00.000Z"
-    },
-    {
-     "medio": "0221",
-     "enlace": "https://www.0221.com.ar/nacional/el-gobierno-busca-eliminar-las-paso-pero-enfrenta-resistencias-sus-aliados-n135249",
-     "fecha": "2026-10-04T14:48:00.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/senado-gobierno-busca-votos-para-eliminar-las-paso-pero-enfrenta-resistencias-en-sus-aliados/",
-     "fecha": "2026-10-04T21:29:07.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "cuerpo: 4 problemas (numero, nombre, promesa): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 48 palabras",
-   "maximo": 4
   },
   {
    "id": "zdjcx4",
@@ -74,30 +71,8 @@
      "fecha": "2026-10-04T17:54:21.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
-   "maximo": 3
-  },
-  {
-   "id": "1camy15",
-   "titulo": "Argentina firmó con Estados Unidos un acuerdo para impulsar la inteligencia artificial en la ciencia",
-   "copete": "La Argentina se sumó este domingo a una iniciativa internacional encabezada por Estados Unidos que propone acelerar la investigación científica mediante sistemas avanzados de inteligencia artificial y revisar, al mismo tiempo, los mecanismos con los que se financian los…",
-   "seccion": "Tecnología",
-   "fecha": "2026-10-04T17:15:26.000Z",
-   "fuentes": [
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/mundo/argentina-firmo-estados-unidos-acuerdo-impulsar-inteligencia-artificial-ciencia_0_kDIQBdiwvJ.html",
-     "fecha": "2026-10-04T17:15:26.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/04/la-argentina-se-sumo-a-un-acuerdo-liderado-por-eeuu-para-impulsar-el-uso-de-la-inteligencia-artificial-en-la-ciencia/",
-     "fecha": "2026-10-04T22:59:44.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 16 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 63 palabras",
    "maximo": 3
   }
  ]

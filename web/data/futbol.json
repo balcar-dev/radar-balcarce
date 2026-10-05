@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-04T23:33:49.424Z",
+ "consultado": "2026-10-05T00:05:29.065Z",
  "equipos": [
   "9739",
   "3",
@@ -385,7 +385,7 @@
     "competencia": "liga",
     "inicio": "2026-10-04T22:15:00.000Z",
     "estado": "en-juego",
-    "minuto": "56'",
+    "minuto": "89'",
     "local": {
      "id": "3",
      "nombre": "Argentinos Juniors",
@@ -394,7 +394,7 @@
     "visitante": {
      "id": "7767",
      "nombre": "Tigre",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
     "goles": [
@@ -408,6 +408,12 @@
       "equipo": "local",
       "jugador": "Gastón Verón",
       "minuto": "42'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Jerónimo Domina",
+      "minuto": "57'",
       "tipo": "gol"
      }
     ],

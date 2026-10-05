@@ -617,6 +617,11 @@
   "ultimo": "2026-09-30T16:32:17.451Z",
   "motivo": "con cuerpo"
  },
+ "1bgww42": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T00:02:28.857Z",
+  "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (division, Ademas, institucion, proxima, segun): va con las tildes ; sin esas oraciones quedan 85 "
+ },
  "1bheb6v": {
   "intentos": 2,
   "ultimo": "2026-10-02T12:01:58.110Z",
@@ -628,9 +633,9 @@
   "motivo": "con cuerpo"
  },
  "1camy15": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 16 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 63 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-05T00:02:28.857Z",
+  "motivo": "con cuerpo"
  },
  "1cbil57": {
   "intentos": 1,
@@ -949,11 +954,6 @@
  "1iri883": {
   "intentos": 2,
   "ultimo": "2026-09-28T06:31:59.100Z",
-  "motivo": "con cuerpo"
- },
- "1is0p0y": {
-  "intentos": 1,
-  "ultimo": "2026-09-27T23:55:10.141Z",
   "motivo": "con cuerpo"
  },
  "1ivau49": {
@@ -1281,11 +1281,6 @@
  "1pdo6sk": {
   "intentos": 1,
   "ultimo": "2026-09-29T20:01:15.190Z",
-  "motivo": "con cuerpo"
- },
- "1pjzhm6": {
-  "intentos": 3,
-  "ultimo": "2026-09-27T23:55:10.141Z",
   "motivo": "con cuerpo"
  },
  "1pq0gh4": {
@@ -1920,8 +1915,8 @@
   "motivo": "con cuerpo"
  },
  "3zyzxd": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
+  "intentos": 2,
+  "ultimo": "2026-10-05T00:02:28.857Z",
   "motivo": "semáforo: necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "436uz0": {
@@ -2434,11 +2429,6 @@
  "gs0rwg": {
   "intentos": 2,
   "ultimo": "2026-10-01T21:17:43.060Z",
-  "motivo": "con cuerpo"
- },
- "gun9be": {
-  "intentos": 1,
-  "ultimo": "2026-09-27T23:55:10.141Z",
   "motivo": "con cuerpo"
  },
  "gvkidj": {
@@ -3235,8 +3225,8 @@
   "motivo": "con cuerpo"
  },
  "wtt964": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
+  "intentos": 2,
+  "ultimo": "2026-10-05T00:02:28.857Z",
   "motivo": "semáforo: necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "ww3s5p": {
@@ -3330,8 +3320,8 @@
   "motivo": "Gemini: Bad Unicode escape in JSON at position 84 (line 1 column 85)"
  },
  "zdjcx4": {
-  "intentos": 2,
-  "ultimo": "2026-10-04T23:31:41.471Z",
+  "intentos": 3,
+  "ultimo": "2026-10-05T00:02:28.857Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "zdkvaa": {
