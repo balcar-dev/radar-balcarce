@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-05T22:02:23.035Z",
+ "consultado": "2026-10-05T22:33:31.223Z",
  "equipos": [
   "9739",
   "3",
@@ -505,7 +505,7 @@
     "competencia": "liga",
     "inicio": "2026-10-05T22:00:00.000Z",
     "estado": "en-juego",
-    "minuto": "4'",
+    "minuto": "35'",
     "local": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",
@@ -528,19 +528,32 @@
     "competencia": "liga",
     "inicio": "2026-10-05T22:00:00.000Z",
     "estado": "en-juego",
-    "minuto": "2'",
+    "minuto": "33'",
     "local": {
      "id": "21",
      "nombre": "Vélez Sarsfield",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "7764",
      "nombre": "Platense",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Ronaldo Martínez",
+      "minuto": "5'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Bautista Merlini",
+      "minuto": "7'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "José Amalfitani",
     "fase": null,
     "partidoDeLaSerie": null,

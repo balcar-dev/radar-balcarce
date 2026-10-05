@@ -7213,16 +7213,16 @@
   "fuentes": 3
  },
  "q7d6xn": {
-  "archivo": "fotos-notas/q7d6xn.jpg",
   "medio": "El Cronista",
-  "credito": "Foto: El Cronista",
   "licencia": null,
   "origen": "medio",
   "titulo": "ANSES aplica un aumento del 1,66% y paga un bono a jubilados",
   "enlace": "https://www.cronista.com/economia-politica/cambian-las-jubilaciones-a-partir-del-8-de-octubre-anses-confirmo-un-nuevo-aumento-y-pagara-el-bono-de-70000-a-todos-estos-jubilados/",
   "imagenOriginal": "https://www.cronista.com/resizer/v2/CLZWBS73SVCZREEDTFUTM52TXY.jpg?auth=224c3f0f36d6337a3f8a83a265e42671df3c38079f6907d1276a3bdccc17b53a&height=630&width=1200&quality=70&focal=238%2C153",
   "razon": "La foto A muestra claramente a una jubilada usando un cajero automático, ilustrando bien el tema sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-05T18:01:47.327Z"
+  "cuando": "2026-10-05T18:01:47.327Z",
+  "intentado": true,
+  "borrada": true
  },
  "bmbmep": {
   "archivo": "fotos-notas/bmbmep.jpg",
@@ -7664,5 +7664,42 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/3KMZW55AZVHKNJNVAHIDEOPIU4.jpg?auth=d9433a3f5d3c8864a1ee6eca91308afee7d439bdd3979c00911660f2cd05a175&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto A muestra claramente la acción en pista y no tiene marcas de agua agregadas por el medio ni menores identificables.",
   "cuando": "2026-10-05T22:02:07.484Z"
+ },
+ "vucg7b": {
+  "archivo": "fotos-notas/vucg7b.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Noemi M. M. / Wikimedia Commons (CC BY-SA 4.0)",
+  "licencia": "CC BY-SA 4.0",
+  "autor": "Noemi M. M.",
+  "origen": "wikimedia",
+  "titulo": "Diputada propone suspender el sueldo a legisladores por insultos",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Monte_las_Mercedes-Llano_el_Loro.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Monte_las_Mercedes-Llano_el_Loro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Mercedes Llano\" de Wikimedia Commons (CC BY-SA 4.0).",
+  "cuando": "2026-10-05T22:31:47.623Z"
+ },
+ "1stssa7": {
+  "archivo": "fotos-notas/1stssa7.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La línea D extiende su horario por la despedida de Messi",
+  "enlace": "https://www.lanacion.com.ar/sociedad/la-despedida-de-messi-la-linea-d-extiende-su-horario-por-el-partido-del-martes-nid05102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/la-despedida-de-messi-la-linea-d-extiende-su-7GXRS2JLZRBT3GA66HN6OPQGEU.JPG?auth=19bbac826626da7275589222fc4e0a5fd562f4b42dd1024c4ab1a3fa59f4e843&width=1200&height=800&quality=70&smart=true",
+  "razon": "Es la única foto de la selección sin menores reconocibles y sin marcas agregadas, mostrando claramente el subte vacío.",
+  "cuando": "2026-10-05T22:31:47.623Z"
+ },
+ "y68w3c": {
+  "archivo": "fotos-notas/y68w3c.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Banco Provincia reduce las tasas de interés para refinanciar deudas",
+  "enlace": "https://www.minutouno.com/economia/un-banco-estatal-las-tasas-los-prestamos-refinanciar-deudas-morosos-n6330304",
+  "imagenOriginal": "https://media.minutouno.com/p/47336dc3379f940953dc438e0ba6d3d6/adjuntos/150/imagenes/043/685/0043685431/un-banco-estatal-las-tasas-los-prestamos-refinanciar-deudas-morosos.jpg",
+  "razon": "Es la única imagen ilustrativa del Banco Provincia libre de marcas del medio y de menores de edad reconocibles.",
+  "cuando": "2026-10-05T22:31:47.623Z"
  }
 }
