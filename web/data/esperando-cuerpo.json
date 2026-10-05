@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T15:53:35.875Z",
+ "generado": "2026-10-05T16:02:07.215Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,25 +15,8 @@
      "fecha": "2026-10-05T15:48:46.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 67 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "1kia0yd",
-   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
-   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-05T11:59:56.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
-     "fecha": "2026-10-05T11:59:56.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo corto (58 palabras)",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 51 palabras",
    "maximo": 3
   },
   {
@@ -76,8 +59,8 @@
      "fecha": "2026-10-05T14:14:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 40 y el cuerpo no lo explica; sin esas oraciones quedan 157 palabras",
+   "intentos": 3,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 93 caracteres, el máximo es 90",
    "maximo": 3
   }
  ]

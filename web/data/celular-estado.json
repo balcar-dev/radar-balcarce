@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T15:53:35.875Z",
- "portada": 44,
- "archivo": 915,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-05T16:02:07.215Z",
+ "portada": 46,
+ "archivo": 916,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T15:53:35.902Z",
+  "generado": "2026-10-05T16:02:07.235Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-05T13:06:26.103Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Participá: mandanos noticias",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-05T15:06:01.156Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-05T13:06:26.103Z",
     "segundos": null,
     "notas": [
@@ -129,6 +129,11 @@
     "segundos": 55,
     "notas": [
      {
+      "id": "1njgnul",
+      "titulo": "Campo de Pato gana el torneo regional y asciende en hockey",
+      "seccion": "Deportes"
+     },
+     {
       "id": "cn09w9",
       "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
       "seccion": "Balcarce"
@@ -142,11 +147,6 @@
       "id": "wb8pre",
       "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
       "seccion": "Agro"
-     },
-     {
-      "id": "bmbmep",
-      "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
-      "seccion": "Argentina"
      }
     ]
    },
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "bmbmep",
+      "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
+      "seccion": "Argentina"
+     },
      {
       "id": "9lbni",
       "titulo": "El capitán de Benín analiza el cruce contra la Selección",
@@ -173,11 +178,6 @@
       "id": "lomklr",
       "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
       "seccion": "Deportes"
-     },
-     {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -201,6 +201,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "1njgnul",
+     "titulo": "Campo de Pato gana el torneo regional y asciende en hockey",
+     "seccion": "Deportes",
+     "marcada": false
+    },
     {
      "id": "wb8pre",
      "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",

@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T15:53:35.875Z",
+  "generado": "2026-10-05T16:02:07.215Z",
   "notas": [
     {
       "id": "gepu85",
@@ -239,8 +239,8 @@
       "guion": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
       "seccion": "Agro",
       "medios": [
-        "Noticias Argentinas (NA)",
-        "Agrositio"
+        "Agrositio",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
       "teniaImagenLaFuente": true,
@@ -375,8 +375,8 @@
       "seccion": "Política",
       "medios": [
         "El Eco de Tandil",
-        "La Verdad",
-        "Agencia DIB"
+        "Agencia DIB",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/politica/carlos-bianco-si-queres-ganar-una-eleccion-la-pureza-ideologica-no-alcanza-n56246",
       "teniaImagenLaFuente": true,
@@ -524,6 +524,93 @@
       }
     },
     {
+      "id": "1njgnul",
+      "titulo": "Campo de Pato gana el torneo regional y asciende en hockey",
+      "copete": "El equipo sub-16 del Club Social y Campo de Pato se consagró campeón en Bahía Blanca de manera invicta. Consiguió el ascenso histórico a la divisional E tras superar en la final a Comercial de Mar del Plata.",
+      "cuerpo": "El Club Social y Campo de Pato logró el título en el Torneo Regional F Sub-16 de Hockey disputado en Bahía Blanca. Las jugadoras se consagraron de manera invicta y consiguieron por primera vez un ascenso para la disciplina local, por lo que competirán en el Torneo Regional E en la próxima edición.\n\nEl plantel estuvo dirigido técnicamente por Matías Antonelli y contó con la preparación física de Analuz Salvo. En las etapas previas del certamen, el equipo superó a rivales como Racing de Chivilcoy, Argentinos de Bahía Blanca y Sarmiento de Junín.",
+      "guion": "Campo de Pato gana el torneo regional y asciende en hockey",
+      "seccion": "Deportes",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Municipalidad de Balcarce",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://balcarce.gob.ar/2026/10/05/campo-de-pato-campeon-del-regional-sub-16-de-hockey/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T13:19:41.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T16:01:26.137Z",
+      "relevancia": 100,
+      "local": true,
+      "oficial": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Campo de Pato ganó el Torneo Regional F Sub-16 de Hockey en Bahía Blanca.",
+        "El equipo balcarceño se consagró campeón de manera invicta.",
+        "Logró un ascenso histórico para competir en el Torneo Regional E."
+      ],
+      "textoRedes": "El equipo sub-16 de Campo de Pato se consagró campeón invicto del Torneo Regional F de Hockey en Bahía Blanca y logró un ascenso histórico a la divisional E.",
+      "etiquetas": [
+        "Campo de Pato",
+        "hockey",
+        "Bahía Blanca",
+        "campeón",
+        "ascenso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/10/05/campo-de-pato-campeon-del-regional-sub-16-de-hockey/",
+          "fecha": "2026-10-05T13:19:41.000Z",
+          "oficial": true,
+          "aporte": "Detalló los resultados de todos los partidos, el cuerpo técnico y la nómina completa del plantel campeón."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/campo-de-pato-campeon-del-regional-sub.html",
+          "fecha": "2026-10-05T13:42:02.751Z",
+          "oficial": false,
+          "aporte": "Confirmó la consagración del equipo en Bahía Blanca y el ascenso histórico al Torneo Regional E."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/campo-de-pato-es-campeon-invicto-del-regional-sub-16-de-hockey-34",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrarse texto en su resumen."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p5a6md",
+          "titulo": "Social Pato compite en el Torneo Regional Sub-16 de hóckey en Bahía Blanca",
+          "fecha": "2026-09-30T17:31:09.698Z",
+          "ruta": "/nota/social-pato-compite-en-el-torneo-regional-sub-16-de-hockey-en-bahia-p5a6md"
+        },
+        {
+          "id": "riobys",
+          "titulo": "Campo de Pato disputa el Torneo Regional de Clubes F en Bahía Blanca",
+          "fecha": "2026-09-29T17:47:43.000Z",
+          "ruta": "/nota/campo-de-pato-disputa-el-torneo-regional-de-clubes-f-en-bahia-blanca-riobys"
+        },
+        {
+          "id": "1iyhhh6",
+          "titulo": "Campo de Pato afronta una intensa doble fecha de hockey",
+          "fecha": "2026-09-25T16:18:25.329Z",
+          "ruta": "/nota/campo-de-pato-tuvo-una-intensa-doble-fecha-de-hockey-en-balcarce-1iyhhh6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman dos medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "campo-de-pato-gana-el-torneo-regional-y-asciende-en-hockey"
+    },
+    {
       "id": "bmbmep",
       "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
       "copete": "Los títulos de la petrolera británica retroceden en la bolsa londinense este lunes. La firma ratificó su continuidad en el yacimiento de Malvinas a pesar de la salida de contratistas.",
@@ -531,9 +618,9 @@
       "guion": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion",
       "seccion": "Argentina",
       "medios": [
-        "Ámbito",
         "Infobae",
         "TN (Todo Noticias)",
+        "Ámbito",
         "Noticias Argentinas (NA)",
         "El Día",
         "El Marplatense"
@@ -768,11 +855,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44992-ticiano-conto-su-historia-y-encontro-una-oportunidad-fue-recibido-por-reino-y-sera-incorporado-a-un-programa-de-emprendedores/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-05T13:01:23.078Z",
       "sinFecha": true,
       "visto": "2026-10-05T13:01:23.078Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -831,15 +918,15 @@
       "guion": "Chascomús reúne a los fanáticos de Chevrolet en su vigésimo encuentro",
       "seccion": "Automovilismo",
       "medios": [
-        "La Verdad",
-        "Agencia DIB"
+        "Agencia DIB",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/adn-bonaerense/chascomus-ch-chevrolet-encuentro-fierreros-orillas-la-laguna-n56241",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T12:54:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:31:24.148Z",
-      "relevancia": 57,
+      "relevancia": 47,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -890,16 +977,16 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "El Eco de Tandil",
+        "Agencia DIB",
         "La Noticia 1",
-        "El Marplatense",
-        "Agencia DIB"
+        "El Marplatense"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/bianco-aseguro-que-la-provincia-hace-mas-obra-publica-que-todo-el-pais-y-destaco-87-nuevas-licitaciones",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T12:53:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T14:01:27.384Z",
-      "relevancia": 86,
+      "relevancia": 76,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -967,21 +1054,7 @@
       "seccion": "Automovilismo",
       "medios": [
         "Radio Gabal (FM 104.1)",
-        "Puntonueve (FM 100.9)",
-        "Diario La Vanguardia",
-        "Campeones",
-        "El Destape",
-        "Página/12",
-        "TyC Sports",
-        "El Día",
-        "El Marplatense",
-        "Solotc",
-        "Olé",
-        "Córdoba Competición",
-        "Clarín",
-        "Ecos Diarios (Necochea)",
-        "La Brújula 24",
-        "La Verdad"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/habra-que-trabajar-para-la-proxima-mangoni-y-el-balance-de-su-fecha-en-san-nicolas",
       "teniaImagenLaFuente": true,
@@ -1224,7 +1297,6 @@
       "guion": "El Hospital Municipal registra problemas en sus líneas telefónicas",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -1234,7 +1306,7 @@
       "fecha": "2026-10-05T11:40:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T12:01:25.478Z",
-      "relevancia": 100,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1333,7 +1405,7 @@
       "fecha": "2026-10-05T11:31:40.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T14:31:15.507Z",
-      "relevancia": 43,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1386,6 +1458,81 @@
       }
     },
     {
+      "id": "o0t9h2",
+      "titulo": "Oficializan la designación de Gabriel Felizia en Mar del Plata",
+      "copete": "El Gobierno bonaerense formalizó el nombramiento de Gabriel Felizia al frente de la Unidad de Coordinación Bahía Bristol en Mar del Plata. El organismo funcionará bajo la órbita del Ministerio de Gobierno.",
+      "cuerpo": "El Gobierno bonaerense oficializó este lunes la designación de Gabriel Felizia como director ejecutivo de la Unidad de Coordinación Bahía Bristol en Mar del Plata, según informó el Boletín Oficial de la provincia de Buenos Aires. La medida, formalizada por el Ministerio de Gobierno, rige desde el 1 de octubre de 2026 con rango y remuneración equivalente a director provincial.\n\nEl organismo articula las áreas provinciales que intervienen en el conjunto urbano del Hotel Provincial, el Casino Central y la Rambla. El ministro de Gobierno, Carlos Bianco, explicó que el municipio no participa porque \"no nos contesta los mensajes\".\n\nLa unidad también cuenta con una Comisión Asesora integrada por representantes de distintas carteras provinciales para la planificación y la toma de decisiones en el sector.",
+      "guion": "Oficializan la designación de Gabriel Felizia en Mar del Plata",
+      "seccion": "Política",
+      "medios": [
+        "Agencia DIB",
+        "La Tecla",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://www.lateclamardelplata.com.ar/66590-bahia-bristol-se-oficializo-a-felizia-al-frente-de-la-nueva-unidad",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T11:29:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T13:31:16.447Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Gabriel Felizia encabeza la Unidad de Coordinación Bahía Bristol.",
+        "La medida fue formalizada por el Ministerio de Gobierno en el Boletín Oficial.",
+        "El organismo abarca la Rambla, el Hotel Provincial y el Casino Central."
+      ],
+      "seSabe": [
+        "Gabriel Felizia fue designado director ejecutivo de la Unidad de Coordinación Bahía Bristol.",
+        "La designación rige desde el 1 de octubre de 2026 con rango de director provincial.",
+        "El organismo funciona bajo la órbita del Ministerio de Gobierno de la Provincia."
+      ],
+      "etiquetas": [
+        "Gabriel Felizia",
+        "Mar del Plata",
+        "Boletín Oficial",
+        "Provincia de Buenos Aires",
+        "Ministerio de Gobierno"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.lateclamardelplata.com.ar/66590-bahia-bristol-se-oficializo-a-felizia-al-frente-de-la-nueva-unidad",
+          "fecha": "2026-10-05T11:29:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la publicación de la designación en el Boletín Oficial y el rol del Ministerio de Gobierno."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/politica/mar-del-plata-designaron-al-titular-la-unidad-coordinacion-bahia-bristol-n56243",
+          "fecha": "2026-10-05T12:40:58.000Z",
+          "oficial": false,
+          "aporte": "Detalló los objetivos de la unidad, la fecha de inicio, el rango del cargo y las declaraciones del ministro Carlos Bianco."
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/oficializan-la-designacion-de-gabriel-felizia-al-frente-de-la-unidad-bahia-bristol-con-cago-de-director-provincial/",
+          "fecha": "2026-10-05T12:50:42.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la oficialización del nombramiento en el Boletín Oficial de la provincia de Buenos Aires."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "oficializan-la-designacion-de-gabriel-felizia-en-mar-del-plata",
+      "foto": {
+        "archivo": "fotos-notas/o0t9h2.jpg",
+        "credito": "Foto: La Tecla"
+      }
+    },
+    {
       "id": "16q21ih",
       "titulo": "Los premios Martín Fierro de la Música anuncian su primera gala",
       "copete": "La entidad periodística de la televisión y la radiofonía nacional estrena una premiación dedicada a la industria discográfica. La ceremonia inaugural se realizará el miércoles 14 de octubre en el distrito porteño.",
@@ -1397,8 +1544,9 @@
         "A24",
         "C5N",
         "Crónica",
-        "Noticias Argentinas (NA)",
-        "La Tecla"
+        "La Tecla",
+        "El Eco de Tandil",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
       "teniaImagenLaFuente": true,
@@ -1496,8 +1644,8 @@
       "medios": [
         "Bichos de Campo",
         "Página/12",
-        "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Nueva",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-gobierno-lanzo-la-segunda-etapa-de-retiros-voluntarios-en-vialidad-nacional_a6ac38821efa9665a6c19f204",
       "teniaImagenLaFuente": true,
@@ -2088,9 +2236,6 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Puntonueve (FM 100.9)",
-        "Municipalidad de Balcarce",
-        "El Diario Balcarce",
         "Acción 5 (Balcarce)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/martina-lupo-y-stefania-mosqueira.html",
@@ -2289,20 +2434,19 @@
       "guion": "Bomberos controlan un principio de incendio en un edificio",
       "seccion": "Policiales",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
         "El Diario Balcarce",
         "Municipalidad de Balcarce",
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/principio-de-incendio-movilizo-dos.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-04T21:50:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T05:01:19.118Z",
-      "relevancia": 93,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2443,8 +2587,8 @@
         "Radio Mitre",
         "Canal 26",
         "Diario Popular",
-        "Noticias Argentinas (NA)",
         "El Eco de Tandil",
+        "Noticias Argentinas (NA)",
         "La Nueva",
         "C5N"
       ],
@@ -2550,7 +2694,6 @@
         "Infobae",
         "Ámbito",
         "TN (Todo Noticias)",
-        "El Destape",
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
@@ -2563,8 +2706,8 @@
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "Radio Mitre",
-        "El Día",
-        "La Nueva"
+        "La Nueva",
+        "El Día"
       ],
       "enlace": "https://www.ambito.com/economia/las-ventas-minoristas-pyme-subieron-apenas-03-septiembre-y-acumulan-una-caida-del-21-anual-n6329896",
       "teniaImagenLaFuente": true,
@@ -2964,8 +3107,8 @@
         "A24",
         "Ámbito",
         "C5N",
-        "Noticias Argentinas (NA)",
         "Doble Amarilla",
+        "Noticias Argentinas (NA)",
         "Minuto Uno"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/selecciones/dibu-martinez-hablo-del-legado-de-messi-y-confeso-donde-le-gustaria-jugar-en-argentina_a6ac25797aa20c9061099c717",
@@ -3128,10 +3271,7 @@
       "guion": "La Provincia y las distribuidoras apelan el fallo que frenó las tarifas",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia",
-        "InfoRegión",
-        "InfoGEI",
-        "El Día"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44987-kicillof-apelo-el-fallo-que-habia-frenado-los-aumentos-de-las-tarifas-electricas-en-la-provincia/",
       "teniaImagenLaFuente": true,
@@ -3195,10 +3335,10 @@
         "TN (Todo Noticias)",
         "TyC Sports",
         "Olé",
-        "Noticias Argentinas (NA)",
         "QZ Noticias (Mar del Plata)",
         "0223 (Mar del Plata)",
         "Clarín",
+        "Noticias Argentinas (NA)",
         "La Nueva"
       ],
       "enlace": "https://www.tycsports.com/seleccion-argentina/dibu-martinez-estuvo-en-el-tc-y-desafio-a-scaloni-a-una-carrera-id764328.html",
@@ -3318,7 +3458,7 @@
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/04/a-la-espera-de-los-primeros-resultados-milei-sigue-con-optimismo-la-eleccion-en-brasil-y-respaldo-a-bolsonaro-en-redes/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-04T12:32:17.978Z",
+      "fecha": "2026-10-04T12:32:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
       "relevancia": 71,
@@ -3403,7 +3543,6 @@
         "Página/12",
         "A24",
         "TyC Sports",
-        "Noticias Argentinas (NA)",
         "0221",
         "La Tecla",
         "InfoRegión",
@@ -3415,13 +3554,14 @@
         "Bolavip Argentina",
         "Olé",
         "0223 (Mar del Plata)",
-        "Córdoba Competición",
         "Crónica",
         "Campeones",
         "El Día",
         "La Brújula 24",
         "La Voz del Pueblo",
         "Ecos Diarios (Necochea)",
+        "Córdoba Competición",
+        "Noticias Argentinas (NA)",
         "La Verdad",
         "Perfil",
         "C5N",
@@ -3511,7 +3651,6 @@
       "guion": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia",
         "La Noticia 1"
       ],
@@ -3637,20 +3776,20 @@
     "Automovilismo",
     "Economía",
     "Política",
+    "Deportes",
     "Argentina",
     "Balcarce",
     "Cultura y agenda",
     "Policiales",
-    "Fútbol",
-    "Deportes"
+    "Fútbol"
   ],
   "temas": [],
   "clima": {
     "ahora": {
       "temp": 18,
       "sensacion": 16,
-      "humedad": 64,
-      "viento": 22,
+      "humedad": 63,
+      "viento": 21,
       "rumbo": "NO",
       "cielo": "Mayormente despejado",
       "esDeDia": true
@@ -3661,7 +3800,7 @@
         "dia": "lun",
         "max": 19,
         "min": 10,
-        "lluvia": 79,
+        "lluvia": 47,
         "codigo": 51,
         "viento": 24,
         "milimetros": 1,
@@ -3672,7 +3811,7 @@
         "dia": "mar",
         "max": 21,
         "min": 8,
-        "lluvia": 18,
+        "lluvia": 20,
         "codigo": 51,
         "viento": 14,
         "milimetros": 0,
@@ -3683,7 +3822,7 @@
         "dia": "mié",
         "max": 16,
         "min": 11,
-        "lluvia": 82,
+        "lluvia": 51,
         "codigo": 51,
         "viento": 21,
         "milimetros": 1,
@@ -3694,7 +3833,7 @@
         "dia": "jue",
         "max": 13,
         "min": 8,
-        "lluvia": 65,
+        "lluvia": 46,
         "codigo": 51,
         "viento": 25,
         "milimetros": 0,
@@ -4011,10 +4150,10 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "h9pxr0",
+      "id": "1xdn33s",
       "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niña\""
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
     },
     {
       "id": "15m9ao1",
@@ -4035,5 +4174,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 3
 }
