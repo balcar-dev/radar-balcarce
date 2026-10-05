@@ -34,6 +34,10 @@ export default function sitemap() {
     { url: `${base}/clima`, lastModified: new Date(), changeFrequency: 'hourly', priority: 0.7 },
     { url: `${base}/dolar`, lastModified: new Date(), changeFrequency: 'hourly', priority: 0.7 },
     { url: `${base}/agenda`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
+    // Las tablas fijas (4/10): una dirección que no cambia y que se actualiza sola después de cada fecha o carrera.
+    { url: `${base}/tablas`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.6 },
+    { url: `${base}/tablas/liga-profesional`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
+    { url: `${base}/tablas/formula-1`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
     { url: `${base}/util`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/quienes-somos`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${base}/contacto`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },

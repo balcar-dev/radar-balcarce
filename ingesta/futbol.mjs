@@ -258,6 +258,8 @@ const baseDeLaNota = ({
   competenciaFutbol: competencia,
   // Lo mismo que dice el cuerpo, ordenado para dibujarlo (tablas y escudos); el cuerpo sigue siendo el texto (redes, buscadores, verificación).
   datosFutbol: datos,
+  // La Liga tiene su página fija de posiciones (/tablas/liga-profesional, 4/10): la nota la enlaza.
+  destacados: competencia === 'liga' ? [{ texto: 'Ver la tabla de posiciones', href: '/tablas/liga-profesional' }] : [],
   // El estadio del primer partido, para buscarle una foto libre (web/scripts/foto-libre.mjs).
   lugarFoto,
   titulo,

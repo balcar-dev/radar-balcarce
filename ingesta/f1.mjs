@@ -242,6 +242,23 @@ export function resumirClasificacion(json) {
   };
 }
 
+/** La clasificación del campeonato de constructores (equipos), completa (4/10: página fija de tablas). */
+export function resumirConstructores(json) {
+  const lista = json?.MRData?.StandingsTable?.StandingsLists?.[0];
+  const filas = lista?.ConstructorStandings;
+  if (!lista || !Array.isArray(filas) || !filas.length) return null;
+  return {
+    temporada: entero(lista.season),
+    ronda: entero(lista.round),
+    filas: filas.map((f) => ({
+      posicion: entero(f.position),
+      equipo: String(f.Constructor?.name ?? '').trim(),
+      puntos: Number(f.points),
+      victorias: entero(f.wins),
+    })).filter((f) => f.equipo && Number.isFinite(f.puntos)),
+  };
+}
+
 /** De la lista de pilotos de la temporada, ¿corre Colapinto? */
 export function resumirPilotos(json) {
   const lista = json?.MRData?.DriverTable?.Drivers;
@@ -287,6 +304,7 @@ export async function traerF1({ antes = null, fetchFn = fetch, ahora = new Date(
     pilotos: previo.pilotos ?? null,
     resultado: previo.resultado ?? null,
     clasificacion: previo.clasificacion ?? null,
+    constructores: previo.constructores ?? null,
     parrilla: previo.parrilla ?? null,
     notas: previo.notas ?? {},
   };
@@ -326,6 +344,10 @@ export async function traerF1({ antes = null, fetchFn = fetch, ahora = new Date(
     if (!tieneClasif) {
       const c = await pedir(fetchFn, 'current/driverstandings.json?limit=100', resumirClasificacion);
       if (c && c.ronda === carrera.ronda) f1.clasificacion = c;
+    }
+    if (f1.constructores?.ronda !== carrera.ronda) {
+      const k = await pedir(fetchFn, 'current/constructorstandings.json?limit=100', resumirConstructores);
+      if (k && k.ronda === carrera.ronda) f1.constructores = k;
     }
   }
   return f1;
@@ -369,6 +391,8 @@ const baseDeLaNota = ({
   id,
   propia: 'f1',
   tipoF1: tipo,
+  // La F1 tiene su página fija del campeonato (/tablas/formula-1, 4/10): la nota la enlaza.
+  destacados: [{ texto: 'Ver el campeonato de pilotos y constructores', href: '/tablas/formula-1' }],
   // El circuito, para buscarle una foto libre (web/scripts/foto-libre.mjs).
   circuitoF1: circuito,
   titulo,
