@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T10:01:22.316Z",
- "portada": 30,
+ "generado": "2026-10-05T10:31:43.109Z",
+ "portada": 29,
  "archivo": 889,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-05T10:01:22.340Z",
+  "generado": "2026-10-05T10:31:43.132Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-05T10:03:57.311Z"
    },
    {
     "nombre": "efemeride",
@@ -98,14 +98,14 @@
     "segundos": 40,
     "notas": [
      {
-      "id": "lomklr",
-      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
-      "seccion": "Deportes"
-     },
-     {
       "id": "c1nalz",
       "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "lomklr",
+      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
+      "seccion": "Deportes"
      }
     ]
    },
