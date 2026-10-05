@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-05T02:01:36.989Z",
+ "consultado": "2026-10-05T02:31:28.411Z",
  "equipos": [
   "9739",
   "3",
@@ -426,12 +426,12 @@
     "id": "401841591",
     "competencia": "liga",
     "inicio": "2026-10-05T00:30:00.000Z",
-    "estado": "en-juego",
-    "minuto": "73'",
+    "estado": "final",
+    "minuto": "90'+6'",
     "local": {
      "id": "19685",
      "nombre": "Estudiantes de Río Cuarto",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "15",
@@ -450,6 +450,12 @@
       "equipo": "visitante",
       "jugador": "Adrián Martínez",
       "minuto": "38'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Mauro Valiente",
+      "minuto": "88'",
       "tipo": "gol"
      }
     ],
