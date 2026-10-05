@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T06:51:34.059Z",
+  "generado": "2026-10-05T07:02:38.836Z",
   "notas": [
     {
       "id": "1u6ny2m",
@@ -340,6 +340,7 @@
       "guion": "Bomberos controlan un principio de incendio en un edificio",
       "seccion": "Policiales",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -671,7 +672,7 @@
       "fecha": "2026-10-04T19:00:23.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T19:31:15.414Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -742,9 +743,9 @@
         "Crónica",
         "El Día",
         "La Nueva",
-        "InfoRegión",
         "Punto Noticias",
-        "Radio Mitre"
+        "Radio Mitre",
+        "InfoRegión"
       ],
       "enlace": "https://www.ambito.com/economia/las-ventas-minoristas-pyme-subieron-apenas-03-septiembre-y-acumulan-una-caida-del-21-anual-n6329896",
       "teniaImagenLaFuente": true,
@@ -1098,121 +1099,6 @@
       }
     },
     {
-      "id": "r1j6p6",
-      "titulo": "Casella choca en Posadas tras un toque y una cubierta golpea a un espectador",
-      "copete": "El piloto uruguayo protagonizó un fuerte accidente en la octava fecha del TCR South America en Posadas. Su vehículo despistó tras un contacto y un neumático voló hacia el público.",
-      "cuerpo": "Casella recibió un toque de Camilo Trappa, perdió el control de su unidad y chocó contra las defensas de contención de neumáticos. Tras el impacto, uno de los elementos de protección salió despedido y alcanzó a una persona que observaba la competencia detrás del alambrado. Según informó la cobertura oficial, el deportista uruguayo no sufrió lesiones y la prueba debió ser neutralizada con el ingreso del auto de seguridad.\n\nLos comisarios deportivos analizaron la maniobra y determinaron que el argentino fue responsable del incidente, por lo que le aplicaron un recargo de diez segundos que lo relegó del quinto al decimosexto puesto. La competencia consagró ganador a Néstor Girolami, con Leonel Pernía en el segundo lugar y Raphael Reis en el tercero.",
-      "guion": "Casella choca en Posadas tras un toque y una cubierta golpea a un espectador",
-      "seccion": "Automovilismo",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Minuto Uno",
-        "Radio Mitre"
-      ],
-      "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/04/susto-en-el-tcr-un-piloto-recibio-un-toque-perdio-el-control-del-auto-y-protagonizo-un-fuerte-choque/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-04T16:03:26.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T19:31:15.414Z",
-      "relevancia": 74,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica",
-      "seSabe": [
-        "Juan Manuel Casella protagonizó un choque en la primera carrera del TCR South America en Posadas.",
-        "El incidente se produjo tras un contacto con Camilo Trappa cuando faltaban nueve minutos para el cierre.",
-        "Un neumático impactó contra un espectador al otro lado del alambrado.",
-        "El piloto uruguayo no sufrió lesiones.",
-        "Camilo Trappa fue sancionado con diez segundos de recargo y finalizó decimosexto.",
-        "Néstor Girolami ganó la competencia, secundado por Leonel Pernía y Raphael Reis."
-      ],
-      "noConfirmado": [
-        "No se informó el estado de salud de la persona alcanzada por el neumático."
-      ],
-      "textoRedes": "Juan Manuel Casella protagonizó un fuerte accidente en la primera carrera del TCR South America en Posadas tras un toque con Camilo Trappa. Un neumático salió despedido e impactó a un espectador, aunque el piloto no sufrió lesiones.",
-      "etiquetas": [
-        "Automovilismo",
-        "TCR South America",
-        "Juan Manuel Casella",
-        "Camilo Trappa",
-        "Posadas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/04/susto-en-el-tcr-un-piloto-recibio-un-toque-perdio-el-control-del-auto-y-protagonizo-un-fuerte-choque/",
-          "fecha": "2026-10-04T16:03:26.000Z",
-          "oficial": false,
-          "aporte": "Detalló el desarrollo del accidente, la sanción a Trappa, el podio y la reacción del piloto uruguayo."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/fuerte-accidente-en-el-tcr-south-america-una-rueda-salio-despedida-y-golpeo-a-un-espectador-nid04102026/",
-          "fecha": "2026-10-04T17:58:40.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la ubicación del evento en el Autódromo Rosamonte de Posadas, Misiones."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/04/video-el-impactante-accidente-en-el-tcr-south-america-que-provoco-que-un-neumatico-golpeara-un-espectador/",
-          "fecha": "2026-10-04T17:52:33.000Z",
-          "oficial": false,
-          "aporte": "Especificó que el hecho ocurrió durante la Final 1 y correspondió a la octava fecha del campeonato."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/el-impactante-video-de-un-accidente-en-el-tcr-south-america-una-persona-termino-herida-id764332.html",
-          "fecha": "2026-10-04T16:55:08.000Z",
-          "oficial": false,
-          "aporte": "Sin contenido informativo en el resumen."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/se-despisto-en-el-circuito-una-rueda-salio-volando-y-golpeo-a-un-espectador-en-la-carrera-del-tcr/",
-          "fecha": "2026-10-04T18:54:42.000Z",
-          "oficial": false,
-          "aporte": "Aportó datos generales sobre el despiste tras el contacto con Camilo Trappa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1y13u38",
-          "titulo": "Ignacio Fain logra la pole en San Nicolás y corta la sequia de Torino",
-          "fecha": "2026-10-03T19:57:35.000Z",
-          "ruta": "/nota/ignacio-fain-logra-la-pole-en-san-nicolas-y-corta-la-sequia-de-torino-1y13u38"
-        },
-        {
-          "id": "sty1jd",
-          "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
-          "fecha": "2026-10-02T16:31:18.468Z",
-          "ruta": "/nota/la-fiesta-nacional-del-postre-anticipa-su-vigesima-segunda-edicion-sty1jd"
-        },
-        {
-          "id": "1j4lf17",
-          "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
-          "fecha": "2026-10-02T01:39:50.000Z",
-          "ruta": "/nota/hugo-mazzacane-descarta-el-regreso-del-turismo-carretera-a-balcarce-1j4lf17"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "casella-choca-en-posadas-tras-un-toque-y-una-cubierta-golpea-a-un",
-      "foto": {
-        "archivo": "fotos-notas/r1j6p6.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "5mn9v7",
       "titulo": "Dibu Martínez revela su deseo de jugar en Mar del Plata",
       "copete": "Tras la goleada ante Burkina Faso, el arquero de la Selección Argentina habló sobre su futuro profesional, recordó por qué evaluó dejar el combinado nacional y palpitó la despedida de Lionel Messi.",
@@ -1454,8 +1340,7 @@
         "TyC Sports",
         "Olé",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "El Gráfico"
+        "La Nueva"
       ],
       "enlace": "https://www.tycsports.com/seleccion-argentina/dibu-martinez-estuvo-en-el-tc-y-desafio-a-scaloni-a-una-carrera-id764328.html",
       "teniaImagenLaFuente": true,
@@ -1725,6 +1610,69 @@
       }
     },
     {
+      "id": "1vb3leq",
+      "titulo": "Intendentes debaten la división provincial y Balcarce analiza su rol",
+      "copete": "El respaldo de jefes comunales a una iniciativa para federalizar el Conurbano reflota el debate histórico sobre la organización territorial bonaerense.",
+      "cuerpo": "El respaldo de intendentes a un proyecto para federalizar el Conurbano reinstaló la discusión sobre la modificación del mapa bonaerense. La iniciativa, impulsada por el exministro Joaquín de la Torre, propone que veintisiete distritos ubicados desde la Ruta 6 hacia la Capital se vinculen de forma directa con la Nación y eliminen la órbita provincial.\n\nEl plan recibió el apoyo de los jefes comunales Guillermo Britos y Carlos Bevilacqua durante un encuentro en Chivilcoy. El proyecto contempla que cada municipio conserve su intendente y su Concejo Deliberante, mientras que la Provincia concentraría sus recursos en el resto del territorio.\n\nEn ese escenario, Balcarce, distrito gobernado por el intendente Esteban Reino, forma parte del interior productivo que históricamente reclama mayor autonomía y una distribución diferente de los recursos.",
+      "guion": "Intendentes debaten la división provincial y Balcarce analiza su rol",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44990-otra-vez-sobre-la-mesa-la-division-de-la-provincia-que-lugar-tendria-balcarce-en-una-buenos-aires-sin-el-peso-del-conurbano/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-04T10:31:15.992Z",
+      "sinFecha": true,
+      "visto": "2026-10-04T10:31:15.992Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Debaten un proyecto para federalizar veintisiete distritos del Conurbano.",
+        "La iniciativa propone eliminar la instancia provincial en esa región.",
+        "Balcarce integra el interior productivo que reclama mayor autonomía."
+      ],
+      "seSabe": [
+        "Joaquín de la Torre impulsa un proyecto para federalizar veintisiete distritos del Conurbano.",
+        "Los intendentes Guillermo Britos y Carlos Bevilacqua respaldaron la iniciativa en Chivilcoy.",
+        "El proyecto plantea que los municipios conserven sus intendentes y concejos deliberantes.",
+        "Esteban Reino gobierna actualmente el distrito de Balcarce, según informó la fuente."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó si la iniciativa obtendrá el aval legislativo necesario para modificar el mapa bonaerense.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Intendentes respaldan un proyecto para federalizar el Conurbano y se reabre la discusión sobre la autonomía del interior bonaerense y el rol de Balcarce.",
+      "etiquetas": [
+        "Politica",
+        "Provincia de Buenos Aires",
+        "Balcarce",
+        "Conurbano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44990-otra-vez-sobre-la-mesa-la-division-de-la-provincia-que-lugar-tendria-balcarce-en-una-buenos-aires-sin-el-peso-del-conurbano/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el proyecto de federalización del Conurbano y el impacto del debate en el interior productivo y en Balcarce."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "intendentes-debaten-la-division-provincial-y-balcarce-analiza-su-rol",
+      "foto": {
+        "archivo": "fotos-notas/1vb3leq.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "c1nalz",
       "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
       "copete": "La ciudad conmemora el domingo la fecha instituida en su memoria por impulso del Club Rotario Balcarce Cerrito y el Concejo Deliberante.",
@@ -1784,69 +1732,6 @@
       "slug": "balcarce-recuerda-a-hector-beto-vuotto-en-el-dia-del-periodista",
       "foto": {
         "archivo": "fotos-notas/c1nalz.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "1vb3leq",
-      "titulo": "Intendentes debaten la división provincial y Balcarce analiza su rol",
-      "copete": "El respaldo de jefes comunales a una iniciativa para federalizar el Conurbano reflota el debate histórico sobre la organización territorial bonaerense.",
-      "cuerpo": "El respaldo de intendentes a un proyecto para federalizar el Conurbano reinstaló la discusión sobre la modificación del mapa bonaerense. La iniciativa, impulsada por el exministro Joaquín de la Torre, propone que veintisiete distritos ubicados desde la Ruta 6 hacia la Capital se vinculen de forma directa con la Nación y eliminen la órbita provincial.\n\nEl plan recibió el apoyo de los jefes comunales Guillermo Britos y Carlos Bevilacqua durante un encuentro en Chivilcoy. El proyecto contempla que cada municipio conserve su intendente y su Concejo Deliberante, mientras que la Provincia concentraría sus recursos en el resto del territorio.\n\nEn ese escenario, Balcarce, distrito gobernado por el intendente Esteban Reino, forma parte del interior productivo que históricamente reclama mayor autonomía y una distribución diferente de los recursos.",
-      "guion": "Intendentes debaten la división provincial y Balcarce analiza su rol",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44990-otra-vez-sobre-la-mesa-la-division-de-la-provincia-que-lugar-tendria-balcarce-en-una-buenos-aires-sin-el-peso-del-conurbano/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-04T10:31:15.992Z",
-      "sinFecha": true,
-      "visto": "2026-10-04T10:31:15.992Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Debaten un proyecto para federalizar veintisiete distritos del Conurbano.",
-        "La iniciativa propone eliminar la instancia provincial en esa región.",
-        "Balcarce integra el interior productivo que reclama mayor autonomía."
-      ],
-      "seSabe": [
-        "Joaquín de la Torre impulsa un proyecto para federalizar veintisiete distritos del Conurbano.",
-        "Los intendentes Guillermo Britos y Carlos Bevilacqua respaldaron la iniciativa en Chivilcoy.",
-        "El proyecto plantea que los municipios conserven sus intendentes y concejos deliberantes.",
-        "Esteban Reino gobierna actualmente el distrito de Balcarce, según informó la fuente."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó si la iniciativa obtendrá el aval legislativo necesario para modificar el mapa bonaerense.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Intendentes respaldan un proyecto para federalizar el Conurbano y se reabre la discusión sobre la autonomía del interior bonaerense y el rol de Balcarce.",
-      "etiquetas": [
-        "Politica",
-        "Provincia de Buenos Aires",
-        "Balcarce",
-        "Conurbano"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44990-otra-vez-sobre-la-mesa-la-division-de-la-provincia-que-lugar-tendria-balcarce-en-una-buenos-aires-sin-el-peso-del-conurbano/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló el proyecto de federalización del Conurbano y el impacto del debate en el interior productivo y en Balcarce."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "intendentes-debaten-la-division-provincial-y-balcarce-analiza-su-rol",
-      "foto": {
-        "archivo": "fotos-notas/1vb3leq.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
     },
@@ -2589,6 +2474,7 @@
       "guion": "Bomberos locales detallan su participación en el rescate en Venezuela",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/nos-preparamos-para-estas-tragedias-aunque-no-queremos-que-ocurran-la-experiencia-de-los-bomberos-balcarcenos-en-venezuela-nos-preparamos-para-este-tipo-de-tragedias-bomberos-balcarcenos-contaron-su-experiencia-tras-el-terremoto-en-venezuela-755",
@@ -2596,7 +2482,7 @@
       "fecha": "2026-10-03T22:39:05.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 78,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2659,82 +2545,65 @@
       }
     },
     {
-      "id": "12y59yp",
-      "titulo": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
-      "copete": "El presidente de la AFA replicó el ritual con un grupo de futbolistas en la previa del encuentro contra Burkina Faso en el Estadio Monumental.",
-      "cuerpo": "El presidente de la AFA, Claudio Tapia, compartió una reunión con Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez en la concentración albiceleste. El grupo tomó mates en la oficina mientras observaba por televisión el partido entre Barracas Central y Atlético Tucumán, en la antesala del segundo amistuso de la fecha FIFA.\n\nLa puesta en escena repite la cábala implementada días atrás en Córdoba antes del compromiso frente a Bolivia. La imagen ratifica la relevancia que adquirieron los cuatro jugadores dentro del vestuario como nueva columna vertebral del equipo que conduce Lionel Scaloni.\n\nLa Selección argentina se enfrenta el sábado a Burkina Faso en el Estadio Monumental para continuar con su rodaje futbolístico ante los simpatizantes.",
-      "guion": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
-      "seccion": "Fútbol",
+      "id": "1gq0pia",
+      "titulo": "La Liga Balcarceña suspende toda la fecha del fútbol local",
+      "copete": "La Liga Balcarceña de Fútbol postergó los encuentros previstos para el fin de semana. La decisión se tomó tras constatar el estado de los terrenos y los accesos por las precipitaciones.",
+      "cuerpo": "La Liga Balcarceña de Fútbol suspendió en su totalidad la programación futbolística prevista para el fin de semana debido a las precipitaciones registradas en las últimas horas. Según informó la entidad, se realizó un recorrido por los distintos escenarios y se constató que los terrenos de juego y los accesos presentan serias dificultades.\n\nDesde la organización explicaron que la humedad acumulada durante la noche impidió que las canchas lograran secarse adecuadamente. Además, señalaron que no era viable disputar una parte de la jornada porque los encuentros pendientes hubieran recargado el calendario del próximo fin de semana.\n\nLa reprogramación de los partidos será informada próximamente por las autoridades de la Liga.",
+      "guion": "La Liga Balcarceña suspende toda la fecha del fútbol local",
+      "seccion": "Balcarce",
       "medios": [
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Olé",
-        "El Día"
+        "Puntonueve (FM 100.9)"
       ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T22:30:12.000Z",
+      "enlace": "https://puntonueve.com.ar/se-postergo-en-su-totalidad-la-fecha-del-futbol-local/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-03T22:24:54.000Z",
       "sinFecha": false,
-      "visto": "2026-10-04T02:34:42.599Z",
-      "relevancia": 64,
-      "local": false,
+      "visto": "2026-10-03T22:31:21.682Z",
+      "relevancia": 59,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Claudio Tapia repitió la cábala con cuatro referentes del plantel en la concentración.",
-        "Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez participaron del ritual.",
-        "El seleccionado nacional juega este sábado un amistoso frente a Burkina Faso en el Monumental."
+        "Se suspendió toda la fecha del fútbol local",
+        "La medida responde al estado de las canchas por el agua caída",
+        "Afecta a los encuentros programados para el fin de semana",
+        "La nueva programación se informará próximamente"
       ],
       "seSabe": [
-        "Claudio Tapia posó junto a Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez.",
-        "El grupo compartió mates y vio televisión en la concentración antes del partido.",
-        "La Selección argentina juega este sábado frente a Burkina Faso en el Estadio Monumental."
+        "La Liga Balcarceña de Fútbol suspendió todos los partidos del fin de semana",
+        "La decisión se basó en el estado de las canchas y los accesos tras las precipitaciones",
+        "La nueva fecha de los encuentros será informada más adelante por la entidad"
       ],
       "noConfirmado": [
-        "No se informaron otros detalles sobre las actividades previas del plantel en la concentración."
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Claudio Tapia replicó una cábala con cuatro referentes del plantel en la previa del partido de la Selección argentina ante Burkina Faso en el Monumental.",
+      "textoRedes": "La Liga Balcarceña de Fútbol suspendió todos los partidos previstos para este fin de semana debido al estado de las canchas y los accesos tras las precipitaciones registradas en las últimas horas.",
       "etiquetas": [
-        "Seleccion argentina",
-        "Claudio Tapia",
-        "AFA",
-        "Estadio Monumental",
-        "Burkina Faso"
+        "Liga Balcarceña de Fútbol",
+        "fútbol local",
+        "suspensión",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
-          "fecha": "2026-10-03T22:30:12.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/se-postergo-en-su-totalidad-la-fecha-del-futbol-local/",
+          "fecha": "2026-10-03T22:24:54.000Z",
           "oficial": false,
-          "aporte": "Detalló la reunión de Claudio Tapia y los cuatro futbolistas antes del partido contra Burkina Faso."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/la-nueva-foto-cabala-de-la-seleccion-argentina-con-chiqui-tapia-id764266.html",
-          "fecha": "2026-10-03T23:36:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/seleccion/foto-cabala-tapia-jugadores-seleccion-romero-martinez-fernandez-alvarez_0_lU6FCBJkGx.html",
-          "fecha": "2026-10-03T22:46:39.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Informó la suspensión total de la fecha del fútbol local debido al estado de las canchas por el agua caída."
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "claudio-tapia-comparte-una-cabala-con-cuatro-referentes-de-la",
+      "slug": "la-liga-balcarcena-suspende-toda-la-fecha-del-futbol-local",
       "foto": {
-        "archivo": "fotos-notas/12y59yp.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
+        "archivo": "fotos-notas/1gq0pia.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2929,10 +2798,10 @@
     "ahora": {
       "temp": 11,
       "sensacion": 7,
-      "humedad": 70,
+      "humedad": 71,
       "viento": 14,
       "rumbo": "NO",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Nublado",
       "esDeDia": false
     },
     "dias": [
@@ -3309,12 +3178,6 @@
       "motivo": "necesita ojo humano: \"niña\""
     },
     {
-      "id": "17hpmfy",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "15m9ao1",
       "titulo": "Tandil reclamó obras urgentes en la Ruta 226 en el…",
       "seccion": "Argentina",
@@ -3337,6 +3200,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "gzrk1u",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1g4hhb1",
