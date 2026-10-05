@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T17:02:11.877Z",
- "portada": 50,
- "archivo": 923,
+ "generado": "2026-10-05T17:31:51.826Z",
+ "portada": 48,
+ "archivo": 922,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T17:02:11.904Z",
+  "generado": "2026-10-05T17:31:51.843Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 48,
     "notas": [
      {
       "id": "1vnue0q",
@@ -144,9 +144,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "wb8pre",
-      "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
-      "seccion": "Agro"
+      "id": "27x6h7",
+      "titulo": "Flybondi se presenta en concurso preventivo de acreedores",
+      "seccion": "Economía"
      }
     ]
    },
@@ -157,11 +157,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 48,
     "notas": [
      {
-      "id": "9lbni",
-      "titulo": "El capitán de Benín analiza el cruce contra la Selección",
+      "id": "uml8iq",
+      "titulo": "Lionel Messi juega su despedida de la selección ante Benín",
       "seccion": "Fútbol"
      },
      {
@@ -170,9 +170,9 @@
       "seccion": "Economía"
      },
      {
-      "id": "199raki",
-      "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",
-      "seccion": "Balcarce"
+      "id": "wb8pre",
+      "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
+      "seccion": "Agro"
      },
      {
       "id": "lomklr",
@@ -198,15 +198,14 @@
      "id": "cn09w9",
      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
      "cuando": "2026-10-05T15:34:17.868Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1njgnul",
      "titulo": "Campo de Pato gana el torneo regional y asciende en hockey",
-     "seccion": "Deportes",
-     "marcada": false
-    },
+     "cuando": "2026-10-05T17:05:33.395Z"
+    }
+   ],
+   "cola": [
     {
      "id": "wb8pre",
      "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
@@ -214,8 +213,8 @@
      "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-05T17:04:17.868Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-05T18:35:33.395Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
