@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T12:05:02.026Z",
+ "generado": "2026-10-05T12:32:17.605Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,25 +15,8 @@
      "fecha": "2026-10-05T11:59:56.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 37 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "r3lz6t",
-   "titulo": "Campo de Pato se ilusiona con una definición histórica",
-   "copete": "Pato Negro goleó a Villa Gesell, mientras que Pato Naranja sumó los puntos ante la ausencia de Gnomos. Los dos equipos balcarceños llegan a la última fecha dentro de la zona de playoffs y podrían enfrentarse entre sí en semifinales.",
-   "seccion": "Deportes",
-   "fecha": "2026-10-05T11:20:43.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/rugby-campo-de-pato-se-ilusiona-con-una-definicion-historica",
-     "fecha": "2026-10-05T11:20:43.000Z"
-    }
-   ],
    "intentos": 2,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 106 palabras",
+   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 21 palabras",
    "maximo": 3
   },
   {
@@ -54,8 +37,8 @@
      "fecha": "2026-10-05T11:40:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"matias\" y la fuente no",
+   "intentos": 2,
+   "motivo": "cuerpo: 7 problemas (numero, nombre): el cuerpo dice 80 y la fuente no lo dice; sin esas oraciones quedan 24 palabras",
    "maximo": 3
   }
  ]

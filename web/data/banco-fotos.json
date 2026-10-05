@@ -3624,16 +3624,16 @@
   "borrada": true
  },
  "1a2z04a": {
-  "archivo": "fotos-notas/1a2z04a.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
   "enlace": "https://accion5.com/el-zonal-del-atlantico-anuncio-dos-competencias-en-balcarce/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/09/DSC_6303-1.jpg",
   "razon": "Tiene buen encuadre y nitidez, muestra claramente la competencia de automovilismo sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-09-30T23:31:50.592Z"
+  "cuando": "2026-09-30T23:31:50.592Z",
+  "intentado": true,
+  "borrada": true
  },
  "1ivau49": {
   "intentado": true,
@@ -6216,15 +6216,15 @@
   "cuando": "2026-10-03T18:46:07.794Z"
  },
  "1t477sv": {
-  "archivo": "fotos-notas/1t477sv.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "manual",
   "por": "balcar-dev",
   "cuando": "2026-10-03T18:45:01.173Z",
   "imagenOriginal": "https://www.diariolavanguardia.com/noticias/44972-balcarce-los-robos-aumentaron-un-32-5-mientras-bajaron-los-delitos-sexuales-y-vinculados-a-drogas/",
-  "enlace": "https://www.diariolavanguardia.com/noticias/44972-balcarce-los-robos-aumentaron-un-32-5-mientras-bajaron-los-delitos-sexuales-y-vinculados-a-drogas/"
+  "enlace": "https://www.diariolavanguardia.com/noticias/44972-balcarce-los-robos-aumentaron-un-32-5-mientras-bajaron-los-delitos-sexuales-y-vinculados-a-drogas/",
+  "intentado": true,
+  "borrada": true
  },
  "1sxk7mg": {
   "archivo": "fotos-notas/1sxk7mg.jpg",
@@ -6962,5 +6962,59 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2024/Alerta_en_Balcarce.jpg",
   "razon": "Ilustra adecuadamente el estado del clima nublado y calles mojadas sin marcas ni menores.",
   "cuando": "2026-10-05T12:03:47.900Z"
+ },
+ "173ttfz": {
+  "archivo": "fotos-notas/173ttfz.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
+  "enlace": "https://www.radiogabal.com.ar/index.php/deportes/el-zonal-del-atlantico-correra-en-el-circuito-chico-del-fangio-y-utilizara-la-variante-juan-manuel-bordeu",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/septiembre/Monomarca%20en%20Balcarce.jpg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y encuadre general, y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-05T12:31:57.782Z"
+ },
+ "2umrmg": {
+  "archivo": "fotos-notas/2umrmg.jpg",
+  "medio": "Agencia DIB",
+  "credito": "Foto: Agencia DIB",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
+  "enlace": "https://dib.com.ar/economia/ganancias-arca-lanza-un-sistema-web-las-declaraciones-juradas-sociedades-n56242",
+  "imagenOriginal": "https://media.dib.com.ar/p/bad0a3bf087e4b7762b186ce31c30bdf/adjuntos/377/imagenes/100/054/0100054783/1200x675/smart/arca-sede.png",
+  "razon": "La imagen B muestra claramente el cartel de ARCA, ilustrando de manera directa el servicio web del organismo, sin menores ni marcas de medios.",
+  "cuando": "2026-10-05T12:31:57.782Z"
+ },
+ "199raki": {
+  "archivo": "fotos-notas/199raki.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/bomberos-concretaron-charla-sobre-el-operativo-realizado-en-venezuela-tras-el-terremoto-de-este-ano",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Reconocimiento_charla_bomberos.jpg",
+  "razon": "Es la única imagen completa que muestra a los bomberos con sus reconocimientos, sin marcas de agua ni menores de edad.",
+  "cuando": "2026-10-05T12:31:57.782Z"
+ },
+ "r3lz6t": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-05T12:31:57.782Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "9lbni": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El capitán de Benín analiza el cruce contra la Selección",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-05T12:31:57.782Z",
+  "intentos": 1,
+  "fuentes": 3
  }
 }

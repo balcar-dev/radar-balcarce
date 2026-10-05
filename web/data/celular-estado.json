@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T12:05:02.026Z",
- "portada": 28,
- "archivo": 889,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-05T12:32:17.605Z",
+ "portada": 31,
+ "archivo": 892,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-05T12:05:02.049Z",
+  "generado": "2026-10-05T12:32:17.629Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-05T12:06:18.739Z"
    },
    {
     "nombre": "noticia1",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 51,
     "notas": [
      {
       "id": "1ni344u",
@@ -108,13 +108,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "vqv317",
-      "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
-      "seccion": "Balcarce"
+      "id": "173ttfz",
+      "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "1bsbkco",
-      "titulo": "Gimnastas locales logran la clasificación a torneos nacionales y regionales",
+      "id": "r3lz6t",
+      "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
       "seccion": "Deportes"
      }
     ]
@@ -126,8 +126,24 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 44,
+    "notas": [
+     {
+      "id": "199raki",
+      "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "vqv317",
+      "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "lomklr",
+      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
+      "seccion": "Deportes"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -141,12 +157,18 @@
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "1ni344u",
      "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-     "seccion": "Balcarce",
+     "cuando": "2026-10-05T12:07:12.505Z"
+    }
+   ],
+   "cola": [
+    {
+     "id": "173ttfz",
+     "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
+     "seccion": "Automovilismo",
      "marcada": false
     },
     {
@@ -154,10 +176,16 @@
      "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
      "seccion": "Balcarce",
      "marcada": false
+    },
+    {
+     "id": "r3lz6t",
+     "titulo": "Campo de Pato llega a la última fecha con chances de semifinales",
+     "seccion": "Deportes",
+     "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-05T01:05:20.177Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-05T13:37:12.505Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

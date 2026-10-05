@@ -328,6 +328,11 @@
   "ultimo": "2026-09-28T19:05:34.750Z",
   "motivo": "con cuerpo"
  },
+ "173ttfz": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T12:31:27.165Z",
+  "motivo": "con cuerpo"
+ },
  "173wsz3": {
   "intentos": 2,
   "ultimo": "2026-10-04T06:01:15.836Z",
@@ -449,6 +454,11 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
+ },
+ "199raki": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T12:31:27.165Z",
+  "motivo": "con cuerpo"
  },
  "19jah2t": {
   "intentos": 2,
@@ -615,11 +625,6 @@
  "1d4do2p": {
   "intentos": 1,
   "ultimo": "2026-10-05T11:32:22.497Z",
-  "motivo": "con cuerpo"
- },
- "1d5l8dl": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T12:08:34.009Z",
   "motivo": "con cuerpo"
  },
  "1dbacpl": {
@@ -951,20 +956,15 @@
   "ultimo": "2026-09-30T19:01:33.516Z",
   "motivo": "con cuerpo"
  },
- "1k5mdvt": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T12:08:34.009Z",
-  "motivo": "con cuerpo"
- },
  "1kfxthk": {
   "intentos": 3,
   "ultimo": "2026-10-03T15:31:28.046Z",
   "motivo": "con cuerpo"
  },
  "1kia0yd": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T12:02:57.568Z",
-  "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 37 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-05T12:31:27.165Z",
+  "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 21 palabras"
  },
  "1knptpr": {
   "intentos": 1,
@@ -1540,11 +1540,6 @@
   "ultimo": "2026-10-03T21:01:24.060Z",
   "motivo": "con cuerpo"
  },
- "1xs34mg": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T12:08:34.009Z",
-  "motivo": "con cuerpo"
- },
  "1xzookf": {
   "intentos": 1,
   "ultimo": "2026-09-29T18:01:18.455Z",
@@ -1656,9 +1651,9 @@
   "motivo": "con cuerpo"
  },
  "2dauj9": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T12:02:57.568Z",
-  "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"matias\" y la fuente no"
+  "intentos": 2,
+  "ultimo": "2026-10-05T12:31:27.165Z",
+  "motivo": "cuerpo: 7 problemas (numero, nombre): el cuerpo dice 80 y la fuente no lo dice; sin esas oraciones quedan 24 palabras"
  },
  "2e3etr": {
   "intentos": 1,
@@ -1683,6 +1678,11 @@
  "2qj2kn": {
   "intentos": 2,
   "ultimo": "2026-10-03T01:31:23.288Z",
+  "motivo": "con cuerpo"
+ },
+ "2umrmg": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T12:31:27.165Z",
   "motivo": "con cuerpo"
  },
  "2uqvxt": {
@@ -2017,6 +2017,11 @@
   "ultimo": "2026-09-28T15:32:14.695Z",
   "motivo": "con cuerpo"
  },
+ "9lbni": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T12:31:27.165Z",
+  "motivo": "con cuerpo"
+ },
  "9sj5l0": {
   "intentos": 1,
   "ultimo": "2026-10-01T14:31:46.688Z",
@@ -2317,11 +2322,6 @@
  "iko0b0": {
   "intentos": 1,
   "ultimo": "2026-10-02T13:03:38.642Z",
-  "motivo": "con cuerpo"
- },
- "in20o1": {
-  "intentos": 2,
-  "ultimo": "2026-09-28T12:08:34.009Z",
   "motivo": "con cuerpo"
  },
  "infbfx": {
@@ -2694,9 +2694,9 @@
   "motivo": "con cuerpo"
  },
  "r3lz6t": {
-  "intentos": 2,
-  "ultimo": "2026-10-05T12:02:57.568Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 106 palabras"
+  "intentos": 3,
+  "ultimo": "2026-10-05T12:31:27.165Z",
+  "motivo": "con cuerpo"
  },
  "r3wxcb": {
   "intentos": 3,
@@ -2761,11 +2761,6 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
- },
- "srfkko": {
-  "intentos": 3,
-  "ultimo": "2026-09-28T12:08:34.009Z",
-  "motivo": "Gemini: Bad Unicode escape in JSON at position 912 (line 1 column 913)"
  },
  "sty1jd": {
   "intentos": 1,
