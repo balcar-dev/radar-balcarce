@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T17:31:51.826Z",
+  "generado": "2026-10-05T18:02:08.950Z",
   "notas": [
     {
       "id": "1v130vb",
@@ -144,6 +144,105 @@
       }
     },
     {
+      "id": "1j1tq9m",
+      "titulo": "Boca aguarda la definición de la sede para la revancha frente a Vasco da Gama",
+      "copete": "La Justicia de Río de Janeiro descartó el uso del Maracaná por el estado del césped. Vasco da Gama analiza alternativas y tiene tiempo hasta el 10 de octubre para confirmar el escenario.",
+      "cuerpo": "La Justicia de Río de Janeiro rechazó el recurso presentado por Vasco da Gama y confirmó que el equipo no podrá utilizar el Maracaná para recibir a Boca en la revancha de las semifinales de la Copa Sudamericana. La jueza Adriana Marques dos Santos Laia Franco tomó la medida debido a las dudas sobre el estado del campo de juego y los informes contrapuestos sobre su mantenimiento.\n\nPara reemplazar ese escenario, el club brasileño maneja otras opciones. El estadio Nilton Santos aparece como la alternativa más viable según los informes de la Policía Militar, aunque la prioridad de la institución es jugar en su propia cancha, São Januário.\n\nEse recinto cuenta con una capacidad cercana a los 24.000 espectadores tras la autorización de los bomberos, una cifra que todavía se encuentra por debajo del mínimo de 30.000 exigido por la Conmebol para esta instancia. Vasco tiene como fecha límite el 10 de octubre para definir el estadio dentro de Río de Janeiro.",
+      "guion": "Boca aguarda la definición de la sede para la revancha frente a Vasco da Gama",
+      "seccion": "Fútbol",
+      "medios": [
+        "Olé",
+        "Minuto Uno",
+        "TyC Sports",
+        "Crónica",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/boca-espera-saber-donde-jugara-la-revancha-vasco-el-maracana-quedo-descartado-n6330217",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T16:24:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T18:01:13.651Z",
+      "relevancia": 88,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Justicia brasileña prohibió a Vasco usar el Maracaná contra Boca",
+        "El tribunal argumentó dudas sobre el estado del césped",
+        "São Januário no cumple con el aforo mínimo de la Conmebol",
+        "Vasco tiene tiempo hasta el 10 de octubre para confirmar el estadio"
+      ],
+      "seSabe": [
+        "La Justicia de Río de Janeiro rechazó la cautelar de Vasco da Gama",
+        "El Maracaná quedó descartado para la revancha de la semifinal",
+        "El estadio Nilton Santos se perfila como una alternativa viable",
+        "São Januário tiene una capacidad de unos 24.000 espectadores",
+        "La Conmebol exige un aforo mínimo de 30.000 personas",
+        "El plazo límite para confirmar la sede en Río de Janeiro es el 10 de octubre"
+      ],
+      "noConfirmado": [
+        "Todavía no se definió en qué estadio se disputará el encuentro de vuelta",
+        "No se confirmó si el club brasileño apelará formalmente la resolución judicial"
+      ],
+      "textoRedes": "Vasco da Gama no podrá usar el Maracaná contra Boca por la Copa Sudamericana y la definición de la sede quedó en suspenso con fecha límite el 10 de octubre.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Vasco da Gama",
+        "Copa Sudamericana",
+        "Maracaná",
+        "Brasil"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/boca-espera-saber-donde-jugara-la-revancha-vasco-el-maracana-quedo-descartado-n6330217",
+          "fecha": "2026-10-05T16:24:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los argumentos de la resolución judicial, las alternativas de estadios y los plazos de definición."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/boca-juniors/justicia-rechazo-pedido-vasco-da-gama-estadio-maracana-boca-semi-sudamericana_0_a15e2YSmHd.html",
+          "fecha": "2026-10-05T17:33:38.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el revés judicial del club brasileño y la continuidad de las opciones."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/vasco-da-gama-no-podra-jugar-en-el-maracana-contra-boca-y-analiza-nuevas-sedes-id764445.html",
+          "fecha": "2026-10-05T16:26:20.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional en el resumen."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/copasudamericana/vasco-boca-maracana-justicia-sao-januario-nilton-santos/",
+          "fecha": "2026-10-05T17:23:59.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el rechazo judicial al uso del Maracaná."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/confirmaron-que-vasco-da-gama-vs-boca-no-se-jugara-en-el-maracana-las-posibles-sedes/",
+          "fecha": "2026-10-05T17:28:38.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el rechazo del planteo judicial para jugar en el Maracaná."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "boca-aguarda-la-definicion-de-la-sede-para-la-revancha-frente-a-vasco",
+      "foto": {
+        "archivo": "fotos-notas/1j1tq9m.jpg",
+        "credito": "Foto: Crónica"
+      }
+    },
+    {
       "id": "uk82ir",
       "titulo": "El Gobierno bonaerense diferencia paros docentes y advierte descuentos",
       "copete": "El ministro Carlos Bianco diferenció las medidas de fuerza de gremios legales y de sectores disidentes. Aclaró que la cartera educativa definirá si aplica retenciones de haberes.",
@@ -151,6 +250,7 @@
       "guion": "El Gobierno bonaerense diferencia paros docentes y advierte descuentos",
       "seccion": "Política",
       "medios": [
+        "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "0221",
         "La Brújula 24",
@@ -161,7 +261,7 @@
       "fecha": "2026-10-05T16:12:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T17:31:05.708Z",
-      "relevancia": 77,
+      "relevancia": 87,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -240,11 +340,11 @@
         "Argenpapa"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17884-argentina-aconcagua-propone-simplificar-el-registro-de-labores-y-la-trazabilidad-en-la-produccion-de-papa",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-05T15:52:36.644Z",
       "sinFecha": true,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 26,
+      "relevancia": 16,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -299,6 +399,7 @@
       "guion": "Lionel Messi juega su despedida de la selección ante Benin",
       "seccion": "Fútbol",
       "medios": [
+        "El Destape",
         "TyC Sports",
         "Crónica",
         "Radio Mitre",
@@ -306,10 +407,10 @@
       ],
       "enlace": "https://bolavip.com/ar/seleccion/se-confirmo-si-papu-gomez-dira-presente-en-la-despedida-de-messi-de-la-seleccion-argentina",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T15:48:46.000Z",
+      "fecha": "2026-10-05T15:48:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T17:31:05.708Z",
-      "relevancia": 89,
+      "relevancia": 99,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -400,8 +501,8 @@
       "medios": [
         "TN (Todo Noticias)",
         "A24",
-        "Radio Mitre",
-        "El Marplatense"
+        "El Marplatense",
+        "Radio Mitre"
       ],
       "enlace": "https://radiomitre.cienradios.com/economia/tras-las-elecciones-en-brasil-las-acciones-argentinas-suben-hasta-un-56-en-wall-street/",
       "teniaImagenLaFuente": true,
@@ -497,6 +598,66 @@
       }
     },
     {
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "copete": "Una vecina advierte sobre complicaciones viales, acumulación de vehículos y basura en las inmediaciones de 19 y 114 bis. Piden la intervención municipal.",
+      "cuerpo": "Vecinos de la zona de calles 19 y 114 bis reclaman soluciones urgentes ante las dificultades diarias para circular por el sector. Según informó una vecina, el problema principal se vincula con el deterioro de la calzada y la presencia de vehículos que obstruyen el paso.\n\nEn la calle 114 bis se acumulan rodados antiguos sobre la calzada y las veredas, panorama al que se suma la acumulación de residuos. Esa situación genera un foco de suciedad y la aparición de roedores, además de complicar el traslado de los estudiantes que utilizan el transporte escolar.",
+      "guion": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "seccion": "Balcarce",
+      "medios": [
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/10/complicaciones-para-circular-por-calle.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T15:14:54.205Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T18:01:13.651Z",
+      "relevancia": 90,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Complicaciones para circular en 19 y 114 bis",
+        "Vehículos antiguos en la calle y veredas",
+        "Acumulación de basura y aparición de roedores",
+        "Afectación al paso del transporte escolar",
+        "Reclamo de intervención municipal"
+      ],
+      "seSabe": [
+        "Existen dificultades para circular en la zona de calles 19 y 114 bis por el estado de la calzada y vehículos que tapan el paso, según una vecina.",
+        "Hay vehículos antiguos acumulados sobre la calle y las veredas de la calle 114 bis.",
+        "La acumulación de residuos genera suciedad y favorece la presencia de roedores.",
+        "La situación complica el recorrido del transporte escolar.",
+        "Se solicita la intervención de las autoridades municipales para retirar los rodados y ordenar el sector."
+      ],
+      "noConfirmado": [
+        "No hay información sobre una respuesta o medidas concretas por parte del municipio ante el reclamo.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Vecinos reclaman soluciones ante las complicaciones para circular en la zona de calles 19 y 114 bis por vehículos estacionados, deterioro y acumulación de basura.",
+      "etiquetas": [
+        "calles 19 y 114 bis",
+        "transporte escolar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/complicaciones-para-circular-por-calle.html",
+          "fecha": "2026-10-05T15:14:54.205Z",
+          "oficial": false,
+          "aporte": "Detalló el reclamo vecinal por el estado de las calles 19 y 114 bis, la presencia de vehículos y basura, y la afectación al transporte escolar."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "vecinos-reclaman-soluciones-por-el-dificil-transito-en-la-zona-de"
+    },
+    {
       "id": "27x6h7",
       "titulo": "Flybondi se presenta en concurso preventivo de acreedores",
       "copete": "La aerolínea low cost acumuló deudas millonarias y lleva casi dos meses sin operar. La causa recayó en el fuero comercial nacional.",
@@ -508,6 +669,7 @@
         "Agencia DIB",
         "La Nación",
         "Clarín",
+        "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
         "iProfesional",
@@ -518,7 +680,7 @@
       "fecha": "2026-10-05T14:58:45.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T17:31:05.708Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -609,6 +771,85 @@
       }
     },
     {
+      "id": "uzokxq",
+      "titulo": "Impulsan un banco municipal de elementos de fisiatría",
+      "copete": "El bloque de concejales de Primero La Patria presentó un proyecto para crear un Banco Municipal de Elementos de Fisiatría y Rehabilitación en Balcarce. La iniciativa busca facilitar el acceso gratuito a dispositivos de movilidad para vecinos vulnerables.",
+      "cuerpo": "La iniciativa busca facilitar el acceso gratuito a dispositivos de apoyo para la movilidad y la recuperación de adultos mayores, personas con discapacidad y pacientes en proceso postquirúrgico.\n\nEl sistema funcionará mediante préstamos gratuitos en comodato o donaciones definitivas para casos crónicos, con administración a cargo de las áreas de Desarrollo Social y Salud. El patrimonio se conformará con partidas de la tasa de salud, donaciones y convenios, mientras que el proyecto reconoce que ya existen entidades locales que prestan servicios similares pero con limitaciones ante la demanda actual.",
+      "guion": "Impulsan un banco municipal de elementos de fisiatría",
+      "seccion": "Balcarce",
+      "medios": [
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/10/impulsan-la-creacion-de-un-banco.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T14:55:36.265Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T18:01:13.651Z",
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Presentan un proyecto para crear un banco municipal de fisiatría.",
+        "El servicio ofrecerá elementos de movilidad en comodato o donación.",
+        "La administración estará a cargo de Desarrollo Social y Salud."
+      ],
+      "seSabe": [
+        "El bloque Primero La Patria presentó el proyecto en el Partido de Balcarce.",
+        "El programa incluye sillas de ruedas, andadores, bastones y colchones antiescaras.",
+        "Las áreas de Desarrollo Social y Salud administrarán el inventario."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Impulsan un proyecto para crear un Banco Municipal de Elementos de Fisiatría y Rehabilitación en Balcarce para facilitar el acceso gratuito a dispositivos de movilidad.",
+      "etiquetas": [
+        "Primero La Patria",
+        "Salud",
+        "Balcarce",
+        "Desarrollo Social"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/impulsan-la-creacion-de-un-banco.html",
+          "fecha": "2026-10-05T14:55:36.265Z",
+          "oficial": false,
+          "aporte": "Presentación del proyecto de ordenanza para crear el Banco Municipal de Elementos de Fisiatría y Rehabilitación en Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1acx84s",
+          "titulo": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
+          "fecha": "2026-09-28T16:14:24.000Z",
+          "ruta": "/nota/fundacion-banco-provincia-entrega-instrumentos-a-la-orquesta-escuela-1acx84s"
+        },
+        {
+          "id": "h1ggzr",
+          "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+          "fecha": "2026-10-02T12:05:00.000Z",
+          "ruta": "/nota/virginia-aparicio-expone-ante-concejales-sobre-sprint-y-su-situacion-h1ggzr"
+        },
+        {
+          "id": "1xzookf",
+          "titulo": "Fernando Gray anuncia exención impositiva total para jubilados",
+          "fecha": "2026-09-29T15:47:00.000Z",
+          "ruta": "/nota/fernando-gray-anuncia-exencion-impositiva-total-para-jubilados-1xzookf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "impulsan-un-banco-municipal-de-elementos-de-fisiatria"
+    },
+    {
       "id": "1vnue0q",
       "titulo": "El Auto Club Balcarce confirma el cronograma para el Zonal",
       "copete": "Las categorías zonales disputan una nueva fecha definitoria en el autódromo local después de cuatro años. Habrá competencias de titulares e invitados.",
@@ -619,7 +860,6 @@
         "Acción 5 (Balcarce)",
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
-        "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "QZ Noticias (Mar del Plata)",
         "El Diario Balcarce",
@@ -630,7 +870,7 @@
       "fecha": "2026-10-05T14:42:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:31:24.148Z",
-      "relevancia": 96,
+      "relevancia": 86,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -705,6 +945,7 @@
       "guion": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
       "seccion": "Agro",
       "medios": [
+        "Ámbito",
         "Noticias Argentinas (NA)",
         "Agrositio"
       ],
@@ -713,7 +954,7 @@
       "fecha": "2026-10-05T14:24:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 43,
+      "relevancia": 53,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -831,6 +1072,100 @@
         "archivo": "fotos-notas/wb8pre.jpg",
         "credito": "Foto: El Diario Balcarce"
       }
+    },
+    {
+      "id": "18ymt3o",
+      "titulo": "Carlos Bianco pide ampliar el espacio político para las elecciones",
+      "copete": "El ministro de Gobierno bonaerense sostuvo que la pureza ideológica no alcanza para ganar los comicios. La postura se da en medio de las discusiones por la posible eliminación de las primarias.",
+      "cuerpo": "El ministro de Gobierno bonaerense, Carlos Bianco, defendió la necesidad de sumar distintos sectores a un frente opositor amplio de cara a las elecciones del próximo año. Durante una conferencia de prensa, el funcionario provincial aseguró que la pureza ideológica no resulta suficiente para lograr la victoria en los comicios nacionales, provinciales y municipales.\n\nLa estrategia del Movimiento Derecho al Futuro apunta a integrar a diversos actores políticos que compartan consensos básicos como la defensa de la industria, la educación y la salud pública. Estas declaraciones se producen en un escenario donde la posible eliminación de las primarias obliga a los dirigentes a buscar nuevas alternativas de armado electoral.",
+      "guion": "Carlos Bianco pide ampliar el espacio político para las elecciones",
+      "seccion": "Política",
+      "medios": [
+        "Ecos Diarios (Necochea)",
+        "Agencia DIB",
+        "El Día",
+        "La Verdad",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://dib.com.ar/politica/carlos-bianco-si-queres-ganar-una-eleccion-la-pureza-ideologica-no-alcanza-n56246",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T14:00:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T15:01:21.016Z",
+      "relevancia": 77,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Carlos Bianco pidió ensanchar el frente opositor para los comicios del próximo año.",
+        "El ministro sostuvo que la pureza ideológica no alcanza para ganar las elecciones.",
+        "El debate surge ante la posible eliminación de las primarias electorales."
+      ],
+      "seSabe": [
+        "Carlos Bianco declaró que la pureza ideológica no alcanza para ganar las elecciones según informó Agencia DIB.",
+        "El ministro afirmó que el Movimiento Derecho al Futuro busca integrar a distintas vertientes.",
+        "La discusión sobre el armado electoral se da frente al posible cambio en el sistema de primarias."
+      ],
+      "noConfirmado": [
+        "No se informaron detalles sobre posibles acuerdos concretos con otros espacios políticos."
+      ],
+      "textoRedes": "Carlos Bianco sostuvo que la pureza ideológica no alcanza para ganar las elecciones y pidió ampliar el espacio opositor de cara a los próximos comicios.",
+      "etiquetas": [
+        "Carlos Bianco",
+        "Elecciones",
+        "Movimiento Derecho al Futuro"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/politica/carlos-bianco-si-queres-ganar-una-eleccion-la-pureza-ideologica-no-alcanza-n56246",
+          "fecha": "2026-10-05T14:00:25.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Carlos Bianco sobre la necesidad de ampliar el frente opositor."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/carlos-bianco-si-queres-ganar-una-eleccion-con-la-pureza-ideologica-no-alcanza/",
+          "fecha": "2026-10-05T14:45:40.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo el contexto sobre la discusión interna del peronismo."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/carlos-bianco-advirtio-que-la-pureza-ideologica-no-alcanza-para-ganar-elecciones",
+          "fecha": "2026-10-05T14:46:55.000Z",
+          "oficial": false,
+          "aporte": "Registró la información general sobre las declaraciones del funcionario provincial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "3anv39",
+          "titulo": "Carlos Bianco defiende las inversiones en infraestructura de la Provincia",
+          "fecha": "2026-10-05T12:53:00.000Z",
+          "ruta": "/nota/carlos-bianco-defiende-las-inversiones-en-infraestructura-de-la-3anv39"
+        },
+        {
+          "id": "9f1kip",
+          "titulo": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
+          "fecha": "2026-09-28T13:57:23.000Z",
+          "ruta": "/nota/carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo-9f1kip"
+        },
+        {
+          "id": "1chec7e",
+          "titulo": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
+          "fecha": "2026-09-26T00:15:11.000Z",
+          "ruta": "/nota/carlos-bianco-destaca-la-inversion-y-las-obras-en-el-autodromo-de-1chec7e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "carlos-bianco-pide-ampliar-el-espacio-politico-para-las-elecciones"
     },
     {
       "id": "d9vaq",
@@ -984,6 +1319,141 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "campo-de-pato-gana-el-torneo-regional-y-asciende-en-hockey"
+    },
+    {
+      "id": "1tdaagh",
+      "titulo": "Boca pierde a Alan Velasco por un desgarro en el aductor",
+      "copete": "El mediocampista ofensivo sufre una lesión muscular tras el último encuentro y se pierde los próximos compromisos del equipo dirigido por Rodolfo Arruabarrena. El chileno Carlos Palacios se perfila como su reemplazante.",
+      "cuerpo": "El plantel Xeneize sufre una baja sensible de cara a la definición de la temporada tras confirmarse la lesión del volante Alan Velasco. El futbolista padece un desgarro en el aductor de la pierna izquierda, sufrido luego de la victoria ante Unión, según informó el cuerpo técnico.\n\nEl entrenador Rodolfo Arruabarrena pierde a una pieza fundamental para afrontar la doble competencia y la Copa Sudamericana. Ante este panorama, el chileno Carlos Palacios asoma como el principal candidato para ocupar su lugar en el mediocampo durante los próximos partidos del equipo.",
+      "guion": "Boca pierde a Alan Velasco por un desgarro en el aductor",
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "El Destape",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno",
+        "Canal 26",
+        "Diario Popular",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.tycsports.com/boca-juniors/desgarro-alan-velasco-oportunidad-carlos-palacios-flechita-para-arriba-boca-id764389.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T13:15:20.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T17:01:18.834Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Alan Velasco sufre un desgarro en el aductor izquierdo",
+        "El mediocampista se perderá varios encuentros de la temporada",
+        "Carlos Palacios se perfila como el reemplazante ideal",
+        "El equipo afronta instancias decisivas en la Copa Sudamericana"
+      ],
+      "noConfirmado": [
+        "No hay precisiones exactas sobre el tiempo total de recuperación, aunque se estima una ausencia de al menos dos semanas o cinco partidos"
+      ],
+      "textoRedes": "Boca sufre la baja de Alan Velasco por un desgarro en el aductor de la pierna izquierda y el cuerpo técnico analiza alternativas para reemplazarlo en la recta final de la temporada.",
+      "etiquetas": [
+        "Alan Velasco",
+        "Rodolfo Arruabarrena",
+        "Carlos Palacios",
+        "Copa Sudamericana",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/desgarro-alan-velasco-oportunidad-carlos-palacios-flechita-para-arriba-boca-id764389.html",
+          "fecha": "2026-10-05T13:15:20.000Z",
+          "oficial": false,
+          "aporte": "Detalló la lesión de Alan Velasco y las declaraciones de Rodolfo Arruabarrena sobre Carlos Palacios."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/05/dura-noticia-para-boca-se-confirmo-la-lesion-de-alan-velasco-y-podria-perderse-la-ida-ante-vasco-da-gama/",
+          "fecha": "2026-10-05T16:03:12.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la baja del mediocampista por un desgarro en el aductor izquierdo."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/alan-velasco-desgarro-boca-pierde-3-partidos-variantes-vasco-arruabarrena-2026105104931",
+          "fecha": "2026-10-05T13:49:31.000Z",
+          "oficial": false,
+          "aporte": "Informó la cantidad de partidos que se perdería el jugador."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/baja-sensible-en-boca-se-confirmo-el-desgarro-de-alan-velasco.phtml",
+          "fecha": "2026-10-05T15:26:38.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que la lesión ocurrió durante el partido contra Unión."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/boca-alan-velasco-desgarro-aductor-baja-arruabarrena-id764418.html",
+          "fecha": "2026-10-05T16:13:11.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/boca-juniors/lesion-desgarro-alan-velasco-tiempo-afuera-boca_0_Rxp370J6pS.html",
+          "fecha": "2026-10-05T14:44:46.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/mala-noticia-boca-se-confirmo-la-lesion-alan-velasco-y-sera-una-baja-clave-n6330214",
+          "fecha": "2026-10-05T16:37:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el Xeneize pierde a una pieza clave para la recta final."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/10/05/alarma-en-boca-la-lesion-de-alan-velasco-que-complica-a-arruabarrena-antes-de-enfrentar-a-vasco-da-gama/",
+          "fecha": "2026-10-05T16:59:35.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el futbolista estará inactivo durante varias semanas."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/futbol/se-confirmo-el-desgarro-velasco-y-se-perdera-la-ida-vasco-da-gama-la-copa-sudamericana-quien-sera-el-reemplazante-n923041",
+          "fecha": "2026-10-05T13:18:00.000Z",
+          "oficial": false,
+          "aporte": "Anotó que Palacios pica en punta para reemplazar al lesionado."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/boca/4-opciones-para-un-puesto-arruabarrena-define-al-reemplazante-alan-velasco-en-el-equipo-titular-de-boca",
+          "fecha": "2026-10-05T14:59:38.000Z",
+          "oficial": false,
+          "aporte": "Agregó que la ausencia abarcaría al menos cinco encuentros de la seguidilla."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/boca/boca-hoy-se-desgarro-velasco-las-opciones-para-arruabarrena-y-mas",
+          "fecha": "2026-10-05T16:10:08.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "boca-pierde-a-alan-velasco-por-un-desgarro-en-el-aductor",
+      "foto": {
+        "archivo": "fotos-notas/1tdaagh.jpg",
+        "credito": "Foto: TyC Sports"
+      }
     },
     {
       "id": "bmbmep",
@@ -1351,10 +1821,10 @@
       "seccion": "Política",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Agencia DIB",
         "La Noticia 1",
         "El Marplatense",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "Agencia DIB"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/bianco-aseguro-que-la-provincia-hace-mas-obra-publica-que-todo-el-pais-y-destaco-87-nuevas-licitaciones",
       "teniaImagenLaFuente": true,
@@ -1471,109 +1941,6 @@
       "foto": {
         "archivo": "fotos-notas/1ulp23j.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
-      "id": "ialwkh",
-      "titulo": "Benín enfrenta a la Selección y advierte que competirá",
-      "copete": "El arquero del seleccionado africano, Marcel Dandjinou, palpitó el último encuentro de Lionel Messi en el país. Afirmó que buscará frenar al capitán y descartó inconvenientes en la estadía.",
-      "cuerpo": "El arquero del conjunto visitante, Marcel Dandjinou, se refirió al cruce y aseguró que el plantel buscará competir con la máxima seriedad.\n\nAdemás, sostuvo que intentará atajar cualquier remate, incluso un penal en los minutos finales, y descartó que la delegación haya sufrido problemas de agua o luz durante su estadía en Buenos Aires.\n\nComo se informó previamente, las localidades para el evento organizado por la Asociación del Fútbol Argentino se agotaron de forma virtual en pocas horas.",
-      "guion": "Benín enfrenta a la Selección y advierte que competirá",
-      "seccion": "Fútbol",
-      "medios": [
-        "QZ Noticias (Mar del Plata)",
-        "Minuto Uno",
-        "TN (Todo Noticias)"
-      ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/05/el-arquero-de-benin-desafio-a-lionel-messi-antes-de-su-despedida-y-advirtio-no-estamos-aca-para-hacer-turismo/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T11:59:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T17:01:18.834Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Selección argentina juega este martes ante Benín en el Monumental.",
-        "El arquero Marcel Dandjinou afirmó que su equipo competirá sin concesiones.",
-        "El plantel visitante descartó problemas con los servicios durante su estadía.",
-        "Las entradas para la despedida del capitán se agotaron de forma anticipada."
-      ],
-      "seSabe": [
-        "El partido se jugará este martes en el estadio Monumental.",
-        "Marcel Dandjinou es el arquero titular del seleccionado de Benín.",
-        "El plantel visitante descartó inconvenientes durante su estadía en Buenos Aires."
-      ],
-      "textoRedes": "El arquero de Benín, Marcel Dandjinou, palpitó el último partido de Lionel Messi en el país y aseguró que el seleccionado africano buscará competir sin concesiones en el estadio Monumental.",
-      "etiquetas": [
-        "Seleccion Argentina",
-        "Lionel Messi",
-        "Benin",
-        "Marcel Dandjinou",
-        "Estadio Monumental"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/05/el-arquero-de-benin-desafio-a-lionel-messi-antes-de-su-despedida-y-advirtio-no-estamos-aca-para-hacer-turismo/",
-          "fecha": "2026-10-05T11:59:50.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones del arquero Marcel Dandjinou sobre el partido y el rechazo a los supuestos problemas de servicios."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/deportes/no-estamos-para-hacer-turismo-la-advertencia-del-arquero-de-benin-antes-de-jugar-con-argentina",
-          "fecha": "2026-10-05T16:29:38.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las declaraciones del guardameta sobre las expectativas del plantel visitante para el amistoso."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/la-desafiante-frase-del-arquero-benin-antes-jugar-argentina-no-estamos-hacer-turismo-n6330102",
-          "fecha": "2026-10-05T13:07:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre los elogios del arquero hacia el capitán del seleccionado nacional."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/seleccionargentina/arquero-benin-messi-penal-dandjinou-despedida-seleccion-argentina/",
-          "fecha": "2026-10-05T16:02:21.000Z",
-          "oficial": false,
-          "aporte": "Aportó precisiones sobre la postura competitiva del conjunto africano en la previa del encuentro."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "o99ioz",
-          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
-          "fecha": "2026-10-03T13:24:05.000Z",
-          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
-        },
-        {
-          "id": "7bv4jl",
-          "titulo": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
-          "fecha": "2026-09-30T12:37:20.000Z",
-          "ruta": "/nota/la-afa-organiza-un-fan-fest-para-la-despedida-de-lionel-messi-7bv4jl"
-        },
-        {
-          "id": "1s5n48z",
-          "titulo": "Se agotan las entradas para el partido de despedida de Lionel Messi",
-          "fecha": "2026-09-24T23:25:00.000Z",
-          "ruta": "/nota/se-agotan-las-entradas-para-el-partido-de-despedida-de-lionel-messi-1s5n48z"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "benin-enfrenta-a-la-seleccion-y-advierte-que-competira",
-      "foto": {
-        "archivo": "fotos-notas/ialwkh.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -1776,8 +2143,8 @@
       "guion": "Registran una baja de la chicharrita en las cinco regiones del país",
       "seccion": "Agro",
       "medios": [
-        "Agrositio",
-        "Noticias Agropecuarias"
+        "Noticias Agropecuarias",
+        "Agrositio"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/05/con-una-retraccion-generalizada-de-la-chicharrita-se-presenta-un-escenario-muy-promisorio-para-el-maiz/",
       "teniaImagenLaFuente": true,
@@ -2527,9 +2894,9 @@
       "guion": "El capitán de Benín analiza el cruce contra la Selección",
       "seccion": "Fútbol",
       "medios": [
+        "Minuto Uno",
         "TN (Todo Noticias)",
         "A24",
-        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Bolavip Argentina"
@@ -2693,8 +3060,7 @@
         "El Diario Balcarce",
         "TN (Todo Noticias)",
         "TyC Sports",
-        "Olé",
-        "El Día"
+        "Olé"
       ],
       "enlace": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/",
       "teniaImagenLaFuente": true,
@@ -3534,10 +3900,10 @@
         "Olé",
         "Noticias Argentinas (NA)",
         "La Opinión",
-        "QZ Noticias (Mar del Plata)",
         "Clarín",
         "La Nueva",
-        "0223 (Mar del Plata)"
+        "0223 (Mar del Plata)",
+        "El Gráfico"
       ],
       "enlace": "https://www.tycsports.com/seleccion-argentina/dibu-martinez-estuvo-en-el-tc-y-desafio-a-scaloni-a-una-carrera-id764328.html",
       "teniaImagenLaFuente": true,
@@ -3634,94 +4000,6 @@
       }
     },
     {
-      "id": "1i07zda",
-      "titulo": "Milei sigue las elecciones en Brasil y respalda a Bolsonaro",
-      "copete": "Desde la residencia de Olivos, el presidente Javier Milei sigue el desarrollo de los comicios presidenciales en Brasil y muestra su apoyo a Flávio Bolsonaro frente a Luiz Inácio Lula da Silva.",
-      "cuerpo": "Durante la jornada electoral, el mandatario argentino utilizó sus redes sociales para replicar publicaciones en favor del candidato opositor y marcar diferencias con el líder del Partido de los Trabajadores.\n\nPor su parte, el referente del Partido Liberal votó en Río de Janeiro, manifestó su intención de recibir al líder libertario en territorio brasileño y deslizó un posible viaje oficial si los resultados habilitan una segunda vuelta prevista para el 25 de octubre.",
-      "guion": "Milei sigue las elecciones en Brasil y respalda a Bolsonaro",
-      "seccion": "Política",
-      "medios": [
-        "La Noticia 1",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "Ámbito",
-        "Minuto Uno",
-        "C5N",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/04/a-la-espera-de-los-primeros-resultados-milei-sigue-con-optimismo-la-eleccion-en-brasil-y-respaldo-a-bolsonaro-en-redes/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-04T12:32:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 71,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El presidente Javier Milei sigue los comicios brasileños desde la quinta de Olivos.",
-        "El mandatario respaldó en redes sociales al candidato opositor Flávio Bolsonaro.",
-        "El oficialismo proyecta una definición en segunda vuelta para el 25 de octubre.",
-        "Flávio Bolsonaro invitó a Milei a visitar Brasil tras emitir su voto."
-      ],
-      "seSabe": [
-        "Javier Milei sigue los comicios en Brasil desde la quinta de Olivos, según Infobae.",
-        "El mandatario argentino compartió publicaciones en respaldo a Flávio Bolsonaro en redes sociales, de acuerdo con Infobae.",
-        "El oficialismo prevé un balotaje para el 25 de octubre, según fuentes oficiales citadas por Infobae."
-      ],
-      "noConfirmado": [
-        "Todavía no se concretó una comunicación oficial entre el Poder Ejecutivo argentino y el senador brasileño.",
-        "No hay confirmación definitiva sobre un eventual viaje presidencial a Brasil tras los resultados."
-      ],
-      "textoRedes": "Desde la quinta de Olivos, el presidente Javier Milei sigue las elecciones presidenciales en Brasil y respalda la candidatura de Flávio Bolsonaro frente a Lula da Silva.",
-      "etiquetas": [
-        "Javier Milei",
-        "Brasil",
-        "elecciones",
-        "Flávio Bolsonaro",
-        "Lula da Silva"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/04/a-la-espera-de-los-primeros-resultados-milei-sigue-con-optimismo-la-eleccion-en-brasil-y-respaldo-a-bolsonaro-en-redes/",
-          "fecha": "2026-10-04T21:40:04.000Z",
-          "oficial": false,
-          "aporte": "Detalló el seguimiento de las elecciones desde Olivos, los posteos en redes y las proyecciones del oficialismo."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/04/javier-milei-monitorea-las-elecciones-en-brasil-desde-olivos-y-refuerza-su-respaldo-a-flavio-bolsonaro/",
-          "fecha": "2026-10-04T21:47:21.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el respaldo explícito de Javier Milei a Flávio Bolsonaro."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-4-19-55-0-milei-sigue-de-cerca-las-elecciones-de-brasil-desde-olivos-y-refuerza-su-respaldo-a-bolsonaro",
-          "fecha": "2026-10-04T23:27:38.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el seguimiento de los comicios y el apoyo a la candidatura de Flávio Bolsonaro."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "milei-sigue-las-elecciones-en-brasil-y-respalda-a-bolsonaro",
-      "foto": {
-        "archivo": "fotos-notas/1i07zda.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "1nqv1cj",
       "titulo": "Franco Colapinto protagoniza un cruce radial con su ingeniero por error",
       "copete": "El piloto argentino discutió con su ingeniero sobre el procedimiento durante la bandera roja en la previa de la largada en Malasia.",
@@ -3737,9 +4015,11 @@
         "LU9 Mar del Plata",
         "La Nación",
         "El Destape",
+        "Perfil",
         "Página/12",
         "A24",
         "TyC Sports",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
         "La Tecla",
@@ -3750,22 +4030,23 @@
         "La Verdad de Ayacucho",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Olé",
         "Crónica",
         "Campeones",
         "El Día",
         "La Brújula 24",
+        "Olé",
         "0223 (Mar del Plata)",
         "La Voz del Pueblo",
         "Ecos Diarios (Necochea)",
         "Córdoba Competición",
         "La Verdad",
-        "Perfil",
         "C5N",
         "La Nueva",
         "Clarín",
-        "El Gráfico",
-        "Minuto Uno"
+        "Minuto Uno",
+        "Motorsport",
+        "Canal 26",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://radiomitre.cienradios.com/deportes/el-insolito-malentendido-entre-franco-colapinto-y-su-ingeniero-durante-la-bandera-roja-en-el-gp-de-bahrein/",
       "teniaImagenLaFuente": true,
@@ -3973,20 +4254,20 @@
     "Agro",
     "Fútbol",
     "Economía",
+    "Balcarce",
     "Automovilismo",
     "Deportes",
     "Argentina",
-    "Balcarce",
     "Cultura y agenda",
     "Policiales"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 19,
-      "sensacion": 17,
-      "humedad": 59,
-      "viento": 22,
+      "temp": 18,
+      "sensacion": 15,
+      "humedad": 62,
+      "viento": 23,
       "rumbo": "NO",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3997,7 +4278,7 @@
         "dia": "lun",
         "max": 19,
         "min": 10,
-        "lluvia": 79,
+        "lluvia": 47,
         "codigo": 51,
         "viento": 24,
         "milimetros": 1,
@@ -4008,7 +4289,7 @@
         "dia": "mar",
         "max": 21,
         "min": 8,
-        "lluvia": 18,
+        "lluvia": 20,
         "codigo": 51,
         "viento": 14,
         "milimetros": 0,
@@ -4019,7 +4300,7 @@
         "dia": "mié",
         "max": 16,
         "min": 11,
-        "lluvia": 82,
+        "lluvia": 51,
         "codigo": 51,
         "viento": 21,
         "milimetros": 1,
@@ -4030,7 +4311,7 @@
         "dia": "jue",
         "max": 13,
         "min": 8,
-        "lluvia": 65,
+        "lluvia": 46,
         "codigo": 51,
         "viento": 25,
         "milimetros": 0,
@@ -4335,6 +4616,12 @@
       "motivo": "necesita ojo humano: \"nena\""
     },
     {
+      "id": "flte73",
+      "titulo": "Proponen prohibir la cartelería política en plazas y…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
       "id": "s5alyz",
       "titulo": "Claudio Albino se prepara para noviembre...",
       "seccion": "Deportes",
@@ -4365,16 +4652,16 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "h9pxr0",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niña\""
-    },
-    {
       "id": "1pr5cdn",
       "titulo": "Murió la actriz Zulema Galperín, reconocida por sus…",
       "seccion": "Cultura y agenda",
       "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "h9pxr0",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niña\""
     },
     {
       "id": "1t0728t",
