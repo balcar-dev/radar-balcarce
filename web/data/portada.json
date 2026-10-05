@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T04:31:28.834Z",
+  "generado": "2026-10-05T05:01:36.095Z",
   "notas": [
     {
       "id": "1u6ny2m",
@@ -78,7 +78,7 @@
       "fecha": "2026-10-05T01:43:33.866Z",
       "sinFecha": false,
       "visto": "2026-10-05T04:01:14.961Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -331,6 +331,96 @@
         "archivo": "fotos-notas/i9he7u.jpg",
         "credito": "Foto: Clarín"
       }
+    },
+    {
+      "id": "1xzp9qx",
+      "titulo": "Bomberos controlan un principio de incendio en un edificio",
+      "copete": "Dos dotaciones trabajaron el domingo por la tarde en una construcción deshabitada de avenida Kelly y calle 25 tras iniciarse fuego en placas de madera.",
+      "cuerpo": "Dos dotaciones de Bomberos Voluntarios acudieron el domingo por la tarde a un edificio abandonado situado en avenida Kelly y calle 25 para contener un principio de incendio. El foco ígneo comenzó sobre unas placas de madera, lo que requirió la intervención del personal para evitar la propagación hacia otros sectores del inmueble.\n\nVecinos y fuentes del sector señalaron que situaciones de características similares ya habrían ocurrido en esa misma construcción deshabitada en ocasiones anteriores.",
+      "guion": "Bomberos controlan un principio de incendio en un edificio",
+      "seccion": "Policiales",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/10/principio-de-incendio-movilizo-dos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-04T21:50:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T05:01:19.118Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "bomberos"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Dos dotaciones de bomberos trabajaron en avenida Kelly y calle 25.",
+        "El fuego se originó sobre placas de madera en un edificio abandonado.",
+        "Las llamas fueron controladas durante la tarde del domingo."
+      ],
+      "noConfirmado": [
+        "No se precisaron las causas exactas que originaron el inicio del fuego en el lugar.",
+        "No se detalló si hubo personas afectadas o daños materiales totales en la estructura."
+      ],
+      "textoRedes": "Dos dotaciones de Bomberos Voluntarios trabajaron este domingo por la tarde en un principio de incendio registrado en un edificio abandonado de avenida Kelly y calle 25.",
+      "etiquetas": [
+        "Bomberos Voluntarios",
+        "incendio",
+        "avenida Kelly"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/principio-de-incendio-movilizo-dos.html",
+          "fecha": "2026-10-04T21:50:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la intervención de dos dotaciones de bomberos en avenida Kelly y calle 25 durante la tarde del domingo y detalló que el fuego comenzó en placas de madera de un edificio abandonado."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/nuevamente-un-incendio-en-edificio-abandonado-de-av-kelly-y-calle-25",
+          "fecha": "2026-10-04T22:59:06.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que los bomberos trabajaron en el cerramiento de madera y lograron controlar las llamas."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44993-otra-vez-un-incendio-afecto-el-edificio-de-kelly-y-25/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1k3dzvz",
+          "titulo": "Principio de incendio en un departamento céntrico",
+          "fecha": "2026-09-24T19:14:04.000Z",
+          "ruta": "/nota/principio-de-incendio-en-un-departamento-centrico-1k3dzvz"
+        },
+        {
+          "id": "16ml7pn",
+          "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+          "fecha": "2026-10-03T13:15:01.000Z",
+          "ruta": "/nota/bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela-16ml7pn"
+        },
+        {
+          "id": "76r67w",
+          "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
+          "fecha": "2026-09-30T17:35:31.000Z",
+          "ruta": "/nota/bomberos-gestiona-una-unidad-de-traslado-para-capacitaciones-76r67w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "bomberos-controlan-un-principio-de-incendio-en-un-edificio"
     },
     {
       "id": "5j1h5s",
@@ -649,11 +739,12 @@
         "Ámbito",
         "Infobae",
         "TN (Todo Noticias)",
-        "C5N",
         "Crónica",
+        "El Día",
         "La Nueva",
         "InfoRegión",
         "Punto Noticias",
+        "C5N",
         "Radio Mitre"
       ],
       "enlace": "https://www.ambito.com/economia/las-ventas-minoristas-pyme-subieron-apenas-03-septiembre-y-acumulan-una-caida-del-21-anual-n6329896",
@@ -1029,7 +1120,7 @@
       "fecha": "2026-10-04T17:01:05.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 97,
+      "relevancia": 90,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1314,16 +1405,16 @@
         "A24",
         "Ámbito",
         "Minuto Uno",
-        "C5N",
         "Noticias Argentinas (NA)",
-        "Doble Amarilla"
+        "Doble Amarilla",
+        "C5N"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/selecciones/dibu-martinez-hablo-del-legado-de-messi-y-confeso-donde-le-gustaria-jugar-en-argentina_a6ac25797aa20c9061099c717",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-04T14:03:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T19:31:15.414Z",
-      "relevancia": 78,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1545,9 +1636,9 @@
         "El Destape",
         "Perfil",
         "Ámbito",
-        "C5N",
         "Crónica",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "C5N"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/04/a-la-espera-de-los-primeros-resultados-milei-sigue-con-optimismo-la-eleccion-en-brasil-y-respaldo-a-bolsonaro-en-redes/",
       "teniaImagenLaFuente": true,
@@ -1828,6 +1919,69 @@
         "archivo": "fotos-notas/1vb3leq.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
+    },
+    {
+      "id": "uvtamv",
+      "titulo": "Proyectan dos mil empleos por eventos de consumo y fin de año",
+      "copete": "La consultora Randstad anuncia contrataciones temporarias y fijas para los próximos meses. La mayor demanda se concentra en logística, comercio electrónico y gastronomía.",
+      "cuerpo": "El mercado laboral proyecta más de dos mil ofertas de empleo para el cierre del año impulsado por el Cyber Monday, el Black Friday y las Fiestas, según informó la consultora Randstad. La firma detalló que las vacantes abarcan puestos fijos y temporarios en logística, distribución, comercio electrónico, retail, consumo masivo, hotelería y gastronomía.\n\nLa CEO de la compañía para la región, Andrea Ávila, explicó que las posiciones temporarias sirven para reforzar equipos y brindan una oportunidad de inserción laboral o experiencia. Entre los perfiles más solicitados figuran armadores de pedidos, operarios de depósito, conductores de autoelevador, planificadores de ruteo, repartidores, vendedores, repositores, preventistas y cajeros.",
+      "guion": "Proyectan dos mil empleos por eventos de consumo y fin de año",
+      "seccion": "Economía",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "Punto Noticias"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/buscan-cubrir-2-000-puestos-laborales-por-el-cyber-monday--el-black-friday-y-la-temporada-de-fin-de-ano_a6abffd82f814a2817c8d2224",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-04T10:25:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-04T13:01:10.717Z",
+      "relevancia": 26,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Proyectan más de dos mil empleos por eventos de fin de año",
+        "Randstad anticipa contrataciones fijas y temporarias",
+        "La demanda se concentra en logística y comercio electrónico"
+      ],
+      "seSabe": [
+        "Se proyectan más de 2.000 ofertas de empleo por el cierre del año, según Randstad.",
+        "La demanda está impulsada por el Cyber Monday, el Black Friday y las Fiestas.",
+        "Los rubros con más búsquedas son logística, e-commerce, retail, consumo masivo y gastronomía."
+      ],
+      "textoRedes": "Estiman más de dos mil ofertas de empleo para el cierre del año por el Cyber Monday, el Black Friday y las Fiestas de Fin de Año, con foco en logística, comercio electrónico y gastronomía.",
+      "etiquetas": [
+        "empleo",
+        "mercado laboral",
+        "Cyber Monday",
+        "Black Friday",
+        "Randstad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/buscan-cubrir-2-000-puestos-laborales-por-el-cyber-monday--el-black-friday-y-la-temporada-de-fin-de-ano_a6abffd82f814a2817c8d2224",
+          "fecha": "2026-10-04T10:25:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las proyecciones de empleo, los sectores con demanda y los puestos requeridos."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/buscan-cubrir-2-000-puestos-laborales-por-el-cyber-monday-el-black-friday-y-la-temporada-de-fin-de-ano/",
+          "fecha": "2026-10-04T12:16:47.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "proyectan-dos-mil-empleos-por-eventos-de-consumo-y-fin-de-ano"
     },
     {
       "id": "futbolpartidosliga20261002",
@@ -2638,85 +2792,6 @@
       }
     },
     {
-      "id": "12y59yp",
-      "titulo": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
-      "copete": "El presidente de la AFA replicó el ritual con un grupo de futbolistas en la previa del encuentro contra Burkina Faso en el Estadio Monumental.",
-      "cuerpo": "El presidente de la AFA, Claudio Tapia, compartió una reunión con Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez en la concentración albiceleste. El grupo tomó mates en la oficina mientras observaba por televisión el partido entre Barracas Central y Atlético Tucumán, en la antesala del segundo amistuso de la fecha FIFA.\n\nLa puesta en escena repite la cábala implementada días atrás en Córdoba antes del compromiso frente a Bolivia. La imagen ratifica la relevancia que adquirieron los cuatro jugadores dentro del vestuario como nueva columna vertebral del equipo que conduce Lionel Scaloni.\n\nLa Selección argentina se enfrenta el sábado a Burkina Faso en el Estadio Monumental para continuar con su rodaje futbolístico ante los simpatizantes.",
-      "guion": "Claudio Tapia comparte una cábala con cuatro referentes de la Selección",
-      "seccion": "Fútbol",
-      "medios": [
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Olé",
-        "El Día"
-      ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T22:30:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T02:34:42.599Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Claudio Tapia repitió la cábala con cuatro referentes del plantel en la concentración.",
-        "Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez participaron del ritual.",
-        "El seleccionado nacional juega este sábado un amistoso frente a Burkina Faso en el Monumental."
-      ],
-      "seSabe": [
-        "Claudio Tapia posó junto a Cristian Cuti Romero, Enzo Fernández, Julián Álvarez y Lisandro Martínez.",
-        "El grupo compartió mates y vio televisión en la concentración antes del partido.",
-        "La Selección argentina juega este sábado frente a Burkina Faso en el Estadio Monumental."
-      ],
-      "noConfirmado": [
-        "No se informaron otros detalles sobre las actividades previas del plantel en la concentración."
-      ],
-      "textoRedes": "Claudio Tapia replicó una cábala con cuatro referentes del plantel en la previa del partido de la Selección argentina ante Burkina Faso en el Monumental.",
-      "etiquetas": [
-        "Seleccion argentina",
-        "Claudio Tapia",
-        "AFA",
-        "Estadio Monumental",
-        "Burkina Faso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/mate-television-y-cuatro-referentes-la-nueva-cabala-de-chiqui-tapia-antes-de-los-partidos-de-la-seleccion-argentina/",
-          "fecha": "2026-10-03T22:30:12.000Z",
-          "oficial": false,
-          "aporte": "Detalló la reunión de Claudio Tapia y los cuatro futbolistas antes del partido contra Burkina Faso."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/la-nueva-foto-cabala-de-la-seleccion-argentina-con-chiqui-tapia-id764266.html",
-          "fecha": "2026-10-03T23:36:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/seleccion/foto-cabala-tapia-jugadores-seleccion-romero-martinez-fernandez-alvarez_0_lU6FCBJkGx.html",
-          "fecha": "2026-10-03T22:46:39.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "claudio-tapia-comparte-una-cabala-con-cuatro-referentes-de-la",
-      "foto": {
-        "archivo": "fotos-notas/12y59yp.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "1xritdf",
       "titulo": "Colegiales recibe los Play Off del Torneo Clausura de Preliga",
       "copete": "El predio alberga el domingo la definición del fútbol infantil balcarceño. El ganador jugará la final contra Ferro Rojo.",
@@ -2817,7 +2892,7 @@
       "fecha": "2026-10-03T20:09:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-03T22:01:21.842Z",
-      "relevancia": 64,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2892,105 +2967,119 @@
       }
     },
     {
-      "id": "tvh0ae",
-      "titulo": "Chec Bebel Doumbia lidera al juvenil plantel de Burkina Faso ante Argentina",
-      "copete": "El seleccionado africano enfrenta a la Argentina con un plantel de emergencia integrado mayormente por juveniles y con el mediocampista Chec Bebel Doumbia como única figura profesional en Europa.",
-      "cuerpo": "El mediocampista Chec Bebel Doumbia se perfila como la principal figura del seleccionado de Burkina Faso para disputar el amistoso frente a la Selección argentina en el estadio Monumental. El plantel africano llegó al país con una delegación alternativa compuesta mayormente por jugadores juveniles y futbolistas de la categoría Sub-23.\n\nLa conformación del equipo visitante sufrió modificaciones de último momento debido a un conflicto interno. Los deportistas se negaron a viajar tras enterarse de un itinerario de veinticinco horas en clase turista desde Marruecos y por desacuerdos vinculados al pago de premios.\n\nAnte la negativa de varios referentes, el entrenador Amir Abdou debió convocar juveniles para completar la lista. Doumbia, de dieciocho años, es la excepción al militar en el fútbol europeo, tras su paso por el Genoa italiano y su cesión actual al Rapid Bucarest de Rumania.",
-      "guion": "Chec Bebel Doumbia lidera al juvenil plantel de Burkina Faso ante Argentina",
-      "seccion": "Fútbol",
+      "id": "1y13u38",
+      "titulo": "Ignacio Fain logra la pole en San Nicolás y corta la sequia de Torino",
+      "copete": "El piloto santafesino se queda con el mejor tiempo en el autódromo bonaerense y le otorga a la marca su primera posición de privilegio con el modelo de nueva generación.",
+      "cuerpo": "Ignacio Fain domina la clasificación de la duodécima fecha del Turismo Carretera en el autódromo de San Nicolás y marca 1m26s047 a bordo de su Torino.\n\nOtto Fritzler se ubica segundo a 0s216 con un Mercedes-Benz, mientras que Julián Santero completa los tres primeros puestos a 0s232 con un BMW. La actividad continuará el domingo con la realización de las series clasificatorias a partir de las 10:55, sobre un recorrido de seis vueltas.",
+      "guion": "Ignacio Fain logra la pole en San Nicolas y corta la sequia de Torino",
+      "seccion": "Automovilismo",
       "medios": [
-        "TN (Todo Noticias)",
-        "C5N",
-        "Radio Mitre",
-        "Canal 26"
+        "Clarín",
+        "El Destape",
+        "Página/12",
+        "TyC Sports",
+        "La Brújula 24",
+        "La Verdad",
+        "El Eco de Tandil",
+        "Campeones",
+        "Solotc",
+        "Olé",
+        "Ecos Diarios (Necochea)",
+        "Córdoba Competición"
       ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/quien-es-chec-bebel-doumbia-el-unico-futbolista-profesional-de-burkina-faso-que-viajo-para-el-amistoso-con-la-seleccion-argentina/",
+      "enlace": "https://campeones.com.ar/tc-en-san-nicolas-fain-logro-su-1a-pole-y-corto-una-sequia-de-3-anos-para-torino/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T20:06:36.000Z",
+      "fecha": "2026-10-03T19:57:35.000Z",
       "sinFecha": false,
-      "visto": "2026-10-04T02:13:39.472Z",
-      "relevancia": 64,
+      "visto": "2026-10-03T21:31:16.516Z",
+      "relevancia": 70,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Chec Bebel Doumbia es la única figura con experiencia en Europa en la delegación visitante.",
-        "El plantel africano sufrió bajas y formó una delegación de emergencia con juveniles.",
-        "Los futbolistas se negaron inicialmente a viajar por demoras, un largo vuelo y reclamos de premios.",
-        "El encuentro amistoso se disputa en el estadio Monumental."
+        "Ignacio Fain marca el mejor tiempo en San Nicolás con 1m26s047.",
+        "Torino consigue su primera pole con el modelo de nueva generación.",
+        "Otto Fritzler y Julián Santero completan los tres primeros lugares."
       ],
       "seSabe": [
-        "Chec Bebel Doumbia tiene 18 años y se desempeña como mediocampista central.",
-        "El pase del juvenil pertenece al Genoa de Italia y juega a préstamo en el Rapid Bucarest de Rumania.",
-        "El plantel visitante afronta el encuentro con una delegación alternativa tras la negativa de varios profesionales a viajar."
+        "Ignacio Fain se queda con la pole position en la duodécima fecha del Turismo Carretera.",
+        "Torino logra su primera pole desde Posadas 2023.",
+        "Otto Fritzler finaliza segundo y Julián Santero tercero en la clasificación."
       ],
-      "noConfirmado": [
-        "No se detalló la formación inicial que presentará el conjunto visitante para el encuentro.",
-        "No trascendieron los montos específicos del reclamo por premios realizado por los futbolistas."
-      ],
-      "textoRedes": "El mediocampista Chec Bebel Doumbia encabeza al juvenil plantel de Burkina Faso que enfrenta a la Selección argentina en el Monumental tras un viaje conflictivo.",
       "etiquetas": [
-        "Seleccion Argentina",
-        "Burkina Faso",
-        "Chec Bebel Doumbia",
-        "Amistoso",
-        "Futbol"
+        "Turismo Carretera",
+        "San Nicolás",
+        "Ignacio Fain",
+        "Torino"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/03/quien-es-chec-bebel-doumbia-el-unico-futbolista-profesional-de-burkina-faso-que-viajo-para-el-amistoso-con-la-seleccion-argentina/",
-          "fecha": "2026-10-03T20:06:36.000Z",
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/tc-en-san-nicolas-fain-logro-su-1a-pole-y-corto-una-sequia-de-3-anos-para-torino/",
+          "fecha": "2026-10-03T19:57:35.000Z",
           "oficial": false,
-          "aporte": "Aportó la biografía de Chec Bebel Doumbia y detalles del conflicto en el plantel."
+          "aporte": null
         },
         {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/deportes/tiene-18-anos-y-fue-dirigido-un-ex-boca-quien-es-el-unico-profesional-burkina-faso-la-seleccion-argentina-n250673",
-          "fecha": "2026-10-03T23:45:00.000Z",
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/ignacio-fain-logro-su-primera-pole-en-el-turismo-carretera-en-san-nicolas-id764227.html",
+          "fecha": "2026-10-03T20:12:36.000Z",
           "oficial": false,
-          "aporte": "Aportó datos sobre la llegada de la delegación y la sede del partido en el Monumental."
+          "aporte": null
         },
         {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/quien-es-chec-bebel-doumbia-el-unico-jugador-profesional-de-burkina-faso-que-enfrentara-a-la-seleccion-argentina/",
-          "fecha": "2026-10-03T23:50:24.000Z",
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/03/turismo-carretera-en-san-nicolas-fain-logro-su-primera-pole-position-n523698/",
+          "fecha": "2026-10-03T21:02:20.000Z",
           "oficial": false,
-          "aporte": "Aportó la edad y la trayectoria europea del mediocampista."
+          "aporte": null
         },
         {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/deportes/2026/10/03/lo-dirigio-un-ex-boca-y-tiene-18-anos-quien-es-chec-bebel-doumbia-el-unico-futbolista-profesional-de-burkina-faso-que-jugara-contra-argentina/",
-          "fecha": "2026-10-03T23:07:52.000Z",
+          "medio": "Solotc",
+          "enlace": "https://www.solotc.com.ar/tc-san-nicolas-fain-gano-clasificacion-fecha-12-2026/",
+          "fecha": "2026-10-03T19:57:56.000Z",
           "oficial": false,
-          "aporte": "Aportó detalles sobre el caótico viaje y la convocatoria de jugadores juveniles de urgencia."
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/tc-san-nicolas-logro-pole-segunda-fecha-copa-oro_0_OdeXCtPU1Q.html",
+          "fecha": "2026-10-03T20:04:32.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "antecedentes": [
         {
-          "id": "ule632",
-          "titulo": "El organizador confirma el amistoso entre la Argentina y Burkina Faso",
-          "fecha": "2026-10-03T16:35:41.000Z",
-          "ruta": "/nota/el-organizador-confirma-el-amistoso-entre-la-argentina-y-burkina-faso-ule632"
+          "id": "sty1jd",
+          "titulo": "La Fiesta Nacional del Postre anticipa su vigésima segunda edición",
+          "fecha": "2026-10-02T16:31:18.468Z",
+          "ruta": "/nota/la-fiesta-nacional-del-postre-anticipa-su-vigesima-segunda-edicion-sty1jd"
         },
         {
-          "id": "1vuvl5f",
-          "titulo": "La selección de Burkina Faso llega al país con suplentes para enfrentar a Argentina",
-          "fecha": "2026-10-03T11:34:10.000Z",
-          "ruta": "/nota/la-seleccion-de-burkina-faso-llega-al-pais-con-suplentes-para-1vuvl5f"
+          "id": "1j4lf17",
+          "titulo": "Hugo Mazzacane descarta el regreso del Turismo Carretera a Balcarce",
+          "fecha": "2026-10-02T01:39:50.000Z",
+          "ruta": "/nota/hugo-mazzacane-descarta-el-regreso-del-turismo-carretera-a-balcarce-1j4lf17"
+        },
+        {
+          "id": "x9mmdo",
+          "titulo": "Otto Fritzler valora el circuito local y lidera el campeonato de TC Pick Up",
+          "fecha": "2026-10-01T01:38:10.000Z",
+          "ruta": "/nota/balcarce-tiene-algo-especial-es-un-autodromo-de-verdad-x9mmdo"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
+        "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "chec-bebel-doumbia-lidera-al-juvenil-plantel-de-burkina-faso-ante",
+      "slug": "ignacio-fain-logra-la-pole-en-san-nicolas-y-corta-la-sequia-de-torino",
       "foto": {
-        "archivo": "fotos-notas/tvh0ae.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
+        "archivo": "fotos-notas/1y13u38.jpg",
+        "credito": "Foto: Campeones"
       }
     },
     {
@@ -3062,89 +3151,97 @@
       }
     },
     {
-      "id": "ayjy85",
-      "titulo": "Barker y Villa Cacique ofrecen turismo y sierras a dos horas",
-      "copete": "Los pueblos del partido de Benito Juárez combinan senderos de montaña, cavernas naturales y producción artesanal de frutos rojos para una escapada de fin de semana.",
-      "cuerpo": "A poco más de dos horas de viaje por la Ruta 226, las localidades rurales de Barker y Villa Cacique proponen un recorrido por las estribaciones del sistema de Tandilia en el partido de Benito Juárez. Según informó un medio local, el destino reúne senderos serranos, grutas naturales y una marcada tradición en la elaboración artesanal de productos con frutos rojos.\n\nLa producción frutícola comenzó a desarrollarse a comienzos de la década del 2000 a través de una iniciativa cooperativa que impulsó el perfil turístico de la zona. Entre los puntos de interés histórico y cultural se encuentran la antigua planta cementera Loma Negra, la capilla San Francisco de Asís y el monumento al cacique Ancafilú.\n\nLos visitantes también pueden realizar caminatas guiadas de trekking por la Cuchilla de las Águilas y el cerro El Sombrerito, además de explorar formaciones de piedra en el Alero de la Vaca Muerta. El circuito se completa con visitas a la estación ferroviaria inaugurada en 1908 y propuestas de escalada en roca.",
-      "guion": "Barker y Villa Cacique ofrecen turismo y sierras a dos horas",
-      "seccion": "Cultura y agenda",
+      "id": "v0xov9",
+      "titulo": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
+      "copete": "El delantero de la Fiorentina convirtió en el 7-0 ante Burkina Faso en el Monumental y habló sobre la exigencia de los hinchas.",
+      "cuerpo": "El delantero Franco Mastantuono convirtió su primer tanto con la camiseta de la Selección Argentina mayor en la goleada por 7-0 frente a Burkina Faso en el Estadio Monumental. Tras el encuentro amistoso disputado por una nueva fecha FIFA, el atacante de la Fiorentina se refirió a las cuestionamientos recibidos en los últimos tiempos.\n\nAdemás, admitió que se generaron altas expectativas en torno a su figura tras su salto al fútbol europeo.",
+      "guion": "Mastantuono marca su primer gol con la Selección y responde a las críticas",
+      "seccion": "Fútbol",
       "medios": [
-        "Canal 26",
-        "0223 (Mar del Plata)"
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Olé",
+        "Noticias Argentinas (NA)",
+        "Bolavip Argentina",
+        "C5N",
+        "Minuto Uno",
+        "El Gráfico",
+        "Clarín"
       ],
-      "enlace": "https://www.0223.com.ar/nota/2026-10-3-14-1-0-a-dos-horas-de-mar-del-plata-el-pueblo-de-cavernas-y-frambuesas-ideal-para-una-escapada",
+      "enlace": "https://www.ole.com.ar/seleccion/seleccion-argentina-franco-mastantuono_0_BFEYKYby4F.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T17:01:00.000Z",
+      "fecha": "2026-10-03T18:00:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-03T17:31:22.477Z",
-      "relevancia": 32,
+      "visto": "2026-10-04T03:04:30.573Z",
+      "relevancia": 74,
       "local": false,
-      "deLaZona": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Ubicación: partido de Benito Juárez, a algo más de dos horas por la Ruta 226.",
-        "Atractivos: senderos de montaña, cavernas naturales y producción de frutos rojos.",
-        "Historia: antigua planta cementera Loma Negra y estación de tren de 1908.",
-        "Actividades: trekking, caminatas guiadas, escalada y degustación de dulces artesanales."
+        "Mastantuono convirtió su primer gol con la Selección mayor.",
+        "Fue en la victoria por 7 a 0 frente a Burkina Faso en el Monumental.",
+        "El delantero se refirió a las críticas y reconoció la exigencia de los hinchas."
       ],
       "seSabe": [
-        "Barker y Villa Cacique están situados en el partido de Benito Juárez, según un medio local.",
-        "El viaje demanda poco más de dos horas desde la región por la Ruta 226, de acuerdo con el informe.",
-        "La producción de frutos rojos nació mediante un proyecto cooperativo a principios de los años 2000, según la publicación.",
-        "El circuito incluye la estación de tren de 1908 y circuitos de trekking por la Cuchilla de las Águilas, según los datos difundidos."
+        "La Selección Argentina goleó 7-0 a Burkina Faso en el Estadio Monumental.",
+        "Franco Mastantuono convirtió su primer tanto con la camiseta celeste y blanca.",
+        "El delantero de la Fiorentina reconoció que existen altas exigencias sobre su rendimiento."
       ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Barker y Villa Cacique proponen una escapada de fin de semana con senderos de montaña, cavernas naturales y producción artesanal de frutos rojos a poco más de dos horas de viaje.",
+      "textoRedes": "Franco Mastantuono convirtió su primer gol con la Selección Argentina en el 7-0 ante Burkina Faso y habló sobre la exigencia de los hinchas tras la goleada en el Monumental.",
       "etiquetas": [
-        "Turismo",
-        "Barker",
-        "Villa Cacique",
-        "Benito Juarez",
-        "Escapada"
+        "Selección Argentina",
+        "Franco Mastantuono",
+        "Fútbol",
+        "Burkina Faso"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-3-14-1-0-a-dos-horas-de-mar-del-plata-el-pueblo-de-cavernas-y-frambuesas-ideal-para-una-escapada",
-          "fecha": "2026-10-03T17:01:00.000Z",
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/seleccion-argentina-franco-mastantuono_0_BFEYKYby4F.html",
+          "fecha": "2026-10-04T02:18:18.000Z",
           "oficial": false,
-          "aporte": "Detalló los atractivos turísticos, históricos y de aventura de Barker y Villa Cacique en el partido de Benito Juárez."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "j3xrez",
-          "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-          "fecha": "2026-10-03T03:01:28.393Z",
-          "ruta": "/nota/la-concesion-de-la-ruta-226-arranca-con-tareas-de-pintura-j3xrez"
+          "aporte": "Detalló el debut goleador de Mastantuono y sus declaraciones tras el partido."
         },
         {
-          "id": "fd2y4d",
-          "titulo": "Choque frontal en la Ruta 226 deja tres heridos",
-          "fecha": "2026-10-02T22:58:21.000Z",
-          "ruta": "/nota/choque-frontal-en-la-ruta-226-deja-tres-heridos-fd2y4d"
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/seleccion-argentina/la-reflexion-de-mastantuono-tras-su-primer-gol-con-la-seleccion-argentina-la-gente-es-muy-exigente-conmigo-id764283.html",
+          "fecha": "2026-10-04T02:35:41.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
         },
         {
-          "id": "1a9rnj4",
-          "titulo": "El municipio anticipa que el Centro de Monitoreo suma cámaras",
-          "fecha": "2026-10-01T17:31:17.133Z",
-          "ruta": "/nota/el-municipio-anticipa-que-el-centro-de-monitoreo-suma-camaras-1a9rnj4"
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/franco-mastantuono-su-primer-gol-la-argentina-la-gente-es-bastante-exigente-conmigo-y-muchas-veces-son-duros-n250683",
+          "fecha": "2026-10-04T03:00:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el debut goleador y el descargo del jugador tras el encuentro."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/franco-mastantuono-sobre-las-criticas---la-gente-es-muy-exigente-conmigo-_a6ac1bcd1bd9cfb5d3711f4df",
+          "fecha": "2026-10-04T02:56:40.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato sobre el club europeo del jugador y sus declaraciones textuales."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/seleccion/franco-mastantuono-les-respondio-a-sus-criticos-tras-su-primer-gol-en-la-seleccion-argentina-son-duros-conmigo",
+          "fecha": "2026-10-04T02:20:40.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el partido se jugó en el Monumental y fue un amistoso de fecha FIFA."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "barker-y-villa-cacique-ofrecen-turismo-y-sierras-a-dos-horas",
+      "slug": "mastantuono-marca-su-primer-gol-con-la-seleccion-y-responde-a-las",
       "foto": {
-        "archivo": "fotos-notas/ayjy85.jpg",
-        "credito": "Foto: 0223 (Mar del Plata)"
+        "archivo": "fotos-notas/v0xov9.jpg",
+        "credito": "Foto: Olé"
       }
     }
   ],
@@ -3157,8 +3254,7 @@
     "Política",
     "Balcarce",
     "Argentina",
-    "Tecnología",
-    "Cultura y agenda"
+    "Tecnología"
   ],
   "temas": [],
   "clima": {
@@ -3527,6 +3623,12 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "1fdpugn",
+      "titulo": "Milei defendió el equilibrio fiscal y volvió a cuestionar…",
+      "seccion": "Política",
+      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
+    },
+    {
       "id": "1148srf",
       "titulo": null,
       "seccion": "Policiales",
@@ -3599,5 +3701,5 @@
       "motivo": "necesita ojo humano: \"herido\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 2
 }
