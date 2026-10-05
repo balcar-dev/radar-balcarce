@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T09:01:20.046Z",
+  "generado": "2026-10-05T09:31:31.625Z",
   "notas": [
     {
       "id": "1u6ny2m",
@@ -738,9 +738,9 @@
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Noticia 1",
-        "Ámbito",
         "La Nación",
         "Infobae",
+        "Ámbito",
         "TN (Todo Noticias)",
         "C5N",
         "Crónica",
@@ -755,7 +755,7 @@
       "fecha": "2026-10-04T18:18:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 73,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1016,7 +1016,11 @@
         "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-arzobispo-de-lujan-advierte-que-la-mayor-division-nacional-es-la"
+      "slug": "el-arzobispo-de-lujan-advierte-que-la-mayor-division-nacional-es-la",
+      "foto": {
+        "archivo": "fotos-notas/1yu4a7r.jpg",
+        "credito": "Foto: Crónica"
+      }
     },
     {
       "id": "1camy15",
@@ -1026,8 +1030,8 @@
       "guion": "Argentina firma un acuerdo global para aplicar inteligencia artificial a la ciencia",
       "seccion": "Tecnología",
       "medios": [
-        "Clarín",
-        "TN (Todo Noticias)"
+        "TN (Todo Noticias)",
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/mundo/argentina-firmo-estados-unidos-acuerdo-impulsar-inteligencia-artificial-ciencia_0_kDIQBdiwvJ.html",
       "teniaImagenLaFuente": true,
@@ -1395,7 +1399,6 @@
         "El Día",
         "0221",
         "InfoRegión",
-        "InfoGEI",
         "NDEN – Noticias de Necochea"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44987-kicillof-apelo-el-fallo-que-habia-frenado-los-aumentos-de-las-tarifas-electricas-en-la-provincia/",
@@ -2764,11 +2767,11 @@
     "ahora": {
       "temp": 11,
       "sensacion": 8,
-      "humedad": 66,
+      "humedad": 67,
       "viento": 12,
       "rumbo": "NO",
       "cielo": "Parcialmente nublado",
-      "esDeDia": false
+      "esDeDia": true
     },
     "dias": [
       {
