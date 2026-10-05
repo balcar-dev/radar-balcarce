@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T10:31:43.109Z",
+  "generado": "2026-10-05T11:01:30.517Z",
   "notas": [
     {
       "id": "1u6ny2m",
@@ -342,7 +342,6 @@
       "guion": "Bomberos controlan un principio de incendio en un edificio",
       "seccion": "Policiales",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -352,7 +351,7 @@
       "fecha": "2026-10-04T21:50:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T05:01:19.118Z",
-      "relevancia": 100,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -426,6 +425,57 @@
       "slug": "bomberos-controlan-un-principio-de-incendio-en-un-edificio"
     },
     {
+      "id": "f1resultado2026r16",
+      "propia": "f1",
+      "tipoF1": "resultado",
+      "destacados": [
+        {
+          "texto": "Ver el campeonato de pilotos y constructores",
+          "href": "/tablas/formula-1"
+        }
+      ],
+      "circuitoF1": "Sepang International Circuit",
+      "titulo": "F1: así fue el Gran Premio de Baréin en Malasia, con Max Verstappen en lo más alto del podio",
+      "copete": "Max Verstappen ganó, Andrea Kimi Antonelli fue segundo y Lewis Hamilton tercero. Así le fue a Colapinto. El resultado completo y cómo está el campeonato.",
+      "cuerpo": "Max Verstappen (Red Bull) ganó el Gran Premio de Baréin en Malasia de la Fórmula 1, que se corrió el domingo 4 de octubre en Sepang International Circuit, Kuala Lumpur, Malasia, con un tiempo de 1:47:14,808, tras 55 vueltas. El podio lo completaron Andrea Kimi Antonelli (Mercedes), a 2,307 segundos, y Lewis Hamilton (Ferrari), a 4,919 segundos.\n\nDel cuarto al décimo puesto terminaron, en ese orden: Charles Leclerc, Isack Hadjar, Oscar Piastri, Liam Lawson, Fernando Alonso, Lando Norris, Arvid Lindblad.\n\nEl argentino Franco Colapinto, con Alpine F1 Team, que había largado desde el puesto 21, terminó en el puesto 13 (a 18,997 segundos del ganador).\n\nMax Verstappen (Red Bull) salió desde el primer puesto de la parrilla. La vuelta rápida fue de Max Verstappen (Red Bull), con 1:38,220 en la vuelta 55.\n\nAsí quedó el campeonato de pilotos después de la fecha 16: 1º Andrea Kimi Antonelli, 302 puntos; 2º George Russell, 236 puntos; 3º Lewis Hamilton, 199 puntos; 4º Lando Norris, 186 puntos; 5º Charles Leclerc, 179 puntos. Franco Colapinto es 12º con 27 puntos.\n\nLos datos son los resultados oficiales según Jolpica F1 (datos abiertos). Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo.",
+      "guion": null,
+      "seccion": "Automovilismo",
+      "local": false,
+      "relevancia": 58,
+      "medios": [
+        "Jolpica F1 (datos abiertos)"
+      ],
+      "enlace": "https://github.com/jolpica/jolpica-f1",
+      "fuentesConsultadas": [
+        {
+          "medio": "Jolpica F1 (datos abiertos)",
+          "enlace": "https://github.com/jolpica/jolpica-f1"
+        }
+      ],
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-04T19:32:39.267Z",
+      "sinFecha": false,
+      "visto": "2026-10-04T19:32:39.267Z",
+      "publicadaPor": null,
+      "publicadaCuando": "2026-10-04T19:32:39.267Z",
+      "temas": [],
+      "etiquetas": [
+        "Fórmula 1",
+        "F1",
+        "Gran Premio",
+        "Gran Premio de Baréin en Malasia",
+        "resultados",
+        "Franco Colapinto"
+      ],
+      "como": "automatica",
+      "firma": "Nota de Radar Balcarce armada con los datos abiertos de Jolpica F1.",
+      "slug": "f1-asi-fue-el-gran-premio-de-barein-en-malasia-con-max-verstappen-en",
+      "foto": {
+        "archivo": "fotos-notas/libre-f1resultado2026r16.jpg",
+        "credito": "Foto: Leminhel / Wikimedia Commons (CC BY-SA 3.0)"
+      }
+    },
+    {
       "id": "ivx73p",
       "titulo": "Scott Bessent abre la puerta a un nuevo rescate financiero para la Argentina",
       "copete": "El secretario del Tesoro de Estados Unidos respaldó la asistencia previa al gobierno de Javier Milei y dejó abierta la posibilidad de repetir la ayuda. La declaración se conoció tras una suba del riesgo país.",
@@ -434,6 +484,7 @@
       "seccion": "Política",
       "medios": [
         "La Nación",
+        "Ámbito",
         "TN (Todo Noticias)",
         "El Cronista",
         "C5N",
@@ -445,7 +496,7 @@
       ],
       "enlace": "https://www.lanacion.com.ar/economia/el-secretario-del-tesoro-de-eeuu-abrio-la-puerta-a-un-nuevo-rescate-a-milei-podriamos-volver-a-nid04102026/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-04T20:23:24.000Z",
+      "fecha": "2026-10-04T19:18:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-04T23:31:21.567Z",
       "relevancia": 73,
@@ -529,57 +580,6 @@
       "foto": {
         "archivo": "fotos-notas/ivx73p.jpg",
         "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "f1resultado2026r16",
-      "propia": "f1",
-      "tipoF1": "resultado",
-      "destacados": [
-        {
-          "texto": "Ver el campeonato de pilotos y constructores",
-          "href": "/tablas/formula-1"
-        }
-      ],
-      "circuitoF1": "Sepang International Circuit",
-      "titulo": "F1: así fue el Gran Premio de Baréin en Malasia, con Max Verstappen en lo más alto del podio",
-      "copete": "Max Verstappen ganó, Andrea Kimi Antonelli fue segundo y Lewis Hamilton tercero. Así le fue a Colapinto. El resultado completo y cómo está el campeonato.",
-      "cuerpo": "Max Verstappen (Red Bull) ganó el Gran Premio de Baréin en Malasia de la Fórmula 1, que se corrió el domingo 4 de octubre en Sepang International Circuit, Kuala Lumpur, Malasia, con un tiempo de 1:47:14,808, tras 55 vueltas. El podio lo completaron Andrea Kimi Antonelli (Mercedes), a 2,307 segundos, y Lewis Hamilton (Ferrari), a 4,919 segundos.\n\nDel cuarto al décimo puesto terminaron, en ese orden: Charles Leclerc, Isack Hadjar, Oscar Piastri, Liam Lawson, Fernando Alonso, Lando Norris, Arvid Lindblad.\n\nEl argentino Franco Colapinto, con Alpine F1 Team, que había largado desde el puesto 21, terminó en el puesto 13 (a 18,997 segundos del ganador).\n\nMax Verstappen (Red Bull) salió desde el primer puesto de la parrilla. La vuelta rápida fue de Max Verstappen (Red Bull), con 1:38,220 en la vuelta 55.\n\nAsí quedó el campeonato de pilotos después de la fecha 16: 1º Andrea Kimi Antonelli, 302 puntos; 2º George Russell, 236 puntos; 3º Lewis Hamilton, 199 puntos; 4º Lando Norris, 186 puntos; 5º Charles Leclerc, 179 puntos. Franco Colapinto es 12º con 27 puntos.\n\nLos datos son los resultados oficiales según Jolpica F1 (datos abiertos). Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo.",
-      "guion": null,
-      "seccion": "Automovilismo",
-      "local": false,
-      "relevancia": 58,
-      "medios": [
-        "Jolpica F1 (datos abiertos)"
-      ],
-      "enlace": "https://github.com/jolpica/jolpica-f1",
-      "fuentesConsultadas": [
-        {
-          "medio": "Jolpica F1 (datos abiertos)",
-          "enlace": "https://github.com/jolpica/jolpica-f1"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-04T19:32:39.267Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T19:32:39.267Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-04T19:32:39.267Z",
-      "temas": [],
-      "etiquetas": [
-        "Fórmula 1",
-        "F1",
-        "Gran Premio",
-        "Gran Premio de Baréin en Malasia",
-        "resultados",
-        "Franco Colapinto"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce armada con los datos abiertos de Jolpica F1.",
-      "slug": "f1-asi-fue-el-gran-premio-de-barein-en-malasia-con-max-verstappen-en",
-      "foto": {
-        "archivo": "fotos-notas/libre-f1resultado2026r16.jpg",
-        "credito": "Foto: Leminhel / Wikimedia Commons (CC BY-SA 3.0)"
       }
     },
     {
@@ -668,10 +668,10 @@
         "C5N",
         "Crónica",
         "El Día",
+        "InfoRegión",
         "Punto Noticias",
         "Radio Mitre",
-        "La Nueva",
-        "InfoRegión"
+        "La Nueva"
       ],
       "enlace": "https://www.ambito.com/economia/las-ventas-minoristas-pyme-subieron-apenas-03-septiembre-y-acumulan-una-caida-del-21-anual-n6329896",
       "teniaImagenLaFuente": true,
@@ -1385,7 +1385,6 @@
         "TyC Sports",
         "Olé",
         "Noticias Argentinas (NA)",
-        "El Gráfico",
         "La Nueva"
       ],
       "enlace": "https://www.tycsports.com/seleccion-argentina/dibu-martinez-estuvo-en-el-tc-y-desafio-a-scaloni-a-una-carrera-id764328.html",
@@ -1581,7 +1580,39 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Ámbito",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Minuto Uno",
+        "Diario La Vanguardia",
+        "El Eco de Tandil",
+        "La Nación",
+        "El Destape",
+        "Perfil",
+        "Página/12",
+        "A24",
+        "TyC Sports",
+        "Crónica",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "0221",
+        "La Tecla",
+        "La Verdad",
+        "InfoRegión",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "La Verdad de Ayacucho",
+        "Doble Amarilla",
+        "Olé",
+        "0223 (Mar del Plata)",
+        "La Nueva",
+        "Clarín",
+        "Campeones",
+        "El Día",
+        "La Brújula 24",
+        "La Voz del Pueblo",
+        "Córdoba Competición",
+        "C5N",
+        "El Gráfico"
       ],
       "enlace": "https://radiomitre.cienradios.com/deportes/el-insolito-malentendido-entre-franco-colapinto-y-su-ingeniero-durante-la-bandera-roja-en-el-gp-de-bahrein/",
       "teniaImagenLaFuente": true,
@@ -1664,7 +1695,6 @@
       "guion": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia",
         "La Noticia 1"
       ],
@@ -1732,11 +1762,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44990-otra-vez-sobre-la-mesa-la-division-de-la-provincia-que-lugar-tendria-balcarce-en-una-buenos-aires-sin-el-peso-del-conurbano/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-04T10:31:15.992Z",
       "sinFecha": true,
       "visto": "2026-10-04T10:31:15.992Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1783,69 +1813,6 @@
         "archivo": "fotos-notas/1vb3leq.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "uvtamv",
-      "titulo": "Proyectan dos mil empleos por eventos de consumo y fin de año",
-      "copete": "La consultora Randstad anuncia contrataciones temporarias y fijas para los próximos meses. La mayor demanda se concentra en logística, comercio electrónico y gastronomía.",
-      "cuerpo": "El mercado laboral proyecta más de dos mil ofertas de empleo para el cierre del año impulsado por el Cyber Monday, el Black Friday y las Fiestas, según informó la consultora Randstad. La firma detalló que las vacantes abarcan puestos fijos y temporarios en logística, distribución, comercio electrónico, retail, consumo masivo, hotelería y gastronomía.\n\nLa CEO de la compañía para la región, Andrea Ávila, explicó que las posiciones temporarias sirven para reforzar equipos y brindan una oportunidad de inserción laboral o experiencia. Entre los perfiles más solicitados figuran armadores de pedidos, operarios de depósito, conductores de autoelevador, planificadores de ruteo, repartidores, vendedores, repositores, preventistas y cajeros.",
-      "guion": "Proyectan dos mil empleos por eventos de consumo y fin de año",
-      "seccion": "Economía",
-      "medios": [
-        "Noticias Argentinas (NA)",
-        "Punto Noticias"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/buscan-cubrir-2-000-puestos-laborales-por-el-cyber-monday--el-black-friday-y-la-temporada-de-fin-de-ano_a6abffd82f814a2817c8d2224",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-04T10:25:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T13:01:10.717Z",
-      "relevancia": 18,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Proyectan más de dos mil empleos por eventos de fin de año",
-        "Randstad anticipa contrataciones fijas y temporarias",
-        "La demanda se concentra en logística y comercio electrónico"
-      ],
-      "seSabe": [
-        "Se proyectan más de 2.000 ofertas de empleo por el cierre del año, según Randstad.",
-        "La demanda está impulsada por el Cyber Monday, el Black Friday y las Fiestas.",
-        "Los rubros con más búsquedas son logística, e-commerce, retail, consumo masivo y gastronomía."
-      ],
-      "textoRedes": "Estiman más de dos mil ofertas de empleo para el cierre del año por el Cyber Monday, el Black Friday y las Fiestas de Fin de Año, con foco en logística, comercio electrónico y gastronomía.",
-      "etiquetas": [
-        "empleo",
-        "mercado laboral",
-        "Cyber Monday",
-        "Black Friday",
-        "Randstad"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/buscan-cubrir-2-000-puestos-laborales-por-el-cyber-monday--el-black-friday-y-la-temporada-de-fin-de-ano_a6abffd82f814a2817c8d2224",
-          "fecha": "2026-10-04T10:25:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las proyecciones de empleo, los sectores con demanda y los puestos requeridos."
-        },
-        {
-          "medio": "Punto Noticias",
-          "enlace": "https://puntonoticias.com/buscan-cubrir-2-000-puestos-laborales-por-el-cyber-monday-el-black-friday-y-la-temporada-de-fin-de-ano/",
-          "fecha": "2026-10-04T12:16:47.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no registrar resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "proyectan-dos-mil-empleos-por-eventos-de-consumo-y-fin-de-ano"
     },
     {
       "id": "futbolpartidosliga20261002",
@@ -2517,145 +2484,6 @@
         "archivo": "fotos-notas/np9nneou5k.jpg",
         "credito": "Foto: eldoce.tv"
       }
-    },
-    {
-      "id": "158gkt0",
-      "titulo": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
-      "copete": "La Liga Balcarceña de Fútbol postergó todos los encuentros previstos para el fin de semana debido a las malas condiciones de los terrenos de juego y de los accesos a los predios deportivos.",
-      "cuerpo": "La Liga Balcarceña de Fútbol canceló toda la programación del fin de semana tras constatar que los campos de juego no se encuentran aptos para disputar partidos. Según informó la institución, la humedad nocturna impidió que los terrenos lograran secarse de manera adecuada.\n\nA esta situación se sumaron las complicaciones detectadas en los accesos a los distintos escenarios deportivos, que presentan serias dificultades para el tránsito vehicular.\n\nDesde la entidad explicaron que la medida se adoptó con anticipación para evitar que los planteles y cuerpos técnicos quedaran a la espera de una cancelación durante la jornada de competencia.",
-      "guion": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
-      "seccion": "Fútbol",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Puntonueve (FM 100.9)",
-        "Diario La Vanguardia",
-        "Acción 5 (Balcarce)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/el-mal-estado-de-las-canchas-obligo.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T22:52:18.014Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T02:13:39.472Z",
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se suspendió toda la programación futbolística del fin de semana",
-        "Los campos de juego no lograron secarse debido a la humedad",
-        "Los accesos a los escenarios deportivos presentan dificultades",
-        "La medida se tomó de manera anticipada para los planteles"
-      ],
-      "seSabe": [
-        "La Liga Balcarceña de Fútbol suspendió la fecha del fin de semana.",
-        "La decisión se tomó por el estado de los campos de juego y los accesos.",
-        "Los terrenos no se secaron debido a la humedad nocturna."
-      ],
-      "etiquetas": [
-        "Liga Balcarceña de Fútbol",
-        "fútbol local",
-        "suspensión de partidos",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-mal-estado-de-las-canchas-obligo.html",
-          "fecha": "2026-10-03T22:52:18.014Z",
-          "oficial": false,
-          "aporte": "Informó la suspensión de la fecha futbolística y los motivos vinculados al estado de las canchas y los accesos."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-liga-balcarcena-de-futbol-suspende-la-fecha-por-el-estado-de-las",
-      "foto": {
-        "archivo": "fotos-notas/158gkt0.jpg",
-        "credito": "Foto: Infórmese Primero (FM 104.9)"
-      }
-    },
-    {
-      "id": "irc0sr",
-      "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
-      "copete": "Ocho integrantes del cuerpo activo compartieron su vivencia en una charla organizada por el Rotary Club Balcarce Cerrito tras intervenir en el sismo.",
-      "cuerpo": "Ocho bomberos balcarceños que formaron parte de la Brigada PUMA USAR ARG-13 compartieron su vivencia en un encuentro organizado por el Rotary Club Balcarce Cerrito el sábado por la tarde. La delegación intervino en las tareas de búsqueda y rescate urbano tras el terremoto desatado el 24 de junio en Venezuela.\n\nLa comitiva estuvo integrada por el comandante general Fernando Alessio, el subcomandante Federico Mancini, los oficiales auxiliares de escuadra Sebastián López y Nicolás Cucci, los ayudantes mayores Gonzalo Castrillo, Federico Cattaneo y Santiago Vivas, y el subayudante Lautaro Vignate. Alessio explicó sobre el desafío que afrontaron: “Nos preparamos para este tipo de tragedias, aunque no queremos que ocurran”.",
-      "guion": "Bomberos locales detallan su participación en el rescate en Venezuela",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/nos-preparamos-para-estas-tragedias-aunque-no-queremos-que-ocurran-la-experiencia-de-los-bomberos-balcarcenos-en-venezuela-nos-preparamos-para-este-tipo-de-tragedias-bomberos-balcarcenos-contaron-su-experiencia-tras-el-terremoto-en-venezuela-755",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-03T22:39:05.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 81,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ocho bomberos balcarceños participaron de la misión en Venezuela.",
-        "Integraron la Brigada PUMA USAR ARG-13 tras el sismo.",
-        "El Rotary Club Balcarce Cerrito organizó el encuentro.",
-        "La delegación trabajó junto a equipos internacionales."
-      ],
-      "seSabe": [
-        "El encuentro se desarrolló el sábado por la tarde.",
-        "La brigada intervino en las tareas tras el terremoto del 24 de junio.",
-        "Ocho bomberos locales integraron la misión internacional."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Ocho bomberos balcarceños compartieron su experiencia tras integrar la brigada de rescate que trabajó en las zonas afectadas por el terremoto en Venezuela.",
-      "etiquetas": [
-        "bomberos",
-        "rescate",
-        "Venezuela",
-        "Balcarce",
-        "terremoto"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/nos-preparamos-para-estas-tragedias-aunque-no-queremos-que-ocurran-la-experiencia-de-los-bomberos-balcarcenos-en-venezuela-nos-preparamos-para-este-tipo-de-tragedias-bomberos-balcarcenos-contaron-su-experiencia-tras-el-terremoto-en-venezuela-755",
-          "fecha": "2026-10-04T20:31:39.000Z",
-          "oficial": false,
-          "aporte": "Detalló la charla de los bomberos sobre su trabajo en Venezuela y los nombres de los integrantes."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "173wsz3",
-          "titulo": "Bomberos locales relatan su trabajo en el terremoto de Venezuela",
-          "fecha": "2026-10-03T13:15:01.000Z",
-          "ruta": "/nota/bomberos-locales-relatan-su-trabajo-en-el-terremoto-de-venezuela-173wsz3"
-        },
-        {
-          "id": "16ml7pn",
-          "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
-          "fecha": "2026-10-03T13:15:01.000Z",
-          "ruta": "/nota/bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela-16ml7pn"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela",
-      "foto": {
-        "archivo": "fotos-notas/irc0sr.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
     }
   ],
   "secciones": [
@@ -2672,10 +2500,10 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 12,
-      "sensacion": 9,
+      "temp": 13,
+      "sensacion": 10,
       "humedad": 66,
-      "viento": 14,
+      "viento": 15,
       "rumbo": "O",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3036,6 +2864,12 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "17hpmfy",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "h9pxr0",
       "titulo": null,
       "seccion": "Argentina",
@@ -3046,6 +2880,12 @@
       "titulo": "Ioma: los afiliados llevan sus reclamos a la Justicia y…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1t0728t",
+      "titulo": "Gignac estuvo con Riquelme en La Bombonera en el triunfo…",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"suscribite\""
     },
     {
       "id": "wob5dc",
