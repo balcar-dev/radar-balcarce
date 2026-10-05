@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T02:31:30.723Z",
+  "generado": "2026-10-05T03:01:38.033Z",
   "notas": [
     {
       "id": "repaso20261004noche",
@@ -85,7 +85,7 @@
       "fecha": "2026-10-04T23:40:07.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T01:41:23.600Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -805,8 +805,8 @@
     {
       "id": "1camy15",
       "titulo": "Argentina firma un acuerdo global para aplicar inteligencia artificial a la ciencia",
-      "copete": "El país se sumó este domingo a una iniciativa internacional encabezada por Estados Unidos en Japón para acelerar la investigación científica mediante sistemas avanzados.",
-      "cuerpo": "La Argentina firmó este domingo una declaración internacional junto a Estados Unidos y otras 15 naciones para aplicar sistemas avanzados de inteligencia artificial en la investigación científica. El documento, llamado Visión de Kioto para una Edad Dorada de la Ciencia, se presentó en Japón durante el Science and Technology in Society Forum.\n\nLa propuesta contempla modificar los mecanismos tradicionales de financiamiento para combinar subsidios con fondos rápidos y premios. También busca incorporar tecnología avanzada a los procesos científicos y potenciar la formación de estudiantes y jóvenes investigadores mediante becas y doctorados conjuntos.",
+      "copete": "El país se sumó el domingo a una iniciativa internacional encabezada por Estados Unidos en Japón para acelerar la investigación científica mediante sistemas avanzados.",
+      "cuerpo": "La Argentina firmó el domingo una declaración internacional junto a Estados Unidos y otras 15 naciones para aplicar sistemas avanzados de inteligencia artificial en la investigación científica. El documento, llamado Visión de Kioto para una Edad Dorada de la Ciencia, se presentó en Japón durante el Science and Technology in Society Forum.\n\nLa propuesta contempla modificar los mecanismos tradicionales de financiamiento para combinar subsidios con fondos rápidos y premios. También busca incorporar tecnología avanzada a los procesos científicos y potenciar la formación de estudiantes y jóvenes investigadores mediante becas y doctorados conjuntos.",
       "guion": "Argentina firma un acuerdo global para aplicar inteligencia artificial a la ciencia",
       "seccion": "Tecnología",
       "medios": [
@@ -896,6 +896,7 @@
         "Clarín",
         "0223 (Mar del Plata)",
         "Infobae",
+        "TN (Todo Noticias)",
         "TyC Sports",
         "Olé",
         "Noticias Argentinas (NA)",
@@ -1004,10 +1005,10 @@
       "seccion": "Automovilismo",
       "medios": [
         "La Nación",
-        "Minuto Uno",
         "Infobae",
         "TN (Todo Noticias)",
         "TyC Sports",
+        "Minuto Uno",
         "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/deportes/automovilismo/2026/10/04/susto-en-el-tcr-un-piloto-recibio-un-toque-perdio-el-control-del-auto-y-protagonizo-un-fuerte-choque/",
@@ -1174,7 +1175,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "xbox-game-pass-quita-nueve-juegos-de-su-catalogo-en-octubre"
+      "slug": "xbox-game-pass-quita-nueve-juegos-de-su-catalogo-en-octubre",
+      "foto": {
+        "archivo": "fotos-notas/1hiaakh.jpg",
+        "credito": "Foto: FayerWayer"
+      }
     },
     {
       "id": "5mn9v7",
@@ -1285,7 +1290,7 @@
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: fútbol, Liga Balcarceña de Fútbol y Colegiales",
       "copete": "Radar Balcarce publicó a las 10:04 de este domingo 4 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la mañana del domingo 4, en el orden en que salieron en el audio.\n\nMastantuono marca su primer gol con la Selección y responde a las críticas. El delantero de la Fiorentina convirtió en el 7-0 ante Burkina Faso en el Monumental y habló sobre la exigencia de los hinchas.\n\nLa Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas. La Liga Balcarceña de Fútbol postergó todos los encuentros previstos para este fin de semana debido a las malas condiciones de los terrenos de juego y de los accesos a los predios deportivos.\n\nColegiales recibe los Play Off del Torneo Clausura de Preliga. El predio alberga el domingo la definición del fútbol infantil balcarceño. El ganador jugará la final contra Ferro Rojo.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la mañana del domingo 4, en el orden en que salieron en el audio.\n\nMastantuono marca su primer gol con la Selección y responde a las críticas. El delantero de la Fiorentina convirtió en el 7-0 ante Burkina Faso en el Monumental y habló sobre la exigencia de los hinchas.\n\nLa Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas. La Liga Balcarceña de Fútbol postergó todos los encuentros previstos para el fin de semana debido a las malas condiciones de los terrenos de juego y de los accesos a los predios deportivos.\n\nColegiales recibe los Play Off del Torneo Clausura de Preliga. El predio alberga el domingo la definición del fútbol infantil balcarceño. El ganador jugará la final contra Ferro Rojo.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Balcarce",
       "local": true,
@@ -1720,7 +1725,7 @@
     {
       "id": "c1nalz",
       "titulo": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
-      "copete": "La ciudad conmemora este domingo la fecha instituida en su memoria por impulso del Club Rotario Balcarce Cerrito y el Concejo Deliberante.",
+      "copete": "La ciudad conmemora el domingo la fecha instituida en su memoria por impulso del Club Rotario Balcarce Cerrito y el Concejo Deliberante.",
       "cuerpo": "Cada 4 de octubre, la comunidad local conmemora el Día del Periodista Balcarceño en homenaje a Héctor Beto Vuotto, una fecha instituida por el Club Rotario Balcarce Cerrito tras su formalización en el Concejo Deliberante. Según informó el medio local, su trayectoria incluyó un destacado paso por La Vanguardia y una notable participación en transmisiones electorales y radiales.\n\nColegas y allegados recuerdan su capacidad analítica, su serenidad y su compromiso con la formación de nuevos comunicadores. Como parte de los reconocimientos a su historia profesional, el Estudio 1 de Multimedios Balcarce fue denominado con su nombre.",
       "guion": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
       "seccion": "Balcarce",
@@ -2454,7 +2459,7 @@
     {
       "id": "158gkt0",
       "titulo": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
-      "copete": "La Liga Balcarceña de Fútbol postergó todos los encuentros previstos para este fin de semana debido a las malas condiciones de los terrenos de juego y de los accesos a los predios deportivos.",
+      "copete": "La Liga Balcarceña de Fútbol postergó todos los encuentros previstos para el fin de semana debido a las malas condiciones de los terrenos de juego y de los accesos a los predios deportivos.",
       "cuerpo": "La Liga Balcarceña de Fútbol canceló toda la programación del fin de semana tras constatar que los campos de juego no se encuentran aptos para disputar partidos. Según informó la institución, la humedad nocturna impidió que los terrenos lograran secarse de manera adecuada.\n\nA esta situación se sumaron las complicaciones detectadas en los accesos a los distintos escenarios deportivos, que presentan serias dificultades para el tránsito vehicular.\n\nDesde la entidad explicaron que la medida se adoptó con anticipación para evitar que los planteles y cuerpos técnicos quedaran a la espera de una cancelación durante la jornada de competencia.",
       "guion": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
       "seccion": "Fútbol",
@@ -2592,8 +2597,8 @@
     {
       "id": "1gq0pia",
       "titulo": "La Liga Balcarceña suspende toda la fecha del fútbol local",
-      "copete": "La Liga Balcarceña de Fútbol postergó los encuentros previstos para este fin de semana. La decisión se tomó tras constatar el estado de los terrenos y los accesos por las precipitaciones.",
-      "cuerpo": "La Liga Balcarceña de Fútbol suspendió en su totalidad la programación futbolística prevista para este fin de semana debido a las precipitaciones registradas en las últimas horas. Según informó la entidad, se realizó un recorrido por los distintos escenarios y se constató que los terrenos de juego y los accesos presentan serias dificultades.\n\nDesde la organización explicaron que la humedad acumulada durante la noche impidió que las canchas lograran secarse adecuadamente. Además, señalaron que no era viable disputar una parte de la jornada porque los encuentros pendientes hubieran recargado el calendario del próximo fin de semana.\n\nLa reprogramación de los partidos será informada próximamente por las autoridades de la Liga.",
+      "copete": "La Liga Balcarceña de Fútbol postergó los encuentros previstos para el fin de semana. La decisión se tomó tras constatar el estado de los terrenos y los accesos por las precipitaciones.",
+      "cuerpo": "La Liga Balcarceña de Fútbol suspendió en su totalidad la programación futbolística prevista para el fin de semana debido a las precipitaciones registradas en las últimas horas. Según informó la entidad, se realizó un recorrido por los distintos escenarios y se constató que los terrenos de juego y los accesos presentan serias dificultades.\n\nDesde la organización explicaron que la humedad acumulada durante la noche impidió que las canchas lograran secarse adecuadamente. Además, señalaron que no era viable disputar una parte de la jornada porque los encuentros pendientes hubieran recargado el calendario del próximo fin de semana.\n\nLa reprogramación de los partidos será informada próximamente por las autoridades de la Liga.",
       "guion": "La Liga Balcarceña suspende toda la fecha del fútbol local",
       "seccion": "Balcarce",
       "medios": [
@@ -3134,14 +3139,14 @@
     {
       "id": "dfadrz",
       "titulo": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
-      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresariallllllllllllllllllllllllllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
+      "copete": "David Robinson dejó su cargo tras cuestionar la cultura empresarialllllllllllllllllllllllllllllllllllllllll y el manejo de los riesgos en la inteligencia artificial. Advirtió sobre la falta de cuidado ante el avance de los sistemas.",
       "cuerpo": "El responsable de redactar los informes de seguridad de OpenAI, David Robinson, anunció su salida de la compañía tras cuestionar el manejo de la tecnología en el sector. Su dimisión se conoció el sábado luego de publicar un ensayo en la revista The Atlantic.\n\nRobinson trabajó en el área de seguridad entre octubre de 2024 y octubre de 2026, según su perfil profesional. En su texto, criticó la confianza extrema y los ciclos de producción continuos de las empresas tecnológicas, y sostuvo que el sector no actúa con la cautela necesaria.\n\nDesde la empresa respondieron que buscan evitar que sus modelos superen su capacidad de protección, y afirmaron que pausan entrenamientos o retienen lanzamientos cuando lo consideran necesario.",
       "guion": "Renuncia un alto responsable de seguridad en OpenAI por desacuerdos",
       "seccion": "Tecnología",
       "medios": [
         "Infobae",
-        "Ecos Diarios (Necochea)",
         "Perfil",
+        "Ecos Diarios (Necochea)",
         "Radio Mitre"
       ],
       "enlace": "https://www.infobae.com/tecno/2026/10/03/lider-de-seguridad-de-openai-renuncia-y-critica-la-cultura-de-la-empresa-el-rumbo-actual-es-inaceptable/",
@@ -3392,23 +3397,12 @@
       "temp": 12,
       "sensacion": 9,
       "humedad": 62,
-      "viento": 10,
+      "viento": 11,
       "rumbo": "O",
-      "cielo": "Despejado",
+      "cielo": "Mayormente despejado",
       "esDeDia": false
     },
     "dias": [
-      {
-        "fecha": "2026-10-04",
-        "dia": "dom",
-        "max": 20,
-        "min": 7,
-        "lluvia": 16,
-        "codigo": 3,
-        "viento": 25,
-        "milimetros": 0,
-        "cielo": "Nublado"
-      },
       {
         "fecha": "2026-10-05",
         "dia": "lun",
@@ -3440,6 +3434,17 @@
         "codigo": 51,
         "viento": 20,
         "milimetros": 1,
+        "cielo": "Llovizna leve"
+      },
+      {
+        "fecha": "2026-10-08",
+        "dia": "jue",
+        "max": 14,
+        "min": 10,
+        "lluvia": 53,
+        "codigo": 51,
+        "viento": 23,
+        "milimetros": 2,
         "cielo": "Llovizna leve"
       }
     ],
@@ -3831,10 +3836,10 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "1muu13g",
-      "titulo": "Ordenan inhibir los bienes de Granja Tres Arroyos tras…",
+      "id": "gzrk1u",
+      "titulo": null,
       "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "4hbo6t",

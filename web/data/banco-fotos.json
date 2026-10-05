@@ -6848,9 +6848,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "El arzobispo de Luján advierte que la mayor división nacional es la exclusión",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-05T01:41:52.809Z",
-  "intentos": 2,
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-05T03:01:28.151Z",
+  "intentos": 3,
   "fuentes": 5
  },
  "1rfl2n3": {
@@ -6898,12 +6898,15 @@
   "fuentes": 1
  },
  "1hiaakh": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1hiaakh.jpg",
+  "medio": "FayerWayer",
+  "credito": "Foto: FayerWayer",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Xbox Game Pass quita nueve juegos de su catálogo en octubre",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-05T01:41:52.809Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://www.fayerwayer.com/entretenimiento/2026/10/04/golpe-a-los-suscriptores-clair-obscur-expedition-33-y-otros-grandes-juegos-abandonan-xbox-game-pass-en-octubre/",
+  "imagenOriginal": "https://www.fayerwayer.com/resizer/v2/34WCPY24ONB2TMFHTA37JXDXUY.jpg?smart=true&auth=387beaff70e69b22d0b88f50ed4bd764e7cfc4fb0f1585d9f7c57cf41cdda6c4&width=1200&height=630",
+  "razon": "Es la imagen completa y legible que ilustra el hecho (los juegos que salen del servicio), mientras que la opción B está recortada y cortada.",
+  "cuando": "2026-10-05T03:01:28.151Z"
  }
 }
