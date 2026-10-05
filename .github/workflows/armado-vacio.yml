@@ -44,7 +44,8 @@ jobs:
           node-version: '24'
       - name: Instalar (web)
         working-directory: web
-        run: npm ci --no-audit --no-fund
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
       - name: Armar el sitio con datos vacíos o a medias
         working-directory: web
         run: node scripts/armado-vacio.mjs

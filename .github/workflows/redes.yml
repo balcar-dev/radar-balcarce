@@ -123,7 +123,8 @@ jobs:
       - name: Instalar
         id: instalar
         if: always() && steps.reloj.outputs.hay == 'true'
-        run: npm ci --no-audit --no-fund
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
 
       - name: Armar las piezas que tocan
         id: armar

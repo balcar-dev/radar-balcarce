@@ -40,3 +40,11 @@ test('la prueba de humo arma el sitio con cinco formas de "casi nada" y corre al
   assert.match(y, /node scripts\/armado-vacio\.mjs/);
   assert.ok(!/web\/data/.test(y.split('paths:')[1].split('schedule:')[0]), 'no corre con los datos que escribe la nube');
 });
+
+test('la instalación de dependencias de los workflows importantes se reintenta (5/10: "npm ci" falló una vez al bajar ffmpeg y habría frenado la corrida)', () => {
+  for (const w of ['actualizar', 'cloudflare-deploy', 'redes', 'pruebas-otra-hora', 'armado-vacio']) {
+    const y = leer(`.github/workflows/${w}.yml`);
+    assert.ok(!/run: npm ci --no-audit --no-fund/.test(y), `${w}: npm ci sin reintento`);
+    assert.match(y, /until npm ci --no-audit --no-fund; do n=\$\(\(n\+1\)\); \[ \$n -ge 3 \] && exit 1;/, w);
+  }
+});

@@ -25,10 +25,12 @@ jobs:
         with:
           node-version: '24'
       - name: Instalar
-        run: npm ci --no-audit --no-fund
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
       - name: Instalar (web)
         working-directory: web
-        run: npm ci --no-audit --no-fund
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
       - name: Probar con cinco horas y fechas distintas
         run: |
           fallo=0
