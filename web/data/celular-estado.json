@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T09:31:31.625Z",
+ "generado": "2026-10-05T10:01:22.316Z",
  "portada": 30,
- "archivo": 891,
+ "archivo": 889,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-05T09:31:31.650Z",
+  "generado": "2026-10-05T10:01:22.340Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -132,14 +132,7 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [
-    {
-     "id": "1bsbkco",
-     "titulo": "Gimnastas locales logran la clasificación a torneos nacionales y regionales",
-     "seccion": "Deportes",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 5,
    "proximoDesde": "2026-10-05T01:05:20.177Z",
    "porDia": 5,
