@@ -1,7 +1,51 @@
 {
- "generado": "2026-10-05T03:31:27.155Z",
+ "generado": "2026-10-05T04:01:42.286Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1xzp9qx",
+   "titulo": "Principio de incendio movilizó a dos dotaciones de Bomberos Voluntarios",
+   "copete": "Dos dotaciones del cuartel de Bomberos Voluntarios trabajaron durante la tarde de este domingo ante un principio de incendio registrado en un edificio abandonado situado en avenida Kelly y calle 25. El fuego se inició sobre unas placas de madera que rápidamente comenzaron a…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-04T21:50:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/principio-de-incendio-movilizo-dos.html",
+     "fecha": "2026-10-04T21:50:00.000Z"
+    },
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/nuevamente-un-incendio-en-edificio-abandonado-de-av-kelly-y-calle-25",
+     "fecha": "2026-10-04T22:59:06.000Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/44993-otra-vez-un-incendio-afecto-el-edificio-de-kelly-y-25/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1bgww42",
+   "titulo": "La Sub 16 de Campo de Pato campeonas y con ascenso incluido",
+   "copete": "Las jugadoras del Club Social y Campo de Pato superaron 2-1 a Comercial de Mar del Plata en la final y se consagraron campeonas del Torneo Regional de Clubes F. Además, lograron el ascenso al Regional E.",
+   "seccion": "Deportes",
+   "fecha": "2026-10-04T23:41:55.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/hockey-la-sub-16-de-campo-de-pato-campeonas-y-con-ascenso-incluido",
+     "fecha": "2026-10-04T23:41:55.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 2 problemas (nombre): el cuerpo nombra a \"radio\" y la fuente no; sin esas oraciones quedan 66 palabras",
+   "maximo": 3
+  },
   {
    "id": "zdjcx4",
    "titulo": "Ni Colombia, Argentina ni Chile: las dos únicas economías de Latinoamérica que superan la riqueza de Elon Musk",

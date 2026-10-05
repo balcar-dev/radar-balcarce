@@ -5271,16 +5271,16 @@
   "cuando": "2026-10-02T17:01:56.424Z"
  },
  "1msbvcb": {
-  "archivo": "fotos-notas/1msbvcb.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "Pichetto y Massot presentan cautelar contra el DNU de tierras",
   "enlace": "https://www.infobae.com/politica/2026/10/02/massot-y-pichetto-presentaron-una-cautelar-para-frenar-la-venta-ilimitada-de-tierras-a-extranjeros/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/OYD53TIFOWXHQWTGJID6KKOPGI.jpg?auth=c51ce8fa3979e2162ed94d4c1c48d267b7ff74d8a6d195082ad02e73e52dc50b&smart=true&width=1200&height=630&quality=85",
   "razon": "Tiene excelente nitidez, encuadre limpio sin marcas de agua ni menores, mostrando claramente a los protagonistas.",
-  "cuando": "2026-10-02T17:01:56.424Z"
+  "cuando": "2026-10-02T17:01:56.424Z",
+  "intentado": true,
+  "borrada": true
  },
  "1gdngfe": {
   "archivo": "fotos-notas/1gdngfe.jpg",
@@ -6917,5 +6917,14 @@
   "cuando": "2026-10-05T03:31:23.277Z",
   "intentos": 1,
   "fuentes": 3
+ },
+ "1bsbkco": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Gimnastas locales logran la clasificación a torneos nacionales y regionales",
+  "razon": "sin fotos para comparar",
+  "cuando": "2026-10-05T04:01:39.789Z",
+  "intentos": 1,
+  "fuentes": 1
  }
 }
