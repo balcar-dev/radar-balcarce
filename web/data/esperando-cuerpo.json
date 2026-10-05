@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T18:32:19.215Z",
+ "generado": "2026-10-05T19:02:18.195Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -84,7 +84,7 @@
     {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/discapacidad--la-iglesia-valoro-la-reunion-con-el-gobierno--pero-exigio-soluciones-concretas-para-el-sector_a6ac3d246efa9665a6c23cda8",
-     "fecha": "2026-10-05T18:03:13.000Z"
+     "fecha": "2026-10-05T18:03:13.305Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -95,6 +95,11 @@
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-politica-y-economia_1791206280",
      "fecha": "2026-10-05T13:34:04.000Z"
+    },
+    {
+     "medio": "Punto Noticias",
+     "enlace": "https://puntonoticias.com/discapacidad-la-iglesia-valoro-la-reunion-con-el-gobierno-pero-exigio-soluciones-concretas-para-el-sector/",
+     "fecha": "2026-10-05T18:44:29.000Z"
     },
     {
      "medio": "El Eco de Tandil",
@@ -110,23 +115,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "1kia0yd",
-   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
-   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-05T11:59:56.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
-     "fecha": "2026-10-05T11:59:56.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo corto (58 palabras)",
-   "maximo": 3
   },
   {
    "id": "r2tg83",
@@ -168,8 +156,8 @@
      "fecha": "2026-10-05T18:19:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 95 caracteres, el máximo es 90",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
    "maximo": 3
   }
  ]

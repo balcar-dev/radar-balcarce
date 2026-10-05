@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T18:32:19.215Z",
- "portada": 54,
- "archivo": 929,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-05T19:02:18.195Z",
+ "portada": 53,
+ "archivo": 931,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-05T18:32:19.250Z",
+  "generado": "2026-10-05T19:02:18.231Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -203,15 +203,14 @@
      "id": "1njgnul",
      "titulo": "Campo de Pato gana el torneo regional y asciende en hockey",
      "cuando": "2026-10-05T17:05:33.395Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "n1xmig",
      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
+     "cuando": "2026-10-05T18:45:22.921Z"
+    }
+   ],
+   "cola": [
     {
      "id": "uzokxq",
      "titulo": "Impulsan un banco municipal de elementos de fisiatría",
@@ -225,8 +224,8 @@
      "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-05T18:35:33.395Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-05T20:15:22.921Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
