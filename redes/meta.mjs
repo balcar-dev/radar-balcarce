@@ -133,6 +133,25 @@ export function crearCliente({
     return { id: j.id };
   }
 
+  /**
+   * Una foto en la página de Facebook, con su texto: el posteo con foto (5/10/2026, Hernán: "5 posteos por día, en Facebook y en Instagram, con foto"). Es la misma
+   * imagen que va a Instagram. Facebook la baja de `imagenUrl` (pública), y estos posteos aparecen solos en la pestaña "Fotos" de la página. Devuelve el id del posteo.
+   */
+  async function publicarFotoEnFacebook({ imagenUrl, mensaje }) {
+    const p = await pagina();
+    const j = await pedir(`${paginaId}/photos`, {
+      metodo: 'POST', conToken: p.tokenPagina, params: { url: imagenUrl, message: mensaje, published: 'true' },
+    });
+    return { id: j.post_id ?? j.id };
+  }
+
+  /** Lo último publicado en la página (texto, hora y id), con la misma forma que lo de Instagram: sirve para comprobar si algo ya salió antes de reintentarlo. */
+  async function publicacionesRecientesDeFacebook({ limite = 25 } = {}) {
+    const p = await pagina();
+    const j = await pedir(`${paginaId}/published_posts`, { conToken: p.tokenPagina, params: { fields: 'id,message,created_time', limit: limite } });
+    return (Array.isArray(j?.data) ? j.data : []).map((x) => ({ id: x.id, caption: x.message ?? '', timestamp: x.created_time }));
+  }
+
   /** Una foto en el feed de Instagram. `imagenUrl` tiene que ser pública y
    *  JPEG: Instagram la descarga desde ahí, no acepta archivos subidos. */
   async function publicarFotoEnInstagram({ imagenUrl, pie }) {
@@ -325,7 +344,7 @@ export function crearCliente({
   }
 
   return {
-    pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook,
+    pedir, pagina, publicarEnFacebook, publicarFotoEnFacebook, publicacionesRecientesDeFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook,
     enlaceDePublicacion, publicacionesRecientesDeInstagram, verificar,
   };
 }

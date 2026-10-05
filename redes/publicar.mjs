@@ -16,7 +16,7 @@ import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken, PAGINA_DE_FACEBOOK } from './meta.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
-import { espejosPendientes, esLimiteDeMeta, posteoYaPublicado, ESPEJO } from './espejo.mjs';
+import { espejosPendientes, esLimiteDeMeta, posteoYaPublicado, comoSaleEnFacebook, ESPEJO } from './espejo.mjs';
 import { FOTO_EN_INSTAGRAM } from '../web/lib/tarjeta-diseno.js';
 import {
   elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, estaActivo,
@@ -71,6 +71,7 @@ async function facebook() {
   // libro de Facebook porque puede fallar sin que eso invalide lo que ya
   // se publicó ahí.
   libro.instagramFeed ??= {};
+  const FACEBOOK_COMO_FOTO = process.env.FACEBOOK_COMO_FOTO !== 'no';
 
   /** El espejo de un posteo en el feed de Instagram. Si falla, queda anotado el
    *  intento en el posteo de Facebook: se reintenta en las vueltas siguientes
@@ -143,7 +144,32 @@ async function facebook() {
     }
 
     try {
-      const r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota, SITIO), enlace });
+      // Con foto (5/10, Hernán: "5 posteos por día con foto, en Facebook y en Instagram"): la misma imagen que el espejo de Instagram, con el mismo texto. Si la foto no sale
+      // (por ejemplo, la tarjeta de la nota todavía no está en la web), se espera a la vuelta siguiente y, tras tres intentos, sale como enlace.
+      libro.facebookFoto ??= {};
+      const intentosDeFoto = libro.facebookFoto[nota.id]?.intentos ?? 0;
+      let r;
+      if (comoSaleEnFacebook({ intentosDeFoto, conFoto: FACEBOOK_COMO_FOTO }) === 'foto') {
+        const pie = FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO), nota) : mensajeDeNota(nota, SITIO);
+        try {
+          r = await api.publicarFotoEnFacebook({ imagenUrl: imagenDeNota(nota, SITIO), mensaje: pie });
+        } catch (e) {
+          if (e instanceof ErrorMeta && e.tokenMuerto) throw e;
+          // Un error de Meta no siempre quiere decir que no se publicó (5/10: cuatro copias en Instagram): se mira antes de darlo por perdido.
+          let ya = null;
+          try { ya = posteoYaPublicado(await api.publicacionesRecientesDeFacebook(), pie); } catch { /* sin datos */ }
+          if (ya) { r = { id: ya.id }; console.log('             Meta contestó con un error pero lo publicó; queda anotado'); }
+          else {
+            libro.facebookFoto[nota.id] = { intentos: intentosDeFoto + 1, ultimo: new Date().toISOString(), error: sinToken(e.message, token).slice(0, 160) };
+            fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+            console.log(`             la foto no salió (intento ${intentosDeFoto + 1} de 3), se reintenta en la vuelta siguiente: ${sinToken(e.message, token)}`);
+            continue;
+          }
+        }
+      } else {
+        r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota, SITIO), enlace });
+      }
+      delete libro.facebookFoto[nota.id];
       // El enlace y los temas quedan en el libro: el enlace es la dirección que
       // ya está en Facebook (generar-datos la respeta aunque cambie el titular)
       // y los temas sirven para no repetir tema al día siguiente.

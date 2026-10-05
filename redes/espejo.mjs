@@ -75,3 +75,9 @@ export function copiasRepetidas(medias = [], { ahora = new Date(), horas = 48 } 
   }
   return [...grupos.values()].filter((g) => g.length > 1).map((g) => ({ titulo: String(g[0].caption).split('\n')[0].slice(0, 90), copias: g.length, ids: g.map((x) => x.id) }));
 }
+
+/** Cuántas veces se intenta el posteo con foto de una nota antes de publicarla como enlace (la foto puede no estar en la web todavía). */
+export const INTENTOS_DE_FOTO = 3;
+
+/** Cómo sale una nota en Facebook: con foto (lo normal) o, si la foto no salió tras varios intentos, como enlace. */
+export const comoSaleEnFacebook = ({ intentosDeFoto = 0, conFoto = true } = {}) => (conFoto && intentosDeFoto < INTENTOS_DE_FOTO ? 'foto' : 'enlace');
