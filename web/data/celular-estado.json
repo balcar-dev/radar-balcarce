@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T18:02:08.950Z",
- "portada": 51,
- "archivo": 925,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-05T18:32:19.215Z",
+ "portada": 54,
+ "archivo": 929,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-05T18:02:08.978Z",
+  "generado": "2026-10-05T18:32:19.250Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-05T18:04:56.696Z"
    },
    {
     "nombre": "farmacia",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 49,
+    "salio": "2026-10-05T18:04:56.696Z",
+    "segundos": null,
     "notas": [
      {
       "id": "uml8iq",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 54,
     "notas": [
-     {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1j1tq9m",
       "titulo": "Boca aguarda la definición de la sede para la revancha frente a Vasco da Gama",
       "seccion": "Fútbol"
      },
      {
-      "id": "27x6h7",
-      "titulo": "Flybondi se presenta en concurso preventivo de acreedores",
-      "seccion": "Economía"
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "seccion": "Balcarce"
      },
      {
       "id": "wb8pre",
       "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
       "seccion": "Agro"
+     },
+     {
+      "id": "lomklr",
+      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
+      "seccion": "Deportes"
      }
     ]
    }

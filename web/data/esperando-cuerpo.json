@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05T18:02:08.950Z",
+ "generado": "2026-10-05T18:32:19.215Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -42,6 +42,11 @@
      "fecha": "2026-10-05T16:12:13.000Z"
     },
     {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/la-iglesia-valoro-la-reunion-el-gobierno-discapacidad-pero-reclamo-medidas-concretas-n6330253",
+     "fecha": "2026-10-05T18:15:00.000Z"
+    },
+    {
      "medio": "El Destape",
      "enlace": "https://www.eldestapeweb.com/politica/gobierno-convoca-conferencia-episcopal-antes-visita-papa-2026105122246",
      "fecha": "2026-10-05T15:22:00.000Z"
@@ -78,6 +83,11 @@
     },
     {
      "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/discapacidad--la-iglesia-valoro-la-reunion-con-el-gobierno--pero-exigio-soluciones-concretas-para-el-sector_a6ac3d246efa9665a6c23cda8",
+     "fecha": "2026-10-05T18:03:13.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad--antes-de-la-visita-del-papa_a6ac3980defa9665a6c1c17fd",
      "fecha": "2026-10-05T12:35:34.277Z"
     },
@@ -102,6 +112,23 @@
    "maximo": 5
   },
   {
+   "id": "1kia0yd",
+   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
+   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-05T11:59:56.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
+     "fecha": "2026-10-05T11:59:56.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo corto (58 palabras)",
+   "maximo": 3
+  },
+  {
    "id": "r2tg83",
    "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
    "copete": "La unidad atenderá de 7 a 12 horas sobre calle 11, entre 18 y 20, con servicios de castración y vacunación antirrábica para perros y gatos.",
@@ -116,6 +143,33 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "1b2dm83",
+   "titulo": "Las acciones argentinas en Wall Street se disparan hasta 8 %, reaccionan los bonos y cae el riesgo país",
+   "copete": "La sorpresa electoral en Brasil provoca fuertes subas en activos financieros del país vecino y genera un efecto contagio en los bonos y las acciones locales. El riesgo país cae y rebotan las acciones. ¿Qué variables sigue mirando el mercado y cuáles son las perspectivas para la…",
+   "seccion": "Economía",
+   "fecha": "2026-10-05T15:53:43.000Z",
+   "fuentes": [
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/finanzas-mercados/las-acciones-argentinas-en-wall-street-se-disparan-hasta-8-reaccionan-los-bonos-y-cae-el-riesgo-pais/",
+     "fecha": "2026-10-05T15:53:43.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/tras-el-triunfo-de-bolsonaro-en-brasil-baja-el-riesgo-pais-y-rebotan-las-acciones-argentinas-en-el-nid05102026/",
+     "fecha": "2026-10-05T18:21:37.000Z"
+    },
+    {
+     "medio": "iProfesional",
+     "enlace": "https://www.iprofesional.com/finanzas/465928-cae-el-riesgo-pais-y-rebotan-las-acciones-argentinas-luego-del-triunfo-de-bolsonaro",
+     "fecha": "2026-10-05T18:19:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 95 caracteres, el máximo es 90",
    "maximo": 3
   }
  ]
