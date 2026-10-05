@@ -159,7 +159,6 @@ export default function RaizLayout({ children }) {
             { href: '/clima', nombre: 'Clima' },
             { href: '/farmacias', nombre: 'Farmacias' },
             { href: '/dolar', nombre: 'Dólar' },
-            { href: '/tablas', nombre: 'Tablas' },
             { href: '/util', nombre: 'Teléfonos' },
           ]}
         />

@@ -219,7 +219,8 @@ test('traerF1 guarda calendario, pilotos, resultado y clasificación cuando la c
 test('traerF1 antes de la carrera no pide el resultado', async () => {
   const pedidos = [];
   const f = await traerF1({ fetchFn: async (u) => { pedidos.push(u); return apiBuena(u); }, ahora: new Date('2026-10-03T15:00:00Z') });
-  assert.ok(!pedidos.some((u) => /results|standings/i.test(u)));
+  assert.ok(!pedidos.some((u) => /results/i.test(u)), 'el resultado de la carrera que no largó no se pide');
+  // Los campeonatos sí se piden si ya hubo una carrera antes (4/10, páginas fijas de tablas): son los de la última terminada.
   assert.equal(f.resultado, null);
 });
 

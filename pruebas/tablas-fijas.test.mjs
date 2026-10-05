@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { resumirConstructores, resumirClasificacion, traerF1 } from '../ingesta/f1.mjs';
+import { resumirConstructores, resumirClasificacion, traerF1, ultimaCarreraTerminada } from '../ingesta/f1.mjs';
 import { notaDeLasTablas, notaDeLosPartidos, COMPETENCIAS } from '../ingesta/futbol.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -24,6 +24,16 @@ test('el campeonato de constructores se resume con posición, equipo, puntos y v
   assert.deepEqual(k.filas, [{ posicion: 1, equipo: 'Mercedes', puntos: 538, victorias: 11 }, { posicion: 2, equipo: 'Ferrari', puntos: 378, victorias: 2 }]);
   assert.equal(resumirConstructores({}), null);
   assert.equal(resumirConstructores({ MRData: { StandingsTable: { StandingsLists: [{ ConstructorStandings: [] }] } } }), null);
+});
+
+test('los dos campeonatos se piden aunque la última carrera sea de hace más de cuatro días (4/10: faltaba el de constructores)', async () => {
+  const carrera = { ronda: 16, nombre: 'Azerbaijan Grand Prix', circuito: 'Baku', localidad: 'Baku', pais: 'Azerbaijan', largada: '2026-09-27T11:00:00.000Z', sesiones: [] };
+  assert.equal(ultimaCarreraTerminada({ carreras: [carrera, { ...carrera, ronda: 17, largada: '2026-10-11T11:00:00.000Z' }] }, new Date('2026-10-05T12:00:00Z')).ronda, 16);
+  assert.equal(ultimaCarreraTerminada({ carreras: [carrera] }, new Date('2026-09-27T11:30:00Z')), null, 'recién largó: todavía no terminó');
+  const antes = { calendario: { temporada: 2026, carreras: [carrera] }, calendarioCuando: '2026-10-05T00:00:00Z', pilotos: { temporada: 2026, colapinto: null }, clasificacion: { temporada: 2026, ronda: 16, filas: [] }, notas: {} };
+  const fetchFn = async (url) => (url.includes('constructorstandings') ? { ok: true, json: async () => constructores(16) } : { ok: false });
+  const f = await traerF1({ antes, fetchFn, ahora: new Date('2026-10-05T12:00:00Z') });
+  assert.equal(f.constructores?.filas?.[0]?.equipo, 'Mercedes');
 });
 
 test('traerF1 pide también los constructores cuando termina una carrera, y no los vuelve a pedir si ya tiene los de esa ronda', async () => {
@@ -74,9 +84,9 @@ test('la página de cada tabla lee lo guardado, dice la verdad si falta y no inv
   } finally { process.chdir(antes); }
 });
 
-test('las páginas existen, están en el menú y en el mapa del sitio, y sus escudos son del sitio', () => {
+test('las páginas existen y están en el mapa del sitio, pero NO en el menú (4/10: una palabra "Tablas" suelta no le dice nada a un lector); y sus escudos son del sitio', () => {
   for (const p of ['web/app/tablas/page.js', 'web/app/tablas/liga-profesional/page.js', 'web/app/tablas/formula-1/page.js']) assert.ok(fs.existsSync(path.join(RAIZ, p)), p);
-  assert.match(leer('web/app/layout.js'), /\{ href: '\/tablas', nombre: 'Tablas' \}/);
+  assert.ok(!/href: '\/tablas'/.test(leer('web/app/layout.js')), 'no va en el menú');
   const mapa = leer('web/app/sitemap.js');
   for (const d of ['/tablas`', '/tablas/liga-profesional`', '/tablas/formula-1`']) assert.ok(mapa.includes(d), d);
   assert.match(leer('web/app/tablas/liga-profesional/page.js'), /camino: '\/tablas\/liga-profesional'/);

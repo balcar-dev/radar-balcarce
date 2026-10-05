@@ -259,6 +259,13 @@ export function resumirConstructores(json) {
   };
 }
 
+/** La última carrera del calendario que ya terminó (o null): la que largó hace más de HORAS_PARA_BUSCAR_RESULTADO horas. */
+export function ultimaCarreraTerminada(calendario, ahora = new Date()) {
+  const t = new Date(ahora).getTime();
+  const terminadas = (calendario?.carreras ?? []).filter((c) => Date.parse(c.largada) + HORAS_PARA_BUSCAR_RESULTADO * HORA_MS <= t);
+  return terminadas.sort((a, b) => Date.parse(a.largada) - Date.parse(b.largada)).at(-1) ?? null;
+}
+
 /** De la lista de pilotos de la temporada, ¿corre Colapinto? */
 export function resumirPilotos(json) {
   const lista = json?.MRData?.DriverTable?.Drivers;
@@ -316,6 +323,19 @@ export async function traerF1({ antes = null, fetchFn = fetch, ahora = new Date(
   if (viejo) {
     const cal = await pedir(fetchFn, 'current.json?limit=100', resumirCalendario);
     if (cal) { f1.calendario = cal; f1.calendarioCuando = hoy.toISOString(); f1.consultado = hoy.toISOString(); }
+  }
+  // Los dos campeonatos (pilotos y constructores) de la última carrera terminada, aunque ya hayan pasado los días de la nota del resultado: son los de las
+  // páginas fijas de tablas (/tablas/formula-1).
+  const ultima = ultimaCarreraTerminada(f1.calendario, hoy);
+  if (ultima) {
+    if (f1.clasificacion?.ronda !== ultima.ronda) {
+      const c = await pedir(fetchFn, 'current/driverstandings.json?limit=100', resumirClasificacion);
+      if (c && c.ronda === ultima.ronda) f1.clasificacion = c;
+    }
+    if (f1.constructores?.ronda !== ultima.ronda) {
+      const k = await pedir(fetchFn, 'current/constructorstandings.json?limit=100', resumirConstructores);
+      if (k && k.ronda === ultima.ronda) f1.constructores = k;
+    }
   }
   const carrera = carreraEnCurso(f1.calendario, hoy);
   if (!carrera) return f1;
