@@ -1,96 +1,22 @@
 {
- "generado": "2026-10-05T23:04:08.613Z",
+ "generado": "2026-10-05T23:32:03.884Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "lniqz9",
-   "titulo": "Investigan a un camionero acusado de quedarse con 32 toneladas de papa",
-   "copete": "Personal de la SubDDI Balcarce, en conjunto con efectivos de la Estación de Policía Comunal (EPC), realizó en las últimas horas dos allanamientos en el marco de una investigación iniciada a partir de una denuncia por el presunto robo de 32.000 kilos de papa. La causa se inició…",
-   "seccion": "Policiales",
-   "fecha": "2026-10-05T22:40:41.000Z",
+   "id": "1kia0yd",
+   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
+   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-05T11:59:56.000Z",
    "fuentes": [
     {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/investigan-a-un-camionero-acusado-de-quedarse-con-32-toneladas-de-papa-en-balcarce/",
-     "fecha": "2026-10-05T22:40:41.000Z"
-    },
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45000-investigan-a-un-camionero-acusado-de-desviar-32-toneladas-de-papa-que-debia-transportar-a-mar-del-plata/",
-     "fecha": null
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 30 y la fuente no lo dice",
-   "maximo": 3
-  },
-  {
-   "id": "h4hdzl",
-   "titulo": "Tobías Andrada recibió el alta médica y volvería a la titularidad en River",
-   "copete": "El volante se recuperó de su lesión en el muslo y podrá jugar ante Estudiantes de Río Cuarto. Luego de un importante parate por la fecha FIFA más la suspensión del encuentro ante Sarmiento , River se prepara para volver al ruedo y recibir a Estudiantes de Río Cuarto en el…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-05T17:05:32.000Z",
-   "fuentes": [
-    {
-     "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/river/tobias-andrada-recibio-el-alta-medica-y-volveria-a-la-titularidad-en-river",
-     "fecha": "2026-10-05T17:05:32.000Z"
-    },
-    {
-     "medio": "Ecos Diarios (Necochea)",
-     "enlace": "https://elecos.com.ar/river-recupera-a-tobias-andrada-para-el-reinicio-de-la-competencia",
-     "fecha": "2026-10-05T18:28:45.000Z"
-    },
-    {
-     "medio": "TyC Sports",
-     "enlace": "https://www.tycsports.com/river-plate/tobias-andrada-recibio-el-alta-en-river-y-se-perfila-como-titular-contra-estudiantes-de-rio-cuarto-id764458.html",
-     "fecha": "2026-10-05T19:18:34.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/deportes/tobias-andrada-recibio-el-alta-river-y-asoma-su-vuelta-contra-quien-n6330333",
-     "fecha": "2026-10-05T20:21:00.000Z"
-    },
-    {
-     "medio": "La Página Millonaria",
-     "enlace": "https://lapaginamillonaria.com/torneo-clausura/buena-noticia-para-ponzio-tobias-andrada-recibio-el-alta-medica-y-ya-puede-volver-a-jugar-con-river",
-     "fecha": "2026-10-05T17:31:32.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (nombre): el cuerpo nombra a \"nunez\" y la fuente no; sin esas oraciones quedan 52 palabras",
-   "maximo": 4
-  },
-  {
-   "id": "z5u242",
-   "titulo": "Fan Fest, shows en vivo y homenajes: cómo será el último partido de Lionel Messi con la camiseta argentina",
-   "copete": "La pasión por la “ Scaloneta ” tendrá una cita especial el próximo 6 de octubre . En el Campo de Deportes de Ciudad Universitaria de la UBA , la Asociación del Fútbol Argentino organizará el Fan Fest AFA “Gracias, Leo” , un evento pensado para acompañar una jornada histórica…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-05T13:54:00.000Z",
-   "fuentes": [
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/deportes/fan-fest-shows-vivo-y-homenajes-como-sera-el-ultimo-partido-lionel-messi-la-camiseta-argentina-n1603261",
-     "fecha": "2026-10-05T13:54:00.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/messi/lionelmessi-fanfest-estadiomonumental-seleccionargentina-ciudaduniversitaria-argentina-benin-policiadelaciudad_0_yORrNMhJ5S.html",
-     "fecha": "2026-10-05T20:35:08.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/deportes/2026/10/05/llega-el-fan-fest-gracias-leo-cuando-y-donde-se-realizara-el-evento-homenaje-para-despedir-a-messi-de-la-seleccion/",
-     "fecha": "2026-10-05T17:43:31.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/deportes/el-operativo-de-seguridad-para-la-despedida-de-messi-y-el-fan-fest-afa---gracias-leo-_a6ac40ad40606b0c07ed7ed06",
-     "fecha": "2026-10-05T21:12:38.000Z"
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
+     "fecha": "2026-10-05T11:59:56.000Z"
     }
    ],
    "intentos": 3,
-   "motivo": "con cuerpo",
+   "motivo": "cuerpo corto (58 palabras)",
    "maximo": 3
   },
   {
@@ -158,6 +84,11 @@
      "fecha": "2026-10-05T13:57:00.000Z"
     },
     {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad--antes-de-la-visita-del-papa_a6ac3980defa9665a6c1c17fd",
+     "fecha": "2026-10-05T12:35:34.277Z"
+    },
+    {
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-politica-y-economia_1791206280",
      "fecha": "2026-10-05T13:34:04.000Z"
@@ -168,11 +99,6 @@
      "fecha": "2026-10-05T13:56:47.000Z"
     },
     {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad--antes-de-la-visita-del-papa_a6ac3980defa9665a6c1c17fd",
-     "fecha": "2026-10-05T12:35:34.000Z"
-    },
-    {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-5-9-55-0-el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-leon-xiv",
      "fecha": "2026-10-05T13:11:17.000Z"
@@ -181,6 +107,23 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "g6w1fz",
+   "titulo": "Leonel Chiarella visitó Balcarce y se reunió con Esteban Reino: el radicalismo busca fortalecer su presencia territorial",
+   "copete": "El presidente de la UCR Nacional e intendente de Venado Tuerto llegó a la ciudad y mantuvo un encuentro con Esteban Reino y dirigentes radicales. La agenda estuvo centrada en la actualidad del partido, la gestión municipal y los desafíos que enfrenta el radicalismo de cara a los…",
+   "seccion": "Política",
+   "fecha": "2026-10-05T23:31:12.329Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/44989-leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-el-radicalismo-busca-fortalecer-su-presencia-territorial/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"chiarella\", \"esteban\", \"reino\" y el cuerpo no los explica; sin esas oraciones quedan 102 palabras",
+   "maximo": 3
   },
   {
    "id": "12tbmrp",

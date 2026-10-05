@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T23:04:08.613Z",
- "portada": 56,
- "archivo": 940,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-05T23:32:03.884Z",
+ "portada": 53,
+ "archivo": 942,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-05T23:04:08.648Z",
+  "generado": "2026-10-05T23:32:03.912Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -74,7 +74,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-05T23:06:14.384Z"
    },
    {
     "nombre": "podcast",
@@ -157,12 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
      {
       "id": "uzokxq",
       "titulo": "Impulsan un banco municipal de elementos de fisiatría",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "12yxkc9",
+      "titulo": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
+      "seccion": "Deportes"
      },
      {
       "id": "18upwel",
@@ -173,11 +178,6 @@
       "id": "wb8pre",
       "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
       "seccion": "Agro"
-     },
-     {
-      "id": "lomklr",
-      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
-      "seccion": "Deportes"
      }
     ]
    }
@@ -212,8 +212,14 @@
    ],
    "cola": [
     {
-     "id": "1pofkpj",
-     "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
+     "id": "12yxkc9",
+     "titulo": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "6txjlx",
+     "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
      "seccion": "Balcarce",
      "marcada": false
     }
