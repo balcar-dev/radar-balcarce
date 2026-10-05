@@ -1,6 +1,89 @@
 {
-  "generado": "2026-10-05T11:01:30.517Z",
+  "generado": "2026-10-05T11:33:04.105Z",
   "notas": [
+    {
+      "id": "1d4do2p",
+      "titulo": "El capitán de Benín acusa a los futbolistas sudamericanos",
+      "copete": "En la previa de la despedida de Lionel Messi de la selección nacional, el delantero Steve Mounié apuntó contra el estilo de juego sudamericano y cuestionó al plantel argentino.",
+      "cuerpo": "En la antesala del encuentro amistoso frente a la Selección argentina que marcará la despedida de Lionel Messi del equipo nacional, el capitán de Benín, Steve Mounié, cuestionó con dureza a los futbolistas sudamericanos.\n\nEl delantero de 32 años aseguró que los equipos de la región recurren de manera sistemática a la provocación psicológica para obtener ventajas reglamentarias dentro del campo de juego. Para respaldar su postura, el referente del conjunto africano recordó un episodio previo con el defensor Leonardo Balerdi, a quien calificó de complicado y malicioso tras un cruce que derivó en su propia expulsión.\n\nMounié sostuvo que la estrategia de entrar en la mente del rival es una especialidad del conjunto que dirige Lionel Scaloni. A pesar de las críticas, el atacante remarcó que el plantel visitante llega con la ambición de mostrar su nivel en un escenario global durante el último partido del astro rosarino con la camiseta celeste y blanca.",
+      "guion": "El capitán de Benín acusa a los futbolistas sudamericanos",
+      "seccion": "Fútbol",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/deportes/el-capitan-de-benin-acuso-a-los-futbolistas-sudamericanos-de--provocadores--en-la-previa-de-la-despedida-de-messi_a6ac37b15efa9665a6c184d16",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T10:31:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T11:31:21.667Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El capitán de Benín criticó el juego de los futbolistas sudamericanos.",
+        "Steve Mounié recordó un cruce previo con el defensor Leonardo Balerdi.",
+        "El delantero afirmó que la selección argentina recurre a la provocación.",
+        "El encuentro en Buenos Aires marcará la despedida de Lionel Messi."
+      ],
+      "textoRedes": "En la previa del partido despedida de Lionel Messi, el capitán de Benín, Steve Mounié, acusó a los futbolistas sudamericanos de recurrir a la provocación y cuestionó el estilo de juego de la selección argentina.",
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Lionel Messi",
+        "Benin",
+        "Steve Mounié",
+        "Futbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/el-capitan-de-benin-acuso-a-los-futbolistas-sudamericanos-de--provocadores--en-la-previa-de-la-despedida-de-messi_a6ac37b15efa9665a6c184d16",
+          "fecha": "2026-10-05T10:31:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones del delantero Steve Mounié sobre los futbolistas sudamericanos y el antecedente con Leonardo Balerdi."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-5-7-55-0-el-capitan-de-benin-acuso-a-los-futbolistas-sudamericanos-de-provocadores-en-la-previa-de-la-despedida-de-messi",
+          "fecha": "2026-10-05T11:05:50.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las acusaciones del capitán de Benín en la previa del partido despedida de Lionel Messi."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "o99ioz",
+          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
+          "fecha": "2026-10-03T13:24:05.000Z",
+          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
+        },
+        {
+          "id": "iheoi7",
+          "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
+          "fecha": "2026-10-01T09:00:00.000Z",
+          "ruta": "/nota/el-partido-despedida-de-messi-dispara-la-demanda-de-viajes-hacia-iheoi7"
+        },
+        {
+          "id": "7bv4jl",
+          "titulo": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
+          "fecha": "2026-09-30T12:37:20.000Z",
+          "ruta": "/nota/la-afa-organiza-un-fan-fest-para-la-despedida-de-lionel-messi-7bv4jl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-capitan-de-benin-acusa-a-los-futbolistas-sudamericanos",
+      "foto": {
+        "archivo": "fotos-notas/1d4do2p.jpg",
+        "credito": "Foto: La Nueva"
+      }
+    },
     {
       "id": "1u6ny2m",
       "titulo": "Ladrones roban herramientas de un local de repuestos",
@@ -342,6 +425,7 @@
       "guion": "Bomberos controlan un principio de incendio en un edificio",
       "seccion": "Policiales",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -351,7 +435,7 @@
       "fecha": "2026-10-04T21:50:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T05:01:19.118Z",
-      "relevancia": 93,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -425,6 +509,83 @@
       "slug": "bomberos-controlan-un-principio-de-incendio-en-un-edificio"
     },
     {
+      "id": "5j1h5s",
+      "titulo": "Tobía Goytía anota para la Sub-17 en la victoria ante Tanzania",
+      "copete": "La Selección Argentina Sub-17 derrotó agónicamente por 3 a 2 a Tanzania en la Vertex Cup de Londres. El delantero de River convirtió el tanto de la victoria en el cierre del encuentro amistoso.",
+      "cuerpo": "La Selección Argentina Sub-17 derrotó por 3 a 2 a Tanzania en un encuentro correspondiente a la Vertex Cup, un torneo amistoso que se lleva a cabo en Londres como preparativo para el Mundial de la categoría.\n\nEl conjunto dirigido por Diego Placente perdía el partido hasta que el atacante selló la remontada agónica con una definición de derecha. Del cotejo también participaron los futbolistas formados en River Galo Escobar y Bautista Giménez.\n\nCon este resultado, el elenco nacional se ubica en la primera posición de la tabla con cinco unidades acumuladas. Su próxima presentación en el cuadrangular internacional será el miércoles 7 de octubre frente a China.",
+      "guion": "Tobía Goytía anota para la Sub-17 en la victoria ante Tanzania",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "Doble Amarilla",
+        "La Página Millonaria"
+      ],
+      "enlace": "https://lapaginamillonaria.com/river-plate/tobias-goytia-joya-de-river-anoto-para-la-seleccion-argentina-sub-17-vs-tanzania-en-la-vertex-cup",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-04T21:12:03.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-04T23:31:21.567Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "La Selección Argentina Sub-17 venció 3-2 a Tanzania en la Vertex Cup.",
+        "El partido se disputó en el estadio The SkyEX Community de Londres.",
+        "Tobías Goytía marcó el gol de la victoria a los 95 minutos.",
+        "El equipo es dirigido por Diego Placente.",
+        "Argentina lidera el cuadrangular con cinco puntos."
+      ],
+      "textoRedes": "La Selección Argentina Sub-17 venció agónicamente por 3 a 2 a Tanzania en la Vertex Cup de Londres. El delantero Tobías Goytía convirtió el gol del triunfo en el cierre del encuentro amistoso preparatorio para el Mundial de la categoría.",
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Sub-17",
+        "Tobias Goytía",
+        "Futbol",
+        "Vertex Cup",
+        "Londres"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/river-plate/tobias-goytia-joya-de-river-anoto-para-la-seleccion-argentina-sub-17-vs-tanzania-en-la-vertex-cup",
+          "fecha": "2026-10-04T21:12:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló la jugada del gol de Goytía, los minutos jugados por los demás convocados y los antecedentes formativos del delantero."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/04/historica-remontada-de-la-seleccion-argentina-sub-17-perdia-0-2-y-lo-gano-con-el-tanto-de-tobias-goytia-a-los-95/",
+          "fecha": "2026-10-04T21:26:10.000Z",
+          "oficial": false,
+          "aporte": "Informó el desarrollo general del encuentro y el contexto del certamen amistoso en Londres."
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/selecciones/argentina-remonto-ante-tanzania-y-se-impuso-en-el-ultimo-minuto_a6ac2d658aa20c90610a5689b",
+          "fecha": "2026-10-04T22:35:36.000Z",
+          "oficial": false,
+          "aporte": "Precisó el estadio donde se disputó el partido y el objetivo del Mundial en Qatar."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1iqqrwd",
+          "titulo": "Alarma en River: Tobías Andrada y Thiago Almada se lesionaron y hay preocupación en la Selección argentina",
+          "fecha": "2026-09-20T13:33:00.000Z",
+          "ruta": "/nota/alarma-en-river-tobias-andrada-y-thiago-almada-se-lesionaron-y-hay-1iqqrwd"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "tobia-goytia-anota-para-la-sub-17-en-la-victoria-ante-tanzania"
+    },
+    {
       "id": "f1resultado2026r16",
       "propia": "f1",
       "tipoF1": "resultado",
@@ -490,6 +651,7 @@
         "C5N",
         "Crónica",
         "Radio Mitre",
+        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva"
@@ -669,6 +831,7 @@
         "Crónica",
         "El Día",
         "InfoRegión",
+        "ANDigital",
         "Punto Noticias",
         "Radio Mitre",
         "La Nueva"
@@ -1581,7 +1744,6 @@
         "TN (Todo Noticias)",
         "Ámbito",
         "Radio Mitre",
-        "Minuto Uno",
         "Diario La Vanguardia",
         "El Eco de Tandil",
         "La Nación",
@@ -1602,15 +1764,17 @@
         "El Marplatense",
         "La Verdad de Ayacucho",
         "Doble Amarilla",
+        "Bolavip Argentina",
         "Olé",
         "0223 (Mar del Plata)",
+        "Córdoba Competición",
         "La Nueva",
         "Clarín",
+        "Minuto Uno",
         "Campeones",
         "El Día",
         "La Brújula 24",
         "La Voz del Pueblo",
-        "Córdoba Competición",
         "C5N",
         "El Gráfico"
       ],
@@ -1695,6 +1859,7 @@
       "guion": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia",
         "La Noticia 1"
       ],
@@ -1762,11 +1927,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44990-otra-vez-sobre-la-mesa-la-division-de-la-provincia-que-lugar-tendria-balcarce-en-una-buenos-aires-sin-el-peso-del-conurbano/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-04T10:31:15.992Z",
       "sinFecha": true,
       "visto": "2026-10-04T10:31:15.992Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2428,65 +2593,10 @@
         "archivo": "fotos-notas/collage-repaso20261003noche.jpg",
         "credito": "Fotos: Clarín y QZ Noticias (Mar del Plata)"
       }
-    },
-    {
-      "id": "np9nneou5k",
-      "propia": "pista",
-      "pista": "pista9nneou5k",
-      "titulo": "Científica argentina desarrolla un parche en 3D para curar heridas complejas",
-      "copete": "La genetista Mikele Amondarain creó un parche de hidrogel con exosomas y células madre que acelera la regeneración de tejidos. Su desarrollo busca tratar quemaduras, úlceras y escaras.",
-      "cuerpo": "La genetista Mikele Amondarain desarrolló un parche de hidrogel en tres dimensiones que acelera la cicatrización y favorece la regeneración de tejidos en lesiones complejas, según informaron diversos medios. El proyecto surgió a partir de su experiencia personal al acompañar a su padre durante su tratamiento oncológico. \n\nEl dispositivo experimental está diseñado para aplicarse sobre quemaduras, úlceras, escaras y heridas profundas. El material se reabsorbe en contacto con el organismo y libera exosomas que estimulan la recuperación celular.",
-      "guion": null,
-      "seccion": "Tecnología",
-      "local": false,
-      "relevancia": 95,
-      "medios": [
-        "clarin.com",
-        "andigital.com.ar",
-        "ecosdelaciudad.com.ar",
-        "eldoce.tv"
-      ],
-      "enlace": "https://www.clarin.com/sociedad/genetista-dolor-creo-innovadora-curita-cicatrices-pueden-carga-emocional_0_6L4IatC5c3.html",
-      "fuentesConsultadas": [
-        {
-          "medio": "clarin.com",
-          "enlace": "https://www.clarin.com/sociedad/genetista-dolor-creo-innovadora-curita-cicatrices-pueden-carga-emocional_0_6L4IatC5c3.html",
-          "fecha": "Sat, 19 Sep 2026 16:29:26 GMT"
-        },
-        {
-          "medio": "andigital.com.ar",
-          "enlace": "https://andigital.com.ar/nota/143595/de-coronel-pringles-al-mundo-mikele-amondarain-y-la-curita-futurista-que-busca-regenerar-tejidos",
-          "fecha": null
-        },
-        {
-          "medio": "ecosdelaciudad.com.ar",
-          "enlace": "https://ecosdelaciudad.com.ar/2026/10/03/m-amondarain-orgullo-regional-que-presento-una-curita-futurista-para-regenerar-tejidos",
-          "fecha": "Sat, 03 Oct 2026 11:24:03 GMT"
-        },
-        {
-          "medio": "eldoce.tv",
-          "enlace": "https://eldoce.tv/tendencias/2026/10/01/creo-un-parche-regenerativo-para-heridas-dificiles-y-emociono-al-contar-como-la-lucha-de-su-papa-inspiro-el-invento",
-          "fecha": "Fri, 02 Oct 2026 02:03:02 GMT"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-03T23:29:10.050Z",
-      "sinFecha": false,
-      "visto": "2026-10-03T23:29:10.050Z",
-      "publicadaPor": "Hernán",
-      "publicadaCuando": "2026-10-03T23:29:10.050Z",
-      "temas": [],
-      "etiquetas": [],
-      "como": "publicada",
-      "firma": "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron clarin.com, andigital.com.ar, ecosdelaciudad.com.ar y eldoce.tv y revisada por la redacción",
-      "slug": "cientifica-argentina-desarrolla-un-parche-en-3d-para-curar-heridas",
-      "foto": {
-        "archivo": "fotos-notas/np9nneou5k.jpg",
-        "credito": "Foto: eldoce.tv"
-      }
     }
   ],
   "secciones": [
+    "Fútbol",
     "Policiales",
     "Deportes",
     "Automovilismo",
@@ -2494,16 +2604,15 @@
     "Política",
     "Balcarce",
     "Argentina",
-    "Tecnología",
-    "Fútbol"
+    "Tecnología"
   ],
   "temas": [],
   "clima": {
     "ahora": {
       "temp": 13,
-      "sensacion": 10,
-      "humedad": 66,
-      "viento": 15,
+      "sensacion": 11,
+      "humedad": 69,
+      "viento": 13,
       "rumbo": "O",
       "cielo": "Nublado",
       "esDeDia": true
@@ -2559,62 +2668,22 @@
   "avisosClima": [],
   "farmacias": {
     "hoy": {
-      "dia": 4,
-      "diaSemana": "DOMINGO",
+      "dia": 5,
+      "diaSemana": "LUNES",
       "farmacias": [
-        "MEDRANO",
-        "SANTA INES",
-        "DEL PATIO"
+        "BENITES"
       ],
       "detalle": [
         {
-          "nombre": "Medrano",
-          "direccion": "Calle 28 esquina 19",
-          "telefono": "15-677121"
-        },
-        {
-          "nombre": "Santa Inés",
-          "direccion": "Calle 17 N° 537",
-          "telefono": "42-4301"
-        },
-        {
-          "nombre": "Del Patio",
-          "direccion": "Av. 39 N° 793",
-          "telefono": "42-2200"
+          "nombre": "Benites",
+          "direccion": "Av. Chaves N° 329 e/ 5 y 7",
+          "telefono": "42-0309"
         }
       ],
       "mes": 10,
-      "fecha": "2026-10-04"
+      "fecha": "2026-10-05"
     },
     "proximos": [
-      {
-        "dia": 4,
-        "diaSemana": "DOMINGO",
-        "farmacias": [
-          "MEDRANO",
-          "SANTA INES",
-          "DEL PATIO"
-        ],
-        "detalle": [
-          {
-            "nombre": "Medrano",
-            "direccion": "Calle 28 esquina 19",
-            "telefono": "15-677121"
-          },
-          {
-            "nombre": "Santa Inés",
-            "direccion": "Calle 17 N° 537",
-            "telefono": "42-4301"
-          },
-          {
-            "nombre": "Del Patio",
-            "direccion": "Av. 39 N° 793",
-            "telefono": "42-2200"
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-04"
-      },
       {
         "dia": 5,
         "diaSemana": "LUNES",
@@ -2694,6 +2763,34 @@
         ],
         "mes": 10,
         "fecha": "2026-10-09"
+      },
+      {
+        "dia": 10,
+        "diaSemana": "SABADO",
+        "farmacias": [
+          "MEDRANO",
+          "SANTA INES",
+          "DEL PATIO"
+        ],
+        "detalle": [
+          {
+            "nombre": "Medrano",
+            "direccion": "Calle 28 esquina 19",
+            "telefono": "15-677121"
+          },
+          {
+            "nombre": "Santa Inés",
+            "direccion": "Calle 17 N° 537",
+            "telefono": "42-4301"
+          },
+          {
+            "nombre": "Del Patio",
+            "direccion": "Av. 39 N° 793",
+            "telefono": "42-2200"
+          }
+        ],
+        "mes": 10,
+        "fecha": "2026-10-10"
       }
     ],
     "avisos": [
@@ -2864,12 +2961,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "17hpmfy",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "h9pxr0",
       "titulo": null,
       "seccion": "Argentina",
@@ -2900,5 +2991,5 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 2
 }

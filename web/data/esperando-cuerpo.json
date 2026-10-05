@@ -1,5 +1,40 @@
 {
- "generado": "2026-10-05T08:31:23.528Z",
+ "generado": "2026-10-05T11:33:04.105Z",
  "intentosMaximos": 3,
- "notas": []
+ "notas": [
+  {
+   "id": "vqv317",
+   "titulo": "Lunes con cielo mayormente nublado y posibles lluvias",
+   "copete": "La jornada se presentará fresca, con una temperatura máxima cercana a los 19°C. Durante el día podrían registrarse lluvias débiles y aisladas.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-05T11:23:01.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/clima-lunes-con-cielo-mayormente-nublado-y-posibles-lluvias",
+     "fecha": "2026-10-05T11:23:01.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "r3lz6t",
+   "titulo": "Campo de Pato se ilusiona con una definición histórica",
+   "copete": "Pato Negro goleó a Villa Gesell, mientras que Pato Naranja sumó los puntos ante la ausencia de Gnomos. Los dos equipos balcarceños llegan a la última fecha dentro de la zona de playoffs y podrían enfrentarse entre sí en semifinales.",
+   "seccion": "Deportes",
+   "fecha": "2026-10-05T11:20:43.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/rugby-campo-de-pato-se-ilusiona-con-una-definicion-historica",
+     "fecha": "2026-10-05T11:20:43.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
+  }
+ ]
 }
