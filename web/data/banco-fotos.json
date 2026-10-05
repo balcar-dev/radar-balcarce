@@ -6846,10 +6846,11 @@
  },
  "1yu4a7r": {
   "intentado": true,
-  "origen": "medio",
-  "cuando": "2026-10-04T23:32:42.912Z",
-  "error": "no se pudo volver a bajar la elegida",
-  "intentos": 1,
+  "origen": "ninguna",
+  "titulo": "El arzobispo de Luján advierte que la mayor división nacional es la exclusión",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-05T01:41:52.809Z",
+  "intentos": 2,
   "fuentes": 5
  },
  "1rfl2n3": {
@@ -6875,5 +6876,34 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/10/04/Axr23GNEC_2000x1500__1.jpg",
   "razon": "Es la única imagen que muestra el contexto completo del acto (escenario y participantes) sin recortes extraños, y no presenta marcas de agua ni menores de edad.",
   "cuando": "2026-10-05T00:05:26.572Z"
+ },
+ "np9nneou5k": {
+  "archivo": "fotos-notas/np9nneou5k.jpg",
+  "medio": "eldoce.tv",
+  "credito": "Foto: eldoce.tv",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-05T01:37:26.985Z",
+  "imagenOriginal": "https://eldoce.tv/tendencias/2026/10/01/creo-un-parche-regenerativo-para-heridas-dificiles-y-emociono-al-contar-como-la-lucha-de-su-papa-inspiro-el-invento",
+  "enlace": "https://eldoce.tv/tendencias/2026/10/01/creo-un-parche-regenerativo-para-heridas-dificiles-y-emociono-al-contar-como-la-lucha-de-su-papa-inspiro-el-invento"
+ },
+ "lomklr": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
+  "razon": "La mejor foto era la de Acción 5 (Balcarce), pero no se puede usar (marca de agua, otro medio o un menor) (Se observa a un menor de edad (chico) sentado en la primera fila, a la izquierda del hombre con remera roja, con el rostro claramente visible.), y ninguna de las otras sirve: no se elige ninguna.",
+  "cuando": "2026-10-05T01:41:52.809Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1hiaakh": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Xbox Game Pass quita nueve juegos de su catálogo en octubre",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-05T01:41:52.809Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }

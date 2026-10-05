@@ -1415,6 +1415,78 @@
    }
   ]
  },
+ "constructores": {
+  "temporada": 2026,
+  "ronda": 16,
+  "filas": [
+   {
+    "posicion": 1,
+    "equipo": "Mercedes",
+    "puntos": 556,
+    "victorias": 11
+   },
+   {
+    "posicion": 2,
+    "equipo": "Ferrari",
+    "puntos": 405,
+    "victorias": 2
+   },
+   {
+    "posicion": 3,
+    "equipo": "McLaren",
+    "puntos": 316,
+    "victorias": 2
+   },
+   {
+    "posicion": 4,
+    "equipo": "Red Bull",
+    "puntos": 298,
+    "victorias": 1
+   },
+   {
+    "posicion": 5,
+    "equipo": "RB F1 Team",
+    "puntos": 90,
+    "victorias": 0
+   },
+   {
+    "posicion": 6,
+    "equipo": "Alpine F1 Team",
+    "puntos": 68,
+    "victorias": 0
+   },
+   {
+    "posicion": 7,
+    "equipo": "Haas F1 Team",
+    "puntos": 27,
+    "victorias": 0
+   },
+   {
+    "posicion": 8,
+    "equipo": "Audi",
+    "puntos": 17,
+    "victorias": 0
+   },
+   {
+    "posicion": 9,
+    "equipo": "Williams",
+    "puntos": 12,
+    "victorias": 0
+   },
+   {
+    "posicion": 10,
+    "equipo": "Aston Martin",
+    "puntos": 7,
+    "victorias": 0
+   },
+   {
+    "posicion": 11,
+    "equipo": "Cadillac F1 Team",
+    "puntos": 0,
+    "victorias": 0
+   }
+  ]
+ },
  "parrilla": {
   "temporada": 2026,
   "ronda": 16,

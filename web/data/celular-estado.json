@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T00:05:31.241Z",
- "portada": 40,
- "archivo": 891,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-05T01:42:04.909Z",
+ "portada": 38,
+ "archivo": 894,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-05T00:05:31.270Z",
+  "generado": "2026-10-05T01:42:04.935Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -74,7 +74,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-05T00:06:28.302Z"
    }
   ],
   "repasos": [
@@ -141,8 +141,8 @@
     "hora": "21:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 48,
+    "salio": "2026-10-05T00:06:28.302Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1rfl2n3",
@@ -150,14 +150,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "r1j6p6",
-      "titulo": "Casella choca en Posadas tras un toque y una cubierta golpea a un espectador",
-      "seccion": "Automovilismo"
-     },
-     {
       "id": "irc0sr",
       "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1nqv1cj",
+      "titulo": "Franco Colapinto protagoniza un cruce radial con su ingeniero por error",
+      "seccion": "Automovilismo"
      },
      {
       "id": "1g4en2j",
@@ -185,7 +185,14 @@
      "cuando": "2026-10-04T23:35:20.177Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "lomklr",
+     "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 2,
    "proximoDesde": "2026-10-05T01:05:20.177Z",
    "porDia": 5,

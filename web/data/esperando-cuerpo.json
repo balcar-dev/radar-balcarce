@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-05T00:05:31.241Z",
+ "generado": "2026-10-05T01:42:04.909Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "lomklr",
-   "titulo": "Longcasting: con campeones y referentes, se realizó la clínica",
-   "copete": "Una novedosa y concurrida propuesta social y deportiva se desplegó el pasado domingo en nuestra ciudad, precisamente en un sector de la periferia y dirigida al público en general. Se trató de la primera clínica de longcasting , la disciplina deportiva derivada de la pesca que…",
-   "seccion": "Deportes",
-   "fecha": "2026-10-04T23:40:07.000Z",
-   "fuentes": [
-    {
-     "medio": "Acción 5 (Balcarce)",
-     "enlace": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/",
-     "fecha": "2026-10-04T23:40:07.000Z"
-    }
-   ],
-   "intentos": 0,
-   "motivo": "",
-   "maximo": 3
-  },
   {
    "id": "1bgww42",
    "titulo": "La Sub 16 de Campo de Pato campeonas y con ascenso incluido",
@@ -32,25 +15,8 @@
      "fecha": "2026-10-04T23:41:55.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (division, Ademas, institucion, proxima, segun): va con las tildes ; sin esas oraciones quedan 85 ",
-   "maximo": 3
-  },
-  {
-   "id": "3r4c2k",
-   "titulo": "Cayó delincuente de frondoso prontuario tras robar en una panadería",
-   "copete": "El sospechoso fue aprehendido luego de robar en la panadería La Higiénica y escapar por los techos. Además, es investigado por su presunta participación en otros diez hechos similares.",
-   "seccion": "Policiales",
-   "fecha": "2026-10-04T12:46:34.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/cayo-delincuente-de-frondoso-prontuario-tras-robar-en-una-panaderia",
-     "fecha": "2026-10-04T12:46:34.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "semáforo: necesita ojo humano: \"detenido\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 61 palabras",
    "maximo": 3
   },
   {

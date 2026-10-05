@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-05T00:05:29.065Z",
+ "consultado": "2026-10-05T01:42:03.818Z",
  "equipos": [
   "9739",
   "3",
@@ -384,8 +384,8 @@
     "id": "401841597",
     "competencia": "liga",
     "inicio": "2026-10-04T22:15:00.000Z",
-    "estado": "en-juego",
-    "minuto": "89'",
+    "estado": "final",
+    "minuto": "90'+7'",
     "local": {
      "id": "3",
      "nombre": "Argentinos Juniors",
@@ -426,8 +426,8 @@
     "id": "401841591",
     "competencia": "liga",
     "inicio": "2026-10-05T00:30:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "53'",
     "local": {
      "id": "19685",
      "nombre": "Estudiantes de Río Cuarto",
@@ -436,10 +436,23 @@
     "visitante": {
      "id": "15",
      "nombre": "Racing Club",
-     "goles": 0
+     "goles": 2
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Tomás Conechny",
+      "minuto": "10'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Adrián Martínez",
+      "minuto": "38'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Ciudad de Río Cuarto Antonio Candini",
     "fase": null,
     "partidoDeLaSerie": null,
@@ -819,6 +832,19 @@
     "filas": [
      {
       "posicion": 1,
+      "id": "3",
+      "equipo": "Argentinos Juniors",
+      "pj": 11,
+      "g": 6,
+      "e": 3,
+      "p": 2,
+      "gf": 15,
+      "gc": 10,
+      "dif": 5,
+      "pts": 21
+     },
+     {
+      "posicion": 2,
       "id": "4",
       "equipo": "Belgrano (Córdoba)",
       "pj": 11,
@@ -831,7 +857,7 @@
       "pts": 19
      },
      {
-      "posicion": 2,
+      "posicion": 3,
       "id": "10",
       "equipo": "Huracán",
       "pj": 11,
@@ -842,19 +868,6 @@
       "gc": 8,
       "dif": 3,
       "pts": 19
-     },
-     {
-      "posicion": 3,
-      "id": "3",
-      "equipo": "Argentinos Juniors",
-      "pj": 10,
-      "g": 5,
-      "e": 3,
-      "p": 2,
-      "gf": 13,
-      "gc": 9,
-      "dif": 4,
-      "pts": 18
      },
      {
       "posicion": 4,
@@ -951,13 +964,13 @@
       "posicion": 11,
       "id": "7767",
       "equipo": "Tigre",
-      "pj": 10,
+      "pj": 11,
       "g": 3,
       "e": 3,
-      "p": 4,
-      "gf": 9,
-      "gc": 9,
-      "dif": 0,
+      "p": 5,
+      "gf": 10,
+      "gc": 11,
+      "dif": -1,
       "pts": 12
      },
      {
@@ -1016,7 +1029,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-04T23:33:49.424Z",
+ "tablaCuando": "2026-10-05T01:42:03.818Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z"

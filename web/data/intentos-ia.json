@@ -618,9 +618,9 @@
   "motivo": "con cuerpo"
  },
  "1bgww42": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T00:02:28.857Z",
-  "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (division, Ademas, institucion, proxima, segun): va con las tildes ; sin esas oraciones quedan 85 "
+  "intentos": 2,
+  "ultimo": "2026-10-05T01:41:31.894Z",
+  "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 61 palabras"
  },
  "1bheb6v": {
   "intentos": 2,
@@ -907,6 +907,11 @@
  "1hhocwa": {
   "intentos": 1,
   "ultimo": "2026-09-28T22:01:14.632Z",
+  "motivo": "con cuerpo"
+ },
+ "1hiaakh": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T01:41:31.894Z",
   "motivo": "con cuerpo"
  },
  "1hjmkd4": {
@@ -1216,11 +1221,6 @@
  "1of8593": {
   "intentos": 2,
   "ultimo": "2026-09-30T04:31:10.389Z",
-  "motivo": "con cuerpo"
- },
- "1oj9qzr": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T00:21:57.723Z",
   "motivo": "con cuerpo"
  },
  "1ojeuju": {
@@ -2666,6 +2666,11 @@
   "ultimo": "2026-10-01T00:01:21.680Z",
   "motivo": "cuerpo: 2 problemas (relleno, copia): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 23 palabras"
  },
+ "lomklr": {
+  "intentos": 1,
+  "ultimo": "2026-10-05T01:41:31.894Z",
+  "motivo": "con cuerpo"
+ },
  "m1ypjt": {
   "intentos": 2,
   "ultimo": "2026-09-28T05:11:30.306Z",
@@ -3225,9 +3230,9 @@
   "motivo": "con cuerpo"
  },
  "wtt964": {
-  "intentos": 2,
-  "ultimo": "2026-10-05T00:02:28.857Z",
-  "motivo": "semáforo: necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-05T01:41:31.894Z",
+  "motivo": "semáforo: necesita ojo humano: \"herida\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "ww3s5p": {
   "intentos": 1,
