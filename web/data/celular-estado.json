@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05T14:07:50.183Z",
+ "generado": "2026-10-05T14:32:23.789Z",
  "portada": 37,
- "archivo": 902,
- "esperandoCuerpo": 6,
+ "archivo": 905,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-05T14:07:50.221Z",
+  "generado": "2026-10-05T14:32:23.812Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "cn09w9",
+      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
+      "seccion": "Balcarce"
+     },
      {
       "id": "2umrmg",
       "titulo": "ARCA lanza un nuevo servicio web para el Impuesto a las Ganancias",
@@ -139,14 +144,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "199raki",
-      "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "lomklr",
-      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
-      "seccion": "Deportes"
+      "id": "wb8pre",
+      "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
+      "seccion": "Agro"
      }
     ]
    },
@@ -157,12 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 39,
+    "segundos": 45,
     "notas": [
      {
-      "id": "cn09w9",
-      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
+      "id": "199raki",
+      "titulo": "Bomberos locales detallan su experiencia en la misión de rescate en Venezuela",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "lomklr",
+      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
+      "seccion": "Deportes"
      },
      {
       "id": "e5jokd",
@@ -190,6 +195,12 @@
      "id": "cn09w9",
      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "wb8pre",
+     "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
+     "seccion": "Agro",
      "marcada": false
     }
    ],
