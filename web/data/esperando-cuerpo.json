@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-05T15:11:50.045Z",
+ "generado": "2026-10-05T15:32:19.622Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1vnue0q",
-   "titulo": "Zonal en Balcarce: los horarios de las dos jornadas completas",
-   "copete": "Confirmó el Auto Club Balcarce los horarios de actividad previstos para la vuelta del Zonal del Atlántico a Balcarce, en este caso, disputando otra de las de las fechas definitorias para el Turismo Special de la Costa, Monomarca Fiat y TC2000 y Promocional del Atlántico…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-05T14:42:56.000Z",
-   "fuentes": [
-    {
-     "medio": "Acción 5 (Balcarce)",
-     "enlace": "https://accion5.com/zonal-en-balcarce-los-horarios-de-las-dos-jornadas-completas/",
-     "fecha": "2026-10-05T14:42:56.000Z"
-    }
-   ],
-   "intentos": 0,
-   "motivo": "",
-   "maximo": 3
-  },
   {
    "id": "r2tg83",
    "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
@@ -39,7 +22,7 @@
   {
    "id": "16q21ih",
    "titulo": "Martín Fierro de la Música 2026: los nominados y todos los detalles de la primera edición",
-   "copete": "Los Martín Fierro tendrán una importante novedad este año con el estreno de una edición dedicada exclusivamente a la música. La primera ceremonia se realizará el miércoles 14 de octubre y reunirá a grandes figuras de la escena nacional, con artistas de distintos estilos y…",
+   "copete": "La música argentina suma una nueva entrega de premios y ya están definidos sus protagonistas. El domingo 4 de octubre se conocieron los nominados a los Martín Fierro de la Música 2026 , que tendrán su primera ceremonia el próximo miércoles 14. La nómina reúne a algunas de las…",
    "seccion": "Cultura y agenda",
    "fecha": "2026-10-05T11:15:00.000Z",
    "fuentes": [
@@ -52,6 +35,11 @@
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/espectaculos/martin-fierro-musica-2026-uno-uno-la-lista-nominados-n6330133",
      "fecha": "2026-10-05T14:13:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/martin-fierro-de-la-musica-2026-todos-los-artistas-que-competiran-en-la-primera-edicion/",
+     "fecha": "2026-10-05T15:03:00.000Z"
     },
     {
      "medio": "Crónica",
@@ -69,9 +57,36 @@
      "fecha": "2026-10-05T12:15:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"martin\", \"fierro\" y el cuerpo no los explica; sin esas oraciones quedan 111 palabras",
+   "intentos": 3,
+   "motivo": "título o bajada: 3 problemas (numero, nombre): el titulo dice 0 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "1rqm2xx",
+   "titulo": "Alquileres en CABA: el 40% de los hogares de menores ingresos destina más de la mitad de su sueldo a la vivienda",
+   "copete": "El alquiler, las expensas y los servicios ocupan una porción cada vez mayor del presupuesto de los hogares porteños y dejan menos margen para el resto de los consumos. En particular, el 40% de los hogares de menores ingresos de la Ciudad de Buenos Aires destina en promedio más…",
+   "seccion": "Economía",
+   "fecha": "2026-10-05T11:34:53.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/economia/2026/10/05/alquileres-en-caba-el-40-de-los-hogares-de-menores-ingresos-destina-mas-de-la-mitad-de-su-sueldo-a-la-vivienda/",
+     "fecha": "2026-10-05T11:34:53.000Z"
+    },
+    {
+     "medio": "iProfesional",
+     "enlace": "https://www.iprofesional.com/economia/465908-caba-el-40-de-los-hogares-pobres-gasta-mas-de-la-mitad-en-alquiler",
+     "fecha": "2026-10-05T14:53:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/economia/alquileres-caba-4-cada-10-hogares-menores-ingresos-destinan-mas-la-mitad-su-sueldo-la-vivienda-n250760",
+     "fecha": "2026-10-05T14:14:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 91 caracteres, el máximo es 90",
+   "maximo": 3
   }
  ]
 }
