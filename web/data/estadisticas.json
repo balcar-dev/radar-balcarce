@@ -865,6 +865,53 @@
         "vistas": 7,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-05T00:00:17.261Z",
+      "web": {
+        "u12": {
+          "visitas": 8,
+          "vistas": 58
+        },
+        "a12": {
+          "visitas": 53,
+          "vistas": 84
+        },
+        "u24": {
+          "visitas": 61,
+          "vistas": 142
+        },
+        "a24": {
+          "visitas": 52,
+          "vistas": 96
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 47
+          },
+          {
+            "camino": "/seccion/tecnologia",
+            "vistas": 7
+          },
+          {
+            "camino": "/seccion/futbol",
+            "vistas": 7
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 5,
+        "vistas": 951,
+        "interacciones": 2
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 75,
+        "alcance": 26,
+        "vistas": 72,
+        "interacciones": 5
+      }
     }
   ],
   "dias": {
@@ -1264,49 +1311,59 @@
     },
     "2026-10-04": {
       "referentes": {
-        "directo": 40
+        "directo": 41,
+        "facebook.com": 7
       },
       "notas": {
+        "1d1hc0g": 4,
         "5skk4j": 3,
-        "np9nneou5k": 2,
+        "inwwi9": 3,
+        "v0xov9": 3,
+        "1nqv1cj": 2,
         "8cknxd": 2,
+        "futbolpartidosliga20261002": 2,
+        "futbolresultadosliga20261002": 2,
+        "173wsz3": 2,
+        "np9nneou5k": 2,
         "1nz8gwo": 2,
-        "17lpda8": 2,
         "ogixfx": 2,
-        "repaso20261003manana": 1,
-        "ule632": 1,
-        "f1parrilla2026r16": 1,
+        "158gkt0": 2,
+        "repaso20261003noche": 2,
+        "17lpda8": 2,
+        "3cr087": 1,
         "1t477sv": 1,
+        "f1parrilla2026r16": 1,
+        "1n4tus5": 1,
         "repaso20261003tarde": 1,
         "1a6c23d": 1,
-        "3cr087": 1,
         "wjdq6r": 1,
-        "1n4tus5": 1,
-        "futbolresultadosliga20261002": 1,
         "ayjy85": 1,
         "15ikzjc": 1,
-        "nm28kh": 1
+        "repaso20261003manana": 1,
+        "nm28kh": 1,
+        "ule632": 1
       },
       "paginas": {
-        "/": 9,
+        "/": 36,
+        "/seccion/futbol": 7,
+        "/seccion/tecnologia": 3,
+        "/clima": 3,
         "/seccion/politica": 2,
-        "/seccion/argentina": 1,
-        "/seccion/economia": 1,
+        "/seccion/automovilismo": 1,
         "/seccion/cultura": 1,
         "/farmacias": 1,
-        "/seccion/futbol": 1,
+        "/seccion/economia": 1,
+        "/agenda/caminata-rosa-muni24072": 1,
+        "/seccion/argentina": 1,
         "/seccion/balcarce": 1,
-        "/clima": 1,
         "/seccion/policiales": 1,
-        "/seccion/tecnologia": 1,
-        "/seccion/automovilismo": 1,
-        "/agenda": 1,
-        "/agenda/caminata-rosa-muni24072": 1
+        "/agenda": 1
       },
       "paises": {
+        "AR": 51,
         "CN": 38,
-        "AR": 7,
-        "US": 4
+        "US": 15,
+        "IE": 3
       },
       "horas": [
         4,
@@ -1318,15 +1375,15 @@
         0,
         0,
         7,
+        24,
+        7,
+        2,
+        4,
+        2,
+        14,
+        3,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        2,
         0,
         0,
         0,
@@ -1334,11 +1391,11 @@
         0,
         0
       ],
-      "visitas": 40,
-      "vistas": 49,
+      "visitas": 48,
+      "vistas": 107,
       "dispositivos": {
-        "desktop": 42,
-        "mobile": 7
+        "desktop": 57,
+        "mobile": 50
       }
     }
   }
