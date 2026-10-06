@@ -6896,13 +6896,15 @@
   "enlace": "https://eldoce.tv/tendencias/2026/10/01/creo-un-parche-regenerativo-para-heridas-dificiles-y-emociono-al-contar-como-la-lucha-de-su-papa-inspiro-el-invento"
  },
  "lomklr": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
-  "razon": "La mejor foto era la de Acción 5 (Balcarce), pero no se puede usar (marca de agua, otro medio o un menor) (Se observa a un menor de edad (chico) sentado en la primera fila, a la izquierda del hombre con remera roja, con el rostro claramente visible.), y ninguna de las otras sirve: no se elige ninguna.",
-  "cuando": "2026-10-05T01:41:52.809Z",
-  "intentos": 1,
-  "fuentes": 1
+  "archivo": "fotos-notas/lomklr.jpg",
+  "medio": "Acción 5 (Balcarce)",
+  "credito": "Foto: Acción 5 (Balcarce)",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-06T00:58:53.232Z",
+  "imagenOriginal": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/",
+  "enlace": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/"
  },
  "1hiaakh": {
   "medio": "FayerWayer",
@@ -7321,13 +7323,15 @@
   "cuando": "2026-10-05T15:53:14.098Z"
  },
  "1njgnul": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Campo de Pato gana el torneo regional y asciende en hockey",
-  "razon": "Todas las fotos muestran menores de edad reconocibles, por lo que ninguna puede ser publicada.",
-  "cuando": "2026-10-05T16:01:54.434Z",
-  "intentos": 1,
-  "fuentes": 3
+  "archivo": "fotos-notas/1njgnul.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-06T00:58:32.797Z",
+  "imagenOriginal": "https://balcarce.gob.ar/2026/10/05/campo-de-pato-campeon-del-regional-sub-16-de-hockey/",
+  "enlace": "https://balcarce.gob.ar/2026/10/05/campo-de-pato-campeon-del-regional-sub-16-de-hockey/"
  },
  "1v130vb": {
   "archivo": "fotos-notas/1v130vb.jpg",
@@ -7852,5 +7856,49 @@
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Suisse_vs_Argentine_-_Granit_Xhaka_%26_Lionel_Messi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Lionel Messi\" de Wikimedia Commons (CC BY-SA 3.0).",
   "cuando": "2026-10-06T00:31:59.214Z"
+ },
+ "1pfa62o": {
+  "archivo": "fotos-notas/1pfa62o.jpg",
+  "medio": "Radio 10 Mar del Plata (FM 105.5)",
+  "credito": "Foto: Radio 10 Mar del Plata (FM 105.5)",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-06T00:56:47.380Z",
+  "imagenOriginal": "https://radio10mardelplata.com.ar/allanamientos-por-hurto-calamitoso-y-encubrimiento-secuestraron-un-auto-robado-armas-y-elementos-de-interes/",
+  "enlace": "https://radio10mardelplata.com.ar/allanamientos-por-hurto-calamitoso-y-encubrimiento-secuestraron-un-auto-robado-armas-y-elementos-de-interes/"
+ },
+ "aa0h34": {
+  "archivo": "fotos-notas/aa0h34.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45003-el-vintage-tour-2026-reunio-en-balcarce-a-fanaticos-de-mercedes-benz/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65959.png",
+  "razon": "La foto tiene buena calidad y encuadre, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-06T01:02:07.461Z"
+ },
+ "1cgax2i": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Servicio Meteorológico Nacional emite un aviso por tormentas y granizo",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-06T01:02:07.461Z",
+  "intentos": 1,
+  "fuentes": 6
+ },
+ "1tib4ft": {
+  "archivo": "fotos-notas/1tib4ft.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
+  "enlace": "https://www.a24.com/politica/a-dias-del-balotaje-brasil-milei-participara-washington-un-evento-junto-eduardo-bolsonaro-n1603476",
+  "imagenOriginal": "https://media.a24.com/p/a26c05e5f536c3e7ef69a9b68f119f88/adjuntos/296/imagenes/009/828/0009828240/1200x675/smart/javier-milei-y-eduardo-bolsonaro2.jpg",
+  "razon": "Es la única foto limpia sin marcas de agua ni menores reconocibles, con buen encuadre de los protagonistas.",
+  "cuando": "2026-10-06T01:02:07.461Z"
  }
 }

@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-06T00:34:06.672Z",
+ "generado": "2026-10-06T01:03:40.751Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "r2tg83",
-   "titulo": "Zoonosis permanecerá toda la semana en inmediaciones de la Escuela de Arte",
-   "copete": "La unidad atenderá de 7 a 12 horas sobre calle 11, entre 18 y 20, con servicios de castración y vacunación antirrábica para perros y gatos.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-05T12:45:56.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/zoonosis-permanecera-toda-la-semana-en-inmediaciones-de-la-escuela-de-arte-2",
-     "fecha": "2026-10-05T12:45:56.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
   {
    "id": "1k1mxar",
    "titulo": "La Iglesia destacó la reunión con el Gobierno por la situación en discapacidad, pero advirtió: \"Los gestos solos no alcanzan\"",
@@ -92,20 +75,37 @@
    "maximo": 5
   },
   {
-   "id": "aa0h34",
-   "titulo": "El Vintage Tour 2026 reunió en Balcarce a fanáticos de Mercedes-Benz",
-   "copete": "El Club Mercedes-Benz Argentina y su filial Mar del Plata participaron de una jornada especial en la ciudad, en el marco del aniversario de la institución y de los 140 años de la marca alemana.",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-06T00:01:17.753Z",
+   "id": "g6w1fz",
+   "titulo": "Leonel Chiarella visitó Balcarce y se reunió con Esteban Reino: el radicalismo busca fortalecer su presencia territorial",
+   "copete": "El presidente de la UCR Nacional e intendente de Venado Tuerto llegó a la ciudad y mantuvo un encuentro con Esteban Reino y dirigentes radicales. La agenda estuvo centrada en la actualidad del partido, la gestión municipal y los desafíos que enfrenta el radicalismo de cara a los…",
+   "seccion": "Política",
+   "fecha": "2026-10-05T23:31:12.329Z",
    "fuentes": [
     {
      "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45003-el-vintage-tour-2026-reunio-en-balcarce-a-fanaticos-de-mercedes-benz/",
+     "enlace": "https://www.diariolavanguardia.com/noticias/44989-leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-el-radicalismo-busca-fortalecer-su-presencia-territorial/",
      "fecha": null
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (relleno): el copete tiene una frase de relleno sin dato: \"en el marco de\"",
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "9ubtg0",
+   "titulo": "Básquetbol Resultados dispares cosechó la Escuela Municipal",
+   "copete": "",
+   "seccion": "Deportes",
+   "fecha": "2026-10-06T01:01:20.534Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/deportes/14294-resultados-dispares-cosecho-la-escuela-municipal/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 93 palabras",
    "maximo": 3
   },
   {

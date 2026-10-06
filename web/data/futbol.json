@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-06T00:34:04.124Z",
+ "consultado": "2026-10-06T01:03:39.108Z",
  "equipos": [
   "9739",
   "3",
@@ -595,11 +595,11 @@
     "competencia": "liga",
     "inicio": "2026-10-06T00:15:00.000Z",
     "estado": "en-juego",
-    "minuto": "18'",
+    "minuto": "45'+2'",
     "local": {
      "id": "235",
      "nombre": "Banfield",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "17",
@@ -607,7 +607,14 @@
      "goles": 0
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Tomás Adoryan",
+      "minuto": "41'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Florencio Solá",
     "fase": null,
     "partidoDeLaSerie": null,
@@ -808,6 +815,19 @@
      },
      {
       "posicion": 2,
+      "id": "21",
+      "equipo": "Vélez Sarsfield",
+      "pj": 11,
+      "g": 5,
+      "e": 6,
+      "p": 0,
+      "gf": 17,
+      "gc": 11,
+      "dif": 6,
+      "pts": 21
+     },
+     {
+      "posicion": 3,
       "id": "8950",
       "equipo": "Defensa y Justicia",
       "pj": 11,
@@ -820,7 +840,7 @@
       "pts": 21
      },
      {
-      "posicion": 3,
+      "posicion": 4,
       "id": "5",
       "equipo": "Boca Juniors",
       "pj": 11,
@@ -833,33 +853,7 @@
       "pts": 20
      },
      {
-      "posicion": 4,
-      "id": "21",
-      "equipo": "Vélez Sarsfield",
-      "pj": 10,
-      "g": 5,
-      "e": 5,
-      "p": 0,
-      "gf": 15,
-      "gc": 9,
-      "dif": 6,
-      "pts": 20
-     },
-     {
       "posicion": 5,
-      "id": "11972",
-      "equipo": "Gimnasia (Mendoza)",
-      "pj": 10,
-      "g": 5,
-      "e": 2,
-      "p": 3,
-      "gf": 14,
-      "gc": 9,
-      "dif": 5,
-      "pts": 17
-     },
-     {
-      "posicion": 6,
       "id": "12",
       "equipo": "Lanús",
       "pj": 11,
@@ -872,7 +866,7 @@
       "pts": 17
      },
      {
-      "posicion": 7,
+      "posicion": 6,
       "id": "14",
       "equipo": "Newell's Old Boys",
       "pj": 11,
@@ -882,6 +876,19 @@
       "gf": 11,
       "gc": 8,
       "dif": 3,
+      "pts": 17
+     },
+     {
+      "posicion": 7,
+      "id": "11972",
+      "equipo": "Gimnasia (Mendoza)",
+      "pj": 11,
+      "g": 5,
+      "e": 2,
+      "p": 4,
+      "gf": 14,
+      "gc": 12,
+      "dif": 2,
       "pts": 17
      },
      {
@@ -899,6 +906,19 @@
      },
      {
       "posicion": 9,
+      "id": "8",
+      "equipo": "Estudiantes de La Plata",
+      "pj": 11,
+      "g": 4,
+      "e": 1,
+      "p": 6,
+      "gf": 13,
+      "gc": 11,
+      "dif": 2,
+      "pts": 13
+     },
+     {
+      "posicion": 10,
       "id": "20",
       "equipo": "Unión (Santa Fe)",
       "pj": 11,
@@ -911,7 +931,7 @@
       "pts": 13
      },
      {
-      "posicion": 10,
+      "posicion": 11,
       "id": "17702",
       "equipo": "Deportivo Riestra",
       "pj": 11,
@@ -924,7 +944,7 @@
       "pts": 11
      },
      {
-      "posicion": 11,
+      "posicion": 12,
       "id": "18",
       "equipo": "San Lorenzo",
       "pj": 11,
@@ -937,30 +957,17 @@
       "pts": 11
      },
      {
-      "posicion": 12,
-      "id": "8",
-      "equipo": "Estudiantes de La Plata",
-      "pj": 10,
-      "g": 3,
-      "e": 1,
-      "p": 6,
-      "gf": 10,
-      "gc": 11,
-      "dif": -1,
-      "pts": 10
-     },
-     {
       "posicion": 13,
       "id": "7764",
       "equipo": "Platense",
-      "pj": 10,
+      "pj": 11,
       "g": 2,
-      "e": 3,
+      "e": 4,
       "p": 5,
-      "gf": 9,
-      "gc": 15,
+      "gf": 11,
+      "gc": 17,
       "dif": -6,
-      "pts": 9
+      "pts": 10
      },
      {
       "posicion": 14,
@@ -1192,7 +1199,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-05T23:04:06.958Z",
+ "tablaCuando": "2026-10-06T01:03:39.108Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z"
