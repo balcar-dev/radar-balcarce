@@ -8357,8 +8357,8 @@
   "origen": "ninguna",
   "titulo": "El Gobierno define los consorcios que compiten por AySA",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-06T17:34:41.255Z",
-  "intentos": 1,
+  "cuando": "2026-10-06T19:32:04.959Z",
+  "intentos": 2,
   "fuentes": 4
  },
  "1jfpdis": {
@@ -8432,5 +8432,50 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/10/06/YLzE0be8s_2000x1500__1.jpg",
   "razon": "La foto A muestra claramente la placa alusiva sin marcas de agua de medios ni menores de edad, con buena nitidez y encuadre.",
   "cuando": "2026-10-06T18:31:48.672Z"
+ },
+ "1ag0mm4": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Las farmacias difunden el cronograma de turnos hasta el domingo",
+  "razon": "La única foto disponible tiene una marca de agua del medio y texto superpuesto.",
+  "cuando": "2026-10-06T19:32:04.959Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "19n87v4": {
+  "archivo": "fotos-notas/19n87v4.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La reventa de entradas supera los seis millones de pesos para la despedida de Messi",
+  "enlace": "https://radiomitre.cienradios.com/deportes/despedida-de-lionel-messi-cuanto-piden-en-la-reventa-por-una-entrada-para-verlo-por-ultima-vez-con-la-seleccion-argentina/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/4VA7RWKA5RGPTIW25LYB7WPR74.png?smart=true&auth=7b20e38b1dd5fa62d2220825985c2748c08f729a038f625b779f9b9b01d0c60e&width=1200&height=630",
+  "razon": "La foto B muestra entradas de fútbol de manera clara y directa, ilustrando perfectamente el tema de la reventa sin personas identificables ni marcas de medios.",
+  "cuando": "2026-10-06T19:32:04.959Z"
+ },
+ "1msr2pb": {
+  "archivo": "fotos-notas/1msr2pb.jpg",
+  "medio": "Agencia DIB",
+  "credito": "Foto: Agencia DIB",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El alquiler consume casi la mitad de los ingresos en la provincia",
+  "enlace": "https://dib.com.ar/sociedad/los-inquilinos-bonaerenses-destinan-casi-la-mitad-su-salario-al-alquiler-n56272",
+  "imagenOriginal": "https://media.dib.com.ar/p/8d2112a9e1190222418e1c90f8f04f7d/adjuntos/377/imagenes/100/036/0100036033/1200x675/smart/novedades-los-precios-los-alquileres.jpeg",
+  "razon": "La foto A muestra edificios modernos desde un buen encuadre sin marcas ni personas, ideal para ilustrar la nota sobre alquileres.",
+  "cuando": "2026-10-06T19:32:04.959Z"
+ },
+ "232als": {
+  "archivo": "fotos-notas/232als.jpg",
+  "medio": "El Marplatense",
+  "credito": "Foto: El Marplatense",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Corte bonaerense declara inconstitucional el límite de edad docente",
+  "enlace": "https://www.elmarplatense.com/la-suprema-corte-volvio-a-objetar-la-restriccion-por-edad-para-ingresar-a-la-docencia",
+  "imagenOriginal": "https://n2.cdnartic.ar/TAqZdzcCvKnXVZi2zDzBrsiUqoQ=/1200x630/smart/filters:format(jpeg):quality(70)/https://elmarplatensecdn.eleco.com.ar/media/2026/10/maestra.webp",
+  "razon": "Se ve claramente a una docente frente al aula, los alumnos de espaldas sin caras reconocibles y sin marcas de agua.",
+  "cuando": "2026-10-06T19:32:04.959Z"
  }
 }
