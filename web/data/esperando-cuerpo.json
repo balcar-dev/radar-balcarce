@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06T12:32:31.386Z",
+ "generado": "2026-10-06T13:03:11.672Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,6 +13,11 @@
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/economia/2026/10/06/el-gobierno-abrira-este-jueves-las-ofertas-economicas-para-privatizar-aysa-busca-recaudar-cerca-de-us500-millones/",
      "fecha": "2026-10-06T10:36:43.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/economia/avanza-la-privatizacion-aysa-y-el-jueves-se-conoceran-las-ofertas-dos-consorcios-empresas-n6330503",
+     "fecha": "2026-10-06T12:50:00.000Z"
     },
     {
      "medio": "Ámbito",
@@ -35,41 +40,9 @@
      "fecha": "2026-10-06T12:04:15.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 81 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 92 palabras",
    "maximo": 4
-  },
-  {
-   "id": "1cr7egi",
-   "titulo": "Fentanilo contaminado: la provincia de Buenos Aires autorizó a sus hospitales a descartar los medicamentos de HLB Pharma y Laboratorios Ramallo",
-   "copete": "El Gobierno de la provincia de Buenos Aires autorizó a sus hospitales y diversos establecimientos sanitarios dependientes del Ministerio de Salud a proceder con el descarte de medicamentos elaborados por las firmas HLB Pharma Group S.A. y Laboratorios Ramallo S.A.. La…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-06T11:16:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/informacion-general/fentanilo-contaminado-la-provincia-buenos-aires-autorizo-sus-hospitales-descartar-los-medicamentos-hlb-pharma-y-laboratorios-ramallo-n6330449",
-     "fecha": "2026-10-06T11:16:00.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/provincia/la-provincia-autorizo-a-sus-hospitales-a-descartar-medicamentos-de-hlb-pharma-y-laboratorios-ramallo",
-     "fecha": "2026-10-06T11:59:49.000Z"
-    },
-    {
-     "medio": "QZ Noticias (Mar del Plata)",
-     "enlace": "https://www.qznoticias.com/la-provincia/la-provincia-autorizo-a-descartar-mas-de-44-millones-de-medicamentos-de-hlb-pharma-y-laboratorios-ramallo",
-     "fecha": "2026-10-06T12:12:24.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/la-provincia-autorizo-sus-hospitales-descartar-medicamentos-hlb-pharma-y-laboratorios-ramallo-n56267",
-     "fecha": "2026-10-06T11:32:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (numero): el copete dice 4.000.000 y la fuente no lo dice",
-   "maximo": 3
   },
   {
    "id": "1jawjgc",
@@ -86,12 +59,17 @@
     {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-anuncio-la-salida-del-interventor-del-enacom-y-designo-a-su-reemplazante-nid06102026/",
-     "fecha": "2026-10-06T06:39:05.000Z"
+     "fecha": "2026-10-06T12:51:57.000Z"
     },
     {
      "medio": "QZ Noticias (Mar del Plata)",
      "enlace": "https://www.qznoticias.com/el-pais/el-gobierno-oficializo-la-salida-de-juan-martin-ozores-y-nombro-a-un-nuevo-interventor-al-frente-del-enacom",
      "fecha": "2026-10-06T11:12:04.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/politica/cambio-el-enacom-renuncio-juan-martin-ozores-y-asumio-un-ingeniero-pasado-telecom-n56269",
+     "fecha": "2026-10-06T12:25:00.000Z"
     },
     {
      "medio": "Infobae",
@@ -158,7 +136,7 @@
     {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/la-iglesia-y-el-ministerio-de-salud-acordaron-mantener-una-mesa-de-dialogo-por-la-crisis-en-nid06102026/",
-     "fecha": "2026-10-06T11:56:46.000Z"
+     "fecha": "2026-10-06T12:30:38.000Z"
     },
     {
      "medio": "El Destape",
@@ -229,23 +207,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "9ubtg0",
-   "titulo": "Básquetbol Resultados dispares cosechó la Escuela Municipal",
-   "copete": "",
-   "seccion": "Deportes",
-   "fecha": "2026-10-06T01:01:20.534Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/deportes/14294-resultados-dispares-cosecho-la-escuela-municipal/",
-     "fecha": null
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
   }
  ]
 }

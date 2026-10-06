@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T12:32:31.386Z",
- "portada": 48,
- "archivo": 956,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-06T13:03:11.672Z",
+ "portada": 51,
+ "archivo": 958,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-06T12:32:31.411Z",
+  "generado": "2026-10-06T13:03:11.692Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -93,13 +93,18 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
-      "id": "i06m20",
-      "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
+      "id": "1cr7egi",
+      "titulo": "La Provincia autoriza a sus hospitales a descartar insumos de laboratorios investigados",
+      "seccion": "Argentina"
+     },
+     {
+      "id": "133cyna",
+      "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
       "seccion": "Balcarce"
      },
      {
@@ -111,11 +116,6 @@
       "id": "108t4y0",
       "titulo": "Burkini Faso recibe a su selección sub 23 tras la goleada con Argentina",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "aa0h34",
-      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -126,17 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
-      "id": "1pofkpj",
-      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
+      "id": "i06m20",
+      "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
       "seccion": "Balcarce"
      },
      {
       "id": "n1xmig",
       "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "aa0h34",
+      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
+      "seccion": "Automovilismo"
      },
      {
       "id": "e5jokd",
@@ -168,17 +173,23 @@
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "1onhk2k",
      "titulo": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
-     "seccion": "Deportes",
+     "cuando": "2026-10-06T12:45:29.843Z"
+    }
+   ],
+   "cola": [
+    {
+     "id": "133cyna",
+     "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-05T20:15:22.921Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-06T14:15:29.843Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

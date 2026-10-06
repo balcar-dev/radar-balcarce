@@ -7983,13 +7983,16 @@
   "cuando": "2026-10-06T10:31:33.011Z"
  },
  "18wosri": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/18wosri.jpg",
+  "medio": "INTA",
+  "credito": "Foto: INTA",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El INTA Rafaela implementa cruzamientos entre ganado lechero y carnicero",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-06T11:33:02.602Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://www.argentina.gob.ar/noticias/carne-derivada-del-tambo-cruzamientos-estrategicos-para-agregar-valor",
+  "imagenOriginal": "https://www.argentina.gob.ar/sites/default/files/2026/09/carne_tambo_2.jpg",
+  "razon": "La foto A tiene mejor encuadre, mostrando más terreno y flores, y ninguna de las dos presenta marcas ni menores.",
+  "cuando": "2026-10-06T13:02:48.398Z"
  },
  "dowztx": {
   "archivo": "fotos-notas/dowztx.jpg",
@@ -8039,5 +8042,29 @@
   "imagenOriginal": "https://cdnartic.ar/eCHr4ZImEg7taVjT3tvXCOWkuPY=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/10/agustin_canapino.png",
   "razon": "La foto B es limpia y no tiene marcas de agua superpuestas, a diferencia de la A que incluye texto en pantalla.",
   "cuando": "2026-10-06T12:32:13.884Z"
+ },
+ "133cyna": {
+  "archivo": "fotos-notas/133cyna.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
+  "enlace": "https://www.radiogabal.com.ar/index.php/politica/proponen-informar-a-vecinos-de-san-agustin-y-los-pinos-sobre-la-numeracion-oficial-de-sus-domicilios",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2024/2024-07-03-17-3-112023-04-10-14-34-1Entrada_de_San_Agustin.jpg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y encuadre, y no presenta marcas de agua ni menores de edad.",
+  "cuando": "2026-10-06T13:02:48.398Z"
+ },
+ "1cr7egi": {
+  "archivo": "fotos-notas/1cr7egi.webp",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Provincia autoriza a sus hospitales a descartar insumos de laboratorios investigados",
+  "enlace": "https://www.ambito.com/informacion-general/fentanilo-contaminado-la-provincia-buenos-aires-autorizo-sus-hospitales-descartar-los-medicamentos-hlb-pharma-y-laboratorios-ramallo-n6330449",
+  "imagenOriginal": "https://media.ambito.com/p/5336f364abdfed3b6693f427b803741f/adjuntos/239/imagenes/042/640/0042640808/fentanilo.png",
+  "razon": "Muestra ampollas de laboratorio con buena nitidez y sin marcas de agua ni menores.",
+  "cuando": "2026-10-06T13:02:48.398Z"
  }
 }
