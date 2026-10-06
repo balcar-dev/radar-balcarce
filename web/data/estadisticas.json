@@ -1006,6 +1006,53 @@
         "vistas": 91,
         "interacciones": 5
       }
+    },
+    {
+      "cuando": "2026-10-06T12:00:20.312Z",
+      "web": {
+        "u12": {
+          "visitas": 52,
+          "vistas": 59
+        },
+        "a12": {
+          "visitas": 19,
+          "vistas": 60
+        },
+        "u24": {
+          "visitas": 71,
+          "vistas": 119
+        },
+        "a24": {
+          "visitas": 18,
+          "vistas": 123
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 17
+          },
+          {
+            "camino": "/nota/campo-de-pato-gana-el-torneo-regional-y-asciende-en-hockey-1njgnul",
+            "vistas": 9
+          },
+          {
+            "camino": "/seccion/futbol",
+            "vistas": 8
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 7,
+        "vistas": 807,
+        "interacciones": 0
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 84,
+        "alcance": 4,
+        "vistas": 11,
+        "interacciones": 3
+      }
     }
   ],
   "dias": {
@@ -1405,9 +1452,8 @@
     },
     "2026-10-04": {
       "referentes": {
-        "directo": 42,
-        "facebook.com": 11,
-        "google.com": 1
+        "directo": 50,
+        "facebook.com": 10
       },
       "notas": {
         "futbolpartidosliga20261002": 16,
@@ -1429,6 +1475,7 @@
         "17lpda8": 2,
         "8cknxd": 2,
         "5mn9v7": 2,
+        "repaso20261003manana": 1,
         "3cr087": 1,
         "1t477sv": 1,
         "f1parrilla2026r16": 1,
@@ -1438,7 +1485,6 @@
         "wjdq6r": 1,
         "ayjy85": 1,
         "15ikzjc": 1,
-        "repaso20261003manana": 1,
         "nm28kh": 1,
         "ule632": 1
       },
@@ -1448,7 +1494,6 @@
         "/seccion/tecnologia": 9,
         "/clima": 3,
         "/seccion/politica": 2,
-        "/seccion/automovilismo": 1,
         "/farmacias": 1,
         "/seccion/cultura": 1,
         "/seccion/economia": 1,
@@ -1456,6 +1501,7 @@
         "/seccion/argentina": 1,
         "/seccion/balcarce": 1,
         "/seccion/policiales": 1,
+        "/seccion/automovilismo": 1,
         "/agenda": 1
       },
       "paises": {
@@ -1500,29 +1546,30 @@
     },
     "2026-10-05": {
       "referentes": {
-        "facebook.com": 18,
+        "facebook.com": 26,
         "directo": 5
       },
       "paises": {
+        "US": 39,
         "AR": 31,
-        "US": 26,
         "SE": 5,
         "IE": 2,
         "TW": 2,
         "CN": 1
       },
-      "dispositivos": {
-        "desktop": 55,
-        "mobile": 12
-      },
+      "dispositivos": {},
       "notas": {
         "1njgnul": 8,
         "cn09w9": 6,
+        "12yxkc9": 5,
+        "z08pph": 4,
         "futbolresultadosliga20261002": 4,
         "uml8iq": 3,
         "futbolpartidosliga20261002": 2,
         "173ttfz": 2,
         "1vnue0q": 2,
+        "wb8pre": 2,
+        "uzokxq": 2,
         "n1xmig": 2,
         "c1nalz": 2,
         "1ni344u": 1
@@ -1534,8 +1581,8 @@
         "/seccion/tecnologia": 3,
         "/seccion/automovilismo": 2
       },
-      "visitas": 23,
-      "vistas": 67,
+      "visitas": 31,
+      "vistas": 80,
       "horas": [
         0,
         0,
@@ -1558,10 +1605,95 @@
         0,
         3,
         0,
-        0,
+        13,
         0,
         0
       ]
+    },
+    "2026-10-06": {
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        46,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "paises": {
+        "CN": 42,
+        "US": 4
+      },
+      "referentes": {
+        "directo": 44
+      },
+      "visitas": 0,
+      "vistas": 0,
+      "notas": {
+        "k7pcxh": 1,
+        "1pfa62o": 1,
+        "1pwavd9": 1,
+        "108t4y0": 1,
+        "z08pph": 1,
+        "y68w3c": 1,
+        "1njgnul": 1,
+        "aa0h34": 1,
+        "sd36kl": 1,
+        "1gklhao": 1,
+        "ialwkh": 1,
+        "1vnue0q": 1,
+        "9pla58": 1,
+        "1tib4ft": 1,
+        "6txjlx": 1,
+        "repaso20261005tarde": 1,
+        "1cgax2i": 1,
+        "12yxkc9": 1,
+        "2buh35": 1,
+        "repaso20261005noche": 1,
+        "nprm173thi": 1,
+        "w7y7kg": 1,
+        "1btbpkb": 1,
+        "gepu85": 1,
+        "9m9h4e": 1
+      },
+      "paginas": {
+        "/": 5,
+        "/seccion/automovilismo": 1,
+        "/seccion/politica": 1,
+        "/seccion/argentina": 1,
+        "/agenda/caminata-rosa-muni24072": 1,
+        "/seccion/cultura": 1,
+        "/farmacias": 1,
+        "/seccion/futbol": 1,
+        "/seccion/balcarce": 1,
+        "/agenda/uttd-tierras-del-diablo-muni22346": 1,
+        "/seccion/agro": 1,
+        "/clima": 1,
+        "/dolar": 1,
+        "/agenda/22-fiesta-nacional-del-postre-muni22540": 1,
+        "/util": 1
+      },
+      "dispositivos": {
+        "desktop": 44,
+        "mobile": 2
+      }
     }
   }
 }
