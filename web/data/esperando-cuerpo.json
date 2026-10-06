@@ -1,19 +1,14 @@
 {
- "generado": "2026-10-06T05:32:35.648Z",
+ "generado": "2026-10-06T06:01:43.664Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "lniqz9",
-   "titulo": "Investigan a un camionero acusado de quedarse con 32 toneladas de papa",
-   "copete": "Personal de la SubDDI Balcarce, en conjunto con efectivos de la Estación de Policía Comunal (EPC), realizó en las últimas horas dos allanamientos en el marco de una investigación iniciada a partir de una denuncia por el presunto robo de 32.000 kilos de papa. La causa se inició…",
-   "seccion": "Policiales",
-   "fecha": "2026-10-05T22:40:41.000Z",
+   "id": "zpjdkr",
+   "titulo": "Aprehendieron a un chofer acusado de desviar 32 toneladas de papa",
+   "copete": "Un hombre fue aprehendido en las últimas horas en el marco de una investigación iniciada a raíz de una denuncia por el presunto desvío de 32.000 kilos de papa que debían ser transportados desde Balcarce hacia Mar del Plata. El procedimiento fue llevado adelante por personal de…",
+   "seccion": "Agro",
+   "fecha": "2026-10-05T22:42:00.196Z",
    "fuentes": [
-    {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/investigan-a-un-camionero-acusado-de-quedarse-con-32-toneladas-de-papa-en-balcarce/",
-     "fecha": "2026-10-05T22:40:41.000Z"
-    },
     {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/aprehendieron-un-chofer-acusado-de.html",
@@ -33,6 +28,60 @@
    "intentos": 3,
    "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 3
+  },
+  {
+   "id": "1em1ou0",
+   "titulo": "Proponen crear un Registro Municipal de Acompañantes Terapéuticos",
+   "copete": "Los concejales Fara Amado Cunqueiro y Gonzalo Scioli, del bloque Somos, presentaron en el Honorable Concejo Deliberante un proyecto de ordenanza que propone crear un Registro Municipal de Acompañantes Terapéuticos del Partido de Balcarce. La iniciativa busca generar una…",
+   "seccion": "Política",
+   "fecha": "2026-10-05T22:28:36.460Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/proponen-crear-un-registro-municipal-de.html",
+     "fecha": "2026-10-05T22:28:36.460Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "sxc156",
+   "titulo": "Discapacidad: la Iglesia valoró la reunión con el Gobierno, pero exigió soluciones concretas para el sector",
+   "copete": "La Conferencia Episcopal Argentina valoró la reunión mantenida con funcionarios del Ministerio de Salud de la Nación para abordar la crítica situación del sector de discapacidad, aunque reclamó respuestas urgentes a las demandas presentadas. Las autoridades eclesiásticas…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-05T18:03:13.305Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/discapacidad--la-iglesia-valoro-la-reunion-con-el-gobierno--pero-exigio-soluciones-concretas-para-el-sector_a6ac3d246efa9665a6c23cda8",
+     "fecha": "2026-10-05T18:03:13.305Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/la-iglesia-valoro-la-reunion-el-gobierno-discapacidad-pero-reclamo-medidas-concretas-n6330253",
+     "fecha": "2026-10-05T18:15:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/iglesia-reunion-gobierno-discapacidad-soluciones-concretas/",
+     "fecha": "2026-10-05T21:51:20.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/discapacidad-la-iglesia-pide-soluciones-concretas-politica-y-economia_1791259928",
+     "fecha": "2026-10-06T04:12:08.000Z"
+    },
+    {
+     "medio": "Punto Noticias",
+     "enlace": "https://puntonoticias.com/discapacidad-la-iglesia-valoro-la-reunion-con-el-gobierno-pero-exigio-soluciones-concretas-para-el-sector/",
+     "fecha": "2026-10-05T18:44:29.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 59 palabras",
+   "maximo": 4
   },
   {
    "id": "1k1mxar",

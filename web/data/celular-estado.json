@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T05:32:35.648Z",
+ "generado": "2026-10-06T06:01:43.664Z",
  "portada": 59,
- "archivo": 952,
- "esperandoCuerpo": 5,
+ "archivo": 953,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-06T05:32:35.678Z",
+  "generado": "2026-10-06T06:01:43.694Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "1pofkpj",
-      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
-     },
      {
       "id": "108t4y0",
       "titulo": "Burkini Faso recibe a su selección sub 23 tras la goleada con Argentina",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "seccion": "Balcarce"
      },
      {
       "id": "aa0h34",
@@ -126,29 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
-    "notas": [
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -157,8 +136,24 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 50,
+    "notas": [
+     {
+      "id": "9m9h4e",
+      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "e5jokd",
+      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -168,12 +163,6 @@
      "id": "12yxkc9",
      "titulo": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "6txjlx",
-     "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],
