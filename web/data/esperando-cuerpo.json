@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06T10:31:47.382Z",
+ "generado": "2026-10-06T11:01:55.477Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -40,14 +40,29 @@
      "fecha": "2026-10-06T06:27:42.000Z"
     },
     {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/el-gobierno-oficializo-la-salida-del-interventor-del-enacom-y-designo-su-reemplazante-n250828",
+     "fecha": "2026-10-06T10:47:00.000Z"
+    },
+    {
      "medio": "Crónica",
      "enlace": "https://www.cronica.com.ar/politica/el-gobierno-acepto-la-renuncia-de-juan-martin-ozores-al-enacom-y-designo-a-andres-michelazzo-como-nuevo-interventor/",
      "fecha": "2026-10-06T07:40:00.000Z"
     },
     {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-designo-a-andres-michelazzo-como-nuevo-interventor-del-enacom-tras-la-renuncia-de-juan-martin-ozores/",
+     "fecha": "2026-10-06T10:31:45.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/enacom--renuncio-el-interventor-y-el-gobierno-designo-a-su-reemplazo-con-rango-de-secretario_a6ac4cad261c1587439e8986b",
      "fecha": "2026-10-06T10:27:26.000Z"
+    },
+    {
+     "medio": "El Economista",
+     "enlace": "https://eleconomista.com.ar/politica/nueva-renuncia-gobierno-fue-interventor-clave-milei-ya-eligio-su-reemplazante-n98635",
+     "fecha": "2026-10-06T10:14:00.000Z"
     }
    ],
    "intentos": 5,
@@ -87,11 +102,6 @@
      "fecha": "2026-10-05T15:59:00.000Z"
     },
     {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/gobierno-convoca-iglesia-discapacidad-visita-papa/",
-     "fecha": "2026-10-05T15:46:40.000Z"
-    },
-    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-se-reune-con-la-iglesia-para-tratar-las-politicas-de-discapacidad-en-el-marco-de-la-visita-del-papa-leon-xiv-al-cottolengo/",
      "fecha": "2026-10-05T15:37:01.000Z"
@@ -120,6 +130,11 @@
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-politica-y-economia_1791206280",
      "fecha": "2026-10-05T13:34:04.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/gobierno-convoca-iglesia-discapacidad-visita-papa/",
+     "fecha": "2026-10-05T15:46:40.000Z"
     }
    ],
    "intentos": 1,

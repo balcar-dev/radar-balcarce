@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T10:31:47.382Z",
+  "generado": "2026-10-06T11:01:55.477Z",
   "notas": [
     {
       "id": "futboltablaliga20261002",
@@ -577,7 +577,7 @@
       "fecha": "2026-10-06T01:53:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T10:31:19.639Z",
-      "relevancia": 74,
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1113,7 +1113,7 @@
       "fecha": "2026-10-05T22:45:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T00:31:12.019Z",
-      "relevancia": 39,
+      "relevancia": 32,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1180,7 +1180,7 @@
       "fecha": "2026-10-05T22:33:29.134Z",
       "sinFecha": false,
       "visto": "2026-10-05T23:31:12.329Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1253,12 +1253,12 @@
       "seccion": "Policiales",
       "medios": [
         "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infobrisas (Radio Brisas)",
         "Radio 10 Mar del Plata (FM 105.5)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
         "Diario La Vanguardia",
+        "Infobrisas (Radio Brisas)",
         "QZ Noticias (Mar del Plata)"
       ],
       "enlace": "https://www.elmarplatense.com/robaron-pertenencias-de-un-hombre-fallecido-realizaron-allanamientos-en-mar-del-plata-y-balcarce",
@@ -1266,7 +1266,7 @@
       "fecha": "2026-10-05T20:13:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T21:32:05.316Z",
-      "relevancia": 100,
+      "relevancia": 86,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1342,6 +1342,7 @@
         "El Destape",
         "Página/12",
         "Noticias Argentinas (NA)",
+        "El Día",
         "0221",
         "La Nueva"
       ],
@@ -1640,6 +1641,7 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Voz del Pueblo",
+        "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
@@ -2128,10 +2130,10 @@
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17885-argentina-convocan-a-los-productores-de-papa-del-sudeste-bonaerense-a-participar-del-censo-hortifloricola-2026",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T16:30:57.223Z",
-      "sinFecha": false,
+      "fecha": "2026-10-05T16:31:22.668Z",
+      "sinFecha": true,
       "visto": "2026-10-05T16:31:22.668Z",
-      "relevancia": 30,
+      "relevancia": 26,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -2286,10 +2288,10 @@
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17884-argentina-aconcagua-propone-simplificar-el-registro-de-labores-y-la-trazabilidad-en-la-produccion-de-papa",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T15:52:08.378Z",
-      "sinFecha": false,
+      "fecha": "2026-10-05T15:52:36.644Z",
+      "sinFecha": true,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 30,
+      "relevancia": 26,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -2726,89 +2728,6 @@
       }
     },
     {
-      "id": "yqqsx9",
-      "titulo": "Los bonos y acciones argentinas suben y el riesgo país cae",
-      "copete": "Los títulos soberanos y las acciones de empresas locales registran fuertes subas en la jornada financiera. El indicador de JP Morgan desciende tras el impacto de los mercados en Brasil.",
-      "cuerpo": "Los papeles de empresas argentinas muestran avances de hasta el 7%, impulsados por el clima financiero en Brasil tras el resultado electoral de la primera vuelta presidencial.\n\nEntre las principales subas de la jornada se destacan Mercado Libre con un 6,5%, BBVA con un 6,2%, Macro con un 5,7% y Central Puerto con un 5,4%. En las semanas previas, la tensión global y los datos adversos de la economía local habían llevado al indicador a rozar las 400 unidades en julio y a superar los 630 puntos a principios de mes, según se había informado.\n\nEl ministro de Economía, Luis Caputo, había señalado la semana pasada desde París, en el marco del Argentina Week, que parte de la volatilidad previa respondía a un anticipado clima electoral.",
-      "guion": "Los bonos y acciones argentinas suben y el riesgo país cae",
-      "seccion": "Economía",
-      "medios": [
-        "Ámbito",
-        "La Nación",
-        "Clarín",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Crónica"
-      ],
-      "enlace": "https://www.clarin.com/economia/medio-euforia-mercados-brasil-suben-bonos-acciones-argentinas-baja-riesgo-pais_0_RVMQHQnSsL.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T14:25:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 72,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "El indicador de JP Morgan desciende a 614 puntos, según Clarín.",
-        "Las acciones argentinas avanzan hasta un 7% en la jornada financiera.",
-        "El ministro de Economía, Luis Caputo, declaró la semana pasada en París que la volatilidad respondía al clima electoral."
-      ],
-      "noConfirmado": [
-        "No se informaron detalles sobre el impacto sectorial específico en el plano local."
-      ],
-      "textoRedes": "Los bonos y acciones argentinas suben con fuerza y el indicador de JP Morgan baja a 614 puntos tras el impacto financiero de los mercados de Brasil.",
-      "etiquetas": [
-        "riesgo pais",
-        "acciones argentinas",
-        "economia",
-        "mercados",
-        "jp morgan"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/medio-euforia-mercados-brasil-suben-bonos-acciones-argentinas-baja-riesgo-pais_0_RVMQHQnSsL.html",
-          "fecha": "2026-10-05T14:25:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló la caída del riesgo país a 614 puntos, las subas de las acciones argentinas y las declaraciones del ministro Luis Caputo."
-        },
-        {
-          "medio": "iProUP",
-          "enlace": "https://www.iproup.com/finanzas/72068-efecto-brasil-en-argentina-cae-el-riesgo-pais-y-suben-bonos-y-merval",
-          "fecha": "2026-10-05T14:39:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional sobre el hecho."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "34t457",
-          "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
-          "fecha": "2026-10-01T16:53:08.000Z",
-          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
-        },
-        {
-          "id": "1b57l0z",
-          "titulo": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
-          "fecha": "2026-09-27T03:01:00.000Z",
-          "ruta": "/nota/el-riesgo-pais-baja-a-604-puntos-tras-el-repunte-de-los-bonos-1b57l0z"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "los-bonos-y-acciones-argentinas-suben-y-el-riesgo-pais-cae",
-      "foto": {
-        "archivo": "fotos-notas/yqqsx9.jpg",
-        "credito": "Foto: Clarín"
-      }
-    },
-    {
       "id": "1tprlf6",
       "titulo": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
       "copete": "La entidad financiera oficial presentó una herramienta comercial con bonificaciones en créditos y reintegros para sostener plantillas de personal y promover el empleo formal.",
@@ -2817,6 +2736,7 @@
       "seccion": "Agro",
       "medios": [
         "Ámbito",
+        "Noticias Argentinas (NA)",
         "Agrositio"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
@@ -2824,7 +2744,7 @@
       "fecha": "2026-10-05T14:24:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 36,
+      "relevancia": 46,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3097,9 +3017,9 @@
         "Infobae",
         "El Cronista",
         "Perfil",
+        "El Economista",
         "Canal 26",
-        "El Día",
-        "El Economista"
+        "El Día"
       ],
       "enlace": "https://eleconomista.com.ar/politica/zurdos-empobrecedores-corranse-medio-explosivo-mensaje-milei-tras-elecciones-brasil-n98613",
       "teniaImagenLaFuente": true,
@@ -4082,6 +4002,112 @@
       }
     },
     {
+      "id": "16q21ih",
+      "titulo": "Los premios Martín Fierro de la Música anuncian su primera gala",
+      "copete": "La entidad periodística de la televisión y la radiofonía nacional estrena una premiación dedicada a la industria discográfica. La ceremonia inaugural se realizará el miércoles 14 de octubre en el distrito porteño.",
+      "cuerpo": "La Asociación de Periodistas de la Televisión y la Radiofonía Argentinas dio a conocer el domingo 4 de octubre la nómina de nominados para la entrega inaugural de los premios Martín Fierro de la Música 2026. La ceremonia se realizará el miércoles 14 de octubre, desde las 19, en el complejo Tango Porteño de la Ciudad de Buenos Aires.\n\nLa entidad organizadora, presidida por Luis Ventura, reunirá a referentes de diferentes generaciones de la escena nacional. La conducción principal de la gala estará a cargo de Hernán Drago y Edith Hermida, mientras que Nara Ferragut, Daniel Gómez Rinaldi, El Polaco y Rocío Marengo recibirán a las figuras en la alfombra roja.\n\nEl encuentro contará con presentaciones musicales en vivo y homenajes a la trayectoria de distintos artistas. Entre los nominados que competirán en esta primera edición figuran Tini Stoessel, Lali Espósito, María Becerra, Cazzu, Fito Páez, Babasónicos y Tan Biónica, entre otros referentes de diversos géneros.",
+      "guion": "Los premios Martin Fierro de la Música anuncian su primera gala",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Ámbito",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "La Brújula 24",
+        "La Tecla",
+        "El Eco de Tandil",
+        "A24",
+        "Minuto Uno",
+        "Crónica",
+        "C5N"
+      ],
+      "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T11:15:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-05T15:52:36.644Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Se conocieron los nominados a la primera edición de los premios.",
+        "La ceremonia inaugural será el miércoles 14 de octubre en Tango Porteño.",
+        "APTRA encabeza la organización del evento con la presidencia de Luis Ventura.",
+        "Hernán Drago y Edith Hermida estarán al frente de la conducción."
+      ],
+      "textoRedes": "APTRA dio a conocer los nominados para la primera edición de los premios Martín Fierro de la Música, que se celebrarán el próximo miércoles 14 de octubre en la Ciudad de Buenos Aires con la conducción de Hernán Drago y Edith Hermida.",
+      "etiquetas": [
+        "Martin Fierro de la Musica",
+        "premios",
+        "musica argentina",
+        "APTRA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
+          "fecha": "2026-10-05T11:15:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles completos de la ceremonia, nominados principales, autoridades de APTRA, conductores y ubicación."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/martin-fierro-musica-2026-uno-uno-la-lista-nominados-n6330133",
+          "fecha": "2026-10-05T14:13:00.000Z",
+          "oficial": false,
+          "aporte": "Anuncio general sobre la celebración de la primera edición y la presencia de figuras nacionales."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/ratingcero/martin-fierro-la-musica-2026-la-lista-completa-los-nominados-n250769",
+          "fecha": "2026-10-05T15:26:00.000Z",
+          "oficial": false,
+          "aporte": "Mención de María Becerra, Lali y Tini como las artistas con más nominaciones, además de shows y homenajes."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/martin-fierro-de-la-musica-2026-todos-los-artistas-que-competiran-en-la-primera-edicion/",
+          "fecha": "2026-10-05T15:03:00.000Z",
+          "oficial": false,
+          "aporte": "Información sobre la fecha de anuncio de nominados y el día de la ceremonia."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/diarioshow/farandula/martin-fierro-de-la-musica-2026-la-lista-completa-de-nominados/",
+          "fecha": "2026-10-05T14:30:32.000Z",
+          "oficial": false,
+          "aporte": "Confirmación del estreno de la edición dedicada exclusivamente a la música para el 14 de octubre."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/espectaculos/todos-los-nominados-a-los-martin-fierro-de-la-musica-2026_a6ac3a0b5efa9665a6c1d6dd5",
+          "fecha": "2026-10-05T13:05:00.000Z",
+          "oficial": false,
+          "aporte": "Datos sobre la entidad organizadora, APTRA, y la fecha de publicación de las nominaciones."
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170180-martin-fierro-de-la-musica-tini-lali-y-maria-becerra-encabezan-la-primera-gala",
+          "fecha": "2026-10-05T12:15:00.000Z",
+          "oficial": false,
+          "aporte": "Fuente registrada sin texto disponible."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "los-premios-martin-fierro-de-la-musica-anuncian-su-primera-gala",
+      "foto": {
+        "archivo": "fotos-notas/16q21ih.jpg",
+        "credito": "Foto: A24"
+      }
+    },
+    {
       "id": "2dauj9",
       "titulo": "La industria argentina registra el cuarto peor desempeño mundial",
       "copete": "La producción manufacturera nacional se ubicó 11,2% por debajo de 2023 en julio. El informe contrasta con el crecimiento de la mediana internacional.",
@@ -4097,7 +4123,7 @@
       "fecha": "2026-10-05T10:40:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T13:01:23.078Z",
-      "relevancia": 36,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4154,7 +4180,6 @@
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
-        "iProfesional",
         "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/economia/arca-cambia-la-forma-presentar-el-impuesto-las-ganancias-cuando-sera-obligatorio-el-nuevo-sistema-n6330022",
@@ -4162,7 +4187,7 @@
       "fecha": "2026-10-05T08:25:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T12:31:16.062Z",
-      "relevancia": 72,
+      "relevancia": 68,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4662,9 +4687,9 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 11,
-      "sensacion": 10,
-      "humedad": 88,
+      "temp": 13,
+      "sensacion": 12,
+      "humedad": 84,
       "viento": 6,
       "rumbo": "N",
       "cielo": "Nublado",
@@ -5018,12 +5043,6 @@
       "titulo": "Paro en la Línea A del subte: será este martes desde las…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "18zq83y",
-      "titulo": "¿Por qué se retrasó la largada del Gran Premio de Baréin…",
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "xof75k",
