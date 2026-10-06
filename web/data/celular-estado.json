@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T22:32:52.742Z",
+ "generado": "2026-10-06T23:03:07.015Z",
  "portada": 66,
- "archivo": 998,
- "esperandoCuerpo": 3,
+ "archivo": 995,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-06T22:32:52.784Z",
+  "generado": "2026-10-06T23:03:07.053Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 49,
     "notas": [
-     {
-      "id": "lcytj",
-      "titulo": "Lionel Messi llora emocionado en el micro rumbo al Monumental",
-      "seccion": "Fútbol"
-     },
      {
       "id": "1jfpdis",
       "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
@@ -175,8 +170,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "id": "823fzo",
+      "titulo": "Lionel Messi juega su último partido con la selección nacional ante Benín",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "sjekvy",
+      "titulo": "Organizan una caminata religiosa hacia la ermita local",
       "seccion": "Cultura y agenda"
      }
     ]
