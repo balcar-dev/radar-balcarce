@@ -1,68 +1,201 @@
 {
-  "generado": "2026-10-06T16:33:53.303Z",
+  "generado": "2026-10-06T17:02:46.479Z",
   "notas": [
     {
-      "id": "zynzss",
-      "titulo": "Un juez declara inconstitucional el decreto que frenaba fondos universitarios",
-      "copete": "El magistrado federal Martín Cormick ordenó al Gobierno cumplir la ley de financiamiento educativo. El fallo responde a una demanda de universidades y docentes contra la norma que frenaba su aplicación.",
-      "cuerpo": "La medida judicial responde a una acción de amparo colectivo presentada por el Consejo Interuniversitario Nacional, universidades nacionales y docentes, sumada a una demanda de la Universidad de Buenos Aires.\n\nLa normativa en cuestión había sido sancionada en agosto de 2025 por el Congreso, luego de que ambas cámaras reunieran los dos tercios de los votos necesarios para insistir con el proyecto tras el veto del Poder Ejecutivo. El magistrado consideró que condicionar la promulgación a la determinación de partidas presupuestarias funcionó como un mecanismo extraconstitucional para frenar una norma ratificada por el parlamento.\n\nAnte esta resolución, el juzgado ordenó al Gobierno nacional el cumplimiento inmediato de la ley mediante las normas reglamentarias y ejecutorias necesarias.",
-      "guion": "Un juez declara inconstitucional el decreto que frenaba fondos universitarios",
-      "seccion": "Política",
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "copete": "El artista urbano analizó la obra que realizó en 2018 en la esquina de 26 y Favaloro. Recordó el contexto en el que se gestó el trabajo y el vínculo del capitán con la ciudad.",
+      "cuerpo": "El dibujante y artista urbano Nicolás Lahitte visitó un medio local para repasar la historia del mural de Lionel Messi ubicado en la esquina de 26 y Favaloro, una obra realizada en 2018 durante la previa del Mundial de Rusia.\n\nEl trabajo formó parte de una iniciativa de la Subsecretaría de Juventud y se concretó de manera conjunta con Sebastián Vidal e Ignacio Ibarlucía en una pared donde antes se encontraba el trabajo del Sargento García. Según indicó el autor, el contexto social en torno al capitán de la Selección argentina era diferente al actual, ya que el deportista recibía diversos cuestionamientos mientras se realizaba el retrato.\n\nRespecto a ambas figuras, el artista valoró la posibilidad de haber presenciado toda la trayectoria del futbolista en contraste con el quíntuple campeón mundial.",
+      "guion": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda",
       "medios": [
-        "Ámbito",
-        "Minuto Uno",
-        "C5N"
+        "Diario La Vanguardia"
       ],
-      "enlace": "https://www.ambito.com/informacion-general/un-juez-declaro-inconstitucional-el-decreto-que-frenaba-la-ley-financiamiento-universitario-fue-un-mecanismo-extraconstitucional-n6330635",
+      "enlace": "https://www.diariolavanguardia.com/noticias/45008-nico-lahitte-y-el-mural-de-messi-es-admiracion-pura/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T15:37:00.000Z",
+      "fecha": "2026-10-06T17:01:25.569Z",
+      "sinFecha": true,
+      "visto": "2026-10-06T17:01:25.569Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Nicolás Lahitte es el autor del mural de Messi situado en 26 y Favaloro.",
+        "La obra se originó en 2018 a través de un programa de la Subsecretaría de Juventud junto a Sebastián Vidal e Ignacio Ibarlucía.",
+        "El artista también realizó recientemente un mural de Juan Manuel Fangio en el autódromo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El artista Nicolás Lahitte recordó cómo nació el mural de Lionel Messi en Balcarce y reflexionó sobre la dimensión del capitán de la Selección.",
+      "etiquetas": [
+        "Nicolás Lahitte",
+        "Lionel Messi",
+        "mural",
+        "arte urbano",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45008-nico-lahitte-y-el-mural-de-messi-es-admiracion-pura/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Entrevista al artista Nicolás Lahitte sobre la historia del mural de Lionel Messi en Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1jtty0p",
+          "titulo": "Fangio siempre presente: \"Nico\" Lahitte artífice de un nuevo mural del Quíntuple en el autódromo",
+          "fecha": "2026-09-20T17:00:51.000Z",
+          "ruta": "/nota/fangio-siempre-presente-nico-lahitte-artifice-de-un-nuevo-mural-del-1jtty0p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "nicolas-lahitte-repasa-la-historia-del-mural-de-messi",
+      "foto": {
+        "archivo": "fotos-notas/1793nst.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "ishs2l",
+      "titulo": "El Gobierno defiende la venta de tierras rurales a inversores extranjeros",
+      "copete": "El oficialismo respaldó la desregulación para captar capitales productivos. La oposición convocó a una sesión en el Congreso para el 15 de noviembre.",
+      "cuerpo": "El Gobierno nacional defendió este martes la eliminación de restricciones en la venta de campos a ciudadanos de otros países y aseguró que la medida apunta a captar capitales productivos. El vocero presidencial, Adrián Ravier, descartó que la adquisición de terrenos por parte de extranjeros vulnere la soberanía nacional y cuestionó las normativas previas por frenar el desarrollo del sector.\n\nLa postura oficial llega una semana después de que la Corte Suprema restituyera la vigencia del artículo 154 del DNU 70/2023. La normativa ya recibió el rechazo del Senado y los bloques opositores impulsan una nueva votación en el Congreso para el 15 de noviembre con el objetivo de revocarla de forma definitiva.",
+      "guion": "El Gobierno defiende la venta de tierras rurales a inversores extranjeros",
+      "seccion": "Agro",
+      "medios": [
+        "Agencia DIB",
+        "La Verdad"
+      ],
+      "enlace": "https://dib.com.ar/politica/el-gobierno-redoblo-su-defensa-la-venta-tierras-extranjeros-n56277",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T15:57:26.000Z",
       "sinFecha": false,
-      "visto": "2026-10-06T16:31:20.376Z",
-      "relevancia": 70,
+      "visto": "2026-10-06T17:01:25.569Z",
+      "relevancia": 57,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El juez Martín Cormick anuló el decreto que condicionaba el financiamiento educativo.",
-        "El fallo responde a un amparo de universidades, docentes y la Universidad de Buenos Aires.",
-        "La normativa había sido ratificada por el Congreso tras superar un veto presidencial.",
-        "El magistrado exigió al Ejecutivo el cumplimiento inmediato de la ley."
+        "El Gobierno nacional defendió la compra de campos por parte de extranjeros.",
+        "El vocero presidencial sostuvo que la medida busca atraer inversiones.",
+        "La oposición fijó una sesión en el Congreso para el 15 de noviembre.",
+        "El DNU 70/2023 ya fue rechazado en el Senado."
       ],
-      "seSabe": [
-        "El juez federal Martín Cormick emitió el fallo sobre la inconstitucionalidad del decreto 759/2025.",
-        "El amparo colectivo fue promovido por el Consejo Interuniversitario Nacional, universidades y docentes.",
-        "La Universidad de Buenos Aires presentó una demanda acumulada en la misma causa.",
-        "La ley 27.795 había sido ratificada en el Congreso por dos tercios de los votos tras un veto previo."
+      "noConfirmado": [
+        "No se confirmó si la sesión del 15 de noviembre logrará los votos necesarios para revocar el decreto."
       ],
-      "textoRedes": "La justicia declaró inconstitucional el decreto que condicionaba la ley de financiamiento universitario. El juez federal Martín Cormick ordenó al Gobierno el cumplimiento inmediato de la normativa tras un amparo de universidades y docentes.",
+      "textoRedes": "El Gobierno nacional defendió la eliminación de límites en la venta de tierras rurales a extranjeros para atraer inversiones productivas. En tanto, la oposición convocó a una sesión en el Congreso para el 15 de noviembre.",
       "etiquetas": [
-        "universidades",
-        "financiamiento educativo",
-        "Gobierno nacional"
+        "Gobierno nacional",
+        "Tierras",
+        "Extranjeros",
+        "Congreso",
+        "DNU 70/2023"
       ],
       "fuentesConsultadas": [
         {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/politica/el-gobierno-redoblo-su-defensa-la-venta-tierras-extranjeros-n56277",
+          "fecha": "2026-10-06T15:57:26.000Z",
+          "oficial": false,
+          "aporte": "Informó las declaraciones del vocero presidencial y la fecha de la sesión opositora en el Congreso."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/el-gobierno-redoblo-su-defensa-sobre-la-venta-de-tierras-a-extranjeros/",
+          "fecha": "2026-10-06T16:55:54.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo el mismo informe sobre la defensa oficial de la venta de tierras."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-defiende-la-venta-de-tierras-rurales-a-inversores",
+      "foto": {
+        "archivo": "fotos-notas/ishs2l.jpg",
+        "credito": "Foto: Agencia DIB"
+      }
+    },
+    {
+      "id": "tqz98z",
+      "titulo": "La chocotorta obtiene el segundo puesto en un ranking mundial",
+      "copete": "El postre tradicional argentino se ubicó en el podio de una clasificación internacional elaborada por TasteAtlas, por encima de preparaciones de Italia, Estados Unidos y Brasil.",
+      "cuerpo": "La receta argentina de galletas de chocolate, dulce de leche y queso crema alcanzó la segunda posición en el listado global de pasteles de chocolate publicado por TasteAtlas, según consignaron los medios consultados. La preparación sin cocción quedó por delante de especialidades de Italia, Estados Unidos y Brasil, y solo fue superada por el pastel sueco kladdkaka.\n\nEl sitio especializado recopiló valoraciones de comensales de diferentes países y situó en el tercer puesto a la torta caprese italiana y en el cuarto al pastel de lava estadounidense. La descripción de la chocotorta destacó que se vincula con la cocina italiana y el tiramisú, aunque su presencia en restaurantes continúa siendo poco frecuente fuera del país.",
+      "guion": "La chocotorta obtiene el segundo puesto en un ranking mundial",
+      "seccion": "Argentina",
+      "medios": [
+        "El Eco de Tandil",
+        "Ámbito",
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/tendencias/2026/10/06/la-chocotorta-argentina-esta-entre-los-tres-mejores-postres-del-mundo-segun-un-ranking/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T15:22:54.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T17:01:25.569Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La chocotorta quedó segunda en una clasificación internacional.",
+        "El ranking fue elaborado por la plataforma TasteAtlas.",
+        "Superó a preparaciones de Italia, Estados Unidos y Brasil.",
+        "El primer puesto fue para el pastel sueco kladdkaka."
+      ],
+      "seSabe": [
+        "La chocotorta obtuvo el segundo lugar en la clasificación global de pasteles de chocolate de TasteAtlas.",
+        "El postre argentino se elabora con bizcochos de chocolate, dulce de leche y queso crema.",
+        "El primer puesto fue para el kladdkaka de Suecia.",
+        "El tercer lugar correspondió a la torta caprese de Italia.",
+        "El cuarto puesto fue para el pastel de chocolate fundido de Estados Unidos."
+      ],
+      "textoRedes": "La chocotorta logró el segundo puesto en una clasificación internacional de pasteles de chocolate elaborada por TasteAtlas y quedó por delante de preparaciones de Italia, Estados Unidos y Brasil.",
+      "etiquetas": [
+        "chocotorta",
+        "gastronomia",
+        "ranking mundial",
+        "TasteAtlas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tendencias/2026/10/06/la-chocotorta-argentina-esta-entre-los-tres-mejores-postres-del-mundo-segun-un-ranking/",
+          "fecha": "2026-10-06T15:22:54.000Z",
+          "oficial": false,
+          "aporte": "Informó la ubicación de la chocotorta en el ranking y los detalles de su preparación."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/mundo/segun-un-ranking-la-chocotorta-argentina-esta-entre-los-tres-mejores-pasteles-del-mundo",
+          "fecha": "2026-10-06T15:57:21.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el segundo puesto del postre argentino en la clasificación internacional."
+        },
+        {
           "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/informacion-general/un-juez-declaro-inconstitucional-el-decreto-que-frenaba-la-ley-financiamiento-universitario-fue-un-mecanismo-extraconstitucional-n6330635",
-          "fecha": "2026-10-06T15:37:00.000Z",
+          "enlace": "https://www.ambito.com/lifestyle/orgullo-argentino-la-chocotorta-fue-elegida-como-la-segunda-mejor-torta-chocolate-del-mundo-n6330657",
+          "fecha": "2026-10-06T16:41:00.000Z",
           "oficial": false,
-          "aporte": "Detalló los argumentos del fallo judicial, los antecedentes del veto y la insistencia del Congreso."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/un-juez-declaro-inconstitucional-el-decreto-que-frena-la-ley-financiamiento-universitario-n6330663",
-          "fecha": "2026-10-06T16:15:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la existencia del amparo colectivo presentado por el Consejo Interuniversitario Nacional, universidades y docentes."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/un-juez-declaro-inconstitucional-el-decreto-que-frenaba-la-ley-financiamiento-universitario-fue-un-mecanismo-extraconstitucional-n250865",
-          "fecha": "2026-10-06T15:40:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los fundamentos principales del juez sobre el carácter extraconstitucional del decreto del Poder Ejecutivo."
+          "aporte": "Indicó que la preparación quedó por encima de platos de Italia, Estados Unidos y Brasil."
         }
       ],
       "verificacion": {
@@ -70,10 +203,10 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "un-juez-declara-inconstitucional-el-decreto-que-frenaba-fondos",
+      "slug": "la-chocotorta-obtiene-el-segundo-puesto-en-un-ranking-mundial",
       "foto": {
-        "archivo": "fotos-notas/zynzss.jpg",
-        "credito": "Foto: Minuto Uno"
+        "archivo": "fotos-notas/tqz98z.jpg",
+        "credito": "Foto: El Eco de Tandil"
       }
     },
     {
@@ -172,6 +305,83 @@
       }
     },
     {
+      "id": "7h598e",
+      "titulo": "Peter Lamelas pide al Senado la adhesión al tratado de patentes",
+      "copete": "El embajador estadounidense reclamó ante un foro empresarial la aprobación del tratado y la protección de datos regulatorios para captar inversiones millonarias.",
+      "cuerpo": "El embajador de Estados Unidos, Peter Lamelas, solicitó ante el foro de salud de la Cámara de Comercio Estadounidense que la Argentina adhiera al Tratado de Cooperación en materia de Patentes y resguarde los datos regulatorios de los remedios. Según indicó, esta medida permitiría captar inversiones por hasta 8.000 millones de dólares en el próximo sexenio.\n\nEl proyecto ya cuenta con el aval de la Cámara de Diputados desde el 27 de agosto de 2026, aunque debió retornar al Senado por una reserva vinculada al examen preliminar internacional. El diplomático advirtió que la dilación impacta de forma directa en los pacientes.\n\nAdemás, el representante extranjero detalló tres iniciativas bilaterales que incluyen tareas con los Centros para el Control y la Prevención de Enfermedades, la instalación de tecnología de diagnóstico en nosocomios y la apertura de una delegación de la FDA en Buenos Aires antes de concluir 2027.",
+      "guion": "Peter Lamelas pide al Senado la adhesión al tratado de patentes",
+      "seccion": "Argentina",
+      "medios": [
+        "El Eco de Tandil",
+        "Infobae",
+        "Ámbito"
+      ],
+      "enlace": "https://www.eleco.com.ar/politica/peter-lamelas-pidio-al-senado-aprobar-el-tratado-de-patentes",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T14:49:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T17:01:25.569Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El embajador Peter Lamelas reclamó la aprobación del tratado de patentes.",
+        "La medida podría atraer inversiones por 8.000 millones de dólares.",
+        "El proyecto volvió al Senado tras su paso por Diputados el 27 de agosto.",
+        "El diplomático anunció tres iniciativas sanitarias bilaterales."
+      ],
+      "seSabe": [
+        "El pedido del embajador Peter Lamelas se realizó este martes ante AmCham.",
+        "La Cámara de Diputados aprobó el texto el 27 de agosto de 2026.",
+        "El proyecto regresó al Senado por una reserva sobre el examen preliminar.",
+        "Se proyecta abrir una oficina de la FDA en Buenos Aires antes de finalizar 2027."
+      ],
+      "textoRedes": "El embajador estadounidense Peter Lamelas reclamó al Senado la aprobación del Tratado de Cooperación en materia de Patentes y la protección de datos regulatorios para atraer inversiones por hasta 8.000 millones de dólares.",
+      "etiquetas": [
+        "Estados Unidos",
+        "Senado",
+        "patentes",
+        "inversiones",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/peter-lamelas-pidio-al-senado-aprobar-el-tratado-de-patentes",
+          "fecha": "2026-10-06T14:49:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló el reclamo sobre patentes, el paso por Diputados y las tres líneas de trabajo conjunto."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/06/lamelas-le-pidio-al-senado-que-apruebe-el-tratado-de-patentes-y-adelanto-que-la-fda-abrira-una-oficina-en-buenos-aires-en-2027/",
+          "fecha": "2026-10-06T14:50:09.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el discurso del embajador fue este martes en el foro de AmCham."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/el-embajador-eeuu-pidio-al-senado-aprobar-el-tratado-patentes-y-anuncio-una-oficina-la-fda-buenos-aires-2027-n6330642",
+          "fecha": "2026-10-06T16:27:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la cifra de hasta 8.000 millones de dólares en inversiones proyectadas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "peter-lamelas-pide-al-senado-la-adhesion-al-tratado-de-patentes",
+      "foto": {
+        "archivo": "fotos-notas/7h598e.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "1kk7etj",
       "titulo": "Nacha Guevara recibe entradas de la mamá de Lionel Messi",
       "copete": "La actriz recibió un obsequio especial por parte de Celia Messi para presenciar el último partido del futbolista. El hecho dejó al descubierto la relación de afecto entre la familia y distintas figuras.",
@@ -179,8 +389,8 @@
       "guion": "Nacha Guevara recibe entradas de la mamá de Lionel Messi",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Minuto Uno",
-        "Infobae"
+        "Infobae",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/teleshow/2026/10/06/la-emocion-de-nacha-guevara-al-recibir-un-inesperado-regalo-de-celia-messi-me-dio-una-alegria-muy-grande/",
       "teniaImagenLaFuente": true,
@@ -245,9 +455,11 @@
       "guion": "El Banco Mundial recorta las estimaciones de crecimiento para el país",
       "seccion": "Economía",
       "medios": [
-        "Ámbito",
+        "Minuto Uno",
         "Infobae",
+        "Ámbito",
         "TN (Todo Noticias)",
+        "A24",
         "Crónica",
         "Canal 26",
         "La Nueva",
@@ -327,145 +539,75 @@
       }
     },
     {
-      "id": "il3c1a",
-      "titulo": "La Corte Suprema convoca a dos conjueces para debatir la ley de tierras",
-      "copete": "El máximo tribunal resolvió sumar a dos magistrados tras no alcanzar una postura unánime. El expediente fue promovido por una asociación ambiental.",
-      "cuerpo": "La decisión se adoptó durante el acuerdo plenario del cuerpo al no lograr una posición unánime entre los ministros.\n\nEl expediente analizado corresponde a una demanda impulsada por la Asociación Civil Árbol de Pie, una entidad ambiental que cuestiona la eliminación de los límites a la propiedad extranjera de campos. El sorteo para definir a los dos magistrados que integrarán el tribunal se realizará en las próximas horas.\n\nEn aquella oportunidad, la Corte aclaró que no se había expedido sobre la constitucionalidad de fondo del régimen.",
-      "guion": "La Corte Suprema convoca a dos conjueces para debatir la ley de tierras",
-      "seccion": "Política",
+      "id": "1cdevto",
+      "titulo": "Nora Cárpena revela detalles de su operación de cadera",
+      "copete": "La actriz de 81 años debió pasar por el quirófano a causa de la artrosis. En plena recuperación, continúa trabajando con asistencia de bastón.",
+      "cuerpo": "Nora Cárpena fue intervenida quirúrgicamente de la cadera a los 81 años debido a un cuadro de artrosis que le provocaba fuertes dolores. Según explicó la propia protagonista, la operación se llevó a cabo hace dos meses y debió suspender sus actividades durante solo un mes.\n\nEn medio de su recuperación, la artista mantiene una intensa agenda laboral que incluye la gira nacional de la obra Viuda e hijas y su reciente participación en la ficción televisiva Sombras. Debido a las secuelas de la cirugía, utiliza un bastón sobre el escenario y recibe asistencia constante de sus compañeros de elenco.",
+      "guion": "Nora Cárpena revela detalles de su operación de cadera",
+      "seccion": "Cultura y agenda",
       "medios": [
-        "El Eco de Tandil",
-        "Minuto Uno",
         "TN (Todo Noticias)",
-        "A24",
-        "Ámbito",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "El Marplatense",
-        "Infobae"
+        "Crónica",
+        "El Día"
       ],
-      "enlace": "https://www.infobae.com/judiciales/2026/10/06/la-corte-suprema-convoco-a-conjueces-para-un-nuevo-debate-sobre-la-ley-de-tierras/",
+      "enlace": "https://www.eldia.com/espectaculos/de-que-operaron-a-nora-carpena-a-los-81-anos-la-reconocida-actriz-no-soporto-mas-el-dolor-espectaculos_1791294720",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T14:20:52.000Z",
+      "fecha": "2026-10-06T14:10:47.000Z",
       "sinFecha": false,
-      "visto": "2026-10-06T16:31:20.376Z",
-      "relevancia": 83,
+      "visto": "2026-10-06T17:01:25.569Z",
+      "relevancia": 65,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La Corte Suprema sumará a dos conjueces por la ley de tierras.",
-        "La decisión se tomó al no haber unanimidad entre los ministros.",
-        "El caso fue iniciado por la Asociación Civil Árbol de Pie.",
-        "El sorteo para designar a los magistrados será en las próximas horas."
+        "La actriz Nora Cárpena fue operada de la cadera a los 81 años.",
+        "La intervención se debió a un cuadro de artrosis.",
+        "Trabaja con la asistencia de un bastón y el cuidado de sus colegas."
       ],
       "seSabe": [
-        "La Corte Suprema convocará a dos conjueces para debatir el artículo 154 del DNU 70/23.",
-        "La medida se adoptó este martes al no registrarse unanimidad entre los jueces.",
-        "El expediente fue promovido por la Asociación Civil Árbol de Pie."
+        "Nora Cárpena tiene 81 años y fue operada de la cadera.",
+        "La cirugía se realizó hace dos meses por artrosis.",
+        "Protagoniza la obra Viuda e hijas y actúa en la ficción Sombras."
       ],
-      "noConfirmado": [
-        "Los nombres de los dos magistrados conjueces que integrarán el tribunal."
-      ],
+      "textoRedes": "Nora Cárpena explicó los detalles de su operación de cadera y cómo continúa trabajando con asistencia.",
       "etiquetas": [
-        "Corte Suprema",
-        "Ley de Tierras",
-        "DNU",
-        "Justicia",
-        "Asociación Civil Árbol de Pie"
+        "Nora Cárpena",
+        "salud"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/judiciales/2026/10/06/la-corte-suprema-convoco-a-conjueces-para-un-nuevo-debate-sobre-la-ley-de-tierras/",
-          "fecha": "2026-10-06T14:20:52.000Z",
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/espectaculos/de-que-operaron-a-nora-carpena-a-los-81-anos-la-reconocida-actriz-no-soporto-mas-el-dolor-espectaculos_1791294720",
+          "fecha": "2026-10-06T14:10:47.000Z",
           "oficial": false,
-          "aporte": "Informó la convocatoria de dos conjueces y los detalles de la causa de la asociación ambiental."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/la-corte-suprema-convoca-a-conjueces-para-debatir-la-validez-de-la-ley-de-tierras",
-          "fecha": "2026-10-06T14:41:36.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la información oficial sobre la convocatoria de conjueces."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/la-corte-suprema-vuelve-discutir-la-ley-tierras-y-convoca-dos-conjueces-n6330618",
-          "fecha": "2026-10-06T15:10:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la causa fue iniciada por una organización ambiental."
+          "aporte": "Detalló los motivos de la operación de cadera, el tiempo transcurrido desde la intervención y cómo transita su recuperación laboral."
         },
         {
           "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/06/la-corte-suprema-convoco-a-dos-conjueces-para-resolver-una-nueva-demanda-contra-la-ley-de-tierras/",
-          "fecha": "2026-10-06T15:26:49.000Z",
+          "enlace": "https://tn.com.ar/show/famosos/2026/10/06/a-los-81-anos-nora-carpena-conto-por-que-se-opero-la-cadera-no-tengo-ganas-de-aguantar-dolor/",
+          "fecha": "2026-10-06T15:40:56.000Z",
           "oficial": false,
-          "aporte": "Aportó el nombre de la Asociación Civil Árbol de Pie y la mención al DNU."
+          "aporte": "Mencionó la agenda laboral de la actriz, incluyendo la gira nacional y el estreno de la ficción Sombras en Net TV."
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/la-corte-convoca-conjueces-un-nuevo-debate-la-ley-tierras-n1603649",
-          "fecha": "2026-10-06T14:45:00.000Z",
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/diarioshow/farandula/nora-carpena-fue-operada-por-un-grave-problema-de-cadera-cual-es-su-estado-de-salud/",
+          "fecha": "2026-10-06T15:22:41.000Z",
           "oficial": false,
-          "aporte": "Señaló que la decisión se debió a la falta de unanimidad y que el sorteo será en las próximas horas."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-corte-suprema-vuelve-discutir-la-ley-tierras-y-convoca-dos-conjueces-n6330617",
-          "fecha": "2026-10-06T15:08:46.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la suma de magistrados para analizar el artículo del DNU 70/23."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/ley-de-tierras-la-corte-suprema-convoco-a-conjueces-para-un-nuevo-debate-sobre-el-dnu/",
-          "fecha": "2026-10-06T15:59:58.000Z",
-          "oficial": false,
-          "aporte": "Detalló que el expediente busca frenar la eliminación de límites a la compra de campos."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/judiciales/la-corte-convoca-a-conjueces-para-un-nuevo-debate-sobre-la-ley-de-tierras_a6ac5061361c1587439f12293",
-          "fecha": "2026-10-06T14:30:48.000Z",
-          "oficial": false,
-          "aporte": "Aportó la fecha precisa del acuerdo plenario de los ministros."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/la-corte-suprema-convoca-a-conjueces-para-un-nuevo-debate-sobre-la-ley-de-tierras-politica-y-economia_1791297660",
-          "fecha": "2026-10-06T14:48:19.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/ley-de-tierras-la-corte-convoca-a-cojueces",
-          "fecha": "2026-10-06T15:45:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "16ufhqn",
-          "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-corte-revoca-el-fallo-sobre-la-ley-de-tierras-del-dnu-16ufhqn"
+          "aporte": "Informó sobre la preocupación generada en torno al estado de salud de la actriz debido a su problema de cadera."
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron 10 medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "la-corte-suprema-convoca-a-dos-conjueces-para-debatir-la-ley-de",
+      "slug": "nora-carpena-revela-detalles-de-su-operacion-de-cadera",
       "foto": {
-        "archivo": "fotos-notas/il3c1a.jpg",
-        "credito": "Foto: Minuto Uno"
+        "archivo": "fotos-notas/1cdevto.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -477,7 +619,8 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
-        "Olé"
+        "Olé",
+        "Minuto Uno"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/la-carta-del-ogro-fabbiani-a-lionel-messi-y-el-guino-para-un-posible-regreso-a-newells-no-quiero-nid06102026/",
       "teniaImagenLaFuente": true,
@@ -563,9 +706,9 @@
     {
       "id": "repaso20261006manana",
       "propia": "repaso",
-      "titulo": "El repaso de la mañana en Radar Balcarce: hospitales, San Agustín, colombofilia y fútbol",
-      "copete": "Radar Balcarce publicó a las 10:05 de este martes 6 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la mañana del martes 6, en el orden en que salieron en el audio.\n\nLa Provincia autoriza a sus hospitales a descartar insumos de laboratorios investigados. El Ministerio de Salud bonaerense oficializó el procedimiento para eliminar medicamentos e insumos de las firmas involucradas en el caso de fentanilo contaminado. La medida abarca a 98 establecimientos sanitarios de la Provincia.\n\nPrimero la Patria propone informar la numeración oficial en San Agustín y Los Pinos. El bloque opositor presentó un proyecto en el Concejo Deliberante para que el Municipio difunda la nomenclatura vigente y la ubicación de los domicilios en ambas localidades.\n\nLa colombofilia local disputa su decimoquinta fecha desde Concordia. La competencia se realizó el domingo pasado con una suelta a 720 kilómetros. Agustín Flórez junto a Juan Pablo Marchena y Emilia Marchena se impusieron en sus respectivas categorías.\n\nBurkini Faso recibe a su selección sub 23 tras la goleada con Argentina. La ministra de Deportes del país africano recibió al plantel tras la derrota por 7 a 0. Los futbolistas viajaron de urgencia para disputar el amistoso en el Monumental.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "titulo": "El repaso de la mañana en Radar Balcarce: hospitales, colombofilia y fútbol",
+      "copete": "Radar Balcarce publicó a las 10:05 de este martes 6 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
+      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la mañana del martes 6, en el orden en que salieron en el audio.\n\nLa Provincia autoriza a sus hospitales a descartar insumos de laboratorios investigados. El Ministerio de Salud bonaerense oficializó el procedimiento para eliminar medicamentos e insumos de las firmas involucradas en el caso de fentanilo contaminado. La medida abarca a 98 establecimientos sanitarios de la Provincia.\n\nLa colombofilia local disputa su decimoquinta fecha desde Concordia. La competencia se realizó el domingo pasado con una suelta a 720 kilómetros. Agustín Flórez junto a Juan Pablo Marchena y Emilia Marchena se impusieron en sus respectivas categorías.\n\nBurkini Faso recibe a su selección sub 23 tras la goleada con Argentina. La ministra de Deportes del país africano recibió al plantel tras la derrota por 7 a 0. Los futbolistas viajaron de urgencia para disputar el amistoso en el Monumental.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Argentina",
       "local": false,
@@ -581,7 +724,6 @@
       "temas": [],
       "etiquetas": [
         "hospitales",
-        "San Agustín",
         "colombofilia",
         "fútbol"
       ],
@@ -589,7 +731,6 @@
       "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
       "notasDelRepaso": [
         "1cr7egi",
-        "133cyna",
         "1onhk2k",
         "108t4y0"
       ],
@@ -597,10 +738,6 @@
         {
           "texto": "La Provincia autoriza a sus hospitales a descartar insumos de laboratorios investigados",
           "href": "/nota/la-provincia-autoriza-a-sus-hospitales-a-descartar-insumos-de-1cr7egi"
-        },
-        {
-          "texto": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
-          "href": "/nota/primero-la-patria-propone-informar-la-numeracion-oficial-en-san-133cyna"
         },
         {
           "texto": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
@@ -712,7 +849,7 @@
       "fecha": "2026-10-06T13:01:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T14:01:11.259Z",
-      "relevancia": 100,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -776,14 +913,15 @@
       "medios": [
         "Diputados Bonaerenses",
         "Clarín",
-        "TN (Todo Noticias)"
+        "TN (Todo Noticias)",
+        "El Cronista"
       ],
       "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T13:01:11.200Z",
       "sinFecha": false,
       "visto": "2026-10-06T16:31:20.376Z",
-      "relevancia": 66,
+      "relevancia": 76,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -867,71 +1005,6 @@
       }
     },
     {
-      "id": "133cyna",
-      "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
-      "copete": "El bloque opositor presentó un proyecto en el Concejo Deliberante para que el Municipio difunda la nomenclatura vigente y la ubicación de los domicilios en ambas localidades.",
-      "cuerpo": "El bloque de concejales de Primero la Patria impulsa un proyecto de comunicación para que la comuna desarrolle una campaña informativa destinada a los habitantes de San Agustín y Los Pinos. La propuesta busca difundir la nomenclatura y la numeración oficial de las arterias y viviendas de ambas localidades.\n\nLa iniciativa se apoya en un relevamiento del Departamento de Catastro Municipal que actualizó las partidas en 2025. En el caso de Los Pinos, la propuesta toma como antecedente la Ordenanza N° 15/2021 sobre la identificación de calles internas.\n\nEl proyecto solicita que los delegados municipales comuniquen los datos a los residentes y sugiere colocar los números en los frentes de los inmuebles. También recomienda actualizar el domicilio en el DNI e instalar la señalización correspondiente en los sectores que lo necesiten.",
-      "guion": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
-      "seccion": "Balcarce",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/politica/proponen-informar-a-vecinos-de-san-agustin-y-los-pinos-sobre-la-numeracion-oficial-de-sus-domicilios",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T12:43:20.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T13:01:11.200Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Proyecto del bloque Primero la Patria en el Concejo Deliberante",
-        "Campaña orientada a vecinos de San Agustín y Los Pinos",
-        "Difusión de nomenclatura y numeración oficial de domicilios",
-        "Recomendación de colocar números visibles y actualizar el DNI"
-      ],
-      "seSabe": [
-        "El bloque de Primero la Patria presentó un proyecto de comunicación en el Concejo Deliberante, según informó un medio local.",
-        "La iniciativa solicita una campaña municipal para informar la numeración oficial en San Agustín y Los Pinos, de acuerdo con un medio local.",
-        "El proyecto se basa en el relevamiento de Catastro Municipal actualizado al año 2025, según informó un medio local."
-      ],
-      "noConfirmado": [
-        "Todavía no fue tratado ni aprobado por el cuerpo legislativo.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El bloque Primero la Patria presentó un proyecto en el Concejo para que el Municipio informe la nomenclatura y numeración oficial de los domicilios en San Agustín y Los Pinos.",
-      "etiquetas": [
-        "San Agustín",
-        "Los Pinos",
-        "Concejo Deliberante",
-        "Primero la Patria",
-        "Catastro Municipal",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/politica/proponen-informar-a-vecinos-de-san-agustin-y-los-pinos-sobre-la-numeracion-oficial-de-sus-domicilios",
-          "fecha": "2026-10-06T12:43:20.000Z",
-          "oficial": false,
-          "aporte": "Detalló el proyecto presentado por Primero la Patria para informar la numeración en San Agustín y Los Pinos."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "primero-la-patria-propone-informar-la-numeracion-oficial-en-san",
-      "foto": {
-        "archivo": "fotos-notas/133cyna.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
       "id": "1onhk2k",
       "titulo": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
       "copete": "La competencia se realizó el domingo pasado con una suelta a 720 kilómetros. Agustín Flórez junto a Juan Pablo Marchena y Emilia Marchena se impusieron en sus respectivas categorías.",
@@ -991,173 +1064,6 @@
       }
     },
     {
-      "id": "1uo836n",
-      "titulo": "La desocupación desplaza a la inflación como principal preocupación",
-      "copete": "Un estudio privado ubica al desempleo al tope de las inquietudes nacionales por encima de los precios. El 69% de los hogares atraviesa dificultades económicas.",
-      "cuerpo": "La falta de trabajo se ubicó en septiembre como la principal inquietud de los argentinos y desplazó a los aumentos de precios y tarifas, de acuerdo con un relevamiento de la consultora Management & Fit.\n\nEn la medición mensual, la desocupación concentró el 19,8% de las menciones frente al 18,9% de los aumentos de tarifas y precios, que en julio lideraban el ranking con el 22,4%.\n\nLos problemas económicos generales suman el 69% de las menciones de los hogares, mientras que el 52,4% de las familias reconoció que atraviesa complicaciones financieras para sostener sus ingresos.",
-      "guion": "La desocupación desplaza a la inflación como principal preocupación",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "iProfesional",
-        "Minuto Uno"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/06/la-desocupacion-desplazo-a-la-inflacion-como-la-principal-preocupacion-de-los-argentinos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T12:08:48.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T14:31:14.500Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El desempleo llegó al 19,8% de las menciones y superó a la inflación.",
-        "Las dificultades económicas alcanzan al 69% de los hogares según el sondeo.",
-        "La mitad de las familias admitió que sus ingresos no alcanzan o tiene grandes dificultades."
-      ],
-      "seSabe": [
-        "La desocupación se ubicó en el 19,8% de las menciones en septiembre según Management & Fit.",
-        "Los aumentos de precios y tarifas retrocedieron al 18,9%.",
-        "El 69% de los hogares registra problemas económicos."
-      ],
-      "textoRedes": "Un estudio privado indica que la desocupación pasó a ser la principal preocupación de los argentinos y desplazó a los aumentos de precios.",
-      "etiquetas": [
-        "desocupacion",
-        "inflacion",
-        "economia",
-        "empleo",
-        "salarios"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/06/la-desocupacion-desplazo-a-la-inflacion-como-la-principal-preocupacion-de-los-argentinos/",
-          "fecha": "2026-10-06T12:08:48.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/el-desempleo-es-la-mayor-preocupacion-los-argentinos-y-6-cada-10-desaprueba-la-gestion-javier-milei-n6330537",
-          "fecha": "2026-10-06T13:50:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/la-desocupacion-es-la-principal-preocupacion-los-argentinos-y-7-cada-10-tiene-problemas-economicos-n6330479",
-          "fecha": "2026-10-06T12:55:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/la-desocupacion-paso-a-ser-el-principal-problema-del-pais-y-mas-de-la-mitad-de-las-familias-tiene-dificultades-economicas.phtml",
-          "fecha": "2026-10-06T13:59:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/economia/465993-el-desempleo-ya-preocupa-mas-que-la-inflacion-al-198-de-argentinos",
-          "fecha": "2026-10-06T13:52:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-desocupacion-desplaza-a-la-inflacion-como-principal-preocupacion",
-      "foto": {
-        "archivo": "fotos-notas/1uo836n.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "1qwqrm2",
-      "titulo": "El Gobierno restituye el nombre histórico al feriado de octubre",
-      "copete": "La administración nacional volvió a utilizar la denominación tradicional para la fecha que recuerda la llegada de Cristóbal Colón. El próximo lunes habrá fin de semana largo.",
-      "cuerpo": "El Gobierno nacional restituyó el nombre con el que se conoció históricamente a la efeméride que recuerda la llegada de Cristóbal Colón a América.\n\nA lo largo de las distintas gestiones, la celebración sufrió modificaciones en su enfoque y denominación. Sin embargo, la normativa vigente sobre feriados nacionales y días no laborables continúa regulada por la Ley 27.399, mientras que el Decreto 1027/2024 estableció los días no laborables con fines turísticos para 2025 sin alterar el nombre de esta jornada.",
-      "guion": "El Gobierno restituye el nombre histórico al feriado de octubre",
-      "seccion": "Argentina",
-      "medios": [
-        "C5N",
-        "El Eco de Tandil",
-        "Clarín"
-      ],
-      "enlace": "https://www.eleco.com.ar/interes-general/el-gobierno-cambio-el-nombre-del-feriado-del-12-de-octubre-y-vuelve-a-denominarlo-dia-de-la-raza",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T11:46:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T15:31:27.469Z",
-      "relevancia": 72,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno cambió el nombre del feriado del 12 de octubre.",
-        "La fecha recuerda la llegada de Cristóbal Colón a América.",
-        "El lunes 12 de octubre configuró un fin de semana largo.",
-        "La Ley 27.399 regula el régimen de feriados nacionales."
-      ],
-      "seSabe": [
-        "La administración actual restituyó el nombre histórico de la fecha.",
-        "El feriado conmemora la llegada de Cristóbal Colón a América.",
-        "El 12 de octubre de 2026 configuró un fin de semana largo junto al sábado 10 y el domingo 11."
-      ],
-      "textoRedes": "El Gobierno nacional restituyó el nombre histórico al feriado del 12 de octubre, fecha que conmemora la llegada de Cristóbal Colón a América y que este año configuró un fin de semana largo.",
-      "etiquetas": [
-        "feriado",
-        "Gobierno nacional",
-        "12 de octubre",
-        "fin de semana largo",
-        "calendario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/interes-general/el-gobierno-cambio-el-nombre-del-feriado-del-12-de-octubre-y-vuelve-a-denominarlo-dia-de-la-raza",
-          "fecha": "2026-10-06T11:46:37.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre el calendario del fin de semana largo, la vigencia de la Ley 27.399 y el alcance del Decreto 1027/2024."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/el-gobierno-cambio-el-nombre-del-feriado-del-12-octubre-que-volvio-llamarse-dia-la-raza-n250853",
-          "fecha": "2026-10-06T14:32:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el cambio de denominación dispuesto por la administración actual para la efeméride."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/informacion-general/dia-raza-2026-volvio-llamarse-feriado-12-octubre-cambia_0_3coCBlk7pm.html",
-          "fecha": "2026-10-06T14:00:07.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la celebración sufrió modificaciones de nombre y enfoque a lo largo de la historia del país."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-restituye-el-nombre-historico-al-feriado-de-octubre",
-      "foto": {
-        "archivo": "fotos-notas/1qwqrm2.jpg",
-        "credito": "Foto: C5N"
-      }
-    },
-    {
       "id": "ql89ei",
       "titulo": "El Gobierno emite titulos por 221.119 millones para saldar obras",
       "copete": "El Ejecutivo nacional dispuso la ampliación de instrumentos financieros para saldar compromisos con constructoras. La medida abarca obligaciones acumuladas desde 2022.",
@@ -1165,10 +1071,11 @@
       "guion": "El Gobierno emite titulos por 221.119 millones para saldar obras",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
+        "La Nación",
         "Ámbito",
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "Infobae"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
@@ -1713,97 +1620,6 @@
       "foto": {
         "archivo": "fotos-notas/18wosri.jpg",
         "credito": "Foto: INTA"
-      }
-    },
-    {
-      "id": "xttimd",
-      "titulo": "El Monumental proyecta goles históricos en la despedida de Lionel Messi",
-      "copete": "El estadio de River exhibe material histórico en sus pantallas desde las 16:00, en el marco del partido despedida del capitán argentino ante Benín.",
-      "cuerpo": "El estadio Monumental proyecta una selección de goles históricos de Lionel Messi en las pantallas del anillo interno, durante la jornada de su despedida de la Selección argentina frente a Benín. La muestra audiovisual arranca a las 16:00 con la apertura de las puertas, cuatro horas antes del comienzo del encuentro amistoso contra el seleccionado africano.\n\nSu trayectoria incluye las consagraciones en la Copa América de 2021 y 2024, la Finalissima de 2022 y el Mundial de Qatar 2022.\n\nLas localidades para el encuentro en Buenos Aires quedaron agotadas en pocas horas tras el anuncio del retiro del delantero, según lo informado en coberturas previas.",
-      "guion": "El Monumental proyecta goles históricos en la despedida de Lionel Messi",
-      "seccion": "Fútbol",
-      "medios": [
-        "0223 (Mar del Plata)",
-        "TN (Todo Noticias)",
-        "La Nueva",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/el-detalle-especial-que-presentara-el-monumental-por-la-despedida-de-lionel-messi-de-la-seleccion-argentina/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T10:24:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T12:01:53.915Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El estadio Monumental exhibe goles históricos en sus pantallas internas.",
-        "La muestra audiovisual comienza a las 16:00 con la apertura de puertas.",
-        "Lionel Messi se despide de la Selección argentina en un partido ante Benín.",
-        "El capitán suma 207 partidos y 125 goles con la camiseta celeste y blanca."
-      ],
-      "seSabe": [
-        "Las pantallas internas del estadio Monumental muestran goles históricos del capitán argentino.",
-        "La exhibición comienza a las 16:00, cuatro horas antes del partido contra Benín.",
-        "Lionel Messi registra 207 partidos y 125 goles con el seleccionado nacional.",
-        "Las entradas para el encuentro de despedida se agotaron en pocas horas."
-      ],
-      "textoRedes": "El estadio Monumental proyecta goles históricos de Lionel Messi en sus pantallas internas desde las 16:00, durante la despedida del capitán de la Selección argentina frente a Benín.",
-      "etiquetas": [
-        "Lionel Messi",
-        "Seleccion Argentina",
-        "Estadio Monumental",
-        "Benin",
-        "Futbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/el-detalle-especial-que-presentara-el-monumental-por-la-despedida-de-lionel-messi-de-la-seleccion-argentina/",
-          "fecha": "2026-10-06T10:24:19.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la proyección de goles en las pantallas y las estadísticas de la carrera de Messi."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/el-emotivo-detalle-que-tendra-el-monumental-para-homenajear-a-messi-en-su-despedida-con-la-seleccion-argentina_a6ac4dd5661c1587439eb10df",
-          "fecha": "2026-10-06T11:45:07.000Z",
-          "oficial": false,
-          "aporte": "Informó que las autoridades de River resolvieron alterar la disposición habitual de las pantallas."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "o99ioz",
-          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
-          "fecha": "2026-10-03T13:24:05.000Z",
-          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
-        },
-        {
-          "id": "e7ym9v",
-          "titulo": "La Selección presenta la camiseta especial para la despedida de Messi",
-          "fecha": "2026-09-25T12:46:30.000Z",
-          "ruta": "/nota/la-seleccion-argentina-presento-la-camiseta-especial-para-la-e7ym9v"
-        },
-        {
-          "id": "1nud4zm",
-          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
-          "fecha": "2026-09-24T19:05:00.000Z",
-          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-monumental-proyecta-goles-historicos-en-la-despedida-de-lionel",
-      "foto": {
-        "archivo": "fotos-notas/xttimd.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2495,8 +2311,8 @@
         "Infobae",
         "Perfil",
         "iProfesional",
-        "El Día",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Nueva"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/caputo-advirtio-al-mercado-sobre-como-se-prepara-ante-un-escenario-electoral-adverso-en-2027-les-nid05102026/",
@@ -2783,11 +2599,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-industrial-prepara-dos-vehiculos-para-el-desafio-eco-2026-361",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-05T23:31:12.329Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T23:03:13.000Z",
+      "sinFecha": false,
       "visto": "2026-10-05T23:31:12.329Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2840,7 +2656,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://www.diariolavanguardia.com/deportes/14295-destacada-actuacion-de-ocho-balcarcenos-en-tandil/",
       "teniaImagenLaFuente": true,
@@ -3343,10 +3160,10 @@
         "Olé",
         "C5N",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "El Día",
         "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
-        "Noticias Argentinas (NA)",
         "La Voz del Pueblo"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
@@ -3418,82 +3235,6 @@
       "foto": {
         "archivo": "fotos-notas/15ngrmw.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "2buh35",
-      "titulo": "Humming Airways proyecta una conexión aérea entre Necochea y Buenos Aires",
-      "copete": "La empresa planifica dos frecuencias semanales con aeronaves de diecinueve pasajeros. Los valores en preventa parten desde los ciento quince dólares por tramo.",
-      "cuerpo": "La compañía Humming Airways impulsa un proyecto para restablecer los vuelos directos entre el Aeródromo Edgardo Hugo Yelpo de Necochea y el Aeroparque Jorge Newbery de la Ciudad de Buenos Aires. El plan contempla dos frecuencias semanales, operadas con aeronaves con capacidad para diecinueve pasajeros, según informaron las fuentes.\n\nLos servicios están programados para los lunes y viernes, con una duración aproximada de setenta minutos por tramo.\n\nLa puesta en marcha del servicio está prevista para diciembre, aunque la continuidad y concreción definitiva dependen de alcanzar el volumen necesario en la etapa de preventa actual, un proceso que por el momento no requiere pagos adelantados ni señales.",
-      "guion": "Humming Airways proyecta una conexión aérea entre Necochea y Buenos Aires",
-      "seccion": "Economía",
-      "medios": [
-        "La Noticia 1",
-        "InfoGEI"
-      ],
-      "enlace": "https://www.lanoticia1.com/noticia/humming-airways-proyecta-una-conexion-aerea-entre-necochea-y-buenos-aires-cuanto-sale-el-vuelo-de-70-minutos",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T18:23:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T21:32:05.316Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Vuelos directos entre Necochea y Aeroparque",
-        "Dos frecuencias semanales los lunes y viernes",
-        "Aeronaves con capacidad para diecinueve pasajeros",
-        "Abonos mensuales desde ciento quince dólares por tramo"
-      ],
-      "seSabe": [
-        "Humming Airways proyecta unir Necochea con Aeroparque",
-        "El servicio contempla dos frecuencias semanales, los lunes y viernes",
-        "Los vuelos duran unos setenta minutos por tramo",
-        "Se utilizan aviones con capacidad para diecinueve pasajeros",
-        "Los abonos mensuales parten desde los ciento quince dólares por tramo en preventa",
-        "La preventa no exige pagos adelantados ni señas"
-      ],
-      "noConfirmado": [
-        "La ruta todavía no cuenta con confirmación definitiva",
-        "El inicio de los vuelos en diciembre depende de alcanzar la sustentabilidad económica mediante la preventa"
-      ],
-      "textoRedes": "Humming Airways proyecta una conexión aérea directa entre Necochea y Buenos Aires con dos frecuencias semanales. Los vuelos duran setenta minutos y los abonos en preventa parten desde los ciento quince dólares por tramo.",
-      "etiquetas": [
-        "Necochea",
-        "Buenos Aires",
-        "Aeroparque",
-        "Humming Airways",
-        "vuelos",
-        "transporte aéreo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/humming-airways-proyecta-una-conexion-aerea-entre-necochea-y-buenos-aires-cuanto-sale-el-vuelo-de-70-minutos",
-          "fecha": "2026-10-05T18:23:07.000Z",
-          "oficial": false,
-          "aporte": "Detalló los horarios de los vuelos, la capacidad de las aeronaves, los precios de los abonos en preventa y los requisitos para concretar las operaciones."
-        },
-        {
-          "medio": "InfoGEI",
-          "enlace": "https://infogei.ar/de-necochea-a-aeroparque-en-70-minutos-la-propuesta-de-humming-a-us-115-por-tramo/",
-          "fecha": "2026-10-05T20:58:08.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la puesta en marcha de la preventa de pasajes destinada a pasajeros de Necochea, Quequén y la región."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "humming-airways-proyecta-una-conexion-aerea-entre-necochea-y-buenos",
-      "foto": {
-        "archivo": "fotos-notas/2buh35.jpg",
-        "credito": "Foto: La Noticia 1"
       }
     },
     {
@@ -3777,7 +3518,6 @@
         "La Nación",
         "Infobae",
         "C5N",
-        "Crónica",
         "Noticias Argentinas (NA)",
         "La Nueva"
       ],
@@ -4092,10 +3832,10 @@
       "guion": "ACA Neogen presenta nuevas variedades de soja para la campaña dos mil veintiséis y dos mil veintisiete",
       "seccion": "Agro",
       "medios": [
+        "Clarín",
         "Agrositio",
         "Agroempresario",
-        "Bichos de Campo",
-        "Clarín"
+        "Bichos de Campo"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248662-soja-aca-neogen-apuesta-a-una-campana-de-alto-potencial-y-pone-el-foco-en-la-genetica-para-transformar-el-agua-en-rendimiento.html",
       "teniaImagenLaFuente": true,
@@ -4156,15 +3896,14 @@
       "seccion": "Agro",
       "medios": [
         "Ámbito",
-        "Agrositio",
-        "Noticias Argentinas (NA)"
+        "Agrositio"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T14:24:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 34,
+      "relevancia": 24,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4902,15 +4641,15 @@
     }
   ],
   "secciones": [
-    "Política",
     "Cultura y agenda",
+    "Agro",
+    "Argentina",
+    "Política",
     "Economía",
     "Fútbol",
-    "Argentina",
     "Deportes",
     "Balcarce",
-    "Automovilismo",
-    "Agro"
+    "Automovilismo"
   ],
   "temas": [
     {
@@ -4927,11 +4666,11 @@
   "clima": {
     "ahora": {
       "temp": 21,
-      "sensacion": 22,
+      "sensacion": 21,
       "humedad": 45,
-      "viento": 7,
-      "rumbo": "NE",
-      "cielo": "Parcialmente nublado",
+      "viento": 8,
+      "rumbo": "E",
+      "cielo": "Nublado",
       "esDeDia": true
     },
     "dias": [
@@ -5284,10 +5023,10 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "z08pph",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
+      "id": "il3c1a",
+      "titulo": "La Corte Suprema convocó a conjueces para un nuevo debate…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "b1sme9",
@@ -5302,22 +5041,34 @@
       "motivo": "necesita ojo humano: \"nena\""
     },
     {
-      "id": "drg1xo",
-      "titulo": "Indignación en Nordelta: un vecino le disparó con un arma…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "bgbapg",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "1ohllv",
+      "titulo": "Reino afianza su vínculo con Santilli: el respaldo que…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
       "id": "eaedz2",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
+      "id": "drg1xo",
+      "titulo": "Indignación en Nordelta: un vecino le disparó con un arma…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1mvoz28",
+      "titulo": "Metrodelegados amenazan con medidas de fuerza por…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "1glo72",
@@ -5354,12 +5105,6 @@
       "titulo": "El relato de Iair Horn, el argentino que estuvo casi 500…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "ib0ast",
-      "titulo": "Paro de subtes: metrodelegados se declararon en estado de…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "8x1i04",

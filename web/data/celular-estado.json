@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T16:33:53.303Z",
- "portada": 57,
- "archivo": 974,
+ "generado": "2026-10-06T17:02:46.479Z",
+ "portada": 55,
+ "archivo": 977,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-06T16:33:53.330Z",
+  "generado": "2026-10-06T17:02:46.521Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -104,8 +104,8 @@
      },
      {
       "id": "133cyna",
-      "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
-      "seccion": "Balcarce"
+      "titulo": null,
+      "seccion": null
      },
      {
       "id": "1onhk2k",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 54,
     "notas": [
      {
       "id": "1k3fdlf",
@@ -139,14 +139,14 @@
       "seccion": "Deportes"
      },
      {
+      "id": "1fxkw0r",
+      "titulo": "Agustín Canapino advierte sobre el impacto del odio en redes sociales",
+      "seccion": "Automovilismo"
+     },
+     {
       "id": "2yqn4q",
       "titulo": "El Banco Mundial recorta las estimaciones de crecimiento para el país",
       "seccion": "Economía"
-     },
-     {
-      "id": "aa0h34",
-      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -165,19 +165,19 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      },
      {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce"
+      "id": "aa0h34",
+      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
+      "seccion": "Automovilismo"
      }
     ]
    }
