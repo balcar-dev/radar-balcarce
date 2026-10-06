@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T04:01:10.807Z",
+  "generado": "2026-10-06T04:31:24.139Z",
   "notas": [
     {
       "id": "futboltablaliga20261002",
@@ -1941,11 +1941,11 @@
         "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17885-argentina-convocan-a-los-productores-de-papa-del-sudeste-bonaerense-a-participar-del-censo-hortifloricola-2026",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-05T16:31:22.668Z",
       "sinFecha": true,
       "visto": "2026-10-05T16:31:22.668Z",
-      "relevancia": 26,
+      "relevancia": 16,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -2004,6 +2004,7 @@
       "medios": [
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
+        "El Día",
         "La Opinión",
         "Infoeme",
         "El Marplatense",
@@ -2018,7 +2019,7 @@
       "fecha": "2026-10-05T16:12:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T17:31:05.708Z",
-      "relevancia": 77,
+      "relevancia": 70,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2097,11 +2098,11 @@
         "Argenpapa"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17884-argentina-aconcagua-propone-simplificar-el-registro-de-labores-y-la-trazabilidad-en-la-produccion-de-papa",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-05T15:52:36.644Z",
       "sinFecha": true,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 26,
+      "relevancia": 16,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -2465,67 +2466,6 @@
       }
     },
     {
-      "id": "18ct4d0",
-      "titulo": "ACA Neogen presenta nuevas variedades de soja para la campaña 2026 y 2027",
-      "copete": "La alianza entre la Asociación de Cooperativas Argentinas y Neogen despliega un portfolio de semillas adaptadas a distintos ambientes productivos del país para la próxima temporada.",
-      "cuerpo": "La Asociación de Cooperativas Argentinas y la marca de genética Neogen avanzan con su oferta de variedades de soja para la campaña 2026/2027, orientada a transformar la disponibilidad hídrica en rendimiento. La propuesta incluye materiales adaptados a diversas regiones productivas, respaldados por los resultados obtenidos en el ciclo anterior.\n\nDurante la temporada 2025/2026, la variedad NEO 47S25 SE alcanzó un registro de 5.266 kilogramos por hectárea en el sur santafesino. El portfolio también incorpora opciones con tecnologías Enlist y Conkesta para distintos grupos de madurez.\n\nAgustín Sosa, gerente comercial de Semillas de ACA, indicó que la alianza acerca una propuesta concreta a través de la red cooperativa. Por su parte, Gonzalo Crespo, gerente de Marca Neogen, remarcó la importancia de ofrecer una genética adecuada para cada lote.",
-      "guion": "ACA Neogen presenta nuevas variedades de soja para la campaña dos mil veintiséis y dos mil veintisiete",
-      "seccion": "Agro",
-      "medios": [
-        "Bichos de Campo",
-        "Agrositio"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248662-soja-aca-neogen-apuesta-a-una-campana-de-alto-potencial-y-pone-el-foco-en-la-genetica-para-transformar-el-agua-en-rendimiento.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T14:30:26.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T21:32:05.316Z",
-      "relevancia": 36,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "ACA y Neogen despliegan variedades para la campaña 2026/2027",
-        "La variedad NEO 47S25 SE registró 5.266 kg/ha en la temporada previa",
-        "El portfolio contempla materiales adaptados a distintos ambientes productivos"
-      ],
-      "textoRedes": "La alianza entre la Asociación de Cooperativas Argentinas y Neogen presenta su portfolio de variedades de soja para la campaña 2026/2027 con opciones adaptadas a distintos ambientes productivos.",
-      "etiquetas": [
-        "soja",
-        "ACA",
-        "Neogen",
-        "campaña agrícola"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248662-soja-aca-neogen-apuesta-a-una-campana-de-alto-potencial-y-pone-el-foco-en-la-genetica-para-transformar-el-agua-en-rendimiento.html",
-          "fecha": "2026-10-05T14:30:26.000Z",
-          "oficial": false,
-          "aporte": "Detalló el rendimiento de las variedades durante el ciclo anterior y los componentes del portfolio actual."
-        },
-        {
-          "medio": "Bichos de Campo",
-          "enlace": "https://bichosdecampo.com/los-cooperativistas-de-aca-profundizan-la-alianza-con-la-semillera-neogen-y-suman-nuevas-variedades-de-soja-a-su-red/",
-          "fecha": "2026-10-05T20:47:28.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la alianza entre ACA y Neogen se encuentra operativa para la campaña 2026/27."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "aca-neogen-presenta-nuevas-variedades-de-soja-para-la-campana-2026-y",
-      "foto": {
-        "archivo": "fotos-notas/18ct4d0.jpg",
-        "credito": "Foto: Agrositio"
-      }
-    },
-    {
       "id": "yqqsx9",
       "titulo": "Los bonos y acciones argentinas suben y el riesgo país cae",
       "copete": "Los títulos soberanos y las acciones de empresas locales registran fuertes subas en la jornada financiera. El indicador de JP Morgan desciende tras el impacto de los mercados en Brasil.",
@@ -2624,7 +2564,7 @@
       "fecha": "2026-10-05T14:24:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 36,
+      "relevancia": 32,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3771,8 +3711,8 @@
       "guion": "Registran una baja de la chicharrita en las cinco regiones del país",
       "seccion": "Agro",
       "medios": [
-        "Agrositio",
-        "Noticias Agropecuarias"
+        "Noticias Agropecuarias",
+        "Agrositio"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/05/con-una-retraccion-generalizada-de-la-chicharrita-se-presenta-un-escenario-muy-promisorio-para-el-maiz/",
       "teniaImagenLaFuente": true,
@@ -4986,11 +4926,11 @@
   "clima": {
     "ahora": {
       "temp": 12,
-      "sensacion": 11,
-      "humedad": 92,
-      "viento": 10,
+      "sensacion": 10,
+      "humedad": 93,
+      "viento": 8,
       "rumbo": "NO",
-      "cielo": "Nublado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": false
     },
     "dias": [
@@ -5403,11 +5343,17 @@
       "motivo": "necesita ojo humano: \"bebés\""
     },
     {
+      "id": "1k9nuf8",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "xpy82d",
       "titulo": "Nordelta: filmaron a un hombre disparando contra un…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 8
 }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06T04:01:10.807Z",
+ "generado": "2026-10-06T04:31:24.139Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -82,6 +82,43 @@
    "intentos": 3,
    "motivo": "con cuerpo",
    "maximo": 3
+  },
+  {
+   "id": "sxc156",
+   "titulo": "Discapacidad: la Iglesia valoró la reunión con el Gobierno, pero exigió soluciones concretas para el sector",
+   "copete": "La Conferencia Episcopal Argentina valoró la reunión mantenida con funcionarios del Ministerio de Salud de la Nación para abordar la crítica situación del sector de discapacidad, aunque reclamó respuestas urgentes a las demandas presentadas. Las autoridades eclesiásticas…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-05T18:03:13.305Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/discapacidad--la-iglesia-valoro-la-reunion-con-el-gobierno--pero-exigio-soluciones-concretas-para-el-sector_a6ac3d246efa9665a6c23cda8",
+     "fecha": "2026-10-05T18:03:13.305Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/la-iglesia-valoro-la-reunion-el-gobierno-discapacidad-pero-reclamo-medidas-concretas-n6330253",
+     "fecha": "2026-10-05T18:15:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/iglesia-reunion-gobierno-discapacidad-soluciones-concretas/",
+     "fecha": "2026-10-05T21:51:20.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/discapacidad-la-iglesia-pide-soluciones-concretas-politica-y-economia_1791259928",
+     "fecha": "2026-10-06T04:12:08.000Z"
+    },
+    {
+     "medio": "Punto Noticias",
+     "enlace": "https://puntonoticias.com/discapacidad-la-iglesia-valoro-la-reunion-con-el-gobierno-pero-exigio-soluciones-concretas-para-el-sector/",
+     "fecha": "2026-10-05T18:44:29.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 109 palabras",
+   "maximo": 4
   },
   {
    "id": "1k1mxar",
