@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T01:31:45.726Z",
+  "generado": "2026-10-06T02:01:36.901Z",
   "notas": [
     {
       "id": "aa0h34",
@@ -407,7 +407,7 @@
       "fecha": "2026-10-05T22:45:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T00:31:12.019Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -467,14 +467,15 @@
       "guion": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
       "seccion": "Deportes",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/la-escuela-municipal-de-basquet-arranco.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T22:33:29.134Z",
       "sinFecha": false,
       "visto": "2026-10-05T23:31:12.329Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -508,6 +509,13 @@
           "fecha": "2026-10-05T22:33:29.134Z",
           "oficial": false,
           "aporte": "Informó los resultados de los cadetes y juveniles en el inicio de los playoffs y adelantó la próxima fecha en Ferroviarios."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/deportes/14294-resultados-dispares-cosecho-la-escuela-municipal/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó los resultados del debut de la Escuela Municipal de básquet en los play-off de la Asociación Marplatense."
         }
       ],
       "antecedentes": [
@@ -610,109 +618,6 @@
       "foto": {
         "archivo": "fotos-notas/1pfa62o.jpg",
         "credito": "Foto: Radio 10 Mar del Plata (FM 105.5)"
-      }
-    },
-    {
-      "id": "1stssa7",
-      "titulo": "La línea D extiende su horario por la despedida de Messi",
-      "copete": "El servicio de subterráneos funcionará hasta la 1:30 de la madrugada el martes por el partido entre la selección argentina y Benín en el estadio Monumental.",
-      "cuerpo": "Las formaciones partirán desde la estación Congreso de Tucumán y los pasajeros podrán descender únicamente en las estaciones Olleros, Plaza Italia, Pueyrredón y 9 de Julio. La Ciudad desplegará además un operativo especial en Núñez y Ciudad Universitaria para ordenar el movimiento de público.\n\nEl evento contará con la presencia de veinte campeones del mundo para rendirle homenaje y la interpretación del himno nacional a cargo del excombatiente de Malvinas Fabio Santana, según se indicó en publicaciones anteriores.",
-      "guion": "La línea D extiende su horario por la despedida de Messi",
-      "seccion": "Fútbol",
-      "medios": [
-        "La Nación",
-        "Página/12",
-        "Crónica",
-        "Diario Popular",
-        "Clarín",
-        "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Minuto Uno",
-        "Ámbito"
-      ],
-      "enlace": "https://www.lanacion.com.ar/sociedad/la-despedida-de-messi-la-linea-d-extiende-su-horario-por-el-partido-del-martes-nid05102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T20:01:57.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T22:31:14.690Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La línea D funcionará hasta la 1:30 de la madrugada este martes.",
-        "El esquema especial busca facilitar la desconcentración tras el partido de la selección.",
-        "Las formaciones saldrán desde Congreso de Tucumán con paradas limitadas.",
-        "El encuentro frente a Benín se disputará en el estadio Monumental."
-      ],
-      "seSabe": [
-        "Subterráneos de Buenos Aires confirmó la extensión horaria de la línea D hasta la 1:30.",
-        "Los trenes saldrán desde Congreso de Tucumán.",
-        "Solo se podrá descender en las estaciones Olleros, Plaza Italia, Pueyrredón y 9 de Julio.",
-        "La selección argentina enfrentará a Benín en el estadio Monumental."
-      ],
-      "textoRedes": "La línea D de subterráneos extenderá su servicio hasta la 1:30 de la madrugada este martes por el partido de despedida de Lionel Messi en el estadio Monumental.",
-      "etiquetas": [
-        "Lionel Messi",
-        "Subte",
-        "Línea D",
-        "Estadio Monumental",
-        "Selección Argentina"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/la-despedida-de-messi-la-linea-d-extiende-su-horario-por-el-partido-del-martes-nid05102026/",
-          "fecha": "2026-10-05T20:01:57.000Z",
-          "oficial": false,
-          "aporte": "Detalló el esquema especial de la línea D, las estaciones operativas y los horarios hasta la 1:30."
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/05/ultimo-partido-de-leo-messi-la-linea-d-extiende-su-horario/",
-          "fecha": "2026-10-05T21:44:29.000Z",
-          "oficial": false,
-          "aporte": "Informó que el partido enfrenta a Argentina contra Benín y que habrá un operativo en Núñez y Ciudad Universitaria."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/por-la-despedida-de-messi-el-subte-d-extiende-su-horario-hasta-la-130/",
-          "fecha": "2026-10-05T21:19:13.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha del martes 6 de octubre y el objetivo de facilitar la desconcentración."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "2gmz6t",
-          "titulo": "A qué hora arranca este martes la venta de entradas para la despedida de Lionel Messi en la Seleción Argentina",
-          "fecha": "2026-09-21T23:16:00.000Z",
-          "ruta": "/nota/a-que-hora-arranca-este-martes-la-venta-de-entradas-para-la-despedida-2gmz6t"
-        },
-        {
-          "id": "z08pph",
-          "titulo": "Fabio Santana canta el himno nacional en la despedida de Lionel Messi",
-          "fecha": "2026-10-05T19:08:04.405Z",
-          "ruta": "/nota/fabio-santana-canta-el-himno-nacional-en-la-despedida-de-lionel-messi-z08pph"
-        },
-        {
-          "id": "uml8iq",
-          "titulo": "Lionel Messi juega su despedida de la selección ante Benín",
-          "fecha": "2026-10-05T15:48:39.000Z",
-          "ruta": "/nota/lionel-messi-juega-su-despedida-de-la-seleccion-ante-benin-uml8iq"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-linea-d-extiende-su-horario-por-la-despedida-de-messi",
-      "foto": {
-        "archivo": "fotos-notas/1stssa7.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -2393,11 +2298,18 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
-        "A24",
+        "Minuto Uno",
+        "Perfil",
         "Olé",
         "Radio Mitre",
         "Canal 26",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Página/12",
+        "Crónica",
+        "Diario Popular",
+        "Clarín",
+        "La Nueva",
+        "Ámbito"
       ],
       "enlace": "https://www.canal26.com/deportes/2026/10/05/llega-el-fan-fest-gracias-leo-cuando-y-donde-se-realizara-el-evento-homenaje-para-despedir-a-messi-de-la-seleccion/",
       "teniaImagenLaFuente": true,
@@ -2769,8 +2681,8 @@
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Nueva",
-        "El Marplatense"
+        "El Marplatense",
+        "La Nueva"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/05/malvinas-caen-casi-20-las-acciones-de-la-petrolera-que-busca-extraer-crudo-con-el-proyecto-sea-lion/",
       "teniaImagenLaFuente": true,
@@ -4290,7 +4202,6 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Clarín",
         "Crónica",
         "La Nueva",
         "C5N"
@@ -4614,10 +4525,10 @@
     "ahora": {
       "temp": 13,
       "sensacion": 12,
-      "humedad": 89,
-      "viento": 7,
-      "rumbo": "NO",
-      "cielo": "Nublado",
+      "humedad": 90,
+      "viento": 10,
+      "rumbo": "N",
+      "cielo": "Parcialmente nublado",
       "esDeDia": false
     },
     "dias": [
@@ -4976,16 +4887,16 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "xof75k",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "1pr5cdn",
       "titulo": "Murió la actriz Zulema Galperín, reconocida por sus…",
       "seccion": "Cultura y agenda",
       "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "xof75k",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "bgbapg",
@@ -5036,5 +4947,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 6
 }

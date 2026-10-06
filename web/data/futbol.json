@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-06T01:31:43.320Z",
+ "consultado": "2026-10-06T02:01:34.643Z",
  "equipos": [
   "9739",
   "3",
@@ -595,7 +595,7 @@
     "competencia": "liga",
     "inicio": "2026-10-06T00:15:00.000Z",
     "estado": "en-juego",
-    "minuto": "54'",
+    "minuto": "84'",
     "local": {
      "id": "235",
      "nombre": "Banfield",
@@ -604,7 +604,7 @@
     "visitante": {
      "id": "17",
      "nombre": "Rosario Central",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
     "goles": [
@@ -612,6 +612,12 @@
       "equipo": "local",
       "jugador": "Tomás Adoryan",
       "minuto": "41'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Giovanni Cantizano",
+      "minuto": "80'",
       "tipo": "gol"
      }
     ],
