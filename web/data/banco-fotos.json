@@ -7628,16 +7628,16 @@
   "cuando": "2026-10-05T21:33:05.141Z"
  },
  "z08pph": {
-  "archivo": "fotos-notas/z08pph.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "Fabio Santana canta el himno nacional en la despedida de Lionel Messi",
   "enlace": "https://www.lanueva.com/nota/2026-10-5-16-43-0-el-excombatiente-de-la-guerra-de-malvinas-que-interpretara-el-himno-nacional-en-la-despedida-de-messi",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791229562119.jpg?&cw=600&ch=365",
   "razon": "Es la única foto nítida de Fabio Santana cantando, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-05T23:03:46.766Z"
+  "cuando": "2026-10-05T23:03:46.766Z",
+  "intentado": true,
+  "borrada": true
  },
  "15ngrmw": {
   "archivo": "fotos-notas/15ngrmw.jpg",
@@ -8243,5 +8243,53 @@
   "imagenOriginal": "https://media.ambito.com/p/323283a9d4083683647113ecab2ce04c/adjuntos/239/imagenes/042/053/0042053657/1200x675/smart/carcel-servicio-penitenciario-seguridadjpg.jpg",
   "razon": "Es la única foto sin marcas de agua ni menores, adecuada para ilustrar el tema carcelario.",
   "cuando": "2026-10-06T16:15:40.782Z"
+ },
+ "zynzss": {
+  "archivo": "fotos-notas/zynzss.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Un juez declara inconstitucional el decreto que frenaba fondos universitarios",
+  "enlace": "https://www.minutouno.com/politica/un-juez-declaro-inconstitucional-el-decreto-que-frena-la-ley-financiamiento-universitario-n6330663",
+  "imagenOriginal": "https://media.minutouno.com/p/62c95c181f56e59398c655e6a0d276db/adjuntos/150/imagenes/043/213/0043213710/1200x675/smart/marcha-conadu-financiamiento-educativo-2.jpg",
+  "razon": "Es la única foto sin marcas añadidas de los medios y sin menores reconocibles en primer plano, con un buen encuadre de la protesta.",
+  "cuando": "2026-10-06T16:32:00.198Z"
+ },
+ "il3c1a": {
+  "archivo": "fotos-notas/il3c1a.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Corte Suprema convoca a dos conjueces para debatir la ley de tierras",
+  "enlace": "https://www.minutouno.com/politica/la-corte-suprema-vuelve-discutir-la-ley-tierras-y-convoca-dos-conjueces-n6330618",
+  "imagenOriginal": "https://media.minutouno.com/p/d2a351c3af4213bf0381af5eda432851/adjuntos/150/imagenes/042/980/0042980437/corte-suprema.jpg",
+  "razon": "Muestra claramente a los jueces de la Corte Suprema en primer plano y con excelente nitidez, sin marcas de agua ni menores.",
+  "cuando": "2026-10-06T16:32:00.198Z"
+ },
+ "1c7wqua": {
+  "archivo": "fotos-notas/1c7wqua.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Funcionarios nacionales y gobernadores participan de inauguración minera",
+  "enlace": "https://www.clarin.com/politica/guinos-paris-rosca-puna-karina-milei-santilli-profundizan-alianza-gobernadores_0_6T7VF7slZl.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/06/IChVnjDrV_2000x1500__1.jpg",
+  "razon": "Muestra claramente a los funcionarios y gobernadores participando de la inauguración minera, sin marcas de agua ni menores.",
+  "cuando": "2026-10-06T16:32:00.198Z"
+ },
+ "ql89ei": {
+  "archivo": "fotos-notas/ql89ei.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno emite titulos por 221.119 millones para saldar obras",
+  "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
+  "imagenOriginal": "https://cdnartic.ar/fA-Bbqmt5ET8DHWSb06fCKMLUek=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/10/obra_publica.webp",
+  "razon": "La foto A muestra una obra vial en construcción, ilustrando perfectamente el título sin marcas de agua ni menores.",
+  "cuando": "2026-10-06T16:32:00.198Z"
  }
 }

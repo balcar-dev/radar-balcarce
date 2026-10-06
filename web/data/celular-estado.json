@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T16:16:04.264Z",
- "portada": 53,
- "archivo": 971,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-06T16:33:53.303Z",
+ "portada": 57,
+ "archivo": 974,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-06T16:16:04.300Z",
+  "generado": "2026-10-06T16:33:53.330Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -170,13 +170,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "id": "9m9h4e",
+      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
       "seccion": "Balcarce"
      },
      {
-      "id": "2vqepe",
-      "titulo": "El consumo de pollo supera por primera vez al de carne vacuna",
+      "id": "e5jokd",
+      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
       "seccion": "Balcarce"
      }
     ]
@@ -193,11 +193,16 @@
      "id": "1k3fdlf",
      "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
      "cuando": "2026-10-06T14:35:26.139Z"
+    },
+    {
+     "id": "1r3qdtj",
+     "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+     "cuando": "2026-10-06T16:13:45.287Z"
     }
    ],
    "cola": [],
-   "cupo": 3,
-   "proximoDesde": "2026-10-06T16:05:26.139Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-06T17:43:45.287Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
