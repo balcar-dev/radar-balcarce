@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-05T23:32:01.553Z",
+ "consultado": "2026-10-06T00:01:58.658Z",
  "equipos": [
   "9739",
   "3",
@@ -504,12 +504,12 @@
     "id": "401841590",
     "competencia": "liga",
     "inicio": "2026-10-05T22:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "76'",
+    "estado": "final",
+    "minuto": "90'+7'",
     "local": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",
-     "goles": 0
+     "goles": 3
     },
     "visitante": {
      "id": "11972",
@@ -517,7 +517,26 @@
      "goles": 0
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Edwin Cetre",
+      "minuto": "83'",
+      "tipo": "de penal"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Fabricio Pérez",
+      "minuto": "90'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Fabricio Pérez",
+      "minuto": "90'+4'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Estadio Jorge Luis Hirschi",
     "fase": null,
     "partidoDeLaSerie": null,
@@ -527,8 +546,8 @@
     "id": "401841585",
     "competencia": "liga",
     "inicio": "2026-10-05T22:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "67'",
+    "estado": "final",
+    "minuto": "90'+6'",
     "local": {
      "id": "21",
      "nombre": "Vélez Sarsfield",
@@ -537,7 +556,7 @@
     "visitante": {
      "id": "7764",
      "nombre": "Platense",
-     "goles": 1
+     "goles": 2
     },
     "penales": null,
     "goles": [
@@ -557,6 +576,12 @@
       "equipo": "local",
       "jugador": "Ronaldo Martínez",
       "minuto": "54'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Franco Zapiola",
+      "minuto": "88'",
       "tipo": "gol"
      }
     ],

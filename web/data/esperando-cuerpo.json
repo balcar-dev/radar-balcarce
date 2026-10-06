@@ -1,23 +1,48 @@
 {
- "generado": "2026-10-05T23:32:03.884Z",
+ "generado": "2026-10-06T00:02:00.841Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1kia0yd",
-   "titulo": "Un camino de esfuerzo, encuentro y fe hasta la Basílica de Luján",
-   "copete": "La fe volvió a ponerse en movimiento y Balcarce tuvo presencia en una nueva edición de la Peregrinación Juvenil a Luján. Jóvenes de las comunidades parroquiales de la ciudad viajaron durante el fin de semana para participar de una de las manifes",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-05T11:59:56.000Z",
+   "id": "z5u242",
+   "titulo": "Fan Fest, shows en vivo y homenajes: cómo será el último partido de Lionel Messi con la camiseta argentina",
+   "copete": "La Ciudad de Buenos Aires desplegará este martes un amplio operativo de seguridad en los alrededores del estadio Monumental y de Ciudad Universitaria con motivo de la despedida de Lionel Messi de la selección argentina . El dispositivo incluirá cortes de tránsito, controles de…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-05T13:54:00.000Z",
    "fuentes": [
     {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/un-camino-de-esfuerzo-encuentro-y-fe-hasta-la-basilica-de-lujan-28",
-     "fecha": "2026-10-05T11:59:56.000Z"
+     "medio": "A24",
+     "enlace": "https://www.a24.com/deportes/fan-fest-shows-vivo-y-homenajes-como-sera-el-ultimo-partido-lionel-messi-la-camiseta-argentina-n1603261",
+     "fecha": "2026-10-05T13:54:00.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/sociedad/como-sera-el-operativo-de-seguridad-y-el-mapa-de-cortes-por-la-despedida-de-messi-de-la-seleccion-nid05102026/",
+     "fecha": "2026-10-05T23:58:34.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/messi/lionelmessi-fanfest-estadiomonumental-seleccionargentina-ciudaduniversitaria-argentina-benin-policiadelaciudad_0_yORrNMhJ5S.html",
+     "fecha": "2026-10-05T20:35:08.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/deportes/llega-el-fan-fest-gracias-leo-cuando-sera-donde-y-como-conseguir-las-entradas/",
+     "fecha": "2026-10-05T23:17:14.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/deportes/2026/10/05/llega-el-fan-fest-gracias-leo-cuando-y-donde-se-realizara-el-evento-homenaje-para-despedir-a-messi-de-la-seleccion/",
+     "fecha": "2026-10-05T17:43:31.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/el-operativo-de-seguridad-para-la-despedida-de-messi-y-el-fan-fest-afa---gracias-leo-_a6ac40ad40606b0c07ed7ed06",
+     "fecha": "2026-10-05T21:12:38.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo corto (58 palabras)",
-   "maximo": 3
+   "intentos": 4,
+   "motivo": "con cuerpo",
+   "maximo": 4
   },
   {
    "id": "r2tg83",
@@ -109,20 +134,20 @@
    "maximo": 5
   },
   {
-   "id": "g6w1fz",
-   "titulo": "Leonel Chiarella visitó Balcarce y se reunió con Esteban Reino: el radicalismo busca fortalecer su presencia territorial",
-   "copete": "El presidente de la UCR Nacional e intendente de Venado Tuerto llegó a la ciudad y mantuvo un encuentro con Esteban Reino y dirigentes radicales. La agenda estuvo centrada en la actualidad del partido, la gestión municipal y los desafíos que enfrenta el radicalismo de cara a los…",
-   "seccion": "Política",
-   "fecha": "2026-10-05T23:31:12.329Z",
+   "id": "aa0h34",
+   "titulo": "El Vintage Tour 2026 reunió en Balcarce a fanáticos de Mercedes-Benz",
+   "copete": "El Club Mercedes-Benz Argentina y su filial Mar del Plata participaron de una jornada especial en la ciudad, en el marco del aniversario de la institución y de los 140 años de la marca alemana.",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-06T00:01:17.753Z",
    "fuentes": [
     {
      "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/44989-leonel-chiarella-visito-balcarce-y-se-reunio-con-esteban-reino-el-radicalismo-busca-fortalecer-su-presencia-territorial/",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45003-el-vintage-tour-2026-reunio-en-balcarce-a-fanaticos-de-mercedes-benz/",
      "fecha": null
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"chiarella\", \"esteban\", \"reino\" y el cuerpo no los explica; sin esas oraciones quedan 102 palabras",
+   "motivo": "cuerpo: 2 problemas (promesa): el título nombra a \"vintage\", \"tour\" y el cuerpo no los explica; sin esas oraciones quedan 114 palabras",
    "maximo": 3
   },
   {
