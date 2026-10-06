@@ -440,13 +440,6 @@
   "ultimo": "2026-10-06T19:31:38.364Z",
   "motivo": "con cuerpo"
  },
- "1a1eesp": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T22:31:15.416Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
- },
  "1a2z04a": {
   "intentos": 2,
   "ultimo": "2026-09-30T23:31:25.359Z",
@@ -598,9 +591,9 @@
   "motivo": "con cuerpo"
  },
  "1cvwcvk": {
-  "intentos": 2,
-  "ultimo": "2026-10-06T22:01:23.795Z",
-  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-06T22:31:35.426Z",
+  "motivo": "cuerpo: 3 problemas (numero, tilde, tildes): el cuerpo dice 3 y la fuente no lo dice; sin esas oraciones quedan 54 palabras"
  },
  "1cvxek6": {
   "intentos": 1,
@@ -700,8 +693,8 @@
   "motivo": "con cuerpo"
  },
  "1fhe1n3": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T22:01:23.795Z",
+  "intentos": 2,
+  "ultimo": "2026-10-06T22:31:35.426Z",
   "motivo": "con cuerpo"
  },
  "1fp0ktu": {
@@ -1079,6 +1072,11 @@
   "ultimo": "2026-10-02T22:31:30.494Z",
   "motivo": "con cuerpo"
  },
+ "1n6yxr": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T22:31:35.426Z",
+  "motivo": "con cuerpo"
+ },
  "1nbnjir": {
   "intentos": 1,
   "ultimo": "2026-10-02T16:31:25.113Z",
@@ -1346,6 +1344,11 @@
  "1tivdmf": {
   "intentos": 1,
   "ultimo": "2026-10-05T14:31:32.600Z",
+  "motivo": "con cuerpo"
+ },
+ "1tkwpmv": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T22:31:35.426Z",
   "motivo": "con cuerpo"
  },
  "1tprlf6": {
@@ -1772,11 +1775,6 @@
   "ultimo": "2026-10-05T00:02:28.857Z",
   "motivo": "semáforo: necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
- "436uz0": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T22:31:15.416Z",
-  "motivo": "con cuerpo"
- },
  "46zq6i": {
   "intentos": 1,
   "ultimo": "2026-10-02T20:31:31.976Z",
@@ -2006,6 +2004,11 @@
   "intentos": 3,
   "ultimo": "2026-10-06T01:01:28.636Z",
   "motivo": "con cuerpo"
+ },
+ "aa1da4": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T22:31:35.426Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "af0k0y": {
   "intentos": 1,
@@ -2454,6 +2457,11 @@
   "ultimo": "2026-10-06T18:01:44.392Z",
   "motivo": "con cuerpo"
  },
+ "lcytj": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T22:31:35.426Z",
+  "motivo": "con cuerpo"
+ },
  "lh07z9": {
   "intentos": 3,
   "ultimo": "2026-10-01T00:01:21.680Z",
@@ -2741,6 +2749,11 @@
  "sd36kl": {
   "intentos": 1,
   "ultimo": "2026-10-05T18:31:33.557Z",
+  "motivo": "con cuerpo"
+ },
+ "sjekvy": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T22:31:35.426Z",
   "motivo": "con cuerpo"
  },
  "sty1jd": {

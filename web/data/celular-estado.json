@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T22:02:03.370Z",
- "portada": 63,
- "archivo": 995,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-06T22:32:52.742Z",
+ "portada": 66,
+ "archivo": 998,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-06T22:02:03.404Z",
+  "generado": "2026-10-06T22:32:52.784Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-06T22:04:37.088Z"
    },
    {
     "nombre": "clima-noche",
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "lcytj",
+      "titulo": "Lionel Messi llora emocionado en el micro rumbo al Monumental",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1jfpdis",
       "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
@@ -170,14 +175,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1eed4ho",
-      "titulo": "Horacio Guevara asume la conducción de Servicios de Salud",
-      "seccion": "Argentina"
-     },
-     {
-      "id": "gmtn3r",
-      "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
-      "seccion": "Fútbol"
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -221,6 +221,12 @@
      "id": "gj403a",
      "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1n6yxr",
+     "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+     "seccion": "Fútbol",
      "marcada": false
     },
     {

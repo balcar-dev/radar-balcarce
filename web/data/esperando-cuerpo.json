@@ -1,38 +1,75 @@
 {
- "generado": "2026-10-06T22:02:03.370Z",
+ "generado": "2026-10-06T22:32:52.742Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "xttimd",
-   "titulo": "El detalle especial que presentará el Monumental por la despedida de Lionel Messi de la Selección argentina",
-   "copete": "La despedida de Lionel Messi de la Selección argentina en el estadio Monumental tendrá un detalle especial que emocionará a todos los presentes. Durante la fiesta de su último partido ante Benín , las pantallas del anillo interno del estadio -habitualmente reservadas para…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-06T10:24:19.000Z",
+   "id": "aa1da4",
+   "titulo": "Cuatro días para no parar de comer postre Balcarce: la fiesta regional para los verdaderos amantes de lo dulce",
+   "copete": "Este fin de semana llega la 22ª edición de la Fiesta Nacional del Postre en la ciudad de Balcarce. Todo lo que hay que saber sobre el festival y dónde es.",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-06T22:25:00.000Z",
    "fuentes": [
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/el-detalle-especial-que-presentara-el-monumental-por-la-despedida-de-lionel-messi-de-la-seleccion-argentina/",
-     "fecha": "2026-10-06T10:24:19.000Z"
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/sociedad/cuatro-dias-no-parar-comer-postre-balcarce-fiesta-regional-verdaderos-amantes-dulce-2026106192532",
+     "fecha": "2026-10-06T22:25:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
+   "maximo": 3
+  },
+  {
+   "id": "1cvwcvk",
+   "titulo": "Dolor por la muerte de Carlos Clerici, periodista, docente y locutor histórico de Luchemos por la Vida",
+   "copete": "Carlos Clerici , el reconocido periodista, docente y locutor que durante 35 años fue la emblemática voz de las campañas de concientización vial de la ONG Luchemos por la Vida , murió este lunes por la tarde. La noticia la difundió su familia a través de un comunicado en redes…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-06T16:21:40.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/06/dolor-por-la-muerte-de-carlos-clerici-periodista-docente-y-locutor-historico-de-luchemos-por-la-vida/",
+     "fecha": "2026-10-06T16:21:40.000Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/deportes/river-homenajea-lionel-messi-horas-la-despedida-la-seleccion-argentina-n6330466",
-     "fecha": "2026-10-06T12:26:00.000Z"
+     "medio": "0223 (Mar del Plata)",
+     "enlace": "https://www.0223.com.ar/nota/2026-10-6-18-55-0-murio-la-emblematica-voz-de-las-campanas-de-luchemos-por-la-vida-quien-era",
+     "fecha": "2026-10-06T21:55:00.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/show/novedades/2026/10/06/murio-carlos-clerici-la-emblematica-voz-de-las-campanas-de-luchemos-por-la-vida/",
+     "fecha": "2026-10-06T21:20:39.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/sociedad/luto-en-el-periodismo-murio-carlos-clerici-la-voz-de-la-campana-luchemos-por-la-vida-nid06102026/",
+     "fecha": "2026-10-06T18:14:44.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/sociedad/murio-carlos-clerici-historica-voz-campanas-luchemos-vida_0_kFlFJggS0J.html",
+     "fecha": "2026-10-06T20:35:23.000Z"
     },
     {
      "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/depo/actualidad/river-homenajeo-a-messi-antes-de-su-despedida-de-la-seleccion-argentina-en-el-monumental/",
-     "fecha": "2026-10-06T16:52:00.000Z"
+     "enlace": "https://www.cronica.com.ar/diarioshow/farandula/murio-carlos-clerici-la-historica-voz-de-luchemos-por-la-vida-a-los-70-anos/",
+     "fecha": "2026-10-06T19:07:48.000Z"
     },
     {
-     "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/river/a-horas-de-su-despedida-de-la-seleccion-argentina-river-homenajeo-a-messi",
-     "fecha": "2026-10-06T15:28:32.000Z"
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/sociedad/murio-carlos-clerici-el-periodista-e-historico-locutor-de-luchemos-por-la-vida/",
+     "fecha": "2026-10-06T17:24:53.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/murio-carlos-clerici-la-voz-historica-luchemos-la-vida-n6330714",
+     "fecha": "2026-10-06T18:30:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"plate\" y la fuente no; sin esas oraciones quedan 62 palabras",
-   "maximo": 3
+   "intentos": 3,
+   "motivo": "cuerpo: 3 problemas (numero, tilde, tildes): el cuerpo dice 3 y la fuente no lo dice; sin esas oraciones quedan 54 palabras",
+   "maximo": 5
   },
   {
    "id": "uknyf",
