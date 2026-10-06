@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T11:35:31.034Z",
- "portada": 54,
- "archivo": 954,
+ "generado": "2026-10-06T12:03:19.764Z",
+ "portada": 53,
+ "archivo": 955,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-06T11:35:31.063Z",
+  "generado": "2026-10-06T12:03:19.796Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 47,
     "notas": [
      {
       "id": "i06m20",
@@ -108,14 +108,14 @@
       "seccion": "Fútbol"
      },
      {
+      "id": "1b2y236",
+      "titulo": "Caputo advierte al mercado por el escenario electoral de 2027",
+      "seccion": "Economía"
+     },
+     {
       "id": "aa0h34",
       "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "lomklr",
-      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
-      "seccion": "Deportes"
      }
     ]
    },
@@ -126,18 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "21:00",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "1pofkpj",
+      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
+      "seccion": "Balcarce"
+     },
      {
       "id": "n1xmig",
       "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
@@ -149,16 +144,21 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "e5jokd",
       "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
       "seccion": "Balcarce"
      }
     ]
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "21:00",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
