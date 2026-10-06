@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T00:02:00.841Z",
- "portada": 54,
- "archivo": 942,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-06T00:34:06.672Z",
+ "portada": 58,
+ "archivo": 946,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-06T00:02:00.876Z",
+  "generado": "2026-10-06T00:34:06.696Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -84,7 +84,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-06T00:04:58.221Z"
    }
   ],
   "repasos": [
@@ -156,8 +156,8 @@
     "hora": "21:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 49,
+    "salio": "2026-10-06T00:04:58.221Z",
+    "segundos": null,
     "notas": [
      {
       "id": "uzokxq",
@@ -215,18 +215,6 @@
      "id": "12yxkc9",
      "titulo": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "1pofkpj",
-     "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "6txjlx",
-     "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],
