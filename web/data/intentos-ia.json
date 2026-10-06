@@ -144,11 +144,6 @@
   "ultimo": "2026-10-06T13:02:26.520Z",
   "motivo": "con cuerpo"
  },
- "13cwgql": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T23:31:21.178Z",
-  "motivo": "con cuerpo"
- },
  "13f00z": {
   "intentos": 3,
   "ultimo": "2026-10-03T16:31:21.954Z",
@@ -326,6 +321,11 @@
  "1793nst": {
   "intentos": 1,
   "ultimo": "2026-10-06T17:01:38.281Z",
+  "motivo": "con cuerpo"
+ },
+ "17i3vkh": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T23:31:45.917Z",
   "motivo": "con cuerpo"
  },
  "17lpda8": {
@@ -591,9 +591,9 @@
   "motivo": "con cuerpo"
  },
  "1cvwcvk": {
-  "intentos": 4,
-  "ultimo": "2026-10-06T23:02:22.598Z",
-  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 5,
+  "ultimo": "2026-10-06T23:31:45.917Z",
+  "motivo": "título o bajada: 1 problema (numero): el copete dice 3 y la fuente no lo dice"
  },
  "1cvxek6": {
   "intentos": 1,
@@ -1194,11 +1194,6 @@
   "ultimo": "2026-10-02T18:31:26.628Z",
   "motivo": "con cuerpo"
  },
- "1puwvvm": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T23:31:21.178Z",
-  "motivo": "con cuerpo"
- },
  "1pwavd9": {
   "intentos": 1,
   "ultimo": "2026-10-06T00:31:22.032Z",
@@ -1245,8 +1240,8 @@
   "motivo": "con cuerpo"
  },
  "1qym9k9": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T23:02:22.598Z",
+  "intentos": 2,
+  "ultimo": "2026-10-06T23:31:45.917Z",
   "motivo": "con cuerpo"
  },
  "1r3qdtj": {
@@ -1352,9 +1347,9 @@
   "motivo": "con cuerpo"
  },
  "1tkwpmv": {
-  "intentos": 2,
-  "ultimo": "2026-10-06T23:02:22.598Z",
-  "motivo": "con cuerpo"
+  "intentos": 3,
+  "ultimo": "2026-10-06T23:31:45.917Z",
+  "motivo": "cuerpo: 5 problemas (numero, fecha, antecedente, copia): el cuerpo dice 2 y la fuente no lo dice; sin esas oraciones quedan 57 palabras"
  },
  "1tprlf6": {
   "intentos": 1,
@@ -1612,6 +1607,11 @@
   "intentos": 1,
   "ultimo": "2026-10-04T12:01:25.456Z",
   "motivo": "con cuerpo"
+ },
+ "1yzgdmc": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T23:31:45.917Z",
+  "motivo": "cuerpo: 2 problemas (relleno, repite): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 19 palabras"
  },
  "1zja8b": {
   "intentos": 2,
