@@ -1,28 +1,11 @@
 {
- "generado": "2026-10-06T08:31:30.645Z",
+ "generado": "2026-10-06T09:01:33.766Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1em1ou0",
-   "titulo": "Proponen crear un Registro Municipal de Acompañantes Terapéuticos",
-   "copete": "Los concejales Fara Amado Cunqueiro y Gonzalo Scioli, del bloque Somos, presentaron en el Honorable Concejo Deliberante un proyecto de ordenanza que propone crear un Registro Municipal de Acompañantes Terapéuticos del Partido de Balcarce. La iniciativa busca generar una…",
-   "seccion": "Política",
-   "fecha": "2026-10-05T22:28:36.460Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/proponen-crear-un-registro-municipal-de.html",
-     "fecha": "2026-10-05T22:28:36.460Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
    "id": "1jawjgc",
    "titulo": "Cambio clave en Comunicaciones: renunció el interventor del ENACOM",
-   "copete": "A menos de tres meses del vencimiento de la intervención vigente, se produjeron cambios en la cúpula del Ente Nacional de Comunicaciones ( ENACOM ). El Ejecutivo aceptó la renuncia de Juan Martín Ozores , quien estaba al frente del proceso interno del organismo desde 2024, y…",
+   "copete": "El Gobierno oficializó la salida de Juan Martín Ozores como interventor del Ente Nacional de Comunicaciones ( Enacom ) y designó como reemplazante el ingeniero Andrés Michelazzo , a través de un decreto publicado este martes en el Boletín Oficial. El funcionario estuvo en el…",
    "seccion": "Política",
    "fecha": "2026-10-06T01:51:22.000Z",
    "fuentes": [
@@ -32,14 +15,14 @@
      "fecha": "2026-10-06T01:51:22.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/politica/2026/10/06/renuncio-el-interventor-del-enacom-y-el-gobierno-designo-a-su-sucesor/",
-     "fecha": "2026-10-06T07:18:16.000Z"
-    },
-    {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-anuncio-la-salida-del-interventor-del-enacom-y-designo-a-su-reemplazante-nid06102026/",
      "fecha": "2026-10-06T06:39:05.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/politica/2026/10/06/renuncio-el-interventor-del-enacom-y-el-gobierno-designo-a-su-sucesor/",
+     "fecha": "2026-10-06T07:18:16.000Z"
     },
     {
      "medio": "Clarín",
@@ -62,8 +45,8 @@
      "fecha": "2026-10-06T07:40:00.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (dimision, habia, intervencion, administracion, gestion): va con la; sin esas oraciones quedan 142",
+   "intentos": 4,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 98 caracteres, el máximo es 90",
    "maximo": 4
   },
   {
