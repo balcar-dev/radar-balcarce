@@ -7995,9 +7995,7 @@
   "cuando": "2026-10-06T13:02:48.398Z"
  },
  "dowztx": {
-  "archivo": "fotos-notas/dowztx.jpg",
   "medio": "Wikimedia Commons",
-  "credito": "Foto: Carla Cortés / Wikimedia Commons (CC BY 2.0)",
   "licencia": "CC BY 2.0",
   "autor": "Carla Cortés",
   "origen": "wikimedia",
@@ -8005,7 +8003,9 @@
   "enlace": "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Otamendi_2015.jpg",
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Nicol%C3%A1s_Otamendi_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Nicolás Otamendi\" de Wikimedia Commons (CC BY 2.0).",
-  "cuando": "2026-10-06T11:33:02.602Z"
+  "cuando": "2026-10-06T11:33:02.602Z",
+  "intentado": true,
+  "borrada": true
  },
  "xttimd": {
   "archivo": "fotos-notas/xttimd.jpg",
@@ -8351,5 +8351,14 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/nora-carpena-conto-por-que-tuvo-que-operarse-de-la-cadera-foto-instagram-noracarpenaok-JY72LVPSHJHRZLQJMS6GZF2Z64.jpg?auth=95dacaf3d075ea51ccfb6ac32eee2ade651ace178a154628df656f55e1be9fea&width=1023",
   "razon": "Es un retrato claro, enfocado y limpio, sin marcas añadidas ni menores.",
   "cuando": "2026-10-06T17:02:24.825Z"
+ },
+ "1ge8oda": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Gobierno define los consorcios que compiten por AySA",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-06T17:34:41.255Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }

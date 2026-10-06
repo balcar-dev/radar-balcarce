@@ -1,43 +1,11 @@
 {
- "generado": "2026-10-06T17:02:46.479Z",
+ "generado": "2026-10-06T17:36:09.668Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1ge8oda",
-   "titulo": "El Gobierno confirmó a los dos consorcios que competirán esta semana por el 90% de AySA",
-   "copete": "El Gobierno nacional oficializó a los dos consorcios empresariales que competirán para quedarse con el 90% del paquete accionario de AySA, la empresa encargada de proveer los servicios de agua y cloacas a unos 14 millones de personas en la Ciudad de Buenos Aires y 26 municipios…",
-   "seccion": "Economía",
-   "fecha": "2026-10-06T10:48:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/el-gobierno-confirmo-a-los-dos-consorcios-que-competiran-esta-semana-por-el-90--de-aysa_a6ac4d1f761c1587439e999f4",
-     "fecha": "2026-10-06T10:48:00.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/el-gobierno-nacional-definira-esta-semana-que-consorcio-se-quedara-con-el-90-de-aysa",
-     "fecha": "2026-10-06T16:35:13.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-gobierno-confirmo-a-los-dos-consorcios-que-competiran-esta-semana-por-el-90-de-aysa/",
-     "fecha": "2026-10-06T11:35:46.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/esta-semana-se-definira-que-consorcio-se-quedara-el-90-aysa-n56270",
-     "fecha": "2026-10-06T12:23:12.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 4 problemas (nombre): el cuerpo nombra a \"saneamientos\" y la fuente no; sin esas oraciones quedan 113 palabras",
-   "maximo": 3
-  },
-  {
    "id": "vt7yd",
    "titulo": "Destacan el rol de las chacras experimentales del Ministerio de Desarrollo Agrario bonaerense",
-   "copete": "El ministro de Desarrollo Agrario bonaerense encabezó el cierre de la primera jornada y puso en valor el trabajo de investigación, experimentación y capacitación que se desarrolla en las Chacras Experimentales del ministerio. (NAP) Se realizó este lunes lunes el cierre de la…",
+   "copete": "El ministro de Desarrollo Agrario de la Provincia de Buenos Aires, Javier Rodríguez, encabezó este lunes el cierre de la primera jornada de la 5° edición de la Semana de Tranqueras Abiertas en la Chacra Experimental Chascomús, donde destacó el rol de estos espacios públicos para…",
    "seccion": "Agro",
    "fecha": "2026-10-06T09:45:24.000Z",
    "fuentes": [
@@ -52,7 +20,7 @@
      "fecha": "2026-10-06T12:02:37.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (fecha): el copete menciona \"viernes\" y la fuente no",
    "maximo": 3
   }
