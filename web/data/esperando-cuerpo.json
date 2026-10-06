@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-06T14:07:39.244Z",
+ "generado": "2026-10-06T14:37:07.089Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1r3qdtj",
-   "titulo": "Balcarceños fueron protagonistas en la Laguna Open Sport",
-   "copete": "Mariano Barreiro se quedó con la prueba principal de 15 kilómetros, mientras que Franco Peidon ganó los 5K. Además, Jimena Vivas fue segunda entre las mujeres en los 10K y Maxi Moreno terminó tercero entre los hombres. La competencia reunió a unos 2.400 corredores.",
-   "seccion": "Deportes",
-   "fecha": "2026-10-06T13:05:17.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/balcarcenos-fueron-protagonistas-en-la-laguna-open-sport",
-     "fecha": "2026-10-06T13:05:17.000Z"
-    }
-   ],
-   "intentos": 0,
-   "motivo": "",
-   "maximo": 3
-  },
   {
    "id": "uknyf",
    "titulo": "El Gobierno abrirá este jueves las ofertas económicas para privatizar Aysa: busca recaudar cerca de US$500 millones",
@@ -52,8 +35,8 @@
      "fecha": "2026-10-06T12:04:15.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 92 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gobierno\", \"aysa\" y el cuerpo no los explica; sin esas oraciones quedan 149 palabras",
    "maximo": 4
   },
   {
@@ -146,7 +129,7 @@
   {
    "id": "ql89ei",
    "titulo": "El Gobierno amplía emisión de títulos por $221.119 millones para saldar deudas de obra pública",
-   "copete": "Buenos Aires, 6 octubre (NA) -- El Gobierno amplió la emisión de títulos públicos por más de $221.000 millones para saldar deudas con contratistas de obra pública, mediante la Resolución Conjunta 59/2026, publicada este martes en el Boletín Oficial. La normativa de las…",
+   "copete": "El Gobierno nacional dispuso la ampliación de la emisión de títulos públicos por un valor efectivo total de 221.119.509.519 pesos, con el objetivo de cancelar deudas pendientes con contratistas de obra pública. La medida fue oficializada este martes mediante la Resolución…",
    "seccion": "Economía",
    "fecha": "2026-10-06T11:38:00.000Z",
    "fuentes": [
@@ -156,18 +139,18 @@
      "fecha": "2026-10-06T11:38:00.000Z"
     },
     {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
+     "fecha": "2026-10-06T13:43:28.000Z"
+    },
+    {
      "medio": "Ámbito",
      "enlace": "https://www.ambito.com/economia/el-gobierno-amplio-la-emision-deuda-221119-millones-pagar-obligaciones-obra-publica-n6330549",
      "fecha": "2026-10-06T13:33:00.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
-     "fecha": "2026-10-06T13:43:30.000Z"
     }
    ],
-   "intentos": 0,
-   "motivo": "",
+   "intentos": 1,
+   "motivo": "título o bajada: 3 problemas (largo, numero): el titulo tiene 99 caracteres, el máximo es 90",
    "maximo": 3
   }
  ]

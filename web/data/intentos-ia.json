@@ -559,11 +559,6 @@
   "ultimo": "2026-10-02T12:01:58.110Z",
   "motivo": "con cuerpo"
  },
- "1bm6ntn": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T14:31:43.418Z",
-  "motivo": "con cuerpo"
- },
  "1bsbkco": {
   "intentos": 1,
   "ultimo": "2026-10-05T04:01:26.099Z",
@@ -662,11 +657,6 @@
  "1ebac9m": {
   "intentos": 1,
   "ultimo": "2026-10-02T13:03:38.642Z",
-  "motivo": "con cuerpo"
- },
- "1edzkza": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T14:31:43.418Z",
   "motivo": "con cuerpo"
  },
  "1egbk71": {
@@ -1246,6 +1236,11 @@
   "ultimo": "2026-09-29T21:01:30.027Z",
   "motivo": "con cuerpo"
  },
+ "1r3qdtj": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T14:34:24.640Z",
+  "motivo": "con cuerpo"
+ },
  "1rfl2n3": {
   "intentos": 1,
   "ultimo": "2026-10-04T23:31:41.471Z",
@@ -1388,6 +1383,11 @@
   "ultimo": "2026-10-05T13:31:26.775Z",
   "motivo": "con cuerpo"
  },
+ "1uo836n": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T14:34:24.640Z",
+  "motivo": "con cuerpo"
+ },
  "1ut0amy": {
   "intentos": 1,
   "ultimo": "2026-10-06T00:31:22.032Z",
@@ -1506,11 +1506,6 @@
  "1wfalz7": {
   "intentos": 1,
   "ultimo": "2026-09-30T17:33:05.915Z",
-  "motivo": "con cuerpo"
- },
- "1wh4i9k": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T14:31:43.418Z",
   "motivo": "con cuerpo"
  },
  "1wjy87t": {
@@ -1950,6 +1945,11 @@
  "8213y6": {
   "intentos": 1,
   "ultimo": "2026-09-29T20:01:15.190Z",
+  "motivo": "con cuerpo"
+ },
+ "823fzo": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T14:34:24.640Z",
   "motivo": "con cuerpo"
  },
  "8cknxd": {
@@ -2454,11 +2454,6 @@
   "ultimo": "2026-10-02T22:01:25.089Z",
   "motivo": "con cuerpo"
  },
- "kvzlzl": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T14:31:43.418Z",
-  "motivo": "con cuerpo"
- },
  "kwip9o": {
   "intentos": 3,
   "ultimo": "2026-09-30T21:31:14.712Z",
@@ -2523,13 +2518,6 @@
   "intentos": 1,
   "ultimo": "2026-10-01T01:01:18.871Z",
   "motivo": "con cuerpo"
- },
- "n5ls7m": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T14:31:43.418Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "ng7qph": {
   "intentos": 1,
@@ -2682,6 +2670,11 @@
   "intentos": 1,
   "ultimo": "2026-09-29T19:31:29.457Z",
   "motivo": "con cuerpo"
+ },
+ "ql89ei": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T14:34:24.640Z",
+  "motivo": "título o bajada: 3 problemas (largo, numero): el titulo tiene 99 caracteres, el máximo es 90"
  },
  "qolc14": {
   "intentos": 3,
@@ -2863,9 +2856,9 @@
   "motivo": "con cuerpo"
  },
  "uknyf": {
-  "intentos": 2,
-  "ultimo": "2026-10-06T13:02:26.520Z",
-  "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 92 palabras"
+  "intentos": 3,
+  "ultimo": "2026-10-06T14:34:24.640Z",
+  "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gobierno\", \"aysa\" y el cuerpo no los explica; sin esas oraciones quedan 149 palabras"
  },
  "ule632": {
   "intentos": 1,

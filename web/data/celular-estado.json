@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T14:07:39.244Z",
- "portada": 55,
- "archivo": 961,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-06T14:37:07.089Z",
+ "portada": 54,
+ "archivo": 964,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-06T14:07:39.266Z",
+  "generado": "2026-10-06T14:37:07.113Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,22 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "1uo836n",
+      "titulo": "La desocupación desplaza a la inflación como principal preocupación",
+      "seccion": "Economía"
+     },
      {
       "id": "1k3fdlf",
       "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
       "seccion": "Balcarce"
      },
      {
-      "id": "i06m20",
-      "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-      "seccion": "Balcarce"
+      "id": "1r3qdtj",
+      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+      "seccion": "Deportes"
      },
      {
       "id": "aa0h34",
@@ -160,6 +160,16 @@
     "segundos": 50,
     "notas": [
      {
+      "id": "i06m20",
+      "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "e5jokd",
       "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
       "seccion": "Balcarce"
@@ -167,11 +177,6 @@
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]
@@ -196,6 +201,12 @@
      "id": "133cyna",
      "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1r3qdtj",
+     "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],
