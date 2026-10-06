@@ -7881,13 +7881,16 @@
   "cuando": "2026-10-06T01:02:07.461Z"
  },
  "1cgax2i": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1cgax2i.jpg",
+  "medio": "QZ Noticias (Mar del Plata)",
+  "credito": "Foto: QZ Noticias (Mar del Plata)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Servicio Meteorológico Nacional emite un aviso por tormentas y granizo",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-06T01:02:07.461Z",
-  "intentos": 1,
-  "fuentes": 6
+  "enlace": "https://www.qznoticias.com/la-ciudad/emitieron-un-aviso-por-tormentas-para-mar-del-plata-y-la-zona",
+  "imagenOriginal": "https://n2.cdnartic.ar/Q52ts2b2lAubJrHGMz0Plte36eo=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://qznoticiascdn.eleco.com.ar/media/2026/10/mar_del_plata_clima_nublado.webp",
+  "razon": "Es la mejor foto que ilustra el temporal sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-06T02:31:22.206Z"
  },
  "1tib4ft": {
   "archivo": "fotos-notas/1tib4ft.jpg",
