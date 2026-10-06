@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T18:02:40.357Z",
- "portada": 62,
- "archivo": 981,
+ "generado": "2026-10-06T18:31:54.772Z",
+ "portada": 61,
+ "archivo": 983,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-06T18:02:40.390Z",
+  "generado": "2026-10-06T18:31:54.810Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-06T18:06:46.125Z"
    },
    {
     "nombre": "farmacia",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 52,
+    "salio": "2026-10-06T18:06:46.125Z",
+    "segundos": null,
     "notas": [
      {
       "id": "k690bx",
@@ -198,15 +198,14 @@
      "id": "1r3qdtj",
      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
      "cuando": "2026-10-06T16:13:45.287Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1jfpdis",
      "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
-     "seccion": "Deportes",
-     "marcada": false
-    },
+     "cuando": "2026-10-06T18:08:44.956Z"
+    }
+   ],
+   "cola": [
     {
      "id": "gj403a",
      "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
@@ -214,8 +213,8 @@
      "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-06T17:43:45.287Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-06T19:38:44.956Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
