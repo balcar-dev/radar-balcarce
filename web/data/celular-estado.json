@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T15:33:12.069Z",
+ "generado": "2026-10-06T16:11:24.212Z",
  "portada": 53,
- "archivo": 967,
- "esperandoCuerpo": 2,
+ "archivo": 970,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-06T15:33:12.105Z",
+  "generado": "2026-10-06T16:11:24.257Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-06T13:05:50.368Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu evento o emprendimiento",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-06T15:05:56.084Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-06T13:05:50.368Z",
     "segundos": null,
     "notas": [
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 49,
     "notas": [
      {
       "id": "1k3fdlf",
@@ -139,14 +139,14 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1pofkpj",
-      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
+      "id": "2yqn4q",
+      "titulo": "El Banco Mundial recorta las estimaciones de crecimiento para el país",
+      "seccion": "Economía"
      },
      {
-      "id": "aa0h34",
-      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
-      "seccion": "Automovilismo"
+      "id": "fxkofi",
+      "titulo": "Caro Calvagni habla de sus deseos de ser madre junto a Nicolás Tagliafico",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -157,26 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "1pofkpj",
+      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
+      "seccion": "Balcarce"
+     },
      {
       "id": "n1xmig",
       "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
       "seccion": "Balcarce"
      },
      {
+      "id": "aa0h34",
+      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
+      "seccion": "Automovilismo"
+     },
+     {
       "id": "e5jokd",
       "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]
@@ -196,12 +196,6 @@
     }
    ],
    "cola": [
-    {
-     "id": "133cyna",
-     "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "1r3qdtj",
      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",

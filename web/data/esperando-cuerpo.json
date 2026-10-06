@@ -1,37 +1,136 @@
 {
- "generado": "2026-10-06T15:33:12.069Z",
+ "generado": "2026-10-06T16:11:24.212Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "p2dhln",
-   "titulo": "Avanza la privatización de AySA: dos consorcios pasaron a la etapa final y el jueves se conocerán las ofertas económicas",
-   "copete": "El proceso para definir la privatización de AySA entrará esta semana en una instancia clave: este jueves 8 de octubre se abrirán las propuestas económicas de los grupos interesados en quedarse con la empresa. La administración nacional estima que la operación podría reportarle…",
-   "seccion": "Economía",
-   "fecha": "2026-10-06T10:52:00.000Z",
+   "id": "il3c1a",
+   "titulo": "La Corte Suprema convocó a conjueces para un nuevo debate sobre la ley de tierras",
+   "copete": "La Corte Suprema de Justicia de la Nación informó este martes 6 de octubre de 2026 que convocará a dos conjueces para avanzar en el debate sobre la validez del artículo 154 del DNU 70/23, el cual derogó la Ley de Tierras. La decisión se tomó luego de que los ministros del máximo…",
+   "seccion": "Política",
+   "fecha": "2026-10-06T14:20:52.000Z",
    "fuentes": [
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/avanza-la-privatizacion-aysa-dos-consorcios-pasaron-la-etapa-final-y-el-jueves-se-conoceran-las-ofertas-economicas-n6330446",
-     "fecha": "2026-10-06T10:52:00.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/judiciales/2026/10/06/la-corte-suprema-convoco-a-conjueces-para-un-nuevo-debate-sobre-la-ley-de-tierras/",
+     "fecha": "2026-10-06T14:20:52.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/nacionales/la-corte-suprema-convoca-a-conjueces-para-debatir-la-validez-de-la-ley-de-tierras",
+     "fecha": "2026-10-06T14:41:36.000Z"
     },
     {
      "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/economia/avanza-la-privatizacion-aysa-y-el-jueves-se-conoceran-las-ofertas-dos-consorcios-empresas-n6330503",
-     "fecha": "2026-10-06T12:50:00.000Z"
+     "enlace": "https://www.minutouno.com/politica/la-corte-suprema-vuelve-discutir-la-ley-tierras-y-convoca-dos-conjueces-n6330618",
+     "fecha": "2026-10-06T15:10:00.000Z"
     },
     {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/economia/privatizacion-de-aysa-el-gobierno-confirmo-a-dos-grupos-empresarios-y-el-jueves-abrira-las-ofertas-economicas.phtml",
-     "fecha": "2026-10-06T11:51:00.000Z"
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/06/la-corte-suprema-convoco-a-dos-conjueces-para-resolver-una-nueva-demanda-contra-la-ley-de-tierras/",
+     "fecha": "2026-10-06T15:26:49.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/politica/la-corte-convoca-conjueces-un-nuevo-debate-la-ley-tierras-n1603649",
+     "fecha": "2026-10-06T14:45:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/la-corte-suprema-vuelve-discutir-la-ley-tierras-y-convoca-dos-conjueces-n6330617",
+     "fecha": "2026-10-06T15:08:46.000Z"
     },
     {
      "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-avanza-con-la-privatizacion-de-aysa-y-dara-a-conocer-las-ofertas-economicas-por-el-90-de-las-acciones/",
-     "fecha": "2026-10-06T12:04:15.000Z"
+     "enlace": "https://radiomitre.cienradios.com/politica/ley-de-tierras-la-corte-suprema-convoco-a-conjueces-para-un-nuevo-debate-sobre-el-dnu/",
+     "fecha": "2026-10-06T15:59:58.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/judiciales/la-corte-convoca-a-conjueces-para-un-nuevo-debate-sobre-la-ley-de-tierras_a6ac5061361c1587439f12293",
+     "fecha": "2026-10-06T14:30:48.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/la-corte-suprema-convoca-a-conjueces-para-un-nuevo-debate-sobre-la-ley-de-tierras-politica-y-economia_1791297660",
+     "fecha": "2026-10-06T14:48:19.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/ley-de-tierras-la-corte-convoca-a-cojueces",
+     "fecha": "2026-10-06T15:45:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gobierno\", \"aysa\" y el cuerpo no los explica; sin esas oraciones quedan 151 palabras",
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 113 palabras",
+   "maximo": 5
+  },
+  {
+   "id": "iqkmmm",
+   "titulo": "El Gobierno crea un comando de fuerzas federales de Seguridad para trasladar a los presos del penal de Devoto a Marcos Paz",
+   "copete": "El Ministerio de Seguridad Nacional creó dentro la estructura del Comando Unificado Federal un cuerpo específico para dar inicio a la mudanza de todas las personas privadas de la libertad alojadas en el Complejo Penitenciario Federal de la Ciudad Autónoma de Buenos Aires. El…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-06T11:38:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/el-gobierno-crea-un-comando-fuerzas-federales-seguridad-trasladar-los-presos-del-penal-devoto-marcos-paz-n6330447",
+     "fecha": "2026-10-06T11:38:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/sociedad/el-gobierno-creo-un-comando-unificado-el-traslado-presos-la-carcel-devoto-al-penal-marcos-paz-n6330625",
+     "fecha": "2026-10-06T15:40:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/el-gobierno-prepara-el-terreno-trasladar-los-presos-del-penal-devoto-marcos-paz-n250862",
+     "fecha": "2026-10-06T15:19:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/sociedad/anunciaron-la-creacion-de-un-comando-unificado-para-el-traslado-de-presos-de-devoto-al-penal-de-marcos-paz_a6ac4f7bc61c1587439eee0f2",
+     "fecha": "2026-10-06T14:10:04.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/06/110427-monteoliva-anuncio-la-creacion-de-un-comando-unificado-para-trasladar-a-los-internos-de-devoto-a-marcos-paz",
+     "fecha": "2026-10-06T15:15:53.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 80 palabras",
+   "maximo": 4
+  },
+  {
+   "id": "1c7wqua",
+   "titulo": "Karina Milei y Santilli siguen las negociaciones con gobernadores para suspender las PASO",
+   "copete": "La secretaria general de la Presidencia, Karina Milei , y el jefe de Gabinete, Diego Santilli , participarán junto a los gobernadores de Salta , Gustavo Sáenz , y de Catamarca , Raúl Jalil , de la inauguración de una planta de litio en La Puna salteña, en medio de las…",
+   "seccion": "Política",
+   "fecha": "2026-10-06T13:01:11.200Z",
+   "fuentes": [
+    {
+     "medio": "Diputados Bonaerenses",
+     "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
+     "fecha": "2026-10-06T14:30:00.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/guinos-paris-rosca-puna-karina-milei-santilli-profundizan-alianza-gobernadores_0_6T7VF7slZl.html",
+     "fecha": "2026-10-06T15:11:16.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/06/karina-milei-y-santilli-se-mostraran-junto-a-los-gobernadores-de-salta-y-catamarca-en-medio-de-las-negociaciones-por-las-paso/",
+     "fecha": "2026-10-06T15:48:21.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/06/karina-milei-y-santilli-se-mostraran-junto-a-los-gobernadores-de-salta-y-catamarca-en-medio-de-las-negociaciones-por-las-paso/",
+     "fecha": "2026-10-06T15:48:21.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 3 problemas (numero, copia): el cuerpo dice 3 y la fuente no lo dice; sin esas oraciones quedan 48 palabras",
    "maximo": 3
   },
   {
@@ -120,6 +219,55 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "biwye6",
+   "titulo": "Ley de Semillas: Federación Agraria advierte por el impacto sobre los productores: “Hay que buscar un equilibrio”",
+   "copete": "Joaquín Vidal, abogado y secretario de la Federación Agraria Argentina, filial Balcarce, visitó los estudios de Radio Líder Balcarce Streaming y analizó las conclusiones del Congreso Anual de la entidad, la discusión por las regalías y los principales reclamos del sector…",
+   "seccion": "Agro",
+   "fecha": "2026-10-06T16:01:25.359Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45007-ley-de-semillas-federacion-agraria-advierte-por-el-impacto-sobre-los-productores-hay-que-buscar-un-equilibrio/",
+     "fecha": null
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
+  },
+  {
+   "id": "ql89ei",
+   "titulo": "El Gobierno amplía emisión de títulos por $221.119 millones para saldar deudas de obra pública",
+   "copete": "El Gobierno argentino ha aprobado este martes la emisión de bonos por un total de 221.120 millones de pesos (129,3 millones de euros) para cancelar deudas con contratistas de obras públicas, según se desprende de la Resolución Conjunta 59/2026 publicada este martes en el Boletín…",
+   "seccion": "Economía",
+   "fecha": "2026-10-06T11:38:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
+     "fecha": "2026-10-06T11:38:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/america/agencias/2026/10/06/el-gobierno-argentino-amplia-la-emision-de-deuda-en-1293-millones-para-pagar-a-contratistas-de-obra-publica/",
+     "fecha": "2026-10-06T15:32:09.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
+     "fecha": "2026-10-06T13:43:28.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/el-gobierno-amplio-la-emision-deuda-221119-millones-pagar-obligaciones-obra-publica-n6330549",
+     "fecha": "2026-10-06T13:33:00.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "título o bajada: 4 problemas (numero, tilde): el titulo dice 221.000 y la fuente no lo dice",
+   "maximo": 3
   }
  ]
 }
