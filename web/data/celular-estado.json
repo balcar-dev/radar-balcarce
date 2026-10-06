@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T16:11:24.212Z",
+ "generado": "2026-10-06T16:16:04.264Z",
  "portada": 53,
- "archivo": 970,
- "esperandoCuerpo": 6,
+ "archivo": 971,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-06T16:11:24.257Z",
+  "generado": "2026-10-06T16:16:04.300Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 55,
     "notas": [
      {
       "id": "1k3fdlf",
@@ -144,9 +144,9 @@
       "seccion": "Economía"
      },
      {
-      "id": "fxkofi",
-      "titulo": "Caro Calvagni habla de sus deseos de ser madre junto a Nicolás Tagliafico",
-      "seccion": "Cultura y agenda"
+      "id": "aa0h34",
+      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 50,
     "notas": [
      {
       "id": "1pofkpj",
@@ -170,13 +170,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "aa0h34",
-      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
-      "seccion": "Automovilismo"
-     },
-     {
       "id": "e5jokd",
       "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "2vqepe",
+      "titulo": "El consumo de pollo supera por primera vez al de carne vacuna",
       "seccion": "Balcarce"
      }
     ]
@@ -195,14 +195,7 @@
      "cuando": "2026-10-06T14:35:26.139Z"
     }
    ],
-   "cola": [
-    {
-     "id": "1r3qdtj",
-     "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
-     "seccion": "Deportes",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 3,
    "proximoDesde": "2026-10-06T16:05:26.139Z",
    "porDia": 5,

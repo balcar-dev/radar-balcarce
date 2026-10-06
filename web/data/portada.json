@@ -1,73 +1,163 @@
 {
-  "generado": "2026-10-06T16:11:24.212Z",
+  "generado": "2026-10-06T16:16:04.264Z",
   "notas": [
     {
-      "id": "fxkofi",
-      "titulo": "Caro Calvagni habla de sus deseos de ser madre junto a Nicolás Tagliafico",
-      "copete": "La modelo se encuentra en el país para acompañar al futbolista en la despedida de Lionel Messi y se refirió por primera vez de forma pública a sus planes de formar una familia.",
-      "cuerpo": "Caro Calvagni se encuentra en el país para acompañar a Nicolás Tagliafico, quien participa este martes del partido de despedida de Lionel Messi. En ese contexto, la modelo habló por primera vez sobre la maternidad y confirmó que ambos tienen deseos de formar una familia.\n\nDurante su paso por el programa Sería Increíble, de Olga, explicó que antes priorizó sus proyectos personales, viajar y disfrutar de la pareja junto al futbolista, con quien convive desde hace más de una década. Asimismo, señaló que ahora se siente en una etapa diferente y preparada para dar ese paso.",
-      "guion": "Caro Calvagni habla de sus deseos de ser madre junto a Nicolás Tagliafico",
-      "seccion": "Cultura y agenda",
+      "id": "2vqepe",
+      "titulo": "El consumo de pollo supera por primera vez al de carne vacuna",
+      "copete": "La ingesta de carne aviar alcanza los 47 kilos anuales por habitante y supera a la vacuna, que baja a 46,7 kilos, según un informe sectorial.",
+      "cuerpo": "El consumo de pollo superó por primera vez al de carne vacuna en el país, según un informe del Instituto de Estudios sobre la Realidad Argentina y Latinoamericana de la Fundación Mediterránea.\n\nLa ingesta anual de carne aviar llegó a 47 kilos por habitante, mientras que la de res retrocedió a 46,7 kilos. El consumo de cerdo alcanzó los 20,1 kilos por habitante. El relevamiento atribuye este cambio en los hábitos alimentarios al aumento en los valores de la carne vacuna, cuya cotización por kilo equivalió a 3,6 kilos de pollo y a 1,9 kilos de pechito de cerdo.\n\nEl Centro de Empresas Procesadoras Avícolas proyecta que la ingesta de pollo podría superar los 50 kilos por habitante durante este año. En paralelo, la Cámara Argentina de Productores e Industrializadores Avícolas informó que el consumo de huevos subió de 398 a 430 unidades anuales por habitante.",
+      "guion": "El consumo de pollo supera por primera vez al de carne vacuna",
+      "seccion": "Balcarce",
       "medios": [
-        "Infobae",
-        "El Destape",
-        "El Día"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://www.eldia.com/espectaculos/caro-calvagni-revelo-un-deseo-muy-especial-que-tiene-junto-a-nicolas-tagliafico-espectaculos_1791298800",
+      "enlace": "https://eldiariobalcarce.com.ar/cambio-historico-en-la-mesa-argentina-se-come-mas-pollo-que-carne-vacuna-928",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-06T16:14:45.240Z",
+      "sinFecha": true,
+      "visto": "2026-10-06T16:14:45.240Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El consumo de pollo llegó a 47 kilos por habitante al año.",
+        "La carne vacuna bajó a 46,7 kilos anuales por habitante.",
+        "El consumo de cerdo se ubica en 20,1 kilos por habitante.",
+        "La ingesta de huevos trepó a 430 unidades anuales por persona."
+      ],
+      "seSabe": [
+        "El consumo anual de pollo llegó a 47 kilos por habitante, según el IERAL.",
+        "El consumo de carne vacuna descendió a 46,7 kilos por habitante anuales, de acuerdo con el mismo instituto.",
+        "El consumo de cerdo se ubicó en 20,1 kilos por habitante, según el informe.",
+        "El consumo de huevos subió de 398 a 430 unidades anuales por habitante, según datos de la CAPIA."
+      ],
+      "noConfirmado": [
+        "No se confirmó si el consumo avícola alcanzará efectivamente los 50 kilos por habitante proyectados por el CEPA para este año.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El consumo de pollo superó por primera vez al de carne vacuna en el país, al alcanzar los 47 kilos anuales por habitante frente a los 46,7 kilos de la carne de res.",
+      "etiquetas": [
+        "consumo",
+        "pollo",
+        "carne vacuna",
+        "IERAL"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/cambio-historico-en-la-mesa-argentina-se-come-mas-pollo-que-carne-vacuna-928",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la evolución del consumo de pollo, carne vacuna, cerdo y huevos, junto con las proyecciones del sector avícola."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-consumo-de-pollo-supera-por-primera-vez-al-de-carne-vacuna",
+      "foto": {
+        "archivo": "fotos-notas/2vqepe.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "svmvqw",
+      "titulo": "El Gobierno busca bajar la tensión con Patricia Bullrich de cara a 2027",
+      "copete": "El oficialismo restó importancia a los dichos de la senadora sobre una posible postulación y aseguró que respalda la reelección de Javier Milei.",
+      "cuerpo": "El Gobierno nacional intentó este martes bajar la tensión política tras las declaraciones de la senadora y jefa del bloque de La Libertad Avanza en el Senado, Patricia Bullrich, quien dejó abierta la posibilidad de competir por la presidencia en 2027. El vocero presidencial, Adrián Ravier, sostuvo en conferencia de prensa que la legisladora apoya la reelección del presidente Javier Milei.\n\nRavier relativizó las diferencias públicas entre ambos y afirmó que en la última reunión de gabinete hubo un respaldo total al proyecto oficialista. Además, destacó la trayectoria política de la exministra y señaló que las discrepancias puntuales son normales dentro del espacio.\n\nA principios de mes, durante su participación en el Coloquio de IDEA en Mar del Plata, la senadora había evitado confirmar si competirá en los próximos comicios y reclamó mayor velocidad en las medidas económicas.",
+      "guion": "El Gobierno busca bajar la tensión con Patricia Bullrich de cara a 2027",
+      "seccion": "Política",
+      "medios": [
+        "El Eco de Tandil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://tn.com.ar/politica/2026/10/06/la-casa-rosada-busco-bajar-la-tension-con-patricia-bullrich-creemos-que-apoya-la-candidatura-de-milei-para-2027/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T15:19:35.000Z",
+      "fecha": "2026-10-06T15:05:37.000Z",
       "sinFecha": false,
-      "visto": "2026-10-06T16:01:25.359Z",
-      "relevancia": 81,
+      "visto": "2026-10-06T16:14:45.240Z",
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Caro Calvagni habló públicamente por primera vez sobre la maternidad.",
-        "Confirmó que junto a Nicolás Tagliafico tienen deseos de ser padres.",
-        "Explicó que en etapas anteriores priorizó sus proyectos personales y viajar.",
-        "Hizo estas declaraciones durante su visita al programa Sería Increíble."
+        "El oficialismo restó importancia a los dichos de Patricia Bullrich sobre una candidatura para 2027.",
+        "El vocero presidencial, Adrián Ravier, aseguró que la senadora apoya la reelección de Javier Milei.",
+        "El funcionario afirmó que las diferencias de enfoque son habituales y destacó la trayectoria de la legisladora.",
+        "En octubre, durante el Coloquio de IDEA, la senadora había evitado definir sus aspiraciones electorales."
       ],
-      "textoRedes": "Caro Calvagni se refirió por primera vez de forma pública a sus deseos de ser madre junto a Nicolás Tagliafico y explicó que atraviesa una nueva etapa personal.",
+      "seSabe": [
+        "El vocero presidencial, Adrián Ravier, afirmó que la senadora Patricia Bullrich apoya la reelección de Javier Milei para 2027.",
+        "Ravier aseguró que en el oficialismo aceptan que puedan existir diferencias de opinión con legisladores.",
+        "El presidente Javier Milei y Patricia Bullrich se reencontraron el lunes en la reunión de gabinete en Casa Rosada."
+      ],
+      "noConfirmado": [
+        "Si Patricia Bullrich oficializará una postulación presidencial para las elecciones de 2027."
+      ],
+      "textoRedes": "El Gobierno nacional buscó bajar la tensión con la senadora Patricia Bullrich tras sus dichos sobre las elecciones de 2027 y aseguró que respalda la reelección de Javier Milei.",
       "etiquetas": [
-        "Caro Calvagni",
-        "Nicolás Tagliafico",
-        "maternidad"
+        "Gobierno nacional",
+        "Patricia Bullrich",
+        "Javier Milei",
+        "elecciones 2027",
+        "Adrián Ravier"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/espectaculos/caro-calvagni-revelo-un-deseo-muy-especial-que-tiene-junto-a-nicolas-tagliafico-espectaculos_1791298800",
-          "fecha": "2026-10-06T15:19:35.000Z",
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/06/la-casa-rosada-busco-bajar-la-tension-con-patricia-bullrich-creemos-que-apoya-la-candidatura-de-milei-para-2027/",
+          "fecha": "2026-10-06T15:05:37.000Z",
           "oficial": false,
-          "aporte": "Informó sobre la presencia de Caro Calvagni en el país y sus declaraciones acerca de la maternidad."
+          "aporte": "Detalló las declaraciones del vocero presidencial sobre el respaldo de Bullrich a Milei y el reencuentro en el gabinete."
         },
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/teleshow/2026/10/06/caro-calvagni-hablo-de-su-deseo-de-ser-madre-con-nicolas-tagliafico-ahora-estoy-preparada/",
-          "fecha": "2026-10-06T15:33:03.000Z",
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/ravier-aseguro-que-bullrich-apoyara-la-reeleccion-de-javier-milei-en-2027",
+          "fecha": "2026-10-06T15:38:02.000Z",
           "oficial": false,
-          "aporte": "Aportó que las declaraciones se realizaron durante su visita al programa Sería Increíble, de Olga."
+          "aporte": "Indicó que el vocero presidencial ratificó el apoyo de la senadora a la reelección durante una conferencia."
         },
         {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/casa-nicolas-tagliafico-caro-calvagni-argentina-fotos-2026106125146",
-          "fecha": "2026-10-06T15:51:46.000Z",
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/ravier-relativizo-las-aspiraciones-presidenciales-de-bullrich-creo-que-apoya-la-candidatura-de-milei/",
+          "fecha": "2026-10-06T15:59:45.000Z",
           "oficial": false,
-          "aporte": "Mencionó detalles sobre la casa que la pareja comparte en Argentina."
+          "aporte": "Informó que el Gobierno nacional buscó poner paños fríos ante especulaciones de una interna."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/ravier---creo-que-para-2027-bullrich-apoyara-la-candidatura-de-milei-_a6ac50c0761c1587439f2010a",
+          "fecha": "2026-10-06T15:31:22.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la conferencia de prensa del vocero presidencial se realizó este martes en Buenos Aires."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1f6rlk",
+          "titulo": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
+          "fecha": "2026-10-01T17:50:05.000Z",
+          "ruta": "/nota/patricia-bullrich-pide-mayor-velocidad-para-los-cambios-economicos-en-1f6rlk"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "caro-calvagni-habla-de-sus-deseos-de-ser-madre-junto-a-nicolas",
+      "slug": "el-gobierno-busca-bajar-la-tension-con-patricia-bullrich-de-cara-a",
       "foto": {
-        "archivo": "fotos-notas/fxkofi.jpg",
-        "credito": "Foto: El Día"
+        "archivo": "fotos-notas/svmvqw.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -401,7 +491,7 @@
       "fecha": "2026-10-06T13:05:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T14:31:14.500Z",
-      "relevancia": 82,
+      "relevancia": 72,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -735,6 +825,179 @@
       "foto": {
         "archivo": "fotos-notas/1uo836n.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "1qwqrm2",
+      "titulo": "El Gobierno restituye el nombre histórico al feriado de octubre",
+      "copete": "La administración nacional volvió a utilizar la denominación tradicional para la fecha que recuerda la llegada de Cristóbal Colón. El próximo lunes habrá fin de semana largo.",
+      "cuerpo": "El Gobierno nacional restituyó el nombre con el que se conoció históricamente a la efeméride que recuerda la llegada de Cristóbal Colón a América.\n\nA lo largo de las distintas gestiones, la celebración sufrió modificaciones en su enfoque y denominación. Sin embargo, la normativa vigente sobre feriados nacionales y días no laborables continúa regulada por la Ley 27.399, mientras que el Decreto 1027/2024 estableció los días no laborables con fines turísticos para 2025 sin alterar el nombre de esta jornada.",
+      "guion": "El Gobierno restituye el nombre histórico al feriado de octubre",
+      "seccion": "Argentina",
+      "medios": [
+        "C5N",
+        "El Eco de Tandil",
+        "Clarín"
+      ],
+      "enlace": "https://www.eleco.com.ar/interes-general/el-gobierno-cambio-el-nombre-del-feriado-del-12-de-octubre-y-vuelve-a-denominarlo-dia-de-la-raza",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T11:46:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T15:31:27.469Z",
+      "relevancia": 72,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno cambió el nombre del feriado del 12 de octubre.",
+        "La fecha recuerda la llegada de Cristóbal Colón a América.",
+        "El lunes 12 de octubre configuró un fin de semana largo.",
+        "La Ley 27.399 regula el régimen de feriados nacionales."
+      ],
+      "seSabe": [
+        "La administración actual restituyó el nombre histórico de la fecha.",
+        "El feriado conmemora la llegada de Cristóbal Colón a América.",
+        "El 12 de octubre de 2026 configuró un fin de semana largo junto al sábado 10 y el domingo 11."
+      ],
+      "textoRedes": "El Gobierno nacional restituyó el nombre histórico al feriado del 12 de octubre, fecha que conmemora la llegada de Cristóbal Colón a América y que este año configuró un fin de semana largo.",
+      "etiquetas": [
+        "feriado",
+        "Gobierno nacional",
+        "12 de octubre",
+        "fin de semana largo",
+        "calendario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/interes-general/el-gobierno-cambio-el-nombre-del-feriado-del-12-de-octubre-y-vuelve-a-denominarlo-dia-de-la-raza",
+          "fecha": "2026-10-06T11:46:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre el calendario del fin de semana largo, la vigencia de la Ley 27.399 y el alcance del Decreto 1027/2024."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/el-gobierno-cambio-el-nombre-del-feriado-del-12-octubre-que-volvio-llamarse-dia-la-raza-n250853",
+          "fecha": "2026-10-06T14:32:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el cambio de denominación dispuesto por la administración actual para la efeméride."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/informacion-general/dia-raza-2026-volvio-llamarse-feriado-12-octubre-cambia_0_3coCBlk7pm.html",
+          "fecha": "2026-10-06T14:00:07.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la celebración sufrió modificaciones de nombre y enfoque a lo largo de la historia del país."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-restituye-el-nombre-historico-al-feriado-de-octubre",
+      "foto": {
+        "archivo": "fotos-notas/1qwqrm2.jpg",
+        "credito": "Foto: C5N"
+      }
+    },
+    {
+      "id": "iqkmmm",
+      "titulo": "El Gobierno crea un comando especial para trasladar a los presos de Devoto",
+      "copete": "El Ministerio de Seguridad Nacional dispuso un cuerpo específico para coordinar el traslado gradual de todos los internos del penal porteño de Villa Devoto hacia el establecimiento de Marcos Paz.",
+      "cuerpo": "El Ministerio de Seguridad Nacional creó un comando especial dentro de la estructura del Comando Unificado Federal para coordinar la mudanza de los internos alojados en el Complejo Penitenciario Federal de la Ciudad Autónoma de Buenos Aires, ubicado en el barrio de Villa Devoto, hacia el nuevo predio de Marcos Paz.\n\nEl traslado se fundamenta en un acuerdo firmado en marzo de 2018 que dispuso la edificación de la nueva cárcel y el cierre definitivo del establecimiento porteño. La cartera de Seguridad argumentó que la magnitud de la operación requiere convocar a un cuerpo interfuerzas para garantizar la seguridad perimetral, vial y el orden público durante el recorrido.\n\nEl operativo estará coordinado por el Servicio Penitenciario Federal junto con la Policía Federal, Gendarmería Nacional, Prefectura Naval y la Policía de Seguridad Aeroportuaria.",
+      "guion": "El Gobierno crea un comando especial para trasladar a los presos de Devoto",
+      "seccion": "Argentina",
+      "medios": [
+        "Minuto Uno",
+        "Ámbito",
+        "C5N",
+        "Noticias Argentinas (NA)",
+        "Infobrisas (Radio Brisas)"
+      ],
+      "enlace": "https://www.ambito.com/politica/el-gobierno-crea-un-comando-fuerzas-federales-seguridad-trasladar-los-presos-del-penal-devoto-marcos-paz-n6330447",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T11:38:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T16:14:45.240Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Ministerio de Seguridad Nacional creó un comando especial para trasladar a los presos de Villa Devoto a Marcos Paz.",
+        "La medida se formalizó a través de la Resolución 1018/2026, firmada por la ministra Alejandra Monteoliva.",
+        "El operativo estará coordinado por el Servicio Penitenciario Federal junto a fuerzas federales.",
+        "El traslado responde a un convenio firmado en marzo de 2018 para cerrar el penal porteño."
+      ],
+      "seSabe": [
+        "El Ministerio de Seguridad Nacional creó un comando específico para trasladar a los presos de Villa Devoto a Marcos Paz.",
+        "La medida quedó establecida por la Resolución 1018/2026, firmada por la ministra Alejandra Monteoliva y publicada en el Boletín Oficial.",
+        "El traslado se apoya en un convenio marco firmado en marzo de 2018.",
+        "El operativo contará con el Servicio Penitenciario Federal, la Policía Federal, Gendarmería, Prefectura y la PSA.",
+        "El Gobierno invitó a la Ciudad y a la Provincia a designar representantes."
+      ],
+      "noConfirmado": [
+        "Todavía no se detallaron las fechas específicas ni los cronogramas concretos en los que se ejecutarán los traslados."
+      ],
+      "textoRedes": "El Gobierno nacional creó un comando especial para coordinar el traslado de todos los internos del penal de Villa Devoto hacia el complejo de Marcos Paz de manera gradual.",
+      "etiquetas": [
+        "Seguridad Nacional",
+        "Villa Devoto",
+        "Marcos Paz",
+        "Servicio Penitenciario Federal",
+        "Ministerio de Seguridad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/el-gobierno-crea-un-comando-fuerzas-federales-seguridad-trasladar-los-presos-del-penal-devoto-marcos-paz-n6330447",
+          "fecha": "2026-10-06T11:38:00.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la resolución ministerial, los objetivos del nuevo comando y el convenio de 2018."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/el-gobierno-creo-un-comando-unificado-el-traslado-presos-la-carcel-devoto-al-penal-marcos-paz-n6330625",
+          "fecha": "2026-10-06T15:40:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las fuerzas de seguridad que participarán en el operativo y la invitación a la Ciudad y la Provincia."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/el-gobierno-prepara-el-terreno-trasladar-los-presos-del-penal-devoto-marcos-paz-n250862",
+          "fecha": "2026-10-06T15:19:00.000Z",
+          "oficial": false,
+          "aporte": "Consignó la creación del cuerpo específico dentro del Comando Unificado Federal para la mudanza de los reclusos."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/anunciaron-la-creacion-de-un-comando-unificado-para-el-traslado-de-presos-de-devoto-al-penal-de-marcos-paz_a6ac4f7bc61c1587439eee0f2",
+          "fecha": "2026-10-06T14:10:04.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el proceso de traslado se llevará a cabo de manera gradual y progresiva."
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/06/110427-monteoliva-anuncio-la-creacion-de-un-comando-unificado-para-trasladar-a-los-internos-de-devoto-a-marcos-paz",
+          "fecha": "2026-10-06T15:15:53.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar texto en su resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-crea-un-comando-especial-para-trasladar-a-los-presos-de",
+      "foto": {
+        "archivo": "fotos-notas/iqkmmm.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -1110,135 +1373,6 @@
       "foto": {
         "archivo": "fotos-notas/18wosri.jpg",
         "credito": "Foto: INTA"
-      }
-    },
-    {
-      "id": "ozgxah",
-      "titulo": "Jannik Sinner termina su temporada y Zverev apunta al uno",
-      "copete": "El número uno del mundo del tenis italiano cierra su año calendario por una lesión en la rodilla derecha. Su ausencia dejará el camino libre para que el alemán Alexander Zverev alcance la cima del ranking.",
-      "cuerpo": "El número uno del ranking mundial no compite desde que se consagró campeón en Wimbledon en julio pasado.\n\nEl deportista explicó a través de un mensaje en sus redes sociales que junto con los médicos decidió encarar un tratamiento médico por una inflamación y una tendinopatía. La baja del italiano le permitirá al alemán Alexander Zverev llegar al primer puesto de la clasificación mundial debido a la diferencia de puntos.",
-      "guion": "Jannik Sinner termina su temporada y Zverev apunta al uno",
-      "seccion": "Deportes",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Olé",
-        "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Bolavip Argentina",
-        "El Gráfico",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.elgrafico.com.ar/articulo/1129/103195/fin-de-la-temporada-2026-para-jannik-sinner-quien-sera-el-nuevo-numero-1-del-mundo",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T06:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T16:01:25.359Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Jannik Sinner termina su temporada 2026 por lesión",
-        "El tenista italiano padece una dolencia en la rodilla derecha",
-        "Alexander Zverev quedará como número uno del ranking ATP"
-      ],
-      "noConfirmado": [
-        "No se informó el tiempo exacto que demandará la recuperación del deportista fuera de las canchas"
-      ],
-      "textoRedes": "El tenista Jannik Sinner anunció que pone fin a su temporada 2026 por una lesión en la rodilla derecha. Su ausencia en las canchas dejará el camino libre para que el alemán Alexander Zverev alcance el número uno del ranking mundial.",
-      "etiquetas": [
-        "Jannik Sinner",
-        "tenis",
-        "ranking ATP",
-        "Alexander Zverev",
-        "lesión"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Gráfico",
-          "enlace": "https://www.elgrafico.com.ar/articulo/1129/103195/fin-de-la-temporada-2026-para-jannik-sinner-quien-sera-el-nuevo-numero-1-del-mundo",
-          "fecha": "2026-10-06T06:00:00.000Z",
-          "oficial": false,
-          "aporte": "Informó el anuncio del tenista sobre el cierre de su temporada por una lesión en la rodilla."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/tenis/jannik-sinner-numero-1-del-mundo-anuncio-que-no-jugara-por-el-resto-del-ano-nid06102026/",
-          "fecha": "2026-10-06T12:25:59.000Z",
-          "oficial": false,
-          "aporte": "Detalló los dichos del deportista en redes sociales y los datos sobre su lesión y ranking."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/06/impacto-en-el-tenis-jannik-sinner-no-jugara-lo-que-resta-del-ano-por-una-lesion-y-otra-figura-sera-numero-1-por-primera-vez/",
-          "fecha": "2026-10-06T13:39:48.000Z",
-          "oficial": false,
-          "aporte": "Aportó que la salida de Sinner abrirá el camino para que Alexander Zverev alcance el número uno."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/tenis/2026/10/06/jannik-sinner-anuncio-que-no-volvera-a-jugar-en-el-resto-de-la-temporada-de-tenis-por-una-lesion-en-la-rodilla/",
-          "fecha": "2026-10-06T09:44:42.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha del anuncio y que no juega desde Wimbledon en julio."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/tenis/sinner-confirmo-que-no-jugara-mas-en-2026-y-perdera-el-primer-puesto-del-ranking-atp-id764575.html",
-          "fecha": "2026-10-06T15:03:23.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/tenis/tenis-jannik-sinner-juega-pierde-ano-lesion-temporada-ranking-primer-puesto-zverev_0_oCpswhFd6t.html",
-          "fecha": "2026-10-06T12:06:18.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/bombazo-en-el-tenis--sinner-se-perdera-lo-que-resta-de-2026-y-zverev-sera-el-nuevo-numero-1-del-mundo_a6ac4e15361c1587439eb94e0",
-          "fecha": "2026-10-06T12:46:41.499Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-6-10-54-0-bombazo-sinner-se-perdera-lo-que-resta-de-2026-y-zverev-sera-el-nuevo-numero-1-del-mundo",
-          "fecha": "2026-10-06T15:50:02.000Z",
-          "oficial": false,
-          "aporte": "Indicó que Zverev llegará a la cima del ranking y el alcance del tratamiento médico."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/tenis/sinner-dio-por-finalizada-su-temporada-y-zverev-sera-numero-1-del-mundo",
-          "fecha": "2026-10-06T10:57:09.000Z",
-          "oficial": false,
-          "aporte": "Recordó el triunfo de Sinner en Wimbledon ante Zverev el pasado 12 de julio."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/videos/el-tenis-tendra-un-nuevo-numero-1-alexander-zverev-llegara-a-ese-puesto-por-primera-vez-en-su-historia-por-una-lesion-de-jannik-sinner/",
-          "fecha": "2026-10-06T11:14:55.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre la llegada de Zverev al primer puesto del ranking mundial."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 10 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "jannik-sinner-termina-su-temporada-y-zverev-apunta-al-uno",
-      "foto": {
-        "archivo": "fotos-notas/ozgxah.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -1930,8 +2064,8 @@
         "Infobae",
         "Perfil",
         "iProfesional",
-        "Noticias Argentinas (NA)",
         "El Día",
+        "Noticias Argentinas (NA)",
         "La Nueva"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/caputo-advirtio-al-mercado-sobre-como-se-prepara-ante-un-escenario-electoral-adverso-en-2027-les-nid05102026/",
@@ -2783,11 +2917,11 @@
         "Olé",
         "C5N",
         "Diario Popular",
-        "Noticias Argentinas (NA)",
         "El Día",
         "La Voz del Pueblo",
         "Doble Amarilla",
-        "UAR (Unión Argentina de Rugby)"
+        "UAR (Unión Argentina de Rugby)",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
       "teniaImagenLaFuente": true,
@@ -2858,113 +2992,6 @@
       "foto": {
         "archivo": "fotos-notas/15ngrmw.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "1tib4ft",
-      "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
-      "copete": "El presidente argentino participará como invitado de honor de una gala en Washington el miércoles 14 de octubre. El encuentro sumará la presencia del diputado brasileño Eduardo Bolsonaro.",
-      "cuerpo": "El presidente Javier Milei viajará a Estados Unidos la semana próxima para asistir como invitado de honor a una gala privada organizada por referentes republicanos. El encuentro tendrá lugar el miércoles 14 de octubre en el Andrew W.\n\nEn la misma velada participará el diputado brasileño Eduardo Bolsonaro, hermano de Flávio Bolsonaro, quien se impuso en la primera vuelta electoral y disputará el balotaje presidencial el 25 de octubre frente a Luiz Inácio Lula da Silva. El legislador brasileño, radicado en territorio estadounidense, expresó su respaldo al mandatario argentino en redes sociales.\n\nComo antecedente, el jefe de Estado había celebrado el resultado de los comicios en el país vecino y cuestionado a la oposición. La agenda internacional del titular del Ejecutivo incluirá además un viaje posterior a España para respaldar a sectores de la derecha opositora.",
-      "guion": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
-      "seccion": "Política",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Perfil",
-        "A24",
-        "Crónica",
-        "Canal 26"
-      ],
-      "enlace": "https://tn.com.ar/politica/2026/10/05/milei-volvera-a-eeuu-y-compartira-un-evento-con-el-hermano-de-flavio-bolsonaro-en-plena-campana-por-el-balotaje-en-brasil/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T18:53:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T01:01:20.534Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El presidente Milei viajará a Estados Unidos el miércoles 14 de octubre",
-        "Participará como invitado de honor en una gala en Washington",
-        "El evento contará con la presencia del diputado brasileño Eduardo Bolsonaro",
-        "El encuentro se da en plena campaña previa al balotaje en Brasil"
-      ],
-      "seSabe": [
-        "El presidente Javier Milei viajará a Estados Unidos el miércoles 14 de octubre.",
-        "El mandatario participará de la Official Hispanic Heritage Gala en el Andrew W. Mellon Auditorium de Washington.",
-        "El Gobierno nacional confirmó el viaje oficial.",
-        "Eduardo Bolsonaro asistirá al mismo evento."
-      ],
-      "textoRedes": "El presidente Javier Milei viajará a Estados Unidos el miércoles 14 de octubre para participar de una gala en Washington. En el encuentro coincidirá con el diputado brasileño Eduardo Bolsonaro, en medio de la contienda electoral de su país.",
-      "etiquetas": [
-        "Javier Milei",
-        "Estados Unidos",
-        "Eduardo Bolsonaro",
-        "Washington",
-        "Brasil"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/05/milei-volvera-a-eeuu-y-compartira-un-evento-con-el-hermano-de-flavio-bolsonaro-en-plena-campana-por-el-balotaje-en-brasil/",
-          "fecha": "2026-10-05T18:53:21.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/milei-vuelve-a-estados-unidos-y-compartira-un-evento-con-eduardo-bolsonaro-11-dias-antes-del-balotaje-en-brasil.phtml",
-          "fecha": "2026-10-06T00:26:05.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/a-dias-del-balotaje-brasil-milei-participara-washington-un-evento-junto-eduardo-bolsonaro-n1603476",
-          "fecha": "2026-10-06T00:52:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/javier-milei-volvera-a-estados-unidos-para/",
-          "fecha": "2026-10-05T19:30:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/milei-viaja-a-washington-para-una-gala-hispana-y-se-mostrara-con-eduardo-bolsonaro_a6ac414a00606b0c07ed97086",
-          "fecha": "2026-10-05T21:47:41.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1i07zda",
-          "titulo": "Milei sigue las elecciones en Brasil y respalda a Bolsonaro",
-          "fecha": "2026-10-04T12:32:17.000Z",
-          "ruta": "/nota/milei-sigue-las-elecciones-en-brasil-y-respalda-a-bolsonaro-1i07zda"
-        },
-        {
-          "id": "1gp4lrt",
-          "titulo": "Javier Milei celebra el resultado electoral en Brasil",
-          "fecha": "2026-10-05T13:13:00.000Z",
-          "ruta": "/nota/javier-milei-celebra-el-resultado-electoral-en-brasil-1gp4lrt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro",
-      "foto": {
-        "archivo": "fotos-notas/1tib4ft.jpg",
-        "credito": "Foto: A24"
       }
     },
     {
@@ -3249,102 +3276,6 @@
       "foto": {
         "archivo": "fotos-notas/w7y7kg.jpg",
         "credito": "Foto: Argenpapa"
-      }
-    },
-    {
-      "id": "uk82ir",
-      "titulo": "El Gobierno bonaerense diferencia paros docentes y advierte descuentos",
-      "copete": "El ministro Carlos Bianco diferenció las medidas de fuerza de gremios legales y de sectores disidentes. Aclaró que la cartera educativa definirá si aplica retenciones de haberes.",
-      "cuerpo": "El ministro de Gobierno, Carlos Bianco, explicó que existen dos tipos de protestas y señaló a sectores como Suteba Multicolor y la Asociación de Maestros de la Provincia de Buenos Aires. En ese sentido, el funcionario indicó que la definición sobre los descuentos salariales quedará en manos de la Dirección General de Cultura y Educación.\n\nLa aclaración oficial surge tras una protesta de 24 horas llevada a cabo el jueves pasado por el Frente de Unidad Docente Bonaerense en reclamo por episodios de violencia en los establecimientos educativos. Bianco sostuvo que las protestas ocurren en un contexto de creciente conflictividad social que afecta también a médicos y policías, y responsabilizó a la administración del presidente Javier Milei por la situación.",
-      "guion": "El Gobierno bonaerense diferencia paros docentes y advierte descuentos",
-      "seccion": "Política",
-      "medios": [
-        "0221",
-        "La Tecla",
-        "La Verdad",
-        "La Opinión",
-        "Infoeme",
-        "Diario Conurbano",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Agencia DIB",
-        "La Brújula 24",
-        "Ecos Diarios (Necochea)",
-        "El Día",
-        "El Destape",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://dib.com.ar/sociedad/el-gobierno-kicillof-advirtio-los-paros-docentes-y-posibles-descuentos-n56249",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T16:12:30.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T17:31:05.708Z",
-      "relevancia": 70,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El ministro Carlos Bianco diferenció los paros de gremios legales y de sectores disidentes.",
-        "La cartera educativa definirá la aplicación de descuentos salariales a los manifestantes.",
-        "El Frente de Unidad Docente Bonaerense realizó una medida de fuerza el jueves pasado."
-      ],
-      "seSabe": [
-        "El ministro de Gobierno bonaerense, Carlos Bianco, diferenció las protestas de sindicatos con representación legal y las de agrupaciones disidentes.",
-        "La definición sobre posibles descuentos salariales estará a cargo de la Dirección General de Cultura y Educación.",
-        "El Frente de Unidad Docente Bonaerense concretó un paro de 24 horas el jueves pasado por hechos de violencia."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó oficialmente si se efectivizarán los descuentos salariales a los docentes que pararon."
-      ],
-      "textoRedes": "El Gobierno bonaerense diferenció los paros docentes entre gremios legales y sectores disidentes, y advirtió que podrían aplicarse descuentos salariales.",
-      "etiquetas": [
-        "docentes",
-        "paros",
-        "Carlos Bianco",
-        "Gobierno bonaerense",
-        "educación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/el-gobierno-kicillof-advirtio-los-paros-docentes-y-posibles-descuentos-n56249",
-          "fecha": "2026-10-05T16:12:30.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre las declaraciones de Carlos Bianco, la mención a los gremios disidentes y el contexto del paro del Frente de Unidad Docente."
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/provincia/la-provincia-amenaza-aplicar-descuentos-los-docentes-que-impulsen-paros-n135306",
-          "fecha": "2026-10-05T17:16:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la advertencia lanzada por el ministro de Gobierno provincial sobre las medidas de fuerza."
-        },
-        {
-          "medio": "La Brújula 24",
-          "enlace": "https://www.labrujula24.com/notas/2026/10/05/provincia-advirtio-que-podria-descontar-los-dias-de-paro-a-docentes-de-agrupaciones-disidentes-n524010/",
-          "fecha": "2026-10-05T17:02:02.000Z",
-          "oficial": false,
-          "aporte": "Precisó que la decisión sobre los descuentos salariales quedará en manos del área de Educación."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/el-gobierno-bonaerense-advirtio-que-podria-descontar-los-dias-de-paro-a-docentes",
-          "fecha": "2026-10-05T16:35:03.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la postura del Gobierno provincial respecto a la diferenciación entre los paros docentes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-bonaerense-diferencia-paros-docentes-y-advierte-descuentos",
-      "foto": {
-        "archivo": "fotos-notas/uk82ir.jpg",
-        "credito": "Foto: Agencia DIB"
       }
     },
     {
@@ -3799,14 +3730,15 @@
       "seccion": "Agro",
       "medios": [
         "Ámbito",
-        "Agrositio"
+        "Agrositio",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T14:24:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 24,
+      "relevancia": 34,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4544,15 +4476,15 @@
     }
   ],
   "secciones": [
+    "Balcarce",
+    "Política",
     "Cultura y agenda",
     "Economía",
     "Fútbol",
     "Argentina",
     "Deportes",
-    "Balcarce",
     "Automovilismo",
-    "Agro",
-    "Política"
+    "Agro"
   ],
   "temas": [
     {
@@ -4926,12 +4858,6 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "uml8iq",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
-    },
-    {
       "id": "b1sme9",
       "titulo": "EE.UU.: senadores demócratas acusan a Trump de interferir…",
       "seccion": "Argentina",
@@ -4986,12 +4912,6 @@
       "motivo": "necesita ojo humano: \"bebés\""
     },
     {
-      "id": "1mvoz28",
-      "titulo": "Metrodelegados amenazan con medidas de fuerza por…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "1oif87s",
       "titulo": "Milei insultó a Luis Novaresio tras el triunfo de…",
       "seccion": "Política",
@@ -5004,29 +4924,23 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "ib0ast",
+      "titulo": "Paro de subtes: metrodelegados se declararon en estado de…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "8x1i04",
       "titulo": "Mar del Plata: afiliados de IOMA llevan sus reclamos a la…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "j5gi9g",
-      "titulo": "Balearon un micro que volvía de Luján e ingresaba a La…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"balearon\""
-    },
-    {
       "id": "o3wyk2",
       "titulo": "El gobierno de Trump destacó el liderazgo regional de…",
       "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "16r1l38",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"nena\""
     }
   ],
-  "esperandoCuerpo": 6
+  "esperandoCuerpo": 3
 }

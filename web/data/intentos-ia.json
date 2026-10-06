@@ -565,9 +565,9 @@
   "motivo": "con cuerpo"
  },
  "1c7wqua": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T16:06:42.750Z",
-  "motivo": "cuerpo: 3 problemas (numero, copia): el cuerpo dice 3 y la fuente no lo dice; sin esas oraciones quedan 48 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-06T16:15:06.167Z",
+  "motivo": "cuerpo: 2 problemas (antecedente, copia): el cuerpo usa \"europa\", que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 71 palabras"
  },
  "1camy15": {
   "intentos": 2,
@@ -578,6 +578,11 @@
   "intentos": 1,
   "ultimo": "2026-09-30T11:31:24.348Z",
   "motivo": "con cuerpo"
+ },
+ "1cdevto": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T16:15:06.167Z",
+  "motivo": "título o bajada: 2 problemas (numero, negacion): el guion dice 80 y la fuente no lo dice"
  },
  "1cdfgu2": {
   "intentos": 2,
@@ -1695,6 +1700,11 @@
   "ultimo": "2026-10-02T11:31:34.803Z",
   "motivo": "con cuerpo"
  },
+ "2vqepe": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T16:15:06.167Z",
+  "motivo": "con cuerpo"
+ },
  "2yqn4q": {
   "intentos": 1,
   "ultimo": "2026-10-06T15:32:07.472Z",
@@ -2335,9 +2345,9 @@
   "motivo": "con cuerpo"
  },
  "il3c1a": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T16:06:42.750Z",
-  "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 113 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-06T16:15:06.167Z",
+  "motivo": "cuerpo: 2 problemas (fecha, copia): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 59 palabras"
  },
  "infbfx": {
   "intentos": 1,
@@ -2350,9 +2360,9 @@
   "motivo": "con cuerpo"
  },
  "iqkmmm": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T16:06:42.750Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 80 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-06T16:15:06.167Z",
+  "motivo": "con cuerpo"
  },
  "irc0sr": {
   "intentos": 1,
@@ -2778,6 +2788,11 @@
  "sty1jd": {
   "intentos": 1,
   "ultimo": "2026-10-02T16:31:25.113Z",
+  "motivo": "con cuerpo"
+ },
+ "svmvqw": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T16:15:06.167Z",
   "motivo": "con cuerpo"
  },
  "swbc0d": {

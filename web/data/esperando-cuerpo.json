@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06T16:11:24.212Z",
+ "generado": "2026-10-06T16:16:04.264Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -60,46 +60,9 @@
      "fecha": "2026-10-06T15:45:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 113 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (fecha, copia): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 59 palabras",
    "maximo": 5
-  },
-  {
-   "id": "iqkmmm",
-   "titulo": "El Gobierno crea un comando de fuerzas federales de Seguridad para trasladar a los presos del penal de Devoto a Marcos Paz",
-   "copete": "El Ministerio de Seguridad Nacional creó dentro la estructura del Comando Unificado Federal un cuerpo específico para dar inicio a la mudanza de todas las personas privadas de la libertad alojadas en el Complejo Penitenciario Federal de la Ciudad Autónoma de Buenos Aires. El…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-06T11:38:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/politica/el-gobierno-crea-un-comando-fuerzas-federales-seguridad-trasladar-los-presos-del-penal-devoto-marcos-paz-n6330447",
-     "fecha": "2026-10-06T11:38:00.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/el-gobierno-creo-un-comando-unificado-el-traslado-presos-la-carcel-devoto-al-penal-marcos-paz-n6330625",
-     "fecha": "2026-10-06T15:40:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/politica/el-gobierno-prepara-el-terreno-trasladar-los-presos-del-penal-devoto-marcos-paz-n250862",
-     "fecha": "2026-10-06T15:19:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/sociedad/anunciaron-la-creacion-de-un-comando-unificado-para-el-traslado-de-presos-de-devoto-al-penal-de-marcos-paz_a6ac4f7bc61c1587439eee0f2",
-     "fecha": "2026-10-06T14:10:04.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/06/110427-monteoliva-anuncio-la-creacion-de-un-comando-unificado-para-trasladar-a-los-internos-de-devoto-a-marcos-paz",
-     "fecha": "2026-10-06T15:15:53.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 80 palabras",
-   "maximo": 4
   },
   {
    "id": "1c7wqua",
@@ -129,144 +92,35 @@
      "fecha": "2026-10-06T15:48:21.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 3 problemas (numero, copia): el cuerpo dice 3 y la fuente no lo dice; sin esas oraciones quedan 48 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (antecedente, copia): el cuerpo usa \"europa\", que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 71 palabras",
    "maximo": 3
   },
   {
-   "id": "1k1mxar",
-   "titulo": "La Iglesia destacó la reunión con el Gobierno por la situación en discapacidad, pero advirtió: \"Los gestos solos no alcanzan\"",
-   "copete": "Previo a la visita del papa León XIV al Cottolengo Don Orione, el Gobierno recibió a la Iglesia para defender sus políticas sobre discapacidad. La reunión se realizó en el Ministerio de Salud, entre funcionarios del área y autoridades de la Conferencia Episcopal Argentina (CEA)…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-05T12:04:27.000Z",
+   "id": "1cdevto",
+   "titulo": "De qué operaron a Nora Cárpena: a los 81 años la reconocida actriz no soportó más el dolor",
+   "copete": "o soportaba más el dolor y entró a quirófano: de qué operaron a Nora Cárpena A los 81 años, la reconocida actriz decidió no aguantar más el dolor que acarreaba hacía un tiempo y decidió hacerse una intervención quirúrgica. Nora Cárpena estaba de gira por el país con la obra…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-06T14:10:47.000Z",
    "fuentes": [
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/05/antes-de-la-visita-del-papa-al-cottolengo-el-gobierno-recibe-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad-2/",
-     "fecha": "2026-10-05T16:12:13.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/politica/la-iglesia-y-el-ministerio-de-salud-acordaron-mantener-una-mesa-de-dialogo-por-la-crisis-en-nid06102026/",
-     "fecha": "2026-10-06T12:30:38.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/politica/gobierno-convoca-conferencia-episcopal-antes-visita-papa-2026105122246",
-     "fecha": "2026-10-05T15:22:00.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/politica/ante-la-llegada-de-leo-xiv-el-gobierno-convoco-a-la-iglesia-para-defender-sus-politicas-sobre-discapacidad.phtml",
-     "fecha": "2026-10-05T14:42:00.000Z"
-    },
-    {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/05/discapacidad-el-gobierno-busca-tender-puentes-con-la-iglesia-antes-de-la-visita-del-papa/",
-     "fecha": "2026-10-06T03:01:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/politica/el-ministerio-salud-recibe-la-iglesia-los-reclamos-discapacidad-n1603300",
-     "fecha": "2026-10-05T15:59:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-se-reune-con-la-iglesia-para-tratar-las-politicas-de-discapacidad-en-el-marco-de-la-visita-del-papa-leon-xiv-al-cottolengo/",
-     "fecha": "2026-10-05T15:37:01.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/antes-la-visita-del-papa-el-gobierno-convoco-la-iglesia-dialogar-discapacidad-n923044",
-     "fecha": "2026-10-05T13:57:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad--antes-de-la-visita-del-papa_a6ac3980defa9665a6c1c17fd",
-     "fecha": "2026-10-05T12:35:34.277Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/06/110394-la-pastoral-social-planteo-reclamos-por-discapacidad-ante-salud",
-     "fecha": "2026-10-06T12:13:26.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/nacionales/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa",
-     "fecha": "2026-10-05T13:56:47.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-5-9-55-0-el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-leon-xiv",
-     "fecha": "2026-10-05T13:11:17.000Z"
-    },
-    {
      "medio": "El Día",
-     "enlace": "https://www.eldia.com/politica-y-economia/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa-politica-y-economia_1791206280",
-     "fecha": "2026-10-05T13:34:04.000Z"
+     "enlace": "https://www.eldia.com/espectaculos/de-que-operaron-a-nora-carpena-a-los-81-anos-la-reconocida-actriz-no-soporto-mas-el-dolor-espectaculos_1791294720",
+     "fecha": "2026-10-06T14:10:47.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/show/famosos/2026/10/06/a-los-81-anos-nora-carpena-conto-por-que-se-opero-la-cadera-no-tengo-ganas-de-aguantar-dolor/",
+     "fecha": "2026-10-06T15:40:56.000Z"
     },
     {
      "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/gobierno-convoca-iglesia-discapacidad-visita-papa/",
-     "fecha": "2026-10-05T15:46:40.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/discapacidad-la-pastoral-social-la-iglesia-y-el-ministerio-salud-crearon-una-mesa-dialogo-n56262",
-     "fecha": "2026-10-05T23:25:00.000Z"
+     "enlace": "https://www.cronica.com.ar/diarioshow/farandula/nora-carpena-fue-operada-por-un-grave-problema-de-cadera-cual-es-su-estado-de-salud/",
+     "fecha": "2026-10-06T15:22:41.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 5
-  },
-  {
-   "id": "biwye6",
-   "titulo": "Ley de Semillas: Federación Agraria advierte por el impacto sobre los productores: “Hay que buscar un equilibrio”",
-   "copete": "Joaquín Vidal, abogado y secretario de la Federación Agraria Argentina, filial Balcarce, visitó los estudios de Radio Líder Balcarce Streaming y analizó las conclusiones del Congreso Anual de la entidad, la discusión por las regalías y los principales reclamos del sector…",
-   "seccion": "Agro",
-   "fecha": "2026-10-06T16:01:25.359Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45007-ley-de-semillas-federacion-agraria-advierte-por-el-impacto-sobre-los-productores-hay-que-buscar-un-equilibrio/",
-     "fecha": null
-    }
-   ],
-   "intentos": 0,
-   "motivo": "",
-   "maximo": 3
-  },
-  {
-   "id": "ql89ei",
-   "titulo": "El Gobierno amplía emisión de títulos por $221.119 millones para saldar deudas de obra pública",
-   "copete": "El Gobierno argentino ha aprobado este martes la emisión de bonos por un total de 221.120 millones de pesos (129,3 millones de euros) para cancelar deudas con contratistas de obras públicas, según se desprende de la Resolución Conjunta 59/2026 publicada este martes en el Boletín…",
-   "seccion": "Economía",
-   "fecha": "2026-10-06T11:38:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
-     "fecha": "2026-10-06T11:38:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/america/agencias/2026/10/06/el-gobierno-argentino-amplia-la-emision-de-deuda-en-1293-millones-para-pagar-a-contratistas-de-obra-publica/",
-     "fecha": "2026-10-06T15:32:09.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
-     "fecha": "2026-10-06T13:43:28.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/el-gobierno-amplio-la-emision-deuda-221119-millones-pagar-obligaciones-obra-publica-n6330549",
-     "fecha": "2026-10-06T13:33:00.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 4 problemas (numero, tilde): el titulo dice 221.000 y la fuente no lo dice",
+   "motivo": "título o bajada: 2 problemas (numero, negacion): el guion dice 80 y la fuente no lo dice",
    "maximo": 3
   }
  ]
