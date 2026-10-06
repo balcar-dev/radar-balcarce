@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T13:36:21.116Z",
- "portada": 51,
- "archivo": 960,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-06T14:07:39.244Z",
+ "portada": 55,
+ "archivo": 961,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-06T13:36:21.140Z",
+  "generado": "2026-10-06T14:07:39.266Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-06T10:04:48.409Z"
    },
    {
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
+     {
+      "id": "1k3fdlf",
+      "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
+      "seccion": "Balcarce"
+     },
      {
       "id": "i06m20",
       "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
@@ -142,11 +147,6 @@
       "id": "aa0h34",
       "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 39,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "e5jokd",
+      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "seccion": "Balcarce"
+     },
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
@@ -181,6 +186,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "1k3fdlf",
+     "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "133cyna",
      "titulo": "Primero la Patria propone informar la numeración oficial en San Agustín y Los Pinos",
