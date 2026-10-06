@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T07:02:27.731Z",
+  "generado": "2026-10-06T07:31:43.759Z",
   "notas": [
     {
       "id": "futboltablaliga20261002",
@@ -1151,7 +1151,7 @@
       "fecha": "2026-10-05T19:08:04.405Z",
       "sinFecha": false,
       "visto": "2026-10-05T22:01:16.285Z",
-      "relevancia": 85,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1246,7 +1246,7 @@
       "fecha": "2026-10-05T19:06:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T01:01:20.534Z",
-      "relevancia": 77,
+      "relevancia": 70,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1355,7 +1355,7 @@
       "fecha": "2026-10-05T19:04:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T22:31:14.690Z",
-      "relevancia": 77,
+      "relevancia": 70,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2600,8 +2600,7 @@
         "Clarín",
         "TN (Todo Noticias)",
         "El Cronista",
-        "Crónica",
-        "El Día"
+        "Crónica"
       ],
       "enlace": "https://www.clarin.com/economia/medio-euforia-mercados-brasil-suben-bonos-acciones-argentinas-baja-riesgo-pais_0_RVMQHQnSsL.html",
       "teniaImagenLaFuente": true,
@@ -2829,10 +2828,10 @@
         "Crónica",
         "La Verdad",
         "QZ Noticias (Mar del Plata)",
+        "El Gráfico",
         "La Capital (Rosario)",
         "Clarín",
         "La Nueva",
-        "El Gráfico",
         "Página/12",
         "Diario Popular",
         "Ámbito"
@@ -4665,116 +4664,6 @@
         "archivo": "fotos-notas/libre-f1resultado2026r16.jpg",
         "credito": "Foto: Leminhel / Wikimedia Commons (CC BY-SA 3.0)"
       }
-    },
-    {
-      "id": "ivx73p",
-      "titulo": "Scott Bessent abre la puerta a un nuevo rescate financiero para la Argentina",
-      "copete": "El secretario del Tesoro de Estados Unidos respaldó la asistencia previa al gobierno de Javier Milei y dejó abierta la posibilidad de repetir la ayuda. La declaración se conoció tras una suba del riesgo país.",
-      "cuerpo": "El secretario del Tesoro de Estados Unidos, Scott Bessent, manifestó que Washington podría otorgar un nuevo apoyo financiero al gobierno de Javier Milei. Durante una entrevista, el funcionario reivindicó el rescate monetario implementado durante la tensión cambiaria previa a los comicios de 2025 y respondió ante la consulta sobre una nueva intervención: ¿Podríamos volver a hacerlo? Claro.\n\nEl pronunciamiento se conoció luego de que el riesgo país argentino ascendiera a 655 puntos básicos, en un contexto internacional marcado por tasas más altas y dudas de los mercados sobre la continuidad del programa económico después de 2027. Ante esto, el ministro de Economía, Luis Caputo, había presentado ante inversores un esquema de blindaje por 72.000 millones de dólares para atravesar el año electoral.",
-      "guion": "Scott Bessent abre la puerta a un nuevo rescate financiero para la Argentina",
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Ámbito",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "Crónica",
-        "La Nueva",
-        "C5N"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/el-secretario-del-tesoro-de-eeuu-abrio-la-puerta-a-un-nuevo-rescate-a-milei-podriamos-volver-a-nid04102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-04T19:18:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-04T23:31:21.567Z",
-      "relevancia": 65,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Scott Bessent respaldó la asistencia financiera a la Argentina.",
-        "El funcionario dejó abierta la posibilidad de repetir el auxilio monetario.",
-        "La declaración surgió tras una suba del riesgo país a 655 puntos básicos.",
-        "Luis Caputo armó un esquema de blindaje por 72.000 millones de dólares."
-      ],
-      "seSabe": [
-        "Scott Bessent afirmó que Washington podría volver a asistir financieramente a la Argentina.",
-        "El secretario del Tesoro defendió el rescate aplicado durante las elecciones de 2025.",
-        "El riesgo país argentino alcanzó los 655 puntos básicos."
-      ],
-      "noConfirmado": [
-        "Todavía no se especificaron los plazos ni los montos de una eventual nueva asistencia financiera por parte de Estados Unidos."
-      ],
-      "etiquetas": [
-        "Scott Bessent",
-        "Tesoro de Estados Unidos",
-        "Javier Milei",
-        "Argentina",
-        "rescate financiero",
-        "Luis Caputo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/el-secretario-del-tesoro-de-eeuu-abrio-la-puerta-a-un-nuevo-rescate-a-milei-podriamos-volver-a-nid04102026/",
-          "fecha": "2026-10-04T20:23:24.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones de Scott Bessent sobre el rescate a la Argentina y el escudo financiero presentado por Luis Caputo."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/04/el-secretario-del-tesoro-de-eeuu-no-descarto-volver-a-asistir-con-fondos-a-la-argentina-podriamos-hacerlo-de-nuevo-claro/",
-          "fecha": "2026-10-04T23:04:06.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el respaldo de Estados Unidos y la frase exacta del secretario del Tesoro."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/bessent-respaldo-a-argentina-y-dejo-abierta-la-posibilidad-de-una-nueva-ayuda-financiera/",
-          "fecha": "2026-10-04T23:11:26.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la administración estadounidense contempla brindar apoyo financiero al gobierno nacional."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/scott-bessent-aseguro-que-la-estabilizacion-de-argentina-propicio-un-cambio-radical-en-america-latina/",
-          "fecha": "2026-10-04T22:05:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que Washington podría realizar intervenciones similares en otros países."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/bessent-abre-la-posibilidad-de-una-nueva-asistencia-financiera-de-estados-unidos-a-la-argentina_a6ac2d2a1e65aff3a39c894c4",
-          "fecha": "2026-10-04T22:44:00.000Z",
-          "oficial": false,
-          "aporte": "Reportó las declaraciones oficiales de Scott Bessent sobre la posibilidad de una nueva intervención."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-4-19-50-0-otro-swap-bessent-abrio-la-posibilidad-de-una-nueva-asistencia-financiera-de-ee-uu-a-la-argentina",
-          "fecha": "2026-10-04T23:27:38.000Z",
-          "oficial": false,
-          "aporte": "Publicó la postura de Estados Unidos respecto de la asistencia financiera al Gobierno."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "scott-bessent-abre-la-puerta-a-un-nuevo-rescate-financiero-para-la",
-      "foto": {
-        "archivo": "fotos-notas/ivx73p.jpg",
-        "credito": "Foto: La Nación"
-      }
     }
   ],
   "secciones": [
@@ -4796,7 +4685,7 @@
       "sensacion": 9,
       "humedad": 89,
       "viento": 4,
-      "rumbo": "NO",
+      "rumbo": "O",
       "cielo": "Despejado",
       "esDeDia": false
     },
@@ -5174,12 +5063,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1jawjgc",
-      "titulo": "Cambio clave en Comunicaciones: renunció el interventor…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"asesinato\""
-    },
-    {
       "id": "2kkzzy",
       "titulo": "Nueve argentinos en el Masters 1000 de Shanghai: sorteo…",
       "seccion": "Deportes",
@@ -5210,10 +5093,10 @@
       "motivo": "necesita ojo humano: \"bebés\""
     },
     {
-      "id": "xpy82d",
-      "titulo": "Nordelta: filmaron a un hombre disparando contra un…",
+      "id": "1k9nuf8",
+      "titulo": null,
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
   "esperandoCuerpo": 5

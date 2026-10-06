@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06T07:02:27.731Z",
+ "generado": "2026-10-06T07:31:43.759Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -18,6 +18,53 @@
    "intentos": 3,
    "motivo": "con cuerpo",
    "maximo": 3
+  },
+  {
+   "id": "1jawjgc",
+   "titulo": "Cambio clave en Comunicaciones: renunció el interventor del ENACOM",
+   "copete": "A menos de tres meses del vencimiento de la intervención vigente, se produjeron cambios en la cúpula del Ente Nacional de Comunicaciones ( ENACOM ). El Ejecutivo aceptó la renuncia de Juan Martín Ozores , quien estaba al frente del proceso interno del organismo desde 2024, y…",
+   "seccion": "Política",
+   "fecha": "2026-10-06T01:51:22.000Z",
+   "fuentes": [
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/politica/cambio-clave-comunicaciones-renuncio-interventor-enacom-2026105225122",
+     "fecha": "2026-10-06T01:51:22.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/politica/2026/10/06/renuncio-el-interventor-del-enacom-y-el-gobierno-designo-a-su-sucesor/",
+     "fecha": "2026-10-06T07:18:16.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-luis-caputo-dijo-que-el-presidente-es-un-faro-ideologico-nid06102026/",
+     "fecha": "2026-10-06T06:52:57.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-anuncio-la-salida-del-interventor-del-enacom-y-designo-a-su-reemplazante-nid06102026/",
+     "fecha": "2026-10-06T06:39:05.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/renuncio-interventor-enacom-gobierno-anuncio-reemplazo_0_Cebkv8Tynj.html",
+     "fecha": "2026-10-06T04:59:08.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/06/renuncio-juan-martin-ozores-al-enacom-y-el-gobierno-designo-a-andres-michelazzo-como-nuevo-interventor/",
+     "fecha": "2026-10-06T06:27:42.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/politica/presento-su-renuncia-el-interventor-del-ente-nacional-de-comunicaciones-enacom-y-el-gobierno-ya-definio-su-sucesor-quien-es.phtml",
+     "fecha": "2026-10-06T06:24:51.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 95 caracteres, el máximo es 90",
+   "maximo": 4
   },
   {
    "id": "1k1mxar",
@@ -123,23 +170,6 @@
    ],
    "intentos": 3,
    "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "12tbmrp",
-   "titulo": "Buen desempeño local en la cuarta edición del MTB Series MDQ",
-   "copete": "La cuarta edición del MTB Series MDQ se desarrolló en el exigente circuito de la Sierra de los Difuntos, en la Estancia Rincón Grande, ubicada sobre la Ruta 226, kilómetro 28,5, dentro del partido de General Pueyrredón. La competencia, considerada la más importante del sudeste…",
-   "seccion": "Deportes",
-   "fecha": "2026-10-05T19:21:20.000Z",
-   "fuentes": [
-    {
-     "medio": "Ecos Diarios (Necochea)",
-     "enlace": "https://elecos.com.ar/buen-desempeno-local-en-la-cuarta-edicion-del-mtb-series-mdq",
-     "fecha": "2026-10-05T19:21:20.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
    "maximo": 3
   }
  ]
