@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-06T02:31:26.672Z",
+ "consultado": "2026-10-06T02:34:42.531Z",
  "equipos": [
   "9739",
   "3",
@@ -1034,6 +1034,19 @@
      },
      {
       "posicion": 3,
+      "id": "17",
+      "equipo": "Rosario Central",
+      "pj": 11,
+      "g": 5,
+      "e": 4,
+      "p": 2,
+      "gf": 12,
+      "gc": 9,
+      "dif": 3,
+      "pts": 19
+     },
+     {
+      "posicion": 4,
       "id": "10",
       "equipo": "Huracán",
       "pj": 11,
@@ -1044,19 +1057,6 @@
       "gc": 8,
       "dif": 3,
       "pts": 19
-     },
-     {
-      "posicion": 4,
-      "id": "17",
-      "equipo": "Rosario Central",
-      "pj": 10,
-      "g": 5,
-      "e": 3,
-      "p": 2,
-      "gf": 11,
-      "gc": 8,
-      "dif": 3,
-      "pts": 18
      },
      {
       "posicion": 5,
@@ -1166,14 +1166,14 @@
       "posicion": 13,
       "id": "235",
       "equipo": "Banfield",
-      "pj": 10,
+      "pj": 11,
       "g": 2,
-      "e": 3,
+      "e": 4,
       "p": 5,
-      "gf": 11,
-      "gc": 16,
+      "gf": 12,
+      "gc": 17,
       "dif": -5,
-      "pts": 9
+      "pts": 10
      },
      {
       "posicion": 14,
@@ -1205,9 +1205,10 @@
    }
   ]
  },
- "tablaCuando": "2026-10-06T01:03:39.108Z",
+ "tablaCuando": "2026-10-06T02:34:42.531Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
-  "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z"
+  "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
+  "futboltablaliga20261002": "2026-10-06T02:34:43.431Z"
  }
 }

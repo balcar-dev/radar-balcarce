@@ -1,18 +1,45 @@
 {
- "generado": "2026-10-06T02:31:28.287Z",
+ "generado": "2026-10-06T02:34:44.961Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "zpjdkr",
+   "titulo": "Aprehendieron a un chofer acusado de desviar 32 toneladas de papa",
+   "copete": "Un hombre fue aprehendido en las últimas horas en el marco de una investigación iniciada a raíz de una denuncia por el presunto desvío de 32.000 kilos de papa que debían ser transportados desde Balcarce hacia Mar del Plata. El procedimiento fue llevado adelante por personal de…",
+   "seccion": "Agro",
+   "fecha": "2026-10-05T22:42:00.196Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/aprehendieron-un-chofer-acusado-de.html",
+     "fecha": "2026-10-05T22:42:00.196Z"
+    },
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/investigan-a-un-camionero-por-desviar-32-toneladas-de-papa-destinadas-a-mar-del-plata-781",
+     "fecha": "2026-10-05T23:38:19.000Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45000-investigan-a-un-camionero-acusado-de-desviar-32-toneladas-de-papa-que-debia-transportar-a-mar-del-plata/",
+     "fecha": null
+    }
+   ],
+   "intentos": 3,
+   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 3
+  },
   {
    "id": "mmiw6g",
    "titulo": "Buena noticia para Ponzio: Tobías Andrada recibió el alta médica y ya puede volver a jugar con River",
    "copete": "Tras el parate por la fecha FIFA y la postergación del encuentro ante Sarmiento, el plantel de River recibió buenas noticias en el inicio de esta semana. En el marco del quinto entrenamiento previo al duelo del sábado frente a Estudiantes de Río Cuarto en el Monumental, el…",
    "seccion": "Fútbol",
-   "fecha": "2026-10-05T16:41:37.000Z",
+   "fecha": "2026-10-05T16:41:40.000Z",
    "fuentes": [
     {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/torneo-clausura/buena-noticia-para-ponzio-tobias-andrada-recibio-el-alta-medica-y-ya-puede-volver-a-jugar-con-river",
-     "fecha": "2026-10-05T16:41:37.000Z"
+     "fecha": "2026-10-05T16:41:40.000Z"
     },
     {
      "medio": "Ecos Diarios (Necochea)",
@@ -32,12 +59,29 @@
     {
      "medio": "Bolavip Argentina",
      "enlace": "https://bolavip.com/ar/river/tobias-andrada-recibio-el-alta-medica-y-volveria-a-la-titularidad-en-river",
-     "fecha": "2026-10-05T17:05:32.000Z"
+     "fecha": "2026-10-05T17:05:30.000Z"
     }
    ],
    "intentos": 4,
    "motivo": "con cuerpo",
    "maximo": 4
+  },
+  {
+   "id": "1em1ou0",
+   "titulo": "Proponen crear un Registro Municipal de Acompañantes Terapéuticos",
+   "copete": "Los concejales Fara Amado Cunqueiro y Gonzalo Scioli, del bloque Somos, presentaron en el Honorable Concejo Deliberante un proyecto de ordenanza que propone crear un Registro Municipal de Acompañantes Terapéuticos del Partido de Balcarce. La iniciativa busca generar una…",
+   "seccion": "Política",
+   "fecha": "2026-10-05T22:28:36.460Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/proponen-crear-un-registro-municipal-de.html",
+     "fecha": "2026-10-05T22:28:36.460Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
   },
   {
    "id": "1k1mxar",
