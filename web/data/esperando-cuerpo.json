@@ -1,41 +1,7 @@
 {
- "generado": "2026-10-06T10:01:50.872Z",
+ "generado": "2026-10-06T10:31:47.382Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1em1ou0",
-   "titulo": "Proponen crear un Registro Municipal de Acompañantes Terapéuticos",
-   "copete": "Los concejales Fara Amado Cunqueiro y Gonzalo Scioli, del bloque Somos, presentaron en el Honorable Concejo Deliberante un proyecto de ordenanza que propone crear un Registro Municipal de Acompañantes Terapéuticos del Partido de Balcarce. La iniciativa busca generar una…",
-   "seccion": "Política",
-   "fecha": "2026-10-05T22:28:36.460Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/proponen-crear-un-registro-municipal-de.html",
-     "fecha": "2026-10-05T22:28:36.460Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "i06m20",
-   "titulo": "Martes templado en Balcarce, con una máxima de 22 grados",
-   "copete": "Balcarce tendrá este martes una máxima de 22 grados , con cielo parcialmente nublado y posibilidad de lluvias débiles .",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-06T01:53:41.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/clima-martes-templado-en-balcarce-con-una-maxima-de-22-grados",
-     "fecha": "2026-10-06T01:53:41.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2023 (line 26 column 13)",
-   "maximo": 3
-  },
   {
    "id": "1jawjgc",
    "titulo": "Cambio clave en Comunicaciones: renunció el interventor del ENACOM",
@@ -74,14 +40,14 @@
      "fecha": "2026-10-06T06:27:42.000Z"
     },
     {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/politica/presento-su-renuncia-el-interventor-del-ente-nacional-de-comunicaciones-enacom-y-el-gobierno-ya-definio-su-sucesor-quien-es.phtml",
-     "fecha": "2026-10-06T06:24:51.000Z"
-    },
-    {
      "medio": "Crónica",
      "enlace": "https://www.cronica.com.ar/politica/el-gobierno-acepto-la-renuncia-de-juan-martin-ozores-al-enacom-y-designo-a-andres-michelazzo-como-nuevo-interventor/",
      "fecha": "2026-10-06T07:40:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/enacom--renuncio-el-interventor-y-el-gobierno-designo-a-su-reemplazo-con-rango-de-secretario_a6ac4cad261c1587439e8986b",
+     "fecha": "2026-10-06T10:27:26.000Z"
     }
    ],
    "intentos": 5,

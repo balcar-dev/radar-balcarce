@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T10:01:50.872Z",
- "portada": 51,
- "archivo": 950,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-06T10:31:47.382Z",
+ "portada": 54,
+ "archivo": 952,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-06T10:01:50.902Z",
+  "generado": "2026-10-06T10:31:47.406Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-06T10:04:48.409Z"
    },
    {
     "nombre": "efemeride",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
      {
       "id": "108t4y0",
@@ -103,8 +103,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "id": "i06m20",
+      "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
       "seccion": "Balcarce"
      },
      {
@@ -136,8 +136,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "seccion": "Balcarce"
+     },
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",

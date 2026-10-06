@@ -629,6 +629,11 @@
   "ultimo": "2026-10-01T15:23:25.909Z",
   "motivo": "con cuerpo"
  },
+ "1dcn7h": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T10:31:25.521Z",
+  "motivo": "con cuerpo"
+ },
  "1dhn3xw": {
   "intentos": 1,
   "ultimo": "2026-10-02T07:01:38.643Z",
@@ -2310,9 +2315,9 @@
   "motivo": "con cuerpo"
  },
  "i06m20": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T10:01:35.163Z",
-  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2023 (line 26 column 13)"
+  "intentos": 2,
+  "ultimo": "2026-10-06T10:31:25.521Z",
+  "motivo": "con cuerpo"
  },
  "i4muk4": {
   "intentos": 1,
