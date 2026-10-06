@@ -1,18 +1,87 @@
 {
- "generado": "2026-10-06T12:03:19.764Z",
+ "generado": "2026-10-06T12:32:31.386Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "uknyf",
+   "titulo": "El Gobierno abrirá este jueves las ofertas económicas para privatizar Aysa: busca recaudar cerca de US$500 millones",
+   "copete": "El Gobierno se prepara para concretar la privatización de Aysa . Este jueves, se conocerán las ofertas económicas de los grupos empresarios que buscan quedarse con el 90% del paquete accionario de la compañía. El Ejecutivo busca recaudar cerca de US$500 millones . La medida fue…",
+   "seccion": "Economía",
+   "fecha": "2026-10-06T10:36:43.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/economia/2026/10/06/el-gobierno-abrira-este-jueves-las-ofertas-economicas-para-privatizar-aysa-busca-recaudar-cerca-de-us500-millones/",
+     "fecha": "2026-10-06T10:36:43.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/avanza-la-privatizacion-aysa-dos-consorcios-pasaron-la-etapa-final-y-el-jueves-se-conoceran-las-ofertas-economicas-n6330446",
+     "fecha": "2026-10-06T10:52:00.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/economia/privatizacion-de-aysa-el-gobierno-confirmo-a-dos-grupos-empresarios-y-el-jueves-abrira-las-ofertas-economicas.phtml",
+     "fecha": "2026-10-06T11:51:00.000Z"
+    },
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/economia-politica/la-mayor-privatizacion-de-milei-define-a-su-futuro-dueno-cuando-se-conoceran-las-cifras/",
+     "fecha": "2026-10-06T12:23:58.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-avanza-con-la-privatizacion-de-aysa-y-dara-a-conocer-las-ofertas-economicas-por-el-90-de-las-acciones/",
+     "fecha": "2026-10-06T12:04:15.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 81 palabras",
+   "maximo": 4
+  },
+  {
+   "id": "1cr7egi",
+   "titulo": "Fentanilo contaminado: la provincia de Buenos Aires autorizó a sus hospitales a descartar los medicamentos de HLB Pharma y Laboratorios Ramallo",
+   "copete": "El Gobierno de la provincia de Buenos Aires autorizó a sus hospitales y diversos establecimientos sanitarios dependientes del Ministerio de Salud a proceder con el descarte de medicamentos elaborados por las firmas HLB Pharma Group S.A. y Laboratorios Ramallo S.A.. La…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-06T11:16:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/informacion-general/fentanilo-contaminado-la-provincia-buenos-aires-autorizo-sus-hospitales-descartar-los-medicamentos-hlb-pharma-y-laboratorios-ramallo-n6330449",
+     "fecha": "2026-10-06T11:16:00.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/provincia/la-provincia-autorizo-a-sus-hospitales-a-descartar-medicamentos-de-hlb-pharma-y-laboratorios-ramallo",
+     "fecha": "2026-10-06T11:59:49.000Z"
+    },
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/la-provincia/la-provincia-autorizo-a-descartar-mas-de-44-millones-de-medicamentos-de-hlb-pharma-y-laboratorios-ramallo",
+     "fecha": "2026-10-06T12:12:24.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/la-provincia-autorizo-sus-hospitales-descartar-medicamentos-hlb-pharma-y-laboratorios-ramallo-n56267",
+     "fecha": "2026-10-06T11:32:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 4.000.000 y la fuente no lo dice",
+   "maximo": 3
+  },
   {
    "id": "1jawjgc",
    "titulo": "Cambio clave en Comunicaciones: renunció el interventor del ENACOM",
    "copete": "El Gobierno oficializó la salida de Juan Martín Ozores como interventor del Ente Nacional de Comunicaciones ( Enacom ) y designó como reemplazante el ingeniero Andrés Michelazzo , a través de un decreto publicado este martes en el Boletín Oficial. El funcionario estuvo en el…",
    "seccion": "Política",
-   "fecha": "2026-10-06T01:51:22.000Z",
+   "fecha": "2026-10-06T01:51:00.000Z",
    "fuentes": [
     {
      "medio": "El Destape",
      "enlace": "https://www.eldestapeweb.com/politica/cambio-clave-comunicaciones-renuncio-interventor-enacom-2026105225122",
-     "fecha": "2026-10-06T01:51:22.000Z"
+     "fecha": "2026-10-06T01:51:00.000Z"
     },
     {
      "medio": "La Nación",
@@ -87,11 +156,6 @@
      "fecha": "2026-10-05T16:12:13.000Z"
     },
     {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/discapacidad-la-pastoral-social-la-iglesia-y-el-ministerio-salud-crearon-una-mesa-dialogo-n56262",
-     "fecha": "2026-10-05T23:25:00.000Z"
-    },
-    {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/la-iglesia-y-el-ministerio-de-salud-acordaron-mantener-una-mesa-de-dialogo-por-la-crisis-en-nid06102026/",
      "fecha": "2026-10-06T11:56:46.000Z"
@@ -132,6 +196,11 @@
      "fecha": "2026-10-05T12:35:34.277Z"
     },
     {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/06/110394-la-pastoral-social-planteo-reclamos-por-discapacidad-ante-salud",
+     "fecha": "2026-10-06T12:13:26.000Z"
+    },
+    {
      "medio": "El Eco de Tandil",
      "enlace": "https://www.eleco.com.ar/nacionales/el-gobierno-convoco-a-la-iglesia-para-dialogar-sobre-discapacidad-antes-de-la-visita-del-papa",
      "fecha": "2026-10-05T13:56:47.000Z"
@@ -150,6 +219,11 @@
      "medio": "Crónica",
      "enlace": "https://www.cronica.com.ar/politica/gobierno-convoca-iglesia-discapacidad-visita-papa/",
      "fecha": "2026-10-05T15:46:40.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/discapacidad-la-pastoral-social-la-iglesia-y-el-ministerio-salud-crearon-una-mesa-dialogo-n56262",
+     "fecha": "2026-10-05T23:25:00.000Z"
     }
    ],
    "intentos": 1,

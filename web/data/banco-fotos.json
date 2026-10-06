@@ -6896,15 +6896,15 @@
   "enlace": "https://eldoce.tv/tendencias/2026/10/01/creo-un-parche-regenerativo-para-heridas-dificiles-y-emociono-al-contar-como-la-lucha-de-su-papa-inspiro-el-invento"
  },
  "lomklr": {
-  "archivo": "fotos-notas/lomklr.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "manual",
   "por": "balcar-dev",
   "cuando": "2026-10-06T00:58:53.232Z",
   "imagenOriginal": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/",
-  "enlace": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/"
+  "enlace": "https://accion5.com/longcasting-con-campeones-y-referentes-se-realizo-clinica/",
+  "intentado": true,
+  "borrada": true
  },
  "1hiaakh": {
   "medio": "FayerWayer",
@@ -8015,5 +8015,29 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-93504af439aa1791281620754-1791282229.jpg?auth=7cdf5b2c6312a74c0217f3045991303780b387fc52208bab68da385878d418ae&width=1023",
   "razon": "La foto A muestra el estadio Monumental con buen encuadre y sin marcas ni menores.",
   "cuando": "2026-10-06T12:03:16.032Z"
+ },
+ "1onhk2k": {
+  "archivo": "fotos-notas/1onhk2k.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
+  "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-colombofilia-disputo-la-15a-fecha-del-campeonato-2026",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2025/colombofila25_1.jpg",
+  "razon": "Es la única foto disponible, tiene buen encuadre y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-06T12:32:13.884Z"
+ },
+ "1fxkw0r": {
+  "archivo": "fotos-notas/1fxkw0r.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Agustín Canapino advierte sobre el impacto del odio en redes sociales",
+  "enlace": "https://www.eleco.com.ar/deportes/agustin-canapino-advirtio-sobre-el-impacto-del-odio-en-redes-sociales-hacia-franco-colapinto",
+  "imagenOriginal": "https://cdnartic.ar/eCHr4ZImEg7taVjT3tvXCOWkuPY=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/10/agustin_canapino.png",
+  "razon": "La foto B es limpia y no tiene marcas de agua superpuestas, a diferencia de la A que incluye texto en pantalla.",
+  "cuando": "2026-10-06T12:32:13.884Z"
  }
 }
