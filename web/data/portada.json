@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T21:12:03.409Z",
+  "generado": "2026-10-06T21:32:25.669Z",
   "notas": [
     {
       "id": "1eed4ho",
@@ -9,15 +9,15 @@
       "guion": "Horacio Guevara asume la conducción de Servicios de Salud",
       "seccion": "Argentina",
       "medios": [
-        "Infobae",
         "La Nación",
         "Clarín",
         "Ámbito",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Infobae"
       ],
       "enlace": "https://www.clarin.com/politica/renuncio-superintendente-servicios-salud-claudio-stivelman-ano-nombramiento_0_FIHN9mi8hK.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T19:54:02.000Z",
+      "fecha": "2026-10-06T19:49:33.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T20:31:49.570Z",
       "relevancia": 88,
@@ -210,89 +210,82 @@
       "slug": "las-farmacias-difunden-el-cronograma-de-turnos-hasta-el-domingo"
     },
     {
-      "id": "egwywq",
-      "titulo": "La Iglesia cuestiona la quita de límites a la venta de tierras",
-      "copete": "La Comisión Episcopal de Pastoral Social reiteró su rechazo a la eliminación de restricciones para la adquisición de inmuebles rurales por parte de inversores extranjeros.",
-      "cuerpo": "La Comisión Episcopal de Pastoral Social expresó su preocupación por la eliminación de las restricciones a la venta de tierras rurales a extranjeros, tras la restitución del artículo 154 del DNU 70/2023 por parte de la Corte Suprema de Justicia. A través de un comunicado conjunto con Endepa y Cáritas, los obispos reclamaron responsabilidad a los legisladores nacionales, funcionarios y jueces para resguardar el territorio nacional.\n\nEn junio pasado, las mismas organizaciones ya habían manifestado su rechazo a las modificaciones impulsadas por el Gobierno al considerar que atentaban contra la soberanía. Por su parte, el Ejecutivo había defendido la medida para captar capitales productivos, mientras que la oposición convocó a una sesión en el Congreso para el 15 de noviembre.",
-      "guion": "La Iglesia cuestiona la quita de límites a la venta de tierras",
-      "seccion": "Política",
+      "id": "gmtn3r",
+      "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+      "copete": "La entidad oficializó el nuevo cronograma de partidos tras la suspensión del fin de semana pasado por el clima adverso.",
+      "cuerpo": "La Liga Balcarceña de Fútbol reprogramó los encuentros correspondientes a la jornada inaugural del torneo Clausura 2026, según informó la institución este martes. Los partidos habían quedado postergados el fin de semana pasado debido a las condiciones climáticas adversas.\n\nEl certamen oficial lleva el nombre \"75º aniversario de Bomberos Voluntarios de Balcarce\" y pone en disputa la Copa Challenger \"Alejandro ‘Cucho’ Mascareño\". El cronograma completo incluye divisiones formativas, fútbol femenino y primera división en distintos escenarios locales.",
+      "guion": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+      "seccion": "Fútbol",
       "medios": [
-        "Agencia DIB",
-        "La Nación",
-        "El Cronista"
+        "Infórmese Primero (FM 104.9)"
       ],
-      "enlace": "https://www.lanacion.com.ar/politica/la-iglesia-expreso-su-preocupacion-por-la-eliminacion-de-los-limites-a-la-venta-de-tierras-a-nid06102026/",
+      "enlace": "http://www.informeseprimero.com.ar/2026/10/futbol-programacion-de-la-1-fecha-del.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T18:14:46.000Z",
+      "fecha": "2026-10-06T18:59:13.963Z",
       "sinFecha": false,
-      "visto": "2026-10-06T20:31:49.570Z",
-      "relevancia": 68,
-      "local": false,
+      "visto": "2026-10-06T21:31:32.390Z",
+      "relevancia": 90,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "ferroviarios",
+        "bomberos"
+      ],
       "como": "automatica",
       "claves": [
-        "La Iglesia rechaza la venta de tierras a extranjeros",
-        "La Corte Suprema restituyó el artículo del DNU",
-        "Obispos piden responsabilidad a jueces y legisladores"
+        "Se reprogramó la primera fecha del torneo Clausura.",
+        "Los partidos se habían suspendido por mal clima.",
+        "El certamen homenajea a Bomberos Voluntarios."
       ],
       "seSabe": [
-        "La Comisión Episcopal de Pastoral Social emitió un comunicado sobre la ley de tierras.",
-        "La Corte Suprema restituyó el artículo 154 del DNU 70/2023.",
-        "Endepa y Cáritas respaldaron el reclamo eclesiástico."
+        "La Liga Balcarceña de Fútbol oficializó este martes la reprogramación de la primera fecha.",
+        "La suspensión previa ocurrió el fin de semana anterior por el clima adverso."
       ],
       "noConfirmado": [
-        "No se detallaron los plazos para debatir el tema en el Congreso tras el comunicado."
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "La Liga Balcarceña de Fútbol oficializó la reprogramación de la primera fecha del torneo Clausura tras la suspensión por mal clima.",
       "etiquetas": [
-        "Iglesia",
-        "tierras",
-        "DNU",
-        "Corte Suprema",
-        "Gobierno"
+        "Liga Balcarceña de Fútbol",
+        "Clausura 2026",
+        "fútbol local"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/la-iglesia-expreso-su-preocupacion-por-la-eliminacion-de-los-limites-a-la-venta-de-tierras-a-nid06102026/",
-          "fecha": "2026-10-06T18:14:46.000Z",
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/futbol-programacion-de-la-1-fecha-del.html",
+          "fecha": "2026-10-06T18:59:13.963Z",
           "oficial": false,
-          "aporte": "Informó sobre el comunicado de la Comisión Episcopal de Pastoral Social y el fallo de la Corte Suprema."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/politica/la-iglesia-expreso-preocupacion-la-caida-los-limites-la-venta-tierras-extranjeros-n56285",
-          "fecha": "2026-10-06T19:39:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el pedido de responsabilidad a jueces, funcionarios y legisladores por parte de los obispos."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/antes-de-la-llegada-de-leon-xiv-la-iglesia-renovo-su-reclamo-contra-la-venta-de-tierras-a-extranjeros/",
-          "fecha": "2026-10-06T19:10:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló la participación de Endepa y Cáritas en el pronunciamiento conjunto."
+          "aporte": "Informó la reprogramación de la primera fecha del Clausura dispuesta por la Liga Balcarceña."
         }
       ],
       "antecedentes": [
         {
-          "id": "ishs2l",
-          "titulo": "El Gobierno defiende la venta de tierras rurales a inversores extranjeros",
-          "fecha": "2026-10-06T15:57:26.000Z",
-          "ruta": "/nota/el-gobierno-defiende-la-venta-de-tierras-rurales-a-inversores-ishs2l"
+          "id": "2qj2kn",
+          "titulo": "Designan los árbitros para el inicio de la fase Clausura",
+          "fecha": "2026-10-03T00:57:01.000Z",
+          "ruta": "/nota/designan-los-arbitros-para-el-inicio-de-la-fase-clausura-2qj2kn"
+        },
+        {
+          "id": "1pig8zv",
+          "titulo": "Asoma el Clausura 2026",
+          "fecha": "2026-09-18T22:17:49.080Z",
+          "ruta": "/nota/liga-balcarcena-asoma-el-clausura-2026-1pig8zv"
+        },
+        {
+          "id": "irc0sr",
+          "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
+          "fecha": "2026-10-04T20:31:39.000Z",
+          "ruta": "/nota/bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela-irc0sr"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "la-iglesia-cuestiona-la-quita-de-limites-a-la-venta-de-tierras",
-      "foto": {
-        "archivo": "fotos-notas/egwywq.jpg",
-        "credito": "Foto: La Nación"
-      }
+      "slug": "la-liga-balcarcena-reprograma-la-primera-fecha-del-torneo-clausura"
     },
     {
       "id": "repaso20261006tarde",
@@ -372,9 +365,9 @@
       "seccion": "Política",
       "medios": [
         "Crónica",
-        "La Verdad",
+        "Noticias Argentinas (NA)",
         "InfoRegión",
-        "Noticias Argentinas (NA)"
+        "La Verdad"
       ],
       "enlace": "https://noticiasargentinas.com/politica/ravier-aseguro-que--la-ley-de-tierras-no-afecta-la-soberania-territorial-_a6ac51dff61c1587439f4cb04",
       "teniaImagenLaFuente": true,
@@ -529,17 +522,18 @@
       "guion": "Arturo Vidal despide a Lionel Messi con un elogio en redes sociales",
       "seccion": "Fútbol",
       "medios": [
+        "Infobae",
+        "Minuto Uno",
         "TN (Todo Noticias)",
         "TyC Sports",
-        "Olé",
-        "Minuto Uno"
+        "Olé"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/el-mensaje-de-arturo-vidal-a-messi-antes-de-su-despedida-de-la-seleccion-argentina-extraterrestre/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T17:07:44.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T20:01:09.143Z",
-      "relevancia": 79,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -819,7 +813,7 @@
       "fecha": "2026-10-06T15:57:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T17:01:25.569Z",
-      "relevancia": 47,
+      "relevancia": 43,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -945,103 +939,6 @@
       }
     },
     {
-      "id": "svmvqw",
-      "titulo": "El Gobierno busca bajar la tensión con Patricia Bullrich de cara a 2027",
-      "copete": "El oficialismo restó importancia a los dichos de la senadora sobre una posible postulación y aseguró que respalda la reelección de Javier Milei.",
-      "cuerpo": "El Gobierno nacional intentó este martes bajar la tensión política tras las declaraciones de la senadora y jefa del bloque de La Libertad Avanza en el Senado, Patricia Bullrich, quien dejó abierta la posibilidad de competir por la presidencia en 2027. El vocero presidencial, Adrián Ravier, sostuvo en conferencia de prensa que la legisladora apoya la reelección del presidente Javier Milei.\n\nRavier relativizó las diferencias públicas entre ambos y afirmó que en la última reunión de gabinete hubo un respaldo total al proyecto oficialista. Además, destacó la trayectoria política de la exministra y señaló que las discrepancias puntuales son normales dentro del espacio.\n\nA principios de mes, durante su participación en el Coloquio de IDEA en Mar del Plata, la senadora había evitado confirmar si competirá en los próximos comicios y reclamó mayor velocidad en las medidas económicas.",
-      "guion": "El Gobierno busca bajar la tensión con Patricia Bullrich de cara a 2027",
-      "seccion": "Política",
-      "medios": [
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Crónica",
-        "La Nueva",
-        "El Eco de Tandil",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://tn.com.ar/politica/2026/10/06/la-casa-rosada-busco-bajar-la-tension-con-patricia-bullrich-creemos-que-apoya-la-candidatura-de-milei-para-2027/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T15:05:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T16:14:45.240Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El oficialismo restó importancia a los dichos de Patricia Bullrich sobre una candidatura para 2027.",
-        "El vocero presidencial, Adrián Ravier, aseguró que la senadora apoya la reelección de Javier Milei.",
-        "El funcionario afirmó que las diferencias de enfoque son habituales y destacó la trayectoria de la legisladora.",
-        "En octubre, durante el Coloquio de IDEA, la senadora había evitado definir sus aspiraciones electorales."
-      ],
-      "seSabe": [
-        "El vocero presidencial, Adrián Ravier, afirmó que la senadora Patricia Bullrich apoya la reelección de Javier Milei para 2027.",
-        "Ravier aseguró que en el oficialismo aceptan que puedan existir diferencias de opinión con legisladores.",
-        "El presidente Javier Milei y Patricia Bullrich se reencontraron el lunes en la reunión de gabinete en Casa Rosada."
-      ],
-      "noConfirmado": [
-        "Si Patricia Bullrich oficializará una postulación presidencial para las elecciones de 2027."
-      ],
-      "textoRedes": "El Gobierno nacional buscó bajar la tensión con la senadora Patricia Bullrich tras sus dichos sobre las elecciones de 2027 y aseguró que respalda la reelección de Javier Milei.",
-      "etiquetas": [
-        "Gobierno nacional",
-        "Patricia Bullrich",
-        "Javier Milei",
-        "elecciones 2027",
-        "Adrián Ravier"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/06/la-casa-rosada-busco-bajar-la-tension-con-patricia-bullrich-creemos-que-apoya-la-candidatura-de-milei-para-2027/",
-          "fecha": "2026-10-06T15:05:37.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones del vocero presidencial sobre el respaldo de Bullrich a Milei y el reencuentro en el gabinete."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/politica/ravier-aseguro-que-bullrich-apoyara-la-reeleccion-de-javier-milei-en-2027",
-          "fecha": "2026-10-06T15:38:02.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el vocero presidencial ratificó el apoyo de la senadora a la reelección durante una conferencia."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/ravier-relativizo-las-aspiraciones-presidenciales-de-bullrich-creo-que-apoya-la-candidatura-de-milei/",
-          "fecha": "2026-10-06T15:59:45.000Z",
-          "oficial": false,
-          "aporte": "Informó que el Gobierno nacional buscó poner paños fríos ante especulaciones de una interna."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/ravier---creo-que-para-2027-bullrich-apoyara-la-candidatura-de-milei-_a6ac50c0761c1587439f2010a",
-          "fecha": "2026-10-06T15:31:22.000Z",
-          "oficial": false,
-          "aporte": "Precisó que la conferencia de prensa del vocero presidencial se realizó este martes en Buenos Aires."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1f6rlk",
-          "titulo": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
-          "fecha": "2026-10-01T17:50:05.000Z",
-          "ruta": "/nota/patricia-bullrich-pide-mayor-velocidad-para-los-cambios-economicos-en-1f6rlk"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-busca-bajar-la-tension-con-patricia-bullrich-de-cara-a",
-      "foto": {
-        "archivo": "fotos-notas/svmvqw.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "7h598e",
       "titulo": "Peter Lamelas pide al Senado la adhesión al tratado de patentes",
       "copete": "El embajador estadounidense reclamó ante un foro empresarial la aprobación del tratado y la protección de datos regulatorios para captar inversiones millonarias.",
@@ -1128,10 +1025,10 @@
       "guion": "Nacha Guevara recibe entradas de la mamá de Lionel Messi",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Clarín",
         "Infobae",
         "Minuto Uno",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Clarín"
       ],
       "enlace": "https://www.infobae.com/teleshow/2026/10/06/la-emocion-de-nacha-guevara-al-recibir-un-inesperado-regalo-de-celia-messi-me-dio-una-alegria-muy-grande/",
       "teniaImagenLaFuente": true,
@@ -1206,10 +1103,10 @@
         "Minuto Uno",
         "Crónica",
         "Canal 26",
+        "Noticias Argentinas (NA)",
         "La Nueva",
         "La Voz del Pueblo",
-        "A24",
-        "Noticias Argentinas (NA)"
+        "A24"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/06/el-banco-mundial-recorto-las-proyecciones-de-crecimiento-economico-para-la-argentina-en-2026-y-2027/",
       "teniaImagenLaFuente": true,
@@ -1393,7 +1290,7 @@
       "fecha": "2026-10-06T13:33:28.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T19:31:28.644Z",
-      "relevancia": 47,
+      "relevancia": 43,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1641,91 +1538,6 @@
       }
     },
     {
-      "id": "11vh5f5",
-      "titulo": "River Plate blinda a una de sus mayores promesas con una cláusula millonaria",
-      "copete": "El delantero Bruno Cabral firmó su primer contrato profesional con el club hasta diciembre de 2028. La institución lo protegió con una cláusula de rescisión de cien millones de euros.",
-      "cuerpo": "La dirigencia decidió blindar al jugador con una cláusula de rescisión de cien millones de euros debido al interés de varios clubes de Europa. Las negociaciones comenzaron a finales del año pasado, pero debieron esperar a que el deportista cumpliera la edad permitida para rubricar el acuerdo.\n\nEl juvenil se destacó previamente como máximo goleador en las divisiones inferiores y fue la gran figura de la Messi Cup 2025 disputada en Miami, donde obtuvo el galardón al mejor jugador y guió al equipo a la consagración.",
-      "guion": "River Plate blinda a una de sus mayores promesas con una cláusula millonaria",
-      "seccion": "Fútbol",
-      "medios": [
-        "TyC Sports",
-        "Bolavip Argentina",
-        "La Página Millonaria",
-        "Minuto Uno"
-      ],
-      "enlace": "https://lapaginamillonaria.com/river-plate/bruno-cabral-firmo-contrato-y-fue-blindado-con-una-clausula-millonaria-quien-es-y-como-juega",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T12:50:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T20:31:49.570Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Bruno Cabral firmó su primer contrato con River Plate hasta diciembre de 2028.",
-        "El delantero categoría 2010 tiene 16 años y cuenta con una cláusula de 100 millones de euros.",
-        "Instituciones de Europa siguen de cerca al goleador tras su destacada actuación en la Messi Cup."
-      ],
-      "textoRedes": "El delantero Bruno Cabral firmó su primer contrato profesional con River Plate hasta diciembre de 2028. La institución lo blindó con una cláusula de rescisión de 100 millones de euros ante el interés de clubes europeos.",
-      "etiquetas": [
-        "River Plate",
-        "Bruno Cabral",
-        "Fútbol",
-        "Divisiones inferiores",
-        "Contrato"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/bruno-cabral-firmo-contrato-y-fue-blindado-con-una-clausula-millonaria-quien-es-y-como-juega",
-          "fecha": "2026-10-06T12:50:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la firma del contrato, la fecha, la duración hasta 2028 y los antecedentes deportivos del jugador en inferiores."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/river-plate/river-blindo-al-juvenil-bruno-cabral-con-una-clausula-de-100-millones-de-euros-id764514.html",
-          "fecha": "2026-10-06T13:46:51.000Z",
-          "oficial": false,
-          "aporte": "Publicó la noticia sin texto de resumen."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/river-blindo-su-gran-joya-juvenil-bruno-cabral-tendra-una-clausula-100-millones-euros-n6330649",
-          "fecha": "2026-10-06T15:50:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la extensión del vínculo hasta diciembre de 2028 y el interés de equipos europeos tras la Messi Cup."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/river/bruno-cabral-la-gran-joya-de-river-firmo-su-primer-contrato-con-una-imponente-clausula-de-rescision",
-          "fecha": "2026-10-06T13:16:28.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el delantero tiene 16 años al momento de firmar su primer contrato."
-        },
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/los-numeros-goleadores-de-bruno-cabral-en-las-inferiores-de-river-y-por-que-habia-tanta-expectativa-de-que-firme-su-primer-contrato",
-          "fecha": "2026-10-06T20:11:59.000Z",
-          "oficial": false,
-          "aporte": "Aportó la cifra de la cláusula de rescisión de 100 millones de euros."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "river-plate-blinda-a-una-de-sus-mayores-promesas-con-una-clausula",
-      "foto": {
-        "archivo": "fotos-notas/11vh5f5.webp",
-        "credito": "Foto: La Página Millonaria"
-      }
-    },
-    {
       "id": "15imf6x",
       "titulo": "Suspenden clases en el Jardín 905 por el robo de caños de gas",
       "copete": "El Jardín de Infantes N° 905 debió interrumpir las actividades del turno mañana este martes tras constatarse el faltante de caños de gas. La Policía actuó de oficio.",
@@ -1889,9 +1701,9 @@
       "guion": "River homenajea a Messi con un repaso de sus goles en las pantallas del Monumental",
       "seccion": "Fútbol",
       "medios": [
-        "La Nueva",
         "Noticias Argentinas (NA)",
         "0223 (Mar del Plata)",
+        "La Nueva",
         "La Capital (Rosario)"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/el-emotivo-detalle-que-tendra-el-monumental-para-homenajear-a-messi-en-su-despedida-con-la-seleccion-argentina_a6ac4dd5661c1587439eb10df",
@@ -1899,7 +1711,7 @@
       "fecha": "2026-10-06T11:45:07.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T20:01:09.143Z",
-      "relevancia": 79,
+      "relevancia": 75,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1992,11 +1804,12 @@
       "guion": "El Gobierno emite titulos por 221.119 millones para saldar obras",
       "seccion": "Economía",
       "medios": [
+        "La Nación",
+        "Infobae",
         "Ámbito",
         "TN (Todo Noticias)",
-        "El Eco de Tandil",
         "Noticias Argentinas (NA)",
-        "Infobae"
+        "El Eco de Tandil"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
       "teniaImagenLaFuente": true,
@@ -2328,18 +2141,18 @@
       "id": "1c7wqua",
       "titulo": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "copete": "La secretaria general de la Presidencia y el jefe de Gabinete se reúnen con mandatarios provinciales en Salta. Buscan respaldos para suspender las PASO y aprobar el Presupuesto.",
-      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnn con candidatos libertarios en sus distritos electorales.",
+      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnn con candidatos libertarios en sus distritos electorales.",
       "guion": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "seccion": "Política",
       "medios": [
         "La Nación",
-        "Clarín",
         "TN (Todo Noticias)",
         "El Cronista",
-        "Ámbito",
         "Crónica",
+        "Noticias Argentinas (NA)",
+        "Clarín",
         "Diputados Bonaerenses",
-        "Noticias Argentinas (NA)"
+        "Ámbito"
       ],
       "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
       "teniaImagenLaFuente": true,
@@ -2427,6 +2240,109 @@
       "foto": {
         "archivo": "fotos-notas/1c7wqua.jpg",
         "credito": "Foto: Clarín"
+      }
+    },
+    {
+      "id": "mxjwi9",
+      "titulo": "Científicos y organizaciones protestan contra la sanción a Virginia Aparicio",
+      "copete": "Trabajadores de la ciencia y entidades ambientales se movilizan este martes en Mar del Plata para rechazar el sumario contra la investigadora del INTA y el CONICET que vive en Balcarce.",
+      "cuerpo": "Una jornada de protesta reúne este martes a trabajadores científicos y entidades frente a la Catedral de Mar del Plata para reclamar contra el proceso administrativo que afronta la investigadora del INTA y el CONICET Virginia Aparicio, quien se desempeña laboralmente en Balcarce. La medida disciplinaria podría derivar en su apartamiento del empleo público tras haber coordinado la pata nacional del proyecto internacional SPRINT sobre exposición a plaguicidas.\n\nEl relevamiento incluyó a 73 voluntarios locales que aportaron distintas muestras biológicas y ambientales. Además, el glifosato apareció en la totalidad de las muestras fecales analizadas.\n\nOrganizaciones sociales y académicas advierten que el expediente constituye una persecución por el contenido de las investigaciones.",
+      "guion": "Científicos y organizaciones protestan contra la sanción a Virginia Aparicio",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce",
+        "0223 (Mar del Plata)",
+        "Mi8 (Canal 8 Mar del Plata)"
+      ],
+      "enlace": "https://mi8.com.ar/concentracion-y-protesta-por-virginia-aparicio-la-cientifica-que-investigo-plaguicidas-y-hoy-enfrenta-una-posible-expulsion/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T10:50:02.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T21:31:32.390Z",
+      "relevancia": 56,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Virginia Aparicio es investigadora del INTA y el CONICET en Balcarce.",
+        "Una protesta rechaza este martes el sumario que afronta la científica.",
+        "El estudio SPRINT detectó mayor exposición a plaguicidas en Argentina que en Europa.",
+        "Diversas organizaciones advierten sobre una persecución por motivos laborales."
+      ],
+      "seSabe": [
+        "Virginia Aparicio trabaja en Balcarce como investigadora del INTA y el CONICET.",
+        "Un estudio coordinado por la especialista detectó plaguicidas en voluntarios locales.",
+        "Organizaciones convocaron a una protesta este martes frente a la Catedral de Mar del Plata."
+      ],
+      "noConfirmado": [
+        "Si la medida disciplinaria concluirá efectivamente en la exoneración de la investigadora."
+      ],
+      "textoRedes": "Científicos y entidades ambientales se movilizan este martes en Mar del Plata para rechazar el sumario contra la investigadora del INTA y el CONICET que trabaja en Balcarce.",
+      "etiquetas": [
+        "Virginia Aparicio",
+        "INTA",
+        "CONICET",
+        "Balcarce",
+        "Mar del Plata",
+        "plaguicidas",
+        "protesta"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/concentracion-y-protesta-por-virginia-aparicio-la-cientifica-que-investigo-plaguicidas-y-hoy-enfrenta-una-posible-expulsion/",
+          "fecha": "2026-10-06T10:50:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados del proyecto SPRINT, los detalles del sumario y las organizaciones convocantes."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/protesta-en-mar-del-plata-por-el-sumario-a-la-investigadora-virginia-aparicio-932",
+          "fecha": "2026-10-06T21:28:40.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la presencia de la investigadora en la movilización de Mar del Plata."
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-6-18-21-0-protesta-en-mar-del-plata-por-el-sumario-a-una-cientifica-del-inta-reclaman-conocer-los-resultados-de-un-estudio-sobre-plaguicidas",
+          "fecha": "2026-10-06T21:21:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó cobertura sobre el reclamo frente a la Catedral contra la posible expulsión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1fp9m4l",
+          "titulo": "El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica",
+          "fecha": "2026-09-28T18:31:07.835Z",
+          "ruta": "/nota/el-inta-balcarce-enfrenta-una-polemica-por-la-posible-exoneracion-de-1fp9m4l"
+        },
+        {
+          "id": "h1ggzr",
+          "titulo": "Virginia Aparicio expone ante concejales sobre SPRINT y su situación en el INTA",
+          "fecha": "2026-10-02T12:05:00.000Z",
+          "ruta": "/nota/virginia-aparicio-expone-ante-concejales-sobre-sprint-y-su-situacion-h1ggzr"
+        },
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "cientificos-y-organizaciones-protestan-contra-la-sancion-a-virginia",
+      "foto": {
+        "archivo": "fotos-notas/mxjwi9.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -2521,97 +2437,6 @@
       "foto": {
         "archivo": "fotos-notas/18wosri.jpg",
         "credito": "Foto: INTA"
-      }
-    },
-    {
-      "id": "xttimd",
-      "titulo": "El Monumental proyecta goles históricos en la despedida de Lionel Messi",
-      "copete": "El estadio de River exhibe material histórico en sus pantallas desde las 16:00, en el marco del partido despedida del capitán argentino ante Benín.",
-      "cuerpo": "El estadio Monumental proyecta una selección de goles históricos de Lionel Messi en las pantallas del anillo interno, durante la jornada de su despedida de la Selección argentina frente a Benín. La muestra audiovisual arranca a las 16:00 con la apertura de las puertas, cuatro horas antes del comienzo del encuentro amistoso contra el seleccionado africano.\n\nSu trayectoria incluye las consagraciones en la Copa América de 2021 y 2024, la Finalissima de 2022 y el Mundial de Qatar 2022.\n\nLas localidades para el encuentro en Buenos Aires quedaron agotadas en pocas horas tras el anuncio del retiro del delantero, según lo informado en coberturas previas.",
-      "guion": "El Monumental proyecta goles históricos en la despedida de Lionel Messi",
-      "seccion": "Fútbol",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Ámbito",
-        "Crónica",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/el-detalle-especial-que-presentara-el-monumental-por-la-despedida-de-lionel-messi-de-la-seleccion-argentina/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T10:24:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T12:01:53.915Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El estadio Monumental exhibe goles históricos en sus pantallas internas.",
-        "La muestra audiovisual comienza a las 16:00 con la apertura de puertas.",
-        "Lionel Messi se despide de la Selección argentina en un partido ante Benín.",
-        "El capitán suma 207 partidos y 125 goles con la camiseta celeste y blanca."
-      ],
-      "seSabe": [
-        "Las pantallas internas del estadio Monumental muestran goles históricos del capitán argentino.",
-        "La exhibición comienza a las 16:00, cuatro horas antes del partido contra Benín.",
-        "Lionel Messi registra 207 partidos y 125 goles con el seleccionado nacional.",
-        "Las entradas para el encuentro de despedida se agotaron en pocas horas."
-      ],
-      "textoRedes": "El estadio Monumental proyecta goles históricos de Lionel Messi en sus pantallas internas desde las 16:00, durante la despedida del capitán de la Selección argentina frente a Benín.",
-      "etiquetas": [
-        "Lionel Messi",
-        "Seleccion Argentina",
-        "Estadio Monumental",
-        "Benin",
-        "Futbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/el-detalle-especial-que-presentara-el-monumental-por-la-despedida-de-lionel-messi-de-la-seleccion-argentina/",
-          "fecha": "2026-10-06T10:24:19.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la proyección de goles en las pantallas y las estadísticas de la carrera de Messi."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/el-emotivo-detalle-que-tendra-el-monumental-para-homenajear-a-messi-en-su-despedida-con-la-seleccion-argentina_a6ac4dd5661c1587439eb10df",
-          "fecha": "2026-10-06T11:45:07.000Z",
-          "oficial": false,
-          "aporte": "Informó que las autoridades de River resolvieron alterar la disposición habitual de las pantallas."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "o99ioz",
-          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
-          "fecha": "2026-10-03T13:24:05.000Z",
-          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
-        },
-        {
-          "id": "e7ym9v",
-          "titulo": "La Selección presenta la camiseta especial para la despedida de Messi",
-          "fecha": "2026-09-25T12:46:30.000Z",
-          "ruta": "/nota/la-seleccion-argentina-presento-la-camiseta-especial-para-la-e7ym9v"
-        },
-        {
-          "id": "1nud4zm",
-          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
-          "fecha": "2026-09-24T19:05:00.000Z",
-          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-monumental-proyecta-goles-historicos-en-la-despedida-de-lionel",
-      "foto": {
-        "archivo": "fotos-notas/xttimd.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -3302,9 +3127,9 @@
         "Infobae",
         "Perfil",
         "iProfesional",
+        "Noticias Argentinas (NA)",
         "El Día",
         "El Eco de Tandil",
-        "Noticias Argentinas (NA)",
         "La Nueva"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/caputo-advirtio-al-mercado-sobre-como-se-prepara-ante-un-escenario-electoral-adverso-en-2027-les-nid05102026/",
@@ -3856,7 +3681,6 @@
       "guion": "Argentina, Chile, Uruguay y Brasil compiten por organizar el Mundial de Rugby 2035",
       "seccion": "Deportes",
       "medios": [
-        "Agencia DIB",
         "La Nación",
         "Infobae",
         "Perfil",
@@ -3864,12 +3688,13 @@
         "Olé",
         "C5N",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "El Día",
         "QZ Noticias (Mar del Plata)",
-        "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
-        "Noticias Argentinas (NA)",
         "La Voz del Pueblo",
+        "Agencia DIB",
+        "Doble Amarilla",
         "0223 (Mar del Plata)"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
@@ -4098,11 +3923,11 @@
         "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17885-argentina-convocan-a-los-productores-de-papa-del-sudeste-bonaerense-a-participar-del-censo-hortifloricola-2026",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-05T16:31:22.668Z",
       "sinFecha": true,
       "visto": "2026-10-05T16:31:22.668Z",
-      "relevancia": 26,
+      "relevancia": 16,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -4539,8 +4364,8 @@
         "Clarín",
         "Infocampo",
         "Agrositio",
-        "Agroempresario",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248662-soja-aca-neogen-apuesta-a-una-campana-de-alto-potencial-y-pone-el-foco-en-la-genetica-para-transformar-el-agua-en-rendimiento.html",
       "teniaImagenLaFuente": true,
@@ -4589,81 +4414,6 @@
       "slug": "aca-neogen-presenta-nuevas-variedades-de-soja-para-la-campana-2026-y",
       "foto": {
         "archivo": "fotos-notas/18ct4d0.jpg",
-        "credito": "Foto: Agrositio"
-      }
-    },
-    {
-      "id": "1tprlf6",
-      "titulo": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
-      "copete": "La entidad financiera oficial presentó una herramienta comercial con bonificaciones en créditos y reintegros para sostener plantillas de personal y promover el empleo formal.",
-      "cuerpo": "El Banco Nación presentó una propuesta comercial destinada a PyMEs y grandes compañías que utilicen el Fondo de Asistencia Laboral, una herramienta impulsada por el Gobierno Nacional para promover el empleo formal. La iniciativa incluye un reintegro total de la comisión de administración del fondo hasta el 31 de diciembre de 2027, según informaron las fuentes.\n\nPara los empleados que acrediten sus haberes en el banco, el esquema contempla una rebaja de 5 puntos porcentuales en préstamos personales Plan Sueldo.",
-      "guion": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
-      "seccion": "Agro",
-      "medios": [
-        "Ámbito",
-        "Agrositio",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T14:24:39.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 34,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Banco Nación lanzó beneficios para empresas que utilicen el Fondo de Asistencia Laboral.",
-        "Incluye el reintegro total de la comisión de administración hasta diciembre de 2027.",
-        "Ofrece tasas preferenciales y bonificaciones en préstamos personales para empleados."
-      ],
-      "seSabe": [
-        "El Banco Nación lanzó una propuesta comercial vinculada al Fondo de Asistencia Laboral.",
-        "Hay un reintegro del 100 por ciento en la comisión de administración hasta el 31 de diciembre de 2027.",
-        "Se otorgan bonificaciones de hasta 3 puntos en financiamiento y de 5 puntos en préstamos personales Plan Sueldo."
-      ],
-      "textoRedes": "El Banco Nación lanzó una propuesta comercial con beneficios en créditos y reintegros para las empresas que implementen el Fondo de Asistencia Laboral.",
-      "etiquetas": [
-        "Banco Nacion",
-        "FAL",
-        "PyMEs",
-        "empleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
-          "fecha": "2026-10-05T14:24:39.000Z",
-          "oficial": false,
-          "aporte": "Detalló los porcentajes de bonificación en créditos, préstamos y el reintegro de la comisión de administración."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-banco-nacion-ofrece-financiamiento-preferencial-y-beneficios-a-empresas-que-lo-elijan-para-el-fal_a6ac3b51befa9665a6c200aae",
-          "fecha": "2026-10-05T14:32:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el lanzamiento de la propuesta comercial para PyMEs y grandes compañías."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "2ctmyu",
-          "titulo": "Banco Nación y ROSGAN organizan el Gran Remate Aniversario",
-          "fecha": "2026-10-02T14:06:41.000Z",
-          "ruta": "/nota/banco-nacion-y-rosgan-organizan-el-gran-remate-aniversario-2ctmyu"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-banco-nacion-lanza-beneficios-financieros-para-empresas-que",
-      "foto": {
-        "archivo": "fotos-notas/1tprlf6.jpg",
         "credito": "Foto: Agrositio"
       }
     },
@@ -4801,7 +4551,6 @@
       "guion": "ARBal lanza planes de pago con quitas para regularizar tasas",
       "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -4810,7 +4559,7 @@
       "fecha": "2026-10-05T13:08:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T13:31:16.447Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -5011,7 +4760,6 @@
       "guion": "Campo de Pato gana el torneo regional y asciende en hockey",
       "seccion": "Deportes",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Diario La Vanguardia",
@@ -5022,7 +4770,7 @@
       "fecha": "2026-10-05T11:58:53.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T16:01:26.137Z",
-      "relevancia": 89,
+      "relevancia": 79,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -5104,18 +4852,18 @@
       "guion": "El Hospital Municipal registra problemas en sus líneas telefónicas",
       "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia",
         "News Balcarce (FM 91.7)",
-        "Ahora Balcarce"
+        "Ahora Balcarce",
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/05/inconvenientes-en-las-lineas-telefonicas-del-hospital-fossati/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T11:40:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T12:01:25.478Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -5207,19 +4955,19 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "Ecos Diarios (Necochea)",
-        "Agencia DIB",
         "Ámbito",
+        "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
         "La Opinión",
         "El Eco de Tandil",
         "A24",
         "Minuto Uno",
-        "Noticias Argentinas (NA)",
         "Crónica",
         "C5N",
         "La Nueva",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Agencia DIB"
       ],
       "enlace": "https://www.a24.com/primiciasya/musica/martin-fierro-la-musica-2026-los-nominados-y-todos-los-detalles-la-primera-edicion-n1603177",
       "teniaImagenLaFuente": true,
@@ -5327,6 +5075,11 @@
       "cuantas": 2
     },
     {
+      "nombre": "El INTA",
+      "ranura": "inta",
+      "cuantas": 2
+    },
+    {
       "nombre": "El hospital",
       "ranura": "hospital",
       "cuantas": 2
@@ -5339,10 +5092,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 18,
-      "sensacion": 17,
+      "temp": 17,
+      "sensacion": 16,
       "humedad": 68,
-      "viento": 8,
+      "viento": 10,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": true
@@ -5691,10 +5444,16 @@
   },
   "pendientes": [
     {
-      "id": "qv44fc",
+      "id": "3mwi2b",
       "titulo": null,
       "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
+      "id": "xttimd",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
     },
     {
       "id": "q0mrv4",
@@ -5751,22 +5510,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1mvoz28",
-      "titulo": "Metrodelegados amenazan con medidas de fuerza por…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "1ueyyim",
-      "titulo": "Dolor en la comunidad agropecuaria por la p...",
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "1ohllv",
       "titulo": "Reino afianza su vínculo con Santilli: el respaldo que…",
       "seccion": "Política",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "n0kz",
+      "titulo": null,
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "emikjh",
@@ -5779,6 +5532,12 @@
       "titulo": "Nueve argentinos en el Masters 1000 de Shanghai: sorteo…",
       "seccion": "Deportes",
       "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "1mvoz28",
+      "titulo": "Metrodelegados amenazan con medidas de fuerza por…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "1mfmp95",
@@ -5811,5 +5570,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 6
 }

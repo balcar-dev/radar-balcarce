@@ -8008,16 +8008,16 @@
   "borrada": true
  },
  "xttimd": {
-  "archivo": "fotos-notas/xttimd.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Monumental proyecta goles históricos en la despedida de Lionel Messi",
   "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/el-detalle-especial-que-presentara-el-monumental-por-la-despedida-de-lionel-messi-de-la-seleccion-argentina/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-93504af439aa1791281620754-1791282229.jpg?auth=7cdf5b2c6312a74c0217f3045991303780b387fc52208bab68da385878d418ae&width=1023",
   "razon": "La foto A muestra el estadio Monumental con buen encuadre y sin marcas ni menores.",
-  "cuando": "2026-10-06T12:03:16.032Z"
+  "cuando": "2026-10-06T12:03:16.032Z",
+  "intentado": true,
+  "borrada": true
  },
  "1onhk2k": {
   "archivo": "fotos-notas/1onhk2k.jpg",
@@ -8586,15 +8586,36 @@
   "fuentes": 4
  },
  "1tq8xgm": {
-  "archivo": "fotos-notas/1tq8xgm.jpg",
   "medio": "Minuto Uno",
-  "credito": "Foto: Minuto Uno",
   "licencia": null,
   "origen": "medio",
   "titulo": "Lionel Messi juega su último partido con la Selección Argentina",
   "enlace": "https://www.minutouno.com/deportes/asi-se-mostro-lionel-messi-la-salida-del-micro-rumbo-al-monumental-n6330840",
   "imagenOriginal": "https://media.minutouno.com/p/a7aeb2a209753add544d2fd49e8ea31a/adjuntos/150/imagenes/043/688/0043688008/1200x675/smart/messi-micro.jpg",
   "razon": "La foto B muestra claramente a Lionel Messi a través de la ventana sin marcas de agua ni menores reconocibles, siendo la mejor opción disponible.",
-  "cuando": "2026-10-06T21:11:54.946Z"
+  "cuando": "2026-10-06T21:11:54.946Z",
+  "intentado": true,
+  "borrada": true
+ },
+ "gmtn3r": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+  "razon": "sin fotos para comparar",
+  "cuando": "2026-10-06T21:32:16.692Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "mxjwi9": {
+  "archivo": "fotos-notas/mxjwi9.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Científicos y organizaciones protestan contra la sanción a Virginia Aparicio",
+  "enlace": "https://eldiariobalcarce.com.ar/protesta-en-mar-del-plata-por-el-sumario-a-la-investigadora-virginia-aparicio-932",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-06-21-28-40apa.jpeg",
+  "razon": "La foto B muestra claramente la protesta con carteles relacionados al hecho y no tiene marca de agua ni menores reconocibles, a diferencia de las otras opciones.",
+  "cuando": "2026-10-06T21:32:16.692Z"
  }
 }

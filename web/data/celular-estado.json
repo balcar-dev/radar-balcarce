@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T21:12:03.409Z",
- "portada": 64,
- "archivo": 992,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-06T21:32:25.669Z",
+ "portada": 61,
+ "archivo": 993,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-06T21:12:03.439Z",
+  "generado": "2026-10-06T21:32:25.719Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "gmtn3r",
+      "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1jfpdis",
       "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
@@ -168,11 +173,6 @@
       "id": "1eed4ho",
       "titulo": "Horacio Guevara asume la conducción de Servicios de Salud",
       "seccion": "Argentina"
-     },
-     {
-      "id": "823fzo",
-      "titulo": "Lionel Messi juega su último partido con la selección nacional ante Benín",
-      "seccion": "Fútbol"
      },
      {
       "id": "n1xmig",
@@ -211,6 +211,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "gmtn3r",
+     "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+     "seccion": "Fútbol",
+     "marcada": false
+    },
     {
      "id": "gj403a",
      "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
