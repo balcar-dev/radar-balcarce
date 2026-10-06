@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T06:31:32.888Z",
- "portada": 58,
+ "generado": "2026-10-06T07:02:27.731Z",
+ "portada": 56,
  "archivo": 953,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-06T06:31:32.917Z",
+  "generado": "2026-10-06T07:02:27.751Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "1pofkpj",
-      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
-     },
      {
       "id": "108t4y0",
       "titulo": "Burkini Faso recibe a su selección sub 23 tras la goleada con Argentina",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "seccion": "Balcarce"
      },
      {
       "id": "aa0h34",
@@ -136,13 +136,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-      "seccion": "Balcarce"
-     },
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
@@ -163,14 +158,7 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [
-    {
-     "id": "12yxkc9",
-     "titulo": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
-     "seccion": "Deportes",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 5,
    "proximoDesde": "2026-10-05T20:15:22.921Z",
    "porDia": 5,
