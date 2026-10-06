@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06T08:02:15.278Z",
+ "generado": "2026-10-06T08:31:30.645Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -38,11 +38,6 @@
     },
     {
      "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-luis-caputo-dijo-que-el-presidente-es-un-faro-ideologico-nid06102026/",
-     "fecha": "2026-10-06T06:52:57.000Z"
-    },
-    {
-     "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-anuncio-la-salida-del-interventor-del-enacom-y-designo-a-su-reemplazante-nid06102026/",
      "fecha": "2026-10-06T06:39:05.000Z"
     },
@@ -60,10 +55,15 @@
      "medio": "Perfil",
      "enlace": "https://www.perfil.com/noticias/politica/presento-su-renuncia-el-interventor-del-ente-nacional-de-comunicaciones-enacom-y-el-gobierno-ya-definio-su-sucesor-quien-es.phtml",
      "fecha": "2026-10-06T06:24:51.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/el-gobierno-acepto-la-renuncia-de-juan-martin-ozores-al-enacom-y-designo-a-andres-michelazzo-como-nuevo-interventor/",
+     "fecha": "2026-10-06T07:40:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 99 caracteres, el máximo es 90",
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (dimision, habia, intervencion, administracion, gestion): va con la; sin esas oraciones quedan 142",
    "maximo": 4
   },
   {
