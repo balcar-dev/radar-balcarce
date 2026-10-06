@@ -33,6 +33,22 @@ Recién estamos arrancando y lo que más ayuda es que nos sigan. ¿Me das una ma
 
 Si te gusta, compartilo con tus contactos de Balcarce. Y si ves o sabés algo que tendría que ser noticia, escribinos. ¡Mil gracias!`;
 
+// Los textos de los perfiles (PERFILES.md, el único lugar de los textos: una prueba controla que esto diga lo mismo).
+const BIO = 'Todo lo que pasa en Balcarce, en un solo lugar. Noticias, clima y agenda. radarbalcarce.com';
+const DESCRIPCION = `Radar Balcarce reúne en un solo lugar todo lo que pasa en Balcarce y la zona:
+noticias, clima, agenda y los datos del día a día. Cada nota dice quién la
+escribió y de dónde sale la información.
+
+Las notas se escriben con inteligencia artificial y se verifican contra las
+fuentes; lo sensible lo revisa una persona antes de salir. Si ves un error,
+escribinos y lo corregimos.
+
+¿Viste algo que tendría que ser noticia? Mandanos la foto o el dato por
+WhatsApp al 2266 51-1612.
+
+Todas las notas, la agenda y el clima, en radarbalcarce.com`;
+const MENSAJE_WHATSAPP = 'Hola, les escribo por Radar Balcarce: ';
+
 export default function Compartir() {
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
@@ -56,6 +72,12 @@ export default function Compartir() {
         descripcion="49 segundos. Para Facebook, YouTube o la compu."
         mensaje="Radar Balcarce: las noticias de Balcarce, todo en un solo lugar. radarbalcarce.com"
       />
+
+      <h2 className="fraunces" style={{ fontSize: 24, marginTop: 36 }}>Para los perfiles</h2>
+      <p className="mini" style={{ marginTop: 6 }}>Textos para pegar en Instagram y en Facebook (Instagram: Editar perfil; Facebook: Información de la página).</p>
+      <Mensaje titulo="Bio, igual en Instagram y en Facebook" texto={BIO} />
+      <Mensaje titulo="Descripción larga de Facebook" texto={DESCRIPCION} />
+      <Mensaje titulo="Mensaje que se arma solo al tocar el botón de WhatsApp" texto={MENSAJE_WHATSAPP} />
 
       <section className="tarjeta" style={{ marginTop: 16 }}>
         <h2 className="fraunces" style={{ fontSize: 19 }}>Los enlaces, uno por uno</h2>

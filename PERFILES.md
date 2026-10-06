@@ -1,6 +1,6 @@
 # Perfiles de Instagram y Facebook
 
-*Actualizado el 29/09/2026.* **El único lugar del texto de los perfiles**: se
+*Actualizado el 06/10/2026 (la bio nueva, la misma en las dos redes).* **El único lugar del texto de los perfiles**: se
 copia de acá, tal cual (una prueba cuida los largos: `pruebas/perfiles.test.mjs`).
 Nada de acá inventa datos: sólo dice lo que el medio hace hoy. Los colores y las
 letras están en `MEDIA-KIT.md`; las medidas, en `FORMATOS.md`; lo que falta
@@ -30,19 +30,19 @@ cargar, en `PENDIENTES.md`.
 | **Enlace** | `https://radarbalcarce.com` |
 | **Categoría** | "Sitio web de noticias y medios de comunicación" (hoy figura "Blog personal": no se ve en el perfil, pero ayuda a que Instagram entienda qué es) |
 | **Botón de contacto** | El WhatsApp del medio, **2266 51-1612** (el del pie de la web, confirmado el 29/09) |
-| **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima, cada una con una portada cuadrada que se vea bien recortada en círculo (un ícono simple por tema, sin texto) |
+| **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima · Participá, cada una con una portada cuadrada que se vea bien recortada en círculo (un ícono simple por tema, sin texto) |
 | **Foto de perfil** | El avatar azul (`reels/avatar.mjs`; cómo es, en `MEDIA-KIT.md`, "Los colores"). Se muestra redondo |
 
 **Bio de Instagram (máx. 150 caracteres)**
 
 ```
-Radar Balcarce: noticias de acá, la región y el país.
-Clima y agenda, todos los días.
-Todo en radarbalcarce.com
+Todo lo que pasa en Balcarce, en un solo lugar. Noticias, clima y agenda. radarbalcarce.com
 ```
 
-Tres renglones, sin emojis ni promesas. Si se cambia una palabra, volver a
-contar: el límite es 150.
+La misma frase que la de Facebook y que la del video de presentación (6/10,
+elegida por Hernán). Sin emojis ni promesas. Si se cambia una palabra, volver a
+contar: el límite de Instagram es 150 y el de la información breve de Facebook,
+101, y tiene que seguir entrando en los dos.
 
 ## Facebook (página "Radar Balcarce")
 
@@ -60,25 +60,51 @@ contar: el límite es 150.
 **Información breve de Facebook (máx. 101 caracteres)**
 
 ```
-Radar Balcarce: noticias de acá, la región y el país. Todo en radarbalcarce.com
+Todo lo que pasa en Balcarce, en un solo lugar. Noticias, clima y agenda. radarbalcarce.com
 ```
 
 **Descripción larga de Facebook**
 
 ```
-Radar Balcarce es el medio digital que sigue lo que pasa en Balcarce, la
-región y el país. Cada día reunimos las noticias con la fuente siempre a la
-vista, y sumamos el clima, la agenda y los teléfonos útiles.
+Radar Balcarce reúne en un solo lugar todo lo que pasa en Balcarce y la zona:
+noticias, clima, agenda y los datos del día a día. Cada nota dice quién la
+escribió y de dónde sale la información.
 
 Las notas se escriben con inteligencia artificial y se verifican contra las
 fuentes; lo sensible lo revisa una persona antes de salir. Si ves un error,
 escribinos y lo corregimos.
 
+¿Viste algo que tendría que ser noticia? Mandanos la foto o el dato por
+WhatsApp al 2266 51-1612.
+
 Todas las notas, la agenda y el clima, en radarbalcarce.com
 ```
 
 La página nueva de Facebook tiene un solo campo de presentación, que junta la
-breve y la larga (el 28/09 quedó la que estaba).
+breve y la larga: pegar primero la información breve y, debajo, la descripción larga.
+
+## Los textos que faltan (6/10)
+
+**Mensaje que se arma solo al tocar el botón de WhatsApp** (el que ve la persona
+antes de enviar; se carga en la configuración del botón, si la red lo permite):
+
+```
+Hola, les escribo por Radar Balcarce:
+```
+
+**Historias destacadas de Instagram** (el nombre que se ve debajo de cada círculo,
+máximo 15 letras, y qué guardar en cada una):
+
+| Nombre | Qué guarda |
+|---|---|
+| Farmacia | La historia de la farmacia de turno de cada noche |
+| Teléfonos | Los teléfonos útiles de la semana |
+| Agenda | La agenda de actividades del fin de semana |
+| Clima | El clima de la mañana y el de la noche |
+| Participá | Las invitaciones a mandarnos noticias, eventos y reclamos |
+
+Portadas: un círculo con un ícono simple por tema (sin texto), con los colores
+del medio (rojo, ámbar y tinta; `MEDIA-KIT.md`).
 
 ## Las imágenes
 
@@ -101,14 +127,14 @@ cual: no de otro lado.
 |---|---|---|
 | Foto de perfil | Instagram: Editar perfil → tocar la foto → Cambiar foto de perfil. Facebook: la página → Editar foto de perfil | Subida el 28/09 |
 | Portada de Facebook | La página → Editar portada → Subir foto. Después mirarla en el celular **y** en la computadora: el avatar redondo tapa distinto en cada una | Subida el 28/09 (la azul) |
-| Bio de Instagram | Editar perfil → Biografía → borrar todo y pegar | Cargada el 28/09 |
-| Presentación de Facebook | Configuración de la página → Información de la página | Quedó la que estaba |
+| Bio de Instagram | Editar perfil → Biografía → borrar todo y pegar | **Cambiar por la nueva (6/10)** |
+| Presentación de Facebook | Configuración de la página → Información de la página | **Cambiar por la nueva (6/10)** |
 | Nombre de Instagram | Editar perfil (el usuario no se toca) | Cargado el 28/09 |
 | Categoría de Instagram | Editar perfil → Categoría | **Falta** |
 | Enlace de Instagram | Editar perfil → Enlaces; sólo desde el celular (la web no deja). Nunca `.com.ar` | **Falta** |
 | Categoría, sitio web y ubicación de Facebook | Configuración de la página → Información de la página | Hechos |
 | Botón de contacto | Instagram: Editar perfil → Opciones de contacto → WhatsApp 2266 51-1612. Facebook: el botón de la página | **Falta** |
-| Historias destacadas | Sólo Instagram, desde el perfil: las cuatro de la tabla de arriba | **Falta** |
+| Historias destacadas | Sólo Instagram, desde el perfil: las cinco de la tabla de "Los textos que faltan" | **Falta** |
 
 Nada de esto pide una clave ni un token: son textos e imágenes. Después de
 cargar algo, avisarle a Claude con una captura o el enlace público del perfil,
