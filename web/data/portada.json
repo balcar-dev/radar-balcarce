@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T18:31:54.772Z",
+  "generado": "2026-10-06T19:01:40.413Z",
   "notas": [
     {
       "id": "repaso20261006tarde",
@@ -225,14 +225,15 @@
       "guion": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
       "seccion": "Deportes",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/emilia-scioli-hizo-podio-en-el-ironman.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T16:26:52.163Z",
       "sinFecha": false,
       "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 90,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -351,7 +352,7 @@
       "fecha": "2026-10-06T15:57:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T17:01:25.569Z",
-      "relevancia": 57,
+      "relevancia": 47,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -477,102 +478,6 @@
       }
     },
     {
-      "id": "svmvqw",
-      "titulo": "El Gobierno busca bajar la tensión con Patricia Bullrich de cara a 2027",
-      "copete": "El oficialismo restó importancia a los dichos de la senadora sobre una posible postulación y aseguró que respalda la reelección de Javier Milei.",
-      "cuerpo": "El Gobierno nacional intentó este martes bajar la tensión política tras las declaraciones de la senadora y jefa del bloque de La Libertad Avanza en el Senado, Patricia Bullrich, quien dejó abierta la posibilidad de competir por la presidencia en 2027. El vocero presidencial, Adrián Ravier, sostuvo en conferencia de prensa que la legisladora apoya la reelección del presidente Javier Milei.\n\nRavier relativizó las diferencias públicas entre ambos y afirmó que en la última reunión de gabinete hubo un respaldo total al proyecto oficialista. Además, destacó la trayectoria política de la exministra y señaló que las discrepancias puntuales son normales dentro del espacio.\n\nA principios de mes, durante su participación en el Coloquio de IDEA en Mar del Plata, la senadora había evitado confirmar si competirá en los próximos comicios y reclamó mayor velocidad en las medidas económicas.",
-      "guion": "El Gobierno busca bajar la tensión con Patricia Bullrich de cara a 2027",
-      "seccion": "Política",
-      "medios": [
-        "El Eco de Tandil",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Crónica",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://tn.com.ar/politica/2026/10/06/la-casa-rosada-busco-bajar-la-tension-con-patricia-bullrich-creemos-que-apoya-la-candidatura-de-milei-para-2027/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T15:05:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T16:14:45.240Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El oficialismo restó importancia a los dichos de Patricia Bullrich sobre una candidatura para 2027.",
-        "El vocero presidencial, Adrián Ravier, aseguró que la senadora apoya la reelección de Javier Milei.",
-        "El funcionario afirmó que las diferencias de enfoque son habituales y destacó la trayectoria de la legisladora.",
-        "En octubre, durante el Coloquio de IDEA, la senadora había evitado definir sus aspiraciones electorales."
-      ],
-      "seSabe": [
-        "El vocero presidencial, Adrián Ravier, afirmó que la senadora Patricia Bullrich apoya la reelección de Javier Milei para 2027.",
-        "Ravier aseguró que en el oficialismo aceptan que puedan existir diferencias de opinión con legisladores.",
-        "El presidente Javier Milei y Patricia Bullrich se reencontraron el lunes en la reunión de gabinete en Casa Rosada."
-      ],
-      "noConfirmado": [
-        "Si Patricia Bullrich oficializará una postulación presidencial para las elecciones de 2027."
-      ],
-      "textoRedes": "El Gobierno nacional buscó bajar la tensión con la senadora Patricia Bullrich tras sus dichos sobre las elecciones de 2027 y aseguró que respalda la reelección de Javier Milei.",
-      "etiquetas": [
-        "Gobierno nacional",
-        "Patricia Bullrich",
-        "Javier Milei",
-        "elecciones 2027",
-        "Adrián Ravier"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/06/la-casa-rosada-busco-bajar-la-tension-con-patricia-bullrich-creemos-que-apoya-la-candidatura-de-milei-para-2027/",
-          "fecha": "2026-10-06T15:05:37.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones del vocero presidencial sobre el respaldo de Bullrich a Milei y el reencuentro en el gabinete."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/politica/ravier-aseguro-que-bullrich-apoyara-la-reeleccion-de-javier-milei-en-2027",
-          "fecha": "2026-10-06T15:38:02.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el vocero presidencial ratificó el apoyo de la senadora a la reelección durante una conferencia."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/ravier-relativizo-las-aspiraciones-presidenciales-de-bullrich-creo-que-apoya-la-candidatura-de-milei/",
-          "fecha": "2026-10-06T15:59:45.000Z",
-          "oficial": false,
-          "aporte": "Informó que el Gobierno nacional buscó poner paños fríos ante especulaciones de una interna."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/ravier---creo-que-para-2027-bullrich-apoyara-la-candidatura-de-milei-_a6ac50c0761c1587439f2010a",
-          "fecha": "2026-10-06T15:31:22.000Z",
-          "oficial": false,
-          "aporte": "Precisó que la conferencia de prensa del vocero presidencial se realizó este martes en Buenos Aires."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1f6rlk",
-          "titulo": "Patricia Bullrich pide mayor velocidad para los cambios económicos en IDEA",
-          "fecha": "2026-10-01T17:50:05.000Z",
-          "ruta": "/nota/patricia-bullrich-pide-mayor-velocidad-para-los-cambios-economicos-en-1f6rlk"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-busca-bajar-la-tension-con-patricia-bullrich-de-cara-a",
-      "foto": {
-        "archivo": "fotos-notas/svmvqw.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "1kk7etj",
       "titulo": "Nacha Guevara recibe entradas de la mamá de Lionel Messi",
       "copete": "La actriz recibió un obsequio especial por parte de Celia Messi para presenciar el último partido del futbolista. El hecho dejó al descubierto la relación de afecto entre la familia y distintas figuras.",
@@ -655,6 +560,7 @@
         "A24",
         "Crónica",
         "Canal 26",
+        "Noticias Argentinas (NA)",
         "La Nueva",
         "La Voz del Pueblo"
       ],
@@ -732,78 +638,6 @@
       }
     },
     {
-      "id": "1cdevto",
-      "titulo": "Nora Cárpena revela detalles de su operación de cadera",
-      "copete": "La actriz de 81 años debió pasar por el quirófano a causa de la artrosis. En plena recuperación, continúa trabajando con asistencia de bastón.",
-      "cuerpo": "Nora Cárpena fue intervenida quirúrgicamente de la cadera a los 81 años debido a un cuadro de artrosis que le provocaba fuertes dolores. Según explicó la propia protagonista, la operación se llevó a cabo hace dos meses y debió suspender sus actividades durante solo un mes.\n\nEn medio de su recuperación, la artista mantiene una intensa agenda laboral que incluye la gira nacional de la obra Viuda e hijas y su reciente participación en la ficción televisiva Sombras. Debido a las secuelas de la cirugía, utiliza un bastón sobre el escenario y recibe asistencia constante de sus compañeros de elenco.",
-      "guion": "Nora Cárpena revela detalles de su operación de cadera",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Crónica",
-        "El Día"
-      ],
-      "enlace": "https://www.eldia.com/espectaculos/de-que-operaron-a-nora-carpena-a-los-81-anos-la-reconocida-actriz-no-soporto-mas-el-dolor-espectaculos_1791294720",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T14:10:47.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T17:01:25.569Z",
-      "relevancia": 55,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La actriz Nora Cárpena fue operada de la cadera a los 81 años.",
-        "La intervención se debió a un cuadro de artrosis.",
-        "Trabaja con la asistencia de un bastón y el cuidado de sus colegas."
-      ],
-      "seSabe": [
-        "Nora Cárpena tiene 81 años y fue operada de la cadera.",
-        "La cirugía se realizó hace dos meses por artrosis.",
-        "Protagoniza la obra Viuda e hijas y actúa en la ficción Sombras."
-      ],
-      "textoRedes": "Nora Cárpena explicó los detalles de su operación de cadera y cómo continúa trabajando con asistencia.",
-      "etiquetas": [
-        "Nora Cárpena",
-        "salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/espectaculos/de-que-operaron-a-nora-carpena-a-los-81-anos-la-reconocida-actriz-no-soporto-mas-el-dolor-espectaculos_1791294720",
-          "fecha": "2026-10-06T14:10:47.000Z",
-          "oficial": false,
-          "aporte": "Detalló los motivos de la operación de cadera, el tiempo transcurrido desde la intervención y cómo transita su recuperación laboral."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/show/famosos/2026/10/06/a-los-81-anos-nora-carpena-conto-por-que-se-opero-la-cadera-no-tengo-ganas-de-aguantar-dolor/",
-          "fecha": "2026-10-06T15:40:56.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la agenda laboral de la actriz, incluyendo la gira nacional y el estreno de la ficción Sombras en Net TV."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/diarioshow/farandula/nora-carpena-fue-operada-por-un-grave-problema-de-cadera-cual-es-su-estado-de-salud/",
-          "fecha": "2026-10-06T15:22:41.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la preocupación generada en torno al estado de salud de la actriz debido a su problema de cadera."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "nora-carpena-revela-detalles-de-su-operacion-de-cadera",
-      "foto": {
-        "archivo": "fotos-notas/1cdevto.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "823fzo",
       "titulo": "Lionel Messi juega su último partido con la selección nacional ante Benín",
       "copete": "El capitán argentino se despide este martes de la albiceleste en el estadio Monumental tras 22 años de trayectoria. Cristian Fabbiani le dedicó un mensaje en redes.",
@@ -820,7 +654,7 @@
       "fecha": "2026-10-06T13:36:57.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T14:31:14.500Z",
-      "relevancia": 77,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1096,6 +930,109 @@
       }
     },
     {
+      "id": "1c7wqua",
+      "titulo": "Funcionarios nacionales y gobernadores participan de inauguración minera",
+      "copete": "La secretaria general de la Presidencia y el jefe de Gabinete se reúnen con mandatarios provinciales en Salta. Buscan respaldos para suspender las PASO y aprobar el Presupuesto.",
+      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnn con candidatos libertarios en sus distritos electorales.",
+      "guion": "Funcionarios nacionales y gobernadores participan de inauguración minera",
+      "seccion": "Política",
+      "medios": [
+        "La Nación",
+        "Diputados Bonaerenses",
+        "Clarín",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T13:01:11.200Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T16:31:20.376Z",
+      "relevancia": 76,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Karina Milei y Diego Santilli participan de la inauguración de una planta de litio en Salta.",
+        "El Gobierno busca el apoyo de los gobernadores para suspender las PASO.",
+        "La actividad incluye la firma de un acuerdo para ampliar la producción de litio en el Salar del Hombre Muerto.",
+        "El oficialismo aseguró que no presentará candidatos en los distritos de los mandatarios aliados."
+      ],
+      "seSabe": [
+        "Karina Milei y Diego Santilli participan de la inauguración de la Planta II del Proyecto Sal de Oro en el Salar del Hombre Muerto.",
+        "Los gobernadores Gustavo Sáenz y Raúl Jalil forman parte de la actividad oficial en La Puna salteña.",
+        "El Ejecutivo nacional busca respaldos provinciales para suspender las PASO y avanzar con la reforma política.",
+        "El oficialismo aseguró a los mandatarios que no presentará listas competidoras en sus distritos."
+      ],
+      "noConfirmado": [
+        "Todavía no se formalizó públicamente el respaldo de todos los gobernadores a la eliminación de las primarias.",
+        "No se detallaron los plazos específicos para la concreción parlamentaria de la reforma electoral."
+      ],
+      "etiquetas": [
+        "Gobierno nacional",
+        "Elecciones",
+        "Litio",
+        "Salta",
+        "Política"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diputados Bonaerenses",
+          "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
+          "fecha": "2026-10-06T14:30:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presencia de funcionarios y gobernadores en la planta de litio y los objetivos de las negociaciones políticas."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/guinos-paris-rosca-puna-karina-milei-santilli-profundizan-alianza-gobernadores_0_6T7VF7slZl.html",
+          "fecha": "2026-10-06T15:11:16.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el Gobierno busca acelerar gestiones para el Presupuesto, la suspensión de las PASO y obras viales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/06/karina-milei-y-santilli-se-mostraran-junto-a-los-gobernadores-de-salta-y-catamarca-en-medio-de-las-negociaciones-por-las-paso/",
+          "fecha": "2026-10-06T16:27:18.000Z",
+          "oficial": false,
+          "aporte": "Brindó coberturas generales sobre las actividades del Poder Ejecutivo nacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "oa2ef",
+          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
+          "fecha": "2026-10-02T09:29:30.000Z",
+          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
+        },
+        {
+          "id": "1pq0gh4",
+          "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
+          "fecha": "2026-10-02T16:57:20.000Z",
+          "ruta": "/nota/karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca-1pq0gh4"
+        },
+        {
+          "id": "wcnatb",
+          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
+          "fecha": "2026-10-01T13:40:00.000Z",
+          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "funcionarios-nacionales-y-gobernadores-participan-de-inauguracion",
+      "foto": {
+        "archivo": "fotos-notas/1c7wqua.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "15imf6x",
       "titulo": "Suspenden clases en el Jardín 905 por el robo de caños de gas",
       "copete": "El Jardín de Infantes N° 905 debió interrumpir las actividades del turno mañana este martes tras constatarse el faltante de caños de gas. La Policía actuó de oficio.",
@@ -1166,62 +1103,89 @@
       "slug": "suspenden-clases-en-el-jardin-905-por-el-robo-de-canos-de-gas"
     },
     {
-      "id": "1onhk2k",
-      "titulo": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
-      "copete": "La competencia se realizó el domingo pasado con una suelta a 720 kilómetros. Agustín Flórez junto a Juan Pablo Marchena y Emilia Marchena se impusieron en sus respectivas categorías.",
-      "cuerpo": "El domingo 4 de octubre se llevó a cabo la decimoquinta fecha del Campeonato Colombófilo 2026, con una prueba de fondo que tuvo como punto de partida la localidad entrerriana de Concordia, distante a 720 kilómetros. Los ejemplares fueron liberados a las 7:15 bajo buenas condiciones climáticas y con la participación de nueve competidores en la categoría A y doce en la B, en una actividad compartida con los circuitos Olavarría y Mar y Sierras.\n\nEn la divisional Adultas, el primer puesto quedó en manos de Agustín Flórez y Juan Pablo Marchena, quienes completaron el trayecto con un promedio de 60,31 km/h. En tanto, Emilia Marchena se impuso en la categoría B al sumar 1.429 unidades. Tras esta jornada, la tabla anual de Adultas continúa encabezada por la dupla integrada por Federico Ferro y Ezequiel Juárez Grave, mientras que Augusto Molina lidera en la divisional B.\n\nLa competencia tendrá un receso durante el próximo fin de semana y retomará su calendario el sábado 17 de octubre con la decimosexta fecha. En esa ocasión, las liberaciones se efectuarán desde Chajarí, Entre Ríos, a 789 kilómetros de distancia.",
-      "guion": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
-      "seccion": "Deportes",
+      "id": "ql89ei",
+      "titulo": "El Gobierno emite titulos por 221.119 millones para saldar obras",
+      "copete": "El Ejecutivo nacional dispuso la ampliación de instrumentos financieros para saldar compromisos con constructoras. La medida abarca obligaciones acumuladas desde 2022.",
+      "cuerpo": "El Gobierno nacional oficializó este martes la ampliación de tres instrumentos financieros por un valor efectivo total de 221.119.509.519 pesos. La disposición quedó establecida a través de la Resolución Conjunta 59/2026 en el Boletín Oficial, firmada por las secretarías de Finanzas y de Hacienda.\n\nLa medida apunta a cancelar pasivos pendientes con constructoras en proyectos de infraestructura y transporte. El plan abarca saldos acumulados entre 2022 y 2025, además de obligaciones de contratos rescindidos desde 2024.\n\nLos pagos a las empresas constructoras se efectivizan mediante una canasta compuesta por Lecap y Boncap, con plazos de vencimiento estipulados entre octubre de este año y abril del próximo año.",
+      "guion": "El Gobierno emite titulos por 221.119 millones para saldar obras",
+      "seccion": "Economía",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Ámbito",
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
+        "Infobae"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-colombofilia-disputo-la-15a-fecha-del-campeonato-2026",
+      "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T12:29:59.000Z",
+      "fecha": "2026-10-06T11:38:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-06T12:31:15.664Z",
-      "relevancia": 72,
-      "local": true,
+      "visto": "2026-10-06T16:31:20.376Z",
+      "relevancia": 73,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "seSabe": [
-        "La competencia se realizó el domingo 4 de octubre.",
-        "La suelta fue desde Concordia a 720 kilómetros.",
-        "Las palomas salieron a las 7:15.",
-        "Participaron 9 colombófilos en categoría A y 12 en categoría B.",
-        "Agustín Flórez y Juan Pablo Marchena ganaron en Adultas con 60,31 km/h de promedio.",
-        "Emilia Marchena ganó en categoría B con 1.429 puntos."
+      "claves": [
+        "Ampliación de emisión de títulos públicos por más de 221.000 millones de pesos.",
+        "Cancelación de deudas con contratistas de obras públicas de infraestructura y transporte.",
+        "Alcance a obligaciones acumuladas entre 2022 y 2025 y contratos finalizados desde 2024.",
+        "Pagos instrumentados mediante Lecap y Boncap con vencimientos hasta abril de 2027."
       ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La colombofilia local disputó su decimoquinta fecha del campeonato con una suelta desde Concordia a 720 kilómetros de distancia. Agustín Flórez junto a Juan Pablo Marchena y Emilia Marchena se impusieron en sus respectivas categorías.",
+      "textoRedes": "El Gobierno nacional oficializó la ampliación de la emisión de títulos públicos por más de 221.000 millones de pesos destinados a cancelar deudas pendientes con contratistas de obras de infraestructura y transporte acumuladas desde 2022.",
       "etiquetas": [
-        "colombofilia",
-        "competencia",
-        "Concordia",
-        "campeonato"
+        "Gobierno nacional",
+        "obra publica",
+        "deuda",
+        "titulos publicos"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-colombofilia-disputo-la-15a-fecha-del-campeonato-2026",
-          "fecha": "2026-10-06T12:29:59.000Z",
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
+          "fecha": "2026-10-06T11:38:00.000Z",
           "oficial": false,
-          "aporte": "Detalló los resultados de la 15ª fecha de colombofilia, las posiciones de las distintas categorías y el cronograma de la próxima competencia."
+          "aporte": "Detalló el monto total de la emisión, el número de resolución y el destino de los fondos para infraestructura."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
+          "fecha": "2026-10-06T13:43:28.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el monto total de la emisión de títulos públicos para contratistas."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/el-gobierno-amplio-la-emision-deuda-221119-millones-pagar-obligaciones-obra-publica-n6330549",
+          "fecha": "2026-10-06T13:33:00.000Z",
+          "oficial": false,
+          "aporte": "Especificó el periodo de las deudas abarcadas y los instrumentos de pago utilizados."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/06/el-gobierno-emitira-bonos-por-221000-millones-para-saldar-deudas-con-empresas-contratistas-de-la-obra-publica/",
+          "fecha": "2026-10-06T16:16:11.000Z",
+          "oficial": false,
+          "aporte": "Informó la cantidad de títulos del Tesoro emitidos y el alcance temporal de los contratos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/10/06/el-gobierno-argentino-amplia-la-emision-de-deuda-en-1293-millones-para-pagar-a-contratistas-de-obra-publica/",
+          "fecha": "2026-10-06T15:32:09.000Z",
+          "oficial": false,
+          "aporte": "Aportó la equivalencia en moneda extranjera y confirmó la publicación oficial de este martes."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-colombofilia-local-disputa-su-decimoquinta-fecha-desde-concordia",
+      "slug": "el-gobierno-emite-titulos-por-221-119-millones-para-saldar-obras",
       "foto": {
-        "archivo": "fotos-notas/1onhk2k.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
+        "archivo": "fotos-notas/ql89ei.jpg",
+        "credito": "Foto: El Eco de Tandil"
       }
     },
     {
@@ -1232,11 +1196,11 @@
       "guion": "El Gobierno crea un comando especial para trasladar a los presos de Devoto",
       "seccion": "Argentina",
       "medios": [
-        "Minuto Uno",
         "Ámbito",
+        "Minuto Uno",
         "C5N",
-        "Infobrisas (Radio Brisas)",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Infobrisas (Radio Brisas)"
       ],
       "enlace": "https://www.ambito.com/politica/el-gobierno-crea-un-comando-fuerzas-federales-seguridad-trasladar-los-presos-del-penal-devoto-marcos-paz-n6330447",
       "teniaImagenLaFuente": true,
@@ -1319,93 +1283,6 @@
       "foto": {
         "archivo": "fotos-notas/iqkmmm.jpg",
         "credito": "Foto: Ámbito"
-      }
-    },
-    {
-      "id": "ql89ei",
-      "titulo": "El Gobierno emite titulos por 221.119 millones para saldar obras",
-      "copete": "El Ejecutivo nacional dispuso la ampliación de instrumentos financieros para saldar compromisos con constructoras. La medida abarca obligaciones acumuladas desde 2022.",
-      "cuerpo": "El Gobierno nacional oficializó este martes la ampliación de tres instrumentos financieros por un valor efectivo total de 221.119.509.519 pesos. La disposición quedó establecida a través de la Resolución Conjunta 59/2026 en el Boletín Oficial, firmada por las secretarías de Finanzas y de Hacienda.\n\nLa medida apunta a cancelar pasivos pendientes con constructoras en proyectos de infraestructura y transporte. El plan abarca saldos acumulados entre 2022 y 2025, además de obligaciones de contratos rescindidos desde 2024.\n\nLos pagos a las empresas constructoras se efectivizan mediante una canasta compuesta por Lecap y Boncap, con plazos de vencimiento estipulados entre octubre de este año y abril del próximo año.",
-      "guion": "El Gobierno emite titulos por 221.119 millones para saldar obras",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Ámbito",
-        "TN (Todo Noticias)",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "Infobae"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T11:38:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T16:31:20.376Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ampliación de emisión de títulos públicos por más de 221.000 millones de pesos.",
-        "Cancelación de deudas con contratistas de obras públicas de infraestructura y transporte.",
-        "Alcance a obligaciones acumuladas entre 2022 y 2025 y contratos finalizados desde 2024.",
-        "Pagos instrumentados mediante Lecap y Boncap con vencimientos hasta abril de 2027."
-      ],
-      "textoRedes": "El Gobierno nacional oficializó la ampliación de la emisión de títulos públicos por más de 221.000 millones de pesos destinados a cancelar deudas pendientes con contratistas de obras de infraestructura y transporte acumuladas desde 2022.",
-      "etiquetas": [
-        "Gobierno nacional",
-        "obra publica",
-        "deuda",
-        "titulos publicos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
-          "fecha": "2026-10-06T11:38:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el monto total de la emisión, el número de resolución y el destino de los fondos para infraestructura."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
-          "fecha": "2026-10-06T13:43:28.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en el monto total de la emisión de títulos públicos para contratistas."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/el-gobierno-amplio-la-emision-deuda-221119-millones-pagar-obligaciones-obra-publica-n6330549",
-          "fecha": "2026-10-06T13:33:00.000Z",
-          "oficial": false,
-          "aporte": "Especificó el periodo de las deudas abarcadas y los instrumentos de pago utilizados."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/06/el-gobierno-emitira-bonos-por-221000-millones-para-saldar-deudas-con-empresas-contratistas-de-la-obra-publica/",
-          "fecha": "2026-10-06T16:16:11.000Z",
-          "oficial": false,
-          "aporte": "Informó la cantidad de títulos del Tesoro emitidos y el alcance temporal de los contratos."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/america/agencias/2026/10/06/el-gobierno-argentino-amplia-la-emision-de-deuda-en-1293-millones-para-pagar-a-contratistas-de-obra-publica/",
-          "fecha": "2026-10-06T15:32:09.000Z",
-          "oficial": false,
-          "aporte": "Aportó la equivalencia en moneda extranjera y confirmó la publicación oficial de este martes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-emite-titulos-por-221-119-millones-para-saldar-obras",
-      "foto": {
-        "archivo": "fotos-notas/ql89ei.jpg",
-        "credito": "Foto: El Eco de Tandil"
       }
     },
     {
@@ -1492,9 +1369,10 @@
         "0221",
         "La Tecla",
         "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "El Eco de Tandil",
         "Ámbito",
         "Agencia DIB",
-        "El Eco de Tandil",
         "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://www.ambito.com/informacion-general/fentanilo-contaminado-la-provincia-buenos-aires-autorizo-sus-hospitales-descartar-los-medicamentos-hlb-pharma-y-laboratorios-ramallo-n6330449",
@@ -1659,84 +1537,6 @@
         "archivo": "fotos-notas/1fxkw0r.jpg",
         "credito": "Foto: El Eco de Tandil"
       }
-    },
-    {
-      "id": "1ge8oda",
-      "titulo": "El Gobierno define los consorcios que compiten por AySA",
-      "copete": "El Poder Ejecutivo oficializó a los dos grupos empresarios que pugnan por el noventa por ciento de las acciones de la prestadora de servicios sanitarios. La apertura de las propuestas económicas se realizará el jueves.",
-      "cuerpo": "El Gobierno nacional oficializó a los dos consorcios empresarios que compiten por el noventa por ciento del paquete accionario de la empresa de servicios sanitarios AySA, que abastece a unos catorce millones de personas en la Ciudad de Buenos Aires y veintiséis municipios. La medida se formalizó mediante la Resolución 1722/2026, publicada en el Boletín Oficial, que fijó para el jueves 8 de octubre a las 10:00 la apertura de las propuestas económicas.\n\nLos grupos habilitados son el consorcio conformado por Rowing, Arcos, Transclor y PHX, junto con la alianza integrada por Roggio ROAS, Hidrosan Capital, Aguas del Plata Participaciones, Benito Roggio e Hijos y Central Buen Ayre.",
-      "guion": "El Gobierno define los consorcios que compiten por AySA",
-      "seccion": "Economía",
-      "medios": [
-        "El Eco de Tandil",
-        "La Verdad",
-        "Noticias Argentinas (NA)",
-        "Agencia DIB"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/el-gobierno-confirmo-a-los-dos-consorcios-que-competiran-esta-semana-por-el-90--de-aysa_a6ac4d1f761c1587439e999f4",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T10:48:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T17:31:22.993Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Ejecutivo oficializó a los dos consorcios que pujan por el 90 por ciento de AySA.",
-        "La apertura de ofertas económicas será este jueves 8 de octubre a las 10:00.",
-        "La privatización se encuadra en la Ley Bases y alcanza a 14 millones de usuarios."
-      ],
-      "seSabe": [
-        "El Gobierno oficializó a los dos consorcios postulantes mediante la Resolución 1722/2026.",
-        "La apertura de ofertas económicas se programó para este jueves 8 de octubre a las 10:00 horas.",
-        "El proceso licitatorio busca transferir el 90 por ciento del capital social de AySA."
-      ],
-      "textoRedes": "El Gobierno nacional oficializó a los dos consorcios que compiten por el noventa por ciento de las acciones de AySA y fijó para este jueves la apertura de las ofertas económicas del proceso de privatización.",
-      "etiquetas": [
-        "AySA",
-        "privatizacion",
-        "Gobierno nacional",
-        "Boletin Oficial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-confirmo-a-los-dos-consorcios-que-competiran-esta-semana-por-el-90--de-aysa_a6ac4d1f761c1587439e999f4",
-          "fecha": "2026-10-06T10:48:00.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de la Resolución 1722/2026, los nombres de los consorcios y la fecha de apertura de ofertas."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/el-gobierno-nacional-definira-esta-semana-que-consorcio-se-quedara-con-el-90-de-aysa",
-          "fecha": "2026-10-06T16:35:13.000Z",
-          "oficial": false,
-          "aporte": "Aportó la confirmación oficial sobre los dos grupos empresarios competidores."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/el-gobierno-confirmo-a-los-dos-consorcios-que-competiran-esta-semana-por-el-90-de-aysa/",
-          "fecha": "2026-10-06T11:35:46.000Z",
-          "oficial": false,
-          "aporte": "Especificó el número de la resolución y su publicación en el Boletín Oficial."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/esta-semana-se-definira-que-consorcio-se-quedara-el-90-aysa-n56270",
-          "fecha": "2026-10-06T12:23:12.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la apertura de ofertas económicas se realizará este jueves."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-define-los-consorcios-que-compiten-por-aysa"
     },
     {
       "id": "uknyf",
@@ -2712,10 +2512,10 @@
         "Infobae",
         "Perfil",
         "iProfesional",
-        "El Día",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "El Eco de Tandil"
+        "El Día",
+        "El Eco de Tandil",
+        "La Nueva"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/caputo-advirtio-al-mercado-sobre-como-se-prepara-ante-un-escenario-electoral-adverso-en-2027-les-nid05102026/",
       "teniaImagenLaFuente": true,
@@ -3057,7 +2857,6 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
         "Ecos Diarios (Necochea)"
       ],
@@ -3066,7 +2865,7 @@
       "fecha": "2026-10-05T22:57:34.810Z",
       "sinFecha": false,
       "visto": "2026-10-06T15:01:34.202Z",
-      "relevancia": 91,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3357,8 +3156,8 @@
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
-        "Servicio Meteorológico Nacional (avisos)",
-        "0223 (Mar del Plata)"
+        "0223 (Mar del Plata)",
+        "Servicio Meteorológico Nacional (avisos)"
       ],
       "enlace": "https://www.0223.com.ar/nota/2026-10-5-16-6-0-emitieron-un-aviso-a-muy-corto-plazo-por-tormentas-fuertes-y-caida-de-granizo-en-mar-del-plata",
       "teniaImagenLaFuente": true,
@@ -3554,7 +3353,6 @@
       "seccion": "Deportes",
       "medios": [
         "0223 (Mar del Plata)",
-        "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
         "La Nación",
         "Infobae",
@@ -3563,10 +3361,11 @@
         "Olé",
         "C5N",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "El Día",
+        "QZ Noticias (Mar del Plata)",
         "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
-        "Noticias Argentinas (NA)",
         "La Voz del Pueblo"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
@@ -3574,7 +3373,7 @@
       "fecha": "2026-10-05T19:00:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-05T22:01:16.285Z",
-      "relevancia": 66,
+      "relevancia": 58,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4291,81 +4090,6 @@
       }
     },
     {
-      "id": "1tprlf6",
-      "titulo": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
-      "copete": "La entidad financiera oficial presentó una herramienta comercial con bonificaciones en créditos y reintegros para sostener plantillas de personal y promover el empleo formal.",
-      "cuerpo": "El Banco Nación presentó una propuesta comercial destinada a PyMEs y grandes compañías que utilicen el Fondo de Asistencia Laboral, una herramienta impulsada por el Gobierno Nacional para promover el empleo formal. La iniciativa incluye un reintegro total de la comisión de administración del fondo hasta el 31 de diciembre de 2027, según informaron las fuentes.\n\nPara los empleados que acrediten sus haberes en el banco, el esquema contempla una rebaja de 5 puntos porcentuales en préstamos personales Plan Sueldo.",
-      "guion": "El Banco Nación lanza beneficios financieros para empresas que apliquen el FAL",
-      "seccion": "Agro",
-      "medios": [
-        "Ámbito",
-        "Agrositio",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T14:24:39.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 34,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Banco Nación lanzó beneficios para empresas que utilicen el Fondo de Asistencia Laboral.",
-        "Incluye el reintegro total de la comisión de administración hasta diciembre de 2027.",
-        "Ofrece tasas preferenciales y bonificaciones en préstamos personales para empleados."
-      ],
-      "seSabe": [
-        "El Banco Nación lanzó una propuesta comercial vinculada al Fondo de Asistencia Laboral.",
-        "Hay un reintegro del 100 por ciento en la comisión de administración hasta el 31 de diciembre de 2027.",
-        "Se otorgan bonificaciones de hasta 3 puntos en financiamiento y de 5 puntos en préstamos personales Plan Sueldo."
-      ],
-      "textoRedes": "El Banco Nación lanzó una propuesta comercial con beneficios en créditos y reintegros para las empresas que implementen el Fondo de Asistencia Laboral.",
-      "etiquetas": [
-        "Banco Nacion",
-        "FAL",
-        "PyMEs",
-        "empleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248661-el-banco-nacion-acompana-la-implementacion-del-fal-con-una-propuesta-comercial-exclusiva-para-empresas.html",
-          "fecha": "2026-10-05T14:24:39.000Z",
-          "oficial": false,
-          "aporte": "Detalló los porcentajes de bonificación en créditos, préstamos y el reintegro de la comisión de administración."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-banco-nacion-ofrece-financiamiento-preferencial-y-beneficios-a-empresas-que-lo-elijan-para-el-fal_a6ac3b51befa9665a6c200aae",
-          "fecha": "2026-10-05T14:32:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el lanzamiento de la propuesta comercial para PyMEs y grandes compañías."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "2ctmyu",
-          "titulo": "Banco Nación y ROSGAN organizan el Gran Remate Aniversario",
-          "fecha": "2026-10-02T14:06:41.000Z",
-          "ruta": "/nota/banco-nacion-y-rosgan-organizan-el-gran-remate-aniversario-2ctmyu"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-banco-nacion-lanza-beneficios-financieros-para-empresas-que",
-      "foto": {
-        "archivo": "fotos-notas/1tprlf6.jpg",
-        "credito": "Foto: Agrositio"
-      }
-    },
-    {
       "id": "wb8pre",
       "titulo": "Ingeniería agronómica recibe la máxima acreditación académica",
       "copete": "La carrera de la Facultad de Ciencias Agrarias obtuvo una nueva certificación de la CONEAU por seis años. El proceso evaluó planes de estudio, infraestructura y el desempeño de toda la comunidad universitaria.",
@@ -5039,9 +4763,9 @@
     "Cultura y agenda",
     "Deportes",
     "Agro",
-    "Política",
     "Economía",
     "Fútbol",
+    "Política",
     "Policiales",
     "Automovilismo"
   ],
@@ -5056,8 +4780,8 @@
     "ahora": {
       "temp": 19,
       "sensacion": 18,
-      "humedad": 54,
-      "viento": 9,
+      "humedad": 62,
+      "viento": 8,
       "rumbo": "NE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -5424,28 +5148,34 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "il3c1a",
-      "titulo": "La Corte Suprema convocó a conjueces para un nuevo debate…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "1iej7tt",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"nena\""
     },
     {
-      "id": "1ohllv",
-      "titulo": "Reino afianza su vínculo con Santilli: el respaldo que…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "eaedz2",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
+      "id": "1wmt2ui",
+      "titulo": "La izquierda convoca a movilizar a la Corte y al Congreso…",
+      "seccion": "Agro",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "1mvoz28",
+      "titulo": "Metrodelegados amenazan con medidas de fuerza por…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "1ohllv",
+      "titulo": "Reino afianza su vínculo con Santilli: el respaldo que…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "emikjh",
@@ -5472,12 +5202,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "ib0ast",
-      "titulo": "Paro de subtes: metrodelegados se declararon en estado de…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "1mfmp95",
       "titulo": null,
       "seccion": "Argentina",
@@ -5494,6 +5218,12 @@
       "titulo": "El gobierno de Trump destacó el liderazgo regional de…",
       "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "8itq4",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
   "esperandoCuerpo": 2

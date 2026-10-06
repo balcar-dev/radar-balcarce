@@ -1,7 +1,44 @@
 {
- "generado": "2026-10-06T18:31:54.772Z",
+ "generado": "2026-10-06T19:01:40.413Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1lji8b6",
+   "titulo": "La emoción de Neymar por la despedida de Lionel Messi: \"Gracias por hacerme amar aún más el fútbol\"",
+   "copete": "El delantero brasileño, íntimo amigo del astro, le dedicó una publicación en la previa del adiós del rosarino a la Albiceleste. \"Espero que disfrutes cada segundo, que todos los homenajes de hoy te hagan feliz\", expresó. Lionel Messi recibió el título Doctor Honoris Causa de la…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-06T18:07:00.000Z",
+   "fuentes": [
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/deportes/la-emocion-neymar-la-despedida-lionel-messi-gracias-hacerme-amar-aun-mas-el-futbol-n250891",
+     "fecha": "2026-10-06T18:07:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/06/neymar-le-dedico-un-sentido-posteo-a-lionel-messi-el-dia-de-su-despedida-de-la-seleccion-argentina/",
+     "fecha": "2026-10-06T18:47:52.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/deportes/neymar-para-messi-gracias-por-hacerme-amar-aun-mas-el-futbol-fue-un-honor-haber-jugado-contra-ti-y-nid06102026/",
+     "fecha": "2026-10-06T18:45:52.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/futbol-internacional/emotivo-mensaje-neymar-messi-despedida-seleccion-argentina-id764606.html",
+     "fecha": "2026-10-06T18:30:41.000Z"
+    },
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/seleccion/el-sentido-posteo-de-neymar-a-lionel-messi-por-su-despedida-de-la-seleccion-argentina-gracias-por-hacerme-amar-aun-mas-el-futbol",
+     "fecha": "2026-10-06T18:17:42.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (relleno, repite): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 70 palabras",
+   "maximo": 4
+  },
   {
    "id": "1ekdqxx",
    "titulo": "Por obras, los ramales Suárez y Bartolomé Mitre no funcionarán entre el 9 y el 12 de octubre",
@@ -15,40 +52,18 @@
      "fecha": "2026-10-06T17:20:18.000Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/informacion-general/las-lineas-suarez-y-bartolome-mitre-estaran-servicio-interrumpido-cuando-y-cuanto-tiempo-n6330709",
-     "fecha": "2026-10-06T17:40:00.000Z"
-    },
-    {
      "medio": "Canal 26",
      "enlace": "https://www.canal26.com/general/2026/10/06/los-ramales-jose-leon-suarez-y-bartolome-mitre-estaran-interrumpidos-por-obras-que-dias-en-octubre-estaran-afectados/",
      "fecha": "2026-10-06T17:45:00.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
-   "maximo": 3
-  },
-  {
-   "id": "vt7yd",
-   "titulo": "Destacan el rol de las chacras experimentales del Ministerio de Desarrollo Agrario bonaerense",
-   "copete": "El ministro de Desarrollo Agrario de la Provincia de Buenos Aires, Javier Rodríguez, encabezó este lunes el cierre de la primera jornada de la 5° edición de la Semana de Tranqueras Abiertas en la Chacra Experimental Chascomús, donde destacó el rol de estos espacios públicos para…",
-   "seccion": "Agro",
-   "fecha": "2026-10-06T09:45:24.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Agropecuarias",
-     "enlace": "https://www.noticiasagropecuarias.com/2026/10/06/destacan-el-rol-de-ls-chacras-experimentales-del-ministerio-de-desarrollo-agrario-bonaerense/",
-     "fecha": "2026-10-06T09:45:24.000Z"
     },
     {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/chacras-experimentales-para-vincular-ciencia-tecnologia-y-produccion/",
-     "fecha": "2026-10-06T12:02:37.000Z"
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/informacion-general/las-lineas-suarez-y-bartolome-mitre-estaran-servicio-interrumpido-cuando-y-cuanto-tiempo-n6330709",
+     "fecha": "2026-10-06T17:40:00.000Z"
     }
    ],
    "intentos": 3,
-   "motivo": "cuerpo: 2 problemas (fecha, repite): el cuerpo menciona \"viernes\" y la fuente no; sin esas oraciones quedan 44 palabras",
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
    "maximo": 3
   }
  ]
