@@ -8185,16 +8185,16 @@
   "cuando": "2026-10-06T16:08:33.622Z"
  },
  "uknyf": {
-  "archivo": "fotos-notas/uknyf.jpg",
   "medio": "El Destape",
-  "credito": "Foto: El Destape",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno abre el jueves las ofertas para privatizar Aysa",
   "enlace": "https://www.eldestapeweb.com/economia/gobierno-inicia-privatizacion-aysa-busca-recaudar-us-500-millones-2026106125836",
   "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/112024/1732747451937.jpg?&cw=1600&ch=900",
   "razon": "Muestra claramente las instalaciones de Aysa desde un plano general sin marcas de agua ni menores.",
-  "cuando": "2026-10-06T16:08:33.622Z"
+  "cuando": "2026-10-06T16:08:33.622Z",
+  "intentado": true,
+  "borrada": true
  },
  "ozgxah": {
   "medio": "La Nación",
@@ -8584,5 +8584,17 @@
   "error": "no se pudo volver a bajar la elegida",
   "intentos": 1,
   "fuentes": 4
+ },
+ "1tq8xgm": {
+  "archivo": "fotos-notas/1tq8xgm.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Messi juega su último partido con la Selección Argentina",
+  "enlace": "https://www.minutouno.com/deportes/asi-se-mostro-lionel-messi-la-salida-del-micro-rumbo-al-monumental-n6330840",
+  "imagenOriginal": "https://media.minutouno.com/p/a7aeb2a209753add544d2fd49e8ea31a/adjuntos/150/imagenes/043/688/0043688008/1200x675/smart/messi-micro.jpg",
+  "razon": "La foto B muestra claramente a Lionel Messi a través de la ventana sin marcas de agua ni menores reconocibles, siendo la mejor opción disponible.",
+  "cuando": "2026-10-06T21:11:54.946Z"
  }
 }

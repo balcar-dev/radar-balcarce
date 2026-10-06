@@ -1,7 +1,39 @@
 {
- "generado": "2026-10-06T21:01:54.180Z",
+ "generado": "2026-10-06T21:12:03.409Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "p2dhln",
+   "titulo": "Avanza la privatización de AySA: dos consorcios pasaron a la etapa final y el jueves se conocerán las ofertas económicas",
+   "copete": "El proceso para definir la privatización de AySA entrará esta semana en una instancia clave: este jueves 8 de octubre se abrirán las propuestas económicas de los grupos interesados en quedarse con la empresa. La administración nacional estima que la operación podría reportarle…",
+   "seccion": "Economía",
+   "fecha": "2026-10-06T10:52:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/avanza-la-privatizacion-aysa-dos-consorcios-pasaron-la-etapa-final-y-el-jueves-se-conoceran-las-ofertas-economicas-n6330446",
+     "fecha": "2026-10-06T10:52:00.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/economia/privatizacion-de-aysa-el-gobierno-confirmo-a-dos-grupos-empresarios-y-el-jueves-abrira-las-ofertas-economicas.phtml",
+     "fecha": "2026-10-06T11:51:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/economia/avanza-la-privatizacion-aysa-y-el-jueves-se-conoceran-las-ofertas-dos-consorcios-empresas-n6330503",
+     "fecha": "2026-10-06T12:50:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-avanza-con-la-privatizacion-de-aysa-y-dara-a-conocer-las-ofertas-economicas-por-el-90-de-las-acciones/",
+     "fecha": "2026-10-06T12:04:15.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gobierno\", \"aysa\" y el cuerpo no los explica; sin esas oraciones quedan 125 palabras",
+   "maximo": 3
+  },
   {
    "id": "1ekdqxx",
    "titulo": "Por obras, los ramales Suárez y Bartolomé Mitre no funcionarán entre el 9 y el 12 de octubre",
@@ -32,6 +64,28 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "11oglw2",
+   "titulo": "No todas las caravanas electrónicas son iguales: qué mirar a la hora de identificar el rodeo",
+   "copete": "Con la identificación electrónica ya incorporada a la realidad de la ganadería argentina, la discusión empieza a correrse de la obligación de caravanear hacia otra cuestión: qué diferencias existen entre los dispositivos disponibles y qué debería considerar el productor al…",
+   "seccion": "Agro",
+   "fecha": "2026-10-06T13:06:32.000Z",
+   "fuentes": [
+    {
+     "medio": "Bichos de Campo",
+     "enlace": "https://bichosdecampo.com/no-todas-las-caravanas-electronicas-son-iguales-que-mirar-a-la-hora-de-identificar-el-rodeo/",
+     "fecha": "2026-10-06T13:06:32.000Z"
+    },
+    {
+     "medio": "Agroempresario",
+     "enlace": "https://agroempresario.com/publicacion/122168/caravanas-electronicas-claves-para-identificar-el-rodeo-bovino/",
+     "fecha": "2026-10-06T18:10:03.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   }
  ]

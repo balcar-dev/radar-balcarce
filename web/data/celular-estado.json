@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T21:01:54.180Z",
- "portada": 65,
- "archivo": 993,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-06T21:12:03.409Z",
+ "portada": 64,
+ "archivo": 992,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-06T21:01:54.220Z",
+  "generado": "2026-10-06T21:12:03.439Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
      {
       "id": "1jfpdis",
@@ -170,14 +170,14 @@
       "seccion": "Argentina"
      },
      {
+      "id": "823fzo",
+      "titulo": "Lionel Messi juega su último partido con la selección nacional ante Benín",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "n1xmig",
       "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
