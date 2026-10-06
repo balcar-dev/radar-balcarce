@@ -1,18 +1,35 @@
 {
- "generado": "2026-10-06T13:03:11.672Z",
+ "generado": "2026-10-06T13:36:21.116Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "uknyf",
-   "titulo": "El Gobierno abrirá este jueves las ofertas económicas para privatizar Aysa: busca recaudar cerca de US$500 millones",
-   "copete": "El Gobierno se prepara para concretar la privatización de Aysa . Este jueves, se conocerán las ofertas económicas de los grupos empresarios que buscan quedarse con el 90% del paquete accionario de la compañía. El Ejecutivo busca recaudar cerca de US$500 millones . La medida fue…",
-   "seccion": "Economía",
-   "fecha": "2026-10-06T10:36:43.000Z",
+   "id": "1r3qdtj",
+   "titulo": "Balcarceños fueron protagonistas en la Laguna Open Sport",
+   "copete": "Mariano Barreiro se quedó con la prueba principal de 15 kilómetros, mientras que Franco Peidon ganó los 5K. Además, Jimena Vivas fue segunda entre las mujeres en los 10K y Maxi Moreno terminó tercero entre los hombres. La competencia reunió a unos 2.400 corredores.",
+   "seccion": "Deportes",
+   "fecha": "2026-10-06T13:05:17.000Z",
    "fuentes": [
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/economia/2026/10/06/el-gobierno-abrira-este-jueves-las-ofertas-economicas-para-privatizar-aysa-busca-recaudar-cerca-de-us500-millones/",
-     "fecha": "2026-10-06T10:36:43.000Z"
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/balcarcenos-fueron-protagonistas-en-la-laguna-open-sport",
+     "fecha": "2026-10-06T13:05:17.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
+  },
+  {
+   "id": "p2dhln",
+   "titulo": "Avanza la privatización de AySA: dos consorcios pasaron a la etapa final y el jueves se conocerán las ofertas económicas",
+   "copete": "El proceso para definir la privatización de AySA entrará esta semana en una instancia clave: este jueves 8 de octubre se abrirán las propuestas económicas de los grupos interesados en quedarse con la empresa. La administración nacional estima que la operación podría reportarle…",
+   "seccion": "Economía",
+   "fecha": "2026-10-06T10:52:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/avanza-la-privatizacion-aysa-dos-consorcios-pasaron-la-etapa-final-y-el-jueves-se-conoceran-las-ofertas-economicas-n6330446",
+     "fecha": "2026-10-06T10:52:00.000Z"
     },
     {
      "medio": "Minuto Uno",
@@ -20,19 +37,9 @@
      "fecha": "2026-10-06T12:50:00.000Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/avanza-la-privatizacion-aysa-dos-consorcios-pasaron-la-etapa-final-y-el-jueves-se-conoceran-las-ofertas-economicas-n6330446",
-     "fecha": "2026-10-06T10:52:00.000Z"
-    },
-    {
      "medio": "Perfil",
      "enlace": "https://www.perfil.com/noticias/economia/privatizacion-de-aysa-el-gobierno-confirmo-a-dos-grupos-empresarios-y-el-jueves-abrira-las-ofertas-economicas.phtml",
      "fecha": "2026-10-06T11:51:00.000Z"
-    },
-    {
-     "medio": "El Cronista",
-     "enlace": "https://www.cronista.com/economia-politica/la-mayor-privatizacion-de-milei-define-a-su-futuro-dueno-cuando-se-conoceran-las-cifras/",
-     "fecha": "2026-10-06T12:23:58.000Z"
     },
     {
      "medio": "Radio Mitre",
@@ -40,9 +47,9 @@
      "fecha": "2026-10-06T12:04:15.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 2 problemas (repite, promesa): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 92 palabras",
-   "maximo": 4
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
   },
   {
    "id": "1jawjgc",
@@ -207,6 +214,23 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "k690bx",
+   "titulo": "Atletismo Destacada actuación de ocho balcarceños en Tandil",
+   "copete": "",
+   "seccion": "Deportes",
+   "fecha": "2026-10-06T13:31:32.819Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/deportes/14295-destacada-actuacion-de-ocho-balcarcenos-en-tandil/",
+     "fecha": null
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
   }
  ]
 }
