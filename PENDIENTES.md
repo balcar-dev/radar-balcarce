@@ -105,7 +105,30 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 - Fútbol local: buscar una fuente local (Liga Balcarceña, Regional Amateur) entre los medios de acá.
 - Repasar todas las ideas juntos (`IDEAS.md`).
 
-## Para mañana (5/10) — lo que dejamos listo y lo que falta mirar
+## Para mañana (7/10) — lo que dejamos listo, lo que hay que mirar y lo que hay que decidir
+
+**Hecho el 5 y 6/10 (todo subido, 1838 pruebas en verde):** la web ya no se congela con datos raros (regla 105: rutas sin lista vacía, armado con datos vacíos cada lunes y al subir código, pruebas con otra hora, avisos que dicen el paso que falló, reintento de `npm ci`); Instagram no sube copias repetidas y el vigilante las busca (regla 106); "Un día como hoy" sale como reel e historia; ninguna pieza con voz repite "Balcarce" al principio; las notas salen en Facebook como posteo con foto (regla 107); se suma Ahora Balcarce a las fuentes; tablas fijas de la Liga y la F1; maqueta de fútbol con escudos; bio única y textos de los perfiles; página `/compartir`; video de presentación (vertical y horizontal, con voz de ElevenLabs).
+
+**Mirar mañana en la nube (antes de tocar nada):**
+- Facebook: que las notas salgan como foto (con la imagen de Instagram) y que no haya posteos repetidos; si algo falla, `FACEBOOK_COMO_FOTO=no` vuelve al enlace.
+- La efeméride de las 9:00: que salga como reel y como historia en las dos redes.
+- Instagram: que no aparezcan copias; el vigilante avisa si las hay.
+- La F1: que ya muestre pilotos y constructores en `/tablas/formula-1`; que la nota de partidos de fútbol sólo traiga lo que falta jugarse; que `/compartir` ande en el celular (copiar mensaje, mandar o descargar el video).
+- Ahora Balcarce: que sume notas de acá sin duplicar.
+- La corrida "Pruebas con otra hora" (lunes) y "Armado con datos vacíos".
+
+**Decidir entre los dos (en este orden):**
+1. El criterio de **relleno y clickbait** (hay que escribir el borrador con ejemplos).
+2. La **excepción a la regla de los 2 medios** para Tecnología y ciencia (oficiales y secciones especializadas): hoy salen 8 de 413 notas.
+3. El **menú de las 15 secciones**: maqueta con "Más" y los servicios en verde (no se toca sin aprobar).
+4. **Policiales de Balcarce**: aprobar por bloques desde el celular o soltar los que cuentan 2 medios.
+5. Las **fuentes en inglés** adaptadas (cuántas y con qué control).
+
+**Para los dos (a mano):** pegar las bios y completar los perfiles (ver `PERFILES.md` y `/compartir`); mails con el dominio (Cloudflare); AdSense con `radarbalcarce@gmail.com`; primeras propuestas a 10 comercios y organismos; borrar Vercel; mandar el video y los mensajes a amigos y grupos de Balcarce (hoy hay 6 seguidores en Facebook y 4 en Instagram).
+
+**Para pensar con calma:** notas de investigación con datos (SNIC, Boletín Oficial, ArgentinaDatos), figuras populares y esports, redes (WhatsApp, YouTube Shorts, TikTok), colaboradores y recortes de video (con un abogado). Todo está en el documento "Plan de crecimiento": https://claude.ai/artifact/7WoF276X7qcQtKR4oYLteJ
+
+## Para mañana (5/10, ya pasó) — lo que dejamos listo y lo que falta mirar
 
 - **Mirar la maqueta nueva de las notas de fútbol (escudos, tablas) y que las dos notas de la misma fecha tengan fotos distintas** (se ve después de la primera corrida de "Actualizar la web" con el cambio).
 - **"Un día como hoy" salió bien (4/10, Hernán): que también sea reel e historia**, y una nota en Cultura y agenda (con foto libre o de archivo, no de stock pago).
