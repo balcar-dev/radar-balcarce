@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06T09:20:28.420Z",
+ "generado": "2026-10-06T10:01:50.872Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -20,6 +20,23 @@
    "maximo": 3
   },
   {
+   "id": "i06m20",
+   "titulo": "Martes templado en Balcarce, con una máxima de 22 grados",
+   "copete": "Balcarce tendrá este martes una máxima de 22 grados , con cielo parcialmente nublado y posibilidad de lluvias débiles .",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-06T01:53:41.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/clima-martes-templado-en-balcarce-con-una-maxima-de-22-grados",
+     "fecha": "2026-10-06T01:53:41.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2023 (line 26 column 13)",
+   "maximo": 3
+  },
+  {
    "id": "1jawjgc",
    "titulo": "Cambio clave en Comunicaciones: renunció el interventor del ENACOM",
    "copete": "El Gobierno oficializó la salida de Juan Martín Ozores como interventor del Ente Nacional de Comunicaciones ( Enacom ) y designó como reemplazante el ingeniero Andrés Michelazzo , a través de un decreto publicado este martes en el Boletín Oficial. El funcionario estuvo en el…",
@@ -35,6 +52,11 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-anuncio-la-salida-del-interventor-del-enacom-y-designo-a-su-reemplazante-nid06102026/",
      "fecha": "2026-10-06T06:39:05.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/cambio-el-enacom-el-gobierno-acepto-la-renuncia-juan-martin-ozores-y-nombro-andres-michelazzo-como-interventor-n6330444",
+     "fecha": "2026-10-06T09:42:00.000Z"
     },
     {
      "medio": "Infobae",
@@ -62,9 +84,9 @@
      "fecha": "2026-10-06T07:40:00.000Z"
     }
    ],
-   "intentos": 4,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 98 caracteres, el máximo es 90",
-   "maximo": 4
+   "intentos": 5,
+   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 53 palabras",
+   "maximo": 5
   },
   {
    "id": "1k1mxar",

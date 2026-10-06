@@ -892,9 +892,9 @@
   "motivo": "con cuerpo"
  },
  "1jawjgc": {
-  "intentos": 4,
-  "ultimo": "2026-10-06T09:01:25.386Z",
-  "motivo": "título o bajada: 1 problema (largo): el titulo tiene 98 caracteres, el máximo es 90"
+  "intentos": 5,
+  "ultimo": "2026-10-06T10:01:35.163Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 53 palabras"
  },
  "1je0ajz": {
   "intentos": 1,
@@ -2308,6 +2308,11 @@
   "intentos": 1,
   "ultimo": "2026-10-02T11:01:29.631Z",
   "motivo": "con cuerpo"
+ },
+ "i06m20": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T10:01:35.163Z",
+  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2023 (line 26 column 13)"
  },
  "i4muk4": {
   "intentos": 1,
