@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T15:07:38.739Z",
- "portada": 50,
- "archivo": 964,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-06T15:33:12.069Z",
+ "portada": 53,
+ "archivo": 967,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-06T15:07:38.778Z",
+  "generado": "2026-10-06T15:33:12.105Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutor",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-06T15:05:56.084Z"
    },
    {
     "nombre": "noticia2",
@@ -126,22 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 53,
     "notas": [
-     {
-      "id": "1uo836n",
-      "titulo": "La desocupación desplaza a la inflación como principal preocupación",
-      "seccion": "Argentina"
-     },
      {
       "id": "1k3fdlf",
       "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
       "seccion": "Balcarce"
      },
      {
-      "id": "1r3qdtj",
-      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+      "id": "k690bx",
+      "titulo": "Atletas locales consiguen triunfos y podios en Tandil",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1pofkpj",
+      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
+      "seccion": "Balcarce"
      },
      {
       "id": "aa0h34",
@@ -160,11 +160,6 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "i06m20",
-      "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "n1xmig",
       "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
       "seccion": "Balcarce"
@@ -177,6 +172,11 @@
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]

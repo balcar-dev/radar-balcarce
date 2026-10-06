@@ -8068,13 +8068,16 @@
   "cuando": "2026-10-06T13:02:48.398Z"
  },
  "1k3fdlf": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1k3fdlf.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-06T14:06:34.753Z",
-  "intentos": 1,
-  "fuentes": 1
+  "enlace": "https://www.radiogabal.com.ar/index.php/policiales/tras-el-robo-de-un-flexible-del-medidor-de-gas-el-jardin-905-tendra-clases-normales-por-la-tarde",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Jardin%20905%20frente.jpeg",
+  "razon": "Muestra claramente el frente del jardín, sin personas ni marcas añadidas.",
+  "cuando": "2026-10-06T15:32:31.275Z"
  },
  "823fzo": {
   "archivo": "fotos-notas/823fzo.jpg",
@@ -8117,5 +8120,41 @@
   "cuando": "2026-10-06T15:06:04.679Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "2yqn4q": {
+  "archivo": "fotos-notas/2yqn4q.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Banco Mundial recorta las estimaciones de crecimiento para el país",
+  "enlace": "https://tn.com.ar/economia/2026/10/06/el-banco-mundial-recorto-las-proyecciones-de-crecimiento-economico-para-la-argentina-en-2026-y-2027/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/javier-milei-y-parte-de-sus-funcionarios-con-el-titular-del-banco-mundial-ajay-banga-foto-presidencia-UYHLMCNPHJB3DADOBO5VC5SQIA.jpg?auth=4dd19ccfee1b5e9530a929e6c7ae3b05f3f02979e39382e05328cf8b3610fa87&width=1023",
+  "razon": "La imagen A tiene mejor nitidez y calidad general, sin marcas agregadas ni menores.",
+  "cuando": "2026-10-06T15:32:31.275Z"
+ },
+ "nq13mz": {
+  "archivo": "fotos-notas/nq13mz.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Un periodista español cuestiona a Lionel Messi antes de su despedida",
+  "enlace": "https://tn.com.ar/deportes/futbol/2026/10/06/un-periodista-de-el-chiringuito-estallo-contra-messi-antes-de-su-despedida-de-la-seleccion-cuando-fracaso-lo-maquillaron/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-023619e527fb1791290748663-1791291501.jpg?auth=b26099e000278820c2ff10abf7057b780a3943cf2dac87ea38662b01c6b53ec6&width=1023",
+  "razon": "Ambas fotos son aptas y sin marcas, pero A tiene mejor encuadre y nitidez para ilustrar la nota.",
+  "cuando": "2026-10-06T15:32:31.275Z"
+ },
+ "1qwqrm2": {
+  "archivo": "fotos-notas/1qwqrm2.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno restituye el nombre histórico al feriado de octubre",
+  "enlace": "https://www.c5n.com/sociedad/el-gobierno-cambio-el-nombre-del-feriado-del-12-octubre-que-volvio-llamarse-dia-la-raza-n250853",
+  "imagenOriginal": "https://media.c5n.com/p/0dc10893c7659459da31bf127c9a431d/adjuntos/326/imagenes/000/394/0000394438/1200x675/smart/casa-rosada.jpg",
+  "razon": "La foto B muestra la Casa Rosada con buen encuadre y nitidez, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-06T15:32:31.275Z"
  }
 }

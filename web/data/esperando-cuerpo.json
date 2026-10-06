@@ -1,34 +1,7 @@
 {
- "generado": "2026-10-06T15:07:38.739Z",
+ "generado": "2026-10-06T15:33:12.069Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1qwqrm2",
-   "titulo": "El Gobierno cambió el nombre del feriado del 12 de octubre",
-   "copete": "La fecha conmemora la llegada de Cristóbal Colón a América. A lo largo de los años y las distintas gestiones, la fecha se resignificó. La administración actual restituyó el nombre con el que se conoció históricamente a esta efeméride. Hay feriado este miércoles tras la despedida…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-06T11:46:37.000Z",
-   "fuentes": [
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/interes-general/el-gobierno-cambio-el-nombre-del-feriado-del-12-de-octubre-y-vuelve-a-denominarlo-dia-de-la-raza",
-     "fecha": "2026-10-06T11:46:37.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/informacion-general/dia-raza-2026-volvio-llamarse-feriado-12-octubre-cambia_0_3coCBlk7pm.html",
-     "fecha": "2026-10-06T14:00:07.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/el-gobierno-cambio-el-nombre-del-feriado-del-12-octubre-que-volvio-llamarse-dia-la-raza-n250853",
-     "fecha": "2026-10-06T14:32:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 3 y la fuente no lo dice; sin esas oraciones quedan 111 palabras",
-   "maximo": 3
-  },
   {
    "id": "p2dhln",
    "titulo": "Avanza la privatización de AySA: dos consorcios pasaron a la etapa final y el jueves se conocerán las ofertas económicas",
@@ -57,7 +30,7 @@
      "fecha": "2026-10-06T12:04:15.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gobierno\", \"aysa\" y el cuerpo no los explica; sin esas oraciones quedan 151 palabras",
    "maximo": 3
   },
