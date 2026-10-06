@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T17:36:09.668Z",
- "portada": 58,
- "archivo": 977,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-06T18:02:40.357Z",
+ "portada": 62,
+ "archivo": 981,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-06T17:36:09.697Z",
+  "generado": "2026-10-06T18:02:40.390Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,14 +124,19 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
      {
       "id": "k690bx",
       "titulo": "Atletas locales consiguen triunfos y podios en Tandil",
       "seccion": "Deportes"
+     },
+     {
+      "id": "gj403a",
+      "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "1fxkw0r",
@@ -142,11 +147,6 @@
       "id": "1k3fdlf",
       "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "1jfpdis",
+      "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
+     },
      {
       "id": "n1xmig",
       "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
       "seccion": "Balcarce"
      },
      {
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "aa0h34",
       "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -200,7 +200,20 @@
      "cuando": "2026-10-06T16:13:45.287Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1jfpdis",
+     "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "gj403a",
+     "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    }
+   ],
    "cupo": 2,
    "proximoDesde": "2026-10-06T17:43:45.287Z",
    "porDia": 5,
