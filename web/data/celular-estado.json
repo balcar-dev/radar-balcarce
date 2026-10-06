@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T05:02:34.722Z",
- "portada": 54,
- "archivo": 951,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-06T05:32:35.648Z",
+ "portada": 59,
+ "archivo": 952,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-06T05:02:34.753Z",
+  "generado": "2026-10-06T05:32:35.678Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "seccion": "Balcarce"
+     },
      {
       "id": "n1xmig",
       "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
@@ -163,6 +168,12 @@
      "id": "12yxkc9",
      "titulo": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "6txjlx",
+     "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
