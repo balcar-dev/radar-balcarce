@@ -959,6 +959,53 @@
         "vistas": 11,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-06T00:00:22.523Z",
+      "web": {
+        "u12": {
+          "visitas": 19,
+          "vistas": 60
+        },
+        "a12": {
+          "visitas": 10,
+          "vistas": 65
+        },
+        "u24": {
+          "visitas": 29,
+          "vistas": 125
+        },
+        "a24": {
+          "visitas": 61,
+          "vistas": 142
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 24
+          },
+          {
+            "camino": "/nota/liga-profesional-los-partidos-de-la-fecha-del-2-al-5-de-octubre-con-futbolpartidosliga20261002",
+            "vistas": 16
+          },
+          {
+            "camino": "/seccion/futbol",
+            "vistas": 15
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 6,
+        "vistas": 645,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 83,
+        "alcance": 20,
+        "vistas": 91,
+        "interacciones": 5
+      }
     }
   ],
   "dias": {
@@ -1453,21 +1500,42 @@
     },
     "2026-10-05": {
       "referentes": {
-        "directo": 4
+        "facebook.com": 18,
+        "directo": 5
       },
       "paises": {
-        "US": 10
+        "AR": 31,
+        "US": 26,
+        "SE": 5,
+        "IE": 2,
+        "TW": 2,
+        "CN": 1
       },
       "dispositivos": {
-        "desktop": 5,
-        "mobile": 2
+        "desktop": 55,
+        "mobile": 12
       },
-      "notas": {},
+      "notas": {
+        "1njgnul": 8,
+        "cn09w9": 6,
+        "futbolresultadosliga20261002": 4,
+        "uml8iq": 3,
+        "futbolpartidosliga20261002": 2,
+        "173ttfz": 2,
+        "1vnue0q": 2,
+        "n1xmig": 2,
+        "c1nalz": 2,
+        "1ni344u": 1
+      },
       "paginas": {
-        "/": 7
+        "/": 19,
+        "/seccion/futbol": 7,
+        "/tablas/liga-profesional": 4,
+        "/seccion/tecnologia": 3,
+        "/seccion/automovilismo": 2
       },
-      "visitas": 4,
-      "vistas": 7,
+      "visitas": 23,
+      "vistas": 67,
       "horas": [
         0,
         0,
@@ -1479,16 +1547,16 @@
         4,
         0,
         0,
+        33,
+        0,
+        4,
+        0,
+        9,
+        9,
+        2,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        3,
         0,
         0,
         0,
