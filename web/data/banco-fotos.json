@@ -8341,28 +8341,28 @@
   "cuando": "2026-10-06T17:02:24.825Z"
  },
  "1cdevto": {
-  "archivo": "fotos-notas/1cdevto.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Nora Cárpena revela detalles de su operación de cadera",
   "enlace": "https://tn.com.ar/show/famosos/2026/10/06/a-los-81-anos-nora-carpena-conto-por-que-se-opero-la-cadera-no-tengo-ganas-de-aguantar-dolor/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/nora-carpena-conto-por-que-tuvo-que-operarse-de-la-cadera-foto-instagram-noracarpenaok-JY72LVPSHJHRZLQJMS6GZF2Z64.jpg?auth=95dacaf3d075ea51ccfb6ac32eee2ade651ace178a154628df656f55e1be9fea&width=1023",
   "razon": "Es un retrato claro, enfocado y limpio, sin marcas añadidas ni menores.",
-  "cuando": "2026-10-06T17:02:24.825Z"
+  "cuando": "2026-10-06T17:02:24.825Z",
+  "intentado": true,
+  "borrada": true
  },
  "1ge8oda": {
-  "archivo": "fotos-notas/1ge8oda.jpg",
   "medio": "La Verdad",
-  "credito": "Foto: La Verdad",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno define los consorcios que compiten por AySA",
   "enlace": "https://laverdadonline.com/el-gobierno-confirmo-a-los-dos-consorcios-que-competiran-esta-semana-por-el-90-de-aysa/",
   "imagenOriginal": "https://laverdadonline.com/wp-content/uploads/2026/10/720.webp",
   "razon": "La foto C muestra claramente la bandera con el logo de la empresa y el río, sin marcas de agua agregadas ni menores.",
-  "cuando": "2026-10-06T20:32:32.616Z"
+  "cuando": "2026-10-06T20:32:32.616Z",
+  "intentado": true,
+  "borrada": true
  },
  "1jfpdis": {
   "archivo": "fotos-notas/1jfpdis.jpg",
@@ -8576,5 +8576,13 @@
   "imagenOriginal": "https://media.lapaginamillonaria.com/wp-content/uploads/sites/15/2026/10/06094951/bruno-cabral-primer-contrato-1200x740.webp",
   "razon": "Tiene excelente nitidez, encuadre limpio y no posee marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-06T20:32:32.616Z"
+ },
+ "c0faya": {
+  "intentado": true,
+  "origen": "medio",
+  "cuando": "2026-10-06T21:01:46.369Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 1,
+  "fuentes": 4
  }
 }

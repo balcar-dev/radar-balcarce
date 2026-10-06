@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T20:33:41.631Z",
- "portada": 68,
- "archivo": 994,
- "esperandoCuerpo": 0,
+ "generado": "2026-10-06T21:01:54.180Z",
+ "portada": 65,
+ "archivo": 993,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-06T20:33:41.658Z",
+  "generado": "2026-10-06T21:01:54.220Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,12 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 50,
     "notas": [
      {
       "id": "1jfpdis",
       "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1eed4ho",
+      "titulo": "Horacio Guevara asume la conducción de Servicios de Salud",
+      "seccion": "Argentina"
      },
      {
       "id": "n1xmig",
@@ -173,11 +178,6 @@
       "id": "1793nst",
       "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "aa0h34",
-      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
-      "seccion": "Automovilismo"
      }
     ]
    }

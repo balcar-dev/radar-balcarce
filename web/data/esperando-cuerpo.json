@@ -1,5 +1,38 @@
 {
- "generado": "2026-10-06T20:33:41.631Z",
+ "generado": "2026-10-06T21:01:54.180Z",
  "intentosMaximos": 3,
- "notas": []
+ "notas": [
+  {
+   "id": "1ekdqxx",
+   "titulo": "Por obras, los ramales Suárez y Bartolomé Mitre no funcionarán entre el 9 y el 12 de octubre",
+   "copete": "Los ramales José León Suárez y Bartolomé Mitre de la línea Mitre permanecerán interrumpidos desde el viernes 9 hasta el lunes 12 de octubre inclusive debido a una serie de obras que se realizarán en la zona de vías. Según informó Trenes Argentinos, el corte permitirá avanzar con…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-06T17:20:18.000Z",
+   "fuentes": [
+    {
+     "medio": "Zona Norte Diario",
+     "enlace": "https://www.zonanortediario.com.ar/06/10/2026/por-obras-los-ramales-suarez-y-bartolome-mitre-no-funcionaran-entre-el-9-y-el-12-de-octubre/",
+     "fecha": "2026-10-06T17:20:18.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/sociedad/2026/10/06/dos-ramales-del-tren-mitre-no-funcionaran-durante-el-fin-de-semana-largo-de-octubre/",
+     "fecha": "2026-10-06T20:31:07.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/general/2026/10/06/los-ramales-jose-leon-suarez-y-bartolome-mitre-estaran-interrumpidos-por-obras-que-dias-en-octubre-estaran-afectados/",
+     "fecha": "2026-10-06T17:45:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/informacion-general/las-lineas-suarez-y-bartolome-mitre-estaran-servicio-interrumpido-cuando-y-cuanto-tiempo-n6330709",
+     "fecha": "2026-10-06T17:40:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
+   "maximo": 3
+  }
+ ]
 }
