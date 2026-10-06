@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T03:31:25.006Z",
- "portada": 58,
+ "generado": "2026-10-06T04:01:10.807Z",
+ "portada": 57,
  "archivo": 951,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-06T03:31:25.036Z",
+  "generado": "2026-10-06T04:01:10.825Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,27 +95,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "1pofkpj",
-      "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
-     },
      {
       "id": "108t4y0",
       "titulo": "Burkini Faso recibe a su selección sub 23 tras la goleada con Argentina",
       "seccion": "Fútbol"
      },
      {
-      "id": "sd36kl",
-      "titulo": "El Banco Central afirma que la mayor parte de los dólares se queda en el país",
-      "seccion": "Economía"
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "seccion": "Balcarce"
      },
      {
       "id": "aa0h34",
       "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "lomklr",
+      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -126,29 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
-    "notas": [
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "lomklr",
-      "titulo": "Balcarce reúne a referentes nacionales en su primera clínica de longcasting",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -157,29 +136,33 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 50,
+    "notas": [
+     {
+      "id": "9m9h4e",
+      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "e5jokd",
+      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
    "hoy": [],
    "cola": [
     {
-     "id": "1pofkpj",
-     "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "12yxkc9",
      "titulo": "La Escuela Municipal de Básquet comienza los playoffs con un triunfo y una derrota",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "6txjlx",
-     "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],
