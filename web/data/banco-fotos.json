@@ -5637,16 +5637,16 @@
   "borrada": true
  },
  "1n4tus5": {
-  "archivo": "fotos-notas/1n4tus5.jpg",
   "medio": "El Destape",
-  "credito": "Foto: El Destape",
   "licencia": null,
   "origen": "medio",
   "titulo": "Sandra Pettovello desplaza a la subsecretaria de Trabajo y designa a un nuevo funcionario",
   "enlace": "https://www.eldestapeweb.com/economia/renuncio-claudia-testa-segunda-secretaria-trabajo-2026102192830",
   "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/072024/1721852749599.jpeg?&cw=1600&ch=900",
   "razon": "Muestra una reunión de funcionarios en una mesa larga de trabajo con buena iluminación y sin marcas de agua ni menores.",
-  "cuando": "2026-10-02T22:32:19.259Z"
+  "cuando": "2026-10-02T22:32:19.259Z",
+  "intentado": true,
+  "borrada": true
  },
  "1jzjpi7": {
   "medio": "La Tecla",
@@ -8108,5 +8108,14 @@
   "cuando": "2026-10-06T14:34:53.068Z",
   "intentos": 1,
   "fuentes": 5
+ },
+ "k690bx": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Atletas locales consiguen triunfos y podios en Tandil",
+  "razon": "La única imagen disponible está marcada con el logo del medio (Diario La Vanguardia), por lo que no puede ser elegida.",
+  "cuando": "2026-10-06T15:06:04.679Z",
+  "intentos": 1,
+  "fuentes": 1
  }
 }

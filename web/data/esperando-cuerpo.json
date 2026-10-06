@@ -1,28 +1,50 @@
 {
- "generado": "2026-10-06T14:37:07.089Z",
+ "generado": "2026-10-06T15:07:38.739Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "uknyf",
-   "titulo": "El Gobierno abrirá este jueves las ofertas económicas para privatizar Aysa: busca recaudar cerca de US$500 millones",
-   "copete": "El Gobierno se prepara para concretar la privatización de Aysa . Este jueves, se conocerán las ofertas económicas de los grupos empresarios que buscan quedarse con el 90% del paquete accionario de la compañía. El Ejecutivo busca recaudar cerca de US$500 millones . La medida fue…",
-   "seccion": "Economía",
-   "fecha": "2026-10-06T10:36:43.000Z",
+   "id": "1qwqrm2",
+   "titulo": "El Gobierno cambió el nombre del feriado del 12 de octubre",
+   "copete": "La fecha conmemora la llegada de Cristóbal Colón a América. A lo largo de los años y las distintas gestiones, la fecha se resignificó. La administración actual restituyó el nombre con el que se conoció históricamente a esta efeméride. Hay feriado este miércoles tras la despedida…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-06T11:46:37.000Z",
    "fuentes": [
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/economia/2026/10/06/el-gobierno-abrira-este-jueves-las-ofertas-economicas-para-privatizar-aysa-busca-recaudar-cerca-de-us500-millones/",
-     "fecha": "2026-10-06T10:36:43.000Z"
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/interes-general/el-gobierno-cambio-el-nombre-del-feriado-del-12-de-octubre-y-vuelve-a-denominarlo-dia-de-la-raza",
+     "fecha": "2026-10-06T11:46:37.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/informacion-general/dia-raza-2026-volvio-llamarse-feriado-12-octubre-cambia_0_3coCBlk7pm.html",
+     "fecha": "2026-10-06T14:00:07.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/el-gobierno-cambio-el-nombre-del-feriado-del-12-octubre-que-volvio-llamarse-dia-la-raza-n250853",
+     "fecha": "2026-10-06T14:32:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 3 y la fuente no lo dice; sin esas oraciones quedan 111 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "p2dhln",
+   "titulo": "Avanza la privatización de AySA: dos consorcios pasaron a la etapa final y el jueves se conocerán las ofertas económicas",
+   "copete": "El proceso para definir la privatización de AySA entrará esta semana en una instancia clave: este jueves 8 de octubre se abrirán las propuestas económicas de los grupos interesados en quedarse con la empresa. La administración nacional estima que la operación podría reportarle…",
+   "seccion": "Economía",
+   "fecha": "2026-10-06T10:52:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/avanza-la-privatizacion-aysa-dos-consorcios-pasaron-la-etapa-final-y-el-jueves-se-conoceran-las-ofertas-economicas-n6330446",
+     "fecha": "2026-10-06T10:52:00.000Z"
     },
     {
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/economia/avanza-la-privatizacion-aysa-y-el-jueves-se-conoceran-las-ofertas-dos-consorcios-empresas-n6330503",
      "fecha": "2026-10-06T12:50:00.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/avanza-la-privatizacion-aysa-dos-consorcios-pasaron-la-etapa-final-y-el-jueves-se-conoceran-las-ofertas-economicas-n6330446",
-     "fecha": "2026-10-06T10:52:00.000Z"
     },
     {
      "medio": "Perfil",
@@ -35,9 +57,9 @@
      "fecha": "2026-10-06T12:04:15.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gobierno\", \"aysa\" y el cuerpo no los explica; sin esas oraciones quedan 149 palabras",
-   "maximo": 4
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gobierno\", \"aysa\" y el cuerpo no los explica; sin esas oraciones quedan 151 palabras",
+   "maximo": 3
   },
   {
    "id": "1k1mxar",
@@ -125,33 +147,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "ql89ei",
-   "titulo": "El Gobierno amplía emisión de títulos por $221.119 millones para saldar deudas de obra pública",
-   "copete": "El Gobierno nacional dispuso la ampliación de la emisión de títulos públicos por un valor efectivo total de 221.119.509.519 pesos, con el objetivo de cancelar deudas pendientes con contratistas de obra pública. La medida fue oficializada este martes mediante la Resolución…",
-   "seccion": "Economía",
-   "fecha": "2026-10-06T11:38:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
-     "fecha": "2026-10-06T11:38:00.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
-     "fecha": "2026-10-06T13:43:28.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/el-gobierno-amplio-la-emision-deuda-221119-millones-pagar-obligaciones-obra-publica-n6330549",
-     "fecha": "2026-10-06T13:33:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 3 problemas (largo, numero): el titulo tiene 99 caracteres, el máximo es 90",
-   "maximo": 3
   }
  ]
 }
