@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T21:32:25.669Z",
- "portada": 61,
- "archivo": 993,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-06T22:02:03.370Z",
+ "portada": 63,
+ "archivo": 995,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-06T21:32:25.719Z",
+  "generado": "2026-10-06T22:02:03.404Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-06T18:06:46.125Z"
    },
    {
@@ -63,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-06T18:06:46.125Z",
     "segundos": null,
     "notas": [
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "gmtn3r",
-      "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
-      "seccion": "Fútbol"
-     },
      {
       "id": "1jfpdis",
       "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
       "seccion": "Deportes"
+     },
+     {
+      "id": "q0mrv4",
+      "titulo": "El quirófano móvil de castraciones sigue en la Escuela de Arte",
+      "seccion": "Balcarce"
      },
      {
       "id": "1eed4ho",
@@ -175,9 +175,9 @@
       "seccion": "Argentina"
      },
      {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
-      "seccion": "Balcarce"
+      "id": "gmtn3r",
+      "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+      "seccion": "Fútbol"
      }
     ]
    }
@@ -212,15 +212,21 @@
    ],
    "cola": [
     {
-     "id": "gmtn3r",
-     "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
-     "seccion": "Fútbol",
+     "id": "q0mrv4",
+     "titulo": "El quirófano móvil de castraciones sigue en la Escuela de Arte",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
      "id": "gj403a",
      "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "gmtn3r",
+     "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+     "seccion": "Fútbol",
      "marcada": false
     }
    ],

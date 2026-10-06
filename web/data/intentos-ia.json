@@ -598,9 +598,9 @@
   "motivo": "con cuerpo"
  },
  "1cvwcvk": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T21:31:41.860Z",
-  "motivo": "título o bajada: 1 problema (numero): el copete dice 3 y la fuente no lo dice"
+  "intentos": 2,
+  "ultimo": "2026-10-06T22:01:23.795Z",
+  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1cvxek6": {
   "intentos": 1,
@@ -697,6 +697,11 @@
  "1fgr8xb": {
   "intentos": 1,
   "ultimo": "2026-09-30T17:02:03.723Z",
+  "motivo": "con cuerpo"
+ },
+ "1fhe1n3": {
+  "intentos": 1,
+  "ultimo": "2026-10-06T22:01:23.795Z",
   "motivo": "con cuerpo"
  },
  "1fp0ktu": {
@@ -1987,11 +1992,6 @@
   "ultimo": "2026-10-06T02:01:28.728Z",
   "motivo": "con cuerpo"
  },
- "9ul7an": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T22:01:20.500Z",
-  "motivo": "con cuerpo"
- },
  "a0bbpp": {
   "intentos": 1,
   "ultimo": "2026-10-01T20:28:44.288Z",
@@ -2329,11 +2329,6 @@
   "ultimo": "2026-10-06T16:31:26.951Z",
   "motivo": "con cuerpo"
  },
- "infbfx": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T22:01:20.500Z",
-  "motivo": "con cuerpo"
- },
  "inwwi9": {
   "intentos": 2,
   "ultimo": "2026-10-04T13:01:15.747Z",
@@ -2615,11 +2610,9 @@
   "motivo": "con cuerpo"
  },
  "q0mrv4": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T18:01:44.392Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
+  "intentos": 2,
+  "ultimo": "2026-10-06T22:01:23.795Z",
+  "motivo": "con cuerpo"
  },
  "q6p856": {
   "intentos": 1,
@@ -2985,10 +2978,15 @@
   "ultimo": "2026-10-01T03:31:15.758Z",
   "motivo": "cuerpo: 2 problemas (nombre): el cuerpo nombra a \"turismo\" y la fuente no; sin esas oraciones quedan 46 palabras"
  },
- "xttimd": {
+ "xmeiz2": {
   "intentos": 1,
-  "ultimo": "2026-10-06T12:03:12.617Z",
+  "ultimo": "2026-10-06T22:01:23.795Z",
   "motivo": "con cuerpo"
+ },
+ "xttimd": {
+  "intentos": 2,
+  "ultimo": "2026-10-06T22:01:23.795Z",
+  "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"plate\" y la fuente no; sin esas oraciones quedan 62 palabras"
  },
  "xvt4t1": {
   "intentos": 1,
