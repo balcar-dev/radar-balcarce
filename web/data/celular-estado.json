@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T22:04:03.400Z",
- "portada": 57,
- "archivo": 1047,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-07T22:33:39.529Z",
+ "portada": 61,
+ "archivo": 1050,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T22:04:03.455Z",
+  "generado": "2026-10-07T22:33:39.587Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-07T22:06:12.522Z"
    },
    {
     "nombre": "clima-noche",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
      {
       "id": "1opc9eu",
@@ -170,8 +170,8 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "id": "woerbj",
+      "titulo": "La Selección Argentina se mantiene segunda en el ranking FIFA",
       "seccion": "Fútbol"
      },
      {
