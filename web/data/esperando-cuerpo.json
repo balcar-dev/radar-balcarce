@@ -1,11 +1,65 @@
 {
- "generado": "2026-10-07T02:01:55.706Z",
+ "generado": "2026-10-07T02:32:12.012Z",
  "intentosMaximos": 3,
  "notas": [
   {
+   "id": "1l2ca46",
+   "titulo": "Un Renault Clio chocó contra un poste de alumbrado en avenida Eva Perón",
+   "copete": "Un siniestro vial se registró en la noche de este martes en avenida Eva Perón, entre calles 104 y 106, donde un automóvil Renault Clio impactó contra un poste de alumbrado público. Según se pudo saber, el conductor del vehículo, un hombre mayor de edad, habría sufrido una…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-06T23:24:12.000Z",
+   "fuentes": [
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/un-renault-clio-choco-contra-un-poste-de-alumbrado-en-avenida-eva-peron/",
+     "fecha": "2026-10-06T23:24:12.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/un-auto-choco-contra-un-poste-de-luz.html",
+     "fecha": "2026-10-06T23:46:00.754Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (numero, copia): el copete dice 2 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "1githwa",
+   "titulo": "Las palabras de Lionel Messi tras su último partido con la Selección: “Jugar en Argentina es lo más lindo que te puede pasar”",
+   "copete": "Todavía conmovido por la ovación del Monumental, Lionel Messi habló tras su último partido con Argentina . El capitán agradeció el acompañamiento de los hinchas, recordó el camino recorrido y expresó qué significó para él despedirse de la camiseta albiceleste: “Jugar en la…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-07T01:59:21.000Z",
+   "fuentes": [
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/deportes/2026/10/07/las-palabras-de-lionel-messi-tras-su-ultimo-partido-con-la-seleccion-jugar-en-la-argentina-es-lo-mas-lindo-que-te-puede-pasar/",
+     "fecha": "2026-10-07T01:59:21.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/deportes/futbol/lionel-messi-en-su-despedida-jugar-en-la-seleccion-es-lo-mas-lindo-que-te-puede-pasar-nid06102026/",
+     "fecha": "2026-10-07T02:19:52.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/07/jugar-en-la-seleccion-es-lo-mas-lindo-que-te-puede-pasar-el-discurso-de-despedida-de-messi/",
+     "fecha": "2026-10-07T02:29:46.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/messi--emocionado-en-su-despedida---jugar-en-la-seleccion-argentina-es-lo-mas-lindo-que-te-puede-pasar-_a6ac5a53961c15874390a19e8",
+     "fecha": "2026-10-07T02:12:52.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
    "id": "1u7aojj",
    "titulo": "La emocionante última arenga de Lionel Messi en la Selección argentina: \"De esa manera lo disfrutamos\"",
-   "copete": "Lionel Messi volvió a ocupar el centro de la escena incluso antes de que empezara el partido. A la salida del túnel, en la antesala de su último encuentro con la camiseta de la selección argentina , el capitán reunió a sus compañeros y encabezó la arenga previa al ingreso a la…",
+   "copete": "Lionel Messi guio por última vez al equipo rumbo al campo de juego del Monumental, en su despedida de la Selección Argentina. Antes de enfrentar a Benín se escuchó la arenga del capitán en la transmisión oficial. ¡ASÍ FUE LA ÚLTIMA ARENGA DE MESSI EN LA SELECCIÓN ARGENTINA!…",
    "seccion": "Fútbol",
    "fecha": "2026-10-06T23:24:00.000Z",
    "fuentes": [
@@ -13,11 +67,6 @@
      "medio": "C5N",
      "enlace": "https://www.c5n.com/deportes/la-emocionante-ultima-arenga-lionel-messi-la-seleccion-argentina-de-esa-manera-lo-disfrutamos-n250930",
      "fecha": "2026-10-06T23:24:00.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/deportes/futbol/la-ultima-arenga-de-lionel-messi-en-la-seleccion-argentina-que-les-dijo-a-sus-companeros-antes-de-nid06102026/",
-     "fecha": "2026-10-07T01:39:54.000Z"
     },
     {
      "medio": "Olé",
@@ -48,23 +97,6 @@
    "intentos": 4,
    "motivo": "cuerpo: 5 problemas (nombre, fecha, antecedente, relleno, repite): el cuerpo nombra a \"plate\" y la fuente no; sin esas oraciones quedan 24 palabras",
    "maximo": 4
-  },
-  {
-   "id": "ioddw4",
-   "titulo": "Un auto chocó contra un poste de luz",
-   "copete": "Este martes por la noche, un automóvil Renault Clío impactó contra un poste de alumbrado público en avenida Eva Perón, entre 104 y 106. Según pudo saber Infórmese Primero , el conductor, un hombre mayor de edad, habría sufrido una descompensación mientras circulaba por el…",
-   "seccion": "Policiales",
-   "fecha": "2026-10-06T23:46:00.754Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/un-auto-choco-contra-un-poste-de-luz.html",
-     "fecha": "2026-10-06T23:46:00.754Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 2, que sale de una nota anterior, como si fuera de hoy",
-   "maximo": 3
   },
   {
    "id": "1yzgdmc",
@@ -102,10 +134,15 @@
      "medio": "0221",
      "enlace": "https://www.0221.com.ar/deportes/video-el-estadio-monumental-exploto-contra-chiqui-tapia-la-despedida-lionel-messi-n135407",
      "fecha": "2026-10-07T00:56:00.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/deportes/futbol/los-canticos-de-los-hinchas-contra-chiqui-tapia-en-la-previa-de-la-despedida-de-messi-de-la-nid06102026/",
+     "fecha": "2026-10-07T02:26:34.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 48 palabras",
+   "intentos": 4,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 35 palabras",
    "maximo": 4
   },
   {
@@ -259,7 +296,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-6-20-42-0-murio-carlos-clerici-la-emblematica-voz-de-las-campanas-de-luchemos-por-la-vida",
-     "fecha": "2026-10-07T01:59:40.000Z"
+     "fecha": "2026-10-07T02:19:35.000Z"
     },
     {
      "medio": "Minuto Uno",
