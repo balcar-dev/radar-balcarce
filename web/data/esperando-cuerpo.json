@@ -1,80 +1,43 @@
 {
- "generado": "2026-10-07T00:32:52.447Z",
+ "generado": "2026-10-07T00:59:47.893Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1u7aojj",
-   "titulo": "La emocionante última arenga de Lionel Messi en la Selección argentina: \"De esa manera lo disfrutamos\"",
-   "copete": "Lionel Messi volvió a ocupar el centro de la escena incluso antes de que empezara el partido. A la salida del túnel, en la antesala de su último encuentro con la camiseta de la selección argentina , el capitán reunió a sus compañeros y encabezó la arenga previa al ingreso a la…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-06T23:24:00.000Z",
+   "id": "1qym9k9",
+   "titulo": "Vandalismo rural: Consiguió dictamen de mayoría en Diputados el proyecto que pena los delitos en el campo y ahora irá al recinto para su debate",
+   "copete": "El proyecto para castigar el vandalismo rural logró este martes dictamen de mayoría en un plenario de las comisiones de Legislación Penal y de Agricultura y Ganadería de Diputados, y quedó en condiciones de llegar al recinto. La iniciativa es del diputado pampeano Martín…",
+   "seccion": "Agro",
+   "fecha": "2026-10-06T20:10:19.000Z",
    "fuentes": [
     {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/deportes/la-emocionante-ultima-arenga-lionel-messi-la-seleccion-argentina-de-esa-manera-lo-disfrutamos-n250930",
-     "fecha": "2026-10-06T23:24:00.000Z"
+     "medio": "Bichos de Campo",
+     "enlace": "https://bichosdecampo.com/vandalismo-rural-consiguio-dictamen-de-mayoria-en-diputados-el-proyecto-que-pena-los-delitos-en-el-campo-y-ahora-ira-al-recinto-para-su-debate/",
+     "fecha": "2026-10-06T20:10:19.000Z"
     },
     {
      "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/deportes/futbol/la-ultima-arenga-de-lionel-messi-en-la-seleccion-argentina-que-les-dijo-a-sus-companeros-antes-de-nid06102026/",
-     "fecha": "2026-10-06T23:53:20.000Z"
+     "enlace": "https://www.lanacion.com.ar/economia/campo/vandalismo-logro-dictamen-en-diputados-un-proyecto-que-preve-hasta-ocho-anos-de-prision-por-ataques-nid06102026/",
+     "fecha": "2026-10-06T22:46:14.000Z"
     },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/seleccion/video-ultima-arenga-messi-seleccion-argentina_0_SVs35ZteOS.html",
-     "fecha": "2026-10-06T23:43:10.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/seleccion/ultima-arenga-messi-argentina_3_ErbbRP0auw.html",
-     "fecha": "2026-10-06T23:30:53.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/la-conmovedora-ultima-arenga-de-lionel-messi-como-capitan-de-la-seleccion-argentina-de-esta-manera-lo-disfrutamos/",
-     "fecha": "2026-10-06T23:34:07.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-6-20-18-0-la-ultima-arenga-de-messi-en-la-seleccion-nada-de-boludeo-lo-disfrutamos-haciendo-goles-y-ganando",
-     "fecha": "2026-10-06T23:33:55.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "cuerpo: 2 problemas (relleno, repite): el cuerpo tiene una frase de relleno sin dato: \"en ocasiones previas\"; sin esas oraciones quedan 56 palabras",
-   "maximo": 4
-  },
-  {
-   "id": "1ckw9zk",
-   "titulo": "Las entradas para la despedida de Messi se ofrecen en la reventa por hasta $1,5 millón",
-   "copete": "La Policía de la Ciudad allanó una vivienda de Vicente López en el marco de una investigación por la presunta reventa de entradas para Argentina-Benín, el partido que marcará la despedida de Lionel Messi de la Selección argentina. Durante el operativo fueron secuestrados nueve…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-06T14:43:48.000Z",
-   "fuentes": [
     {
      "medio": "QZ Noticias (Mar del Plata)",
-     "enlace": "https://www.qznoticias.com/deportes/las-entradas-para-la-despedida-de-messi-se-ofrecen-en-la-reventa-por-hasta-15-millon",
-     "fecha": "2026-10-06T14:43:48.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/deportes/allanaron-mujer-reventa-entradas-despedida-messi-vendia-sobreprecios-800_0_aK6fndMp88.html",
-     "fecha": "2026-10-06T22:05:01.000Z"
-    },
-    {
-     "medio": "La Noticia 1",
-     "enlace": "https://www.lanoticia1.com/noticia/allanaron-una-vivienda-en-vicente-lopez-por-la-reventa-de-entradas-para-la-despedida-de-messi-secuestraron-dolares-y-casi-10-millones",
-     "fecha": "2026-10-06T23:41:19.000Z"
+     "enlace": "https://www.qznoticias.com/el-pais/diputados-avanzo-con-un-proyecto-que-incorpora-el-vandalismo-rural-al-codigo-penal",
+     "fecha": "2026-10-06T22:48:55.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/sociedad/allanaron-la-vivienda-de-una-mujer-por-reventa-de-entradas-para-la-despedida-de-messi_a6ac57c7361c15874390488bf",
-     "fecha": "2026-10-06T23:17:00.000Z"
+     "enlace": "https://noticiasargentinas.com/politica/diputados-aprueba-en-comision-incorporar-el--vandalismo-rural--al-codigo-penal-con-penas-de-hasta-8-anos_a6ac54b5061c1587439fb8d98",
+     "fecha": "2026-10-06T20:32:40.061Z"
+    },
+    {
+     "medio": "Noticias Agropecuarias",
+     "enlace": "https://www.noticiasagropecuarias.com/2026/10/06/vandalismo-rural-diputados-analiza-endurecer-las-penas-mientras-productores-reclaman-mas-seguridad-en-er/",
+     "fecha": "2026-10-06T21:52:22.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 145 palabras",
-   "maximo": 3
+   "intentos": 4,
+   "motivo": "con cuerpo",
+   "maximo": 4
   },
   {
    "id": "1ekdqxx",
@@ -165,7 +128,7 @@
     {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/show/novedades/2026/10/06/murio-carlos-clerici-la-emblematica-voz-de-las-campanas-de-luchemos-por-la-vida/",
-     "fecha": "2026-10-06T21:20:39.000Z"
+     "fecha": "2026-10-06T21:20:40.000Z"
     },
     {
      "medio": "La Nación",
@@ -190,7 +153,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-6-20-42-0-murio-carlos-clerici-la-emblematica-voz-de-las-campanas-de-luchemos-por-la-vida",
-     "fecha": "2026-10-06T23:51:07.000Z"
+     "fecha": "2026-10-07T00:43:32.000Z"
     },
     {
      "medio": "Minuto Uno",
