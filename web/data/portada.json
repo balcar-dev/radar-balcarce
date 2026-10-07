@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T14:29:49.592Z",
+  "generado": "2026-10-07T14:38:06.758Z",
   "notas": [
     {
       "id": "repaso20261007manana",
@@ -189,15 +189,17 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45020-nuevo-operativo-de-documentacion-en-balcarce-dni-partidas-y-certificados-sin-turno/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T13:31:19.995Z",
       "sinFecha": true,
       "visto": "2026-10-07T13:31:19.995Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "claves": [
         "Atención desde el jueves 8 hasta el sábado 10 de octubre.",
@@ -243,6 +245,66 @@
         "archivo": "fotos-notas/kwpmcv.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
+    },
+    {
+      "id": "1lxw5wx",
+      "titulo": "Detienen a un hombre tras ser atrapado dentro de una casa",
+      "copete": "Familiares del dueño de una vivienda redujeron al sospechoso en la zona de calle 21 y 12. La policía lo trasladó a la Unidad Penal de Batán.",
+      "cuerpo": "Un hombre fue aprehendido el martes por la tarde tras ser encontrado en el interior de una vivienda situada en las inmediaciones de calle 21 y 12, según informó un medio local. El llamado al servicio de emergencias 911 ingresó a las 17.15, cuando alertaron que vecinos retenían a un individuo.\n\nPersonal de la Estación de Policía Comunal llegó al lugar y se entrevistó con el propietario, quien indicó que sus familiares sorprendieron al sujeto dentro del inmueble, lo persiguieron y redujeron hasta la llegada de los uniformados. Durante la requisa, los agentes hallaron entre sus prendas un teléfono celular marca Motorola con carcasa amarilla, reconocido por la víctima.\n\nEl inmueble no tenía traba en el ingreso, por lo que el sospechoso accedió sin provocar daños. La medida fue avalada por el magistrado De la Canale, quien dispuso la formación de una causa y el traslado del acusado a la Unidad Penal número 44 de Batán. De acuerdo con los datos recabados, el individuo registra antecedentes penales por episodios de características similares.",
+      "guion": "Detienen a un hombre tras ser atrapado dentro de una casa",
+      "seccion": "Policiales",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/detuvieron-a-un-hombre-tras-ser-encontrado-dentro-de-una-vivienda/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-07T13:14:35.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T14:32:57.915Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ocurrió el martes por la tarde en calle 21 y 12",
+        "Familiares del dueño redujeron al sospechoso",
+        "Secuestraron un celular y lo trasladaron a Batán",
+        "El aprehendido tiene antecedentes penales"
+      ],
+      "seSabe": [
+        "El procedimiento policial se realizó el martes por la tarde en calle 21 y 12",
+        "El llamado al 911 se registró a las 17.15",
+        "El sospechoso fue retenido por familiares del propietario",
+        "La policía secuestró un teléfono celular Motorola con carcasa amarilla",
+        "Intervino el fiscal De la Canale y el acusado fue alojado en la Unidad Penal 44 de Batán"
+      ],
+      "noConfirmado": [
+        "Los detalles sobre la identidad del aprehendido y la tipificación exacta de la causa judicial",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un hombre fue aprehendido tras ser sorprendido por familiares del propietario dentro de una vivienda en calle 21 y 12. La policía secuestró un celular y trasladó al sospechoso a la Unidad Penal de Batán.",
+      "etiquetas": [
+        "policiales",
+        "aprehendido",
+        "policia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/detuvieron-a-un-hombre-tras-ser-encontrado-dentro-de-una-vivienda/",
+          "fecha": "2026-10-07T13:14:35.000Z",
+          "oficial": false,
+          "aporte": "Detalles del procedimiento policial, la ubicación, el secuestro del celular y el traslado a Batán"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "detienen-a-un-hombre-tras-ser-atrapado-dentro-de-una-casa"
     },
     {
       "id": "siahkq",
@@ -292,63 +354,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "las-correcaminos-participan-de-un-torneo-de-basquet-en-mar-del-plata"
-    },
-    {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "copete": "El piloto balcarceño completó una buena actuación en el autódromo de 9 de Julio. En tanto, Ariel Ianni y Mario Alberghini sufrieron inconvenientes y abandonaron la final.",
-      "cuerpo": "El piloto Francisco Tamagno completó el fin de semana en el octavo puesto de la octava fecha de la Clase \"B\" del Procar 4000, disputada en el autódromo Guillermo Maldonado de 9 de Julio, según informó un medio local. Con su cupé Dodge, el balcarceño mantuvo un ritmo firme, avanzó en el clasificador a pesar de algunos problemas en los frenos y cerró la competencia dentro del pelotón de vanguardia que encabezó Germán Pietranera.\n\nPor el contrario, los otros representantes locales sufrieron distintos inconvenientes y no pudieron terminar la prueba decisiva. Ariel Ianni debió abandonar en el inicio tras un toque que lo sacó de pista con su Ford Falcon, mientras que Mario Alberghini dejó la competencia en la segunda vuelta debido a una falla en el motor de su Torino.",
-      "guion": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-07T12:31:19.165Z",
-      "sinFecha": true,
-      "visto": "2026-10-07T12:31:19.165Z",
-      "relevancia": 61,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Francisco Tamagno terminó en el octavo puesto con su Dodge",
-        "Ariel Ianni abandonó la final tras un despiste en el arranque",
-        "Mario Alberghini dejó la carrera en la segunda vuelta por una falla mecánica",
-        "Germán Pietranera se impuso en la clasificación y en la primera serie"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El piloto Francisco Tamagno terminó octavo en la octava fecha del Procar 4000 en 9 de Julio. Ariel Ianni y Mario Alberghini debieron abandonar la competencia final.",
-      "etiquetas": [
-        "Procar 4000",
-        "Francisco Tamagno",
-        "deportes",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
-          "fecha": "2026-10-07T12:01:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados y el desarrollo de la competencia de los pilotos balcarceños en 9 de Julio."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "francisco-tamagno-termina-octavo-en-la-octava-fecha-del-procar-4000",
-      "foto": {
-        "archivo": "fotos-notas/y4gp3v.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
     },
     {
       "id": "45acbd",
@@ -481,44 +486,49 @@
       }
     },
     {
-      "id": "tlcnz1",
-      "titulo": "Hacelo Corto Balcarce celebra su octava edición con 19 producciones",
-      "copete": "El festival de cortometrajes reunió trabajos de distintas escuelas del distrito. La temática central giró en torno al sesquicentenario de la ciudad.",
-      "cuerpo": "La Escuela de Educación Secundaria Técnica Nº 1 albergó la octava edición del festival Hacelo Corto Balcarce. Estudiantes y docentes de la Tecnicatura en Multimedios organizaron el encuentro audiovisual que convocó a 19 producciones de diferentes establecimientos educativos locales.\n\nLa temática principal abordó la historia, la identidad y la cultura local en conmemoración del sesquicentenario del distrito. Los trabajos compitieron en categorías destinadas a nivel primario, ciclo básico y ciclo superior, y el jurado premió distintos rubros como mejor cortometraje, actuación, guion, realización audiovisual y arte.",
-      "guion": "Hacelo Corto Balcarce celebra su octava edición con diecinueve producciones",
-      "seccion": "Cultura y agenda",
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "copete": "El piloto balcarceño completó una buena actuación en el autódromo de 9 de Julio. En tanto, Ariel Ianni y Mario Alberghini sufrieron inconvenientes y abandonaron la final.",
+      "cuerpo": "El piloto Francisco Tamagno completó el fin de semana en el octavo puesto de la octava fecha de la Clase \"B\" del Procar 4000, disputada en el autódromo Guillermo Maldonado de 9 de Julio, según informó un medio local. Con su cupé Dodge, el balcarceño mantuvo un ritmo firme, avanzó en el clasificador a pesar de algunos problemas en los frenos y cerró la competencia dentro del pelotón de vanguardia que encabezó Germán Pietranera.\n\nPor el contrario, los otros representantes locales sufrieron distintos inconvenientes y no pudieron terminar la prueba decisiva. Ariel Ianni debió abandonar en el inicio tras un toque que lo sacó de pista con su Ford Falcon, mientras que Mario Alberghini dejó la competencia en la segunda vuelta debido a una falla en el motor de su Torino.",
+      "guion": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo",
       "medios": [
         "El Diario Balcarce"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168",
+      "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T12:01:47.000Z",
+      "fecha": "2026-10-07T12:01:15.000Z",
       "sinFecha": false,
-      "visto": "2026-10-07T14:27:45.295Z",
-      "relevancia": 88,
+      "visto": "2026-10-07T12:31:19.165Z",
+      "relevancia": 96,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
+      "seSabe": [
+        "Francisco Tamagno terminó en el octavo puesto con su Dodge",
+        "Ariel Ianni abandonó la final tras un despiste en el arranque",
+        "Mario Alberghini dejó la carrera en la segunda vuelta por una falla mecánica",
+        "Germán Pietranera se impuso en la clasificación y en la primera serie"
+      ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Se realizó la octava edición del festival de cortometrajes Hacelo Corto Balcarce con la participación de diecinueve producciones escolares centradas en la historia y la identidad local.",
+      "textoRedes": "El piloto Francisco Tamagno terminó octavo en la octava fecha del Procar 4000 en 9 de Julio. Ariel Ianni y Mario Alberghini debieron abandonar la competencia final.",
       "etiquetas": [
-        "Hacelo Corto",
-        "cortometrajes",
-        "educacion",
-        "escuelas",
-        "cultura"
+        "Procar 4000",
+        "Francisco Tamagno",
+        "deportes",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
           "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168",
-          "fecha": "2026-10-07T12:01:47.000Z",
+          "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+          "fecha": "2026-10-07T12:01:15.000Z",
           "oficial": false,
-          "aporte": "Informó los detalles de la octava edición del festival Hacelo Corto Balcarce y los establecimientos premiados."
+          "aporte": "Detalló los resultados y el desarrollo de la competencia de los pilotos balcarceños en 9 de Julio."
         }
       ],
       "verificacion": {
@@ -526,7 +536,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "hacelo-corto-balcarce-celebra-su-octava-edicion-con-19-producciones"
+      "slug": "francisco-tamagno-termina-octavo-en-la-octava-fecha-del-procar-4000",
+      "foto": {
+        "archivo": "fotos-notas/y4gp3v.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
     },
     {
       "id": "15zgvx1",
@@ -943,6 +957,7 @@
       "guion": "Lionel Messi se despide de la selección argentina con un triunfo",
       "seccion": "Fútbol",
       "medios": [
+        "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
@@ -1441,6 +1456,55 @@
       "slug": "vecinos-atrapan-y-reducen-a-un-ladron-tras-robar-una-casa"
     },
     {
+      "id": "tlcnz1",
+      "titulo": "Hacelo Corto Balcarce celebra su octava edición con 19 producciones",
+      "copete": "El festival de cortometrajes reunió trabajos de distintas escuelas del distrito. La temática central giró en torno al sesquicentenario de la ciudad.",
+      "cuerpo": "La Escuela de Educación Secundaria Técnica Nº 1 albergó la octava edición del festival Hacelo Corto Balcarce. Estudiantes y docentes de la Tecnicatura en Multimedios organizaron el encuentro audiovisual que convocó a 19 producciones de diferentes establecimientos educativos locales.\n\nLa temática principal abordó la historia, la identidad y la cultura local en conmemoración del sesquicentenario del distrito. Los trabajos compitieron en categorías destinadas a nivel primario, ciclo básico y ciclo superior, y el jurado premió distintos rubros como mejor cortometraje, actuación, guion, realización audiovisual y arte.",
+      "guion": "Hacelo Corto Balcarce celebra su octava edición con diecinueve producciones",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T23:52:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T14:27:45.295Z",
+      "relevancia": 98,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se realizó la octava edición del festival de cortometrajes Hacelo Corto Balcarce con la participación de diecinueve producciones escolares centradas en la historia y la identidad local.",
+      "etiquetas": [
+        "Hacelo Corto",
+        "cortometrajes",
+        "educacion",
+        "escuelas",
+        "cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168",
+          "fecha": "2026-10-07T12:01:47.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la octava edición del festival Hacelo Corto Balcarce y los establecimientos premiados."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "hacelo-corto-balcarce-celebra-su-octava-edicion-con-19-producciones"
+    },
+    {
       "id": "e3ix5w",
       "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "copete": "Detectan mensajes fraudulentos dirigidos a conductores que transitan por la región. Utilizan la automatización del peaje El Dorado como ardid.",
@@ -1513,14 +1577,15 @@
       "guion": "Organizan una caminata religiosa hacia la ermita local",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45015-invitan-a-participar-de-una-peregrinacion-hacia-la-ermita-de-la-virgen-del-rosario-de-san-nicolas/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T22:31:23.096Z",
-      "sinFecha": true,
+      "sinFecha": false,
       "visto": "2026-10-06T22:31:23.096Z",
-      "relevancia": 63,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1658,7 +1723,7 @@
       "id": "1uh42rm",
       "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "copete": "El Relevamiento de Expectativas de Mercado proyecta una contracción del Producto Bruto Interno en el tercer trimestre y un aumento del desempleo. El dato oficial del INDEC se conocerá el próximo martes.",
-      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
+      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
       "guion": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "seccion": "Economía",
       "medios": [
@@ -2085,8 +2150,8 @@
       "medios": [
         "Crónica",
         "Noticias Argentinas (NA)",
-        "InfoRegión",
         "La Verdad",
+        "InfoRegión",
         "Agencia DIB"
       ],
       "enlace": "https://noticiasargentinas.com/politica/ravier-aseguro-que--la-ley-de-tierras-no-afecta-la-soberania-territorial-_a6ac51dff61c1587439f4cb04",
@@ -2150,95 +2215,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "ravier-defiende-la-derogacion-de-la-ley-de-tierras-rurales"
-    },
-    {
-      "id": "19n87v4",
-      "titulo": "La reventa de entradas supera los seis millones de pesos para la despedida de Messi",
-      "copete": "A pocas horas del amistoso entre Argentina y Benín en el Monumental, las plataformas informales ofrecen tickets a valores que multiplican por varias veces los precios originales fijados por la AFA.",
-      "cuerpo": "Las plataformas de reventa exhiben localidades por valores que superan los seis millones de pesos para presenciar el amistoso entre Argentina y Benín, previsto para el martes a las 20 en el Estadio Monumental. Las entradas originales dispuestas por la Asociación del Fútbol Argentino (AFA) oscilaban entre los 90 mil y los 480 mil pesos, pero se agotaron en menos de dos horas tras salir a la venta.\n\nEl encuentro marca la despedida de Lionel Messi de la selección nacional tras dos dìcadas de trayectoria con la camiseta albiceleste. Ante la alta demanda para el partido número 208 del capitán, el mercado informal concentra la oferta restante con diferencias marcadas según la ubicación elegida.\n\nLa jornada contará con espectáculos musicales desde las 17:30 y una camiseta especial diseñada para el homenaje al delantero.",
-      "guion": "La reventa de entradas supera los seis millones de pesos para la despedida de Messi",
-      "seccion": "Fútbol",
-      "medios": [
-        "Infobae",
-        "Radio Mitre",
-        "Minuto Uno",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/06/cuanto-piden-en-la-reventa-por-una-entrada-para-ver-el-ultimo-partido-de-messi-en-la-seleccion/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T17:12:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T19:31:28.644Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El amistoso se juega este martes en el Estadio Monumental.",
-        "Los tickets originales se agotaron en menos de dos horas.",
-        "La reventa alcanza cifras superiores a los seis millones de pesos."
-      ],
-      "seSabe": [
-        "El amistoso entre Argentina y Benín se disputa este martes a las 20 en el Estadio Monumental, según informaron las fuentes.",
-        "Las entradas originales de la AFA costaban desde 90 mil hasta 480 mil pesos y se agotaron en menos de dos horas.",
-        "Las plataformas de reventa ofrecen ubicaciones que superan los seis millones de pesos por ticket.",
-        "El encuentro marca la despedida de Lionel Messi de la selección argentina."
-      ],
-      "textoRedes": "Las plataformas de reventa de entradas para el amistoso entre Argentina y Benín en el Monumental exhiben valores que superan los seis millones de pesos por ticket a pocas horas de la despedida de Lionel Messi de la selección nacional.",
-      "etiquetas": [
-        "Lionel Messi",
-        "Selección Argentina",
-        "Estadio Monumental",
-        "AFA"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/06/cuanto-piden-en-la-reventa-por-una-entrada-para-ver-el-ultimo-partido-de-messi-en-la-seleccion/",
-          "fecha": "2026-10-06T17:12:10.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre los precios originales de la AFA, los valores concretos en plataformas de reventa y el cronograma de espectáculos."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/despedida-de-lionel-messi-cuanto-piden-en-la-reventa-por-una-entrada-para-verlo-por-ultima-vez-con-la-seleccion-argentina/",
-          "fecha": "2026-10-06T19:21:04.000Z",
-          "oficial": false,
-          "aporte": "Aportó la confirmación sobre las cifras millonarias alcanzadas en la reventa a pocas horas del encuentro."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "823fzo",
-          "titulo": "Lionel Messi juega su último partido con la selección nacional ante Benín",
-          "fecha": "2026-10-06T13:36:57.000Z",
-          "ruta": "/nota/lionel-messi-juega-su-ultimo-partido-con-la-seleccion-nacional-ante-823fzo"
-        },
-        {
-          "id": "e7ym9v",
-          "titulo": "La Selección presenta la camiseta especial para la despedida de Messi",
-          "fecha": "2026-09-25T12:46:30.000Z",
-          "ruta": "/nota/la-seleccion-argentina-presento-la-camiseta-especial-para-la-e7ym9v"
-        },
-        {
-          "id": "1if2xbk",
-          "titulo": "Se agotaron las entradas para la despedida de Messi de la selección argentina",
-          "fecha": "2026-09-24T23:34:05.000Z",
-          "ruta": "/nota/se-agotaron-las-entradas-para-la-despedida-de-messi-de-la-seleccion-1if2xbk"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-reventa-de-entradas-supera-los-seis-millones-de-pesos-para-la",
-      "foto": {
-        "archivo": "fotos-notas/19n87v4.jpg",
-        "credito": "Foto: Radio Mitre"
-      }
     },
     {
       "id": "1hw35d",
@@ -2334,11 +2310,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45008-nico-lahitte-y-el-mural-de-messi-es-admiracion-pura/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T17:01:25.569Z",
       "sinFecha": true,
       "visto": "2026-10-06T17:01:25.569Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2630,6 +2606,85 @@
       }
     },
     {
+      "id": "tqz98z",
+      "titulo": "La chocotorta obtiene el segundo puesto en un ranking mundial",
+      "copete": "El postre tradicional argentino se ubicó en el podio de una clasificación internacional elaborada por TasteAtlas, por encima de preparaciones de Italia, Estados Unidos y Brasil.",
+      "cuerpo": "La receta argentina de galletas de chocolate, dulce de leche y queso crema alcanzó la segunda posición en el listado global de pasteles de chocolate publicado por TasteAtlas, según consignaron los medios consultados. La preparación sin cocción quedó por delante de especialidades de Italia, Estados Unidos y Brasil, y solo fue superada por el pastel sueco kladdkaka.\n\nEl sitio especializado recopiló valoraciones de comensales de diferentes países y situó en el tercer puesto a la torta caprese italiana y en el cuarto al pastel de lava estadounidense. La descripción de la chocotorta destacó que se vincula con la cocina italiana y el tiramisú, aunque su presencia en restaurantes continúa siendo poco frecuente fuera del país.",
+      "guion": "La chocotorta obtiene el segundo puesto en un ranking mundial",
+      "seccion": "Argentina",
+      "medios": [
+        "El Cronista",
+        "C5N",
+        "El Eco de Tandil",
+        "Infobae",
+        "Ámbito"
+      ],
+      "enlace": "https://www.infobae.com/tendencias/2026/10/06/la-chocotorta-argentina-esta-entre-los-tres-mejores-postres-del-mundo-segun-un-ranking/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T15:22:54.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T17:01:25.569Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La chocotorta quedó segunda en una clasificación internacional.",
+        "El ranking fue elaborado por la plataforma TasteAtlas.",
+        "Superó a preparaciones de Italia, Estados Unidos y Brasil.",
+        "El primer puesto fue para el pastel sueco kladdkaka."
+      ],
+      "seSabe": [
+        "La chocotorta obtuvo el segundo lugar en la clasificación global de pasteles de chocolate de TasteAtlas.",
+        "El postre argentino se elabora con bizcochos de chocolate, dulce de leche y queso crema.",
+        "El primer puesto fue para el kladdkaka de Suecia.",
+        "El tercer lugar correspondió a la torta caprese de Italia.",
+        "El cuarto puesto fue para el pastel de chocolate fundido de Estados Unidos."
+      ],
+      "textoRedes": "La chocotorta logró el segundo puesto en una clasificación internacional de pasteles de chocolate elaborada por TasteAtlas y quedó por delante de preparaciones de Italia, Estados Unidos y Brasil.",
+      "etiquetas": [
+        "chocotorta",
+        "gastronomia",
+        "ranking mundial",
+        "TasteAtlas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tendencias/2026/10/06/la-chocotorta-argentina-esta-entre-los-tres-mejores-postres-del-mundo-segun-un-ranking/",
+          "fecha": "2026-10-06T15:22:54.000Z",
+          "oficial": false,
+          "aporte": "Informó la ubicación de la chocotorta en el ranking y los detalles de su preparación."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/mundo/segun-un-ranking-la-chocotorta-argentina-esta-entre-los-tres-mejores-pasteles-del-mundo",
+          "fecha": "2026-10-06T15:57:21.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el segundo puesto del postre argentino en la clasificación internacional."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/lifestyle/orgullo-argentino-la-chocotorta-fue-elegida-como-la-segunda-mejor-torta-chocolate-del-mundo-n6330657",
+          "fecha": "2026-10-06T16:41:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la preparación quedó por encima de platos de Italia, Estados Unidos y Brasil."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-chocotorta-obtiene-el-segundo-puesto-en-un-ranking-mundial",
+      "foto": {
+        "archivo": "fotos-notas/tqz98z.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
+    },
+    {
       "id": "lb9m27",
       "titulo": "La muestra Braford en Chaco inicia con un remate de hacienda",
       "copete": "La tercera exposición Nacional Primavera Braford comenzó en Chaco con una subasta de 8.500 cabezas. Las actividades continúan con el Congreso de Carnes del NEA y las juras.",
@@ -2646,7 +2701,7 @@
       "fecha": "2026-10-06T15:10:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 46,
+      "relevancia": 50,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2938,74 +2993,83 @@
       }
     },
     {
-      "id": "129cc5g",
-      "titulo": "Aapresid advierte sobre la caída de la siembra directa en el país",
-      "copete": "El uso del sistema cayó al 80,6% de la superficie agrícola en la campaña 2025/26. El retroceso responde al avance de las labranzas por malezas y compactación.",
-      "cuerpo": "La superficie bajo siembra directa registró una nueva baja a nivel nacional durante la temporada 2025/26, según un estudio de la Red de Manejo de Plagas de Aapresid. El sistema abarcó el 80,6% de las 31,71 millones de hectáreas analizadas, lo que representa una disminución de dos puntos porcentuales frente al ciclo anterior.\n\nEl relevamiento detalla que la merma profundiza un proceso iniciado después del máximo de 93% alcanzado en 2017/18. Marcelo Torres, titular de la entidad, explicó que el uso de labranzas creció principalmente para enfrentar la compactación de los suelos y las malezas resistentes. El control de vegetación no deseada concentró el 48,5% del área removida, mientras que la compactación afectó al 25,6%, unas 1,57 millones de hectáreas.\n\nUn 26% restante, equivalente a 1,6 millones de hectáreas, obedeció a factores adicionales como restricciones en zonas periurbanas, contratos de arrendamiento anuales y costos de insumos. Desde la organización sostuvieron que la situación varía según la provincia y señalaron que la inestabilidad económica dificulta planificar a largo plazo.",
-      "guion": "Aapresid advierte sobre la caída de la siembra directa en el país",
-      "seccion": "Agro",
+      "id": "xmeiz2",
+      "titulo": "El FMI cuestiona los subsidios a las tarifas y pide ayuda focalizada",
+      "copete": "El Fondo Monetario Internacional difundió un informe el martes donde critica los subsidios generalizados por considerarlos costosos. Aconseja reemplazarlos por asistencia directa y destaca que las ayudas actuales benefician más a sectores de altos ingresos.",
+      "cuerpo": "El Fondo Monetario Internacional cuestionó el martes el uso de subsidios generalizados a los servicios públicos por considerarlos ineficientes y costosos para el Estado. A través de un informe difundido el martes, el organismo internacional recomendó reemplazar estas medidas por mecanismos de asistencia directa y focalizada hacia los sectores más vulnerables.\n\nEl estudio detalló que proteger a la población de menores recursos mediante subsidios al consumidor demanda entre 3 y 6 veces más recursos que la ayuda directa, mientras que subsidiar a los productores cuesta entre 14 y 22 veces más. Además, el organismo advirtió que los fondos destinados a energía y combustibles benefician principalmente a los sectores de mayor poder adquisitivo, ya que menos de 20 centavos de cada euro llegan al 20 por ciento más pobre.\n\nEn paralelo, el Observatorio de Tarifas y Subsidios del IIEP UBA-Conicet informó que la canasta de servicios del Área Metropolitana Buenos Aires aumentó un 867 por ciento entre diciembre de 2023 y septiembre de 2026, frente a una inflación general del 254 por ciento. Durante septiembre, un hogar promedio de esa región necesitó 268.405 pesos para abonar energía, transporte y agua potable sin asistencia estatal.",
+      "guion": "El FMI cuestiona los subsidios a las tarifas y pide ayuda focalizada",
+      "seccion": "Economía",
       "medios": [
-        "La Nación",
-        "Infocampo"
+        "Ámbito",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "El Eco de Tandil",
+        "Crónica"
       ],
-      "enlace": "https://www.infocampo.com.ar/alertan-por-el-retroceso-de-la-siembra-directa-ya-hay-1-de-cada-5-lotes-que-volvio-a-la-labranza/",
+      "enlace": "https://www.ambito.com/economia/fuerte-critica-del-fmi-los-subsidios-las-tarifas-n6330377",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T11:35:49.000Z",
+      "fecha": "2026-10-06T13:00:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 32,
+      "visto": "2026-10-06T22:01:15.379Z",
+      "relevancia": 60,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El uso de siembra directa bajó al 80,6% en la última campaña.",
-        "El relevamiento abarcó 31,71 millones de hectáreas en todo el país.",
-        "El control de malezas y la compactación impulsaron el regreso a la labranza.",
-        "Desde Aapresid apuntaron a la falta de previsión a largo plazo."
+        "El FMI criticó los subsidios generalizados por costosos e ineficientes",
+        "El organismo recomendó reemplazarlos por asistencia directa focalizada",
+        "El estudio indicó que los subsidios energéticos benefician más a sectores ricos",
+        "La canasta de servicios del AMBA subió 867 por ciento desde diciembre de 2023"
       ],
-      "seSabe": [
-        "El 80,6% de las 31,71 millones de hectáreas relevadas se trabajó con siembra directa en la campaña 2025/26.",
-        "El sistema acumula una baja desde el pico del 93% registrado en 2017/18.",
-        "El control de malezas explica el 48,5% de la superficie laboreada.",
-        "La compactación representó el 25,6% de la superficie removida, unas 1,57 millones de hectáreas.",
-        "Otras causas abarcaron el 26% del área laboreada, equivalente a 1,6 millones de hectáreas."
-      ],
-      "noConfirmado": [
-        "No se detalló el impacto económico específico de cada factor en las distintas regiones productivas."
-      ],
-      "textoRedes": "La superficie bajo siembra directa cayó al 80,6% en la campaña 2025/26. El retroceso responde al avance de las labranzas por malezas y compactación, según un informe de Aapresid.",
+      "textoRedes": "El Fondo Monetario Internacional difundió un informe este martes en el que critica los subsidios generalizados a los servicios públicos por considerarlos costosos e ineficientes y recomendó reemplazarlos por asistencia directa a los sectores más vulnerables.",
       "etiquetas": [
-        "siembra directa",
-        "Aapresid",
-        "campaña agrícola"
+        "FMI",
+        "subsidios",
+        "tarifas",
+        "inflación",
+        "servicios públicos"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Infocampo",
-          "enlace": "https://www.infocampo.com.ar/alertan-por-el-retroceso-de-la-siembra-directa-ya-hay-1-de-cada-5-lotes-que-volvio-a-la-labranza/",
-          "fecha": "2026-10-06T11:35:49.000Z",
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/fuerte-critica-del-fmi-los-subsidios-las-tarifas-n6330377",
+          "fecha": "2026-10-06T13:00:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre la nueva advertencia de Aapresid respecto al retroceso de la superficie sembrada bajo siembra directa."
+          "aporte": "Detalló las conclusiones del informe del FMI sobre subsidios, las recomendaciones de asistencia focalizada y los datos del IIEP UBA-Conicet sobre la canasta de servicios del AMBA."
         },
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/la-siembra-directa-volvio-a-caer-y-quedo-lejos-del-maximo-que-habia-alcanzado-en-la-argentina-nid06102026/",
-          "fecha": "2026-10-06T17:30:20.000Z",
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/el-fmi-cuestiono-los-subsidios-a-las-tarifas-como-politica-tendiente-a-frenar-la-inflacion",
+          "fecha": "2026-10-06T21:14:28.000Z",
           "oficial": false,
-          "aporte": "Aportó los datos de la campaña 2025/26, las estadísticas de hectáreas, los motivos del laboreo y las declaraciones de Marcelo Torres."
+          "aporte": "Informó sobre la postura del FMI respecto a las ineficiencias fiscales de reprimir las tarifas y la protección a sectores vulnerables."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/fmi-cuestiona-subsidios-tarifas-inflacion/",
+          "fecha": "2026-10-06T16:36:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el FMI cuestionó los subsidios como mecanismo para atenuar la inflación por considerarlos costosos para el Estado."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-fmi-cuestiono-los-subsidios-a-las-tarifas-como-politica-para-frenar-el-impacto-de-la-inflacion_a6ac515f961c1587439f38db0",
+          "fecha": "2026-10-06T15:34:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir contenido en su resumen."
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
+        "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "aapresid-advierte-sobre-la-caida-de-la-siembra-directa-en-el-pais",
+      "slug": "el-fmi-cuestiona-los-subsidios-a-las-tarifas-y-pide-ayuda-focalizada",
       "foto": {
-        "archivo": "fotos-notas/129cc5g.jpg",
-        "credito": "Foto: La Nación"
+        "archivo": "fotos-notas/xmeiz2.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -3098,8 +3162,8 @@
         "TN (Todo Noticias)",
         "Agrositio",
         "Agroempresario",
-        "Infocampo",
-        "Noticias Agropecuarias"
+        "Noticias Agropecuarias",
+        "Infocampo"
       ],
       "enlace": "https://www.argentina.gob.ar/noticias/carne-derivada-del-tambo-cruzamientos-estrategicos-para-agregar-valor",
       "teniaImagenLaFuente": true,
@@ -3181,477 +3245,26 @@
         "archivo": "fotos-notas/18wosri.jpg",
         "credito": "Foto: INTA"
       }
-    },
-    {
-      "id": "futboltablaliga20261002",
-      "propia": "futbol",
-      "tipoFutbol": "tablas",
-      "competenciaFutbol": "liga",
-      "datosFutbol": {
-        "torneo": "Argentine Liga Profesional de Fútbol",
-        "zonas": [
-          {
-            "nombre": "Zona A",
-            "filas": [
-              {
-                "posicion": 1,
-                "id": "2975",
-                "equipo": "Instituto (Córdoba)",
-                "pj": 11,
-                "g": 8,
-                "e": 1,
-                "p": 2,
-                "gf": 17,
-                "gc": 8,
-                "dif": 9,
-                "pts": 25
-              },
-              {
-                "posicion": 2,
-                "id": "21",
-                "equipo": "Vélez Sarsfield",
-                "pj": 11,
-                "g": 5,
-                "e": 6,
-                "p": 0,
-                "gf": 17,
-                "gc": 11,
-                "dif": 6,
-                "pts": 21
-              },
-              {
-                "posicion": 3,
-                "id": "8950",
-                "equipo": "Defensa y Justicia",
-                "pj": 11,
-                "g": 6,
-                "e": 3,
-                "p": 2,
-                "gf": 16,
-                "gc": 11,
-                "dif": 5,
-                "pts": 21
-              },
-              {
-                "posicion": 4,
-                "id": "5",
-                "equipo": "Boca Juniors",
-                "pj": 11,
-                "g": 5,
-                "e": 5,
-                "p": 1,
-                "gf": 17,
-                "gc": 11,
-                "dif": 6,
-                "pts": 20
-              },
-              {
-                "posicion": 5,
-                "id": "12",
-                "equipo": "Lanús",
-                "pj": 11,
-                "g": 5,
-                "e": 2,
-                "p": 4,
-                "gf": 13,
-                "gc": 9,
-                "dif": 4,
-                "pts": 17
-              },
-              {
-                "posicion": 6,
-                "id": "14",
-                "equipo": "Newell's Old Boys",
-                "pj": 11,
-                "g": 4,
-                "e": 5,
-                "p": 2,
-                "gf": 11,
-                "gc": 8,
-                "dif": 3,
-                "pts": 17
-              },
-              {
-                "posicion": 7,
-                "id": "11972",
-                "equipo": "Gimnasia (Mendoza)",
-                "pj": 11,
-                "g": 5,
-                "e": 2,
-                "p": 4,
-                "gf": 14,
-                "gc": 12,
-                "dif": 2,
-                "pts": 17
-              },
-              {
-                "posicion": 8,
-                "id": "11",
-                "equipo": "Independiente",
-                "pj": 11,
-                "g": 5,
-                "e": 2,
-                "p": 4,
-                "gf": 11,
-                "gc": 12,
-                "dif": -1,
-                "pts": 17
-              },
-              {
-                "posicion": 9,
-                "id": "8",
-                "equipo": "Estudiantes de La Plata",
-                "pj": 11,
-                "g": 4,
-                "e": 1,
-                "p": 6,
-                "gf": 13,
-                "gc": 11,
-                "dif": 2,
-                "pts": 13
-              },
-              {
-                "posicion": 10,
-                "id": "20",
-                "equipo": "Unión (Santa Fe)",
-                "pj": 11,
-                "g": 4,
-                "e": 1,
-                "p": 6,
-                "gf": 17,
-                "gc": 19,
-                "dif": -2,
-                "pts": 13
-              },
-              {
-                "posicion": 11,
-                "id": "17702",
-                "equipo": "Deportivo Riestra",
-                "pj": 11,
-                "g": 2,
-                "e": 5,
-                "p": 4,
-                "gf": 9,
-                "gc": 11,
-                "dif": -2,
-                "pts": 11
-              },
-              {
-                "posicion": 12,
-                "id": "18",
-                "equipo": "San Lorenzo",
-                "pj": 11,
-                "g": 3,
-                "e": 2,
-                "p": 6,
-                "gf": 4,
-                "gc": 11,
-                "dif": -7,
-                "pts": 11
-              },
-              {
-                "posicion": 13,
-                "id": "7764",
-                "equipo": "Platense",
-                "pj": 11,
-                "g": 2,
-                "e": 4,
-                "p": 5,
-                "gf": 11,
-                "gc": 17,
-                "dif": -6,
-                "pts": 10
-              },
-              {
-                "posicion": 14,
-                "id": "11989",
-                "equipo": "Central Córdoba (Santiago del Estero)",
-                "pj": 11,
-                "g": 2,
-                "e": 3,
-                "p": 6,
-                "gf": 8,
-                "gc": 14,
-                "dif": -6,
-                "pts": 9
-              },
-              {
-                "posicion": 15,
-                "id": "19",
-                "equipo": "Talleres (Córdoba)",
-                "pj": 11,
-                "g": 2,
-                "e": 2,
-                "p": 7,
-                "gf": 11,
-                "gc": 18,
-                "dif": -7,
-                "pts": 8
-              }
-            ]
-          },
-          {
-            "nombre": "Zona B",
-            "filas": [
-              {
-                "posicion": 1,
-                "id": "3",
-                "equipo": "Argentinos Juniors",
-                "pj": 11,
-                "g": 6,
-                "e": 3,
-                "p": 2,
-                "gf": 15,
-                "gc": 10,
-                "dif": 5,
-                "pts": 21
-              },
-              {
-                "posicion": 2,
-                "id": "4",
-                "equipo": "Belgrano (Córdoba)",
-                "pj": 11,
-                "g": 5,
-                "e": 4,
-                "p": 2,
-                "gf": 12,
-                "gc": 7,
-                "dif": 5,
-                "pts": 19
-              },
-              {
-                "posicion": 3,
-                "id": "17",
-                "equipo": "Rosario Central",
-                "pj": 11,
-                "g": 5,
-                "e": 4,
-                "p": 2,
-                "gf": 12,
-                "gc": 9,
-                "dif": 3,
-                "pts": 19
-              },
-              {
-                "posicion": 4,
-                "id": "10",
-                "equipo": "Huracán",
-                "pj": 11,
-                "g": 5,
-                "e": 4,
-                "p": 2,
-                "gf": 11,
-                "gc": 8,
-                "dif": 3,
-                "pts": 19
-              },
-              {
-                "posicion": 5,
-                "id": "9744",
-                "equipo": "Independiente Rivadavia",
-                "pj": 11,
-                "g": 5,
-                "e": 3,
-                "p": 3,
-                "gf": 15,
-                "gc": 14,
-                "dif": 1,
-                "pts": 18
-              },
-              {
-                "posicion": 6,
-                "id": "9",
-                "equipo": "Gimnasia La Plata",
-                "pj": 11,
-                "g": 5,
-                "e": 3,
-                "p": 3,
-                "gf": 16,
-                "gc": 16,
-                "dif": 0,
-                "pts": 18
-              },
-              {
-                "posicion": 7,
-                "id": "10158",
-                "equipo": "Sarmiento (Junín)",
-                "pj": 10,
-                "g": 5,
-                "e": 1,
-                "p": 4,
-                "gf": 17,
-                "gc": 16,
-                "dif": 1,
-                "pts": 16
-              },
-              {
-                "posicion": 8,
-                "id": "10060",
-                "equipo": "Barracas Central",
-                "pj": 11,
-                "g": 4,
-                "e": 3,
-                "p": 4,
-                "gf": 8,
-                "gc": 9,
-                "dif": -1,
-                "pts": 15
-              },
-              {
-                "posicion": 9,
-                "id": "16",
-                "equipo": "River Plate",
-                "pj": 10,
-                "g": 4,
-                "e": 1,
-                "p": 5,
-                "gf": 13,
-                "gc": 12,
-                "dif": 1,
-                "pts": 13
-              },
-              {
-                "posicion": 10,
-                "id": "9785",
-                "equipo": "Atlético Tucumán",
-                "pj": 11,
-                "g": 3,
-                "e": 4,
-                "p": 4,
-                "gf": 9,
-                "gc": 9,
-                "dif": 0,
-                "pts": 13
-              },
-              {
-                "posicion": 11,
-                "id": "7767",
-                "equipo": "Tigre",
-                "pj": 11,
-                "g": 3,
-                "e": 3,
-                "p": 5,
-                "gf": 10,
-                "gc": 11,
-                "dif": -1,
-                "pts": 12
-              },
-              {
-                "posicion": 12,
-                "id": "15",
-                "equipo": "Racing Club",
-                "pj": 11,
-                "g": 3,
-                "e": 2,
-                "p": 6,
-                "gf": 13,
-                "gc": 17,
-                "dif": -4,
-                "pts": 11
-              },
-              {
-                "posicion": 13,
-                "id": "235",
-                "equipo": "Banfield",
-                "pj": 11,
-                "g": 2,
-                "e": 4,
-                "p": 5,
-                "gf": 12,
-                "gc": 17,
-                "dif": -5,
-                "pts": 10
-              },
-              {
-                "posicion": 14,
-                "id": "9739",
-                "equipo": "Aldosivi",
-                "pj": 11,
-                "g": 2,
-                "e": 2,
-                "p": 7,
-                "gf": 12,
-                "gc": 17,
-                "dif": -5,
-                "pts": 8
-              },
-              {
-                "posicion": 15,
-                "id": "19685",
-                "equipo": "Estudiantes de Río Cuarto",
-                "pj": 11,
-                "g": 1,
-                "e": 3,
-                "p": 7,
-                "gf": 6,
-                "gc": 15,
-                "dif": -9,
-                "pts": 6
-              }
-            ]
-          }
-        ]
-      },
-      "destacados": [
-        {
-          "texto": "Ver la tabla de posiciones",
-          "href": "/tablas/liga-profesional"
-        }
-      ],
-      "lugarFoto": "Estadio Libertadores de América",
-      "titulo": "Liga Profesional: así están las tablas después de la fecha del 2 al 5 de octubre",
-      "copete": "Posiciones de las dos zonas de la Liga Profesional de Fútbol (Argentine Liga Profesional de Fútbol), con puntos, partidos jugados y goles.",
-      "cuerpo": "Así quedaron las posiciones de la Liga Profesional de Fútbol (Argentine Liga Profesional de Fútbol) después de los partidos del 2 al 5 de octubre. Los equipos están ordenados como informa ESPN, con los mismos criterios de desempate del torneo:\n\nZona A:\n1º Instituto (Córdoba): 25 puntos, 11 jugados (8 ganados, 1 empatados, 2 perdidos), goles 17 a 8, diferencia +9.\n2º Vélez Sarsfield: 21 puntos, 11 jugados (5 ganados, 6 empatados, 0 perdidos), goles 17 a 11, diferencia +6.\n3º Defensa y Justicia: 21 puntos, 11 jugados (6 ganados, 3 empatados, 2 perdidos), goles 16 a 11, diferencia +5.\n4º Boca Juniors: 20 puntos, 11 jugados (5 ganados, 5 empatados, 1 perdidos), goles 17 a 11, diferencia +6.\n5º Lanús: 17 puntos, 11 jugados (5 ganados, 2 empatados, 4 perdidos), goles 13 a 9, diferencia +4.\n6º Newell's Old Boys: 17 puntos, 11 jugados (4 ganados, 5 empatados, 2 perdidos), goles 11 a 8, diferencia +3.\n7º Gimnasia (Mendoza): 17 puntos, 11 jugados (5 ganados, 2 empatados, 4 perdidos), goles 14 a 12, diferencia +2.\n8º Independiente: 17 puntos, 11 jugados (5 ganados, 2 empatados, 4 perdidos), goles 11 a 12, diferencia -1.\n9º Estudiantes de La Plata: 13 puntos, 11 jugados (4 ganados, 1 empatados, 6 perdidos), goles 13 a 11, diferencia +2.\n10º Unión (Santa Fe): 13 puntos, 11 jugados (4 ganados, 1 empatados, 6 perdidos), goles 17 a 19, diferencia -2.\n11º Deportivo Riestra: 11 puntos, 11 jugados (2 ganados, 5 empatados, 4 perdidos), goles 9 a 11, diferencia -2.\n12º San Lorenzo: 11 puntos, 11 jugados (3 ganados, 2 empatados, 6 perdidos), goles 4 a 11, diferencia -7.\n13º Platense: 10 puntos, 11 jugados (2 ganados, 4 empatados, 5 perdidos), goles 11 a 17, diferencia -6.\n14º Central Córdoba (Santiago del Estero): 9 puntos, 11 jugados (2 ganados, 3 empatados, 6 perdidos), goles 8 a 14, diferencia -6.\n15º Talleres (Córdoba): 8 puntos, 11 jugados (2 ganados, 2 empatados, 7 perdidos), goles 11 a 18, diferencia -7.\n\nZona B:\n1º Argentinos Juniors: 21 puntos, 11 jugados (6 ganados, 3 empatados, 2 perdidos), goles 15 a 10, diferencia +5.\n2º Belgrano (Córdoba): 19 puntos, 11 jugados (5 ganados, 4 empatados, 2 perdidos), goles 12 a 7, diferencia +5.\n3º Rosario Central: 19 puntos, 11 jugados (5 ganados, 4 empatados, 2 perdidos), goles 12 a 9, diferencia +3.\n4º Huracán: 19 puntos, 11 jugados (5 ganados, 4 empatados, 2 perdidos), goles 11 a 8, diferencia +3.\n5º Independiente Rivadavia: 18 puntos, 11 jugados (5 ganados, 3 empatados, 3 perdidos), goles 15 a 14, diferencia +1.\n6º Gimnasia La Plata: 18 puntos, 11 jugados (5 ganados, 3 empatados, 3 perdidos), goles 16 a 16, diferencia 0.\n7º Sarmiento (Junín): 16 puntos, 10 jugados (5 ganados, 1 empatados, 4 perdidos), goles 17 a 16, diferencia +1.\n8º Barracas Central: 15 puntos, 11 jugados (4 ganados, 3 empatados, 4 perdidos), goles 8 a 9, diferencia -1.\n9º River Plate: 13 puntos, 10 jugados (4 ganados, 1 empatados, 5 perdidos), goles 13 a 12, diferencia +1.\n10º Atlético Tucumán: 13 puntos, 11 jugados (3 ganados, 4 empatados, 4 perdidos), goles 9 a 9, diferencia 0.\n11º Tigre: 12 puntos, 11 jugados (3 ganados, 3 empatados, 5 perdidos), goles 10 a 11, diferencia -1.\n12º Racing Club: 11 puntos, 11 jugados (3 ganados, 2 empatados, 6 perdidos), goles 13 a 17, diferencia -4.\n13º Banfield: 10 puntos, 11 jugados (2 ganados, 4 empatados, 5 perdidos), goles 12 a 17, diferencia -5.\n14º Aldosivi: 8 puntos, 11 jugados (2 ganados, 2 empatados, 7 perdidos), goles 12 a 17, diferencia -5.\n15º Estudiantes de Río Cuarto: 6 puntos, 11 jugados (1 ganados, 3 empatados, 7 perdidos), goles 6 a 15, diferencia -9.\n\nLos datos son las posiciones oficiales según ESPN.",
-      "guion": null,
-      "seccion": "Fútbol",
-      "local": false,
-      "relevancia": 56,
-      "medios": [
-        "ESPN (datos abiertos)"
-      ],
-      "enlace": "https://www.espn.com.ar/futbol/",
-      "fuentesConsultadas": [
-        {
-          "medio": "ESPN (datos abiertos)",
-          "enlace": "https://www.espn.com.ar/futbol/"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-06T02:34:43.431Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T02:34:43.431Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-06T02:34:43.431Z",
-      "temas": [],
-      "etiquetas": [
-        "fútbol",
-        "Liga Profesional",
-        "tabla de posiciones",
-        "posiciones",
-        "Argentine Liga Profesional de Fútbol"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce armada con los datos de ESPN.",
-      "slug": "liga-profesional-asi-estan-las-tablas-despues-de-la-fecha-del-2-al-5",
-      "foto": {
-        "archivo": "fotos-notas/libre-futboltablaliga20261002.jpg",
-        "credito": "Foto: Nicolasmayercai / Wikimedia Commons (CC BY-SA 4.0)"
-      }
     }
   ],
   "secciones": [
     "Balcarce",
     "Agro",
+    "Policiales",
     "Deportes",
-    "Automovilismo",
     "Cultura y agenda",
+    "Automovilismo",
     "Economía",
     "Política",
     "Fútbol",
-    "Policiales",
     "Argentina"
   ],
   "temas": [
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 2
+    },
     {
       "nombre": "El INTA",
       "ranura": "inta",
@@ -3662,8 +3275,8 @@
     "ahora": {
       "temp": 15,
       "sensacion": 12,
-      "humedad": 84,
-      "viento": 20,
+      "humedad": 83,
+      "viento": 21,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": true
@@ -4036,6 +3649,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "psu8d9",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "1qmt02i",
       "titulo": null,
       "seccion": "Policiales",
@@ -4070,6 +3689,12 @@
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
+      "id": "13wfgz4",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "1wmt2ui",
@@ -4132,6 +3757,12 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "msz2ie",
+      "titulo": "El relato de Iair Horn, el argentino que estuvo casi 500…",
+      "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "1utgmte",
       "titulo": null,
       "seccion": "Argentina",
@@ -4156,12 +3787,6 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "msz2ie",
-      "titulo": "El relato de Iair Horn, el argentino que estuvo casi 500…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "1cjo0n1",
       "titulo": "Javier Milei recibió un mensaje de Flávio Bolsonaro y…",
       "seccion": "Política",
@@ -4174,5 +3799,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 7
 }

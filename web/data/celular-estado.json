@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T14:29:49.592Z",
+ "generado": "2026-10-07T14:38:06.758Z",
  "portada": 42,
- "archivo": 1010,
- "esperandoCuerpo": 5,
+ "archivo": 1011,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-07T14:29:49.639Z",
+  "generado": "2026-10-07T14:38:06.807Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -129,13 +129,13 @@
     "segundos": 46,
     "notas": [
      {
-      "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
-      "seccion": "Agro"
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "1aak7ut",
-      "titulo": "La Justicia ordena preservar registros de tierras rurales provinciales",
+      "id": "vm4nnt",
+      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
       "seccion": "Agro"
      },
      {
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "1aak7ut",
+      "titulo": "La Justicia ordena preservar registros de tierras rurales provinciales",
+      "seccion": "Agro"
+     },
      {
       "id": "1n6yxr",
       "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
      },
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce"
      },
      {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "d63yik",
-      "titulo": "Social Pato Naranja y Negro buscan hacer historia en el rugby",
-      "seccion": "Deportes"
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -195,12 +195,6 @@
      "id": "siahkq",
      "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "tlcnz1",
-     "titulo": "Hacelo Corto Balcarce celebra su octava edición con 19 producciones",
-     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
