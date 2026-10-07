@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T00:59:47.893Z",
+  "generado": "2026-10-07T01:02:44.820Z",
   "notas": [
     {
       "id": "d63yik",
@@ -326,7 +326,6 @@
       "seccion": "Fútbol",
       "medios": [
         "Acción 5 (Balcarce)",
-        "Infórmese Primero (FM 104.9)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://accion5.com/con-el-clasico-ferro-a-unidos-se-inicia-el-clausura-del-oficial-2/",
@@ -399,6 +398,99 @@
       "foto": {
         "archivo": "fotos-notas/1n6yxr.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
+      }
+    },
+    {
+      "id": "1uh42rm",
+      "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
+      "copete": "El Relevamiento de Expectativas de Mercado proyecta una contracción del Producto Bruto Interno en el tercer trimestre y un aumento del desempleo. El dato oficial del INDEC se conocerá el próximo martes.",
+      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una suba de precios acumulada de 30 por ciento.",
+      "guion": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Página/12",
+        "La Nueva",
+        "La Brújula 24"
+      ],
+      "enlace": "https://www.pagina12.com.ar/2026/10/06/mas-inflacion-y-desempleo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T21:24:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T01:02:05.217Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Proyectan una inflación de 1,9% para septiembre.",
+        "Estiman una contracción del PBI del 1% en el tercer trimestre.",
+        "Calculan una desocupación del 7,5% para el período.",
+        "El INDEC difundirá el dato oficial el 13 de octubre."
+      ],
+      "seSabe": [
+        "La inflación de septiembre se estimó en 1,9%, según el REM.",
+        "El PBI se habría contraído 1% en el tercer trimestre de 2026.",
+        "La desocupación alcanzará 7,5% en el tercer trimestre.",
+        "El INDEC publicará el dato oficial del IPC el martes 13 de octubre."
+      ],
+      "textoRedes": "El Relevamiento de Expectativas de Mercado proyecta una inflación del 1,9% para septiembre y una contracción del PBI en el tercer trimestre. El INDEC difundirá el dato oficial el próximo martes.",
+      "etiquetas": [
+        "inflacion",
+        "banco central",
+        "desempleo",
+        "pbi",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/10/06/mas-inflacion-y-desempleo/",
+          "fecha": "2026-10-06T21:24:44.000Z",
+          "oficial": false,
+          "aporte": "Informó el recorte de pronósticos de crecimiento y el aumento de inflación y desempleo."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/06/las-consultoras-que-releva-el-bcra-volvieron-a-recortar-el-crecimiento-del-pbi-y-estimaron-una-inflacion-de-19-para-septiembre/",
+          "fecha": "2026-10-06T22:25:48.000Z",
+          "oficial": false,
+          "aporte": "Detalló las cifras del PBI, la inflación anual, el tipo de cambio y la desocupación."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/06/los-analistas-que-releva-el-bcra-estimaron-que-la-inflacion-de-septiembre-fue-de-19-y-recortaron-sus-estimaciones-de-crecimiento/",
+          "fecha": "2026-10-06T22:24:46.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el INDEC difundirá el IPC de septiembre el martes 13 de octubre."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-6-21-38-0-inflacion-de-1-9-y-menor-crecimiento-que-proyectan-los-analistas-que-releva-el-bcra",
+          "fecha": "2026-10-07T00:43:32.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la proyección inflacionaria y la fecha de publicación del INDEC."
+        },
+        {
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/06/las-consultoras-que-releva-el-bcra-estimaron-una-inflacion-de-19-para-septiembre-n524224/",
+          "fecha": "2026-10-07T00:54:44.000Z",
+          "oficial": false,
+          "aporte": "Señaló el repunte de precios y la perspectiva de recesión técnica."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "los-analistas-estiman-una-inflacion-de-1-9-por-ciento-para-septiembre",
+      "foto": {
+        "archivo": "fotos-notas/1uh42rm.jpg",
+        "credito": "Foto: Página/12"
       }
     },
     {
@@ -565,6 +657,86 @@
       }
     },
     {
+      "id": "gmtn3r",
+      "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+      "copete": "La Liga Balcarceña de Fútbol oficializó la nueva programación para el inicio del Clausura 2026. La primera fecha había sido suspendida el fin de semana pasado por el clima adverso.",
+      "cuerpo": "La Liga Balcarceña de Fútbol oficializó la reprogramación de los encuentros correspondientes a la primera fecha de la fase Clausura del Torneo Oficial 2026. El certamen se denomina 75 aniversario de Bomberos Voluntarios de Balcarce y pone en juego la Copa Challenger Alejandro Cucho Mascareño.\n\nLa jornada inicial iba a disputarse el fin de semana anterior, pero debió suspenderse debido a las condiciones climáticas adversas que afectaron la región, según informó la entidad organizadora.\n\nEl calendario completo con los cruces para todas las categorías fue publicado por la institución para definir los nuevos horarios de los partidos.",
+      "guion": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/10/futbol-programacion-de-la-1-fecha-del.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T18:59:13.963Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T01:02:05.217Z",
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "ferroviarios",
+        "bomberos"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Se reprogramó la primera fecha del torneo Clausura de la Liga Balcarceña.",
+        "La suspensión inicial ocurrió el fin de semana pasado por mal clima.",
+        "El certamen homenajea a los bomberos voluntarios locales."
+      ],
+      "seSabe": [
+        "La Liga Balcarceña oficializó la reprogramación de la primera fecha del Clausura 2026.",
+        "La jornada inicial se suspendió el fin de semana pasado por el clima adverso, según informó la entidad.",
+        "El torneo rinde homenaje al 75 aniversario de Bomberos Voluntarios y disputa la Copa Challenger Alejandro Cucho Mascareño."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Liga Balcarceña de Fútbol oficializó la reprogramación de los partidos de la primera fecha del torneo Clausura tras la suspensión por mal clima.",
+      "etiquetas": [
+        "Fútbol",
+        "Liga Balcarceña",
+        "Torneo Clausura",
+        "Deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/futbol-programacion-de-la-1-fecha-del.html",
+          "fecha": "2026-10-06T18:59:13.963Z",
+          "oficial": false,
+          "aporte": "Informó la oficialización de la reprogramación de la primera fecha del Clausura y los detalles de la suspensión previa por mal clima."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1pig8zv",
+          "titulo": "Asoma el Clausura 2026",
+          "fecha": "2026-09-18T22:17:49.080Z",
+          "ruta": "/nota/liga-balcarcena-asoma-el-clausura-2026-1pig8zv"
+        },
+        {
+          "id": "irc0sr",
+          "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
+          "fecha": "2026-10-04T20:31:39.000Z",
+          "ruta": "/nota/bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela-irc0sr"
+        },
+        {
+          "id": "16ml7pn",
+          "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+          "fecha": "2026-10-03T13:15:01.000Z",
+          "ruta": "/nota/bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela-16ml7pn"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-liga-balcarcena-reprograma-la-primera-fecha-del-torneo-clausura"
+    },
+    {
       "id": "repaso20261006tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: Tandil, Casa del Bicentenario y Agustín Canapino",
@@ -643,8 +815,8 @@
       "medios": [
         "Crónica",
         "Noticias Argentinas (NA)",
-        "InfoRegión",
         "La Verdad",
+        "InfoRegión",
         "Agencia DIB"
       ],
       "enlace": "https://noticiasargentinas.com/politica/ravier-aseguro-que--la-ley-de-tierras-no-afecta-la-soberania-territorial-_a6ac51dff61c1587439f4cb04",
@@ -1254,6 +1426,94 @@
       }
     },
     {
+      "id": "mly71m",
+      "titulo": "Cristian Fabbiani despide a Lionel Messi de la Selección y pide por su llegada a Newell's",
+      "copete": "El entrenador y exdelantero escribió una carta abierta para el capitán nacional en la previa de su despedida del seleccionado y le rogó un cierre en el club rosarino.",
+      "cuerpo": "Cristian Fabbiani publicó un mensaje dedicado a Lionel Messi en la previa del último encuentro del capitán con la selección argentina. El partido se disputa este martes 6 de octubre ante Benín en el estadio Monumental, marcando el cierre de una trayectoria de veintidós años con la camiseta albiceleste.\n\nAdemás, el exdelantero cerró el texto con una propuesta particular dirigida al jugador del Inter Miami: le pidió un último baile en Newell's para coronar su carrera.",
+      "guion": "Cristian Fabbiani despide a Lionel Messi de la Selección y pide por su llegada a Newell's",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Olé",
+        "Minuto Uno",
+        "La Capital (Rosario)"
+      ],
+      "enlace": "https://www.ole.com.ar/messi/emotiva-carta-despedida-gracias-cristian-ogro-fabbiani-lionel-messi-jugar-newells_0_bK3Ofg1rcg.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T14:27:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T01:02:05.217Z",
+      "relevancia": 79,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lionel Messi disputa su último partido con la Selección este martes ante Benín",
+        "El encuentro amistoso se juega en el estadio Monumental",
+        "Cristian Fabbiani le dedicó una carta de agradecimiento en redes sociales",
+        "El entrenador pidió un último paso del capitán por Newell's"
+      ],
+      "seSabe": [
+        "Lionel Messi juega su último partido con la selección argentina este martes 6 de octubre",
+        "El encuentro se disputa en el estadio Monumental frente a Benín",
+        "Cristian Fabbiani publicó una carta de agradecimiento en su cuenta de Instagram",
+        "Fabbiani pidió un último baile del capitán en Newell's"
+      ],
+      "noConfirmado": [
+        "Si se concretará el paso de Lionel Messi por Newell's"
+      ],
+      "textoRedes": "Cristian Fabbiani publicó una carta de despedida para Lionel Messi en la previa de su último partido con la selección argentina y le pidió un último paso por Newell's.",
+      "etiquetas": [
+        "Lionel Messi",
+        "Cristian Fabbiani",
+        "Selección Argentina",
+        "Newell's",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/messi/emotiva-carta-despedida-gracias-cristian-ogro-fabbiani-lionel-messi-jugar-newells_0_bK3Ofg1rcg.html",
+          "fecha": "2026-10-06T14:27:42.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles del último partido de Lionel Messi con la selección argentina frente a Benín en el Monumental."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/la-carta-del-ogro-fabbiani-a-lionel-messi-y-el-guino-para-un-posible-regreso-a-newells-no-quiero-nid06102026/",
+          "fecha": "2026-10-06T22:23:48.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha y el rival del último encuentro del capitán con la Albiceleste."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/la-carta-del-ogro-fabbiani-messi-antes-su-despedida-ojala-se-pueda-dar-tu-ultimo-baile-n6330671",
+          "fecha": "2026-10-06T16:39:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó la existencia de la carta redactada por Cristian Fabbiani."
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/la-emotiva-carta-del-ogro-fabbiani-messi-y-un-deseo-especial-ojala-se-tu-ultimo-baile-newells-n10285262.html",
+          "fecha": "2026-10-06T21:47:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el pedido específico de Fabbiani para que el jugador cierre su etapa en Newell's."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "cristian-fabbiani-despide-a-lionel-messi-de-la-seleccion-y-pide-por",
+      "foto": {
+        "archivo": "fotos-notas/mly71m.jpg",
+        "credito": "Foto: Minuto Uno"
+      }
+    },
+    {
       "id": "2yqn4q",
       "titulo": "El Banco Mundial recorta las estimaciones de crecimiento para el país",
       "copete": "La entidad financiera ajustó las proyecciones al 2,1% para este período y al 3% para el año próximo. A su vez, resaltó la baja del riesgo país y el superávit fiscal alcanzado.",
@@ -1359,8 +1619,8 @@
       "medios": [
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
-        "La Voz del Pueblo",
-        "Infoeme"
+        "Infoeme",
+        "La Voz del Pueblo"
       ],
       "enlace": "https://dib.com.ar/sociedad/los-inquilinos-bonaerenses-destinan-casi-la-mitad-su-salario-al-alquiler-n56272",
       "teniaImagenLaFuente": true,
@@ -1541,85 +1801,6 @@
       }
     },
     {
-      "id": "xmeiz2",
-      "titulo": "El FMI cuestiona los subsidios a las tarifas y pide ayuda focalizada",
-      "copete": "El Fondo Monetario Internacional difundió un informe este martes donde critica los subsidios generalizados por considerarlos costosos. Aconseja reemplazarlos por asistencia directa y destaca que las ayudas actuales benefician más a sectores de altos ingresos.",
-      "cuerpo": "El Fondo Monetario Internacional cuestionó este martes el uso de subsidios generalizados a los servicios públicos por considerarlos ineficientes y costosos para el Estado. A través de un informe difundido este martes, el organismo internacional recomendó reemplazar estas medidas por mecanismos de asistencia directa y focalizada hacia los sectores más vulnerables.\n\nEl estudio detalló que proteger a la población de menores recursos mediante subsidios al consumidor demanda entre 3 y 6 veces más recursos que la ayuda directa, mientras que subsidiar a los productores cuesta entre 14 y 22 veces más. Además, el organismo advirtió que los fondos destinados a energía y combustibles benefician principalmente a los sectores de mayor poder adquisitivo, ya que menos de 20 centavos de cada euro llegan al 20 por ciento más pobre.\n\nEn paralelo, el Observatorio de Tarifas y Subsidios del IIEP UBA-Conicet informó que la canasta de servicios del Área Metropolitana Buenos Aires aumentó un 867 por ciento entre diciembre de 2023 y septiembre de 2026, frente a una inflación general del 254 por ciento. Durante septiembre, un hogar promedio de esa región necesitó 268.405 pesos para abonar energía, transporte y agua potable sin asistencia estatal.",
-      "guion": "El FMI cuestiona los subsidios a las tarifas y pide ayuda focalizada",
-      "seccion": "Economía",
-      "medios": [
-        "El Eco de Tandil",
-        "Ámbito",
-        "Crónica",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://www.ambito.com/economia/fuerte-critica-del-fmi-los-subsidios-las-tarifas-n6330377",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T13:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T22:01:15.379Z",
-      "relevancia": 70,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El FMI criticó los subsidios generalizados por costosos e ineficientes",
-        "El organismo recomendó reemplazarlos por asistencia directa focalizada",
-        "El estudio indicó que los subsidios energéticos benefician más a sectores ricos",
-        "La canasta de servicios del AMBA subió 867 por ciento desde diciembre de 2023"
-      ],
-      "textoRedes": "El Fondo Monetario Internacional difundió un informe este martes en el que critica los subsidios generalizados a los servicios públicos por considerarlos costosos e ineficientes y recomendó reemplazarlos por asistencia directa a los sectores más vulnerables.",
-      "etiquetas": [
-        "FMI",
-        "subsidios",
-        "tarifas",
-        "inflación",
-        "servicios públicos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/fuerte-critica-del-fmi-los-subsidios-las-tarifas-n6330377",
-          "fecha": "2026-10-06T13:00:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las conclusiones del informe del FMI sobre subsidios, las recomendaciones de asistencia focalizada y los datos del IIEP UBA-Conicet sobre la canasta de servicios del AMBA."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/el-fmi-cuestiono-los-subsidios-a-las-tarifas-como-politica-tendiente-a-frenar-la-inflacion",
-          "fecha": "2026-10-06T21:14:28.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la postura del FMI respecto a las ineficiencias fiscales de reprimir las tarifas y la protección a sectores vulnerables."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/fmi-cuestiona-subsidios-tarifas-inflacion/",
-          "fecha": "2026-10-06T16:36:07.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el FMI cuestionó los subsidios como mecanismo para atenuar la inflación por considerarlos costosos para el Estado."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-fmi-cuestiono-los-subsidios-a-las-tarifas-como-politica-para-frenar-el-impacto-de-la-inflacion_a6ac515f961c1587439f38db0",
-          "fecha": "2026-10-06T15:34:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir contenido en su resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-fmi-cuestiona-los-subsidios-a-las-tarifas-y-pide-ayuda-focalizada",
-      "foto": {
-        "archivo": "fotos-notas/xmeiz2.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "15imf6x",
       "titulo": "Suspenden clases en el Jardín 905 por el robo de caños de gas",
       "copete": "El Jardín de Infantes N° 905 debió interrumpir las actividades del turno mañana este martes tras constatarse el faltante de caños de gas. La Policía actuó de oficio.",
@@ -1776,6 +1957,92 @@
       }
     },
     {
+      "id": "ql89ei",
+      "titulo": "El Gobierno emite titulos por 221.119 millones para saldar obras",
+      "copete": "El Ejecutivo nacional dispuso la ampliación de instrumentos financieros para saldar compromisos con constructoras. La medida abarca obligaciones acumuladas desde 2022.",
+      "cuerpo": "El Gobierno nacional oficializó este martes la ampliación de tres instrumentos financieros por un valor efectivo total de 221.119.509.519 pesos. La disposición quedó establecida a través de la Resolución Conjunta 59/2026 en el Boletín Oficial, firmada por las secretarías de Finanzas y de Hacienda.\n\nLa medida apunta a cancelar pasivos pendientes con constructoras en proyectos de infraestructura y transporte. El plan abarca saldos acumulados entre 2022 y 2025, además de obligaciones de contratos rescindidos desde 2024.\n\nLos pagos a las empresas constructoras se efectivizan mediante una canasta compuesta por Lecap y Boncap, con plazos de vencimiento estipulados entre octubre de este año y abril del próximo año.",
+      "guion": "El Gobierno emite titulos por 221.119 millones para saldar obras",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
+        "Infobae"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T11:38:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T16:31:20.376Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ampliación de emisión de títulos públicos por más de 221.000 millones de pesos.",
+        "Cancelación de deudas con contratistas de obras públicas de infraestructura y transporte.",
+        "Alcance a obligaciones acumuladas entre 2022 y 2025 y contratos finalizados desde 2024.",
+        "Pagos instrumentados mediante Lecap y Boncap con vencimientos hasta abril de 2027."
+      ],
+      "textoRedes": "El Gobierno nacional oficializó la ampliación de la emisión de títulos públicos por más de 221.000 millones de pesos destinados a cancelar deudas pendientes con contratistas de obras de infraestructura y transporte acumuladas desde 2022.",
+      "etiquetas": [
+        "Gobierno nacional",
+        "obra publica",
+        "deuda",
+        "titulos publicos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-amplia-emision-de-titulos-por--221-119-millones-para-saldar-deudas-de-obra-publica_a6ac4e04c61c1587439eb7932",
+          "fecha": "2026-10-06T11:38:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el monto total de la emisión, el número de resolución y el destino de los fondos para infraestructura."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/el-gobierno-amplio-la-emision-de-titulos-por-221119-millones-para-cancelar-deudas-de-obra-publica",
+          "fecha": "2026-10-06T13:43:28.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el monto total de la emisión de títulos públicos para contratistas."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/el-gobierno-amplio-la-emision-deuda-221119-millones-pagar-obligaciones-obra-publica-n6330549",
+          "fecha": "2026-10-06T13:33:00.000Z",
+          "oficial": false,
+          "aporte": "Especificó el periodo de las deudas abarcadas y los instrumentos de pago utilizados."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/06/el-gobierno-emitira-bonos-por-221000-millones-para-saldar-deudas-con-empresas-contratistas-de-la-obra-publica/",
+          "fecha": "2026-10-06T16:16:11.000Z",
+          "oficial": false,
+          "aporte": "Informó la cantidad de títulos del Tesoro emitidos y el alcance temporal de los contratos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/10/06/el-gobierno-argentino-amplia-la-emision-de-deuda-en-1293-millones-para-pagar-a-contratistas-de-obra-publica/",
+          "fecha": "2026-10-06T15:32:09.000Z",
+          "oficial": false,
+          "aporte": "Aportó la equivalencia en moneda extranjera y confirmó la publicación oficial de este martes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-emite-titulos-por-221-119-millones-para-saldar-obras",
+      "foto": {
+        "archivo": "fotos-notas/ql89ei.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
+    },
+    {
       "id": "129cc5g",
       "titulo": "Aapresid advierte sobre la caída de la siembra directa en el país",
       "copete": "El uso del sistema cayó al 80,6% de la superficie agrícola en la campaña 2025/26. El retroceso responde al avance de las labranzas por malezas y compactación.",
@@ -1860,9 +2127,9 @@
         "La Tecla",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
+        "El Eco de Tandil",
         "Ámbito",
         "Agencia DIB",
-        "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
         "Diputados Bonaerenses"
       ],
@@ -2034,7 +2301,7 @@
       "id": "1c7wqua",
       "titulo": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "copete": "La secretaria general de la Presidencia y el jefe de Gabinete se reúnen con mandatarios provinciales en Salta. Buscan respaldos para suspender las PASO y aprobar el Presupuesto.",
-      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
+      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
       "guion": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "seccion": "Política",
       "medios": [
@@ -2048,9 +2315,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Tecla",
+        "La Verdad",
         "Diputados Bonaerenses",
-        "Ámbito",
-        "La Verdad"
+        "Ámbito"
       ],
       "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
       "teniaImagenLaFuente": true,
@@ -2928,8 +3195,8 @@
         "iProfesional",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Nueva",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "La Nueva"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/caputo-advirtio-al-mercado-sobre-como-se-prepara-ante-un-escenario-electoral-adverso-en-2027-les-nid05102026/",
       "teniaImagenLaFuente": true,
@@ -3135,7 +3402,7 @@
       "fecha": "2026-10-06T00:01:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T00:31:12.019Z",
-      "relevancia": 17,
+      "relevancia": 21,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -3425,34 +3692,30 @@
         "Canal 26",
         "C5N",
         "A24",
-        "Bolavip Argentina",
-        "Página/12",
-        "Olé",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "TyC Sports",
-        "Diario Popular",
-        "0223 (Mar del Plata)",
-        "La Nueva",
-        "La Capital (Rosario)",
-        "Clarín",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
+        "Clarín",
+        "TyC Sports",
+        "Olé",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "Bolavip Argentina",
         "La Página Millonaria",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Perfil",
-        "QZ Noticias (Mar del Plata)",
-        "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Crónica",
+        "Página/12",
+        "0221",
+        "El Día",
+        "0223 (Mar del Plata)",
+        "La Nueva",
+        "La Capital (Rosario)",
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
         "Ámbito",
-        "0221",
-        "El Economista",
-        "Doble Amarilla",
-        "La Brújula 24",
+        "Crónica",
+        "Perfil",
+        "Infobrisas (Radio Brisas)",
+        "El Eco de Tandil",
+        "Mi8 (Canal 8 Mar del Plata)",
         "El Gráfico"
       ],
       "enlace": "https://radiomitre.cienradios.com/deportes/antonela-roccuzzo-y-celia-cuccittini-se-emocionaron-en-el-monumental-antes-de-la-despedida-de-lionel-messi/",
@@ -3568,11 +3831,11 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "QZ Noticias (Mar del Plata)",
+        "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
         "La Voz del Pueblo",
         "C5N",
         "El Día",
-        "Doble Amarilla",
         "0223 (Mar del Plata)"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
@@ -4564,72 +4827,6 @@
         "archivo": "fotos-notas/collage-repaso20261005manana.jpg",
         "credito": "Fotos: Municipalidad de Balcarce, Diario La Vanguardia y Radio Gabal (FM 104.1)"
       }
-    },
-    {
-      "id": "e5jokd",
-      "titulo": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "copete": "El joven que vendía alfajores artesanales en la calle fue recibido por el intendente. Participará de la Fiesta Nacional del Postre y avanza su regularización.",
-      "cuerpo": "Ticiano Espinosa, un joven de 21 años llegado desde la ciudad mendocina de General Alvear, fue recibido por el intendente Esteban Reino tras relatar su situación en un medio radial local. Espinosa se había instalado en la esquina de las calles Primera Junta y Chaves para vender alfajores elaborados junto a su hermana, luego de no conseguir empleo formal tras su arribo al distrito el 17 de febrero.\n\nA raíz de la prohibición de la venta ambulante, personal municipal le había impedido continuar con la actividad en la vía pública. Tras la difusión de su caso, el jefe comunal mantuvo un encuentro para analizar alternativas y brindar acompañamiento institucional a su producción.\n\nComo parte de las gestiones, se tramita su ingreso al programa PUPAA y al monotributo social para formalizar el proyecto. Además, el municipio confirmó su participación en la próxima edición de la Fiesta Nacional del Postre y se habilitó la línea telefónica 2266 514127 para quienes deseen adquirir sus productos o colaborar.",
-      "guion": "Ticiano Espinosa se reúne con Reino y suma su emprendimiento a un programa",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44992-ticiano-conto-su-historia-y-encontro-una-oportunidad-fue-recibido-por-reino-y-sera-incorporado-a-un-programa-de-emprendedores/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T13:01:23.078Z",
-      "sinFecha": true,
-      "visto": "2026-10-05T13:01:23.078Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ticiano Espinosa tiene 21 años y llegó a Balcarce desde Mendoza.",
-        "Vendía alfajores en la vía pública hasta que le notificaron la prohibición.",
-        "Fue recibido por el intendente Esteban Reino tras relatar su caso en la radio.",
-        "Participará en la Fiesta Nacional del Postre y gestiona su ingreso al programa PUPAA."
-      ],
-      "seSabe": [
-        "Ticiano Espinosa llegó a Balcarce el 17 de febrero desde General Alvear, Mendoza.",
-        "El intendente Esteban Reino lo recibió en su despacho.",
-        "Participará de la próxima edición de la Fiesta Nacional del Postre.",
-        "Se gestiona su incorporación al programa PUPAA y al monotributo social.",
-        "El contacto para colaborar es el 2266 514127."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Ticiano Espinosa, el joven que elabora alfajores artesanales, fue recibido por el intendente Esteban Reino. Participará de la Fiesta Nacional del Postre y avanza su regularización a través de un programa municipal.",
-      "etiquetas": [
-        "Ticiano Espinosa",
-        "Esteban Reino",
-        "emprendedores",
-        "Fiesta Nacional del Postre",
-        "PUPAA",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44992-ticiano-conto-su-historia-y-encontro-una-oportunidad-fue-recibido-por-reino-y-sera-incorporado-a-un-programa-de-emprendedores/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro entre el intendente y el joven emprendedor, las medidas acordadas y los detalles de su situación."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "ticiano-espinosa-se-reune-con-reino-y-suma-su-emprendimiento-a-un",
-      "foto": {
-        "archivo": "fotos-notas/e5jokd.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
     }
   ],
   "secciones": [
@@ -4637,10 +4834,10 @@
     "Balcarce",
     "Cultura y agenda",
     "Fútbol",
+    "Economía",
     "Argentina",
     "Política",
     "Agro",
-    "Economía",
     "Policiales",
     "Automovilismo"
   ],
@@ -4648,6 +4845,11 @@
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
+      "cuantas": 2
+    },
+    {
+      "nombre": "Bomberos Voluntarios",
+      "ranura": "bomberos",
       "cuantas": 2
     },
     {
@@ -5022,12 +5224,6 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "108t4y0",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
-    },
-    {
       "id": "15u3elu",
       "titulo": null,
       "seccion": "Argentina",
@@ -5136,5 +5332,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 5
 }
