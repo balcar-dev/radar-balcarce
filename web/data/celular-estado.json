@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T20:32:27.521Z",
- "portada": 57,
- "archivo": 1039,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-07T21:03:21.310Z",
+ "portada": 58,
+ "archivo": 1041,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-07T20:32:27.566Z",
+  "generado": "2026-10-07T21:03:21.364Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -165,6 +165,11 @@
       "seccion": "Balcarce"
      },
      {
+      "id": "28zqic",
+      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+      "seccion": "Automovilismo"
+     },
+     {
       "id": "px37p5",
       "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
       "seccion": "Fútbol"
@@ -173,11 +178,6 @@
       "id": "10cpafd",
       "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
      }
     ]
    }
@@ -212,14 +212,20 @@
    ],
    "cola": [
     {
-     "id": "3exxze",
-     "titulo": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
+     "id": "rwhqdu",
+     "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "rwhqdu",
-     "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
+     "id": "28zqic",
+     "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
+    {
+     "id": "3exxze",
+     "titulo": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
      "seccion": "Balcarce",
      "marcada": false
     }

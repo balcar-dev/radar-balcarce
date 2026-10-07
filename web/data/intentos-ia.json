@@ -1097,11 +1097,6 @@
   "ultimo": "2026-10-07T09:01:24.344Z",
   "motivo": "con cuerpo"
  },
- "1nlsp0x": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T21:01:16.156Z",
-  "motivo": "con cuerpo"
- },
  "1nqv1cj": {
   "intentos": 1,
   "ultimo": "2026-10-04T12:01:25.456Z",
@@ -1616,6 +1611,11 @@
  "27x6h7": {
   "intentos": 1,
   "ultimo": "2026-10-05T17:31:14.146Z",
+  "motivo": "con cuerpo"
+ },
+ "28zqic": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T21:02:23.919Z",
   "motivo": "con cuerpo"
  },
  "2apvm8": {
@@ -2211,6 +2211,13 @@
   "ultimo": "2026-10-03T15:02:13.158Z",
   "motivo": "con cuerpo"
  },
+ "fmic2l": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T21:02:23.919Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "fxkofi": {
   "intentos": 1,
   "ultimo": "2026-10-06T16:06:42.750Z",
@@ -2234,11 +2241,6 @@
  "gb1e4h": {
   "intentos": 1,
   "ultimo": "2026-09-30T22:31:30.288Z",
-  "motivo": "con cuerpo"
- },
- "gd6n9s": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T21:01:16.156Z",
   "motivo": "con cuerpo"
  },
  "gdwukq": {
@@ -2818,6 +2820,11 @@
   "ultimo": "2026-10-07T14:28:06.738Z",
   "motivo": "con cuerpo"
  },
+ "tnbf7h": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T21:02:23.919Z",
+  "motivo": "con cuerpo"
+ },
  "tqz98z": {
   "intentos": 1,
   "ultimo": "2026-10-06T17:01:38.281Z",
@@ -3068,6 +3075,11 @@
   "ultimo": "2026-10-02T23:01:27.757Z",
   "motivo": "con cuerpo"
  },
+ "yhgmbn": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T21:02:23.919Z",
+  "motivo": "con cuerpo"
+ },
  "yqqsx9": {
   "intentos": 1,
   "ultimo": "2026-10-05T15:52:45.158Z",
@@ -3076,11 +3088,6 @@
  "z08pph": {
   "intentos": 2,
   "ultimo": "2026-10-05T22:01:36.128Z",
-  "motivo": "con cuerpo"
- },
- "z3c4f": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T21:01:16.156Z",
   "motivo": "con cuerpo"
  },
  "z5u242": {

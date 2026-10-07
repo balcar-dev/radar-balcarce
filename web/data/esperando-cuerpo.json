@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T20:32:27.521Z",
+ "generado": "2026-10-07T21:03:21.310Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,6 +13,11 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/07/viernes-9-educacion-identidad-y-propuestas-locales-en-la-fiesta-nacional-del-postre/",
      "fecha": "2026-10-07T11:05:49.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/la-22a-fiesta-nacional-del-postre-abrira-con-una-jornada-dedicada-a-la-identidad-y-el-aprendizaje/",
+     "fecha": "2026-10-07T12:34:04.000Z"
     },
     {
      "medio": "Infórmese Primero (FM 104.9)",
@@ -47,40 +52,6 @@
    "maximo": 3
   },
   {
-   "id": "1msn95k",
-   "titulo": "Organizan una cena a beneficio para acompañar a Kevin “Bam Bam” Gómez",
-   "copete": "Será el 30 de octubre, a las 21, en el Club Ferroviario. Las tarjetas tienen un valor de $25.000 e incluyen entrada, plato principal y postre.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-07T20:23:25.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/organizan-una-cena-a-beneficio-para-acompanar-a-kevin-bam-bam-gomez",
-     "fecha": "2026-10-07T20:23:25.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras",
-   "maximo": 3
-  },
-  {
-   "id": "6ytz79",
-   "titulo": "ANSES inicia este jueves el pago de jubilaciones mínimas, pensiones y asignaciones",
-   "copete": "Este 8 de octubre comenzará el calendario de pagos, con un aumento del 1,66% por movilidad. Jubilados y titulares de Pensiones No Contributivas recibirán además el bono de $70.000.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-07T19:55:51.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/anses-inicia-este-jueves-el-pago-de-jubilaciones-minimas-pensiones-y-asignaciones",
-     "fecha": "2026-10-07T19:55:51.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 4 problemas (nombre): el copete nombra a \"administracion\" y la fuente no",
-   "maximo": 3
-  },
-  {
    "id": "o7akpp",
    "titulo": "El 57% de los bonaerenses que tomó deuda con una financiera está en mora",
    "copete": "General Pueyrredon registró un 56,2% de deudores con atrasos en los pagos de préstamos personales otorgados por financieras privadas, de acuerdo con el informe El mapa de la deuda, elaborado por el Centro de Estudios para la Ciudad (CEC) y la Fundación Friedrich Ebert (FES). El…",
@@ -103,6 +74,16 @@
      "fecha": "2026-10-07T16:01:03.000Z"
     },
     {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
+     "fecha": "2026-10-07T20:30:21.000Z"
+    },
+    {
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
+    },
+    {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
      "enlace": "https://mi8.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora-los-marplatenses-entre-los-mas-complicados/",
      "fecha": "2026-10-07T17:58:47.000Z"
@@ -110,12 +91,7 @@
     {
      "medio": "El Eco de Tandil",
      "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
-     "fecha": "2026-10-07T14:43:44.000Z"
-    },
-    {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
+     "fecha": "2026-10-07T14:43:51.000Z"
     }
    ],
    "intentos": 4,
