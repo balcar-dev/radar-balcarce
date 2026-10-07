@@ -19,6 +19,11 @@
   "ultimo": "2026-10-03T23:01:38.989Z",
   "motivo": "sin material"
  },
+ "10cpafd": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T20:01:35.015Z",
+  "motivo": "con cuerpo"
+ },
  "10ht2cj": {
   "intentos": 3,
   "ultimo": "2026-10-02T03:31:38.342Z",
@@ -152,6 +157,11 @@
  "14z3rme": {
   "intentos": 1,
   "ultimo": "2026-10-06T05:31:37.205Z",
+  "motivo": "con cuerpo"
+ },
+ "158583a": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T20:01:35.015Z",
   "motivo": "con cuerpo"
  },
  "158gkt0": {
@@ -671,9 +681,9 @@
   "motivo": "con cuerpo"
  },
  "1f57zit": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T19:01:42.967Z",
-  "motivo": "cuerpo: 3 problemas (antecedente, nombre, promesa): el cuerpo usa 6, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 71 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-07T20:01:35.015Z",
+  "motivo": "con cuerpo"
  },
  "1f6rlk": {
   "intentos": 1,
@@ -736,11 +746,6 @@
   "intentos": 1,
   "ultimo": "2026-10-04T19:31:35.029Z",
   "motivo": "con cuerpo"
- },
- "1g985bm": {
-  "intentos": 3,
-  "ultimo": "2026-09-30T20:01:48.346Z",
-  "motivo": "título o bajada: 1 problema (largo): el titulo tiene 112 caracteres, el máximo es 90"
  },
  "1gdngfe": {
   "intentos": 1,
@@ -1157,11 +1162,6 @@
  "1p68wmw": {
   "intentos": 2,
   "ultimo": "2026-09-30T22:35:25.799Z",
-  "motivo": "con cuerpo"
- },
- "1pawdnw": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T19:31:48.979Z",
   "motivo": "con cuerpo"
  },
  "1pfa62o": {
@@ -1668,11 +1668,6 @@
   "ultimo": "2026-10-05T12:31:27.165Z",
   "motivo": "con cuerpo"
  },
- "2v48w6": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T19:31:48.979Z",
-  "motivo": "con cuerpo"
- },
  "2vliuj": {
   "intentos": 1,
   "ultimo": "2026-10-01T12:32:07.895Z",
@@ -1709,9 +1704,9 @@
   "motivo": "con cuerpo"
  },
  "367w6m": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T13:03:09.354Z",
-  "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"policia\" y la fuente no"
+  "intentos": 2,
+  "ultimo": "2026-10-07T20:01:35.015Z",
+  "motivo": "con cuerpo"
  },
  "36p9t0": {
   "intentos": 1,
@@ -1769,6 +1764,13 @@
   "intentos": 1,
   "ultimo": "2026-10-05T14:31:32.600Z",
   "motivo": "con cuerpo"
+ },
+ "51b1bv": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T20:01:35.015Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "5cxrkh": {
   "intentos": 4,
@@ -1849,6 +1851,11 @@
   "intentos": 2,
   "ultimo": "2026-09-30T23:01:13.968Z",
   "motivo": "con cuerpo"
+ },
+ "6ytz79": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T20:01:35.015Z",
+  "motivo": "cuerpo: 7 problemas (nombre, fecha, copia): el cuerpo nombra a \"administracion\" y la fuente no; sin esas oraciones quedan 36 palabras"
  },
  "72u7uu": {
   "intentos": 1,
@@ -2000,6 +2007,11 @@
  "afx3aq": {
   "intentos": 2,
   "ultimo": "2026-10-05T22:01:36.128Z",
+  "motivo": "con cuerpo"
+ },
+ "ajdznk": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T20:01:35.015Z",
   "motivo": "con cuerpo"
  },
  "alddw5": {
@@ -2294,11 +2306,6 @@
   "ultimo": "2026-10-06T10:31:25.521Z",
   "motivo": "con cuerpo"
  },
- "i4muk4": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T20:01:48.346Z",
-  "motivo": "con cuerpo"
- },
  "i4xb8": {
   "intentos": 1,
   "ultimo": "2026-10-04T12:31:27.651Z",
@@ -2524,11 +2531,6 @@
   "ultimo": "2026-10-05T18:01:33.785Z",
   "motivo": "con cuerpo"
  },
- "n3bhr": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T19:31:48.979Z",
-  "motivo": "con cuerpo"
- },
  "n3x306": {
   "intentos": 1,
   "ultimo": "2026-10-01T01:01:18.871Z",
@@ -2713,6 +2715,11 @@
   "intentos": 1,
   "ultimo": "2026-10-03T16:01:33.605Z",
   "motivo": "con cuerpo"
+ },
+ "rwhqdu": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T20:01:35.015Z",
+  "motivo": "cuerpo: 2 problemas (fecha, repite): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 18 palabras"
  },
  "rzjt95": {
   "intentos": 1,

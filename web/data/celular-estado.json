@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T19:31:34.957Z",
+ "generado": "2026-10-07T20:02:47.420Z",
  "portada": 53,
- "archivo": 1030,
- "esperandoCuerpo": 4,
+ "archivo": 1034,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T19:31:35.000Z",
+  "generado": "2026-10-07T20:02:47.461Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 55,
     "notas": [
      {
       "id": "1opc9eu",
@@ -165,19 +165,19 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "2r3foe",
-      "titulo": "La Fiesta Nacional del Postre confirma las clases de cocina para el fin de semana",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "158583a",
+      "titulo": "La industria y la construcción suben en agosto según el INDEC",
+      "seccion": "Economía"
+     },
+     {
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -203,30 +203,23 @@
      "id": "1wp29m7",
      "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
      "cuando": "2026-10-07T17:37:09.174Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1opc9eu",
      "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
+     "cuando": "2026-10-07T19:33:47.785Z"
+    }
+   ],
+   "cola": [
     {
      "id": "45acbd",
      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
      "seccion": "Cultura y agenda",
      "marcada": false
-    },
-    {
-     "id": "15zgvx1",
-     "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
-     "seccion": "Balcarce",
-     "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-07T19:07:09.174Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-07T21:03:47.785Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

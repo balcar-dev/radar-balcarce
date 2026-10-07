@@ -1,6 +1,119 @@
 {
-  "generado": "2026-10-07T19:31:34.957Z",
+  "generado": "2026-10-07T20:02:47.420Z",
   "notas": [
+    {
+      "id": "158583a",
+      "titulo": "La industria y la construcción suben en agosto según el INDEC",
+      "copete": "La actividad manufacturera avanzó un 1,9% y la construcción mejoró un 0,4% en comparación con julio, de acuerdo con el organismo oficial.",
+      "cuerpo": "El Instituto Nacional de Estadística y Censos informó que la actividad manufacturera subió un 1,9% durante agosto en comparación con julio, mientras que la construcción avanzó un 0,4% en el mismo período.\n\nEn la medición interanual, los datos oficiales reflejan bajas del 3,2% para la industria y del 4,4% para el sector de la construcción. En el acumulado de los primeros ocho meses del año, la industria registra una caída del 2,7% y la construcción muestra una suba del 0,8%.",
+      "guion": "La industria y la construcción suben en agosto según el INDEC",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Clarín",
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.perfil.com/noticias/economia/la-industria-reboto-19-interanual-en-agosto-segun-el-indec-a40.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T19:12:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T20:01:26.802Z",
+      "relevancia": 88,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La actividad manufacturera subió 1,9% mensual en agosto.",
+        "La construcción avanzó 0,4% en comparación con julio.",
+        "En la medición interanual se registraron bajas del 3,2% y 4,4%."
+      ],
+      "seSabe": [
+        "El índice de producción industrial manufacturero subió 1,9% en agosto respecto a julio, según el INDEC.",
+        "La construcción registró una suba mensual del 0,4% en el mismo período, de acuerdo con el organismo oficial.",
+        "En la comparación interanual, la industria acumuló una caída del 3,2% y la construcción del 4,4%."
+      ],
+      "textoRedes": "El INDEC informó que la industria y la construcción registraron una recuperación en agosto con subas del 1,9% y 0,4% respectivamente en comparación con el mes anterior.",
+      "etiquetas": [
+        "Indec",
+        "industria",
+        "construccion",
+        "agosto"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-industria-reboto-19-interanual-en-agosto-segun-el-indec-a40.phtml",
+          "fecha": "2026-10-07T19:12:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los porcentajes de variación mensual, interanual y acumulada de la industria y la construcción."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/07/la-industria-y-la-construccion-repuntaron-en-agosto-pero-cayeron-contra-el-mismo-mes-de-2025/",
+          "fecha": "2026-10-07T19:37:36.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la recuperación mensual de ambos sectores en agosto informada por el INDEC."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/10/07/la-actividad-de-la-construccion-en-argentina-sube-apenas-un-04-en-agosto/",
+          "fecha": "2026-10-07T19:31:47.000Z",
+          "oficial": false,
+          "aporte": "Detalló la suba mensual del 0,4% en la construcción y la caída previa de julio."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/industria-construccion-recuperaron-agosto-fuerte-caida-julio_0_axZaEZoSAo.html",
+          "fecha": "2026-10-07T19:32:58.000Z",
+          "oficial": false,
+          "aporte": "Avaló los datos oficiales sobre la mejora en la producción manufacturera y la construcción."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/07/la-industria-y-la-construccion-crecieron-en-agosto-pero-cayeron-en-la-comparacion-con-el-ano-pasado/",
+          "fecha": "2026-10-07T19:24:48.000Z",
+          "oficial": false,
+          "aporte": "Indicó que, a pesar del repunte mensual, las cifras interanuales muestran caídas."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/indec-derrumbaron-industria-construccion-agosto-2026107165150",
+          "fecha": "2026-10-07T19:51:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó bajas en sectores específicos como maquinaria, textiles y automotriz."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/la-industria-repunto-1-9--en-agosto--pero-volvio-a-caer-en-la-comparacion-interanual_a6ac6985c25d386c88152bd29",
+          "fecha": "2026-10-07T19:29:50.000Z",
+          "oficial": false,
+          "aporte": "Informó el porcentaje de avance del índice de producción industrial manufacturero difundido por el INDEC."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1vmzrvq",
+          "titulo": "El consumo cae uno por ciento en agosto según la Cámara de Comercio",
+          "fecha": "2026-09-28T22:05:38.000Z",
+          "ruta": "/nota/el-consumo-cae-uno-por-ciento-en-agosto-segun-la-camara-de-comercio-1vmzrvq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-industria-y-la-construccion-suben-en-agosto-segun-el-indec",
+      "foto": {
+        "archivo": "fotos-notas/158583a.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
     {
       "id": "1opc9eu",
       "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
@@ -9,6 +122,7 @@
       "guion": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
       "seccion": "Balcarce",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
@@ -17,7 +131,7 @@
       "fecha": "2026-10-07T18:31:21.770Z",
       "sinFecha": false,
       "visto": "2026-10-07T18:31:21.770Z",
-      "relevancia": 98,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -211,8 +325,8 @@
       "guion": "Patricia Bullrich vota en contra del pliego de una fiscal",
       "seccion": "Política",
       "medios": [
-        "Infobae",
         "La Nación",
+        "Infobae",
         "Clarín",
         "El Cronista",
         "Noticias Argentinas (NA)"
@@ -296,10 +410,11 @@
       "guion": "Lionel Messi publica un emotivo mensaje tras su despedida de la Selección",
       "seccion": "Fútbol",
       "medios": [
+        "Infobae",
         "La Nación",
-        "Ámbito",
         "TN (Todo Noticias)",
         "Perfil",
+        "Ámbito",
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
@@ -316,7 +431,7 @@
       "fecha": "2026-10-07T17:59:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T18:31:21.770Z",
-      "relevancia": 100,
+      "relevancia": 99,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -509,6 +624,93 @@
       "foto": {
         "archivo": "fotos-notas/1qsixdr.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1f57zit",
+      "titulo": "Franco Colapinto despide a Lionel Messi con un emotivo mensaje",
+      "copete": "El piloto argentino de Fórmula 1 homenajeó al capitán en sus redes sociales con una camiseta retro, una canción y palabras de agradecimiento tras su ciclo en la Selección.",
+      "cuerpo": "El piloto de Fórmula 1 Franco Colapinto homenajeó a Lionel Messi en sus redes sociales tras el último partido del capitán en el Estadio Monumental. El corredor de la escudería Alpine compartió una imagen en su cuenta de Instagram con la camiseta albiceleste con el dorsal número 19, que utilizó el astro en el Mundial de Alemania 2006.\n\nA la fotografía le sumó la palabra de despedida, emojis y la canción Stop Crying Your Heart Out de la banda Oasis. Además, el deportista le dedicó un mensaje de gratitud por su trayectoria y valoró su capacidad de superación con la camiseta nacional.",
+      "guion": "Franco Colapinto despide a Lionel Messi con un emotivo mensaje",
+      "seccion": "Argentina",
+      "medios": [
+        "Minuto Uno",
+        "A24"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/el-guino-franco-colapinto-lionel-messi-su-emotiva-despedida-la-seleccion-argentina-n6331170",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T17:01:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T20:01:26.802Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto despidió a Lionel Messi en redes sociales.",
+        "El piloto utilizó una camiseta histórica del Mundial 2006.",
+        "Acompañó el posteo con un mensaje de gratitud y música."
+      ],
+      "seSabe": [
+        "Franco Colapinto publicó una historia en Instagram para despedir a Lionel Messi.",
+        "El piloto lució la camiseta número 19 usada por el capitán en Alemania 2006.",
+        "El posteo incluyó la canción Stop Crying Your Heart Out de Oasis y un mensaje de agradecimiento."
+      ],
+      "textoRedes": "Franco Colapinto despidió a Lionel Messi en redes sociales con una camiseta histórica del Mundial 2006, un mensaje de agradecimiento y una canción.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Lionel Messi",
+        "Seleccion Argentina",
+        "Formula 1",
+        "Instagram"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/el-guino-franco-colapinto-lionel-messi-su-emotiva-despedida-la-seleccion-argentina-n6331170",
+          "fecha": "2026-10-07T17:01:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la publicación en Instagram, la canción elegida y las declaraciones completas de agradecimiento hacia el capitán."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/camiseta-retro-oasis-y-un-guino-2006-el-emotivo-posteo-franco-colapinto-despedir-lionel-messi-n1604181",
+          "fecha": "2026-10-07T18:06:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el uso de la camiseta número 19 del Mundial 2006 en la foto compartida por el piloto."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nud4zm",
+          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
+          "fecha": "2026-09-24T19:05:00.000Z",
+          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
+        },
+        {
+          "id": "19q1gf3",
+          "titulo": "El sentido mensaje de Colapinto a Messi por su despedida de la selección argentina: “No te vayas nunca”",
+          "fecha": "2026-09-22T22:59:57.000Z",
+          "ruta": "/nota/el-sentido-mensaje-de-colapinto-a-messi-por-su-despedida-de-la-19q1gf3"
+        },
+        {
+          "id": "150qeb8",
+          "titulo": "A qué hora venden las entradas para la despedida de Lionel Messi de la Selección Argentina",
+          "fecha": "2026-09-22T21:21:00.000Z",
+          "ruta": "/nota/a-que-hora-venden-las-entradas-para-la-despedida-de-lionel-messi-de-150qeb8"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-despide-a-lionel-messi-con-un-emotivo-mensaje",
+      "foto": {
+        "archivo": "fotos-notas/1f57zit.jpg",
+        "credito": "Foto: Minuto Uno"
       }
     },
     {
@@ -746,6 +948,93 @@
       }
     },
     {
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "copete": "El conjunto dirigido por Rodolfo Arruabarrena se medirá el viernes ante el líder de la Zona A en Córdoba. El plantel administra sus cargas físicas ante la cercanía de la Copa Sudamericana.",
+      "cuerpo": "Para este compromiso, el entrenador planifica alinear una formación combinada entre futbolistas habituales y suplentes con el objetivo de administrar el esfuerzo físico del plantel.\n\nLa institución de La Ribera tiene por delante el cruce semifinalista de la Copa Sudamericana frente a Vasco da Gama de Brasil. Por este motivo, el cuerpo técnico diagramó una estrategia que incluye dosificar las cargas de los deportistas durante esta seguidilla de compromisos oficiales.",
+      "guion": "Boca arma un equipo mixto para visitar a Instituto",
+      "seccion": "Fútbol",
+      "medios": [
+        "El Destape",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno",
+        "Crónica"
+      ],
+      "enlace": "https://www.eldestapeweb.com/deportes/boca-pone-mejor-instituto-piensa-vasco-da-gama-rota-talleres-semana-agitada-arruabarrena-2026107115746",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T14:57:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T20:01:26.802Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El partido se jugará el viernes 9 a las 19.30 en Córdoba",
+        "El árbitro designado para el encuentro será Leandro Rey Hilfer",
+        "La transmisión televisiva estará disponible a través de TNT Sports",
+        "El plantel piensa en el duelo internacional frente a Vasco da Gama"
+      ],
+      "textoRedes": "Boca alistará un equipo mixto para visitar a Instituto este viernes a las 19.30 en Córdoba por el Torneo Clausura 2026, mientras administra las cargas físicas de cara al duelo por la Copa Sudamericana.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Instituto",
+        "Torneo Clausura",
+        "Copa Sudamericana",
+        "Rodolfo Arruabarrena"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/boca-pone-mejor-instituto-piensa-vasco-da-gama-rota-talleres-semana-agitada-arruabarrena-2026107115746",
+          "fecha": "2026-10-07T14:57:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el cronograma del partido, la formación mixta y el contexto internacional."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/arruabarrena-mix-titulares-suplentes-visita-boca-instituto-id764699.html",
+          "fecha": "2026-10-07T18:28:50.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional en su resumen."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/boca-juniors/cuestiones-debe-definir-arruabarrena-pensando-instituto-vasco-da-gama_0_9TbCw4rnZJ.html",
+          "fecha": "2026-10-07T16:11:51.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional en su resumen."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/boca-prepara-cambios-instituto-el-equipo-que-piensa-arruabarrena-antes-vasco-da-gama-n6331158",
+          "fecha": "2026-10-07T16:28:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el análisis del entrenador sobre la rotación y la administración de cargas."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/boca-hoy-arruabarrena-planea-poner-un-mix-de-titulares-y-suplentes-para-visitar-a-instituto/",
+          "fecha": "2026-10-07T19:48:00.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la planificación del director técnico para el compromiso en Córdoba."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "boca-arma-un-equipo-mixto-para-visitar-a-instituto",
+      "foto": {
+        "archivo": "fotos-notas/ajdznk.jpg",
+        "credito": "Foto: TyC Sports"
+      }
+    },
+    {
       "id": "1wp29m7",
       "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
       "copete": "El conjunto masculino se impuso en los cuatro encuentros del certamen disputado en Mar del Plata. Tres de los integrantes del plantel tienen quince años.",
@@ -753,6 +1042,7 @@
       "guion": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
@@ -761,7 +1051,7 @@
       "fecha": "2026-10-07T14:38:16.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 84,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -815,84 +1105,6 @@
       "slug": "voley-balcarce-gana-el-torneo-promocional-sub-21-en-mar-del-plata"
     },
     {
-      "id": "2r3foe",
-      "titulo": "La Fiesta Nacional del Postre confirma las clases de cocina para el fin de semana",
-      "copete": "Del 9 al 12 de octubre, la Sociedad Rural de Balcarce recibirá una nueva edición del tradicional encuentro gastronómico. La programación incluye demostraciones de pasteleros y creadores de contenido.",
-      "cuerpo": "Del 9 al 12 de octubre se desarrollará la vigesimosegunda edición de la Fiesta Nacional del Postre en el predio de la Sociedad Rural de Balcarce, con entrada libre y gratuita según se informó previamente. Las clases de cocina comenzarán el sábado a las 16 horas con la presentación de Lulo Kazimirczyk sobre pastelería nórdica, seguida a las 17 horas por el creador de contenido conocido como Mambrunense.\n\nLa programación continuará el domingo a las 17 horas con la participación de Rocío Espinillo, madrina del tradicional encuentro. En tanto, el cierre del lunes a las 16 horas estará a cargo de Valentín Galdón Ritvo, conocido como Chef Salé.\n\nDurante las cuatro jornadas, el evento reunirá espacios para productores, emprendedores, espectáculos y diversas propuestas gastronómicas para toda la familia en torno al Postre Balcarce.",
-      "guion": "La Fiesta Nacional del Postre confirma las clases de cocina para el fin de semana",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/lulo-kazimirczyk-mambrunense-rocio-espinillo-y-chef-sale-las-figuras-que-tendra-la-fiesta-nacional-del-postre",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T14:08:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T15:31:08.051Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Del 9 al 12 de octubre se realizará la Fiesta Nacional del Postre en la Sociedad Rural.",
-        "Lulo Kazimirczyk y Mambrunense se presentarán el sábado por la tarde.",
-        "Rocío Espinillo actuará el domingo y Chef Salé estará el lunes.",
-        "El evento contará con espacios para productores, emprendedores y espectáculos."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Del 9 al 12 de octubre se realizará una nueva edición de la Fiesta Nacional del Postre en la Sociedad Rural de Balcarce con clases de cocina, productores y espectáculos.",
-      "etiquetas": [
-        "Fiesta Nacional del Postre",
-        "Sociedad Rural",
-        "Balcarce",
-        "gastronomía",
-        "pastelería"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/lulo-kazimirczyk-mambrunense-rocio-espinillo-y-chef-sale-las-figuras-que-tendra-la-fiesta-nacional-del-postre",
-          "fecha": "2026-10-07T14:08:04.000Z",
-          "oficial": false,
-          "aporte": "Detalló las figuras invitadas, los horarios de las presentaciones y las actividades previstas para la Fiesta Nacional del Postre."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1s10vxl",
-          "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
-          "fecha": "2026-09-30T16:59:57.000Z",
-          "ruta": "/nota/rocio-espinillo-anticipa-su-receta-para-la-fiesta-del-postre-1s10vxl"
-        },
-        {
-          "id": "1h3b7f0",
-          "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
-          "fecha": "2026-09-30T18:17:49.000Z",
-          "ruta": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0"
-        },
-        {
-          "id": "12rp30w",
-          "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
-          "fecha": "2026-09-29T18:01:09.192Z",
-          "ruta": "/nota/edgardo-rios-visita-la-fiesta-nacional-del-postre-12rp30w"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-fiesta-nacional-del-postre-confirma-las-clases-de-cocina-para-el",
-      "foto": {
-        "archivo": "fotos-notas/2r3foe.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
       "id": "2i73nb",
       "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "copete": "Estudiantes secundarios participan el jueves de charlas sobre los riesgos de las plataformas digitales. La iniciativa provincial llega con la presencia de autoridades de Lotería y Casinos.",
@@ -900,7 +1112,6 @@
       "guion": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/alerta-temprana-sobre-juego-online.html",
@@ -908,7 +1119,7 @@
       "fecha": "2026-10-07T13:37:09.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T15:31:08.051Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1056,6 +1267,7 @@
       "guion": "La Justicia ordena preservar registros de tierras rurales provinciales",
       "seccion": "Agro",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Agencia DIB",
         "El Cronista",
         "El Destape",
@@ -1233,68 +1445,6 @@
       }
     },
     {
-      "id": "1lxw5wx",
-      "titulo": "Detienen a un hombre tras ser atrapado dentro de una casa",
-      "copete": "Familiares del dueño de una vivienda redujeron al sospechoso en la zona de calle 21 y 12. La policía lo trasladó a la Unidad Penal de Batán.",
-      "cuerpo": "Un hombre fue aprehendido el martes por la tarde tras ser encontrado en el interior de una vivienda situada en las inmediaciones de calle 21 y 12, según informó un medio local. El llamado al servicio de emergencias 911 ingresó a las 17.15, cuando alertaron que vecinos retenían a un individuo.\n\nPersonal de la Estación de Policía Comunal llegó al lugar y se entrevistó con el propietario, quien indicó que sus familiares sorprendieron al sujeto dentro del inmueble, lo persiguieron y redujeron hasta la llegada de los uniformados. Durante la requisa, los agentes hallaron entre sus prendas un teléfono celular marca Motorola con carcasa amarilla, reconocido por la víctima.\n\nEl inmueble no tenía traba en el ingreso, por lo que el sospechoso accedió sin provocar daños. La medida fue avalada por el magistrado De la Canale, quien dispuso la formación de una causa y el traslado del acusado a la Unidad Penal número 44 de Batán. De acuerdo con los datos recabados, el individuo registra antecedentes penales por episodios de características similares.",
-      "guion": "Detienen a un hombre tras ser atrapado dentro de una casa",
-      "seccion": "Policiales",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/detuvieron-a-un-hombre-tras-ser-encontrado-dentro-de-una-vivienda/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-07T13:14:35.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T14:32:57.915Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ocurrió el martes por la tarde en calle 21 y 12",
-        "Familiares del dueño redujeron al sospechoso",
-        "Secuestraron un celular y lo trasladaron a Batán",
-        "El aprehendido tiene antecedentes penales"
-      ],
-      "seSabe": [
-        "El procedimiento policial se realizó el martes por la tarde en calle 21 y 12",
-        "El llamado al 911 se registró a las 17.15",
-        "El sospechoso fue retenido por familiares del propietario",
-        "La policía secuestró un teléfono celular Motorola con carcasa amarilla",
-        "Intervino el fiscal De la Canale y el acusado fue alojado en la Unidad Penal 44 de Batán"
-      ],
-      "noConfirmado": [
-        "Los detalles sobre la identidad del aprehendido y la tipificación exacta de la causa judicial",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un hombre fue aprehendido tras ser sorprendido por familiares del propietario dentro de una vivienda en calle 21 y 12. La policía secuestró un celular y trasladó al sospechoso a la Unidad Penal de Batán.",
-      "etiquetas": [
-        "policiales",
-        "aprehendido",
-        "policia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/detuvieron-a-un-hombre-tras-ser-encontrado-dentro-de-una-vivienda/",
-          "fecha": "2026-10-07T13:14:35.000Z",
-          "oficial": false,
-          "aporte": "Detalles del procedimiento policial, la ubicación, el secuestro del celular y el traslado a Batán"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "detienen-a-un-hombre-tras-ser-atrapado-dentro-de-una-casa"
-    },
-    {
       "id": "siahkq",
       "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
       "copete": "El conjunto femenino de la Escuela Municipal de Básquet disputó varios encuentros en el certamen Sporting Rosa. La competencia combinó el deporte con la concientización sobre el cáncer de mama.",
@@ -1343,6 +1493,122 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "las-correcaminos-participan-de-un-torneo-de-basquet-en-mar-del-plata"
+    },
+    {
+      "id": "367w6m",
+      "titulo": "Secuestran un auto con pedido de captura y armas en operativos",
+      "copete": "Hallan un vehículo robado en Balcarce y armas en Mar del Plata durante procedimientos por el hurto a un hombre fallecido.",
+      "cuerpo": "Personal de la Comisaría Primera llevó a cabo operativos en Balcarce y Mar del Plata vinculados al hurto de pertenencias de un hombre de 76 años que falleció. En un inmueble local, los efectivos hallaron un Renault Mégane que poseía pedido de secuestro activo desde junio por un delito automotor. En tanto, en un domicilio marplatense incautaron herramientas, teléfonos, repuestos y motores de aeromodelismo, junto a una escopeta sin cañón y numeración limada.\n\nLa investigación está a cargo de la UFI N.º 4, cuyo titular avaló las incautaciones recientes y notificó a los implicados, sin ordenar restricciones a su libertad.",
+      "guion": "Secuestran un auto con pedido de captura y armas en operativos",
+      "seccion": "Policiales",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/secuestraron-un-auto-con-pedido-de-captura-armas-y-otros-elementos-en-nuevos-allanamientos-491",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-07T13:01:24.717Z",
+      "sinFecha": true,
+      "visto": "2026-10-07T20:01:26.802Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Nuevos operativos en Balcarce y Mar del Plata",
+        "Secuestran un auto con pedido de captura y armas",
+        "Investigan el hurto a un hombre de 76 años fallecido",
+        "La causa interviene la UFI N.º 4"
+      ],
+      "seSabe": [
+        "Se realizaron allanamientos en Balcarce y Mar del Plata por una causa de hurto.",
+        "Hallaron un Renault Mégane con pedido de secuestro activo desde junio.",
+        "En Mar del Plata incautaron herramientas, teléfonos, motores de aeromodelismo y una escopeta sin cañón.",
+        "La UFI N.º 4 notificó a los involucrados sin dictar restricciones de libertad.",
+        "El 24 de septiembre hubo operativos previos con cinco motos secuestradas y dos aprehendidos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Hallan un auto con pedido de secuestro y armas en operativos realizados en Balcarce y Mar del Plata por una causa de hurto.",
+      "etiquetas": [
+        "allanamientos",
+        "Balcarce",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/secuestraron-un-auto-con-pedido-de-captura-armas-y-otros-elementos-en-nuevos-allanamientos-491",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalla los allanamientos realizados en Balcarce y Mar del Plata, el secuestro de un auto robado, armas, elementos de interés y los antecedentes de la causa a cargo de la UFI N.º 4."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "secuestran-un-auto-con-pedido-de-captura-y-armas-en-operativos"
+    },
+    {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "copete": "El piloto balcarceño completó una buena actuación en el autódromo de 9 de Julio. En tanto, Ariel Ianni y Mario Alberghini sufrieron inconvenientes y abandonaron la final.",
+      "cuerpo": "El piloto Francisco Tamagno completó el fin de semana en el octavo puesto de la octava fecha de la Clase \"B\" del Procar 4000, disputada en el autódromo Guillermo Maldonado de 9 de Julio, según informó un medio local. Con su cupé Dodge, el balcarceño mantuvo un ritmo firme, avanzó en el clasificador a pesar de algunos problemas en los frenos y cerró la competencia dentro del pelotón de vanguardia que encabezó Germán Pietranera.\n\nPor el contrario, los otros representantes locales sufrieron distintos inconvenientes y no pudieron terminar la prueba decisiva. Ariel Ianni debió abandonar en el inicio tras un toque que lo sacó de pista con su Ford Falcon, mientras que Mario Alberghini dejó la competencia en la segunda vuelta debido a una falla en el motor de su Torino.",
+      "guion": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-07T12:31:19.165Z",
+      "sinFecha": true,
+      "visto": "2026-10-07T12:31:19.165Z",
+      "relevancia": 61,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Francisco Tamagno terminó en el octavo puesto con su Dodge",
+        "Ariel Ianni abandonó la final tras un despiste en el arranque",
+        "Mario Alberghini dejó la carrera en la segunda vuelta por una falla mecánica",
+        "Germán Pietranera se impuso en la clasificación y en la primera serie"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El piloto Francisco Tamagno terminó octavo en la octava fecha del Procar 4000 en 9 de Julio. Ariel Ianni y Mario Alberghini debieron abandonar la competencia final.",
+      "etiquetas": [
+        "Procar 4000",
+        "Francisco Tamagno",
+        "deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+          "fecha": "2026-10-07T12:01:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados y el desarrollo de la competencia de los pilotos balcarceños en 9 de Julio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "francisco-tamagno-termina-octavo-en-la-octava-fecha-del-procar-4000",
+      "foto": {
+        "archivo": "fotos-notas/y4gp3v.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
     },
     {
       "id": "45acbd",
@@ -1473,63 +1739,6 @@
       "foto": {
         "archivo": "fotos-notas/131078z.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "copete": "El piloto balcarceño completó una buena actuación en el autódromo de 9 de Julio. En tanto, Ariel Ianni y Mario Alberghini sufrieron inconvenientes y abandonaron la final.",
-      "cuerpo": "El piloto Francisco Tamagno completó el fin de semana en el octavo puesto de la octava fecha de la Clase \"B\" del Procar 4000, disputada en el autódromo Guillermo Maldonado de 9 de Julio, según informó un medio local. Con su cupé Dodge, el balcarceño mantuvo un ritmo firme, avanzó en el clasificador a pesar de algunos problemas en los frenos y cerró la competencia dentro del pelotón de vanguardia que encabezó Germán Pietranera.\n\nPor el contrario, los otros representantes locales sufrieron distintos inconvenientes y no pudieron terminar la prueba decisiva. Ariel Ianni debió abandonar en el inicio tras un toque que lo sacó de pista con su Ford Falcon, mientras que Mario Alberghini dejó la competencia en la segunda vuelta debido a una falla en el motor de su Torino.",
-      "guion": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T12:01:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T12:31:19.165Z",
-      "relevancia": 86,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Francisco Tamagno terminó en el octavo puesto con su Dodge",
-        "Ariel Ianni abandonó la final tras un despiste en el arranque",
-        "Mario Alberghini dejó la carrera en la segunda vuelta por una falla mecánica",
-        "Germán Pietranera se impuso en la clasificación y en la primera serie"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El piloto Francisco Tamagno terminó octavo en la octava fecha del Procar 4000 en 9 de Julio. Ariel Ianni y Mario Alberghini debieron abandonar la competencia final.",
-      "etiquetas": [
-        "Procar 4000",
-        "Francisco Tamagno",
-        "deportes",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
-          "fecha": "2026-10-07T12:01:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados y el desarrollo de la competencia de los pilotos balcarceños en 9 de Julio."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "francisco-tamagno-termina-octavo-en-la-octava-fecha-del-procar-4000",
-      "foto": {
-        "archivo": "fotos-notas/y4gp3v.jpg",
-        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -1814,8 +2023,8 @@
       "guion": "Ercolini procesa a Roberto Baratta por enriquecimiento ilícito",
       "seccion": "Política",
       "medios": [
-        "La Nación",
         "Clarín",
+        "La Nación",
         "TN (Todo Noticias)",
         "Perfil",
         "Crónica",
@@ -2204,13 +2413,20 @@
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
+        "El Destape",
         "Perfil",
         "Olé",
+        "C5N",
         "Crónica",
+        "Radio Mitre",
+        "Canal 26",
         "Noticias Argentinas (NA)",
+        "Bolavip Argentina",
         "La Página Millonaria",
+        "0223 (Mar del Plata)",
+        "La Capital (Rosario)",
         "El Economista",
-        "La Capital (Rosario)"
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/07/el-show-con-drones-que-hizo-emocionar-a-lionel-messi-en-su-despedida-de-la-seleccion-argentina/",
       "teniaImagenLaFuente": true,
@@ -2549,13 +2765,13 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
+        "Minuto Uno",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
         "A24",
         "TyC Sports",
         "Olé",
-        "Minuto Uno",
         "C5N",
         "Crónica",
         "Radio Mitre",
@@ -2663,7 +2879,6 @@
       "guion": "Hacelo Corto Balcarce celebra su octava edición con diecinueve producciones",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce"
       ],
@@ -2672,7 +2887,7 @@
       "fecha": "2026-10-06T23:52:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T14:27:45.295Z",
-      "relevancia": 98,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2779,8 +2994,8 @@
       "seccion": "Política",
       "medios": [
         "El Diario Balcarce",
+        "QZ Noticias (Mar del Plata)",
         "TN (Todo Noticias)",
-        "El Día",
         "La Nueva",
         "0221",
         "La Brújula 24",
@@ -2884,15 +3099,14 @@
       "guion": "Organizan una caminata religiosa hacia la ermita local",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45015-invitan-a-participar-de-una-peregrinacion-hacia-la-ermita-de-la-virgen-del-rosario-de-san-nicolas/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T22:31:23.096Z",
-      "sinFecha": false,
+      "sinFecha": true,
       "visto": "2026-10-06T22:31:23.096Z",
-      "relevancia": 88,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3030,7 +3244,7 @@
       "id": "1uh42rm",
       "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "copete": "El Relevamiento de Expectativas de Mercado proyecta una contracción del Producto Bruto Interno en el tercer trimestre y un aumento del desempleo. El dato oficial del INDEC se conocerá el próximo martes.",
-      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
+      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
       "guion": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "seccion": "Economía",
       "medios": [
@@ -3039,10 +3253,10 @@
         "El Cronista",
         "Página/12",
         "Minuto Uno",
-        "Crónica",
         "El Marplatense",
         "La Nueva",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Crónica"
       ],
       "enlace": "https://www.pagina12.com.ar/2026/10/06/mas-inflacion-y-desempleo/",
       "teniaImagenLaFuente": true,
@@ -3231,7 +3445,7 @@
       "fecha": "2026-10-06T19:34:36.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T20:31:49.570Z",
-      "relevancia": 75,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3377,11 +3591,11 @@
       "guion": "Grupo Cali explica los motivos de la suspensión de su show",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Olé",
         "La Nación",
         "TN (Todo Noticias)",
         "El Destape",
         "TyC Sports",
-        "Olé",
         "Crónica",
         "Radio Mitre",
         "C5N",
@@ -3561,20 +3775,17 @@
         "Minuto Uno",
         "Radio Mitre",
         "Clarín",
-        "TyC Sports",
-        "Noticias Argentinas (NA)",
-        "0223 (Mar del Plata)",
-        "El Economista",
-        "La Nueva",
-        "La Capital (Rosario)",
         "TN (Todo Noticias)",
+        "TyC Sports",
         "Olé",
         "Diario Popular",
         "Ámbito",
         "Canal 26",
         "El Destape",
+        "La Nueva",
         "C5N",
         "La Nación",
+        "Noticias Argentinas (NA)",
         "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/emilia-scioli-hizo-podio-en-el-ironman.html",
@@ -3629,161 +3840,6 @@
       }
     },
     {
-      "id": "q0mrv4",
-      "titulo": "El quirófano móvil de castraciones sigue en la Escuela de Arte",
-      "copete": "El dispositivo veterinario continúa en la calle 11 entre 18 y 20 debido a trabajos de puesta en valor en el edificio. Las prestaciones siguen con normalidad.",
-      "cuerpo": "El quirófano móvil de castraciones, perteneciente a la Dirección de Inspección General, mantiene su base en la Escuela de Arte Astor Piazzolla, ubicada en la calle 11 entre 18 y 20. El móvil seguirá en ese lugar temporalmente porque docentes y alumnos llevarán adelante una intervención para mejorar la fachada del establecimiento.\n\nEl inicio de las obras se postergó a causa de las condiciones climáticas de las jornadas previas. Mientras tanto, el dispositivo presta los servicios habituales de acuerdo con la programación vigente y la agenda futura se comunicará cuando finalicen las tareas edilicias.",
-      "guion": "El quirófano móvil de castraciones sigue en la Escuela de Arte",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/el-quirofano-movil-continua-atendiendo.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T16:12:03.715Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T22:01:15.379Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El quirófano móvil sigue en la Escuela de Arte.",
-        "Hay demoras en la obra por el clima.",
-        "Las castraciones se realizan con normalidad."
-      ],
-      "seSabe": [
-        "El quirófano móvil depende de la Dirección de Inspección General.",
-        "El dispositivo está situado en la calle 11 entre 18 y 20.",
-        "La permanencia se debe a una intervención en la fachada de la escuela.",
-        "Las atenciones se desarrollan con normalidad."
-      ],
-      "noConfirmado": [
-        "La fecha exacta en que finalizarán las obras en el establecimiento educativo."
-      ],
-      "textoRedes": "El quirófano móvil de castraciones continúa atendiendo en la Escuela de Arte debido a trabajos de mejora en la fachada. Las prestaciones se desarrollan de manera habitual.",
-      "etiquetas": [
-        "quirofano movil",
-        "castraciones",
-        "Escuela de Arte Astor Piazzolla",
-        "Inspeccion General"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-quirofano-movil-continua-atendiendo.html",
-          "fecha": "2026-10-06T16:12:03.715Z",
-          "oficial": false,
-          "aporte": "Informó que el quirófano sigue en la escuela por obras en la fachada y que el clima demoró el inicio."
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/el-quirofano-movil-de-castraciones-continua-temporalmente-en-la-escuela-de-arte/",
-          "fecha": "2026-10-06T19:44:08.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la ubicación del dispositivo en la calle 11 entre 18 y 20 y los motivos de su permanencia."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45012-el-quirofano-movil-de-castraciones-continua-en-la-escuela-de-arte/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló que las atenciones continúan con normalidad durante la intervención que realizan docentes y alumnos."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1o1dlqq",
-          "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
-          "fecha": "2026-09-29T14:32:05.000Z",
-          "ruta": "/nota/arte-fusion-expo-anual-2026-en-el-museo-historico-1o1dlqq"
-        },
-        {
-          "id": "1b8n8ol",
-          "titulo": "Zoonosis traslada el quirófano móvil",
-          "fecha": "2026-09-21T16:47:06.052Z",
-          "ruta": "/nota/zoonosis-traslada-el-quirofano-movil-en-balcarce-1b8n8ol"
-        },
-        {
-          "id": "1ozoykm",
-          "titulo": "Zoonosis traslada el quirófano móvil a la Plaza Colón",
-          "fecha": "2026-09-18T20:11:28.000Z",
-          "ruta": "/nota/zoonosis-traslada-el-quirofano-movil-a-la-plaza-colon-1ozoykm"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-quirofano-movil-de-castraciones-sigue-en-la-escuela-de-arte",
-      "foto": {
-        "archivo": "fotos-notas/q0mrv4.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "gj403a",
-      "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
-      "copete": "El espacio municipal albergó un encuentro artístico con entrada gratuita y un buffet a beneficio de la Sociedad de Protección a la Infancia.",
-      "cuerpo": "La Casa del Bicentenario albergó un encuentro artístico que combinó música en vivo, literatura y un fin solidario a beneficio de la Sociedad de Protección a la Infancia, que estuvo a cargo del buffet con acceso libre.\n\nLa jornada, conducida por Marcos Jauregui, comenzó con la actuación de Nahuel González Salvo, quien repasó canciones propias, clásicos del rock, tango y folklore. Luego, el secretario de Cultura, César Gustavo De Gerónimo, leyó un poema de Jorge Luis Borges, y más tarde se presentó el dúo Bajo Fondo, integrado por Juan Manuel Troglio y Marcelo Requena, con un repertorio de rock argentino de los ochenta y noventa junto a invitados especiales.\n\nEl cierre reunió a los artistas en el escenario para interpretar una obra de Vox Dei en recuerdo de Ricardo Soulé, integrante de la banda fallecido recientemente.",
-      "guion": "La Casa del Bicentenario recibe un festival de música y homenajes",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/una-noche-de-musica-y-homenaje-en-la.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T16:07:51.536Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Casa del Bicentenario fue sede de un festival artístico y solidario.",
-        "Participaron músicos locales, invitados y el secretario de Cultura.",
-        "El buffet estuvo a cargo de la Sociedad de Protección a la Infancia.",
-        "Realizaron un homenaje musical al fallecido Ricardo Soulé."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Casa del Bicentenario albergó un festival artístico con música, literatura y un buffet a beneficio de la Sociedad de Protección a la Infancia.",
-      "etiquetas": [
-        "Cultura",
-        "Casa del Bicentenario",
-        "musica",
-        "homenaje"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/una-noche-de-musica-y-homenaje-en-la.html",
-          "fecha": "2026-10-06T16:07:51.536Z",
-          "oficial": false,
-          "aporte": "Informó los detalles del festival cultural, los artistas participantes y el fin solidario del encuentro."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-casa-del-bicentenario-recibe-un-festival-de-musica-y-homenajes",
-      "foto": {
-        "archivo": "fotos-notas/gj403a.jpg",
-        "credito": "Foto: Infórmese Primero (FM 104.9)"
-      }
-    },
-    {
       "id": "1ypbdma",
       "titulo": "El riesgo país sube y vuelve a la zona de los 600 puntos básicos",
       "copete": "El indicador financiero del JP Morgan trepa este miércoles tras dos jornadas consecutivas en descenso. El repunte se produce luego del optimismo generado en los mercados por las elecciones presidenciales en Brasil.",
@@ -3794,15 +3850,14 @@
         "La Nación",
         "iProfesional",
         "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día"
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-retoma-la-senda-alcista-y-supera-los-600-puntos-basicos_a6ac654b725d386c88149018b",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T14:27:36.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T16:01:25.564Z",
-      "relevancia": 73,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4367,16 +4422,16 @@
     }
   ],
   "secciones": [
-    "Balcarce",
     "Economía",
+    "Balcarce",
     "Agro",
     "Política",
     "Fútbol",
+    "Argentina",
     "Deportes",
-    "Cultura y agenda",
     "Policiales",
     "Automovilismo",
-    "Argentina"
+    "Cultura y agenda"
   ],
   "temas": [
     {
@@ -4392,10 +4447,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
-      "sensacion": 10,
+      "temp": 12,
+      "sensacion": 9,
       "humedad": 97,
-      "viento": 24,
+      "viento": 25,
       "rumbo": "SE",
       "cielo": "Llovizna",
       "esDeDia": true
@@ -4756,16 +4811,22 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "1jw4p7g",
+      "titulo": null,
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"nene\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "7gf331",
       "titulo": "Proyecto del CENS N° 451 impulsa un Punto Digital móvil o…",
       "seccion": "Balcarce",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "146mbos",
-      "titulo": "La ANMAT prohibió el uso de dos suplementos promocionados…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "6hubq6",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "13wfgz4",
@@ -4774,28 +4835,34 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "baz7ti",
-      "titulo": "Denuncian a Alejandro Mancuso por vender licencias de DT…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1qmt02i",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
+      "id": "146mbos",
+      "titulo": "La ANMAT prohibió el uso de dos suplementos promocionados…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "1d4b5el",
       "titulo": "Juicio contra Aníbal Lotocki: declarará por las presuntas…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "1tcxxsy",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "51b1bv",
+      "titulo": "El quirófano móvil de castraciones continúa en la Escuela…",
+      "seccion": "Balcarce",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "urah7l",
@@ -4808,6 +4875,12 @@
       "titulo": "La izquierda convoca a movilizar a la Corte y al Congreso…",
       "seccion": "Agro",
       "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "baz7ti",
+      "titulo": "Denuncian a Alejandro Mancuso por vender licencias de DT…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "b36p7m",
@@ -4868,13 +4941,7 @@
       "titulo": "El relato de Iair Horn, el argentino que estuvo casi 500…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "1cjo0n1",
-      "titulo": "Javier Milei recibió un mensaje de Flávio Bolsonaro y…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 5
 }
