@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T03:02:14.508Z",
- "portada": 50,
+ "generado": "2026-10-07T03:31:39.388Z",
+ "portada": 49,
  "archivo": 992,
  "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-07T03:02:14.546Z",
+  "generado": "2026-10-07T03:31:39.413Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
      {
       "id": "1cnlvgi",
@@ -103,14 +103,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "1r3qdtj",
       "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
       "seccion": "Deportes"
+     },
+     {
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "seccion": "Balcarce"
      },
      {
       "id": "1793nst",
@@ -126,21 +126,21 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "11d7omy",
+      "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
+      "seccion": "Fútbol"
+     },
      {
       "id": "17i3vkh",
       "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "n1xmig",
-      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      },
      {
@@ -157,12 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 49,
     "notas": [
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "seccion": "Balcarce"
+      "id": "1uh42rm",
+      "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
+      "seccion": "Economía"
+     },
+     {
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      },
      {
       "id": "9m9h4e",
@@ -180,12 +185,6 @@
   "facebook": {
    "hoy": [],
    "cola": [
-    {
-     "id": "9ncum9",
-     "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "1n6yxr",
      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",

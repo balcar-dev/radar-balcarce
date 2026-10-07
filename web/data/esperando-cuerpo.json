@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T03:02:14.508Z",
+ "generado": "2026-10-07T03:31:39.388Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -30,8 +30,8 @@
      "fecha": "2026-10-07T02:17:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 48 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
    "maximo": 3
   },
   {
@@ -49,7 +49,7 @@
     {
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/teleshow/2026/10/07/asi-fueron-los-shows-de-la-despedida-de-lionel-messi-del-abrazo-del-capitan-con-la-sole-a-la-sorpresa-de-sergio-torres/",
-     "fecha": "2026-10-07T02:52:56.000Z"
+     "fecha": "2026-10-07T03:06:59.000Z"
     },
     {
      "medio": "La Nación",
@@ -107,8 +107,8 @@
      "fecha": "2026-10-06T22:29:50.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (nombre, negacion): el copete nombra a \"benen\" y la fuente no",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 5
   },
   {
@@ -127,6 +127,11 @@
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/deportes/futbol/los-canticos-de-los-hinchas-contra-chiqui-tapia-en-la-previa-de-la-despedida-de-messi-de-la-nid06102026/",
      "fecha": "2026-10-07T02:26:34.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/seleccion/tapia-messi-carta-instagram_0_ydtR0iNwMb.html",
+     "fecha": "2026-10-07T03:25:14.000Z"
     },
     {
      "medio": "Olé",
@@ -154,41 +159,36 @@
    "maximo": 4
   },
   {
-   "id": "1u7aojj",
-   "titulo": "La emocionante última arenga de Lionel Messi en la Selección argentina: \"De esa manera lo disfrutamos\"",
-   "copete": "Lionel Messi volvió a ocupar el centro de la escena incluso antes de que empezara el partido. A la salida del túnel, en la antesala de su último encuentro con la camiseta de la selección argentina , el capitán reunió a sus compañeros y encabezó la arenga previa al ingreso a la…",
+   "id": "rilva6",
+   "titulo": "El show con drones que hizo emocionar a Lionel Messi en su despedida de la selección argentina",
+   "copete": "El cielo del estadio Monumental se convirtió en una pantalla para despedir a Lionel Messi. Un show de drones repasó los símbolos centrales de su recorrido con la selección argentina y terminó con un retrato de perfil del capitán, que siguió la secuencia desde el campo de juego…",
    "seccion": "Fútbol",
-   "fecha": "2026-10-06T23:24:00.000Z",
+   "fecha": "2026-10-07T01:56:20.000Z",
    "fuentes": [
     {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/deportes/la-emocionante-ultima-arenga-lionel-messi-la-seleccion-argentina-de-esa-manera-lo-disfrutamos-n250930",
-     "fecha": "2026-10-06T23:24:00.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/deportes/futbol/la-ultima-arenga-de-lionel-messi-en-la-seleccion-argentina-que-les-dijo-a-sus-companeros-antes-de-nid06102026/",
-     "fecha": "2026-10-07T01:39:54.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/07/el-show-con-drones-que-hizo-emocionar-a-lionel-messi-en-su-despedida-de-la-seleccion-argentina/",
+     "fecha": "2026-10-07T01:56:20.000Z"
     },
     {
      "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/seleccion/ultima-arenga-messi-argentina_3_ErbbRP0auw.html",
-     "fecha": "2026-10-06T23:30:53.000Z"
+     "enlace": "https://www.ole.com.ar/seleccion/show-drones-despedida-messi_3_j06Cg3viGE.html",
+     "fecha": "2026-10-07T02:00:06.000Z"
     },
     {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/futbol/video-messi-dio-su-ultima-arenga-la-seleccion-n923136",
-     "fecha": "2026-10-07T00:26:00.000Z"
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/el-insolito-blooper-del-show-de-drones-en-la-despedida-de-messi_a6ac5ac5061c15874390af71a",
+     "fecha": "2026-10-07T02:26:00.000Z"
     },
     {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/la-conmovedora-ultima-arenga-de-lionel-messi-como-capitan-de-la-seleccion-argentina-de-esta-manera-lo-disfrutamos/",
-     "fecha": "2026-10-06T23:34:07.000Z"
+     "medio": "La Página Millonaria",
+     "enlace": "https://lapaginamillonaria.com/seleccion-argentina/el-monumental-repudio-a-chiqui-tapia-en-la-despedida-de-messi-de-la-seleccion-argentina-tras-el-show-de-drones",
+     "fecha": "2026-10-07T02:33:47.000Z"
     }
    ],
-   "intentos": 4,
-   "motivo": "cuerpo: 5 problemas (nombre, fecha, antecedente, relleno, repite): el cuerpo nombra a \"plate\" y la fuente no; sin esas oraciones quedan 24 palabras",
-   "maximo": 4
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (nombre): el cuerpo nombra a \"catar\" y la fuente no; sin esas oraciones quedan 67 palabras",
+   "maximo": 3
   },
   {
    "id": "ioddw4",
@@ -230,6 +230,11 @@
      "fecha": "2026-10-06T22:48:55.000Z"
     },
     {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/diputados-dio-un-paso-clave-en-un-proyecto-para-incorporar-el-vandalismo-rural-en-el-codigo-penal/",
+     "fecha": "2026-10-07T03:11:58.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/diputados-aprueba-en-comision-incorporar-el--vandalismo-rural--al-codigo-penal-con-penas-de-hasta-8-anos_a6ac54b5061c1587439fb8d98",
      "fecha": "2026-10-06T20:32:40.061Z"
@@ -247,7 +252,7 @@
   {
    "id": "1ekdqxx",
    "titulo": "Por obras, los ramales Suárez y Bartolomé Mitre no funcionarán entre el 9 y el 12 de octubre",
-   "copete": "Los ramales José León Suárez y Bartolomé Mitre de la línea Mitre permanecerán interrumpidos desde el viernes 9 hasta el lunes 12 de octubre inclusive debido a una serie de obras que se realizarán en la zona de vías. Según informó Trenes Argentinos, el corte permitirá avanzar con…",
+   "copete": "Los ramales José León Suárez y Bartolomé Mitre de la línea del Tren Mitre quedarán sin servicio entre el viernes 9 y el lunes 12 de octubre inclusive, como consecuencia de obras de reemplazo del puente ferroviario ubicado sobre la avenida Luis María Campos , en la Ciudad de…",
    "seccion": "Argentina",
    "fecha": "2026-10-06T17:20:18.000Z",
    "fuentes": [
@@ -333,7 +338,7 @@
     {
      "medio": "TN (Todo Noticias)",
      "enlace": "https://tn.com.ar/show/novedades/2026/10/06/murio-carlos-clerici-la-emblematica-voz-de-las-campanas-de-luchemos-por-la-vida/",
-     "fecha": "2026-10-06T21:20:39.000Z"
+     "fecha": "2026-10-06T21:20:40.000Z"
     },
     {
      "medio": "La Nación",

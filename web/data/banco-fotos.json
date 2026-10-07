@@ -7251,16 +7251,16 @@
   "cuando": "2026-10-05T16:32:00.717Z"
  },
  "1vnue0q": {
-  "archivo": "fotos-notas/1vnue0q.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Auto Club Balcarce confirma el cronograma para el Zonal",
   "enlace": "https://accion5.com/zonal-en-balcarce-los-horarios-de-las-dos-jornadas-completas/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/DSC_6297.jpg",
   "razon": "Es la única opción disponible, cuenta con buena nitidez y encuadre de los autos de carrera, sin marcas de agua del medio ni menores reconocibles.",
-  "cuando": "2026-10-05T15:32:06.604Z"
+  "cuando": "2026-10-05T15:32:06.604Z",
+  "intentado": true,
+  "borrada": true
  },
  "k7pcxh": {
   "archivo": "fotos-notas/k7pcxh.jpg",
@@ -8839,5 +8839,14 @@
   "cuando": "2026-10-07T03:02:04.264Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "11d7omy": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-07T03:31:35.125Z",
+  "intentos": 1,
+  "fuentes": 5
  }
 }
