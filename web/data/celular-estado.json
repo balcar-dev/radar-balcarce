@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T04:01:52.398Z",
- "portada": 48,
- "archivo": 993,
+ "generado": "2026-10-07T04:31:58.605Z",
+ "portada": 46,
+ "archivo": 992,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-07T04:01:52.437Z",
+  "generado": "2026-10-07T04:31:58.645Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,22 +95,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
      {
-      "id": "1cnlvgi",
-      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
+      "id": "11d7omy",
+      "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
-      "seccion": "Balcarce"
      },
      {
       "id": "1r3qdtj",
       "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
       "seccion": "Deportes"
+     },
+     {
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "seccion": "Balcarce"
      },
      {
       "id": "1793nst",
@@ -126,21 +126,21 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "11d7omy",
-      "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
-      "seccion": "Fútbol"
-     },
      {
       "id": "1outpc2",
       "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "id": "17i3vkh",
+      "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      },
      {
@@ -160,23 +160,18 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "17i3vkh",
-      "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1uh42rm",
-      "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
-      "seccion": "Economía"
-     },
-     {
       "id": "1n6yxr",
       "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
      },
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "id": "9m9h4e",
+      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]
@@ -185,12 +180,6 @@
   "facebook": {
    "hoy": [],
    "cola": [
-    {
-     "id": "9ncum9",
-     "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "1n6yxr",
      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",

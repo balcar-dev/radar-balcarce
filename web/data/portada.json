@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T04:01:52.398Z",
+  "generado": "2026-10-07T04:31:58.605Z",
   "notas": [
     {
       "id": "11d7omy",
@@ -337,7 +337,6 @@
       "guion": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/estudiantes-presentaron-19-cortometrajes-sobre-balcarce-en-la-octava-edicion-de-hacelo-corto",
@@ -345,7 +344,7 @@
       "fecha": "2026-10-06T23:52:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T00:31:18.034Z",
-      "relevancia": 88,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -615,8 +614,8 @@
         "Minuto Uno",
         "Infobae",
         "TN (Todo Noticias)",
-        "Página/12",
         "La Nueva",
+        "Página/12",
         "La Brújula 24"
       ],
       "enlace": "https://www.pagina12.com.ar/2026/10/06/mas-inflacion-y-desempleo/",
@@ -624,7 +623,7 @@
       "fecha": "2026-10-06T21:24:44.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T01:02:05.217Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -696,6 +695,139 @@
       "foto": {
         "archivo": "fotos-notas/1uh42rm.jpg",
         "credito": "Foto: Página/12"
+      }
+    },
+    {
+      "id": "zqq9w8",
+      "titulo": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
+      "copete": "Un grupo de fanáticos abucheó al presidente de la Asociación del Fútbol Argentino en la previa del partido homenaje a Lionel Messi en el estadio Monumental. El dirigente afronta una causa judicial por enriquecimiento ilícito.",
+      "cuerpo": "Un grupo de simpatizantes entonó cánticos contra el presidente de la Asociación del Fútbol Argentino, Claudio Tapia, minutos antes del partido amistoso entre la selección argentina y Benín en el estadio Monumental. Los gritos comenzaron en la tribuna Centenario alta y se extendieron hasta el sector Sívori en la previa de la despedida del capitán Lionel Messi.\n\nEn paralelo al homenaje organizado por la entidad madre del fútbol nacional, Tapia afronta una investigación judicial por presunto enriquecimiento ilícito a cargo del juez federal Ariel Lijo, expediente que sumó medidas recientes impulsadas por el fiscal Gerardo Pollicita.",
+      "guion": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Perfil",
+        "Olé",
+        "El Día",
+        "0221",
+        "Clarín",
+        "Radio Mitre"
+      ],
+      "enlace": "https://noticias.perfil.com/noticias/deportes/lavado-de-imagen-chiqui-tapia-se-abrazo-a-messi-antes-de-la-despedida-del-capitan.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T20:18:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T01:31:56.668Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Hinchas insultaron al presidente de la AFA en la previa del partido en el Monumental.",
+        "Los cánticos nacieron en la tribuna Centenario y se extendieron a la Sívori.",
+        "Lionel Messi disputó su encuentro despedida de la selección argentina frente a Benín.",
+        "Claudio Tapia afronta una investigación judicial por presunto enriquecimiento ilícito."
+      ],
+      "noConfirmado": [
+        "No trascendió la cantidad exacta de hinchas que participaron de los cánticos contra el titular de la AFA."
+      ],
+      "textoRedes": "Hinchas insultaron al presidente de la AFA, Claudio Tapia, en la previa del partido despedida de Lionel Messi en el estadio Monumental. Los cánticos comenzaron en la tribuna Centenario alta y se extendieron por distintos sectores del escenario deportivo.",
+      "etiquetas": [
+        "Claudio Tapia",
+        "Lionel Messi",
+        "Seleccion argentina",
+        "Estadio Monumental",
+        "AFA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://noticias.perfil.com/noticias/deportes/lavado-de-imagen-chiqui-tapia-se-abrazo-a-messi-antes-de-la-despedida-del-capitan.phtml",
+          "fecha": "2026-10-06T20:18:29.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la trayectoria de Messi, la organización de la AFA y la causa judicial contra Tapia."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/los-canticos-de-los-hinchas-contra-chiqui-tapia-en-la-previa-de-la-despedida-de-messi-de-la-nid06102026/",
+          "fecha": "2026-10-06T23:49:38.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los cánticos de los hinchas contra el presidente de la AFA en la previa."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/chiqui-tapia-boton-cantos-presidente-afa-previa-despedida-messi-monumental_0_oWhRD6JQVz.html",
+          "fecha": "2026-10-06T22:42:18.000Z",
+          "oficial": false,
+          "aporte": "Precisó que los gritos comenzaron en la Centenario alta y se extendieron a la Sívori."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/insultos-claudio-tapia-monumental-despedida-messi_0_sv6o3l2oNb.html",
+          "fecha": "2026-10-06T22:52:02.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/canticos-tapia_3_LxAylRmWhM.html",
+          "fecha": "2026-10-06T22:42:52.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/videos/video-la-reaccion-de-los-hinchas-contra-chiqui-tapia-en-el-partido-despedida-de-lionel-messi/",
+          "fecha": "2026-10-06T23:26:12.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los insultos de los fanáticos al presidente de la AFA antes del inicio."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/videos-insultos-para-chiqui-tapia-en-el-monumental-en-la-previa-de-la-despedida-de-messi-deportes_1791327960",
+          "fecha": "2026-10-06T23:09:00.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/video-el-estadio-monumental-exploto-contra-chiqui-tapia-la-despedida-lionel-messi-n135407",
+          "fecha": "2026-10-07T00:56:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el recorrido de los cánticos desde la tribuna Centenario por distintos sectores del Monumental."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "19n87v4",
+          "titulo": "La reventa de entradas supera los seis millones de pesos para la despedida de Messi",
+          "fecha": "2026-10-06T17:12:10.000Z",
+          "ruta": "/nota/la-reventa-de-entradas-supera-los-seis-millones-de-pesos-para-la-19n87v4"
+        },
+        {
+          "id": "o99ioz",
+          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
+          "fecha": "2026-10-03T13:24:05.000Z",
+          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
+        },
+        {
+          "id": "iheoi7",
+          "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
+          "fecha": "2026-10-01T09:00:00.000Z",
+          "ruta": "/nota/el-partido-despedida-de-messi-dispara-la-demanda-de-viajes-hacia-iheoi7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "hinchas-insultan-a-claudio-tapia-en-la-despedida-de-lionel-messi",
+      "foto": {
+        "archivo": "fotos-notas/zqq9w8.jpg",
+        "credito": "Foto: Clarín"
       }
     },
     {
@@ -940,8 +1072,8 @@
       "medios": [
         "Crónica",
         "Noticias Argentinas (NA)",
-        "La Verdad",
         "InfoRegión",
+        "La Verdad",
         "Agencia DIB"
       ],
       "enlace": "https://noticiasargentinas.com/politica/ravier-aseguro-que--la-ley-de-tierras-no-afecta-la-soberania-territorial-_a6ac51dff61c1587439f4cb04",
@@ -1257,7 +1389,7 @@
       "fecha": "2026-10-06T16:12:03.715Z",
       "sinFecha": false,
       "visto": "2026-10-06T22:01:15.379Z",
-      "relevancia": 90,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1346,7 +1478,6 @@
       "guion": "La Casa del Bicentenario recibe un festival de música y homenajes",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Diario La Vanguardia"
       ],
@@ -1355,7 +1486,7 @@
       "fecha": "2026-10-06T16:07:51.536Z",
       "sinFecha": false,
       "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 100,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1414,7 +1545,7 @@
       "fecha": "2026-10-06T15:10:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 50,
+      "relevancia": 46,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1645,71 +1776,6 @@
       "foto": {
         "archivo": "fotos-notas/2yqn4q.jpg",
         "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "1msr2pb",
-      "titulo": "El alquiler consume casi la mitad de los ingresos en la provincia",
-      "copete": "Los inquilinos bonaerenses destinan cerca del 50 por ciento de su salario al pago de la vivienda, según datos difundidos por la Provincia y entidades del sector.",
-      "cuerpo": "El alquiler de una vivienda demanda alrededor del 50 por ciento de los ingresos en el territorio bonaerense, mientras que en 2023 esa proporción se ubicaba en el 35 por ciento, según informó el asesor de la Gobernación Agustín Simone. El funcionario señaló que la suba responde a ingresos bajos, el costo de la construcción y la falta de acceso a créditos hipotecarios, además de una rentabilidad que trepó del cinco al diez por ciento sobre el valor de los inmuebles.\n\nEn paralelo, un estudio de Inquilinos Agrupados elaborado con registros de ARBA determinó que 104.584 personas poseen cinco o más propiedades edificadas y concentran al menos el 14 por ciento de los inmuebles. El informe detalla que el 74,2 por ciento de los dueños tiene una sola unidad, aunque quienes cuentan con dos o más dominan más de la mitad del mercado. Los hogares que alquilan pasaron de representar el 9,5 por ciento en 2001 al 19,3 por ciento en 2022.",
-      "guion": "El alquiler consume casi la mitad de los ingresos en la provincia",
-      "seccion": "Economía",
-      "medios": [
-        "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
-        "Infoeme",
-        "La Voz del Pueblo"
-      ],
-      "enlace": "https://dib.com.ar/sociedad/los-inquilinos-bonaerenses-destinan-casi-la-mitad-su-salario-al-alquiler-n56272",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T13:33:28.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T19:31:28.644Z",
-      "relevancia": 60,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El alquiler de una vivienda demanda cerca del 50% del salario en la provincia.",
-        "En 2023 la relación era del 35%, según indicó el asesor de la Gobernación Agustín Simone.",
-        "Un relevamiento basado en datos de ARBA muestra que 104.584 personas poseen cinco o más inmuebles.",
-        "Los hogares inquilinos crecieron del 9,5% en 2001 al 19,3% en 2022."
-      ],
-      "textoRedes": "El alquiler de una vivienda representa cerca del 50 por ciento del salario en la provincia de Buenos Aires, según informaron fuentes provinciales y entidades del sector.",
-      "etiquetas": [
-        "inquilinos",
-        "alquileres",
-        "provincia de Buenos Aires",
-        "salarios",
-        "vivienda"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/los-inquilinos-bonaerenses-destinan-casi-la-mitad-su-salario-al-alquiler-n56272",
-          "fecha": "2026-10-06T13:33:28.000Z",
-          "oficial": false,
-          "aporte": "Detalló que el alquiler consume el 50% del salario, la evolución de la rentabilidad inmobiliaria y las estadísticas de concentración de propiedades de ARBA."
-        },
-        {
-          "medio": "Infoeme",
-          "enlace": "https://www.infoeme.com/informacion-general/2026-10-6-15-49-4-los-inquilinos-bonaerenses-destinan-casi-la-mitad-de-su-salario-al-alquiler",
-          "fecha": "2026-10-06T18:49:04.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el alquiler de una vivienda representa cerca del 50% del salario en la provincia de Buenos Aires."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-alquiler-consume-casi-la-mitad-de-los-ingresos-en-la-provincia",
-      "foto": {
-        "archivo": "fotos-notas/1msr2pb.jpg",
-        "credito": "Foto: Agencia DIB"
       }
     },
     {
@@ -2174,7 +2240,7 @@
       "fecha": "2026-10-06T11:16:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T13:01:11.200Z",
-      "relevancia": 73,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2337,11 +2403,12 @@
       "id": "1c7wqua",
       "titulo": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "copete": "La secretaria general de la Presidencia y el jefe de Gabinete se reúnen con mandatarios provinciales en Salta. Buscan respaldos para suspender las PASO y aprobar el Presupuesto.",
-      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
+      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
       "guion": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "seccion": "Política",
       "medios": [
         "La Nación",
+        "Clarín",
         "Infobae",
         "El Cronista",
         "C5N",
@@ -2350,10 +2417,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Tecla",
-        "La Verdad",
-        "Clarín",
         "Diputados Bonaerenses",
-        "Ámbito"
+        "Ámbito",
+        "La Verdad"
       ],
       "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
       "teniaImagenLaFuente": true,
@@ -2997,6 +3063,113 @@
       }
     },
     {
+      "id": "1dcn7h",
+      "titulo": "El canciller Pablo Quirno critica la postura británica sobre Malvinas ante el embajador",
+      "copete": "Durante la cena anual del CARI en Buenos Aires, el canciller Pablo Quirno cuestionó la soberanía británica sobre las Islas Malvinas frente al embajador David Cairns, quien se retiró al finalizar el discurso.",
+      "cuerpo": "El canciller Pablo Quirno cuestionó la negativa británica a negociar la soberanía de las Islas Malvinas durante la comida anual del Consejo Argentino para las Relaciones Internacionales (CARI), realizada el lunes por la noche en La Rural de Palermo.\n\nEn el evento, que reunió a ministros, empresarios y diplomáticos en el marco del 48 aniversario de la institución, el embajador de Reino Unido, David Cairns, siguió las palabras desde la mesa 23 y se retiró apenas concluyó la exposición con la frase \"tengo que informar a mi gobierno\".",
+      "guion": "El canciller Pablo Quirno critica la postura británica sobre Malvinas ante el embajador",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "A24",
+        "Clarín",
+        "Crónica"
+      ],
+      "enlace": "https://www.clarin.com/economia/incomoda-coincidencia-canciller-quirno-hablo-sanciones-malvinas-frente-embajador-reino-unido-cena-rural_0_eAUtpW1544.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T02:19:24.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T10:31:19.639Z",
+      "relevancia": 64,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El canciller Pablo Quirno cuestionó al Reino Unido por las Islas Malvinas.",
+        "El embajador británico David Cairns se retiró de la cena del CARI tras el discurso.",
+        "El funcionario nacional mencionó sanciones a petroleras que operan en la cuenca de Sea Lion."
+      ],
+      "seSabe": [
+        "El canciller Pablo Quirno expuso en la cena anual del CARI en La Rural el lunes por la noche.",
+        "El embajador británico David Cairns escuchó el discurso y se retiró al finalizar.",
+        "Quirno afirmó que las medidas contra la explotación petrolera afectan a las empresas Rockhopper y Navitas."
+      ],
+      "noConfirmado": [
+        "No se detallaron los pasos diplomáticos futuros que tomará el gobierno británico tras la advertencia del embajador."
+      ],
+      "textoRedes": "El canciller Pablo Quirno criticó la posición británica sobre Malvinas durante la cena del CARI ante el embajador David Cairns, quien se retiró del lugar al terminar la exposición.",
+      "etiquetas": [
+        "Malvinas",
+        "Pablo Quirno",
+        "CARI",
+        "Reino Unido"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/incomoda-coincidencia-canciller-quirno-hablo-sanciones-malvinas-frente-embajador-reino-unido-cena-rural_0_eAUtpW1544.html",
+          "fecha": "2026-10-06T02:19:24.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos del canciller Quirno sobre las petroleras y la salida del embajador."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/reunion-del-cari-ante-el-embajador-britanico-el-canciller-quirno-fustigo-la-ocupacion-de-las-islas-nid06102026/",
+          "fecha": "2026-10-06T06:23:57.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la descripción de la incomodidad del embajador británico durante la cena."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/06/pablo-quirno-celebro-el-resultado-electoral-en-brasil-y-hablo-de-las-sanciones-por-malvinas-frente-al-embajador-britanico/",
+          "fecha": "2026-10-06T05:48:06.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la celebración del canciller por el resultado electoral en Brasil."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/05/pablo-quirno-destaco-el-resultado-electoral-en-brasil-la-argentina-aporto-la-fuerza-de-su-ejemplo/",
+          "fecha": "2026-10-06T02:24:12.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el evento correspondía al 48 aniversario del CARI."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wnwtbo",
+          "titulo": "El Reino Unido exige autorización central para nuevos permisos petroleros en Malvinas",
+          "fecha": "2026-10-01T10:50:00.000Z",
+          "ruta": "/nota/el-reino-unido-exige-autorizacion-central-para-nuevos-permisos-wnwtbo"
+        },
+        {
+          "id": "iw7x0c",
+          "titulo": "El Reino Unido respondió el discurso de Milei ante la ONU y rechazó negociar la soberanía de Malvinas sin aval isleño",
+          "fecha": "2026-09-23T20:10:17.000Z",
+          "ruta": "/nota/el-reino-unido-respondio-el-discurso-de-milei-ante-la-onu-y-rechazo-iw7x0c"
+        },
+        {
+          "id": "tlydas",
+          "titulo": "Canciller afirma que Chile no da apoyo logístico en Malvinas",
+          "fecha": "2026-09-29T14:41:10.000Z",
+          "ruta": "/nota/canciller-afirma-que-chile-no-da-apoyo-logistico-en-malvinas-tlydas"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-canciller-pablo-quirno-critica-la-postura-britanica-sobre-malvinas",
+      "foto": {
+        "archivo": "fotos-notas/1dcn7h.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "aa0h34",
       "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
       "copete": "La ciudad recibió a integrantes del Club Mercedes-Benz Argentina y de la filial marplatense para celebrar los 140 años de la firma alemana durante una nueva edición del Vintage Tour.",
@@ -3406,15 +3579,14 @@
       "guion": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-industrial-prepara-dos-vehiculos-para-el-desafio-eco-2026-361",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T23:03:13.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-05T23:31:12.329Z",
+      "sinFecha": true,
       "visto": "2026-10-05T23:31:12.329Z",
-      "relevancia": 73,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3605,113 +3777,6 @@
       "slug": "la-escuela-municipal-de-basquet-comienza-los-playoffs-con-un-triunfo"
     },
     {
-      "id": "1cnlvgi",
-      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
-      "copete": "El capitán argentino completó su trayectoria en el seleccionado nacional con un homenaje en el estadio Monumental. Los hinchas ovacionaron al rosarino en su despedida.",
-      "cuerpo": "El estadio Monumental fue el escenario del último partido de Lionel Messi con la camiseta de la selección argentina, tras un triunfo frente a un seleccionado africano. El evento incluyó un espectáculo de drones y la interpretación de la cantante Soledad Pastorutti de la melodía Brindis.\n\nDurante el homenaje, el capitán agradeció el acompañamiento de los hinchas y recordó sus más de veinte años de trayectoria con el combinado nacional. El delantero expresó su agradecimiento al grupo de compañeros con los que compartió los títulos recientes.",
-      "guion": "Lionel Messi despide a la selección argentina tras su último partido",
-      "seccion": "Fútbol",
-      "medios": [
-        "La Nación",
-        "Clarín",
-        "Ámbito",
-        "Minuto Uno",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "iProfesional",
-        "TyC Sports",
-        "Olé",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Brújula 24",
-        "La Verdad",
-        "La Voz del Pueblo",
-        "Infobrisas (Radio Brisas)",
-        "Infobae"
-      ],
-      "enlace": "https://www.eldia.com/deportes/lionel-messi-tras-su-retiro-jugar-en-la-seleccion-es-lo-mas-lindo-me-gustaria-venir-toda-la-vida-deportes_1791337680",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T21:43:58.128Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T02:01:22.039Z",
-      "relevancia": 100,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lionel Messi jugó su último partido en la selección.",
-        "El Monumental albergó un homenaje con drones y música.",
-        "El capitán agradeció el apoyo de los hinchas."
-      ],
-      "seSabe": [
-        "Lionel Messi completó su etapa en el seleccionado nacional.",
-        "Se realizó un espectáculo visual con drones en el estadio Monumental.",
-        "Soledad Pastorutti interpretó una canción durante el homenaje."
-      ],
-      "textoRedes": "Lionel Messi jugó su último partido con la selección argentina y recibió un homenaje en el estadio Monumental ante miles de hinchas.",
-      "etiquetas": [
-        "Lionel Messi",
-        "Seleccion Argentina",
-        "Estadio Monumental"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/lionel-messi-tras-su-retiro-jugar-en-la-seleccion-es-lo-mas-lindo-me-gustaria-venir-toda-la-vida-deportes_1791337680",
-          "fecha": "2026-10-07T01:58:29.000Z",
-          "oficial": false,
-          "aporte": "Detalló el homenaje con drones y las declaraciones completas de Messi."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/futbol/lionel-messi-en-su-despedida-jugar-en-la-seleccion-es-lo-mas-lindo-que-te-puede-pasar-nid06102026/",
-          "fecha": "2026-10-07T01:59:11.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el discurso de despedida tras el último partido."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/deportes/2026/10/07/las-palabras-de-lionel-messi-tras-su-ultimo-partido-con-la-seleccion-jugar-en-la-argentina-es-lo-mas-lindo-que-te-puede-pasar/",
-          "fecha": "2026-10-07T01:59:21.000Z",
-          "oficial": false,
-          "aporte": "Señaló la reacción del público ante la ovación en el Monumental."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "mly71m",
-          "titulo": "Cristian Fabbiani despide a Lionel Messi de la Selección y pide por su llegada a Newell's",
-          "fecha": "2026-10-06T14:27:42.000Z",
-          "ruta": "/nota/cristian-fabbiani-despide-a-lionel-messi-de-la-seleccion-y-pide-por-mly71m"
-        },
-        {
-          "id": "e7ym9v",
-          "titulo": "La Selección presenta la camiseta especial para la despedida de Messi",
-          "fecha": "2026-09-25T12:46:30.000Z",
-          "ruta": "/nota/la-seleccion-argentina-presento-la-camiseta-especial-para-la-e7ym9v"
-        },
-        {
-          "id": "1if2xbk",
-          "titulo": "Se agotaron las entradas para la despedida de Messi de la selección argentina",
-          "fecha": "2026-09-24T23:34:05.000Z",
-          "ruta": "/nota/se-agotaron-las-entradas-para-la-despedida-de-messi-de-la-seleccion-1if2xbk"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lionel-messi-despide-a-la-seleccion-argentina-tras-su-ultimo-partido"
-    },
-    {
       "id": "17i3vkh",
       "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
       "copete": "La esposa y la madre del capitán de la Selección argentina siguieron los shows musicales desde un palco del Monumental. El plantel estrenó una camiseta especial frente a Benín.",
@@ -3728,7 +3793,6 @@
         "C5N",
         "A24",
         "Minuto Uno",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
@@ -3740,8 +3804,8 @@
         "La Página Millonaria",
         "Clarín",
         "0223 (Mar del Plata)",
-        "La Capital (Rosario)",
         "La Nueva",
+        "La Capital (Rosario)",
         "Ámbito",
         "Crónica",
         "LU9 Mar del Plata",
@@ -3866,10 +3930,10 @@
         "QZ Noticias (Mar del Plata)",
         "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
-        "0223 (Mar del Plata)",
         "La Voz del Pueblo",
         "C5N",
-        "El Día"
+        "El Día",
+        "0223 (Mar del Plata)"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
       "teniaImagenLaFuente": true,
@@ -3998,151 +4062,6 @@
         "archivo": "fotos-notas/collage-repaso20261005tarde.jpg",
         "credito": "Fotos: Municipalidad de Balcarce"
       }
-    },
-    {
-      "id": "1v130vb",
-      "titulo": "Xoana Martínez defiende el acuerdo paritario y detalla los puntos del sector municipal",
-      "copete": "La secretaria general del Sindicato de Trabajadores Municipales repasó la negociación salarial. Destacó los incrementos acumulativos, la suba en el plus para choferes y evaluó la situación del Hospital Fossati.",
-      "cuerpo": "Entre los puntos sectoriales alcanzados, detalló que el adicional para choferes de vehículos y maquinaria municipal subió del 2,5 al 5 por ciento. Asimismo, señaló que avanzan en el pedido de días por estrés para tareas de riesgo, un punto que prevén incluir en el presupuesto del próximo año.\n\nPor otra parte, Martínez se refirió al Hospital Municipal Felipe Fossati al señalar que la conducción anterior afectó los derechos de los trabajadores, aunque confió en que la llegada del nuevo director, Alejandro Cano, abra una etapa favorable.",
-      "guion": "Xoana Martínez defiende el acuerdo paritario y detalla los puntos del sector municipal",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44998-xoana-martinez-defendio-el-acuerdo-paritario-municipal-hay-que-trabajar-mucho-para-conseguir-todo-lo-que-se-ha-logrado/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T16:31:22.668Z",
-      "sinFecha": true,
-      "visto": "2026-10-05T16:31:22.668Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "hospital"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Xoana Martínez defendió la paritaria municipal y destacó aumentos por encima de la inflación.",
-        "El plus para choferes de vehículos y maquinaria municipal subió del 2,5 al 5 por ciento.",
-        "El gremio gestiona incorporar días por estrés para trabajadores de áreas con riesgo.",
-        "La dirigente criticó la gestión anterior en el Hospital Fossati y respaldó al nuevo director."
-      ],
-      "noConfirmado": [
-        "La fecha exacta de implementación de los días por estrés para el personal municipal.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La secretaria general del Sindicato de Trabajadores Municipales repasó los detalles de la última negociación salarial, el incremento para choferes y la situación del Hospital Fossati.",
-      "etiquetas": [
-        "Sindicato de Trabajadores Municipales",
-        "Xoana Martínez",
-        "paritarias",
-        "Hospital Fossati"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44998-xoana-martinez-defendio-el-acuerdo-paritario-municipal-hay-que-trabajar-mucho-para-conseguir-todo-lo-que-se-ha-logrado/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los alcances de la negociación salarial, el aumento para choferes, el pedido de días por estrés y su postura sobre el Hospital Fossati."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "qx0kz",
-          "titulo": "El municipio y el sindicato firman el acuerdo paritario",
-          "fecha": "2026-09-24T21:08:28.050Z",
-          "ruta": "/nota/acuerdo-paritario-para-los-municipales-de-balcarce-qx0kz"
-        },
-        {
-          "id": "1ni344u",
-          "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-          "fecha": "2026-10-05T11:40:58.000Z",
-          "ruta": "/nota/el-hospital-municipal-registra-problemas-en-sus-lineas-telefonicas-1ni344u"
-        },
-        {
-          "id": "164o14u",
-          "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-          "fecha": "2026-10-02T13:18:34.000Z",
-          "ruta": "/nota/el-club-de-leones-entrega-nuevos-equipos-al-hospital-municipal-164o14u"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "xoana-martinez-defiende-el-acuerdo-paritario-y-detalla-los-puntos-del",
-      "foto": {
-        "archivo": "fotos-notas/1v130vb.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "w7y7kg",
-      "titulo": "Convocan a productores de papa locales a completar el censo provincial",
-      "copete": "El relevamiento hortiflorícola bonaerense sigue abierto hasta el 31 de octubre. Buscan registrar la actividad papera de la región con datos actualizados.",
-      "cuerpo": "El objetivo de la recolección es evitar que la dimensión del sector productivo local quede subestimada en las estadísticas oficiales.\n\nLa encuesta demanda entre quince y veinte minutos y permite coordinar con el censista el lugar y el horario del encuentro.\n\nDesde el organismo recordaron que la participación es obligatoria para quienes arriendan lotes o no residen en el establecimiento. Toda la información brindada es confidencial y está protegida por el secreto estadístico.",
-      "guion": "Convocan a productores de papa locales a completar el censo provincial",
-      "seccion": "Agro",
-      "medios": [
-        "Argenpapa",
-        "News Balcarce (FM 91.7)"
-      ],
-      "enlace": "https://www.argenpapa.com.ar/noticia/17885-argentina-convocan-a-los-productores-de-papa-del-sudeste-bonaerense-a-participar-del-censo-hortifloricola-2026",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T16:31:22.668Z",
-      "sinFecha": true,
-      "visto": "2026-10-05T16:31:22.668Z",
-      "relevancia": 26,
-      "local": false,
-      "deLaZona": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El censo bonaerense sigue abierto hasta el 31 de octubre",
-        "Convocan a los productores de papa del Sudeste",
-        "La encuesta demora entre quince y veinte minutos",
-        "Los datos aportados son anónimos y confidenciales"
-      ],
-      "seSabe": [
-        "El relevamiento continúa hasta el 31 de octubre según el Censo Hortiflorícola de la Provincia de Buenos Aires",
-        "La encuesta requiere entre 15 y 20 minutos según la organización",
-        "Los datos cuentan con la protecci_n del secreto estadístico de acuerdo con la organización"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Censo Hortiflorícola bonaerense sigue abierto hasta el 31 de octubre. Convocan a los productores de papa de la región a participar para evitar que la dimensión del sector quede subestimada.",
-      "etiquetas": [
-        "Censo Hortiflorícola",
-        "papa",
-        "Sudeste bonaerense",
-        "productores",
-        "producción"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Argenpapa",
-          "enlace": "https://www.argenpapa.com.ar/noticia/17885-argentina-convocan-a-los-productores-de-papa-del-sudeste-bonaerense-a-participar-del-censo-hortifloricola-2026",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los plazos, requisitos y objetivos del Censo Hortiflorícola para los productores de papa."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "convocan-a-productores-de-papa-locales-a-completar-el-censo-provincial",
-      "foto": {
-        "archivo": "fotos-notas/w7y7kg.jpg",
-        "credito": "Foto: Argenpapa"
-      }
     }
   ],
   "secciones": [
@@ -4159,11 +4078,11 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 12,
+      "temp": 11,
       "sensacion": 10,
-      "humedad": 84,
+      "humedad": 87,
       "viento": 12,
-      "rumbo": "NE",
+      "rumbo": "E",
       "cielo": "Llovizna leve",
       "esDeDia": false
     },
@@ -4517,28 +4436,16 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "psu8d9",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "id": "flte73",
+      "titulo": "Proponen prohibir la cartelería política en plazas y…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
       "id": "1qmt02i",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "12k90x4",
-      "titulo": null,
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "flte73",
-      "titulo": "Proponen prohibir la cartelería política en plazas y…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
       "id": "15u3elu",
@@ -4557,18 +4464,6 @@
       "titulo": "EE.UU.: senadores demócratas acusan a Trump de interferir…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "1ohllv",
-      "titulo": "Reino afianza su vínculo con Santilli: el respaldo que…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1tcxxsy",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1w3wdws",
@@ -4607,6 +4502,18 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "1ohllv",
+      "titulo": "Reino afianza su vínculo con Santilli: el respaldo que…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "1tcxxsy",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "1mfmp95",
       "titulo": null,
       "seccion": "Argentina",
@@ -4619,21 +4526,15 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "msz2ie",
-      "titulo": "El relato de Iair Horn, el argentino que estuvo casi 500…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "2kkzzy",
       "titulo": "Nueve argentinos en el Masters 1000 de Shanghai: sorteo…",
       "seccion": "Deportes",
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "o3wyk2",
-      "titulo": "El gobierno de Trump destacó el liderazgo regional de…",
-      "seccion": "Política",
+      "id": "msz2ie",
+      "titulo": "El relato de Iair Horn, el argentino que estuvo casi 500…",
+      "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
@@ -4646,6 +4547,12 @@
       "id": "emikjh",
       "titulo": "Elecciones en Brasil: Lula ganó entre los brasileños que…",
       "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "o3wyk2",
+      "titulo": "El gobierno de Trump destacó el liderazgo regional de…",
+      "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
     },
     {

@@ -7406,16 +7406,16 @@
   "borrada": true
  },
  "1rqm2xx": {
-  "archivo": "fotos-notas/1rqm2xx.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "El cuarenta por ciento de los hogares porteños destina gran parte del sueldo al alquiler",
   "enlace": "https://www.infobae.com/economia/2026/10/05/alquileres-en-caba-el-40-de-los-hogares-de-menores-ingresos-destina-mas-de-la-mitad-de-su-sueldo-a-la-vivienda/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/GNZYWWB7NBATLEM5FL4OZV2C3Q.png?auth=5b6cb21253a8b261f23532e1d112c9133723c4b17366a2a194517a2e8e865e32&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto A muestra claramente una persona mirando un cartel de alquiler y hablando por teléfono, sin marcas de agua ni menores, siendo muy ilustrativa para el tema.",
-  "cuando": "2026-10-05T17:01:43.066Z"
+  "cuando": "2026-10-05T17:01:43.066Z",
+  "intentado": true,
+  "borrada": true
  },
  "uk82ir": {
   "archivo": "fotos-notas/uk82ir.jpg",
@@ -8844,9 +8844,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-07T03:31:35.125Z",
-  "intentos": 1,
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-07T04:31:53.464Z",
+  "intentos": 2,
   "fuentes": 5
  },
  "1outpc2": {
