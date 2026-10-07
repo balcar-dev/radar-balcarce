@@ -7346,16 +7346,16 @@
   "cuando": "2026-10-05T16:32:00.717Z"
  },
  "w7y7kg": {
-  "archivo": "fotos-notas/w7y7kg.jpg",
   "medio": "Argenpapa",
-  "credito": "Foto: Argenpapa",
   "licencia": null,
   "origen": "medio",
   "titulo": "Convocan a productores de papa locales a completar el censo provincial",
   "enlace": "https://www.argenpapa.com.ar/noticia/17885-argentina-convocan-a-los-productores-de-papa-del-sudeste-bonaerense-a-participar-del-censo-hortifloricola-2026",
   "imagenOriginal": "https://www.argenpapa.com.ar/images/noticias/1791216230_big.jpg",
   "razon": "Es la única foto disponible, tiene buena nitidez y no presenta marcas de agua ni menores.",
-  "cuando": "2026-10-05T16:32:00.717Z"
+  "cuando": "2026-10-05T16:32:00.717Z",
+  "intentado": true,
+  "borrada": true
  },
  "swbc0d": {
   "archivo": "fotos-notas/swbc0d.jpg",
@@ -8853,9 +8853,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-07T04:01:43.589Z",
-  "intentos": 1,
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-07T05:01:48.999Z",
+  "intentos": 2,
   "fuentes": 4
  }
 }

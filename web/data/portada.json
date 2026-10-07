@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T04:31:58.605Z",
+  "generado": "2026-10-07T05:01:56.308Z",
   "notas": [
     {
       "id": "11d7omy",
@@ -20,7 +20,7 @@
       "fecha": "2026-10-07T02:01:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T03:31:06.043Z",
-      "relevancia": 99,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -122,7 +122,7 @@
       "fecha": "2026-10-07T01:56:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T04:01:19.654Z",
-      "relevancia": 91,
+      "relevancia": 81,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -337,6 +337,7 @@
       "guion": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/estudiantes-presentaron-19-cortometrajes-sobre-balcarce-en-la-octava-edicion-de-hacelo-corto",
@@ -344,7 +345,7 @@
       "fecha": "2026-10-06T23:52:26.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T00:31:18.034Z",
-      "relevancia": 74,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -614,8 +615,8 @@
         "Minuto Uno",
         "Infobae",
         "TN (Todo Noticias)",
-        "La Nueva",
         "Página/12",
+        "La Nueva",
         "La Brújula 24"
       ],
       "enlace": "https://www.pagina12.com.ar/2026/10/06/mas-inflacion-y-desempleo/",
@@ -623,7 +624,7 @@
       "fecha": "2026-10-06T21:24:44.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T01:02:05.217Z",
-      "relevancia": 73,
+      "relevancia": 83,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1072,8 +1073,8 @@
       "medios": [
         "Crónica",
         "Noticias Argentinas (NA)",
-        "InfoRegión",
         "La Verdad",
+        "InfoRegión",
         "Agencia DIB"
       ],
       "enlace": "https://noticiasargentinas.com/politica/ravier-aseguro-que--la-ley-de-tierras-no-afecta-la-soberania-territorial-_a6ac51dff61c1587439f4cb04",
@@ -1478,6 +1479,7 @@
       "guion": "La Casa del Bicentenario recibe un festival de música y homenajes",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Diario La Vanguardia"
       ],
@@ -1486,7 +1488,7 @@
       "fecha": "2026-10-06T16:07:51.536Z",
       "sinFecha": false,
       "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 83,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1545,7 +1547,7 @@
       "fecha": "2026-10-06T15:10:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 46,
+      "relevancia": 50,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1779,6 +1781,71 @@
       }
     },
     {
+      "id": "1msr2pb",
+      "titulo": "El alquiler consume casi la mitad de los ingresos en la provincia",
+      "copete": "Los inquilinos bonaerenses destinan cerca del 50 por ciento de su salario al pago de la vivienda, según datos difundidos por la Provincia y entidades del sector.",
+      "cuerpo": "El alquiler de una vivienda demanda alrededor del 50 por ciento de los ingresos en el territorio bonaerense, mientras que en 2023 esa proporción se ubicaba en el 35 por ciento, según informó el asesor de la Gobernación Agustín Simone. El funcionario señaló que la suba responde a ingresos bajos, el costo de la construcción y la falta de acceso a créditos hipotecarios, además de una rentabilidad que trepó del cinco al diez por ciento sobre el valor de los inmuebles.\n\nEn paralelo, un estudio de Inquilinos Agrupados elaborado con registros de ARBA determinó que 104.584 personas poseen cinco o más propiedades edificadas y concentran al menos el 14 por ciento de los inmuebles. El informe detalla que el 74,2 por ciento de los dueños tiene una sola unidad, aunque quienes cuentan con dos o más dominan más de la mitad del mercado. Los hogares que alquilan pasaron de representar el 9,5 por ciento en 2001 al 19,3 por ciento en 2022.",
+      "guion": "El alquiler consume casi la mitad de los ingresos en la provincia",
+      "seccion": "Economía",
+      "medios": [
+        "QZ Noticias (Mar del Plata)",
+        "Agencia DIB",
+        "Infoeme",
+        "La Voz del Pueblo"
+      ],
+      "enlace": "https://dib.com.ar/sociedad/los-inquilinos-bonaerenses-destinan-casi-la-mitad-su-salario-al-alquiler-n56272",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T13:33:28.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-06T19:31:28.644Z",
+      "relevancia": 60,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El alquiler de una vivienda demanda cerca del 50% del salario en la provincia.",
+        "En 2023 la relación era del 35%, según indicó el asesor de la Gobernación Agustín Simone.",
+        "Un relevamiento basado en datos de ARBA muestra que 104.584 personas poseen cinco o más inmuebles.",
+        "Los hogares inquilinos crecieron del 9,5% en 2001 al 19,3% en 2022."
+      ],
+      "textoRedes": "El alquiler de una vivienda representa cerca del 50 por ciento del salario en la provincia de Buenos Aires, según informaron fuentes provinciales y entidades del sector.",
+      "etiquetas": [
+        "inquilinos",
+        "alquileres",
+        "provincia de Buenos Aires",
+        "salarios",
+        "vivienda"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/los-inquilinos-bonaerenses-destinan-casi-la-mitad-su-salario-al-alquiler-n56272",
+          "fecha": "2026-10-06T13:33:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el alquiler consume el 50% del salario, la evolución de la rentabilidad inmobiliaria y las estadísticas de concentración de propiedades de ARBA."
+        },
+        {
+          "medio": "Infoeme",
+          "enlace": "https://www.infoeme.com/informacion-general/2026-10-6-15-49-4-los-inquilinos-bonaerenses-destinan-casi-la-mitad-de-su-salario-al-alquiler",
+          "fecha": "2026-10-06T18:49:04.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el alquiler de una vivienda representa cerca del 50% del salario en la provincia de Buenos Aires."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-alquiler-consume-casi-la-mitad-de-los-ingresos-en-la-provincia",
+      "foto": {
+        "archivo": "fotos-notas/1msr2pb.jpg",
+        "credito": "Foto: Agencia DIB"
+      }
+    },
+    {
       "id": "repaso20261006manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: hospitales y colombofilia",
@@ -1973,92 +2040,6 @@
       }
     },
     {
-      "id": "232als",
-      "titulo": "La Corte bonaerense declara inconstitucional el límite de edad docente",
-      "copete": "El máximo tribunal provincial ordenó anotar a una maestra de 54 años en los listados oficiales y pidió derogar la normativa que fija restricciones por edad.",
-      "cuerpo": "La Suprema Corte de Justicia de la Provincia resolvió que la restricción de cincuenta años para ingresar a la docencia titular contradice la Constitución. El fallo favoreció a Elizabeth Rosana Pérsico, una maestra de la Escuela Primaria N° 37 de Lomas de Zamora a quien le habían negado la inscripción para este ciclo lectivo.\n\nEl tribunal liderado por el juez Daniel Soria remarcó que la edad no refleja falta de capacidad y cuestionó que la legislación mantenga una barrera rígida. La Provincia se allanó al planteo debido a los múltiples antecedentes judiciales previos en el mismo sentido.\n\nAnte la persistencia de la norma, los magistrados exhortaron al Poder Ejecutivo y a la Legislatura a modificar o suprimir el artículo cuestionado.",
-      "guion": "La Corte bonaerense declara inconstitucional el límite de edad docente",
-      "seccion": "Política",
-      "medios": [
-        "Ámbito",
-        "Minuto Uno",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Agencia DIB",
-        "Ecos Diarios (Necochea)"
-      ],
-      "enlace": "https://www.minutouno.com/politica/la-suprema-corte-bonaerense-volvio-declarar-inconstitucional-el-limite-50-anos-ingresar-la-docencia-n6330507",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T12:25:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T19:31:28.644Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El máximo tribunal declaró inconstitucional la restricción de cincuenta años para ingresar a la docencia titular.",
-        "La medida benefició a una educadora de Lomas de Zamora tras un planteo judicial.",
-        "El tribunal advirtió que la edad no demuestra falta de idoneidad y pidió derogar la norma."
-      ],
-      "textoRedes": "La Suprema Corte bonaerense declaró inconstitucional el límite de cincuenta años para ingresar a la docencia titular y ordenó inscribir a una maestra de 54 años.",
-      "etiquetas": [
-        "docentes",
-        "Justicia",
-        "Provincia de Buenos Aires",
-        "fallo judicial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/la-suprema-corte-bonaerense-volvio-declarar-inconstitucional-el-limite-50-anos-ingresar-la-docencia-n6330507",
-          "fecha": "2026-10-06T12:25:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los fundamentos jurídicos del fallo y los antecedentes mencionados por el juez Daniel Soria."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/la-suprema-corte-declaro-inconstitucional-el-limite-de-50-anos-para-el-ingreso-a-la-docencia",
-          "fecha": "2026-10-06T19:12:11.000Z",
-          "oficial": false,
-          "aporte": "Informó la resolución judicial sobre el límite de edad para la docencia titular."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/la-suprema-corte-vuelve-declarar-inconstitucional-el-limite-50-anos-ingresar-la-docencia-n56281",
-          "fecha": "2026-10-06T17:27:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó la orden de inscripción y el pedido de derogación de la normativa."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-corte-suprema-bonaerense-volvio-declarar-inconstitucional-el-limite-50-anos-ingresar-la-docencia-n6330513",
-          "fecha": "2026-10-06T13:26:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la edad no demuestra falta de idoneidad según el tribunal."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/la-suprema-corte-volvio-a-objetar-la-restriccion-por-edad-para-ingresar-a-la-docencia",
-          "fecha": "2026-10-06T18:15:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la habilitación de la docente de Lomas de Zamora para incorporarse a los listados."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-corte-bonaerense-declara-inconstitucional-el-limite-de-edad-docente",
-      "foto": {
-        "archivo": "fotos-notas/232als.jpg",
-        "credito": "Foto: El Marplatense"
-      }
-    },
-    {
       "id": "ql89ei",
       "titulo": "El Gobierno emite titulos por 221.119 millones para saldar obras",
       "copete": "El Ejecutivo nacional dispuso la ampliación de instrumentos financieros para saldar compromisos con constructoras. La medida abarca obligaciones acumuladas desde 2022.",
@@ -2224,7 +2205,6 @@
       "seccion": "Argentina",
       "medios": [
         "Clarín",
-        "El Día",
         "0221",
         "La Tecla",
         "QZ Noticias (Mar del Plata)",
@@ -2233,6 +2213,7 @@
         "Ámbito",
         "Agencia DIB",
         "Ecos Diarios (Necochea)",
+        "El Día",
         "Diputados Bonaerenses"
       ],
       "enlace": "https://www.ambito.com/informacion-general/fentanilo-contaminado-la-provincia-buenos-aires-autorizo-sus-hospitales-descartar-los-medicamentos-hlb-pharma-y-laboratorios-ramallo-n6330449",
@@ -2403,7 +2384,7 @@
       "id": "1c7wqua",
       "titulo": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "copete": "La secretaria general de la Presidencia y el jefe de Gabinete se reúnen con mandatarios provinciales en Salta. Buscan respaldos para suspender las PASO y aprobar el Presupuesto.",
-      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
+      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
       "guion": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "seccion": "Política",
       "medios": [
@@ -2417,9 +2398,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Tecla",
+        "La Verdad",
         "Diputados Bonaerenses",
-        "Ámbito",
-        "La Verdad"
+        "Ámbito"
       ],
       "enlace": "https://diputadosbsas.com.ar/karina-milei-santilli-gobernadores-paso/",
       "teniaImagenLaFuente": true,
@@ -3075,7 +3056,8 @@
         "TN (Todo Noticias)",
         "A24",
         "Clarín",
-        "Crónica"
+        "Crónica",
+        "El Día"
       ],
       "enlace": "https://www.clarin.com/economia/incomoda-coincidencia-canciller-quirno-hablo-sanciones-malvinas-frente-embajador-reino-unido-cena-rural_0_eAUtpW1544.html",
       "teniaImagenLaFuente": true,
@@ -3295,9 +3277,9 @@
         "Perfil",
         "iProfesional",
         "Noticias Argentinas (NA)",
-        "El Día",
         "El Eco de Tandil",
-        "La Nueva"
+        "La Nueva",
+        "El Día"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/caputo-advirtio-al-mercado-sobre-como-se-prepara-ante-un-escenario-electoral-adverso-en-2027-les-nid05102026/",
       "teniaImagenLaFuente": true,
@@ -3579,14 +3561,15 @@
       "guion": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-industrial-prepara-dos-vehiculos-para-el-desafio-eco-2026-361",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-05T23:31:12.329Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-05T23:03:13.000Z",
+      "sinFecha": false,
       "visto": "2026-10-05T23:31:12.329Z",
-      "relevancia": 53,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3628,74 +3611,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "la-tecnica-n-1-prepara-dos-autos-para-el-desafio-eco"
-    },
-    {
-      "id": "1gklhao",
-      "titulo": "Los patentamientos de maquinaria agrícola caen un 18,6 por ciento en septiembre",
-      "copete": "El sector agroindustrial registra bajas en tractores, cosechadoras y pulverizadoras frente a agosto. El acumulado anual vuelve a terreno negativo según un informe oficial.",
-      "cuerpo": "Los patentamientos de maquinaria agrícola retrocedieron un 18,6 por ciento en septiembre frente a agosto y alcanzaron las 493 unidades, de acuerdo con el informe difundido por la Asociación de Concesionarios de Automotores de la República Argentina (Acara).\n\nEl descenso mensual abarcó a los tres rubros principales: los registros de tractores bajaron un 21,1 por ciento, los de cosechadoras un 6,3 por ciento y los de pulverizadoras un 6 por ciento. En la comparación interanual, el mercado total retrocedió un 20,6 por ciento frente al noveno mes de 2025 y el acumulado de los primeros nueve meses sumó 5.098 equipos, lo que representa una baja del 0,7 por ciento.\n\nEl mercado vuelve a contraerse luego de la mejora registrada durante julio y agosto. La entidad empresaria advirtió que la demanda continúa condicionada por las herramientas de financiación, los precios y los estímulos comerciales disponibles.",
-      "guion": "Los patentamientos de maquinaria agrícola caen un 18,6 por ciento en septiembre",
-      "seccion": "Agro",
-      "medios": [
-        "Perfil",
-        "La Capital (Rosario)"
-      ],
-      "enlace": "https://www.lacapital.com.ar/agro/la-maquinaria-agricola-volvio-perder-ritmo-los-patentamientos-cayeron-186-septiembre-n10285040.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T22:45:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-06T00:31:12.019Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El mercado de maquinaria agrícola registró una caída del 18,6% en septiembre respecto a agosto.",
-        "Se patentaron 493 unidades en total, con descensos en tractores, cosechadoras y pulverizadoras.",
-        "El acumulado de los primeros nueve meses sumó 5.098 equipos y acumula una baja del 0,7% interanual.",
-        "La demanda continúa sujeta a las condiciones de financiación y estímulos comerciales."
-      ],
-      "seSabe": [
-        "Los registros de tractores bajaron un 21,1% en septiembre frente a agosto, según Acara.",
-        "Las cosechadoras cayeron un 6,3% mensual pero acumulan un crecimiento del 12,5% en el año.",
-        "Las pulverizadoras registraron una baja del 6% mensual y del 9,8% en el acumulado anual.",
-        "El total de unidades patentadas en septiembre fue de 493, de acuerdo con los datos de la DNRPA."
-      ],
-      "textoRedes": "Los patentamientos de maquinaria agrícola cayeron un 18,6% en septiembre frente a agosto con 493 unidades registradas. El acumulado anual retrocedió un 0,7% interanual y el sector advierte que la demanda depende de la financiación.",
-      "etiquetas": [
-        "maquinaria agricola",
-        "patentamientos",
-        "Acara",
-        "tractores"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/agro/la-maquinaria-agricola-volvio-perder-ritmo-los-patentamientos-cayeron-186-septiembre-n10285040.html",
-          "fecha": "2026-10-05T22:45:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los porcentajes de caída por segmento, las cifras totales de patentamientos de septiembre y el acumulado anual."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/los-patentamientos-de-maquinaria-agricola-cayeron-206-en-septiembre-y-frenaron-la-recuperacion.phtml",
-          "fecha": "2026-10-05T23:45:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la caída general del mercado tras el rebote de los meses previos."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "los-patentamientos-de-maquinaria-agricola-caen-un-18-6-por-ciento-en",
-      "foto": {
-        "archivo": "fotos-notas/1gklhao.jpg",
-        "credito": "Foto: La Capital (Rosario)"
-      }
     },
     {
       "id": "12yxkc9",
@@ -3793,6 +3708,7 @@
         "C5N",
         "A24",
         "Minuto Uno",
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
@@ -3804,8 +3720,8 @@
         "La Página Millonaria",
         "Clarín",
         "0223 (Mar del Plata)",
-        "La Nueva",
         "La Capital (Rosario)",
+        "La Nueva",
         "Ámbito",
         "Crónica",
         "LU9 Mar del Plata",
@@ -3930,10 +3846,10 @@
         "QZ Noticias (Mar del Plata)",
         "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
+        "0223 (Mar del Plata)",
         "La Voz del Pueblo",
         "C5N",
-        "El Día",
-        "0223 (Mar del Plata)"
+        "El Día"
       ],
       "enlace": "https://uar.com.ar/argentina-y-la-region-presentaron-la-candidatura-para-ser-sede-de-rugby-world-cup-2035/",
       "teniaImagenLaFuente": true,
@@ -4079,9 +3995,9 @@
   "clima": {
     "ahora": {
       "temp": 11,
-      "sensacion": 10,
-      "humedad": 87,
-      "viento": 12,
+      "sensacion": 9,
+      "humedad": 89,
+      "viento": 11,
       "rumbo": "E",
       "cielo": "Llovizna leve",
       "esDeDia": false
@@ -4436,10 +4352,22 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "12k90x4",
+      "titulo": null,
+      "seccion": "Automovilismo",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "flte73",
       "titulo": "Proponen prohibir la cartelería política en plazas y…",
       "seccion": "Política",
       "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "psu8d9",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "1qmt02i",
@@ -4464,6 +4392,12 @@
       "titulo": "EE.UU.: senadores demócratas acusan a Trump de interferir…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "1tcxxsy",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1w3wdws",
@@ -4496,22 +4430,10 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "drg1xo",
-      "titulo": "Indignación en Nordelta: un vecino le disparó con un arma…",
+      "id": "a77j4o",
+      "titulo": "Carpinchos baleados en Nordelta: un vecino arremetió…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1ohllv",
-      "titulo": "Reino afianza su vínculo con Santilli: el respaldo que…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1tcxxsy",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1mfmp95",
@@ -4526,16 +4448,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "2kkzzy",
-      "titulo": "Nueve argentinos en el Masters 1000 de Shanghai: sorteo…",
-      "seccion": "Deportes",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "msz2ie",
       "titulo": "El relato de Iair Horn, el argentino que estuvo casi 500…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "2kkzzy",
+      "titulo": "Nueve argentinos en el Masters 1000 de Shanghai: sorteo…",
+      "seccion": "Deportes",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "1glo72",
@@ -4568,5 +4490,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 4
 }
