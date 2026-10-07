@@ -1,7 +1,29 @@
 {
- "generado": "2026-10-07T07:07:44.660Z",
+ "generado": "2026-10-07T08:01:39.572Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1l2ca46",
+   "titulo": "Un Renault Clio chocó contra un poste de alumbrado en avenida Eva Perón",
+   "copete": "Un siniestro vial se registró en la noche de este martes en avenida Eva Perón, entre calles 104 y 106, donde un automóvil Renault Clio impactó contra un poste de alumbrado público. Según se pudo saber, el conductor del vehículo, un hombre mayor de edad, habría sufrido una…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-06T23:24:12.000Z",
+   "fuentes": [
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/un-renault-clio-choco-contra-un-poste-de-alumbrado-en-avenida-eva-peron/",
+     "fecha": "2026-10-06T23:24:12.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/un-auto-choco-contra-un-poste-de-luz.html",
+     "fecha": "2026-10-06T23:46:00.754Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice",
+   "maximo": 3
+  },
   {
    "id": "1yzgdmc",
    "titulo": "\"Chiqui Tapia botón\": los cantos contra el presidente de la AFA en la previa de la despedida de Messi en el Monumental",
@@ -45,20 +67,35 @@
    "maximo": 4
   },
   {
-   "id": "ioddw4",
-   "titulo": "Un auto chocó contra un poste de luz",
-   "copete": "Este martes por la noche, un automóvil Renault Clío impactó contra un poste de alumbrado público en avenida Eva Perón, entre 104 y 106. Según pudo saber Infórmese Primero , el conductor, un hombre mayor de edad, habría sufrido una descompensación mientras circulaba por el…",
-   "seccion": "Policiales",
-   "fecha": "2026-10-06T23:46:00.754Z",
+   "id": "rilva6",
+   "titulo": "El show con drones que hizo emocionar a Lionel Messi en su despedida de la selección argentina",
+   "copete": "El cielo del estadio Monumental se convirtió en una pantalla para despedir a Lionel Messi. Un show de drones repasó los símbolos centrales de su recorrido con la selección argentina y terminó con un retrato de perfil del capitán, que siguió la secuencia desde el campo de juego…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-07T01:56:20.000Z",
    "fuentes": [
     {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/un-auto-choco-contra-un-poste-de-luz.html",
-     "fecha": "2026-10-06T23:46:00.754Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/07/el-show-con-drones-que-hizo-emocionar-a-lionel-messi-en-su-despedida-de-la-seleccion-argentina/",
+     "fecha": "2026-10-07T01:56:20.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/seleccion/show-drones-despedida-messi_3_j06Cg3viGE.html",
+     "fecha": "2026-10-07T02:00:06.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/el-insolito-blooper-del-show-de-drones-en-la-despedida-de-messi_a6ac5ac5061c15874390af71a",
+     "fecha": "2026-10-07T02:26:00.000Z"
+    },
+    {
+     "medio": "La Página Millonaria",
+     "enlace": "https://lapaginamillonaria.com/seleccion-argentina/el-monumental-repudio-a-chiqui-tapia-en-la-despedida-de-messi-de-la-seleccion-argentina-tras-el-show-de-drones",
+     "fecha": "2026-10-07T02:33:47.000Z"
     }
    ],
    "intentos": 3,
-   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 2, que sale de una nota anterior, como si fuera de hoy",
+   "motivo": "con cuerpo",
    "maximo": 3
   },
   {
