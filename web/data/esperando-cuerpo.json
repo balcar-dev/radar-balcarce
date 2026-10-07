@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T05:01:56.308Z",
+ "generado": "2026-10-07T05:32:13.183Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -25,46 +25,90 @@
    "maximo": 3
   },
   {
-   "id": "1ekdqxx",
-   "titulo": "Por obras, los ramales Suárez y Bartolomé Mitre no funcionarán entre el 9 y el 12 de octubre",
-   "copete": "Los ramales José León Suárez y Bartolomé Mitre de la línea del Tren Mitre quedarán sin servicio entre el viernes 9 y el lunes 12 de octubre inclusive, como consecuencia de obras de reemplazo del puente ferroviario ubicado sobre la avenida Luis María Campos , en la Ciudad de…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-06T17:20:18.000Z",
+   "id": "h7y441",
+   "titulo": "Fue exclusivo de Infórmese Primero: Allanaron la vivienda de un conocido delincuente tras una serie de robos",
+   "copete": "Personal de la Oficina del Gabinete Técnico Operativo (GTO) de la Estación de Policía Comunal (EPC), en conjunto con efectivos de la Sub DDI Balcarce, llevó adelante un allanamiento en una vivienda ubicada en calle 10, entre Primera Junta (1) y 3, en el marco de cuatro…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-07T00:55:00.000Z",
    "fuentes": [
     {
-     "medio": "Zona Norte Diario",
-     "enlace": "https://www.zonanortediario.com.ar/06/10/2026/por-obras-los-ramales-suarez-y-bartolome-mitre-no-funcionaran-entre-el-9-y-el-12-de-octubre/",
-     "fecha": "2026-10-06T17:20:18.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/sociedad/2026/10/06/dos-ramales-del-tren-mitre-no-funcionaran-durante-el-fin-de-semana-largo-de-octubre/",
-     "fecha": "2026-10-06T20:31:07.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/trenes-argentinos-informo-que-la-linea-mitre-no-prestara-servicio-el-fin-semana-largo-el-motivo-n6330882",
-     "fecha": "2026-10-06T23:48:00.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/general/2026/10/06/los-ramales-jose-leon-suarez-y-bartolome-mitre-estaran-interrumpidos-por-obras-que-dias-en-octubre-estaran-afectados/",
-     "fecha": "2026-10-06T17:45:00.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/provincia/cuatro-dias-servicio-interrumpido-el-ramal-retiro-suarez-la-linea-mitre-n923118",
-     "fecha": "2026-10-07T00:19:00.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/informacion-general/las-lineas-suarez-y-bartolome-mitre-estaran-servicio-interrumpido-cuando-y-cuanto-tiempo-n6330709",
-     "fecha": "2026-10-06T17:40:00.000Z"
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/exclusivo-cuatro-robos-bajo.html",
+     "fecha": "2026-10-07T00:55:00.000Z"
     }
    ],
-   "intentos": 4,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
-   "maximo": 4
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (relleno): el copete tiene una frase de relleno sin dato: \"en el marco de\"",
+   "maximo": 3
+  },
+  {
+   "id": "y9z4ox",
+   "titulo": "En respaldo a Virginia Aparicio, el STM Balcarce participó de una movilización en Mar del Plata",
+   "copete": "Este martes se llevó adelante en la ciudad de Mar del Plata una jornada de lucha en respaldo a la ingeniera agrónoma Virginia Aparicio. De la convocatoria participaron organizaciones científicas, ambientales y sociales, integrantes de la Comisión Directiva del Sindicato de…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-07T00:35:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/en-respaldo-virginia-aparicio-el-stm.html",
+     "fecha": "2026-10-07T00:35:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (antecedente): el cuerpo usa 6, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 72 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1qym9k9",
+   "titulo": "Vandalismo rural: Consiguió dictamen de mayoría en Diputados el proyecto que pena los delitos en el campo y ahora irá al recinto para su debate",
+   "copete": "El proyecto para castigar el vandalismo rural logró este martes dictamen de mayoría en un plenario de las comisiones de Legislación Penal y de Agricultura y Ganadería de Diputados, y quedó en condiciones de llegar al recinto. La iniciativa es del diputado pampeano Martín…",
+   "seccion": "Agro",
+   "fecha": "2026-10-06T20:10:19.000Z",
+   "fuentes": [
+    {
+     "medio": "Bichos de Campo",
+     "enlace": "https://bichosdecampo.com/vandalismo-rural-consiguio-dictamen-de-mayoria-en-diputados-el-proyecto-que-pena-los-delitos-en-el-campo-y-ahora-ira-al-recinto-para-su-debate/",
+     "fecha": "2026-10-06T20:10:19.000Z"
+    },
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/el-pais/diputados-avanzo-con-un-proyecto-que-incorpora-el-vandalismo-rural-al-codigo-penal",
+     "fecha": "2026-10-06T22:48:55.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/campo/vandalismo-logro-dictamen-en-diputados-un-proyecto-que-preve-hasta-ocho-anos-de-prision-por-ataques-nid06102026/",
+     "fecha": "2026-10-06T22:46:14.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/rural/avanza-congreso-actualizacion-penas-vandalismo-rural_0_TMM1syZHj5.html",
+     "fecha": "2026-10-06T21:09:07.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/politica/diputados-dio-un-paso-clave-en-un-proyecto-para-incorporar-el-vandalismo-rural-en-el-codigo-penal/",
+     "fecha": "2026-10-07T03:11:58.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/diputados-aprueba-en-comision-incorporar-el--vandalismo-rural--al-codigo-penal-con-penas-de-hasta-8-anos_a6ac54b5061c1587439fb8d98",
+     "fecha": "2026-10-06T20:32:40.061Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/avanzan-penas-contra-el-vandalismo-rural-politica-y-economia_1791348388",
+     "fecha": "2026-10-07T04:46:28.000Z"
+    },
+    {
+     "medio": "Noticias Agropecuarias",
+     "enlace": "https://www.noticiasagropecuarias.com/2026/10/06/vandalismo-rural-diputados-analiza-endurecer-las-penas-mientras-productores-reclaman-mas-seguridad-en-er/",
+     "fecha": "2026-10-06T21:52:22.000Z"
+    }
+   ],
+   "intentos": 5,
+   "motivo": "con cuerpo",
+   "maximo": 5
   },
   {
    "id": "1tkwpmv",
@@ -91,38 +135,6 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 5 problemas (numero, fecha, antecedente, copia): el cuerpo dice 2 y la fuente no lo dice; sin esas oraciones quedan 57 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "1s9anmt",
-   "titulo": "Santa Fe definió su cronograma electoral para 2027: el 12 de abril serán las PASO y el 13 de junio se elige gobernador",
-   "copete": "La provincia de Santa Fe definió este martes su calendario electoral para 2027. Según precisaron medios locales , el gobernador Maximiliano Pullaro definió que el cierre de listas será el 12 de febrero, las elecciones primarias se realizarán el 18 de abril y los comicios…",
-   "seccion": "Política",
-   "fecha": "2026-10-06T19:01:03.000Z",
-   "fuentes": [
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/politica/santa-fe-definio-su-cronograma-electoral-para-2027-el-12-de-abril-seran-las-paso-y-el-13-de-junio-se-nid06102026/",
-     "fecha": "2026-10-06T19:01:03.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/nacionales/santa-fe-desdoblara-las-elecciones",
-     "fecha": "2026-10-06T22:08:51.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/santa-fe-desdoblara-las-elecciones--como-queda-el-cronograma-electoral-_a6ac545db61c1587439fab32a",
-     "fecha": "2026-10-06T20:10:45.307Z"
-    },
-    {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/politica-y-economia/santa-fe-tambien-desdoblara-las-elecciones-politica-y-economia_1791348628",
-     "fecha": "2026-10-07T04:50:28.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 2.027 y el cuerpo no lo explica; sin esas oraciones quedan 111 palabras",
    "maximo": 3
   }
  ]

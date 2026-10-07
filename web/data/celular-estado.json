@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T05:01:56.308Z",
- "portada": 45,
- "archivo": 991,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-07T05:32:13.183Z",
+ "portada": 46,
+ "archivo": 993,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T05:01:56.348Z",
+  "generado": "2026-10-07T05:32:13.224Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,8 +98,8 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "11d7omy",
-      "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
+      "id": "1cnlvgi",
+      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
       "seccion": "Fútbol"
      },
      {
@@ -126,21 +126,21 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 44,
     "notas": [
+     {
+      "id": "11d7omy",
+      "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
+      "seccion": "Fútbol"
+     },
      {
       "id": "zqq9w8",
       "titulo": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "17i3vkh",
-      "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      },
      {
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 49,
     "notas": [
      {
       "id": "1uh42rm",
@@ -170,13 +170,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "id": "9m9h4e",
+      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
       "seccion": "Balcarce"
      },
      {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]

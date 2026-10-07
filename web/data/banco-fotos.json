@@ -8818,8 +8818,8 @@
   "origen": "ninguna",
   "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T03:02:04.264Z",
-  "intentos": 2,
+  "cuando": "2026-10-07T05:31:56.954Z",
+  "intentos": 3,
   "fuentes": 3
  },
  "a00g5p": {
@@ -8845,8 +8845,8 @@
   "origen": "ninguna",
   "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T04:31:53.464Z",
-  "intentos": 2,
+  "cuando": "2026-10-07T05:31:56.954Z",
+  "intentos": 3,
   "fuentes": 5
  },
  "1outpc2": {
@@ -8856,6 +8856,27 @@
   "razon": "Groq también falló: HTTP 413",
   "cuando": "2026-10-07T05:01:48.999Z",
   "intentos": 2,
+  "fuentes": 4
+ },
+ "e09k96": {
+  "archivo": "fotos-notas/e09k96.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45001-proponen-crear-un-banco-municipal-de-elementos-de-fisiatria-y-rehabilitacion-en-balcarce/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65957.png",
+  "razon": "Es la única opción disponible y no presenta marcas de agua ni menores de edad, mostrando a los protagonistas del hecho.",
+  "cuando": "2026-10-07T05:31:56.954Z"
+ },
+ "1s9anmt": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Santa Fe define las fechas de las elecciones para el año 2027",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-07T05:31:56.954Z",
+  "intentos": 1,
   "fuentes": 4
  }
 }
