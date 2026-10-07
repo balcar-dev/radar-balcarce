@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T03:31:39.388Z",
- "portada": 49,
- "archivo": 992,
- "esperandoCuerpo": 9,
+ "generado": "2026-10-07T04:01:52.398Z",
+ "portada": 48,
+ "archivo": 993,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-07T03:31:39.413Z",
+  "generado": "2026-10-07T04:01:52.437Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 50,
     "notas": [
      {
       "id": "1cnlvgi",
@@ -103,14 +103,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1r3qdtj",
-      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
-      "seccion": "Deportes"
-     },
-     {
       "id": "9ncum9",
       "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1r3qdtj",
+      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+      "seccion": "Deportes"
      },
      {
       "id": "1793nst",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 50,
     "notas": [
      {
       "id": "11d7omy",
@@ -134,13 +134,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "17i3vkh",
-      "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
+      "id": "1outpc2",
+      "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      },
      {
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "17i3vkh",
+      "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1uh42rm",
       "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
@@ -170,13 +175,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      }
     ]
@@ -185,6 +185,12 @@
   "facebook": {
    "hoy": [],
    "cola": [
+    {
+     "id": "9ncum9",
+     "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "1n6yxr",
      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
