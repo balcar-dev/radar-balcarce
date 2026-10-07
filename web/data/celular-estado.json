@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T12:32:25.587Z",
+ "generado": "2026-10-07T13:04:46.381Z",
  "portada": 41,
- "archivo": 1006,
+ "archivo": 1007,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-07T12:32:25.624Z",
+  "generado": "2026-10-07T13:04:46.425Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -93,15 +93,10 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 53,
+    "segundos": 55,
     "notas": [
-     {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "1outpc2",
       "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
@@ -116,6 +111,11 @@
       "id": "vm4nnt",
       "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
       "seccion": "Agro"
+     },
+     {
+      "id": "45acbd",
+      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -126,17 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 47,
     "notas": [
      {
       "id": "rilva6",
       "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "45acbd",
-      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
-      "seccion": "Cultura y agenda"
      },
      {
       "id": "15zgvx1",
@@ -147,6 +142,11 @@
       "id": "1l0p3uh",
       "titulo": "El tren Sarmiento suspende su servicio cuatro días por obras",
       "seccion": "Argentina"
+     },
+     {
+      "id": "1r3qdtj",
+      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "1r3qdtj",
-      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
-      "seccion": "Deportes"
-     },
      {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
@@ -178,19 +173,24 @@
       "id": "1793nst",
       "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "y4gp3v",
      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
+     "cuando": "2026-10-07T12:45:28.765Z"
+    }
+   ],
+   "cola": [
     {
      "id": "45acbd",
      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
@@ -202,10 +202,16 @@
      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
      "seccion": "Balcarce",
      "marcada": false
+    },
+    {
+     "id": "131078z",
+     "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
+     "seccion": "Deportes",
+     "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-06T21:15:28.818Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-07T14:15:28.765Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T12:32:25.587Z",
+ "generado": "2026-10-07T13:04:46.381Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,6 +15,11 @@
      "fecha": "2026-10-07T11:05:49.000Z"
     },
     {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/la-22a-fiesta-nacional-del-postre-abrira-con-una-jornada-dedicada-a-la-identidad-y-el-aprendizaje/",
+     "fecha": "2026-10-07T12:34:04.000Z"
+    },
+    {
      "medio": "Diario La Vanguardia",
      "enlace": "https://www.diariolavanguardia.com/noticias/45019-la-fiesta-nacional-del-postre-tambien-se-vivira-con-juegos-y-propuestas-educativas/",
      "fecha": null
@@ -22,23 +27,6 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 2 problemas (copia, promesa): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 106 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "131078z",
-   "titulo": "Agustín Molpeceres recibirá un reconocimiento de la Cámara de Diputados bonaerense",
-   "copete": "El licenciado en Educación Física será distinguido por la Cámara de Diputados de la Provincia de Buenos Aires por su trayectoria en el deporte adaptado y el alto rendimiento paralímpico. Integró el cuerpo técnico de la Selección Argentina de Boccia en los Juegos de Río 2016 y…",
-   "seccion": "Deportes",
-   "fecha": "2026-10-07T12:07:32.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/agustin-molpeceres-recibira-un-reconocimiento-de-la-camara-de-diputados-bonaerense",
-     "fecha": "2026-10-07T12:07:32.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice",
    "maximo": 3
   },
   {
@@ -56,6 +44,23 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "367w6m",
+   "titulo": "Secuestraron un auto con pedido de captura, armas y otros elementos en nuevos allanamientos",
+   "copete": "",
+   "seccion": "Policiales",
+   "fecha": "2026-10-07T13:01:24.717Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/secuestraron-un-auto-con-pedido-de-captura-armas-y-otros-elementos-en-nuevos-allanamientos-491",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"policia\" y la fuente no",
    "maximo": 3
   }
  ]
