@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T22:33:39.529Z",
- "portada": 61,
- "archivo": 1050,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-07T23:04:05.468Z",
+ "portada": 58,
+ "archivo": 1055,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-07T22:33:39.587Z",
+  "generado": "2026-10-07T23:04:05.521Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 49,
     "notas": [
      {
       "id": "1opc9eu",
@@ -170,14 +170,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "woerbj",
-      "titulo": "La Selección Argentina se mantiene segunda en el ranking FIFA",
+      "id": "1fpl6he",
+      "titulo": "Pablo Giralt toma una drástica decisión tras el último partido de Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "10cpafd",
-      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
-      "seccion": "Cultura y agenda"
+      "id": "131078z",
+      "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
+      "seccion": "Deportes"
      }
     ]
    }
@@ -215,12 +215,6 @@
      "id": "28zqic",
      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
      "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "rwhqdu",
-     "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T22:33:39.529Z",
+ "generado": "2026-10-07T23:04:05.468Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -28,48 +28,6 @@
    "intentos": 3,
    "motivo": "cuerpo: 2 problemas (copia, promesa): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 106 palabras",
    "maximo": 3
-  },
-  {
-   "id": "13lk63p",
-   "titulo": "\"No te vayas, pensalo una vez más\", la canción que sonó en el micro de la Selección",
-   "copete": "A medida que transcurren las horas, se dan a conocer detalles íntimos de la despedida de Lionel Messi de la Selección, una jornada que quedará grabada en la historia del país. Nicolás Otamendi, quien también cerró el miércoles su ciclo en la albiceleste, compartió un video desde…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-07T14:11:00.000Z",
-   "fuentes": [
-    {
-     "medio": "El Gráfico",
-     "enlace": "https://www.elgrafico.com.ar/articulo/1112/103221/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-sono-en-el-micro-de-la-seleccion",
-     "fecha": "2026-10-07T14:11:00.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/messi/video-cancion-seleccion-argentina-lionel-messi-despedida_0_GX6Au5weTh.html",
-     "fecha": "2026-10-07T21:07:06.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/deportes/no-te-vayas-pensalo-una-vez-mas-la-cancion-la-que-el-plantel-despidio-lionel-messi-el-micro-n251029",
-     "fecha": "2026-10-07T21:11:00.000Z"
-    },
-    {
-     "medio": "Doble Amarilla",
-     "enlace": "https://www.dobleamarilla.com.ar/selecciones/-no-te-vayas--pensalo-una-vez-mas---la-cancion-que-sono-en-el-micro-de-la-seleccion_a6ac6ba6df45aded923c937cb",
-     "fecha": "2026-10-07T19:35:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/deportes/2026/10/07/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-los-companeros-le-cantaron-a-lionel-messi-en-el-micro-camino-a-su-despedida/",
-     "fecha": "2026-10-07T19:40:07.000Z"
-    },
-    {
-     "medio": "TyC Sports",
-     "enlace": "https://www.tycsports.com/seleccion-argentina/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-los-jugadores-le-cantaron-a-messi-en-el-micro-id764761.html",
-     "fecha": "2026-10-07T20:55:25.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
-   "maximo": 4
   },
   {
    "id": "op4hk5",
@@ -106,14 +64,14 @@
      "fecha": "2026-10-07T16:01:03.000Z"
     },
     {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
-     "fecha": "2026-10-07T20:30:21.000Z"
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
+     "fecha": "2026-10-07T14:43:44.000Z"
     },
     {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/la-ciudad/general-pueyrredon-el-562-de-los-deudores-con-creditos-de-financieras-privadas-esta-en-mora",
+     "fecha": "2026-10-07T15:45:37.000Z"
     },
     {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
@@ -121,14 +79,95 @@
      "fecha": "2026-10-07T17:58:47.000Z"
     },
     {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
-     "fecha": "2026-10-07T14:43:51.000Z"
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
+     "fecha": "2026-10-07T20:30:21.000Z"
     }
    ],
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "o5u9d2",
+   "titulo": "El emotivo último mensaje que publicó Piero seis días antes de morir: \"Gracias\"",
+   "copete": "Piero De Benedictis murió este 7 de octubre de 2026 a los 81 años . Días antes de su fallecimiento, el reconocido cantante y autor de clásicos como “ Mi viejo ” y “ Para el pueblo lo que es del pueblo ” había realizado un posteo que, con el paso de los días, se convirtió en su…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-07T19:34:15.905Z",
+   "fuentes": [
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/espectaculos/emotivo-ultimo-mensaje-publico-piero-seis-dias-antes-morir-gracias-2026107163415",
+     "fecha": "2026-10-07T19:34:15.905Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/musica/noticias/2026/10/07/el-emotivo-ultimo-posteo-que-hizo-piero-antes-de-morir-es-muy-fuerte-escuchar-mi-voz-alli/",
+     "fecha": "2026-10-07T21:03:45.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/videos/musica/noticias/2026/10/07/el-emotivo-ultimo-posteo-que-hizo-piero-antes-de-morir-es-muy-fuerte-escuchar-mi-voz-alli/",
+     "fecha": "2026-10-07T20:07:14.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/espectaculos/se-conocio-el-ultimo-posteo-que-hizo-piero-antes-de-morir/",
+     "fecha": "2026-10-07T20:42:13.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/07/el-ultimo-y-emotivo-posteo-de-piero-antes-de-su-muerte-es-muy-fuerte-escuchar-mi-voz-alli/",
+     "fecha": "2026-10-07T20:59:09.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 80 y la fuente no lo dice",
+   "maximo": 4
+  },
+  {
+   "id": "133qm11",
+   "titulo": "Accidente en 31 y 14: sólo se registraron daños materiales",
+   "copete": "",
+   "seccion": "Policiales",
+   "fecha": "2026-10-07T23:01:35.401Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45031-accidente-en-31-y-14-solo-se-registraron-danos-materiales/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "ypnjqn",
+   "titulo": "UTA reclamó al Gobierno por rutas y ómnibus de larga distancia",
+   "copete": "Buenos Aires, 7 octubre (NA) - La Unión Tranviarios Automotor (UTA) reclamó al Gobierno medidas urgentes para mejorar la seguridad y el sostenimiento del transporte de pasajeros de larga distancia, luego de poner de relieve el deterioro de las rutas, la ausencia de…",
+   "seccion": "Economía",
+   "fecha": "2026-10-07T20:31:39.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/uta-reclamo-al-gobierno-por-rutas-y-omnibus-de-larga-distancia_a6ac6ab9e25d386c88155c41c",
+     "fecha": "2026-10-07T20:31:39.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/uta-reclamo-al-gobierno-por-rutas-y-omnibus-de-larga-distancia/",
+     "fecha": "2026-10-07T22:19:30.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (presentacion, kilometros, senalizacion, Ademas, organizacion): va ; sin esas oraciones quedan 154",
+   "maximo": 3
   },
   {
    "id": "1xbyav3",
@@ -148,7 +187,7 @@
      "fecha": "2026-10-07T22:00:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   }
