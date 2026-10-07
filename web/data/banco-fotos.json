@@ -8859,13 +8859,16 @@
   "cuando": "2026-10-07T12:02:52.950Z"
  },
  "1outpc2": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1outpc2.jpg",
+  "medio": "Crónica",
+  "credito": "Foto: Crónica",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T06:31:45.940Z",
-  "intentos": 3,
-  "fuentes": 4
+  "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/la-sole-le-canto-a-messi-y-emociono-a-todo-el-monumental/",
+  "imagenOriginal": "https://www.cronica.com.ar/files/image/1718/1718173/6ac5ad78e1dd3_600_315!.jpg?s=837d183b8b291d4387dd4e26d159f440&d=1791340696",
+  "razon": "Muestra claramente a Soledad Pastorutti junto a Lionel Messi sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-07T12:32:04.511Z"
  },
  "e09k96": {
   "archivo": "fotos-notas/e09k96.jpg",
@@ -9013,5 +9016,50 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/las-transferencias-entre-cuentas-propias-tienen-montos-a-partir-de-los-cuales-las-entidades-financieras-deben-informar-los-movimientos-a-arca-foto-freepik-y-arca-GSCTUAZUEVHRRPI3MOJSTRPE4Q.png?auth=979d2f73787dbc2a098e3a5a6126ac2210029bff98400e0d9d07cff76072aa57&width=1023",
   "razon": "La foto B ilustra adecuadamente el uso de billeteras virtuales y organismos de control sin marcas de agua ni menores.",
   "cuando": "2026-10-07T12:02:52.950Z"
+ },
+ "45acbd": {
+  "archivo": "fotos-notas/45acbd.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
+  "enlace": "https://balcarce.gob.ar/2026/10/07/espectaculo-a-la-gorra-a-beneficio-de-rufi-cerezuela-2/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2025/04/teatro.jpg",
+  "razon": "Es la unica foto disponible, no tiene marcas ni menores y muestra claramente el Teatro Municipal.",
+  "cuando": "2026-10-07T12:32:04.511Z"
+ },
+ "y4gp3v": {
+  "archivo": "fotos-notas/y4gp3v.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+  "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-07-12-1-15AUTO_1.JPG",
+  "razon": "Es la única opción disponible, cumple con los requisitos y no tiene marcas de agua ni menores visibles.",
+  "cuando": "2026-10-07T12:32:04.511Z"
+ },
+ "17q8tbm": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Senado bonaerense sanciona la ley que regula los celulares en escuelas",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-07T12:32:04.511Z",
+  "intentos": 1,
+  "fuentes": 5
+ },
+ "nfrfo8": {
+  "archivo": "fotos-notas/nfrfo8.jpg",
+  "medio": "La Verdad",
+  "credito": "Foto: La Verdad",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Crecen las refinanciaciones de deudas y muchos clientes vuelven a incumplir",
+  "enlace": "https://laverdadonline.com/morosidad-crecen-las-refinanciaciones-pero-muchos-clientes-vuelven-a-incumplir/",
+  "imagenOriginal": "https://laverdadonline.com/wp-content/uploads/2026/08/10-morosidad.webp",
+  "razon": "La foto A tiene marca de agua de Noticias Argentinas, por lo que se descarta. La foto B ilustra bien el tema de deudas y no presenta marcas ni menores.",
+  "cuando": "2026-10-07T12:32:04.511Z"
  }
 }

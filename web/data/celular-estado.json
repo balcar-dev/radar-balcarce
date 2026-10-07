@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T12:03:45.114Z",
- "portada": 44,
- "archivo": 1002,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-07T12:32:25.587Z",
+ "portada": 41,
+ "archivo": 1006,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-07T12:03:45.159Z",
+  "generado": "2026-10-07T12:32:25.624Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-07T12:06:36.184Z"
    },
    {
     "nombre": "noticia1",
@@ -95,27 +95,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "1outpc2",
       "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
-      "seccion": "Agro"
-     },
-     {
-      "id": "15zgvx1",
-      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce"
      },
      {
-      "id": "1r3qdtj",
-      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
-      "seccion": "Deportes"
+      "id": "vm4nnt",
+      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
+      "seccion": "Agro"
      }
     ]
    },
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 54,
     "notas": [
      {
       "id": "rilva6",
@@ -134,19 +134,19 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1l0p3uh",
-      "titulo": "El tren Sarmiento suspende su servicio cuatro días por obras",
-      "seccion": "Argentina"
+      "id": "45acbd",
+      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "id": "15zgvx1",
+      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
       "seccion": "Balcarce"
      },
      {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
+      "id": "1l0p3uh",
+      "titulo": "El tren Sarmiento suspende su servicio cuatro días por obras",
+      "seccion": "Argentina"
      }
     ]
    },
@@ -157,11 +157,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "id": "1r3qdtj",
+      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
      },
      {
@@ -170,14 +175,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "aa0h34",
-      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "seccion": "Balcarce"
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -185,6 +185,18 @@
   "facebook": {
    "hoy": [],
    "cola": [
+    {
+     "id": "y4gp3v",
+     "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
+    {
+     "id": "45acbd",
+     "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
     {
      "id": "15zgvx1",
      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",

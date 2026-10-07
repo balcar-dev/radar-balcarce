@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T12:03:45.114Z",
+ "generado": "2026-10-07T12:32:25.587Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,10 +13,32 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/07/viernes-9-educacion-identidad-y-propuestas-locales-en-la-fiesta-nacional-del-postre/",
      "fecha": "2026-10-07T11:05:49.000Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45019-la-fiesta-nacional-del-postre-tambien-se-vivira-con-juegos-y-propuestas-educativas/",
+     "fecha": null
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 2 problemas (nombre, fecha): el cuerpo nombra a \"municipalidad\" y la fuente no; sin esas oraciones quedan 61 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 2 problemas (copia, promesa): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 106 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "131078z",
+   "titulo": "Agustín Molpeceres recibirá un reconocimiento de la Cámara de Diputados bonaerense",
+   "copete": "El licenciado en Educación Física será distinguido por la Cámara de Diputados de la Provincia de Buenos Aires por su trayectoria en el deporte adaptado y el alto rendimiento paralímpico. Integró el cuerpo técnico de la Selección Argentina de Boccia en los Juegos de Río 2016 y…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-07T12:07:32.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/agustin-molpeceres-recibira-un-reconocimiento-de-la-camara-de-diputados-bonaerense",
+     "fecha": "2026-10-07T12:07:32.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice",
    "maximo": 3
   },
   {
