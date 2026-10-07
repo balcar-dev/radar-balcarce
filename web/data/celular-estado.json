@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T07:02:21.436Z",
- "portada": 47,
- "archivo": 995,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-07T07:07:44.660Z",
+ "portada": 43,
+ "archivo": 996,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-07T07:02:21.472Z",
+  "generado": "2026-10-07T07:07:44.697Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
      {
       "id": "1cnlvgi",
@@ -103,14 +103,14 @@
       "seccion": "Fútbol"
      },
      {
+      "id": "vm4nnt",
+      "titulo": "Científicos protestan en Mar del Plata por el sumario a investigadora del INTA",
+      "seccion": "Agro"
+     },
+     {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1r3qdtj",
-      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
-      "seccion": "Deportes"
      },
      {
       "id": "1793nst",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 54,
     "notas": [
      {
       "id": "1outpc2",
@@ -139,8 +139,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      },
      {
@@ -157,24 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
-    "notas": [
-     {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
