@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T06:31:58.746Z",
- "portada": 48,
+ "generado": "2026-10-07T07:02:21.436Z",
+ "portada": 47,
  "archivo": 995,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T06:31:58.791Z",
+  "generado": "2026-10-07T07:02:21.472Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -103,8 +103,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
      },
      {
@@ -126,22 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 40,
+    "segundos": 48,
     "notas": [
      {
-      "id": "zqq9w8",
-      "titulo": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
+      "id": "1outpc2",
+      "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
      },
      {
       "id": "1n6yxr",
       "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "seccion": "Balcarce"
      },
      {
       "id": "aa0h34",
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "a00g5p",
-      "titulo": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos",
-      "seccion": "Balcarce"
-     },
      {
       "id": "e3ix5w",
       "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
@@ -173,6 +168,11 @@
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -180,12 +180,6 @@
   "facebook": {
    "hoy": [],
    "cola": [
-    {
-     "id": "9ncum9",
-     "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "pvwlvg",
      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",

@@ -1,19 +1,56 @@
 {
- "generado": "2026-10-07T06:31:58.746Z",
+ "generado": "2026-10-07T07:02:21.436Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1l2ca46",
-   "titulo": "Un Renault Clio chocó contra un poste de alumbrado en avenida Eva Perón",
-   "copete": "Un siniestro vial se registró en la noche de este martes en avenida Eva Perón, entre calles 104 y 106, donde un automóvil Renault Clio impactó contra un poste de alumbrado público. Según se pudo saber, el conductor del vehículo, un hombre mayor de edad, habría sufrido una…",
-   "seccion": "Policiales",
-   "fecha": "2026-10-06T23:24:12.000Z",
+   "id": "1yzgdmc",
+   "titulo": "\"Chiqui Tapia botón\": los cantos contra el presidente de la AFA en la previa de la despedida de Messi en el Monumental",
+   "copete": "Minutos antes del partido entre la selección argentina y Benín , en el marco de la despedida de Lionel Messi en el estadio Monumental, un grupo de hinchas entonó fuertes cánticos contra el presidente de la Asociación del Fútbol Argentino (AFA), Claudio “Chiqui” Tapia . Los…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-06T22:42:18.000Z",
    "fuentes": [
     {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/un-renault-clio-choco-contra-un-poste-de-alumbrado-en-avenida-eva-peron/",
-     "fecha": "2026-10-06T23:24:12.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/deportes/chiqui-tapia-boton-cantos-presidente-afa-previa-despedida-messi-monumental_0_oWhRD6JQVz.html",
+     "fecha": "2026-10-06T22:42:18.000Z"
     },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/deportes/futbol/los-canticos-de-los-hinchas-contra-chiqui-tapia-en-la-previa-de-la-despedida-de-messi-de-la-nid06102026/",
+     "fecha": "2026-10-07T02:26:34.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/seleccion/canticos-tapia_3_LxAylRmWhM.html",
+     "fecha": "2026-10-06T22:42:52.000Z"
+    },
+    {
+     "medio": "0221",
+     "enlace": "https://www.0221.com.ar/deportes/video-el-estadio-monumental-exploto-contra-chiqui-tapia-la-despedida-lionel-messi-n135407",
+     "fecha": "2026-10-07T00:56:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/video-la-reaccion-de-los-hinchas-contra-chiqui-tapia-en-el-partido-despedida-de-lionel-messi/",
+     "fecha": "2026-10-06T23:26:12.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/deportes/videos-insultos-para-chiqui-tapia-en-el-monumental-en-la-previa-de-la-despedida-de-messi-deportes_1791327960",
+     "fecha": "2026-10-06T23:09:41.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 35 palabras",
+   "maximo": 4
+  },
+  {
+   "id": "ioddw4",
+   "titulo": "Un auto chocó contra un poste de luz",
+   "copete": "Este martes por la noche, un automóvil Renault Clío impactó contra un poste de alumbrado público en avenida Eva Perón, entre 104 y 106. Según pudo saber Infórmese Primero , el conductor, un hombre mayor de edad, habría sufrido una descompensación mientras circulaba por el…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-06T23:46:00.754Z",
+   "fuentes": [
     {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/un-auto-choco-contra-un-poste-de-luz.html",
@@ -21,7 +58,7 @@
     }
    ],
    "intentos": 3,
-   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice",
+   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 2, que sale de una nota anterior, como si fuera de hoy",
    "maximo": 3
   },
   {
