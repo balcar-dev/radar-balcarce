@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T15:04:55.673Z",
- "portada": 41,
- "archivo": 1010,
- "esperandoCuerpo": 11,
+ "generado": "2026-10-07T15:39:06.934Z",
+ "portada": 44,
+ "archivo": 1015,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-07T15:04:55.718Z",
+  "generado": "2026-10-07T15:39:06.958Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutora",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-07T15:05:51.901Z"
    },
    {
     "nombre": "noticia2",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 48,
     "notas": [
      {
       "id": "vm4nnt",
@@ -134,19 +134,19 @@
       "seccion": "Agro"
      },
      {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "rilva6",
-      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "kr8nxa",
+      "titulo": "Grupo Cali explica los motivos de la suspensión de su show",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 53,
     "notas": [
      {
       "id": "1aak7ut",
@@ -165,19 +165,19 @@
       "seccion": "Agro"
      },
      {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "id": "2r3foe",
+      "titulo": "La Fiesta Nacional del Postre confirma las clases de cocina para el fin de semana",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "rilva6",
+      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
       "seccion": "Fútbol"
      },
      {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -197,6 +197,18 @@
    ],
    "cola": [
     {
+     "id": "2i73nb",
+     "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "2r3foe",
+     "titulo": "La Fiesta Nacional del Postre confirma las clases de cocina para el fin de semana",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
      "id": "45acbd",
      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
      "seccion": "Cultura y agenda",
@@ -206,12 +218,6 @@
      "id": "15zgvx1",
      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "131078z",
-     "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
-     "seccion": "Deportes",
      "marcada": false
     }
    ],
