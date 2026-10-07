@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T20:02:47.420Z",
+ "generado": "2026-10-07T20:08:24.775Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -59,25 +59,8 @@
      "fecha": "2026-10-07T19:55:51.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 7 problemas (nombre, fecha, copia): el cuerpo nombra a \"administracion\" y la fuente no; sin esas oraciones quedan 36 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "rwhqdu",
-   "titulo": "Nueva infracción por circular con maquinaria pesada en la red vial Rural",
-   "copete": "Los controles se mantienen activos ante las condiciones climáticas y el riesgo de deterioro de los caminos recientemente intervenidos En el contexto del seguimiento permanente que se realiza sobre la red vial rural del distrito, se registró una nueva infracción vinculada con la…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-07T19:46:05.000Z",
-   "fuentes": [
-    {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/07/nueva-infraccion-por-circular-con-maquinaria-pesada-en-la-red-vial-rural/",
-     "fecha": "2026-10-07T19:46:05.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (fecha, repite): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 18 palabras",
+   "intentos": 2,
+   "motivo": "título o bajada: 4 problemas (nombre): el copete nombra a \"administracion\" y la fuente no",
    "maximo": 3
   },
   {
@@ -121,6 +104,23 @@
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "10cpafd",
+   "titulo": "Música, poesía y un homenaje a Ricardo Soulé en la Casa del Bicentenario",
+   "copete": "La Casa del Bicentenario fue escenario de una propuesta artística que reunió música, literatura e invitados especiales. El encuentro tuvo acceso libre y gratuito y contó además con un buffet a beneficio de la Sociedad de Protección a la Infancia. El cierre estuvo marcado por un…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-07T20:01:26.802Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45013-musica-poesia-y-un-homenaje-a-ricardo-soule-en-la-casa-del-bicentenario/",
+     "fecha": null
+    }
+   ],
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 73 palabras",
+   "maximo": 3
   }
  ]
 }

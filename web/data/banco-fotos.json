@@ -9376,16 +9376,16 @@
   "cuando": "2026-10-07T19:02:08.763Z"
  },
  "10cpafd": {
-  "archivo": "fotos-notas/10cpafd.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Casa del Bicentenario reúne música y literatura",
   "enlace": "https://www.diariolavanguardia.com/noticias/45013-musica-poesia-y-un-homenaje-a-ricardo-soule-en-la-casa-del-bicentenario/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65972.png",
   "razon": "La foto tiene buena calidad y encuadre, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-07T20:02:27.321Z"
+  "cuando": "2026-10-07T20:02:27.321Z",
+  "intentado": true,
+  "borrada": true
  },
  "158583a": {
   "archivo": "fotos-notas/158583a.jpg",
@@ -9422,5 +9422,17 @@
   "imagenOriginal": "https://media.tycsports.com/files/2026/10/07/993680/rodolfo-arruabarrena_1440x810.webp?v=1",
   "razon": "Es la foto con mejor nitidez y encuadre del DT, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-07T20:02:27.321Z"
+ },
+ "rwhqdu": {
+  "archivo": "fotos-notas/rwhqdu.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
+  "enlace": "https://balcarce.gob.ar/2026/10/07/nueva-infraccion-por-circular-con-maquinaria-pesada-en-la-red-vial-rural/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-07-at-3.57.47-PM.jpeg",
+  "razon": "Muestra claramente el hecho sin marcas ni menores.",
+  "cuando": "2026-10-07T20:08:19.074Z"
  }
 }
