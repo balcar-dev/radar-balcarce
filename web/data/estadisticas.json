@@ -1100,6 +1100,53 @@
         "vistas": 76,
         "interacciones": 4
       }
+    },
+    {
+      "cuando": "2026-10-07T12:00:30.640Z",
+      "web": {
+        "u12": {
+          "visitas": 6,
+          "vistas": 14
+        },
+        "a12": {
+          "visitas": 27,
+          "vistas": 47
+        },
+        "u24": {
+          "visitas": 33,
+          "vistas": 61
+        },
+        "a24": {
+          "visitas": 71,
+          "vistas": 119
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 11
+          },
+          {
+            "camino": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis",
+            "vistas": 11
+          },
+          {
+            "camino": "/nota/el-jardin-905-reanuda-las-clases-por-la-tarde-tras-revisar-las-1k3fdlf",
+            "vistas": 10
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 7,
+        "vistas": 876,
+        "interacciones": 11
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 93,
+        "alcance": 5,
+        "vistas": 8,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -1632,7 +1679,7 @@
         "/seccion/tecnologia": 3,
         "/seccion/automovilismo": 2
       },
-      "visitas": 31,
+      "visitas": 30,
       "vistas": 80,
       "horas": [
         0,
@@ -1684,37 +1731,37 @@
         0,
         0,
         0,
-        0,
+        6,
         0,
         0
       ],
       "paises": {
-        "CN": 42,
-        "US": 38,
-        "IE": 9,
-        "AR": 2,
-        "SE": 2
+        "US": 40,
+        "IE": 20,
+        "CN": 20
       },
       "referentes": {
         "directo": 45,
-        "facebook.com": 26
+        "facebook.com": 32
       },
-      "visitas": 71,
-      "vistas": 93,
+      "visitas": 77,
+      "vistas": 99,
       "notas": {
         "1k3fdlf": 10,
         "1jfpdis": 9,
         "1onhk2k": 7,
         "1r3qdtj": 6,
+        "q0mrv4": 4,
         "1ag0mm4": 3,
         "k690bx": 3,
         "108t4y0": 3,
+        "sjekvy": 2,
         "1fxkw0r": 2,
         "repaso20261005noche": 1,
-        "y68w3c": 1,
         "1njgnul": 1,
         "sd36kl": 1,
         "1gklhao": 1,
+        "z08pph": 1,
         "1vnue0q": 1,
         "9pla58": 1,
         "1pwavd9": 1,
@@ -1733,19 +1780,19 @@
         "1btbpkb": 1,
         "gepu85": 1,
         "9m9h4e": 1,
-        "z08pph": 1
+        "y68w3c": 1
       },
       "paginas": {
         "/": 10,
         "/seccion/automovilismo": 1,
         "/agenda/caminata-rosa-muni24072": 1,
         "/seccion/economia": 1,
-        "/seccion/argentina": 1,
         "/seccion/cultura": 1,
         "/farmacias": 1,
-        "/seccion/politica": 1,
+        "/seccion/argentina": 1,
         "/seccion/futbol": 1,
         "/seccion/balcarce": 1,
+        "/seccion/politica": 1,
         "/agenda/uttd-tierras-del-diablo-muni22346": 1,
         "/seccion/agro": 1,
         "/clima": 1,
@@ -1753,9 +1800,50 @@
         "/agenda/22-fiesta-nacional-del-postre-muni22540": 1
       },
       "dispositivos": {
-        "desktop": 71,
-        "mobile": 22
+        "desktop": 73,
+        "mobile": 26
       }
+    },
+    "2026-10-07": {
+      "referentes": {},
+      "notas": {
+        "1jfpdis": 2
+      },
+      "paginas": {
+        "/": 6
+      },
+      "dispositivos": {},
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "paises": {
+        "AR": 8
+      },
+      "visitas": 0,
+      "vistas": 8
     }
   }
 }
