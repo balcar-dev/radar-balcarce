@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T01:02:44.820Z",
+  "generado": "2026-10-07T01:32:34.141Z",
   "notas": [
     {
       "id": "d63yik",
@@ -333,7 +333,7 @@
       "fecha": "2026-10-06T22:23:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T22:31:23.096Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -491,6 +491,139 @@
       "foto": {
         "archivo": "fotos-notas/1uh42rm.jpg",
         "credito": "Foto: Página/12"
+      }
+    },
+    {
+      "id": "zqq9w8",
+      "titulo": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
+      "copete": "Un grupo de fanáticos abucheó al presidente de la Asociación del Fútbol Argentino en la previa del partido homenaje a Lionel Messi en el estadio Monumental. El dirigente afronta una causa judicial por enriquecimiento ilícito.",
+      "cuerpo": "Un grupo de simpatizantes entonó cánticos contra el presidente de la Asociación del Fútbol Argentino, Claudio Tapia, minutos antes del partido amistoso entre la selección argentina y Benín en el estadio Monumental. Los gritos comenzaron en la tribuna Centenario alta y se extendieron hasta el sector Sívori en la previa de la despedida del capitán Lionel Messi.\n\nEn paralelo al homenaje organizado por la entidad madre del fútbol nacional, Tapia afronta una investigación judicial por presunto enriquecimiento ilícito a cargo del juez federal Ariel Lijo, expediente que sumó medidas recientes impulsadas por el fiscal Gerardo Pollicita.",
+      "guion": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Clarín",
+        "Perfil",
+        "Olé",
+        "Radio Mitre",
+        "El Día",
+        "0221"
+      ],
+      "enlace": "https://noticias.perfil.com/noticias/deportes/lavado-de-imagen-chiqui-tapia-se-abrazo-a-messi-antes-de-la-despedida-del-capitan.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T20:18:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T01:31:56.668Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Hinchas insultaron al presidente de la AFA en la previa del partido en el Monumental.",
+        "Los cánticos nacieron en la tribuna Centenario y se extendieron a la Sívori.",
+        "Lionel Messi disputó su encuentro despedida de la selección argentina frente a Benín.",
+        "Claudio Tapia afronta una investigación judicial por presunto enriquecimiento ilícito."
+      ],
+      "noConfirmado": [
+        "No trascendió la cantidad exacta de hinchas que participaron de los cánticos contra el titular de la AFA."
+      ],
+      "textoRedes": "Hinchas insultaron al presidente de la AFA, Claudio Tapia, en la previa del partido despedida de Lionel Messi en el estadio Monumental. Los cánticos comenzaron en la tribuna Centenario alta y se extendieron por distintos sectores del escenario deportivo.",
+      "etiquetas": [
+        "Claudio Tapia",
+        "Lionel Messi",
+        "Seleccion argentina",
+        "Estadio Monumental",
+        "AFA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://noticias.perfil.com/noticias/deportes/lavado-de-imagen-chiqui-tapia-se-abrazo-a-messi-antes-de-la-despedida-del-capitan.phtml",
+          "fecha": "2026-10-06T20:18:29.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la trayectoria de Messi, la organización de la AFA y la causa judicial contra Tapia."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/los-canticos-de-los-hinchas-contra-chiqui-tapia-en-la-previa-de-la-despedida-de-messi-de-la-nid06102026/",
+          "fecha": "2026-10-06T23:49:38.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los cánticos de los hinchas contra el presidente de la AFA en la previa."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/chiqui-tapia-boton-cantos-presidente-afa-previa-despedida-messi-monumental_0_oWhRD6JQVz.html",
+          "fecha": "2026-10-06T22:42:18.000Z",
+          "oficial": false,
+          "aporte": "Precisó que los gritos comenzaron en la Centenario alta y se extendieron a la Sívori."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/insultos-claudio-tapia-monumental-despedida-messi_0_sv6o3l2oNb.html",
+          "fecha": "2026-10-06T22:52:02.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/canticos-tapia_3_LxAylRmWhM.html",
+          "fecha": "2026-10-06T22:42:52.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/videos/video-la-reaccion-de-los-hinchas-contra-chiqui-tapia-en-el-partido-despedida-de-lionel-messi/",
+          "fecha": "2026-10-06T23:26:12.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los insultos de los fanáticos al presidente de la AFA antes del inicio."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/videos-insultos-para-chiqui-tapia-en-el-monumental-en-la-previa-de-la-despedida-de-messi-deportes_1791327960",
+          "fecha": "2026-10-06T23:09:00.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/video-el-estadio-monumental-exploto-contra-chiqui-tapia-la-despedida-lionel-messi-n135407",
+          "fecha": "2026-10-07T00:56:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el recorrido de los cánticos desde la tribuna Centenario por distintos sectores del Monumental."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "19n87v4",
+          "titulo": "La reventa de entradas supera los seis millones de pesos para la despedida de Messi",
+          "fecha": "2026-10-06T17:12:10.000Z",
+          "ruta": "/nota/la-reventa-de-entradas-supera-los-seis-millones-de-pesos-para-la-19n87v4"
+        },
+        {
+          "id": "o99ioz",
+          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
+          "fecha": "2026-10-03T13:24:05.000Z",
+          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
+        },
+        {
+          "id": "iheoi7",
+          "titulo": "El partido despedida de Messi dispara la demanda de viajes hacia Buenos Aires",
+          "fecha": "2026-10-01T09:00:00.000Z",
+          "ruta": "/nota/el-partido-despedida-de-messi-dispara-la-demanda-de-viajes-hacia-iheoi7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "hinchas-insultan-a-claudio-tapia-en-la-despedida-de-lionel-messi",
+      "foto": {
+        "archivo": "fotos-notas/zqq9w8.jpg",
+        "credito": "Foto: Clarín"
       }
     },
     {
@@ -1288,7 +1421,7 @@
       "fecha": "2026-10-06T15:10:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T18:01:30.786Z",
-      "relevancia": 53,
+      "relevancia": 57,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1750,7 +1883,7 @@
       "fecha": "2026-10-06T13:05:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-06T14:31:14.500Z",
-      "relevancia": 96,
+      "relevancia": 89,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1801,74 +1934,73 @@
       }
     },
     {
-      "id": "15imf6x",
-      "titulo": "Suspenden clases en el Jardín 905 por el robo de caños de gas",
-      "copete": "El Jardín de Infantes N° 905 debió interrumpir las actividades del turno mañana este martes tras constatarse el faltante de caños de gas. La Policía actuó de oficio.",
-      "cuerpo": "El Jardín de Infantes N° 905 Isidora de Vega, situado en la calle 13 entre Chacabuco y San Lorenzo, suspendió las actividades del turno mañana de este martes debido al faltante de caños de la instalación de gas. El personal detectó un fuerte olor a gas al ingresar al establecimiento, lo que motivó una revisión que confirmó la sustracción de los conductos.\n\nLa Policía tomó conocimiento del episodio de oficio, aunque hasta el momento no se formalizó la denuncia correspondiente. Las autoridades locales analizan los daños para determinar los arreglos necesarios antes de retomar el dictado de clases.",
-      "guion": "Suspenden clases en el Jardín 905 por el robo de caños de gas",
-      "seccion": "Policiales",
+      "id": "1k3fdlf",
+      "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
+      "copete": "El Jardín de Infantes N° 905 retoma la actividad escolar en el turno tarde. Personal técnico intervino en el edificio tras el robo de un componente del medidor.",
+      "cuerpo": "El Jardín de Infantes N° 905 “Isidora de Vega” restablece las clases presenciales durante el turno tarde. La medida se adopta luego de que operarios de la empresa Camuzzi concretaran la revisión integral de la red interna.\n\nLa interrupción de la jornada matutina se produjo a causa del robo de un conducto flexible del medidor de gas. El establecimiento se sitúa en la calle 13 entre Chacabuco y San Lorenzo.\n\nEspecialistas de la prestataria inspeccionaron el sector afectado y corroboraron la seguridad del inmueble escolar. De esta manera, las autoridades confirmaron la normalización de las actividades pedagógicas para los alumnos.",
+      "guion": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
+      "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Radio Gabal (FM 104.1)"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/lo-que-faltaba-robaron-canos-de-gas-en-el-jardin-905-y-debieron-suspender-las-clases",
+      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/tras-el-robo-de-un-flexible-del-medidor-de-gas-el-jardin-905-tendra-clases-normales-por-la-tarde",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T12:30:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-06T13:31:32.819Z",
-      "relevancia": 98,
+      "visto": "2026-10-06T14:01:11.259Z",
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Jardín de Infantes N° 905 Isidora de Vega.",
-        "Suspensión de clases en el turno mañana.",
-        "Sustracción de caños de gas y olor en el edificio.",
-        "Intervención policial de oficio sin denuncia."
+        "El Jardín 905 tendrá clases normales por la tarde.",
+        "Robaron un flexible del medidor de gas del establecimiento.",
+        "Personal de Camuzzi verificó las instalaciones y garantizó la seguridad."
       ],
       "seSabe": [
-        "El Jardín N° 905 está ubicado en calle 13 entre Chacabuco y San Lorenzo.",
-        "Se suspendieron las clases del turno mañana de este martes.",
-        "Se detectó el faltante de caños de gas tras percibir olor en el edificio.",
-        "La Policía actuó de oficio ante el caso."
+        "Según informó una fuente periodística, el Jardín 905 retomará las clases en el turno tarde.",
+        "Trabajó personal de Camuzzi en el edificio ubicado en calle 13 entre Chacabuco y San Lorenzo."
       ],
       "noConfirmado": [
-        "No se radicó la denuncia formal del hecho.",
-        "No se especificó la fecha exacta en la que ocurrió el hurto.",
-        "No trascendió cuándo se retomarán las actividades escolares."
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Suspenden las clases del turno mañana en el Jardín de Infantes N° 905 tras constatarse el robo de caños de la instalación de gas en el edificio de calle 13.",
+      "textoRedes": "El Jardín de Infantes N° 905 tendrá clases normales por la tarde tras la revisión de las instalaciones de gas por parte de operarios de Camuzzi en el edificio de calle 13.",
       "etiquetas": [
         "Jardín 905",
-        "Balcarce",
-        "suspensión de clases",
-        "policiales"
+        "Camuzzi",
+        "gas",
+        "clases",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
           "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/lo-que-faltaba-robaron-canos-de-gas-en-el-jardin-905-y-debieron-suspender-las-clases",
-          "fecha": "2026-10-06T13:18:36.000Z",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/tras-el-robo-de-un-flexible-del-medidor-de-gas-el-jardin-905-tendra-clases-normales-por-la-tarde",
+          "fecha": "2026-10-06T13:47:24.000Z",
           "oficial": false,
-          "aporte": "Informó la suspensión de clases en el Jardín N° 905 y la ubicación del establecimiento."
-        },
+          "aporte": "Detalló la revisión de Camuzzi y la continuidad de las clases por la tarde tras el robo del flexible."
+        }
+      ],
+      "antecedentes": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45006-robaron-canos-de-gas-del-jardin-n-905-y-suspendieron-las-clases/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló que el hecho se vincula al robo de caños de gas y que la intervención policial fue de oficio."
+          "id": "15imf6x",
+          "titulo": "Suspenden clases en el Jardín 905 por el robo de caños de gas",
+          "fecha": "2026-10-06T13:18:36.000Z",
+          "ruta": "/nota/suspenden-clases-en-el-jardin-905-por-el-robo-de-canos-de-gas-15imf6x"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "suspenden-clases-en-el-jardin-905-por-el-robo-de-canos-de-gas"
+      "slug": "el-jardin-905-reanuda-las-clases-por-la-tarde-tras-revisar-las",
+      "foto": {
+        "archivo": "fotos-notas/1k3fdlf.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "232als",
@@ -2301,7 +2433,7 @@
       "id": "1c7wqua",
       "titulo": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "copete": "La secretaria general de la Presidencia y el jefe de Gabinete se reúnen con mandatarios provinciales en Salta. Buscan respaldos para suspender las PASO y aprobar el Presupuesto.",
-      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
+      "cuerpo": "La actividad forma parte de las gestiones del Ejecutivo nacional para conseguir apoyos de los mandatarios provinciales con el fin de suspender las elecciones Primarias, Abiertas, Simultáneas y Obligatorias y avanzar con la reforma política.\n\nDurante el encuentro en el Salar del Hombre Muerto se prevé firmar un memorándum de entendimiento para las etapas III y IV del proyecto minero, con la meta de alcanzar una producción anual de 100.000 toneladas de litio. Desde La Libertad Avanza señalaron que el oficialismo garantizó a los gobernadores que no competiránnnnnnnnnnnnnnnnnn con candidatos libertarios en sus distritos electorales.",
       "guion": "Funcionarios nacionales y gobernadores participan de inauguración minera",
       "seccion": "Política",
       "medios": [
@@ -3685,13 +3817,13 @@
       "medios": [
         "Infobae",
         "La Nación",
-        "Minuto Uno",
         "TN (Todo Noticias)",
         "El Destape",
         "Radio Mitre",
         "Canal 26",
         "C5N",
         "A24",
+        "Minuto Uno",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia",
@@ -3704,14 +3836,13 @@
         "La Página Millonaria",
         "Página/12",
         "0221",
-        "El Día",
         "0223 (Mar del Plata)",
         "La Nueva",
         "La Capital (Rosario)",
-        "LU9 Mar del Plata",
-        "Ecos Diarios (Necochea)",
         "Ámbito",
         "Crónica",
+        "LU9 Mar del Plata",
+        "Ecos Diarios (Necochea)",
         "Perfil",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
@@ -4128,11 +4259,11 @@
         "Argenpapa"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17884-argentina-aconcagua-propone-simplificar-el-registro-de-labores-y-la-trazabilidad-en-la-produccion-de-papa",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-05T15:52:36.644Z",
       "sinFecha": true,
       "visto": "2026-10-05T15:52:36.644Z",
-      "relevancia": 16,
+      "relevancia": 26,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -4506,8 +4637,8 @@
         "Clarín",
         "Infocampo",
         "Agrositio",
-        "Bichos de Campo",
-        "Agroempresario"
+        "Agroempresario",
+        "Bichos de Campo"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248662-soja-aca-neogen-apuesta-a-una-campana-de-alto-potencial-y-pone-el-foco-en-la-genetica-para-transformar-el-agua-en-rendimiento.html",
       "teniaImagenLaFuente": true,
@@ -4619,214 +4750,6 @@
         "archivo": "fotos-notas/wb8pre.jpg",
         "credito": "Foto: El Diario Balcarce"
       }
-    },
-    {
-      "id": "d9vaq",
-      "titulo": "La Provincia refuerza el Fondo Municipal y Balcarce espera fondos",
-      "copete": "El Gobierno bonaerense destinó $1.368 millones para reforzar el FEFIM. Balcarce figura entre los distritos que podrían recibir una nueva transferencia según el Coeficiente Único de Distribución.",
-      "cuerpo": "El Ministerio de Economía bonaerense dispuso una transferencia de $1.368.288.000 para reforzar el Fondo de Emergencia y Fortalecimiento de la Inversión Municipal mediante la Resolución N° 379-MECONGP-2026, según informó un medio local. La medida busca atender atrasos de Tesorería y financiar programas sociales, ambientales y de inversión en los 135 distritos.\n\nEl esquema establece que el 70% de los recursos se distribuye de acuerdo con el Coeficiente Único de Distribución, mientras que el 30% restante se destina a programas provinciales. El distrito cuenta con un CUD de 0,51257 para este año, de acuerdo con los registros oficiales.\n\nLa llegada de estos recursos genera expectativas en las cuentas locales frente a las dificultades financieras que atraviesan los municipios. Sin embargo, todavía resta conocer el detalle de la distribución para determinar qué monto final ingresará al distrito.",
-      "guion": "La Provincia refuerza el Fondo Municipal y Balcarce espera fondos",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44995-balcarce-podria-verse-beneficiado-por-una-nueva-transferencia-del-fefim-a-los-municipios-bonaerenses/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T13:31:16.447Z",
-      "sinFecha": true,
-      "visto": "2026-10-05T13:31:16.447Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Provincia destinó $1.368 millones para reforzar el FEFIM.",
-        "El reparto se realiza entre los 135 municipios según el CUD.",
-        "Balcarce cuenta con un coeficiente de 0,51257 para este año.",
-        "Todavía se desconoce el monto exacto que recibirá el distrito."
-      ],
-      "seSabe": [
-        "El Gobierno bonaerense transfirió $1.368.288.000 para el FEFIM.",
-        "La medida se instrumentó mediante la Resolución N° 379-MECONGP-2026.",
-        "El fondo se reparte según el CUD en un 70% y el resto a programas provinciales.",
-        "Balcarce tiene un CUD de 0,51257 para 2026."
-      ],
-      "noConfirmado": [
-        "El monto exacto que recibirá Balcarce en esta nueva transferencia.",
-        "El detalle de la distribución que aplicará el Ministerio de Economía.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Provincia transfirió 1.368 millones de pesos para reforzar el Fondo de Emergencia y Fortalecimiento de la Inversión Municipal. Balcarce figura entre los distritos que esperan recibir recursos según el CUD.",
-      "etiquetas": [
-        "FEFIM",
-        "Coparticipación",
-        "Provincia",
-        "Economía"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44995-balcarce-podria-verse-beneficiado-por-una-nueva-transferencia-del-fefim-a-los-municipios-bonaerenses/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la transferencia de $1.368 millones para el FEFIM, la resolución ministerial y el impacto del CUD en Balcarce."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-provincia-refuerza-el-fondo-municipal-y-balcarce-espera-fondos",
-      "foto": {
-        "archivo": "fotos-notas/d9vaq.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "cn09w9",
-      "titulo": "ARBal lanza planes de pago con quitas para regularizar tasas",
-      "copete": "La Agencia de Recaudación Balcarce implementa un esquema de regularización de deudas con una vigencia de dos meses. Incluye quitas totales de intereses por pago al contado o en hasta dos cuotas.",
-      "cuerpo": "La Agencia de Recaudación Balcarce (ARBal) implementa nuevos planes de pago destinados a la regularización de deudas por tasas municipales, según informó el organismo oficial. La medida alcanza a los tributos de Servicios Urbanos, Alumbrado Público, Red Vial, Obras y Patente de automotores, y se extenderá durante dos meses.\n\nEl esquema contempla quitas de hasta el cien por ciento de los intereses acumulados, de acuerdo con la modalidad elegida por el contribuyente. Los vecinos pueden optar por cancelar los montos al contado o en un máximo de dos cuotas.\n\nDesde el organismo municipal detallaron que la iniciativa apunta a facilitar el cumplimiento de las obligaciones fiscales y prevenir costos adicionales por acciones judiciales.",
-      "guion": "ARBal lanza planes de pago con quitas para regularizar tasas",
-      "seccion": "Balcarce",
-      "medios": [
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://balcarce.gob.ar/2026/10/05/solo-por-2-meses/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-05T13:08:01.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T13:31:16.447Z",
-      "relevancia": 69,
-      "local": true,
-      "oficial": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Agencia de Recaudación Balcarce lanza planes para regularizar tasas municipales.",
-        "La medida tiene una vigencia de dos meses.",
-        "El esquema incluye quitas de hasta el ciento por ciento de los intereses por pago al contado o en dos cuotas.",
-        "Las tasas comprendidas son Servicios Urbanos, Alumbrado Público, Red Vial, Obras y Patente."
-      ],
-      "seSabe": [
-        "ARBal implementa nuevos planes de pago para tasas municipales, según la información oficial.",
-        "La medida rige por el plazo de dos meses, de acuerdo con la agencia.",
-        "Se otorgan quitas de hasta el ciento por ciento de los intereses para pagos al contado o en hasta dos cuotas, según informó el organismo.",
-        "Las tasas incluidas son Servicios Urbanos, Alumbrado Público, Red Vial, Obras y Patente de automotores, según el comunicado."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Agencia de Recaudación Balcarce lanza nuevos planes de pago para regularizar deudas en tasas municipales con una vigencia de dos meses. El esquema ofrece quitas de hasta el ciento por ciento de los intereses para pagos al contado o en dos cuotas.",
-      "etiquetas": [
-        "ARBal",
-        "tasas municipales",
-        "Balcarce",
-        "deudas",
-        "Agencia de Recaudación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/10/05/solo-por-2-meses/",
-          "fecha": "2026-10-05T13:08:01.000Z",
-          "oficial": true,
-          "aporte": "Informó el lanzamiento de los planes de pago de ARBal, las tasas incluidas, los plazos, las quitas de intereses y las vías de atención."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1q0vr9a",
-          "titulo": "La Libertad Avanza propone eliminar tasas municipales para taxis y remises desde 2027",
-          "fecha": "2026-09-17T18:02:03.000Z",
-          "ruta": "/nota/la-libertad-avanza-propone-eliminar-tasas-municipales-para-taxis-y-1q0vr9a"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "arbal-lanza-planes-de-pago-con-quitas-para-regularizar-tasas",
-      "foto": {
-        "archivo": "fotos-notas/cn09w9.jpg",
-        "credito": "Foto: Municipalidad de Balcarce"
-      }
-    },
-    {
-      "id": "repaso20261005manana",
-      "propia": "repaso",
-      "titulo": "El repaso de la mañana en Radar Balcarce: Hospital Municipal y Héctor Beto Vuotto",
-      "copete": "Radar Balcarce publicó a las 10:06 de este lunes 5 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la mañana del lunes 5, en el orden en que salieron en el audio.\n\nEl Hospital Municipal registra problemas en sus líneas telefónicas. El centro de salud local sufre inconvenientes en el conmutador y los números habituales. El número 107 funciona únicamente para urgencias.\n\nBalcarce recuerda a Héctor Beto Vuotto en el Día del Periodista. La ciudad conmemora el domingo la fecha instituida en su memoria por impulso del Club Rotario Balcarce Cerrito y el Concejo Deliberante.\n\nEl Zonal del Atlántico compite en el circuito chico del Fangio. Las categorías zonales volverán a correr el fin de semana en el autódromo local. Utilizarán una traza reducida que incluye sectores históricos y las nuevas modificaciones.\n\nCampo de Pato llega a la última fecha con chances de semifinales. Los dos conjuntos locales se ubican en zona de playoffs del Torneo Desarrollo y podrían cruzarse en la siguiente instancia del campeonato.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-05T13:06:26.103Z",
-      "sinFecha": false,
-      "visto": "2026-10-05T13:06:26.103Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-05T13:06:26.103Z",
-      "temas": [],
-      "etiquetas": [
-        "Hospital Municipal",
-        "Héctor Beto Vuotto",
-        "Zonal del Atlántico",
-        "Campo de Pato"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "1ni344u",
-        "c1nalz",
-        "173ttfz",
-        "r3lz6t"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-          "href": "/nota/el-hospital-municipal-registra-problemas-en-sus-lineas-telefonicas-1ni344u"
-        },
-        {
-          "texto": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista",
-          "href": "/nota/balcarce-recuerda-a-hector-beto-vuotto-en-el-dia-del-periodista-c1nalz"
-        },
-        {
-          "texto": "El Zonal del Atlántico compite en el circuito chico del Fangio",
-          "href": "/nota/el-zonal-del-atlantico-compite-en-el-circuito-chico-del-fangio-173ttfz"
-        },
-        {
-          "texto": "Campo de Pato llega a la última fecha con chances de semifinales",
-          "href": "/nota/campo-de-pato-llega-a-la-ultima-fecha-con-chances-de-semifinales-r3lz6t"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DeHRteZAHja/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/29106426225631249/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-manana-en-radar-balcarce-hospital-municipal-y-hector",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261005manana.jpg",
-        "credito": "Fotos: Municipalidad de Balcarce, Diario La Vanguardia y Radio Gabal (FM 104.1)"
-      }
     }
   ],
   "secciones": [
@@ -4838,7 +4761,6 @@
     "Argentina",
     "Política",
     "Agro",
-    "Policiales",
     "Automovilismo"
   ],
   "temas": [
@@ -4862,7 +4784,7 @@
     "ahora": {
       "temp": 15,
       "sensacion": 13,
-      "humedad": 67,
+      "humedad": 68,
       "viento": 10,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -5218,6 +5140,12 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "1qmt02i",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
       "id": "flte73",
       "titulo": "Proponen prohibir la cartelería política en plazas y…",
       "seccion": "Política",
@@ -5278,12 +5206,6 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "1mvoz28",
-      "titulo": "Metrodelegados amenazan con medidas de fuerza por…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "1mfmp95",
       "titulo": null,
       "seccion": "Argentina",
@@ -5302,16 +5224,22 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "o3wyk2",
+      "titulo": "El gobierno de Trump destacó el liderazgo regional de…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "1glo72",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "o3wyk2",
-      "titulo": "El gobierno de Trump destacó el liderazgo regional de…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "ib0ast",
+      "titulo": "Paro de subtes: metrodelegados se declararon en estado de…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "msz2ie",
@@ -5326,11 +5254,17 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "1cjo0n1",
+      "titulo": "Javier Milei recibió un mensaje de Flávio Bolsonaro y…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "8itq4",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 6
 }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T01:02:44.820Z",
+ "generado": "2026-10-07T01:32:34.141Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -45,9 +45,26 @@
      "fecha": "2026-10-06T23:33:55.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "intentos": 4,
+   "motivo": "cuerpo: 5 problemas (nombre, fecha, antecedente, relleno, repite): el cuerpo nombra a \"plate\" y la fuente no; sin esas oraciones quedan 24 palabras",
    "maximo": 4
+  },
+  {
+   "id": "ioddw4",
+   "titulo": "Un auto chocó contra un poste de luz",
+   "copete": "Este martes por la noche, un automóvil Renault Clío impactó contra un poste de alumbrado público en avenida Eva Perón, entre 104 y 106. Según pudo saber Infórmese Primero , el conductor, un hombre mayor de edad, habría sufrido una descompensación mientras circulaba por el…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-06T23:46:00.754Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/un-auto-choco-contra-un-poste-de-luz.html",
+     "fecha": "2026-10-06T23:46:00.754Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 2, que sale de una nota anterior, como si fuera de hoy",
+   "maximo": 3
   },
   {
    "id": "1qym9k9",

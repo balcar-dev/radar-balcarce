@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T01:02:44.820Z",
- "portada": 58,
+ "generado": "2026-10-07T01:32:34.141Z",
+ "portada": 56,
  "archivo": 991,
- "esperandoCuerpo": 5,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-07T01:02:44.842Z",
+  "generado": "2026-10-07T01:32:34.177Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -212,12 +212,6 @@
    ],
    "cola": [
     {
-     "id": "1n6yxr",
-     "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-     "seccion": "Fútbol",
-     "marcada": false
-    },
-    {
      "id": "9ncum9",
      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
      "seccion": "Balcarce",
@@ -226,6 +220,12 @@
     {
      "id": "gmtn3r",
      "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
+     "seccion": "Fútbol",
+     "marcada": false
+    },
+    {
+     "id": "1n6yxr",
+     "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
      "seccion": "Fútbol",
      "marcada": false
     }
