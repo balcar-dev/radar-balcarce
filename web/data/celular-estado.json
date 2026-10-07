@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T16:03:16.445Z",
- "portada": 47,
- "archivo": 1017,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-07T16:32:51.037Z",
+ "portada": 48,
+ "archivo": 1020,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-07T16:03:16.485Z",
+  "generado": "2026-10-07T16:32:51.086Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
-      "seccion": "Agro"
-     },
      {
       "id": "2i73nb",
       "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "vm4nnt",
+      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
+      "seccion": "Agro"
      },
      {
       "id": "kr8nxa",
@@ -144,9 +144,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
+      "id": "1wp29m7",
+      "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 55,
     "notas": [
      {
       "id": "1aak7ut",
@@ -170,9 +170,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "rilva6",
-      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
-      "seccion": "Fútbol"
+      "id": "1ypbdma",
+      "titulo": "El riesgo país sube y vuelve a la zona de los 600 puntos básicos",
+      "seccion": "Economía"
      },
      {
       "id": "pvwlvg",
@@ -193,13 +193,18 @@
      "id": "siahkq",
      "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
      "cuando": "2026-10-07T14:31:59.319Z"
+    },
+    {
+     "id": "2i73nb",
+     "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+     "cuando": "2026-10-07T16:05:19.589Z"
     }
    ],
    "cola": [
     {
-     "id": "2i73nb",
-     "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
-     "seccion": "Balcarce",
+     "id": "1wp29m7",
+     "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
+     "seccion": "Deportes",
      "marcada": false
     },
     {
@@ -221,8 +226,8 @@
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-07T16:01:59.319Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-07T17:35:19.589Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
