@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T14:38:06.758Z",
- "portada": 42,
- "archivo": 1011,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-07T15:04:55.673Z",
+ "portada": 41,
+ "archivo": 1010,
+ "esperandoCuerpo": 11,
  "redes": {
-  "generado": "2026-10-07T14:38:06.807Z",
+  "generado": "2026-10-07T15:04:55.718Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-07T12:06:36.184Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu reclamo",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -129,14 +129,14 @@
     "segundos": 46,
     "notas": [
      {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
-     },
-     {
       "id": "vm4nnt",
       "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
       "seccion": "Agro"
+     },
+     {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      },
      {
       "id": "rilva6",
@@ -188,15 +188,14 @@
      "id": "y4gp3v",
      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
      "cuando": "2026-10-07T12:45:28.765Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "siahkq",
      "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
-     "seccion": "Deportes",
-     "marcada": false
-    },
+     "cuando": "2026-10-07T14:31:59.319Z"
+    }
+   ],
+   "cola": [
     {
      "id": "45acbd",
      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
@@ -216,8 +215,8 @@
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-07T14:15:28.765Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-07T16:01:59.319Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
