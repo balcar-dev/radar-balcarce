@@ -124,6 +124,11 @@
   "ultimo": "2026-10-03T16:31:21.954Z",
   "motivo": "cuerpo: 3 problemas (fecha): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 26 palabras"
  },
+ "13lk63p": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T21:31:36.587Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
  "13npbde": {
   "intentos": 2,
   "ultimo": "2026-10-02T04:01:52.965Z",
@@ -997,11 +1002,6 @@
   "ultimo": "2026-10-02T18:14:15.202Z",
   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
- "1lfoejz": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T21:31:14.712Z",
-  "motivo": "con cuerpo"
- },
  "1lji8b6": {
   "intentos": 1,
   "ultimo": "2026-10-06T19:01:25.408Z",
@@ -1227,6 +1227,11 @@
  "1r3qdtj": {
   "intentos": 1,
   "ultimo": "2026-10-06T14:34:24.640Z",
+  "motivo": "con cuerpo"
+ },
+ "1rcyrsi": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T21:31:36.587Z",
   "motivo": "con cuerpo"
  },
  "1rfl2n3": {
@@ -1513,11 +1518,6 @@
   "ultimo": "2026-10-01T17:01:22.551Z",
   "motivo": "con cuerpo"
  },
- "1xow9qi": {
-  "intentos": 2,
-  "ultimo": "2026-09-30T21:31:14.712Z",
-  "motivo": "con cuerpo"
- },
  "1xritdf": {
   "intentos": 1,
   "ultimo": "2026-10-03T21:01:24.060Z",
@@ -1546,11 +1546,6 @@
  "1y5m4fa": {
   "intentos": 1,
   "ultimo": "2026-10-03T11:01:28.166Z",
-  "motivo": "con cuerpo"
- },
- "1yjj044": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T21:31:14.712Z",
   "motivo": "con cuerpo"
  },
  "1yl5yok": {
@@ -2019,11 +2014,6 @@
   "ultimo": "2026-10-01T18:31:32.691Z",
   "motivo": "con cuerpo"
  },
- "alvfk7": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T21:31:14.712Z",
-  "motivo": "con cuerpo"
- },
  "au1bse": {
   "intentos": 3,
   "ultimo": "2026-10-01T16:31:13.369Z",
@@ -2113,6 +2103,11 @@
   "intentos": 1,
   "ultimo": "2026-10-05T13:31:26.775Z",
   "motivo": "con cuerpo"
+ },
+ "d3o2d6": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T21:31:36.587Z",
+  "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"agencia\" y la fuente no; sin esas oraciones quedan 94 palabras"
  },
  "d614dn": {
   "intentos": 1,
@@ -2452,11 +2447,6 @@
   "intentos": 1,
   "ultimo": "2026-10-07T15:33:00.200Z",
   "motivo": "con cuerpo"
- },
- "kwip9o": {
-  "intentos": 3,
-  "ultimo": "2026-09-30T21:31:14.712Z",
-  "motivo": "título o bajada: 4 problemas (nombre, numero): el titulo nombra a \"diez\" y la fuente no"
  },
  "kwpmcv": {
   "intentos": 1,

@@ -9448,13 +9448,16 @@
   "cuando": "2026-10-07T20:32:17.909Z"
  },
  "px37p5": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/px37p5.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T20:32:17.909Z",
-  "intentos": 1,
-  "fuentes": 5
+  "enlace": "https://www.lanacion.com.ar/deportes/futbol/un-diario-ingles-contrasto-el-berrinche-de-cristiano-en-portugal-con-la-elegante-salida-de-messi-de-nid07102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/lionel-messi-y-cristiano-ronaldo-con-finales-DDRZY6YTPVDX3FTVREDXKAEUFI.jpg?auth=a51ee957dd0480e767f5135dfcbd71e443adb8a84de4f2ca96392fa9cb686c77&width=1200&height=800&quality=70&smart=true",
+  "razon": "Es la mejor foto que muestra a ambos jugadores juntos en el campo sin marcas ni menores reconocibles.",
+  "cuando": "2026-10-07T21:33:09.825Z"
  },
  "28zqic": {
   "archivo": "fotos-notas/28zqic.jpg",
@@ -9491,5 +9494,14 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/la-harina-de-soja-de-origen-argentino-logra-mejores-precios-foto-bcr-2MWN4NKMLVAWLEWZM4JRKUUXD4.png?auth=e83edbca632670e480193cb80a41eed0db75dffa47574565b55412bf32ba5050&width=1023",
   "razon": "La foto B muestra claramente harina de soja en polvo, es de excelente calidad y no tiene marcas ni menores.",
   "cuando": "2026-10-07T21:02:52.475Z"
+ },
+ "1rcyrsi": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Un diputado libertario reivindica la dictadura y la comisión termina en escándalo",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-07T21:33:09.825Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }

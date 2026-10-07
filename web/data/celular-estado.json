@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T21:03:21.310Z",
- "portada": 58,
- "archivo": 1041,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-07T21:33:45.593Z",
+ "portada": 57,
+ "archivo": 1042,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T21:03:21.364Z",
+  "generado": "2026-10-07T21:33:45.640Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -212,12 +212,6 @@
    ],
    "cola": [
     {
-     "id": "rwhqdu",
-     "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "28zqic",
      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
      "seccion": "Automovilismo",
@@ -226,6 +220,12 @@
     {
      "id": "3exxze",
      "titulo": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "rwhqdu",
+     "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
      "seccion": "Balcarce",
      "marcada": false
     }

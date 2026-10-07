@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T21:03:21.310Z",
+ "generado": "2026-10-07T21:33:45.593Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,11 +15,6 @@
      "fecha": "2026-10-07T11:05:49.000Z"
     },
     {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/la-22a-fiesta-nacional-del-postre-abrira-con-una-jornada-dedicada-a-la-identidad-y-el-aprendizaje/",
-     "fecha": "2026-10-07T12:34:04.000Z"
-    },
-    {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/fiesta-nacional-del-postre-educacion.html",
      "fecha": "2026-10-07T13:53:15.932Z"
@@ -33,6 +28,43 @@
    "intentos": 3,
    "motivo": "cuerpo: 2 problemas (copia, promesa): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 106 palabras",
    "maximo": 3
+  },
+  {
+   "id": "13lk63p",
+   "titulo": "\"No te vayas, pensalo una vez más\", la canción que sonó en el micro de la Selección",
+   "copete": "Fueron 90 minutos de emoción durante lo que fue el amistoso entre Argentina y Benín , que significó la despedida oficial de Lionel Messi con la Selección, pero antes y después también surgieron historias y perlitas dignas de ser contadas. Los mismos protagonistas se encargaron…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-07T14:11:00.000Z",
+   "fuentes": [
+    {
+     "medio": "El Gráfico",
+     "enlace": "https://www.elgrafico.com.ar/articulo/1112/103221/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-sono-en-el-micro-de-la-seleccion",
+     "fecha": "2026-10-07T14:11:00.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/messi/video-cancion-seleccion-argentina-lionel-messi-despedida_0_GX6Au5weTh.html",
+     "fecha": "2026-10-07T21:07:06.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/07/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-los-companeros-le-cantaron-a-lionel-messi-en-el-micro-camino-a-su-despedida/",
+     "fecha": "2026-10-07T19:40:07.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/seleccion-argentina/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-los-jugadores-le-cantaron-a-messi-en-el-micro-id764761.html",
+     "fecha": "2026-10-07T20:55:25.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/deportes/no-te-vayas-pensalo-una-vez-mas-la-cancion-la-que-el-plantel-despidio-lionel-messi-el-micro-n251029",
+     "fecha": "2026-10-07T21:11:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
+   "maximo": 4
   },
   {
    "id": "op4hk5",
@@ -74,16 +106,6 @@
      "fecha": "2026-10-07T16:01:03.000Z"
     },
     {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
-     "fecha": "2026-10-07T20:30:21.000Z"
-    },
-    {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
-    },
-    {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
      "enlace": "https://mi8.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora-los-marplatenses-entre-los-mas-complicados/",
      "fecha": "2026-10-07T17:58:47.000Z"
@@ -92,11 +114,53 @@
      "medio": "El Eco de Tandil",
      "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
      "fecha": "2026-10-07T14:43:51.000Z"
+    },
+    {
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
+     "fecha": "2026-10-07T20:30:21.000Z"
     }
    ],
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "d3o2d6",
+   "titulo": "Rafael Grossi sube al segundo lugar en una carrera aún incierta para liderar la ONU y hay entusiasmo en el entorno del argentino",
+   "copete": "El diplomático argentino Rafael Grossi alcanzó el segundo puesto en la quinta votación del Consejo de Seguridad de las Naciones Unidas para definir al próximo secretario general del organismo internacional. El actual director general de la Organización Internacional de Energía…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-07T15:48:34.000Z",
+   "fuentes": [
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/mundo/rafael-grossi-sube-segundo-lugar-carrera-incierta-liderar-onu-entusiasmo-entorno-argentino_0_8ieqX7HWDh.html",
+     "fecha": "2026-10-07T15:48:34.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/mundo/el-argentino-rafael-grossi-escalo-posiciones-y-quedo-segundo-la-carrera-liderar-la-onu-n6331323",
+     "fecha": "2026-10-07T21:10:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/mundo/el-argentino-rafael-grossi-avanzo-al-segundo-lugar-la-carrera-ser-secretario-general-la-onu-n1604225",
+     "fecha": "2026-10-07T20:26:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/rafael-grossi-carrera-secretario-general-onu/",
+     "fecha": "2026-10-07T16:52:17.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"agencia\" y la fuente no; sin esas oraciones quedan 94 palabras",
+   "maximo": 3
   }
  ]
 }
