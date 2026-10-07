@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T13:04:46.381Z",
- "portada": 41,
+ "generado": "2026-10-07T13:32:05.285Z",
+ "portada": 38,
  "archivo": 1007,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-07T13:04:46.425Z",
+  "generado": "2026-10-07T13:32:05.326Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "en-hora",
     "salio": null,
-    "segundos": 55,
+    "segundos": 54,
     "notas": [
      {
       "id": "1outpc2",
@@ -103,19 +103,19 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
-      "seccion": "Agro"
+      "id": "siahkq",
+      "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
+      "seccion": "Deportes"
      },
      {
       "id": "45acbd",
       "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "15zgvx1",
+      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 48,
     "notas": [
      {
       "id": "rilva6",
@@ -134,19 +134,19 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "15zgvx1",
-      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
+      "id": "vm4nnt",
+      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
+      "seccion": "Agro"
+     },
+     {
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
      },
      {
-      "id": "1l0p3uh",
-      "titulo": "El tren Sarmiento suspende su servicio cuatro días por obras",
-      "seccion": "Argentina"
-     },
-     {
-      "id": "1r3qdtj",
-      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
-      "seccion": "Deportes"
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,27 +157,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 41,
     "notas": [
      {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      },
      {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
+      "id": "d63yik",
+      "titulo": "Social Pato Naranja y Negro buscan hacer historia en el rugby",
+      "seccion": "Deportes"
      },
      {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -192,6 +187,12 @@
    ],
    "cola": [
     {
+     "id": "siahkq",
+     "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
      "id": "45acbd",
      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
      "seccion": "Cultura y agenda",
@@ -201,12 +202,6 @@
      "id": "15zgvx1",
      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "131078z",
-     "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
-     "seccion": "Deportes",
      "marcada": false
     }
    ],
