@@ -8872,13 +8872,16 @@
   "cuando": "2026-10-07T05:31:56.954Z"
  },
  "1s9anmt": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1s9anmt.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Santa Fe define las fechas de las elecciones para el año 2027",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T05:31:56.954Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://www.lanacion.com.ar/politica/santa-fe-definio-su-cronograma-electoral-para-2027-el-12-de-abril-seran-las-paso-y-el-13-de-junio-se-nid06102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-gobernador-de-la-provincia-de-santa-fe-VUSRPOUSM5CLFHW5BX753OICZA.jpeg?auth=4897eb355e1cba459ca9057dbf6bdabbbe8920b9c014c572cc71d3fcdcac193d&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto A es la única que tiene excelente nitidez y encuadre, muestra claramente al funcionario y no tiene marcas de agua agregadas ni menores reconocibles.",
+  "cuando": "2026-10-07T11:31:51.553Z"
  },
  "pvwlvg": {
   "intentado": true,
@@ -8933,5 +8936,53 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/10/04/a1RWJ8YDm_2000x1500__1.jpg",
   "razon": "Se seleccionó la foto A porque muestra claramente a Franco Colapinto en el evento sin marcas de agua de los medios ni menores de edad reconocibles, con buena calidad de imagen.",
   "cuando": "2026-10-07T11:02:36.442Z"
+ },
+ "1qwm7jy": {
+  "archivo": "fotos-notas/1qwm7jy.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno fija un tope de 27.200 millones para la devolución del IVA",
+  "enlace": "https://www.ambito.com/economia/el-gobierno-fijo-27200-millones-el-tope-que-las-empresas-servicios-publicos-subsidiadas-recuperen-saldos-iva-n6330956",
+  "imagenOriginal": "https://media.ambito.com/p/028245b2a94b70ee5501180dce8a6945/adjuntos/239/imagenes/042/929/0042929035/impuestos-ingresos-brutos-ganancias-iva-arca-afip.jpg",
+  "razon": "La foto B es clara, ilustra adecuadamente trámites económicos y no tiene marcas de agua agregadas por el medio.",
+  "cuando": "2026-10-07T11:31:51.553Z"
+ },
+ "1l0p3uh": {
+  "archivo": "fotos-notas/1l0p3uh.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El tren Sarmiento suspende su servicio cuatro días por obras",
+  "enlace": "https://www.ambito.com/informacion-general/falla-tecnica-el-tren-sarmiento-hay-seis-barreras-bajas-y-caos-transito-caballito-y-flores-n6330969",
+  "imagenOriginal": "https://media.ambito.com/p/979e3c48f14aa1354ced8c8f97abec02/adjuntos/239/imagenes/040/646/0040646645/tren-sarmientojpg.jpg",
+  "razon": "Muestra claramente el tren Sarmiento sobre las vías sin personas de más, sin menores ni marcas de agua agregadas.",
+  "cuando": "2026-10-07T11:31:51.553Z"
+ },
+ "1iyzpcv": {
+  "archivo": "fotos-notas/1iyzpcv.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Messi se despide de la Selección argentina ante Benín",
+  "enlace": "https://radiomitre.cienradios.com/deportes/despedida-de-messi-de-la-seleccion-argentina-como-reacciono-la-prensa-mundial-tras-el-3-0-ante-benin/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/P3736346UVEERN7AE3LCSTUDDI.jpg?smart=true&auth=fe4a224dca3b8dbace0e7f45917bd9ba180051b5edf652694a19a9c0898465fa&width=1200&height=630",
+  "razon": "Tiene excelente nitidez, encuadre limpio mostrando a Messi despidiéndose, y no tiene marcas de agua agregadas ni menores.",
+  "cuando": "2026-10-07T11:31:51.553Z"
+ },
+ "e2uhkm": {
+  "archivo": "fotos-notas/e2uhkm.jpg",
+  "medio": "El Destape",
+  "credito": "Foto: El Destape",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Charly García asiste al partido despedida de Lionel Messi",
+  "enlace": "https://www.eldestapeweb.com/sociedad/idolo-otro-emotivo-gesto-charly-garcia-despedida-messi-2026106211419",
+  "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1791331849298.jpg?&cw=1600&ch=900",
+  "razon": "Es la única foto limpia sin marcas de agua ni menores, mostrando claramente a Charly García junto a Lionel Messi.",
+  "cuando": "2026-10-07T11:31:51.553Z"
  }
 }

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T11:03:07.688Z",
- "portada": 46,
- "archivo": 998,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-07T11:32:16.401Z",
+ "portada": 47,
+ "archivo": 1002,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-07T11:03:07.723Z",
+  "generado": "2026-10-07T11:32:16.437Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 45,
     "notas": [
+     {
+      "id": "1iyzpcv",
+      "titulo": "Lionel Messi se despide de la Selección argentina ante Benín",
+      "seccion": "Fútbol"
+     },
      {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
      },
      {
       "id": "1793nst",
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
      {
-      "id": "a00g5p",
-      "titulo": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos",
-      "seccion": "Balcarce"
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      },
      {
       "id": "e3ix5w",
