@@ -1,64 +1,7 @@
 {
- "generado": "2026-10-07T00:02:06.080Z",
+ "generado": "2026-10-07T00:32:52.447Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "lcytj",
-   "titulo": "La primera emoción: las lágrimas de Lionel Messi en pleno viaje rumbo al Monumental",
-   "copete": "En la noche de su despedida, se pudo ver al capitán argentino visiblemente emocionado durante el trayecto hacia el estadio de River, donde disputará su último partido con la Selección argentina. Despedida de Lionel Messi: quiénes son los campeones del mundo que estarán en el…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-06T21:46:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/deportes/la-primera-emocion-las-lagrimas-lionel-messi-pleno-viaje-rumbo-al-monumental-n6330856",
-     "fecha": "2026-10-06T21:46:00.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/deportes/lionel-messi-no-pudo-contener-las-lagrimas-el-carino-los-hinchas-su-despedida-rumbo-al-monumental-n6330889",
-     "fecha": "2026-10-06T23:44:00.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/deportes/no-vio-tv-lionel-messi-rompio-micro-mientras-llegaba-monumental-despedida-2026106191356",
-     "fecha": "2026-10-06T22:13:56.000Z"
-    },
-    {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/06/messi-rompio-en-llanto-en-el-micro-rumbo-al-monumental/",
-     "fecha": "2026-10-06T23:04:08.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/seleccion/video-emocion-messi-viaje-monumental_0_QRtuyluwud.html",
-     "fecha": "2026-10-06T22:12:17.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/deportes/video-lionel-messi-no-pudo-contener-las-lagrimas-rumbo-al-monumental-y-emociono-todos-n250922",
-     "fecha": "2026-10-06T22:09:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/deportes/el-llanto-de-leo-messi-en-el-micro-rumbo-a-su-ultimo-partido-con-la-seleccion-argentina_a6ac5796e61c1587439040d88",
-     "fecha": "2026-10-06T22:14:00.000Z"
-    },
-    {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/deportes/no-aguanto-la-emocion-las-lagrimas-de-lionel-messi-camino-su-ultimo-partido-con-la-seleccion-deportes_1791327660",
-     "fecha": "2026-10-06T23:09:53.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-6-18-49-0-messi-no-pudo-contener-las-lagrimas-rumbo-al-monumental-para-su-ultimo-partido-con-la-seleccion",
-     "fecha": "2026-10-06T21:56:50.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 5
-  },
   {
    "id": "1u7aojj",
    "titulo": "La emocionante última arenga de Lionel Messi en la Selección argentina: \"De esa manera lo disfrutamos\"",
@@ -97,8 +40,82 @@
      "fecha": "2026-10-06T23:33:55.000Z"
     }
    ],
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (relleno, repite): el cuerpo tiene una frase de relleno sin dato: \"en ocasiones previas\"; sin esas oraciones quedan 56 palabras",
+   "maximo": 4
+  },
+  {
+   "id": "1ckw9zk",
+   "titulo": "Las entradas para la despedida de Messi se ofrecen en la reventa por hasta $1,5 millón",
+   "copete": "La Policía de la Ciudad allanó una vivienda de Vicente López en el marco de una investigación por la presunta reventa de entradas para Argentina-Benín, el partido que marcará la despedida de Lionel Messi de la Selección argentina. Durante el operativo fueron secuestrados nueve…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-06T14:43:48.000Z",
+   "fuentes": [
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/deportes/las-entradas-para-la-despedida-de-messi-se-ofrecen-en-la-reventa-por-hasta-15-millon",
+     "fecha": "2026-10-06T14:43:48.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/deportes/allanaron-mujer-reventa-entradas-despedida-messi-vendia-sobreprecios-800_0_aK6fndMp88.html",
+     "fecha": "2026-10-06T22:05:01.000Z"
+    },
+    {
+     "medio": "La Noticia 1",
+     "enlace": "https://www.lanoticia1.com/noticia/allanaron-una-vivienda-en-vicente-lopez-por-la-reventa-de-entradas-para-la-despedida-de-messi-secuestraron-dolares-y-casi-10-millones",
+     "fecha": "2026-10-06T23:41:19.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/sociedad/allanaron-la-vivienda-de-una-mujer-por-reventa-de-entradas-para-la-despedida-de-messi_a6ac57c7361c15874390488bf",
+     "fecha": "2026-10-06T23:17:00.000Z"
+    }
+   ],
    "intentos": 1,
-   "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (ultima, seleccion): va con las tildes y la eñe donde corresponden",
+   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 145 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1ekdqxx",
+   "titulo": "Por obras, los ramales Suárez y Bartolomé Mitre no funcionarán entre el 9 y el 12 de octubre",
+   "copete": "Los ramales José León Suárez y Bartolomé Mitre de la línea Mitre permanecerán interrumpidos desde el viernes 9 hasta el lunes 12 de octubre inclusive debido a una serie de obras que se realizarán en la zona de vías. Según informó Trenes Argentinos, el corte permitirá avanzar con…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-06T17:20:18.000Z",
+   "fuentes": [
+    {
+     "medio": "Zona Norte Diario",
+     "enlace": "https://www.zonanortediario.com.ar/06/10/2026/por-obras-los-ramales-suarez-y-bartolome-mitre-no-funcionaran-entre-el-9-y-el-12-de-octubre/",
+     "fecha": "2026-10-06T17:20:18.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/sociedad/trenes-argentinos-informo-que-la-linea-mitre-no-prestara-servicio-el-fin-semana-largo-el-motivo-n6330882",
+     "fecha": "2026-10-06T23:48:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/sociedad/2026/10/06/dos-ramales-del-tren-mitre-no-funcionaran-durante-el-fin-de-semana-largo-de-octubre/",
+     "fecha": "2026-10-06T20:31:07.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/general/2026/10/06/los-ramales-jose-leon-suarez-y-bartolome-mitre-estaran-interrumpidos-por-obras-que-dias-en-octubre-estaran-afectados/",
+     "fecha": "2026-10-06T17:45:00.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/provincia/cuatro-dias-servicio-interrumpido-el-ramal-retiro-suarez-la-linea-mitre-n923118",
+     "fecha": "2026-10-07T00:19:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/informacion-general/las-lineas-suarez-y-bartolome-mitre-estaran-servicio-interrumpido-cuando-y-cuanto-tiempo-n6330709",
+     "fecha": "2026-10-06T17:40:00.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
    "maximo": 4
   },
   {
@@ -127,43 +144,6 @@
    "intentos": 3,
    "motivo": "cuerpo: 5 problemas (numero, fecha, antecedente, copia): el cuerpo dice 2 y la fuente no lo dice; sin esas oraciones quedan 57 palabras",
    "maximo": 3
-  },
-  {
-   "id": "1ekdqxx",
-   "titulo": "Por obras, los ramales Suárez y Bartolomé Mitre no funcionarán entre el 9 y el 12 de octubre",
-   "copete": "Los ramales José León Suárez y Bartolomé Mitre de la línea Mitre permanecerán interrumpidos desde el viernes 9 hasta el lunes 12 de octubre inclusive debido a una serie de obras que se realizarán en la zona de vías. Según informó Trenes Argentinos, el corte permitirá avanzar con…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-06T17:20:18.000Z",
-   "fuentes": [
-    {
-     "medio": "Zona Norte Diario",
-     "enlace": "https://www.zonanortediario.com.ar/06/10/2026/por-obras-los-ramales-suarez-y-bartolome-mitre-no-funcionaran-entre-el-9-y-el-12-de-octubre/",
-     "fecha": "2026-10-06T17:20:18.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/sociedad/2026/10/06/dos-ramales-del-tren-mitre-no-funcionaran-durante-el-fin-de-semana-largo-de-octubre/",
-     "fecha": "2026-10-06T20:31:07.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/trenes-argentinos-informo-que-la-linea-mitre-no-prestara-servicio-el-fin-semana-largo-el-motivo-n6330882",
-     "fecha": "2026-10-06T23:48:00.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/general/2026/10/06/los-ramales-jose-leon-suarez-y-bartolome-mitre-estaran-interrumpidos-por-obras-que-dias-en-octubre-estaran-afectados/",
-     "fecha": "2026-10-06T17:45:00.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/informacion-general/las-lineas-suarez-y-bartolome-mitre-estaran-servicio-interrumpido-cuando-y-cuanto-tiempo-n6330709",
-     "fecha": "2026-10-06T17:40:00.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
-   "maximo": 4
   },
   {
    "id": "1cvwcvk",
