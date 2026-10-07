@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T08:31:33.301Z",
+ "generado": "2026-10-07T09:01:38.628Z",
  "portada": 48,
- "archivo": 996,
- "esperandoCuerpo": 4,
+ "archivo": 997,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-07T08:31:33.329Z",
+  "generado": "2026-10-07T09:01:38.661Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
      {
       "id": "vm4nnt",
@@ -108,8 +108,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "id": "a00g5p",
+      "titulo": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos",
       "seccion": "Balcarce"
      },
      {
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 49,
     "notas": [
+     {
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1outpc2",
       "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
      },
      {
       "id": "1793nst",
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1n6yxr",
       "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "a00g5p",
-      "titulo": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos",
-      "seccion": "Balcarce"
      },
      {
       "id": "e3ix5w",
