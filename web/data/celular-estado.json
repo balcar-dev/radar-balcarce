@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T07:07:44.660Z",
- "portada": 43,
- "archivo": 996,
+ "generado": "2026-10-07T07:31:34.281Z",
+ "portada": 47,
+ "archivo": 995,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-07T07:07:44.697Z",
+  "generado": "2026-10-07T07:31:34.318Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "1cnlvgi",
-      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
-      "seccion": "Fútbol"
-     },
      {
       "id": "vm4nnt",
       "titulo": "Científicos protestan en Mar del Plata por el sumario a investigadora del INTA",
       "seccion": "Agro"
+     },
+     {
+      "id": "1cnlvgi",
+      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
+      "seccion": "Fútbol"
      },
      {
       "id": "pvwlvg",
@@ -113,9 +113,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
+      "id": "1r3qdtj",
+      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 49,
     "notas": [
      {
       "id": "1outpc2",
@@ -134,14 +134,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "seccion": "Balcarce"
      },
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "seccion": "Balcarce"
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "aa0h34",
@@ -157,8 +157,29 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 55,
+    "notas": [
+     {
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "9m9h4e",
+      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
