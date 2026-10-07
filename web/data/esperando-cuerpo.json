@@ -1,14 +1,19 @@
 {
- "generado": "2026-10-07T10:31:23.011Z",
+ "generado": "2026-10-07T11:03:07.688Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "ioddw4",
-   "titulo": "Un auto chocó contra un poste de luz",
-   "copete": "Este martes por la noche, un automóvil Renault Clío impactó contra un poste de alumbrado público en avenida Eva Perón, entre 104 y 106. Según pudo saber Infórmese Primero , el conductor, un hombre mayor de edad, habría sufrido una descompensación mientras circulaba por el…",
+   "id": "1l2ca46",
+   "titulo": "Un Renault Clio chocó contra un poste de alumbrado en avenida Eva Perón",
+   "copete": "Un siniestro vial se registró en la noche de este martes en avenida Eva Perón, entre calles 104 y 106, donde un automóvil Renault Clio impactó contra un poste de alumbrado público. Según se pudo saber, el conductor del vehículo, un hombre mayor de edad, habría sufrido una…",
    "seccion": "Policiales",
-   "fecha": "2026-10-06T23:46:00.754Z",
+   "fecha": "2026-10-06T23:24:12.000Z",
    "fuentes": [
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/un-renault-clio-choco-contra-un-poste-de-alumbrado-en-avenida-eva-peron/",
+     "fecha": "2026-10-06T23:24:12.000Z"
+    },
     {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/un-auto-choco-contra-un-poste-de-luz.html",
@@ -16,8 +21,45 @@
     }
    ],
    "intentos": 3,
-   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 2, que sale de una nota anterior, como si fuera de hoy",
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice",
    "maximo": 3
+  },
+  {
+   "id": "1iyzpcv",
+   "titulo": "Así reaccionaron los medios del mundo a la despedida de Messi de la Selección argentina: “El rey dijo adiós”",
+   "copete": "Lionel Messi se despidió de la Selección argentina este martes por la noche en un inolvidable partido en el estadio Monumental . El capitán de la albiceleste cerró un ciclo de 21 años en el equipo con una goleada 3-0 a Benín. Tras el encuentro, los medios de comunicación…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-07T04:29:28.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/07/asi-reaccionaron-los-medios-del-mundo-a-la-despedida-de-messi-de-la-seleccion-argentina-el-rey-dijo-adios/",
+     "fecha": "2026-10-07T04:29:28.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/mundo/como-reaccionaron-los-medios-del-mundo-a-la-despedida-de-messi-de-la-seleccion-argentina/",
+     "fecha": "2026-10-07T06:37:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/deportes/despedida-de-messi-de-la-seleccion-argentina-como-reacciono-la-prensa-mundial-tras-el-3-0-ante-benin/",
+     "fecha": "2026-10-07T09:33:03.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/deportes/2026/10/07/el-rey-le-dijo-adios-a-la-argentina-los-diarios-del-mundo-reflejaron-la-emocion-por-la-despedida-de-messi-de-la-seleccion/",
+     "fecha": "2026-10-07T10:23:35.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/el-mundo/la-despedida-de-messi-dio-la-vuelta-al-mundo-asi-reaccionaron-los-medios-internacionales-el-mundo_1791369900",
+     "fecha": "2026-10-07T10:48:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 5 problemas (numero, tilde, tildes): el cuerpo dice 5.000 y la fuente no lo dice; sin esas oraciones quedan 70 palabras",
+   "maximo": 4
   },
   {
    "id": "e09k96",

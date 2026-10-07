@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T10:31:23.011Z",
+ "generado": "2026-10-07T11:03:07.688Z",
  "portada": 46,
- "archivo": 997,
- "esperandoCuerpo": 2,
+ "archivo": 998,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-07T10:31:23.033Z",
+  "generado": "2026-10-07T11:03:07.723Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,21 +95,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 55,
     "notas": [
-     {
-      "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
-      "seccion": "Agro"
-     },
      {
       "id": "1outpc2",
       "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "id": "vm4nnt",
+      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
+      "seccion": "Agro"
+     },
+     {
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce"
      },
      {
@@ -126,11 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 46,
     "notas": [
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
      },
      {
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "a00g5p",
+      "titulo": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos",
+      "seccion": "Balcarce"
+     },
      {
       "id": "e3ix5w",
       "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
@@ -167,11 +172,6 @@
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]
