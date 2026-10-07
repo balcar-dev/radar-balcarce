@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T20:08:24.775Z",
+ "generado": "2026-10-07T20:32:27.521Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -47,6 +47,23 @@
    "maximo": 3
   },
   {
+   "id": "1msn95k",
+   "titulo": "Organizan una cena a beneficio para acompañar a Kevin “Bam Bam” Gómez",
+   "copete": "Será el 30 de octubre, a las 21, en el Club Ferroviario. Las tarjetas tienen un valor de $25.000 e incluyen entrada, plato principal y postre.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-07T20:23:25.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/organizan-una-cena-a-beneficio-para-acompanar-a-kevin-bam-bam-gomez",
+     "fecha": "2026-10-07T20:23:25.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras",
+   "maximo": 3
+  },
+  {
    "id": "6ytz79",
    "titulo": "ANSES inicia este jueves el pago de jubilaciones mínimas, pensiones y asignaciones",
    "copete": "Este 8 de octubre comenzará el calendario de pagos, con un aumento del 1,66% por movilidad. Jubilados y titulares de Pensiones No Contributivas recibirán además el bono de $70.000.",
@@ -59,7 +76,7 @@
      "fecha": "2026-10-07T19:55:51.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 4 problemas (nombre): el copete nombra a \"administracion\" y la fuente no",
    "maximo": 3
   },
@@ -86,11 +103,6 @@
      "fecha": "2026-10-07T16:01:03.000Z"
     },
     {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
-    },
-    {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
      "enlace": "https://mi8.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora-los-marplatenses-entre-los-mas-complicados/",
      "fecha": "2026-10-07T17:58:47.000Z"
@@ -98,29 +110,17 @@
     {
      "medio": "El Eco de Tandil",
      "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
-     "fecha": "2026-10-07T14:43:51.000Z"
+     "fecha": "2026-10-07T14:43:44.000Z"
+    },
+    {
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
     }
    ],
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 4
-  },
-  {
-   "id": "10cpafd",
-   "titulo": "Música, poesía y un homenaje a Ricardo Soulé en la Casa del Bicentenario",
-   "copete": "La Casa del Bicentenario fue escenario de una propuesta artística que reunió música, literatura e invitados especiales. El encuentro tuvo acceso libre y gratuito y contó además con un buffet a beneficio de la Sociedad de Protección a la Infancia. El cierre estuvo marcado por un…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-07T20:01:26.802Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45013-musica-poesia-y-un-homenaje-a-ricardo-soule-en-la-casa-del-bicentenario/",
-     "fecha": null
-    }
-   ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 73 palabras",
-   "maximo": 3
   }
  ]
 }

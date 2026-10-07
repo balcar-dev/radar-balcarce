@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T20:08:24.775Z",
- "portada": 55,
- "archivo": 1035,
+ "generado": "2026-10-07T20:32:27.521Z",
+ "portada": 57,
+ "archivo": 1039,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T20:08:24.818Z",
+  "generado": "2026-10-07T20:32:27.566Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 50,
     "notas": [
      {
       "id": "1opc9eu",
@@ -165,19 +165,19 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
       "seccion": "Fútbol"
      },
      {
-      "id": "158583a",
-      "titulo": "La industria y la construcción suben en agosto según el INDEC",
-      "seccion": "Economía"
+      "id": "10cpafd",
+      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      }
     ]
    }
@@ -212,15 +212,15 @@
    ],
    "cola": [
     {
-     "id": "rwhqdu",
-     "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
+     "id": "3exxze",
+     "titulo": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "45acbd",
-     "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
-     "seccion": "Cultura y agenda",
+     "id": "rwhqdu",
+     "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
