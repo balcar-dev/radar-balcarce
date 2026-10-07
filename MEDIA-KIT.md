@@ -10,7 +10,7 @@ hacerse: `PUBLICIDAD.md`).
 
 - **Nombre:** Radar Balcarce. **Dominio:** `radarbalcarce.com`.
 - **Quiénes lo hacen:** Hernán y Andrés, dos vecinos de Balcarce (`/quienes-somos`).
-- **Contacto público:** WhatsApp 2266 51-1612 y `radarbalcarce@gmail.com`
+- **Contacto público:** WhatsApp 2266 51-1612 y `contacto@radarbalcarce.com` (reenvía al Gmail del medio)
   (`WHATSAPP` y `MAIL` en `web/lib/datos.js`).
 - **El eslogan:** "Lo que pasa en Balcarce, la región y el país" (la portada de
   Facebook, `BAJADA` en `reels/portada.mjs`, y la descripción del sitio en

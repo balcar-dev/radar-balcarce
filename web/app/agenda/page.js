@@ -47,7 +47,7 @@ export default function PaginaAgenda() {
             Actos, muestras, ferias, fiestas y encuentros deportivos. Sale de la agenda
             oficial del municipio y de lo que nos acercan las instituciones. Tocá un evento
             para ver los detalles, agendarlo o pasarlo por WhatsApp.
-            ¿Organizás algo? <a href="mailto:radarbalcarce@gmail.com?subject=Evento%20para%20la%20agenda" style={{ color: 'var(--rojo)', fontWeight: 600 }}>Mandanos los datos</a> y lo sumamos.
+            ¿Organizás algo? <a href="mailto:redaccion@radarbalcarce.com?subject=Evento%20para%20la%20agenda" style={{ color: 'var(--rojo)', fontWeight: 600 }}>Mandanos los datos</a> y lo sumamos.
           </p>
 
           {porDia.length === 0 && (

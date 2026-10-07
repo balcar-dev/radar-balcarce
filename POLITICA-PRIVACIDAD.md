@@ -9,7 +9,7 @@ panel del celular. El marco legal (ley 25.326), en `INVESTIGACION.md`, sección 
 ## Por dónde llega lo que manda la gente
 
 No hay formulario en el sitio. La gente escribe por **WhatsApp** (2266 51-1612) o
-por **correo** (`radarbalcarce@gmail.com`), desde el pie de cada página, la
+por **correo** (`contacto@radarbalcarce.com`), desde el pie de cada página, la
 tarjeta "¿Viste algo en el barrio?" y las invitaciones de la web
 (`web/components/piezas.js`). Lo que sirve se carga **a mano** en el buzón del
 panel de la PC (pestaña Buzón), con uno de cuatro tipos: dato, reclamo, opinión o

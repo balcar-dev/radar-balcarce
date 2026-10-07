@@ -410,7 +410,9 @@ export function whatsapp(mensaje) {
   return `https://wa.me/${WHATSAPP.numero}?text=${encodeURIComponent(mensaje)}`;
 }
 
-export const MAIL = 'radarbalcarce@gmail.com';
+export const MAIL = 'contacto@radarbalcarce.com';
+/** Datos y fotos para la redacción (la agenda, las notas): el mismo buzón, otra dirección. */
+export const MAIL_REDACCION = 'redaccion@radarbalcarce.com';
 
 // Las cuentas del medio. La de Facebook va por el número del perfil de la
 // página (el de la dirección), no por el ID de la API (ver docs/07-REDES.md).

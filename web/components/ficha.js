@@ -30,7 +30,7 @@ export function FichaDelSitio() {
         '@id': `${base}/#medio`,
         name: NOMBRE,
         url: base,
-        email: 'radarbalcarce@gmail.com',
+        email: 'contacto@radarbalcarce.com',
         // Las cuentas del medio: Google las muestra junto al nombre.
         sameAs: Object.values(REDES_SOCIALES),
         // El logo lo piden Google Noticias y los resultados enriquecidos:

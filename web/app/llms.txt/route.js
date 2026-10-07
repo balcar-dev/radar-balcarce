@@ -37,7 +37,7 @@ ${secciones}
 
 ## Contacto
 
-${'radarbalcarce@gmail.com'}
+${'contacto@radarbalcarce.com'}
 `;
 
   return new Response(texto, { headers: { 'content-type': 'text/plain; charset=utf-8' } });
