@@ -7556,16 +7556,16 @@
   "borrada": true
  },
  "af0k0y": {
-  "archivo": "fotos-notas/af0k0y.jpg",
   "medio": "Olé",
-  "credito": "Foto: Olé",
   "licencia": null,
   "origen": "medio",
   "titulo": "Tobías Andrada recibe el alta médica y vuelve a entrenar en River",
   "enlace": "https://www.ole.com.ar/river-plate/river-tobias-andrada-alta-medica-recupera-ponzio-jugador-lesion-titular-formacion-almada-moreno_0_CBZGfnD5En.html",
   "imagenOriginal": "https://www.ole.com.ar/images/2026/09/09/XVX1VG3KQ_2000x1500__1.jpg",
   "razon": "La IA había preferido la de La Página Millonaria, pero no se puede usar (marca de agua, otro medio o un menor) (Tobías Andrada es menor de edad, aunque la foto cumple con los requisitos técnicos de calidad y ausencia de marcas.): se usa Olé en su lugar, aunque no sea la ideal.",
-  "cuando": "2026-10-05T19:01:59.254Z"
+  "cuando": "2026-10-05T19:01:59.254Z",
+  "intentado": true,
+  "borrada": true
  },
  "9pla58": {
   "medio": "Infobae",
@@ -8579,11 +8579,10 @@
  },
  "c0faya": {
   "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Ravier defiende la derogación de la Ley de Tierras Rurales",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T06:01:49.615Z",
-  "intentos": 4,
+  "origen": "medio",
+  "cuando": "2026-10-07T12:02:52.950Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 5,
   "fuentes": 4
  },
  "1tq8xgm": {
@@ -8815,13 +8814,16 @@
   "cuando": "2026-10-07T01:32:23.981Z"
  },
  "1cnlvgi": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1cnlvgi.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T05:31:56.954Z",
-  "intentos": 3,
-  "fuentes": 3
+  "enlace": "https://www.eldia.com/deportes/lionel-messi-tras-su-retiro-jugar-en-la-seleccion-es-lo-mas-lindo-me-gustaria-venir-toda-la-vida-deportes_1791337680",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1791338539036.jpg?&cw=1200&ch=630",
+  "razon": "Es la única foto limpia sin marcas de agua ni personas reconocibles en segundo plano.",
+  "cuando": "2026-10-07T12:02:52.950Z"
  },
  "a00g5p": {
   "intentado": true,
@@ -8833,22 +8835,28 @@
   "fuentes": 1
  },
  "rilva6": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Lionel Messi despide su etapa en la selección con un homenaje de drones",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T03:02:04.264Z",
-  "intentos": 1,
-  "fuentes": 4
+  "archivo": "fotos-notas/rilva6.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
+  "enlace": "https://www.infobae.com/deportes/2026/10/07/el-show-con-drones-que-hizo-emocionar-a-lionel-messi-en-su-despedida-de-la-seleccion-argentina/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/BZBJWM4CCRHOXOMU76QMNCI3XQ.jpg?auth=a15e4e0cb927784b8550c0706d51ae7502566f550a313e94bdaf8f0157b208a5&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la única foto limpia sin marcas de agua ni menores reconocibles, con buena calidad y encuadre general del estadio.",
+  "cuando": "2026-10-07T12:02:52.950Z"
  },
  "11d7omy": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/11d7omy.jpg",
+  "medio": "Bolavip Argentina",
+  "credito": "Foto: Bolavip Argentina",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T05:31:56.954Z",
-  "intentos": 3,
-  "fuentes": 5
+  "enlace": "https://bolavip.com/ar/messi/lionel-messi-descarto-los-rumores-de-la-final-del-mundial-2026-no-paso-nada-raro",
+  "imagenOriginal": "https://media.bolavip.com/wp-content/uploads/sites/18/2026/10/06225913/Lionel-Messi-en-su-despedida-de-la-Seleccion-Argentina-2-1200x740.webp",
+  "razon": "La foto E muestra a Messi con los brazos en alto, excelente nitidez y encuadre, sin marcas agregadas por el medio ni menores reconocibles.",
+  "cuando": "2026-10-07T12:02:52.950Z"
  },
  "1outpc2": {
   "intentado": true,
@@ -8872,16 +8880,16 @@
   "cuando": "2026-10-07T05:31:56.954Z"
  },
  "1s9anmt": {
-  "archivo": "fotos-notas/1s9anmt.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "Santa Fe define las fechas de las elecciones para el año 2027",
   "enlace": "https://www.lanacion.com.ar/politica/santa-fe-definio-su-cronograma-electoral-para-2027-el-12-de-abril-seran-las-paso-y-el-13-de-junio-se-nid06102026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-gobernador-de-la-provincia-de-santa-fe-VUSRPOUSM5CLFHW5BX753OICZA.jpeg?auth=4897eb355e1cba459ca9057dbf6bdabbbe8920b9c014c572cc71d3fcdcac193d&width=1200&height=800&quality=70&smart=true",
   "razon": "La foto A es la única que tiene excelente nitidez y encuadre, muestra claramente al funcionario y no tiene marcas de agua agregadas ni menores reconocibles.",
-  "cuando": "2026-10-07T11:31:51.553Z"
+  "cuando": "2026-10-07T11:31:51.553Z",
+  "intentado": true,
+  "borrada": true
  },
  "pvwlvg": {
   "intentado": true,
@@ -8984,5 +8992,26 @@
   "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/102026/1791331849298.jpg?&cw=1600&ch=900",
   "razon": "Es la única foto limpia sin marcas de agua ni menores, mostrando claramente a Charly García junto a Lionel Messi.",
   "cuando": "2026-10-07T11:31:51.553Z"
+ },
+ "15zgvx1": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
+  "razon": "La única imagen disponible es un cartel promocional con el fondo desenfocado, no una fotografía del evento, y además muestra la cara de una persona que parece menor de edad.",
+  "cuando": "2026-10-07T12:02:52.950Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "14so024": {
+  "archivo": "fotos-notas/14so024.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "ARCA fija los montos de control para cuentas y billeteras",
+  "enlace": "https://tn.com.ar/economia/2026/10/07/cuanto-dinero-se-puede-transferir-entre-cuentas-propias-en-octubre-2026/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/las-transferencias-entre-cuentas-propias-tienen-montos-a-partir-de-los-cuales-las-entidades-financieras-deben-informar-los-movimientos-a-arca-foto-freepik-y-arca-GSCTUAZUEVHRRPI3MOJSTRPE4Q.png?auth=979d2f73787dbc2a098e3a5a6126ac2210029bff98400e0d9d07cff76072aa57&width=1023",
+  "razon": "La foto B ilustra adecuadamente el uso de billeteras virtuales y organismos de control sin marcas de agua ni menores.",
+  "cuando": "2026-10-07T12:02:52.950Z"
  }
 }

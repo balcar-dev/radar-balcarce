@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T11:32:16.401Z",
- "portada": 47,
+ "generado": "2026-10-07T12:03:45.114Z",
+ "portada": 44,
  "archivo": 1002,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-07T11:32:16.437Z",
+  "generado": "2026-10-07T12:03:45.159Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 48,
     "notas": [
      {
       "id": "1outpc2",
@@ -108,8 +108,8 @@
       "seccion": "Agro"
      },
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "id": "15zgvx1",
+      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
       "seccion": "Balcarce"
      },
      {
@@ -129,9 +129,14 @@
     "segundos": 45,
     "notas": [
      {
-      "id": "1iyzpcv",
-      "titulo": "Lionel Messi se despide de la Selección argentina ante Benín",
+      "id": "rilva6",
+      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1l0p3uh",
+      "titulo": "El tren Sarmiento suspende su servicio cuatro días por obras",
+      "seccion": "Argentina"
      },
      {
       "id": "pvwlvg",
@@ -142,11 +147,6 @@
       "id": "1793nst",
       "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "aa0h34",
-      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -157,21 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1n6yxr",
       "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
      },
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "seccion": "Balcarce"
+      "id": "aa0h34",
+      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "9m9h4e",
-      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      }
     ]
@@ -179,7 +184,14 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "15zgvx1",
+     "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-06T21:15:28.818Z",
    "porDia": 5,
