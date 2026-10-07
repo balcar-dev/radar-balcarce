@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T18:33:38.617Z",
- "portada": 50,
- "archivo": 1029,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-07T19:02:34.337Z",
+ "portada": 51,
+ "archivo": 1030,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T18:33:38.656Z",
+  "generado": "2026-10-07T19:02:34.380Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,11 +157,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 48,
     "notas": [
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "id": "1opc9eu",
+      "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
       "seccion": "Balcarce"
      },
      {
@@ -206,6 +206,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "1opc9eu",
+     "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "45acbd",
      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",

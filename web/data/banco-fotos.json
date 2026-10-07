@@ -9182,16 +9182,16 @@
   "cuando": "2026-10-07T15:36:45.374Z"
  },
  "pqvxnw": {
-  "archivo": "fotos-notas/pqvxnw.jpg",
   "medio": "Clarín",
-  "credito": "Foto: Clarín",
   "licencia": null,
   "origen": "medio",
   "titulo": "Agustín Giay cambia su camperón por el poncho de Soledad Pastorutti",
   "enlace": "https://www.clarin.com/deportes/futbolista-seleccion-cambio-poncho-sole-abrio-debate-redes-salio-ganando_0_SAuFd2vt5F.html",
   "imagenOriginal": "https://www.clarin.com/img/2026/10/07/LrwM4e4gz_2000x1500__1.jpg",
   "razon": "La foto B muestra claramente el abrazo y el momento clave de la nota con excelente calidad de imagen y sin marcas de agua ni menores reconocibles en primer plano.",
-  "cuando": "2026-10-07T15:36:45.374Z"
+  "cuando": "2026-10-07T15:36:45.374Z",
+  "intentado": true,
+  "borrada": true
  },
  "ccot62": {
   "archivo": "fotos-notas/ccot62.jpg",
@@ -9241,9 +9241,9 @@
  "mtmc51": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-07T17:33:04.162Z",
+  "cuando": "2026-10-07T19:02:08.763Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 2,
+  "intentos": 3,
   "fuentes": 7
  },
  "1qsixdr": {
@@ -9338,5 +9338,41 @@
   "cuando": "2026-10-07T18:32:30.432Z",
   "intentos": 1,
   "fuentes": 3
+ },
+ "vxkgel": {
+  "archivo": "fotos-notas/vxkgel.jpg",
+  "medio": "El Cronista",
+  "credito": "Foto: El Cronista",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Nissan transfiere su negocio en el país a los grupos Simpa y Tagle",
+  "enlace": "https://www.cronista.com/negocios/nissan-cierra-el-traspaso-de-su-operacion-de-venta-de-autos-en-la-argentina/",
+  "imagenOriginal": "https://www.cronista.com/resizer/v2/QEZ5S3RLWZBTVIEGZUQRVELEJI.png?auth=611a61f01ab7bb9e88fa332a29b41e234aea981a1a6f678778ee4097b6732761&height=630&width=1200&quality=70&smart=true",
+  "razon": "La foto B muestra un vehículo de manera clara, limpia y con excelente calidad, sin marcas de agua ni personas.",
+  "cuando": "2026-10-07T19:02:08.763Z"
+ },
+ "wyigz9": {
+  "archivo": "fotos-notas/wyigz9.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Patricia Bullrich vota en contra del pliego de una fiscal",
+  "enlace": "https://www.lanacion.com.ar/politica/patricia-bullrich-se-diferencio-del-gobierno-por-el-pliego-de-la-fiscal-del-caso-chocobar-va-a-tener-nid07102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/patricia-7R6LNBAXXFAHPBLH4OJCARATNQ.jpeg?auth=7502d75bb05368385f9a318f0d1c65c622e8e88be2824799d2cf5890bb80f935&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto B muestra claramente a la protagonista en primer plano con buen encuadre y sin marcas ni menores.",
+  "cuando": "2026-10-07T19:02:08.763Z"
+ },
+ "174codx": {
+  "archivo": "fotos-notas/174codx.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Luis Caputo viaja a Tailandia para avanzar en la revisión con el FMI",
+  "enlace": "https://www.eleco.com.ar/politica/luis-caputo-viaja-a-tailandia-para-avanzar-en-la-revision-del-programa-con-el-fmi",
+  "imagenOriginal": "https://cdnartic.ar/O0GApHLStpRY2FGSZI5NllCy1w8=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/08/caputo_2.webp",
+  "razon": "La foto A muestra claramente al protagonista de la nota en primer plano, sin marcas de agua ni menores, con excelente nitidez.",
+  "cuando": "2026-10-07T19:02:08.763Z"
  }
 }

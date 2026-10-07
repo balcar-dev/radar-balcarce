@@ -1,44 +1,7 @@
 {
- "generado": "2026-10-07T18:33:38.617Z",
+ "generado": "2026-10-07T19:02:34.337Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1ukn90p",
-   "titulo": "El mensaje de Franco Colapinto para Messi tras su despedida en la Seleccion: el detalle que no pasó inadvertido",
-   "copete": "La despedida de Lionel Messi de la Selección argentina generó reacciones de distintas figuras del deporte. Una de ellas fue la de Franco Colapinto , quien eligió las redes sociales para dedicarle un mensaje al capitán después de su último partido con la camiseta argentina. El…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-07T11:43:54.000Z",
-   "fuentes": [
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/07/el-mensaje-de-franco-colapinto-para-messi-tras-su-despedida-en-la-seleccion-el-detalle-que-no-paso-inadvertido/",
-     "fecha": "2026-10-07T11:43:54.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/deportes/el-guino-franco-colapinto-lionel-messi-su-emotiva-despedida-la-seleccion-argentina-n6331170",
-     "fecha": "2026-10-07T17:01:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/deportes/camiseta-retro-oasis-y-un-guino-2006-el-emotivo-posteo-franco-colapinto-despedir-lionel-messi-n1604181",
-     "fecha": "2026-10-07T18:06:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/deportes/el-mensaje-de-franco-colapinto-ante-la-despedida-a-lionel-messi-con-un-gesto-que-llamo-la-atencion/",
-     "fecha": "2026-10-07T16:04:03.000Z"
-    },
-    {
-     "medio": "0221",
-     "enlace": "https://www.0221.com.ar/deportes/el-particular-homenaje-franco-colapinto-lionel-messi-que-no-paso-inadvertido-n135434",
-     "fecha": "2026-10-07T14:54:00.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
-   "maximo": 4
-  },
   {
    "id": "c17e7i",
    "titulo": "Viernes 9: Educación, Identidad y propuestas locales en la Fiesta Nacional del Postre",
@@ -79,8 +42,30 @@
      "fecha": "2026-10-07T18:00:33.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "1f57zit",
+   "titulo": "El guiño de Franco Colapinto para Lionel Messi tras su emotiva despedida de la Selección Argentina",
+   "copete": "El piloto argentino de Fórmula 1 despidió al capitán en redes sociales con una camiseta histórica, un emotivo mensaje de gratitud y una canción cargada de simbolismo.",
+   "seccion": "Argentina",
+   "fecha": "2026-10-07T17:01:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/deportes/el-guino-franco-colapinto-lionel-messi-su-emotiva-despedida-la-seleccion-argentina-n6331170",
+     "fecha": "2026-10-07T17:01:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/deportes/camiseta-retro-oasis-y-un-guino-2006-el-emotivo-posteo-franco-colapinto-despedir-lionel-messi-n1604181",
+     "fecha": "2026-10-07T18:06:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 3 problemas (antecedente, nombre, promesa): el cuerpo usa 6, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 71 palabras",
    "maximo": 3
   },
   {
@@ -119,6 +104,33 @@
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "1ukn90p",
+   "titulo": "El mensaje de Franco Colapinto para Messi tras su despedida en la Seleccion: el detalle que no pasó inadvertido",
+   "copete": "La despedida de Lionel Messi de la Selección argentina generó reacciones de distintas figuras del deporte. Una de ellas fue la de Franco Colapinto , quien eligió las redes sociales para dedicarle un mensaje al capitán después de su último partido con la camiseta argentina. El…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-07T11:43:54.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/07/el-mensaje-de-franco-colapinto-para-messi-tras-su-despedida-en-la-seleccion-el-detalle-que-no-paso-inadvertido/",
+     "fecha": "2026-10-07T11:43:54.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/deportes/el-mensaje-de-franco-colapinto-ante-la-despedida-a-lionel-messi-con-un-gesto-que-llamo-la-atencion/",
+     "fecha": "2026-10-07T16:04:03.000Z"
+    },
+    {
+     "medio": "0221",
+     "enlace": "https://www.0221.com.ar/deportes/el-particular-homenaje-franco-colapinto-lionel-messi-que-no-paso-inadvertido-n135434",
+     "fecha": "2026-10-07T14:54:00.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
+   "maximo": 3
   }
  ]
 }
