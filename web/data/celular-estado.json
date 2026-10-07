@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T16:32:51.037Z",
- "portada": 48,
- "archivo": 1020,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-07T17:35:36.256Z",
+ "portada": 51,
+ "archivo": 1023,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-07T16:32:51.086Z",
+  "generado": "2026-10-07T17:35:36.284Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -129,11 +129,6 @@
     "segundos": 47,
     "notas": [
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "vm4nnt",
       "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
       "seccion": "Agro"
@@ -147,6 +142,11 @@
       "id": "1wp29m7",
       "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
       "seccion": "Deportes"
+     },
+     {
+      "id": "rilva6",
+      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -160,9 +160,9 @@
     "segundos": 55,
     "notas": [
      {
-      "id": "1aak7ut",
-      "titulo": "La Justicia ordena preservar registros de tierras rurales provinciales",
-      "seccion": "Agro"
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "seccion": "Balcarce"
      },
      {
       "id": "2r3foe",
@@ -170,14 +170,14 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1ypbdma",
-      "titulo": "El riesgo país sube y vuelve a la zona de los 600 puntos básicos",
-      "seccion": "Economía"
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      },
      {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      }
     ]
    }
@@ -205,12 +205,6 @@
      "id": "1wp29m7",
      "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "2r3foe",
-     "titulo": "La Fiesta Nacional del Postre confirma las clases de cocina para el fin de semana",
-     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {

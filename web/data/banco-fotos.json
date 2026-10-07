@@ -6255,16 +6255,16 @@
   "borrada": true
  },
  "wnwtbo": {
-  "archivo": "fotos-notas/wnwtbo.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Reino Unido exige autorización central para nuevos permisos petroleros en Malvinas",
   "enlace": "https://www.infobae.com/politica/2026/10/03/el-reino-unido-anuncio-que-las-nuevas-licencias-de-hidrocarburos-en-las-islas-malvinas-requeriran-su-autorizacion-final/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/CHEMCRYCX5HBRF4VIKFF43JKCY.jpg?auth=1001b2b2cf2ae227422619eae0a005786594586fbc466b44c643bd389c9dae00&smart=true&width=1200&height=630&quality=85",
   "razon": "La imagen A muestra una vista satelital de las Islas Malvinas adecuada para ilustrar la nota sobre exploración petrolera, sin marcas de agua ni personas.",
-  "cuando": "2026-10-03T20:31:38.422Z"
+  "cuando": "2026-10-03T20:31:38.422Z",
+  "intentado": true,
+  "borrada": true
  },
  "1xritdf": {
   "archivo": "fotos-notas/1xritdf.jpg",
@@ -9042,13 +9042,16 @@
   "cuando": "2026-10-07T12:32:04.511Z"
  },
  "17q8tbm": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/17q8tbm.jpg",
+  "medio": "Diputados Bonaerenses",
+  "credito": "Foto: Diputados Bonaerenses",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Senado bonaerense sanciona la ley que regula los celulares en escuelas",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T12:32:04.511Z",
-  "intentos": 1,
-  "fuentes": 5
+  "enlace": "https://diputadosbsas.com.ar/regulan-celulares-en-escuelas-secundarias/",
+  "imagenOriginal": "https://dptdsbsas.nyc3.digitaloceanspaces.com/wp-content/uploads/2026/10/06195847/WhatsApp-Image-2026-10-06-at-7.42.58-PM.jpeg",
+  "razon": "Es la única foto que ilustra claramente el uso de celulares en el aula, sin marcas de agua y sin mostrar menores reconocibles de frente.",
+  "cuando": "2026-10-07T17:33:04.162Z"
  },
  "nfrfo8": {
   "archivo": "fotos-notas/nfrfo8.jpg",
@@ -9238,9 +9241,57 @@
  "mtmc51": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-07T16:32:18.830Z",
+  "cuando": "2026-10-07T17:33:04.162Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 1,
+  "intentos": 2,
   "fuentes": 7
+ },
+ "1qsixdr": {
+  "archivo": "fotos-notas/1qsixdr.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45024-sotelo-defendio-las-cuentas-de-la-cooperativa-y-apunto-contra-la-politica-no-se-van-a-meter-por-la-ventana/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65985.png",
+  "razon": "Es la única imagen completa que ilustra el contexto de la entrevista, con buen encuadre y nitidez, y sin marcas de agua ni menores.",
+  "cuando": "2026-10-07T17:33:04.162Z"
+ },
+ "1dl8nx4": {
+  "archivo": "fotos-notas/1dl8nx4.jpg",
+  "medio": "El Marplatense",
+  "credito": "Foto: El Marplatense",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Una fila de ochocientos metros expone la crisis laboral en Mar del Plata",
+  "enlace": "https://www.elmarplatense.com/una-fila-de-una-manzana-para-conseguir-trabajo-en-mar-del-plata",
+  "imagenOriginal": "https://n2.cdnartic.ar/DfTUgN6hUrSFBknhd2GVfb2cO1g=/1200x630/smart/filters:format(jpeg):quality(70)/https://elmarplatensecdn.eleco.com.ar/media/2026/10/hghghgh.webp",
+  "razon": "La foto D muestra claramente la fila de gente sin marcas de agua del medio ni menores reconocibles.",
+  "cuando": "2026-10-07T17:33:04.162Z"
+ },
+ "uc2dz4": {
+  "archivo": "fotos-notas/uc2dz4.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Ercolini procesa a Roberto Baratta por enriquecimiento ilícito",
+  "enlace": "https://www.clarin.com/politica/procesaron-roberto-baratta-enriquecimiento-ilicito-dinero-efectivo-testaferros-incremento-patrimonial-injustificado_0_L8SQguFD1n.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/04/14/pQ7C3VlkV_2000x1500__1.jpg",
+  "razon": "Es la foto de mejor calidad y encuadre que muestra claramente al protagonista caminando por los pasillos judiciales, sin marcas superpuestas ni menores.",
+  "cuando": "2026-10-07T17:33:04.162Z"
+ },
+ "1gdr2jb": {
+  "archivo": "fotos-notas/1gdr2jb.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La chicharrita del maíz retrocede y mejora el escenario para la siembra",
+  "enlace": "https://www.infobae.com/revista-chacra/2026/10/07/la-chicharrita-retrocede-y-abre-un-escenario-alentador-para-la-campana-de-maiz/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/XR7K7GXRVRCXRALTXJUMZOTRQ4.jpg?auth=d24a4a46c06658b5da4273d6f36ff22dd3f79bee92627e50742dfc498f0d843e&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto B muestra claramente al insecto protagonista de la nota sobre la chicharrita del maíz, sin marcas de agua ni menores.",
+  "cuando": "2026-10-07T17:33:04.162Z"
  }
 }
