@@ -1053,6 +1053,53 @@
         "vistas": 11,
         "interacciones": 3
       }
+    },
+    {
+      "cuando": "2026-10-07T00:00:20.836Z",
+      "web": {
+        "u12": {
+          "visitas": 27,
+          "vistas": 47
+        },
+        "a12": {
+          "visitas": 52,
+          "vistas": 59
+        },
+        "u24": {
+          "visitas": 79,
+          "vistas": 106
+        },
+        "a24": {
+          "visitas": 29,
+          "vistas": 125
+        },
+        "top": [
+          {
+            "camino": "/nota/el-jardin-905-reanuda-las-clases-por-la-tarde-tras-revisar-las-1k3fdlf",
+            "vistas": 10
+          },
+          {
+            "camino": "/",
+            "vistas": 10
+          },
+          {
+            "camino": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis",
+            "vistas": 9
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 7,
+        "vistas": 807,
+        "interacciones": 0
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 92,
+        "alcance": 16,
+        "vistas": 76,
+        "interacciones": 4
+      }
     }
   ],
   "dias": {
@@ -1452,8 +1499,9 @@
     },
     "2026-10-04": {
       "referentes": {
-        "directo": 50,
-        "facebook.com": 10
+        "directo": 42,
+        "facebook.com": 11,
+        "google.com": 1
       },
       "notas": {
         "futbolpartidosliga20261002": 16,
@@ -1475,7 +1523,6 @@
         "17lpda8": 2,
         "8cknxd": 2,
         "5mn9v7": 2,
-        "repaso20261003manana": 1,
         "3cr087": 1,
         "1t477sv": 1,
         "f1parrilla2026r16": 1,
@@ -1485,6 +1532,7 @@
         "wjdq6r": 1,
         "ayjy85": 1,
         "15ikzjc": 1,
+        "repaso20261003manana": 1,
         "nm28kh": 1,
         "ule632": 1
       },
@@ -1494,6 +1542,7 @@
         "/seccion/tecnologia": 9,
         "/clima": 3,
         "/seccion/politica": 2,
+        "/seccion/automovilismo": 1,
         "/farmacias": 1,
         "/seccion/cultura": 1,
         "/seccion/economia": 1,
@@ -1501,7 +1550,6 @@
         "/seccion/argentina": 1,
         "/seccion/balcarce": 1,
         "/seccion/policiales": 1,
-        "/seccion/automovilismo": 1,
         "/agenda": 1
       },
       "paises": {
@@ -1557,7 +1605,10 @@
         "TW": 2,
         "CN": 1
       },
-      "dispositivos": {},
+      "dispositivos": {
+        "desktop": 60,
+        "mobile": 20
+      },
       "notas": {
         "1njgnul": 8,
         "cn09w9": 6,
@@ -1621,15 +1672,15 @@
         0,
         46,
         0,
+        7,
+        2,
+        12,
+        3,
+        6,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        13,
+        3,
+        1,
         0,
         0,
         0,
@@ -1639,60 +1690,71 @@
       ],
       "paises": {
         "CN": 42,
-        "US": 4
+        "US": 38,
+        "IE": 9,
+        "AR": 2,
+        "SE": 2
       },
       "referentes": {
-        "directo": 44
+        "directo": 45,
+        "facebook.com": 26
       },
-      "visitas": 0,
-      "vistas": 0,
+      "visitas": 71,
+      "vistas": 93,
       "notas": {
-        "k7pcxh": 1,
-        "1pfa62o": 1,
-        "1pwavd9": 1,
-        "108t4y0": 1,
-        "z08pph": 1,
+        "1k3fdlf": 10,
+        "1jfpdis": 9,
+        "1onhk2k": 7,
+        "1r3qdtj": 6,
+        "1ag0mm4": 3,
+        "k690bx": 3,
+        "108t4y0": 3,
+        "1fxkw0r": 2,
+        "repaso20261005noche": 1,
         "y68w3c": 1,
         "1njgnul": 1,
-        "aa0h34": 1,
         "sd36kl": 1,
         "1gklhao": 1,
-        "ialwkh": 1,
         "1vnue0q": 1,
         "9pla58": 1,
+        "1pwavd9": 1,
         "1tib4ft": 1,
         "6txjlx": 1,
         "repaso20261005tarde": 1,
+        "1pfa62o": 1,
         "1cgax2i": 1,
         "12yxkc9": 1,
+        "aa0h34": 1,
         "2buh35": 1,
-        "repaso20261005noche": 1,
+        "k7pcxh": 1,
         "nprm173thi": 1,
+        "ialwkh": 1,
         "w7y7kg": 1,
         "1btbpkb": 1,
         "gepu85": 1,
-        "9m9h4e": 1
+        "9m9h4e": 1,
+        "z08pph": 1
       },
       "paginas": {
-        "/": 5,
+        "/": 10,
         "/seccion/automovilismo": 1,
-        "/seccion/politica": 1,
-        "/seccion/argentina": 1,
         "/agenda/caminata-rosa-muni24072": 1,
+        "/seccion/economia": 1,
+        "/seccion/argentina": 1,
         "/seccion/cultura": 1,
         "/farmacias": 1,
+        "/seccion/politica": 1,
         "/seccion/futbol": 1,
         "/seccion/balcarce": 1,
         "/agenda/uttd-tierras-del-diablo-muni22346": 1,
         "/seccion/agro": 1,
         "/clima": 1,
         "/dolar": 1,
-        "/agenda/22-fiesta-nacional-del-postre-muni22540": 1,
-        "/util": 1
+        "/agenda/22-fiesta-nacional-del-postre-muni22540": 1
       },
       "dispositivos": {
-        "desktop": 44,
-        "mobile": 2
+        "desktop": 71,
+        "mobile": 22
       }
     }
   }
