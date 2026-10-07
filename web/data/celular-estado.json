@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T05:32:13.183Z",
- "portada": 46,
- "archivo": 993,
+ "generado": "2026-10-07T06:02:03.734Z",
+ "portada": 45,
+ "archivo": 994,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-07T05:32:13.224Z",
+  "generado": "2026-10-07T06:02:03.770Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,13 +98,13 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "1cnlvgi",
-      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
+      "id": "zqq9w8",
+      "titulo": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
       "seccion": "Fútbol"
      },
      {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
      },
      {
@@ -126,27 +126,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 51,
     "notas": [
      {
-      "id": "11d7omy",
-      "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
      },
      {
-      "id": "zqq9w8",
-      "titulo": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce"
      },
      {
       "id": "aa0h34",
       "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,18 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 38,
     "notas": [
-     {
-      "id": "1uh42rm",
-      "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
-      "seccion": "Economía"
-     },
-     {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
-     },
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
@@ -186,8 +176,8 @@
    "hoy": [],
    "cola": [
     {
-     "id": "9ncum9",
-     "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+     "id": "pvwlvg",
+     "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
      "seccion": "Balcarce",
      "marcada": false
     },
