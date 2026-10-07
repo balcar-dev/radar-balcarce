@@ -130,8 +130,8 @@
   "motivo": "cuerpo: 3 problemas (fecha): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 26 palabras"
  },
  "13lk63p": {
-  "intentos": 3,
-  "ultimo": "2026-10-07T22:32:05.084Z",
+  "intentos": 4,
+  "ultimo": "2026-10-07T23:31:39.433Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "13npbde": {
@@ -460,11 +460,6 @@
   "ultimo": "2026-10-06T19:31:38.364Z",
   "motivo": "con cuerpo"
  },
- "1a2z04a": {
-  "intentos": 2,
-  "ultimo": "2026-09-30T23:31:25.359Z",
-  "motivo": "con cuerpo"
- },
  "1a6c23d": {
   "intentos": 1,
   "ultimo": "2026-10-03T13:31:34.579Z",
@@ -569,6 +564,11 @@
   "intentos": 1,
   "ultimo": "2026-10-05T18:31:33.557Z",
   "motivo": "con cuerpo"
+ },
+ "1bw7314": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T23:31:39.433Z",
+  "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1c7wqua": {
   "intentos": 3,
@@ -870,11 +870,6 @@
  "1i07zda": {
   "intentos": 1,
   "ultimo": "2026-10-04T23:31:41.471Z",
-  "motivo": "con cuerpo"
- },
- "1ivau49": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T23:31:25.359Z",
   "motivo": "con cuerpo"
  },
  "1iyw6rv": {
@@ -1187,6 +1182,11 @@
  "1pwavd9": {
   "intentos": 1,
   "ultimo": "2026-10-06T00:31:22.032Z",
+  "motivo": "con cuerpo"
+ },
+ "1qdgf5p": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T23:31:39.433Z",
   "motivo": "con cuerpo"
  },
  "1qitrjt": {
@@ -1862,11 +1862,6 @@
   "ultimo": "2026-10-01T14:12:21.113Z",
   "motivo": "con cuerpo"
  },
- "6sldfi": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T23:31:25.359Z",
-  "motivo": "con cuerpo"
- },
  "6txjlx": {
   "intentos": 1,
   "ultimo": "2026-10-05T23:31:24.867Z",
@@ -2426,11 +2421,6 @@
  "k690bx": {
   "intentos": 1,
   "ultimo": "2026-10-06T15:05:44.083Z",
-  "motivo": "con cuerpo"
- },
- "k6d4hv": {
-  "intentos": 2,
-  "ultimo": "2026-09-30T23:31:25.359Z",
   "motivo": "con cuerpo"
  },
  "k7pcxh": {
