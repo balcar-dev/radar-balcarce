@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T21:33:45.593Z",
+ "generado": "2026-10-07T22:04:03.400Z",
  "portada": 57,
- "archivo": 1042,
- "esperandoCuerpo": 5,
+ "archivo": 1047,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-07T21:33:45.640Z",
+  "generado": "2026-10-07T22:04:03.455Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-07T18:06:19.121Z"
    },
    {
@@ -63,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-07T18:06:19.121Z",
     "segundos": null,
     "notas": [
@@ -215,12 +215,6 @@
      "id": "28zqic",
      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
      "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "3exxze",
-     "titulo": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
-     "seccion": "Balcarce",
      "marcada": false
     },
     {

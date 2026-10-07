@@ -125,8 +125,8 @@
   "motivo": "cuerpo: 3 problemas (fecha): el cuerpo menciona \"sabado\" y la fuente no; sin esas oraciones quedan 26 palabras"
  },
  "13lk63p": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T21:31:36.587Z",
+  "intentos": 2,
+  "ultimo": "2026-10-07T22:01:53.969Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "13npbde": {
@@ -220,6 +220,11 @@
   "intentos": 1,
   "ultimo": "2026-10-04T02:13:57.247Z",
   "motivo": "con cuerpo"
+ },
+ "15z9ofl": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T22:01:53.969Z",
+  "motivo": "semáforo: necesita ojo humano: \"nene\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "15zgvx1": {
   "intentos": 1,
@@ -618,6 +623,11 @@
  "1d1hc0g": {
   "intentos": 3,
   "ultimo": "2026-10-04T05:31:30.387Z",
+  "motivo": "con cuerpo"
+ },
+ "1d48tdj": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T22:01:53.969Z",
   "motivo": "con cuerpo"
  },
  "1d4do2p": {
@@ -1092,6 +1102,11 @@
   "ultimo": "2026-10-05T16:01:33.889Z",
   "motivo": "con cuerpo"
  },
+ "1njsbo2": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T22:01:53.969Z",
+  "motivo": "con cuerpo"
+ },
  "1nlg6jl": {
   "intentos": 1,
   "ultimo": "2026-10-07T09:01:24.344Z",
@@ -1247,6 +1262,11 @@
  "1rzdfjj": {
   "intentos": 1,
   "ultimo": "2026-10-03T17:01:22.160Z",
+  "motivo": "con cuerpo"
+ },
+ "1s4z4z2": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T22:01:53.969Z",
   "motivo": "con cuerpo"
  },
  "1s9anmt": {
@@ -1503,6 +1523,11 @@
   "ultimo": "2026-10-07T16:31:41.138Z",
   "motivo": "con cuerpo"
  },
+ "1wp6u10": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T22:01:53.969Z",
+  "motivo": "con cuerpo"
+ },
  "1wtp555": {
   "intentos": 1,
   "ultimo": "2026-10-02T18:14:15.202Z",
@@ -1512,6 +1537,11 @@
   "intentos": 1,
   "ultimo": "2026-10-02T15:31:29.831Z",
   "motivo": "título o bajada: 1 problema (numero): el copete dice 4.000 y la fuente no lo dice"
+ },
+ "1xbyav3": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T22:01:53.969Z",
+  "motivo": "título o bajada: 2 problemas (negacion, tildes): la fuente niega algo en el título y el texto nuevo no"
  },
  "1xl1em": {
   "intentos": 1,
@@ -2105,9 +2135,9 @@
   "motivo": "con cuerpo"
  },
  "d3o2d6": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T21:31:36.587Z",
-  "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"agencia\" y la fuente no; sin esas oraciones quedan 94 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-07T22:01:53.969Z",
+  "motivo": "con cuerpo"
  },
  "d614dn": {
   "intentos": 1,
@@ -2398,11 +2428,6 @@
   "ultimo": "2026-10-02T16:49:15.306Z",
   "motivo": "con cuerpo"
  },
- "jhvbxg": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T22:01:19.317Z",
-  "motivo": "título o bajada: 1 problema (numero): el copete dice 0 y la fuente no lo dice"
- },
  "jzu6k": {
   "intentos": 1,
   "ultimo": "2026-10-01T16:31:13.369Z",
@@ -2562,6 +2587,11 @@
   "intentos": 1,
   "ultimo": "2026-10-04T13:31:13.910Z",
   "motivo": "con cuerpo"
+ },
+ "o5u9d2": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T22:01:53.969Z",
+  "motivo": "título o bajada: 3 problemas (numero, tildes): el titulo dice 80 y la fuente no lo dice"
  },
  "o7akpp": {
   "intentos": 4,
@@ -2908,11 +2938,6 @@
  "vot8hs": {
   "intentos": 1,
   "ultimo": "2026-09-30T23:01:13.968Z",
-  "motivo": "con cuerpo"
- },
- "vp5l7j": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T22:01:19.317Z",
   "motivo": "con cuerpo"
  },
  "vqv317": {

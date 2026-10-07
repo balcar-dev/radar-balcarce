@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T21:33:45.593Z",
+ "generado": "2026-10-07T22:04:03.400Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -60,9 +60,14 @@
      "medio": "C5N",
      "enlace": "https://www.c5n.com/deportes/no-te-vayas-pensalo-una-vez-mas-la-cancion-la-que-el-plantel-despidio-lionel-messi-el-micro-n251029",
      "fecha": "2026-10-07T21:11:00.000Z"
+    },
+    {
+     "medio": "Doble Amarilla",
+     "enlace": "https://www.dobleamarilla.com.ar/selecciones/-no-te-vayas--pensalo-una-vez-mas---la-cancion-que-sono-en-el-micro-de-la-seleccion_a6ac6ba6df45aded923c937cb",
+     "fecha": "2026-10-07T19:35:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 4
   },
@@ -86,7 +91,7 @@
   {
    "id": "o7akpp",
    "titulo": "El 57% de los bonaerenses que tomó deuda con una financiera está en mora",
-   "copete": "General Pueyrredon registró un 56,2% de deudores con atrasos en los pagos de préstamos personales otorgados por financieras privadas, de acuerdo con el informe El mapa de la deuda, elaborado por el Centro de Estudios para la Ciudad (CEC) y la Fundación Friedrich Ebert (FES). El…",
+   "copete": "La situación económica de los hogares bonaerenses atraviesa un momento crítico. Según datos del Mapa de la Deuda, elaborado por el Centro de Estudios para la Ciudad (CEC) y la Fundación Friedrich Ebert (FES), el acceso a préstamos personales a través de financieras se ha…",
    "seccion": "Economía",
    "fecha": "2026-10-07T14:14:40.000Z",
    "fuentes": [
@@ -96,14 +101,19 @@
      "fecha": "2026-10-07T14:14:40.000Z"
     },
     {
-     "medio": "QZ Noticias (Mar del Plata)",
-     "enlace": "https://www.qznoticias.com/la-ciudad/general-pueyrredon-el-562-de-los-deudores-con-creditos-de-financieras-privadas-esta-en-mora",
-     "fecha": "2026-10-07T15:45:37.000Z"
-    },
-    {
      "medio": "Ecos Diarios (Necochea)",
      "enlace": "https://elecos.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-financieras-se-encuentra-en-mora",
      "fecha": "2026-10-07T16:01:03.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
+     "fecha": "2026-10-07T20:30:21.000Z"
+    },
+    {
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
     },
     {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
@@ -113,17 +123,12 @@
     {
      "medio": "El Eco de Tandil",
      "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
-     "fecha": "2026-10-07T14:43:51.000Z"
+     "fecha": "2026-10-07T14:43:44.000Z"
     },
     {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
-     "fecha": "2026-10-07T20:30:21.000Z"
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/la-ciudad/general-pueyrredon-el-562-de-los-deudores-con-creditos-de-financieras-privadas-esta-en-mora",
+     "fecha": "2026-10-07T15:45:37.000Z"
     }
    ],
    "intentos": 4,
@@ -131,35 +136,62 @@
    "maximo": 4
   },
   {
-   "id": "d3o2d6",
-   "titulo": "Rafael Grossi sube al segundo lugar en una carrera aún incierta para liderar la ONU y hay entusiasmo en el entorno del argentino",
-   "copete": "El diplomático argentino Rafael Grossi alcanzó el segundo puesto en la quinta votación del Consejo de Seguridad de las Naciones Unidas para definir al próximo secretario general del organismo internacional. El actual director general de la Organización Internacional de Energía…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-07T15:48:34.000Z",
+   "id": "o5u9d2",
+   "titulo": "El emotivo último mensaje que publicó Piero seis días antes de morir: \"Gracias\"",
+   "copete": "Piero De Benedictis murió hoy a los 81 años . El músico argentino fue reconocido por temas como “Mi viejo” y “Para el pueblo lo que es del pueblo”. Días atrás, el artista fue homenajeado en Francia con una canción que se remonta a sus inicios y a sus primeros años en Italia. La…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-07T19:34:15.905Z",
    "fuentes": [
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/mundo/rafael-grossi-sube-segundo-lugar-carrera-incierta-liderar-onu-entusiasmo-entorno-argentino_0_8ieqX7HWDh.html",
-     "fecha": "2026-10-07T15:48:34.000Z"
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/espectaculos/emotivo-ultimo-mensaje-publico-piero-seis-dias-antes-morir-gracias-2026107163415",
+     "fecha": "2026-10-07T19:34:15.905Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/mundo/el-argentino-rafael-grossi-escalo-posiciones-y-quedo-segundo-la-carrera-liderar-la-onu-n6331323",
-     "fecha": "2026-10-07T21:10:00.000Z"
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/musica/noticias/2026/10/07/el-emotivo-ultimo-posteo-que-hizo-piero-antes-de-morir-es-muy-fuerte-escuchar-mi-voz-alli/",
+     "fecha": "2026-10-07T20:07:11.000Z"
     },
     {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/mundo/el-argentino-rafael-grossi-avanzo-al-segundo-lugar-la-carrera-ser-secretario-general-la-onu-n1604225",
-     "fecha": "2026-10-07T20:26:00.000Z"
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/videos/musica/noticias/2026/10/07/el-emotivo-ultimo-posteo-que-hizo-piero-antes-de-morir-es-muy-fuerte-escuchar-mi-voz-alli/",
+     "fecha": "2026-10-07T20:07:14.000Z"
     },
     {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/rafael-grossi-carrera-secretario-general-onu/",
-     "fecha": "2026-10-07T16:52:17.000Z"
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/espectaculos/se-conocio-el-ultimo-posteo-que-hizo-piero-antes-de-morir/",
+     "fecha": "2026-10-07T20:42:13.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/07/el-ultimo-y-emotivo-posteo-de-piero-antes-de-su-muerte-es-muy-fuerte-escuchar-mi-voz-alli/",
+     "fecha": "2026-10-07T20:59:09.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"agencia\" y la fuente no; sin esas oraciones quedan 94 palabras",
+   "motivo": "título o bajada: 3 problemas (numero, tildes): el titulo dice 80 y la fuente no lo dice",
+   "maximo": 4
+  },
+  {
+   "id": "1xbyav3",
+   "titulo": "No sólo quiere faenar Wagyu, también quiere criarlo: El frigorífico Rioplatense armó su propio rodeo y busca vientres para multiplicar su genética premium",
+   "copete": "El frigorífico Rioplatense decidió meterse en el negocio de la carne de alto marmoleo y comenzó un programa de multiplicación de genética wagyu a través de la producción de embriones, con el objetivo de desarrollar un rodeo propio y avanzar hacia el autoabastecimiento de esta…",
+   "seccion": "Agro",
+   "fecha": "2026-10-07T15:17:53.000Z",
+   "fuentes": [
+    {
+     "medio": "Bichos de Campo",
+     "enlace": "https://bichosdecampo.com/no-solo-quiere-faenar-wagyu-tambien-quiere-criarlo-el-frigorifico-rioplatense-armo-su-propio-rodeo-y-busca-vientres-para-multiplicar-su-genetica-premium/",
+     "fecha": "2026-10-07T15:17:53.000Z"
+    },
+    {
+     "medio": "Agroempresario",
+     "enlace": "https://agroempresario.com/publicacion/122223/como-rioplatense-avanza-con-su-propio-rodeo-de-carne-wagyu/",
+     "fecha": "2026-10-07T22:00:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (negacion, tildes): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   }
  ]
