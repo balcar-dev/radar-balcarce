@@ -6,6 +6,8 @@
 import { semillaDe, variante } from './guiones.mjs';
 
 export const WHATSAPP = '2266 51-1612';
+/** El mail de la redacción (6/10): reenvía a la cuenta del medio con Cloudflare Email Routing. Los otros: contacto@ (lectores y comercios) y publicidad@. */
+export const MAIL_REDACCION = 'redaccion@radarbalcarce.com';
 
 /** Cada pieza: su id en el cronograma, el día (0 = domingo), el color de su sección y lo que dice. */
 export const PIEZAS_PARTICIPA = {
@@ -48,5 +50,5 @@ export function guionParticipa(id, { fecha = new Date(), momento = 'manana' } = 
   const p = PIEZAS_PARTICIPA[id];
   if (!p) return '';
   const s = semillaDe(id, fecha);
-  return [variante(SALUDOS[momento] ?? SALUDOS.manana, s, 'saludo'), ...p.voz, 'Escribinos por WhatsApp: el número está en pantalla.'].join(' ');
+  return [variante(SALUDOS[momento] ?? SALUDOS.manana, s, 'saludo'), ...p.voz, 'Escribinos por WhatsApp o por mail: los datos están en pantalla.'].join(' ');
 }

@@ -13,7 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, placaParticipa, placaEfemeride, COLOR_FERIADO, COLOR_SECCION, COLORES } from './placa.mjs';
-import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa } from '../redes/participa.mjs';
+import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa, MAIL_REDACCION } from '../redes/participa.mjs';
 import { feriadoDelDia, fechaDeFeriado, datosParaContar, guionFeriado } from '../redes/feriado.mjs';
 import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
@@ -433,7 +433,7 @@ export function planDelDia(datos, {
       seccion: p.seccion,
       guion: guionParticipa(id, { fecha, momento }),
       momento, indicacion: INDICACIONES[momento],
-      svg: placaParticipa({ rotulo: p.rotulo, pregunta: p.pregunta, pie1: p.pie1, pie2: p.pie2, color: COLOR_SECCION[p.seccion] }),
+      svg: placaParticipa({ rotulo: p.rotulo, pregunta: p.pregunta, pie1: p.pie1, pie2: p.pie2, color: COLOR_SECCION[p.seccion], mail: MAIL_REDACCION }),
       acento: COLOR_SECCION[p.seccion],
     });
   }

@@ -705,7 +705,7 @@ function placaConRasgo({ cab, filas, color }) {
  */
 export function placaParticipa({
   rotulo: kicker, pregunta, pie1 = '', pie2 = '', color = COLOR_SECCION.Balcarce,
-  numero = '2266 51-1612', etiqueta = 'Escribinos por WhatsApp',
+  numero = '2266 51-1612', etiqueta = 'Escribinos por WhatsApp', mail = '',
 }) {
   const disponible = ANCHO - MARGEN * 2;
   // El primer cuerpo donde ninguna palabra se sale del ancho (una palabra larga como "emprendimiento" no se parte).
@@ -716,13 +716,17 @@ export function placaParticipa({
   const yPregunta = 470;
   const yFranja = yPregunta + (p.lineas.length - 1) * inter + 150;
   const extra = [pie1, pie2].filter(Boolean).flatMap((t, i) => envolverAncho(t, 46, disponible, 'sans').map((l) => ({ l, i })));
+  // El mail (6/10, Hernán: "sumemos los mails del dominio además del WhatsApp"): una línea debajo de la franja, antes de los pies.
+  const yMail = yFranja + 290;
+  const yExtra = yFranja + 300 + (mail ? 70 : 0);
   return lienzo(`
   ${rotulo(kicker, { y: 300, color })}
   ${renglones(p.lineas, { y: yPregunta, tam: p.tam, interlinea: inter, espaciado: -2 })}
   <rect x="${MARGEN}" y="${yFranja}" width="${disponible}" height="210" rx="28" fill="${COLOR_SECCION.WhatsApp}"/>
   <text x="${MARGEN + 44}" y="${yFranja + 62}" font-family="${TEXTO}" font-size="28" font-weight="700" letter-spacing="4" fill="#FFFFFF" fill-opacity="0.8">${esc(etiqueta.toUpperCase())}</text>
   <text x="${MARGEN + 44}" y="${yFranja + 164}" font-family="${TEXTO}" font-size="92" font-weight="700" letter-spacing="-1" fill="#FFFFFF">${esc(numero)}</text>
-  ${extra.map(({ l, i }, n) => `<text x="${MARGEN}" y="${yFranja + 300 + n * 62}" font-family="${TEXTO}" font-size="46" font-weight="${i === 0 ? 600 : 500}" fill="${i === 0 ? COLORES.tinta : COLORES.gris}">${esc(l)}</text>`).join('\n  ')}
+  ${mail ? `<text x="${MARGEN}" y="${yMail}" font-family="${TEXTO}" font-size="42" font-weight="700" fill="${COLORES.tinta}">${esc(`O por mail: ${mail}`)}</text>` : ''}
+  ${extra.map(({ l, i }, n) => `<text x="${MARGEN}" y="${yExtra + n * 62}" font-family="${TEXTO}" font-size="46" font-weight="${i === 0 ? 600 : 500}" fill="${i === 0 ? COLORES.tinta : COLORES.gris}">${esc(l)}</text>`).join('\n  ')}
   ${pie()}`);
 }
 

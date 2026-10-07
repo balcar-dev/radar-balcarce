@@ -99,3 +99,26 @@ test('los feriados por decreto que la API no trae (la visita del papa) salen, co
   const g = guionFeriado(nov11, { fecha: new Date('2026-11-11T12:00:00-03:00') });
   assert.match(g, /feriado en la provincia de Buenos Aires/);
 });
+
+// ---- el mail del dominio junto al WhatsApp (6/10, Hernán): redaccion@ en las cuatro historias de participá
+import { MAIL_REDACCION } from '../redes/participa.mjs';
+
+test('las historias de participá muestran el mail de la redacción junto al WhatsApp y todo entra antes del cierre', () => {
+  assert.equal(MAIL_REDACCION, 'redaccion@radarbalcarce.com');
+  for (const [id, p] of Object.entries(PIEZAS_PARTICIPA)) {
+    const svg = placaParticipa({ rotulo: p.rotulo, pregunta: p.pregunta, pie1: p.pie1, pie2: p.pie2, mail: MAIL_REDACCION });
+    assert.match(svg, /2266 51-1612/, id);
+    assert.ok(svg.includes(`O por mail: ${MAIL_REDACCION}`), id);
+    const alturas = [...svg.matchAll(/<text[^>]* y="(\d+)"/g)].map((m) => Number(m[1])).filter((y) => y < 1470);
+    assert.ok(Math.max(...alturas) <= 1440, `${id}: algo queda pegado al cierre`);
+    const ancho = anchoAproximado(`O por mail: ${MAIL_REDACCION}`, 42, 'sans');
+    assert.ok(ancho <= 936, `${id}: el mail no entra (${ancho})`);
+  }
+  assert.ok(!placaParticipa({ rotulo: 'x', pregunta: 'y' }).includes('O por mail'), 'sin mail no dibuja nada');
+});
+
+test('la locutora manda a escribir por WhatsApp o por mail y no lee ningún dato', () => {
+  const g = guionParticipa('participa-noticias', { fecha: new Date('2026-10-05T12:00:00-03:00'), momento: 'manana' });
+  assert.match(g, /WhatsApp o por mail/);
+  assert.ok(!/@|\d{4}/.test(g));
+});

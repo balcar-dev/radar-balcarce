@@ -124,7 +124,7 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 4. **Policiales de Balcarce**: aprobar por bloques desde el celular o soltar los que cuentan 2 medios.
 5. Las **fuentes en inglés** adaptadas (cuántas y con qué control).
 
-**Para los dos (a mano):** pegar las bios y completar los perfiles (ver `PERFILES.md` y `/compartir`); mails con el dominio (Cloudflare); AdSense con `radarbalcarce@gmail.com`; primeras propuestas a 10 comercios y organismos; borrar Vercel; mandar el video y los mensajes a amigos y grupos de Balcarce (hoy hay 6 seguidores en Facebook y 4 en Instagram).
+**Para los dos (a mano):** pegar las bios y completar los perfiles (ver `PERFILES.md` y `/compartir`); mails con el dominio (**hecho el 7/10**: `contacto@`, `redaccion@` y `publicidad@radarbalcarce.com` reenvían a `radarbalcarce@gmail.com` con Cloudflare Email Routing; falta mandarse un mail de prueba a cada una y, si quieren responder desde esas direcciones, configurar "Enviar como" en Gmail, que lo hace una persona; `redaccion@` ya sale en las historias de "Participá" junto al WhatsApp; el pie de la web sigue con el Gmail hasta que decidan cambiarlo); AdSense con `radarbalcarce@gmail.com`; primeras propuestas a 10 comercios y organismos; borrar Vercel; mandar el video y los mensajes a amigos y grupos de Balcarce (hoy hay 6 seguidores en Facebook y 4 en Instagram).
 
 **Para pensar con calma:** notas de investigación con datos (SNIC, Boletín Oficial, ArgentinaDatos), figuras populares y esports, redes (WhatsApp, YouTube Shorts, TikTok), colaboradores y recortes de video (con un abogado). Todo está en el documento "Plan de crecimiento": https://claude.ai/artifact/7WoF276X7qcQtKR4oYLteJ
 

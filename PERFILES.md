@@ -30,6 +30,7 @@ cargar, en `PENDIENTES.md`.
 | **Enlace** | `https://radarbalcarce.com` |
 | **Categoría** | "Sitio web de noticias y medios de comunicación" (hoy figura "Blog personal": no se ve en el perfil, pero ayuda a que Instagram entienda qué es) |
 | **Botón de contacto** | El WhatsApp del medio, **2266 51-1612** (el del pie de la web, confirmado el 29/09) |
+| **Mails del dominio (7/10)** | `contacto@radarbalcarce.com` (lectores y comercios), `redaccion@radarbalcarce.com` (datos, fotos y notas; es el que sale en las historias de Participá) y `publicidad@radarbalcarce.com` (propuestas comerciales). Los tres reenvían a `radarbalcarce@gmail.com` (Cloudflare Email Routing) |
 | **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima · Participá, cada una con una portada cuadrada que se vea bien recortada en círculo (un ícono simple por tema, sin texto) |
 | **Foto de perfil** | El avatar azul (`reels/avatar.mjs`; cómo es, en `MEDIA-KIT.md`, "Los colores"). Se muestra redondo |
 
