@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T09:01:38.628Z",
- "portada": 48,
+ "generado": "2026-10-07T09:31:31.601Z",
+ "portada": 47,
  "archivo": 997,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-07T09:01:38.661Z",
+  "generado": "2026-10-07T09:31:31.634Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,11 +95,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
      {
       "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a investigadora del INTA",
+      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
       "seccion": "Agro"
      },
      {
@@ -108,8 +108,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "a00g5p",
-      "titulo": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos",
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
      },
      {
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
+     },
      {
       "id": "9ncum9",
       "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1outpc2",
-      "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
-      "seccion": "Fútbol"
      },
      {
       "id": "1793nst",
@@ -157,18 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
-     },
      {
       "id": "e3ix5w",
       "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
@@ -177,6 +167,11 @@
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]
