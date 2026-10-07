@@ -1402,8 +1402,8 @@
   "motivo": "con cuerpo"
  },
  "1ukn90p": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T15:33:00.200Z",
+  "intentos": 2,
+  "ultimo": "2026-10-07T16:02:37.748Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "1ulp23j": {
@@ -1534,9 +1534,9 @@
   "fuentes": 1
  },
  "1wp29m7": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T15:33:00.200Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 16 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 65 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-07T16:02:37.748Z",
+  "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"municipalidad\" y la fuente no; sin esas oraciones quedan 31 palabras"
  },
  "1wtp555": {
   "intentos": 1,
@@ -1596,6 +1596,11 @@
  "1yl5yok": {
   "intentos": 1,
   "ultimo": "2026-10-03T17:31:30.664Z",
+  "motivo": "con cuerpo"
+ },
+ "1ypbdma": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T16:02:37.748Z",
   "motivo": "con cuerpo"
  },
  "1ysjgnl": {
@@ -2123,9 +2128,9 @@
   "motivo": "con cuerpo"
  },
  "ccot62": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T15:33:00.200Z",
-  "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 2,
+  "ultimo": "2026-10-07T16:02:37.748Z",
+  "motivo": "con cuerpo"
  },
  "ce0pxp": {
   "intentos": 2,
@@ -2614,6 +2619,11 @@
   "ultimo": "2026-10-04T13:31:13.910Z",
   "motivo": "con cuerpo"
  },
+ "o7akpp": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T16:02:37.748Z",
+  "motivo": "título o bajada: 5 problemas (largo, numero): el titulo tiene 97 caracteres, el máximo es 90"
+ },
  "o99ioz": {
   "intentos": 1,
   "ultimo": "2026-10-03T15:02:13.158Z",
@@ -2886,11 +2896,6 @@
   "ultimo": "2026-10-07T14:28:06.738Z",
   "motivo": "título o bajada: 1 problema (numero): el copete dice 0 y la fuente no lo dice"
  },
- "uhxgoz": {
-  "intentos": 3,
-  "ultimo": "2026-09-30T16:02:22.205Z",
-  "motivo": "sin material"
- },
  "uk82ir": {
   "intentos": 1,
   "ultimo": "2026-10-05T17:31:14.146Z",
@@ -2934,11 +2939,6 @@
  "v0xov9": {
   "intentos": 1,
   "ultimo": "2026-10-04T03:04:34.143Z",
-  "motivo": "con cuerpo"
- },
- "v2h1r4": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T16:02:22.205Z",
   "motivo": "con cuerpo"
  },
  "vguosy": {

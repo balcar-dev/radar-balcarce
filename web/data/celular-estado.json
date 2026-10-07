@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T15:39:06.934Z",
- "portada": 44,
- "archivo": 1015,
+ "generado": "2026-10-07T16:03:16.445Z",
+ "portada": 47,
+ "archivo": 1017,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-07T15:39:06.958Z",
+  "generado": "2026-10-07T16:03:16.485Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-07T13:35:12.800Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu reclamo",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-07T15:05:51.901Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-07T13:35:12.800Z",
     "segundos": null,
     "notas": [

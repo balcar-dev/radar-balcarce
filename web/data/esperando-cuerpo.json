@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T15:39:06.934Z",
+ "generado": "2026-10-07T16:03:16.445Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -84,8 +84,8 @@
      "fecha": "2026-10-07T14:38:16.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 16 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 65 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"municipalidad\" y la fuente no; sin esas oraciones quedan 31 palabras",
    "maximo": 3
   },
   {
@@ -106,7 +106,7 @@
      "fecha": "2026-10-07T14:54:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   },
@@ -128,30 +128,25 @@
    "maximo": 3
   },
   {
-   "id": "189ob3f",
-   "titulo": "Tal como pronosticó el Servicio Meteorológico Nacional, llueve en el AMBA: mapa en vivo de las precipitaciones",
-   "copete": "El Área Metropolitana de Buenos Aires (AMBA) atravesará una semana marcada por la inestabilidad, con tormentas previstas para este miércoles, lluvias durante la primera parte del jueves y un descenso de la temperatura hacia el fin de semana, según el pronóstico del Servicio…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-07T12:50:00.000Z",
+   "id": "o7akpp",
+   "titulo": "El 57% de los bonaerenses que tomó deuda con una financiera está en mora",
+   "copete": "Mientras las refinanciaciones no logran resolver el problema de fondo sobre las deudas que tienen miles de hogares en todo el país, durante agosto se profundizó la crisis en las cuotas que deben pagar por algún tipo de préstamos personales los bonaerenses que recurrieron a…",
+   "seccion": "Economía",
+   "fecha": "2026-10-07T14:14:40.000Z",
    "fuentes": [
     {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/sociedad/tal-como-pronostico-el-servicio-meteorologico-nacional-llueve-el-amba-mapa-vivo-las-precipitaciones-n6331021",
-     "fecha": "2026-10-07T12:50:00.000Z"
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/el-57-los-bonaerenses-que-tomo-deuda-una-financiera-esta-mora-n56306",
+     "fecha": "2026-10-07T14:14:40.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/sociedad/2026/10/07/rigen-alertas-por-tormentas-y-lluvias-en-13-provincias-cuando-comenzara-a-llover-en-el-amba/",
-     "fecha": "2026-10-07T13:01:56.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/sociedad/2026/10/07/tormentas-fuertes-con-rafagas-de-hasta-50-kmh-el-pronostico-del-servicio-meteorologico-para-hoy-en-el-amba/",
-     "fecha": "2026-10-07T15:23:08.000Z"
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
+     "fecha": "2026-10-07T14:43:44.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo corto (60 palabras)",
+   "motivo": "título o bajada: 5 problemas (largo, numero): el titulo tiene 97 caracteres, el máximo es 90",
    "maximo": 3
   },
   {
