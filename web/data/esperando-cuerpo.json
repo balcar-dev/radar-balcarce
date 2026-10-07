@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T01:32:34.141Z",
+ "generado": "2026-10-07T02:01:55.706Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -17,7 +17,7 @@
     {
      "medio": "La Nación",
      "enlace": "https://www.lanacion.com.ar/deportes/futbol/la-ultima-arenga-de-lionel-messi-en-la-seleccion-argentina-que-les-dijo-a-sus-companeros-antes-de-nid06102026/",
-     "fecha": "2026-10-06T23:53:20.000Z"
+     "fecha": "2026-10-07T01:39:54.000Z"
     },
     {
      "medio": "Olé",
@@ -62,9 +62,51 @@
      "fecha": "2026-10-06T23:46:00.754Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (antecedente): el copete usa 2, que sale de una nota anterior, como si fuera de hoy",
    "maximo": 3
+  },
+  {
+   "id": "1yzgdmc",
+   "titulo": "\"Chiqui Tapia botón\": los cantos contra el presidente de la AFA en la previa de la despedida de Messi en el Monumental",
+   "copete": "Minutos antes del partido entre la selección argentina y Benín, en el marco de la despedida de Lionel Messi en el estadio Monumental, un grupo de hinchas entonó fuertes cánticos contra el presidente de la Asociación del Fútbol Argentino (AFA), Claudio “Chiqui” Tapia. “Chiqui…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-06T22:42:18.000Z",
+   "fuentes": [
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/deportes/chiqui-tapia-boton-cantos-presidente-afa-previa-despedida-messi-monumental_0_oWhRD6JQVz.html",
+     "fecha": "2026-10-06T22:42:18.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/deportes/futbol/los-canticos-de-los-hinchas-contra-chiqui-tapia-en-la-previa-de-la-despedida-de-messi-de-la-nid06102026/",
+     "fecha": "2026-10-07T01:44:57.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/seleccion/canticos-tapia_3_LxAylRmWhM.html",
+     "fecha": "2026-10-06T22:42:52.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/video-la-reaccion-de-los-hinchas-contra-chiqui-tapia-en-el-partido-despedida-de-lionel-messi/",
+     "fecha": "2026-10-06T23:26:12.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/deportes/videos-insultos-para-chiqui-tapia-en-el-monumental-en-la-previa-de-la-despedida-de-messi-deportes_1791327960",
+     "fecha": "2026-10-06T23:09:41.000Z"
+    },
+    {
+     "medio": "0221",
+     "enlace": "https://www.0221.com.ar/deportes/video-el-estadio-monumental-exploto-contra-chiqui-tapia-la-despedida-lionel-messi-n135407",
+     "fecha": "2026-10-07T00:56:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 48 palabras",
+   "maximo": 4
   },
   {
    "id": "1qym9k9",
@@ -217,7 +259,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-6-20-42-0-murio-carlos-clerici-la-emblematica-voz-de-las-campanas-de-luchemos-por-la-vida",
-     "fecha": "2026-10-07T00:43:32.000Z"
+     "fecha": "2026-10-07T01:59:40.000Z"
     },
     {
      "medio": "Minuto Uno",
