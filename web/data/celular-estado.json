@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T19:02:34.337Z",
- "portada": 51,
+ "generado": "2026-10-07T19:31:34.957Z",
+ "portada": 53,
  "archivo": 1030,
- "esperandoCuerpo": 5,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-07T19:02:34.380Z",
+  "generado": "2026-10-07T19:31:35.000Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,12 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 54,
     "notas": [
      {
       "id": "1opc9eu",
       "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      },
      {
       "id": "2r3foe",
@@ -173,11 +178,6 @@
       "id": "1n6yxr",
       "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
      }
     ]
    }
