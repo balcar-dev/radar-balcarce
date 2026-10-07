@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T13:32:05.285Z",
- "portada": 38,
- "archivo": 1007,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-07T14:08:11.845Z",
+ "portada": 41,
+ "archivo": 1008,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-07T13:32:05.326Z",
+  "generado": "2026-10-07T14:08:11.890Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-07T10:03:51.877Z"
    },
    {
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-07T13:35:12.800Z"
    },
    {
     "nombre": "participa-reclamos",
@@ -94,8 +94,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 54,
+    "salio": "2026-10-07T13:35:12.800Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1outpc2",
@@ -126,12 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 46,
     "notas": [
      {
-      "id": "rilva6",
-      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
-      "seccion": "Fútbol"
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      },
      {
       "id": "vm4nnt",
@@ -139,14 +139,14 @@
       "seccion": "Agro"
      },
      {
+      "id": "rilva6",
+      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,21 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 41,
+    "segundos": 50,
     "notas": [
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "d63yik",
-      "titulo": "Social Pato Naranja y Negro buscan hacer historia en el rugby",
-      "seccion": "Deportes"
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      },
      {
       "id": "kwpmcv",
       "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      }
     ]
@@ -202,6 +207,12 @@
      "id": "15zgvx1",
      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "131078z",
+     "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],
