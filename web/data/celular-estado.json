@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T18:06:45.566Z",
- "portada": 47,
- "archivo": 1023,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-07T18:33:38.617Z",
+ "portada": 50,
+ "archivo": 1029,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-07T18:06:45.604Z",
+  "generado": "2026-10-07T18:33:38.656Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-07T18:06:19.121Z"
    },
    {
     "nombre": "farmacia",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 47,
+    "salio": "2026-10-07T18:06:19.121Z",
+    "segundos": null,
     "notas": [
      {
       "id": "vm4nnt",
@@ -134,19 +134,19 @@
       "seccion": "Agro"
      },
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "kr8nxa",
       "titulo": "Grupo Cali explica los motivos de la suspensión de su show",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-      "seccion": "Automovilismo"
+      "id": "1wp29m7",
+      "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "rilva6",
+      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,17 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 55,
     "notas": [
      {
-      "id": "rilva6",
-      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1wp29m7",
-      "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
-      "seccion": "Deportes"
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "seccion": "Balcarce"
      },
      {
       "id": "2r3foe",
@@ -175,9 +170,14 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      }
     ]
    }
