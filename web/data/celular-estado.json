@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T09:31:31.601Z",
+ "generado": "2026-10-07T10:01:20.053Z",
  "portada": 47,
  "archivo": 997,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-07T09:31:31.634Z",
+  "generado": "2026-10-07T10:01:20.080Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 49,
     "notas": [
      {
       "id": "vm4nnt",
@@ -103,13 +103,13 @@
       "seccion": "Agro"
      },
      {
-      "id": "1cnlvgi",
-      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
+      "id": "1nlg6jl",
+      "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
       "seccion": "Fútbol"
      },
      {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
       "seccion": "Balcarce"
      },
      {
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 46,
     "notas": [
+     {
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1n6yxr",
       "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "9ncum9",
-      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
-      "seccion": "Balcarce"
      },
      {
       "id": "1793nst",
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "a00g5p",
+      "titulo": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos",
+      "seccion": "Balcarce"
+     },
      {
       "id": "e3ix5w",
       "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
@@ -167,11 +172,6 @@
      {
       "id": "9m9h4e",
       "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "6txjlx",
-      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
       "seccion": "Balcarce"
      }
     ]
