@@ -465,11 +465,6 @@
   "ultimo": "2026-10-01T17:31:26.840Z",
   "motivo": "con cuerpo"
  },
- "1aaafwm": {
-  "intentos": 3,
-  "ultimo": "2026-09-30T00:01:19.604Z",
-  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
- },
  "1ac6tw2": {
   "intentos": 1,
   "ultimo": "2026-10-01T00:31:23.236Z",
@@ -661,8 +656,8 @@
   "motivo": "con cuerpo"
  },
  "1ekdqxx": {
-  "intentos": 3,
-  "ultimo": "2026-10-06T19:01:25.408Z",
+  "intentos": 4,
+  "ultimo": "2026-10-07T00:01:39.191Z",
   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice"
  },
  "1em1ou0": {
@@ -1240,8 +1235,8 @@
   "motivo": "con cuerpo"
  },
  "1qym9k9": {
-  "intentos": 2,
-  "ultimo": "2026-10-06T23:31:45.917Z",
+  "intentos": 3,
+  "ultimo": "2026-10-07T00:01:39.191Z",
   "motivo": "con cuerpo"
  },
  "1r3qdtj": {
@@ -1371,6 +1366,11 @@
   "ultimo": "2026-10-05T04:01:26.099Z",
   "motivo": "con cuerpo"
  },
+ "1u7aojj": {
+  "intentos": 1,
+  "ultimo": "2026-10-07T00:01:39.191Z",
+  "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (ultima, seleccion): va con las tildes y la eñe donde corresponden"
+ },
  "1ueyyim": {
   "intentos": 1,
   "ultimo": "2026-10-06T21:11:32.898Z",
@@ -1484,11 +1484,6 @@
  "1vuvl5f": {
   "intentos": 1,
   "ultimo": "2026-10-03T13:01:25.217Z",
-  "motivo": "con cuerpo"
- },
- "1vzdxxe": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T00:01:19.604Z",
   "motivo": "con cuerpo"
  },
  "1w64u7p": {
@@ -1609,9 +1604,9 @@
   "motivo": "con cuerpo"
  },
  "1yzgdmc": {
-  "intentos": 1,
-  "ultimo": "2026-10-06T23:31:45.917Z",
-  "motivo": "cuerpo: 2 problemas (relleno, repite): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 19 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-07T00:01:39.191Z",
+  "motivo": "con cuerpo"
  },
  "1zja8b": {
   "intentos": 2,
@@ -1868,11 +1863,6 @@
  "6xex85": {
   "intentos": 2,
   "ultimo": "2026-09-30T23:01:13.968Z",
-  "motivo": "con cuerpo"
- },
- "709xqq": {
-  "intentos": 1,
-  "ultimo": "2026-09-30T00:01:19.604Z",
   "motivo": "con cuerpo"
  },
  "72u7uu": {
@@ -2711,11 +2701,6 @@
   "intentos": 1,
   "ultimo": "2026-10-03T16:01:33.605Z",
   "motivo": "con cuerpo"
- },
- "rya21n": {
-  "intentos": 3,
-  "ultimo": "2026-09-30T00:01:19.604Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 112 palabras"
  },
  "rzjt95": {
   "intentos": 1,

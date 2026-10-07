@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-06T23:35:24.885Z",
- "portada": 65,
- "archivo": 996,
+ "generado": "2026-10-07T00:02:06.080Z",
+ "portada": 62,
+ "archivo": 994,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-06T23:35:24.929Z",
+  "generado": "2026-10-07T00:02:06.118Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -155,10 +155,15 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 50,
+    "segundos": 41,
     "notas": [
+     {
+      "id": "1yzgdmc",
+      "titulo": "Hinchas insultan al presidente de la AFA en la despedida de Messi",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1jfpdis",
       "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
@@ -168,11 +173,6 @@
       "id": "q0mrv4",
       "titulo": "El quirófano móvil de castraciones sigue en la Escuela de Arte",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "17i3vkh",
-      "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
-      "seccion": "Fútbol"
      },
      {
       "id": "sjekvy",
@@ -226,12 +226,6 @@
     {
      "id": "1n6yxr",
      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-     "seccion": "Fútbol",
-     "marcada": false
-    },
-    {
-     "id": "gmtn3r",
-     "titulo": "La Liga Balcarceña reprograma la primera fecha del torneo Clausura",
      "seccion": "Fútbol",
      "marcada": false
     }

@@ -5766,16 +5766,16 @@
   "fuentes": 1
  },
  "2qj2kn": {
-  "archivo": "fotos-notas/2qj2kn.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Designan los árbitros para el inicio de la fase Clausura",
   "enlace": "https://accion5.com/oficial-estan-los-arbitros-para-la-primera-fecha-del-clausura/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/DSC_0439.jpg",
   "razon": "Es la única imagen nítida y con buen encuadre que ilustra claramente el tema de la nota (un árbitro en acción), sin marcas de agua ni menores de edad.",
-  "cuando": "2026-10-03T01:32:09.201Z"
+  "cuando": "2026-10-03T01:32:09.201Z",
+  "intentado": true,
+  "borrada": true
  },
  "1wdslpn": {
   "archivo": "fotos-notas/1wdslpn.jpg",
@@ -7394,16 +7394,16 @@
   "cuando": "2026-10-05T17:01:43.066Z"
  },
  "ialwkh": {
-  "archivo": "fotos-notas/ialwkh.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Benín enfrenta a la Selección y advierte que competirá",
   "enlace": "https://tn.com.ar/deportes/futbol/2026/10/05/el-arquero-de-benin-desafio-a-lionel-messi-antes-de-su-despedida-y-advirtio-no-estamos-aca-para-hacer-turismo/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/marcel-dandjinou-el-hombre-que-estara-bajo-los-tres-palos-del-seleccionado-africano-hablo-antes-del-amistoso-ante-la-argentina-en-el-monumental-foto-marceldandjinouinstagram-VVVJTFKXXJC3NDQWBDYA7XWOOM.jpg?auth=f8620544398460aaa521c65eb0a8e5742a7f46aaff89d4b4f49ae2a24be0b595&width=1023",
   "razon": "La foto A muestra claramente al protagonista con excelente nitidez y encuadre adecuado, sin marcas de medios ni menores reconocibles.",
-  "cuando": "2026-10-05T17:01:43.066Z"
+  "cuando": "2026-10-05T17:01:43.066Z",
+  "intentado": true,
+  "borrada": true
  },
  "1rqm2xx": {
   "archivo": "fotos-notas/1rqm2xx.jpg",
@@ -8746,5 +8746,17 @@
   "cuando": "2026-10-06T23:34:29.134Z",
   "intentos": 1,
   "fuentes": 5
+ },
+ "1yzgdmc": {
+  "archivo": "fotos-notas/1yzgdmc.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Hinchas insultan al presidente de la AFA en la despedida de Messi",
+  "enlace": "https://www.clarin.com/deportes/chiqui-tapia-boton-cantos-presidente-afa-previa-despedida-messi-monumental_0_oWhRD6JQVz.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/06/kKc9-ZKuB_2000x1500__1.jpg",
+  "razon": "Es la única foto con buen encuadre y nitidez que no tiene marcas añadidas ni muestra menores reconocibles en primer plano.",
+  "cuando": "2026-10-07T00:01:58.703Z"
  }
 }
