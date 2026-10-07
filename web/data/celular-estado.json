@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-07T02:32:12.012Z",
+ "generado": "2026-10-07T03:02:14.508Z",
  "portada": 50,
  "archivo": 992,
- "esperandoCuerpo": 8,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-07T02:32:12.051Z",
+  "generado": "2026-10-07T03:02:14.546Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-06T10:04:48.409Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-06T12:06:24.110Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,18 +33,18 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-06T13:05:50.368Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "participa-evento",
+    "nombre": "participa-reclamos",
     "tipo": "historia",
     "hora": "12:00",
-    "que": "Tu evento o emprendimiento",
-    "voz": "locutor",
+    "que": "Tu reclamo",
+    "voz": "locutora",
     "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-06T15:05:56.084Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -53,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-06T18:06:46.125Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-06T22:04:37.088Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-06T23:06:19.995Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-07T00:05:14.231Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-06T13:05:50.368Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 50,
     "notas": [
      {
-      "id": "1cr7egi",
-      "titulo": "La Provincia autoriza a sus hospitales a descartar insumos de laboratorios investigados",
-      "seccion": "Argentina"
+      "id": "1cnlvgi",
+      "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
+      "seccion": "Fútbol"
      },
      {
-      "id": "133cyna",
-      "titulo": null,
-      "seccion": null
+      "id": "9ncum9",
+      "titulo": "Estudiantes presentan diecinueve cortometrajes por el aniversario",
+      "seccion": "Balcarce"
      },
      {
-      "id": "1onhk2k",
-      "titulo": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
+      "id": "1r3qdtj",
+      "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
       "seccion": "Deportes"
      },
      {
-      "id": "108t4y0",
-      "titulo": null,
-      "seccion": null
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -124,29 +124,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-06T18:06:46.125Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 51,
     "notas": [
      {
-      "id": "k690bx",
-      "titulo": "Atletas locales consiguen triunfos y podios en Tandil",
-      "seccion": "Deportes"
+      "id": "17i3vkh",
+      "titulo": "Antonela Roccuzzo y Celia Cuccittini viven la previa del adiós de Lionel Messi",
+      "seccion": "Fútbol"
      },
      {
-      "id": "gj403a",
-      "titulo": "La Casa del Bicentenario recibe un festival de música y homenajes",
-      "seccion": "Cultura y agenda"
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      },
      {
-      "id": "1fxkw0r",
-      "titulo": "Agustín Canapino advierte sobre el impacto del odio en redes sociales",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1k3fdlf",
-      "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
+      "id": "n1xmig",
+      "titulo": "Vecinos reclaman soluciones por el difícil tránsito en la zona de calles 19 y 114 bis",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "aa0h34",
+      "titulo": "El Vintage Tour reúne autos clásicos de Mercedes-Benz",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -155,61 +155,30 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-07T00:05:14.231Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 47,
     "notas": [
      {
-      "id": "1yzgdmc",
-      "titulo": null,
-      "seccion": null
-     },
-     {
-      "id": "1jfpdis",
-      "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "q0mrv4",
-      "titulo": "El quirófano móvil de castraciones sigue en la Escuela de Arte",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      },
      {
-      "id": "sjekvy",
-      "titulo": "Organizan una caminata religiosa hacia la ermita local",
-      "seccion": "Cultura y agenda"
+      "id": "9m9h4e",
+      "titulo": "La Asociación de Maestros convoca a un paro docente para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "6txjlx",
+      "titulo": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+      "seccion": "Balcarce"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "1onhk2k",
-     "titulo": "La colombofilia local disputa su decimoquinta fecha desde Concordia",
-     "cuando": "2026-10-06T12:45:29.843Z"
-    },
-    {
-     "id": "1k3fdlf",
-     "titulo": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
-     "cuando": "2026-10-06T14:35:26.139Z"
-    },
-    {
-     "id": "1r3qdtj",
-     "titulo": "Atletas locales ganan pruebas en la Laguna Open Sport",
-     "cuando": "2026-10-06T16:13:45.287Z"
-    },
-    {
-     "id": "1jfpdis",
-     "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
-     "cuando": "2026-10-06T18:08:44.956Z"
-    },
-    {
-     "id": "1ag0mm4",
-     "titulo": "Las farmacias difunden el cronograma de turnos hasta el domingo",
-     "cuando": "2026-10-06T19:45:28.818Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "9ncum9",
@@ -224,7 +193,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-06T21:15:28.818Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,

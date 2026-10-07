@@ -8818,8 +8818,8 @@
   "origen": "ninguna",
   "titulo": "Lionel Messi despide a la selección argentina tras su último partido",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-07T02:01:50.057Z",
-  "intentos": 1,
+  "cuando": "2026-10-07T03:02:04.264Z",
+  "intentos": 2,
   "fuentes": 3
  },
  "a00g5p": {
@@ -8830,5 +8830,14 @@
   "cuando": "2026-10-07T02:32:05.403Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "rilva6": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Lionel Messi despide su etapa en la selección con un homenaje de drones",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-07T03:02:04.264Z",
+  "intentos": 1,
+  "fuentes": 4
  }
 }
