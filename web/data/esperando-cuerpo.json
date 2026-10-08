@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T01:02:14.535Z",
+ "generado": "2026-10-08T01:33:07.622Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -45,6 +45,11 @@
      "fecha": "2026-10-07T21:11:00.000Z"
     },
     {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/futbol/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-la-seleccion-le-canto-messi-n923470",
+     "fecha": "2026-10-08T01:16:00.000Z"
+    },
+    {
      "medio": "Doble Amarilla",
      "enlace": "https://www.dobleamarilla.com.ar/selecciones/-no-te-vayas--pensalo-una-vez-mas---la-cancion-que-sono-en-el-micro-de-la-seleccion_a6ac6ba6df45aded923c937cb",
      "fecha": "2026-10-07T19:35:00.000Z"
@@ -84,8 +89,8 @@
      "fecha": "2026-10-08T00:11:36.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 3 problemas (numero, copia): el cuerpo dice 10 y la fuente no lo dice; sin esas oraciones quedan 33 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 4 problemas (numero, tildes, promesa): el cuerpo dice 10 y la fuente no lo dice; sin esas oraciones quedan 49 palabras",
    "maximo": 3
   },
   {
@@ -106,6 +111,48 @@
    "maximo": 3
   },
   {
+   "id": "o7akpp",
+   "titulo": "El 57% de los bonaerenses que tomó deuda con una financiera está en mora",
+   "copete": "Mientras las refinanciaciones no logran resolver el problema de fondo sobre las deudas que tienen miles de hogares en todo el país, durante agosto se profundizó en las cuotas que deben pagar por algún tipo de préstamos personales que sacaron los bonaerenses con financieras, por…",
+   "seccion": "Economía",
+   "fecha": "2026-10-07T14:14:40.000Z",
+   "fuentes": [
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/el-57-los-bonaerenses-que-tomo-deuda-una-financiera-esta-mora-n56306",
+     "fecha": "2026-10-07T14:14:40.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
+     "fecha": "2026-10-07T20:30:21.000Z"
+    },
+    {
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
+    },
+    {
+     "medio": "Mi8 (Canal 8 Mar del Plata)",
+     "enlace": "https://mi8.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora-los-marplatenses-entre-los-mas-complicados/",
+     "fecha": "2026-10-07T17:58:46.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
+     "fecha": "2026-10-07T14:43:51.000Z"
+    },
+    {
+     "medio": "Ecos Diarios (Necochea)",
+     "enlace": "https://elecos.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-financieras-se-encuentra-en-mora",
+     "fecha": "2026-10-07T16:01:03.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
+   "maximo": 4
+  },
+  {
    "id": "15z9ofl",
    "titulo": "Damián Soriano le envió un regalo de Plim Plim a Nico y su familia agradeció el gesto",
    "copete": "Nicolás tiene tres años y recibe tratamiento por leucemia en el Hospital Materno Infantil. Su mamá destacó el regalo del balcarceño y agradeció el acompañamiento de la comunidad.",
@@ -121,85 +168,6 @@
    "intentos": 3,
    "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 3
-  },
-  {
-   "id": "o7akpp",
-   "titulo": "El 57% de los bonaerenses que tomó deuda con una financiera está en mora",
-   "copete": "Así se desprende de los datos de agosto del Mapa de la Deuda. La tasa de mora se ubica en el 53,4%. Los municipios más complicados.",
-   "seccion": "Economía",
-   "fecha": "2026-10-07T14:14:40.000Z",
-   "fuentes": [
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/el-57-los-bonaerenses-que-tomo-deuda-una-financiera-esta-mora-n56306",
-     "fecha": "2026-10-07T14:14:40.000Z"
-    },
-    {
-     "medio": "Mi8 (Canal 8 Mar del Plata)",
-     "enlace": "https://mi8.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora-los-marplatenses-entre-los-mas-complicados/",
-     "fecha": "2026-10-07T17:58:46.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-se-encuentra-en-mora",
-     "fecha": "2026-10-07T14:43:44.000Z"
-    },
-    {
-     "medio": "Ecos Diarios (Necochea)",
-     "enlace": "https://elecos.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-financieras-se-encuentra-en-mora",
-     "fecha": "2026-10-07T16:01:03.000Z"
-    },
-    {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
-     "fecha": "2026-10-07T20:30:21.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
-   "maximo": 4
-  },
-  {
-   "id": "u3yzup",
-   "titulo": "Caen las acciones argentinas y el riesgo país retoma la senda alcista y se acerca a los 600 puntos",
-   "copete": "El riesgo país retoma la senda alcista este miércoles y vuelve a quedar cerca de la zona de los 600 puntos básicos luego de haber registrado una merma ante el buen clima de los mercados tras las elecciones presidenciales en Brasil. El indicador del JP Morgan escaló 13 unidades…",
-   "seccion": "Economía",
-   "fecha": "2026-10-07T15:13:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/caen-las-acciones-argentinas-y-el-riesgo-pais-retoma-la-senda-alcista-y-se-acerca-los-600-puntos-n923163",
-     "fecha": "2026-10-07T15:13:00.000Z"
-    },
-    {
-     "medio": "iProfesional",
-     "enlace": "https://www.iprofesional.com/finanzas/466110-riesgo-pais-retomo-senda-alcista-y-se-acerca-nuevamente-a-600-puntos-basicos",
-     "fecha": "2026-10-07T20:45:00.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/economia/2026/10/07/el-riesgo-pais-vuelve-a-subir-y-queda-cerca-de-los-600-puntos-las-claves-del-rebote-del-indicador-del-jp-morgan/",
-     "fecha": "2026-10-07T20:26:47.000Z"
-    },
-    {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-vuelve-a-subir-y-queda-al-borde-de-los-600-puntos-politica-y-economia_1791386100",
-     "fecha": "2026-10-07T15:27:00.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/caen-las-acciones-argentinas-y-el-riesgo-pais-retoma-la-senda-alcista-supera-los-600-puntos-n923163",
-     "fecha": "2026-10-07T15:13:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 149 palabras",
-   "maximo": 4
   },
   {
    "id": "7r5ucc",

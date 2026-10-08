@@ -9241,9 +9241,9 @@
  "mtmc51": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-07T19:02:08.763Z",
+  "cuando": "2026-10-08T01:32:16.679Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 3,
+  "intentos": 4,
   "fuentes": 7
  },
  "1qsixdr": {
@@ -9671,5 +9671,26 @@
   "imagenOriginal": "https://media.diariopopular.com.ar/p/b186d7e907196061cf42ff772fe0d622/adjuntos/143/imagenes/008/259/0008259282/1200x675/smart/hudwlsdxaaauqgf.jpg",
   "razon": "Muestra al artista en un plano más abierto y con mejor encuadre, libre de marcas y menores.",
   "cuando": "2026-10-08T01:02:08.804Z"
+ },
+ "l5uou9": {
+  "archivo": "fotos-notas/l5uou9.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
+  "enlace": "https://www.ole.com.ar/seleccion/dedicatoria-chicana-messi-musso-voy-extranar_0_n6tzTot3Is.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/10/07/7SvJ-oXH5_2000x1500__1.jpg",
+  "razon": "Es la única foto limpia sin marcas de agua ni menores reconocibles que ilustra adecuadamente el abrazo entre Messi y Musso.",
+  "cuando": "2026-10-08T01:32:16.679Z"
+ },
+ "u3yzup": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El riesgo país sube y las acciones registran caídas en la bolsa",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-08T01:32:16.679Z",
+  "intentos": 1,
+  "fuentes": 5
  }
 }
