@@ -3344,7 +3344,20 @@
       "parte": "historia-del-reel",
       "error": "La subida del video falló (400) Request processing failed",
       "cuando": "2026-10-07T13:34:40.377Z"
+    },
+    "2026-10-08/efemeride/instagram/reel": {
+      "pieza": "efemeride",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-08T12:05:46.695Z"
     }
   },
-  "facebookFoto": {}
+  "facebookFoto": {
+    "1cpkl2f": {
+      "intentos": 1,
+      "ultimo": "2026-10-08T12:05:18.804Z",
+      "error": "Missing or invalid image file"
+    }
+  }
 }
