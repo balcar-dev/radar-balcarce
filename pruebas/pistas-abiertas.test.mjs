@@ -179,7 +179,8 @@ test('lo conectado: la nube guarda la pista abierta, un workflow la vuelve a mir
   assert.match(cel, /conPista\(leerJson\(ARCHIVO_PISTAS, \{ pistas: \{\} \}\), id,/);
   const w = leer('.github/workflows/pistas.yml');
   assert.match(w, /cron: '23 \*\/3 \* \* \*'/);
-  assert.match(w, /group: panel-celular/, 'comparte el grupo con "Panel del celular": los dos escriben pistas.json');
+  assert.match(w, /group: pistas\b/, 'candado propio (A-3): no se cancela con los pedidos de "Panel del celular"; los choques en pistas.json los une panel/unir-conflictos.mjs');
+  assert.doesNotMatch(w, /group: panel-celular/);
   assert.match(w, /git add web\/data\/pistas\.json/);
   assert.match(w, /PISTA: \$\{\{ inputs\.id \}\}/, 'lo que manda el celular va por variable de entorno');
   assert.ok(!/run: .*\$\{\{ inputs\./.test(w), 'un run: no usa inputs directo');

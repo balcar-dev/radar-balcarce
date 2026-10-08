@@ -171,6 +171,9 @@ export function crearCliente({ token, fetchFn = (...a) => fetch(...a) }) {
     }
   }
 
+  // Lo que se pidió a cada workflow (por su marca), para poder repetirlo si GitHub lo cancela porque llegó otro pedido (A-3, 8/10/2026).
+  const pedidos = new Map();
+
   return {
     leer,
     guardar,
@@ -184,6 +187,18 @@ export function crearCliente({ token, fetchFn = (...a) => fetch(...a) }) {
     /** Dispara un workflow (actualizar.yml, panel.yml). */
     async disparar(workflow, inputs = {}) {
       await pedir(`/repos/${REPO}/actions/workflows/${workflow}/dispatches`, { metodo: 'POST', cuerpo: { ref: RAMA, inputs } });
+      if (inputs.marca) pedidos.set(inputs.marca, { workflow, inputs });
+    },
+    /**
+     * Repite un pedido que GitHub canceló (con un candado puesto sólo espera uno: el que llega después cancela al que esperaba). Lo vuelve a
+     * disparar con una marca nueva y la devuelve; null si no se conoce ese pedido.
+     */
+    async repetir(marcaVieja) {
+      const antes = pedidos.get(marcaVieja);
+      if (!antes) return null;
+      const marca = marcaNueva();
+      await this.disparar(antes.workflow, { ...antes.inputs, marca });
+      return marca;
     },
     /** Las últimas corridas de un workflow. */
     async corridas(workflow) {

@@ -2,6 +2,7 @@
 
 *8/10/2026. Son propuestas; lo que ya se hizo figura en "Avance" de [`PRIORIDADES.md`](PRIORIDADES.md).*
 
+- **[`DONDE-SEGUIMOS.md`](DONDE-SEGUIMOS.md)**: **empezar por acá.** El traspaso del 8/10: qué se hizo, qué sigue y quién lo hace.
 - **[`PRIORIDADES.md`](PRIORIDADES.md)**: todo lo anotado, en el orden en que conviene hacerlo.
 - **[`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md)**: lo que sólo una persona puede hacer (cuentas, tarjeta, claves), paso a paso.
 - **[`PANEL-NUEVO.md`](PANEL-NUEVO.md)**: el panel único que reemplaza al de la PC: qué pasa con cada pestaña y en qué orden.

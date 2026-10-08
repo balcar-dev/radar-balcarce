@@ -32,7 +32,9 @@ permissions:
 
 # El mismo grupo que "Panel del celular": los dos escriben web/data/pistas.json.
 concurrency:
-  group: panel-celular
+  # Candado propio (A-3, 8/10/2026): con el del celular, un pedido de "Panel del celular" y la revisión de las pistas se cancelaban entre sí
+  # (GitHub deja uno solo esperando). Los dos escriben pistas.json, pero ahora se unen cambio por cambio (panel/unir-conflictos.mjs).
+  group: pistas
   cancel-in-progress: false
 
 jobs:

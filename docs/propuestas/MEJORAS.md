@@ -1177,7 +1177,7 @@ ninguna nota; la guardia del 20 % va también ahí.
   vienen precargados). Una voz borrada no vuelve igual. Los modos que crean gastan cupo y el formulario no
   lo dice (`reels/crear-voces.mjs:108-116`). Pedir un texto de confirmación y decir cuántos audios gasta. 1 h.
 
-**R-2 · Un "Reintentar" del celular se cancela solo** — *Confirmado · MEDIA*
+**R-2 ✔ · Un "Reintentar" del celular se cancela solo** — *Confirmado · MEDIA*
 - Comparte candado con Redes y GitHub deja uno solo esperando; el panel dice "Volvió a fallar". Distinguir
   "cancelada" o darle candado propio. 1-2 h.
 
@@ -1233,7 +1233,7 @@ mismo cambio `pruebas/piezas-fijas.test.mjs:67-73`. Nada más sobra en `reels/` 
   o podar en G2, la web se puede quedar quieta. Regla ya mismo: nunca subir un documento sin correr
   `npm test`. De fondo, con A5.
 
-**A-3 · Los candados de GitHub cancelan pedidos que esperaban** — *Confirmado · ALTA*
+**A-3 ✔ · Los candados de GitHub cancelan pedidos que esperaban** — *Confirmado · ALTA*
 - Con el candado puesto, GitHub deja una sola corrida esperando y cancela la anterior. Pasa en el candado
   de Redes (reloj, Piezas, Reintentar) y en el del celular (pedidos y Pistas; el 8/10 hubo 8 pedidos en
   5 minutos). La persona ve "falló". Que el celular repita si salió "cancelada" y Pistas en otro candado.
@@ -1422,7 +1422,7 @@ días de efemérides o de feriados cargados (los feriados llegan hasta el 25/05/
   Se acabaría en unas dos semanas y "Hacer la nota" dejaría de andar sin aviso. Reintentar como mucho una
   vez por día, búsqueda básica y contar créditos en el WhatsApp. 2 h.
 
-**P-5 · Se pierden pedidos del celular** — *Confirmado · MEDIA*
+**P-5 ✔ · Se pierden pedidos del celular** — *Confirmado · MEDIA*
 - "Panel del celular" y "Pistas" comparten el mismo turno, y GitHub deja uno solo esperando: un pedido nuevo
   cancela al anterior. Grupos distintos y reintento si sale "cancelado". 1 h.
 

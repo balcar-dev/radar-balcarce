@@ -208,3 +208,18 @@ test('"Publicar" de un tema delicado muestra el texto antes de publicarlo', () =
   assert.match(app, /if \(publicar && !delicada && borrador\.ok/);
   assert.match(app, /es un tema delicado/);
 });
+
+// A-3 / P-5 / R-2 (8/10/2026): GitHub deja un solo pedido esperando y cancela al anterior; el panel lo vuelve a pedir en vez de decir "falló".
+test('un pedido cancelado por GitHub se vuelve a pedir con una marca nueva (hasta dos veces)', async () => {
+  const fs = await import('node:fs');
+  const app = fs.readFileSync(new URL('../web/public/panel/app.js', import.meta.url), 'utf8');
+  const gh = fs.readFileSync(new URL('../web/public/panel/github.js', import.meta.url), 'utf8');
+  const espera = app.slice(app.indexOf('async function esperarCorrida'), app.indexOf('async function investigarPista'));
+  assert.match(espera, /conclusion === 'cancelled' && repeticiones < 2/);
+  assert.match(espera, /E\.cliente\.repetir\?\.\(marca\)/);
+  assert.match(gh, /async repetir\(marcaVieja\)/);
+  assert.match(gh, /pedidos\.set\(inputs\.marca/);
+  // Los cuatro pedidos que antes esperaban a mano ahora pasan por la misma espera.
+  assert.equal((app.match(/await esperarCorrida\(/g) ?? []).length >= 6, true);
+  assert.doesNotMatch(app, /corridaConMarca\(await E\.cliente\.corridas\('(panel|reintentar)\.yml'\), marca\)\s*;\s*\n\s*if \(corrida\?\.status === 'completed'\) break;\s*\n\s*\}\s*\n\s*if \(corrida\?\.status !== 'completed'\) throw new Error\('GitHub tardó demasiado\.'\)/);
+});

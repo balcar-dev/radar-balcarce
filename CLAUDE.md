@@ -39,7 +39,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 141.)
+próxima regla es la 142.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -148,7 +148,7 @@ próxima regla es la 141.)
   redes. El cupo gratis de voz (10 por día) es justo para un día normal.
 - **Las reglas de la IA cambiaron el 29/09** (regla 1 contra la copia y el campo "datos"):
   mirar unos días cuántas notas sacan cuerpo.
-- Lo que falta, con quién y qué urgencia: **`PENDIENTES.md`**.
+- Lo que falta, con quién y qué urgencia: **`PENDIENTES.md`**. El plan de mejoras del 8/10 (auditorías, en orden) y dónde quedó: **`docs/propuestas/DONDE-SEGUIMOS.md`**.
 
 ## Dónde tocar cada cosa
 

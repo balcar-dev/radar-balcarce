@@ -663,14 +663,7 @@ async function sumarFoto(id, { url, credito, confirmo }) {
   const marca = marcaNueva();
   try {
     await E.cliente.disparar('panel.yml', { accion: 'foto', id, pedido: url, credito: creditoDeFoto(credito).replace(/^Foto:\s*/, ''), marca });
-    let corrida = null;
-    for (let i = 0; i < 72; i += 1) {
-      await dormir(5000);
-      corrida = corridaConMarca(await E.cliente.corridas('panel.yml'), marca);
-      if (corrida?.status === 'completed') break;
-    }
-    if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado.');
-    if (corrida.conclusion !== 'success') throw new Error('la nube no pudo bajar esa imagen (¿es la dirección de la imagen y no la de la página? ¿pesa mucho?). El motivo está en GitHub → Actions → "Panel del celular"');
+    await esperarCorrida('panel.yml', marca, { mensajeSiFalla: 'la nube no pudo bajar esa imagen (¿es la dirección de la imagen y no la de la página? ¿pesa mucho?). El motivo está en GitHub → Actions → "Panel del celular"' });
     E.trabajos[id] = { clase: 'foto', estado: 'listo' };
     aviso('Foto sumada: sale en la web en la próxima actualización.', { conActualizar: true });
   } catch (e) {
@@ -761,13 +754,7 @@ async function reintentarParte(pieza, red, parte) {
   const marca = marcaNueva();
   try {
     await E.cliente.disparar('reintentar.yml', { pieza, red, parte, dia: hoyEnBalcarce(), marca });
-    let corrida = null;
-    for (let i = 0; i < 60; i += 1) {
-      await dormir(5000);
-      corrida = corridaConMarca(await E.cliente.corridas('reintentar.yml'), marca);
-      if (corrida?.status === 'completed') break;
-    }
-    if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Mirá en un rato la pestaña Redes.');
+    const corrida = await esperarCorrida('reintentar.yml', marca, { intentos: 60, sinLanzar: true });
     await cargar({ archivo: !!E.archivo });
     E.pestana = 'redes';
     vistaLista();
@@ -943,16 +930,28 @@ async function ponerPaso(clave, corrida) {
 }
 
 /** Espera una corrida del workflow con esa marca; devuelve la corrida terminada o lanza si tardó o falló. Con `tarea`, va contando en la franja. */
-async function esperarCorrida(workflow, marca, { intentos = 72, quePaso = 'La corrida de GitHub', tarea = null } = {}) {
+async function esperarCorrida(workflow, marca, { intentos = 72, quePaso = 'La corrida de GitHub', tarea = null, mensajeSiFalla = null, sinLanzar = false } = {}) {
   let corrida = null;
+  let repeticiones = 0;
   for (let i = 0; i < intentos; i += 1) {
     await dormir(i === 0 ? 2500 : 4000);
     corrida = corridaConMarca(await E.cliente.corridas(workflow), marca);
     if (tarea) await ponerPaso(tarea, corrida);
+    // A-3: con el candado puesto GitHub deja uno solo esperando y cancela al anterior. Si lo cancelaron, no es un error de la persona: se vuelve a pedir.
+    if (corrida?.status === 'completed' && corrida.conclusion === 'cancelled' && repeticiones < 2) {
+      const nueva = await E.cliente.repetir?.(marca);
+      if (nueva) {
+        repeticiones += 1;
+        marca = nueva;
+        corrida = null;
+        if (tarea && E.tareas[tarea]) E.tareas[tarea].paso = 'GitHub canceló el pedido porque llegó otro: se vuelve a pedir…';
+        continue;
+      }
+    }
     if (corrida?.status === 'completed') break;
   }
   if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Probá de nuevo en un rato.');
-  if (corrida.conclusion !== 'success') throw new Error(`${quePaso} falló. Mirá "${workflow}" en GitHub → Actions.`);
+  if (corrida.conclusion !== 'success' && !sinLanzar) throw new Error(mensajeSiFalla ?? `${quePaso} falló. Mirá "${workflow}" en GitHub → Actions.`);
   return corrida;
 }
 
@@ -1527,14 +1526,7 @@ async function trabajoDeIA(tipo, id, pedido, { publicar, titulo }) {
   const desde = Date.now();
   try {
     await E.cliente.disparar('panel.yml', { accion: 'escribir', id, pedido: pedido ?? '', marca });
-    let corrida = null;
-    for (let i = 0; i < 72; i += 1) {
-      await dormir(5000);
-      corrida = corridaConMarca(await E.cliente.corridas('panel.yml'), marca);
-      if (corrida?.status === 'completed') break;
-    }
-    if (corrida?.status !== 'completed') throw new Error('GitHub tardó demasiado. Probá de nuevo en un rato.');
-    if (corrida.conclusion !== 'success') throw new Error('La corrida de GitHub falló. Mirá "Panel del celular" en GitHub → Actions.');
+    await esperarCorrida('panel.yml', marca, { mensajeSiFalla: 'La corrida de GitHub falló. Mirá "Panel del celular" en GitHub → Actions.' });
     const { json } = await E.cliente.leer(ARCHIVOS.borradores);
     const sobre = json.borradores?.[id];
     const borrador = sobre && Date.parse(sobre.cuando) >= desde - 120000 ? await abrir(sobre, E.llaves) : null;
