@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T00:10:34.618Z",
+ "generado": "2026-10-08T00:32:42.233Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -67,8 +67,25 @@
      "fecha": "2026-10-07T23:58:21.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "jul31s",
+   "titulo": "Primera edicion de la Expo Salud-Deporte y Tecnologia.",
+   "copete": "La Subsecretaría de Deporte y Recreación, brindarà este jueves, una conferencia de prensa que se llevará a cabo mañana,en la “Sala de los Intendentes”del Palacio Municipal. Durante el encuentro se presentará oficialmente la primera edición de la Expo Salud, Deporte y Tecnología…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-08T00:11:36.000Z",
+   "fuentes": [
+    {
+     "medio": "News Balcarce (FM 91.7)",
+     "enlace": "https://newsbalcarce.com.ar/?p=30970",
+     "fecha": "2026-10-08T00:11:36.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 93 caracteres, el máximo es 90",
    "maximo": 3
   },
   {
@@ -108,7 +125,7 @@
   {
    "id": "o7akpp",
    "titulo": "El 57% de los bonaerenses que tomó deuda con una financiera está en mora",
-   "copete": "Así se desprende de los datos de agosto del Mapa de la Deuda. La tasa de mora se ubica en el 53,4%. Los municipios más complicados.",
+   "copete": "Mientras las refinanciaciones no logran resolver el problema de fondo sobre las deudas que tienen miles de hogares en todo el país, durante agosto se profundizó en las cuotas que deben pagar por algún tipo de préstamos personales que sacaron los bonaerenses con financieras, por…",
    "seccion": "Economía",
    "fecha": "2026-10-07T14:14:40.000Z",
    "fuentes": [
@@ -116,6 +133,16 @@
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/sociedad/el-57-los-bonaerenses-que-tomo-deuda-una-financiera-esta-mora-n56306",
      "fecha": "2026-10-07T14:14:40.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
+     "fecha": "2026-10-07T20:30:21.000Z"
+    },
+    {
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
     },
     {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
@@ -131,16 +158,6 @@
      "medio": "Ecos Diarios (Necochea)",
      "enlace": "https://elecos.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-financieras-se-encuentra-en-mora",
      "fecha": "2026-10-07T16:01:03.000Z"
-    },
-    {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
-     "fecha": "2026-10-07T20:30:21.000Z"
     }
    ],
    "intentos": 4,
@@ -162,6 +179,23 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "1bw7314",
+   "titulo": "Un gesto que abraza: el regalo de un balcarceño que llevó alegría a Nico",
+   "copete": "",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-07T23:31:13.741Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45032-un-gesto-que-abraza-el-regalo-de-un-balcarceno-que-llevo-alegria-a-nico/",
+     "fecha": null
+    }
+   ],
+   "intentos": 3,
+   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 3
   },
   {

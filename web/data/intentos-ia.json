@@ -490,11 +490,6 @@
   "ultimo": "2026-10-07T06:01:25.686Z",
   "motivo": "cuerpo: 2 problemas (nombre, repite): el cuerpo nombra a \"minuto\" y la fuente no; sin esas oraciones quedan 29 palabras"
  },
- "1ac6tw2": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T00:31:23.236Z",
-  "motivo": "con cuerpo"
- },
  "1aekavp": {
   "intentos": 1,
   "ultimo": "2026-10-02T18:01:29.109Z",
@@ -742,11 +737,6 @@
   "ultimo": "2026-10-07T06:01:25.686Z",
   "motivo": "con cuerpo"
  },
- "1fqh4sy": {
-  "intentos": 2,
-  "ultimo": "2026-10-01T00:31:23.236Z",
-  "motivo": "con cuerpo"
- },
  "1fs15g0": {
   "intentos": 5,
   "ultimo": "2026-10-02T17:31:21.949Z",
@@ -893,8 +883,8 @@
   "motivo": "con cuerpo"
  },
  "1j5cds9": {
-  "intentos": 2,
-  "ultimo": "2026-10-08T00:10:23.160Z",
+  "intentos": 3,
+  "ultimo": "2026-10-08T00:31:46.628Z",
   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras"
  },
  "1jawjgc": {
@@ -1740,11 +1730,6 @@
   "ultimo": "2026-10-05T14:05:38.428Z",
   "motivo": "con cuerpo"
  },
- "3b4lyp": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T00:31:23.236Z",
-  "motivo": "con cuerpo"
- },
  "3cr087": {
   "intentos": 2,
   "ultimo": "2026-10-02T21:01:25.335Z",
@@ -2402,6 +2387,11 @@
   "intentos": 1,
   "ultimo": "2026-10-02T16:49:15.306Z",
   "motivo": "con cuerpo"
+ },
+ "jul31s": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T00:31:46.628Z",
+  "motivo": "título o bajada: 1 problema (largo): el titulo tiene 93 caracteres, el máximo es 90"
  },
  "jzu6k": {
   "intentos": 1,
