@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T06:31:43.694Z",
- "portada": 55,
+ "generado": "2026-10-08T06:35:19.825Z",
+ "portada": 53,
  "archivo": 1065,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-08T06:31:43.736Z",
+  "generado": "2026-10-08T06:35:19.874Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,12 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 48,
     "notas": [
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "l5uou9",
+      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
+      "seccion": "Fútbol"
      },
      {
       "id": "28zqic",
@@ -108,14 +113,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1d48tdj",
-      "titulo": "Detectan maquinaria pesada en caminos rurales de El Verano",
-      "seccion": "Agro"
+      "id": "10cpafd",
+      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -129,6 +129,16 @@
     "segundos": 55,
     "notas": [
      {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "ajdznk",
       "titulo": "Boca arma un equipo mixto para visitar a Instituto",
       "seccion": "Fútbol"
@@ -137,16 +147,6 @@
       "id": "y4gp3v",
       "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "10cpafd",
-      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
