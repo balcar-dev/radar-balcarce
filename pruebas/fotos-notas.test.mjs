@@ -30,7 +30,7 @@ const imagenJpeg = () => ({ ok: true, headers: { get: () => 'image/jpeg' }, arra
 function fetchDeUnaFuenteConFoto() {
   return async (url) => {
     if (String(url).includes('generativelanguage')) {
-      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false }] }) }] } }] }) };
+      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false, menor: false }] }) }] } }] }) };
     }
     if (url === 'https://a.com/n') return { ok: true, text: async () => '<meta property="og:image" content="https://a.com/f.jpg">' };
     if (url === 'https://a.com/f.jpg') return imagenJpeg();
@@ -259,7 +259,7 @@ test('elegirFotosNuevas guarda la foto achicada (jpg) y la anota así en el banc
   const nota = { id: 'n9', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [{ medio: 'A', enlace: 'https://a.com/n' }] };
   const grande = Buffer.from('foto'.repeat(100));
   const fetchFn = async (url) => {
-    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false }] }) }] } }] }) };
+    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false, menor: false }] }) }] } }] }) };
     if (url === 'https://a.com/n') return { ok: true, text: async () => '<meta property="og:image" content="https://a.com/f.png">' };
     if (url === 'https://a.com/f.png') return { ok: true, headers: { get: () => 'image/png' }, arrayBuffer: async () => grande };
   };
