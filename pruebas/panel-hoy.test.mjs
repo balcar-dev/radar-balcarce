@@ -39,7 +39,7 @@ test('lo que espera un toque se cuenta, con su detalle, y lleva a donde se resue
   assert.match(h, /<h1>Hoy, jueves 8<\/h1>/);
   assert.match(h, /La web se armó a las 14:30 \(hace 5 min\) · la próxima, a las 15:00\./);
   assert.match(h, /La IA está escribiendo “Corte de luz”/);
-  for (const destino of ['esperan', 'fotos', 'redes', 'pistas']) assert.match(h, new RegExp(`data-pestana="${destino}"`));
+  for (const destino of ['esperan', 'borradores', 'fotos', 'redes', 'pistas']) assert.match(h, new RegExp(`data-pestana="${destino}"`));
 });
 
 test('sin nada pendiente dice que está todo en orden, y un problema en las redes lo evita', () => {
@@ -67,5 +67,5 @@ test('el panel arranca en Hoy, Fotos pasó a Más y el panel se actualiza solo e
   assert.match(app, /function vistaHoy\(\)/);
   assert.match(app, /E\.pestana === 'hoy'\) vistaHoy\(\)/);
   assert.match(leer('web/public/panel/sw.js'), /'\/panel\/hoy\.js'/);
-  assert.match(leer('web/public/panel/sw.js'), /radar-panel-19/);
+  assert.match(leer('web/public/panel/sw.js'), /radar-panel-20/);
 });

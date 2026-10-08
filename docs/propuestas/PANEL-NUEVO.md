@@ -11,8 +11,8 @@ es el del celular, mejorado, y el de la PC queda en desuso (no se borra todavía
 Se decidió **no portar** Fuentes, Calendario, Agenda, Buzón ni Avisos del panel de la PC, porque nadie los usó: si más adelante hacen falta,
 se piden y se hacen en el celular.
 
-**Hecho el 8/10:** la pantalla **Hoy** (primera de la barra; lo que espera tu toque, cómo viene el día) y Fotos pasó a Más ([regla 125](../10-REGLAS-Y-PRUEBAS.md)).
-**Sigue (se va mejorando de a poco):** la pestaña **Borradores** (todo lo que se le pidió a la IA, con lo ya resuelto), el **recorrido de una nota**
+**Hecho el 8/10:** la pantalla **Hoy** (primera de la barra; lo que espera tu toque, cómo viene el día) y Fotos pasó a Más ([regla 125](../10-REGLAS-Y-PRUEBAS.md)); la pestaña **Borradores** (todo lo que se le pidió a la IA, con lo ya resuelto; [regla 126](../10-REGLAS-Y-PRUEBAS.md)).
+**Sigue (se va mejorando de a poco):** el **recorrido de una nota**
 (entró de qué medios, esperó, la IA escribió, quién la aprobó, dónde salió), el **calendario de Fechas** y una lista de sólo lectura de lo **frenado en rojo**
 con su motivo. Todas están dibujadas en [`material/panel-nuevo-maqueta.html`](material/panel-nuevo-maqueta.html).
 

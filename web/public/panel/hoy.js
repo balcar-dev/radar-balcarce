@@ -44,7 +44,7 @@ export function resumenDeHoy(datos = {}, ahora = new Date()) {
   if (datos.sinCuerpo) necesitaToque.push({ id: 'esperan', n: datos.sinCuerpo, titulo: datos.sinCuerpo === 1 ? 'Nota sin cuerpo todavía' : 'Notas sin cuerpo todavía', detalle: 'la IA las vuelve a intentar sola' });
   if (b.listos) {
     necesitaToque.push({
-      id: 'esperan', n: b.listos, titulo: b.listos === 1 ? 'Borrador listo para leer' : 'Borradores listos para leer',
+      id: 'borradores', n: b.listos, titulo: b.listos === 1 ? 'Borrador listo para leer' : 'Borradores listos para leer',
       detalle: b.conMarca ? `${plural(b.conMarca, 'tiene algo', 'tienen algo')} marcado por el verificador` : 'el verificador no marcó nada',
     });
   }
