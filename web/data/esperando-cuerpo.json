@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-08T02:31:36.470Z",
+ "generado": "2026-10-08T03:01:52.630Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1j5cds9",
-   "titulo": "Rodrigo Cunqueiro será invitado de Diego Ramos en “La Noche es Nuestra”",
-   "copete": "Rodrigo Cunqueiro volverá a tener este jueves 8 una presencia destacada en la televisión nacional. El artista balcarceño será uno de los invitados de “La Noche es Nuestra”, el ciclo que conduce Diego Ramos por Televisión Pública, donde tend",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-07T23:58:21.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/rodrigo-cunqueiro-sera-invitado-de-diego-ramos-en-la-noche-es-nuestra-749",
-     "fecha": "2026-10-07T23:58:21.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
-   "maximo": 3
-  },
   {
    "id": "jul31s",
    "titulo": "Primera edicion de la Expo Salud-Deporte y Tecnologia.",
@@ -51,6 +34,23 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "1j5cds9",
+   "titulo": "Rodrigo Cunqueiro será invitado de Diego Ramos en “La Noche es Nuestra”",
+   "copete": "Rodrigo Cunqueiro volverá a tener este jueves 8 una presencia destacada en la televisión nacional. El artista balcarceño será uno de los invitados de “La Noche es Nuestra”, el ciclo que conduce Diego Ramos por Televisión Pública, donde tend",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-07T23:58:21.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/rodrigo-cunqueiro-sera-invitado-de-diego-ramos-en-la-noche-es-nuestra-749",
+     "fecha": "2026-10-07T23:58:21.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
    "maximo": 3
   },
   {

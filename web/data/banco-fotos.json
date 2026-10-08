@@ -9625,16 +9625,16 @@
   "cuando": "2026-10-07T23:03:04.975Z"
  },
  "1jga964": {
-  "archivo": "fotos-notas/1jga964.jpg",
   "medio": "Clarín",
-  "credito": "Foto: Clarín",
   "licencia": null,
   "origen": "medio",
   "titulo": "George Russell sale último en Singapur por una sanción en su motor",
   "enlace": "https://www.clarin.com/deportes/george-russell-sancion-complica-lucha-titulo-formula-1-largara-ultimo-singapur_0_F49BbG5rbu.html",
   "imagenOriginal": "https://www.clarin.com/img/2026/09/25/nmxE_OXuM_2000x1500__1.jpg",
   "razon": "Tiene excelente nitidez, encuadre limpio y sin marcas ni menores.",
-  "cuando": "2026-10-07T23:03:04.975Z"
+  "cuando": "2026-10-07T23:03:04.975Z",
+  "intentado": true,
+  "borrada": true
  },
  "k1hf6i": {
   "archivo": "fotos-notas/k1hf6i.jpg",
@@ -9722,5 +9722,28 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/LKXLBY6GBBAXNNQFUXU7LO625U.png?auth=96871a65f1b5a9dda656765b9008c9434f0690c153c5fb9d7496e54bacb0225c&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto A muestra claramente a la delegación en buena calidad y sin marcas ni menores.",
   "cuando": "2026-10-08T02:31:29.089Z"
+ },
+ "1dxl25b": {
+  "archivo": "fotos-notas/1dxl25b.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "OpenAI presenta hallazgos matemáticos y reabre el debate sobre la inteligencia artificial",
+  "enlace": "https://www.infobae.com/tecno/2026/10/08/openai-publica-377-resultados-matematicos-y-profundiza-la-discusion-sobre-el-rol-de-la-ia/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/Q3CPHUS4LBA3VJZMZHM6WBRE6Q.JPG?auth=7e44e70c3f6c0ef2da6033beb1f6ae3a9e31eafc4f5816709b48f8ecf1d36957&smart=true&width=1200&height=630&quality=85",
+  "razon": "La imagen B muestra el logo de OpenAI sobre un circuito, lo cual ilustra directamente el tema de la nota (hallazgos de OpenAI), mientras que la A es un retrato genérico de una persona.",
+  "cuando": "2026-10-08T03:01:40.826Z"
+ },
+ "f1horarios2026r17": {
+  "archivo": "fotos-notas/libre-f1horarios2026r17.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Kam2y / Wikimedia Commons (CC BY 3.0)",
+  "licencia": "CC BY 3.0",
+  "origen": "libre",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Marina_Bay_Street_Circuit_Home_straight.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/82/Marina_Bay_Street_Circuit_Home_straight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "titulo": "File:Marina Bay Street Circuit Home straight.jpg",
+  "cuando": "2026-10-08T03:01:51.557Z"
  }
 }

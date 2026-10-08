@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T02:31:36.470Z",
+ "generado": "2026-10-08T03:01:52.630Z",
  "portada": 56,
- "archivo": 1062,
+ "archivo": 1063,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-08T02:31:36.519Z",
+  "generado": "2026-10-08T03:01:52.674Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-07T10:03:51.877Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-07T12:06:36.184Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,18 +33,18 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-07T13:35:12.800Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "participa-reclamos",
+    "nombre": "agenda",
     "tipo": "historia",
     "hora": "12:00",
-    "que": "Tu reclamo",
+    "que": "La agenda del fin de semana",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-07T15:05:51.901Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -53,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-07T18:06:19.121Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-07T22:06:12.522Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-07T23:06:09.766Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-08T00:05:51.242Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-07T13:35:12.800Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 47,
     "notas": [
      {
-      "id": "1outpc2",
-      "titulo": "Soledad Pastorutti canta en la despedida de Lionel Messi",
+      "id": "l5uou9",
+      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
       "seccion": "Fútbol"
      },
      {
-      "id": "siahkq",
-      "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "45acbd",
-      "titulo": "El Teatro Municipal presenta un espectáculo solidario a beneficio",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "15zgvx1",
-      "titulo": "Up organiza la cuarta edición de su torneo de gimnasia artística",
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "28zqic",
+      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1d48tdj",
+      "titulo": "Detectan maquinaria pesada en caminos rurales de El Verano",
+      "seccion": "Agro"
      }
     ]
    },
@@ -124,29 +124,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-07T18:06:19.121Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 55,
     "notas": [
      {
-      "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
-      "seccion": "Agro"
-     },
-     {
-      "id": "kr8nxa",
-      "titulo": "Grupo Cali explica los motivos de la suspensión de su show",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1wp29m7",
-      "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "rilva6",
-      "titulo": "Lionel Messi se despide de la selección argentina con un triunfo",
+      "id": "woerbj",
+      "titulo": "La Selección Argentina se mantiene segunda en el ranking FIFA",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "10cpafd",
+      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -155,61 +155,35 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-08T00:05:51.242Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 49,
     "notas": [
      {
-      "id": "1opc9eu",
-      "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1jga964",
-      "titulo": "George Russell sale último en Singapur por una sanción en su motor",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1fpl6he",
-      "titulo": "Pablo Giralt toma una drástica decisión tras el último partido de Messi",
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
       "seccion": "Fútbol"
      },
      {
-      "id": "131078z",
-      "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
-      "seccion": "Deportes"
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1793nst",
+      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "y4gp3v",
-     "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
-     "cuando": "2026-10-07T12:45:28.765Z"
-    },
-    {
-     "id": "siahkq",
-     "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
-     "cuando": "2026-10-07T14:31:59.319Z"
-    },
-    {
-     "id": "2i73nb",
-     "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
-     "cuando": "2026-10-07T16:05:19.589Z"
-    },
-    {
-     "id": "1wp29m7",
-     "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
-     "cuando": "2026-10-07T17:37:09.174Z"
-    },
-    {
-     "id": "1opc9eu",
-     "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
-     "cuando": "2026-10-07T19:33:47.785Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "28zqic",
@@ -218,7 +192,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-07T21:03:47.785Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
