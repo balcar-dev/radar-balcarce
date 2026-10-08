@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T14:02:56.486Z",
- "portada": 40,
- "archivo": 1072,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-08T14:32:29.234Z",
+ "portada": 42,
+ "archivo": 1074,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-08T14:02:56.527Z",
+  "generado": "2026-10-08T14:32:29.290Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,16 +126,16 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 52,
     "notas": [
      {
-      "id": "r7ox1t",
-      "titulo": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
-      "seccion": "Economía"
+      "id": "16tb2vo",
+      "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "id": "6izwi8",
+      "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
       "seccion": "Balcarce"
      },
      {
@@ -144,9 +144,9 @@
       "seccion": "Economía"
      },
      {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,26 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 54,
     "notas": [
-     {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
-      "seccion": "Fútbol"
-     },
      {
       "id": "ajdznk",
       "titulo": "Boca arma un equipo mixto para visitar a Instituto",
       "seccion": "Fútbol"
      },
      {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce"
      },
      {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "id": "1boxf4v",
+      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
       "seccion": "Balcarce"
      }
     ]
@@ -192,9 +192,21 @@
    ],
    "cola": [
     {
+     "id": "16tb2vo",
+     "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
+    {
      "id": "159oig4",
      "titulo": "Mini Club y Sportivo Trabajo ganan en la Liga Local de Básquet",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "6izwi8",
+     "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
