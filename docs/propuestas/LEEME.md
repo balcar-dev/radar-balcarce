@@ -2,6 +2,8 @@
 
 *8/10/2026. Nada de esto está aplicado: son propuestas para decidir.*
 
+- **[`PRIORIDADES.md`](PRIORIDADES.md)**: todo lo anotado, en el orden en que conviene hacerlo.
+
 Se separa en dos listas, para no mezclar:
 
 - **[`MEJORAS.md`](MEJORAS.md)**: arreglos, mejoras y decisiones sobre lo que **ya existe** (flujo,

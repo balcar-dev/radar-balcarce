@@ -247,7 +247,7 @@ licencia; en Policiales sigue sin haber foto real.
   hasta el del hecho, y "Y además" de a uno) y feriado (la hoja del calendario que pasa del 11 al 12, y un dato
   del censo que cuenta). Todos con subtítulos y la misma estética. Los íconos son dibujos propios y genéricos:
   ningún logo de marca (tampoco el de WhatsApp).
-- **Tercera tanda (8/10):** farmacia con **dos de turno** (una ficha por farmacia, cada una entra de un costado);
+- **Tercera tanda (8/10):** farmacia con **dos y tres de turno** (una ficha por farmacia, cada una entra de un costado);
   feriado rehecho con el dato que **de verdad** sale el 12/10 (Colón, 1492, con una carabela que cruza); el clima
   **sin decir de dónde salen los datos** (eso va en la nota, no en la placa).
 - **Feriados, decidido (8/10):** cada feriado tiene su animación y su dato propios (una fecha patria no es igual
@@ -285,7 +285,7 @@ sale solo como historia **no lo ve nadie**.
 **Límites que no molestan:** Facebook acepta hasta 30 reels por día por la API; hoy un día normal tiene unas 10
 piezas.
 
-### Una locución que sepa qué se dijo antes (idea nueva, sin apuro)
+### Una locución que sepa qué se dijo antes (aprobada el 8/10: se hace pronto, ver `PRIORIDADES.md`)
 
 **El problema:** cada pieza se arma sola, así que de noche pueden salir tres seguidas que empiezan "Hola, buenas
 noches", y ninguna sabe que llovió todo el día.

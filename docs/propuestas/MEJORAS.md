@@ -1222,6 +1222,23 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
 En privado, el plan gratis trae 2.000 minutos por mes (el plan Pro, de US$ 4, trae 3.000), y hoy los robots
 usan unos 10.000 (48 corridas por día de ~7 minutos, más las redes). El exceso costaría US$ 40-60 por mes.
 
+**¿Dónde se contrata el servidor?** No es de GitHub ni de Cloudflare: es una computadora alquilada en una
+empresa de servidores, a la que se le instala el programa de GitHub para correr los robots (ese programa es
+gratis). Opciones conocidas, a confirmar precios al contratar:
+- **Hetzner** (Alemania): unos € 4-5 por mes por un servidor chico. El más barato de los conocidos.
+- **DigitalOcean** o **Vultr**: unos US$ 6 por mes.
+- **Oracle Cloud "Always Free"**: gratis, con un servidor bastante grande, pero pide tarjeta y a veces no hay
+  lugar disponible para crearlo.
+- **Google Cloud** tiene uno gratis, pero es muy chico para armar videos.
+Cloudflare no alquila servidores de este tipo.
+
+**¿GitHub cobra por usar un servidor propio?** Hoy no. En diciembre de 2025 anunció que iba a cobrar US$ 0,002
+por minuto a los ejecutores propios en repositorios privados desde marzo de 2026, y a los dos días lo postergó.
+Según lo último encontrado (junio de 2026), sigue gratis, pero GitHub no descartó cobrarlo más adelante. Con
+los minutos de hoy, ese cobro serían unos US$ 20 por mes: hay que confirmarlo antes de decidir. Fuentes:
+[Techzine](https://www.techzine.eu/news/devops/137396/github-bends-to-criticism-and-delays-paid-self-hosting-of-runners/),
+[SAMexpert](https://samexpert.com/github-actions-pricing-backlash-2026/).
+
 **El plan propuesto (unos US$ 5-6 por mes):**
 1. **Un servidor chico propio** (una computadora alquilada en internet, de unos US$ 5 por mes) que corre los
    mismos robots de GitHub como "ejecutor propio". Los minutos de un ejecutor propio no se cobran, aunque el
