@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T04:31:28.757Z",
- "portada": 57,
+ "generado": "2026-10-08T05:01:52.499Z",
+ "portada": 56,
  "archivo": 1064,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-08T04:31:28.782Z",
+  "generado": "2026-10-08T05:01:52.539Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,13 +95,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "woerbj",
-      "titulo": "La Selección Argentina se mantiene segunda en el ranking FIFA",
-      "seccion": "Fútbol"
-     },
      {
       "id": "2i73nb",
       "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
@@ -111,6 +106,11 @@
       "id": "28zqic",
       "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "seccion": "Fútbol"
      },
      {
       "id": "1d48tdj",
@@ -126,11 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 55,
     "notas": [
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
       "seccion": "Fútbol"
      },
      {
@@ -157,26 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
-      "seccion": "Fútbol"
-     },
      {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
      },
      {
-      "id": "1793nst",
-      "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
-      "seccion": "Cultura y agenda"
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      },
      {
       "id": "kwpmcv",
       "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      }
     ]
@@ -184,14 +184,7 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [
-    {
-     "id": "28zqic",
-     "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
-     "seccion": "Automovilismo",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 5,
    "proximoDesde": "2026-10-07T21:03:47.785Z",
    "porDia": 5,
