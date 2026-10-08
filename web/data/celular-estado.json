@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T15:40:22.737Z",
- "portada": 45,
+ "generado": "2026-10-08T16:02:07.074Z",
+ "portada": 43,
  "archivo": 1079,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-08T15:40:22.777Z",
+  "generado": "2026-10-08T16:02:07.124Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T13:06:32.914Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "La agenda del fin de semana",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T15:09:29.403Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T13:06:32.914Z",
     "segundos": null,
     "notas": [
@@ -126,27 +126,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "1rf94dp",
+      "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
+      "seccion": "Balcarce"
+     },
      {
       "id": "16tb2vo",
       "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
       "seccion": "Automovilismo"
      },
      {
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "e5v4vp",
       "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
       "seccion": "Economía"
-     },
-     {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1rf94dp",
-      "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -160,23 +160,23 @@
     "segundos": 54,
     "notas": [
      {
+      "id": "zzuoo4",
+      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "w8t322",
       "titulo": "El consorcio de Rowing gana la concesión de AySA por millones",
       "seccion": "Economía"
      },
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
       "seccion": "Balcarce"
      },
      {
       "id": "1boxf4v",
       "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
       "seccion": "Balcarce"
      }
     ]
@@ -197,21 +197,15 @@
    ],
    "cola": [
     {
-     "id": "zzuoo4",
-     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "1rf94dp",
      "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "159oig4",
-     "titulo": "Mini Club y Sportivo Trabajo ganan en la Liga Local de Básquet",
-     "seccion": "Deportes",
+     "id": "zzuoo4",
+     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
