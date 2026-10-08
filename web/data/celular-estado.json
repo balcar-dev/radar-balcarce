@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T15:02:28.727Z",
- "portada": 42,
- "archivo": 1078,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-08T15:40:22.737Z",
+ "portada": 45,
+ "archivo": 1079,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-08T15:02:28.760Z",
+  "generado": "2026-10-08T15:40:22.777Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutora",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-08T15:09:29.403Z"
    },
    {
     "nombre": "noticia2",
@@ -157,17 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 54,
     "notas": [
      {
       "id": "w8t322",
       "titulo": "El consorcio de Rowing gana la concesión de AySA por millones",
       "seccion": "Economía"
-     },
-     {
-      "id": "1jwkhok",
-      "titulo": "Lionel Messi publica un emotivo mensaje tras su despedida de la Selección",
-      "seccion": "Fútbol"
      },
      {
       "id": "2i73nb",
@@ -177,6 +172,11 @@
      {
       "id": "1boxf4v",
       "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
       "seccion": "Balcarce"
      }
     ]
