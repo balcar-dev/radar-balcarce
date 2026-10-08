@@ -161,7 +161,9 @@ export function guionNoticia(n) {
 const hayTormenta = (c) => /tormenta|granizo/i.test(String(c?.cielo ?? ''));
 
 function comentarioDeLluvia(v, hoy) {
-  const l = hoy.lluvia ?? 0;
+  // Sin probabilidad (el clima de respaldo no la trae) no se dice nada de la lluvia: "no se espera lluvia" sería inventar (I-8).
+  if (hoy.lluvia == null) return null;
+  const l = hoy.lluvia;
   if (l >= 50) {
     return v([
       `Hay muchas chances de lluvia, ${l} por ciento: llevate el paraguas.`,
@@ -251,7 +253,8 @@ export function guionClima(clima, _turno, { fecha = new Date(), direccion } = {}
     ], 'lluvia'));
   } else {
     if ((hoy.lluvia ?? 0) >= 25) conToque = true;
-    partes.push(comentarioDeLluvia(v, hoy));
+    const lluvia = comentarioDeLluvia(v, hoy);
+    if (lluvia) partes.push(lluvia);
   }
 
   if (c.viento >= 30) {

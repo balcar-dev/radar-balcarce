@@ -223,3 +223,17 @@ test('el clima de respaldo no inventa la sensación térmica', () => {
   assert.match(ing, /c\.sensacion != null \? `sensación térmica/);
   assert.match(fs.readFileSync(new URL('../web/components/clima-vivo.js', import.meta.url), 'utf8'), /a\.sensacion != null &&/);
 });
+
+// I-8 (8/10/2026): el clima de respaldo (met.no, versión compact) no trae probabilidad de lluvia: no se inventa un "0 %".
+test('sin probabilidad de lluvia, la voz no dice "no se espera lluvia" y el pronóstico queda sin dato', async () => {
+  const { guionClima } = await import('../redes/guiones.mjs');
+  const clima = { ahora: { temp: 12, viento: 10, cielo: 'Lluvia' }, dias: [{ min: 8, max: 14, lluvia: null }, { min: 9, max: 15, lluvia: null }] };
+  for (let dia = 1; dia <= 10; dia += 1) {
+    const g = guionClima(clima, null, { fecha: new Date(`2026-10-${String(dia).padStart(2, '0')}T12:00:00-03:00`) });
+    assert.doesNotMatch(g, /no se espera lluvia|sin lluvia a la vista|no hay lluvia en el pron/i, g);
+  }
+  const conDato = guionClima({ ...clima, dias: [{ min: 8, max: 14, lluvia: 0 }, clima.dias[1]] }, null, { fecha: new Date('2026-10-02T12:00:00-03:00') });
+  assert.match(conDato, /lluvia/i, 'con un 0 % de verdad sí lo dice');
+  const ingesta = fs.readFileSync(new URL('../ingesta/ingesta.mjs', import.meta.url), 'utf8');
+  assert.match(ingesta, /lluvia: d\.lluvia == null \? null : Math\.round\(d\.lluvia\)/);
+});

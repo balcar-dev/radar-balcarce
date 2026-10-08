@@ -884,11 +884,13 @@ async function climaDeMetNo() {
   for (const punto of serie) {
     const dia = punto.time.slice(0, 10);
     const t = punto.data.instant.details.air_temperature;
-    porDia[dia] ??= { temps: [], lluvia: 0, simbolo: null };
+    porDia[dia] ??= { temps: [], lluvia: null, simbolo: null };
     porDia[dia].temps.push(t);
+    // I-8 (8/10/2026): la versión "compact" de met.no NO trae probabilidad de lluvia. Sin dato, queda null (no se inventa un "0 %": la voz
+    // diría "no se espera lluvia" con el cielo lluvioso). Todo lo que la usa compara con `>=` o se salta el dato si es null.
     const prob = punto.data.next_1_hours?.details?.probability_of_precipitation
-      ?? punto.data.next_6_hours?.details?.probability_of_precipitation ?? 0;
-    porDia[dia].lluvia = Math.max(porDia[dia].lluvia, prob);
+      ?? punto.data.next_6_hours?.details?.probability_of_precipitation ?? null;
+    if (prob != null) porDia[dia].lluvia = Math.max(porDia[dia].lluvia ?? 0, prob);
     porDia[dia].simbolo ??= punto.data.next_6_hours?.summary?.symbol_code
       ?? punto.data.next_1_hours?.summary?.symbol_code;
   }
@@ -898,7 +900,7 @@ async function climaDeMetNo() {
     dia: DIAS_CORTOS[new Date(`${fecha}T12:00:00`).getDay()],
     max: Math.round(Math.max(...d.temps)),
     min: Math.round(Math.min(...d.temps)),
-    lluvia: Math.round(d.lluvia),
+    lluvia: d.lluvia == null ? null : Math.round(d.lluvia),
     cielo: cieloDeSimbolo(d.simbolo ?? ''),
   }));
 

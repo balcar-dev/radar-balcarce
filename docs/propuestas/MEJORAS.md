@@ -1086,7 +1086,7 @@ en pasado ni incumplimientos de `promesa` en lo publicado; la tabla de números 
 **I-7 · El aviso de helada está corrido una noche** — *Confirmado · MEDIA* — **✔ HECHO 8/10 · regla 129**
 - "Esta noche" usa la mínima de hoy, que ya pasó a la madrugada (`ingesta/alertas.mjs:47-63`). 1 h.
 
-**I-8 · El clima de respaldo puede inventar "0 % de lluvia"** — *A confirmar · MEDIA*
+**I-8 ✔ · El clima de respaldo puede inventar "0 % de lluvia"** — *Confirmado · MEDIA · hecho el 8/10 (regla 140)*
 - met.no agrupa por fecha UTC y probablemente no trae probabilidad de lluvia (`ingesta/ingesta.mjs:881,885`).
   Dejar el dato vacío. 1 h.
 
