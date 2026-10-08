@@ -1,0 +1,282 @@
+<title>Código o IA, paso a paso</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Idea: un mapa del recorrido donde cada paso lleva dos etiquetas: quién lo hace (código, IA, persona) y qué conviene (dejar, pasar a código, crear, revisar). */
+:root{
+  --bg:#F3F6F7; --panel:#FFFFFF; --ink:#102A33; --muted:#51666F; --line:#D3DDE1;
+  --accent:#0E8F63; --accent-ink:#FFFFFF; --soft:#E3F2EC;
+  --code:#2F6FB3; --code-soft:#E1ECF8; --ia:#8A4FBF; --ia-soft:#EFE5F8; --per:#B7860B; --per-soft:#F8EFD2;
+  --ok:#1E8E5A; --ok-soft:#E1F3EA; --warn:#B4540A; --warn-soft:#FBEBDD; --red:#C0392B; --red-soft:#F8E1DE;
+  --f-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --f-body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B171C; --panel:#12242B; --ink:#E6EFF2; --muted:#9DB2BA; --line:#25404A;
+  --accent:#3CCB93; --accent-ink:#06231A; --soft:#12352B;
+  --code:#6FB0F0; --code-soft:#14283B; --ia:#C79AF0; --ia-soft:#2C1D3D; --per:#E6B93C; --per-soft:#3A3114;
+  --ok:#3CCB93; --ok-soft:#12352B; --warn:#F0A060; --warn-soft:#3A2614; --red:#F07A6B; --red-soft:#3D1D1A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B171C; --panel:#12242B; --ink:#E6EFF2; --muted:#9DB2BA; --line:#25404A;
+  --accent:#3CCB93; --accent-ink:#06231A; --soft:#12352B;
+  --code:#6FB0F0; --code-soft:#14283B; --ia:#C79AF0; --ia-soft:#2C1D3D; --per:#E6B93C; --per-soft:#3A3114;
+  --ok:#3CCB93; --ok-soft:#12352B; --warn:#F0A060; --warn-soft:#3A2614; --red:#F07A6B; --red-soft:#3D1D1A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:780px;margin-inline:auto}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,6vw,3rem);font-weight:700}
+h2{font-size:clamp(1.5rem,4.5vw,2rem);font-weight:700;margin-top:56px}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:.6em 0}
+.lead{font-size:1.15rem;color:var(--muted)}
+code{font-family:var(--f-mono);font-size:.82em;background:var(--soft);padding:1px 6px;border-radius:5px;overflow-wrap:anywhere}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header.top{padding-block:40px 8px}
+nav.index{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);z-index:5;display:flex;gap:8px;overflow-x:auto;margin-inline:-16px;padding-inline:16px}
+nav.index a{white-space:nowrap;font-size:.9rem;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--panel)}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.say{background:var(--soft);border-radius:12px;padding:14px 18px;margin-block:16px}
+.warn{background:var(--warn-soft);border-radius:12px;padding:14px 18px;margin-block:16px}
+.red{background:var(--red-soft);border-radius:12px;padding:14px 18px;margin-block:16px}
+.say b,.warn b,.red b{font-family:var(--f-display)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:12px}
+.grid>*{min-width:0}
+.big{font-family:var(--f-display);font-size:1.7rem;font-weight:700}
+.tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+/* etiquetas */
+.b{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:2px 9px;border-radius:999px;margin-right:6px;border:1px solid transparent;white-space:nowrap}
+.b.c{background:var(--code-soft);color:var(--code);border-color:var(--code)}
+.b.i{background:var(--ia-soft);color:var(--ia);border-color:var(--ia)}
+.b.p{background:var(--per-soft);color:var(--per);border-color:var(--per)}
+.v{display:inline-block;font-family:var(--f-display);font-weight:700;font-size:.8rem;padding:2px 10px;border-radius:8px}
+.v.dejar{background:var(--ok-soft);color:var(--ok)}
+.v.pasar{background:var(--code-soft);color:var(--code)}
+.v.crear{background:var(--ia-soft);color:var(--ia)}
+.v.revisar{background:var(--warn-soft);color:var(--warn)}
+/* filtros */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.filters button{font:inherit;font-size:.9rem;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* recorrido */
+ol.flow{list-style:none;margin:16px 0 0;padding:0}
+ol.flow>li{position:relative;padding-left:52px;padding-bottom:14px}
+ol.flow>li::before{content:attr(data-n);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:var(--f-display);font-weight:700;display:grid;place-items:center}
+ol.flow>li::after{content:"";position:absolute;left:18px;top:42px;bottom:0;width:2px;background:var(--line)}
+ol.flow>li:last-child::after{display:none}
+ol.flow details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+ol.flow summary{cursor:pointer;list-style:none}
+ol.flow summary::-webkit-details-marker{display:none}
+ol.flow summary .t{display:block;font-family:var(--f-display);font-weight:700;margin-bottom:4px}
+ol.flow details>*:not(summary){margin-top:10px}
+ol.flow ul{margin:.4em 0;padding-left:20px}
+li[hidden]{display:none!important}
+.tw{overflow-x:auto;margin-top:12px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.93rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-display);font-size:.85rem;color:var(--muted)}
+.bars{display:grid;gap:10px;margin-top:12px}
+.bar{display:grid;grid-template-columns:minmax(0,170px) 1fr auto;gap:10px;align-items:center;font-size:.93rem}
+.bar .track{height:14px;background:var(--line);border-radius:7px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:7px;display:block}
+.bar .n{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);white-space:nowrap}
+@media(max-width:480px){.bar{grid-template-columns:1fr auto}.bar .track{grid-column:1/-1}}
+footer{margin-top:56px;color:var(--muted);font-size:.9rem}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Radar Balcarce · 8 de octubre de 2026</div>
+  <h1>Qué hace el código y qué hace la IA</h1>
+  <p class="lead">Cada paso del sistema, quién lo hace hoy y qué conviene: dejarlo, pasarlo a código común, crear algo nuevo o revisarlo. Con lo medido en los registros reales y lo investigado de redes, fotos, redacción, fuentes y medición. <b>Pistas y el panel del celular quedan afuera</b>, como pediste.</p>
+</header>
+
+<nav class="index" aria-label="Secciones">
+  <a href="#mapa">El mapa</a><a href="#redes">Redes y archivos</a><a href="#medir">Medir</a><a href="#fuentes">Fuentes</a><a href="#archivos">Redacción y fotos</a><a href="#resumen">Qué crear</a>
+</nav>
+
+<h2 id="mapa">1. El mapa, paso a paso</h2>
+<p><span class="b c">CÓDIGO</span> programa común, gratis y siempre igual. <span class="b i">IA</span> un modelo (Gemini, con Groq de respaldo), que gasta cupo y puede equivocarse. <span class="b p">PERSONA</span> Hernán o Andrés.</p>
+<div class="say"><b>La regla que usaría para decidir:</b> si el paso se puede escribir como una regla clara (comparar, contar, buscar palabras, ordenar), va en <b>código</b>. Si pide entender un texto o mirar una imagen, va en <b>IA</b>, y se controla después con código. Hoy el sistema ya hace casi todo así: la verificación la hace un programa, no otra IA.</div>
+
+<div class="filters" role="group" aria-label="Filtrar pasos">
+  <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+  <button type="button" data-f="ia" aria-pressed="false">Usan IA</button>
+  <button type="button" data-f="pasar" aria-pressed="false">Pasar a código</button>
+  <button type="button" data-f="crear" aria-pressed="false">Crear algo nuevo</button>
+  <button type="button" data-f="revisar" aria-pressed="false">Revisar</button>
+</div>
+
+<ol class="flow" id="flow">
+  <li data-n="1" data-t="codigo" data-v="revisar"><details open><summary><span class="t">Descargar las fuentes</span><span class="b c">CÓDIGO</span><span class="v revisar">Revisar</span></summary>
+    <p>236 fuentes de 105 medios, todas a la vez, cada 30 minutos (<code>ingesta/ingesta.mjs</code>). Tarda unos 31 segundos.</p>
+    <ul><li><b>Lo que falla:</b> entre 24 y 84 fuentes por corrida, casi todas RSS comunes. No reintenta nunca y descarta el motivo real del error.</li>
+    <li><b>Qué conviene:</b> guardar el motivo, reintentar una vez y limitar los pedidos simultáneos. Leer solo lo nuevo no conviene: ahorraría pocos segundos y rompería la comparación entre medios.</li></ul></details></li>
+  <li data-n="2" data-t="codigo" data-v="dejar"><details><summary><span class="t">Unificar lo que cuentan varios medios (el cruce)</span><span class="b c">CÓDIGO</span><span class="v dejar">Dejar</span></summary>
+    <p>Compara los textos y junta los que se parecen un 42 % o más (<code>ingesta/cruce.mjs</code>). No entiende de qué trata la noticia, solo mide parecido.</p>
+    <ul><li>Funciona bien y es gratis. Sus errores (juntar mal o dejar repetidas) los corrige el paso 5.</li></ul></details></li>
+  <li data-n="3" data-t="codigo" data-v="dejar"><details><summary><span class="t">Sección, puntaje y semáforo</span><span class="b c">CÓDIGO</span><span class="v dejar">Dejar</span></summary>
+    <p>Listas de palabras y suma de puntos. El semáforo protege (menores, víctimas, sepelios) y es una decisión de seguridad, no de comodidad.</p>
+    <ul><li>Conviene que siga siendo código: una IA no es confiable para una regla que no puede fallar.</li></ul></details></li>
+  <li data-n="4" data-t="ia" data-v="dejar"><details><summary><span class="t">Leer cada nota nueva y completar su ficha</span><span class="b i">IA</span><span class="v dejar">Dejar</span></summary>
+    <p>Gemini (Groq de respaldo) decide si es de acá, qué sección, si es chimento o publicidad. Hasta 12 notas por pedido, 5 pedidos por corrida, 200 por día (<code>ingesta/lectura-ia.mjs</code>).</p>
+    <ul><li>Es un buen trabajo para una IA: entender el texto. Es corto y barato, así que sirve un modelo chico.</li>
+    <li>Solo puede <b>endurecer</b> (sacar o frenar), nunca destrabar.</li></ul></details></li>
+  <li data-n="5" data-t="mixto" data-v="crear"><details><summary><span class="t">Juntar las repetidas que el cruce no vio</span><span class="b c">CÓDIGO</span><span class="b i">IA</span><span class="v crear">Crear algo nuevo</span></summary>
+    <p>La IA agrupa repetidas y confirma parejas dudosas (<code>agruparRepetidas</code>, <code>confirmarParejas</code>). En una corrida real, un pedido de repetidas falló con error 429 (sin cupo) y se siguió con los grupos de antes.</p>
+    <ul><li><b>Medido:</b> todavía se cuelan notas del mismo hecho (2 pares de títulos y 5 de descripciones iguales en el sitio).</li>
+    <li><b>Nuevo:</b> un contador diario de duplicados que pasan, para saber si hace falta comparar por hecho (quién, qué, dónde) y no por palabras.</li></ul></details></li>
+  <li data-n="6" data-t="ia" data-v="pasar"><details><summary><span class="t">Escribir título, bajada y cuerpo</span><span class="b i">IA</span><span class="v pasar">Pasar parte a código</span></summary>
+    <p>Gemini escribe con el texto de la fuente y el criterio editorial (<code>reels/reescritura.mjs</code>). De 611 notas intentadas, 500 salieron con cuerpo y 111 se rechazaron.</p>
+    <ul><li><b>La IA tiene que escribir.</b> Eso no se pasa a código.</li>
+    <li><b>Sí se puede sacar de la IA:</b> el guion de los reels (el título tal cual, con números en palabras), las fechas completas con día, mes y año (que el código las escriba y las deje como material verificado), las tildes cuando la regla ya las conoce, y los campos internos que nadie usa (claves, <code>nivelSugerido</code>).</li>
+    <li><b>Para no pagar de más:</b> no reintentar si el semáforo ya va a frenar la misma palabra, y no pedir nota si el material no alcanza.</li></ul></details></li>
+  <li data-n="7" data-t="codigo" data-v="revisar"><details><summary><span class="t">Verificar lo escrito contra las fuentes</span><span class="b c">CÓDIGO</span><span class="v revisar">Revisar</span></summary>
+    <p>Un programa compara nombres, cifras y fechas (<code>ingesta/verificar.mjs</code>). Es la mejor decisión del diseño: una IA no controla a otra IA.</p>
+    <ul><li><b>Pero se contradice con lo que se le pide a la IA</b> (detalle en la sección 5). Gran parte de los rechazos vienen de ahí.</li></ul></details></li>
+  <li data-n="8" data-t="codigo" data-v="dejar"><details><summary><span class="t">Los 8 controles finales y publicar</span><span class="b c">CÓDIGO</span><span class="v dejar">Dejar</span></summary>
+    <p>Retirada a mano, decisión de una persona, llega tarde, texto, dirección, correcciones, lo que nunca sale y cuerpo de 70 palabras o más. <span class="b p">PERSONA</span> decide lo amarillo.</p></details></li>
+  <li data-n="9" data-t="mixto" data-v="crear"><details><summary><span class="t">Elegir la foto</span><span class="b c">CÓDIGO</span><span class="b i">IA</span><span class="v crear">Crear algo nuevo</span></summary>
+    <p>Código baja las imágenes; la IA con visión descarta las que tienen marca de agua o un menor (<code>ingesta/fotos.mjs</code>).</p>
+    <ul><li><b>La visión sí es trabajo de IA</b>: el código no puede ver una marca de agua.</li>
+    <li><b>Sale de la IA y pasa a código:</b> no repetir fotos, validar la licencia (hoy una expresión sin ancla acepta CC BY-NC y BY-ND por error), y saber si una persona es pública.</li>
+    <li><b>Nuevo:</b> el banco de fotos como base de datos con tipo, etiquetas y registro de usos, para que la foto de Messi no ilustre una nota sobre un show.</li></ul></details></li>
+  <li data-n="10" data-t="codigo" data-v="pasar"><details><summary><span class="t">Armar el sitio y subirlo</span><span class="b c">CÓDIGO</span><span class="v pasar">Pasar a una sola impresión</span></summary>
+    <p>Next.js arma 1.148 páginas, dos veces por ciclo (66 s y 111 s). Se publica una sola vez en Cloudflare Pages.</p></details></li>
+  <li data-n="11" data-t="mixto" data-v="crear"><details><summary><span class="t">Redes: elegir, escribir, voz, video y publicar</span><span class="b c">CÓDIGO</span><span class="b i">IA</span><span class="v crear">Crear: contador de voz</span></summary>
+    <p>Detalle en la sección 2. El guion no lo escribe una IA; solo el texto del posteo y la voz.</p></details></li>
+  <li data-n="12" data-t="codigo" data-v="crear"><details><summary><span class="t">Vigilar y medir</span><span class="b c">CÓDIGO</span><span class="v crear">Crear algo nuevo</span></summary>
+    <p>Hoy se mide si la web está arriba, si las corridas fallan, las claves y las redes. No se mide casi nada de la salud de las fuentes ni de la calidad del contenido. Detalle en la sección 3.</p></details></li>
+</ol>
+
+<h2 id="redes">2. Redes, audios, imágenes y videos: dónde vive cada cosa</h2>
+<div class="warn"><b>Dos supuestos que no eran ciertos:</b> el guion de los reels <b>no</b> lo escribe una IA (son bancos de frases con semilla de fecha, por código). Y las tarjetas de las notas <b>no</b> usan <code>resvg</code>: usan <code>next/og</code>; <code>resvg</code> solo dibuja las placas de los videos.</div>
+<div class="tw"><table>
+  <thead><tr><th>Qué</th><th>Quién lo hace</th><th>Dónde vive</th><th>Cuánto dura</th></tr></thead>
+  <tbody>
+  <tr><td>Texto del posteo</td><td><span class="b i">IA</span> junto con la nota</td><td>Dentro de la nota</td><td>Mientras exista la nota</td></tr>
+  <tr><td>Guion del reel</td><td><span class="b c">CÓDIGO</span></td><td>No se guarda</td><td>—</td></tr>
+  <tr><td>Voz (mp3)</td><td><span class="b i">IA</span> Gemini, 10 por día</td><td>Solo en la máquina de GitHub durante la corrida</td><td>Se descarta (7 días si salió por <code>piezas.yml</code>)</td></tr>
+  <tr><td>Placa (imagen del video)</td><td><span class="b c">CÓDIGO</span> resvg</td><td>Igual que la voz</td><td>Igual</td></tr>
+  <tr><td>Video del día (mp4)</td><td><span class="b c">CÓDIGO</span> ffmpeg</td><td>Se sube directo a Meta; copia 3 días como archivo adjunto de GitHub</td><td>En Meta, para siempre; la historia, 24 h</td></tr>
+  <tr><td>Piezas fijas "Participá"</td><td><span class="b c">CÓDIGO</span></td><td><b>En el repo</b>, <code>reels/fijas/</code> (1,6 MB)</td><td>Valen hasta el 31/10</td></tr>
+  <tr><td>Tarjeta de Instagram (1080×1350)</td><td><span class="b c">CÓDIGO</span> <code>next/og</code></td><td>Se arma al compilar el sitio; Cloudflare</td><td>Mientras la nota esté activa</td></tr>
+  <tr><td>Fotos de las notas</td><td>IA elige, código guarda</td><td><b>En el repo</b>, <code>web/public/fotos-notas/</code> (44 MB)</td><td>Se poda a mano de la nota</td></tr>
+  <tr><td>Libro de publicaciones</td><td><span class="b c">CÓDIGO</span></td><td><b>En el repo</b>, <code>web/data/redes.json</code> (107 KB)</td><td>No se poda; crece unos 6 KB por día</td></tr>
+  </tbody></table></div>
+<ul>
+  <li><b>Lo que más pesa en el repo</b> son las fotos y <code>archivo.json</code>, no los videos.</li>
+  <li><b>El cupo de voz no se cuenta.</b> Un día normal gasta 7 de 10 audios (8 jueves y sábados), y nadie ve cuántos van. Un contador con aviso es poco trabajo y evita perder un reel.</li>
+  <li><b>Si falla Instagram, el audio gastado se pierde</b> salvo que haya un archivo adjunto de ese día. Las historias no se reintentan solas.</li>
+  <li><b>No hay métricas por pieza</b> (qué reel anduvo mejor), aunque los identificadores ya están en el libro.</li>
+</ul>
+<div class="say"><b>Qué crear:</b> (1) un contador de voz con aviso a 8 de 10; (2) guardar las piezas del día para reintentar sin gastar voz; (3) métricas por pieza; (4) podar el libro de redes.</div>
+
+<h2 id="medir">3. Cómo se puede medir todo</h2>
+<div class="grid">
+  <div class="card"><div class="tag">Chequeo de todo el sitio</div><div class="big">13 s</div>para 1.148 páginas, 38.934 enlaces y 12.109 imágenes</div>
+  <div class="card"><div class="tag">Enlaces internos rotos</div><div class="big">0</div>de 38.934</div>
+  <div class="card"><div class="tag">Fotos rotas hoy</div><div class="big">9</div>notas con extensión vieja</div>
+</div>
+<div class="red"><b>Hallazgo urgente:</b> 9 notas piden una foto <code>.png</code> o <code>.webp</code> que en el repo está como <code>.jpg</code> (la nota guarda la extensión vieja y la foto se recomprimió). Es un error real hoy; no pude confirmarlo contra el sitio vivo porque el entorno no tiene internet, pero los archivos son los que se publican. <b>También:</b> la auditoría semanal del 5/10 no dejó resultado (el archivo sigue con fecha del 28/09).</div>
+<h3 style="margin-top:20px">Lo que se mide hoy y lo que falta</h3>
+<div class="tw"><table>
+  <thead><tr><th>Se mide hoy</th><th>No se mide hoy</th></tr></thead>
+  <tbody>
+  <tr><td>Web arriba, corridas que fallan, claves de IA y voces, vencimientos, redes contra Meta</td><td><b>Historial por fuente</b>: cuántas corridas lleva caída, cuántas notas aporta</td></tr>
+  <tr><td>Visitas, seguidores y alcance (2 veces por día)</td><td>Motivo real de cada caída</td></tr>
+  <tr><td>Auditoría con IA de lo publicado (12 notas por hora, sobre todo ortografía)</td><td><b>Cupo y tokens de IA</b> por día, y tasa de rechazo</td></tr>
+  <tr><td>SEO al compilar, y semanal en vivo</td><td><b>Fotos repetidas</b> y enlaces e imágenes rotas</td></tr>
+  <tr><td>Resumen de las 21 por WhatsApp</td><td><b>Duplicados que pasan</b>, tiempo por tramo, 404 reales, cobertura por localidad</td></tr>
+  </tbody></table></div>
+<h3 style="margin-top:20px">¿Auditar el sitio entero vale la pena?</h3>
+<p>Depende de qué se chequee. La clave es separar lo <b>barato y rápido</b> (se puede hacer siempre) de lo <b>caro y lento</b> (solo semanal o de a poco):</p>
+<div class="tw"><table>
+  <thead><tr><th>Cuándo</th><th>Qué chequear</th><th>Costo</th></tr></thead>
+  <tbody>
+  <tr><td><b>Ya, en cada ciclo, sobre todo el sitio</b></td><td>Enlaces e imágenes que no existen, duplicados de título y descripción, sitemap y feeds. Como aviso, <b>nunca frenando la publicación</b>.</td><td>~13 s</td></tr>
+  <tr><td><b>Solo sobre lo nuevo de cada vuelta</b></td><td>Enlaces externos, imagen de vista previa remota, duplicado contra las últimas 24 h</td><td>Segundos</td></tr>
+  <tr><td><b>Semanal, completo</b></td><td>Velocidad y accesibilidad (Lighthouse sobre 20 a 30 páginas), 404 reales de Cloudflare, fotos repetidas, cobertura por localidad</td><td>15 a 40 min de robot (estimado)</td></tr>
+  <tr><td><b>No recomendado</b></td><td>Lighthouse en cada ciclo (3 a 6 horas) y que un chequeo nuevo frene la web: un falso positivo congelaría el sitio</td><td>—</td></tr>
+  </tbody></table></div>
+<div class="say"><b>Qué crear primero:</b> un solo archivo <code>web/data/salud.json</code>, escrito por la actualización de la web, con el historial por fuente y los conteos del día. Sin archivos sueltos nuevos, para no perderlos al guardar.</div>
+
+<h2 id="fuentes">4. ¿Se puede mejorar la cantidad de fuentes?</h2>
+<p>Conviene en este orden: <b>arreglar, podar y recién después sumar poco y local</b>. Datos reales de 1.031 notas con medios:</p>
+<div class="bars" role="img" aria-label="Porcentaje de notas que cubren los medios principales">
+  <div class="bar"><span>Top 5 medios</span><span class="track"><span class="fill" style="width:46%"></span></span><span class="n">46 % de las notas</span></div>
+  <div class="bar"><span>Top 10 medios</span><span class="track"><span class="fill" style="width:67%"></span></span><span class="n">67 %</span></div>
+  <div class="bar"><span>Top 20 medios</span><span class="track"><span class="fill" style="width:84%"></span></span><span class="n">84 %</span></div>
+</div>
+<ul>
+  <li><b>Lo de afuera sobra:</b> una nota de afuera la cuentan 6,7 medios en promedio.</li>
+  <li><b>Lo local depende de muy pocos:</b> La Vanguardia, Infórmese Primero y Radio Gabal son más de la mitad de lo de Balcarce. Casi todas las notas con un solo medio son locales.</li>
+  <li><b>19 de los 105 medios no aportaron ninguna nota</b> (los que casi siempre fallan, entre ellos). Unos 33 más aportan menos del 2 %.</li>
+  <li><b>Tecnología:</b> 6 notas en 11 días con 21 fuentes. Sumar más ahí no sirve: el límite es la regla de 2 medios.</li>
+  <li><b>Huecos locales:</b> Concejo, INTA propio, hospital, bomberos, clubes y las localidades del partido (0 a 3 notas cada una). Todas "a verificar": no hay fuente hoy.</li>
+  <li><b>Un dato bueno:</b> de lo que la IA marca como "de Balcarce" se publica el 42 %; de lo nacional, el 6 %. Para lo local el límite es cuánto llega, no el filtro.</li>
+</ul>
+<div class="say"><b>Regla simple para una fuente nueva (14 días de prueba):</b> una local se queda si publica 10 o más notas y al menos 3 exclusivas (o 2 por semana si cubre un hueco como el Concejo). Una de afuera, solo si es decisiva en el cruce o cubre una sección floja. Se apaga con 0 notas en 28 días. Los números son una propuesta mía, no una regla ya escrita.</div>
+
+<h2 id="archivos">5. Redacción y fotos: ¿los archivos se contradicen?</h2>
+<p>Sí, y es la causa de buena parte de los rechazos. El criterio dice una cosa, el prompt pide otra y el verificador exige una tercera. <b>Gana siempre el verificador</b>, así que la IA falla aunque haga lo que se le pidió.</p>
+<h3 style="margin-top:16px">Redacción: las más importantes</h3>
+<div class="tw"><table>
+  <thead><tr><th>Lo que se le pide a la IA</th><th>Lo que el verificador rechaza</th></tr></thead>
+  <tbody>
+  <tr><td>Escribir fechas con día y mes</td><td>Cualquier mes o día que no esté en el título o resumen de la fuente</td></tr>
+  <tr><td>Redondear cifras ("unos 30")</td><td>Menos de 100 tiene que ser exacto; desde 100, hasta 6 %</td></tr>
+  <tr><td>Escribir números en palabras para el guion ("treinta y cinco")</td><td>No entiende compuestos: lee 30 y 5</td></tr>
+  <tr><td>Explicar las siglas ("Instituto… (INTA)")</td><td>Rechaza palabras capitalizadas que la fuente no trae</td></tr>
+  <tr><td>Cuerpo de 70 a 180 palabras</td><td>Publicar exige 70, y el material mínimo es 60: no hay margen</td></tr>
+  <tr><td>(Nada sobre negaciones)</td><td>Rechaza si la fuente decía "no" o "sin" y el texto nuevo no</td></tr>
+  </tbody></table></div>
+<p>Otros hallazgos: el prompt tiene unos 20.000 caracteres y dice "nunca" 36 veces; el campo <code>datos</code>, que según el texto va primero, se pide recién al final; "tres intentos" son en realidad 3, 4 o 5 según el medio; y dos secciones del criterio se contradicen sobre el tono ("liviano" contra "no es escribir liviano"). El semáforo frena palabras que el propio prompt manda usar ("según la denuncia"), y se reintenta hasta el tope con el mismo resultado.</p>
+<h3 style="margin-top:16px">Fotos: las más importantes</h3>
+<ul>
+  <li><span class="v revisar">Grave</span> <b>Fotos de otros medios sin crédito en la tapa y las secciones.</b> El crédito solo aparece dentro de la nota; el criterio dice que va siempre debajo.</li>
+  <li><span class="v revisar">Latente</span> <b>Licencias:</b> el código acepta CC BY-NC y BY-ND por una expresión sin ancla; el documento dice que solo se aceptan CC0, BY, BY-SA y dominio público. Hoy el banco tiene solo BY y BY-SA.</li>
+  <li><b>Fotos repetidas:</b> la de Xhaka y Messi y la de Colapinto en Singapur se usaron en 4 notas cada una. Las de Wikimedia y las manuales no pasan por la visión de la IA.</li>
+  <li><b>Dos implementaciones de Wikimedia</b> con reglas distintas (tamaño, tipos, autor).</li>
+</ul>
+<div class="say"><b>La propuesta de orden:</b> una sola fuente de verdad por regla. Los números, en <code>ingesta/criterio.mjs</code>, y el prompt y los documentos se generan desde ahí en vez de compararse a mano. Las reglas de escritura, solo en la sección 12 del criterio. Una prueba que revise que cada control del verificador tenga su línea en el prompt. Un solo componente de foto con crédito para la nota, la tapa, las secciones y los temas. Y reducir el prompt a un 60 % de su largo.</div>
+
+<h2 id="resumen">6. Resumen: qué crear, qué pasar a código y qué dejar</h2>
+<div class="grid">
+  <div class="card"><span class="v crear">Crear algo nuevo</span>
+    <ul><li><code>salud.json</code>: historial por fuente y conteos del día</li><li>Contador de voz con aviso</li><li>Banco de fotos con etiquetas y usos</li><li>Chequeo de enlaces e imágenes rotas como aviso</li><li>Una página "léeme" para no técnicos</li></ul></div>
+  <div class="card"><span class="v pasar">Pasar a código</span>
+    <ul><li>El guion de los reels (ya lo es; sacar los pedidos a la IA)</li><li>Fechas completas escritas por el código</li><li>Tildes y licencias</li><li>No repetir fotos y saber si una persona es pública</li><li>Una sola impresión del sitio</li></ul></div>
+  <div class="card"><span class="v dejar">Dejar como está</span>
+    <ul><li>Cruce, puntaje y semáforo (código)</li><li>Lectura con IA (ficha)</li><li>Escribir con IA, controlado por código</li><li>Visión de fotos para marca de agua y menores</li><li>Voz con IA</li></ul></div>
+  <div class="card"><span class="v revisar">Revisar</span>
+    <ul><li>Fuentes que fallan y su motivo</li><li>Contradicciones entre criterio, prompt y verificador</li><li>Fotos sin crédito en la tapa</li><li>9 fotos rotas y la auditoría del 5/10</li></ul></div>
+</div>
+<div class="say"><b>Lo más rentable de arreglar primero:</b> las 9 fotos rotas (un error visible hoy), la contradicción entre lo que se le pide a la IA y lo que rechaza el verificador (menos rechazos y menos cupo gastado), y el historial por fuente (hoy una fuente muere en silencio).</div>
+
+<footer>Datos medidos en los registros de GitHub Actions, en los archivos del repositorio y en un build local del sitio (8/10/2026). Lo marcado como estimado o supuesto no se verificó. Detalle de cada ítem en <code>docs/PLAN-DE-MEJORAS-2026-10.md</code>, en la rama <code>main-m9q04a</code>.</footer>
+</div>
+
+<script>
+(function(){
+  var items=document.querySelectorAll('#flow>li');
+  var btns=document.querySelectorAll('.filters button');
+  function apply(f){
+    items.forEach(function(li){
+      var t=li.getAttribute('data-t'), v=li.getAttribute('data-v');
+      var show=true;
+      if(f==='ia') show=(t==='ia'||t==='mixto');
+      else if(f==='pasar'||f==='crear'||f==='revisar') show=(v===f);
+      li.hidden=!show;
+    });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      apply(b.getAttribute('data-f'));
+    });
+  });
+})();
+</script>

@@ -14,6 +14,8 @@
 import { VOZ, CLIMA_VOZ, PODCAST_VOZ, PIEZA_FIJA_VOZ } from '../ingesta/criterio.mjs';
 import { MEDIO, SITIO_DICHO } from './prompt-redes.mjs';
 import { ZONA, diaAR } from '../ingesta/zona.mjs';
+import { FUENTES, FUENTES_NACIONALES } from '../ingesta/fuentes.mjs';
+import { FUENTES_CRUCE } from '../ingesta/fuentes-cruce.mjs';
 
 
 // --- la semilla ------------------------------------------------------------
@@ -503,11 +505,26 @@ export function armarPodcast(items, { momento = 'manana', fecha = new Date(), sa
 // --- la revisión: las reglas que TODA pieza respeta -------------------------
 
 /** Medios de los que nunca se dice el nombre en una pieza. */
-export const MEDIOS_QUE_NO_SE_NOMBRAN = [
+const MEDIOS_A_MANO = [
   'Infobae', 'Clarín', 'La Nación', 'Página 12', 'Página/12', 'Ámbito', 'Todo Noticias',
   'La Vanguardia', 'Puntonueve', 'Radio Gabal', 'La Capital', 'El Cronista', 'Télam', 'Noticias Argentinas',
   'El Diario de Balcarce', 'Meteored',
 ];
+
+// R-5 (8/10/2026): la lista se completa con TODOS los medios de las fuentes (unos 90; antes eran 16). Quedan afuera los organismos
+// oficiales (se pueden nombrar) y los nombres que también son palabras de todos los días ("El Día", "Perfil", "Olé", "Campeones"…),
+// que dispararían avisos falsos.
+const NOMBRES_QUE_SON_PALABRAS = new Set([
+  'El Día', 'La Verdad', 'La Opinión', 'El Norte', 'Crónica', 'Perfil', 'Campeones', 'Motorsport', 'Olé', 'Google', 'Google DeepMind',
+  'Microsoft', 'OpenAI', 'Nvidia', 'NASA', 'ESA', 'INTA', 'UAR', 'CADA', 'Teatro Colón', 'Solotc', 'Argenpapa',
+]);
+const sinParentesis = (m) => String(m).replace(/\s*\([^)]*\)/g, '').trim();
+const MEDIOS_DE_LAS_FUENTES = [...new Set([...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE]
+  .filter((f) => !f.oficial && f.medio && !/municipi|vecinos/i.test(f.medio))
+  .map((f) => sinParentesis(f.medio))
+  .filter((m) => m.length >= 4 && !NOMBRES_QUE_SON_PALABRAS.has(m)))];
+
+export const MEDIOS_QUE_NO_SE_NOMBRAN = [...new Set([...MEDIOS_A_MANO, ...MEDIOS_DE_LAS_FUENTES])];
 
 const escapar = (t) => t.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
 const RE_MEDIOS = new RegExp(`(?<![\\p{L}\\p{N}])(${MEDIOS_QUE_NO_SE_NOMBRAN.map(escapar).join('|')})(?![\\p{L}\\p{N}])`, 'iu');

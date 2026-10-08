@@ -14,6 +14,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
@@ -109,6 +110,45 @@ export function segundosDeWav(buf) {
   return buf.length / 48000;
 }
 
+// ------------------------------------------------------------------ la memoria de voces (8/10/2026, C-16)
+//
+// El cupo gratis es de 10 audios por día y una pieza que se arma de nuevo (porque falló ffmpeg, o Meta contestó con error, o el reloj la
+// volvió a pedir) pedía la voz otra vez y se la comía. Ahora, si hay una carpeta de memoria (la variable VOZ_CACHE; en GitHub la guarda
+// la caché de Actions), un mismo texto con la misma voz y el mismo estilo se pide UNA vez: la segunda vez se reusa el audio. Sin la
+// variable no hay memoria y todo anda como antes.
+
+/** La clave de un audio: el texto, la voz, el estilo y el modelo. Lo mismo de entrada, el mismo audio. */
+export function claveDeVoz(texto, voz, indicacion) {
+  return crypto.createHash('sha256').update(JSON.stringify([MODELO, String(texto), String(voz), String(indicacion)])).digest('hex').slice(0, 24);
+}
+
+/** Si el audio ya está en la memoria, lo copia a `destino` y devuelve { archivo, duracion, palabras, anclasUsadas }; si no, null. */
+export function leerDeLaMemoriaDeVoz(clave, destino, carpeta = process.env.VOZ_CACHE) {
+  if (!carpeta) return null;
+  try {
+    const meta = JSON.parse(fs.readFileSync(path.join(carpeta, `${clave}.json`), 'utf8'));
+    const mp3 = path.join(carpeta, `${clave}.mp3`);
+    if (!fs.existsSync(mp3) || !Array.isArray(meta.palabras) || !meta.palabras.length) return null;
+    fs.mkdirSync(path.dirname(destino), { recursive: true });
+    fs.copyFileSync(mp3, destino);
+    return { archivo: destino, duracion: meta.duracion, palabras: meta.palabras, anclasUsadas: meta.anclasUsadas, deLaMemoria: true };
+  } catch { return null; }
+}
+
+/** Guarda un audio recién pedido en la memoria y borra lo de más de `dias` días. No lanza: la memoria nunca frena una pieza. */
+export function guardarEnLaMemoriaDeVoz(clave, resultado, carpeta = process.env.VOZ_CACHE, { dias = 3, ahora = Date.now() } = {}) {
+  if (!carpeta) return;
+  try {
+    fs.mkdirSync(carpeta, { recursive: true });
+    fs.copyFileSync(resultado.archivo, path.join(carpeta, `${clave}.mp3`));
+    fs.writeFileSync(path.join(carpeta, `${clave}.json`), JSON.stringify({ duracion: resultado.duracion, palabras: resultado.palabras, anclasUsadas: resultado.anclasUsadas ?? null, guardado: new Date(ahora).toISOString() }));
+    for (const f of fs.readdirSync(carpeta)) {
+      const ruta = path.join(carpeta, f);
+      if (ahora - fs.statSync(ruta).mtimeMs > dias * 864e5) fs.rmSync(ruta, { force: true });
+    }
+  } catch { /* sin memoria no pasa nada */ }
+}
+
 /**
  * Sintetiza con Gemini. Devuelve { archivo, duracion, palabras }, con los
  * tiempos de cada palabra resueltos por alineación (ver alinear.mjs).
@@ -118,6 +158,10 @@ export function segundosDeWav(buf) {
 export async function decirGemini(texto, destino, {
   voz = VOZ_POR_DEFECTO, indicacion = ESTILO_POR_DEFECTO, intentos = 4, fetchFn = fetch,
 } = {}) {
+  // Antes de gastar un audio: ¿ya se pidió exactamente esto?
+  const claveDeMemoria = claveDeVoz(texto, voz, indicacion);
+  const guardado = leerDeLaMemoriaDeVoz(claveDeMemoria, destino);
+  if (guardado) return guardado;
   const k = clave();
   if (!k) throw new Error('falta GEMINI_API_KEY_REDES (en el entorno o en .env)');
   fs.mkdirSync(path.dirname(destino), { recursive: true });
@@ -191,7 +235,9 @@ export async function decirGemini(texto, destino, {
     fs.rmSync(crudo, { force: true });
 
     const { palabras, duracion, anclasUsadas } = await alinear(texto, destino);
-    return { archivo: destino, duracion, palabras, anclasUsadas };
+    const resultado = { archivo: destino, duracion, palabras, anclasUsadas };
+    guardarEnLaMemoriaDeVoz(claveDeMemoria, resultado);
+    return resultado;
   }
   throw ultimoError ?? new Error('no se pudo sintetizar');
 }

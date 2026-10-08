@@ -94,7 +94,7 @@ test('elegirFoto: Gemini elige una candidata sin marca', async () => {
   const candidatas = conDatos(['ElDiario', 'Campeones']);
   const fetchFn = fetchGemini({
     elegida: 'B', razon: 'mejor encuadre',
-    fotos: [{ letra: 'A', tiene_marca: false }, { letra: 'B', tiene_marca: false }],
+    fotos: [{ letra: 'A', tiene_marca: false, menor: false }, { letra: 'B', tiene_marca: false, menor: false }],
   });
   const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(r.proveedor, 'gemini');
@@ -102,12 +102,27 @@ test('elegirFoto: Gemini elige una candidata sin marca', async () => {
   assert.equal(r.razon, 'mejor encuadre');
 });
 
+// I-4 (8/10/2026): una foto que la IA no evaluó no es "sin marca y sin menor": es "sin evaluar".
+test('elegirFoto: una foto sin evaluación explícita de marca y de menor no se elige', async () => {
+  const nota = { titulo: 't', seccion: 'Balcarce' };
+  const candidatas = conDatos(['Local1', 'Local2']);
+  // La IA elige B pero no dijo nada de "menor" (o no devolvió la evaluación).
+  for (const fotos of [[{ letra: 'A', tiene_marca: false, menor: false }, { letra: 'B', tiene_marca: false }], [{ letra: 'A', tiene_marca: false, menor: false }], []]) {
+    const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn: fetchGemini({ elegida: 'B', razon: 'x', fotos }) });
+    assert.equal(r.elegida, null, JSON.stringify(fotos));
+    assert.match(r.razon, /no evaluó/);
+  }
+  // Y si la elegida está marcada, el reemplazo también tiene que estar evaluado.
+  const r2 = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn: fetchGemini({ elegida: 'A', razon: 'x', fotos: [{ letra: 'A', tiene_marca: true }, { letra: 'B', tiene_marca: false }] }) });
+  assert.equal(r2.elegida, null, 'la de reemplazo sin evaluar de menor no sirve');
+});
+
 test('elegirFoto: si la IA elige (mal) la marcada, usa la otra sin marca en su lugar (28/09, Hernán: "aunque no sea la ideal")', async () => {
   const nota = { titulo: 't', seccion: 'Balcarce' };
   const candidatas = conDatos(['Local1', 'Local2']);
   const fetchFn = fetchGemini({
     elegida: 'A', razon: 'la mejor',
-    fotos: [{ letra: 'A', tiene_marca: true, detalle: 'logo abajo a la derecha' }, { letra: 'B', tiene_marca: false }],
+    fotos: [{ letra: 'A', tiene_marca: true, detalle: 'logo abajo a la derecha' }, { letra: 'B', tiene_marca: false, menor: false }],
   });
   const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(r.elegida.medio, 'Local2');
@@ -145,7 +160,7 @@ test('elegirFoto: si Gemini falla, prueba con Groq', async () => {
     return {
       ok: true,
       json: async () => ({
-        choices: [{ message: { content: JSON.stringify({ elegida: 'A', razon: 'ok', fotos: [{ letra: 'A', tiene_marca: false }, { letra: 'B', tiene_marca: false }] }) } }],
+        choices: [{ message: { content: JSON.stringify({ elegida: 'A', razon: 'ok', fotos: [{ letra: 'A', tiene_marca: false, menor: false }, { letra: 'B', tiene_marca: false, menor: false }] }) } }],
       }),
     };
   };
@@ -165,7 +180,7 @@ test('elegirFoto: a Groq nunca le manda más de 3 fotos (límite documentado de 
     imagenesEnviadas = body.messages[0].content.filter((c) => c.type === 'image_url').length;
     return {
       ok: true,
-      json: async () => ({ choices: [{ message: { content: JSON.stringify({ elegida: 'A', razon: 'ok', fotos: [{ letra: 'A', tiene_marca: false }, { letra: 'B', tiene_marca: false }, { letra: 'C', tiene_marca: false }] }) } }] }),
+      json: async () => ({ choices: [{ message: { content: JSON.stringify({ elegida: 'A', razon: 'ok', fotos: [{ letra: 'A', tiene_marca: false, menor: false }, { letra: 'B', tiene_marca: false, menor: false }, { letra: 'C', tiene_marca: false, menor: false }] }) } }] }),
     };
   };
   const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: 'r', fetchFn });
@@ -247,7 +262,7 @@ test('elegirFotoParaNota: si una fuente sirve, ni pregunta por la persona públi
     if (String(url).includes('generativelanguage')) {
       const body = JSON.parse(init.body);
       if (body.contents[0].parts.length === 1) preguntoPersona = true; // sin imágenes: sería el pedido de persona
-      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false }] }) }] } }] }) };
+      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false, menor: false }] }) }] } }] }) };
     }
     if (url === 'https://a.com/n') return { ok: true, text: async () => '<meta property="og:image" content="https://a.com/f.jpg">' };
     if (url === 'https://a.com/f.jpg') return { ok: true, headers: { get: () => 'image/jpeg' }, arrayBuffer: async () => Buffer.from('abc') };

@@ -29,6 +29,7 @@ import {
   guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
+import { revisarTexto } from '../redes/guiones.mjs';
 import { nombreDeEvento } from '../web/lib/eventos.js';
 import {
   PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, piezasPublicadasHoy, historiasQueSobran,
@@ -193,6 +194,10 @@ function leerDatos() {
 
 // --- el plan ---------------------------------------------------------------
 
+/** Más viejo que esto, portada.json ya no sirve para el clima ni la farmacia. */
+export const EDAD_MAXIMA_DE_LA_PORTADA_HORAS = 2;
+const PIEZAS_QUE_ENVEJECEN = ['clima-manana', 'clima-noche', 'farmacia'];
+
 export function planDelDia(datos, {
   libro = null, fecha = new Date(), estado = leerEstado(), eventos = null,
   // Piezas que se piden aunque hoy no les toque (para armarlas de antemano: `--incluir=` y reels/fijas.mjs).
@@ -229,7 +234,7 @@ export function planDelDia(datos, {
   // 7:00, con ventana hasta las 22:00, así la primera vuelta del reloj que lo
   // ve lo pide) lo dice avisoDeClima, en redes/piezas.mjs: el reloj usa la
   // misma función y pide el mismo nombre que acá se arma.
-  const a = avisoDeClima(datos.clima);
+  const a = avisoDeClima(datos.clima, fecha);
   if (a) {
     piezas.push({
       tipo: 'historia',
@@ -238,7 +243,7 @@ export function planDelDia(datos, {
       titulo: a.titulo,
       motivo: 'aviso de clima · sale apenas se detecta, sin esperar horario',
       seccion: 'Clima',
-      guion: `${a.titulo}. ${a.texto}`,
+      guion: `${a.titulo}. ${a.texto} Radar Balcarce.`,
       // "Historia diaria" con el recuadro del aviso: el título del aviso
       // manda (es lo que hay que ver de reojo) y abajo lo que hay que saber.
       svg: placaClima({
@@ -536,6 +541,17 @@ export function planDelDia(datos, {
     if (p) { p.fueraDeTecho = true; p.motivo = `${p.motivo} · no sale: el día ya tiene ${REGLAS.historiasMaximasPorDia} historias`; }
   }
 
+  // Si la web lleva horas congelada, portada.json es de hace rato: el clima, el aviso de clima y la farmacia hablarían de ayer ("Buen día"
+  // con la temperatura de la madrugada, o la farmacia que ya no es de turno). Esas piezas no se arman hasta que la portada se renueve (C-15).
+  const edadHoras = datos.generado ? (fecha.getTime() - Date.parse(datos.generado)) / 3600e3 : 0;
+  if (edadHoras > EDAD_MAXIMA_DE_LA_PORTADA_HORAS) {
+    for (const p of [...piezas]) {
+      if (PIEZAS_QUE_ENVEJECEN.includes(p.nombre) || p.nombre?.startsWith('aviso')) piezas.splice(piezas.indexOf(p), 1);
+    }
+    console.warn(`  la portada tiene ${edadHoras.toFixed(1)} horas: no se arman el clima ni la farmacia hasta que la web se renueve.`);
+    return { piezas, turno, portadaVieja: true };
+  }
+
   return { piezas, turno };
 }
 
@@ -580,6 +596,13 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
           fs.copyFileSync(fija.ruta, destino);
           r = { mp4: destino, duracion: fija.duracion ?? 0, historia: null, vozUsada: `fija hasta el ${fija.hasta}, no gasta voz` };
         } else {
+          // R-5 (8/10/2026): el control de textos corre ANTES de gastar el cupo de voz. Es un aviso (no frena la pieza):
+          // si dice algo que el criterio prohíbe, queda a la vista en la corrida para arreglarlo.
+          const dudas = revisarTexto(p.guion, { tipo: 'voz', momento: p.momento });
+          if (dudas.length) {
+            console.log(`\x1b[33m    AVISO\x1b[0m el texto de ${p.nombre} no cumple el criterio: ${dudas.join('; ')}`);
+            if (process.env.GITHUB_ACTIONS) console.log(`::warning::${p.nombre}: el texto no cumple el criterio de las redes (${dudas.join('; ')})`);
+          }
           r = await armarReel(p, SALIDA);
         }
         manifiesto.push({

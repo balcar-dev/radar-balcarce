@@ -14,7 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken, PAGINA_DE_FACEBOOK } from './meta.mjs';
-import { leerJson as leer } from '../ingesta/json.mjs';
+import { leerJson as leer, leerJsonEstricto } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes, esLimiteDeMeta, posteoYaPublicado, comoSaleEnFacebook, ESPEJO } from './espejo.mjs';
 import { FOTO_EN_INSTAGRAM } from '../web/lib/tarjeta-diseno.js';
@@ -62,7 +62,7 @@ async function verificar() {
 async function facebook() {
   const { token, api } = cliente();
   const portada = leer(PORTADA, { notas: [] });
-  const libro = leer(LIBRO, libroNuevo());
+  const libro = leerJsonEstricto(LIBRO, libroNuevo());
   libro.facebook ??= {};
   // El mismo posteo de Facebook, espejado como foto en el feed de
   // Instagram: misma noticia en las dos redes, con la tarjeta propia
@@ -205,7 +205,7 @@ async function piezas() {
     console.log('  No hay piezas armadas (falta reels/salida/piezas.json).');
     return;
   }
-  const libro = leer(LIBRO, libroNuevo());
+  const libro = leerJsonEstricto(LIBRO, libroNuevo());
   // --destino=instagram | facebook | ambas (por defecto). La primera red de la
   // lista es la que manda: decide si la pieza está pendiente.
   const destino = (process.argv.find((a) => a.startsWith('--destino=')) ?? '--destino=ambas').slice(10);
@@ -236,7 +236,7 @@ async function enlaces() {
     return;
   }
   const api = crearCliente({ token, paginaId: PAGINA });
-  const libro = leer(LIBRO, libroNuevo());
+  const libro = leerJsonEstricto(LIBRO, libroNuevo());
   try {
     const cambios = await completarEnlaces({ api, libro });
     if (cambios) fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);

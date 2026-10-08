@@ -10,6 +10,7 @@ import {
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO, TITULO_LOTERIA,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
+import { menorPorEdad } from './menores.mjs';
 import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { decodificar } from './articulo.mjs';
@@ -710,6 +711,9 @@ export function semaforoDelTexto(textoCrudo, {
     if (corroborada && AMARILLO_QUE_SE_SUELTA_SI_LA_CONFIRMAN.includes(p)) continue;
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
   }
+  // Una persona menor de 18 años dicha por su edad ("una chica de 16 años"): espera a una persona, también en el texto entero.
+  const menor = menorPorEdad(texto);
+  if (menor) return { color: 'amarillo', motivo: `necesita ojo humano: "${menor}"` };
   if (!soloMenores && conMuerte) {
     for (const p of REGLAS_SEMAFORO.amarilloMuerte ?? []) {
       if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
@@ -901,9 +905,10 @@ async function climaDeMetNo() {
   return {
     ahora: {
       temp: Math.round(det.air_temperature),
-      // met.no no da sensación térmica: se usa la temperatura real antes
-      // que inventar un número.
-      sensacion: Math.round(det.air_temperature),
+      // met.no no da sensación térmica: no se inventa (antes se repetía la
+      // temperatura y la web decía "sensación térmica" igual a la temperatura;
+      // 8/10/2026). Todo lo que la muestra se salta el dato si es null.
+      sensacion: null,
       humedad: Math.round(det.relative_humidity),
       // Viene en metros por segundo, hay que pasarlo a km/h.
       viento: Math.round(det.wind_speed * 3.6),
@@ -1572,7 +1577,7 @@ export async function ingestar({
 
   if (clima) {
     const c = clima.ahora;
-    log(`\n\x1b[1mCLIMA AHORA\x1b[0m\n  ${c.temp}° · ${c.cielo} · sensación térmica ${c.sensacion}° · viento ${c.rumbo} ${c.viento} km/h · humedad ${c.humedad}%`);
+    log(`\n\x1b[1mCLIMA AHORA\x1b[0m\n  ${c.temp}° · ${c.cielo} · ${c.sensacion != null ? `sensación térmica ${c.sensacion}° · ` : ''}viento ${c.rumbo} ${c.viento} km/h · humedad ${c.humedad}%`);
     log(`  ${clima.dias.map((d) => `${d.dia} ${d.max}°/${d.min}°`).join('  ')}`);
   }
 
@@ -1687,7 +1692,7 @@ function armarPreview(d) {
     ${c ? `<section>
       <h2>El clima ahora</h2>
       <div class="temp">${c.temp}°</div>
-      <div style="font-size:13px;color:var(--suave);margin-top:6px;">${esc(c.cielo)} · sensación térmica ${c.sensacion}°<br>Viento ${esc(c.rumbo)} ${c.viento} km/h · humedad ${c.humedad}%</div>
+      <div style="font-size:13px;color:var(--suave);margin-top:6px;">${esc(c.cielo)}${c.sensacion != null ? ` · sensación térmica ${c.sensacion}°` : ''}<br>Viento ${esc(c.rumbo)} ${c.viento} km/h · humedad ${c.humedad}%</div>
       <div class="dias">${d.clima.dias.map((x) => `<div><b>${esc(x.dia)}</b>${x.max}°/${x.min}°<br><span style="color:var(--suave)">${x.lluvia}%</span></div>`).join('')}</div>
       <div style="margin-top:10px;font-size:11px;color:var(--suave)">Fuente: Open-Meteo</div>
     </section>` : ''}

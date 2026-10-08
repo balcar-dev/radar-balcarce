@@ -64,7 +64,7 @@ concurrency:
 
 jobs:
   redes:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     permissions:
       contents: write # para guardar el libro de lo ya publicado
@@ -126,12 +126,30 @@ jobs:
         run: |
           n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
 
+      # La memoria de voces (C-16, 8/10/2026): un texto con la misma voz y el mismo estilo se pide UNA vez al día; si la pieza se arma de
+      # nuevo (falló ffmpeg, Meta contestó con error, el reloj la volvió a pedir) se reusa el audio y no se gasta cupo (reels/voz-gemini.mjs).
+      - name: Restaurar la memoria de voces
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/voz
+          key: voz-${{ github.run_id }}
+          restore-keys: |
+            voz-
+
       - name: Armar las piezas que tocan
         id: armar
         if: always() && steps.instalar.outcome == 'success'
         run: node reels/plan.mjs --generar --solo=${{ steps.reloj.outputs.solo }}
         env:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+          VOZ_CACHE: ${{ github.workspace }}/.cache/voz
+
+      - name: Guardar la memoria de voces
+        if: always() && hashFiles('.cache/voz/*.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/voz
+          key: voz-${{ hashFiles('.cache/voz/*.json') }}
 
       - name: Publicar en Instagram y en la página de Facebook
         if: always() && steps.armar.outcome == 'success'

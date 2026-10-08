@@ -26,13 +26,14 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      // El feed es para programas, no para el índice de búsqueda. El panel del
-      // celular (29/09) es una herramienta de la redacción, no una página.
-      disallow: ['/feed.xml', '/panel/'],
+      // El panel del celular (29/09) es una herramienta de la redacción, no una página.
+      // El feed ya NO está bloqueado (8/10/2026, V2-13): Google lo usa para descubrir notas
+      // nuevas, y el feed no es una página que compita en el índice (los lectores de RSS no
+      // miran robots.txt, pero Google sí).
+      disallow: ['/panel/'],
     },
     // El de noticias es aparte: Google Noticias y Discover lo miran solo,
     // con las reglas propias de ese sitemap (ver sitemap-news.xml/route.js).
     sitemap: [`${base}/sitemap.xml`, `${base}/sitemap-news.xml`],
-    host: base,
   };
 }

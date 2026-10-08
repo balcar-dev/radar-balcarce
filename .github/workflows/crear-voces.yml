@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: 'crear = crea los seis candidatos y los prueba; recrear = vuelve a crear la locutora C y el locutor A (dos versiones de cada uno) en el proyecto de la clave; dialogo = una charla entre las dos voces; dialogo2 = la misma charla con un estilo por intervención, pausas y un "mhm"; dialogo3 = un noticiero con dos lectores que se turnan las notas, sin charla; listar = la biblioteca de Google; borrar = quita una voz propia'
+        description: 'crear = crea los seis candidatos y los prueba; recrear = vuelve a crear la locutora C y el locutor A (dos versiones de cada uno) en el proyecto de la clave; dialogo = una charla entre las dos voces; dialogo2 = la misma charla con un estilo por intervención, pausas y un "mhm"; dialogo3 = un noticiero con dos lectores que se turnan las notas, sin charla; listar = la biblioteca de Google; borrar = quita una voz propia (las dos de producción piden confirmación). Gasto de voz: crear ≈ 12 audios, recrear ≈ 8, dialogo ≈ 8 a 10, listar y borrar 0; el cupo gratis es de 10 por día'
         type: choice
         options: [crear, recrear, dialogo, dialogo2, dialogo3, listar, borrar]
         default: dialogo
@@ -33,7 +33,7 @@ on:
         type: string
         default: 'voice_cdljkn0jpmk6'
       borrar_id:
-        description: 'Sólo para borrar: el id de la voz que se quita (voice_…)'
+        description: 'Sólo para borrar: el id de la voz que se quita (voice_…); si es una de producción, agregar :borrar-de-produccion al final'
         type: string
         default: ''
 
@@ -42,7 +42,7 @@ permissions:
 
 jobs:
   voces:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4

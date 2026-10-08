@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T14:02:56.486Z",
- "portada": 40,
- "archivo": 1072,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-08T19:53:23.223Z",
+ "portada": 56,
+ "archivo": 1101,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-08T14:02:56.527Z",
+  "generado": "2026-10-08T19:53:23.260Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T12:07:47.663Z"
    },
    {
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T13:06:32.914Z"
    },
    {
@@ -43,8 +43,8 @@
     "que": "La agenda del fin de semana",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "antes",
-    "salio": null
+    "momento": "cerrada",
+    "salio": "2026-10-08T15:09:29.403Z"
    },
    {
     "nombre": "noticia2",
@@ -53,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
-    "salio": null
+    "momento": "en-hora",
+    "salio": "2026-10-08T18:36:11.280Z"
    },
    {
     "nombre": "farmacia",
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T13:06:32.914Z",
     "segundos": null,
     "notas": [
@@ -124,29 +124,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 54,
+    "momento": "en-hora",
+    "salio": "2026-10-08T18:36:11.280Z",
+    "segundos": null,
     "notas": [
      {
-      "id": "r7ox1t",
-      "titulo": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
-      "seccion": "Economía"
+      "id": "f6j0rt",
+      "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "id": "jul321",
+      "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "jul3dm",
+      "titulo": "El Diario cumple 31 años como medio gráfico local",
       "seccion": "Balcarce"
      },
      {
-      "id": "w8t322",
-      "titulo": "El consorcio de Rowing gana la concesión de AySA por millones",
-      "seccion": "Economía"
-     },
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
+      "id": "vnuraj",
+      "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 49,
     "notas": [
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Agro"
+     },
+     {
+      "id": "11yxcy2",
+      "titulo": "Julián Álvarez rompe con su representante tras la fallida salida",
       "seccion": "Fútbol"
      },
      {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+      "id": "zzuoo4",
+      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
       "seccion": "Balcarce"
      },
      {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
-      "seccion": "Balcarce"
+      "id": "19k7tmn",
+      "titulo": "Mauro Icardi y Wanda Nara se divorcian oficialmente en Italia",
+      "seccion": "Argentina"
      }
     ]
    }
@@ -188,18 +188,44 @@
      "id": "1cpkl2f",
      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
      "cuando": "2026-10-08T12:35:25.263Z"
+    },
+    {
+     "id": "16tb2vo",
+     "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+     "cuando": "2026-10-08T14:45:24.070Z"
+    },
+    {
+     "id": "1rf94dp",
+     "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
+     "cuando": "2026-10-08T16:35:20.061Z"
+    },
+    {
+     "id": "jul321",
+     "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
+     "cuando": "2026-10-08T18:06:50.188Z"
+    },
+    {
+     "id": "6vefne",
+     "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+     "cuando": "2026-10-08T19:40:07.630Z"
     }
    ],
    "cola": [
     {
-     "id": "159oig4",
-     "titulo": "Mini Club y Sportivo Trabajo ganan en la Liga Local de Básquet",
-     "seccion": "Deportes",
+     "id": "zzuoo4",
+     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "175ztwv",
+     "titulo": "UATRE Balcarce saluda al personal rural en su día",
+     "seccion": "Agro",
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-08T14:05:25.263Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-08T21:10:07.630Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

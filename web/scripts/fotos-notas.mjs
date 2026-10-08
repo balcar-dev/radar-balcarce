@@ -188,7 +188,10 @@ export function fotoDeLaWeb(banco, id) {
 export function conFotosDelBanco(notas = [], banco = {}) {
   for (const n of notas) {
     const foto = fotoDeLaWeb(banco, n.id);
-    if (foto) n.foto = foto;
+    // Policiales sin fuente oficial no lleva foto real, ni aunque esté en el banco o la haya sumado una persona desde el panel
+    // (8/10/2026: "Choque frontal en la Ruta 226" salía con una foto de El Eco de Tandil). Regla firme: CRITERIO-EDITORIAL.md, "Las fotos".
+    if (foto && elegiblePorSeccion(n)) n.foto = foto;
+    else if (foto) delete n.foto;
   }
   return notas;
 }

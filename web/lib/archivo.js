@@ -51,17 +51,18 @@ export const DIAS_DE_RETIRADAS = 7;
  * "para no juntar información sin sentido"). Pasada una semana, una nota ya no
  * se puede estrenar (llegaTarde), así que la lista no la necesita. Se quedan las
  * que la ingesta todavía trae (enLaIngesta): mientras un feed la muestre, la
- * lista es lo único que la frena. Sin fecha (`cuando`), también se quedan.
+ * lista es lo único que la frena. Sin fecha (`cuando`), también se quedan. Y las que siguen aprobadas por una persona en las decisiones
+ * (`conAprobacion`): sin la lista, la aprobación las volvería a publicar.
  * `hoy` es el día de Balcarce, "AAAA-MM-DD".
  */
-export function podarRetiradas(json, { hoy, dias = DIAS_DE_RETIRADAS, enLaIngesta = new Set() } = {}) {
+export function podarRetiradas(json, { hoy, dias = DIAS_DE_RETIRADAS, enLaIngesta = new Set(), conAprobacion = new Set() } = {}) {
   const notas = json && typeof json === 'object' && json.notas && typeof json.notas === 'object' ? json.notas : {};
   const limite = Date.parse(`${hoy}T00:00:00Z`) - dias * 86400000;
   const quedan = {};
   const quitadas = [];
   for (const [id, n] of Object.entries(notas)) {
     const t = Date.parse(`${String(n?.cuando ?? '').slice(0, 10)}T00:00:00Z`);
-    if (Number.isFinite(t) && t < limite && !enLaIngesta.has(id)) quitadas.push(id);
+    if (Number.isFinite(t) && t < limite && !enLaIngesta.has(id) && !conAprobacion.has(id)) quitadas.push(id);
     else quedan[id] = n;
   }
   return { json: { ...json, notas: quedan }, quitadas };
@@ -120,9 +121,10 @@ export function cambiosDeLaAuditoria(json) {
 }
 
 /**
- * Aplica esos pares al texto de la nota. Sólo si el fragmento está UNA vez en el campo: si el texto cambió (se reescribió, lo corrigió
- * una persona), el par ya no calza y no se hace nada. A diferencia de `conCorreccion`, no marca la nota como revisada por la redacción:
- * nadie de la redacción la revisó.
+ * Aplica esos pares al texto de la nota. Sólo si el fragmento está UNA vez en el campo, como palabra entera (no pegado a otras letras),
+ * y si lo nuevo no contiene a lo viejo: de otro modo cada corrida volvía a corregir el texto ya corregido y lo estiraba ("se contrajo 1
+ * por ciento" → "… en" → "… en en en…", 08/10/2026). Si el texto cambió (se reescribió, lo corrigió una persona), el par ya no calza y no
+ * se hace nada. A diferencia de `conCorreccion`, no marca la nota como revisada por la redacción: nadie de la redacción la revisó.
  */
 export function conCambiosDeLaAuditoria(nota, cambios) {
   const lista = nota?.id ? cambios?.get(nota.id) : null;
@@ -130,7 +132,9 @@ export function conCambiosDeLaAuditoria(nota, cambios) {
   const salida = { ...nota };
   for (const c of lista) {
     const texto = salida[c.campo];
-    if (typeof texto === 'string' && texto.split(c.antes).length === 2) salida[c.campo] = texto.replace(c.antes, () => c.despues);
+    if (typeof texto !== 'string' || c.despues.includes(c.antes)) continue;
+    const buscado = new RegExp(`(?<![\\p{L}\\p{N}])${c.antes.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}\\p{N}])`, 'gu');
+    if ([...texto.matchAll(buscado)].length === 1) salida[c.campo] = texto.replace(buscado, () => c.despues);
   }
   return salida;
 }
@@ -187,8 +191,11 @@ export const DIAS_DE_ARCHIVO = 180;
 /** Tope de notas con página. Cada una son varios archivos en el sitio (la
  *  página y sus dos imágenes) y Cloudflare Pages acepta hasta 20.000 archivos
  *  por despliegue; además, cada nota más es tiempo de compilación. Si se pasa,
- *  se quedan primero las que salieron en las redes y después las más nuevas. */
-const MAXIMO_EN_ARCHIVO = 2500;
+ *  se quedan primero las que salieron en las redes y después las más nuevas.
+ *  8/10/2026 (C-6): subió de 2.500 a 3.500 (≈10.500 archivos, con margen bajo los 20.000) y lo que sale del archivo por edad o por tope
+ *  ya no se pierde: va al histórico por mes (`bajasDelArchivo`, `web/data/historico/AAAA-MM.json`). Más allá hace falta armar las viejas
+ *  en el momento (MEJORAS C-6). */
+const MAXIMO_EN_ARCHIVO = 3500;
 
 const HORA = 3600e3;
 const tiempo = (n) => new Date(n?.fecha).getTime();
@@ -304,6 +311,39 @@ export const sinPuntaje = ({ relevancia, ...resto }) => resto;
 
 /** El texto de web/data/archivo.json. Una nota por línea: el archivo pesa
  *  megas y así cada corrida cambia sólo las líneas de las notas que cambiaron. */
+/**
+ * ¿Se puede guardar el archivo nuevo? No si perdió más del 20 % de las notas del anterior de un golpe (C-5, 8/10/2026): el archivo
+ * envejece de a poco; una baja así es un archivo roto o una lectura que falló, no un día normal. Con menos de 50 notas no se mira.
+ * Para forzarla a propósito (un ajuste grande hecho a mano) se corre con ARCHIVO_PERMITIR_BAJA=1.
+ */
+export function guardiaDelArchivo(antes = 0, despues = 0, { minimo = 50, tolerancia = 0.2 } = {}) {
+  if (antes < minimo || despues >= antes * (1 - tolerancia)) return { ok: true };
+  return { ok: false, motivo: `el archivo pasaría de ${antes} a ${despues} notas (más de ${Math.round(tolerancia * 100)} % menos); no se guarda` };
+}
+
+/**
+ * Las notas que estaban en el archivo y ya no están por EDAD o por TOPE (no por haber sido retiradas: una retirada a mano o por el
+ * semáforo no se guarda en ningún lado). Van al histórico (C-6, 8/10/2026: "guardar el 100 % de las notas, año tras año").
+ */
+export function bajasDelArchivo(antes = [], despues = [], retiradas = new Set()) {
+  const quedan = new Set(despues.map((n) => n?.id));
+  return antes.filter((n) => n?.id && !quedan.has(n.id) && !retiradas.has(n.id));
+}
+
+/** El mes de una nota ("2026-10") para elegir su archivo del histórico; "sin-fecha" si no la tiene. */
+export function mesDeLaNota(n) {
+  const m = /^(\d{4}-\d{2})/.exec(String(n?.fecha ?? ''));
+  return m ? m[1] : 'sin-fecha';
+}
+
+/** El histórico de un mes con las bajas nuevas sumadas (sin repetir por id; manda lo que ya estaba). */
+export function conBajasEnElHistorico(historico, bajas = []) {
+  const notas = Array.isArray(historico?.notas) ? [...historico.notas] : [];
+  const ids = new Set(notas.map((n) => n?.id));
+  for (const n of bajas) if (n?.id && !ids.has(n.id)) { notas.push(n); ids.add(n.id); }
+  return { notas };
+}
+
 export function comoArchivoJson(notas = []) {
   return `{"notas":[\n${notas.map((n) => JSON.stringify(n)).join(',\n')}\n]}\n`;
 }

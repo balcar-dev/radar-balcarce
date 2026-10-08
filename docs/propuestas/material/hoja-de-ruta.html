@@ -1,0 +1,578 @@
+<title>Hoja de ruta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Idea: seis escalones, de lo más simple a lo más complejo; cada mejora es una ficha con tiempo, costo y riesgo. */
+:root{--bg:#F3F6F7;--panel:#FFFFFF;--ink:#102A33;--muted:#51666F;--line:#D3DDE1;--accent:#0E8F63;--soft:#E3F2EC;
+ --n0:#1E8E5A;--n1:#2F6FB3;--n2:#0E8F63;--n3:#9A7209;--n4:#B4540A;--n5:#8A4FBF;
+ --red:#C0392B;--red-soft:#F8E1DE;--warn-soft:#FBEBDD;
+ --f-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--f-body:'Source Sans 3','Segoe UI',system-ui,sans-serif;--f-mono:'JetBrains Mono',ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B171C;--panel:#12242B;--ink:#E6EFF2;--muted:#9DB2BA;--line:#25404A;--accent:#3CCB93;--soft:#12352B;
+ --n0:#3CCB93;--n1:#6FB0F0;--n2:#3CCB93;--n3:#E6B93C;--n4:#F0A060;--n5:#C79AF0;--red:#F07A6B;--red-soft:#3D1D1A;--warn-soft:#3A2614;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B171C;--panel:#12242B;--ink:#E6EFF2;--muted:#9DB2BA;--line:#25404A;--accent:#3CCB93;--soft:#12352B;
+ --n0:#3CCB93;--n1:#6FB0F0;--n2:#3CCB93;--n3:#E6B93C;--n4:#F0A060;--n5:#C79AF0;--red:#F07A6B;--red-soft:#3D1D1A;--warn-soft:#3A2614;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:780px;margin-inline:auto}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,6vw,3rem);font-weight:700}
+h2{font-size:clamp(1.4rem,4.5vw,1.9rem);font-weight:700;margin-top:48px}
+p{margin:.6em 0}
+.lead{font-size:1.12rem;color:var(--muted)}
+code{font-family:var(--f-mono);font-size:.82em;background:var(--soft);padding:1px 6px;border-radius:5px;overflow-wrap:anywhere}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+header.top{padding-block:40px 8px}
+nav.index{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);z-index:5;display:flex;gap:8px;overflow-x:auto;margin-inline:-16px;padding-inline:16px}
+nav.index a{white-space:nowrap;font-size:.9rem;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--panel)}
+a:focus-visible,summary:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.say{background:var(--soft);border-radius:12px;padding:14px 18px;margin-block:16px}
+.say b{font-family:var(--f-display)}
+.stairs{display:grid;gap:8px;margin-top:14px}
+.stair{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;text-decoration:none;color:var(--ink)}
+.stair .num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;color:#fff}
+.stair .tt{font-family:var(--f-display);font-weight:700;line-height:1.2}
+.stair small{display:block;color:var(--muted);font-family:var(--f-body)}
+.stair .cnt{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);white-space:nowrap}
+.first{counter-reset:p;list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px}
+.first li{counter-increment:p;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px 8px 46px;position:relative}
+.first li::before{content:counter(p);position:absolute;left:10px;top:8px;width:26px;height:26px;border-radius:7px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:.9rem}
+.first small{color:var(--muted)}
+.lvl{margin-top:36px;border-top:4px solid var(--c);padding-top:14px}
+.lvl h2{margin-top:0}
+.lvl .meta{color:var(--muted)}
+.tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:10px}
+.item.hecho{opacity:.55}
+.item label{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;cursor:pointer}
+.item input{width:20px;height:20px;margin-top:3px;accent-color:var(--accent)}
+.item .tit{font-family:var(--f-display);font-weight:700;line-height:1.25}
+.item .id{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);margin-right:6px}
+.item p.q{margin:6px 0 8px;padding-left:30px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding-left:30px}
+.chip{font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:1px 10px;color:var(--muted);white-space:nowrap}
+.chip.r-Alto{border-color:var(--red);color:var(--red)}
+.chip.r-Medio{border-color:var(--n4);color:var(--n4)}
+.chip.r-Bajo{border-color:var(--n0);color:var(--n0)}
+.flag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 8px;border-radius:8px;margin-left:6px}
+.flag.u{background:var(--red-soft);color:var(--red)}
+.flag.k{background:var(--soft);color:var(--accent)}
+.flag.x{background:var(--warn-soft);color:var(--n4)}
+.dep{padding-left:30px;color:var(--muted);font-size:.88rem;margin-top:6px}
+.prog{margin-top:10px;color:var(--muted);font-size:.9rem}
+.bar{height:10px;background:var(--line);border-radius:5px;overflow:hidden;margin-top:6px}
+.bar span{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+ol.dec{padding-left:22px}
+footer{margin-top:48px;color:var(--muted);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){.bar span{transition:none}}
+</style>
+<div class="wrap">
+<header class="top">
+ <div class="eyebrow">Radar Balcarce · 8 de octubre de 2026</div>
+ <h1>Hoja de ruta de mejoras</h1>
+ <p class="lead">Todo lo que hablamos y anotamos, <b>ordenado de lo más simple a lo más complejo</b>: 110 mejoras en 6 escalones. Cada ficha dice qué es, cuánto lleva, cuánto cuesta, qué riesgo tiene y de qué depende. <b>No se aplicó nada.</b></p>
+</header>
+<nav class="index" aria-label="Escalones"><a href="#n0">Nivel 0</a><a href="#n1">Nivel 1</a><a href="#n2">Nivel 2</a><a href="#n3">Nivel 3</a><a href="#n4">Nivel 4</a><a href="#n5">Nivel 5</a><a href="#decidir">Decisiones</a></nav>
+<h2>Cómo se ordenó</h2>
+<p>La complejidad sale de cuatro cosas: <b>cuántos archivos toca</b>, <b>qué riesgo tiene</b> (si puede frenar la web o publicar algo mal), <b>si depende de otra mejora</b> y <b>si necesita que una persona cree una cuenta o decida algo</b>. Los tiempos son estimaciones mías.</p>
+<div class="stairs">
+<a class="stair" href="#n0"><span class="num" style="background:#1E8E5A">0</span><span class="tt">Arreglar lo que está roto hoy<small>minutos a unas horas</small></span><span class="cnt">5 mejoras</span></a>
+<a class="stair" href="#n1"><span class="num" style="background:#2F6FB3">1</span><span class="tt">Medir sin cambiar nada<small>1 a 4 horas cada uno</small></span><span class="cnt">11 mejoras</span></a>
+<a class="stair" href="#n2"><span class="num" style="background:#0E8F63">2</span><span class="tt">Arreglos chicos de comportamiento<small>medio día cada uno</small></span><span class="cnt">36 mejoras</span></a>
+<a class="stair" href="#n3"><span class="num" style="background:#B7860B">3</span><span class="tt">Mejoras medianas<small>1 a 3 días cada una</small></span><span class="cnt">41 mejoras</span></a>
+<a class="stair" href="#n4"><span class="num" style="background:#B4540A">4</span><span class="tt">Obras grandes<small>1 a 3 semanas cada una</small></span><span class="cnt">13 mejoras</span></a>
+<a class="stair" href="#n5"><span class="num" style="background:#8A4FBF">5</span><span class="tt">Cambios de plataforma y de modelo<small>semanas a meses</small></span><span class="cnt">4 mejoras</span></a>
+</div>
+<div class="say"><b>La idea:</b> primero arreglar lo roto (nivel 0), después medir (nivel 1) para decidir con datos, y recién entonces tocar el comportamiento. <b>⚠</b> marca un error o riesgo que existe hoy y <b>★</b> las de más impacto.</div>
+<h2>Para empezar: 12 pasos sugeridos</h2>
+<ol class="first">
+<li><b>Arreglar las 9 fotos rotas</b> <small>· nivel 0 · 1 a 2 h</small></li>
+<li><b>Ver por qué no corrió la auditoría del lunes 5/10</b> <small>· nivel 0 · 30 min a 2 h</small></li>
+<li><b>Corregir las 14 contradicciones de documentos</b> <small>· nivel 0 · 2 a 4 h</small></li>
+<li><b>Guardar el motivo real de cada fuente caída</b> <small>· nivel 1 · 1 a 2 h</small></li>
+<li><b>Cronometrar cada tramo en el registro</b> <small>· nivel 1 · 1 h</small></li>
+<li><b>Medir el volumen real de IA por día</b> <small>· nivel 1 · 2 a 3 h</small></li>
+<li><b>Contador de voz con aviso a 8 de 10</b> <small>· nivel 1 · 2 a 3 h</small></li>
+<li><b>Recuperar Puntonueve</b> <small>· nivel 2 · 3 a 4 h</small></li>
+<li><b>Crédito en la tapa y las secciones</b> <small>· nivel 2 · 4 h</small></li>
+<li><b>Chequeo de enlaces, imágenes y duplicados como aviso</b> <small>· nivel 2 · 4 h</small></li>
+<li><b>Publicar con una sola impresión del sitio</b> <small>· nivel 3 · 1 a 2 días</small></li>
+<li><b>Miniaturas de 400 px</b> <small>· nivel 3 · 1 día</small></li>
+</ol>
+<p class="prog" id="prog"></p><div class="bar" aria-hidden="true"><span id="progbar"></span></div>
+<section class="lvl" id="n0" style="--c:#1E8E5A"><h2>Nivel 0 · Arreglar lo que está roto hoy</h2><p class="meta">Errores o desfasajes que ya existen. No cambian el comportamiento del sistema y no tienen riesgo. <b>Tiempo:</b> minutos a unas horas.</p>
+<div class="item" data-id="N1"><label><input type="checkbox" id="c-N1"><span><span class="id">N1</span><span class="tit">Arreglar las 9 fotos rotas</span><span class="flag u">⚠ hoy</span></span></label>
+<p class="q">Las notas guardan <code>.png</code> o <code>.webp</code> y el archivo es <code>.jpg</code>. Reasignarlas y hacer que la nota guarde siempre la extensión final.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 1 a 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="N2"><label><input type="checkbox" id="c-N2"><span><span class="id">N2</span><span class="tit">Ver por qué no corrió la auditoría del lunes 5/10</span><span class="flag u">⚠ hoy</span></span></label>
+<p class="q">El archivo sigue con fecha del 28/09. Revisar la corrida en Actions y el vigilante.</p>
+<div class="chips"><span class="chip">Medición</span><span class="chip">⏱ 30 min a 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="G1"><label><input type="checkbox" id="c-G1"><span><span class="id">G1</span><span class="tit">Corregir las 14 contradicciones de documentos</span></span></label>
+<p class="q">Redes prendidas, claves gratis, 22 workflows, documento 13, duración de la corrida, <code>:07/:37</code>, archivo que no existe, fechas de encabezados, <code>TAVILY_API_KEY</code>.</p>
+<div class="chips"><span class="chip">Documentación</span><span class="chip">⏱ 2 a 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="M-doc"><label><input type="checkbox" id="c-M-doc"><span><span class="id">M-doc</span><span class="tit">Corregir las 10 contradicciones de docs de redes</span></span></label>
+<p class="q">Zoom de la placa, ventanas de los repasos, 6 o 7 audios, Reintentar sí commitea, comentarios de "clave paga".</p>
+<div class="chips"><span class="chip">Documentación</span><span class="chip">⏱ 1 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="Sondeos"><label><input type="checkbox" id="c-Sondeos"><span><span class="id">Sondeos</span><span class="tit">Borrar los archivos de sondeo y unir los workflows de diagnóstico</span></span></label>
+<p class="q">Cinco archivos seguros de borrar y ocho workflows manuales que pasan a uno solo. De 22 a unos 14 workflows.</p>
+<div class="chips"><span class="chip">Limpieza</span><span class="chip">⏱ 1 a 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Tu aprobación</div></div>
+</section>
+<section class="lvl" id="n1" style="--c:#2F6FB3"><h2>Nivel 1 · Medir sin cambiar nada</h2><p class="meta">Solo registran información para decidir mejor después. Casi sin riesgo. <b>Tiempo:</b> 1 a 4 horas cada uno.</p>
+<div class="item" data-id="B1"><label><input type="checkbox" id="c-B1"><span><span class="id">B1</span><span class="tit">Guardar el motivo real de cada fuente caída</span></span></label>
+<p class="q">Hoy se tira la causa y solo queda "fetch failed". Registrar si fue tiempo, bloqueo, nombre no encontrado o certificado.</p>
+<div class="chips"><span class="chip">Fuentes</span><span class="chip">⏱ 1 a 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="A6"><label><input type="checkbox" id="c-A6"><span><span class="id">A6</span><span class="tit">Cronometrar cada tramo en el registro</span></span></label>
+<p class="q">Fuentes, IA, fotos, impresión. Hoy los 50 s de fotos son una estimación.</p>
+<div class="chips"><span class="chip">Medición</span><span class="chip">⏱ 1 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="D1-1"><label><input type="checkbox" id="c-D1-1"><span><span class="id">D1-1</span><span class="tit">Medir el volumen real de IA por día</span></span></label>
+<p class="q">Guardar tokens de entrada y salida por pedido durante una semana, para decidir con datos si cambiar de proveedor.</p>
+<div class="chips"><span class="chip">IA</span><span class="chip">⏱ 2 a 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="M1"><label><input type="checkbox" id="c-M1"><span><span class="id">M1</span><span class="tit">Contador de voz con aviso a 8 de 10</span></span></label>
+<p class="q">Un día normal gasta 7 de 10 audios y nadie los cuenta. Contar en el libro y avisar por WhatsApp.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 2 a 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="A7"><label><input type="checkbox" id="c-A7"><span><span class="id">A7</span><span class="tit">Vigilar al vigilante</span></span></label>
+<p class="q">healthchecks.io gratis y un segundo canal de aviso. Sumar los workflows que hoy nadie mira.</p>
+<div class="chips"><span class="chip">Medición</span><span class="chip">⏱ 2 a 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Crear cuenta y pegar un secreto (persona)</div></div>
+<div class="item" data-id="S1"><label><input type="checkbox" id="c-S1"><span><span class="id">S1</span><span class="tit">Cuentas y vencimientos</span></span></label>
+<p class="q">Renovar el dominio por varios años (vence el 21/09/2027, igual que el token de cron-job.org), activar 2FA con códigos de respaldo fuera de la PC, sumar a Andrés como administrador de Meta, Cloudflare y el repositorio, y anotar la versión de la API de Meta (v23, se retira hacia mediados de 2027) entre los vencimientos del vigilante.</p>
+<div class="chips"><span class="chip">Plataforma</span><span class="chip">⏱ 2 a 3 h</span><span class="chip">💲 Dominio (ya se paga)</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Las hace una persona con sus cuentas</div></div>
+<div class="item" data-id="D-priv"><label><input type="checkbox" id="c-D-priv"><span><span class="id">D-priv</span><span class="tit">Revisar los términos de privacidad de las capas gratis de IA</span></span></label>
+<p class="q">En la capa gratis de Gemini el texto enviado puede usarse para mejorar productos. Revisar qué se manda (notas con datos sensibles, menores, víctimas) y si hace falta otra clave o proveedor.</p>
+<div class="chips"><span class="chip">IA</span><span class="chip">⏱ 1 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Una persona lee los términos</div></div>
+<div class="item" data-id="A8"><label><input type="checkbox" id="c-A8"><span><span class="id">A8</span><span class="tit">Contar corridas duplicadas por hora</span></span></label>
+<p class="q">"Actualizar la web" tiene un reloj propio (<code>7,37</code>) además del disparo de cron-job.org. Cada corrida de más gasta cupo de IA y dispara Cloudflare y Redes.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 1 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="RS-0"><label><input type="checkbox" id="c-RS-0"><span><span class="id">RS-0</span><span class="tit">Decidir cómo se publica en YouTube y TikTok</span></span></label>
+<p class="q">Tres caminos: a mano con el video ya armado, con una herramienta de terceros que ya pasó las auditorías (de pago, a confirmar) o con API propia después de aprobar una auditoría. Revisar también las reglas de cada plataforma para voces de IA.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 1 h de lectura y decisión</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Hernán y Andrés deciden</div></div>
+<div class="item" data-id="U0"><label><input type="checkbox" id="c-U0"><span><span class="id">U0</span><span class="tit">Probar el acceso a las fuentes nuevas desde GitHub</span></span></label>
+<p class="q">Desde el entorno de investigación no se pudo abrir ninguna fuente oficial. Un diagnóstico que pruebe cada una desde Actions y diga si responde, el formato y la fecha del último dato.</p>
+<div class="chips"><span class="chip">Notas propias · Todas</span><span class="chip">⏱ 2 a 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Antes de cualquier nota propia nueva</div></div>
+<div class="item" data-id="ECO-1a"><label><input type="checkbox" id="c-ECO-1a"><span><span class="id">ECO-1a</span><span class="tit">Abrir el archivo de combustibles y ver si trae Balcarce</span></span></label>
+<p class="q">Diez minutos desde la PC: si el dataset de precios en surtidor tiene estaciones de Balcarce al día, la nota de la nafta pasa al primer lugar.</p>
+<div class="chips"><span class="chip">Notas propias · Economía</span><span class="chip">⏱ 10 min</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Una persona desde la PC</div></div>
+</section>
+<section class="lvl" id="n2" style="--c:#0E8F63"><h2>Nivel 2 · Arreglos chicos de comportamiento</h2><p class="meta">Cambian una cosa concreta en un archivo o dos, con su prueba. Riesgo bajo. <b>Tiempo:</b> medio día cada uno.</p>
+<div class="item" data-id="B5"><label><input type="checkbox" id="c-B5"><span><span class="id">B5</span><span class="tit">Recuperar Puntonueve</span><span class="flag u">⚠ hoy</span></span></label>
+<p class="q">Es el único medio de Balcarce que falla (5 de cada 6 corridas).</p>
+<div class="chips"><span class="chip">Fuentes</span><span class="chip">⏱ 3 a 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: B1, B4</div></div>
+<div class="item" data-id="P16"><label><input type="checkbox" id="c-P16"><span><span class="id">P16</span><span class="tit">Crédito en la tapa y las secciones</span><span class="flag u">⚠ hoy</span></span></label>
+<p class="q">Un solo componente <code>FotoConCredito</code> para la nota, la tapa, las secciones y los temas (hoy solo la nota muestra crédito). Que el crédito diga autor, licencia con enlace y "(adaptada)" si se recortó; es la ficha C6 del plan.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Hablarlo (decisión del 4/10)</div></div>
+<div class="item" data-id="DEP-1"><label><input type="checkbox" id="c-DEP-1"><span><span class="id">DEP-1</span><span class="tit">Balcarce en la final de los Juegos Bonaerenses (19 al 23/10)</span><span class="flag u">⚠ hoy</span></span></label>
+<p class="q">"Hoy compiten los de Balcarce": una persona carga los finalistas una vez y la nota sale cada mañana. Nombrar disciplinas y categorías, nunca chicos.</p>
+<div class="chips"><span class="chip">Notas propias · Deportes</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="B2"><label><input type="checkbox" id="c-B2"><span><span class="id">B2</span><span class="tit">Reintentar una vez las fuentes que fallan</span></span></label>
+<p class="q">Hoy no reintenta nunca; muchas de las que fallan andan en otras corridas.</p>
+<div class="chips"><span class="chip">Fuentes</span><span class="chip">⏱ 3 a 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: B1</div></div>
+<div class="item" data-id="B3"><label><input type="checkbox" id="c-B3"><span><span class="id">B3</span><span class="tit">Tope de pedidos simultáneos</span></span></label>
+<p class="q">Hoy se piden las 236 a la vez. Limitar a 20 o 30 y no pedir juntos los feeds de un mismo sitio.</p>
+<div class="chips"><span class="chip">Fuentes</span><span class="chip">⏱ 3 a 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: B1</div></div>
+<div class="item" data-id="B4"><label><input type="checkbox" id="c-B4"><span><span class="id">B4</span><span class="tit">Probar User-Agent de navegador, fuente por fuente</span></span></label>
+<p class="q">Para Puntonueve, ESPN, TNT, Mundo Ascenso y los diarios que rechazan lo que no parece un navegador.</p>
+<div class="chips"><span class="chip">Fuentes</span><span class="chip">⏱ 3 a 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: B1</div></div>
+<div class="item" data-id="B6"><label><input type="checkbox" id="c-B6"><span><span class="id">B6</span><span class="tit">Apagar con nota las que nunca andan</span></span></label>
+<p class="q">19 medios sin ninguna nota y 13 que casi siempre fallan, después de intentar arreglarlas.</p>
+<div class="chips"><span class="chip">Fuentes</span><span class="chip">⏱ 2 a 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: B1, B4 y tu decisión</div></div>
+<div class="item" data-id="A4"><label><input type="checkbox" id="c-A4"><span><span class="id">A4</span><span class="tit">No reabrir las notas ya vistas en las páginas raspadas</span></span></label>
+<p class="q">Se abren unas 15 notas una por una en cada corrida.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="A2"><label><input type="checkbox" id="c-A2"><span><span class="id">A2</span><span class="tit">Guardar la memoria de impresión del sitio</span></span></label>
+<p class="q">El registro dice "No build cache found" en cada impresión.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: A6 (para medir el ahorro)</div></div>
+<div class="item" data-id="A5"><label><input type="checkbox" id="c-A5"><span><span class="id">A5</span><span class="tit">Pruebas por cambio de código</span></span></label>
+<p class="q">Que las 1.840 pruebas corran al cambiar código, y en el ciclo quede un control corto. Evita que una prueba mal escrita congele la web.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 3 a 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="P17"><label><input type="checkbox" id="c-P17"><span><span class="id">P17</span><span class="tit">Licencias: cerrar la expresión que acepta CC BY-NC y BY-ND</span></span></label>
+<p class="q">Hoy está latente (el banco solo tiene BY y BY-SA). Corregir y agregar prueba.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 1 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="P13"><label><input type="checkbox" id="c-P13"><span><span class="id">P13</span><span class="tit">Arreglar siempre las tildes conocidas</span></span></label>
+<p class="q">Hoy rechaza una nota con 3 palabras sin tilde aunque sabe arreglarlas.</p>
+<div class="chips"><span class="chip">Redacción</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="P7-10"><label><input type="checkbox" id="c-P7-10"><span><span class="id">P7-10</span><span class="tit">Unificar números y tono en el criterio</span></span></label>
+<p class="q">"Tres intentos" (son 3, 4 o 5), 450 "notas" por día que en realidad son pedidos, copia de 10 o 12 palabras, "liviano" contra "no liviano".</p>
+<div class="chips"><span class="chip">Redacción</span><span class="chip">⏱ 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="P12"><label><input type="checkbox" id="c-P12"><span><span class="id">P12</span><span class="tit">No reintentar si el semáforo va a frenar lo mismo</span></span></label>
+<p class="q">Hoy se pagan hasta 3 a 5 intentos con el mismo resultado.</p>
+<div class="chips"><span class="chip">Redacción</span><span class="chip">⏱ 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="C8"><label><input type="checkbox" id="c-C8"><span><span class="id">C8</span><span class="tit">Reintentar las fotos pendientes y rechazar miniaturas de Google</span></span></label>
+<p class="q">9 con "no se pudo volver a bajar", 2 con el máximo de intentos.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="D3"><label><input type="checkbox" id="c-D3"><span><span class="id">D3</span><span class="tit">Fijar la versión del modelo de Gemini</span></span></label>
+<p class="q">El alias <code>-latest</code> cambia de modelo sin avisar y puede mover la calidad.</p>
+<div class="chips"><span class="chip">IA</span><span class="chip">⏱ 1 a 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="N4"><label><input type="checkbox" id="c-N4"><span><span class="id">N4</span><span class="tit">Chequeo de enlaces, imágenes y duplicados como aviso</span></span></label>
+<p class="q">Sobre todo el sitio en 13 segundos, informando total y distintos. Nunca frena la publicación.</p>
+<div class="chips"><span class="chip">Medición</span><span class="chip">⏱ 4 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: N1</div></div>
+<div class="item" data-id="M5-6"><label><input type="checkbox" id="c-M5-6"><span><span class="id">M5-6</span><span class="tit">Podar el libro de redes y bajar el peso de las tarjetas</span></span></label>
+<p class="q">El libro crece unos 6 KB por día; las tarjetas de Instagram pesan 811 KB promedio.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="C7"><label><input type="checkbox" id="c-C7"><span><span class="id">C7</span><span class="tit">Sin foto real de chicos en notas amarillas</span></span></label>
+<p class="q">Hoy solo Policiales está excluida.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Conversarlo antes (menores)</div></div>
+<div class="item" data-id="A8-b"><label><input type="checkbox" id="c-A8-b"><span><span class="id">A8-b</span><span class="tit">Guardia de "ya corrió hace menos de 20 minutos"</span></span></label>
+<p class="q">Si se confirma el duplicado, que la corrida de respaldo no arranque si la anterior fue reciente.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: A8</div></div>
+<div class="item" data-id="Borrar-c"><label><input type="checkbox" id="c-Borrar-c"><span><span class="id">Borrar-c</span><span class="tit">Borrar con cuidado cuatro archivos más</span></span></label>
+<p class="q"><code>recuperar-archivo.mjs</code>, <code>combinar-auditorias.mjs</code>, <code>auditar-redes.yml</code> y <code>prueba-estadisticas.yml</code>. Cada uno tiene una prueba que hay que sacar y decirlo.</p>
+<div class="chips"><span class="chip">Limpieza</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Tu aprobación</div></div>
+<div class="item" data-id="Deps"><label><input type="checkbox" id="c-Deps"><span><span class="id">Deps</span><span class="tit">Declarar las dependencias que la web usa sin declarar</span></span></label>
+<p class="q"><code>ffmpeg-static</code>, <code>@resvg/resvg-js</code> y <code>sharp</code> resuelven por la carpeta de la raíz. Si el deploy instalara solo <code>web/</code>, se rompería.</p>
+<div class="chips"><span class="chip">Limpieza</span><span class="chip">⏱ 1 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="Acc-v4"><label><input type="checkbox" id="c-Acc-v4"><span><span class="id">Acc-v4</span><span class="tit">Actualizar las acciones de GitHub (Node 20 en desuso)</span></span></label>
+<p class="q">El registro avisa que <code>checkout</code>, <code>setup-node</code> y <code>cache</code> se fuerzan a Node 24. Probar las versiones nuevas en un workflow manual antes de tocar Actualizar y Redes.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="P11-14-15"><label><input type="checkbox" id="c-P11-14-15"><span><span class="id">P11-14-15</span><span class="tit">Aplicar o borrar lo que el criterio pide y nadie hace cumplir</span></span></label>
+<p class="q">Los ganchos prohibidos en bajada, guion y textoRedes (P11), la ciudad del medio que el redactor no recibe (P14) y la bajada de 2 a 3 frases con 3 párrafos (P15).</p>
+<div class="chips"><span class="chip">Redacción</span><span class="chip">⏱ 3 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="C-banco"><label><input type="checkbox" id="c-C-banco"><span><span class="id">C-banco</span><span class="tit">Podar el banco de fotos</span></span></label>
+<p class="q">322 marcas "intentado" sin archivo que nadie borra. Evaluar también bajar los 180 días del archivo para que crezca menos.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 2 h</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="C-rev"><label><input type="checkbox" id="c-C-rev"><span><span class="id">C-rev</span><span class="tit">Revisión humana de derechos de las fotos</span></span></label>
+<p class="q">Mirar a ojo las fotos de las notas más compartidas y de medios chicos locales, como ya pide el documento de fotos.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 1 h por semana</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Una persona</div></div>
+<div class="item" data-id="RSS-1"><label><input type="checkbox" id="c-RSS-1"><span><span class="id">RSS-1</span><span class="tit">Mejorar el RSS de noticias que ya existe</span></span></label>
+<p class="q">Hoy hay un solo <code>feed.xml</code> con título, enlace, fecha, sección y bajada (no el cuerpo). Sumar un feed por sección (hasta 15) y el cuerpo de la nota, y revisar que salga con la dirección real del sitio.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="BAL-1"><label><input type="checkbox" id="c-BAL-1"><span><span class="id">BAL-1</span><span class="tit">La semana del bolsillo: qué vence y qué se cobra</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">ARBA, ANSES y tasas municipales en un calendario cargado a mano con doble control. Nota los lunes, historia sin voz y barra lateral de Balcarce y de Argentina.</p>
+<div class="chips"><span class="chip">Notas propias · Balcarce y Argentina</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="EDU-1"><label><input type="checkbox" id="c-EDU-1"><span><span class="id">EDU-1</span><span class="tit">¿Hay clases?</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Calendario escolar bonaerense cargado una vez por año, más feriados y alertas; paros solo con 2 medios o anuncio del gremio. Nota e historia a las 7 solo con novedad.</p>
+<div class="chips"><span class="chip">Notas propias · Educación</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="ECO-2"><label><input type="checkbox" id="c-ECO-2"><span><span class="id">ECO-2</span><span class="tit">La inflación del mes en la región Pampeana</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Dato del INDEC el día que sale, con el molde de la nota del dólar y sin IA.</p>
+<div class="chips"><span class="chip">Notas propias · Economía</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="AUT-2"><label><input type="checkbox" id="c-AUT-2"><span><span class="id">AUT-2</span><span class="tit">Fangio, un día como hoy, con datos de Jolpica</span></span></label>
+<p class="q">Carga única de sus carreras (cruzada con una segunda lista), que alimenta las efemérides sin gastar voz.</p>
+<div class="chips"><span class="chip">Notas propias · Automovilismo</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="FUT-1"><label><input type="checkbox" id="c-FUT-1"><span><span class="id">FUT-1</span><span class="tit">Así está el descenso (Aldosivi)</span></span></label>
+<p class="q">Con las tablas de ESPN que ya se usan y una carga única de puntos de 2024 y 2025 controlada por una persona.</p>
+<div class="chips"><span class="chip">Notas propias · Fútbol</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="AGR-3"><label><input type="checkbox" id="c-AGR-3"><span><span class="id">AGR-3</span><span class="tit">La papa, de la chacra a la góndola</span></span></label>
+<p class="q">Precio de la papa en la región Pampeana (INDEC) y reportes del Mercado Central.</p>
+<div class="chips"><span class="chip">Notas propias · Agro</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="SAL-3"><label><input type="checkbox" id="c-SAL-3"><span><span class="id">SAL-3</span><span class="tit">Vacunación: qué toca y dónde</span></span></label>
+<p class="q">Calendario de campañas y página "Dónde vacunarse en Balcarce", confirmada una vez por mes con Salud del Municipio.</p>
+<div class="chips"><span class="chip">Notas propias · Salud</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="EDU-3"><label><input type="checkbox" id="c-EDU-3"><span><span class="id">EDU-3</span><span class="tit">Fechas para anotarse</span></span></label>
+<p class="q">Progresar, Facultad de Agrarias, listados docentes, inscripción escolar: aviso al abrir y 3 días antes de cerrar.</p>
+<div class="chips"><span class="chip">Notas propias · Educación</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="Humanas"><label><input type="checkbox" id="c-Humanas"><span><span class="id">Humanas</span><span class="tit">Notas con trabajo humano barato (una persona, pocos minutos)</span></span></label>
+<p class="q">Votómetro del Concejo, Bomberos y Fiscalía en números, locales vacíos del centro, remates de la zona, peón rural, convocatorias y becas, bibliotecas, trámite de la semana, proyecto de la semana.</p>
+<div class="chips"><span class="chip">Notas propias · Varias</span><span class="chip">⏱ 30 min a 2 h cada una</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Quién se encarga de cada una</div></div>
+</section>
+<section class="lvl" id="n3" style="--c:#B7860B"><h2>Nivel 3 · Mejoras medianas</h2><p class="meta">Tocan varias piezas y piden pruebas nuevas. Conviene probarlas primero en la rama. <b>Tiempo:</b> 1 a 3 días cada una.</p>
+<div class="item" data-id="N3"><label><input type="checkbox" id="c-N3"><span><span class="id">N3</span><span class="tit">Archivo de salud: historial por fuente y conteos del día</span></span></label>
+<p class="q">Un solo <code>web/data/salud.json</code>: caídas seguidas, notas que aporta cada fuente, duplicados, fotos repetidas, tiempos y rechazo de la IA.</p>
+<div class="chips"><span class="chip">Medición</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: B1, A6</div></div>
+<div class="item" data-id="A1"><label><input type="checkbox" id="c-A1"><span><span class="id">A1</span><span class="tit">Publicar con una sola impresión del sitio</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Hoy se imprime dos veces (66 s y 111 s). Ahorra unos 2 minutos, de 7 a 5.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: A6</div></div>
+<div class="item" data-id="A3"><label><input type="checkbox" id="c-A3"><span><span class="id">A3</span><span class="tit">Fotos y reescritura con 2 o 3 pedidos a la vez</span></span></label>
+<p class="q">Hoy se hacen de a uno (57 s y ~50 s). Ahorra 1 a 2 minutos; hay que cuidar los cupos.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: A6</div></div>
+<div class="item" data-id="C1"><label><input type="checkbox" id="c-C1"><span><span class="id">C1</span><span class="tit">Miniaturas de 400 px</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Las secciones bajan fotos de 1.200 px para mostrarlas a 240. Hasta 80 % menos de peso en esas páginas.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="C2"><label><input type="checkbox" id="c-C2"><span><span class="id">C2</span><span class="tit">Vista previa de WhatsApp en JPG</span></span></label>
+<p class="q">Hoy es un PNG de 370 KB de promedio.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="C5+C4"><label><input type="checkbox" id="c-C5+C4"><span><span class="id">C5+C4</span><span class="tit">Banco de fotos con etiquetas y reglas para que no se repitan</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Tipo de foto, etiquetas y registro de usos. Que la foto de Messi no ilustre una nota sobre un show.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 2 a 3 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="P1-6"><label><input type="checkbox" id="c-P1-6"><span><span class="id">P1-6</span><span class="tit">Reconciliar lo que se le pide a la IA con lo que rechaza el verificador</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Fechas completas escritas por el código, números, siglas, negaciones, margen de material y guion en código. Menos rechazos y menos cupo gastado.</p>
+<div class="chips"><span class="chip">Redacción</span><span class="chip">⏱ 2 a 3 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: D1-1 (medir antes)</div></div>
+<div class="item" data-id="Q1"><label><input type="checkbox" id="c-Q1"><span><span class="id">Q1</span><span class="tit">Copia de las piezas por 30 días fuera del repo</span></span></label>
+<p class="q">Guardar mp4 y mp3 en Cloudflare R2 para reintentar sin gastar voz y no depender solo de Meta.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0 (a confirmar)</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Decisión; crear depósito y token (persona)</div></div>
+<div class="item" data-id="M3-4-7"><label><input type="checkbox" id="c-M3-4-7"><span><span class="id">M3-4-7</span><span class="tit">Reintento de historias, métricas por pieza y caché de ffmpeg</span></span></label>
+<p class="q">Las historias no se reintentan solas, no se sabe qué reel anduvo mejor y ffmpeg se baja en cada corrida.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Q1</div></div>
+<div class="item" data-id="D2"><label><input type="checkbox" id="c-D2"><span><span class="id">D2</span><span class="tit">Segunda clave de voz en otro proyecto de Google</span></span></label>
+<p class="q">Plan B cuando se acaban los 10 audios. Sin tarjeta, para que no se contagie la suspensión.</p>
+<div class="chips"><span class="chip">IA</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: M1; crear la clave (persona)</div></div>
+<div class="item" data-id="N5-6"><label><input type="checkbox" id="c-N5-6"><span><span class="id">N5-6</span><span class="tit">Cupo y tokens de IA en el WhatsApp y 404 reales de Cloudflare</span></span></label>
+<p class="q">Mostrar "voz 8/10" y qué enlaces rotos ven los lectores.</p>
+<div class="chips"><span class="chip">Medición</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: D1-1, M1</div></div>
+<div class="item" data-id="B7"><label><input type="checkbox" id="c-B7"><span><span class="id">B7</span><span class="tit">Sumar fuentes locales, una por una</span></span></label>
+<p class="q">Concejo, INTA, hospital, bomberos, clubes, localidades. Prueba de 14 días con la regla de decisión.</p>
+<div class="chips"><span class="chip">Fuentes</span><span class="chip">⏱ 1 a 2 días cada una</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: B1, B2; las direcciones se verifican a mano</div></div>
+<div class="item" data-id="G2"><label><input type="checkbox" id="c-G2"><span><span class="id">G2</span><span class="tit">Una página "léeme" para no técnicos y podar documentos</span></span></label>
+<p class="q">Recorrido, semáforo con ejemplos, quién decide qué y qué hacer si algo falla. Podar PENDIENTES, IDEAS y CLAUDE.</p>
+<div class="chips"><span class="chip">Documentación</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: G1</div></div>
+<div class="item" data-id="P18-23"><label><input type="checkbox" id="c-P18-23"><span><span class="id">P18-23</span><span class="tit">Unificar Wikimedia y alinear criterio y código en Policiales</span></span></label>
+<p class="q">Dos implementaciones con reglas distintas; Policiales acepta cualquier fuente oficial.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: C5+C4</div></div>
+<div class="item" data-id="Efem"><label><input type="checkbox" id="c-Efem"><span><span class="id">Efem</span><span class="tit">Efemérides: aprobar el mes y automatizar la propuesta</span></span></label>
+<p class="q">Aprobar los días del 19 al 31/10, y armar la propuesta mensual con Wikidata y ECyT-ar (ya investigadas) con las señales nuevas de puntaje.</p>
+<div class="chips"><span class="chip">Contenido</span><span class="chip">⏱ 2 a 3 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Hernán y Andrés aprueban</div></div>
+<div class="item" data-id="RS-1"><label><input type="checkbox" id="c-RS-1"><span><span class="id">RS-1</span><span class="tit">Audio dentro de la nota de cada repaso</span></span></label>
+<p class="q">Un reproductor en la nota del repaso (mañana, tarde, noche) con el mismo audio que sale en redes. Requiere guardar el mp3 en un depósito público (R2), no en el repo.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 2 a 3 días</span><span class="chip">💲 US$ 0 (a confirmar)</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: Q1 (copia de las piezas)</div></div>
+<div class="item" data-id="COM-3"><label><input type="checkbox" id="c-COM-3"><span><span class="id">COM-3</span><span class="tit">Planilla pública de Google que el sistema lee sola</span></span></label>
+<p class="q">Una pieza para todo lo que llenan otros: Liga Balcarceña, "Este finde en Balcarce", zonal, remates, locales vacíos. Con columna "revisado por".</p>
+<div class="chips"><span class="chip">Notas propias · Varias</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: —</div></div>
+<div class="item" data-id="FUT-3"><label><input type="checkbox" id="c-FUT-3"><span><span class="id">FUT-3</span><span class="tit">La fecha de la Liga Balcarceña</span></span></label>
+<p class="q">No hay tabla en internet: la carga la Liga o un cronista en la planilla y la nota sale el domingo a la noche.</p>
+<div class="chips"><span class="chip">Notas propias · Fútbol</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: COM-3; quién carga</div></div>
+<div class="item" data-id="DEP-3"><label><input type="checkbox" id="c-DEP-3"><span><span class="id">DEP-3</span><span class="tit">Este finde en Balcarce: qué se juega</span></span></label>
+<p class="q">Los clubes cargan partido, sede, hora y entrada; sale los viernes y suma a la agenda.</p>
+<div class="chips"><span class="chip">Notas propias · Deportes</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: COM-3</div></div>
+<div class="item" data-id="AUT-1"><label><input type="checkbox" id="c-AUT-1"><span><span class="id">AUT-1</span><span class="tit">El TC y el TC Pick-Up como la F1, con Santiago Mangoni</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Resultados y campeonato de la ACTC con el molde de la F1 y un renglón fijo para Mangoni (piloto de Balcarce; confirmar).</p>
+<div class="chips"><span class="chip">Notas propias · Automovilismo</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0; escribir a la ACTC</div></div>
+<div class="item" data-id="AUT-3"><label><input type="checkbox" id="c-AUT-3"><span><span class="id">AUT-3</span><span class="tit">La carrera de Colapinto en datos</span></span></label>
+<p class="q">Gráfico de posiciones vuelta a vuelta (OpenF1) para la nota del resultado que ya existe.</p>
+<div class="chips"><span class="chip">Notas propias · Automovilismo</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="AUT-4"><label><input type="checkbox" id="c-AUT-4"><span><span class="id">AUT-4</span><span class="tit">El zonal y los pilotos de acá</span></span></label>
+<p class="q">Pedir la clasificación a las categorías y cargar los 5 primeros y los de Balcarce; guía del finde cuando se corre en el Fangio.</p>
+<div class="chips"><span class="chip">Notas propias · Automovilismo</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: COM-3</div></div>
+<div class="item" data-id="DEP-2"><label><input type="checkbox" id="c-DEP-2"><span><span class="id">DEP-2</span><span class="tit">Los clubes de Balcarce en las ligas de Mar del Plata</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Excepción chica del filtro: tomar de El Marplatense solo el resultado de "Campo de Pato" o "(Balcarce)" y armar una nota semanal propia.</p>
+<div class="chips"><span class="chip">Notas propias · Deportes</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: Confirmar el club</div></div>
+<div class="item" data-id="FUT-2"><label><input type="checkbox" id="c-FUT-2"><span><span class="id">FUT-2</span><span class="tit">El Federal A de la zona</span></span></label>
+<p class="q">Alvarado, Kimberley, Círculo y Santamarina con TheSportsDB (uso comercial pago, a confirmar), controlado contra El Marplatense.</p>
+<div class="chips"><span class="chip">Notas propias · Fútbol</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 5 a 9 al mes (a confirmar)</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: Pagar o pedir permiso</div></div>
+<div class="item" data-id="POL-1"><label><input type="checkbox" id="c-POL-1"><span><span class="id">POL-1</span><span class="tit">La plata que manda la Provincia</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Transferencias mensuales a Balcarce, descontada la inflación y por habitante contra los vecinos. Datos abiertos, sin IA.</p>
+<div class="chips"><span class="chip">Notas propias · Política</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="POL-3"><label><input type="checkbox" id="c-POL-3"><span><span class="id">POL-3</span><span class="tit">Así vota Balcarce, rumbo a 2027</span></span></label>
+<p class="q">Página fija con 20 años de resultados y notas en el cierre de listas y la noche de elección.</p>
+<div class="chips"><span class="chip">Notas propias · Política</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="POC-1"><label><input type="checkbox" id="c-POC-1"><span><span class="id">POC-1</span><span class="tit">Balcarce en la estadística criminal oficial</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Tasa cada 100.000 habitantes, serie 2014-2025 y vecinos, sin casos. Bloque fijo para la barra lateral de Policiales.</p>
+<div class="chips"><span class="chip">Notas propias · Policiales</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="POC-2"><label><input type="checkbox" id="c-POC-2"><span><span class="id">POC-2</span><span class="tit">Seguridad vial en el partido</span></span></label>
+<p class="q">Muertes y lesiones viales (SNIC, Agencia de Seguridad Vial) y un pedido mensual a Tránsito. Sin nombres, fotos ni patentes.</p>
+<div class="chips"><span class="chip">Notas propias · Policiales</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="AGR-1"><label><input type="checkbox" id="c-AGR-1"><span><span class="id">AGR-1</span><span class="tit">Balcarce en el mapa agrícola</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Siembra, cosecha y rinde por cultivo del partido (MAGyP) y existencias de vacas (SENASA). Sin IA.</p>
+<div class="chips"><span class="chip">Notas propias · Agro</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="AGR-2"><label><input type="checkbox" id="c-AGR-2"><span><span class="id">AGR-2</span><span class="tit">El sudeste en el Panorama Agrícola y la pizarra de Quequén</span></span></label>
+<p class="q">El párrafo del sudeste del panorama de la Bolsa de Cereales, reescrito y atribuido, más el precio del puerto de Quequén.</p>
+<div class="chips"><span class="chip">Notas propias · Agro</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="ECO-1"><label><input type="checkbox" id="c-ECO-1"><span><span class="id">ECO-1</span><span class="tit">La nafta en Balcarce, estación por estación</span></span></label>
+<p class="q">Solo precios de los últimos 7 días, cada uno con su fecha; si no hay datos frescos, no sale.</p>
+<div class="chips"><span class="chip">Notas propias · Economía</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: ECO-1a</div></div>
+<div class="item" data-id="ECO-3"><label><input type="checkbox" id="c-ECO-3"><span><span class="id">ECO-3</span><span class="tit">Cuánto paga un plazo fijo en los bancos de Balcarce</span></span></label>
+<p class="q">API de transparencia del BCRA, semanal, con la lista de bancos locales cargada una vez. Dato, no consejo.</p>
+<div class="chips"><span class="chip">Notas propias · Economía</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="TRA-1"><label><input type="checkbox" id="c-TRA-1"><span><span class="id">TRA-1</span><span class="tit">El empleo registrado en Balcarce</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Puestos y sueldo promedio del partido, trimestral (observatorio de la Secretaría de Trabajo).</p>
+<div class="chips"><span class="chip">Notas propias · Trabajo</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="TRA-2"><label><input type="checkbox" id="c-TRA-2"><span><span class="id">TRA-2</span><span class="tit">Ofertas de empleo de la semana</span></span></label>
+<p class="q">Del Portal Empleo y del Municipio; solo fuentes oficiales o empresas identificadas.</p>
+<div class="chips"><span class="chip">Notas propias · Trabajo</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="CYT-1"><label><input type="checkbox" id="c-CYT-1"><span><span class="id">CYT-1</span><span class="tit">Ciencia hecha en Balcarce</span></span></label>
+<p class="q">Lo nuevo del INTA Balcarce, la Facultad de Agrarias y el IPADS (OpenAlex y repositorio del INTA), resumido y atribuido. Llena la sección sin la regla de dos medios.</p>
+<div class="chips"><span class="chip">Notas propias · Ciencia y tecnología</span><span class="chip">⏱ 2 a 3 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="CYT-2"><label><input type="checkbox" id="c-CYT-2"><span><span class="id">CYT-2</span><span class="tit">La conectividad de Balcarce y sus pueblos</span></span></label>
+<p class="q">Accesos a internet y 4G por localidad (ENACOM), trimestral; cubre Napaleofú, San Agustín, Los Pinos y Ramos Otero.</p>
+<div class="chips"><span class="chip">Notas propias · Ciencia y tecnología</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="CUL-1"><label><input type="checkbox" id="c-CUL-1"><span><span class="id">CUL-1</span><span class="tit">Convocatorias abiertas</span></span></label>
+<p class="q">Cada 15 días, las convocatorias nacionales y provinciales con cierre futuro y enlace oficial.</p>
+<div class="chips"><span class="chip">Notas propias · Cultura</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="CUL-2"><label><input type="checkbox" id="c-CUL-2"><span><span class="id">CUL-2</span><span class="tit">Mapa cultural de Balcarce</span></span></label>
+<p class="q">Bibliotecas, museos y salas del partido (SInCA), confirmados por teléfono; página fija.</p>
+<div class="chips"><span class="chip">Notas propias · Cultura</span><span class="chip">⏱ 1 día</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="EDU-2"><label><input type="checkbox" id="c-EDU-2"><span><span class="id">EDU-2</span><span class="tit">Las escuelas de Balcarce en números</span></span></label>
+<p class="q">Matrícula por nivel en 10 años y comparada con los vecinos, más una página con mapa. Solo números agregados.</p>
+<div class="chips"><span class="chip">Notas propias · Educación</span><span class="chip">⏱ 1 a 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: U0</div></div>
+<div class="item" data-id="BAL-2"><label><input type="checkbox" id="c-BAL-2"><span><span class="id">BAL-2</span><span class="tit">¿Cuánto sube la luz en Balcarce?</span></span></label>
+<p class="q">Aviso cuando sale un cuadro tarifario; una persona copia 4 números y la plantilla calcula la factura tipo.</p>
+<div class="chips"><span class="chip">Notas propias · Balcarce</span><span class="chip">⏱ 2 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: Confirmar que la Cooperativa figura en los anexos</div></div>
+<div class="item" data-id="SAL-1"><label><input type="checkbox" id="c-SAL-1"><span><span class="id">SAL-1</span><span class="tit">El parte de la semana (en temporada)</span></span></label>
+<p class="q">Tres o cuatro números del boletín epidemiológico, con tasa y comparación interanual, sin alarmismo.</p>
+<div class="chips"><span class="chip">Notas propias · Salud</span><span class="chip">⏱ 2 a 3 días</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0; decidir si Salud espera a una persona en redes</div></div>
+</section>
+<section class="lvl" id="n4" style="--c:#B4540A"><h2>Nivel 4 · Obras grandes</h2><p class="meta">Cambian cómo trabaja una parte entera del sistema. Hay que decidir antes y probar mucho. <b>Tiempo:</b> 1 a 3 semanas cada una.</p>
+<div class="item" data-id="C3"><label><input type="checkbox" id="c-C3"><span><span class="id">C3</span><span class="tit">WebP o AVIF con tres tamaños</span></span></label>
+<p class="q">Ahorra de 15 a 20 MB de los 44 (estimado en una muestra de 22 fotos). Las tarjetas y las vistas previas siguen leyendo JPG.</p>
+<div class="chips"><span class="chip">Fotos</span><span class="chip">⏱ 1 semana</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: C1</div></div>
+<div class="item" data-id="P-orden"><label><input type="checkbox" id="c-P-orden"><span><span class="id">P-orden</span><span class="tit">Una sola fuente de verdad por regla</span></span></label>
+<p class="q">Números en un archivo y prompt y documentos generados desde ahí, una prueba que cruce verificador y prompt, y reducir el prompt a un 60 %.</p>
+<div class="chips"><span class="chip">Redacción</span><span class="chip">⏱ 1 a 2 semanas</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: P1-6</div></div>
+<div class="item" data-id="D1"><label><input type="checkbox" id="c-D1"><span><span class="id">D1</span><span class="tit">Evaluar otros proveedores de IA para redactar</span></span></label>
+<p class="q">Probar 30 notas reales con Gemini, Claude Haiku 5.5, GPT-5 nano, DeepSeek, Cloudflare Workers AI y Groq (con prompt corto). Si conviene, adaptador y respaldo de otro proveedor.</p>
+<div class="chips"><span class="chip">IA</span><span class="chip">⏱ 1 a 2 semanas</span><span class="chip">💲 Centavos de prueba</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: D1-1, P1-6</div></div>
+<div class="item" data-id="E2"><label><input type="checkbox" id="c-E2"><span><span class="id">E2</span><span class="tit">Worker de Cloudflare como disparador</span></span></label>
+<p class="q">Reemplaza a cron-job.org, que se desactiva solo. Una semana de prueba con el actual de respaldo.</p>
+<div class="chips"><span class="chip">Plataforma</span><span class="chip">⏱ 1 semana</span><span class="chip">💲 US$ 5 al mes</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: A7</div></div>
+<div class="item" data-id="N7"><label><input type="checkbox" id="c-N7"><span><span class="id">N7</span><span class="tit">Auditoría semanal completa</span></span></label>
+<p class="q">Lighthouse sobre 20 a 30 páginas, accesibilidad, redirecciones, fotos repetidas y cobertura por localidad. 15 a 40 min de robot (estimado).</p>
+<div class="chips"><span class="chip">Medición</span><span class="chip">⏱ 1 semana</span><span class="chip">💲 US$ 0</span><span class="chip r-Bajo">riesgo bajo</span></div>
+<div class="dep">Depende de: N2, N3</div></div>
+<div class="item" data-id="H1"><label><input type="checkbox" id="c-H1"><span><span class="id">H1</span><span class="tit">De 11 a 15 secciones con barra lateral</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Maqueta del menú y la barra, después Educación y Salud, Deporte local y una cuarta. 15 lugares del código y redirecciones 301.</p>
+<div class="chips"><span class="chip">Secciones</span><span class="chip">⏱ 2 a 3 semanas</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: Aprobar la maqueta</div></div>
+<div class="item" data-id="F1-b"><label><input type="checkbox" id="c-F1-b"><span><span class="id">F1-b</span><span class="tit">Configuración por sección ("carriles")</span></span></label>
+<p class="q">Un solo archivo con el cupo, el criterio extra de IA, la frecuencia de redes, la barra lateral y las fuentes de cada sección.</p>
+<div class="chips"><span class="chip">Secciones</span><span class="chip">⏱ 1 a 2 semanas</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: H1</div></div>
+<div class="item" data-id="Ciclo"><label><input type="checkbox" id="c-Ciclo"><span><span class="id">Ciclo</span><span class="tit">Acortar el ciclo de 30 a 15 minutos (idea)</span></span></label>
+<p class="q">La demora media real para un lector es de unos 22 minutos y el ciclo es lo que más pesa. El repo público no paga minutos, pero hay que cuidar el cupo de IA y la cantidad de commits.</p>
+<div class="chips"><span class="chip">Flujo</span><span class="chip">⏱ 1 semana</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: A1, A3, A8</div></div>
+<div class="item" data-id="D4"><label><input type="checkbox" id="c-D4"><span><span class="id">D4</span><span class="tit">Un segundo proveedor (Groq, Cloudflare Workers AI, Claude Haiku u otro) como respaldo de la redacción</span></span></label>
+<p class="q">Hoy los respaldos de la redacción son otras claves de Gemini: si Google falla o suspende, caen todas juntas. Groq no sirve hoy porque su capa gratis acepta 8.000 tokens por minuto y un pedido ocupa unos 9.000. Se vuelve posible con un prompt más corto (P-orden) o con el plan de pago.</p>
+<div class="chips"><span class="chip">IA</span><span class="chip">⏱ 2 a 3 días</span><span class="chip">💲 US$ 0 si el prompt cabe; si no, centavos</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: P-orden, D1-1 y probar calidad con 30 notas</div></div>
+<div class="item" data-id="RS-2"><label><input type="checkbox" id="c-RS-2"><span><span class="id">RS-2</span><span class="tit">Feed de podcast (audio y texto) y alta en Spotify y otras</span></span></label>
+<p class="q">Un feed aparte con el audio de cada repaso, la nota como descripción, imagen cuadrada y datos del programa; se registra gratis en Spotify for Creators, Apple Podcasts y otras. Revisar la política de Spotify sobre voces de IA y avisar en cada episodio que la voz es sintética.</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 1 semana</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: RS-1, Q1</div></div>
+<div class="item" data-id="RS-3"><label><input type="checkbox" id="c-RS-3"><span><span class="id">RS-3</span><span class="tit">Publicar los reels en YouTube Shorts</span></span></label>
+<p class="q">Reusar el mismo mp4 (no gasta voz ni IA). Con API propia, los videos de un proyecto sin auditar quedan privados hasta pasar una auditoría de Google; el cupo diario es discutido (a confirmar).</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 1 a 2 semanas más la auditoría</span><span class="chip">💲 US$ 0 (o una herramienta de terceros)</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: RS-0, Q1</div></div>
+<div class="item" data-id="RS-4"><label><input type="checkbox" id="c-RS-4"><span><span class="id">RS-4</span><span class="tit">Publicar los reels en TikTok</span></span></label>
+<p class="q">Reusar el mismo mp4. Una app sin auditar solo publica en privado y para pocos usuarios; la auditoría se estima en 2 a 6 semanas y rechaza apps de "gestión de cuenta personal" (a confirmar). Alternativa: subir a la bandeja y que una persona toque "publicar".</p>
+<div class="chips"><span class="chip">Redes</span><span class="chip">⏱ 2 a 6 semanas con la auditoría</span><span class="chip">💲 US$ 0 (o una herramienta de terceros)</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: RS-0, Q1</div></div>
+<div class="item" data-id="COM-4"><label><input type="checkbox" id="c-COM-4"><span><span class="id">COM-4</span><span class="tit">Lector de boletines oficiales</span><span class="flag k">★ impacto</span></span></label>
+<p class="q">Una pieza que detecta normas nuevas (SIBOM municipal, Boletín nacional y provincial, ANMAT) para tres notas: "La semana en el Boletín" (POL-2), "Qué cambia desde hoy" (ARG-2) y "Retirados de la venta" (SAL-2).</p>
+<div class="chips"><span class="chip">Notas propias · Política, Argentina y Salud</span><span class="chip">⏱ 1 a 2 semanas</span><span class="chip">💲 US$ 0</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: U0 (que se pueda leer SIBOM y los boletines desde Actions)</div></div>
+</section>
+<section class="lvl" id="n5" style="--c:#8A4FBF"><h2>Nivel 5 · Cambios de plataforma y de modelo</h2><p class="meta">Mover dónde corre todo o cambiar cómo se organiza el medio. Riesgo medio a alto. <b>Tiempo:</b> semanas a meses.</p>
+<div class="item" data-id="E1"><label><input type="checkbox" id="c-E1"><span><span class="id">E1</span><span class="tit">Repositorio privado y servidor propio</span></span></label>
+<p class="q">Un servidor de unos US$ 5 a 6 corre los robots (con los mismos workflows o con su propio reloj). Sin tope de minutos y con lo comercial protegido.</p>
+<div class="chips"><span class="chip">Plataforma</span><span class="chip">⏱ 3 a 6 semanas</span><span class="chip">💲 US$ 5 a 9 al mes</span><span class="chip r-Alto">riesgo alto</span></div>
+<div class="dep">Depende de: E2, A7; mantenimiento</div></div>
+<div class="item" data-id="R2-fotos"><label><input type="checkbox" id="c-R2-fotos"><span><span class="id">R2-fotos</span><span class="tit">Sacar las fotos de git (R2) y limpiar el historial</span></span></label>
+<p class="q">El repo pesa 145 MB y crece unos 4 MB por día de fotos. <code>git filter-repo</code> rompe los clones: se hace con los dos presentes.</p>
+<div class="chips"><span class="chip">Plataforma</span><span class="chip">⏱ 2 a 4 semanas</span><span class="chip">💲 US$ 0 (a confirmar)</span><span class="chip r-Alto">riesgo alto</span></div>
+<div class="dep">Depende de: Q1, C5+C4</div></div>
+<div class="item" data-id="I1"><label><input type="checkbox" id="c-I1"><span><span class="id">I1</span><span class="tit">Contenido propio y comercial</span></span></label>
+<p class="q">Parte agroclimático, pluviómetros, QR en farmacias, "¿Hay clases?", entrevistas, página <code>/publicidad</code>, tres auspiciantes fundadores. Es producto, no solo técnica.</p>
+<div class="chips"><span class="chip">Contenido</span><span class="chip">⏱ continuo</span><span class="chip">💲 Variable</span><span class="chip r-Medio">riesgo medio</span></div>
+<div class="dep">Depende de: Ustedes (calle y comercial)</div></div>
+<div class="item" data-id="F1-a"><label><input type="checkbox" id="c-F1-a"><span><span class="id">F1-a</span><span class="tit">Separar el motor entero por sección</span><span class="flag x">no recomendado</span></span></label>
+<p class="q">No recomendado: una nota no sabe de qué sección es hasta cruzarse con otros medios, y se multiplicaría el trabajo por 15.</p>
+<div class="chips"><span class="chip">Secciones</span><span class="chip">⏱ meses</span><span class="chip">💲 —</span><span class="chip r-Alto">riesgo alto</span></div>
+<div class="dep">Depende de: Reevaluar si el volumen crece mucho</div></div>
+</section>
+<section class="lvl" id="decidir" style="--c:var(--ink)"><h2>Decisiones que necesitan a Hernán y Andrés</h2><ol class="dec"><li>Si se borran los archivos de sondeo (nivel 0).</li><li>Si se muestra el crédito de las fotos también en la tapa y las secciones (P16): es una decisión del 4/10 que conviene revisar.</li><li>Qué regla de repetición de fotos les parece bien (tabla de C4 del plan).</li><li>Si se guarda copia de las piezas de redes por 30 días (Q1) y cuánto tiempo.</li><li>Si se prueba otro proveedor de IA para redactar y con qué presupuesto de prueba (D1).</li><li>Si se sacan de GitHub público los documentos comerciales y personales (E1).</li><li>Qué secciones nuevas, en qué orden, y aprobar la maqueta (H1).</li><li>Sobre chicos en notas amarillas (C7): conversarlo antes de tocar.</li><li>Si Tecnología acepta una fuente de un solo medio (la excepción que hoy decide Hernán), para que esa sección llegue al mínimo.</li><li>Qué términos de privacidad aceptan para las capas gratis de IA (D-priv).</li></ol>
+<h2>Evaluado y descartado (y por qué)</h2><ul><li><b>Firebase:</b> Pide tarjeta para tareas programadas y no resuelve nada que Cloudflare no resuelva; sumaría otro proveedor. Solo serviría para avisos push a lectores, y eso se puede hacer con un Worker.</li><li><b>ElevenLabs:</b> El plan gratis no alcanza para 6 a 8 audios por día y no deja uso comercial; además rompe la regla de no cambiar de voz. Queda como plan de emergencia pago si Google recortara el cupo.</li><li><b>Pasar GitHub a privado pagando solo el plan:</b> Los minutos de robot (~10.000 por mes) no entran en los 2.000 a 3.000 incluidos; el exceso saldría unos US$ 40 a 60. Solo cierra junto con un servidor propio (E1).</li><li><b>Leer solo lo nuevo de cada feed:</b> Ahorraría pocos segundos de los 31, funciona mal en muchos sitios y rompería la comparación entre medios (el cruce).</li><li><b>Lighthouse en cada ciclo:</b> Serían 3 a 6 horas por vuelta. Va solo semanal sobre una muestra.</li><li><b>Que un chequeo nuevo frene la publicación:</b> Un falso positivo congelaría el sitio: los chequeos nuevos avisan, no cortan.</li><li><b>Separar el motor entero por sección:</b> Una nota no sabe de qué sección es hasta cruzarse con otros medios; se multiplicaría el trabajo por 15. Sí conviene la configuración por sección (F1-b).</li><li><b>Todo en Cloudflare (Workers y D1):</b> <code>ffmpeg</code> y <code>resvg</code> no corren en un Worker: harían falta otra máquina para los reels.</li></ul><h2>Qué queda afuera por ahora</h2><ul><li><b>Pistas, el panel del celular y el panel de notas</b> (botón Publicar, borradores, "Esperan cuerpo"), a pedido: quedan pausados.</li><li><b>Comparación con los 20 medios nacionales:</b> pendiente (hay que habilitar sus dominios o pasar capturas de los menús).</li><li><b>Precios de IA y de servidores:</b> confirmar en las páginas oficiales.</li></ul></section>
+<footer>El detalle paso por paso de cada ficha está en <code>docs/PLAN-DE-MEJORAS-2026-10.md</code> y la primera auditoría en <code>docs/AUDITORIA-2026-10-08.md</code> (rama <code>main-m9q04a</code>). Las casillas se guardan solo en este navegador y sirven para ir marcando lo que se hace.</footer>
+</div>
+<script>
+(function(){
+ var KEY='ruta-radar-2026-10';
+ function leer(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return {}}}
+ function guardar(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+ var st=leer(), items=document.querySelectorAll('.item');
+ function prog(){
+  var t=items.length,d=0; items.forEach(function(it){ if(it.querySelector('input').checked) d++; });
+  document.getElementById('prog').textContent='Hechas: '+d+' de '+t;
+  document.getElementById('progbar').style.width=(t?d/t*100:0)+'%';
+ }
+ items.forEach(function(it){
+  var id=it.getAttribute('data-id'), c=it.querySelector('input');
+  if(st[id]){c.checked=true;it.classList.add('hecho');}
+  c.addEventListener('change',function(){
+   it.classList.toggle('hecho',c.checked);
+   var s=leer(); if(c.checked) s[id]=1; else delete s[id]; guardar(s); prog();
+  });
+ });
+ prog();
+})();
+</script>

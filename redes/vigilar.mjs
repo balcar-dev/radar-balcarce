@@ -95,9 +95,25 @@ export const QUE_SIGNIFICA_EL_PASO = {
   'Revisar que el SEO siga en pie': 'Falta algo del SEO en el HTML (título, descripción o tarjeta): la web no se actualiza hasta arreglarlo.',
 };
 
+/**
+ * Los workflows de GitHub cuya última corrida mira el vigilante: si falla, avisa. Archivo → nombre. Los cuatro últimos se sumaron el
+ * 8/10/2026 (A-4 y T-3): nacieron después del congelamiento del 4/10 para avisar y, si fallaban, sólo llegaba un correo a la cuenta de GitHub.
+ */
+export const WORKFLOWS_VIGILADOS = {
+  'actualizar.yml': 'Actualizar la web',
+  'redes.yml': 'Redes',
+  'cloudflare-deploy.yml': 'Cloudflare Pages',
+  'respaldo.yml': 'Respaldo',
+  'armado-vacio.yml': 'Armado con datos vacíos',
+  'pruebas-otra-hora.yml': 'Pruebas con otra hora',
+  'auditoria-ia.yml': 'Auditoría IA',
+  'pistas.yml': 'Pistas',
+};
+
 export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
   minutosSinReloj: 100,        // el reloj de redes corre cada 30
+  minutosSinRespaldo: 10 * 24 * 60, // el respaldo corre cada domingo
   horasEntreAvisos: 6,
   horasEntreAvisosDeRedesApagadas: 24, // el recordatorio de "redes apagadas": una vez por día
   minimoDeNotasConCuerpo: 0.35, // de las últimas 24 horas; con 10 notas o más
@@ -206,9 +222,34 @@ const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) 
  * @param {object} o.libro  web/data/redes.json
  * @returns {{ clave: string, nivel: 'alta'|'media', texto: string }[]}
  */
+/**
+ * "Un día como hoy" y las piezas fijas de participá se arman por adelantado y se acaban (C-17, 8/10/2026: el 31/10 se acababan las dos
+ * sin aviso). `ultimoDia` es el último día armado de web/data/efemerides-piezas.json ("AAAA-MM-DD") y `fijasHasta` el primer
+ * vencimiento de reels/fijas/vigencia.json. Hernán pidió armar el mes siguiente el día 20, para tener por lo menos 10 días de revisión.
+ */
+export function avisosDeEfemerides({ ahora, ultimoDia = null, fijasHasta = null } = {}) {
+  const hoy = diaAR(ahora);
+  const dias = (iso) => Math.round((Date.parse(`${iso}T12:00:00Z`) - Date.parse(`${hoy}T12:00:00Z`)) / 86400000);
+  const avisos = [];
+  if (ultimoDia) {
+    const quedan = dias(ultimoDia);
+    const diaDelMes = Number(hoy.slice(8, 10));
+    const sigueElMes = ultimoDia.slice(0, 7) === hoy.slice(0, 7);
+    if (quedan < 7) {
+      avisos.push({ clave: 'efemerides-por-acabarse', nivel: 'alta', texto: `"Un día como hoy" sólo tiene armados ${Math.max(quedan, 0)} día(s) más (hasta el ${ultimoDia.slice(8, 10)}/${ultimoDia.slice(5, 7)}). Hay que armar el mes que sigue (ingesta/generar-efemerides.mjs, docs/13-EFEMERIDES.md).` });
+    } else if (diaDelMes >= 20 && sigueElMes) {
+      avisos.push({ clave: 'efemerides-por-acabarse', nivel: 'media', texto: `Ya es ${diaDelMes} y el mes que sigue de "Un día como hoy" no está armado (llega hasta el ${ultimoDia.slice(8, 10)}/${ultimoDia.slice(5, 7)}). Hernán pidió armarlo el día 20, para tener 10 días de revisión (docs/13-EFEMERIDES.md).` });
+    }
+  }
+  if (fijasHasta && dias(fijasHasta) <= 7) {
+    avisos.push({ clave: 'fijas-por-vencer', nivel: 'media', texto: `Las piezas fijas de participá vencen el ${fijasHasta.slice(8, 10)}/${fijasHasta.slice(5, 7)}: desde entonces gastan un audio por día. Hay que renovarlas o decidir que no (reels/fijas/vigencia.json).` });
+  }
+  return avisos;
+}
+
 export function evaluar({
   ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
-  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [],
+  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [], efemerides = null,
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -240,6 +281,9 @@ export function evaluar({
       de('pocos-cuerpos', 'media', `Sólo ${conCuerpo} de ${total} notas de las últimas 24 horas tienen cuerpo. Miré la reescritura en "Actualizar la web" (clave de Gemini, cuota, verificador).`);
     }
   }
+
+  // --- "Un día como hoy" y las fijas de participá: que no se acaben sin aviso (C-17)
+  if (efemerides) for (const a of avisosDeEfemerides({ ahora, ...efemerides })) de(a.clave, a.nivel, a.texto);
 
   // --- que la auditoría semanal siga corriendo
   if (auditoriaVencida(auditoria, ahora)) {
@@ -286,9 +330,8 @@ export function evaluar({
   }
 
   // --- las corridas de GitHub
-  const NOMBRES ={ 'Actualizar la web': 'Actualizar la web', Redes: 'Redes', 'Cloudflare Pages': 'Cloudflare Pages' };
   for (const [nombre, lista] of Object.entries(corridas)) {
-    if (!NOMBRES[nombre]) continue;
+    if (!Object.values(WORKFLOWS_VIGILADOS).includes(nombre)) continue;
     const terminadas = lista.filter((r) => r.status === 'completed' && r.conclusion !== 'cancelled' && r.conclusion !== 'skipped');
     const ultima = terminadas[0];
     if (!ultima) continue;
@@ -299,6 +342,14 @@ export function evaluar({
       const enFila = seguidas < 0 ? terminadas.length : seguidas;
       const queSignifica = QUE_SIGNIFICA_EL_PASO[ultima.paso] ? ` ${QUE_SIGNIFICA_EL_PASO[ultima.paso]}` : '';
       de(`falla-${nombre}`, enFila >= 2 || fallas >= 3 ? 'alta' : 'media', `"${nombre}" falló en su última corrida${ultima.paso ? `, en el paso "${ultima.paso}"` : ''} (${enFila} seguidas; ${fallas} de las últimas ${Math.min(5, terminadas.length)}).${queSignifica}`);
+    }
+  }
+
+  // --- que haya un respaldo bueno reciente (el workflow "Respaldo" corre los domingos). Sin ninguna corrida todavía (recién armado), no se avisa.
+  if (corridas.Respaldo?.length) {
+    const buena = corridas.Respaldo.find((r) => r.status === 'completed' && r.conclusion === 'success');
+    if (!buena || minutos(buena.createdAt, ahora) > LIMITES.minutosSinRespaldo) {
+      de('respaldo-viejo', 'media', 'Hace más de 10 días que no hay un respaldo bueno (workflow "Respaldo" en GitHub Actions). Si se perdiera la cuenta de GitHub, se perdería todo.');
     }
   }
 
@@ -376,6 +427,13 @@ export function problemasDelContrato(contrato, { redesActivas = true } = {}) {
         texto: p.fase === 'no-se-reintenta'
           ? `${red.nombre}: no salió ${que} de ${p.etiqueta} (su reel sí salió y la historia no se reintenta). Mirá el registro de "Redes": las historias de Meta aceptan hasta 60 segundos.`
           : `${red.nombre}: no salió ${que} de ${p.etiqueta} de las ${p.hora}, y ya se cerró su ventana. Si ese día no había notas para contar, es normal.`,
+      });
+    }
+    // R-4 (8/10/2026): lo que el cronograma traía ese día además de lo fijo (efeméride, feriado, agenda, Participá, avisos de clima).
+    for (const p of red.extrasFaltan ?? []) {
+      lista.push({
+        clave: `falta-${red.red}-${p.id}`, nivel: 'media',
+        texto: `${red.nombre}: no salió ${p.tipo === 'REELS' ? 'el reel' : 'la historia'} de ${p.etiqueta} de las ${p.hora}, y ya se cerró su ventana. Si ese día había más de ocho historias, el tope pudo sacarla a propósito.`,
       });
     }
     if (red.posteos.sinEspejo.length) {
@@ -618,7 +676,7 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
 
   const corridas = {};
   if (token && repo) {
-    for (const archivo of ['actualizar.yml', 'redes.yml', 'cloudflare-deploy.yml']) {
+    for (const archivo of Object.keys(WORKFLOWS_VIGILADOS)) {
       const r = await pedir(`https://api.github.com/repos/${repo}/actions/workflows/${archivo}/runs?per_page=6`, {
         headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' },
       });
@@ -634,7 +692,7 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
           falla.paso = jobs.flatMap((job) => job.steps ?? []).find((s) => s.conclusion === 'failure')?.name ?? null;
         }
       }
-      const nombre = { 'actualizar.yml': 'Actualizar la web', 'redes.yml': 'Redes', 'cloudflare-deploy.yml': 'Cloudflare Pages' }[archivo];
+      const nombre = WORKFLOWS_VIGILADOS[archivo];
       corridas[nombre] = lista;
     }
   }
@@ -688,8 +746,11 @@ async function main() {
   const contrato = contratoDelDia({ libro, ahora, portada });
   const redesActivas = redesPrendidas();
   if (!redesActivas) console.log('  Las redes están apagadas (REDES_ACTIVAS): no se avisa pieza por pieza.');
+  const diasArmados = Object.keys(leer(path.join(RAIZ, 'web', 'data', 'efemerides-piezas.json'), {})?.dias ?? {}).sort();
+  const vigencias = Object.values(leer(path.join(RAIZ, 'reels', 'fijas', 'vigencia.json'), {})).map((v) => v?.hasta).filter(Boolean).sort();
+  const efemerides = { ultimoDia: diasArmados.at(-1) ?? null, fijasHasta: vigencias[0] ?? null };
   const problemas = evaluar({
-    ...obs, libro, auditoria, contrato, redesActivas, contenido: { ...(obs.contenido ?? {}), cuerpos },
+    ...obs, libro, auditoria, contrato, redesActivas, efemerides, contenido: { ...(obs.contenido ?? {}), cuerpos },
   });
 
   if (probarCierre) {

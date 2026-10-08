@@ -1073,7 +1073,13 @@ export const REGLAS_SEMAFORO = {
     'agresión sexual', 'agresiones sexuales', 'abuso de menores', 'abuso de un menor',
     'abuso de una menor', 'corrupción de menores', 'pornografía infantil',
     'explotación sexual', 'víctimas de trata', 'red de trata', 'delito de trata',
-    'violada', 'violador', 'la violaron', 'estupro'],
+    'violada', 'violador', 'la violaron', 'estupro',
+    // Sumados el 8/10/2026 (C-12; Hernán y Andrés autorizaron mejorar el semáforo). Formas que la lista no tenía: la búsqueda sólo admite
+    // tres letras de más al final, así que "suicidarse", "abusos sexuales" o "feminicidio" pasaban en verde. Sin "violó" ni "violaron" a
+    // secas: "violó la cautelar" es castellano de todos los días; van las formas que sí hablan de una persona.
+    'suicidarse', 'suicidaron', 'suicidada', 'feminicidio', 'feminicidios', 'abusos sexuales', 'abuso sexual infantil',
+    'violaron a una', 'violaron a un', 'violó a una', 'violó a un', 'fue violada', 'fue violado', 'fueron violadas',
+    'trata de personas con fines'],
   // Espera aprobación.
   //
   // El 21/09 se sacaron de acá "concejo deliberante", "intendente", "gremio",
@@ -1084,7 +1090,11 @@ export const REGLAS_SEMAFORO = {
   // "servicios de sepelios" de la Cooperativa (nombres de personas fallecidas).
   // Salieron diez veces, cada una en una sección distinta, y Hernán decidió
   // (27/09) que no se hacen: es sensible y no hay una fuente oficial.
-  nunca: ['sepelio', 'sepelios', 'inhumación', 'inhumacion', 'inhumaciones'],
+  // Sumado el 8/10/2026 (Hernán: "lo único que no tiene que salir es la sección necrológicas de Balcarce; si muere alguien importante
+  // va a tener su nota y esa sí entra"): las frases propias de un aviso fúnebre, sólo en el título. La noticia de una muerte NO está acá.
+  nunca: ['sepelio', 'sepelios', 'inhumación', 'inhumacion', 'inhumaciones', 'necrológica', 'necrológicas', 'obituario', 'obituarios',
+    'q.e.p.d', 'qepd', 'participan su fallecimiento', 'participa su fallecimiento', 'participan el fallecimiento', 'servicio fúnebre',
+    'servicios fúnebres', 'cochería', 'cocheria'],
   // "hospital" e "investigación" salieron el 28/09 (Hernán, auditoría): no
   // acusan, no hablan de una muerte ni involucran a un chico, y frenaban la
   // prórroga de las obras sociales o un refuerzo de fondos. Las palabras de
@@ -1112,6 +1122,10 @@ export const REGLAS_SEMAFORO = {
   // (laMuerteFrena, ingesta/ingesta.mjs). El homenaje a Los Nocheros o la
   // vacunación contra la rabia, contados por varios medios, ya no esperan.
   amarilloMuerte: ['muerte', 'falleció', 'fallecio', 'murió', 'murio', 'muere', 'fallece', 'deceso', 'velatorio',
+    // Las otras formas del verbo (8/10/2026): "Murieron dos jóvenes en la 226" y "Hallaron muerta a una mujer" salían en verde.
+    // Sin "muerto"/"muerta" sueltos (Vaca Muerta, el Salar del Hombre Muerto) ni "fallecido" suelto (un homenaje a alguien que ya no está).
+    'murieron', 'mueren', 'fallecieron', 'fallecen', 'muertos', 'muertas', 'hallaron muerto', 'hallaron muerta', 'hallado muerto', 'hallada muerta',
+    'encontraron muerto', 'encontraron muerta', 'encontrado muerto', 'encontrada muerta', 'sin vida', 'víctima fatal', 'victima fatal',
     // Un herido también (28/09): un choque en la 226 con heridos espera a una persona.
     'herido', 'herida', 'heridos', 'heridas', 'lesionado', 'lesionada', 'lesionados'],
   // Todas las secciones salen solas si el semáforo da verde. Hasta el 28/09

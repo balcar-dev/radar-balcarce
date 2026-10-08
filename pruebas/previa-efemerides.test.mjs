@@ -7,10 +7,12 @@ import {
   palabrasSinteticas, momentoDelAdemas, placasDelDia, fechaLarga, RITMO,
 } from '../reels/previa-efemerides.mjs';
 import { VOCES, REPARTO } from '../redes/prompt-redes.mjs';
+import { rutaDeDatos } from '../ingesta/datos-vivos.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
-const datos = JSON.parse(fs.readFileSync(path.join(RAIZ, 'web', 'data', 'efemerides-piezas.json'), 'utf8'));
-const candidatas = JSON.parse(fs.readFileSync(path.join(RAIZ, 'web', 'data', 'efemerides-candidatas.json'), 'utf8')).dias;
+// Datos fijos (pruebas/datos-fijos/): el mes armado de web/data cambia cuando se arma el siguiente (C-7, 8/10/2026).
+const datos = JSON.parse(fs.readFileSync(rutaDeDatos('efemerides-piezas.json'), 'utf8'));
+const candidatas = JSON.parse(fs.readFileSync(rutaDeDatos('efemerides-candidatas.json'), 'utf8')).dias;
 
 test('los tiempos de las palabras siguen el ritmo de la voz y no se pisan', () => {
   const p = palabrasSinteticas('Buen día, Balcarce. Un día como hoy, en 1922, nació alguien importante.');

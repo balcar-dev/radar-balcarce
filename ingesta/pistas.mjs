@@ -11,6 +11,9 @@
 // cifrado para el celular (panel/cifrado.mjs). Sin dependencias.
 
 import { REGLAS_SEMAFORO } from './fuentes.mjs';
+import { menorPorEdad } from './menores.mjs';
+
+export { menorPorEdad };
 import { claveRedaccion, claveClasificacion, MODELO_DE_TEXTO } from '../reels/claves.mjs';
 
 export const PISTA = {
@@ -32,7 +35,7 @@ const plegar = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').t
 /** ¿La pista toca algo del semáforo rojo (un menor, una víctima)? Devuelve la frase que pegó, o null. */
 export function palabraDelicada(texto) {
   const t = plegar(texto);
-  return REGLAS_SEMAFORO.rojo.map(plegar).find((p) => t.includes(p)) ?? null;
+  return REGLAS_SEMAFORO.rojo.map(plegar).find((p) => t.includes(p)) ?? menorPorEdad(texto);
 }
 
 /** Sin la Gemini: los nombres propios y las frases entre comillas del texto, como búsquedas de emergencia. */

@@ -30,7 +30,7 @@ const imagenJpeg = () => ({ ok: true, headers: { get: () => 'image/jpeg' }, arra
 function fetchDeUnaFuenteConFoto() {
   return async (url) => {
     if (String(url).includes('generativelanguage')) {
-      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false }] }) }] } }] }) };
+      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false, menor: false }] }) }] } }] }) };
     }
     if (url === 'https://a.com/n') return { ok: true, text: async () => '<meta property="og:image" content="https://a.com/f.jpg">' };
     if (url === 'https://a.com/f.jpg') return imagenJpeg();
@@ -187,10 +187,10 @@ test('la página de la nota muestra la foto sólo si hay, con el crédito en el 
   const pagina = leer('web/app/nota/[id]/page.js');
   assert.match(pagina, /\{n\.foto && \(/, 'la foto es condicional: sin foto, no se rompe nada');
   assert.match(pagina, /<figcaption[^>]*>\{n\.foto\.credito\}<\/figcaption>/, 'el crédito va en el epígrafe');
-  assert.match(pagina, /src=\{`\/\$\{n\.foto\.archivo\}`\}/, 'la imagen sale de banco-fotos.json, no de la fuente');
+  assert.match(pagina, /src=\{urlDeFoto\(n\.foto\.archivo\)\}/, 'la imagen sale de banco-fotos.json, no de la fuente');
   // El nombre del medio no se escribe DENTRO de la imagen (eso sería un
   // <text> o un overlay sobre el <img>; acá sólo puede estar en el epígrafe).
-  const bloqueFoto = pagina.match(/\{n\.foto && \([\s\S]*?\)\}/)?.[0] ?? '';
+  const bloqueFoto = pagina.match(/\{n\.foto && \([\s\S]*?<\/figure>/)?.[0] ?? '';
   assert.equal((bloqueFoto.match(/n\.foto\.credito/g) ?? []).length, 1, 'el crédito aparece una sola vez, en el epígrafe');
 });
 
@@ -259,7 +259,7 @@ test('elegirFotosNuevas guarda la foto achicada (jpg) y la anota así en el banc
   const nota = { id: 'n9', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [{ medio: 'A', enlace: 'https://a.com/n' }] };
   const grande = Buffer.from('foto'.repeat(100));
   const fetchFn = async (url) => {
-    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false }] }) }] } }] }) };
+    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false, menor: false }] }) }] } }] }) };
     if (url === 'https://a.com/n') return { ok: true, text: async () => '<meta property="og:image" content="https://a.com/f.png">' };
     if (url === 'https://a.com/f.png') return { ok: true, headers: { get: () => 'image/png' }, arrayBuffer: async () => grande };
   };
@@ -310,4 +310,17 @@ test('el criterio de menores de la IA mira lo que se ve, no el tema de la nota (
   const f = fs.readFileSync(path.join(import.meta.dirname, '..', 'ingesta/fotos.mjs'), 'utf8');
   assert.match(f, /sólo por lo que SE VE en la imagen, no por el tema de la nota/);
   assert.match(f, /Si dudás si es menor, ponelo en true/, 'ante la duda sigue siendo menor');
+});
+
+test('Policiales sin fuente oficial no lleva foto real, ni la del banco ni la que sumó una persona (8/10/2026: Ruta 226, El Eco de Tandil)', async () => {
+  const { conFotosDelBanco } = await import('../web/scripts/fotos-notas.mjs');
+  const banco = { a: { archivo: 'fotos-notas/a.jpg', credito: 'Foto: El Eco de Tandil', origen: 'manual' }, b: { archivo: 'fotos-notas/b.jpg', credito: 'Foto: Bomberos' }, c: { archivo: 'fotos-notas/c.jpg', credito: 'Foto: X' } };
+  const notas = conFotosDelBanco([
+    { id: 'a', seccion: 'Policiales', fuentesConsultadas: [{ medio: 'El Eco de Tandil', oficial: false }], foto: { archivo: 'fotos-notas/a.jpg', credito: 'viejo' } },
+    { id: 'b', seccion: 'Policiales', fuentesConsultadas: [{ medio: 'Bomberos Voluntarios', oficial: true }] },
+    { id: 'c', seccion: 'Balcarce', fuentesConsultadas: [{ medio: 'Otro', oficial: false }] },
+  ], banco);
+  assert.equal(notas[0].foto, undefined, 'Policiales sin fuente oficial: sin foto');
+  assert.equal(notas[1].foto.archivo, 'fotos-notas/b.jpg', 'con fuente oficial, sí');
+  assert.equal(notas[2].foto.archivo, 'fotos-notas/c.jpg', 'las demás secciones no cambian');
 });

@@ -100,6 +100,7 @@ export default function RaizLayout({ children }) {
         />
       </head>
       <body>
+        <a className="saltar" href="#contenido">Saltar al contenido</a>
         <HorasVivas />
         {/* La chapa de servicio: clima y farmacia de turno, en todas las
             páginas. Son las dos cosas que la gente viene a buscar sin
@@ -163,7 +164,7 @@ export default function RaizLayout({ children }) {
           ]}
         />
 
-        <main>{children}</main>
+        <main id="contenido" tabIndex={-1}>{children}</main>
 
         {/* Las analíticas (Cloudflare Web Analytics, se prende desde el panel de Cloudflare, no desde el código): cuenta visitas y qué nota se leyó, sin
             cookies, sin seguir a nadie entre sitios y sin guardar direcciones

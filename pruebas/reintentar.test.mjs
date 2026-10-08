@@ -152,6 +152,26 @@ test('pide cosas que existen: pieza, red y parte', async () => {
   assert.deepEqual(PARTES, ['reel', 'historia', 'historia-del-reel']);
 });
 
+// R-3 (8/10/2026): el reintento respeta la franja horaria de cada pieza. Caso real que se evita: subir a las 21 el clima de la mañana diciendo "buen día".
+test('no se reintenta una pieza fuera de su franja ni la de otro día', async () => {
+  const tarde = new Date('2026-09-25T00:30:00Z'); // 24/09 21:30 en Balcarce: ya pasó la franja del clima de la mañana (7:30 → 11:30)
+  const libro = libroNuevo();
+  const a = api();
+  const r = await reintentar(a, libro, { pieza: 'clima-manana', parte: 'historia', ahora: new Date('2026-09-25T00:30:00Z'), dia: '2026-09-24' });
+  assert.equal(r.ok, false);
+  assert.match(r.mensaje, /Ya pasó la franja/);
+  const r2 = await reintentar(a, libro, { pieza: 'clima-manana', parte: 'historia', ahora: new Date('2026-09-25T23:40:00Z') });
+  assert.equal(r2.ok, false, 'a las 20:40 el clima de la mañana tampoco sale');
+  assert.match(r2.mensaje, /Ya pasó la franja/);
+  const r3 = await reintentar(a, libro, { ahora: tarde });
+  assert.equal(r3.ok, false, 'el día pedido ya no es hoy');
+  assert.match(r3.mensaje, /lo de un día no sale otro día/);
+  assert.equal(a.subidas.length, 0, 'no subió nada');
+  const dentro = await reintentar(a, libro, { pieza: 'clima-manana', parte: 'historia' }); // 10:40, dentro de su franja
+  assert.equal(dentro.ok, true);
+  assert.equal(a.subidas.length, 1);
+});
+
 // ------------------------------------------------------------ el workflow
 
 test('el workflow comparte el candado con las redes, usa el video guardado y no pide voz', () => {

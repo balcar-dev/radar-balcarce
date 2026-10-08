@@ -8,6 +8,7 @@
 
 import { Etiqueta, Hace, PlacaSeccion } from '@/components/piezas';
 import { fechaCorta } from '@/lib/tiempo';
+import { urlDeFoto } from '@/lib/fotos';
 
 const HORAS_DE_HACE = 36;
 
@@ -27,7 +28,7 @@ function Postal({ nota, indice }) {
       <div className="postal-marco">
         <a href={nota.ruta} className="postal-foto" tabIndex={-1} aria-hidden="true">
           {foto
-            ? <img src={`/${foto.archivo}`} alt="" width={1200} height={900} decoding="async" loading={indice < 2 ? undefined : 'lazy'} />
+            ? <img src={urlDeFoto(foto.archivo)} alt="" width={1200} height={900} decoding="async" loading={indice < 2 ? undefined : 'lazy'} />
             : <PlacaSeccion seccion={nota.seccion} chica />}
         </a>
         <div className="chapa-nota postal-chapa">
@@ -57,7 +58,7 @@ export function FilaConMiniatura({ nota }) {
   return (
     <div className="fila-nota fila-miniatura">
       <a href={nota.ruta} className="miniatura" tabIndex={-1} aria-hidden="true">
-        {foto ? <img src={`/${foto.archivo}`} alt="" width={240} height={180} loading="lazy" decoding="async" /> : <span className="sin-foto" />}
+        {foto ? <img src={urlDeFoto(foto.archivo)} alt="" width={240} height={180} loading="lazy" decoding="async" /> : <span className="sin-foto" />}
       </a>
       <div style={{ flexGrow: 1, minWidth: 0 }}>
         <div className="chapa-nota"><Etiqueta seccion={nota.seccion} /><CuandoNota nota={nota} /></div>

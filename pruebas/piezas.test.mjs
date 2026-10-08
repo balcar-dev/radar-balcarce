@@ -149,7 +149,7 @@ test('los reels van como reel y lo demás como historia', () => {
 
 test('las historias no llevan texto y los reels sí', () => {
   assert.equal(pieDePieza(PIEZAS[0]), '');
-  assert.match(pieDePieza(PIEZAS[1]), /^Una noticia con gancho\n\nMás en radarbalcarce\.com$/);
+  assert.match(pieDePieza(PIEZAS[1]), /^Una noticia con gancho\n\nMás en radarbalcarce\.com\n\nVoz generada con inteligencia artificial\.$/);
   assert.match(pieDePieza({ nombre: 'podcast', tipo: 'reel' }), /repaso del día/);
 });
 
@@ -590,7 +590,7 @@ test('el pie de un podcast lista cada nota con su enlace y no nombra la fuente',
       { titulo: 'Otra nota', enlace: 'https://radarbalcarce.com/nota/otra-nota-b' },
     ],
   });
-  assert.match(pie, /^El repaso de la mañana\n\n• Una nota\n  https:\/\/radarbalcarce\.com\/nota\/una-nota-a\n• Otra nota\n  https:\/\/radarbalcarce\.com\/nota\/otra-nota-b\n\nMás en radarbalcarce\.com$/);
+  assert.match(pie, /^El repaso de la mañana\n\n• Una nota\n  https:\/\/radarbalcarce\.com\/nota\/una-nota-a\n• Otra nota\n  https:\/\/radarbalcarce\.com\/nota\/otra-nota-b\n\nMás en radarbalcarce\.com\n\nVoz generada con inteligencia artificial\.$/);
   assert.ok(!/fuente/i.test(pie));
 });
 

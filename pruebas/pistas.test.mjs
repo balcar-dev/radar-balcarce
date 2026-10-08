@@ -136,3 +136,14 @@ test('el panel manda la pista a "Panel del celular" y la nube la guarda cifrada 
   assert.match(fs.readFileSync(path.join(RAIZ, '.github/workflows/panel.yml'), 'utf8'), /escribir, pista, nota-pista o foto/);
   assert.match(fs.readFileSync(path.join(RAIZ, 'web/public/panel/sw.js'), 'utf8'), /\/panel\/pistas\.js/);
 });
+
+// I-6 (8/10/2026): "Un nene de 6 años…" pasaba a pistas.json, que es público.
+test('una pista que habla de alguien menor de 18 por su edad se rechaza', async () => {
+  const { palabraDelicada, menorPorEdad } = await import('../ingesta/pistas.mjs');
+  for (const t of ['Un nene de 6 años quedó atrapado en el pozo', 'Una chica de 15 años desapareció', 'Se perdió un adolescente de 17 años', 'Rescataron a un bebé de 1 año', 'un menor de 12 años fue internado', 'una niña, de 9 años']) {
+    assert.ok(palabraDelicada(t), t);
+  }
+  for (const t of ['Un hombre de 45 años chocó en la ruta 226', 'El club cumple 100 años', 'Una chica de 18 años ganó el torneo', 'La obra lleva 3 años de demora', 'El auto de 5 años']) {
+    assert.equal(menorPorEdad(t), null, t);
+  }
+});

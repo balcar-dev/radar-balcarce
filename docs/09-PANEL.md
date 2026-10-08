@@ -131,6 +131,8 @@ Generate new token (el panel tiene el enlace directo):
 
 ### Las pestañas
 
+> **Desde el 8/10/2026 el panel arranca en "Hoy"** (`web/public/panel/hoy.js`): lo que espera tu toque, los borradores de la IA, las notas sin foto, cómo viene el día en las redes y las pistas con novedad, cada uno con un atajo. La barra de abajo es Hoy, Esperan, Publicadas, Redes y Más; Fotos se mudó a Más. En "Más" hay también **Borradores** (`borradores.js`): todo lo que se le pidió a la IA en los últimos 7 días, para leer y ya resuelto.
+
 > **Desde el 2/10/2026 la barra de abajo tiene cinco pestañas** (Esperan, Publicadas, Fotos, Redes y Más): la de Sin cuerpo
 > pasó adentro de Esperan, y Pistas, Revisión, Fechas y Números se abren desde Más. La tabla de abajo describe cada cosa; lo que cambió
 > está en "El panel reordenado", al final de este documento.
@@ -242,6 +244,8 @@ repositorio con la llave de cada persona, y lo sensible viaja cifrado.
 ---
 
 ## El panel de la PC
+
+> **En desuso desde el 8/10/2026:** Hernán y Andrés confirmaron que nunca lo usaron; sólo usan el del celular (o lo abren online). No se le agregan funciones. Se retira cuando se confirme que nada depende de él (`docs/propuestas/PANEL-NUEVO.md`).
 
 Un programa de Node que corre **sólo en la PC de Hernán**
 (`http://localhost:4321`): busca noticias cada 10 minutos, deja decidir las

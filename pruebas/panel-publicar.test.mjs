@@ -26,8 +26,8 @@ test('Esperan y Sin cuerpo tienen un botón "Publicar" que escribe y publica', (
   assert.match(app, /data-accion="publicar-ia" data-tipo="sin-cuerpo"[^>]*>Publicar<\/button>/);
   assert.match(app, /pedirALaIA\(tipo, id, '', \{ publicar: true \}\)/);
   // Sólo se publica sola si el verificador no marcó nada; si marcó algo, se la muestra a quien decide.
-  assert.match(app, /publicar && borrador\.ok && borrador\.texto && !\(borrador\.problemas \?\? \[\]\)\.length/);
-  assert.match(app, /el verificador marcó algo: revisala antes de publicar/);
+  assert.match(app, /publicar && !delicada && borrador\.ok && borrador\.texto && !\(borrador\.problemas \?\? \[\]\)\.length/);
+  assert.match(app, /el verificador marcó algo'\}: leela antes de publicar/);
 });
 
 test('el borrador de la IA no se pierde al volver atrás', () => {

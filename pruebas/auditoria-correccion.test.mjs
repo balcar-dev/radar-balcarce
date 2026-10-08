@@ -30,7 +30,8 @@ test('la distancia de edición cuenta letras', () => {
 
 test('una falta chica, única y sin números se corrige sola', () => {
   assert.deepEqual(cambioMecanico(orto('reunion', 'reunión'), nota()), { campo: 'cuerpo', antes: 'reunion', despues: 'reunión' });
-  assert.deepEqual(cambioMecanico(orto('Titular de la notta', 'Titular de la nota'), nota({ titulo: 'Titular de la notta' })), { campo: 'titulo', antes: 'Titular de la notta', despues: 'Titular de la nota' });
+  assert.deepEqual(cambioMecanico(orto('anuncio', 'anunció'), nota({ titulo: 'Titular de la nota', cuerpo: `${CUERPO} anuncio` })), null, 'una tilde al final es tiempo verbal, no falta');
+  assert.deepEqual(cambioMecanico(orto('cancion', 'canción'), nota({ titulo: 'Una cancion nueva' })), { campo: 'titulo', antes: 'cancion', despues: 'canción' });
 });
 
 test('no se corrige solo lo que no es seguro', () => {
@@ -147,5 +148,48 @@ test('el rediseño: cinco pestañas con ícono, barra de acciones fija en la not
   assert.match(html, /\.barra-acciones \{ position: fixed;/);
   assert.match(html, /REDISEÑO DEL 2\/10/);
   assert.match(html, /\.pestanas \{ grid-template-columns: repeat\(5, 1fr\)/);
-  assert.match(leer('web/public/panel/sw.js'), /radar-panel-17/);
+  assert.match(leer('web/public/panel/sw.js'), /radar-panel-21/);
+});
+
+// 8/10/2026: la corrección automática dejó "se contrajo 1 por ciento en en en…" (179 veces), "no competiránnnn…" (43 n), "nodocentes → docentes",
+// "recaudos → recursos", "quíntuple → quintuple", "suba → subida". Sólo se corrige solo la tilde que falta, y nunca se estira un texto.
+test('con los casos reales del 8/10: lo que cambia el sentido no se corrige solo', () => {
+  const cuerpo = (t) => nota({ cuerpo: `${CUERPO} ${t} ${CUERPO}` });
+  const casos = [
+    ['nodocentes', 'docentes'], ['recaudos', 'recursos'], ['quíntuple', 'quintuple'], ['suba mensual', 'subida mensual'], ['señas', 'señales'],
+    ['ligazón', 'ligación'], ['opositora', 'opositor'], ['competirá', 'competirán'], ['ciento por ciento', 'cien por ciento'], ['collar', 'colgar'],
+    ['definitorias', 'definitivas'], ['arribó a la Argentina', 'arribó a Argentina'], ['seguridad de suministro', 'seguridad del suministro'],
+    ['una suba de precios acumulada de 30 por ciento', 'una subirá de precios acumulada de 30 por ciento'],
+  ];
+  for (const [antes, despues] of casos) assert.equal(cambioMecanico(orto(antes, despues), cuerpo(antes)), null, `${antes} → ${despues}`);
+  // La tilde que cambia el sentido (público / publicó) la decide una persona.
+  assert.equal(cambioMecanico(orto('publico', 'público'), cuerpo('publico')), null);
+  assert.equal(cambioMecanico(orto('termino', 'término'), cuerpo('termino')), null);
+  // Y una palabra pegada a otra más larga no cuenta: "reunion" no está en "reuniones".
+  assert.equal(cambioMecanico(orto('reunion', 'reunión'), cuerpo('reuniones')), null);
+});
+
+test('aplicar un par dos, tres o cien veces da lo mismo: el texto nunca se estira', () => {
+  const mapa = cambiosDeLaAuditoria({ notas: { n1: { cambios: [{ campo: 'cuerpo', antes: 'se contrajo 1 por ciento', despues: 'se contrajo 1 por ciento en' }] } } });
+  let n = nota({ cuerpo: 'El PBI se contrajo 1 por ciento el trimestre.' });
+  for (let i = 0; i < 5; i += 1) n = conCambiosDeLaAuditoria(n, mapa);
+  assert.equal(n.cuerpo, 'El PBI se contrajo 1 por ciento el trimestre.', 'si lo nuevo contiene a lo viejo, no se aplica');
+  const mapa2 = cambiosDeLaAuditoria({ notas: { n1: { cambios: [{ campo: 'cuerpo', antes: 'competirá', despues: 'competirán' }] } } });
+  let m = nota({ cuerpo: 'no competirá con candidatos' });
+  for (let i = 0; i < 5; i += 1) m = conCambiosDeLaAuditoria(m, mapa2);
+  assert.equal(m.cuerpo, 'no competirá con candidatos', '"competirán" contiene a "competirá": no se toca (así se estiró a 43 n)');
+  // El par sólo calza con la palabra entera: "subirá" no está dentro de "subiráN".
+  const mapa3 = cambiosDeLaAuditoria({ notas: { n1: { cambios: [{ campo: 'cuerpo', antes: 'subirá', despues: 'subida' }] } } });
+  assert.equal(conCambiosDeLaAuditoria(nota({ cuerpo: 'ella subiráfuerte' }), mapa3).cuerpo, 'ella subiráfuerte');
+});
+
+test('lo ya publicado quedó sano: ningún texto del archivo ni de la portada tiene palabras estiradas', () => {
+  for (const f of ['web/data/archivo.json', 'web/data/portada.json']) {
+    const t = leer(f);
+    assert.ok(!/\b(\p{L}+) \1 \1 \1\b/u.test(t), `${f}: una palabra repetida cuatro veces seguidas`);
+    assert.ok(!/(\p{L})\1{6,}/u.test(t.replace(/https?:\S+/g, '')), `${f}: una letra repetida siete veces seguidas`);
+  }
+  // El libro de correcciones sólo guarda cambios de tilde de una palabra.
+  const libro = JSON.parse(leer('web/data/correcciones-auditoria.json'));
+  for (const e of Object.values(libro.notas)) for (const c of e.cambios) assert.ok(c.despues.length - c.antes.length <= 3, `${c.antes} → ${c.despues}`);
 });

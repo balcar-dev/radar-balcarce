@@ -1,0 +1,824 @@
+{
+  "generado": "2026-10-02",
+  "nota": "Un día como hoy: lo que se lee, quién lo lee y cómo se ve, preparado por tandas (2 al 31/10/2026). Todos los días a las 9:00, con la locutora. Desde el 4/10 todo sale como está, salvo que Hernán o Andrés lo saquen o pidan cambios desde la pestaña Fechas del panel (Más → Fechas → Mes armado). Los guiones están escritos con los datos verificados; los \"verificar\" son datos que no vienen del archivo y hay que confirmar con una segunda fuente.",
+  "hora": "09:00",
+  "dias": {
+    "2026-10-02": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1ogcuex",
+        "anio": 1869,
+        "titulo": "Nace Mahatma Gandhi",
+        "cuerpo": "Líder del movimiento por la independencia de la India, que defendió la no violencia. Hoy es el Día Internacional de la No Violencia.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "n5ytl",
+          "anio": 1836,
+          "texto": "El HMS Beagle, con Charles Darwin a bordo, llega a Falmouth al terminar su vuelta al mundo"
+        },
+        {
+          "id": "j4qltq",
+          "anio": 1955,
+          "texto": "Se apaga definitivamente la ENIAC, una de las primeras computadoras electrónicas"
+        },
+        {
+          "id": "tl42fn",
+          "anio": null,
+          "texto": "Día Nacional del Recolector de Residuos"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1869, nació Mahatma Gandhi, el líder de la independencia de la India, que defendió la no violencia. Por eso hoy es el Día Internacional de la No Violencia. Y además, un día como hoy: en 1836 el Beagle, con Charles Darwin a bordo, llegó a Falmouth, en Inglaterra, al terminar su vuelta al mundo; en 1955 se apagó para siempre la ENIAC, una de las primeras computadoras electrónicas; y hoy es el Día Nacional del Recolector de Residuos. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-03": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1m8hvqu",
+        "anio": 1931,
+        "titulo": "Se inaugura el palacio de la Legislatura porteña",
+        "cuerpo": "En Buenos Aires se inaugura el lujoso palacio del Concejo Deliberante, hoy Legislatura de la Ciudad, construido con mármoles. Hace 95 años.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1mtc0kr",
+          "anio": 1903,
+          "texto": "Se funda Cipolletti, en Río Negro"
+        },
+        {
+          "id": "gsnhis",
+          "anio": 1959,
+          "texto": "Se inaugura el estadio Feliciano Gambarte, de Godoy Cruz, en Mendoza"
+        },
+        {
+          "id": "5r3url",
+          "anio": null,
+          "texto": "Día del Odontólogo"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 95 años, en 1931, se inauguró en Buenos Aires el lujoso palacio del Concejo Deliberante, hoy Legislatura de la Ciudad. Y además, un día como hoy: en 1903 se fundó Cipolletti, en Río Negro; en 1959 se inauguró en Mendoza el estadio Feliciano Gambarte, del club Godoy Cruz; y hoy es el Día del Odontólogo. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-04": {
+      "voz": "locutora",
+      "principal": {
+        "id": "9dljlt",
+        "anio": 1582,
+        "titulo": "Diez días que desaparecieron del calendario",
+        "cuerpo": "Se decreta el calendario gregoriano: la noche del jueves 4 de octubre dio paso al viernes 15. Es el calendario que usamos hoy.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1v3vxg6",
+          "anio": 1915,
+          "texto": "Nace Silvina Bullrich, escritora argentina"
+        },
+        {
+          "id": "p802n7",
+          "anio": 1927,
+          "texto": "Nace Virginia Luque, actriz y cantante argentina"
+        },
+        {
+          "id": "1onz2dq",
+          "anio": 2009,
+          "texto": "Fallece Mercedes Sosa, la cantante"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1582, se decretó el calendario gregoriano, el que usamos hasta hoy: la noche del jueves 4 de octubre dio paso al viernes 15, y diez días desaparecieron del calendario. Y además, un día como hoy: en 1915 nació la escritora argentina Silvina Bullrich; en 1927 nació la actriz y cantante Virginia Luque; y en 2009 murió Mercedes Sosa, la Negra, una de las grandes voces del folklore argentino. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-05": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1i57sj5",
+        "anio": 1922,
+        "titulo": "Nace José Froilán González",
+        "cuerpo": "Piloto argentino de Fórmula 1. En 1951 le dio a Ferrari su primera victoria en la categoría.",
+        "verificar": [
+          "Ganó el Gran Premio de Gran Bretaña de 1951 con Ferrari, la primera victoria de la marca en la Fórmula 1"
+        ]
+      },
+      "ademas": [
+        {
+          "id": "1hs282c",
+          "anio": 1962,
+          "texto": "The Beatles editan su primer sencillo, \"Love Me Do\""
+        },
+        {
+          "id": "tyf8sp",
+          "anio": 1906,
+          "texto": "Se funda el pueblo bonaerense de Darregueira"
+        },
+        {
+          "id": "rmmasj",
+          "anio": null,
+          "texto": "Día Nacional del Ave"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 104 años, nació José Froilán González, uno de los grandes pilotos argentinos de Fórmula 1. En 1951, al volante de un Ferrari, ganó el Gran Premio de Gran Bretaña: fue la primera victoria de Ferrari en la categoría. Y además, un día como hoy: en 1962 The Beatles editaron su primer sencillo, Love Me Do; en 1906 se fundó el pueblo bonaerense de Darregueira; y hoy se celebra el Día Nacional del Ave. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-06": {
+      "voz": "locutora",
+      "principal": {
+        "id": "b3q5fq",
+        "anio": null,
+        "titulo": "Día del Circo Criollo",
+        "cuerpo": "En honor a Pepe Podestá. Con su familia llevó al circo las historias del gaucho.",
+        "verificar": [
+          "Que de la familia Podestá y el circo criollo nace buena parte del teatro argentino (pantomima de Juan Moreira, 1884)"
+        ]
+      },
+      "ademas": [
+        {
+          "id": "qy4hct",
+          "anio": 1887,
+          "texto": "Nace Le Corbusier, el arquitecto de la Casa Curutchet, en La Plata"
+        },
+        {
+          "id": "yavvb",
+          "anio": 1990,
+          "texto": "Se lanza la sonda Ulysses para estudiar el Sol"
+        },
+        {
+          "id": "1ffggwt",
+          "anio": 2006,
+          "texto": "Muere el cineasta Eduardo Mignogna"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Hoy es el Día del Circo Criollo, en honor a Pepe Podestá. Con su familia llevó al circo las historias del gaucho, y ahí empezó buena parte del teatro argentino. Y además, un día como hoy: en 1887 nació Le Corbusier, el arquitecto de la Casa Curutchet, en La Plata; en 1990 se lanzó la sonda Ulysses para estudiar el Sol; y en 2006 murió el cineasta Eduardo Mignogna. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-07": {
+      "voz": "locutora",
+      "principal": {
+        "id": "nqlcth",
+        "anio": 1939,
+        "titulo": "Nace Enrique Pinti",
+        "cuerpo": "Actor, humorista, director teatral y dramaturgo. Precursor del stand up teatral en la Argentina.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "9raiv4",
+          "anio": 1958,
+          "texto": "La NASA crea el proyecto Mercurio"
+        },
+        {
+          "id": "jjlp7c",
+          "anio": 1901,
+          "texto": "Nace en Gualeguay el poeta Carlos Mastronardi"
+        },
+        {
+          "id": "s65t5g",
+          "anio": 1734,
+          "texto": "Se consagra el Templo de San Ignacio, en Buenos Aires"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1939, nació Enrique Pinti, actor, humorista, director teatral y dramaturgo, precursor del stand up teatral en la Argentina. Y además, un día como hoy: en 1958 la NASA creó el proyecto Mercurio, su primer programa para llevar personas al espacio; en 1901 nació en Gualeguay el poeta Carlos Mastronardi; y en 1734 se consagró en Buenos Aires el Templo de San Ignacio. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-08": {
+      "voz": "locutora",
+      "principal": {
+        "id": "7m7786",
+        "anio": 1944,
+        "titulo": "Día del Trabajador Rural",
+        "cuerpo": "Se recuerda el Estatuto del Peón, que marcó el comienzo de la protección legal del trabajador rural.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "g4gcgi",
+          "anio": 1927,
+          "texto": "Muere Ricardo Güiraldes, autor de Don Segundo Sombra"
+        },
+        {
+          "id": "vbds4f",
+          "anio": 1927,
+          "texto": "Nace César Milstein, Premio Nobel de Medicina"
+        },
+        {
+          "id": "1qljtq4",
+          "anio": 1898,
+          "texto": "Aparece en Buenos Aires la revista Caras y Caretas"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Hoy es el Día del Trabajador Rural, en recuerdo del Estatuto del Peón de 1944, que marcó el comienzo de la protección legal de quienes trabajan en el campo. En una zona como la nuestra, es un día que se siente cerca. Y además, un día como hoy: en 1927 murió Ricardo Güiraldes, autor de Don Segundo Sombra; ese mismo año nació César Milstein, Premio Nobel de Medicina; y en 1898 apareció en Buenos Aires la revista Caras y Caretas. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-09": {
+      "voz": "locutora",
+      "principal": {
+        "id": "yr86pe",
+        "anio": 1974,
+        "titulo": "Se crea la UNICEN",
+        "cuerpo": "La Universidad Nacional del Centro de la Provincia de Buenos Aires, con sede en Tandil, en nuestra región.",
+        "verificar": [
+          "Creada por la ley 20.753 el 9/10/1974; empezó a funcionar en 1975 (por eso se dice 'se crea')"
+        ]
+      },
+      "ademas": [
+        {
+          "id": "12oz350",
+          "anio": 1604,
+          "texto": "Se observa la supernova más reciente de la Vía Láctea"
+        },
+        {
+          "id": "z2e6kf",
+          "anio": 1972,
+          "texto": "Se funda Tolhuin, en Tierra del Fuego"
+        },
+        {
+          "id": "27b5c8",
+          "anio": null,
+          "texto": "Día del Técnico de Laboratorio"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1974, se creó la Universidad Nacional del Centro de la Provincia de Buenos Aires, la UNICEN, con sede en Tandil, en nuestra región. Y además, un día como hoy: en 1604 se observó la supernova más reciente de la Vía Láctea; en 1972 se fundó la localidad de Tolhuin, en Tierra del Fuego; y hoy es el Día del Técnico de Laboratorio. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-10": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1363pli",
+        "anio": 1856,
+        "titulo": "Muere Vicente López y Planes",
+        "cuerpo": "Autor de la letra del Himno Nacional Argentino.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1hjfqrq",
+          "anio": 1813,
+          "texto": "Nace el compositor italiano Giuseppe Verdi"
+        },
+        {
+          "id": "hjsrw",
+          "anio": 1927,
+          "texto": "Se inaugura en Córdoba la Fábrica Militar de Aviones"
+        },
+        {
+          "id": "53ykxi",
+          "anio": 1925,
+          "texto": "Se inaugura en Buenos Aires el monumento a Leandro N. Alem"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1856, murió Vicente López y Planes, el autor de la letra del Himno Nacional Argentino. Y además, un día como hoy: en 1813 nació el compositor italiano Giuseppe Verdi; en 1927 se inauguró en Córdoba la Fábrica Militar de Aviones; y en 1925 se inauguró en Buenos Aires el monumento a Leandro N. Alem. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-11": {
+      "voz": "locutora",
+      "principal": {
+        "id": "d4a4dg",
+        "anio": 1904,
+        "titulo": "Nace Tita Merello",
+        "cuerpo": "Actriz y cantante, ícono del tango y del cine argentino.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "khxv7j",
+          "anio": 1830,
+          "texto": "Chopin interpreta en Varsovia su Concierto para piano n.º 1"
+        },
+        {
+          "id": "16xc5q8",
+          "anio": 1878,
+          "texto": "Día Nacional de la Patagonia"
+        },
+        {
+          "id": "4vy00k",
+          "anio": 1894,
+          "texto": "Nace el boxeador Luis Ángel Firpo"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1904, nació Tita Merello, actriz y cantante, ícono del tango y del cine argentino. Y además, un día como hoy: en 1830 Chopin interpretó en Varsovia su Concierto para piano número uno; hoy es el Día Nacional de la Patagonia, por la creación de su gobernación en 1878; y en 1894 nació el boxeador Luis Ángel Firpo. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-12": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1p12z82",
+        "anio": 1926,
+        "titulo": "Nace César Pelli",
+        "cuerpo": "Arquitecto argentino, nacido en Tucumán. Cumpliría 100 años. Diseñó las Torres Petronas, en Malasia.",
+        "verificar": [
+          "Nació en San Miguel de Tucumán",
+          "Diseñó las Torres Petronas (Kuala Lumpur)",
+          "La fundación de Necochea el 12/10/1881, la de Ushuaia por Lasserre el 12/10/1884 y la del Club Atlanta el 12/10/1904 no pasaron por la verificación"
+        ]
+      },
+      "ademas": [
+        {
+          "id": "fimusg",
+          "anio": 1881,
+          "texto": "Se funda Necochea, nuestra vecina de la costa"
+        },
+        {
+          "id": "112b3cq",
+          "anio": 1884,
+          "texto": "Augusto Lasserre funda la villa de Ushuaia"
+        },
+        {
+          "id": "nsu970",
+          "anio": 1904,
+          "texto": "Se funda en Buenos Aires el Club Atlético Atlanta"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 100 años, en 1926, nació César Pelli, el arquitecto argentino que diseñó las Torres Petronas, en Malasia. Y además, un día como hoy: en 1881 se fundó Necochea, nuestra vecina de la costa; en 1884 Augusto Lasserre fundó la villa de Ushuaia; y en 1904 se fundó en Buenos Aires el Club Atlético Atlanta. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-13": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1mrs2rs",
+        "anio": 1970,
+        "titulo": "Muere Alberto Prebisch",
+        "cuerpo": "Arquitecto argentino, diseñador del Obelisco de Buenos Aires.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "3vwrm8",
+          "anio": 1847,
+          "texto": "Nace el pintor Eduardo Sívori, figura del realismo argentino"
+        },
+        {
+          "id": "1wufuod",
+          "anio": 1879,
+          "texto": "Se descubre el asteroide Martha"
+        },
+        {
+          "id": "1r6ppue",
+          "anio": null,
+          "texto": "Día del Psicólogo"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1970, murió Alberto Prebisch, el arquitecto argentino que diseñó el Obelisco de Buenos Aires. Y además, un día como hoy: en 1847 nació el pintor Eduardo Sívori, una de las figuras del realismo argentino; en 1879 se descubrió el asteroide Martha; y hoy es el Día del Psicólogo. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-14": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1bm2eek",
+        "anio": 1959,
+        "titulo": "Se funda la UTN",
+        "cuerpo": "La Universidad Tecnológica Nacional, la universidad de la ingeniería argentina.",
+        "verificar": [
+          "\"La universidad de la ingeniería argentina\" es una descripción nuestra: confirmar o cambiar"
+        ]
+      },
+      "ademas": [
+        {
+          "id": "1aiafcv",
+          "anio": 1934,
+          "texto": "Nace Horacio Accavallo, boxeador argentino"
+        },
+        {
+          "id": "e4xy43",
+          "anio": 1964,
+          "texto": "Se anuncia el Nobel de la Paz para Martin Luther King"
+        },
+        {
+          "id": "111ie7w",
+          "anio": 2025,
+          "texto": "Windows 10 deja de recibir soporte de Microsoft"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1959, se fundó la Universidad Tecnológica Nacional, la UTN, la universidad de la ingeniería argentina. Y además, un día como hoy: en 1934 nació Horacio Accavallo, boxeador argentino; en 1964 se anunció que Martin Luther King ganaba el Premio Nobel de la Paz; y en 2025 Windows 10 dejó de recibir soporte de Microsoft. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-15": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1yd0it3",
+        "anio": 1984,
+        "titulo": "Nobel de Medicina para Milstein",
+        "cuerpo": "Se anuncia el premio para el científico argentino César Milstein.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1b6ouqh",
+          "anio": 1881,
+          "texto": "Nace en Lobería el cirujano y escritor José Arce"
+        },
+        {
+          "id": "1jtlb35",
+          "anio": 1997,
+          "texto": "Se lanza la sonda Cassini-Huygens rumbo a Saturno"
+        },
+        {
+          "id": "26x0vl",
+          "anio": null,
+          "texto": "Día de la Mujer Rural"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1984, se anunció el Premio Nobel de Medicina para el científico argentino César Milstein. Y además, un día como hoy: en 1881 nació en Lobería el cirujano y escritor José Arce; en 1997 se lanzó la sonda Cassini-Huygens rumbo a Saturno; y hoy es el Día de la Mujer Rural. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-16": {
+      "voz": "locutora",
+      "principal": {
+        "id": "3pw21i",
+        "anio": 2004,
+        "titulo": "Messi debuta en el Barcelona",
+        "cuerpo": "Con 17 años, Lionel Messi juega su primer partido oficial con el club.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "120eijz",
+          "anio": 2014,
+          "texto": "Se lanza el satélite argentino ARSAT-1, desde Kourou"
+        },
+        {
+          "id": "3i7u02",
+          "anio": 1736,
+          "texto": "Whiston calcula que un cometa chocaría con la Tierra"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 2004, un pibe de 17 años debutó en el Barcelona: se llamaba Lionel Messi. Y además, un día como hoy: en 2014 se lanzó el satélite argentino ARSAT-1, desde Kourou, en la Guayana Francesa; y en 1736 el astrónomo William Whiston calculó que un cometa chocaría con la Tierra y provocaría el fin del mundo. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-17": {
+      "voz": "locutora",
+      "principal": {
+        "id": "meuwzi",
+        "anio": 1933,
+        "titulo": "Einstein llega a los Estados Unidos",
+        "cuerpo": "Albert Einstein se exilia de la Alemania nazi. Vivirá allí el resto de su vida.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1bleuqp",
+          "anio": 1905,
+          "texto": "Se sanciona la Ley Láinez: escuelas primarias nacionales en las provincias"
+        },
+        {
+          "id": "1x0re09",
+          "anio": 1920,
+          "texto": "Nace la actriz Zully Moreno"
+        },
+        {
+          "id": "181tfnm",
+          "anio": 1930,
+          "texto": "Abre la Línea B del subte de Buenos Aires"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1933, Albert Einstein llegó a los Estados Unidos, escapando de la Alemania nazi. Allí vivió el resto de su vida. Y además, un día como hoy: en 1905 se sancionó la Ley Láinez, que creó escuelas primarias nacionales en las provincias; en 1920 nació la actriz Zully Moreno; y en 1930 abrió la Línea B del subte de Buenos Aires. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-18": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1vaw9mz",
+        "anio": 1869,
+        "titulo": "Aparece el diario La Prensa",
+        "cuerpo": "Se publica en Buenos Aires, fundado por José C. Paz.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "ypkz4i",
+          "anio": 1989,
+          "texto": "Se lanza la misión Galileo rumbo a Júpiter"
+        },
+        {
+          "id": "1a5e2ps",
+          "anio": 2007,
+          "texto": "Se inaugura la Línea H del subte porteño"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1869, apareció en Buenos Aires el diario La Prensa, fundado por José C. Paz. Y además, un día como hoy: en 1989 se lanzó la misión Galileo rumbo a Júpiter; y en 2007 se inauguró la Línea H del subte porteño. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-19": {
+      "voz": "locutora",
+      "principal": {
+        "id": "15jfqt5",
+        "anio": 1928,
+        "titulo": "Aparece Patoruzú",
+        "cuerpo": "El cacique tehuelche de la historieta nace en una tira del diario Crítica, creado por Dante Quinterno.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "dpuy28",
+          "anio": 2025,
+          "texto": "En París se produce un robo en la Galería de Apolo del museo del Louvre"
+        },
+        {
+          "id": "fgl9ri",
+          "anio": 1937,
+          "texto": "Fallece el cirujano argentino Pedro Chutró"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1928, apareció por primera vez Patoruzú, el cacique tehuelche de la historieta argentina, en una tira del diario Crítica creada por Dante Quinterno. Y además, un día como hoy: en 1937 murió en Buenos Aires el prestigioso cirujano argentino Pedro Chutró; y en 2025, hace un año, se produjo un robo en la Galería de Apolo del museo del Louvre, en París. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-20": {
+      "voz": "locutora",
+      "principal": {
+        "id": "b5bw01",
+        "anio": 1976,
+        "titulo": "Maradona debuta en Primera",
+        "cuerpo": "Diego Maradona, con 15 años, debuta con Argentinos Juniors. Hace 50 años.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "13mujg6",
+          "anio": 1938,
+          "texto": "Nace César Isella, músico y compositor folklórico argentino"
+        },
+        {
+          "id": "oye8c9",
+          "anio": 1910,
+          "texto": "Es botado en Belfast el RMS Olympic, barco gemelo del Titanic"
+        },
+        {
+          "id": "1rd9106",
+          "anio": 2004,
+          "texto": "Se anuncia Ubuntu, el sistema operativo de Canonical y Mark Shuttleworth"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 50 años, en 1976, un pibe de 15 llamado Diego Maradona debutó en Primera con Argentinos Juniors. Y además, un día como hoy: en 1910 se botó en Belfast el RMS Olympic, el barco gemelo del Titanic; en 1938 nació el músico folklórico César Isella; y en 2004 se anunció Ubuntu, el sistema operativo de Mark Shuttleworth. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-21": {
+      "voz": "locutora",
+      "principal": {
+        "id": "syqx1y",
+        "anio": 1921,
+        "titulo": "Se funda el Radio Club Argentino",
+        "cuerpo": "Nace la entidad de los radioaficionados, ligada a los comienzos de la radio en el país. Hoy es su día.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "igx9nb",
+          "anio": 1833,
+          "texto": "Nace Alfred Nobel, el inventor sueco que creó los premios"
+        },
+        {
+          "id": "10t5bkt",
+          "anio": 1982,
+          "texto": "Gabriel García Márquez es declarado Premio Nobel de Literatura"
+        },
+        {
+          "id": "1aaahvr",
+          "anio": 1992,
+          "texto": "Mendoza adopta su bandera actual, basada en la del Ejército de los Andes"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 105 años, en 1921, se fundó el Radio Club Argentino, la entidad de los radioaficionados. Por eso hoy es su día. Y además, un día como hoy: en 1833 nació Alfred Nobel, el inventor sueco que creó los premios; en 1982 Gabriel García Márquez fue declarado Premio Nobel de Literatura; y en 1992 Mendoza adoptó su bandera actual, basada en la del Ejército de los Andes. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-22": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1j4gpdb",
+        "anio": 1854,
+        "titulo": "Se funda Chivilcoy",
+        "cuerpo": "La ciudad bonaerense, hoy cabecera del partido del mismo nombre, cumple 172 años.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1l1sp10",
+          "anio": 1844,
+          "texto": "Nace Sarah Bernhardt, la gran actriz francesa"
+        },
+        {
+          "id": "46uec2",
+          "anio": 1854,
+          "texto": "Fallece el general José María Paz, destacado militar argentino"
+        },
+        {
+          "id": "oylxwp",
+          "anio": 2009,
+          "texto": "Microsoft lanza Windows 7"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1854, se fundó Chivilcoy, la ciudad bonaerense que cumple 172 años. Y además, un día como hoy: en 1844 nació Sarah Bernhardt, la gran actriz francesa; en 1854, el mismo año de Chivilcoy, murió el general argentino José María Paz; y en 2009 Microsoft lanzó Windows 7. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-23": {
+      "voz": "locutora",
+      "principal": {
+        "id": "tcoqyz",
+        "anio": 1947,
+        "titulo": "Houssay, Nobel de Medicina",
+        "cuerpo": "Bernardo Houssay se convierte en el primer latinoamericano con un Nobel científico.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1l16n9m",
+          "anio": 1951,
+          "texto": "Nace Charly García, músico y compositor argentino de rock"
+        },
+        {
+          "id": "p335i4",
+          "anio": 1869,
+          "texto": "Se funda la villa bonaerense de General Pinto"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1947, se anunció que Bernardo Houssay ganaba el Premio Nobel de Medicina: fue el primer latinoamericano en recibir un Nobel científico. Y además, un día como hoy: en 1869 se fundó la villa bonaerense de General Pinto; y en 1951, hace 75 años, nació Charly García, músico, compositor y una de las grandes figuras del rock argentino. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-24": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1irwou",
+        "anio": 1985,
+        "titulo": "Argentinos Juniors, campeón de la Libertadores",
+        "cuerpo": "En Asunción, el Bicho gana por primera vez la Copa Libertadores de América. Hace 41 años.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1lslzzd",
+          "anio": 1871,
+          "texto": "Se inaugura el Observatorio Astronómico de Córdoba"
+        },
+        {
+          "id": "z8xrkz",
+          "anio": 2006,
+          "texto": "Taylor Swift publica su primer álbum"
+        },
+        {
+          "id": "3g0vc8",
+          "anio": null,
+          "texto": "Día del Diseñador Gráfico"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1985, en Asunción, Argentinos Juniors ganó por primera vez la Copa Libertadores de América. Y además, un día como hoy: en 1871 se inauguró el Observatorio Astronómico de Córdoba; en 2006 Taylor Swift publicó su primer álbum; y hoy es el Día del Diseñador Gráfico. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-25": {
+      "voz": "locutora",
+      "principal": {
+        "id": "14fd4fw",
+        "anio": 2001,
+        "titulo": "Windows XP sale a la venta",
+        "cuerpo": "El sistema de Microsoft con el prado verde de fondo de pantalla cumple 25 años.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "b5fo93",
+          "anio": 1938,
+          "texto": "Fallece la poeta Alfonsina Storni"
+        },
+        {
+          "id": "o57kcb",
+          "anio": 2009,
+          "texto": "U2 da el primer concierto en vivo por YouTube"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 25 años, en 2001, salió a la venta Windows XP, el sistema de Microsoft del prado verde en la pantalla. Y además, un día como hoy: en 1938 murió la poeta argentina Alfonsina Storni, autora de obras como Languidez y Ocre; y en 2009 U2 dio el primer concierto en vivo por YouTube, parte de su gira 360. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-26": {
+      "voz": "locutora",
+      "principal": {
+        "id": "1n5pcpy",
+        "anio": 1965,
+        "titulo": "Parte la primera expedición argentina al Polo Sur",
+        "cuerpo": "Desde la base General Belgrano, en la Antártida, sale la columna que lideró el coronel Jorge Edgar Leal.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "11wfthi",
+          "anio": 1928,
+          "texto": "Nace Francisco Solano López, dibujante de El Eternauta"
+        },
+        {
+          "id": "118g32s",
+          "anio": 1885,
+          "texto": "Louis Pasteur presenta ante la Academia de Ciencias sus trabajos contra la rabia"
+        },
+        {
+          "id": "ct20av",
+          "anio": 1920,
+          "texto": "Nace la aviadora argentina Maureen Dunlop de Popp"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1965, partió desde la base General Belgrano, en la Antártida, la primera expedición argentina al Polo Sur, al mando del coronel Jorge Edgar Leal. Y además, un día como hoy: en 1885 Louis Pasteur presentó sus trabajos contra la rabia; en 1920 nació la aviadora Maureen Dunlop de Popp; y en 1928 nació Francisco Solano López, el dibujante de El Eternauta. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-27": {
+      "voz": "locutora",
+      "principal": {
+        "id": "oosgp",
+        "anio": 1970,
+        "titulo": "Leloir, Nobel de Química",
+        "cuerpo": "Luis Federico Leloir, científico argentino, gana el Nobel de Química.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1p2ye9h",
+          "anio": 1728,
+          "texto": "Nace James Cook, el navegante y cartógrafo británico"
+        },
+        {
+          "id": "b8ttg9",
+          "anio": 1974,
+          "texto": "Nace Elena Roger, cantante y actriz argentina"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1970, se anunció que el científico argentino Luis Federico Leloir ganaba el Premio Nobel de Química. Y además, un día como hoy: en 1728 nació el navegante y cartógrafo británico James Cook; y en 1974 nació en Buenos Aires la cantante y actriz Elena Roger. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-28": {
+      "voz": "locutora",
+      "principal": {
+        "id": "v1k0qx",
+        "anio": 1951,
+        "titulo": "Fangio, campeón del mundo por primera vez",
+        "cuerpo": "El balcarceño Juan Manuel Fangio gana su primer título de Fórmula 1. Hace 75 años.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "55mpz6",
+          "anio": 2011,
+          "texto": "La NASA lanza el satélite NPP para observar el clima de la Tierra"
+        },
+        {
+          "id": "adrisb",
+          "anio": 1955,
+          "texto": "Nace Bill Gates, fundador de Microsoft"
+        },
+        {
+          "id": "zvk806",
+          "anio": 1979,
+          "texto": "Nace Jawed Karim, cofundador de YouTube"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, hace 75 años, en 1951, nuestro Juan Manuel Fangio, el chueco de Balcarce, ganó su primer campeonato mundial de Fórmula 1. Y además, un día como hoy: en 1955 nació Bill Gates, el fundador de Microsoft; en 1979 nació Jawed Karim, cofundador de YouTube; y en 2011 la NASA lanzó el satélite NPP para observar el clima de la Tierra. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-29": {
+      "voz": "locutora",
+      "principal": {
+        "id": "18kokcb",
+        "anio": 1969,
+        "titulo": "Se inaugura la Base Marambio",
+        "cuerpo": "La base antártica argentina, hoy una de las más importantes del continente, cumple 57 años.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "1s7sdwj",
+          "anio": 1787,
+          "texto": "Mozart estrena su ópera Don Giovanni en Praga"
+        },
+        {
+          "id": "18zslbc",
+          "anio": 1920,
+          "texto": "Nace la actriz argentina Hilda Bernard"
+        },
+        {
+          "id": "1px7nk8",
+          "anio": 1945,
+          "texto": "Jean-Paul Sartre pronuncia en París la conferencia \"El existencialismo es un humanismo\""
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1969, se inauguró la Base Marambio, en la Antártida, hoy una de las bases argentinas más importantes. Y además, un día como hoy: en 1787 Mozart estrenó en Praga su ópera Don Giovanni; en 1920 nació la actriz argentina Hilda Bernard; y en 1945 Jean-Paul Sartre dio en París su conferencia El existencialismo es un humanismo. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-30": {
+      "voz": "locutora",
+      "principal": {
+        "id": "4t54z5",
+        "anio": 1921,
+        "titulo": "La Selección gana su primer Sudamericano",
+        "cuerpo": "Argentina se consagra campeona por primera vez en el Campeonato Sudamericano de fútbol, el antecesor de la Copa América.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "118zzb3",
+          "anio": 1960,
+          "texto": "Nace Diego Armando Maradona"
+        },
+        {
+          "id": "14ekfon",
+          "anio": 2001,
+          "texto": "Michael Jackson publica \"Invincible\", su último álbum de estudio en vida"
+        },
+        {
+          "id": "1ah5z2o",
+          "anio": null,
+          "texto": "Día Nacional de la Educación Física"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1921, la Selección Argentina ganó por primera vez el Campeonato Sudamericano de fútbol, el antecesor de la Copa América. Y además, un día como hoy: en 1960 nació Diego Armando Maradona; en 2001 Michael Jackson publicó Invincible, su último álbum de estudio; y hoy es el Día Nacional de la Educación Física. Un día como hoy, en Radar Balcarce."
+    },
+    "2026-10-31": {
+      "voz": "locutora",
+      "principal": {
+        "id": "pyyddg",
+        "anio": 1512,
+        "titulo": "Se inauguran los frescos de la Capilla Sixtina",
+        "cuerpo": "Se presentan al público los frescos del techo pintados por Miguel Ángel, en Roma.",
+        "verificar": []
+      },
+      "ademas": [
+        {
+          "id": "5xr4su",
+          "anio": 1541,
+          "texto": "Miguel Ángel termina \"El Juicio Final\" en la misma capilla"
+        },
+        {
+          "id": "115lc9j",
+          "anio": 1925,
+          "texto": "Muere José Ingenieros, psiquiatra y escritor argentino"
+        }
+      ],
+      "guion": "Buen día, Balcarce. Un día como hoy, en 1512, se inauguraron en Roma los frescos del techo de la Capilla Sixtina, pintados por Miguel Ángel. Y además, un día como hoy: en 1541 Miguel Ángel terminó en esa misma capilla El Juicio Final; y en 1925 murió José Ingenieros, psiquiatra y escritor argentino, autor de El hombre mediocre. Un día como hoy, en Radar Balcarce."
+    }
+  }
+}

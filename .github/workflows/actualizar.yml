@@ -39,7 +39,7 @@ concurrency:
 
 jobs:
   actualizar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # Hoy tarda entre 2 y 3 minutos y medio. Veinte es de sobra, y corta una
     # corrida colgada (un pedido que no contesta) antes de que se pise con la
     # de la media hora siguiente.
@@ -135,6 +135,7 @@ jobs:
         run: npm run build
         env:
           SITIO: https://radarbalcarce.com
+          FOTOS_BASE: ${{ vars.FOTOS_BASE }}
 
       # Que lo importante haya quedado en el HTML. Sin esto, alguien toca
       # layout.js dentro de seis meses, se lleva puesto el Open Graph y no
@@ -166,7 +167,7 @@ jobs:
           # redes, para el celular (redes/previa.mjs; es de lo ya publicado).
           # fusionadas.json: las notas repetidas con otra dirección y adónde
           # redirige cada una (29/09, web/lib/repetidas.js).
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/f1.json web/data/futbol.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/data/celular-estado.json web/data/fusionadas.json web/public/fotos-notas/ web/public/escudos/
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/f1.json web/data/futbol.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/data/celular-estado.json web/data/fusionadas.json web/data/historico/ web/public/fotos-notas/ web/public/escudos/
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

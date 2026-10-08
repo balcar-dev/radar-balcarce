@@ -177,6 +177,8 @@ Lo común a todas:
 - **Lo que decide una persona:** Política y Policiales, y lo que salió en la web porque lo
   aprobó una persona, van a Facebook e Instagram **sólo si esa persona lo marca** desde el
   panel del celular ("También a Facebook e Instagram").
+- **Los reels (Instagram y Facebook) cierran el posteo con «Voz generada con inteligencia artificial.»** (8/10/2026; un aviso en
+  texto, sin la etiqueta visual de Meta). Es de la voz, no de la nota: no cambia lo que sigue.
 - **No lleva:** la fuente, "Resumen hecho con IA" (quién escribió la nota se dice en la
   nota), "en vivo", `.com.ar`, ni "punto com" escrito (eso es sólo para la voz).
 - **Bien:** "Ferroviarios gana el Apertura y va por la final. Toda la nota acá:

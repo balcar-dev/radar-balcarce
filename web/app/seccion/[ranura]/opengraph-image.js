@@ -1,4 +1,4 @@
-import { porRanura, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
+import { porRanura, frasesDeSeccion, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
 import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
 import { partirRanura, cuantasPaginas } from '@/lib/paginas';
 
@@ -21,5 +21,5 @@ export function generateStaticParams() {
 export default function Imagen({ params }) {
   const { base } = partirRanura(params.ranura, porRanura);
   const s = porRanura(base);
-  return tarjeta({ titulo: s ? `${s.nombre} en Balcarce` : 'Radar Balcarce', seccion: s?.nombre });
+  return tarjeta({ titulo: s ? frasesDeSeccion(s.nombre).enBalcarce : 'Radar Balcarce', seccion: s?.nombre });
 }

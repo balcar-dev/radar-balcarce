@@ -149,3 +149,11 @@ test('el HTML compilado tiene las clases del sistema (si ya se compiló)', (t) =
   const d = path.join(RAIZ, 'web/out/dolar.html');
   if (fs.existsSync(d)) assert.ok(!/en vivo/i.test(fs.readFileSync(d, 'utf8').replace(/<script[\s\S]*?<\/script>/g, '')));
 });
+
+// V2-15 (8/10/2026): enlace "saltar al contenido" para quien navega con el teclado o un lector de pantalla.
+test('el sitio tiene un enlace para saltar al contenido', () => {
+  const layout = fs.readFileSync(new URL('../web/app/layout.js', import.meta.url), 'utf8');
+  assert.match(layout, /<a className="saltar" href="#contenido">Saltar al contenido<\/a>/);
+  assert.match(layout, /<main id="contenido"/);
+  assert.match(fs.readFileSync(new URL('../web/app/globals.css', import.meta.url), 'utf8'), /\.saltar:focus/);
+});

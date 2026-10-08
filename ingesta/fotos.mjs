@@ -197,6 +197,13 @@ function interpretarRespuesta(respuesta, candidatas) {
   // Una foto con un menor reconocible (28/09) queda afuera igual que una con marca.
   const conMarca = new Set([...porLetra.entries()].filter(([, f]) => f.tiene_marca === true || f.menor === true).map(([l]) => l));
 
+  // Sólo vale una foto que la IA evaluó y marcó EXPLÍCITAMENTE sin marca y sin menor (I-4, 8/10/2026): si la respuesta no trae la
+  // evaluación de esa foto (más probable con Groq), no es "sin marca y sin menor", es "sin evaluar", y no se elige.
+  const evaluadaSinMarcaNiMenor = (letra) => {
+    const f = porLetra.get(letra);
+    return f?.tiene_marca === false && f?.menor === false;
+  };
+
   const resultado = candidatas.map((c, i) => {
     const letra = LETRAS[i];
     const f = porLetra.get(letra);
@@ -219,7 +226,7 @@ function interpretarRespuesta(respuesta, candidatas) {
     const i = LETRAS.indexOf(obj.elegida);
     const medio = candidatas[i]?.medio ?? 'esa fuente';
     const detalle = porLetra.get(obj.elegida)?.detalle;
-    const iSinMarca = candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]));
+    const iSinMarca = candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]) && evaluadaSinMarcaNiMenor(LETRAS[j]));
     if (iSinMarca >= 0) {
       elegida = { ...resultado[iSinMarca], letra: LETRAS[iSinMarca], datos: candidatas[iSinMarca].datos };
       razon = `La IA había preferido la de ${medio}, pero no se puede usar (marca de agua, otro medio o un menor)${detalle ? ` (${detalle})` : ''}: se usa ${resultado[iSinMarca].medio} en su lugar, aunque no sea la ideal.`;
@@ -230,7 +237,8 @@ function interpretarRespuesta(respuesta, candidatas) {
     const i = LETRAS.indexOf(obj.elegida);
     // Con la imagen que ya se bajó para compararla: volver a bajarla fallaba (1/10, "la virgen de la tosquera", nueve
     // fuentes y tres intentos con "no se pudo volver a bajar la elegida").
-    if (candidatas[i]?.datos) elegida = { ...resultado[i], letra: obj.elegida, datos: candidatas[i].datos };
+    if (candidatas[i]?.datos && evaluadaSinMarcaNiMenor(obj.elegida)) elegida = { ...resultado[i], letra: obj.elegida, datos: candidatas[i].datos };
+    else if (candidatas[i]?.datos) razon = `La IA eligió la de ${candidatas[i].medio ?? 'esa fuente'} pero no evaluó si tiene marca de agua o un menor: sin esa evaluación no se usa.`;
   }
   return { elegida, razon, candidatas: resultado };
 }

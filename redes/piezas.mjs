@@ -91,8 +91,8 @@ export const ventanaDe = (nombre) => VENTANAS[nombre] ?? (esAviso(nombre) ? VENT
  * tarjeta de la portada; interrumpir a alguien con una historia es para lo
  * que le puede costar plata o un susto.
  */
-export function avisoDeClima(clima) {
-  const a = avisosDelClima(clima).find((x) => x.gravedad === 'alta');
+export function avisoDeClima(clima, ahora = new Date()) {
+  const a = avisosDelClima(clima, { ahora }).find((x) => x.gravedad === 'alta');
   return a ? { ...a, nombre: `aviso-${a.tipo}` } : null;
 }
 
@@ -141,8 +141,15 @@ export const tipoInstagram = (pieza) => (pieza.tipo === 'reel' ? 'REELS' : 'STOR
  * El texto que acompaña al reel. Las historias no llevan.
  * Sólo lo que ya está publicado: el titular y de dónde seguir leyendo.
  */
+/** El aviso de que la voz es sintética, como texto en el posteo (C-9, 8/10/2026; decidido: texto, sin la etiqueta visual de Meta). */
+export const AVISO_DE_VOZ = 'Voz generada con inteligencia artificial.';
+
 export function pieDePieza(pieza) {
   if (pieza.tipo !== 'reel') return '';
+  return `${pieDeReel(pieza)}\n\n${AVISO_DE_VOZ}`;
+}
+
+function pieDeReel(pieza) {
   // Un podcast lista las notas que cuenta, cada una con su enlace. La fuente
   // no se nombra: eso está en la nota de la web.
   if (pieza.items?.length) {
@@ -204,7 +211,7 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null
     .filter((h) => !SOLO_EN_LA_PC.includes(h.id))
     .filter((h) => toca(h, fecha, { estado }))
     .map((h) => ({ nombre: h.id, tipo: 'historia', hora: h.hora }));
-  const aviso = avisoDeClima(clima);
+  const aviso = avisoDeClima(clima, fecha);
 
   return [
     ...(aviso ? [{ nombre: aviso.nombre, tipo: 'historia', hora: HORA_AVISO }] : []),
@@ -214,7 +221,7 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null
 }
 
 /** ¿Está dentro de su hora? Desde que le toca hasta que vence la ventana. */
-function enHora(hora, ahora, ventana) {
+export function enHora(hora, ahora, ventana) {
   const desde = minutosDeHora(hora);
   const ahoraMin = minutoDelDiaAR(ahora);
   return ahoraMin >= desde && ahoraMin < desde + ventana;

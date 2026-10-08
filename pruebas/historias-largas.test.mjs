@@ -349,7 +349,7 @@ test('16d · en el plan, el día no pasa de 8 historias: con aviso grave y agend
   assert.equal(cuenta(sinAviso), 7);
 
   // Con un aviso grave, sin agenda, son 8 y entra todo.
-  const conAviso = { ...datos, clima: { ...datos.clima, dias: [{ fecha: '2026-09-26', max: 20, min: -6, lluvia: 30, codigo: 3, viento: 15 }, { ...datos.clima.dias[1], fecha: '2026-09-27' }] } };
+  const conAviso = { ...datos, clima: { ...datos.clima, dias: [{ fecha: '2026-09-26', max: 20, min: 4, lluvia: 30, codigo: 3, viento: 15 }, { ...datos.clima.dias[1], fecha: '2026-09-27', min: -6 }] } };
   const plan = planDelDia(conAviso, { fecha: AR('2026-09-26', '09:00'), estado: SIN_PARTICIPA }).piezas;
   const aviso = plan.find((p) => p.nombre.startsWith('aviso'));
   assert.ok(aviso, 'el aviso de helada fuerte sale');

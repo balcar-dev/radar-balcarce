@@ -417,3 +417,36 @@ test('Hoy en Balcarce: flechas del teclado, una sola pestaña en el orden de Tab
   assert.match(hoy, /Number\.isFinite\(a\.temp\)/);
   assert.match(hoy, /aria-label="Servicios de hoy"/);
 });
+
+// S-1 / W-5 (8/10/2026): las notas automáticas sin cuerpo (las 296 del 18 al 25/09) no se ofrecen a Google.
+test('una nota automática sin cuerpo lleva noindex, follow; con cuerpo o publicada por una persona, no', async () => {
+  const { noSeOfreceAGoogle } = await import('../web/lib/cuerpo.js');
+  const cuerpo = 'palabra '.repeat(80).trim();
+  assert.equal(noSeOfreceAGoogle({ como: 'automatica', copete: 'La bajada', cuerpo: 'La bajada' }), true);
+  assert.equal(noSeOfreceAGoogle({ copete: 'La bajada', cuerpo: '' }), true, 'las viejas, sin "como"');
+  assert.equal(noSeOfreceAGoogle({ como: 'automatica', copete: 'La bajada', cuerpo }), false);
+  assert.equal(noSeOfreceAGoogle({ como: 'publicada', copete: 'La bajada', cuerpo: 'corto' }), false, 'lo que publica una persona se respeta');
+  const pagina = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/app/nota/[id]/page.js'), 'utf8');
+  assert.match(pagina, /noSeOfreceAGoogle\(n\) \? \{ robots: \{ index: false, follow: true \} \}/);
+});
+
+// V2-13 (8/10/2026): Google usa el feed para descubrir notas; robots.txt no lo bloquea. El panel sí sigue bloqueado.
+test('robots.txt deja pasar el feed y bloquea el panel', () => {
+  const robots = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/app/robots.js'), 'utf8');
+  assert.match(robots, /disallow: \['\/panel\/'\],/);
+  assert.ok(!/disallow:[^\n]*feed\.xml/.test(robots), 'el feed no se bloquea');
+  assert.ok(!/^\s*host:/m.test(robots), 'sin la línea Host:');
+});
+
+// SEO (8/10/2026): las secciones no dicen "Balcarce en Balcarce" ni "Argentina en Balcarce".
+test('la frase de cada sección tiene sentido y ninguna repite "Balcarce en Balcarce"', async () => {
+  const fs2 = await import('node:fs');
+  const datos = fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/lib/datos.js'), 'utf8');
+  const bloque = datos.slice(datos.indexOf('export function frasesDeSeccion'), datos.indexOf('// Un nombre corto para la navegación'));
+  assert.ok(!/Balcarce en Balcarce|Argentina en Balcarce/.test(bloque));
+  for (const s of ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina']) {
+    assert.ok(bloque.includes(`${s.includes(' ') ? `'${s}'` : s}: {`), `falta la frase de ${s}`);
+  }
+  assert.match(fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/app/seccion/[ranura]/page.js'), 'utf8'), /frasesDeSeccion\(s\.nombre\)\.lema/);
+  assert.match(fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/app/seccion/[ranura]/opengraph-image.js'), 'utf8'), /frasesDeSeccion\(s\.nombre\)\.enBalcarce/);
+});

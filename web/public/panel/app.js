@@ -23,6 +23,9 @@ import {
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
+import { resumenDeHoy, htmlDeHoy } from './hoy.js';
+import { clasificarBorradores, htmlDeBorradores } from './borradores.js';
+import { pasosDeLaNota, htmlDelRecorrido } from './recorrido.js';
 import { htmlDeFormulario, htmlDeLista, htmlDeUnaPista, htmlDeCerrarPista } from './pistas.js';
 import {
   armarContactos, htmlDeContactos, htmlDeUnContacto, htmlDeFormularioContacto, htmlDeCola, colaDeEnvio, contactoPropio, conHistorial, enlaceWhatsApp, enlaceMail,
@@ -43,7 +46,7 @@ const COLOR = {
 const chip = (s) => (s ? `<span class="chip" style="background:var(--s-${COLOR[s] ?? 'pais'})">${esc(s)}</span>` : '');
 const GUARDADO = 'radar-panel';
 /** Los archivos del panel (los mismos que guarda sw.js): "Actualizar el panel" los vuelve a bajar. */
-const ARCHIVOS_DEL_PANEL = ['app.js', 'github.js', 'cifrado.js', 'textos.js', 'fechas.js', 'numeros.js', 'redes-estado.js', 'revision.js', 'pistas.js', 'contactos.js', 'fotos.js', 'index.html'].map((a) => `/panel/${a}`);
+const ARCHIVOS_DEL_PANEL = ['app.js', 'github.js', 'cifrado.js', 'textos.js', 'fechas.js', 'numeros.js', 'redes-estado.js', 'revision.js', 'pistas.js', 'contactos.js', 'fotos.js', 'hoy.js', 'borradores.js', 'recorrido.js', 'index.html'].map((a) => `/panel/${a}`);
 const DEMO = new URLSearchParams(location.search).has('demo');
 const VOCES = { locutora: 'la locutora', locutor: 'el locutor' };
 const enlaceDeNota = (n) => `https://radarbalcarce.com/nota/${n.slug ? `${n.slug}-${n.id}` : n.id}`;
@@ -90,7 +93,7 @@ async function guardarLlavesDelCelular(v) {
 // ------------------------------------------------------------------ el estado
 
 const E = {
-  cliente: null, nombre: '', llaves: null, pestana: 'esperan', busqueda: '',
+  cliente: null, nombre: '', llaves: null, pestana: 'hoy', busqueda: '',
   portada: null, esperando: [], intentosMaximos: 3, pendientes: null, descartadas: [], papelera: [], publicos: [],
   decisiones: { notas: {}, redes: {} }, correcciones: { notas: {} }, archivo: null, estadoCel: null, libro: {},
   // La pestaña Fechas (se carga la primera vez que se abre).
@@ -320,6 +323,7 @@ const vueltaAPublicar = (n) => {
 
 /** Los íconos de la barra de abajo (trazos simples, del color del texto). */
 const ICONOS = {
+  hoy: '<svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>',
   esperan: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
   publicadas: '<svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h6M9 13h6"/></svg>',
   fotos: '<svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
@@ -335,8 +339,8 @@ function pestanas() {
   const sinFoto = E.banco ? resumenDeFotos().items.length : null;
   const rev = E.revision ? contarRevision(E.revision.items) : null;
   const items = [
-    ['esperan', 'Esperan', esperan], ['publicadas', 'Publicadas', ultimas], ['fotos', 'Fotos', sinFoto === null ? '·' : (sinFoto || '✓')],
-    ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : (pistasConNovedad() ? '●' : '⋯')],
+    ['hoy', 'Hoy', '·'], ['esperan', 'Esperan', esperan], ['publicadas', 'Publicadas', ultimas],
+    ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : (pistasConNovedad() || sinFoto ? '●' : '⋯')],
   ];
   const actual = EN_MAS.has(E.pestana) ? 'mas' : E.pestana;
   // El globito: rojo si hay algo que atender, gris si es un total, verde si está todo bien; sin globito si no hay nada que mostrar.
@@ -370,8 +374,10 @@ function vistaLista() {
   pestanas();
   $('#recargar').hidden = false;
   const cuando = E.portada?.generado ? `La web se armó ${haceCuanto(E.portada.generado)}.` : '';
-  if (E.pestana === 'esperan') vistaEsperan(cuando);
+  if (E.pestana === 'hoy') vistaHoy();
+  else if (E.pestana === 'esperan') vistaEsperan(cuando);
   else if (E.pestana === 'fotos') vistaFotos();
+  else if (E.pestana === 'borradores') vistaBorradores();
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
   else if (E.pestana === 'contactos') vistaContactos();
@@ -384,6 +390,87 @@ function vistaLista() {
   if (EN_MAS.has(E.pestana) && !E.dia && !E.feriado && !E.pieza && !E.pistaAbierta && !E.cerrandoPista && !E.contactoAbierto && !E.nuevoContacto && !E.cola) app.insertAdjacentHTML('afterbegin', '<button type="button" class="boton volver-mas" data-pestana="mas">← Más</button>');
   // Volver a donde se estaba: después de abrir una nota, aprobarla o descartarla, la lista sigue en el mismo lugar.
   if (E.restaurar != null) { const y = E.restaurar; E.restaurar = null; requestAnimationFrame(() => window.scrollTo(0, y)); }
+}
+
+// ------------------------------------------------------------------ la pestaña Borradores (borradores.js)
+
+/** El tipo con que se abre una nota para escribirle un borrador: en qué lista está hoy. */
+function tipoDeNota(id) {
+  for (const t of ['pendiente', 'sin-cuerpo', 'retirada', 'publicada']) if (buscar(t, id)) return t;
+  return 'pendiente';
+}
+
+/** Cómo está la nota de un borrador: espera, la aprobaron, la descartaron, la retiraron o ya está en la web. */
+function estadoDeLaNota(id) {
+  const d = decididaEnElCelular(id);
+  if (d?.estado === 'publicada') return 'aprobada';
+  if (d?.estado === 'descartada') return 'descartada';
+  if (d?.estado === 'bloqueada') return 'retirada';
+  if ((E.portada?.notas ?? []).some((n) => n.id === id)) return 'publicada';
+  return 'espera';
+}
+
+/** Lee el archivo de borradores cifrado y abre cada sobre con la llave de este celular (como mucho 40, los más nuevos). */
+async function cargarBorradores() {
+  const { json } = await E.cliente.leer(ARCHIVOS.borradores);
+  const sobres = Object.entries(json.borradores ?? {})
+    .map(([clave, sobre]) => ({ clave, sobre, cuando: Date.parse(sobre?.cuando ?? '') }))
+    .filter((x) => Number.isFinite(x.cuando)).sort((a, b) => b.cuando - a.cuando).slice(0, 40);
+  const abiertos = await Promise.all(sobres.map(async (x) => {
+    const b = E.llaves ? await abrir(x.sobre, E.llaves).catch(() => null) : null;
+    return b ? { ...x, b } : null;
+  }));
+  const items = abiertos.filter(Boolean).map(({ clave, cuando, b }) => {
+    const deLaPista = clave.startsWith('nota-');
+    const id = deLaPista ? clave.slice(5) : clave;
+    const nota = deLaPista ? null : buscar(tipoDeNota(id), id);
+    (E.borradoresIA ??= {})[clave] ??= { b, cuando };
+    return { id, clave, tipo: deLaPista ? 'nota-pista' : tipoDeNota(id), cuando, b, estado: deLaPista ? 'espera' : estadoDeLaNota(id), tituloNota: nota?.titulo, seccionNota: nota?.seccion };
+  });
+  E.borradoresLista = { cargadoEn: Date.now(), items, sinLlave: !E.llaves };
+}
+
+function vistaBorradores() {
+  const enCurso = Object.values(E.trabajos).filter((t) => t.clase === 'ia' && t.estado === 'escribiendo').map((t) => t.titulo).filter(Boolean);
+  const L = E.borradoresLista;
+  if (!L || Date.now() - L.cargadoEn > 60000) {
+    if (!E.cargandoBorradores) {
+      E.cargandoBorradores = true;
+      cargarBorradores().catch((e) => { aviso(explicarError(e), { ms: 9000 }); E.borradoresLista ??= { cargadoEn: Date.now(), items: [] }; })
+        .finally(() => { E.cargandoBorradores = false; if (E.pestana === 'borradores' && enUnaLista()) vistaBorradores(); });
+    }
+    if (!L) { app.innerHTML = htmlDeBorradores({}, { esc, haceCuanto, chip }, { cargando: true, enCurso }); return; }
+  }
+  app.innerHTML = htmlDeBorradores(clasificarBorradores(L.items), { esc, haceCuanto, chip }, { sinLlave: L.sinLlave && !L.items.length, enCurso });
+}
+
+/** La pantalla de entrada (hoy.js): lo que hay que mirar al abrir el panel, con un atajo a cada cosa. */
+function vistaHoy() {
+  const { sinDecidir } = listasDeEsperan();
+  // Con la lista de Borradores ya cargada, sólo cuentan los que esperan una persona; si no, los de esta sesión.
+  const borradores = E.borradoresLista
+    ? clasificarBorradores(E.borradoresLista.items).paraLeer.map((x) => x.b)
+    : Object.values(E.borradoresIA ?? {}).map((g) => g.b).filter((b) => b?.ok && b.texto);
+  const enCurso = Object.values(E.trabajos).filter((t) => t.clase === 'ia' && t.estado === 'escribiendo').map((t) => t.titulo).filter(Boolean);
+  const fotos = E.banco ? resumenDeFotos().items : [];
+  const r = E.estadoCel?.redes;
+  const hoy = hoyEnBalcarce();
+  const piezas = r?.piezas ?? [];
+  const salio = (p) => E.libro?.instagram?.[`${hoy}/${p.nombre}`]?.cuando ?? null;
+  const proxima = piezas.filter((p) => !salio(p) && estadoDePieza({ hora: p.hora, ventana: p.ventana, salio: null }).clase !== 'mal').sort((a, b) => String(a.hora).localeCompare(String(b.hora)))[0] ?? null;
+  const masVieja = sinDecidir.map((n) => Date.parse(n.fecha)).filter(Number.isFinite).sort((a, b) => a - b)[0];
+  const rev = E.revision ? contarRevision(E.revision.items) : null;
+  const resumen = resumenDeHoy({
+    generado: E.portada?.generado ?? null,
+    esperan: { n: sinDecidir.length, deBalcarce: sinDecidir.filter((n) => n.seccion === 'Balcarce').length, masVieja: masVieja ? haceCuanto(new Date(masVieja).toISOString()) : null },
+    sinCuerpo: sinCuerpoVigentes().length,
+    borradores: { listos: borradores.length, conMarca: borradores.filter((b) => (b.problemas ?? []).length).length, enCurso },
+    sinFoto: { n: fotos.length, firmes: fotos.filter((x) => MOTIVOS_DE_FOTO[x.motivo]?.firme).length },
+    redes: r ? { problemas: problemasDeHoy(E.libro, hoy).length, salieron: piezas.filter(salio).length, total: piezas.length, proxima: proxima ? { que: proxima.que, hora: proxima.hora } : null } : null,
+    pistas: pistasConNovedad(),
+    graves: rev?.graves ?? 0,
+  });
+  app.innerHTML = htmlDeHoy(resumen, { esc, haceCuanto, horaEnBalcarce });
 }
 
 /** Si la nota va a tener foto cuando se publique, y si no, por qué (2/10, Hernán: "saber si la nota que uno revisa va a tener o no foto"). */
@@ -1212,6 +1299,8 @@ async function guardarFechas(cambiarJson, mensaje, listo) {
  * [id, nombre, ícono, para qué sirve]. Cada una se abre desde "Más" y trae su botón para volver.
  */
 const MENU_MAS = [
+  ['borradores', 'Borradores', '✎', 'Todo lo que se le pidió a la IA: lo que está para leer y lo que ya se resolvió.'],
+  ['fotos', 'Fotos', '📷', 'Las notas de la portada sin foto, por qué no la tienen y dónde buscarle una.'],
   ['contactos', 'Contactos', '👥', 'Instituciones y personas a quienes pedirles fechas y eventos: escribirles y llevar quién respondió.'],
   ['pistas', 'Pistas', '✎', 'Pegá un dato o un tuit y mirá si lo cubrieron los medios.'],
   ['revision', 'Revisión', '✓', 'Lo que la IA marcó en las notas ya publicadas (ortografía, texto roto, temas sensibles).'],
@@ -1225,7 +1314,9 @@ function vistaMas() {
   const reglas = reglasFb();
   const rev = E.revision ? contarRevision(E.revision.items) : null;
   const nPistas = pistasConNovedad();
-  const avisoDe = { pistas: nPistas ? `● ${nPistas} con novedad` : '', revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
+  const nSinFoto = E.banco ? resumenDeFotos().items.length : 0;
+  const nBorradores = E.borradoresLista ? clasificarBorradores(E.borradoresLista.items).paraLeer.length : 0;
+  const avisoDe = { borradores: nBorradores ? `${nBorradores} para leer` : '', fotos: E.banco ? (nSinFoto ? `${nSinFoto} sin foto` : '✓ todas con foto') : '', pistas: nPistas ? `● ${nPistas} con novedad` : '', revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
   app.innerHTML = `
     <h1>Más</h1>
     ${MENU_MAS.map(([id, nombre, icono, que]) => `<button type="button" class="tarjeta" data-pestana="${id}"><div class="menu-item"><span class="menu-icono">${icono}</span><div><div class="titulo">${esc(nombre)}${avisoDe[id] ? ` <span class="marca${(rev?.graves && id === 'revision') || (id === 'pistas' && nPistas) ? ' mal' : ''}">${esc(avisoDe[id])}</span>` : ''}</div><div class="meta">${esc(que)}</div></div><span class="flecha">›</span></div></button>`).join('')}
@@ -1305,6 +1396,25 @@ function barraDeAcciones(tipo, id, d) {
   return botones ? `<div class="espacio-barra"></div><div class="barra-acciones">${botones}</div>` : '';
 }
 
+/** "Su recorrido": de dónde entró la nota, por qué esperó, quién la escribió y la aprobó, adónde salió (recorrido.js). */
+function recorridoDeLaNota(tipo, id, n, d) {
+  const g = E.borradoresIA?.[id];
+  const medios = (n.fuentes ?? n.fuentesConsultadas ?? []).map((f) => f?.medio).filter(Boolean);
+  const todos = medios.length ? medios : (n.medios ?? []);
+  const pasos = pasosDeLaNota({
+    nota: n,
+    medios: [...new Set(todos)],
+    motivoExplicado: tipo === 'pendiente' && n.motivo ? explicarMotivo(n.motivo) : '',
+    decision: d ? { estado: d.estado, por: d.por, cuando: d.cuando, cambioElTitulo: !!d.titulo && d.titulo !== n.titulo } : null,
+    borrador: g?.b ? { cuando: g.cuando, pedido: g.b.pedido, marcas: (g.b.problemas ?? []).length } : null,
+    escritaPorIA: tipo === 'publicada' && !!n.guion && !n.cuerpoAMano,
+    salioEnLaWeb: tipo === 'publicada',
+    salioSola: n.como === 'automatica',
+    facebook: enFacebook(id), instagram: enInstagram(id), marcadaParaRedes: marcadaParaRedes(id),
+  }, { horaEnBalcarce });
+  return htmlDelRecorrido(pasos, { esc });
+}
+
 function vistaNota(tipo, id) {
   E.notaActual = id;
   const n = buscar(tipo, id);
@@ -1376,6 +1486,7 @@ function vistaNota(tipo, id) {
     <p>${chip(c?.seccion ?? n.seccion)}<span class="meta">${esc(haceCuanto(n.fecha))}</span></p>
     <h1>${esc(c?.titulo ?? n.titulo ?? 'Nota sensible')}</h1>
     ${cuerpo}
+    ${recorridoDeLaNota(tipo, id, n, d)}
     ${extra}
     <div class="botones">${acciones}</div>${barraDeAcciones(tipo, id, d)}`;
   window.scrollTo(0, 0);
@@ -1430,7 +1541,9 @@ async function trabajoDeIA(tipo, id, pedido, { publicar, titulo }) {
     if (!borrador) throw new Error('No pude abrir el borrador en este celular. Si recién lo registraste, probá de nuevo.');
     (E.borradoresIA ??= {})[id] = { b: borrador, cuando: Date.now() };
     // "Publicar" = que la escriba y salga. Sólo si el verificador no marcó nada; si marcó algo, se la muestra a quien decide.
-    if (publicar && borrador.ok && borrador.texto && !(borrador.problemas ?? []).length) {
+    // Un tema delicado ("necesita ojo humano": un detenido, un chico, una muerte) no sale sin que alguien lea el texto (C-19, 8/10/2026).
+    const delicada = /necesita ojo humano/i.test(buscar(tipo, id)?.motivo ?? '');
+    if (publicar && !delicada && borrador.ok && borrador.texto && !(borrador.problemas ?? []).length) {
       const t = borrador.texto;
       const seccion = borrador.seccion ?? buscar(tipo, id)?.seccion ?? '';
       E.trabajos[id] = { clase: 'ia', estado: 'publicando', tipo, titulo };
@@ -1442,7 +1555,7 @@ async function trabajoDeIA(tipo, id, pedido, { publicar, titulo }) {
       return;
     }
     E.trabajos[id] = { clase: 'ia', estado: 'listo', tipo, titulo };
-    aviso(publicar ? `La IA escribió “${titulo}”, pero el verificador marcó algo: revisala antes de publicar.` : `Lista la nota “${titulo}”: tocá para revisarla.`, { ver: { tipo, id }, ms: 20000 });
+    aviso(publicar ? `La IA escribió “${titulo}”, pero ${delicada ? 'es un tema delicado' : 'el verificador marcó algo'}: leela antes de publicar.` : `Lista la nota “${titulo}”: tocá para revisarla.`, { ver: { tipo, id }, ms: 20000 });
   } catch (e) {
     E.trabajos[id] = { clase: 'ia', estado: 'fallo', tipo, titulo, motivo: explicarError(e) };
     aviso(`No se pudo escribir “${titulo}”: ${explicarError(e)}`, { ms: 12000 });
@@ -1765,6 +1878,10 @@ document.addEventListener('click', async (ev) => {
   } else if (accion === 'ver-borrador') {
     const g = E.borradoresIA?.[tipo === 'nota-pista' ? `nota-${id}` : id];
     if (g) vistaBorrador(tipo, id, g.b);
+  } else if (accion === 'abrir-borrador') {
+    const clave = tipo === 'nota-pista' ? `nota-${id}` : id;
+    const g = E.borradoresIA?.[clave];
+    if (g) vistaBorrador(tipo, id, g.b); else aviso('No pude abrir ese borrador. Probá de nuevo en un momento.');
   } else if (accion === 'borrador-guardado') {
     try {
       const { json } = await E.cliente.leer(ARCHIVOS.borradores);

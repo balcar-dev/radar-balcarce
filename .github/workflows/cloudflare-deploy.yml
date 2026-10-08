@@ -38,10 +38,10 @@ permissions:
 jobs:
   desplegar:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # Hoy tarda entre uno y uno y medio minutos. Quince es de sobra y corta
     # una subida colgada.
-    timeout-minutes: 15
+    timeout-minutes: 25
     env:
       # Que "hoy" y las horas que se compilan sean los de Balcarce, no UTC.
       TZ: America/Argentina/Buenos_Aires
@@ -62,6 +62,8 @@ jobs:
         run: npm run build
         env:
           SITIO: https://radarbalcarce.com
+          # De dónde salen las fotos de las notas: vacío = el propio sitio (web/lib/fotos.js).
+          FOTOS_BASE: ${{ vars.FOTOS_BASE }}
 
       # Direct Upload: se sube lo que ya compilamos, sin que Cloudflare
       # corra su propio build. Así no cuenta contra el límite de 500 builds

@@ -33,7 +33,8 @@ test('el celular escribe correcciones y decisiones con una nota por renglón, co
   // El archivo del repositorio, reescrito por el celular, dice lo mismo y en el
   // mismo formato: una nota por renglón (si traía un id repetido, queda el último,
   // que es el que ya se usaba).
-  const actual = JSON.parse(leer('web/data/correcciones.json'));
+  // Un ejemplo fijo, no el archivo vivo: si alguien lo vacía desde el celular, la web no puede congelarse (C-7, 8/10/2026).
+  const actual = { notas: { a: { motivo: 'x', cuando: '2026-09-29', por: 'H' }, b: { motivo: 'y', cuando: '2026-09-29', por: 'H' } } };
   const reescrito = formatear(ARCHIVOS.correcciones, actual);
   assert.deepEqual(JSON.parse(reescrito), actual);
   assert.equal(reescrito.split('\n').length, Object.keys(actual.notas).length + 3);
@@ -198,4 +199,12 @@ test('la página del panel: sin nada de afuera, sin indexar, y se puede instalar
   assert.match(cabeceras, /\/panel\/\*\r?\n\s+X-Robots-Tag: noindex, nofollow/);
   assert.match(cabeceras, /connect-src 'self' https:\/\/api\.github\.com/);
   assert.match(leer('web/app/robots.js'), /'\/panel\/'/);
+});
+
+// C-19 (8/10/2026): "Publicar" no saca solo una nota de un tema delicado: la muestra para que la lean.
+test('"Publicar" de un tema delicado muestra el texto antes de publicarlo', () => {
+  const app = leer('web/public/panel/app.js');
+  assert.match(app, /const delicada = \/necesita ojo humano\/i\.test\(buscar\(tipo, id\)\?\.motivo \?\? ''\);/);
+  assert.match(app, /if \(publicar && !delicada && borrador\.ok/);
+  assert.match(app, /es un tema delicado/);
 });

@@ -3,8 +3,8 @@
 *8/10/2026. Junta todo lo anotado: la auditoría propia, la revisión archivo por archivo, la de SEO, las tres
 auditorías externas y lo que decidieron Hernán y Andrés. Va **de lo más crítico a lo menos**, sin dejar nada
 afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJORAS.md) e
-[`IDEAS-NUEVAS.md`](IDEAS-NUEVAS.md) (columna "Dónde"). Nada está hecho. Antes de cada paso, ustedes dan el visto
-bueno.*
+[`IDEAS-NUEVAS.md`](IDEAS-NUEVAS.md) (columna "Dónde"). Desde el 8/10 se trabaja en este orden y lo hecho queda anotado en
+"Avance" (abajo). Lo que toca reglas que no se negocian o requiere una decisión espera a ustedes.*
 
 **Cómo se ordenó:**
 1. Lo que ya publica algo mal o rompe la web.
@@ -18,6 +18,52 @@ bueno.*
 9. Ideas nuevas.
 
 **"Quién"**: C = lo hace Claude con su visto bueno · P = lo hace una persona · D = decisión de ustedes.
+
+## Avance
+
+*Se completa a medida que se trabaja. Cada cambio sube a `main` con las pruebas en verde.*
+
+| # | Qué se hizo | Cuándo | Commit / regla |
+|---|---|---|---|
+| 2 | La prueba de las retiradas acepta una lista vacía; se simuló el lunes 12/10 (la poda deja cero) | 8/10 | `c764736` |
+| 1 y 25 | La corrección automática de la auditoría **sólo corrige la tilde que falta en una palabra**, nunca estira un texto y no cambia el sentido. Se reparó "en en en…" (nota `1uh42rm`) y "compiránnn…" (`1c7wqua`) y se revirtieron 13 cambios que alteraban lo que decía la nota; quedaron los 4 pares correctos | 8/10 | `16ca292`, regla 108 |
+| 28 | Se borraron dos celulares personales de `docs/historico/HISTORIA.md` (siguen en el historial de git) y se quitó la línea `Host:` del robots | 8/10 | `5bc00d7` |
+| 18 | Parche de las herramientas de armado (sharp, source-map-js); el sitio compila. **Falta:** el aviso de fin de parches de Next 15 sólo se resuelve pasando a Next 16 (cambio grande, a decidir) | 8/10 | `5bc00d7` |
+| 14 | Un archivo de datos roto corta la corrida en vez de leerse como vacío (archivo de notas, libro de redes, armado del sitio) y no se guarda un archivo con más de 20 % menos notas | 8/10 | regla 110 |
+| 15 | Una corrección hecha después de aprobar una nota ya no se deshace, y la poda de los lunes no suelta una retirada que sigue aprobada | 8/10 | regla 111 |
+| 20 | El tope de notas con página subió a 3.500 y lo que sale del archivo va al histórico por mes (`web/data/historico/`); el plazo de la subida a Cloudflare pasó de 15 a 25 minutos. **Falta:** armar las notas viejas en el momento (más allá de 3.500) y mover las fotos a un depósito | 8/10 | regla 111 |
+| 17 | Los 22 robots quedaron fijos en Ubuntu 24.04 (no `ubuntu-latest`), así el cambio del 19/10 no los agarra de sorpresa. **Falta:** probar un robot con Ubuntu 26 a propósito y pasar de a poco | 8/10 | prueba `workflows-fijos` |
+| 30 | "Crear voces" no borra las dos voces de producción sin escribir una confirmación, y el formulario dice cuántos audios gasta cada modo | 8/10 | prueba `workflows-fijos` |
+| 13 y 4 | Las pruebas ya no leen los feriados ni las efemérides vivos: usan copias fijas (`pruebas/datos-fijos/`). Se simularon cuatro escenarios (cambiar el feriado, sacar una efeméride, armar noviembre, vaciar correcciones y retiradas) y ninguno hace fallar una prueba. **Ya se puede tocar el feriado del 12/10 y la efeméride del 11/10 desde el celular** | 8/10 | regla 112 |
+| 16 | Las 296 páginas sin cuerpo llevan `noindex, follow` (verificado con un armado completo). **Falta:** la parte de "una sola fuente sin aporte" (necesita el jefe editor) | 8/10 | regla 113 |
+| 27 | Los reels cierran el posteo con «Voz generada con inteligencia artificial.» (texto, sin etiqueta de Meta). **Falta:** probar el campo `is_ai_generated` de Instagram (sólo búsqueda; decidido que por ahora va en texto) | 8/10 | regla 114 |
+| 10 | Una foto que la IA no evaluó (marca y menor) ya no se elige | 8/10 | regla 115 |
+| 7 (parte) | Las pistas del panel rechazan a un menor dicho por su edad ("un nene de 6 años"). **Falta, con su visto bueno:** las edades y los verbos en la lista roja del semáforo de las notas (no se toca sin preguntar) | 8/10 | regla 116 |
+| 23 (parte) | Si la portada tiene más de 2 horas, las redes no arman el clima, los avisos ni la farmacia. **Falta:** la parte de la web (turno de farmacia en el navegador y fecha en el pie) | 8/10 | regla 117 |
+| — | **Tropiezo y arreglo (8/10, 12:30):** al subir el histórico, la corrida de las 12:30 falló en "Guardar si cambió algo" (el `git add` nombraba una carpeta que todavía no existía). Se arregló en 4 minutos, se disparó a mano la actualización y quedó verde; ahora una prueba controla que todo lo que nombra ese `git add` exista. La web quedó con los datos de las 12:04 durante una media hora | 8/10 | `e86e9be` |
+| 18 (aclaración) | La web ya está en Next 15.5.27 (la última de la línea 15). Lo que queda es pasar a Next 16 antes de que la línea 15 deje de recibir parches (21/10 según la auditoría); no corre riesgo el lector, sólo el armado | 8/10 | `5bc00d7` |
+| 3b | "Publicar" del celular ya no saca solo un tema delicado ("necesita ojo humano"): muestra el borrador para que una persona lo lea. La firma "revisada por una persona" para lo que se aprueba a ciegas queda para el panel nuevo | 8/10 | regla 120 |
+| 136 | **Respaldo semanal armado** (`respaldo.yml`): bundle con todo el historial y copia de datos y fotos como archivos de la corrida; espejo a GitLab y copia a R2 listos para activarse con una cuenta y un token. El vigilante avisa si falta. **Falta de ustedes:** crear el proyecto de GitLab y activar R2, ver [`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md) | 8/10 | regla 121 |
+| 132 | **Fotos a R2, etapa 1 preparada**: `FOTOS_BASE` (una variable cambia de dónde cargan las fotos las páginas) y el workflow "Fotos a R2" que copia las 592 fotos. **Falta de ustedes:** el depósito, el dominio `fotos.radarbalcarce.com` y las dos variables ([pasos](PASOS-PARA-USTEDES.md)) | 8/10 | regla 122 |
+| — | El verificador compara exacto los años ("2019" ≠ "2024") y mira cada acusación en su propia oración (I-2 e I-3). Ninguna de las 1.097 notas publicadas cambia | 8/10 | regla 128 |
+| — | El aviso de helada mira la mínima de la madrugada que viene (antes usaba la de hoy, que ya había pasado) | 8/10 | regla 129 |
+| 53 y 41 | La lista roja tiene huella en una prueba (nadie la cambia sin querer) y los títulos de sección se arreglaron ("Balcarce en Balcarce" → "Noticias de Balcarce"). **Título de la pestaña de la nota (40):** se deja en 60 caracteres porque fue una decisión del 29/09; si prefieren más largo, es un número | 8/10 | regla 130 |
+| 130 (hecho) | **"Su recorrido"** en cada nota del panel: de dónde entró, por qué esperó, quién la escribió y aprobó, adónde salió (sin inventar lo que no se sabe) | 8/10 | regla 127 |
+| 130 (hecho) | **Pestaña Borradores** del panel (en "Más" y desde "Hoy"): todo lo que se le pidió a la IA, para leer y ya resuelto. Siguen el calendario de Fechas y lo frenado en rojo | 8/10 | regla 126 |
+| 130 (hecho) | **Pantalla "Hoy" del panel del celular** (primera de la barra): lo que espera tu toque, los borradores, las notas sin foto, cómo viene el día en las redes y las pistas con novedad. Fotos pasó a Más. El panel de la PC queda en desuso (nunca se usó). Probado en un navegador real. Siguen, de a poco: Borradores, el recorrido de una nota, el calendario de Fechas y lo frenado en rojo | 8/10 | regla 125 |
+| 130 | Panel de la PC: decisión de hacerlo de nuevo registrada, con qué pasa con cada pestaña y el orden de construcción: [`PANEL-NUEVO.md`](PANEL-NUEVO.md). No se construyó todavía | 8/10 | — |
+| 22 (parte) | **Un mismo audio no se pide dos veces**: memoria de voces (texto + voz + estilo) guardada en la caché de Actions; una pieza armada de nuevo reusa el audio y no gasta el cupo de 10 por día. **Falta:** preguntar a Meta antes de reintentar las historias y el tope de pedidos por pieza | 8/10 | regla 123 |
+| 39 | `robots.txt` ya no bloquea el feed (`/feed.xml`); sigue bloqueado `/panel/` | 8/10 | prueba en `seo-paginas.test.mjs` |
+| 43 (parte) | El vigilante mira también Armado con datos vacíos, Pruebas con otra hora, Auditoría IA y Pistas; todos los workflows dicen sus permisos y tienen tope de tiempo; el proyecto pide Node 24. **Falta:** el aviso de afuera si el vigilante mismo se cae (Healthchecks) y un segundo canal | 8/10 | regla 124 |
+| 8 | **Lo rojo ya no sale con el texto que lo puso en rojo, aunque lo apruebe una persona**; si la persona lo reescribe y el texto ya no toca la lista roja, sí puede salir (para los falsos positivos) | 8/10 | regla 119 |
+| 7, 9 | **Semáforo mejorado** (autorizado por Hernán y Andrés): formas que faltaban de rojo y de muerte, edad de menores, aviso fúnebre como "nunca" y la nota hereda el peor color al juntarse. Ninguna de las 1.083 notas publicadas cambia de color. **Sigue abierto:** que lo rojo aprobado a mano no salga (C-10) y "Publicar" del celular | 8/10 | regla 118 |
+| 7 (estudio) | Se escribió cómo funciona hoy el semáforo, con ejemplos comprobados, para decidir juntos: [`SEMAFORO-HOY.md`](SEMAFORO-HOY.md). No se cambió nada | 8/10 | — |
+| 47 | **Reintentar respeta la franja horaria**: el botón del celular no sube una pieza fuera de su hora ni la de otro día, y dice por qué (antes se podía subir a las 21 el clima de la mañana) | 8/10 | regla 131 |
+| 45 | **El control de textos de redes corre antes de gastar la voz** (aviso en la corrida, no frena), la lista de medios sale de las fuentes (91 nombres) y los avisos de clima y Participá dicen «Radar Balcarce» | 8/10 | regla 132 |
+| 46 | **El contrato del día y el vigilante miran también la efeméride, el feriado, Participá y los avisos de clima** (desde el 9/10): si su ventana se cierra sin que salgan, el vigilante avisa | 8/10 | regla 133 |
+| 132-136 | **Cuarta auditoría externa leída y contrastada**: acierta en lo central (fotos a R2, datos fuera de git, panel unificado, respaldo) y casi todo ya estaba decidido; se armó un plan por etapas en [`registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md`](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md). No se aplicó nada: necesita tarjeta y token de Cloudflare | 8/10 | — |
+| — | Se llevó a `docs/propuestas/material/` todo lo generado en la auditoría que se puede ver en la PC: las tres páginas explicativas, las dos maquetas del panel nuevo y los ocho videos de ejemplo (el detalle de seguridad y los montos quedan sólo en la página privada) | 8/10 | [`material/LEEME.md`](material/LEEME.md) |
+| 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---
 
@@ -196,7 +242,12 @@ bueno.*
 | 127 | Partir los archivos más grandes | V2-19 | — |
 | 128 | Auditoría semanal completa (Lighthouse, accesibilidad) | N7 | — |
 | 129 | Bajar el ciclo a 15 minutos | Ciclo | — |
-| 130 | El panel del celular, rediseñado sobre el flujo nuevo | Decidido | Que el flujo esté rearmado |
+| 130 | **El panel nuevo**, único, que reemplaza al de la PC y al del celular actual. **Decidido el 8/10** (el de la PC se hace de nuevo y se congela el viejo). Plan por pestañas y por etapas en [`PANEL-NUEVO.md`](PANEL-NUEVO.md) | Decidido | Una reunión corta de diseño con la maqueta |
+| 132 | **Arquitectura de datos (cuarta auditoría)**, etapa 1: fotos a Cloudflare R2 con una sola variable `FOTOS_BASE`. Antes del 2/12 | [registro](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md) | D + tarjeta y token en Cloudflare |
+| 133 | Etapa 2: `archivo.json` y el histórico fuera de git (R2 por mes o D1) y las notas viejas armadas en el momento; el tope de notas deja de existir | ídem | D (R2 o D1) |
+| 134 | Etapa 3: lo que cambia siempre (`vistas`, `estadisticas`, `fichas`, `banco-fotos`, `redes`…) fuera de git; las decisiones de personas se quedan | ídem | — |
+| 135 | Etapa 4: un Worker de Cloudflare con Cron Trigger como segundo disparador (convive con cron-job.org) | ídem | P + token |
+| 136 | Etapa 6: respaldo en GitLab, Google Drive y la PC (se pide aparte, **lo primero que conviene hacer**) | ídem | P |
 | 131 | Herramientas a probar: recorte inteligente, lectura de marcas en fotos, detección de caras, lector de notas (trafilatura), subtítulos con Whisper, Vega, LanguageTool, pa11y, Dependabot y actionlint | Herramientas | — |
 
 *Revisión con recordatorio: 15/12/2026 (archivo histórico, fotos y respaldo).*

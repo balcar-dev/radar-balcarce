@@ -57,6 +57,15 @@ export function tieneCuerpo(nota) {
 }
 
 /**
+ * ¿Esta página no se ofrece a Google? La nota que salió sola y no tiene cuerpo de verdad (las 296 del 18 al 25/09, antes de la regla
+ * del cuerpo: la bajada copiada de la fuente): se puede abrir con su enlace, pero lleva `noindex, follow` (S-1 y W-5, 8/10/2026).
+ * Lo que publicó una persona se respeta.
+ */
+export function noSeOfreceAGoogle(nota) {
+  return nota?.como !== 'publicada' && !tieneCuerpo(nota);
+}
+
+/**
  * ¿Esta nota de la portada salió sola y no tiene cuerpo? Es la que no puede ir
  * a ninguna lista ni a las redes. Lo que publicó una persona desde el panel
  * (`como: 'publicada'`) se respeta aunque no tenga cuerpo.

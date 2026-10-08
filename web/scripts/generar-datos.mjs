@@ -55,7 +55,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { leerJson } from '../../ingesta/json.mjs';
+import { leerJson, leerJsonEstricto } from '../../ingesta/json.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import {
@@ -69,12 +69,12 @@ import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
-  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson,
+  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo, bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico,
   idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
-import { esperaSoloPorCantidad } from '../../ingesta/ingesta.mjs';
+import { esperaSoloPorCantidad, semaforoDelTexto } from '../../ingesta/ingesta.mjs';
 import { conFotosDelBanco, podarFotos } from './fotos-notas.mjs';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -225,7 +225,7 @@ estado.decisiones = unirDecisiones(estado.decisiones ?? {}, CELULAR.notas);
 const anterior = leerJson(SALIDA, { notas: [] });
 // El archivo también guarda el primer avistaje: una nota que salió de la
 // portada y vuelve no cambia de hora.
-const archivoAnterior = leerJson(ARCHIVO, { notas: [] });
+const archivoAnterior = leerJsonEstricto(ARCHIVO, { notas: [] });
 const vistoAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
   .filter((n) => n.visto)
   .map((n) => [n.id, n.visto]));
@@ -392,6 +392,9 @@ if (enLaNube && diaSemanaAR() === 1) {
   const ruta = path.join(AQUI, '..', 'data', 'retiradas.json');
   const { json, quitadas } = podarRetiradas(leerJson(ruta, null), {
     hoy: diaAR(), enLaIngesta: new Set((ultima.notas ?? []).map((n) => n.id)),
+    // Una retirada que sigue aprobada en las decisiones no se poda: sin la lista la nota volvería (C-14).
+    conAprobacion: new Set(Object.entries(estado.decisiones ?? {})
+      .filter(([, d]) => decisionHumana(d) && (d.estado === 'publicada' || d.estado === 'automatica')).map(([id]) => id)),
   });
   if (quitadas.length) {
     fs.writeFileSync(ruta, comoRetiradasJson(json), 'utf8');
@@ -419,6 +422,14 @@ const esperandoCuerpo = [];
 
 /** ¿El título o la bajada son de lo que no se publica nunca (REGLAS_SEMAFORO.nunca)? */
 const nuncaSePublica = (nota) => esDeLoQueNuncaSePublica(nota, REGLAS_SEMAFORO.nunca);
+
+/**
+ * Una nota que el semáforo puso en ROJO (un menor, una víctima) no sale con el texto que la puso en rojo, ni aunque una persona la
+ * apruebe (C-10, 8/10/2026: "se rompe la regla de no identificar a un menor o a una víctima por un clic equivocado"). Si la persona
+ * la reescribió y el texto final ya no toca la lista roja, sí puede salir: lo que se mira es lo que se va a publicar.
+ */
+const sigueRoja = (original, final) => original?.semaforo === 'rojo'
+  && semaforoDelTexto([final?.titulo, final?.copete, final?.cuerpo].filter(Boolean).join('\n'))?.color === 'rojo';
 
 // Mismo criterio que el panel: sin decisión manda el semáforo (verde =
 // automática, rojo = bloqueada, el resto pendiente). Sólo lo publicado o
@@ -537,6 +548,7 @@ function notaPublicada(n) {
   // lo que aprobó una persona (28/09): la regla es "no se publican nunca", y
   // una lista de sepelios con "falleció" llegaba al panel como amarilla.
   if (nuncaSePublica(corregida)) return null;
+  if (sigueRoja(n, corregida)) return null;
   // SIN CUERPO NO SE PUBLICA (25/09): una nota automática sin cuerpo de
   // verdad (70 palabras o más, distinto de la bajada) queda "esperando
   // cuerpo" y no aparece en ninguna lista, ni en el feed, el sitemap o las
@@ -634,11 +646,13 @@ for (const a of archivoAnterior.notas ?? []) {
   if (decisionHumana(d)) {
     if (d.estado !== 'publicada' && d.estado !== 'automatica') retiradas.add(a.id);
     else if (!enIngesta.has(a.id)) {
-      corregidas.push({
+      // La corrección hecha DESPUÉS de aprobar va al final: si no, el texto de la aprobación la pisaba a los 3 días (C-14, 8/10/2026) y,
+      // si había sacado un nombre, el nombre volvía.
+      corregidas.push(conCorreccion({
         ...sinExtras(a),
         ...extrasParaLaWeb(d, a),
         titulo: d.titulo ?? a.titulo, copete: d.copete ?? a.copete, cuerpo: d.cuerpo ?? a.cuerpo, guion: d.guion ?? a.guion,
-      });
+      }, CORRECCIONES));
     }
   } else if (pierdeLaPagina(enIngesta.get(a.id), {
     // La cotización del dólar no es sensible: sale de las listas (está en
@@ -652,6 +666,7 @@ for (const a of archivoAnterior.notas ?? []) {
   // Lo que no se publica nunca (las listas de sepelios) no conserva la página,
   // aunque la haya aprobado una persona (28/09).
   if (nuncaSePublica(conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
+  if (sigueRoja(enIngesta.get(a.id), conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
   // Una página vieja que promete una cobertura "EN VIVO" o "minuto a minuto" en
   // el título (el texto de otro medio, de antes de la regla): Radar Balcarce no
   // hace coberturas en vivo (29/09; "música en vivo" sí).
@@ -911,9 +926,23 @@ const archivo = aligerarViejas(actualizarArchivo({
   enRedes: idsEnRedes(libroRedes),
 }));
 if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
+  const guardia = guardiaDelArchivo((archivoAnterior.notas ?? []).length, archivo.length);
+  if (!guardia.ok && process.env.ARCHIVO_PERMITIR_BAJA !== '1') {
+    throw new Error(`archivo.json: ${guardia.motivo}. Si es a propósito, correr con ARCHIVO_PERMITIR_BAJA=1.`);
+  }
   fs.mkdirSync(path.dirname(ARCHIVO), { recursive: true });
   fs.writeFileSync(ARCHIVO, comoArchivoJson(archivo), 'utf8');
   console.log(`  archivo.json: ${archivo.length} notas con página (${retiradas.size} retiradas)`);
+  // Lo que salió por edad o por tope no se pierde: queda en web/data/historico/AAAA-MM.json (C-6). Sólo en la nube, que es la que sube.
+  const bajas = enLaNube ? bajasDelArchivo(archivoAnterior.notas ?? [], archivo, retiradas) : [];
+  const porMes = new Map();
+  for (const n of bajas) porMes.set(mesDeLaNota(n), [...(porMes.get(mesDeLaNota(n)) ?? []), n]);
+  for (const [mes, notasDelMes] of porMes) {
+    const ruta = path.join(AQUI, '..', 'data', 'historico', `${mes}.json`);
+    fs.mkdirSync(path.dirname(ruta), { recursive: true });
+    fs.writeFileSync(ruta, comoArchivoJson(conBajasEnElHistorico(leerJsonEstricto(ruta, { notas: [] }), notasDelMes).notas), 'utf8');
+  }
+  if (bajas.length) console.log(`  histórico: ${bajas.length} notas pasaron del archivo al histórico`);
 }
 
 // Las fotos que ya no tienen nota se borran (podarFotos): las de lo retirado a

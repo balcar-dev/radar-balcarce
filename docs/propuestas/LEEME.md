@@ -1,8 +1,11 @@
 # Propuestas de mejora · octubre de 2026
 
-*8/10/2026. Nada de esto está aplicado: son propuestas para decidir.*
+*8/10/2026. Son propuestas; lo que ya se hizo figura en "Avance" de [`PRIORIDADES.md`](PRIORIDADES.md).*
 
 - **[`PRIORIDADES.md`](PRIORIDADES.md)**: todo lo anotado, en el orden en que conviene hacerlo.
+- **[`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md)**: lo que sólo una persona puede hacer (cuentas, tarjeta, claves), paso a paso.
+- **[`PANEL-NUEVO.md`](PANEL-NUEVO.md)**: el panel único que reemplaza al de la PC: qué pasa con cada pestaña y en qué orden.
+- **[`SEMAFORO-HOY.md`](SEMAFORO-HOY.md)**: cómo funciona hoy el semáforo (verde, amarillo, rojo), sin proponer cambios.
 
 Se separa en dos listas, para no mezclar:
 
@@ -14,7 +17,8 @@ Se separa en dos listas, para no mezclar:
   secciones nuevas, servicios, formatos de redes, distribución, planes comerciales). Cada una dice si hay
   datos de verdad: **comprobado** (se bajó el dato desde GitHub y trae a Balcarce), fuente accesible, solo
   búsqueda, bloqueada, trabajo humano o especulación.
+- **[`material/`](material/)**: las páginas y videos de ejemplo que se armaron (para abrir en la PC).
 - **[`registro/`](registro/)**: la auditoría, el plan y la hoja de ruta del 8/10 tal como se escribieron.
-  Mezclan las dos cosas; se conservan como historial y por el detalle (ejemplos de títulos, fuentes, URLs).
+  Incluye la cuarta auditoría externa (la arquitectura) con su plan por etapas. Mezclan las dos cosas; se conservan como historial y por el detalle (ejemplos de títulos, fuentes, URLs).
 
 Si una lista y el código no coinciden, manda el código.

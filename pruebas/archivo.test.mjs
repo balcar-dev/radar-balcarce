@@ -54,10 +54,21 @@ test('la poda de retiradas corre los lunes en la nube y el workflow guarda el ar
   assert.match(flujo, /git add [^\n]*web\/data\/retiradas\.json/);
 });
 
+test('una lista de retiradas vacía es válida y la poda la deja así (12/10/2026: las 11 de septiembre cumplen 7 días)', () => {
+  const vieja = { notas: { a: { motivo: 'm', cuando: '2026-09-28', por: 'p' }, b: { motivo: 'm', cuando: '2026-09-29', por: 'p' } } };
+  const { json: podado, quitadas } = podarRetiradas(vieja, { hoy: '2026-10-12', enLaIngesta: new Set() });
+  assert.deepEqual(quitadas.sort(), ['a', 'b']);
+  assert.deepEqual(podado.notas, {});
+  assert.equal(idsRetiradosAMano(podado).size, 0);
+  assert.deepEqual(JSON.parse(comoRetiradasJson(podado)), podado);
+});
+
 test('la lista de retiradas del repositorio está bien armada: cada una con motivo, fecha y quién', () => {
   const json = JSON.parse(fs.readFileSync(new URL('../web/data/retiradas.json', import.meta.url), 'utf8'));
   const entradas = Object.entries(json.notas);
-  assert.ok(entradas.length > 0);
+  // Una lista vacía es válida: los lunes la nube saca las retiradas de más de 7 días (la primera vez, el 12/10/2026,
+  // quedaron 0) y esta prueba no puede congelar la web por eso. Lo que se controla es la forma, no la cantidad.
+  assert.equal(typeof json.notas, 'object');
   for (const [id, n] of entradas) {
     assert.ok(n.motivo && n.cuando && n.por, `a ${id} le falta motivo, fecha o quién`);
   }
@@ -387,4 +398,73 @@ test('generar-datos no estrena lo que llega tarde ni le pide cuerpo a Gemini, y 
   // (28/09: una sin hora quedaba fuera de la reescritura pero se podía estrenar).
   assert.match(s, /const fecha = fechaReal\(n\);\s+(\/\/[^\n]*\s+)*if \(!humana && !yaSalieron\.has\(n\.id\) && llegaTarde\(fecha\)\) return null;/);
   assert.match(s, /const fecha = fechaReal\(n\);\s+(\/\/[^\n]*\s+)*return vigenteEnPortada\(\{ fecha \}\) && \(yaSalieron\.has\(n\.id\) \|\| !llegaTarde\(fecha\)\);/);
+});
+
+// 8/10/2026 (C-5): un archivo de datos roto no puede vaciar el sitio ni hacer que las redes vuelvan a publicar lo ya publicado.
+test('un JSON que existe y está roto corta; uno que no existe es vacío', async () => {
+  const { leerJsonEstricto } = await import('../ingesta/json.mjs');
+  const os = await import('node:os');
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'estricto-'));
+  assert.deepEqual(leerJsonEstricto(path.join(dir, 'nada.json'), { notas: [] }), { notas: [] });
+  fs.writeFileSync(path.join(dir, 'bien.json'), '{"notas":[1]}');
+  assert.deepEqual(leerJsonEstricto(path.join(dir, 'bien.json'), null), { notas: [1] });
+  fs.writeFileSync(path.join(dir, 'roto.json'), '{"notas":[1,');
+  assert.throws(() => leerJsonEstricto(path.join(dir, 'roto.json'), { notas: [] }), /está roto/);
+});
+
+test('la guardia del archivo no deja guardar uno con más de 20 % menos notas', async () => {
+  const { guardiaDelArchivo } = await import('../web/lib/archivo.js');
+  assert.equal(guardiaDelArchivo(1000, 990).ok, true, 'una baja chica es normal');
+  assert.equal(guardiaDelArchivo(1000, 1200).ok, true);
+  assert.equal(guardiaDelArchivo(1000, 790).ok, false);
+  assert.equal(guardiaDelArchivo(1000, 0).ok, false, 'vacío nunca');
+  assert.equal(guardiaDelArchivo(20, 0).ok, true, 'con tan pocas notas no se mira');
+  assert.match(guardiaDelArchivo(1000, 100).motivo, /no se guarda/);
+});
+
+test('el archivo y el libro de redes se leen sin pasar por vacío cuando están rotos', () => {
+  const gen = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
+  assert.match(gen, /const archivoAnterior = leerJsonEstricto\(ARCHIVO/);
+  assert.match(gen, /guardiaDelArchivo\(/);
+  for (const f of ['publicar', 'reintentar']) assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', `redes/${f}.mjs`), 'utf8'), /leerJsonEstricto\(LIBRO/);
+  assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', 'redes/reloj.mjs'), 'utf8'), /leerJsonEstricto\(LIBRO/);
+});
+
+// 8/10/2026 (C-14): ni una corrección hecha después de aprobar ni una retirada que sigue aprobada pueden deshacerse solas.
+test('la poda de retiradas no suelta las que siguen aprobadas en las decisiones', async () => {
+  const { podarRetiradas } = await import('../web/lib/archivo.js');
+  const json = { notas: { a: { motivo: 'm', cuando: '2026-09-01', por: 'h' }, b: { motivo: 'm', cuando: '2026-09-01', por: 'h' } } };
+  const r = podarRetiradas(json, { hoy: '2026-10-12', enLaIngesta: new Set(), conAprobacion: new Set(['b']) });
+  assert.deepEqual(r.quitadas, ['a']);
+  assert.deepEqual(Object.keys(r.json.notas), ['b']);
+});
+
+test('la corrección a mano se aplica a la nota aprobada que se rearma desde el archivo', () => {
+  const gen = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
+  assert.match(gen, /corregidas\.push\(conCorreccion\(\{[\s\S]*?\}, CORRECCIONES\)\);/);
+  assert.match(gen, /conAprobacion: new Set\(/);
+});
+
+// 8/10/2026 (C-6): lo que sale del archivo por edad o por tope no se pierde, va al histórico del mes.
+test('las bajas del archivo van al histórico por mes; las retiradas no', async () => {
+  const { bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico, comoArchivoJson, actualizarArchivo } = await import('../web/lib/archivo.js');
+  const ahora = Date.parse('2026-10-08T12:00:00Z');
+  const vieja = { id: 'v', titulo: 'Vieja', fecha: '2026-03-01T10:00:00Z', slug: 'vieja', redes: true };
+  const nueva = { id: 'n', titulo: 'Nueva', fecha: '2026-10-07T10:00:00Z', slug: 'nueva', redes: true };
+  const retirada = { id: 'r', titulo: 'Retirada', fecha: '2026-10-06T10:00:00Z', slug: 'retirada' };
+  const despues = actualizarArchivo({ archivo: [vieja, nueva, retirada], publicadas: [], enPortada: new Set(), retiradas: new Set(['r']), ahora });
+  assert.deepEqual(despues.map((n) => n.id), ['n']);
+  assert.deepEqual(bajasDelArchivo([vieja, nueva, retirada], despues, new Set(['r'])).map((n) => n.id), ['v'], 'la retirada a mano no se guarda');
+  assert.equal(mesDeLaNota(vieja), '2026-03');
+  assert.equal(mesDeLaNota({}), 'sin-fecha');
+  const h1 = conBajasEnElHistorico({ notas: [] }, [vieja]);
+  const h2 = conBajasEnElHistorico(h1, [vieja, { ...vieja, titulo: 'otra' }]);
+  assert.equal(h2.notas.length, 1, 'no se repite');
+  assert.equal(h2.notas[0].titulo, 'Vieja', 'manda lo que ya estaba');
+  assert.ok(JSON.parse(comoArchivoJson(h2.notas)).notas.length === 1);
+  const gen = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
+  assert.match(gen, /bajasDelArchivo\(/);
+  assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', '.github/workflows/actualizar.yml'), 'utf8'), /git add [^\n]*web\/data\/historico\//);
 });

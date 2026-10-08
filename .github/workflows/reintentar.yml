@@ -45,7 +45,7 @@ concurrency:
 
 jobs:
   reintentar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
       contents: write # para guardar el libro de lo publicado

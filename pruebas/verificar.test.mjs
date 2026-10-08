@@ -417,3 +417,25 @@ test('el delito dicho como hecho, sin atribuir, se sigue frenando', () => {
   // Sin la tilde, el verbo que no se confunde con un sustantivo también.
   assert.equal(acusa('El comerciante estafo a varios clientes'), true);
 });
+
+// I-2 (8/10/2026): un año se compara exacto; antes "2019" en la fuente y "2024" en la nota pasaba por caer dentro del 6 %.
+test('un año cambiado no pasa, aunque quede cerca; un número grande redondeado sí', () => {
+  const fuente = { titulo: 'El club recordó la final de 2019', resumen: 'La final se jugó en 2019 ante 3.500 personas y el club ganó 2 a 1.' };
+  const mal = verificar(fuente, { titulo: 'El club recordó la final de 2024', copete: 'La final se jugó en 2024 ante unas 3.400 personas.', guion: 'El club recordó la final de 2024.' });
+  assert.ok(mal.problemas.some((p) => p.tipo === 'numero' && /2\.?024/.test(p.detalle)), JSON.stringify(mal.problemas));
+  const bien = verificar(fuente, { titulo: 'El club recordó la final de 2019', copete: 'La final se jugó en 2019 ante unas 3.400 personas.', guion: 'El club recordó la final de 2019.' });
+  assert.ok(!bien.problemas.some((p) => p.tipo === 'numero'), JSON.stringify(bien.problemas));
+});
+
+// I-3 (8/10/2026): "Un hombre mató a su vecino." pasaba porque OTRA oración decía "la policía".
+test('un delito dicho como hecho no pasa por cómo suena la oración de al lado', async () => {
+  const { acusacionSinAtribuir } = await import('../ingesta/verificar.mjs');
+  assert.equal(acusacionSinAtribuir('Un hombre mató a su vecino. La policía investiga el caso.'), 'Un hombre mató a su vecino.');
+  assert.equal(acusacionSinAtribuir('La policía investiga. Un hombre mató a su vecino.'), 'Un hombre mató a su vecino.');
+  assert.equal(acusacionSinAtribuir('Según la policía, un hombre habría matado a su vecino.'), null);
+  assert.equal(acusacionSinAtribuir('Un hombre fue detenido. Según la fiscalía, mató a su vecino y robó una moto.'), null);
+  assert.equal(acusacionSinAtribuir('El club ganó 2 a 1. El técnico habló del partido.'), null);
+  const fuente = { titulo: 'Detienen a un hombre en Balcarce', resumen: 'La policía detuvo a un hombre acusado de matar a su vecino.' };
+  const r = verificar(fuente, { titulo: 'Detienen a un hombre en Balcarce', copete: 'Un hombre mató a su vecino. La policía lo detuvo.', guion: 'Detienen a un hombre en Balcarce.' });
+  assert.ok(r.problemas.some((p) => p.tipo === 'acusacion'), JSON.stringify(r.problemas));
+});

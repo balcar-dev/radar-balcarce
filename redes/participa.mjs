@@ -50,5 +50,5 @@ export function guionParticipa(id, { fecha = new Date(), momento = 'manana' } = 
   const p = PIEZAS_PARTICIPA[id];
   if (!p) return '';
   const s = semillaDe(id, fecha);
-  return [variante(SALUDOS[momento] ?? SALUDOS.manana, s, 'saludo'), ...p.voz, 'Escribinos por WhatsApp o por mail: los datos están en pantalla.'].join(' ');
+  return [variante(SALUDOS[momento] ?? SALUDOS.manana, s, 'saludo'), ...p.voz, 'Escribinos por WhatsApp o por mail: los datos están en pantalla.', 'Radar Balcarce.'].join(' ');
 }
