@@ -1137,7 +1137,10 @@ export const REGLAS_SEMAFORO = {
   // promoción de una radio, no una noticia nuestra.
   promocional: ['sorteo', 'sortea', 'sortearemos', 'ganá tu entrada', 'gana tu entrada',
     'participá del', 'participa del', 'regala las entradas', 'promoción exclusiva',
-    'promocion exclusiva', 'suscribite', 'seguinos en', 'auspicia', 'publicidad'],
+    'promocion exclusiva', 'suscribite', 'seguinos en', 'auspicia', 'publicidad',
+    // 8/10: un medio contando su propia sede, teléfono y mail ("El Diario Balcarce detalla su rol periodístico")
+    // es una presentación del medio, no una noticia (regla 142).
+    'rol periodístico', 'rol periodistico', 'vías de contacto', 'vias de contacto', 'sede legal'],
   // La cotización del dólar NO es una nota: es un número que cambia cada hora
   // y el sitio lo muestra en /dolar. El 25/09 salían dos o tres por día ("El
   // dólar minorista y el dólar blue cotizan este viernes", "Dólar hoy y dólar

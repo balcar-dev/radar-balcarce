@@ -681,7 +681,9 @@ manda sobre lo que se repita acá. Los horarios y cómo se publica, en
   celular ("También a Facebook e Instagram"); lo rojo, nunca. Tampoco va una nota sin
   cuerpo ni una nota propia.
 - **Facebook:** hasta 5 notas por día, con relevancia 75 o más, de 8 a 22:00 en punto, con
-  90 minutos entre una y otra, y sin repetir un tema publicado en las últimas 24 horas. El
+  90 minutos entre una y otra, y sin repetir un tema publicado en las últimas 24 horas. **Con foto primero:** una nota
+  sin foto espera hasta 3 horas a que aparezca (salvo que una persona la haya marcado); pasado
+  ese tiempo sale con la tarjeta de siempre. El
   posteo lleva el texto para redes (o el título y la bajada), **el enlace a nuestra nota**
   y hasta tres hashtags. **Nunca nombra la fuente ni dice "Resumen hecho con IA".**
 - **Instagram** recibe video con voz (historias y reels) y el espejo de cada posteo de
@@ -808,6 +810,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Facebook: minutos que espera una nota nueva | 15 | `FACEBOOK.esperaMinutos` |
 | Facebook: horas de vida de una nota para salir | 8 | `FACEBOOK.edadMaximaHoras` |
 | Facebook: horas sin repetir un tema | 24 | `FACEBOOK.horasSinRepetirTema` |
+| Facebook: horas que espera una nota sin foto | 3 | `FACEBOOK.horasEsperandoFoto` |
 | Podcasts: relevancia mínima | 62 | `PIEZAS.relevanciaPodcast` |
 | Podcasts (los tres repasos): notas | 4 | `PIEZAS.notasPorPodcast` |
 | Podcast: notas mínimas para que salga | 2 | `PIEZAS.notasMinimasPodcast` |

@@ -232,6 +232,9 @@ export const FACEBOOK = {
   esperaMinutos: 15,
   edadMaximaHoras: 8,
   horasSinRepetirTema: 24,
+  // Una nota sin foto espera hasta tres horas a que aparezca (8/10, Hernán: lo de las
+  // redes tiene que llevar foto, mayormente); pasado ese tiempo sale con la tarjeta de siempre.
+  horasEsperandoFoto: 3,
 };
 
 /** Las piezas de video: los podcasts. (Las historias de una nota y el feed de

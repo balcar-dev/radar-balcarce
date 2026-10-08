@@ -196,6 +196,27 @@ test('"taller" en el cuerpo, hablando de un auto, no manda a Cultura (27/09)', (
   assert.notEqual(clasificar(n), 'Cultura y agenda');
 });
 
+test('"rural" sólo en la bajada no manda a Agro una nota de un gremio local (8/10)', () => {
+  // Salió en Facebook con la placa "Agro": UATRE abría la inscripción para útiles escolares.
+  const n = nota({
+    titulo: 'UATRE Balcarce abre la inscripción para útiles escolares',
+    copete: 'La seccional local del gremio rural habilitó el registro para entregar guardapolvos a los hijos de los afiliados.',
+    local: true,
+  });
+  assert.notEqual(clasificar(n), 'Agro');
+});
+
+test('un medio que cuenta su propia sede y su teléfono no sale solo (regla 142, 8/10)', () => {
+  const n = nota({
+    titulo: 'El Diario Balcarce detalla su rol periodístico y sus vías de contacto',
+    cuerpo: 'El Diario Balcarce se define como el único medio de la ciudad con edición en papel y formato digital. La sede legal se encuentra en la calle 17.',
+    local: true,
+  });
+  const s = semaforo(n, 'Balcarce');
+  assert.equal(s.color, 'amarillo');
+  assert.match(s.motivo, /promoción/);
+});
+
 test('si la fuente ya viene separada por sección, se le cree', () => {
   const n = nota({ titulo: 'Ganó el equipo local', seccionFuente: 'Deportes' });
   assert.equal(clasificar(n), 'Deportes');

@@ -336,7 +336,7 @@ test('generar-datos arma "fuentesConsultadas" desde los orígenes cuando ni la I
 test('Facebook y los podcasts no toman una nota automática sin cuerpo', () => {
   const ahora = new Date('2026-09-25T15:00:00Z');
   const nota = {
-    id: 'a', titulo: 'Una nota', seccion: 'Balcarce', local: true, relevancia: 99, como: 'automatica', cuerpo: '', fecha: new Date(ahora - 60 * 60e3).toISOString(),
+    id: 'a', titulo: 'Una nota', seccion: 'Balcarce', local: true, relevancia: 99, como: 'automatica', cuerpo: '', fecha: new Date(ahora - 60 * 60e3).toISOString(), foto: { archivo: 'a.jpg' },
   };
   assert.deepEqual(elegirParaFacebook({ notas: [nota], ahora }), []);
   assert.equal(sePuedeSola(nota), false);

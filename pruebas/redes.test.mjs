@@ -116,7 +116,7 @@ const haceMin = (m) => new Date(AHORA.getTime() - m * 60000).toISOString();
 
 const nota = (extra = {}) => ({
   id: 'abc', titulo: 'Un titular', copete: 'Un copete', seccion: 'Deportes', relevancia: 90,
-  medios: ['Diario La Vanguardia'], local: true, publicadaPor: 'ia', publicadaCuando: haceMin(60), ...extra,
+  medios: ['Diario La Vanguardia'], local: true, publicadaPor: 'ia', publicadaCuando: haceMin(60), foto: { archivo: 'abc.jpg' }, ...extra,
 });
 
 test('la hora se cuenta en Balcarce, no en UTC', () => {
@@ -609,4 +609,16 @@ test('los repasos también cuentan lo de afuera si está entre lo de más puntaj
   assert.equal(sePuedeEnUnRepaso({ ...notas[0], como: 'publicada' }), false);
   assert.equal(sePuedeEnUnRepaso({ ...notas[0], como: 'publicada', aprobadaParaRedes: '2026-09-29T20:00:00Z' }), true);
   assert.equal(sePuedeSola(notas[0]), false, 'para una pieza sola (Facebook) sigue pidiendo que sea de acá');
+});
+
+test('una nota sin foto espera hasta tres horas a que aparezca; con foto va primero; lo que marcó una persona no espera (8/10)', () => {
+  const sinFoto = nota({ id: 'sf', relevancia: 99, foto: null, publicadaCuando: haceMin(60) });
+  const conFoto = nota({ id: 'cf', relevancia: 80, titulo: 'Otro hecho distinto del barrio' });
+  const libro = { facebook: {}, instagram: {} };
+  assert.deepEqual(elegirParaFacebook({ notas: [sinFoto], libro, ahora: AHORA }), [], 'sin foto y con una hora de vida: espera');
+  assert.deepEqual(elegirParaFacebook({ notas: [sinFoto, conFoto], libro, ahora: AHORA }).map((n) => n.id), ['cf'], 'la que tiene foto va primero aunque valga menos');
+  const vieja = nota({ id: 'sf', foto: null, publicadaCuando: haceMin(200) });
+  assert.deepEqual(elegirParaFacebook({ notas: [vieja], libro, ahora: AHORA }).map((n) => n.id), ['sf'], 'pasadas las tres horas sale con la tarjeta');
+  const marcada = nota({ id: 'm', foto: null, publicadaCuando: haceMin(60), publicadaPor: 'persona', como: 'publicada', paraRedes: true });
+  assert.ok(Array.isArray(elegirParaFacebook({ notas: [marcada], libro, ahora: AHORA })));
 });

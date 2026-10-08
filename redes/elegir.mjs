@@ -64,6 +64,7 @@ export const REGLAS_FACEBOOK = {
   // del autódromo en cuatro horas: para el que sigue la página es la misma
   // noticia tres veces. Ver temaParecido.
   horasSinRepetirTema: FACEBOOK.horasSinRepetirTema,
+  horasEsperandoFoto: FACEBOOK.horasEsperandoFoto, // una nota sin foto espera a que aparezca; lo que una persona marcó, no
   seccionesQueEsperanPersona: SECCIONES_QUE_ESPERAN_PERSONA,
 };
 
@@ -153,11 +154,13 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
     const salio = cuandoSalio(n);
     if (!salio) return false;
     const edad = minutosDesde(salio, ahora);
-    return edad >= reglas.esperaMinutos && edad <= reglas.edadMaximaHoras * 60;
+    if (edad < reglas.esperaMinutos || edad > reglas.edadMaximaHoras * 60) return false;
+    // Sin foto todavía: se espera (la foto se sigue buscando) salvo que una persona la haya marcado.
+    return Boolean(n.foto?.archivo) || aprobadaParaLasRedes(n) || edad >= (reglas.horasEsperandoFoto ?? 0) * 60;
   });
 
   // Lo que aprobó una persona para las redes va primero; después, por relevancia.
-  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || (Number(Boolean(b.foto?.archivo)) - Number(Boolean(a.foto?.archivo))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
   return candidatas.slice(0, Math.min(cupo, reglas.porCorrida));
 }
 

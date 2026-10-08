@@ -523,6 +523,9 @@ function figuraQueNombra(nota) {
 const PALABRAS_DEBILES = new Set([
   'partido', 'descenso', 'tenis', 'copa', 'liga', 'gol',
   'muestra', 'exposicion', 'exposición', 'paso', 'box',
+  // 8/10: "UATRE abre la inscripción para útiles escolares" cayó en Agro por decir "gremio rural"
+  // en la bajada, y salió así en Facebook; el gremio es de acá, no es una nota del campo.
+  'rural',
   // Economía y Tecnología (21/09). Con "gana la palabra más larga", una
   // palabra genérica y larga le ganaba a una corta y precisa: "Rompieron la
   // vidriera y se llevaron herramientas" cayó en Economía por decir
