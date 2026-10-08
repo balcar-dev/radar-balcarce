@@ -190,3 +190,51 @@ test('cada término de la lista de la cotización, en un titular, da amarillo', 
     assert.equal(colorDe(`Balcarce: ${termino} en el barrio`), 'amarillo', termino);
   }
 });
+
+// ------------------------------------------------ 8/10/2026: huecos cerrados (C-12), con el visto bueno de Hernán y Andrés
+
+test('las formas que faltaban de lo sensible ahora frenan', () => {
+  const rojo = ['Un joven intentó suicidarse', 'Investigan abusos sexuales en un club', 'Detienen a un hombre por feminicidio', 'Violaron a una mujer en la terminal', 'Fue violada por un conocido'];
+  for (const t of rojo) assert.equal(semaforoDelTexto(t)?.color, 'rojo', t);
+  const amarillo = ['Murieron dos jóvenes en un choque en la ruta 226', 'Hallaron muerta a una mujer en un descampado', 'Un hombre fue hallado sin vida'];
+  for (const t of amarillo) assert.equal(semaforoDelTexto(t)?.color, 'amarillo', t);
+});
+
+test('una persona menor de 18 años, dicha por su edad, espera a una persona', () => {
+  for (const t of ['Una chica de 16 años fue golpeada', 'Un nene de 6 años quedó atrapado', 'Un joven de 17 años chocó con su moto', 'Rescataron a una menor de 14 años', 'Un adolescente con 15 años ganó el torneo']) {
+    assert.equal(semaforoDelTexto(t)?.color, 'amarillo', t);
+    assert.equal(semaforoDelTexto(t, { soloMenores: true })?.color ?? 'amarillo', 'amarillo', `${t} (texto entero)`);
+  }
+});
+
+test('lo que se cuidó de no frenar sigue saliendo', () => {
+  const verdes = ['La menor inflación en 12 años', 'Vaca Muerta bate un récord de producción', 'Salar del Hombre Muerto: nueva inauguración', 'El club cumple 100 años', 'Un hombre de 45 años chocó en la 226',
+    'Una chica de 18 años ganó el torneo', 'El intendente violó la cautelar, dice la oposición', 'Homenaje al fallecido periodista Héctor Vuotto', 'Un edificio de 15 años tendrá obras'];
+  for (const t of verdes) assert.equal(semaforoDelTexto(t), null, t);
+});
+
+test('el aviso fúnebre no sale nunca, pero la noticia de una muerte importante sí puede salir', () => {
+  const nota = (titulo, extra = {}) => semaforo({ titulo, cuerpo: '', categorias: [], peso: 20, alcance: 'local', local: true, fecha: new Date(), imagen: null, ...extra }, 'Balcarce');
+  for (const t of ['Necrológicas de Balcarce', 'Obituario: despedimos a un vecino', 'Participan su fallecimiento los hijos de Pedro Pérez', 'Servicios fúnebres de hoy']) {
+    assert.equal(nota(t).color, 'rojo', t);
+  }
+  // La muerte de alguien importante no es un aviso fúnebre: espera a una persona (que es quien la aprueba), no se bloquea para siempre.
+  assert.equal(nota('Murió el histórico dirigente del club').color, 'amarillo');
+});
+
+test('si una versión de la misma noticia es roja o sensible, la que queda lo hereda', async () => {
+  const { quitarRepetidas } = await import('../ingesta/lectura-ia.mjs');
+  const base = { fecha: new Date(), relevancia: 50, medios: ['A'] };
+  const roja = { ...base, id: 'r', titulo: 'Detienen a un hombre por abuso sexual', semaforo: 'rojo', motivo: 'tema sensible: "abuso sexual"' };
+  const verde = { ...base, id: 'v', titulo: 'Detienen a un hombre en Balcarce', semaforo: 'verde', motivo: 'sección Policiales', medios: ['B'] };
+  const r = quitarRepetidas([roja, verde], [['r', 'v']]);
+  assert.equal(r.notas.find((n) => n.id === 'v').semaforo, 'rojo', 'la verde no sale sola si su gemela es roja');
+  const sensible = { ...base, id: 's', titulo: 'x', semaforo: 'amarillo', motivo: 'necesita ojo humano: "detenido"' };
+  const r2 = quitarRepetidas([sensible, { ...verde, id: 'v2' }], [['s', 'v2']]);
+  assert.equal(r2.notas.length, 1);
+  assert.equal(r2.notas[0].semaforo, 'amarillo');
+  // Lo "poco contada" no se hereda: unir los medios es justamente lo que la suelta.
+  const poca = { ...base, id: 'p', titulo: 'y', semaforo: 'amarillo', motivo: 'de afuera y poco contada (1 medio; Economía pide 2)' };
+  const r3 = quitarRepetidas([poca, { ...verde, id: 'v3' }], [['p', 'v3']]);
+  assert.equal(r3.notas[0].semaforo, 'verde');
+});

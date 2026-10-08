@@ -584,8 +584,13 @@ export function quitarRepetidas(notas, grupos = [], { publicadas = new Set() } =
   const fuera = new Map();
   const reemplazo = new Map();
   for (const ids of grupos) {
-    const del = ids.map((id) => porId.get(id)).filter(Boolean).filter((n) => n.semaforo !== 'rojo');
-    if (del.length < 2) continue;
+    const todas = ids.map((id) => porId.get(id)).filter(Boolean);
+    const del = todas.filter((n) => n.semaforo !== 'rojo');
+    // La misma noticia con una versión roja (o con "necesita ojo humano"): la que queda hereda el peor color (8/10/2026, C-12). Antes
+    // se descartaba la roja y la verde salía sola con el mismo hecho.
+    const hayRoja = todas.some((n) => n.semaforo === 'rojo');
+    const sensible = todas.find((n) => n.semaforo === 'amarillo' && String(n.motivo ?? '').startsWith('necesita ojo humano'));
+    if (del.length < 2 && !(del.length === 1 && (hayRoja || sensible))) continue;
     const orden = (n) => [publicadas.has(n.id) ? 1 : 0, n.semaforo === 'verde' ? 1 : 0, new Set(n.medios ?? []).size, n.relevancia ?? 0];
     del.sort((a, b) => {
       const [x, y] = [orden(a), orden(b)];
@@ -594,7 +599,9 @@ export function quitarRepetidas(notas, grupos = [], { publicadas = new Set() } =
     });
     const [queda, ...resto] = del;
     const medios = [...new Set(del.flatMap((n) => n.medios ?? []))];
-    reemplazo.set(queda.id, { ...queda, medios });
+    const heredada = hayRoja ? { semaforo: 'rojo', motivo: 'la misma noticia, en otro medio, es un tema sensible' }
+      : (sensible && queda.semaforo === 'verde' ? { semaforo: 'amarillo', motivo: `${sensible.motivo} (en otro medio que cuenta lo mismo)` } : {});
+    reemplazo.set(queda.id, { ...queda, ...heredada, medios });
     for (const n of resto) fuera.set(n.id, { id: n.id, titulo: n.titulo, queda: queda.id });
   }
   return {

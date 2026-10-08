@@ -1,6 +1,6 @@
 # El semáforo, tal como funciona hoy
 
-*8/10/2026. Sólo describe lo que hace el código hoy; no propone cambios (los huecos conocidos están al final y en
+*8/10/2026. **Actualización del mismo día:** Hernán y Andrés autorizaron mejorarlo ("lo único que importa que no salga en sí es la sección necrológicas de Balcarce") y se cerraron los huecos de la sección "Huecos conocidos" (regla 118, `docs/10-REGLAS-Y-PRUEBAS.md`). Lo que sigue describe el semáforo ANTES de ese cambio, salvo donde dice lo contrario; la regla 118 dice qué se sumó. Describe el código; no propone cambios (los huecos conocidos están al final y en
 [`MEJORAS.md`](MEJORAS.md), puntos C-10 y C-12). La lista roja no se toca sin que Hernán y Andrés lo decidan.*
 
 ## En una frase
@@ -100,7 +100,7 @@ Un policial que no es de un medio de acá, no dice Balcarce en el título y no t
 - Los videos y las historias que cuentan varias notas no se arman si alguna es de las que esperan a una persona
   (`notas-propias.js`).
 
-## Huecos conocidos (no corregidos, esperan decisión)
+## Huecos conocidos (CERRADOS el 8/10 por la regla 118; se dejan como estaban para que se vea qué pasaba)
 
 Probados el 8/10 con frases inventadas y la función real (`semaforoDelTexto`); estas salen **verdes** hoy (C-12 de `MEJORAS.md`):
 
@@ -113,7 +113,7 @@ Probados el 8/10 con frases inventadas y la función real (`semaforoDelTexto`); 
   viene de un medio local (comprobado el 8/10: "abusaron" solo no está en ninguna lista).
 - Al juntar dos notas del mismo hecho gana la verde sobre la amarilla, y una historia mira sólo el título de la principal.
 
-No se encontró ningún caso publicado todavía. Nada de esto se tocó.
+No se encontró ningún caso publicado. Cerrados el mismo día con la regla 118: las formas de rojo y de muerte, la edad de menores y el color heredado al juntar notas. Queda abierto el punto 2 de abajo (lo rojo aprobado a mano) y el de "Publicar".
 
 ## Qué habría que decidir (para repasar juntos)
 

@@ -316,3 +316,30 @@ test('recortar corta en palabra entera', () => {
   assert.equal(recortar('uno dos tres cuatro', 12), 'uno dos…');
   assert.equal(recortar('corto', 60), 'corto');
 });
+
+// C-17 (8/10/2026): "Un día como hoy" y las fijas de participá se acababan el 31/10 sin aviso.
+test('el vigilante avisa cuando se acaban las efemérides armadas o vencen las fijas', async () => {
+  const { avisosDeEfemerides } = await import('../redes/vigilar.mjs');
+  const a = (hoy, extra) => avisosDeEfemerides({ ahora: new Date(`${hoy}T15:00:00Z`), ...extra });
+  assert.deepEqual(a('2026-10-08', { ultimoDia: '2026-10-31', fijasHasta: '2026-10-31' }), [], 'sobra tiempo');
+  assert.deepEqual(a('2026-10-19', { ultimoDia: '2026-10-31' }), [], 'todavía no es el 20');
+  const el20 = a('2026-10-20', { ultimoDia: '2026-10-31' });
+  assert.equal(el20.length, 1);
+  assert.equal(el20[0].nivel, 'media');
+  assert.match(el20[0].texto, /día 20/);
+  assert.deepEqual(a('2026-10-20', { ultimoDia: '2026-11-30' }), [], 'noviembre ya está armado');
+  const casi = a('2026-10-27', { ultimoDia: '2026-10-31' });
+  assert.equal(casi[0].nivel, 'alta', 'quedan menos de 7 días');
+  assert.match(casi[0].texto, /31\/10/);
+  const fijas = a('2026-10-26', { ultimoDia: '2026-11-30', fijasHasta: '2026-10-31' });
+  assert.equal(fijas.length, 1);
+  assert.equal(fijas[0].clave, 'fijas-por-vencer');
+  assert.deepEqual(a('2026-10-08', {}), []);
+});
+
+test('evaluar suma los avisos de efemérides sólo si recibe el dato', async () => {
+  const { evaluar } = await import('../redes/vigilar.mjs');
+  const base = { ahora: new Date('2026-10-28T15:00:00Z'), web: { estado: 200, actualizado: new Date('2026-10-28T14:50:00Z').toISOString() }, redesActivas: false };
+  assert.ok(!evaluar(base).some((p) => p.clave === 'efemerides-por-acabarse'));
+  assert.ok(evaluar({ ...base, efemerides: { ultimoDia: '2026-10-31' } }).some((p) => p.clave === 'efemerides-por-acabarse'));
+});

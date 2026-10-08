@@ -201,3 +201,12 @@ test('con la portada de hace más de 2 horas no se arman el clima, el aviso ni l
   // Sin fecha de armado (datos del panel de la PC), no se descarta nada.
   assert.ok(!planDelDia(datos, { fecha: ahora }).portadaVieja);
 });
+
+// W-7 (8/10/2026): el respaldo (met.no) no trae sensación térmica; se repetía la temperatura y la web la mostraba como "sensación".
+test('el clima de respaldo no inventa la sensación térmica', () => {
+  const ing = fs.readFileSync(new URL('../ingesta/ingesta.mjs', import.meta.url), 'utf8');
+  const bloque = ing.slice(ing.indexOf('met.no no da sensación térmica'), ing.indexOf('met.no no da sensación térmica') + 400);
+  assert.match(bloque, /sensacion: null,/);
+  assert.match(ing, /c\.sensacion != null \? `sensación térmica/);
+  assert.match(fs.readFileSync(new URL('../web/components/clima-vivo.js', import.meta.url), 'utf8'), /a\.sensacion != null &&/);
+});

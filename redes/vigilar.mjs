@@ -206,9 +206,34 @@ const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) 
  * @param {object} o.libro  web/data/redes.json
  * @returns {{ clave: string, nivel: 'alta'|'media', texto: string }[]}
  */
+/**
+ * "Un día como hoy" y las piezas fijas de participá se arman por adelantado y se acaban (C-17, 8/10/2026: el 31/10 se acababan las dos
+ * sin aviso). `ultimoDia` es el último día armado de web/data/efemerides-piezas.json ("AAAA-MM-DD") y `fijasHasta` el primer
+ * vencimiento de reels/fijas/vigencia.json. Hernán pidió armar el mes siguiente el día 20, para tener por lo menos 10 días de revisión.
+ */
+export function avisosDeEfemerides({ ahora, ultimoDia = null, fijasHasta = null } = {}) {
+  const hoy = diaAR(ahora);
+  const dias = (iso) => Math.round((Date.parse(`${iso}T12:00:00Z`) - Date.parse(`${hoy}T12:00:00Z`)) / 86400000);
+  const avisos = [];
+  if (ultimoDia) {
+    const quedan = dias(ultimoDia);
+    const diaDelMes = Number(hoy.slice(8, 10));
+    const sigueElMes = ultimoDia.slice(0, 7) === hoy.slice(0, 7);
+    if (quedan < 7) {
+      avisos.push({ clave: 'efemerides-por-acabarse', nivel: 'alta', texto: `"Un día como hoy" sólo tiene armados ${Math.max(quedan, 0)} día(s) más (hasta el ${ultimoDia.slice(8, 10)}/${ultimoDia.slice(5, 7)}). Hay que armar el mes que sigue (ingesta/generar-efemerides.mjs, docs/13-EFEMERIDES.md).` });
+    } else if (diaDelMes >= 20 && sigueElMes) {
+      avisos.push({ clave: 'efemerides-por-acabarse', nivel: 'media', texto: `Ya es ${diaDelMes} y el mes que sigue de "Un día como hoy" no está armado (llega hasta el ${ultimoDia.slice(8, 10)}/${ultimoDia.slice(5, 7)}). Hernán pidió armarlo el día 20, para tener 10 días de revisión (docs/13-EFEMERIDES.md).` });
+    }
+  }
+  if (fijasHasta && dias(fijasHasta) <= 7) {
+    avisos.push({ clave: 'fijas-por-vencer', nivel: 'media', texto: `Las piezas fijas de participá vencen el ${fijasHasta.slice(8, 10)}/${fijasHasta.slice(5, 7)}: desde entonces gastan un audio por día. Hay que renovarlas o decidir que no (reels/fijas/vigencia.json).` });
+  }
+  return avisos;
+}
+
 export function evaluar({
   ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
-  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [],
+  redesActivas = true, claves = [], voces = null, copiasEnInstagram = [], efemerides = null,
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -240,6 +265,9 @@ export function evaluar({
       de('pocos-cuerpos', 'media', `Sólo ${conCuerpo} de ${total} notas de las últimas 24 horas tienen cuerpo. Miré la reescritura en "Actualizar la web" (clave de Gemini, cuota, verificador).`);
     }
   }
+
+  // --- "Un día como hoy" y las fijas de participá: que no se acaben sin aviso (C-17)
+  if (efemerides) for (const a of avisosDeEfemerides({ ahora, ...efemerides })) de(a.clave, a.nivel, a.texto);
 
   // --- que la auditoría semanal siga corriendo
   if (auditoriaVencida(auditoria, ahora)) {
@@ -688,8 +716,11 @@ async function main() {
   const contrato = contratoDelDia({ libro, ahora, portada });
   const redesActivas = redesPrendidas();
   if (!redesActivas) console.log('  Las redes están apagadas (REDES_ACTIVAS): no se avisa pieza por pieza.');
+  const diasArmados = Object.keys(leer(path.join(RAIZ, 'web', 'data', 'efemerides-piezas.json'), {})?.dias ?? {}).sort();
+  const vigencias = Object.values(leer(path.join(RAIZ, 'reels', 'fijas', 'vigencia.json'), {})).map((v) => v?.hasta).filter(Boolean).sort();
+  const efemerides = { ultimoDia: diasArmados.at(-1) ?? null, fijasHasta: vigencias[0] ?? null };
   const problemas = evaluar({
-    ...obs, libro, auditoria, contrato, redesActivas, contenido: { ...(obs.contenido ?? {}), cuerpos },
+    ...obs, libro, auditoria, contrato, redesActivas, efemerides, contenido: { ...(obs.contenido ?? {}), cuerpos },
   });
 
   if (probarCierre) {
