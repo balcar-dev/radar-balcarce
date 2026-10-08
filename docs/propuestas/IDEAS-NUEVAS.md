@@ -249,6 +249,23 @@ Varias ideas chocan con reglas escritas. No se pueden hacer sin que ustedes camb
 - Reels de prueba (para no seguidores) por la API: piden 1.000 seguidores.
 - Grupos de Facebook: Meta cerró la publicación automática en abril de 2024.
 
+### Redes: el plan completo, en un solo lugar (decidido el 8/10)
+
+Junta lo que se decidió para las redes. El detalle de cada parte está más abajo en esta misma sección.
+
+| Qué | Cómo queda | Estado |
+|---|---|---|
+| **Videos animados** | Ninguna pieza con imagen fija: todas con movimiento, subtítulos de la voz en la misma franja y una sola estética. Hay ejemplos de nota con foto, clima (lluvia y día lindo), repaso, farmacia (una, dos y tres de turno), participá, efeméride y feriado | Aprobado. Se repasan juntos la semana que viene |
+| **Feriados** | Animación y dato propios para cada feriado; el dato lo elige el criterio del medio | Aprobado |
+| **Dónde sale cada pieza** | **Facebook:** clima y farmacia también como reel. **Instagram:** clima y farmacia solo como historia. **Lo demás con voz:** reel en las dos redes y el mismo video como historia | Aprobado. Se mide 4 semanas |
+| **Locución con memoria del día** | Cada guion sabe cómo está el día, qué saludo ya se usó y qué viene después: nada de tres "buenas noches" seguidos | Aprobado, se hace pronto (`PRIORIDADES.md` #31) |
+| **Aviso de voz con IA** | Una línea de texto en el posteo, sin la etiqueta visual de Meta | Aprobado (`MEJORAS.md` C-9) |
+| **Historias y reels, para qué** | Para lo más relevante. Los posteos de notas, para llevar gente a la web | Aprobado |
+| **Una historia que lleve al posteo de la nota** | Para evaluar, sin cargar de más | Para decidir |
+| **Guardar lo que se genera** | Audio y video de cada pieza guardados; se reusan como notas con audio en la web y en el podcast | Aprobado (Q1) |
+| **TikTok** | A mano primero; después a la bandeja; al final automático | Aprobado |
+| **Voces** | Se sigue con Gemini; las demás quedan abiertas | Aprobado |
+
 ### Videos con movimiento (idea nueva, con ejemplos)
 
 Hoy los reels son una placa fija con los subtítulos abajo. Se armaron **tres ejemplos** (sin voz, solo para
@@ -360,7 +377,13 @@ Policiales o Política. **Trabajo:** 1 o 2 días, con pruebas de que no se repit
   enlaces al reel en Facebook e Instagram. Lo mismo para la farmacia, la efeméride y los repasos.
 - **Dos canales RSS bien armados:** uno de texto (todas las notas, con el cuerpo) y uno de audio (el podcast),
   que es el que leen Apple Podcasts y Spotify para sumar episodios.
-- **¿Audio para el 100 % de las notas?** Con Gemini no alcanza (10 audios por día). Opciones para evaluar:
+- **¿Audio para el 100 % de las notas? Recomendación (8/10): no, por ahora.**
+  - No mejora la posición en Google (lo dijo gente de Google en 2021 y en 2025).
+  - Obliga a usar otra voz, distinta de la de las redes.
+  - Suma trabajo y cosas que pueden fallar.
+  - **Sí conviene** el audio en lo que **ya tiene voz** (clima, farmacia, efeméride, feriado y repasos), como nota en
+    la web y en el podcast: no gasta nada más.
+  - Si más adelante quieren audio en las notas de Balcarce, estas son las opciones:
   - **Edge TTS:** usa las voces de lectura en voz alta de Microsoft Edge, que tienen voces argentinas
     (Elena y Tomás). Es gratis, pero no es un servicio oficial: puede cortarse sin aviso y sus condiciones no
     contemplan el uso comercial.

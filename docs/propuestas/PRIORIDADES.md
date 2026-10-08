@@ -67,6 +67,7 @@ bueno.*
 |---|---|---|---|---|
 | 31 | **Locución con memoria del día** (cómo está el día, qué saludo ya se usó, qué viene después). **Aprobada** | Ideas | 1-2 días | C |
 | 32 | **Videos animados y unificados** para todas las piezas, con subtítulos. **Aprobado**; se repasan juntos la semana que viene | Ideas | 3-5 días | D + C |
+| 32b | **El plan de redes completo** (videos, dónde sale cada pieza, memoria, aviso de IA, TikTok) está junto en Ideas, sección 7 | Ideas | — | — |
 | 33 | **Reels:** clima y farmacia como reel en Facebook (en Instagram, historia); lo demás con voz, reel en las dos; medir 4 semanas | Ideas | 1 día + medir | C |
 | 34 | La fecha que va a Google: la de cuando sale en la web, no la de la fuente | S-2 | 3 h | C |
 | 35 | "Balcarce" en las notas locales (bajada, descripción y título, solo con datos que están en la fuente) | S-3, auditoría 3 | 3 h | C |
@@ -247,7 +248,7 @@ bueno.*
 | 177 | Reclamómetro; pregunta de los vecinos | D-12, D-13 |
 | 178 | Mapa de Medios Bonaerenses, capacitaciones, fondos | D-9, D-10, D-11 |
 | 179 | Cortina sonora propia | R-10 |
-| 180 | Audio para todas las notas (con otra voz) | Ideas |
+| 180 | Audio para todas las notas (con otra voz). **No recomendado por ahora**: no ayuda en Google y obliga a otra voz; sí el audio de lo que ya tiene voz (#63) | Ideas |
 
 ### Comercial
 | # | Qué | Dónde |
