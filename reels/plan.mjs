@@ -193,6 +193,10 @@ function leerDatos() {
 
 // --- el plan ---------------------------------------------------------------
 
+/** Más viejo que esto, portada.json ya no sirve para el clima ni la farmacia. */
+export const EDAD_MAXIMA_DE_LA_PORTADA_HORAS = 2;
+const PIEZAS_QUE_ENVEJECEN = ['clima-manana', 'clima-noche', 'farmacia'];
+
 export function planDelDia(datos, {
   libro = null, fecha = new Date(), estado = leerEstado(), eventos = null,
   // Piezas que se piden aunque hoy no les toque (para armarlas de antemano: `--incluir=` y reels/fijas.mjs).
@@ -534,6 +538,17 @@ export function planDelDia(datos, {
   for (const nombre of historiasQueSobran(historiasDelDia, REGLAS.historiasMaximasPorDia)) {
     const p = piezas.find((x) => x.nombre === nombre);
     if (p) { p.fueraDeTecho = true; p.motivo = `${p.motivo} · no sale: el día ya tiene ${REGLAS.historiasMaximasPorDia} historias`; }
+  }
+
+  // Si la web lleva horas congelada, portada.json es de hace rato: el clima, el aviso de clima y la farmacia hablarían de ayer ("Buen día"
+  // con la temperatura de la madrugada, o la farmacia que ya no es de turno). Esas piezas no se arman hasta que la portada se renueve (C-15).
+  const edadHoras = datos.generado ? (fecha.getTime() - Date.parse(datos.generado)) / 3600e3 : 0;
+  if (edadHoras > EDAD_MAXIMA_DE_LA_PORTADA_HORAS) {
+    for (const p of [...piezas]) {
+      if (PIEZAS_QUE_ENVEJECEN.includes(p.nombre) || p.nombre?.startsWith('aviso')) piezas.splice(piezas.indexOf(p), 1);
+    }
+    console.warn(`  la portada tiene ${edadHoras.toFixed(1)} horas: no se arman el clima ni la farmacia hasta que la web se renueve.`);
+    return { piezas, turno, portadaVieja: true };
   }
 
   return { piezas, turno };

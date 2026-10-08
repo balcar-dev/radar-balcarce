@@ -185,3 +185,19 @@ test('fechaLarga escribe la fecha como la farmacia, sin coma', () => {
   assert.equal(fechaLarga(new Date('2026-09-28T15:00:00Z')), 'Lunes 28 de septiembre');
   assert.equal(fechaLarga(new Date('2026-09-30T15:00:00Z')), 'Miércoles 30 de septiembre');
 });
+
+// C-15 (8/10/2026): con la web congelada, portada.json es de ayer y las redes no pueden decir "Buen día" con el clima de ayer.
+test('con la portada de hace más de 2 horas no se arman el clima, el aviso ni la farmacia', async () => {
+  const { EDAD_MAXIMA_DE_LA_PORTADA_HORAS } = await import('../reels/plan.mjs');
+  assert.equal(EDAD_MAXIMA_DE_LA_PORTADA_HORAS, 2);
+  const datos = datosDelDia(95); // código de tormenta con granizo: sale un aviso
+  const ahora = new Date('2026-09-21T10:00:00-03:00');
+  const fresca = planDelDia({ ...datos, generado: '2026-09-21T12:50:00Z' }, { fecha: ahora, forzar: ['clima-manana', 'farmacia'] });
+  assert.ok(!fresca.portadaVieja);
+  assert.ok(fresca.piezas.some((p) => p.nombre === 'clima-manana'), 'con la portada fresca el clima sí se arma');
+  const vieja = planDelDia({ ...datos, generado: '2026-09-21T08:00:00Z' }, { fecha: ahora, forzar: ['clima-manana', 'clima-noche', 'farmacia'] });
+  assert.equal(vieja.portadaVieja, true);
+  assert.deepEqual(vieja.piezas.filter((p) => ['clima-manana', 'clima-noche', 'farmacia'].includes(p.nombre) || p.nombre?.startsWith('aviso')), []);
+  // Sin fecha de armado (datos del panel de la PC), no se descarta nada.
+  assert.ok(!planDelDia(datos, { fecha: ahora }).portadaVieja);
+});
