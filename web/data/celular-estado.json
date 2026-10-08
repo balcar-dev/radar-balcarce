@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T06:35:19.825Z",
- "portada": 53,
- "archivo": 1065,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-08T07:01:37.959Z",
+ "portada": 52,
+ "archivo": 1064,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-08T06:35:19.874Z",
+  "generado": "2026-10-08T07:01:37.988Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "1boxf4v",
+      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
+      "seccion": "Balcarce"
+     },
      {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
@@ -170,13 +175,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "id": "1qsixdr",
+      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
       "seccion": "Balcarce"
      }
     ]

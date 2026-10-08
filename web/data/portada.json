@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T06:35:19.825Z",
+  "generado": "2026-10-08T07:01:37.959Z",
   "notas": [
     {
       "id": "futbolpartidosliga20261009",
@@ -464,8 +464,8 @@
       "medios": [
         "Infobae",
         "Crónica",
-        "El Día",
-        "La Brújula 24"
+        "La Brújula 24",
+        "El Día"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/08/una-mision-de-eeuu-llego-a-la-argentina-para-concretar-las-inversiones-de-usd-7-mil-millones-en-el-corredor-andes-atlantico/",
       "teniaImagenLaFuente": true,
@@ -606,6 +606,60 @@
       }
     },
     {
+      "id": "7r5ucc",
+      "titulo": "Vecinos advierten sobre el robo de flexibles de gas",
+      "copete": "Registran un incremento en la sustracción de conexiones de cobre junto a los medidores domiciliarios en Balcarce. Un jardín de infantes debió suspender las clases tras un episodio similar.",
+      "cuerpo": "Vecinos de Balcarce advierten sobre una modalidad delictiva centrada en la sustracción de flexibles de cobre ubicados junto a los medidores de gas. Un comercio del rubro reportó un incremento en la demanda de reemplazos tras vender tres unidades en una sola jornada y otra el día anterior. La motivación detrás de estos episodios radica en la cotización del cobre para su comercialización como material reciclable, según indicó un trabajador del sector.\n\nEsta situación generó antecedentes recientes en el distrito. El martes, el personal del Jardín de Infantes N° 905 detectó olor a gas al faltar el flexible del medidor, lo que motivó la suspensión preventiva de las actividades escolares durante el turno mañana hasta la llegada de operarios de la empresa Camuzzi para asegurar el inmueble.\n\nLa extracción de estos componentes genera riesgos por la liberación de combustible. Como alternativa, el mercado ofrece conexiones de acero recubiertas con plástico que carecen de valor para la reventa ilegal, valuadas en unos 44.000 pesos frente a los 32.000 pesos de las piezas tradicionales.",
+      "guion": "Vecinos advierten sobre el robo de flexibles de gas",
+      "seccion": "Policiales",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T22:52:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T23:01:35.401Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sustracción de flexibles de cobre en medidores de gas",
+        "Venta de repuestos aumentó en un comercio local",
+        "Jardín de Infantes N° 905 suspendió clases el martes",
+        "Alternativas de acero para evitar nuevos robos"
+      ],
+      "noConfirmado": [
+        "No hay información oficial sobre la cantidad total de hechos registrados en la ciudad",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Vecinos de Balcarce advierten sobre el robo de flexibles de cobre en medidores de gas. Un comercio local reportó mayores ventas de repuestos y un jardín de infantes debió suspender clases por un faltante.",
+      "etiquetas": [
+        "gas",
+        "robos",
+        "Balcarce",
+        "medidores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+          "fecha": "2026-10-07T22:52:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló los robos de flexibles de gas, la venta de repuestos y el caso del jardín de infantes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "vecinos-advierten-sobre-el-robo-de-flexibles-de-gas"
+    },
+    {
       "id": "1boxf4v",
       "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
       "copete": "Finalizaron los trabajos de señalización horizontal en un tramo clave para la circulación vehicular. Automovilistas y transportistas habían exigido la mejora debido a las dificultades para transitar de noche.",
@@ -616,11 +670,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/demarcaron-la-ruta-55-entre-pieres-y-balcarce-834",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-07T23:01:35.401Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T22:50:01.000Z",
+      "sinFecha": false,
       "visto": "2026-10-07T23:01:35.401Z",
-      "relevancia": 53,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -765,7 +819,6 @@
       "seccion": "Economía",
       "medios": [
         "Infobae",
-        "iProfesional",
         "Crónica",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -996,6 +1049,7 @@
         "Crónica",
         "Diario Popular",
         "El Día",
+        "Letra P",
         "Ámbito"
       ],
       "enlace": "https://www.perfil.com/noticias/empresas-y-protagonistas/fuerte-reclamo-federal-que-intendentes-reeligieron-a-su-lider-y-lanzaron-una-dura-advertencia-al-gobierno.phtml",
@@ -1072,74 +1126,6 @@
       "foto": {
         "archivo": "fotos-notas/mdbgzx.jpg",
         "credito": "Foto: Perfil"
-      }
-    },
-    {
-      "id": "1dxl25b",
-      "titulo": "OpenAI presenta hallazgos matemáticos y reabre el debate sobre la inteligencia artificial",
-      "copete": "La empresa difundió cientos de nuevos resultados en distintas ramas de la matemática. El hecho genera sorpresa y dudas entre los especialistas sobre el alcance de las herramientas tecnológicas.",
-      "cuerpo": "OpenAI difundió el martes cientos de resultados matemáticos nuevos en áreas como álgebra, teoría de números, informática teórica, lógica matemática y topología. Los hallazgos se obtuvieron mediante un modelo avanzado que todavía no se comercializa de forma pública.\n\nEste anuncio sigue al presentado el mes pasado sobre la resolución de uno de los Problemas del Milenio. El avance generó interrogantes sobre si los sistemas aplican un razonamiento propio o si completan demostraciones a partir del trabajo previo de personas.\n\nUn consejo asesor de matemáticos ubicado en Nueva Jersey señaló que este lanzamiento constituye el inicio para integrar dichos conocimientos al campo científico. A su vez, existen diferencias de criterio respecto al uso de pruebas en problemas avanzados para medir el rendimiento de los modelos.",
-      "guion": "OpenAI presenta hallazgos matemáticos y reabre el debate sobre la inteligencia artificial",
-      "seccion": "Tecnología",
-      "medios": [
-        "Infobae",
-        "TN (Todo Noticias)"
-      ],
-      "enlace": "https://tn.com.ar/tecno/2026/10/07/openai-publico-hallazgos-sobre-377-problemas-matematicos-y-reavivo-la-discusion-sobre-el-papel-de-la-ia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T20:08:02.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T03:01:26.680Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La empresa difundió 377 resultados matemáticos nuevos.",
-        "Los datos abarcan álgebra, topología y teoría de números.",
-        "Un consejo asesor evalúa la comunicación de estos avances."
-      ],
-      "seSabe": [
-        "OpenAI publicó 377 resultados matemáticos nuevos el martes.",
-        "Los datos abarcan álgebra, teoría de números, informática teórica, lógica matemática y topología.",
-        "Se utilizó un modelo de inteligencia artificial no lanzado al público."
-      ],
-      "noConfirmado": [
-        "Todavía no se determina si los modelos de inteligencia artificial emplean pensamiento creativo o completan pasos a partir de ideas humanas."
-      ],
-      "textoRedes": "OpenAI difundió 377 resultados matemáticos nuevos en distintas áreas científicas mediante un modelo avanzado de inteligencia artificial, lo que reaviva la discusión sobre el alcance de estas herramientas.",
-      "etiquetas": [
-        "OpenAI",
-        "inteligencia artificial",
-        "matemáticas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/tecno/2026/10/07/openai-publico-hallazgos-sobre-377-problemas-matematicos-y-reavivo-la-discusion-sobre-el-papel-de-la-ia/",
-          "fecha": "2026-10-07T20:08:02.000Z",
-          "oficial": false,
-          "aporte": "Detalló la publicación de 377 resultados matemáticos, las áreas que abarcan y las declaraciones del consejo asesor."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/tecno/2026/10/08/openai-publica-377-resultados-matematicos-y-profundiza-la-discusion-sobre-el-rol-de-la-ia/",
-          "fecha": "2026-10-08T02:58:21.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la difusión de los 377 resultados matemáticos nuevos por parte de la empresa OpenAI."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "openai-presenta-hallazgos-matematicos-y-reabre-el-debate-sobre-la",
-      "foto": {
-        "archivo": "fotos-notas/1dxl25b.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1459,15 +1445,17 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45024-sotelo-defendio-las-cuentas-de-la-cooperativa-y-apunto-contra-la-politica-no-se-van-a-meter-por-la-ventana/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T17:31:11.484Z",
       "sinFecha": true,
       "visto": "2026-10-07T17:31:11.484Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "seSabe": [
         "Mario Aníbal Sotelo y Julián Pinchetti visitaron los estudios de Radio Líder Balcarce Streaming",
@@ -1537,11 +1525,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45023-la-pelea-por-la-lapicera-lla-y-el-radicalismo-y-el-desafio-de-una-eventual-alianza/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T16:31:27.099Z",
       "sinFecha": true,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2658,9 +2646,9 @@
         "La Tecla",
         "Zona Norte Diario",
         "El Eco de Tandil",
+        "Noticias Agropecuarias",
         "Agencia DIB",
         "El Día",
-        "Noticias Agropecuarias",
         "Infobae"
       ],
       "enlace": "https://www.latecla.info/170241-la-justicia-ordeno-preservar-los-datos-sobre-las-tierras-rurales-bonaerenses",
@@ -3343,7 +3331,7 @@
       "fecha": "2026-10-07T11:14:07.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T21:02:11.967Z",
-      "relevancia": 52,
+      "relevancia": 56,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3493,79 +3481,6 @@
       }
     },
     {
-      "id": "ofmp08",
-      "titulo": "El Gobierno oficializa cambios en la Subsecretaría de Trabajo",
-      "copete": "El Ejecutivo nacional aceptó la salida de Claudia Testa y designó al abogado Mariano Sartoris al frente de la Subsecretaría de Relaciones del Trabajo. La modificación quedó formalizada mediante el Boletín Oficial.",
-      "cuerpo": "El Gobierno nacional aceptó la dimisión de Claudia Testa al frente de la Subsecretaría de Relaciones del Trabajo y nombró en su reemplazo a Mariano Sartoris. La medida quedó establecida a través del decreto 1150/2026, publicado en el Boletín Oficial.\n\nLa salida de la funcionaria rige desde el 5 de octubre, mientras que la designación del nuevo titular comenzó a regir al día siguiente. El recambio se enmarca en un proceso de reorganización interna impulsado dentro de la cartera de Capital Humano.\n\nAntes de asumir su nuevo rol, Sartoris se desempeñaba como subsecretario Legal dentro del mismo ministerio. El área se encarga de las negociaciones paritarias, la revisión de convenios colectivos y el vínculo con sindicatos y cámaras empresariales.",
-      "guion": "El Gobierno oficializa cambios en la Subsecretaría de Trabajo",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "Crónica",
-        "La Nueva",
-        "La Voz del Pueblo"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/07/el-gobierno-oficializo-la-salida-de-la-ex-subsecretaria-de-trabajo-y-nombro-a-su-reemplazo/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T05:51:48.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T08:01:23.441Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno aceptó la renuncia de Claudia Testa y nombró a Mariano Sartoris.",
-        "La modificación quedó establecida mediante el decreto 1150/2026 en el Boletín Oficial.",
-        "El recambio se inscribe en una reestructuración del Ministerio de Capital Humano."
-      ],
-      "textoRedes": "El Gobierno aceptó la renuncia de Claudia Testa y nombró al abogado Mariano Sartoris al frente de la Subsecretaría de Relaciones del Trabajo mediante el Boletín Oficial.",
-      "etiquetas": [
-        "Gobierno nacional",
-        "Trabajo",
-        "Boletín Oficial",
-        "Ministerio de Capital Humano"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/07/el-gobierno-oficializo-la-salida-de-la-ex-subsecretaria-de-trabajo-y-nombro-a-su-reemplazo/",
-          "fecha": "2026-10-07T05:51:48.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de la renuncia, la designación de Mariano Sartoris y la reestructuración ministerial."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/el-gobierno-acepto-la-renuncia-de-claudia-testa-subsecretaria-de-trabajo-y-ya-nombro-su-reemplazante-quien-es.phtml",
-          "fecha": "2026-10-07T07:18:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó el número de decreto y la fecha de publicación en el Boletín Oficial."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/oficializaron-la-salida-de-la-ex-subsecretaria-de-trabajo-y-nombro-a-su-reemplazo/",
-          "fecha": "2026-10-07T07:31:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha de formalización de la medida y el rol del nuevo funcionario."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-oficializa-cambios-en-la-subsecretaria-de-trabajo",
-      "foto": {
-        "archivo": "fotos-notas/ofmp08.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "yhgmbn",
       "titulo": "La industria y la construcción suben contra julio pero caen en el año",
       "copete": "La actividad manufacturera y la construcción crecieron frente a julio pero registraron bajas interanuales en agosto, según los datos difundidos por el Indec.",
@@ -3586,7 +3501,6 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "La Brújula 24",
         "Infoeme",
         "ANDigital"
@@ -4100,7 +4014,7 @@
       "id": "1uh42rm",
       "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "copete": "El Relevamiento de Expectativas de Mercado proyecta una contracción del Producto Bruto Interno en el tercer trimestre y un aumento del desempleo. El dato oficial del INDEC se conocerá el próximo martes.",
-      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
+      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
       "guion": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "seccion": "Economía",
       "medios": [
@@ -4438,18 +4352,17 @@
     "Deportes",
     "Economía",
     "Balcarce",
+    "Policiales",
     "Cultura y agenda",
     "Política",
-    "Tecnología",
     "Agro",
-    "Argentina",
-    "Policiales"
+    "Argentina"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 5
+      "cuantas": 6
     },
     {
       "nombre": "El autódromo",
@@ -4464,48 +4377,61 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 10,
-      "sensacion": 10,
-      "humedad": 97,
-      "viento": 26,
+      "temp": 9,
+      "sensacion": 5,
+      "humedad": 98,
+      "viento": 29,
       "rumbo": "SE",
-      "cielo": "Lluvia"
+      "cielo": "Lluvia leve",
+      "esDeDia": false
     },
     "dias": [
       {
         "fecha": "2026-10-08",
         "dia": "jue",
-        "max": 14,
-        "min": 9,
-        "lluvia": 0,
-        "cielo": "Lluvia"
+        "max": 12,
+        "min": 8,
+        "lluvia": 96,
+        "codigo": 81,
+        "viento": 31,
+        "milimetros": 18,
+        "cielo": "Chaparrones fuertes"
       },
       {
         "fecha": "2026-10-09",
         "dia": "vie",
         "max": 14,
         "min": 8,
-        "lluvia": 0,
-        "cielo": "Nublado"
+        "lluvia": 7,
+        "codigo": 51,
+        "viento": 20,
+        "milimetros": 1,
+        "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-10",
         "dia": "sáb",
         "max": 11,
-        "min": 10,
-        "lluvia": 0,
-        "cielo": "Nublado"
+        "min": 8,
+        "lluvia": 90,
+        "codigo": 55,
+        "viento": 18,
+        "milimetros": 5,
+        "cielo": "Llovizna intensa"
       },
       {
         "fecha": "2026-10-11",
         "dia": "dom",
-        "max": 14,
-        "min": 9,
-        "lluvia": 0,
-        "cielo": "Nublado"
+        "max": 13,
+        "min": 7,
+        "lluvia": 24,
+        "codigo": 51,
+        "viento": 13,
+        "milimetros": 0,
+        "cielo": "Llovizna leve"
       }
     ],
-    "fuente": "MET Noruega"
+    "fuente": "Open-Meteo"
   },
   "avisosClima": [],
   "farmacias": {
@@ -4947,5 +4873,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 6
+  "esperandoCuerpo": 5
 }
