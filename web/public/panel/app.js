@@ -1430,7 +1430,9 @@ async function trabajoDeIA(tipo, id, pedido, { publicar, titulo }) {
     if (!borrador) throw new Error('No pude abrir el borrador en este celular. Si recién lo registraste, probá de nuevo.');
     (E.borradoresIA ??= {})[id] = { b: borrador, cuando: Date.now() };
     // "Publicar" = que la escriba y salga. Sólo si el verificador no marcó nada; si marcó algo, se la muestra a quien decide.
-    if (publicar && borrador.ok && borrador.texto && !(borrador.problemas ?? []).length) {
+    // Un tema delicado ("necesita ojo humano": un detenido, un chico, una muerte) no sale sin que alguien lea el texto (C-19, 8/10/2026).
+    const delicada = /necesita ojo humano/i.test(buscar(tipo, id)?.motivo ?? '');
+    if (publicar && !delicada && borrador.ok && borrador.texto && !(borrador.problemas ?? []).length) {
       const t = borrador.texto;
       const seccion = borrador.seccion ?? buscar(tipo, id)?.seccion ?? '';
       E.trabajos[id] = { clase: 'ia', estado: 'publicando', tipo, titulo };
@@ -1442,7 +1444,7 @@ async function trabajoDeIA(tipo, id, pedido, { publicar, titulo }) {
       return;
     }
     E.trabajos[id] = { clase: 'ia', estado: 'listo', tipo, titulo };
-    aviso(publicar ? `La IA escribió “${titulo}”, pero el verificador marcó algo: revisala antes de publicar.` : `Lista la nota “${titulo}”: tocá para revisarla.`, { ver: { tipo, id }, ms: 20000 });
+    aviso(publicar ? `La IA escribió “${titulo}”, pero ${delicada ? 'es un tema delicado' : 'el verificador marcó algo'}: leela antes de publicar.` : `Lista la nota “${titulo}”: tocá para revisarla.`, { ver: { tipo, id }, ms: 20000 });
   } catch (e) {
     E.trabajos[id] = { clase: 'ia', estado: 'fallo', tipo, titulo, motivo: explicarError(e) };
     aviso(`No se pudo escribir “${titulo}”: ${explicarError(e)}`, { ms: 12000 });

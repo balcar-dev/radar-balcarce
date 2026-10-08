@@ -6,7 +6,7 @@
 // panel se veía viejo (4/10). Nunca guarda nada de GitHub: las notas y la llave
 // no pasan por acá.
 
-const CACHE = 'radar-panel-17';
+const CACHE = 'radar-panel-18';
 const ARCHIVOS = ['/panel/', '/panel/app.js', '/panel/github.js', '/panel/cifrado.js', '/panel/textos.js', '/panel/fechas.js', '/panel/numeros.js', '/panel/redes-estado.js', '/panel/revision.js', '/panel/pistas.js', '/panel/contactos.js', '/panel/fotos.js', '/panel/manifest.webmanifest'];
 
 self.addEventListener('install', (ev) => {

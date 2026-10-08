@@ -238,3 +238,15 @@ test('si una versión de la misma noticia es roja o sensible, la que queda lo he
   const r3 = quitarRepetidas([poca, { ...verde, id: 'v3' }], [['p', 'v3']]);
   assert.equal(r3.notas[0].semaforo, 'verde');
 });
+
+// C-10 (8/10/2026): lo rojo no sale con el texto que lo puso en rojo, ni aprobado por una persona.
+test('generar-datos no publica una nota roja cuyo texto final sigue tocando la lista roja', async () => {
+  const fs = await import('node:fs');
+  const gen = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
+  assert.match(gen, /const sigueRoja = \(original, final\) => original\?\.semaforo === 'rojo'/);
+  assert.match(gen, /if \(sigueRoja\(n, corregida\)\) return null;/, 'al publicar');
+  assert.match(gen, /sigueRoja\(enIngesta\.get\(a\.id\), conCorreccion\(a, CORRECCIONES\)\)\) retiradas\.add/, 'al armar el archivo');
+  // Lo que se mira es lo que se va a publicar: reescrita sin la frase, deja de ser roja; con la frase, sigue siéndolo.
+  assert.equal(semaforoDelTexto('Condenan a un hombre por abuso sexual\nLa fiscalía pidió pena')?.color, 'rojo');
+  assert.notEqual(semaforoDelTexto('Condenan a un hombre por un delito contra la integridad\nLa fiscalía pidió pena')?.color, 'rojo');
+});

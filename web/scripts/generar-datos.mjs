@@ -74,7 +74,7 @@ import {
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
-import { esperaSoloPorCantidad } from '../../ingesta/ingesta.mjs';
+import { esperaSoloPorCantidad, semaforoDelTexto } from '../../ingesta/ingesta.mjs';
 import { conFotosDelBanco, podarFotos } from './fotos-notas.mjs';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -423,6 +423,14 @@ const esperandoCuerpo = [];
 /** ¿El título o la bajada son de lo que no se publica nunca (REGLAS_SEMAFORO.nunca)? */
 const nuncaSePublica = (nota) => esDeLoQueNuncaSePublica(nota, REGLAS_SEMAFORO.nunca);
 
+/**
+ * Una nota que el semáforo puso en ROJO (un menor, una víctima) no sale con el texto que la puso en rojo, ni aunque una persona la
+ * apruebe (C-10, 8/10/2026: "se rompe la regla de no identificar a un menor o a una víctima por un clic equivocado"). Si la persona
+ * la reescribió y el texto final ya no toca la lista roja, sí puede salir: lo que se mira es lo que se va a publicar.
+ */
+const sigueRoja = (original, final) => original?.semaforo === 'rojo'
+  && semaforoDelTexto([final?.titulo, final?.copete, final?.cuerpo].filter(Boolean).join('\n'))?.color === 'rojo';
+
 // Mismo criterio que el panel: sin decisión manda el semáforo (verde =
 // automática, rojo = bloqueada, el resto pendiente). Sólo lo publicado o
 // automático llega a la web.
@@ -540,6 +548,7 @@ function notaPublicada(n) {
   // lo que aprobó una persona (28/09): la regla es "no se publican nunca", y
   // una lista de sepelios con "falleció" llegaba al panel como amarilla.
   if (nuncaSePublica(corregida)) return null;
+  if (sigueRoja(n, corregida)) return null;
   // SIN CUERPO NO SE PUBLICA (25/09): una nota automática sin cuerpo de
   // verdad (70 palabras o más, distinto de la bajada) queda "esperando
   // cuerpo" y no aparece en ninguna lista, ni en el feed, el sitemap o las
@@ -657,6 +666,7 @@ for (const a of archivoAnterior.notas ?? []) {
   // Lo que no se publica nunca (las listas de sepelios) no conserva la página,
   // aunque la haya aprobado una persona (28/09).
   if (nuncaSePublica(conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
+  if (sigueRoja(enIngesta.get(a.id), conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
   // Una página vieja que promete una cobertura "EN VIVO" o "minuto a minuto" en
   // el título (el texto de otro medio, de antes de la regla): Radar Balcarce no
   // hace coberturas en vivo (29/09; "música en vivo" sí).

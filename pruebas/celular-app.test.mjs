@@ -200,3 +200,11 @@ test('la página del panel: sin nada de afuera, sin indexar, y se puede instalar
   assert.match(cabeceras, /connect-src 'self' https:\/\/api\.github\.com/);
   assert.match(leer('web/app/robots.js'), /'\/panel\/'/);
 });
+
+// C-19 (8/10/2026): "Publicar" no saca solo una nota de un tema delicado: la muestra para que la lean.
+test('"Publicar" de un tema delicado muestra el texto antes de publicarlo', () => {
+  const app = leer('web/public/panel/app.js');
+  assert.match(app, /const delicada = \/necesita ojo humano\/i\.test\(buscar\(tipo, id\)\?\.motivo \?\? ''\);/);
+  assert.match(app, /if \(publicar && !delicada && borrador\.ok/);
+  assert.match(app, /es un tema delicado/);
+});

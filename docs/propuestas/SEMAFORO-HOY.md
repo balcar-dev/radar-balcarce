@@ -118,6 +118,6 @@ No se encontró ningún caso publicado. Cerrados el mismo día con la regla 118:
 ## Qué habría que decidir (para repasar juntos)
 
 1. ¿Se suman las edades de menores y las formas que faltan del verbo? (Es tocar la lista roja y la amarilla.)
-2. ¿Lo rojo pasa a funcionar como los sepelios (nunca, ni aprobado)?
-3. ¿"Publicar" en el celular muestra el texto antes de publicar cuando la nota es delicada, o se deja como está?
-4. ¿Al juntar notas del mismo hecho el grupo hereda el peor color?
+2. ~~¿Lo rojo pasa a funcionar como los sepelios?~~ **Resuelto el 8/10 (regla 119):** lo rojo no sale con el texto que lo puso en rojo, ni aprobado; si una persona lo reescribe y el texto ya no toca la lista, puede salir.
+3. ~~¿"Publicar" muestra el texto antes cuando la nota es delicada?~~ **Resuelto el 8/10 (regla 120):** sí, para "necesita ojo humano".
+4. ~~¿Al juntar notas el grupo hereda el peor color?~~ **Resuelto el 8/10 (regla 118).**
