@@ -341,3 +341,9 @@ test('elegirFoto: si la IA marca la única foto (por ejemplo, un zócalo de otro
   assert.equal(r.elegida, null);
   assert.match(r.razon, /Radio Líder/);
 });
+
+test('las licencias con NC o ND no se aceptan, aunque empiecen como CC BY (P17, 8/10)', async () => {
+  const { WIKIMEDIA_LICENCIAS_LIBRES: libres } = await import('../ingesta/fotos.mjs');
+  for (const ok of ['CC BY 4.0', 'CC BY-SA 4.0', 'CC0', 'Public domain', 'cc-by-sa-3.0']) assert.ok(libres.test(ok), ok);
+  for (const no of ['CC BY-NC 4.0', 'CC BY-ND 2.0', 'CC BY-NC-SA 3.0', 'cc-by-nc-nd-4.0', 'CC BY NC']) assert.ok(!libres.test(no), no);
+});

@@ -365,7 +365,8 @@ export async function personaPublicaDeNota(nota, { clave = claveClasificacion(),
 // "Sólo con atribución" alcanza (el crédito ya va siempre en la cita); lo que
 // no está en esta lista (por ejemplo "todos los derechos reservados", que
 // Commons también aloja para material de archivo) se descarta.
-const WIKIMEDIA_LICENCIAS_LIBRES = /^(cc0|cc[\s-]?by(?:[\s-]?sa)?|public domain|dominio p[uú]blico|\bpd\b)/i;
+// Sin "NC" ni "ND" (P17, 8/10): "CC BY-NC" empezaba igual que "CC BY" y pasaba; ahora tampoco se acepta lo que sigue con "-nc" o "-nd".
+export const WIKIMEDIA_LICENCIAS_LIBRES = /^(cc0|cc[\s-]?by(?:[\s-]?sa)?(?![\s-]?n[cd]\b)|public domain|dominio p[uú]blico|\bpd\b)/i;
 
 /** El autor que da Commons (`extmetadata.Artist`) viene en HTML: un enlace a
  *  su página de usuario, a veces con <bdi> o <span>. Se deja sólo el texto. */
