@@ -44,6 +44,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 18 (aclaración) | La web ya está en Next 15.5.27 (la última de la línea 15). Lo que queda es pasar a Next 16 antes de que la línea 15 deje de recibir parches (21/10 según la auditoría); no corre riesgo el lector, sólo el armado | 8/10 | `5bc00d7` |
 | 7, 9 | **Semáforo mejorado** (autorizado por Hernán y Andrés): formas que faltaban de rojo y de muerte, edad de menores, aviso fúnebre como "nunca" y la nota hereda el peor color al juntarse. Ninguna de las 1.083 notas publicadas cambia de color. **Sigue abierto:** que lo rojo aprobado a mano no salga (C-10) y "Publicar" del celular | 8/10 | regla 118 |
 | 7 (estudio) | Se escribió cómo funciona hoy el semáforo, con ejemplos comprobados, para decidir juntos: [`SEMAFORO-HOY.md`](SEMAFORO-HOY.md). No se cambió nada | 8/10 | — |
+| 132-136 | **Cuarta auditoría externa leída y contrastada**: acierta en lo central (fotos a R2, datos fuera de git, panel unificado, respaldo) y casi todo ya estaba decidido; se armó un plan por etapas en [`registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md`](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md). No se aplicó nada: necesita tarjeta y token de Cloudflare | 8/10 | — |
 | 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---
@@ -224,6 +225,11 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 128 | Auditoría semanal completa (Lighthouse, accesibilidad) | N7 | — |
 | 129 | Bajar el ciclo a 15 minutos | Ciclo | — |
 | 130 | El panel del celular, rediseñado sobre el flujo nuevo | Decidido | Que el flujo esté rearmado |
+| 132 | **Arquitectura de datos (cuarta auditoría)**, etapa 1: fotos a Cloudflare R2 con una sola variable `FOTOS_BASE`. Antes del 2/12 | [registro](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md) | D + tarjeta y token en Cloudflare |
+| 133 | Etapa 2: `archivo.json` y el histórico fuera de git (R2 por mes o D1) y las notas viejas armadas en el momento; el tope de notas deja de existir | ídem | D (R2 o D1) |
+| 134 | Etapa 3: lo que cambia siempre (`vistas`, `estadisticas`, `fichas`, `banco-fotos`, `redes`…) fuera de git; las decisiones de personas se quedan | ídem | — |
+| 135 | Etapa 4: un Worker de Cloudflare con Cron Trigger como segundo disparador (convive con cron-job.org) | ídem | P + token |
+| 136 | Etapa 6: respaldo en GitLab, Google Drive y la PC (se pide aparte, **lo primero que conviene hacer**) | ídem | P |
 | 131 | Herramientas a probar: recorte inteligente, lectura de marcas en fotos, detección de caras, lector de notas (trafilatura), subtítulos con Whisper, Vega, LanguageTool, pa11y, Dependabot y actionlint | Herramientas | — |
 
 *Revisión con recordatorio: 15/12/2026 (archivo histórico, fotos y respaldo).*

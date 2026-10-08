@@ -16,6 +16,6 @@ Se separa en dos listas, para no mezclar:
   datos de verdad: **comprobado** (se bajó el dato desde GitHub y trae a Balcarce), fuente accesible, solo
   búsqueda, bloqueada, trabajo humano o especulación.
 - **[`registro/`](registro/)**: la auditoría, el plan y la hoja de ruta del 8/10 tal como se escribieron.
-  Mezclan las dos cosas; se conservan como historial y por el detalle (ejemplos de títulos, fuentes, URLs).
+  Incluye la cuarta auditoría externa (la arquitectura) con su plan por etapas. Mezclan las dos cosas; se conservan como historial y por el detalle (ejemplos de títulos, fuentes, URLs).
 
 Si una lista y el código no coinciden, manda el código.
