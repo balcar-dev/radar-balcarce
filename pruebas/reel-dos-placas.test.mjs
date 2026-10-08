@@ -6,9 +6,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, execFile } from 'node:child_process';
 import ffmpeg from 'ffmpeg-static';
-import { armarReel, medirDuracion } from '../reels/reel.mjs';
+import { armarReel, medirDuracion, VOLUMEN_PAREJO } from '../reels/reel.mjs';
 import { placasDelDia } from '../reels/placas-efemeride.mjs';
 import { palabrasSinteticas } from '../reels/previa-efemerides.mjs';
 import { efemerideDelDia } from '../redes/efemeride.mjs';
@@ -49,4 +49,31 @@ test('con una sola placa sigue funcionando como siempre', async (t) => {
   const r = await armarReel({ nombre: 'efemeride', svg: placasDelDia(e.fecha, e).principal, guion: 'Buen día, Balcarce.', acento: '#9D2C8F', hablar: decirFalso }, dir);
   assert.ok(fs.existsSync(r.mp4));
   assert.ok(!fs.existsSync(path.join(dir, 'efemeride-2.png')));
+});
+
+// Herramientas (8/10/2026): todas las voces al mismo volumen. Una voz muy baja y una fuerte salen parejas (-16 LUFS).
+test('una voz muy baja y una fuerte quedan al mismo volumen en el video', async (t) => {
+  if (!ffmpeg || !fs.existsSync(ffmpeg)) { t.skip('sin ffmpeg'); return; }
+  assert.match(VOLUMEN_PAREJO, /loudnorm=I=-16/);
+  const e = efemerideDelDia(new Date('2026-10-05T12:00:00-03:00'));
+  const palabras = palabrasSinteticas('Buen día, Balcarce. Un día como hoy, en Radar Balcarce.');
+  const duracion = palabras.at(-1).hasta;
+  const medir = async (v) => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'reel-vol-'));
+    const decirFalso = async (_texto, mp3) => {
+      execFileSync(ffmpeg, ['-y', '-f', 'lavfi', '-i', `sine=frequency=330:duration=${duracion.toFixed(2)},volume=${v}`, '-c:a', 'libmp3lame', mp3], { stdio: 'ignore' });
+      return { palabras, duracion };
+    };
+    const r = await armarReel({ nombre: 'efemeride', svg: placasDelDia(e.fecha, e).principal, guion: 'Buen día, Balcarce.', acento: '#9D2C8F', hablar: decirFalso }, dir);
+    const out = await new Promise((resolve) => {
+      let err = '';
+      const p = execFile(ffmpeg, ['-hide_banner', '-nostats', '-i', r.mp4, '-af', 'ebur128', '-vn', '-f', 'null', '-'], () => resolve(err));
+      p.stderr.on('data', (d) => { err += d; });
+    });
+    const finales = [...out.matchAll(/I:\s+(-?\d+\.\d)\s+LUFS/g)];
+    return Number(finales.at(-1)[1]);
+  };
+  const bajo = await medir(0.03);
+  const fuerte = await medir(0.8);
+  assert.ok(Math.abs(bajo - fuerte) < 2, `quedaron en ${bajo} y ${fuerte} LUFS`);
 });

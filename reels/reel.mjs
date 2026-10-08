@@ -18,6 +18,9 @@ import {
 } from './duracion.mjs';
 
 const correr = promisify(execFile);
+/** El filtro que deja todos los audios al mismo volumen: -16 LUFS (voz), pico máximo -1,5 dB; vuelve a 44,1 kHz porque loudnorm sube la frecuencia. */
+export const VOLUMEN_PAREJO = 'loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100';
+
 // Lo que tarda en entrar la voz después de que aparece la placa.
 const RETARDO = 0.25;
 
@@ -179,7 +182,8 @@ export async function armarReel({
     ? ['-loop', '1', '-t', corte.toFixed(2), '-i', path.basename(png), '-loop', '1', '-t', (total - corte).toFixed(2), '-i', path.basename(png2), '-i', path.basename(mp3)]
     : ['-loop', '1', '-i', path.basename(png), '-i', path.basename(mp3)];
   const origen = dosPlacas ? '[0:v][1:v]concat=n=2:v=1:a=0' : '[0:v]null';
-  const audio = `[${dosPlacas ? 2 : 1}:a]adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
+  // loudnorm (R-4 de Herramientas, 8/10/2026): todas las voces al mismo volumen (-16 LUFS), para que ninguna pieza suene más fuerte que otra.
+  const audio = `[${dosPlacas ? 2 : 1}:a]${VOLUMEN_PAREJO},adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
 
   await correr(ffmpeg, [
     '-y', ...entradas,
