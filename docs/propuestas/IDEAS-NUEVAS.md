@@ -247,9 +247,60 @@ licencia; en Policiales sigue sin haber foto real.
   hasta el del hecho, y "Y además" de a uno) y feriado (la hoja del calendario que pasa del 11 al 12, y un dato
   del censo que cuenta). Todos con subtítulos y la misma estética. Los íconos son dibujos propios y genéricos:
   ningún logo de marca (tampoco el de WhatsApp).
+- **Tercera tanda (8/10):** farmacia con **dos de turno** (una ficha por farmacia, cada una entra de un costado);
+  feriado rehecho con el dato que **de verdad** sale el 12/10 (Colón, 1492, con una carabela que cruza); el clima
+  **sin decir de dónde salen los datos** (eso va en la nota, no en la placa).
+- **Feriados, decidido (8/10):** cada feriado tiene su animación y su dato propios (una fecha patria no es igual
+  a un feriado religioso o a uno trasladable). **Los datos del feriado los elige el criterio editorial del medio**,
+  que es de centro-derecha: la historia de la fecha y sus hechos, no estadísticas que no van con esa línea (el
+  dato del censo que se usó en el primer ejemplo **no va**; en la pieza real del 12/10 no estaba: sale solo el
+  dato de Colón). Hay que escribirlo en `CRITERIO-REDES.md` y revisar el campo "enfoque" de cada feriado en
+  `web/data/feriados-piezas.json`.
 - **El ejemplo de nota con foto** no corresponde a una pieza de hoy: las notas salen como posteos, no como
   reel ni historia. **Queda para evaluar** una historia que lleve al posteo, sin cargar de más: **las
   historias y los reels son para lo más relevante; los posteos, para llevar gente a la web** (8/10).
+
+### Historias contra reels: qué conviene (análisis del 8/10)
+
+**Hoy:** los tres repasos (10, 15 y 21) salen como reel y como historia; todo lo demás (clima de la mañana y de
+la noche, farmacia, efeméride, feriado, participá, útiles, agenda) sale **solo como historia**.
+
+**Lo que pesa más que todo:** una historia la ve **solo quien ya sigue la cuenta**, y hoy son 7 seguidores en
+Facebook y 4 en Instagram. Un reel, en cambio, Meta se lo muestra a **gente que no sigue la cuenta**. Por eso
+los reels tienen muchas más reproducciones, como vieron en Facebook. Con tan pocos seguidores, casi todo lo que
+sale solo como historia **no lo ve nadie**.
+
+**Recomendación:**
+1. **Todo lo que tiene voz, como reel**, y el mismo video también como historia. No gasta voz extra: es el mismo
+   archivo publicado dos veces.
+2. **El clima y la farmacia como reel también.** Sirven todos los días y son lo más compartible. El reel queda
+   en el perfil: la fecha tiene que estar grande y clara, para que nadie lea un clima viejo como de hoy.
+3. **Instagram con un poco más de cuidado:** su perfil se llena de piezas diarias que vencen. Se puede probar
+   todo como reel en Facebook (donde están las visitas) y, en Instagram, reel para repasos, efeméride, feriado
+   y clima de la mañana, e historia para farmacia y participá.
+4. **Medirlo en serio, 4 semanas:** alcance y reproducciones de cada pieza, separando seguidores y no
+   seguidores (M3-4-7 en `MEJORAS.md`; la llave de Meta ya tiene permiso para leer esas estadísticas). Después
+   se decide pieza por pieza.
+
+**Límites que no molestan:** Facebook acepta hasta 30 reels por día por la API; hoy un día normal tiene unas 10
+piezas.
+
+### Una locución que sepa qué se dijo antes (idea nueva, sin apuro)
+
+**El problema:** cada pieza se arma sola, así que de noche pueden salir tres seguidas que empiezan "Hola, buenas
+noches", y ninguna sabe que llovió todo el día.
+
+**La idea:** una "memoria del día" que cada guion consulta antes de armarse:
+- **Cómo está el día:** si llueve, hace frío, calor o hay alerta, el guion lo puede nombrar ("en esta noche de
+  lluvia, les paso el repaso").
+- **Qué se dijo antes:** el saludo usado no se repite en el mismo día; la segunda pieza de la noche ya no saluda
+  igual ("Seguimos con…", "Y para cerrar el día…").
+- **Qué viene después:** cerrar con un adelanto ("a las 21, el repaso de la noche").
+
+**Cómo:** con el mismo código que arma hoy los guiones (`redes/guiones.mjs`), con frases armadas y verificables,
+sin IA para inventar. El libro de redes ya anota qué salió y a qué hora. No gasta voz extra.
+**Cuidado:** que la referencia al clima sea cierta (sale de los datos del día) y que nunca se mezcle con
+Policiales o Política. **Trabajo:** 1 o 2 días, con pruebas de que no se repita un saludo en el mismo día.
 
 ### Podcast, YouTube y TikTok (RS)
 

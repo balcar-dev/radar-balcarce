@@ -1216,11 +1216,43 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
 
 *Semanas o meses. Riesgo medio a alto.*
 
-**E1 · Repositorio privado y servidor propio** — *Confirmado*
-- En privado, los ~10.000 minutos por mes no entran en los 2.000-3.000 incluidos. Un servidor de
-  US$ 5-9 correría los robots. Primero, pasar lo comercial a un repo privado aparte (gratis; ver C-8).
+**E1 · Repositorio privado por menos de US$ 10 por mes** — *Confirmado · es lo que quieren (8/10)*
+
+**Por qué no alcanza con poner el repositorio en privado:** en público, los robots de GitHub no tienen tope.
+En privado, el plan gratis trae 2.000 minutos por mes (el plan Pro, de US$ 4, trae 3.000), y hoy los robots
+usan unos 10.000 (48 corridas por día de ~7 minutos, más las redes). El exceso costaría US$ 40-60 por mes.
+
+**El plan propuesto (unos US$ 5-6 por mes):**
+1. **Un servidor chico propio** (una computadora alquilada en internet, de unos US$ 5 por mes) que corre los
+   mismos robots de GitHub como "ejecutor propio". Los minutos de un ejecutor propio no se cobran, aunque el
+   repositorio sea privado. El código y los robots siguen igual.
+2. **Las fotos, audios y videos en Cloudflare** (ver R2-fotos): gratis hasta 10 GB.
+3. **El repositorio pasa a privado.** Lo que se ve de afuera sigue siendo solo la web. Al pasar a privado
+   también deja de verse la historia del repositorio.
+
+**Antes de pasar a privado conviene:** armar el sitio una sola vez por ciclo (A1), sacar las corridas de más
+(A8-b) y correr las pruebas solo cuando cambia el código (T-1). Así el servidor trabaja menos.
+
+**Lo que hay que saber:**
+- Ese servidor hay que mantenerlo (actualizaciones). Si se cae, los robots no corren: va con aviso
+  (healthchecks) y con GitHub como plan B por unos días, pagando el exceso solo ese tiempo.
+- El panel del celular sigue funcionando con un repositorio privado (usa la llave de quien lo usa).
+- La subida a Cloudflare ya es directa y no depende de que el repositorio sea público.
+
+**Orden propuesto:** fotos a Cloudflare → respaldo en cuatro lugares → servidor propio a prueba con un solo
+robot → todos los robots → repositorio privado. 3 a 6 semanas en total, sin apuro.
 
 **R2-fotos · Sacar las fotos de git y llevarlas a Cloudflare** — *Confirmado · pedido el 8/10*
+- **¿Conviene? Sí (opinión, 8/10).** Cloudflare ya está habilitado con tarjeta. Llevar las fotos, el banco de
+  fotos, los audios y los videos a su depósito (R2) sirve para:
+  - aliviar el repositorio, que hoy crece con cada foto;
+  - armar el sitio más rápido;
+  - poder pasar a privado (E1);
+  - simplificar el respaldo;
+  - bajar el riesgo de que un reclamo por una foto frene todo el repositorio.
+- **Costo:** gratis hasta 10 GB guardados, y no cobra por mirar las fotos (a confirmar el detalle en su página).
+  Se servirían desde una dirección propia, por ejemplo `fotos.radarbalcarce.com`.
+- **Trabajo:** 2 a 3 días, más mudar las 578 fotos que ya hay y probar que ninguna se rompa.
 - **Lo que pidieron:** que las fotos y el banco de fotos se guarden directamente en Cloudflare, para no
   depender tanto de GitHub. Hernán cree que la cuenta de Cloudflare ya está habilitada para eso: **a
   confirmar** (el depósito de Cloudflare, R2, pide cargar una tarjeta aunque no cobre hasta 10 GB).
@@ -1291,6 +1323,7 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
    - La página guarda su historia siempre; por ahora se prevén 1 o 2 años, con recordatorio el 15/12/2026.
    - Lo que se genera para redes (audio y video) se guarda y se reusa en la web.
    - Las historias y los reels son solo para lo más relevante; los posteos de notas, para llevar gente a la web.
+   - Quieren el repositorio privado por menos de US$ 10: servidor propio y fotos en Cloudflare (E1, R2-fotos).
    - **El panel no decide si algo sale ni si las pruebas pasan.** Se rediseña después, cuando el flujo esté
      rearmado. Mientras tanto, nadie toca el feriado del 12/10 ni la efeméride del 11/10.
 0. **C-18:** no tocar el feriado del 12/10 ni la efeméride del 11/10 en el celular hasta el 13/10.
