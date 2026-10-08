@@ -1407,7 +1407,7 @@ días de efemérides o de feriados cargados (los feriados llegan hasta el 25/05/
 
 ### Panel, Pistas y comercial (revisión del 8/10)
 
-**P-2 · El robot puede pisar lo que decidió una persona en las pistas** — *Confirmado · ALTA*
+**P-2 ✔ · El robot puede pisar lo que decidió una persona en las pistas** — *Confirmado · ALTA · hecho el 8/10 (regla 139)*
 - `pistas.json` y `notas-de-pistas.json` los escriben el celular y los robots. Si chocan, el robot se queda
   con su versión (`checkout --theirs` en `panel.yml:75-79,110-116` y `pistas.yml:197-203`): una pista
   cerrada o una nota retirada puede volver. Volver a leer y aplicar solo el cambio propio. 3 h.

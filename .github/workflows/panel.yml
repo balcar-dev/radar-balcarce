@@ -109,6 +109,8 @@ jobs:
           # corridas y reintentar. Este archivo lo escribe sólo este workflow.
           for intento in 1 2 3; do
             if ! git pull --rebase; then
+              # P-2: lo de las pistas se une cambio por cambio, así el robot no pisa lo que decidió una persona (panel/unir-conflictos.mjs).
+              node panel/unir-conflictos.mjs || echo "No se pudo unir las pistas: sigue el camino de siempre"
               chocan=$(git diff --name-only --diff-filter=U)
               echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
               echo "$chocan" | xargs -r git checkout --theirs --
