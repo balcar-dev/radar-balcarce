@@ -1,7 +1,24 @@
 {
- "generado": "2026-10-08T19:04:21.462Z",
+ "generado": "2026-10-08T19:37:05.989Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1h9a0rw",
+   "titulo": "Por el mal tiempo, postergaron las competencias del automovilismo zonal en el Autódromo",
+   "copete": "Las competencias del automovilismo zonal previstas para este fin de semana en el Autódromo Juan Manuel Fangio fueron reprogramadas para el 24 y 25 de octubre debido a los pronósticos climáticos desfavorables.",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T17:13:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/por-el-mal-tiempo-postergaron-las-competencias-del-automovilismo-zonal-en-el-autodromo",
+     "fecha": "2026-10-08T17:13:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
+  },
   {
    "id": "159oig4",
    "titulo": "Quinta fecha de la Liga Local",
@@ -86,8 +103,8 @@
      "fecha": "2026-10-08T18:17:28.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 3 problemas (nombre, promesa): el cuerpo nombra a \"gureta\" y la fuente no; sin esas oraciones quedan 76 palabras",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
    "maximo": 3
   },
   {
@@ -105,6 +122,28 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "1cjphdj",
+   "titulo": "Leonel Pernía, entre los 33 inscriptos de la Clase 3",
+   "copete": "",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T09:46:14.000Z",
+   "fuentes": [
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/deportes/leonel-pernia-entre-los-33-inscriptos-de-la-clase-3",
+     "fecha": "2026-10-08T09:46:14.000Z"
+    },
+    {
+     "medio": "Campeones",
+     "enlace": "https://campeones.com.ar/leonel-pernia-se-enfoca-en-el-fin-de-semana-de-tn-y-su-futuro-en-2027/",
+     "fecha": "2026-10-08T17:07:37.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"nacional\" y la fuente no",
    "maximo": 3
   }
  ]

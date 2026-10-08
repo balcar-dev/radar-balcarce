@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T19:04:21.462Z",
- "portada": 52,
- "archivo": 1097,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-08T19:37:05.989Z",
+ "portada": 55,
+ "archivo": 1099,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-08T19:04:21.508Z",
+  "generado": "2026-10-08T19:37:06.034Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
-      "seccion": "Balcarce"
-     },
      {
       "id": "6vefne",
       "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
       "seccion": "Agro"
      },
      {
-      "id": "bas6dw",
-      "titulo": "Una familia porteña necesita más de dos millones y medio para ser clase media",
-      "seccion": "Economía"
+      "id": "zzuoo4",
+      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "seccion": "Balcarce"
      },
      {
       "id": "19k7tmn",
       "titulo": "Mauro Icardi y Wanda Nara se divorcian oficialmente en Italia",
-      "seccion": "Fútbol"
+      "seccion": "Argentina"
+     },
+     {
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      }
     ]
    }
@@ -213,21 +213,15 @@
      "marcada": false
     },
     {
-     "id": "175ztwv",
-     "titulo": "UATRE Balcarce saluda al personal rural en su día",
-     "seccion": "Agro",
-     "marcada": false
-    },
-    {
      "id": "zzuoo4",
      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "jul3dm",
-     "titulo": "El Diario cumple 31 años como medio gráfico local",
-     "seccion": "Balcarce",
+     "id": "175ztwv",
+     "titulo": "UATRE Balcarce saluda al personal rural en su día",
+     "seccion": "Agro",
      "marcada": false
     }
    ],
