@@ -9975,8 +9975,8 @@
   "origen": "ninguna",
   "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-08T16:37:43.169Z",
-  "intentos": 2,
+  "cuando": "2026-10-08T17:37:53.930Z",
+  "intentos": 3,
   "fuentes": 1
  },
  "1rf94dp": {
@@ -10041,26 +10041,30 @@
   "origen": "ninguna",
   "titulo": "Marcas internacionales de indumentaria abren locales en el país",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-08T16:37:43.169Z",
-  "intentos": 1,
+  "cuando": "2026-10-08T17:37:53.930Z",
+  "intentos": 2,
   "fuentes": 3
  },
  "vnuraj": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/vnuraj.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: @cfcunofficial (Chelsea Debs) London from London, UK / Wikimedia Commons (CC BY-SA 2.0)",
+  "licencia": "CC BY-SA 2.0",
+  "autor": "@cfcunofficial (Chelsea Debs) London from London, UK",
+  "origen": "wikimedia",
   "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-08T16:37:43.169Z",
-  "intentos": 1,
-  "fuentes": 3
+  "enlace": "https://commons.wikimedia.org/wiki/File:Chelsea_4_Ajax_4_(49022677533)_(cropped,_Kurt_Zouma_and_Nicol%C3%A1s_Tagliafico).jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chelsea_4_Ajax_4_%2849022677533%29_%28cropped%2C_Kurt_Zouma_and_Nicol%C3%A1s_Tagliafico%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Nicolás Tagliafico\" de Wikimedia Commons (CC BY-SA 2.0).",
+  "cuando": "2026-10-08T17:37:53.930Z"
  },
  "vr9xc5": {
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-08T16:37:43.169Z",
-  "intentos": 1,
+  "cuando": "2026-10-08T17:37:53.930Z",
+  "intentos": 2,
   "fuentes": 9
  },
  "r09m78": {
@@ -10116,5 +10120,59 @@
   "cuando": "2026-10-08T17:07:33.336Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "f6j0rt": {
+  "archivo": "fotos-notas/f6j0rt.jpg",
+  "medio": "Acción 5 (Balcarce)",
+  "credito": "Foto: Acción 5 (Balcarce)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
+  "enlace": "https://accion5.com/por-cuestiones-climaticas-fue-suspendido-zonal-atlantico/",
+  "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/4-2a.jpg",
+  "razon": "Es la única imagen que muestra el circuito de forma clara y con buena nitidez, sin marcas de agua ni menores de edad.",
+  "cuando": "2026-10-08T17:37:53.930Z"
+ },
+ "bas6dw": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Una familia porteña necesita más de dos millones y medio para ser clase media",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-08T17:37:53.930Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "jul3dm": {
+  "archivo": "fotos-notas/jul3dm.jpg",
+  "medio": "News Balcarce (FM 91.7)",
+  "credito": "Foto: News Balcarce (FM 91.7)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Diario cumple 31 años como medio gráfico local",
+  "enlace": "https://newsbalcarce.com.ar/?p=30985",
+  "imagenOriginal": "https://newsbalcarce.com.ar/wp-content/uploads/EL-DIARIO-31-ANIVERSARIO.webp",
+  "razon": "Es la única foto disponible, cumple con los requisitos y no tiene marcas ni menores.",
+  "cuando": "2026-10-08T17:37:53.930Z"
+ },
+ "jul321": {
+  "archivo": "fotos-notas/jul321.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45035-por-el-mal-clima-se-suspendio-la-fiesta-nacional-del-postre/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65996.png",
+  "razon": "La foto B muestra adecuadamente la temática de la fiesta sin marcas de agua ni menores reconocibles, mientras que la A es un flyer institucional con marcas de la red social.",
+  "cuando": "2026-10-08T17:37:53.930Z"
+ },
+ "we9ftu": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Franco Colapinto bromea con un hincha español en Singapur",
+  "razon": "Ambas fotos muestran a un menor de edad reconocible interactuando con Colapinto, por lo que ninguna cumple con la política del medio.",
+  "cuando": "2026-10-08T17:37:53.930Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }

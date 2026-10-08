@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T17:08:47.330Z",
- "portada": 41,
- "archivo": 1086,
- "esperandoCuerpo": 8,
+ "generado": "2026-10-08T17:41:09.856Z",
+ "portada": 44,
+ "archivo": 1090,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-08T17:08:47.385Z",
+  "generado": "2026-10-08T17:41:09.910Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,12 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 55,
     "notas": [
      {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
-      "seccion": "Balcarce"
+      "id": "jul321",
+      "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "f6j0rt",
+      "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
+      "seccion": "Automovilismo"
      },
      {
       "id": "5e10lb",
@@ -139,14 +144,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "id": "jul3dm",
+      "titulo": "El Diario cumple 31 años como medio gráfico local",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "vr9xc5",
-      "titulo": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -157,26 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 42,
+    "segundos": 51,
     "notas": [
      {
-      "id": "1dqrc9g",
-      "titulo": "Posterggan la Fiesta Nacional del Postre por el clima",
+      "id": "zzuoo4",
+      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "vr9xc5",
+      "titulo": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "seccion": "Balcarce"
      },
      {
       "id": "7gf331",
       "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce"
      }
     ]
@@ -202,15 +202,21 @@
    ],
    "cola": [
     {
-     "id": "zzuoo4",
-     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "id": "jul321",
+     "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "jul3dm",
+     "titulo": "El Diario cumple 31 años como medio gráfico local",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "1dqrc9g",
-     "titulo": "Posterggan la Fiesta Nacional del Postre por el clima",
-     "seccion": "Cultura y agenda",
+     "id": "zzuoo4",
+     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
