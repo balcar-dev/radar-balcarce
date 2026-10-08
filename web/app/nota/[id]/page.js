@@ -13,6 +13,7 @@ import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { recortarEn } from '@/lib/texto';
+import { noSeOfreceAGoogle } from '@/lib/cuerpo';
 import { fechaDeModificacion } from '@/lib/tiempo';
 import { seguirLeyendo } from '@/lib/seguir-leyendo';
 import { parrafosConEnlaces } from '@/lib/enlaces-en-texto';
@@ -52,6 +53,8 @@ export function generateMetadata({ params }) {
     title: { absolute: recortarEn(n.titulo, 60) },
     description: descripcion,
     alternates: { canonical: camino },
+    // Sin cuerpo de verdad, la página existe pero no se ofrece a Google (S-1, 8/10/2026).
+    ...(noSeOfreceAGoogle(n) ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       ...OG_COMUN,
       type: 'article',

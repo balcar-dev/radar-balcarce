@@ -417,3 +417,15 @@ test('Hoy en Balcarce: flechas del teclado, una sola pestaña en el orden de Tab
   assert.match(hoy, /Number\.isFinite\(a\.temp\)/);
   assert.match(hoy, /aria-label="Servicios de hoy"/);
 });
+
+// S-1 / W-5 (8/10/2026): las notas automáticas sin cuerpo (las 296 del 18 al 25/09) no se ofrecen a Google.
+test('una nota automática sin cuerpo lleva noindex, follow; con cuerpo o publicada por una persona, no', async () => {
+  const { noSeOfreceAGoogle } = await import('../web/lib/cuerpo.js');
+  const cuerpo = 'palabra '.repeat(80).trim();
+  assert.equal(noSeOfreceAGoogle({ como: 'automatica', copete: 'La bajada', cuerpo: 'La bajada' }), true);
+  assert.equal(noSeOfreceAGoogle({ copete: 'La bajada', cuerpo: '' }), true, 'las viejas, sin "como"');
+  assert.equal(noSeOfreceAGoogle({ como: 'automatica', copete: 'La bajada', cuerpo }), false);
+  assert.equal(noSeOfreceAGoogle({ como: 'publicada', copete: 'La bajada', cuerpo: 'corto' }), false, 'lo que publica una persona se respeta');
+  const pagina = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/app/nota/[id]/page.js'), 'utf8');
+  assert.match(pagina, /noSeOfreceAGoogle\(n\) \? \{ robots: \{ index: false, follow: true \} \}/);
+});

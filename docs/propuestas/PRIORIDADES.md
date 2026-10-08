@@ -35,6 +35,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 17 | Los 22 robots quedaron fijos en Ubuntu 24.04 (no `ubuntu-latest`), así el cambio del 19/10 no los agarra de sorpresa. **Falta:** probar un robot con Ubuntu 26 a propósito y pasar de a poco | 8/10 | prueba `workflows-fijos` |
 | 30 | "Crear voces" no borra las dos voces de producción sin escribir una confirmación, y el formulario dice cuántos audios gasta cada modo | 8/10 | prueba `workflows-fijos` |
 | 13 y 4 | Las pruebas ya no leen los feriados ni las efemérides vivos: usan copias fijas (`pruebas/datos-fijos/`). Se simularon cuatro escenarios (cambiar el feriado, sacar una efeméride, armar noviembre, vaciar correcciones y retiradas) y ninguno hace fallar una prueba. **Ya se puede tocar el feriado del 12/10 y la efeméride del 11/10 desde el celular** | 8/10 | regla 112 |
+| 16 | Las 296 páginas sin cuerpo llevan `noindex, follow` (verificado con un armado completo). **Falta:** la parte de "una sola fuente sin aporte" (necesita el jefe editor) | 8/10 | regla 113 |
 | 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---
