@@ -46,7 +46,7 @@ bueno.*
 | 13 | Pruebas con datos propios, y separar el control de cada media hora de las pruebas completas | Nada de lo que toque una persona puede congelar la web; además armar noviembre la congela | C-18, C-7, T-1 | 1 día | C |
 | 14 | Un archivo de datos roto no puede vaciar el sitio (con guardia del 20 %) | Ya pasó el 25/09; se pierden 180 días | C-5 | 3 h | C |
 | 15 | Una corrección no se deshace sola; una retirada no vuelve | Puede volver el nombre de una víctima | C-14 | 2 h | C |
-| 16 | **Google:** `noindex` a las 296 páginas sin cuerpo; decidir lo nacional sin relación con Balcarce | Riesgo de que Google castigue todo el sitio | S-1, W-5 | 3 h | D + C |
+| 16 | **Google:** `noindex` a las 296 páginas sin cuerpo y a lo derivado de **una sola** fuente sin aporte; lo de varias fuentes con dato propio se deja. **Decidido:** no hace falta que lo nacional tenga ángulo de Balcarce | Riesgo de que Google castigue todo el sitio | S-1, W-5 | 3 h | C |
 | 17 | Probar los robots con Ubuntu 26 y las acciones nuevas | Cambia el **19/10** | C-4 | 2 h | C |
 | 18 | Parche de seguridad de Next 15 | Sin parches desde el **21/10** | C-3 | 1 h | C |
 | 19 | Efemérides: corrida del día 20 con aviso; decidir las piezas fijas antes del 25/10 | El **1/11** se acaban | C-17 | 1-2 h | D + C |
@@ -70,14 +70,16 @@ bueno.*
 | 32 | **Videos animados y unificados** para todas las piezas, con subtítulos. **Aprobado**; se repasan juntos la semana que viene | Ideas | 3-5 días | D + C |
 | 32b | **El plan de redes completo** (videos, dónde sale cada pieza, memoria, aviso de IA, TikTok) está junto en Ideas, sección 7 | Ideas | — | — |
 | 33 | **Reels:** clima y farmacia como reel en Facebook (en Instagram, historia); lo demás con voz, reel en las dos; medir 4 semanas | Ideas | 1 día + medir | C |
-| 33b | **Jefe editor** para las notas con 3+ fuentes (Haiku para todas, Sonnet para las 5 más importantes) más **fichas de contexto** verificadas; primero se prueba con 30 notas reales | Ideas 4c, MEJORAS "Modelos de IA" | 2-3 días + prueba | D + C |
-| 33c | **Segunda opinión de fotos con otro modelo** (si cualquiera ve marca o menor, sale placa) | MEJORAS "Modelos de IA" | 1 día | C |
-| 33d | **Notas viejas sin cuerpo:** `noindex` a las 296 y reescribir solo las de Balcarce y las de redes (un lote con Haiku, menos de US$ 1) | MEJORAS "Notas viejas" | 3 h + 1 día | D + C |
-| 33e | **Cuenta de Anthropic** con crédito y tope mensual, clave como secreto de GitHub | MEJORAS "Modelos de IA" | 20 min | P |
+| 33b | **Jefe editor** para las notas con 3+ fuentes (sin Política ni Policiales), con **fichas de contexto** verificadas; arranca con Gemini y se prueba con 30 notas reales. Haiku o Sonnet, cuando haya cuenta | Ideas 4c, MEJORAS "Modelos de IA" | 2-3 días + prueba | D + C |
+| 33c | **Segunda opinión de fotos** con otro modelo (hoy, Gemini más lectura de texto y detección de caras; Haiku, cuando haya cuenta). Si cualquiera ve marca o menor, sale placa | MEJORAS "Modelos de IA" | 1 día | C |
+| 33d | **Notas viejas sin cuerpo (decidido 8/10):** `noindex` a las 296 y reescribir solo las de Balcarce y las de redes en un lote | MEJORAS "Notas viejas" | 3 h + 1 día | C |
+| 33e | *(Más adelante)* **Cuenta de Anthropic** con crédito y tope mensual; hoy no hay | MEJORAS "Modelos de IA" | 20 min | P |
+| 33f | **Revisar si las reglas y el verificador son coherentes** y cómo se aplican a una nota hecha de varias fuentes; duplicados (**auditoría en curso**) | Auditoría | 1-2 días | C |
+| 33g | **Línea editorial** escrita en el criterio (centro y centro-derecha, tono neutral): hay un borrador en Ideas 4c | Ideas 4c | 1 h | D + C |
 | 34 | La fecha que va a Google: la de cuando sale en la web, no la de la fuente | S-2 | 3 h | C |
 | 35 | "Balcarce" en las notas locales (bajada, descripción y título, solo con datos que están en la fuente) | S-3, auditoría 3 | 3 h | C |
 | 36 | La foto real para Google en tres proporciones | S-4 | 4 h | C |
-| 37 | Confianza: nombres completos y roles, página "Cómo trabajamos y cómo usamos la IA", correcciones visibles con fecha | S-5, V2-12 | 3 h + decisión | D + C |
+| 37 | Confianza: **"Quiénes somos" con los nombres de los creadores (en una o dos semanas)**, página "Cómo trabajamos y cómo usamos la IA", correcciones visibles con fecha | S-5, V2-12 | 3 h + decisión | D + C |
 | 38 | Firma honesta de lo que escribió Claude | W-4 | 1 h | D + C |
 | 39 | Destrabar el feed en `robots.txt` | V2-13 | 5 min | C |
 | 40 | Títulos de la pestaña enteros (sin "…") | SEO | 30 min | C |

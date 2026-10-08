@@ -209,40 +209,59 @@ Balcarce**. Sumar y rehacer notas todo el tiempo, **con prioridad a lo de Balcar
 ### "Jefe editor": una sola nota a partir de todas las fuentes (idea de Hernán y Andrés, 8/10)
 
 **La idea:** cuando un hecho lo cuentan **3 o más medios** (casi siempre lo nacional: el último partido de Messi),
-que un "jefe editor" mire todas las fuentes y arme **una nota única**, pensando qué la hace distinta (por ejemplo,
-un dato de contexto). Hoy entran unas 25 notas por día así.
+que un "jefe editor" mire todas las fuentes y arme **una nota única**, con un criterio marcado, y que pueda sumar
+un dato que no está en esas notas. Hoy entran unas 25 notas por día así.
 
-**Sí se puede.** Es una pasada de redacción con una instrucción distinta:
-1. **El código** junta las fuentes y las ordena (ya lo hace el cruce).
-2. **El jefe editor** (un modelo) lee todas, separa lo que **todos** confirman de lo que dice **uno solo**, decide el
-   ángulo para Balcarce y qué dato de contexto sumar, y escribe la nota.
-3. **El verificador** (código, como hoy) controla nombres, números, fechas y citas contra las fuentes.
-4. **Política y Policiales** siguen esperando a una persona.
+**Sí se puede hacer.** Es una pasada de redacción con otra instrucción:
+1. **El código** junta y ordena las fuentes (el cruce ya lo hace).
+2. **El jefe editor** (un modelo) las lee todas, separa lo que **todos** confirman de lo que dice **uno solo**, elige
+   el ángulo y, si hay uno, un dato de contexto, y escribe la nota.
+3. **El verificador** (código, como hoy) controla nombres, números, fechas y citas.
+4. **No hace falta** que cada nota tenga un ángulo de Balcarce (decidido el 8/10).
 
-**Qué modelo:** Haiku 5.5 para todas (~US$ 1 por mes) y Sonnet 5.5 para las 5 más importantes del día (~US$ 5 por
-mes en total). Cuentas en `MEJORAS.md`, "Modelos de IA".
+**Decidido el 8/10:**
+- **Política y Policiales: sin filtros nuevos por ahora.** Siguen como hoy y el jefe editor no los toca. Si más
+  adelante se quieren rehacer, se rehacen aparte. La regla de menores y víctimas no se toca sin hablarlo antes.
+- **El filtro general:** notas con varias fuentes y que no salgan duplicadas.
+- **Hoy no hay API de Anthropic.** Se arranca con un modelo de Gemini más fuerte dentro del cupo gratis (son pocas
+  notas por día). Haiku o Sonnet quedan para cuando haya cuenta (costos en `MEJORAS.md`).
+- **"Quiénes somos" no es la línea editorial:** solo nombra a los creadores. Eso se hace en una o dos semanas. La
+  línea editorial va en el criterio, que es lo que lee la IA.
 
-**El dato único (la estadística de Messi): sí, pero con fuente.** El verificador no deja pasar un número que no esté
-en las fuentes, y un modelo no puede sacarlo de memoria. La forma de hacerlo:
-- **Fichas de contexto:** un archivo con datos verificados de las figuras que más aparecen (Messi, Colapinto,
-  Milei, Caputo, los clubes), armado por código desde una fuente con su enlace (Wikidata, ESPN, Jolpica), con la
-  fecha de actualización.
-- El jefe editor elige **uno** de esa lista y lo cita ("según ESPN"). Si no hay ficha, no inventa: la nota sale sin
-  dato extra.
+**Datos de afuera de las notas: sí, pero con fuente.** El verificador no deja pasar un número que no esté en las
+fuentes, y un modelo no puede sacarlo de memoria. La forma de hacerlo:
+- **Fichas de contexto:** un archivo con datos verificados de las figuras que más aparecen (Messi, Colapinto, Milei,
+  Caputo, los clubes), armado por código desde una fuente con su enlace (Wikidata, ESPN, Jolpica) y con la fecha de
+  actualización.
+- El jefe editor elige **uno** y lo cita ("según ESPN"). Si no hay ficha, la nota sale sin dato extra.
 - Ya funciona así con las notas de F1 y de fútbol: el dato lo trae el código, no el modelo.
 
-**Lo que no hace una sola nota única:** juntar cinco notas ajenas sigue siendo una nota derivada. Lo que la vuelve
-propia para Google (S-1) es lo que **suma**: el dato de contexto verificado y el "qué significa para Balcarce".
+**¿Lo detecta Google?** Google no mira cómo se hizo la nota. Lo que sí mide:
+- **Si es parecida a otras páginas** (originalidad) y **si aporta algo** (utilidad). Su política es contra el contenido
+  hecho **a escala y sin aporte**, sea de una persona o de una IA (así figura en la auditoría de SEO).
+- Una nota que **junta varias fuentes, suma un dato verificado y está bien armada** se parece a lo que hace cualquier
+  redacción con las agencias: no es lo que Google castiga. Una reescritura de **una sola** fuente sin nada nuevo, sí.
+- **Cómo se confirma:** en Search Console, mirando cuántas de esas notas Google indexa y cuántas aparecen en las
+  búsquedas. No hay una prueba mejor que esa.
 
-**Sobre el criterio de centro-derecha, una advertencia.** `CRITERIO-EDITORIAL.md` dice hoy "claro, directo y
-**neutral**: sin sensacionalismo y sin opinión". Un editor "de centro-derecha" choca con esa línea si se
-entiende como un tono. Lo que sí se puede declarar, sin chocar:
-- **Qué cubrir y qué ángulo elegir:** por ejemplo, más peso a la economía, la gestión, la seguridad, lo productivo.
-- **Qué contexto o dato sumar:** elegido por ese criterio, con fuente.
-- **El mismo trato** para todos los bloques y personas; las posturas enfrentadas, cada una con su argumento.
-- **Lo que no cambia:** tono neutral, sin adjetivos de opinión, atribución de lo que dice cada uno y verificación.
-Si quieren una línea más marcada, hay que **escribirla en el criterio** (y en "Quiénes somos") para que la lean la
-IA y los lectores, y decidir cómo convive con "independiente y sin partidos", que el sitio dice hoy.
+**Dos cuidados:**
+- Juntar cinco notas ajenas sigue siendo una nota derivada: lo que la vuelve propia es lo que **suma**.
+- Para el verificador, la síntesis necesita reglas propias (cuántas fuentes respaldan cada afirmación, cómo se trata
+  lo que dice una sola, cómo entra el dato de la ficha). Hay una auditoría en curso (ver `PRIORIDADES.md`, 33f).
+
+**Línea editorial: borrador para `CRITERIO-EDITORIAL.md` (no está aplicado; se pega cuando se arranque).**
+*Hernán y Andrés: confirmen o corrijan los puntos marcados.*
+
+> **Línea editorial.** Radar Balcarce se ubica en el **centro y el centro-derecha**. Esa línea se nota en **qué se
+> elige y qué contexto se suma**, nunca en el tono ni en cómo se cuenta un hecho.
+> 1. Cuando una historia tiene varios ángulos, se elige el que más le sirve a un lector que valora **[a confirmar:
+>    el orden y la seguridad, la economía y la producción, el uso del dinero público, la iniciativa privada]**.
+> 2. Se prefieren los **hechos y los datos comprobables** a las declaraciones. Un dato de contexto solo entra si
+>    tiene fuente.
+> 3. El tono es **neutral**: sin adjetivos de opinión, sin editorializar, sin descalificar a personas ni a partidos.
+> 4. **Mismo trato para todos:** cada postura va con su argumento, atribuido a quien lo dijo. Nunca se omite un hecho
+>    relevante porque incomode a un lado u otro.
+> 5. Lo que dice una fuente no se cambia ni se exagera.
 
 ## 5. Secciones: de 11 a 15, con barra lateral (H1)
 

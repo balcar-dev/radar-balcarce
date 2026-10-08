@@ -792,9 +792,12 @@ las páginas de Google desde este entorno: los requisitos de Google salen de bú
 
 **S-1 · Riesgo de "contenido a escala"** — *Confirmado · CRÍTICO* (amplía V2-11 y W-5)
 1. `noindex` ya mismo para las 296 páginas sin cuerpo (W-5).
-2. **Decisión de ustedes:** lo nacional que no tiene relación con Balcarce, ¿se le sigue ofreciendo a Google?
-   Propuesta: que se siga viendo en el sitio y en redes, pero con `noindex, follow` y fuera del sitemap. Contra
-   Clarín no se posiciona igual, y resta.
+2. **Lo nacional (decidido el 8/10): no hace falta que todo tenga un ángulo de Balcarce.** El filtro es otro:
+   - **Se ofrece a Google** lo que tiene **varias fuentes** y una nota **única** (síntesis más un dato verificado
+     que no está en las fuentes; ver "Jefe editor" en `IDEAS-NUEVAS.md`).
+   - **No se ofrece** (`noindex, follow`, fuera del sitemap) lo que es una reescritura de **un solo** medio sin nada
+     propio, y lo duplicado.
+   - Se mide en Search Console y se ajusta.
 3. En lo local de un solo medio, sumar aporte propio: contexto, enlaces a notas anteriores, datos de servicio,
    una consulta propia.
 4. Una regla en el criterio contra los títulos sensacionalistas: hoy hay en el sitemap de noticias títulos como
@@ -859,6 +862,31 @@ comprobar. **Hay que mirarlo en Search Console**, porque define cuán urgente es
 **Las personas:** mirar en Search Console, una vez por semana, qué páginas se indexaron y cuáles no, y las
 búsquedas con "balcarce".
 
+### Dónde vive cada cosa (mapa del 8/10, de `docs/08-INFRAESTRUCTURA.md` y del repositorio)
+
+| Qué | Dónde vive hoy |
+|---|---|
+| **El código** (motor, redes, reels, panel, web) | **GitHub** (repositorio público) |
+| **Las notas y sus datos** (archivo, banco de fotos, correcciones, decisiones, libro de redes, estadísticas) | **GitHub**, en `web/data/` (se guardan cada media hora) |
+| **Las fotos** (578, unos 45 MB) y el banco de fotos | **GitHub** (`web/public/fotos-notas`); al lector se las sirve **Cloudflare** |
+| **La web que ve el lector** (las páginas armadas) | **Cloudflare Pages**: un robot de GitHub la arma y la sube |
+| **Los robots** (cada 30 min, redes, vigilancia) | **GitHub Actions**; los dispara **cron-job.org**, un servicio de afuera |
+| **El panel del celular** | Sus archivos están en el mismo sitio (**Cloudflare**, en `/panel`). No tiene servidor: guarda las decisiones en **GitHub**, con la llave de quien lo usa |
+| **El panel de la PC** | Solo en la PC (hoy sin uso) |
+| **Las fuentes** (~90 medios) | Los sitios de cada medio. Solo la **lista** está en GitHub (`ingesta/fuentes.mjs`, `FUENTES.md`) |
+| **Las claves** | **GitHub Secrets** (nunca en el código ni en un chat) |
+| **Los reels, historias y posteos publicados** | **Meta** (Facebook e Instagram). El video armado queda 3 días como adjunto de GitHub y después se borra |
+| **Las voces** | **Google** (proyecto de la clave de redes) |
+| **Las visitas** | **Cloudflare Web Analytics**; los números agregados se guardan en GitHub (`estadisticas.json`) |
+| **El dominio** | Registrado en **DonWeb**; el DNS está en Cloudflare. Vence el 21/09/2027 |
+| **Qué ve Google** | **Search Console** |
+| **Respaldo** | **No existe todavía** (propuesta: cuatro lugares) |
+
+**Lo que sí depende de GitHub:** el código, todos los datos, las fotos y los robots. **Cloudflare** solo guarda la
+última versión armada del sitio, y por eso, si GitHub falla, la web sigue pero queda congelada.
+**Fotos: ya está anotado** pasarlas a Cloudflare y a un formato más liviano: C1 (miniaturas de 400 px), C2 (vista
+previa de WhatsApp en JPG), C3 (WebP y tres tamaños) y R2-fotos (llevarlas al depósito de Cloudflare).
+
 ### Modelos de IA: cuál para qué y cuánto cuesta (análisis del 8/10)
 
 **Precios por millón de tokens** (entrada / salida; tabla de Anthropic del 6/10, a confirmar al contratar):
@@ -898,6 +926,12 @@ unas 25 por día** (Economía, Fútbol, Política y Argentina concentran la mayo
 6. **Mandar solo lo necesario:** el texto relevante de cada fuente, con tope de palabras.
 7. **Medir antes y después** (D1-1): sin ese contador, estos números son estimaciones.
 
+**Estado (8/10): todavía no hay cuenta ni API de Anthropic.** Todo lo de arriba queda **para tener en cuenta**.
+Mientras tanto se sigue con Gemini y Groq, y el código nuevo se escribe de modo que cambiar de proveedor sea
+cambiar una configuración, no reescribir. Para el jefe editor y la segunda opinión de fotos se puede usar
+un modelo de Gemini más fuerte dentro del cupo gratis (son pocas notas por día; el cupo y la calidad se confirman
+con la prueba de 30 notas).
+
 **Lo que hace falta para usarlos (solo código `fetch`, sin dependencias):**
 - una cuenta en Anthropic con crédito y **un tope mensual de gasto** (por ejemplo, US$ 10);
 - la clave, pegada por una persona como secreto de GitHub (nunca en un chat);
@@ -908,7 +942,7 @@ unas 25 por día** (Economía, Fútbol, Política y Argentina concentran la mayo
   términos comerciales de Anthropic, la API no usa lo que se le manda para entrenar (a confirmar al contratar).
   Eso favorece mandarle lo delicado.
 
-### Las 296 notas viejas sin cuerpo: ¿reescribirlas? (análisis del 8/10)
+### Las 296 notas viejas sin cuerpo: ¿reescribirlas? (**decidido el 8/10: se adopta la recomendación**)
 
 - **El costo no es el problema:** con Haiku en lote saldría menos de US$ 1; con Sonnet, unos US$ 8.
 - **Lo que sí complica:**
@@ -1575,6 +1609,7 @@ robot → todos los robots → repositorio privado. 3 a 6 semanas en total, sin 
 
 ## Decisiones que necesitan a Hernán y Andrés
 
+0. **Decidido el 8/10 sobre las notas:** se adopta la recomendación de las notas viejas (`noindex` a las 296 y reescribir solo las de Balcarce y de redes); no hace falta que lo nacional tenga ángulo de Balcarce; el filtro general es varias fuentes y sin duplicados; Política y Policiales, sin filtros nuevos por ahora; hoy no hay API de Anthropic.
 0. **C-0:** frenar ya la corrección automática de la auditoría y arreglar las dos notas rotas.
 0. **Decidido el 8/10:**
    - Las efemérides salen salvo que Hernán diga que no, y el mes siguiente se arma el día 20.
