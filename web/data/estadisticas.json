@@ -1147,6 +1147,53 @@
         "vistas": 8,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-08T00:00:20.138Z",
+      "web": {
+        "u12": {
+          "visitas": 50,
+          "vistas": 60
+        },
+        "a12": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "u24": {
+          "visitas": 60,
+          "vistas": 90
+        },
+        "a24": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "top": [
+          {
+            "camino": "/nota/el-concejo-deliberante-distingue-a-la-fiscalia-descentralizada-1opc9eu",
+            "vistas": 12
+          },
+          {
+            "camino": "/nota/el-colegio-normal-recibe-una-jornada-de-prevencion-sobre-apuestas-2i73nb",
+            "vistas": 8
+          },
+          {
+            "camino": "/",
+            "vistas": 7
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 7,
+        "vistas": 876,
+        "interacciones": 11
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 101,
+        "alcance": 14,
+        "vistas": 50,
+        "interacciones": 7
+      }
     }
   ],
   "dias": {
@@ -1644,14 +1691,7 @@
         "facebook.com": 26,
         "directo": 5
       },
-      "paises": {
-        "US": 39,
-        "AR": 31,
-        "SE": 5,
-        "IE": 2,
-        "TW": 2,
-        "CN": 1
-      },
+      "paises": {},
       "dispositivos": {
         "desktop": 60,
         "mobile": 20
@@ -1679,7 +1719,7 @@
         "/seccion/tecnologia": 3,
         "/seccion/automovilismo": 2
       },
-      "visitas": 30,
+      "visitas": 31,
       "vistas": 80,
       "horas": [
         0,
@@ -1736,9 +1776,11 @@
         0
       ],
       "paises": {
-        "US": 40,
-        "IE": 20,
-        "CN": 20
+        "CN": 42,
+        "US": 42,
+        "IE": 11,
+        "AR": 2,
+        "SE": 2
       },
       "referentes": {
         "directo": 45,
@@ -1805,14 +1847,31 @@
       }
     },
     "2026-10-07": {
-      "referentes": {},
+      "referentes": {
+        "facebook.com": 40,
+        "directo": 1
+      },
       "notas": {
-        "1jfpdis": 2
+        "1opc9eu": 12,
+        "2i73nb": 8,
+        "76r67w": 6,
+        "y4gp3v": 6,
+        "1wp29m7": 4,
+        "1jfpdis": 2,
+        "kr8nxa": 2,
+        "vm4nnt": 2,
+        "rilva6": 2,
+        "45acbd": 2,
+        "1outpc2": 2,
+        "15zgvx1": 2
       },
       "paginas": {
-        "/": 6
+        "/": 7
       },
-      "dispositivos": {},
+      "dispositivos": {
+        "mobile": 33,
+        "desktop": 24
+      },
       "horas": [
         0,
         0,
@@ -1823,27 +1882,30 @@
         8,
         0,
         0,
+        6,
+        6,
         0,
         0,
+        6,
+        6,
+        12,
+        10,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        2,
+        1,
         0,
         0,
         0,
         0
       ],
       "paises": {
-        "AR": 8
+        "US": 30,
+        "AR": 15,
+        "IE": 6,
+        "SE": 6
       },
-      "visitas": 0,
-      "vistas": 8
+      "visitas": 41,
+      "vistas": 57
     }
   }
 }
