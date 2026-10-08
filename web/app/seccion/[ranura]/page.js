@@ -1,5 +1,5 @@
 import {
-  porRanura, nombreCorto, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
+  porRanura, nombreCorto, frasesDeSeccion, SECCIONES, notasDeLaSeccion, paramsNoVacios } from '@/lib/datos';
 import { Cierre, Invitacion } from '@/components/piezas';
 import { Postales, FilaConMiniatura } from '@/components/postales';
 import { notFound } from 'next/navigation';
@@ -36,7 +36,7 @@ export function generateMetadata({ params }) {
   const delDia = notasDeLaSeccion(s.nombre);
   const ultimas = delDia.slice(0, 2).map((n) => n.titulo).join(' · ');
   const descripcion = recortarEn(
-    `${nombreCorto(s.nombre)} en Balcarce${pagina > 1 ? ` (página ${pagina})` : ''}: ${ultimas || 'las últimas noticias'}.`,
+    `${frasesDeSeccion(s.nombre).lema}${pagina > 1 ? ` (página ${pagina})` : ''}: ${ultimas || 'las últimas noticias'}.`,
     155,
   );
   const camino = direccionDePagina(s.ranura, pagina);

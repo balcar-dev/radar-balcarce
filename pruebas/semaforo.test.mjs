@@ -250,3 +250,15 @@ test('generar-datos no publica una nota roja cuyo texto final sigue tocando la l
   assert.equal(semaforoDelTexto('Condenan a un hombre por abuso sexual\nLa fiscalía pidió pena')?.color, 'rojo');
   assert.notEqual(semaforoDelTexto('Condenan a un hombre por un delito contra la integridad\nLa fiscalía pidió pena')?.color, 'rojo');
 });
+
+// T-2 y M-7 (8/10/2026): nadie toca la lista roja sin querer. Si esta prueba falla es porque cambió `REGLAS_SEMAFORO.rojo` o `.nunca`: esas listas
+// cuidan a menores y víctimas (leyes 26.061 y 26.485) y NO se tocan sin que Hernán y Andrés lo decidan. Si fue a propósito y lo autorizaron,
+// se actualiza la huella de abajo (el mensaje de la falla dice cuál es la nueva) y se anota en docs/10-REGLAS-Y-PRUEBAS.md.
+test('la lista roja y la de "nunca" tienen la huella autorizada', async () => {
+  const { createHash } = await import('node:crypto');
+  const huella = (lista) => createHash('sha256').update(JSON.stringify([...lista].map((t) => String(t).normalize('NFC')).sort())).digest('hex').slice(0, 16);
+  const HUELLA_ROJO = 'f9048b9fd041463c';
+  const HUELLA_NUNCA = 'cb9b4c8954b56062';
+  assert.equal(huella(REGLAS_SEMAFORO.rojo), HUELLA_ROJO, `la lista roja cambió: la huella nueva es ${huella(REGLAS_SEMAFORO.rojo)} (${REGLAS_SEMAFORO.rojo.length} términos). No se toca sin preguntar.`);
+  assert.equal(huella(REGLAS_SEMAFORO.nunca), HUELLA_NUNCA, `la lista de "nunca" cambió: la huella nueva es ${huella(REGLAS_SEMAFORO.nunca)} (${REGLAS_SEMAFORO.nunca.length} términos). No se toca sin preguntar.`);
+});

@@ -437,3 +437,16 @@ test('robots.txt deja pasar el feed y bloquea el panel', () => {
   assert.ok(!/disallow:[^\n]*feed\.xml/.test(robots), 'el feed no se bloquea');
   assert.ok(!/^\s*host:/m.test(robots), 'sin la línea Host:');
 });
+
+// SEO (8/10/2026): las secciones no dicen "Balcarce en Balcarce" ni "Argentina en Balcarce".
+test('la frase de cada sección tiene sentido y ninguna repite "Balcarce en Balcarce"', async () => {
+  const fs2 = await import('node:fs');
+  const datos = fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/lib/datos.js'), 'utf8');
+  const bloque = datos.slice(datos.indexOf('export function frasesDeSeccion'), datos.indexOf('// Un nombre corto para la navegación'));
+  assert.ok(!/Balcarce en Balcarce|Argentina en Balcarce/.test(bloque));
+  for (const s of ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina']) {
+    assert.ok(bloque.includes(`${s.includes(' ') ? `'${s}'` : s}: {`), `falta la frase de ${s}`);
+  }
+  assert.match(fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/app/seccion/[ranura]/page.js'), 'utf8'), /frasesDeSeccion\(s\.nombre\)\.lema/);
+  assert.match(fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/app/seccion/[ranura]/opengraph-image.js'), 'utf8'), /frasesDeSeccion\(s\.nombre\)\.enBalcarce/);
+});

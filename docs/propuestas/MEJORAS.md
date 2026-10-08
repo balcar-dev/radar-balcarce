@@ -1272,7 +1272,7 @@ mismo cambio `pruebas/piezas-fijas.test.mjs:67-73`. Nada más sobra en `reels/` 
 - `contacto@radarbalcarce.com` está en la web y en la política de privacidad; `PENDIENTES.md:127` dice que
   falta mandarse un mail de prueba. Lo hace una persona en 10 minutos.
 
-**M-7 · Nada impide tocar la lista roja sin preguntar** — *Confirmado · MEDIA*
+**M-7 · Nada impide tocar la lista roja sin preguntar** — *Confirmado · MEDIA* — **✔ HECHO 8/10 · regla 130**
 - Una prueba que guarde una "huella" de la lista entera obliga a cambiarla a propósito. 30 min.
 
 **Chicos (BAJA):**
@@ -1316,7 +1316,7 @@ del minuto 0 y tienen tope de tiempo.
 - En GitHub el paso de pruebas tarda 26 s; el más lento es `reel-dos-placas` (44 s locales, arma dos
   videos con ffmpeg en cada corrida).
 
-**T-2 · La lista roja no está trabada** — *Confirmado · ALTA* (es M-7)
+**T-2 · La lista roja no está trabada** — *Confirmado · ALTA* (es M-7) — **✔ HECHO 8/10 · regla 130**
 - La prueba recorre la lista tal como está: si alguien borra un término, su prueba desaparece con él. De 34
   términos, solo ~26 están escritos fijos en las pruebas. Una prueba con la lista completa a mano. 30 min.
 

@@ -463,6 +463,27 @@ function ranuraDe(nombre) {
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
+/**
+ * La frase de cada sección para el buscador y las tarjetas (8/10/2026): antes todas decían "<sección> en Balcarce", y salía "Balcarce en Balcarce" y
+ * "Argentina en Balcarce". `lema` va en la descripción de la página; `enBalcarce`, en la tarjeta para compartir.
+ */
+export function frasesDeSeccion(nombre) {
+  const frases = {
+    Balcarce: { lema: 'Noticias de Balcarce', enBalcarce: 'Noticias de Balcarce' },
+    Política: { lema: 'Política local y nacional que importa en Balcarce', enBalcarce: 'Política en Balcarce' },
+    Policiales: { lema: 'Policiales de Balcarce y la zona', enBalcarce: 'Policiales en Balcarce' },
+    Fútbol: { lema: 'Fútbol de Balcarce y de Argentina', enBalcarce: 'Fútbol en Balcarce' },
+    Deportes: { lema: 'Deportes en Balcarce y la región', enBalcarce: 'Deportes en Balcarce' },
+    Automovilismo: { lema: 'Automovilismo: Balcarce, tierra de fierros', enBalcarce: 'Automovilismo en Balcarce' },
+    Agro: { lema: 'El campo y el agro de Balcarce y la región', enBalcarce: 'Agro en Balcarce' },
+    Economía: { lema: 'Economía que se siente en Balcarce', enBalcarce: 'Economía para Balcarce' },
+    'Cultura y agenda': { lema: 'Cultura y agenda de Balcarce', enBalcarce: 'Cultura y agenda de Balcarce' },
+    Tecnología: { lema: 'Tecnología que cambia la vida diaria', enBalcarce: 'Tecnología para Balcarce' },
+    Argentina: { lema: 'Lo que pasa en el país y se lee en Balcarce', enBalcarce: 'Argentina, vista desde Balcarce' },
+  };
+  return frases[nombre] ?? { lema: `${nombre} en Balcarce`, enBalcarce: `${nombre} en Balcarce` };
+}
+
 // Un nombre corto para la navegación y las etiquetas: "Cultura y agenda"
 // no entra en una etiqueta de 8 caracteres.
 export function nombreCorto(nombre) {
