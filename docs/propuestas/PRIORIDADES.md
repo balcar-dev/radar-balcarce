@@ -40,6 +40,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 10 | Una foto que la IA no evaluó (marca y menor) ya no se elige | 8/10 | regla 115 |
 | 7 (parte) | Las pistas del panel rechazan a un menor dicho por su edad ("un nene de 6 años"). **Falta, con su visto bueno:** las edades y los verbos en la lista roja del semáforo de las notas (no se toca sin preguntar) | 8/10 | regla 116 |
 | 23 (parte) | Si la portada tiene más de 2 horas, las redes no arman el clima, los avisos ni la farmacia. **Falta:** la parte de la web (turno de farmacia en el navegador y fecha en el pie) | 8/10 | regla 117 |
+| — | **Tropiezo y arreglo (8/10, 12:30):** al subir el histórico, la corrida de las 12:30 falló en "Guardar si cambió algo" (el `git add` nombraba una carpeta que todavía no existía). Se arregló en 4 minutos, se disparó a mano la actualización y quedó verde; ahora una prueba controla que todo lo que nombra ese `git add` exista. La web quedó con los datos de las 12:04 durante una media hora | 8/10 | `e86e9be` |
 | 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---

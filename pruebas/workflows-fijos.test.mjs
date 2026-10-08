@@ -29,3 +29,15 @@ test('crear-voces protege las voces de producción y coincide con CRITERIO-REDES
   assert.match(codigo, /VOCES_DE_PRODUCCION\.includes\(id\) && !pedido\.endsWith\(CONFIRMA_PRODUCCION\)/);
   assert.match(fs.readFileSync(path.join(raiz, '.github/workflows/crear-voces.yml'), 'utf8'), /borrar-de-produccion/);
 });
+
+// 8/10/2026: "Guardar si cambió algo" falló porque el `git add` nombraba una carpeta que no existía (web/data/historico/) y git corta
+// con "pathspec did not match". Todo lo que nombra ese `git add` tiene que existir en el repositorio.
+test('todos los caminos del git add de "Actualizar la web" existen', () => {
+  const raiz = path.join(import.meta.dirname, '..');
+  const yml = fs.readFileSync(path.join(raiz, '.github', 'workflows', 'actualizar.yml'), 'utf8');
+  const linea = yml.split('\n').find((l) => /^\s*git add web\/data\/portada\.json/.test(l));
+  assert.ok(linea, 'no se encontró el git add principal');
+  const caminos = linea.trim().replace(/^git add\s+/, '').split(/\s+/);
+  assert.ok(caminos.length > 15);
+  for (const c of caminos) assert.ok(fs.existsSync(path.join(raiz, c)), `${c} no existe: el git add falla y la web se congela`);
+});
