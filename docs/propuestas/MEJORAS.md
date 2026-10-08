@@ -29,6 +29,7 @@ no por la dificultad.
 | **C-0** | **La corrección automática de la auditoría está rompiendo notas publicadas** | **Ya, cada media hora** | Dos notas del sitio ya tienen "en en en en…" y "compitiránnnnn…", y crecen en cada corrida | 30 min para frenarlo + 2-3 h el arreglo |
 | C-1 | **La prueba que congela la web el lunes** | **Lunes 12/10** | La web deja de actualizarse sola | 5 minutos |
 | **C-18** | **Dos botones del celular congelan la web** ("Pedir cambios" en el feriado del 12/10, y "Sacar" o "Pedir cambios" en la efeméride del 11/10) | **Ya, hasta el 12/10** | La web deja de actualizarse sola | No tocarlos hasta el 13/10; arreglo 3-4 h |
+| **C-19** | **"Publicar" de un toque en el celular saca un texto de la IA que nadie leyó, y firma "revisada por una persona"** | Ya (25 de las 33 notas que esperan hablan de denuncias, chicos o víctimas) | Una nota delicada sale sin que nadie la lea, con una firma que no es cierta | 2 h + decisión |
 | C-2 | **Un riesgo de seguridad del panel del celular** (el detalle no va en el repositorio público) | Ya (es un riesgo, no una falla) | Grave si se aprovecha | Medio día a 1 día |
 | C-3 | **Next 15 deja de recibir parches** | **21/10** | El sitio queda con fallas de seguridad conocidas sin arreglo | 1 h (parche) + 1-2 días (Next 16) |
 | C-4 | **Las máquinas de GitHub pasan a Ubuntu 26** | **Desde el 19/10** | Algún robot puede fallar el día del cambio | 2 h para probar antes |
@@ -119,6 +120,16 @@ pueden cambiar desde la pestaña Fechas del celular. Se simuló en una copia: co
 - **Arreglo (3-4 h):** que esas pruebas usen datos fijos propios (las funciones ya aceptan datos como
   parámetro). **Regla general:** lo que escriben Hernán y Andrés se valida por su forma, nunca por su
   contenido.
+
+### C-19 · "Publicar" sin leer en el celular — *Confirmado (auditoría del panel, 8/10)*
+
+En "Esperan", el botón "Publicar" hace que la IA escriba la nota y, si el verificador no marca nada, la publica
+sola: nadie lee el texto (`web/public/panel/app.js:1433-1442`). Pasa justo con las notas que esperan porque
+necesitan que alguien las mire: hoy 25 de las 33 dicen "denuncia", "niño", "víctima", "adolescente" o "el menor
+de". Además la nota sale firmada como **revisada por una persona** (`web/components/metadatos.js:81`).
+
+- **Propuesta:** que "Publicar" siempre muestre el texto antes; o, si se deja el atajo, que no exista para lo
+  delicado y que la firma diga la verdad. 2 h. **Decisión de Hernán y Andrés.**
 
 ### C-2 · Un riesgo de seguridad del panel del celular — *Confirmado (riesgo grave)*
 
@@ -1123,6 +1134,70 @@ del minuto 0 y tienen tope de tiempo.
 **Que alguien más revise:** anotar en `docs/11-OPERACION.md` "si no llegó el resumen de WhatsApp de las
 21, mirar Actions" (el vigilante no tiene quién lo vigile). Que el vigilante avise cuando quedan menos de 7
 días de efemérides o de feriados cargados (los feriados llegan hasta el 25/05/2027).
+
+### El panel del celular: auditoría de uso y rediseño (8/10)
+
+*Maqueta de cuatro pantallas en la página privada "Panel nuevo del celular".*
+
+**Los problemas de uso más graves:**
+1. **Los borradores no tienen lugar.** Lo que escribe la IA vive en la memoria del celular. El botón "Ver el
+   borrador" dura de 20 a 60 segundos en un aviso, y en Publicadas ni existe. Un borrador nuevo pisa al anterior y
+   no dice quién lo pidió.
+2. **"Publicar" sin leer** (C-19).
+3. **Nunca confirma que algo salió:** todo termina en "sale en la próxima actualización".
+4. **La foto no se ve en ningún lado:** no se sabe si una nota tiene foto, cuál, ni si sale con placa.
+5. **Textos que contradicen lo que pasa:** "30 días en Retiradas" (son 24 h), "72 horas" (son 48), "nada sale
+   solo" (lo decidido es lo contrario).
+6. **Botones que frenan cosas sin avisar:** "Guardar el día" puede frenar una efeméride; "Pedir cambios" en un
+   feriado hace que no salga (y congela la web, C-18). Ningún "pedir cambios" le llega a nadie.
+7. **En los feriados se aprueba algo distinto de lo que sale:** el panel muestra cinco datos (incluido el del censo)
+   y la locutora dice uno solo.
+8. **"Esperan" es una lista larga** (36 tarjetas) que mezcla "necesita tu OK" con "falta el cuerpo", sin ordenar por
+   Balcarce ni por importancia.
+9. **Hernán y Andrés no ven lo que hace el otro:** los dos pueden aprobar o pedir lo mismo, y gana el último.
+10. **Demasiados toques:** corregir una nota lleva 5 o más; revisar un mes de efemérides, unos 90.
+
+**El rediseño propuesto:**
+- **Abajo, cinco lugares:**
+  - **Hoy:** qué necesita tu toque y cómo viene el día.
+  - **Revisar:** dos solapas, "Necesitan tu OK" y "Falta el cuerpo"; Balcarce primero.
+  - **Borradores:** "Para leer", "En curso" (compartido entre los dos celulares) y "Ya resueltos".
+  - **Publicadas:** con la foto o la placa, la firma, la hora en cada red, y filtros.
+  - **Más:** fotos, fechas, redes, pistas, revisión, números y contactos.
+- **Cada nota muestra su recorrido completo:** de cuántos medios entró, si esperó, el borrador y quién lo pidió,
+  quién la aprobó, la hora en que salió en la web y en cada red, si tiene foto o placa, y la firma.
+- **Pocos verbos y siempre los mismos:** Publicar, Descartar, Retirar, Deshacer, Que no salga.
+- **El panel pide y la nube contesta:** cada corrida deja un **recibo** por decisión ("salió a las 13:00" o "no se
+  aplicó: falta el cuerpo"). Las pruebas nunca leen lo que escriben las personas: así el panel no decide si algo
+  sale ni si las pruebas pasan.
+- **Fechas en calendario, mes por mes:** una fila de meses y un calendario con puntos de colores (sale, para
+  mirar, no sale, feriado). Al tocar un día se ve el texto exacto de la locutora, con tres botones: "Está bien",
+  "Pedir cambio" (avisa por WhatsApp) y "Que no salga".
+
+**Efemérides y feriados de todo el año:**
+- **Feriados: sí, casi ya.** Todos los nacionales tienen su ficha. Falta:
+  - llevar el plazo de 240 a 366 días;
+  - guardar el texto exacto que dice la locutora;
+  - confirmar los feriados de 2027 contra el decreto de ese año;
+  - sacar el dato del censo del 12/10 (después del 13/10, con las pruebas ya arregladas).
+- **Candidatas del año: sí, sin gastar IA, pero antes hay que:**
+  - arreglar las pruebas (C-7);
+  - corregir el año fijo 2026 en el código, que corre un año los aniversarios de 2027;
+  - pasar a un archivo por mes, porque todo el año en un solo archivo pesaría unos 3 MB;
+  - cuidar que rearmar no borre la propuesta ya revisada.
+- **Las piezas de todo el año: todavía no.** El freno es la verificación con una segunda fuente: hoy la hace Claude
+  con búsquedas, y el cupo de búsqueda lo comparten las Pistas.
+- **Recomendación:** dejar armadas ya las candidatas del año como borrador, y cerrar las piezas mes a mes el día 20,
+  con el aviso de "ya está el mes que viene".
+
+**Trabajo:**
+
+| Parte | Esfuerzo |
+|---|---|
+| Arreglos chicos sin rediseñar (botón del borrador, textos, avisos antes de frenar algo, C-19) | ~1 día |
+| Lo que tiene que entregar la nube (recibos, quién pidió, texto exacto del feriado, foto y firma de cada nota) | 1,5-2 días |
+| El rediseño completo | 8-10 días |
+| Efemérides del año por meses | 3-4 días |
 
 ### Panel, Pistas y comercial (revisión del 8/10)
 

@@ -28,6 +28,7 @@ bueno.*
 | 1 | Frenar la corrección automática y arreglar las dos notas rotas ("en en en…", "compitiránnn…") | Rompe notas publicadas cada media hora | C-0 | 30 min | D + C |
 | 2 | Que la prueba de las retiradas acepte una lista vacía | El **lunes 12/10** se congela la web | C-1 | 5 min | D + C |
 | 3 | Sacar la foto de *El Eco de Tandil* de la nota de Policiales `fd2y4d` | Rompe la regla de fotos, está publicada | C-13 | 5 min | D + C |
+| 3b | "Publicar" de un toque en el celular: que muestre el texto antes (no publicar sin leer lo delicado) y que la firma diga la verdad | Notas delicadas salen sin que nadie las lea | C-19 | 2 h | D + C |
 | 4 | No tocar en el celular el feriado del 12/10 ni la efeméride del 11/10 | Congela la web | C-18 | — | P |
 | 5 | Mirar en Search Console cuántas páginas tiene Google | Define cuán urgente es lo de Google (#16) | SEO | 10 min | P |
 | 6 | Mirar en Cloudflare qué bloquea a los lectores automáticos, y decidir si se deja leer a los buscadores con IA | Una auditoría externa quedó bloqueada; el sitio tiene `llms.txt` para que lo lean | Auditoría 3 | 15 min | P + D |
@@ -97,7 +98,9 @@ bueno.*
 | 59 | El clima de respaldo no inventa "0 % de lluvia" ni la sensación térmica | I-8, W-7 | 1 h | C |
 | 60 | Bing Webmaster e IndexNow (Bing alimenta a ChatGPT) | SEO | 2 h | P + C |
 | 60b | Estadísticas: números por pieza de redes, filtrar robots, Search Console y resumen semanal | MEJORAS, "Estadísticas" | 1-2 días | C |
-| 60c | **Rediseño del panel del celular** (auditoría en curso) | Panel | — | D + C |
+| 60c | **Panel del celular, arreglos chicos:** botón del borrador, textos que se contradicen, avisar antes de frenar algo | Panel | ~1 día | C |
+| 60d | **Panel del celular, rediseño:** Hoy / Revisar / Borradores / Publicadas / Más, recorrido de cada nota, recibos de la nube | Panel | 10-12 días | D + C |
+| 60e | **Efemérides y feriados del año, mes por mes**, con calendario en el panel | Panel | 3-4 días | C |
 | 61 | Personas: una vez por semana mirar Search Console, las fotos manuales y 10 notas verdes contra su fuente | Varios | 45 min por semana | P |
 
 ## P3 · Mejoras medianas
