@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T20:01:44.436Z",
+  "generado": "2026-10-08T20:31:48.034Z",
   "notas": [
     {
       "id": "repaso20261008tarde",
@@ -78,6 +78,7 @@
       "guion": "La Cámara Nacional Electoral aprueba una plataforma digital para proyectos de ley",
       "seccion": "Argentina",
       "medios": [
+        "La Nación",
         "Minuto Uno",
         "Infobae",
         "Ámbito"
@@ -87,7 +88,7 @@
       "fecha": "2026-10-08T18:19:35.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T19:31:35.841Z",
-      "relevancia": 68,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -167,6 +168,8 @@
       "medios": [
         "La Nación",
         "Clarín",
+        "iProfesional",
+        "Noticias Argentinas (NA)",
         "Infobae"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/10/08/rechazaron-el-intento-de-maximo-y-florencia-kirchner-por-evitar-que-sus-bienes-sean-decomisados-en-la-causa-vialidad/",
@@ -174,7 +177,7 @@
       "fecha": "2026-10-08T17:53:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T20:01:23.518Z",
-      "relevancia": 63,
+      "relevancia": 83,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -635,12 +638,13 @@
       "medios": [
         "Infobae",
         "TN (Todo Noticias)",
+        "Perfil",
         "Olé",
         "Crónica",
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Día",
+        "Bolavip Argentina",
         "La Capital (Rosario)"
       ],
       "enlace": "https://www.lacapital.com.ar/ovacion/perdi-el-amor-el-futbol-argentino-la-critica-tagliafico-la-liga-profesional-n10285581.html",
@@ -798,11 +802,12 @@
         "El Cronista",
         "El Destape",
         "Perfil",
-        "C5N",
         "Crónica",
         "Diario Popular",
+        "El Día",
         "Infobae",
         "Página/12",
+        "C5N",
         "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
@@ -1233,7 +1238,7 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
-        "A24",
+        "iProfesional",
         "C5N",
         "Crónica",
         "Radio Mitre",
@@ -1241,7 +1246,8 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "InfoRegión"
+        "InfoRegión",
+        "A24"
       ],
       "enlace": "https://www.ambito.com/economia/la-inflacion-caba-se-acelero-al-18-septiembre-impulsada-educacion-vivienda-y-alimentos-n6331545",
       "teniaImagenLaFuente": true,
@@ -1311,85 +1317,6 @@
       "foto": {
         "archivo": "fotos-notas/e5v4vp.jpg",
         "credito": "Foto: Ámbito"
-      }
-    },
-    {
-      "id": "11yxcy2",
-      "titulo": "Julián Álvarez rompe con su representante tras la fallida salida",
-      "copete": "El delantero argentino finalizó el vínculo con Fernando Hidalgo a raíz de la frustrada transferencia al fútbol español. Su padre encabeza las gestiones provisorias mientras evalúan alternativas.",
-      "cuerpo": "Julián Álvarez finalizó su relación contractual con su representante Fernando Hidalgo tras el frustrado intento de dejar el Atlético de Madrid. El delantero tomó la determinación por sentirse decepcionado con el manejo de su futuro profesional durante el interés del Barcelona.\n\nGustavo Álvarez, padre del deportista, encabeza de manera temporal las negociaciones con distintas agencias postulantes. Entre los primeros nombres candidatos asoma el exjugador Javier Pastore con su empresa The Elegant Game, aunque todavía no existe un reemplazante confirmado.\n\nEl conjunto madrileño dirigido por Diego Simeone visitará al Alavés el sábado 10 de octubre a las 11.15 por la octava fecha de LaLiga.",
-      "guion": "Julián Álvarez rompe con su representante tras la fallida salida",
-      "seccion": "Fútbol",
-      "medios": [
-        "El Destape",
-        "TyC Sports",
-        "Doble Amarilla"
-      ],
-      "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/julian-alvarez-rompio-con-su-representante-tras-la-frustrada-salida-del-atletico-de-madrid_a6ac7cea61eb9026484ac07a2",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T14:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T19:01:21.617Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Julián Álvarez terminó su vínculo con el representante Fernando Hidalgo.",
-        "La decisión se originó por el pase frustrado al fútbol español.",
-        "Gustavo Álvarez encabeza de manera transitoria las negociaciones.",
-        "El equipo madrileño enfrentará al Alavés el sábado."
-      ],
-      "seSabe": [
-        "Julián Álvarez rompió su vínculo con Fernando Hidalgo, según informaron las fuentes.",
-        "Gustavo Álvarez encabeza de manera provisoria las negociaciones por la representación, de acuerdo con los datos difundidos.",
-        "El Atlético de Madrid jugará contra el Alavés el sábado 10 de octubre a las 11.15."
-      ],
-      "noConfirmado": [
-        "Todavía no hay un agente nuevo confirmado para representar al delantero.",
-        "No se cerraron acuerdos con las agencias que presentaron ofertas."
-      ],
-      "textoRedes": "Julián Álvarez finalizó su vínculo con el representante Fernando Hidalgo tras la frustrada salida del Atlético de Madrid y su padre encabeza las gestiones provisorias.",
-      "etiquetas": [
-        "Julián Álvarez",
-        "Atlético de Madrid",
-        "LaLiga",
-        "Fernando Hidalgo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/julian-alvarez-rompio-con-su-representante-tras-la-frustrada-salida-del-atletico-de-madrid_a6ac7cea61eb9026484ac07a2",
-          "fecha": "2026-10-08T17:57:45.000Z",
-          "oficial": false,
-          "aporte": "Informó la ruptura del vínculo contractual entre el delantero y Fernando Hidalgo."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/julian-alvarez-rompio-vinculo-representante-quien-sera-nuevo-manager-2026108155128",
-          "fecha": "2026-10-08T18:51:28.000Z",
-          "oficial": false,
-          "aporte": "Detalló los motivos de la decisión, el rol del padre del jugador y los próximos compromisos del equipo."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/espana/la-liga/la-fuerte-decision-de-julian-alvarez-por-su-futuro-deja-a-su-representante-id764945.html",
-          "fecha": "2026-10-08T18:24:26.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "julian-alvarez-rompe-con-su-representante-tras-la-fallida-salida",
-      "foto": {
-        "archivo": "fotos-notas/11yxcy2.jpg",
-        "credito": "Foto: Gaetano Gallino / Wikimedia Commons (Public domain)"
       }
     },
     {
@@ -1620,15 +1547,14 @@
       "guion": "El Diario cumple 31 años como medio gráfico local",
       "seccion": "Balcarce",
       "medios": [
-        "News Balcarce (FM 91.7)",
-        "El Diario Balcarce"
+        "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30985",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-08T12:44:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 90,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1764,7 +1690,7 @@
       "fecha": "2026-10-08T12:20:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T18:31:25.201Z",
-      "relevancia": 43,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1818,6 +1744,70 @@
       }
     },
     {
+      "id": "1t7xd99",
+      "titulo": "Comienzan las juras de la muestra Nacional Primavera Braford en Chaco",
+      "copete": "La exposición ganadera arrancó en el predio de la Sociedad Rural de la localidad chaqueña de Margarita Belén. Cabañas de distintas provincias se llevaron los primeros premios en la competencia a corral.",
+      "cuerpo": "La tercera edición de la Nacional Primavera Braford puso en marcha sus actividades en el predio de la Sociedad Rural del Chaco, ubicado en la localidad de Margarita Belén, con la organización junto a Expoagro. Durante la primera jornada de clasificaciones de animales a corral, el jurado Gustavo Alcalá evaluó a los ejemplares llegados desde establecimientos de Chaco, Corrientes, Santa Fe, Santiago del Estero, Entre Ríos y Salta.\n\nEn la categoría de hembras, la cabaña Don Cancio se quedó con el galardón principal al Gran Campeón Conjunto, mientras que el establecimiento El Cambio cosechó el premio al Gran Campeón Individual a Corral. Por el lado de los machos, la cabaña El Rocío lideró las principales menciones con los mejores ejemplares de conjuntos y de animales individuales.\n\nLa muestra había iniciado sus actividades preliminares con un remate de hacienda de ocho mil quinientas cabezas y el desarrollo del Congreso de Carnes del NEA, según se informó previamente. Las actividades continuarán durante la mañana con la jura de los animales a bozal para definir a los grandes campeones.",
+      "guion": "Comienzan las juras de la muestra Nacional Primavera Braford en Chaco",
+      "seccion": "Agro",
+      "medios": [
+        "Clarín",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.clarin.com/rural/genetica-braford-empezo-mostrar-brillo-lotes-corral-chaco_0_LNwGtJV74o.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T12:08:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T19:01:21.617Z",
+      "relevancia": 47,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "textoRedes": "Comenzaron las juras de clasificación de la Nacional Primavera Braford en la Sociedad Rural del Chaco. Cabañas de distintas provincias se llevaron los primeros premios en la competencia de animales a corral.",
+      "etiquetas": [
+        "Braford",
+        "Chaco",
+        "Sociedad Rural",
+        "Expoagro"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/genetica-braford-empezo-mostrar-brillo-lotes-corral-chaco_0_LNwGtJV74o.html",
+          "fecha": "2026-10-08T12:08:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló los ganadores de la competencia de animales a corral y el desarrollo de las juras."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/08/la-raza-braford-eligio-a-sus-mejores-ejemplares-en-la-nacional-primavera/",
+          "fecha": "2026-10-08T16:42:14.000Z",
+          "oficial": false,
+          "aporte": "Informó el inicio de las juras de clasificación en la Sociedad Rural del Chaco."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "lb9m27",
+          "titulo": "La muestra Braford en Chaco inicia con un remate de hacienda",
+          "fecha": "2026-10-06T15:10:30.000Z",
+          "ruta": "/nota/la-muestra-braford-en-chaco-inicia-con-un-remate-de-hacienda-lb9m27"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "comienzan-las-juras-de-la-muestra-nacional-primavera-braford-en-chaco",
+      "foto": {
+        "archivo": "fotos-notas/1t7xd99.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "r7ox1t",
       "titulo": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
       "copete": "La Provincia autorizó una suba del 8,8% en las tarifas del Sistema Vial Integrado del Atlántico. Rige desde el viernes 9 de octubre e impacta en las estaciones de AUBASA.",
@@ -1825,7 +1815,6 @@
       "guion": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
       "seccion": "Economía",
       "medios": [
-        "0223 (Mar del Plata)",
         "La Noticia 1",
         "Infobae",
         "Ámbito",
@@ -1845,7 +1834,8 @@
         "Punto Noticias",
         "El Eco de Tandil",
         "Agencia DIB",
-        "A24"
+        "A24",
+        "0223 (Mar del Plata)"
       ],
       "enlace": "https://dib.com.ar/sociedad/suben-los-peajes-las-rutas-la-costa-atlantica-cuanto-costara-viajar-n56330",
       "teniaImagenLaFuente": true,
@@ -3040,60 +3030,6 @@
       }
     },
     {
-      "id": "7r5ucc",
-      "titulo": "Vecinos advierten sobre el robo de flexibles de gas",
-      "copete": "Registran un incremento en la sustracción de conexiones de cobre junto a los medidores domiciliarios en Balcarce. Un jardín de infantes debió suspender las clases tras un episodio similar.",
-      "cuerpo": "Vecinos de Balcarce advierten sobre una modalidad delictiva centrada en la sustracción de flexibles de cobre ubicados junto a los medidores de gas. Un comercio del rubro reportó un incremento en la demanda de reemplazos tras vender tres unidades en una sola jornada y otra el día anterior. La motivación detrás de estos episodios radica en la cotización del cobre para su comercialización como material reciclable, según indicó un trabajador del sector.\n\nEsta situación generó antecedentes recientes en el distrito. El martes, el personal del Jardín de Infantes N° 905 detectó olor a gas al faltar el flexible del medidor, lo que motivó la suspensión preventiva de las actividades escolares durante el turno mañana hasta la llegada de operarios de la empresa Camuzzi para asegurar el inmueble.\n\nLa extracción de estos componentes genera riesgos por la liberación de combustible. Como alternativa, el mercado ofrece conexiones de acero recubiertas con plástico que carecen de valor para la reventa ilegal, valuadas en unos 44.000 pesos frente a los 32.000 pesos de las piezas tradicionales.",
-      "guion": "Vecinos advierten sobre el robo de flexibles de gas",
-      "seccion": "Policiales",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T22:52:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T23:01:35.401Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Sustracción de flexibles de cobre en medidores de gas",
-        "Venta de repuestos aumentó en un comercio local",
-        "Jardín de Infantes N° 905 suspendió clases el martes",
-        "Alternativas de acero para evitar nuevos robos"
-      ],
-      "noConfirmado": [
-        "No hay información oficial sobre la cantidad total de hechos registrados en la ciudad",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Vecinos de Balcarce advierten sobre el robo de flexibles de cobre en medidores de gas. Un comercio local reportó mayores ventas de repuestos y un jardín de infantes debió suspender clases por un faltante.",
-      "etiquetas": [
-        "gas",
-        "robos",
-        "Balcarce",
-        "medidores"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
-          "fecha": "2026-10-07T22:52:46.000Z",
-          "oficial": false,
-          "aporte": "Detalló los robos de flexibles de gas, la venta de repuestos y el caso del jardín de infantes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "vecinos-advierten-sobre-el-robo-de-flexibles-de-gas"
-    },
-    {
       "id": "1qdgf5p",
       "titulo": "La Argentina firma un acuerdo internacional contra la producción excesiva",
       "copete": "El país se sumó a un bloque de quince naciones para cuestionar la sobrecapacidad industrial global y los subsidios estatales. La decisión se adoptó durante una cumbre del G20.",
@@ -3181,6 +3117,7 @@
       "guion": "Fernando Espinoza asume un nuevo mandato en la Federación Argentina de Municipios",
       "seccion": "Política",
       "medios": [
+        "Ecos Diarios (Necochea)",
         "El Destape",
         "Página/12",
         "Diario Popular",
@@ -3197,7 +3134,7 @@
       "fecha": "2026-10-07T20:27:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T22:31:32.752Z",
-      "relevancia": 82,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3290,7 +3227,7 @@
       "fecha": "2026-10-07T20:07:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T01:31:06.008Z",
-      "relevancia": 82,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3364,7 +3301,6 @@
       "guion": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Diario La Vanguardia"
       ],
@@ -3373,7 +3309,7 @@
       "fecha": "2026-10-07T20:06:42.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T04:31:08.770Z",
-      "relevancia": 93,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3874,7 +3810,6 @@
       "guion": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Acción 5 (Balcarce)",
@@ -3889,7 +3824,7 @@
       "fecha": "2026-10-07T14:38:16.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -4013,6 +3948,88 @@
       }
     },
     {
+      "id": "11yxcy2",
+      "titulo": "Julián Álvarez rompe con su representante tras la fallida salida",
+      "copete": "El delantero argentino finalizó el vínculo con Fernando Hidalgo a raíz de la frustrada transferencia al fútbol español. Su padre encabeza las gestiones provisorias mientras evalúan alternativas.",
+      "cuerpo": "Julián Álvarez finalizó su relación contractual con su representante Fernando Hidalgo tras el frustrado intento de dejar el Atlético de Madrid. El delantero tomó la determinación por sentirse decepcionado con el manejo de su futuro profesional durante el interés del Barcelona.\n\nGustavo Álvarez, padre del deportista, encabeza de manera temporal las negociaciones con distintas agencias postulantes. Entre los primeros nombres candidatos asoma el exjugador Javier Pastore con su empresa The Elegant Game, aunque todavía no existe un reemplazante confirmado.\n\nEl conjunto madrileño dirigido por Diego Simeone visitará al Alavés el sábado 10 de octubre a las 11.15 por la octava fecha de LaLiga.",
+      "guion": "Julián Álvarez rompe con su representante tras la fallida salida",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "El Destape",
+        "TyC Sports",
+        "Minuto Uno",
+        "Crónica",
+        "Doble Amarilla"
+      ],
+      "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/julian-alvarez-rompio-con-su-representante-tras-la-frustrada-salida-del-atletico-de-madrid_a6ac7cea61eb9026484ac07a2",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T14:03:37.944Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T19:01:21.617Z",
+      "relevancia": 99,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Julián Álvarez terminó su vínculo con el representante Fernando Hidalgo.",
+        "La decisión se originó por el pase frustrado al fútbol español.",
+        "Gustavo Álvarez encabeza de manera transitoria las negociaciones.",
+        "El equipo madrileño enfrentará al Alavés el sábado."
+      ],
+      "seSabe": [
+        "Julián Álvarez rompió su vínculo con Fernando Hidalgo, según informaron las fuentes.",
+        "Gustavo Álvarez encabeza de manera provisoria las negociaciones por la representación, de acuerdo con los datos difundidos.",
+        "El Atlético de Madrid jugará contra el Alavés el sábado 10 de octubre a las 11.15."
+      ],
+      "noConfirmado": [
+        "Todavía no hay un agente nuevo confirmado para representar al delantero.",
+        "No se cerraron acuerdos con las agencias que presentaron ofertas."
+      ],
+      "textoRedes": "Julián Álvarez finalizó su vínculo con el representante Fernando Hidalgo tras la frustrada salida del Atlético de Madrid y su padre encabeza las gestiones provisorias.",
+      "etiquetas": [
+        "Julián Álvarez",
+        "Atlético de Madrid",
+        "LaLiga",
+        "Fernando Hidalgo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/julian-alvarez-rompio-con-su-representante-tras-la-frustrada-salida-del-atletico-de-madrid_a6ac7cea61eb9026484ac07a2",
+          "fecha": "2026-10-08T17:57:45.000Z",
+          "oficial": false,
+          "aporte": "Informó la ruptura del vínculo contractual entre el delantero y Fernando Hidalgo."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/julian-alvarez-rompio-vinculo-representante-quien-sera-nuevo-manager-2026108155128",
+          "fecha": "2026-10-08T18:51:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló los motivos de la decisión, el rol del padre del jugador y los próximos compromisos del equipo."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/espana/la-liga/la-fuerte-decision-de-julian-alvarez-por-su-futuro-deja-a-su-representante-id764945.html",
+          "fecha": "2026-10-08T18:24:26.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "julian-alvarez-rompe-con-su-representante-tras-la-fallida-salida",
+      "foto": {
+        "archivo": "fotos-notas/11yxcy2.jpg",
+        "credito": "Foto: Gaetano Gallino / Wikimedia Commons (Public domain)"
+      }
+    },
+    {
       "id": "2i73nb",
       "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "copete": "Estudiantes secundarios participan el jueves de charlas sobre los riesgos de las plataformas digitales. La iniciativa provincial llega con la presencia de autoridades de Lotería y Casinos.",
@@ -4020,6 +4037,7 @@
       "guion": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Diario La Vanguardia"
       ],
@@ -4028,7 +4046,7 @@
       "fecha": "2026-10-07T13:37:09.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T15:31:08.051Z",
-      "relevancia": 75,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4190,10 +4208,10 @@
         "Noticias Argentinas (NA)",
         "La Tecla",
         "El Eco de Tandil",
-        "Noticias Agropecuarias",
         "Agencia DIB",
         "Zona Norte Diario",
         "El Día",
+        "Noticias Agropecuarias",
         "Infobae"
       ],
       "enlace": "https://www.latecla.info/170241-la-justicia-ordeno-preservar-los-datos-sobre-las-tierras-rurales-bonaerenses",
@@ -4298,7 +4316,8 @@
       "guion": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45020-nuevo-operativo-de-documentacion-en-balcarce-dni-partidas-y-certificados-sin-turno/",
       "teniaImagenLaFuente": true,
@@ -4366,7 +4385,6 @@
       "guion": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -4377,7 +4395,7 @@
       "fecha": "2026-10-07T13:06:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T13:31:19.995Z",
-      "relevancia": 89,
+      "relevancia": 79,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -4684,17 +4702,17 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "Agroempresario",
         "Todo Agro",
         "Noticias Agropecuarias",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "Agroempresario"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/07/la-harina-de-soja-argentina-consigue-una-prima-de-us6-por-tonelada-ante-la-fuerte-demanda-europea/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T11:14:07.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T21:02:11.967Z",
-      "relevancia": 58,
+      "relevancia": 54,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4792,8 +4810,8 @@
     "ahora": {
       "temp": 10,
       "sensacion": 5,
-      "humedad": 86,
-      "viento": 27,
+      "humedad": 88,
+      "viento": 26,
       "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": true
@@ -5146,16 +5164,16 @@
   },
   "pendientes": [
     {
-      "id": "10v14fs",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
       "id": "afnvn3",
       "titulo": "Sin investigar, el juez de Zárate-Campana sobreseyó a…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "10v14fs",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "mkof0b",
@@ -5188,22 +5206,10 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "veuftg",
-      "titulo": "Milei vuelve a Estados Unidos: nuevo gesto de apoyo a…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "1szcs0u",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "6gphoh",
-      "titulo": "La historia de Nico: su mamá contó cómo atraviesan el…",
-      "seccion": "Balcarce",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "55yszw",
@@ -5230,12 +5236,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "skjezu",
-      "titulo": "Alumnos del Colegio Modelo Lomas usaron IA para “desnudar”…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"imputado\""
-    },
-    {
       "id": "1ylauja",
       "titulo": "Médicos bonaerenses, contra PAMI: denuncian precariedad…",
       "seccion": "Argentina",
@@ -5250,6 +5250,12 @@
     {
       "id": "11x1acq",
       "titulo": "Milei llamó “ladrón” a Lula y volvió a respaldar a Flávio…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "veuftg",
+      "titulo": "Milei vuelve a Estados Unidos: nuevo gesto de apoyo a…",
       "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
     },
@@ -5282,6 +5288,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "6gphoh",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1d96pbn",

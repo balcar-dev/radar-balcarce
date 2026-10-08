@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T20:01:44.436Z",
+ "generado": "2026-10-08T20:31:48.034Z",
  "portada": 56,
- "archivo": 1101,
+ "archivo": 1100,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-08T20:01:44.491Z",
+  "generado": "2026-10-08T20:31:48.083Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 49,
     "notas": [
      {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
-      "seccion": "Balcarce"
+      "id": "11yxcy2",
+      "titulo": "Julián Álvarez rompe con su representante tras la fallida salida",
+      "seccion": "Fútbol"
      },
      {
       "id": "6vefne",
@@ -211,12 +211,6 @@
     }
    ],
    "cola": [
-    {
-     "id": "jul3dm",
-     "titulo": "El Diario cumple 31 años como medio gráfico local",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
     {
      "id": "zzuoo4",
      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",

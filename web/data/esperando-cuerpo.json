@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T20:01:44.436Z",
+ "generado": "2026-10-08T20:31:48.034Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -25,23 +25,6 @@
    "maximo": 3
   },
   {
-   "id": "1dqrc9g",
-   "titulo": "Por cuestiones climáticas se POSTERGÓ Fiesta del Postre",
-   "copete": "Tras una reunión con el grupo de trabajo, se resolvió este jueves postergar la realización de la 22ª Fiesta Nacional del Postre, prevista para este viernes al lunes, próximos en la Sociedad Rural. La razón responde a cuestiones climáticas reinantes y que se avizoran para el fin…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-08T16:59:16.000Z",
-   "fuentes": [
-    {
-     "medio": "Acción 5 (Balcarce)",
-     "enlace": "https://accion5.com/por-cuestiones-climaticas-se-postergo-fiesta-del-postre/",
-     "fecha": "2026-10-08T16:59:16.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
    "id": "2ela87",
    "titulo": "Tini Stoessel debutará en el Lollapalooza Argentina 2027: el emotivo mensaje en sus redes",
    "copete": "La artista pop expresó sus primexeras sensaciones, luego de que el festival musical confirmara el line up para la edición que se llevará a cabo del 12 al 14 de marzo en el Hipódromo de San Isidro. Se conoció el line up del Lollapalooza Argentina 2027: todos los artistas…",
@@ -61,6 +44,23 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "7r5ucc",
+   "titulo": "Preocupación por el robo de flexibles de gas",
+   "copete": "",
+   "seccion": "Policiales",
+   "fecha": "2026-10-07T23:01:35.401Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
    "maximo": 3
   }
  ]
