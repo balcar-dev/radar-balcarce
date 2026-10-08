@@ -113,6 +113,9 @@ export function numerosDe(texto) {
 function estaEnLaFuente(valor, deLaFuente) {
   if (deLaFuente.includes(valor)) return true;
   if (valor < 100) return false;
+  // Un año es exacto (8/10/2026, I-2): "2019" en la fuente y "2024" en la nota pasaba por caer dentro del 6 %. Los números entre 1900 y 2100
+  // se comparan sin margen; el redondeo de las cifras grandes sigue valiendo para el resto.
+  if (Number.isInteger(valor) && valor >= 1900 && valor <= 2100) return false;
   return deLaFuente.some((f) => f >= 100 && Math.abs(f - valor) / f <= 0.06);
 }
 
@@ -208,6 +211,17 @@ const LOCALIA_SIN_RESPALDO = /\b(de nuestra ciudad|de nuestro pueblo|nuestros ve
 // con el corte de palabra al final, "presunt" nunca encontraba "presunto", ni
 // "denunci" "la denuncia", ni "investig" "investigan". Se mira sin tildes.
 const ATRIBUCION = /\b(segun|habria|habrian|presunt\w*|supuest\w*|acusad\w*|acusacion\w*|denunci\w*|imputad\w*|sospech\w*|investig\w*|policia\w*|fiscal\w*|justicia|alegadamente|de acuerdo)\b/;
+
+/**
+ * La primera oración que afirma un delito ("mató", "robó"…) sin atribuirlo en ESA oración ("según la policía", "habría", "acusado de"…), o null.
+ * Una oración que nombra un delito con atribución en la oración de al lado no alcanza: cada una tiene que poder sostenerse sola.
+ */
+export function acusacionSinAtribuir(texto) {
+  for (const oracion of String(texto).split(/(?<=[.!?…])\s+|\n+/)) {
+    if (DELITOS.test(oracion.toLowerCase().normalize('NFC')) && !ATRIBUCION.test(sinTildes(oracion))) return oracion.trim();
+  }
+  return null;
+}
 
 // ----------------------------------------------------------------- las citas
 
@@ -378,10 +392,12 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
     }
   }
 
-  // 6. Una acusación dicha como hecho.
+  // 6. Una acusación dicha como hecho. Se mira oración por oración (8/10/2026, I-3): antes bastaba con que OTRA oración dijera "la policía"
+  // para que "Un hombre mató a su vecino." pasara.
   const n = sinTildes(t);
-  if (DELITOS.test(t.toLowerCase().normalize('NFC')) && !ATRIBUCION.test(n)) {
-    agregar('acusacion', `el ${campo} afirma un delito sin atribuirlo a nadie: "${t.slice(0, 50)}"`);
+  const sinAtribuir = acusacionSinAtribuir(t);
+  if (sinAtribuir) {
+    agregar('acusacion', `el ${campo} afirma un delito sin atribuirlo a nadie: "${sinAtribuir.slice(0, 50)}"`);
   }
 
   // 7. "más" mal escrito no es un detalle de estilo: "mas" sin tilde es

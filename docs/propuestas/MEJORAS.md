@@ -1067,11 +1067,11 @@ en pasado ni incumplimientos de `promesa` en lo publicado; la tabla de números 
 
 ### Motor de noticias (revisión del 8/10)
 
-**I-2 · El verificador acepta un año cambiado** — *Confirmado · ALTA*
+**I-2 · El verificador acepta un año cambiado** — *Confirmado · ALTA* — **✔ HECHO 8/10 · regla 128**
 - Los números de 100 para arriba aceptan un 6 % de diferencia, y los años también: la fuente dice "2019",
   la IA escribe "2024" y pasa (`ingesta/verificar.mjs:113-117`). Comparar exacto años y horas. 1 h.
 
-**I-3 · Un delito dicho como hecho pasa si en otra oración dice "policía"** — *Confirmado · ALTA*
+**I-3 · Un delito dicho como hecho pasa si en otra oración dice "policía"** — *Confirmado · ALTA* — **✔ HECHO 8/10 · regla 128**
 - "Un hombre mató a su vecino." pasa porque otra oración dice "La policía…" (`verificar.mjs:383`).
   Mirarlo oración por oración. 1 h.
 
