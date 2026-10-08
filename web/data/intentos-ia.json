@@ -149,6 +149,11 @@
   "ultimo": "2026-10-04T14:01:33.670Z",
   "motivo": "título o bajada: 3 problemas (nombre, negacion): el titulo nombra a \"cerondolo\" y la fuente no"
  },
+ "144vvk7": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T13:01:51.438Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 213 palabras"
+ },
  "144x64h": {
   "intentos": 1,
   "ultimo": "2026-10-03T00:03:02.318Z",
@@ -266,11 +271,6 @@
  "16fjrrx": {
   "intentos": 2,
   "ultimo": "2026-10-04T08:19:59.314Z",
-  "motivo": "con cuerpo"
- },
- "16kemme": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T13:01:42.857Z",
   "motivo": "con cuerpo"
  },
  "16ml7pn": {
@@ -1077,11 +1077,6 @@
   "ultimo": "2026-10-02T16:31:25.113Z",
   "motivo": "cuerpo: 1 problema (antecedente): el cuerpo usa 10, que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 79 palabras"
  },
- "1neicxo": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T13:01:42.857Z",
-  "motivo": "con cuerpo"
- },
  "1ni344u": {
   "intentos": 1,
   "ultimo": "2026-10-05T12:02:57.568Z",
@@ -1487,8 +1482,8 @@
   "motivo": "con cuerpo"
  },
  "1we1z9n": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T12:31:59.150Z",
+  "intentos": 2,
+  "ultimo": "2026-10-08T13:01:51.438Z",
   "motivo": "con cuerpo"
  },
  "1wjy87t": {
@@ -1825,6 +1820,11 @@
  "6cucid": {
   "intentos": 1,
   "ultimo": "2026-10-02T18:31:26.628Z",
+  "motivo": "con cuerpo"
+ },
+ "6izwi8": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T13:01:51.438Z",
   "motivo": "con cuerpo"
  },
  "6jbdxb": {
@@ -2608,11 +2608,6 @@
   "ultimo": "2026-10-05T15:04:56.390Z",
   "motivo": "con cuerpo"
  },
- "q7qzpl": {
-  "intentos": 3,
-  "ultimo": "2026-10-01T13:01:42.857Z",
-  "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"espana\", que sale de una nota anterior, como si fuera de hoy"
- },
  "qh4l57": {
   "intentos": 3,
   "ultimo": "2026-10-03T00:41:54.550Z",
@@ -2741,8 +2736,8 @@
   "motivo": "con cuerpo"
  },
  "tjmhqp": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T12:31:59.150Z",
+  "intentos": 2,
+  "ultimo": "2026-10-08T13:01:51.438Z",
   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "tlcnz1": {
@@ -2875,6 +2870,11 @@
   "ultimo": "2026-10-07T19:01:42.967Z",
   "motivo": "con cuerpo"
  },
+ "w1sw1n": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T13:01:51.438Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 21 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 96 palabras"
+ },
  "w3769j": {
   "intentos": 4,
   "ultimo": "2026-10-02T21:16:53.506Z",
@@ -3004,6 +3004,13 @@
   "intentos": 2,
   "ultimo": "2026-10-05T22:01:36.128Z",
   "motivo": "con cuerpo"
+ },
+ "z14qq8": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T13:01:51.438Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "z5u242": {
   "intentos": 4,
