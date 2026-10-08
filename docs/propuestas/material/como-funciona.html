@@ -1,0 +1,330 @@
+<title>Cómo funciona Radar Balcarce</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Idea: un diario impreso que sale de una imprenta automática. Tinta azul petróleo, papel frío, verde de radar como único acento. */
+:root{
+  --bg:#F3F6F7; --panel:#FFFFFF; --ink:#102A33; --muted:#51666F; --line:#D3DDE1;
+  --accent:#0E8F63; --accent-ink:#FFFFFF; --soft:#E3F2EC; --warn:#B4540A; --warn-soft:#FBEBDD;
+  --ok:#1E8E5A; --amb:#B7860B; --red:#C0392B; --ok-soft:#E1F3EA; --amb-soft:#F8EFD2; --red-soft:#F8E1DE;
+  --f-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --f-body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B171C; --panel:#12242B; --ink:#E6EFF2; --muted:#9DB2BA; --line:#25404A;
+  --accent:#3CCB93; --accent-ink:#06231A; --soft:#12352B; --warn:#F0A060; --warn-soft:#3A2614;
+  --ok:#3CCB93; --amb:#E6B93C; --red:#F07A6B; --ok-soft:#12352B; --amb-soft:#3A3114; --red-soft:#3D1D1A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B171C; --panel:#12242B; --ink:#E6EFF2; --muted:#9DB2BA; --line:#25404A;
+  --accent:#3CCB93; --accent-ink:#06231A; --soft:#12352B; --warn:#F0A060; --warn-soft:#3A2614;
+  --ok:#3CCB93; --amb:#E6B93C; --red:#F07A6B; --ok-soft:#12352B; --amb-soft:#3A3114; --red-soft:#3D1D1A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:760px;margin-inline:auto}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,6vw,3rem);font-weight:700}
+h2{font-size:clamp(1.5rem,4.5vw,2rem);font-weight:700;margin-top:56px}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:.6em 0}
+.lead{font-size:1.15rem;color:var(--muted)}
+code,.mono{font-family:var(--f-mono);font-size:.85em;background:var(--soft);padding:1px 6px;border-radius:5px;overflow-wrap:anywhere}
+header.top{padding-block:40px 8px}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+nav.index{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);z-index:5;display:flex;gap:8px;overflow-x:auto;margin-inline:-16px;padding-inline:16px}
+nav.index a{white-space:nowrap;font-size:.9rem;color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--panel)}
+nav.index a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid>*{min-width:0}
+.say{background:var(--soft);border-radius:12px;padding:14px 18px;margin-block:16px}
+.warn{background:var(--warn-soft);border-radius:12px;padding:14px 18px;margin-block:16px}
+.say b,.warn b{font-family:var(--f-display)}
+/* analogía */
+.pair{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.pair{grid-template-columns:1fr}}
+.pair .card h3{margin-bottom:4px}
+.tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+/* glosario */
+dl.glos{display:grid;gap:10px;margin:16px 0 0}
+dl.glos .card{padding:12px 16px}
+dl.glos dt{font-family:var(--f-display);font-weight:700}
+dl.glos dd{margin:2px 0 0;color:var(--muted)}
+/* recorrido: es una secuencia real, por eso va numerado */
+ol.flow{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:0}
+ol.flow>li{position:relative;padding-left:56px;padding-bottom:18px}
+ol.flow>li::before{content:attr(data-n);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-family:var(--f-display);font-weight:700;display:grid;place-items:center}
+ol.flow>li::after{content:"";position:absolute;left:19px;top:44px;bottom:0;width:2px;background:var(--line)}
+ol.flow>li:last-child::after{display:none}
+ol.flow details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+ol.flow summary{cursor:pointer;font-family:var(--f-display);font-weight:700;list-style:none}
+ol.flow summary::-webkit-details-marker{display:none}
+ol.flow summary small{display:block;font-family:var(--f-body);font-weight:400;color:var(--muted)}
+ol.flow details>*:not(summary){margin-top:10px}
+.who{display:inline-block;font-family:var(--f-mono);font-size:.72rem;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);margin-right:6px}
+.who.ia{border-color:var(--accent);color:var(--accent)}
+/* ocho pasos */
+ol.ocho{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;counter-reset:p}
+ol.ocho li{counter-increment:p;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px 10px 52px;position:relative}
+ol.ocho li::before{content:counter(p);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:8px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:var(--f-display);font-weight:700}
+ol.ocho li b{font-family:var(--f-display)}
+/* barras de peso */
+.bars{display:grid;gap:10px;margin-top:14px}
+.bar{display:grid;grid-template-columns:minmax(0,150px) 1fr auto;gap:10px;align-items:center;font-size:.95rem}
+.bar .track{height:14px;background:var(--line);border-radius:7px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:7px}
+.bar .n{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);white-space:nowrap}
+@media(max-width:480px){.bar{grid-template-columns:1fr auto}.bar .track{grid-column:1/-1}}
+/* semáforo y capas de decisión */
+.lanes{display:grid;gap:10px;margin-top:14px}
+.lane{border-radius:12px;padding:12px 16px;border-left:8px solid var(--line)}
+.lane.r{background:var(--red-soft);border-left-color:var(--red)}
+.lane.a{background:var(--amb-soft);border-left-color:var(--amb)}
+.lane.v{background:var(--ok-soft);border-left-color:var(--ok)}
+.lane b{font-family:var(--f-display)}
+.lane ul{margin:6px 0 0;padding-left:20px}
+.layer{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:14px 18px;margin-top:12px}
+.layer .tag{margin-bottom:2px}
+.ex{font-size:.92rem;color:var(--muted);margin:2px 0}
+.ex b{color:var(--ink);font-family:var(--f-mono);font-size:.78rem}
+.bar.seg .fill{background:var(--accent)}
+.bar.seg.dup .fill{background:var(--warn)}
+.bar.seg.other .fill{background:var(--muted)}
+/* tabla */
+.tw{overflow-x:auto;margin-top:12px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.95rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-display);font-size:.85rem;color:var(--muted)}
+td.c{font-family:var(--f-mono);white-space:nowrap}
+/* calculadora */
+.calc label{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.calc input{width:20px;height:20px;margin-top:3px;accent-color:var(--accent)}
+.calc .pr{font-family:var(--f-mono);font-size:.85rem;white-space:nowrap}
+.calc small{display:block;color:var(--muted)}
+.meter{margin-top:14px}
+.meter .track{height:18px;background:var(--line);border-radius:9px;overflow:hidden}
+.meter .fill{height:100%;background:var(--accent);width:0;transition:width .25s}
+.meter.over .fill{background:var(--warn)}
+.total{font-family:var(--f-display);font-size:1.4rem;font-weight:700;margin-top:8px}
+@media(prefers-reduced-motion:reduce){.meter .fill{transition:none}}
+footer{margin-top:56px;color:var(--muted);font-size:.9rem}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Radar Balcarce · 8 de octubre de 2026</div>
+  <h1>Cómo se arma la página, sin vueltas</h1>
+  <p class="lead">Para entender qué pasa desde que un medio publica una noticia hasta que alguien la lee en <b>radarbalcarce.com</b>, qué se puede mejorar y cuánto costaría, sin pasar los 20 dólares por mes.</p>
+</header>
+
+<nav class="index" aria-label="Secciones">
+  <a href="#idea">La idea</a><a href="#palabras">Las palabras</a><a href="#recorrido">El recorrido</a><a href="#decide">Cómo elige</a><a href="#ocho">Los 8 pasos</a><a href="#peso">¿Pesa mucho?</a><a href="#tiempo">Los 7 minutos</a><a href="#mejoras">Mejoras</a><a href="#plata">Plata</a>
+</nav>
+
+<h2 id="idea">1. La idea en una imagen</h2>
+<p>Pensalo como un <b>diario impreso que se imprime solo, cada media hora</b>. Nadie lo arma mientras vos lo leés: ya está listo, y solo hay que repartir copias.</p>
+<div class="pair">
+  <div class="card"><div class="tag">El taller · GitHub</div><h3>Donde se fabrica</h3><p>Un empleado automático (un “robot con reloj”) lee las noticias, las junta, las evalúa, las escribe con IA y arma todas las páginas del diario.</p></div>
+  <div class="card"><div class="tag">La vidriera · Cloudflare</div><h3>Donde se entrega</h3><p>Guarda las páginas ya hechas y las reparte rápido a cada lector. No piensa, no escribe: solo entrega copias.</p></div>
+</div>
+<div class="say"><b>Por qué importa:</b> como las páginas ya están hechas cuando alguien entra, el sitio es muy rápido y casi no cuesta. Y como el taller trabaja solo, funciona con la computadora de ustedes apagada.</div>
+
+<h2 id="palabras">2. Las palabras, traducidas</h2>
+<p>Estas son las que van a aparecer cuando hablemos de mejoras. Cada una con una comparación.</p>
+<dl class="glos">
+  <div class="card"><dt>Repositorio (“repo”)</dt><dd>Una carpeta en internet con todo el proyecto y el historial de cada cambio. Es como un Drive que recuerda quién cambió qué y cuándo. Ahora es <b>público</b>: cualquiera puede mirarlo (no las claves, que se guardan aparte).</dd></div>
+  <div class="card"><dt>GitHub</dt><dd>La empresa que aloja ese repositorio. Es el “depósito” del proyecto.</dd></div>
+  <div class="card"><dt>GitHub Actions / workflow</dt><dd>Los empleados automáticos de GitHub. Un <i>workflow</i> es una receta que un robot repite: “cada media hora, hacé esto”. Hoy hay 22 recetas.</dd></div>
+  <div class="card"><dt>Cron</dt><dd>El despertador. Dice “a tal hora, arrancá”. Hoy lo maneja un servicio aparte, <i>cron-job.org</i>, que toca el timbre de GitHub.</dd></div>
+  <div class="card"><dt>Feed (RSS)</dt><dd>La lista de las últimas noticias que un medio ofrece en formato para máquinas. Es la ventanilla por donde se las lee.</dd></div>
+  <div class="card"><dt>JSON</dt><dd>Una planilla en texto. Acá guardan todo en archivos así: las noticias, las decisiones, las correcciones.</dd></div>
+  <div class="card"><dt>IA / Gemini / Groq</dt><dd>Los redactores automáticos. Gemini (de Google) escribe las notas y las voces; Groq es el suplente para leer.</dd></div>
+  <div class="card"><dt>Next.js</dt><dd>La imprenta: toma las planillas (JSON) y las convierte en páginas web.</dd></div>
+  <div class="card"><dt>Compilar (“build”)</dt><dd>El momento en que la imprenta arma las más de mil páginas.</dd></div>
+  <div class="card"><dt>HTML estático</dt><dd>Páginas ya impresas. Lo contrario es una página “dinámica”, que se cocina en el momento de entrar y necesita un servidor trabajando.</dd></div>
+  <div class="card"><dt>Cloudflare Pages</dt><dd>El servicio que guarda las páginas impresas y las reparte por el mundo. Es la vidriera.</dd></div>
+  <div class="card"><dt>Worker</dt><dd>Un empleado mínimo de Cloudflare: un programa chico que responde al instante o se despierta a una hora fija.</dd></div>
+  <div class="card"><dt>Secreto / clave</dt><dd>Una contraseña que usan los robots (Gemini, Meta, etc.). Se guarda en una caja fuerte de GitHub y nunca va escrita en el proyecto.</dd></div>
+</dl>
+
+<h2 id="recorrido">3. El recorrido de una noticia</h2>
+<p>Tocá cada paso para ver qué pasa adentro. Todo esto corre solo, cada 30 minutos.</p>
+<ol class="flow">
+  <li data-n="1"><details open><summary>Se leen las fuentes<small>Unos 90 medios, más de 200 feeds</small></summary>
+    <p><span class="who">robot</span>Cada media hora se visita cada ventanilla (feed) y se baja la lista de notas. Se anota la fecha de cada una y se descartan las que no sirven de entrada (otro país, policiales de afuera, etc.).</p>
+    <p>Si una fuente se cae o viene vacía, no da error: simplemente trae menos. Por eso el sistema deja un aviso amarillo.</p></details></li>
+  <li data-n="2"><details><summary>Se juntan las que cuentan lo mismo<small>El “cruce” de medios</small></summary>
+    <p><span class="who">robot</span>Si cinco medios cuentan el mismo hecho, se arma <b>una sola historia</b> con cinco fuentes. El sistema recuerda lo de las últimas 36 horas para no repetir.</p>
+    <p>Una noticia de afuera solo pasa si la cuentan varios medios (entre 2 y 4 según la sección). Lo de Balcarce pasa con menos.</p></details></li>
+  <li data-n="3"><details><summary>Se clasifica y se puntúa<small>Sección, puntaje y semáforo</small></summary>
+    <p><span class="who">robot</span>Se decide la sección (de las 11), qué tan importante es (<i>puntaje</i>) y el <b>semáforo</b>: <b>verde</b> sale sola, <b>amarillo</b> espera a una persona, <b>rojo</b> no sale (por ejemplo, riesgo de identificar a un menor o a una víctima).</p>
+    <p>Lo local pesa más: las fuentes de Balcarce suman 24 a 30 puntos y las nacionales 8.</p></details></li>
+  <li data-n="4"><details><summary>Una IA la lee y opina<small>Lectura con IA</small></summary>
+    <p><span class="who ia">IA</span>Lee cada nota nueva y decide: ¿es de acá?, ¿es la sección correcta?, ¿hay que sacarla? Solo puede <b>frenar o corregir</b>; nunca destraba algo que el semáforo bloqueó.</p></details></li>
+  <li data-n="5"><details><summary>Otra IA escribe la nota<small>Redacción</small></summary>
+    <p><span class="who ia">IA</span>Con el texto completo de la fuente y el criterio editorial, Gemini escribe título, bajada y cuerpo. Cada nota dice quién la escribió.</p></details></li>
+  <li data-n="6"><details><summary>Se verifica lo escrito<small>Control contra la fuente</small></summary>
+    <p><span class="who">robot</span>Cada dato (nombres, cifras, fechas) se compara con lo que dicen las fuentes. Si algo no cierra, se corrige sin inventar o la nota no sale. Una nota sin cuerpo de al menos 70 palabras no se publica.</p></details></li>
+  <li data-n="7"><details><summary>Se ponen las decisiones de ustedes<small>Panel del celular</small></summary>
+    <p><span class="who">personas</span>Lo que Hernán y Andrés decidieron desde el celular (publicar, retirar, corregir) manda sobre lo automático. Política y Policiales esperan siempre a una persona en las redes.</p></details></li>
+  <li data-n="8"><details><summary>Se guardan las planillas<small>Archivos <code>web/data/*.json</code></small></summary>
+    <p><span class="who">robot</span>Todo lo decidido queda escrito en archivos JSON dentro del repositorio. Eso es “la base de datos”: no hay otra.</p></details></li>
+  <li data-n="9"><details><summary>Se imprime el diario<small>Compilar con Next.js</small></summary>
+    <p><span class="who">robot</span>Next.js lee las planillas y arma las páginas: la portada, una por cada nota, las secciones, el buscador, el mapa del sitio para Google. Hoy son <b>1.148 páginas</b>.</p></details></li>
+  <li data-n="10"><details><summary>Se reparte<small>Cloudflare Pages</small></summary>
+    <p><span class="who">robot</span>Las páginas se suben a Cloudflare y quedan en su red de copias. Cuando alguien entra, recibe la copia más cercana. Después, otros robots arman las piezas de Facebook e Instagram y un vigilante controla que todo funcione.</p></details></li>
+</ol>
+
+<div class="warn"><b>Un dato clave del diseño:</b> las decisiones y las notas viven <i>dentro del repositorio de GitHub</i> (pasos 7 y 8). GitHub es a la vez la bodega y el taller. Por eso, si GitHub o su cola de robots se traba, el diario deja de actualizarse (ya pasó dos veces, una de 3,5 horas y otra de 10).</div>
+
+<h2 id="decide">4. Cómo elige el sistema qué publicar</h2>
+<p>No es una sola decisión: son <b>tres capas</b> que se miran en este orden. Importa distinguirlas porque cada una hace algo distinto.</p>
+
+<div class="layer"><div class="tag">Capa 1 · Semáforo</div><h3>¿Puede salir?</h3>
+<p>Mira el título y el comienzo del texto, y se queda con <b>lo primero que encuentra</b>. Es la capa que protege.</p>
+<div class="lanes">
+  <div class="lane r"><b>Rojo: no sale</b><ul><li>Temas sensibles (menores de edad, abuso, violación, femicidio, suicidio, trata).</li><li>Lo que nunca se publica (listas de sepelios).</li></ul></div>
+  <div class="lane a"><b>Amarillo: espera a una persona</b><ul><li>Palabras como denuncia, detenido, imputado, víctima, niño, adolescente.</li><li>Cotización del dólar (ya se muestra en /dolar), política internacional sin relación con Balcarce, y avisos de sorteos o promociones.</li><li>Algo de afuera que cuentan pocos medios.</li></ul></div>
+  <div class="lane v"><b>Verde: sale sola</b><ul><li>Un comunicado oficial, o una nota que ninguna regla frenó.</li></ul></div>
+</div>
+<p class="ex">La lista roja es una decisión editorial y de seguridad: <b>no se toca sin hablarlo</b>.</p></div>
+
+<div class="layer"><div class="tag">Capa 2 · Lectura con IA</div><h3>¿De verdad es de acá y vale la pena?</h3>
+<p>Una IA lee cada nota nueva y completa una ficha con valores cerrados (no escribe libre): el <b>ámbito</b> (Balcarce, región, provincia, nacional, internacional), la <b>sección</b>, el <b>impacto en Balcarce</b> (directo, indirecto, nulo), la <b>importancia</b>, y si es <b>publicidad</b> o <b>chimento</b>.</p>
+<p>Regla de oro: <b>la IA solo puede endurecer</b>. Puede sacar una nota o mandarla a esperar, pero nunca destrabar algo que el semáforo frenó.</p>
+<p class="ex">Ejemplos reales de la corrida de las 22:30 del 7/10, en la que leyó 14 notas nuevas:</p>
+<p class="ex"><b>FUERA</b> “Zaira Nara y Jakob Von Plessen volvieron a apostar al amor” (es un chimento)</p>
+<p class="ex"><b>FUERA</b> “Tragedia en Mendoza: hallaron muerto a un niño de 12 años…” (policial que no es de Balcarce)</p>
+<p class="ex"><b>REPETIDA</b> “Campo de Pato campeón del Regional Sub-16 de Hockey” (se junta con otra que cuenta lo mismo)</p>
+<p class="ex">Límite de uso: de a 12 notas por pedido, hasta 5 pedidos por corrida y 200 por día con su clave propia. Si Gemini no responde, lo reemplaza Groq.</p></div>
+
+<div class="layer"><div class="tag">Capa 3 · Puntaje</div><h3>¿Qué va primero?</h3>
+<p>Un número de 0 a 100 que <b>solo ordena</b>: qué ocupa la tapa, qué entra en el cupo y qué va a Facebook y a los podcasts. <b>No decide si la nota sale</b>. Suma puntos así:</p>
+<div class="bars" role="img" aria-label="Puntos que suma cada característica de una nota">
+  <div class="bar"><span>Es de Balcarce</span><span class="track"><span class="fill" style="width:62%;display:block"></span></span><span class="n">+25</span></div>
+  <div class="bar"><span>Muy reciente (menos de 3 h)</span><span class="track"><span class="fill" style="width:62%;display:block"></span></span><span class="n">+25</span></div>
+  <div class="bar"><span>Un medio de afuera dice “Balcarce” en el título</span><span class="track"><span class="fill" style="width:55%;display:block"></span></span><span class="n">+22</span></div>
+  <div class="bar"><span>Nombra a una figura argentina</span><span class="track"><span class="fill" style="width:40%;display:block"></span></span><span class="n">+16</span></div>
+  <div class="bar"><span>Cada medio más que lo cuenta (hasta 4)</span><span class="track"><span class="fill" style="width:25%;display:block"></span></span><span class="n">+10 c/u, tope +40</span></div>
+  <div class="bar"><span>Peso del medio de origen</span><span class="track"><span class="fill" style="width:75%;display:block"></span></span><span class="n">24 a 30 si es local · 8 si es nacional</span></div>
+  <div class="bar"><span>Automovilismo</span><span class="track"><span class="fill" style="width:20%;display:block"></span></span><span class="n">+8</span></div>
+  <div class="bar"><span>Trae foto / texto completo</span><span class="track"><span class="fill" style="width:15%;display:block"></span></span><span class="n">+6 / +4</span></div>
+</div>
+<p class="ex">Por eso lo local gana casi siempre: un medio de Balcarce arranca con 24 a 30 y suma 25 más por ser de acá, contra 8 de un medio nacional.</p></div>
+
+<div class="say"><b>En una frase:</b> el semáforo dice <i>si puede salir</i>, la IA dice <i>si de verdad corresponde</i> y el puntaje dice <i>cuánto lugar merece</i>. Después vienen los ocho controles finales (más abajo), y recién ahí se publica.</div>
+
+<h2 id="ocho">5. Los “8 pasos”: por qué ocho</h2>
+<p>Antes de publicar cada nota, el sistema la hace pasar por <b>ocho controles</b>, siempre en este orden. Si falla uno, no sale.</p>
+<ol class="ocho">
+  <li><b>¿La retiraron a mano?</b> Si sí, no sale.</li>
+  <li><b>¿Qué decidió una persona?</b> Si alguien decidió, manda eso. Si no, el semáforo.</li>
+  <li><b>¿Llega tarde?</b> Una noticia vieja que nunca salió no se estrena (más de 12 horas).</li>
+  <li><b>¿Qué texto lleva?</b> El de la persona, si no el de la IA, si no el resumen de la fuente.</li>
+  <li><b>¿Qué dirección tiene?</b> Se fija la primera vez y no cambia nunca más.</li>
+  <li><b>¿Hay correcciones?</b> Pisan título, bajada, sección o cuerpo.</li>
+  <li><b>¿Es algo que nunca se publica?</b> Por ejemplo, listas de sepelios, aunque alguien las haya aprobado.</li>
+  <li><b>¿Tiene cuerpo?</b> Sin cuerpo de 70 palabras o más no se publica.</li>
+</ol>
+<div class="say"><b>¿Por qué ocho y no más o menos?</b> No hay un motivo matemático. Cada control cubre <b>una forma distinta de que algo salga mal</b>: una persona que se arrepiente (1, 2, 6), el tiempo (3), el texto (4, 8), los enlaces (5) y lo que jamás debe salir (7). Lo que sé por cómo está escrito el proyecto: cada vez que algo salió mal publicado, se sumó una prueba y una regla. Es decir, la lista creció por experiencia. Ocho no es el número ideal: es el que quedó.</div>
+<p>Una conclusión práctica: si quieren simplificar, no hay que contar pasos, hay que <b>agrupar por riesgo</b>. Por ejemplo, 1, 2 y 6 son “lo que decide una persona” y podrían ser un solo bloque.</p>
+
+<h2 id="peso">6. ¿La página carga mucho?</h2>
+<p>Lo medí hoy: compilé el sitio y miré cuánto se descarga. <b>La página es liviana.</b> Esto es lo que baja un lector al abrir la portada:</p>
+<div class="bars" role="img" aria-label="Peso de la portada por tipo de contenido">
+  <div class="bar"><span>Texto de la portada (HTML)</span><span class="track"><span class="fill" style="width:7%;display:block"></span></span><span class="n">24 KB</span></div>
+  <div class="bar"><span>Programa (JavaScript)</span><span class="track"><span class="fill" style="width:29%;display:block"></span></span><span class="n">103 KB</span></div>
+  <div class="bar"><span>Fotos de la portada (5)</span><span class="track"><span class="fill" style="width:100%;display:block"></span></span><span class="n">351 KB</span></div>
+</div>
+<p>En total, menos de <b>medio megabyte</b>. Un video de WhatsApp pesa más. Una nota individual pesa unos 22 KB de texto.</p>
+<div class="grid" style="margin-top:12px">
+  <div class="card"><div class="tag">Páginas hechas</div><b style="font-family:var(--f-display);font-size:1.5rem">1.148</b><div style="color:var(--muted)">1.057 notas, 65 de secciones, 8 de agenda y 18 más</div></div>
+  <div class="card"><div class="tag">Fotos guardadas</div><b style="font-family:var(--f-display);font-size:1.5rem">44 MB</b><div style="color:var(--muted)">en el sitio; cada lector solo baja las que ve</div></div>
+  <div class="card"><div class="tag">Todo el sitio armado</div><b style="font-family:var(--f-display);font-size:1.5rem">340 MB</b><div style="color:var(--muted)">en Cloudflare; ningún lector lo baja entero</div></div>
+</div>
+<div class="say"><b>Lo que sí se puede afinar en la carga:</b> las fotos son lo más pesado (promedio de 70 KB cada una, razonable). Se podría pasar a un formato más chico (WebP) y cargar las de abajo recién al desplazarse. Es una mejora chica, no un problema. <b>Dónde sí hay lentitud real no es cuando el lector entra, sino cuando una nota sale:</b> desde que la IA la escribe hasta que aparece pasan varios minutos, porque el sitio se imprime <i>dos veces</i> por ciclo (una para controlar y otra para publicar).</div>
+
+<h2 id="tiempo">7. ¿Por qué tarda unos 7 minutos? ¿Es mucho?</h2>
+<p>Miré una corrida real, la de las 22:30 del 7/10, y cronometré cada tramo con los registros de GitHub. Desde que arranca hasta que la nota queda en la web pasaron <b>6 minutos 58 segundos</b>. Hay <b>dos robots seguidos</b>: el primero junta y escribe, el segundo imprime y publica.</p>
+<div class="bars" role="img" aria-label="Segundos que tarda cada tramo del ciclo">
+  <div class="tag" style="margin-top:6px">Robot 1 · Actualizar la web (4 min 11 s)</div>
+  <div class="bar seg other"><span>Preparar y probar el código</span><span class="track"><span class="fill" style="width:24%;display:block"></span></span><span class="n">27 s</span></div>
+  <div class="bar seg"><span>Leer unas 200 fuentes</span><span class="track"><span class="fill" style="width:28%;display:block"></span></span><span class="n">31 s</span></div>
+  <div class="bar seg"><span>La IA lee y clasifica</span><span class="track"><span class="fill" style="width:13%;display:block"></span></span><span class="n">14 s</span></div>
+  <div class="bar seg"><span>La IA escribe las notas</span><span class="track"><span class="fill" style="width:51%;display:block"></span></span><span class="n">57 s</span></div>
+  <div class="bar seg"><span>Buscar fotos</span><span class="track"><span class="fill" style="width:45%;display:block"></span></span><span class="n">50 s</span></div>
+  <div class="bar seg dup"><span>Imprimir el diario (1ª vez)</span><span class="track"><span class="fill" style="width:59%;display:block"></span></span><span class="n">66 s</span></div>
+  <div class="tag" style="margin-top:10px">Robot 2 · Cloudflare Pages (2 min 36 s)</div>
+  <div class="bar seg other"><span>Esperar y preparar</span><span class="track"><span class="fill" style="width:14%;display:block"></span></span><span class="n">16 s</span></div>
+  <div class="bar seg dup"><span>Imprimir el diario (2ª vez)</span><span class="track"><span class="fill" style="width:100%;display:block"></span></span><span class="n">111 s</span></div>
+  <div class="bar seg"><span>Subir a Cloudflare</span><span class="track"><span class="fill" style="width:26%;display:block"></span></span><span class="n">29 s</span></div>
+</div>
+<p style="color:var(--muted);font-size:.9rem">Las barras naranjas son el mismo trabajo hecho dos veces. “Buscar fotos” es una estimación: el registro no marca el comienzo de ese tramo, solo cuándo termina (50 s para 2 notas nuevas).</p>
+
+<div class="say"><b>¿Es mucho o poco?</b> Para lo que hace, <b>poco</b>: leer 200 fuentes, juntar unas 700 historias, hacer leer y escribir a una IA, verificar y armar más de 1.400 páginas en 7 minutos es rápido. Lo que sí pesa más es el <b>ciclo</b>: una noticia que sale a las :01 espera hasta 30 minutos a que arranque la próxima vuelta, así que la demora real para un lector es de unos <b>22 minutos en promedio</b> (15 de espera más 7 de proceso). Los 7 minutos son un tercio de eso.</div>
+
+<h3 style="margin-top:20px">Dónde está lo que se puede ahorrar</h3>
+<ul>
+  <li><b>Imprimir dos veces (177 s, el 42% del tiempo).</b> El primer robot arma el sitio como control y el segundo lo vuelve a armar para publicar. Si se publica lo que ya se armó una vez, se ahorran unos <b>2 minutos</b>. Es la mejora más grande y no cuesta nada.</li>
+  <li><b>Sin memoria de impresión.</b> El registro avisa “No build cache found”: cada vez se empieza de cero. Guardar esa memoria es gratis y debería acortar algo ambas impresiones; cuánto, no lo sé sin probarlo.</li>
+  <li><b>Fotos: 50 segundos para 2 notas</b> es mucho. Conviene mirar qué hace ese tramo, porque probablemente espera en fila.</li>
+  <li><b>Las pruebas no son el problema:</b> 1.840 pruebas tardan solo 16 segundos. Corrijo lo que dije antes: su costo es de tiempo bajo; el riesgo es que una prueba mal escrita frene todo.</li>
+</ul>
+
+<div class="warn"><b>Otro hallazgo, de contenido más que de velocidad:</b> en esa corrida <b>fallaron unas 50 fuentes de las ~200</b> (“fetch failed”), entre ellas La Nación, Clarín, TN, Perfil, ESPN, iProfesional y también <b>Puntonueve, que es de Balcarce</b>. No sé si son siempre las mismas: hay que mirar varias corridas. Muchos sitios bloquean las visitas desde los servidores de GitHub. Si se repite, el sistema está perdiendo cobertura sin que se note, porque una fuente caída no da error, solo trae menos.</div>
+
+<div class="say"><b>¿Armamos un proceso engorroso?</b> Tiene muchos pasos, pero casi todos tienen una razón concreta (cada uno nació de algo que salió mal) y la velocidad no es el síntoma. Lo engorroso está en otro lado: <b>22 recetas de robots, 1.840 pruebas, el repositorio usado como base de datos con 48 commits por día</b>. Eso no hace lento al sitio; hace más difícil cambiar cosas sin romper otras. Por eso la prioridad no es acelerar, es <b>simplificar y vigilar</b>.</div>
+
+<h2 id="mejoras">8. Qué se puede mejorar (de lo más fácil a lo más grande)</h2>
+<div class="tw"><table>
+  <thead><tr><th>Mejora</th><th>Qué arregla</th><th>Costo</th><th>Riesgo</th></tr></thead>
+  <tbody>
+  <tr><td><b>Un solo “imprimir” por ciclo</b></td><td>La nota sale unos 2 minutos antes (de 7 a 5).</td><td class="c">US$ 0</td><td>Medio</td></tr>
+  <tr><td><b>Guardar la memoria de impresión</b> (caché de Next.js y de las descargas)</td><td>Acorta las impresiones; ahorro a medir.</td><td class="c">US$ 0</td><td>Bajo</td></tr>
+  <tr><td><b>Pruebas solo cuando cambia el código</b></td><td>Cada ciclo corre 1.840 pruebas (16 s). Cuesta poco, pero una mala frena la web (pasó dos veces).</td><td class="c">US$ 0</td><td>Bajo</td></tr>
+  <tr><td><b>Mirar las ~50 fuentes que fallan</b></td><td>Recuperar cobertura perdida, incluida Puntonueve (de Balcarce).</td><td class="c">US$ 0</td><td>Bajo</td></tr>
+  <tr><td><b>Un vigilante del vigilante</b> (healthchecks.io, plan gratis)</td><td>Hoy nadie avisa si el propio vigilante falla.</td><td class="c">US$ 0</td><td>Bajo</td></tr>
+  <tr><td><b>Fotos en WebP y carga diferida</b></td><td>Portada más liviana en celulares con poca señal.</td><td class="c">US$ 0</td><td>Bajo</td></tr>
+  <tr><td><b>Despertador propio en Cloudflare</b> (Worker con cron)</td><td>Dejar de depender de cron-job.org, que se apaga solo si falla varias veces.</td><td class="c">US$ 5/mes*</td><td>Bajo</td></tr>
+  <tr><td><b>Guardar las decisiones en Cloudflare</b> en vez del repositorio</td><td>El panel responde al instante, todo es privado y se saca el cifrado especial.</td><td class="c">dentro de los US$ 5*</td><td>Alto (obra grande)</td></tr>
+  <tr><td><b>Un servidor propio chico</b> para el motor</td><td>Sin límite de tiempo de robots, repositorio privado, nada se frena por la cola de GitHub.</td><td class="c">US$ 4 a 6/mes*</td><td>Alto (hay que mantenerlo)</td></tr>
+  </tbody>
+</table></div>
+<p style="color:var(--muted);font-size:.9rem">* Precios aproximados, de memoria y de búsquedas. Hay que confirmarlos en la página de cada servicio antes de pagar.</p>
+
+<h2 id="plata">9. Armá tu combo (tope: US$ 20 por mes)</h2>
+<p>Tildá lo que te interese y mirá cuánto da. Todo lo gratis ya está sumado en el plan.</p>
+<div class="card calc" id="calc">
+  <label><input type="checkbox" data-p="0" checked disabled><span><b>Mejoras gratis</b><small>Un solo imprimir, memoria de impresión, pruebas por cambio, vigilante del vigilante, fotos WebP, revisar las fuentes caídas.</small></span><span class="pr">US$ 0</span></label>
+  <label for="c1"><input id="c1" type="checkbox" data-p="5"><span><b>Despertador propio + guardado de decisiones</b> (Cloudflare Workers de pago)<small>Reemplaza a cron-job.org y permite un panel instantáneo y privado.</small></span><span class="pr">US$ 5</span></label>
+  <label for="c2"><input id="c2" type="checkbox" data-p="5"><span><b>Servidor propio chico</b> (VPS)<small>Corre el motor sin límites, con ffmpeg y las voces. Hay que mantenerlo.</small></span><span class="pr">US$ 5</span></label>
+  <label for="c3"><input id="c3" type="checkbox" data-p="8"><span><b>Repositorio privado de GitHub</b> (plan Team, 2 personas)<small>Ojo: incluye solo 3.000 minutos de robots por mes y hoy se usan unos 11.500. Solo conviene junto al servidor propio.</small></span><span class="pr">US$ 8</span></label>
+  <label for="c4"><input id="c4" type="checkbox" data-p="10"><span><b>Reserva para imprevistos</b> (dominio, un cupo de voz extra, otra herramienta)<small>Un colchón razonable.</small></span><span class="pr">US$ 10</span></label>
+  <div class="meter" id="meter"><div class="track"><div class="fill" id="fill"></div></div><div class="total" id="total">US$ 0 de 20</div><div id="msg" style="color:var(--muted)"></div></div>
+</div>
+<div class="say"><b>Mi recomendación para empezar:</b> primero todo lo gratis. Después el Worker de US$ 5 (más el despertador propio). Eso deja un colchón de sobra bajo los 20 y no obliga a mudar nada de golpe. El servidor propio y el repositorio privado los dejaría para más adelante, si el crecimiento los justifica.</div>
+
+<h2>10. Qué no conviene (y por qué)</h2>
+<div class="grid">
+  <div class="card"><h3>Firebase</h3><p>Pide tarjeta para ejecutar tareas programadas y no resuelve nada que Cloudflare no resuelva. Sumaría otro proveedor.</p></div>
+  <div class="card"><h3>ElevenLabs</h3><p>El plan gratis no alcanza para 6 a 8 audios por día y no deja usar las voces comercialmente. Rompe además la regla de no cambiar de voz.</p></div>
+  <div class="card"><h3>Pasar todo a privado en GitHub</h3><p>Hoy son unos 11.500 minutos de robot por mes; el plan privado incluye 2.000 a 3.000. El exceso saldría unos US$ 55 a 60 por mes solo para la actualización de la web.</p></div>
+</div>
+
+<footer>Cifras tomadas de la compilación real del sitio (8/10/2026) y del código del proyecto. Los precios de servicios externos son aproximados y hay que verificarlos antes de contratar.</footer>
+</div>
+
+<script>
+(function(){
+  var cs=document.querySelectorAll('#calc input[type=checkbox]');
+  var fill=document.getElementById('fill'), total=document.getElementById('total'), msg=document.getElementById('msg'), meter=document.getElementById('meter');
+  function calc(){
+    var t=0; cs.forEach(function(c){ if(c.checked) t+=Number(c.getAttribute('data-p')); });
+    fill.style.width=Math.min(100,t/20*100)+'%';
+    total.textContent='US$ '+t+' de 20';
+    meter.classList.toggle('over',t>20);
+    msg.textContent=t>20?'Te pasaste del tope por US$ '+(t-20)+'.':(t===20?'Justo en el tope.':'Te quedan US$ '+(20-t)+'.');
+  }
+  cs.forEach(function(c){ c.addEventListener('change',calc); });
+  calc();
+})();
+</script>

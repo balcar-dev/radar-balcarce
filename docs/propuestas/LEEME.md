@@ -15,6 +15,7 @@ Se separa en dos listas, para no mezclar:
   secciones nuevas, servicios, formatos de redes, distribución, planes comerciales). Cada una dice si hay
   datos de verdad: **comprobado** (se bajó el dato desde GitHub y trae a Balcarce), fuente accesible, solo
   búsqueda, bloqueada, trabajo humano o especulación.
+- **[`material/`](material/)**: las páginas y videos de ejemplo que se armaron (para abrir en la PC).
 - **[`registro/`](registro/)**: la auditoría, el plan y la hoja de ruta del 8/10 tal como se escribieron.
   Incluye la cuarta auditoría externa (la arquitectura) con su plan por etapas. Mezclan las dos cosas; se conservan como historial y por el detalle (ejemplos de títulos, fuentes, URLs).
 
