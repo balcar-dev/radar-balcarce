@@ -1469,6 +1469,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-08/efemeride": {
+      "cuando": "2026-10-08T12:07:47.663Z",
+      "mediaId": "17991016122061900",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "facebookVideos": {
@@ -2448,6 +2456,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-08/efemeride": {
+      "cuando": "2026-10-08T12:08:28.415Z",
+      "mediaId": "1730280414740247",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "instagramFeed": {
@@ -3328,6 +3344,20 @@
       "nombre": "podcast",
       "red": "facebook",
       "notaId": null
+    },
+    "instagram/2026-10-08/efemeride": {
+      "cuando": "2026-10-08T12:08:19.666Z",
+      "mediaId": "18141869827668037",
+      "nombre": "efemeride",
+      "red": "instagram",
+      "notaId": null
+    },
+    "facebook/2026-10-08/efemeride": {
+      "cuando": "2026-10-08T12:09:06.636Z",
+      "mediaId": "1631594025303324",
+      "nombre": "efemeride",
+      "red": "facebook",
+      "notaId": null
     }
   },
   "problemas": {
@@ -3344,19 +3374,12 @@
       "parte": "historia-del-reel",
       "error": "La subida del video falló (400) Request processing failed",
       "cuando": "2026-10-07T13:34:40.377Z"
-    },
-    "2026-10-08/efemeride/instagram/reel": {
-      "pieza": "efemeride",
-      "red": "instagram",
-      "parte": "reel",
-      "error": "La subida del video falló (400) Request processing failed",
-      "cuando": "2026-10-08T12:05:46.695Z"
     }
   },
   "facebookFoto": {
     "1cpkl2f": {
-      "intentos": 1,
-      "ultimo": "2026-10-08T12:05:18.804Z",
+      "intentos": 2,
+      "ultimo": "2026-10-08T12:06:43.489Z",
       "error": "Missing or invalid image file"
     }
   }
