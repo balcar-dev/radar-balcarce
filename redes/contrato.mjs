@@ -37,7 +37,7 @@
 import { CONTRATO_DIARIO, FACEBOOK } from '../ingesta/criterio.mjs';
 import { temaParecido, vaAFacebookPorLoQueEs } from './elegir.mjs';
 import { diaAR, minutoDelDiaAR, minutosDeHora } from '../ingesta/zona.mjs';
-import { cronogramaDelDia, ventanaDe, PODCASTS } from './piezas.mjs';
+import { cronogramaDelDia, ventanaDe, PODCASTS, SALE_COMO_REEL } from './piezas.mjs';
 
 /** El día desde el que rige este contrato. Antes las historias eran de notas y
  *  los podcasts no se subían como historia: no se les puede pedir lo de ahora. */
@@ -82,18 +82,26 @@ export function piezasDelContrato(fecha, { clima = null } = {}) {
     lista.push({ id: `historia:${nombre}`, grupo, nombre, etiqueta: ETIQUETAS_FIJAS[nombre], tipo: 'STORIES', hora: horaDe(nombre), ventana: ventanaDe(nombre) });
   }
   if (cronograma.some((p) => p.nombre === 'utiles')) {
-    lista.push({ id: 'historia:utiles', grupo: 'utiles', nombre: 'utiles', etiqueta: ETIQUETAS_FIJAS.utiles, tipo: 'STORIES', hora: horaDe('utiles'), ventana: ventanaDe('utiles'), semanal: true });
+    // Desde el 9/10 los útiles salen como reel y como historia (SALE_COMO_REEL); antes, sólo historia.
+    if (fecha < EXTRAS_DESDE) {
+      lista.push({ id: 'historia:utiles', grupo: 'utiles', nombre: 'utiles', etiqueta: ETIQUETAS_FIJAS.utiles, tipo: 'STORIES', hora: horaDe('utiles'), ventana: ventanaDe('utiles'), semanal: true });
+    } else {
+      lista.push({ id: 'reel:utiles', grupo: 'utiles', nombre: 'utiles', etiqueta: ETIQUETAS_FIJAS.utiles, tipo: 'REELS', hora: horaDe('utiles'), ventana: ventanaDe('utiles'), semanal: true });
+      lista.push({ id: 'historia:utiles', grupo: 'historia-del-reel', nombre: 'utiles', etiqueta: `${ETIQUETAS_FIJAS.utiles} (historia)`, tipo: 'STORIES', hora: horaDe('utiles'), ventana: ventanaDe('utiles'), semanal: true });
+    }
   }
   // R-4 (8/10/2026): lo que el cronograma trae ese día además de lo fijo —la efeméride (reel y su historia), el feriado, la agenda,
   // las de Participá y el aviso de clima— también se mira. No cuenta en los totales del contrato (son "semanales", sin número fijo),
   // pero si su ventana se cierra sin que salgan, se avisa. El cronograma ya sabe qué le toca a cada día (una efeméride sin preparar
   // o un día sin feriado no figuran), así que no se le exige lo que no estaba previsto.
   for (const p of fecha < EXTRAS_DESDE ? [] : cronograma) {
-    if (p.nombre === 'efemeride') {
-      lista.push({ id: 'reel:efemeride', grupo: 'efemeride', nombre: p.nombre, etiqueta: 'Un día como hoy', tipo: 'REELS', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
-      lista.push({ id: 'historia:efemeride', grupo: 'historia-del-reel', nombre: p.nombre, etiqueta: 'Un día como hoy (historia)', tipo: 'STORIES', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
-    } else if (EXTRAS[p.nombre] || p.nombre.startsWith('aviso-') || p.nombre.startsWith('participa-')) {
-      lista.push({ id: `historia:${p.nombre}`, grupo: 'extra', nombre: p.nombre, etiqueta: EXTRAS[p.nombre] ?? (p.nombre.startsWith('aviso-') ? `aviso de ${p.nombre.slice(6)}` : `Participá (${p.nombre.slice(9)})`), tipo: 'STORIES', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
+    if (SALE_COMO_REEL(p.nombre) && p.nombre !== 'utiles') {
+      // Salen como reel y, con el mismo video, como historia (8/10, "dónde sale cada pieza"): se mira cada una.
+      const etiqueta = p.nombre === 'efemeride' ? 'Un día como hoy' : (EXTRAS[p.nombre] ?? `Participá (${p.nombre.slice(9)})`);
+      lista.push({ id: `reel:${p.nombre}`, grupo: p.nombre === 'efemeride' ? 'efemeride' : 'extra-reel', nombre: p.nombre, etiqueta, tipo: 'REELS', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
+      lista.push({ id: `historia:${p.nombre}`, grupo: 'historia-del-reel', nombre: p.nombre, etiqueta: `${etiqueta} (historia)`, tipo: 'STORIES', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
+    } else if (p.nombre.startsWith('aviso-')) {
+      lista.push({ id: `historia:${p.nombre}`, grupo: 'extra', nombre: p.nombre, etiqueta: `aviso de ${p.nombre.slice(6)}`, tipo: 'STORIES', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
     }
   }
   return lista.sort((a, b) => minutosDeHora(a.hora) - minutosDeHora(b.hora));

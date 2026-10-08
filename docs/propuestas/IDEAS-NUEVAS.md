@@ -413,10 +413,10 @@ Junta lo que se decidió para las redes. El detalle de cada parte está más aba
 
 | Qué | Cómo queda | Estado |
 |---|---|---|
-| **Videos animados** | Ninguna pieza con imagen fija: todas con movimiento, subtítulos de la voz en la misma franja y una sola estética. Hay ejemplos de nota con foto, clima (lluvia y día lindo), repaso, farmacia (una, dos y tres de turno), participá, efeméride y feriado | Aprobado. Se repasan juntos la semana que viene |
+| **Videos animados** | Ninguna pieza con imagen fija: todas con movimiento, subtítulos de la voz en la misma franja y una sola estética. Hay ejemplos de nota con foto, clima (lluvia y día lindo), repaso, farmacia (una, dos y tres de turno), participá, efeméride y feriado | **Hecho el 8/10 (regla 145):** entrada animada de cada bloque, cifras que cuentan y barra de avance en todas las piezas. Falta repasar juntos cada animación |
 | **Feriados** | Animación y dato propios para cada feriado; el dato lo elige el criterio del medio | Aprobado |
-| **Dónde sale cada pieza** | **Facebook:** clima y farmacia también como reel. **Instagram:** clima y farmacia solo como historia. **Lo demás con voz:** reel en las dos redes y el mismo video como historia | Aprobado. Se mide 4 semanas |
-| **Locución con memoria del día** | Cada guion sabe cómo está el día, qué saludo ya se usó y qué viene después: nada de tres "buenas noches" seguidos | Aprobado, se hace pronto (`PRIORIDADES.md` #31) |
+| **Dónde sale cada pieza** | **Facebook:** clima y farmacia también como reel. **Instagram:** clima y farmacia solo como historia. **Lo demás con voz:** reel en las dos redes y el mismo video como historia | **Hecho el 8/10 (regla 147).** Se mide 4 semanas |
+| **Locución con memoria del día** | Cada guion sabe cómo está el día, qué saludo ya se usó y qué viene después: nada de tres "buenas noches" seguidos | **Hecho el 8/10 (regla 146):** el saludo se dice una vez por franja y las piezas siguientes empiezan con un puente |
 | **Aviso de voz con IA** | Una línea de texto en el posteo, sin la etiqueta visual de Meta | Aprobado (`MEJORAS.md` C-9) |
 | **Historias y reels, para qué** | Para lo más relevante. Los posteos de notas, para llevar gente a la web | Aprobado |
 | **Una historia que lleve al posteo de la nota** | Para evaluar, sin cargar de más | Para decidir |

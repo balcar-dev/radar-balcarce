@@ -168,6 +168,16 @@ function pieDeReel(pieza) {
 // siempre.
 export { diaRotativoDeUtiles };
 
+/**
+ * Las piezas con voz que salen como REEL en las dos redes y, además, como historia (8/10/2026, "dónde sale cada pieza", aprobado; se mide
+ * cuatro semanas). El clima y la farmacia no: en Instagram son sólo historia, y en Facebook salen como historia y también como reel
+ * (`reelEnFacebook`, reels/plan.mjs). Los avisos de clima siguen siendo sólo historia: no esperan nada.
+ */
+export const SALE_COMO_REEL = (nombre) => ['efemeride', 'feriado', 'agenda', 'utiles'].includes(nombre) || String(nombre ?? '').startsWith('participa-');
+
+/** Las piezas de clima y farmacia que en Facebook salen además como reel. */
+export const TAMBIEN_REEL_EN_FACEBOOK = ['clima-manana', 'clima-noche', 'farmacia'];
+
 /** Las historias extras (no están en el contrato de las seis), de la que se
  *  sacaría primero a la que menos importa. */
 export const EXTRAS_DE_HISTORIAS = ['utiles', 'agenda', 'participa-noticias', 'participa-evento', 'participa-reclamos', 'participa-nota', 'feriado'];
@@ -210,7 +220,7 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null
   const fijas = horariosDe(estado)
     .filter((h) => !SOLO_EN_LA_PC.includes(h.id))
     .filter((h) => toca(h, fecha, { estado }))
-    .map((h) => ({ nombre: h.id, tipo: 'historia', hora: h.hora }));
+    .map((h) => ({ nombre: h.id, tipo: SALE_COMO_REEL(h.id) ? 'reel' : 'historia', hora: h.hora }));
   const aviso = avisoDeClima(clima, fecha);
 
   return [

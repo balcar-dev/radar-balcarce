@@ -32,7 +32,7 @@ import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import { revisarTexto } from '../redes/guiones.mjs';
 import { nombreDeEvento } from '../web/lib/eventos.js';
 import {
-  PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, piezasPublicadasHoy, historiasQueSobran,
+  PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, piezasPublicadasHoy, historiasQueSobran, SALE_COMO_REEL,
 } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
@@ -276,7 +276,7 @@ export function planDelDia(datos, {
   if (datos.clima && tocaHoy('clima-manana')) {
     const hoy = climaHoy;
     piezas.push({
-      tipo: 'historia', hora: cuando['clima-manana'].hora, nombre: 'clima-manana', titulo: 'El clima de hoy',
+      tipo: 'historia', reelEnFacebook: true, hora: cuando['clima-manana'].hora, nombre: 'clima-manana', titulo: 'El clima de hoy',
       motivo: 'servicio fijo · no gasta cupo de reel', seccion: 'Clima',
       guion: guionClima(datos.clima, turno),
       momento: 'manana', indicacion: INDICACIONES.manana,
@@ -309,7 +309,7 @@ export function planDelDia(datos, {
     const hoy = climaHoy;
     const manana = climaManana;
     piezas.push({
-      tipo: 'historia', hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el clima esta noche',
+      tipo: 'historia', reelEnFacebook: true, hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el clima esta noche',
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaNoche(datos.clima),
       momento: 'noche', indicacion: INDICACIONES.noche,
@@ -340,7 +340,7 @@ export function planDelDia(datos, {
   // La farmacia va tarde a propósito: sirve cuando las demás ya cerraron.
   if (turno && tocaHoy('farmacia')) {
     piezas.push({
-      tipo: 'historia', hora: cuando.farmacia.hora, nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
+      tipo: 'historia', reelEnFacebook: true, hora: cuando.farmacia.hora, nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
       motivo: 'a la hora en que cierran las demás', seccion: 'Farmacias',
       guion: guionFarmacia(turno, { momento: momentoDeHora(cuando.farmacia.hora) }),
       momento: momentoDeHora(cuando.farmacia.hora), indicacion: INDICACIONES[momentoDeHora(cuando.farmacia.hora)],
@@ -363,7 +363,7 @@ export function planDelDia(datos, {
     const grupos = [...new Set(NUMEROS.map((n) => n.categoria))]
       .map((categoria) => ({ categoria, items: NUMEROS.filter((n) => n.categoria === categoria) }));
     piezas.push({
-      tipo: 'historia', hora: cuando.utiles.hora, nombre: 'utiles',
+      tipo: 'reel', hora: cuando.utiles.hora, nombre: 'utiles',
       titulo: 'Teléfonos útiles de Balcarce', motivo: 'una vez por semana, los sábados',
       // No hay sección Servicios desde el 27/09: lo práctico de acá va a
       // Balcarce (CLAUDE.md, "Las secciones son once").
@@ -381,7 +381,7 @@ export function planDelDia(datos, {
   const deLaAgenda = eventos ?? eventosProximos(4);
   if (tocaHoy('agenda') && deLaAgenda.length) {
     piezas.push({
-      tipo: 'historia', hora: cuando.agenda.hora, nombre: 'agenda',
+      tipo: 'reel', hora: cuando.agenda.hora, nombre: 'agenda',
       titulo: 'Qué hacer este fin de semana', motivo: 'los jueves, si hay eventos cargados',
       seccion: 'Cultura y agenda',
       guion: guionAgenda(deLaAgenda, { momento: momentoDeHora(cuando.agenda.hora) }),
@@ -396,7 +396,7 @@ export function planDelDia(datos, {
     const f = feriadoDelDia(fecha);
     const momento = momentoDeHora(cuando.feriado.hora);
     piezas.push({
-      tipo: 'historia', hora: cuando.feriado.hora, nombre: 'feriado',
+      tipo: 'reel', hora: cuando.feriado.hora, nombre: 'feriado',
       titulo: f.nombre, motivo: 'hoy es feriado',
       seccion: 'Argentina',
       guion: guionFeriado(f, { fecha, momento }),
@@ -433,7 +433,7 @@ export function planDelDia(datos, {
     const p = PIEZAS_PARTICIPA[id];
     const momento = momentoDeHora(cuando[id].hora);
     piezas.push({
-      tipo: 'historia', hora: cuando[id].hora, nombre: id,
+      tipo: 'reel', hora: cuando[id].hora, nombre: id,
       titulo: p.nombre, motivo: 'invitación a participar, al mediodía',
       seccion: p.seccion,
       guion: guionParticipa(id, { fecha, momento }),
@@ -533,7 +533,7 @@ export function planDelDia(datos, {
   // salido. Si se pasa, se dejan de armar los extras: primero los teléfonos
   // útiles, después la agenda. Las del contrato y los avisos nunca se sacan.
   const historiasDelDia = [
-    ...piezas.filter((p) => p.tipo === 'historia' || p.nombre === 'efemeride' || NOMBRES_DE_PODCAST.includes(p.nombre)).map((p) => p.nombre),
+    ...piezas.filter((p) => p.tipo === 'historia' || SALE_COMO_REEL(p.nombre) || NOMBRES_DE_PODCAST.includes(p.nombre)).map((p) => p.nombre),
     ...NOMBRES_DE_PODCAST.filter((n) => hechas.has(n)),
   ];
   for (const nombre of historiasQueSobran(historiasDelDia, REGLAS.historiasMaximasPorDia)) {
@@ -610,7 +610,7 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
         }
         manifiesto.push({
           nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo, notaId: p.notaId ?? null,
-          notaIds: p.notaIds ?? [], items: p.items ?? [],
+          notaIds: p.notaIds ?? [], items: p.items ?? [], ...(p.reelEnFacebook ? { reelEnFacebook: true } : {}),
           archivo: path.basename(r.mp4), duracion: Number(r.duracion.toFixed(1)),
           // Si el video pasa de lo que acepta una historia, las historias suben
           // esta versión recortada; el reel sube entero (redes/publicar-piezas.mjs).

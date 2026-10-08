@@ -219,6 +219,22 @@ export async function publicarPiezas({
               }
             }
           }
+          // Facebook: el clima y la farmacia salen como historia en las dos redes y, en Facebook, también como reel (8/10, "dónde sale cada
+          // pieza", aprobado; se mide cuatro semanas). Es el mismo video. Si falla, la historia queda igual y no se reintenta: es un extra.
+          if (tipo === 'STORIES' && red === 'facebook' && pieza.reelEnFacebook) {
+            libro.reelsEnFacebook ??= {};
+            if (!libro.reelsEnFacebook[clave]) {
+              try {
+                const rr = await api[metodo]({ video: leerVideo(pieza.archivo), tipo: 'REELS', pie: pieDePieza({ ...pieza, tipo: 'reel' }) });
+                anotar(libro, 'reelsEnFacebook', clave, { mediaId: rr.id, nombre: pieza.nombre, tipo: 'REELS' });
+                guardar();
+                log(`             + reel en Facebook: ${rr.id}`);
+              } catch (e) {
+                log(`             el reel de Facebook falló (queda la historia): ${e.message}`);
+                if (e.tokenMuerto) { resultado.tokenMuerto = true; return resultado; }
+              }
+            }
+          }
         } catch (e) {
           log(`             falló${intentos > 1 ? ` (intento ${intento} de ${intentos})` : ''}: ${e.message}`);
           if (e.tokenMuerto) {

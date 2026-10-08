@@ -113,7 +113,7 @@ test('16a · el plan arma los tres podcasts con presupuesto, con las notas que q
   }));
   const datos = { clima: null, farmacias: { turnos: [] }, notas };
   const { piezas } = planDelDia(datos, { fecha: AR('2026-09-25', '09:00'), estado: {} });
-  const podcasts = piezas.filter((p) => p.tipo === 'reel');
+  const podcasts = piezas.filter((p) => p.tipo === 'reel' && ['noticia1', 'noticia2', 'podcast'].includes(p.nombre));
   assert.deepEqual(podcasts.map((p) => p.nombre).sort(), ['noticia1', 'noticia2', 'podcast']);
   for (const p of podcasts) {
     assert.ok(p.segundosEstimados <= PODCAST_VOZ.segundosPresupuesto, `${p.nombre}: ~${p.segundosEstimados.toFixed(1)} s`);
@@ -139,7 +139,7 @@ test('el repaso del día se cumple (mañana, tarde y noche) aunque parte de las 
   anotar(libro, 'instagram', claveDePieza('noticia1', ayer), { notaIds: ['p2', 'p3'] });
 
   const { piezas } = planDelDia(datos, { fecha: AR('2026-09-25', '09:00'), estado: {}, libro });
-  const podcasts = piezas.filter((p) => p.tipo === 'reel');
+  const podcasts = piezas.filter((p) => p.tipo === 'reel' && ['noticia1', 'noticia2', 'podcast'].includes(p.nombre));
   // Los tres repasos del día se arman igual: mañana, tarde y noche.
   assert.deepEqual(podcasts.map((p) => p.nombre).sort(), ['noticia1', 'noticia2', 'podcast']);
   for (const p of podcasts) assert.ok(p.notaIds.length >= 2, `${p.nombre} sin al menos dos notas`);
@@ -296,7 +296,7 @@ const DATOS = (dia) => ({
 });
 
 test('16c · el plan arma la historia de útiles el día que toca y no el que no toca; lo que dice el reloj, el plan lo arma', () => {
-  const armadas = (fecha, estado = {}) => planDelDia(DATOS(AR(fecha).getDate()), { fecha: AR(fecha), estado }).piezas.filter((p) => p.tipo === 'historia' && !p.fueraDeTecho).map((p) => p.nombre);
+  const armadas = (fecha, estado = {}) => planDelDia(DATOS(AR(fecha).getDate()), { fecha: AR(fecha), estado }).piezas.filter((p) => (p.tipo === 'historia' || p.tipo === 'reel') && !p.fueraDeTecho).map((p) => p.nombre);
   assert.ok(armadas('2026-09-26').includes('utiles'), 'sábado 26/09: sí');
   assert.ok(!armadas('2026-09-25').includes('utiles'), 'viernes 25/09: no');
   assert.ok(!armadas('2026-09-29').includes('utiles'), 'martes 29/09: no');

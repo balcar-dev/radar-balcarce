@@ -205,6 +205,14 @@ Lo común a todas:
   de artesanos, el sábado 10:00, en el Parque Cerro El Triunfo. La agenda completa está en
   Radar Balcarce punto com. Radar Balcarce."
 
+### Dónde sale cada pieza (8/10, aprobado; se mide cuatro semanas)
+
+- **Reel en Facebook e Instagram y, con el mismo video, historia:** los tres repasos, "Un día como hoy", el feriado, la agenda,
+  los teléfonos útiles y las piezas de Participá.
+- **Historia en Instagram; en Facebook, historia y también reel:** el clima de la mañana, el de la noche y la farmacia de turno.
+- **Sólo historia:** los avisos de clima (no esperan nada).
+- Todo reel lleva en el posteo «Voz generada con inteligencia artificial.» (regla 114).
+
 ### El feriado · 8:00, los días de feriado · 10 a 25 segundos
 
 - **Para qué:** contar de qué se trata el feriado, con datos verificados (`web/data/feriados-piezas.json`, que sale de

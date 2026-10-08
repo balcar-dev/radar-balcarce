@@ -640,3 +640,50 @@ test('los podcasts del plan llevan el rojo de la marca, no un color rotativo', a
   assert.equal((plan.match(/color: COLORES.rojo/g) ?? []).length, 2, 'los dos tipos de podcast usan el rojo de la marca');
   assert.ok(!/colorDelDia|COLORES_DEL_DIA/.test(plan));
 });
+
+// ---------------------------------------------- dónde sale cada pieza (8/10/2026, aprobado)
+
+test('el clima y la farmacia, en Facebook, salen como historia y también como reel; en Instagram, sólo como historia', async () => {
+  const subidas = [];
+  const libro = libroNuevo();
+  const crear = (red) => async ({ video, tipo, pie }) => { subidas.push({ red, nombre: video.toString(), tipo, pie }); return { id: `${red}-${tipo}-${video}` }; };
+  const api = { publicarVideoEnInstagram: crear('instagram'), publicarVideoEnFacebook: crear('facebook') };
+  const manifiesto = [
+    { nombre: 'clima-manana', tipo: 'historia', hora: '07:00', titulo: 'El clima de hoy', archivo: 'clima-manana.mp4', reelEnFacebook: true },
+    { nombre: 'participa-reclamos', tipo: 'reel', hora: '12:00', titulo: 'Tu reclamo', archivo: 'participa-reclamos.mp4' },
+  ];
+  await publicarPiezas({
+    api, manifiesto, libro, activo: true, destinos: ['instagram', 'facebook'], esperar: async () => {}, sinHorario: true, ahora: A_LAS('16:00'),
+    leerVideo: (a) => Buffer.from(a), guardar: () => {}, log: () => {},
+  });
+  const de = (red, nombre) => subidas.filter((s) => s.red === red && s.nombre === `${nombre}.mp4`).map((s) => s.tipo).sort();
+  assert.deepEqual(de('instagram', 'clima-manana'), ['STORIES'], 'en Instagram el clima es sólo historia');
+  assert.deepEqual(de('facebook', 'clima-manana'), ['REELS', 'STORIES'], 'en Facebook, historia y reel');
+  assert.match(subidas.find((s) => s.red === 'facebook' && s.tipo === 'REELS' && s.nombre === 'clima-manana.mp4').pie, /Voz generada con inteligencia artificial/, 'el reel lleva el aviso de voz');
+  assert.deepEqual(de('instagram', 'participa-reclamos'), ['REELS', 'STORIES'], 'Participá: reel y su historia en Instagram');
+  assert.deepEqual(de('facebook', 'participa-reclamos'), ['REELS', 'STORIES'], 'y en Facebook');
+  assert.ok(libro.reelsEnFacebook[claveDePieza('clima-manana', A_LAS('16:00'))], 'el reel extra queda anotado y no se repite');
+  // Una segunda vuelta no vuelve a subir nada.
+  const antes = subidas.length;
+  await publicarPiezas({
+    api, manifiesto, libro, activo: true, destinos: ['instagram', 'facebook'], esperar: async () => {}, sinHorario: true, ahora: A_LAS('16:00'),
+    leerVideo: (a) => Buffer.from(a), guardar: () => {}, log: () => {},
+  });
+  assert.equal(subidas.length, antes);
+});
+
+test('si falla el reel extra de Facebook, la historia queda y no se cuenta como fallo', async () => {
+  const libro = libroNuevo();
+  const api = {
+    publicarVideoEnInstagram: async () => ({ id: 'ig' }),
+    publicarVideoEnFacebook: async ({ tipo }) => { if (tipo === 'REELS') throw new Error('Facebook dijo que no'); return { id: 'fb' }; },
+  };
+  const r = await publicarPiezas({
+    api, manifiesto: [{ nombre: 'farmacia', tipo: 'historia', hora: '19:00', titulo: 'Farmacia de turno', archivo: 'farmacia.mp4', reelEnFacebook: true }], libro, activo: true,
+    destinos: ['instagram', 'facebook'], esperar: async () => {}, sinHorario: true, ahora: A_LAS('19:30'), leerVideo: (a) => Buffer.from(a), guardar: () => {}, log: () => {},
+  });
+  assert.equal(r.fallos.length, 0);
+  assert.ok(libro.facebookVideos[claveDePieza('farmacia', A_LAS('19:30'))], 'la historia de Facebook salió');
+  assert.equal(libro.reelsEnFacebook?.[claveDePieza('farmacia', A_LAS('19:30'))], undefined);
+  assert.equal(Object.keys(libro.problemas ?? {}).length, 0, 'no se anota como problema: es un extra');
+});

@@ -50,7 +50,7 @@ test('el reloj la pide a las 9:00 los días preparados', () => {
   const dia = cronogramaDelDia(A('2026-10-06'));
   const e = dia.find((p) => p.nombre === 'efemeride');
   assert.equal(e.hora, '09:00');
-  assert.equal(e.tipo, 'historia');
+  assert.equal(e.tipo, 'reel', 'la efeméride sale como reel (y su historia)');
   assert.ok(!cronogramaDelDia(A('2030-01-01')).some((p) => p.nombre === 'efemeride'));
 });
 
@@ -73,7 +73,7 @@ test('la efeméride como reel no saca a ningún podcast del techo de reels ni de
   assert.ok(reels.some((x) => x.nombre === 'efemeride'));
   for (const r of reels) assert.equal(r.fueraDeTecho, undefined, `${r.nombre} se sacó por el techo`);
   assert.match(fs.readFileSync(path.join(RAIZ, 'reels', 'plan.mjs'), 'utf8'), /p\.tipo === 'reel' && NOMBRES_DE_PODCAST\.includes\(p\.nombre\)/, 'el techo de reels cuenta sólo los podcasts');
-  assert.match(fs.readFileSync(path.join(RAIZ, 'reels', 'plan.mjs'), 'utf8'), /p.nombre === 'efemeride'/, 'y la efeméride cuenta para el techo de historias');
+  assert.match(fs.readFileSync(path.join(RAIZ, 'reels', 'plan.mjs'), 'utf8'), /SALE_COMO_REEL\(p\.nombre\)/, 'y la efeméride cuenta para el techo de historias');
 });
 
 test('nunca se saca por el techo de historias, ni siquiera un día de feriado cargado', () => {

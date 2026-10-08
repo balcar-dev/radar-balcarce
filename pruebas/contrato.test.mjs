@@ -264,7 +264,8 @@ test('desde el 9/10 el contrato también mira la efeméride, el feriado y Partic
   assert.equal(EXTRAS_DESDE, '2026-10-09');
   // 12/10: feriado (8:00), efeméride (9:00) y Participá (12:00) además de lo fijo.
   const piezas = piezasDelContrato('2026-10-12').filter((p) => p.semanal).map((p) => p.id);
-  for (const id of ['reel:efemeride', 'historia:efemeride', 'historia:feriado', 'historia:participa-noticias']) assert.ok(piezas.includes(id), `falta ${id}`);
+  // Desde el 8/10 ("dónde sale cada pieza"): el feriado y Participá salen como reel y, con el mismo video, como historia.
+  for (const id of ['reel:efemeride', 'historia:efemeride', 'reel:feriado', 'historia:feriado', 'reel:participa-noticias', 'historia:participa-noticias']) assert.ok(piezas.includes(id), `falta ${id}`);
   // Lo fijo sigue igual: 3 reels y 6 historias.
   const fijas = piezasDelContrato('2026-10-12').filter((p) => !p.semanal);
   assert.equal(fijas.filter((p) => p.grupo === 'reel').length, 3);
@@ -273,22 +274,24 @@ test('desde el 9/10 el contrato también mira la efeméride, el feriado y Partic
   const libro = libroCompleto('2026-10-12');
   const cierre = AR('2026-10-12', '23:50');
   const sin = contratoDelDia({ libro, fecha: '2026-10-12', ahora: cierre }).instagram;
-  assert.deepEqual(sin.extrasFaltan.map((p) => p.id).sort(), ['historia:efemeride', 'historia:feriado', 'historia:participa-noticias', 'reel:efemeride']);
+  assert.deepEqual(sin.extrasFaltan.map((p) => p.id).sort(), ['historia:efemeride', 'historia:feriado', 'historia:participa-noticias', 'reel:efemeride', 'reel:feriado', 'reel:participa-noticias']);
   assert.equal(sin.completo, false);
   assert.match(lineaDeRed(sin), /falta: .*Un día como hoy/);
 
   // Con todo publicado, queda completo.
   libro.instagram['2026-10-12/efemeride'] = { cuando: UTC('2026-10-12', '09:02'), mediaId: 'E', nombre: 'efemeride', tipo: 'REELS' };
   libro.historiasDeReels['instagram/2026-10-12/efemeride'] = { cuando: UTC('2026-10-12', '09:02'), mediaId: 'EH', nombre: 'efemeride', red: 'instagram' };
-  libro.instagram['2026-10-12/feriado'] = { cuando: UTC('2026-10-12', '08:02'), mediaId: 'F', nombre: 'feriado', tipo: 'STORIES' };
-  libro.instagram['2026-10-12/participa-noticias'] = { cuando: UTC('2026-10-12', '12:02'), mediaId: 'P', nombre: 'participa-noticias', tipo: 'STORIES' };
+  libro.instagram['2026-10-12/feriado'] = { cuando: UTC('2026-10-12', '08:02'), mediaId: 'F', nombre: 'feriado', tipo: 'REELS' };
+  libro.historiasDeReels['instagram/2026-10-12/feriado'] = { cuando: UTC('2026-10-12', '08:02'), mediaId: 'FH', nombre: 'feriado', red: 'instagram' };
+  libro.instagram['2026-10-12/participa-noticias'] = { cuando: UTC('2026-10-12', '12:02'), mediaId: 'P', nombre: 'participa-noticias', tipo: 'REELS' };
+  libro.historiasDeReels['instagram/2026-10-12/participa-noticias'] = { cuando: UTC('2026-10-12', '12:02'), mediaId: 'PH', nombre: 'participa-noticias', red: 'instagram' };
   const con = contratoDelDia({ libro, fecha: '2026-10-12', ahora: cierre }).instagram;
   assert.deepEqual(con.extrasFaltan, []);
   assert.equal(con.completo, true);
   // Lo que todavía está a tiempo no falta.
   const enHora = (hhmm) => contratoDelDia({ libro: libroCompleto('2026-10-12'), fecha: '2026-10-12', ahora: AR('2026-10-12', hhmm) }).instagram.extrasFaltan.map((p) => p.id).sort();
   assert.deepEqual(enHora('10:00'), [], 'a las 10 el feriado y la efeméride están dentro de su ventana');
-  assert.deepEqual(enHora('12:30'), ['historia:efemeride', 'historia:feriado', 'reel:efemeride'], 'a las 12:30 se cerraron; Participá (hasta las 13) todavía está a tiempo');
+  assert.deepEqual(enHora('12:30'), ['historia:efemeride', 'historia:feriado', 'reel:efemeride', 'reel:feriado'], 'a las 12:30 se cerraron; Participá (hasta las 13) todavía está a tiempo');
 });
 
 test('el vigilante avisa (media) lo extra que no salió, y las fechas anteriores al 9/10 no se exigen', () => {
