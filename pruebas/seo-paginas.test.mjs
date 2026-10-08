@@ -429,3 +429,11 @@ test('una nota automática sin cuerpo lleva noindex, follow; con cuerpo o public
   const pagina = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/app/nota/[id]/page.js'), 'utf8');
   assert.match(pagina, /noSeOfreceAGoogle\(n\) \? \{ robots: \{ index: false, follow: true \} \}/);
 });
+
+// V2-13 (8/10/2026): Google usa el feed para descubrir notas; robots.txt no lo bloquea. El panel sí sigue bloqueado.
+test('robots.txt deja pasar el feed y bloquea el panel', () => {
+  const robots = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/app/robots.js'), 'utf8');
+  assert.match(robots, /disallow: \['\/panel\/'\],/);
+  assert.ok(!/disallow:[^\n]*feed\.xml/.test(robots), 'el feed no se bloquea');
+  assert.ok(!/^\s*host:/m.test(robots), 'sin la línea Host:');
+});
