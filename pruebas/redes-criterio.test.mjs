@@ -38,6 +38,7 @@ import {
   repasoConPresupuesto, elegirParaPodcast, REGLAS_PIEZAS, mensajeDeNota, FRASES_DEL_ENLACE,
 } from '../redes/elegir.mjs';
 import { pieDePieza, PODCASTS } from '../redes/piezas.mjs';
+import { IDS_PARTICIPA, guionParticipa } from '../redes/participa.mjs';
 import { fechaEnBalcarce } from '../ingesta/utiles.mjs';
 import { clipsDeAuditoria, revisarTranscripcion, cuantasDirecciones } from '../redes/auditoria-voz.mjs';
 import { VOZ_POR_DEFECTO, ESTILO_POR_DEFECTO } from '../reels/voz-gemini.mjs';
@@ -622,4 +623,36 @@ test('las transcripciones REALES de la primera auditoría (26/09): la voz dijo b
   for (const c of clipsDeAuditoria()) {
     assert.deepEqual(revisarTranscripcion({ guion: c.texto, transcripcion: reales[c.id], saludo: c.saludo }), [], c.id);
   }
+});
+
+// ---------------------------------------- R-5 (8/10/2026): el control de textos antes de gastar la voz
+
+test('la lista de medios que no se nombran sale de las fuentes (no sólo 16) y deja afuera lo oficial y las palabras de todos los días', () => {
+  assert.ok(MEDIOS_QUE_NO_SE_NOMBRAN.length >= 80, `sólo ${MEDIOS_QUE_NO_SE_NOMBRAN.length} medios`);
+  for (const m of ['Infobae', 'Radio Mitre', 'TyC Sports', 'La Tecla', 'El Gráfico', 'Agrositio', 'News Balcarce', 'Ahora Balcarce']) {
+    assert.ok(MEDIOS_QUE_NO_SE_NOMBRAN.includes(m), `falta ${m}`);
+  }
+  assert.ok(!MEDIOS_QUE_NO_SE_NOMBRAN.some((m) => /municipi/i.test(m)), 'la Municipalidad es un organismo: se puede nombrar');
+  for (const palabra of ['El Día', 'Perfil', 'Olé', 'Campeones', 'La Verdad']) {
+    assert.ok(!MEDIOS_QUE_NO_SE_NOMBRAN.includes(palabra), `${palabra} es una palabra de todos los días`);
+  }
+  assert.deepEqual(revisarTexto('Buen día. Este es el día de la primavera. Radar Balcarce.', { momento: 'manana' }), []);
+  assert.ok(revisarTexto('Buen día. Lo contó Radio Mitre. Radar Balcarce.', { momento: 'manana' }).some((p) => /medio/.test(p)));
+});
+
+test('los avisos de clima y las piezas de Participá nombran a "Radar Balcarce" y pasan el control', () => {
+  for (const id of IDS_PARTICIPA) {
+    assert.deepEqual(revisarTexto(guionParticipa(id, { momento: 'tarde' }), { momento: 'tarde' }), [], id);
+  }
+  const plan = leer('reels/plan.mjs');
+  assert.match(plan, /guion: `\$\{a\.titulo\}\. \$\{a\.texto\} Radar Balcarce\.`/);
+});
+
+test('el plan corre el control de textos ANTES de pedir la voz, y sólo avisa (no frena la pieza)', () => {
+  const plan = leer('reels/plan.mjs');
+  const control = plan.indexOf('revisarTexto(p.guion');
+  const voz = plan.indexOf('r = await armarReel(p, SALIDA)');
+  assert.ok(control > 0 && voz > control, 'el control va antes de armarReel');
+  assert.match(plan.slice(control, voz), /::warning::/);
+  assert.doesNotMatch(plan.slice(control, voz), /throw|continue/);
 });

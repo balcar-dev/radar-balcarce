@@ -29,6 +29,7 @@ import {
   guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
+import { revisarTexto } from '../redes/guiones.mjs';
 import { nombreDeEvento } from '../web/lib/eventos.js';
 import {
   PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, piezasPublicadasHoy, historiasQueSobran,
@@ -242,7 +243,7 @@ export function planDelDia(datos, {
       titulo: a.titulo,
       motivo: 'aviso de clima · sale apenas se detecta, sin esperar horario',
       seccion: 'Clima',
-      guion: `${a.titulo}. ${a.texto}`,
+      guion: `${a.titulo}. ${a.texto} Radar Balcarce.`,
       // "Historia diaria" con el recuadro del aviso: el título del aviso
       // manda (es lo que hay que ver de reojo) y abajo lo que hay que saber.
       svg: placaClima({
@@ -595,6 +596,13 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
           fs.copyFileSync(fija.ruta, destino);
           r = { mp4: destino, duracion: fija.duracion ?? 0, historia: null, vozUsada: `fija hasta el ${fija.hasta}, no gasta voz` };
         } else {
+          // R-5 (8/10/2026): el control de textos corre ANTES de gastar el cupo de voz. Es un aviso (no frena la pieza):
+          // si dice algo que el criterio prohíbe, queda a la vista en la corrida para arreglarlo.
+          const dudas = revisarTexto(p.guion, { tipo: 'voz', momento: p.momento });
+          if (dudas.length) {
+            console.log(`\x1b[33m    AVISO\x1b[0m el texto de ${p.nombre} no cumple el criterio: ${dudas.join('; ')}`);
+            if (process.env.GITHUB_ACTIONS) console.log(`::warning::${p.nombre}: el texto no cumple el criterio de las redes (${dudas.join('; ')})`);
+          }
           r = await armarReel(p, SALIDA);
         }
         manifiesto.push({

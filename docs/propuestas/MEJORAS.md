@@ -1188,7 +1188,7 @@ ninguna nota; la guardia del 20 % va también ahí.
 - Efeméride, participá, feriado, agenda y avisos de clima: si fallan, nadie se entera
   (`redes/contrato.mjs:68-85`). 2 h.
 
-**R-5 · El control de textos no corre antes de gastar la voz** — *Confirmado · MEDIA*
+**R-5 ✔ · El control de textos no corre antes de gastar la voz** — *Confirmado · MEDIA · hecho el 8/10 (regla 132): corre como aviso, no frena*
 - `revisarTexto` existe pero no corre en el plan; los avisos de clima y participá no dicen "Radar
   Balcarce"; la lista de medios prohibidos tiene 16 nombres contra ~90 (`redes/guiones.mjs:506,528`).
   Correrlo como aviso y armar la lista desde las fuentes. 2 h.
