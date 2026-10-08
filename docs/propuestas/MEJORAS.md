@@ -813,6 +813,11 @@ lee es el texto. Lo que sí aporta el audio:
 categoría, idioma, dueño con correo (queda público), un mp3 por episodio con su duración y un identificador que no
 cambie nunca. Hoy los audios viven solo en Instagram y Facebook: primero hay que guardarlos (Q1).
 
+**¿Algo bloquea a los lectores automáticos?** Una auditoría externa no pudo abrir `robots.txt` ni el sitemap: le
+apareció un bloqueo de Cloudflare. Nuestro `robots.txt` no bloquea a nadie salvo `/feed.xml` y `/panel/`, y
+Cloudflare deja pasar a Google. Mirar en Cloudflare (bots y "rastreadores de IA") qué está activo y decidir si se
+deja leer a los buscadores con IA, que pueden traer lectores. El sitio tiene un `llms.txt` pensado para ellos.
+
 **¿Cuántas páginas tiene Google?** Una auditoría externa dice que Google no tiene ninguna. Desde acá no se pudo
 comprobar. **Hay que mirarlo en Search Console**, porque define cuán urgente es S-1.
 

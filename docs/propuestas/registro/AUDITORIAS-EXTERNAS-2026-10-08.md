@@ -88,3 +88,39 @@ es el **plan de contenido original** y el **sello de "nota propia"**.
 | Balcarce en números | Notas con datos comprobados (ECO-1, POL-1, AGR-1, POL-3, EDU-2) | **Comprobado** |
 | Qué pasó finalmente con… | Qué pasó con… (V-8) | Datos propios |
 | Vecinos que hacen cosas, historias de la sierra | **Nueva** (perfiles) | Trabajo humano |
+
+## Auditoría 3 · "Historial completo de la auditoría"
+
+**En general:** vio la portada real (los titulares que lista coinciden con lo publicado el 8/10) y encontró los
+reels en Facebook e Instagram. Pero cuando quiso abrir `robots.txt`, el sitemap y otras páginas, no pudo, y a
+partir de ahí **supuso** que faltaban cosas que sí existen. Algunas recomendaciones son para WordPress, que no
+usamos.
+
+| Lo que dice | Estado | Comentario |
+|---|---|---|
+| Portada con notas "hace 1h/2h", secciones, pie con teléfonos de emergencia | **Cierto** | Coincide |
+| Cloudflare le bloqueó `robots.txt`, el sitemap y otras páginas (`LIVE_CRAWL_POLICY_BLOCKED`) | **A confirmar · nuevo** | Nuestro `robots.txt` no bloquea a nadie salvo `/feed.xml` y `/panel/`. El bloqueo viene de Cloudflare (algún ajuste de bots o de "rastreadores de IA") o de la propia política de esa IA. **A Google no lo frena**: Cloudflare deja pasar a los buscadores verificados. Hay que mirarlo en Cloudflare y **decidir si se deja leer a los buscadores con IA** (ChatGPT, Perplexity), que pueden traer lectores. Ojo: el sitio tiene un `llms.txt` pensado para que las IA lo lean, así que bloquearlas sería contradictorio |
+| "Sin datos estructurados NewsArticle, Breadcrumb" | **Equivocado** | Existen |
+| "Falta H1 único" | **Equivocado** | La portada tiene un H1 (oculto a la vista, para lectores de pantalla y Google) y cada nota uno |
+| "/farmacia-de-turno y /clima no son páginas indexables" | **Equivocado** | Existen `/farmacias` y `/clima`, en el sitemap |
+| "Sin canonicals, sin robots/sitemap, sin lazy, sin preload" | **Equivocado** | Existen todos |
+| "hace 2h sin fecha absoluta confunde a Google" | **Equivocado** | Cada "hace" va con la fecha exacta en `<time datetime>` |
+| "Texto de La Nación": se marca como agregador | **Cierto, ya estaba** | S-1 y W-5 |
+| Video corto de 30 s | **Ya estaba** | Ya existen los repasos |
+| **Mapa de la farmacia de turno** | **Nuevo** | En `/farmacias`, un mapa chico con el punto (dibujado al armar el sitio, sin cargar mapas de afuera) |
+| **Clima por horas** | **Nuevo** | La página `/clima` muestra "ahora" y la semana, no las horas. Open-Meteo ya da el dato por hora |
+| RankMath, Yoast, Cloudflare APO y Polish | **No conviene** | Son para WordPress o del plan pago de Cloudflare; el sitio no los necesita |
+| Títulos "Balcarce + verbo + dato" | **Nuevo en parte** | Se suma a S-3: que lo local diga Balcarce en el título cuando el hecho es de acá. **El dato solo si está en la fuente** ("cuánto pagó" solo si se sabe): no se inventa |
+| Los reels transcritos como notas en la web | **Ya estaba en parte** | Los repasos ya tienen su nota en la web. Falta el audio (RS-1) y declarar el video para Google |
+| **Datos para Google del video** (VideoObject o Clip) | **Nuevo** | Se suma a SEO: cuando el audio y el video estén en la web |
+| H2 "Política en Balcarce", H1 "Noticias de HOY en Balcarce" | **Ya estaba en parte** | Los títulos de sección ya están anotados (raros: "Argentina en Balcarce"). El título de la portada ya dice "Noticias de Balcarce, clima y farmacia de turno" |
+| Páginas por fecha (`/farmacia-de-turno-2026-10-08`) | **No conviene** | Son miles de páginas casi iguales: es justo lo que Google castiga como contenido a escala |
+| Resultados de la Liga Balcarceña | **Ya estaba** | FUT-3 |
+| Modelo 70 % pauta directa, 20 % servicios, 10 % SEO | **Ya estaba** | Coincide con la sección 9 |
+| "Auspicia la farmacia de turno" | **Ya estaba, con regla** | "Presentado por" en un servicio, pero nunca una farmacia auspiciando el turno |
+| Media kit "12.000 balcarceños nos leen" | **No conviene** | Hoy no es cierto: casi todas las visitas son robots. **Regla:** el media kit muestra solo números reales |
+| 3 banners a $80.000 | **A confirmar** | Está por encima de lo que cobra una radio chica; los precios los deciden ustedes |
+| WhatsApp de difusión y newsletter con el repaso | **Ya estaba** | D-1, D-2, D-3 |
+| Google News Publisher Center y Business Profile | **Equivocado** | Publisher Center ya no admite medios nuevos; Business Profile pide atención en persona |
+| "El sitio tiene tráfico local real" y "el problema no es contenido, es técnica SEO" | **Equivocado** | La técnica está bien (auditoría de SEO). El problema principal es el contenido sin aporte propio (S-1), y las visitas reales de Argentina son muy pocas |
+| **"El repaso" como formato central** (web, reel, WhatsApp y mail) | **Nuevo** | Buena idea: el repaso como pieza principal en todos los canales |

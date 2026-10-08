@@ -214,6 +214,12 @@ Varias ideas chocan con reglas escritas. No se pueden hacer sin que ustedes camb
 
 ---
 
+### De la tercera auditoría externa (8/10)
+- **Clima por horas** en `/clima` (hoy muestra "ahora" y la semana). Open-Meteo ya da el dato por hora.
+- **Mapa chico de la farmacia de turno** en `/farmacias`, dibujado al armar el sitio (sin cargar mapas de afuera).
+- **El repaso como formato central:** la misma pieza en la web (con audio), reel, WhatsApp y mail.
+- **Datos para Google del video** (VideoObject), cuando el audio y el video estén en la web.
+
 ## 7. Redes: formatos nuevos
 
 *Ninguno gasta cupo de voz. Todos, salvo R-5, chocan con la regla de Instagram (sección 2, punto 1).*
