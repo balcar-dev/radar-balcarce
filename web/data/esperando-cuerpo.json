@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T19:37:05.989Z",
+ "generado": "2026-10-08T19:53:23.223Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,7 +15,7 @@
      "fecha": "2026-10-08T17:13:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "sin material",
    "maximo": 3
   },
@@ -59,33 +59,6 @@
    "maximo": 3
   },
   {
-   "id": "1we1z9n",
-   "titulo": "Franco Colapinto se entusiasmó con sumar puntos en el GP de Singapur: “Tenemos un coche muy rápido”",
-   "copete": "Franco Colapinto se prepara para disputar una nueva edición del Gran Premio de Singapur y ya palpita uno de los circuitos más exigentes de la Fórmula 1. El piloto argentino llega con expectativas renovadas y buscará mejorar sus antecedentes en Marina Bay. Franco Colapinto se…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-08T10:13:38.000Z",
-   "fuentes": [
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/franco-colapinto-participara-de-la-conferencia-de-prensa-de-los-pilotos-de-la-formula-1-antes-del-gran-premio-de-singapur/",
-     "fecha": "2026-10-08T10:13:38.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/deportes/franco-colapinto-hablo-singapur-confia-cambiarle-cara-alpine-coche-rapido_0_HQiPTrHpi9.html",
-     "fecha": "2026-10-08T13:23:23.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/deportes/la-ilusion-de-franco-colapinto-antes-del-gp-de-singapur-tenemos-un-coche-muy-rapido/",
-     "fecha": "2026-10-08T10:19:26.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gran\", \"premio\", \"singapur\" y el cuerpo no los explica; sin esas oraciones quedan 146 palabras",
-   "maximo": 3
-  },
-  {
    "id": "2ela87",
    "titulo": "Tini Stoessel debutará en el Lollapalooza Argentina 2027: el emotivo mensaje en sus redes",
    "copete": "La artista pop expresó sus primexeras sensaciones, luego de que el festival musical confirmara el line up para la edición que se llevará a cabo del 12 al 14 de marzo en el Hipódromo de San Isidro. Se conoció el line up del Lollapalooza Argentina 2027: todos los artistas…",
@@ -103,7 +76,7 @@
      "fecha": "2026-10-08T18:17:28.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
    "maximo": 3
   },
@@ -125,6 +98,28 @@
    "maximo": 3
   },
   {
+   "id": "eae1az",
+   "titulo": "Google Doodle celebra la Semana Mundial del Espacio 2026 con la impactante Nebulosa de Carina captada por el Telescopio James Webb",
+   "copete": "En el marco de las celebraciones globales por la Semana Mundial del Espacio , Google rindió homenaje a la tecnología y al arte de la astrofotografía mediante un doodle inspirado en las impactantes imágenes captadas por el Telescopio Espacial James Webb de la NASA. Para aquellos…",
+   "seccion": "Tecnología",
+   "fecha": "2026-10-08T10:39:12.000Z",
+   "fuentes": [
+    {
+     "medio": "FayerWayer",
+     "enlace": "https://www.fayerwayer.com/espacio/2026/10/08/google-doodle-celebra-la-semana-mundial-del-espacio-2026-con-la-impactante-nebulosa-de-carina-captada-por-el-telescopio-james-webb/",
+     "fecha": "2026-10-08T10:39:12.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/tecno/2026/10/08/google-celebra-la-semana-del-espacio-con-doodle-de-la-nebulosa-de-carina-captada-por-el-telescopio-james-webb/",
+     "fecha": "2026-10-08T18:29:30.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 7.500 y la fuente no lo dice; sin esas oraciones quedan 74 palabras",
+   "maximo": 3
+  },
+  {
    "id": "1cjphdj",
    "titulo": "Leonel Pernía, entre los 33 inscriptos de la Clase 3",
    "copete": "",
@@ -142,7 +137,7 @@
      "fecha": "2026-10-08T17:07:37.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"nacional\" y la fuente no",
    "maximo": 3
   }

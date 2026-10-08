@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T19:37:05.989Z",
- "portada": 55,
- "archivo": 1099,
+ "generado": "2026-10-08T19:53:23.223Z",
+ "portada": 56,
+ "archivo": 1101,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-08T19:37:06.034Z",
+  "generado": "2026-10-08T19:53:23.260Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,12 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 49,
     "notas": [
      {
       "id": "6vefne",
       "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
       "seccion": "Agro"
+     },
+     {
+      "id": "11yxcy2",
+      "titulo": "Julián Álvarez rompe con su representante tras la fallida salida",
+      "seccion": "Fútbol"
      },
      {
       "id": "zzuoo4",
@@ -173,11 +178,6 @@
       "id": "19k7tmn",
       "titulo": "Mauro Icardi y Wanda Nara se divorcian oficialmente en Italia",
       "seccion": "Argentina"
-     },
-     {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
-      "seccion": "Agro"
      }
     ]
    }
@@ -203,15 +203,14 @@
      "id": "jul321",
      "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
      "cuando": "2026-10-08T18:06:50.188Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "6vefne",
      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
-     "seccion": "Agro",
-     "marcada": false
-    },
+     "cuando": "2026-10-08T19:40:07.630Z"
+    }
+   ],
+   "cola": [
     {
      "id": "zzuoo4",
      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
@@ -225,8 +224,8 @@
      "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-08T19:36:50.188Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-08T21:10:07.630Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
