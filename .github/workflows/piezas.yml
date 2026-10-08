@@ -90,6 +90,16 @@ jobs:
       # Lo que se escribe en "solo" llega por una variable y no pegado en el
       # comando: pegado, un texto con comillas o un ";" se ejecutaba como
       # parte del comando (auditoría del 25/09).
+      # La memoria de voces (C-16, 8/10/2026): un texto con la misma voz y el mismo estilo se pide UNA vez al día; si la pieza se arma de
+      # nuevo (falló ffmpeg, Meta contestó con error, el reloj la volvió a pedir) se reusa el audio y no se gasta cupo (reels/voz-gemini.mjs).
+      - name: Restaurar la memoria de voces
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/voz
+          key: voz-${{ github.run_id }}
+          restore-keys: |
+            voz-
+
       - name: Armar las piezas
         run: |
           if [ -n "$SOLO" ]; then
@@ -103,6 +113,14 @@ jobs:
           SOLO: ${{ inputs.solo }}
           TODAS: ${{ inputs.todas }}
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+          VOZ_CACHE: ${{ github.workspace }}/.cache/voz
+
+      - name: Guardar la memoria de voces
+        if: always() && hashFiles('.cache/voz/*.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/voz
+          key: voz-${{ hashFiles('.cache/voz/*.json') }}
 
       - name: Dejar las piezas para descargar
         uses: actions/upload-artifact@v4
