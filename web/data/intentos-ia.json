@@ -328,6 +328,11 @@
   "ultimo": "2026-10-06T23:31:45.917Z",
   "motivo": "con cuerpo"
  },
+ "17l1wv1": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T02:01:33.215Z",
+  "motivo": "con cuerpo"
+ },
  "17lpda8": {
   "intentos": 1,
   "ultimo": "2026-10-03T15:02:13.158Z",
@@ -418,11 +423,6 @@
  "18wosri": {
   "intentos": 1,
   "ultimo": "2026-10-06T11:32:19.032Z",
-  "motivo": "con cuerpo"
- },
- "18xuulv": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T02:01:11.710Z",
   "motivo": "con cuerpo"
  },
  "18ymt3o": {
@@ -1878,11 +1878,9 @@
   "motivo": "con cuerpo"
  },
  "7gf331": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T15:33:00.200Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
+  "intentos": 2,
+  "ultimo": "2026-10-08T02:01:33.215Z",
+  "motivo": "con cuerpo"
  },
  "7h598e": {
   "intentos": 1,
@@ -2715,11 +2713,6 @@
   "ultimo": "2026-10-04T19:31:35.029Z",
   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gran\", \"premio\", \"singapur\" y el cuerpo no los explica; sin esas oraciones quedan 91 palabras"
  },
- "saeapr": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T02:01:11.710Z",
-  "motivo": "con cuerpo"
- },
  "sd36kl": {
   "intentos": 1,
   "ultimo": "2026-10-05T18:31:33.557Z",
@@ -2939,11 +2932,6 @@
   "intentos": 1,
   "ultimo": "2026-10-01T15:23:25.909Z",
   "motivo": "con cuerpo"
- },
- "wgvbiv": {
-  "intentos": 3,
-  "ultimo": "2026-10-01T02:01:11.710Z",
-  "motivo": "título o bajada: 4 problemas (nombre, numero): el titulo nombra a \"agronomia\" y la fuente no"
  },
  "wjdq6r": {
   "intentos": 1,
