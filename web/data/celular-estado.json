@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T21:02:12.922Z",
- "portada": 54,
- "archivo": 1100,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-08T21:35:35.988Z",
+ "portada": 63,
+ "archivo": 1109,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-08T21:02:12.953Z",
+  "generado": "2026-10-08T21:35:36.031Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
+     },
      {
       "id": "ypnvl8",
       "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
       "seccion": "Fútbol"
      },
      {
-      "id": "11yxcy2",
-      "titulo": "Julián Álvarez rompe con su representante tras la fallida salida",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
       "seccion": "Balcarce"
      },
      {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
-      "seccion": "Agro"
+      "id": "mr88ek",
+      "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -211,6 +211,18 @@
     }
    ],
    "cola": [
+    {
+     "id": "1om2oqi",
+     "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "mr88ek",
+     "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
     {
      "id": "zzuoo4",
      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
