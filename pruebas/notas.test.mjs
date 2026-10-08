@@ -588,3 +588,11 @@ test('el fútbol tiene sección propia; los otros deportes quedan en Deportes; P
   // "boca" suelta no es Boca.
   assert.notEqual(clasificar(nota({ titulo: 'Limpian una boca de tormenta en el centro' })), 'Fútbol');
 });
+
+test('del feed sólo entran enlaces http y https (V2-16, 8/10)', async () => {
+  const { parsearFeed } = await import('../ingesta/ingesta.mjs');
+  const item = (t, l) => `<item><title>${t}</title><link>${l}</link><pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate><description>x</description></item>`;
+  const xml = `<rss><channel>${item('Una nota buena del barrio', 'https://medio.ar/a')}${item('Una nota con enlace raro', 'javascript:alert(1)')}${item('Otra nota con enlace raro', 'data:text/html,x')}</channel></rss>`;
+  const notas = parsearFeed(xml, { nombre: 'Medio', medio: 'Medio', peso: 20 });
+  assert.deepEqual(notas.map((n) => n.enlace), ['https://medio.ar/a']);
+});

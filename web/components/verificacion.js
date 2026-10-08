@@ -95,7 +95,7 @@ export function PieConFuentes({ firma, explicacion, fuentes }) {
       <ul>
         {fuentes.map((f, i) => (
           <li key={f.enlace ?? f.medio}>
-            {f.enlace
+            {/^https?:[/][/]/i.test(f.enlace ?? '')
               ? <a href={f.enlace} target="_blank" rel="noopener noreferrer">{etiquetas[i]}</a>
               : <span>{etiquetas[i]}</span>}
           </li>

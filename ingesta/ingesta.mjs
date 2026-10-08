@@ -161,6 +161,8 @@ export function tituloDelSitemap(bloque) {
   return titulo;
 }
 
+/** Sólo enlaces http y https entran (V2-16, 8/10): un feed con `javascript:` o `data:` no llega a ninguna página. */
+const ES_HTTP = new RegExp('^https?://', 'i');
 export function parsearFeed(xml, fuente) {
   // El índice de noticias que cada sitio arma para Google (news-sitemap): trae
   // TODO lo del día, no sólo las últimas 10 o 20 notas de un RSS (27/09, para
@@ -184,7 +186,7 @@ export function parsearFeed(xml, fuente) {
         seccionFuente: fuente.seccion ?? null,
         peso: fuente.peso ?? 10,
       };
-    }).filter((n) => n.titulo && n.enlace);
+    }).filter((n) => n.titulo && n.enlace && ES_HTTP.test(n.enlace)); // sólo http y https (V2-16, 8/10)
   }
   const esAtom = /<feed[\s>]/i.test(xml) && !/<rss[\s>]/i.test(xml);
   const crudos = esAtom ? bloques(xml, 'entry') : bloques(xml, 'item');
@@ -241,7 +243,7 @@ export function parsearFeed(xml, fuente) {
       seccionFuente: fuente.seccion ?? null,
       peso: fuente.peso ?? 10,
     };
-  }).filter((n) => n.titulo && n.enlace);
+  }).filter((n) => n.titulo && n.enlace && ES_HTTP.test(n.enlace)); // sólo http y https (V2-16, 8/10)
 }
 
 // Los medios sin feed se leen de la portada. `fuente.patronEnlace` es la
