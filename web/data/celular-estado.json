@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T18:34:38.058Z",
- "portada": 50,
- "archivo": 1092,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-08T19:04:21.462Z",
+ "portada": 52,
+ "archivo": 1097,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-08T18:34:38.106Z",
+  "generado": "2026-10-08T19:04:21.508Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-08T18:36:11.280Z"
    },
    {
     "nombre": "farmacia",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 46,
+    "salio": "2026-10-08T18:36:11.280Z",
+    "segundos": null,
     "notas": [
      {
       "id": "f6j0rt",
@@ -144,9 +144,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
-      "seccion": "Agro"
+      "id": "vnuraj",
+      "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 48,
     "notas": [
      {
       "id": "1ihpcqe",
@@ -165,8 +165,8 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
       "seccion": "Agro"
      },
      {
@@ -175,8 +175,8 @@
       "seccion": "Economía"
      },
      {
-      "id": "vnuraj",
-      "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
+      "id": "19k7tmn",
+      "titulo": "Mauro Icardi y Wanda Nara se divorcian oficialmente en Italia",
       "seccion": "Fútbol"
      }
     ]
@@ -207,12 +207,6 @@
    ],
    "cola": [
     {
-     "id": "jul3dm",
-     "titulo": "El Diario cumple 31 años como medio gráfico local",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "6vefne",
      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
      "seccion": "Agro",
@@ -227,6 +221,12 @@
     {
      "id": "zzuoo4",
      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "jul3dm",
+     "titulo": "El Diario cumple 31 años como medio gráfico local",
      "seccion": "Balcarce",
      "marcada": false
     }

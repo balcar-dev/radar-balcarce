@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T18:34:38.058Z",
+ "generado": "2026-10-08T19:04:21.462Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -22,6 +22,23 @@
    ],
    "intentos": 3,
    "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA",
+   "maximo": 3
+  },
+  {
+   "id": "1dqrc9g",
+   "titulo": "Por cuestiones climáticas se POSTERGÓ Fiesta del Postre",
+   "copete": "Tras una reunión con el grupo de trabajo, se resolvió este jueves postergar la realización de la 22ª Fiesta Nacional del Postre, prevista para este viernes al lunes, próximos en la Sociedad Rural. La razón responde a cuestiones climáticas reinantes y que se avizoran para el fin…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-08T16:59:16.000Z",
+   "fuentes": [
+    {
+     "medio": "Acción 5 (Balcarce)",
+     "enlace": "https://accion5.com/por-cuestiones-climaticas-se-postergo-fiesta-del-postre/",
+     "fecha": "2026-10-08T16:59:16.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
    "maximo": 3
   },
   {
@@ -52,30 +69,42 @@
    "maximo": 3
   },
   {
-   "id": "1we1z9n",
-   "titulo": "Franco Colapinto participará de la conferencia de prensa de los pilotos de la Fórmula 1 antes del Gran Premio de Singapur",
-   "copete": "Se viene una nueva carrera en el calendario de la Fórmula 1 : el Gran Premio de Singapur . Franco Colapinto fue uno de los tres pilotos que abrió la rueda de conferencias junto al francés Esteban Ocon y español Fernando Alonso. El argentino, que llega de una fecha complicada en…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-08T09:53:51.000Z",
+   "id": "2ela87",
+   "titulo": "Tini Stoessel debutará en el Lollapalooza Argentina 2027: el emotivo mensaje en sus redes",
+   "copete": "La artista pop expresó sus primexeras sensaciones, luego de que el festival musical confirmara el line up para la edición que se llevará a cabo del 12 al 14 de marzo en el Hipódromo de San Isidro. Se conoció el line up del Lollapalooza Argentina 2027: todos los artistas…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-08T15:59:00.000Z",
    "fuentes": [
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/franco-colapinto-participara-de-la-conferencia-de-prensa-de-los-pilotos-de-la-formula-1-antes-del-gran-premio-de-singapur/",
-     "fecha": "2026-10-08T09:53:51.000Z"
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/ratingcero/tini-stoessel-debutara-el-lollapalooza-argentina-2027-el-emotivo-mensaje-sus-redes-n251100",
+     "fecha": "2026-10-08T15:59:00.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/deportes/2026/10/08/el-divertido-show-entre-franco-colapinto-y-fernando-alonso-en-la-conferencia-de-prensa-del-gp-de-singapur-acabo-de-hablar-yo-boludo/",
-     "fecha": "2026-10-08T16:33:30.000Z"
-    },
-    {
-     "medio": "0221",
-     "enlace": "https://www.0221.com.ar/deportes/video-el-divertido-cruce-franco-colapinto-y-fernando-alonso-que-altero-la-previa-del-gp-singapur-n135515",
-     "fecha": "2026-10-08T18:15:00.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/fama/mensaje-tini-stoessel-confirmacion-primera-vez-lollapalooza-argentina_0_gHxBaYYtjs.html",
+     "fecha": "2026-10-08T18:17:28.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gran\", \"premio\", \"singapur\" y el cuerpo no los explica; sin esas oraciones quedan 146 palabras",
+   "intentos": 1,
+   "motivo": "cuerpo: 3 problemas (nombre, promesa): el cuerpo nombra a \"gureta\" y la fuente no; sin esas oraciones quedan 76 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "7r5ucc",
+   "titulo": "Preocupación por el robo de flexibles de gas",
+   "copete": "",
+   "seccion": "Policiales",
+   "fecha": "2026-10-07T23:01:35.401Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
    "maximo": 3
   }
  ]
