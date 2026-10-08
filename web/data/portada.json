@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T09:31:14.853Z",
+  "generado": "2026-10-08T10:01:38.265Z",
   "notas": [
     {
       "id": "133qm11",
@@ -661,77 +661,67 @@
       }
     },
     {
-      "id": "1d48tdj",
-      "titulo": "Detectan maquinaria pesada en caminos rurales de El Verano",
-      "copete": "El Comando de Prevención Rural labró una infracción por el paso de equipos agrícolas en zonas afectadas por las precipitaciones. El municipio recordó las restricciones vigentes.",
-      "cuerpo": "Personal del Comando de Prevención Rural interceptó maquinaria agrícola en el paraje El Verano debido a la circulación de equipos de gran porte por caminos que requerían especial cuidado tras las lluvias. La actuación se rige por la Ordenanza Municipal Nº 43/16, que establece restricciones para preservar la red vial rural y evitar daños en la superficie.\n\nEl municipio advirtió que los operativos continuarán en distintos sectores del distrito para evitar el deterioro de los caminos y el consecuente gasto de recursos en nuevos trabajos de mantenimiento.",
-      "guion": "Detectan maquinaria pesada en caminos rurales de El Verano",
-      "seccion": "Agro",
+      "id": "1boxf4v",
+      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
+      "copete": "Finalizaron los trabajos de señalización horizontal en un tramo clave para la circulación vehicular. Automovilistas y transportistas habían exigido la mejora debido a las dificultades para transitar de noche.",
+      "cuerpo": "Durante la última semana finalizó la demarcación horizontal de la calzada en la traza de la Ruta Provincial número 55 que une el paraje Pieres con Balcarce. La intervención vial completó las tareas de bacheo realizadas meses atrás en el mismo sector.\n\nEl trayecto acumulaba pedidos de automovilistas y transportistas debido a las complicaciones que generaba la ausencia de líneas divisorias, sobre todo durante la noche o en momentos de escasa visibilidad. Como se había informado a principios de mes, la empresa ESUCO retomó las labores viales en los corredores de la región.\n\nTras la finalización de estas mejoras, la atención de los usuarios se trasladó a la Ruta Provincial número 227 a la altura de Napaleofú. En ese otro corredor del distrito persisten los reclamos por el estado del pavimento y la falta de señalización.",
+      "guion": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
+      "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45029-detectan-maquinaria-pesada-circulando-por-caminos-rurales-afectados-por-las-lluvias/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T22:01:34.358Z",
+      "enlace": "https://eldiariobalcarce.com.ar/demarcaron-la-ruta-55-entre-pieres-y-balcarce-834",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-07T23:01:35.401Z",
       "sinFecha": true,
-      "visto": "2026-10-07T22:01:34.358Z",
-      "relevancia": 63,
+      "visto": "2026-10-07T23:01:35.401Z",
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "rutas"
+      ],
       "como": "automatica",
-      "claves": [
-        "Interceptan maquinaria pesada en el paraje El Verano.",
-        "El operativo estuvo a cargo del Comando de Prevención Rural.",
-        "La medida responde a restricciones por las lluvias recientes.",
-        "El municipio ratificó la continuidad de los controles viales."
-      ],
-      "seSabe": [
-        "El procedimiento se realizó en la zona del paraje El Verano.",
-        "Personal del Comando de Prevención Rural estuvo a cargo de la intervención.",
-        "La Ordenanza Municipal Nº 43/16 regula el tránsito tras las precipitaciones, según informó el municipio.",
-        "Las autoridades ratificaron la continuidad de los controles viales."
-      ],
       "noConfirmado": [
-        "No se informaron las multas exactas aplicadas en esta ocasión.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Detectan maquinaria pesada circulando por caminos rurales de El Verano que requerían cuidado tras las lluvias. El Comando de Prevención Rural realizó el procedimiento y el municipio ratificó la continuidad de los controles.",
+      "textoRedes": "Finalizó la demarcación horizontal de la Ruta 55 entre el paraje Pieres y Balcarce tras los reclamos de automovilistas y transportistas por la falta de señalización.",
       "etiquetas": [
-        "caminos rurales",
-        "El Verano",
-        "Comando de Prevención Rural",
-        "lluvias",
-        "maquinaria pesada"
+        "Ruta 55",
+        "Pieres",
+        "Balcarce",
+        "Seguridad vial",
+        "Ruta 227",
+        "Napaleofú"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45029-detectan-maquinaria-pesada-circulando-por-caminos-rurales-afectados-por-las-lluvias/",
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/demarcaron-la-ruta-55-entre-pieres-y-balcarce-834",
           "fecha": null,
           "oficial": false,
-          "aporte": "Informó sobre el operativo del CPR en El Verano y las restricciones de la Ordenanza Municipal Nº 43/16."
+          "aporte": "Informó la finalización de la demarcación en la Ruta 55, los reclamos previos de los automovilistas y el pedido actual sobre la Ruta 227."
         }
       ],
       "antecedentes": [
         {
-          "id": "jul3w9",
-          "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
-          "fecha": "2026-09-29T12:08:15.000Z",
-          "ruta": "/nota/infraccionan-a-un-tractor-en-caminos-rurales-tras-las-lluvias-jul3w9"
+          "id": "1pwavd9",
+          "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región",
+          "fecha": "2026-10-06T00:01:00.000Z",
+          "ruta": "/nota/la-empresa-esuco-retoma-tareas-viales-en-las-rutas-de-la-region-1pwavd9"
         },
         {
-          "id": "3exxze",
-          "titulo": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
-          "fecha": "2026-10-07T20:27:12.000Z",
-          "ruta": "/nota/el-cpr-multa-a-maquinaria-agricola-por-circular-en-caminos-de-el-3exxze"
+          "id": "j3xrez",
+          "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+          "fecha": "2026-10-03T03:01:28.393Z",
+          "ruta": "/nota/la-concesion-de-la-ruta-226-arranca-con-tareas-de-pintura-j3xrez"
         },
         {
-          "id": "rwhqdu",
-          "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
-          "fecha": "2026-10-07T19:46:05.000Z",
-          "ruta": "/nota/el-municipio-labra-una-infraccion-por-circular-con-maquinaria-pesada-rwhqdu"
+          "id": "fd2y4d",
+          "titulo": "Choque frontal en la Ruta 226 deja tres heridos",
+          "fecha": "2026-10-02T22:58:21.000Z",
+          "ruta": "/nota/choque-frontal-en-la-ruta-226-deja-tres-heridos-fd2y4d"
         }
       ],
       "verificacion": {
@@ -739,10 +729,10 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "detectan-maquinaria-pesada-en-caminos-rurales-de-el-verano",
+      "slug": "demarcan-la-ruta-55-entre-el-paraje-pieres-y-balcarce",
       "foto": {
-        "archivo": "fotos-notas/1d48tdj.jpg",
-        "credito": "Foto: Diario La Vanguardia"
+        "archivo": "fotos-notas/1boxf4v.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -756,14 +746,17 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Diario Popular",
+        "El Diario Balcarce",
         "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "Ámbito",
         "El Cronista",
+        "A24",
         "C5N",
         "Crónica",
+        "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "0221",
@@ -780,7 +773,6 @@
         "Infobae",
         "Clarín",
         "Minuto Uno",
-        "Radio Mitre",
         "El Día",
         "La Nueva",
         "La Brújula 24",
@@ -876,7 +868,7 @@
       "fecha": "2026-10-07T21:25:19.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T23:31:13.741Z",
-      "relevancia": 79,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -928,6 +920,88 @@
       "foto": {
         "archivo": "fotos-notas/1qdgf5p.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "28zqic",
+      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+      "copete": "La concejal analizó el impacto económico de la reapertura del circuito y señaló que se requieren nuevas inversiones para recibir a la máxima categoría nacional.",
+      "cuerpo": "La concejal Sol Di Geronimo valoró el movimiento financiero generado en distintos rubros comerciales y familiares tras la reapertura del autódromo Juan Manuel Fangio. Durante una entrevista brindada el miércoles, la edil indicó que mantuvo diálogo con el funcionario provincial Carlos Bianco y reconoció la decisión del gobernador Axel Kicillof de destinar recursos al circuito local. Asimismo, mencionó la presencia de Diego Santilli y consideró oportuno sumar respaldo del Gobierno nacional.\n\nRespecto de las expectativas futuras, la representante política sostuvo que el circuito requerirá nuevas obras en infraestructura y mayores gestiones para lograr el regreso del Turismo Carretera a Balcarce. En ese sentido, agradeció la labor de los integrantes de la Asociación Autódromo, el Auto Club Balcarce, los empleados comunales y los colaboradores voluntarios que participaron en las tareas previas.",
+      "guion": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/di-geronimo-destaco-el-impulso-economico-del-autodromo-y-pidio-sumar-gestiones-para-el-regreso-del-tc",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T20:37:35.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T21:02:11.967Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "concejo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "La concejal analizó el impacto económico de la reapertura del autódromo.",
+        "Mantuvo contactos con funcionarios provinciales y mencionó al referente nacional Diego Santilli.",
+        "Reconoció el esfuerzo de los trabajadores y entidades que participaron en las tareas del circuito."
+      ],
+      "noConfirmado": [
+        "Todavía no se precisaron los plazos exactos ni los montos necesarios para las futuras inversiones en infraestructura.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La concejal Sol Di Geronimo analizó el impacto económico de la reapertura del autódromo local y remarcó la necesidad de realizar nuevas inversiones para lograr el regreso del Turismo Carretera a Balcarce.",
+      "etiquetas": [
+        "Sol Di Geronimo",
+        "autodromo",
+        "Turismo Carretera",
+        "Balcarce",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/di-geronimo-destaco-el-impulso-economico-del-autodromo-y-pidio-sumar-gestiones-para-el-regreso-del-tc",
+          "fecha": "2026-10-07T20:37:35.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de la concejal Sol Di Geronimo sobre el impacto económico del autódromo, las gestiones políticas y el agradecimiento a los trabajadores."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kt5uyq",
+          "titulo": "Esteban Reino destaca el impacto económico tras la reapertura del autódromo",
+          "fecha": "2026-09-30T12:59:12.000Z",
+          "ruta": "/nota/esteban-reino-destaca-el-impacto-economico-tras-la-reapertura-del-1kt5uyq"
+        },
+        {
+          "id": "37t3r4",
+          "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
+          "fecha": "2026-09-28T18:31:07.835Z",
+          "ruta": "/nota/guillen-propone-sumar-nuevos-eventos-al-autodromo-municipal-37t3r4"
+        },
+        {
+          "id": "caurxr",
+          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
+          "fecha": "2026-09-28T15:35:16.000Z",
+          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "sol-di-geronimo-pide-nuevas-gestiones-para-concretar-el-regreso-del-tc",
+      "foto": {
+        "archivo": "fotos-notas/28zqic.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -1192,7 +1266,8 @@
       "guion": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/nueva-infraccion-por-circular-con.html",
       "teniaImagenLaFuente": true,
@@ -2016,6 +2091,7 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/07/voley-balcarce-se-consagro-campeon-del-promocional-sub-21/",
@@ -2023,7 +2099,7 @@
       "fecha": "2026-10-07T14:38:16.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 77,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2786,6 +2862,7 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -2794,7 +2871,7 @@
       "fecha": "2026-10-07T13:06:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T13:31:19.995Z",
-      "relevancia": 77,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2892,6 +2969,129 @@
       "foto": {
         "archivo": "fotos-notas/45acbd.jpg",
         "credito": "Foto: Municipalidad de Balcarce"
+      }
+    },
+    {
+      "id": "131078z",
+      "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
+      "copete": "La Cámara de Diputados de la Provincia distinguirá al balcarceño por su trayectoria en el deporte adaptado y su paso por los Juegos Paralímpicos.",
+      "cuerpo": "La distinción se originó a partir de una iniciativa impulsada por el bloque UCR + Cambio Federal en la Legislatura bonaerense, según informó un medio local.\n\nEl homenaje valora su labor como integrante del cuerpo técnico de la Selección Argentina de Boccia en los Juegos Paralímpicos de Río de Janeiro 2016 y Tokio 2020, además de su trabajo sostenido para fomentar la inclusión y el desarrollo de habilidades motrices y sociales a través de la actividad física.",
+      "guion": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/agustin-molpeceres-recibira-un-reconocimiento-de-la-camara-de-diputados-bonaerense",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T12:07:32.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T13:01:24.717Z",
+      "relevancia": 65,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Cámara de Diputados bonaerense distinguirá a Agustín Molpeceres",
+        "El reconocimiento valora su trayectoria en el deporte adaptado",
+        "Integró el cuerpo técnico de la Selección Argentina de Boccia en Río 2016 y Tokio 2020"
+      ],
+      "noConfirmado": [
+        "No se informó la fecha exacta en la que se realizará la entrega formal del reconocimiento",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El balcarceño Agustín Molpeceres recibirá un reconocimiento de la Cámara de Diputados bonaerense por su trayectoria en el deporte adaptado y su participación en los Juegos Paralímpicos.",
+      "etiquetas": [
+        "Agustín Molpeceres",
+        "deporte adaptado",
+        "Legislatura bonaerense",
+        "Balcarce",
+        "Juegos Paralímpicos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/agustin-molpeceres-recibira-un-reconocimiento-de-la-camara-de-diputados-bonaerense",
+          "fecha": "2026-10-07T12:07:32.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el reconocimiento legislativo al balcarceño Agustín Molpeceres por su trayectoria en el deporte adaptado y su participación en los Juegos Paralímpicos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1xow9qi",
+          "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
+          "fecha": "2026-09-30T19:34:59.000Z",
+          "ruta": "/nota/agustin-molpeceres-recibe-un-reconocimiento-legislativo-en-la-1xow9qi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "agustin-molpeceres-recibe-una-distincion-de-la-legislatura-bonaerense",
+      "foto": {
+        "archivo": "fotos-notas/131078z.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "copete": "El piloto balcarceño completó una buena actuación en el autódromo de 9 de Julio. En tanto, Ariel Ianni y Mario Alberghini sufrieron inconvenientes y abandonaron la final.",
+      "cuerpo": "El piloto Francisco Tamagno completó el fin de semana en el octavo puesto de la octava fecha de la Clase \"B\" del Procar 4000, disputada en el autódromo Guillermo Maldonado de 9 de Julio, según informó un medio local. Con su cupé Dodge, el balcarceño mantuvo un ritmo firme, avanzó en el clasificador a pesar de algunos problemas en los frenos y cerró la competencia dentro del pelotón de vanguardia que encabezó Germán Pietranera.\n\nPor el contrario, los otros representantes locales sufrieron distintos inconvenientes y no pudieron terminar la prueba decisiva. Ariel Ianni debió abandonar en el inicio tras un toque que lo sacó de pista con su Ford Falcon, mientras que Mario Alberghini dejó la competencia en la segunda vuelta debido a una falla en el motor de su Torino.",
+      "guion": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T12:01:15.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T12:31:19.165Z",
+      "relevancia": 79,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Francisco Tamagno terminó en el octavo puesto con su Dodge",
+        "Ariel Ianni abandonó la final tras un despiste en el arranque",
+        "Mario Alberghini dejó la carrera en la segunda vuelta por una falla mecánica",
+        "Germán Pietranera se impuso en la clasificación y en la primera serie"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El piloto Francisco Tamagno terminó octavo en la octava fecha del Procar 4000 en 9 de Julio. Ariel Ianni y Mario Alberghini debieron abandonar la competencia final.",
+      "etiquetas": [
+        "Procar 4000",
+        "Francisco Tamagno",
+        "deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+          "fecha": "2026-10-07T12:01:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados y el desarrollo de la competencia de los pilotos balcarceños en 9 de Julio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "francisco-tamagno-termina-octavo-en-la-octava-fecha-del-procar-4000",
+      "foto": {
+        "archivo": "fotos-notas/y4gp3v.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -3181,87 +3381,72 @@
       }
     },
     {
-      "id": "vm4nnt",
-      "titulo": "Científicos protestan en Mar del Plata por el sumario a la investigadora del INTA",
-      "copete": "La investigadora Virginia Aparicio y voluntarios del proyecto SPRINT se manifestaron frente a la Catedral marplatense para exigir que se conozcan los resultados sobre plaguicidas.",
-      "cuerpo": "La investigadora del INTA Balcarce y del CONICET Virginia Aparicio participó de una protesta el martes frente a la Catedral de Mar del Plata junto a un voluntario del proyecto internacional SPRINT y representantes del STM. Reclamaron conocer los resultados de la investigación sobre plaguicidas y cuestionaron el sumario administrativo que enfrenta la científica, un proceso que podría derivar en su exoneración.\n\nEl caso genera rechazo en sectores científicos y gremiales desde que trascendió la posible medida disciplinaria contra la especialista.",
-      "guion": "Científicos protestan en Mar del Plata por el sumario a investigadora del INTA",
-      "seccion": "Agro",
+      "id": "18wlubj",
+      "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+      "copete": "El piloto argentino afronta una nueva fecha de la Fórmula 1 en un circuito callejero exigente. La competencia incluirá por primera vez el formato Sprint.",
+      "cuerpo": "Franco Colapinto afronta desde el viernes el Gran Premio de Singapur en una exigente cita del calendario de la Fórmula 1. La competencia incluirá por primera vez el formato Sprint, lo que dejará apenas una sesión de entrenamientos libres para que los equipos encuentren la puesta a punto.\n\nPara el piloto argentino significará el regreso a un trazado urbano donde compitió por primera vez hace dos años en una prueba nocturna, según informó la fuente.\n\nEl circuito de Marina Bay combina altas temperaturas, humedad tropical y muros cercanos que exigen precisión constante al volante. \"La pista es implacable y muy divertida para manejar\", expresó el deportista en la previa sobre el trazado.",
+      "guion": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+      "seccion": "Automovilismo",
       "medios": [
-        "Diario La Vanguardia",
-        "Infórmese Primero (FM 104.9)"
+        "Clarín",
+        "La Brújula 24"
       ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45014-protesta-en-mar-del-plata-por-el-sumario-a-una-cientifica-del-inta-balcarce-reclaman-conocer-los-resultados-del-estudio-sobre-plaguicidas/",
+      "enlace": "https://www.clarin.com/deportes/formula-1-singapur-colapinto-llega-circuitos-favoritos-ano-delicado-momento-alpine_0_TtFxoxGmVe.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T07:07:26.606Z",
-      "sinFecha": true,
-      "visto": "2026-10-07T07:07:26.606Z",
-      "relevancia": 63,
-      "local": true,
+      "fecha": "2026-10-07T09:01:08.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T11:01:25.302Z",
+      "relevancia": 47,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "inta"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "Protesta en Mar del Plata por el sumario a Virginia Aparicio",
-        "Reclaman conocer los datos del proyecto SPRINT sobre plaguicidas",
-        "El INTA analiza una sanción contra la investigadora del organismo",
-        "Representantes del STM acompañaron la manifestación"
+        "Franco Colapinto corre este fin de semana en Singapur.",
+        "La competencia tendrá formato Sprint por primera vez en este circuito.",
+        "El piloto argentino afronta el desafío en un trazado callejero muy exigente."
       ],
-      "seSabe": [
-        "Virginia Aparicio es investigadora de la Estación Experimental Balcarce del INTA y del CONICET",
-        "La científica participó de una protesta frente a la Catedral de Mar del Plata el martes",
-        "El INTA inició un sumario administrativo contra la investigadora",
-        "El proyecto SPRINT analizó la presencia de plaguicidas en personas y ambientes"
-      ],
-      "noConfirmado": [
-        "Si se concretará la exoneración de la investigadora",
-        "Los resultados definitivos del estudio internacional en la región"
-      ],
-      "textoRedes": "Investigadores y voluntarios protestaron en Mar del Plata contra el sumario administrativo que enfrenta una científica del INTA Balcarce y reclamaron difundir los datos sobre plaguicidas.",
+      "textoRedes": "Franco Colapinto compite este fin de semana en el Gran Premio de Singapur. La exigente prueba callejera incluirá por primera vez el formato Sprint y una sola práctica libre.",
       "etiquetas": [
-        "INTA Balcarce",
-        "Virginia Aparicio",
-        "Mar del Plata",
-        "plaguicidas",
-        "Conicet"
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Singapur"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45014-protesta-en-mar-del-plata-por-el-sumario-a-una-cientifica-del-inta-balcarce-reclaman-conocer-los-resultados-del-estudio-sobre-plaguicidas/",
-          "fecha": "2026-10-06T21:21:00.000Z",
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/formula-1-singapur-colapinto-llega-circuitos-favoritos-ano-delicado-momento-alpine_0_TtFxoxGmVe.html",
+          "fecha": "2026-10-07T09:01:08.000Z",
           "oficial": false,
-          "aporte": "Detalló la participación de la investigadora y el respaldo gremial del STM en la protesta de Mar del Plata."
+          "aporte": "Detalló que Alpine está a 22 puntos de Racing Bulls y que el piloto corrió allí hace dos años."
         },
         {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-6-18-21-0-protesta-en-mar-del-plata-por-el-sumario-a-una-cientifica-del-inta-reclaman-conocer-los-resultados-de-un-estudio-sobre-plaguicidas",
-          "fecha": "2026-10-06T21:21:00.000Z",
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/07/colapinto-llega-a-uno-de-sus-circuitos-favoritos-con-alpine-obligado-a-reaccionar-n524274/",
+          "fecha": "2026-10-07T10:12:10.000Z",
           "oficial": false,
-          "aporte": "Confirmó la presencia de la científica y un voluntario en la concentración frente a la Catedral el martes."
+          "aporte": "Informó que el Gran Premio de Singapur comienza el viernes e incluye formato Sprint."
         }
       ],
       "antecedentes": [
         {
-          "id": "1fp9m4l",
-          "titulo": "El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica",
-          "fecha": "2026-09-28T18:31:07.835Z",
-          "ruta": "/nota/el-inta-balcarce-enfrenta-una-polemica-por-la-posible-exoneracion-de-1fp9m4l"
+          "id": "1ppws54",
+          "titulo": "Alpine elige una foto de Colapinto para anunciar el GP de Bahréin",
+          "fecha": "2026-09-28T10:57:11.000Z",
+          "ruta": "/nota/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-1ppws54"
         },
         {
-          "id": "mxjwi9",
-          "titulo": "Científicos y organizaciones protestan contra la sanción a Virginia Aparicio",
-          "fecha": "2026-10-06T10:50:02.000Z",
-          "ruta": "/nota/cientificos-y-organizaciones-protestan-contra-la-sancion-a-virginia-mxjwi9"
+          "id": "zd48ar",
+          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "ruta": "/nota/el-respaldo-de-juan-pablo-montoya-a-franco-colapinto-en-la-formula-1-zd48ar"
         },
         {
-          "id": "18wosri",
-          "titulo": "El INTA Rafaela implementa cruzamientos entre ganado lechero y carnicero",
-          "fecha": "2026-10-06T10:35:48.000Z",
-          "ruta": "/nota/el-inta-rafaela-implementa-cruzamientos-entre-ganado-lechero-y-18wosri"
+          "id": "17f0jbe",
+          "titulo": "Alpine analiza el desempeño de Colapinto y Gasly tras Azerbaiyán",
+          "fecha": "2026-09-25T15:18:00.000Z",
+          "ruta": "/nota/alpine-analiza-el-desempeno-de-colapinto-y-gasly-tras-azerbaiyan-17f0jbe"
         }
       ],
       "verificacion": {
@@ -3269,10 +3454,10 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "cientificos-protestan-en-mar-del-plata-por-el-sumario-a-investigadora",
+      "slug": "franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de",
       "foto": {
-        "archivo": "fotos-notas/vm4nnt.jpg",
-        "credito": "Foto: Diario La Vanguardia"
+        "archivo": "fotos-notas/18wlubj.jpg",
+        "credito": "Foto: Clarín"
       }
     },
     {
@@ -3661,6 +3846,59 @@
       }
     },
     {
+      "id": "tlcnz1",
+      "titulo": "Hacelo Corto Balcarce celebra su octava edición con 19 producciones",
+      "copete": "El festival de cortometrajes reunió trabajos de distintas escuelas del distrito. La temática central giró en torno al sesquicentenario de la ciudad.",
+      "cuerpo": "La Escuela de Educación Secundaria Técnica Nº 1 albergó la octava edición del festival Hacelo Corto Balcarce. Estudiantes y docentes de la Tecnicatura en Multimedios organizaron el encuentro audiovisual que convocó a 19 producciones de diferentes establecimientos educativos locales.\n\nLa temática principal abordó la historia, la identidad y la cultura local en conmemoración del sesquicentenario del distrito. Los trabajos compitieron en categorías destinadas a nivel primario, ciclo básico y ciclo superior, y el jurado premió distintos rubros como mejor cortometraje, actuación, guion, realización audiovisual y arte.",
+      "guion": "Hacelo Corto Balcarce celebra su octava edición con diecinueve producciones",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-06T23:52:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T14:27:45.295Z",
+      "relevancia": 81,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se realizó la octava edición del festival de cortometrajes Hacelo Corto Balcarce con la participación de diecinueve producciones escolares centradas en la historia y la identidad local.",
+      "etiquetas": [
+        "Hacelo Corto",
+        "cortometrajes",
+        "educacion",
+        "escuelas",
+        "cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168",
+          "fecha": "2026-10-07T12:01:47.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la octava edición del festival Hacelo Corto Balcarce y los establecimientos premiados."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "hacelo-corto-balcarce-celebra-su-octava-edicion-con-19-producciones",
+      "foto": {
+        "archivo": "fotos-notas/tlcnz1.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "e3ix5w",
       "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "copete": "Detectan mensajes fraudulentos dirigidos a conductores que transitan por la región. Utilizan la automatización del peaje El Dorado como ardid.",
@@ -3723,116 +3961,6 @@
       "foto": {
         "archivo": "fotos-notas/e3ix5w.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "17q8tbm",
-      "titulo": "El Senado bonaerense sanciona la ley que regula los celulares en escuelas",
-      "copete": "La norma alcanza a los establecimientos secundarios de gestión estatal y privada de toda la provincia. La iniciativa fue presentada por el legislador Martín Rozas.",
-      "cuerpo": "El Senado de la provincia de Buenos Aires aprobó una ley para normar el empleo de teléfonos celulares y otras pantallas tecnológicas en los establecimientos secundarios. La medida abarca tanto a las instituciones educativas de gestión estatal como privada del territorio bonaerense.\n\nEl proyecto tuvo su sanción definitiva durante la cuarta sesión ordinaria del cuerpo legislativo. La propuesta original pertenece al diputado provincial Martín Rozas.\n\nEn los fundamentos del texto, el legislador mencionó que naciones como Francia, Estados Unidos, Alemania, Noruega y China implementaron medidas semejantes con resultados favorables en el aprendizaje. Asimismo, remarcó que la interacción cara a cara resulta clave para el desarrollo de habilidades sociales y advirtió sobre los riesgos del aislamiento por el uso excesivo de dispositivos.",
-      "guion": "El Senado bonaerense sanciona la ley que regula los celulares en escuelas",
-      "seccion": "Política",
-      "medios": [
-        "QZ Noticias (Mar del Plata)",
-        "TN (Todo Noticias)",
-        "El Día",
-        "0221",
-        "La Tecla",
-        "La Verdad",
-        "La Opinión",
-        "Infoeme",
-        "La Voz del Pueblo",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Punto Noticias",
-        "El Eco de Tandil",
-        "Diputados Bonaerenses",
-        "Agencia DIB",
-        "La Brújula 24",
-        "La Nueva"
-      ],
-      "enlace": "https://www.eleco.com.ar/provincia/el-senado-bonaerense-sanciono-la-ley-que-regula-el-uso-de-celulares-en-escuelas-secundarias",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T22:55:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T12:31:19.165Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Senado bonaerense aprobó la ley que regula el uso de celulares.",
-        "La medida alcanza a las escuelas secundarias estatales y privadas.",
-        "La iniciativa fue impulsada por el diputado provincial Martín Rozas."
-      ],
-      "seSabe": [
-        "El Senado bonaerense aprobó el proyecto durante su cuarta sesión ordinaria.",
-        "La norma regula el uso de celulares y pantallas en secundarias públicas y privadas.",
-        "La iniciativa fue presentada por el diputado Martín Rozas."
-      ],
-      "textoRedes": "El Senado bonaerense sancionó la ley que regula el uso de teléfonos celulares y pantallas en las escuelas secundarias estatales y privadas de la provincia. La iniciativa fue impulsada por el diputado Martín Rozas.",
-      "etiquetas": [
-        "Senado bonaerense",
-        "celulares",
-        "escuelas secundarias",
-        "Martín Rozas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/provincia/el-senado-bonaerense-sanciono-la-ley-que-regula-el-uso-de-celulares-en-escuelas-secundarias",
-          "fecha": "2026-10-07T11:47:57.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre los fundamentos del diputado Rozas y la sesión ordinaria."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/regulan-ley-el-uso-celulares-escuelas-secundarias-bonaerenses-n56300",
-          "fecha": "2026-10-07T11:52:58.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la ley regula el uso en escuelas públicas y privadas."
-        },
-        {
-          "medio": "Diputados Bonaerenses",
-          "enlace": "https://diputadosbsas.com.ar/regulan-celulares-en-escuelas-secundarias/",
-          "fecha": "2026-10-07T12:18:00.000Z",
-          "oficial": false,
-          "aporte": "Identificó al diputado autor del proyecto como Martín Rozas."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/regulan-por-ley-el-uso-de-celulares-en-escuelas-secundarias-bonaerenses/",
-          "fecha": "2026-10-07T12:16:01.000Z",
-          "oficial": false,
-          "aporte": "Agregó que la norma incluye a teléfonos celulares y otras pantallas tecnológicas."
-        },
-        {
-          "medio": "Infoeme",
-          "enlace": "https://www.infoeme.com/informacion-general/2026-10-7-9-29-54-regulan-por-ley-el-uso-de-celulares-en-escuelas-secundarias-bonaerenses",
-          "fecha": "2026-10-07T12:29:54.000Z",
-          "oficial": false,
-          "aporte": "Ratificó la aprobación de la ley en el Senado provincial para escuelas secundarias."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "165tzq5",
-          "titulo": "El Senado bonaerense evalúa multas millonarias por escapes libres",
-          "fecha": "2026-09-24T14:42:25.611Z",
-          "ruta": "/nota/el-senado-bonaerense-debate-multas-por-escapes-libres-en-balcarce-165tzq5"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-senado-bonaerense-sanciona-la-ley-que-regula-los-celulares-en",
-      "foto": {
-        "archivo": "fotos-notas/17q8tbm.jpg",
-        "credito": "Foto: Diputados Bonaerenses"
       }
     },
     {
@@ -3991,16 +4119,16 @@
     "Deportes",
     "Economía",
     "Balcarce",
-    "Agro",
     "Cultura y agenda",
     "Política",
+    "Agro",
     "Argentina"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 3
+      "cuantas": 4
     }
   ],
   "clima": {
@@ -4381,16 +4509,16 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "6hubq6",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "13wfgz4",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "55yszw",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "1tcxxsy",
@@ -4411,16 +4539,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1edj7ut",
-      "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
       "id": "skjezu",
       "titulo": "Alumnos del Colegio Modelo Lomas usaron IA para “desnudar”…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1qmt02i",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "zvqrlj",
@@ -4439,6 +4567,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "187swo1",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "531xz2",
@@ -4477,5 +4611,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 5
 }

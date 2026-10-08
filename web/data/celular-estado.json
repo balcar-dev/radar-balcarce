@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T09:31:14.853Z",
- "portada": 45,
- "archivo": 1062,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-08T10:01:38.265Z",
+ "portada": 48,
+ "archivo": 1061,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-08T09:31:14.888Z",
+  "generado": "2026-10-08T10:01:38.301Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 49,
     "notas": [
      {
       "id": "2i73nb",
@@ -108,9 +108,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1d48tdj",
-      "titulo": "Detectan maquinaria pesada en caminos rurales de El Verano",
-      "seccion": "Agro"
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo"
      },
      {
       "id": "10cpafd",
@@ -126,12 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 48,
     "notas": [
      {
       "id": "ajdznk",
       "titulo": "Boca arma un equipo mixto para visitar a Instituto",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "28zqic",
+      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+      "seccion": "Automovilismo"
      },
      {
       "id": "7gf331",
@@ -141,11 +146,6 @@
      {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce"
      }
     ]
@@ -157,11 +157,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 43,
+    "segundos": 52,
     "notas": [
      {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce"
      },
      {
@@ -170,8 +170,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1boxf4v",
+      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
       "seccion": "Balcarce"
      }
     ]
