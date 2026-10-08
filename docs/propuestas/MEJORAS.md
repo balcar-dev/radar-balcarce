@@ -33,7 +33,7 @@ no por la dificultad.
 | C-3 | **Next 15 deja de recibir parches** | **21/10** | El sitio queda con fallas de seguridad conocidas sin arreglo | 1 h (parche) + 1-2 días (Next 16) |
 | C-4 | **Las máquinas de GitHub pasan a Ubuntu 26** | **Desde el 19/10** | Algún robot puede fallar el día del cambio | 2 h para probar antes |
 | C-5 | **Un archivo de datos roto se lee como vacío** | Cualquier día (ya pasó el 25/09) | Se pueden perder hasta 180 días de páginas | 3 h |
-| C-6 | **El tope de 2.500 notas** | **Alrededor del 2/11** | Las notas empiezan a perder su página a los ~43 días en vez de a los 180 | Decisión + 2 h |
+| C-6 | **El tope de 2.500 notas** (un número que puso el proyecto, por un límite de Cloudflare) | **Alrededor del 2/11** | Las notas viejas pierden su página y sus datos | 2 h (subir el tope) + plan para guardar el 100 % |
 | C-7 | **Unas 20 pruebas atadas a los datos reales de efemérides y feriados** | Al armar noviembre (fin de octubre) | Otra vez la web congelada | 2-6 h (junto con C-18) |
 | C-8 | **Los datos de seguimiento comercial quedarían públicos** | El día del primer mensaje a un comercio | Cualquiera ve a quién se le ofreció qué y quién dijo que no | 1 h |
 | C-9 | **Los reels con voz de IA salen sin la etiqueta de IA de Meta** | Ya (lo pide Meta) | Meta puede bajar el alcance o sancionar | Decisión + 2-4 h |
@@ -163,17 +163,41 @@ Ninguna prueba revisa esos dos archivos.
 - **Consecuencia:** `web/scripts/recuperar-archivo.mjs` **no se borra** (la propuesta Borrar-c lo
   incluía): es el rescate justo para este caso.
 
-### C-6 · El tope de 2.500 notas, alrededor del 2/11 — *Confirmado; decisión*
+### C-6 · El tope de 2.500 notas, y guardar el 100 % año tras año — *Confirmado; decidido el 8/10*
 
-Entran 55 a 60 notas por día al archivo y hay unas 1.060. Al llegar a 2.500, las notas que no salieron
-en redes pierden la página a los ~43 días, no a los 180, y Google empieza a encontrar 404. El tope se
-puso por Cloudflare, pero sobra margen: hoy el sitio tiene ~3.300 archivos y el límite es 20.000.
+**Qué es el tope.** Es un número que **puso el propio proyecto** en el código (`web/lib/archivo.js:185-191`):
+no es un impuesto ni una regla de nadie de afuera. Se puso por un límite real de Cloudflare Pages, que
+acepta **hasta 20.000 archivos por publicación** en el plan gratis, y porque cada nota suma tiempo de
+armado. Cada nota son unos 3 archivos (la página, su copia para navegar rápido y su imagen para compartir).
+Hoy el sitio tiene 3.315 archivos. Además de las 2.500, una nota pierde su página a los 180 días.
 
-- **Evidencia:** `web/lib/archivo.js:185-191`; conteo de `web/out`; notas por día del 29/09 al 7/10:
-  56, 85, 67, 68, 43, 35, 48, 55, 77.
-- **Opciones:** subir el tope a ~5.000 (unos 14.000 archivos) midiendo cuánto tarda el armado, o
-  bajar los 180 días a lo que de verdad pasa y cuidar el sitemap.
-- **Recordar:** el número vive en `ingesta/criterio.mjs` **y** en `web/lib/archivo.js`.
+**Qué pasa si no se toca:** cerca del 2/11 se llega a 2.500 y, para que entren las nuevas, las más viejas
+pierden su página (y sus datos se sacan del archivo). Nada se rompe, pero se pierden notas.
+
+**Decisión de Hernán y Andrés (8/10):** guardar el **100 % de los datos, año tras año**, desde ahora.
+
+**El problema de guardar todo como páginas:** son unas 21.000 notas por año, o sea ~63.000 archivos. Eso
+pasa el límite gratis de Cloudflare (20.000) en pocos meses. El plan pago de Cloudflare (US$ 5) llega a
+unos 100.000 archivos (a confirmar): tampoco alcanza para siempre.
+
+**El plan propuesto: separar "guardar" de "tener página".**
+1. **Guardar todo, siempre (los datos):** cada nota publicada se agrega a un archivo histórico por mes
+   (`web/data/historico/2026-10.json`, etc.) con título, bajada, cuerpo, fuentes, foto, fecha, sección y
+   firma. **Nunca se poda.** Pesa unos 4 KB por nota: ~85 MB por año. Las retiradas a mano se marcan como
+   retiradas y no se muestran, pero el registro queda.
+2. **Páginas fijas para lo reciente:** las notas de los últimos meses siguen siendo páginas armadas, como hoy.
+3. **Páginas para lo viejo, sin archivos de más:** una sola función de Cloudflare (gratis hasta 100.000
+   visitas por día) arma en el momento la página de cualquier nota vieja leyendo el archivo del mes. La
+   dirección de cada nota no cambia nunca. Son unos pocos archivos por mes, no miles.
+4. **Buscador de todo** con Pagefind (sección Herramientas).
+5. **Las fotos** son lo que más pesa (~4 MB por día, ~1,5 GB por año en git). Antes de fin de año conviene
+   sacarlas a un depósito (R2-fotos). R2 pide tarjeta aunque no cobre: es una decisión.
+
+**Mientras tanto (antes del 2/11):** subir el tope (por ejemplo a 5.000 notas, unos 15.000 archivos) y que
+lo que salga del archivo vaya al histórico en vez de borrarse. Así no se pierde nada mientras se arma lo
+demás. Hoy no se perdió ninguna nota: el archivo empezó a mediados de septiembre.
+
+**Recordar:** los números viven en `ingesta/criterio.mjs` **y** en `web/lib/archivo.js`.
 
 ### C-7 · Pruebas atadas a los datos de efemérides y feriados — *Confirmado con una simulación*
 
@@ -226,7 +250,10 @@ no marca nada.
   [guía de publicación directa de TikTok](https://developers.tiktok.com/doc/content-posting-api-reference-direct-post).
 - **Propuesta:** si la API no deja, una línea fija "Voz generada con IA" en el texto y en la bio de
   Instagram. Implica cambiar las reglas 6 y 4.6 del criterio.
-- **Decisión de Hernán y Andrés.**
+- **Decisión de Hernán y Andrés (8/10):** avisar con una línea de texto en el posteo (por ejemplo "Voz
+  generada con IA"), **no** con la etiqueta visual de Meta. El campo `is_ai_generated` pone una etiqueta
+  visible, así que **no se usa**. Riesgo a tener en cuenta: Meta podría poner la etiqueta por su cuenta si
+  detecta la voz; si pasa, se revisa.
 
 ### C-10 · Lo rojo aprobado por una persona se publica — *Confirmado; no se toca sin preguntar*
 
@@ -662,24 +689,37 @@ día; prueba con un Meta simulado que publica y contesta error.
 - **No usar Google Places**: sus condiciones prohíben mostrar los datos en un mapa que no sea de Google y
   obligan a borrar las coordenadas a los 30 días.
 
-### Respaldo (backup) de todo — *Propuesta nueva · nivel 1-2*
+### Respaldo (backup) de todo — *Propuesta · decidido hacerlo el 8/10*
 
-**¿Corresponde? Sí.** Hoy todo vive en una sola cuenta de GitHub. Si GitHub la suspende (por ejemplo, por un
-reclamo de derechos de autor por una foto, ver R2-fotos), se pierden juntos el motor, los robots y la web.
+**¿Por qué hoy depende todo de GitHub?** Porque ahí está todo junto: el código, los datos (las notas, las
+correcciones, las decisiones), las fotos y los robots que corren cada media hora. Cloudflare solo guarda la
+última copia armada del sitio. Si GitHub suspendiera la cuenta (por ejemplo, por un reclamo de derechos de
+autor por una foto), **la web seguiría en el aire pero congelada**, las redes dejarían de salir, y sin copia
+se perdería la historia.
 
-**Qué respaldar y cómo:**
+**El flujo propuesto: cuatro copias, cada una en un lugar distinto.**
 
-| Qué | Cómo | Costo |
-|---|---|---|
-| El repositorio entero (código, datos, fotos, historia) | Una copia espejo automática semanal en otro servicio (GitLab o Codeberg, gratis) o en un repositorio privado, y una copia en la PC de Hernán o Andrés una vez por mes | US$ 0 |
-| Los datos que escriben las personas (`correcciones`, `retiradas`, `celular-decisiones`, `contactos-celular`) | Van dentro del espejo; además, un adjunto semanal de Actions con un .zip de `web/data/` (90 días) | US$ 0 |
-| Las piezas de redes (mp4 y mp3) | Ver Q1: hoy se guardan 3 días | US$ 0 |
-| La lista de claves y dónde está cada una (**los nombres, nunca los valores**) | Un documento privado con qué secreto existe, para qué sirve y dónde se renueva | US$ 0 |
-| La configuración de Cloudflare, cron-job.org y Meta | Capturas o un documento privado, una vez | US$ 0 |
-| Las dos voces | No se pueden exportar: viven en el proyecto de Google. Anotar sus ids y el texto con que se crearon (ya en `CRITERIO-REDES.md`) para poder recrearlas parecidas | — |
+| # | Dónde | Qué se copia | Cada cuánto | Qué hace falta (persona) | Costo |
+|---|---|---|---|---|---|
+| 1 | **GitHub** (el original) | Todo | Siempre | Nada | US$ 0 |
+| 2 | **GitLab** (otro servicio, proyecto privado) | El repositorio entero, con toda su historia | Una vez por semana, solo, desde un robot | Crear una cuenta con `radarbalcarce@gmail.com`, un proyecto privado y una llave; pegar la llave como secreto de GitHub (`GITLAB_TOKEN`) | US$ 0 (el plan gratis guarda varios GB por proyecto; a confirmar el número exacto) |
+| 3 | **Google Drive** de `radarbalcarce@gmail.com` | Un solo archivo con todo el repositorio y su historia (`git bundle`), un .zip de `web/data/` y la lista de claves (solo los nombres) | Una vez por semana; se guardan las últimas 8 semanas y una por mes | Dar permiso una vez para que el robot suba a Drive (se pega como secreto) | US$ 0 (15 GB gratis, compartidos con el Gmail) |
+| 4 | **La PC** (y un pendrive o disco externo) | Una copia completa | Una vez por mes, con un `RESPALDAR.bat` que la baja y la guarda con la fecha | Enchufar el pendrive y hacer doble clic | US$ 0 |
 
-**¿Sirve?** Sí, sobre todo por el riesgo de cuenta única. Un espejo semanal más una prueba de restauración por
-año (que alguien baje la copia y vea que se arma) alcanza. 2 a 3 h.
+**Además:**
+- **Un aviso si el respaldo falla** (en el WhatsApp de las 21, y en el vigilante).
+- **Una prueba de restauración por año:** alguien baja la copia de GitLab o Drive y comprueba que el sitio se
+  arma. Un respaldo que nunca se probó no se sabe si sirve.
+- **Un documento privado** con qué cuentas existen, qué secretos hay y dónde se renueva cada uno (**los nombres,
+  nunca las claves**). Va en el Drive.
+- **Las dos voces no se pueden copiar** (viven en el proyecto de Google). Se anota con qué texto se crearon
+  (ya está en `CRITERIO-REDES.md`) para poder rehacerlas parecidas.
+
+**Descartado por ahora:** Codeberg (pide que el proyecto sea de código libre) y Bitbucket (1 GB por
+repositorio en el plan gratis: no alcanza para las fotos).
+
+**Trabajo:** 3 a 4 horas de código, más 20 minutos de una persona para crear la cuenta de GitLab y dar el
+permiso de Drive.
 
 ### Auditoría de fotos — *Propuesta nueva · nivel 2-3*
 
@@ -1222,7 +1262,15 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
 ## Decisiones que necesitan a Hernán y Andrés
 
 0. **C-0:** frenar ya la corrección automática de la auditoría y arreglar las dos notas rotas.
-0. **Decidido el 8/10:** las efemérides salen salvo que Hernán diga que no, y el mes siguiente se arma el día 20.
+0. **Decidido el 8/10:**
+   - Las efemérides salen salvo que Hernán diga que no, y el mes siguiente se arma el día 20.
+   - Las pruebas completas no corren cada media hora: solo cuando cambia el código y una vez por noche.
+   - Se arma el respaldo en cuatro lugares (GitHub, GitLab, Google Drive y la PC).
+   - El aviso de voz con IA va como texto en el posteo, sin la etiqueta visual de Meta.
+   - Se guarda el 100 % de las notas, año tras año.
+   - Las voces siguen con Gemini por ahora, abiertas a probar otras.
+   - **El panel no decide si algo sale ni si las pruebas pasan.** Se rediseña después, cuando el flujo esté
+     rearmado. Mientras tanto, nadie toca el feriado del 12/10 ni la efeméride del 11/10.
 0. **C-18:** no tocar el feriado del 12/10 ni la efeméride del 11/10 en el celular hasta el 13/10.
 1. **C-1:** si se arregla la prueba antes del lunes 12/10.
 2. **C-2:** la regla de "ningún script de terceros" y cómo se separa el panel (detalle en el documento privado).

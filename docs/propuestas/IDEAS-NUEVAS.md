@@ -234,7 +234,13 @@ ancho; en GitHub sería parecido) y hay que medir que no atrase los horarios.
 de ffmpeg (zoom y fundidos, más rápido pero menos control).
 **Cuidado:** el movimiento no puede tapar el crédito de la foto ni la marca de la sección; nada de música sin
 licencia; en Policiales sigue sin haber foto real.
-**Estado:** técnica comprobada con los ejemplos; falta decidir cuál gusta y medir el tiempo en GitHub.
+**Estado:** técnica comprobada con los ejemplos. **Les gustó (8/10).** Decidido:
+- **Ninguna pieza queda con la imagen fija**: todas llevan alguna animación, porque tienen voz.
+- **Todas llevan los subtítulos de la voz**, siempre en la misma franja (arriba del pie), con el mismo estilo
+  de hoy: la palabra que se dice en rojo. Los ejemplos ya los muestran así.
+- **Una sola estética para todas:** mismas letras, colores, pie y barra de avance.
+- **La semana que viene** se unifican los criterios, se repasan todas las piezas y se elige la animación de
+  cada una. Falta medir cuánto tarda en armarse en GitHub.
 
 ### Podcast, YouTube y TikTok (RS)
 
@@ -443,7 +449,8 @@ probó. Las que reemplazan algo que ya existe también están en `MEJORAS.md` (s
 ### Descartadas por ahora
 
 - **Licencia que no conviene:** aeneas, whisper-timestamped y RSSHub (AGPL).
-- **Voces gratis (Piper, Kokoro, sherpa-onnx) y ElevenLabs:** no están descartadas. Hernán y Andrés
+- **Voces gratis (Piper, Kokoro, sherpa-onnx) y ElevenLabs:** no están descartadas. Por ahora se sigue con
+  Gemini (decisión del 8/10). Hernán y Andrés
   dijeron (8/10) que las voces siguen abiertas a cualquier cambio. Hoy chocan con la regla "la voz no se
   cambia", que también se puede revisar; quedan para evaluar escuchándolas (las voces en castellano de Kokoro
   no son rioplatenses).
