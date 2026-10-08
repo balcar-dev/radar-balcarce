@@ -429,6 +429,13 @@ export function problemasDelContrato(contrato, { redesActivas = true } = {}) {
           : `${red.nombre}: no salió ${que} de ${p.etiqueta} de las ${p.hora}, y ya se cerró su ventana. Si ese día no había notas para contar, es normal.`,
       });
     }
+    // R-4 (8/10/2026): lo que el cronograma traía ese día además de lo fijo (efeméride, feriado, agenda, Participá, avisos de clima).
+    for (const p of red.extrasFaltan ?? []) {
+      lista.push({
+        clave: `falta-${red.red}-${p.id}`, nivel: 'media',
+        texto: `${red.nombre}: no salió ${p.tipo === 'REELS' ? 'el reel' : 'la historia'} de ${p.etiqueta} de las ${p.hora}, y ya se cerró su ventana. Si ese día había más de ocho historias, el tope pudo sacarla a propósito.`,
+      });
+    }
     if (red.posteos.sinEspejo.length) {
       lista.push({ clave: `sin-espejo-${red.red}`, nivel: 'media', texto: `Instagram: ${red.posteos.sinEspejo.length} posteo(s) de Facebook de hoy no tienen su foto en el feed (${red.posteos.sinEspejo.map((e) => e.titulo).join(' | ').slice(0, 90)}).` });
     }

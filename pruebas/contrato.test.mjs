@@ -11,10 +11,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  contratoDelDia, piezasDelContrato, estadoDeLaPieza, textoContrato, lineaDeRed, contratoCompleto,
+  contratoDelDia, piezasDelContrato, EXTRAS_DESDE, estadoDeLaPieza, textoContrato, lineaDeRed, contratoCompleto,
   candidatasSinPublicar, PODCASTS, CONTRATO_DESDE,
 } from '../redes/contrato.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
+import { problemasDelContrato } from '../redes/vigilar.mjs';
 import { HORAS_REELS } from '../redes/piezas.mjs';
 
 const REAL = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, 'libro-real-24-25-09.json'), 'utf8'));
@@ -255,4 +256,49 @@ test('los semanales van aparte: los teléfonos útiles no cuentan en las 6 histo
 
 test('el contrato rige desde el 25/09', () => {
   assert.equal(CONTRATO_DESDE, '2026-09-25');
+});
+
+// ---------------------------------------- R-4 (8/10/2026): el contrato y el vigilante miran lo que el cronograma trae de más
+
+test('desde el 9/10 el contrato también mira la efeméride, el feriado y Participá; si se cierra su ventana sin salir, falta', () => {
+  assert.equal(EXTRAS_DESDE, '2026-10-09');
+  // 12/10: feriado (8:00), efeméride (9:00) y Participá (12:00) además de lo fijo.
+  const piezas = piezasDelContrato('2026-10-12').filter((p) => p.semanal).map((p) => p.id);
+  for (const id of ['reel:efemeride', 'historia:efemeride', 'historia:feriado', 'historia:participa-noticias']) assert.ok(piezas.includes(id), `falta ${id}`);
+  // Lo fijo sigue igual: 3 reels y 6 historias.
+  const fijas = piezasDelContrato('2026-10-12').filter((p) => !p.semanal);
+  assert.equal(fijas.filter((p) => p.grupo === 'reel').length, 3);
+  assert.equal(fijas.length, 9);
+
+  const libro = libroCompleto('2026-10-12');
+  const cierre = AR('2026-10-12', '23:50');
+  const sin = contratoDelDia({ libro, fecha: '2026-10-12', ahora: cierre }).instagram;
+  assert.deepEqual(sin.extrasFaltan.map((p) => p.id).sort(), ['historia:efemeride', 'historia:feriado', 'historia:participa-noticias', 'reel:efemeride']);
+  assert.equal(sin.completo, false);
+  assert.match(lineaDeRed(sin), /falta: .*Un día como hoy/);
+
+  // Con todo publicado, queda completo.
+  libro.instagram['2026-10-12/efemeride'] = { cuando: UTC('2026-10-12', '09:02'), mediaId: 'E', nombre: 'efemeride', tipo: 'REELS' };
+  libro.historiasDeReels['instagram/2026-10-12/efemeride'] = { cuando: UTC('2026-10-12', '09:02'), mediaId: 'EH', nombre: 'efemeride', red: 'instagram' };
+  libro.instagram['2026-10-12/feriado'] = { cuando: UTC('2026-10-12', '08:02'), mediaId: 'F', nombre: 'feriado', tipo: 'STORIES' };
+  libro.instagram['2026-10-12/participa-noticias'] = { cuando: UTC('2026-10-12', '12:02'), mediaId: 'P', nombre: 'participa-noticias', tipo: 'STORIES' };
+  const con = contratoDelDia({ libro, fecha: '2026-10-12', ahora: cierre }).instagram;
+  assert.deepEqual(con.extrasFaltan, []);
+  assert.equal(con.completo, true);
+  // Lo que todavía está a tiempo no falta.
+  const enHora = (hhmm) => contratoDelDia({ libro: libroCompleto('2026-10-12'), fecha: '2026-10-12', ahora: AR('2026-10-12', hhmm) }).instagram.extrasFaltan.map((p) => p.id).sort();
+  assert.deepEqual(enHora('10:00'), [], 'a las 10 el feriado y la efeméride están dentro de su ventana');
+  assert.deepEqual(enHora('12:30'), ['historia:efemeride', 'historia:feriado', 'reel:efemeride'], 'a las 12:30 se cerraron; Participá (hasta las 13) todavía está a tiempo');
+});
+
+test('el vigilante avisa (media) lo extra que no salió, y las fechas anteriores al 9/10 no se exigen', () => {
+  const c = contratoDelDia({ libro: libroCompleto('2026-10-12'), fecha: '2026-10-12', ahora: AR('2026-10-12', '23:50') });
+  const avisos = problemasDelContrato(c);
+  const ef = avisos.find((p) => p.clave === 'falta-instagram-reel:efemeride');
+  assert.ok(ef, 'avisa la efeméride');
+  assert.equal(ef.nivel, 'media');
+  assert.match(ef.texto, /Un día como hoy/);
+  assert.match(ef.texto, /tope|ocho/);
+  const viejo = contratoDelDia({ libro: libroCompleto('2026-10-07'), fecha: '2026-10-07', ahora: AR('2026-10-07', '23:50') });
+  assert.deepEqual(viejo.instagram.extrasFaltan, []);
 });

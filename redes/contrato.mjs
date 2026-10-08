@@ -43,6 +43,9 @@ import { cronogramaDelDia, ventanaDe, PODCASTS } from './piezas.mjs';
  *  los podcasts no se subían como historia: no se les puede pedir lo de ahora. */
 export const CONTRATO_DESDE = '2026-09-25';
 
+/** El día desde el que se miran también la efeméride, el feriado, la agenda, Participá y los avisos de clima (R-4, 8/10/2026). */
+export const EXTRAS_DESDE = '2026-10-09';
+
 export const REDES_DEL_CONTRATO = [
   { red: 'facebook', nombre: 'Facebook', posteos: 'facebook', videos: 'facebookVideos' },
   { red: 'instagram', nombre: 'Instagram', posteos: 'instagramFeed', videos: 'instagram' },
@@ -65,8 +68,8 @@ const alMediodia = (fecha) => new Date(`${fecha}T12:00:00-03:00`);
  * tipo, hora, ventana, semanal }. `grupo` es reel, historia-podcast, clima o
  * farmacia (o utiles, que es semanal).
  */
-export function piezasDelContrato(fecha) {
-  const cronograma = cronogramaDelDia(alMediodia(fecha));
+export function piezasDelContrato(fecha, { clima = null } = {}) {
+  const cronograma = cronogramaDelDia(alMediodia(fecha), { clima });
   const horaDe = (nombre) => cronograma.find((p) => p.nombre === nombre)?.hora ?? HORAS_FIJAS[nombre];
   const lista = [];
   PODCASTS.forEach((p) => {
@@ -81,8 +84,23 @@ export function piezasDelContrato(fecha) {
   if (cronograma.some((p) => p.nombre === 'utiles')) {
     lista.push({ id: 'historia:utiles', grupo: 'utiles', nombre: 'utiles', etiqueta: ETIQUETAS_FIJAS.utiles, tipo: 'STORIES', hora: horaDe('utiles'), ventana: ventanaDe('utiles'), semanal: true });
   }
+  // R-4 (8/10/2026): lo que el cronograma trae ese día además de lo fijo —la efeméride (reel y su historia), el feriado, la agenda,
+  // las de Participá y el aviso de clima— también se mira. No cuenta en los totales del contrato (son "semanales", sin número fijo),
+  // pero si su ventana se cierra sin que salgan, se avisa. El cronograma ya sabe qué le toca a cada día (una efeméride sin preparar
+  // o un día sin feriado no figuran), así que no se le exige lo que no estaba previsto.
+  for (const p of fecha < EXTRAS_DESDE ? [] : cronograma) {
+    if (p.nombre === 'efemeride') {
+      lista.push({ id: 'reel:efemeride', grupo: 'efemeride', nombre: p.nombre, etiqueta: 'Un día como hoy', tipo: 'REELS', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
+      lista.push({ id: 'historia:efemeride', grupo: 'historia-del-reel', nombre: p.nombre, etiqueta: 'Un día como hoy (historia)', tipo: 'STORIES', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
+    } else if (EXTRAS[p.nombre] || p.nombre.startsWith('aviso-') || p.nombre.startsWith('participa-')) {
+      lista.push({ id: `historia:${p.nombre}`, grupo: 'extra', nombre: p.nombre, etiqueta: EXTRAS[p.nombre] ?? (p.nombre.startsWith('aviso-') ? `aviso de ${p.nombre.slice(6)}` : `Participá (${p.nombre.slice(9)})`), tipo: 'STORIES', hora: p.hora, ventana: ventanaDe(p.nombre), semanal: true });
+    }
+  }
   return lista.sort((a, b) => minutosDeHora(a.hora) - minutosDeHora(b.hora));
 }
+
+/** Las historias de más que el cronograma trae algunos días (R-4). `utiles` ya figura arriba. */
+const EXTRAS = { feriado: 'feriado', agenda: 'agenda' };
 
 /** Cómo va una pieza que no salió: 'pendiente' (todavía no es su hora, o está
  *  dentro de su ventana) o 'falta' (la ventana se cerró y no salió). */
@@ -164,10 +182,10 @@ function contratoDeUnaRed(def, { libro, fecha, ahora, portada }) {
   const historiasDeReels = libro?.historiasDeReels ?? {};
 
   // --- las piezas de video
-  const piezas = piezasDelContrato(fecha).map((p) => {
+  const piezas = piezasDelContrato(fecha, { clima: fecha === diaAR(ahora) ? portada?.clima ?? null : null }).map((p) => {
     let entrada = null;
     let clave = `${fecha}/${p.nombre}`;
-    if (p.grupo === 'historia-podcast') {
+    if (p.grupo === 'historia-podcast' || p.grupo === 'historia-del-reel') {
       clave = `${def.red}/${fecha}/${p.nombre}`;
       entrada = historiasDeReels[clave] ?? null;
     } else {
@@ -179,7 +197,7 @@ function contratoDeUnaRed(def, { libro, fecha, ahora, portada }) {
     // reel ya salió hace rato y la historia no, no va a salir más: el reloj ya
     // no arma el podcast (piezasQueTocan mira sólo el reel), así que no está
     // "a tiempo" por más ventana que le quede.
-    if (p.grupo === 'historia-podcast') {
+    if (p.grupo === 'historia-podcast' || p.grupo === 'historia-del-reel') {
       const reel = videos[`${fecha}/${p.nombre}`];
       if (reel?.cuando && (ahora.getTime() - new Date(reel.cuando).getTime()) / 60000 > MINUTOS_PARA_LA_HISTORIA) {
         return { ...base, estado: 'falta', fase: 'no-se-reintenta' };
@@ -191,7 +209,7 @@ function contratoDeUnaRed(def, { libro, fecha, ahora, portada }) {
   const semanales = piezas.filter((p) => p.semanal);
   // La agenda sale sólo si hay eventos cargados: si es jueves y salió se anota, pero no se le exige.
   const agenda = [...Object.entries(videos)].find(([k]) => k === `${fecha}/agenda`);
-  if (agenda) semanales.push({ id: 'historia:agenda', grupo: 'agenda', nombre: 'agenda', etiqueta: 'agenda', tipo: 'STORIES', estado: 'salio', cuando: agenda[1].cuando, semanal: true });
+  if (agenda && !semanales.some((p) => p.nombre === 'agenda')) semanales.push({ id: 'historia:agenda', grupo: 'agenda', nombre: 'agenda', etiqueta: 'agenda', tipo: 'STORIES', estado: 'salio', cuando: agenda[1].cuando, semanal: true });
 
   // --- duplicados que dejan rastro en el libro
   const delDia = (seccion, prefijo = '') => Object.entries(libro?.[seccion] ?? {}).filter(([k]) => k.startsWith(`${prefijo}${fecha}/`));
@@ -240,6 +258,8 @@ function contratoDeUnaRed(def, { libro, fecha, ahora, portada }) {
   const historias = delContrato.filter((p) => p.grupo !== 'reel');
   const faltan = delContrato.filter((p) => p.estado === 'falta');
   const pendientes = delContrato.filter((p) => p.estado === 'pendiente');
+  // Los útiles y la agenda no se exigen: salen sólo si hay con qué (la agenda, si hay eventos) y son lo primero que saca el tope de historias.
+  const extrasFaltan = semanales.filter((p) => p.estado === 'falta' && !['utiles', 'agenda'].includes(p.nombre));
   if (sinEspejo.length && def.red === 'instagram') explicacion = 'espejo';
   const posteosFalla = explicacion === 'falla';
   return {
@@ -255,9 +275,10 @@ function contratoDeUnaRed(def, { libro, fecha, ahora, portada }) {
     piezas: delContrato,
     semanales,
     faltan,
+    extrasFaltan,
     pendientes,
     duplicadas,
-    completo: !faltan.length && !duplicadas.length && !posteosFalla && !sinEspejo.length,
+    completo: !faltan.length && !extrasFaltan.length && !duplicadas.length && !posteosFalla && !sinEspejo.length,
   };
 }
 
@@ -303,6 +324,7 @@ export function lineaDeRed(c) {
   const extra = [];
   if (c.duplicadas.length) extra.push(`DUPLICADO: ${c.duplicadas.map((d) => d.claves.join('=')).join(', ')}`);
   if (c.posteos.sinEspejo.length) extra.push(`${c.posteos.sinEspejo.length} posteo(s) sin espejo`);
+  if (c.extrasFaltan?.length) extra.push(`falta: ${c.extrasFaltan.map((p) => p.etiqueta).join(', ')}`);
   return `${c.nombre}: ${[posteos, reels, historias, ...extra].join(' · ')}`;
 }
 
