@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { unirPorClave, unirPista, unirArchivo, ARCHIVOS_QUE_SE_UNEN } from '../panel/unir-conflictos.mjs';
 import { comoRenglones } from '../panel/pistas-libro.mjs';
 
@@ -81,7 +82,7 @@ test('con un choque de git de verdad, el robot no pisa la pista cerrada por una 
     let choco = false;
     try { git(robot, 'pull', '--rebase', 'origin', 'main'); } catch { choco = true; }
     assert.equal(choco, true, 'el caso de prueba tiene que chocar');
-    const script = new URL('../panel/unir-conflictos.mjs', import.meta.url).pathname;
+    const script = fileURLToPath(new URL('../panel/unir-conflictos.mjs', import.meta.url));
     execFileSync(process.execPath, [script], { cwd: robot, stdio: 'ignore' });
     assert.equal(git(robot, 'diff', '--name-only', '--diff-filter=U').trim(), '', 'ya no queda nada en conflicto');
     execFileSync('git', ['-c', 'user.name=t', '-c', 'user.email=t@t', 'rebase', '--continue'], { cwd: robot, env: { ...process.env, GIT_EDITOR: 'true' }, stdio: 'ignore' });
