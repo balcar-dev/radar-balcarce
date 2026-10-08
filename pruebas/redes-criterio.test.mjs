@@ -539,7 +539,9 @@ test('todas las piezas del plan hablan según su horario y cumplen el criterio',
     assert.equal(p.momento, momento, `${nombre}: momento`);
     assert.equal(p.indicacion, INDICACIONES[momento], `${nombre}: la indicación de voz tiene que ser la de su momento`);
     debeCumplir(p.guion, momento, nombre);
-    assert.match(p.guion, empiezaCon[momento], nombre);
+    // La memoria del día (8/10): la farmacia de las 19 ya saludó, así que el clima de las 20 y el repaso de las 21 empiezan con un puente.
+    if (['clima-noche', 'podcast'].includes(nombre)) assert.match(p.guion, /^(Seguimos|Vamos con otra cosa|Sigamos con lo de hoy|Una más para ustedes)\./, `${nombre}: puente en vez de saludo`);
+    else assert.match(p.guion, empiezaCon[momento], nombre);
   }
   for (const p of piezas.filter((x) => x.tipo === 'reel')) {
     for (const i of p.items ?? []) assert.match(i.enlace, /^https:\/\/radarbalcarce\.com\/nota\//);

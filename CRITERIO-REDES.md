@@ -345,6 +345,8 @@ la voz, y mejor de noche, después del último repaso. Si la voz insistiera en a
 ".ar", la dirección se deja de decir (`VOZ.direccionEnPodcasts` y `VOZ.direccionUnaDeCada`
 en 0) y las piezas cierran sólo con "Radar Balcarce".
 
+**Saludos con memoria (8/10):** la primera pieza de cada franja del día saluda; las que salen dentro de las dos horas y media siguientes empiezan con un puente corto en lugar de volver a saludar (regla 146).
+
 ## 8. Colores y diseño de las placas
 
 Decisión del 30/09 (Hernán): **el color de una pieza tiene un sentido de uso, siempre el

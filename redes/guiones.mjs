@@ -94,6 +94,51 @@ export const SALUDOS = {
   ],
 };
 
+// --- la memoria del día (8/10/2026, "locución con memoria", aprobada) ---------
+//
+// Entre las 19 y las 21 salían tres piezas seguidas con "Buenas noches, Balcarce": la farmacia, el clima y el repaso. Quien mira las
+// historias una tras otra oye lo mismo tres veces. Ahora el plan del día sabe qué se saludó y cuándo: la primera pieza de una franja
+// saluda, y las que salen dentro de las dos horas y media siguientes empiezan con un puente corto en vez de volver a saludar.
+
+/** Cuánto tiene que pasar para que vuelva a saludarse en la misma franja del día (minutos). */
+export const MINUTOS_ENTRE_SALUDOS = 150;
+
+/** Lo que se dice en lugar del saludo cuando ya se saludó hace poco. */
+export const PUENTES = ['Seguimos.', 'Vamos con otra cosa.', 'Sigamos con lo de hoy.', 'Una más para ustedes.'];
+
+/** El saludo con el que empieza un guion (toda la primera oración: "Buen día, Balcarce, vamos con lo que hay."), o null. */
+export const SALUDO_AL_PRINCIPIO = /^\s*(?:muy\s+)?(?:buen d[ií]a|buenas tardes|buenas noches)[^.?!]*[.?!]\s*/i;
+
+const aMinutos = (hhmm) => {
+  const [h, m] = String(hhmm).split(':').map(Number);
+  return Number.isFinite(h) ? h * 60 + (m || 0) : null;
+};
+
+/**
+ * Le da memoria al día: recorre las piezas por hora y, si una empieza saludando y ya se saludó en esa franja (mañana, tarde, noche)
+ * hace menos de MINUTOS_ENTRE_SALUDOS, cambia el saludo por un puente. Cambia el guion de las piezas en el lugar y devuelve las
+ * que cambió. `momentoDe(hora)` es momentoDeHora de redes/prompt-redes.mjs (se pasa para no importar de más). Las piezas que no salen
+ * (`fueraDeTecho`) no cuentan. Un aviso de clima no se toca: un aviso siempre arranca por lo que avisa.
+ */
+export function conMemoriaDelDia(piezas = [], momentoDe, { fecha = new Date() } = {}) {
+  const ultimo = {};
+  const cambiadas = [];
+  const ordenadas = piezas.filter((p) => p?.guion && p.hora && !p.fueraDeTecho && !String(p.nombre ?? '').startsWith('aviso'))
+    .sort((a, b) => aMinutos(a.hora) - aMinutos(b.hora));
+  for (const p of ordenadas) {
+    if (!SALUDO_AL_PRINCIPIO.test(p.guion)) continue;
+    const franja = momentoDe(p.hora);
+    const minutos = aMinutos(p.hora);
+    if (ultimo[franja] !== undefined && minutos - ultimo[franja] < MINUTOS_ENTRE_SALUDOS) {
+      p.guion = p.guion.replace(SALUDO_AL_PRINCIPIO, `${variante(PUENTES, semillaDe(p.nombre, fecha), 'puente')} `);
+      cambiadas.push(p.nombre);
+    } else {
+      ultimo[franja] = minutos;
+    }
+  }
+  return cambiadas;
+}
+
 /** El deseo humano con el que cierra cada franja del día. */
 export const CIERRES_HUMANOS = {
   manana: [

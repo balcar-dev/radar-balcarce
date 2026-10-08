@@ -26,7 +26,7 @@ import { repasosDelDia } from '../redes/repasos.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
 import {
-  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
+  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre, conMemoriaDelDia,
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import { revisarTexto } from '../redes/guiones.mjs';
@@ -549,9 +549,12 @@ export function planDelDia(datos, {
       if (PIEZAS_QUE_ENVEJECEN.includes(p.nombre) || p.nombre?.startsWith('aviso')) piezas.splice(piezas.indexOf(p), 1);
     }
     console.warn(`  la portada tiene ${edadHoras.toFixed(1)} horas: no se arman el clima ni la farmacia hasta que la web se renueve.`);
+    conMemoriaDelDia(piezas, momentoDeHora, { fecha });
     return { piezas, turno, portadaVieja: true };
   }
 
+  // La locución con memoria del día (8/10): la primera pieza de cada franja saluda y las que salen enseguida empiezan con un puente.
+  conMemoriaDelDia(piezas, momentoDeHora, { fecha });
   return { piezas, turno };
 }
 
