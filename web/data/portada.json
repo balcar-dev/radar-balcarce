@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T03:01:52.630Z",
+  "generado": "2026-10-08T03:31:37.116Z",
   "notas": [
     {
       "id": "f1horarios2026r17",
@@ -1531,7 +1531,7 @@
       "fecha": "2026-10-07T15:16:46.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T21:31:26.895Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1948,7 +1948,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-cens-n-451-impulsa-un-punto-digital-para-facilitar-tramites"
+      "slug": "el-cens-n-451-impulsa-un-punto-digital-para-facilitar-tramites",
+      "foto": {
+        "archivo": "fotos-notas/7gf331.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
     },
     {
       "id": "ajdznk",
@@ -3280,6 +3284,7 @@
         "A24",
         "iProfesional",
         "Crónica",
+        "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Brújula 24",
@@ -3794,7 +3799,7 @@
       "id": "1uh42rm",
       "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "copete": "El Relevamiento de Expectativas de Mercado proyecta una contracción del Producto Bruto Interno en el tercer trimestre y un aumento del desempleo. El dato oficial del INDEC se conocerá el próximo martes.",
-      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
+      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
       "guion": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "seccion": "Economía",
       "medios": [
@@ -4529,10 +4534,10 @@
     "ahora": {
       "temp": 11,
       "sensacion": 7,
-      "humedad": 95,
+      "humedad": 96,
       "viento": 25,
       "rumbo": "SE",
-      "cielo": "Llovizna leve",
+      "cielo": "Chaparrones",
       "esDeDia": false
     },
     "dias": [
@@ -4879,8 +4884,8 @@
   },
   "pendientes": [
     {
-      "id": "1jga964",
-      "titulo": "George Russell y una sanción que complica su lucha por el…",
+      "id": "1x8kmfb",
+      "titulo": "El más difícil todavía: Mercedes confirma que Russell…",
       "seccion": "Automovilismo",
       "motivo": "necesita ojo humano: \"detenido\""
     },
@@ -4931,6 +4936,12 @@
       "titulo": "Histórico balance sanitario para Córdoba: cayeron 78%…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"recién nacido\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "1ob03ue",
+      "titulo": "El desconocido gesto de Messi con los empleados de la AFA…",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "6hubq6",
@@ -5039,13 +5050,7 @@
       "titulo": "Comienza el juicio político al juez federal de Rosario…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "gk72dg",
-      "titulo": "Senadores demócratas acusaron a Trump de interferir en las…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 6
 }

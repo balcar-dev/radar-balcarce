@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-08T03:01:52.630Z",
+ "generado": "2026-10-08T03:31:37.116Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "jul31s",
-   "titulo": "Primera edicion de la Expo Salud-Deporte y Tecnologia.",
-   "copete": "La Subsecretaría de Deporte y Recreación, brindarà este jueves, una conferencia de prensa que se llevará a cabo mañana,en la “Sala de los Intendentes”del Palacio Municipal. Durante el encuentro se presentará oficialmente la primera edición de la Expo Salud, Deporte y Tecnología…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-08T00:11:36.000Z",
-   "fuentes": [
-    {
-     "medio": "News Balcarce (FM 91.7)",
-     "enlace": "https://newsbalcarce.com.ar/?p=30970",
-     "fecha": "2026-10-08T00:11:36.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 4 problemas (numero, tildes, promesa): el cuerpo dice 10 y la fuente no lo dice; sin esas oraciones quedan 49 palabras",
-   "maximo": 3
-  },
   {
    "id": "op4hk5",
    "titulo": "Fiesta del Postre: Cyrano lleva la Torta Serrana a Balcarce y también la ofrece en Necochea",
@@ -51,6 +34,23 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "jul31s",
+   "titulo": "Primera edicion de la Expo Salud-Deporte y Tecnologia.",
+   "copete": "La Subsecretaría de Deporte y Recreación, brindarà este jueves, una conferencia de prensa que se llevará a cabo mañana,en la “Sala de los Intendentes”del Palacio Municipal. Durante el encuentro se presentará oficialmente la primera edición de la Expo Salud, Deporte y Tecnología…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-08T00:11:36.000Z",
+   "fuentes": [
+    {
+     "medio": "News Balcarce (FM 91.7)",
+     "enlace": "https://newsbalcarce.com.ar/?p=30970",
+     "fecha": "2026-10-08T00:11:36.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 4 problemas (numero, tildes, promesa): el cuerpo dice 10 y la fuente no lo dice; sin esas oraciones quedan 49 palabras",
    "maximo": 3
   },
   {
@@ -102,28 +102,6 @@
    ],
    "intentos": 3,
    "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)",
-   "maximo": 3
-  },
-  {
-   "id": "1xbyav3",
-   "titulo": "No sólo quiere faenar Wagyu, también quiere criarlo: El frigorífico Rioplatense armó su propio rodeo y busca vientres para multiplicar su genética premium",
-   "copete": "El frigorífico Rioplatense decidió meterse en el negocio de la carne de alto marmoleo y comenzó un programa de multiplicación de genética wagyu a través de la producción de embriones, con el objetivo de desarrollar un rodeo propio y avanzar hacia el autoabastecimiento de esta…",
-   "seccion": "Agro",
-   "fecha": "2026-10-07T15:17:53.000Z",
-   "fuentes": [
-    {
-     "medio": "Bichos de Campo",
-     "enlace": "https://bichosdecampo.com/no-solo-quiere-faenar-wagyu-tambien-quiere-criarlo-el-frigorifico-rioplatense-armo-su-propio-rodeo-y-busca-vientres-para-multiplicar-su-genetica-premium/",
-     "fecha": "2026-10-07T15:17:53.000Z"
-    },
-    {
-     "medio": "Agroempresario",
-     "enlace": "https://agroempresario.com/publicacion/122223/como-rioplatense-avanza-con-su-propio-rodeo-de-carne-wagyu/",
-     "fecha": "2026-10-07T22:00:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   }
  ]
