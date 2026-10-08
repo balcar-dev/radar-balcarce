@@ -1,55 +1,33 @@
 {
- "generado": "2026-10-08T22:32:05.888Z",
+ "generado": "2026-10-08T23:03:07.587Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "16ootdv",
-   "titulo": "El Madrid le ganó al Partizan y un Facu figura se llevó el duelo argento",
-   "copete": "Euroliga Facu lideró el Madrid en su primera victoria (Getty). El elenco español se impuso por 86 a 76 de local y cosechó su primera victoria en la Euroliga 26/27. Campazzo sumó 12 puntos y Luca Vildoza 2 unidades. El Real Madrid consiguió su primera victoria de la temporada en…",
+   "id": "159oig4",
+   "titulo": "Quinta fecha de la Liga Local",
+   "copete": "En las instalaciones del Club Ferroviarios se desarrolló días pasados la quinta fecha de la Liga Local de Básquet, propuesta por la Subsecretaría de Deporte. La competencia está destinada a chicos de hasta 13 años y se puso en marcha a comienzos de año con el objetivo de…",
    "seccion": "Deportes",
-   "fecha": "2026-10-08T20:51:59.000Z",
+   "fecha": "2026-10-08T12:46:12.000Z",
    "fuentes": [
     {
-     "medio": "Básquet Plus",
-     "enlace": "https://basquetplus.com/euroliga-facundo-campazzo-real-madrid-primera-victoria-partizan-luca-vildoza-argentinos",
-     "fecha": "2026-10-08T20:51:59.000Z"
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/08/quinta-fecha-de-la-liga-local/",
+     "fecha": "2026-10-08T12:46:12.000Z"
     },
     {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/basquet/real-madrid-euroliga-campazzo-deck-vildoza-victoria-mala-racha_0_t3kPD3l5Fs.html",
-     "fecha": "2026-10-08T21:23:20.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/deportes/real-madrid-le-gano-86-76-a-partizan-y-sumo-su-primer-triunfo-en-la-euroliga-con-aporte-de-facundo-campazzo/",
-     "fecha": "2026-10-08T21:36:51.000Z"
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/se-disputo-la-quinta-fecha-de-la-liga.html",
+     "fecha": "2026-10-08T16:40:46.230Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 77 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "15l69b7",
-   "titulo": "Agustín Molpeceres será reconocido en la Cámara de Diputados provincial",
-   "copete": "La Cámara de Diputados de la Provincia de Buenos Aires otorgará un reconocimiento oficial al balcarceño Agustín Molpeceres, por su destacada trayectoria en el deporte adaptado y el alto rendimiento paralímpico. LOS FUNDAMENTOS La distinción,",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-08T12:52:32.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-provincial-626",
-     "fecha": "2026-10-08T12:52:32.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 4 problemas (numero, fecha, copia): el cuerpo dice 0 y la fuente no lo dice; sin esas oraciones quedan 62 palabras",
+   "intentos": 3,
+   "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA",
    "maximo": 3
   },
   {
    "id": "2ela87",
    "titulo": "Tini Stoessel debutará en el Lollapalooza Argentina 2027: el emotivo mensaje en sus redes",
-   "copete": "Tras su gira internacional de Futttura , y los preparativos para su casamiento, Tini Stoessel mostró su emoción por formar parte del line up de Lollapalooza Argentina 2027 , cuya próxima edición se realizará en marzo en el Hipódromo de San Isidro . La cantante anunció su…",
+   "copete": "La artista pop expresó sus primexeras sensaciones, luego de que el festival musical confirmara el line up para la edición que se llevará a cabo del 12 al 14 de marzo en el Hipódromo de San Isidro. Se conoció el line up del Lollapalooza Argentina 2027: todos los artistas…",
    "seccion": "Cultura y agenda",
    "fecha": "2026-10-08T15:59:00.000Z",
    "fuentes": [
@@ -59,14 +37,14 @@
      "fecha": "2026-10-08T15:59:00.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/08/la-reaccion-de-tini-stoessel-al-anunciar-su-debut-como-headliner-de-lollapalooza-mi-primera-vez/",
-     "fecha": "2026-10-08T21:58:56.000Z"
-    },
-    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/fama/mensaje-tini-stoessel-confirmacion-primera-vez-lollapalooza-argentina_0_gHxBaYYtjs.html",
      "fecha": "2026-10-08T18:17:28.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/08/la-reaccion-de-tini-stoessel-al-anunciar-su-debut-como-headliner-de-lollapalooza-mi-primera-vez/",
+     "fecha": "2026-10-08T21:58:56.000Z"
     }
    ],
    "intentos": 3,

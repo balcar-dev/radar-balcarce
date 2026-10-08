@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T22:32:05.888Z",
- "portada": 57,
- "archivo": 1110,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-08T23:03:07.587Z",
+ "portada": 62,
+ "archivo": 1114,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-08T22:32:05.928Z",
+  "generado": "2026-10-08T23:03:07.638Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -18,7 +18,7 @@
    },
    {
     "nombre": "efemeride",
-    "tipo": "historia",
+    "tipo": "reel",
     "hora": "09:00",
     "que": "efemeride",
     "voz": "locutora",
@@ -38,7 +38,7 @@
    },
    {
     "nombre": "agenda",
-    "tipo": "historia",
+    "tipo": "reel",
     "hora": "12:00",
     "que": "La agenda del fin de semana",
     "voz": "locutora",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -160,24 +160,24 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
-     },
-     {
       "id": "zzuoo4",
       "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
       "seccion": "Balcarce"
      },
      {
-      "id": "ypnvl8",
-      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "mr88ek",
       "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
+     },
+     {
+      "id": "ypnvl8",
+      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
+      "seccion": "Fútbol"
      }
     ]
    }
@@ -212,15 +212,15 @@
    ],
    "cola": [
     {
-     "id": "zzuoo4",
-     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "id": "1om2oqi",
+     "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
      "seccion": "Balcarce",
      "marcada": false
     },
     {
-     "id": "1om2oqi",
-     "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-     "seccion": "Balcarce",
+     "id": "5ffwsk",
+     "titulo": "AACYC Balcarce gana cinco pruebas en Mar del Plata",
+     "seccion": "Deportes",
      "marcada": false
     },
     {
