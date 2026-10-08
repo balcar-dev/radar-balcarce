@@ -11,6 +11,7 @@ hecho todavía. Antes de cada paso, Hernán y Andrés dan el visto bueno.*
 | 1 | Frenar la corrección automática que rompe notas y arreglar las dos notas rotas | C-0 | 30 min | Su autorización |
 | 2 | Que la prueba de las retiradas acepte una lista vacía (si no, el lunes se congela la web) | C-1 | 5 min | Su autorización |
 | 3 | Sacar la foto de *El Eco de Tandil* de la nota de Policiales `fd2y4d` | C-13 | 5 min | Su autorización |
+| 4b | Mirar en Search Console cuántas páginas indexó Google | SEO | 10 min | Ustedes |
 | 4 | Nadie toca en el celular el feriado del 12/10 ni la efeméride del 11/10 | C-18 | — | Ustedes |
 
 ## 2. En un rato (pedido el 8/10)
@@ -61,6 +62,7 @@ hecho todavía. Antes de cada paso, Hernán y Andrés dan el visto bueno.*
 | # | Qué | Código | Necesita |
 |---|---|---|---|
 | 27 | Repositorio privado con un servidor propio (unos US$ 5-6 por mes) | E1 | Decidir y contratar |
+| 27b | **Contenido propio:** sello "Nota de Radar Balcarce" y una nota propia por semana (empezando por "Balcarce en números") | Ideas, 4b | Quién la escribe |
 | 28 | Primeras notas propias con datos comprobados: nafta, TC con Mangoni, plata de la Provincia, siembra, elecciones | ECO-1, AUT-1, POL-1, AGR-1, POL-3 | Elegir cuáles |
 | 29 | Lo comercial: página `/publicidad` y "presentado por" | Ideas, sección 9 | Precios y quién vende |
 | 30 | TikTok, a mano primero | RS-4 | Una persona |

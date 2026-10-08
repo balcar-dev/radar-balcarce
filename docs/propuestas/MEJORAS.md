@@ -674,6 +674,8 @@ día; prueba con un Meta simulado que publica y contesta error.
   (`redes/estadisticas-detalle.mjs:130-146`). No menciona Google Fonts (la IP del lector va a Google,
   `web/app/layout.js:92-99`), Meta, WhatsApp, CallMeBot ni que lo que manda la gente puede pasar por IA.
 - Reescribirla y tener las fuentes en el propio sitio (`next/font/local`), que además acelera la carga.
+- **Falta una página de términos de uso** (lo señaló una auditoría externa el 8/10). Va junto con la política de
+  privacidad y la página "Cómo trabajamos" (S-5).
   3 h + 2 h.
 
 ### Redes
@@ -810,6 +812,9 @@ lee es el texto. Lo que sí aporta el audio:
 **Para el podcast en Apple y Spotify** hace falta un RSS con lo que piden: imagen cuadrada de 1.400 a 3.000 px,
 categoría, idioma, dueño con correo (queda público), un mp3 por episodio con su duración y un identificador que no
 cambie nunca. Hoy los audios viven solo en Instagram y Facebook: primero hay que guardarlos (Q1).
+
+**¿Cuántas páginas tiene Google?** Una auditoría externa dice que Google no tiene ninguna. Desde acá no se pudo
+comprobar. **Hay que mirarlo en Search Console**, porque define cuán urgente es S-1.
 
 **Las personas:** mirar en Search Console, una vez por semana, qué páginas se indexaron y cuáles no, y las
 búsquedas con "balcarce".

@@ -140,6 +140,35 @@ Varias ideas chocan con reglas escritas. No se pueden hacer sin que ustedes camb
 
 ---
 
+## 4b. Contenido propio: sello, ritmo y primeras notas (de las auditorías externas del 8/10)
+
+*Detalle y cruce en `registro/AUDITORIAS-EXTERNAS-2026-10-08.md`.*
+
+- **Sello "Nota de Radar Balcarce"** (u "Original"), bien visible y distinto de lo automático, en la nota, la
+  portada y las redes. Ayuda con Google (S-1) y con los lectores.
+- **Un feed RSS solo de notas propias**, además del general.
+- **Ritmo propuesto:** una nota propia por semana el primer mes; después, dos.
+- **Las primeras, en este orden:**
+  1. Balcarce en números (con los datos ya comprobados: nafta, plata de la Provincia, siembra, elecciones,
+     escuelas).
+  2. Farmacias de turno: por qué a veces no coincide y cómo lo chequeamos (explicador con datos propios).
+  3. Qué se está hablando en Balcarce esta semana (lo que manda la gente por WhatsApp).
+  4. Qué pasó finalmente con… (seguimiento de temas abiertos).
+  5. Agenda real de la semana.
+  6. Vecinos que hacen cosas (perfiles).
+  7. Entrevistas a comerciantes.
+  8. Cuánto cuesta vivir en Balcarce.
+  9. El mapa de los baches según los vecinos.
+  10. Las rutas 55 y 226.
+- **Frase para el sitio y las redes (propuesta):** "El medio más útil y transparente de Balcarce". Cuando haya
+  más contenido propio: "…y el que te cuenta lo que nadie más te cuenta".
+- **Herramientas gratis para investigar a mano:** Google Pinpoint y NotebookLM, para leer documentos largos
+  (presupuesto municipal, ordenanzas, actas) y sacar datos con su fuente.
+- **Fotos ilustrativas de bancos libres** (Unsplash, Pexels) en temas genéricos, siempre rotuladas "Imagen
+  ilustrativa" y nunca como si fueran del hecho. **Decisión de ustedes**: choca en parte con el criterio de fotos.
+- **Membresía de lectores** (como hacen algunos medios locales de Estados Unidos): para más adelante, cuando haya
+  público. Es especulación para una ciudad de 45.000 habitantes.
+
 ## 5. Secciones: de 11 a 15, con barra lateral (H1)
 
 *Detalle en `registro/AUDITORIA-2026-10-08.md`, sección 3.*
@@ -570,6 +599,12 @@ probó. Las que reemplazan algo que ya existe también están en `MEJORAS.md` (s
 - **Mistral para redactar:** exige aceptar que entrene con los datos.
 - **Publicar automático en grupos de Facebook o canales de WhatsApp:** no hay API; arriesga la cuenta.
 - **AdSense ahora:** paga centavos y mete scripts de terceros (ver C-2 en `MEJORAS.md`).
+- **De las auditorías externas:**
+  - **GA4 con banner de cookies:** mete scripts de terceros.
+  - **Publicidad política (Spot-On) y nativa (MGID):** chocan con la neutralidad y con "nada de terceros".
+  - **Video generado por IA (LTX):** inventa imágenes.
+  - **Cambiar las direcciones a /año/mes/día:** rompe enlaces.
+  - **Pasar a WordPress o Astro:** el armado actual funciona.
 - **Perfil de Empresa de Google:** pide atención en persona.
 
 ## 13. Decisiones que necesitan a Hernán y Andrés
