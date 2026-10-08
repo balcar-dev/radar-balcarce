@@ -1924,11 +1924,6 @@
   "ultimo": "2026-10-02T22:31:30.494Z",
   "motivo": "con cuerpo"
  },
- "8i88s7": {
-  "intentos": 3,
-  "ultimo": "2026-10-01T01:01:18.871Z",
-  "motivo": "semáforo: necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes)"
- },
  "8y333p": {
   "intentos": 1,
   "ultimo": "2026-10-01T17:31:26.840Z",
@@ -2389,9 +2384,9 @@
   "motivo": "con cuerpo"
  },
  "jul31s": {
-  "intentos": 1,
-  "ultimo": "2026-10-08T00:31:46.628Z",
-  "motivo": "título o bajada: 1 problema (largo): el titulo tiene 93 caracteres, el máximo es 90"
+  "intentos": 2,
+  "ultimo": "2026-10-08T01:01:42.813Z",
+  "motivo": "cuerpo: 3 problemas (numero, copia): el cuerpo dice 10 y la fuente no lo dice; sin esas oraciones quedan 33 palabras"
  },
  "jzu6k": {
   "intentos": 1,
@@ -2511,11 +2506,6 @@
  "n1xmig": {
   "intentos": 1,
   "ultimo": "2026-10-05T18:01:33.785Z",
-  "motivo": "con cuerpo"
- },
- "n3x306": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T01:01:18.871Z",
   "motivo": "con cuerpo"
  },
  "nfrfo8": {
@@ -2785,11 +2775,6 @@
   "ultimo": "2026-10-01T21:17:43.060Z",
   "motivo": "con cuerpo"
  },
- "t8noy6": {
-  "intentos": 2,
-  "ultimo": "2026-10-01T01:01:18.871Z",
-  "motivo": "con cuerpo"
- },
  "tjhvbt": {
   "intentos": 1,
   "ultimo": "2026-10-02T11:01:29.631Z",
@@ -2825,6 +2810,11 @@
   "ultimo": "2026-10-04T02:13:57.247Z",
   "motivo": "con cuerpo"
  },
+ "u3yzup": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T01:01:42.813Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 17 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 149 palabras"
+ },
  "u91n4s": {
   "intentos": 3,
   "ultimo": "2026-10-02T19:32:00.019Z",
@@ -2838,6 +2828,11 @@
  "uk82ir": {
   "intentos": 1,
   "ultimo": "2026-10-05T17:31:14.146Z",
+  "motivo": "con cuerpo"
+ },
+ "uknghh": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T01:01:42.813Z",
   "motivo": "con cuerpo"
  },
  "uknyf": {
