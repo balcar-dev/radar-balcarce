@@ -32,6 +32,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 14 | Un archivo de datos roto corta la corrida en vez de leerse como vacío (archivo de notas, libro de redes, armado del sitio) y no se guarda un archivo con más de 20 % menos notas | 8/10 | regla 110 |
 | 15 | Una corrección hecha después de aprobar una nota ya no se deshace, y la poda de los lunes no suelta una retirada que sigue aprobada | 8/10 | regla 111 |
 | 20 | El tope de notas con página subió a 3.500 y lo que sale del archivo va al histórico por mes (`web/data/historico/`); el plazo de la subida a Cloudflare pasó de 15 a 25 minutos. **Falta:** armar las notas viejas en el momento (más allá de 3.500) y mover las fotos a un depósito | 8/10 | regla 111 |
+| 17 | Los 22 robots quedaron fijos en Ubuntu 24.04 (no `ubuntu-latest`), así el cambio del 19/10 no los agarra de sorpresa. **Falta:** probar un robot con Ubuntu 26 a propósito y pasar de a poco | 8/10 | prueba `workflows-fijos` |
 | 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---

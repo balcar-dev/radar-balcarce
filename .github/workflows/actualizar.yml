@@ -39,7 +39,7 @@ concurrency:
 
 jobs:
   actualizar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # Hoy tarda entre 2 y 3 minutos y medio. Veinte es de sobra, y corta una
     # corrida colgada (un pedido que no contesta) antes de que se pise con la
     # de la media hora siguiente.
