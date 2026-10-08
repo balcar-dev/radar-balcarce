@@ -33,6 +33,5 @@ export default function robots() {
     // El de noticias es aparte: Google Noticias y Discover lo miran solo,
     // con las reglas propias de ese sitemap (ver sitemap-news.xml/route.js).
     sitemap: [`${base}/sitemap.xml`, `${base}/sitemap-news.xml`],
-    host: base,
   };
 }

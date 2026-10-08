@@ -197,7 +197,7 @@ organizan los eventos grandes (visibles en la misma pestaña del panel):
 | Organizador | Para qué preguntarle | Contacto |
 |---|---|---|
 | Subsecretaría de Deportes y Recreación (municipio) | Cualquier prueba deportiva | (02266) 43-1218 / 43-1704 |
-| Perfil Extremo (Tandil) | Mountain bike en el Cerro | Gastón +54 9 249-460-2248 · Lalo +54 9 249-464-1547 |
+| Perfil Extremo (Tandil) | Mountain bike en el Cerro | Gastón y Lalo (los teléfonos están en la agenda de contactos del panel, no acá) |
 | Grupo Hets (Balcarce) | Balcarce Corre, Tierras del Diablo | (02266) 47-5024 · grupohets@gmail.com |
 | Subsecretaría de Turismo (municipio) | Ferias, fiestas populares | (02266) 42-2394 / 43-0895 · @turismobalcarce en Instagram |
 
