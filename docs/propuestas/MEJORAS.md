@@ -740,6 +740,30 @@ Hoy nadie revisa las fotos ya publicadas (por eso pasó C-13). Propuesta, de lo 
    detectar caras (para Policiales y notas con chicos).
 4. **Una persona, 15 minutos por semana:** las fotos manuales y las de Policiales.
 
+### Estadísticas: qué se mide hoy y qué falta (revisado el 8/10)
+
+**Ya existe y anda.** Dos veces por día el vigilante guarda los números en `web/data/estadisticas.json`. Salen en la
+pestaña Números del celular y en el WhatsApp.
+
+| Qué | De dónde | Qué mide | Último dato (8/10, 9 h) |
+|---|---|---|---|
+| **La web** | Cloudflare Web Analytics, sin cookies | Visitas y vistas (12 h y 24 h), páginas más vistas, de dónde llegan, países, horas y aparatos | 70 visitas y 80 vistas en 24 h |
+| **Facebook** | API de Meta (permiso de estadísticas activo) | Seguidores, vistas e interacciones de la página | 7 seguidores, 672 vistas, 0 interacciones |
+| **Instagram** | API de Meta | Seguidores, publicaciones, alcance, vistas e interacciones | 4 seguidores, 102 publicaciones, alcance 1, 2 vistas |
+
+**Lo que dicen los números:**
+- **Instagram hoy casi no llega a nadie.** Facebook sí: refuerza la decisión de reels en Facebook.
+- **En la web, muchas visitas son robots** de afuera. El 6/10 hubo 2 visitas de Argentina.
+
+**Lo que falta:**
+1. **Números por pieza:** cuántas reproducciones tuvo cada reel y cada historia, separando seguidores de no
+   seguidores. Hace falta para la prueba de 4 semanas de reels (M3-4-7). Los identificadores ya están en el libro
+   de redes.
+2. **Filtrar robots y contar solo Argentina y la zona** en la web. Sin eso, los números no sirven para vender
+   publicidad.
+3. **Search Console:** búsquedas, clics y páginas indexadas, en el mismo lugar.
+4. **Un resumen semanal y mensual** con la evolución, no solo el día.
+
 ### SEO: que Google nos liste bien (auditoría completa del 8/10)
 
 *Se compiló una copia del sitio con la dirección real y se miró el HTML. No se pudo abrir radarbalcarce.com ni

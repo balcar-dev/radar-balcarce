@@ -169,6 +169,43 @@ Varias ideas chocan con reglas escritas. No se pueden hacer sin que ustedes camb
 - **Membresía de lectores** (como hacen algunos medios locales de Estados Unidos): para más adelante, cuando haya
   público. Es especulación para una ciudad de 45.000 habitantes.
 
+## 4c. Hacia dónde va el medio y cómo sumar gente (pedido el 8/10)
+
+**La idea de Hernán y Andrés:** ser un medio serio en cinco niveles: **nacional, provincial, zonal, vecinal y de
+Balcarce**. Sumar y rehacer notas todo el tiempo, **con prioridad a lo de Balcarce, sobre todo en redes**.
+
+**Qué implica:**
+- **Secciones y barras laterales:** sigue pendiente (sección 5, y F1-b en `MEJORAS.md` como base). Los cinco
+  niveles pueden ordenar el menú: Balcarce primero; después la zona (Mar del Plata, Tandil, Lobería, la ruta 226);
+  la Provincia; y el país.
+- **Redes con prioridad a Balcarce:** que los repasos y los posteos elijan primero lo local, y que lo nacional
+  entre solo si es muy importante. Hoy ya se elige así en parte (`redes/elegir.mjs`); conviene escribir la regla
+  en el criterio de redes y medirla.
+- **Lo nacional, con aporte:** para ser un medio nacional serio, lo nacional tiene que sumar algo (contexto, qué
+  cambia para Balcarce). Mientras tanto, ver S-1 en `MEJORAS.md`.
+
+**Sumar colaboradores (nuevo):**
+1. **Corresponsales vecinos:** gente de cada localidad o institución (clubes, escuelas, el campo) que manda
+   información por WhatsApp con un formato fijo. Una persona la revisa antes de publicar.
+2. **Notas de colaboradores, con su firma:** invitar a gente que sabe de un tema a escribir. Va con revisión, el
+   sello "Colaboración" y una regla escrita: sin conflicto de intereses, nada de política partidaria.
+3. **Entrevistas online:** por videollamada grabada, con permiso. Salen como nota, como audio con voz humana (no
+   gasta cupo) y como reel con un fragmento.
+4. **Entrevistas presenciales con video:** para eventos y personajes del pueblo. Cuidado con los menores y con el
+   permiso de imagen.
+
+**Videos de terceros (turistas, creadores que pasan por Balcarce) (nuevo, con reglas):**
+- **Solo con permiso escrito** del autor (un mensaje que diga que sí alcanza, guardado). Sin permiso, subir el
+  video de otro es usar algo ajeno: Meta lo puede bajar o sacarle alcance. Meta anunció en 2025 que reduce la
+  distribución de las cuentas que republican contenido de otros sin aportar nada (solo búsqueda: confirmarlo).
+- **Con aporte propio:** recorte, contexto, subtítulos y la placa de Radar. No subirlo tal cual.
+- **Con crédito:** el nombre del autor en el texto del posteo y etiquetado en la colaboración de Instagram (R-4).
+  Hay que decidir si el crédito también puede ir escrito sobre el video: la regla de hoy dice que sobre una imagen
+  nunca va el nombre de otro medio. Un creador no es un medio, pero conviene dejarlo escrito.
+- **Sirve también como invitación:** "Te sacamos en Radar Balcarce" suma seguidores de los dos lados.
+- **En la web,** los videos de YouTube se pueden mostrar insertados, sin bajarlos, siempre que el autor lo permita.
+  Ojo: el reproductor de YouTube carga código de afuera (ver C-2 en `MEJORAS.md`).
+
 ## 5. Secciones: de 11 a 15, con barra lateral (H1)
 
 *Detalle en `registro/AUDITORIA-2026-10-08.md`, sección 3.*

@@ -96,6 +96,8 @@ bueno.*
 | 58 | El aviso de helada corrido una noche | I-7 | 1 h | C |
 | 59 | El clima de respaldo no inventa "0 % de lluvia" ni la sensación térmica | I-8, W-7 | 1 h | C |
 | 60 | Bing Webmaster e IndexNow (Bing alimenta a ChatGPT) | SEO | 2 h | P + C |
+| 60b | Estadísticas: números por pieza de redes, filtrar robots, Search Console y resumen semanal | MEJORAS, "Estadísticas" | 1-2 días | C |
+| 60c | **Rediseño del panel del celular** (auditoría en curso) | Panel | — | D + C |
 | 61 | Personas: una vez por semana mirar Search Console, las fotos manuales y 10 notas verdes contra su fuente | Varios | 45 min por semana | P |
 
 ## P3 · Mejoras medianas
@@ -220,6 +222,9 @@ bueno.*
 ### Web y servicios
 | # | Qué | Dónde |
 |---|---|---|
+| 155b | **Prioridad a Balcarce en redes**, escrita en el criterio y medida | Ideas 4c |
+| 155c | Corresponsales vecinos, notas de colaboradores, entrevistas online y presenciales con video | Ideas 4c |
+| 155d | Videos de terceros (turistas, creadores) **solo con permiso**, con aporte y crédito | Ideas 4c |
 | 156 | **El repaso como formato central** (web, reel, WhatsApp y mail) | Auditoría 3 |
 | 157 | Clima por horas en `/clima` | Auditoría 3 |
 | 158 | Mapa chico de la farmacia de turno | Auditoría 3 |
