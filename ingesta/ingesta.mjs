@@ -34,11 +34,36 @@ const UA = 'RadarBalcarce/0.1 (agregador local de noticias de Balcarce)';
 
 // ---------------------------------------------------------------- utilidades
 
+/**
+ * Qué pasó cuando una fuente no contestó (B1, 8/10): Node sólo dice "fetch failed" y la causa queda escondida. Se dice en castellano si
+ * fue el tiempo, un nombre que no existe, un certificado vencido, una conexión cortada o un bloqueo, para decidir qué arreglar.
+ */
+export function motivoDeFalla(err, timeout = 15000) {
+  if (err?.name === 'AbortError') return `tiempo agotado (${Math.round(timeout / 1000)} s)`;
+  const msg = String(err?.message ?? err);
+  if (/^HTTP ([0-9]+)/.test(msg)) {
+    const n = Number(msg.match(/^HTTP ([0-9]+)/)[1]);
+    if (n === 403 || n === 401 || n === 429) return `${msg} (bloqueo o límite: probar otro User-Agent)`;
+    if (n === 404 || n === 410) return `${msg} (la dirección ya no existe)`;
+    return msg;
+  }
+  const codigo = String(err?.cause?.code ?? err?.code ?? '');
+  const causa = String(err?.cause?.message ?? '');
+  if (codigo === 'ENOTFOUND' || codigo === 'EAI_AGAIN') return 'el nombre del sitio no se encuentra (DNS)';
+  if (/CERT|SELF_SIGNED|UNABLE_TO_VERIFY|ERR_TLS/i.test(codigo + causa)) return `problema de certificado (${codigo || causa.slice(0, 40)})`;
+  if (codigo === 'ECONNRESET' || codigo === 'UND_ERR_SOCKET') return 'la conexión se cortó';
+  if (codigo === 'ECONNREFUSED') return 'el sitio rechazó la conexión';
+  if (codigo === 'UND_ERR_CONNECT_TIMEOUT' || codigo === 'ETIMEDOUT') return 'no llegó a conectar a tiempo';
+  return codigo ? `${msg} (${codigo})` : msg;
+}
+
 export async function traer(url, { timeout = 15000, agente, sinCompresion = false } = {}) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), timeout);
   try {
-    const res = await fetch(url, {
+    let res;
+    try {
+      res = await fetch(url, {
       signal: ctrl.signal,
       redirect: 'follow',
       // Algunas APIs (met.no) exigen un User-Agent que identifique al que
@@ -46,8 +71,11 @@ export async function traer(url, { timeout = 15000, agente, sinCompresion = fals
       // Algunos servidores mandan la compresión rota (SoloTC) y otros rechazan el nombre
       // de siempre (TNT Sports): por fuente, `sinCompresion` y `agente` (30/09).
       headers: { 'user-agent': agente ?? UA, accept: '*/*', ...(sinCompresion ? { 'accept-encoding': 'identity' } : {}) },
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      });
+    } catch (err) {
+      throw Object.assign(new Error(motivoDeFalla(err, timeout)), { causa: err });
+    }
+    if (!res.ok) throw new Error(motivoDeFalla(new Error(`HTTP ${res.status}`), timeout));
     // Varios sitios no declaran charset y fetch los lee como latin1: forzamos UTF-8
     // y sólo volvemos atrás si el resultado queda lleno de caracteres rotos.
     const buf = Buffer.from(await res.arrayBuffer());

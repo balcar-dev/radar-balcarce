@@ -596,3 +596,15 @@ test('del feed sólo entran enlaces http y https (V2-16, 8/10)', async () => {
   const notas = parsearFeed(xml, { nombre: 'Medio', medio: 'Medio', peso: 20 });
   assert.deepEqual(notas.map((n) => n.enlace), ['https://medio.ar/a']);
 });
+
+test('cuando una fuente no contesta se guarda el motivo real y no sólo "fetch failed" (B1, 8/10)', async () => {
+  const { motivoDeFalla } = await import('../ingesta/ingesta.mjs');
+  assert.match(motivoDeFalla(Object.assign(new Error('The operation was aborted'), { name: 'AbortError' }), 15000), /tiempo agotado \(15 s\)/);
+  assert.match(motivoDeFalla(new Error('HTTP 403')), /bloqueo/);
+  assert.match(motivoDeFalla(new Error('HTTP 404')), /ya no existe/);
+  assert.equal(motivoDeFalla(new Error('HTTP 500')), 'HTTP 500');
+  assert.match(motivoDeFalla(Object.assign(new Error('fetch failed'), { cause: { code: 'ENOTFOUND' } })), /DNS/);
+  assert.match(motivoDeFalla(Object.assign(new Error('fetch failed'), { cause: { code: 'CERT_HAS_EXPIRED' } })), /certificado/);
+  assert.match(motivoDeFalla(Object.assign(new Error('fetch failed'), { cause: { code: 'ECONNRESET' } })), /se cortó/);
+  assert.match(motivoDeFalla(new Error('fetch failed')), /fetch failed/);
+});
