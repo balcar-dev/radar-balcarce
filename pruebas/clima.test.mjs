@@ -71,14 +71,16 @@ test('los dos íconos (la tarjeta grande y la pastilla chica) dibujan la nube cu
 // -------------------------------------------------------------- los avisos
 
 /** Un pronóstico tranquilo, para ir empeorándolo de a un dato por prueba. */
-function pronostico(hoy = {}) {
+function pronostico(hoy = {}, manana = {}) {
   return {
     dias: [
       { fecha: '2026-09-20', max: 20, min: 9, lluvia: 10, codigo: 3, viento: 15, ...hoy },
-      { fecha: '2026-09-21', max: 21, min: 10, lluvia: 5, codigo: 1, viento: 12 },
+      { fecha: '2026-09-21', max: 21, min: 10, lluvia: 5, codigo: 1, viento: 12, ...manana },
+      { fecha: '2026-09-22', max: 21, min: 10, lluvia: 5, codigo: 1, viento: 12 },
     ],
   };
 }
+const MEDIODIA = new Date('2026-09-20T15:00:00Z'); // 12:00 en Balcarce
 
 test('un pronóstico tranquilo no avisa nada', () => {
   // Esto es lo más importante de todo: un aviso que salta todas las semanas
@@ -86,15 +88,26 @@ test('un pronóstico tranquilo no avisa nada', () => {
   assert.deepEqual(avisosDelClima(pronostico()), []);
 });
 
-test('avisa la helada', () => {
-  const [a] = avisosDelClima(pronostico({ min: -3 }));
+test('avisa la helada de esta noche con la mínima de la madrugada que sigue, no con la de hoy', () => {
+  const [a] = avisosDelClima(pronostico({}, { min: -3 }), { ahora: MEDIODIA });
   assert.equal(a.tipo, 'helada');
   assert.equal(a.gravedad, 'alta');
   assert.ok(a.texto.includes('-3'));
+  assert.match(a.titulo, /esta noche/);
+  assert.equal(a.dia, '2026-09-21', 'la madrugada del día que sigue');
+  // La mínima de hoy ya pasó (a la mañana): a mediodía no avisa nada.
+  assert.deepEqual(avisosDelClima(pronostico({ min: -3 }), { ahora: MEDIODIA }), []);
+});
+
+test('antes de las 9 de la mañana la mínima de hoy todavía es la que viene: "esta madrugada"', () => {
+  const [a] = avisosDelClima(pronostico({ min: -3 }), { ahora: new Date('2026-09-20T07:00:00Z') }); // 4:00 en Balcarce
+  assert.equal(a.tipo, 'helada');
+  assert.match(a.titulo, /esta madrugada/);
+  assert.equal(a.dia, '2026-09-20');
 });
 
 test('una noche fresca no es una helada', () => {
-  assert.deepEqual(avisosDelClima(pronostico({ min: UMBRALES.helada + 1 })), []);
+  assert.deepEqual(avisosDelClima(pronostico({}, { min: UMBRALES.helada + 1 }), { ahora: MEDIODIA }), []);
 });
 
 test('avisa el granizo', () => {

@@ -12,6 +12,8 @@
 // deliberadamente altos: un aviso que salta todas las semanas deja de ser un
 // aviso y se vuelve ruido, y entonces el día que importa nadie lo mira.
 
+import { horaAR } from './zona.mjs';
+
 /** Los códigos de Open-Meteo que significan granizo o tormenta fuerte. */
 const TORMENTA_FUERTE = new Set([96, 99]);
 const TORMENTA = new Set([95, 96, 99]);
@@ -36,7 +38,7 @@ export const UMBRALES = {
  *
  * `dias` es lo que arma la ingesta: [{ fecha, dia, max, min, lluvia, cielo }].
  */
-export function avisosDelClima(clima) {
+export function avisosDelClima(clima, { ahora = new Date() } = {}) {
   const dias = clima?.dias ?? [];
   if (!dias.length) return [];
 
@@ -48,17 +50,23 @@ export function avisosDelClima(clima) {
     const cuando = i === 0 ? 'hoy' : 'mañana';
     const enLaNoche = i === 0 ? 'esta noche' : 'mañana a la noche';
 
-    if (d.min <= UMBRALES.heladaFuerte) {
+    // La helada es de la MADRUGADA: la mínima de "hoy" ya pasó (a la mañana) y la de "esta noche" es la del día que sigue (8/10/2026, I-7). Antes de las
+    // 9 de la mañana, en cambio, la mínima de hoy todavía es la que viene ("esta madrugada").
+    // Sólo la de esta noche / esta madrugada: la de "mañana a la noche" sería pasado mañana, demasiado lejos para avisar.
+    const antesDeLaMañana = i === 0 && horaAR(ahora) < 9;
+    const madrugada = i === 0 ? (antesDeLaMañana ? d : dias[1]) : null;
+    const cuandoHiela = antesDeLaMañana ? 'esta madrugada' : enLaNoche;
+    if (madrugada && madrugada.min <= UMBRALES.heladaFuerte) {
       avisos.push({
-        tipo: 'helada', gravedad: 'alta', dia: d.fecha,
-        titulo: `Helada fuerte ${enLaNoche}`,
-        texto: `Se esperan ${d.min}° de mínima ${enLaNoche} en Balcarce. Cubrí las plantas y cuidá las cañerías.`,
+        tipo: 'helada', gravedad: 'alta', dia: madrugada.fecha,
+        titulo: `Helada fuerte ${cuandoHiela}`,
+        texto: `Se esperan ${madrugada.min}° de mínima ${cuandoHiela} en Balcarce. Cubrí las plantas y cuidá las cañerías.`,
       });
-    } else if (d.min <= UMBRALES.helada) {
+    } else if (madrugada && madrugada.min <= UMBRALES.helada) {
       avisos.push({
-        tipo: 'helada', gravedad: 'media', dia: d.fecha,
-        titulo: `Posible helada ${enLaNoche}`,
-        texto: `La mínima baja a ${d.min}° ${enLaNoche} en Balcarce.`,
+        tipo: 'helada', gravedad: 'media', dia: madrugada.fecha,
+        titulo: `Posible helada ${cuandoHiela}`,
+        texto: `La mínima baja a ${madrugada.min}° ${cuandoHiela} en Balcarce.`,
       });
     }
 

@@ -233,7 +233,7 @@ export function planDelDia(datos, {
   // 7:00, con ventana hasta las 22:00, así la primera vuelta del reloj que lo
   // ve lo pide) lo dice avisoDeClima, en redes/piezas.mjs: el reloj usa la
   // misma función y pide el mismo nombre que acá se arma.
-  const a = avisoDeClima(datos.clima);
+  const a = avisoDeClima(datos.clima, fecha);
   if (a) {
     piezas.push({
       tipo: 'historia',

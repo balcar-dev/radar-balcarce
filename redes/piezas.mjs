@@ -91,8 +91,8 @@ export const ventanaDe = (nombre) => VENTANAS[nombre] ?? (esAviso(nombre) ? VENT
  * tarjeta de la portada; interrumpir a alguien con una historia es para lo
  * que le puede costar plata o un susto.
  */
-export function avisoDeClima(clima) {
-  const a = avisosDelClima(clima).find((x) => x.gravedad === 'alta');
+export function avisoDeClima(clima, ahora = new Date()) {
+  const a = avisosDelClima(clima, { ahora }).find((x) => x.gravedad === 'alta');
   return a ? { ...a, nombre: `aviso-${a.tipo}` } : null;
 }
 
@@ -211,7 +211,7 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null
     .filter((h) => !SOLO_EN_LA_PC.includes(h.id))
     .filter((h) => toca(h, fecha, { estado }))
     .map((h) => ({ nombre: h.id, tipo: 'historia', hora: h.hora }));
-  const aviso = avisoDeClima(clima);
+  const aviso = avisoDeClima(clima, fecha);
 
   return [
     ...(aviso ? [{ nombre: aviso.nombre, tipo: 'historia', hora: HORA_AVISO }] : []),

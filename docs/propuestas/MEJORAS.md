@@ -1083,7 +1083,7 @@ en pasado ni incumplimientos de `promesa` en lo publicado; la tabla de números 
 - Antes de guardar una pista en `pistas.json` (público, sin cifrar) solo se mira la lista roja: "Un nene de
   6 años…" pasa (`ingesta/pistas.mjs:33`). Sumar menores y edad. 30 min.
 
-**I-7 · El aviso de helada está corrido una noche** — *Confirmado · MEDIA*
+**I-7 · El aviso de helada está corrido una noche** — *Confirmado · MEDIA* — **✔ HECHO 8/10 · regla 129**
 - "Esta noche" usa la mínima de hoy, que ya pasó a la madrugada (`ingesta/alertas.mjs:47-63`). 1 h.
 
 **I-8 · El clima de respaldo puede inventar "0 % de lluvia"** — *A confirmar · MEDIA*
