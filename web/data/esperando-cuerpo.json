@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-08T19:53:23.223Z",
+ "generado": "2026-10-08T20:01:44.436Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1h9a0rw",
-   "titulo": "Por el mal tiempo, postergaron las competencias del automovilismo zonal en el Autódromo",
-   "copete": "Las competencias del automovilismo zonal previstas para este fin de semana en el Autódromo Juan Manuel Fangio fueron reprogramadas para el 24 y 25 de octubre debido a los pronósticos climáticos desfavorables.",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-08T17:13:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/por-el-mal-tiempo-postergaron-las-competencias-del-automovilismo-zonal-en-el-autodromo",
-     "fecha": "2026-10-08T17:13:00.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "sin material",
-   "maximo": 3
-  },
   {
    "id": "159oig4",
    "titulo": "Quinta fecha de la Liga Local",
@@ -78,67 +61,6 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
-   "maximo": 3
-  },
-  {
-   "id": "7r5ucc",
-   "titulo": "Preocupación por el robo de flexibles de gas",
-   "copete": "",
-   "seccion": "Policiales",
-   "fecha": "2026-10-07T23:01:35.401Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
-     "fecha": null
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "eae1az",
-   "titulo": "Google Doodle celebra la Semana Mundial del Espacio 2026 con la impactante Nebulosa de Carina captada por el Telescopio James Webb",
-   "copete": "En el marco de las celebraciones globales por la Semana Mundial del Espacio , Google rindió homenaje a la tecnología y al arte de la astrofotografía mediante un doodle inspirado en las impactantes imágenes captadas por el Telescopio Espacial James Webb de la NASA. Para aquellos…",
-   "seccion": "Tecnología",
-   "fecha": "2026-10-08T10:39:12.000Z",
-   "fuentes": [
-    {
-     "medio": "FayerWayer",
-     "enlace": "https://www.fayerwayer.com/espacio/2026/10/08/google-doodle-celebra-la-semana-mundial-del-espacio-2026-con-la-impactante-nebulosa-de-carina-captada-por-el-telescopio-james-webb/",
-     "fecha": "2026-10-08T10:39:12.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/tecno/2026/10/08/google-celebra-la-semana-del-espacio-con-doodle-de-la-nebulosa-de-carina-captada-por-el-telescopio-james-webb/",
-     "fecha": "2026-10-08T18:29:30.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 7.500 y la fuente no lo dice; sin esas oraciones quedan 74 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "1cjphdj",
-   "titulo": "Leonel Pernía, entre los 33 inscriptos de la Clase 3",
-   "copete": "",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-08T09:46:14.000Z",
-   "fuentes": [
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/deportes/leonel-pernia-entre-los-33-inscriptos-de-la-clase-3",
-     "fecha": "2026-10-08T09:46:14.000Z"
-    },
-    {
-     "medio": "Campeones",
-     "enlace": "https://campeones.com.ar/leonel-pernia-se-enfoca-en-el-fin-de-semana-de-tn-y-su-futuro-en-2027/",
-     "fecha": "2026-10-08T17:07:37.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"nacional\" y la fuente no",
    "maximo": 3
   }
  ]

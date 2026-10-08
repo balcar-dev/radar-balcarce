@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T19:53:23.223Z",
+ "generado": "2026-10-08T20:01:44.436Z",
  "portada": 56,
  "archivo": 1101,
- "esperandoCuerpo": 7,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-08T19:53:23.260Z",
+  "generado": "2026-10-08T20:01:44.491Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 54,
     "notas": [
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
-      "seccion": "Agro"
-     },
-     {
-      "id": "11yxcy2",
-      "titulo": "Julián Álvarez rompe con su representante tras la fallida salida",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce"
      },
      {
-      "id": "19k7tmn",
-      "titulo": "Mauro Icardi y Wanda Nara se divorcian oficialmente en Italia",
-      "seccion": "Argentina"
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "u1zabu",
+      "titulo": "Mario Pergolini cuestiona el bajo rating de su programa",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      }
     ]
    }
@@ -211,6 +211,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "jul3dm",
+     "titulo": "El Diario cumple 31 años como medio gráfico local",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "zzuoo4",
      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
