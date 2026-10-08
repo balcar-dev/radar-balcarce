@@ -48,7 +48,7 @@ test('no ofrece notas del mismo tema que la nota actual', () => {
   assert.ok(!seguir.some((n) => n.id === 't'));
 });
 
-test('siempre cuatro: dos de la misma sección y dos de otras, de la más nueva a la más vieja', () => {
+test('siempre cuatro: las de la misma sección primero, y si faltan se completa con otras (8/10), de la más nueva a la más vieja', () => {
   const actual = nota('a', 'Nota actual sobre la calle', 0.5);
   const seguir = seguirLeyendo(actual, [
     nota('b1', 'Rutas cortadas por las lluvias del fin de semana', 1),
@@ -59,12 +59,30 @@ test('siempre cuatro: dos de la misma sección y dos de otras, de la más nueva 
     nota('d1', 'Ferroviarios ganó por penales y llegó a la final', 0.7, { seccion: 'Deportes' }),
   ]);
   assert.equal(seguir.length, 4);
-  assert.equal(seguir.filter((n) => n.seccion === 'Balcarce').length, 2);
+  assert.equal(seguir.filter((n) => n.seccion === 'Balcarce').length, 3, 'las tres de su sección');
   const otras = seguir.filter((n) => n.seccion !== 'Balcarce');
-  assert.equal(otras.length, 2);
-  assert.notEqual(otras[0].seccion, otras[1].seccion);
+  assert.equal(otras.length, 1);
   const horas = seguir.map((n) => new Date(n.fecha).getTime());
   assert.deepEqual(horas, [...horas].sort((x, y) => y - x), 'lo más nuevo primero');
+});
+
+test('una nota de Automovilismo termina con otras de Automovilismo, también del archivo, y las más parecidas primero (8/10, Hernán)', () => {
+  const actual = nota('a', 'El Zonal del Atlántico compite en el autódromo', 1, { seccion: 'Automovilismo', etiquetas: ['Zonal del Atlántico'] });
+  const portada = [
+    nota('c1', 'Colapinto bromea con un hincha en Singapur', 3, { seccion: 'Automovilismo' }),
+    nota('x1', 'Docentes paran el jueves por salarios', 0.5),
+    nota('x2', 'Suspenden la Fiesta del Postre por el mal clima', 0.7, { seccion: 'Cultura y agenda' }),
+  ];
+  const archivo = [
+    conCuerpo(nota('v1', 'Se inauguró el nuevo boxes del circuito local', 24 * 3, { seccion: 'Automovilismo', etiquetas: ['zonal del atlántico'] })),
+    conCuerpo(nota('v4', 'Una escudería local presentó su auto para el campeonato', 24 * 7, { seccion: 'Automovilismo' })),
+    conCuerpo(nota('v2', 'Arrigoni ganó el TC Mouras en Rosario', 24 * 5, { seccion: 'Automovilismo' })),
+    conCuerpo(nota('v3', 'Tamagno terminó octavo en la octava fecha', 24 * 6, { seccion: 'Automovilismo' })),
+  ];
+  const seguir = seguirLeyendo(actual, portada, archivo);
+  assert.equal(seguir.length, 4);
+  assert.ok(seguir.every((n) => n.seccion === 'Automovilismo'), 'las cuatro son de Automovilismo');
+  assert.ok(seguir.some((n) => n.id === 'v1'), 'la que comparte etiquetas entra aunque sea más vieja');
 });
 
 test('no elige notas sin hora ni la nota del dólar mientras haya otra opción', () => {

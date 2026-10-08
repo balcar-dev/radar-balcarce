@@ -7,8 +7,9 @@
 //   · SIEMPRE hay cuatro (si el sitio tiene cuatro notas para ofrecer);
 //   · todas cuentan historias distintas entre sí y de la nota que se lee;
 //   · todas con su hora real, y de la más nueva a la más vieja;
-//   · dos de la misma sección y dos de otras secciones (de secciones
-//     distintas entre sí, si se puede);
+//   · las cuatro de la misma sección si las hay (8/10: antes eran dos y dos y todas las
+//     notas terminaban con las mismas), las más parecidas primero; si faltan, de otras
+//     secciones (distintas entre sí, si se puede);
 //   · nunca una nota propia de servicio (el dólar, un repaso) mientras haya
 //     otra cosa para ofrecer;
 //   · si las notas de la portada (HORAS_EN_PORTADA) no alcanzan, se completa
@@ -20,10 +21,14 @@ import { mismaHistoria } from './texto.js';
 import { tieneCuerpo, tieneRespaldo } from './cuerpo.js';
 
 const CUANTAS_SIGUEN = 4;
-const DE_LA_MISMA_SECCION = 2;
 
 const tiempo = (n) => new Date(n?.fecha).getTime() || 0;
 const masNueva = (a, b) => tiempo(b) - tiempo(a);
+/** Cuánto se parece a la nota que se lee: temas en común pesan el doble que las etiquetas. */
+const afinidad = (nota, otra) => {
+  const en = (a, b) => (a ?? []).filter((x) => (b ?? []).map((y) => String(y).toLowerCase()).includes(String(x).toLowerCase())).length;
+  return en(nota.temas, otra.temas) * 2 + en(nota.etiquetas, otra.etiquetas);
+};
 const conHora = (n) => !n.sinFecha && Number.isFinite(new Date(n.fecha).getTime());
 
 /**
@@ -61,12 +66,15 @@ export function seguirLeyendo(nota, recientes = [], archivo = [], cuantas = CUAN
   const dePortada = unicas(recientes).sort(masNueva);
   const delArchivo = unicas(archivo.filter((n) => tieneCuerpo(n) && tieneRespaldo(n))).sort(masNueva);
 
-  // De mejor a peor candidata: con hora y no propia, de la portada primero; después
-  // las del archivo; al final lo que no cumple (sin hora, o de servicio).
-  const buenas = (lista) => lista.filter((n) => conHora(n) && !propia(n));
+  // De mejor a peor candidata: con hora y no propia (portada y archivo juntos, ordenadas por
+  // cuánto se parecen a la nota que se lee y después por la hora); al final, lo que no cumple
+  // (de servicio, o sin hora). Primero las de la MISMA sección, hasta completar las cuatro
+  // (8/10, Hernán: en una nota de Automovilismo, "Seguí leyendo" tiene que traer otras de
+  // Automovilismo, no las mismas de siempre); lo que falte se completa con las de otras secciones.
+  const buenas = [...dePortada, ...delArchivo].filter((n) => conHora(n) && !propia(n))
+    .sort((x, y) => (afinidad(nota, y) - afinidad(nota, x)) || masNueva(x, y));
   const escalones = [
-    buenas(dePortada),
-    buenas(delArchivo),
+    buenas,
     dePortada.filter((n) => conHora(n) && propia(n)),
     dePortada.filter((n) => !conHora(n)),
   ];
@@ -77,16 +85,11 @@ export function seguirLeyendo(nota, recientes = [], archivo = [], cuantas = CUAN
     const pool = yaDistintas(escalon);
     const faltan = cuantas - elegidas.length;
     if (faltan <= 0) break;
-    const mismaSec = elegidas.filter((n) => n.seccion === nota.seccion).length;
-    const otras = elegidas.length - mismaSec;
-    const cupoMisma = Math.max(0, DE_LA_MISMA_SECCION - mismaSec);
-    const cupoOtras = Math.max(0, cuantas - DE_LA_MISMA_SECCION - otras);
-
-    const deSeccion = tomar(pool.filter((n) => n.seccion === nota.seccion), [nota, ...elegidas], Math.min(cupoMisma, faltan));
-    const deOtras = tomar(pool.filter((n) => n.seccion !== nota.seccion), [nota, ...elegidas, ...deSeccion], Math.min(cupoOtras, faltan - deSeccion.length), { seccionesDistintas: true });
+    const deSeccion = tomar(pool.filter((n) => n.seccion === nota.seccion), [nota, ...elegidas], faltan);
+    const deOtras = tomar(pool.filter((n) => n.seccion !== nota.seccion), [nota, ...elegidas, ...deSeccion], faltan - deSeccion.length, { seccionesDistintas: true });
     elegidas = [...elegidas, ...deSeccion, ...deOtras];
 
-    // Si una de las dos mitades no llenó su cupo, la otra completa.
+    // Si las otras secciones no alcanzan a ser distintas entre sí, se completa igual.
     const aun = cuantas - elegidas.length;
     if (aun > 0) elegidas = [...elegidas, ...tomar(pool, [nota, ...elegidas], aun)];
   }
