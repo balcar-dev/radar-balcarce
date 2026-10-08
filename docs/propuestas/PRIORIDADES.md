@@ -76,6 +76,11 @@ bueno.*
 | 33e | *(Más adelante)* **Cuenta de Anthropic** con crédito y tope mensual; hoy no hay | MEJORAS "Modelos de IA" | 20 min | P |
 | 33f | **Revisar si las reglas y el verificador son coherentes** y cómo se aplican a una nota hecha de varias fuentes; duplicados (**auditoría en curso**) | Auditoría | 1-2 días | C |
 | 33g | **Línea editorial** escrita en el criterio (centro y centro-derecha, tono neutral): hay un borrador en Ideas 4c | Ideas 4c | 1 h | D + C |
+| 33h | **Duplicados** (hoy 3,4 %, antes 9,3 %): segunda pasada en el cruce, fusión sin IA, no retirar una nota si el destino no tiene página, mega-temas con tope | MEJORAS "Reglas y verificador" | 2-3 días | C |
+| 33i | **Menos rechazos de forma:** números en palabras, fechas de las fuentes, negación, "promesa", corrección parcial (35 de 81 rechazos son de forma) | MEJORAS hallazgos 2 a 6 | 2-3 días | C |
+| 33j | **"ALTA" y "N medios" solo con fuentes leídas**, no con medios que la IA nunca vio | MEJORAS hallazgo 1 | 1 día | C |
+| 33k | **Huecos del verificador:** nombres que abren una oración, delitos conjugados, revalidar con el mismo material | MEJORAS hallazgos 7 a 9, I-2, I-3 | 1-2 días | C |
+| 33l | **Jefe editor, diseño y 14 pruebas** (afirmaciones con sus fuentes, contexto con fecha, regla para indexar) | Ideas 4c | 3-4 días | D + C |
 | 34 | La fecha que va a Google: la de cuando sale en la web, no la de la fuente | S-2 | 3 h | C |
 | 35 | "Balcarce" en las notas locales (bajada, descripción y título, solo con datos que están en la fuente) | S-3, auditoría 3 | 3 h | C |
 | 36 | La foto real para Google en tres proporciones | S-4 | 4 h | C |

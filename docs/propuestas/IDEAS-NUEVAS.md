@@ -263,6 +263,70 @@ fuentes, y un modelo no puede sacarlo de memoria. La forma de hacerlo:
 >    relevante porque incomode a un lado u otro.
 > 5. Lo que dice una fuente no se cambia ni se exagera.
 
+### Jefe editor: diseño detallado (auditoría del 8/10)
+
+**Una aclaración:** hoy **ya sale una nota por hecho**, escrita con todas las fuentes del grupo. No hace falta una
+estructura nueva: faltan tres mejoras al pase actual.
+- **El insumo:** hoy llega un solo texto completo y resúmenes de 280 caracteres de las demás fuentes.
+- **El control:** el verificador mezcla todas las fuentes en una bolsa de palabras.
+- **El aporte propio:** no hay ángulo ni dato de contexto.
+
+**Pasos:**
+1. **Disparo:** 3 o más medios independientes (Fútbol y Deportes siguen en 4), **sin Política ni Policiales**. Se
+   re-sintetiza una sola vez si el hecho crece a 6 medios o aparece una fuente oficial. La nota conserva su dirección y
+   su fecha no rejuvenece.
+2. **Material:** el código elige hasta 6 fuentes (la oficial primero, un solo medio por grupo, un cable replicado cuenta
+   como uno); texto completo de hasta 3; al resto, "solo resumen".
+3. **Datos de contexto:** hasta 3, de figuras o clubes de la nota, cada uno con `{dato, fuente, enlace, fecha, vence}`,
+   desde Wikidata, ESPN o Jolpica, o cargados por una persona. Se llaman "contexto" (no "ficha", que ya es otra cosa).
+   Hay que revisar las condiciones de uso de ESPN.
+4. **Una sola llamada:** la IA devuelve primero una lista de afirmaciones (cada una con las fuentes que la dicen), las
+   discrepancias, el ángulo y el contexto usado, y después escribe. Con salida estructurada y menos "temperatura".
+5. **Verificación por fuente** (tabla abajo), reparación parcial, semáforo y firma como hoy.
+
+**Qué respaldo necesita cada afirmación:**
+
+| Dónde | Respaldo mínimo |
+|---|---|
+| Título, bajada, guion y redes: hecho central, cifras, nombres | 2 o más fuentes independientes, o 1 oficial. Si no, no hay síntesis y se escribe como hoy |
+| Cuerpo: dato de una sola fuente | Se puede, en una oración atribuida ("según la Secretaría…") |
+| Cifras que difieren | Las dos versiones, atribuidas. Nunca una elegida a mano |
+| Cita | Literal en la fuente que se nombra, con hablante nombrado |
+| Acusación | Como hoy: condicional y atribuida. Diez medios que repiten una denuncia cuentan como una fuente |
+| Dato de contexto | Solo en el cuerpo, máximo 2, con la fuente y la fecha en la misma oración, con la cifra tal cual y sin vencer |
+
+**Reglas actuales que estorban o no alcanzan:**
+- **Copia:** con 6 fuentes hay más frases en común; eximir tramos de nombres propios y cifras.
+- **Material:** "60 palabras sumando todo" no sirve para una síntesis: pedir al menos 2 fuentes con material propio.
+- **Citas y negación:** comparan contra una bolsa; la síntesis necesita saber de qué fuente salió cada cosa.
+- **Localía (regla 15):** prohíbe cualquier vínculo con Balcarce que la fuente no diga. Como ya **no hace falta** ángulo
+  local, no estorba; si algún día se quiere, habría que permitirlo con un dato local verificado.
+- **Nivel de verificación:** mezcla "repetido por muchos" con "confirmado" (ver hallazgo 1 en `MEJORAS.md`).
+- **Nombrar al medio (regla 8):** con un dato de una sola fuente, "según un medio" informa poco. **Decisión de ustedes.**
+
+**El ángulo (propuesta, a confirmar con Hernán y Andrés):** una lista cerrada: impacto en el bolsillo, gestión y
+resultados, seguridad y orden, producción y empleo, reglas y procedimiento, antecedentes. El ángulo decide qué va
+primero y qué contexto se elige; **nunca qué hecho se omite ni el tono**. Con un control de "mismo trato": cada postura
+con su argumento y sin motes de ningún bando.
+
+**Cómo se ve para Google:**
+- **Hoy marca la nota como derivada:** un solo `isBasedOn` (la fuente principal), `citation` con nombres sin enlace,
+  un autor con la explicación de la IA metida, y texto que repite hechos y cifras de las fuentes.
+- **La marcaría como propia:** un dato de contexto con fuente y fecha en un bloque aparte; `isBasedOn` con todas las
+  fuentes realmente leídas; `citation` con enlace; la página "Cómo trabajamos"; fecha propia (S-2).
+- **No ocultar `isBasedOn`:** no cambia el contenido y contradice la regla de decir de dónde sale cada cosa.
+- **Regla para indexar una síntesis** (propuesta): 3 o más fuentes leídas, al menos un aporte propio verificable
+  (contexto o dato local) y un cuerpo de 120 palabras o más. Si no, `noindex, follow`.
+
+**Pruebas que habría que escribir (14):** una cifra de una sola fuente no entra en el título; un nombre de una fuente
+sin atribución se rechaza; números en palabras; discrepancias con las dos versiones; el dato de contexto sin fuente, en el
+título, vencido o con otra cifra se rechaza; la cita con otra puntuación pasa y la inexistente no; una cifra atribuida a
+una fuente que no la contiene se rechaza; cinco medios que replican un cable cuentan uno; la fecha no rejuvenece; el cruce
+une grupos con 2 o más medios (AUBASA, INDEC, Toyota); una fusión nunca apunta a una nota sin página; lo escrito con 5
+fuentes se revalida con el mismo material; Política y Policiales no salen solas; palabras de gancho ("drástica", "picante").
+
+**Costo:** unos 14.000 tokens por pedido: del orden de US$ 0,002 por nota con Haiku, o gratis con Gemini dentro del cupo.
+
 ## 5. Secciones: de 11 a 15, con barra lateral (H1)
 
 *Detalle en `registro/AUDITORIA-2026-10-08.md`, sección 3.*

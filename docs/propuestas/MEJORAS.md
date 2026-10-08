@@ -955,6 +955,74 @@ con la prueba de 30 notas).
      pasa por el verificador, con su fecha original, y con la foto ya elegida.
   3. Las demás quedan en el archivo, sin Google.
 
+### Reglas y verificador: coherencia y duplicados (auditoría del 8/10)
+
+*Medido con `main` del 8/10: 608 notas intentadas (1 al 8/10), 1.068 en el archivo, 34 horas de historial. La
+prueba completa no se pudo correr acá; las 102 pruebas de verificador, estilo, criterio y lectura pasan.*
+
+**Lo que dicen los datos:**
+- De 608 notas, **120 quedan sin cuerpo (20 %)** y 488 salen con cuerpo.
+- De 81 rechazos del verificador por texto, **35 (43 %) los causan reglas de forma** (`repite`, `copia`, `promesa`,
+  `negacion`, `tildes`), que no protegen de ninguna falsedad. Las otras 46 involucran una regla de exactitud.
+- Las notas con 3 o más intentos terminan bien solo el 46 %.
+
+**Correcciones a lo anotado:** P7-10 ("copia de 10 o 12 palabras") **no es una contradicción**: es un margen
+deliberado y está documentado (`docs/04-REDACCION.md:132-134`); lo que sí pasa es que el número está en cuatro
+lugares. P1-6 queda **confirmado con datos** (arriba).
+
+**Los 10 hallazgos, por impacto:**
+
+| # | Qué pasa | Gravedad | Propuesta |
+|---|---|---|---|
+| 1 | **"ALTA" y "N medios" cuentan fuentes que la IA nunca leyó.** De las fuentes que recibe, solo la principal viene con texto completo; las demás, con un resumen de 280 caracteres. 293 de 724 notas tienen más medios que fuentes consultadas (`uknghh`: 38 medios, 3 leídas). `lectura-ia.mjs:597`, `reescritura.mjs:633-644`, `ingesta.mjs:806-809` | Alta | Unir también los orígenes; anotar si cada fuente se leyó entera o en resumen; que ALTA exija fuentes leídas |
+| 2 | **Los números, causa nº 1 de rechazo.** "Treinta y cinco" se lee como 30 y 5; "veintidós", "doscientos" y "2º" no se leen; el guion se rechaza aunque diga lo mismo que el título. 17 de 84 fallos. `verificar.mjs:58-117`; la regla 7 manda escribir los números en palabras | Alta | Leer compuestos, centenas y ordinales; verificar el guion como "mismas cifras que el título"; tolerar "más de" debajo de 100 en el cuerpo |
+| 3 | **Fechas:** el prompt manda comparar la fecha de hoy con la de cada fuente, pero esos encabezados no entran en el material del verificador. "Ayer" en la fuente y "el viernes" en la nota se rechaza. 7 notas terminaron así | Alta | Meter las fechas de las fuentes, con su día, en el material verificable |
+| 4 | **La regla de negación tira notas buenas:** "Cerondolo no juega" → "se baja / queda fuera" cae. 7 notas | Media-alta | Ampliar el léxico ("fuera", "baja", "ausente") o pasarla a aviso |
+| 5 | **"Promesa" mata cuerpos buenos:** cuenta "Gran", "Premio" y "Singapur" como tres nombres. `1we1z9n` espera hoy con 146 palabras | Media | Ignorar sustantivos comunes (Gran Premio, Copa, Liga) |
+| 6 | **El segundo pedido rehace todo,** aunque solo falle el título. 923 intentos para 608 notas | Media | Corrección parcial ("rehacé solo el título"); va con P12 |
+| 7 | **Los nombres que abren una oración no se controlan:** "Gómez aseguró… Rodríguez criticó…" pasa con ambos apellidos inventados. `verificar.mjs:166-170` | Alta por diseño | Tratar la primera palabra como nombre si no está en el material; medirlo antes en las 336 notas del 1/10 |
+| 8 | **Delitos:** la lista solo tiene el singular ("mataron", "robaron", "asaltaron" pasan) y la atribución se busca en todo el texto (I-3). Y al revés: "disparó al arco" se rechaza como delito en deportes | Alta en lo grave, baja en volumen | Sumar conjugaciones; oración por oración; no aplicar en Fútbol y Deportes |
+| 9 | **Al revalidar se usa menos material que al escribir:** una bajada que pasa al escribir da `negacion` al revalidar. Riesgo por lectura del código, no medido | Media, latente | Guardar con la nota el material que usó, o revalidar solo reglas de forma |
+| 10 | **Reglas sin control y números dispersos:** el medio nombrado solo se controla en el texto para redes; el cuerpo de 180 palabras es solo del prompt (hay uno de 249); el campo `datos` no se usa; números fuera de la tabla del criterio (`CRUCE`, `REPETIDAS`, `PAREJAS`, `LECTURA`, `FALLOS_PARA_CORTAR`) | Baja-media | Aplicarlas o borrarlas; juntar los números |
+
+**Documentación vieja que se suma a G1:** `docs/10:86` dice "hoy, 89"; `docs/10:142` dice "77 reglas" y la tabla llega
+a 107; `CLAUDE.md:42` dice 108; el comentario de `reescritura.mjs:849` habla de una clave paga que ya no existe.
+
+**Duplicados, medidos.** Sobre 1.013 notas desde el 14/09, mismo hecho en 96 horas:
+
+| Medición | Resultado |
+|---|---|
+| Notas redundantes | **66 (6,5 %)**, en 52 grupos |
+| Antes del 29/09 (cuando nació la fusión) | 50 de 539 (**9,3 %**) |
+| Desde el 29/09 | 16 de 474 (**3,4 %**) |
+| Fusiones hechas desde el 29/09 | 68 (el sistema atrapa unas 3 de cada 4) |
+
+- **Lo que se escapa** (19 pares reales): 8 cruzan de sección, 7 tienen títulos casi sin palabras en común y 7 comparten
+  2 o más medios. Ejemplos: AUBASA (`r7ox1t` / `116x391`), INDEC (`158583a` / `yhgmbn`), Caputo (`1h348rv` /
+  `18bbdzh`), Toyota RIGI en Economía y Automovilismo (`vp5l7j` / `1ugpk62`), el tractor en Agro y Policiales, tres
+  notas del aumento de YPF, y **11 notas** sobre las entradas de la despedida de Messi. En 3 semanas hay 49 notas con
+  "Messi" en el título: ya no es duplicado, es el mismo tema contado muchas veces.
+- **Por qué se escapan:**
+  1. El cruce nunca une dos notas del mismo medio: una historia que llega en dos "olas" forma dos grupos.
+  2. La pregunta a la IA por pares exige la misma sección y títulos parecidos (AUBASA da 0,10), con un tope de 24 por corrida.
+  3. La fusión por título pide 0,8 y deja afuera lo que salió en redes.
+  4. Las decisiones se pierden cuando las notas salen de la ventana.
+  5. La IA de repetidas es muy conservadora.
+- **Efectos de la fusión:** 11 de 68 fusiones (16 %) apuntan a una nota que ya no tiene página (W-6): por ejemplo `uml8iq`,
+  que salió en reel. Hay 3 cadenas de redirecciones. En 34 horas, 18 notas salieron del archivo sin intervención humana
+  y 7 a las 38-44 horas de vida; la causa no se pudo confirmar (hay que mirar el registro de Actions).
+- **Cómo mejorarlo, de más a menos retorno:**
+  1. **Segunda pasada en el cruce:** unir grupos con 2 o más medios en común y parecido de 0,45 en 48 horas, sin mirar
+     la sección. Atrapa al menos los 7 con medios en común; con 1 medio y parecido de 0,5, sube a 15 de 19.
+  2. **Fusión determinista:** si un grupo contiene 2 o más notas ya publicadas con parecido directo de 0,42 o más, fusionarlas sin IA.
+  3. **Pares a la IA:** sacar la condición de misma sección, usar el parecido de texto, conservar lo decidido y subir el tope a ~40.
+  4. **Antes de retirar una nota:** exigir que el destino tenga cuerpo y semáforo verde; resolver las cadenas.
+  5. **Mega-temas:** tope de una nota por ángulo y por día.
+
+**Lo que está bien:** el diseño (verificador mecánico y gratis, nivel calculado por el sistema y no por la IA);
+`depurarCuerpo` salva notas en vez de tirarlas; los fallos del servicio no gastan intentos; desde el 1/10 no hay títulos
+en pasado ni incumplimientos de `promesa` en lo publicado; la tabla de números del criterio coincide con el código.
+
 ### Motor de noticias (revisión del 8/10)
 
 **I-2 · El verificador acepta un año cambiado** — *Confirmado · ALTA*
