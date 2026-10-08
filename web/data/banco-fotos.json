@@ -9595,16 +9595,16 @@
   "cuando": "2026-10-07T22:32:47.166Z"
  },
  "1boxf4v": {
-  "archivo": "fotos-notas/1boxf4v.jpg",
   "medio": "El Diario Balcarce",
-  "credito": "Foto: El Diario Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
   "enlace": "https://eldiariobalcarce.com.ar/demarcaron-la-ruta-55-entre-pieres-y-balcarce-834",
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-07-22-50-1Ruta_55__2_.jpg",
   "razon": "Es la única opción disponible, tiene buena nitidez, muestra claramente la ruta demarcada y no contiene marcas de agua ni menores.",
-  "cuando": "2026-10-07T23:03:04.975Z"
+  "cuando": "2026-10-07T23:03:04.975Z",
+  "intentado": true,
+  "borrada": true
  },
  "1v3qcu4": {
   "archivo": "fotos-notas/1v3qcu4.webp",
@@ -10172,6 +10172,15 @@
   "titulo": "Franco Colapinto bromea con un hincha español en Singapur",
   "razon": "Ambas fotos muestran a un menor de edad reconocible interactuando con Colapinto, por lo que ninguna cumple con la política del medio.",
   "cuando": "2026-10-08T17:37:53.930Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "1279vct": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Franco Colapinto bromea con un fanático en Singapur y apunta alto",
+  "razon": "Ninguna de las fotos sirve ya que ambas muestran un menor de edad reconocible interactuando con Colapinto.",
+  "cuando": "2026-10-08T18:03:43.524Z",
   "intentos": 1,
   "fuentes": 2
  }

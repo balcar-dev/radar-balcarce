@@ -1,32 +1,22 @@
 {
- "generado": "2026-10-08T17:41:09.856Z",
+ "generado": "2026-10-08T18:04:06.283Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1we1z9n",
-   "titulo": "Franco Colapinto se entusiasmó con sumar puntos en el GP de Singapur: “Tenemos un coche muy rápido”",
-   "copete": "Franco Colapinto se prepara para disputar una nueva edición del Gran Premio de Singapur y ya palpita uno de los circuitos más exigentes de la Fórmula 1. El piloto argentino llega con expectativas renovadas y buscará mejorar sus antecedentes en Marina Bay. Franco Colapinto se…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-08T10:13:38.000Z",
+   "id": "159oig4",
+   "titulo": "Quinta fecha de la Liga Local",
+   "copete": "En las instalaciones del Club Ferroviarios se desarrolló días pasados la quinta fecha de la Liga Local de Básquet, propuesta por la Subsecretaría de Deporte. La competencia está destinada a chicos de hasta 13 años y se puso en marcha a comienzos de año con el objetivo de…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-08T12:46:12.000Z",
    "fuentes": [
     {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/franco-colapinto-participara-de-la-conferencia-de-prensa-de-los-pilotos-de-la-formula-1-antes-del-gran-premio-de-singapur/",
-     "fecha": "2026-10-08T10:13:38.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/deportes/franco-colapinto-hablo-singapur-confia-cambiarle-cara-alpine-coche-rapido_0_HQiPTrHpi9.html",
-     "fecha": "2026-10-08T13:23:23.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/deportes/la-ilusion-de-franco-colapinto-antes-del-gp-de-singapur-tenemos-un-coche-muy-rapido/",
-     "fecha": "2026-10-08T10:19:26.000Z"
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/08/quinta-fecha-de-la-liga-local/",
+     "fecha": "2026-10-08T12:46:12.000Z"
     }
    ],
    "intentos": 3,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gran\", \"premio\", \"singapur\" y el cuerpo no los explica; sin esas oraciones quedan 146 palabras",
+   "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA",
    "maximo": 3
   },
   {
@@ -57,51 +47,9 @@
      "fecha": "2026-10-08T15:16:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 2 problemas (fecha, copia): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 62 palabras",
    "maximo": 3
-  },
-  {
-   "id": "tjmhqp",
-   "titulo": "La ANMAT dio de baja la habilitación de un laboratorio por no retirar del mercado sus medicamentos",
-   "copete": "La Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT) resolvió dar de baja la habilitación de P. L. Rivero y Cía. S.A. , un laboratorio con sede en la avenida Boyacá 411/419 de la Ciudad Autónoma de Buenos Aires. La medida alcanza a la firma…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-08T05:42:20.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/sociedad/2026/10/08/la-anmat-dio-de-baja-la-habilitacion-de-un-laboratorio-por-no-retirar-del-mercado-sus-medicamentos/",
-     "fecha": "2026-10-08T05:42:20.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/sociedad/anmat-dio-baja-reconocido-laboratorio-grave-denuncia-penal-202610892348",
-     "fecha": "2026-10-08T12:23:48.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/sociedad/la-anmat-ordeno-dar-de-baja-la-habilitacion-otorgada-a-un-laboratorio-cual-es-la-firma-afectada.phtml",
-     "fecha": "2026-10-08T08:03:44.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/sociedad/anmat-dio-baja-un-reconocido-laboratorio-no-retirar-del-mercado-medicamentos-prohibidos-n251073",
-     "fecha": "2026-10-08T13:07:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/sociedad/la-anmat-dio-de-baja-la-inhabilitacion-de-un-laboratorio-que-no-retiro-del-mercado-sus-productos-tras-una-advertencia/",
-     "fecha": "2026-10-08T11:44:40.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/informacion-general/la-anmat-cancelo-la-habilitacion-un-laboratorio-medicamentos-prohibidos-los-motivos-la-medida-n6331428",
-     "fecha": "2026-10-08T11:57:00.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)",
-   "maximo": 4
   },
   {
    "id": "1we1z9n",

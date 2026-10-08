@@ -1,6 +1,77 @@
 {
-  "generado": "2026-10-08T17:41:09.856Z",
+  "generado": "2026-10-08T18:04:06.283Z",
   "notas": [
+    {
+      "id": "bas6dw",
+      "titulo": "Una familia porteña necesita más de dos millones y medio para ser clase media",
+      "copete": "Un hogar de cuatro integrantes requirió al menos $2.669.815 en septiembre para pertenecer a ese sector en la Ciudad de Buenos Aires, según informó la estadística oficial. La canasta básica total para no ser pobre se ubicó en $1.687.299.",
+      "cuerpo": "El mismo grupo familiar requirió $1.687.299 para no caer bajo la línea de pobreza, monto destinado a cubrir los gastos alimentarios y esenciales.\n\nEl umbral para pertenecer a la clase media creció $66.259 respecto a agosto, cuando se ubicaba en $2.603.556. En la pirámide de ingresos, los hogares que superaron los $8.543.407 quedaron clasificados dentro de los sectores acomodados.\n\nPor otra parte, la inflación en el distrito alcanzó el 1,8% durante el noveno mes del año, lo que representó una leve aceleración frente al 1,7% registrado en el período previo.",
+      "guion": "Una familia porteña necesita más de dos millones y medio para ser clase media",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Radio Mitre",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/08/cuanto-debe-ganar-por-mes-una-familia-portena-para-ser-de-clase-media/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T16:25:57.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T17:31:16.079Z",
+      "relevancia": 79,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Una familia tipo necesitó $2.669.815 para ser clase media en septiembre.",
+        "La línea de pobreza se ubicó en $1.687.299 para el mismo hogar de referencia.",
+        "El instituto estadístico porteño informó que la inflación mensual llegó al 1,8%."
+      ],
+      "seSabe": [
+        "Una familia tipo porteña necesitó $2.669.815 para ser clase media en septiembre, según el instituto estadístico oficial.",
+        "La línea de pobreza para el hogar de referencia se estableció en $1.687.299 mensuales.",
+        "La inflación en la Ciudad de Buenos Aires registró un aumento del 1,8% durante septiembre."
+      ],
+      "textoRedes": "Una familia porteña necesitó al menos $2.669.815 en septiembre para ser considerada de clase media, según informó el instituto estadístico de la Ciudad de Buenos Aires. La línea de pobreza para el mismo hogar se ubicó en $1.687.299.",
+      "etiquetas": [
+        "clase media",
+        "pobreza",
+        "inflacion",
+        "ciudad de buenos aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/08/cuanto-debe-ganar-por-mes-una-familia-portena-para-ser-de-clase-media/",
+          "fecha": "2026-10-08T16:25:57.000Z",
+          "oficial": false,
+          "aporte": "Aportó los montos detallados para clase media, pobreza y la evolución de la inflación porteña."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/08/una-familia-de-cuatro-personas-necesito-mas-de-2660000-en-septiembre-para-ser-de-clase-media-en-caba/",
+          "fecha": "2026-10-08T16:44:27.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los ingresos necesarios de la familia propietaria en CABA según el organismo estadístico."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/sociedad/cuanto-necesito-una-familia-portena-para-ser-clase-media-en-septiembre-2026/",
+          "fecha": "2026-10-08T17:21:06.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el cálculo para la clase media se realizó sin considerar el costo del alquiler."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "una-familia-portena-necesita-mas-de-dos-millones-y-medio-para-ser"
+    },
     {
       "id": "f6j0rt",
       "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
@@ -9,14 +80,16 @@
       "guion": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
       "seccion": "Automovilismo",
       "medios": [
+        "Puntonueve (FM 100.9)",
+        "Radio Gabal (FM 104.1)",
         "Acción 5 (Balcarce)"
       ],
       "enlace": "https://accion5.com/por-cuestiones-climaticas-fue-suspendido-zonal-atlantico/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-08T16:40:13.000Z",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T16:14:22.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 90,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -86,141 +159,6 @@
       "foto": {
         "archivo": "fotos-notas/f6j0rt.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
-      }
-    },
-    {
-      "id": "bas6dw",
-      "titulo": "Una familia porteña necesita más de dos millones y medio para ser clase media",
-      "copete": "Un hogar de cuatro integrantes requirió al menos $2.669.815 en septiembre para pertenecer a ese sector en la Ciudad de Buenos Aires, según informó la estadística oficial. La canasta básica total para no ser pobre se ubicó en $1.687.299.",
-      "cuerpo": "El mismo grupo familiar requirió $1.687.299 para no caer bajo la línea de pobreza, monto destinado a cubrir los gastos alimentarios y esenciales.\n\nEl umbral para pertenecer a la clase media creció $66.259 respecto a agosto, cuando se ubicaba en $2.603.556. En la pirámide de ingresos, los hogares que superaron los $8.543.407 quedaron clasificados dentro de los sectores acomodados.\n\nPor otra parte, la inflación en el distrito alcanzó el 1,8% durante el noveno mes del año, lo que representó una leve aceleración frente al 1,7% registrado en el período previo.",
-      "guion": "Una familia porteña necesita más de dos millones y medio para ser clase media",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/08/cuanto-debe-ganar-por-mes-una-familia-portena-para-ser-de-clase-media/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T16:25:57.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Una familia tipo necesitó $2.669.815 para ser clase media en septiembre.",
-        "La línea de pobreza se ubicó en $1.687.299 para el mismo hogar de referencia.",
-        "El instituto estadístico porteño informó que la inflación mensual llegó al 1,8%."
-      ],
-      "seSabe": [
-        "Una familia tipo porteña necesitó $2.669.815 para ser clase media en septiembre, según el instituto estadístico oficial.",
-        "La línea de pobreza para el hogar de referencia se estableció en $1.687.299 mensuales.",
-        "La inflación en la Ciudad de Buenos Aires registró un aumento del 1,8% durante septiembre."
-      ],
-      "textoRedes": "Una familia porteña necesitó al menos $2.669.815 en septiembre para ser considerada de clase media, según informó el instituto estadístico de la Ciudad de Buenos Aires. La línea de pobreza para el mismo hogar se ubicó en $1.687.299.",
-      "etiquetas": [
-        "clase media",
-        "pobreza",
-        "inflacion",
-        "ciudad de buenos aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/08/cuanto-debe-ganar-por-mes-una-familia-portena-para-ser-de-clase-media/",
-          "fecha": "2026-10-08T16:25:57.000Z",
-          "oficial": false,
-          "aporte": "Aportó los montos detallados para clase media, pobreza y la evolución de la inflación porteña."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/08/una-familia-de-cuatro-personas-necesito-mas-de-2660000-en-septiembre-para-ser-de-clase-media-en-caba/",
-          "fecha": "2026-10-08T16:44:27.000Z",
-          "oficial": false,
-          "aporte": "Confirmó los ingresos necesarios de la familia propietaria en CABA según el organismo estadístico."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/sociedad/cuanto-necesito-una-familia-portena-para-ser-clase-media-en-septiembre-2026/",
-          "fecha": "2026-10-08T17:21:06.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el cálculo para la clase media se realizó sin considerar el costo del alquiler."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "una-familia-portena-necesita-mas-de-dos-millones-y-medio-para-ser"
-    },
-    {
-      "id": "jul3dm",
-      "titulo": "El Diario cumple 31 años como medio gráfico local",
-      "copete": "El único medio gráfico impreso y digital de Balcarce celebra 31 años de trayectoria periodística ininterrumpida desde su fundación como semanario en 1995.",
-      "cuerpo": "El Diario cumple 31 años de trayectoria en la comunidad tras haber salido a la calle por primera vez el 8 de octubre de 1995 como un semanario. Con el transcurso de los años, el medio gráfico sumó dos ediciones semanales y, desde febrero de 2003, consolidó su formato diario en la ciudad.\n\nEn la actualidad, la propuesta informativa abarca la cobertura de actividades locales, institucionales, deportivas y sociales, además de mantener su impresión en talleres propios y la distribución urbana a través del gremio de canillitas.",
-      "guion": "El Diario cumple 31 años como medio gráfico local",
-      "seccion": "Balcarce",
-      "medios": [
-        "News Balcarce (FM 91.7)"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30985",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-08T16:16:41.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 84,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El medio local cumple 31 años de trayectoria",
-        "Nació el 8 de octubre de 1995 como un semanario",
-        "Se transformó en edición diaria en febrero de 2003",
-        "Cuenta con su plataforma digital desde el año 1998"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El único medio gráfico de Balcarce celebra 31 años de trayectoria periodística desde su fundación como semanario en 1995.",
-      "etiquetas": [
-        "El Diario",
-        "medio grafico",
-        "Balcarce",
-        "historia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30985",
-          "fecha": "2026-10-08T16:16:41.000Z",
-          "oficial": false,
-          "aporte": "Aportó toda la información sobre el aniversario, la historia y la trayectoria del medio gráfico."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "crx30o",
-          "titulo": "El único diario de Balcarce de aparición en papel y en formato digital. Nuestro compromiso es informar con la verdad, con información chequeada, sin tergiversación y con compromiso con el ciudadano.",
-          "fecha": "2026-09-20T23:42:02.956Z",
-          "ruta": "/nota/el-unico-diario-de-balcarce-de-aparicion-en-papel-y-en-formato-crx30o"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-diario-cumple-31-anos-como-medio-grafico-local",
-      "foto": {
-        "archivo": "fotos-notas/jul3dm.jpg",
-        "credito": "Foto: News Balcarce (FM 91.7)"
       }
     },
     {
@@ -306,6 +244,8 @@
       "medios": [
         "News Balcarce (FM 91.7)",
         "Diario La Vanguardia",
+        "El Diario Balcarce",
+        "Puntonueve (FM 100.9)",
         "Acción 5 (Balcarce)",
         "El Destape"
       ],
@@ -353,6 +293,13 @@
           "fecha": null,
           "oficial": false,
           "aporte": "Agregó que por el momento no se definió una nueva fecha para el evento."
+        },
+        {
+          "medio": "Acción 5 (Balcarce)",
+          "enlace": "https://accion5.com/por-cuestiones-climaticas-se-postergo-fiesta-del-postre/",
+          "fecha": "2026-10-08T16:59:16.000Z",
+          "oficial": false,
+          "aporte": "Informó la postergación de la Fiesta Nacional del Postre y los motivos climáticos."
         }
       ],
       "antecedentes": [
@@ -396,6 +343,9 @@
       "medios": [
         "TN (Todo Noticias)",
         "Olé",
+        "Crónica",
+        "Radio Mitre",
+        "Canal 26",
         "La Capital (Rosario)"
       ],
       "enlace": "https://www.lacapital.com.ar/ovacion/perdi-el-amor-el-futbol-argentino-la-critica-tagliafico-la-liga-profesional-n10285581.html",
@@ -403,7 +353,7 @@
       "fecha": "2026-10-08T15:22:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T16:31:19.916Z",
-      "relevancia": 79,
+      "relevancia": 99,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -470,7 +420,7 @@
       "fecha": "2026-10-08T15:00:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T15:01:21.096Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -536,129 +486,6 @@
       "slug": "el-intendente-recibe-a-las-jugadoras-de-hockey-de-campo-de-pato"
     },
     {
-      "id": "vr9xc5",
-      "titulo": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
-      "copete": "El festival de música reveló los artistas que se presentarán del 12 al 14 de marzo en el Hipódromo de San Isidro. Tini Stoessel debutará en el evento junto a figuras internacionales.",
-      "cuerpo": "El festival Lollapalooza Argentina confirmó la grilla de artistas para su duodécima edición, que tendrá lugar del 12 al 14 de marzo de 2027 en el Hipódromo de San Isidro. \n\nLas principales figuras que encabezan el cartel son Tini, Travis Scott, Charli XCX, The Killers y David Guetta. La cantante nacional se presentará por primera vez en el encuentro musical, mientras transcurre su gira actual. \n\nLa programación principal también incluye los regresos de Queens of the Stone Age tras nueve años y de The Neighbourhood, además de las actuaciones de Rawayana, Fontaines D.C. y el debut en el país de Sombr.",
-      "guion": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "La Nación",
-        "Minuto Uno",
-        "Ámbito",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Perfil",
-        "Crónica",
-        "Infobae",
-        "Clarín"
-      ],
-      "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T15:00:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T16:31:19.916Z",
-      "relevancia": 83,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El festival se hará del 12 al 14 de marzo de 2027.",
-        "El Hipódromo de San Isidro será la sede del evento.",
-        "Tini Stoessel participará por primera vez en el encuentro.",
-        "Travis Scott, Charli XCX, The Killers y David Guetta lideran el cartel."
-      ],
-      "seSabe": [
-        "El festival Lollapalooza Argentina se realizará del 12 al 14 de marzo de 2027, según confirmó la organización este jueves.",
-        "El Hipódromo de San Isidro volverá a ser la sede del evento musical.",
-        "Travis Scott, Charli XCX, The Killers, Tini y David Guetta encabezan la grilla oficial.",
-        "Queens of the Stone Age, The Neighbourhood, Rawayana, Fontaines D.C. y Sombr integran la primera línea."
-      ],
-      "noConfirmado": [
-        "Todavía no se informaron los precios de las entradas ni la fecha de inicio de la venta de tickets."
-      ],
-      "etiquetas": [
-        "Lollapalooza",
-        "música",
-        "festivales",
-        "Tini",
-        "The Killers"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
-          "fecha": "2026-10-08T15:00:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la fecha del anuncio, las figuras principales de la grilla y los artistas que completan la primera línea."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/espectaculos/lollapalooza-argentina-2027-anuncio-lineup-travis-scott-charli-xcx-the-killers-tini-stoessel-encabezan-festival_0_Jp13a9hPsf.html",
-          "fecha": "2026-10-08T15:22:26.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las fechas de realización del festival en el Hipódromo de San Isidro."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/espectaculos/mas-alla-los-headliners-las-otras-bombas-del-lollapalooza-argentina-2027-n6331639",
-          "fecha": "2026-10-08T16:15:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la relevancia de la segunda línea de artistas en el lineup."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/espectaculos/lollapalooza-2027-argentina-line-up-confirmado-y-todo-lo-que-tenes-que-saber-n6331567",
-          "fecha": "2026-10-08T15:01:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que se trata de la duodécima edición del festival y ratificó los artistas principales."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/musica/noticias/2026/10/08/la-grilla-de-lollapalooza-2027-travis-scott-charli-xcx-the-killers-tini-david-guetta-y-queens-of-the-stone-age-entre-otros/",
-          "fecha": "2026-10-08T15:07:01.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la celebración de los doce años del festival junto al público argentino."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/clase/trendy/lollapalooza-2027-confirmaron-el-lineup-completo-que-artistas-completan-la-grilla/",
-          "fecha": "2026-10-08T15:10:12.000Z",
-          "oficial": false,
-          "aporte": "Aportó datos sobre la confirmación oficial del lineup para 2027."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/cultura/lollapalooza-argentina-2027-ya-esta-el-lineup-completo-con-travis-scott-tini-charli-xcx-y-the-killers-a42.phtml",
-          "fecha": "2026-10-08T15:28:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló la diversidad de géneros musicales que reunirá el encuentro durante las tres jornadas."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/lollapalooza-argentina-2027-se-conocio-el-lineup-completo-con-travis-scott-tini-the-killers-y-mas/",
-          "fecha": "2026-10-08T15:01:00.000Z",
-          "oficial": false,
-          "aporte": "Destacó la combinación de artistas internacionales y referentes de la escena nacional."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/teleshow/2026/10/08/lollapalooza-argentina-2027-travis-scott-charli-xcx-y-tini-stoessel-encabezan-el-line-up/",
-          "fecha": "2026-10-08T15:23:12.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lollapalooza-anuncia-su-grilla-con-tini-y-the-killers-para-2027"
-    },
-    {
       "id": "5e10lb",
       "titulo": "Ramón Díaz suena en Corinthians y se aleja de River",
       "copete": "El director técnico argentino encabeza las opciones para asumir en el conjunto paulista tras la salida de Fernando Diniz. Su posible llegada al fútbol brasileño modifica el escenario del club de Núñez.",
@@ -677,7 +504,7 @@
       "fecha": "2026-10-08T14:43:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T17:01:18.260Z",
-      "relevancia": 87,
+      "relevancia": 77,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -771,6 +598,7 @@
         "Crónica",
         "Radio Mitre",
         "Canal 26",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "InfoRegión"
       ],
@@ -994,6 +822,72 @@
       }
     },
     {
+      "id": "jul3dm",
+      "titulo": "El Diario cumple 31 años como medio gráfico local",
+      "copete": "El único medio gráfico impreso y digital de Balcarce celebra 31 años de trayectoria periodística ininterrumpida desde su fundación como semanario en 1995.",
+      "cuerpo": "El Diario cumple 31 años de trayectoria en la comunidad tras haber salido a la calle por primera vez el 8 de octubre de 1995 como un semanario. Con el transcurso de los años, el medio gráfico sumó dos ediciones semanales y, desde febrero de 2003, consolidó su formato diario en la ciudad.\n\nEn la actualidad, la propuesta informativa abarca la cobertura de actividades locales, institucionales, deportivas y sociales, además de mantener su impresión en talleres propios y la distribución urbana a través del gremio de canillitas.",
+      "guion": "El Diario cumple 31 años como medio gráfico local",
+      "seccion": "Balcarce",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30985",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T12:44:02.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T17:31:16.079Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El medio local cumple 31 años de trayectoria",
+        "Nació el 8 de octubre de 1995 como un semanario",
+        "Se transformó en edición diaria en febrero de 2003",
+        "Cuenta con su plataforma digital desde el año 1998"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El único medio gráfico de Balcarce celebra 31 años de trayectoria periodística desde su fundación como semanario en 1995.",
+      "etiquetas": [
+        "El Diario",
+        "medio grafico",
+        "Balcarce",
+        "historia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30985",
+          "fecha": "2026-10-08T16:16:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó toda la información sobre el aniversario, la historia y la trayectoria del medio gráfico."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "crx30o",
+          "titulo": "El único diario de Balcarce de aparición en papel y en formato digital. Nuestro compromiso es informar con la verdad, con información chequeada, sin tergiversación y con compromiso con el ciudadano.",
+          "fecha": "2026-09-20T23:42:02.956Z",
+          "ruta": "/nota/el-unico-diario-de-balcarce-de-aparicion-en-papel-y-en-formato-crx30o"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-diario-cumple-31-anos-como-medio-grafico-local",
+      "foto": {
+        "archivo": "fotos-notas/jul3dm.jpg",
+        "credito": "Foto: News Balcarce (FM 91.7)"
+      }
+    },
+    {
       "id": "1gsplvm",
       "titulo": "La Bolsa de Cereales anticipa lluvias y fuertes contrastes térmicos",
       "copete": "El pronóstico agroclimático para gran parte del país prevé precipitaciones variables, ingreso de aire polar con heladas en zonas serranas y marcas térmicas de hasta 40 grados en el norte.",
@@ -1064,90 +958,6 @@
       }
     },
     {
-      "id": "we9ftu",
-      "titulo": "Franco Colapinto bromea con un hincha español en Singapur",
-      "copete": "El piloto argentino de Alpine se cruzó con un simpatizante que llevaba la camiseta de España en la previa de la competencia nocturna en el circuito de Marina Bay.",
-      "cuerpo": "El piloto Franco Colapinto protagonizó un divertido cruce con un hincha que lucía la camiseta de España en la previa del Gran Premio de Singapur. El deportista de Alpine le señaló al simpatizante que su indumentaria era incorrecta, en referencia a la final del Mundial. El intercambio generó risas y concluyó cuando el fanático reconoció que también apoya a la Albiceleste. La escudería francesa difundió las imágenes del momento en sus redes sociales.",
-      "guion": "Franco Colapinto bromea con un hincha espanol en Singapur",
-      "seccion": "Automovilismo",
-      "medios": [
-        "TyC Sports",
-        "Minuto Uno"
-      ],
-      "enlace": "https://www.tycsports.com/automovilismo/colapinto-broma-singapur-recordo-final-mundial-id764845.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T12:00:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Franco Colapinto bromeó con un hincha en Singapur",
-        "El piloto cuestionó la camiseta de España",
-        "Alpine publicó el video del encuentro"
-      ],
-      "seSabe": [
-        "Franco Colapinto compite este fin de semana en el Gran Premio de Singapur",
-        "El piloto se cruzó con un hincha con la camiseta de España",
-        "La escudería Alpine compartió el video del momento"
-      ],
-      "noConfirmado": [
-        "No trascendieron los detalles sobre el resultado final de la competencia en el circuito nocturno"
-      ],
-      "textoRedes": "Franco Colapinto protagonizó un divertido cruce con un hincha que llevaba la camiseta de España en la previa del Gran Premio de Singapur.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Gran Premio de Singapur",
-        "Alpine"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/colapinto-broma-singapur-recordo-final-mundial-id764845.html",
-          "fecha": "2026-10-08T12:00:37.000Z",
-          "oficial": false,
-          "aporte": "Detalló el cruce de Franco Colapinto con el hincha y la publicación del video de Alpine"
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/la-chicana-franco-colapinto-un-fan-singapur-que-recordo-la-final-del-mundial-2026-n6331585",
-          "fecha": "2026-10-08T14:57:00.000Z",
-          "oficial": false,
-          "aporte": "Informó el encuentro del piloto argentino con un fanático con la casaca de España"
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "117ewnb",
-          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
-          "fecha": "2026-10-08T11:26:30.000Z",
-          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
-        },
-        {
-          "id": "18wlubj",
-          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
-          "fecha": "2026-10-07T09:01:08.000Z",
-          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
-        },
-        {
-          "id": "11d7omy",
-          "titulo": "Lionel Messi descarta teorías conspirativas sobre la final del Mundial",
-          "fecha": "2026-10-07T02:01:00.000Z",
-          "ruta": "/nota/lionel-messi-descarta-teorias-conspirativas-sobre-la-final-del-mundial-11d7omy"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-bromea-con-un-hincha-espanol-en-singapur"
-    },
-    {
       "id": "r7ox1t",
       "titulo": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
       "copete": "La Provincia autorizó una suba del 8,8% en las tarifas del Sistema Vial Integrado del Atlántico. Rige desde el viernes 9 de octubre e impacta en las estaciones de AUBASA.",
@@ -1157,11 +967,12 @@
       "medios": [
         "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
         "La Noticia 1",
         "Infobae",
         "Ámbito",
+        "TN (Todo Noticias)",
         "A24",
+        "iProfesional",
         "C5N",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
@@ -1170,7 +981,8 @@
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "Agencia DIB"
       ],
       "enlace": "https://dib.com.ar/sociedad/suben-los-peajes-las-rutas-la-costa-atlantica-cuanto-costara-viajar-n56330",
       "teniaImagenLaFuente": true,
@@ -1287,8 +1099,8 @@
       "guion": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
       "seccion": "Automovilismo",
       "medios": [
-        "Campeones",
         "La Verdad de Ayacucho",
+        "Campeones",
         "La Nación",
         "Radio Mitre"
       ],
@@ -1297,7 +1109,7 @@
       "fecha": "2026-10-08T11:26:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T13:31:08.020Z",
-      "relevancia": 67,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1350,6 +1162,85 @@
         "archivo": "fotos-notas/117ewnb.jpg",
         "credito": "Foto: La Verdad de Ayacucho"
       }
+    },
+    {
+      "id": "1279vct",
+      "titulo": "Franco Colapinto bromea con un fanático en Singapur y apunta alto",
+      "copete": "El piloto argentino afronta la decimoséptima fecha de la Fórmula 1 en el circuito callejero de Marina Bay. Durante su llegada, protagonizó un divertido cruce con un simpatizante y repasó sus expectativas para el fin de semana.",
+      "cuerpo": "Franco Colapinto transita la previa del Gran Premio de Singapur en el trazado callejero de Marina Bay, correspondiente a la decimoséptima fecha de la Fórmula 1. Durante su ingreso a las instalaciones este jueves, un simpatizante se le acercó para solicitarle una firma luciendo una camiseta de la Selección de España. El deportista respondió con simpatía que esa indumentaria \"está mal\", mientras el joven le retrucó que alentaba por la Argentina, según informaron los medios presentes.\n\nEn la conferencia de prensa oficial, el volante de la escudería Alpine remarcó el potencial del vehículo tras las mejoras incorporadas desde el Gran Premio de Países Bajos. El piloto confía en pelear por las unidades en disputa y estimó que el rendimiento actual permite aspirar al quinto lugar en la clasificación.\n\nLa actividad en pista continuará con las prácticas libres uno a las 5:30 y la clasificación sprint a partir de las 9:30.",
+      "guion": "Franco Colapinto bromea con un fanático en Singapur y apunta alto",
+      "seccion": "Automovilismo",
+      "medios": [
+        "TN (Todo Noticias)",
+        "A24"
+      ],
+      "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/la-inesperada-respuesta-de-franco-colapinto-a-un-fanatico-que-se-le-acerco-en-el-gp-de-singapur-esta-mal/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T10:52:06.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T18:01:30.284Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto disputa una nueva fecha de la Fórmula 1 en Singapur.",
+        "El piloto protagonizó un divertido cruce con un hincha por una camiseta de fútbol.",
+        "El deportista confía en el rendimiento del vehículo para sumar puntos.",
+        "La actividad oficial en pista incluye prácticas y clasificación sprint."
+      ],
+      "textoRedes": "Franco Colapinto transita la previa del Gran Premio de Singapur en la Fórmula 1, protagonizó un divertido cruce con un fanático por una camiseta de fútbol y anticipó sus expectativas para sumar puntos en el circuito callejero.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Singapur"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/la-inesperada-respuesta-de-franco-colapinto-a-un-fanatico-que-se-le-acerco-en-el-gp-de-singapur-esta-mal/",
+          "fecha": "2026-10-08T10:52:06.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la conferencia de prensa, las declaraciones del piloto respecto al auto y el diálogo con el hincha."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/esta-mal-la-inesperada-respuesta-colapinto-un-fanatico-la-previa-del-gp-singapur-n1604539",
+          "fecha": "2026-10-08T17:18:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el cruce simpático con el fanático en Singapur y las expectativas generales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18wlubj",
+          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+          "fecha": "2026-10-07T09:01:08.000Z",
+          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
+        },
+        {
+          "id": "16fjrrx",
+          "titulo": "Franco Colapinto larga desde el fondo en el Gran Premio de Malasia",
+          "fecha": "2026-10-04T03:00:14.000Z",
+          "ruta": "/nota/franco-colapinto-larga-desde-el-fondo-en-el-gran-premio-de-malasia-16fjrrx"
+        },
+        {
+          "id": "fjrow3",
+          "titulo": "Franco Colapinto busca la remontada en el Gran Premio de Baréin",
+          "fecha": "2026-10-03T10:28:42.000Z",
+          "ruta": "/nota/franco-colapinto-busca-la-remontada-en-el-gran-premio-de-barein-fjrow3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-bromea-con-un-fanatico-en-singapur-y-apunta-alto"
     },
     {
       "id": "112w8rt",
@@ -1941,7 +1832,7 @@
       "fecha": "2026-10-08T05:25:13.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T17:01:18.260Z",
-      "relevancia": 99,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2204,6 +2095,60 @@
       }
     },
     {
+      "id": "7r5ucc",
+      "titulo": "Vecinos advierten sobre el robo de flexibles de gas",
+      "copete": "Registran un incremento en la sustracción de conexiones de cobre junto a los medidores domiciliarios en Balcarce. Un jardín de infantes debió suspender las clases tras un episodio similar.",
+      "cuerpo": "Vecinos de Balcarce advierten sobre una modalidad delictiva centrada en la sustracción de flexibles de cobre ubicados junto a los medidores de gas. Un comercio del rubro reportó un incremento en la demanda de reemplazos tras vender tres unidades en una sola jornada y otra el día anterior. La motivación detrás de estos episodios radica en la cotización del cobre para su comercialización como material reciclable, según indicó un trabajador del sector.\n\nEsta situación generó antecedentes recientes en el distrito. El martes, el personal del Jardín de Infantes N° 905 detectó olor a gas al faltar el flexible del medidor, lo que motivó la suspensión preventiva de las actividades escolares durante el turno mañana hasta la llegada de operarios de la empresa Camuzzi para asegurar el inmueble.\n\nLa extracción de estos componentes genera riesgos por la liberación de combustible. Como alternativa, el mercado ofrece conexiones de acero recubiertas con plástico que carecen de valor para la reventa ilegal, valuadas en unos 44.000 pesos frente a los 32.000 pesos de las piezas tradicionales.",
+      "guion": "Vecinos advierten sobre el robo de flexibles de gas",
+      "seccion": "Policiales",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T22:52:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T23:01:35.401Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sustracción de flexibles de cobre en medidores de gas",
+        "Venta de repuestos aumentó en un comercio local",
+        "Jardín de Infantes N° 905 suspendió clases el martes",
+        "Alternativas de acero para evitar nuevos robos"
+      ],
+      "noConfirmado": [
+        "No hay información oficial sobre la cantidad total de hechos registrados en la ciudad",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Vecinos de Balcarce advierten sobre el robo de flexibles de cobre en medidores de gas. Un comercio local reportó mayores ventas de repuestos y un jardín de infantes debió suspender clases por un faltante.",
+      "etiquetas": [
+        "gas",
+        "robos",
+        "Balcarce",
+        "medidores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+          "fecha": "2026-10-07T22:52:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló los robos de flexibles de gas, la venta de repuestos y el caso del jardín de infantes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "vecinos-advierten-sobre-el-robo-de-flexibles-de-gas"
+    },
+    {
       "id": "1qdgf5p",
       "titulo": "La Argentina firma un acuerdo internacional contra la producción excesiva",
       "copete": "El país se sumó a un bloque de quince naciones para cuestionar la sobrecapacidad industrial global y los subsidios estatales. La decisión se adoptó durante una cumbre del G20.",
@@ -2291,13 +2236,13 @@
       "guion": "Fernando Espinoza asume un nuevo mandato en la Federación Argentina de Municipios",
       "seccion": "Política",
       "medios": [
-        "Agencia DIB",
         "El Destape",
         "Página/12",
         "Crónica",
         "Diario Popular",
         "Perfil",
         "Letra P",
+        "Agencia DIB",
         "Ámbito",
         "El Día"
       ],
@@ -2473,14 +2418,16 @@
       "guion": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/nueva-infraccion-por-circular-con.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T20:06:42.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T04:31:08.770Z",
-      "relevancia": 73,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2981,6 +2928,7 @@
       "guion": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Acción 5 (Balcarce)",
@@ -2996,7 +2944,7 @@
       "fecha": "2026-10-07T14:38:16.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 69,
+      "relevancia": 79,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3057,6 +3005,7 @@
       "guion": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/impulsan-un-punto-digital-movil-para.html",
@@ -3064,7 +3013,7 @@
       "fecha": "2026-10-07T14:22:28.232Z",
       "sinFecha": false,
       "visto": "2026-10-08T02:01:19.757Z",
-      "relevancia": 65,
+      "relevancia": 75,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3296,10 +3245,10 @@
         "Noticias Argentinas (NA)",
         "La Tecla",
         "El Eco de Tandil",
+        "Noticias Agropecuarias",
         "Agencia DIB",
         "Zona Norte Diario",
         "El Día",
-        "Noticias Agropecuarias",
         "Infobae"
       ],
       "enlace": "https://www.latecla.info/170241-la-justicia-ordeno-preservar-los-datos-sobre-las-tierras-rurales-bonaerenses",
@@ -3472,7 +3421,9 @@
       "guion": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -3481,7 +3432,7 @@
       "fecha": "2026-10-07T13:06:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T13:31:19.995Z",
-      "relevancia": 69,
+      "relevancia": 89,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3579,6 +3530,130 @@
       "foto": {
         "archivo": "fotos-notas/45acbd.jpg",
         "credito": "Foto: Municipalidad de Balcarce"
+      }
+    },
+    {
+      "id": "131078z",
+      "titulo": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
+      "copete": "La Cámara de Diputados de la Provincia distinguirá al balcarceño por su trayectoria en el deporte adaptado y su paso por los Juegos Paralímpicos.",
+      "cuerpo": "La distinción se originó a partir de una iniciativa impulsada por el bloque UCR + Cambio Federal en la Legislatura bonaerense, según informó un medio local.\n\nEl homenaje valora su labor como integrante del cuerpo técnico de la Selección Argentina de Boccia en los Juegos Paralímpicos de Río de Janeiro 2016 y Tokio 2020, además de su trabajo sostenido para fomentar la inclusión y el desarrollo de habilidades motrices y sociales a través de la actividad física.",
+      "guion": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/agustin-molpeceres-recibira-un-reconocimiento-de-la-camara-de-diputados-bonaerense",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T12:07:32.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T13:01:24.717Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Cámara de Diputados bonaerense distinguirá a Agustín Molpeceres",
+        "El reconocimiento valora su trayectoria en el deporte adaptado",
+        "Integró el cuerpo técnico de la Selección Argentina de Boccia en Río 2016 y Tokio 2020"
+      ],
+      "noConfirmado": [
+        "No se informó la fecha exacta en la que se realizará la entrega formal del reconocimiento",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El balcarceño Agustín Molpeceres recibirá un reconocimiento de la Cámara de Diputados bonaerense por su trayectoria en el deporte adaptado y su participación en los Juegos Paralímpicos.",
+      "etiquetas": [
+        "Agustín Molpeceres",
+        "deporte adaptado",
+        "Legislatura bonaerense",
+        "Balcarce",
+        "Juegos Paralímpicos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/agustin-molpeceres-recibira-un-reconocimiento-de-la-camara-de-diputados-bonaerense",
+          "fecha": "2026-10-07T12:07:32.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el reconocimiento legislativo al balcarceño Agustín Molpeceres por su trayectoria en el deporte adaptado y su participación en los Juegos Paralímpicos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1xow9qi",
+          "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
+          "fecha": "2026-09-30T19:34:59.000Z",
+          "ruta": "/nota/agustin-molpeceres-recibe-un-reconocimiento-legislativo-en-la-1xow9qi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "agustin-molpeceres-recibe-una-distincion-de-la-legislatura-bonaerense",
+      "foto": {
+        "archivo": "fotos-notas/131078z.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "copete": "El piloto balcarceño completó una buena actuación en el autódromo de 9 de Julio. En tanto, Ariel Ianni y Mario Alberghini sufrieron inconvenientes y abandonaron la final.",
+      "cuerpo": "El piloto Francisco Tamagno completó el fin de semana en el octavo puesto de la octava fecha de la Clase \"B\" del Procar 4000, disputada en el autódromo Guillermo Maldonado de 9 de Julio, según informó un medio local. Con su cupé Dodge, el balcarceño mantuvo un ritmo firme, avanzó en el clasificador a pesar de algunos problemas en los frenos y cerró la competencia dentro del pelotón de vanguardia que encabezó Germán Pietranera.\n\nPor el contrario, los otros representantes locales sufrieron distintos inconvenientes y no pudieron terminar la prueba decisiva. Ariel Ianni debió abandonar en el inicio tras un toque que lo sacó de pista con su Ford Falcon, mientras que Mario Alberghini dejó la competencia en la segunda vuelta debido a una falla en el motor de su Torino.",
+      "guion": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T12:01:15.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T12:31:19.165Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Francisco Tamagno terminó en el octavo puesto con su Dodge",
+        "Ariel Ianni abandonó la final tras un despiste en el arranque",
+        "Mario Alberghini dejó la carrera en la segunda vuelta por una falla mecánica",
+        "Germán Pietranera se impuso en la clasificación y en la primera serie"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El piloto Francisco Tamagno terminó octavo en la octava fecha del Procar 4000 en 9 de Julio. Ariel Ianni y Mario Alberghini debieron abandonar la competencia final.",
+      "etiquetas": [
+        "Procar 4000",
+        "Francisco Tamagno",
+        "deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/procar-4000-francisco-tamagno-termino-8-en-atractiva-carrera-364",
+          "fecha": "2026-10-07T12:01:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados y el desarrollo de la competencia de los pilotos balcarceños en 9 de Julio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "francisco-tamagno-termina-octavo-en-la-octava-fecha-del-procar-4000",
+      "foto": {
+        "archivo": "fotos-notas/y4gp3v.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -3742,125 +3817,14 @@
         "archivo": "fotos-notas/tnbf7h.jpg",
         "credito": "Foto: TN (Todo Noticias)"
       }
-    },
-    {
-      "id": "w8t322",
-      "titulo": "El consorcio de Rowing gana la concesión de AySA por millones",
-      "copete": "El Gobierno nacional adjudicó el noventa por ciento de las acciones de Agua y Saneamientos Argentinos. La oferta ganadora superó los trescientos cuarenta millones de dólares.",
-      "cuerpo": "El Gobierno nacional adjudicó este jueves la privatización del noventa por ciento de las acciones de Agua y Saneamientos Argentinos a un consorcio integrado por el grupo Rowing, Transclor, Arcos Saneamento e Participações y PHX.\n\nTras la apertura de sobres, el proceso continúa con la vista del expediente, el período para impugnaciones, el dictamen de preadjudicación, la resolución definitiva, el pago y la posterior firma del contrato. Desde el sector estiman que los nuevos operadores tomarán posesión del servicio hacia finales de este año.",
-      "guion": "El consorcio de Rowing gana la concesión de AySA por millones",
-      "seccion": "Economía",
-      "medios": [
-        "El Eco de Tandil",
-        "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
-        "Diputados Bonaerenses",
-        "La Nación",
-        "Infobae",
-        "Clarín",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "El Destape",
-        "Página/12",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Tecla",
-        "InfoRegión",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)"
-      ],
-      "enlace": "https://www.cronista.com/economia-politica/con-una-oferta-de-us-3402-millones-la-privatizacion-de-aysa-ya-tiene-favorito/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T06:00:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T14:01:09.593Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El consorcio ganador ofertó u$s 340,2 millones por AySA.",
-        "La propuesta superó por casi el veinte por ciento a la de Roggio.",
-        "El grupo prevé inversiones por u$s 15.040 millones en treinta años."
-      ],
-      "seSabe": [
-        "La oferta del consorcio ganador fue de u$s 340,2 millones por el 90 por ciento de las acciones.",
-        "El grupo está integrado por Rowing, Transclor, Arcos y PHX.",
-        "Se prevé una inversión de u$s 1.940 millones en los primeros cinco años."
-      ],
-      "noConfirmado": [
-        "Todavía resta completar el período de impugnaciones, el dictamen y la firma del contrato."
-      ],
-      "textoRedes": "El Gobierno nacional adjudicó la privatización de AySA al consorcio encabezado por Rowing. La oferta ganadora superó los trescientos cuarenta millones de dólares e incluye un plan de inversiones millonario para los próximos treinta años.",
-      "etiquetas": [
-        "AySA",
-        "Privatizacion",
-        "Economia",
-        "AMBA",
-        "Agua"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/con-una-oferta-de-us-3402-millones-la-privatizacion-de-aysa-ya-tiene-favorito/",
-          "fecha": "2026-10-08T13:14:09.000Z",
-          "oficial": false,
-          "aporte": "Detalló las cifras de la oferta ganadora, los montos de inversión y las etapas del proceso de adjudicación."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/08/un-grupo-empresario-local-ofrecio-usd-340-millones-y-se-quedo-con-la-concesion-de-aysa-por-30-anos/",
-          "fecha": "2026-10-08T13:53:44.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la concesión abarca el 90 por ciento de las acciones de la empresa."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/aysa-vuelve-a-manos-privadas-por-us340-millones-nid08102026/",
-          "fecha": "2026-10-08T13:33:47.000Z",
-          "oficial": false,
-          "aporte": "Informó que la apertura de las propuestas económicas se realizó el jueves a las 10."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-adjudico-aysa-al-grupo-de-mauricio-filiberti-por-us-340-millones_a6ac79b025319d0dbc2757fdd",
-          "fecha": "2026-10-08T13:35:45.000Z",
-          "oficial": false,
-          "aporte": "Especificó los nombres de las empresas que integran el holding adjudicatario."
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/10/08/privatizacion-de-aysa-el-grupo-de-mauricio-filiberti-adjudico-aysa-por-us340-millones/",
-          "fecha": "2026-10-08T13:59:03.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la adjudicación fue realizada por el Gobierno nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-consorcio-de-rowing-gana-la-concesion-de-aysa-por-millones",
-      "foto": {
-        "archivo": "fotos-notas/w8t322.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
-    "Automovilismo",
     "Economía",
-    "Balcarce",
+    "Automovilismo",
     "Cultura y agenda",
     "Fútbol",
+    "Balcarce",
     "Política",
     "Agro",
     "Argentina",
@@ -3872,15 +3836,20 @@
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
       "cuantas": 4
+    },
+    {
+      "nombre": "El autódromo",
+      "ranura": "autodromo",
+      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
-      "temp": 11,
+      "temp": 10,
       "sensacion": 6,
-      "humedad": 83,
-      "viento": 27,
-      "rumbo": "SE",
+      "humedad": 84,
+      "viento": 25,
+      "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": true
     },
@@ -4244,16 +4213,22 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "10v14fs",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
       "id": "3mwi2b",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "159oig4",
-      "titulo": null,
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA (visto al reescribir)"
+      "id": "mkof0b",
+      "titulo": "Concejo Deliberante: este jueves llega la decimoquinta…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "baz7ti",
@@ -4268,22 +4243,28 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "1boxf4v",
+      "titulo": "Demarcaron la Ruta 55 entre Pieres y Balcarce",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
+    },
+    {
       "id": "veuftg",
       "titulo": "Milei vuelve a Estados Unidos: nuevo gesto de apoyo a…",
       "seccion": "Política",
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "h7y441",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
-    },
-    {
       "id": "1szcs0u",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "6gphoh",
+      "titulo": "La historia de Nico: su mamá contó cómo atraviesan el…",
+      "seccion": "Balcarce",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "1tcxxsy",
@@ -4308,12 +4289,6 @@
       "titulo": "Médicos bonaerenses, contra PAMI: denuncian precariedad…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1vlmvrz",
-      "titulo": "La Corte convoca a conjueces para un nuevo debate sobre la…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "11x1acq",
@@ -4344,18 +4319,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "cilz2p",
-      "titulo": null,
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"el menor de\""
-    },
-    {
-      "id": "6gphoh",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1d96pbn",
@@ -4394,5 +4357,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 3
 }
