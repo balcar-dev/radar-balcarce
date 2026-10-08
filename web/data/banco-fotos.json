@@ -9501,16 +9501,16 @@
   "cuando": "2026-10-07T21:02:52.475Z"
  },
  "1rcyrsi": {
-  "archivo": "fotos-notas/1rcyrsi.jpg",
   "medio": "Página/12",
-  "credito": "Foto: Página/12",
   "licencia": null,
   "origen": "medio",
   "titulo": "Un diputado libertario reivindica la dictadura y la comisión termina en escándalo",
   "enlace": "https://www.pagina12.com.ar/2026/10/07/el-diputado-libertario-beltran-benedit-reivindico-la-visita-a-los-genocidas/",
   "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/4B7HUPAOUFBW7EVAGSUQLMHDSY.jpg?smart=true&auth=843958bd09fee6f08d3756426667f6a42c0be40c9ed5d8a14d8e961675faa4ee&width=1200&height=630",
   "razon": "Tiene excelente nitidez, encuadre limpio sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-07T23:31:56.922Z"
+  "cuando": "2026-10-07T23:31:56.922Z",
+  "intentado": true,
+  "borrada": true
  },
  "1d48tdj": {
   "medio": "Diario La Vanguardia",
@@ -9809,5 +9809,41 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Planta_caida_coope.jpeg",
   "razon": "Es la única opción disponible, cuenta con buena nitidez, muestra claramente el hecho y los operarios trabajando sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-08T12:03:04.464Z"
+ },
+ "1c93acw": {
+  "archivo": "fotos-notas/1c93acw.jpg",
+  "medio": "Página/12",
+  "credito": "Foto: Página/12",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto cuenta detalles de su llanto por la despedida de Messi",
+  "enlace": "https://www.pagina12.com.ar/2026/10/08/llore-un-rato-franco-colapinto-hablo-sobre-la-despedida-de-messi/",
+  "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/UZLLIUBGFJDBZI7K46W4GCVH34.jpeg?smart=true&auth=6e4711f4e94844a546f66379063030b5f8c36845eaca79f0b04cb39768e5be03&width=1200&height=630",
+  "razon": "La foto B muestra claramente a Franco Colapinto en primer plano sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-08T12:32:22.075Z"
+ },
+ "116x391": {
+  "archivo": "fotos-notas/116x391.jpg",
+  "medio": "La Tecla",
+  "credito": "Foto: La Tecla",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "AUBASA aumenta los peajes del Sistema Vial del Atlántico",
+  "enlace": "https://www.latecla.info/170262-aubasa-actualiza-las-tarifas-de-los-peajes-del-sistema-vial-del-atlantico",
+  "imagenOriginal": "https://latecla-repos-dw6.aplinews.com/archivos/noticias/fotografias/216481_3.jpg",
+  "razon": "Muestra claramente la estación de peaje con buena nitidez, sin personas ni marcas agregadas por el medio.",
+  "cuando": "2026-10-08T12:32:22.075Z"
+ },
+ "1we1z9n": {
+  "archivo": "fotos-notas/1we1z9n.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto busca sumar puntos en el Gran Premio de Singapur",
+  "enlace": "https://radiomitre.cienradios.com/deportes/la-ilusion-de-franco-colapinto-antes-del-gp-de-singapur-tenemos-un-coche-muy-rapido/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/UWIG7YIESBGSNAZYZ5KTVGACRE.png?smart=true&auth=14772618e25001aca9c7adb3e5734c6ca5b42d520899828d507892229e9c96f6&width=1200&height=630",
+  "razon": "La foto B muestra a Franco Colapinto de cuerpo entero en exteriores con buena calidad y sin marcas agregadas, ideal para la nota.",
+  "cuando": "2026-10-08T12:32:22.075Z"
  }
 }
