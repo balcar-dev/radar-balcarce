@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T00:02:51.340Z",
+ "generado": "2026-10-08T00:10:34.618Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,29 +15,9 @@
      "fecha": "2026-10-07T14:11:00.000Z"
     },
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/deportes/cancion-jugadores-scaloneta-pedirle-lionel-messi-retire-seleccion-sos-eterno_0_HIv3VHE7PQ.html",
-     "fecha": "2026-10-07T20:00:53.000Z"
-    },
-    {
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/deportes/2026/10/07/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-los-companeros-le-cantaron-a-lionel-messi-en-el-micro-camino-a-su-despedida/",
      "fecha": "2026-10-07T19:40:07.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/07/sos-eterno-como-lo-de-qatar-la-nueva-cancion-que-el-plantel-de-la-seleccion-le-compuso-a-messi-en-su-despedida/",
-     "fecha": "2026-10-07T19:43:43.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/07/sos-eterno-como-lo-de-qatar-la-nueva-cancion-que-el-plantel-de-la-seleccion-le-compuso-a-messi-en-su-despedida/",
-     "fecha": "2026-10-07T21:25:48.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://442.perfil.com/noticias/seleccion-argentina/la-cancion-que-los-jugadores-de-la-seleccion-argentina-le-hicieron-a-lionel-messi-previo-a-su-retiro.phtml",
-     "fecha": "2026-10-07T21:40:00.000Z"
     },
     {
      "medio": "Página/12",
@@ -78,7 +58,7 @@
    "id": "1j5cds9",
    "titulo": "Rodrigo Cunqueiro será invitado de Diego Ramos en “La Noche es Nuestra”",
    "copete": "Rodrigo Cunqueiro volverá a tener este jueves 8 una presencia destacada en la televisión nacional. El artista balcarceño será uno de los invitados de “La Noche es Nuestra”, el ciclo que conduce Diego Ramos por Televisión Pública, donde tend",
-   "seccion": "Balcarce",
+   "seccion": "Cultura y agenda",
    "fecha": "2026-10-07T23:58:21.000Z",
    "fuentes": [
     {
@@ -87,8 +67,8 @@
      "fecha": "2026-10-07T23:58:21.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 4 problemas (numero, nombre): el titulo dice 0 y la fuente no lo dice",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
    "maximo": 3
   },
   {
