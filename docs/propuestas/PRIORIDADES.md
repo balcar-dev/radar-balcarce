@@ -70,6 +70,10 @@ bueno.*
 | 32 | **Videos animados y unificados** para todas las piezas, con subtítulos. **Aprobado**; se repasan juntos la semana que viene | Ideas | 3-5 días | D + C |
 | 32b | **El plan de redes completo** (videos, dónde sale cada pieza, memoria, aviso de IA, TikTok) está junto en Ideas, sección 7 | Ideas | — | — |
 | 33 | **Reels:** clima y farmacia como reel en Facebook (en Instagram, historia); lo demás con voz, reel en las dos; medir 4 semanas | Ideas | 1 día + medir | C |
+| 33b | **Jefe editor** para las notas con 3+ fuentes (Haiku para todas, Sonnet para las 5 más importantes) más **fichas de contexto** verificadas; primero se prueba con 30 notas reales | Ideas 4c, MEJORAS "Modelos de IA" | 2-3 días + prueba | D + C |
+| 33c | **Segunda opinión de fotos con otro modelo** (si cualquiera ve marca o menor, sale placa) | MEJORAS "Modelos de IA" | 1 día | C |
+| 33d | **Notas viejas sin cuerpo:** `noindex` a las 296 y reescribir solo las de Balcarce y las de redes (un lote con Haiku, menos de US$ 1) | MEJORAS "Notas viejas" | 3 h + 1 día | D + C |
+| 33e | **Cuenta de Anthropic** con crédito y tope mensual, clave como secreto de GitHub | MEJORAS "Modelos de IA" | 20 min | P |
 | 34 | La fecha que va a Google: la de cuando sale en la web, no la de la fuente | S-2 | 3 h | C |
 | 35 | "Balcarce" en las notas locales (bajada, descripción y título, solo con datos que están en la fuente) | S-3, auditoría 3 | 3 h | C |
 | 36 | La foto real para Google en tres proporciones | S-4 | 4 h | C |

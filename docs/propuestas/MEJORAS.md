@@ -859,6 +859,68 @@ comprobar. **Hay que mirarlo en Search Console**, porque define cuán urgente es
 **Las personas:** mirar en Search Console, una vez por semana, qué páginas se indexaron y cuáles no, y las
 búsquedas con "balcarce".
 
+### Modelos de IA: cuál para qué y cuánto cuesta (análisis del 8/10)
+
+**Precios por millón de tokens** (entrada / salida; tabla de Anthropic del 6/10, a confirmar al contratar):
+
+| Modelo | Entrada | Salida | Para qué sirve acá |
+|---|---|---|---|
+| Gemini (hoy, clave gratis) | US$ 0 | US$ 0 | Lo que ya se hace: lectura, fichas, redacción. Con límites por día |
+| **Haiku 5.5** | US$ 0,10 | US$ 0,50 | Tareas de volumen: segunda opinión, notas viejas, auditorías, fotos |
+| **Sonnet 5.5** | US$ 2 | US$ 10 | Las pocas notas importantes, donde importa más la calidad |
+| Opus 5.5 | US$ 4 | US$ 20 | No hace falta en producción |
+| Lotes (Batch) | −50 % | −50 % | Todo lo que no corre con apuro (notas viejas, auditorías) |
+
+**Volumen medido en el archivo (8/10):** 1.068 notas. Con 3 o más fuentes entraron **198 en los últimos 8 días,
+unas 25 por día** (Economía, Fútbol, Política y Argentina concentran la mayoría). Un pedido de redacción pesa unos
+9.000 tokens de entrada (el criterio más las fuentes) y devuelve unos 1.000.
+
+**Cuánto costaría cada cosa** (cuentas con esos números; la medición real es D1-1):
+
+| Tarea | Modelo propuesto | Costo |
+|---|---|---|
+| Lectura, fichas y redacción de siempre | Gemini gratis, como hoy | US$ 0 |
+| Pasar toda la redacción (hasta 60 notas por día) a Haiku | Haiku 5.5 | unos US$ 3-4 por mes |
+| "Jefe editor" para las ~25 notas por día con 3+ fuentes | Todas con Haiku | ~US$ 1 por mes |
+| Lo mismo, con Sonnet para las 5 más importantes del día | Haiku + Sonnet | ~US$ 5 por mes |
+| Lo mismo, con Sonnet para las 25 | Sonnet 5.5 | US$ 13-21 por mes |
+| Lo mismo, con Opus | Opus 5.5 | ~US$ 42 por mes |
+| Segunda opinión sobre las fotos (~24 por día, cada una ~1.500 tokens) | Haiku 5.5 con imagen | ~US$ 0,15 por mes; las 578 que ya hay, ~US$ 0,10 una vez |
+| Reescribir las ~300 notas viejas | Haiku 5.5 en lote | menos de US$ 1 |
+| Auditoría semanal de textos y fotos | Haiku 5.5 en lote | centavos |
+
+**Cómo gastar menos:**
+1. **Primero el código:** el cruce, el semáforo y el verificador son código y no gastan tokens.
+2. **El modelo más barato que alcance:** lo de volumen con Gemini gratis o Haiku; Sonnet solo para lo que más pesa.
+3. **Lotes** para lo que no corre con apuro: la mitad del precio.
+4. **Caché del criterio:** el criterio editorial viaja igual en cada pedido; guardado, cuesta una décima parte.
+5. **Esfuerzo bajo** en las tareas de rutina (el modelo piensa menos y gasta menos).
+6. **Mandar solo lo necesario:** el texto relevante de cada fuente, con tope de palabras.
+7. **Medir antes y después** (D1-1): sin ese contador, estos números son estimaciones.
+
+**Lo que hace falta para usarlos (solo código `fetch`, sin dependencias):**
+- una cuenta en Anthropic con crédito y **un tope mensual de gasto** (por ejemplo, US$ 10);
+- la clave, pegada por una persona como secreto de GitHub (nunca en un chat);
+- si el modelo se niega a escribir una nota (a veces pasa con temas de violencia), la nota sigue con Gemini;
+- primero se compara con 30 notas reales (D1) para ver si Haiku o Sonnet escriben mejor que Gemini. **No lo
+  sé hasta medirlo:** hoy el verificador rechaza 111 de 611 notas intentadas con Gemini.
+- **Privacidad (D-priv):** en la capa gratis de Gemini el texto puede usarse para mejorar sus productos. Según los
+  términos comerciales de Anthropic, la API no usa lo que se le manda para entrenar (a confirmar al contratar).
+  Eso favorece mandarle lo delicado.
+
+### Las 296 notas viejas sin cuerpo: ¿reescribirlas? (análisis del 8/10)
+
+- **El costo no es el problema:** con Haiku en lote saldría menos de US$ 1; con Sonnet, unos US$ 8.
+- **Lo que sí complica:**
+  - Para reescribir hace falta la nota original. Son del 18 al 25/09: puede haber cambiado o estar bloqueada.
+  - Con solo el resumen copiado (menos de 70 palabras) no hay material. La regla "sin material no se pide" lo frena.
+  - Son noticias de hace 2 o 3 semanas: al lector ya no le sirven. Solo le importan a Google.
+- **Recomendación:**
+  1. **`noindex` a las 296 ahora** (S-1): gratis, 3 horas, resuelve el riesgo con Google.
+  2. **Reescribir solo las de Balcarce** y las que salieron en redes (unas 30 a 50), en un lote con Haiku. Cada una
+     pasa por el verificador, con su fecha original, y con la foto ya elegida.
+  3. Las demás quedan en el archivo, sin Google.
+
 ### Motor de noticias (revisión del 8/10)
 
 **I-2 · El verificador acepta un año cambiado** — *Confirmado · ALTA*

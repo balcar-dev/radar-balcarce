@@ -206,6 +206,44 @@ Balcarce**. Sumar y rehacer notas todo el tiempo, **con prioridad a lo de Balcar
 - **En la web,** los videos de YouTube se pueden mostrar insertados, sin bajarlos, siempre que el autor lo permita.
   Ojo: el reproductor de YouTube carga código de afuera (ver C-2 en `MEJORAS.md`).
 
+### "Jefe editor": una sola nota a partir de todas las fuentes (idea de Hernán y Andrés, 8/10)
+
+**La idea:** cuando un hecho lo cuentan **3 o más medios** (casi siempre lo nacional: el último partido de Messi),
+que un "jefe editor" mire todas las fuentes y arme **una nota única**, pensando qué la hace distinta (por ejemplo,
+un dato de contexto). Hoy entran unas 25 notas por día así.
+
+**Sí se puede.** Es una pasada de redacción con una instrucción distinta:
+1. **El código** junta las fuentes y las ordena (ya lo hace el cruce).
+2. **El jefe editor** (un modelo) lee todas, separa lo que **todos** confirman de lo que dice **uno solo**, decide el
+   ángulo para Balcarce y qué dato de contexto sumar, y escribe la nota.
+3. **El verificador** (código, como hoy) controla nombres, números, fechas y citas contra las fuentes.
+4. **Política y Policiales** siguen esperando a una persona.
+
+**Qué modelo:** Haiku 5.5 para todas (~US$ 1 por mes) y Sonnet 5.5 para las 5 más importantes del día (~US$ 5 por
+mes en total). Cuentas en `MEJORAS.md`, "Modelos de IA".
+
+**El dato único (la estadística de Messi): sí, pero con fuente.** El verificador no deja pasar un número que no esté
+en las fuentes, y un modelo no puede sacarlo de memoria. La forma de hacerlo:
+- **Fichas de contexto:** un archivo con datos verificados de las figuras que más aparecen (Messi, Colapinto,
+  Milei, Caputo, los clubes), armado por código desde una fuente con su enlace (Wikidata, ESPN, Jolpica), con la
+  fecha de actualización.
+- El jefe editor elige **uno** de esa lista y lo cita ("según ESPN"). Si no hay ficha, no inventa: la nota sale sin
+  dato extra.
+- Ya funciona así con las notas de F1 y de fútbol: el dato lo trae el código, no el modelo.
+
+**Lo que no hace una sola nota única:** juntar cinco notas ajenas sigue siendo una nota derivada. Lo que la vuelve
+propia para Google (S-1) es lo que **suma**: el dato de contexto verificado y el "qué significa para Balcarce".
+
+**Sobre el criterio de centro-derecha, una advertencia.** `CRITERIO-EDITORIAL.md` dice hoy "claro, directo y
+**neutral**: sin sensacionalismo y sin opinión". Un editor "de centro-derecha" choca con esa línea si se
+entiende como un tono. Lo que sí se puede declarar, sin chocar:
+- **Qué cubrir y qué ángulo elegir:** por ejemplo, más peso a la economía, la gestión, la seguridad, lo productivo.
+- **Qué contexto o dato sumar:** elegido por ese criterio, con fuente.
+- **El mismo trato** para todos los bloques y personas; las posturas enfrentadas, cada una con su argumento.
+- **Lo que no cambia:** tono neutral, sin adjetivos de opinión, atribución de lo que dice cada uno y verificación.
+Si quieren una línea más marcada, hay que **escribirla en el criterio** (y en "Quiénes somos") para que la lean la
+IA y los lectores, y decidir cómo convive con "independiente y sin partidos", que el sitio dice hoy.
+
 ## 5. Secciones: de 11 a 15, con barra lateral (H1)
 
 *Detalle en `registro/AUDITORIA-2026-10-08.md`, sección 3.*
