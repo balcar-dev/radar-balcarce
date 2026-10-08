@@ -161,3 +161,38 @@ export const decisionVencida = (d, decision) => !!decision && decision.huella !=
 
 /** El estado de un feriado en lo que se guardó: 'aprobada', 'cambiar' o null. */
 export const estadoDeFeriado = (elegidas, fecha) => elegidas?.feriados?.[fecha]?.estado ?? null;
+
+/** Los meses ('2026-10') que tocan estos días, en orden. */
+export const mesesDe = (dias = []) => [...new Set(dias.map((d) => String(d).slice(0, 7)))].sort();
+
+/** "octubre 2026". */
+export function nombreDelMes(mes) {
+  const [a, m] = String(mes).split('-').map(Number);
+  return `${MESES[m - 1]} ${a}`;
+}
+
+/**
+ * Las celdas de un mes para dibujar el calendario (semanas de lunes a domingo). `estados`: { 'YYYY-MM-DD': { clase } } de los días armados
+ * (clase 'ok' sale, 'espera' para mirar, 'mal' no sale); un día sin entrada entre `desde` y `hasta` es "sin armar"; `feriados`: lista de fechas.
+ * Cada celda: { vacio: true } o { dia, iso, clase, feriado, armado }.
+ */
+export function celdasDelMes(mes, estados = {}, feriados = [], { desde = '0000-00-00', hasta = '9999-99-99' } = {}) {
+  const [a, m] = String(mes).split('-').map(Number);
+  const primero = new Date(Date.UTC(a, m - 1, 1, 12)).getUTCDay();
+  const celdas = Array.from({ length: (primero + 6) % 7 }, () => ({ vacio: true }));
+  const cuantos = new Date(Date.UTC(a, m, 0, 12)).getUTCDate();
+  for (let dia = 1; dia <= cuantos; dia++) {
+    const iso = `${a}-${String(m).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
+    const e = estados[iso];
+    const dentro = iso >= desde && iso <= hasta;
+    celdas.push({ dia, iso, clase: e ? e.clase : (dentro ? 'sin' : ''), feriado: feriados.includes(iso), armado: !!e });
+  }
+  return celdas;
+}
+
+/** El resumen de un mes: cuántos días salen, cuántos esperan, cuántos no salen y cuántos faltan armar (dentro del tramo). */
+export function resumenDelMes(celdas = []) {
+  const dias = celdas.filter((c) => c.dia);
+  const cuenta = (clase) => dias.filter((c) => c.clase === clase).length;
+  return { salen: cuenta('ok'), esperan: cuenta('espera'), noSalen: cuenta('mal'), sinArmar: cuenta('sin') };
+}

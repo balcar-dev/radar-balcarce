@@ -14,7 +14,7 @@ import {
 } from './github.js';
 import {
   ESTILOS, COLOR_DE_ESTILO, ROLES, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
-  haceTexto, marcaLegible, diasArmados, estadoDeFeriado, estadoDeDiaArmado, huellaDelDia, decisionVencida,
+  haceTexto, marcaLegible, diasArmados, mesesDe, nombreDelMes, celdasDelMes, resumenDelMes, estadoDeFeriado, estadoDeDiaArmado, huellaDelDia, decisionVencida,
 } from './fechas.js';
 import { crearLlaves, abrir, cerrar as cerrarSobre } from './cifrado.js';
 import {
@@ -97,7 +97,7 @@ const E = {
   portada: null, esperando: [], intentosMaximos: 3, pendientes: null, descartadas: [], papelera: [], publicos: [],
   decisiones: { notas: {}, redes: {} }, correcciones: { notas: {} }, archivo: null, estadoCel: null, libro: {},
   // La pestaña Fechas (se carga la primera vez que se abre).
-  fechas: null, subfechas: 'piezas', pieza: null, dia: null, borrador: null, filtroEstilo: null, feriado: null,
+  fechas: null, mesFechas: null, subfechas: 'piezas', pieza: null, dia: null, borrador: null, filtroEstilo: null, feriado: null,
   // Lo que se está haciendo en la nube sin trabar el panel (la IA escribiendo, una foto sumándose): { [id]: { clase, estado, … } }.
   trabajos: {}, tareas: {}, relojDeTareas: null, pistasLibro: null, pistaAbierta: null, banco: null, publicadasTodas: false, scrollLista: null, restaurar: null,
 };
@@ -1222,7 +1222,16 @@ function listaDePiezas() {
       <div class="titulo">${esc(p.principal?.titulo ?? '')}</div>
       <div class="meta">${esc((p.ademas ?? []).length)} más: ${esc((p.ademas ?? []).map((x) => x.anio ?? '').filter(Boolean).join(', '))}${decisionVencida(p, el.piezas?.[d]) ? ' · se rearmó después de tu decisión' : ''}</div></button>`;
   }).join('')}`).join('');
-  return `<p class="estado"><strong>${salen}</strong> de ${dias.length} días salen como están${esperan ? `; <strong>${esperan}</strong> esperan tu visto bueno` : ''}. Tocá un día para ver todo lo que cuenta la pieza y aprobarlo, sacarlo o pedir cambios.</p>
+  const feriadosDelAnio = (E.fechas.feriados?.feriados ?? []).map((f) => f.fecha);
+  const meses = mesesDe([...dias, ...feriadosDelAnio.filter((f) => f >= hoy)]);
+  if (!meses.includes(E.mesFechas)) E.mesFechas = meses[0];
+  const celdas = celdasDelMes(E.mesFechas, estados, feriadosDelAnio, { desde: hoy, hasta: dias[dias.length - 1] });
+  const r = resumenDelMes(celdas);
+  const calendario = `<div class="sub">${meses.map((m) => `<button type="button" data-accion="mes-fechas" data-mes="${esc(m)}" aria-current="${m === E.mesFechas}">${esc(nombreDelMes(m).split(' ')[0])}</button>`).join('')}</div>
+    <p class="estado"><strong>${esc(nombreDelMes(E.mesFechas))}:</strong> ${r.salen} salen como están${r.esperan ? ` · <strong>${r.esperan} para mirar</strong>` : ''}${r.noSalen ? ` · ${r.noSalen} sacados` : ''}${r.sinArmar ? ` · ${r.sinArmar} sin armar` : ''}.</p>
+    <div class="ley"><span><b class="pt ok"></b>sale</span><span><b class="pt espera"></b>para mirar</span><span><b class="pt mal"></b>no sale</span><span><b class="pt sin"></b>sin armar</span><span><b class="raya"></b>feriado</span></div>
+    <div class="cal">${['L', 'M', 'M', 'J', 'V', 'S', 'D'].map((x) => `<span class="h">${x}</span>`).join('')}${celdas.map((c) => c.vacio ? '<span class="d vac"></span>' : (c.armado ? `<button type="button" class="d ${c.clase}${c.feriado ? ' fer' : ''}" data-accion="abrir-pieza" data-dia="${esc(c.iso)}" aria-label="${esc(etiquetaLarga(c.iso))}">${c.dia}<i></i></button>` : `<span class="d ${c.clase}${c.feriado ? ' fer' : ''}" aria-label="${esc(etiquetaLarga(c.iso))}">${c.dia}${c.clase ? '<i></i>' : ''}</span>`)).join('')}</div>`;
+  return `${calendario}<p class="estado"><strong>${salen}</strong> de ${dias.length} días salen como están${esperan ? `; <strong>${esperan}</strong> esperan tu visto bueno` : ''}. Tocá un día para ver todo lo que cuenta la pieza y aprobarlo, sacarlo o pedir cambios.</p>
     ${huecos.length ? `<div class="problemas"><strong>Sin armar (ese día no sale nada):</strong> ${huecos.map((d) => esc(etiquetaCorta(d))).join(', ')}.</div>` : ''}
     ${bloques}`;
 }
@@ -1812,6 +1821,7 @@ document.addEventListener('click', async (ev) => {
     }
   }
   else if (accion === 'rango-numeros') { E.rangoNumeros = Number(el.dataset.rango); vistaNumeros(); }
+  else if (accion === 'mes-fechas') { E.mesFechas = el.dataset.mes; vistaFechas(); }
   else if (accion === 'sub-fechas') { E.subfechas = el.dataset.sub; vistaFechas(); }
   else if (accion === 'abrir-pieza') { E.pieza = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
   else if (accion === 'armar-con-candidatas') { E.pieza = null; E.subfechas = 'efemerides'; E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }

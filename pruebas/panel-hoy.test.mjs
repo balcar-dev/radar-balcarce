@@ -67,5 +67,5 @@ test('el panel arranca en Hoy, Fotos pasó a Más y el panel se actualiza solo e
   assert.match(app, /function vistaHoy\(\)/);
   assert.match(app, /E\.pestana === 'hoy'\) vistaHoy\(\)/);
   assert.match(leer('web/public/panel/sw.js'), /'\/panel\/hoy\.js'/);
-  assert.match(leer('web/public/panel/sw.js'), /radar-panel-22/);
+  assert.match(leer('web/public/panel/sw.js'), /radar-panel-23/);
 });
