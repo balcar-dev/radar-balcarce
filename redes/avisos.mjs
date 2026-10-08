@@ -255,6 +255,12 @@ const PIEZAS_DEL_RESUMEN = [
   ['farmacia', 'farmacia'], ['clima-noche', 'clima noche'], ['podcast', 'podcast noche'],
 ];
 
+/** De los posteos dados, cuántos son de una nota que tiene foto propia (se busca por el final del enlace, que es el id). */
+const conFoto = (portada, posteos) => {
+  const porId = new Map((portada?.notas ?? []).map((n) => [n.id, n]));
+  return posteos.filter((p) => porId.get(String(p.enlace ?? '').split('-').pop())?.foto?.archivo).length;
+};
+
 /** Los números del día, de lo ya publicado. */
 export function datosDelDia({ ahora = new Date(), portada = {}, libro = {} }) {
   const hoy = diaAR(ahora);
@@ -265,6 +271,8 @@ export function datosDelDia({ ahora = new Date(), portada = {}, libro = {} }) {
     locales: notas.filter((n) => n.local).length,
     conCuerpo: notas.filter((n) => n.cuerpo).length,
     facebook: Object.values(libro?.facebook ?? {}).filter((p) => esDeHoy(p.cuando)).length,
+    // Cuántos de esos posteos de hoy salieron con la foto de la nota (8/10, Hernán: lo de las redes lleva foto).
+    facebookConFoto: conFoto(portada, Object.values(libro?.facebook ?? {}).filter((p) => esDeHoy(p.cuando))),
     instagramFotos: Object.values(libro?.instagramFeed ?? {}).filter((p) => esDeHoy(p.cuando)).length,
     piezas: Object.fromEntries(PIEZAS_DEL_RESUMEN.map(([n]) => [n, Boolean(libro?.instagram?.[`${hoy}/${n}`])])),
     // El contrato del día completo, por red (redes/contrato.mjs): lo que salió,
@@ -315,6 +323,7 @@ export function textoResumen({
     l.push(`• Facebook: ${datos.facebook} posteo(s) · Instagram: ${datos.instagramFotos} foto(s)`);
     l.push(`• Piezas: ${PIEZAS_DEL_RESUMEN.map(([n, nombre]) => `${nombre} ${datos.piezas[n] ? '✓' : '✗'}`).join(' · ')}`);
   }
+  if (redesActivas && datos.facebook > 0 && Number.isFinite(datos.facebookConFoto)) l.push(`• Posteos de hoy con foto de la nota: ${datos.facebookConFoto} de ${datos.facebook}`);
   if (datos.pendientes !== null && datos.pendientes !== undefined) l.push(`• Esperando a una persona: ${datos.pendientes}`);
   if (datos.esperandoCuerpo !== null && datos.esperandoCuerpo !== undefined) l.push(`• Esperando cuerpo: ${datos.esperandoCuerpo}`);
   if (web?.actualizado) l.push(`• Web al día (última actualización ${horaCorta(web.actualizado)})`);

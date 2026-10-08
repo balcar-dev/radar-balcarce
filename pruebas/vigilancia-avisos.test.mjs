@@ -10,7 +10,7 @@ import path from 'node:path';
 import {
   pendientesDeLaIngesta, pendientesAAvisar, textoPendientes, anotarPendientes, LIMITES_AVISOS,
   importantesAAvisar, textoImportantes, anotarImportantes, IMPORTANTE,
-  novedadesEnRedes, textoRedes, datosDelDia, armarMensaje, recortar,
+  novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje, recortar,
 } from '../redes/avisos.mjs';
 import { planDeAvisos, mensajeDelResumen } from '../redes/vigilar.mjs';
 import { LARGO_MAXIMO } from '../redes/whatsapp.mjs';
@@ -356,4 +356,18 @@ test('el vigilante avisa si el respaldo está viejo o falló, y calla si todaví
   assert.ok(claves({ Respaldo: [corrida(12)] }).includes('respaldo-viejo'), 'hace 12 días');
   assert.ok(claves({ Respaldo: [corrida(1, 'failure'), corrida(5, 'failure')] }).includes('respaldo-viejo'), 'ninguno bueno');
   assert.ok(claves({ Respaldo: [corrida(1, 'failure'), corrida(7)] }).includes('falla-Respaldo'), 'la última falló');
+});
+
+test('el resumen de las 21 dice cuántos posteos de hoy salieron con la foto de la nota (8/10)', () => {
+  const ahora = new Date('2026-10-08T23:30:00Z');
+  const portada = { notas: [{ id: 'aaa', foto: { archivo: 'aaa.jpg' } }, { id: 'bbb' }] };
+  const libro = { facebook: {
+    a: { cuando: '2026-10-08T15:00:00Z', enlace: 'https://radarbalcarce.com/nota/una-nota-aaa' },
+    b: { cuando: '2026-10-08T17:00:00Z', enlace: 'https://radarbalcarce.com/nota/otra-nota-bbb' },
+    c: { cuando: '2026-10-07T17:00:00Z', enlace: 'https://radarbalcarce.com/nota/ayer-aaa' },
+  }, instagram: {}, instagramFeed: {} };
+  const datos = datosDelDia({ ahora, portada, libro });
+  assert.equal(datos.facebook, 2);
+  assert.equal(datos.facebookConFoto, 1);
+  assert.match(textoResumen({ datos }), /Posteos de hoy con foto de la nota: 1 de 2/);
 });
