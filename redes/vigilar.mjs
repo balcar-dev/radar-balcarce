@@ -98,6 +98,7 @@ export const QUE_SIGNIFICA_EL_PASO = {
 export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
   minutosSinReloj: 100,        // el reloj de redes corre cada 30
+  minutosSinRespaldo: 10 * 24 * 60, // el respaldo corre cada domingo
   horasEntreAvisos: 6,
   horasEntreAvisosDeRedesApagadas: 24, // el recordatorio de "redes apagadas": una vez por día
   minimoDeNotasConCuerpo: 0.35, // de las últimas 24 horas; con 10 notas o más
@@ -314,7 +315,7 @@ export function evaluar({
   }
 
   // --- las corridas de GitHub
-  const NOMBRES ={ 'Actualizar la web': 'Actualizar la web', Redes: 'Redes', 'Cloudflare Pages': 'Cloudflare Pages' };
+  const NOMBRES ={ 'Actualizar la web': 'Actualizar la web', Redes: 'Redes', 'Cloudflare Pages': 'Cloudflare Pages', Respaldo: 'Respaldo' };
   for (const [nombre, lista] of Object.entries(corridas)) {
     if (!NOMBRES[nombre]) continue;
     const terminadas = lista.filter((r) => r.status === 'completed' && r.conclusion !== 'cancelled' && r.conclusion !== 'skipped');
@@ -327,6 +328,14 @@ export function evaluar({
       const enFila = seguidas < 0 ? terminadas.length : seguidas;
       const queSignifica = QUE_SIGNIFICA_EL_PASO[ultima.paso] ? ` ${QUE_SIGNIFICA_EL_PASO[ultima.paso]}` : '';
       de(`falla-${nombre}`, enFila >= 2 || fallas >= 3 ? 'alta' : 'media', `"${nombre}" falló en su última corrida${ultima.paso ? `, en el paso "${ultima.paso}"` : ''} (${enFila} seguidas; ${fallas} de las últimas ${Math.min(5, terminadas.length)}).${queSignifica}`);
+    }
+  }
+
+  // --- que haya un respaldo bueno reciente (el workflow "Respaldo" corre los domingos). Sin ninguna corrida todavía (recién armado), no se avisa.
+  if (corridas.Respaldo?.length) {
+    const buena = corridas.Respaldo.find((r) => r.status === 'completed' && r.conclusion === 'success');
+    if (!buena || minutos(buena.createdAt, ahora) > LIMITES.minutosSinRespaldo) {
+      de('respaldo-viejo', 'media', 'Hace más de 10 días que no hay un respaldo bueno (workflow "Respaldo" en GitHub Actions). Si se perdiera la cuenta de GitHub, se perdería todo.');
     }
   }
 
@@ -646,7 +655,7 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
 
   const corridas = {};
   if (token && repo) {
-    for (const archivo of ['actualizar.yml', 'redes.yml', 'cloudflare-deploy.yml']) {
+    for (const archivo of ['actualizar.yml', 'redes.yml', 'cloudflare-deploy.yml', 'respaldo.yml']) {
       const r = await pedir(`https://api.github.com/repos/${repo}/actions/workflows/${archivo}/runs?per_page=6`, {
         headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' },
       });
@@ -662,7 +671,7 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
           falla.paso = jobs.flatMap((job) => job.steps ?? []).find((s) => s.conclusion === 'failure')?.name ?? null;
         }
       }
-      const nombre = { 'actualizar.yml': 'Actualizar la web', 'redes.yml': 'Redes', 'cloudflare-deploy.yml': 'Cloudflare Pages' }[archivo];
+      const nombre = { 'actualizar.yml': 'Actualizar la web', 'redes.yml': 'Redes', 'cloudflare-deploy.yml': 'Cloudflare Pages', 'respaldo.yml': 'Respaldo' }[archivo];
       corridas[nombre] = lista;
     }
   }

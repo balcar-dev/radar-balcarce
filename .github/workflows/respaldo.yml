@@ -1,0 +1,107 @@
+# Respaldo semanal de todo el repositorio (código, datos, fotos e historial).
+#
+# Por qué existe (8/10/2026, decisión de Hernán y Andrés: "respaldo en cuatro lugares: GitHub, GitLab, Google Drive y la PC"): hasta
+# hoy no había ningún respaldo; si se perdía la cuenta de GitHub se perdía todo. Cada domingo, y a mano cuando se quiera
+# (Actions → "Respaldo" → Run workflow), hace tres cosas:
+#
+#   1. SIEMPRE: arma un "bundle" de git (todo el historial en un archivo) y una copia de los datos y las fotos, y los deja como
+#      archivos de la corrida (se guardan 90 días; se bajan desde la página de la corrida). Esto NO es un lugar aparte (sigue siendo
+#      GitHub) pero deja un archivo que se puede bajar a la PC o a Google Drive.
+#   2. SI HAY CUENTA DE GITLAB: sube un espejo completo del repositorio. Hace falta crear un proyecto VACÍO en gitlab.com y poner:
+#         secreto  GITLAB_TOKEN   un token de acceso del proyecto con permiso write_repository
+#         variable GITLAB_REPO    "usuario/proyecto" (por ejemplo radarbalcarce/radar-balcarce)
+#   3. SI HAY R2 (Cloudflare): sube el bundle a un depósito. Hace falta un depósito R2 y, en el token de Cloudflare
+#      (CLOUDFLARE_API_TOKEN), el permiso "Workers R2 Storage: Edit":
+#         variable R2_RESPALDOS   el nombre del depósito (por ejemplo radar-respaldos)
+#
+# Lo que falte no hace fallar la corrida: queda dicho en el resumen de la corrida (lo que se hizo y lo que se saltó).
+# El vigilante (redes/vigilar.mjs) avisa si el respaldo falla o si pasan más de 10 días sin uno bueno.
+
+name: Respaldo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * 0'   # domingos, 3:17 de Balcarce
+
+permissions:
+  contents: read
+
+concurrency:
+  group: respaldo
+  cancel-in-progress: false
+
+jobs:
+  respaldar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0   # todo el historial
+
+      - name: Armar el bundle y la copia de los datos
+        run: |
+          fecha=$(date +%F)
+          mkdir -p respaldo
+          git bundle create "respaldo/radar-balcarce-$fecha.bundle" --all
+          tar -czf "respaldo/datos-y-fotos-$fecha.tar.gz" web/data web/public/fotos-notas
+          ls -lh respaldo
+          echo "FECHA=$fecha" >> "$GITHUB_ENV"
+          {
+            echo "## Respaldo del $fecha"
+            echo
+            echo "- Bundle de git (todo el historial): \`radar-balcarce-$fecha.bundle\` ($(du -h respaldo/radar-balcarce-$fecha.bundle | cut -f1))"
+            echo "- Datos y fotos: \`datos-y-fotos-$fecha.tar.gz\` ($(du -h respaldo/datos-y-fotos-$fecha.tar.gz | cut -f1))"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: respaldo-${{ env.FECHA }}
+          path: respaldo/
+          retention-days: 90
+
+      - name: Espejo en GitLab (si está configurado)
+        if: ${{ !cancelled() }}
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          GITLAB_REPO: ${{ vars.GITLAB_REPO }}
+        run: |
+          if [ -z "$GITLAB_TOKEN" ] || [ -z "$GITLAB_REPO" ]; then
+            echo "- GitLab: **no configurado** (falta el secreto GITLAB_TOKEN o la variable GITLAB_REPO)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          # Todas las ramas (las que bajó el checkout están en origin/*) y las etiquetas, con todo el historial. El token no se imprime.
+          if git push --force "https://oauth2:${GITLAB_TOKEN}@gitlab.com/${GITLAB_REPO}.git" "+refs/remotes/origin/*:refs/heads/*" "+refs/tags/*:refs/tags/*" > /dev/null 2>&1; then
+            echo "- GitLab: **espejo subido** a $GITLAB_REPO" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- GitLab: **FALLÓ** el espejo a $GITLAB_REPO (revisar el token y que el proyecto exista y esté vacío)" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        if: ${{ !cancelled() }}
+        with:
+          node-version: '24'
+
+      - name: Copia en Cloudflare R2 (si está configurado)
+        if: ${{ !cancelled() }}
+        env:
+          R2_RESPALDOS: ${{ vars.R2_RESPALDOS }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$R2_RESPALDOS" ]; then
+            echo "- Cloudflare R2: **no configurado** (falta la variable R2_RESPALDOS)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if npx --yes wrangler@4.139.0 r2 object put "$R2_RESPALDOS/respaldos/$FECHA/radar-balcarce-$FECHA.bundle" --file "respaldo/radar-balcarce-$FECHA.bundle" --remote \
+             && npx --yes wrangler@4.139.0 r2 object put "$R2_RESPALDOS/respaldos/$FECHA/datos-y-fotos-$FECHA.tar.gz" --file "respaldo/datos-y-fotos-$FECHA.tar.gz" --remote; then
+            echo "- Cloudflare R2: **subido** a $R2_RESPALDOS/respaldos/$FECHA/" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- Cloudflare R2: **FALLÓ** (revisar que el depósito exista y que el token tenga el permiso Workers R2 Storage: Edit; wrangler sube hasta 300 MB por archivo)" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi

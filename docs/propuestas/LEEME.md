@@ -3,6 +3,7 @@
 *8/10/2026. Son propuestas; lo que ya se hizo figura en "Avance" de [`PRIORIDADES.md`](PRIORIDADES.md).*
 
 - **[`PRIORIDADES.md`](PRIORIDADES.md)**: todo lo anotado, en el orden en que conviene hacerlo.
+- **[`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md)**: lo que sólo una persona puede hacer (cuentas, tarjeta, claves), paso a paso.
 - **[`SEMAFORO-HOY.md`](SEMAFORO-HOY.md)**: cómo funciona hoy el semáforo (verde, amarillo, rojo), sin proponer cambios.
 
 Se separa en dos listas, para no mezclar:

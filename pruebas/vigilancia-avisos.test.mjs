@@ -343,3 +343,17 @@ test('evaluar suma los avisos de efemérides sólo si recibe el dato', async () 
   assert.ok(!evaluar(base).some((p) => p.clave === 'efemerides-por-acabarse'));
   assert.ok(evaluar({ ...base, efemerides: { ultimoDia: '2026-10-31' } }).some((p) => p.clave === 'efemerides-por-acabarse'));
 });
+
+// Respaldo semanal (8/10/2026): el vigilante avisa si no hay uno bueno hace más de 10 días.
+test('el vigilante avisa si el respaldo está viejo o falló, y calla si todavía no existe', async () => {
+  const { evaluar } = await import('../redes/vigilar.mjs');
+  const ahora = new Date('2026-10-20T15:00:00Z');
+  const base = { ahora, web: { estado: 200, actualizado: '2026-10-20T14:50:00Z' }, redesActivas: false };
+  const corrida = (dias, conclusion = 'success') => ({ status: 'completed', conclusion, createdAt: new Date(ahora.getTime() - dias * 864e5).toISOString() });
+  const claves = (c) => evaluar({ ...base, corridas: c }).map((p) => p.clave);
+  assert.ok(!claves({}).includes('respaldo-viejo'), 'sin corridas: todavía no se armó');
+  assert.ok(!claves({ Respaldo: [corrida(3)] }).includes('respaldo-viejo'));
+  assert.ok(claves({ Respaldo: [corrida(12)] }).includes('respaldo-viejo'), 'hace 12 días');
+  assert.ok(claves({ Respaldo: [corrida(1, 'failure'), corrida(5, 'failure')] }).includes('respaldo-viejo'), 'ninguno bueno');
+  assert.ok(claves({ Respaldo: [corrida(1, 'failure'), corrida(7)] }).includes('falla-Respaldo'), 'la última falló');
+});

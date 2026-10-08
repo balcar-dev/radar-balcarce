@@ -41,3 +41,14 @@ test('todos los caminos del git add de "Actualizar la web" existen', () => {
   assert.ok(caminos.length > 15);
   for (const c of caminos) assert.ok(fs.existsSync(path.join(raiz, c)), `${c} no existe: el git add falla y la web se congela`);
 });
+
+test('el workflow de respaldo existe y sus pasos opcionales no hacen fallar a los demás', () => {
+  const raiz = path.join(import.meta.dirname, '..');
+  const t = fs.readFileSync(path.join(raiz, '.github', 'workflows', 'respaldo.yml'), 'utf8');
+  assert.match(t, /git bundle create/);
+  assert.match(t, /fetch-depth: 0/);
+  assert.match(t, /secrets\.GITLAB_TOKEN/);
+  assert.match(t, /vars\.R2_RESPALDOS/);
+  assert.ok((t.match(/if: \$\{\{ !cancelled\(\) \}\}/g) ?? []).length >= 3, 'GitLab y R2 corren aunque el otro falle');
+  assert.ok(!/echo[^\n]*\$\{?GITLAB_TOKEN/.test(t), 'el token no se imprime');
+});
