@@ -209,15 +209,15 @@ export function resumenParaWhatsApp(hallazgos = [], notas = []) {
 
 // ------------------------------------------------------------------ ETAPA 2: lo mecánico se corrige solo (2/10)
 //
-// Hernán (2/10): "la revisión tendría que decir qué encontró mal y qué corrigió". Sólo se corrige solo una falta de ortografía
-// chica, segura y verificable: la IA cita el fragmento exacto, da cómo queda bien, el cambio es de unas pocas letras, no toca
-// ningún número, no es sólo de mayúsculas (nombres propios y estilo) y el fragmento aparece UNA vez en la nota. Lo demás (sección,
+// Hernán (2/10): "la revisión tendría que decir qué encontró mal y qué corrigió". Desde el 8/10 sólo se corrige solo la TILDE que falta
+// en una palabra: la IA cita la palabra exacta, la misma con una tilde más, que no sea de las que con tilde cambian de sentido, y aparece
+// UNA vez, como palabra entera, en un solo campo de la nota. Lo demás (sección,
 // sensible, afirmación, título, texto roto) sigue siendo un aviso para una persona. El cambio no se mete en el texto de la nota
 // sino en web/data/correcciones-auditoria.json (pares "antes → después", que escribe sólo la Auditoría IA) y la web lo aplica al
 // armar cada nota (web/lib/archivo.js, conCambiosDeLaAuditoria): si el texto cambia, el par ya no calza y no hace nada. No marca la
 // nota como "revisada por la redacción": nadie de la redacción la revisó.
 
-export const CORRECCION_AUTOMATICA = { citaMaxima: 60, cambioMaximo: 3, diasGuardados: 190 };
+export const CORRECCION_AUTOMATICA = { citaMaxima: 60, cambioMaximo: 2, diasGuardados: 190 };
 
 /** Cuántas letras hay que cambiar para pasar de una a la otra (Levenshtein). */
 export function distanciaDeEdicion(a, b) {
@@ -232,22 +232,42 @@ export function distanciaDeEdicion(a, b) {
   return previa[y.length];
 }
 
-const numerosDe = (t) => (String(t).match(/\d+/g) ?? []).join(',');
+const sinTilde = (t) => String(t).normalize('NFD').replace(/\u0301/g, '').normalize('NFC');
+const tildes = (t) => (String(t).normalize('NFD').match(/\u0301/g) ?? []).length;
+const ESCAPAR = (t) => String(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** Cuántas veces aparece `frag` como palabra entera (sin letras ni números pegados) en `texto`. */
+export function vecesComoPalabra(texto, frag) {
+  if (!frag) return 0;
+  return [...String(texto).matchAll(new RegExp(`(?<![\\p{L}\\p{N}])${ESCAPAR(frag)}(?![\\p{L}\\p{N}])`, 'gu'))].length;
+}
+
+// Palabras cuya tilde cambia lo que quieren decir (público/publico/publicó, término/termino/terminó, esta/está…): ahí la tilde no es
+// una falta sino otra palabra, y decidirlo es de una persona.
+const TILDE_QUE_CAMBIA_EL_SENTIDO = new Set([
+  'publico', 'practica', 'practico', 'critica', 'critico', 'termino', 'numero', 'capitulo', 'ultimo', 'ultima', 'esta', 'este', 'ese', 'esa',
+  'aun', 'solo', 'como', 'cuando', 'donde', 'quien', 'cual', 'cuanto', 'porque', 'tomo', 'animo', 'calculo', 'deposito', 'dialogo', 'domestico',
+  'estimulo', 'explico', 'indico', 'legitimo', 'liquido', 'medico', 'metodo', 'musica', 'oficio', 'parametro', 'periodo', 'principe', 'prototipo',
+  'sabana', 'secretaria', 'sintesis', 'transito', 'vacuna', 'valido', 'vario', 'varia', 'jugo', 'paso', 'pasa', 'hacia', 'libero', 'continuo',
+]);
 
 /**
- * El cambio que se puede hacer solo para este hallazgo, o null: { campo, antes, despues }. Sólo ortografía; ver arriba por qué.
- * `nota` es la de la portada (titulo, copete, cuerpo).
+ * El cambio que se puede hacer solo para este hallazgo, o null: { campo, antes, despues }. Sólo la tilde que falta en UNA palabra
+ * (8/10/2026: la versión anterior dejaba pasar "suba → subida", "nodocentes → docentes", "recaudos → recursos", "quíntuple → quintuple";
+ * eso es cambiar lo que dice la nota, no una falta). `nota` es la de la portada (titulo, copete, cuerpo).
  */
 export function cambioMecanico(h, nota) {
   if (h?.tipo !== 'ortografia') return null;
   const antes = String(h.cita ?? '').trim();
   const despues = String(h.sugerencia ?? '').trim();
-  if (!antes || !despues || antes === despues || antes.length > CORRECCION_AUTOMATICA.citaMaxima || despues.length > CORRECCION_AUTOMATICA.citaMaxima + 20) return null;
-  if (/[\n\r]/.test(despues) || antes.toLowerCase() === despues.toLowerCase()) return null;
-  if (numerosDe(antes) !== numerosDe(despues)) return null;
+  if (!antes || !despues || antes === despues || antes.length > CORRECCION_AUTOMATICA.citaMaxima) return null;
+  // Una sola palabra, de letras, que sólo gana una tilde y no la gana en la última letra (anunció/anuncio es tiempo verbal, no falta).
+  if (!/^\p{L}{4,40}$/u.test(antes) || !/^\p{L}{4,40}$/u.test(despues)) return null;
+  if (sinTilde(antes) !== sinTilde(despues) || tildes(despues) !== tildes(antes) + 1) return null;
+  if (/[áéíóú]$/iu.test(despues) || TILDE_QUE_CAMBIA_EL_SENTIDO.has(sinTilde(antes).toLowerCase())) return null;
   if (distanciaDeEdicion(antes, despues) > CORRECCION_AUTOMATICA.cambioMaximo) return null;
-  const donde = ['titulo', 'copete', 'cuerpo'].filter((c) => String(nota?.[c] ?? '').includes(antes));
-  const veces = donde.reduce((s, c) => s + String(nota[c]).split(antes).length - 1, 0);
+  const donde = ['titulo', 'copete', 'cuerpo'].filter((c) => vecesComoPalabra(nota?.[c], antes) > 0);
+  const veces = donde.reduce((s, c) => s + vecesComoPalabra(nota[c], antes), 0);
   return donde.length === 1 && veces === 1 ? { campo: donde[0], antes, despues } : null;
 }
 

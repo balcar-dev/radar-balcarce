@@ -120,9 +120,10 @@ export function cambiosDeLaAuditoria(json) {
 }
 
 /**
- * Aplica esos pares al texto de la nota. Sólo si el fragmento está UNA vez en el campo: si el texto cambió (se reescribió, lo corrigió
- * una persona), el par ya no calza y no se hace nada. A diferencia de `conCorreccion`, no marca la nota como revisada por la redacción:
- * nadie de la redacción la revisó.
+ * Aplica esos pares al texto de la nota. Sólo si el fragmento está UNA vez en el campo, como palabra entera (no pegado a otras letras),
+ * y si lo nuevo no contiene a lo viejo: de otro modo cada corrida volvía a corregir el texto ya corregido y lo estiraba ("se contrajo 1
+ * por ciento" → "… en" → "… en en en…", 08/10/2026). Si el texto cambió (se reescribió, lo corrigió una persona), el par ya no calza y no
+ * se hace nada. A diferencia de `conCorreccion`, no marca la nota como revisada por la redacción: nadie de la redacción la revisó.
  */
 export function conCambiosDeLaAuditoria(nota, cambios) {
   const lista = nota?.id ? cambios?.get(nota.id) : null;
@@ -130,7 +131,9 @@ export function conCambiosDeLaAuditoria(nota, cambios) {
   const salida = { ...nota };
   for (const c of lista) {
     const texto = salida[c.campo];
-    if (typeof texto === 'string' && texto.split(c.antes).length === 2) salida[c.campo] = texto.replace(c.antes, () => c.despues);
+    if (typeof texto !== 'string' || c.despues.includes(c.antes)) continue;
+    const buscado = new RegExp(`(?<![\\p{L}\\p{N}])${c.antes.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}\\p{N}])`, 'gu');
+    if ([...texto.matchAll(buscado)].length === 1) salida[c.campo] = texto.replace(buscado, () => c.despues);
   }
   return salida;
 }
