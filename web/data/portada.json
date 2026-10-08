@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T10:31:28.670Z",
+  "generado": "2026-10-08T11:01:30.656Z",
   "notas": [
     {
       "id": "133qm11",
@@ -519,15 +519,16 @@
       "medios": [
         "Infobae",
         "Crónica",
-        "El Día",
-        "La Brújula 24"
+        "La Brújula 24",
+        "El Economista",
+        "El Día"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/08/una-mision-de-eeuu-llego-a-la-argentina-para-concretar-las-inversiones-de-usd-7-mil-millones-en-el-corredor-andes-atlantico/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-08T00:40:14.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T02:31:20.591Z",
-      "relevancia": 68,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -661,6 +662,60 @@
       }
     },
     {
+      "id": "7r5ucc",
+      "titulo": "Vecinos advierten sobre el robo de flexibles de gas",
+      "copete": "Registran un incremento en la sustracción de conexiones de cobre junto a los medidores domiciliarios en Balcarce. Un jardín de infantes debió suspender las clases tras un episodio similar.",
+      "cuerpo": "Vecinos de Balcarce advierten sobre una modalidad delictiva centrada en la sustracción de flexibles de cobre ubicados junto a los medidores de gas. Un comercio del rubro reportó un incremento en la demanda de reemplazos tras vender tres unidades en una sola jornada y otra el día anterior. La motivación detrás de estos episodios radica en la cotización del cobre para su comercialización como material reciclable, según indicó un trabajador del sector.\n\nEsta situación generó antecedentes recientes en el distrito. El martes, el personal del Jardín de Infantes N° 905 detectó olor a gas al faltar el flexible del medidor, lo que motivó la suspensión preventiva de las actividades escolares durante el turno mañana hasta la llegada de operarios de la empresa Camuzzi para asegurar el inmueble.\n\nLa extracción de estos componentes genera riesgos por la liberación de combustible. Como alternativa, el mercado ofrece conexiones de acero recubiertas con plástico que carecen de valor para la reventa ilegal, valuadas en unos 44.000 pesos frente a los 32.000 pesos de las piezas tradicionales.",
+      "guion": "Vecinos advierten sobre el robo de flexibles de gas",
+      "seccion": "Policiales",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T22:52:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T23:01:35.401Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sustracción de flexibles de cobre en medidores de gas",
+        "Venta de repuestos aumentó en un comercio local",
+        "Jardín de Infantes N° 905 suspendió clases el martes",
+        "Alternativas de acero para evitar nuevos robos"
+      ],
+      "noConfirmado": [
+        "No hay información oficial sobre la cantidad total de hechos registrados en la ciudad",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Vecinos de Balcarce advierten sobre el robo de flexibles de cobre en medidores de gas. Un comercio local reportó mayores ventas de repuestos y un jardín de infantes debió suspender clases por un faltante.",
+      "etiquetas": [
+        "gas",
+        "robos",
+        "Balcarce",
+        "medidores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+          "fecha": "2026-10-07T22:52:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló los robos de flexibles de gas, la venta de repuestos y el caso del jardín de infantes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "vecinos-advierten-sobre-el-robo-de-flexibles-de-gas"
+    },
+    {
       "id": "1boxf4v",
       "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
       "copete": "Finalizaron los trabajos de señalización horizontal en un tramo clave para la circulación vehicular. Automovilistas y transportistas habían exigido la mejora debido a las dificultades para transitar de noche.",
@@ -671,11 +726,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/demarcaron-la-ruta-55-entre-pieres-y-balcarce-834",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-07T23:01:35.401Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T22:50:01.000Z",
+      "sinFecha": false,
       "visto": "2026-10-07T23:01:35.401Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -754,7 +809,6 @@
         "Ámbito",
         "El Cronista",
         "A24",
-        "C5N",
         "Crónica",
         "Radio Mitre",
         "Canal 26",
@@ -773,6 +827,7 @@
         "Infobae",
         "Clarín",
         "Minuto Uno",
+        "C5N",
         "El Día",
         "La Nueva",
         "La Brújula 24",
@@ -856,7 +911,9 @@
       "medios": [
         "Infobae",
         "La Nación",
+        "A24",
         "iProfesional",
+        "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -1092,6 +1149,7 @@
         "Crónica",
         "Diario Popular",
         "El Día",
+        "Letra P",
         "Perfil",
         "Ámbito"
       ],
@@ -1488,15 +1546,17 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45024-sotelo-defendio-las-cuentas-de-la-cooperativa-y-apunto-contra-la-politica-no-se-van-a-meter-por-la-ventana/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T17:31:11.484Z",
       "sinFecha": true,
       "visto": "2026-10-07T17:31:11.484Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "seSabe": [
         "Mario Aníbal Sotelo y Julián Pinchetti visitaron los estudios de Radio Líder Balcarce Streaming",
@@ -1566,11 +1626,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45023-la-pelea-por-la-lapicera-lla-y-el-radicalismo-y-el-desafio-de-una-eventual-alianza/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T16:31:27.099Z",
       "sinFecha": true,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1628,15 +1688,16 @@
       "guion": "Luis Caputo viaja a Tailandia para avanzar en la revisión con el FMI",
       "seccion": "Economía",
       "medios": [
-        "Minuto Uno",
         "Ámbito",
         "TN (Todo Noticias)",
         "A24",
+        "Minuto Uno",
         "C5N",
         "Crónica",
         "Canal 26",
         "Diario Popular",
         "La Nueva",
+        "La Brújula 24",
         "El Eco de Tandil",
         "Radio Mitre"
       ],
@@ -2691,9 +2752,9 @@
         "La Tecla",
         "Zona Norte Diario",
         "El Eco de Tandil",
+        "Noticias Agropecuarias",
         "Agencia DIB",
         "El Día",
-        "Noticias Agropecuarias",
         "Infobae"
       ],
       "enlace": "https://www.latecla.info/170241-la-justicia-ordeno-preservar-los-datos-sobre-las-tierras-rurales-bonaerenses",
@@ -3379,7 +3440,7 @@
       "fecha": "2026-10-07T11:14:07.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T21:02:11.967Z",
-      "relevancia": 52,
+      "relevancia": 56,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3471,6 +3532,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "0221",
         "ANDigital",
         "El Marplatense",
@@ -3567,6 +3629,7 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "Infoeme",
         "ANDigital",
         "La Brújula 24"
@@ -3982,71 +4045,6 @@
         "archivo": "fotos-notas/tlcnz1.jpg",
         "credito": "Foto: El Diario Balcarce"
       }
-    },
-    {
-      "id": "e3ix5w",
-      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "copete": "Detectan mensajes fraudulentos dirigidos a conductores que transitan por la región. Utilizan la automatización del peaje El Dorado como ardid.",
-      "cuerpo": "Varios automovilistas que transitan habitualmente por la Autovía 226 recibieron comunicaciones fraudulentas vinculadas a TelePASE, según advirtió un medio local. Los mensajes llegan a través de WhatsApp o correos electrónicos y simulan beneficios o alertan sobre inconvenientes de cobro para robar información bancaria.\n\nLa maniobra coincide con las recientes modificaciones en la concesión y la automatización del peaje El Dorado, lo que genera confusión entre quienes utilizan ese corredor vial.\n\nAnte esta situación, se recomienda no ingresar a los enlaces recibidos, evitar brindar datos personales y realizar las consultas exclusivamente a través de los canales oficiales.",
-      "guion": "Advierten por una estafa de TelePASE en la Autovía 226",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45016-advierten-por-una-estafa-con-telepase-que-ya-llego-a-usuarios-de-la-autovia-226/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T23:01:22.111Z",
-      "sinFecha": true,
-      "visto": "2026-10-06T23:01:22.111Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Detectan estafas de TelePASE en la Autovía 226.",
-        "Los mensajes fraudulentos llegan por WhatsApp y correo electrónico.",
-        "Buscan robar datos bancarios mediante enlaces falsos.",
-        "Recomiendan no hacer clic y verificar por canales oficiales."
-      ],
-      "seSabe": [
-        "Conductores de la Autovía 226 recibieron mensajes falsos sobre TelePASE.",
-        "Los engaños se propagan por WhatsApp y correos electrónicos.",
-        "Los mensajes simulan descuentos o problemas con el medio de pago.",
-        "Se aconseja no ingresar a los enlaces y denunciar ante la entidad bancaria en caso de haber entregado datos."
-      ],
-      "noConfirmado": [
-        "No se especificó la cantidad exacta de personas afectadas por el fraude.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Advierten sobre una modalidad de estafa con TelePASE dirigida a automovilistas que utilizan la Autovía 226. Los delincuentes envían mensajes falsos para obtener datos bancarios.",
-      "etiquetas": [
-        "TelePASE",
-        "Autovía 226",
-        "estafa",
-        "Balcarce",
-        "peaje El Dorado"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45016-advierten-por-una-estafa-con-telepase-que-ya-llego-a-usuarios-de-la-autovia-226/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó sobre la modalidad de estafa con TelePASE en la Autovía 226 y brindó recomendaciones de seguridad."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "advierten-por-una-estafa-de-telepase-en-la-autovia-226",
-      "foto": {
-        "archivo": "fotos-notas/e3ix5w.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
     }
   ],
   "secciones": [
@@ -4065,14 +4063,14 @@
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 4
+      "cuantas": 5
     }
   ],
   "clima": {
     "ahora": {
       "temp": 10,
       "sensacion": 5,
-      "humedad": 97,
+      "humedad": 96,
       "viento": 28,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4446,6 +4444,12 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "1s8ckrw",
+      "titulo": null,
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"el menor de\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "1tcxxsy",
       "titulo": null,
       "seccion": "Balcarce",
@@ -4524,6 +4528,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "b36p7m",
+      "titulo": "Escándalo en Nordelta: un vecino quedó bajo investigación…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "531xz2",
       "titulo": null,
       "seccion": "Fútbol",
@@ -4548,11 +4558,11 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "b36p7m",
-      "titulo": "Escándalo en Nordelta: un vecino quedó bajo investigación…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "zxmg50",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 2
 }
