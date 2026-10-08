@@ -141,8 +141,15 @@ export const tipoInstagram = (pieza) => (pieza.tipo === 'reel' ? 'REELS' : 'STOR
  * El texto que acompaña al reel. Las historias no llevan.
  * Sólo lo que ya está publicado: el titular y de dónde seguir leyendo.
  */
+/** El aviso de que la voz es sintética, como texto en el posteo (C-9, 8/10/2026; decidido: texto, sin la etiqueta visual de Meta). */
+export const AVISO_DE_VOZ = 'Voz generada con inteligencia artificial.';
+
 export function pieDePieza(pieza) {
   if (pieza.tipo !== 'reel') return '';
+  return `${pieDeReel(pieza)}\n\n${AVISO_DE_VOZ}`;
+}
+
+function pieDeReel(pieza) {
   // Un podcast lista las notas que cuenta, cada una con su enlace. La fuente
   // no se nombra: eso está en la nota de la web.
   if (pieza.items?.length) {
