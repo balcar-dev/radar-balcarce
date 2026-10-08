@@ -1194,6 +1194,53 @@
         "vistas": 50,
         "interacciones": 7
       }
+    },
+    {
+      "cuando": "2026-10-08T12:00:21.186Z",
+      "web": {
+        "u12": {
+          "visitas": 17,
+          "vistas": 35
+        },
+        "a12": {
+          "visitas": 41,
+          "vistas": 49
+        },
+        "u24": {
+          "visitas": 70,
+          "vistas": 80
+        },
+        "a24": {
+          "visitas": 33,
+          "vistas": 61
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 16
+          },
+          {
+            "camino": "/nota/el-concejo-deliberante-distingue-a-la-fiscalia-descentralizada-1opc9eu",
+            "vistas": 12
+          },
+          {
+            "camino": "/nota/el-colegio-normal-recibe-una-jornada-de-prevencion-sobre-apuestas-2i73nb",
+            "vistas": 8
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 7,
+        "vistas": 672,
+        "interacciones": 0
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 102,
+        "alcance": 1,
+        "vistas": 2,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -1775,13 +1822,7 @@
         0,
         0
       ],
-      "paises": {
-        "CN": 42,
-        "US": 42,
-        "IE": 11,
-        "AR": 2,
-        "SE": 2
-      },
+      "paises": {},
       "referentes": {
         "directo": 45,
         "facebook.com": 32
@@ -1848,7 +1889,7 @@
     },
     "2026-10-07": {
       "referentes": {
-        "facebook.com": 40,
+        "facebook.com": 48,
         "directo": 1
       },
       "notas": {
@@ -1856,7 +1897,11 @@
         "2i73nb": 8,
         "76r67w": 6,
         "y4gp3v": 6,
+        "1jga964": 5,
+        "repaso20261007noche": 4,
         "1wp29m7": 4,
+        "131078z": 3,
+        "1fpl6he": 3,
         "1jfpdis": 2,
         "kr8nxa": 2,
         "vm4nnt": 2,
@@ -1866,11 +1911,11 @@
         "15zgvx1": 2
       },
       "paginas": {
-        "/": 7
+        "/": 9
       },
       "dispositivos": {
-        "mobile": 33,
-        "desktop": 24
+        "mobile": 46,
+        "desktop": 28
       },
       "horas": [
         0,
@@ -1894,18 +1939,67 @@
         2,
         1,
         0,
+        11,
+        6,
+        0
+      ],
+      "paises": {
+        "US": 38,
+        "AR": 21,
+        "IE": 9,
+        "SE": 6
+      },
+      "visitas": 49,
+      "vistas": 74
+    },
+    "2026-10-08": {
+      "referentes": {
+        "directo": 9
+      },
+      "notas": {
+        "repaso20261007noche": 2,
+        "f1horarios2026r17": 2
+      },
+      "paginas": {
+        "/": 13,
+        "/dolar": 1
+      },
+      "paises": {
+        "HK": 10,
+        "US": 10
+      },
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        9,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0
       ],
-      "paises": {
-        "US": 30,
-        "AR": 15,
-        "IE": 6,
-        "SE": 6
-      },
-      "visitas": 41,
-      "vistas": 57
+      "visitas": 9,
+      "vistas": 18,
+      "dispositivos": {
+        "desktop": 16,
+        "mobile": 2
+      }
     }
   }
 }
