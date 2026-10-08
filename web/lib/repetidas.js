@@ -127,17 +127,30 @@ export function conFusionadas(antes, fusion, porId, ahora = new Date()) {
   for (const [id, a] of fusion) {
     const nota = porId.get(id);
     if (!nota) continue;
-    notas[id] = { a, ruta: notas[id]?.ruta ?? rutaDeNota(nota), cuando: notas[id]?.cuando ?? ahora.toISOString() };
+    notas[id] = {
+      a, ruta: notas[id]?.ruta ?? rutaDeNota(nota), cuando: notas[id]?.cuando ?? ahora.toISOString(),
+      // La sección, para que si la que queda pierde su página la dirección vieja lleve a la sección y no dé 404 (W-6).
+      ...((nota.seccion ?? notas[id]?.seccion) ? { seccion: nota.seccion ?? notas[id].seccion } : {}),
+    };
   }
   return { notas };
 }
 
-/** Las redirecciones de las repetidas a la nota que queda (si todavía tiene página). */
-export function redireccionesDeFusionadas(fusionadas, rutaDe) {
+/**
+ * Las redirecciones de las repetidas a la nota que queda. W-6 (8/10/2026): si la que queda ya no tiene página, se sigue la cadena
+ * (a su vez unida a otra) y, si no se llega a ninguna con página, se lleva a la sección de la repetida (`rutaDeSeccion`) o a la
+ * portada, en vez de dejar la dirección compartida con un 404.
+ */
+export function redireccionesDeFusionadas(fusionadas, rutaDe, { rutaDeSeccion = () => null } = {}) {
   const salida = [];
-  for (const [id, f] of Object.entries(fusionadas?.notas ?? {})) {
-    const destino = rutaDe(f.a);
-    if (!destino) continue;
+  const notas = fusionadas?.notas ?? {};
+  for (const [id, f] of Object.entries(notas)) {
+    let destino = rutaDe(f.a);
+    for (let saltos = 0, siguiente = f.a; !destino && saltos < 5 && notas[siguiente]; saltos += 1) {
+      siguiente = notas[siguiente].a;
+      destino = rutaDe(siguiente);
+    }
+    if (!destino) destino = rutaDeSeccion(f.seccion) ?? '/';
     if (f.ruta && f.ruta !== destino) salida.push({ origen: f.ruta, destino });
     salida.push({ origen: `/nota/${id}`, destino });
   }

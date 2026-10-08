@@ -9,6 +9,8 @@ import {
   parecido, repetidasConOtraDireccion, conFusionadas, redireccionesDeFusionadas, REPETIDAS,
 } from '../web/lib/repetidas.js';
 import { diceEnVivo } from '../ingesta/verificar.mjs';
+import { RANURAS_DE_SECCION, rutaDeSeccion } from '../web/scripts/generar-redirects.mjs';
+import { SECCIONES } from '../web/lib/datos.js';
 
 const CUERPO = Array.from({ length: 80 }, (_, i) => `palabra${i}`).join(' ');
 const nota = (id, titulo, fecha, o = {}) => ({ id, titulo, fecha, slug: titulo.toLowerCase().replace(/\W+/g, '-'), ...o });
@@ -55,7 +57,7 @@ test('la dirección de la repetida redirige a la que queda, y se guarda con su f
     { origen: '/nota/reabre-el-aut-dromo-juan-manuel-fangio-a', destino: '/nota/el-autodromo-reabre-b' },
     { origen: '/nota/a', destino: '/nota/el-autodromo-reabre-b' },
   ]);
-  assert.deepEqual(redireccionesDeFusionadas(json, () => null), [], 'si la que queda ya no tiene página, no se redirige');
+  assert.deepEqual(redireccionesDeFusionadas(json, () => null).map((x) => x.destino), ['/', '/'], 'si ninguna del grupo tiene página, va a la portada y no a un 404');
 });
 
 test('"EN VIVO" y "minuto a minuto" en el título se retiran; "música en vivo", no', () => {
@@ -151,4 +153,29 @@ test('generar-datos pregunta por las parejas sospechosas y las fusiona, sin gast
   assert.ok(g.indexOf('parejasSospechosas(pool') > g.indexOf('const conPaginaHoy') && g.indexOf('parejasSospechosas(pool') < g.indexOf('const fusion = repetidasConOtraDireccion('));
   assert.match(g, /confirmadas: parejasConfirmadas/);
   assert.match(g, /sumarFuentesDeParejas\(deLaIngesta, parejasConfirmadas\)/);
+});
+
+
+// W-6 (8/10/2026): una dirección vieja de una repetida no da 404 si la nota que quedó ya no tiene página.
+test('si la que queda perdió su página, se sigue la cadena y, si no, se va a la sección o a la portada', () => {
+  const json = { notas: {
+    a: { a: 'b', ruta: '/nota/a-a', seccion: 'Fútbol' },
+    b: { a: 'c', ruta: '/nota/b-b', seccion: 'Fútbol' },
+    x: { a: 'y', ruta: '/nota/x-x', seccion: 'Economía' },
+    z: { a: 'y', ruta: '/nota/z-z' },
+  } };
+  const rutaDe = (id) => (id === 'c' ? '/nota/c-c' : null);
+  const r = redireccionesDeFusionadas(json, rutaDe, { rutaDeSeccion });
+  const a = (origen) => r.find((x) => x.origen === origen)?.destino;
+  assert.equal(a('/nota/a'), '/nota/c-c', 'a → b → c, que sí tiene página');
+  assert.equal(a('/nota/b'), '/nota/c-c');
+  assert.equal(a('/nota/x'), '/seccion/economia', 'sin ninguna con página, a la sección de la repetida');
+  assert.equal(a('/nota/z'), '/', 'si ni la sección se sabe, a la portada');
+  assert.ok(r.every((x) => x.destino), 'ninguna queda sin destino');
+});
+
+test('las secciones de las redirecciones son las once de la web', () => {
+  assert.deepEqual(Object.keys(RANURAS_DE_SECCION).sort(), SECCIONES.map((s) => s.nombre).sort());
+  for (const s of SECCIONES) assert.equal(rutaDeSeccion(s.nombre), `/seccion/${s.ranura}`);
+  assert.equal(rutaDeSeccion('Inventada'), null);
 });

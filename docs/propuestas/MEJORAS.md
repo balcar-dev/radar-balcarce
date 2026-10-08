@@ -1126,7 +1126,7 @@ salieron solas, contra su fuente (20 minutos).
   fuente) y 3 son cotizaciones del dólar. No están en el sitemap pero se pueden indexar, y contradicen
   `/quienes-somos`. Ponerles `noindex` y sacar del archivo las que no salieron en redes. 2 h.
 
-**W-6 · 11 direcciones viejas de notas unidas dan 404** — *Confirmado · MEDIA*
+**W-6 ✔ · 11 direcciones viejas de notas unidas dan 404** — *Confirmado · MEDIA · hecho el 8/10 (regla 135)*
 - Apuntan a una nota que ya no tiene página (`web/lib/repetidas.js:136-145`; ejemplo `t3k0l2` → `823fzo`).
   Redirigir a otra del grupo o a la sección. 3 h.
 

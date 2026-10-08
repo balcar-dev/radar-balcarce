@@ -52,6 +52,13 @@ export const SECCIONES_VIEJAS = [
   { origen: '/seccion/pais', destino: '/seccion/argentina' },
 ];
 
+/** La dirección de la página de una sección por su nombre (las once), o null. Una prueba la compara con SECCIONES de lib/datos.js. */
+export const RANURAS_DE_SECCION = {
+  Balcarce: 'balcarce', Política: 'politica', Policiales: 'policiales', Fútbol: 'futbol', Deportes: 'deportes', Automovilismo: 'automovilismo',
+  Agro: 'agro', Economía: 'economia', 'Cultura y agenda': 'cultura', Tecnología: 'tecnologia', Argentina: 'argentina',
+};
+export const rutaDeSeccion = (nombre) => (RANURAS_DE_SECCION[nombre] ? `/seccion/${RANURAS_DE_SECCION[nombre]}` : null);
+
 export function comoRedirectsDeCloudflare(redirecciones) {
   // Formato Netlify/Cloudflare: "origen destino código", una por línea. El
   // 301 es permanente, igual que el `permanent: true` que tenía Next.
@@ -64,7 +71,7 @@ if (process.argv[1] && process.argv[1].endsWith('generar-redirects.mjs')) {
   // Las repetidas que se unieron a otra nota (fusionadas.json, 29/09) van antes
   // que las de las notas: su página ya no existe.
   const rutas = new Map([...(portada.notas ?? []), ...(archivo.notas ?? [])].map((n) => [n.id, rutaDeNota(n)]));
-  const fusionadas = redireccionesDeFusionadas(leerJson(path.join(RAIZ, 'data', 'fusionadas.json'), null), (id) => rutas.get(id));
+  const fusionadas = redireccionesDeFusionadas(leerJson(path.join(RAIZ, 'data', 'fusionadas.json'), null), (id) => rutas.get(id), { rutaDeSeccion });
   const redirecciones = [...SECCIONES_VIEJAS, ...fusionadas, ...redireccionesDeNotas(portada, archivo)];
 
   fs.mkdirSync(path.join(RAIZ, 'public'), { recursive: true });
