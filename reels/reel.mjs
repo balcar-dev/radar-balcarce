@@ -11,6 +11,7 @@ import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
+import { FPS, partirSvg, renderizarEntrada } from './animacion.mjs';
 import { decirGemini } from './voz-gemini.mjs';
 import { componerIndicacion, vozDePieza } from '../redes/prompt-redes.mjs';
 import {
@@ -108,6 +109,50 @@ export async function recortarParaHistoria(mp4, salida) {
   return { mp4: salida, duracion: (await medirDuracion(salida)) ?? HISTORIA_MAXIMA };
 }
 
+/** El rojo de la barra de avance que corre abajo durante toda la pieza (el de la marca). */
+const ROJO_DE_LA_BARRA = '0xC7381C';
+
+/**
+ * El video sin voz ni subtítulos, con la entrada animada de cada placa (reels/animacion.mjs): los cuadros de la entrada y, después, la
+ * placa quieta hasta que empieza la siguiente (o hasta el final). `placas`: [{ svg, png, desde }] en orden. Devuelve la ruta del mp4
+ * o lanza (quien llama sigue con la placa quieta: la animación nunca frena una pieza).
+ */
+async function armarBaseAnimada({ nombre, placas, total, dir }) {
+  const entradas = [];
+  const trozos = [];
+  for (let i = 0; i < placas.length; i += 1) {
+    const { svg, png, desde } = placas[i];
+    const largo = (placas[i + 1]?.desde ?? total) - desde;
+    const prefijo = `${nombre}-a${i}-`;
+    const hechos = await renderizarEntrada(svg, dir, prefijo);
+    const usados = Math.max(1, Math.min(hechos, Math.floor(largo * FPS)));
+    entradas.push('-framerate', String(FPS), '-t', (usados / FPS).toFixed(3), '-i', `${prefijo}%03d.png`);
+    trozos.push(`[${trozos.length}:v]`);
+    const quieta = largo - usados / FPS;
+    if (quieta > 0.02) {
+      entradas.push('-framerate', String(FPS), '-loop', '1', '-t', quieta.toFixed(3), '-i', path.basename(png));
+      trozos.push(`[${trozos.length}:v]`);
+    }
+  }
+  const base = path.join(dir, `${nombre}-base.mp4`);
+  const unir = trozos.map((t, i) => `${t}fps=${FPS},scale=1080:1920,format=yuv420p,setsar=1[s${i}]`).join(';');
+  await correr(ffmpeg, [
+    '-y', ...entradas,
+    '-filter_complex', `${unir};${trozos.map((_, i) => `[s${i}]`).join('')}concat=n=${trozos.length}:v=1:a=0[v]`,
+    '-map', '[v]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-pix_fmt', 'yuv420p', '-r', String(FPS),
+    path.basename(base),
+  ], { cwd: dir, maxBuffer: 1024 * 1024 * 40 });
+  return base;
+}
+
+/** Los cuadros y el video intermedio de la animación se borran: sólo queda el reel. */
+function limpiarAnimacion(dir, nombre) {
+  try {
+    for (const f of fs.readdirSync(dir)) if (f.startsWith(`${nombre}-a`) && f.endsWith('.png') && /-a\d+-\d{3}\.png$/.test(f)) fs.rmSync(path.join(dir, f));
+    fs.rmSync(path.join(dir, `${nombre}-base.mp4`), { force: true });
+  } catch { /* si no se puede borrar, no pasa nada */ }
+}
+
 /**
  * @param spec { nombre, svg, guion, acento }
  * @returns ruta del mp4
@@ -120,6 +165,8 @@ export async function armarReel({
   vozGemini = vozDePieza(nombre),
   // La función que habla: la de Gemini; las pruebas pasan una falsa (sin red ni cupo).
   hablar = decirGemini,
+  // La entrada animada de cada placa (reels/animacion.mjs). REELS_ANIMADOS=no la apaga y todo sale con la placa quieta, como antes.
+  animar = process.env.REELS_ANIMADOS !== 'no',
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);
@@ -178,28 +225,56 @@ export async function armarReel({
   const idxCorte = png2 ? voz.palabras.findIndex((p, k) => /^y$/i.test(String(p.texto).replace(/[^\p{L}]/gu, '')) && /^adem[aá]s/i.test(String(voz.palabras[k + 1]?.texto ?? ''))) : -1;
   const corte = idxCorte > 0 ? voz.palabras[idxCorte].desde + retardo : null;
   const dosPlacas = Boolean(png2 && corte);
-  const entradas = dosPlacas
-    ? ['-loop', '1', '-t', corte.toFixed(2), '-i', path.basename(png), '-loop', '1', '-t', (total - corte).toFixed(2), '-i', path.basename(png2), '-i', path.basename(mp3)]
-    : ['-loop', '1', '-i', path.basename(png), '-i', path.basename(mp3)];
-  const origen = dosPlacas ? '[0:v][1:v]concat=n=2:v=1:a=0' : '[0:v]null';
-  // loudnorm (R-4 de Herramientas, 8/10/2026): todas las voces al mismo volumen (-16 LUFS), para que ninguna pieza suene más fuerte que otra.
-  const audio = `[${dosPlacas ? 2 : 1}:a]${VOLUMEN_PAREJO},adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
-
-  await correr(ffmpeg, [
-    '-y', ...entradas,
-    '-filter_complex', `${origen},${filtro}[v];${audio}`,
-    '-map', '[v]', '-map', '[a]',
-    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p',
-    '-c:a', 'aac', '-b:a', '160k', '-ar', '44100',
-    '-t', String(total), '-r', '30', '-movflags', '+faststart',
-    path.basename(mp4),
-  ], { cwd: dir, maxBuffer: 1024 * 1024 * 40 });
+  // La entrada animada de cada placa y, encima, la barra de avance (8/10/2026). Si algo falla, la pieza sigue con la placa quieta.
+  let base = null;
+  if (animar && partirSvg(svg) && (!dosPlacas || partirSvg(svg2))) {
+    try {
+      base = await armarBaseAnimada({
+        nombre, total, dir,
+        placas: dosPlacas ? [{ svg, png, desde: 0 }, { svg: svg2, png: png2, desde: corte }] : [{ svg, png, desde: 0 }],
+      });
+    } catch (e) {
+      console.log(`  (la animación de ${nombre} no se pudo armar y sale con la placa quieta: ${String(e.message).slice(0, 120)})`);
+      base = null;
+    }
+  }
+  const armarFinal = (conBase) => {
+    const entradas = conBase
+      ? ['-i', path.basename(base), '-f', 'lavfi', '-t', total.toFixed(2), '-i', `color=c=${ROJO_DE_LA_BARRA}:s=1080x14:r=${FPS}`, '-i', path.basename(mp3)]
+      : dosPlacas
+        ? ['-loop', '1', '-t', corte.toFixed(2), '-i', path.basename(png), '-loop', '1', '-t', (total - corte).toFixed(2), '-i', path.basename(png2), '-i', path.basename(mp3)]
+        : ['-loop', '1', '-i', path.basename(png), '-i', path.basename(mp3)];
+    const origen = conBase
+      ? `[0:v][1:v]overlay=x='-w+w*t/${total.toFixed(2)}':y=H-h:eof_action=pass`
+      : dosPlacas ? '[0:v][1:v]concat=n=2:v=1:a=0' : '[0:v]null';
+    // loudnorm (R-4 de Herramientas, 8/10/2026): todas las voces al mismo volumen (-16 LUFS), para que ninguna pieza suene más fuerte que otra.
+    const audio = `[${conBase || dosPlacas ? 2 : 1}:a]${VOLUMEN_PAREJO},adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
+    return correr(ffmpeg, [
+      '-y', ...entradas,
+      '-filter_complex', `${origen},${filtro}[v];${audio}`,
+      '-map', '[v]', '-map', '[a]',
+      '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p',
+      '-c:a', 'aac', '-b:a', '160k', '-ar', '44100',
+      '-t', String(total), '-r', '30', '-movflags', '+faststart',
+      path.basename(mp4),
+    ], { cwd: dir, maxBuffer: 1024 * 1024 * 40 });
+  };
+  try {
+    await armarFinal(Boolean(base));
+  } catch (e) {
+    if (!base) throw e;
+    // Algo de la animación no encajó: la pieza sale igual, con la placa quieta.
+    console.log(`  (el video animado de ${nombre} no se pudo juntar y sale con la placa quieta: ${String(e.message).slice(0, 120)})`);
+    base = null;
+    await armarFinal(false);
+  }
 
   // La duración de verdad, medida en el archivo (no la calculada). Si pasa del
   // máximo de una historia, se hace además una versión recortada para las
   // historias; el reel queda entero. Sirve tanto para un podcast (se sube como
   // reel y como historia) como para una historia suelta que se hubiera alargado.
   const duracionReal = (await medirDuracion(mp4)) ?? total;
+  limpiarAnimacion(dir, nombre);
   let historia = null;
   if (pasaDelMaximo(duracionReal)) {
     historia = await recortarParaHistoria(mp4, path.join(dir, `${nombre}-historia.mp4`));

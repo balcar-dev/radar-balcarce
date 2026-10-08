@@ -27,6 +27,8 @@ test('con dos placas y una voz falsa, el video sale armado, con audio, y dura lo
     return { palabras, duracion };
   };
   const r = await armarReel({ nombre: 'efemeride', svg: placas.principal, svg2: placas.ademas, guion: e.guion, acento: '#9D2C8F', hablar: decirFalso }, dir);
+  // La animación (8/10): se arma con los cuadros de cada placa, y al terminar no deja cuadros ni el video intermedio.
+  assert.deepEqual(fs.readdirSync(dir).filter((f) => /-a\d+-\d{3}\.png$|-base\.mp4$/.test(f)), []);
   assert.ok(fs.existsSync(r.mp4) && fs.statSync(r.mp4).size > 20000, 'el video existe');
   assert.ok(fs.existsSync(path.join(dir, 'efemeride-2.png')), 'la segunda placa se dibujó');
   const real = await medirDuracion(r.mp4);
@@ -64,7 +66,7 @@ test('una voz muy baja y una fuerte quedan al mismo volumen en el video', async 
       execFileSync(ffmpeg, ['-y', '-f', 'lavfi', '-i', `sine=frequency=330:duration=${duracion.toFixed(2)},volume=${v}`, '-c:a', 'libmp3lame', mp3], { stdio: 'ignore' });
       return { palabras, duracion };
     };
-    const r = await armarReel({ nombre: 'efemeride', svg: placasDelDia(e.fecha, e).principal, guion: 'Buen día, Balcarce.', acento: '#9D2C8F', hablar: decirFalso }, dir);
+    const r = await armarReel({ nombre: 'efemeride', svg: placasDelDia(e.fecha, e).principal, guion: 'Buen día, Balcarce.', acento: '#9D2C8F', hablar: decirFalso, animar: false }, dir);
     const out = await new Promise((resolve) => {
       let err = '';
       const p = execFile(ffmpeg, ['-hide_banner', '-nostats', '-i', r.mp4, '-af', 'ebur128', '-vn', '-f', 'null', '-'], () => resolve(err));

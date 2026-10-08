@@ -404,5 +404,8 @@ con el color de la pieza, a la altura de las filas 250 a 300; el cuerpo usa **to
 zona segura** (filas 250 a 1480), con el rasgo grande propio de cada pieza; y **el mismo
 cierre en todas**: la raya de tinta, "Radar Balcarce" a la izquierda y radarbalcarce.com
 a la derecha, sobre la fila 1478. Sin nombre de otro medio ni foto con marca de agua.
-Las placas van **quietas**: sin zoom sobre la imagen (regla 90); el movimiento, cuando
-llegue, es de detalles calculados cuadro a cuadro.
+Las placas **no tiemblan**: sin zoom sobre la imagen (regla 90). Desde el 8/10 (regla 145) todas las piezas
+llevan una entrada animada, calculada cuadro a cuadro: cada bloque (rótulo, título, tarjetas, renglones) entra de
+a uno, subiendo unos pocos píxeles y apareciendo, mientras la firma de abajo ya está; al terminar (menos de 2,3
+segundos) el cuadro es la placa quieta de siempre. Una barra roja avanza abajo durante toda la pieza. Los
+subtítulos de la voz van en la misma franja de siempre.
