@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-07T23:32:11.067Z",
+ "generado": "2026-10-08T00:02:51.340Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,9 +15,29 @@
      "fecha": "2026-10-07T14:11:00.000Z"
     },
     {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/deportes/cancion-jugadores-scaloneta-pedirle-lionel-messi-retire-seleccion-sos-eterno_0_HIv3VHE7PQ.html",
+     "fecha": "2026-10-07T20:00:53.000Z"
+    },
+    {
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/deportes/2026/10/07/no-te-vayas-pensalo-una-vez-mas-la-cancion-que-los-companeros-le-cantaron-a-lionel-messi-en-el-micro-camino-a-su-despedida/",
      "fecha": "2026-10-07T19:40:07.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/07/sos-eterno-como-lo-de-qatar-la-nueva-cancion-que-el-plantel-de-la-seleccion-le-compuso-a-messi-en-su-despedida/",
+     "fecha": "2026-10-07T19:43:43.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/07/sos-eterno-como-lo-de-qatar-la-nueva-cancion-que-el-plantel-de-la-seleccion-le-compuso-a-messi-en-su-despedida/",
+     "fecha": "2026-10-07T21:25:48.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://442.perfil.com/noticias/seleccion-argentina/la-cancion-que-los-jugadores-de-la-seleccion-argentina-le-hicieron-a-lionel-messi-previo-a-su-retiro.phtml",
+     "fecha": "2026-10-07T21:40:00.000Z"
     },
     {
      "medio": "Página/12",
@@ -50,9 +70,26 @@
      "fecha": "2026-10-07T19:35:00.000Z"
     }
    ],
-   "intentos": 4,
+   "intentos": 5,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 5
+  },
+  {
+   "id": "1j5cds9",
+   "titulo": "Rodrigo Cunqueiro será invitado de Diego Ramos en “La Noche es Nuestra”",
+   "copete": "Rodrigo Cunqueiro volverá a tener este jueves 8 una presencia destacada en la televisión nacional. El artista balcarceño será uno de los invitados de “La Noche es Nuestra”, el ciclo que conduce Diego Ramos por Televisión Pública, donde tend",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-07T23:58:21.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/rodrigo-cunqueiro-sera-invitado-de-diego-ramos-en-la-noche-es-nuestra-749",
+     "fecha": "2026-10-07T23:58:21.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 4 problemas (numero, nombre): el titulo dice 0 y la fuente no lo dice",
+   "maximo": 3
   },
   {
    "id": "15z9ofl",
@@ -91,7 +128,7 @@
   {
    "id": "o7akpp",
    "titulo": "El 57% de los bonaerenses que tomó deuda con una financiera está en mora",
-   "copete": "Mientras las refinanciaciones no logran resolver el problema de fondo sobre las deudas que tienen miles de hogares en todo el país, durante agosto se profundizó en las cuotas que deben pagar por algún tipo de préstamos personales que sacaron los bonaerenses con financieras, por…",
+   "copete": "Así se desprende de los datos de agosto del Mapa de la Deuda. La tasa de mora se ubica en el 53,4%. Los municipios más complicados.",
    "seccion": "Economía",
    "fecha": "2026-10-07T14:14:40.000Z",
    "fuentes": [
@@ -99,16 +136,6 @@
      "medio": "Agencia DIB",
      "enlace": "https://dib.com.ar/sociedad/el-57-los-bonaerenses-que-tomo-deuda-una-financiera-esta-mora-n56306",
      "fecha": "2026-10-07T14:14:40.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
-     "fecha": "2026-10-07T20:30:21.000Z"
-    },
-    {
-     "medio": "Infoeme",
-     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
-     "fecha": "2026-10-07T19:22:46.000Z"
     },
     {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
@@ -124,11 +151,38 @@
      "medio": "Ecos Diarios (Necochea)",
      "enlace": "https://elecos.com.ar/el-57-de-los-bonaerenses-que-tomo-deuda-con-financieras-se-encuentra-en-mora",
      "fecha": "2026-10-07T16:01:03.000Z"
+    },
+    {
+     "medio": "Infoeme",
+     "enlace": "https://www.infoeme.com/economia/2026-10-7-16-22-46-los-olavarrienses-entre-los-mas-morosos-con-entidades-financieras",
+     "fecha": "2026-10-07T19:22:46.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/el-57-de-los-bonaerenses-que-tomo-deuda-con-una-financiera-esta-en-mora/",
+     "fecha": "2026-10-07T20:30:21.000Z"
     }
    ],
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el guion dice 50 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "7r5ucc",
+   "titulo": "Preocupación por el robo de flexibles de gas",
+   "copete": "",
+   "seccion": "Policiales",
+   "fecha": "2026-10-07T23:01:35.401Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 3
   },
   {
    "id": "1xbyav3",
