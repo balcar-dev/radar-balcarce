@@ -29,6 +29,9 @@ concurrency:
   group: armado-vacio
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   armar:
     runs-on: ubuntu-24.04

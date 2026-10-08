@@ -95,6 +95,21 @@ export const QUE_SIGNIFICA_EL_PASO = {
   'Revisar que el SEO siga en pie': 'Falta algo del SEO en el HTML (título, descripción o tarjeta): la web no se actualiza hasta arreglarlo.',
 };
 
+/**
+ * Los workflows de GitHub cuya última corrida mira el vigilante: si falla, avisa. Archivo → nombre. Los cuatro últimos se sumaron el
+ * 8/10/2026 (A-4 y T-3): nacieron después del congelamiento del 4/10 para avisar y, si fallaban, sólo llegaba un correo a la cuenta de GitHub.
+ */
+export const WORKFLOWS_VIGILADOS = {
+  'actualizar.yml': 'Actualizar la web',
+  'redes.yml': 'Redes',
+  'cloudflare-deploy.yml': 'Cloudflare Pages',
+  'respaldo.yml': 'Respaldo',
+  'armado-vacio.yml': 'Armado con datos vacíos',
+  'pruebas-otra-hora.yml': 'Pruebas con otra hora',
+  'auditoria-ia.yml': 'Auditoría IA',
+  'pistas.yml': 'Pistas',
+};
+
 export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
   minutosSinReloj: 100,        // el reloj de redes corre cada 30
@@ -315,9 +330,8 @@ export function evaluar({
   }
 
   // --- las corridas de GitHub
-  const NOMBRES ={ 'Actualizar la web': 'Actualizar la web', Redes: 'Redes', 'Cloudflare Pages': 'Cloudflare Pages', Respaldo: 'Respaldo' };
   for (const [nombre, lista] of Object.entries(corridas)) {
-    if (!NOMBRES[nombre]) continue;
+    if (!Object.values(WORKFLOWS_VIGILADOS).includes(nombre)) continue;
     const terminadas = lista.filter((r) => r.status === 'completed' && r.conclusion !== 'cancelled' && r.conclusion !== 'skipped');
     const ultima = terminadas[0];
     if (!ultima) continue;
@@ -655,7 +669,7 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
 
   const corridas = {};
   if (token && repo) {
-    for (const archivo of ['actualizar.yml', 'redes.yml', 'cloudflare-deploy.yml', 'respaldo.yml']) {
+    for (const archivo of Object.keys(WORKFLOWS_VIGILADOS)) {
       const r = await pedir(`https://api.github.com/repos/${repo}/actions/workflows/${archivo}/runs?per_page=6`, {
         headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json' },
       });
@@ -671,7 +685,7 @@ export async function observar({ sitio, repo, token, ahora = new Date(), env = p
           falla.paso = jobs.flatMap((job) => job.steps ?? []).find((s) => s.conclusion === 'failure')?.name ?? null;
         }
       }
-      const nombre = { 'actualizar.yml': 'Actualizar la web', 'redes.yml': 'Redes', 'cloudflare-deploy.yml': 'Cloudflare Pages', 'respaldo.yml': 'Respaldo' }[archivo];
+      const nombre = WORKFLOWS_VIGILADOS[archivo];
       corridas[nombre] = lista;
     }
   }

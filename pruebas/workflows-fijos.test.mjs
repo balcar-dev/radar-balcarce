@@ -52,3 +52,25 @@ test('el workflow de respaldo existe y sus pasos opcionales no hacen fallar a lo
   assert.ok((t.match(/if: \$\{\{ !cancelled\(\) \}\}/g) ?? []).length >= 3, 'GitLab y R2 corren aunque el otro falle');
   assert.ok(!/echo[^\n]*\$\{?GITLAB_TOKEN/.test(t), 'el token no se imprime');
 });
+
+// V2-20, M-4, T-4, A-4 y T-3 (8/10/2026)
+test('todos los workflows dicen sus permisos y tienen tope de tiempo', () => {
+  const raiz = path.join(import.meta.dirname, '..');
+  const carpeta = path.join(raiz, '.github', 'workflows');
+  for (const f of fs.readdirSync(carpeta).filter((x) => x.endsWith('.yml'))) {
+    const t = fs.readFileSync(path.join(carpeta, f), 'utf8');
+    assert.match(t, /^\s*permissions:/m, `${f} no dice sus permisos`);
+    assert.match(t, /timeout-minutes:/, `${f} no tiene tope de tiempo`);
+  }
+});
+
+test('el proyecto pide Node 24 y el vigilante mira los workflows que nacieron para avisar', async () => {
+  const raiz = path.join(import.meta.dirname, '..');
+  assert.equal(JSON.parse(fs.readFileSync(path.join(raiz, 'package.json'), 'utf8')).engines.node, '>=24');
+  const { WORKFLOWS_VIGILADOS } = await import('../redes/vigilar.mjs');
+  for (const [archivo, nombre] of Object.entries(WORKFLOWS_VIGILADOS)) {
+    const t = fs.readFileSync(path.join(raiz, '.github', 'workflows', archivo), 'utf8');
+    assert.match(t, new RegExp(`^name: ${nombre}$`, 'm'), `${archivo} no se llama "${nombre}"`);
+  }
+  for (const necesario of ['armado-vacio.yml', 'pruebas-otra-hora.yml', 'auditoria-ia.yml', 'pistas.yml']) assert.ok(WORKFLOWS_VIGILADOS[necesario], necesario);
+});
