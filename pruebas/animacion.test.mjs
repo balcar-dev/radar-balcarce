@@ -5,7 +5,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  partirSvg, clasificar, esperas, duracionDeLaEntrada, cuadrosDeLaEntrada, placaEn, ENTRADA, FPS,
+  partirSvg, clasificar, esperas, duracionDeLaEntrada, cuadrosDeLaEntrada, placaEn, comoContador, ENTRADA, CONTADOR, FPS,
 } from '../reels/animacion.mjs';
 import {
   placaParticipa, placaRepaso, placaFarmacia, placaEfemeride, placaAgenda, placaUtiles, COLORES,
@@ -68,8 +68,8 @@ test('la entrada dura poco, aunque la placa tenga muchos renglones (una lista de
   const muchas = placaUtiles({ grupos: Array.from({ length: 6 }, (_, i) => ({ categoria: `Grupo ${i}`, items: [{ nombre: `Servicio ${i}`, numero: `Teléfono ${i}` }] })) });
   for (const svg of [PLACAS.participa(), PLACAS.efemeride(), muchas]) {
     const p = partirSvg(svg);
-    assert.ok(duracionDeLaEntrada(p) <= ENTRADA.tope + 0.01, `${duracionDeLaEntrada(p)} s`);
-    assert.ok(cuadrosDeLaEntrada(p) <= Math.ceil((ENTRADA.tope + 0.01) * FPS) + 1);
+    assert.ok(duracionDeLaEntrada(p) <= ENTRADA.tope + CONTADOR.duracion, `${duracionDeLaEntrada(p)} s`);
+    assert.ok(cuadrosDeLaEntrada(p) <= Math.ceil((ENTRADA.tope + CONTADOR.duracion) * FPS) + 1);
   }
   const e = esperas(30);
   assert.ok(e.at(-1) + ENTRADA.duracion <= ENTRADA.tope + 0.001, 'con treinta bloques se achica la espera');
@@ -84,4 +84,29 @@ test('el reel arma la animación y la barra de avance, la apaga con REELS_ANIMAD
   assert.match(reel, /limpiarAnimacion\(dir, nombre\)/);
   assert.match(reel, /la animación de \$\{nombre\} no se pudo armar y sale con la placa quieta/, 'si falla, la pieza sale quieta');
   assert.ok(COLORES.rojo.toLowerCase() === '#c7381c' && reel.includes('0xC7381C'), 'la barra es el rojo de la marca');
+});
+
+test('la cifra grande cuenta: la temperatura sube desde cero y el año corre hacia atrás hasta el del hecho (8/10)', () => {
+  const grande = (txt, tam = 296) => `<text x="106" y="874" font-family="Source Serif 4 60pt" font-size="${tam}" font-weight="900" fill="#FFFFFF">${txt}</text>`;
+  assert.equal(comoContador(grande('9°')).valor, 9);
+  assert.equal(comoContador(grande('-3°')).valor, -3);
+  assert.equal(comoContador(grande('1872')).esAnio, true);
+  assert.equal(comoContador(grande('12')).esAnio, false);
+  assert.equal(comoContador(grande('9°', 60)), null, 'un número chico no cuenta');
+  assert.equal(comoContador('<text font-size="300">Hola</text>'), null);
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920"><rect width="1080" height="1920" fill="#fff"/>${grande('20°')}${grande('1872')}</svg>`;
+  const p = partirSvg(svg);
+  const numeros = (t) => [...placaEn(p, t, { anio: 2026 }).matchAll(/>(-?\d+)(°)?<\/text>/g)].map((m) => Number(m[1]));
+  const medio = numeros(0.5);
+  assert.ok(medio[0] > 0 && medio[0] < 20, `la temperatura va subiendo: ${medio[0]}`);
+  assert.ok(medio[1] > 1872 && medio[1] < 2026, `el año va corriendo hacia atrás: ${medio[1]}`);
+  const fin = placaEn(p, duracionDeLaEntrada(p) + 0.05, { anio: 2026 });
+  assert.ok(fin.includes('>20°<') && fin.includes('>1872<'), 'termina en el valor verdadero');
+  assert.ok(!fin.includes('<g '), 'y sin ningún envoltorio');
+});
+
+test('en las placas de verdad, el clima de la mañana y la efeméride tienen su cifra que cuenta', () => {
+  const e = partirSvg(PLACAS.efemeride());
+  assert.equal(clasificar(e.hijos).filter((c) => comoContador(c.h)).length, 1);
 });

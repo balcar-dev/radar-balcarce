@@ -20,6 +20,17 @@ export const ENTRADA = { duracion: 0.55, espera: 0.17, primero: 0.12, tope: 2.2,
 /** Desde esta fila para abajo está la firma de Radar Balcarce (Y_PIE de placa.mjs): aparece enseguida, sin subir. */
 const FILA_DEL_PIE = 1470;
 
+/** La cifra grande de una placa (la temperatura, el año de una efeméride) no aparece de golpe: cuenta hasta su valor. */
+export const CONTADOR = { duracion: 1.2, tamMinimo: 200 };
+const CIFRA_GRANDE = /^(<text\b[^>]*\bfont-size="(\d+)"[^>]*>)\s*(-?\d{1,4})(°C?)?\s*(<\/text>)$/;
+
+/** Si un bloque es una cifra grande, devuelve cómo rehacerla; si no, null. */
+export function comoContador(h) {
+  const m = String(h).match(CIFRA_GRANDE);
+  if (!m || Number(m[2]) < CONTADOR.tamMinimo) return null;
+  return { abre: m[1], valor: Number(m[3]), sufijo: m[4] ?? '', cierra: m[5], esAnio: !m[4] && m[3].length === 4 && Number(m[3]) >= 1000 && Number(m[3]) <= 2100 };
+}
+
 const ESTATICOS = new Set(['defs', 'style', 'clippath', 'lineargradient', 'radialgradient', 'filter', 'mask', 'pattern', 'title', 'desc']);
 
 const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
@@ -82,16 +93,16 @@ export function esperas(cuantos) {
 
 /** Cuánto dura la entrada de una placa, en segundos. */
 export function duracionDeLaEntrada(partida) {
-  const bloques = clasificar(partida.hijos).filter((c) => c.tipo === 'bloque').length;
-  const e = esperas(bloques);
-  return bloques ? e[e.length - 1] + ENTRADA.duracion : 0;
+  const bloques = clasificar(partida.hijos).filter((c) => c.tipo === 'bloque');
+  const e = esperas(bloques.length);
+  return bloques.reduce((fin, c, i) => Math.max(fin, e[i] + (comoContador(c.h) ? CONTADOR.duracion : ENTRADA.duracion)), 0);
 }
 
 /** Cuántos cuadros hacen falta para mostrar la entrada entera. */
 export const cuadrosDeLaEntrada = (partida) => Math.ceil(duracionDeLaEntrada(partida) * FPS) + 1;
 
 /** La placa en el instante `t` (segundos desde que aparece). Pasada la entrada, es la placa original, sin ningún envoltorio. */
-export function placaEn(partida, t) {
+export function placaEn(partida, t, { anio = new Date().getFullYear() } = {}) {
   const clases = clasificar(partida.hijos);
   const hay = clases.filter((c) => c.tipo === 'bloque').length;
   const demoras = esperas(hay);
@@ -102,7 +113,17 @@ export function placaEn(partida, t) {
       const a = suave(t / 0.4);
       return a >= 1 ? c.h : `<g opacity="${a.toFixed(3)}">${c.h}</g>`;
     }
-    const p = suave((t - demoras[k++]) / ENTRADA.duracion);
+    const desde = demoras[k++];
+    const cuenta = comoContador(c.h);
+    const p = suave((t - desde) / ENTRADA.duracion);
+    if (cuenta) {
+      // La cifra grande cuenta: la temperatura sube desde cero; el año corre hacia atrás desde el actual hasta el del hecho.
+      const q = suave((t - desde) / CONTADOR.duracion);
+      if ((t - desde) / CONTADOR.duracion >= 1) return c.h;
+      if (p <= 0) return '';
+      const v = cuenta.esAnio ? Math.round(cuenta.valor + (anio - cuenta.valor) * (1 - q)) : Math.round(cuenta.valor * q);
+      return `<g opacity="${p.toFixed(3)}">${cuenta.abre}${v}${cuenta.sufijo}${cuenta.cierra}</g>`;
+    }
     if (p >= 1) return c.h;
     if (p <= 0) return '';
     return `<g opacity="${p.toFixed(3)}" transform="translate(0 ${((1 - p) * ENTRADA.sube).toFixed(2)})">${c.h}</g>`;
@@ -114,7 +135,7 @@ export function placaEn(partida, t) {
  * Dibuja los cuadros de la entrada de una placa como imágenes numeradas (`<prefijo>000.png`…) y devuelve cuántos son. La última queda
  * igual a la placa quieta. Lanza si el conversor no está o la placa no se puede partir: quien llama sigue con la placa quieta.
  */
-export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080 } = {}) {
+export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio = new Date().getFullYear() } = {}) {
   const partida = partirSvg(svg);
   if (!partida) throw new Error('la placa no se puede animar');
   const { Resvg } = await import('@resvg/resvg-js');
@@ -122,7 +143,7 @@ export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080 } = {}
   const propias = archivosDeFuente();
   const n = cuadrosDeLaEntrada(partida);
   for (let i = 0; i < n; i += 1) {
-    const r = new Resvg(placaEn(partida, i / FPS), {
+    const r = new Resvg(placaEn(partida, i / FPS, { anio }), {
       fitTo: { mode: 'width', value: ancho },
       font: { fontFiles: propias, loadSystemFonts: propias.length === 0, defaultFontFamily: 'Inter' },
     });
