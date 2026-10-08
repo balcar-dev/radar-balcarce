@@ -311,3 +311,16 @@ test('el criterio de menores de la IA mira lo que se ve, no el tema de la nota (
   assert.match(f, /sólo por lo que SE VE en la imagen, no por el tema de la nota/);
   assert.match(f, /Si dudás si es menor, ponelo en true/, 'ante la duda sigue siendo menor');
 });
+
+test('Policiales sin fuente oficial no lleva foto real, ni la del banco ni la que sumó una persona (8/10/2026: Ruta 226, El Eco de Tandil)', async () => {
+  const { conFotosDelBanco } = await import('../web/scripts/fotos-notas.mjs');
+  const banco = { a: { archivo: 'fotos-notas/a.jpg', credito: 'Foto: El Eco de Tandil', origen: 'manual' }, b: { archivo: 'fotos-notas/b.jpg', credito: 'Foto: Bomberos' }, c: { archivo: 'fotos-notas/c.jpg', credito: 'Foto: X' } };
+  const notas = conFotosDelBanco([
+    { id: 'a', seccion: 'Policiales', fuentesConsultadas: [{ medio: 'El Eco de Tandil', oficial: false }], foto: { archivo: 'fotos-notas/a.jpg', credito: 'viejo' } },
+    { id: 'b', seccion: 'Policiales', fuentesConsultadas: [{ medio: 'Bomberos Voluntarios', oficial: true }] },
+    { id: 'c', seccion: 'Balcarce', fuentesConsultadas: [{ medio: 'Otro', oficial: false }] },
+  ], banco);
+  assert.equal(notas[0].foto, undefined, 'Policiales sin fuente oficial: sin foto');
+  assert.equal(notas[1].foto.archivo, 'fotos-notas/b.jpg', 'con fuente oficial, sí');
+  assert.equal(notas[2].foto.archivo, 'fotos-notas/c.jpg', 'las demás secciones no cambian');
+});
