@@ -43,7 +43,7 @@
 /agenda/*/opengraph-image
   Content-Type: image/png
 
-# Las fotos de las notas: el nombre es el de la nota y no cambia. Una semana en
+# Las fotos de las notas: cada foto tiene su nombre y no cambia (si se reemplaza, la nueva lleva otro: ID-2, regla 136). Una semana en
 # el navegador y en Cloudflare (29/09: antes 4 horas por defecto).
 /fotos-notas/*
   Cache-Control: public, max-age=604800

@@ -1134,7 +1134,7 @@ salieron solas, contra su fuente (20 minutos).
 - Con met.no se muestra "Sensación térmica" igual a la temperatura; la regla dice que no se inventa
   (`ingesta/ingesta.mjs:904-906`, `web/components/clima-vivo.js:140`). 30 min.
 
-**W-8 · Una foto reemplazada se sigue viendo hasta una semana** — *Confirmado · MEDIA*
+**W-8 ✔ · Una foto reemplazada se sigue viendo hasta una semana** — *Confirmado · MEDIA · hecho el 8/10 (regla 136)*
 - Se guarda con el mismo nombre y la caché dura 7 días (`web/public/_headers:48-49`). Si se reemplazó por
   tener marca o un menor, la vieja sigue apareciendo. Nombre nuevo al reemplazar. 1 h.
 

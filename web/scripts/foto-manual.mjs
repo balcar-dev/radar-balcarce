@@ -10,7 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { fotoParaGuardar, PESO_MINIMO_DE_UNA_FOTO } from './achicar-foto.mjs';
+import { fotoParaGuardar, PESO_MINIMO_DE_UNA_FOTO, nombreDeFotoNueva } from './achicar-foto.mjs';
 import { urlDeFotoValida, creditoDeFoto } from '../public/panel/fotos.js';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -79,10 +79,11 @@ export async function sumarFoto({ id, url, credito, por, ahora = new Date() }, {
   const guardar = await fotoParaGuardar(bytes, ext, achicar ? { achicar } : {});
   // Una nota pegada por su enlace trae la imagen que el diario puso para compartir, que a veces es su logo (4/10): un archivo así de liviano no es una foto.
   if (guardar.bytes.length < PESO_MINIMO_DE_UNA_FOTO) throw new Error('Esa imagen parece un logo o un dibujo, no una foto de la nota. Buscá la foto y copiá la dirección de la imagen misma.');
-  const nombre = `${id}.${guardar.ext}`;
-  fs.mkdirSync(carpeta, { recursive: true });
-  fs.writeFileSync(path.join(carpeta, nombre), guardar.bytes);
   const libro = fs.existsSync(archivo) ? JSON.parse(fs.readFileSync(archivo, 'utf8')) : {};
+  fs.mkdirSync(carpeta, { recursive: true });
+  // Si la nota ya tenía foto (de la máquina o de otra vez), la nueva lleva un nombre nuevo: la vieja sigue en la caché una semana (W-8).
+  const nombre = `${nombreDeFotoNueva(id, [...fs.readdirSync(carpeta).filter((f) => f.replace(/\.\w+$/, '') === id || f.startsWith(`${id}-`)), libro[id]?.archivo ?? ''])}.${guardar.ext}`;
+  fs.writeFileSync(path.join(carpeta, nombre), guardar.bytes);
   const entrada = {
     archivo: `fotos-notas/${nombre}`, medio: cred.replace(/^Foto:\s*/, ''), credito: cred, licencia: null, origen: 'manual',
     por: String(por ?? '').slice(0, 30), cuando: ahora.toISOString(), imagenOriginal: String(url).trim().slice(0, 500), ...(deLaPagina ? { enlace: String(deLaPagina).slice(0, 500) } : {}),

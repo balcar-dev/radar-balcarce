@@ -11,6 +11,7 @@ import {
 } from '../web/public/panel/fotos.js';
 import { motivoDeLaNota, MOTIVOS_FIRMES } from '../ingesta/auditar-fotos.mjs';
 import { sumarFoto, bajarImagen } from '../web/scripts/foto-manual.mjs';
+import { nombreDeFotoNueva } from '../web/scripts/achicar-foto.mjs';
 
 const leer = (f) => fs.readFileSync(new URL(`../${f}`, import.meta.url), 'utf8');
 const apps = { esc: (t) => String(t ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])), chip: (s) => `[${s}]`, haceCuanto: () => 'hace un rato' };
@@ -276,4 +277,23 @@ test('la nota de una pista puede llevar una foto subida desde el celular; el dó
   assert.deepEqual(notasSinFoto(notas, {}).map((x) => x.nota.id), ['p']);
   const gen = leer('web/scripts/generar-datos.mjs');
   assert.ok(gen.includes("n.propia === 'pista' && guardada?.archivo"), 'generar-datos le pone la foto subida');
+});
+
+
+// W-8 (8/10/2026): una foto que reemplaza a otra lleva un nombre nuevo, porque la vieja queda una semana en la caché.
+test('una foto que reemplaza a otra se guarda con otro nombre (ID-2, ID-3…)', async () => {
+  assert.equal(nombreDeFotoNueva('abc', []), 'abc');
+  assert.equal(nombreDeFotoNueva('abc', ['abc.jpg']), 'abc-2');
+  assert.equal(nombreDeFotoNueva('abc', ['fotos-notas/abc.jpg', 'abc-2.png']), 'abc-3');
+  assert.equal(nombreDeFotoNueva('abc', ['abcd.jpg']), 'abc', 'otra nota con un nombre parecido no cuenta');
+  const dir = carpetaTemporal();
+  try {
+    const archivo = path.join(dir, 'manuales.json');
+    const pedido = { id: 'abc123', url: 'https://balcarce.gob.ar/f.jpg', credito: 'Municipalidad de Balcarce', por: 'Hernán' };
+    const opciones = { fetchFn: respuesta(JPG), achicar: async () => Buffer.alloc(8000, 1), carpeta: path.join(dir, 'fotos'), archivo };
+    assert.equal((await sumarFoto(pedido, opciones)).archivo, 'fotos-notas/abc123.jpg');
+    assert.equal((await sumarFoto(pedido, opciones)).archivo, 'fotos-notas/abc123-2.jpg', 'la segunda no pisa a la primera');
+    assert.equal((await sumarFoto(pedido, opciones)).archivo, 'fotos-notas/abc123-3.jpg');
+    assert.equal(JSON.parse(fs.readFileSync(archivo, 'utf8')).abc123.archivo, 'fotos-notas/abc123-3.jpg', 'el libro apunta a la última');
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });

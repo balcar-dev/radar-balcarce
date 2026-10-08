@@ -77,3 +77,17 @@ export async function fotoParaGuardar(original, extOriginal, { achicar = achicar
  * más livianas del banco, 7.000). Por debajo de esto no se guarda ni se usa en un collage.
  */
 export const PESO_MINIMO_DE_UNA_FOTO = 6000;
+
+/**
+ * El nombre de una foto que reemplaza a otra (W-8, 8/10/2026). Cloudflare y el navegador guardan las fotos una semana por su
+ * dirección: si una foto nueva se guardara con el mismo nombre, durante días se seguiría viendo la vieja (justo la que se cambió
+ * por tener una marca o un menor). Por eso cada reemplazo lleva un nombre nuevo: ID, ID-2, ID-3…
+ * `ocupados` son los nombres que ya existen (en disco o en el banco), con o sin extensión.
+ */
+export function nombreDeFotoNueva(id, ocupados = []) {
+  const usados = new Set([...ocupados].map((f) => String(f).split('/').pop().replace(/\.\w+$/, '')));
+  if (!usados.has(id)) return id;
+  let version = 2;
+  while (usados.has(`${id}-${version}`)) version += 1;
+  return `${id}-${version}`;
+}
