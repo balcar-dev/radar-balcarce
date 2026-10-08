@@ -450,3 +450,11 @@ test('la frase de cada sección tiene sentido y ninguna repite "Balcarce en Balc
   assert.match(fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/app/seccion/[ranura]/page.js'), 'utf8'), /frasesDeSeccion\(s\.nombre\)\.lema/);
   assert.match(fs2.readFileSync(path.join(import.meta.dirname, '..', 'web/app/seccion/[ranura]/opengraph-image.js'), 'utf8'), /frasesDeSeccion\(s\.nombre\)\.enBalcarce/);
 });
+
+test('el sitemap no dice "cambió ahora" en cada armado ni ofrece las páginas de tema (8/10)', () => {
+  const s = leer('app/sitemap.js');
+  const fijas = s.slice(s.indexOf('const fijas'), s.indexOf('// Una entrada por página de sección'));
+  assert.ok(!fijas.includes('new Date()'), 'las páginas fijas usan la fecha de los datos o ninguna');
+  assert.ok(!s.includes('/tema/'), 'los temas son páginas finas: fuera del sitemap');
+  for (const r of ['quienes-somos', 'contacto', 'politica-de-privacidad']) assert.ok(s.includes('/' + r + '`, changeFrequency'), `${r} no lleva fecha`);
+});

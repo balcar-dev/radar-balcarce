@@ -872,7 +872,7 @@ las páginas de Google desde este entorno: los requisitos de Google salen de bú
 - Los títulos de las secciones dicen cosas como "Balcarce en Balcarce" o "Argentina en Balcarce".
 - El feed está bloqueado en `robots.txt` (V2-13).
 - El `lastmod` del sitemap cambia cada media hora en las páginas fijas.
-- `/tema/concejo` está en el sitemap.
+- `/tema/concejo` está en el sitemap (**sacado 8/10**).
 - La página 404 trae dos indicaciones contradictorias.
 - Sobra una línea `Host:` en `robots.txt`.
 - **Bing:** importar el sitio desde Search Console a Bing Webmaster y avisarle cada nota nueva (IndexNow). Bing

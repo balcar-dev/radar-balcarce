@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, obtenerArchivo, temasVivos, SECCIONES, proximosEventos, notasDeLaSeccion,
+  obtenerDatos, obtenerArchivo, SECCIONES, proximosEventos, notasDeLaSeccion,
 } from '@/lib/datos';
 import { tieneCuerpo } from '@/lib/cuerpo';
 import { cuantasPaginas, direccionDePagina } from '@/lib/paginas';
@@ -28,20 +28,24 @@ export default function sitemap() {
     ? new Date(Math.max(...notas.map((n) => new Date(n.fecha).getTime())))
     : new Date();
 
+  // Cuándo se armaron los datos de la web: lo único honesto que se puede decir de farmacias, clima, dólar y agenda. Las páginas que no
+  // cambian (Quiénes somos, Contacto, Privacidad, Útil) no llevan fecha: antes decían "cambió ahora" en cada armado (8/10).
+  const generado = d.generado ? new Date(d.generado) : ultima;
+
   const fijas = [
     { url: base, lastModified: ultima, changeFrequency: 'hourly', priority: 1 },
-    { url: `${base}/farmacias`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${base}/clima`, lastModified: new Date(), changeFrequency: 'hourly', priority: 0.7 },
-    { url: `${base}/dolar`, lastModified: new Date(), changeFrequency: 'hourly', priority: 0.7 },
-    { url: `${base}/agenda`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
+    { url: `${base}/farmacias`, lastModified: generado, changeFrequency: 'daily', priority: 0.8 },
+    { url: `${base}/clima`, lastModified: generado, changeFrequency: 'hourly', priority: 0.7 },
+    { url: `${base}/dolar`, lastModified: generado, changeFrequency: 'hourly', priority: 0.7 },
+    { url: `${base}/agenda`, lastModified: generado, changeFrequency: 'daily', priority: 0.7 },
     // Las tablas fijas (4/10): una dirección que no cambia y que se actualiza sola después de cada fecha o carrera.
-    { url: `${base}/tablas`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.6 },
-    { url: `${base}/tablas/liga-profesional`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${base}/tablas/formula-1`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${base}/util`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${base}/quienes-somos`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${base}/contacto`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${base}/politica-de-privacidad`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.2 },
+    { url: `${base}/tablas`, lastModified: generado, changeFrequency: 'daily', priority: 0.6 },
+    { url: `${base}/tablas/liga-profesional`, lastModified: generado, changeFrequency: 'daily', priority: 0.8 },
+    { url: `${base}/tablas/formula-1`, lastModified: generado, changeFrequency: 'daily', priority: 0.8 },
+    { url: `${base}/util`, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/quienes-somos`, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${base}/contacto`, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${base}/politica-de-privacidad`, changeFrequency: 'yearly', priority: 0.2 },
   ];
 
   // Una entrada por página de sección, igual que las que se generan.
@@ -54,13 +58,6 @@ export default function sitemap() {
       priority: i === 0 ? 0.8 : 0.4,
     }));
   });
-
-  const temas = temasVivos().map((t) => ({
-    url: `${base}/tema/${t.ranura}`,
-    lastModified: ultima,
-    changeFrequency: 'daily',
-    priority: 0.6,
-  }));
 
   const deNotas = notas.map((n) => ({
     url: `${base}${n.ruta}`,
@@ -92,6 +89,6 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...fijas, ...secciones, ...temas, ...deNotas, ...archivadas, ...deEventos];
+  return [...fijas, ...secciones, ...deNotas, ...archivadas, ...deEventos];
 }
 
