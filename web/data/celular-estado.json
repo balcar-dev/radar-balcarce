@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T14:32:29.234Z",
+ "generado": "2026-10-08T15:02:28.727Z",
  "portada": 42,
- "archivo": 1074,
- "esperandoCuerpo": 3,
+ "archivo": 1078,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-08T14:32:29.290Z",
+  "generado": "2026-10-08T15:02:28.760Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T12:07:47.663Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "La agenda del fin de semana",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
       "id": "16tb2vo",
@@ -134,19 +134,19 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "6izwi8",
-      "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "w8t322",
-      "titulo": "El consorcio de Rowing gana la concesión de AySA por millones",
+      "id": "e5v4vp",
+      "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
       "seccion": "Economía"
      },
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
-      "seccion": "Fútbol"
+      "id": "zzuoo4",
+      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1rf94dp",
+      "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,11 +157,16 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 51,
     "notas": [
      {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "id": "w8t322",
+      "titulo": "El consorcio de Rowing gana la concesión de AySA por millones",
+      "seccion": "Economía"
+     },
+     {
+      "id": "1jwkhok",
+      "titulo": "Lionel Messi publica un emotivo mensaje tras su despedida de la Selección",
       "seccion": "Fútbol"
      },
      {
@@ -173,11 +178,6 @@
       "id": "1boxf4v",
       "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -188,13 +188,24 @@
      "id": "1cpkl2f",
      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
      "cuando": "2026-10-08T12:35:25.263Z"
+    },
+    {
+     "id": "16tb2vo",
+     "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+     "cuando": "2026-10-08T14:45:24.070Z"
     }
    ],
    "cola": [
     {
-     "id": "16tb2vo",
-     "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
-     "seccion": "Automovilismo",
+     "id": "zzuoo4",
+     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1rf94dp",
+     "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
@@ -202,16 +213,10 @@
      "titulo": "Mini Club y Sportivo Trabajo ganan en la Liga Local de Básquet",
      "seccion": "Deportes",
      "marcada": false
-    },
-    {
-     "id": "6izwi8",
-     "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
-     "seccion": "Balcarce",
-     "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-08T14:05:25.263Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-08T16:15:24.070Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
