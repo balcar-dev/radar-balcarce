@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T11:31:19.391Z",
- "portada": 43,
- "archivo": 1061,
+ "generado": "2026-10-08T12:03:12.034Z",
+ "portada": 45,
+ "archivo": 1062,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-08T11:31:19.416Z",
+  "generado": "2026-10-08T12:03:12.075Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -98,18 +98,18 @@
     "segundos": 54,
     "notas": [
      {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce"
      },
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "id": "l5uou9",
+      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
       "seccion": "Fútbol"
      },
      {
-      "id": "28zqic",
-      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+      "id": "y4gp3v",
+      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
       "seccion": "Automovilismo"
      },
      {
@@ -126,12 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 51,
     "notas": [
      {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
-      "seccion": "Fútbol"
+      "id": "1cpkl2f",
+      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
+      "seccion": "Balcarce"
      },
      {
       "id": "7gf331",
@@ -139,14 +139,14 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "seccion": "Fútbol"
      },
      {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
-      "seccion": "Balcarce"
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "seccion": "Fútbol"
      }
     ]
    },
@@ -157,13 +157,41 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 42,
+    "notas": [
+     {
+      "id": "1boxf4v",
+      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1qsixdr",
+      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1cpkl2f",
+     "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-07T21:03:47.785Z",
    "porDia": 5,
