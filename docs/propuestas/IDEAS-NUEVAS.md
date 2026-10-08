@@ -282,6 +282,13 @@ sale solo como historia **no lo ve nadie**.
    seguidores (M3-4-7 en `MEJORAS.md`; la llave de Meta ya tiene permiso para leer esas estadísticas). Después
    se decide pieza por pieza.
 
+**Lo que quedó (8/10, con lo que ven Hernán y Andrés en Facebook):**
+- **Facebook:** clima y farmacia también como reel. Ahí la gente los mira mucho y suman alcance.
+- **Instagram:** clima y farmacia solo como historia, para no llenar el perfil de piezas que vencen.
+- **Todo lo demás con voz** (repasos, efeméride, feriado, participá): reel en las dos redes y el mismo video como
+  historia.
+- Se mide 4 semanas y se ajusta pieza por pieza.
+
 **Límites que no molestan:** Facebook acepta hasta 30 reels por día por la API; hoy un día normal tiene unas 10
 piezas.
 

@@ -738,6 +738,82 @@ Hoy nadie revisa las fotos ya publicadas (por eso pasó C-13). Propuesta, de lo 
    detectar caras (para Policiales y notas con chicos).
 4. **Una persona, 15 minutos por semana:** las fotos manuales y las de Policiales.
 
+### SEO: que Google nos liste bien (auditoría completa del 8/10)
+
+*Se compiló una copia del sitio con la dirección real y se miró el HTML. No se pudo abrir radarbalcarce.com ni
+las páginas de Google desde este entorno: los requisitos de Google salen de búsquedas que citan a Google.*
+
+**Cómo estamos, en simple:**
+- **La parte técnica está bien:** direcciones fijas, sitemaps, datos para Google, imagen grande permitida y la
+  transparencia sobre la IA.
+- **El problema principal es de contenido.** De 1.104 notas con página:
+  - unas 500 son nacionales, reescritas de otros medios;
+  - 294 son locales, reescritas de un solo medio;
+  - 194 tienen el texto copiado de la fuente y se pueden indexar.
+- **Eso es lo que Google castiga como "contenido a escala sin aporte".** Desde agosto de 2026 Google mide todo
+  el dominio junto: las notas flojas arrastran a las buenas.
+
+**S-1 · Riesgo de "contenido a escala"** — *Confirmado · CRÍTICO* (amplía V2-11 y W-5)
+1. `noindex` ya mismo para las 296 páginas sin cuerpo (W-5).
+2. **Decisión de ustedes:** lo nacional que no tiene relación con Balcarce, ¿se le sigue ofreciendo a Google?
+   Propuesta: que se siga viendo en el sitio y en redes, pero con `noindex, follow` y fuera del sitemap. Contra
+   Clarín no se posiciona igual, y resta.
+3. En lo local de un solo medio, sumar aporte propio: contexto, enlaces a notas anteriores, datos de servicio,
+   una consulta propia.
+4. Una regla en el criterio contra los títulos sensacionalistas: hoy hay en el sitemap de noticias títulos como
+   "toma una drástica decisión" o "deja una picante dedicatoria".
+
+**S-2 · La fecha que va a Google es la de la fuente, no la nuestra** — *Confirmado · ALTA*
+- La página le dice a Google que salió horas antes de existir: mediana de 4 horas, y 370 de 890 notas con más de
+  6 (`web/components/ficha.js:89`, `web/app/sitemap-news.xml/route.js:42`). Guardar cuándo sale de verdad en la web
+  y usar esa fecha. 3 h.
+
+**S-3 · La mitad de las notas de Balcarce no dicen "Balcarce"** — *Confirmado · ALTA*
+- Son 278 de 573 notas locales: Google no puede saber que son de acá. Por ejemplo, "Chocan una EcoSport y un Fiat
+  en avenida Cereijo y 14". Que la bajada nombre la localidad cuando el hecho es de acá (es un dato, no se
+  inventa) y que la descripción empiece con "En Balcarce:". 3 h.
+
+**S-4 · Para Google, la imagen es una tarjeta con texto, no la foto** — *Confirmado · ALTA* (Discover)
+- Hay foto real de 1.200 px en el 63 % de los casos. Declararla en tres proporciones (16:9, 4:3 y 1:1). La tarjeta
+  sigue para WhatsApp y Facebook. 4 h.
+
+**S-5 · Señales de confianza** — *Confirmado · ALTA* (amplía V2-12)
+- Faltan:
+  - nombres completos con su rol (por ejemplo, "Director responsable");
+  - una página pública "Cómo trabajamos y cómo usamos la IA";
+  - correcciones visibles con su fecha: hoy una corrección no cambia la fecha de modificación ni se avisa
+    (`web/lib/tiempo.js:19-25`).
+- Quiénes somos dice "sin copiar", y las 194 páginas de S-1 lo contradicen.
+
+**Más chicos (MEDIA y BAJA):**
+- El título de la pestaña corta la nota con "…" (se pierde la última palabra).
+- Los títulos de las secciones dicen cosas como "Balcarce en Balcarce" o "Argentina en Balcarce".
+- El feed está bloqueado en `robots.txt` (V2-13).
+- El `lastmod` del sitemap cambia cada media hora en las páginas fijas.
+- `/tema/concejo` está en el sitemap.
+- La página 404 trae dos indicaciones contradictorias.
+- Sobra una línea `Host:` en `robots.txt`.
+- **Bing:** importar el sitio desde Search Console a Bing Webmaster y avisarle cada nota nueva (IndexNow). Bing
+  también alimenta a ChatGPT.
+
+**Correcciones a lo anotado:**
+- **Publisher Center ya no admite medios nuevos** (desde abril de 2024): entrar en Google Noticias es automático.
+  Hay que sacar ese pendiente de `SEO.md` y `PENDIENTES.md`.
+- **El cuadro de búsqueda en Google** (SearchAction) ya no existe desde noviembre de 2024: no agregarlo.
+
+**El audio en cada nota no mejora la posición en Google.** Gente de Google lo dijo en 2021 y en 2025: lo que Google
+lee es el texto. Lo que sí aporta el audio:
+- accesibilidad;
+- gente que prefiere escuchar;
+- como podcast, estar en Apple Podcasts y Spotify. Google Podcasts cerró en 2024.
+
+**Para el podcast en Apple y Spotify** hace falta un RSS con lo que piden: imagen cuadrada de 1.400 a 3.000 px,
+categoría, idioma, dueño con correo (queda público), un mp3 por episodio con su duración y un identificador que no
+cambie nunca. Hoy los audios viven solo en Instagram y Facebook: primero hay que guardarlos (Q1).
+
+**Las personas:** mirar en Search Console, una vez por semana, qué páginas se indexaron y cuáles no, y las
+búsquedas con "balcarce".
+
 ### Motor de noticias (revisión del 8/10)
 
 **I-2 · El verificador acepta un año cambiado** — *Confirmado · ALTA*
@@ -1341,6 +1417,7 @@ robot → todos los robots → repositorio privado. 3 a 6 semanas en total, sin 
    - Lo que se genera para redes (audio y video) se guarda y se reusa en la web.
    - Las historias y los reels son solo para lo más relevante; los posteos de notas, para llevar gente a la web.
    - Quieren el repositorio privado por menos de US$ 10: servidor propio y fotos en Cloudflare (E1, R2-fotos).
+   - Clima y farmacia como reel en Facebook (donde la gente los mira mucho); en Instagram, solo historia.
    - **El panel no decide si algo sale ni si las pruebas pasan.** Se rediseña después, cuando el flujo esté
      rearmado. Mientras tanto, nadie toca el feriado del 12/10 ni la efeméride del 11/10.
 0. **C-18:** no tocar el feriado del 12/10 ni la efeméride del 11/10 en el celular hasta el 13/10.
@@ -1357,6 +1434,7 @@ robot → todos los robots → repositorio privado. 3 a 6 semanas en total, sin 
 11. Licencia del repositorio (V2-9) y cuánto mostrar de ustedes como responsables (V2-12).
 12. Fotos de chicos en notas amarillas (C7): conversarlo antes de tocar.
 13. **C-10:** que lo rojo no salga nunca, ni aprobado (toca la lista roja).
+13b. **S-1:** si lo nacional sin relación con Balcarce se le sigue ofreciendo a Google.
 14. **C-12:** sumar a la lista roja las formas y las edades que faltan.
 15. **C-13:** sacar la foto de la nota `fd2y4d`.
 16. **C-17:** renovar o no las piezas fijas antes del 25/10, y si las efemérides salen solo aprobadas.

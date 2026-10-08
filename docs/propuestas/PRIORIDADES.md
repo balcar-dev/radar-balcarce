@@ -33,6 +33,7 @@ hecho todavía. Antes de cada paso, Hernán y Andrés dan el visto bueno.*
 
 | # | Qué | Código | Trabajo | Necesita |
 |---|---|---|---|---|
+| 10b | **SEO urgente:** `noindex` a las páginas sin cuerpo, destrabar el feed, títulos enteros, fecha honesta para Google; y decidir qué pasa con lo nacional | S-1, S-2 | 1 día | Decidir lo nacional |
 | 11 | Huecos del semáforo (menores y víctimas) y que lo rojo no salga nunca | C-12, C-10 | 3-4 h | Que ustedes aprueben tocar la lista roja |
 | 12 | Que la corrección automática sea real y no empeore (una sola vez, solo lo seguro) | C-0 | 2-3 h | — |
 | 13 | Reintentos de redes que gastan voz o duplican; datos viejos si la web se congela | C-16, C-15 | 1-2 días | — |
@@ -40,7 +41,7 @@ hecho todavía. Antes de cada paso, Hernán y Andrés dan el visto bueno.*
 | 15 | Un archivo roto no puede vaciar la web; una corrección no se deshace sola | C-5, C-14 | 4 h | — |
 | 16 | El vigilante mira todos los robots, y un aviso de afuera si el vigilante mismo se cae | A-4, A7 | 2-3 h | Crear una cuenta gratis |
 | 17 | **Videos animados y unificados** (todas las piezas, con subtítulos y la misma estética) | Ideas, "Videos con movimiento" | 3-5 días | Repasar juntos la semana que viene |
-| 18 | **Todo lo que tiene voz, también como reel**, y medir 4 semanas | Ideas, "Historias contra reels" | 1 día + medir | — |
+| 18 | **Reels:** clima y farmacia como reel en Facebook (en Instagram, historia); todo lo demás con voz, reel en las dos; medir 4 semanas | Ideas, "Historias contra reels" | 1 día + medir | — |
 | 19 | Firma honesta de lo escrito con IA, y páginas viejas sin cuerpo fuera de Google | W-4, W-5 | 3 h | Decidir cómo firmar |
 | 20 | Auditoría de fotos | MEJORAS, "Auditoría de fotos" | 1 día | — |
 
@@ -51,7 +52,7 @@ hecho todavía. Antes de cada paso, Hernán y Andrés dan el visto bueno.*
 | 21 | Respaldo en cuatro lugares (GitHub, GitLab, Google Drive, la PC) | MEJORAS, "Respaldo" | 3-4 h | 20 min de una persona |
 | 22 | Fotos, audios y videos a Cloudflare, en formato más liviano | R2-fotos, C1, C3 | 3-5 días | — |
 | 23 | Guardar lo de redes y usarlo: notas con audio en la web, RSS de texto y de audio (Apple, Spotify) | Q1, RS-1, RS-2, RSS-1 | 1-2 semanas | — |
-| 24 | SEO: lo que salga de la auditoría completa | (en curso) | — | — |
+| 24 | SEO, el resto: foto real para Google, "Balcarce" en lo local, página "Cómo trabajamos", nombres y roles, correcciones visibles, Bing | S-3, S-4, S-5 | 2-3 días | Nombres y roles |
 | 25 | Armar el sitio una sola vez y sacar corridas de más (más rápido y prepara lo privado) | A1, A8-b | 1-2 días | — |
 | 26 | Guardar el 100 % de las notas año tras año | C-6 | 1 semana | — |
 
