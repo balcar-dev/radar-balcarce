@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T13:32:47.586Z",
- "portada": 40,
- "archivo": 1068,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-08T13:58:01.937Z",
+ "portada": 42,
+ "archivo": 1070,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-08T13:32:47.618Z",
+  "generado": "2026-10-08T13:58:01.985Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,22 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "16tb2vo",
+      "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
+      "seccion": "Balcarce"
+     },
      {
       "id": "r7ox1t",
       "titulo": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
       "seccion": "Economía"
-     },
-     {
-      "id": "6izwi8",
-      "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
-      "seccion": "Balcarce"
      },
      {
       "id": "px37p5",
@@ -157,8 +157,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "6izwi8",
+      "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
+     },
      {
       "id": "ajdznk",
       "titulo": "Boca arma un equipo mixto para visitar a Instituto",
@@ -168,16 +178,6 @@
       "id": "117ewnb",
       "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1boxf4v",
-      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -191,6 +191,18 @@
     }
    ],
    "cola": [
+    {
+     "id": "16tb2vo",
+     "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
+    {
+     "id": "159oig4",
+     "titulo": "Mini Club y Sportivo Trabajo ganan en la Liga Local de Básquet",
+     "seccion": "Deportes",
+     "marcada": false
+    },
     {
      "id": "6izwi8",
      "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
