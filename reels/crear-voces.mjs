@@ -105,11 +105,21 @@ async function aMp3(wav, destino) {
 
 fs.mkdirSync(SALIDA, { recursive: true });
 
+// Las dos voces que usan las piezas (CRITERIO-REDES.md § 6). Una voz borrada no vuelve igual (Voice Design no repite la misma voz), así
+// que borrarlas pide escribir el id con ":borrar-de-produccion" al final (R-1, 8/10/2026).
+const VOCES_DE_PRODUCCION = ['voice_v8mf7jt16hch', 'voice_cdljkn0jpmk6'];
+const CONFIRMA_PRODUCCION = ':borrar-de-produccion';
+
 if (process.argv[2] === 'borrar') {
   // node reels/crear-voces.mjs borrar "voice_a voice_b": quita una o más voces propias del proyecto
   // (los ids separados por espacios o comas).
-  for (const id of String(process.argv[3] ?? '').split(/[\s,]+/).filter(Boolean)) {
+  for (const pedido of String(process.argv[3] ?? '').split(/[\s,]+/).filter(Boolean)) {
+    const id = pedido.replace(CONFIRMA_PRODUCCION, '');
     if (!/^voice_[a-z0-9]+$/.test(id)) { console.log(`${id}: no es un identificador de voz`); continue; }
+    if (VOCES_DE_PRODUCCION.includes(id) && !pedido.endsWith(CONFIRMA_PRODUCCION)) {
+      console.log(`${id}: es una voz de PRODUCCION (la usan las piezas) y no se borra sin confirmar. Si es a propósito, escribí ${id}${CONFIRMA_PRODUCCION}`);
+      continue;
+    }
     const r = await api('DELETE', `/voices/${id}`);
     console.log(`${id}: ${r.ok ? 'borrada' : `ERROR ${r.estado ?? ''} ${r.error}`}`);
   }

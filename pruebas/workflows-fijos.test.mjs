@@ -17,3 +17,15 @@ test('ningún workflow corre en ubuntu-latest: todos fijan la versión', () => {
     assert.match(t, /runs-on:\s*ubuntu-\d\d\.\d\d/, `${f} no fija la versión`);
   }
 });
+
+// 8/10/2026 (R-1): "Crear voces" no borra las dos voces de producción sin una confirmación escrita.
+test('crear-voces protege las voces de producción y coincide con CRITERIO-REDES.md', () => {
+  const raiz = path.join(import.meta.dirname, '..');
+  const codigo = fs.readFileSync(path.join(raiz, 'reels/crear-voces.mjs'), 'utf8');
+  const criterio = fs.readFileSync(path.join(raiz, 'CRITERIO-REDES.md'), 'utf8');
+  const lista = /VOCES_DE_PRODUCCION = \[([^\]]+)\]/.exec(codigo)[1].match(/voice_[a-z0-9]+/g);
+  assert.equal(lista.length, 2);
+  for (const id of lista) assert.ok(criterio.includes(id), `${id} no figura en CRITERIO-REDES.md`);
+  assert.match(codigo, /VOCES_DE_PRODUCCION\.includes\(id\) && !pedido\.endsWith\(CONFIRMA_PRODUCCION\)/);
+  assert.match(fs.readFileSync(path.join(raiz, '.github/workflows/crear-voces.yml'), 'utf8'), /borrar-de-produccion/);
+});
