@@ -55,7 +55,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { leerJson } from '../../ingesta/json.mjs';
+import { leerJson, leerJsonEstricto } from '../../ingesta/json.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import {
@@ -69,7 +69,7 @@ import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
-  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson,
+  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo,
   idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
@@ -225,7 +225,7 @@ estado.decisiones = unirDecisiones(estado.decisiones ?? {}, CELULAR.notas);
 const anterior = leerJson(SALIDA, { notas: [] });
 // El archivo también guarda el primer avistaje: una nota que salió de la
 // portada y vuelve no cambia de hora.
-const archivoAnterior = leerJson(ARCHIVO, { notas: [] });
+const archivoAnterior = leerJsonEstricto(ARCHIVO, { notas: [] });
 const vistoAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
   .filter((n) => n.visto)
   .map((n) => [n.id, n.visto]));
@@ -911,6 +911,10 @@ const archivo = aligerarViejas(actualizarArchivo({
   enRedes: idsEnRedes(libroRedes),
 }));
 if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
+  const guardia = guardiaDelArchivo((archivoAnterior.notas ?? []).length, archivo.length);
+  if (!guardia.ok && process.env.ARCHIVO_PERMITIR_BAJA !== '1') {
+    throw new Error(`archivo.json: ${guardia.motivo}. Si es a propósito, correr con ARCHIVO_PERMITIR_BAJA=1.`);
+  }
   fs.mkdirSync(path.dirname(ARCHIVO), { recursive: true });
   fs.writeFileSync(ARCHIVO, comoArchivoJson(archivo), 'utf8');
   console.log(`  archivo.json: ${archivo.length} notas con página (${retiradas.size} retiradas)`);

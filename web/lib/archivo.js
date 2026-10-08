@@ -307,6 +307,16 @@ export const sinPuntaje = ({ relevancia, ...resto }) => resto;
 
 /** El texto de web/data/archivo.json. Una nota por línea: el archivo pesa
  *  megas y así cada corrida cambia sólo las líneas de las notas que cambiaron. */
+/**
+ * ¿Se puede guardar el archivo nuevo? No si perdió más del 20 % de las notas del anterior de un golpe (C-5, 8/10/2026): el archivo
+ * envejece de a poco; una baja así es un archivo roto o una lectura que falló, no un día normal. Con menos de 50 notas no se mira.
+ * Para forzarla a propósito (un ajuste grande hecho a mano) se corre con ARCHIVO_PERMITIR_BAJA=1.
+ */
+export function guardiaDelArchivo(antes = 0, despues = 0, { minimo = 50, tolerancia = 0.2 } = {}) {
+  if (antes < minimo || despues >= antes * (1 - tolerancia)) return { ok: true };
+  return { ok: false, motivo: `el archivo pasaría de ${antes} a ${despues} notas (más de ${Math.round(tolerancia * 100)} % menos); no se guarda` };
+}
+
 export function comoArchivoJson(notas = []) {
   return `{"notas":[\n${notas.map((n) => JSON.stringify(n)).join(',\n')}\n]}\n`;
 }

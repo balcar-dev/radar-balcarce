@@ -17,6 +17,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { leerJsonEstricto } from '../ingesta/json.mjs';
 import { libroNuevo, estaActivo } from './elegir.mjs';
 import { slotsQueTocan, POR_CORRIDA } from './piezas.mjs';
 
@@ -53,7 +54,7 @@ export function estadoDelReloj({
 // una prueba sin leer el libro real ni escribir en GITHUB_OUTPUT.
 if (process.argv[1] && process.argv[1].endsWith('reloj.mjs')) {
   let libro = libroNuevo();
-  try { libro = JSON.parse(fs.readFileSync(LIBRO, 'utf8')); } catch { /* todavía no hay libro */ }
+  libro = leerJsonEstricto(LIBRO, libro); // sin libro todavía: uno nuevo; roto: corta (C-5)
   // El clima publicado: el mismo que usa reels/plan.mjs en GitHub (vía
   // redes/datos.mjs), así el reloj pide el mismo aviso que el plan arma.
   let clima = null;

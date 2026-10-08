@@ -19,7 +19,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente, PAGINA_DE_FACEBOOK, sinToken } from './meta.mjs';
-import { leerJson as leer } from '../ingesta/json.mjs';
+import { leerJson as leer, leerJsonEstricto } from '../ingesta/json.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
 import { anotar, libroNuevo, estaActivo } from './elegir.mjs';
 import { pieDePieza } from './piezas.mjs';
@@ -106,7 +106,7 @@ async function main() {
   const token = process.env.META_TOKEN;
   if (!token) { console.error('  Falta META_TOKEN.'); process.exit(1); }
   const LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
-  const libro = leer(LIBRO, libroNuevo());
+  const libro = leerJsonEstricto(LIBRO, libroNuevo());
   const manifiesto = leer(path.join(carpeta, 'piezas.json'), []);
   const r = await reintentarPieza({
     api: crearCliente({ token, paginaId: PAGINA_DE_FACEBOOK }), libro, manifiesto,

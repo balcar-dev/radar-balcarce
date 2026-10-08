@@ -39,6 +39,10 @@ function leerConMemoria(archivo, armar) {
   return valor;
 }
 
+// Un archivo que no existe se lee como vacío (leerConMemoria lo devuelve como null); uno que existe y está roto corta el armado en vez
+// de publicar un sitio sin notas (C-5, 8/10/2026): mejor la web de hace un rato que una web en blanco.
+const rotoNoVacio = (e) => new Error(`No se pudieron leer los datos de la web: ${e?.message ?? e}`, { cause: e });
+
 const VACIO = () => ({
   generado: null, notas: [], secciones: [], clima: null,
   farmacias: { hoy: null, proximos: [], avisos: [] },
@@ -74,8 +78,8 @@ export function obtenerDatos() {
     // Una copia por encima, para que ninguna página ensucie lo guardado.
     const { conPagina, ...resto } = d;
     return { ...resto, notas: [...d.notas] };
-  } catch {
-    return VACIO();
+  } catch (e) {
+    throw rotoNoVacio(e);
   }
 }
 
@@ -83,8 +87,8 @@ export function obtenerDatos() {
 function notasDeLaPortada() {
   try {
     return leerPortada()?.conPagina ?? [];
-  } catch {
-    return [];
+  } catch (e) {
+    throw rotoNoVacio(e);
   }
 }
 
@@ -92,8 +96,8 @@ function notasDeLaPortada() {
 export function obtenerArchivo() {
   try {
     return leerConMemoria(path.join(carpetaDeDatos(), 'archivo.json'), (crudo) => (crudo?.notas ?? []).map(conRuta));
-  } catch {
-    return [];
+  } catch (e) {
+    throw rotoNoVacio(e);
   }
 }
 

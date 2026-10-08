@@ -399,3 +399,35 @@ test('generar-datos no estrena lo que llega tarde ni le pide cuerpo a Gemini, y 
   assert.match(s, /const fecha = fechaReal\(n\);\s+(\/\/[^\n]*\s+)*if \(!humana && !yaSalieron\.has\(n\.id\) && llegaTarde\(fecha\)\) return null;/);
   assert.match(s, /const fecha = fechaReal\(n\);\s+(\/\/[^\n]*\s+)*return vigenteEnPortada\(\{ fecha \}\) && \(yaSalieron\.has\(n\.id\) \|\| !llegaTarde\(fecha\)\);/);
 });
+
+// 8/10/2026 (C-5): un archivo de datos roto no puede vaciar el sitio ni hacer que las redes vuelvan a publicar lo ya publicado.
+test('un JSON que existe y está roto corta; uno que no existe es vacío', async () => {
+  const { leerJsonEstricto } = await import('../ingesta/json.mjs');
+  const os = await import('node:os');
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'estricto-'));
+  assert.deepEqual(leerJsonEstricto(path.join(dir, 'nada.json'), { notas: [] }), { notas: [] });
+  fs.writeFileSync(path.join(dir, 'bien.json'), '{"notas":[1]}');
+  assert.deepEqual(leerJsonEstricto(path.join(dir, 'bien.json'), null), { notas: [1] });
+  fs.writeFileSync(path.join(dir, 'roto.json'), '{"notas":[1,');
+  assert.throws(() => leerJsonEstricto(path.join(dir, 'roto.json'), { notas: [] }), /está roto/);
+});
+
+test('la guardia del archivo no deja guardar uno con más de 20 % menos notas', async () => {
+  const { guardiaDelArchivo } = await import('../web/lib/archivo.js');
+  assert.equal(guardiaDelArchivo(1000, 990).ok, true, 'una baja chica es normal');
+  assert.equal(guardiaDelArchivo(1000, 1200).ok, true);
+  assert.equal(guardiaDelArchivo(1000, 790).ok, false);
+  assert.equal(guardiaDelArchivo(1000, 0).ok, false, 'vacío nunca');
+  assert.equal(guardiaDelArchivo(20, 0).ok, true, 'con tan pocas notas no se mira');
+  assert.match(guardiaDelArchivo(1000, 100).motivo, /no se guarda/);
+});
+
+test('el archivo y el libro de redes se leen sin pasar por vacío cuando están rotos', () => {
+  const gen = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
+  assert.match(gen, /const archivoAnterior = leerJsonEstricto\(ARCHIVO/);
+  assert.match(gen, /guardiaDelArchivo\(/);
+  for (const f of ['publicar', 'reintentar']) assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', `redes/${f}.mjs`), 'utf8'), /leerJsonEstricto\(LIBRO/);
+  assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', 'redes/reloj.mjs'), 'utf8'), /leerJsonEstricto\(LIBRO/);
+});
