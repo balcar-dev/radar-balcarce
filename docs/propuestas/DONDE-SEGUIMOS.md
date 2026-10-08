@@ -4,6 +4,8 @@
 cosa está en [`PRIORIDADES.md`](PRIORIDADES.md) (la lista en orden, con lo hecho en "Avance") y en [`MEJORAS.md`](MEJORAS.md) (cada punto,
 marcado ✔ cuando está hecho). Todo lo de este documento ya está subido a `main`.*
 
+> **Mapa por frentes y etapas (8/10, noche): [`PLAN-INTEGRAL.md`](PLAN-INTEGRAL.md).**
+
 ## Cómo arrancar en la PC
 
 1. `git pull` en la carpeta del proyecto (para traer todo y lo que haya guardado el robot).
