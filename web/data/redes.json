@@ -491,6 +491,16 @@
       "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
       "enlace": "https://radarbalcarce.com/nota/una-planta-cae-sobre-la-red-electrica-y-dana-cables-en-calle-20-1cpkl2f",
       "temas": []
+    },
+    "16tb2vo": {
+      "cuando": "2026-10-08T14:45:24.070Z",
+      "postId": "1254237411116171_122107299975495512",
+      "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+      "enlace": "https://radarbalcarce.com/nota/el-zonal-del-atlantico-compite-el-fin-de-semana-en-el-autodromo-16tb2vo",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ]
     }
   },
   "instagram": {
@@ -2851,6 +2861,12 @@
       "mediaId": "17985929291888516",
       "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
       "enlace": "https://radarbalcarce.com/nota/una-planta-cae-sobre-la-red-electrica-y-dana-cables-en-calle-20-1cpkl2f"
+    },
+    "16tb2vo": {
+      "cuando": "2026-10-08T14:45:37.390Z",
+      "mediaId": "18007775661005930",
+      "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
+      "enlace": "https://radarbalcarce.com/nota/el-zonal-del-atlantico-compite-el-fin-de-semana-en-el-autodromo-16tb2vo"
     }
   },
   "historiasDeReels": {
@@ -3431,11 +3447,5 @@
       "cuando": "2026-10-07T13:34:40.377Z"
     }
   },
-  "facebookFoto": {
-    "16tb2vo": {
-      "intentos": 2,
-      "ultimo": "2026-10-08T14:35:16.321Z",
-      "error": "Missing or invalid image file"
-    }
-  }
+  "facebookFoto": {}
 }
