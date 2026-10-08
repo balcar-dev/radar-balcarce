@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T11:01:30.656Z",
- "portada": 47,
+ "generado": "2026-10-08T11:31:19.391Z",
+ "portada": 43,
  "archivo": 1061,
- "esperandoCuerpo": 2,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-08T11:01:30.694Z",
+  "generado": "2026-10-08T11:31:19.416Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,11 +95,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 54,
     "notas": [
      {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce"
      },
      {
@@ -108,8 +108,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "id": "28zqic",
+      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
       "seccion": "Automovilismo"
      },
      {
@@ -126,26 +126,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
-     },
      {
       "id": "ajdznk",
       "titulo": "Boca arma un equipo mixto para visitar a Instituto",
       "seccion": "Fútbol"
      },
      {
-      "id": "28zqic",
-      "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
-      "seccion": "Automovilismo"
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
      },
      {
-      "id": "1boxf4v",
-      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
+      "id": "pvwlvg",
+      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce"
      }
     ]
@@ -157,24 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
-    "notas": [
-     {
-      "id": "pvwlvg",
-      "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
