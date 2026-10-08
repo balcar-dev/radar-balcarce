@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T08:01:34.861Z",
+  "generado": "2026-10-08T08:31:37.990Z",
   "notas": [
     {
       "id": "futbolpartidosliga20261009",
@@ -464,8 +464,8 @@
       "medios": [
         "Infobae",
         "Crónica",
-        "El Día",
-        "La Brújula 24"
+        "La Brújula 24",
+        "El Día"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/08/una-mision-de-eeuu-llego-a-la-argentina-para-concretar-las-inversiones-de-usd-7-mil-millones-en-el-corredor-andes-atlantico/",
       "teniaImagenLaFuente": true,
@@ -602,8 +602,63 @@
       "slug": "el-repaso-de-la-noche-en-radar-balcarce-fiscalia-descentralizada-y",
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261007noche.jpg",
-        "credito": "Fotos: Diario La Vanguardia y Radio Gabal (FM 104.1)"
+        "credito": "Fotos: Diario La Vanguardia, A24 y Radio Gabal (FM 104.1)"
       }
+    },
+    {
+      "id": "133qm11",
+      "titulo": "Chocan una EcoSport y un Fiat en avenida Cereijo y 14",
+      "copete": "Una camioneta y un automóvil colisionaron el miércoles por la tarde en la intersección de la avenida Cereijo y la calle 14. El impacto dejó únicamente daños materiales y no se reportaron personas heridas.",
+      "cuerpo": "Una Ford EcoSport y un automóvil Fiat colisionaron el miércoles por la tarde en el cruce de la avenida Cereijo —la calle 31— y la calle 14, según informó un medio local. El choque ocurrió durante una jornada de lluvias e inestabilidad climática, lo que obligó a extremar las precauciones en el tránsito.\n\nEl episodio motivó la intervención de los servicios correspondientes y provocó demoras momentáneas para circular por el sector.",
+      "guion": "Chocan una EcoSport y un Fiat en avenida Cereijo y 14.",
+      "seccion": "Policiales",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45031-accidente-en-31-y-14-solo-se-registraron-danos-materiales/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T23:01:35.401Z",
+      "sinFecha": true,
+      "visto": "2026-10-08T08:31:31.003Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "Hernán",
+      "publicadaCuando": "2026-10-08T08:24:28.273Z",
+      "temas": [],
+      "como": "publicada",
+      "claves": [
+        "Choque entre una Ford EcoSport y un Fiat",
+        "Ocurrió el miércoles por la tarde",
+        "Sucedió en avenida Cereijo y 14",
+        "Solo se registraron daños materiales"
+      ],
+      "seSabe": [
+        "El choque ocurrió el miércoles por la tarde",
+        "Los vehículos involucrados fueron una Ford EcoSport y un Fiat",
+        "No hubo personas heridas",
+        "Se registraron demoras temporales en la circulación"
+      ],
+      "noConfirmado": [
+        "Las causas que originaron el impacto",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una Ford EcoSport y un Fiat chocaron el miércoles por la tarde en la intersección de la avenida Cereijo y la calle 14. Solo se registraron daños materiales y no hubo personas heridas.",
+      "etiquetas": [
+        "accidente",
+        "avenida Cereijo",
+        "tránsito",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45031-accidente-en-31-y-14-solo-se-registraron-danos-materiales/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el choque entre una Ford EcoSport y un Fiat en avenida Cereijo y 14, detallando que solo hubo daños materiales."
+        }
+      ],
+      "slug": "chocan-una-ecosport-y-un-fiat-en-avenida-cereijo-y-14"
     },
     {
       "id": "1boxf4v",
@@ -766,6 +821,117 @@
       }
     },
     {
+      "id": "uknghh",
+      "titulo": "Famosos despiden con emotivos mensajes al cantautor Piero tras su fallecimiento",
+      "copete": "Colegas del ambiente artístico despidieron en las redes sociales al autor de Mi viejo tras confirmarse su fallecimiento a los 81 años.",
+      "cuerpo": "El ambiente musical despide al cantautor Piero De Benedictis tras confirmarse su fallecimiento a los 81 años mediante un comunicado emitido por su entorno íntimo. Figuras como Fito Páez, Jairo, Valeria Lynch, León Gieco y Alejandro Lerner expresaron su pesar a través de las redes sociales tras conocerse la noticia.\n\nPáez recordó la trayectoria del músico, su paso por el destierro y su obra, mientras que Lerner compartió una imagen del último encuentro que compartieron. El posteo oficial de la familia agradeció los saludos recibidos y destacó la vigencia de su mensaje de paz.",
+      "guion": "Famosos despiden con emotivos mensajes al cantautor Piero tras su fallecimiento",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Diario Popular",
+        "El Diario Balcarce",
+        "0223 (Mar del Plata)",
+        "QZ Noticias (Mar del Plata)",
+        "Ecos Diarios (Necochea)",
+        "Agencia DIB",
+        "Ámbito",
+        "El Cronista",
+        "A24",
+        "C5N",
+        "Crónica",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "0221",
+        "La Tecla",
+        "La Verdad",
+        "La Opinión",
+        "La Voz del Pueblo",
+        "InfoRegión",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Radio 10 Mar del Plata (FM 105.5)",
+        "NDEN – Noticias de Necochea",
+        "La Nación",
+        "Infobae",
+        "Clarín",
+        "Minuto Uno",
+        "Radio Mitre",
+        "El Día",
+        "La Nueva",
+        "La Brújula 24",
+        "La Capital (Rosario)",
+        "Perfil",
+        "Página/12",
+        "iProfesional",
+        "La Noticia 1"
+      ],
+      "enlace": "https://tn.com.ar/musica/noticias/2026/10/07/de-jairo-a-valeria-lynch-los-emotivos-mensajes-de-los-famosos-para-despedir-a-piero/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T21:51:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T01:01:30.426Z",
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Falleció el cantautor Piero a los 81 años",
+        "La familia confirmó la noticia en redes sociales",
+        "Fito Páez, Jairo y Valeria Lynch lo homenajearon",
+        "Colegas destacaron su música y su mensaje"
+      ],
+      "seSabe": [
+        "La familia de Piero confirmó su fallecimiento a los 81 años.",
+        "Fito Páez, Jairo, Valeria Lynch, León Gieco y Alejandro Lerner le dedicaron mensajes de despedida.",
+        "Pablo Milanés y las redes de Mercedes Sosa se sumaron a los homenajes."
+      ],
+      "textoRedes": "El ambiente artístico despide al cantautor Piero tras confirmarse su fallecimiento a los 81 años. Colegas como Fito Páez, Jairo, Valeria Lynch y León Gieco le dedicaron mensajes en las redes sociales.",
+      "etiquetas": [
+        "Piero",
+        "Musica",
+        "Famosos",
+        "Fallecimiento",
+        "Homenaje"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/musica/noticias/2026/10/07/de-jairo-a-valeria-lynch-los-emotivos-mensajes-de-los-famosos-para-despedir-a-piero/",
+          "fecha": "2026-10-07T21:51:04.000Z",
+          "oficial": false,
+          "aporte": "Informó los mensajes de despedida de los famosos y el comunicado familiar sobre la muerte de Piero."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/cultura/murio-piero-valeria-lynch-jairo-ricardo-mollo-famosos-despidieron-2026107195225",
+          "fecha": "2026-10-07T22:52:25.766Z",
+          "oficial": false,
+          "aporte": "Publicó la noticia sin resumen disponible."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/espectaculos/los-emotivos-mensajes-los-famosos-despedir-piero-n923393",
+          "fecha": "2026-10-08T00:54:00.000Z",
+          "oficial": false,
+          "aporte": "Publicó la noticia sin resumen disponible."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "famosos-despiden-con-emotivos-mensajes-al-cantautor-piero-tras-su",
+      "foto": {
+        "archivo": "fotos-notas/uknghh.jpg",
+        "credito": "Foto: Diario Popular"
+      }
+    },
+    {
       "id": "1qdgf5p",
       "titulo": "La Argentina firma un acuerdo internacional contra la producción excesiva",
       "copete": "El país se sumó a un bloque de quince naciones para cuestionar la sobrecapacidad industrial global y los subsidios estatales. La decisión se adoptó durante una cumbre del G20.",
@@ -774,7 +940,6 @@
       "seccion": "Economía",
       "medios": [
         "Infobae",
-        "iProfesional",
         "Crónica",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -988,7 +1153,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "la-casa-del-bicentenario-reune-musica-y-un-homenaje-a-ricardo-soule"
+      "slug": "la-casa-del-bicentenario-reune-musica-y-un-homenaje-a-ricardo-soule",
+      "foto": {
+        "archivo": "fotos-notas/10cpafd.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
     },
     {
       "id": "mdbgzx",
@@ -1013,7 +1182,7 @@
       "fecha": "2026-10-07T20:27:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T22:31:32.752Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1105,7 +1274,7 @@
       "fecha": "2026-10-07T20:07:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T01:31:06.008Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1384,7 +1553,7 @@
       "slug": "el-repaso-de-la-tarde-en-radar-balcarce-mar-del-plata-grupo-cali",
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261007tarde.jpg",
-        "credito": "Fotos: Wikimedia Commons y Infobae"
+        "credito": "Fotos: Diario La Vanguardia, Wikimedia Commons y Infobae"
       }
     },
     {
@@ -1463,113 +1632,6 @@
       "foto": {
         "archivo": "fotos-notas/1qsixdr.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "9t1uix",
-      "titulo": "YPF invierte u$s 400 millones para fabricar combustible de aviación",
-      "copete": "La petrolera y la firma francesa TotalEnergies firmaron un acuerdo para producir combustible sostenible en Santa Fe. El proyecto incluye la reconversión del complejo industrial de San Lorenzo.",
-      "cuerpo": "Santa Fe Bio, la sociedad creada entre YPF y Essential Energy, firmó un contrato de compraventa a largo plazo con la firma francesa TOTSA TotalEnergies Trading SA para fabricar combustible sostenible para aviación y otros productos renovables.\n\nLa iniciativa contempla un desembolso superior a los u$s 400 millones destinado a transformar el complejo industrial situado en San Lorenzo, provincia de Santa Fe. De acuerdo con la información difundida por YPF, la futura planta alcanzará una capacidad aproximada de 170.000 toneladas anuales de combustible para aviación y aceite vegetal hidrotratado, orientadas principalmente a los mercados externos.\n\nLa empresa francesa adquirirá la mayor parte de esa producción bajo un compromiso firme y mantendrá la prioridad sobre el resto de los volúmenes, según indicó la compañía estatal.",
-      "guion": "YPF invierte u$s 400 millones para fabricar combustible de aviación",
-      "seccion": "Economía",
-      "medios": [
-        "El Eco de Tandil",
-        "La Nación",
-        "Infobae",
-        "Perfil",
-        "Noticias Argentinas (NA)",
-        "El Cronista"
-      ],
-      "enlace": "https://www.cronista.com/negocios/ypf-invierte-us-400-millones-para-un-acuerdo-de-biocombustibles-con-totalenergies/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T17:29:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T04:01:31.538Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Santa Fe Bio y TotalEnergies firmaron un acuerdo a largo plazo.",
-        "La inversión supera los u$s 400 millones para la planta en San Lorenzo.",
-        "Producirán unas 170.000 toneladas anuales de combustible sostenible."
-      ],
-      "seSabe": [
-        "YPF y Essential Energy integran la sociedad Santa Fe Bio, según informó YPF.",
-        "El proyecto se desarrollará en el complejo industrial de San Lorenzo, de acuerdo con los datos oficiales.",
-        "La capacidad de producción estimada es de 170.000 toneladas anuales, según detalló la petrolera."
-      ],
-      "textoRedes": "YPF y TotalEnergies firmaron un acuerdo superior a los u$s 400 millones para producir combustible sostenible para aviación en la provincia de Santa Fe.",
-      "etiquetas": [
-        "YPF",
-        "TotalEnergies",
-        "biocombustibles",
-        "Santa Fe",
-        "inversión"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/negocios/ypf-invierte-us-400-millones-para-un-acuerdo-de-biocombustibles-con-totalenergies/",
-          "fecha": "2026-10-07T17:29:56.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles del acuerdo entre Santa Fe Bio y TotalEnergies, la capacidad de producción de la planta y el monto de la inversión."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/la-empresa-ypf-producira-combustible-sostenible",
-          "fecha": "2026-10-07T20:56:20.000Z",
-          "oficial": false,
-          "aporte": "Mencionó el acuerdo de YPF para fabricar combustible de aviación sostenible en el país."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/inversion-de-us400-millones-una-sociedad-que-integra-ypf-le-vendera-un-combustible-sostenible-para-nid07102026/",
-          "fecha": "2026-10-07T22:31:46.000Z",
-          "oficial": false,
-          "aporte": "Especificó que la sociedad Santa Fe Bio y la firma TOTSA TotalEnergies Trading SA suscribieron la compraventa a largo plazo."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/07/un-negocio-de-hasta-usd-1000-millones-ypf-confirmo-que-producira-en-la-argentina-el-combustible-estrella-del-transporte-aereo/",
-          "fecha": "2026-10-07T18:02:36.000Z",
-          "oficial": false,
-          "aporte": "Señaló que YPF tenía en carpeta desde el año pasado la construcción de una biorrefinería avanzada."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/ypf-producira-combustible-renovable-para-aviones-y-ya-tiene-comprador-a40.phtml",
-          "fecha": "2026-10-07T19:12:13.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el proyecto contempla más de US$ 400 millones para reconvertir el complejo de San Lorenzo."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/ypf-producira-por-primera-vez-combustible-sustentable-para-aviones-y-ya-tiene-comprador_a6ac6808125d386c8814f208b",
-          "fecha": "2026-10-07T17:56:29.081Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional en su resumen."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "we53o0",
-          "titulo": "Pan American Energy invierte mil doscientos millones de dólares en Chubut",
-          "fecha": "2026-10-01T14:07:24.000Z",
-          "ruta": "/nota/pan-american-energy-invierte-mil-doscientos-millones-de-dolares-en-we53o0"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "ypf-invierte-u-s-400-millones-para-fabricar-combustible-de-aviacion",
-      "foto": {
-        "archivo": "fotos-notas/9t1uix.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -1812,7 +1874,11 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "pablo-giralt-toma-una-drastica-decision-tras-el-ultimo-partido-de"
+      "slug": "pablo-giralt-toma-una-drastica-decision-tras-el-ultimo-partido-de",
+      "foto": {
+        "archivo": "fotos-notas/1fpl6he.jpg",
+        "credito": "Foto: A24"
+      }
     },
     {
       "id": "d3o2d6",
@@ -2357,7 +2423,6 @@
         "TyC Sports",
         "Olé",
         "Crónica",
-        "Bolavip Argentina",
         "Minuto Uno"
       ],
       "enlace": "https://www.eldestapeweb.com/deportes/boca-pone-mejor-instituto-piensa-vasco-da-gama-rota-talleres-semana-agitada-arruabarrena-2026107115746",
@@ -2809,7 +2874,8 @@
       "guion": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45020-nuevo-operativo-de-documentacion-en-balcarce-dni-partidas-y-certificados-sin-turno/",
       "teniaImagenLaFuente": true,
@@ -3498,9 +3564,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "ANDigital",
         "La Brújula 24",
-        "Infoeme"
+        "Infoeme",
+        "ANDigital"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/07/la-industria-y-la-construccion-crecieron-en-agosto-pero-cayeron-en-la-comparacion-con-el-ano-pasado/",
       "teniaImagenLaFuente": true,
@@ -3791,7 +3857,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "hacelo-corto-balcarce-celebra-su-octava-edicion-con-19-producciones"
+      "slug": "hacelo-corto-balcarce-celebra-su-octava-edicion-con-19-producciones",
+      "foto": {
+        "archivo": "fotos-notas/tlcnz1.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
     },
     {
       "id": "e3ix5w",
@@ -4010,7 +4080,7 @@
       "id": "1uh42rm",
       "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "copete": "El Relevamiento de Expectativas de Mercado proyecta una contracción del Producto Bruto Interno en el tercer trimestre y un aumento del desempleo. El dato oficial del INDEC se conocerá el próximo martes.",
-      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
+      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
       "guion": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "seccion": "Economía",
       "medios": [
@@ -4193,7 +4263,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "cientificos-protestan-en-mar-del-plata-por-el-sumario-a-investigadora"
+      "slug": "cientificos-protestan-en-mar-del-plata-por-el-sumario-a-investigadora",
+      "foto": {
+        "archivo": "fotos-notas/vm4nnt.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
     }
   ],
   "secciones": [
@@ -4202,6 +4276,7 @@
     "Deportes",
     "Economía",
     "Balcarce",
+    "Policiales",
     "Agro",
     "Cultura y agenda",
     "Política",
@@ -4580,12 +4655,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "fmic2l",
-      "titulo": "Realizarán trámites gratuitos de DNI en el Concejo…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "baz7ti",
       "titulo": "Denuncian a Alejandro Mancuso por vender licencias de DT…",
       "seccion": "Fútbol",
@@ -4616,46 +4685,22 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "o322qv",
-      "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "133qm11",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
       "id": "1tcxxsy",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1w3wdws",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "51b1bv",
-      "titulo": "El quirófano móvil de castraciones continúa en la Escuela…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "bbuh5t",
-      "titulo": "El Gobierno denunciará a los estudiantes universitarios…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "khkz63",
       "titulo": "Aníbal Lotocki declarará por las lesiones graves a cinco…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "ij9zxi",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "skjezu",

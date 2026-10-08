@@ -8446,16 +8446,16 @@
   "fuentes": 1
  },
  "19n87v4": {
-  "archivo": "fotos-notas/19n87v4.jpg",
   "medio": "Radio Mitre",
-  "credito": "Foto: Radio Mitre",
   "licencia": null,
   "origen": "medio",
   "titulo": "La reventa de entradas supera los seis millones de pesos para la despedida de Messi",
   "enlace": "https://radiomitre.cienradios.com/deportes/despedida-de-lionel-messi-cuanto-piden-en-la-reventa-por-una-entrada-para-verlo-por-ultima-vez-con-la-seleccion-argentina/",
   "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/4VA7RWKA5RGPTIW25LYB7WPR74.png?smart=true&auth=7b20e38b1dd5fa62d2220825985c2748c08f729a038f625b779f9b9b01d0c60e&width=1200&height=630",
   "razon": "La foto B muestra entradas de fútbol de manera clara y directa, ilustrando perfectamente el tema de la reventa sin personas identificables ni marcas de medios.",
-  "cuando": "2026-10-06T19:32:04.959Z"
+  "cuando": "2026-10-06T19:32:04.959Z",
+  "intentado": true,
+  "borrada": true
  },
  "1msr2pb": {
   "archivo": "fotos-notas/1msr2pb.jpg",
@@ -8904,13 +8904,15 @@
   "fuentes": 1
  },
  "vm4nnt": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Científicos protestan en Mar del Plata por el sumario a investigadora del INTA",
-  "razon": "Ninguna foto sirve: la A incluye a un menor a la izquierda y la B no muestra adecuadamente el hecho de la protesta.",
-  "cuando": "2026-10-07T07:07:38.388Z",
-  "intentos": 1,
-  "fuentes": 2
+  "archivo": "fotos-notas/vm4nnt.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-08T08:23:55.151Z",
+  "imagenOriginal": "https://www.diariolavanguardia.com/noticias/45014-protesta-en-mar-del-plata-por-el-sumario-a-una-cientifica-del-inta-balcarce-reclaman-conocer-los-resultados-del-estudio-sobre-plaguicidas/",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45014-protesta-en-mar-del-plata-por-el-sumario-a-una-cientifica-del-inta-balcarce-reclaman-conocer-los-resultados-del-estudio-sobre-plaguicidas/"
  },
  "ofmp08": {
   "archivo": "fotos-notas/ofmp08.jpg",
@@ -9111,13 +9113,15 @@
   "cuando": "2026-10-07T14:28:46.789Z"
  },
  "tlcnz1": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Hacelo Corto Balcarce celebra su octava edición con 19 producciones",
-  "razon": "La única foto disponible incluye menores reconocibles y no puede ser publicada.",
-  "cuando": "2026-10-07T14:28:46.789Z",
-  "intentos": 1,
-  "fuentes": 1
+  "archivo": "fotos-notas/tlcnz1.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-08T08:23:18.487Z",
+  "imagenOriginal": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168",
+  "enlace": "https://eldiariobalcarce.com.ar/hacelo-corto-balcarce-celebro-su-octava-edicion-con-19-producciones-168"
  },
  "vtlwe4": {
   "archivo": "fotos-notas/vtlwe4.jpg",
@@ -9331,13 +9335,15 @@
   "cuando": "2026-10-07T18:32:30.432Z"
  },
  "1fpl6he": {
-  "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Pablo Giralt toma una drástica decisión tras el último partido de Messi",
-  "razon": "Ninguna foto sirve: las tres presentan marcas de agua o logos superpuestos de los medios. (se probó una foto libre de \"Pablo Giralt\" en Wikimedia Commons, sin resultado)",
-  "cuando": "2026-10-07T18:32:30.432Z",
-  "intentos": 1,
-  "fuentes": 3
+  "archivo": "fotos-notas/1fpl6he.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-08T08:21:54.629Z",
+  "imagenOriginal": "https://www.a24.com/trends/pablo-giralt-tomo-una-inesperada-decision-plena-despedida-messi-y-sorprendio-todos-n1604163",
+  "enlace": "https://www.a24.com/trends/pablo-giralt-tomo-una-inesperada-decision-plena-despedida-messi-y-sorprendio-todos-n1604163"
  },
  "vxkgel": {
   "archivo": "fotos-notas/vxkgel.jpg",
@@ -9376,16 +9382,15 @@
   "cuando": "2026-10-07T19:02:08.763Z"
  },
  "10cpafd": {
+  "archivo": "fotos-notas/10cpafd.jpg",
   "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
-  "origen": "medio",
-  "titulo": "La Casa del Bicentenario reúne música y literatura",
-  "enlace": "https://www.diariolavanguardia.com/noticias/45013-musica-poesia-y-un-homenaje-a-ricardo-soule-en-la-casa-del-bicentenario/",
-  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65972.png",
-  "razon": "La foto tiene buena calidad y encuadre, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-07T20:02:27.321Z",
-  "intentado": true,
-  "borrada": true
+  "origen": "manual",
+  "por": "balcar-dev",
+  "cuando": "2026-10-08T08:21:18.463Z",
+  "imagenOriginal": "https://www.diariolavanguardia.com/noticias/45013-musica-poesia-y-un-homenaje-a-ricardo-soule-en-la-casa-del-bicentenario/",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45013-musica-poesia-y-un-homenaje-a-ricardo-soule-en-la-casa-del-bicentenario/"
  },
  "158583a": {
   "archivo": "fotos-notas/158583a.jpg",
