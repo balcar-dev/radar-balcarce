@@ -790,6 +790,11 @@
   "ultimo": "2026-10-06T17:33:34.029Z",
   "motivo": "con cuerpo"
  },
+ "1gf49wy": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T23:32:20.234Z",
+  "motivo": "con cuerpo"
+ },
  "1githwa": {
   "intentos": 1,
   "ultimo": "2026-10-07T02:31:40.382Z",
@@ -841,8 +846,8 @@
   "motivo": "con cuerpo"
  },
  "1h9a0rw": {
-  "intentos": 2,
-  "ultimo": "2026-10-08T19:49:00.504Z",
+  "intentos": 3,
+  "ultimo": "2026-10-08T23:32:20.234Z",
   "motivo": "sin material"
  },
  "1hb8j3a": {
@@ -1172,11 +1177,6 @@
   "ultimo": "2026-10-06T12:31:45.661Z",
   "motivo": "con cuerpo"
  },
- "1ooelqh": {
-  "intentos": 1,
-  "ultimo": "2026-10-01T23:20:21.729Z",
-  "motivo": "con cuerpo"
- },
  "1opc9eu": {
   "intentos": 1,
   "ultimo": "2026-10-07T18:31:37.567Z",
@@ -1366,6 +1366,11 @@
   "intentos": 2,
   "ultimo": "2026-10-06T21:31:41.860Z",
   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2753 (line 28 column 14)"
+ },
+ "1u3brye": {
+  "intentos": 1,
+  "ultimo": "2026-10-08T23:32:20.234Z",
+  "motivo": "con cuerpo"
  },
  "1u612sk": {
   "intentos": 3,

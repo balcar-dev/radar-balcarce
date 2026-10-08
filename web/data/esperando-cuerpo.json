@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-08T23:03:07.587Z",
+ "generado": "2026-10-08T23:32:45.081Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -22,6 +22,40 @@
    ],
    "intentos": 3,
    "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA",
+   "maximo": 3
+  },
+  {
+   "id": "1h9a0rw",
+   "titulo": "Por el mal tiempo, postergaron las competencias del automovilismo zonal en el Autódromo",
+   "copete": "Las competencias del automovilismo zonal previstas para este fin de semana en el Autódromo Juan Manuel Fangio fueron reprogramadas para el 24 y 25 de octubre debido a los pronósticos climáticos desfavorables.",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T17:13:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/por-el-mal-tiempo-postergaron-las-competencias-del-automovilismo-zonal-en-el-autodromo",
+     "fecha": "2026-10-08T17:13:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "15l69b7",
+   "titulo": "Agustín Molpeceres será reconocido en la Cámara de Diputados provincial",
+   "copete": "La Cámara de Diputados de la Provincia de Buenos Aires otorgará un reconocimiento oficial al balcarceño Agustín Molpeceres, por su destacada trayectoria en el deporte adaptado y el alto rendimiento paralímpico. LOS FUNDAMENTOS La distinción,",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-08T12:52:32.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-provincial-626",
+     "fecha": "2026-10-08T12:52:32.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "con cuerpo",
    "maximo": 3
   },
   {
