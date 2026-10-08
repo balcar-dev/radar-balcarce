@@ -159,9 +159,9 @@ test('la foto sumada llega al banco y a la web: el workflow la guarda y generar-
 test('el panel tiene cinco pestañas de todos los días y lo demás vive en "Más"', () => {
   const app = leer('web/public/panel/app.js').split('\r\n').join('\n');
   const items = app.match(/const items = \[\n([\s\S]*?)\n  \];\n  const actual/)[1];
-  assert.deepEqual([...items.matchAll(/\['(\w+)', '/g)].map((m) => m[1]), ['esperan', 'publicadas', 'fotos', 'redes', 'mas']);
+  assert.deepEqual([...items.matchAll(/\['(\w+)', '/g)].map((m) => m[1]), ['hoy', 'esperan', 'publicadas', 'redes', 'mas']);
   assert.match(leer('web/public/panel/index.html'), /repeat\(5, 1fr\)/);
-  for (const [id, nombre] of [['pistas', 'Pistas'], ['revision', 'Revisión'], ['fechas', 'Fechas'], ['numeros', 'Números']]) assert.match(app, new RegExp(`\\['${id}', '${nombre}', `), nombre);
+  for (const [id, nombre] of [['fotos', 'Fotos'], ['pistas', 'Pistas'], ['revision', 'Revisión'], ['fechas', 'Fechas'], ['numeros', 'Números']]) assert.match(app, new RegExp(`\\['${id}', '${nombre}', `), nombre);
   assert.match(app, /EN_MAS\.has\(E\.pestana\)/);
 });
 

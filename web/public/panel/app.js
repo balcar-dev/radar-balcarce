@@ -23,6 +23,7 @@ import {
 } from './textos.js';
 import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from './numeros.js';
 import { htmlDeRevision, contarRevision } from './revision.js';
+import { resumenDeHoy, htmlDeHoy } from './hoy.js';
 import { htmlDeFormulario, htmlDeLista, htmlDeUnaPista, htmlDeCerrarPista } from './pistas.js';
 import {
   armarContactos, htmlDeContactos, htmlDeUnContacto, htmlDeFormularioContacto, htmlDeCola, colaDeEnvio, contactoPropio, conHistorial, enlaceWhatsApp, enlaceMail,
@@ -43,7 +44,7 @@ const COLOR = {
 const chip = (s) => (s ? `<span class="chip" style="background:var(--s-${COLOR[s] ?? 'pais'})">${esc(s)}</span>` : '');
 const GUARDADO = 'radar-panel';
 /** Los archivos del panel (los mismos que guarda sw.js): "Actualizar el panel" los vuelve a bajar. */
-const ARCHIVOS_DEL_PANEL = ['app.js', 'github.js', 'cifrado.js', 'textos.js', 'fechas.js', 'numeros.js', 'redes-estado.js', 'revision.js', 'pistas.js', 'contactos.js', 'fotos.js', 'index.html'].map((a) => `/panel/${a}`);
+const ARCHIVOS_DEL_PANEL = ['app.js', 'github.js', 'cifrado.js', 'textos.js', 'fechas.js', 'numeros.js', 'redes-estado.js', 'revision.js', 'pistas.js', 'contactos.js', 'fotos.js', 'hoy.js', 'index.html'].map((a) => `/panel/${a}`);
 const DEMO = new URLSearchParams(location.search).has('demo');
 const VOCES = { locutora: 'la locutora', locutor: 'el locutor' };
 const enlaceDeNota = (n) => `https://radarbalcarce.com/nota/${n.slug ? `${n.slug}-${n.id}` : n.id}`;
@@ -90,7 +91,7 @@ async function guardarLlavesDelCelular(v) {
 // ------------------------------------------------------------------ el estado
 
 const E = {
-  cliente: null, nombre: '', llaves: null, pestana: 'esperan', busqueda: '',
+  cliente: null, nombre: '', llaves: null, pestana: 'hoy', busqueda: '',
   portada: null, esperando: [], intentosMaximos: 3, pendientes: null, descartadas: [], papelera: [], publicos: [],
   decisiones: { notas: {}, redes: {} }, correcciones: { notas: {} }, archivo: null, estadoCel: null, libro: {},
   // La pestaña Fechas (se carga la primera vez que se abre).
@@ -320,6 +321,7 @@ const vueltaAPublicar = (n) => {
 
 /** Los íconos de la barra de abajo (trazos simples, del color del texto). */
 const ICONOS = {
+  hoy: '<svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>',
   esperan: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
   publicadas: '<svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h6M9 13h6"/></svg>',
   fotos: '<svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
@@ -335,8 +337,8 @@ function pestanas() {
   const sinFoto = E.banco ? resumenDeFotos().items.length : null;
   const rev = E.revision ? contarRevision(E.revision.items) : null;
   const items = [
-    ['esperan', 'Esperan', esperan], ['publicadas', 'Publicadas', ultimas], ['fotos', 'Fotos', sinFoto === null ? '·' : (sinFoto || '✓')],
-    ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : (pistasConNovedad() ? '●' : '⋯')],
+    ['hoy', 'Hoy', '·'], ['esperan', 'Esperan', esperan], ['publicadas', 'Publicadas', ultimas],
+    ['redes', 'Redes', problemasDeHoy(E.libro, hoyEnBalcarce()).length ? '⚠' : '◷'], ['mas', 'Más', rev?.graves ? '⚠' : (pistasConNovedad() || sinFoto ? '●' : '⋯')],
   ];
   const actual = EN_MAS.has(E.pestana) ? 'mas' : E.pestana;
   // El globito: rojo si hay algo que atender, gris si es un total, verde si está todo bien; sin globito si no hay nada que mostrar.
@@ -370,7 +372,8 @@ function vistaLista() {
   pestanas();
   $('#recargar').hidden = false;
   const cuando = E.portada?.generado ? `La web se armó ${haceCuanto(E.portada.generado)}.` : '';
-  if (E.pestana === 'esperan') vistaEsperan(cuando);
+  if (E.pestana === 'hoy') vistaHoy();
+  else if (E.pestana === 'esperan') vistaEsperan(cuando);
   else if (E.pestana === 'fotos') vistaFotos();
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
@@ -384,6 +387,32 @@ function vistaLista() {
   if (EN_MAS.has(E.pestana) && !E.dia && !E.feriado && !E.pieza && !E.pistaAbierta && !E.cerrandoPista && !E.contactoAbierto && !E.nuevoContacto && !E.cola) app.insertAdjacentHTML('afterbegin', '<button type="button" class="boton volver-mas" data-pestana="mas">← Más</button>');
   // Volver a donde se estaba: después de abrir una nota, aprobarla o descartarla, la lista sigue en el mismo lugar.
   if (E.restaurar != null) { const y = E.restaurar; E.restaurar = null; requestAnimationFrame(() => window.scrollTo(0, y)); }
+}
+
+/** La pantalla de entrada (hoy.js): lo que hay que mirar al abrir el panel, con un atajo a cada cosa. */
+function vistaHoy() {
+  const { sinDecidir } = listasDeEsperan();
+  const borradores = Object.values(E.borradoresIA ?? {}).map((g) => g.b).filter((b) => b?.ok && b.texto);
+  const enCurso = Object.values(E.trabajos).filter((t) => t.clase === 'ia' && t.estado === 'escribiendo').map((t) => t.titulo).filter(Boolean);
+  const fotos = E.banco ? resumenDeFotos().items : [];
+  const r = E.estadoCel?.redes;
+  const hoy = hoyEnBalcarce();
+  const piezas = r?.piezas ?? [];
+  const salio = (p) => E.libro?.instagram?.[`${hoy}/${p.nombre}`]?.cuando ?? null;
+  const proxima = piezas.filter((p) => !salio(p) && estadoDePieza({ hora: p.hora, ventana: p.ventana, salio: null }).clase !== 'mal').sort((a, b) => String(a.hora).localeCompare(String(b.hora)))[0] ?? null;
+  const masVieja = sinDecidir.map((n) => Date.parse(n.fecha)).filter(Number.isFinite).sort((a, b) => a - b)[0];
+  const rev = E.revision ? contarRevision(E.revision.items) : null;
+  const resumen = resumenDeHoy({
+    generado: E.portada?.generado ?? null,
+    esperan: { n: sinDecidir.length, deBalcarce: sinDecidir.filter((n) => n.seccion === 'Balcarce').length, masVieja: masVieja ? haceCuanto(new Date(masVieja).toISOString()) : null },
+    sinCuerpo: sinCuerpoVigentes().length,
+    borradores: { listos: borradores.length, conMarca: borradores.filter((b) => (b.problemas ?? []).length).length, enCurso },
+    sinFoto: { n: fotos.length, firmes: fotos.filter((x) => MOTIVOS_DE_FOTO[x.motivo]?.firme).length },
+    redes: r ? { problemas: problemasDeHoy(E.libro, hoy).length, salieron: piezas.filter(salio).length, total: piezas.length, proxima: proxima ? { que: proxima.que, hora: proxima.hora } : null } : null,
+    pistas: pistasConNovedad(),
+    graves: rev?.graves ?? 0,
+  });
+  app.innerHTML = htmlDeHoy(resumen, { esc, haceCuanto, horaEnBalcarce });
 }
 
 /** Si la nota va a tener foto cuando se publique, y si no, por qué (2/10, Hernán: "saber si la nota que uno revisa va a tener o no foto"). */
@@ -1212,6 +1241,7 @@ async function guardarFechas(cambiarJson, mensaje, listo) {
  * [id, nombre, ícono, para qué sirve]. Cada una se abre desde "Más" y trae su botón para volver.
  */
 const MENU_MAS = [
+  ['fotos', 'Fotos', '📷', 'Las notas de la portada sin foto, por qué no la tienen y dónde buscarle una.'],
   ['contactos', 'Contactos', '👥', 'Instituciones y personas a quienes pedirles fechas y eventos: escribirles y llevar quién respondió.'],
   ['pistas', 'Pistas', '✎', 'Pegá un dato o un tuit y mirá si lo cubrieron los medios.'],
   ['revision', 'Revisión', '✓', 'Lo que la IA marcó en las notas ya publicadas (ortografía, texto roto, temas sensibles).'],
@@ -1225,7 +1255,8 @@ function vistaMas() {
   const reglas = reglasFb();
   const rev = E.revision ? contarRevision(E.revision.items) : null;
   const nPistas = pistasConNovedad();
-  const avisoDe = { pistas: nPistas ? `● ${nPistas} con novedad` : '', revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
+  const nSinFoto = E.banco ? resumenDeFotos().items.length : 0;
+  const avisoDe = { fotos: E.banco ? (nSinFoto ? `${nSinFoto} sin foto` : '✓ todas con foto') : '', pistas: nPistas ? `● ${nPistas} con novedad` : '', revision: rev ? (rev.graves ? `⚠ ${rev.graves} grave${rev.graves === 1 ? '' : 's'}` : (rev.total ? `${rev.total} para mirar` : '✓ sin avisos')) : '' };
   app.innerHTML = `
     <h1>Más</h1>
     ${MENU_MAS.map(([id, nombre, icono, que]) => `<button type="button" class="tarjeta" data-pestana="${id}"><div class="menu-item"><span class="menu-icono">${icono}</span><div><div class="titulo">${esc(nombre)}${avisoDe[id] ? ` <span class="marca${(rev?.graves && id === 'revision') || (id === 'pistas' && nPistas) ? ' mal' : ''}">${esc(avisoDe[id])}</span>` : ''}</div><div class="meta">${esc(que)}</div></div><span class="flecha">›</span></div></button>`).join('')}

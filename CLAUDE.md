@@ -16,7 +16,7 @@ escribir siempre en castellano rioplatense, claro y sin voseo forzado.
     ingesta/   el motor: fuentes, cruce, selección, lectura con IA, verificador, números del criterio. SIN dependencias
     reels/     placas, voz (Gemini), video… y la reescritura con IA (reels/reescritura.mjs). SÍ tiene dependencias (resvg, ffmpeg)
     redes/     Facebook e Instagram (API de Meta), contrato del día, vigilante, WhatsApp. SIN dependencias
-    panel/     el panel de la PC (puerto 4321, respaldo) y lo del panel del celular (cifrado, pedidos a la IA). SIN dependencias
+    panel/     lo del panel del celular (cifrado, pedidos a la IA) y el panel de la PC (puerto 4321), que NO se usa y queda en desuso. SIN dependencias
     web/       el sitio (Next.js 15, JavaScript, HTML estático); web/public/panel/ es el panel del celular; web/scripts/generar-datos.mjs arma los datos
     pruebas/   `npm test`: más de 1.400 pruebas, sin red
     docs/      la documentación: 00-INDICE a 12-GLOSARIO, e historico/
@@ -39,7 +39,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 125.)
+próxima regla es la 126.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
