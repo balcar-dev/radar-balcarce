@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T18:04:06.283Z",
- "portada": 45,
- "archivo": 1089,
+ "generado": "2026-10-08T18:34:38.058Z",
+ "portada": 50,
+ "archivo": 1092,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-08T18:04:06.326Z",
+  "generado": "2026-10-08T18:34:38.106Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -144,9 +144,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "vnuraj",
-      "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
-      "seccion": "Fútbol"
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Agro"
      }
     ]
    },
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 47,
     "notas": [
      {
       "id": "1ihpcqe",
@@ -165,19 +165,19 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      },
      {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
-      "seccion": "Balcarce"
+      "id": "bas6dw",
+      "titulo": "Una familia porteña necesita más de dos millones y medio para ser clase media",
+      "seccion": "Economía"
      },
      {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
-      "seccion": "Balcarce"
+      "id": "vnuraj",
+      "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
+      "seccion": "Fútbol"
      }
     ]
    }
@@ -198,24 +198,41 @@
      "id": "1rf94dp",
      "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
      "cuando": "2026-10-08T16:35:20.061Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "jul321",
      "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
+     "cuando": "2026-10-08T18:06:50.188Z"
+    }
+   ],
+   "cola": [
     {
      "id": "jul3dm",
      "titulo": "El Diario cumple 31 años como medio gráfico local",
      "seccion": "Balcarce",
      "marcada": false
+    },
+    {
+     "id": "6vefne",
+     "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+     "seccion": "Agro",
+     "marcada": false
+    },
+    {
+     "id": "175ztwv",
+     "titulo": "UATRE Balcarce saluda al personal rural en su día",
+     "seccion": "Agro",
+     "marcada": false
+    },
+    {
+     "id": "zzuoo4",
+     "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+     "seccion": "Balcarce",
+     "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-08T18:05:20.061Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-08T19:36:50.188Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

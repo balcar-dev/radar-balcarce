@@ -10108,8 +10108,8 @@
   "origen": "ninguna",
   "titulo": "Ramón Díaz suena en Corinthians y se aleja de River",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-08T17:07:33.336Z",
-  "intentos": 1,
+  "cuando": "2026-10-08T18:33:48.525Z",
+  "intentos": 2,
   "fuentes": 5
  },
  "1nk2shg": {
@@ -10117,8 +10117,8 @@
   "origen": "ninguna",
   "titulo": "Los docentes bonaerenses paran por veinticuatro horas el jueves",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-08T17:07:33.336Z",
-  "intentos": 1,
+  "cuando": "2026-10-08T18:33:48.525Z",
+  "intentos": 2,
   "fuentes": 4
  },
  "f6j0rt": {
@@ -10183,5 +10183,35 @@
   "cuando": "2026-10-08T18:03:43.524Z",
   "intentos": 1,
   "fuentes": 2
+ },
+ "6vefne": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+  "razon": "sin fotos para comparar",
+  "cuando": "2026-10-08T18:33:48.525Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "175ztwv": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "UATRE Balcarce saluda al personal rural en su día",
+  "razon": "sin fotos para comparar",
+  "cuando": "2026-10-08T18:33:48.525Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1b0ewyh": {
+  "archivo": "fotos-notas/1b0ewyh.jpg",
+  "medio": "Agrositio",
+  "credito": "Foto: Agrositio",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Cierra la campaña agrícola cordobesa con récord en maíz",
+  "enlace": "https://www.agrositio.com.ar/noticia/248729-cordoba-un-maiz-record-corona-el-cierre-de-la-campana-202526.html",
+  "imagenOriginal": "https://www.agrositio.com.ar/imagenesweb/contenidos/og_248729_61887464.jpg",
+  "razon": "La foto A muestra claramente una mazorca de maíz en primer plano con buena nitidez, ideal para ilustrar la campaña agrícola sin marcas de agua ni personas.",
+  "cuando": "2026-10-08T18:33:48.525Z"
  }
 }
