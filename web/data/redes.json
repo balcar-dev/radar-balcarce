@@ -484,6 +484,13 @@
       "temas": [
         "concejo"
       ]
+    },
+    "1cpkl2f": {
+      "cuando": "2026-10-08T12:35:25.263Z",
+      "postId": "1254237411116171_122107172073495512",
+      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
+      "enlace": "https://radarbalcarce.com/nota/una-planta-cae-sobre-la-red-electrica-y-dana-cables-en-calle-20-1cpkl2f",
+      "temas": []
     }
   },
   "instagram": {
@@ -2810,6 +2817,12 @@
       "mediaId": "17901005013378641",
       "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
       "enlace": "https://radarbalcarce.com/nota/el-concejo-deliberante-distingue-a-la-fiscalia-descentralizada-1opc9eu"
+    },
+    "1cpkl2f": {
+      "cuando": "2026-10-08T12:35:40.121Z",
+      "mediaId": "17985929291888516",
+      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
+      "enlace": "https://radarbalcarce.com/nota/una-planta-cae-sobre-la-red-electrica-y-dana-cables-en-calle-20-1cpkl2f"
     }
   },
   "historiasDeReels": {
@@ -3376,11 +3389,5 @@
       "cuando": "2026-10-07T13:34:40.377Z"
     }
   },
-  "facebookFoto": {
-    "1cpkl2f": {
-      "intentos": 2,
-      "ultimo": "2026-10-08T12:06:43.489Z",
-      "error": "Missing or invalid image file"
-    }
-  }
+  "facebookFoto": {}
 }
