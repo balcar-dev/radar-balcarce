@@ -29,10 +29,25 @@ export const PISTA = {
 
 const plegar = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
 
+// Una persona de menos de 18 años dicha por su edad: "un nene de 6 años", "una chica de 15", "un joven de 17 años" (I-6, 8/10/2026: la lista
+// roja no miraba edades y "Un nene de 6 años…" llegaba al archivo público).
+const PERSONA_Y_EDAD = /\b(?:nen[eao]s?|nin[oa]s?|chic[oa]s?|pib[ea]s?|menor(?:es)?|adolescentes?|bebes?|jovencit[oa]s?|joven|hij[oa]s?|alumn[oa]s?|estudiantes?|adolescente|criatura)\b[^.\n]{0,40}?\b(\d{1,2})\s*(?:anos?|anitos)\b/;
+const EDAD_Y_PERSONA = /\b(\d{1,2})\s*(?:anos?|anitos)\b[^.\n]{0,20}?\b(?:nen[eao]s?|nin[oa]s?|chic[oa]s?|pib[ea]s?|menor(?:es)?|adolescentes?)\b/;
+
+/** ¿Habla de alguien de menos de 18 años por su edad? Devuelve lo que pegó, o null. */
+export function menorPorEdad(texto) {
+  const t = plegar(texto);
+  for (const re of [PERSONA_Y_EDAD, EDAD_Y_PERSONA]) {
+    const m = re.exec(t);
+    if (m && Number(m[1]) < 18) return m[0];
+  }
+  return null;
+}
+
 /** ¿La pista toca algo del semáforo rojo (un menor, una víctima)? Devuelve la frase que pegó, o null. */
 export function palabraDelicada(texto) {
   const t = plegar(texto);
-  return REGLAS_SEMAFORO.rojo.map(plegar).find((p) => t.includes(p)) ?? null;
+  return REGLAS_SEMAFORO.rojo.map(plegar).find((p) => t.includes(p)) ?? menorPorEdad(texto);
 }
 
 /** Sin la Gemini: los nombres propios y las frases entre comillas del texto, como búsquedas de emergencia. */

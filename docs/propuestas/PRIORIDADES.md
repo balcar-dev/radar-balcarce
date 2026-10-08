@@ -38,6 +38,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 16 | Las 296 páginas sin cuerpo llevan `noindex, follow` (verificado con un armado completo). **Falta:** la parte de "una sola fuente sin aporte" (necesita el jefe editor) | 8/10 | regla 113 |
 | 27 | Los reels cierran el posteo con «Voz generada con inteligencia artificial.» (texto, sin etiqueta de Meta). **Falta:** probar el campo `is_ai_generated` de Instagram (sólo búsqueda; decidido que por ahora va en texto) | 8/10 | regla 114 |
 | 10 | Una foto que la IA no evaluó (marca y menor) ya no se elige | 8/10 | regla 115 |
+| 7 (parte) | Las pistas del panel rechazan a un menor dicho por su edad ("un nene de 6 años"). **Falta, con su visto bueno:** las edades y los verbos en la lista roja del semáforo de las notas (no se toca sin preguntar) | 8/10 | regla 116 |
 | 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---
