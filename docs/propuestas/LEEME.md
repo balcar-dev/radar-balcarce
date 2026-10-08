@@ -4,6 +4,7 @@
 
 - **[`PRIORIDADES.md`](PRIORIDADES.md)**: todo lo anotado, en el orden en que conviene hacerlo.
 - **[`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md)**: lo que sólo una persona puede hacer (cuentas, tarjeta, claves), paso a paso.
+- **[`PANEL-NUEVO.md`](PANEL-NUEVO.md)**: el panel único que reemplaza al de la PC: qué pasa con cada pestaña y en qué orden.
 - **[`SEMAFORO-HOY.md`](SEMAFORO-HOY.md)**: cómo funciona hoy el semáforo (verde, amarillo, rojo), sin proponer cambios.
 
 Se separa en dos listas, para no mezclar:

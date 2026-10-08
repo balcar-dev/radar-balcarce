@@ -45,6 +45,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 3b | "Publicar" del celular ya no saca solo un tema delicado ("necesita ojo humano"): muestra el borrador para que una persona lo lea. La firma "revisada por una persona" para lo que se aprueba a ciegas queda para el panel nuevo | 8/10 | regla 120 |
 | 136 | **Respaldo semanal armado** (`respaldo.yml`): bundle con todo el historial y copia de datos y fotos como archivos de la corrida; espejo a GitLab y copia a R2 listos para activarse con una cuenta y un token. El vigilante avisa si falta. **Falta de ustedes:** crear el proyecto de GitLab y activar R2, ver [`PASOS-PARA-USTEDES.md`](PASOS-PARA-USTEDES.md) | 8/10 | regla 121 |
 | 132 | **Fotos a R2, etapa 1 preparada**: `FOTOS_BASE` (una variable cambia de dónde cargan las fotos las páginas) y el workflow "Fotos a R2" que copia las 592 fotos. **Falta de ustedes:** el depósito, el dominio `fotos.radarbalcarce.com` y las dos variables ([pasos](PASOS-PARA-USTEDES.md)) | 8/10 | regla 122 |
+| 130 | Panel de la PC: decisión de hacerlo de nuevo registrada, con qué pasa con cada pestaña y el orden de construcción: [`PANEL-NUEVO.md`](PANEL-NUEVO.md). No se construyó todavía | 8/10 | — |
 | 8 | **Lo rojo ya no sale con el texto que lo puso en rojo, aunque lo apruebe una persona**; si la persona lo reescribe y el texto ya no toca la lista roja, sí puede salir (para los falsos positivos) | 8/10 | regla 119 |
 | 7, 9 | **Semáforo mejorado** (autorizado por Hernán y Andrés): formas que faltaban de rojo y de muerte, edad de menores, aviso fúnebre como "nunca" y la nota hereda el peor color al juntarse. Ninguna de las 1.083 notas publicadas cambia de color. **Sigue abierto:** que lo rojo aprobado a mano no salga (C-10) y "Publicar" del celular | 8/10 | regla 118 |
 | 7 (estudio) | Se escribió cómo funciona hoy el semáforo, con ejemplos comprobados, para decidir juntos: [`SEMAFORO-HOY.md`](SEMAFORO-HOY.md). No se cambió nada | 8/10 | — |
@@ -229,7 +230,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 127 | Partir los archivos más grandes | V2-19 | — |
 | 128 | Auditoría semanal completa (Lighthouse, accesibilidad) | N7 | — |
 | 129 | Bajar el ciclo a 15 minutos | Ciclo | — |
-| 130 | El panel del celular, rediseñado sobre el flujo nuevo | Decidido | Que el flujo esté rearmado |
+| 130 | **El panel nuevo**, único, que reemplaza al de la PC y al del celular actual. **Decidido el 8/10** (el de la PC se hace de nuevo y se congela el viejo). Plan por pestañas y por etapas en [`PANEL-NUEVO.md`](PANEL-NUEVO.md) | Decidido | Una reunión corta de diseño con la maqueta |
 | 132 | **Arquitectura de datos (cuarta auditoría)**, etapa 1: fotos a Cloudflare R2 con una sola variable `FOTOS_BASE`. Antes del 2/12 | [registro](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md) | D + tarjeta y token en Cloudflare |
 | 133 | Etapa 2: `archivo.json` y el histórico fuera de git (R2 por mes o D1) y las notas viejas armadas en el momento; el tope de notas deja de existir | ídem | D (R2 o D1) |
 | 134 | Etapa 3: lo que cambia siempre (`vistas`, `estadisticas`, `fichas`, `banco-fotos`, `redes`…) fuera de git; las decisiones de personas se quedan | ídem | — |
