@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T13:58:01.937Z",
- "portada": 42,
- "archivo": 1070,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-08T14:02:56.486Z",
+ "portada": 40,
+ "archivo": 1072,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-08T13:58:01.985Z",
+  "generado": "2026-10-08T14:02:56.527Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T10:04:36.490Z"
    },
    {
@@ -126,27 +126,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 54,
     "notas": [
-     {
-      "id": "16tb2vo",
-      "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
-      "seccion": "Balcarce"
-     },
      {
       "id": "r7ox1t",
       "titulo": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
       "seccion": "Economía"
      },
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
-      "seccion": "Fútbol"
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "w8t322",
+      "titulo": "El consorcio de Rowing gana la concesión de AySA por millones",
+      "seccion": "Economía"
+     },
+     {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,17 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 44,
     "notas": [
      {
-      "id": "6izwi8",
-      "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "seccion": "Fútbol"
      },
      {
       "id": "ajdznk",
@@ -175,9 +170,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "117ewnb",
-      "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
-      "seccion": "Automovilismo"
+      "id": "1qsixdr",
+      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -192,21 +192,9 @@
    ],
    "cola": [
     {
-     "id": "16tb2vo",
-     "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
      "id": "159oig4",
      "titulo": "Mini Club y Sportivo Trabajo ganan en la Liga Local de Básquet",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "6izwi8",
-     "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],

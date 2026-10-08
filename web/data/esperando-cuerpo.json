@@ -1,22 +1,69 @@
 {
- "generado": "2026-10-08T13:58:01.937Z",
+ "generado": "2026-10-08T14:02:56.486Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "28ui0c",
-   "titulo": "31 años siendo parte de la historia",
-   "copete": "El Diario cumple hoy 31 años de vida. Nació en 1995 como un semanario y, con el paso del tiempo, se transformó en el único diario y medio gráfico de la localidad, hecho en Balcarce, por balcarceños y para toda la comunidad. Tres décadas despu�",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-08T12:44:02.000Z",
+   "id": "tjmhqp",
+   "titulo": "La ANMAT dio de baja la habilitación de un laboratorio por no retirar del mercado sus medicamentos",
+   "copete": "La Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT) resolvió dar de baja la habilitación de P. L. Rivero y Cía. S.A. , un laboratorio con sede en la avenida Boyacá 411/419 de la Ciudad Autónoma de Buenos Aires. La medida alcanza a la firma…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-08T05:42:20.000Z",
    "fuentes": [
     {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/31-anos-siendo-parte-de-la-historia-de-balcarce-349",
-     "fecha": "2026-10-08T12:44:02.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/sociedad/2026/10/08/la-anmat-dio-de-baja-la-habilitacion-de-un-laboratorio-por-no-retirar-del-mercado-sus-medicamentos/",
+     "fecha": "2026-10-08T05:42:20.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/sociedad/anmat-dio-baja-reconocido-laboratorio-grave-denuncia-penal-202610892348",
+     "fecha": "2026-10-08T12:23:48.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/sociedad/la-anmat-ordeno-dar-de-baja-la-habilitacion-otorgada-a-un-laboratorio-cual-es-la-firma-afectada.phtml",
+     "fecha": "2026-10-08T08:03:44.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/anmat-dio-baja-un-reconocido-laboratorio-no-retirar-del-mercado-medicamentos-prohibidos-n251073",
+     "fecha": "2026-10-08T13:07:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/sociedad/la-anmat-dio-de-baja-la-inhabilitacion-de-un-laboratorio-que-no-retiro-del-mercado-sus-productos-tras-una-advertencia/",
+     "fecha": "2026-10-08T11:44:40.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/informacion-general/la-anmat-cancelo-la-habilitacion-un-laboratorio-medicamentos-prohibidos-los-motivos-la-medida-n6331428",
+     "fecha": "2026-10-08T11:57:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 4 problemas (numero): el titulo dice 30 y la fuente no lo dice",
+   "intentos": 4,
+   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 4
+  },
+  {
+   "id": "1we1z9n",
+   "titulo": "Franco Colapinto se entusiasmó con sumar puntos en el GP de Singapur: “Tenemos un coche muy rápido”",
+   "copete": "Se viene una nueva carrera en el calendario de la Fórmula 1 : el Gran Premio de Singapur . Franco Colapinto fue uno de los tres pilotos que abrió la rueda de conferencias junto al francés Esteban Ocon y español Fernando Alonso. El argentino, que llega de una fecha complicada en…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T09:53:51.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/franco-colapinto-participara-de-la-conferencia-de-prensa-de-los-pilotos-de-la-formula-1-antes-del-gran-premio-de-singapur/",
+     "fecha": "2026-10-08T09:53:51.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/deportes/la-ilusion-de-franco-colapinto-antes-del-gp-de-singapur-tenemos-un-coche-muy-rapido/",
+     "fecha": "2026-10-08T10:19:26.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gran\", \"premio\", \"singapur\" y el cuerpo no los explica; sin esas oraciones quedan 146 palabras",
    "maximo": 3
   }
  ]
