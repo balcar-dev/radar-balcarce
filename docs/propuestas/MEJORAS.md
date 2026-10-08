@@ -21,33 +21,37 @@ hecho: es una lista para decidir y después hacer.*
 
 ## Lo crítico, con fecha
 
+*Estado al 8/10 por la tarde: ✔ hecho · ◐ parcial · ✗ pendiente. El detalle de cada avance está en la línea "Estado" de cada punto y en [`PRIORIDADES.md`](PRIORIDADES.md).*
+
 Estas son las cosas que **pueden romper algo pronto** si nadie hace nada. Van primero por la fecha,
 no por la dificultad.
 
 | # | Qué | Cuándo muerde | Qué pasa si no se hace | Trabajo |
 |---|---|---|---|---|
-| **C-0** | **La corrección automática de la auditoría está rompiendo notas publicadas** | **Ya, cada media hora** | Dos notas del sitio ya tienen "en en en en…" y "compitiránnnnn…", y crecen en cada corrida | 30 min para frenarlo + 2-3 h el arreglo |
-| C-1 | **La prueba que congela la web el lunes** | **Lunes 12/10** | La web deja de actualizarse sola | 5 minutos |
-| **C-18** | **Dos botones del celular congelan la web** ("Pedir cambios" en el feriado del 12/10, y "Sacar" o "Pedir cambios" en la efeméride del 11/10) | **Ya, hasta el 12/10** | La web deja de actualizarse sola | No tocarlos hasta el 13/10; arreglo 3-4 h |
-| **C-19** | **"Publicar" de un toque en el celular saca un texto de la IA que nadie leyó, y firma "revisada por una persona"** | Ya (25 de las 33 notas que esperan hablan de denuncias, chicos o víctimas) | Una nota delicada sale sin que nadie la lea, con una firma que no es cierta | 2 h + decisión |
-| C-2 | **Un riesgo de seguridad del panel del celular** (el detalle no va en el repositorio público) | Ya (es un riesgo, no una falla) | Grave si se aprovecha | Medio día a 1 día |
-| C-3 | **Next 15 deja de recibir parches** | **21/10** | El sitio queda con fallas de seguridad conocidas sin arreglo | 1 h (parche) + 1-2 días (Next 16) |
-| C-4 | **Las máquinas de GitHub pasan a Ubuntu 26** | **Desde el 19/10** | Algún robot puede fallar el día del cambio | 2 h para probar antes |
-| C-5 | **Un archivo de datos roto se lee como vacío** | Cualquier día (ya pasó el 25/09) | Se pueden perder hasta 180 días de páginas | 3 h |
-| C-6 | **El tope de 2.500 notas** (un número que puso el proyecto, por un límite de Cloudflare) | **Alrededor del 2/11** | Las notas viejas pierden su página y sus datos | 2 h (subir el tope) + plan para guardar el 100 % |
-| C-7 | **Unas 20 pruebas atadas a los datos reales de efemérides y feriados** | Al armar noviembre (fin de octubre) | Otra vez la web congelada | 2-6 h (junto con C-18) |
-| C-8 | **Los datos de seguimiento comercial quedarían públicos** | El día del primer mensaje a un comercio | Cualquiera ve a quién se le ofreció qué y quién dijo que no | 1 h |
-| C-9 | **Los reels con voz de IA salen sin la etiqueta de IA de Meta** | Ya (lo pide Meta) | Meta puede bajar el alcance o sancionar | Decisión + 2-4 h |
-| C-10 | **Algo en rojo (un menor, una víctima) se publica si una persona lo aprueba** | Ya | Se rompe la regla "nunca identificar a un menor ni a una víctima" por un clic equivocado | 1 h (pero es la lista roja: preguntar antes) |
-| C-11 | **Las pistas que "salen solas" pueden publicar lo que una persona miró y no aprobó** | Ya (hay dos intentándolo: Messi y Margaret Hamilton) | Sale una nota sin control, en la sección equivocada y arriba de todo | Medio día |
-| C-12 | **El semáforo deja salir solas notas que pueden identificar a un menor o a una víctima** | Ya (no se encontró ningún caso publicado todavía) | Una nota con un chico de 16 años o una víctima sale sin que la vea nadie | 3-4 h (es la lista roja: preguntar antes) |
-| C-13 | **Una foto de otro medio y de otro hecho está publicada en una nota de Policiales** | Ya | Rompe la regla de fotos en Policiales | 5 min sacarla + 2 h el freno |
-| C-14 | **Una corrección hecha sobre una nota aprobada desde el celular se deshace sola a los 3 días** | Cuando se use "Editar" sobre una nota aprobada (hoy no hay casos) | Si la corrección sacó el nombre de una víctima, el nombre vuelve | 1 h |
-| C-15 | **Si la web se congela, la farmacia de turno y el clima de las redes quedan viejos** | El lunes 12/10 si no se arregla C-1 | Se manda a la gente a una farmacia que no está de turno; el reel de clima muestra el pronóstico de ayer | 3 h + 2-3 h |
-| C-16 | **Cuando Meta contesta con error, se vuelve a armar la pieza, se gasta voz y puede salir duplicada** | Ya (el 5/10 Meta publicó aunque contestó error) | Una falla repetida puede comerse los 10 audios del día o duplicar un posteo | 1 día |
-| C-17 | **Efemérides: del 19 al 31/10 salen solas sin aprobar, y el 31/10 se acaban (también las piezas fijas)** | **19/10 y 1/11** | La efeméride deja de salir sin aviso y participá empieza a gastar 4 audios por semana | 1 h + decidir antes del 25/10 |
+| **C-0 ✔** | **La corrección automática de la auditoría está rompiendo notas publicadas** | **Ya, cada media hora** | Dos notas del sitio ya tienen "en en en en…" y "compitiránnnnn…", y crecen en cada corrida | 30 min para frenarlo + 2-3 h el arreglo |
+| C-1 ✔ | **La prueba que congela la web el lunes** | **Lunes 12/10** | La web deja de actualizarse sola | 5 minutos |
+| **C-18 ✔** | **Dos botones del celular congelan la web** ("Pedir cambios" en el feriado del 12/10, y "Sacar" o "Pedir cambios" en la efeméride del 11/10) | **Ya, hasta el 12/10** | La web deja de actualizarse sola | No tocarlos hasta el 13/10; arreglo 3-4 h |
+| **C-19 ◐** | **"Publicar" de un toque en el celular saca un texto de la IA que nadie leyó, y firma "revisada por una persona"** | Ya (25 de las 33 notas que esperan hablan de denuncias, chicos o víctimas) | Una nota delicada sale sin que nadie la lea, con una firma que no es cierta | 2 h + decisión |
+| C-2 ✗ | **Un riesgo de seguridad del panel del celular** (el detalle no va en el repositorio público) | Ya (es un riesgo, no una falla) | Grave si se aprovecha | Medio día a 1 día |
+| C-3 ◐ | **Next 15 deja de recibir parches** | **21/10** | El sitio queda con fallas de seguridad conocidas sin arreglo | 1 h (parche) + 1-2 días (Next 16) |
+| C-4 ◐ | **Las máquinas de GitHub pasan a Ubuntu 26** | **Desde el 19/10** | Algún robot puede fallar el día del cambio | 2 h para probar antes |
+| C-5 ✔ | **Un archivo de datos roto se lee como vacío** | Cualquier día (ya pasó el 25/09) | Se pueden perder hasta 180 días de páginas | 3 h |
+| C-6 ◐ | **El tope de 2.500 notas** (un número que puso el proyecto, por un límite de Cloudflare) | **Alrededor del 2/11** | Las notas viejas pierden su página y sus datos | 2 h (subir el tope) + plan para guardar el 100 % |
+| C-7 ✔ | **Unas 20 pruebas atadas a los datos reales de efemérides y feriados** | Al armar noviembre (fin de octubre) | Otra vez la web congelada | 2-6 h (junto con C-18) |
+| C-8 ✗ | **Los datos de seguimiento comercial quedarían públicos** | El día del primer mensaje a un comercio | Cualquiera ve a quién se le ofreció qué y quién dijo que no | 1 h |
+| C-9 ✔ | **Los reels con voz de IA salen sin la etiqueta de IA de Meta** | Ya (lo pide Meta) | Meta puede bajar el alcance o sancionar | Decisión + 2-4 h |
+| C-10 ✔ | **Algo en rojo (un menor, una víctima) se publica si una persona lo aprueba** | Ya | Se rompe la regla "nunca identificar a un menor ni a una víctima" por un clic equivocado | 1 h (pero es la lista roja: preguntar antes) |
+| C-11 ✗ | **Las pistas que "salen solas" pueden publicar lo que una persona miró y no aprobó** | Ya (hay dos intentándolo: Messi y Margaret Hamilton) | Sale una nota sin control, en la sección equivocada y arriba de todo | Medio día |
+| C-12 ✔ | **El semáforo deja salir solas notas que pueden identificar a un menor o a una víctima** | Ya (no se encontró ningún caso publicado todavía) | Una nota con un chico de 16 años o una víctima sale sin que la vea nadie | 3-4 h (es la lista roja: preguntar antes) |
+| C-13 ✔ | **Una foto de otro medio y de otro hecho está publicada en una nota de Policiales** | Ya | Rompe la regla de fotos en Policiales | 5 min sacarla + 2 h el freno |
+| C-14 ✔ | **Una corrección hecha sobre una nota aprobada desde el celular se deshace sola a los 3 días** | Cuando se use "Editar" sobre una nota aprobada (hoy no hay casos) | Si la corrección sacó el nombre de una víctima, el nombre vuelve | 1 h |
+| C-15 ◐ | **Si la web se congela, la farmacia de turno y el clima de las redes quedan viejos** | El lunes 12/10 si no se arregla C-1 | Se manda a la gente a una farmacia que no está de turno; el reel de clima muestra el pronóstico de ayer | 3 h + 2-3 h |
+| C-16 ◐ | **Cuando Meta contesta con error, se vuelve a armar la pieza, se gasta voz y puede salir duplicada** | Ya (el 5/10 Meta publicó aunque contestó error) | Una falla repetida puede comerse los 10 audios del día o duplicar un posteo | 1 día |
+| C-17 ◐ | **Efemérides: del 19 al 31/10 salen solas sin aprobar, y el 31/10 se acaban (también las piezas fijas)** | **19/10 y 1/11** | La efeméride deja de salir sin aviso y participá empieza a gastar 4 audios por semana | 1 h + decidir antes del 25/10 |
 
 ### C-0 · La auditoría está rompiendo notas publicadas — *Confirmado en el sitio, 8/10*
+
+> **Estado:** ✔ HECHO 8/10 · regla 108. Sólo corrige tildes, no estira, notas reparadas.
 
 **Explicado en simple.** Una vez por semana, una auditoría con IA relee lo publicado y, si encuentra un
 error chico de ortografía, lo corrige sola (regla 98). El problema es que la web vuelve a aplicar la misma
@@ -84,6 +88,8 @@ la estira de nuevo cada media hora.
 
 ### C-1 · La prueba que congela la web el lunes 12/10 — *Confirmado*
 
+> **Estado:** ✔ HECHO 8/10 · la prueba acepta una lista vacía.
+
 **Explicado en simple.** Antes de publicar, cada media hora el robot corre las pruebas: más de 1.800
 controles automáticos que revisan que nada esté roto. Si una sola falla, el robot **no publica** y la
 web se queda quieta en la última versión buena, hasta que alguien lo arregle.
@@ -108,6 +114,8 @@ Una lista vacía no es un error (quiere decir "no hay nada retirado esta semana"
 
 ### C-18 · Dos botones del celular congelan la web — *Confirmado con una simulación*
 
+> **Estado:** ✔ HECHO 8/10 · regla 112. Ya se puede tocar el feriado y la efeméride desde el celular.
+
 Hay pruebas que usan los datos **reales** del 11 y el 12 de octubre (el feriado y la efeméride), que se
 pueden cambiar desde la pestaña Fechas del celular. Se simuló en una copia: con un toque, fallan 9 pruebas
 (feriado) o 1 (efeméride), y la web se congela en la corrida siguiente.
@@ -123,6 +131,8 @@ pueden cambiar desde la pestaña Fechas del celular. Se simuló en una copia: co
 
 ### C-19 · "Publicar" sin leer en el celular — *Confirmado (auditoría del panel, 8/10)*
 
+> **Estado:** ◐ PARCIAL 8/10 · regla 120. Un tema delicado muestra el borrador antes de publicar. Queda: la firma "revisada por una persona" para lo aprobado sin leer.
+
 En "Esperan", el botón "Publicar" hace que la IA escriba la nota y, si el verificador no marca nada, la publica
 sola: nadie lee el texto (`web/public/panel/app.js:1433-1442`). Pasa justo con las notas que esperan porque
 necesitan que alguien las mire: hoy 25 de las 33 dicen "denuncia", "niño", "víctima", "adolescente" o "el menor
@@ -132,6 +142,8 @@ de". Además la nota sale firmada como **revisada por una persona** (`web/compon
   delicado y que la firma diga la verdad. 2 h. **Decisión de Hernán y Andrés.**
 
 ### C-2 · Un riesgo de seguridad del panel del celular — *Confirmado (riesgo grave)*
+
+> **Estado:** ✗ PENDIENTE · va con el panel nuevo (PANEL-NUEVO.md). Mientras tanto, ningún script de terceros en la web.
 
 El repositorio es público, así que el detalle de este punto **no se escribe acá**: está en el documento
 privado de la investigación (la página de propuestas). En resumen: hay una forma en que la llave de GitHub
@@ -143,6 +155,8 @@ del panel podría quedar expuesta.
 
 ### C-3 · Next 15 deja de recibir parches el 21/10 — *Confirmado*
 
+> **Estado:** ◐ PARCIAL 8/10 · ya está en Next 15.5.27. Queda pasar a Next 16.
+
 Está instalado Next 15.5.25 y ya salió 15.5.27. `npm audit` en `web/` da 4 avisos (postcss, sharp por
 librsvg y source-map-js altos; next moderado). Además `web/package.json` dice React 18, pero lo que
 corre es React 19.2 (el que trae Next adentro).
@@ -153,6 +167,8 @@ corre es React 19.2 (el que trae Next adentro).
 
 ### C-4 · Ubuntu 26 en GitHub Actions desde el 19/10 — *A confirmar*
 
+> **Estado:** ◐ PARCIAL 8/10 · los robots quedaron fijos en Ubuntu 24.04. Queda probar el 26 a propósito.
+
 `ubuntu-latest` pasa a la versión 26. Además los registros ya avisan que `actions/checkout@v4`,
 `setup-node@v4` y `cache@v4` usan Node 20, que GitHub está retirando. (Antes era **Acc-v4**.)
 
@@ -161,6 +177,8 @@ corre es React 19.2 (el que trae Next adentro).
   y `sharp`, que traen binarios.
 
 ### C-5 · Un archivo de datos roto se lee como vacío — *Confirmado*
+
+> **Estado:** ✔ HECHO 8/10 · regla 110.
 
 `leerJson` trata igual "no existe" y "está roto". Si `web/data/archivo.json` se rompe (ya pasó el 25/09
 con uno subido a mano), la corrida arranca como si no hubiera archivo y **guarda uno casi vacío**: se
@@ -175,6 +193,8 @@ Ninguna prueba revisa esos dos archivos.
   incluía): es el rescate justo para este caso.
 
 ### C-6 · El tope de 2.500 notas, y guardar el 100 % año tras año — *Confirmado; decidido el 8/10*
+
+> **Estado:** ◐ PARCIAL 8/10 · regla 111. Tope en 3.500 y histórico por mes. Queda: armar las notas viejas en el momento (etapa 2 del plan de arquitectura).
 
 **Qué es el tope.** Es un número que **puso el propio proyecto** en el código (`web/lib/archivo.js:185-191`):
 no es un impuesto ni una regla de nadie de afuera. Se puso por un límite real de Cloudflare Pages, que
@@ -216,6 +236,8 @@ demás. Hoy no se perdió ninguna nota: el archivo empezó a mediados de septiem
 
 ### C-7 · Pruebas atadas a los datos de efemérides y feriados — *Confirmado con una simulación*
 
+> **Estado:** ✔ HECHO 8/10 · regla 112.
+
 Al principio parecían 2; son **unas 20 pruebas en 8 archivos**. Se simuló en una copia lo que va a pasar:
 
 - **Cuando se arme noviembre** (candidatas nuevas, días nuevos): fallan `exportar-efemerides.test.mjs:50`,
@@ -239,6 +261,8 @@ la investigación. 2 h más, junto con C-18.
 
 ### C-8 · Los datos comerciales, antes del primer mensaje — *Confirmado*
 
+> **Estado:** ✗ PENDIENTE · antes del primer mensaje a un comercio.
+
 `comercial/datos/comercios.json` está en el repositorio público. Sus 145 fichas tienen el campo
 `comercial` (`contactado`, `confirmadoPorElComercio`, `notas`). Hoy está vacío en todas, así que no se
 ve nada; pero el día que se empiece a vender, quién dijo que sí y quién dijo que no queda a la vista de
@@ -249,6 +273,8 @@ todos. Además hay algún correo personal que vino de OpenStreetMap.
 - El texto de baja (Ley 25.326) ya va al pie de los mensajes comerciales (`PIE`): esa parte está hecha.
 
 ### C-9 · La etiqueta de IA de Meta en los reels — *Confirmado; choca con una regla*
+
+> **Estado:** ✔ HECHO 8/10 · regla 114 (aviso en texto). Queda probar el campo is_ai_generated de Instagram.
 
 Meta pide la etiqueta "Información de IA" para audio realista hecho con IA, y da de ejemplo justo "un
 reel narrado con una voz de IA realista". El criterio de redes **prohíbe** decir que es IA y el código
@@ -272,6 +298,8 @@ no marca nada.
 
 ### C-10 · Lo rojo aprobado por una persona se publica — *Confirmado; no se toca sin preguntar*
 
+> **Estado:** ✔ HECHO 8/10 · regla 119.
+
 Las únicas notas que no salen **nunca**, ni aprobadas por una persona, son las listas de sepelios. Algo en
 rojo (un menor, una víctima) sí sale si alguien lo aprueba, y el panel de la PC acepta esa aprobación
 aunque el botón esté escondido. El criterio dice "no se publica nunca, ni por error".
@@ -281,6 +309,8 @@ aunque el botón esté escondido. El criterio dice "no se publica nunca, ni por 
   **lo deciden Hernán y Andrés antes**.
 
 ### C-11 · Las pistas que salen solas — *Confirmado*
+
+> **Estado:** ✗ PENDIENTE · hay que definir cómo se cuentan los medios argentinos.
 
 La regla 101 ("con 3 medios, una pista sale sola") es de ustedes. Lo que falla es cómo se aplica:
 
@@ -301,6 +331,8 @@ La regla 101 ("con 3 medios, una pista sale sola") es de ustedes. Lo que falla e
 - **Mientras tanto:** cerrar a mano esas dos pistas desde el celular si no quieren que salgan.
 
 ### C-12 · Huecos en el semáforo — *Confirmado con el código; no se toca sin preguntar*
+
+> **Estado:** ✔ HECHO 8/10 · regla 118 (autorizado por Hernán y Andrés).
 
 Se probó la función del semáforo con frases inventadas. Todas estas salen en **verde**, o sea, se publican
 solas:
@@ -330,6 +362,8 @@ sola si viene de un medio local. No se encontró ningún caso publicado todavía
 
 ### C-13 · Foto de otro medio en Policiales — *Confirmado, publicado*
 
+> **Estado:** ✔ HECHO 8/10 · regla 109.
+
 La nota `fd2y4d` ("Choque frontal en la Ruta 226 deja tres heridos", Policiales) tiene una foto de
 *El Eco de Tandil* cargada a mano el 3/10, sacada de otra nota de ese diario sobre **otros** accidentes, y
 sin decir que es de archivo. El panel muestra el cartel "Policiales sin fuente oficial: no lleva foto real",
@@ -343,6 +377,8 @@ pero igual deja subirla. Además, si una nota pasa a Policiales después, conser
 
 ### C-14 · Una corrección que se deshace sola — *Confirmado (latente)*
 
+> **Estado:** ✔ HECHO 8/10 · regla 111.
+
 Cuando una nota aprobada desde el celular deja de estar en la ingesta (~72 horas), se rearma con el
 título, la bajada y el cuerpo de la aprobación, y eso pisa la corrección hecha después en
 `correcciones.json`. Si la corrección había sacado el nombre de una víctima, el nombre vuelve. Hoy no hay
@@ -355,6 +391,8 @@ ningún caso; alcanza con usar "Editar" sobre una nota ya aprobada.
 
 ### C-15 · La web congelada deja datos viejos en la web y en las redes — *Confirmado*
 
+> **Estado:** ◐ PARCIAL 8/10 · regla 117. Las redes ya no hablan del clima ni de la farmacia de ayer. Queda la parte de la web.
+
 - **En la web:** el turno de farmacia se fija al armar el sitio (el clima y el dólar se actualizan en el
   navegador; la farmacia no). Si la web se congela pasadas las 8:30, muestra la farmacia de ayer. El pie
   dice la hora del armado, sin la fecha (`generar-datos.mjs:959-967`, `web/app/layout.js:120-130`).
@@ -366,6 +404,8 @@ ningún caso; alcanza con usar "Editar" sobre una nota ya aprobada.
   tiene más de 2 horas, no armar clima ni repasos y avisar; elegir por fecha. 2-3 h.
 
 ### C-16 · Reintentos que gastan voz y duplican — *Confirmado*
+
+> **Estado:** ◐ PARCIAL 8/10 · regla 123. Un mismo audio no se pide dos veces. Queda preguntar a Meta antes de reintentar y el tope por pieza.
 
 El reloj vuelve a pedir toda pieza que no figura publicada, y el plan **la arma de cero y pide la voz otra
 vez** (`redes/piezas.mjs:302-308`, `reels/plan.mjs:583`). La voz se pide antes de ffmpeg: si falla ffmpeg,
@@ -381,6 +421,8 @@ reusar el mp4 de la corrida anterior (como ya hace "Reintentar"); tope de 2 pedi
 día; prueba con un Meta simulado que publica y contesta error.
 
 ### C-17 · Se acaban las efemérides y las piezas fijas el 31/10 — *Confirmado, con fecha*
+
+> **Estado:** ◐ PARCIAL 8/10 · el vigilante avisa (desde el 20 y con menos de 7 días) y se corrigieron los documentos. Queda armar noviembre el día 20 y decidir las fijas.
 
 - `web/data/efemerides-piezas.json` llega hasta el 31/10: desde el 1/11 "Un día como hoy" no se programa,
   y no queda anotado como faltante.
@@ -587,7 +629,7 @@ día; prueba con un Meta simulado que publica y contesta error.
   un control corto (JSON válido, motivo/cuándo/quién, SEO); (b) guardar en caché un "sello" del código
   y correr las pruebas largas solo si el código cambió. Se puede combinar con A1.
 
-**V2-20 · Permisos de los workflows** — *Confirmado*
+**V2-20 · Permisos de los workflows** — *Confirmado* — **◐ PARCIAL 8/10 · permisos hechos; faltan fijar las acciones**
 - `armado-vacio.yml` y `pruebas-otra-hora.yml` no dicen `permissions:` y heredan lo del repositorio;
   las acciones van por etiqueta (`@v4`), no fijadas; `auditar-redes.yml:64` mete un dato escrito en el
   comando.
@@ -661,13 +703,13 @@ día; prueba con un Meta simulado que publica y contesta error.
 - Hoy hay un solo `feed.xml` (título, enlace, fecha, sección, bajada). Un feed por sección, con el cuerpo
   y validado. 1 día.
 
-**V2-13 · El feed y las imágenes para Google** — *Discutible*
+**V2-13 · El feed y las imágenes para Google** — *Discutible* — **◐ PARCIAL 8/10 · el feed ya no está bloqueado y se sacó el Host**
 - `robots.txt` bloquea `/feed.xml` **a propósito** (comentario en `web/app/robots.js:29-31`: "el feed
   es para programas, no para el índice"). Google sí usa los feeds para descubrir notas: revisar esa
   decisión.
 - Cada nota declara una sola imagen (1200×630); Google recomienda tres proporciones (16:9, 4:3, 1:1).
 
-**V2-15 · Accesibilidad** — *Confirmado*
+**V2-15 · Accesibilidad** — *Confirmado* — **◐ PARCIAL 8/10 · enlace "Saltar al contenido" hecho**
 - No hay enlace "saltar al contenido" y el texto alternativo de cada foto es el título de la nota. Lo
   demás está bien (landmarks, `lang="es-AR"`, contraste). Agregar el enlace y sacar el texto
   alternativo del epígrafe. 2 h.
@@ -790,7 +832,7 @@ las páginas de Google desde este entorno: los requisitos de Google salen de bú
 - **Eso es lo que Google castiga como "contenido a escala sin aporte".** Desde agosto de 2026 Google mide todo
   el dominio junto: las notas flojas arrastran a las buenas.
 
-**S-1 · Riesgo de "contenido a escala"** — *Confirmado · CRÍTICO* (amplía V2-11 y W-5)
+**S-1 · Riesgo de "contenido a escala"** — *Confirmado · CRÍTICO* (amplía V2-11 y W-5) — **◐ PARCIAL 8/10 · noindex a las 296 sin cuerpo; falta lo de una sola fuente (jefe editor)**
 1. `noindex` ya mismo para las 296 páginas sin cuerpo (W-5).
 2. **Lo nacional (decidido el 8/10): no hace falta que todo tenga un ángulo de Balcarce.** El filtro es otro:
    - **Se ofrece a Google** lo que tiene **varias fuentes** y una nota **única** (síntesis más un dato verificado
@@ -1033,11 +1075,11 @@ en pasado ni incumplimientos de `promesa` en lo publicado; la tabla de números 
 - "Un hombre mató a su vecino." pasa porque otra oración dice "La policía…" (`verificar.mjs:383`).
   Mirarlo oración por oración. 1 h.
 
-**I-4 · Una foto sin evaluación cuenta como "sin marca y sin menor"** — *Confirmado · ALTA*
+**I-4 · Una foto sin evaluación cuenta como "sin marca y sin menor"** — *Confirmado · ALTA* — **✔ HECHO 8/10 · regla 115**
 - Si la IA no devuelve la evaluación de una foto, se puede elegir (`ingesta/fotos.mjs:196-233`); es más
   probable con Groq. Elegir solo fotos marcadas explícitamente sin marca y sin menor. 1 h.
 
-**I-6 · Una pista con un chico pasa al archivo público** — *Confirmado · MEDIA*
+**I-6 · Una pista con un chico pasa al archivo público** — *Confirmado · MEDIA* — **✔ HECHO 8/10 · regla 116**
 - Antes de guardar una pista en `pistas.json` (público, sin cifrar) solo se mira la lista roja: "Un nene de
   6 años…" pasa (`ingesta/pistas.mjs:33`). Sumar menores y edad. 30 min.
 
@@ -1079,7 +1121,7 @@ salieron solas, contra su fuente (20 minutos).
   escribió" (`web/components/metadatos.js:75-78`, `web/lib/archivo.js:146-154`). Marcarlas como escritas
   con IA. 1 h.
 
-**W-5 · 296 páginas del archivo sin cuerpo** — *Confirmado · ALTA*
+**W-5 · 296 páginas del archivo sin cuerpo** — *Confirmado · ALTA* — **◐ PARCIAL 8/10 · regla 113 (noindex hecho)**
 - Del 18 al 25/09, antes de la regla. 194 firman "Texto de \<medio\>" (es el resumen copiado de la
   fuente) y 3 son cotizaciones del dólar. No están en el sitemap pero se pueden indexar, y contradicen
   `/quienes-somos`. Ponerles `noindex` y sacar del archivo las que no salieron en redes. 2 h.
@@ -1088,7 +1130,7 @@ salieron solas, contra su fuente (20 minutos).
 - Apuntan a una nota que ya no tiene página (`web/lib/repetidas.js:136-145`; ejemplo `t3k0l2` → `823fzo`).
   Redirigir a otra del grupo o a la sección. 3 h.
 
-**W-7 · El clima de respaldo inventa la sensación térmica** — *Confirmado · MEDIA*
+**W-7 · El clima de respaldo inventa la sensación térmica** — *Confirmado · MEDIA* — **✔ HECHO 8/10**
 - Con met.no se muestra "Sensación térmica" igual a la temperatura; la regla dice que no se inventa
   (`ingesta/ingesta.mjs:904-906`, `web/components/clima-vivo.js:140`). 30 min.
 
@@ -1130,7 +1172,7 @@ ninguna nota; la guardia del 20 % va también ahí.
 
 ### Redes (revisión del 8/10)
 
-**R-1 · Crear voces puede borrar las de producción** — *Confirmado · ALTA*
+**R-1 · Crear voces puede borrar las de producción** — *Confirmado · ALTA* — **✔ HECHO 8/10 · regla (crear voces)**
 - El modo `borrar` de "Crear voces" borra cualquier voz, también las dos que usan las piezas (sus ids
   vienen precargados). Una voz borrada no vuelve igual. Los modos que crean gastan cupo y el formulario no
   lo dice (`reels/crear-voces.mjs:108-116`). Pedir un texto de confirmación y decir cuántos audios gasta. 1 h.
@@ -1197,7 +1239,7 @@ mismo cambio `pruebas/piezas-fijas.test.mjs:67-73`. Nada más sobra en `reels/` 
   5 minutos). La persona ve "falló". Que el celular repita si salió "cancelada" y Pistas en otro candado.
   Une P-5 y R-2. 2-3 h.
 
-**A-4 · Los workflows que se crearon para avisar no le avisan a nadie** — *Confirmado · ALTA*
+**A-4 · Los workflows que se crearon para avisar no le avisan a nadie** — *Confirmado · ALTA* — **✔ HECHO 8/10 · regla 124**
 - `armado-vacio.yml` y `pruebas-otra-hora.yml` (creados después del congelamiento del 4/10), Auditoría IA y
   Pistas no los mira el vigilante (`redes/vigilar.mjs:621,637`). Si fallan, solo llega un correo a la
   cuenta de GitHub. Sumarlos. 1 h (es la lista concreta de A7).
@@ -1219,10 +1261,10 @@ mismo cambio `pruebas/piezas-fijas.test.mjs:67-73`. Nada más sobra en `reels/` 
 - Las corridas que dispara Actualizar la web y los horarios propios de GitHub lo tapan
   (`vigilar.mjs:300-308`). Mirar quién disparó cada corrida. Une R-7. 1 h.
 
-**M-4 · `auditoria.yml` no tiene tope de tiempo** — *Confirmado · MEDIA*
+**M-4 · `auditoria.yml` no tiene tope de tiempo** — *Confirmado · MEDIA* — **✔ HECHO 8/10 · regla 124**
 - Una corrida colgada gastaría hasta 6 horas. Agregar `timeout-minutes`. 5 min.
 
-**M-5 · Celulares personales de terceros en un documento público** — *Confirmado · MEDIA*
+**M-5 · Celulares personales de terceros en un documento público** — *Confirmado · MEDIA* — **✔ HECHO 8/10**
 - `docs/historico/HISTORIA.md:200` tiene dos celulares personales. Contradice la regla del propio repo
   ("nunca un celular personal"). Borrarlos (5 min); quedan en la historia de git.
 
@@ -1259,7 +1301,7 @@ del minuto 0 y tienen tope de tiempo.
 
 ### Pruebas (revisión del 8/10)
 
-**T-1 · Separar "guardia de datos" de "pruebas de código"** — *Confirmado · ALTA* (concreta A5)
+**T-1 · Separar "guardia de datos" de "pruebas de código"** — *Confirmado · ALTA* (concreta A5) — **◐ PARCIAL 8/10 · regla 112 (datos fijos); falta separar el control de datos de las pruebas**
 - **¿Hace falta correr todas las pruebas cada media hora? No.** Lo que cambia cada media hora son los datos,
   no el código. Las 1.840 pruebas revisan el código: alcanza con correrlas cuando alguien cambia código y
   una vez por noche. Cada media hora basta con un control corto de que los datos estén sanos.
@@ -1278,11 +1320,11 @@ del minuto 0 y tienen tope de tiempo.
 - La prueba recorre la lista tal como está: si alguien borra un término, su prueba desaparece con él. De 34
   términos, solo ~26 están escritos fijos en las pruebas. Una prueba con la lista completa a mano. 30 min.
 
-**T-3 · "Pruebas con otra hora" falló el 5/10 y nadie se enteró** — *Confirmado · MEDIA* (va con A-4)
+**T-3 · "Pruebas con otra hora" falló el 5/10 y nadie se enteró** — *Confirmado · MEDIA* (va con A-4) — **✔ HECHO 8/10 · regla 124**
 - Falló al instalar; el vigilante no lo mira. Lo mismo el panel del celular: 6 fallas en las últimas 30
   corridas.
 
-**T-4 · Falta declarar la versión de Node** — *Confirmado · MEDIA*
+**T-4 · Falta declarar la versión de Node** — *Confirmado · MEDIA* — **✔ HECHO 8/10 · regla 124**
 - Con Node 22 se cancelan 6 pruebas (en GitHub, con Node 24, pasan). Poner `"engines": {"node": ">=24"}`.
   10 min.
 
