@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T06:01:30.581Z",
+ "generado": "2026-10-08T06:31:43.694Z",
  "portada": 55,
- "archivo": 1066,
+ "archivo": 1065,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-08T06:01:30.607Z",
+  "generado": "2026-10-08T06:31:43.736Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,13 +95,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "l5uou9",
-      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
-      "seccion": "Fútbol"
-     },
      {
       "id": "2i73nb",
       "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
@@ -111,6 +106,11 @@
       "id": "28zqic",
       "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "seccion": "Fútbol"
      },
      {
       "id": "1d48tdj",
@@ -126,11 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 55,
     "notas": [
      {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
       "seccion": "Fútbol"
      },
      {
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
-      "seccion": "Fútbol"
-     },
      {
       "id": "pvwlvg",
       "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1n6yxr",
+      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+      "seccion": "Fútbol"
      },
      {
       "id": "kwpmcv",
