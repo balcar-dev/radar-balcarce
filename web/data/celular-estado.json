@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T04:01:58.104Z",
- "portada": 55,
- "archivo": 1063,
+ "generado": "2026-10-08T04:31:28.757Z",
+ "portada": 57,
+ "archivo": 1064,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-08T04:01:58.147Z",
+  "generado": "2026-10-08T04:31:28.782Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,11 +95,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 49,
     "notas": [
      {
-      "id": "l5uou9",
-      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
+      "id": "woerbj",
+      "titulo": "La Selección Argentina se mantiene segunda en el ranking FIFA",
       "seccion": "Fútbol"
      },
      {
@@ -126,11 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 48,
     "notas": [
      {
-      "id": "woerbj",
-      "titulo": "La Selección Argentina se mantiene segunda en el ranking FIFA",
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
       "seccion": "Fútbol"
      },
      {
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 48,
     "notas": [
-     {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
-      "seccion": "Fútbol"
-     },
      {
       "id": "ajdznk",
       "titulo": "Boca arma un equipo mixto para visitar a Instituto",
@@ -178,6 +173,11 @@
       "id": "1793nst",
       "titulo": "Nicolás Lahitte repasa la historia del mural de Messi",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "seccion": "Balcarce"
      }
     ]
    }
