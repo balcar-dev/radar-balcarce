@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T07:01:37.959Z",
- "portada": 52,
+ "generado": "2026-10-08T07:31:13.185Z",
+ "portada": 50,
  "archivo": 1064,
- "esperandoCuerpo": 5,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-08T07:01:37.988Z",
+  "generado": "2026-10-08T07:31:13.211Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
-      "seccion": "Balcarce"
-     },
      {
       "id": "l5uou9",
       "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
+      "seccion": "Balcarce"
      },
      {
       "id": "28zqic",
@@ -113,9 +113,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "10cpafd",
-      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
-      "seccion": "Cultura y agenda"
+      "id": "1d48tdj",
+      "titulo": "Detectan maquinaria pesada en caminos rurales de El Verano",
+      "seccion": "Agro"
      }
     ]
    },
@@ -126,27 +126,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 48,
     "notas": [
-     {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
-     },
      {
       "id": "px37p5",
       "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
       "seccion": "Fútbol"
      },
      {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "y4gp3v",
       "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "10cpafd",
+      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 46,
     "notas": [
      {
-      "id": "1boxf4v",
-      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
-      "seccion": "Balcarce"
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "seccion": "Fútbol"
      },
      {
       "id": "pvwlvg",
@@ -170,13 +170,13 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1n6yxr",
-      "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-      "seccion": "Fútbol"
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
+      "seccion": "Balcarce"
      },
      {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+      "id": "e3ix5w",
+      "titulo": "Advierten por una estafa de TelePASE en la Autovía 226",
       "seccion": "Balcarce"
      }
     ]

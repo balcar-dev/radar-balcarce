@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T07:01:37.959Z",
+  "generado": "2026-10-08T07:31:13.185Z",
   "notas": [
     {
       "id": "futbolpartidosliga20261009",
@@ -606,60 +606,6 @@
       }
     },
     {
-      "id": "7r5ucc",
-      "titulo": "Vecinos advierten sobre el robo de flexibles de gas",
-      "copete": "Registran un incremento en la sustracción de conexiones de cobre junto a los medidores domiciliarios en Balcarce. Un jardín de infantes debió suspender las clases tras un episodio similar.",
-      "cuerpo": "Vecinos de Balcarce advierten sobre una modalidad delictiva centrada en la sustracción de flexibles de cobre ubicados junto a los medidores de gas. Un comercio del rubro reportó un incremento en la demanda de reemplazos tras vender tres unidades en una sola jornada y otra el día anterior. La motivación detrás de estos episodios radica en la cotización del cobre para su comercialización como material reciclable, según indicó un trabajador del sector.\n\nEsta situación generó antecedentes recientes en el distrito. El martes, el personal del Jardín de Infantes N° 905 detectó olor a gas al faltar el flexible del medidor, lo que motivó la suspensión preventiva de las actividades escolares durante el turno mañana hasta la llegada de operarios de la empresa Camuzzi para asegurar el inmueble.\n\nLa extracción de estos componentes genera riesgos por la liberación de combustible. Como alternativa, el mercado ofrece conexiones de acero recubiertas con plástico que carecen de valor para la reventa ilegal, valuadas en unos 44.000 pesos frente a los 32.000 pesos de las piezas tradicionales.",
-      "guion": "Vecinos advierten sobre el robo de flexibles de gas",
-      "seccion": "Policiales",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T22:52:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T23:01:35.401Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Sustracción de flexibles de cobre en medidores de gas",
-        "Venta de repuestos aumentó en un comercio local",
-        "Jardín de Infantes N° 905 suspendió clases el martes",
-        "Alternativas de acero para evitar nuevos robos"
-      ],
-      "noConfirmado": [
-        "No hay información oficial sobre la cantidad total de hechos registrados en la ciudad",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Vecinos de Balcarce advierten sobre el robo de flexibles de cobre en medidores de gas. Un comercio local reportó mayores ventas de repuestos y un jardín de infantes debió suspender clases por un faltante.",
-      "etiquetas": [
-        "gas",
-        "robos",
-        "Balcarce",
-        "medidores"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
-          "fecha": "2026-10-07T22:52:46.000Z",
-          "oficial": false,
-          "aporte": "Detalló los robos de flexibles de gas, la venta de repuestos y el caso del jardín de infantes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "vecinos-advierten-sobre-el-robo-de-flexibles-de-gas"
-    },
-    {
       "id": "1boxf4v",
       "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
       "copete": "Finalizaron los trabajos de señalización horizontal en un tramo clave para la circulación vehicular. Automovilistas y transportistas habían exigido la mejora debido a las dificultades para transitar de noche.",
@@ -670,11 +616,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/demarcaron-la-ruta-55-entre-pieres-y-balcarce-834",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T22:50:01.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-07T23:01:35.401Z",
+      "sinFecha": true,
       "visto": "2026-10-07T23:01:35.401Z",
-      "relevancia": 78,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -732,6 +678,91 @@
       "foto": {
         "archivo": "fotos-notas/1boxf4v.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1d48tdj",
+      "titulo": "Detectan maquinaria pesada en caminos rurales de El Verano",
+      "copete": "El Comando de Prevención Rural labró una infracción por el paso de equipos agrícolas en zonas afectadas por las precipitaciones. El municipio recordó las restricciones vigentes.",
+      "cuerpo": "Personal del Comando de Prevención Rural interceptó maquinaria agrícola en el paraje El Verano debido a la circulación de equipos de gran porte por caminos que requerían especial cuidado tras las lluvias. La actuación se rige por la Ordenanza Municipal Nº 43/16, que establece restricciones para preservar la red vial rural y evitar daños en la superficie.\n\nEl municipio advirtió que los operativos continuarán en distintos sectores del distrito para evitar el deterioro de los caminos y el consecuente gasto de recursos en nuevos trabajos de mantenimiento.",
+      "guion": "Detectan maquinaria pesada en caminos rurales de El Verano",
+      "seccion": "Agro",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45029-detectan-maquinaria-pesada-circulando-por-caminos-rurales-afectados-por-las-lluvias/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T22:01:34.358Z",
+      "sinFecha": true,
+      "visto": "2026-10-07T22:01:34.358Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Interceptan maquinaria pesada en el paraje El Verano.",
+        "El operativo estuvo a cargo del Comando de Prevención Rural.",
+        "La medida responde a restricciones por las lluvias recientes.",
+        "El municipio ratificó la continuidad de los controles viales."
+      ],
+      "seSabe": [
+        "El procedimiento se realizó en la zona del paraje El Verano.",
+        "Personal del Comando de Prevención Rural estuvo a cargo de la intervención.",
+        "La Ordenanza Municipal Nº 43/16 regula el tránsito tras las precipitaciones, según informó el municipio.",
+        "Las autoridades ratificaron la continuidad de los controles viales."
+      ],
+      "noConfirmado": [
+        "No se informaron las multas exactas aplicadas en esta ocasión.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Detectan maquinaria pesada circulando por caminos rurales de El Verano que requerían cuidado tras las lluvias. El Comando de Prevención Rural realizó el procedimiento y el municipio ratificó la continuidad de los controles.",
+      "etiquetas": [
+        "caminos rurales",
+        "El Verano",
+        "Comando de Prevención Rural",
+        "lluvias",
+        "maquinaria pesada"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45029-detectan-maquinaria-pesada-circulando-por-caminos-rurales-afectados-por-las-lluvias/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el operativo del CPR en El Verano y las restricciones de la Ordenanza Municipal Nº 43/16."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "jul3w9",
+          "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
+          "fecha": "2026-09-29T12:08:15.000Z",
+          "ruta": "/nota/infraccionan-a-un-tractor-en-caminos-rurales-tras-las-lluvias-jul3w9"
+        },
+        {
+          "id": "3exxze",
+          "titulo": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
+          "fecha": "2026-10-07T20:27:12.000Z",
+          "ruta": "/nota/el-cpr-multa-a-maquinaria-agricola-por-circular-en-caminos-de-el-3exxze"
+        },
+        {
+          "id": "rwhqdu",
+          "titulo": "El municipio labra una infracción por circular con maquinaria pesada",
+          "fecha": "2026-10-07T19:46:05.000Z",
+          "ruta": "/nota/el-municipio-labra-una-infraccion-por-circular-con-maquinaria-pesada-rwhqdu"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "detectan-maquinaria-pesada-en-caminos-rurales-de-el-verano",
+      "foto": {
+        "archivo": "fotos-notas/1d48tdj.jpg",
+        "credito": "Foto: Diario La Vanguardia"
       }
     },
     {
@@ -1223,16 +1254,14 @@
       "guion": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/nueva-infraccion-por-circular-con.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T20:06:42.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T04:31:08.770Z",
-      "relevancia": 100,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1304,7 +1333,6 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Diario La Vanguardia",
         "Mi8 (Canal 8 Mar del Plata)"
@@ -1445,17 +1473,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45024-sotelo-defendio-las-cuentas-de-la-cooperativa-y-apunto-contra-la-politica-no-se-van-a-meter-por-la-ventana/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-07T17:31:11.484Z",
       "sinFecha": true,
       "visto": "2026-10-07T17:31:11.484Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
+      "temas": [],
       "como": "automatica",
       "seSabe": [
         "Mario Aníbal Sotelo y Julián Pinchetti visitaron los estudios de Radio Líder Balcarce Streaming",
@@ -1525,11 +1551,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45023-la-pelea-por-la-lapicera-lla-y-el-radicalismo-y-el-desafio-de-una-eventual-alianza/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-07T16:31:27.099Z",
       "sinFecha": true,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2047,7 +2073,6 @@
       "guion": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
@@ -2057,7 +2082,7 @@
       "fecha": "2026-10-07T14:38:16.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T16:31:27.099Z",
-      "relevancia": 97,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2121,7 +2146,6 @@
         "La Noticia 1",
         "Diputados Bonaerenses",
         "La Nación",
-        "Mi8 (Canal 8 Mar del Plata)",
         "Punto Noticias",
         "0223 (Mar del Plata)",
         "Agencia DIB",
@@ -2227,7 +2251,6 @@
       "guion": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/impulsan-un-punto-digital-movil-para.html",
@@ -2235,7 +2258,7 @@
       "fecha": "2026-10-07T14:22:28.232Z",
       "sinFecha": false,
       "visto": "2026-10-08T02:01:19.757Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2474,7 +2497,6 @@
       "guion": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Diario La Vanguardia"
       ],
@@ -2483,7 +2505,7 @@
       "fecha": "2026-10-07T13:37:09.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T15:31:08.051Z",
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2646,9 +2668,9 @@
         "La Tecla",
         "Zona Norte Diario",
         "El Eco de Tandil",
-        "Noticias Agropecuarias",
         "Agencia DIB",
         "El Día",
+        "Noticias Agropecuarias",
         "Infobae"
       ],
       "enlace": "https://www.latecla.info/170241-la-justicia-ordeno-preservar-los-datos-sobre-las-tierras-rurales-bonaerenses",
@@ -2814,66 +2836,6 @@
       }
     },
     {
-      "id": "1lxw5wx",
-      "titulo": "Detienen a un hombre tras ser atrapado dentro de una casa",
-      "copete": "Familiares del dueño de una vivienda redujeron al sospechoso en la zona de calle 21 y 12. La policía lo trasladó a la Unidad Penal de Batán.",
-      "cuerpo": "Un hombre fue aprehendido el martes por la tarde tras ser encontrado en el interior de una vivienda situada en las inmediaciones de calle 21 y 12, según informó un medio local. El llamado al servicio de emergencias 911 ingresó a las 17.15, cuando alertaron que vecinos retenían a un individuo.\n\nPersonal de la Estación de Policía Comunal llegó al lugar y se entrevistó con el propietario, quien indicó que sus familiares sorprendieron al sujeto dentro del inmueble, lo persiguieron y redujeron hasta la llegada de los uniformados. Durante la requisa, los agentes hallaron entre sus prendas un teléfono celular marca Motorola con carcasa amarilla, reconocido por la víctima.\n\nEl inmueble no tenía traba en el ingreso, por lo que el sospechoso accedió sin provocar daños. La medida fue avalada por el magistrado De la Canale, quien dispuso la formación de una causa y el traslado del acusado a la Unidad Penal número 44 de Batán. De acuerdo con los datos recabados, el individuo registra antecedentes penales por episodios de características similares.",
-      "guion": "Detienen a un hombre tras ser atrapado dentro de una casa",
-      "seccion": "Policiales",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/detuvieron-a-un-hombre-tras-ser-encontrado-dentro-de-una-vivienda/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-07T13:14:35.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T14:32:57.915Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ocurrió el martes por la tarde en calle 21 y 12",
-        "Familiares del dueño redujeron al sospechoso",
-        "Secuestraron un celular y lo trasladaron a Batán",
-        "El aprehendido tiene antecedentes penales"
-      ],
-      "seSabe": [
-        "El procedimiento policial se realizó el martes por la tarde en calle 21 y 12",
-        "El llamado al 911 se registró a las 17.15",
-        "El sospechoso fue retenido por familiares del propietario",
-        "La policía secuestró un teléfono celular Motorola con carcasa amarilla",
-        "Intervino el fiscal De la Canale y el acusado fue alojado en la Unidad Penal 44 de Batán"
-      ],
-      "noConfirmado": [
-        "Los detalles sobre la identidad del aprehendido y la tipificación exacta de la causa judicial",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un hombre fue aprehendido tras ser sorprendido por familiares del propietario dentro de una vivienda en calle 21 y 12. La policía secuestró un celular y trasladó al sospechoso a la Unidad Penal de Batán.",
-      "etiquetas": [
-        "policiales",
-        "aprehendido",
-        "policia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/detuvieron-a-un-hombre-tras-ser-encontrado-dentro-de-una-vivienda/",
-          "fecha": "2026-10-07T13:14:35.000Z",
-          "oficial": false,
-          "aporte": "Detalles del procedimiento policial, la ubicación, el secuestro del celular y el traslado a Batán"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "detienen-a-un-hombre-tras-ser-atrapado-dentro-de-una-casa"
-    },
-    {
       "id": "siahkq",
       "titulo": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
       "copete": "El conjunto femenino de la Escuela Municipal de Básquet disputó varios encuentros en el certamen Sporting Rosa. La competencia combinó el deporte con la concientización sobre el cáncer de mama.",
@@ -2881,17 +2843,17 @@
       "guion": "Las Correcaminos participan de un torneo de básquet en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/07/gran-actuacion-de-las-correcaminos-en-mar-del-plata/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T13:06:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T13:31:19.995Z",
-      "relevancia": 97,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -3331,7 +3293,7 @@
       "fecha": "2026-10-07T11:14:07.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T21:02:11.967Z",
-      "relevancia": 56,
+      "relevancia": 52,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3501,16 +3463,17 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Brújula 24",
-        "Infoeme",
-        "ANDigital"
+        "ANDigital",
+        "Infoeme"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/07/la-industria-y-la-construccion-crecieron-en-agosto-pero-cayeron-en-la-comparacion-con-el-ano-pasado/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-07T03:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-07T21:02:11.967Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3869,15 +3832,14 @@
       "guion": "Organizan una caminata religiosa hacia la ermita local",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45015-invitan-a-participar-de-una-peregrinacion-hacia-la-ermita-de-la-virgen-del-rosario-de-san-nicolas/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-06T22:31:23.096Z",
-      "sinFecha": false,
+      "sinFecha": true,
       "visto": "2026-10-06T22:31:23.096Z",
-      "relevancia": 81,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4014,7 +3976,7 @@
       "id": "1uh42rm",
       "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "copete": "El Relevamiento de Expectativas de Mercado proyecta una contracción del Producto Bruto Interno en el tercer trimestre y un aumento del desempleo. El dato oficial del INDEC se conocerá el próximo martes.",
-      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
+      "cuerpo": "El Banco Central dio a conocer el Relevamiento de Expectativas de Mercado, en el cual las consultoras estimaron que la inflación de septiembre se ubicó en 1,9 por ciento. Las proyecciones también advierten que el Producto Bruto Interno se contrajo 1 por ciento en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en en el tercer trimestre y la economía ingresaría en una recesión técnica.\n\nEn paralelo, el tipo de cambio proyectado para diciembre se ubicó en 1.614 pesos por dólar.\n\nPara el cierre de 2026, los analistas prevén una subida de precios acumulada de 30 por ciento.",
       "guion": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
       "seccion": "Economía",
       "medios": [
@@ -4282,68 +4244,6 @@
         "archivo": "fotos-notas/1uu12lc.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
       }
-    },
-    {
-      "id": "367w6m",
-      "titulo": "Secuestran un auto con pedido de captura y armas en operativos",
-      "copete": "Hallan un vehículo robado en Balcarce y armas en Mar del Plata durante procedimientos por el hurto a un hombre fallecido.",
-      "cuerpo": "Personal de la Comisaría Primera llevó a cabo operativos en Balcarce y Mar del Plata vinculados al hurto de pertenencias de un hombre de 76 años que falleció. En un inmueble local, los efectivos hallaron un Renault Mégane que poseía pedido de secuestro activo desde junio por un delito automotor. En tanto, en un domicilio marplatense incautaron herramientas, teléfonos, repuestos y motores de aeromodelismo, junto a una escopeta sin cañón y numeración limada.\n\nLa investigación está a cargo de la UFI N.º 4, cuyo titular avaló las incautaciones recientes y notificó a los implicados, sin ordenar restricciones a su libertad.",
-      "guion": "Secuestran un auto con pedido de captura y armas en operativos",
-      "seccion": "Policiales",
-      "medios": [
-        "Radio Gabal (FM 104.1)",
-        "El Diario Balcarce",
-        "Infórmese Primero (FM 104.9)",
-        "Infobrisas (Radio Brisas)"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/secuestraron-un-auto-con-pedido-de-captura-armas-y-otros-elementos-en-nuevos-allanamientos-491",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-06T19:12:24.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T20:01:26.802Z",
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Nuevos operativos en Balcarce y Mar del Plata",
-        "Secuestran un auto con pedido de captura y armas",
-        "Investigan el hurto a un hombre de 76 años fallecido",
-        "La causa interviene la UFI N.º 4"
-      ],
-      "seSabe": [
-        "Se realizaron allanamientos en Balcarce y Mar del Plata por una causa de hurto.",
-        "Hallaron un Renault Mégane con pedido de secuestro activo desde junio.",
-        "En Mar del Plata incautaron herramientas, teléfonos, motores de aeromodelismo y una escopeta sin cañón.",
-        "La UFI N.º 4 notificó a los involucrados sin dictar restricciones de libertad.",
-        "El 24 de septiembre hubo operativos previos con cinco motos secuestradas y dos aprehendidos."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Hallan un auto con pedido de secuestro y armas en operativos realizados en Balcarce y Mar del Plata por una causa de hurto.",
-      "etiquetas": [
-        "allanamientos",
-        "Balcarce",
-        "Mar del Plata"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/secuestraron-un-auto-con-pedido-de-captura-armas-y-otros-elementos-en-nuevos-allanamientos-491",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalla los allanamientos realizados en Balcarce y Mar del Plata, el secuestro de un auto robado, armas, elementos de interés y los antecedentes de la causa a cargo de la UFI N.º 4."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "secuestran-un-auto-con-pedido-de-captura-y-armas-en-operativos"
     }
   ],
   "secciones": [
@@ -4352,17 +4252,16 @@
     "Deportes",
     "Economía",
     "Balcarce",
-    "Policiales",
+    "Agro",
     "Cultura y agenda",
     "Política",
-    "Agro",
     "Argentina"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 6
+      "cuantas": 5
     },
     {
       "nombre": "El autódromo",
@@ -4380,9 +4279,9 @@
       "temp": 9,
       "sensacion": 5,
       "humedad": 98,
-      "viento": 29,
+      "viento": 28,
       "rumbo": "SE",
-      "cielo": "Lluvia leve",
+      "cielo": "Llovizna",
       "esDeDia": false
     },
     "dias": [
@@ -4747,12 +4646,6 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "1jw4p7g",
-      "titulo": null,
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"nene\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "baz7ti",
       "titulo": "Denuncian a Alejandro Mancuso por vender licencias de DT…",
       "seccion": "Fútbol",
@@ -4837,12 +4730,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "b36p7m",
-      "titulo": "Escándalo en Nordelta: un vecino quedó bajo investigación…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "531xz2",
       "titulo": null,
       "seccion": "Fútbol",
@@ -4867,11 +4754,17 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "b36p7m",
+      "titulo": "Escándalo en Nordelta: un vecino quedó bajo investigación…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "1ylauja",
       "titulo": "Médicos bonaerenses, contra PAMI: denuncian precariedad…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 6
 }
