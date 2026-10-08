@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Radar Balcarce: la ingesta de noticias, el panel editorial, los reels y la web.",
   "scripts": {
-    "test": "node --test \"pruebas/*.test.mjs\"",
+    "test": "node --import ./pruebas/datos-fijos.mjs --test \"pruebas/*.test.mjs\"",
     "panel": "node panel/servidor.mjs",
     "ingesta": "node ingesta/ingesta.mjs",
     "auditar": "node ingesta/auditar.mjs",

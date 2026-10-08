@@ -13,20 +13,19 @@
 // Sin dependencias de afuera de Node.
 
 import fs from 'node:fs';
-import path from 'node:path';
 import { diaAR } from '../ingesta/zona.mjs';
+import { rutaDeDatos } from '../ingesta/datos-vivos.mjs';
 
-const RUTA = path.join(import.meta.dirname, '..', 'web', 'data', 'efemerides-piezas.json');
-const RUTA_ELEGIDAS = path.join(import.meta.dirname, '..', 'web', 'data', 'efemerides-elegidas.json');
+// Las rutas se arman en cada llamada: las pruebas leen copias fijas (ingesta/datos-vivos.mjs).
 export const HORA_EFEMERIDE = '09:00';
 
 /** Lo preparado (el archivo entero) o null. */
-export function leerEfemerides(ruta = RUTA) {
+export function leerEfemerides(ruta = rutaDeDatos('efemerides-piezas.json')) {
   try { return JSON.parse(fs.readFileSync(ruta, 'utf8')); } catch { return null; }
 }
 
 /** Lo que decidieron Hernán y Andrés sobre cada día armado, desde la pestaña Fechas del panel (`piezas` de efemerides-elegidas.json). */
-export function leerDecisiones(ruta = RUTA_ELEGIDAS) {
+export function leerDecisiones(ruta = rutaDeDatos('efemerides-elegidas.json')) {
   try { return JSON.parse(fs.readFileSync(ruta, 'utf8'))?.piezas ?? {}; } catch { return {}; }
 }
 

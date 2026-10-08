@@ -34,6 +34,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 20 | El tope de notas con página subió a 3.500 y lo que sale del archivo va al histórico por mes (`web/data/historico/`); el plazo de la subida a Cloudflare pasó de 15 a 25 minutos. **Falta:** armar las notas viejas en el momento (más allá de 3.500) y mover las fotos a un depósito | 8/10 | regla 111 |
 | 17 | Los 22 robots quedaron fijos en Ubuntu 24.04 (no `ubuntu-latest`), así el cambio del 19/10 no los agarra de sorpresa. **Falta:** probar un robot con Ubuntu 26 a propósito y pasar de a poco | 8/10 | prueba `workflows-fijos` |
 | 30 | "Crear voces" no borra las dos voces de producción sin escribir una confirmación, y el formulario dice cuántos audios gasta cada modo | 8/10 | prueba `workflows-fijos` |
+| 13 y 4 | Las pruebas ya no leen los feriados ni las efemérides vivos: usan copias fijas (`pruebas/datos-fijos/`). Se simularon cuatro escenarios (cambiar el feriado, sacar una efeméride, armar noviembre, vaciar correcciones y retiradas) y ninguno hace fallar una prueba. **Ya se puede tocar el feriado del 12/10 y la efeméride del 11/10 desde el celular** | 8/10 | regla 112 |
 | 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---

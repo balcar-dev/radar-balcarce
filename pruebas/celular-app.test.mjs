@@ -33,7 +33,8 @@ test('el celular escribe correcciones y decisiones con una nota por renglón, co
   // El archivo del repositorio, reescrito por el celular, dice lo mismo y en el
   // mismo formato: una nota por renglón (si traía un id repetido, queda el último,
   // que es el que ya se usaba).
-  const actual = JSON.parse(leer('web/data/correcciones.json'));
+  // Un ejemplo fijo, no el archivo vivo: si alguien lo vacía desde el celular, la web no puede congelarse (C-7, 8/10/2026).
+  const actual = { notas: { a: { motivo: 'x', cuando: '2026-09-29', por: 'H' }, b: { motivo: 'y', cuando: '2026-09-29', por: 'H' } } };
   const reescrito = formatear(ARCHIVOS.correcciones, actual);
   assert.deepEqual(JSON.parse(reescrito), actual);
   assert.equal(reescrito.split('\n').length, Object.keys(actual.notas).length + 3);

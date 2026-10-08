@@ -36,6 +36,6 @@ jobs:
           fallo=0
           for hora in 2027-01-03T03:10:00Z 2027-01-06T17:30:00Z 2027-01-09T23:50:00Z 2027-01-31T23:30:00Z 2027-12-31T22:00:00Z; do
             echo "=== como si fuera $hora"
-            HORA_FALSA=$hora node --import ./pruebas/hora-falsa.mjs --test "pruebas/*.test.mjs" || fallo=1
+            HORA_FALSA=$hora node --import ./pruebas/datos-fijos.mjs --import ./pruebas/hora-falsa.mjs --test "pruebas/*.test.mjs" || fallo=1
           done
           exit $fallo

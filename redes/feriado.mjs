@@ -6,10 +6,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { diaAR } from '../ingesta/zona.mjs';
+import { rutaDeDatos } from '../ingesta/datos-vivos.mjs';
 import { semillaDe, variante } from './guiones.mjs';
 
-const DATA = path.join(import.meta.dirname, '..', 'web', 'data');
-const leer = (nombre) => { try { return JSON.parse(fs.readFileSync(path.join(DATA, nombre), 'utf8')); } catch { return null; } };
+const leer = (nombre) => { try { return JSON.parse(fs.readFileSync(rutaDeDatos(nombre), 'utf8')); } catch { return null; } };
 
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
