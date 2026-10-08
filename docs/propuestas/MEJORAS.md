@@ -28,12 +28,13 @@ no por la dificultad.
 |---|---|---|---|---|
 | **C-0** | **La corrección automática de la auditoría está rompiendo notas publicadas** | **Ya, cada media hora** | Dos notas del sitio ya tienen "en en en en…" y "compitiránnnnn…", y crecen en cada corrida | 30 min para frenarlo + 2-3 h el arreglo |
 | C-1 | **La prueba que congela la web el lunes** | **Lunes 12/10** | La web deja de actualizarse sola | 5 minutos |
+| **C-18** | **Dos botones del celular congelan la web** ("Pedir cambios" en el feriado del 12/10, y "Sacar" o "Pedir cambios" en la efeméride del 11/10) | **Ya, hasta el 12/10** | La web deja de actualizarse sola | No tocarlos hasta el 13/10; arreglo 3-4 h |
 | C-2 | **Un riesgo de seguridad del panel del celular** (el detalle no va en el repositorio público) | Ya (es un riesgo, no una falla) | Grave si se aprovecha | Medio día a 1 día |
 | C-3 | **Next 15 deja de recibir parches** | **21/10** | El sitio queda con fallas de seguridad conocidas sin arreglo | 1 h (parche) + 1-2 días (Next 16) |
 | C-4 | **Las máquinas de GitHub pasan a Ubuntu 26** | **Desde el 19/10** | Algún robot puede fallar el día del cambio | 2 h para probar antes |
 | C-5 | **Un archivo de datos roto se lee como vacío** | Cualquier día (ya pasó el 25/09) | Se pueden perder hasta 180 días de páginas | 3 h |
 | C-6 | **El tope de 2.500 notas** | **Alrededor del 2/11** | Las notas empiezan a perder su página a los ~43 días en vez de a los 180 | Decisión + 2 h |
-| C-7 | **Pruebas atadas a fechas reales de las efemérides** | Al armar noviembre (fin de octubre) | Otra vez la web congelada | 1 h |
+| C-7 | **Unas 20 pruebas atadas a los datos reales de efemérides y feriados** | Al armar noviembre (fin de octubre) | Otra vez la web congelada | 2-6 h (junto con C-18) |
 | C-8 | **Los datos de seguimiento comercial quedarían públicos** | El día del primer mensaje a un comercio | Cualquiera ve a quién se le ofreció qué y quién dijo que no | 1 h |
 | C-9 | **Los reels con voz de IA salen sin la etiqueta de IA de Meta** | Ya (lo pide Meta) | Meta puede bajar el alcance o sancionar | Decisión + 2-4 h |
 | C-10 | **Algo en rojo (un menor, una víctima) se publica si una persona lo aprueba** | Ya | Se rompe la regla "nunca identificar a un menor ni a una víctima" por un clic equivocado | 1 h (pero es la lista roja: preguntar antes) |
@@ -97,6 +98,21 @@ Una lista vacía no es un error (quiere decir "no hay nada retirado esta semana"
   portada no cambia y el vigilante avisa "la web no se actualiza". Se arregla igual, con la misma línea.
 - **Decisión pendiente de Hernán y Andrés:** si se arregla antes del lunes (recomendado) o se espera.
 
+### C-18 · Dos botones del celular congelan la web — *Confirmado con una simulación*
+
+Hay pruebas que usan los datos **reales** del 11 y el 12 de octubre (el feriado y la efeméride), que se
+pueden cambiar desde la pestaña Fechas del celular. Se simuló en una copia: con un toque, fallan 9 pruebas
+(feriado) o 1 (efeméride), y la web se congela en la corrida siguiente.
+
+- **Hasta el 13/10, no tocar:** "Pedir cambios" en el **feriado del 12/10**, ni "Sacar" o "Pedir cambios"
+  en la **efeméride del 11/10**. Aprobar no rompe nada.
+- **Evidencia:** `pruebas/cronograma-semana.test.mjs:14,26,37,54,61`, `cronograma-html.test.mjs:17`,
+  `hoja-cronograma.test.mjs:11`, `placa-participa.test.mjs:70`, `efemeride-viva.test.mjs:27,79`; el botón
+  está en `web/public/panel/app.js:1114`.
+- **Arreglo (3-4 h):** que esas pruebas usen datos fijos propios (las funciones ya aceptan datos como
+  parámetro). **Regla general:** lo que escriben Hernán y Andrés se valida por su forma, nunca por su
+  contenido.
+
 ### C-2 · Un riesgo de seguridad del panel del celular — *Confirmado (riesgo grave)*
 
 El repositorio es público, así que el detalle de este punto **no se escribe acá**: está en el documento
@@ -152,14 +168,28 @@ puso por Cloudflare, pero sobra margen: hoy el sitio tiene ~3.300 archivos y el 
   bajar los 180 días a lo que de verdad pasa y cuidar el sitemap.
 - **Recordar:** el número vive en `ingesta/criterio.mjs` **y** en `web/lib/archivo.js`.
 
-### C-7 · Pruebas atadas a fechas reales — *Confirmado*
+### C-7 · Pruebas atadas a los datos de efemérides y feriados — *Confirmado con una simulación*
 
-Una prueba espera exactamente 34 días de candidatas de efemérides; otra espera que el 5/10 tenga
-efeméride y el 16/11 no. Las dos se rompen al armar noviembre, y como corren antes de publicar,
-congelan la web igual que C-1.
+Al principio parecían 2; son **unas 20 pruebas en 8 archivos**. Se simuló en una copia lo que va a pasar:
 
-- **Evidencia:** `pruebas/exportar-efemerides.test.mjs:50`; `pruebas/cronograma-semana.test.mjs:45-51`.
-- **Arreglo:** que usen datos de ejemplo fijos, no los archivos vivos. Revisar si hay más pruebas así.
+- **Cuando se arme noviembre** (candidatas nuevas, días nuevos): fallan `exportar-efemerides.test.mjs:50`,
+  `efemerides.test.mjs:247-248`, `previa-efemerides.test.mjs:43-44,60` y `cronograma-semana.test.mjs:49-50`.
+- **Cuando se vuelva a armar la lista de feriados después del 12/10**: el 12/10 desaparece y fallan las
+  mismas 9 de C-18.
+- **Si se borran los días de octubre**: fallan 11 más (`efemeride-viva`, `previa-efemerides`,
+  `reel-dos-placas`, `cronograma-semana`).
+- **Si un día se marca para que no salga, o su guion pasa de 100 palabras**: falla
+  `previa-efemerides.test.mjs:48,56`.
+- **Si alguien vacía `correcciones.json`**: falla `celular-app.test.mjs:39`.
+
+**Lo bueno:** ninguna prueba falla solo porque pasa el tiempo (se corrió la suite como si fueran 12 fechas
+distintas, hasta octubre de 2027, y en UTC). Todas las bombas son de **datos**. Por eso "Pruebas con otra
+hora" no las ve: adelanta el reloj pero deja los datos como están.
+
+**Arreglo:** el mismo de C-18, más que las pruebas que miran el archivo vivo controlen solo la forma (cada
+día tiene principal y guion), sin cantidades ni fechas fijas. Y sumar al workflow semanal una simulación
+de lo que va a pasar sí o sí (la poda del lunes, los feriados "desde hoy"); el script ya está escrito en
+la investigación. 2 h más, junto con C-18.
 
 ### C-8 · Los datos comerciales, antes del primer mensaje — *Confirmado*
 
@@ -848,6 +878,41 @@ mismo cambio `pruebas/piezas-fijas.test.mjs:67-73`. Nada más sobra en `reels/` 
 guardan usan el mismo ciclo con reintentos; las claves no se imprimen; casi todos los horarios están fuera
 del minuto 0 y tienen tope de tiempo.
 
+### Pruebas (revisión del 8/10)
+
+**T-1 · Separar "guardia de datos" de "pruebas de código"** — *Confirmado · ALTA* (concreta A5)
+- **Guardia de datos**, en cada corrida (1-2 s): que todo `web/data/*.json` se pueda leer, motivo, cuándo y
+  quién en retiradas y correcciones, decisiones válidas. Sin cantidades ni fechas.
+- **Pruebas de código**, al subir código y una vez por noche: las 1.840, con las que leen datos vivos
+  pasadas a datos fijos. Esto vuelve inofensivas las bombas de C-1, C-7 y C-18 aunque se escape alguna.
+- En GitHub el paso de pruebas tarda 26 s; el más lento es `reel-dos-placas` (44 s locales, arma dos
+  videos con ffmpeg en cada corrida).
+
+**T-2 · La lista roja no está trabada** — *Confirmado · ALTA* (es M-7)
+- La prueba recorre la lista tal como está: si alguien borra un término, su prueba desaparece con él. De 34
+  términos, solo ~26 están escritos fijos en las pruebas. Una prueba con la lista completa a mano. 30 min.
+
+**T-3 · "Pruebas con otra hora" falló el 5/10 y nadie se enteró** — *Confirmado · MEDIA* (va con A-4)
+- Falló al instalar; el vigilante no lo mira. Lo mismo el panel del celular: 6 fallas en las últimas 30
+  corridas.
+
+**T-4 · Falta declarar la versión de Node** — *Confirmado · MEDIA*
+- Con Node 22 se cancelan 6 pruebas (en GitHub, con Node 24, pasan). Poner `"engines": {"node": ">=24"}`.
+  10 min.
+
+**Chicos (BAJA):**
+- `tipografia.test.mjs:142` nunca corre en GitHub y falla en la PC.
+- `fotos-panel.test.mjs:266` no prueba nada (`length >= 0`).
+- `placas.test.mjs:262` se saltea en silencio si no hay fotos.
+- `correcciones.json` se valida dos veces.
+- `docs/10-REGLAS-Y-PRUEBAS.md:163` cita una prueba de la regla 9 que no existe.
+- El mapa de pruebas de `docs/10` dice 83 archivos y 1.367 pruebas; hay 144 y 1.840.
+- Unos 115 controles leen el texto del código en vez de probar lo que hace: aceptarlo, no sumar más.
+
+**Que alguien más revise:** anotar en `docs/11-OPERACION.md` "si no llegó el resumen de WhatsApp de las
+21, mirar Actions" (el vigilante no tiene quién lo vigile). Que el vigilante avise cuando quedan menos de 7
+días de efemérides o de feriados cargados (los feriados llegan hasta el 25/05/2027).
+
 ### Panel, Pistas y comercial (revisión del 8/10)
 
 **P-2 · El robot puede pisar lo que decidió una persona en las pistas** — *Confirmado · ALTA*
@@ -1098,6 +1163,7 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
 ## Decisiones que necesitan a Hernán y Andrés
 
 0. **C-0:** frenar ya la corrección automática de la auditoría y arreglar las dos notas rotas.
+0. **C-18:** no tocar el feriado del 12/10 ni la efeméride del 11/10 en el celular hasta el 13/10.
 1. **C-1:** si se arregla la prueba antes del lunes 12/10.
 2. **C-2:** la regla de "ningún script de terceros" y cómo se separa el panel (detalle en el documento privado).
 3. **C-6:** subir el tope de notas o acortar los 180 días.
