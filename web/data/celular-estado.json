@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T13:04:58.769Z",
- "portada": 39,
- "archivo": 1064,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-08T13:32:47.586Z",
+ "portada": 40,
+ "archivo": 1068,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-08T13:04:58.819Z",
+  "generado": "2026-10-08T13:32:47.618Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-08T13:06:32.914Z"
    },
    {
     "nombre": "agenda",
@@ -94,28 +94,28 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 51,
+    "salio": "2026-10-08T13:06:32.914Z",
+    "segundos": null,
     "notas": [
      {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
+      "id": "1cpkl2f",
+      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
       "seccion": "Balcarce"
      },
      {
-      "id": "116x391",
-      "titulo": "AUBASA aumenta los peajes del Sistema Vial del Atlántico",
-      "seccion": "Economía"
-     },
-     {
-      "id": "px37p5",
-      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
+      "id": "l5uou9",
+      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
       "seccion": "Fútbol"
      },
      {
       "id": "y4gp3v",
       "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "10cpafd",
+      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -126,26 +126,26 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "r7ox1t",
+      "titulo": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
+      "seccion": "Economía"
+     },
      {
       "id": "6izwi8",
       "titulo": "El Club Rotario Balcarce Cerrito agasaja a los periodistas locales",
       "seccion": "Balcarce"
      },
      {
-      "id": "1cpkl2f",
-      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
+      "id": "2i73nb",
+      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
       "seccion": "Balcarce"
      },
      {
-      "id": "7gf331",
-      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "ajdznk",
-      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "id": "px37p5",
+      "titulo": "The Telegraph compara el adiós de Messi con la salida de Ronaldo",
       "seccion": "Fútbol"
      }
     ]
@@ -157,21 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 36,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "ajdznk",
+      "titulo": "Boca arma un equipo mixto para visitar a Instituto",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "117ewnb",
+      "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "7gf331",
+      "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1boxf4v",
       "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1qsixdr",
-      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "kwpmcv",
-      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce"
      }
     ]
