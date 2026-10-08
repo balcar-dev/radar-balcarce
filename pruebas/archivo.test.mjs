@@ -468,3 +468,26 @@ test('las bajas del archivo van al histórico por mes; las retiradas no', async 
   assert.match(gen, /bajasDelArchivo\(/);
   assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', '.github/workflows/actualizar.yml'), 'utf8'), /git add [^\n]*web\/data\/historico\//);
 });
+
+// W-10 (8/10/2026): si casi todas las fuentes fallan, no se arma la web con eso.
+test('una ingesta con casi todas las fuentes caídas o vacías no se usa para armar la web', async () => {
+  const { ingestaSana } = await import('../web/lib/archivo.js');
+  const fuentes = (buenas, malas, vacias = 0) => [
+    ...Array.from({ length: buenas }, (_, i) => ({ id: `b${i}`, estado: 'ok', notas: 5 })),
+    ...Array.from({ length: malas }, (_, i) => ({ id: `m${i}`, estado: 'error', error: 'timeout' })),
+    ...Array.from({ length: vacias }, (_, i) => ({ id: `v${i}`, estado: 'ok', notas: 0 })),
+  ];
+  assert.equal(ingestaSana(fuentes(190, 10)).ok, true, 'un día normal: algunas fallan');
+  assert.equal(ingestaSana(fuentes(120, 40, 40)).ok, true, 'un mal día: más de la mitad sirve');
+  assert.equal(ingestaSana(fuentes(60, 100, 40)).ok, true, 'lo justo: 30 % sirve');
+  const mal = ingestaSana(fuentes(10, 180, 10));
+  assert.equal(mal.ok, false);
+  assert.match(mal.motivo, /10 de 200 fuentes/);
+  assert.equal(ingestaSana(fuentes(0, 200)).ok, false, 'todas caídas');
+  assert.equal(ingestaSana(undefined).ok, true, 'en la PC no hay lista: no se mira');
+  assert.equal(ingestaSana(fuentes(2, 10)).ok, true, 'con muy pocas fuentes no se juzga');
+  const datos = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
+  const sana = datos.indexOf('ingestaSana(ultima.fuentes)');
+  assert.ok(sana > 0 && sana < datos.indexOf('const anterior = leerJson(SALIDA'), 'se mira antes de escribir nada');
+  assert.match(datos.slice(sana, sana + 400), /process\.exit\(1\)/);
+});

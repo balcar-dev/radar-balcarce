@@ -69,7 +69,7 @@ import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
-  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo, bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico,
+  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo, ingestaSana, bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico,
   idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
@@ -198,6 +198,12 @@ if (enLaNube) {
   // de entrar sin ningún error, y lo único que se nota es que el sitio
   // tiene menos. Estas líneas ("::warning::") las muestra GitHub arriba de
   // la corrida, donde se ve sin abrir el registro.
+  // W-10: si casi todas las fuentes fallaron, la corrida termina acá con error y la web queda como estaba (el vigilante avisa).
+  const sana = ingestaSana(ultima.fuentes);
+  if (!sana.ok && process.env.INGESTA_PERMITIR_VACIA !== '1') {
+    console.log(`::error title=Ingesta casi vacía::${sana.motivo}`);
+    process.exit(1);
+  }
   for (const f of ultima.fuentes ?? []) {
     if (f.estado === 'error') console.log(`::warning title=Fuente caída::${f.nombre}: ${f.error}`);
     else if (f.notas === 0) console.log(`::warning title=Fuente vacía::${f.nombre} no trajo ninguna nota`);

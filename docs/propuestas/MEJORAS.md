@@ -1138,7 +1138,7 @@ salieron solas, contra su fuente (20 minutos).
 - Se guarda con el mismo nombre y la caché dura 7 días (`web/public/_headers:48-49`). Si se reemplazó por
   tener marca o un menor, la vieja sigue apareciendo. Nombre nuevo al reemplazar. 1 h.
 
-**W-10 · Si la ingesta vuelve casi vacía, la portada queda sin farmacia ni clima** — *Confirmado · MEDIA*
+**W-10 ✔ · Si la ingesta vuelve casi vacía, la portada queda sin farmacia ni clima** — *Confirmado · MEDIA · hecho el 8/10 (regla 137)*
 - `generar-datos.mjs:190,966,979`. Si llega menos del 30 % de lo normal, no tocar `portada.json` y avisar. 2 h.
 
 **W-11 · Correr la web en una PC sin el panel actúa como la nube** — *Confirmado · MEDIA*

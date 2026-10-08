@@ -322,6 +322,19 @@ export function guardiaDelArchivo(antes = 0, despues = 0, { minimo = 50, toleran
 }
 
 /**
+ * ¿La ingesta de esta corrida sirve para armar la web? (W-10, 8/10/2026.) Si casi todas las fuentes fallaron o llegaron vacías (una caída
+ * de red del robot, un bloqueo), armar la portada con eso la dejaría sin clima, sin farmacia y con la mitad de las notas: es mejor no
+ * tocarla, dejar la anterior y avisar. `fuentes` es la lista de la ingesta ({ estado, notas }); sin lista (la PC) o con pocas fuentes no se mira.
+ */
+export function ingestaSana(fuentes = [], { minimoDeFuentes = 20, fraccionMinima = 0.3 } = {}) {
+  const lista = (fuentes ?? []).filter((f) => f?.estado);
+  if (lista.length < minimoDeFuentes) return { ok: true };
+  const conNotas = lista.filter((f) => f.estado !== 'error' && f.notas > 0).length;
+  if (conNotas >= lista.length * fraccionMinima) return { ok: true };
+  return { ok: false, motivo: `sólo ${conNotas} de ${lista.length} fuentes trajeron notas (menos del ${Math.round(fraccionMinima * 100)} %); no se arma la web con eso y queda la anterior` };
+}
+
+/**
  * Las notas que estaban en el archivo y ya no están por EDAD o por TOPE (no por haber sido retiradas: una retirada a mano o por el
  * semáforo no se guarda en ningún lado). Van al histórico (C-6, 8/10/2026: "guardar el 100 % de las notas, año tras año").
  */
