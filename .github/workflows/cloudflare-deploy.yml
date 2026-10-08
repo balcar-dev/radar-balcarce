@@ -62,6 +62,8 @@ jobs:
         run: npm run build
         env:
           SITIO: https://radarbalcarce.com
+          # De dónde salen las fotos de las notas: vacío = el propio sitio (web/lib/fotos.js).
+          FOTOS_BASE: ${{ vars.FOTOS_BASE }}
 
       # Direct Upload: se sube lo que ya compilamos, sin que Cloudflare
       # corra su propio build. Así no cuenta contra el límite de 500 builds

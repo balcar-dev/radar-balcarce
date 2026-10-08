@@ -135,6 +135,7 @@ jobs:
         run: npm run build
         env:
           SITIO: https://radarbalcarce.com
+          FOTOS_BASE: ${{ vars.FOTOS_BASE }}
 
       # Que lo importante haya quedado en el HTML. Sin esto, alguien toca
       # layout.js dentro de seis meses, se lleva puesto el Open Graph y no

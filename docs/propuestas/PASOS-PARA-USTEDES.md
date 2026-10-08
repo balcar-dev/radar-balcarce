@@ -31,9 +31,20 @@ de 10 días sin un respaldo bueno.
 
 ## 2. Fotos a Cloudflare R2
 
-Se hace sobre lo anterior (mismo R2). Cuando tengan el depósito y el permiso del punto 1b, me avisan y sigo yo: una variable (`FOTOS_BASE`)
-para que todas las direcciones de foto salgan de un solo lugar, el robot que sube las fotos nuevas, y pasar las 592 que hay.
-Ver [`registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md`](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md), etapa 1.
+Lo que ya quedó hecho (8/10): todas las direcciones de foto de las páginas salen de un solo lugar (`web/lib/fotos.js`) y hay un workflow,
+**"Fotos a R2"**, que copia las 592 fotos al depósito (sólo copia: no borra nada ni cambia lo que ve el lector). Con el depósito
+y el permiso del punto 1b, falta esto, a mano:
+1. Crear otro depósito en R2 para las fotos, por ejemplo `radar-fotos`.
+2. En ese depósito → Settings → **Custom domains** → conectar `fotos.radarbalcarce.com` (el dominio ya está en Cloudflare, lo hace solo).
+3. En GitHub → Settings → Secrets and variables → Actions → variable `R2_FOTOS` = `radar-fotos`.
+4. Correr "Fotos a R2" (Actions → Run workflow). Tarda unos 15 minutos. El resumen dice cuántas subió.
+5. Abrir `https://fotos.radarbalcarce.com/fotos-notas/` + el nombre de cualquier foto del sitio y comprobar que se ve.
+6. Recién ahí, en GitHub, variable `FOTOS_BASE` = `https://fotos.radarbalcarce.com`. Desde la corrida siguiente las páginas cargan las fotos de
+   ahí. Para volver atrás se borra la variable.
+
+**Qué NO hace todavía:** las fotos siguen también en el repositorio y se siguen subiendo con el sitio, porque las tarjetas para compartir
+(Instagram, Facebook) se arman en la compilación leyendo el archivo local. Sacarlas del repositorio es la etapa siguiente
+([plan](registro/AUDITORIA-EXTERNA-4-ARQUITECTURA-2026-10-08.md)), y se hace después de ver que todo anda con `FOTOS_BASE`.
 
 ## 3. Lo que no hace falta que hagan
 

@@ -2,6 +2,7 @@
 // piezas.js, que no lleva ninguna imagen: sólo dibujos propios.
 
 import { PlacaSeccion } from '@/components/piezas';
+import { urlDeFoto } from '@/lib/fotos';
 
 /**
  * Lo que va arriba de la nota destacada de una sección o de un tema: su foto
@@ -12,7 +13,7 @@ export function ImagenDestacada({ nota }) {
   if (!nota?.foto?.archivo) return <PlacaSeccion seccion={nota?.seccion} />;
   return (
     <figure style={{ margin: 0 }}>
-      <img src={`/${nota.foto.archivo}`} alt="" width={1200} height={675} decoding="async" className="foto-destacada" />
+      <img src={urlDeFoto(nota.foto.archivo)} alt="" width={1200} height={675} decoding="async" className="foto-destacada" />
     </figure>
   );
 }

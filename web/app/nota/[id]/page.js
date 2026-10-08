@@ -14,6 +14,7 @@ import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { recortarEn } from '@/lib/texto';
 import { noSeOfreceAGoogle } from '@/lib/cuerpo';
+import { urlDeFoto } from '@/lib/fotos';
 import { fechaDeModificacion } from '@/lib/tiempo';
 import { seguirLeyendo } from '@/lib/seguir-leyendo';
 import { parrafosConEnlaces } from '@/lib/enlaces-en-texto';
@@ -112,7 +113,7 @@ export default function PaginaNota({ params }) {
         {n.foto && (
           <figure style={{ margin: '20px 0 4px' }}>
             <img
-              src={`/${n.foto.archivo}`}
+              src={urlDeFoto(n.foto.archivo)}
               alt={n.titulo}
               width={1200}
               height={675}

@@ -187,10 +187,10 @@ test('la página de la nota muestra la foto sólo si hay, con el crédito en el 
   const pagina = leer('web/app/nota/[id]/page.js');
   assert.match(pagina, /\{n\.foto && \(/, 'la foto es condicional: sin foto, no se rompe nada');
   assert.match(pagina, /<figcaption[^>]*>\{n\.foto\.credito\}<\/figcaption>/, 'el crédito va en el epígrafe');
-  assert.match(pagina, /src=\{`\/\$\{n\.foto\.archivo\}`\}/, 'la imagen sale de banco-fotos.json, no de la fuente');
+  assert.match(pagina, /src=\{urlDeFoto\(n\.foto\.archivo\)\}/, 'la imagen sale de banco-fotos.json, no de la fuente');
   // El nombre del medio no se escribe DENTRO de la imagen (eso sería un
   // <text> o un overlay sobre el <img>; acá sólo puede estar en el epígrafe).
-  const bloqueFoto = pagina.match(/\{n\.foto && \([\s\S]*?\)\}/)?.[0] ?? '';
+  const bloqueFoto = pagina.match(/\{n\.foto && \([\s\S]*?<\/figure>/)?.[0] ?? '';
   assert.equal((bloqueFoto.match(/n\.foto\.credito/g) ?? []).length, 1, 'el crédito aparece una sola vez, en el epígrafe');
 });
 
