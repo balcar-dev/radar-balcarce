@@ -54,10 +54,21 @@ test('la poda de retiradas corre los lunes en la nube y el workflow guarda el ar
   assert.match(flujo, /git add [^\n]*web\/data\/retiradas\.json/);
 });
 
+test('una lista de retiradas vacía es válida y la poda la deja así (12/10/2026: las 11 de septiembre cumplen 7 días)', () => {
+  const vieja = { notas: { a: { motivo: 'm', cuando: '2026-09-28', por: 'p' }, b: { motivo: 'm', cuando: '2026-09-29', por: 'p' } } };
+  const { json: podado, quitadas } = podarRetiradas(vieja, { hoy: '2026-10-12', enLaIngesta: new Set() });
+  assert.deepEqual(quitadas.sort(), ['a', 'b']);
+  assert.deepEqual(podado.notas, {});
+  assert.equal(idsRetiradosAMano(podado).size, 0);
+  assert.deepEqual(JSON.parse(comoRetiradasJson(podado)), podado);
+});
+
 test('la lista de retiradas del repositorio está bien armada: cada una con motivo, fecha y quién', () => {
   const json = JSON.parse(fs.readFileSync(new URL('../web/data/retiradas.json', import.meta.url), 'utf8'));
   const entradas = Object.entries(json.notas);
-  assert.ok(entradas.length > 0);
+  // Una lista vacía es válida: los lunes la nube saca las retiradas de más de 7 días (la primera vez, el 12/10/2026,
+  // quedaron 0) y esta prueba no puede congelar la web por eso. Lo que se controla es la forma, no la cantidad.
+  assert.equal(typeof json.notas, 'object');
   for (const [id, n] of entradas) {
     assert.ok(n.motivo && n.cuando && n.por, `a ${id} le falta motivo, fecha o quién`);
   }
