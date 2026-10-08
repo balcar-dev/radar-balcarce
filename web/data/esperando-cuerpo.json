@@ -1,37 +1,49 @@
 {
- "generado": "2026-10-08T16:41:21.627Z",
+ "generado": "2026-10-08T17:08:47.330Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "ypnvl8",
-   "titulo": "Carlos Tevez se despide con todo en Boca: sueña con juntar a Lionel Messi con Cristiano Ronaldo",
-   "copete": "Luego de la despedida del capitán en la Selección argentina, el portugués le envió un guiño al rosarino y ahora, de la mano de Carlos Tévez, no solo podrían compartir cancha, sino también podrían estar hasta en el mismo equipo. Video inédito: se viralizó la insólita pregunta que…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-08T14:44:32.000Z",
+   "id": "jul321",
+   "titulo": "Se suspendio por mal clima la Fiesta del Postre.",
+   "copete": "A traves de un comunicado emitido hace instantes por la Subsecretaria deTurismo, Autoridades de la organizacion del evento dieron a conocer la suspension de la Fiesta Nacional del Postre, señalando que : Debido a las adversas condiciones climáticas previstas para este fin de…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-08T15:45:28.000Z",
    "fuentes": [
     {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/deportes/carlos-tevez-despide-todo-boca-suena-juntar-lionel-messi-cristiano-ronaldo-2026108114432",
-     "fecha": "2026-10-08T14:44:32.000Z"
+     "medio": "News Balcarce (FM 91.7)",
+     "enlace": "https://newsbalcarce.com.ar/?p=30979",
+     "fecha": "2026-10-08T15:45:28.000Z"
     },
     {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/deportes/la-despedida-carlos-tevez-podria-tener-un-hecho-inedito-messi-y-cristiano-ronaldo-jugando-juntos-n6331613",
-     "fecha": "2026-10-08T15:40:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/deportes/lionel-messi-y-cristiano-ronaldo-podrian-jugar-primera-vez-juntos-y-boca-n251099",
-     "fecha": "2026-10-08T16:21:00.000Z"
-    },
-    {
-     "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/futbolargentino/carlos-tevez-planea-juntar-a-cristiano-ronado-y-lionel-messi-en-el-mismo-equipo",
-     "fecha": "2026-10-08T15:27:38.000Z"
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45035-por-el-mal-clima-se-suspendio-la-fiesta-nacional-del-postre/",
+     "fecha": null
     }
    ],
    "intentos": 1,
-   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice",
+   "motivo": "título o bajada: 3 problemas (nombre): el titulo nombra a \"turismo\" y la fuente no",
+   "maximo": 3
+  },
+  {
+   "id": "lv2da9",
+   "titulo": "Postergaron la fecha del Zonal Atlántico en Balcarce por las condiciones climáticas",
+   "copete": "La actividad del automovilismo zonal que estaba prevista para este fin de semana en el Autódromo Juan Manuel Fangio fue postergada y se desarrollará finalmente los días 24 y 25 de octubre. La decisión fue adoptada este mediodía, luego de una reunión realizada en la Federación…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T16:14:22.000Z",
+   "fuentes": [
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/postergaron-la-fecha-del-zonal-atlantico-en-balcarce-por-las-condiciones-climaticas/",
+     "fecha": "2026-10-08T16:14:22.000Z"
+    },
+    {
+     "medio": "Acción 5 (Balcarce)",
+     "enlace": "https://accion5.com/por-cuestiones-climaticas-fue-suspendido-zonal-atlantico/",
+     "fecha": "2026-10-08T16:40:13.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
    "maximo": 3
   },
   {
@@ -47,8 +59,8 @@
      "fecha": "2026-10-08T16:16:41.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (fecha): el copete menciona \"jueves\" y la fuente no",
+   "intentos": 2,
+   "motivo": "título o bajada: 3 problemas (numero): el titulo dice 30 y la fuente no lo dice",
    "maximo": 3
   },
   {
@@ -76,28 +88,6 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gran\", \"premio\", \"singapur\" y el cuerpo no los explica; sin esas oraciones quedan 146 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "1ccb7u7",
-   "titulo": "Colapinto vuelve al GP de Singapur, donde realizó una de sus maniobras más recordadas en la Fórmula 1",
-   "copete": "Buenos Aires, 8 octubre (NA) -- El argentino Franco Colapinto (Alpine) disputará este fin de semana el Gran Premio de Singapur, en un circuito donde realizó una de sus maniobras más recordadas en la Fórmula 1. Para eso hay que remontarse a la temporada 2024, en la que el…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-08T13:52:29.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/deportes/colapinto-vuelve-al-gp-de-singapur--donde-realizo-una-de-sus-maniobras-mas-recordadas-en-la-formula-1_a6ac799495319d0dbc27532fd",
-     "fecha": "2026-10-08T13:52:29.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-8-11-10-0-colapinto-vuelve-al-gp-de-singapur-donde-realizo-una-de-sus-maniobras-mas-recordadas",
-     "fecha": "2026-10-08T16:07:01.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
    "maximo": 3
   },
   {
@@ -143,20 +133,74 @@
    "maximo": 4
   },
   {
-   "id": "7r5ucc",
-   "titulo": "Preocupación por el robo de flexibles de gas",
-   "copete": "",
-   "seccion": "Policiales",
-   "fecha": "2026-10-07T23:01:35.401Z",
+   "id": "1we1z9n",
+   "titulo": "Franco Colapinto participará de la conferencia de prensa de los pilotos de la Fórmula 1 antes del Gran Premio de Singapur",
+   "copete": "Se viene una nueva carrera en el calendario de la Fórmula 1 : el Gran Premio de Singapur . Franco Colapinto fue uno de los tres pilotos que abrió la rueda de conferencias junto al francés Esteban Ocon y español Fernando Alonso. El argentino, que llega de una fecha complicada en…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T09:53:51.000Z",
    "fuentes": [
     {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
-     "fecha": null
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/franco-colapinto-participara-de-la-conferencia-de-prensa-de-los-pilotos-de-la-formula-1-antes-del-gran-premio-de-singapur/",
+     "fecha": "2026-10-08T09:53:51.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/08/el-divertido-show-entre-franco-colapinto-y-fernando-alonso-en-la-conferencia-de-prensa-del-gp-de-singapur-acabo-de-hablar-yo-boludo/",
+     "fecha": "2026-10-08T16:33:30.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"gran\", \"premio\", \"singapur\" y el cuerpo no los explica; sin esas oraciones quedan 146 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1ccb7u7",
+   "titulo": "Colapinto vuelve al GP de Singapur, donde realizó una de sus maniobras más recordadas en la Fórmula 1",
+   "copete": "Buenos Aires, 8 octubre (NA) -- El argentino Franco Colapinto (Alpine) disputará este fin de semana el Gran Premio de Singapur, en un circuito donde realizó una de sus maniobras más recordadas en la Fórmula 1. Para eso hay que remontarse a la temporada 2024, en la que el…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T13:52:29.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/colapinto-vuelve-al-gp-de-singapur--donde-realizo-una-de-sus-maniobras-mas-recordadas-en-la-formula-1_a6ac799495319d0dbc27532fd",
+     "fecha": "2026-10-08T13:52:29.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-8-11-10-0-colapinto-vuelve-al-gp-de-singapur-donde-realizo-una-de-sus-maniobras-mas-recordadas",
+     "fecha": "2026-10-08T16:07:01.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "8k451h",
+   "titulo": "Lollapalooza 2027: uno por uno, todos los artistas confirmados y la grilla completa",
+   "copete": "La organización del Lollapalooza Argentina reveló finalmente los artistas que formarán parte de la edición 2027. El evento, que se desarrollará los días 12, 13 y 14 de marzo en el Hipódromo de San Isidro, contará con una grilla que incluye figuras de renombre internacional y una…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-08T15:04:37.000Z",
+   "fuentes": [
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/08/lollapalooza-2027-uno-por-uno-todos-los-artistas-confirmados-y-la-grilla-completa/",
+     "fecha": "2026-10-08T15:04:37.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/espectaculos/lollapalooza-2027-confirmo-su-grilla-con-10-headliners-internacionales",
+     "fecha": "2026-10-08T16:08:49.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/ratingcero/se-conocio-el-line-up-del-lollapalooza-argentina-2027-todos-los-artistas-confirmados-n251097",
+     "fecha": "2026-10-08T15:16:00.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "con cuerpo",
+   "motivo": "título o bajada: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras",
    "maximo": 3
   }
  ]

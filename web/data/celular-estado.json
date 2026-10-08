@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T16:41:21.627Z",
- "portada": 44,
- "archivo": 1083,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-08T17:08:47.330Z",
+ "portada": 41,
+ "archivo": 1086,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-08T16:41:21.671Z",
+  "generado": "2026-10-08T17:08:47.385Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -129,19 +129,19 @@
     "segundos": 49,
     "notas": [
      {
-      "id": "1rf94dp",
-      "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce"
      },
      {
-      "id": "e5v4vp",
-      "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
-      "seccion": "Economía"
+      "id": "5e10lb",
+      "titulo": "Ramón Díaz suena en Corinthians y se aleja de River",
+      "seccion": "Fútbol"
      },
      {
-      "id": "16tb2vo",
-      "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
-      "seccion": "Automovilismo"
+      "id": "zzuoo4",
+      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "seccion": "Balcarce"
      },
      {
       "id": "vr9xc5",
@@ -157,26 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 42,
     "notas": [
      {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "2i73nb",
-      "titulo": "El Colegio Normal recibe una jornada de prevención sobre apuestas online",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1boxf4v",
-      "titulo": "Demarcan la Ruta 55 entre el paraje Pieres y Balcarce",
-      "seccion": "Balcarce"
+      "id": "1dqrc9g",
+      "titulo": "Posterggan la Fiesta Nacional del Postre por el clima",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "7gf331",
       "titulo": "El CENS N° 451 impulsa un Punto Digital para facilitar trámites",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1qsixdr",
+      "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "kwpmcv",
+      "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
       "seccion": "Balcarce"
      }
     ]
@@ -193,24 +193,29 @@
      "id": "16tb2vo",
      "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
      "cuando": "2026-10-08T14:45:24.070Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1rf94dp",
      "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
+     "cuando": "2026-10-08T16:35:20.061Z"
+    }
+   ],
+   "cola": [
     {
      "id": "zzuoo4",
      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
      "seccion": "Balcarce",
      "marcada": false
+    },
+    {
+     "id": "1dqrc9g",
+     "titulo": "Posterggan la Fiesta Nacional del Postre por el clima",
+     "seccion": "Cultura y agenda",
+     "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-08T16:15:24.070Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-08T18:05:20.061Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
