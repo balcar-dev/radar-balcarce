@@ -8542,16 +8542,16 @@
   "cuando": "2026-10-06T20:32:32.616Z"
  },
  "egwywq": {
-  "archivo": "fotos-notas/egwywq.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Iglesia cuestiona la quita de límites a la venta de tierras",
   "enlace": "https://www.lanacion.com.ar/politica/la-iglesia-expreso-su-preocupacion-por-la-eliminacion-de-los-limites-a-la-venta-de-tierras-a-nid06102026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/la-comision-episcopal-de-la-pastoral-social-NDY2IYOM7JG57DX7OXQZL77MUA.jpeg?auth=f9fa203fd2f81bde2ca4839afa7587728b818b58e063472ac2c01bcb70106384&width=1200&height=800&quality=70&smart=true",
   "razon": "Es la única foto sin marcas de agua ni menores reconocibles, con buena calidad e iluminación.",
-  "cuando": "2026-10-06T20:32:32.616Z"
+  "cuando": "2026-10-06T20:32:32.616Z",
+  "intentado": true,
+  "borrada": true
  },
  "w7o4x7": {
   "archivo": "fotos-notas/w7o4x7.jpg",
@@ -9241,9 +9241,9 @@
  "mtmc51": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-08T01:32:16.679Z",
+  "cuando": "2026-10-08T08:01:25.462Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 4,
+  "intentos": 5,
   "fuentes": 7
  },
  "1qsixdr": {
