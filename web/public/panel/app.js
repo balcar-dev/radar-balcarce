@@ -25,6 +25,7 @@ import { htmlDeNumeros, indiceDeNotas, resumenDeCorridas, diaDeBalcarce } from '
 import { htmlDeRevision, contarRevision } from './revision.js';
 import { resumenDeHoy, htmlDeHoy } from './hoy.js';
 import { clasificarBorradores, htmlDeBorradores } from './borradores.js';
+import { pasosDeLaNota, htmlDelRecorrido } from './recorrido.js';
 import { htmlDeFormulario, htmlDeLista, htmlDeUnaPista, htmlDeCerrarPista } from './pistas.js';
 import {
   armarContactos, htmlDeContactos, htmlDeUnContacto, htmlDeFormularioContacto, htmlDeCola, colaDeEnvio, contactoPropio, conHistorial, enlaceWhatsApp, enlaceMail,
@@ -45,7 +46,7 @@ const COLOR = {
 const chip = (s) => (s ? `<span class="chip" style="background:var(--s-${COLOR[s] ?? 'pais'})">${esc(s)}</span>` : '');
 const GUARDADO = 'radar-panel';
 /** Los archivos del panel (los mismos que guarda sw.js): "Actualizar el panel" los vuelve a bajar. */
-const ARCHIVOS_DEL_PANEL = ['app.js', 'github.js', 'cifrado.js', 'textos.js', 'fechas.js', 'numeros.js', 'redes-estado.js', 'revision.js', 'pistas.js', 'contactos.js', 'fotos.js', 'hoy.js', 'borradores.js', 'index.html'].map((a) => `/panel/${a}`);
+const ARCHIVOS_DEL_PANEL = ['app.js', 'github.js', 'cifrado.js', 'textos.js', 'fechas.js', 'numeros.js', 'redes-estado.js', 'revision.js', 'pistas.js', 'contactos.js', 'fotos.js', 'hoy.js', 'borradores.js', 'recorrido.js', 'index.html'].map((a) => `/panel/${a}`);
 const DEMO = new URLSearchParams(location.search).has('demo');
 const VOCES = { locutora: 'la locutora', locutor: 'el locutor' };
 const enlaceDeNota = (n) => `https://radarbalcarce.com/nota/${n.slug ? `${n.slug}-${n.id}` : n.id}`;
@@ -1395,6 +1396,25 @@ function barraDeAcciones(tipo, id, d) {
   return botones ? `<div class="espacio-barra"></div><div class="barra-acciones">${botones}</div>` : '';
 }
 
+/** "Su recorrido": de dónde entró la nota, por qué esperó, quién la escribió y la aprobó, adónde salió (recorrido.js). */
+function recorridoDeLaNota(tipo, id, n, d) {
+  const g = E.borradoresIA?.[id];
+  const medios = (n.fuentes ?? n.fuentesConsultadas ?? []).map((f) => f?.medio).filter(Boolean);
+  const todos = medios.length ? medios : (n.medios ?? []);
+  const pasos = pasosDeLaNota({
+    nota: n,
+    medios: [...new Set(todos)],
+    motivoExplicado: tipo === 'pendiente' && n.motivo ? explicarMotivo(n.motivo) : '',
+    decision: d ? { estado: d.estado, por: d.por, cuando: d.cuando, cambioElTitulo: !!d.titulo && d.titulo !== n.titulo } : null,
+    borrador: g?.b ? { cuando: g.cuando, pedido: g.b.pedido, marcas: (g.b.problemas ?? []).length } : null,
+    escritaPorIA: tipo === 'publicada' && !!n.guion && !n.cuerpoAMano,
+    salioEnLaWeb: tipo === 'publicada',
+    salioSola: n.como === 'automatica',
+    facebook: enFacebook(id), instagram: enInstagram(id), marcadaParaRedes: marcadaParaRedes(id),
+  }, { horaEnBalcarce });
+  return htmlDelRecorrido(pasos, { esc });
+}
+
 function vistaNota(tipo, id) {
   E.notaActual = id;
   const n = buscar(tipo, id);
@@ -1466,6 +1486,7 @@ function vistaNota(tipo, id) {
     <p>${chip(c?.seccion ?? n.seccion)}<span class="meta">${esc(haceCuanto(n.fecha))}</span></p>
     <h1>${esc(c?.titulo ?? n.titulo ?? 'Nota sensible')}</h1>
     ${cuerpo}
+    ${recorridoDeLaNota(tipo, id, n, d)}
     ${extra}
     <div class="botones">${acciones}</div>${barraDeAcciones(tipo, id, d)}`;
   window.scrollTo(0, 0);

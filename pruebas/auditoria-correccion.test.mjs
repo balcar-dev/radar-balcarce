@@ -148,7 +148,7 @@ test('el rediseño: cinco pestañas con ícono, barra de acciones fija en la not
   assert.match(html, /\.barra-acciones \{ position: fixed;/);
   assert.match(html, /REDISEÑO DEL 2\/10/);
   assert.match(html, /\.pestanas \{ grid-template-columns: repeat\(5, 1fr\)/);
-  assert.match(leer('web/public/panel/sw.js'), /radar-panel-20/);
+  assert.match(leer('web/public/panel/sw.js'), /radar-panel-21/);
 });
 
 // 8/10/2026: la corrección automática dejó "se contrajo 1 por ciento en en en…" (179 veces), "no competiránnnn…" (43 n), "nodocentes → docentes",
