@@ -10329,16 +10329,16 @@
   "cuando": "2026-10-08T20:01:39.849Z"
  },
  "1kubycv": {
-  "archivo": "fotos-notas/1kubycv.jpg",
   "medio": "El Diario Balcarce",
-  "credito": "Foto: El Diario Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "Postergas la actividad en el autódromo Juan Manuel Fangio",
   "enlace": "https://eldiariobalcarce.com.ar/se-postergo-la-actividad-en-el-fangio-488",
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-08-21-7-50Zonal_2025.jpg",
   "razon": "Es la única foto disponible, tiene buen encuadre y no posee marcas ni menores.",
-  "cuando": "2026-10-08T21:32:34.774Z"
+  "cuando": "2026-10-08T21:32:34.774Z",
+  "intentado": true,
+  "borrada": true
  },
  "6sz9pj": {
   "intentado": true,
@@ -10426,5 +10426,42 @@
   "cuando": "2026-10-08T21:32:34.774Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "mtojvh": {
+  "archivo": "fotos-notas/mtojvh.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Liauzh / Wikimedia Commons (CC BY-SA 4.0)",
+  "licencia": "CC BY-SA 4.0",
+  "autor": "Liauzh",
+  "origen": "wikimedia",
+  "titulo": "Franco Colapinto bromea con un fanático en Singapur y se emociona por Messi",
+  "enlace": "https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Alpine_-_Franco_Colapinto_-_FP2.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6c/2025_Singapore_GP_-_Alpine_-_Franco_Colapinto_-_FP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Franco Colapinto\" de Wikimedia Commons (CC BY-SA 4.0).",
+  "cuando": "2026-10-08T22:01:38.857Z"
+ },
+ "1hem9fi": {
+  "archivo": "fotos-notas/1hem9fi.jpg",
+  "medio": "Diputados Bonaerenses",
+  "credito": "Foto: Diputados Bonaerenses",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Carlos Bianco celebra el regreso del diálogo con General Pueyrredon",
+  "enlace": "https://diputadosbsas.com.ar/bianco-regreso-montenegro-mar-del-plata/",
+  "imagenOriginal": "https://dptdsbsas.nyc3.digitaloceanspaces.com/wp-content/uploads/2026/10/08123405/BIANCO-07-1024x683.webp",
+  "razon": "La foto B muestra claramente al funcionario sin marcas de agua ni menores, con un excelente encuadre y nitidez.",
+  "cuando": "2026-10-08T22:01:38.857Z"
+ },
+ "936sqm": {
+  "archivo": "fotos-notas/936sqm.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Netflix prepara una precuela de Bridgerton enfocada en Lady Violet",
+  "enlace": "https://www.eldia.com/espectaculos/anuncian-una-precuela-de-la-serie-bridgerton-que-plataforma-y-de-que-tratara-espectaculos_1791469080",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1791469322286.jpg?&cw=1200&ch=630",
+  "razon": "Es la foto grupal de excelente calidad y sin marcas de agua.",
+  "cuando": "2026-10-08T22:01:38.857Z"
  }
 }

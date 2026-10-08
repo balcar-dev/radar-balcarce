@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T21:35:35.988Z",
- "portada": 63,
- "archivo": 1109,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-08T22:01:58.392Z",
+ "portada": 61,
+ "archivo": 1111,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-08T21:35:36.031Z",
+  "generado": "2026-10-08T22:01:58.432Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T18:36:11.280Z"
    },
    {
@@ -63,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-08T18:36:11.280Z",
     "segundos": null,
     "notas": [
@@ -160,6 +160,11 @@
     "segundos": 51,
     "notas": [
      {
+      "id": "mr88ek",
+      "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "fkiosn",
       "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
       "seccion": "Economía"
@@ -173,11 +178,6 @@
       "id": "1om2oqi",
       "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "mr88ek",
-      "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -215,12 +215,6 @@
      "id": "1om2oqi",
      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "mr88ek",
-     "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
-     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
