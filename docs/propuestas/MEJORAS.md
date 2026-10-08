@@ -1417,7 +1417,7 @@ días de efemérides o de feriados cargados (los feriados llegan hasta el 25/05/
   `pistas.json`, también lo que después se rechaza por delicado. Un rumor con nombre y apellido queda en el
   historial. Propuesta: que viaje cifrado como lo demás del celular. 1 día.
 
-**P-4 · Las pistas pueden gastar todo el cupo de búsqueda (Tavily)** — *Confirmado · ALTA*
+**P-4 ✔ · Las pistas pueden gastar todo el cupo de búsqueda (Tavily)** — *Confirmado · ALTA · hecho el 8/10 (regla 138); falta contar los créditos en el WhatsApp*
 - Hasta ~64 créditos por día con dos pistas abiertas; el plan gratis ronda los 1.000 por mes (a confirmar).
   Se acabaría en unas dos semanas y "Hacer la nota" dejaría de andar sin aviso. Reintentar como mucho una
   vez por día, búsqueda básica y contar créditos en el WhatsApp. 2 h.
