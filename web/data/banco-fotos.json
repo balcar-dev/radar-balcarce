@@ -9897,8 +9897,8 @@
   "origen": "ninguna",
   "titulo": "Mini Club y Sportivo Trabajo ganan en la Liga Local de Básquet",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-08T15:02:12.064Z",
-  "intentos": 2,
+  "cuando": "2026-10-08T16:37:43.169Z",
+  "intentos": 3,
   "fuentes": 1
  },
  "w8t322": {
@@ -9975,8 +9975,8 @@
   "origen": "ninguna",
   "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-08T15:02:12.064Z",
-  "intentos": 1,
+  "cuando": "2026-10-08T16:37:43.169Z",
+  "intentos": 2,
   "fuentes": 1
  },
  "1rf94dp": {
@@ -10035,5 +10035,44 @@
   "imagenOriginal": "https://www.cronica.com.ar/files/image/1692/1692155/6a70d2f08ece7_600_315!.jpg?s=9427e1448acc035ebc20de0981a51074&d=1785726000",
   "razon": "La foto B es la única limpia de marcas de agua y menores, ilustrando adecuadamente la temática de consumo masivo.",
   "cuando": "2026-10-08T15:40:11.274Z"
+ },
+ "170rgay": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Marcas internacionales de indumentaria abren locales en el país",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-08T16:37:43.169Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "vnuraj": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-08T16:37:43.169Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "vr9xc5": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-08T16:37:43.169Z",
+  "intentos": 1,
+  "fuentes": 9
+ },
+ "r09m78": {
+  "archivo": "fotos-notas/r09m78.jpg",
+  "medio": "Agencia DIB",
+  "credito": "Foto: Agencia DIB",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "ARBA habilita el pago con descuento de la patente hasta el viernes",
+  "enlace": "https://dib.com.ar/economia/vence-la-cuota-8-del-impuesto-automotor-clave-pagar-descuento-n56336",
+  "imagenOriginal": "https://media.dib.com.ar/p/cf2d6f29f5022b5cfdb8c59a960ad25a/adjuntos/377/imagenes/100/051/0100051596/1200x675/smart/impuesto-automotor.jpg",
+  "razon": "Es la foto más clara y representativa del pago de patentes mediante un celular en la calle, sin marcas de agua ni menores.",
+  "cuando": "2026-10-08T16:37:43.169Z"
  }
 }
