@@ -193,6 +193,10 @@ unos 100.000 archivos (a confirmar): tampoco alcanza para siempre.
 5. **Las fotos** son lo que más pesa (~4 MB por día, ~1,5 GB por año en git). Antes de fin de año conviene
    sacarlas a un depósito (R2-fotos). R2 pide tarjeta aunque no cobre: es una decisión.
 
+**Lo que pidieron Hernán y Andrés (8/10):** que la historia de la página siga siempre; por ahora, prever que
+ande bien 1 o 2 años y después ir adaptando. Hay un **recordatorio programado para el 15/12/2026** que les
+llega por notificación y por mail, con una revisión de cómo vienen el archivo, las fotos y el respaldo.
+
 **Mientras tanto (antes del 2/11):** subir el tope (por ejemplo a 5.000 notas, unos 15.000 archivos) y que
 lo que salga del archivo vaya al histórico en vez de borrarse. Así no se pierde nada mientras se arma lo
 demás. Hoy no se perdió ninguna nota: el archivo empezó a mediados de septiembre.
@@ -1115,7 +1119,12 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
   la duda sobre marcas se resuelve a favor de usar. Un solo `ingesta/commons.mjs` y alinear con
   `docs/05`. Depende de C5+C4.
 
-**Q1 · Guardar las piezas de redes más tiempo** — *Corregido*
+**Q1 · Guardar las piezas de redes y aprovecharlas** — *Corregido · pedido el 8/10*
+- **Lo que pidieron:** que no se pierda lo que se genera. Hoy, una vez publicada la historia o el reel, el
+  audio y el video desaparecen; en Instagram y Facebook quedan los reels y posteos, y las historias se van a
+  las 24 horas. La idea es guardarlos y reusarlos: por ejemplo, que el clima sea también una **nota propia en
+  la web, con su audio para escuchar** y los enlaces a Facebook e Instagram (ver RS-1 y RS-2 en las ideas).
+
 - Hoy el mp4 se guarda 3 días como adjunto de Actions y el mp3 se descarta. Si Meta bloquea la cuenta o
   falla Instagram, después de 3 días no hay copia.
 - **Primer paso, sin cuentas nuevas:** subir la retención del adjunto (los repositorios públicos
@@ -1211,7 +1220,16 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
 - En privado, los ~10.000 minutos por mes no entran en los 2.000-3.000 incluidos. Un servidor de
   US$ 5-9 correría los robots. Primero, pasar lo comercial a un repo privado aparte (gratis; ver C-8).
 
-**R2-fotos · Sacar las fotos de git** — *Confirmado; motivo nuevo*
+**R2-fotos · Sacar las fotos de git y llevarlas a Cloudflare** — *Confirmado · pedido el 8/10*
+- **Lo que pidieron:** que las fotos y el banco de fotos se guarden directamente en Cloudflare, para no
+  depender tanto de GitHub. Hernán cree que la cuenta de Cloudflare ya está habilitada para eso: **a
+  confirmar** (el depósito de Cloudflare, R2, pide cargar una tarjeta aunque no cobre hasta 10 GB).
+- **Cuánto pesan de verdad (medido el 8/10):** hoy son **578 fotos y 44 MB en total**, unos 77 KB cada una.
+  Se suman unas 24 por día: **~1,8 MB por día, unos 650 MB por año**. Los "1,5 GB por año" que se dijeron antes
+  eran el crecimiento de todo el repositorio, que además guarda cada media hora una copia nueva de los datos.
+- **Bajarles el peso:** pasarlas a WebP (o AVIF) y en tres tamaños (C1 y C3). Con una muestra se estimó un
+  ahorro de un tercio a casi la mitad.
+
 - El repositorio pesa 145 MB y crece ~4 MB por día de fotos.
 - **Motivo nuevo (V2-7):** guarda 576 fotos de otros medios. Un aviso de derechos de autor a GitHub
   puede deshabilitar el repositorio entero (motor, robots y web juntos). Escribir ya un procedimiento de
@@ -1269,6 +1287,10 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
    - El aviso de voz con IA va como texto en el posteo, sin la etiqueta visual de Meta.
    - Se guarda el 100 % de las notas, año tras año.
    - Las voces siguen con Gemini por ahora, abiertas a probar otras.
+   - Las fotos y el banco de fotos van a Cloudflare, en un formato más liviano.
+   - La página guarda su historia siempre; por ahora se prevén 1 o 2 años, con recordatorio el 15/12/2026.
+   - Lo que se genera para redes (audio y video) se guarda y se reusa en la web.
+   - Las historias y los reels son solo para lo más relevante; los posteos de notas, para llevar gente a la web.
    - **El panel no decide si algo sale ni si las pruebas pasan.** Se rediseña después, cuando el flujo esté
      rearmado. Mientras tanto, nadie toca el feriado del 12/10 ni la efeméride del 11/10.
 0. **C-18:** no tocar el feriado del 12/10 ni la efeméride del 11/10 en el celular hasta el 13/10.

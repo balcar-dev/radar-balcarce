@@ -241,6 +241,15 @@ licencia; en Policiales sigue sin haber foto real.
 - **Una sola estética para todas:** mismas letras, colores, pie y barra de avance.
 - **La semana que viene** se unifican los criterios, se repasan todas las piezas y se elige la animación de
   cada una. Falta medir cuánto tarda en armarse en GitHub.
+- **Segunda tanda de ejemplos (8/10):** clima con día lindo (sol que sale, nubes que pasan), farmacia de turno
+  (una cruz verde que entra y late, el marcador de la dirección y los próximos días), participá (el número que
+  se escribe solo, el globo de chat y el sobre del mail que se abre), efeméride (el año que corre hacia atrás
+  hasta el del hecho, y "Y además" de a uno) y feriado (la hoja del calendario que pasa del 11 al 12, y un dato
+  del censo que cuenta). Todos con subtítulos y la misma estética. Los íconos son dibujos propios y genéricos:
+  ningún logo de marca (tampoco el de WhatsApp).
+- **El ejemplo de nota con foto** no corresponde a una pieza de hoy: las notas salen como posteos, no como
+  reel ni historia. **Queda para evaluar** una historia que lleve al posteo, sin cargar de más: **las
+  historias y los reels son para lo más relevante; los posteos, para llevar gente a la web** (8/10).
 
 ### Podcast, YouTube y TikTok (RS)
 
@@ -251,6 +260,22 @@ licencia; en Policiales sigue sin haber foto real.
 | RS-2 | **Feed de podcast** y alta gratis en Spotify y Apple | Solo búsqueda (reglas) | 1 semana | Spotify retira lo que imita voces reales (19/05/2026): avisar que es IA. Episodios de 55 s son cortos: uno diario que junte los tres |
 | RS-3 | **Reels en YouTube Shorts** | Solo búsqueda | Medio | Un proyecto sin auditar sube **en privado**; hay que pasar una auditoría de Google, o subir a mano |
 | RS-4 | **Reels en TikTok** | Solo búsqueda | Medio | Una app sin auditar publica **en privado**; la auditoría lleva 2 a 6 semanas; o a la bandeja y se termina a mano |
+
+**Todo lo que se genera, guardado y aprovechado (pedido el 8/10):**
+- Guardar el audio y el video de cada pieza (Q1 en `MEJORAS.md`), porque hoy se pierden.
+- **Notas propias con audio:** por ejemplo, el clima del día como nota en la web, con su audio, su texto y los
+  enlaces al reel en Facebook e Instagram. Lo mismo para la farmacia, la efeméride y los repasos.
+- **Dos canales RSS bien armados:** uno de texto (todas las notas, con el cuerpo) y uno de audio (el podcast),
+  que es el que leen Apple Podcasts y Spotify para sumar episodios.
+- **¿Audio para el 100 % de las notas?** Con Gemini no alcanza (10 audios por día). Opciones para evaluar:
+  - **Edge TTS:** usa las voces de lectura en voz alta de Microsoft Edge, que tienen voces argentinas
+    (Elena y Tomás). Es gratis, pero no es un servicio oficial: puede cortarse sin aviso y sus condiciones no
+    contemplan el uso comercial.
+  - **Azure Speech** (el servicio oficial de Microsoft, con las mismas voces argentinas): tiene un plan
+    gratis por mes (a confirmar la cantidad); alcanzaría para las notas de Balcarce, no para todas.
+  - En cualquier caso es una voz distinta de la de las redes: hay que decidir si se acepta.
+- **SEO y que todo esté bien indexado:** sitemap, datos para Google, RSS y Search Console (ver V2-13, V2-11 y
+  RSS-1 en `MEJORAS.md`).
 
 **TikTok, el camino propuesto** (Hernán y Andrés: "a mano o lo que haga falta"):
 1. **Ya, a mano:** el mp4 de cada reel queda como adjunto en GitHub (3 días; con Q1, más). Una persona lo baja
