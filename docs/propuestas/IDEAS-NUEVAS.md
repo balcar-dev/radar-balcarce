@@ -214,6 +214,28 @@ Varias ideas chocan con reglas escritas. No se pueden hacer sin que ustedes camb
 - Reels de prueba (para no seguidores) por la API: piden 1.000 seguidores.
 - Grupos de Facebook: Meta cerró la publicación automática en abril de 2024.
 
+### Videos con movimiento (idea nueva, con ejemplos)
+
+Hoy los reels son una placa fija con los subtítulos abajo. Se armaron **tres ejemplos** (sin voz, solo para
+mirar, el 8/10) con las mismas letras y colores del sitio:
+
+1. **Nota con foto:** la foto con un zoom lento, el nombre de la sección que entra de costado, el título que
+   aparece línea por línea, subtítulos que marcan la palabra que se dice y una barra de avance abajo.
+2. **Clima animado:** la temperatura que sube hasta el valor, lluvia suave de fondo si llueve, y las barras de
+   máxima y mínima de cada día que crecen de a una.
+3. **Repaso con transiciones:** cada titular con su foto, el paso de uno a otro deslizando, y puntos arriba que
+   dicen en cuál de los tres vas.
+
+**Cómo se hacen:** cuadro por cuadro con las mismas herramientas que ya usa el proyecto (resvg para dibujar y
+ffmpeg para juntar). No suma nada nuevo para instalar ni gasta voz: la voz es la misma de hoy, encima.
+**Costo:** US$ 0. Tarda más en armarse (unos 3 minutos para 28 segundos de video en esta prueba, a 720 de
+ancho; en GitHub sería parecido) y hay que medir que no atrase los horarios.
+**Otras formas:** Remotion (gratis hasta 3 personas, más fácil para animaciones complejas) o efectos simples
+de ffmpeg (zoom y fundidos, más rápido pero menos control).
+**Cuidado:** el movimiento no puede tapar el crédito de la foto ni la marca de la sección; nada de música sin
+licencia; en Policiales sigue sin haber foto real.
+**Estado:** técnica comprobada con los ejemplos; falta decidir cuál gusta y medir el tiempo en GitHub.
+
 ### Podcast, YouTube y TikTok (RS)
 
 | Id | Idea | Estado | Trabajo | Lo que hay que saber |
@@ -223,6 +245,14 @@ Varias ideas chocan con reglas escritas. No se pueden hacer sin que ustedes camb
 | RS-2 | **Feed de podcast** y alta gratis en Spotify y Apple | Solo búsqueda (reglas) | 1 semana | Spotify retira lo que imita voces reales (19/05/2026): avisar que es IA. Episodios de 55 s son cortos: uno diario que junte los tres |
 | RS-3 | **Reels en YouTube Shorts** | Solo búsqueda | Medio | Un proyecto sin auditar sube **en privado**; hay que pasar una auditoría de Google, o subir a mano |
 | RS-4 | **Reels en TikTok** | Solo búsqueda | Medio | Una app sin auditar publica **en privado**; la auditoría lleva 2 a 6 semanas; o a la bandeja y se termina a mano |
+
+**TikTok, el camino propuesto** (Hernán y Andrés: "a mano o lo que haga falta"):
+1. **Ya, a mano:** el mp4 de cada reel queda como adjunto en GitHub (3 días; con Q1, más). Una persona lo baja
+   y lo sube desde la app de TikTok, marcando "contenido generado con IA". Unos 2 minutos por video.
+2. **Después, a la bandeja:** con una app de TikTok con la revisión básica, el robot deja el video en la bandeja
+   de la cuenta y una persona solo toca "publicar". Pide crear la app y una persona que la registre.
+3. **Al final, automático:** pasar la auditoría de TikTok (2 a 6 semanas, con video de demostración). Recién
+   ahí se publica solo y en público.
 
 ---
 
@@ -351,6 +381,8 @@ lanzamiento no van en el repositorio público**: están en el documento privado 
 
 ## 10. Herramientas gratis de código abierto (GitHub)
 
+*Nada de esta lista está cerrado: lo descartado es "por ahora" y se puede volver a mirar.*
+
 *Investigado el 8/10. Estrellas, fecha del último cambio y licencia, comprobados en GitHub ese día.
 Condiciones y límites de los servicios, solo por búsqueda. Tiempos de ejecución: estimados, nada se
 probó. Las que reemplazan algo que ya existe también están en `MEJORAS.md` (sección "Herramientas").*
@@ -408,10 +440,13 @@ probó. Las que reemplazan algo que ya existe también están en `MEJORAS.md` (s
 - **Git scraping** (Simon Willison): bajar una página cada tanto desde Actions y guardarla en git, para
   ver qué cambió.
 
-### Descartadas
+### Descartadas por ahora
 
 - **Licencia que no conviene:** aeneas, whisper-timestamped y RSSHub (AGPL).
-- **Rompen la regla de la voz:** Piper, Kokoro y sherpa-onnx para publicar.
+- **Voces gratis (Piper, Kokoro, sherpa-onnx) y ElevenLabs:** no están descartadas. Hernán y Andrés
+  dijeron (8/10) que las voces siguen abiertas a cualquier cambio. Hoy chocan con la regla "la voz no se
+  cambia", que también se puede revisar; quedan para evaluar escuchándolas (las voces en castellano de Kokoro
+  no son rioplatenses).
 - **Pesadas o abandonadas:** WhisperX, stable-ts, FFCreator, MoviePy, LAION Watermark y Human (que
   además estima edades, algo que no sirve para decidir).
 - **Necesitan servidor:** Uptime Kuma, ArchiveBox, listmonk y Apprise (no hace falta).
@@ -433,7 +468,9 @@ probó. Las que reemplazan algo que ya existe también están en `MEJORAS.md` (s
 11. **R-1 Motor de carruseles + R-13 El finde en 5 placas:** si cambian la regla de Instagram.
 12. **COM-4 Lector de boletines:** una pieza para tres secciones (fuentes accesibles).
 
-## 12. Descartadas (y por qué)
+## 12. Descartadas por ahora (y por qué)
+
+*Ninguna está cerrada: si cambia algo, se vuelven a mirar.*
 
 - **Cargos docentes del día (ABC):** piden usuario del portal.
 - **Resultados de Aprender por distrito:** solo hay por provincia.

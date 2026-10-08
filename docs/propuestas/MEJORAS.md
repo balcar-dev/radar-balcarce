@@ -71,6 +71,13 @@ la estira de nuevo cada media hora.
 - **Arreglo de fondo (2-3 h):** no aplicar si el texto ya tiene la forma corregida; rechazar pares donde
   una forma contiene a la otra; corregir solo tildes y letras dobles, nunca palabras con mayúscula, "no",
   "ni", "nunca" ni números escritos; una prueba con los 15 casos reales.
+- **Cómo hacer que una corrección sea real y no empeore:**
+  1. Se aplica **una sola vez**: cuando se aplica, se anota como aplicada y el texto corregido queda guardado
+     en la nota. La corrida siguiente no la vuelve a buscar.
+  2. Antes de aplicar, se fija si el texto **ya tiene** la forma corregida: si la tiene, no hace nada.
+  3. Sola, solo lo seguro: tildes y letras dobles. Todo lo demás (otra palabra, un nombre, un número) va a
+     la pestaña Revisión del celular para que una persona diga sí o no.
+  4. Una prueba con los 15 casos reales de hoy, para que no vuelva.
 - **Para que no vuelva a pasar sin que nadie se entere:** que el vigilante avise si el cuerpo de una nota
   publicada cambia sin que lo haya tocado una persona, o si aparece una palabra repetida tres veces seguidas.
 
@@ -210,7 +217,13 @@ no marca nada.
 
 - **Evidencia:** `CRITERIO-REDES.md:180,215`; `redes/guiones.mjs:536`; `redes/meta.mjs` no tiene campo
   de etiqueta.
-- **No se sabe** si la API de Meta deja poner la etiqueta.
+- **Cómo se avisa (solo búsqueda, confirmar en la documentación de Meta):** desde el 22/06/2026 la API de
+  Instagram tiene el campo `is_ai_generated`. Se pone en `true` al crear el contenido y Meta agrega sola la
+  etiqueta "Información de IA". Va en el momento de crear: después no se puede agregar. Para Facebook no
+  se encontró el equivalente: confirmarlo. En TikTok existe un aviso de "contenido generado con IA"; el
+  nombre exacto del campo en su API no se pudo confirmar.
+- Fuentes: [registro de cambios de la plataforma de Instagram](https://developers.facebook.com/documentation/instagram-platform/changelog),
+  [guía de publicación directa de TikTok](https://developers.tiktok.com/doc/content-posting-api-reference-direct-post).
 - **Propuesta:** si la API no deja, una línea fija "Voz generada con IA" en el texto y en la bio de
   Instagram. Implica cambiar las reglas 6 y 4.6 del criterio.
 - **Decisión de Hernán y Andrés.**
@@ -335,9 +348,14 @@ día; prueba con un Meta simulado que publica y contesta error.
   `docs/efemerides-octubre-para-revisar.md:3`) dicen que del 19 al 31/10 esperan la aprobación de Hernán,
   pero en `web/data/efemerides-piezas.json` esos días **no tienen la marca que los frena** y no hay ninguna
   aprobación registrada: si nadie las aprobó a propósito, **desde el lunes 19/10 salen a las 9 sin
-  revisión**. Confirmarlo (5 min) y decidir si salen solo las aprobadas.
-- **Propuesta:** que el vigilante avise si quedan menos de 7 días de efemérides o de fijas; decidir antes
-  del 25/10 si se renuevan las fijas; armar noviembre (ojo con C-7). 1 h.
+  revisión**. **Decisión de Hernán (8/10): las efemérides
+  salen salvo que él diga que no.** O sea, lo que hace el código está bien; lo que hay que corregir son los
+  documentos que dicen lo contrario.
+- **Decisión de Hernán (8/10): el mes siguiente se arma el día 20** (por ejemplo, el 20/10 todo noviembre),
+  para tener por lo menos 10 días de revisión. Propuesta: que la corrida mensual de efemérides corra el 20
+  de cada mes y mande un WhatsApp "ya está noviembre para revisar"; que el vigilante avise si el 25 todavía
+  no está armado o si quedan menos de 7 días; decidir antes del 25/10 si se renuevan las fijas. Ojo: armar
+  noviembre hoy congela la web (C-7); hay que arreglar esas pruebas antes del 20/10. 1-2 h.
 
 ---
 
@@ -644,6 +662,38 @@ día; prueba con un Meta simulado que publica y contesta error.
 - **No usar Google Places**: sus condiciones prohíben mostrar los datos en un mapa que no sea de Google y
   obligan a borrar las coordenadas a los 30 días.
 
+### Respaldo (backup) de todo — *Propuesta nueva · nivel 1-2*
+
+**¿Corresponde? Sí.** Hoy todo vive en una sola cuenta de GitHub. Si GitHub la suspende (por ejemplo, por un
+reclamo de derechos de autor por una foto, ver R2-fotos), se pierden juntos el motor, los robots y la web.
+
+**Qué respaldar y cómo:**
+
+| Qué | Cómo | Costo |
+|---|---|---|
+| El repositorio entero (código, datos, fotos, historia) | Una copia espejo automática semanal en otro servicio (GitLab o Codeberg, gratis) o en un repositorio privado, y una copia en la PC de Hernán o Andrés una vez por mes | US$ 0 |
+| Los datos que escriben las personas (`correcciones`, `retiradas`, `celular-decisiones`, `contactos-celular`) | Van dentro del espejo; además, un adjunto semanal de Actions con un .zip de `web/data/` (90 días) | US$ 0 |
+| Las piezas de redes (mp4 y mp3) | Ver Q1: hoy se guardan 3 días | US$ 0 |
+| La lista de claves y dónde está cada una (**los nombres, nunca los valores**) | Un documento privado con qué secreto existe, para qué sirve y dónde se renueva | US$ 0 |
+| La configuración de Cloudflare, cron-job.org y Meta | Capturas o un documento privado, una vez | US$ 0 |
+| Las dos voces | No se pueden exportar: viven en el proyecto de Google. Anotar sus ids y el texto con que se crearon (ya en `CRITERIO-REDES.md`) para poder recrearlas parecidas | — |
+
+**¿Sirve?** Sí, sobre todo por el riesgo de cuenta única. Un espejo semanal más una prueba de restauración por
+año (que alguien baje la copia y vea que se arma) alcanza. 2 a 3 h.
+
+### Auditoría de fotos — *Propuesta nueva · nivel 2-3*
+
+Hoy nadie revisa las fotos ya publicadas (por eso pasó C-13). Propuesta, de lo barato a lo caro:
+
+1. **Control por código en cada corrida (gratis):** ninguna foto real en Policiales sin marca de fuente
+   oficial; ninguna foto sin evaluación (I-4); ninguna foto repetida en el mismo día.
+2. **Una vez por semana, con IA (gratis, dentro del cupo):** mirar las fotos de la semana y preguntar si tiene
+   marca o nombre de otro medio, si aparece un chico, y si la foto tiene que ver con la nota. Que avise en la
+   pestaña Fotos, como hace la auditoría de textos con Revisión.
+3. **Herramientas gratis como segundo control** (sección Herramientas): leer texto en los bordes (marcas) y
+   detectar caras (para Policiales y notas con chicos).
+4. **Una persona, 15 minutos por semana:** las fotos manuales y las de Policiales.
+
 ### Motor de noticias (revisión del 8/10)
 
 **I-2 · El verificador acepta un año cambiado** — *Confirmado · ALTA*
@@ -881,6 +931,13 @@ del minuto 0 y tienen tope de tiempo.
 ### Pruebas (revisión del 8/10)
 
 **T-1 · Separar "guardia de datos" de "pruebas de código"** — *Confirmado · ALTA* (concreta A5)
+- **¿Hace falta correr todas las pruebas cada media hora? No.** Lo que cambia cada media hora son los datos,
+  no el código. Las 1.840 pruebas revisan el código: alcanza con correrlas cuando alguien cambia código y
+  una vez por noche. Cada media hora basta con un control corto de que los datos estén sanos.
+- **¿Se pueden hacer mejores pruebas, que no fallen cuando algo está vacío?** Sí: cada prueba usa sus propios
+  datos de ejemplo, guardados con la prueba, y nunca los archivos vivos. Así, que una lista quede vacía o que
+  una persona toque un botón nunca puede congelar la web. Y se suman pruebas de "qué pasa si viene vacío o
+  roto" para cada archivo (lo que hoy faltó en C-5).
 - **Guardia de datos**, en cada corrida (1-2 s): que todo `web/data/*.json` se pueda leer, motivo, cuándo y
   quién en retiradas y correcciones, decisiones válidas. Sin cantidades ni fechas.
 - **Pruebas de código**, al subir código y una vez por noche: las 1.840, con las que leen datos vivos
@@ -1146,11 +1203,13 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
 
 ---
 
-## Descartado (y por qué)
+## Descartado por ahora (y por qué)
+
+*Nada está cerrado: si cambia algo, se vuelve a mirar.*
 
 - **Firebase:** pide tarjeta para tareas programadas y no resuelve nada que Cloudflare no resuelva.
-- **ElevenLabs:** el plan gratis no alcanza, no permite uso comercial y rompe "no cambiar de voz".
-  Queda como plan de emergencia pago.
+- **ElevenLabs:** el plan gratis no alcanza y no permite uso comercial. Las voces siguen abiertas a cambios
+  (Hernán y Andrés, 8/10): queda para evaluar, incluida una opción paga.
 - **GitHub privado pagando solo el plan:** el exceso de minutos saldría US$ 40-60 por mes.
 - **Leer solo lo nuevo de cada feed:** ahorra segundos y rompe la comparación entre medios.
 - **Lighthouse en cada ciclo:** serían horas por vuelta.
@@ -1163,6 +1222,7 @@ siempre rotula "Espacio publicitario". El texto de baja (Ley 25.326) ya va en lo
 ## Decisiones que necesitan a Hernán y Andrés
 
 0. **C-0:** frenar ya la corrección automática de la auditoría y arreglar las dos notas rotas.
+0. **Decidido el 8/10:** las efemérides salen salvo que Hernán diga que no, y el mes siguiente se arma el día 20.
 0. **C-18:** no tocar el feriado del 12/10 ni la efeméride del 11/10 en el celular hasta el 13/10.
 1. **C-1:** si se arregla la prueba antes del lunes 12/10.
 2. **C-2:** la regla de "ningún script de terceros" y cómo se separa el panel (detalle en el documento privado).
