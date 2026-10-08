@@ -205,6 +205,16 @@ Lo común a todas:
   de artesanos, el sábado 10:00, en el Parque Cerro El Triunfo. La agenda completa está en
   Radar Balcarce punto com. Radar Balcarce."
 
+### El feriado · 8:00, los días de feriado · 10 a 25 segundos
+
+- **Para qué:** contar de qué se trata el feriado, con datos verificados (`web/data/feriados-piezas.json`, que sale de
+  `ingesta/efemerides-curadas.json`). Cada feriado tiene su animación y su dato propios: una fecha patria no es igual a un
+  feriado religioso o a uno trasladable.
+- **Qué dato se cuenta (8/10, Hernán y Andrés):** lo elige el criterio editorial del medio: **la historia de la fecha y sus
+  hechos**, en tono sobrio e institucional, con su fuente. **No estadísticas** que no vayan con esa línea (el censo, por ejemplo,
+  quedó afuera del 12/10). Cada feriado lleva su `enfoque` escrito: sin enfoque ni datos no sale.
+- **Una persona lo revisa** cuando el tema es delicado (`revisaUnaPersona`).
+
 ## 4. Lo que toda pieza respeta
 
 1. **Nombra sólo "Radar Balcarce"**, nunca otro nombre para el medio.
