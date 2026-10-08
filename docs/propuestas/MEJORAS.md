@@ -1181,7 +1181,7 @@ ninguna nota; la guardia del 20 % va también ahí.
 - Comparte candado con Redes y GitHub deja uno solo esperando; el panel dice "Volvió a fallar". Distinguir
   "cancelada" o darle candado propio. 1-2 h.
 
-**R-3 · Reintentar no mira la franja horaria** — *Confirmado · MEDIA*
+**R-3 ✔ · Reintentar no mira la franja horaria** — *Confirmado · MEDIA · hecho el 8/10 (regla 131)*
 - Se puede subir a las 21 el clima de la mañana diciendo "Buen día" (`redes/reintentar.mjs:46-98`). 1 h.
 
 **R-4 · El contrato y el vigilante no miran todas las piezas** — *Confirmado · MEDIA*

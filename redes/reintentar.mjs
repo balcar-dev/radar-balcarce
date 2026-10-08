@@ -22,7 +22,7 @@ import { crearCliente, PAGINA_DE_FACEBOOK, sinToken } from './meta.mjs';
 import { leerJson as leer, leerJsonEstricto } from '../ingesta/json.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
 import { anotar, libroNuevo, estaActivo } from './elegir.mjs';
-import { pieDePieza } from './piezas.mjs';
+import { pieDePieza, enHora, ventanaDe } from './piezas.mjs';
 import { limpiarProblema, registrarProblema } from './publicar-piezas.mjs';
 
 /** Cómo se llama cada red en el libro y qué método del cliente publica en ella (igual que publicar-piezas.mjs). */
@@ -59,6 +59,10 @@ export async function reintentarPieza({
   const claveHistoria = `${red}/${clave}`;
   const yaEsta = parte === 'historia-del-reel' ? libro.historiasDeReels[claveHistoria] : libro[r.libro][clave];
   if (yaEsta) return { ok: true, mensaje: 'Ya estaba publicada: no se hizo nada.' };
+
+  // R-3 (8/10/2026): cada pieza dice lo de su parte del día ("buen día", "esta noche"). Fuera de su franja, o de otro día, no se sube.
+  if (dia !== diaAR(ahora)) return { ok: false, mensaje: `${nombre} era del ${dia}: lo de un día no sale otro día.` };
+  if (pieza.hora && !enHora(pieza.hora, ahora, ventanaDe(nombre))) return { ok: false, mensaje: `Ya pasó la franja de "${nombre}" (salía a las ${pieza.hora}): fuera de hora no se publica.` };
 
   const tipo = parte === 'reel' ? 'REELS' : 'STORIES';
   if (parte === 'reel' && pieza.tipo !== 'reel') return { ok: false, mensaje: `"${nombre}" no es un reel.` };

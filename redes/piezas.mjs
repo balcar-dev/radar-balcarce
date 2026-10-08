@@ -221,7 +221,7 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {}, clima = null
 }
 
 /** ¿Está dentro de su hora? Desde que le toca hasta que vence la ventana. */
-function enHora(hora, ahora, ventana) {
+export function enHora(hora, ahora, ventana) {
   const desde = minutosDeHora(hora);
   const ahoraMin = minutoDelDiaAR(ahora);
   return ahoraMin >= desde && ahoraMin < desde + ventana;
