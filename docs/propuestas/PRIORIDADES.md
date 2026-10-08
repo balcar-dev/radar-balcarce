@@ -30,6 +30,8 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 28 | Se borraron dos celulares personales de `docs/historico/HISTORIA.md` (siguen en el historial de git) y se quitó la línea `Host:` del robots | 8/10 | `5bc00d7` |
 | 18 | Parche de las herramientas de armado (sharp, source-map-js); el sitio compila. **Falta:** el aviso de fin de parches de Next 15 sólo se resuelve pasando a Next 16 (cambio grande, a decidir) | 8/10 | `5bc00d7` |
 | 14 | Un archivo de datos roto corta la corrida en vez de leerse como vacío (archivo de notas, libro de redes, armado del sitio) y no se guarda un archivo con más de 20 % menos notas | 8/10 | regla 110 |
+| 15 | Una corrección hecha después de aprobar una nota ya no se deshace, y la poda de los lunes no suelta una retirada que sigue aprobada | 8/10 | regla 111 |
+| 20 | El tope de notas con página subió a 3.500 y lo que sale del archivo va al histórico por mes (`web/data/historico/`); el plazo de la subida a Cloudflare pasó de 15 a 25 minutos. **Falta:** armar las notas viejas en el momento (más allá de 3.500) y mover las fotos a un depósito | 8/10 | regla 111 |
 | 3 y 11 | Se sacó la foto de *El Eco de Tandil* de la nota `fd2y4d` y Policiales sin fuente oficial ya no lleva foto real aunque venga del banco o del panel | 8/10 | `e5ccab5`, regla 109 |
 
 ---

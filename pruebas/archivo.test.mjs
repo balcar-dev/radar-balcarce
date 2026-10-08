@@ -431,3 +431,40 @@ test('el archivo y el libro de redes se leen sin pasar por vacío cuando están 
   for (const f of ['publicar', 'reintentar']) assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', `redes/${f}.mjs`), 'utf8'), /leerJsonEstricto\(LIBRO/);
   assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', 'redes/reloj.mjs'), 'utf8'), /leerJsonEstricto\(LIBRO/);
 });
+
+// 8/10/2026 (C-14): ni una corrección hecha después de aprobar ni una retirada que sigue aprobada pueden deshacerse solas.
+test('la poda de retiradas no suelta las que siguen aprobadas en las decisiones', async () => {
+  const { podarRetiradas } = await import('../web/lib/archivo.js');
+  const json = { notas: { a: { motivo: 'm', cuando: '2026-09-01', por: 'h' }, b: { motivo: 'm', cuando: '2026-09-01', por: 'h' } } };
+  const r = podarRetiradas(json, { hoy: '2026-10-12', enLaIngesta: new Set(), conAprobacion: new Set(['b']) });
+  assert.deepEqual(r.quitadas, ['a']);
+  assert.deepEqual(Object.keys(r.json.notas), ['b']);
+});
+
+test('la corrección a mano se aplica a la nota aprobada que se rearma desde el archivo', () => {
+  const gen = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
+  assert.match(gen, /corregidas\.push\(conCorreccion\(\{[\s\S]*?\}, CORRECCIONES\)\);/);
+  assert.match(gen, /conAprobacion: new Set\(/);
+});
+
+// 8/10/2026 (C-6): lo que sale del archivo por edad o por tope no se pierde, va al histórico del mes.
+test('las bajas del archivo van al histórico por mes; las retiradas no', async () => {
+  const { bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico, comoArchivoJson, actualizarArchivo } = await import('../web/lib/archivo.js');
+  const ahora = Date.parse('2026-10-08T12:00:00Z');
+  const vieja = { id: 'v', titulo: 'Vieja', fecha: '2026-03-01T10:00:00Z', slug: 'vieja', redes: true };
+  const nueva = { id: 'n', titulo: 'Nueva', fecha: '2026-10-07T10:00:00Z', slug: 'nueva', redes: true };
+  const retirada = { id: 'r', titulo: 'Retirada', fecha: '2026-10-06T10:00:00Z', slug: 'retirada' };
+  const despues = actualizarArchivo({ archivo: [vieja, nueva, retirada], publicadas: [], enPortada: new Set(), retiradas: new Set(['r']), ahora });
+  assert.deepEqual(despues.map((n) => n.id), ['n']);
+  assert.deepEqual(bajasDelArchivo([vieja, nueva, retirada], despues, new Set(['r'])).map((n) => n.id), ['v'], 'la retirada a mano no se guarda');
+  assert.equal(mesDeLaNota(vieja), '2026-03');
+  assert.equal(mesDeLaNota({}), 'sin-fecha');
+  const h1 = conBajasEnElHistorico({ notas: [] }, [vieja]);
+  const h2 = conBajasEnElHistorico(h1, [vieja, { ...vieja, titulo: 'otra' }]);
+  assert.equal(h2.notas.length, 1, 'no se repite');
+  assert.equal(h2.notas[0].titulo, 'Vieja', 'manda lo que ya estaba');
+  assert.ok(JSON.parse(comoArchivoJson(h2.notas)).notas.length === 1);
+  const gen = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/scripts/generar-datos.mjs'), 'utf8');
+  assert.match(gen, /bajasDelArchivo\(/);
+  assert.match(fs.readFileSync(path.join(import.meta.dirname, '..', '.github/workflows/actualizar.yml'), 'utf8'), /git add [^\n]*web\/data\/historico\//);
+});

@@ -13,7 +13,7 @@ En orden alfabético.
 | **Alcance** | De dónde es una fuente: `local` (Balcarce), `region`, `provincia` o `pais` | Campo de cada fuente (`ingesta/fuentes.mjs`, `ingesta/fuentes-cruce.mjs`) |
 | **Amarillo** | El color del semáforo que **espera a una persona** en el panel. En la nube, sin una persona, no sale | `semaforo` (`ingesta/ingesta.mjs`); `docs/03-SELECCION.md` |
 | **Antecedentes** | Hasta 3 notas que el sitio ya publicó en los últimos 30 días sobre el mismo tema, que la IA recibe como contexto **anterior**. No se busca nada en internet | `antecedentesDe` (`reels/reescritura.mjs`); `docs/04-REDACCION.md` |
-| **Archivo** | Lo que tiene **página**: lo publicado en los últimos 180 días, hasta 2.500 notas. La portada es lo que se **muestra** (36 horas) | `web/data/archivo.json`, `web/lib/archivo.js`; `docs/06-WEB.md` |
+| **Archivo** | Lo que tiene **página**: lo publicado en los últimos 180 días, hasta 3.500 notas. La portada es lo que se **muestra** (36 horas) | `web/data/archivo.json`, `web/lib/archivo.js`; `docs/06-WEB.md` |
 | **Archivadas** (en el panel) | Las notas que pasaron 72 horas sin que nadie las decidiera. Sólo en la PC | `HORAS_PARA_ARCHIVAR` (`panel/servidor.mjs`); `docs/09-PANEL.md` |
 | **Auditoría (semanal)** | El workflow de los lunes a las 9 que mide lo publicado (tamaños de imágenes, íconos, SEO) y el contrato de la semana. Corrió por primera vez el 28/09; guarda `web/data/auditoria.json` | `.github/workflows/auditoria.yml`, `redes/auditar.mjs`; `docs/08-INFRAESTRUCTURA.md` |
 | **Aviso (publicitario)** | Uno de los tres espacios de publicidad de la web (apertura, clima, pie). Se cargan desde el panel | `web/data/avisos.json`, `panel/avisos.mjs`, `web/components/avisos.js`; `PUBLICIDAD.md` |

@@ -314,7 +314,7 @@ Los que no, los sube otro (el panel, otro workflow o una persona).
 | Archivo | Qué guarda | Quién lo escribe | Quién lo lee | ¿Lo sube Actualizar? |
 |---|---|---|---|---|
 | `portada.json` | Lo que se **muestra**: las notas de las últimas 36 h, secciones con notas, temas, clima y avisos, farmacia, fiestas anuales, útiles, pendientes, cuántas esperan cuerpo | `generar-datos.mjs`, sólo si `cambioQueImporta` | Todas las páginas (`lib/datos.js`), las redes (`redes/datos.mjs`), el vigilante, la auditoría de redes, y `generar-datos` en la corrida siguiente (primer avistaje, fechas, slugs, lo ya reescrito) | Sí |
-| `archivo.json` | Lo que tiene **página**: lo publicado en los últimos 180 días, hasta 2.500 notas, una por renglón | `generar-datos.mjs` (`actualizarArchivo`) | `lib/datos.js` (páginas de notas, tapa, "Seguí leyendo", sitemap), `generar-redirects.mjs`, el panel (antecedentes para la IA), `generar-datos` | Sí |
+| `archivo.json` | Lo que tiene **página**: lo publicado en los últimos 180 días, hasta 3.500 notas, una por renglón | `generar-datos.mjs` (`actualizarArchivo`) | `lib/datos.js` (páginas de notas, tapa, "Seguí leyendo", sitemap), `generar-redirects.mjs`, el panel (antecedentes para la IA), `generar-datos` | Sí |
 | `agenda.json` | Los eventos con página: los que vienen y los que pasaron hace menos de 60 días | `generar-datos.mjs` (`actualizarAgenda`) | `lib/datos.js` (agenda, portada, Cultura, sitemap), `reels/plan.mjs` | Sí |
 | `intentos-ia.json` | Cuántas veces se le pidió cada nota a Gemini y por qué falló (7 días) | `generar-datos.mjs` con `reels/reescritura.mjs` | `generar-datos.mjs` | Sí |
 | `futbol.json` | Los partidos (con goleadores) de la Liga y las copas de los últimos 10 días y los próximos 4, la tabla de la Liga y los equipos argentinos, de ESPN, y la fecha de cada nota de fútbol | `generar-datos.mjs`, **sólo en la nube** | `ingesta/futbol.mjs` | Sí |
@@ -495,7 +495,7 @@ ya está en Facebook, en un grupo de WhatsApp o en Google no da error.
 - lo que hoy no tiene respaldo (de afuera, contado por un solo medio y sin
   fuente oficial: `tieneRespaldo`, `web/lib/cuerpo.js`) se va, **salvo** que
   haya salido en redes;
-- lo de más de 180 días (`DIAS_DE_ARCHIVO`) se va, y si pasa de 2.500 notas
+- lo de más de 180 días (`DIAS_DE_ARCHIVO`) se va, y si pasa de 3.500 notas
   (`MAXIMO_EN_ARCHIVO`, por el límite de 20.000 archivos por despliegue de
   Cloudflare) se quedan primero las que salieron en redes y después las más
   nuevas.

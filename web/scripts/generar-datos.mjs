@@ -69,7 +69,7 @@ import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
-  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo,
+  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo, bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico,
   idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
@@ -392,6 +392,9 @@ if (enLaNube && diaSemanaAR() === 1) {
   const ruta = path.join(AQUI, '..', 'data', 'retiradas.json');
   const { json, quitadas } = podarRetiradas(leerJson(ruta, null), {
     hoy: diaAR(), enLaIngesta: new Set((ultima.notas ?? []).map((n) => n.id)),
+    // Una retirada que sigue aprobada en las decisiones no se poda: sin la lista la nota volvería (C-14).
+    conAprobacion: new Set(Object.entries(estado.decisiones ?? {})
+      .filter(([, d]) => decisionHumana(d) && (d.estado === 'publicada' || d.estado === 'automatica')).map(([id]) => id)),
   });
   if (quitadas.length) {
     fs.writeFileSync(ruta, comoRetiradasJson(json), 'utf8');
@@ -634,11 +637,13 @@ for (const a of archivoAnterior.notas ?? []) {
   if (decisionHumana(d)) {
     if (d.estado !== 'publicada' && d.estado !== 'automatica') retiradas.add(a.id);
     else if (!enIngesta.has(a.id)) {
-      corregidas.push({
+      // La corrección hecha DESPUÉS de aprobar va al final: si no, el texto de la aprobación la pisaba a los 3 días (C-14, 8/10/2026) y,
+      // si había sacado un nombre, el nombre volvía.
+      corregidas.push(conCorreccion({
         ...sinExtras(a),
         ...extrasParaLaWeb(d, a),
         titulo: d.titulo ?? a.titulo, copete: d.copete ?? a.copete, cuerpo: d.cuerpo ?? a.cuerpo, guion: d.guion ?? a.guion,
-      });
+      }, CORRECCIONES));
     }
   } else if (pierdeLaPagina(enIngesta.get(a.id), {
     // La cotización del dólar no es sensible: sale de las listas (está en
@@ -918,6 +923,16 @@ if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
   fs.mkdirSync(path.dirname(ARCHIVO), { recursive: true });
   fs.writeFileSync(ARCHIVO, comoArchivoJson(archivo), 'utf8');
   console.log(`  archivo.json: ${archivo.length} notas con página (${retiradas.size} retiradas)`);
+  // Lo que salió por edad o por tope no se pierde: queda en web/data/historico/AAAA-MM.json (C-6). Sólo en la nube, que es la que sube.
+  const bajas = enLaNube ? bajasDelArchivo(archivoAnterior.notas ?? [], archivo, retiradas) : [];
+  const porMes = new Map();
+  for (const n of bajas) porMes.set(mesDeLaNota(n), [...(porMes.get(mesDeLaNota(n)) ?? []), n]);
+  for (const [mes, notasDelMes] of porMes) {
+    const ruta = path.join(AQUI, '..', 'data', 'historico', `${mes}.json`);
+    fs.mkdirSync(path.dirname(ruta), { recursive: true });
+    fs.writeFileSync(ruta, comoArchivoJson(conBajasEnElHistorico(leerJsonEstricto(ruta, { notas: [] }), notasDelMes).notas), 'utf8');
+  }
+  if (bajas.length) console.log(`  histórico: ${bajas.length} notas pasaron del archivo al histórico`);
 }
 
 // Las fotos que ya no tienen nota se borran (podarFotos): las de lo retirado a

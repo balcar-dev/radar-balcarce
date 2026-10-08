@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     # Hoy tarda entre uno y uno y medio minutos. Quince es de sobra y corta
     # una subida colgada.
-    timeout-minutes: 15
+    timeout-minutes: 25
     env:
       # Que "hoy" y las horas que se compilan sean los de Balcarce, no UTC.
       TZ: America/Argentina/Buenos_Aires
