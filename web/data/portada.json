@@ -1,84 +1,91 @@
 {
-  "generado": "2026-10-09T14:03:07.848Z",
+  "generado": "2026-10-09T14:32:38.859Z",
   "notas": [
     {
-      "id": "601x8n",
-      "titulo": "La Fiesta Nacional del Postre evalúa su paso para noviembre",
-      "copete": "La organización analiza nuevas fechas para concretar la vigesimosegunda edición tras la suspensión por las condiciones climáticas.",
-      "cuerpo": "La vigesimosegunda edición de la Fiesta Nacional del Postre analiza trasladarse al mes de noviembre. La decisión surge luego de que el encuentro gastronómico debiera suspenderse debido a las adversas condiciones climáticas registradas para el fin de semana.\n\nLa organización evalúa distintas alternativas para reprogramar las actividades que iban a desarrollarse en el predio de la Sociedad Rural. La propuesta original contemplaba una amplia oferta gastronómica junto con las presentaciones en vivo de los pasteleros Lulo Kazimrczyk, Mambrunense, la madrina Rocío Espinillo y Valentín Galdón Ritvo.\n\nHasta el momento no existe una fecha oficial definida para concretar el evento. Las autoridades aguardan resolver la disponibilidad del predio y la coordinación general para anunciar el nuevo cronograma.",
-      "guion": "La Fiesta Nacional del Postre evalúa su paso para noviembre",
-      "seccion": "Cultura y agenda",
+      "id": "1nqkexf",
+      "titulo": "La Corte Suprema frena la venta de campos a extranjeros",
+      "copete": "El máximo tribunal dictó una medida cautelar de urgencia que restituye los límites a la adquisición de tierras rurales por parte de ciudadanos de otros países.",
+      "cuerpo": "La Corte Suprema de Justicia dictó una medida cautelar interina que restituye las limitaciones para la adquisición de tierras rurales por parte de personas extranjeras. La decisión se tomó de urgencia y con un tribunal dividido. El texto fue firmado por los jueces Horacio Rosatti y Ricardo Lorenzetti, junto con los conjueces Diego Barroetaveña y Juan Ignacio Pérez Curci.\n\nEl máximo tribunal revirtió de forma parcial los efectos de una resolución previa dictada el martes de la semana pasada, que había dejado sin efecto un fallo de la Cámara Federal de La Plata contra la normativa aplicada por el Poder Ejecutivo.\n\nLa Corte decidió enviar el expediente al juzgado federal de Bariloche para que se analice la legitimación de los demandantes, mientras la cautelar suspende los alcances del artículo correspondiente del decreto presidencial hasta que haya una resolución de fondo.",
+      "guion": "La Corte Suprema frena la venta de campos a extranjeros",
+      "seccion": "Agro",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "La Nación",
+        "El Día"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/exclusivo-la-fiesta-nacional-del-postre-podria-reprogramarse-para-noviembre",
+      "enlace": "https://www.lanacion.com.ar/politica/un-fallo-urgente-de-la-corte-repone-los-limites-a-la-venta-de-tierras-a-extranjeros-y-alivia-al-nid09102026/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T13:53:46.000Z",
       "sinFecha": false,
-      "visto": "2026-10-09T14:01:21.836Z",
-      "relevancia": 84,
-      "local": true,
+      "visto": "2026-10-09T14:31:49.247Z",
+      "relevancia": 53,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La 22ª edición fue suspendida por el clima",
-        "La organización analiza reprogramarla para noviembre",
-        "Todavía no hay una nueva fecha oficial confirmada"
-      ],
-      "seSabe": [
-        "La suspensión de la fiesta se debió a las condiciones climáticas adversas",
-        "La organización evalúa realizar el evento durante noviembre",
-        "La programación incluía presentaciones de pasteleros en la Sociedad Rural"
+        "La Corte Suprema restituyó los límites a la compra de campos por parte de extranjeros.",
+        "La medida cautelar interina frena los efectos del artículo correspondiente del DNU 70/2023.",
+        "El expediente fue derivado al juzgado federal de Bariloche para su discusión de fondo."
       ],
       "noConfirmado": [
-        "No hay una nueva fecha confirmada para la realización del evento",
-        "Resta definir la disponibilidad del predio y el cronograma definitivo",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "Todavía no se resolvió la constitucionalidad de fondo del decreto presidencial.",
+        "No se determinó la legitimación definitiva de todos los actores involucrados en la demanda."
       ],
-      "textoRedes": "La organización de la Fiesta Nacional del Postre analiza realizar la vigesimosegunda edición durante noviembre tras la suspensión por el mal clima.",
+      "textoRedes": "La Corte Suprema dictó una medida cautelar que restituye las restricciones a la compra de campos por parte de extranjeros.",
       "etiquetas": [
-        "Fiesta Nacional del Postre",
-        "Sociedad Rural",
-        "Balcarce",
-        "clima"
+        "Corte Suprema",
+        "tierras",
+        "extranjeros",
+        "DNU",
+        "justicia"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/exclusivo-la-fiesta-nacional-del-postre-podria-reprogramarse-para-noviembre",
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/un-fallo-urgente-de-la-corte-repone-los-limites-a-la-venta-de-tierras-a-extranjeros-y-alivia-al-nid09102026/",
           "fecha": "2026-10-09T13:53:46.000Z",
           "oficial": false,
-          "aporte": "Informó la suspensión de la fiesta por el clima y la evaluación de una nueva fecha en noviembre"
+          "aporte": "Informó sobre el fallo de la Corte Suprema que repone las restricciones a la compra de campos por parte de extranjeros y los detalles de la medida cautelar."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/la-corte-dicto-un-fallo-que-repone-la-vigencia-de-la-ley-de-tierras-politica-y-economia_1791554280",
+          "fecha": "2026-10-09T14:11:27.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "antecedentes": [
         {
-          "id": "2r3foe",
-          "titulo": "La Fiesta Nacional del Postre confirma las clases de cocina para el fin de semana",
-          "fecha": "2026-10-07T14:08:04.000Z",
-          "ruta": "/nota/la-fiesta-nacional-del-postre-confirma-las-clases-de-cocina-para-el-2r3foe"
+          "id": "16ufhqn",
+          "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
+          "fecha": "2026-09-29T03:00:00.000Z",
+          "ruta": "/nota/la-corte-revoca-el-fallo-sobre-la-ley-de-tierras-del-dnu-16ufhqn"
         },
         {
-          "id": "jul321",
-          "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
-          "fecha": "2026-10-03T23:02:33.000Z",
-          "ruta": "/nota/suspenden-la-fiesta-nacional-del-postre-por-el-mal-clima-jul321"
+          "id": "1k45c07",
+          "titulo": "Caról pide a Diputados rechazar el decreto sobre tierras tras el fallo",
+          "fecha": "2026-09-30T16:44:00.000Z",
+          "ruta": "/nota/carol-pide-a-diputados-rechazar-el-decreto-sobre-tierras-tras-el-fallo-1k45c07"
         },
         {
-          "id": "1h3b7f0",
-          "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
-          "fecha": "2026-09-30T18:17:49.000Z",
-          "ruta": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0"
+          "id": "1lubi1s",
+          "titulo": "La Corte Suprema se reúne para revisar las restricciones a la compra de tierras",
+          "fecha": "2026-09-29T03:00:00.000Z",
+          "ruta": "/nota/la-corte-suprema-se-reune-para-revisar-las-restricciones-a-la-compra-1lubi1s"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-fiesta-nacional-del-postre-evalua-su-paso-para-noviembre"
+      "slug": "la-corte-suprema-frena-la-venta-de-campos-a-extranjeros",
+      "foto": {
+        "archivo": "fotos-notas/1nqkexf.jpg",
+        "credito": "Foto: La Nación"
+      }
     },
     {
       "id": "18jx7kk",
@@ -162,150 +169,6 @@
       }
     },
     {
-      "id": "5crmtt",
-      "titulo": "Franco Colapinto arranca undécimo en el sprint de Singapur",
-      "copete": "El piloto argentino de Alpine quedó a un paso de la Q3 y largará desde la undécima posición el sábado. La actividad en el circuito continuará con la carrera corta y la prueba principal.",
-      "cuerpo": "Franco Colapinto cumplió una sólida labor en la clasificación y largará en el undécimo lugar en la competencia corta del Gran Premio de Singapur. El piloto argentino de la escudería Alpine quedó muy cerca de ingresar al lote de los diez mejores durante la sesión.\n\nEn la parte alta del clasificador, el neerlandés Max Verstappen marcó el mejor tiempo a bordo de su Red Bull, seguido por el británico George Russell con Mercedes. El italiano Kimi Antonelli, líder del certamen, comenzará la prueba desde el séptimo cajón de la grilla. Colapinto se ubica duodécimo en la tabla anual con veintisiete unidades, mientras que su equipo ocupa el sexto puesto entre los constructores.\n\nLa agenda continuará el sábado con la carrera sprint a las seis de la mañana y la posterior tanda de ordenamiento para la final a las diez. El evento principal se pondrá en marcha el domingo a las nueve.",
-      "guion": "Franco Colapinto arranca undécimo en el sprint de Singapur",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Ámbito",
-        "TyC Sports"
-      ],
-      "enlace": "https://www.ambito.com/deportes/franco-colapinto-llega-la-clasificacion-sprint-singapur-una-practica-dificil-alpine-n6331912",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T13:45:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T14:01:21.836Z",
-      "relevancia": 80,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Colapinto largará 11° en el sprint de Singapur este sábado a las 6.",
-        "Max Verstappen dominó la clasificación pero su pole corre riesgo por una sanción.",
-        "Kimi Antonelli encabeza el campeonato y partirá desde el séptimo lugar."
-      ],
-      "seSabe": [
-        "Franco Colapinto largará en el puesto 11 en la carrera sprint de Singapur.",
-        "Max Verstappen dominó la clasificación y George Russell quedó segundo.",
-        "Kimi Antonelli lidera el campeonato de pilotos y largará séptimo.",
-        "La carrera sprint se disputará el sábado a las 6.",
-        "La clasificación para la competencia principal será el sábado a las 10 y la final el domingo a las 9."
-      ],
-      "noConfirmado": [
-        "La sanción sobre el vehículo de Max Verstappen que pondría en riesgo su pole position."
-      ],
-      "textoRedes": "Franco Colapinto se ubicó undécimo en la clasificación y largará desde esa posición en la carrera sprint del Gran Premio de Singapur. La actividad continuará durante el fin de semana con las pruebas principales.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Formula 1",
-        "Gran Premio de Singapur"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/franco-colapinto-llega-la-clasificacion-sprint-singapur-una-practica-dificil-alpine-n6331912",
-          "fecha": "2026-10-09T13:45:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados de la clasificación en Singapur, los horarios de la competencia y la posición de Colapinto."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/f1-hora-y-donde-ver-en-vivo-la-clasificacion-de-la-sprint-de-colapinto-en-el-gp-de-singapur-id764675.html",
-          "fecha": "2026-10-09T13:49:09.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional sobre el evento."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1u3brye",
-          "titulo": "Franco Colapinto encara el Gran Premio de Singapur con expectativas altas",
-          "fecha": "2026-10-08T13:32:18.000Z",
-          "ruta": "/nota/franco-colapinto-encara-el-gran-premio-de-singapur-con-expectativas-1u3brye"
-        },
-        {
-          "id": "117ewnb",
-          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
-          "fecha": "2026-10-08T11:26:30.000Z",
-          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
-        },
-        {
-          "id": "18wlubj",
-          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
-          "fecha": "2026-10-07T09:01:08.000Z",
-          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-arranca-undecimo-en-el-sprint-de-singapur",
-      "foto": {
-        "archivo": "fotos-notas/5crmtt.jpg",
-        "credito": "Foto: TyC Sports"
-      }
-    },
-    {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "copete": "La institución organizó un encuentro en la Sociedad Italiana para celebrar la labor informativa y homenajear a la familia de Beto Vuotto.",
-      "cuerpo": "El Club Rotario Balcarce Cerrito organizó un encuentro en la Sociedad Italiana para agasajar a los trabajadores de prensa de la ciudad y destacar su labor cotidiana. Durante la velada participó la familia de Vuotto, en recuerdo del reconocido periodista local.\n\nLa fecha conmemorativa se instauró en 2023 en honor a Beto Vuotto, tomando como referencia su natalicio el 4 de octubre. Esta celebración busca reconocer la trayectoria de los comunicadores locales y vincular a distintas generaciones.\n\nAdemás, la institución recibió a los jóvenes balcarceños que regresaron recientemente a la ciudad tras participar en programas de intercambio en Brasil y Australia.",
-      "guion": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce",
-      "medios": [
-        "News Balcarce (FM 91.7)"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30988",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T13:19:29.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T13:31:40.859Z",
-      "relevancia": 84,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Club Rotario Balcarce Cerrito agasajó a los periodistas locales.",
-        "El encuentro se desarrolló en la Sociedad Italiana.",
-        "Participó la familia de Beto Vuotto, en cuyo homenaje se instauró la fecha.",
-        "Recibieron a jóvenes que volvieron de intercambios en el exterior."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Club Rotario Balcarce Cerrito organizó un encuentro en la Sociedad Italiana para agasajar a los periodistas locales y homenajear a la familia de Beto Vuotto. Además, recibieron a jóvenes que regresaron de intercambios en el exterior.",
-      "etiquetas": [
-        "Rotary",
-        "periodismo",
-        "Sociedad Italiana",
-        "Balcarce",
-        "homenaje"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30988",
-          "fecha": "2026-10-09T13:19:29.000Z",
-          "oficial": false,
-          "aporte": "Detalló el agasajo del Club Rotario a los periodistas, el homenaje a Beto Vuotto y la bienvenida a los jóvenes de intercambio."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-rotary-agasaja-al-periodismo-local-y-recibe-a-jovenes-de"
-    },
-    {
       "id": "repaso20261009manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: Vaca Muerta, sumario, OSeBal y Carlos Tevez",
@@ -382,15 +245,16 @@
       "guion": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
       "seccion": "Deportes",
       "medios": [
+        "Infobae",
         "La Nueva",
         "UAR (Unión Argentina de Rugby)"
       ],
       "enlace": "https://uar.com.ar/mario-ledesma-y-shaun-edwards-se-suman-al-cuerpo-tecnico-de-los-pumas/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T13:01:13.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:42:24.435Z",
-      "relevancia": 63,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -449,6 +313,7 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
@@ -457,7 +322,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 69,
+      "relevancia": 75,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -496,156 +361,87 @@
       "slug": "franco-riquelme-antonetti-gana-la-copa-centenario-de-la-base-naval"
     },
     {
-      "id": "sq9o10",
-      "titulo": "Investigadores registran fuerte baja de algas en el dique Paso de las Piedras",
-      "copete": "Un estudio científico en el embalse Paso de las Piedras detectó una caída superior al 90% en la presencia de cianobacterias. La prueba se desarrolló entre octubre de 2025 y junio de este año.",
-      "cuerpo": "Un trabajo técnico desarrollado en el embalse Paso de las Piedras comprobó una reducción superior al 90% en las concentraciones de cianobacterias y toxinas, según informaron la Universidad Nacional del Sur y el Conicet. La experiencia se extendió entre octubre de 2025 y junio de 2026 en el principal reservorio que provee agua potable a Bahía Blanca y Coronel Rosales.\n\nEl proyecto contó con la participación de ABSA, la Autoridad del Agua y equipos académicos mediante la instalación de nueve dispositivos de control. Los especialistas aclararon que será necesario continuar con las mediciones para evaluar el comportamiento del sistema a largo plazo.",
-      "guion": "Investigadores registran fuerte baja de algas en el dique Paso de las Piedras",
-      "seccion": "Argentina",
+      "id": "1gmlwhw",
+      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "copete": "Ediles cruzaron cuestionamientos en la 15á sesión por la campaña de recupero de deuda a más de 2.000 usuarios y la contratación de un estudio jurídico externo.",
+      "cuerpo": "El tramo final de la decimoquinta sesión del Concejo Deliberante concentró un intenso debate en torno a las intimaciones enviadas por Aguas de la Ciudad para recuperar deudas acumuladas por más de 2.000 usuarios. La discusión expuso objeciones de la oposición sobre la contratación de un estudio jurídico marplatense y la demora en responder pedidos de informes.\n\nEn la misma línea, Enrique Guillén y Gabriel Petruccelli reclamaron que las gestiones queden a cargo de profesionales locales y exigieron mayores facilidades de pago para los vecinos. Desde el oficialismo, Leandro Spinelli rechazó las sospechas, defendió la necesidad de recaudar fondos ante la delicada situación financiera de la firma y prometió gestionar las explicaciones requeridas.",
+      "guion": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "seccion": "Balcarce",
       "medios": [
-        "Agencia DIB",
-        "La Nueva",
-        "La Brújula 24"
+        "Puntonueve (FM 100.9)"
       ],
-      "enlace": "https://www.labrujula24.com/notas/2026/10/09/paso-de-las-piedras-detectan-reduccion-de-mas-de-90-de-cianobacterias-y-sus-toxinas-n524606/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T11:19:36.000Z",
+      "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T11:36:27.000Z",
       "sinFecha": false,
-      "visto": "2026-10-09T13:31:40.859Z",
-      "relevancia": 73,
-      "local": false,
+      "visto": "2026-10-09T14:31:49.247Z",
+      "relevancia": 84,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Evaluaron el embalse entre octubre de 2025 y junio de 2026.",
-        "Detectaron una reducción superior al 90% de cianobacterias.",
-        "Participaron la UNS, el Conicet, ABSA y la Autoridad del Agua."
+        "Intimaciones a más de 2.000 usuarios del servicio sanitario.",
+        "Cuestionamiento opositor a un estudio jurídico marplatense.",
+        "Reclamos por falta de respuestas a pedidos de informes.",
+        "Defensa oficialista de la recaudación para sostener a la empresa."
       ],
       "seSabe": [
-        "La prueba piloto arrojó una caída superior al 90% en cianobacterias y microcistinas, según la UNS y el Conicet.",
-        "El embalse Paso de las Piedras abastece de agua potable a Bahía Blanca y Coronel Rosales.",
-        "La experiencia técnica se llevó adelante entre octubre de 2025 y junio de 2026."
+        "El debate ocurrió al cierre de la 15á sesión del Concejo Deliberante.",
+        "La campaña de cobro alcanza a más de 2.000 usuarios.",
+        "La oposición cuestionó la Ordenanza 40/26 y la falta de respuestas de Ricardo Stoppani."
       ],
       "noConfirmado": [
-        "Todavía resta conocer la evolución del sistema a largo plazo mediante nuevos monitoreos."
+        "No se detallaron los montos totales de la deuda reclamada a los usuarios.",
+        "No trascendieron los plazos en los que asumiría el nuevo gerente de la empresa.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Un estudio científico en el embalse Paso de las Piedras detectó una reducción superior al 90% en la presencia de cianobacterias y microcistinas durante una prueba piloto.",
+      "textoRedes": "Intenso debate en el Concejo Deliberante por las intimaciones y el recupero de deudas impulsado por Aguas de la Ciudad a más de 2.000 usuarios.",
       "etiquetas": [
-        "cianobacterias",
-        "embalse Paso de las Piedras",
-        "UNS",
-        "Conicet",
-        "agua potable"
+        "Concejo Deliberante",
+        "Aguas de la Ciudad",
+        "deudas",
+        "OSEBAL"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "La Brújula 24",
-          "enlace": "https://www.labrujula24.com/notas/2026/10/09/paso-de-las-piedras-detectan-reduccion-de-mas-de-90-de-cianobacterias-y-sus-toxinas-n524606/",
-          "fecha": "2026-10-09T11:19:36.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
+          "fecha": "2026-10-09T11:36:27.000Z",
           "oficial": false,
-          "aporte": "Detalló los porcentajes de reducción, los plazos de la prueba piloto y los organismos intervinientes."
+          "aporte": "Detalló los cruces en el Concejo Deliberante por las intimaciones de Aguas de la Ciudad y las posturas de los bloques."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "z7t628",
+          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
+          "fecha": "2026-10-09T02:06:53.000Z",
+          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
         },
         {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/bahia-blanca-hay-un-90-menos-algas-el-dique-paso-las-piedras-n56364",
-          "fecha": "2026-10-09T13:06:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que el embalse abastece a Bahía Blanca y Coronel Rosales."
+          "id": "e09k96",
+          "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
+          "fecha": "2026-10-07T05:31:18.450Z",
+          "ruta": "/nota/el-concejo-debate-la-creacion-de-un-banco-municipal-de-fisiatria-e09k96"
         },
         {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-9-7-48-0-presentaron-los-resultados-del-monitoreo-en-el-embalse-paso-de-las-piedras",
-          "fecha": "2026-10-09T13:27:22.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la presentación conjunta de los resultados por parte de la UNS y el Conicet."
+          "id": "1s9so2g",
+          "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
+          "fecha": "2026-09-25T23:02:57.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal-1s9so2g"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "investigadores-registran-fuerte-baja-de-algas-en-el-dique-paso-de-las",
-      "foto": {
-        "archivo": "fotos-notas/sq9o10.jpg",
-        "credito": "Foto: La Brújula 24"
-      }
-    },
-    {
-      "id": "vwb5m5",
-      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
-      "copete": "El director técnico del Atlético de Madrid elogió al capitán argentino y evitó compararlo con Diego Maradona. Además, repasó su carrera en la previa de un compromiso por el torneo español.",
-      "cuerpo": "El entrenador del Atlético de Madrid, Diego Simeone, elogió este viernes al capitán de la selección argentina y destacó el valor de su trayectoria profesional.\n\nDurante una conferencia de prensa, el técnico evitó elegir entre Diego Maradona y Lionel Messi al considerarlos los mejores futbolistas de la historia. Asimismo, señaló que las estadísticas del delantero son inalcanzables y valoró su conducta deportiva mantenida durante dos décadas.\n\nSimeone también remarcó que el atacante enseñó a sus compatriotas a insistir ante la adversidad. El capitán albiceleste disputó su último encuentro internacional el 6 de octubre en un amistoso frente a Benín.",
-      "guion": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
-      "seccion": "Fútbol",
-      "medios": [
-        "TyC Sports",
-        "Olé",
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T11:16:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 75,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Diego Simeone elogió la trayectoria y la conducta deportiva de Lionel Messi.",
-        "El entrenador evitó comparar al capitán argentino con Diego Maradona.",
-        "El técnico destacó que el delantero enseñó a insistir frente a las dificultades."
-      ],
-      "seSabe": [
-        "Diego Simeone declaró que los números de Lionel Messi son insuperables.",
-        "El entrenador del Atlético de Madrid destacó el buen comportamiento sostenido por el delantero.",
-        "Messi jugó su último partido con la selección argentina el 6 de octubre contra Benín."
-      ],
-      "textoRedes": "Diego Simeone elogió a Lionel Messi en conferencia de prensa, destacó sus estadísticas y valoró su conducta deportiva a lo largo de su carrera.",
-      "etiquetas": [
-        "Diego Simeone",
-        "Lionel Messi",
-        "Atletico de Madrid",
-        "Seleccion Argentina",
-        "Futbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
-          "fecha": "2026-10-09T11:16:06.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones completas de Diego Simeone sobre Lionel Messi y los datos de su último partido con la selección."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/diego-simeone-lionel-messi-seleccion-argentina-despedida-id765102.html",
-          "fecha": "2026-10-09T12:46:30.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/messi/messi-enseno-cosas-vienen-mal-pelear_3_uBK7BYE9YN.html",
-          "fecha": "2026-10-09T11:37:21.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "simeone-destaca-las-ensenanzas-de-messi-y-valora-su-trayectoria",
+      "slug": "el-concejo-discute-las-intimaciones-de-aguas-de-la-ciudad",
       "foto": {
-        "archivo": "fotos-notas/vwb5m5.jpg",
-        "credito": "Foto: TyC Sports"
+        "archivo": "fotos-notas/1gmlwhw.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -660,15 +456,14 @@
         "Infobae",
         "Perfil",
         "El Cronista",
-        "Crónica",
-        "Noticias Argentinas (NA)"
+        "Crónica"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T10:56:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T12:01:23.333Z",
-      "relevancia": 89,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -788,11 +583,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45043-el-concejo-aprobo-la-creacion-de-un-registro-de-acompanantes-terapeuticos-y-nuevas-ordenanzas/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T10:31:41.235Z",
       "sinFecha": true,
       "visto": "2026-10-09T10:31:41.235Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1114,6 +909,94 @@
       }
     },
     {
+      "id": "k4h7u0",
+      "titulo": "Boca visita a Instituto en el arranque de la fecha del Clausura",
+      "copete": "El conjunto xeneize se mide esta tarde ante el líder del torneo en el Estadio Mario Alberto Kempes. El técnico analiza variantes en la formación por la Copa Sudamericana.",
+      "cuerpo": "Boca visita a Instituto este viernes a partir de las 19:30 en el Estadio Mario Alberto Kempes, en el inicio de la duodécima fecha de la Zona A del Torneo Clausura. El arbitraje principal corre por cuenta de Leandro Rey Hilfer, mientras que Yamil Possi está a cargo del VAR.\n\nEl equipo dirigido por Rodolfo Arruabarrena marcha cuarto en su zona con 20 puntos y acumula un invicto de 16 partidos en el semestre. Por su parte, el conjunto cordobés lidera el certamen con 25 unidades y atraviesa una destacada campaña bajo la conducción de Diego Flores.\n\nDe cara al compromiso, el cuerpo técnico visitante evalúa dar descanso a algunos habituales titulares debido al próximo cruce de ida frente a Vasco Da Gama por las semifinales de la Copa Sudamericana. Entre las variantes se destaca el posible ingreso del juvenil Dylan Gorosito y el retorno de Rodrigo Battaglia a la convocatoria tras superar una grave lesión.",
+      "guion": "Boca visita a Instituto en el arranque de la fecha del Clausura",
+      "seccion": "Fútbol",
+      "medios": [
+        "Olé",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Verdad",
+        "Doble Amarilla",
+        "La Nueva"
+      ],
+      "enlace": "https://www.eldia.com/deportes/boca-visita-a-instituto-en-un-cruce-fundamental-deportes_1791525172",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T06:42:02.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T11:31:38.538Z",
+      "relevancia": 75,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Boca enfrenta a Instituto este viernes a las 19:30 en Córdoba",
+        "El encuentro se disputa en el Estadio Mario Alberto Kempes",
+        "El conjunto local lidera la Zona A con veinticinco puntos"
+      ],
+      "seSabe": [
+        "El partido corresponde a la duodécima fecha de la Zona A del Torneo Clausura",
+        "El árbitro principal es Leandro Rey Hilfer y Yamil Possi está en el VAR",
+        "Instituto suma veinticinco puntos en el torneo"
+      ],
+      "noConfirmado": [
+        "La alineación titular definitiva de Boca para el encuentro",
+        "La presencia desde el inicio de Rodrigo Battaglia"
+      ],
+      "textoRedes": "Boca visita a Instituto esta tarde a las 19:30 en el Estadio Mario Alberto Kempes por la duodécima fecha de la Zona A del Torneo Clausura.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Instituto",
+        "Torneo Clausura",
+        "futbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/boca-visita-a-instituto-en-un-cruce-fundamental-deportes_1791525172",
+          "fecha": "2026-10-09T06:42:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario, el estadio, el cuerpo arbitral, las estadísticas de ambos equipos y las probables variantes tácticas"
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/ante-instituto-boca-afronta-otro-examen-de-alto-riesgo",
+          "fecha": "2026-10-09T08:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el horario y el objetivo de Boca de trepar a la cima de la tabla anual"
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/boca-y-una-visita-clave-a-instituto-de-cordoba-para-trepar-a-lo-mas-alto-en-la-tabla-anual_a6ac78d4f5319d0dbc2735aa2",
+          "fecha": "2026-10-09T09:12:35.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el encuentro se disputa este viernes por la duodécima fecha"
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-9-5-0-21-hora-tv-y-formaciones-boca-visita-a-instituto-de-cordoba-en-busca-de-trepar-a-lo-mas-alto-en-la-tabla-anual",
+          "fecha": "2026-10-09T11:23:29.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el partido se programó para las 19:30 en Córdoba"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "boca-visita-a-instituto-en-el-arranque-de-la-fecha-del-clausura",
+      "foto": {
+        "archivo": "fotos-notas/k4h7u0.jpg",
+        "credito": "Foto: El Día"
+      }
+    },
+    {
       "id": "1bb4gv8",
       "titulo": "Atletas locales suman cinco triunfos en Mar del Plata",
       "copete": "Cuatro representantes de la Asociación Civil Atlética Carreras y Concursos participaron del Torneo de la Diversidad Cultural y consiguieron seis podios en distintas disciplinas.",
@@ -1188,7 +1071,7 @@
       "fecha": "2026-10-09T02:06:53.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T02:31:40.028Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1472,156 +1355,6 @@
       }
     },
     {
-      "id": "13p9pma",
-      "titulo": "Montenegro se reúne con Santilli y marca que la prioridad es la seguridad",
-      "copete": "El intendente de General Pueyrredon mantuvo un encuentro con el jefe de Gabinete nacional en Casa Rosada para coordinar acciones contra el delito. La reunión se da tras su regreso a la conducción del municipio.",
-      "cuerpo": "Durante la reunión, ambos funcionarios conversaron sobre la situación del distrito y remarcaron la necesidad de articular el trabajo conjunto en materia de prevención.\n\nEl jefe comunal indicó que la prioridad central de su gestión es la seguridad y señaló que la problemática exige una intervención coordinada entre las fuerzas policiales, las áreas municipales y la Justicia. Asimismo, recalcó que las autoridades tienen la obligación de brindar respuestas sin distinguir jurisdicciones y aseguró que el foco debe ponerse en combatir el delito.\n\nEsta visita a Buenos Aires se produjo luego de que el mandatario comunal decidiera dejar su banca en el Senado provincial para ponerse al frente del municipio. En una conferencia de prensa brindada en el Centro de Operaciones y Monitoreo, explicó que su retorno respondió al reclamo de los vecinos ante los hechos delictivos y planteó la necesidad de sumar a la Patrulla Municipal, la Policía Bonaerense, fuerzas federales, jueces y fiscales.",
-      "guion": "Montenegro se reúne con Santilli y marca que la prioridad es la seguridad",
-      "seccion": "Política",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "0223 (Mar del Plata)",
-        "El Eco de Tandil",
-        "Diputados Bonaerenses",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infobrisas (Radio Brisas)"
-      ],
-      "enlace": "https://www.elmarplatense.com/montenegro-se-reunio-con-santilli-en-casa-rosada-y-lanzo-una-advertencia-el-enemigo-es-el-delincuente",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T22:48:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T07:31:51.291Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reunión en Casa Rosada entre Guillermo Montenegro y Diego Santilli.",
-        "El eje del encuentro fue la coordinación en materia de seguridad.",
-        "El intendente retomó sus funciones ejecutivas tras dejar el Senado provincial."
-      ],
-      "seSabe": [
-        "Guillermo Montenegro se reunió con Diego Santilli en Casa Rosada.",
-        "El encuentro centró su atención en la seguridad del partido de General Pueyrredon.",
-        "Montenegro dejó su banca en el Senado bonaerense para volver a la intendencia."
-      ],
-      "textoRedes": "El intendente Guillermo Montenegro se reunió con el jefe de Gabinete nacional, Diego Santilli, en Casa Rosada para coordinar acciones en materia de seguridad en General Pueyrredon.",
-      "etiquetas": [
-        "Guillermo Montenegro",
-        "Diego Santilli",
-        "Casa Rosada",
-        "Seguridad",
-        "General Pueyrredon"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/montenegro-se-reunio-con-santilli-en-casa-rosada-y-lanzo-una-advertencia-el-enemigo-es-el-delincuente",
-          "fecha": "2026-10-08T22:48:15.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro entre el intendente y el jefe de Gabinete en Casa Rosada."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/montenegro-se-reunio-con-santilli-en.html",
-          "fecha": "2026-10-09T06:06:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la coordinación de fuerzas de seguridad y el regreso al ejecutivo municipal."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-8-20-12-0-montenegro-se-reunio-con-santilli-por-la-seguridad-de-mar-del-plata-el-enemigo-es-el-delincuente",
-          "fecha": "2026-10-08T23:12:00.000Z",
-          "oficial": false,
-          "aporte": "Comunicó detalles del encuentro a través de redes sociales."
-        },
-        {
-          "medio": "Mi8 (Canal 8 Mar del Plata)",
-          "enlace": "https://mi8.com.ar/montenegro-se-reunio-con-santilli-y-hablaron-sobre-la-seguridad-en-mar-del-plata-es-nuestra-principal-prioridad/",
-          "fecha": "2026-10-08T23:11:50.000Z",
-          "oficial": false,
-          "aporte": "Destacó que la seguridad es la principal prioridad para el municipio."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/08/110802-montenegro-se-reunio-con-santilli-en-casa-rosada-con-el-foco-en-la-seguridad-de-mar-del-plata",
-          "fecha": "2026-10-08T22:51:05.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "montenegro-se-reune-con-santilli-y-marca-que-la-prioridad-es-la",
-      "foto": {
-        "archivo": "fotos-notas/13p9pma.jpg",
-        "credito": "Foto: El Marplatense"
-      }
-    },
-    {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
-      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
-      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-08T21:31:14.736Z",
-      "sinFecha": true,
-      "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reunión de trabajadores de prensa locales",
-        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
-        "Fecha oficial en el calendario desde 2023"
-      ],
-      "seSabe": [
-        "Se llevó a cabo un encuentro del periodismo balcarceño.",
-        "La fecha se conmemora desde 2023 en el calendario local.",
-        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
-      "etiquetas": [
-        "periodismo",
-        "Balcarce",
-        "Beto Vuotto",
-        "reconocimiento"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-          "fecha": "2026-10-08T21:17:37.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
-    },
-    {
       "id": "w8iv0l",
       "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
       "copete": "El referente de Oklahoma City Thunder asegura que su nivel lo ubica en la cima de la liga. Además, se sumó como inversor de una entidad deportiva europea.",
@@ -1631,14 +1364,16 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "Básquet Plus"
+        "Bolavip Argentina",
+        "Básquet Plus",
+        "El Economista"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-08T21:26:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T01:31:40.326Z",
-      "relevancia": 62,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1697,6 +1432,63 @@
         "archivo": "fotos-notas/w8iv0l.jpg",
         "credito": "Foto: La Nación"
       }
+    },
+    {
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
+      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T21:17:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T21:31:14.736Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reunión de trabajadores de prensa locales",
+        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
+        "Fecha oficial en el calendario desde 2023"
+      ],
+      "seSabe": [
+        "Se llevó a cabo un encuentro del periodismo balcarceño.",
+        "La fecha se conmemora desde 2023 en el calendario local.",
+        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "etiquetas": [
+        "periodismo",
+        "Balcarce",
+        "Beto Vuotto",
+        "reconocimiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+          "fecha": "2026-10-08T21:17:37.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
     },
     {
       "id": "1q4j7p",
@@ -1847,106 +1639,6 @@
       }
     },
     {
-      "id": "5oqfmf",
-      "titulo": "Gabriel Katopodis confirma proyectos de autovías viales para la región",
-      "copete": "El ministro bonaerense de Infraestructura detalló el estado de las obras en las rutas 11 y 88 durante una visita a Mar del Plata.",
-      "cuerpo": "El ministro provincial de Infraestructura, Gabriel Katopodis, confirmó avances en las obras viales de la región durante una visita a Mar del Plata. El funcionario indicó que la ampliación de la Ruta 11 entre Mar Chiquita y Villa Gesell está próxima a finalizar y que el sector entre Pinamar y Mar de Ajó se encuentra en proceso de licitación, con inicio de trabajos previsto para marzo de 2027. Además, señaló que la Provincia busca tener finalizado antes de que termine el año el proyecto técnico para transformar la Ruta 88 en autovía en el trayecto que une Mar del Plata con Necochea. Las definiciones fueron brindadas en el marco del sexto encuentro regional de infraestructura realizado en el Hotel 13 de Julio, donde participaron representantes de once distritos.",
-      "guion": "Gabriel Katopodis confirma proyectos de autovias viales para la región",
-      "seccion": "Política",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "El Diario Balcarce",
-        "El Eco de Tandil",
-        "LU9 Mar del Plata",
-        "QZ Noticias (Mar del Plata)",
-        "Ecos Diarios (Necochea)",
-        "Agencia DIB",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "NDEN – Noticias de Necochea"
-      ],
-      "enlace": "https://www.qznoticias.com/la-provincia/katopodis-remarco-la-proyeccion-de-las-obras-en-ruta-11-el-proyecto-para-ensanchar-la-88-y-la-segunda-etapa-de-la-rambla",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T20:15:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T23:01:41.431Z",
-      "relevancia": 70,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Katopodis detalló obras viales para la región.",
-        "La Ruta 11 sumará doble vía en nuevos tramos.",
-        "El proyecto para la Ruta 88 concluiría este año.",
-        "Las definiciones fueron dadas en Mar del Plata."
-      ],
-      "seSabe": [
-        "Gabriel Katopodis encabeza el plan de infraestructura provincial.",
-        "La obra entre Mar Chiquita y Villa Gesell está por terminar.",
-        "El tramo Pinamar y Mar de Ajó prevé iniciar obras en marzo de 2027.",
-        "El proyecto técnico de la Ruta 88 busca estar terminado antes de fin de año."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la asignación presupuestaria definitiva para la obra de la Ruta 88."
-      ],
-      "textoRedes": "El ministro Gabriel Katopodis confirmó avances en las obras de las rutas 11 y 88 durante una jornada en Mar del Plata con participación de once municipios de la región.",
-      "etiquetas": [
-        "Gabriel Katopodis",
-        "Ruta 11",
-        "Ruta 88",
-        "Mar del Plata",
-        "Infraestructura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/la-provincia/katopodis-remarco-la-proyeccion-de-las-obras-en-ruta-11-el-proyecto-para-ensanchar-la-88-y-la-segunda-etapa-de-la-rambla",
-          "fecha": "2026-10-08T20:15:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre los tramos de la Ruta 11 y el desarrollo del encuentro regional en Mar del Plata."
-        },
-        {
-          "medio": "LU9 Mar del Plata",
-          "enlace": "https://www.lu9mardelplata.com.ar/katopodis-confirmo-que-la-provincia-busca-tener-listo-a-fin-de-ano-el-proyecto-para-transformar-la-ruta-88-en-autovia",
-          "fecha": "2026-10-08T21:13:36.000Z",
-          "oficial": false,
-          "aporte": "Mencionó que la transformación de la Ruta Provincial 88 es central en la agenda."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/katopodis-confirmo-que-la-provincia-busca-tener-listo-a-fin-de-ano-el-proyecto-para-transformar-la-ruta-88-en-autovia",
-          "fecha": "2026-10-08T20:15:54.000Z",
-          "oficial": false,
-          "aporte": "Destacó la relevancia de la autovía en la Ruta 88 para la región."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/politica/ruta-88-provincia-busca-tener-listo-fin-ano-el-proyecto-autovia-n56354",
-          "fecha": "2026-10-08T22:25:00.000Z",
-          "oficial": false,
-          "aporte": "Ratificó las declaraciones del ministro durante su visita a Mar del Plata."
-        },
-        {
-          "medio": "NDEN – Noticias de Necochea",
-          "enlace": "https://nden.com.ar/nota/38347/autovia-88-provincia-busca-tener-listo-el-proyecto-antes-de-fin-de-ano",
-          "fecha": "2026-10-08T21:26:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el dato de que el proyecto técnico para el corredor de la Ruta 88 busca estar antes de fin de año."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "gabriel-katopodis-confirma-proyectos-de-autovias-viales-para-la-region",
-      "foto": {
-        "archivo": "fotos-notas/5oqfmf.jpg",
-        "credito": "Foto: Agencia DIB"
-      }
-    },
-    {
       "id": "bcq9u5",
       "titulo": "Genneia inaugura parque solar en San Juan tras invertir 110 millones",
       "copete": "La empresa puso en marcha el complejo San Juan Sur en la localidad de Retamito. Cuenta con 250.000 paneles solares y apunta a abastecer al sector minero.",
@@ -1958,9 +1650,9 @@
         "Infobae",
         "Perfil",
         "Noticias Argentinas (NA)",
+        "El Economista",
         "El Cronista",
-        "Ámbito",
-        "El Economista"
+        "Ámbito"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/negocios/genneia-inauguro-el-parque-solar-mas-grande-de-san-juan-invirtio-us110-millones-y-apunta-al-negocio-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -2118,9 +1810,9 @@
       "guion": "Francisco Cerúndolo avanza a la tercera ronda en Shanghái",
       "seccion": "Deportes",
       "medios": [
-        "La Nación",
-        "Olé",
         "Infobae",
+        "Olé",
+        "La Nación",
         "TN (Todo Noticias)",
         "TyC Sports",
         "0221",
@@ -2295,8 +1987,8 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "Letra P",
+        "La Verdad",
         "La Voz del Pueblo",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -2304,7 +1996,6 @@
         "Clarín",
         "iProfesional",
         "Perfil",
-        "La Verdad",
         "La Nueva"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/10/08/rechazaron-el-intento-de-maximo-y-florencia-kirchner-por-evitar-que-sus-bienes-sean-decomisados-en-la-causa-vialidad/",
@@ -2449,7 +2140,6 @@
         "Diario La Vanguardia",
         "Diputados Bonaerenses",
         "La Nación",
-        "Radio Mitre",
         "0221",
         "La Tecla",
         "QZ Noticias (Mar del Plata)",
@@ -2458,6 +2148,7 @@
         "Punto Noticias",
         "El Eco de Tandil",
         "Clarín",
+        "Radio Mitre",
         "La Noticia 1",
         "El Cronista",
         "A24",
@@ -2678,6 +2369,96 @@
       }
     },
     {
+      "id": "17mqr96",
+      "titulo": "ANSES confirma el pago del aguinaldo de Reparación Histórica",
+      "copete": "La Administración Nacional de Seguridad Social abonará un monto proporcional en diciembre para jubilados y pensionados. El beneficio requiere contar con representación legal y validación en la plataforma digital.",
+      "cuerpo": "La Administración Nacional de Seguridad Social confirmó que abonará el Aguinaldo Reparación Histórica en diciembre para jubilados y pensionados. El componente corresponde a un proporcional de las liquidaciones semestrales vinculadas con los haberes alcanzados por el programa establecido por la Ley 26.260.\n\nEl esquema previsional se creó en junio de 2016 con el propósito de actualizar las jubilaciones y cancelar deudas previsionales mediante acuerdos entre el Estado y los titulares. Para acceder al pago, los beneficiarios deben verificar el estado del trámite en la plataforma digital del organismo, aceptar los términos y contar con el patrocinio de un abogado para la rúbrica del convenio.\n\nEl sistema previsional ya había registrado movimientos en septiembre de 2026 con el pago de haberes superiores al mínimo y prestaciones por desempleo.",
+      "guion": "ANSES confirma el pago del aguinaldo de Reparación Histórica",
+      "seccion": "Economía",
+      "medios": [
+        "Perfil",
+        "Canal 26",
+        "Ámbito",
+        "Clarín"
+      ],
+      "enlace": "https://www.perfil.com/noticias/economia/anses-que-es-el-a35-aguinaldo-reparacion-historica-y-quienes-lo-cobraran-en-diciembre.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T16:27:54.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T19:31:35.841Z",
+      "relevancia": 61,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La ANSES pagará el aguinaldo de Reparación Histórica en diciembre.",
+        "El beneficio está dirigido a jubilados y pensionados alcanzados por el programa.",
+        "Se requiere la designación de un abogado y la aceptación en la plataforma digital."
+      ],
+      "noConfirmado": [
+        "Todavía no se detalló el calendario exacto de pagos para el mes de diciembre."
+      ],
+      "textoRedes": "La ANSES confirmó el pago del aguinaldo de Reparación Histórica para jubilados y pensionados en diciembre. Conocé los requisitos y el procedimiento para percibir el beneficio previsional.",
+      "etiquetas": [
+        "ANSES",
+        "jubilados",
+        "pensionados",
+        "Reparación Histórica",
+        "aguinaldo",
+        "diciembre"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/anses-que-es-el-a35-aguinaldo-reparacion-historica-y-quienes-lo-cobraran-en-diciembre.phtml",
+          "fecha": "2026-10-08T16:27:54.000Z",
+          "oficial": false,
+          "aporte": "Detalló los requisitos, el origen del programa de 2016 y los pasos para la aceptación en la plataforma digital."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/informacion-general/jubilados-cobran-aguinaldo-reparacion-historica-diciembre_0_WratnMzoiT.html",
+          "fecha": "2026-10-08T18:30:15.000Z",
+          "oficial": false,
+          "aporte": "Indicó cómo figura el concepto en el recibo y aclaró que no se trata de un bono extra."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/10/08/aguinaldo-de-reparacion-historica-anses-que-es-de-cuanto-es-el-monto-y-que-jubilados-lo-cobran/",
+          "fecha": "2026-10-08T19:24:42.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el pago del aguinaldo para jubilados y pensionados en diciembre."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/aguinaldo-reparacion-historica-anses-diciembre-2026-quienes-les-corresponde-y-como-se-calcula-n6331635",
+          "fecha": "2026-10-08T16:30:00.000Z",
+          "oficial": false,
+          "aporte": "Explicó que se contempla un monto proporcional para los haberes reajustados por Reparación Histórica."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "19uutgi",
+          "titulo": "ANSES: quiénes cobran este miércoles 23 de septiembre",
+          "fecha": "2026-09-22T18:37:09.000Z",
+          "ruta": "/nota/anses-quienes-cobran-este-miercoles-23-de-septiembre-19uutgi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "anses-confirma-el-pago-del-aguinaldo-de-reparacion-historica",
+      "foto": {
+        "archivo": "fotos-notas/17mqr96.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "f6j0rt",
       "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
       "copete": "La competencia automovilística prevista para el próximo fin de semana en el autódromo local fue postergada por cuestiones climáticas. La organización propuso el 24 y 25 del corriente como fecha alternativa.",
@@ -2687,14 +2468,13 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Acción 5 (Balcarce)",
-        "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Ahora Balcarce",
-        "Infobrisas (Radio Brisas)",
         "Diario La Vanguardia",
-        "Agencia DIB",
-        "La Verdad de Ayacucho",
+        "Infobrisas (Radio Brisas)",
         "ANDigital"
       ],
       "enlace": "https://accion5.com/por-cuestiones-climaticas-fue-suspendido-zonal-atlantico/",
@@ -2799,10 +2579,10 @@
         "El Marplatense",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "El Día",
         "El Gráfico",
-        "La Capital (Rosario)",
-        "La Nueva"
+        "La Nueva",
+        "El Día",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.0221.com.ar/deportes/escandalo-la-reserva-talleres-vs-atletico-tucuman-lautaro-acosta-y-su-hermano-las-trompadas-n135524",
       "teniaImagenLaFuente": true,
@@ -2903,9 +2683,9 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "Bolavip Argentina",
-        "La Capital (Rosario)",
-        "El Día"
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.lacapital.com.ar/ovacion/perdi-el-amor-el-futbol-argentino-la-critica-tagliafico-la-liga-profesional-n10285581.html",
       "teniaImagenLaFuente": true,
@@ -3063,11 +2843,11 @@
         "Zona Norte Diario",
         "QZ Noticias (Mar del Plata)",
         "El Eco de Tandil",
+        "Perfil",
         "Infobae",
         "La Nación",
         "Página/12",
         "C5N",
-        "Perfil",
         "Clarín",
         "Minuto Uno"
       ],
@@ -3188,9 +2968,9 @@
       "guion": "La inflación portena llega al 1,8 por ciento en septiembre",
       "seccion": "Economía",
       "medios": [
-        "Agencia DIB",
         "La Nación",
         "Infobae",
+        "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
@@ -3205,9 +2985,11 @@
         "El Día",
         "InfoRegión",
         "El Eco de Tandil",
+        "Noticias Agropecuarias",
         "Ámbito",
         "A24",
-        "Crónica"
+        "Crónica",
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/economia/la-inflacion-caba-se-acelero-al-18-septiembre-impulsada-educacion-vivienda-y-alimentos-n6331545",
       "teniaImagenLaFuente": true,
@@ -3429,72 +3211,6 @@
       }
     },
     {
-      "id": "jul3dm",
-      "titulo": "El Diario cumple 31 años como medio gráfico local",
-      "copete": "El único medio gráfico impreso y digital de Balcarce celebra 31 años de trayectoria periodística ininterrumpida desde su fundación como semanario en 1995.",
-      "cuerpo": "El Diario cumple 31 años de trayectoria en la comunidad tras haber salido a la calle por primera vez el 8 de octubre de 1995 como un semanario. Con el transcurso de los años, el medio gráfico sumó dos ediciones semanales y, desde febrero de 2003, consolidó su formato diario en la ciudad.\n\nEn la actualidad, la propuesta informativa abarca la cobertura de actividades locales, institucionales, deportivas y sociales, además de mantener su impresión en talleres propios y la distribución urbana a través del gremio de canillitas.",
-      "guion": "El Diario cumple 31 años como medio gráfico local",
-      "seccion": "Balcarce",
-      "medios": [
-        "News Balcarce (FM 91.7)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30985",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T12:44:02.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El medio local cumple 31 años de trayectoria",
-        "Nació el 8 de octubre de 1995 como un semanario",
-        "Se transformó en edición diaria en febrero de 2003",
-        "Cuenta con su plataforma digital desde el año 1998"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El único medio gráfico de Balcarce celebra 31 años de trayectoria periodística desde su fundación como semanario en 1995.",
-      "etiquetas": [
-        "El Diario",
-        "medio grafico",
-        "Balcarce",
-        "historia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30985",
-          "fecha": "2026-10-08T16:16:41.000Z",
-          "oficial": false,
-          "aporte": "Aportó toda la información sobre el aniversario, la historia y la trayectoria del medio gráfico."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "crx30o",
-          "titulo": "El único diario de Balcarce de aparición en papel y en formato digital. Nuestro compromiso es informar con la verdad, con información chequeada, sin tergiversación y con compromiso con el ciudadano.",
-          "fecha": "2026-09-20T23:42:02.956Z",
-          "ruta": "/nota/el-unico-diario-de-balcarce-de-aparicion-en-papel-y-en-formato-crx30o"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-diario-cumple-31-anos-como-medio-grafico-local",
-      "foto": {
-        "archivo": "fotos-notas/jul3dm.jpg",
-        "credito": "Foto: News Balcarce (FM 91.7)"
-      }
-    },
-    {
       "id": "1gsplvm",
       "titulo": "La Bolsa de Cereales anticipa lluvias y fuertes contrastes térmicos",
       "copete": "El pronóstico agroclimático para gran parte del país prevé precipitaciones variables, ingreso de aire polar con heladas en zonas serranas y marcas térmicas de hasta 40 grados en el norte.",
@@ -3580,7 +3296,7 @@
       "fecha": "2026-10-08T12:20:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T18:31:25.201Z",
-      "relevancia": 24,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4151,7 +3867,6 @@
       "seccion": "Economía",
       "medios": [
         "La Nación",
-        "0223 (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "Minuto Uno",
@@ -4172,10 +3887,11 @@
         "InfoRegión",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Economista",
         "Clarín",
         "La Nueva",
         "La Capital (Rosario)",
-        "El Economista",
+        "0223 (Mar del Plata)",
         "Radio Mitre",
         "La Brújula 24"
       ],
@@ -4363,23 +4079,23 @@
     }
   ],
   "secciones": [
-    "Cultura y agenda",
     "Agro",
-    "Automovilismo",
-    "Balcarce",
     "Economía",
     "Deportes",
+    "Balcarce",
+    "Política",
     "Argentina",
     "Fútbol",
-    "Política"
+    "Cultura y agenda",
+    "Automovilismo"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 11,
+      "temp": 12,
       "sensacion": 8,
-      "humedad": 78,
-      "viento": 18,
+      "humedad": 77,
+      "viento": 19,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -4734,28 +4450,28 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "aq8ze",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
+    },
+    {
+      "id": "11yxcy2",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
       "id": "6fykn0",
       "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
       "seccion": "Fútbol",
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "13c60a8",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
       "id": "1s8ckrw",
       "titulo": null,
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"el menor de\""
-    },
-    {
-      "id": "1el0rhm",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "afnvn3",
@@ -4776,40 +4492,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "12xoybu",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\" (en otro medio que cuenta lo mismo)"
-    },
-    {
       "id": "d80j5g",
       "titulo": "Monteoliva anunció la creación de un comando unificado…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "16ew96u",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "jul33u",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
       "id": "6hubq6",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "veuftg",
-      "titulo": "Milei vuelve a Estados Unidos: nuevo gesto de apoyo a…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "5bmjjg",
@@ -4826,6 +4518,12 @@
     {
       "id": "146mbos",
       "titulo": "La ANMAT prohibió el uso de dos suplementos promocionados…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1mgua6l",
+      "titulo": "Denuncian a alumnos por crear con IA imágenes falsas de…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
@@ -4860,6 +4558,12 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "vbfl3j",
+      "titulo": "El particular regalo de Benín a Messi en su despedida",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "uvmc92",
       "titulo": "El Gobierno denunció daños en la Secretaría de Educación…",
       "seccion": "Política",
@@ -4872,16 +4576,28 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "13wfgz4",
+      "id": "wdhpc1",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "wdhpc1",
+      "id": "6af5cy",
+      "titulo": "Empezó la reunión en Tribunales: la Corte Suprema analiza…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"sortea\""
+    },
+    {
+      "id": "ygpw0i",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "veuftg",
+      "titulo": "Milei vuelve a Estados Unidos: nuevo gesto de apoyo a…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "lktast",
@@ -4896,10 +4612,16 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "vx7am0",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
+      "id": "74vm3v",
+      "titulo": "Fuerte cruce en Diputados: un libertario defendió la…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "1e7wy8p",
+      "titulo": "Javier Milei volverá a viajar a Estados Unidos: nuevas…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "7ym2kb",
@@ -4914,5 +4636,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 8
 }

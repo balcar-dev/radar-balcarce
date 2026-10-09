@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T14:03:07.848Z",
- "portada": 51,
- "archivo": 857,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-09T14:32:38.859Z",
+ "portada": 47,
+ "archivo": 859,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-09T14:03:07.881Z",
+  "generado": "2026-10-09T14:32:38.907Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -134,19 +134,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "601x8n",
-      "titulo": "La Fiesta Nacional del Postre evalúa su paso para noviembre",
-      "seccion": "Cultura y agenda"
-     },
-     {
       "id": "18jx7kk",
       "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
       "seccion": "Agro"
      },
      {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "id": "1gmlwhw",
+      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -160,14 +160,14 @@
     "segundos": 50,
     "notas": [
      {
+      "id": "w8iv0l",
+      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
+      "seccion": "Deportes"
+     },
+     {
       "id": "fkiosn",
       "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
       "seccion": "Economía"
-     },
-     {
-      "id": "5crmtt",
-      "titulo": "Franco Colapinto arranca undécimo en el sprint de Singapur",
-      "seccion": "Automovilismo"
      },
      {
       "id": "6vefne",
@@ -203,8 +203,8 @@
      "marcada": false
     },
     {
-     "id": "jul3dj",
-     "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+     "id": "1gmlwhw",
+     "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
      "seccion": "Balcarce",
      "marcada": false
     }

@@ -1,28 +1,11 @@
 {
- "generado": "2026-10-09T14:03:07.848Z",
+ "generado": "2026-10-09T14:32:38.859Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "13ysda0",
-   "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
-   "copete": "El Hospital Municipal “Dr. Felipe A. Fossati” informa que el conmutador telefónico ha restablecido su funcionamiento habitual, por lo que las líneas de comunicación con la institución se encuentran nuevamente operativas. En ese sentido, se recuerdan los números telefónicos…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T11:23:10.000Z",
-   "fuentes": [
-    {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
-     "fecha": "2026-10-09T11:23:10.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
-   "maximo": 3
-  },
-  {
    "id": "7w5vsc",
    "titulo": "La Liga Balcarceña de Fútbol volvió a postergar la primera fecha por las lluvias",
-   "copete": "El mal estado de las canchas, que todavía presentan una importante acumulación de agua, obligó a suspender nuevamente el inicio de la competencia. La jornada será reprogramada durante la próxima semana.",
+   "copete": "Las lluvias registradas y los pronósticos poco alentadores para las próximas horas obligaron a suspender la actividad prevista para este fin de semana. La fecha será reprogramada durante la próxima semana. La Liga Balcarceña de Fútbol resolvió postergar nuevamente la primera…",
    "seccion": "Fútbol",
    "fecha": "2026-10-09T13:12:01.000Z",
    "fuentes": [
@@ -30,6 +13,11 @@
      "medio": "Radio Gabal (FM 104.1)",
      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-liga-balcarcena-de-futbol-volvio-a-postergar-la-primera-fecha-por-las-lluvias",
      "fecha": "2026-10-09T13:12:01.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/la-liga-balcarcena-de-futbol-postergo-nuevamente-la-primera-fecha/",
+     "fecha": "2026-10-09T13:13:17.000Z"
     }
    ],
    "intentos": 3,
@@ -46,7 +34,7 @@
     {
      "medio": "El Gráfico",
      "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
-     "fecha": "2026-10-08T19:00:00.000Z"
+     "fecha": "2026-10-09T07:30:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -64,11 +52,6 @@
      "fecha": "2026-10-08T22:43:42.000Z"
     },
     {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
-     "fecha": "2026-10-09T05:55:55.000Z"
-    },
-    {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
      "fecha": "2026-10-09T13:13:54.000Z"
@@ -77,6 +60,45 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 4
+  },
+  {
+   "id": "13ysda0",
+   "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
+   "copete": "El Hospital Municipal “Dr. Felipe A. Fossati” informa que el conmutador telefónico ha restablecido su funcionamiento habitual, por lo que las líneas de comunicación con la institución se encuentran nuevamente operativas. En ese sentido, se recuerdan los números telefónicos…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T11:23:10.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
+     "fecha": "2026-10-09T11:23:10.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/el-hospital-fossati-restablecio-el-funcionamiento-de-su-conmutador-telefonico/",
+     "fecha": "2026-10-09T12:08:29.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "vmuzu3",
+   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
+   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
+   "seccion": "Policiales",
+   "fecha": "2026-10-09T14:18:32.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
+     "fecha": "2026-10-09T14:18:32.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
   },
   {
    "id": "s67kgm",
@@ -118,42 +140,47 @@
    "maximo": 3
   },
   {
-   "id": "189z3bv",
-   "titulo": "Un total de 76 familias de Balcarce firmarán sus escrituras",
+   "id": "1cnk2r1",
+   "titulo": "Despues de 20 años, un total de 76 familias de Balcarce recibirán sus escrituras",
    "copete": "El acto se realizará en el hall de la Municipalidad, en principio. Participarán vecinos del barrio Favaloro, familias del barrio Hipólito Yrigoyen y los primeros beneficiarios del loteo municipal de 31 y Caseros, cuyos terrenos fueron vendidos en 2023.",
    "seccion": "Balcarce",
-   "fecha": "2026-10-09T13:31:40.859Z",
+   "fecha": "2026-10-09T14:31:49.247Z",
    "fuentes": [
     {
      "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45045-un-total-de-76-familias-de-balcarce-firmaran-sus-escrituras/",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45045-despues-de-20-anos-un-total-de-76-familias-de-balcarce-recibiran-sus-escrituras/",
      "fecha": null
     }
    ],
-   "intentos": 3,
+   "intentos": 1,
    "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
    "maximo": 3
   },
   {
-   "id": "1nsv7wb",
-   "titulo": "Kicillof acusó a Milei de “destruir” la educación",
-   "copete": "El gobernador Axel Kicillof encabezó ayer la apertura de un encuentro en conmemoración de los 150 años de la aplicación de la Ley N°988 de Educación Común, que estableció las bases de obligatoriedad y gratuidad de la escuela primaria en la Provincia. Fue en el Teatro Argentino…",
-   "seccion": "Política",
-   "fecha": "2026-10-09T05:39:50.000Z",
+   "id": "wtkj5v",
+   "titulo": "Se conocieron los nominados a los Martín Fierro de Radio 2026: quiénes son los candidatos de Radio Mitre",
+   "copete": "La Asociación de Periodistas de la Televisión y la Radiofonía Argentinas (APTRA) dio a conocer los nominados a los Martín Fierro de Radio 2026 , que premiarán la producción del año 2025. La ceremonia se realizará el 21 de octubre en el Goldencenter de Parque Norte, con la…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-09T12:46:55.000Z",
    "fuentes": [
     {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/politica-y-economia/kicillof-acuso-a-milei-de-destruir-la-educacion-politica-y-economia_1791524390",
-     "fecha": "2026-10-09T05:39:50.000Z"
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/se-conocieron-los-nominados-a-los-martin-fierro-de-radio-2026-quienes-son-los-candidatos-de-radio-mitre/",
+     "fecha": "2026-10-09T12:46:55.000Z"
     },
     {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/politica/kicillof-advirtio-sobre-el-ataque-a-la-educacion-publica-defenderla-es-transformarla",
-     "fecha": "2026-10-09T11:52:42.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/09/quienes-son-los-nominados-al-martin-fierro-de-radio-2026/",
+     "fecha": "2026-10-09T14:17:32.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/espectaculos/radio/martin-fierro-de-radio-2026-quienes-son-los-nominados-nid09102026/",
+     "fecha": "2026-10-09T13:59:24.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"plata\" y la fuente no",
+   "intentos": 1,
+   "motivo": "cuerpo: 5 problemas (numero, copia, promesa): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 48 palabras",
    "maximo": 3
   }
  ]
