@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T14:32:38.859Z",
- "portada": 47,
- "archivo": 859,
+ "generado": "2026-10-09T15:02:27.650Z",
+ "portada": 44,
+ "archivo": 860,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-09T14:32:38.907Z",
+  "generado": "2026-10-09T15:02:27.681Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-09T12:06:39.045Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu nota",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -126,11 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 43,
     "notas": [
      {
-      "id": "13xrjvk",
-      "titulo": "Francisco Cerúndolo avanza a la tercera ronda en Shanghái",
+      "id": "10izr2u",
+      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
       "seccion": "Deportes"
      },
      {
@@ -139,8 +139,8 @@
       "seccion": "Agro"
      },
      {
-      "id": "1gmlwhw",
-      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
       "seccion": "Balcarce"
      },
      {
@@ -160,24 +160,24 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "w8iv0l",
-      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
+      "id": "13xrjvk",
+      "titulo": "Francisco Cerúndolo avanza a la tercera ronda en Shanghái",
       "seccion": "Deportes"
      },
      {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
-     },
-     {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
-      "seccion": "Balcarce"
+      "id": "15x6yh5",
+      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
+      "seccion": "Automovilismo"
      },
      {
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro"
+     },
+     {
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -203,9 +203,9 @@
      "marcada": false
     },
     {
-     "id": "1gmlwhw",
-     "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-     "seccion": "Balcarce",
+     "id": "2qmh95",
+     "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],
