@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T07:03:51.984Z",
+ "generado": "2026-10-09T07:32:19.413Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -17,60 +17,6 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "13p9pma",
-   "titulo": "Montenegro se reunió con Santilli en Casa Rosada y lanzó una advertencia: “El enemigo es el delincuente”",
-   "copete": "El intendente de General Pueyrredon, Guillermo Montenegro, se reunió con el jefe de Gabinete de Ministros, Diego Santilli, en Casa Rosada, donde abordaron distintos temas relacionados con Mar del Plata y pusieron especial atención en la seguridad de los vecinos. A través de una…",
-   "seccion": "Política",
-   "fecha": "2026-10-08T22:48:15.000Z",
-   "fuentes": [
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/montenegro-se-reunio-con-santilli-en-casa-rosada-y-lanzo-una-advertencia-el-enemigo-es-el-delincuente",
-     "fecha": "2026-10-08T22:48:15.000Z"
-    },
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/montenegro-se-reunio-con-santilli-en.html",
-     "fecha": "2026-10-09T06:06:00.000Z"
-    },
-    {
-     "medio": "0223 (Mar del Plata)",
-     "enlace": "https://www.0223.com.ar/nota/2026-10-8-20-12-0-montenegro-se-reunio-con-santilli-por-la-seguridad-de-mar-del-plata-el-enemigo-es-el-delincuente",
-     "fecha": "2026-10-08T23:12:00.000Z"
-    },
-    {
-     "medio": "Mi8 (Canal 8 Mar del Plata)",
-     "enlace": "https://mi8.com.ar/montenegro-se-reunio-con-santilli-y-hablaron-sobre-la-seguridad-en-mar-del-plata-es-nuestra-principal-prioridad/",
-     "fecha": "2026-10-08T23:11:50.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/08/110802-montenegro-se-reunio-con-santilli-en-casa-rosada-con-el-foco-en-la-seguridad-de-mar-del-plata",
-     "fecha": "2026-10-08T22:51:05.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 21 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 69 palabras",
-   "maximo": 4
-  },
-  {
-   "id": "spe9cx",
-   "titulo": "Nicolás necesita el acompañamiento de la comunidad para afrontar su tratamiento oncológico: harán rifa",
-   "copete": "Nicolás tiene 3 años y atraviesa un tratamiento oncológico por una Leucemia Linfoblástica Aguda (LLA). El proceso se extenderá durante aproximadamente tres años y requiere controles y atención en el Hospital Materno Infantil de Mar del Plata. Si bien el pequeño cuenta con…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-08T21:13:15.000Z",
-   "fuentes": [
-    {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/nicolas-necesita-el-acompanamiento-de-la-comunidad-para-afrontar-su-tratamiento-oncologico/",
-     "fecha": "2026-10-08T21:13:15.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)",
    "maximo": 3
   },
   {
