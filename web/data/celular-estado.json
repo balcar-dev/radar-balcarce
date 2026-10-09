@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T16:32:28.478Z",
- "portada": 44,
- "archivo": 867,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-09T17:03:44.396Z",
+ "portada": 55,
+ "archivo": 869,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-09T16:32:28.522Z",
+  "generado": "2026-10-09T17:03:44.433Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
      {
       "id": "14mxql1",
@@ -134,13 +134,13 @@
       "seccion": "Deportes"
      },
      {
-      "id": "vwb5m5",
-      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
+      "id": "1j94k5u",
+      "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol"
      },
      {
-      "id": "1y9462t",
-      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
+      "id": "jul3en",
+      "titulo": "Virginia Aparicio expone en el Concejo Deliberante",
       "seccion": "Balcarce"
      },
      {
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
      {
       "id": "2qmh95",
@@ -165,19 +165,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "10izr2u",
-      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1j94k5u",
-      "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
+      "id": "vwb5m5",
+      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol"
      },
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "id": "1y9462t",
+      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
+      "seccion": "Cultura y agenda"
      }
     ]
    }

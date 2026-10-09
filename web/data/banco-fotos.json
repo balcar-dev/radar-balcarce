@@ -11033,45 +11033,57 @@
   "origen": "ninguna",
   "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-09T15:32:31.765Z",
-  "intentos": 1,
+  "cuando": "2026-10-09T17:02:39.028Z",
+  "intentos": 2,
   "fuentes": 1
  },
  "14mxql1": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/14mxql1.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-09T15:32:31.765Z",
-  "intentos": 1,
-  "fuentes": 1
+  "enlace": "https://balcarce.gob.ar/2026/10/09/balcarce-va-por-la-gloria-provincial-en-paleta/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/Pato-Pelota-Paleta.jpeg",
+  "razon": "Es la única foto disponible, tiene buena nitidez, muestra claramente a los protagonistas del evento y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-09T17:02:39.028Z"
  },
  "juyiki": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/juyiki.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El embajador de Estados Unidos advierte sobre el uso de tecnología china",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-09T15:32:31.765Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://www.lanueva.com/nota/2026-10-9-12-6-0-nueva-advertencia-del-embajador-de-ee-uu-sobre-el-uso-de-tecnologia-china-en-la-argentina",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791558580883.jpg?&cw=600&ch=365",
+  "razon": "Ambas fotos son muy similares, pero la opción B tiene mejor encuadre al mostrar la escena completa sin cortar las manos levantadas en el borde inferior, y ninguna tiene marcas ni menores.",
+  "cuando": "2026-10-09T17:02:39.028Z"
  },
  "1x5dlcz": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1x5dlcz.jpg",
+  "medio": "FayerWayer",
+  "credito": "Foto: FayerWayer",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "WhatsApp suspende perfiles de forma temporal con el aviso Cuenta en revisión",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-09T15:32:31.765Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://www.fayerwayer.com/moviles/2026/10/09/que-significa-cuenta-en-revision-en-whatsapp-razones-de-la-suspension-y-como-recuperar-el-acceso-a-tus-chats/",
+  "imagenOriginal": "https://www.fayerwayer.com/resizer/v2/XCDWNC5YY5HOHH64JATO5QXMNM.jpg?smart=true&auth=3fa2c3f42c22dec884f2d9401d7d378f8eeea18bf3d8352c1d8fa5c51e50c661&width=1200&height=630",
+  "razon": "La imagen B ilustra mejor la nota sobre suspensión y revisión de perfiles con elementos de seguridad, mientras que la A es solo el logo genérico.",
+  "cuando": "2026-10-09T17:02:39.028Z"
  },
  "k8fay1": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/k8fay1.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Gobierno fija en dólares la tasa de vuelos nacionales",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T15:32:31.765Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://www.lanacion.com.ar/economia/aumentan-la-tasa-de-uso-aeroportuario-para-los-vuelos-de-cabotaje-que-impactara-en-los-precios-de-nid09102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/en-los-ultimos-meses-tambien-se-ajusto-la-tasa-de-SQQB37UNNBBK7N6OGCXTLN2H5Q.jpg?auth=7c8ea4324a26e22edb1b88d8161986fe511c8d9994aeff4fb9c03fddf6550103&width=1200&height=800&quality=70&smart=true",
+  "razon": "La foto B ilustra claramente un contexto de pasajes y tarifas en dólares sin mostrar rostros de menores ni marcas de agua sobreimpresas.",
+  "cuando": "2026-10-09T17:02:39.028Z"
  },
  "1j94k5u": {
   "archivo": "fotos-notas/1j94k5u.jpg",
@@ -11093,5 +11105,30 @@
   "cuando": "2026-10-09T16:32:21.474Z",
   "intentos": 1,
   "fuentes": 2
+ },
+ "1u383pj": {
+  "archivo": "fotos-notas/1u383pj.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66010.png",
+  "razon": "Es la única foto disponible, cuenta con buena nitidez, encuadre adecuado y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-09T17:02:39.028Z"
+ },
+ "jul3en": {
+  "archivo": "fotos-notas/jul3en.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Mizael Contreras / Wikimedia Commons (CC BY-SA 4.0)",
+  "licencia": "CC BY-SA 4.0",
+  "autor": "Mizael Contreras",
+  "origen": "wikimedia",
+  "titulo": "Virginia Aparicio expone en el Concejo Deliberante",
+  "enlace": "https://commons.wikimedia.org/wiki/File:%C3%81guila,_escultura_de_Virginia_Aparicio.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%C3%81guila%2C_escultura_de_Virginia_Aparicio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Virginia Aparicio\" de Wikimedia Commons (CC BY-SA 4.0).",
+  "cuando": "2026-10-09T17:02:39.028Z"
  }
 }

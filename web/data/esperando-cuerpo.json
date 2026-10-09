@@ -1,7 +1,46 @@
 {
- "generado": "2026-10-09T16:32:28.478Z",
+ "generado": "2026-10-09T17:03:44.396Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "13ysda0",
+   "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
+   "copete": "El Hospital Municipal “Dr. Felipe A. Fossati” informa que el conmutador telefónico ha restablecido su funcionamiento habitual, por lo que las líneas de comunicación con la institución se encuentran nuevamente operativas. En ese sentido, se recuerdan los números telefónicos…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T11:23:10.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
+     "fecha": "2026-10-09T11:23:10.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/restablecieron-el-servicio-telefonico.html",
+     "fecha": "2026-10-09T12:45:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "vmuzu3",
+   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
+   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
+   "seccion": "Policiales",
+   "fecha": "2026-10-09T14:18:32.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
+     "fecha": "2026-10-09T14:18:32.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
+  },
   {
    "id": "11lqk0q",
    "titulo": "La despedida de Messi: La productora a cargo señaló a River por las fallas",
@@ -12,7 +51,7 @@
     {
      "medio": "El Gráfico",
      "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
-     "fecha": "2026-10-09T07:30:00.000Z"
+     "fecha": "2026-10-08T19:00:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -35,6 +74,16 @@
      "fecha": "2026-10-09T12:20:55.000Z"
     },
     {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
+     "fecha": "2026-10-09T05:55:55.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/polemica-por-la-despedida-de-messi-la-productora-denuncio-a-river-y-el-club-respondio",
+     "fecha": "2026-10-09T16:46:07.000Z"
+    },
+    {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
      "fecha": "2026-10-09T13:13:54.000Z"
@@ -47,29 +96,44 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 4
+   "maximo": 5
   },
   {
-   "id": "13ysda0",
-   "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
-   "copete": "El Hospital Municipal “Dr. Felipe A. Fossati” informa que el conmutador telefónico ha restablecido su funcionamiento habitual, por lo que las líneas de comunicación con la institución se encuentran nuevamente operativas. En ese sentido, se recuerdan los números telefónicos…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T11:23:10.000Z",
+   "id": "1l98x2s",
+   "titulo": "Hora, TV y formaciones: Boca visita a Instituto de Córdoba en busca de trepar a lo más alto en la tabla anual",
+   "copete": "Boca se medirá con Instituto en Córdoba por la duodécima fecha de la Zona A del Torneo Clausura 2026 de la Liga Profesional. El partido comenzará a las 19:30 en el Estadio Juan Domingo Perón, será transmitido por TNT Sports y tendrá a Leandro Rey Hilfer como árbitro, acompañado…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-09T08:00:21.000Z",
    "fuentes": [
     {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
-     "fecha": "2026-10-09T11:23:10.000Z"
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-9-5-0-21-hora-tv-y-formaciones-boca-visita-a-instituto-de-cordoba-en-busca-de-trepar-a-lo-mas-alto-en-la-tabla-anual",
+     "fecha": "2026-10-09T08:00:21.000Z"
     },
     {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/restablecieron-el-servicio-telefonico.html",
-     "fecha": "2026-10-09T12:45:00.000Z"
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/boca-juniors/chance-unica-boca-tabla-anual-visita-instituto_0_z5vopwOcEX.html",
+     "fecha": "2026-10-09T13:42:25.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/deportes/boca-y-una-visita-clave-a-instituto-de-cordoba-para-trepar-a-lo-mas-alto-en-la-tabla-anual_a6ac78d4f5319d0dbc2735aa2",
+     "fecha": "2026-10-09T09:12:35.000Z"
+    },
+    {
+     "medio": "Doble Amarilla",
+     "enlace": "https://www.dobleamarilla.com.ar/liga-/boca-visita-a-instituto-en-cordoba--buscando-llegar-a-la-cima-de-la-tabla-anual-y-con-rotacion-pensando-en-la-sudamericana_a6ac7dfbf1eb9026484acc51e",
+     "fecha": "2026-10-09T10:48:16.000Z"
+    },
+    {
+     "medio": "La Verdad",
+     "enlace": "https://laverdadonline.com/boca-y-una-visita-clave-a-instituto-de-cordoba-para-trepar-a-lo-mas-alto-en-la-tabla-anual/",
+     "fecha": "2026-10-09T10:30:28.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
-   "maximo": 3
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 97 palabras",
+   "maximo": 4
   },
   {
    "id": "c9d4ip",
@@ -114,11 +178,6 @@
      "fecha": "2026-10-09T14:13:55.000Z"
     },
     {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/se-conocieron-los-nominados-a-los-martin-fierro-de-radio-2026-quienes-son-los-candidatos-de-radio-mitre/",
-     "fecha": "2026-10-09T12:46:55.000Z"
-    },
-    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/espectaculos/jonatan-viale--baby-etchecopar-y-nelson-castro--nominados-en-los-martin-fierro-de-radio-2026_a6ac8ee018e24c1a50accee35",
      "fecha": "2026-10-09T13:47:00.000Z"
@@ -127,43 +186,16 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/primiciasya/martin-fierro-radio-2026-luis-ventura-anuncio-las-nominaciones-y-confirmo-los-detalles-la-gala-n1604828",
      "fecha": "2026-10-09T12:25:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/se-conocieron-los-nominados-a-los-martin-fierro-de-radio-2026-quienes-son-los-candidatos-de-radio-mitre/",
+     "fecha": "2026-10-09T12:46:55.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 5 problemas (fecha, numero, promesa): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 84 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"martin\", \"fierro\" y el cuerpo no los explica; sin esas oraciones quedan 87 palabras",
    "maximo": 5
-  },
-  {
-   "id": "1ntwg3r",
-   "titulo": "Bullrich se reunió con Milei: “Hablamos de todo lo que vengo planteando”",
-   "copete": "Buenos Aires, 9 octubre (NA) -- La senadora y jefa de bloque de La Libertad Avanza, Patricia Bullrich, se reunió este viernes con el presidente Javier Milei, luego de sus desmarques sobre el rumbo económico del Gobierno. \"Conversación profunda con el Presidente @JMilei. Hablamos…",
-   "seccion": "Política",
-   "fecha": "2026-10-09T16:14:16.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/bullrich-se-reunio-con-milei---hablamos-de-todo-lo-que-vengo-planteando-_a6ac911fc587f18d752ff9d12",
-     "fecha": "2026-10-09T16:14:16.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/politica/tras-la-tension-por-los-desmarques-javier-milei-se-reunio-con-patricia-bullrich-en-la-quinta-de-nid09102026/",
-     "fecha": "2026-10-09T16:22:25.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/09/milei-y-bullrich-se-reunieron-durante-mas-de-dos-horas-en-medio-de-la-tension-fue-una-conversacion-con-total-honestidad/",
-     "fecha": "2026-10-09T16:24:30.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/politica/2026/10/09/milei-y-bullrich-se-reunieron-durante-mas-de-dos-horas-en-medio-de-la-tension-fue-una-conversacion-con-total-honestidad/",
-     "fecha": "2026-10-09T16:24:30.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"camara\" y la fuente no; sin esas oraciones quedan 110 palabras",
-   "maximo": 3
   },
   {
    "id": "s67kgm",
@@ -181,10 +213,66 @@
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/cuatro-gimnastas-de-up-clasificaron-la.html",
      "fecha": "2026-10-09T14:22:54.624Z"
+    },
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/cuatro-gimnastas-de-up-clasificaron-a-la-final-regional-del-centro-tras-destacarse-en-aguas-verdes",
+     "fecha": "2026-10-09T13:20:37.000Z"
     }
    ],
    "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el copete dice 4 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "15l69b7",
+   "titulo": "Agustín Molpeceres será reconocido en la Cámara de Diputados provincial",
+   "copete": "La Cámara de Diputados de la Provincia de Buenos Aires otorgará un reconocimiento oficial al balcarceño Agustín Molpeceres, por su destacada trayectoria en el deporte adaptado y el alto rendimiento paralímpico. LOS FUNDAMENTOS La distinción,",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-08T12:52:32.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-provincial-626",
+     "fecha": "2026-10-08T12:52:32.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "1cnk2r1",
+   "titulo": "Despues de 20 años, un total de 76 familias de Balcarce recibirán sus escrituras",
+   "copete": "",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T14:31:49.247Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45045-despues-de-20-anos-un-total-de-76-familias-de-balcarce-recibiran-sus-escrituras/",
+     "fecha": null
+    }
+   ],
+   "intentos": 3,
+   "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "zdlxph",
+   "titulo": "General Pueyrredon realizará la segunda jornada de la Mesa Técnica del Kiwi",
+   "copete": "La Secretaría de Desarrollo Local, Inversiones e Integración Público Privada de General Pueyrredon, junto con la Cámara de Productores de Kiwi de Mar del Plata y el INTA, realizará el segundo encuentro de la Mesa Técnica del Kiwi el próximo viernes 16 de 09:00 a 11:00, en el…",
+   "seccion": "Agro",
+   "fecha": "2026-10-09T16:45:00.000Z",
+   "fuentes": [
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/la-ciudad/general-pueyrredon-realizara-la-segunda-jornada-de-la-mesa-tecnica-del-kiwi",
+     "fecha": "2026-10-09T16:45:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
    "maximo": 3
   }
  ]
