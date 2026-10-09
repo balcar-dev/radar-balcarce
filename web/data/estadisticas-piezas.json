@@ -1695,6 +1695,178 @@
     "shares": 0,
     "saved": 0
    }
+  },
+  {
+   "clave": "facebook/historia/1072489568964606",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "participa-evento",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T15:06:19.794Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122105414445495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1r3qdtj",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T16:13:45.287Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "post_media_view": 5,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18115479893102105",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1r3qdtj",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T16:13:56.273Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "reach": 2,
+    "views": 9,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "instagram/reel/18117346379082235",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "noticia2",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T18:06:46.125Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "reach": 1,
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1795160321810126",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "noticia2",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T18:07:52.890Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/4502827893265329",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "noticia2",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T18:08:22.232Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122105498367495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1jfpdis",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T18:08:44.956Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "post_media_view": 6,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 1,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/17970058683169702",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1jfpdis",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T18:08:55.541Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "reach": 4,
+    "views": 7,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122105562273495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1ag0mm4",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T19:45:28.818Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "post_media_view": 8,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18109872512612907",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1ag0mm4",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T19:45:39.548Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "reach": 2,
+    "views": 3,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/2730212327398001",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "farmacia",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T22:04:59.745Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/1790489201959166",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-noche",
+   "dia": "2026-10-06",
+   "cuando": "2026-10-06T23:06:46.471Z",
+   "medida": "2026-10-09T06:30:18.031Z",
+   "metricas": {
+    "total_video_views": 0
+   }
   }
  ]
 }
