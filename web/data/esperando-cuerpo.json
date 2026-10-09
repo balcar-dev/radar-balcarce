@@ -1,46 +1,7 @@
 {
- "generado": "2026-10-09T23:02:42.712Z",
+ "generado": "2026-10-09T23:28:24.999Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1trv7re",
-   "titulo": "“Si yo fuera Mazzacane, haría el Coronación de TC en Balcarce”",
-   "copete": "La reapertura del autódromo “Juan Manuel Fangio” al automovilismo nacional dejó un saldo positivo tanto en lo deportivo, como en lo organizativo y superando las expectativas el público brindó su apoyo. Frente al éxito de la realización, a",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-09T22:45:51.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/si-yo-fuera-mazzacane-haria-el-coronacion-de-tc-en-balcarce-11",
-     "fecha": "2026-10-09T22:45:51.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"carretera\" y la fuente no",
-   "maximo": 3
-  },
-  {
-   "id": "13ysda0",
-   "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
-   "copete": "El Hospital Municipal “Dr. Felipe A. Fossati” informa que el conmutador telefónico ha restablecido su funcionamiento habitual, por lo que las líneas de comunicación con la institución se encuentran nuevamente operativas. En ese sentido, se recuerdan los números telefónicos…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T11:23:10.000Z",
-   "fuentes": [
-    {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
-     "fecha": "2026-10-09T11:23:10.000Z"
-    },
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/restablecieron-el-servicio-telefonico.html",
-     "fecha": "2026-10-09T12:45:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
-   "maximo": 3
-  },
   {
    "id": "1fb9s8v",
    "titulo": "Solo tres provincias en todo el país lograron aumentar el empleo industrial en los últimos dos años",
@@ -198,23 +159,6 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
-   "maximo": 3
-  },
-  {
-   "id": "88fvqd",
-   "titulo": "El descarte de medicamentos vencidos, una problemática que llegó al Concejo Deliberante",
-   "copete": "",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T23:01:49.633Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/el-descarte-de-medicamentos-vencidos-una-problematica-que-llego-al-concejo-deliberante-283",
-     "fecha": null
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo corto (41 palabras)",
    "maximo": 3
   },
   {

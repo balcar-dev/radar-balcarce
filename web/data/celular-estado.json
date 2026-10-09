@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T23:02:42.712Z",
- "portada": 58,
- "archivo": 878,
- "esperandoCuerpo": 11,
+ "generado": "2026-10-09T23:28:24.999Z",
+ "portada": 62,
+ "archivo": 883,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-09T23:02:42.759Z",
+  "generado": "2026-10-09T23:28:25.054Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -74,7 +74,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-09T23:06:04.652Z"
    },
    {
     "nombre": "podcast",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 53,
     "notas": [
      {
       "id": "17di2tc",
@@ -165,19 +165,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "vwb5m5",
-      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
-      "seccion": "Fútbol"
+      "id": "1trv7re",
+      "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1360zul",
+      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "jul3dj",
       "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
-      "seccion": "Agro"
      }
     ]
    }
@@ -210,7 +210,32 @@
      "cuando": "2026-10-09T18:45:24.033Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1trv7re",
+     "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
+    {
+     "id": "88fvqd",
+     "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1360zul",
+     "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "146dyw0",
+     "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-09T20:15:24.033Z",
    "porDia": 5,
