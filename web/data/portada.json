@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T09:01:45.093Z",
+  "generado": "2026-10-09T09:31:55.837Z",
   "notas": [
     {
       "id": "1bb4gv8",
@@ -684,7 +684,7 @@
       "fecha": "2026-10-08T21:17:37.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1244,12 +1244,12 @@
         "El Día",
         "La Nueva",
         "Letra P",
+        "La Verdad",
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobae",
         "Clarín",
-        "Perfil",
-        "La Verdad"
+        "Perfil"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/10/08/rechazaron-el-intento-de-maximo-y-florencia-kirchner-por-evitar-que-sus-bienes-sean-decomisados-en-la-causa-vialidad/",
       "teniaImagenLaFuente": true,
@@ -1539,6 +1539,76 @@
       }
     },
     {
+      "id": "17s3or9",
+      "titulo": "El Museo Comunitario Isla Maciel abre una muestra sobre Juan Carlos Romero",
+      "copete": "El espacio cultural expone desde el sábado obras del referente del arte político. La entrada es libre y gratuita durante todo el mes.",
+      "cuerpo": "El Museo Comunitario Isla Maciel abrirá el sábado a las 16 una exposición dedicada al artista y grabador Juan Carlos Romero, fallecido en 2017. La muestra, titulada \"Mi discurso es el silencio. Mi canto el grito\", se podrá recorrer durante todo octubre con acceso libre y gratuito en la sede ubicada en la calle 3 de Febrero 1570, en la localidad de Dock Sud, partido de Avellaneda.\n\nLa propuesta reúne trabajos de uno de los principales exponentes del arte político y la gráfica nacional, cuyo recorrido estuvo atravesado por el compromiso social y la experimentación visual. El espacio elegido para la exhibición se vincula con las raíces del creador, nacido en ese partido bonaerense en 1931.",
+      "guion": "El Museo Comunitario Isla Maciel abre una muestra sobre Juan Carlos Romero",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Infobae",
+        "Noticias Argentinas (NA)",
+        "InfoRegión"
+      ],
+      "enlace": "https://noticiasargentinas.com/cultura/el-museo-comunitario-isla-maciel-inaugura-una-muestra-dedicada-al-artista-juan-carlos-romero_a6ac7cae93d40083fb6592f14",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T17:00:58.942Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T03:31:44.849Z",
+      "relevancia": 46,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Inauguración el sábado a las 16 en Dock Sud.",
+        "Muestra dedicada al artista Juan Carlos Romero.",
+        "Entrada libre y gratuita durante todo octubre."
+      ],
+      "seSabe": [
+        "La muestra se titula \"Mi discurso es el silencio. Mi canto el grito\".",
+        "La sede del museo se encuentra en 3 de Febrero 1570, Dock Sud.",
+        "La entrada es libre y gratuita."
+      ],
+      "textoRedes": "El Museo Comunitario Isla Maciel inaugura este sábado una muestra dedicada al artista Juan Carlos Romero. Será con entrada libre y gratuita durante todo octubre en Dock Sud.",
+      "etiquetas": [
+        "Cultura",
+        "Arte",
+        "Juan Carlos Romero",
+        "Avellaneda"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/cultura/el-museo-comunitario-isla-maciel-inaugura-una-muestra-dedicada-al-artista-juan-carlos-romero_a6ac7cae93d40083fb6592f14",
+          "fecha": "2026-10-08T17:00:58.942Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la temática, los horarios, la ubicación y la biografía del artista."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/cultura/agenda-cultura/2026/10/09/guia-de-arte-y-cultura-semana-del-9-al-16-de-octubre-de-2026/",
+          "fecha": "2026-10-09T03:25:00.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la información sobre la apertura de la muestra."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/10/08/avellaneda-el-museo-comunitario-isla-maciel-inaugura-una-muestra-dedicada-al-artista-juan-carlos-romero/",
+          "fecha": "2026-10-08T18:30:12.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha y la hora exacta de la inauguración."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-museo-comunitario-isla-maciel-abre-una-muestra-sobre-juan-carlos"
+    },
+    {
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "copete": "La seccional local del gremio reconoce la labor de quienes se desempeñan en el campo. La fecha conmemora la sanción del primer Estatuto del Peón Rural en 1944.",
@@ -1806,9 +1876,9 @@
         "Noticias Argentinas (NA)",
         "La Nueva",
         "0221",
-        "El Día",
-        "Bolavip Argentina",
         "Doble Amarilla",
+        "Bolavip Argentina",
+        "El Día",
         "El Gráfico",
         "La Capital (Rosario)"
       ],
@@ -1912,7 +1982,6 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Capital (Rosario)",
-        "Bolavip Argentina",
         "El Día"
       ],
       "enlace": "https://www.lacapital.com.ar/ovacion/perdi-el-amor-el-futbol-argentino-la-critica-tagliafico-la-liga-profesional-n10285581.html",
@@ -2067,6 +2136,7 @@
         "Minuto Uno",
         "Ámbito",
         "TN (Todo Noticias)",
+        "El Cronista",
         "El Destape",
         "Crónica",
         "Diario Popular",
@@ -2074,7 +2144,6 @@
         "El Eco de Tandil",
         "Infobae",
         "La Nación",
-        "El Cronista",
         "Página/12",
         "C5N",
         "Perfil",
@@ -2587,7 +2656,7 @@
       "fecha": "2026-10-08T12:20:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T18:31:25.201Z",
-      "relevancia": 32,
+      "relevancia": 36,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2965,97 +3034,6 @@
       "foto": {
         "archivo": "fotos-notas/112w8rt.jpg",
         "credito": "Foto: Infocampo"
-      }
-    },
-    {
-      "id": "r09m78",
-      "titulo": "ARBA habilita el pago con descuento de la patente hasta el viernes",
-      "copete": "La Agencia de Recaudación bonaerense recuerda que el viernes 9 de octubre vence el plazo para abonar la cuota ocho del Impuesto a los Automotores con una bonificación de hasta el 10%.",
-      "cuerpo": "Para cancelar la obligación, los usuarios pueden ingresar al sitio web oficial para abonar con tarjeta de crédito o generar un código de pago electrónico para cajeros. También se encuentra habilitada la opción digital mediante Cuenta DNI con el código QR enviado por correo electrónico, además de la modalidad presencial en bancos y bocas de Provincia Net tras descargar las boletas.\n\nDurante este periodo rige el esquema de vencimientos mensuales fraccionado en hasta diez cuotas dispuesto por el organismo provincial para brindar previsibilidad financiera.",
-      "guion": "ARBA habilita el pago con descuento de la patente hasta el viernes",
-      "seccion": "Argentina",
-      "medios": [
-        "Diario Popular",
-        "El Eco de Tandil",
-        "Zona Norte Diario",
-        "Agencia DIB",
-        "El Día"
-      ],
-      "enlace": "https://www.zonanortediario.com.ar/08/10/2026/hasta-manana-se-puede-pagar-la-cuota-8-del-impuesto-automotor-con-descuento/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T09:30:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T16:31:19.916Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Vence el viernes 9 de octubre la cuota ocho del Impuesto a los Automotores.",
-        "El descuento es de hasta el 10% para contribuyentes al día.",
-        "Se puede pagar de forma digital, web o presencial en bocas habilitadas."
-      ],
-      "seSabe": [
-        "El plazo para pagar vence el viernes 9 de octubre, según ARBA.",
-        "La bonificación alcanza hasta el 10% para quienes abonen en término y estén al día.",
-        "El pago se puede realizar por la web, Cuenta DNI o en bocas de cobro presenciales."
-      ],
-      "textoRedes": "ARBA recuerda que este viernes 9 de octubre vence el plazo para abonar la cuota ocho del Impuesto a los Automotores con una bonificación de hasta el 10% para quienes estén al día. Se puede abonar por la web, Cuenta DNI o en bocas presenciales.",
-      "etiquetas": [
-        "ARBA",
-        "Impuesto Automotor",
-        "Patente",
-        "Descuento",
-        "Provincia de Buenos Aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Zona Norte Diario",
-          "enlace": "https://www.zonanortediario.com.ar/08/10/2026/hasta-manana-se-puede-pagar-la-cuota-8-del-impuesto-automotor-con-descuento/",
-          "fecha": "2026-10-08T09:30:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los canales de pago, los medios habilitados y el porcentaje de descuento."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/vence-manana-el-plazo-para-pagar-la-cuota-ocho-del-impuesto-automotor-con-descuento",
-          "fecha": "2026-10-08T13:11:26.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha límite del viernes 9 de octubre para la cuota ocho."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/economia/vence-la-cuota-8-del-impuesto-automotor-clave-pagar-descuento-n56336",
-          "fecha": "2026-10-08T14:00:04.000Z",
-          "oficial": false,
-          "aporte": "Indicó el porcentaje de la bonificación y el organismo emisor."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/hasta-este-viernes-9-10-se-puede-pagar-la-cuota-8-del-impuesto-automotor-descuento-n923539",
-          "fecha": "2026-10-08T15:04:00.000Z",
-          "oficial": false,
-          "aporte": "Especificó que el beneficio aplica con cualquier medio de pago elegido."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/informacion-general/manana-vence-el-plazo-para-pagar-con-descuento-el-impuesto-automotor-provincial-informacion-general_1791475800",
-          "fecha": "2026-10-08T16:17:11.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "arba-habilita-el-pago-con-descuento-de-la-patente-hasta-el-viernes",
-      "foto": {
-        "archivo": "fotos-notas/r09m78.jpg",
-        "credito": "Foto: Agencia DIB"
       }
     },
     {
@@ -3650,6 +3628,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "La Brújula 24",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
         "La Capital (Rosario)",
@@ -4024,86 +4003,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "vecinos-advierten-sobre-el-robo-de-flexibles-de-gas"
-    },
-    {
-      "id": "1qdgf5p",
-      "titulo": "La Argentina firma un acuerdo internacional contra la producción excesiva",
-      "copete": "El país se sumó a un bloque de quince naciones para cuestionar la sobrecapacidad industrial global y los subsidios estatales. La decisión se adoptó durante una cumbre del G20.",
-      "cuerpo": "El gobierno argentino adhirió a una declaración conjunta de quince países para cuestionar la sobrecapacidad estructural en sectores manufactureros durante una cumbre del G20 realizada en la ciudad estadounidense de Milwaukee. La administración que encabeza el presidente Javier Milei firmó el documento junto con representantes de Estados Unidos, Canadá, la Unión Europea y Japón, entre otros.\n\nEl texto apunta a modelos de fabricación sostenidos mediante intervenciones estatales que generan una oferta superior a la demanda mundial y alteran los precios internacionales.",
-      "guion": "La Argentina firma un acuerdo internacional contra la producción excesiva",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Ámbito",
-        "La Nación",
-        "C5N",
-        "Noticias Argentinas (NA)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "iProfesional",
-        "Crónica",
-        "El Día",
-        "La Brújula 24",
-        "La Nueva",
-        "A24"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/07/un-freno-a-china-la-argentina-firmo-un-acuerdo-con-eeuu-y-otros-paises-para-enfrentar-la-produccion-excesiva-a-nivel-global/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-07T21:25:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-07T23:31:13.741Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "El gobierno argentino ratificó la adhesión a través de la administración de Javier Milei.",
-        "El pronunciamiento se acordó en una reunión del G20 en Milwaukee.",
-        "Participaron 15 naciones, entre ellas Estados Unidos, Canadá y la Unión Europea."
-      ],
-      "textoRedes": "La Argentina se sumó a un bloque de quince países para cuestionar la sobrecapacidad industrial global y los subsidios estatales durante una cumbre del G20.",
-      "etiquetas": [
-        "Argentina",
-        "G20",
-        "industria",
-        "comercio internacional",
-        "Estados Unidos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/07/un-freno-a-china-la-argentina-firmo-un-acuerdo-con-eeuu-y-otros-paises-para-enfrentar-la-produccion-excesiva-a-nivel-global/",
-          "fecha": "2026-10-07T21:45:47.000Z",
-          "oficial": false,
-          "aporte": "Detalló los puntos principales del acuerdo sobre sobrecapacidad industrial y los plazos de trabajo hasta diciembre."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-argentino-firmo-un-acuerdo-con-estados-unidos-y-otros-paises-para-frenar-la--produccion-excesiva--a-nivel-global_a6ac6c7da25d386c88159d565",
-          "fecha": "2026-10-07T23:01:03.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la adhesión del gobierno nacional encabezado por el presidente Javier Milei."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1camy15",
-          "titulo": "Argentina firma un acuerdo global para aplicar inteligencia artificial a la ciencia",
-          "fecha": "2026-10-04T17:15:26.000Z",
-          "ruta": "/nota/argentina-firma-un-acuerdo-global-para-aplicar-inteligencia-1camy15"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-argentina-firma-un-acuerdo-internacional-contra-la-produccion",
-      "foto": {
-        "archivo": "fotos-notas/1qdgf5p.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
@@ -4124,10 +4023,10 @@
       "temp": 9,
       "sensacion": 6,
       "humedad": 89,
-      "viento": 15,
+      "viento": 14,
       "rumbo": "SE",
       "cielo": "Nublado",
-      "esDeDia": false
+      "esDeDia": true
     },
     "dias": [
       {
@@ -4473,28 +4372,28 @@
   },
   "pendientes": [
     {
-      "id": "11yxcy2",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
       "id": "1s8ckrw",
       "titulo": null,
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"el menor de\""
     },
     {
-      "id": "dc8gpu",
-      "titulo": "El Gobierno estudia denunciar a Irán ante la Corte de la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "13c60a8",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "1el0rhm",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
+    },
+    {
+      "id": "dc8gpu",
+      "titulo": "El Gobierno estudia denunciar a Irán ante la Corte de la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "afnvn3",
@@ -4515,10 +4414,10 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "158wauu",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
+      "id": "1fl6540",
+      "titulo": "El Colegio de Médicos denunció precariedad laboral y…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "skjezu",
@@ -4557,6 +4456,12 @@
       "motivo": "necesita ojo humano: \"apuñalado\""
     },
     {
+      "id": "o5u9d2",
+      "titulo": null,
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "146mbos",
       "titulo": "La ANMAT prohibió el uso de dos suplementos promocionados…",
       "seccion": "Argentina",
@@ -4569,28 +4474,22 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "uriwx3",
-      "titulo": "Sebastián Driussi y Francisco Ortega tienen una sobrecarga…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "14wsi7n",
-      "titulo": "Juicio contra Aníbal Lotocki: el cirujano declarará por…",
+      "id": "18qie9r",
+      "titulo": "Lotocki declaró por las lesiones a cinco mujeres: “El…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1fl6540",
-      "titulo": "El Colegio de Médicos denunció precariedad laboral y…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "emxfi0",
       "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "158wauu",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "1ob03ue",
@@ -4605,22 +4504,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "7afp6h",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "13wfgz4",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "1d96pbn",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"alumna de\""
     },
     {
       "id": "189wr3s",
@@ -4651,12 +4538,6 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "vx7am0",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
     }
   ],
   "esperandoCuerpo": 2
