@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T18:02:23.611Z",
- "portada": 56,
- "archivo": 875,
- "esperandoCuerpo": 8,
+ "generado": "2026-10-09T18:32:04.697Z",
+ "portada": 53,
+ "archivo": 877,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-09T18:02:23.657Z",
+  "generado": "2026-10-09T18:32:04.721Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-09T18:07:31.269Z"
    },
    {
     "nombre": "farmacia",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 52,
+    "salio": "2026-10-09T18:07:31.269Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1j94k5u",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "vwb5m5",
-      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
-      "seccion": "Fútbol"
-     },
      {
       "id": "10izr2u",
       "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
       "seccion": "Deportes"
      },
      {
-      "id": "1y9462t",
-      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
       "seccion": "Balcarce"
      },
      {
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro"
+     },
+     {
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -222,12 +222,6 @@
      "id": "2qmh95",
      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "1y9462t",
-     "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],

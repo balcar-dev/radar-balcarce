@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T18:02:23.611Z",
+ "generado": "2026-10-09T18:32:04.697Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,11 +15,6 @@
      "fecha": "2026-10-09T11:23:10.000Z"
     },
     {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/el-hospital-fossati-restablecio-el-funcionamiento-de-su-conmutador-telefonico/",
-     "fecha": "2026-10-09T12:08:29.000Z"
-    },
-    {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/restablecieron-el-servicio-telefonico.html",
      "fecha": "2026-10-09T12:45:00.000Z"
@@ -28,6 +23,53 @@
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
    "maximo": 3
+  },
+  {
+   "id": "16bffnh",
+   "titulo": "Aeropuertos Argentina invertirá USD 1.500 millones en obras",
+   "copete": "Aeropuertos Argentina anunció un plan de obras por US$1500 millones para modernizar y ampliar la infraestructura aeroportuaria del país entre 2027 y 2031. El proyecto contempla la construcción de una nueva terminal de arribos internacionales en Ezeiza, una terminal exclusiva…",
+   "seccion": "Economía",
+   "fecha": "2026-10-09T16:02:18.000Z",
+   "fuentes": [
+    {
+     "medio": "Agroempresario",
+     "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
+     "fecha": "2026-10-09T16:02:18.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/gigantesco-plan-de-obras-asi-sera-aterrizar-en-la-argentina-en-2030-nid09102026/",
+     "fecha": "2026-10-09T17:56:46.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/economia/2026/10/09/aeropuertos-argentina-anuncio-el-mayor-plan-de-inversion-de-su-historia-desembolsara-usd-1500-millones-en-los-proximos-5-anos/",
+     "fecha": "2026-10-09T17:25:56.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/economia/ampliar-concesion-aeropuertos-argentina-invertira-us-1500-millones-ezeiza-aeroparque-interior-pais_0_PZtLSKCq6u.html",
+     "fecha": "2026-10-09T17:14:50.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/economia/2026/10/09/aeropuertos-argentina-anuncio-obras-por-us1500-millones-ezeiza-tendra-una-nueva-terminal-de-arribos-y-se-ampliara-el-aeroparque/",
+     "fecha": "2026-10-09T17:34:05.000Z"
+    },
+    {
+     "medio": "iProfesional",
+     "enlace": "https://www.iprofesional.com/negocios/466298-aeropuertos-argentina-invertira-us1500-millones-en-el-pais",
+     "fecha": "2026-10-09T17:55:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/ezeiza-tendra-dos-nuevas-terminales-y-aeroparque-ampliara-sus-instalaciones_a6ac91158587f18d752ff8898",
+     "fecha": "2026-10-09T16:09:59.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 6 problemas (numero, copia): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 50 palabras",
+   "maximo": 4
   },
   {
    "id": "11lqk0q",
@@ -39,7 +81,7 @@
     {
      "medio": "El Gráfico",
      "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
-     "fecha": "2026-10-09T07:30:00.000Z"
+     "fecha": "2026-10-08T19:00:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -74,7 +116,7 @@
     {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
-     "fecha": "2026-10-09T13:13:54.000Z"
+     "fecha": "2026-10-09T00:53:00.000Z"
     },
     {
      "medio": "La Capital (Rosario)",
@@ -187,8 +229,8 @@
      "fecha": "2026-10-09T16:43:15.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"francia\" y la fuente no",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (Paris, Asociacion, Promocion): va con las tildes y la eñe donde co; sin esas oraciones quedan 143",
    "maximo": 3
   },
   {

@@ -271,6 +271,11 @@
   "ultimo": "2026-10-03T22:31:25.959Z",
   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 69 palabras"
  },
+ "16bffnh": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T18:31:36.134Z",
+  "motivo": "cuerpo: 6 problemas (numero, copia): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 50 palabras"
+ },
  "16btgej": {
   "intentos": 1,
   "ultimo": "2026-10-05T13:03:48.838Z",
@@ -492,11 +497,6 @@
   "intentos": 1,
   "ultimo": "2026-10-03T13:31:34.579Z",
   "motivo": "con cuerpo"
- },
- "1a6zyt9": {
-  "intentos": 5,
-  "ultimo": "2026-10-02T18:14:15.202Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"augusto\", \"belluscio\" y el cuerpo no los explica; sin esas oraciones quedan 106 palabras"
  },
  "1a7teye": {
   "intentos": 1,
@@ -993,11 +993,6 @@
   "ultimo": "2026-10-03T14:01:27.961Z",
   "motivo": "con cuerpo"
  },
- "1l7b8nt": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T18:14:15.202Z",
-  "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
- },
  "1l98x2s": {
   "intentos": 1,
   "ultimo": "2026-10-09T17:01:38.358Z",
@@ -1183,11 +1178,6 @@
  "1pofkpj": {
   "intentos": 1,
   "ultimo": "2026-10-05T21:32:25.306Z",
-  "motivo": "con cuerpo"
- },
- "1pq0gh4": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T18:31:26.628Z",
   "motivo": "con cuerpo"
  },
  "1pwavd9": {
@@ -1492,11 +1482,6 @@
   "ultimo": "2026-10-07T22:01:53.969Z",
   "motivo": "con cuerpo"
  },
- "1wtp555": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T18:14:15.202Z",
-  "motivo": "con cuerpo"
- },
  "1wv2vgs": {
   "intentos": 1,
   "ultimo": "2026-10-09T00:01:57.209Z",
@@ -1789,11 +1774,6 @@
  "64sjkx": {
   "intentos": 1,
   "ultimo": "2026-10-07T22:32:05.084Z",
-  "motivo": "con cuerpo"
- },
- "6cucid": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T18:31:26.628Z",
   "motivo": "con cuerpo"
  },
  "6izwi8": {
@@ -2655,9 +2635,9 @@
   "motivo": "cuerpo: 2 problemas (fecha, copia): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 63 palabras"
  },
  "rzygx9": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T18:02:02.223Z",
-  "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"francia\" y la fuente no"
+  "intentos": 2,
+  "ultimo": "2026-10-09T18:31:36.134Z",
+  "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (Paris, Asociacion, Promocion): va con las tildes y la eñe donde co; sin esas oraciones quedan 143"
  },
  "s5alyz": {
   "intentos": 1,
@@ -2775,6 +2755,11 @@
   "intentos": 3,
   "ultimo": "2026-10-02T19:32:00.019Z",
   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"boedo\" y la fuente no"
+ },
+ "ubfg45": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T18:31:36.134Z",
+  "motivo": "con cuerpo"
  },
  "uc2dz4": {
   "intentos": 2,
