@@ -9800,16 +9800,16 @@
   "cuando": "2026-10-08T12:03:04.464Z"
  },
  "1c93acw": {
-  "archivo": "fotos-notas/1c93acw.jpg",
   "medio": "Página/12",
-  "credito": "Foto: Página/12",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto cuenta detalles de su llanto por la despedida de Messi",
   "enlace": "https://www.pagina12.com.ar/2026/10/08/llore-un-rato-franco-colapinto-hablo-sobre-la-despedida-de-messi/",
   "imagenOriginal": "https://www.pagina12.com.ar/resizer/v2/UZLLIUBGFJDBZI7K46W4GCVH34.jpeg?smart=true&auth=6e4711f4e94844a546f66379063030b5f8c36845eaca79f0b04cb39768e5be03&width=1200&height=630",
   "razon": "La foto B muestra claramente a Franco Colapinto en primer plano sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-08T12:32:22.075Z"
+  "cuando": "2026-10-08T12:32:22.075Z",
+  "intentado": true,
+  "borrada": true
  },
  "116x391": {
   "archivo": "fotos-notas/116x391.jpg",
@@ -10295,16 +10295,16 @@
   "cuando": "2026-10-08T21:01:55.309Z"
  },
  "1okvzqw": {
-  "archivo": "fotos-notas/1okvzqw.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto y Fernando Alonso cruzan bromas en Singapur",
   "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/08/video-el-divertido-cruce-entre-franco-colapinto-y-fernando-alonso-en-la-conferencia-de-prensa-del-gp-de-singapur/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-398-292867a531aa1791482269086-1791482453.jpg?auth=e4178711a6b70a430c435f0ee764ff8054b531310cd9c33f47da5db71e908f8a&width=1023",
   "razon": "La foto B muestra a ambos protagonistas juntos y enfocados en el mismo plano sin divisiones, sin marcas de agua de medios ni menores.",
-  "cuando": "2026-10-08T19:52:16.120Z"
+  "cuando": "2026-10-08T19:52:16.120Z",
+  "intentado": true,
+  "borrada": true
  },
  "u1zabu": {
   "archivo": "fotos-notas/u1zabu.jpg",
@@ -10549,16 +10549,16 @@
   "cuando": "2026-10-08T23:32:30.505Z"
  },
  "1u3brye": {
-  "archivo": "fotos-notas/1u3brye.jpg",
   "medio": "TyC Sports",
-  "credito": "Foto: TyC Sports",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto encara el Gran Premio de Singapur con expectativas altas",
   "enlace": "https://www.tycsports.com/automovilismo/colapinto-palpito-el-gran-premio-de-singapur-con-altas-expectativas-todo-es-posible-id764873.html",
   "imagenOriginal": "https://media.tycsports.com/files/2026/03/31/936573/franco-colapinto-en-el-paddock-del-gp-de-japon_1440x810.webp?v=1",
   "razon": "Es la única imagen completa y con buen encuadre que muestra al piloto de forma clara, sin marcas de agua ni menores de edad.",
-  "cuando": "2026-10-08T23:32:30.505Z"
+  "cuando": "2026-10-08T23:32:30.505Z",
+  "intentado": true,
+  "borrada": true
  },
  "1p0s5l3": {
   "archivo": "fotos-notas/1p0s5l3.jpg",
@@ -10807,16 +10807,16 @@
   "cuando": "2026-10-09T11:02:04.131Z"
  },
  "178vmym": {
-  "archivo": "fotos-notas/178vmym.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno nacional aprueba nuevas tarifas para treinta aeropuertos",
   "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-aprobo-las-nuevas-tarifas-para-operar-en-30-aeropuertos-del-pais/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/P7A7F6LTTNDYFDFO5EXFXZSIFY.jpg?auth=aefdd1d18302add74516a57acddcb843c55e481f920301f2783f9a679b5948da&smart=true&width=1200&height=630&quality=85",
   "razon": "Muestra una vista aérea general y clara de un aeropuerto con múltiples aviones, ideal para ilustrar una nota sobre tarifas aeroportuarias, sin marcas ni personas reconocibles.",
-  "cuando": "2026-10-09T11:02:04.131Z"
+  "cuando": "2026-10-09T11:02:04.131Z",
+  "intentado": true,
+  "borrada": true
  },
  "13xrjvk": {
   "archivo": "fotos-notas/13xrjvk.jpg",
@@ -11125,9 +11125,7 @@
   "cuando": "2026-10-09T17:02:39.028Z"
  },
  "jul3en": {
-  "archivo": "fotos-notas/jul3en.jpg",
   "medio": "Wikimedia Commons",
-  "credito": "Foto: Mizael Contreras / Wikimedia Commons (CC BY-SA 4.0)",
   "licencia": "CC BY-SA 4.0",
   "autor": "Mizael Contreras",
   "origen": "wikimedia",
@@ -11135,7 +11133,9 @@
   "enlace": "https://commons.wikimedia.org/wiki/File:%C3%81guila,_escultura_de_Virginia_Aparicio.jpg",
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%C3%81guila%2C_escultura_de_Virginia_Aparicio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Virginia Aparicio\" de Wikimedia Commons (CC BY-SA 4.0).",
-  "cuando": "2026-10-09T17:02:39.028Z"
+  "cuando": "2026-10-09T17:02:39.028Z",
+  "intentado": true,
+  "borrada": true
  },
  "u6j4ho": {
   "archivo": "fotos-notas/u6j4ho.jpg",
@@ -11207,16 +11207,16 @@
   "cuando": "2026-10-09T18:02:15.833Z"
  },
  "o8zpwa": {
-  "archivo": "fotos-notas/o8zpwa.jpg",
   "medio": "TyC Sports",
-  "credito": "Foto: TyC Sports",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto y Pierre Gasly participan de un juego viral de Alpine",
   "enlace": "https://www.tycsports.com/automovilismo/colapinto-y-gasly-juego-viral-alpine-id765138.html",
   "imagenOriginal": "https://media.tycsports.com/files/2026/10/09/994364/franco_1440x810.webp?v=2",
   "razon": "Muestra claramente a Franco Colapinto y Pierre Gasly participando del juego viral con los teléfonos en la frente, con excelente nitidez y sin marcas de medios ni menores.",
-  "cuando": "2026-10-09T18:02:15.833Z"
+  "cuando": "2026-10-09T18:02:15.833Z",
+  "intentado": true,
+  "borrada": true
  },
  "ubfg45": {
   "archivo": "fotos-notas/ubfg45.jpg",
@@ -11312,5 +11312,17 @@
   "imagenOriginal": "https://cdn1.eldia.com/102026/1791548714417.jpg?&cw=1200&ch=630",
   "razon": "Es la foto más clara y de mejor calidad que ilustra adecuadamente la temática de tránsito sin marcas superpuestas ni menores de edad.",
   "cuando": "2026-10-09T21:01:53.663Z"
+ },
+ "pyejmn": {
+  "archivo": "fotos-notas/pyejmn.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
+  "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/las-lluvias-de-la-primera-semana-de-octubre-aportaron-un-promedio-de-48-mm-en-la-region-nucleo-reactivando-la-condicion-de-los-trigos-que-ingresan-en-su-etapa-critica-de-definicion-de-rinde-foto-tn-N2M3YY236ZCK7DXRFA2RM32GLU.jpg?auth=3976b241148b9ecaa4c015d44a87a1e3498bbe35850645eeb93fac55dbbbcb9f&width=1023",
+  "razon": "La foto A muestra un campo de trigo verde y saludable, libre de marcas de agua y menores, ideal para ilustrar el rendimiento del cultivo.",
+  "cuando": "2026-10-09T21:32:06.130Z"
  }
 }
