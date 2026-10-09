@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T04:32:13.925Z",
+  "generado": "2026-10-09T05:01:58.240Z",
   "notas": [
     {
       "id": "mxhy8u",
@@ -149,6 +149,87 @@
         "archivo": "fotos-notas/z7t628.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
       }
+    },
+    {
+      "id": "12xoybu",
+      "titulo": "Un auto se incendia y termina destruido en la colectora de la ruta 226",
+      "copete": "El rodado quedó completamente destruido tras desatarse las llamas durante la tarde del jueves. Una dotación de Bomberos Voluntarios trabajó en el lugar.",
+      "cuerpo": "Un automóvil Ford Ka sufrió daños totales al incendiarse el jueves por la tarde en la colectora de la Autovía Nacional 226. El episodio comenzó cuando la propietaria regresaba de hacer compras y advirtió el fuego en el vehículo.\n\nUna dotación de Bomberos Voluntarios acudió para extinguir las llamas y frenar la propagación, aunque el rodado quedó destruido por completo. En el sitio también prestaron servicio efectivos de la Estación de Policía Comunal y personal de Tránsito.",
+      "guion": "Un auto se incendia y termina destruido en la colectora de la ruta 226",
+      "seccion": "Policiales",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45042-un-auto-fue-consumido-por-las-llamas-y-termino-destruido-en-la-colectora-de-la-ruta-226/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T01:01:28.815Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T01:01:28.815Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "bomberos",
+        "rutas"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Un auto se prendió fuego en la colectora de la ruta 226.",
+        "El fuego causó daños totales en el vehículo.",
+        "Bomberos Voluntarios trabajaron para apagar las llamas."
+      ],
+      "seSabe": [
+        "El hecho ocurrió el jueves por la tarde en la colectora de la Autovía Nacional 226.",
+        "El vehículo afectado fue un Ford Ka que sufrió daños totales.",
+        "La propietaria descubrió el fuego al volver de hacer compras.",
+        "Trabajaron en el lugar Bomberos Voluntarios, personal de Tránsito y efectivos de la Estación de Policía Comunal."
+      ],
+      "noConfirmado": [
+        "No se informaron las causas que originaron el incendio del vehículo.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un automóvil quedó destruido este jueves por la tarde tras incendiarse en la colectora de la Autovía Nacional 226. Bomberos Voluntarios trabajaron en el lugar para apagar las llamas.",
+      "etiquetas": [
+        "incendio",
+        "ruta 226",
+        "bomberos voluntarios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45042-un-auto-fue-consumido-por-las-llamas-y-termino-destruido-en-la-colectora-de-la-ruta-226/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el incendio de un auto en la colectora de la ruta 226 y el trabajo de los bomberos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1n6yxr",
+          "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+          "fecha": "2026-10-06T22:23:08.000Z",
+          "ruta": "/nota/la-liga-balcarcena-inicia-la-fase-clausura-del-torneo-oficial-1n6yxr"
+        },
+        {
+          "id": "1pwavd9",
+          "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región",
+          "fecha": "2026-10-06T00:01:00.000Z",
+          "ruta": "/nota/la-empresa-esuco-retoma-tareas-viales-en-las-rutas-de-la-region-1pwavd9"
+        },
+        {
+          "id": "irc0sr",
+          "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
+          "fecha": "2026-10-04T20:31:39.000Z",
+          "ruta": "/nota/bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela-irc0sr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "un-auto-se-incendia-y-termina-destruido-en-la-colectora-de-la-ruta-226"
     },
     {
       "id": "repaso20261008noche",
@@ -428,88 +509,6 @@
       "slug": "aacyc-balcarce-gana-cinco-pruebas-en-mar-del-plata"
     },
     {
-      "id": "12xoybu",
-      "titulo": "Un auto se incendia y termina destruido en la colectora de la ruta 226",
-      "copete": "El rodado quedó completamente destruido tras desatarse las llamas durante la tarde del jueves. Una dotación de Bomberos Voluntarios trabajó en el lugar.",
-      "cuerpo": "Un automóvil Ford Ka sufrió daños totales al incendiarse el jueves por la tarde en la colectora de la Autovía Nacional 226. El episodio comenzó cuando la propietaria regresaba de hacer compras y advirtió el fuego en el vehículo.\n\nUna dotación de Bomberos Voluntarios acudió para extinguir las llamas y frenar la propagación, aunque el rodado quedó destruido por completo. En el sitio también prestaron servicio efectivos de la Estación de Policía Comunal y personal de Tránsito.",
-      "guion": "Un auto se incendia y termina destruido en la colectora de la ruta 226",
-      "seccion": "Policiales",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45042-un-auto-fue-consumido-por-las-llamas-y-termino-destruido-en-la-colectora-de-la-ruta-226/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T22:51:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T01:01:28.815Z",
-      "relevancia": 88,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "bomberos",
-        "rutas"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Un auto se prendió fuego en la colectora de la ruta 226.",
-        "El fuego causó daños totales en el vehículo.",
-        "Bomberos Voluntarios trabajaron para apagar las llamas."
-      ],
-      "seSabe": [
-        "El hecho ocurrió el jueves por la tarde en la colectora de la Autovía Nacional 226.",
-        "El vehículo afectado fue un Ford Ka que sufrió daños totales.",
-        "La propietaria descubrió el fuego al volver de hacer compras.",
-        "Trabajaron en el lugar Bomberos Voluntarios, personal de Tránsito y efectivos de la Estación de Policía Comunal."
-      ],
-      "noConfirmado": [
-        "No se informaron las causas que originaron el incendio del vehículo.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un automóvil quedó destruido este jueves por la tarde tras incendiarse en la colectora de la Autovía Nacional 226. Bomberos Voluntarios trabajaron en el lugar para apagar las llamas.",
-      "etiquetas": [
-        "incendio",
-        "ruta 226",
-        "bomberos voluntarios"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45042-un-auto-fue-consumido-por-las-llamas-y-termino-destruido-en-la-colectora-de-la-ruta-226/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó sobre el incendio de un auto en la colectora de la ruta 226 y el trabajo de los bomberos."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1n6yxr",
-          "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
-          "fecha": "2026-10-06T22:23:08.000Z",
-          "ruta": "/nota/la-liga-balcarcena-inicia-la-fase-clausura-del-torneo-oficial-1n6yxr"
-        },
-        {
-          "id": "1pwavd9",
-          "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región",
-          "fecha": "2026-10-06T00:01:00.000Z",
-          "ruta": "/nota/la-empresa-esuco-retoma-tareas-viales-en-las-rutas-de-la-region-1pwavd9"
-        },
-        {
-          "id": "irc0sr",
-          "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
-          "fecha": "2026-10-04T20:31:39.000Z",
-          "ruta": "/nota/bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela-irc0sr"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "un-auto-se-incendia-y-termina-destruido-en-la-colectora-de-la-ruta-226"
-    },
-    {
       "id": "w8iv0l",
       "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
       "copete": "El referente de Oklahoma City Thunder asegura que su nivel lo ubica en la cima de la liga. Además, se sumó como inversor de una entidad deportiva europea.",
@@ -519,16 +518,14 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "Bolavip Argentina",
-        "Básquet Plus",
-        "El Economista"
+        "Básquet Plus"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-08T21:26:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T01:31:40.326Z",
-      "relevancia": 89,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -727,90 +724,6 @@
       }
     },
     {
-      "id": "10znf8w",
-      "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
-      "copete": "El Registro Provincial de las Personas traslada las jornadas al edificio legislativo debido al clima. Funciona viernes y sábado de 12 a 17 sin turno previo.",
-      "cuerpo": "Las jornadas previstas para el viernes 9 y el sábado 10 de octubre se desarrollan en el edificio del Honorable Concejo Deliberante, situado en la calle 20 entre la avenida Favaloro y la calle 15.\n\nLa atención se presta entre las 12 y las 17 horas sin necesidad de turno previo, mediante la entrega de números por orden de llegada. Los vecinos pueden gestionar DNI, partidas de nacimiento y matrimonio, además de certificados de domicilio y extravío, de forma gratuita. El Pasaporte también se encuentra disponible, aunque con el arancel oficial del organismo provincial.",
-      "guion": "El operativo de Dni funciona en el Concejo Deliberante",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/el-operativo-de-documentacion-se-realizara-en-el-concejo-deliberante-por-las-condiciones-climaticas/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-08T20:25:28.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T04:31:46.393Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Cambian de sede las jornadas de documentación por el clima.",
-        "Funciona viernes y sábado de 12 a 17 en calle 20 entre Favaloro y 15.",
-        "La atención es sin turno previo y se entrega un número al llegar.",
-        "Los trámites son gratuitos salvo el Pasaporte."
-      ],
-      "seSabe": [
-        "El operativo móvil de documentación se trasladó al Concejo Deliberante debido al clima, según el Registro Provincial de las Personas.",
-        "Las jornadas se llevan a cabo el viernes 9 y el sábado 10 de octubre de 12 a 17 horas.",
-        "La atención es sin turno previo por orden de llegada.",
-        "Se pueden tramitar DNI, partidas, certificados y Pasaportes, con costo únicamente para este último."
-      ],
-      "textoRedes": "El operativo móvil de documentación funciona este viernes y sábado en el Concejo Deliberante debido a las condiciones climáticas. La atención es de 12 a 17 sin turno previo.",
-      "etiquetas": [
-        "documentacion",
-        "DNI",
-        "Concejo Deliberante",
-        "operativo movil",
-        "Registro de las Personas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/el-operativo-de-documentacion-se-realizara-en-el-concejo-deliberante-por-las-condiciones-climaticas/",
-          "fecha": "2026-10-08T20:25:28.000Z",
-          "oficial": false,
-          "aporte": "Informó el cambio de sede del operativo por el clima, los horarios, los trámites disponibles y la modalidad de atención."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1opc9eu",
-          "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
-          "fecha": "2026-10-07T18:31:21.770Z",
-          "ruta": "/nota/el-concejo-deliberante-distingue-a-la-fiscalia-descentralizada-1opc9eu"
-        },
-        {
-          "id": "1iv58lw",
-          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos",
-          "fecha": "2026-09-24T12:55:31.000Z",
-          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
-        },
-        {
-          "id": "repaso20261005noche",
-          "titulo": "El repaso de la noche en Radar Balcarce: el Concejo Deliberante y Básquet",
-          "fecha": "2026-10-06T00:04:58.221Z",
-          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-el-concejo-deliberante-repaso20261005noche"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-operativo-de-dni-funciona-en-el-concejo-deliberante",
-      "foto": {
-        "archivo": "fotos-notas/10znf8w.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "5oqfmf",
       "titulo": "Gabriel Katopodis confirma proyectos de autovías viales para la región",
       "copete": "El ministro bonaerense de Infraestructura detalló el estado de las obras en las rutas 11 y 88 durante una visita a Mar del Plata.",
@@ -919,8 +832,8 @@
         "Perfil",
         "El Cronista",
         "Noticias Argentinas (NA)",
-        "El Economista",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/negocios/genneia-inauguro-el-parque-solar-mas-grande-de-san-juan-invirtio-us110-millones-y-apunta-al-negocio-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -999,95 +912,6 @@
       "foto": {
         "archivo": "fotos-notas/bcq9u5.jpg",
         "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "vjzeja",
-      "titulo": "Marketing Sports culpa a River por las fallas en el homenaje",
-      "copete": "La empresa organizadora del evento para Lionel Messi en el estadio Monumental emitió un comunicado. Apuntó contra la dirigencia del club por restricciones operativas y fallas técnicas durante el espectáculo.",
-      "cuerpo": "Según la empresa, el desarrollo del evento se vio condicionado por limitaciones operativas y responsabilizó a la dirigencia de River.\n\nLa firma detalló que el club retiró la pantalla LED principal tras el anuncio de la sede y rechazó instalar una alternativa en el césped. Además, indicó que prohibieron armar un escenario central y que el sonido e iluminación dependían del personal de la institución.\n\nDurante la actuación del Grupo Cali, un corte de energía eléctrica interrumpió el show y el personal encendió las luces generales, lo que provocó la salida de los espectadores antes del final.",
-      "guion": "Marketing Sports culpa a River por las fallas en el homenaje",
-      "seccion": "Fútbol",
-      "medios": [
-        "Perfil",
-        "Olé",
-        "La Página Millonaria",
-        "El Gráfico"
-      ],
-      "enlace": "https://442.perfil.com/noticias/futbol/la-productora-encargada-del-homenaje-a-messi-explico-las-fallas-tecnicas-del-show-y-responsabilizo-a-river.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T19:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T00:31:46.698Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Marketing Sports organizó el homenaje a Messi en el Monumental por contrato de la AFA.",
-        "La productora emitió un comunicado para responsabilizar a River por los problemas técnicos.",
-        "Denunciaron la falta de pantalla LED, la prohibición de un escenario central y un corte de luz."
-      ],
-      "seSabe": [
-        "Marketing Sports emitió un comunicado para explicar las fallas técnicas en el homenaje a Lionel Messi.",
-        "La productora fue contratada por la Asociación del Fútbol Argentino para el evento en el estadio Monumental.",
-        "La empresa denunció que River retiró la pantalla LED y negó colocar otra en el campo de juego.",
-        "El sonido y la iluminación estaban a cargo del personal técnico del club.",
-        "Un corte de electricidad interrumpió la presentación del Grupo Cali y obligó a encender la iluminación general."
-      ],
-      "noConfirmado": [
-        "No se difundió la respuesta oficial de la dirigencia de River frente a las acusaciones de la productora."
-      ],
-      "textoRedes": "La productora encargada del homenaje a Lionel Messi en el estadio Monumental emitió un comunicado para explicar las fallas técnicas y responsabilizó a la dirigencia de River por las restricciones operativas durante el espectáculo.",
-      "etiquetas": [
-        "Lionel Messi",
-        "AFA",
-        "River Plate",
-        "Estadio Monumental",
-        "Fútbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/futbol/la-productora-encargada-del-homenaje-a-messi-explico-las-fallas-tecnicas-del-show-y-responsabilizo-a-river.phtml",
-          "fecha": "2026-10-08T22:50:50.000Z",
-          "oficial": false,
-          "aporte": "Detalló los inconvenientes operativos y la negativa de River sobre la pantalla LED y el escenario."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/la-productora-del-homenaje-lionel-messi-apunto-contra-river-y-lo-acuso-empanar-la-despedida-n6331839",
-          "fecha": "2026-10-09T00:00:00.000Z",
-          "oficial": false,
-          "aporte": "Denunció restricciones del club y señaló los cortes de sonido y el apagón durante el show del Grupo Cali."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
-          "fecha": "2026-10-08T23:00:53.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el comunicado difundido por la productora contratada por la AFA."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "99mpv8",
-          "titulo": "Marketing Sports apunta contra River por las fallas en el adiós a Messi",
-          "fecha": "2026-10-08T22:07:42.000Z",
-          "ruta": "/nota/marketing-sports-apunta-contra-river-por-las-fallas-en-el-adios-a-99mpv8"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "marketing-sports-culpa-a-river-por-las-fallas-en-el-homenaje",
-      "foto": {
-        "archivo": "fotos-notas/vjzeja.jpg",
-        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -1369,12 +1193,12 @@
         "El Día",
         "La Nueva",
         "Letra P",
-        "La Verdad",
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobae",
         "Clarín",
-        "Perfil"
+        "Perfil",
+        "La Verdad"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/10/08/rechazaron-el-intento-de-maximo-y-florencia-kirchner-por-evitar-que-sus-bienes-sean-decomisados-en-la-causa-vialidad/",
       "teniaImagenLaFuente": true,
@@ -1680,7 +1504,7 @@
       "fecha": "2026-10-08T17:00:58.942Z",
       "sinFecha": false,
       "visto": "2026-10-09T03:31:44.849Z",
-      "relevancia": 53,
+      "relevancia": 46,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1894,19 +1718,17 @@
       "guion": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
       "seccion": "Automovilismo",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Acción 5 (Balcarce)",
-        "El Diario Balcarce",
-        "News Balcarce (FM 91.7)"
+        "News Balcarce (FM 91.7)",
+        "El Diario Balcarce"
       ],
       "enlace": "https://accion5.com/por-cuestiones-climaticas-fue-suspendido-zonal-atlantico/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-08T16:14:22.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 100,
+      "relevancia": 89,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2107,7 +1929,8 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "Bolavip Argentina"
       ],
       "enlace": "https://www.lacapital.com.ar/ovacion/perdi-el-amor-el-futbol-argentino-la-critica-tagliafico-la-liga-profesional-n10285581.html",
       "teniaImagenLaFuente": true,
@@ -2174,7 +1997,6 @@
       "guion": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2185,7 +2007,7 @@
       "fecha": "2026-10-08T15:00:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T15:01:21.096Z",
-      "relevancia": 100,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2259,6 +2081,7 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "QZ Noticias (Mar del Plata)",
+        "Minuto Uno",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Cronista",
@@ -2267,13 +2090,12 @@
         "Diario Popular",
         "Zona Norte Diario",
         "El Eco de Tandil",
-        "Perfil",
         "Infobae",
         "La Nación",
         "Página/12",
         "C5N",
-        "Clarín",
-        "Minuto Uno"
+        "Perfil",
+        "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -2394,7 +2216,6 @@
       "medios": [
         "El Eco de Tandil",
         "Agencia DIB",
-        "Minuto Uno",
         "La Nación",
         "Infobae",
         "Ámbito",
@@ -2402,6 +2223,7 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
+        "Minuto Uno",
         "C5N",
         "Crónica",
         "Radio Mitre",
@@ -2639,15 +2461,14 @@
       "guion": "El Diario cumple 31 años como medio gráfico local",
       "seccion": "Balcarce",
       "medios": [
-        "News Balcarce (FM 91.7)",
-        "El Diario Balcarce"
+        "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30985",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-08T12:44:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T17:31:16.079Z",
-      "relevancia": 83,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2768,77 +2589,6 @@
       }
     },
     {
-      "id": "1n9bvrh",
-      "titulo": "Spotify incorpora audiolibros en español en el país",
-      "copete": "La plataforma de música suma más de 45.000 títulos en español para los usuarios locales. El despliegue progresivo alcanza a más de 180 mercados.",
-      "cuerpo": "Spotify amplía su catálogo con miles de audiolibros en español y Argentina figura entre los países seleccionados para recibir estas novedades. El despliegue llega de forma progresiva a más de 180 mercados y se extenderá hasta fin de año, según informó la empresa.\n\nEl servicio incluye más de 45.000 obras en castellano, respaldadas por más de 300 editoriales de todo el mundo. Los suscriptores disponen de 12 horas de contenido y cuentan con el plan Audiobook+, que otorga 15 horas adicionales de escucha y opciones de compra individual.",
-      "guion": "Spotify incorpora audiolibros en español en el país",
-      "seccion": "Tecnología",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Página/12"
-      ],
-      "enlace": "https://tn.com.ar/tecno/aplicaciones/2026/10/08/spotify-suma-audiolibros-en-espanol-los-detalles-del-lanzamiento/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T12:21:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T00:01:47.529Z",
-      "relevancia": 36,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Llegan audiolibros en español a la plataforma",
-        "Argentina figura entre los mercados habilitados",
-        "El catálogo incluye más de 45.000 títulos",
-        "Se ofrecen planes con 12 y 15 horas de escucha"
-      ],
-      "seSabe": [
-        "Spotify amplía su servicio a más de 180 mercados de forma progresiva hasta fin de año",
-        "Los usuarios hispanoparlantes acceden a más de 45.000 libros en español",
-        "Los suscriptores disponen de 12 horas de escucha y existe el plan Audiobook+ con 15 horas",
-        "Owen Smith se desempeña como vicepresidente de Audiolibros en la empresa"
-      ],
-      "noConfirmado": [
-        "El cronograma exacto de habilitación para cada usuario particular en el país"
-      ],
-      "textoRedes": "Spotify amplía su catálogo y suma más de 45.000 audiolibros en español para los usuarios del país, con un despliegue progresivo que alcanza a más de 180 mercados.",
-      "etiquetas": [
-        "Spotify",
-        "audiolibros",
-        "streaming",
-        "libros"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/tecno/aplicaciones/2026/10/08/spotify-suma-audiolibros-en-espanol-los-detalles-del-lanzamiento/",
-          "fecha": "2026-10-08T12:21:58.000Z",
-          "oficial": false,
-          "aporte": "Detalló la incorporación de títulos en español, la cantidad de libros, las horas de escucha y las declaraciones del vicepresidente de la empresa."
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/08/spotify-lanza-audiolibros-en-todo-el-mundo-cuando-llegan-a-argentina/",
-          "fecha": "2026-10-08T22:54:06.000Z",
-          "oficial": false,
-          "aporte": "Informó la ampliación de 22 a más de 180 mercados y el uso del plan Audiobook+ en el país."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "spotify-incorpora-audiolibros-en-espanol-en-el-pais",
-      "foto": {
-        "archivo": "fotos-notas/1n9bvrh.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "1b0ewyh",
       "titulo": "Cierra la campaña agrícola cordobesa con récord en maíz",
       "copete": "La cosecha estival 2025/26 finaliza en Córdoba con un volumen conjunto cercano a 40,8 millones de toneladas, impulsada por un rendimiento maicero histórico.",
@@ -2854,7 +2604,7 @@
       "fecha": "2026-10-08T12:20:02.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T18:31:25.201Z",
-      "relevancia": 36,
+      "relevancia": 32,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2924,18 +2674,18 @@
         "C5N",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Día",
         "0221",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
         "El Eco de Tandil",
         "Agencia DIB",
         "A24",
         "0223 (Mar del Plata)",
-        "Radio Mitre",
-        "Punto Noticias"
+        "El Día",
+        "Radio Mitre"
       ],
       "enlace": "https://dib.com.ar/sociedad/suben-los-peajes-las-rutas-la-costa-atlantica-cuanto-costara-viajar-n56330",
       "teniaImagenLaFuente": true,
@@ -3066,11 +2816,11 @@
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
+        "Punto Noticias",
         "El Eco de Tandil",
         "La Opinión",
         "La Nueva",
         "La Voz del Pueblo",
-        "Punto Noticias",
         "El Cronista",
         "A24",
         "TyC Sports",
@@ -3169,9 +2919,9 @@
       "medios": [
         "Infocampo",
         "Perfil",
-        "Noticias Agropecuarias",
         "La Nación",
-        "La Voz del Pueblo"
+        "La Voz del Pueblo",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.lanacion.com.ar/lifestyle/efemerides-del-8-de-octubre-que-paso-un-dia-como-hoy-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -3234,6 +2984,97 @@
       "foto": {
         "archivo": "fotos-notas/112w8rt.jpg",
         "credito": "Foto: Infocampo"
+      }
+    },
+    {
+      "id": "r09m78",
+      "titulo": "ARBA habilita el pago con descuento de la patente hasta el viernes",
+      "copete": "La Agencia de Recaudación bonaerense recuerda que el viernes 9 de octubre vence el plazo para abonar la cuota ocho del Impuesto a los Automotores con una bonificación de hasta el 10%.",
+      "cuerpo": "Para cancelar la obligación, los usuarios pueden ingresar al sitio web oficial para abonar con tarjeta de crédito o generar un código de pago electrónico para cajeros. También se encuentra habilitada la opción digital mediante Cuenta DNI con el código QR enviado por correo electrónico, además de la modalidad presencial en bancos y bocas de Provincia Net tras descargar las boletas.\n\nDurante este periodo rige el esquema de vencimientos mensuales fraccionado en hasta diez cuotas dispuesto por el organismo provincial para brindar previsibilidad financiera.",
+      "guion": "ARBA habilita el pago con descuento de la patente hasta el viernes",
+      "seccion": "Argentina",
+      "medios": [
+        "Diario Popular",
+        "El Día",
+        "El Eco de Tandil",
+        "Zona Norte Diario",
+        "Agencia DIB"
+      ],
+      "enlace": "https://www.zonanortediario.com.ar/08/10/2026/hasta-manana-se-puede-pagar-la-cuota-8-del-impuesto-automotor-con-descuento/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T09:30:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T16:31:19.916Z",
+      "relevancia": 64,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Vence el viernes 9 de octubre la cuota ocho del Impuesto a los Automotores.",
+        "El descuento es de hasta el 10% para contribuyentes al día.",
+        "Se puede pagar de forma digital, web o presencial en bocas habilitadas."
+      ],
+      "seSabe": [
+        "El plazo para pagar vence el viernes 9 de octubre, según ARBA.",
+        "La bonificación alcanza hasta el 10% para quienes abonen en término y estén al día.",
+        "El pago se puede realizar por la web, Cuenta DNI o en bocas de cobro presenciales."
+      ],
+      "textoRedes": "ARBA recuerda que este viernes 9 de octubre vence el plazo para abonar la cuota ocho del Impuesto a los Automotores con una bonificación de hasta el 10% para quienes estén al día. Se puede abonar por la web, Cuenta DNI o en bocas presenciales.",
+      "etiquetas": [
+        "ARBA",
+        "Impuesto Automotor",
+        "Patente",
+        "Descuento",
+        "Provincia de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Zona Norte Diario",
+          "enlace": "https://www.zonanortediario.com.ar/08/10/2026/hasta-manana-se-puede-pagar-la-cuota-8-del-impuesto-automotor-con-descuento/",
+          "fecha": "2026-10-08T09:30:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los canales de pago, los medios habilitados y el porcentaje de descuento."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/vence-manana-el-plazo-para-pagar-la-cuota-ocho-del-impuesto-automotor-con-descuento",
+          "fecha": "2026-10-08T13:11:26.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha límite del viernes 9 de octubre para la cuota ocho."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/economia/vence-la-cuota-8-del-impuesto-automotor-clave-pagar-descuento-n56336",
+          "fecha": "2026-10-08T14:00:04.000Z",
+          "oficial": false,
+          "aporte": "Indicó el porcentaje de la bonificación y el organismo emisor."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/hasta-este-viernes-9-10-se-puede-pagar-la-cuota-8-del-impuesto-automotor-descuento-n923539",
+          "fecha": "2026-10-08T15:04:00.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el beneficio aplica con cualquier medio de pago elegido."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/informacion-general/manana-vence-el-plazo-para-pagar-con-descuento-el-impuesto-automotor-provincial-informacion-general_1791475800",
+          "fecha": "2026-10-08T16:17:11.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "arba-habilita-el-pago-con-descuento-de-la-patente-hasta-el-viernes",
+      "foto": {
+        "archivo": "fotos-notas/r09m78.jpg",
+        "credito": "Foto: Agencia DIB"
       }
     },
     {
@@ -3830,8 +3671,8 @@
         "La Nueva",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
-        "El Economista",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "El Economista"
       ],
       "enlace": "https://www.ambito.com/politica/la-agn-revela-que-el-banco-central-perdio-mas-us1000-millones-operaciones-el-oro-n6331772",
       "teniaImagenLaFuente": true,
@@ -3944,7 +3785,6 @@
         "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
-        "El Destape",
         "iProfesional",
         "C5N",
         "Crónica",
@@ -4024,7 +3864,6 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -4215,7 +4054,6 @@
         "Infobae",
         "Ámbito",
         "La Nación",
-        "C5N",
         "Noticias Argentinas (NA)",
         "Mi8 (Canal 8 Mar del Plata)",
         "iProfesional",
@@ -4379,6 +4217,94 @@
       "foto": {
         "archivo": "fotos-notas/mdbgzx.jpg",
         "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "l5uou9",
+      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
+      "copete": "El capitán argentino se despidió del seleccionado nacional tras el encuentro ante Benín. En una camiseta destinada al arquero Juan Musso, dejó una broma sobre los entrenamientos.",
+      "cuerpo": "Lionel Messi cerró su etapa en la Selección Argentina en el marco del encuentro disputado ante Benín. Tras la victoria por tres a cero en un estadio Monumental colmado por más de ochenta mil personas, el capitán dejó una broma en la camiseta firmada para el arquero Juan Musso.\n\n“Voy a extrañar cagarte a goles y que te enojes”, redactó el capitán en la prenda que el guardameta lució en sus redes sociales para despedirlo.\n\nVarios compañeros de plantel también publicaron mensajes emotivos para saludar al capitán en su última presentación con la camiseta celeste y blanca.",
+      "guion": "Messi deja una picante dedicatoria a Musso en su despedida",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno",
+        "Radio Mitre",
+        "Noticias Argentinas (NA)",
+        "La Noticia 1"
+      ],
+      "enlace": "https://www.ole.com.ar/seleccion/dedicatoria-chicana-messi-musso-voy-extranar_0_n6tzTot3Is.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T20:07:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T01:31:06.008Z",
+      "relevancia": 74,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lionel Messi se despidió de la Selección Argentina",
+        "El equipo nacional derrotó a Benín por tres a cero",
+        "El capitán le firmó una camiseta al arquero Juan Musso",
+        "La frase hizo referencia a las prácticas del seleccionado"
+      ],
+      "etiquetas": [
+        "Lionel Messi",
+        "Juan Musso",
+        "Seleccion Argentina",
+        "Estadio Monumental"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/dedicatoria-chicana-messi-musso-voy-extranar_0_n6tzTot3Is.html",
+          "fecha": "2026-10-07T20:07:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la frase exacta de la dedicatoria de Messi a Musso y el contexto de la publicación en redes."
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/la-particular-y-divertida-dedicatoria-de-messi-para-el-arquero-nicoleno-juan-musso-voy-a-extranar",
+          "fecha": "2026-10-08T00:45:00.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la información sobre la dedicatoria del capitán al arquero en las redes sociales."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/07/voy-a-extranar-cagarte-a-goles-una-figura-de-la-seleccion-argentina-revelo-la-especial-dedicatoria-de-messi-tras-su-despedida/",
+          "fecha": "2026-10-07T20:32:43.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre el encuentro ante Benín en el estadio Monumental con más de 80.000 asistentes."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/seleccion-argentina/voy-a-extranar-cagarte-a-goles-y-que-te-enojes-la-dedicatoria-mas-divertida-de-messi-a-un-companero-id764768.html",
+          "fecha": "2026-10-07T21:03:08.000Z",
+          "oficial": false,
+          "aporte": "No aportó información específica en su resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/la-divertida-dedicatoria-de-messi-para-juan-musso---voy-a-extranar-cagarte-a-goles-_a6ac6c51a25d386c881597322",
+          "fecha": "2026-10-07T22:57:24.000Z",
+          "oficial": false,
+          "aporte": "Indicó la edad del delantero de 39 años y confirmó la dedicatoria a través de la agencia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "messi-deja-una-picante-dedicatoria-a-musso-en-su-despedida",
+      "foto": {
+        "archivo": "fotos-notas/l5uou9.jpg",
+        "credito": "Foto: Olé"
       }
     },
     {
@@ -4682,28 +4608,27 @@
   "secciones": [
     "Automovilismo",
     "Política",
+    "Policiales",
     "Balcarce",
     "Cultura y agenda",
     "Economía",
     "Deportes",
-    "Policiales",
-    "Fútbol",
     "Argentina",
     "Agro",
-    "Tecnología"
+    "Fútbol"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 4
+      "cuantas": 3
     }
   ],
   "clima": {
     "ahora": {
       "temp": 9,
       "sensacion": 5,
-      "humedad": 92,
+      "humedad": 91,
       "viento": 18,
       "rumbo": "S",
       "cielo": "Nublado",
@@ -5065,16 +4990,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "6fykn0",
-      "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
+      "id": "vjzeja",
+      "titulo": "La productora encargada del homenaje a Messi explicó las…",
       "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "spe9cx",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "1el0rhm",
@@ -5087,6 +5006,12 @@
       "titulo": "Sin investigar, el juez de Zárate-Campana sobreseyó a…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "6fykn0",
+      "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "baz7ti",
@@ -5131,10 +5056,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1ylauja",
-      "titulo": "Médicos bonaerenses, contra PAMI: denuncian precariedad…",
+      "id": "16ew96u",
+      "titulo": null,
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "jul33u",
@@ -5149,6 +5074,12 @@
       "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
     },
     {
+      "id": "veuftg",
+      "titulo": "Milei vuelve a Estados Unidos: nuevo gesto de apoyo a…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "146mbos",
       "titulo": "La ANMAT prohibió el uso de dos suplementos promocionados…",
       "seccion": "Argentina",
@@ -5161,10 +5092,22 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "uriwx3",
+      "titulo": "Sebastián Driussi y Francisco Ortega tienen una sobrecarga…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "14wsi7n",
       "titulo": "Juicio contra Aníbal Lotocki: el cirujano declarará por…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1fl6540",
+      "titulo": "El Colegio de Médicos denunció precariedad laboral y…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "1ob03ue",
@@ -5215,12 +5158,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "veuftg",
-      "titulo": "Milei vuelve a Estados Unidos: nuevo gesto de apoyo a…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "189wr3s",
       "titulo": "Kicillof cruzó a concejales de LLA que denunciaron que…",
       "seccion": "Política",
@@ -5239,23 +5176,11 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "1e7wy8p",
-      "titulo": "Javier Milei volverá a viajar a Estados Unidos: nuevas…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "1c5jdmn",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1d5qfd4",
-      "titulo": "Romina Manguel apuntó contra Matías Martin tras la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 3
 }

@@ -10600,16 +10600,16 @@
   "cuando": "2026-10-09T04:32:02.343Z"
  },
  "vjzeja": {
-  "archivo": "fotos-notas/vjzeja.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "Marketing Sports culpa a River por las fallas en el homenaje",
   "enlace": "https://www.ambito.com/deportes/la-productora-del-homenaje-lionel-messi-apunto-contra-river-y-lo-acuso-empanar-la-despedida-n6331839",
   "imagenOriginal": "https://media.ambito.com/p/704edd602cf5eb64c43b20c86a190c16/adjuntos/239/imagenes/043/688/0043688550/1200x675/smart/despedida-messi-38jpg.jpeg",
   "razon": "Tiene mejor encuadre general, nitidez y está libre de marcas y menores.",
-  "cuando": "2026-10-09T00:32:01.150Z"
+  "cuando": "2026-10-09T00:32:01.150Z",
+  "intentado": true,
+  "borrada": true
  },
  "1rkkg1m": {
   "intentado": true,
@@ -10675,9 +10675,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-09T04:01:49.296Z",
-  "intentos": 2,
+  "razon": "La única foto disponible tiene una marca de agua del medio (Diario La Vanguardia) superpuesta a la imagen, por lo que no puede ser elegida.",
+  "cuando": "2026-10-09T05:01:55.769Z",
+  "intentos": 3,
   "fuentes": 1
  },
  "17s3or9": {

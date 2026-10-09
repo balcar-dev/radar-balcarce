@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T04:32:13.925Z",
- "portada": 54,
- "archivo": 839,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-09T05:01:58.240Z",
+ "portada": 53,
+ "archivo": 838,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-09T04:32:13.970Z",
+  "generado": "2026-10-09T05:01:58.283Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 48,
     "notas": [
-     {
-      "id": "w8iv0l",
-      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
-      "seccion": "Deportes"
-     },
      {
       "id": "fkiosn",
       "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
       "seccion": "Economía"
+     },
+     {
+      "id": "15x6yh5",
+      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
+      "seccion": "Automovilismo"
      },
      {
       "id": "6vefne",
@@ -126,22 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 55,
     "notas": [
      {
-      "id": "15x6yh5",
-      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "ypnvl8",
-      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
-      "seccion": "Fútbol"
+      "id": "bcq9u5",
+      "titulo": "Genneia inaugura parque solar en San Juan tras invertir 110 millones",
+      "seccion": "Economía"
      },
      {
       "id": "1om2oqi",
       "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "mxhy8u",
+      "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
+      "seccion": "Automovilismo"
      },
      {
       "id": "1p0s5l3",
@@ -157,24 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
-    "notas": [
-     {
-      "id": "bcq9u5",
-      "titulo": "Genneia inaugura parque solar en San Juan tras invertir 110 millones",
-      "seccion": "Economía"
-     },
-     {
-      "id": "mxhy8u",
-      "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
