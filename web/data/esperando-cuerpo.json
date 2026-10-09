@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T01:02:10.468Z",
+ "generado": "2026-10-09T01:32:14.508Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,9 +15,46 @@
      "fecha": "2026-10-09T00:33:23.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 16 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo corto (46 palabras)",
    "maximo": 3
+  },
+  {
+   "id": "1lubi1s",
+   "titulo": "La Corte Suprema se reúne este viernes a las 9 para volver a fallar sobre la ley de tierras",
+   "copete": "La Corte Suprema de Justicia se reunirá mañana a las 9, en un acuerdo extraordinario, para tratar un nuevo caso sobre la ley de tierras . La convocatoria la hizo su presidente, Horacio Rosatti , informaron fuentes del tribunal. El expediente que tienen para resolver incluye un…",
+   "seccion": "Política",
+   "fecha": "2026-10-08T23:29:39.000Z",
+   "fuentes": [
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/la-corte-suprema-se-reune-este-viernes-a-las-9-para-volver-a-fallar-sobre-la-ley-de-tierras-nid08102026/",
+     "fecha": "2026-10-08T23:29:39.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/la-corte-suprema-convoco-un-acuerdo-extraordinario-y-puede-definir-el-futuro-la-ley-tierras-n6331841",
+     "fecha": "2026-10-09T00:40:00.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/08/la-corte-suprema-se-reune-este-viernes-y-podria-fallar-sobre-la-ley-de-tierras/",
+     "fecha": "2026-10-09T00:22:31.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/judiciales/corte-suprema-definicion-ley-tierras-limites-compra-extranjera.phtml",
+     "fecha": "2026-10-09T01:10:49.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/politica/2026/10/09/la-corte-suprema-se-reunira-por-la-ley-de-tierras-y-podria-restablecer-las-restricciones-a-la-compra-de-campos/",
+     "fecha": "2026-10-09T00:10:38.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (integracion, Nacion, segun, despues, asociacion): va con las tilde; sin esas oraciones quedan 142",
+   "maximo": 4
   },
   {
    "id": "1h9a0rw",
