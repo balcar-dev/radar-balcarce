@@ -7,7 +7,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { ejemplos, ejemplosDeClima, ejemplosDeServicios } from './ejemplos-plantillas.mjs';
+import { ejemplos, ejemplosDeClima, ejemplosDeServicios, ejemplosDeDeportes } from './ejemplos-plantillas.mjs';
 import { esc } from './placa.mjs';
 
 export const REGLAS_COMUNES = [
@@ -52,6 +52,10 @@ export const CATEGORIAS = [
     regla: 'Los teléfonos de a uno, por grupo (emergencias, salud…), con el número a la derecha. La voz dice «guardalos en el celular» y no los lee.',
   },
   {
+    id: 'deportes', titulo: 'Deportes (para más adelante)', cuando: 'todavía sin horario: se arman cuando se quiera publicar un dato', prefijo: 'deportes-',
+    regla: 'Hechas para el día que se quiera contar con voz un dato del automovilismo o del fútbol: cómo clasificó Colapinto (marcado en su fila aunque largue lejos), el podio de la carrera con su resultado, la tabla de la Liga (los primeros diez, con los puntos que cuentan) y el resultado de un partido con sus goles. Los datos salen de lo que la web ya baja; si falta uno, no se escribe. Hoy no están conectadas a ninguna pieza.',
+  },
+  {
     id: 'agenda', titulo: 'La agenda del fin de semana', cuando: 'jueves 12:00, sólo si hay eventos · 12 a 25 s', prefijo: 'agenda-',
     regla: 'Cada evento (nombre, día y hora, lugar) entra de a uno. La voz dice cuántas actividades hay y las dos o tres primeras; el resto, en la web.',
   },
@@ -64,6 +68,7 @@ const ETIQUETAS = {
   'efemeride-t': (n) => n.replace(/^efemeride-t\d-/, ''),
   'feriado-': (n) => n.replace(/^feriado-\d-/, ''),
   'participa-': (n) => n.replace(/^participa-\d-/, ''),
+  'deportes-': (n) => n.replace(/^deportes-d-/, '').replace(/-/g, ' '),
   'utiles-': () => 'útiles', 'agenda-': () => 'agenda',
 };
 
@@ -75,7 +80,7 @@ async function dibujar(e, ancho = 400) {
 }
 
 export async function armarCatalogo() {
-  const todos = [...ejemplosDeClima(), ...ejemplos().filter((e) => /aviso/.test(e.nombre)), ...ejemplosDeServicios()];
+  const todos = [...ejemplosDeClima(), ...ejemplos().filter((e) => /aviso/.test(e.nombre)), ...ejemplosDeServicios(), ...ejemplosDeDeportes()];
   const secciones = [];
   for (const cat of CATEGORIAS) {
     const delGrupo = todos.filter((e) => e.nombre.startsWith(cat.prefijo) && (!cat.soloEstos || cat.soloEstos.test(e.nombre))

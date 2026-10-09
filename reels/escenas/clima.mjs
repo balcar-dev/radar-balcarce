@@ -284,7 +284,7 @@ export function escenaDeClima({ momento = 'manana', clima, fecha, aviso = null, 
   const cSub = textoClaro ? '#DCE6F0' : '#3B403C';
 
   const kicker = esAviso ? `Aviso de clima · ${aviso.dia === hoy?.fecha ? 'hoy' : 'mañana'}` : momento === 'noche' ? 'Esta noche en Balcarce' : 'Hoy en Balcarce';
-  const titulo = esAviso ? aviso.titulo : momento === 'noche' ? 'Así sigue la noche' : fechaEnLetras(fecha);
+  const titulo = esAviso ? fechaEnLetras(aviso.dia ?? fecha) : momento === 'noche' ? 'Así sigue la noche' : fechaEnLetras(fecha);
   const cab = cabecera(kicker, titulo, { color: esAviso ? acento : COLOR_SECCION.Clima });
   // Todas las variantes (de día, de noche, con o sin aviso) arrancan en el mismo lugar y miden lo mismo (9/10, Hernán).
   const yPanel = cabecera('x', 'x').hasta + 44;

@@ -4,7 +4,7 @@
 // del clima se reconoce.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { ejemplos, ejemplosDeServicios, CLIMAS } from '../reels/ejemplos-plantillas.mjs';
+import { ejemplos, ejemplosDeServicios, ejemplosDeClima, ejemplosDeDeportes, CLIMAS } from '../reels/ejemplos-plantillas.mjs';
 import {
   baseDelCielo, nombreDeVariante, etiquetasDelClima, fechaEnLetras, BASES, TODAS_LAS_VARIANTES, TODOS_LOS_AVISOS, escenaDeClima,
 } from '../reels/escenas/clima.mjs';
@@ -36,8 +36,8 @@ test('las etiquetas chicas del clima: helada, calor y viento fuerte, y de noche 
 });
 
 test('cada ejemplo dibuja un SVG entero y sano en todos los tiempos, con la firma y sin números rotos', () => {
-  const todos = [...ejemplos(), ...ejemplosDeServicios()];
-  assert.ok(todos.length >= 22, `hay ${todos.length} ejemplos`);
+  const todos = [...ejemplos(), ...ejemplosDeClima(), ...ejemplosDeServicios(), ...ejemplosDeDeportes()];
+  assert.ok(todos.length >= 50, `hay ${todos.length} ejemplos`);
   for (const e of todos) {
     assert.equal(e.escena.fps, FPS_ESCENA);
     for (const t of TIEMPOS) {

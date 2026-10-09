@@ -144,3 +144,12 @@ Qué hechos se eligen y cómo se cuentan, para el que mira Radar Balcarce:
 2. **Pasar el clima a producción**, con todas sus variantes y su prueba.
 3. Después, en este orden: farmacia, efeméride, feriado, Participá, útiles, agenda y repasos: **un ejemplo de cada una, se aprueba, se pasa a producción**.
 4. Escribir lo aprobado en `CRITERIO-REDES.md` y dejar las pruebas que lo cuidan.
+
+## 6. Escenas del deporte, hechas para más adelante *(9/10/2026)*
+
+Todavía no salen en ninguna pieza ni tienen horario: quedan armadas (`reels/escenas/deportes.mjs`, con ejemplos y en el catálogo) para el día que se quiera contar con voz un dato del automovilismo o del fútbol. Los datos son los que la web ya baja (`web/data/f1.json` y `web/data/futbol.json`); si falta uno, no se escribe.
+
+- **Clasificación de la Fórmula 1:** los siete primeros con su mejor tiempo y, si Colapinto no está entre ellos, su fila marcada al final.
+- **Carrera de la Fórmula 1:** el podio que sube, y abajo la tarjeta de Colapinto (en qué lugar terminó, de cuál largó, la diferencia).
+- **Tabla de la Liga:** los primeros diez de la zona, con partidos, diferencia y puntos que cuentan hasta su valor; se puede marcar un equipo.
+- **Resultado de un partido:** el marcador grande que cuenta hasta su valor y los goleadores de cada lado.

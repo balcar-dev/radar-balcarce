@@ -16,6 +16,7 @@ import {
   escenaDeFarmacia, escenaDeParticipa, escenaDeUtiles, escenaDeAgenda,
 } from './escenas/servicios.mjs';
 import { escenaDeEfemeride, escenaDeFeriado } from './escenas/fechas.mjs';
+import { escenaDeClasificacion, escenaDePodio, escenaDeTabla, escenaDeResultado } from './escenas/deportes.mjs';
 import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa, MAIL_REDACCION } from '../redes/participa.mjs';
 import { guionFarmacia, guionUtiles, guionAgenda } from '../redes/guiones.mjs';
 import { guionFeriado } from '../redes/feriado.mjs';
@@ -161,6 +162,35 @@ export function ejemplosDeClima() {
   });
 }
 
+/** Las escenas del deporte, HECHAS PARA MÁS ADELANTE (todavía no salen en las redes), con datos de verdad de f1.json y futbol.json. */
+export function ejemplosDeDeportes() {
+  const f1 = leerJson('web/data/f1.json');
+  const futbol = leerJson('web/data/futbol.json');
+  const gp = 'Gran Premio de Malasia';
+  const zona = futbol.tabla?.zonas?.[0];
+  const partido = (futbol.partidos?.liga ?? []).find((p) => p.estado === 'final' && (p.goles ?? []).length >= 3) ?? futbol.partidos?.liga?.[0];
+  const colapinto = (f1.parrilla?.filas ?? []).find((f) => f.colapinto);
+  const yo = f1.resultado?.filas?.find((f) => f.colapinto);
+  return [
+    f1.parrilla?.filas?.length ? {
+      nombre: 'deportes-1-clasificacion-f1', escena: escenaDeClasificacion({ gp, fecha: '2026-10-03', filas: f1.parrilla.filas }),
+      guion: `Así largó el Gran Premio de Malasia. ${colapinto ? `Franco Colapinto clasificó ${colapinto.posicion}.º.` : ''} La clasificación completa, en la pantalla. Radar Balcarce.`,
+    } : null,
+    f1.resultado?.filas?.length >= 3 ? {
+      nombre: 'deportes-2-carrera-f1', escena: escenaDePodio({ gp, filas: f1.resultado.filas }),
+      guion: `El podio del Gran Premio de Malasia: ganó ${f1.resultado.filas[0].piloto}. ${yo ? `Franco Colapinto terminó ${yo.posicion}.º.` : ''} Radar Balcarce.`,
+    } : null,
+    zona ? {
+      nombre: 'deportes-3-tabla-futbol', escena: escenaDeTabla({ torneo: 'Liga Profesional', zona: zona.nombre, filas: zona.filas, destacado: '5' }),
+      guion: `Así está la ${zona.nombre} de la Liga Profesional. Lidera ${zona.filas[0].equipo} con ${zona.filas[0].pts} puntos. La tabla, en la pantalla. Radar Balcarce.`,
+    } : null,
+    partido ? {
+      nombre: 'deportes-4-resultado-futbol', escena: escenaDeResultado({ torneo: 'Liga Profesional', partido }),
+      guion: `Terminó el partido: ${partido.local.nombre} ${partido.local.goles}, ${partido.visitante.nombre} ${partido.visitante.goles}. Los goles, en la pantalla. Radar Balcarce.`,
+    } : null,
+  ].filter(Boolean);
+}
+
 /** Los ejemplos: nombre del archivo → { escena, guion }. */
 export function ejemplos() {
   const fecha = '2026-10-09';
@@ -207,7 +237,7 @@ if (process.argv[1] && process.argv[1].endsWith('ejemplos-plantillas.mjs')) {
   const fotos = process.argv.includes('--fotos');
   const pedidos = process.argv.slice(3).filter((a) => !a.startsWith('--'));
   fs.mkdirSync(carpeta, { recursive: true });
-  const todos = [...ejemplos(), ...ejemplosDeClima(), ...ejemplosDeServicios()];
+  const todos = [...ejemplos(), ...ejemplosDeClima(), ...ejemplosDeServicios(), ...ejemplosDeDeportes()];
   if (fotos) {
     // Tres cuadros de cada escena (al empezar, a mitad de la entrada y ya entrada), para revisar el diseño sin armar el video.
     const { Resvg } = await import('@resvg/resvg-js');
