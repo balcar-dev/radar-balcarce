@@ -10,7 +10,8 @@ export function generateStaticParams() {
   return ranurasDeTemasParaArmar();
 }
 
-export default function Imagen({ params }) {
-  const nombre = nombreDeTema(params.ranura);
+export default async function Imagen({ params }) {
+  const { ranura } = await params;
+  const nombre = nombreDeTema(ranura);
   return tarjeta({ titulo: nombre ?? 'Radar Balcarce', seccion: 'Tema que seguimos' });
 }

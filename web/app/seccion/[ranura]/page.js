@@ -27,8 +27,9 @@ export function generateStaticParams() {
   return paramsNoVacios(params, { ranura: 'ninguna' });
 }
 
-export function generateMetadata({ params }) {
-  const { base, pagina } = partirRanura(params.ranura, porRanura);
+export async function generateMetadata({ params }) {
+  const { ranura } = await params;
+  const { base, pagina } = partirRanura(ranura, porRanura);
   const s = porRanura(base);
   if (!s) return {};
 
@@ -55,8 +56,9 @@ export function generateMetadata({ params }) {
 // Una sola columna. El clima y la farmacia están en la barra de arriba y en
 // la portada; repetirlos acá los convertía en ruido. Y la tarjeta de "otras
 // secciones" sobraba desde que la navegación las muestra todas.
-export default function PaginaSeccion({ params }) {
-  const { base, pagina } = partirRanura(params.ranura, porRanura);
+export default async function PaginaSeccion({ params }) {
+  const { ranura } = await params;
+  const { base, pagina } = partirRanura(ranura, porRanura);
   const s = porRanura(base);
   if (!s) notFound();
 

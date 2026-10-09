@@ -36,8 +36,9 @@ export function generateStaticParams() {
  * La imagen se declara acá: la tarjeta propia de la nota (opengraph-image/route.js)
  * si la tiene, y si no la del sitio (29/09: antes se declaraba una que no existía).
  */
-export function generateMetadata({ params }) {
-  const n = obtenerNota(params.id);
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const n = obtenerNota(id);
   if (!n) return {};
 
   const camino = n.ruta;
@@ -71,8 +72,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function PaginaNota({ params }) {
-  const n = obtenerNota(params.id);
+export default async function PaginaNota({ params }) {
+  const { id } = await params;
+  const n = obtenerNota(id);
   if (!n) notFound();
 
   const s = datosSeccion(n.seccion);

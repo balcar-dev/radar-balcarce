@@ -15,7 +15,8 @@ export function generateStaticParams() {
   return paramsNoVacios(params, { id: 'sin-eventos' });
 }
 
-export default function Imagen({ params }) {
-  const e = obtenerEvento(params.id);
+export default async function Imagen({ params }) {
+  const { id } = await params;
+  const e = obtenerEvento(id);
   return tarjeta(e ? { titulo: nombreDeEvento(e.nombre), seccion: 'Cultura y agenda' } : {});
 }

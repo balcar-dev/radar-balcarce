@@ -17,12 +17,13 @@ export function generateStaticParams() {
   return ranurasDeTemasParaArmar();
 }
 
-export function generateMetadata({ params }) {
-  const nombre = nombreDeTema(params.ranura);
+export async function generateMetadata({ params }) {
+  const { ranura } = await params;
+  const nombre = nombreDeTema(ranura);
   if (!nombre) return {};
 
   const descripcion = `Todo lo que publicamos sobre ${nombre.toLowerCase()} en Balcarce, de lo último a lo primero.`;
-  const camino = `/tema/${params.ranura}`;
+  const camino = `/tema/${ranura}`;
 
   return {
     title: nombre,
@@ -32,16 +33,17 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function PaginaTema({ params }) {
-  const nombre = nombreDeTema(params.ranura);
-  const notas = porTema(params.ranura);
+export default async function PaginaTema({ params }) {
+  const { ranura } = await params;
+  const nombre = nombreDeTema(ranura);
+  const notas = porTema(ranura);
   if (!nombre || notas.length === 0) notFound();
 
   const { principal, resto } = ordenarPortada(notas);
 
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
-      <Migas pasos={[{ nombre, camino: `/tema/${params.ranura}` }]} />
+      <Migas pasos={[{ nombre, camino: `/tema/${ranura}` }]} />
       <div className="chapa-tema">
         <span className="meta">Tema que seguimos</span>
         <h1>{nombre}</h1>

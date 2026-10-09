@@ -29,8 +29,9 @@ export function generateStaticParams() {
 
 const mayuscula = (t) => (t ? t[0].toUpperCase() + t.slice(1) : t);
 
-export function generateMetadata({ params }) {
-  const e = obtenerEvento(params.id);
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const e = obtenerEvento(id);
   if (!e) return {};
   const nombre = nombreDeEvento(e.nombre);
   const entrada = entradaDe(e);
@@ -48,8 +49,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function PaginaEvento({ params }) {
-  const e = obtenerEvento(params.id);
+export default async function PaginaEvento({ params }) {
+  const { id } = await params;
+  const e = obtenerEvento(id);
   if (!e) notFound();
 
   const nombre = nombreDeEvento(e.nombre);

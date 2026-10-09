@@ -18,8 +18,9 @@ export function generateStaticParams() {
   return paramsNoVacios(params, { ranura: 'ninguna' });
 }
 
-export default function Imagen({ params }) {
-  const { base } = partirRanura(params.ranura, porRanura);
+export default async function Imagen({ params }) {
+  const { ranura } = await params;
+  const { base } = partirRanura(ranura, porRanura);
   const s = porRanura(base);
   return tarjeta({ titulo: s ? frasesDeSeccion(s.nombre).enBalcarce : 'Radar Balcarce', seccion: s?.nombre });
 }

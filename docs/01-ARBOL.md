@@ -26,7 +26,7 @@ radar-balcarce/
 ├── reels/               placas, voz, video y la reescritura con IA. SÍ tiene dependencias (docs/04, 07)
 ├── redes/               Facebook, Instagram, contrato, vigilante, WhatsApp. SIN dependencias (docs/07, 08)
 ├── panel/               el panel de la PC (puerto 4321) y el lado de GitHub del panel del celular. SIN dependencias (docs/09)
-├── web/                 el sitio: Next.js 15 exportado como HTML estático (docs/06)
+├── web/                 el sitio: Next.js 16 exportado como HTML estático (docs/06)
 │   ├── app/             las páginas
 │   ├── components/      las piezas de la interfaz
 │   ├── lib/             la lógica compartida (datos, archivo, rutas, tarjetas…)
@@ -174,7 +174,7 @@ abajo), y lo que corre en GitHub, acá.
 |---|---|---|---|
 | `web/README.md` | Cómo correr la web en la PC; remite a `docs/06-WEB.md` | Personas | — |
 | `web/.gitignore` | Que no se suba ningún `.env` de la web | git | Sí |
-| `web/package.json` | Next 15 y React 18, `"type": "module"`; scripts `datos`, `dev`, `dolar`, `redirects`, `build` | `npm` en `actualizar.yml` y `cloudflare-deploy.yml` | Sí |
+| `web/package.json` | Next 16 y React 19, `"type": "module"`; scripts `datos`, `dev`, `dolar`, `redirects`, `build` | `npm` en `actualizar.yml` y `cloudflare-deploy.yml` | Sí |
 | `web/package-lock.json` | Las versiones exactas | `npm ci` | Sí |
 | `web/next.config.mjs` | Exportar el sitio como archivos (`output: 'export'`) | `next build` | Sí |
 | `web/jsconfig.json` | El atajo `@/` para importar desde la raíz de `web/` | Next | Sí |
