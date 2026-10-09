@@ -1356,6 +1356,177 @@
    "metricas": {
     "total_video_views": 0
    }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122104419141495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "cn09w9",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T15:34:17.868Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "post_media_view": 5,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 1
+   }
+  },
+  {
+   "clave": "instagram/foto/18272396971310032",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "cn09w9",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T15:34:28.138Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "reach": 2,
+    "views": 7,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122104482219495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1njgnul",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T17:05:33.395Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "post_media_view": 5,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 1
+   }
+  },
+  {
+   "clave": "instagram/foto/17909674332473865",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1njgnul",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T17:05:46.692Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "reach": 3,
+    "views": 9,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "instagram/reel/17971257858170916",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "noticia2",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T18:04:56.696Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "reach": 13,
+    "views": 16,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1093941140231566",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "noticia2",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T18:06:15.641Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/4026268354345573",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "noticia2",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T18:06:47.815Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122104536273495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "n1xmig",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T18:45:22.921Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "post_media_view": 13,
+    "post_total_media_view_unique": 3,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 2
+   }
+  },
+  {
+   "clave": "facebook/historia/1603008897960043",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "farmacia",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T22:05:03.526Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/1732539991149863",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-noche",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-05T23:06:44.594Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "instagram/reel/18033597347668903",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "podcast",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-06T00:04:58.221Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {
+    "reach": 6,
+    "views": 9,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1142838171643321",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "podcast",
+   "dia": "2026-10-05",
+   "cuando": "2026-10-06T00:05:33.053Z",
+   "medida": "2026-10-09T05:30:17.500Z",
+   "metricas": {}
   }
  ]
 }
