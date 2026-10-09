@@ -2325,6 +2325,28 @@
    "cuando": "2026-10-08T18:36:41.020Z",
    "medida": "2026-10-09T08:00:21.957Z",
    "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/4928795870740076",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-manana",
+   "dia": "2026-10-08",
+   "cuando": "2026-10-08T10:05:05.512Z",
+   "medida": "2026-10-09T10:30:17.192Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "instagram/historia/18374947153212836",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "farmacia",
+   "dia": "2026-10-08",
+   "cuando": "2026-10-08T22:04:41.305Z",
+   "medida": "2026-10-09T10:30:17.192Z",
+   "metricas": {}
   }
  ]
 }
