@@ -37,6 +37,35 @@ retomar: si algo de acá ya está hecho, se tacha acá y en su documento de orig
 Lo que Claude **no** hace solo: tocar la lista roja del semáforo, crear cuentas (GitLab, R2, AdSense, Healthchecks), pegar tokens, borrar posteos o proyectos,
 cambiar el menú, la portada o la firma, ni nada de lo que Google lee sin hablarlo antes.
 
+### Lo que se agregó el 9/10 por la tarde (pedidos de Hernán)
+
+| Qué | Estado |
+|---|---|
+| Nota del **sprint de la F1** (podio, puntos, Colapinto y lo que sigue) — regla 158 | Hecha. Jolpica no da la clasificación sprint ni las prácticas: no hay nota de eso |
+| **Portada de los Reels** (el primer cuadro era papel vacío y los Reels se veían en blanco) — regla 159 | Hecha: el cuadro 0 es la pieza compuesta. Se confirma con el primer reel de mañana |
+| **Miniatura de las notas sin foto**: ahora muestra la placa de su sección en las listas | Hecha |
+| **Respaldo local** en `D:\BalcarDev\Respaldos\` (el repositorio entero con su historial en un solo archivo) | Hecho el 9/10 (143 MB); repetirlo cada tanto |
+| **Reloj propio en Cloudflare** (reemplaza a cron-job.org) | Código y pruebas listos; falta que una persona cargue el token (docs/08, «El reloj de Cloudflare») |
+| **Listado de claves y servicios de IA** y cuáles sumar | `CLAVES-DE-IA.md` |
+| Qué hace falta para que el sitio **dure años** (el límite de 20.000 archivos, R2, el historial de Git) | Explicado a Hernán; la decisión es R2 por mes o D1 antes del 2/12 |
+| **Aprobar los pull requests de afuera** | Claude **no** lo hace: es un ajuste de seguridad de GitHub (Settings → Actions → General → «Fork pull request workflows from outside collaborators» → «Require approval for all outside collaborators») |
+| **Resumen diario por mail** (qué salió, qué falló, estadísticas) | Propuesto: el WhatsApp de las 21 ya junta casi todo; falta un canal de mail (Healthchecks/ntfy o un correo desde GitHub Actions). Se decide con el listado de claves |
+| **Qué hace falta para que las notas nacionales sean más propias** (la IA ya las reescribe cruzando fuentes, pero sin aportar datos nuevos) | Análisis abajo |
+| Search Console: 409 sin indexar (333 «descubiertas, todavía sin rastrear» —normal en un sitio nuevo—, 55 con `noindex` a propósito, 9 con 404, 9 «rastreadas, sin indexar», 3 redirecciones) | Los 55 `noindex` son notas finas, y las notas viejas sin cuerpo ya salen del archivo (regla 156). Los 9 404 hay que verlos entre los dos (la cuenta de Search Console es la del medio) |
+
+### Las notas con varias fuentes: qué se hace hoy y qué podría mejorar
+
+Hoy, una noticia que cuentan 2 o más medios pasa por el «editor digital» (Gemini): investiga el hecho cruzando las fuentes (qué confirman todas, qué dice una sola, qué se contradice), la reescribe con palabras propias (nunca más de diez palabras seguidas iguales a una fuente), atribuye cada dato, le agrega antecedentes de nuestras propias notas anteriores, y después un verificador la compara con las fuentes. Es redacción propia, pero **no suma datos que las fuentes no tengan**, a propósito: lo que no se puede comprobar no se afirma.
+
+Para que sean más originales (y mejor vistas por Google) sin inventar nada, hay cuatro caminos, de menor a mayor esfuerzo:
+
+1. **Contexto propio verificable**: «cómo llegamos hasta acá» (línea de tiempo con las notas nuestras), «qué cambia y desde cuándo», un glosario de una línea para las siglas.
+2. **Un dato de color que sale de una fuente abierta y citada**: el clima de ese día, el dólar, un número del INDEC o del BCRA, la tabla de posiciones, el mapa de un lugar. Es lo que ya hacen las notas propias (F1, fútbol, dólar).
+3. **Un gráfico o una tarjeta** hechos por nosotros con datos de la nota (una comparación, una barra, un mapa chico), con las mismas placas de las redes.
+4. **Una medición de originalidad** sobre las notas ya publicadas (cuánto se parece cada cuerpo a sus fuentes y cuántas notas quedan sin dato propio) para saber dónde conviene empezar. La puede hacer Claude solo con lo que ya está guardado.
+
+Sobre usar ChatGPT desde el Chrome para pedirle criterio: se puede, pero implica mandar tres notas a un servicio de afuera y entrar con una cuenta; Claude puede hacer ese análisis de criterio sin salir del proyecto. Queda a decisión de ustedes.
+
 ## 3. Lo que necesita a Hernán o a Andrés
 
 **Hoy o esta semana**

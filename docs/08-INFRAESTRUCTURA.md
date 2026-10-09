@@ -149,6 +149,20 @@ Detalles que importan:
   "Actualizar la web" corre con su `schedule` (impuntual), "Redes" arranca al
   final de cada "Actualizar la web" y "Vigilancia" corre cada 3 horas.
 
+## El reloj de Cloudflare (preparado el 9/10/2026, sin activar)
+
+Reemplaza a cron-job.org y evita que un trabajo se desactive solo: un programa chico (`infra/reloj-cloudflare/`) que Cloudflare despierta a los :00, :05, :30, :35 y :45
+y que le pide a GitHub, con su API, lo mismo que hoy pide cron-job.org (los :00 y :30 la web y la vigilancia; los :05, :35 y :45 el reloj de Redes). Es gratis.
+
+Para activarlo (una sola vez, lo hace una persona):
+
+1. Crear en GitHub un token de grano fino de la cuenta del repositorio, **sólo para este repositorio**, con el permiso «Actions: lectura y escritura» (es el mismo tipo que usa cron-job.org).
+2. Guardarlo en GitHub (Settings → Secrets and variables → Actions) con el nombre `RELOJ_GITHUB_TOKEN`. Nunca en un chat.
+3. En GitHub → Actions → «Reloj de Cloudflare» → Run workflow. Sube el programa y le carga el secreto.
+4. Mirar un día que las dos cosas corran juntas (si dos relojes piden lo mismo, el `concurrency` de los workflows evita que se pisen) y recién ahí apagar los trabajos de cron-job.org.
+
+Si el token de la cuenta de Cloudflare (`CLOUDFLARE_API_TOKEN`) no tiene permiso para Workers, el paso 3 va a fallar con ese mensaje: habría que agregarle «Workers Scripts: edición».
+
 ## Cloudflare Pages: la web
 
 - Sirve `radarbalcarce.com` desde el 24/09. El dominio está **registrado en

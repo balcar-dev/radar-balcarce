@@ -1,0 +1,7 @@
+# El reloj propio de Radar Balcarce en Cloudflare (ver worker.mjs). Las horas son UTC; los minutos, los mismos que en Balcarce.
+name = "radar-balcarce-reloj"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+
+[triggers]
+crons = ["0,30 * * * *", "5,35,45 * * * *"]
