@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T02:32:18.707Z",
- "portada": 57,
- "archivo": 1127,
+ "generado": "2026-10-09T03:01:30.882Z",
+ "portada": 54,
+ "archivo": 838,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-09T02:32:18.745Z",
+  "generado": "2026-10-09T03:01:30.911Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-08T10:04:36.490Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-08T12:07:47.663Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,18 +33,18 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-08T13:06:32.914Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "agenda",
+    "nombre": "participa-nota",
     "tipo": "reel",
     "hora": "12:00",
-    "que": "La agenda del fin de semana",
-    "voz": "locutora",
+    "que": "Tu nota",
+    "voz": "locutor",
     "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-08T15:09:29.403Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -53,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-08T18:36:11.280Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-08T22:04:41.305Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-08T23:06:19.574Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-09T00:06:44.415Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-08T13:06:32.914Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 48,
     "notas": [
      {
-      "id": "1cpkl2f",
-      "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
-      "seccion": "Balcarce"
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
      },
      {
-      "id": "l5uou9",
-      "titulo": "Messi deja una picante dedicatoria a Musso en su despedida",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "y4gp3v",
-      "titulo": "Francisco Tamagno termina octavo en la octava fecha del Procar 4000",
+      "id": "15x6yh5",
+      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
       "seccion": "Automovilismo"
      },
      {
-      "id": "10cpafd",
-      "titulo": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
-      "seccion": "Cultura y agenda"
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      }
     ]
    },
@@ -124,29 +124,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-08T18:36:11.280Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 50,
     "notas": [
      {
-      "id": "f6j0rt",
-      "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
-      "seccion": "Automovilismo"
+      "id": "ypnvl8",
+      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
+      "seccion": "Fútbol"
      },
      {
-      "id": "jul321",
-      "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
-      "seccion": "Cultura y agenda"
+      "id": "bcq9u5",
+      "titulo": "Genneia inaugura parque solar en San Juan tras invertir 110 millones",
+      "seccion": "Economía"
      },
      {
-      "id": "jul3dm",
-      "titulo": "El Diario cumple 31 años como medio gráfico local",
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
       "seccion": "Balcarce"
      },
      {
-      "id": "vnuraj",
-      "titulo": "Nicolás Tagliafico critica la Liga Profesional de fútbol",
-      "seccion": "Fútbol"
+      "id": "mxhy8u",
+      "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -155,61 +155,25 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-09T00:06:44.415Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 39,
     "notas": [
      {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce"
      },
      {
-      "id": "mr88ek",
-      "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1w1okdp",
-      "titulo": "Talleres y Atlético Tucumán protagonizan pelea en Reserva",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "5ffwsk",
-      "titulo": "AACYC Balcarce gana cinco pruebas en Mar del Plata",
-      "seccion": "Deportes"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "1cpkl2f",
-     "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20",
-     "cuando": "2026-10-08T12:35:25.263Z"
-    },
-    {
-     "id": "16tb2vo",
-     "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
-     "cuando": "2026-10-08T14:45:24.070Z"
-    },
-    {
-     "id": "1rf94dp",
-     "titulo": "Docentes locales paran el jueves 15 por salarios y presupuesto",
-     "cuando": "2026-10-08T16:35:20.061Z"
-    },
-    {
-     "id": "jul321",
-     "titulo": "Suspenden la Fiesta Nacional del Postre por el mal clima",
-     "cuando": "2026-10-08T18:06:50.188Z"
-    },
-    {
-     "id": "6vefne",
-     "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
-     "cuando": "2026-10-08T19:40:07.630Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "1om2oqi",
@@ -218,7 +182,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-08T21:10:07.630Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
