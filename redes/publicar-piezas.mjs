@@ -94,6 +94,19 @@ export async function completarEnlaces({
       cambios += 1;
     }
   }
+  // El reel extra del clima y la farmacia en Facebook (8/10): también necesita su dirección pública.
+  for (const [clave, p] of Object.entries(libro?.reelsEnFacebook ?? {})) {
+    if (p.permalink || clave.slice(0, 10) < desde || (p.intentosEnlace ?? 0) >= intentos) continue;
+    const url = await buscarEnlace(api, 'facebook', p.mediaId);
+    if (url) {
+      p.permalink = url;
+      delete p.intentosEnlace;
+      log(`  Facebook · reel extra ${clave}: ${url}`);
+    } else {
+      p.intentosEnlace = (p.intentosEnlace ?? 0) + 1;
+    }
+    cambios += 1;
+  }
   return cambios;
 }
 
@@ -227,6 +240,9 @@ export async function publicarPiezas({
               try {
                 const rr = await api[metodo]({ video: leerVideo(pieza.archivo), tipo: 'REELS', pie: pieDePieza({ ...pieza, tipo: 'reel' }) });
                 anotar(libro, 'reelsEnFacebook', clave, { mediaId: rr.id, nombre: pieza.nombre, tipo: 'REELS' });
+                // La dirección pública: la nota del clima de la mañana (web/lib/notas-propias.js) la enlaza. Si Meta todavía no la da, la completa la vuelta siguiente.
+                const urlDelReel = await buscarEnlace(api, 'facebook', rr.id);
+                if (urlDelReel) libro.reelsEnFacebook[clave].permalink = urlDelReel;
                 guardar();
                 log(`             + reel en Facebook: ${rr.id}`);
               } catch (e) {

@@ -80,6 +80,7 @@ import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
   cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notasDelDolar, notasDeRepasos,
+  cuandoArmarClima, entradaDelClima, sumarClimaAlHistorial, comoClimaJson, notasDelClima,
 } from '../lib/notas-propias.js';
 import {
   leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir, papeleraAlDia, paraLaPapelera,
@@ -117,6 +118,7 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 // nota propia del dólar y su comparación con días anteriores
 // (lib/notas-propias.js). Va versionado, como intentos-ia.json.
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
+const HISTORIA_CLIMA = path.join(AQUI, '..', 'data', 'clima-historia.json');
 // Las notas que nacieron de una pista y aprobó una persona desde el celular (3/10, web/lib/notas-de-pistas.js): las escribe el celular, ningún workflow las toca.
 const NOTAS_DE_PISTAS = path.join(AQUI, '..', 'data', 'notas-de-pistas.json');
 // La Fórmula 1 (ingesta/f1.mjs, 3/10): calendario, resultado y campeonato de Jolpica, y cuándo salió cada nota.
@@ -708,6 +710,24 @@ if (!historiaAntes || JSON.stringify(historiaDolar) !== JSON.stringify(historiaA
   fs.writeFileSync(HISTORIA_DOLAR, comoHistoriaJson(historiaDolar), 'utf8');
 }
 
+// El clima del día (8/10, lib/notas-propias.js): una nota por día, a las 7:30 o después, con el pronóstico de lo que ya trae la portada; queda
+// congelada en clima-historia.json (sólo en la nube, por lo mismo que el dólar).
+const climaAntes = leerJson(HISTORIA_CLIMA, null);
+let historiaClima = climaAntes ?? { dias: [] };
+if (enLaNube) {
+  const toca = cuandoArmarClima({ historia: historiaClima, clima: ultima.clima ?? null });
+  if (toca.armar) {
+    const entrada = entradaDelClima(ultima.clima, { consultado: new Date() });
+    if (entrada) {
+      historiaClima = sumarClimaAlHistorial(historiaClima, entrada);
+      console.log(`  clima: se guardó el pronóstico de hoy (${entrada.hoy.min}° a ${entrada.hoy.max}°)`);
+    }
+  }
+}
+if (!climaAntes || JSON.stringify(historiaClima) !== JSON.stringify(climaAntes)) {
+  fs.writeFileSync(HISTORIA_CLIMA, comoClimaJson(historiaClima), 'utf8');
+}
+
 // La Fórmula 1 (ingesta/f1.mjs): horarios en hora argentina los días del Gran Premio y el resultado
 // al terminar. Se consulta Jolpica sólo en la nube; si la API falla queda lo último guardado.
 const f1Antes = leerJson(F1_JSON, null);
@@ -748,7 +768,7 @@ const conPagina = new Map([
 const { notas: repasos, noSeArman } = notasDeRepasos(libroRedes, conPagina, { catalogo: TEMAS });
 for (const id of noSeArman) retiradas.add(id);
 // La regla de cuerpo vale también para lo propio (lib/cuerpo.js).
-const propias = [...notasDelDolar(historiaDolar), ...notasF1, ...notasFutbol, ...notasDePistas(leerJson(NOTAS_DE_PISTAS, null)), ...repasos]
+const propias = [...notasDelDolar(historiaDolar), ...notasDelClima(historiaClima, libroRedes), ...notasF1, ...notasFutbol, ...notasDePistas(leerJson(NOTAS_DE_PISTAS, null)), ...repasos]
   .map((n) => fijarSlug(n, direcciones))
   .filter((n) => tieneCuerpo(n));
 if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);

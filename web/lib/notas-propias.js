@@ -284,6 +284,168 @@ export function notasDelDolar(historia = { dias: [] }, { ahora = new Date(), dia
     .filter(Boolean);
 }
 
+// ======================================================= el clima del día (8/10/2026)
+//
+// Una nota propia por día, a la mañana, con el pronóstico de Balcarce y, si ya salió, el enlace al reel del clima en Facebook (pedido de
+// Hernán y Andrés: "una nota propia del clima durante el día por la mañana, y linkear la primera salida de redes del clima").
+// Es una plantilla que se llena con los números de Open-Meteo: sin IA, sin adjetivos y sin inventar nada. Lo que no hay (la probabilidad
+// de lluvia, por ejemplo) no se escribe (regla 140). Se arma una sola vez por día, a las 7:30 o después, y se guarda congelada en
+// web/data/clima-historia.json: la nota de hoy no cambia cada media hora, y la de ayer queda como estaba.
+
+/** Desde qué hora de Balcarce se arma (media hora después del clima de las 7:00 en las redes) y hasta cuál se sigue intentando. */
+const CLIMA_DESDE = 7 * 60 + 30;
+const CLIMA_HASTA = 12 * 60;
+
+/** Cuántos días se guardan. */
+export const DIAS_DE_CLIMA = 30;
+
+export const RELEVANCIA_CLIMA = 58;
+const FIRMA_CLIMA = (hora) => `Nota de Radar Balcarce armada con los datos de Open-Meteo a las ${hora}.`;
+
+/** ¿Hay que guardar el clima de hoy ahora? Entre las 7:30 y las 12, y si todavía no está. */
+export function cuandoArmarClima({ ahora = new Date(), historia = { dias: [] }, clima = null } = {}) {
+  const hoy = diaAR(ahora);
+  const min = minutosAR(ahora);
+  if (min < CLIMA_DESDE) return { armar: false, motivo: 'todavía no son las 7:30' };
+  if ((historia?.dias ?? []).some((d) => d.dia === hoy)) return { armar: false, motivo: 'ya está el de hoy' };
+  if (min >= CLIMA_HASTA) return { armar: false, motivo: 'pasó el mediodía sin el clima del día' };
+  if (!entradaDelClima(clima, { consultado: ahora })) return { armar: false, motivo: 'todavía no hay datos del clima de hoy' };
+  return { armar: true, motivo: 'toca' };
+}
+
+const numero = (x) => (typeof x === 'number' && Number.isFinite(x) ? x : null);
+
+/**
+ * El clima de hoy para guardar, a partir de lo que trae la portada ({ ahora, dias, fuente }), o null si no sirve: si el primer día del
+ * pronóstico no es hoy, o falta la temperatura, la máxima o la mínima.
+ */
+export function entradaDelClima(clima, { consultado = new Date() } = {}) {
+  const hoy = diaAR(consultado);
+  const a = clima?.ahora;
+  const dias = Array.isArray(clima?.dias) ? clima.dias : [];
+  const d0 = dias.find((d) => d?.fecha === hoy);
+  if (!a || !d0 || numero(a.temp) === null || numero(d0.max) === null || numero(d0.min) === null) return null;
+  const sig = dias.filter((d) => d?.fecha > hoy && numero(d.max) !== null && numero(d.min) !== null).slice(0, 3);
+  const limpiar = (d) => ({
+    fecha: d.fecha, dia: d.dia ?? null, max: d.max, min: d.min, lluvia: numero(d.lluvia), viento: numero(d.viento), cielo: d.cielo ?? null,
+  });
+  return {
+    dia: hoy, consultado: new Date(consultado).toISOString(), fuente: clima.fuente ?? 'Open-Meteo',
+    ahora: {
+      temp: a.temp, sensacion: numero(a.sensacion), humedad: numero(a.humedad), viento: numero(a.viento), rumbo: a.rumbo ?? null, cielo: a.cielo ?? null,
+    },
+    hoy: limpiar(d0),
+    siguientes: sig.map(limpiar),
+  };
+}
+
+/** La historia con el día sumado (uno por día: el primero que se guardó queda), ordenada y podada. */
+export function sumarClimaAlHistorial(historia = { dias: [] }, entrada = null, dias = DIAS_DE_CLIMA) {
+  const lista = [...(historia?.dias ?? [])];
+  if (entrada && !lista.some((d) => d.dia === entrada.dia)) lista.push(entrada);
+  lista.sort((a, b) => a.dia.localeCompare(b.dia));
+  return { dias: lista.slice(-dias) };
+}
+
+/** El archivo, como se escribe: un día por renglón. */
+export function comoClimaJson(historia = { dias: [] }) {
+  return `{"dias":[\n${(historia?.dias ?? []).map((d) => JSON.stringify(d)).join(',\n')}\n]}\n`;
+}
+
+const cieloEnMinuscula = (c) => String(c ?? '').toLowerCase();
+
+/** "máxima de 13° y mínima de 9°" */
+const rangoDe = (d) => `mínima de ${d.min}° y máxima de ${d.max}°`;
+
+/**
+ * La dirección del reel del clima en Facebook de ese día, si ya salió y Meta nos la dio: libro.reelsEnFacebook["2026-10-09/clima-manana"].permalink.
+ * Sólo direcciones de verdad de Facebook. Las historias de Instagram no sirven: duran un día.
+ */
+export function enlaceDelClimaEnFacebook(libro = {}, dia) {
+  const url = libro?.reelsEnFacebook?.[`${dia}/clima-manana`]?.permalink;
+  return esEnlaceDe('facebook', url) ? url : '';
+}
+
+/** La nota del clima de un día. `enlaceReel`: la dirección del reel en Facebook, o ''. */
+export function notaDelClima(entrada, { enlaceReel = '' } = {}) {
+  if (!entrada?.ahora || !entrada?.hoy) return null;
+  const { dia, ahora: a, hoy: d } = entrada;
+  const hora = horaAR(entrada.consultado);
+  let titulo = `El clima de hoy en Balcarce: ${rangoDe(d)}`;
+  if (d.lluvia !== null && d.lluvia >= 50) titulo = `Clima en Balcarce: ${d.lluvia}% de probabilidad de lluvia, con ${rangoDe(d)}`;
+  if (titulo.length > MAXIMO_TITULO) titulo = `El clima de hoy en Balcarce: máxima de ${d.max}° y mínima de ${d.min}°`;
+
+  const copete = `El pronóstico de este ${diaLargo(dia)} para Balcarce marca una ${rangoDe(d)}${d.cielo ? `, con ${cieloEnMinuscula(d.cielo)}` : ''}.`;
+
+  const partesDeAhora = [
+    `a las ${hora} hay ${a.temp}°${a.cielo ? ` y el cielo está ${cieloEnMinuscula(a.cielo)}` : ''}`,
+    a.sensacion !== null ? `la sensación térmica es de ${a.sensacion}°` : null,
+    a.viento !== null ? `el viento sopla${a.rumbo ? ` del ${a.rumbo}` : ''} a ${a.viento} km/h` : null,
+    a.humedad !== null ? `la humedad es del ${a.humedad}%` : null,
+  ].filter(Boolean);
+  const p1 = `En Balcarce, ${partesDeAhora.join('; ')}. Son los datos de Open-Meteo de ese momento.`;
+
+  const delDia = [
+    `Para todo el ${diaCorto(dia)}, el pronóstico marca una ${rangoDe(d)}`,
+    d.cielo ? `y ${cieloEnMinuscula(d.cielo)}` : null,
+  ].filter(Boolean).join(' ');
+  const extras = [
+    d.lluvia !== null ? `La probabilidad de lluvia es del ${d.lluvia}%.` : null,
+    d.viento !== null ? `El viento llegaría a ${d.viento} km/h.` : null,
+  ].filter(Boolean).join(' ');
+  const p2 = `${delDia}. ${extras}`.trim();
+
+  const siguientes = (entrada.siguientes ?? []).map((s) => {
+    const lluvia = s.lluvia !== null && s.lluvia >= 10 ? `, con ${s.lluvia}% de probabilidad de lluvia` : '';
+    return `el ${diaCorto(s.fecha)}, ${rangoDe(s)}${lluvia}`;
+  });
+  const p3 = siguientes.length
+    ? `Para los días que siguen, el pronóstico dice: ${siguientes.join('; ')}.`
+    : null;
+
+  const p4 = `El clima se actualiza a lo largo del día: los valores de ahora, hora por hora, están en la página del clima de Radar Balcarce.${enlaceReel ? ' El clima de la mañana también salió como video en nuestra página de Facebook.' : ''}`;
+
+  const cuerpo = [p1, p2, p3, p4].filter(Boolean).join('\n\n');
+  const fuente = { medio: entrada.fuente ?? 'Open-Meteo', enlace: 'https://open-meteo.com' };
+
+  return {
+    id: `clima${sinGuiones(dia)}`,
+    propia: 'clima',
+    titulo,
+    copete,
+    cuerpo,
+    guion: null,
+    seccion: 'Balcarce',
+    local: true,
+    relevancia: RELEVANCIA_CLIMA,
+    medios: [fuente.medio],
+    enlace: fuente.enlace,
+    fuentesConsultadas: [fuente],
+    teniaImagenLaFuente: false,
+    // Una sola fecha para todo el día: la del momento en que se guardó.
+    fecha: entrada.consultado,
+    sinFecha: false,
+    visto: entrada.consultado,
+    publicadaPor: null,
+    publicadaCuando: entrada.consultado,
+    temas: [],
+    etiquetas: ['clima', 'pronóstico', 'Balcarce', 'tiempo'],
+    como: 'automatica',
+    firma: FIRMA_CLIMA(hora),
+    enlacesEnTexto: [{ texto: 'página del clima de Radar Balcarce', href: '/clima' }, ...(enlaceReel ? [{ texto: 'nuestra página de Facebook', href: enlaceReel }] : [])],
+    destacados: [{ texto: 'Ver el clima de ahora', href: '/clima' }, ...(enlaceReel ? [{ texto: 'Mirá el clima de hoy en video, en Facebook', href: enlaceReel }] : [])],
+  };
+}
+
+/** Las notas del clima de los últimos `dias` días (la de hoy y las anteriores, como estaban cuando se guardaron). */
+export function notasDelClima(historia = { dias: [] }, libro = {}, { ahora = new Date(), dias = 3 } = {}) {
+  const desde = sumarDias(diaAR(ahora), -dias);
+  return (historia?.dias ?? [])
+    .filter((d) => d.dia >= desde)
+    .map((d) => notaDelClima(d, { enlaceReel: enlaceDelClimaEnFacebook(libro, d.dia) }))
+    .filter(Boolean);
+}
+
 // ======================================================= los repasos
 
 /** Las piezas del libro que son un podcast, y cómo se llama cada una. */
