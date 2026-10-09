@@ -9069,16 +9069,16 @@
   "cuando": "2026-10-07T13:04:39.784Z"
  },
  "kwpmcv": {
-  "archivo": "fotos-notas/kwpmcv.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Registro Provincial de las Personas instala una unidad móvil",
   "enlace": "https://www.diariolavanguardia.com/noticias/45020-nuevo-operativo-de-documentacion-en-balcarce-dni-partidas-y-certificados-sin-turno/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65981.png",
   "razon": "La foto tiene buena calidad y encuadre, muestra claramente el operativo de la unidad móvil y no presenta marcas de agua ni menores.",
-  "cuando": "2026-10-07T13:31:53.691Z"
+  "cuando": "2026-10-07T13:31:53.691Z",
+  "intentado": true,
+  "borrada": true
  },
  "siahkq": {
   "intentado": true,
@@ -10588,13 +10588,16 @@
   "fuentes": 3
  },
  "1n9bvrh": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1n9bvrh.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Spotify incorpora audiolibros en español en el país",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-09T00:02:19.214Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://tn.com.ar/tecno/aplicaciones/2026/10/08/spotify-suma-audiolibros-en-espanol-los-detalles-del-lanzamiento/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/se-lanzan-mas-de-45000-titulos-en-nuestro-idioma-foto-adobe-stock-APLD6CJN4ZCV5GMQ7QGQ2PAZ7Q.jpeg?auth=81766cae3baa34c133b25679f293bcc79a3b50582c4efb048885648b2e001400&width=1023",
+  "razon": "Es una imagen de stock limpia y nítida que ilustra perfectamente el concepto de audiolibros (libros y audífonos), sin marcas de medios ni personas.",
+  "cuando": "2026-10-09T04:32:02.343Z"
  },
  "vjzeja": {
   "archivo": "fotos-notas/vjzeja.jpg",
@@ -10643,8 +10646,8 @@
   "origen": "ninguna",
   "titulo": "La Corte Suprema se reúne para revisar las restricciones a la compra de tierras",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T03:31:59.671Z",
-  "intentos": 2,
+  "cuando": "2026-10-09T04:32:02.343Z",
+  "intentos": 3,
   "fuentes": 9
  },
  "6q5i7o": {
@@ -10682,8 +10685,20 @@
   "origen": "ninguna",
   "titulo": "El Museo Comunitario Isla Maciel abre una muestra sobre Juan Carlos Romero",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T03:31:59.671Z",
-  "intentos": 1,
+  "cuando": "2026-10-09T04:32:02.343Z",
+  "intentos": 2,
   "fuentes": 3
+ },
+ "10znf8w": {
+  "archivo": "fotos-notas/10znf8w.jpg",
+  "medio": "Puntonueve (FM 100.9)",
+  "credito": "Foto: Puntonueve (FM 100.9)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
+  "enlace": "https://puntonueve.com.ar/el-operativo-de-documentacion-se-realizara-en-el-concejo-deliberante-por-las-condiciones-climaticas/",
+  "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2026/10/operativo-dni-21082025.webp",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez e ilustra adecuadamente el operativo en el Concejo Deliberante.",
+  "cuando": "2026-10-09T04:32:02.343Z"
  }
 }
