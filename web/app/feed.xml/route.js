@@ -1,8 +1,11 @@
 import { obtenerDatos } from '@/lib/datos';
 import { sitio } from '@/lib/sitio';
+import { armarRss } from '@/lib/rss';
 
 // RSS para quien quiera seguirnos sin redes: Google Noticias y los
-// lectores de feeds lo leen desde acá.
+// lectores de feeds lo leen desde acá. Desde el 8/10 cada nota trae su texto
+// completo, su foto con el crédito y el enlace a la página (lib/rss.js); y cada
+// sección tiene su propio feed (/seccion/<sección>/feed.xml).
 //
 // Se arma en el momento de compilar, no en cada visita: los datos no
 // cambian entre una compilación y la siguiente (el sitio se reconstruye
@@ -14,28 +17,8 @@ export const dynamic = 'force-static';
 export async function GET() {
   const SITIO = sitio();
   const d = obtenerDatos();
-  const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-  const items = d.notas.map((n) => `
-    <item>
-      <title>${esc(n.titulo)}</title>
-      <link>${SITIO}${n.ruta}</link>
-      <guid>${SITIO}${n.ruta}</guid>
-      <pubDate>${new Date(n.fecha).toUTCString()}</pubDate>
-      <category>${esc(n.seccion)}</category>
-      <description>${esc(n.copete)}</description>
-    </item>`).join('');
-
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-  <channel>
-    <title>Radar Balcarce</title>
-    <link>${SITIO}</link>
-    <description>Lo que pasa en Balcarce, la región y el país.</description>
-    <language>es-AR</language>
-    ${items}
-  </channel>
-</rss>`;
-
+  const xml = armarRss({
+    enlace: SITIO, autoEnlace: `${SITIO}/feed.xml`, notas: d.notas, sitio: SITIO, generado: d.generado,
+  });
   return new Response(xml, { headers: { 'content-type': 'application/rss+xml; charset=utf-8' } });
 }

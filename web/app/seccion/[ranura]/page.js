@@ -45,7 +45,8 @@ export async function generateMetadata({ params }) {
   return {
     title: titulo,
     description: descripcion,
-    alternates: { canonical: camino },
+    // El feed de la sección (RSS-1, 8/10): sólo en la primera página y si hay notas.
+    alternates: { canonical: camino, ...(pagina === 1 && delDia.length ? { types: { 'application/rss+xml': `/seccion/${s.ranura}/feed.xml` } } : {}) },
     // Sin notas hoy no es una página para el buscador (29/09).
     ...(delDia.length === 0 ? { robots: { index: false, follow: true } } : {}),
     // La tarjeta la pone sola opengraph-image.js, que está al lado.
