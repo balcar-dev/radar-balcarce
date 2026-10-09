@@ -160,9 +160,9 @@
   "motivo": "con cuerpo"
  },
  "13ysda0": {
-  "intentos": 2,
-  "ultimo": "2026-10-09T12:31:51.351Z",
-  "motivo": "cuerpo: 3 problemas (numero, fecha): el cuerpo dice 2.018 y la fuente no lo dice; sin esas oraciones quedan 42 palabras"
+  "intentos": 3,
+  "ultimo": "2026-10-09T13:02:13.076Z",
+  "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras"
  },
  "144vvk7": {
   "intentos": 2,
@@ -1519,6 +1519,11 @@
   "baja": true,
   "fuentes": 1
  },
+ "1wlwxma": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T13:02:13.076Z",
+  "motivo": "con cuerpo"
+ },
  "1wp29m7": {
   "intentos": 3,
   "ultimo": "2026-10-07T16:31:41.138Z",
@@ -2179,6 +2184,11 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
+ },
+ "f8taqk": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T13:02:13.076Z",
+  "motivo": "con cuerpo"
  },
  "fjrow3": {
   "intentos": 2,
@@ -2889,6 +2899,11 @@
  "vucg7b": {
   "intentos": 1,
   "ultimo": "2026-10-05T22:31:25.509Z",
+  "motivo": "con cuerpo"
+ },
+ "vwb5m5": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T13:02:13.076Z",
   "motivo": "con cuerpo"
  },
  "vxkgel": {

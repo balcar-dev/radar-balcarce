@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-09T12:32:09.357Z",
+ "generado": "2026-10-09T13:03:49.186Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1izf4c8",
-   "titulo": "Nuevas tecnologías para el sector eléctrico",
-   "copete": "El Microcine del Museo del Automovilismo Juan Manuel Fangio fue escenario de una jornada técnica destinada a acercar nuevas herramientas y soluciones de medición a empresas y cooperativas de la región. La actividad fue organizada por Electrocompo",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T00:33:23.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/nuevas-tecnologias-para-el-sector-electrico-127",
-     "fecha": "2026-10-09T00:33:23.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
-   "maximo": 3
-  },
   {
    "id": "13ysda0",
    "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
@@ -30,10 +13,15 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
      "fecha": "2026-10-09T11:23:10.000Z"
+    },
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/indican-que-el-conmutador-del-hospital-ya-se-encuentra-operativo",
+     "fecha": "2026-10-09T12:52:17.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 3 problemas (numero, fecha): el cuerpo dice 2.018 y la fuente no lo dice; sin esas oraciones quedan 42 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
    "maximo": 3
   },
   {
@@ -71,7 +59,7 @@
     {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
-     "fecha": "2026-10-09T00:53:00.000Z"
+     "fecha": "2026-10-09T01:33:28.000Z"
     }
    ],
    "intentos": 1,
