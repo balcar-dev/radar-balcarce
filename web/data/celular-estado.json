@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T06:36:26.800Z",
- "portada": 46,
- "archivo": 840,
- "esperandoCuerpo": 0,
+ "generado": "2026-10-09T07:03:51.984Z",
+ "portada": 53,
+ "archivo": 841,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-09T06:36:26.839Z",
+  "generado": "2026-10-09T07:03:52.024Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -103,13 +103,13 @@
       "seccion": "Economía"
      },
      {
-      "id": "ypnvl8",
-      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
-      "seccion": "Fútbol"
+      "id": "w8iv0l",
+      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
+      "seccion": "Deportes"
      },
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
       "seccion": "Balcarce"
      },
      {
@@ -139,8 +139,8 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
+      "id": "10znf8w",
+      "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
       "seccion": "Balcarce"
      },
      {
@@ -157,12 +157,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 32,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Balcarce"
+     },
      {
       "id": "mxhy8u",
       "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
+      "seccion": "Balcarce"
      },
      {
       "id": "1bb4gv8",
