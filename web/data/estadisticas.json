@@ -1288,6 +1288,53 @@
         "vistas": 58,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-09T12:00:18.960Z",
+      "web": {
+        "u12": {
+          "visitas": 9,
+          "vistas": 45
+        },
+        "a12": {
+          "visitas": 62,
+          "vistas": 138
+        },
+        "u24": {
+          "visitas": 0,
+          "vistas": 300
+        },
+        "a24": {
+          "visitas": 58,
+          "vistas": 84
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 31
+          },
+          {
+            "camino": "/nota/una-planta-cae-sobre-la-red-electrica-y-dana-cables-en-calle-20-1cpkl2f",
+            "vistas": 12
+          },
+          {
+            "camino": "/nota/el-zonal-del-atlantico-compite-el-fin-de-semana-en-el-autodromo-16tb2vo",
+            "vistas": 11
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 9,
+        "vistas": 759,
+        "interacciones": 4
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 111,
+        "alcance": 2,
+        "vistas": 11,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -1977,23 +2024,23 @@
         0,
         0,
         0,
-        8,
         0,
         0,
-        6,
-        6,
         0,
         0,
-        6,
-        6,
-        12,
-        10,
         0,
-        2,
-        1,
         0,
-        11,
-        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
       ],
       "paises": {
@@ -2007,44 +2054,16 @@
     },
     "2026-10-08": {
       "referentes": {
-        "facebook.com": 54,
-        "directo": 17
+        "facebook.com": 60,
+        "directo": 19
       },
-      "notas": {
-        "1cpkl2f": 12,
-        "16tb2vo": 11,
-        "6vefne": 10,
-        "1wp29m7": 8,
-        "jul321": 8,
-        "1rf94dp": 7,
-        "jul3dm": 7,
-        "vnuraj": 6,
-        "41whtr": 6,
-        "1ube6ai": 6,
-        "f6j0rt": 5,
-        "siahkq": 3,
-        "wvbi4h": 3,
-        "repaso20261007noche": 2,
-        "10cpafd": 2,
-        "y4gp3v": 2,
-        "l5uou9": 2,
-        "f1horarios2026r17": 2,
-        "28ui0c": 2,
-        "131078z": 1
-      },
-      "paginas": {
-        "/": 32,
-        "/seccion/automovilismo": 8,
-        "/seccion/policiales": 5,
-        "/seccion/deportes": 4,
-        "/seccion/politica": 1,
-        "/dolar": 1
-      },
+      "notas": {},
+      "paginas": {},
       "paises": {
-        "US": 68,
-        "AR": 67,
-        "SE": 10,
-        "IE": 7,
+        "AR": 99,
+        "US": 73,
+        "SE": 12,
+        "IE": 11,
         "HK": 2,
         "ES": 1,
         "JP": 1
@@ -2055,31 +2074,69 @@
         0,
         0,
         0,
-        7,
-        9,
         0,
-        2,
-        11,
-        4,
-        8,
-        4,
-        13,
         0,
-        24,
-        16,
-        55,
-        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
         0,
         0
       ],
-      "visitas": 71,
-      "vistas": 156,
-      "dispositivos": {
-        "mobile": 101,
-        "desktop": 55
+      "visitas": 79,
+      "vistas": 199,
+      "dispositivos": {}
+    },
+    "2026-10-09": {
+      "referentes": {
+        "directo": 1
+      },
+      "visitas": 0,
+      "vistas": 0,
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "paises": {
+        "US": 2
+      },
+      "dispositivos": {},
+      "notas": {},
+      "paginas": {
+        "/": 2
       }
     }
   }
