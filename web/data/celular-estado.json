@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T15:32:43.917Z",
- "portada": 49,
+ "generado": "2026-10-09T16:01:55.606Z",
+ "portada": 53,
  "archivo": 866,
- "esperandoCuerpo": 8,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-09T15:32:43.957Z",
+  "generado": "2026-10-09T16:01:55.637Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-09T13:07:58.299Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu nota",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-09T15:04:52.781Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-09T13:07:58.299Z",
     "segundos": null,
     "notas": [
@@ -144,8 +144,8 @@
       "seccion": "Agro"
      },
      {
-      "id": "1y9462t",
-      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
       "seccion": "Balcarce"
      }
     ]
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 54,
     "notas": [
      {
       "id": "13xrjvk",
@@ -165,19 +165,19 @@
       "seccion": "Deportes"
      },
      {
-      "id": "1gmlwhw",
-      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "id": "15x6yh5",
+      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1y9462t",
+      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
       "seccion": "Balcarce"
      },
      {
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro"
-     },
-     {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -193,6 +193,11 @@
      "id": "xlon5q",
      "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
      "cuando": "2026-10-09T13:45:20.333Z"
+    },
+    {
+     "id": "18jx7kk",
+     "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
+     "cuando": "2026-10-09T15:35:02.449Z"
     }
    ],
    "cola": [
@@ -203,9 +208,9 @@
      "marcada": false
     },
     {
-     "id": "18jx7kk",
-     "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
-     "seccion": "Agro",
+     "id": "jul3dj",
+     "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
@@ -221,8 +226,8 @@
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-09T15:15:20.333Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-09T17:05:02.449Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
