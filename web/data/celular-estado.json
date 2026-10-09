@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T22:02:12.774Z",
- "portada": 55,
- "archivo": 872,
+ "generado": "2026-10-09T22:33:34.280Z",
+ "portada": 57,
+ "archivo": 876,
  "esperandoCuerpo": 10,
  "redes": {
-  "generado": "2026-10-09T22:02:12.821Z",
+  "generado": "2026-10-09T22:33:34.325Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-09T22:05:26.370Z"
    },
    {
     "nombre": "clima-noche",
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "17di2tc",
+      "titulo": "Cristiano Ronaldo marca en la goleada de Al Nassr y escala hacia los mil tantos",
+      "seccion": "Deportes"
+     },
      {
       "id": "vwb5m5",
       "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "10izr2u",
-      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
-      "seccion": "Deportes"
      },
      {
       "id": "jul3dj",
@@ -210,14 +210,7 @@
      "cuando": "2026-10-09T18:45:24.033Z"
     }
    ],
-   "cola": [
-    {
-     "id": "2qmh95",
-     "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-     "seccion": "Deportes",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 0,
    "proximoDesde": "2026-10-09T20:15:24.033Z",
    "porDia": 5,

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T22:02:12.774Z",
+ "generado": "2026-10-09T22:33:34.280Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -49,7 +49,7 @@
     {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/economia/empleo-industrial--se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-y-solo-3-lograron-aumentar-la-cantidad_a6ac92902587f18d752035eca",
-     "fecha": "2026-10-09T18:55:38.129Z"
+     "fecha": "2026-10-09T18:55:38.000Z"
     },
     {
      "medio": "La Brújula 24",
@@ -59,6 +59,53 @@
    ],
    "intentos": 4,
    "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 93 palabras",
+   "maximo": 4
+  },
+  {
+   "id": "1tcczj3",
+   "titulo": "Mar del Plata registra entre un 45% y un 50% de reservas para el fin de semana largo",
+   "copete": "Con motivo del fin de semana largo por el feriado del lunes 12 de octubre, la Municipalidad de General Pueyrredon informó cómo será el funcionamiento de los principales servicios públicos en Mar del Plata y Batán. Durante estas jornadas se mantendrán guardias en Salud…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-09T16:00:04.000Z",
+   "fuentes": [
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/mar-del-plata-registra-entre-un-45-y-un-50-de-reservas-para-el-fin-de-semana-largo",
+     "fecha": "2026-10-09T16:00:04.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/fin-de-semana-largo-en-mar-del-plata-como-funcionaran-los-servicios-municipales-1",
+     "fecha": "2026-10-09T18:30:00.000Z"
+    },
+    {
+     "medio": "Mi8 (Canal 8 Mar del Plata)",
+     "enlace": "https://mi8.com.ar/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo/",
+     "fecha": "2026-10-09T19:56:02.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110937-fin-de-semana-largo-en-mar-del-plata-hay-un-50por_ciento-de-reservas-y-preocupa-el-clima",
+     "fecha": "2026-10-09T22:11:42.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110880-como-seran-las-guardias-municipales-durante-el-fin-de-semana-largo-en-mar-del-plata",
+     "fecha": "2026-10-09T16:47:14.000Z"
+    },
+    {
+     "medio": "Punto Noticias",
+     "enlace": "https://puntonoticias.com/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo-5/",
+     "fecha": "2026-10-09T20:37:03.000Z"
+    },
+    {
+     "medio": "Radio 10 Mar del Plata (FM 105.5)",
+     "enlace": "https://radio10mardelplata.com.ar/fin-de-semana-largo-en-mar-del-plata-que-servicios-municipales-funcionaran-y-cuales-tendran-guardias/",
+     "fecha": "2026-10-09T17:01:43.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (numero, antecedente): el cuerpo dice 40 y la fuente no lo dice; sin esas oraciones quedan 84 palabras",
    "maximo": 4
   },
   {
@@ -98,7 +145,7 @@
   {
    "id": "fadug2",
    "titulo": "La FIA admite un \"error humano\" que perjudicó a varios pilotos en la SQ1 de Singapur",
-   "copete": "La FIA quedó nuevamente bajo la lupa en la Fórmula 1 después de reconocer un error humano que alteró las condiciones de clasificación para la carrera sprint del Gran Premio de Singapur. La falla se produjo durante la SQ1 y afectó el rendimiento de varios monoplazas, entre ellos…",
+   "copete": "La FIA emitió un comunicado pocas horas después de la clasificación al sprint del Gran Premio de Singapur para explicar uno de los incidentes que marcó la SQ1. Más allá de los problemas de cronometraje que obligaron a retrasar el inicio de la SQ2, el organismo rector reconoció…",
    "seccion": "Automovilismo",
    "fecha": "2026-10-09T14:19:55.000Z",
    "fuentes": [
@@ -115,38 +162,6 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "1e8rdd4",
-   "titulo": "El dólar cerró la semana con una leve suba y escaló hasta los $1.517",
-   "copete": "Buenos Aires, 9 octubre (NA) -- En medio de una semana marcada por la apreciación que registró el real, luego de la victoria electoral del senador Flávio Bolsonaro en Brasil, el dólar mayorista culminó la semana con una leve suba, que lo llevó a cerrar en los $1.517. Según supo…",
-   "seccion": "Economía",
-   "fecha": "2026-10-09T20:03:17.000Z",
-   "fuentes": [
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/el-dolar-cerro-la-semana-con-una-leve-suba-y-escalo-hasta-los--1-517_a6ac94524587f18d752090951",
-     "fecha": "2026-10-09T20:03:17.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/el-dolar-mayorista-escalo-a-1517-pesos",
-     "fecha": "2026-10-09T21:13:25.000Z"
-    },
-    {
-     "medio": "La Voz del Pueblo",
-     "enlace": "https://lavozdelpueblo.com.ar/el-dolar-mayorista-cerro-la-semana-en-1517-pesos-tras-un-leve-incremento",
-     "fecha": "2026-10-09T20:41:02.000Z"
-    },
-    {
-     "medio": "InfoRegión",
-     "enlace": "https://www.inforegion.com.ar/2026/10/09/el-dolar-mayorista-cerro-la-semana-en-1-517-y-registro-una-leve-suba/",
-     "fecha": "2026-10-09T20:16:25.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 3 problemas (numero): el titulo dice 17 y la fuente no lo dice",
    "maximo": 3
   },
   {
