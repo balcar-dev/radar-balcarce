@@ -815,3 +815,8 @@ export async function aPng(svg, destino, ancho = ANCHO) {
   fs.writeFileSync(destino, r.render().asPng());
   return destino;
 }
+
+// Lo que usan las escenas animadas (reels/escenas/): las mismas piezas de dibujo de las placas, para que una escena y una placa se vean de la misma familia.
+export {
+  esc, rotulo, cabecera, pie, lienzo, renglones, firma, DISPLAY, TEXTO, MARGEN, Y_PIE, FIN_CONTENIDO,
+};

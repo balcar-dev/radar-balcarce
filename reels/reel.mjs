@@ -11,7 +11,7 @@ import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
-import { FPS, partirSvg, renderizarEntrada } from './animacion.mjs';
+import { FPS, partirSvg, renderizarEntrada, renderizarEscena } from './animacion.mjs';
 import { decirGemini } from './voz-gemini.mjs';
 import { componerIndicacion, vozDePieza } from '../redes/prompt-redes.mjs';
 import {
@@ -145,10 +145,22 @@ async function armarBaseAnimada({ nombre, placas, total, dir }) {
   return base;
 }
 
+/** El video base de una ESCENA (reels/escenas/): todos sus cuadros, durante toda la pieza, pasados a 30 por segundo. */
+async function armarBaseDeEscena({ nombre, escena, total, dir }) {
+  await renderizarEscena(escena, dir, `${nombre}-a0-`, { duracion: total });
+  const base = path.join(dir, `${nombre}-base.mp4`);
+  await correr(ffmpeg, [
+    '-y', '-framerate', String(escena.fps), '-i', `${nombre}-a0-%04d.png`,
+    '-vf', `fps=${FPS},scale=1080:1920,format=yuv420p,setsar=1`,
+    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '17', '-pix_fmt', 'yuv420p', '-r', String(FPS), path.basename(base),
+  ], { cwd: dir, maxBuffer: 1024 * 1024 * 40 });
+  return base;
+}
+
 /** Los cuadros y el video intermedio de la animación se borran: sólo queda el reel. */
 function limpiarAnimacion(dir, nombre) {
   try {
-    for (const f of fs.readdirSync(dir)) if (f.startsWith(`${nombre}-a`) && f.endsWith('.png') && /-a\d+-\d{3}\.png$/.test(f)) fs.rmSync(path.join(dir, f));
+    for (const f of fs.readdirSync(dir)) if (f.startsWith(`${nombre}-a`) && f.endsWith('.png') && /-a\d+-\d{3,4}\.png$/.test(f)) fs.rmSync(path.join(dir, f));
     fs.rmSync(path.join(dir, `${nombre}-base.mp4`), { force: true });
   } catch { /* si no se puede borrar, no pasa nada */ }
 }
@@ -167,6 +179,8 @@ export async function armarReel({
   hablar = decirGemini,
   // La entrada animada de cada placa (reels/animacion.mjs). REELS_ANIMADOS=no la apaga y todo sale con la placa quieta, como antes.
   animar = process.env.REELS_ANIMADOS !== 'no',
+  // Una escena animada entera (reels/escenas/): si viene, reemplaza a la entrada de la placa y se mueve durante toda la pieza.
+  escena = null,
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);
@@ -227,7 +241,14 @@ export async function armarReel({
   const dosPlacas = Boolean(png2 && corte);
   // La entrada animada de cada placa y, encima, la barra de avance (8/10/2026). Si algo falla, la pieza sigue con la placa quieta.
   let base = null;
-  if (animar && partirSvg(svg) && (!dosPlacas || partirSvg(svg2))) {
+  if (animar && escena) {
+    try {
+      base = await armarBaseDeEscena({ nombre, escena, total, dir });
+    } catch (e) {
+      console.log(`  (la escena de ${nombre} no se pudo armar y sale con la placa quieta: ${String(e.message).slice(0, 120)})`);
+      base = null;
+    }
+  } else if (animar && partirSvg(svg) && (!dosPlacas || partirSvg(svg2))) {
     try {
       base = await armarBaseAnimada({
         nombre, total, dir,

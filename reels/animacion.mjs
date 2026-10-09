@@ -151,3 +151,22 @@ export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio 
   }
   return n;
 }
+
+/**
+ * Dibuja una ESCENA entera (reels/escenas/): un cuadro por cada 1/fps de segundo durante toda la pieza, como imágenes numeradas
+ * (`<prefijo>0000.png`…). Devuelve cuántos son. A diferencia de la entrada de una placa, acá se mueve también el fondo todo el tiempo.
+ */
+export async function renderizarEscena(escena, dir, prefijo, { duracion, ancho = 1080 } = {}) {
+  const { Resvg } = await import('@resvg/resvg-js');
+  fs.mkdirSync(dir, { recursive: true });
+  const propias = archivosDeFuente();
+  const n = Math.ceil(duracion * escena.fps) + 1;
+  for (let i = 0; i < n; i += 1) {
+    const r = new Resvg(escena.cuadro(i / escena.fps, duracion), {
+      fitTo: { mode: 'width', value: ancho },
+      font: { fontFiles: propias, loadSystemFonts: propias.length === 0, defaultFontFamily: 'Inter' },
+    });
+    fs.writeFileSync(path.join(dir, `${prefijo}${String(i).padStart(4, '0')}.png`), r.render().asPng());
+  }
+  return n;
+}
