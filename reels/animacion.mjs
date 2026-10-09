@@ -137,7 +137,7 @@ export function placaEn(partida, t, { anio = new Date().getFullYear() } = {}) {
  * Dibuja los cuadros de la entrada de una placa como imágenes numeradas (`<prefijo>000.png`…) y devuelve cuántos son. La última queda
  * igual a la placa quieta. Lanza si el conversor no está o la placa no se puede partir: quien llama sigue con la placa quieta.
  */
-export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio = new Date().getFullYear() } = {}) {
+export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio = new Date().getFullYear(), poster = false } = {}) {
   const partida = partirSvg(svg);
   if (!partida) throw new Error('la placa no se puede animar');
   const { Resvg } = await import('@resvg/resvg-js');
@@ -145,7 +145,9 @@ export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio 
   const propias = archivosDeFuente();
   const n = cuadrosDeLaEntrada(partida);
   for (let i = 0; i < n; i += 1) {
-    const r = new Resvg(placaEn(partida, i / FPS, { anio }), {
+    // El primer cuadro de un video es la portada que muestran Facebook e Instagram: si fuera el papel vacío antes de que entre el contenido, el Reel se ve
+    // en blanco en la grilla (9/10). Con `poster`, el cuadro 0 es la placa ya entrada (dura 50 ms) y la entrada sigue desde el 1.
+    const r = new Resvg(placaEn(partida, poster && i === 0 ? n / FPS + 5 : i / FPS, { anio }), {
       fitTo: { mode: 'width', value: ancho },
       font: { fontFiles: propias, loadSystemFonts: propias.length === 0, defaultFontFamily: 'Inter' },
     });
@@ -158,7 +160,7 @@ export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio 
  * Dibuja una ESCENA entera (reels/escenas/): un cuadro por cada 1/fps de segundo durante toda la pieza, como imágenes numeradas
  * (`<prefijo>0000.png`…). Devuelve cuántos son. A diferencia de la entrada de una placa, acá se mueve también el fondo todo el tiempo.
  */
-export async function renderizarEscena(escena, dir, prefijo, { duracion, ancho = 1080, obreros = null } = {}) {
+export async function renderizarEscena(escena, dir, prefijo, { duracion, ancho = 1080, obreros = null, poster = true } = {}) {
   fs.mkdirSync(dir, { recursive: true });
   const n = Math.ceil(duracion * escena.fps) + 1;
   // El SVG de cada cuadro se arma acá (es barato) y el dibujo (lo caro) se reparte entre los núcleos (9/10/2026).
@@ -166,6 +168,8 @@ export async function renderizarEscena(escena, dir, prefijo, { duracion, ancho =
   for (let i = 0; i < n; i += 1) {
     cuadros.push({ svg: escena.cuadro(i / escena.fps, duracion), archivo: path.join(dir, `${prefijo}${String(i).padStart(4, '0')}.png`) });
   }
+  // El primer cuadro es la portada del Reel en Facebook e Instagram: la escena ya compuesta, no el papel vacío (9/10).
+  if (poster && cuadros.length > 1) cuadros[0].svg = escena.cuadro(Math.min(8, duracion), duracion);
   const cuantos = Math.max(1, Math.min(obreros ?? os.availableParallelism(), 8));
   const grupos = Array.from({ length: cuantos }, () => []);
   cuadros.forEach((c, i) => grupos[i % cuantos].push(c));

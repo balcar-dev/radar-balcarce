@@ -58,7 +58,7 @@ export function FilaConMiniatura({ nota }) {
   return (
     <div className="fila-nota fila-miniatura">
       <a href={nota.ruta} className="miniatura" tabIndex={-1} aria-hidden="true">
-        {foto ? <img src={urlDeFoto(foto.archivo)} alt="" width={240} height={180} loading="lazy" decoding="async" /> : <span className="sin-foto" />}
+        {foto ? <img src={urlDeFoto(foto.archivo)} alt="" width={240} height={180} loading="lazy" decoding="async" /> : <PlacaSeccion seccion={nota.seccion} chica />}
       </a>
       <div style={{ flexGrow: 1, minWidth: 0 }}>
         <div className="chapa-nota"><Etiqueta seccion={nota.seccion} /><CuandoNota nota={nota} /></div>

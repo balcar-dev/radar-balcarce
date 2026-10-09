@@ -110,3 +110,20 @@ test('en las placas de verdad, el clima de la mañana y la efeméride tienen su 
   const e = partirSvg(PLACAS.efemeride());
   assert.equal(clasificar(e.hijos).filter((c) => comoContador(c.h)).length, 1);
 });
+
+// La portada del Reel (9/10/2026): Facebook e Instagram muestran el primer cuadro del video; si fuera el papel vacío, el Reel se ve en blanco en la grilla.
+test('el primer cuadro del video es la pieza ya compuesta (la portada), no el papel vacío', async () => {
+  const { default: fs } = await import('node:fs');
+  const { default: os } = await import('node:os');
+  const { default: path } = await import('node:path');
+  const { placaFarmacia } = await import('../reels/placa.mjs');
+  const { renderizarEntrada, cuadrosDeLaEntrada, partirSvg } = await import('../reels/animacion.mjs');
+  const svg = placaFarmacia({ detalle: [{ nombre: 'Norte', direccion: 'Calle 15 esquina 8', telefono: '42-4656' }], farmacias: ['NORTE'], dia: 9, diaSemana: 'VIERNES', mes: 10, hasta: 'De turno hasta mañana a las 8:30.' });
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'portada-'));
+  const n = await renderizarEntrada(svg, dir, 'p-', { poster: true });
+  assert.equal(n, cuadrosDeLaEntrada(partirSvg(svg)));
+  const lee = (i) => fs.readFileSync(path.join(dir, `p-${String(i).padStart(3, '0')}.png`));
+  assert.ok(lee(0).equals(lee(n - 1)), 'el cuadro 0 es la placa ya entrada, igual al último');
+  assert.ok(!lee(0).equals(lee(1)), 'y el 1 vuelve a empezar la entrada');
+  fs.rmSync(dir, { recursive: true, force: true });
+});

@@ -124,7 +124,7 @@ async function armarBaseAnimada({ nombre, placas, total, dir }) {
     const { svg, png, desde } = placas[i];
     const largo = (placas[i + 1]?.desde ?? total) - desde;
     const prefijo = `${nombre}-a${i}-`;
-    const hechos = await renderizarEntrada(svg, dir, prefijo);
+    const hechos = await renderizarEntrada(svg, dir, prefijo, { poster: i === 0 });
     const usados = Math.max(1, Math.min(hechos, Math.floor(largo * FPS)));
     entradas.push('-framerate', String(FPS), '-t', (usados / FPS).toFixed(3), '-i', `${prefijo}%03d.png`);
     trozos.push(`[${trozos.length}:v]`);
