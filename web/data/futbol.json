@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-09T19:27:22.311Z",
+ "consultado": "2026-10-09T21:02:38.282Z",
  "equipos": [
   "9739",
   "3",
@@ -678,8 +678,8 @@
     "id": "401841609",
     "competencia": "liga",
     "inicio": "2026-10-09T21:00:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "2'",
     "local": {
      "id": "9",
      "nombre": "Gimnasia La Plata",
@@ -1523,7 +1523,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-09T19:27:22.311Z",
+ "tablaCuando": "2026-10-09T21:02:38.282Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",

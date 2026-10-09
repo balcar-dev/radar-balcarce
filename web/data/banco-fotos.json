@@ -10037,13 +10037,16 @@
   "cuando": "2026-10-08T15:40:11.274Z"
  },
  "170rgay": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/170rgay.jpg",
+  "medio": "iProfesional",
+  "credito": "Foto: iProfesional",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Marcas internacionales de indumentaria abren locales en el país",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-08T17:37:53.930Z",
-  "intentos": 2,
-  "fuentes": 3
+  "enlace": "https://www.iprofesional.com/actualidad/466200-tres-marcas-internacionales-llegan-a-un-shopping-con-40-de-descuento",
+  "imagenOriginal": "https://resizer.iproimg.com/unsafe/1280x720/assets.iprofesional.com/assets/jpg/2026/10/627213_landscape.jpg",
+  "razon": "La foto A muestra claramente el local comercial con excelente nitidez, sin marcas de agua ni personas que dificulten la visualización.",
+  "cuando": "2026-10-09T21:01:53.663Z"
  },
  "vnuraj": {
   "archivo": "fotos-notas/vnuraj.jpg",
@@ -11297,5 +11300,17 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/10/09/Y5Tz-mnr2_2000x1500__1.jpg",
   "razon": "La foto A muestra claramente al orador principal en primer plano con buena nitidez, sin marcas de agua ni menores.",
   "cuando": "2026-10-09T20:32:06.249Z"
+ },
+ "hx00ak": {
+  "archivo": "fotos-notas/hx00ak.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Legislatura aprueba cambios en la ley de tránsito bonaerense",
+  "enlace": "https://www.eldia.com/la-ciudad/la-provincia-modifico-la-ley-de-transito-uno-por-uno-los-cambios-con-impacto-en-la-plata-la-ciudad_1791546240",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1791548714417.jpg?&cw=1200&ch=630",
+  "razon": "Es la foto más clara y de mejor calidad que ilustra adecuadamente la temática de tránsito sin marcas superpuestas ni menores de edad.",
+  "cuando": "2026-10-09T21:01:53.663Z"
  }
 }
