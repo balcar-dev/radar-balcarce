@@ -5,6 +5,8 @@ cosa está en [`PRIORIDADES.md`](PRIORIDADES.md) (la lista en orden, con lo hech
 marcado ✔ cuando está hecho). Todo lo de este documento ya está subido a `main`.*
 
 > **Mapa por frentes y etapas (8/10, noche): [`PLAN-INTEGRAL.md`](PLAN-INTEGRAL.md).**
+>
+> **Pendientes consolidados (9/10): [`PENDIENTES-AL-9-10.md`](PENDIENTES-AL-9-10.md)** (lo hecho, lo que Claude puede hacer solo, lo que necesita a Hernán y Andrés, riesgos y documentos viejos). Desde el 9/10 las piezas de todos los días salen con su escena animada (regla 157).
 
 ## Cómo arrancar en la PC
 
