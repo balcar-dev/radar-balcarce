@@ -11015,8 +11015,8 @@
   "origen": "ninguna",
   "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
   "razon": "sin fotos para comparar",
-  "cuando": "2026-10-09T16:32:21.474Z",
-  "intentos": 2,
+  "cuando": "2026-10-09T17:33:08.501Z",
+  "intentos": 3,
   "fuentes": 1
  },
  "1d75c0g": {
@@ -11098,13 +11098,16 @@
   "cuando": "2026-10-09T16:32:21.474Z"
  },
  "1i5839k": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1i5839k.jpg",
+  "medio": "El Economista",
+  "credito": "Foto: El Economista",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Gobierno aprueba el proyecto petrolero Los Toldos bajo el régimen de incentivos",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-09T16:32:21.474Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://eleconomista.com.ar/energia/los-toldos-luz-verde-megaproyecto-petrolero-us6432-millones-n98753",
+  "imagenOriginal": "https://statics.eleconomista.com.ar/2026/03/69b8780ac0213.jpg",
+  "razon": "La foto B ilustra directamente el proyecto petrolero y no tiene marcas de agua ni menores, a diferencia de la A que tiene marca de Noticias Argentinas.",
+  "cuando": "2026-10-09T17:33:08.501Z"
  },
  "1u383pj": {
   "archivo": "fotos-notas/1u383pj.jpg",
@@ -11130,5 +11133,62 @@
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%C3%81guila%2C_escultura_de_Virginia_Aparicio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Virginia Aparicio\" de Wikimedia Commons (CC BY-SA 4.0).",
   "cuando": "2026-10-09T17:02:39.028Z"
+ },
+ "u6j4ho": {
+  "archivo": "fotos-notas/u6j4ho.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Sergio Aranaga analiza el empleo local y no descarta postularse",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66011.png",
+  "razon": "Es la única opción disponible, posee buena nitidez, retrato claro sin marcas ni menores.",
+  "cuando": "2026-10-09T17:33:08.501Z"
+ },
+ "aqy95q": {
+  "archivo": "fotos-notas/aqy95q.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
+  "enlace": "https://www.radiogabal.com.ar/index.php/politica/soberania-y-la-propiedad-de-la-tierra-en-debate-en-el-concejo-deliberante",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Concejo_Sesion_8_10.jpeg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y encuadre del recinto, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-09T17:33:08.501Z"
+ },
+ "liqt9r": {
+  "archivo": "fotos-notas/liqt9r.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "WhatsApp incorpora la velocidad de 2x para reproducir los videos en los Estados",
+  "enlace": "https://www.lanueva.com/nota/2026-10-9-14-13-0-whatsapp-prepara-una-nueva-funcion-en-los-estados-como-funcionara-la-reproduccion-en-2x",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791566113836.jpg?&cw=600&ch=365",
+  "razon": "La foto B ilustra específicamente la función de velocidad 2x en los estados de WhatsApp sin tener marcas de agua agregadas por el medio.",
+  "cuando": "2026-10-09T17:33:08.501Z"
+ },
+ "c9d4ip": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "APTRA anuncia los nominados al Martín Fierro de Radio 2026",
+  "razon": "Muestra claramente al orador principal en el evento con buena nitidez y sin marcas de agua ni menores.",
+  "cuando": "2026-10-09T17:33:08.501Z",
+  "intentos": 1,
+  "fuentes": 11
+ },
+ "1rghsb2": {
+  "archivo": "fotos-notas/1rghsb2.jpg",
+  "medio": "La Noticia 1",
+  "credito": "Foto: La Noticia 1",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Sociedad Rural de San Pedro emite alerta por la crecida del río Paraná",
+  "enlace": "https://www.lanoticia1.com/noticia/la-sociedad-rural-de-san-pedro-en-alerta-por-crecida-del-rio-parana",
+  "imagenOriginal": "https://cdnartic.ar/V8vlVdGgWmi5F4ofA-1T0Zgf8Yo=/1200x630/smart/filters:format(jpeg):quality(70)/https://lanoticia1cdn.eleco.com.ar/media/2026/10/crecida_parana.webp",
+  "razon": "La foto A muestra una vista aérea clara de la zona afectada por la crecida sin personas ni marcas de agua.",
+  "cuando": "2026-10-09T17:33:08.501Z"
  }
 }

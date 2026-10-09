@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T17:03:44.396Z",
- "portada": 55,
- "archivo": 869,
- "esperandoCuerpo": 9,
+ "generado": "2026-10-09T17:35:22.548Z",
+ "portada": 59,
+ "archivo": 874,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-09T17:03:44.433Z",
+  "generado": "2026-10-09T17:35:22.588Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 52,
     "notas": [
      {
       "id": "14mxql1",
@@ -139,13 +139,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "jul3en",
-      "titulo": "Virginia Aparicio expone en el Concejo Deliberante",
+      "id": "aqy95q",
+      "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
       "seccion": "Balcarce"
      },
      {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "id": "18jx7kk",
+      "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
       "seccion": "Agro"
      }
     ]
@@ -175,9 +175,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      }
     ]
    }
@@ -198,15 +198,14 @@
      "id": "18jx7kk",
      "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
      "cuando": "2026-10-09T15:35:02.449Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "14mxql1",
      "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
-     "seccion": "Deportes",
-     "marcada": false
-    },
+     "cuando": "2026-10-09T17:05:23.621Z"
+    }
+   ],
+   "cola": [
     {
      "id": "2qmh95",
      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
@@ -220,14 +219,20 @@
      "marcada": false
     },
     {
+     "id": "aqy95q",
+     "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
      "id": "1y9462t",
      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
      "seccion": "Balcarce",
      "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-09T17:05:02.449Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-09T18:35:23.621Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

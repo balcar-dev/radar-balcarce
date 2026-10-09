@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T17:03:44.396Z",
+ "generado": "2026-10-09T17:35:22.548Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -22,23 +22,6 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "vmuzu3",
-   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
-   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
-   "seccion": "Policiales",
-   "fecha": "2026-10-09T14:18:32.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
-     "fecha": "2026-10-09T14:18:32.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
    "maximo": 3
   },
   {
@@ -76,7 +59,7 @@
     {
      "medio": "El Día",
      "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
-     "fecha": "2026-10-09T05:55:55.000Z"
+     "fecha": "2026-10-09T05:55:00.000Z"
     },
     {
      "medio": "El Marplatense",
@@ -99,103 +82,21 @@
    "maximo": 5
   },
   {
-   "id": "1l98x2s",
-   "titulo": "Hora, TV y formaciones: Boca visita a Instituto de Córdoba en busca de trepar a lo más alto en la tabla anual",
-   "copete": "Boca se medirá con Instituto en Córdoba por la duodécima fecha de la Zona A del Torneo Clausura 2026 de la Liga Profesional. El partido comenzará a las 19:30 en el Estadio Juan Domingo Perón, será transmitido por TNT Sports y tendrá a Leandro Rey Hilfer como árbitro, acompañado…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-09T08:00:21.000Z",
+   "id": "vmuzu3",
+   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
+   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
+   "seccion": "Policiales",
+   "fecha": "2026-10-09T14:18:32.000Z",
    "fuentes": [
     {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-9-5-0-21-hora-tv-y-formaciones-boca-visita-a-instituto-de-cordoba-en-busca-de-trepar-a-lo-mas-alto-en-la-tabla-anual",
-     "fecha": "2026-10-09T08:00:21.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/boca-juniors/chance-unica-boca-tabla-anual-visita-instituto_0_z5vopwOcEX.html",
-     "fecha": "2026-10-09T13:42:25.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/deportes/boca-y-una-visita-clave-a-instituto-de-cordoba-para-trepar-a-lo-mas-alto-en-la-tabla-anual_a6ac78d4f5319d0dbc2735aa2",
-     "fecha": "2026-10-09T09:12:35.000Z"
-    },
-    {
-     "medio": "Doble Amarilla",
-     "enlace": "https://www.dobleamarilla.com.ar/liga-/boca-visita-a-instituto-en-cordoba--buscando-llegar-a-la-cima-de-la-tabla-anual-y-con-rotacion-pensando-en-la-sudamericana_a6ac7dfbf1eb9026484acc51e",
-     "fecha": "2026-10-09T10:48:16.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/boca-y-una-visita-clave-a-instituto-de-cordoba-para-trepar-a-lo-mas-alto-en-la-tabla-anual/",
-     "fecha": "2026-10-09T10:30:28.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 97 palabras",
-   "maximo": 4
-  },
-  {
-   "id": "c9d4ip",
-   "titulo": "Quiénes son los nominados al Martín Fierro de Radio 2026",
-   "copete": "Se dieron a conocer hoy los nominados a los Martín Fierro de Radio 2026 , que entrega la Asociación de Periodistas de la Televisión y la Radiofonía Argentinas (Aptra) en las 32 categorías que se premiarán en relación a las producciones de 2025/2026. La ceremonia se realizará el…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-09T12:22:12.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/09/quienes-son-los-nominados-al-martin-fierro-de-radio-2026/",
-     "fecha": "2026-10-09T12:22:12.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/radio/martin-fierro-de-radio-2026-quienes-son-los-nominados-nid09102026/",
-     "fecha": "2026-10-09T14:29:41.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/espectaculos/premios-martin-fierro-de-radio-2026-lista-completa-de-nominados-y-detalles-de-la-ceremonia",
-     "fecha": "2026-10-09T15:19:52.000Z"
-    },
-    {
-     "medio": "LU9 Mar del Plata",
-     "enlace": "https://www.lu9mardelplata.com.ar/martin-fierro-de-radio-2026-aptra-confirmo-los-nominados-y-los-detalles-de-la-ceremonia",
-     "fecha": "2026-10-09T15:46:03.000Z"
-    },
-    {
-     "medio": "Ecos Diarios (Necochea)",
-     "enlace": "https://elecos.com.ar/luis-ventura-anuncio-los-nominados-a-los-premios-martin-fierro-de-radio-2026",
-     "fecha": "2026-10-09T15:31:22.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/ratingcero/martin-fierro-radio-2026-se-conocio-la-lista-completa-nominados-n251189",
-     "fecha": "2026-10-09T15:15:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/luis-ventura-paso-por-el-pase-y-anuncio-a-los-candidatos-de-los-martin-fierro-de-radio-hay-que-preparar-la-cara/",
-     "fecha": "2026-10-09T14:13:55.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/espectaculos/jonatan-viale--baby-etchecopar-y-nelson-castro--nominados-en-los-martin-fierro-de-radio-2026_a6ac8ee018e24c1a50accee35",
-     "fecha": "2026-10-09T13:47:00.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/martin-fierro-radio-2026-luis-ventura-anuncio-las-nominaciones-y-confirmo-los-detalles-la-gala-n1604828",
-     "fecha": "2026-10-09T12:25:00.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/se-conocieron-los-nominados-a-los-martin-fierro-de-radio-2026-quienes-son-los-candidatos-de-radio-mitre/",
-     "fecha": "2026-10-09T12:46:55.000Z"
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
+     "fecha": "2026-10-09T14:18:32.000Z"
     }
    ],
    "intentos": 3,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"martin\", \"fierro\" y el cuerpo no los explica; sin esas oraciones quedan 87 palabras",
-   "maximo": 5
+   "motivo": "sin material",
+   "maximo": 3
   },
   {
    "id": "s67kgm",
@@ -244,7 +145,7 @@
   {
    "id": "1cnk2r1",
    "titulo": "Despues de 20 años, un total de 76 familias de Balcarce recibirán sus escrituras",
-   "copete": "",
+   "copete": "El acto se realizará en el hall de la Municipalidad, en principio. Participarán vecinos del barrio Favaloro, familias del barrio Hipólito Yrigoyen y los primeros beneficiarios del loteo municipal de 31 y Caseros, cuyos terrenos fueron vendidos en 2023.",
    "seccion": "Balcarce",
    "fecha": "2026-10-09T14:31:49.247Z",
    "fuentes": [
@@ -271,7 +172,7 @@
      "fecha": "2026-10-09T16:45:00.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "sin material",
    "maximo": 3
   }
