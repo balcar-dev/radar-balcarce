@@ -683,6 +683,11 @@
   "ultimo": "2026-10-08T03:01:34.257Z",
   "motivo": "con cuerpo"
  },
+ "1e8rdd4": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T22:01:50.067Z",
+  "motivo": "título o bajada: 3 problemas (numero): el titulo dice 17 y la fuente no lo dice"
+ },
  "1eed4ho": {
   "intentos": 1,
   "ultimo": "2026-10-06T20:32:07.564Z",
@@ -704,9 +709,9 @@
   "motivo": "con cuerpo"
  },
  "1fb9s8v": {
-  "intentos": 3,
-  "ultimo": "2026-10-09T21:01:42.983Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 100 palabras"
+  "intentos": 4,
+  "ultimo": "2026-10-09T22:01:50.067Z",
+  "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 93 palabras"
  },
  "1fhe1n3": {
   "intentos": 2,
@@ -1395,11 +1400,6 @@
   "ultimo": "2026-10-04T10:31:20.690Z",
   "motivo": "con cuerpo"
  },
- "1vbxjbh": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T22:01:25.089Z",
-  "motivo": "con cuerpo"
- },
  "1vnue0q": {
   "intentos": 1,
   "ultimo": "2026-10-05T15:31:39.763Z",
@@ -1670,11 +1670,6 @@
   "intentos": 1,
   "ultimo": "2026-10-09T14:01:45.240Z",
   "motivo": "con cuerpo"
- },
- "5cxrkh": {
-  "intentos": 4,
-  "ultimo": "2026-10-02T22:01:25.089Z",
-  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 33 palabras"
  },
  "5e10lb": {
   "intentos": 1,
@@ -2275,11 +2270,6 @@
   "ultimo": "2026-10-09T15:31:56.968Z",
   "motivo": "con cuerpo"
  },
- "kg0imu": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T22:01:25.089Z",
-  "motivo": "con cuerpo"
- },
  "kp99r6": {
   "intentos": 1,
   "ultimo": "2026-10-07T18:31:37.567Z",
@@ -2418,6 +2408,13 @@
   "intentos": 1,
   "ultimo": "2026-10-06T15:32:07.472Z",
   "motivo": "con cuerpo"
+ },
+ "nwcpi7": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T22:01:50.067Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "o0t9h2": {
   "intentos": 2,

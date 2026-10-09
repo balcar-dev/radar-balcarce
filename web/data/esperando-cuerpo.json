@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T21:32:10.266Z",
+ "generado": "2026-10-09T22:02:12.774Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -23,6 +23,43 @@
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
    "maximo": 3
+  },
+  {
+   "id": "1fb9s8v",
+   "titulo": "Solo tres provincias en todo el país lograron aumentar el empleo industrial en los últimos dos años",
+   "copete": "El empleo registrado en la industria manufacturera cayó 5,2% en el primer trimestre de 2026 en comparación con el mismo período de 2024, lo que representó la pérdida de 66.262 puestos de trabajo en todo el país. En ese lapso, solo tres provincias lograron incrementar la cantidad…",
+   "seccion": "Economía",
+   "fecha": "2026-10-09T13:00:33.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/economia/2026/10/09/solo-tres-provincias-en-todo-el-pais-lograron-aumentar-el-empleo-industrial-en-los-ultimos-dos-anos/",
+     "fecha": "2026-10-09T13:00:33.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/se-perdieron-mas-de-66-mil-puestos-de-trabajo-industrial-entre-todas-las-provincias",
+     "fecha": "2026-10-09T21:12:07.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/economia/industria-perdio-66-262-empleos-llegada-milei-provincias-afectadas-202610914562",
+     "fecha": "2026-10-09T17:56:02.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/empleo-industrial--se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-y-solo-3-lograron-aumentar-la-cantidad_a6ac92902587f18d752035eca",
+     "fecha": "2026-10-09T18:55:38.129Z"
+    },
+    {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/09/empleo-industrial-se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-n524677/",
+     "fecha": "2026-10-09T19:59:52.000Z"
+    }
+   ],
+   "intentos": 4,
+   "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 93 palabras",
+   "maximo": 4
   },
   {
    "id": "n9eggk",
@@ -61,7 +98,7 @@
   {
    "id": "fadug2",
    "titulo": "La FIA admite un \"error humano\" que perjudicó a varios pilotos en la SQ1 de Singapur",
-   "copete": "La FIA emitió un comunicado pocas horas después de la clasificación al sprint del Gran Premio de Singapur para explicar uno de los incidentes que marcó la SQ1. Más allá de los problemas de cronometraje que obligaron a retrasar el inicio de la SQ2, el organismo rector reconoció…",
+   "copete": "La FIA quedó nuevamente bajo la lupa en la Fórmula 1 después de reconocer un error humano que alteró las condiciones de clasificación para la carrera sprint del Gran Premio de Singapur. La falla se produjo durante la SQ1 y afectó el rendimiento de varios monoplazas, entre ellos…",
    "seccion": "Automovilismo",
    "fecha": "2026-10-09T14:19:55.000Z",
    "fuentes": [
@@ -78,6 +115,38 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "1e8rdd4",
+   "titulo": "El dólar cerró la semana con una leve suba y escaló hasta los $1.517",
+   "copete": "Buenos Aires, 9 octubre (NA) -- En medio de una semana marcada por la apreciación que registró el real, luego de la victoria electoral del senador Flávio Bolsonaro en Brasil, el dólar mayorista culminó la semana con una leve suba, que lo llevó a cerrar en los $1.517. Según supo…",
+   "seccion": "Economía",
+   "fecha": "2026-10-09T20:03:17.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-dolar-cerro-la-semana-con-una-leve-suba-y-escalo-hasta-los--1-517_a6ac94524587f18d752090951",
+     "fecha": "2026-10-09T20:03:17.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/economia/el-dolar-mayorista-escalo-a-1517-pesos",
+     "fecha": "2026-10-09T21:13:25.000Z"
+    },
+    {
+     "medio": "La Voz del Pueblo",
+     "enlace": "https://lavozdelpueblo.com.ar/el-dolar-mayorista-cerro-la-semana-en-1517-pesos-tras-un-leve-incremento",
+     "fecha": "2026-10-09T20:41:02.000Z"
+    },
+    {
+     "medio": "InfoRegión",
+     "enlace": "https://www.inforegion.com.ar/2026/10/09/el-dolar-mayorista-cerro-la-semana-en-1-517-y-registro-una-leve-suba/",
+     "fecha": "2026-10-09T20:16:25.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 3 problemas (numero): el titulo dice 17 y la fuente no lo dice",
    "maximo": 3
   },
   {
@@ -105,38 +174,6 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el copete dice 4 y la fuente no lo dice",
-   "maximo": 3
-  },
-  {
-   "id": "1fb9s8v",
-   "titulo": "Solo tres provincias en todo el país lograron aumentar el empleo industrial en los últimos dos años",
-   "copete": "El empleo registrado en la industria manufacturera cayó 5,2% en el primer trimestre de 2026 en comparación con el mismo período de 2024, lo que representó la pérdida de 66.262 puestos de trabajo en todo el país. En ese lapso, solo tres provincias lograron incrementar la cantidad…",
-   "seccion": "Economía",
-   "fecha": "2026-10-09T13:00:33.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/09/solo-tres-provincias-en-todo-el-pais-lograron-aumentar-el-empleo-industrial-en-los-ultimos-dos-anos/",
-     "fecha": "2026-10-09T13:00:33.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/economia/industria-perdio-66-262-empleos-llegada-milei-provincias-afectadas-202610914562",
-     "fecha": "2026-10-09T17:56:02.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/empleo-industrial--se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-y-solo-3-lograron-aumentar-la-cantidad_a6ac92902587f18d752035eca",
-     "fecha": "2026-10-09T18:55:38.129Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/09/empleo-industrial-se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-n524677/",
-     "fecha": "2026-10-09T19:59:52.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 100 palabras",
    "maximo": 3
   },
   {
