@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T10:01:45.369Z",
- "portada": 44,
- "archivo": 840,
+ "generado": "2026-10-09T10:32:07.996Z",
+ "portada": 46,
+ "archivo": 843,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-09T10:01:45.398Z",
+  "generado": "2026-10-09T10:32:08.046Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-09T10:04:28.344Z"
    },
    {
     "nombre": "efemeride",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
+     {
+      "id": "w8iv0l",
+      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
+      "seccion": "Deportes"
+     },
      {
       "id": "ypnvl8",
       "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
      },
      {
       "id": "6vefne",
@@ -126,11 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 50,
     "notas": [
      {
-      "id": "bcq9u5",
-      "titulo": "Genneia inaugura parque solar en San Juan tras invertir 110 millones",
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
       "seccion": "Economía"
      },
      {
@@ -157,8 +157,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 30,
+    "notas": [
+     {
+      "id": "10znf8w",
+      "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1bb4gv8",
+      "titulo": "Atletas locales suman cinco triunfos en Mar del Plata",
+      "seccion": "Deportes"
+     }
+    ]
    }
   ],
   "facebook": {
