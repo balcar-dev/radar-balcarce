@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T08:31:50.437Z",
+  "generado": "2026-10-09T09:01:45.093Z",
   "notas": [
     {
       "id": "1bb4gv8",
@@ -352,7 +352,11 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "ypf-adquiere-la-totalidad-de-las-acciones-de-ypf-luz-por-430-millones"
+      "slug": "ypf-adquiere-la-totalidad-de-las-acciones-de-ypf-luz-por-430-millones",
+      "foto": {
+        "archivo": "fotos-notas/1wv2vgs.jpg",
+        "credito": "Foto: iProfesional"
+      }
     },
     {
       "id": "5ffwsk",
@@ -738,7 +742,7 @@
       "fecha": "2026-10-08T20:57:54.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T07:01:38.741Z",
-      "relevancia": 43,
+      "relevancia": 36,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -806,7 +810,7 @@
       "fecha": "2026-10-08T20:51:59.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T23:01:41.431Z",
-      "relevancia": 69,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1240,12 +1244,12 @@
         "El Día",
         "La Nueva",
         "Letra P",
-        "La Verdad",
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobae",
         "Clarín",
-        "Perfil"
+        "Perfil",
+        "La Verdad"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/10/08/rechazaron-el-intento-de-maximo-y-florencia-kirchner-por-evitar-que-sus-bienes-sean-decomisados-en-la-causa-vialidad/",
       "teniaImagenLaFuente": true,
@@ -1605,9 +1609,9 @@
       "guion": "ANSES confirma el pago del aguinaldo de Reparación Histórica",
       "seccion": "Economía",
       "medios": [
-        "Ámbito",
         "Perfil",
         "Canal 26",
+        "Ámbito",
         "Clarín"
       ],
       "enlace": "https://www.perfil.com/noticias/economia/anses-que-es-el-a35-aguinaldo-reparacion-historica-y-quienes-lo-cobraran-en-diciembre.phtml",
@@ -1802,9 +1806,9 @@
         "Noticias Argentinas (NA)",
         "La Nueva",
         "0221",
-        "Doble Amarilla",
-        "Bolavip Argentina",
         "El Día",
+        "Bolavip Argentina",
+        "Doble Amarilla",
         "El Gráfico",
         "La Capital (Rosario)"
       ],
@@ -1908,6 +1912,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Capital (Rosario)",
+        "Bolavip Argentina",
         "El Día"
       ],
       "enlace": "https://www.lacapital.com.ar/ovacion/perdi-el-amor-el-futbol-argentino-la-critica-tagliafico-la-liga-profesional-n10285581.html",
@@ -2062,7 +2067,6 @@
         "Minuto Uno",
         "Ámbito",
         "TN (Todo Noticias)",
-        "El Cronista",
         "El Destape",
         "Crónica",
         "Diario Popular",
@@ -2070,6 +2074,7 @@
         "El Eco de Tandil",
         "Infobae",
         "La Nación",
+        "El Cronista",
         "Página/12",
         "C5N",
         "Perfil",
@@ -2789,7 +2794,6 @@
         "La Noticia 1",
         "Diputados Bonaerenses",
         "TN (Todo Noticias)",
-        "Clarín",
         "0221",
         "La Tecla",
         "El Marplatense",
@@ -2797,7 +2801,7 @@
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "El Eco de Tandil",
-        "La Voz del Pueblo",
+        "Clarín",
         "El Cronista",
         "A24",
         "TyC Sports",
@@ -2894,9 +2898,9 @@
       "guion": "Argentina celebra el Día del Trabajador Rural",
       "seccion": "Agro",
       "medios": [
-        "Infocampo",
         "Perfil",
         "La Nación",
+        "Infocampo",
         "La Voz del Pueblo",
         "Noticias Agropecuarias"
       ],
@@ -2905,7 +2909,7 @@
       "fecha": "2026-10-08T10:03:45.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T14:01:09.593Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3656,7 +3660,7 @@
       "fecha": "2026-10-08T03:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 96,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3762,6 +3766,7 @@
         "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
+        "El Destape",
         "iProfesional",
         "C5N",
         "Crónica",
@@ -4119,8 +4124,8 @@
       "temp": 9,
       "sensacion": 6,
       "humedad": 89,
-      "viento": 14,
-      "rumbo": "S",
+      "viento": 15,
+      "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": false
     },
@@ -4468,6 +4473,12 @@
   },
   "pendientes": [
     {
+      "id": "11yxcy2",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
       "id": "1s8ckrw",
       "titulo": null,
       "seccion": "Deportes",
@@ -4508,12 +4519,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "1fl6540",
-      "titulo": "El Colegio de Médicos denunció precariedad laboral y…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "skjezu",
@@ -4564,10 +4569,22 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "uriwx3",
+      "titulo": "Sebastián Driussi y Francisco Ortega tienen una sobrecarga…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "14wsi7n",
       "titulo": "Juicio contra Aníbal Lotocki: el cirujano declarará por…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1fl6540",
+      "titulo": "El Colegio de Médicos denunció precariedad laboral y…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "emxfi0",
@@ -4586,6 +4603,12 @@
       "titulo": "Denuncian a Alejandro Mancuso por vender licencias de DT…",
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "7afp6h",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "13wfgz4",
@@ -4628,6 +4651,12 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "vx7am0",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     }
   ],
   "esperandoCuerpo": 2

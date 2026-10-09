@@ -10231,9 +10231,7 @@
   "cuando": "2026-10-08T18:33:48.525Z"
  },
  "11yxcy2": {
-  "archivo": "fotos-notas/11yxcy2.jpg",
   "medio": "Wikimedia Commons",
-  "credito": "Foto: Gaetano Gallino / Wikimedia Commons (Public domain)",
   "licencia": "Public domain",
   "autor": "Gaetano Gallino",
   "origen": "wikimedia",
@@ -10241,7 +10239,9 @@
   "enlace": "https://commons.wikimedia.org/wiki/File:Juli%C3%A1n_%C3%81lvarez.jpg",
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Juli%C3%A1n_%C3%81lvarez.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Julián Álvarez\" de Wikimedia Commons (Public domain).",
-  "cuando": "2026-10-08T19:03:10.837Z"
+  "cuando": "2026-10-08T19:03:10.837Z",
+  "intentado": true,
+  "borrada": true
  },
  "19k7tmn": {
   "medio": "Infobae",
@@ -10570,13 +10570,16 @@
   "cuando": "2026-10-09T00:02:19.214Z"
  },
  "1wv2vgs": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1wv2vgs.jpg",
+  "medio": "iProfesional",
+  "credito": "Foto: iProfesional",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "YPF adquiere la totalidad de las acciones de YPF Luz por 430 millones de dólares",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T02:32:10.197Z",
-  "intentos": 3,
-  "fuentes": 3
+  "enlace": "https://www.iprofesional.com/energia/466246-ypf-se-queda-con-el-100-de-su-empresa-de-energia-electrica-tras-una-inversion-de-us430-m",
+  "imagenOriginal": "https://resizer.iproimg.com/unsafe/1280x720/assets.iprofesional.com/assets/jpg/2025/09/603204_landscape.jpg",
+  "razon": "Muestra un plano claro del aerogenerador con la marca YPF Luz sin marcas de agua ni personas.",
+  "cuando": "2026-10-09T09:01:38.322Z"
  },
  "99mpv8": {
   "intentado": true,
