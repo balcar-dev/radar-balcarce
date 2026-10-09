@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T10:32:07.996Z",
- "portada": 46,
- "archivo": 843,
+ "generado": "2026-10-09T11:02:27.694Z",
+ "portada": 49,
+ "archivo": 845,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-09T10:32:08.046Z",
+  "generado": "2026-10-09T11:02:27.740Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,14 +98,14 @@
     "segundos": 49,
     "notas": [
      {
-      "id": "w8iv0l",
-      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
-      "seccion": "Deportes"
+      "id": "11lqk0q",
+      "titulo": "Marketing Sports acusa a River por fallas en la despedida de Messi",
+      "seccion": "Fútbol"
      },
      {
-      "id": "ypnvl8",
-      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
-      "seccion": "Fútbol"
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
      },
      {
       "id": "6vefne",
@@ -126,13 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 45,
     "notas": [
-     {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
-     },
      {
       "id": "15x6yh5",
       "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
@@ -157,19 +152,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
-    "notas": [
-     {
-      "id": "10znf8w",
-      "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1bb4gv8",
-      "titulo": "Atletas locales suman cinco triunfos en Mar del Plata",
-      "seccion": "Deportes"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {

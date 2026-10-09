@@ -10428,9 +10428,7 @@
   "fuentes": 1
  },
  "mtojvh": {
-  "archivo": "fotos-notas/mtojvh.jpg",
   "medio": "Wikimedia Commons",
-  "credito": "Foto: Liauzh / Wikimedia Commons (CC BY-SA 4.0)",
   "licencia": "CC BY-SA 4.0",
   "autor": "Liauzh",
   "origen": "wikimedia",
@@ -10438,7 +10436,9 @@
   "enlace": "https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Alpine_-_Franco_Colapinto_-_FP2.jpg",
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6c/2025_Singapore_GP_-_Alpine_-_Franco_Colapinto_-_FP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Franco Colapinto\" de Wikimedia Commons (CC BY-SA 4.0).",
-  "cuando": "2026-10-08T22:01:38.857Z"
+  "cuando": "2026-10-08T22:01:38.857Z",
+  "intentado": true,
+  "borrada": true
  },
  "1hem9fi": {
   "archivo": "fotos-notas/1hem9fi.jpg",
@@ -10615,13 +10615,16 @@
   "borrada": true
  },
  "1rkkg1m": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1rkkg1m.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Lionel Messi se reincorpora a los entrenamientos del Inter Miami",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T02:02:06.035Z",
-  "intentos": 2,
-  "fuentes": 3
+  "enlace": "https://www.infobae.com/deportes/2026/10/09/las-imagenes-del-regreso-de-lionel-messi-a-los-entrenamientos-del-inter-miami-tras-su-despedida-de-la-seleccion-argentina/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/N5G2FT37SRFSRKCQJG73QAOTPM.jpg?auth=0fc14e19108ddfa0b28cf469d87999d8fcfa72c16133733ceefcde4daf991641&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto B muestra correctamente a Lionel Messi en el entrenamiento sin marcas de agua ni menores reconocibles, mientras que la C tiene el logo de Noticias Argentinas y la A tiene un encuadre menos abierto.",
+  "cuando": "2026-10-09T11:02:04.131Z"
  },
  "bsy3zw": {
   "intentado": true,
@@ -10645,13 +10648,16 @@
   "cuando": "2026-10-09T01:32:08.771Z"
  },
  "1lubi1s": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1lubi1s.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La Corte Suprema se reúne para revisar las restricciones a la compra de tierras",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T04:32:02.343Z",
-  "intentos": 3,
-  "fuentes": 9
+  "enlace": "https://www.a24.com/politica/la-corte-suprema-se-reunira-este-viernes-tratar-una-cautelar-la-ley-tierras-n1604713",
+  "imagenOriginal": "https://media.a24.com/p/4bf26d890d52ec21a3dffa70be0ca343/adjuntos/296/imagenes/009/765/0009765940/1200x675/smart/corte-suprema.jpg",
+  "razon": "Muestra claramente a los jueces de la Corte Suprema en buena calidad, sin marcas de agua ni menores.",
+  "cuando": "2026-10-09T11:02:04.131Z"
  },
  "6q5i7o": {
   "intentado": true,
@@ -10705,13 +10711,16 @@
   "cuando": "2026-10-09T04:32:02.343Z"
  },
  "11lqk0q": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/11lqk0q.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Marketing Sports acusa a River por fallas en la despedida de Messi",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T06:36:22.958Z",
-  "intentos": 2,
-  "fuentes": 4
+  "enlace": "https://442.perfil.com/noticias/futbol/la-productora-encargada-del-homenaje-a-messi-explico-las-fallas-tecnicas-del-show-y-responsabilizo-a-river.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2026/10/08/trim/1140/641/lionel-messi-2344781.jpg",
+  "razon": "La foto A muestra claramente a Messi con compañeros en primer plano, sin marcas agregadas ni menores reconocibles.",
+  "cuando": "2026-10-09T11:02:04.131Z"
  },
  "1bb4gv8": {
   "intentado": true,
@@ -10781,5 +10790,29 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/MAXT3RMVMBB2VAUICR37AGDU2M.jpg?auth=ad052862cb4dcb3c593bbc282d56a173d00fd2f985ddba105136345c190b1445&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto A muestra una escena de ejercicio militar clara y dinámica con buena calidad, sin menores ni marcas de medios.",
   "cuando": "2026-10-09T10:31:59.864Z"
+ },
+ "1onb1mo": {
+  "archivo": "fotos-notas/1onb1mo.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Milei designa al nuevo embajador en Namibia y Mauricio",
+  "enlace": "https://www.lanueva.com/nota/2026-10-9-7-16-0-milei-designo-al-embajador-de-las-republicas-de-namibia-y-mauricio",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791541019463.jpg?&cw=600&ch=365",
+  "razon": "La foto C muestra claramente a los protagonistas del hecho sin marcas de agua superpuestas ni menores.",
+  "cuando": "2026-10-09T11:02:04.131Z"
+ },
+ "178vmym": {
+  "archivo": "fotos-notas/178vmym.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno nacional aprueba nuevas tarifas para treinta aeropuertos",
+  "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-aprobo-las-nuevas-tarifas-para-operar-en-30-aeropuertos-del-pais/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/P7A7F6LTTNDYFDFO5EXFXZSIFY.jpg?auth=aefdd1d18302add74516a57acddcb843c55e481f920301f2783f9a679b5948da&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra una vista aérea general y clara de un aeropuerto con múltiples aviones, ideal para ilustrar una nota sobre tarifas aeroportuarias, sin marcas ni personas reconocibles.",
+  "cuando": "2026-10-09T11:02:04.131Z"
  }
 }
