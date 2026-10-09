@@ -77,17 +77,17 @@ export function escenaDeFarmacia({ fecha, farmacias = [], hasta = 'De turno hast
  * La invitación a participar. `p`: { rotulo, pregunta, pie1, pie2 } de redes/participa.mjs; `color` el de su sección.
  */
 export function escenaDeParticipa({ p, color, numero = '2266 51-1612', mail = 'redaccion@radarbalcarce.com' }) {
-  const escalones = [120, 104, 92, 80].map((tam) => ({ tam, max: 5 }));
+  const escalones = [104, 92, 84, 76].map((tam) => ({ tam, max: 5 }));
   const pregunta = repartir(p.pregunta, escalones, W - MARGEN * 2, 'serif');
   const inter = Math.round(pregunta.tam * 1.04);
-  const yPregunta = 450;
-  const yCaja = yPregunta + (pregunta.lineas.length - 1) * inter + (pregunta.lineas.length > 3 ? 64 : 110);
+  const yPregunta = 430;
+  const yCaja = yPregunta + (pregunta.lineas.length - 1) * inter + (pregunta.lineas.length > 3 ? 80 : 100);
   const altoCaja = 230;
-  const yMail = yCaja + altoCaja + 120;
+  const yMail = yCaja + altoCaja + 150;
   // Los pies se parten en renglones si no entran (el de «evento» se cortaba).
   const pie1 = repartir(p.pie1 ?? '', [{ tam: 42, max: 2 }, { tam: 36, max: 2 }], W - MARGEN * 2, 'sans');
   const pie2 = repartir(p.pie2 ?? '', [{ tam: 36, max: 2 }], W - MARGEN * 2, 'sans');
-  const yPie1 = yMail + 96;
+  const yPie1 = yMail + 118;
   const yPie2 = yPie1 + pie1.lineas.length * Math.round(pie1.tam * 1.25) + 18;
 
   const cuadro = (t) => {
@@ -128,7 +128,7 @@ export function escenaDeUtiles({ grupos = [] }) {
   for (const g of grupos) {
     for (const it of g.items) {
       if (filas.length >= 6) break;
-      filas.push({ categoria: g.categoria !== anterior ? g.categoria : '', nombre: it.nombre, numero: String(it.numero).split(' / ')[0] });
+      filas.push({ categoria: g.categoria, nombre: it.nombre, numero: String(it.numero).split(' / ')[0] });
       anterior = g.categoria;
     }
   }
@@ -155,18 +155,20 @@ export function escenaDeUtiles({ grupos = [] }) {
 const COLOR_AGENDA = COLOR_SECCION['Cultura y agenda'];
 
 /** La agenda del fin de semana. `eventos`: [{ nombre, cuando, lugar }] (hasta cuatro). */
-export function escenaDeAgenda({ eventos = [], titulo = 'Qué hacer este fin de semana' }) {
+export function escenaDeAgenda({ eventos = [], titulo = 'Este fin de semana' }) {
   const lista = eventos.slice(0, 4);
   const cab = cabecera('Agenda', titulo, { color: COLOR_AGENDA });
   const y0 = cab.hasta + 56;
   const gap = 20;
-  const alto = Math.min(250, Math.floor((FIN - y0 - gap * (lista.length - 1)) / Math.max(1, lista.length)));
+  const alto = Math.min(330, Math.floor((FIN - y0 - gap * (lista.length - 1)) / Math.max(1, lista.length)));
   const cuadro = (t) => {
     const tarjetas = lista.map((e, k) => {
       const y = y0 + k * (alto + gap);
       const nombre = repartir(e.nombre, [{ tam: 50, max: 1 }, { tam: 42, max: 2 }], W - 128 - 250, 'serif');
       const [dia, hora] = String(e.cuando ?? '').split(' ');
-      const yN = y + 40 + Math.round(nombre.tam * 0.9);
+      // El contenido va centrado en la tarjeta (con pocas, las tarjetas son más altas).
+      const bloque = (nombre.lineas.length - 1) * Math.round(nombre.tam * 1.04) + (e.lugar ? 72 : 0);
+      const yN = y + Math.round((alto - bloque) / 2) + Math.round(nombre.tam * 0.34);
       return aparece(t, 0.7 + k * 0.4, `<rect x="64" y="${y}" width="${W - 128}" height="${alto}" rx="26" fill="#FFFFFF" stroke="${COLORES.lineaSuave}" stroke-width="2"/>
         <rect x="64" y="${y}" width="190" height="${alto}" rx="26" fill="${COLOR_AGENDA}"/><rect x="224" y="${y}" width="30" height="${alto}" fill="${COLOR_AGENDA}"/>
         <text x="${64 + 95}" y="${y + alto / 2 + (hora ? -6 : 14)}" text-anchor="middle" font-family="${TEXTO}" font-size="${hora ? 34 : 38}" font-weight="800" letter-spacing="2" fill="#FFFFFF">${esc(String(dia ?? '').slice(0, 3).toUpperCase())}</text>

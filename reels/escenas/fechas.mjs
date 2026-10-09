@@ -204,7 +204,8 @@ export function escenaDeFeriado({ fecha, feriado, dato, tipo = 'patrio' }) {
   const inter = Math.round(nombre.tam * 1.04);
   const yAnio = yNombre + (nombre.lineas.length - 1) * inter + 150;
   const datoR = dato?.texto ? repartir(dato.texto, [{ tam: 38, max: 4 }, { tam: 32, max: 5 }], W - MARGEN * 2, 'sans') : null;
-  const yDato = yAnio + 62;
+  // Sin año grande (un decreto) el texto sube y no queda un hueco.
+  const yDato = dato?.anio ? yAnio + 62 : yNombre + (nombre.lineas.length - 1) * inter + (feriado.alcance && feriado.alcance !== 'nacional' ? 130 : 90) - 40;
   const alcance = feriado.alcance && feriado.alcance !== 'nacional' ? `Rige en ${feriado.alcance}` : null;
 
   const cuadro = (t) => {

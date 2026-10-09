@@ -219,33 +219,44 @@ export function etiquetasDelClima({ ahora = {}, hoy = {}, manana = null, momento
   return e.slice(0, 2);
 }
 
-/** El pronóstico de los días que siguen: una columna por día, con una barra de mínima a máxima y, si hay dato, la lluvia. */
+/** Un dibujito del cielo de ese día (el mismo vocabulario de las ilustraciones grandes, en chiquito). Centrado en (cx, cy), de unos 110 px. */
+function iconoDelDia(base, cx, cy, t, fase = 0) {
+  const sol = (x, y, r) => `<g transform="translate(${x} ${y}) rotate(${(t * 12 + fase * 30).toFixed(1)})">${Array.from({ length: 8 }, (_, i) => `<rect x="-3.5" y="${-r - 17}" width="7" height="13" rx="3.5" fill="#F6B73C" transform="rotate(${i * 45})"/>`).join('')}<circle r="${r}" fill="#F6B73C"/></g>`;
+  const nube = (x, y, k, color = '#B9C6D3') => `<g transform="translate(${x} ${y}) scale(${k})" fill="${color}"><circle cx="-24" cy="8" r="20"/><circle cx="2" cy="-6" r="28"/><circle cx="30" cy="8" r="19"/><rect x="-44" y="8" width="94" height="20" rx="10"/></g>`;
+  const gotas = (n, color) => Array.from({ length: n }, (_, i) => {
+    const f = ((t * 1.3 + i * 0.37 + fase * 0.2) % 1);
+    return `<rect x="${-26 + i * (52 / Math.max(1, n - 1))}" y="${(22 + f * 30).toFixed(1)}" width="6" height="16" rx="3" fill="${color}" opacity="${(1 - f * 0.8).toFixed(2)}" transform="rotate(14)"/>`;
+  }).join('');
+  const bob = Math.sin(t * 1.6 + fase) * 3;
+  let dibujo;
+  if (base === 'despejado') dibujo = sol(0, 0, 26);
+  else if (base === 'parcial') dibujo = `${sol(-16, -14, 20)}${nube(8, 12, 0.85, '#C9D3DD')}`;
+  else if (base === 'nublado') dibujo = `${nube(-14, -12, 0.55, '#A9B6C4')}${nube(6, 8, 0.85, '#C9D3DD')}`;
+  else if (base === 'niebla') dibujo = `${nube(0, -14, 0.8, '#D5DCE3')}${[10, 28, 46].map((y, i) => `<rect x="${-46 + i * 8}" y="${y - 8}" width="${86 - i * 6}" height="8" rx="4" fill="#AEB9C4" opacity="${(0.6 + 0.4 * Math.sin(t * 1.4 + i)).toFixed(2)}"/>`).join('')}`;
+  else if (base === 'tormenta') dibujo = `${nube(0, -16, 0.9, '#6B7787')}<path d="M4 6 L-12 34 L2 34 L-6 56 L18 24 L4 24 Z" fill="#F2C230" opacity="${(0.75 + 0.25 * Math.sin(t * 5 + fase)).toFixed(2)}"/>`;
+  else dibujo = `${nube(0, -16, 0.9, base === 'lluvia' ? '#8795A6' : '#A9B6C4')}${gotas(base === 'lluvia' ? 4 : 3, '#3C8FC4')}`;
+  return `<g transform="translate(${cx} ${(cy + bob).toFixed(1)}) scale(1.35)">${dibujo}</g>`;
+}
+
+/** El pronóstico de los días que siguen: una columna por día, con el dibujo del cielo, la máxima, la mínima y, si hay dato, la lluvia. */
 function pronosticoEnColumnas(t, dias, { x, y, ancho, alto, titulo, desde = 1.5 }) {
   if (!dias.length) return '';
-  const minT = Math.min(...dias.map((d) => d.min)) - 2;
-  const maxT = Math.max(...dias.map((d) => d.max)) + 2;
-  const yBarraArriba = y + 150;
-  const yBarraAbajo = y + alto - 112;
-  const yDe = (v) => yBarraAbajo - ((v - minT) / Math.max(1, maxT - minT)) * (yBarraAbajo - yBarraArriba);
   const col = (ancho - 48) / dias.length;
   const columnas = dias.map((d, k) => {
     const a = entra(t, desde + k * 0.15, 0.7);
     const cx = x + 24 + col * k + col / 2;
-    const y1 = yDe(d.max);
-    const y2 = yDe(d.min);
-    const yc = (y1 + y2) / 2;
-    const arriba = yc - (yc - y1) * a;
-    const abajo = yc + (y2 - yc) * a;
     const etiqueta = String(d.etiqueta ?? d.dia ?? '').toUpperCase();
-    return `<g opacity="${clamp(a * 1.6).toFixed(2)}">
-      <text x="${cx.toFixed(1)}" y="${y + 100}" text-anchor="middle" font-family="${TEXTO}" font-weight="700" font-size="30" letter-spacing="2" fill="${COLORES.gris}">${esc(etiqueta)}</text>
-      <rect x="${(cx - 17).toFixed(1)}" y="${arriba.toFixed(1)}" width="34" height="${Math.max(0, abajo - arriba).toFixed(1)}" rx="17" fill="${COLORES.rojo}" opacity="0.88"/>
-      <text x="${cx.toFixed(1)}" y="${(arriba - 16).toFixed(1)}" text-anchor="middle" font-family="${TEXTO}" font-weight="700" font-size="36" fill="${TINTA}">${d.max}°</text>
-      <text x="${cx.toFixed(1)}" y="${(abajo + 46).toFixed(1)}" text-anchor="middle" font-family="${TEXTO}" font-weight="500" font-size="32" fill="${COLORES.gris}">${d.min}°</text>
-      ${typeof d.lluvia === 'number' ? `<text x="${cx.toFixed(1)}" y="${y + alto - 28}" text-anchor="middle" font-family="${TEXTO}" font-weight="600" font-size="30" fill="#2F6E8F">${d.lluvia}%</text>` : ''}</g>`;
+    const base = baseDelCielo(d.cielo ?? '');
+    const separador = k ? `<rect x="${(x + 24 + col * k - 1).toFixed(1)}" y="${y + 96}" width="2" height="${alto - 130}" rx="1" fill="${COLORES.lineaSuave}"/>` : '';
+    return `${separador}<g opacity="${clamp(a * 1.6).toFixed(2)}" transform="translate(0 ${((1 - a) * 24).toFixed(1)})">
+      <text x="${cx.toFixed(1)}" y="${y + 118}" text-anchor="middle" font-family="${TEXTO}" font-weight="800" font-size="30" letter-spacing="2" fill="${COLORES.gris}">${esc(etiqueta)}</text>
+      ${iconoDelDia(base, cx, y + 204, t, k)}
+      <text x="${cx.toFixed(1)}" y="${y + 292}" text-anchor="middle" font-family="${DISPLAY}" font-weight="900" font-size="54" letter-spacing="-1" fill="${TINTA}">${d.max}°</text>
+      <text x="${cx.toFixed(1)}" y="${y + 336}" text-anchor="middle" font-family="${TEXTO}" font-weight="500" font-size="34" fill="${COLORES.gris}">${d.min}°</text>
+      ${typeof d.lluvia === 'number' && d.lluvia > 0 ? `<g transform="translate(${(cx - 14).toFixed(1)} ${y + 372})"><path d="M0 -26 C-8 -12 -12 -6 -12 0 a12 12 0 0 0 24 0 C12 -6 8 -12 0 -26 Z" fill="#3C8FC4"/><text x="22" y="8" font-family="${TEXTO}" font-weight="700" font-size="30" fill="#2F6E8F">${d.lluvia}%</text></g>` : ''}</g>`;
   }).join('');
   return `<rect x="${x}" y="${y}" width="${ancho}" height="${alto}" rx="32" fill="#FFFFFF" stroke="${COLORES.lineaSuave}" stroke-width="2"/>
-  ${rotulo(titulo, { x: x + 36, y: y + 54, color: COLORES.gris, tam: 24 })}${columnas}`;
+  ${rotulo(titulo, { x: x + 36, y: y + 60, color: COLORES.gris, tam: 24 })}${columnas}`;
 }
 
 /**
@@ -273,10 +284,11 @@ export function escenaDeClima({ momento = 'manana', clima, fecha, aviso = null, 
   const cSub = textoClaro ? '#DCE6F0' : '#3B403C';
 
   const kicker = esAviso ? `Aviso de clima · ${aviso.dia === hoy?.fecha ? 'hoy' : 'mañana'}` : momento === 'noche' ? 'Esta noche en Balcarce' : 'Hoy en Balcarce';
-  const titulo = esAviso ? aviso.titulo : momento === 'noche' ? 'Cómo sigue el clima esta noche' : fechaEnLetras(fecha);
+  const titulo = esAviso ? aviso.titulo : momento === 'noche' ? 'Así sigue la noche' : fechaEnLetras(fecha);
   const cab = cabecera(kicker, titulo, { color: esAviso ? acento : COLOR_SECCION.Clima });
-  const yPanel = cab.hasta + 44;
-  const altoPronostico = 360;
+  // Todas las variantes (de día, de noche, con o sin aviso) arrancan en el mismo lugar y miden lo mismo (9/10, Hernán).
+  const yPanel = cabecera('x', 'x').hasta + 44;
+  const altoPronostico = 420;
   const panel = { x: 64, y: yPanel, ancho: W - 128, alto: esAviso ? 1440 - yPanel : clamp(1440 - yPanel - altoPronostico - 30, 520, 640) };
   const yPronostico = panel.y + panel.alto + 30;
 
@@ -296,6 +308,7 @@ export function escenaDeClima({ momento = 'manana', clima, fecha, aviso = null, 
   const etiquetas = esAviso ? [] : etiquetasDelClima({ ahora: a, hoy, manana, momento });
 
   const defs = `<linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${colorFondo[0]}"/><stop offset="1" stop-color="${colorFondo[1]}"/></linearGradient>
+    <linearGradient id="velo" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${colorFondo[1]}" stop-opacity="0.78"/><stop offset="0.55" stop-color="${colorFondo[1]}" stop-opacity="0.35"/><stop offset="0.8" stop-color="${colorFondo[1]}" stop-opacity="0"/></linearGradient>
     <clipPath id="panel"><rect x="${panel.x}" y="${panel.y}" width="${panel.ancho}" height="${panel.alto}" rx="40"/></clipPath>`;
 
   const cuadro = (t) => {
@@ -341,7 +354,7 @@ export function escenaDeClima({ momento = 'manana', clima, fecha, aviso = null, 
 
     const fondoPanel = `<rect x="${panel.x}" y="${panel.y}" width="${panel.ancho}" height="${panel.alto}" rx="40" fill="url(#cielo)"/>`;
     const entradaPanel = entra(t, 0.05, 0.7);
-    const panelSvg = `<g opacity="${entradaPanel.toFixed(3)}" transform="translate(0 ${((1 - entradaPanel) * 40).toFixed(2)})">${fondoPanel}<g clip-path="url(#panel)">${ilu}</g>${interior}</g>`;
+    const panelSvg = `<g opacity="${entradaPanel.toFixed(3)}" transform="translate(0 ${((1 - entradaPanel) * 40).toFixed(2)})">${fondoPanel}<g clip-path="url(#panel)">${ilu}${!esAviso && textoClaro && ['lluvia', 'tormenta', 'llovizna'].includes(base) ? `<rect x="${panel.x}" y="${panel.y}" width="${panel.ancho}" height="${panel.alto}" fill="url(#velo)"/>` : ''}</g>${interior}</g>`;
     const pronostico = pronosticoEnColumnas(t, columnas, {
       x: panel.x, y: yPronostico, ancho: panel.ancho, alto: altoPronostico, titulo: momento === 'noche' ? 'Mañana y los días que siguen' : 'Hoy y los días que siguen', desde: 1.5,
     });

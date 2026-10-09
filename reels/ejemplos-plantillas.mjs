@@ -207,7 +207,7 @@ if (process.argv[1] && process.argv[1].endsWith('ejemplos-plantillas.mjs')) {
   const fotos = process.argv.includes('--fotos');
   const pedidos = process.argv.slice(3).filter((a) => !a.startsWith('--'));
   fs.mkdirSync(carpeta, { recursive: true });
-  const todos = [...ejemplos(), ...ejemplosDeServicios()];
+  const todos = [...ejemplos(), ...ejemplosDeClima(), ...ejemplosDeServicios()];
   if (fotos) {
     // Tres cuadros de cada escena (al empezar, a mitad de la entrada y ya entrada), para revisar el diseño sin armar el video.
     const { Resvg } = await import('@resvg/resvg-js');

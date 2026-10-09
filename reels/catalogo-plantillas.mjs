@@ -90,7 +90,7 @@ export async function armarCatalogo() {
   }
   return `<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Catálogo de plantillas</title>
+<title>Catálogo de plantillas v2</title>
 <style>
 :root{--bg:#FAF8F3;--fg:#14161A;--sub:#5B5F66;--linea:#E2DDD2;--acento:#C7381C;--card:#FFFFFF}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14161A;--fg:#F2EFE8;--sub:#A9ADB3;--linea:#2C3036;--acento:#F0735A;--card:#1D2025;color-scheme:dark}}
@@ -112,7 +112,7 @@ figure{margin:0;flex:0 0 auto;width:min(400px,78vw)}
 figure img{width:100%;height:auto;display:block;border:1px solid var(--linea);border-radius:10px}
 figcaption{text-align:center;font-size:.85rem;color:var(--sub);margin-top:6px;text-transform:capitalize}
 </style></head><body><main>
-<h1>Catálogo de plantillas</h1>
+<h1>Catálogo de plantillas · versión 2</h1>
 <p class="lead">Todas las variantes de cada pieza, una al lado de la otra, con la regla común y la regla propia de cada una. Cada imagen es un cuadro ya entrado de la escena animada; deslizá hacia el costado para ver las demás. Es una propuesta: todavía no está conectada a las redes.</p>
 <nav>${CATEGORIAS.map((c) => `<a href="#${c.id}">${esc(c.titulo)}</a>`).join('')}</nav>
 <div class="comunes"><h2>Reglas comunes a todas las piezas</h2><ol>${REGLAS_COMUNES.map((r) => `<li>${esc(r)}</li>`).join('')}</ol></div>
