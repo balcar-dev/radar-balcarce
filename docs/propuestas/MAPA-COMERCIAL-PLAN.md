@@ -58,3 +58,9 @@ Un comercio con su local y su perfil comercial es otra cosa. Para los profesiona
 2. Elegir dónde se guarda el seguimiento comercial (una hoja privada de Google, o cifrado en el panel del celular).
 3. Decidir si se usa Google Places (hay un costo chico) o sólo las demás fuentes.
 4. Firmar y mandar los pedidos a la Municipalidad y a las instituciones.
+
+## 7. La base «más grande» que recuerda Hernán (9/10)
+
+Se buscó en el repositorio (todo el historial de `comercial/datos/comercios.json`: una sola versión, de 145 fichas), en el disco D: (sin otro archivo comercial fuera del proyecto) y en los 99 artefactos publicados
+(el único comercial es «Guía comercial», del 24/9, con **las mismas 145 fichas**). **No apareció una base más grande.** Si Hernán la encuentra (un archivo, una hoja o un artefacto de otra ventana), se
+suma con `comercial/base.mjs`, que fusiona sin pisar lo que ya se cargó a mano. Mientras tanto, la vista local (sin publicar nada) se arma con `node comercial/vista.mjs` → `comercial/salida/guia-previa.html`.
