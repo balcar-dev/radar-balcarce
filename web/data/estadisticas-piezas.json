@@ -1,0 +1,185 @@
+{
+ "version": 1,
+ "medidas": [
+  {
+   "clave": "facebook/historia/1735633850871226",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-manana",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T10:36:42.037Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122100462993495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "m212r6",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T12:06:50.587Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "post_media_view": 4,
+    "post_total_media_view_unique": 1,
+    "post_clicks": 1,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18116630656985614",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "m212r6",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T12:35:26.662Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "reach": 3,
+    "views": 5,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "instagram/reel/18115328825043113",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "noticia1",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T13:35:03.428Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "reach": 2,
+    "views": 7,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1654870962731775",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "noticia1",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T13:37:31.531Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/1070447099112835",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "noticia1",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T13:38:12.304Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122100518817495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "ff9n91",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T13:38:34.741Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "post_media_view": 0,
+    "post_total_media_view_unique": 0,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/17961838536197577",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "ff9n91",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T13:38:50.473Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "reach": 18,
+    "views": 29,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122100596745495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1sko7lj",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T15:25:55.233Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "post_media_view": 0,
+    "post_total_media_view_unique": 0,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/17902220916596705",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1sko7lj",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T15:26:05.503Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "reach": 3,
+    "views": 8,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122100665121495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "15i90co",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T17:03:32.167Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "post_media_view": 0,
+    "post_total_media_view_unique": 0,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18636210754013289",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "15i90co",
+   "dia": "2026-10-01",
+   "cuando": "2026-10-01T17:03:43.697Z",
+   "medida": "2026-10-09T01:30:18.860Z",
+   "metricas": {
+    "reach": 3,
+    "views": 7,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  }
+ ]
+}
