@@ -21,8 +21,8 @@ retomar: si algo de acá ya está hecho, se tacha acá y en su documento de orig
 | 1 | **Miniaturas livianas**: al guardar cada foto, hacer también una versión de ~480 px y usarla en las listas (hoy una lista baja ~1 MB de fotos grandes para mostrar cuadraditos) + `srcset` en la portada y la nota | medio | Mayor mejora de carga en celular. `web/scripts/achicar-foto.mjs`, `components/postales.js` |
 | 2 | **Fotos nuevas en WebP** (25–35 % menos) cuidando que las tarjetas para compartir sigan leyéndolas | medio | Va junto con la anterior |
 | 3 | Sacar los dos videos de `web/public/compartir/` (9,9 MB que viajan en cada despliegue) a R2 o enlace externo | bajo | R2 depende de ustedes (ver 3) |
-| 4 | Un chequeo al final del build que cuente los archivos de `web/out` y avise cerca de 14.000 (el tope de Cloudflare es 20.000; hoy ~4.500) | bajo | `web/scripts/contar-archivos.mjs` |
-| 5 | `alt` con el título en la foto destacada de secciones y temas (hoy vacío; ayuda a Google Imágenes) | bajo | `components/imagen-destacada.js` |
+| 4 | ~~Chequeo del tope de archivos~~ **hecho el 9/10**: `npm run contar` al final del build avisa desde 14.000 y alerta desde 18.000 (el tope de Cloudflare es 20.000) | – | `web/scripts/contar-archivos.mjs` |
+| 5 | ~~`alt` en la foto destacada~~ **se dejó vacío a propósito**: el título va al lado y repetirlo molesta a los lectores de pantalla | – | `components/imagen-destacada.js` |
 | 6 | Medición real: un build en la PC y un Lighthouse móvil, para confirmar las estimaciones de la auditoría | bajo | |
 | 7 | Mirar que hoy salga bien lo nuevo: el clima de las 7 con escena, las efemérides de las 9, el WhatsApp de las 21 | bajo | Claude puede mirarlo solo mañana |
 | 8 | Lista de sólo lectura de "lo frenado en rojo" en el panel del celular (#1 de DONDE-SEGUIMOS) | medio | El calendario de Fechas ya está hecho |
