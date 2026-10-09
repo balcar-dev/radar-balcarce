@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T08:31:50.437Z",
+ "generado": "2026-10-09T11:33:34.701Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -35,6 +35,43 @@
    "intentos": 2,
    "motivo": "con cuerpo",
    "maximo": 3
+  },
+  {
+   "id": "2s03hc",
+   "titulo": "Un informe reveló la caída del consumo masivo en todo el país: cuáles son las regiones más afectadas",
+   "copete": "El consumo masivo muestra una caída en las 24 provincias del país y ninguna recuperó los niveles que existían en 2023, según un estudio privado. El trabajo de la Fundación Encuentro puntualizó que “es más profunda en el NEA y el NOA” y subrayó que “el salario registrado medido…",
+   "seccion": "Economía",
+   "fecha": "2026-10-08T12:55:35.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/un-informe-revela-la-caida-del-consumo-masivo-en-todo-el-pais_a6ac790f35319d0dbc273eb7a",
+     "fecha": "2026-10-08T12:55:35.614Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://www.perfil.com/noticias/nea/caida-masiva-del-consumo-en-todo-el-pais-el-impacto-en-nea-es-del-328.phtml",
+     "fecha": "2026-10-09T09:53:00.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/el-mapa-de-la-caida-del-consumo-en-todo-el-pais-politica-y-economia_1791524210",
+     "fecha": "2026-10-09T05:36:50.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-8-11-2-0-un-informe-revelo-la-caida-del-consumo-masivo-en-todo-el-pais",
+     "fecha": "2026-10-08T14:20:06.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/sociedad/cayo-el-consumo-masivo-en-todo-el-pais-cuales-son-las-regiones-mas-afectadas/",
+     "fecha": "2026-10-08T15:11:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 4
   }
  ]
 }

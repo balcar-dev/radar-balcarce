@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T11:02:27.694Z",
+ "generado": "2026-10-09T11:33:34.701Z",
  "portada": 49,
- "archivo": 845,
- "esperandoCuerpo": 2,
+ "archivo": 848,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-09T11:02:27.740Z",
+  "generado": "2026-10-09T11:33:34.743Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,14 +98,14 @@
     "segundos": 49,
     "notas": [
      {
-      "id": "11lqk0q",
-      "titulo": "Marketing Sports acusa a River por fallas en la despedida de Messi",
-      "seccion": "Fútbol"
+      "id": "w8iv0l",
+      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
+      "seccion": "Deportes"
      },
      {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
+      "id": "ypnvl8",
+      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
+      "seccion": "Fútbol"
      },
      {
       "id": "6vefne",
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
+     },
      {
       "id": "15x6yh5",
       "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
