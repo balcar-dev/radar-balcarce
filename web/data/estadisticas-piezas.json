@@ -2659,6 +2659,28 @@
     "shares": 0,
     "saved": 0
    }
+  },
+  {
+   "clave": "facebook/historia/2160512324558749",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "farmacia",
+   "dia": "2026-10-08",
+   "cuando": "2026-10-08T22:05:10.068Z",
+   "medida": "2026-10-09T22:30:18.137Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "instagram/historia/18113568617016375",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "clima-manana",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-09T10:04:28.344Z",
+   "medida": "2026-10-09T22:30:18.137Z",
+   "metricas": {}
   }
  ]
 }
