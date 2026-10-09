@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T06:32:05.208Z",
- "portada": 52,
+ "generado": "2026-10-09T06:36:26.800Z",
+ "portada": 46,
  "archivo": 840,
- "esperandoCuerpo": 2,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-09T06:32:05.247Z",
+  "generado": "2026-10-09T06:36:26.839Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -103,19 +103,19 @@
       "seccion": "Economía"
      },
      {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "id": "ypnvl8",
+      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
       "seccion": "Balcarce"
      },
      {
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro"
-     },
-     {
-      "id": "mxhy8u",
-      "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 47,
     "notas": [
      {
       "id": "bcq9u5",
@@ -139,8 +139,8 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
       "seccion": "Balcarce"
      },
      {
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
+    "segundos": 32,
     "notas": [
      {
-      "id": "1ihpcqe",
-      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
-      "seccion": "Balcarce"
+      "id": "mxhy8u",
+      "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
+      "seccion": "Automovilismo"
      },
      {
       "id": "1bb4gv8",
