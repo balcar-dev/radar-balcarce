@@ -181,7 +181,7 @@ export function ejemplosDeDeportes() {
       guion: `El podio del Gran Premio de Malasia: ganó ${f1.resultado.filas[0].piloto}. ${yo ? `Franco Colapinto terminó ${yo.posicion}.º.` : ''} Radar Balcarce.`,
     } : null,
     zona ? {
-      nombre: 'deportes-3-tabla-futbol', escena: escenaDeTabla({ torneo: 'Liga Profesional', zona: zona.nombre, filas: zona.filas, destacado: '5' }),
+      nombre: 'deportes-3-tabla-futbol', escena: escenaDeTabla({ torneo: 'Liga Profesional', zona: zona.nombre, filas: zona.filas }),
       guion: `Así está la ${zona.nombre} de la Liga Profesional. Lidera ${zona.filas[0].equipo} con ${zona.filas[0].pts} puntos. La tabla, en la pantalla. Radar Balcarce.`,
     } : null,
     partido ? {

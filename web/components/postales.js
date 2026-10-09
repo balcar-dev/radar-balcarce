@@ -28,7 +28,7 @@ function Postal({ nota, indice }) {
       <div className="postal-marco">
         <a href={nota.ruta} className="postal-foto" tabIndex={-1} aria-hidden="true">
           {foto
-            ? <img src={urlDeFoto(foto.archivo)} alt="" width={1200} height={900} decoding="async" loading={indice < 2 ? undefined : 'lazy'} />
+            ? <img src={urlDeFoto(foto.archivo)} alt="" width={1200} height={900} decoding="async" loading={indice < 2 ? undefined : 'lazy'} fetchPriority={indice === 0 ? 'high' : undefined} />
             : <PlacaSeccion seccion={nota.seccion} chica />}
         </a>
         <div className="chapa-nota postal-chapa">

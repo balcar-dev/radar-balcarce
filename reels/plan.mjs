@@ -22,6 +22,9 @@ import { fijaVigente } from './fijas.mjs';
 import { efemerideDelDia } from '../redes/efemeride.mjs';
 import { placasDelDia, COLOR_UN_DIA_COMO_HOY } from './placas-efemeride.mjs';
 import { diaAR } from '../ingesta/zona.mjs';
+import {
+  escenaDelClima, escenaDelAviso, escenaDeLaFarmacia, escenaDeLosUtiles, escenaDeLaAgenda, escenaDeLaEfemeride, escenaDelFeriado, escenaDeParticipaDelPlan,
+} from './escenas/del-plan.mjs';
 import { repasosDelDia } from '../redes/repasos.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
@@ -262,6 +265,8 @@ export function planDelDia(datos, {
         cajas: datos.clima.dias.slice(0, 3).map((d, i) => cajaDeDia(d, i === 0 ? 'HOY' : null)).filter(Boolean),
       }),
       acento: COLOR_SECCION.Policiales ?? COLOR_SECCION.Clima,
+      // La escena animada (9/10): si no se puede armar, sale con la placa de `svg`.
+      escena: escenaDelAviso({ aviso: a, clima: datos.clima, fecha }),
     });
   }
 
@@ -280,6 +285,7 @@ export function planDelDia(datos, {
       motivo: 'servicio fijo · no gasta cupo de reel', seccion: 'Clima',
       guion: guionClima(datos.clima, turno),
       momento: 'manana', indicacion: INDICACIONES.manana,
+      escena: escenaDelClima({ momento: 'manana', clima: datos.clima, fecha }),
       // "Historia diaria" (28/09): la tarjeta del clima ahora, hoy y los dos
       // días que siguen. Sin dólar: si se mueve, sale como nota propia.
       svg: placaClima({
@@ -313,6 +319,7 @@ export function planDelDia(datos, {
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaNoche(datos.clima),
       momento: 'noche', indicacion: INDICACIONES.noche,
+      escena: escenaDelClima({ momento: 'noche', clima: datos.clima, fecha }),
       // Mira para adelante: esta noche, mañana y pasado.
       svg: placaClima({
         temp: c.temp,
@@ -344,6 +351,7 @@ export function planDelDia(datos, {
       motivo: 'a la hora en que cierran las demás', seccion: 'Farmacias',
       guion: guionFarmacia(turno, { momento: momentoDeHora(cuando.farmacia.hora) }),
       momento: momentoDeHora(cuando.farmacia.hora), indicacion: INDICACIONES[momentoDeHora(cuando.farmacia.hora)],
+      escena: escenaDeLaFarmacia({ turno, fecha, hasta: hastaCuandoElTurno(cuando.farmacia.hora) }),
       svg: placaFarmacia({
         detalle: turno.detalle,
         farmacias: turno.farmacias,
@@ -371,6 +379,7 @@ export function planDelDia(datos, {
       guion: guionUtiles({ momento: momentoDeHora(cuando.utiles.hora) }),
       momento: momentoDeHora(cuando.utiles.hora), indicacion: INDICACIONES[momentoDeHora(cuando.utiles.hora)],
       svg: placaUtiles({ grupos }),
+      escena: escenaDeLosUtiles({ grupos }),
       acento: COLOR_UTILES_ACENTO,
     });
   }
@@ -387,6 +396,7 @@ export function planDelDia(datos, {
       guion: guionAgenda(deLaAgenda, { momento: momentoDeHora(cuando.agenda.hora) }),
       momento: momentoDeHora(cuando.agenda.hora), indicacion: INDICACIONES[momentoDeHora(cuando.agenda.hora)],
       svg: placaAgenda({ eventos: deLaAgenda }),
+      escena: escenaDeLaAgenda({ eventos: deLaAgenda }),
       acento: '#6D4BA0',
     });
   }
@@ -401,6 +411,7 @@ export function planDelDia(datos, {
       seccion: 'Argentina',
       guion: guionFeriado(f, { fecha, momento }),
       momento, indicacion: INDICACIONES[momento],
+      escena: escenaDelFeriado({ feriado: f, dato: datosParaContar(f)[0] }),
       svg: placaEfemeride({ rotulo: `Feriado · ${fechaDeFeriado(f.fecha)}`, titulo: f.nombre, cuerpo: datosParaContar(f).join(' '), color: COLOR_FERIADO }),
       acento: COLOR_FERIADO,
     });
@@ -421,6 +432,7 @@ export function planDelDia(datos, {
         guion: e.guion,
         momento, indicacion: INDICACIONES[momento],
         svg: placas.principal, svg2: placas.ademas,
+        escena: escenaDeLaEfemeride({ efemeride: e, fecha }),
         acento: COLOR_UN_DIA_COMO_HOY,
       });
     }
@@ -438,6 +450,7 @@ export function planDelDia(datos, {
       seccion: p.seccion,
       guion: guionParticipa(id, { fecha, momento }),
       momento, indicacion: INDICACIONES[momento],
+      escena: escenaDeParticipaDelPlan({ id }),
       svg: placaParticipa({ rotulo: p.rotulo, pregunta: p.pregunta, pie1: p.pie1, pie2: p.pie2, color: COLOR_SECCION[p.seccion], mail: MAIL_REDACCION }),
       acento: COLOR_SECCION[p.seccion],
     });

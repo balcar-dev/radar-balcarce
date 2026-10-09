@@ -51,6 +51,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+          # La caché de npm (9/10): no baja de nuevo todo en cada corrida de las cada-media-hora.
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      # La caché del compilador de Next: la corrida arranca con lo ya calculado y no en frío. Si no existe o falla, compila de cero, como antes.
+      - uses: actions/cache@v4
+        with:
+          path: web/.next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('web/package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            next-${{ runner.os }}-${{ hashFiles('web/package-lock.json') }}-
 
       - name: Instalar
         working-directory: web

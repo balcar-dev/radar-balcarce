@@ -9,6 +9,8 @@
 // imagen en `renderizarEntrada`, que carga el conversor recién ahí (como aPng).
 
 import fs from 'node:fs';
+import os from 'node:os';
+import { Worker } from 'node:worker_threads';
 import path from 'node:path';
 import { archivosDeFuente } from './placa.mjs';
 
@@ -156,17 +158,22 @@ export async function renderizarEntrada(svg, dir, prefijo, { ancho = 1080, anio 
  * Dibuja una ESCENA entera (reels/escenas/): un cuadro por cada 1/fps de segundo durante toda la pieza, como imágenes numeradas
  * (`<prefijo>0000.png`…). Devuelve cuántos son. A diferencia de la entrada de una placa, acá se mueve también el fondo todo el tiempo.
  */
-export async function renderizarEscena(escena, dir, prefijo, { duracion, ancho = 1080 } = {}) {
-  const { Resvg } = await import('@resvg/resvg-js');
+export async function renderizarEscena(escena, dir, prefijo, { duracion, ancho = 1080, obreros = null } = {}) {
   fs.mkdirSync(dir, { recursive: true });
-  const propias = archivosDeFuente();
   const n = Math.ceil(duracion * escena.fps) + 1;
+  // El SVG de cada cuadro se arma acá (es barato) y el dibujo (lo caro) se reparte entre los núcleos (9/10/2026).
+  const cuadros = [];
   for (let i = 0; i < n; i += 1) {
-    const r = new Resvg(escena.cuadro(i / escena.fps, duracion), {
-      fitTo: { mode: 'width', value: ancho },
-      font: { fontFiles: propias, loadSystemFonts: propias.length === 0, defaultFontFamily: 'Inter' },
-    });
-    fs.writeFileSync(path.join(dir, `${prefijo}${String(i).padStart(4, '0')}.png`), r.render().asPng());
+    cuadros.push({ svg: escena.cuadro(i / escena.fps, duracion), archivo: path.join(dir, `${prefijo}${String(i).padStart(4, '0')}.png`) });
   }
+  const cuantos = Math.max(1, Math.min(obreros ?? os.availableParallelism(), 8));
+  const grupos = Array.from({ length: cuantos }, () => []);
+  cuadros.forEach((c, i) => grupos[i % cuantos].push(c));
+  await Promise.all(grupos.filter((g) => g.length).map((trabajo) => new Promise((resolve, reject) => {
+    const w = new Worker(new URL('./render-cuadros.mjs', import.meta.url), { workerData: { trabajo, ancho } });
+    w.once('message', resolve);
+    w.once('error', reject);
+    w.once('exit', (codigo) => { if (codigo) reject(new Error(`el obrero de cuadros salió con ${codigo}`)); });
+  })));
   return n;
 }
