@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T19:27:24.632Z",
+  "generado": "2026-10-09T19:32:04.800Z",
   "notas": [
     {
       "id": "futbolresultadosliga20261009",
@@ -1073,6 +1073,7 @@
       "seccion": "Tecnología",
       "medios": [
         "Infobae",
+        "La Nación",
         "FayerWayer"
       ],
       "enlace": "https://www.infobae.com/tecno/2026/10/09/que-significa-cuenta-en-revision-en-whatsapp-y-como-recuperar-el-acceso-a-todos-los-chats/",
@@ -1080,7 +1081,7 @@
       "fecha": "2026-10-09T14:19:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T15:31:45.594Z",
-      "relevancia": 49,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4634,76 +4635,6 @@
         "archivo": "fotos-notas/jul3dm.jpg",
         "credito": "Foto: News Balcarce (FM 91.7)"
       }
-    },
-    {
-      "id": "1gsplvm",
-      "titulo": "La Bolsa de Cereales anticipa lluvias y fuertes contrastes térmicos",
-      "copete": "El pronóstico agroclimático para gran parte del país prevé precipitaciones variables, ingreso de aire polar con heladas en zonas serranas y marcas térmicas de hasta 40 grados en el norte.",
-      "cuerpo": "Gran parte de la región agrícola transcurre la siembra de maíz bajo un pronóstico de lluvias que se extenderá entre el 8 y el 14 de octubre, de acuerdo con el informe de la Bolsa de Cereales de Buenos Aires. El reporte indica que las precipitaciones presentarán una distribución despareja, con acumulados de 10 a 25 milímetros en la mayoría de los distritos y marcas de hasta 200 milímetros en el norte del litoral fluvial.\n\nJunto al paso del sistema frontal, el ingreso de vientos polares generará marcas inferiores a los 5 grados y heladas generales en las zonas serranas. Posteriormente, el retorno de vientos tropicales elevará las temperaturas hasta los 40 grados en el norte del área productiva, mientras que el centro y el sur registrarán marcas estables.",
-      "guion": "La Bolsa de Cereales anticipa lluvias y fuertes contrastes térmicos",
-      "seccion": "Agro",
-      "medios": [
-        "La Nación",
-        "Clarín"
-      ],
-      "enlace": "https://www.clarin.com/rural/anticipan-fuertes-tormentas-contrastes-temperaturas-area-agricola-proximos-dias_0_3KlFcsT7i6.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T12:31:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T15:01:21.096Z",
-      "relevancia": 28,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lluvias desparejas en gran parte del país hasta el 14 de octubre.",
-        "Acumulados de hasta 200 milímetros en el norte del litoral fluvial.",
-        "Ingreso de aire polar con heladas en zonas serranas.",
-        "Temperaturas máximas de hasta 40 grados en el norte."
-      ],
-      "seSabe": [
-        "Las precipitaciones se desarrollan entre el 8 y el 14 de octubre según la Bolsa de Cereales de Buenos Aires.",
-        "El norte del litoral fluvial concentra los mayores acumulados, que superan los 200 milímetros.",
-        "El ingreso de vientos polares provoca heladas generales en zonas serranas."
-      ],
-      "noConfirmado": [
-        "La magnitud exacta de los acumulados pluviales en las zonas con registros moderados."
-      ],
-      "textoRedes": "El informe agroclimático semanal prevé lluvias variables, heladas en zonas serranas y marcas térmicas de hasta 40 grados en el norte del país durante la siembra de maíz.",
-      "etiquetas": [
-        "lluvias",
-        "temperaturas",
-        "siembra",
-        "maiz"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/rural/anticipan-fuertes-tormentas-contrastes-temperaturas-area-agricola-proximos-dias_0_3KlFcsT7i6.html",
-          "fecha": "2026-10-08T12:31:33.000Z",
-          "oficial": false,
-          "aporte": "Detalló el informe agroclimático semanal con los registros térmicos, los acumulados de lluvia y el ingreso de vientos polares y tropicales."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/el-nino-advierten-sobre-lugares-con-fuertes-tormentas-y-marcados-contrastes-de-temperatura-en-los-nid07102026/",
-          "fecha": "2026-10-08T14:33:51.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la siembra de maíz en paralelo a las precipitaciones previstas para la región productiva."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-bolsa-de-cereales-anticipa-lluvias-y-fuertes-contrastes-termicos",
-      "foto": {
-        "archivo": "fotos-notas/1gsplvm.jpg",
-        "credito": "Foto: Clarín"
-      }
     }
   ],
   "secciones": [
@@ -4734,7 +4665,7 @@
     "ahora": {
       "temp": 12,
       "sensacion": 8,
-      "humedad": 75,
+      "humedad": 76,
       "viento": 21,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4744,41 +4675,41 @@
       {
         "fecha": "2026-10-09",
         "dia": "vie",
-        "max": 12,
+        "max": 13,
         "min": 9,
         "lluvia": 47,
         "codigo": 51,
-        "viento": 21,
+        "viento": 22,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-10",
         "dia": "sáb",
-        "max": 12,
+        "max": 13,
         "min": 9,
         "lluvia": 71,
         "codigo": 51,
         "viento": 15,
-        "milimetros": 2,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-11",
         "dia": "dom",
         "max": 13,
-        "min": 8,
+        "min": 7,
         "lluvia": 29,
-        "codigo": 3,
+        "codigo": 51,
         "viento": 14,
         "milimetros": 0,
-        "cielo": "Nublado"
+        "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-12",
         "dia": "lun",
-        "max": 14,
-        "min": 6,
+        "max": 13,
+        "min": 7,
         "lluvia": 22,
         "codigo": 51,
         "viento": 15,
@@ -5250,6 +5181,12 @@
       "titulo": "Grabois cruzó a Pettovello por las denuncias contra…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "16ew96u",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "wdhpc1",
