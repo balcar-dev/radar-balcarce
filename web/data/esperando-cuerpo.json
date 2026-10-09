@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T19:03:16.368Z",
+ "generado": "2026-10-09T19:27:24.632Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -85,6 +85,23 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
+  },
+  {
+   "id": "n9eggk",
+   "titulo": "Fin de semana largo: pronostican lluvias, cielo nublado y temperaturas frescas",
+   "copete": "El sábado y el lunes se esperan precipitaciones, mientras que el domingo aparece como la mejor jornada para realizar actividades al aire libre.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T14:09:54.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/fin-de-semana-largo-pronostican-lluvias-cielo-nublado-y-temperaturas-frescas",
+     "fecha": "2026-10-09T14:09:54.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
   },
   {
    "id": "vmuzu3",

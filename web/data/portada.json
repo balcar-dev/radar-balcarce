@@ -1,6 +1,107 @@
 {
-  "generado": "2026-10-09T19:03:16.368Z",
+  "generado": "2026-10-09T19:27:24.632Z",
   "notas": [
+    {
+      "id": "futbolresultadosliga20261009",
+      "propia": "futbol",
+      "tipoFutbol": "resultados",
+      "competenciaFutbol": "liga",
+      "datosFutbol": {
+        "partidos": [
+          {
+            "dia": "Viernes 9 de octubre",
+            "hora": "14:30",
+            "estado": "final",
+            "estadio": "José María Minella",
+            "fase": null,
+            "local": {
+              "id": "9739",
+              "nombre": "Aldosivi",
+              "goles": 1
+            },
+            "visitante": {
+              "id": "10158",
+              "nombre": "Sarmiento (Junín)",
+              "goles": 3
+            },
+            "penales": null,
+            "goles": [
+              {
+                "equipo": "visitante",
+                "jugador": "Junior Marabel",
+                "minuto": "18'",
+                "tipo": "gol"
+              },
+              {
+                "equipo": "local",
+                "jugador": "Lucas Castro",
+                "minuto": "20'",
+                "tipo": "gol"
+              },
+              {
+                "equipo": "visitante",
+                "jugador": "Julián Mavilla",
+                "minuto": "86'",
+                "tipo": "gol"
+              },
+              {
+                "equipo": "visitante",
+                "jugador": "Jonathan Herrera",
+                "minuto": "89'",
+                "tipo": "gol"
+              }
+            ]
+          }
+        ],
+        "faltan": 14,
+        "aparte": 0
+      },
+      "destacados": [
+        {
+          "texto": "Ver la tabla de posiciones",
+          "href": "/tablas/liga-profesional"
+        }
+      ],
+      "lugarFoto": "José María Minella",
+      "titulo": "Liga Profesional: así va la fecha del 9 al 12 de octubre, con los resultados",
+      "copete": "1 partido terminado de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
+      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 12 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nTodavía faltan jugarse: Gimnasia La Plata y Atlético Tucumán (Viernes 9 de octubre, 18:00), Instituto (Córdoba) y Boca Juniors (Viernes 9 de octubre, 19:30), Unión (Santa Fe) y Defensa y Justicia (Viernes 9 de octubre, 21:45), Barracas Central y Huracán (Sábado 10 de octubre, 15:45), Central Córdoba (Santiago del Estero) y Estudiantes de La Plata (Sábado 10 de octubre, 17:00), Tigre y Banfield (Sábado 10 de octubre, 19:15), River Plate y Estudiantes de Río Cuarto (Sábado 10 de octubre, 21:30), San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00) y Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
+      "guion": null,
+      "seccion": "Fútbol",
+      "local": false,
+      "relevancia": 56,
+      "medios": [
+        "ESPN (datos abiertos)"
+      ],
+      "enlace": "https://www.espn.com.ar/futbol/",
+      "fuentesConsultadas": [
+        {
+          "medio": "ESPN (datos abiertos)",
+          "enlace": "https://www.espn.com.ar/futbol/"
+        }
+      ],
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T19:27:23.047Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T19:27:23.047Z",
+      "publicadaPor": null,
+      "publicadaCuando": "2026-10-09T19:27:23.047Z",
+      "temas": [],
+      "etiquetas": [
+        "fútbol",
+        "Liga Profesional",
+        "resultados",
+        "Aldosivi",
+        "Sarmiento (Junín)"
+      ],
+      "como": "automatica",
+      "firma": "Nota de Radar Balcarce armada con los datos de ESPN.",
+      "slug": "liga-profesional-asi-va-la-fecha-del-9-al-12-de-octubre-con-los",
+      "foto": {
+        "archivo": "fotos-notas/libre-futbolresultadosliga20261009.jpg",
+        "credito": "Foto: Unknown author Unknown author / Wikimedia Commons (Public domain)"
+      }
+    },
     {
       "id": "npvutmbzyv",
       "propia": "pista",
@@ -52,6 +153,90 @@
       "como": "publicada",
       "firma": "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron lavozdegalicia.es, nytimes.com, es.linkedin.com y dw.com y controlada contra esas fuentes",
       "slug": "fallece-margaret-hamilton-pionera-de-la-informatica-en-la-nasa"
+    },
+    {
+      "id": "ubfg45",
+      "titulo": "El Concejo crea un registro municipal para acompañantes terapéuticos",
+      "copete": "El cuerpo legislativo aprobó una herramienta para conectar a profesionales con pacientes. Concejales reclamaron mejoras salariales y más oportunidades para el sector.",
+      "cuerpo": "El Concejo Deliberante aprobó la creación de un Registro Municipal de Acompañantes Terapéuticos durante su decimoquinta sesión ordinaria. La iniciativa, impulsada por los concejales Fara Amado Cunqueiro y Gonzalo Scioli, funcionará como un portal de búsqueda digital donde los prestadores podrán registrar sus títulos, experiencia y datos de contacto con resguardo de su información personal.\n\nDurante el debate, la edil Sol Di Gerónimo advirtió sobre la falta de empleo en el sector y las bajas remuneraciones que pagan las obras sociales. En coincidencia, el concejal Gabriel Petruccelli señaló que la falta de honorarios adecuados limita la cantidad de horas que los profesionales pueden brindar a los pacientes. Por su parte, la concejal Mara Laso Barreiro expuso las dificultades que atraviesan las escuelas para garantizar estos servicios a los estudiantes debido a vacíos legales y problemas de cobertura.",
+      "guion": "El Concejo crea un registro municipal para acompañantes terapéuticos",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/politica/aprobaron-la-creacion-de-un-registro-municipal-de-acompanantes-terapeuticos",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T18:21:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T19:27:08.643Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante sancionó la creación de un registro local para acompañantes terapéuticos.",
+        "La herramienta funcionará como un portal de búsqueda voluntario para conectar profesionales y pacientes.",
+        "Ediles reclamaron mejoras salariales y denunciaron que las obras sociales pagan remuneraciones bajas.",
+        "Se advirtieron obstáculos en las escuelas para garantizar la cobertura de los estudiantes."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó la herramienta en la decimoquinta sesión ordinaria.",
+        "La propuesta fue presentada por los concejales Fara Amado Cunqueiro y Gonzalo Scioli.",
+        "El registro funcionará como un portal digital con títulos y datos de los prestadores."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó la creación de un Registro Municipal de Acompañantes Terapéuticos para vincular a los profesionales con los pacientes y jerarquizar la actividad en la ciudad.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Acompañantes Terapéuticos",
+        "Empleo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/aprobaron-la-creacion-de-un-registro-municipal-de-acompanantes-terapeuticos",
+          "fecha": "2026-10-09T18:21:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la aprobación del registro en el Concejo Deliberante y los reclamos salariales de los ediles."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xuha1k",
+          "titulo": "El Concejo aprueba la creación de un registro de acompañantes terapéuticos",
+          "fecha": "2026-10-09T10:31:41.235Z",
+          "ruta": "/nota/el-concejo-aprueba-la-creacion-de-un-registro-de-acompanantes-xuha1k"
+        },
+        {
+          "id": "1pofkpj",
+          "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
+          "fecha": "2026-10-05T20:25:05.000Z",
+          "ruta": "/nota/concejales-proponen-crear-un-registro-de-acompanantes-terapeuticos-1pofkpj"
+        },
+        {
+          "id": "15i90co",
+          "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
+          "fecha": "2026-10-01T15:01:12.943Z",
+          "ruta": "/nota/concejales-proponen-crear-un-registro-municipal-de-acompanantes-15i90co"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-crea-un-registro-municipal-para-acompanantes-terapeuticos",
+      "foto": {
+        "archivo": "fotos-notas/ubfg45.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "repaso20261009tarde",
@@ -417,6 +602,7 @@
         "Infobae",
         "Clarín",
         "TN (Todo Noticias)",
+        "El Cronista",
         "iProfesional",
         "Noticias Argentinas (NA)",
         "Agroempresario"
@@ -426,7 +612,7 @@
       "fecha": "2026-10-09T16:02:18.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T19:01:44.733Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -737,6 +923,92 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-municipio-saluda-a-los-tecnicos-de-laboratorio-en-su-jornada"
+    },
+    {
+      "id": "o8zpwa",
+      "titulo": "Franco Colapinto y Pierre Gasly participan de un juego viral de Alpine",
+      "copete": "Los pilotos de la escudería francesa protagonizaron un desafío de adivinanzas en la previa del Gran Premio de Singapur. Además, la actividad oficial en el circuito comenzó con las prácticas y la clasificación.",
+      "cuerpo": "Franco Colapinto y Pierre Gasly participaron de un desafío de adivinanzas organizado por la escudería Alpine en la previa del Gran Premio de Singapur. El juego consistió en descubrir nombres de figuras de la categoría mediante preguntas acotadas.\n\nDurante la partida, el francés adivinó con rapidez su personaje en el primer intento, lo que provocó una exclamación de asombro del argentino. En otro tramo del entretenimiento, el piloto nacional confundió a su excompañero Alex Albon con el propio Gasly.\n\nTras finalizar decimonoveno en la práctica libre con inconvenientes en su monoplaza, Colapinto se ubicó undécimo en la clasificación corta, justo detrás de su compañero, quien largará décimo. La competencia Sprint se disputará el sábado a las 6 y la clasificación para la carrera principal tendrá lugar el domingo a las 9.",
+      "guion": "Franco Colapinto y Pierre Gasly participan de un juego viral de Alpine",
+      "seccion": "Automovilismo",
+      "medios": [
+        "TyC Sports",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.tycsports.com/automovilismo/colapinto-y-gasly-juego-viral-alpine-id765138.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T14:57:33.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T18:01:48.011Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los pilotos jugaron a las adivinanzas en la previa de Singapur.",
+        "La actividad oficial en el Circuito de Marina Bay comenzó el viernes.",
+        "Colapinto se ubicó undécimo en la clasificación corta.",
+        "La carrera Sprint se disputa el sábado a las 6."
+      ],
+      "noConfirmado": [
+        "No se especificaron detalles adicionales sobre los inconvenientes mecánicos reportados por el piloto argentino en la práctica libre."
+      ],
+      "textoRedes": "Franco Colapinto y Pierre Gasly participaron de un juego viral de adivinanzas organizado por Alpine en la previa del Gran Premio de Singapur. La actividad oficial en el Circuito de Marina Bay comenzó el viernes con vistas a la competencia Sprint.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Pierre Gasly",
+        "Alpine",
+        "Formula 1",
+        "Gran Premio de Singapur"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/colapinto-y-gasly-juego-viral-alpine-id765138.html",
+          "fecha": "2026-10-09T14:57:33.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles del desafío lúdico de Alpine, las reacciones de los pilotos y los resultados de las prácticas y la clasificación corta."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/franco-colapinto-y-pierre-gasly-se-animaron-a-un-juego-viral-y-enloquecieron-a-las-redes-que-hijo-de/",
+          "fecha": "2026-10-09T17:44:43.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la información sobre la participación de los pilotos en el juego viral de la escudería francesa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "17f0jbe",
+          "titulo": "Alpine analiza el desempeño de Colapinto y Gasly tras Azerbaiyán",
+          "fecha": "2026-09-25T15:18:00.000Z",
+          "ruta": "/nota/alpine-analiza-el-desempeno-de-colapinto-y-gasly-tras-azerbaiyan-17f0jbe"
+        },
+        {
+          "id": "1ppws54",
+          "titulo": "Alpine elige una foto de Colapinto para anunciar el GP de Bahréin",
+          "fecha": "2026-09-28T10:57:11.000Z",
+          "ruta": "/nota/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-1ppws54"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "La fría reacción de Pierre Gasly ante las disculpas de Franco Colapinto por el choque en Bakú",
+          "fecha": "2026-09-22T13:54:00.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-y-pierre-gasly-participan-de-un-juego-viral-de-alpine",
+      "foto": {
+        "archivo": "fotos-notas/o8zpwa.jpg",
+        "credito": "Foto: TyC Sports"
+      }
     },
     {
       "id": "2qmh95",
@@ -1205,6 +1477,8 @@
         "Minuto Uno",
         "TN (Todo Noticias)",
         "C5N",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
         "Infobae",
         "A24",
         "Radio Mitre",
@@ -1736,6 +2010,7 @@
         "La Nación",
         "Clarín",
         "iProfesional",
+        "Crónica",
         "Radio Mitre",
         "Infoeme",
         "El Marplatense",
@@ -2147,7 +2422,7 @@
       "fecha": "2026-10-09T07:23:49.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T10:31:41.235Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2230,7 +2505,7 @@
       "fecha": "2026-10-09T07:02:38.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T11:31:38.538Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3184,6 +3459,7 @@
       "seccion": "Deportes",
       "medios": [
         "La Nación",
+        "Ámbito",
         "Infobae",
         "TN (Todo Noticias)",
         "TyC Sports",
@@ -3268,8 +3544,8 @@
         "Infobae",
         "La Nación",
         "Perfil",
-        "Minuto Uno",
-        "Ámbito"
+        "Ámbito",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/08/la-camara-nacional-electoral-aprobo-una-plataforma-digital-para-iniciativas-populares/",
       "teniaImagenLaFuente": true,
@@ -3579,7 +3855,12 @@
       "guion": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Perfil",
+        "La Nación",
+        "Infocampo",
+        "La Voz del Pueblo",
+        "Noticias Agropecuarias"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/uatre-balcarce-saluda-los-trabajadores.html",
       "teniaImagenLaFuente": true,
@@ -3757,10 +4038,8 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
-        "Olé",
         "Radio Mitre",
         "Canal 26",
-        "Diario Popular",
         "Noticias Argentinas (NA)",
         "Bolavip Argentina",
         "La Capital (Rosario)",
@@ -4428,22 +4707,22 @@
     }
   ],
   "secciones": [
+    "Fútbol",
     "Argentina",
     "Balcarce",
     "Política",
-    "Fútbol",
     "Economía",
     "Deportes",
+    "Automovilismo",
     "Tecnología",
     "Agro",
-    "Cultura y agenda",
-    "Automovilismo"
+    "Cultura y agenda"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 3
+      "cuantas": 4
     },
     {
       "nombre": "El INTA",
@@ -4455,7 +4734,7 @@
     "ahora": {
       "temp": 12,
       "sensacion": 8,
-      "humedad": 76,
+      "humedad": 75,
       "viento": 21,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4889,12 +5168,6 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "5bmjjg",
-      "titulo": "“¿A quién defiende?”: Bullrich cruzó a la fiscal que pidió…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"apuñalado\""
-    },
-    {
       "id": "16bm3w7",
       "titulo": null,
       "seccion": "Cultura y agenda",
@@ -4914,7 +5187,7 @@
     },
     {
       "id": "5w58zn",
-      "titulo": "EN VIVO Aldosivi y Sarmiento ya juegan el segundo tiempo",
+      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
       "seccion": "Fútbol",
       "motivo": "parece promoción, no noticia: \"suscribite\""
     },
@@ -4925,10 +5198,22 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
+      "id": "11i60cy",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
       "id": "emxfi0",
       "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "1hc2g38",
+      "titulo": "Renunció un importante funcionario político de Azul…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1ob03ue",
@@ -4985,12 +5270,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "11i60cy",
-      "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "dfdr7f",
       "titulo": "Alumnos de otro colegio fueron denunciados por alterar…",
       "seccion": "Argentina",
@@ -5033,5 +5312,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 8
 }

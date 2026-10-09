@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-09T19:03:13.772Z",
+ "consultado": "2026-10-09T19:27:22.311Z",
  "equipos": [
   "9739",
   "3",
@@ -630,8 +630,8 @@
     "id": "401841612",
     "competencia": "liga",
     "inicio": "2026-10-09T17:30:00.000Z",
-    "estado": "en-juego",
-    "minuto": "73'",
+    "estado": "final",
+    "minuto": "90'+4'",
     "local": {
      "id": "9739",
      "nombre": "Aldosivi",
@@ -640,7 +640,7 @@
     "visitante": {
      "id": "10158",
      "nombre": "Sarmiento (Junín)",
-     "goles": 1
+     "goles": 3
     },
     "penales": null,
     "goles": [
@@ -654,6 +654,18 @@
       "equipo": "local",
       "jugador": "Lucas Castro",
       "minuto": "20'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Julián Mavilla",
+      "minuto": "86'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Jonathan Herrera",
+      "minuto": "89'",
       "tipo": "gol"
      }
     ],
@@ -1340,6 +1352,19 @@
      },
      {
       "posicion": 3,
+      "id": "10158",
+      "equipo": "Sarmiento (Junín)",
+      "pj": 11,
+      "g": 6,
+      "e": 1,
+      "p": 4,
+      "gf": 20,
+      "gc": 17,
+      "dif": 3,
+      "pts": 19
+     },
+     {
+      "posicion": 4,
       "id": "17",
       "equipo": "Rosario Central",
       "pj": 11,
@@ -1352,7 +1377,7 @@
       "pts": 19
      },
      {
-      "posicion": 4,
+      "posicion": 5,
       "id": "10",
       "equipo": "Huracán",
       "pj": 11,
@@ -1365,7 +1390,7 @@
       "pts": 19
      },
      {
-      "posicion": 5,
+      "posicion": 6,
       "id": "9744",
       "equipo": "Independiente Rivadavia",
       "pj": 11,
@@ -1378,7 +1403,7 @@
       "pts": 18
      },
      {
-      "posicion": 6,
+      "posicion": 7,
       "id": "9",
       "equipo": "Gimnasia La Plata",
       "pj": 11,
@@ -1389,19 +1414,6 @@
       "gc": 16,
       "dif": 0,
       "pts": 18
-     },
-     {
-      "posicion": 7,
-      "id": "10158",
-      "equipo": "Sarmiento (Junín)",
-      "pj": 10,
-      "g": 5,
-      "e": 1,
-      "p": 4,
-      "gf": 17,
-      "gc": 16,
-      "dif": 1,
-      "pts": 16
      },
      {
       "posicion": 8,
@@ -1485,13 +1497,13 @@
       "posicion": 14,
       "id": "9739",
       "equipo": "Aldosivi",
-      "pj": 11,
+      "pj": 12,
       "g": 2,
       "e": 2,
-      "p": 7,
-      "gf": 12,
-      "gc": 17,
-      "dif": -5,
+      "p": 8,
+      "gf": 13,
+      "gc": 20,
+      "dif": -7,
       "pts": 8
      },
      {
@@ -1511,11 +1523,12 @@
    }
   ]
  },
- "tablaCuando": "2026-10-09T13:32:23.606Z",
+ "tablaCuando": "2026-10-09T19:27:22.311Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
   "futboltablaliga20261002": "2026-10-06T02:34:43.431Z",
-  "futbolpartidosliga20261009": "2026-10-08T05:31:57.920Z"
+  "futbolpartidosliga20261009": "2026-10-08T05:31:57.920Z",
+  "futbolresultadosliga20261009": "2026-10-09T19:27:23.047Z"
  }
 }

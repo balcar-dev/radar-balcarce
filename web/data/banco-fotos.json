@@ -9914,16 +9914,16 @@
   "cuando": "2026-10-08T14:02:39.879Z"
  },
  "112w8rt": {
-  "archivo": "fotos-notas/112w8rt.jpg",
   "medio": "Infocampo",
-  "credito": "Foto: Infocampo",
   "licencia": null,
   "origen": "medio",
   "titulo": "Argentina celebra el Día del Trabajador Rural",
   "enlace": "https://www.infocampo.com.ar/un-homenaje-a-quienes-encienden-el-motor-productivo-argentina-celebra-el-dia-del-trabajador-rural/",
   "imagenOriginal": "https://www.infocampo.com.ar/wp-content/uploads/2026/10/trabajadores-rurales-sra.png",
   "razon": "Ilustra perfectamente la temática del trabajador rural con buena calidad y sin marcas ni menores.",
-  "cuando": "2026-10-08T14:02:39.879Z"
+  "cuando": "2026-10-08T14:02:39.879Z",
+  "intentado": true,
+  "borrada": true
  },
  "ztbuao": {
   "medio": "El Cronista",
@@ -11262,5 +11262,16 @@
   "imagenOriginal": "https://www.agrositio.com.ar/imagenesweb/contenidos/og_248758_69205760.jpg",
   "razon": "La foto B ofrece un encuadre más amplio y limpio del stand de la Asociación Argentina de Angus, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-09T19:02:19.614Z"
+ },
+ "futbolresultadosliga20261009": {
+  "archivo": "fotos-notas/libre-futbolresultadosliga20261009.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Unknown author Unknown author / Wikimedia Commons (Public domain)",
+  "licencia": "Public domain",
+  "origen": "libre",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Estadio_mundialista_minella_1978.jpg",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Estadio_mundialista_minella_1978.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "titulo": "File:Estadio mundialista minella 1978.jpg",
+  "cuando": "2026-10-09T19:27:23.785Z"
  }
 }
