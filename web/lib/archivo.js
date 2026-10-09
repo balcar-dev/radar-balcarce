@@ -19,7 +19,7 @@
 // archivos: generar-datos lo usa y las pruebas lo prueban sin red.
 
 import { slugDe } from './ruta.js';
-import { tieneRespaldo } from './cuerpo.js';
+import { tieneRespaldo, tieneCuerpo } from './cuerpo.js';
 import { sinTildes } from './texto.js';
 
 /** Cuánto se queda una nota en las listas del sitio. Es el mismo criterio que
@@ -405,6 +405,23 @@ export function aligerarViejas(notas = [], { ahora = Date.now(), dias = DIAS_CON
   });
 }
 
+/** Cuántos días se espera a que una nota automática sin cuerpo lo consiga antes de sacarla del archivo. */
+export const DIAS_SIN_CUERPO = 3;
+
+/**
+ * ¿Esta nota se saca del archivo por no tener cuerpo? (8/10/2026, decisión de Hernán: "las del principio que sólo salían el título y sin
+ * cuerpo las podemos borrar".) Son las notas automáticas de antes de la regla del cuerpo (18 al 25/09): se publicaban con la bajada
+ * copiada de la fuente. Llevan `noindex`, no se ofrecen a Google y cada una cuesta unos tres archivos de los 20.000 que acepta Cloudflare.
+ * NO se saca: lo que circula en las redes (su enlace está compartido), lo que publicó una persona, lo propio, lo que tiene cuerpo ni lo
+ * que tiene menos de DIAS_SIN_CUERPO (3) días (todavía puede conseguirlo). No se pierde: va al histórico por mes.
+ */
+export function sePodaPorFaltaDeCuerpo(n, ahora = Date.now()) {
+  if (!n || n.redes || n.como === 'publicada' || n.propia) return false;
+  if (tieneCuerpo(n)) return false;
+  const t = tiempo(n);
+  return Number.isFinite(t) && Number(ahora) - t > DIAS_SIN_CUERPO * 24 * HORA;
+}
+
 export function actualizarArchivo({
   archivo = [], publicadas = [], enPortada = new Set(), retiradas = new Set(), enRedes = new Set(),
   ahora = Date.now(), dias = DIAS_DE_ARCHIVO, maximo = MAXIMO_EN_ARCHIVO,
@@ -424,6 +441,7 @@ export function actualizarArchivo({
   let notas = [...porId.values()]
     .map((n) => (enRedes.has(n.id) || n.redes ? { ...n, redes: true } : n))
     .filter((n) => n.redes || tieneRespaldo(n))
+    .filter((n) => !sePodaPorFaltaDeCuerpo(n, ahora))
     .filter((n) => !Number.isFinite(tiempo(n)) || tiempo(n) >= corte)
     .sort(porFecha);
 

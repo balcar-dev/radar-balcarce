@@ -491,3 +491,32 @@ test('una ingesta con casi todas las fuentes caídas o vacías no se usa para ar
   assert.ok(sana > 0 && sana < datos.indexOf('const anterior = leerJson(SALIDA'), 'se mira antes de escribir nada');
   assert.match(datos.slice(sana, sana + 400), /process\.exit\(1\)/);
 });
+
+// ---------------------------------------------- las notas sin cuerpo salen del archivo (8/10/2026, decisión de Hernán)
+
+import { sePodaPorFaltaDeCuerpo, DIAS_SIN_CUERPO, guardiaDelArchivo } from '../web/lib/archivo.js';
+
+test('una nota automática sin cuerpo y de más de tres días sale del archivo, salvo que circule en las redes', () => {
+  const ahora = Date.parse('2026-10-09T12:00:00Z');
+  const cuerpo = Array.from({ length: 90 }, (_, i) => `palabra${i}`).join(' ');
+  const vieja = (id, extra = {}) => ({ id, titulo: `Nota ${id}`, copete: `Bajada ${id}`, cuerpo: '', seccion: 'Balcarce', local: true, como: 'automatica', fecha: '2026-09-21T12:00:00Z', ...extra });
+  const archivo = [
+    vieja('sin'), vieja('enredes', { redes: true }), vieja('persona', { como: 'publicada' }), vieja('conCuerpo', { cuerpo, copete: 'otra bajada distinta' }),
+    vieja('reciente', { fecha: '2026-10-08T12:00:00Z' }), vieja('propia', { propia: 'dolar' }),
+  ];
+  assert.equal(DIAS_SIN_CUERPO, 3);
+  const quedan = actualizarArchivo({ archivo, ahora }).map((n) => n.id).sort();
+  assert.deepEqual(quedan, ['conCuerpo', 'enredes', 'persona', 'propia', 'reciente']);
+  assert.equal(sePodaPorFaltaDeCuerpo(archivo[0], ahora), true);
+  assert.equal(sePodaPorFaltaDeCuerpo(archivo[1], ahora), false);
+  assert.equal(sePodaPorFaltaDeCuerpo(null, ahora), false);
+});
+
+test('la guardia del archivo no se asusta de lo que se sacó a propósito, pero sí de una baja sin explicación', () => {
+  // 1.125 notas, 296 sin cuerpo que se sacan: sin contarlas, es una baja de 26 % y la guardia frenaría; contadas, se ve normal.
+  assert.equal(guardiaDelArchivo(1125, 829).ok, false);
+  assert.equal(guardiaDelArchivo(1125, 829 + 296).ok, true);
+  assert.equal(guardiaDelArchivo(1125, 500 + 296).ok, false, 'una baja grande sin explicación sigue frenada');
+  const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+  assert.match(g, /guardiaDelArchivo\(\(archivoAnterior\.notas \?\? \[\]\)\.length, archivo\.length \+ podadasSinCuerpo\)/);
+});

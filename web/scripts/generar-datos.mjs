@@ -71,7 +71,7 @@ import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson, guardiaDelArchivo, ingestaSana, bajasDelArchivo, mesDeLaNota, conBajasEnElHistorico,
   idsRetiradosAMano, correccionesAMano, conCorreccion, cambiosDeLaAuditoria, conCambiosDeLaAuditoria, fechaDeLaNota, llegaTarde,
-  esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
+  esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson, sePodaPorFaltaDeCuerpo,
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad, semaforoDelTexto } from '../../ingesta/ingesta.mjs';
@@ -952,7 +952,9 @@ const archivo = aligerarViejas(actualizarArchivo({
   enRedes: idsEnRedes(libroRedes),
 }));
 if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
-  const guardia = guardiaDelArchivo((archivoAnterior.notas ?? []).length, archivo.length);
+  // Lo que se saca a propósito por no tener cuerpo (sePodaPorFaltaDeCuerpo) no cuenta como una baja sospechosa.
+  const podadasSinCuerpo = (archivoAnterior.notas ?? []).filter((n) => sePodaPorFaltaDeCuerpo(n)).length;
+  const guardia = guardiaDelArchivo((archivoAnterior.notas ?? []).length, archivo.length + podadasSinCuerpo);
   if (!guardia.ok && process.env.ARCHIVO_PERMITIR_BAJA !== '1') {
     throw new Error(`archivo.json: ${guardia.motivo}. Si es a propósito, correr con ARCHIVO_PERMITIR_BAJA=1.`);
   }
