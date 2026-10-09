@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T12:02:21.735Z",
- "portada": 51,
- "archivo": 849,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-09T12:32:09.357Z",
+ "portada": 48,
+ "archivo": 850,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-09T12:02:21.760Z",
+  "generado": "2026-10-09T12:32:09.405Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-09T12:06:39.045Z"
    },
    {
     "nombre": "noticia1",
@@ -95,8 +95,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "l5o975",
+      "titulo": "El Gobierno oficializa el proyecto petrolero de Tecpetrol en Vaca Muerta",
+      "seccion": "Economía"
+     },
+     {
+      "id": "xlon5q",
+      "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
+      "seccion": "Agro"
+     },
      {
       "id": "1v0pyz6",
       "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
@@ -106,16 +116,6 @@
       "id": "ypnvl8",
       "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
-     },
-     {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
-      "seccion": "Agro"
      }
     ]
    },
@@ -126,12 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 47,
     "notas": [
      {
-      "id": "15x6yh5",
-      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
-      "seccion": "Automovilismo"
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
      },
      {
       "id": "6vefne",
@@ -139,9 +139,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "seccion": "Balcarce"
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      },
      {
       "id": "1p0s5l3",
@@ -157,22 +157,39 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 31,
+    "notas": [
+     {
+      "id": "1bb4gv8",
+      "titulo": "Atletas locales suman cinco triunfos en Mar del Plata",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "1v0pyz6",
      "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
-     "seccion": "Balcarce",
+     "cuando": "2026-10-09T12:08:37.621Z"
+    }
+   ],
+   "cola": [
+    {
+     "id": "xlon5q",
+     "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
+     "seccion": "Agro",
      "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-08T21:10:07.630Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-09T13:38:37.621Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

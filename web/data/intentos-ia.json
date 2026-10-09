@@ -160,9 +160,9 @@
   "motivo": "con cuerpo"
  },
  "13ysda0": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T12:01:57.134Z",
-  "motivo": "cuerpo: 2 problemas (nombre, fecha): el cuerpo nombra a \"municipalidad\" y la fuente no; sin esas oraciones quedan 54 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-09T12:31:51.351Z",
+  "motivo": "cuerpo: 3 problemas (numero, fecha): el cuerpo dice 2.018 y la fuente no lo dice; sin esas oraciones quedan 42 palabras"
  },
  "144vvk7": {
   "intentos": 2,
@@ -1422,11 +1422,6 @@
   "ultimo": "2026-10-06T21:11:32.898Z",
   "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
- "1ugi3md": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T12:31:15.977Z",
-  "motivo": "con cuerpo"
- },
  "1uh42rm": {
   "intentos": 1,
   "ultimo": "2026-10-07T01:02:10.806Z",
@@ -2292,11 +2287,6 @@
   "ultimo": "2026-10-05T17:01:27.550Z",
   "motivo": "con cuerpo"
  },
- "ig6fdw": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T12:31:15.977Z",
-  "motivo": "con cuerpo"
- },
  "iko0b0": {
   "intentos": 1,
   "ultimo": "2026-10-02T13:03:38.642Z",
@@ -2981,6 +2971,11 @@
   "ultimo": "2026-10-08T05:31:34.301Z",
   "motivo": "cuerpo: 2 problemas (numero, fecha): el cuerpo dice 7 y la fuente no lo dice; sin esas oraciones quedan 113 palabras"
  },
+ "xlon5q": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T12:31:51.351Z",
+  "motivo": "con cuerpo"
+ },
  "xmeiz2": {
   "intentos": 1,
   "ultimo": "2026-10-06T22:01:23.795Z",
@@ -2996,19 +2991,9 @@
   "ultimo": "2026-10-09T10:31:53.207Z",
   "motivo": "con cuerpo"
  },
- "xvt4t1": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T12:31:15.977Z",
-  "motivo": "con cuerpo"
- },
  "xz54n": {
   "intentos": 2,
   "ultimo": "2026-10-02T16:07:48.087Z",
-  "motivo": "con cuerpo"
- },
- "y1kgx4": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T12:31:15.977Z",
   "motivo": "con cuerpo"
  },
  "y4gp3v": {
