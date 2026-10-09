@@ -1,6 +1,87 @@
 {
-  "generado": "2026-10-09T00:32:07.960Z",
+  "generado": "2026-10-09T01:02:10.468Z",
   "notas": [
+    {
+      "id": "12xoybu",
+      "titulo": "Un auto se incendia y termina destruido en la colectora de la ruta 226",
+      "copete": "El rodado quedó completamente destruido tras desatarse las llamas durante la tarde del jueves. Una dotación de Bomberos Voluntarios trabajó en el lugar.",
+      "cuerpo": "Un automóvil Ford Ka sufrió daños totales al incendiarse el jueves por la tarde en la colectora de la Autovía Nacional 226. El episodio comenzó cuando la propietaria regresaba de hacer compras y advirtió el fuego en el vehículo.\n\nUna dotación de Bomberos Voluntarios acudió para extinguir las llamas y frenar la propagación, aunque el rodado quedó destruido por completo. En el sitio también prestaron servicio efectivos de la Estación de Policía Comunal y personal de Tránsito.",
+      "guion": "Un auto se incendia y termina destruido en la colectora de la ruta 226",
+      "seccion": "Policiales",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45042-un-auto-fue-consumido-por-las-llamas-y-termino-destruido-en-la-colectora-de-la-ruta-226/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T01:01:28.815Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T01:01:28.815Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "bomberos",
+        "rutas"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Un auto se prendió fuego en la colectora de la ruta 226.",
+        "El fuego causó daños totales en el vehículo.",
+        "Bomberos Voluntarios trabajaron para apagar las llamas."
+      ],
+      "seSabe": [
+        "El hecho ocurrió el jueves por la tarde en la colectora de la Autovía Nacional 226.",
+        "El vehículo afectado fue un Ford Ka que sufrió daños totales.",
+        "La propietaria descubrió el fuego al volver de hacer compras.",
+        "Trabajaron en el lugar Bomberos Voluntarios, personal de Tránsito y efectivos de la Estación de Policía Comunal."
+      ],
+      "noConfirmado": [
+        "No se informaron las causas que originaron el incendio del vehículo.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un automóvil quedó destruido este jueves por la tarde tras incendiarse en la colectora de la Autovía Nacional 226. Bomberos Voluntarios trabajaron en el lugar para apagar las llamas.",
+      "etiquetas": [
+        "incendio",
+        "ruta 226",
+        "bomberos voluntarios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45042-un-auto-fue-consumido-por-las-llamas-y-termino-destruido-en-la-colectora-de-la-ruta-226/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el incendio de un auto en la colectora de la ruta 226 y el trabajo de los bomberos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1n6yxr",
+          "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
+          "fecha": "2026-10-06T22:23:08.000Z",
+          "ruta": "/nota/la-liga-balcarcena-inicia-la-fase-clausura-del-torneo-oficial-1n6yxr"
+        },
+        {
+          "id": "1pwavd9",
+          "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región",
+          "fecha": "2026-10-06T00:01:00.000Z",
+          "ruta": "/nota/la-empresa-esuco-retoma-tareas-viales-en-las-rutas-de-la-region-1pwavd9"
+        },
+        {
+          "id": "irc0sr",
+          "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
+          "fecha": "2026-10-04T20:31:39.000Z",
+          "ruta": "/nota/bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela-irc0sr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "un-auto-se-incendia-y-termina-destruido-en-la-colectora-de-la-ruta-226"
+    },
     {
       "id": "repaso20261008noche",
       "propia": "repaso",
@@ -142,8 +223,8 @@
       "guion": "YPF adquiere la totalidad de las acciones de YPF Luz por 430 millones de dólares",
       "seccion": "Economía",
       "medios": [
-        "Infobae",
         "Clarín",
+        "Infobae",
         "El Cronista",
         "iProfesional"
       ],
@@ -211,80 +292,146 @@
       "slug": "ypf-adquiere-la-totalidad-de-las-acciones-de-ypf-luz-por-430-millones"
     },
     {
-      "id": "vjzeja",
-      "titulo": "Marketing Sports culpa a River por las fallas en el homenaje",
-      "copete": "La empresa organizadora del evento para Lionel Messi en el estadio Monumental emitió un comunicado. Apuntó contra la dirigencia del club por restricciones operativas y fallas técnicas durante el espectáculo.",
-      "cuerpo": "Según la empresa, el desarrollo del evento se vio condicionado por limitaciones operativas y responsabilizó a la dirigencia de River.\n\nLa firma detalló que el club retiró la pantalla LED principal tras el anuncio de la sede y rechazó instalar una alternativa en el césped. Además, indicó que prohibieron armar un escenario central y que el sonido e iluminación dependían del personal de la institución.\n\nDurante la actuación del Grupo Cali, un corte de energía eléctrica interrumpió el show y el personal encendió las luces generales, lo que provocó la salida de los espectadores antes del final.",
-      "guion": "Marketing Sports culpa a River por las fallas en el homenaje",
+      "id": "5ffwsk",
+      "titulo": "AACYC Balcarce gana cinco pruebas en Mar del Plata",
+      "copete": "Cuatro representantes de la entidad local compitieron en el Torneo de la Diversidad Cultural. Benicio Caro sobresalió con tres triunfos.",
+      "cuerpo": "Cuatro deportistas de AACYC Balcarce compitieron el sábado 3 de octubre en el Torneo de la Diversidad Cultural en Mar del Plata, organizado por la Federación Marplatense de Atletismo. \n\nEn la división U12, Benicio Caro se impuso en los 50 metros llanos con 7”99 y en los 500 metros con 1’32”76, además de ganar en salto en largo de la categoría U14 con 4,27 metros. Por su parte, Elías Aguer triunfó en los 80 metros llanos U16 con 11”21 y finalizó tercero en salto en largo con 4,05 metros. \n\nEn tanto, Jesús Coria se quedó con el primer puesto en lanzamiento de bala U18 con un registro de 11,01 metros. La delegación se completó con Juan Andrés Solar, quien participó en los 1.500 metros de Mayores, donde concluyó decimocuarto en la general y quinto en su categoría U18 con 5’12”63.",
+      "guion": "AACYC Balcarce gana cinco pruebas en Mar del Plata",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/aacyc-balcarce-cosecho-triunfos-y-podios-en-mar-del-plata",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T22:58:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T23:01:41.431Z",
+      "relevancia": 82,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cuatro atletas locales participaron en Mar del Plata",
+        "Benicio Caro cosechó tres primeros puestos",
+        "Elías Aguer y Jesús Coria sumaron victorias",
+        "Juan Andrés Solar completó la actuación en Mayores"
+      ],
+      "seSabe": [
+        "La competencia se disputó el sábado 3 de octubre en Mar del Plata.",
+        "El certamen fue organizado por la Federación Marplatense de Atletismo.",
+        "Benicio Caro ganó en 50 metros, 500 metros y salto en largo.",
+        "Elías Aguer se impuso en 80 metros llanos y fue tercero en salto en largo.",
+        "Jesús Coria ganó en lanzamiento de bala."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Cuatro atletas de AACYC Balcarce lograron cinco triunfos en el Torneo de la Diversidad Cultural disputado en Mar del Plata. Benicio Caro se destacó con tres primeros puestos, acompañado por las victorias de Elías Aguer y Jesús Coria.",
+      "etiquetas": [
+        "atletismo",
+        "AACYC Balcarce",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/aacyc-balcarce-cosecho-triunfos-y-podios-en-mar-del-plata",
+          "fecha": "2026-10-08T22:58:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados y las marcas de los cuatro atletas locales en el torneo de Mar del Plata."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "k690bx",
+          "titulo": "Atletas locales consiguen triunfos y podios en Tandil",
+          "fecha": "2026-10-05T22:57:34.810Z",
+          "ruta": "/nota/atletas-locales-consiguen-triunfos-y-podios-en-tandil-k690bx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "aacyc-balcarce-gana-cinco-pruebas-en-mar-del-plata"
+    },
+    {
+      "id": "1rkkg1m",
+      "titulo": "Lionel Messi se reincorpora a los entrenamientos del Inter Miami",
+      "copete": "Tras su despedida de la selección argentina en el estadio Monumental, el capitán rosarino volvió a Estados Unidos y se sumó a las prácticas de su equipo.",
+      "cuerpo": "Lionel Messi regresó a Estados Unidos y se reincorporó a los entrenamientos del Inter Miami para encarar el tramo final de la temporada regular de la MLS, tras su reciente despedida de la selección argentina. El conjunto rosado recibirá al DC United el sábado 10 de octubre a las 20.30 en el Chase Stadium, por la vigesimoctava fecha del torneo norteamericano.\n\nBajo las órdenes del cuerpo técnico que encabeza el entrenador, el delantero argentino centra sus objetivos en la recta final de la temporada y en la posterior fase de playoffs, abocado exclusivamente al fútbol de clubes.",
+      "guion": "Lionel Messi se reincorpora a los entrenamientos del Inter Miami",
       "seccion": "Fútbol",
       "medios": [
-        "Ámbito",
-        "Perfil",
-        "El Día"
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)"
       ],
-      "enlace": "https://442.perfil.com/noticias/futbol/la-productora-encargada-del-homenaje-a-messi-explico-las-fallas-tecnicas-del-show-y-responsabilizo-a-river.phtml",
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/10/08/tras-despedirse-de-la-seleccion-argentina-lionel-messi-regreso-a-los-entrenamientos-de-inter-miami/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T22:50:50.000Z",
+      "fecha": "2026-10-08T22:35:05.000Z",
       "sinFecha": false,
-      "visto": "2026-10-09T00:31:46.698Z",
+      "visto": "2026-10-09T01:01:28.815Z",
       "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "Marketing Sports organizó el homenaje a Messi en el Monumental por contrato de la AFA.",
-        "La productora emitió un comunicado para responsabilizar a River por los problemas técnicos.",
-        "Denunciaron la falta de pantalla LED, la prohibición de un escenario central y un corte de luz."
-      ],
-      "seSabe": [
-        "Marketing Sports emitió un comunicado para explicar las fallas técnicas en el homenaje a Lionel Messi.",
-        "La productora fue contratada por la Asociación del Fútbol Argentino para el evento en el estadio Monumental.",
-        "La empresa denunció que River retiró la pantalla LED y negó colocar otra en el campo de juego.",
-        "El sonido y la iluminación estaban a cargo del personal técnico del club.",
-        "Un corte de electricidad interrumpió la presentación del Grupo Cali y obligó a encender la iluminación general."
-      ],
       "noConfirmado": [
-        "No se difundió la respuesta oficial de la dirigencia de River frente a las acusaciones de la productora."
+        "Todavía no se definió si el capitán integrará el equipo titular o ingresará desde el banco de suplentes en el próximo encuentro."
       ],
-      "textoRedes": "La productora encargada del homenaje a Lionel Messi en el estadio Monumental emitió un comunicado para explicar las fallas técnicas y responsabilizó a la dirigencia de River por las restricciones operativas durante el espectáculo.",
+      "textoRedes": "Tras su despedida de la selección argentina en el Monumental, Lionel Messi regresó a Estados Unidos y se reincorporó a los entrenamientos del Inter Miami.",
       "etiquetas": [
         "Lionel Messi",
-        "AFA",
-        "River Plate",
-        "Estadio Monumental",
-        "Fútbol"
+        "Inter Miami",
+        "MLS",
+        "Seleccion Argentina"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/futbol/la-productora-encargada-del-homenaje-a-messi-explico-las-fallas-tecnicas-del-show-y-responsabilizo-a-river.phtml",
-          "fecha": "2026-10-08T22:50:50.000Z",
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/08/tras-despedirse-de-la-seleccion-argentina-lionel-messi-regreso-a-los-entrenamientos-de-inter-miami/",
+          "fecha": "2026-10-08T22:35:05.000Z",
           "oficial": false,
-          "aporte": "Detalló los inconvenientes operativos y la negativa de River sobre la pantalla LED y el escenario."
+          "aporte": "Informó sobre el calendario de partidos de octubre y la incertidumbre sobre su titularidad."
         },
         {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/la-productora-del-homenaje-lionel-messi-apunto-contra-river-y-lo-acuso-empanar-la-despedida-n6331839",
-          "fecha": "2026-10-09T00:00:00.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/09/las-imagenes-del-regreso-de-lionel-messi-a-los-entrenamientos-del-inter-miami-tras-su-despedida-de-la-seleccion-argentina/",
+          "fecha": "2026-10-09T00:51:34.000Z",
           "oficial": false,
-          "aporte": "Denunció restricciones del club y señaló los cortes de sonido y el apagón durante el show del Grupo Cali."
+          "aporte": "Confirmó el retorno a las prácticas tras la victoria en el estadio Monumental."
         },
         {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
-          "fecha": "2026-10-08T23:00:53.000Z",
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/lionel-messi-volvio-a-los-entrenamientos-del-inter-miami-tras-despedirse-de-la-seleccion_a6ac816b73d40083fb6640137",
+          "fecha": "2026-10-08T23:37:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre el comunicado difundido por la productora contratada por la AFA."
+          "aporte": "Aportó que el último encuentro con la selección fue frente a Benín."
         }
       ],
       "antecedentes": [
         {
-          "id": "99mpv8",
-          "titulo": "Marketing Sports apunta contra River por las fallas en el adiós a Messi",
-          "fecha": "2026-10-08T22:07:42.000Z",
-          "ruta": "/nota/marketing-sports-apunta-contra-river-por-las-fallas-en-el-adios-a-99mpv8"
+          "id": "1nlg6jl",
+          "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
+          "fecha": "2026-09-19T03:00:00.000Z",
+          "ruta": "/nota/lionel-messi-vuelve-a-jugar-en-inter-miami-tras-su-despedida-de-la-1nlg6jl"
+        },
+        {
+          "id": "kp99r6",
+          "titulo": "Cristiano Ronaldo saluda a Lionel Messi tras su adiós de la Selección",
+          "fecha": "2026-10-07T18:06:07.000Z",
+          "ruta": "/nota/cristiano-ronaldo-saluda-a-lionel-messi-tras-su-adios-de-la-seleccion-kp99r6"
+        },
+        {
+          "id": "1jwkhok",
+          "titulo": "Lionel Messi publica un emotivo mensaje tras su despedida de la Selección",
+          "fecha": "2026-10-07T17:59:00.000Z",
+          "ruta": "/nota/lionel-messi-publica-un-emotivo-mensaje-tras-su-despedida-de-la-1jwkhok"
         }
       ],
       "verificacion": {
@@ -292,11 +439,155 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "marketing-sports-culpa-a-river-por-las-fallas-en-el-homenaje",
-      "foto": {
-        "archivo": "fotos-notas/vjzeja.jpg",
-        "credito": "Foto: Ámbito"
-      }
+      "slug": "lionel-messi-se-reincorpora-a-los-entrenamientos-del-inter-miami"
+    },
+    {
+      "id": "bsy3zw",
+      "titulo": "Shai Gilgeous-Alexander se convierte en accionista del Atlético de Madrid",
+      "copete": "La estrella de la NBA y jugador de Oklahoma City Thunder ingresó al grupo inversor de la entidad española, que cuenta con una fuerte presencia argentina en su plantel y cuerpo técnico.",
+      "cuerpo": "El basquetbolista Shai Gilgeous-Alexander se sumó al grupo inversor del Atlético de Madrid. El canadiense, bicampeón del premio al Jugador Más Valioso de la NBA con Oklahoma City Thunder, expresó su entusiasmo por integrarse a la institución europea en busca de potenciar el crecimiento internacional. Por su parte, la entidad española remarcó que el deportista comparte valores vinculados a la ambición y la cultura del esfuerzo. El equipo madrileño cuenta con la dirección técnica de Diego Simeone y tiene en su plantel a los futbolistas argentinos Julián Álvarez, Giuliano Simeone, Cristian Romero y Juan Musso.",
+      "guion": "Shai Gilgeous Alexander se convierte en accionista del Atletico de Madrid",
+      "seccion": "Deportes",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Bolavip Argentina",
+        "El Economista",
+        "Básquet Plus"
+      ],
+      "enlace": "https://eleconomista.com.ar/deportes/shai-gilgeous-alexander-accionista-atletico-madrid-n98727",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T21:26:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T01:01:28.815Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El basquetbolista ingresó como inversor del club español",
+        "El canadiense obtuvo los dos últimos premios al Jugador Más Valioso de la NBA",
+        "El plantel cuenta con varios futbolistas argentinos y es dirigido por Diego Simeone"
+      ],
+      "seSabe": [
+        "Shai Gilgeous-Alexander es nuevo accionista del Atlético de Madrid, según informó el club español",
+        "El basquetbolista milita en Oklahoma City Thunder y ganó los dos últimos premios al Jugador Más Valioso",
+        "El plantel incluye a los argentinos Julián Álvarez, Giuliano Simeone, Cristian Romero y Juan Musso, bajo la conducción de Diego Simeone"
+      ],
+      "noConfirmado": [
+        "No se informó el monto invertido por el jugador",
+        "No se detalló el porcentaje de participación societaria adquirido"
+      ],
+      "textoRedes": "La estrella de la NBA Shai Gilgeous-Alexander se incorporó como nuevo accionista del Atlético de Madrid. El basquetbolista de Oklahoma City Thunder se sumó a la entidad española, que cuenta con una marcada presencia de futbolistas argentinos en su plantel.",
+      "etiquetas": [
+        "Basquet",
+        "NBA",
+        "Atletico de Madrid",
+        "Shai Gilgeous Alexander",
+        "Futbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Economista",
+          "enlace": "https://eleconomista.com.ar/deportes/shai-gilgeous-alexander-accionista-atletico-madrid-n98727",
+          "fecha": "2026-10-08T21:26:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la incorporación del basquetbolista al club y las declaraciones institucionales."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/shai-gilgeous-alexander-la-estrella-de-la-nba-que-se-convirtio-en-accionista-del-atletico-de-madrid-nid08102026/",
+          "fecha": "2026-10-09T00:49:16.000Z",
+          "oficial": false,
+          "aporte": "Consignó la llegada de la figura de la NBA como nuevo inversor de la entidad."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
+          "fecha": "2026-10-08T21:49:08.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto deportivo actual del canadiense en Oklahoma City Thunder."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/europa/una-estrella-de-la-nba-se-convirtio-en-accionista-de-atletico-de-madrid-estoy-emocionado-de-unirme",
+          "fecha": "2026-10-08T22:58:06.000Z",
+          "oficial": false,
+          "aporte": "Indicó el lanzamiento del comunicado oficial por parte del club español."
+        },
+        {
+          "medio": "Básquet Plus",
+          "enlace": "https://basquetplus.com/nba-shai-gilgeous-alexander-atletico-de-madrid-accionista-dueno-julian-alvarez-cholo-simeone",
+          "fecha": "2026-10-08T23:28:59.000Z",
+          "oficial": false,
+          "aporte": "Señaló la presencia de jugadores y el cuerpo técnico argentino en la institución."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "shai-gilgeous-alexander-se-convierte-en-accionista-del-atletico-de"
+    },
+    {
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
+      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T21:17:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T21:31:14.736Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reunión de trabajadores de prensa locales",
+        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
+        "Fecha oficial en el calendario desde 2023"
+      ],
+      "seSabe": [
+        "Se llevó a cabo un encuentro del periodismo balcarceño.",
+        "La fecha se conmemora desde 2023 en el calendario local.",
+        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "etiquetas": [
+        "periodismo",
+        "Balcarce",
+        "Beto Vuotto",
+        "reconocimiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+          "fecha": "2026-10-08T21:17:37.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
     },
     {
       "id": "16ootdv",
@@ -1203,7 +1494,9 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Acción 5 (Balcarce)",
-        "News Balcarce (FM 91.7)"
+        "News Balcarce (FM 91.7)",
+        "El Eco de Tandil",
+        "El Diario Balcarce"
       ],
       "enlace": "https://accion5.com/por-cuestiones-climaticas-fue-suspendido-zonal-atlantico/",
       "teniaImagenLaFuente": true,
@@ -1478,6 +1771,7 @@
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/08/el-intendente-recibio-al-club-social-y-campo-de-pato-general-balcarce-tras-su-consagracion-regional/",
@@ -1485,7 +1779,7 @@
       "fecha": "2026-10-08T15:00:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T15:01:21.096Z",
-      "relevancia": 84,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1566,13 +1860,14 @@
         "El Destape",
         "Crónica",
         "Diario Popular",
+        "El Día",
+        "El Eco de Tandil",
         "Infobae",
         "El Cronista",
         "Página/12",
         "C5N",
         "Perfil",
-        "Clarín",
-        "El Eco de Tandil"
+        "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -1863,7 +2158,7 @@
       "fecha": "2026-10-08T14:18:40.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T19:48:47.161Z",
-      "relevancia": 81,
+      "relevancia": 77,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1973,8 +2268,8 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "A24",
-        "InfoRegión"
+        "InfoRegión",
+        "A24"
       ],
       "enlace": "https://www.ambito.com/economia/la-inflacion-caba-se-acelero-al-18-septiembre-impulsada-educacion-vivienda-y-alimentos-n6331545",
       "teniaImagenLaFuente": true,
@@ -2210,7 +2505,7 @@
       "fecha": "2026-10-08T13:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T13:31:08.020Z",
-      "relevancia": 72,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2502,12 +2797,12 @@
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
-        "Agencia DIB",
+        "Punto Noticias",
         "El Eco de Tandil",
+        "Agencia DIB",
         "A24",
         "0223 (Mar del Plata)",
-        "Radio Mitre",
-        "Punto Noticias"
+        "Radio Mitre"
       ],
       "enlace": "https://dib.com.ar/sociedad/suben-los-peajes-las-rutas-la-costa-atlantica-cuanto-costara-viajar-n56330",
       "teniaImagenLaFuente": true,
@@ -2627,7 +2922,24 @@
         "La Nación",
         "Infobae",
         "Radio Mitre",
+        "El Diario Balcarce",
+        "Diario La Vanguardia",
+        "La Noticia 1",
+        "Diputados Bonaerenses",
         "TN (Todo Noticias)",
+        "Clarín",
+        "0221",
+        "La Tecla",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Punto Noticias",
+        "El Eco de Tandil",
+        "La Brújula 24",
+        "La Opinión",
+        "La Nueva",
+        "La Voz del Pueblo",
+        "El Cronista",
         "A24",
         "TyC Sports",
         "Minuto Uno"
@@ -2790,6 +3102,97 @@
       "foto": {
         "archivo": "fotos-notas/112w8rt.jpg",
         "credito": "Foto: Infocampo"
+      }
+    },
+    {
+      "id": "r09m78",
+      "titulo": "ARBA habilita el pago con descuento de la patente hasta el viernes",
+      "copete": "La Agencia de Recaudación bonaerense recuerda que el viernes 9 de octubre vence el plazo para abonar la cuota ocho del Impuesto a los Automotores con una bonificación de hasta el 10%.",
+      "cuerpo": "Para cancelar la obligación, los usuarios pueden ingresar al sitio web oficial para abonar con tarjeta de crédito o generar un código de pago electrónico para cajeros. También se encuentra habilitada la opción digital mediante Cuenta DNI con el código QR enviado por correo electrónico, además de la modalidad presencial en bancos y bocas de Provincia Net tras descargar las boletas.\n\nDurante este periodo rige el esquema de vencimientos mensuales fraccionado en hasta diez cuotas dispuesto por el organismo provincial para brindar previsibilidad financiera.",
+      "guion": "ARBA habilita el pago con descuento de la patente hasta el viernes",
+      "seccion": "Argentina",
+      "medios": [
+        "Diario Popular",
+        "El Día",
+        "El Eco de Tandil",
+        "Zona Norte Diario",
+        "Agencia DIB"
+      ],
+      "enlace": "https://www.zonanortediario.com.ar/08/10/2026/hasta-manana-se-puede-pagar-la-cuota-8-del-impuesto-automotor-con-descuento/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T09:30:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T16:31:19.916Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Vence el viernes 9 de octubre la cuota ocho del Impuesto a los Automotores.",
+        "El descuento es de hasta el 10% para contribuyentes al día.",
+        "Se puede pagar de forma digital, web o presencial en bocas habilitadas."
+      ],
+      "seSabe": [
+        "El plazo para pagar vence el viernes 9 de octubre, según ARBA.",
+        "La bonificación alcanza hasta el 10% para quienes abonen en término y estén al día.",
+        "El pago se puede realizar por la web, Cuenta DNI o en bocas de cobro presenciales."
+      ],
+      "textoRedes": "ARBA recuerda que este viernes 9 de octubre vence el plazo para abonar la cuota ocho del Impuesto a los Automotores con una bonificación de hasta el 10% para quienes estén al día. Se puede abonar por la web, Cuenta DNI o en bocas presenciales.",
+      "etiquetas": [
+        "ARBA",
+        "Impuesto Automotor",
+        "Patente",
+        "Descuento",
+        "Provincia de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Zona Norte Diario",
+          "enlace": "https://www.zonanortediario.com.ar/08/10/2026/hasta-manana-se-puede-pagar-la-cuota-8-del-impuesto-automotor-con-descuento/",
+          "fecha": "2026-10-08T09:30:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los canales de pago, los medios habilitados y el porcentaje de descuento."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/vence-manana-el-plazo-para-pagar-la-cuota-ocho-del-impuesto-automotor-con-descuento",
+          "fecha": "2026-10-08T13:11:26.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha límite del viernes 9 de octubre para la cuota ocho."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/economia/vence-la-cuota-8-del-impuesto-automotor-clave-pagar-descuento-n56336",
+          "fecha": "2026-10-08T14:00:04.000Z",
+          "oficial": false,
+          "aporte": "Indicó el porcentaje de la bonificación y el organismo emisor."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/hasta-este-viernes-9-10-se-puede-pagar-la-cuota-8-del-impuesto-automotor-descuento-n923539",
+          "fecha": "2026-10-08T15:04:00.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el beneficio aplica con cualquier medio de pago elegido."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/informacion-general/manana-vence-el-plazo-para-pagar-con-descuento-el-impuesto-automotor-provincial-informacion-general_1791475800",
+          "fecha": "2026-10-08T16:17:11.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "arba-habilita-el-pago-con-descuento-de-la-patente-hasta-el-viernes",
+      "foto": {
+        "archivo": "fotos-notas/r09m78.jpg",
+        "credito": "Foto: Agencia DIB"
       }
     },
     {
@@ -3364,13 +3767,15 @@
       "guion": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
       "seccion": "Economía",
       "medios": [
+        "Infobae",
         "0223 (Mar del Plata)",
         "Agencia DIB",
         "Minuto Uno",
-        "Infobae",
+        "La Nación",
         "Clarín",
         "Perfil",
         "TN (Todo Noticias)",
+        "El Cronista",
         "El Destape",
         "Página/12",
         "A24",
@@ -3382,10 +3787,9 @@
         "Noticias Argentinas (NA)",
         "La Nueva",
         "ANDigital",
+        "Mi8 (Canal 8 Mar del Plata)",
         "La Capital (Rosario)",
-        "El Economista",
-        "La Nación",
-        "El Cronista"
+        "El Economista"
       ],
       "enlace": "https://www.ambito.com/politica/la-agn-revela-que-el-banco-central-perdio-mas-us1000-millones-operaciones-el-oro-n6331772",
       "teniaImagenLaFuente": true,
@@ -3637,6 +4041,7 @@
       "medios": [
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Acción 5 (Balcarce)",
         "Diario La Vanguardia"
@@ -3761,6 +4166,60 @@
       }
     },
     {
+      "id": "7r5ucc",
+      "titulo": "Vecinos advierten sobre el robo de flexibles de gas",
+      "copete": "Registran un incremento en la sustracción de conexiones de cobre junto a los medidores domiciliarios en Balcarce. Un jardín de infantes debió suspender las clases tras un episodio similar.",
+      "cuerpo": "Vecinos de Balcarce advierten sobre una modalidad delictiva centrada en la sustracción de flexibles de cobre ubicados junto a los medidores de gas. Un comercio del rubro reportó un incremento en la demanda de reemplazos tras vender tres unidades en una sola jornada y otra el día anterior. La motivación detrás de estos episodios radica en la cotización del cobre para su comercialización como material reciclable, según indicó un trabajador del sector.\n\nEsta situación generó antecedentes recientes en el distrito. El martes, el personal del Jardín de Infantes N° 905 detectó olor a gas al faltar el flexible del medidor, lo que motivó la suspensión preventiva de las actividades escolares durante el turno mañana hasta la llegada de operarios de la empresa Camuzzi para asegurar el inmueble.\n\nLa extracción de estos componentes genera riesgos por la liberación de combustible. Como alternativa, el mercado ofrece conexiones de acero recubiertas con plástico que carecen de valor para la reventa ilegal, valuadas en unos 44.000 pesos frente a los 32.000 pesos de las piezas tradicionales.",
+      "guion": "Vecinos advierten sobre el robo de flexibles de gas",
+      "seccion": "Policiales",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-07T22:52:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-07T23:01:35.401Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sustracción de flexibles de cobre en medidores de gas",
+        "Venta de repuestos aumentó en un comercio local",
+        "Jardín de Infantes N° 905 suspendió clases el martes",
+        "Alternativas de acero para evitar nuevos robos"
+      ],
+      "noConfirmado": [
+        "No hay información oficial sobre la cantidad total de hechos registrados en la ciudad",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Vecinos de Balcarce advierten sobre el robo de flexibles de cobre en medidores de gas. Un comercio local reportó mayores ventas de repuestos y un jardín de infantes debió suspender clases por un faltante.",
+      "etiquetas": [
+        "gas",
+        "robos",
+        "Balcarce",
+        "medidores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-el-robo-de-flexibles-de-gas-952",
+          "fecha": "2026-10-07T22:52:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló los robos de flexibles de gas, la venta de repuestos y el caso del jardín de infantes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "vecinos-advierten-sobre-el-robo-de-flexibles-de-gas"
+    },
+    {
       "id": "1qdgf5p",
       "titulo": "La Argentina firma un acuerdo internacional contra la producción excesiva",
       "copete": "El país se sumó a un bloque de quince naciones para cuestionar la sobrecapacidad industrial global y los subsidios estatales. La decisión se adoptó durante una cumbre del G20.",
@@ -3851,6 +4310,7 @@
         "Ecos Diarios (Necochea)",
         "La Nación",
         "El Destape",
+        "Página/12",
         "Diario Popular",
         "La Opinión",
         "Perfil",
@@ -3858,7 +4318,6 @@
         "Agencia DIB",
         "Ámbito",
         "Crónica",
-        "Página/12",
         "El Día"
       ],
       "enlace": "https://www.perfil.com/noticias/empresas-y-protagonistas/fuerte-reclamo-federal-que-intendentes-reeligieron-a-su-lider-y-lanzaron-una-dura-advertencia-al-gobierno.phtml",
@@ -4608,19 +5067,18 @@
         "Bichos de Campo",
         "TN (Todo Noticias)",
         "El Cronista",
-        "Ámbito",
+        "Página/12",
         "C5N",
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "Agencia DIB",
         "La Tecla",
+        "El Eco de Tandil",
+        "Agencia DIB",
         "Zona Norte Diario",
+        "Ámbito",
         "El Día",
         "Noticias Agropecuarias",
-        "El Eco de Tandil",
-        "Página/12",
-        "Perfil",
         "Infobae"
       ],
       "enlace": "https://www.latecla.info/170241-la-justicia-ordeno-preservar-los-datos-sobre-las-tierras-rurales-bonaerenses",
@@ -4837,16 +5295,16 @@
     }
   ],
   "secciones": [
+    "Policiales",
     "Balcarce",
     "Cultura y agenda",
     "Economía",
-    "Fútbol",
     "Deportes",
+    "Fútbol",
     "Política",
     "Argentina",
     "Automovilismo",
-    "Agro",
-    "Policiales"
+    "Agro"
   ],
   "temas": [
     {
@@ -4858,60 +5316,47 @@
   "clima": {
     "ahora": {
       "temp": 9,
-      "sensacion": 5,
-      "humedad": 92,
-      "viento": 22,
+      "sensacion": null,
+      "humedad": 90,
+      "viento": 23,
       "rumbo": "S",
-      "cielo": "Nublado",
-      "esDeDia": false
+      "cielo": "Nublado"
     },
     "dias": [
       {
-        "fecha": "2026-10-08",
-        "dia": "jue",
-        "max": 11,
-        "min": 9,
-        "lluvia": 100,
-        "codigo": 81,
-        "viento": 29,
-        "milimetros": 17,
-        "cielo": "Chaparrones fuertes"
-      },
-      {
         "fecha": "2026-10-09",
         "dia": "vie",
-        "max": 13,
+        "max": 14,
         "min": 9,
-        "lluvia": 22,
-        "codigo": 51,
-        "viento": 21,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
+        "lluvia": null,
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-10",
         "dia": "sáb",
         "max": 11,
         "min": 9,
-        "lluvia": 96,
-        "codigo": 53,
-        "viento": 16,
-        "milimetros": 3,
-        "cielo": "Llovizna"
+        "lluvia": null,
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-11",
         "dia": "dom",
-        "max": 14,
+        "max": 15,
         "min": 8,
-        "lluvia": 19,
-        "codigo": 51,
-        "viento": 14,
-        "milimetros": 0,
-        "cielo": "Llovizna leve"
+        "lluvia": null,
+        "cielo": "Nublado"
+      },
+      {
+        "fecha": "2026-10-12",
+        "dia": "lun",
+        "max": 14,
+        "min": 6,
+        "lluvia": null,
+        "cielo": "Mayormente despejado"
       }
     ],
-    "fuente": "Open-Meteo"
+    "fuente": "MET Noruega"
   },
   "avisosClima": [],
   "farmacias": {
@@ -5215,7 +5660,7 @@
     {
       "id": "evzeoy",
       "titulo": null,
-      "seccion": "Argentina",
+      "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"el menor de\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
@@ -5235,6 +5680,12 @@
       "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
       "seccion": "Fútbol",
       "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "1el0rhm",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "dc8gpu",
@@ -5267,22 +5718,16 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
+      "id": "emxfi0",
+      "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
+      "seccion": "Economía",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "158wauu",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "skjezu",
-      "titulo": "Alumnos del Colegio Modelo Lomas usaron IA para “desnudar”…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"imputado\""
-    },
-    {
-      "id": "hvbl3q",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "jul33u",
@@ -5291,10 +5736,10 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "iqkmmm",
-      "titulo": "El Gobierno crea un comando de fuerzas federales de…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"detenido\""
+      "id": "11x1acq",
+      "titulo": "Milei llamó “ladrón” a Lula y volvió a respaldar a Flávio…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "veuftg",
@@ -5319,12 +5764,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "11x1acq",
-      "titulo": "Milei llamó “ladrón” a Lula y volvió a respaldar a Flávio…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "uriwx3",
@@ -5357,10 +5796,10 @@
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "emxfi0",
-      "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "kzzd97",
+      "titulo": "Grabois cruzó a Pettovello por las denuncias contra…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "531xz2",
@@ -5409,13 +5848,7 @@
       "titulo": "El FMI alertó que el petróleo seguirá caro en 2027: cuál…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "1d5qfd4",
-      "titulo": "Romina Manguel apuntó contra Matías Martin tras la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 4
 }

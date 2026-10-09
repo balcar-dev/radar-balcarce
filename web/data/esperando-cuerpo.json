@@ -1,27 +1,56 @@
 {
- "generado": "2026-10-09T00:32:07.960Z",
+ "generado": "2026-10-09T01:02:10.468Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "159oig4",
-   "titulo": "Quinta fecha de la Liga Local",
-   "copete": "En las instalaciones del Club Ferroviarios se desarrolló días pasados la quinta fecha de la Liga Local de Básquet, propuesta por la Subsecretaría de Deporte. La competencia está destinada a chicos de hasta 13 años y se puso en marcha a comienzos de año con el objetivo de…",
-   "seccion": "Deportes",
-   "fecha": "2026-10-08T12:46:12.000Z",
+   "id": "1izf4c8",
+   "titulo": "Nuevas tecnologías para el sector eléctrico",
+   "copete": "El Microcine del Museo del Automovilismo Juan Manuel Fangio fue escenario de una jornada técnica destinada a acercar nuevas herramientas y soluciones de medición a empresas y cooperativas de la región. La actividad fue organizada por Electrocompo",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T00:33:23.000Z",
    "fuentes": [
     {
-     "medio": "Municipalidad de Balcarce",
-     "enlace": "https://balcarce.gob.ar/2026/10/08/quinta-fecha-de-la-liga-local/",
-     "fecha": "2026-10-08T12:46:12.000Z"
-    },
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/nuevas-tecnologias-para-el-sector-electrico-127",
+     "fecha": "2026-10-09T00:33:23.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 16 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "1h9a0rw",
+   "titulo": "Por el mal tiempo, postergaron las competencias del automovilismo zonal en el Autódromo",
+   "copete": "Las competencias del automovilismo zonal previstas para este fin de semana en el Autódromo Juan Manuel Fangio fueron reprogramadas para el 24 y 25 de octubre debido a los pronósticos climáticos desfavorables.",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-08T17:13:00.000Z",
+   "fuentes": [
     {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/se-disputo-la-quinta-fecha-de-la-liga.html",
-     "fecha": "2026-10-08T16:40:46.230Z"
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/por-el-mal-tiempo-postergaron-las-competencias-del-automovilismo-zonal-en-el-autodromo",
+     "fecha": "2026-10-08T17:13:00.000Z"
     }
    ],
    "intentos": 3,
-   "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA",
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "15l69b7",
+   "titulo": "Agustín Molpeceres será reconocido en la Cámara de Diputados provincial",
+   "copete": "La Cámara de Diputados de la Provincia de Buenos Aires otorgará un reconocimiento oficial al balcarceño Agustín Molpeceres, por su destacada trayectoria en el deporte adaptado y el alto rendimiento paralímpico. LOS FUNDAMENTOS La distinción,",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-08T12:52:32.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-provincial-626",
+     "fecha": "2026-10-08T12:52:32.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "con cuerpo",
    "maximo": 3
   },
   {
