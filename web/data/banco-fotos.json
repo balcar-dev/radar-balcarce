@@ -10574,8 +10574,8 @@
   "origen": "ninguna",
   "titulo": "YPF adquiere la totalidad de las acciones de YPF Luz por 430 millones de dólares",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-09T01:32:08.771Z",
-  "intentos": 2,
+  "cuando": "2026-10-09T02:32:10.197Z",
+  "intentos": 3,
   "fuentes": 3
  },
  "99mpv8": {
@@ -10655,5 +10655,26 @@
   "cuando": "2026-10-09T02:02:06.035Z",
   "intentos": 1,
   "fuentes": 4
+ },
+ "z7t628": {
+  "archivo": "fotos-notas/z7t628.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
+  "enlace": "https://www.radiogabal.com.ar/index.php/politica/ley-de-tierras-y-aguas-de-la-ciudad-los-ejes-de-la-decimoquinta-sesion-del-concejo-deliberante",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Sesion_8_10.jpeg",
+  "razon": "Es la única opción disponible y muestra el recinto del Concejo Deliberante en sesión, identificando claramente el lugar y el contexto político de la nota.",
+  "cuando": "2026-10-09T02:32:10.197Z"
+ },
+ "mxhy8u": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El clima obliga a postergar el automovilismo Zonal y el Karting Regional",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-09T02:32:10.197Z",
+  "intentos": 1,
+  "fuentes": 1
  }
 }
