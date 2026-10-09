@@ -2555,6 +2555,38 @@
     "shares": 0,
     "saved": 0
    }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122107451031495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "jul321",
+   "dia": "2026-10-08",
+   "cuando": "2026-10-08T18:06:50.188Z",
+   "medida": "2026-10-09T18:21:17.659Z",
+   "metricas": {
+    "post_media_view": 3,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18123251134808127",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "jul321",
+   "dia": "2026-10-08",
+   "cuando": "2026-10-08T18:07:02.376Z",
+   "medida": "2026-10-09T18:21:17.659Z",
+   "metricas": {
+    "reach": 3,
+    "views": 4,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
   }
  ]
 }
