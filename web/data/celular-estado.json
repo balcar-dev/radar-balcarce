@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T17:35:22.548Z",
- "portada": 59,
- "archivo": 874,
- "esperandoCuerpo": 7,
+ "generado": "2026-10-09T18:02:23.611Z",
+ "portada": 56,
+ "archivo": 875,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-09T17:35:22.588Z",
+  "generado": "2026-10-09T18:02:23.657Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,19 +124,19 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 52,
     "notas": [
      {
-      "id": "14mxql1",
-      "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
-      "seccion": "Deportes"
-     },
-     {
       "id": "1j94k5u",
       "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "14mxql1",
+      "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
+      "seccion": "Deportes"
      },
      {
       "id": "aqy95q",
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 53,
     "notas": [
-     {
-      "id": "2qmh95",
-      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-      "seccion": "Deportes"
-     },
      {
       "id": "vwb5m5",
       "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "10izr2u",
+      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
+      "seccion": "Deportes"
      },
      {
       "id": "1y9462t",
@@ -207,12 +207,6 @@
    ],
    "cola": [
     {
-     "id": "2qmh95",
-     "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
      "id": "1j94k5u",
      "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
      "seccion": "Fútbol",
@@ -222,6 +216,12 @@
      "id": "aqy95q",
      "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "2qmh95",
+     "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+     "seccion": "Deportes",
      "marcada": false
     },
     {

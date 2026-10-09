@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-09T17:35:21.213Z",
+ "consultado": "2026-10-09T18:02:22.205Z",
  "equipos": [
   "9739",
   "3",
@@ -631,19 +631,32 @@
     "competencia": "liga",
     "inicio": "2026-10-09T17:30:00.000Z",
     "estado": "en-juego",
-    "minuto": "4'",
+    "minuto": "31'",
     "local": {
      "id": "9739",
      "nombre": "Aldosivi",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "10158",
      "nombre": "Sarmiento (Junín)",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Junior Marabel",
+      "minuto": "18'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Lucas Castro",
+      "minuto": "20'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "José María Minella",
     "fase": null,
     "partidoDeLaSerie": null,

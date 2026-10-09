@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T17:35:22.548Z",
+ "generado": "2026-10-09T18:02:23.611Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,6 +13,11 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
      "fecha": "2026-10-09T11:23:10.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/el-hospital-fossati-restablecio-el-funcionamiento-de-su-conmutador-telefonico/",
+     "fecha": "2026-10-09T12:08:29.000Z"
     },
     {
      "medio": "Infórmese Primero (FM 104.9)",
@@ -34,7 +39,7 @@
     {
      "medio": "El Gráfico",
      "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
-     "fecha": "2026-10-08T19:00:00.000Z"
+     "fecha": "2026-10-09T07:30:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -59,7 +64,7 @@
     {
      "medio": "El Día",
      "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
-     "fecha": "2026-10-09T05:55:00.000Z"
+     "fecha": "2026-10-09T05:55:55.000Z"
     },
     {
      "medio": "El Marplatense",
@@ -160,6 +165,33 @@
    "maximo": 3
   },
   {
+   "id": "rzygx9",
+   "titulo": "Rumbo a la SIAL de París: La carne Angus Certificada triplica sus exportaciones y va por el mercado asiático",
+   "copete": "La Asociación Argentina de Angus se prepara para desembarcar en la SIAL de París, la feria internacional de alimentación más importante de Europa, coronando un año histórico para la raza: las exportaciones de Carne Angus Certificada pasarán de las 9.000 toneladas registradas el…",
+   "seccion": "Agro",
+   "fecha": "2026-10-09T11:43:39.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Agropecuarias",
+     "enlace": "https://www.noticiasagropecuarias.com/2026/10/09/rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico/",
+     "fecha": "2026-10-09T11:43:39.000Z"
+    },
+    {
+     "medio": "La Voz del Pueblo",
+     "enlace": "https://lavozdelpueblo.com.ar/la-carne-angus-certificada-ahora-quiere-conquistar-asia",
+     "fecha": "2026-10-09T17:19:46.000Z"
+    },
+    {
+     "medio": "Agrositio",
+     "enlace": "https://www.agrositio.com.ar/noticia/248758-rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico.html",
+     "fecha": "2026-10-09T16:43:15.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"francia\" y la fuente no",
+   "maximo": 3
+  },
+  {
    "id": "zdlxph",
    "titulo": "General Pueyrredon realizará la segunda jornada de la Mesa Técnica del Kiwi",
    "copete": "La Secretaría de Desarrollo Local, Inversiones e Integración Público Privada de General Pueyrredon, junto con la Cámara de Productores de Kiwi de Mar del Plata y el INTA, realizará el segundo encuentro de la Mesa Técnica del Kiwi el próximo viernes 16 de 09:00 a 11:00, en el…",
@@ -172,7 +204,7 @@
      "fecha": "2026-10-09T16:45:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "sin material",
    "maximo": 3
   }
