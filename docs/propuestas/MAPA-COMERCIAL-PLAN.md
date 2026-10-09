@@ -64,3 +64,19 @@ Un comercio con su local y su perfil comercial es otra cosa. Para los profesiona
 Se buscó en el repositorio (todo el historial de `comercial/datos/comercios.json`: una sola versión, de 145 fichas), en el disco D: (sin otro archivo comercial fuera del proyecto) y en los 99 artefactos publicados
 (el único comercial es «Guía comercial», del 24/9, con **las mismas 145 fichas**). **No apareció una base más grande.** Si Hernán la encuentra (un archivo, una hoja o un artefacto de otra ventana), se
 suma con `comercial/base.mjs`, que fusiona sin pisar lo que ya se cargó a mano. Mientras tanto, la vista local (sin publicar nada) se arma con `node comercial/vista.mjs` → `comercial/salida/guia-previa.html`.
+
+## 8. La guía comercial grande (encontrada el 9/10 a la tarde)
+
+Hernán adjuntó la guía que recordaba: **1.282 comercios** (no 145), con rubros, subrubros, dirección, teléfonos, redes, horario, fuentes de cada dato, confianza y estado.
+El archivo **no está en el repositorio** (es público y tiene datos personales) y se guarda **fuera del proyecto**, en `D:\BalcarDev\Respaldos\guia-comercial-local\`, solo para mirar y validar en local.
+
+Resumen (sin datos personales): 1.091 comercios «requieren verificación», 118 «activos confirmados», 71 «activos recientes», 2 «cerrados». Confianza: 187 alta, 721 media, 374 baja.
+Hay 323 teléfonos celulares y 64 nombres de personas (profesionales). Hay 115 registros con fuente «Google Maps» (según una «base maestra compartida», sin origen claro).
+
+**Cuidados antes de usarla (no se publica nada de esto sin decidirlo):**
+1. **Datos de Google Maps**: copiar o usar datos de Google Maps que no vengan de su API oficial va contra sus términos. Antes de cualquier uso, hay que saber de dónde salió cada registro; los de esa fuente se descartan o se verifican a mano.
+2. **Teléfonos y nombres de personas**: los celulares de profesionales y particulares son datos personales (ley 25.326). Solo se usan si la persona lo autorizó, o se contacta al local por su número comercial.
+3. **Vigencia**: el estado «requiere verificación» es la mayoría. Igual que con el resto, se valida con el comercio antes de mostrar nada.
+4. **Ningún dato sale a la web ni a las redes** sin la validación de Hernán y Andrés.
+
+**Próximo paso (lo puede hacer Claude en local):** cruzar esta guía con `comercial/datos/comercios.json` (los 145 de OpenStreetMap) para unificar sin duplicar, marcar la fuente de cada dato y separar lo que es de una fuente con permiso de lo que no.
