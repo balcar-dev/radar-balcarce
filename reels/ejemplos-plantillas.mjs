@@ -11,12 +11,12 @@ import { execFileSync } from 'node:child_process';
 import ffmpeg from 'ffmpeg-static';
 import { armarReel } from './reel.mjs';
 import { palabrasSinteticas } from './previa-efemerides.mjs';
-import { escenaDeClima } from './escenas/clima.mjs';
+import { escenaDeClima, TODAS_LAS_VARIANTES } from './escenas/clima.mjs';
 import {
   escenaDeFarmacia, escenaDeParticipa, escenaDeUtiles, escenaDeAgenda,
 } from './escenas/servicios.mjs';
 import { escenaDeEfemeride, escenaDeFeriado } from './escenas/fechas.mjs';
-import { PIEZAS_PARTICIPA, guionParticipa, MAIL_REDACCION } from '../redes/participa.mjs';
+import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa, MAIL_REDACCION } from '../redes/participa.mjs';
 import { guionFarmacia, guionUtiles, guionAgenda } from '../redes/guiones.mjs';
 import { guionFeriado } from '../redes/feriado.mjs';
 import { NUMEROS } from '../ingesta/utiles.mjs';
@@ -104,7 +104,26 @@ export function ejemplosDeServicios() {
       nombre, escena: escenaDeFeriado({ fecha: f.fecha, feriado: f, dato: { anio, texto: textoDato }, tipo }), guion: guionFeriado(f, { fecha: new Date(`${f.fecha}T12:00:00Z`), momento: 'manana' }),
     };
   };
-  const p = PIEZAS_PARTICIPA['participa-reclamos'];
+  const COLOR_PARTICIPA = { Balcarce: COLOR_SECCION.Balcarce, 'Cultura y agenda': COLOR_SECCION['Cultura y agenda'] };
+  const participa = IDS_PARTICIPA.map((id, i) => ({
+    nombre: `participa-${i + 1}-${id.replace('participa-', '')}`,
+    escena: escenaDeParticipa({ p: PIEZAS_PARTICIPA[id], color: COLOR_PARTICIPA[PIEZAS_PARTICIPA[id].seccion] ?? COLOR_SECCION.Balcarce, mail: MAIL_REDACCION }),
+    guion: guionParticipa(id, { fecha: new Date('2026-10-14T15:00:00Z'), momento: 'tarde' }),
+  }));
+  // Un hecho de cada tipo (conocidos y sin discusión), para ver cada plantilla; los reales los elige la efeméride del día.
+  const HECHOS = [
+    ['patria', '2026-07-09', 1816, 'Se declara la Independencia argentina', 'El Congreso reunido en Tucumán declaró la independencia de las Provincias Unidas del Río de la Plata.'],
+    ['balcarce', '2026-06-24', 1911, 'Nace Juan Manuel Fangio, en Balcarce', 'Cinco veces campeón mundial de Fórmula 1. Su museo es hoy un orgullo de la ciudad.'],
+    ['campo', '2026-09-04', 1944, 'Se sanciona el Estatuto del Peón rural', 'La norma ordenó el trabajo en el campo argentino. Hoy se recuerda el Día del Trabajador Rural.'],
+    ['ciencia', '2026-12-10', 1947, 'Houssay recibe el Premio Nobel de Medicina', 'Bernardo Houssay fue el primer latinoamericano en ganar un Nobel científico.'],
+    ['deporte', '2026-06-29', 1986, 'Argentina, campeona del mundo en México', 'La selección ganó la final y se consagró en el Mundial de fútbol de 1986.'],
+    ['cultura', '2026-01-31', 1908, 'Nace Atahualpa Yupanqui', 'Cantor, guitarrista y compositor, una de las voces mayores del folklore argentino.'],
+    ['historia', '2026-06-11', 1580, 'Juan de Garay funda Buenos Aires por segunda vez', 'La ciudad se asentó sobre la barranca del Río de la Plata, a orillas del actual Parque Lezama.'],
+  ].map(([tipo, fecha, anio, titulo, cuerpo], i) => ({
+    nombre: `efemeride-t${i + 1}-${tipo}`,
+    escena: escenaDeEfemeride({ fecha, principal: { anio, titulo, cuerpo }, ademas: [], tipo }),
+    guion: `${titulo}. ${cuerpo} Radar Balcarce.`,
+  }));
   const grupos = ['Emergencias', 'Salud'].map((categoria) => ({ categoria, items: NUMEROS.filter((n) => n.categoria === categoria) }));
   const eventos = [
     { nombre: '22° Fiesta Nacional del Postre', cuando: 'viernes 18:00', lugar: 'Parque Cerro El Triunfo' },
@@ -119,10 +138,27 @@ export function ejemplosDeServicios() {
     feriado('feriado-1-patrio', /Diversidad Cultural/, 'patrio'),
     feriado('feriado-2-religioso', /Inmaculada/, 'religioso'),
     feriado('feriado-3-decreto', /Feriado por la visita|visita del papa/, 'decreto'),
-    { nombre: 'participa-1-reclamos', escena: escenaDeParticipa({ p, color: '#B91C1C', mail: MAIL_REDACCION }), guion: guionParticipa('participa-reclamos', { fecha: new Date('2026-10-14T15:00:00Z'), momento: 'tarde' }) },
+    feriado('feriado-4-trasladable', /Soberan/, 'trasladable'),
+    feriado('feriado-5-carnaval', /Carnaval/, 'carnaval'),
+    ...HECHOS, ...participa,
     { nombre: 'utiles-1', escena: escenaDeUtiles({ grupos }), guion: guionUtiles({ fecha: new Date('2026-10-10T20:00:00Z'), momento: 'tarde' }) },
     { nombre: 'agenda-1', escena: escenaDeAgenda({ eventos }), guion: guionAgenda(eventos, { fecha: new Date('2026-10-08T15:00:00Z'), momento: 'tarde' }) },
   ].filter(Boolean);
+}
+
+/** Las catorce variantes del clima (siete cielos, de día y de noche), con el clima de mentira que las provoca. */
+export function ejemplosDeClima() {
+  const fecha = '2026-10-09';
+  const CIELOS = { despejado: 'Despejado', parcial: 'Parcialmente nublado', nublado: 'Nublado', llovizna: 'Llovizna', lluvia: 'Lluvia', tormenta: 'Tormenta eléctrica', niebla: 'Niebla' };
+  return TODAS_LAS_VARIANTES.map((v, i) => {
+    const base = v.noche ? CLIMAS.nocheDespejada : CLIMAS.sol;
+    const clima = { ...base, ahora: { ...base.ahora, cielo: CIELOS[v.base], esDeDia: !v.noche } };
+    return {
+      nombre: `clima-v${String(i + 1).padStart(2, '0')}-${v.nombre}`,
+      escena: escenaDeClima({ momento: v.noche ? 'noche' : 'manana', clima, fecha }),
+      guion: v.noche ? guionClimaNoche(clima, { fecha: new Date(`${fecha}T23:00:00Z`) }) : guionClima(clima, null, { fecha: new Date(`${fecha}T10:00:00Z`) }),
+    };
+  });
 }
 
 /** Los ejemplos: nombre del archivo → { escena, guion }. */

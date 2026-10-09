@@ -37,16 +37,14 @@ export function escenaDeFarmacia({ fecha, farmacias = [], hasta = 'De turno hast
   const lista = farmacias.slice(0, 3);
   const n = lista.length;
   const cab = cabecera('Farmacia de turno', fechaEnLetras(fecha), { color: VERDE });
-  const yIcono = cab.hasta + 70;
-  const tit = n === 1 ? 'Esta noche, de turno' : `Hoy hay ${NUMERO_EN_LETRAS[n]} farmacias de turno`;
-  const titR = repartir(tit, [{ tam: 56, max: 2 }], 560, 'serif');
   // Cada ficha mide lo que ocupa su contenido y el grupo se centra en el espacio que queda entre el título y la franja de abajo.
   const gap = 24;
   const yChip = FIN - 70;
-  const tamNombre = n === 1 ? 80 : n === 2 ? 66 : 56;
-  const tamDato = n === 1 ? 40 : n === 2 ? 36 : 32;
+  const tamNombre = n === 1 ? 96 : n === 2 ? 72 : 60;
+  const tamDato = n === 1 ? 46 : n === 2 ? 40 : 34;
   const alto = Math.round(34 + tamNombre + 22 + tamDato * 1.4 + (lista.some((f) => f.telefono) ? tamDato * 1.5 : 0) + 30);
-  const espacioDesde = yIcono + 290;
+  // No se dice cuántas hay (decisión del 9/10): el espacio es para las fichas, que entran las tres.
+  const espacioDesde = cab.hasta + 40;
   const bloque = alto * n + gap * (n - 1);
   const yFichas = espacioDesde + Math.max(0, Math.floor((yChip - 30 - espacioDesde - bloque) / 2));
 
@@ -65,8 +63,7 @@ export function escenaDeFarmacia({ fecha, farmacias = [], hasta = 'De turno hast
     }).join('');
     return escenaSobrePapel({
       contenido: `${aparece(t, 0, cab.svg, { dy: 0, dur: 0.5 })}
-        ${cruzVerde(t, 220, yIcono + 120, 0.8)}
-        ${aparece(t, 0.8, renglones(titR.lineas, { x: 400, y: yIcono + 100, tam: titR.tam, interlinea: Math.round(titR.tam * 1.05), color: VERDE, espaciado: -1 }), { dy: 24 })}
+        ${cruzVerde(t, W - 64 - 78, cab.hasta - 78, 0.52)}
         ${fichas}
         ${aparece(t, 1.1 + n * 0.45, `<rect x="64" y="${yChip}" width="${W - 128}" height="58" rx="29" fill="${VERDE}"/><text x="${W / 2}" y="${yChip + 39}" text-anchor="middle" font-family="${TEXTO}" font-size="30" font-weight="700" letter-spacing="1" fill="#FFFFFF">${esc(hasta)}</text>`, { dy: 16 })}`,
     });
@@ -84,9 +81,14 @@ export function escenaDeParticipa({ p, color, numero = '2266 51-1612', mail = 'r
   const pregunta = repartir(p.pregunta, escalones, W - MARGEN * 2, 'serif');
   const inter = Math.round(pregunta.tam * 1.04);
   const yPregunta = 450;
-  const yCaja = yPregunta + (pregunta.lineas.length - 1) * inter + 110;
+  const yCaja = yPregunta + (pregunta.lineas.length - 1) * inter + (pregunta.lineas.length > 3 ? 64 : 110);
   const altoCaja = 230;
-  const yMail = yCaja + altoCaja + 110;
+  const yMail = yCaja + altoCaja + 120;
+  // Los pies se parten en renglones si no entran (el de «evento» se cortaba).
+  const pie1 = repartir(p.pie1 ?? '', [{ tam: 42, max: 2 }, { tam: 36, max: 2 }], W - MARGEN * 2, 'sans');
+  const pie2 = repartir(p.pie2 ?? '', [{ tam: 36, max: 2 }], W - MARGEN * 2, 'sans');
+  const yPie1 = yMail + 96;
+  const yPie2 = yPie1 + pie1.lineas.length * Math.round(pie1.tam * 1.25) + 18;
 
   const cuadro = (t) => {
     const lineas = pregunta.lineas.map((l, i) => aparece(t, 0.2 + i * 0.2, `<text x="${MARGEN}" y="${yPregunta + i * inter}" font-family="${DISPLAY}" font-size="${pregunta.tam}" font-weight="900" letter-spacing="-2" fill="${TINTA}">${esc(l)}</text>`, { dy: 40, dur: 0.6 })).join('');
@@ -105,7 +107,8 @@ export function escenaDeParticipa({ p, color, numero = '2266 51-1612', mail = 'r
       <path d="M-62 -42 L0 ${(-42 + 54 * (1 - 2 * tapa)).toFixed(1)} L62 -42" fill="none" stroke="${TINTA}" stroke-width="5" stroke-linejoin="round"/></g>`;
     const textoMail = aparece(t, 3.2, `<text x="${MARGEN + 150}" y="${yMail - 22}" font-family="${TEXTO}" font-size="26" font-weight="700" letter-spacing="3" fill="${GRIS}">O POR MAIL</text>
       <text x="${MARGEN + 150}" y="${yMail + 28}" font-family="${TEXTO}" font-size="42" font-weight="700" fill="${TINTA}">${esc(mail)}</text>`, { dy: 14 });
-    const pies = [p.pie1, p.pie2].filter(Boolean).map((tx, k) => aparece(t, 4.4 + k * 0.4, `<text x="${MARGEN}" y="${yMail + 110 + k * 62}" font-family="${TEXTO}" font-size="42" font-weight="${k ? 500 : 700}" fill="${k ? GRIS : TINTA}">${esc(tx)}</text>`, { dy: 14 })).join('');
+    const pies = (pie1.lineas.length ? aparece(t, 4.4, renglones(pie1.lineas, { x: MARGEN, y: yPie1, tam: pie1.tam, interlinea: Math.round(pie1.tam * 1.25), familia: TEXTO, peso: 700, color: TINTA }), { dy: 14 }) : '')
+      + (pie2.lineas.length ? aparece(t, 4.8, renglones(pie2.lineas, { x: MARGEN, y: yPie2, tam: pie2.tam, interlinea: Math.round(pie2.tam * 1.25), familia: TEXTO, peso: 500, color: GRIS }), { dy: 14 }) : '');
     return escenaSobrePapel({ contenido: `${aparece(t, 0, rotulo(p.rotulo, { y: 300, color }), { dy: 0, dur: 0.5 })}${lineas}${caja}${sobre}${textoMail}${pies}` });
   };
   return crearEscena({ nombre: 'participa', variante: 'participa', cuadro, duracionMinima: 12 });
