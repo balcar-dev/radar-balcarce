@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T13:03:49.186Z",
- "portada": 50,
- "archivo": 853,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-09T13:32:25.048Z",
+ "portada": 52,
+ "archivo": 855,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-09T13:03:49.233Z",
+  "generado": "2026-10-09T13:32:25.082Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-09T13:07:58.299Z"
    },
    {
     "nombre": "participa-nota",
@@ -94,8 +94,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 52,
+    "salio": "2026-10-09T13:07:58.299Z",
+    "segundos": null,
     "notas": [
      {
       "id": "l5o975",
@@ -126,27 +126,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "13xrjvk",
+      "titulo": "Francisco Cerúndolo avanza a la tercera ronda en Shanghái",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
+     },
      {
       "id": "fkiosn",
       "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
       "seccion": "Economía"
      },
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro"
-     },
-     {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -157,17 +157,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 37,
     "notas": [
+     {
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "1bb4gv8",
       "titulo": "Atletas locales suman cinco triunfos en Mar del Plata",
       "seccion": "Deportes"
-     },
-     {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -181,6 +186,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "jul3dj",
+     "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "xlon5q",
      "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",

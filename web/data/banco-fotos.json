@@ -8656,16 +8656,16 @@
   "cuando": "2026-10-06T23:34:29.134Z"
  },
  "1n6yxr": {
-  "archivo": "fotos-notas/1n6yxr.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Liga Balcarceña inicia la fase Clausura del Torneo Oficial",
   "enlace": "https://accion5.com/con-el-clasico-ferro-a-unidos-se-inicia-el-clausura-del-oficial-2/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/auf1.jpg",
   "razon": "Es la única opción disponible, posee buena nitidez, encuadre adecuado y no presenta marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-06T22:32:11.969Z"
+  "cuando": "2026-10-06T22:32:11.969Z",
+  "intentado": true,
+  "borrada": true
  },
  "lcytj": {
   "medio": "Minuto Uno",
@@ -10919,5 +10919,26 @@
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791471066987.jpg?&cw=600&ch=365",
   "razon": "Es la única opción limpia, sin marcas de agua ni menores reconocibles, con excelente calidad y encuadre del festejo.",
   "cuando": "2026-10-09T13:02:58.461Z"
+ },
+ "jul3dj": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+  "razon": "La única foto disponible incluye jóvenes de intercambio menores de edad reconocibles, por lo que no puede ser publicada.",
+  "cuando": "2026-10-09T13:32:16.158Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "sq9o10": {
+  "archivo": "fotos-notas/sq9o10.jpg",
+  "medio": "La Brújula 24",
+  "credito": "Foto: La Brújula 24",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Investigadores registran fuerte baja de algas en el dique Paso de las Piedras",
+  "enlace": "https://www.labrujula24.com/notas/2026/10/09/paso-de-las-piedras-detectan-reduccion-de-mas-de-90-de-cianobacterias-y-sus-toxinas-n524606/",
+  "imagenOriginal": "https://www.labrujula24.com/wp-content/uploads/2026/10/monitoreodique-1000x600.jpg",
+  "razon": "Muestra claramente el equipamiento utilizado en el dique sin marcas de agua ni menores.",
+  "cuando": "2026-10-09T13:32:16.158Z"
  }
 }

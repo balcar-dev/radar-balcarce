@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T13:03:49.186Z",
+ "generado": "2026-10-09T13:32:25.048Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -22,6 +22,23 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "7w5vsc",
+   "titulo": "La Liga Balcarceña de Fútbol volvió a postergar la primera fecha por las lluvias",
+   "copete": "El mal estado de las canchas, que todavía presentan una importante acumulación de agua, obligó a suspender nuevamente el inicio de la competencia. La jornada será reprogramada durante la próxima semana.",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-09T13:12:01.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-liga-balcarcena-de-futbol-volvio-a-postergar-la-primera-fecha-por-las-lluvias",
+     "fecha": "2026-10-09T13:12:01.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
    "maximo": 3
   },
   {
@@ -52,19 +69,36 @@
      "fecha": "2026-10-08T22:43:42.000Z"
     },
     {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
-     "fecha": "2026-10-09T05:55:55.000Z"
-    },
-    {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
-     "fecha": "2026-10-09T01:33:28.000Z"
+     "fecha": "2026-10-09T13:13:54.000Z"
     }
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 4
+  },
+  {
+   "id": "s67kgm",
+   "titulo": "Gimnastas de up clasificaron a la Final Regional del Centro",
+   "copete": "Casi una treintena de gimnastas de UP participaron de la final provincial de los Niveles 1 y 2 que se llevó a cabo en el Polideportivo de Aguas Verdes. En esta importante instancia, Morena Marino, Ingrid Unales, Giovana Ríos y Felicitas Larroquet lograron la clasificación a la…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-09T13:17:13.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/09/gimnastas-de-up-clasificaron-a-la-final-regional-del-centro/",
+     "fecha": "2026-10-09T13:17:13.000Z"
+    },
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/cuatro-gimnastas-de-up-clasificaron-a-la-final-regional-del-centro-tras-destacarse-en-aguas-verdes",
+     "fecha": "2026-10-09T13:20:37.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 4 y la fuente no lo dice",
+   "maximo": 3
   },
   {
    "id": "15l69b7",
@@ -81,6 +115,45 @@
    ],
    "intentos": 2,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "189z3bv",
+   "titulo": "Un total de 76 familias de Balcarce firmarán sus escrituras",
+   "copete": "El acto se realizará en el hall de la Municipalidad, en principio. Participarán vecinos del barrio Favaloro, familias del barrio Hipólito Yrigoyen y los primeros beneficiarios del loteo municipal de 31 y Caseros, cuyos terrenos fueron vendidos en 2023.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T13:31:40.859Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45045-un-total-de-76-familias-de-balcarce-firmaran-sus-escrituras/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "10izr2u",
+   "titulo": "Mario Ledesma y Shaun Edwards se suman al cuerpo técnico de Los Pumas",
+   "copete": "A pocas semanas de la continuación del Nations Championship a disputarse en noviembre en Europa, se confirmó la incorporación de Mario Ledesma y Shaun Edwards al staff técnico de Los Pumas como entrenadores de forwards y defensa, respectivamente, hasta el final de la Copa del…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-09T13:01:13.000Z",
+   "fuentes": [
+    {
+     "medio": "UAR (Unión Argentina de Rugby)",
+     "enlace": "https://uar.com.ar/mario-ledesma-y-shaun-edwards-se-suman-al-cuerpo-tecnico-de-los-pumas/",
+     "fecha": "2026-10-09T13:01:13.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-9-10-8-0-los-pumas-confirmaron-dos-incorporaciones-a-su-staff-tecnico",
+     "fecha": "2026-10-09T13:27:22.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (nombre, copia): el copete nombra a \"union\" y la fuente no",
    "maximo": 3
   }
  ]
