@@ -441,7 +441,7 @@ de turno que lleva a `/farmacias`), el logo, el buscador, el menú
 (`components/navegacion.js`: las secciones de `EN_NAVEGACION` que hoy tienen
 notas, y al final en verde Agenda, Clima, Farmacias, Dólar y Teléfonos) y el
 pie. En el `<head>`, la ficha del sitio para Google (`FichaDelSitio`), el feed
-y las tipografías de Google Fonts.
+y las tipografías (desde el 8/10 en el propio sitio, `web/public/fuentes/`, sin pedirle nada a Google).
 
 ---
 

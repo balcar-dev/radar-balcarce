@@ -49,7 +49,7 @@ dominio):
 
 | Servicio | Para qué | Cuándo | Dónde está en el código |
 |---|---|---|---|
-| **Google Fonts** | Las letras de la web | En cada página | `web/app/layout.js` |
+| **Tipografías** | Las letras de la web, ahora en el propio sitio (desde el 8/10/2026: antes se pedían a Google Fonts) | Ya no se le manda nada a Google por las letras | `web/public/fuentes/`, `web/app/globals.css` |
 | **Open-Meteo** | El clima al momento | En cada página (el clima de arriba), y cada 10 minutos mientras está abierta | `web/lib/pedir-clima.js` |
 | **DolarApi.com** (y **Bluelytics**, si DolarApi no contesta) | El dólar al momento | En la portada y en `/dolar`, y cada 5 minutos mientras está abierta | `web/lib/dolar.js`, `web/components/usar-dolar.js` |
 

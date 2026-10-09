@@ -10,7 +10,7 @@ marcado ✔ cuando está hecho). Todo lo de este documento ya está subido a `ma
 
 1. `git pull` en la carpeta del proyecto (para traer todo y lo que haya guardado el robot).
 2. Correr `npm test`: tienen que pasar todas (hoy son 1.916; en Node 22 hay 6 "canceladas" por tiempo, en GitHub con Node 24 no pasa).
-3. Abrir `CLAUDE.md` (las reglas que no se negocian) y este documento. La próxima regla a numerar es la **152**
+3. Abrir `CLAUDE.md` (las reglas que no se negocian) y este documento. La próxima regla a numerar es la **153**
    (las reglas 108 a 141 se escribieron en esta tanda, en `docs/10-REGLAS-Y-PRUEBAS.md`).
 4. Para subir algo: `git pull --rebase`, `npm test`, commit y push. El robot de GitHub guarda `web/data/` cada media hora: si choca,
    `git checkout --theirs` sobre esos archivos y seguir. Borrar `web/out` y `web/.next` después de compilar en la PC (si no, fallan unas pruebas).

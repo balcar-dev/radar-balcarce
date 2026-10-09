@@ -89,15 +89,10 @@ export default function RaizLayout({ children }) {
             noticias lo encuentran solos por esta línea. */}
         <FichaDelSitio />
         <link rel="alternate" type="application/rss+xml" title="Radar Balcarce" href="/feed.xml" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Source Serif 4 para los títulos e Inter para todo lo demás (27/09; antes
-            Fraunces e IBM Plex Sans, que en el celular se veían pesadas). Las dos
-            con el eje de tamaño óptico (opsz): la letra se ajusta sola al tamaño. */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600..900&family=Inter:opsz,wght@14..32,400..700&display=swap"
-        />
+        {/* Source Serif 4 para los títulos e Inter para todo lo demás (27/09). Desde el 8/10 están en el propio sitio (web/public/fuentes/,
+            @font-face en globals.css): sin pedirle nada a Google. Se precargan las dos que se usan en toda página. */}
+        <link rel="preload" href="/fuentes/source-serif-4-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fuentes/inter-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>
         <a className="saltar" href="#contenido">Saltar al contenido</a>

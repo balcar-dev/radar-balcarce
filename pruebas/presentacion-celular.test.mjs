@@ -83,8 +83,15 @@ test('/farmacias destaca la de turno con la misma tarjeta y ordena la semana sin
 test('Source Serif 4 en los títulos e Inter en el texto, con cifras alineadas a la línea base', () => {
   // 27/09: Fraunces e IBM Plex Sans se veían pesadas en el celular (Hernán).
   const layout = leer('web/app/layout.js');
-  assert.match(layout, /family=Source\+Serif\+4:opsz,wght@/);
-  assert.match(layout, /family=Inter:opsz,wght@/);
+  // 8/10: las letras están en el propio sitio, sin pedirle nada a Google.
+  assert.ok(!/fonts\.googleapis|fonts\.gstatic/.test(layout), 'el sitio no le pide las letras a Google');
+  for (const f of ['source-serif-4-latin', 'inter-latin']) {
+    assert.ok(layout.includes(`/fuentes/${f}.woff2`), `${f}: se precarga`);
+    assert.match(css, new RegExp(`url\\("/fuentes/${f}\\.woff2"\\) format\\("woff2"\\)`));
+    assert.ok(fs.existsSync(new URL(`../web/public/fuentes/${f}.woff2`, import.meta.url)), `${f}: el archivo está`);
+  }
+  assert.match(css, /font-family: "Source Serif 4"; font-style: normal; font-weight: 600 900; font-display: swap/);
+  assert.match(css, /font-family: "Inter"; font-style: normal; font-weight: 400 700; font-display: swap/);
   assert.ok(!/family=(Fraunces|IBM)/.test(layout), 'no se cargan las letras de antes');
   assert.ok(!/Fraunces|Plex|WONK/.test(css.replace(/\/\*[\s\S]*?\*\//g, '')), 'la hoja no las nombra fuera de los comentarios');
   assert.match(css, /--f-titulo: "Source Serif 4"/);
