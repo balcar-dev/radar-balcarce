@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T15:02:27.650Z",
- "portada": 44,
- "archivo": 860,
+ "generado": "2026-10-09T15:32:43.917Z",
+ "portada": 49,
+ "archivo": 866,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-09T15:02:27.681Z",
+  "generado": "2026-10-09T15:32:43.957Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutor",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-09T15:04:52.781Z"
    },
    {
     "nombre": "noticia2",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 43,
+    "segundos": 53,
     "notas": [
      {
       "id": "10izr2u",
@@ -134,19 +134,19 @@
       "seccion": "Deportes"
      },
      {
+      "id": "vwb5m5",
+      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "18jx7kk",
       "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
       "seccion": "Agro"
      },
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "id": "1y9462t",
+      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -165,9 +165,9 @@
       "seccion": "Deportes"
      },
      {
-      "id": "15x6yh5",
-      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
-      "seccion": "Automovilismo"
+      "id": "1gmlwhw",
+      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "seccion": "Balcarce"
      },
      {
       "id": "175ztwv",
@@ -175,9 +175,9 @@
       "seccion": "Agro"
      },
      {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "seccion": "Balcarce"
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -197,9 +197,21 @@
    ],
    "cola": [
     {
+     "id": "14mxql1",
+     "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
      "id": "18jx7kk",
      "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
      "seccion": "Agro",
+     "marcada": false
+    },
+    {
+     "id": "1y9462t",
+     "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {

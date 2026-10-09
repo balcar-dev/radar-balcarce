@@ -1,70 +1,11 @@
 {
- "generado": "2026-10-09T15:02:27.650Z",
+ "generado": "2026-10-09T15:32:43.917Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "vmuzu3",
-   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
-   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
-   "seccion": "Policiales",
-   "fecha": "2026-10-09T14:18:32.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
-     "fecha": "2026-10-09T14:18:32.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "14r77qb",
-   "titulo": "Martín Fierro de Radio 2026: Luis Ventura anunció las nominaciones y confirmó los detalles de la gala",
-   "copete": "La Asociación de Periodistas de la Televisión y la Radiofonía Argentinas (APTRA) dio a conocer los nominados a los Martín Fierro de Radio 2026 , que premiarán la producción del año 2025. La ceremonia se realizará el 21 de octubre en el Goldencenter de Parque Norte, con la…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-09T12:25:00.000Z",
-   "fuentes": [
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/martin-fierro-radio-2026-luis-ventura-anuncio-las-nominaciones-y-confirmo-los-detalles-la-gala-n1604828",
-     "fecha": "2026-10-09T12:25:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/teleshow/2026/10/09/quienes-son-los-nominados-al-martin-fierro-de-radio-2026/",
-     "fecha": "2026-10-09T14:49:36.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/espectaculos/radio/martin-fierro-de-radio-2026-quienes-son-los-nominados-nid09102026/",
-     "fecha": "2026-10-09T14:29:41.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/luis-ventura-paso-por-el-pase-y-anuncio-a-los-candidatos-de-los-martin-fierro-de-radio-hay-que-preparar-la-cara/",
-     "fecha": "2026-10-09T14:13:55.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/videos/se-conocieron-los-nominados-a-los-martin-fierro-de-radio-2026-quienes-son-los-candidatos-de-radio-mitre/",
-     "fecha": "2026-10-09T12:46:55.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/espectaculos/jonatan-viale--baby-etchecopar-y-nelson-castro--nominados-en-los-martin-fierro-de-radio-2026_a6ac8ee018e24c1a50accee35",
-     "fecha": "2026-10-09T13:47:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 4 problemas (fecha, numero, promesa): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 84 palabras",
-   "maximo": 4
-  },
-  {
    "id": "7w5vsc",
    "titulo": "La Liga Balcarceña de Fútbol volvió a postergar la primera fecha por las lluvias",
-   "copete": "El mal estado de las canchas, que todavía presentan una importante acumulación de agua, obligó a suspender nuevamente el inicio de la competencia. La jornada será reprogramada durante la próxima semana.",
+   "copete": "Las lluvias registradas y los pronósticos poco alentadores para las próximas horas obligaron a suspender la actividad prevista para este fin de semana. La fecha será reprogramada durante la próxima semana. La Liga Balcarceña de Fútbol resolvió postergar nuevamente la primera…",
    "seccion": "Fútbol",
    "fecha": "2026-10-09T13:12:01.000Z",
    "fuentes": [
@@ -72,6 +13,11 @@
      "medio": "Radio Gabal (FM 104.1)",
      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-liga-balcarcena-de-futbol-volvio-a-postergar-la-primera-fecha-por-las-lluvias",
      "fecha": "2026-10-09T13:12:01.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/la-liga-balcarcena-de-futbol-postergo-nuevamente-la-primera-fecha/",
+     "fecha": "2026-10-09T13:13:17.000Z"
     }
    ],
    "intentos": 3,
@@ -88,7 +34,7 @@
     {
      "medio": "El Gráfico",
      "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
-     "fecha": "2026-10-08T19:00:00.000Z"
+     "fecha": "2026-10-09T07:30:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -104,6 +50,11 @@
      "medio": "Olé",
      "enlace": "https://www.ole.com.ar/river-plate/river-despedida-messi-marketing-sports-empresa-organizacion-comunicado-contrapunto-pantalla-electricidad_0_9WP8SrGGjp.html",
      "fecha": "2026-10-08T22:43:42.000Z"
+    },
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
+     "fecha": "2026-10-09T05:55:55.000Z"
     },
     {
      "medio": "La Página Millonaria",
@@ -126,11 +77,80 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
      "fecha": "2026-10-09T11:23:10.000Z"
+    },
+    {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/el-hospital-fossati-restablecio-el-funcionamiento-de-su-conmutador-telefonico/",
+     "fecha": "2026-10-09T12:08:29.000Z"
     }
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
    "maximo": 3
+  },
+  {
+   "id": "vmuzu3",
+   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
+   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
+   "seccion": "Policiales",
+   "fecha": "2026-10-09T14:18:32.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
+     "fecha": "2026-10-09T14:18:32.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "14r77qb",
+   "titulo": "Martín Fierro de Radio 2026: Luis Ventura anunció las nominaciones y confirmó los detalles de la gala",
+   "copete": "La Asociación de Periodistas de la Televisión y la Radiofonía Argentinas (APTRA) dio a conocer los nominados a los Martín Fierro de Radio 2026 , que premiarán la producción del año 2025. La ceremonia se realizará el 21 de octubre en el Goldencenter de Parque Norte, con la…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-09T12:25:00.000Z",
+   "fuentes": [
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/martin-fierro-radio-2026-luis-ventura-anuncio-las-nominaciones-y-confirmo-los-detalles-la-gala-n1604828",
+     "fecha": "2026-10-09T12:25:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/teleshow/2026/10/09/quienes-son-los-nominados-al-martin-fierro-de-radio-2026/",
+     "fecha": "2026-10-09T15:05:09.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/espectaculos/radio/martin-fierro-de-radio-2026-quienes-son-los-nominados-nid09102026/",
+     "fecha": "2026-10-09T14:29:41.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/ratingcero/martin-fierro-radio-2026-se-conocio-la-lista-completa-nominados-n251189",
+     "fecha": "2026-10-09T15:15:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/luis-ventura-paso-por-el-pase-y-anuncio-a-los-candidatos-de-los-martin-fierro-de-radio-hay-que-preparar-la-cara/",
+     "fecha": "2026-10-09T14:13:55.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/se-conocieron-los-nominados-a-los-martin-fierro-de-radio-2026-quienes-son-los-candidatos-de-radio-mitre/",
+     "fecha": "2026-10-09T12:46:55.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/espectaculos/jonatan-viale--baby-etchecopar-y-nelson-castro--nominados-en-los-martin-fierro-de-radio-2026_a6ac8ee018e24c1a50accee35",
+     "fecha": "2026-10-09T13:47:00.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "cuerpo: 6 problemas (fecha, numero, repite, promesa): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 31 palabras",
+   "maximo": 4
   },
   {
    "id": "s67kgm",
@@ -174,7 +194,7 @@
   {
    "id": "1cnk2r1",
    "titulo": "Despues de 20 años, un total de 76 familias de Balcarce recibirán sus escrituras",
-   "copete": "",
+   "copete": "El acto se realizará en el hall de la Municipalidad, en principio. Participarán vecinos del barrio Favaloro, familias del barrio Hipólito Yrigoyen y los primeros beneficiarios del loteo municipal de 31 y Caseros, cuyos terrenos fueron vendidos en 2023.",
    "seccion": "Balcarce",
    "fecha": "2026-10-09T14:31:49.247Z",
    "fuentes": [
@@ -184,7 +204,7 @@
      "fecha": null
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
    "maximo": 3
   }
