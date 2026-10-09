@@ -23,7 +23,7 @@ retomar: si algo de acá ya está hecho, se tacha acá y en su documento de orig
 | 3 | Sacar los dos videos de `web/public/compartir/` (9,9 MB que viajan en cada despliegue) a R2 o enlace externo | bajo | R2 depende de ustedes (ver 3) |
 | 4 | ~~Chequeo del tope de archivos~~ **hecho el 9/10**: `npm run contar` al final del build avisa desde 14.000 y alerta desde 18.000 (el tope de Cloudflare es 20.000) | – | `web/scripts/contar-archivos.mjs` |
 | 5 | ~~`alt` en la foto destacada~~ **se dejó vacío a propósito**: el título va al lado y repetirlo molesta a los lectores de pantalla | – | `components/imagen-destacada.js` |
-| 6 | Medición real: un build en la PC y un Lighthouse móvil, para confirmar las estimaciones de la auditoría | bajo | |
+| 6 | ~~Medición real~~ **hecha el 9/10 sobre el sitio publicado**: la portada pesa 16 KB de HTML comprimido (83 KB sin comprimir) y una nota 11 KB; el JavaScript y el CSS que baja cualquier página suman ~155 KB comprimidos (compartidos: se bajan una vez). Es un peso chico. Falta un Lighthouse móvil con la herramienta de Chrome. (En esta PC `npm run build` falla por un conflicto de Windows con la carpeta temporal de Next; en GitHub compila bien) | – | |
 | 7 | Mirar que hoy salga bien lo nuevo: el clima de las 7 con escena, las efemérides de las 9, el WhatsApp de las 21 | bajo | Claude puede mirarlo solo mañana |
 | 8 | Lista de sólo lectura de "lo frenado en rojo" en el panel del celular (#1 de DONDE-SEGUIMOS) | medio | El calendario de Fechas ya está hecho |
 | 9 | Cifrar el texto de las pistas (hoy queda en un archivo público) (#50) | medio-alto | Delicado: se avisa antes de tocar |
