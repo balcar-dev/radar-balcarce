@@ -64,11 +64,11 @@ test('reels/fijas/ no está en el .gitignore (hay que subir los videos)', () => 
   assert.ok(!/^reels\/\*$/m.test(ign) || /!reels\/fijas/.test(ign));
 });
 
-test('las dos piezas que faltan se arman solas el 2/10 a las 05:30, ya con el cupo del día nuevo, y sólo en 2026', () => {
+test('las cuatro piezas de Participá se vuelven a armar solas el 10/10 a las 05:30 con el diseño nuevo, ya con el cupo del día nuevo, y sólo en 2026', () => {
   const y = leer('.github/workflows/fijar-piezas.yml');
-  assert.match(y, /cron: '30 8 2 10 \*'/, '05:30 de Balcarce el 2 de octubre');
-  assert.match(y, /inputs\.piezas \|\| 'participa-evento,participa-reclamos'/);
-  assert.match(y, /inputs\.desde \|\| '2026-10-06'/);
+  assert.match(y, /cron: '30 8 10 10 \*'/, '05:30 de Balcarce el 10 de octubre');
+  assert.match(y, /inputs\.piezas \|\| 'participa-noticias,participa-evento,participa-reclamos,participa-nota'/);
+  assert.match(y, /inputs\.desde \|\| '2026-10-10'/);
   assert.match(y, /date \+%Y\)" != "2026"/, 'no se repite el año que viene');
   assert.ok((y.match(/env\.SEGUIR != 'false'/g) ?? []).length >= 6, 'todos los pasos respetan la guarda');
 });

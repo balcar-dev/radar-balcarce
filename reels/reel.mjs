@@ -62,11 +62,15 @@ const CARPETA_FUENTES = '../marca/fuentes';
 
 export function armarAss(carteles, { acento = '#E8A33C', retardo = 0 } = {}) {
   const lineas = [];
-  for (const c of carteles) {
+  for (let k = 0; k < carteles.length; k += 1) {
+    const c = carteles[k];
+    // Un cartel dura un poco más que su última palabra; si el que sigue arranca antes, se cortan: nunca dos carteles a la vez en el mismo lugar
+    // (9/10: en una historia se veían dos líneas encimadas).
+    const tope = carteles[k + 1] ? carteles[k + 1].desde : Infinity;
     for (let i = 0; i < c.palabras.length; i += 1) {
       const p = c.palabras[i];
       const desde = (i === 0 ? c.desde : p.desde) + retardo;
-      const hasta = (i === c.palabras.length - 1 ? c.hasta : c.palabras[i + 1].desde) + retardo;
+      const hasta = (i === c.palabras.length - 1 ? Math.min(c.hasta, tope) : c.palabras[i + 1].desde) + retardo;
       const texto = c.palabras.map((q, j) => (j === i
         ? `{\\c${aAss(acento)}}${q.texto}{\\c${aAss(TINTA)}}`
         : q.texto)).join(' ');

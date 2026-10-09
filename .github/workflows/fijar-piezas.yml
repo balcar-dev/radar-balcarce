@@ -13,10 +13,11 @@
 name: Fijar piezas
 
 on:
-  # Una sola vez, el viernes 2/10/2026 a las 05:30 (hora de Balcarce, ya con el cupo de voz del día
-  # nuevo): arma las dos piezas de participá que faltan. Se puede sacar después de esa fecha.
+  # Una sola vez, el sábado 10/10/2026 a las 05:30 (hora de Balcarce, ya con el cupo de voz del día
+  # nuevo): vuelve a armar las CUATRO piezas de participá con el diseño nuevo (la escena animada: el sobre con el mail, el
+  # pie parejo; las fijas de antes eran de la placa vieja). Gasta cuatro audios del cupo del día. Se puede sacar después.
   schedule:
-    - cron: '30 8 2 10 *'
+    - cron: '30 8 10 10 *'
   workflow_dispatch:
     inputs:
       piezas:
@@ -45,9 +46,9 @@ jobs:
     env:
       TZ: America/Argentina/Buenos_Aires
       # A mano llegan por los datos de entrada; en la corrida programada valen los de abajo.
-      PIEZAS: ${{ inputs.piezas || 'participa-evento,participa-reclamos' }}
-      DESDE: ${{ inputs.desde || '2026-10-06' }}
-      DIAS: ${{ inputs.dias || '14' }}
+      PIEZAS: ${{ inputs.piezas || 'participa-noticias,participa-evento,participa-reclamos,participa-nota' }}
+      DESDE: ${{ inputs.desde || '2026-10-10' }}
+      DIAS: ${{ inputs.dias || '22' }}
     steps:
       - uses: actions/checkout@v4
         with:
