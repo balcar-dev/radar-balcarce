@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T06:02:24.805Z",
- "portada": 53,
- "archivo": 839,
+ "generado": "2026-10-09T06:32:05.208Z",
+ "portada": 52,
+ "archivo": 840,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-09T06:02:24.852Z",
+  "generado": "2026-10-09T06:32:05.247Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,8 +157,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 30,
+    "notas": [
+     {
+      "id": "1ihpcqe",
+      "titulo": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1bb4gv8",
+      "titulo": "Atletas locales suman cinco triunfos en Mar del Plata",
+      "seccion": "Deportes"
+     }
+    ]
    }
   ],
   "facebook": {
