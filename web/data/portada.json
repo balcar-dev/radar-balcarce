@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T19:32:04.800Z",
+  "generado": "2026-10-09T20:01:58.429Z",
   "notas": [
     {
       "id": "futbolresultadosliga20261009",
@@ -538,11 +538,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:01:23.701Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:01:23.701Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -601,6 +601,7 @@
         "La Nación",
         "Infobae",
         "Clarín",
+        "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
         "iProfesional",
@@ -925,92 +926,6 @@
       "slug": "el-municipio-saluda-a-los-tecnicos-de-laboratorio-en-su-jornada"
     },
     {
-      "id": "o8zpwa",
-      "titulo": "Franco Colapinto y Pierre Gasly participan de un juego viral de Alpine",
-      "copete": "Los pilotos de la escudería francesa protagonizaron un desafío de adivinanzas en la previa del Gran Premio de Singapur. Además, la actividad oficial en el circuito comenzó con las prácticas y la clasificación.",
-      "cuerpo": "Franco Colapinto y Pierre Gasly participaron de un desafío de adivinanzas organizado por la escudería Alpine en la previa del Gran Premio de Singapur. El juego consistió en descubrir nombres de figuras de la categoría mediante preguntas acotadas.\n\nDurante la partida, el francés adivinó con rapidez su personaje en el primer intento, lo que provocó una exclamación de asombro del argentino. En otro tramo del entretenimiento, el piloto nacional confundió a su excompañero Alex Albon con el propio Gasly.\n\nTras finalizar decimonoveno en la práctica libre con inconvenientes en su monoplaza, Colapinto se ubicó undécimo en la clasificación corta, justo detrás de su compañero, quien largará décimo. La competencia Sprint se disputará el sábado a las 6 y la clasificación para la carrera principal tendrá lugar el domingo a las 9.",
-      "guion": "Franco Colapinto y Pierre Gasly participan de un juego viral de Alpine",
-      "seccion": "Automovilismo",
-      "medios": [
-        "TyC Sports",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.tycsports.com/automovilismo/colapinto-y-gasly-juego-viral-alpine-id765138.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T14:57:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T18:01:48.011Z",
-      "relevancia": 67,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Los pilotos jugaron a las adivinanzas en la previa de Singapur.",
-        "La actividad oficial en el Circuito de Marina Bay comenzó el viernes.",
-        "Colapinto se ubicó undécimo en la clasificación corta.",
-        "La carrera Sprint se disputa el sábado a las 6."
-      ],
-      "noConfirmado": [
-        "No se especificaron detalles adicionales sobre los inconvenientes mecánicos reportados por el piloto argentino en la práctica libre."
-      ],
-      "textoRedes": "Franco Colapinto y Pierre Gasly participaron de un juego viral de adivinanzas organizado por Alpine en la previa del Gran Premio de Singapur. La actividad oficial en el Circuito de Marina Bay comenzó el viernes con vistas a la competencia Sprint.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Pierre Gasly",
-        "Alpine",
-        "Formula 1",
-        "Gran Premio de Singapur"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/colapinto-y-gasly-juego-viral-alpine-id765138.html",
-          "fecha": "2026-10-09T14:57:33.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles del desafío lúdico de Alpine, las reacciones de los pilotos y los resultados de las prácticas y la clasificación corta."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/franco-colapinto-y-pierre-gasly-se-animaron-a-un-juego-viral-y-enloquecieron-a-las-redes-que-hijo-de/",
-          "fecha": "2026-10-09T17:44:43.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la información sobre la participación de los pilotos en el juego viral de la escudería francesa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "17f0jbe",
-          "titulo": "Alpine analiza el desempeño de Colapinto y Gasly tras Azerbaiyán",
-          "fecha": "2026-09-25T15:18:00.000Z",
-          "ruta": "/nota/alpine-analiza-el-desempeno-de-colapinto-y-gasly-tras-azerbaiyan-17f0jbe"
-        },
-        {
-          "id": "1ppws54",
-          "titulo": "Alpine elige una foto de Colapinto para anunciar el GP de Bahréin",
-          "fecha": "2026-09-28T10:57:11.000Z",
-          "ruta": "/nota/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-1ppws54"
-        },
-        {
-          "id": "mk94me",
-          "titulo": "La fría reacción de Pierre Gasly ante las disculpas de Franco Colapinto por el choque en Bakú",
-          "fecha": "2026-09-22T13:54:00.000Z",
-          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-y-pierre-gasly-participan-de-un-juego-viral-de-alpine",
-      "foto": {
-        "archivo": "fotos-notas/o8zpwa.jpg",
-        "credito": "Foto: TyC Sports"
-      }
-    },
-    {
       "id": "2qmh95",
       "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
       "copete": "El equipo local compitió en el Club Edal por el Top 6 de la Liga Marplatense Federada. Superó a Atlético Villa Gesell por 2 a 0 y cayó frente al conjunto tandilense.",
@@ -1072,8 +987,8 @@
       "guion": "WhatsApp suspende perfiles de forma temporal con el aviso Cuenta en revisión",
       "seccion": "Tecnología",
       "medios": [
-        "Infobae",
         "La Nación",
+        "Infobae",
         "FayerWayer"
       ],
       "enlace": "https://www.infobae.com/tecno/2026/10/09/que-significa-cuenta-en-revision-en-whatsapp-y-como-recuperar-el-acceso-a-todos-los-chats/",
@@ -1277,20 +1192,19 @@
       "guion": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Acción 5 (Balcarce)",
-        "El Diario Balcarce",
         "Diario La Vanguardia",
-        "News Balcarce (FM 91.7)"
+        "News Balcarce (FM 91.7)",
+        "El Diario Balcarce"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/futbol-volvieron-postergar-el-inicio.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T13:12:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 100,
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1415,7 +1329,6 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
@@ -1425,7 +1338,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 75,
+      "relevancia": 69,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -1475,7 +1388,6 @@
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
-        "Minuto Uno",
         "TN (Todo Noticias)",
         "C5N",
         "Diario Popular",
@@ -1483,7 +1395,8 @@
         "Infobae",
         "A24",
         "Radio Mitre",
-        "La Nación"
+        "La Nación",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/teleshow/2026/10/09/quienes-son-los-nominados-al-martin-fierro-de-radio-2026/",
       "teniaImagenLaFuente": true,
@@ -1695,90 +1608,6 @@
       "foto": {
         "archivo": "fotos-notas/rzygx9.jpg",
         "credito": "Foto: Agrositio"
-      }
-    },
-    {
-      "id": "1gmlwhw",
-      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "copete": "Ediles cruzaron cuestionamientos en la 15á sesión por la campaña de recupero de deuda a más de 2.000 usuarios y la contratación de un estudio jurídico externo.",
-      "cuerpo": "El tramo final de la decimoquinta sesión del Concejo Deliberante concentró un intenso debate en torno a las intimaciones enviadas por Aguas de la Ciudad para recuperar deudas acumuladas por más de 2.000 usuarios. La discusión expuso objeciones de la oposición sobre la contratación de un estudio jurídico marplatense y la demora en responder pedidos de informes.\n\nEn la misma línea, Enrique Guillén y Gabriel Petruccelli reclamaron que las gestiones queden a cargo de profesionales locales y exigieron mayores facilidades de pago para los vecinos. Desde el oficialismo, Leandro Spinelli rechazó las sospechas, defendió la necesidad de recaudar fondos ante la delicada situación financiera de la firma y prometió gestionar las explicaciones requeridas.",
-      "guion": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T11:36:27.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T14:31:49.247Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Intimaciones a más de 2.000 usuarios del servicio sanitario.",
-        "Cuestionamiento opositor a un estudio jurídico marplatense.",
-        "Reclamos por falta de respuestas a pedidos de informes.",
-        "Defensa oficialista de la recaudación para sostener a la empresa."
-      ],
-      "seSabe": [
-        "El debate ocurrió al cierre de la 15á sesión del Concejo Deliberante.",
-        "La campaña de cobro alcanza a más de 2.000 usuarios.",
-        "La oposición cuestionó la Ordenanza 40/26 y la falta de respuestas de Ricardo Stoppani."
-      ],
-      "noConfirmado": [
-        "No se detallaron los montos totales de la deuda reclamada a los usuarios.",
-        "No trascendieron los plazos en los que asumiría el nuevo gerente de la empresa.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Intenso debate en el Concejo Deliberante por las intimaciones y el recupero de deudas impulsado por Aguas de la Ciudad a más de 2.000 usuarios.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Aguas de la Ciudad",
-        "deudas",
-        "OSEBAL"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-          "fecha": "2026-10-09T11:36:27.000Z",
-          "oficial": false,
-          "aporte": "Detalló los cruces en el Concejo Deliberante por las intimaciones de Aguas de la Ciudad y las posturas de los bloques."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "z7t628",
-          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
-          "fecha": "2026-10-09T02:06:53.000Z",
-          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
-        },
-        {
-          "id": "e09k96",
-          "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
-          "fecha": "2026-10-07T05:31:18.450Z",
-          "ruta": "/nota/el-concejo-debate-la-creacion-de-un-banco-municipal-de-fisiatria-e09k96"
-        },
-        {
-          "id": "1s9so2g",
-          "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
-          "fecha": "2026-09-25T23:02:57.000Z",
-          "ruta": "/nota/el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal-1s9so2g"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-discute-las-intimaciones-de-aguas-de-la-ciudad",
-      "foto": {
-        "archivo": "fotos-notas/1gmlwhw.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2314,95 +2143,6 @@
       }
     },
     {
-      "id": "178vmym",
-      "titulo": "El Gobierno nacional aprueba nuevas tarifas para treinta aeropuertos",
-      "copete": "El Organismo Regulador del Sistema Nacional de Aeropuertos oficializó un nuevo cuadro tarifario para más de treinta terminales del país. Los valores comenzarán a regir en sesenta días.",
-      "cuerpo": "La medida modifica la Tasa de Uso de Aeroestación e incluye a las terminales del Grupo A, entre las que figuran Aeroparque, Ezeiza, Córdoba, Bariloche, Mendoza y Mar del Plata.\n\nLos nuevos valores entrarán en vigencia sesenta días después de su publicación en el Boletín Oficial. Además, el esquema incorpora de forma directa una rebaja del treinta por ciento en la Tasa de Aterrizaje y en la Tasa de Estacionamiento para vuelos internacionales, un descuento que hasta el momento dependía de convenios específicos con aerolíneas.",
-      "guion": "El Gobierno nacional aprueba nuevas tarifas para treinta aeropuertos",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Ámbito",
-        "El Cronista",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-aprobo-las-nuevas-tarifas-para-operar-en-30-aeropuertos-del-pais/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T07:39:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T11:01:45.821Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Afecta a más de treinta aeropuertos del Grupo A.",
-        "Los nuevos valores entran en vigencia en sesenta días.",
-        "Modifica la Tasa de Uso de Aeroestación.",
-        "Incorpora una rebaja del treinta por ciento en tasas internacionales."
-      ],
-      "seSabe": [
-        "El ORSNA aprobó el nuevo cuadro tarifario mediante la Resolución N° 69/2026.",
-        "La medida fue oficializada este viernes en el Boletín Oficial.",
-        "Los cambios alcanzan a las terminales del Grupo A, incluyendo Ezeiza, Aeroparque y Mar del Plata.",
-        "Las nuevas tarifas comenzarán a regir dentro de sesenta días.",
-        "Se establece una reducción directa del treinta por ciento en las tasas de aterrizaje y estacionamiento internacional."
-      ],
-      "noConfirmado": [
-        "No se especificaron los porcentajes exactos de aumento para la Tasa de Uso de Aeroestación doméstica, ya que dependerán de cada tipo de vuelo y aeropuerto."
-      ],
-      "textoRedes": "El Gobierno oficializó un nuevo cuadro tarifario para más de treinta aeropuertos del país. La medida modifica la tasa de uso de aeroestación y reduce un treinta por ciento las tasas internacionales. Los nuevos valores regirán en sesenta días.",
-      "etiquetas": [
-        "aeropuertos",
-        "tarifas",
-        "ORSNA",
-        "Gobierno nacional",
-        "transporte aéreo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-aprobo-las-nuevas-tarifas-para-operar-en-30-aeropuertos-del-pais/",
-          "fecha": "2026-10-09T07:39:23.000Z",
-          "oficial": false,
-          "aporte": "Informó la aprobación por parte del ORSNA, la resolución oficial y los detalles sobre las tasas y aeropuertos."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/aprueban-un-nuevo-cuadro-tarifario-mas-30-aeropuertos-del-pais-n6331888",
-          "fecha": "2026-10-09T10:32:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que la medida alcanza al Grupo A y especificó terminales como Ezeiza, Aeroparque, Córdoba y Bariloche."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/aprobaron-nuevas-tarifas-para-operar-en-30-aeropuertos-del-pais-cuando-entran-en-vigencia/",
-          "fecha": "2026-10-09T10:54:25.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la oficialización por parte del Gobierno nacional y el número de la resolución."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/sociedad/autorizaron-un-nuevo-cuadro-tarifario-para-mas-de-30-aeropuertos-del-pais-desde-cuando-regira/",
-          "fecha": "2026-10-09T10:29:36.000Z",
-          "oficial": false,
-          "aporte": "Agregó que el esquema incorpora cambios para los vuelos internacionales y tasas aeroportuarias."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-nacional-aprueba-nuevas-tarifas-para-treinta-aeropuertos",
-      "foto": {
-        "archivo": "fotos-notas/178vmym.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "1i7p0dt",
       "titulo": "El Gobierno autoriza al Ejército a participar del ejercicio Arandú 2026",
       "copete": "El Poder Ejecutivo habilitó mediante un decreto el envío de personal y equipamiento militar a Brasil. Las maniobras conjuntas se desarrollarán entre el 10 y el 17 de octubre.",
@@ -2644,8 +2384,8 @@
         "El Destape",
         "La Nueva",
         "UAR (Unión Argentina de Rugby)",
-        "El Gráfico",
-        "Clarín"
+        "Clarín",
+        "El Gráfico"
       ],
       "enlace": "https://uar.com.ar/mario-ledesma-y-shaun-edwards-se-suman-al-cuerpo-tecnico-de-los-pumas/",
       "teniaImagenLaFuente": true,
@@ -2930,10 +2670,10 @@
         "Infobae",
         "El Cronista",
         "Canal 26",
-        "El Economista",
         "iProfesional",
         "Clarín",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://www.cronista.com/negocios/ypf-se-quedo-con-la-parte-que-le-faltaba-de-una-de-sus-principales-subsidiarias/",
       "teniaImagenLaFuente": true,
@@ -3001,6 +2741,63 @@
         "archivo": "fotos-notas/1wv2vgs.jpg",
         "credito": "Foto: iProfesional"
       }
+    },
+    {
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
+      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-08T21:31:14.736Z",
+      "sinFecha": true,
+      "visto": "2026-10-08T21:31:14.736Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reunión de trabajadores de prensa locales",
+        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
+        "Fecha oficial en el calendario desde 2023"
+      ],
+      "seSabe": [
+        "Se llevó a cabo un encuentro del periodismo balcarceño.",
+        "La fecha se conmemora desde 2023 en el calendario local.",
+        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "etiquetas": [
+        "periodismo",
+        "Balcarce",
+        "Beto Vuotto",
+        "reconocimiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+          "fecha": "2026-10-08T21:17:37.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
     },
     {
       "id": "w8iv0l",
@@ -3081,63 +2878,6 @@
         "archivo": "fotos-notas/w8iv0l.jpg",
         "credito": "Foto: La Nación"
       }
-    },
-    {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
-      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
-      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T21:17:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reunión de trabajadores de prensa locales",
-        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
-        "Fecha oficial en el calendario desde 2023"
-      ],
-      "seSabe": [
-        "Se llevó a cabo un encuentro del periodismo balcarceño.",
-        "La fecha se conmemora desde 2023 en el calendario local.",
-        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
-      "etiquetas": [
-        "periodismo",
-        "Balcarce",
-        "Beto Vuotto",
-        "reconocimiento"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-          "fecha": "2026-10-08T21:17:37.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
     },
     {
       "id": "1q4j7p",
@@ -3299,9 +3039,9 @@
         "Infobae",
         "Perfil",
         "Noticias Argentinas (NA)",
-        "El Economista",
         "El Cronista",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/negocios/genneia-inauguro-el-parque-solar-mas-grande-de-san-juan-invirtio-us110-millones-y-apunta-al-negocio-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -3463,6 +3203,7 @@
         "Ámbito",
         "Infobae",
         "TN (Todo Noticias)",
+        "Página/12",
         "TyC Sports",
         "Olé",
         "Noticias Argentinas (NA)",
@@ -3939,12 +3680,12 @@
         "El Marplatense",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "0223 (Mar del Plata)",
-        "La Capital (Rosario)",
-        "La Nueva",
         "El Día",
         "Clarín",
-        "El Gráfico"
+        "El Gráfico",
+        "La Capital (Rosario)",
+        "0223 (Mar del Plata)",
+        "La Nueva"
       ],
       "enlace": "https://www.0221.com.ar/deportes/escandalo-la-reserva-talleres-vs-atletico-tucuman-lautaro-acosta-y-su-hermano-las-trompadas-n135524",
       "teniaImagenLaFuente": true,
@@ -4202,11 +3943,11 @@
         "Diario Popular",
         "QZ Noticias (Mar del Plata)",
         "El Eco de Tandil",
-        "Perfil",
         "Infobae",
         "La Nación",
         "Página/12",
         "C5N",
+        "Perfil",
         "Clarín",
         "Minuto Uno",
         "Zona Norte Diario"
@@ -4330,11 +4071,11 @@
       "medios": [
         "La Nación",
         "Infobae",
+        "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
-        "Página/12",
         "Minuto Uno",
         "C5N",
         "Radio Mitre",
@@ -4344,19 +4085,17 @@
         "El Día",
         "InfoRegión",
         "El Eco de Tandil",
-        "Noticias Agropecuarias",
-        "Ámbito",
-        "iProfesional",
         "A24",
         "Crónica",
-        "Agencia DIB"
+        "Agencia DIB",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.ambito.com/economia/la-inflacion-caba-se-acelero-al-18-septiembre-impulsada-educacion-vivienda-y-alimentos-n6331545",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-08T14:00:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-08T14:31:25.059Z",
-      "relevancia": 65,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4635,6 +4374,76 @@
         "archivo": "fotos-notas/jul3dm.jpg",
         "credito": "Foto: News Balcarce (FM 91.7)"
       }
+    },
+    {
+      "id": "1gsplvm",
+      "titulo": "La Bolsa de Cereales anticipa lluvias y fuertes contrastes térmicos",
+      "copete": "El pronóstico agroclimático para gran parte del país prevé precipitaciones variables, ingreso de aire polar con heladas en zonas serranas y marcas térmicas de hasta 40 grados en el norte.",
+      "cuerpo": "Gran parte de la región agrícola transcurre la siembra de maíz bajo un pronóstico de lluvias que se extenderá entre el 8 y el 14 de octubre, de acuerdo con el informe de la Bolsa de Cereales de Buenos Aires. El reporte indica que las precipitaciones presentarán una distribución despareja, con acumulados de 10 a 25 milímetros en la mayoría de los distritos y marcas de hasta 200 milímetros en el norte del litoral fluvial.\n\nJunto al paso del sistema frontal, el ingreso de vientos polares generará marcas inferiores a los 5 grados y heladas generales en las zonas serranas. Posteriormente, el retorno de vientos tropicales elevará las temperaturas hasta los 40 grados en el norte del área productiva, mientras que el centro y el sur registrarán marcas estables.",
+      "guion": "La Bolsa de Cereales anticipa lluvias y fuertes contrastes térmicos",
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Clarín"
+      ],
+      "enlace": "https://www.clarin.com/rural/anticipan-fuertes-tormentas-contrastes-temperaturas-area-agricola-proximos-dias_0_3KlFcsT7i6.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T12:31:33.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T15:01:21.096Z",
+      "relevancia": 28,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lluvias desparejas en gran parte del país hasta el 14 de octubre.",
+        "Acumulados de hasta 200 milímetros en el norte del litoral fluvial.",
+        "Ingreso de aire polar con heladas en zonas serranas.",
+        "Temperaturas máximas de hasta 40 grados en el norte."
+      ],
+      "seSabe": [
+        "Las precipitaciones se desarrollan entre el 8 y el 14 de octubre según la Bolsa de Cereales de Buenos Aires.",
+        "El norte del litoral fluvial concentra los mayores acumulados, que superan los 200 milímetros.",
+        "El ingreso de vientos polares provoca heladas generales en zonas serranas."
+      ],
+      "noConfirmado": [
+        "La magnitud exacta de los acumulados pluviales en las zonas con registros moderados."
+      ],
+      "textoRedes": "El informe agroclimático semanal prevé lluvias variables, heladas en zonas serranas y marcas térmicas de hasta 40 grados en el norte del país durante la siembra de maíz.",
+      "etiquetas": [
+        "lluvias",
+        "temperaturas",
+        "siembra",
+        "maiz"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/anticipan-fuertes-tormentas-contrastes-temperaturas-area-agricola-proximos-dias_0_3KlFcsT7i6.html",
+          "fecha": "2026-10-08T12:31:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló el informe agroclimático semanal con los registros térmicos, los acumulados de lluvia y el ingreso de vientos polares y tropicales."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/el-nino-advierten-sobre-lugares-con-fuertes-tormentas-y-marcados-contrastes-de-temperatura-en-los-nid07102026/",
+          "fecha": "2026-10-08T14:33:51.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la siembra de maíz en paralelo a las precipitaciones previstas para la región productiva."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-bolsa-de-cereales-anticipa-lluvias-y-fuertes-contrastes-termicos",
+      "foto": {
+        "archivo": "fotos-notas/1gsplvm.jpg",
+        "credito": "Foto: Clarín"
+      }
     }
   ],
   "secciones": [
@@ -4644,10 +4453,10 @@
     "Política",
     "Economía",
     "Deportes",
-    "Automovilismo",
     "Tecnología",
     "Agro",
-    "Cultura y agenda"
+    "Cultura y agenda",
+    "Automovilismo"
   ],
   "temas": [
     {
@@ -4663,10 +4472,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 12,
+      "temp": 11,
       "sensacion": 8,
-      "humedad": 76,
-      "viento": 21,
+      "humedad": 79,
+      "viento": 20,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -5015,12 +4824,6 @@
   },
   "pendientes": [
     {
-      "id": "aq8ze",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
       "id": "lf3dro",
       "titulo": "Julio Politano explicó en “Balcarce Vox” el pedido de…",
       "seccion": "Automovilismo",
@@ -5054,6 +4857,12 @@
       "id": "dc8gpu",
       "titulo": "El Gobierno estudia denunciar a Irán ante la Corte de la…",
       "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1hc2g38",
+      "titulo": "Renunció un importante funcionario político de Azul…",
+      "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
@@ -5099,12 +4908,6 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "16bm3w7",
-      "titulo": null,
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "146mbos",
       "titulo": "La ANMAT prohibió el uso de dos suplementos promocionados…",
       "seccion": "Argentina",
@@ -5135,18 +4938,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "emxfi0",
-      "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "1hc2g38",
-      "titulo": "Renunció un importante funcionario político de Azul…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1ob03ue",
       "titulo": "El desconocido gesto de Messi con los empleados de la AFA…",
       "seccion": "Fútbol",
@@ -5157,12 +4948,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "vbfl3j",
-      "titulo": "El particular regalo de Benín a Messi en su despedida",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "13ti6av",
@@ -5189,6 +4974,12 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
+      "id": "emxfi0",
+      "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
+      "seccion": "Economía",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "wdhpc1",
       "titulo": null,
       "seccion": "Argentina",
@@ -5199,12 +4990,6 @@
       "titulo": "Dispersión de precios: un mismo producto puede costar…",
       "seccion": "Economía",
       "motivo": "parece promoción, no noticia: \"publicidad\""
-    },
-    {
-      "id": "1s6utqr",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "dfdr7f",
@@ -5249,5 +5034,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 9
 }

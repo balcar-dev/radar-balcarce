@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T19:32:04.800Z",
+ "generado": "2026-10-09T20:01:58.429Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,11 +15,6 @@
      "fecha": "2026-10-09T11:23:10.000Z"
     },
     {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/el-hospital-fossati-restablecio-el-funcionamiento-de-su-conmutador-telefonico/",
-     "fecha": "2026-10-09T12:08:29.000Z"
-    },
-    {
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/restablecieron-el-servicio-telefonico.html",
      "fecha": "2026-10-09T12:45:00.000Z"
@@ -28,63 +23,6 @@
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (fecha): el cuerpo menciona \"octubre\" y la fuente no; sin esas oraciones quedan 57 palabras",
    "maximo": 3
-  },
-  {
-   "id": "11lqk0q",
-   "titulo": "La despedida de Messi: La productora a cargo señaló a River por las fallas",
-   "copete": "La despedida de Lionel Messi de la Selección argentina en el estadio Monumental, que debía ser una fiesta inolvidable, terminó opacada por un cruce de acusaciones entre River y la productora Marketing Sports que contrató la AFA . El evento, que terminó con un espectáculo de…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-08T19:00:00.000Z",
-   "fuentes": [
-    {
-     "medio": "El Gráfico",
-     "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
-     "fecha": "2026-10-09T07:30:00.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/09/polemica-por-la-despedida-de-messi-river-y-la-empresa-que-contrato-la-afa-se-cruzaron-por-las-fallas-en-la-organizacion/",
-     "fecha": "2026-10-09T11:50:46.000Z"
-    },
-    {
-     "medio": "Perfil",
-     "enlace": "https://442.perfil.com/noticias/futbol/la-productora-encargada-del-homenaje-a-messi-explico-las-fallas-tecnicas-del-show-y-responsabilizo-a-river.phtml",
-     "fecha": "2026-10-08T22:50:50.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/river-plate/river-despedida-messi-marketing-sports-empresa-organizacion-comunicado-contrapunto-pantalla-electricidad_0_9WP8SrGGjp.html",
-     "fecha": "2026-10-08T22:43:42.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/deportes/2026/10/09/los-inconvenientes-en-la-despedida-de-lionel-messi-tensaron-aun-mas-la-relacion-entre-river-y-la-afa/",
-     "fecha": "2026-10-09T12:20:55.000Z"
-    },
-    {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/deportes/la-productora-del-homenaje-a-lionel-messi-apunto-contra-river-por-las-fallas-en-el-espectaculo-del-monumental-deportes_1791500280",
-     "fecha": "2026-10-09T05:55:55.000Z"
-    },
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/polemica-por-la-despedida-de-messi-la-productora-denuncio-a-river-y-el-club-respondio",
-     "fecha": "2026-10-09T16:46:07.000Z"
-    },
-    {
-     "medio": "La Página Millonaria",
-     "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
-     "fecha": "2026-10-09T13:13:54.000Z"
-    },
-    {
-     "medio": "La Capital (Rosario)",
-     "enlace": "https://www.lacapital.com.ar/ovacion/polemica-la-productora-la-afa-y-river-las-fallas-la-despedida-lionel-messi-n10285799.html",
-     "fecha": "2026-10-09T15:18:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 5
   },
   {
    "id": "n9eggk",
@@ -99,7 +37,7 @@
      "fecha": "2026-10-09T14:09:54.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "sin material",
    "maximo": 3
   },
@@ -117,6 +55,28 @@
     }
    ],
    "intentos": 3,
+   "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "fadug2",
+   "titulo": "La FIA admite un \"error humano\" que perjudicó a varios pilotos en la SQ1 de Singapur",
+   "copete": "La FIA quedó nuevamente bajo la lupa en la Fórmula 1 después de reconocer un error humano que alteró las condiciones de clasificación para la carrera sprint del Gran Premio de Singapur. La falla se produjo durante la SQ1 y afectó el rendimiento de varios monoplazas, entre ellos…",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-09T14:19:55.000Z",
+   "fuentes": [
+    {
+     "medio": "Motorsport",
+     "enlace": "https://es.motorsport.com/f1/news/fia-admite-error-humano-sq1-singapur/10863477/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+     "fecha": "2026-10-09T14:19:55.000Z"
+    },
+    {
+     "medio": "Doble Amarilla",
+     "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/escandalo-en-la-clasificacion-sprint-de-la-formula-1--un-error-de-la-fia-perjudico-a-sainz-y-a-otros-pilotos_a6ac93a681ec8d0dc7a1afe94",
+     "fecha": "2026-10-09T19:46:34.000Z"
+    }
+   ],
+   "intentos": 1,
    "motivo": "sin material",
    "maximo": 3
   },
@@ -145,6 +105,38 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el copete dice 4 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "1fb9s8v",
+   "titulo": "Solo tres provincias en todo el país lograron aumentar el empleo industrial en los últimos dos años",
+   "copete": "El empleo registrado en la industria manufacturera cayó 5,2% en el primer trimestre de 2026 en comparación con el mismo período de 2024, lo que representó la pérdida de 66.262 puestos de trabajo en todo el país. En ese lapso, solo tres provincias lograron incrementar la cantidad…",
+   "seccion": "Economía",
+   "fecha": "2026-10-09T13:00:33.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/economia/2026/10/09/solo-tres-provincias-en-todo-el-pais-lograron-aumentar-el-empleo-industrial-en-los-ultimos-dos-anos/",
+     "fecha": "2026-10-09T13:00:33.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/economia/industria-perdio-66-262-empleos-llegada-milei-provincias-afectadas-202610914562",
+     "fecha": "2026-10-09T17:56:02.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/empleo-industrial--se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-y-solo-3-lograron-aumentar-la-cantidad_a6ac92902587f18d752035eca",
+     "fecha": "2026-10-09T18:55:38.000Z"
+    },
+    {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/09/empleo-industrial-se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-n524677/",
+     "fecha": "2026-10-09T19:59:52.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (numero): el copete dice 6.000 y la fuente no lo dice",
    "maximo": 3
   },
   {
