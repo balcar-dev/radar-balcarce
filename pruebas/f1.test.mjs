@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  instante, enHoraArgentina, sesionesDeLaCarrera, resumirCalendario, resumirResultado, resumirClasificacion, resumirPilotos,
+  instante, enHoraArgentina, sesionesDeLaCarrera, resumirCalendario, resumirResultado, resumirClasificacion, resumirPilotos, resumirSprint, notaDeSprint,
   ventanaDeHorarios, notaDeHorarios, notaDeResultado, notasDeF1, traerF1, nombreDelGranPremio, carreraEnCurso, FIRMA_F1,
 } from '../ingesta/f1.mjs';
 import { tieneCuerpo } from '../web/lib/cuerpo.js';
@@ -281,4 +281,62 @@ test('generar-datos arma las notas de F1 como propias y el workflow guarda f1.js
   assert.match(g, /\.\.\.notasDelDolar\(historiaDolar\), \.\.\.notasDelClima\(historiaClima, libroRedes\), \.\.\.notasF1, \.\.\.notasFutbol, \.\.\.notasDePistas\(leerJson\(NOTAS_DE_PISTAS, null\)\), \.\.\.repasos/);
   const wf = fs.readFileSync(path.join(RAIZ, '.github', 'workflows', 'actualizar.yml'), 'utf8');
   assert.match(wf, /web\/data\/f1\.json/);
+});
+
+// ------------------------------------------------------------ el sprint (9/10/2026)
+
+const SPRINT = () => ({
+  MRData: { RaceTable: { season: '2026', round: '17', Races: [carreraJson({ date: '2026-10-11', time: '12:00:00Z', SprintResults: [
+    fila(1, piloto('russell', 'George', 'Russell', 'RUS'), 'Mercedes', { grid: '1', points: '8', laps: '19', Time: { time: '30:12.345' } }),
+    fila(2, piloto('ver', 'Max', 'Verstappen', 'VER'), 'Red Bull', { grid: '3', points: '7', laps: '19', Time: { time: '+1.200' } }),
+    fila(3, piloto('had', 'Isack', 'Hadjar', 'HAD'), 'Red Bull', { grid: '2', points: '6', laps: '19', Time: { time: '+2.500' } }),
+    fila(4, piloto('lec', 'Charles', 'Leclerc', 'LEC'), 'Ferrari', { points: '5' }),
+    fila(5, piloto('nor', 'Lando', 'Norris', 'NOR'), 'McLaren', { points: '4' }),
+    fila(6, piloto('pia', 'Oscar', 'Piastri', 'PIA'), 'McLaren', { points: '3' }),
+    fila(7, piloto('ham', 'Lewis', 'Hamilton', 'HAM'), 'Ferrari', { points: '2' }),
+    fila(8, piloto('ant', 'Kimi', 'Antonelli', 'ANT'), 'Mercedes', { points: '1' }),
+    fila(9, piloto('gas', 'Pierre', 'Gasly', 'GAS'), 'Alpine F1 Team'),
+    fila(10, COL, 'Alpine F1 Team', { grid: '14', Time: { time: '+30.100' } }),
+  ] }, 17, 'Singapore Grand Prix', 'Singapore')] } },
+});
+
+test('el sprint se guarda con su podio, los puntos y cómo largó cada uno', () => {
+  const s = resumirSprint(SPRINT());
+  assert.equal(s.ronda, 17);
+  assert.equal(s.filas.length, 10);
+  assert.equal(s.filas[0].piloto, 'George Russell');
+  assert.equal(s.filas[0].puntos, 8);
+  assert.equal(s.filas.find((f) => f.colapinto).parrilla, 14);
+  assert.equal(resumirSprint({ MRData: { RaceTable: { Races: [] } } }), null);
+});
+
+test('la nota del sprint cuenta el podio, a Colapinto y lo que sigue, sin inventar', () => {
+  const s = resumirSprint(SPRINT());
+  const n = notaDeSprint(s, { carrera: carrera(17), fecha: '2026-10-10T12:00:00.000Z' });
+  assert.equal(n.id, 'f1sprint2026r17');
+  assert.equal(n.tipoF1, 'sprint');
+  assert.match(n.titulo, /sprint del Gran Premio de Singapur/);
+  assert.match(n.cuerpo, /George Russell \(Mercedes\) ganó el sprint/);
+  assert.match(n.cuerpo, /Franco Colapinto, con Alpine F1 Team, que había largado desde el puesto 14, terminó en el puesto 10/);
+  assert.match(n.cuerpo, /la clasificación de la carrera es el sábado 10 de octubre a las 10:00 y la carrera, el domingo 11 de octubre a las 09:00/);
+  assert.match(n.cuerpo, /la había liderado George Russell/);
+  assert.ok(tieneCuerpo(n));
+  assert.equal(notaDeSprint({ filas: [] }, { fecha: 'x' }), null);
+});
+
+test('el sprint se pide una hora después de que empieza y su nota sale hasta poco después de la carrera', async () => {
+  const pedidos = [];
+  const api = async (u) => {
+    pedidos.push(u);
+    if (/sprint\.json/.test(u)) return respuesta(SPRINT());
+    return apiBuena(u);
+  };
+  const antes = await traerF1({ fetchFn: api, ahora: new Date('2026-10-10T09:30:00Z') });
+  assert.equal(antes.sprint, null, 'a la media hora de empezar todavía no se pide');
+  const despues = await traerF1({ fetchFn: api, ahora: new Date('2026-10-10T10:15:00Z') });
+  assert.equal(despues.sprint.ronda, 17);
+  const { notas } = notasDeF1(despues, { ahora: new Date('2026-10-10T10:30:00Z') });
+  assert.ok(notas.some((x) => x.id === 'f1sprint2026r17'), 'la nota del sprint sale el sábado');
+  assert.ok(notasDeF1(despues, { ahora: new Date('2026-10-11T13:00:00Z') }).notas.some((x) => x.id === 'f1sprint2026r17'), 'y sigue el domingo hasta tres horas después de la largada');
+  assert.ok(!notasDeF1(despues, { ahora: new Date('2026-10-11T16:00:00Z') }).notas.some((x) => x.id === 'f1sprint2026r17'), 'y después desaparece');
 });
