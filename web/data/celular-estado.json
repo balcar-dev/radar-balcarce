@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T16:01:55.606Z",
- "portada": 53,
- "archivo": 866,
- "esperandoCuerpo": 9,
+ "generado": "2026-10-09T16:32:28.478Z",
+ "portada": 44,
+ "archivo": 867,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-09T16:01:55.637Z",
+  "generado": "2026-10-09T16:32:28.522Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,48 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 50,
     "notas": [
      {
-      "id": "10izr2u",
-      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
+      "id": "14mxql1",
+      "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
       "seccion": "Deportes"
      },
      {
       "id": "vwb5m5",
       "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "18jx7kk",
-      "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
-      "seccion": "Agro"
-     },
-     {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce"
-     }
-    ]
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "21:00",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 54,
-    "notas": [
-     {
-      "id": "13xrjvk",
-      "titulo": "Francisco Cerúndolo avanza a la tercera ronda en Shanghái",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "15x6yh5",
-      "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
-      "seccion": "Automovilismo"
      },
      {
       "id": "1y9462t",
@@ -178,6 +147,37 @@
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro"
+     }
+    ]
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "21:00",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 52,
+    "notas": [
+     {
+      "id": "2qmh95",
+      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "10izr2u",
+      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1j94k5u",
+      "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -208,21 +208,21 @@
      "marcada": false
     },
     {
-     "id": "jul3dj",
-     "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-     "seccion": "Balcarce",
+     "id": "2qmh95",
+     "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "1j94k5u",
+     "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
+     "seccion": "Fútbol",
      "marcada": false
     },
     {
      "id": "1y9462t",
      "titulo": "El municipio saluda a los técnicos de laboratorio en su jornada",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "2qmh95",
-     "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-     "seccion": "Deportes",
      "marcada": false
     }
    ],

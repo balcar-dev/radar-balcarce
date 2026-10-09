@@ -1,58 +1,7 @@
 {
- "generado": "2026-10-09T16:01:55.606Z",
+ "generado": "2026-10-09T16:32:28.478Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "jul3en",
-   "titulo": "Al final,Virginia Aparicio expondrá en el Concejo Deliberante.",
-   "copete": "La investigadora del INTA y el CONICET, Dra. Virginia aparicio, brindará una charla abierta el jueves 15 de octubre, a las 18 hs, en la sala de sesiones del Concejo Deliberante. La actividad fue impulsada por el concejal Gabriel Petruccelli, luego de que el cuerpo no aprobara…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T15:49:06.000Z",
-   "fuentes": [
-    {
-     "medio": "News Balcarce (FM 91.7)",
-     "enlace": "https://newsbalcarce.com.ar/?p=30991",
-     "fecha": "2026-10-09T15:49:06.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "vmuzu3",
-   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
-   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
-   "seccion": "Policiales",
-   "fecha": "2026-10-09T14:18:32.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
-     "fecha": "2026-10-09T14:18:32.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "7w5vsc",
-   "titulo": "La Liga Balcarceña de Fútbol volvió a postergar la primera fecha por las lluvias",
-   "copete": "El mal estado de las canchas, que todavía presentan una importante acumulación de agua, obligó a suspender nuevamente el inicio de la competencia. La jornada será reprogramada durante la próxima semana.",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-09T13:12:01.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-liga-balcarcena-de-futbol-volvio-a-postergar-la-primera-fecha-por-las-lluvias",
-     "fecha": "2026-10-09T13:12:01.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
   {
    "id": "11lqk0q",
    "titulo": "La despedida de Messi: La productora a cargo señaló a River por las fallas",
@@ -63,7 +12,7 @@
     {
      "medio": "El Gráfico",
      "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
-     "fecha": "2026-10-08T19:00:00.000Z"
+     "fecha": "2026-10-09T07:30:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -81,9 +30,19 @@
      "fecha": "2026-10-08T22:43:42.000Z"
     },
     {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/deportes/2026/10/09/los-inconvenientes-en-la-despedida-de-lionel-messi-tensaron-aun-mas-la-relacion-entre-river-y-la-afa/",
+     "fecha": "2026-10-09T12:20:55.000Z"
+    },
+    {
      "medio": "La Página Millonaria",
      "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
-     "fecha": "2026-10-09T00:53:00.000Z"
+     "fecha": "2026-10-09T13:13:54.000Z"
+    },
+    {
+     "medio": "La Capital (Rosario)",
+     "enlace": "https://www.lacapital.com.ar/ovacion/polemica-la-productora-la-afa-y-river-las-fallas-la-despedida-lionel-messi-n10285799.html",
+     "fecha": "2026-10-09T15:18:00.000Z"
     }
    ],
    "intentos": 1,
@@ -101,6 +60,11 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
      "fecha": "2026-10-09T11:23:10.000Z"
+    },
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/restablecieron-el-servicio-telefonico.html",
+     "fecha": "2026-10-09T12:45:00.000Z"
     }
    ],
    "intentos": 3,
@@ -140,11 +104,6 @@
      "fecha": "2026-10-09T15:31:22.000Z"
     },
     {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/primiciasya/martin-fierro-radio-2026-luis-ventura-anuncio-las-nominaciones-y-confirmo-los-detalles-la-gala-n1604828",
-     "fecha": "2026-10-09T12:25:00.000Z"
-    },
-    {
      "medio": "C5N",
      "enlace": "https://www.c5n.com/ratingcero/martin-fierro-radio-2026-se-conocio-la-lista-completa-nominados-n251189",
      "fecha": "2026-10-09T15:15:00.000Z"
@@ -163,11 +122,48 @@
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/espectaculos/jonatan-viale--baby-etchecopar-y-nelson-castro--nominados-en-los-martin-fierro-de-radio-2026_a6ac8ee018e24c1a50accee35",
      "fecha": "2026-10-09T13:47:00.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/primiciasya/martin-fierro-radio-2026-luis-ventura-anuncio-las-nominaciones-y-confirmo-los-detalles-la-gala-n1604828",
+     "fecha": "2026-10-09T12:25:00.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "cuerpo: 5 problemas (fecha, numero, promesa): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 84 palabras",
+   "maximo": 5
+  },
+  {
+   "id": "1ntwg3r",
+   "titulo": "Bullrich se reunió con Milei: “Hablamos de todo lo que vengo planteando”",
+   "copete": "Buenos Aires, 9 octubre (NA) -- La senadora y jefa de bloque de La Libertad Avanza, Patricia Bullrich, se reunió este viernes con el presidente Javier Milei, luego de sus desmarques sobre el rumbo económico del Gobierno. \"Conversación profunda con el Presidente @JMilei. Hablamos…",
+   "seccion": "Política",
+   "fecha": "2026-10-09T16:14:16.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/bullrich-se-reunio-con-milei---hablamos-de-todo-lo-que-vengo-planteando-_a6ac911fc587f18d752ff9d12",
+     "fecha": "2026-10-09T16:14:16.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/tras-la-tension-por-los-desmarques-javier-milei-se-reunio-con-patricia-bullrich-en-la-quinta-de-nid09102026/",
+     "fecha": "2026-10-09T16:22:25.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/09/milei-y-bullrich-se-reunieron-durante-mas-de-dos-horas-en-medio-de-la-tension-fue-una-conversacion-con-total-honestidad/",
+     "fecha": "2026-10-09T16:24:30.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/09/milei-y-bullrich-se-reunieron-durante-mas-de-dos-horas-en-medio-de-la-tension-fue-una-conversacion-con-total-honestidad/",
+     "fecha": "2026-10-09T16:24:30.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
-   "maximo": 5
+   "motivo": "cuerpo: 2 problemas (nombre, promesa): el cuerpo nombra a \"camara\" y la fuente no; sin esas oraciones quedan 110 palabras",
+   "maximo": 3
   },
   {
    "id": "s67kgm",
@@ -182,47 +178,13 @@
      "fecha": "2026-10-09T13:17:13.000Z"
     },
     {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/deportes/cuatro-gimnastas-de-up-clasificaron-a-la-final-regional-del-centro-tras-destacarse-en-aguas-verdes",
-     "fecha": "2026-10-09T13:20:37.000Z"
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/cuatro-gimnastas-de-up-clasificaron-la.html",
+     "fecha": "2026-10-09T14:22:54.624Z"
     }
    ],
    "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el copete dice 4 y la fuente no lo dice",
-   "maximo": 3
-  },
-  {
-   "id": "15l69b7",
-   "titulo": "Agustín Molpeceres será reconocido en la Cámara de Diputados provincial",
-   "copete": "La Cámara de Diputados de la Provincia de Buenos Aires otorgará un reconocimiento oficial al balcarceño Agustín Molpeceres, por su destacada trayectoria en el deporte adaptado y el alto rendimiento paralímpico. LOS FUNDAMENTOS La distinción,",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-08T12:52:32.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-provincial-626",
-     "fecha": "2026-10-08T12:52:32.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "1cnk2r1",
-   "titulo": "Despues de 20 años, un total de 76 familias de Balcarce recibirán sus escrituras",
-   "copete": "",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T14:31:49.247Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45045-despues-de-20-anos-un-total-de-76-familias-de-balcarce-recibiran-sus-escrituras/",
-     "fecha": null
-    }
-   ],
-   "intentos": 3,
-   "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
    "maximo": 3
   }
  ]
