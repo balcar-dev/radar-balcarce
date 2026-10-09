@@ -81,3 +81,10 @@ jobs:
           PROYECTO: ${{ vars.CLOUDFLARE_PROJECT || 'radar-balcarce' }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # Después de subir, se le avisa a Bing (IndexNow, sin cuenta ni clave secreta) qué notas nuevas hay (redes/indexnow.mjs). Es un aviso:
+      # si falla, el despliegue sigue verde.
+      - name: Avisar a Bing de las notas nuevas
+        if: github.event_name == 'workflow_run' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: node redes/indexnow.mjs
