@@ -686,6 +686,176 @@
     "saved": 0,
     "total_interactions": 0
    }
+  },
+  {
+   "clave": "facebook/reel/1502546251635813",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "noticia1",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T13:05:02.165Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/4515878285292602",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "noticia1",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T13:05:39.123Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122102548629495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "16ml7pn",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T13:34:29.368Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "post_media_view": 0,
+    "post_total_media_view_unique": 0,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18104470028129529",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "16ml7pn",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T13:45:34.761Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "reach": 49,
+    "views": 66,
+    "likes": 2,
+    "comments": 0,
+    "shares": 1,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122102717391495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1l5htn5",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T17:03:20.427Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "post_media_view": 1,
+    "post_total_media_view_unique": 1,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/17927261349185916",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1l5htn5",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T17:03:32.644Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "reach": 3,
+    "views": 9,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "instagram/reel/18105082484251235",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "noticia2",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T18:06:57.606Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "reach": 1,
+    "views": 5,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/2549822372147043",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "noticia2",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T18:08:38.068Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/981794428301237",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "noticia2",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T18:09:07.207Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/2519183188491076",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "utiles",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T20:04:04.135Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122102886069495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1xritdf",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T21:03:27.339Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "post_media_view": 2,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18114149813103005",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1xritdf",
+   "dia": "2026-10-03",
+   "cuando": "2026-10-03T21:33:43.838Z",
+   "medida": "2026-10-09T03:30:18.748Z",
+   "metricas": {
+    "reach": 0,
+    "views": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
   }
  ]
 }
