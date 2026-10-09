@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T13:43:11.030Z",
- "portada": 48,
- "archivo": 854,
+ "generado": "2026-10-09T14:03:07.848Z",
+ "portada": 51,
+ "archivo": 857,
  "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-09T13:43:11.075Z",
+  "generado": "2026-10-09T14:03:07.881Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-09T10:04:28.344Z"
    },
    {
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
      {
       "id": "13xrjvk",
@@ -134,19 +134,19 @@
       "seccion": "Deportes"
      },
      {
+      "id": "601x8n",
+      "titulo": "La Fiesta Nacional del Postre evalúa su paso para noviembre",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "18jx7kk",
+      "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
+      "seccion": "Agro"
+     },
+     {
       "id": "jul3dj",
       "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
-     },
-     {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
-      "seccion": "Agro"
      }
     ]
    },
@@ -157,22 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
+     },
+     {
+      "id": "5crmtt",
+      "titulo": "Franco Colapinto arranca undécimo en el sprint de Singapur",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "6vefne",
       "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
       "seccion": "Balcarce"
      },
      {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1bb4gv8",
-      "titulo": "Atletas locales suman cinco triunfos en Mar del Plata",
-      "seccion": "Deportes"
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      }
     ]
    }
@@ -183,24 +188,29 @@
      "id": "1v0pyz6",
      "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
      "cuando": "2026-10-09T12:08:37.621Z"
+    },
+    {
+     "id": "xlon5q",
+     "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
+     "cuando": "2026-10-09T13:45:20.333Z"
     }
    ],
    "cola": [
+    {
+     "id": "18jx7kk",
+     "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
+     "seccion": "Agro",
+     "marcada": false
+    },
     {
      "id": "jul3dj",
      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
      "seccion": "Balcarce",
      "marcada": false
-    },
-    {
-     "id": "xlon5q",
-     "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
-     "seccion": "Agro",
-     "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-09T13:38:37.621Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-09T15:15:20.333Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

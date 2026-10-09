@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T13:43:11.030Z",
+ "generado": "2026-10-09T14:03:07.848Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,11 +13,6 @@
      "medio": "Municipalidad de Balcarce",
      "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
      "fecha": "2026-10-09T11:23:10.000Z"
-    },
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/indican-que-el-conmutador-del-hospital-ya-se-encuentra-operativo",
-     "fecha": "2026-10-09T12:52:17.000Z"
     }
    ],
    "intentos": 3,
@@ -37,7 +32,7 @@
      "fecha": "2026-10-09T13:12:01.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "sin material",
    "maximo": 3
   },
@@ -101,7 +96,7 @@
      "fecha": "2026-10-09T13:20:37.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el copete dice 4 y la fuente no lo dice",
    "maximo": 3
   },
@@ -135,7 +130,7 @@
      "fecha": null
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
    "maximo": 3
   },
@@ -157,8 +152,8 @@
      "fecha": "2026-10-09T11:52:42.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"com\" y la fuente no",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"plata\" y la fuente no",
    "maximo": 3
   }
  ]
