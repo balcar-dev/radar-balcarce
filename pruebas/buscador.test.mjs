@@ -11,7 +11,7 @@ const leer = (...r) => fs.readFileSync(path.join(RAIZ, ...r), 'utf8').replace(/\
 
 test('el armado del sitio arma el índice de búsqueda, y si falla el sitio sale igual', () => {
   const p = JSON.parse(leer('web', 'package.json'));
-  assert.match(p.scripts.build, /next build && npm run indexar$/);
+  assert.match(p.scripts.build, /next build && npm run indexar( && npm run contar)?$/);
   assert.equal(p.scripts.indexar, 'node scripts/indexar.mjs');
   assert.ok(p.devDependencies.pagefind, 'Pagefind es una dependencia de desarrollo de la web');
   const s = leer('web', 'scripts', 'indexar.mjs');
