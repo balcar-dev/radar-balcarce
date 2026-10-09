@@ -68,6 +68,7 @@ import {
   medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos,
 } from './estadisticas.mjs';
 import { mezclarDias } from './estadisticas-detalle.mjs';
+import { medirPiezas } from './estadisticas-piezas.mjs';
 
 /**
  * ¿Están prendidas las redes? Es la variable REDES_ACTIVAS de GitHub, que la
@@ -721,6 +722,7 @@ async function main() {
   const RAIZ = path.join(import.meta.dirname, '..');
   const ESTADO = path.join(RAIZ, 'web', 'data', 'vigilancia.json');
   const ESTADISTICAS = path.join(RAIZ, 'web', 'data', 'estadisticas.json');
+  const ESTADISTICAS_DE_PIEZAS = path.join(RAIZ, 'web', 'data', 'estadisticas-piezas.json');
   const sinAvisar = process.argv.includes('--sin-avisar');
   // Manda UN WhatsApp con el resumen del día tal como saldría a las 21 (con
   // las estadísticas medidas en el momento), para ver cómo llega. No guarda
@@ -794,6 +796,20 @@ ${c.texto}`);
       estado.ultimaMedicion = turno;
       cambio = true;
     }
+  }
+
+  // --- los números de cada pieza (8/10): cada publicación se mide una vez, cuando ya tiene números casi finales (redes/estadisticas-piezas.mjs).
+  // Nunca frena nada: si Meta no da una métrica, se anota y se sigue.
+  if (redesActivas && process.env.META_TOKEN && !probarResumen && !sinAvisar) {
+    try {
+      const r = await medirPiezas({ token: process.env.META_TOKEN, libro, previo: leer(ESTADISTICAS_DE_PIEZAS, {}), ahora });
+      if (r.cambio) {
+        fs.writeFileSync(ESTADISTICAS_DE_PIEZAS, `${JSON.stringify(r.archivo, null, 1)}\n`);
+        cambio = true;
+        console.log(`  Se midieron ${r.midieron} publicaciones (estadísticas por pieza).`);
+      }
+      for (const f of r.faltan.slice(0, 6)) console.log(`  (estadísticas por pieza) ${f}`);
+    } catch (e) { console.log(`  (estadísticas por pieza) no se pudo medir: ${e.message}`); }
   }
 
   // --- el cierre del día (23:30): contra lo que Meta tiene de verdad
