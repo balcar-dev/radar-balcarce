@@ -10,7 +10,7 @@ marcado ✔ cuando está hecho). Todo lo de este documento ya está subido a `ma
 
 1. `git pull` en la carpeta del proyecto (para traer todo y lo que haya guardado el robot).
 2. Correr `npm test`: tienen que pasar todas (hoy son 1.916; en Node 22 hay 6 "canceladas" por tiempo, en GitHub con Node 24 no pasa).
-3. Abrir `CLAUDE.md` (las reglas que no se negocian) y este documento. La próxima regla a numerar es la **153**
+3. Abrir `CLAUDE.md` (las reglas que no se negocian) y este documento. La próxima regla a numerar es la **154**
    (las reglas 108 a 141 se escribieron en esta tanda, en `docs/10-REGLAS-Y-PRUEBAS.md`).
 4. Para subir algo: `git pull --rebase`, `npm test`, commit y push. El robot de GitHub guarda `web/data/` cada media hora: si choca,
    `git checkout --theirs` sobre esos archivos y seguir. Borrar `web/out` y `web/.next` después de compilar en la PC (si no, fallan unas pruebas).
@@ -69,7 +69,7 @@ variables y el token), Bing / IndexNow, aprobar que corran los pull requests de 
 | 19/10 | Ubuntu 26 (los robots están fijos en Ubuntu 24.04; probar uno a propósito antes de pasar) |
 | 19 al 23/10 | Juegos Bonaerenses (lista de finalistas de Balcarce: la carga una persona) |
 | 20/10 | Armar las efemérides de noviembre (el mes armado se aprueba en la pestaña Fechas) |
-| 21/10 | Fin de parches de Next 15: **ya se pasó a Next 16 el 8/10** (regla 148) |
+| 21/10 | Fin de parches de Next 15. **No se pasó a Next 16**: exporta 2,4 veces más archivos y el límite de Cloudflare Pages es 20.000 por despliegue (regla 148). Las páginas ya están listas; se pasa cuando haya menos archivos por página |
 | 25/10 | Decidir las piezas fijas de Participá (vencen el 31/10) |
 | 15/12 | Recordatorio de revisión general |
 

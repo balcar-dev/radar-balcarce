@@ -93,12 +93,14 @@ export default async function PaginaNota({ params }) {
         { nombre: s.nombre, camino: `/seccion/${s.ranura}` },
         { nombre: n.titulo, camino: n.ruta },
       ]} />
-      <article className="cuerpo-nota">
-        <div className="chapa-nota">
+      {/* Pagefind (el buscador, web/scripts/indexar.mjs) indexa sólo las notas que Google también puede ver: las que llevan noindex se ignoran. */}
+      <article className="cuerpo-nota" {...(noSeOfreceAGoogle(n) ? { 'data-pagefind-ignore': 'all' } : { 'data-pagefind-body': '' })}>
+        <span hidden data-pagefind-meta={`seccion:${n.seccion}`} />
+        <div className="chapa-nota" data-pagefind-ignore="">
           <Etiqueta seccion={n.seccion} />
           <Hace nota={n} />
         </div>
-        <p className="fecha-de-la-nota"><FechaExacta nota={n} /></p>
+        <p className="fecha-de-la-nota" data-pagefind-ignore=""><FechaExacta nota={n} /></p>
 
         <h1>{n.titulo}</h1>
         {n.copete && <p className="copete">{n.copete}</p>}

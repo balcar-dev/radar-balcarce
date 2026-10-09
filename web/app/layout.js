@@ -137,11 +137,9 @@ export default function RaizLayout({ children }) {
                 en el pie y en la tarjeta del buzón. */}
             <a href="/" className="logo fraunces">Radar <span>Balcarce</span></a>
             <span style={{ flexGrow: 1 }} />
-            {/* El buscador busca sobre las notas que ya están en la página:
-                sin servidor y sin una sola consulta de red. */}
-            <Buscador notas={(d.notas ?? []).map((n) => ({
-              id: n.id, ruta: n.ruta, titulo: n.titulo, copete: n.copete, seccion: n.seccion, medios: n.medios,
-            }))} />
+            {/* El buscador busca en todo el archivo con un índice que se arma al compilar (Pagefind, web/scripts/indexar.mjs) y que se baja
+                sólo cuando alguien abre el buscador: las páginas ya no llevan adentro la lista de notas. */}
+            <Buscador />
           </div>
         </header>
 

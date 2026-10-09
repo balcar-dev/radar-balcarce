@@ -209,6 +209,8 @@ header.principal .envoltura {
 @media (min-width: 720px) { .logo { font-size: 42px; } }
 
 /* -------------------------------------------------------------- buscador */
+.resultado .extracto { display: block; font-size: 13.5px; line-height: 1.4; color: var(--suave); margin-top: 3px; }
+.resultado .extracto mark { background: transparent; color: var(--tinta); font-weight: 700; }
 
 .abrir-buscador {
   display: inline-flex; align-items: center; gap: 8px;

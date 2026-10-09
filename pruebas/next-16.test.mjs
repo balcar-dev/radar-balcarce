@@ -1,5 +1,10 @@
-// El sitio corre en Next 16 con React 19 (8/10/2026; la línea 15 deja de recibir parches el 21/10). En Next 16 `params` es siempre una promesa:
-// leerlo directo (params.id) dejaba las páginas vacías sin avisar. Esta prueba lo cuida.
+// Next 16 y `params` (8/10/2026). En Next 16 `params` es siempre una promesa: leerlo directo (params.id) dejaba las páginas vacías sin avisar. El código
+// ya lo espera (sirve igual en Next 15), así que el día que se pase a Next 16 no hay que tocar las páginas. Esta prueba lo cuida.
+//
+// OJO: el sitio SIGUE en Next 15 a propósito. Next 16 exporta, por cada página, cuatro archivos de más para la navegación (`__next._full.txt`,
+// `_index`, `_tree` y uno por tramo): el despliegue pasó de 3.500 a 8.400 archivos con 1.100 notas. Cloudflare Pages acepta 20.000 por
+// despliegue, y con 3.000 notas (pasaría a fin de noviembre) no entraría. Para el sitio exportado, Next 15 sin parches de servidor no
+// corre ningún riesgo (no hay servidor); se pasa a 16 cuando haya menos archivos por página (fotos y archivo viejo en R2, etapa 2 de datos).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -13,11 +18,9 @@ function archivos(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((d) => (d.isDirectory() ? archivos(path.join(dir, d.name)) : [path.join(dir, d.name)]));
 }
 
-test('el sitio usa Next 16 y React 19', () => {
+test('el sitio sigue en Next 15 hasta que haya menos archivos por página (Cloudflare Pages acepta 20.000 por despliegue)', () => {
   const p = JSON.parse(fs.readFileSync(web('package.json'), 'utf8')).dependencies;
-  assert.match(p.next, /^\^?16/);
-  assert.match(p.react, /^\^?19/);
-  assert.match(p['react-dom'], /^\^?19/);
+  assert.match(p.next, /^\^?15\./);
 });
 
 test('ninguna página ni imagen lee `params` sin esperarlo (params.algo)', () => {
