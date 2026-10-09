@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-08T23:32:45.081Z",
+ "generado": "2026-10-09T00:02:30.435Z",
  "portada": 62,
- "archivo": 1116,
+ "archivo": 1120,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-08T23:32:45.132Z",
+  "generado": "2026-10-09T00:02:30.491Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -155,29 +155,29 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 53,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "zzuoo4",
+      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
+      "seccion": "Balcarce"
+     },
      {
       "id": "mr88ek",
       "titulo": "La primera Expo Salud, deporte y tecnología llega el 24 de octubre",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
+      "id": "1w1okdp",
+      "titulo": "Talleres y Atlético Tucumán protagonizan pelea en Reserva",
+      "seccion": "Fútbol"
      },
      {
-      "id": "mtojvh",
-      "titulo": "Franco Colapinto bromea con un fanático en Singapur y se emociona por Messi",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "zzuoo4",
-      "titulo": "El intendente recibe a las jugadoras de hockey de Campo de Pato",
-      "seccion": "Balcarce"
+      "id": "5ffwsk",
+      "titulo": "AACYC Balcarce gana cinco pruebas en Mar del Plata",
+      "seccion": "Deportes"
      }
     ]
    }
