@@ -340,6 +340,186 @@
    "metricas": {
     "total_video_views": 0
    }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122101285437495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1bheb6v",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T12:04:52.139Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "post_media_view": 1,
+    "post_total_media_view_unique": 1,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18070721381584637",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1bheb6v",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T12:33:23.526Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "reach": 3,
+    "views": 7,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "instagram/reel/18115997074795860",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "noticia1",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T13:06:22.640Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "reach": 8,
+    "views": 8,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 1
+   }
+  },
+  {
+   "clave": "facebook/reel/1558129009694865",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "noticia1",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T13:07:31.131Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/28805829519070912",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "noticia1",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T13:08:06.111Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122101347051495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1knptpr",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T13:35:24.696Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "post_media_view": 0,
+    "post_total_media_view_unique": 0,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18011649515974700",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1knptpr",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T13:45:28.750Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "reach": 2,
+    "views": 4,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/historia/2321933635234687",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "participa-nota",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T15:06:15.737Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122101403331495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "164o14u",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T15:06:32.699Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "post_media_view": 0,
+    "post_total_media_view_unique": 0,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18458773096186773",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "164o14u",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T15:06:42.689Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "reach": 3,
+    "views": 7,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122101637277495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "xvt4t1",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T16:45:22.855Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "post_media_view": 1,
+    "post_total_media_view_unique": 1,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18052319702589664",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "xvt4t1",
+   "dia": "2026-10-02",
+   "cuando": "2026-10-02T16:45:34.067Z",
+   "medida": "2026-10-09T02:30:17.823Z",
+   "metricas": {
+    "reach": 3,
+    "views": 5,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
   }
  ]
 }
