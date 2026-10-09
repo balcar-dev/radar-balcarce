@@ -57,6 +57,24 @@ export function motivoDeFalla(err, timeout = 15000) {
   return codigo ? `${msg} (${codigo})` : msg;
 }
 
+/**
+ * ¿Vale la pena probar de nuevo una fuente que falló? (B2, 8/10/2026) Sí si fue algo del momento: una conexión que se cortó, un sitio que
+ * rechazó la conexión o contestó con un error de servidor (5xx) o "demasiados pedidos" (429). No si el sitio no existe, el certificado está
+ * vencido, la dirección ya no existe (404), nos bloquean (403) o se acabó el tiempo (un reintento más sumaría otros 15 segundos).
+ */
+export const esReintentable = (mensaje = '') => /la conexión se cortó|rechazó la conexión|^HTTP 5\d\d|^HTTP 429/.test(String(mensaje));
+
+/** Trae una fuente y, si falló por algo del momento, lo vuelve a intentar UNA vez a los dos segundos. */
+export async function traerConReintento(url, opciones, { esperar = (ms) => new Promise((r) => { setTimeout(r, ms); }), traerFn = traer } = {}) {
+  try {
+    return await traerFn(url, opciones);
+  } catch (e) {
+    if (!esReintentable(e.message)) throw e;
+    await esperar(2000);
+    return traerFn(url, opciones);
+  }
+}
+
 export async function traer(url, { timeout = 15000, agente, sinCompresion = false } = {}) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), timeout);
@@ -1376,7 +1394,7 @@ export async function ingestar({
   // 1. Fuentes de noticias
   log('\x1b[1mFUENTES\x1b[0m');
   const resultados = await Promise.allSettled(lista.map(async (f) => {
-    const cuerpo = await traer(f.url, { agente: f.agente, sinCompresion: f.sinCompresion });
+    const cuerpo = await traerConReintento(f.url, { agente: f.agente, sinCompresion: f.sinCompresion });
     let notas = f.tipo === 'scrape' ? parsearScrape(cuerpo, f) : parsearFeed(cuerpo, f);
     // Los feeds enormes (OpenAI trae más de mil notas) se cortan en las primeras, que son las nuevas.
     if (f.maxNotas) notas = notas.slice(0, f.maxNotas);

@@ -608,3 +608,19 @@ test('cuando una fuente no contesta se guarda el motivo real y no sólo "fetch f
   assert.match(motivoDeFalla(Object.assign(new Error('fetch failed'), { cause: { code: 'ECONNRESET' } })), /se cortó/);
   assert.match(motivoDeFalla(new Error('fetch failed')), /fetch failed/);
 });
+
+test('una fuente que falló por algo del momento se prueba una vez más; lo que no tiene arreglo, no (B2, 8/10)', async () => {
+  const { esReintentable, traerConReintento } = await import('../ingesta/ingesta.mjs');
+  for (const si of ['la conexión se cortó', 'el sitio rechazó la conexión', 'HTTP 503', 'HTTP 500', 'HTTP 429 (bloqueo o límite: probar otro User-Agent)']) assert.ok(esReintentable(si), si);
+  for (const no of ['tiempo agotado (15 s)', 'HTTP 404 (la dirección ya no existe)', 'HTTP 403 (bloqueo o límite: probar otro User-Agent)', 'el nombre del sitio no se encuentra (DNS)', 'problema de certificado (CERT_HAS_EXPIRED)']) assert.ok(!esReintentable(no), no);
+  let llamadas = 0;
+  const unaVez = async () => { llamadas += 1; if (llamadas === 1) throw new Error('la conexión se cortó'); return 'ok'; };
+  assert.equal(await traerConReintento('x', {}, { traerFn: unaVez, esperar: async () => {} }), 'ok');
+  assert.equal(llamadas, 2);
+  let n = 0;
+  await assert.rejects(traerConReintento('x', {}, { traerFn: async () => { n += 1; throw new Error('HTTP 404'); }, esperar: async () => {} }), /404/);
+  assert.equal(n, 1, 'un 404 no se reintenta');
+  let m = 0;
+  await assert.rejects(traerConReintento('x', {}, { traerFn: async () => { m += 1; throw new Error('HTTP 500'); }, esperar: async () => {} }), /500/);
+  assert.equal(m, 2, 'sólo un reintento, nunca más');
+});
