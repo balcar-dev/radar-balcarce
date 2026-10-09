@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T23:28:24.999Z",
+ "generado": "2026-10-09T23:32:26.062Z",
  "portada": 62,
- "archivo": 883,
+ "archivo": 885,
  "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-09T23:28:25.054Z",
+  "generado": "2026-10-09T23:32:26.092Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -145,8 +145,8 @@
      },
      {
       "id": "18jx7kk",
-      "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
-      "seccion": "Agro"
+      "titulo": null,
+      "seccion": null
      }
     ]
    },
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 51,
     "notas": [
      {
       "id": "17di2tc",
@@ -170,14 +170,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "seccion": "Cultura y agenda"
+      "id": "1aizybd",
+      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "seccion": "Balcarce"
      },
      {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce"
+      "id": "175ztwv",
+      "titulo": "UATRE Balcarce saluda al personal rural en su día",
+      "seccion": "Agro"
      }
     ]
    }
@@ -212,27 +212,9 @@
    ],
    "cola": [
     {
-     "id": "1trv7re",
-     "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "88fvqd",
-     "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
+     "id": "1aizybd",
+     "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1360zul",
-     "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "146dyw0",
-     "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-     "seccion": "Deportes",
      "marcada": false
     }
    ],
