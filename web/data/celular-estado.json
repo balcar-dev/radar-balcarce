@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T00:16:33.891Z",
- "portada": 60,
+ "generado": "2026-10-09T00:32:07.960Z",
+ "portada": 56,
  "archivo": 1121,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-09T00:16:33.939Z",
+  "generado": "2026-10-09T00:32:08.010Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -210,26 +210,7 @@
      "cuando": "2026-10-08T19:40:07.630Z"
     }
    ],
-   "cola": [
-    {
-     "id": "1om2oqi",
-     "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "5ffwsk",
-     "titulo": "AACYC Balcarce gana cinco pruebas en Mar del Plata",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "175ztwv",
-     "titulo": "UATRE Balcarce saluda al personal rural en su día",
-     "seccion": "Agro",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 0,
    "proximoDesde": "2026-10-08T21:10:07.630Z",
    "porDia": 5,
