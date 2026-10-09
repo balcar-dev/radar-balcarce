@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T22:33:34.280Z",
+  "generado": "2026-10-09T23:02:42.712Z",
   "notas": [
     {
       "id": "17di2tc",
@@ -9,6 +9,7 @@
       "guion": "Cristiano Ronaldo marca en la goleada de Al Nassr y escala hacia los mil tantos",
       "seccion": "Deportes",
       "medios": [
+        "Ámbito",
         "Infobae",
         "Perfil",
         "Olé",
@@ -19,7 +20,7 @@
       "fecha": "2026-10-09T20:53:24.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T22:31:52.756Z",
-      "relevancia": 89,
+      "relevancia": 99,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -221,9 +222,41 @@
                 "tipo": "gol"
               }
             ]
+          },
+          {
+            "dia": "Viernes 9 de octubre",
+            "hora": "18:00",
+            "estado": "final",
+            "estadio": "Juan Carmelo Zerillo (El Bosque)",
+            "fase": null,
+            "local": {
+              "id": "9",
+              "nombre": "Gimnasia La Plata",
+              "goles": 1
+            },
+            "visitante": {
+              "id": "9785",
+              "nombre": "Atlético Tucumán",
+              "goles": 1
+            },
+            "penales": null,
+            "goles": [
+              {
+                "equipo": "visitante",
+                "jugador": "Lautaro Godoy",
+                "minuto": "83'",
+                "tipo": "gol"
+              },
+              {
+                "equipo": "local",
+                "jugador": "Marcelo Torres",
+                "minuto": "90'+5'",
+                "tipo": "de penal"
+              }
+            ]
           }
         ],
-        "faltan": 14,
+        "faltan": 13,
         "aparte": 0
       },
       "destacados": [
@@ -234,8 +267,8 @@
       ],
       "lugarFoto": "José María Minella",
       "titulo": "Liga Profesional: así va la fecha del 9 al 12 de octubre, con los resultados",
-      "copete": "1 partido terminado de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
-      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 12 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nTodavía faltan jugarse: Gimnasia La Plata y Atlético Tucumán (Viernes 9 de octubre, 18:00), Instituto (Córdoba) y Boca Juniors (Viernes 9 de octubre, 19:30), Unión (Santa Fe) y Defensa y Justicia (Viernes 9 de octubre, 21:45), Barracas Central y Huracán (Sábado 10 de octubre, 15:45), Central Córdoba (Santiago del Estero) y Estudiantes de La Plata (Sábado 10 de octubre, 17:00), Tigre y Banfield (Sábado 10 de octubre, 19:15), River Plate y Estudiantes de Río Cuarto (Sábado 10 de octubre, 21:30), San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00) y Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
+      "copete": "2 partidos terminados de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
+      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 12 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nViernes 9 de octubre, 18:00: Gimnasia La Plata 1, Atlético Tucumán 1. Goles: Gimnasia La Plata: Marcelo Torres (90'+5', de penal). Atlético Tucumán: Lautaro Godoy (83').\n\nTodavía faltan jugarse: Instituto (Córdoba) y Boca Juniors (Viernes 9 de octubre, 19:30), Unión (Santa Fe) y Defensa y Justicia (Viernes 9 de octubre, 21:45), Barracas Central y Huracán (Sábado 10 de octubre, 15:45), Central Córdoba (Santiago del Estero) y Estudiantes de La Plata (Sábado 10 de octubre, 17:00), Tigre y Banfield (Sábado 10 de octubre, 19:15), River Plate y Estudiantes de Río Cuarto (Sábado 10 de octubre, 21:30), San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00) y Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
       "guion": null,
       "seccion": "Fútbol",
       "local": false,
@@ -262,7 +295,9 @@
         "Liga Profesional",
         "resultados",
         "Aldosivi",
-        "Sarmiento (Junín)"
+        "Sarmiento (Junín)",
+        "Gimnasia La Plata",
+        "Atlético Tucumán"
       ],
       "como": "automatica",
       "firma": "Nota de Radar Balcarce armada con los datos de ESPN.",
@@ -901,6 +936,142 @@
       }
     },
     {
+      "id": "1tcczj3",
+      "titulo": "Mar del Plata registra un cincuenta por ciento de reservas",
+      "copete": "La ciudad balnearia alcanza la mitad de su capacidad reservada para el fin de semana largo. El sector turístico espera mejoras climáticas para sumar visitantes.",
+      "cuerpo": "El distrito de General Pueyrredon alcanza un nivel de reservas de entre el 45% y el 50% para el fin de semana largo por el feriado del lunes 12 de octubre, según informó el sector turístico. Hernán Szkrohal explicó que aguardan las condiciones meteorológicas de los próximos días para concretar más contrataciones a último momento.\n\nEn paralelo, la Municipalidad dispuso un esquema de guardias en los servicios públicos de Mar del Plata y Batán durante el fin de semana. La recolección de residuos funciona con normalidad, mientras que los centros de salud como el Ameghino y el de Batán, además de las áreas de Seguridad, Desarrollo Social y los cementerios, operan con esquemas especiales de atención.",
+      "guion": "Mar del Plata registra un cincuenta por ciento de reservas",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "0223 (Mar del Plata)",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
+        "Radio 10 Mar del Plata (FM 105.5)"
+      ],
+      "enlace": "https://www.elmarplatense.com/mar-del-plata-registra-entre-un-45-y-un-50-de-reservas-para-el-fin-de-semana-largo",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T16:00:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:01:49.633Z",
+      "relevancia": 76,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "rutas"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El sector turístico alcanza hasta el 50% de reservas.",
+        "El lunes 12 de octubre se conmemora el feriado nacional.",
+        "La Municipalidad organiza guardias en servicios públicos."
+      ],
+      "seSabe": [
+        "El nivel de reservas turísticas se ubica entre el 45% y el 50%, según el sector.",
+        "La Municipalidad de General Pueyrredon mantiene guardias en servicios esenciales.",
+        "La recolección de residuos funciona de manera habitual."
+      ],
+      "noConfirmado": [
+        "No se especificó la cantidad total de plazas hoteleras disponibles en el distrito."
+      ],
+      "etiquetas": [
+        "Mar del Plata",
+        "fin de semana largo",
+        "reservas",
+        "Municipalidad de General Pueyrredon"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/mar-del-plata-registra-entre-un-45-y-un-50-de-reservas-para-el-fin-de-semana-largo",
+          "fecha": "2026-10-09T16:00:04.000Z",
+          "oficial": false,
+          "aporte": "Aportó el porcentaje de reservas hoteleras y las declaraciones de Hernán Szkrohal."
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-9-19-48-0-finde-largo-como-funcionaran-las-guardias-de-los-principales-servicios-municipales",
+          "fecha": "2026-10-09T22:48:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el esquema de guardias municipales por el fin de semana largo."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/fin-de-semana-largo-en-mar-del-plata-como-funcionaran-los-servicios-municipales-1",
+          "fecha": "2026-10-09T18:30:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los servicios públicos en Mar del Plata y Batán."
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo/",
+          "fecha": "2026-10-09T19:56:02.000Z",
+          "oficial": false,
+          "aporte": "Mencionó los centros de salud que permanecen abiertos."
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110937-fin-de-semana-largo-en-mar-del-plata-hay-un-50por_ciento-de-reservas-y-preocupa-el-clima",
+          "fecha": "2026-10-09T22:11:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110880-como-seran-las-guardias-municipales-durante-el-fin-de-semana-largo-en-mar-del-plata",
+          "fecha": "2026-10-09T16:47:14.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo-5/",
+          "fecha": "2026-10-09T20:37:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio 10 Mar del Plata (FM 105.5)",
+          "enlace": "https://radio10mardelplata.com.ar/fin-de-semana-largo-en-mar-del-plata-que-servicios-municipales-funcionaran-y-cuales-tendran-guardias/",
+          "fecha": "2026-10-09T17:01:43.000Z",
+          "oficial": false,
+          "aporte": "Indicó el funcionamiento de la recolección de residuos y áreas especiales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1pwavd9",
+          "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región",
+          "fecha": "2026-10-06T00:01:00.000Z",
+          "ruta": "/nota/la-empresa-esuco-retoma-tareas-viales-en-las-rutas-de-la-region-1pwavd9"
+        },
+        {
+          "id": "j3xrez",
+          "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
+          "fecha": "2026-10-03T03:01:28.393Z",
+          "ruta": "/nota/la-concesion-de-la-ruta-226-arranca-con-tareas-de-pintura-j3xrez"
+        },
+        {
+          "id": "fd2y4d",
+          "titulo": "Choque frontal en la Ruta 226 deja tres heridos",
+          "fecha": "2026-10-02T22:58:21.000Z",
+          "ruta": "/nota/choque-frontal-en-la-ruta-226-deja-tres-heridos-fd2y4d"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "mar-del-plata-registra-un-cincuenta-por-ciento-de-reservas",
+      "foto": {
+        "archivo": "fotos-notas/1tcczj3.jpg",
+        "credito": "Foto: 0223 (Mar del Plata)"
+      }
+    },
+    {
       "id": "1d75c0g",
       "titulo": "Ferroviarios recibe la quinta fecha de la Liga Local de Básquet",
       "copete": "El gimnasio del Club Ferroviarios albergó una nueva jornada del torneo municipal de básquet para menores de trece años, con dos encuentros disputados.",
@@ -959,87 +1130,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "ferroviarios-recibe-la-quinta-fecha-de-la-liga-local-de-basquet"
-    },
-    {
-      "id": "pyejmn",
-      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
-      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T15:31:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T21:31:52.077Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cayeron 48 milímetros promedio en la región núcleo.",
-        "El trigo atraviesa las etapas clave de floración y espigazón.",
-        "Los rendimientos superarán los cuarenta quintales por hectárea."
-      ],
-      "seSabe": [
-        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
-        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
-        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
-      ],
-      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "etiquetas": [
-        "trigo",
-        "clima",
-        "lluvias",
-        "agro",
-        "Bolsa de Comercio de Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-          "fecha": "2026-10-09T15:31:40.000Z",
-          "oficial": false,
-          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
-          "fecha": "2026-10-09T19:32:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ydwxhf",
-          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-          "fecha": "2026-10-02T17:03:25.000Z",
-          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
-        },
-        {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
-      "foto": {
-        "archivo": "fotos-notas/pyejmn.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
     },
     {
       "id": "1y9462t",
@@ -1329,6 +1419,7 @@
       "medios": [
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
+        "El Diario Balcarce",
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/virginia-aparicio-dara-su-testimonio-en-exclusiva-en-polemica-en-gabal",
@@ -1667,11 +1758,11 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
+        "El Eco de Tandil",
         "Infobae",
         "A24",
         "Radio Mitre",
         "La Nación",
-        "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "Minuto Uno"
@@ -1808,8 +1899,8 @@
       "seccion": "Agro",
       "medios": [
         "La Voz del Pueblo",
-        "Noticias Agropecuarias",
-        "Agrositio"
+        "Agrositio",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/09/rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico/",
       "teniaImagenLaFuente": true,
@@ -1889,6 +1980,114 @@
       }
     },
     {
+      "id": "1s9drxk",
+      "titulo": "Santiago Caputo cuestiona las pensiones por invalidez y Milei rechaza el aumento",
+      "copete": "El asesor presidencial aseguró que una gran parte de los beneficios presenta anomalías. El mandatario nacional respaldó los señalamientos y criticó el manejo de los fondos.",
+      "cuerpo": "El asesor presidencial Santiago Caputo aseguró este viernes en la red social X que aproximadamente el 60 por ciento de las pensiones por invalidez serían irregulares y cuestionó el supuesto uso político de los certificados. Tras la difusión de los mensajes, el presidente Javier Milei respaldó los dichos y calificó el esquema como una estafa vinculada al sector político.\n\nPor su parte, distintos funcionarios señalaron anomalías en la entrega de ayudas por discapacidad y anunciaron reformas que podrían alcanzar a los beneficiarios de los programas.",
+      "guion": "Santiago Caputo cuestiona las pensiones por invalidez y Milei rechaza el aumento",
+      "seccion": "Política",
+      "medios": [
+        "Clarín",
+        "iProfesional",
+        "Noticias Argentinas (NA)",
+        "InfoRegión"
+      ],
+      "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-fanatica-desacatamientos-judiciales-duro-cruce-grabois-pettovello-ley-financiamiento-universitario_0_7bBwT0IyXQ.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T11:31:57.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:01:49.633Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Santiago Caputo afirmó que el 60 por ciento de las pensiones por invalidez serían irregulares.",
+        "El asesor presidencial difundió su postura este viernes a través de la red social X.",
+        "El presidente Javier Milei se sumó a las críticas y cuestionó el manejo de los recursos.",
+        "Funcionarios anunciaron reformas en la entrega de subsidios por discapacidad."
+      ],
+      "seSabe": [
+        "Santiago Caputo aseguró que cerca del 60 por ciento de los beneficios son irregulares.",
+        "El asesor presidencial publicó sus declaraciones este viernes en la plataforma X.",
+        "El presidente Javier Milei cuestionó públicamente el incremento de las pensiones.",
+        "Funcionarios adelantaron cambios en el otorgamiento de ayudas por discapacidad."
+      ],
+      "noConfirmado": [
+        "No se informaron los plazos exactos ni el alcance detallado de las reformas anunciadas para los subsidios."
+      ],
+      "textoRedes": "Santiago Caputo cuestionó las pensiones por invalidez y sostuvo que la mayoría de los beneficios presentan irregularidades. El presidente Javier Milei respaldó las críticas y cuestionó el manejo de los fondos.",
+      "etiquetas": [
+        "Santiago Caputo",
+        "Javier Milei",
+        "pensiones por invalidez",
+        "discapacidad",
+        "gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-fanatica-desacatamientos-judiciales-duro-cruce-grabois-pettovello-ley-financiamiento-universitario_0_7bBwT0IyXQ.html",
+          "fecha": "2026-10-09T11:31:57.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de Santiago Caputo en la red social X y las críticas del presidente Milei."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/economia/466333-santiago-caputo-denuncio-fraude-pensiones-por-invalidez-casi-60-por-ciento-truchas",
+          "fecha": "2026-10-09T22:34:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los señalamientos de funcionarios respecto a irregularidades y el anuncio de reformas."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/santiago-caputo-cuestiono-las-pensiones-por-invalidez---el-60--son-truchas-_a6ac93355587f18d752056ffd",
+          "fecha": "2026-10-09T19:31:49.486Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional en su registro."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/10/09/santiago-caputo-afirmo-que-el-60-de-las-pensiones-por-invalidez-son-irregulares/",
+          "fecha": "2026-10-09T20:13:56.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo los dichos de Santiago Caputo sobre las pensiones por invalidez."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1tib4ft",
+          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
+          "fecha": "2026-10-05T18:53:21.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
+        },
+        {
+          "id": "1gp4lrt",
+          "titulo": "Javier Milei celebra el resultado electoral en Brasil",
+          "fecha": "2026-10-05T13:13:00.000Z",
+          "ruta": "/nota/javier-milei-celebra-el-resultado-electoral-en-brasil-1gp4lrt"
+        },
+        {
+          "id": "1qnkumc",
+          "titulo": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones",
+          "fecha": "2026-10-02T18:50:40.275Z",
+          "ruta": "/nota/milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-1qnkumc"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "santiago-caputo-cuestiona-las-pensiones-por-invalidez-y-milei-rechaza",
+      "foto": {
+        "archivo": "fotos-notas/1s9drxk.jpg",
+        "credito": "Foto: iProfesional"
+      }
+    },
+    {
       "id": "vwb5m5",
       "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "copete": "El director técnico del Atlético de Madrid elogió al capitán argentino y evitó compararlo con Diego Maradona. Además, repasó su carrera en la previa de un compromiso por el torneo español.",
@@ -1902,6 +2101,7 @@
         "Olé",
         "Minuto Uno",
         "Crónica",
+        "Doble Amarilla",
         "Infobae"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
@@ -1983,7 +2183,7 @@
       "fecha": "2026-10-09T10:56:04.110Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 39,
+      "relevancia": 32,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2046,6 +2246,8 @@
         "La Nación",
         "Infobae",
         "Perfil",
+        "El Cronista",
+        "El Destape",
         "Página/12",
         "Crónica",
         "Radio Mitre"
@@ -2115,17 +2317,16 @@
       "guion": "El Gobierno fija en dólares la tasa de vuelos nacionales",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
-        "La Nación",
         "Clarín",
         "iProfesional",
         "Crónica",
         "Radio Mitre",
         "Diario Popular",
         "0221",
-        "El Marplatense",
-        "Agencia DIB",
         "Infoeme",
+        "El Marplatense",
+        "El Eco de Tandil",
+        "Agencia DIB",
         "Infobae",
         "Ámbito",
         "El Cronista"
@@ -2135,7 +2336,7 @@
       "fecha": "2026-10-09T10:53:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T15:31:45.594Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2267,84 +2468,6 @@
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-9-y-maxima-de-13"
     },
     {
-      "id": "1onb1mo",
-      "titulo": "Milei designa al nuevo embajador en Namibia y Mauricio",
-      "copete": "El Gobierno oficializó este viernes la designación de Raúl Santiago Ailan al frente de las representaciones diplomáticas en ambos estados africanos, en paralelo con sus funciones actuales.",
-      "cuerpo": "El presidente Javier Milei nombró a Raúl Santiago Ailan como nuevo embajador extraordinario y plenipotenciario en las repúblicas de Namibia y Mauricio, según se comunicó este viernes mediante el Boletín Oficial.\n\nLa decisión quedó establecida a través de los decretos 1158 y 1159, que llevan las firmas del mandatario nacional y del canciller Pablo Quirno. Los nombramientos se dispusieron sin interrumpir sus labores actuales como representante diplomático argentino en Sudáfrica.\n\nAmbas administraciones africanas concedieron el correspondiente plácet de estilo para ratificar la llegada del funcionario nacional.",
-      "guion": "Milei designa al nuevo embajador en Namibia y Mauricio",
-      "seccion": "Política",
-      "medios": [
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Ámbito",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/milei-designo-al-embajador-de-las-republicas-de-namibia-y-mauricio_a6ac8ba1004eebb515d2a783b",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T09:57:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T11:01:45.821Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El presidente designó a Raúl Santiago Ailan.",
-        "Abarca a las repúblicas de Namibia y Mauricio.",
-        "Se oficializó mediante el Boletín Oficial.",
-        "Conserva su puesto diplomático en Sudáfrica."
-      ],
-      "seSabe": [
-        "El presidente Javier Milei nombró a Raúl Santiago Ailan en los cargos diplomáticos.",
-        "La medida se oficializó este viernes mediante el Boletín Oficial en los decretos 1158 y 1159.",
-        "El funcionario mantiene sus tareas en Sudáfrica.",
-        "Los gobiernos de ambos países otorgaron el plácet de estilo."
-      ],
-      "textoRedes": "El Gobierno oficializó la designación de Raúl Santiago Ailan como embajador en Namibia y Mauricio en paralelo con sus funciones en Sudáfrica.",
-      "etiquetas": [
-        "Gobierno nacional",
-        "Designación",
-        "Namibia",
-        "Mauricio"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/milei-designo-al-embajador-de-las-republicas-de-namibia-y-mauricio_a6ac8ba1004eebb515d2a783b",
-          "fecha": "2026-10-09T09:57:31.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de los decretos y los nombres de los funcionarios intervinientes."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/informacion-general/el-embajador-sudafrica-sumara-la-representacion-argentina-namibia-y-mauricio-n6331890",
-          "fecha": "2026-10-09T10:38:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el diplomático conserva su destino actual en Pretoria."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-9-7-16-0-milei-designo-al-embajador-de-las-republicas-de-namibia-y-mauricio",
-          "fecha": "2026-10-09T10:44:29.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la publicación de la medida en el Boletín Oficial."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "milei-designa-al-nuevo-embajador-en-namibia-y-mauricio",
-      "foto": {
-        "archivo": "fotos-notas/1onb1mo.jpg",
-        "credito": "Foto: La Nueva"
-      }
-    },
-    {
       "id": "1i7p0dt",
       "titulo": "El Gobierno autoriza al Ejército a participar del ejercicio Arandú 2026",
       "copete": "El Poder Ejecutivo habilitó mediante un decreto el envío de personal y equipamiento militar a Brasil. Las maniobras conjuntas se desarrollarán entre el 10 y el 17 de octubre.",
@@ -2426,6 +2549,91 @@
       "foto": {
         "archivo": "fotos-notas/1i7p0dt.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "1nx2jwv",
+      "titulo": "El Congreso declara Héroe Nacional a Estanislao López",
+      "copete": "El Gobierno oficializa la normativa que reconoce al dirigente santafesino por su defensa del federalismo. La iniciativa fue promulgada de hecho tras su paso por el Senado.",
+      "cuerpo": "El Congreso nacional formaliza la declaración del brigadier Estanislao López como Héroe Nacional mediante la Ley 27.827. La medida se publica este viernes en el Boletín Oficial tras quedar promulgada de hecho el 7 de octubre.\n\nLa norma destaca su trayectoria política y militar, además de su rol histórico en la construcción del sistema federal argentino. El proyecto había sido impulsado por el exdiputado nacional Roberto Mirabella y obtuvo 58 votos afirmativos y uno negativo en la Cámara alta.",
+      "guion": "El Congreso declara Héroe Nacional a Estanislao López",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "Perfil",
+        "Minuto Uno",
+        "Noticias Argentinas (NA)",
+        "Crónica",
+        "Ámbito"
+      ],
+      "enlace": "https://www.infobae.com/sociedad/2026/10/09/declararon-a-estanislao-lopez-como-heroe-nacional-por-que-se-lo-conoce-como-el-patriarca-del-federalismo-argentino/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T07:02:38.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T11:31:38.538Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Congreso declara Héroe Nacional al brigadier Estanislao López.",
+        "La medida se oficializa mediante la Ley 27.827.",
+        "La norma se publica este viernes en el Boletín Oficial."
+      ],
+      "seSabe": [
+        "El Congreso aprobó la declaración de Estanislao López como Héroe Nacional según la Ley 27.827.",
+        "La normativa fue promulgada de hecho el 7 de octubre y se oficializó este viernes en el Boletín Oficial.",
+        "El proyecto recibió 58 votos afirmativos y uno negativo en el Senado de acuerdo con los registros legislativos."
+      ],
+      "textoRedes": "El Congreso declara Héroe Nacional al brigadier Estanislao López mediante la Ley 27.827. La norma destaca su trayectoria en la construcción del federalismo argentino y se oficializa este viernes en el Boletín Oficial tras su promulgación de hecho.",
+      "etiquetas": [
+        "Estanislao López",
+        "Héroe Nacional",
+        "Congreso",
+        "Ley 27.827",
+        "Federalismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/sociedad/2026/10/09/declararon-a-estanislao-lopez-como-heroe-nacional-por-que-se-lo-conoce-como-el-patriarca-del-federalismo-argentino/",
+          "fecha": "2026-10-09T07:02:38.000Z",
+          "oficial": false,
+          "aporte": "Detalla el número de ley, los votos en el Senado y los fundamentos históricos."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/rige-la-ley-que-reconoce-estanislao-lopez-como-heroe-nacional-n6331886",
+          "fecha": "2026-10-09T10:28:00.000Z",
+          "oficial": false,
+          "aporte": "Informa sobre la promulgación de hecho y los antecedentes de su gobierno santafesino."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/declararon-heroe-nacional-al-brigadier-estanislao-lopez-la-historia-del-patriarca-del-federalismo-argentino/",
+          "fecha": "2026-10-09T08:31:00.000Z",
+          "oficial": false,
+          "aporte": "Confirma la oficialización de la medida por parte del Gobierno este viernes."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/declararon-heroe-nacional-al-brigadier-estanislao-lopez--patriarca-del-federalismo-argentino-_a6ac8c99e8e24c1a50ac70976",
+          "fecha": "2026-10-09T11:04:27.000Z",
+          "oficial": false,
+          "aporte": "Señala que la norma fue sancionada por ambas cámaras del Congreso."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-congreso-declara-heroe-nacional-a-estanislao-lopez",
+      "foto": {
+        "archivo": "fotos-notas/1nx2jwv.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -2695,61 +2903,87 @@
       }
     },
     {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
-      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
-      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "seccion": "Balcarce",
+      "id": "1wv2vgs",
+      "titulo": "YPF adquiere la totalidad de las acciones de YPF Luz por 430 millones de dólares",
+      "copete": "La petrolera estatal compra el porcentaje restante a BNR Power Investments y alcanza el ciento por ciento del capital de su subsidiaria de generación eléctrica.",
+      "cuerpo": "El Directorio de YPF aprobó la compra del 24,99 por ciento de las acciones de YPF Energía Eléctrica, conocida como YPF Luz, que pertenecían al fondo BNR Power Investments por una suma de 430 millones de dólares.\n\nHoracio Marín, presidente y director ejecutivo de YPF, afirmó que la transacción le permitiría a la subsidiaria potenciar sus capacidades en el sector. YPF Luz se creó en 2013 y sumó al fondo BNR como socio en 2018, etapa tras la cual alcanzó una capacidad instalada de 3,8 gigavatios en ocho provincias argentinas.",
+      "guion": "YPF adquiere la totalidad de las acciones de YPF Luz por 430 millones de dólares",
+      "seccion": "Economía",
       "medios": [
-        "El Diario Balcarce"
+        "Infobae",
+        "El Cronista",
+        "Canal 26",
+        "iProfesional",
+        "Clarín",
+        "Ámbito",
+        "El Economista"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-08T21:31:14.736Z",
-      "sinFecha": true,
-      "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 53,
-      "local": true,
+      "enlace": "https://www.cronista.com/negocios/ypf-se-quedo-con-la-parte-que-le-faltaba-de-una-de-sus-principales-subsidiarias/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T23:12:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T00:01:47.529Z",
+      "relevancia": 66,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Reunión de trabajadores de prensa locales",
-        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
-        "Fecha oficial en el calendario desde 2023"
+        "YPF compra el 24,99 por ciento restante de YPF Luz",
+        "La operación asciende a 430 millones de dólares",
+        "La compañía vendedora es BNR Power Investments",
+        "YPF pasa a controlar la totalidad del capital de la generadora"
       ],
       "seSabe": [
-        "Se llevó a cabo un encuentro del periodismo balcarceño.",
-        "La fecha se conmemora desde 2023 en el calendario local.",
-        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
+        "El Directorio de YPF aprobó la adquisición del porcentaje restante de YPF Luz",
+        "La operación se fijó en 430 millones de dólares",
+        "El fondo BNR Power Investments era el titular de las acciones compradas",
+        "YPF Luz opera en ocho provincias con una capacidad instalada de 3,8 gigavatios"
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "La fecha exacta en la que finalizará formalmente el traspaso accionario",
+        "Los plazos específicos para el cumplimiento de las condiciones de cierre de la transacción"
       ],
-      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "textoRedes": "YPF adquiere el porcentaje restante de su subsidiaria YPF Luz por 430 millones de dólares y pasa a controlar la totalidad del capital de la empresa de generación eléctrica.",
       "etiquetas": [
-        "periodismo",
-        "Balcarce",
-        "Beto Vuotto",
-        "reconocimiento"
+        "YPF",
+        "YPF Luz",
+        "energia"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-          "fecha": "2026-10-08T21:17:37.000Z",
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/negocios/ypf-se-quedo-con-la-parte-que-le-faltaba-de-una-de-sus-principales-subsidiarias/",
+          "fecha": "2026-10-08T23:12:05.000Z",
           "oficial": false,
-          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
+          "aporte": "Informó la aprobación del Directorio, el porcentaje adquirido, el monto de la operación, las declaraciones del CEO y datos operativos de YPF Luz."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/08/ypf-cerro-un-acuerdo-para-quedarse-con-el-100-de-su-empresa-de-energia-electrica/",
+          "fecha": "2026-10-08T23:44:25.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los detalles de la transacción con el fondo BNR Power Investments y el monto de 430 millones de dólares."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/energia/466246-ypf-se-queda-con-el-100-de-su-empresa-de-energia-electrica-tras-una-inversion-de-us430-m",
+          "fecha": "2026-10-08T23:18:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el acuerdo para adquirir la participación del fondo y la integración total de los resultados."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
+      "slug": "ypf-adquiere-la-totalidad-de-las-acciones-de-ypf-luz-por-430-millones",
+      "foto": {
+        "archivo": "fotos-notas/1wv2vgs.jpg",
+        "credito": "Foto: iProfesional"
+      }
     },
     {
       "id": "w8iv0l",
@@ -2760,10 +2994,10 @@
       "seccion": "Deportes",
       "medios": [
         "La Nación",
+        "Ámbito",
         "Infobae",
         "El Destape",
-        "Básquet Plus",
-        "Doble Amarilla"
+        "Básquet Plus"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
       "teniaImagenLaFuente": true,
@@ -2829,6 +3063,63 @@
         "archivo": "fotos-notas/w8iv0l.jpg",
         "credito": "Foto: La Nación"
       }
+    },
+    {
+      "id": "1om2oqi",
+      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
+      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T21:17:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T21:31:14.736Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reunión de trabajadores de prensa locales",
+        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
+        "Fecha oficial en el calendario desde 2023"
+      ],
+      "seSabe": [
+        "Se llevó a cabo un encuentro del periodismo balcarceño.",
+        "La fecha se conmemora desde 2023 en el calendario local.",
+        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
+      "etiquetas": [
+        "periodismo",
+        "Balcarce",
+        "Beto Vuotto",
+        "reconocimiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
+          "fecha": "2026-10-08T21:17:37.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
     },
     {
       "id": "1q4j7p",
@@ -3325,8 +3616,8 @@
         "Bolavip Argentina",
         "TyC Sports",
         "0221",
-        "La Nación",
         "Radio Mitre",
+        "La Nación",
         "A24",
         "Crónica",
         "Minuto Uno"
@@ -3483,81 +3774,6 @@
       }
     },
     {
-      "id": "17s3or9",
-      "titulo": "El Museo Comunitario Isla Maciel abre una muestra sobre Juan Carlos Romero",
-      "copete": "El espacio cultural expone desde el sábado obras del referente del arte político. La entrada es libre y gratuita durante todo el mes.",
-      "cuerpo": "El Museo Comunitario Isla Maciel abrirá el sábado a las 16 una exposición dedicada al artista y grabador Juan Carlos Romero, fallecido en 2017. La muestra, titulada \"Mi discurso es el silencio. Mi canto el grito\", se podrá recorrer durante todo octubre con acceso libre y gratuito en la sede ubicada en la calle 3 de Febrero 1570, en la localidad de Dock Sud, partido de Avellaneda.\n\nLa propuesta reúne trabajos de uno de los principales exponentes del arte político y la gráfica nacional, cuyo recorrido estuvo atravesado por el compromiso social y la experimentación visual. El espacio elegido para la exhibición se vincula con las raíces del creador, nacido en ese partido bonaerense en 1931.",
-      "guion": "El Museo Comunitario Isla Maciel abre una muestra sobre Juan Carlos Romero",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Infobae",
-        "Noticias Argentinas (NA)",
-        "InfoRegión",
-        "ANDigital"
-      ],
-      "enlace": "https://noticiasargentinas.com/cultura/el-museo-comunitario-isla-maciel-inaugura-una-muestra-dedicada-al-artista-juan-carlos-romero_a6ac7cae93d40083fb6592f14",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T17:00:58.942Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T03:31:44.849Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Inauguración el sábado a las 16 en Dock Sud.",
-        "Muestra dedicada al artista Juan Carlos Romero.",
-        "Entrada libre y gratuita durante todo octubre."
-      ],
-      "seSabe": [
-        "La muestra se titula \"Mi discurso es el silencio. Mi canto el grito\".",
-        "La sede del museo se encuentra en 3 de Febrero 1570, Dock Sud.",
-        "La entrada es libre y gratuita."
-      ],
-      "textoRedes": "El Museo Comunitario Isla Maciel inaugura este sábado una muestra dedicada al artista Juan Carlos Romero. Será con entrada libre y gratuita durante todo octubre en Dock Sud.",
-      "etiquetas": [
-        "Cultura",
-        "Arte",
-        "Juan Carlos Romero",
-        "Avellaneda"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/cultura/el-museo-comunitario-isla-maciel-inaugura-una-muestra-dedicada-al-artista-juan-carlos-romero_a6ac7cae93d40083fb6592f14",
-          "fecha": "2026-10-08T17:00:58.942Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la temática, los horarios, la ubicación y la biografía del artista."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/cultura/agenda-cultura/2026/10/09/guia-de-arte-y-cultura-semana-del-9-al-16-de-octubre-de-2026/",
-          "fecha": "2026-10-09T03:25:00.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la información sobre la apertura de la muestra."
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/10/08/avellaneda-el-museo-comunitario-isla-maciel-inaugura-una-muestra-dedicada-al-artista-juan-carlos-romero/",
-          "fecha": "2026-10-08T18:30:12.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha y la hora exacta de la inauguración."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-museo-comunitario-isla-maciel-abre-una-muestra-sobre-juan-carlos",
-      "foto": {
-        "archivo": "fotos-notas/17s3or9.jpg",
-        "credito": "Foto: InfoRegión"
-      }
-    },
-    {
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "copete": "La seccional local del gremio reconoce la labor de quienes se desempeñan en el campo. La fecha conmemora la sanción del primer Estatuto del Peón Rural en 1944.",
@@ -3640,10 +3856,10 @@
         "Noticias Argentinas (NA)",
         "0221",
         "El Marplatense",
-        "El Día",
-        "Bolavip Argentina",
-        "Clarín",
         "Doble Amarilla",
+        "Bolavip Argentina",
+        "El Día",
+        "Clarín",
         "Minuto Uno",
         "El Gráfico",
         "La Capital (Rosario)",
@@ -3746,9 +3962,9 @@
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
+        "Bolavip Argentina",
         "La Capital (Rosario)",
         "Crónica",
-        "Bolavip Argentina",
         "El Día"
       ],
       "enlace": "https://www.lacapital.com.ar/ovacion/perdi-el-amor-el-futbol-argentino-la-critica-tagliafico-la-liga-profesional-n10285581.html",
@@ -3900,19 +4116,19 @@
       "medios": [
         "Ámbito",
         "TN (Todo Noticias)",
+        "El Cronista",
         "El Destape",
         "Crónica",
         "Diario Popular",
         "QZ Noticias (Mar del Plata)",
+        "El Eco de Tandil",
         "Infobae",
         "La Nación",
-        "El Cronista",
         "Página/12",
         "C5N",
         "Perfil",
         "Clarín",
         "Minuto Uno",
-        "El Eco de Tandil",
         "Zona Norte Diario"
       ],
       "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
@@ -4046,13 +4262,13 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "InfoRegión",
+        "El Eco de Tandil",
         "Ámbito",
         "Perfil",
         "iProfesional",
         "A24",
         "Crónica",
         "Agencia DIB",
-        "El Eco de Tandil",
         "Noticias Agropecuarias"
       ],
       "enlace": "https://www.ambito.com/economia/la-inflacion-caba-se-acelero-al-18-septiembre-impulsada-educacion-vivienda-y-alimentos-n6331545",
@@ -4482,9 +4698,9 @@
     "Argentina",
     "Balcarce",
     "Política",
-    "Agro",
-    "Tecnología",
     "Cultura y agenda",
+    "Tecnología",
+    "Agro",
     "Automovilismo"
   ],
   "temas": [],
@@ -4492,8 +4708,8 @@
     "ahora": {
       "temp": 10,
       "sensacion": 7,
-      "humedad": 85,
-      "viento": 14,
+      "humedad": 87,
+      "viento": 13,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": false
@@ -4896,6 +5112,12 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
+      "id": "19vahug",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\" (en otro medio que cuenta lo mismo)"
+    },
+    {
       "id": "afnvn3",
       "titulo": "Sin investigar, el juez de Zárate-Campana sobreseyó a…",
       "seccion": "Política",
@@ -4906,6 +5128,12 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "1mgua6l",
+      "titulo": "Denuncian a alumnos por crear con IA imágenes falsas de…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "dc8gpu",
@@ -4926,6 +5154,12 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "1he1jh5",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
       "id": "1ob03ue",
       "titulo": "El desconocido gesto de Messi con los empleados de la AFA…",
       "seccion": "Fútbol",
@@ -4942,12 +5176,6 @@
       "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "wdhpc1",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "1inj0si",
@@ -4980,10 +5208,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "uuh0jx",
-      "titulo": "Dispersión de precios: un mismo producto puede costar…",
-      "seccion": "Economía",
-      "motivo": "parece promoción, no noticia: \"publicidad\""
+      "id": "14lcw5x",
+      "titulo": "Un diputado libertario reivindicó a la dictadura y la…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "wdhpc1",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "1d4b32c",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "6af5cy",
@@ -4992,34 +5232,22 @@
       "motivo": "parece promoción, no noticia: \"sortea\""
     },
     {
-      "id": "skjezu",
-      "titulo": "Alumnos del Colegio Modelo Lomas usaron IA para “desnudar”…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\" (en otro medio que cuenta lo mismo)"
-    },
-    {
       "id": "1k8f8s0",
       "titulo": "El FMI alertó que el petróleo seguirá caro en 2027: cuál…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "74vm3v",
-      "titulo": "Fuerte cruce en Diputados: un libertario defendió la…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"detenido\""
+      "id": "uuh0jx",
+      "titulo": "Dispersión de precios: un mismo producto puede costar…",
+      "seccion": "Economía",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "1e7wy8p",
-      "titulo": "Javier Milei volverá a viajar a Estados Unidos: nuevas…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "wwfhbm",
-      "titulo": "Javier Milei volvió a tildar de “ladrón” a Lula y respaldó…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "vx7am0",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "17p53w7",
@@ -5028,5 +5256,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 10
+  "esperandoCuerpo": 11
 }

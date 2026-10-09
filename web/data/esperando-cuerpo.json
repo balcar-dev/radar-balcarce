@@ -1,7 +1,24 @@
 {
- "generado": "2026-10-09T22:33:34.280Z",
+ "generado": "2026-10-09T23:02:42.712Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1trv7re",
+   "titulo": "“Si yo fuera Mazzacane, haría el Coronación de TC en Balcarce”",
+   "copete": "La reapertura del autódromo “Juan Manuel Fangio” al automovilismo nacional dejó un saldo positivo tanto en lo deportivo, como en lo organizativo y superando las expectativas el público brindó su apoyo. Frente al éxito de la realización, a",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-09T22:45:51.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/si-yo-fuera-mazzacane-haria-el-coronacion-de-tc-en-balcarce-11",
+     "fecha": "2026-10-09T22:45:51.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"carretera\" y la fuente no",
+   "maximo": 3
+  },
   {
    "id": "13ysda0",
    "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
@@ -47,9 +64,14 @@
      "fecha": "2026-10-09T17:56:02.000Z"
     },
     {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/politica/la-industria-perdio-66262-empleos-dos-anos-n923768",
+     "fecha": "2026-10-09T22:38:00.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/economia/empleo-industrial--se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-y-solo-3-lograron-aumentar-la-cantidad_a6ac92902587f18d752035eca",
-     "fecha": "2026-10-09T18:55:38.000Z"
+     "fecha": "2026-10-09T18:55:38.129Z"
     },
     {
      "medio": "La Brújula 24",
@@ -59,53 +81,6 @@
    ],
    "intentos": 4,
    "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 93 palabras",
-   "maximo": 4
-  },
-  {
-   "id": "1tcczj3",
-   "titulo": "Mar del Plata registra entre un 45% y un 50% de reservas para el fin de semana largo",
-   "copete": "Con motivo del fin de semana largo por el feriado del lunes 12 de octubre, la Municipalidad de General Pueyrredon informó cómo será el funcionamiento de los principales servicios públicos en Mar del Plata y Batán. Durante estas jornadas se mantendrán guardias en Salud…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-09T16:00:04.000Z",
-   "fuentes": [
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/mar-del-plata-registra-entre-un-45-y-un-50-de-reservas-para-el-fin-de-semana-largo",
-     "fecha": "2026-10-09T16:00:04.000Z"
-    },
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/fin-de-semana-largo-en-mar-del-plata-como-funcionaran-los-servicios-municipales-1",
-     "fecha": "2026-10-09T18:30:00.000Z"
-    },
-    {
-     "medio": "Mi8 (Canal 8 Mar del Plata)",
-     "enlace": "https://mi8.com.ar/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo/",
-     "fecha": "2026-10-09T19:56:02.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110937-fin-de-semana-largo-en-mar-del-plata-hay-un-50por_ciento-de-reservas-y-preocupa-el-clima",
-     "fecha": "2026-10-09T22:11:42.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110880-como-seran-las-guardias-municipales-durante-el-fin-de-semana-largo-en-mar-del-plata",
-     "fecha": "2026-10-09T16:47:14.000Z"
-    },
-    {
-     "medio": "Punto Noticias",
-     "enlace": "https://puntonoticias.com/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo-5/",
-     "fecha": "2026-10-09T20:37:03.000Z"
-    },
-    {
-     "medio": "Radio 10 Mar del Plata (FM 105.5)",
-     "enlace": "https://radio10mardelplata.com.ar/fin-de-semana-largo-en-mar-del-plata-que-servicios-municipales-funcionaran-y-cuales-tendran-guardias/",
-     "fecha": "2026-10-09T17:01:43.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (numero, antecedente): el cuerpo dice 40 y la fuente no lo dice; sin esas oraciones quedan 84 palabras",
    "maximo": 4
   },
   {
@@ -145,7 +120,7 @@
   {
    "id": "fadug2",
    "titulo": "La FIA admite un \"error humano\" que perjudicó a varios pilotos en la SQ1 de Singapur",
-   "copete": "La FIA emitió un comunicado pocas horas después de la clasificación al sprint del Gran Premio de Singapur para explicar uno de los incidentes que marcó la SQ1. Más allá de los problemas de cronometraje que obligaron a retrasar el inicio de la SQ2, el organismo rector reconoció…",
+   "copete": "La FIA quedó nuevamente bajo la lupa en la Fórmula 1 después de reconocer un error humano que alteró las condiciones de clasificación para la carrera sprint del Gran Premio de Singapur. La falla se produjo durante la SQ1 y afectó el rendimiento de varios monoplazas, entre ellos…",
    "seccion": "Automovilismo",
    "fecha": "2026-10-09T14:19:55.000Z",
    "fuentes": [
@@ -223,6 +198,23 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "88fvqd",
+   "titulo": "El descarte de medicamentos vencidos, una problemática que llegó al Concejo Deliberante",
+   "copete": "",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T23:01:49.633Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/el-descarte-de-medicamentos-vencidos-una-problematica-que-llego-al-concejo-deliberante-283",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo corto (41 palabras)",
    "maximo": 3
   },
   {

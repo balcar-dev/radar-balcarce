@@ -463,11 +463,6 @@
   "ultimo": "2026-10-04T07:31:30.063Z",
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"domingo\", que sale de una nota anterior, como si fuera de hoy"
  },
- "1917p5s": {
-  "intentos": 2,
-  "ultimo": "2026-10-02T23:01:27.757Z",
-  "motivo": "con cuerpo"
- },
  "196uqz0": {
   "intentos": 1,
   "ultimo": "2026-10-07T15:33:00.200Z",
@@ -1260,6 +1255,11 @@
   "ultimo": "2026-10-07T05:31:27.339Z",
   "motivo": "con cuerpo"
  },
+ "1s9drxk": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T23:02:00.329Z",
+  "motivo": "con cuerpo"
+ },
  "1stssa7": {
   "intentos": 2,
   "ultimo": "2026-10-05T22:31:25.509Z",
@@ -1276,9 +1276,9 @@
   "motivo": "con cuerpo"
  },
  "1tcczj3": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T22:32:01.209Z",
-  "motivo": "cuerpo: 2 problemas (numero, antecedente): el cuerpo dice 40 y la fuente no lo dice; sin esas oraciones quedan 84 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-09T23:02:00.329Z",
+  "motivo": "con cuerpo"
  },
  "1tckq4a": {
   "intentos": 1,
@@ -1314,6 +1314,11 @@
   "intentos": 2,
   "ultimo": "2026-10-06T21:31:41.860Z",
   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2753 (line 28 column 14)"
+ },
+ "1trv7re": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T23:02:00.329Z",
+  "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"carretera\" y la fuente no"
  },
  "1u383pj": {
   "intentos": 1,
@@ -1820,6 +1825,11 @@
   "intentos": 1,
   "ultimo": "2026-10-06T14:34:24.640Z",
   "motivo": "con cuerpo"
+ },
+ "88fvqd": {
+  "intentos": 1,
+  "ultimo": "2026-10-09T23:02:00.329Z",
+  "motivo": "cuerpo corto (41 palabras)"
  },
  "8k451h": {
   "intentos": 3,
@@ -2932,11 +2942,6 @@
   "intentos": 1,
   "ultimo": "2026-10-04T19:31:35.029Z",
   "motivo": "título o bajada: 3 problemas (antecedente): el titulo usa 70, que sale de una nota anterior, como si fuera de hoy"
- },
- "ydwxhf": {
-  "intentos": 1,
-  "ultimo": "2026-10-02T23:01:27.757Z",
-  "motivo": "con cuerpo"
  },
  "yhgmbn": {
   "intentos": 1,

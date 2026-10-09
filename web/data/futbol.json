@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-09T22:33:31.424Z",
+ "consultado": "2026-10-09T23:02:41.307Z",
  "equipos": [
   "9739",
   "3",
@@ -678,20 +678,33 @@
     "id": "401841609",
     "competencia": "liga",
     "inicio": "2026-10-09T21:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "76'",
+    "estado": "final",
+    "minuto": "90'+7'",
     "local": {
      "id": "9",
      "nombre": "Gimnasia La Plata",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "9785",
      "nombre": "Atlético Tucumán",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Lautaro Godoy",
+      "minuto": "83'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Marcelo Torres",
+      "minuto": "90'+5'",
+      "tipo": "de penal"
+     }
+    ],
     "estadio": "Juan Carmelo Zerillo (El Bosque)",
     "fase": null,
     "partidoDeLaSerie": null,
@@ -701,20 +714,33 @@
     "id": "401841607",
     "competencia": "liga",
     "inicio": "2026-10-09T22:30:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "28'",
     "local": {
      "id": "2975",
      "nombre": "Instituto (Córdoba)",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "5",
      "nombre": "Boca Juniors",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Fernando Alarcón",
+      "minuto": "14'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Enner Valencia",
+      "minuto": "23'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Monumental Presidente Perón",
     "fase": null,
     "partidoDeLaSerie": null,
