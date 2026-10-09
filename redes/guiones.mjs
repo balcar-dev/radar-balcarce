@@ -490,7 +490,7 @@ export function guionAgenda(eventos, { fecha = new Date(), direccion, momento = 
 
 const INTROS = {
   manana: [
-    'Esto es lo que hay para saber esta mañana.',
+    'Las noticias para arrancar el día.',
     'Te cuento lo más importante para arrancar el día.',
     'Estas son las notas para empezar la mañana.',
     'Vamos con lo que tenés que saber esta mañana.',

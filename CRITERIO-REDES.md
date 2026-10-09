@@ -157,7 +157,7 @@ Lo común a todas:
   son las mejores rankeadas" (Hernán).
 - **No lleva nunca:** Política ni Policiales, nada en rojo, las notas propias del sitio,
   la fuente de ninguna nota, ni nombres de víctimas o menores.
-- **Bien (mañana):** "Buen día, Balcarce. Esto es lo que hay para saber esta mañana. Para
+- **Bien (mañana):** "Buen día, Balcarce. Las noticias para arrancar el día. Para
   arrancar: Ferroviarios gana el Apertura. Cambiando de tema: Cortan el agua en el centro.
   Y para cerrar: Nueva muestra en el museo. Que tengan un buen día. Todo lo demás lo
   encontrás en Radar Balcarce punto com."

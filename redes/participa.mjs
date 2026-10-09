@@ -31,9 +31,9 @@ export const PIEZAS_PARTICIPA = {
   },
   'participa-nota': {
     dia: 5, nombre: 'Tu nota', rotulo: 'Tu nota', seccion: 'Cultura y agenda',
-    pregunta: '¿Tu club, tu escuela o tu grupo tiene algo para contar?', pie1: 'Escribinos y lo miramos.', pie2: 'Antes de publicar, lo chequeamos.',
-    sub: 'Escribinos y lo miramos',
-    voz: ['¿Tu club, tu escuela o tu grupo tiene algo para contar? Escribinos y lo miramos.'],
+    pregunta: '¿Tenés algo para contar de tu club, tu escuela o tu barrio?', pie1: 'Mandanos tu nota, tu historia o tu opinión.', pie2: 'La leemos y, si corresponde, la publicamos con tu nombre.',
+    sub: 'Mandanos tu nota, tu historia o tu opinión',
+    voz: ['¿Tenés algo para contar de tu club, tu escuela o tu barrio? Mandanos tu nota, tu historia o tu opinión. La leemos y, si corresponde, la publicamos con tu nombre.'],
   },
 };
 
