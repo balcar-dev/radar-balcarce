@@ -9162,9 +9162,7 @@
   "borrada": true
  },
  "kr8nxa": {
-  "archivo": "fotos-notas/kr8nxa.jpg",
   "medio": "Wikimedia Commons",
-  "credito": "Foto: Ludovic Péron / Wikimedia Commons (CC BY-SA 3.0)",
   "licencia": "CC BY-SA 3.0",
   "autor": "Ludovic Péron",
   "origen": "wikimedia",
@@ -9172,7 +9170,9 @@
   "enlace": "https://commons.wikimedia.org/wiki/File:Suisse_vs_Argentine_-_Granit_Xhaka_%26_Lionel_Messi.jpg",
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Suisse_vs_Argentine_-_Granit_Xhaka_%26_Lionel_Messi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Lionel Messi\" de Wikimedia Commons (CC BY-SA 3.0).",
-  "cuando": "2026-10-07T15:36:45.374Z"
+  "cuando": "2026-10-07T15:36:45.374Z",
+  "intentado": true,
+  "borrada": true
  },
  "pqvxnw": {
   "medio": "Clarín",
@@ -10850,5 +10850,29 @@
   "imagenOriginal": "https://cdn1.eldia.com/102026/1791525484334.jpg?&cw=1200&ch=630",
   "razon": "La foto A muestra claramente a un jugador de Boca en entrenamiento, sin marcas agregadas y sin menores reconocibles.",
   "cuando": "2026-10-09T11:32:51.108Z"
+ },
+ "1v0pyz6": {
+  "archivo": "fotos-notas/1v0pyz6.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/este-viernes-es-el-segundo-vencimiento-de-la-factura-del-servicio-de-agua",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2025/Frente_Aguas_1.jpg",
+  "razon": "Es la única opción disponible, cumple con los requisitos y no tiene marcas de agua ni menores.",
+  "cuando": "2026-10-09T12:02:09.549Z"
+ },
+ "l5o975": {
+  "archivo": "fotos-notas/l5o975.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno oficializa el proyecto petrolero de Tecpetrol en Vaca Muerta",
+  "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/7JBRWDFXKRFHVM5HDP5FLQ7QTM.JPG?auth=c33bf11ce2fba297211f87e5807355a642bdf9251245f554d74ad881a6db889f&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra claramente balancines petroleros en Vaca Muerta, con excelente nitidez y sin marcas ni personas.",
+  "cuando": "2026-10-09T12:02:09.549Z"
  }
 }

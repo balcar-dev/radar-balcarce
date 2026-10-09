@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T11:33:34.701Z",
+ "generado": "2026-10-09T12:02:21.735Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -18,6 +18,60 @@
    "intentos": 3,
    "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
    "maximo": 3
+  },
+  {
+   "id": "13ysda0",
+   "titulo": "El conmutador del Hospital Municipal funciona con normalidad",
+   "copete": "El Hospital Municipal “Dr. Felipe A. Fossati” informa que el conmutador telefónico ha restablecido su funcionamiento habitual, por lo que las líneas de comunicación con la institución se encuentran nuevamente operativas. En ese sentido, se recuerdan los números telefónicos…",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-09T11:23:10.000Z",
+   "fuentes": [
+    {
+     "medio": "Municipalidad de Balcarce",
+     "enlace": "https://balcarce.gob.ar/2026/10/09/el-conmutador-del-hospital-municipal-funciona-con-normalidad/",
+     "fecha": "2026-10-09T11:23:10.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (nombre, fecha): el cuerpo nombra a \"municipalidad\" y la fuente no; sin esas oraciones quedan 54 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "11lqk0q",
+   "titulo": "La despedida de Messi: La productora a cargo señaló a River por las fallas",
+   "copete": "La despedida de Lionel Messi de la Selección argentina en el estadio Monumental, que debía ser una fiesta inolvidable, terminó opacada por un cruce de acusaciones entre River y la productora Marketing Sports que contrató la AFA . El evento, que terminó con un espectáculo de…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-08T19:00:00.000Z",
+   "fuentes": [
+    {
+     "medio": "El Gráfico",
+     "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
+     "fecha": "2026-10-08T19:00:00.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/09/polemica-por-la-despedida-de-messi-river-y-la-empresa-que-contrato-la-afa-se-cruzaron-por-las-fallas-en-la-organizacion/",
+     "fecha": "2026-10-09T11:50:46.000Z"
+    },
+    {
+     "medio": "Perfil",
+     "enlace": "https://442.perfil.com/noticias/futbol/la-productora-encargada-del-homenaje-a-messi-explico-las-fallas-tecnicas-del-show-y-responsabilizo-a-river.phtml",
+     "fecha": "2026-10-08T22:50:50.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/river-plate/river-despedida-messi-marketing-sports-empresa-organizacion-comunicado-contrapunto-pantalla-electricidad_0_9WP8SrGGjp.html",
+     "fecha": "2026-10-08T22:43:42.000Z"
+    },
+    {
+     "medio": "La Página Millonaria",
+     "enlace": "https://lapaginamillonaria.com/river-plate/la-respuesta-de-river-al-comunicado-de-marketing-sports-la-productora-que-afa-contrato-para-la-despedida-de-messi",
+     "fecha": "2026-10-09T00:53:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 4
   },
   {
    "id": "15l69b7",

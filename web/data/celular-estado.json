@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T11:33:34.701Z",
- "portada": 49,
- "archivo": 848,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-09T12:02:21.735Z",
+ "portada": 51,
+ "archivo": 849,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-09T11:33:34.743Z",
+  "generado": "2026-10-09T12:02:21.760Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -98,9 +98,9 @@
     "segundos": 49,
     "notas": [
      {
-      "id": "w8iv0l",
-      "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
-      "seccion": "Deportes"
+      "id": "1v0pyz6",
+      "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
+      "seccion": "Balcarce"
      },
      {
       "id": "ypnvl8",
@@ -108,9 +108,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "6vefne",
-      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
-      "seccion": "Balcarce"
+      "id": "fkiosn",
+      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
+      "seccion": "Economía"
      },
      {
       "id": "175ztwv",
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 49,
     "notas": [
-     {
-      "id": "fkiosn",
-      "titulo": "La Auditoría General detecta pérdidas millonarias en el Banco Central",
-      "seccion": "Economía"
-     },
      {
       "id": "15x6yh5",
       "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "6vefne",
+      "titulo": "UATRE Balcarce abre la inscripción para útiles escolares",
+      "seccion": "Balcarce"
      },
      {
       "id": "1om2oqi",
@@ -163,7 +163,14 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1v0pyz6",
+     "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-08T21:10:07.630Z",
    "porDia": 5,
