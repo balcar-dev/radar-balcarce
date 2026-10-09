@@ -53,6 +53,18 @@ cambiar el menú, la portada o la firma, ni nada de lo que Google lee sin hablar
 | **Qué hace falta para que las notas nacionales sean más propias** (la IA ya las reescribe cruzando fuentes, pero sin aportar datos nuevos) | Análisis abajo |
 | Search Console: 409 sin indexar (333 «descubiertas, todavía sin rastrear» —normal en un sitio nuevo—, 55 con `noindex` a propósito, 9 con 404, 9 «rastreadas, sin indexar», 3 redirecciones) | Los 55 `noindex` son notas finas, y las notas viejas sin cuerpo ya salen del archivo (regla 156). Los 9 404 hay que verlos entre los dos (la cuenta de Search Console es la del medio) |
 
+### Lo de las capturas del 9/10 al mediodía (Participá, efeméride, subtítulos)
+
+| Qué se vio | Causa | Qué se hizo |
+|---|---|---|
+| La pieza de Participá no tenía el mail ni el sobre | Las cuatro de Participá son **piezas fijas** armadas el 1 y 2/10 con la placa vieja: el plan las sube tal cual | Se vuelven a armar **el sábado 10/10 a las 5:30** con la escena nueva (sobre y mail, pie parejo) y valen hasta el 31/10. Gasta cuatro audios del cupo del día |
+| La efeméride no tenía el dibujito al lado del año | La de las 9:00 salió **antes** de conectar las escenas (las conecté después, ya al mediodía) | Desde mañana salen con su dibujo (bandera, espigas, átomo, copa, notas, reloj o plano, según el tipo) |
+| «No se ve la barrita roja de abajo» en Participá | Está en todas las piezas; en esa captura el video recién empezaba (la barra avanza de izquierda a derecha durante todo el video) | Nada: se confirma mirando un video completo |
+| **Subtítulos encimados** en una historia (dos líneas una sobre la otra) | Un cartel dura 0,12 s más que su última palabra y, si el siguiente arranca antes, se veían los dos a la vez | Corregido: nunca se superponen (`subtitulos-sin-encimar.test.mjs`) |
+
+El plan del **mapa comercial de Balcarce** (psicólogos, oficios, comercios, agro; formas de contacto; primer mensaje de validar datos; «comercios amigos» en las placas; notas de comercios) quedó escrito en
+[`MAPA-COMERCIAL-PLAN.md`](MAPA-COMERCIAL-PLAN.md), para después de lo técnico. La base que ya existe está en `COMERCIAL.md` y `comercial/` (145 comercios de OpenStreetMap).
+
 ### Las notas con varias fuentes: qué se hace hoy y qué podría mejorar
 
 Hoy, una noticia que cuentan 2 o más medios pasa por el «editor digital» (Gemini): investiga el hecho cruzando las fuentes (qué confirman todas, qué dice una sola, qué se contradice), la reescribe con palabras propias (nunca más de diez palabras seguidas iguales a una fuente), atribuye cada dato, le agrega antecedentes de nuestras propias notas anteriores, y después un verificador la compara con las fuentes. Es redacción propia, pero **no suma datos que las fuentes no tengan**, a propósito: lo que no se puede comprobar no se afirma.
