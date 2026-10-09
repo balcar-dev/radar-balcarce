@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T18:32:04.697Z",
- "portada": 53,
- "archivo": 877,
- "esperandoCuerpo": 9,
+ "generado": "2026-10-09T19:03:16.368Z",
+ "portada": 57,
+ "archivo": 880,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-09T18:32:04.721Z",
+  "generado": "2026-10-09T19:03:16.415Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "vwb5m5",
+      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
+      "seccion": "Fútbol"
+     },
      {
       "id": "10izr2u",
       "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
@@ -173,11 +178,6 @@
       "id": "175ztwv",
       "titulo": "UATRE Balcarce saluda al personal rural en su día",
       "seccion": "Agro"
-     },
-     {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -203,15 +203,14 @@
      "id": "14mxql1",
      "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
      "cuando": "2026-10-09T17:05:23.621Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1j94k5u",
      "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
-     "seccion": "Fútbol",
-     "marcada": false
-    },
+     "cuando": "2026-10-09T18:45:24.033Z"
+    }
+   ],
+   "cola": [
     {
      "id": "aqy95q",
      "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
@@ -225,8 +224,8 @@
      "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-09T18:35:23.621Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-09T20:15:24.033Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
