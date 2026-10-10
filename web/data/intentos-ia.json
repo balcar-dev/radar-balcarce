@@ -220,9 +220,9 @@
   "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA"
  },
  "15fpn5m": {
-  "intentos": 3,
-  "ultimo": "2026-10-10T01:31:42.972Z",
-  "motivo": "cuerpo: 1 problema (nombre): el cuerpo nombra a \"legislativo\" y la fuente no; sin esas oraciones quedan 57 palabras"
+  "intentos": 4,
+  "ultimo": "2026-10-10T02:02:20.281Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 69 palabras"
  },
  "15ikzjc": {
   "intentos": 1,
@@ -846,11 +846,6 @@
  "1hw35d": {
   "intentos": 1,
   "ultimo": "2026-10-06T18:31:38.105Z",
-  "motivo": "con cuerpo"
- },
- "1hy6wdw": {
-  "intentos": 1,
-  "ultimo": "2026-10-03T02:01:20.010Z",
   "motivo": "con cuerpo"
  },
  "1i07zda": {
