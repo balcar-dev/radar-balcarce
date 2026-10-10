@@ -1,6 +1,97 @@
 {
-  "generado": "2026-10-10T10:31:56.621Z",
+  "generado": "2026-10-10T11:02:05.431Z",
   "notas": [
+    {
+      "id": "4u38d4",
+      "titulo": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur",
+      "copete": "Los pilotos de McLaren protagonizaron un incidente en el cierre de la competencia corta en el circuito asiático que dejó fuera de pista al australiano y relegó al británico al octavo lugar.",
+      "cuerpo": "Lando Norris impactó contra el vehículo de su compañero Oscar Piastri durante los metros finales de la carrera Sprint en el Gran Premio de Singapur. Como resultado, el australiano abandonó la competencia y su colega rescató el octavo puesto.\n\nEl episodio causó sorpresa debido a los antecedentes recientes del corredor británico, quien semanas atrás cuestionó con dureza a Franco Colapinto en Azerbaiyán por una acción comparable y exigió suspensiones por parte de las autoridades. Ante las consultas sobre lo sucedido en esta ocasión, el protagonista minimizó el choque y afirmó que se trató de una situación propia de la actividad en pista sin emitir disculpas.",
+      "guion": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/10/video-norris-choco-a-piastri-en-singapur-tras-una-maniobra-similar-a-la-de-colapinto-que-habia-cuestionado-en-azerbaiyan/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T10:45:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T11:01:50.338Z",
+      "relevancia": 77,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lando Norris embistió a Oscar Piastri en el cierre de la carrera Sprint en Singapur.",
+        "El australiano abandonó la competencia y el británico finalizó en el octavo puesto.",
+        "Norris había criticado previamente una maniobra similar de Franco Colapinto en Azerbaiyán.",
+        "El piloto restó importancia al incidente y lo calificó como una acción propia de las carreras."
+      ],
+      "seSabe": [
+        "Lando Norris y Oscar Piastri protagonizaron un choque en la última vuelta de la carrera Sprint de Singapur.",
+        "Oscar Piastri debió abandonar la competencia y Lando Norris terminó octavo.",
+        "Lando Norris restó importancia al incidente tras finalizar la prueba."
+      ],
+      "noConfirmado": [
+        "No se informaron sanciones oficiales por parte de las autoridades de la competencia tras el choque entre los compañeros de equipo."
+      ],
+      "textoRedes": "Lando Norris chocó a su compañero Oscar Piastri en la última vuelta de la carrera Sprint en Singapur, lo que obligó al australiano a abandonar y dejó al británico en el octavo puesto.",
+      "etiquetas": [
+        "Formula 1",
+        "Gran Premio de Singapur",
+        "Lando Norris",
+        "Oscar Piastri",
+        "McLaren"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/10/video-norris-choco-a-piastri-en-singapur-tras-una-maniobra-similar-a-la-de-colapinto-que-habia-cuestionado-en-azerbaiyan/",
+          "fecha": "2026-10-10T10:45:16.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo del choque en la última vuelta de la Sprint, el abandono de Piastri y las declaraciones posteriores de Norris."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/10/escandaloso-accidente-entre-los-mclaren-a-metros-del-final-de-la-sprint-lando-norris-se-toco-a-oscar-piastri-y-lo-dejo-fuera-de-carrera/",
+          "fecha": "2026-10-10T10:52:36.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1wob65z",
+          "titulo": "Max Verstappen gana la carrera Sprint en Singapur y Colapinto abandona",
+          "fecha": "2026-10-10T10:26:51.000Z",
+          "ruta": "/nota/max-verstappen-gana-la-carrera-sprint-en-singapur-y-colapinto-abandona-1wob65z"
+        },
+        {
+          "id": "117ewnb",
+          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
+          "fecha": "2026-10-08T11:26:30.000Z",
+          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
+        },
+        {
+          "id": "18wlubj",
+          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+          "fecha": "2026-10-07T09:01:08.000Z",
+          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "lando-norris-choca-a-su-companero-oscar-piastri-en-la-sprint-de",
+      "foto": {
+        "archivo": "fotos-notas/4u38d4.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
     {
       "id": "clima20261010",
       "propia": "clima",
@@ -109,105 +200,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-calendario-conmemora-la-salud-mental-y-la-danza"
-    },
-    {
-      "id": "1wob65z",
-      "titulo": "Max Verstappen gana la carrera Sprint en Singapur y Colapinto abandona",
-      "copete": "Max Verstappen se queda con la victoria en la competencia corta del Gran Premio de Singapur. La prueba comienza con demora por la lluvia y el argentino Franco Colapinto abandona en la cuarta vuelta.",
-      "cuerpo": "Max Verstappen gana la carrera Sprint del Gran Premio de Singapur, correspondiente a la decimoséptima fecha de la temporada de la Fórmula 1. La competencia arranca con media hora de demora a causa de la intensa lluvia en el circuito callejero de Marina Bay.\n\nEl piloto argentino Franco Colapinto sufre un trompo en el transcurso de la cuarta vuelta y decide retirar su vehículo sin registrar impactos contra las defensas. Trece monoplazas de los veintidós participantes logran cruzar la línea de meta, en una prueba donde Lewis Hamilton termina en el segundo puesto y Charles Leclerc ocupa el tercer lugar del podio.",
-      "guion": "Max Verstappen gana la carrera Sprint en Singapur y Colapinto abandona",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infobae",
-        "TyC Sports",
-        "La Nueva"
-      ],
-      "enlace": "https://www.tycsports.com/automovilismo/f1-hora-y-donde-ver-la-carrera-sprint-de-colapinto-en-el-gp-de-singapur-id764748.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T10:26:51.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T10:31:25.625Z",
-      "relevancia": 87,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Max Verstappen gana la carrera Sprint en Singapur",
-        "Franco Colapinto abandona en la cuarta vuelta",
-        "Lewis Hamilton finaliza segundo y Charles Leclerc tercero",
-        "La competencia comienza con demora por la lluvia"
-      ],
-      "seSabe": [
-        "Max Verstappen gana la competencia corta en Singapur",
-        "Franco Colapinto abandona tras un trompo en la cuarta vuelta",
-        "La largada registra media hora de demora por la lluvia",
-        "Lewis Hamilton y Charles Leclerc completan el podio"
-      ],
-      "noConfirmado": [
-        "El origen exacto del fallo eléctrico en el monoplaza del argentino"
-      ],
-      "textoRedes": "Max Verstappen gana la carrera Sprint en el Gran Premio de Singapur tras una largada demorada por la lluvia. El argentino Franco Colapinto sufre un trompo y abandona la competencia en la cuarta vuelta.",
-      "etiquetas": [
-        "Formula 1",
-        "Max Verstappen",
-        "Franco Colapinto",
-        "Singapur"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/f1-hora-y-donde-ver-la-carrera-sprint-de-colapinto-en-el-gp-de-singapur-id764748.html",
-          "fecha": "2026-10-10T10:26:51.000Z",
-          "oficial": false,
-          "aporte": "Detalla el desarrollo de la carrera, el abandono de Colapinto y las posiciones de los pilotos."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/10/franco-colapinto-largara-11-la-carrera-sprint-del-gran-premio-de-singapur-de-formula-1-hora-tv-y-la-grilla-de-largada/",
-          "fecha": "2026-10-10T10:27:56.000Z",
-          "oficial": false,
-          "aporte": "Informa sobre la victoria de Verstappen y la demora inicial por la lluvia."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-9-23-53-0-en-vivo-se-encuentra-demorada-por-lluvia-la-carrera-sprint-del-gp-de-singapur",
-          "fecha": "2026-10-10T10:27:00.000Z",
-          "oficial": false,
-          "aporte": "Ubica la competencia en la fecha 17 del campeonato y en el circuito de Marina Bay."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "117ewnb",
-          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
-          "fecha": "2026-10-08T11:26:30.000Z",
-          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
-        },
-        {
-          "id": "18wlubj",
-          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
-          "fecha": "2026-10-07T09:01:08.000Z",
-          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
-        },
-        {
-          "id": "kg0imu",
-          "titulo": "Verstappen agradece los elogios de Colapinto tras el choque en Bakú",
-          "fecha": "2026-10-02T19:48:38.000Z",
-          "ruta": "/nota/verstappen-agradece-los-elogios-de-colapinto-tras-el-choque-en-baku-kg0imu"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "max-verstappen-gana-la-carrera-sprint-en-singapur-y-colapinto-abandona",
-      "foto": {
-        "archivo": "fotos-notas/1wob65z.jpg",
-        "credito": "Foto: Infobae"
-      }
     },
     {
       "id": "9zwjal",
@@ -584,6 +576,85 @@
       }
     },
     {
+      "id": "xggmkl",
+      "titulo": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "copete": "A pesar de registrar una baja en sus precios en dólares durante julio, el país mantiene los valores más altos de América Latina en dos rubros clave, según un informe de Fundar.",
+      "cuerpo": "Los precios en moneda extranjera retrocedieron 0,3% en julio y acumularon dos meses seguidos de descenso frente a la región, de acuerdo con el informe de Fundar. El país registra los valores más elevados en restaurantes, indumentaria, comunicaciones, recreación y equipamiento del hogar. Por el contrario, los segmentos más accesibles resultaron alimentos, educación, vivienda y servicios, alcohol y tabaco y salud.\n\nEl nivel general se ubicó en 98,3 puntos y se situó por encima de Chile, un hecho que no ocurría desde abril de 2025. Ese cambio obedeció a la caída de casi 3% en la moneda chilena durante el mismo periodo, mientras que la economía nacional quedó 1,7% por debajo del promedio regional.\n\nEn la perspectiva de largo plazo, los precios locales acumulan un incremento del 74,4% en dólares en comparación con enero de 2021. Hacia agosto, la tendencia habría cambiado con un nuevo encarecimiento relativo tras registrar una inflación del 1,7%.",
+      "guion": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "Perfil",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T23:44:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T06:31:48.320Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los precios en dólares bajaron 0,3% en julio.",
+        "Argentina lidera los costos regionales en ropa y gastronomía.",
+        "El país superó a Chile en el índice de precios durante julio.",
+        "La economía nacional acumula un incremento del 74,4% en dólares desde 2021."
+      ],
+      "seSabe": [
+        "Los precios en dólares bajaron 0,3% en julio según el Índice Mensual de Precios Relativos de Fundar.",
+        "Argentina supera a Chile en el indicador regional con 98,3 puntos frente a 97,6.",
+        "El país encabeza los rubros de restaurantes e indumentaria en América Latina."
+      ],
+      "noConfirmado": [
+        "La comparación exacta con el resto de América Latina correspondiente al mes de agosto todavía no fue actualizada."
+      ],
+      "textoRedes": "El país registra los precios más altos de América Latina en restaurantes e indumentaria a pesar de una leve baja en dólares durante julio, según un informe de Fundar.",
+      "etiquetas": [
+        "precios",
+        "dolares",
+        "indumentaria",
+        "restaurantes",
+        "fundar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+          "fecha": "2026-10-09T23:44:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del índice de precios en dólares, la comparación regional, los rubros más caros y las estadísticas de Fundar."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-indumentaria-y-los-restaurantes-mas-caros-de-la-region.phtml",
+          "fecha": "2026-10-10T05:56:13.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-tiene-la-ropa-y-los-restaurantes-mas-caros-de-la-region--pese-a-la-leve-baja-de-la-inflacion-en-dolares-en-julio_a6ac993e3587f18d75220d84b",
+          "fecha": "2026-10-10T01:34:49.000Z",
+          "oficial": false,
+          "aporte": "Compartió la información general sobre la posición de Argentina en precios de indumentaria y restaurantes frente a la región."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "argentina-encabeza-el-ranking-regional-en-indumentaria-y-gastronomia",
+      "foto": {
+        "archivo": "fotos-notas/xggmkl.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
       "id": "1aizybd",
       "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
       "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
@@ -738,6 +809,64 @@
       "slug": "leandro-spinelli-analiza-la-economia-local-y-confirma-nuevas-obras"
     },
     {
+      "id": "1360zul",
+      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
+      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
+      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:21:15.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:27:38.237Z",
+      "relevancia": 74,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
+        "La función se realiza en el teatro Roxy desde las 21.30.",
+        "El unipersonal cuenta con dirección de Martín Bontempo.",
+        "Las entradas están a la venta en Plateanet y en la boletería."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
+      "etiquetas": [
+        "Camila Peralta",
+        "Suavecita",
+        "Mar del Plata",
+        "teatro",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
+          "fecha": "2026-10-09T23:21:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
+      "foto": {
+        "archivo": "fotos-notas/1360zul.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "88fvqd",
       "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
       "copete": "Una iniciativa escolar sobre el manejo de fármacos caducados ingresó al ámbito legislativo local tras un interrogante planteado en el aula.",
@@ -752,7 +881,7 @@
       "fecha": "2026-10-09T22:40:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -822,100 +951,62 @@
       }
     },
     {
-      "id": "1429pe8",
-      "titulo": "Karina Milei proyecta la exportación de carne a Israel",
-      "copete": "La secretaria general de la Presidencia se reunió con la embajadora Ahuva Spieler Reshef para impulsar el mercado cárnico en el exterior.",
-      "cuerpo": "De la reunión participó el presidente ejecutivo de PromArgentina, Diego Sucalesca.\n\nDurante el encuentro, las autoridades anunciaron el lanzamiento de la Semana de la Carne Argentina en Israel. Como parte de la iniciativa de inserción comercial, representantes de frigoríficos integrarán una misión comercial a la ciudad de Tel Aviv con respaldo técnico y logístico.\n\nA principios de mes, la funcionaria nacional había encabezado rondas de negocios en París junto a firmas pesqueras y directivos de empresas francesas para incrementar exportaciones y captar inversiones.",
-      "guion": "Karina Milei proyecta la exportación de carne a Israel",
-      "seccion": "Política",
+      "id": "146dyw0",
+      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
+      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
+      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "seccion": "Deportes",
       "medios": [
-        "La Nación",
-        "Ámbito",
-        "Bichos de Campo",
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "Infobae"
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
       ],
-      "enlace": "https://noticiasargentinas.com/politica/con-foco-en-las-exportaciones--karina-milei-se-reunio-con-la-embajadora-de-israel_a6ac95f9a587f18d75210421a",
+      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T21:34:58.000Z",
+      "fecha": "2026-10-09T22:30:19.147Z",
       "sinFecha": false,
       "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 66,
-      "local": false,
+      "relevancia": 93,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "Karina Milei recibió a la embajadora de Israel en la Casa Rosada.",
-        "Anunciaron el lanzamiento de la Semana de la Carne Argentina en Israel.",
-        "Representantes de frigoríficos viajarán a Tel Aviv para una misión comercial."
+      "seSabe": [
+        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
+        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
+        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
       ],
       "noConfirmado": [
-        "Todavía no se informaron las fechas exactas en las que se desarrollará la misión comercial en Tel Aviv."
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Karina Milei mantuvo un encuentro con la embajadora de Israel en la Casa Rosada y anunciaron el lanzamiento de la Semana de la Carne Argentina para potenciar las exportaciones.",
+      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
       "etiquetas": [
-        "Karina Milei",
-        "Israel",
-        "exportaciones",
-        "carne",
-        "PromArgentina"
+        "Paula Boccia",
+        "tenis",
+        "Balcarce",
+        "Tucumán",
+        "deportes"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/con-foco-en-las-exportaciones--karina-milei-se-reunio-con-la-embajadora-de-israel_a6ac95f9a587f18d75210421a",
-          "fecha": "2026-10-09T22:12:35.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
+          "fecha": "2026-10-09T22:31:35.000Z",
           "oficial": false,
-          "aporte": "Detalló el encuentro en la Casa Rosada y los objetivos de exportación."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/semana-de-la-carne-en-israel-karina-milei-y-la-embajadora-ahuva-spieler-reshef-anunciaron-una-nid09102026/",
-          "fecha": "2026-10-09T23:01:50.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación de Diego Sucalesca y el anuncio de la feria."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/el-gobierno-organizara-la-semana-la-carne-argentina-tel-aviv-impulsar-las-exportaciones-israel-n6332246",
-          "fecha": "2026-10-09T23:22:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que representantes de frigoríficos viajarán a Tel Aviv."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pq0gh4",
-          "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "ruta": "/nota/karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca-1pq0gh4"
-        },
-        {
-          "id": "oa2ef",
-          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
-          "fecha": "2026-10-02T09:29:30.000Z",
-          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
-        },
-        {
-          "id": "wcnatb",
-          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
-          "fecha": "2026-10-01T13:40:00.000Z",
-          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
+          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "karina-milei-proyecta-la-exportacion-de-carne-a-israel",
+      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
       "foto": {
-        "archivo": "fotos-notas/1429pe8.jpg",
-        "credito": "Foto: La Nación"
+        "archivo": "fotos-notas/146dyw0.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1374,7 +1465,7 @@
       "fecha": "2026-10-09T18:21:42.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T09:01:36.782Z",
-      "relevancia": 100,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1840,87 +1931,6 @@
       "foto": {
         "archivo": "fotos-notas/16bffnh.jpg",
         "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "pyejmn",
-      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
-      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T15:31:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T21:31:52.077Z",
-      "relevancia": 32,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cayeron 48 milímetros promedio en la región núcleo.",
-        "El trigo atraviesa las etapas clave de floración y espigazón.",
-        "Los rendimientos superarán los cuarenta quintales por hectárea."
-      ],
-      "seSabe": [
-        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
-        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
-        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
-      ],
-      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "etiquetas": [
-        "trigo",
-        "clima",
-        "lluvias",
-        "agro",
-        "Bolsa de Comercio de Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-          "fecha": "2026-10-09T15:31:40.000Z",
-          "oficial": false,
-          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
-          "fecha": "2026-10-09T19:32:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ydwxhf",
-          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-          "fecha": "2026-10-02T17:03:25.000Z",
-          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
-        },
-        {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
-      "foto": {
-        "archivo": "fotos-notas/pyejmn.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2398,6 +2408,7 @@
       "guion": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
@@ -2416,7 +2427,7 @@
       "fecha": "2026-10-09T13:12:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 83,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2541,6 +2552,7 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2551,7 +2563,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 62,
+      "relevancia": 72,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -2825,139 +2837,87 @@
       }
     },
     {
-      "id": "1tcczj3",
-      "titulo": "Mar del Plata registra un cincuenta por ciento de reservas",
-      "copete": "La ciudad balnearia alcanza la mitad de su capacidad reservada para el fin de semana largo. El sector turístico espera mejoras climáticas para sumar visitantes.",
-      "cuerpo": "El distrito de General Pueyrredon alcanza un nivel de reservas de entre el 45% y el 50% para el fin de semana largo por el feriado del lunes 12 de octubre, según informó el sector turístico. Hernán Szkrohal explicó que aguardan las condiciones meteorológicas de los próximos días para concretar más contrataciones a último momento.\n\nEn paralelo, la Municipalidad dispuso un esquema de guardias en los servicios públicos de Mar del Plata y Batán durante el fin de semana. La recolección de residuos funciona con normalidad, mientras que los centros de salud como el Ameghino y el de Batán, además de las áreas de Seguridad, Desarrollo Social y los cementerios, operan con esquemas especiales de atención.",
-      "guion": "Mar del Plata registra un cincuenta por ciento de reservas",
-      "seccion": "Cultura y agenda",
+      "id": "1gmlwhw",
+      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "copete": "Ediles cruzaron cuestionamientos en la 15á sesión por la campaña de recupero de deuda a más de 2.000 usuarios y la contratación de un estudio jurídico externo.",
+      "cuerpo": "El tramo final de la decimoquinta sesión del Concejo Deliberante concentró un intenso debate en torno a las intimaciones enviadas por Aguas de la Ciudad para recuperar deudas acumuladas por más de 2.000 usuarios. La discusión expuso objeciones de la oposición sobre la contratación de un estudio jurídico marplatense y la demora en responder pedidos de informes.\n\nEn la misma línea, Enrique Guillén y Gabriel Petruccelli reclamaron que las gestiones queden a cargo de profesionales locales y exigieron mayores facilidades de pago para los vecinos. Desde el oficialismo, Leandro Spinelli rechazó las sospechas, defendió la necesidad de recaudar fondos ante la delicada situación financiera de la firma y prometió gestionar las explicaciones requeridas.",
+      "guion": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "seccion": "Balcarce",
       "medios": [
-        "0223 (Mar del Plata)",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infobrisas (Radio Brisas)",
-        "Punto Noticias",
-        "Radio 10 Mar del Plata (FM 105.5)"
+        "Puntonueve (FM 100.9)"
       ],
-      "enlace": "https://www.elmarplatense.com/mar-del-plata-registra-entre-un-45-y-un-50-de-reservas-para-el-fin-de-semana-largo",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T11:17:00.000Z",
+      "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T11:36:27.000Z",
       "sinFecha": false,
-      "visto": "2026-10-09T23:01:49.633Z",
-      "relevancia": 69,
-      "local": false,
+      "visto": "2026-10-09T14:31:49.247Z",
+      "relevancia": 67,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "El sector turístico alcanza hasta el 50% de reservas.",
-        "El lunes 12 de octubre se conmemora el feriado nacional.",
-        "La Municipalidad organiza guardias en servicios públicos."
+        "Intimaciones a más de 2.000 usuarios del servicio sanitario.",
+        "Cuestionamiento opositor a un estudio jurídico marplatense.",
+        "Reclamos por falta de respuestas a pedidos de informes.",
+        "Defensa oficialista de la recaudación para sostener a la empresa."
       ],
       "seSabe": [
-        "El nivel de reservas turísticas se ubica entre el 45% y el 50%, según el sector.",
-        "La Municipalidad de General Pueyrredon mantiene guardias en servicios esenciales.",
-        "La recolección de residuos funciona de manera habitual."
+        "El debate ocurrió al cierre de la 15á sesión del Concejo Deliberante.",
+        "La campaña de cobro alcanza a más de 2.000 usuarios.",
+        "La oposición cuestionó la Ordenanza 40/26 y la falta de respuestas de Ricardo Stoppani."
       ],
       "noConfirmado": [
-        "No se especificó la cantidad total de plazas hoteleras disponibles en el distrito."
+        "No se detallaron los montos totales de la deuda reclamada a los usuarios.",
+        "No trascendieron los plazos en los que asumiría el nuevo gerente de la empresa.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "Intenso debate en el Concejo Deliberante por las intimaciones y el recupero de deudas impulsado por Aguas de la Ciudad a más de 2.000 usuarios.",
       "etiquetas": [
-        "Mar del Plata",
-        "fin de semana largo",
-        "reservas",
-        "Municipalidad de General Pueyrredon"
+        "Concejo Deliberante",
+        "Aguas de la Ciudad",
+        "deudas",
+        "OSEBAL"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/mar-del-plata-registra-entre-un-45-y-un-50-de-reservas-para-el-fin-de-semana-largo",
-          "fecha": "2026-10-09T16:00:04.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
+          "fecha": "2026-10-09T11:36:27.000Z",
           "oficial": false,
-          "aporte": "Aportó el porcentaje de reservas hoteleras y las declaraciones de Hernán Szkrohal."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-9-19-48-0-finde-largo-como-funcionaran-las-guardias-de-los-principales-servicios-municipales",
-          "fecha": "2026-10-09T22:48:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el esquema de guardias municipales por el fin de semana largo."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/fin-de-semana-largo-en-mar-del-plata-como-funcionaran-los-servicios-municipales-1",
-          "fecha": "2026-10-09T18:30:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los servicios públicos en Mar del Plata y Batán."
-        },
-        {
-          "medio": "Mi8 (Canal 8 Mar del Plata)",
-          "enlace": "https://mi8.com.ar/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo/",
-          "fecha": "2026-10-09T19:56:02.000Z",
-          "oficial": false,
-          "aporte": "Mencionó los centros de salud que permanecen abiertos."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110937-fin-de-semana-largo-en-mar-del-plata-hay-un-50por_ciento-de-reservas-y-preocupa-el-clima",
-          "fecha": "2026-10-09T22:11:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110880-como-seran-las-guardias-municipales-durante-el-fin-de-semana-largo-en-mar-del-plata",
-          "fecha": "2026-10-09T16:47:14.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Punto Noticias",
-          "enlace": "https://puntonoticias.com/el-municipio-informa-el-funcionamiento-de-las-guardias-para-este-fin-de-semana-largo-5/",
-          "fecha": "2026-10-09T20:37:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio 10 Mar del Plata (FM 105.5)",
-          "enlace": "https://radio10mardelplata.com.ar/fin-de-semana-largo-en-mar-del-plata-que-servicios-municipales-funcionaran-y-cuales-tendran-guardias/",
-          "fecha": "2026-10-09T17:01:43.000Z",
-          "oficial": false,
-          "aporte": "Indicó el funcionamiento de la recolección de residuos y áreas especiales."
+          "aporte": "Detalló los cruces en el Concejo Deliberante por las intimaciones de Aguas de la Ciudad y las posturas de los bloques."
         }
       ],
       "antecedentes": [
         {
-          "id": "1pwavd9",
-          "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región",
-          "fecha": "2026-10-06T00:01:00.000Z",
-          "ruta": "/nota/la-empresa-esuco-retoma-tareas-viales-en-las-rutas-de-la-region-1pwavd9"
+          "id": "z7t628",
+          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
+          "fecha": "2026-10-09T02:06:53.000Z",
+          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
         },
         {
-          "id": "j3xrez",
-          "titulo": "La concesión de la Ruta 226 arranca con tareas de pintura",
-          "fecha": "2026-10-03T03:01:28.393Z",
-          "ruta": "/nota/la-concesion-de-la-ruta-226-arranca-con-tareas-de-pintura-j3xrez"
+          "id": "e09k96",
+          "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
+          "fecha": "2026-10-07T05:31:18.450Z",
+          "ruta": "/nota/el-concejo-debate-la-creacion-de-un-banco-municipal-de-fisiatria-e09k96"
         },
         {
-          "id": "fd2y4d",
-          "titulo": "Choque frontal en la Ruta 226 deja tres heridos",
-          "fecha": "2026-10-02T22:58:21.000Z",
-          "ruta": "/nota/choque-frontal-en-la-ruta-226-deja-tres-heridos-fd2y4d"
+          "id": "1s9so2g",
+          "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
+          "fecha": "2026-09-25T23:02:57.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal-1s9so2g"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "mar-del-plata-registra-un-cincuenta-por-ciento-de-reservas",
+      "slug": "el-concejo-discute-las-intimaciones-de-aguas-de-la-ciudad",
       "foto": {
-        "archivo": "fotos-notas/1tcczj3.jpg",
-        "credito": "Foto: 0223 (Mar del Plata)"
+        "archivo": "fotos-notas/1gmlwhw.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2969,13 +2929,13 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
-        "Infobae",
         "Ámbito",
         "TyC Sports",
         "Olé",
         "Minuto Uno",
         "Crónica",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Infobae"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
       "teniaImagenLaFuente": true,
@@ -3056,7 +3016,7 @@
       "fecha": "2026-10-09T10:56:04.110Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 32,
+      "relevancia": 24,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3119,10 +3079,10 @@
         "La Nación",
         "Infobae",
         "Perfil",
+        "El Cronista",
         "El Destape",
         "Página/12",
         "Radio Mitre",
-        "El Cronista",
         "Crónica"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
@@ -3180,107 +3140,6 @@
       "foto": {
         "archivo": "fotos-notas/l5o975.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "k8fay1",
-      "titulo": "El Gobierno fija en dólares la tasa de vuelos nacionales",
-      "copete": "El Organismo Regulador del Sistema Nacional de Aeropuertos oficializó un cuadro tarifario que fija en nueve dólares la tasa para vuelos de cabotaje. Los nuevos valores comenzarán a regir el 8 de diciembre.",
-      "cuerpo": "El cambio principal para los pasajeros de vuelos nacionales es que la tasa aeroportuaria deja de estar expresada en pesos. Hasta el momento, el importe se ubicaba en 5.685 pesos de acuerdo con lo dispuesto en octubre de 2024.\n\nLa modificación tarifaria forma parte de la readecuación contractual acordada en septiembre pasado entre la administración pública y la empresa concesionaria, que extiende la concesión hasta 2056 e incluye un compromiso de inversión por seiscientos millones de dólares.",
-      "guion": "El Gobierno fija en dólares la tasa de vuelos nacionales",
-      "seccion": "Economía",
-      "medios": [
-        "iProfesional",
-        "Crónica",
-        "Radio Mitre",
-        "Diario Popular",
-        "0221",
-        "El Marplatense",
-        "El Eco de Tandil",
-        "Clarín",
-        "Agencia DIB",
-        "Infoeme",
-        "Infobae",
-        "Ámbito",
-        "El Cronista"
-      ],
-      "enlace": "https://www.iprofesional.com/negocios/466260-gobierno-dolariza-tasa-de-cabotaje-nuevas-tarifas-de-aeropuertos",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T10:53:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T15:31:45.594Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "El ORSNA oficializó la Resolución 69/2026 el viernes 9 de octubre.",
-        "La tasa de cabotaje pasa a costar 9 dólares por pasajero.",
-        "El nuevo cuadro tarifario se aplicará en 35 aeropuertos del Grupo A desde el 8 de diciembre.",
-        "La renegociación incluye inversiones por 600 millones de dólares."
-      ],
-      "textoRedes": "El Gobierno oficializó un nuevo cuadro tarifario para 35 aeropuertos que fija en nueve dólares la tasa para vuelos nacionales. La medida comenzará a aplicarse el 8 de diciembre próximo.",
-      "etiquetas": [
-        "aeropuertos",
-        "tarifas",
-        "gobierno nacional",
-        "economia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/negocios/466260-gobierno-dolariza-tasa-de-cabotaje-nuevas-tarifas-de-aeropuertos",
-          "fecha": "2026-10-09T10:53:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los montos específicos para vuelos nacionales e internacionales, la fecha de aplicación y los detalles del acuerdo de concesión."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/aumentan-la-tasa-de-uso-aeroportuario-para-los-vuelos-de-cabotaje-que-impactara-en-los-precios-de-nid09102026/",
-          "fecha": "2026-10-09T13:53:51.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la aprobación del nuevo cuadro tarifario para los 35 aeropuertos del Grupo A."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/cambian-tarifas-aeropuertos-aumenta-tasa-vuelos-cabotaje-pasara-cobrarse-dolares_0_AKmZRl7aES.html",
-          "fecha": "2026-10-09T13:30:43.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la tasa de vuelos nacionales deja de estar fijada en pesos y comenzará a aplicarse en 60 días."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/sociedad/cambios-en-las-tarifas-de-los-aeropuertos-aumenta-la-tasa-para-vuelos-de-cabotaje-y-desde-ahora-se-cobrara-en-dolares/",
-          "fecha": "2026-10-09T15:11:25.000Z",
-          "oficial": false,
-          "aporte": "Precisó el valor anterior de 5.685 pesos y el número de la resolución oficial."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "178vmym",
-          "titulo": "El Gobierno nacional aprueba nuevas tarifas para treinta aeropuertos",
-          "fecha": "2026-10-09T07:39:23.000Z",
-          "ruta": "/nota/el-gobierno-nacional-aprueba-nuevas-tarifas-para-treinta-aeropuertos-178vmym"
-        },
-        {
-          "id": "1e5cybr",
-          "titulo": "Extienden al menos hasta el 2049 la concesión de Aeropuertos Argentina",
-          "fecha": "2026-09-28T01:16:41.000Z",
-          "ruta": "/nota/extienden-hasta-2049-la-concesion-de-aeropuertos-argentina-1e5cybr"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-fija-en-dolares-la-tasa-de-vuelos-nacionales",
-      "foto": {
-        "archivo": "fotos-notas/k8fay1.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -3436,11 +3295,11 @@
         "Infobae",
         "El Destape",
         "TyC Sports",
+        "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
         "La Nueva",
         "Clarín",
         "El Gráfico",
-        "Doble Amarilla",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce"
       ],
@@ -3516,9 +3375,9 @@
         "TyC Sports",
         "C5N",
         "Radio Mitre",
+        "La Brújula 24",
         "ANDigital",
-        "Doble Amarilla",
-        "La Brújula 24"
+        "Doble Amarilla"
       ],
       "enlace": "https://www.clarin.com/deportes/seleccion-argentina-atacada-redes-mundial-2026-acusaciones-corrupcion-supuestos-favores-fifa-var_0_iyeMgUFdks.html",
       "teniaImagenLaFuente": true,
@@ -3607,9 +3466,9 @@
         "La Noticia 1",
         "Diputados Bonaerenses",
         "El Día",
+        "La Verdad",
         "Zona Norte Diario",
-        "ANDigital",
-        "La Verdad"
+        "ANDigital"
       ],
       "enlace": "https://dib.com.ar/politica/gabriel-katopodis-blanqueo-que-quiere-pelear-la-sucesion-kicillof-n56372",
       "teniaImagenLaFuente": true,
@@ -3814,16 +3673,16 @@
     }
   ],
   "secciones": [
+    "Automovilismo",
     "Balcarce",
     "Cultura y agenda",
-    "Automovilismo",
     "Policiales",
     "Agro",
-    "Política",
-    "Fútbol",
-    "Deportes",
-    "Argentina",
     "Economía",
+    "Política",
+    "Deportes",
+    "Fútbol",
+    "Argentina",
     "Tecnología"
   ],
   "temas": [
@@ -3840,9 +3699,9 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 9,
+      "temp": 10,
       "sensacion": 7,
-      "humedad": 91,
+      "humedad": 88,
       "viento": 13,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4198,10 +4057,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "aq8ze",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
+    },
+    {
       "id": "10conaq",
       "titulo": null,
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"el menor de\""
+    },
+    {
+      "id": "11yxcy2",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "b0dinz",
@@ -4214,12 +4085,6 @@
       "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
       "seccion": "Fútbol",
       "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "1wgh2q7",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "1omxa4o",
@@ -4328,12 +4193,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "y5udqq",
-      "titulo": "Capital Humano denunciará en la Justicia la toma del…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1s6utqr",
