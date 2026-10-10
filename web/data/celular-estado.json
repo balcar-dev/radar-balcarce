@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T18:32:41.264Z",
- "portada": 43,
- "archivo": 898,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-10T19:01:55.133Z",
+ "portada": 45,
+ "archivo": 901,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T18:32:41.320Z",
+  "generado": "2026-10-10T19:01:55.159Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-10T18:37:43.946Z"
    },
    {
     "nombre": "utiles",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 52,
+    "salio": "2026-10-10T18:37:43.946Z",
+    "segundos": null,
     "notas": [
      {
       "id": "4u38d4",
@@ -157,8 +157,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 41,
+    "notas": [
+     {
+      "id": "1cj5sd",
+      "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
+      "seccion": "Agro"
+     },
+     {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -172,18 +183,23 @@
      "id": "190bbf8",
      "titulo": "Agustín Conti repasa su vocación y los desafíos de la docencia",
      "cuando": "2026-10-10T13:08:21.023Z"
+    },
+    {
+     "id": "1vwpejn",
+     "titulo": "El Concejo declara de interés el aniversario del Club Amigos Unidos",
+     "cuando": "2026-10-10T18:45:22.680Z"
     }
    ],
    "cola": [
     {
-     "id": "1vwpejn",
-     "titulo": "El Concejo declara de interés el aniversario del Club Amigos Unidos",
-     "seccion": "Balcarce",
+     "id": "1cj5sd",
+     "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
+     "seccion": "Agro",
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-10T14:38:21.023Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-10T20:15:22.680Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
