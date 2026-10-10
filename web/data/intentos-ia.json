@@ -220,9 +220,9 @@
   "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA"
  },
  "15fpn5m": {
-  "intentos": 2,
-  "ultimo": "2026-10-10T01:02:01.933Z",
-  "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-10T01:31:42.972Z",
+  "motivo": "cuerpo: 1 problema (nombre): el cuerpo nombra a \"legislativo\" y la fuente no; sin esas oraciones quedan 57 palabras"
  },
  "15ikzjc": {
   "intentos": 1,
@@ -411,11 +411,6 @@
   "ultimo": "2026-10-04T14:20:23.733Z",
   "motivo": "con cuerpo"
  },
- "17ze7ck": {
-  "intentos": 1,
-  "ultimo": "2026-10-03T01:31:23.288Z",
-  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras"
- },
  "189ob3f": {
   "intentos": 1,
   "ultimo": "2026-10-07T15:33:00.200Z",
@@ -439,6 +434,11 @@
  "18jx7kk": {
   "intentos": 2,
   "ultimo": "2026-10-10T01:02:01.933Z",
+  "motivo": "con cuerpo"
+ },
+ "18k03tm": {
+  "intentos": 1,
+  "ultimo": "2026-10-10T01:31:42.972Z",
   "motivo": "con cuerpo"
  },
  "18upwel": {
@@ -1440,11 +1440,6 @@
   "ultimo": "2026-10-05T21:32:25.306Z",
   "motivo": "con cuerpo"
  },
- "1wdslpn": {
-  "intentos": 2,
-  "ultimo": "2026-10-03T01:31:23.288Z",
-  "motivo": "con cuerpo"
- },
  "1we1z9n": {
   "intentos": 3,
   "ultimo": "2026-10-08T13:31:28.465Z",
@@ -1590,11 +1585,6 @@
  "2i73nb": {
   "intentos": 1,
   "ultimo": "2026-10-07T15:33:00.200Z",
-  "motivo": "con cuerpo"
- },
- "2qj2kn": {
-  "intentos": 2,
-  "ultimo": "2026-10-03T01:31:23.288Z",
   "motivo": "con cuerpo"
  },
  "2qmh95": {
@@ -2571,11 +2561,6 @@
   "ultimo": "2026-10-05T12:31:27.165Z",
   "motivo": "con cuerpo"
  },
- "r3wxcb": {
-  "intentos": 3,
-  "ultimo": "2026-10-03T01:31:23.288Z",
-  "motivo": "con cuerpo"
- },
  "r7ox1t": {
   "intentos": 1,
   "ultimo": "2026-10-08T13:31:28.465Z",
@@ -2911,6 +2896,11 @@
  "x8b5c1": {
   "intentos": 1,
   "ultimo": "2026-10-09T23:32:05.226Z",
+  "motivo": "con cuerpo"
+ },
+ "xj8ent": {
+  "intentos": 1,
+  "ultimo": "2026-10-10T01:31:42.972Z",
   "motivo": "con cuerpo"
  },
  "xlon5q": {
