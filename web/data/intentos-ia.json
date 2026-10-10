@@ -220,8 +220,8 @@
   "motivo": "semáforo: necesita ojo humano: \"menores de 13 anos\", en lo que escribió la IA"
  },
  "15fpn5m": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T00:31:56.241Z",
+  "intentos": 2,
+  "ultimo": "2026-10-10T01:02:01.933Z",
   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "15ikzjc": {
@@ -437,8 +437,8 @@
   "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice"
  },
  "18jx7kk": {
-  "intentos": 1,
-  "ultimo": "2026-10-09T14:01:45.240Z",
+  "intentos": 2,
+  "ultimo": "2026-10-10T01:02:01.933Z",
   "motivo": "con cuerpo"
  },
  "18upwel": {
@@ -2536,15 +2536,15 @@
   "ultimo": "2026-10-05T15:04:56.390Z",
   "motivo": "con cuerpo"
  },
- "qh4l57": {
-  "intentos": 3,
-  "ultimo": "2026-10-03T00:41:54.550Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título dice 3 y el cuerpo no lo explica; sin esas oraciones quedan 136 palabras"
- },
  "ql89ei": {
   "intentos": 3,
   "ultimo": "2026-10-06T16:31:26.951Z",
   "motivo": "con cuerpo"
+ },
+ "qnh2fp": {
+  "intentos": 1,
+  "ultimo": "2026-10-10T01:02:01.933Z",
+  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2603 (line 27 column 14)"
  },
  "qqa24c": {
   "intentos": 3,

@@ -1,49 +1,7 @@
 {
- "generado": "2026-10-10T00:32:01.173Z",
+ "generado": "2026-10-10T01:02:14.353Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1fb9s8v",
-   "titulo": "Solo tres provincias en todo el país lograron aumentar el empleo industrial en los últimos dos años",
-   "copete": "El empleo registrado en la industria manufacturera cayó 5,2% en el primer trimestre de 2026 en comparación con el mismo período de 2024, lo que representó la pérdida de 66.262 puestos de trabajo en todo el país. En ese lapso, solo tres provincias lograron incrementar la cantidad…",
-   "seccion": "Economía",
-   "fecha": "2026-10-09T13:00:33.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/09/solo-tres-provincias-en-todo-el-pais-lograron-aumentar-el-empleo-industrial-en-los-ultimos-dos-anos/",
-     "fecha": "2026-10-09T13:00:33.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/economia/se-perdieron-mas-de-66-mil-puestos-de-trabajo-industrial-entre-todas-las-provincias",
-     "fecha": "2026-10-09T21:12:07.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/economia/industria-perdio-66-262-empleos-llegada-milei-provincias-afectadas-202610914562",
-     "fecha": "2026-10-09T17:56:02.000Z"
-    },
-    {
-     "medio": "Diario Popular",
-     "enlace": "https://www.diariopopular.com.ar/politica/la-industria-perdio-66262-empleos-dos-anos-n923768",
-     "fecha": "2026-10-09T22:38:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/empleo-industrial--se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-y-solo-3-lograron-aumentar-la-cantidad_a6ac92902587f18d752035eca",
-     "fecha": "2026-10-09T18:55:38.129Z"
-    },
-    {
-     "medio": "La Brújula 24",
-     "enlace": "https://www.labrujula24.com/notas/2026/10/09/empleo-industrial-se-perdieron-mas-de-66-mil-puestos-entre-todas-las-provincias-n524677/",
-     "fecha": "2026-10-09T19:59:52.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 2 y el cuerpo no lo explica; sin esas oraciones quedan 93 palabras",
-   "maximo": 4
-  },
   {
    "id": "n9eggk",
    "titulo": "Fin de semana largo: pronostican lluvias, cielo nublado y temperaturas frescas",
@@ -128,23 +86,6 @@
    "maximo": 3
   },
   {
-   "id": "15l69b7",
-   "titulo": "Agustín Molpeceres será reconocido en la Cámara de Diputados provincial",
-   "copete": "La Cámara de Diputados de la Provincia de Buenos Aires otorgará un reconocimiento oficial al balcarceño Agustín Molpeceres, por su destacada trayectoria en el deporte adaptado y el alto rendimiento paralímpico. LOS FUNDAMENTOS La distinción,",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-08T12:52:32.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/agustin-molpeceres-sera-reconocido-en-la-camara-de-diputados-provincial-626",
-     "fecha": "2026-10-08T12:52:32.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
    "id": "1cnk2r1",
    "titulo": "Despues de 20 años, un total de 76 familias de Balcarce recibirán sus escrituras",
    "copete": "El acto se realizará en el hall de la Municipalidad, en principio. Participarán vecinos del barrio Favaloro, familias del barrio Hipólito Yrigoyen y los primeros beneficiarios del loteo municipal de 31 y Caseros, cuyos terrenos fueron vendidos en 2023.",
@@ -159,6 +100,23 @@
    ],
    "intentos": 3,
    "motivo": "título o bajada: 6 problemas (numero): el titulo dice 70 y la fuente no lo dice",
+   "maximo": 3
+  },
+  {
+   "id": "qnh2fp",
+   "titulo": "Presentarán en el Concejo los resultados de la investigación del Proyecto SPRINT",
+   "copete": "",
+   "seccion": "Política",
+   "fecha": "2026-10-10T01:01:53.242Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45050-presentaran-en-el-concejo-los-resultados-de-la-investigacion-del-proyecto-sprint/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2603 (line 27 column 14)",
    "maximo": 3
   },
   {
