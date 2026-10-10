@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T11:31:32.391Z",
- "portada": 45,
+ "generado": "2026-10-10T12:02:05.373Z",
+ "portada": 43,
  "archivo": 896,
- "esperandoCuerpo": 0,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-10T11:31:32.417Z",
+  "generado": "2026-10-10T12:02:05.412Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
      {
       "id": "2qmh95",
@@ -137,11 +137,6 @@
       "id": "jul3dj",
       "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
      },
      {
       "id": "16s8yom",
