@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T21:31:57.789Z",
- "portada": 46,
- "archivo": 904,
+ "generado": "2026-10-10T22:02:09.897Z",
+ "portada": 51,
+ "archivo": 905,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-10T21:31:57.827Z",
+  "generado": "2026-10-10T22:02:09.939Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-10T18:37:43.946Z"
    },
    {
@@ -63,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-10T18:37:43.946Z",
     "segundos": null,
     "notas": [
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 41,
+    "segundos": 36,
     "notas": [
      {
-      "id": "1cj5sd",
-      "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
-      "seccion": "Agro"
+      "id": "p4vc8j",
+      "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
+      "seccion": "Deportes"
      },
      {
       "id": "jul3dj",
@@ -195,7 +195,14 @@
      "cuando": "2026-10-10T20:34:01.086Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "p4vc8j",
+     "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 1,
    "proximoDesde": "2026-10-10T22:04:01.086Z",
    "porDia": 5,
