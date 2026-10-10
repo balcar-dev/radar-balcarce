@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T04:01:49.031Z",
+  "generado": "2026-10-10T04:31:59.792Z",
   "notas": [
     {
       "id": "9zwjal",
@@ -892,9 +892,9 @@
       "seccion": "Economía",
       "medios": [
         "El Eco de Tandil",
+        "Noticias Argentinas (NA)",
         "La Voz del Pueblo",
-        "InfoRegión",
-        "Noticias Argentinas (NA)"
+        "InfoRegión"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-dolar-cerro-la-semana-con-una-leve-suba-y-escalo-hasta-los--1-517_a6ac94524587f18d752090951",
       "teniaImagenLaFuente": true,
@@ -1527,15 +1527,15 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "iProfesional",
-        "Agroempresario",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Agroempresario"
       ],
       "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T16:02:18.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T19:01:44.733Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1758,74 +1758,6 @@
       }
     },
     {
-      "id": "liqt9r",
-      "titulo": "WhatsApp incorpora la velocidad de 2x para reproducir los videos en los Estados",
-      "copete": "La aplicación de mensajería desarrolla una herramienta para duplicar la velocidad de reproducción en los videos efímeros de los Estados, según informaron agencias y portales especializados.",
-      "cuerpo": "WhatsApp prepara una modificación en su sección de Estados para permitir la reproducción de videos a una velocidad de 2x. La función fue detectada inicialmente en pruebas para el sistema operativo iOS y luego incorporada a la versión beta 2.26.40.4 de Android, de acuerdo con los reportes del portal especializado WABetaInfo.\n\nA diferencia de la herramienta utilizada en los audios mediante un botón fijo, esta nueva opción para las publicaciones efímeras funcionará con una dinámica similar a la que ya utilizan plataformas como TikTok, Instagram o YouTube para agilizar la visualización de los contenidos audiovisuales.",
-      "guion": "WhatsApp incorpora la velocidad de dos equis para reproducir los videos en los Estados",
-      "seccion": "Tecnología",
-      "medios": [
-        "La Nueva",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/interes-general/whatsapp-prepara-una-nueva-funcion-en-los-estados--como-funcionara-la-reproduccion-en-2x_a6ac903be587f18d752fd4183",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T15:13:52.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 36,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "WhatsApp prepara reproducción en 2x para los Estados de video",
-        "La novedad se detectó en pruebas de iOS y la beta de Android",
-        "Funciona de manera similar a plataformas como TikTok e Instagram"
-      ],
-      "seSabe": [
-        "WhatsApp prepara una función para reproducir videos de Estados a velocidad 2x",
-        "La herramienta apareció en pruebas de iOS y en la versión beta de Android 2.26.40.4",
-        "El sistema de aceleración se asemeja al de plataformas como TikTok e Instagram"
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta del lanzamiento oficial para todos los usuarios de la aplicación"
-      ],
-      "textoRedes": "WhatsApp prepara una modificación en la sección de Estados para permitir la reproducción de videos a una velocidad de 2x, con un funcionamiento similar al de plataformas como TikTok e Instagram.",
-      "etiquetas": [
-        "WhatsApp",
-        "Estados",
-        "aplicaciones"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/interes-general/whatsapp-prepara-una-nueva-funcion-en-los-estados--como-funcionara-la-reproduccion-en-2x_a6ac903be587f18d752fd4183",
-          "fecha": "2026-10-09T15:13:52.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la incorporación de la velocidad 2x en la versión beta de Android y los detalles de funcionamiento."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-9-14-13-0-whatsapp-prepara-una-nueva-funcion-en-los-estados-como-funcionara-la-reproduccion-en-2x",
-          "fecha": "2026-10-09T17:16:41.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la plataforma prepara la opción de duplicar el ritmo de reproducción en los Estados de video."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "whatsapp-incorpora-la-velocidad-de-2x-para-reproducir-los-videos-en",
-      "foto": {
-        "archivo": "fotos-notas/liqt9r.jpg",
-        "credito": "Foto: La Nueva"
-      }
-    },
-    {
       "id": "14mxql1",
       "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
       "copete": "El equipo local se impuso en el Torneo Provincial de cuarta categoría y jugará el título en noviembre. Regresó este año a la competencia federada tras casi dos décadas.",
@@ -1960,8 +1892,8 @@
         "Ámbito",
         "Crónica",
         "Radio Mitre",
-        "La Nueva",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
       "enlace": "https://tn.com.ar/politica/2026/10/09/nueva-advertencia-del-embajador-de-eeuu-sobre-el-uso-de-tecnologia-china-en-la-argentina-es-entregar-las-llaves-de-tu-casa/",
       "teniaImagenLaFuente": true,
@@ -2303,10 +2235,10 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Acción 5 (Balcarce)",
         "News Balcarce (FM 91.7)",
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
+        "Acción 5 (Balcarce)",
         "Ahora Balcarce",
         "Diario La Vanguardia",
         "Ayacucho al Día",
@@ -2503,13 +2435,13 @@
         "LU9 Mar del Plata",
         "TN (Todo Noticias)",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "0221",
         "El Eco de Tandil",
         "Infobae",
         "A24",
         "Radio Mitre",
         "La Nación",
-        "Noticias Argentinas (NA)",
         "C5N",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
@@ -2808,6 +2740,74 @@
       }
     },
     {
+      "id": "1i5839k",
+      "titulo": "El Gobierno aprueba el proyecto petrolero Los Toldos bajo el régimen de incentivos",
+      "copete": "El Ministerio de Economía validó la iniciativa energética de Tecpetrol y Gas y Petróleo del Neuquén. Prevén una inversión de 6.432 millones de dólares hasta 2054 en la provincia patagónica.",
+      "cuerpo": "El Ministerio de Economía avaló la incorporación de la propuesta Los Toldos al régimen de inversiones. La medida quedó formalizada mediante la Resolución 1771 del corriente año, rubricada por el titular de la cartera económica y difundida en el Boletín Oficial.\n\nEl plan prevé desembolsos por 6.432 millones de dólares hasta 2054 en el departamento neuquino de Pehuenches. La iniciativa pertenece a Tecpetrol junto a Gas y Petróleo del Neuquén y contempla la perforación de 380 pozos horizontales.\n\nEl desarrollo incluye una planta central para procesar hasta 70.000 barriles diarios de crudo y 3,6 millones de metros cúbicos estándar de gas natural.",
+      "guion": "El Gobierno aprueba el proyecto petrolero Los Toldos bajo el régimen de incentivos",
+      "seccion": "Agro",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "El Economista"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/los-toldos--aprueban-el-rigi-para-un-plan-de-us-6-432-millones_a6ac8c7aa8e24c1a50ac6ab0e",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T10:56:04.110Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T16:31:40.451Z",
+      "relevancia": 32,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Inversión de 6.432 millones de dólares hasta 2054.",
+        "Desarrollo a cargo de Tecpetrol y Gas y Petróleo del Neuquén.",
+        "Perforación de 380 pozos horizontales en Pehuenches.",
+        "Construcción de una planta central de tratamiento."
+      ],
+      "seSabe": [
+        "El Ministerio de Economía aprobó el ingreso del proyecto Los Toldos al régimen de inversiones.",
+        "La inversión prevista alcanza los 6.432 millones de dólares con proyección hasta 2054.",
+        "El plan pertenece a una unión transitoria entre Tecpetrol y Gas y Petróleo del Neuquén.",
+        "La iniciativa se ubica en el departamento Pehuenches e incluye 380 pozos horizontales."
+      ],
+      "textoRedes": "El Gobierno aprobó el ingreso del proyecto petrolero Los Toldos al régimen de inversiones con una inversión prevista de 6.432 millones de dólares hasta 2054 en Neuquén.",
+      "etiquetas": [
+        "Economía",
+        "Inversiones",
+        "Neuquén",
+        "Tecpetrol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/los-toldos--aprueban-el-rigi-para-un-plan-de-us-6-432-millones_a6ac8c7aa8e24c1a50ac6ab0e",
+          "fecha": "2026-10-09T10:56:04.110Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Economista",
+          "enlace": "https://eleconomista.com.ar/energia/los-toldos-luz-verde-megaproyecto-petrolero-us6432-millones-n98753",
+          "fecha": "2026-10-09T16:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-aprueba-el-proyecto-petrolero-los-toldos-bajo-el-regimen",
+      "foto": {
+        "archivo": "fotos-notas/1i5839k.jpg",
+        "credito": "Foto: El Economista"
+      }
+    },
+    {
       "id": "l5o975",
       "titulo": "El Gobierno oficializa el proyecto petrolero de Tecpetrol en Vaca Muerta",
       "copete": "El Ejecutivo nacional aprobó la incorporación de Los Toldos II Este al régimen de grandes inversiones. La iniciativa implica una cifra millonaria para incrementar la producción hidrocarburífera en la Cuenca Neuquina.",
@@ -2822,9 +2822,7 @@
         "El Destape",
         "Página/12",
         "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "Crónica",
-        "El Economista"
+        "Crónica"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
       "teniaImagenLaFuente": true,
@@ -2896,11 +2894,11 @@
         "Radio Mitre",
         "Diario Popular",
         "0221",
-        "Infoeme",
         "El Marplatense",
         "El Eco de Tandil",
         "Clarín",
         "Agencia DIB",
+        "Infoeme",
         "Infobae",
         "Ámbito",
         "El Cronista"
@@ -3050,8 +3048,8 @@
       "seccion": "Política",
       "medios": [
         "Crónica",
-        "El Eco de Tandil",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "La Nueva",
         "Ámbito"
       ],
@@ -3132,8 +3130,8 @@
         "Perfil",
         "Crónica",
         "Radio Mitre",
-        "Ámbito",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Ámbito"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/09/el-gobierno-autorizo-la-participacion-del-ejercito-argentino-en-un-ejercicio-militar-con-brasil/",
       "teniaImagenLaFuente": true,
@@ -3214,9 +3212,9 @@
         "Infobae",
         "Perfil",
         "Minuto Uno",
+        "Noticias Argentinas (NA)",
         "Crónica",
-        "Ámbito",
-        "Noticias Argentinas (NA)"
+        "Ámbito"
       ],
       "enlace": "https://www.infobae.com/sociedad/2026/10/09/declararon-a-estanislao-lopez-como-heroe-nacional-por-que-se-lo-conoce-como-el-patriarca-del-federalismo-argentino/",
       "teniaImagenLaFuente": true,
@@ -3468,9 +3466,9 @@
         "Agencia DIB",
         "La Noticia 1",
         "Diputados Bonaerenses",
-        "La Verdad",
         "Zona Norte Diario",
-        "ANDigital"
+        "ANDigital",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/politica/gabriel-katopodis-blanqueo-que-quiere-pelear-la-sucesion-kicillof-n56372",
       "teniaImagenLaFuente": true,
@@ -3691,8 +3689,7 @@
         "Infobae",
         "El Destape",
         "Ámbito",
-        "Básquet Plus",
-        "Doble Amarilla"
+        "Básquet Plus"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
       "teniaImagenLaFuente": true,
@@ -4061,8 +4058,8 @@
         "La Nación",
         "Infobae",
         "Perfil",
-        "El Cronista",
         "Noticias Argentinas (NA)",
+        "El Cronista",
         "Ámbito",
         "El Economista"
       ],
@@ -4617,7 +4614,7 @@
       "temp": 9,
       "sensacion": 7,
       "humedad": 89,
-      "viento": 14,
+      "viento": 13,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": false
@@ -4990,12 +4987,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1fworos",
-      "titulo": "Joaquín Levinton sufre un “severo” problema de salud y…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "6fykn0",
       "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
       "seccion": "Fútbol",
@@ -5086,6 +5077,12 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "y5udqq",
+      "titulo": "Capital Humano denunciará en la Justicia la toma del…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "5w58zn",
       "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
       "seccion": "Fútbol",
@@ -5108,6 +5105,12 @@
       "titulo": "Denunciaron a Luis Caputo y Santiago Bausili por las…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1c5jdmn",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "wdhpc1",
@@ -5134,10 +5137,10 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1k8f8s0",
-      "titulo": "El FMI alertó que el petróleo seguirá caro en 2027: cuál…",
+      "id": "uuh0jx",
+      "titulo": "Dispersión de precios: un mismo producto puede costar…",
       "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
+      "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
       "id": "146mbos",
@@ -5156,13 +5159,7 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "18zyaf9",
-      "titulo": "Causa ANDIS: sobreseyeron a un técnico de Suizo Argentina…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 3
 }
