@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T11:02:05.431Z",
- "portada": 47,
+ "generado": "2026-10-10T11:31:32.391Z",
+ "portada": 45,
  "archivo": 896,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-10T11:02:05.477Z",
+  "generado": "2026-10-10T11:31:32.417Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,39 +95,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes"
-     },
      {
       "id": "14imhay",
       "titulo": "El calendario conmemora la salud mental y la danza",
       "seccion": "Cultura y agenda"
      },
-     {
-      "id": "vwb5m5",
-      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce"
-     }
-    ]
-   },
-   {
-    "nombre": "noticia2",
-    "titulo": "El repaso de la tarde",
-    "hora": "15:00",
-    "voz": "locutora",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 51,
-    "notas": [
      {
       "id": "10izr2u",
       "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
@@ -139,8 +113,34 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "id": "15zr9uw",
+      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
+      "seccion": "Agro"
+     }
+    ]
+   },
+   {
+    "nombre": "noticia2",
+    "titulo": "El repaso de la tarde",
+    "hora": "15:00",
+    "voz": "locutora",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 52,
+    "notas": [
+     {
+      "id": "2qmh95",
+      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
       "seccion": "Cultura y agenda"
      },
      {
@@ -157,44 +157,28 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 42,
-    "notas": [
-     {
-      "id": "2qmh95",
-      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1p0s5l3",
-      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1u383pj",
-      "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
-   "hoy": [],
+   "hoy": [
+    {
+     "id": "15zr9uw",
+     "titulo": "Investigadores locales reciben una distinción en congreso nacional",
+     "cuando": "2026-10-10T11:04:30.101Z"
+    }
+   ],
    "cola": [
     {
      "id": "14imhay",
      "titulo": "El calendario conmemora la salud mental y la danza",
      "seccion": "Cultura y agenda",
      "marcada": false
-    },
-    {
-     "id": "15zr9uw",
-     "titulo": "Investigadores locales reciben una distinción en congreso nacional",
-     "seccion": "Agro",
-     "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-09T20:15:24.033Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-10T12:34:30.101Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
