@@ -11509,16 +11509,16 @@
   "cuando": "2026-10-10T01:31:54.464Z"
  },
  "xj8ent": {
-  "archivo": "fotos-notas/xj8ent.jpg",
   "medio": "Minuto Uno",
-  "credito": "Foto: Minuto Uno",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Fiesta Nacional del Postre pasa a fines de octubre por las lluvias",
   "enlace": "https://www.minutouno.com/lifestyle/las-lluvias-pararon-la-fiesta-la-que-iban-cocinar-el-postre-balcarce-mas-largo-del-mundo-cuando-se-hace-n6332271",
   "imagenOriginal": "https://media.minutouno.com/p/b0030d2b9eb07e702ffda0fa9e7e1518/adjuntos/150/imagenes/043/695/0043695454/1200x675/smart/las-lluvias-pararon-la-fiesta-la-que-iban-cocinar-el-postre-balcarce-mas-largo-del-mundo-cuando-se-hace.jpg",
   "razon": "Tiene buen encuadre, nitidez adecuada, no presenta marcas de agua del medio ni menores reconocibles.",
-  "cuando": "2026-10-10T01:31:54.464Z"
+  "cuando": "2026-10-10T01:31:54.464Z",
+  "intentado": true,
+  "borrada": true
  },
  "1dh9ril": {
   "intentado": true,
@@ -11573,5 +11573,17 @@
   "cuando": "2026-10-10T02:32:04.508Z",
   "intentos": 1,
   "fuentes": 3
+ },
+ "15zr9uw": {
+  "archivo": "fotos-notas/15zr9uw.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Investigadores locales reciben una distinción en congreso nacional",
+  "enlace": "https://eldiariobalcarce.com.ar/distinguen-trabajo-de-la-unidad-integrada-en-el-quinto-congreso-argentino-de-malezas-570",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-10-3-19-4inta_premio_1.JPG",
+  "razon": "Tiene excelente nitidez, encuadre adecuado de los investigadores premiados y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-10T03:32:03.547Z"
  }
 }
