@@ -1786,6 +1786,14 @@
       "tipo": "REELS",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-10/farmacia": {
+      "cuando": "2026-10-10T22:05:43.678Z",
+      "mediaId": "18137405896727660",
+      "nombre": "farmacia",
+      "tipo": "STORIES",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "facebookVideos": {
@@ -2973,6 +2981,14 @@
       "tipo": "REELS",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-10/farmacia": {
+      "cuando": "2026-10-10T22:06:09.905Z",
+      "mediaId": "2284876769000764",
+      "nombre": "farmacia",
+      "tipo": "STORIES",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "instagramFeed": {
@@ -4130,7 +4146,13 @@
       "cuando": "2026-10-07T13:34:40.377Z"
     }
   },
-  "facebookFoto": {},
+  "facebookFoto": {
+    "p4vc8j": {
+      "intentos": 1,
+      "ultimo": "2026-10-10T22:04:34.546Z",
+      "error": "Missing or invalid image file"
+    }
+  },
   "reelsEnFacebook": {
     "2026-10-08/clima-noche": {
       "cuando": "2026-10-08T23:06:56.514Z",
@@ -4166,6 +4188,13 @@
       "nombre": "clima-manana",
       "tipo": "REELS",
       "permalink": "https://www.facebook.com/reel/1614858403553177/"
+    },
+    "2026-10-10/farmacia": {
+      "cuando": "2026-10-10T22:06:18.571Z",
+      "mediaId": "1821794509161611",
+      "nombre": "farmacia",
+      "tipo": "REELS",
+      "permalink": "https://www.facebook.com/reel/1821794509161611/"
     }
   }
 }
