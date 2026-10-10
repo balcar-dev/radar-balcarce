@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-09T23:28:23.526Z",
+ "consultado": "2026-10-10T00:02:14.062Z",
  "equipos": [
   "9739",
   "3",
@@ -714,17 +714,17 @@
     "id": "401841607",
     "competencia": "liga",
     "inicio": "2026-10-09T22:30:00.000Z",
-    "estado": "entretiempo",
-    "minuto": "45'+1'",
+    "estado": "en-juego",
+    "minuto": "68'",
     "local": {
      "id": "2975",
      "nombre": "Instituto (Córdoba)",
-     "goles": 1
+     "goles": 2
     },
     "visitante": {
      "id": "5",
      "nombre": "Boca Juniors",
-     "goles": 1
+     "goles": 2
     },
     "penales": null,
     "goles": [
@@ -738,6 +738,18 @@
       "equipo": "visitante",
       "jugador": "Enner Valencia",
       "minuto": "23'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Jonathan Galván",
+      "minuto": "48'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Miguel Merentiel",
+      "minuto": "56'",
       "tipo": "gol"
      }
     ],

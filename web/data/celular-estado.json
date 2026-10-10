@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-09T23:32:26.062Z",
- "portada": 62,
- "archivo": 885,
- "esperandoCuerpo": 8,
+ "generado": "2026-10-10T00:02:16.151Z",
+ "portada": 64,
+ "archivo": 886,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-10-09T23:32:26.092Z",
+  "generado": "2026-10-10T00:02:16.193Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -155,19 +155,19 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 51,
     "notas": [
      {
-      "id": "17di2tc",
-      "titulo": "Cristiano Ronaldo marca en la goleada de Al Nassr y escala hacia los mil tantos",
-      "seccion": "Deportes"
-     },
-     {
       "id": "1trv7re",
       "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "17di2tc",
+      "titulo": "Cristiano Ronaldo marca en la goleada de Al Nassr y escala hacia los mil tantos",
+      "seccion": "Deportes"
      },
      {
       "id": "1aizybd",
