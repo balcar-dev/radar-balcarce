@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T04:31:59.792Z",
- "portada": 56,
+ "generado": "2026-10-10T05:01:33.448Z",
+ "portada": 59,
  "archivo": 892,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-10T04:31:59.836Z",
+  "generado": "2026-10-10T05:01:33.498Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,12 +95,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 55,
     "notas": [
      {
-      "id": "15zr9uw",
-      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
-      "seccion": "Agro"
+      "id": "146dyw0",
+      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "seccion": "Deportes"
      },
      {
       "id": "vw0kpx",
@@ -108,9 +108,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "2qmh95",
-      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-      "seccion": "Deportes"
+      "id": "1360zul",
+      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "jul3dj",
@@ -157,17 +157,40 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 30,
+    "notas": [
+     {
+      "id": "2qmh95",
+      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1u383pj",
+      "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
    "hoy": [],
    "cola": [
     {
+     "id": "146dyw0",
+     "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
      "id": "15zr9uw",
      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
      "seccion": "Agro",
+     "marcada": false
+    },
+    {
+     "id": "1aizybd",
+     "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
