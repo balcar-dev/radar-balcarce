@@ -10639,16 +10639,16 @@
   "fuentes": 5
  },
  "w8iv0l": {
-  "archivo": "fotos-notas/w8iv0l.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "Shai Gilgeous-Alexander se considera el mejor basquetbolista de la NBA",
   "enlace": "https://www.lanacion.com.ar/deportes/futbol/shai-gilgeous-alexander-la-estrella-de-la-nba-que-se-convirtio-en-accionista-del-atletico-de-madrid-nid08102026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/shai-gilgeous-alexander-de-oklahoma-city-thunder-WFYH3HKNQBDONBYTQHIAJN5QUU.jpg?auth=a85255350aa2d6ae899be6cfee40b0e438f39da4acc0644846fdfd3895e48e9f&width=1200&height=800&quality=70&smart=true",
   "razon": "La foto de La Nación ofrece un primer plano nítido y enfocado de Shai Gilgeous-Alexander, ideal para ilustrar la nota, mientras que la de Infobae tiene un encuadre más amplio y menos impactante.",
-  "cuando": "2026-10-09T01:32:08.771Z"
+  "cuando": "2026-10-09T01:32:08.771Z",
+  "intentado": true,
+  "borrada": true
  },
  "1lubi1s": {
   "archivo": "fotos-notas/1lubi1s.jpg",
@@ -11681,5 +11681,17 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Agustin%20Conti.jpeg",
   "razon": "Es la única opción disponible, posee buena nitidez y encuadre adecuado sin marcas de agua ni menores.",
   "cuando": "2026-10-10T13:02:12.960Z"
+ },
+ "k1kiay": {
+  "archivo": "fotos-notas/k1kiay.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto supera la primera ronda y avanza en Singapur",
+  "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid10102026-2/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/franco-colapinto-afronta-la-clasificacion-para-el-3NEY5UUUOJAFVIUGGUOOKEP5RU.JPG?auth=eea21b80375e0af29e83bab67d765662fbd2c5e51c42a9a9c84be4356c4bc77d&width=1200&height=675&quality=70&smart=true",
+  "razon": "La foto A muestra el monoplaza en el circuito de Singapur con buena iluminación nocturna y sin personas extrañas, mientras que la B tiene gente en el fondo.",
+  "cuando": "2026-10-10T14:02:08.523Z"
  }
 }

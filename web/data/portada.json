@@ -1,6 +1,96 @@
 {
-  "generado": "2026-10-10T13:32:03.219Z",
+  "generado": "2026-10-10T14:02:14.976Z",
   "notas": [
+    {
+      "id": "k1kiay",
+      "titulo": "Franco Colapinto supera la primera ronda y avanza en Singapur",
+      "copete": "El piloto argentino logra el noveno puesto en la sesión inicial de clasificación en el circuito callejero de Marina Bay y continúa en competencia.",
+      "cuerpo": "Franco Colapinto completa la primera tanda clasificatoria en el noveno lugar con un registro de 1m33s261/100 y logra el pase a la siguiente ronda en el Gran Premio de Singapur. La sesión en el trazado callejero de Marina Bay comienza con retraso respecto al horario previsto debido al desarrollo de la competencia sprint, y da paso inmediato a los quince minutos de la Q2.\n\nEn la instancia inicial quedan fuera de competencia Fernando Alonso, Alex Albon, Lance Stroll, Sergio Pérez, Valtteri Bottas e Isack Hadjar, este último sin poder girar por inconvenientes eléctricos en su vehículo. Por su parte, el piloto argentino afronta el fin de semana con modificaciones en el sistema de almacenamiento de energía de su unidad provista por Alpine, tras registrar fallas en la prueba previa, aunque evita sanciones en la grilla de partida.",
+      "guion": "Franco Colapinto supera la primera ronda y avanza en Singapur",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Infobae",
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid10102026-2/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T13:53:43.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T14:01:48.448Z",
+      "relevancia": 77,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Colapinto termina la Q1 en el noveno puesto.",
+        "El argentino marca un tiempo de 1m33s261/100.",
+        "Seis pilotos quedan eliminados en la primera tanda.",
+        "Alpine cambia piezas en el auto sin penalización."
+      ],
+      "seSabe": [
+        "Colapinto avanza a la Q2 tras finalizar noveno en la primera sesión.",
+        "El piloto registra un tiempo de 1m33s261/100.",
+        "Quedan eliminados Alonso, Albon, Stroll, Pérez, Bottas y Hadjar.",
+        "Alpine realiza un cambio en la unidad de potencia sin sanción para el argentino."
+      ],
+      "noConfirmado": [
+        "El rendimiento final en las tandas decisivas de la clasificación."
+      ],
+      "textoRedes": "Franco Colapinto termina la primera ronda clasificatoria en el noveno puesto y avanza a la siguiente tanda en el Gran Premio de Singapur.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Singapur"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid10102026-2/",
+          "fecha": "2026-10-10T13:53:43.000Z",
+          "oficial": false,
+          "aporte": "Detalla el tiempo de Colapinto, los eliminados de la Q1 y los cambios en la unidad de potencia."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/10/tras-el-abandono-en-la-sprint-franco-colapinto-afrontara-la-clasificacion-para-el-gran-premio-de-singapur-de-formula-1-hora-y-tv/",
+          "fecha": "2026-10-10T13:56:15.000Z",
+          "oficial": false,
+          "aporte": "Informa sobre el inicio y la duración de la Q2 y los registros de los pilotos eliminados."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18wlubj",
+          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+          "fecha": "2026-10-07T09:01:08.000Z",
+          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
+        },
+        {
+          "id": "117ewnb",
+          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
+          "fecha": "2026-10-08T11:26:30.000Z",
+          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
+        },
+        {
+          "id": "16fjrrx",
+          "titulo": "Franco Colapinto larga desde el fondo en el Gran Premio de Malasia",
+          "fecha": "2026-10-04T03:00:14.000Z",
+          "ruta": "/nota/franco-colapinto-larga-desde-el-fondo-en-el-gran-premio-de-malasia-16fjrrx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-supera-la-primera-ronda-y-avanza-en-singapur",
+      "foto": {
+        "archivo": "fotos-notas/k1kiay.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
     {
       "id": "repaso20261010manana",
       "propia": "repaso",
@@ -143,7 +233,7 @@
       "fecha": "2026-10-10T10:45:16.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T11:01:50.338Z",
-      "relevancia": 77,
+      "relevancia": 67,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -699,6 +789,87 @@
       "foto": {
         "archivo": "fotos-notas/16s8yom.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "xggmkl",
+      "titulo": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "copete": "A pesar de registrar una baja en sus precios en dólares durante julio, el país mantiene los valores más altos de América Latina en dos rubros clave, según un informe de Fundar.",
+      "cuerpo": "Los precios en moneda extranjera retrocedieron 0,3% en julio y acumularon dos meses seguidos de descenso frente a la región, de acuerdo con el informe de Fundar. El país registra los valores más elevados en restaurantes, indumentaria, comunicaciones, recreación y equipamiento del hogar. Por el contrario, los segmentos más accesibles resultaron alimentos, educación, vivienda y servicios, alcohol y tabaco y salud.\n\nEl nivel general se ubicó en 98,3 puntos y se situó por encima de Chile, un hecho que no ocurría desde abril de 2025. Ese cambio obedeció a la caída de casi 3% en la moneda chilena durante el mismo periodo, mientras que la economía nacional quedó 1,7% por debajo del promedio regional.\n\nEn la perspectiva de largo plazo, los precios locales acumulan un incremento del 74,4% en dólares en comparación con enero de 2021. Hacia agosto, la tendencia habría cambiado con un nuevo encarecimiento relativo tras registrar una inflación del 1,7%.",
+      "guion": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "seccion": "Economía",
+      "medios": [
+        "El Diario Balcarce",
+        "La Nación",
+        "Ámbito",
+        "Perfil",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T23:44:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T06:31:48.320Z",
+      "relevancia": 72,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los precios en dólares bajaron 0,3% en julio.",
+        "Argentina lidera los costos regionales en ropa y gastronomía.",
+        "El país superó a Chile en el índice de precios durante julio.",
+        "La economía nacional acumula un incremento del 74,4% en dólares desde 2021."
+      ],
+      "seSabe": [
+        "Los precios en dólares bajaron 0,3% en julio según el Índice Mensual de Precios Relativos de Fundar.",
+        "Argentina supera a Chile en el indicador regional con 98,3 puntos frente a 97,6.",
+        "El país encabeza los rubros de restaurantes e indumentaria en América Latina."
+      ],
+      "noConfirmado": [
+        "La comparación exacta con el resto de América Latina correspondiente al mes de agosto todavía no fue actualizada."
+      ],
+      "textoRedes": "El país registra los precios más altos de América Latina en restaurantes e indumentaria a pesar de una leve baja en dólares durante julio, según un informe de Fundar.",
+      "etiquetas": [
+        "precios",
+        "dolares",
+        "indumentaria",
+        "restaurantes",
+        "fundar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+          "fecha": "2026-10-09T23:44:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del índice de precios en dólares, la comparación regional, los rubros más caros y las estadísticas de Fundar."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-indumentaria-y-los-restaurantes-mas-caros-de-la-region.phtml",
+          "fecha": "2026-10-10T05:56:13.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-tiene-la-ropa-y-los-restaurantes-mas-caros-de-la-region--pese-a-la-leve-baja-de-la-inflacion-en-dolares-en-julio_a6ac993e3587f18d75220d84b",
+          "fecha": "2026-10-10T01:34:49.000Z",
+          "oficial": false,
+          "aporte": "Compartió la información general sobre la posición de Argentina en precios de indumentaria y restaurantes frente a la región."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "argentina-encabeza-el-ranking-regional-en-indumentaria-y-gastronomia",
+      "foto": {
+        "archivo": "fotos-notas/xggmkl.jpg",
+        "credito": "Foto: Perfil"
       }
     },
     {
@@ -3255,15 +3426,15 @@
     }
   ],
   "secciones": [
+    "Automovilismo",
     "Balcarce",
     "Cultura y agenda",
-    "Automovilismo",
     "Policiales",
     "Agro",
+    "Economía",
     "Política",
     "Fútbol",
     "Argentina",
-    "Economía",
     "Deportes",
     "Tecnología"
   ],
@@ -3283,8 +3454,8 @@
     "ahora": {
       "temp": 12,
       "sensacion": 9,
-      "humedad": 68,
-      "viento": 15,
+      "humedad": 65,
+      "viento": 16,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3705,12 +3876,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "vbfl3j",
-      "titulo": "El particular regalo de Benín a Messi en su despedida",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "11sovpd",
       "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
       "seccion": "Política",
@@ -3729,15 +3894,15 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "5fv24u",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"menores de 5 anos\""
+    },
+    {
       "id": "uvmc92",
       "titulo": "El Gobierno denunció daños en la Secretaría de Educación…",
       "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "dfdr7f",
-      "titulo": "Alumnos de otro colegio fueron denunciados por alterar…",
-      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
@@ -3765,22 +3930,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "5w58zn",
-      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"suscribite\""
-    },
-    {
       "id": "emxfi0",
       "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "wdhpc1",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "1s6utqr",
@@ -3789,10 +3942,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "dfdr7f",
+      "titulo": "Alumnos de otro colegio fueron denunciados por alterar…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "lktast",
       "titulo": "La herramienta gratuita que permite a menores denunciar la…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "wdhpc1",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "6af5cy",
