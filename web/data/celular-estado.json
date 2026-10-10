@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T17:31:56.731Z",
- "portada": 27,
+ "generado": "2026-10-10T18:01:33.282Z",
+ "portada": 40,
  "archivo": 895,
- "esperandoCuerpo": 0,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T17:31:56.760Z",
+  "generado": "2026-10-10T18:01:33.309Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,21 +124,10 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 32,
-    "notas": [
-     {
-      "id": "4u38d4",
-      "titulo": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "p1wpy5",
-      "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -147,8 +136,24 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 37,
+    "notas": [
+     {
+      "id": "4u38d4",
+      "titulo": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1u383pj",
+      "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {

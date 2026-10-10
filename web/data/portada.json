@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T17:31:56.731Z",
+  "generado": "2026-10-10T18:01:33.282Z",
   "notas": [
     {
       "id": "1chw90",
@@ -243,8 +243,8 @@
       "medios": [
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
-        "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Nueva",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/sociedad/dia-mundial-de-la-salud-mental--la-importancia-de-cuidar-el-bienestar-en-el-ambito-laboral_a6ac8f29a8e24c1a50acdb540",
       "teniaImagenLaFuente": true,
@@ -412,6 +412,7 @@
       "seccion": "Automovilismo",
       "medios": [
         "La Nación",
+        "Motorsport",
         "Infobae",
         "TN (Todo Noticias)",
         "Radio Mitre",
@@ -624,6 +625,227 @@
       }
     },
     {
+      "id": "9zwjal",
+      "titulo": "Investigan la desaparición de fondos en la escuela Emilio Lamarca",
+      "copete": "Desapareció dinero de la recaudación para un evento escolar en la escuela Emilio Lamarca y las autoridades investigan las circunstancias del hecho.",
+      "cuerpo": "Una suma de dinero destinada a un evento escolar desapareció de la escuela Emilio Lamarca, según informó un medio local. El faltante correspondía a la recaudación por la venta anticipada de entradas para una función organizada por el Jardín que se llevará a cabo el viernes 23 en el Teatro.\n\nDe acuerdo con la información brindada, los fondos se encontraban guardados en la caja de la preceptoría perteneciente al Nivel Inicial de la institución educativa. La situación se conoció el viernes en la tarde y las autoridades iniciaron las averiguaciones para esclarecer lo sucedido.",
+      "guion": "Investigan la desaparición de fondos en la escuela Emilio Lamarca",
+      "seccion": "Policiales",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/desaparicion-de-dinero-en-el-emilio-lamarca-760",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T03:25:53.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T03:31:44.259Z",
+      "relevancia": 91,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Desapareció dinero en la escuela Emilio Lamarca.",
+        "Los fondos eran de la recaudación para un evento del Jardín.",
+        "El dinero estaba en la caja de la preceptoría del Nivel Inicial.",
+        "Las autoridades investigan cómo se produjo el faltante."
+      ],
+      "seSabe": [
+        "Se registró la desaparición de dinero en la escuela Emilio Lamarca, según un medio local.",
+        "Los fondos correspondían a la recaudación de entradas anticipadas para un evento del Jardín.",
+        "El evento se realizará en el Teatro el viernes 23.",
+        "El dinero estaba guardado en la caja de la preceptoría del Nivel Inicial.",
+        "La situación se conoció el viernes en la tarde."
+      ],
+      "noConfirmado": [
+        "Todavía no se determinaron las circunstancias en las que se produjo el faltante de dinero.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Investigan la desaparición de dinero de la recaudación para un evento escolar en la escuela Emilio Lamarca.",
+      "etiquetas": [
+        "escuela Emilio Lamarca",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/desaparicion-de-dinero-en-el-emilio-lamarca-760",
+          "fecha": "2026-10-10T03:25:53.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la desaparición de dinero de la recaudación en la escuela Emilio Lamarca y el inicio de la investigación."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "investigan-la-desaparicion-de-fondos-en-la-escuela-emilio-lamarca"
+    },
+    {
+      "id": "15zr9uw",
+      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
+      "copete": "Un equipo del INTA y de la Facultad de Ciencias Agrarias obtuvo un reconocimiento en Córdoba por una investigación sobre herbicidas.",
+      "cuerpo": "La investigación premiada, titulada \"Análisis integrado de residuos herbicidas en suelo: ciencia, diagnóstico y aplicabilidad\", sobresalió entre un total de 148 proyectos presentados.\n\nDel estudio participaron los especialistas Hernán Panaggio, Valeria Gianelli, Eduardo De Gerónimo y Andrea Salvalaggio, pertenecientes al INTA Balcarce - IPADS y a la Facultad de Ciencias Agrarias de la Universidad Nacional de Mar del Plata.\n\nDesde el INTA Balcarce señalaron que la mención valora el aporte científico para el diagnóstico y el manejo responsable de residuos en los suelos productivos.",
+      "guion": "Investigadores locales reciben una distinción en congreso nacional",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/distinguen-trabajo-de-la-unidad-integrada-en-el-quinto-congreso-argentino-de-malezas-570",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T03:19:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T03:31:44.259Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Un trabajo del INTA local y Agrarias fue premiado en Córdoba.",
+        "La investigación compitió entre 148 proyectos científicos.",
+        "El estudio aborda el análisis de residuos herbicidas en el suelo."
+      ],
+      "seSabe": [
+        "Un trabajo de investigadores locales fue premiado en el V Congreso Argentino de Malezas - ASACIM 2026 en Córdoba.",
+        "La investigación titulada Análisis integrado de residuos herbicidas en suelo: ciencia, diagnóstico y aplicabilidad fue distinguida entre 148 presentaciones.",
+        "Participaron los investigadores Hernán Panaggio, Valeria Gianelli, Eduardo De Gerónimo y Andrea Salvalaggio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Investigadores locales del INTA y de la Facultad de Ciencias Agrarias recibieron una distinción en Córdoba durante el V Congreso Argentino de Malezas por un trabajo sobre residuos de herbicidas.",
+      "etiquetas": [
+        "INTA Balcarce",
+        "Facultad de Ciencias Agrarias",
+        "Congreso Argentino de Malezas",
+        "Investigación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/distinguen-trabajo-de-la-unidad-integrada-en-el-quinto-congreso-argentino-de-malezas-570",
+          "fecha": "2026-10-10T03:19:04.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la distinción al trabajo de investigadores locales en el congreso de malezas en Córdoba."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "jul3en",
+          "titulo": "Virginia Aparicio expone en el Concejo Deliberante",
+          "fecha": "2026-10-09T13:47:33.000Z",
+          "ruta": "/nota/virginia-aparicio-expone-en-el-concejo-deliberante-jul3en"
+        },
+        {
+          "id": "18jx7kk",
+          "titulo": "Virginia Aparicio brinda su testimonio el viernes en Polémica en Gabal",
+          "fecha": "2026-10-09T13:47:33.000Z",
+          "ruta": "/nota/virginia-aparicio-habla-en-radio-sobre-su-situacion-en-el-inta-18jx7kk"
+        },
+        {
+          "id": "xlon5q",
+          "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
+          "fecha": "2026-10-09T12:30:42.000Z",
+          "ruta": "/nota/la-facultad-de-agronomia-de-la-uba-cuestiona-el-sumario-a-xlon5q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "investigadores-locales-reciben-una-distincion-en-congreso-nacional",
+      "foto": {
+        "archivo": "fotos-notas/15zr9uw.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "14oacl3",
+      "titulo": "El operativo de documentación continúa el sábado en el Concejo",
+      "copete": "El Registro Provincial de las Personas y la Jefatura de Asesores del Gobernador despliegan el sábado de 12 a 17 el operativo documentario en la sede legislativa local para facilitar trámites sin necesidad de viajar.",
+      "cuerpo": "El Concejo Deliberante, ubicado en la calle 20 N° 569, alberga el sábado 10 de octubre la segunda jornada del operativo documentario impulsado por el Registro Provincial de las Personas y la Jefatura de Asesores del Gobernador. Las gestiones se desarrollan de 12 a 17 y permiten tramitar pasaportes y otros documentos personales, según informó un medio local.\n\nEstas tareas forman parte de un programa del Gobierno bonaerense destinado a evitar que los vecinos deban trasladarse a otras ciudades para cumplir con sus trámites.\n\nDesde la organización recomendaron concurrir con la documentación correspondiente y consultar previamente los requisitos específicos para cada gestión. El operativo continuará el sábado según el cronograma establecido.",
+      "guion": "El operativo de documentación continúa el sábado en el Concejo",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45051-continua-este-sabado-el-operativo-documentario-en-el-concejo-deliberante/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-10T02:31:26.354Z",
+      "sinFecha": true,
+      "visto": "2026-10-10T02:31:26.354Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El operativo documentario sigue este sábado en el Concejo Deliberante.",
+        "Funciona de 12 a 17 en la calle 20 número 569.",
+        "Permite tramitar pasaportes y documentación personal.",
+        "La iniciativa pertenece al Registro Provincial de las Personas y la Jefatura de Asesores."
+      ],
+      "noConfirmado": [
+        "No se informaron detalles sobre la suspensión de la fiesta mencionada en el cronograma.",
+        "No se especificaron los requisitos exactos de cada trámite, los cuales varían según cada situación.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "oper operativo documentario",
+        "Concejo Deliberante",
+        "Registro Provincial de las Personas",
+        "Balcarce",
+        "documentación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45051-continua-este-sabado-el-operativo-documentario-en-el-concejo-deliberante/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la continuidad del operativo documentario provincial en el Concejo Deliberante para este sábado y sus horarios."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "10znf8w",
+          "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
+          "fecha": "2026-10-08T20:25:28.000Z",
+          "ruta": "/nota/el-operativo-de-dni-funciona-en-el-concejo-deliberante-10znf8w"
+        },
+        {
+          "id": "88fvqd",
+          "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
+          "fecha": "2026-10-09T23:27:38.237Z",
+          "ruta": "/nota/el-concejo-deliberante-analiza-el-descarte-de-remedios-vencidos-88fvqd"
+        },
+        {
+          "id": "jul3en",
+          "titulo": "Virginia Aparicio expone en el Concejo Deliberante",
+          "fecha": "2026-10-09T13:47:33.000Z",
+          "ruta": "/nota/virginia-aparicio-expone-en-el-concejo-deliberante-jul3en"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-operativo-de-documentacion-continua-el-sabado-en-el-concejo"
+    },
+    {
       "id": "repaso20261009noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: Norberto Fontana y Cristiano Ronaldo",
@@ -690,6 +912,325 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261009noche.jpg",
         "credito": "Fotos: El Diario Balcarce, Infobae y Infórmese Primero (FM 104.9)"
+      }
+    },
+    {
+      "id": "xggmkl",
+      "titulo": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "copete": "A pesar de registrar una baja en sus precios en dólares durante julio, el país mantiene los valores más altos de América Latina en dos rubros clave, según un informe de Fundar.",
+      "cuerpo": "Los precios en moneda extranjera retrocedieron 0,3% en julio y acumularon dos meses seguidos de descenso frente a la región, de acuerdo con el informe de Fundar. El país registra los valores más elevados en restaurantes, indumentaria, comunicaciones, recreación y equipamiento del hogar. Por el contrario, los segmentos más accesibles resultaron alimentos, educación, vivienda y servicios, alcohol y tabaco y salud.\n\nEl nivel general se ubicó en 98,3 puntos y se situó por encima de Chile, un hecho que no ocurría desde abril de 2025. Ese cambio obedeció a la caída de casi 3% en la moneda chilena durante el mismo periodo, mientras que la economía nacional quedó 1,7% por debajo del promedio regional.\n\nEn la perspectiva de largo plazo, los precios locales acumulan un incremento del 74,4% en dólares en comparación con enero de 2021. Hacia agosto, la tendencia habría cambiado con un nuevo encarecimiento relativo tras registrar una inflación del 1,7%.",
+      "guion": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "seccion": "Economía",
+      "medios": [
+        "El Diario Balcarce",
+        "La Nación",
+        "Ámbito",
+        "Perfil",
+        "Noticias Argentinas (NA)",
+        "La Brújula 24"
+      ],
+      "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T23:44:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T06:31:48.320Z",
+      "relevancia": 72,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los precios en dólares bajaron 0,3% en julio.",
+        "Argentina lidera los costos regionales en ropa y gastronomía.",
+        "El país superó a Chile en el índice de precios durante julio.",
+        "La economía nacional acumula un incremento del 74,4% en dólares desde 2021."
+      ],
+      "seSabe": [
+        "Los precios en dólares bajaron 0,3% en julio según el Índice Mensual de Precios Relativos de Fundar.",
+        "Argentina supera a Chile en el indicador regional con 98,3 puntos frente a 97,6.",
+        "El país encabeza los rubros de restaurantes e indumentaria en América Latina."
+      ],
+      "noConfirmado": [
+        "La comparación exacta con el resto de América Latina correspondiente al mes de agosto todavía no fue actualizada."
+      ],
+      "textoRedes": "El país registra los precios más altos de América Latina en restaurantes e indumentaria a pesar de una leve baja en dólares durante julio, según un informe de Fundar.",
+      "etiquetas": [
+        "precios",
+        "dolares",
+        "indumentaria",
+        "restaurantes",
+        "fundar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+          "fecha": "2026-10-09T23:44:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del índice de precios en dólares, la comparación regional, los rubros más caros y las estadísticas de Fundar."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-indumentaria-y-los-restaurantes-mas-caros-de-la-region.phtml",
+          "fecha": "2026-10-10T05:56:13.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-tiene-la-ropa-y-los-restaurantes-mas-caros-de-la-region--pese-a-la-leve-baja-de-la-inflacion-en-dolares-en-julio_a6ac993e3587f18d75220d84b",
+          "fecha": "2026-10-10T01:34:49.000Z",
+          "oficial": false,
+          "aporte": "Compartió la información general sobre la posición de Argentina en precios de indumentaria y restaurantes frente a la región."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "argentina-encabeza-el-ranking-regional-en-indumentaria-y-gastronomia",
+      "foto": {
+        "archivo": "fotos-notas/xggmkl.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "1aizybd",
+      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
+      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
+      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:32:00.485Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T23:32:00.485Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
+        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
+        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
+        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
+        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
+      ],
+      "seSabe": [
+        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
+        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
+        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
+        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
+        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
+      "etiquetas": [
+        "Giuliana Romero",
+        "Balcarce",
+        "Operación",
+        "Recuperación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+          "fecha": "2026-10-09T23:29:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pvwlvg",
+          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+          "fecha": "2026-10-07T00:30:00.000Z",
+          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
+      "foto": {
+        "archivo": "fotos-notas/1aizybd.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "88fvqd",
+      "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
+      "copete": "Una iniciativa escolar sobre el manejo de fármacos caducados ingresó al ámbito legislativo local tras un interrogante planteado en el aula.",
+      "cuerpo": "El Concejo Deliberante trata una propuesta vinculada a la gestión de remedios vencidos, una problemática que abarca tanto al ámbito sanitario como al ambiental. El proyecto, titulado El descarte importa, se originó a partir de una consulta planteada por alumnos en el ámbito escolar y cuenta con la participación de docentes.\n\nLa iniciativa ingresó recientemente al cuerpo legislativo para su discusión y evaluación por parte de los ediles, conforme a los datos dados a conocer.",
+      "guion": "El Concejo Deliberante analiza el descarte de remedios vencidos",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-descarte-de-medicamentos-vencidos-una-problematica-que-llego-al-concejo-deliberante-283",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T22:40:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:27:38.237Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Tratan un proyecto sobre fármacos caducados en el Concejo",
+        "La iniciativa se originó a partir de una pregunta escolar",
+        "El planteo involucra cuestiones de salud y ambiente"
+      ],
+      "seSabe": [
+        "El proyecto se denomina El descarte importa, según informó un medio local",
+        "La propuesta fue impulsada por estudiantes y docentes, de acuerdo con la misma fuente",
+        "El asunto ingresó al Concejo Deliberante tras surgir en el aula"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante debate un proyecto sobre el descarte de medicamentos vencidos que surgió a partir de una iniciativa escolar vinculada a la salud y el ambiente.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "medicamentos",
+        "salud",
+        "ambiente",
+        "educación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-descarte-de-medicamentos-vencidos-una-problematica-que-llego-al-concejo-deliberante-283",
+          "fecha": "2026-10-09T22:40:56.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el proyecto escolar y su llegada al Concejo Deliberante."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "10znf8w",
+          "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
+          "fecha": "2026-10-08T20:25:28.000Z",
+          "ruta": "/nota/el-operativo-de-dni-funciona-en-el-concejo-deliberante-10znf8w"
+        },
+        {
+          "id": "1opc9eu",
+          "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
+          "fecha": "2026-10-07T18:31:21.770Z",
+          "ruta": "/nota/el-concejo-deliberante-distingue-a-la-fiscalia-descentralizada-1opc9eu"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-deliberante-analiza-el-descarte-de-remedios-vencidos",
+      "foto": {
+        "archivo": "fotos-notas/88fvqd.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1c33j6a",
+      "titulo": "El torneo de la Liga Balcarceña se atrasa y terminaría en enero",
+      "copete": "El certamen de fútbol local acumula once fechas suspendidas por el clima. La actividad podría reactivarse a fines de octubre y finalizaría a principios de enero.",
+      "cuerpo": "El torneo Oficial de fútbol de la Liga Balcarceña se atrasó tres meses debido a las malas condiciones climáticas. Según informó un medio local, el certamen acumula once fechas suspendidas y todavía no pudo dar inicio a la fase Clausura.\n\nLa competencia reúne a doce equipos locales en las categorías de primera, reserva, femenino e inferiores. La continuidad del torneo podría interrumpirse el próximo domingo por la celebración del Día de la Madre. Además, la reactivación prevista para el fin de semana del 24 y 25 de octubre dependerá de la disponibilidad de personal policial afectado a la carrera Zonal del Atlántico.\n\nEl calendario restante incluye seis fechas regulares, sumadas a las instancias eliminatorias de cuartos de final, semifinal y final. De desarrollarse sin nuevas interrupciones, la actividad culminaría tentativamente el domingo 3 de enero.",
+      "guion": "El torneo de la Liga Balcarceña se atrasa y terminaría en enero",
+      "seccion": "Fútbol",
+      "medios": [
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://accion5.com/el-futbol-se-atraso-tres-meses-y-volveria-a-terminar-en-enero/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T21:11:21.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T02:31:26.354Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "bomberos"
+      ],
+      "como": "automatica",
+      "seSabe": [
+        "El torneo Oficial se atrasó tres meses debido a las condiciones climáticas, según informó un medio local.",
+        "El certamen acumula once fechas suspendidas y aún no inició la fase Clausura.",
+        "Doce equipos participan en primera, reserva, femenino e inferiores."
+      ],
+      "noConfirmado": [
+        "La posible suspensión de la próxima fecha por el Día de la Madre.",
+        "La disponibilidad de la Policía para el fin de semana del Zonal del Atlántico.",
+        "La fecha exacta de finalización del campeonato.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El torneo de la Liga Balcarceña acumula once fechas suspendidas por las condiciones climáticas y la actividad podría finalizar en enero.",
+      "etiquetas": [
+        "fútbol",
+        "Liga Balcarceña",
+        "clima"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Acción 5 (Balcarce)",
+          "enlace": "https://accion5.com/el-futbol-se-atraso-tres-meses-y-volveria-a-terminar-en-enero/",
+          "fecha": "2026-10-09T21:11:21.000Z",
+          "oficial": false,
+          "aporte": "Detalló el estado actual del torneo de fútbol local, los retrasos por el clima y la proyección de finalización."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "irc0sr",
+          "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
+          "fecha": "2026-10-04T20:31:39.000Z",
+          "ruta": "/nota/bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela-irc0sr"
+        },
+        {
+          "id": "16ml7pn",
+          "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
+          "fecha": "2026-10-03T13:15:01.000Z",
+          "ruta": "/nota/bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela-16ml7pn"
+        },
+        {
+          "id": "76r67w",
+          "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
+          "fecha": "2026-09-30T17:35:31.000Z",
+          "ruta": "/nota/bomberos-gestiona-una-unidad-de-traslado-para-capacitaciones-76r67w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-torneo-de-la-liga-balcarcena-se-atrasa-y-terminaria-en-enero",
+      "foto": {
+        "archivo": "fotos-notas/1c33j6a.jpg",
+        "credito": "Foto: Acción 5 (Balcarce)"
       }
     },
     {
@@ -965,14 +1506,16 @@
       "guion": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
       "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/el-concejo-deliberante-aprobo-la.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T18:21:42.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T09:01:36.782Z",
-      "relevancia": 73,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1111,6 +1654,333 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261009tarde.jpg",
         "credito": "Fotos: Infórmese Primero (FM 104.9), Municipalidad de Balcarce y Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "u6j4ho",
+      "titulo": "Sergio Aranaga analiza el empleo local y no descarta postularse",
+      "copete": "El titular del Partido Justicialista de Balcarce advirtió sobre la pérdida de empleo en el distrito, cuestionó las medidas nacionales y dejó abierta la posibilidad de competir por la intendencia.",
+      "cuerpo": "Durante una entrevista con un medio local, el funcionario advirtió sobre un paráte en la actividad y señaló que se registran entre diez y doce despidos mensuales como mínimo en el ámbito local. Al respecto, indicó que sectores como la empresa McCain, la actividad agropecuaria y la Cooperativa actúan como contención, aunque sostuvo que la crisis nacional impacta en el empleo formal.\n\nPor otro lado, cuestionó la política económica del gobierno de Javier Milei, criticó los efectos de la reforma laboral sobre los puestos registrados y respaldó la gestión del gobernador bonaerense Axel Kicillof.",
+      "guion": "Sergio Aranaga analiza el empleo local y no descarta postularse",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T17:31:41.075Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T17:31:41.075Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "Todavía no se definieron postulaciones formales ni alianzas electorales de cara a los próximos comicios.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Sergio Aranaga analizó la situación del empleo en Balcarce, advirtió sobre la pérdida de puestos formales, respaldó la gestión provincial y dejó abierta la posibilidad de ser candidato a intendente.",
+      "etiquetas": [
+        "Sergio Aranaga",
+        "Partido Justicialista",
+        "empleo",
+        "Balcarce",
+        "política"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó declaraciones del dirigente Sergio Aranaga sobre la situación del empleo en Balcarce, sus críticas a la política nacional y sus expectativas electorales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1vm79z5",
+          "titulo": "La CGT rechaza los dichos de Milei sobre la actividad económica",
+          "fecha": "2026-09-28T13:52:34.000Z",
+          "ruta": "/nota/la-cgt-rechaza-los-dichos-de-milei-sobre-la-actividad-economica-1vm79z5"
+        },
+        {
+          "id": "11nk8l",
+          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "sergio-aranaga-analiza-el-empleo-local-y-no-descarta-postularse",
+      "foto": {
+        "archivo": "fotos-notas/u6j4ho.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "aqy95q",
+      "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
+      "copete": "El cuerpo deliberativo aprobó solicitar a los legisladores nacionales que anulen la medida que dejó sin efecto la Ley de Tierras Rurales. La iniciativa generó cruces entre los bloques por el rol judicial y la extranjerización.",
+      "cuerpo": "La iniciativa prosperó con 12 votos afirmativos, cuatro abstenciones y un voto negativo durante la decimoquinta sesión ordinaria.\n\nLa propuesta generó diferencias entre los bloques partidarios. La concejal Sol Di Gerónimo defendió el proyecto al señalar que la discusión involucra la soberanía y los recursos naturales. En contraposición, Edgar Foglia cuestionó los argumentos sobre la Corte Suprema y adelantó que su espacio no acompañaría la medida, postura similar a la expresada por Enrique Guillén, quien indicó que su bloque se abstendría. Por su parte, Javier Menonne advirtió que unas 13 millones de hectáreas pertenecen a extranjeros, mientras que Gonzalo Scioli abogó por limitar la adquisición de tierras en zonas fronterizas.\n\nEn paralelo a la discusión legislativa, la Corte Suprema de la Nación emitió un fallo que ratificó la vigencia del artículo mencionado del decreto presidencial, según informó la fuente consultada.",
+      "guion": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/politica/soberania-y-la-propiedad-de-la-tierra-en-debate-en-el-concejo-deliberante",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T17:03:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T17:31:41.075Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó un pedido para que el Congreso derogue el artículo 154 del DNU 70/2023.",
+        "La iniciativa obtuvo 12 votos a favor, cuatro abstenciones y un voto en contra en la decimoquinta sesión ordinaria.",
+        "Ediles de distintos bloques expusieron argumentos encontrados sobre la extranjerización de tierras y el fallo judicial.",
+        "La Corte Suprema resolvió recientemente sobre la validez del artículo y la vigencia de la normativa."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó la iniciativa con 12 votos afirmativos, cuatro abstenciones y un voto negativo.",
+        "La concejal Sol Di Gerónimo respaldó el proyecto vinculado a la soberanía y los recursos naturales.",
+        "El edil Edgar Foglia cuestionó los planteos sobre la Corte Suprema y no acompañó la votación.",
+        "El concejal Javier Menonne advirtió que 13 millones de hectáreas están en manos extranjeras.",
+        "El edil Gonzalo Scioli solicitó establecer límites a la compra de tierras por parte de ciudadanos extranjeros.",
+        "El concejal Enrique Guillén adelantó la abstención de su bloque ante el tono del debate."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó un pedido para que el Congreso nacional derogue el artículo del DNU que dejó sin efecto la Ley de Tierras Rurales. La iniciativa generó debate y diferencias entre los distintos bloques políticos del cuerpo legislativo local.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Ley de Tierras",
+        "DNU",
+        "soberanía",
+        "Corte Suprema"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/soberania-y-la-propiedad-de-la-tierra-en-debate-en-el-concejo-deliberante",
+          "fecha": "2026-10-09T17:03:18.000Z",
+          "oficial": false,
+          "aporte": "Detalló los votos de la sesión, los argumentos de los concejales y el fallo de la Corte Suprema."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "z7t628",
+          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
+          "fecha": "2026-10-09T02:06:53.000Z",
+          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        },
+        {
+          "id": "jul3en",
+          "titulo": "Virginia Aparicio expone en el Concejo Deliberante",
+          "fecha": "2026-10-09T15:49:06.000Z",
+          "ruta": "/nota/virginia-aparicio-expone-en-el-concejo-deliberante-jul3en"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-aprueba-pedir-la-derogacion-del-articulo-del-dnu-sobre",
+      "foto": {
+        "archivo": "fotos-notas/aqy95q.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "1u383pj",
+      "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
+      "copete": "El ex trabajador de la base local y fotógrafo visitó un medio local para recordar hitos históricos de las comunicaciones y relatar sus inmersiones con tiburones en el Caribe.",
+      "cuerpo": "Luis Arabia visitó los estudios de Radio Líder Balcarce Stream para repasar su trayectoria de más de tres décadas como trabajador de la Estación Terrena de Telecomunicaciones. Durante la charla, el fotógrafo recordó el rol de la base local en transmisiones vinculadas a acontecimientos históricos, entre los que destacó la llegada del hombre a la Luna.\n\nEn la misma entrevista, el buzo compartió sus experiencias en el Caribe y cuestionó la fama de los tiburones. Según indicó, la reputación de estos animales responde a representaciones cinematográficas y aseguró que se trata de especies tranquilas cuando se respetan las pautas de precaución y las indicaciones de los guías.",
+      "guion": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T17:01:23.701Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T17:01:23.701Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Luis Arabia visitó un medio local y repasó su trayectoria.",
+        "Trabajó más de treinta años en la Estación Terrena.",
+        "Recordó transmisiones históricas como la llegada a la Luna.",
+        "Compartió experiencias sobre sus inmersiones con tiburones."
+      ],
+      "seSabe": [
+        "Luis Arabia trabajó más de treinta años en la Estación Terrena de Telecomunicaciones de Balcarce.",
+        "El ex trabajador visitó los estudios de Radio Líder Balcarce Stream.",
+        "Arabia es buzo, fotógrafo y relató sus inmersiones con tiburones en el Caribe."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El ex trabajador de la Estación Terrena Luis Arabia visitó un medio local para repasar hitos históricos de las comunicaciones y contar sus experiencias de buceo con tiburones.",
+      "etiquetas": [
+        "Luis Arabia",
+        "Estación Terrena",
+        "Balcarce",
+        "buceo",
+        "tiburones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló su trayectoria en la Estación Terrena de Balcarce y sus experiencias de buceo con tiburones en el Caribe."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "luis-arabia-repasa-su-paso-por-la-estacion-terrena-y-el-buceo",
+      "foto": {
+        "archivo": "fotos-notas/1u383pj.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "16bffnh",
+      "titulo": "Aeropuertos Argentina invierte 1500 millones de dólares en obras",
+      "copete": "La empresa destinará fondos entre 2027 y 2031 para modernizar 35 terminales aéreas en todo el país. Ezeiza, Aeroparque y los aeropuertos del interior concentrarán las principales obras de infraestructura.",
+      "cuerpo": "Aeropuertos Argentina destina 1500 millones de dólares para modernizar y ampliar la infraestructura de 35 terminales aéreas del país entre 2027 y 2031. El programa, acordado con el Organismo Regulador del Sistema Nacional de Aeropuertos, se financia con fondos propios y recursos del fideicomiso del sector.\n\nEl Aeropuerto Internacional de Ezeiza recibe 794 millones de dólares para construir una nueva terminal de arribos internacionales y otra para vuelos domésticos. El Aeroparque Jorge Newbery cuenta con una asignación de 200 millones de dólares para levantar un nuevo espigón y ampliar el sector internacional.\n\nEl resto de los fondos se distribuye en 33 terminales del interior del país, con mejoras en edificios, pistas y balizamiento en catorce ciudades que incluyen Bariloche, Mendoza y Córdoba.",
+      "guion": "Aeropuertos Argentina invierte mil quinientos millones de dólares en obras",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "iProfesional",
+        "Noticias Argentinas (NA)",
+        "Agroempresario",
+        "Clarín"
+      ],
+      "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T16:02:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T19:01:44.733Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Inversión total de 1500 millones de dólares",
+        "Obras previstas entre 2027 y 2031",
+        "Trabajos en Ezeiza, Aeroparque y el interior"
+      ],
+      "seSabe": [
+        "El plan abarca 35 aeropuertos administrados por la empresa",
+        "Ezeiza recibe 794 millones de dólares",
+        "Aeroparque cuenta con 200 millones de dólares para obras"
+      ],
+      "textoRedes": "Aeropuertos Argentina invertirá 1500 millones de dólares entre 2027 y 2031 para modernizar 35 terminales aéreas en todo el país, con obras en Ezeiza, Aeroparque y el interior.",
+      "etiquetas": [
+        "Aeropuertos Argentina",
+        "inversion",
+        "infraestructura",
+        "Ezeiza",
+        "Aeroparque"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
+          "fecha": "2026-10-09T16:02:18.000Z",
+          "oficial": false,
+          "aporte": "Detalló el monto total de la inversión y el desglose por aeropuertos"
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/gigantesco-plan-de-obras-asi-sera-aterrizar-en-la-argentina-en-2030-nid09102026/",
+          "fecha": "2026-10-09T17:56:46.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/09/aeropuertos-argentina-anuncio-el-mayor-plan-de-inversion-de-su-historia-desembolsara-usd-1500-millones-en-los-proximos-5-anos/",
+          "fecha": "2026-10-09T17:25:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/ampliar-concesion-aeropuertos-argentina-invertira-us-1500-millones-ezeiza-aeroparque-interior-pais_0_PZtLSKCq6u.html",
+          "fecha": "2026-10-09T17:14:50.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/09/aeropuertos-argentina-anuncio-obras-por-us1500-millones-ezeiza-tendra-una-nueva-terminal-de-arribos-y-se-ampliara-el-aeroparque/",
+          "fecha": "2026-10-09T17:34:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/negocios/466298-aeropuertos-argentina-invertira-us1500-millones-en-el-pais",
+          "fecha": "2026-10-09T17:55:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/ezeiza-tendra-dos-nuevas-terminales-y-aeroparque-ampliara-sus-instalaciones_a6ac91158587f18d752ff8898",
+          "fecha": "2026-10-09T16:09:59.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "aeropuertos-argentina-invierte-1500-millones-de-dolares-en-obras",
+      "foto": {
+        "archivo": "fotos-notas/16bffnh.jpg",
+        "credito": "Foto: La Nación"
       }
     },
     {
@@ -1289,6 +2159,74 @@
       }
     },
     {
+      "id": "liqt9r",
+      "titulo": "WhatsApp incorpora la velocidad de 2x para reproducir los videos en los Estados",
+      "copete": "La aplicación de mensajería desarrolla una herramienta para duplicar la velocidad de reproducción en los videos efímeros de los Estados, según informaron agencias y portales especializados.",
+      "cuerpo": "WhatsApp prepara una modificación en su sección de Estados para permitir la reproducción de videos a una velocidad de 2x. La función fue detectada inicialmente en pruebas para el sistema operativo iOS y luego incorporada a la versión beta 2.26.40.4 de Android, de acuerdo con los reportes del portal especializado WABetaInfo.\n\nA diferencia de la herramienta utilizada en los audios mediante un botón fijo, esta nueva opción para las publicaciones efímeras funcionará con una dinámica similar a la que ya utilizan plataformas como TikTok, Instagram o YouTube para agilizar la visualización de los contenidos audiovisuales.",
+      "guion": "WhatsApp incorpora la velocidad de dos equis para reproducir los videos en los Estados",
+      "seccion": "Tecnología",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/interes-general/whatsapp-prepara-una-nueva-funcion-en-los-estados--como-funcionara-la-reproduccion-en-2x_a6ac903be587f18d752fd4183",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T15:13:52.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T17:31:41.075Z",
+      "relevancia": 24,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "WhatsApp prepara reproducción en 2x para los Estados de video",
+        "La novedad se detectó en pruebas de iOS y la beta de Android",
+        "Funciona de manera similar a plataformas como TikTok e Instagram"
+      ],
+      "seSabe": [
+        "WhatsApp prepara una función para reproducir videos de Estados a velocidad 2x",
+        "La herramienta apareció en pruebas de iOS y en la versión beta de Android 2.26.40.4",
+        "El sistema de aceleración se asemeja al de plataformas como TikTok e Instagram"
+      ],
+      "noConfirmado": [
+        "Todavía no se informó la fecha exacta del lanzamiento oficial para todos los usuarios de la aplicación"
+      ],
+      "textoRedes": "WhatsApp prepara una modificación en la sección de Estados para permitir la reproducción de videos a una velocidad de 2x, con un funcionamiento similar al de plataformas como TikTok e Instagram.",
+      "etiquetas": [
+        "WhatsApp",
+        "Estados",
+        "aplicaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/interes-general/whatsapp-prepara-una-nueva-funcion-en-los-estados--como-funcionara-la-reproduccion-en-2x_a6ac903be587f18d752fd4183",
+          "fecha": "2026-10-09T15:13:52.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la incorporación de la velocidad 2x en la versión beta de Android y los detalles de funcionamiento."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-9-14-13-0-whatsapp-prepara-una-nueva-funcion-en-los-estados-como-funcionara-la-reproduccion-en-2x",
+          "fecha": "2026-10-09T17:16:41.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la plataforma prepara la opción de duplicar el ritmo de reproducción en los Estados de video."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "whatsapp-incorpora-la-velocidad-de-2x-para-reproducir-los-videos-en",
+      "foto": {
+        "archivo": "fotos-notas/liqt9r.jpg",
+        "credito": "Foto: La Nueva"
+      }
+    },
+    {
       "id": "14mxql1",
       "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
       "copete": "El equipo local se impuso en el Torneo Provincial de cuarta categoría y jugará el título en noviembre. Regresó este año a la competencia federada tras casi dos décadas.",
@@ -1297,6 +2235,7 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/09/balcarce-va-por-la-gloria-provincial-en-paleta/",
@@ -1304,7 +2243,7 @@
       "fecha": "2026-10-09T15:06:24.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T15:31:45.594Z",
-      "relevancia": 69,
+      "relevancia": 79,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1355,6 +2294,7 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/09/maxivoley-femenino-le-gano-a-gesell-y-cayo-con-edal/",
@@ -1362,7 +2302,7 @@
       "fecha": "2026-10-09T14:33:27.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T15:01:39.586Z",
-      "relevancia": 69,
+      "relevancia": 79,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1471,6 +2411,153 @@
       }
     },
     {
+      "id": "jul3en",
+      "titulo": "Virginia Aparicio expone en el Concejo Deliberante",
+      "copete": "La investigadora del INTA y del CONICET brindará una charla abierta el próximo jueves 15 de octubre en el recinto legislativo tras una iniciativa individual del concejal Gabriel Petruccelli.",
+      "cuerpo": "La ingeniera agrónoma Virginia Aparicio brindará una disertación gratuita en la sala de sesiones del cuerpo legislativo local el jueves 15 de octubre desde las 18. La especialista del INTA y del CONICET profundizará sobre el hallazgo de rastros químicos en organismos humanos, enmarcado dentro del programa global SPRINT enfocado en métodos agrícolas sustentables. La realización del evento surge por una gestión particular del concejal Gabriel Petruccelli. La medida se concreta luego de que el cuerpo deliberativo rechazara por mayoría una convocatoria institucional formal hacia la profesional.",
+      "guion": "Virginia Aparicio expone en el Concejo Deliberante",
+      "seccion": "Balcarce",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30991",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T13:47:33.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:32:00.485Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo",
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Virginia Aparicio expone el jueves 15 de octubre a las 18",
+        "La charla se realiza en la sala de sesiones del Concejo Deliberante",
+        "La actividad surge por una gestión del concejal Gabriel Petruccelli"
+      ],
+      "seSabe": [
+        "Virginia Aparicio expone el jueves 15 de octubre a las 18 hs",
+        "La charla se realiza en la sala de sesiones del Concejo Deliberante",
+        "El concejal Gabriel Petruccelli impulsa la actividad",
+        "El Concejo Deliberante no aprobó la invitación formal"
+      ],
+      "noConfirmado": [
+        "No se informaron los motivos específicos del rechazo de la invitación formal por parte del cuerpo deliberativo"
+      ],
+      "etiquetas": [
+        "Virginia Aparicio",
+        "Concejo Deliberante",
+        "INTA",
+        "CONICET",
+        "Gabriel Petruccelli"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30991",
+          "fecha": "2026-10-09T15:49:06.000Z",
+          "oficial": false,
+          "aporte": "Aporta la fecha, horario, lugar y detalles de la exposición de Virginia Aparicio y la gestión de Gabriel Petruccelli."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-brindara-una-charla-abierta-sobre-plaguicidas-y-salud-928",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18jx7kk",
+          "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
+          "fecha": "2026-10-09T13:47:33.000Z",
+          "ruta": "/nota/virginia-aparicio-habla-en-radio-sobre-su-situacion-en-el-inta-18jx7kk"
+        },
+        {
+          "id": "10znf8w",
+          "titulo": "El operativo de DNI funciona en el Concejo Deliberante",
+          "fecha": "2026-10-08T20:25:28.000Z",
+          "ruta": "/nota/el-operativo-de-dni-funciona-en-el-concejo-deliberante-10znf8w"
+        },
+        {
+          "id": "1opc9eu",
+          "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada",
+          "fecha": "2026-10-07T18:31:21.770Z",
+          "ruta": "/nota/el-concejo-deliberante-distingue-a-la-fiscalia-descentralizada-1opc9eu"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "virginia-aparicio-expone-en-el-concejo-deliberante"
+    },
+    {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "copete": "La institución organizó un encuentro en la Sociedad Italiana para celebrar la labor informativa y homenajear a la familia de Beto Vuotto.",
+      "cuerpo": "El Club Rotario Balcarce Cerrito organizó un encuentro en la Sociedad Italiana para agasajar a los trabajadores de prensa de la ciudad y destacar su labor cotidiana. Durante la velada participó la familia de Vuotto, en recuerdo del reconocido periodista local.\n\nLa fecha conmemorativa se instauró en 2023 en honor a Beto Vuotto, tomando como referencia su natalicio el 4 de octubre. Esta celebración busca reconocer la trayectoria de los comunicadores locales y vincular a distintas generaciones.\n\nAdemás, la institución recibió a los jóvenes balcarceños que regresaron recientemente a la ciudad tras participar en programas de intercambio en Brasil y Australia.",
+      "guion": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30988",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T13:19:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T13:31:40.859Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Club Rotario Balcarce Cerrito agasajó a los periodistas locales.",
+        "El encuentro se desarrolló en la Sociedad Italiana.",
+        "Participó la familia de Beto Vuotto, en cuyo homenaje se instauró la fecha.",
+        "Recibieron a jóvenes que volvieron de intercambios en el exterior."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Club Rotario Balcarce Cerrito organizó un encuentro en la Sociedad Italiana para agasajar a los periodistas locales y homenajear a la familia de Beto Vuotto. Además, recibieron a jóvenes que regresaron de intercambios en el exterior.",
+      "etiquetas": [
+        "Rotary",
+        "periodismo",
+        "Sociedad Italiana",
+        "Balcarce",
+        "homenaje"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30988",
+          "fecha": "2026-10-09T13:19:29.000Z",
+          "oficial": false,
+          "aporte": "Detalló el agasajo del Club Rotario a los periodistas, el homenaje a Beto Vuotto y la bienvenida a los jóvenes de intercambio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-rotary-agasaja-al-periodismo-local-y-recibe-a-jovenes-de"
+    },
+    {
       "id": "1j94k5u",
       "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "copete": "La primera fecha del Torneo Oficial 2026 se suspende otra vez por el agua acumulada en las canchas. La reprogramación se define en los próximos días.",
@@ -1479,6 +2566,15 @@
       "seccion": "Fútbol",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "News Balcarce (FM 91.7)",
+        "Municipalidad de Balcarce",
+        "El Diario Balcarce",
+        "Acción 5 (Balcarce)",
+        "Ahora Balcarce",
+        "Diario La Vanguardia",
+        "QZ Noticias (Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
+        "Ayacucho al Día",
         "Minuto Uno"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/futbol-volvieron-postergar-el-inicio.html",
@@ -1612,7 +2708,8 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/09/riquelme-antonetti-se-quedo-con-la-copa-base-naval/",
       "teniaImagenLaFuente": true,
@@ -1827,74 +2924,6 @@
       }
     },
     {
-      "id": "1i5839k",
-      "titulo": "El Gobierno aprueba el proyecto petrolero Los Toldos bajo el régimen de incentivos",
-      "copete": "El Ministerio de Economía validó la iniciativa energética de Tecpetrol y Gas y Petróleo del Neuquén. Prevén una inversión de 6.432 millones de dólares hasta 2054 en la provincia patagónica.",
-      "cuerpo": "El Ministerio de Economía avaló la incorporación de la propuesta Los Toldos al régimen de inversiones. La medida quedó formalizada mediante la Resolución 1771 del corriente año, rubricada por el titular de la cartera económica y difundida en el Boletín Oficial.\n\nEl plan prevé desembolsos por 6.432 millones de dólares hasta 2054 en el departamento neuquino de Pehuenches. La iniciativa pertenece a Tecpetrol junto a Gas y Petróleo del Neuquén y contempla la perforación de 380 pozos horizontales.\n\nEl desarrollo incluye una planta central para procesar hasta 70.000 barriles diarios de crudo y 3,6 millones de metros cúbicos estándar de gas natural.",
-      "guion": "El Gobierno aprueba el proyecto petrolero Los Toldos bajo el régimen de incentivos",
-      "seccion": "Agro",
-      "medios": [
-        "Noticias Argentinas (NA)",
-        "El Economista"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/los-toldos--aprueban-el-rigi-para-un-plan-de-us-6-432-millones_a6ac8c7aa8e24c1a50ac6ab0e",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T10:56:04.110Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Inversión de 6.432 millones de dólares hasta 2054.",
-        "Desarrollo a cargo de Tecpetrol y Gas y Petróleo del Neuquén.",
-        "Perforación de 380 pozos horizontales en Pehuenches.",
-        "Construcción de una planta central de tratamiento."
-      ],
-      "seSabe": [
-        "El Ministerio de Economía aprobó el ingreso del proyecto Los Toldos al régimen de inversiones.",
-        "La inversión prevista alcanza los 6.432 millones de dólares con proyección hasta 2054.",
-        "El plan pertenece a una unión transitoria entre Tecpetrol y Gas y Petróleo del Neuquén.",
-        "La iniciativa se ubica en el departamento Pehuenches e incluye 380 pozos horizontales."
-      ],
-      "textoRedes": "El Gobierno aprobó el ingreso del proyecto petrolero Los Toldos al régimen de inversiones con una inversión prevista de 6.432 millones de dólares hasta 2054 en Neuquén.",
-      "etiquetas": [
-        "Economía",
-        "Inversiones",
-        "Neuquén",
-        "Tecpetrol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/los-toldos--aprueban-el-rigi-para-un-plan-de-us-6-432-millones_a6ac8c7aa8e24c1a50ac6ab0e",
-          "fecha": "2026-10-09T10:56:04.110Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Economista",
-          "enlace": "https://eleconomista.com.ar/energia/los-toldos-luz-verde-megaproyecto-petrolero-us6432-millones-n98753",
-          "fecha": "2026-10-09T16:17:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-aprueba-el-proyecto-petrolero-los-toldos-bajo-el-regimen",
-      "foto": {
-        "archivo": "fotos-notas/1i5839k.jpg",
-        "credito": "Foto: El Economista"
-      }
-    },
-    {
       "id": "l5o975",
       "titulo": "El Gobierno oficializa el proyecto petrolero de Tecpetrol en Vaca Muerta",
       "copete": "El Ejecutivo nacional aprobó la incorporación de Los Toldos II Este al régimen de grandes inversiones. La iniciativa implica una cifra millonaria para incrementar la producción hidrocarburífera en la Cuenca Neuquina.",
@@ -1905,11 +2934,13 @@
         "La Nación",
         "Infobae",
         "Perfil",
-        "El Cronista",
         "El Destape",
         "Página/12",
         "Radio Mitre",
-        "Crónica"
+        "Noticias Argentinas (NA)",
+        "El Cronista",
+        "Crónica",
+        "El Economista"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
       "teniaImagenLaFuente": true,
@@ -2037,8 +3068,8 @@
         "El Cronista",
         "Perfil",
         "Radio Mitre",
-        "Noticias Argentinas (NA)",
         "Ámbito",
+        "Noticias Argentinas (NA)",
         "Crónica"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/09/el-gobierno-autorizo-la-participacion-del-ejercito-argentino-en-un-ejercicio-militar-con-brasil/",
@@ -2116,16 +3147,29 @@
     "Balcarce",
     "Automovilismo",
     "Deportes",
-    "Fútbol",
+    "Policiales",
     "Agro",
+    "Fútbol",
+    "Política",
     "Tecnología"
   ],
-  "temas": [],
+  "temas": [
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 5
+    },
+    {
+      "nombre": "El INTA",
+      "ranura": "inta",
+      "cuantas": 2
+    }
+  ],
   "clima": {
     "ahora": {
       "temp": 13,
       "sensacion": 10,
-      "humedad": 63,
+      "humedad": 64,
       "viento": 12,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -2493,16 +3537,34 @@
   },
   "pendientes": [
     {
-      "id": "1stahh",
+      "id": "1hbflhh",
       "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "11yxcy2",
+      "id": "flkwe1",
+      "titulo": "Trenes Argentinos denunció ataques a balazos contra…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "6gphoh",
+      "titulo": "La historia de Nico: su mamá contó cómo atraviesan el…",
+      "seccion": "Balcarce",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "19272wr",
       "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"adolescente\""
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "18c3rib",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "1hc2g38",
@@ -2517,22 +3579,10 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "19pmnlu",
-      "titulo": "Denunciaron a alumnos de un colegio por crear imágenes de…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1f0go0k",
       "titulo": "La defensa de Pity Álvarez solicitó la nulidad de la…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "kzzd97",
-      "titulo": "Grabois cruzó a Pettovello por las denuncias contra…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "uvmc92",
@@ -2559,22 +3609,28 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "kzzd97",
+      "titulo": "Grabois cruzó a Pettovello por las denuncias contra…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "5fv24u",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"menores de 5 anos\""
     },
     {
-      "id": "emxfi0",
-      "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "1nerhmu",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "wdhpc1",
-      "titulo": null,
+      "id": "19pmnlu",
+      "titulo": "Denunciaron a alumnos de un colegio por crear imágenes de…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "11i60cy",
@@ -2583,21 +3639,15 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "1he1jh5",
+      "id": "wdhpc1",
       "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"adolescente\""
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "5xhpo2",
       "titulo": null,
       "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "7ym2kb",
-      "titulo": null,
-      "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
@@ -2607,5 +3657,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 2
 }
