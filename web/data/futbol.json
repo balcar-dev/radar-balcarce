@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-10T20:00:12.816Z",
+ "consultado": "2026-10-10T20:04:15.579Z",
  "equipos": [
   "9739",
   "3",
@@ -799,7 +799,7 @@
     "competencia": "liga",
     "inicio": "2026-10-10T18:45:00.000Z",
     "estado": "en-juego",
-    "minuto": "57'",
+    "minuto": "61'",
     "local": {
      "id": "10060",
      "nombre": "Barracas Central",
@@ -828,8 +828,8 @@
     "id": "401841610",
     "competencia": "liga",
     "inicio": "2026-10-10T20:00:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "4'",
     "local": {
      "id": "11989",
      "nombre": "Central Córdoba (Santiago del Estero)",
@@ -1608,7 +1608,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-10T18:32:39.631Z",
+ "tablaCuando": "2026-10-10T20:04:15.579Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",

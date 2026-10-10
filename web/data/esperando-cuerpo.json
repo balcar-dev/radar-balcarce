@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-10T19:01:55.133Z",
+ "generado": "2026-10-10T20:04:17.507Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -34,6 +34,28 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "1w029fv",
+   "titulo": "TC2000: Traut, con su primera «pole» en el cierre de la clasificación pampeana",
+   "copete": "TC2000 – LA PAMPA II – CLASIFICACIÓN (Q2) La entrada TC2000: Traut, con su primera «pole» en el cierre de la clasificación pampeana se publicó primero en Campeones .",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-10T19:46:23.000Z",
+   "fuentes": [
+    {
+     "medio": "Campeones",
+     "enlace": "https://campeones.com.ar/tc2000-traut-con-su-primera-pole-en-el-cierre-de-la-clasificacion-pampeana/",
+     "fecha": "2026-10-10T19:46:23.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/autos/tc2000-toay-logro-pole_0_ScXbpnehCn.html",
+     "fecha": "2026-10-10T19:49:36.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 4 problemas (nombre, numero, tilde, tildes): el cuerpo nombra a \"volkswagen\" y la fuente no; sin esas oraciones quedan 99 palabras",
    "maximo": 3
   }
  ]
