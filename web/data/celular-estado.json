@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T00:02:16.151Z",
- "portada": 64,
- "archivo": 886,
- "esperandoCuerpo": 9,
+ "generado": "2026-10-10T00:32:01.173Z",
+ "portada": 62,
+ "archivo": 885,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-10T00:02:16.193Z",
+  "generado": "2026-10-10T00:32:01.228Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -84,7 +84,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-10T00:06:07.119Z"
    }
   ],
   "repasos": [
@@ -156,8 +156,8 @@
     "hora": "21:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 51,
+    "salio": "2026-10-10T00:06:07.119Z",
+    "segundos": null,
     "notas": [
      {
       "id": "1trv7re",
@@ -215,6 +215,24 @@
      "id": "1aizybd",
      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
      "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "88fvqd",
+     "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1360zul",
+     "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "146dyw0",
+     "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],
