@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-10T22:32:01.605Z",
+ "consultado": "2026-10-10T23:01:47.072Z",
  "equipos": [
   "9739",
   "3",
@@ -883,7 +883,7 @@
     "competencia": "liga",
     "inicio": "2026-10-10T22:15:00.000Z",
     "estado": "en-juego",
-    "minuto": "17'",
+    "minuto": "45'+2'",
     "local": {
      "id": "7767",
      "nombre": "Tigre",
@@ -892,7 +892,7 @@
     "visitante": {
      "id": "235",
      "nombre": "Banfield",
-     "goles": 1
+     "goles": 2
     },
     "penales": null,
     "goles": [
@@ -906,6 +906,12 @@
       "equipo": "local",
       "jugador": "Jerónimo Domina",
       "minuto": "10'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Tomás Adoryan",
+      "minuto": "36'",
       "tipo": "gol"
      }
     ],

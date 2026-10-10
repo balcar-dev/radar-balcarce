@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T22:32:04.170Z",
- "portada": 45,
- "archivo": 905,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-10T23:01:49.979Z",
+ "portada": 47,
+ "archivo": 908,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T22:32:04.206Z",
+  "generado": "2026-10-10T23:01:50.012Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -157,8 +157,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 36,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "1nhtdpr",
+      "titulo": "El Gobierno reitera el pedido a la Fórmula 1 para volver a ser sede",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "17wk7q3",
+      "titulo": "Brasil derrota a Argentina por 3 a 1 en un amistoso internacional",
+      "seccion": "Fútbol"
+     },
      {
       "id": "p4vc8j",
       "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
@@ -193,18 +203,16 @@
      "id": "1cj5sd",
      "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
      "cuando": "2026-10-10T20:34:01.086Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "p4vc8j",
      "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
-     "seccion": "Deportes",
-     "marcada": false
+     "cuando": "2026-10-10T22:34:27.070Z"
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-10T22:04:01.086Z",
+   "cola": [],
+   "cupo": 0,
+   "proximoDesde": "2026-10-11T00:04:27.070Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
