@@ -11599,12 +11599,15 @@
   "fuentes": 4
  },
  "xggmkl": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/xggmkl.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-10T06:32:03.842Z",
-  "intentos": 1,
-  "fuentes": 3
+  "enlace": "https://www.perfil.com/noticias/economia/la-indumentaria-y-los-restaurantes-mas-caros-de-la-region.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2026/10/10/trim/1140/641/101026restaurantcedocg-2345776.jpg",
+  "razon": "La foto B muestra un restaurante ordenado y sin marcas de agua ni menores reconocibles, ideal para ilustrar la sección de gastronomía.",
+  "cuando": "2026-10-10T08:01:55.544Z"
  }
 }

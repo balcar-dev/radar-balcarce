@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T07:31:53.647Z",
+  "generado": "2026-10-10T08:02:00.218Z",
   "notas": [
     {
       "id": "9zwjal",
@@ -154,11 +154,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45051-continua-este-sabado-el-operativo-documentario-en-el-concejo-deliberante/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-10T02:31:26.354Z",
       "sinFecha": true,
       "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -376,6 +376,158 @@
       }
     },
     {
+      "id": "xggmkl",
+      "titulo": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "copete": "A pesar de registrar una baja en sus precios en dólares durante julio, el país mantiene los valores más altos de América Latina en dos rubros clave, según un informe de Fundar.",
+      "cuerpo": "Los precios en moneda extranjera retrocedieron 0,3% en julio y acumularon dos meses seguidos de descenso frente a la región, de acuerdo con el informe de Fundar. El país registra los valores más elevados en restaurantes, indumentaria, comunicaciones, recreación y equipamiento del hogar. Por el contrario, los segmentos más accesibles resultaron alimentos, educación, vivienda y servicios, alcohol y tabaco y salud.\n\nEl nivel general se ubicó en 98,3 puntos y se situó por encima de Chile, un hecho que no ocurría desde abril de 2025. Ese cambio obedeció a la caída de casi 3% en la moneda chilena durante el mismo periodo, mientras que la economía nacional quedó 1,7% por debajo del promedio regional.\n\nEn la perspectiva de largo plazo, los precios locales acumulan un incremento del 74,4% en dólares en comparación con enero de 2021. Hacia agosto, la tendencia habría cambiado con un nuevo encarecimiento relativo tras registrar una inflación del 1,7%.",
+      "guion": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "Perfil",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T23:44:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T06:31:48.320Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los precios en dólares bajaron 0,3% en julio.",
+        "Argentina lidera los costos regionales en ropa y gastronomía.",
+        "El país superó a Chile en el índice de precios durante julio.",
+        "La economía nacional acumula un incremento del 74,4% en dólares desde 2021."
+      ],
+      "seSabe": [
+        "Los precios en dólares bajaron 0,3% en julio según el Índice Mensual de Precios Relativos de Fundar.",
+        "Argentina supera a Chile en el indicador regional con 98,3 puntos frente a 97,6.",
+        "El país encabeza los rubros de restaurantes e indumentaria en América Latina."
+      ],
+      "noConfirmado": [
+        "La comparación exacta con el resto de América Latina correspondiente al mes de agosto todavía no fue actualizada."
+      ],
+      "textoRedes": "El país registra los precios más altos de América Latina en restaurantes e indumentaria a pesar de una leve baja en dólares durante julio, según un informe de Fundar.",
+      "etiquetas": [
+        "precios",
+        "dolares",
+        "indumentaria",
+        "restaurantes",
+        "fundar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+          "fecha": "2026-10-09T23:44:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del índice de precios en dólares, la comparación regional, los rubros más caros y las estadísticas de Fundar."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-indumentaria-y-los-restaurantes-mas-caros-de-la-region.phtml",
+          "fecha": "2026-10-10T05:56:13.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-tiene-la-ropa-y-los-restaurantes-mas-caros-de-la-region--pese-a-la-leve-baja-de-la-inflacion-en-dolares-en-julio_a6ac993e3587f18d75220d84b",
+          "fecha": "2026-10-10T01:34:49.000Z",
+          "oficial": false,
+          "aporte": "Compartió la información general sobre la posición de Argentina en precios de indumentaria y restaurantes frente a la región."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "argentina-encabeza-el-ranking-regional-en-indumentaria-y-gastronomia",
+      "foto": {
+        "archivo": "fotos-notas/xggmkl.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "1aizybd",
+      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
+      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
+      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:32:00.485Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T23:32:00.485Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
+        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
+        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
+        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
+        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
+      ],
+      "seSabe": [
+        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
+        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
+        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
+        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
+        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
+      "etiquetas": [
+        "Giuliana Romero",
+        "Balcarce",
+        "Operación",
+        "Recuperación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+          "fecha": "2026-10-09T23:29:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pvwlvg",
+          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+          "fecha": "2026-10-07T00:30:00.000Z",
+          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
+      "foto": {
+        "archivo": "fotos-notas/1aizybd.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "1m8dnbh",
       "titulo": "Leandro Spinelli analiza la economía local y confirma nuevas obras",
       "copete": "El concejal Leandro Spinelli repasó la situación de los sectores productivos y confirmó la pavimentación de catorce cuadras con fondos provinciales en barrios locales.",
@@ -455,137 +607,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "leandro-spinelli-analiza-la-economia-local-y-confirma-nuevas-obras"
-    },
-    {
-      "id": "1aizybd",
-      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
-      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
-      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T23:29:47.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
-        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
-        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
-        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
-        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
-      ],
-      "seSabe": [
-        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
-        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
-        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
-        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
-        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
-      "etiquetas": [
-        "Giuliana Romero",
-        "Balcarce",
-        "Operación",
-        "Recuperación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-          "fecha": "2026-10-09T23:29:47.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "pvwlvg",
-          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-          "fecha": "2026-10-07T00:30:00.000Z",
-          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
-      "foto": {
-        "archivo": "fotos-notas/1aizybd.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
-      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
-      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T23:21:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
-        "La función se realiza en el teatro Roxy desde las 21.30.",
-        "El unipersonal cuenta con dirección de Martín Bontempo.",
-        "Las entradas están a la venta en Plateanet y en la boletería."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
-      "etiquetas": [
-        "Camila Peralta",
-        "Suavecita",
-        "Mar del Plata",
-        "teatro",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-          "fecha": "2026-10-09T23:21:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
-      "foto": {
-        "archivo": "fotos-notas/1360zul.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
     },
     {
       "id": "88fvqd",
@@ -669,65 +690,6 @@
       "foto": {
         "archivo": "fotos-notas/88fvqd.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
-      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
-      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T22:30:19.147Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
-        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
-        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
-      "etiquetas": [
-        "Paula Boccia",
-        "tenis",
-        "Balcarce",
-        "Tucumán",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-          "fecha": "2026-10-09T22:31:35.000Z",
-          "oficial": false,
-          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
-      "foto": {
-        "archivo": "fotos-notas/146dyw0.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1436,11 +1398,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:31:41.075Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1591,11 +1553,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:01:23.701Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:01:23.701Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2364,12 +2326,11 @@
       "guion": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce",
         "News Balcarce (FM 91.7)",
         "Municipalidad de Balcarce",
-        "El Diario Balcarce",
         "Acción 5 (Balcarce)",
         "Ahora Balcarce",
         "Diario La Vanguardia",
@@ -2383,7 +2344,7 @@
       "fecha": "2026-10-09T13:12:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2508,7 +2469,6 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2519,7 +2479,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 72,
+      "relevancia": 62,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -2790,90 +2750,6 @@
       "foto": {
         "archivo": "fotos-notas/rzygx9.jpg",
         "credito": "Foto: Agrositio"
-      }
-    },
-    {
-      "id": "1gmlwhw",
-      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "copete": "Ediles cruzaron cuestionamientos en la 15á sesión por la campaña de recupero de deuda a más de 2.000 usuarios y la contratación de un estudio jurídico externo.",
-      "cuerpo": "El tramo final de la decimoquinta sesión del Concejo Deliberante concentró un intenso debate en torno a las intimaciones enviadas por Aguas de la Ciudad para recuperar deudas acumuladas por más de 2.000 usuarios. La discusión expuso objeciones de la oposición sobre la contratación de un estudio jurídico marplatense y la demora en responder pedidos de informes.\n\nEn la misma línea, Enrique Guillén y Gabriel Petruccelli reclamaron que las gestiones queden a cargo de profesionales locales y exigieron mayores facilidades de pago para los vecinos. Desde el oficialismo, Leandro Spinelli rechazó las sospechas, defendió la necesidad de recaudar fondos ante la delicada situación financiera de la firma y prometió gestionar las explicaciones requeridas.",
-      "guion": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T11:36:27.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T14:31:49.247Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Intimaciones a más de 2.000 usuarios del servicio sanitario.",
-        "Cuestionamiento opositor a un estudio jurídico marplatense.",
-        "Reclamos por falta de respuestas a pedidos de informes.",
-        "Defensa oficialista de la recaudación para sostener a la empresa."
-      ],
-      "seSabe": [
-        "El debate ocurrió al cierre de la 15á sesión del Concejo Deliberante.",
-        "La campaña de cobro alcanza a más de 2.000 usuarios.",
-        "La oposición cuestionó la Ordenanza 40/26 y la falta de respuestas de Ricardo Stoppani."
-      ],
-      "noConfirmado": [
-        "No se detallaron los montos totales de la deuda reclamada a los usuarios.",
-        "No trascendieron los plazos en los que asumiría el nuevo gerente de la empresa.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Intenso debate en el Concejo Deliberante por las intimaciones y el recupero de deudas impulsado por Aguas de la Ciudad a más de 2.000 usuarios.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Aguas de la Ciudad",
-        "deudas",
-        "OSEBAL"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-          "fecha": "2026-10-09T11:36:27.000Z",
-          "oficial": false,
-          "aporte": "Detalló los cruces en el Concejo Deliberante por las intimaciones de Aguas de la Ciudad y las posturas de los bloques."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "z7t628",
-          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
-          "fecha": "2026-10-09T02:06:53.000Z",
-          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
-        },
-        {
-          "id": "e09k96",
-          "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
-          "fecha": "2026-10-07T05:31:18.450Z",
-          "ruta": "/nota/el-concejo-debate-la-creacion-de-un-banco-municipal-de-fisiatria-e09k96"
-        },
-        {
-          "id": "1s9so2g",
-          "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
-          "fecha": "2026-09-25T23:02:57.000Z",
-          "ruta": "/nota/el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal-1s9so2g"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-discute-las-intimaciones-de-aguas-de-la-ciudad",
-      "foto": {
-        "archivo": "fotos-notas/1gmlwhw.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -3429,6 +3305,7 @@
         "Infobae",
         "El Destape",
         "TyC Sports",
+        "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
         "La Nueva",
         "Clarín",
@@ -3822,9 +3699,8 @@
         "Infobae",
         "El Destape",
         "Ámbito",
-        "Bolavip Argentina",
-        "El Economista",
-        "Básquet Plus"
+        "Básquet Plus",
+        "Doble Amarilla"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
       "teniaImagenLaFuente": true,
@@ -3890,63 +3766,6 @@
         "archivo": "fotos-notas/w8iv0l.jpg",
         "credito": "Foto: La Nación"
       }
-    },
-    {
-      "id": "1om2oqi",
-      "titulo": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "copete": "Los trabajadores de prensa de la ciudad celebraron una nueva edición de la fecha instaurada en 2023. El homenaje central recordó la figura de Héctor Heriberto \"Beto\" Vuotto.",
-      "cuerpo": "Los trabajadores de prensa locales volvieron a reunirse para celebrar una nueva edición del Día del Periodista Balcarceño. La conmemoración forma parte del calendario oficial del distrito desde el año 2023.\n\nDurante el encuentro, la figura central del reconocimiento fue Héctor Heriberto \"Beto\" Vuotto, recordado por su trayectoria en la actividad. La jornada sirvió como espacio de encuentro y reconocimiento para los profesionales de los medios de comunicación de la comunidad.",
-      "guion": "El periodismo local conmemora el Día del Periodista Balcarceño",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T21:17:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reunión de trabajadores de prensa locales",
-        "Homenaje a Héctor Heriberto \"Beto\" Vuotto",
-        "Fecha oficial en el calendario desde 2023"
-      ],
-      "seSabe": [
-        "Se llevó a cabo un encuentro del periodismo balcarceño.",
-        "La fecha se conmemora desde 2023 en el calendario local.",
-        "Héctor Heriberto \"Beto\" Vuotto es la figura central del homenaje."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El periodismo local se reunió para celebrar el Día del Periodista Balcarceño, una fecha instalada en el calendario distrital desde 2023 que rinde homenaje a la figura de Héctor Heriberto \"Beto\" Vuotto.",
-      "etiquetas": [
-        "periodismo",
-        "Balcarce",
-        "Beto Vuotto",
-        "reconocimiento"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-periodismo-balcarceno-volvio-a-encontrarse-para-recordar-a-beto-vuotto-987",
-          "fecha": "2026-10-08T21:17:37.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el encuentro del periodismo local en el marco del Día del Periodista Balcarceño y el reconocimiento a Héctor Heriberto \"Beto\" Vuotto."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-periodismo-local-conmemora-el-dia-del-periodista-balcarceno"
     },
     {
       "id": "1q4j7p",
@@ -4181,113 +4000,18 @@
         "archivo": "fotos-notas/1trv7re.jpg",
         "credito": "Foto: El Diario Balcarce"
       }
-    },
-    {
-      "id": "bcq9u5",
-      "titulo": "Genneia inaugura parque solar en San Juan tras invertir 110 millones",
-      "copete": "La empresa puso en marcha el complejo San Juan Sur en la localidad de Retamito. Cuenta con 250.000 paneles solares y apunta a abastecer al sector minero.",
-      "cuerpo": "La empresa Genneia inauguró el parque solar San Juan Sur en la localidad sanjuanina de Retamito, tras una inversión de US$110 millones. El complejo cuenta con una capacidad instalada de 129 megavatios y ocupa una superficie de 500 hectáreas con 250.000 paneles solares bifaciales.\n\nEl proyecto abastecerá a grandes usuarios industriales y mineros mediante el Mercado a Término de Energías Renovables. La obra generó 300 puestos de trabajo durante su construcción y su producción equivale al consumo anual de 90.000 hogares.\n\nDe la ceremonia participaron el presidente de la firma, Jorge Brito, el CEO Bernardo Andrews, el gobernador sanjuanino Marcelo Orrego y el intendente de Sarmiento, Alfredo Castro.",
-      "guion": "Genneia inaugura parque solar en San Juan tras invertir 110 millones",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Perfil",
-        "Noticias Argentinas (NA)",
-        "El Economista",
-        "El Cronista",
-        "Ámbito"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/negocios/genneia-inauguro-el-parque-solar-mas-grande-de-san-juan-invirtio-us110-millones-y-apunta-al-negocio-nid08102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T19:53:11.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 65,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Genneia inauguró el parque solar San Juan Sur en Retamito.",
-        "La obra demandó una inversión de US$110 millones.",
-        "El complejo cuenta con una capacidad instalada de 129 megavatios."
-      ],
-      "seSabe": [
-        "Genneia inauguró el parque solar San Juan Sur en Retamito.",
-        "La inversión fue de US$110 millones.",
-        "La capacidad instalada es de 129 megavatios.",
-        "Participaron Jorge Brito, Bernardo Andrews, Marcelo Orrego y Alfredo Castro."
-      ],
-      "textoRedes": "Genneia inauguró el parque solar San Juan Sur en San Juan con una inversión de US$110 millones y una capacidad de 129 megavatios para abastecer al sector minero.",
-      "etiquetas": [
-        "Genneia",
-        "parque solar",
-        "San Juan",
-        "energía renovable",
-        "minería"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/negocios/genneia-inauguro-el-parque-solar-mas-grande-de-san-juan-invirtio-us110-millones-y-apunta-al-negocio-nid08102026/",
-          "fecha": "2026-10-08T19:53:11.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles técnicos, de ubicación, la inversión, la tecnología de los paneles y las declaraciones de las autoridades."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/08/inversion-de-usd-110-millones-con-la-presencia-de-jorge-brito-y-el-gobernador-orrego-genneia-inauguro-el-parque-solar-san-juan-sur/",
-          "fecha": "2026-10-08T20:57:44.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la inauguración del Parque Solar San Juan Sur en Retamito, la inversión y la potencia."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/protagonistas/genneia-invirtio-us-110-millones-en-el-parque-solar-mas-grande-de-san-juan-y-refuerza-su-apuesta-por-la-mineria/",
-          "fecha": "2026-10-08T20:07:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el impulso del desarrollo minero y la necesidad de abastecer a la industria."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/genneia-inauguro-en-san-juan-el-parque-solar-mas-grande-de-la-provincia-con-una-inversion-de-us--110-millones_a6ac808043d40083fb661a524",
-          "fecha": "2026-10-08T21:19:08.000Z",
-          "oficial": false,
-          "aporte": "Precisó que se trata del desarrollo fotovoltaico más grande de la provincia y la ubicación en Retamito."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "gfh5l8",
-          "titulo": "La Provincia cede un predio minero a Olavarría para un parque urbano",
-          "fecha": "2026-10-02T10:38:00.000Z",
-          "ruta": "/nota/la-provincia-cede-un-predio-minero-a-olavarria-para-un-parque-urbano-gfh5l8"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "genneia-inaugura-parque-solar-en-san-juan-tras-invertir-110-millones",
-      "foto": {
-        "archivo": "fotos-notas/bcq9u5.jpg",
-        "credito": "Foto: La Nación"
-      }
     }
   ],
   "secciones": [
     "Policiales",
     "Agro",
     "Balcarce",
-    "Política",
-    "Cultura y agenda",
-    "Deportes",
-    "Fútbol",
-    "Argentina",
     "Economía",
+    "Política",
+    "Fútbol",
+    "Deportes",
+    "Argentina",
+    "Cultura y agenda",
     "Tecnología",
     "Automovilismo"
   ],
@@ -4307,7 +4031,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 91,
+      "humedad": 93,
       "viento": 12,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4322,7 +4046,7 @@
         "lluvia": 70,
         "codigo": 51,
         "viento": 15,
-        "milimetros": 1,
+        "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
@@ -4333,7 +4057,7 @@
         "lluvia": 12,
         "codigo": 51,
         "viento": 14,
-        "milimetros": 0,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
@@ -4344,7 +4068,7 @@
         "lluvia": 25,
         "codigo": 51,
         "viento": 14,
-        "milimetros": 1,
+        "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
@@ -4355,7 +4079,7 @@
         "lluvia": 53,
         "codigo": 51,
         "viento": 16,
-        "milimetros": 0,
+        "milimetros": 2,
         "cielo": "Llovizna leve"
       }
     ],
@@ -4657,34 +4381,16 @@
   },
   "pendientes": [
     {
-      "id": "ubfg45",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"el menor de\" (en otro medio que cuenta lo mismo)"
-    },
-    {
       "id": "1hbflhh",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "aq8ze",
+      "id": "10conaq",
       "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
-      "id": "11sovpd",
-      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "8u3cip",
-      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
-      "seccion": "Cultura y agenda",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"el menor de\""
     },
     {
       "id": "ltv8xo",
@@ -4753,10 +4459,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "vbfl3j",
-      "titulo": "El particular regalo de Benín a Messi en su despedida",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
+      "id": "11sovpd",
+      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "8u3cip",
+      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
+      "seccion": "Cultura y agenda",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "kzzd97",
@@ -4849,17 +4561,11 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
-      "id": "146mbos",
-      "titulo": "La ANMAT prohibió el uso de dos suplementos promocionados…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "7ym2kb",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 1
 }

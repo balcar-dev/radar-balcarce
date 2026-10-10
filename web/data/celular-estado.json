@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T07:31:53.647Z",
- "portada": 53,
- "archivo": 892,
- "esperandoCuerpo": 0,
+ "generado": "2026-10-10T08:02:00.218Z",
+ "portada": 49,
+ "archivo": 891,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-10T07:31:53.688Z",
+  "generado": "2026-10-10T08:02:00.258Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,22 +95,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes"
-     },
      {
       "id": "vwb5m5",
       "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol"
      },
      {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "seccion": "Cultura y agenda"
+      "id": "10izr2u",
+      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "15zr9uw",
+      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
+      "seccion": "Agro"
      },
      {
       "id": "jul3dj",
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "10izr2u",
-      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
-      "seccion": "Deportes"
-     },
      {
       "id": "vw0kpx",
       "titulo": "La Selección Argentina lidera el ranking de equipos más atacados en redes",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "2qmh95",
+      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+      "seccion": "Deportes"
      },
      {
       "id": "16s8yom",
@@ -157,19 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
-    "notas": [
-     {
-      "id": "2qmh95",
-      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1u383pj",
-      "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
