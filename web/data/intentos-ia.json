@@ -64,6 +64,13 @@
   "ultimo": "2026-10-06T23:02:22.598Z",
   "motivo": "con cuerpo"
  },
+ "11sovpd": {
+  "intentos": 1,
+  "ultimo": "2026-10-10T04:01:29.600Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "11vh5f5": {
   "intentos": 2,
   "ultimo": "2026-10-06T20:32:07.564Z",
@@ -942,6 +949,11 @@
   "intentos": 1,
   "ultimo": "2026-10-07T23:01:52.452Z",
   "motivo": "con cuerpo"
+ },
+ "1jimkee": {
+  "intentos": 1,
+  "ultimo": "2026-10-10T04:01:29.600Z",
+  "motivo": "cuerpo: 3 problemas (numero, fecha, promesa): el cuerpo dice 12 y la fuente no lo dice; sin esas oraciones quedan 25 palabras"
  },
  "1jwkhok": {
   "intentos": 1,

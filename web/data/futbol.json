@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-10T03:01:29.122Z",
+ "consultado": "2026-10-10T04:01:47.340Z",
  "equipos": [
   "9739",
   "3",
@@ -1217,6 +1217,19 @@
      },
      {
       "posicion": 2,
+      "id": "8950",
+      "equipo": "Defensa y Justicia",
+      "pj": 12,
+      "g": 7,
+      "e": 3,
+      "p": 2,
+      "gf": 18,
+      "gc": 11,
+      "dif": 7,
+      "pts": 24
+     },
+     {
+      "posicion": 3,
       "id": "5",
       "equipo": "Boca Juniors",
       "pj": 12,
@@ -1229,7 +1242,7 @@
       "pts": 21
      },
      {
-      "posicion": 3,
+      "posicion": 4,
       "id": "21",
       "equipo": "Vélez Sarsfield",
       "pj": 11,
@@ -1239,19 +1252,6 @@
       "gf": 17,
       "gc": 11,
       "dif": 6,
-      "pts": 21
-     },
-     {
-      "posicion": 4,
-      "id": "8950",
-      "equipo": "Defensa y Justicia",
-      "pj": 11,
-      "g": 6,
-      "e": 3,
-      "p": 2,
-      "gf": 16,
-      "gc": 11,
-      "dif": 5,
       "pts": 21
      },
      {
@@ -1323,13 +1323,13 @@
       "posicion": 10,
       "id": "20",
       "equipo": "Unión (Santa Fe)",
-      "pj": 11,
+      "pj": 12,
       "g": 4,
       "e": 1,
-      "p": 6,
+      "p": 7,
       "gf": 17,
-      "gc": 19,
-      "dif": -2,
+      "gc": 21,
+      "dif": -4,
       "pts": 13
      },
      {
@@ -1601,7 +1601,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-10T02:02:26.550Z",
+ "tablaCuando": "2026-10-10T04:01:47.340Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",

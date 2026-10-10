@@ -1,18 +1,40 @@
 {
- "generado": "2026-10-10T03:01:31.516Z",
+ "generado": "2026-10-10T04:01:49.031Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1ns9c2b",
+   "titulo": "Paula Boccia competirá en el 42° Campeonato Nacional de Veteranas",
+   "copete": "La tenista balcarceña Paula Boccia integrará la delegación de Mar del Plata que participará, desde este sábado, del 42° Campeonato Nacional de Tenis de Veteranas, que se disputará en San Miguel de Tucumán hasta el miércoles 14 de octubre. El certamen, que se desarrolla una vez…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-09T22:30:19.147Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/paula-boccia-competira-en-el-42.html",
+     "fecha": "2026-10-09T22:30:19.147Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/deportes/14316-paula-boccia-competira-en-un-nacional/",
+     "fecha": null
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
   {
    "id": "15fpn5m",
    "titulo": "Santiago Caputo cuestionó las pensiones por invalidez: “El 60% son truchas\"",
    "copete": "Santiago Caputo cuestionó las pensiones por invalidez y aseguró que aproximadamente el 60% de los beneficios serían irregulares. El asesor presidencial publicó sus declaraciones este viernes en la red social X, donde apuntó contra el presunto uso político de los certificados de…",
    "seccion": "Política",
-   "fecha": "2026-10-09T19:31:49.486Z",
+   "fecha": "2026-10-09T19:31:49.000Z",
    "fuentes": [
     {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/santiago-caputo-cuestiono-las-pensiones-por-invalidez---el-60--son-truchas-_a6ac93355587f18d752056ffd",
-     "fecha": "2026-10-09T19:31:49.486Z"
+     "fecha": "2026-10-09T19:31:49.000Z"
     },
     {
      "medio": "Perfil",
@@ -43,6 +65,38 @@
    "intentos": 4,
    "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 69 palabras",
    "maximo": 4
+  },
+  {
+   "id": "1jimkee",
+   "titulo": "El oficialismo convocó una mega sesión para el 21 de octubre y bloquea el avance opositor contra el DNU 70",
+   "copete": "Buenos Aires, 9 octubre (NA) -- La Libertad Avanza pidió una sesión especial para el miércoles 21 de octubre al mediodía en la Cámara de Diputados y la Secretaría Parlamentaria rápidamente confirmó la convocatoria con la que el oficialismo busca bloquear el intento opositor para…",
+   "seccion": "Política",
+   "fecha": "2026-10-09T23:23:18.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/el-oficialismo-convoco-una-mega-sesion-para-el-21-de-octubre-y-bloquea-el-avance-opositor-contra-el-dnu-70_a6ac96ff0587f18d752159160",
+     "fecha": "2026-10-09T23:23:18.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/diputados-el-oficialismo-llamo-a-una-sesion-para-el-21-de-octubre-y-podria-frenar-avanzada-para-derogar-el-dnu-70-2023/",
+     "fecha": "2026-10-10T00:35:54.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/politica/2026/10/10/el-gobierno-convoco-a-una-mega-sesion-en-diputados-y-bloquea-el-avance-de-la-oposicion-contra-el-dnu-70/",
+     "fecha": "2026-10-10T00:08:28.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-9-23-17-0-dnu-70-el-oficialismo-movio-las-fichas-parlamentarias-para-frenar-la-embestida-opositora",
+     "fecha": "2026-10-10T02:52:48.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 3 problemas (numero, fecha, promesa): el cuerpo dice 12 y la fuente no lo dice; sin esas oraciones quedan 25 palabras",
+   "maximo": 3
   },
   {
    "id": "zdlxph",
