@@ -581,8 +581,8 @@
   "motivo": "con cuerpo"
  },
  "1c8h3cp": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T18:31:59.976Z",
+  "intentos": 2,
+  "ultimo": "2026-10-10T19:31:42.103Z",
   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1c93acw": {
@@ -676,9 +676,11 @@
   "motivo": "con cuerpo"
  },
  "1d4xgqi": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T18:31:59.976Z",
-  "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"di\", \"geronimo\", \"laguna\", \"brava\" y el cuerpo no los explica; sin esas oraciones quedan 80 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-10T19:31:42.103Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "1d75c0g": {
   "intentos": 1,
@@ -2547,11 +2549,6 @@
   "ultimo": "2026-10-10T01:02:01.933Z",
   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2603 (line 27 column 14)"
  },
- "qqa24c": {
-  "intentos": 3,
-  "ultimo": "2026-10-03T19:31:25.866Z",
-  "motivo": "con cuerpo"
- },
  "r09m78": {
   "intentos": 1,
   "ultimo": "2026-10-08T16:32:04.668Z",
@@ -2570,6 +2567,11 @@
  "r3lz6t": {
   "intentos": 3,
   "ultimo": "2026-10-05T12:31:27.165Z",
+  "motivo": "con cuerpo"
+ },
+ "r7245w": {
+  "intentos": 1,
+  "ultimo": "2026-10-10T19:31:42.103Z",
   "motivo": "con cuerpo"
  },
  "r7ox1t": {
