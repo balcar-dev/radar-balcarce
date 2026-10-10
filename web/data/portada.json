@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T21:01:57.776Z",
+  "generado": "2026-10-10T21:31:57.789Z",
   "notas": [
     {
       "id": "1cj5sd",
@@ -228,7 +228,7 @@
       "fecha": "2026-10-10T18:30:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T18:31:46.672Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -288,81 +288,6 @@
       "foto": {
         "archivo": "fotos-notas/1vwpejn.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
-      "id": "iqzdzj",
-      "titulo": "El Gobierno avanza con nuevas privatizaciones y analiza el futuro de Intercargo",
-      "copete": "Tras recibir ofertas por el noventa por ciento de AySA, la administración nacional prepara nuevas licitaciones para transferir al sector privado distintas empresas estatales.",
-      "cuerpo": "El jueves se conocieron las propuestas económicas para quedarse con el noventa por ciento de las acciones de Agua y Saneamientos Argentinos (AySA). El futuro operador deberá asumir inversiones por US$2000 millones para mejorar el servicio.\n\nEn paralelo, el Ejecutivo analiza relanzar la licitación de Intercargo con condiciones modificadas, luego de que el primer intento terminara desierto en julio. Además, la agenda incluye la venta de participaciones estatales en las centrales termoeléctricas Manuel Belgrano —ubicada en Campana— y José de San Martín —en Timbúes—, cuyas operaciones el Gobierno busca concretar antes de fin de año.",
-      "guion": "El Gobierno avanza con nuevas privatizaciones y analiza el futuro de Intercargo",
-      "seccion": "Economía",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Canal 26"
-      ],
-      "enlace": "https://tn.com.ar/economia/2026/10/10/despues-de-aysa-el-gobierno-avanza-con-nuevas-privatizaciones-y-analiza-el-futuro-de-intercargo/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T18:13:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T19:59:59.619Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno recibió ofertas económicas por el noventa por ciento de las acciones de AySA.",
-        "Dos consorcios presentaron propuestas por la compañía de agua y saneamiento.",
-        "El Ejecutivo prepara un nuevo llamado a licitación para privatizar Intercargo.",
-        "Avanza la venta de las participaciones estatales en las centrales termoeléctricas Manuel Belgrano y José de San Martín."
-      ],
-      "noConfirmado": [
-        "Todavía se desconoce cuándo se oficializará el nuevo llamado a licitación para Intercargo ni cuál será su precio base.",
-        "Aún no se determinó la fecha exacta en que se concretarán las licitaciones de las centrales termoeléctricas antes de fin de año."
-      ],
-      "textoRedes": "El Gobierno nacional avanza con nuevas privatizaciones tras recibir ofertas por AySA y prepara un nuevo llamado a licitación para transferir al sector privado a Intercargo y a centrales termoeléctricas.",
-      "etiquetas": [
-        "privatizaciones",
-        "AySA",
-        "Intercargo",
-        "Enarsa",
-        "Gobierno nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/10/despues-de-aysa-el-gobierno-avanza-con-nuevas-privatizaciones-y-analiza-el-futuro-de-intercargo/",
-          "fecha": "2026-10-10T18:13:37.000Z",
-          "oficial": false,
-          "aporte": "Detalló las ofertas económicas por AySA, los montos, los plazos de adjudicación y el estado de los procesos de Intercargo y Enarsa."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-avanza-con-el-esquema-de-privatizaciones-y-define-el-futuro-de-intercargo/",
-          "fecha": "2026-10-10T19:54:24.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el Gobierno busca impulsar otros procesos de privatización que incluyen centrales térmicas y la concesión de servicios."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/10/10/aysa-intercargo-y-belgrano-cargas-como-sigue-el-plan-de-privatizaciones-del-gobierno/",
-          "fecha": "2026-10-10T18:32:44.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el avance del cronograma de privatizaciones y las nuevas licitaciones impulsadas por el Ejecutivo tras la apertura de sobres por AySA."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-avanza-con-nuevas-privatizaciones-y-analiza-el-futuro-de",
-      "foto": {
-        "archivo": "fotos-notas/iqzdzj.jpg",
-        "credito": "Foto: Canal 26"
       }
     },
     {
@@ -511,6 +436,84 @@
       }
     },
     {
+      "id": "1nhtdpr",
+      "titulo": "El Gobierno reitera el pedido a la Fórmula 1 para volver a ser sede",
+      "copete": "El canciller Pablo Quirno mantuvo un encuentro en Singapur con el máximo responsable de la categoría para insistir en el regreso de la competencia al país. Las gestiones se suman a los planteos previos realizados por el presidente Javier Milei.",
+      "cuerpo": "El canciller Pablo Quirno se reunió este sábado en Singapur con el presidente y CEO de la Fórmula 1, Stefano Domenicali, para reiterarle la solicitud de que la Argentina recupere una fecha en el calendario internacional. El funcionario nacional transmitió el interés oficial durante una visita al país asiático, invitado por ministros locales.\n\nEl presidente Javier Milei ya había realizado un planteo similar a finales de agosto durante el Congreso Americano de la Federación Internacional del Automóvil en Buenos Aires, donde destacó la trayectoria nacional en el automovilismo y el impacto de los pilotos locales.\n\nLa categoría ya publicó el cronograma para el próximo año, por lo que las posibilidades de concretar el pedido se evalúan para 2027 ante eventuales cancelaciones de otras plazas o para reemplazar desde 2028 a fechas cuyos contratos finalicen. En paralelo, continúan las obras en el Autódromo de la Ciudad de Buenos Aires con la expectativa de recibir al MotoGP en abril de 2027.",
+      "guion": "El Gobierno reitera el pedido a la Fórmula 1 para volver a ser sede",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Ámbito",
+        "Infobae",
+        "Perfil",
+        "Crónica",
+        "Diario Popular",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/10/el-gobierno-reitero-la-solicitud-a-la-fia-para-que-la-argentina-sea-sede-de-un-gran-premio-de-la-formula-1/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T16:30:08.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T19:01:27.411Z",
+      "relevancia": 100,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reunión entre el canciller Pablo Quirno y Stefano Domenicali en Singapur.",
+        "El Gobierno insiste en recuperar una fecha para la máxima categoría del automovilismo.",
+        "Las opciones para recibir a la competencia se evalúan de cara a 2027 o 2028.",
+        "El proyecto se complementa con las tareas de remodelación en el Autódromo porteño."
+      ],
+      "seSabe": [
+        "El canciller Pablo Quirno se reunió este sábado con Stefano Domenicali en Singapur.",
+        "El funcionario renovó formalmente el pedido para que el país reciba un Gran Premio.",
+        "El presidente Javier Milei había planteado la misma solicitud a fines de agosto ante autoridades de la FIA.",
+        "La categoría ya difundió el cronograma del próximo año."
+      ],
+      "noConfirmado": [
+        "Todavía no hay fechas confirmadas para el retorno de la competencia al país.",
+        "Las posibilidades para 2027 dependen de posibles cancelaciones de otras sedes internacionales."
+      ],
+      "textoRedes": "El canciller Pablo Quirno se reunió en Singapur con el CEO de la Fórmula 1 para reiterar el pedido de que la Argentina vuelva a albergar un Gran Premio.",
+      "etiquetas": [
+        "Fórmula 1",
+        "Pablo Quirno",
+        "Stefano Domenicali",
+        "Javier Milei",
+        "Automovilismo",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/10/el-gobierno-reitero-la-solicitud-a-la-fia-para-que-la-argentina-sea-sede-de-un-gran-premio-de-la-formula-1/",
+          "fecha": "2026-10-10T16:30:08.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles del encuentro en Singapur entre Pablo Quirno y Stefano Domenicali, junto con los antecedentes de las gestiones oficiales."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/vuelve-la-formula-1-la-argentina-elgobierno-reitero-la-fia-su-pedido-organizar-un-gran-premio-n6332364",
+          "fecha": "2026-10-10T18:39:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la reunión en Singapur y la vinculación de la iniciativa con los proyectos en el Autódromo porteño."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-reitera-el-pedido-a-la-formula-1-para-volver-a-ser-sede",
+      "foto": {
+        "archivo": "fotos-notas/1nhtdpr.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "p3cnfm",
       "titulo": "Luján habilita un portal con servicios para la visita del Papa",
       "copete": "El municipio bonaerense lanzó una plataforma web para organizar a los peregrinos que llegarán el 11 de noviembre por la visita del papa León XIV. Reúne más de doscientos alojamientos y zonas de acampe.",
@@ -520,9 +523,9 @@
       "medios": [
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
-        "La Verdad",
         "La Opinión",
         "QZ Noticias (Mar del Plata)",
+        "La Verdad",
         "Infoeme"
       ],
       "enlace": "https://dib.com.ar/sociedad/lujan-el-municipio-lanzo-un-portal-informacion-alojamientos-la-visita-del-papa-n56394",
@@ -755,8 +758,8 @@
       "medios": [
         "El Eco de Tandil",
         "La Noticia 1",
-        "Diputados Bonaerenses",
-        "Ámbito"
+        "Ámbito",
+        "Diputados Bonaerenses"
       ],
       "enlace": "https://diputadosbsas.com.ar/pareja-congreso-juventud-lla-moron/",
       "teniaImagenLaFuente": true,
@@ -838,17 +841,22 @@
       "guion": "La cantidad de empresas registradas baja en julio",
       "seccion": "Economía",
       "medios": [
+        "QZ Noticias (Mar del Plata)",
+        "Agencia DIB",
         "Infobae",
         "Radio Mitre",
+        "Canal 26",
         "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Nueva",
+        "0221",
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/10/cerraron-casi-1000-empresas-en-julio-cuantas-bajaron-sus-persianas-desde-que-asumio-el-gobierno-de-javier-milei/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-10T11:20:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T17:01:52.685Z",
-      "relevancia": 69,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1698,7 +1706,7 @@
       "fecha": "2026-10-09T21:11:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 71,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2437,6 +2445,115 @@
       }
     },
     {
+      "id": "16bffnh",
+      "titulo": "Aeropuertos Argentina invierte 1500 millones de dólares en obras",
+      "copete": "La empresa destinará fondos entre 2027 y 2031 para modernizar 35 terminales aéreas en todo el país. Ezeiza, Aeroparque y los aeropuertos del interior concentrarán las principales obras de infraestructura.",
+      "cuerpo": "Aeropuertos Argentina destina 1500 millones de dólares para modernizar y ampliar la infraestructura de 35 terminales aéreas del país entre 2027 y 2031. El programa, acordado con el Organismo Regulador del Sistema Nacional de Aeropuertos, se financia con fondos propios y recursos del fideicomiso del sector.\n\nEl Aeropuerto Internacional de Ezeiza recibe 794 millones de dólares para construir una nueva terminal de arribos internacionales y otra para vuelos domésticos. El Aeroparque Jorge Newbery cuenta con una asignación de 200 millones de dólares para levantar un nuevo espigón y ampliar el sector internacional.\n\nEl resto de los fondos se distribuye en 33 terminales del interior del país, con mejoras en edificios, pistas y balizamiento en catorce ciudades que incluyen Bariloche, Mendoza y Córdoba.",
+      "guion": "Aeropuertos Argentina invierte mil quinientos millones de dólares en obras",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "iProfesional",
+        "Noticias Argentinas (NA)",
+        "Agroempresario",
+        "Clarín"
+      ],
+      "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T16:02:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T19:01:44.733Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Inversión total de 1500 millones de dólares",
+        "Obras previstas entre 2027 y 2031",
+        "Trabajos en Ezeiza, Aeroparque y el interior"
+      ],
+      "seSabe": [
+        "El plan abarca 35 aeropuertos administrados por la empresa",
+        "Ezeiza recibe 794 millones de dólares",
+        "Aeroparque cuenta con 200 millones de dólares para obras"
+      ],
+      "textoRedes": "Aeropuertos Argentina invertirá 1500 millones de dólares entre 2027 y 2031 para modernizar 35 terminales aéreas en todo el país, con obras en Ezeiza, Aeroparque y el interior.",
+      "etiquetas": [
+        "Aeropuertos Argentina",
+        "inversion",
+        "infraestructura",
+        "Ezeiza",
+        "Aeroparque"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
+          "fecha": "2026-10-09T16:02:18.000Z",
+          "oficial": false,
+          "aporte": "Detalló el monto total de la inversión y el desglose por aeropuertos"
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/gigantesco-plan-de-obras-asi-sera-aterrizar-en-la-argentina-en-2030-nid09102026/",
+          "fecha": "2026-10-09T17:56:46.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/09/aeropuertos-argentina-anuncio-el-mayor-plan-de-inversion-de-su-historia-desembolsara-usd-1500-millones-en-los-proximos-5-anos/",
+          "fecha": "2026-10-09T17:25:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/ampliar-concesion-aeropuertos-argentina-invertira-us-1500-millones-ezeiza-aeroparque-interior-pais_0_PZtLSKCq6u.html",
+          "fecha": "2026-10-09T17:14:50.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/09/aeropuertos-argentina-anuncio-obras-por-us1500-millones-ezeiza-tendra-una-nueva-terminal-de-arribos-y-se-ampliara-el-aeroparque/",
+          "fecha": "2026-10-09T17:34:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/negocios/466298-aeropuertos-argentina-invertira-us1500-millones-en-el-pais",
+          "fecha": "2026-10-09T17:55:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/ezeiza-tendra-dos-nuevas-terminales-y-aeroparque-ampliara-sus-instalaciones_a6ac91158587f18d752ff8898",
+          "fecha": "2026-10-09T16:09:59.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "aeropuertos-argentina-invierte-1500-millones-de-dolares-en-obras",
+      "foto": {
+        "archivo": "fotos-notas/16bffnh.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "17di2tc",
       "titulo": "Cristiano Ronaldo marca en la goleada de Al Nassr y escala hacia los mil tantos",
       "copete": "El delantero portugués convirtió en el triunfo frente a Al Draih por la liga saudí. Alcanzó los 980 goles en su carrera en medio de su suspensión en la selección de su país.",
@@ -2528,87 +2645,6 @@
       "foto": {
         "archivo": "fotos-notas/17di2tc.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "pyejmn",
-      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
-      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T15:31:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T21:31:52.077Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cayeron 48 milímetros promedio en la región núcleo.",
-        "El trigo atraviesa las etapas clave de floración y espigazón.",
-        "Los rendimientos superarán los cuarenta quintales por hectárea."
-      ],
-      "seSabe": [
-        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
-        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
-        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
-      ],
-      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "etiquetas": [
-        "trigo",
-        "clima",
-        "lluvias",
-        "agro",
-        "Bolsa de Comercio de Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-          "fecha": "2026-10-09T15:31:40.000Z",
-          "oficial": false,
-          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
-          "fecha": "2026-10-09T19:32:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ydwxhf",
-          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-          "fecha": "2026-10-02T17:03:25.000Z",
-          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
-        },
-        {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
-      "foto": {
-        "archivo": "fotos-notas/pyejmn.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -3146,9 +3182,9 @@
       "guion": "La Asociación Argentina de Angus triplica sus exportaciones de carne",
       "seccion": "Agro",
       "medios": [
+        "Agrositio",
         "Noticias Agropecuarias",
-        "La Voz del Pueblo",
-        "Agrositio"
+        "La Voz del Pueblo"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/09/rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico/",
       "teniaImagenLaFuente": true,
@@ -3386,10 +3422,10 @@
         "La Nación",
         "Infobae",
         "Perfil",
-        "El Cronista",
         "El Destape",
         "Página/12",
         "Radio Mitre",
+        "El Cronista",
         "Crónica"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
@@ -3447,6 +3483,84 @@
       "foto": {
         "archivo": "fotos-notas/l5o975.jpg",
         "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "iqzdzj",
+      "titulo": "El Gobierno avanza con nuevas privatizaciones y analiza el futuro de Intercargo",
+      "copete": "Tras recibir ofertas por el noventa por ciento de AySA, la administración nacional prepara nuevas licitaciones para transferir al sector privado distintas empresas estatales.",
+      "cuerpo": "El jueves se conocieron las propuestas económicas para quedarse con el noventa por ciento de las acciones de Agua y Saneamientos Argentinos (AySA). El futuro operador deberá asumir inversiones por US$2000 millones para mejorar el servicio.\n\nEn paralelo, el Ejecutivo analiza relanzar la licitación de Intercargo con condiciones modificadas, luego de que el primer intento terminara desierto en julio. Además, la agenda incluye la venta de participaciones estatales en las centrales termoeléctricas Manuel Belgrano —ubicada en Campana— y José de San Martín —en Timbúes—, cuyas operaciones el Gobierno busca concretar antes de fin de año.",
+      "guion": "El Gobierno avanza con nuevas privatizaciones y analiza el futuro de Intercargo",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Radio Mitre",
+        "Canal 26",
+        "La Tecla",
+        "El Día",
+        "El Economista"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/10/10/despues-de-aysa-el-gobierno-avanza-con-nuevas-privatizaciones-y-analiza-el-futuro-de-intercargo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T10:40:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T19:59:59.619Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno recibió ofertas económicas por el noventa por ciento de las acciones de AySA.",
+        "Dos consorcios presentaron propuestas por la compañía de agua y saneamiento.",
+        "El Ejecutivo prepara un nuevo llamado a licitación para privatizar Intercargo.",
+        "Avanza la venta de las participaciones estatales en las centrales termoeléctricas Manuel Belgrano y José de San Martín."
+      ],
+      "noConfirmado": [
+        "Todavía se desconoce cuándo se oficializará el nuevo llamado a licitación para Intercargo ni cuál será su precio base.",
+        "Aún no se determinó la fecha exacta en que se concretarán las licitaciones de las centrales termoeléctricas antes de fin de año."
+      ],
+      "textoRedes": "El Gobierno nacional avanza con nuevas privatizaciones tras recibir ofertas por AySA y prepara un nuevo llamado a licitación para transferir al sector privado a Intercargo y a centrales termoeléctricas.",
+      "etiquetas": [
+        "privatizaciones",
+        "AySA",
+        "Intercargo",
+        "Enarsa",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/10/despues-de-aysa-el-gobierno-avanza-con-nuevas-privatizaciones-y-analiza-el-futuro-de-intercargo/",
+          "fecha": "2026-10-10T18:13:37.000Z",
+          "oficial": false,
+          "aporte": "Detalló las ofertas económicas por AySA, los montos, los plazos de adjudicación y el estado de los procesos de Intercargo y Enarsa."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-avanza-con-el-esquema-de-privatizaciones-y-define-el-futuro-de-intercargo/",
+          "fecha": "2026-10-10T19:54:24.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el Gobierno busca impulsar otros procesos de privatización que incluyen centrales térmicas y la concesión de servicios."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/10/10/aysa-intercargo-y-belgrano-cargas-como-sigue-el-plan-de-privatizaciones-del-gobierno/",
+          "fecha": "2026-10-10T18:32:44.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el avance del cronograma de privatizaciones y las nuevas licitaciones impulsadas por el Ejecutivo tras la apertura de sobres por AySA."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-avanza-con-nuevas-privatizaciones-y-analiza-el-futuro-de",
+      "foto": {
+        "archivo": "fotos-notas/iqzdzj.jpg",
+        "credito": "Foto: Canal 26"
       }
     },
     {
@@ -3510,11 +3624,11 @@
   "secciones": [
     "Agro",
     "Balcarce",
-    "Economía",
     "Automovilismo",
     "Cultura y agenda",
     "Argentina",
     "Política",
+    "Economía",
     "Policiales",
     "Fútbol",
     "Deportes",
@@ -3534,10 +3648,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 11,
+      "temp": 10,
       "sensacion": 8,
-      "humedad": 80,
-      "viento": 15,
+      "humedad": 81,
+      "viento": 14,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3956,12 +4070,6 @@
       "titulo": "Grabois cruzó a Pettovello por las denuncias contra…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "116fwnp",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "mhjg4",
