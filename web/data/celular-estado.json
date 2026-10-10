@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T19:32:01.811Z",
- "portada": 47,
- "archivo": 902,
+ "generado": "2026-10-10T20:00:14.264Z",
+ "portada": 44,
+ "archivo": 903,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T19:32:01.860Z",
+  "generado": "2026-10-10T20:00:14.300Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "Los teléfonos útiles",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
