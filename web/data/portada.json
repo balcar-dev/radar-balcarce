@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T23:26:16.472Z",
+  "generado": "2026-10-10T23:31:58.504Z",
   "notas": [
     {
       "id": "f1parrilla2026r17",
@@ -712,12 +712,12 @@
       "guion": "Luján habilita un portal con servicios para la visita del Papa",
       "seccion": "Argentina",
       "medios": [
-        "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Opinión",
         "QZ Noticias (Mar del Plata)",
         "La Verdad",
-        "Infoeme"
+        "Infoeme",
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://dib.com.ar/sociedad/lujan-el-municipio-lanzo-un-portal-informacion-alojamientos-la-visita-del-papa-n56394",
       "teniaImagenLaFuente": true,
@@ -866,7 +866,7 @@
       "fecha": "2026-10-10T11:30:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T17:01:52.685Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -958,7 +958,7 @@
       "fecha": "2026-10-10T11:30:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T20:31:38.609Z",
-      "relevancia": 66,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3582,12 +3582,12 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 9,
+      "temp": 8,
       "sensacion": 6,
-      "humedad": 88,
+      "humedad": 91,
       "viento": 13,
       "rumbo": "SE",
-      "cielo": "Despejado",
+      "cielo": "Mayormente despejado",
       "esDeDia": false
     },
     "dias": [
