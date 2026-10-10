@@ -1382,6 +1382,53 @@
         "vistas": 63,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-10T12:00:18.104Z",
+      "web": {
+        "u12": {
+          "visitas": 16,
+          "vistas": 22
+        },
+        "a12": {
+          "visitas": 37,
+          "vistas": 120
+        },
+        "u24": {
+          "visitas": 70,
+          "vistas": 150
+        },
+        "a24": {
+          "visitas": 0,
+          "vistas": 300
+        },
+        "top": [
+          {
+            "camino": "/nota/virginia-aparicio-habla-en-radio-sobre-su-situacion-en-el-inta-18jx7kk",
+            "vistas": 17
+          },
+          {
+            "camino": "/",
+            "vistas": 17
+          },
+          {
+            "camino": "/nota/osebal-llega-al-segundo-vencimiento-de-la-factura-de-agua-1v0pyz6",
+            "vistas": 11
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 9,
+        "vistas": 730,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 122,
+        "alcance": 2,
+        "vistas": 4,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2187,11 +2234,12 @@
     },
     "2026-10-09": {
       "referentes": {
-        "facebook.com": 34,
-        "directo": 4
+        "facebook.com": 46,
+        "directo": 5,
+        "dataindex.pro": 1
       },
-      "visitas": 38,
-      "vistas": 122,
+      "visitas": 52,
+      "vistas": 139,
       "horas": [
         0,
         0,
@@ -2214,46 +2262,95 @@
         0,
         2,
         0,
+        16,
         0,
-        0,
-        0
+        1
       ],
       "paises": {
+        "US": 63,
         "AR": 62,
-        "US": 52,
-        "IE": 4,
-        "SE": 4
+        "IE": 9,
+        "SE": 4,
+        "RU": 1
       },
       "dispositivos": {
-        "mobile": 81,
-        "desktop": 41
+        "mobile": 90,
+        "desktop": 49
       },
       "notas": {
         "18jx7kk": 17,
         "1v0pyz6": 11,
         "14mxql1": 7,
+        "6q5i7o": 6,
         "repaso20261009manana": 6,
         "1j94k5u": 6,
-        "6q5i7o": 6,
+        "17di2tc": 5,
+        "1aizybd": 4,
         "aqy95q": 4,
-        "601x8n": 3,
+        "175ztwv": 4,
         "16fjrrx": 3,
+        "601x8n": 3,
         "173ttfz": 2,
         "l5o975": 2,
         "ypnvl8": 2,
+        "1trv7re": 2,
         "xlon5q": 2,
         "5crmtt": 1
       },
       "paginas": {
-        "/": 17,
+        "/": 19,
         "/seccion/agro": 10,
         "/seccion/futbol": 7,
         "/seccion/automovilismo": 4,
-        "/seccion/argentina": 4,
         "/seccion/cultura-2": 4,
-        "/quienes-somos": 2,
-        "/seccion/cultura": 2
+        "/seccion/argentina": 4,
+        "/seccion/cultura": 2,
+        "/quienes-somos": 2
       }
+    },
+    "2026-10-10": {
+      "paises": {
+        "US": 5
+      },
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "referentes": {
+        "facebook.com": 2
+      },
+      "dispositivos": {
+        "mobile": 3,
+        "desktop": 2
+      },
+      "visitas": 2,
+      "vistas": 5,
+      "notas": {
+        "15zr9uw": 5
+      },
+      "paginas": {}
     }
   }
 }
