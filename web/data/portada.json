@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T06:01:55.562Z",
+  "generado": "2026-10-10T06:32:09.207Z",
   "notas": [
     {
       "id": "9zwjal",
@@ -16,7 +16,7 @@
       "fecha": "2026-10-10T03:25:53.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T03:31:44.259Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -75,7 +75,7 @@
       "fecha": "2026-10-10T03:19:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T03:31:44.259Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -154,11 +154,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45051-continua-este-sabado-el-operativo-documentario-en-el-concejo-deliberante/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-10T02:31:26.354Z",
       "sinFecha": true,
       "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -376,6 +376,154 @@
       }
     },
     {
+      "id": "xggmkl",
+      "titulo": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "copete": "A pesar de registrar una baja en sus precios en dólares durante julio, el país mantiene los valores más altos de América Latina en dos rubros clave, según un informe de Fundar.",
+      "cuerpo": "Los precios en moneda extranjera retrocedieron 0,3% en julio y acumularon dos meses seguidos de descenso frente a la región, de acuerdo con el informe de Fundar. El país registra los valores más elevados en restaurantes, indumentaria, comunicaciones, recreación y equipamiento del hogar. Por el contrario, los segmentos más accesibles resultaron alimentos, educación, vivienda y servicios, alcohol y tabaco y salud.\n\nEl nivel general se ubicó en 98,3 puntos y se situó por encima de Chile, un hecho que no ocurría desde abril de 2025. Ese cambio obedeció a la caída de casi 3% en la moneda chilena durante el mismo periodo, mientras que la economía nacional quedó 1,7% por debajo del promedio regional.\n\nEn la perspectiva de largo plazo, los precios locales acumulan un incremento del 74,4% en dólares en comparación con enero de 2021. Hacia agosto, la tendencia habría cambiado con un nuevo encarecimiento relativo tras registrar una inflación del 1,7%.",
+      "guion": "Argentina encabeza el ranking regional en indumentaria y gastronomía",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "Perfil",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T23:44:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T06:31:48.320Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los precios en dólares bajaron 0,3% en julio.",
+        "Argentina lidera los costos regionales en ropa y gastronomía.",
+        "El país superó a Chile en el índice de precios durante julio.",
+        "La economía nacional acumula un incremento del 74,4% en dólares desde 2021."
+      ],
+      "seSabe": [
+        "Los precios en dólares bajaron 0,3% en julio según el Índice Mensual de Precios Relativos de Fundar.",
+        "Argentina supera a Chile en el indicador regional con 98,3 puntos frente a 97,6.",
+        "El país encabeza los rubros de restaurantes e indumentaria en América Latina."
+      ],
+      "noConfirmado": [
+        "La comparación exacta con el resto de América Latina correspondiente al mes de agosto todavía no fue actualizada."
+      ],
+      "textoRedes": "El país registra los precios más altos de América Latina en restaurantes e indumentaria a pesar de una leve baja en dólares durante julio, según un informe de Fundar.",
+      "etiquetas": [
+        "precios",
+        "dolares",
+        "indumentaria",
+        "restaurantes",
+        "fundar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
+          "fecha": "2026-10-09T23:44:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del índice de precios en dólares, la comparación regional, los rubros más caros y las estadísticas de Fundar."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-indumentaria-y-los-restaurantes-mas-caros-de-la-region.phtml",
+          "fecha": "2026-10-10T05:56:13.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-tiene-la-ropa-y-los-restaurantes-mas-caros-de-la-region--pese-a-la-leve-baja-de-la-inflacion-en-dolares-en-julio_a6ac993e3587f18d75220d84b",
+          "fecha": "2026-10-10T01:34:49.000Z",
+          "oficial": false,
+          "aporte": "Compartió la información general sobre la posición de Argentina en precios de indumentaria y restaurantes frente a la región."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "argentina-encabeza-el-ranking-regional-en-indumentaria-y-gastronomia"
+    },
+    {
+      "id": "1aizybd",
+      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
+      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
+      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:32:00.485Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T23:32:00.485Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
+        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
+        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
+        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
+        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
+      ],
+      "seSabe": [
+        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
+        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
+        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
+        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
+        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
+      "etiquetas": [
+        "Giuliana Romero",
+        "Balcarce",
+        "Operación",
+        "Recuperación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+          "fecha": "2026-10-09T23:29:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pvwlvg",
+          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+          "fecha": "2026-10-07T00:30:00.000Z",
+          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
+      "foto": {
+        "archivo": "fotos-notas/1aizybd.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "1m8dnbh",
       "titulo": "Leandro Spinelli analiza la economía local y confirma nuevas obras",
       "copete": "El concejal Leandro Spinelli repasó la situación de los sectores productivos y confirmó la pavimentación de catorce cuadras con fondos provinciales en barrios locales.",
@@ -455,137 +603,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "leandro-spinelli-analiza-la-economia-local-y-confirma-nuevas-obras"
-    },
-    {
-      "id": "1aizybd",
-      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
-      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
-      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T23:29:47.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
-        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
-        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
-        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
-        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
-      ],
-      "seSabe": [
-        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
-        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
-        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
-        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
-        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
-      "etiquetas": [
-        "Giuliana Romero",
-        "Balcarce",
-        "Operación",
-        "Recuperación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-          "fecha": "2026-10-09T23:29:47.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "pvwlvg",
-          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-          "fecha": "2026-10-07T00:30:00.000Z",
-          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
-      "foto": {
-        "archivo": "fotos-notas/1aizybd.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
-      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
-      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T23:21:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
-        "La función se realiza en el teatro Roxy desde las 21.30.",
-        "El unipersonal cuenta con dirección de Martín Bontempo.",
-        "Las entradas están a la venta en Plateanet y en la boletería."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
-      "etiquetas": [
-        "Camila Peralta",
-        "Suavecita",
-        "Mar del Plata",
-        "teatro",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-          "fecha": "2026-10-09T23:21:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
-      "foto": {
-        "archivo": "fotos-notas/1360zul.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
     },
     {
       "id": "88fvqd",
@@ -669,65 +686,6 @@
       "foto": {
         "archivo": "fotos-notas/88fvqd.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
-      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
-      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T22:30:19.147Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
-        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
-        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
-      "etiquetas": [
-        "Paula Boccia",
-        "tenis",
-        "Balcarce",
-        "Tucumán",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-          "fecha": "2026-10-09T22:31:35.000Z",
-          "oficial": false,
-          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
-      "foto": {
-        "archivo": "fotos-notas/146dyw0.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1436,11 +1394,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:31:41.075Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1591,11 +1549,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:01:23.701Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:01:23.701Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1886,6 +1844,87 @@
       "foto": {
         "archivo": "fotos-notas/1tcczj3.jpg",
         "credito": "Foto: 0223 (Mar del Plata)"
+      }
+    },
+    {
+      "id": "pyejmn",
+      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
+      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
+      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
+      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Agrositio"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T15:31:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T21:31:52.077Z",
+      "relevancia": 32,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cayeron 48 milímetros promedio en la región núcleo.",
+        "El trigo atraviesa las etapas clave de floración y espigazón.",
+        "Los rendimientos superarán los cuarenta quintales por hectárea."
+      ],
+      "seSabe": [
+        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
+        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
+        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
+      ],
+      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
+      "etiquetas": [
+        "trigo",
+        "clima",
+        "lluvias",
+        "agro",
+        "Bolsa de Comercio de Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
+          "fecha": "2026-10-09T15:31:40.000Z",
+          "oficial": false,
+          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
+        },
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
+          "fecha": "2026-10-09T19:32:50.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ydwxhf",
+          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+          "fecha": "2026-10-02T17:03:25.000Z",
+          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
+        },
+        {
+          "id": "gd6n9s",
+          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+          "fecha": "2026-09-30T18:42:58.000Z",
+          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
+      "foto": {
+        "archivo": "fotos-notas/pyejmn.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2364,7 +2403,6 @@
       "guion": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
@@ -2383,7 +2421,7 @@
       "fecha": "2026-10-09T13:12:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2508,7 +2546,6 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2519,7 +2556,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 72,
+      "relevancia": 62,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -2570,12 +2607,12 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "El Eco de Tandil",
         "Infobae",
         "A24",
         "Radio Mitre",
         "La Nación",
         "C5N",
+        "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "Minuto Uno"
@@ -2712,8 +2749,8 @@
       "seccion": "Agro",
       "medios": [
         "La Voz del Pueblo",
-        "Agrositio",
-        "Noticias Agropecuarias"
+        "Noticias Agropecuarias",
+        "Agrositio"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/09/rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico/",
       "teniaImagenLaFuente": true,
@@ -2793,87 +2830,82 @@
       }
     },
     {
-      "id": "1gmlwhw",
-      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "copete": "Ediles cruzaron cuestionamientos en la 15á sesión por la campaña de recupero de deuda a más de 2.000 usuarios y la contratación de un estudio jurídico externo.",
-      "cuerpo": "El tramo final de la decimoquinta sesión del Concejo Deliberante concentró un intenso debate en torno a las intimaciones enviadas por Aguas de la Ciudad para recuperar deudas acumuladas por más de 2.000 usuarios. La discusión expuso objeciones de la oposición sobre la contratación de un estudio jurídico marplatense y la demora en responder pedidos de informes.\n\nEn la misma línea, Enrique Guillén y Gabriel Petruccelli reclamaron que las gestiones queden a cargo de profesionales locales y exigieron mayores facilidades de pago para los vecinos. Desde el oficialismo, Leandro Spinelli rechazó las sospechas, defendió la necesidad de recaudar fondos ante la delicada situación financiera de la firma y prometió gestionar las explicaciones requeridas.",
-      "guion": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "seccion": "Balcarce",
+      "id": "sq9o10",
+      "titulo": "Investigadores registran fuerte baja de algas en el dique Paso de las Piedras",
+      "copete": "Un estudio científico en el embalse Paso de las Piedras detectó una caída superior al 90% en la presencia de cianobacterias. La prueba se desarrolló entre octubre de 2025 y junio de este año.",
+      "cuerpo": "Un trabajo técnico desarrollado en el embalse Paso de las Piedras comprobó una reducción superior al 90% en las concentraciones de cianobacterias y toxinas, según informaron la Universidad Nacional del Sur y el Conicet. La experiencia se extendió entre octubre de 2025 y junio de 2026 en el principal reservorio que provee agua potable a Bahía Blanca y Coronel Rosales.\n\nEl proyecto contó con la participación de ABSA, la Autoridad del Agua y equipos académicos mediante la instalación de nueve dispositivos de control. Los especialistas aclararon que será necesario continuar con las mediciones para evaluar el comportamiento del sistema a largo plazo.",
+      "guion": "Investigadores registran fuerte baja de algas en el dique Paso de las Piedras",
+      "seccion": "Argentina",
       "medios": [
-        "Puntonueve (FM 100.9)"
+        "Agencia DIB",
+        "La Nueva",
+        "La Brújula 24",
+        "La Verdad"
       ],
-      "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T11:36:27.000Z",
+      "enlace": "https://www.labrujula24.com/notas/2026/10/09/paso-de-las-piedras-detectan-reduccion-de-mas-de-90-de-cianobacterias-y-sus-toxinas-n524606/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T11:19:36.000Z",
       "sinFecha": false,
-      "visto": "2026-10-09T14:31:49.247Z",
-      "relevancia": 67,
-      "local": true,
+      "visto": "2026-10-09T13:31:40.859Z",
+      "relevancia": 66,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Intimaciones a más de 2.000 usuarios del servicio sanitario.",
-        "Cuestionamiento opositor a un estudio jurídico marplatense.",
-        "Reclamos por falta de respuestas a pedidos de informes.",
-        "Defensa oficialista de la recaudación para sostener a la empresa."
+        "Evaluaron el embalse entre octubre de 2025 y junio de 2026.",
+        "Detectaron una reducción superior al 90% de cianobacterias.",
+        "Participaron la UNS, el Conicet, ABSA y la Autoridad del Agua."
       ],
       "seSabe": [
-        "El debate ocurrió al cierre de la 15á sesión del Concejo Deliberante.",
-        "La campaña de cobro alcanza a más de 2.000 usuarios.",
-        "La oposición cuestionó la Ordenanza 40/26 y la falta de respuestas de Ricardo Stoppani."
+        "La prueba piloto arrojó una caída superior al 90% en cianobacterias y microcistinas, según la UNS y el Conicet.",
+        "El embalse Paso de las Piedras abastece de agua potable a Bahía Blanca y Coronel Rosales.",
+        "La experiencia técnica se llevó adelante entre octubre de 2025 y junio de 2026."
       ],
       "noConfirmado": [
-        "No se detallaron los montos totales de la deuda reclamada a los usuarios.",
-        "No trascendieron los plazos en los que asumiría el nuevo gerente de la empresa.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "Todavía resta conocer la evolución del sistema a largo plazo mediante nuevos monitoreos."
       ],
-      "textoRedes": "Intenso debate en el Concejo Deliberante por las intimaciones y el recupero de deudas impulsado por Aguas de la Ciudad a más de 2.000 usuarios.",
+      "textoRedes": "Un estudio científico en el embalse Paso de las Piedras detectó una reducción superior al 90% en la presencia de cianobacterias y microcistinas durante una prueba piloto.",
       "etiquetas": [
-        "Concejo Deliberante",
-        "Aguas de la Ciudad",
-        "deudas",
-        "OSEBAL"
+        "cianobacterias",
+        "embalse Paso de las Piedras",
+        "UNS",
+        "Conicet",
+        "agua potable"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-          "fecha": "2026-10-09T11:36:27.000Z",
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/09/paso-de-las-piedras-detectan-reduccion-de-mas-de-90-de-cianobacterias-y-sus-toxinas-n524606/",
+          "fecha": "2026-10-09T11:19:36.000Z",
           "oficial": false,
-          "aporte": "Detalló los cruces en el Concejo Deliberante por las intimaciones de Aguas de la Ciudad y las posturas de los bloques."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "z7t628",
-          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
-          "fecha": "2026-10-09T02:06:53.000Z",
-          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
+          "aporte": "Detalló los porcentajes de reducción, los plazos de la prueba piloto y los organismos intervinientes."
         },
         {
-          "id": "e09k96",
-          "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
-          "fecha": "2026-10-07T05:31:18.450Z",
-          "ruta": "/nota/el-concejo-debate-la-creacion-de-un-banco-municipal-de-fisiatria-e09k96"
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/bahia-blanca-hay-un-90-menos-algas-el-dique-paso-las-piedras-n56364",
+          "fecha": "2026-10-09T13:06:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que el embalse abastece a Bahía Blanca y Coronel Rosales."
         },
         {
-          "id": "1s9so2g",
-          "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
-          "fecha": "2026-09-25T23:02:57.000Z",
-          "ruta": "/nota/el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal-1s9so2g"
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-9-7-48-0-presentaron-los-resultados-del-monitoreo-en-el-embalse-paso-de-las-piedras",
+          "fecha": "2026-10-09T13:27:22.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presentación conjunta de los resultados por parte de la UNS y el Conicet."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-concejo-discute-las-intimaciones-de-aguas-de-la-ciudad",
+      "slug": "investigadores-registran-fuerte-baja-de-algas-en-el-dique-paso-de-las",
       "foto": {
-        "archivo": "fotos-notas/1gmlwhw.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
+        "archivo": "fotos-notas/sq9o10.jpg",
+        "credito": "Foto: La Brújula 24"
       }
     },
     {
@@ -2885,13 +2917,13 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
+        "Infobae",
         "Ámbito",
         "TyC Sports",
         "Olé",
         "Minuto Uno",
         "Crónica",
-        "Radio Mitre",
-        "Infobae"
+        "Radio Mitre"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
       "teniaImagenLaFuente": true,
@@ -3035,10 +3067,10 @@
         "La Nación",
         "Infobae",
         "Perfil",
-        "El Cronista",
         "El Destape",
         "Página/12",
         "Radio Mitre",
+        "El Cronista",
         "Crónica"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
@@ -3106,16 +3138,17 @@
       "guion": "El Gobierno fija en dólares la tasa de vuelos nacionales",
       "seccion": "Economía",
       "medios": [
+        "La Nación",
         "iProfesional",
         "Crónica",
         "Radio Mitre",
         "Diario Popular",
         "0221",
-        "Infoeme",
         "El Marplatense",
-        "El Eco de Tandil",
         "Clarín",
         "Agencia DIB",
+        "El Eco de Tandil",
+        "Infoeme",
         "Infobae",
         "Ámbito",
         "El Cronista"
@@ -3266,9 +3299,9 @@
       "medios": [
         "Crónica",
         "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
         "La Nueva",
-        "Ámbito"
+        "Ámbito",
+        "El Eco de Tandil"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-designo-al-embajador-de-las-republicas-de-namibia-y-mauricio_a6ac8ba1004eebb515d2a783b",
       "teniaImagenLaFuente": true,
@@ -3593,9 +3626,9 @@
         "TyC Sports",
         "C5N",
         "Radio Mitre",
-        "La Brújula 24",
         "ANDigital",
-        "Doble Amarilla"
+        "Doble Amarilla",
+        "La Brújula 24"
       ],
       "enlace": "https://www.clarin.com/deportes/seleccion-argentina-atacada-redes-mundial-2026-acusaciones-corrupcion-supuestos-favores-fifa-var_0_iyeMgUFdks.html",
       "teniaImagenLaFuente": true,
@@ -3684,9 +3717,9 @@
         "La Noticia 1",
         "Diputados Bonaerenses",
         "El Día",
-        "La Verdad",
         "Zona Norte Diario",
-        "ANDigital"
+        "ANDigital",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/politica/gabriel-katopodis-blanqueo-que-quiere-pelear-la-sucesion-kicillof-n56372",
       "teniaImagenLaFuente": true,
@@ -3907,9 +3940,8 @@
         "Infobae",
         "El Destape",
         "Ámbito",
-        "Bolavip Argentina",
-        "El Economista",
-        "Básquet Plus"
+        "Básquet Plus",
+        "Doble Amarilla"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
       "teniaImagenLaFuente": true,
@@ -4279,9 +4311,9 @@
         "Infobae",
         "Perfil",
         "Noticias Argentinas (NA)",
-        "El Economista",
         "El Cronista",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/negocios/genneia-inauguro-el-parque-solar-mas-grande-de-san-juan-invirtio-us110-millones-y-apunta-al-negocio-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -4377,10 +4409,10 @@
         "Olé",
         "Canal 26",
         "El Marplatense",
-        "La Página Millonaria",
-        "La Capital (Rosario)",
         "El Día",
-        "El Gráfico"
+        "La Página Millonaria",
+        "El Gráfico",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
       "teniaImagenLaFuente": true,
@@ -4550,12 +4582,12 @@
     "Policiales",
     "Agro",
     "Balcarce",
-    "Política",
-    "Cultura y agenda",
-    "Deportes",
-    "Fútbol",
-    "Argentina",
     "Economía",
+    "Política",
+    "Fútbol",
+    "Deportes",
+    "Argentina",
+    "Cultura y agenda",
     "Tecnología",
     "Automovilismo"
   ],
@@ -4575,7 +4607,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 89,
+      "humedad": 90,
       "viento": 12,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4937,31 +4969,13 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "11sovpd",
-      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "8u3cip",
-      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
-      "seccion": "Cultura y agenda",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "aq8ze",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
       "id": "ltv8xo",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "11yxcy2",
+      "id": "1wgh2q7",
       "titulo": null,
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"adolescente\""
@@ -5021,10 +5035,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "vbfl3j",
-      "titulo": "El particular regalo de Benín a Messi en su despedida",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
+      "id": "11sovpd",
+      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "8u3cip",
+      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
+      "seccion": "Cultura y agenda",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "kzzd97",
@@ -5129,5 +5149,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }
