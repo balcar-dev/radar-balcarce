@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T10:01:35.188Z",
- "portada": 46,
- "archivo": 892,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-10T10:31:56.621Z",
+ "portada": 47,
+ "archivo": 895,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-10T10:01:35.216Z",
+  "generado": "2026-10-10T10:31:56.648Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -14,7 +14,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-10T10:04:26.657Z"
    },
    {
     "nombre": "efemeride",
@@ -95,27 +95,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "1wob65z",
+      "titulo": "Max Verstappen gana la carrera Sprint en Singapur y Colapinto abandona",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "14imhay",
+      "titulo": "El calendario conmemora la salud mental y la danza",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "vwb5m5",
       "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol"
      },
      {
-      "id": "10izr2u",
-      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
-      "seccion": "Deportes"
-     },
-     {
       "id": "15zr9uw",
       "titulo": "Investigadores locales reciben una distinción en congreso nacional",
       "seccion": "Agro"
-     },
-     {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -126,21 +126,21 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "10izr2u",
+      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
+      "seccion": "Deportes"
+     },
      {
       "id": "vw0kpx",
       "titulo": "La Selección Argentina lidera el ranking de equipos más atacados en redes",
       "seccion": "Fútbol"
      },
      {
-      "id": "2qmh95",
-      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "16s8yom",
-      "titulo": "Sindicato municipal y el Hospital pactan protocolo de violencia laboral",
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
       "seccion": "Balcarce"
      },
      {
@@ -157,13 +157,35 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 43,
+    "notas": [
+     {
+      "id": "2qmh95",
+      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "16s8yom",
+      "titulo": "Sindicato municipal y el Hospital pactan protocolo de violencia laboral",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1u383pj",
+      "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
    "hoy": [],
    "cola": [
+    {
+     "id": "14imhay",
+     "titulo": "El calendario conmemora la salud mental y la danza",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
     {
      "id": "15zr9uw",
      "titulo": "Investigadores locales reciben una distinción en congreso nacional",

@@ -1,6 +1,214 @@
 {
-  "generado": "2026-10-10T10:01:35.188Z",
+  "generado": "2026-10-10T10:31:56.621Z",
   "notas": [
+    {
+      "id": "clima20261010",
+      "propia": "clima",
+      "titulo": "Clima en Balcarce: 70% de probabilidad de lluvia, con mínima de 7° y máxima de 13°",
+      "copete": "El pronóstico de este sábado 10 de octubre para Balcarce marca una mínima de 7° y máxima de 13°, con llovizna leve.",
+      "cuerpo": "En Balcarce, a las 07:31 hay 9° y el cielo está nublado; la sensación térmica es de 7°; el viento sopla del SE a 13 km/h; la humedad es del 91%. Son los datos de Open-Meteo de ese momento.\n\nPara todo el sábado 10, el pronóstico marca una mínima de 7° y máxima de 13° y llovizna leve. La probabilidad de lluvia es del 70%. El viento llegaría a 15 km/h.\n\nPara los días que siguen, el pronóstico dice: el domingo 11, mínima de 7° y máxima de 13°, con 12% de probabilidad de lluvia; el lunes 12, mínima de 5° y máxima de 14°, con 25% de probabilidad de lluvia; el martes 13, mínima de 7° y máxima de 14°, con 53% de probabilidad de lluvia.\n\nEl clima se actualiza a lo largo del día: los valores de ahora, hora por hora, están en la página del clima de Radar Balcarce. El clima de la mañana también salió como video en nuestra página de Facebook.",
+      "guion": null,
+      "seccion": "Balcarce",
+      "local": true,
+      "relevancia": 58,
+      "medios": [
+        "Open-Meteo"
+      ],
+      "enlace": "https://open-meteo.com",
+      "fuentesConsultadas": [
+        {
+          "medio": "Open-Meteo",
+          "enlace": "https://open-meteo.com"
+        }
+      ],
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-10T10:31:54.966Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T10:31:54.966Z",
+      "publicadaPor": null,
+      "publicadaCuando": "2026-10-10T10:31:54.966Z",
+      "temas": [],
+      "etiquetas": [
+        "clima",
+        "pronóstico",
+        "Balcarce",
+        "tiempo"
+      ],
+      "como": "automatica",
+      "firma": "Nota de Radar Balcarce armada con los datos de Open-Meteo a las 07:31.",
+      "enlacesEnTexto": [
+        {
+          "texto": "página del clima de Radar Balcarce",
+          "href": "/clima"
+        },
+        {
+          "texto": "nuestra página de Facebook",
+          "href": "https://www.facebook.com/reel/1614858403553177/"
+        }
+      ],
+      "destacados": [
+        {
+          "texto": "Ver el clima de ahora",
+          "href": "/clima"
+        },
+        {
+          "texto": "Mirá el clima de hoy en video, en Facebook",
+          "href": "https://www.facebook.com/reel/1614858403553177/"
+        }
+      ],
+      "slug": "clima-en-balcarce-70-de-probabilidad-de-lluvia-con-minima-de-7-y"
+    },
+    {
+      "id": "14imhay",
+      "titulo": "El calendario conmemora la salud mental y la danza",
+      "copete": "El 10 de octubre reúne fechas dedicadas al bienestar emocional, la labor técnica y la danza nacional.",
+      "cuerpo": "El calendario marca hoy la conmemoración del Día Mundial de la Salud Mental, una jornada destinada a promover el cuidado emocional, prevenir inconvenientes psicológicos y facilitar el acceso a la atención y el acompañamiento necesario.\n\nAdemás, la fecha incluye la recordación del Día Nacional de la Danza, establecido en memoria de los bailarines del Teatro Colón fallecidos en un accidente aéreo en 1971.\n\nAsimismo, el país celebra el Día del Técnico en coincidencia con la aprobación de los planes de estudio impulsados por Otto Krause en 1898.",
+      "guion": "El calendario conmemora la salud mental y la danza",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-10-de-octubre-se-celebra-el-dia-mundial-de-la-salud-mental",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T10:30:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T10:31:25.625Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Se celebra el Día Mundial de la Salud Mental.",
+        "Se conmemora el Día Nacional de la Danza.",
+        "Se recuerda el Día del Técnico en Argentina."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El calendario marca hoy la conmemoración del Día Mundial de la Salud Mental, el Día Nacional de la Danza y el Día del Técnico.",
+      "etiquetas": [
+        "salud mental",
+        "danza",
+        "dia del tecnico",
+        "efemerides"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-10-de-octubre-se-celebra-el-dia-mundial-de-la-salud-mental",
+          "fecha": "2026-10-10T10:30:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó las efemérides y los datos sobre el Día Mundial de la Salud Mental, la danza y el técnico."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-calendario-conmemora-la-salud-mental-y-la-danza"
+    },
+    {
+      "id": "1wob65z",
+      "titulo": "Max Verstappen gana la carrera Sprint en Singapur y Colapinto abandona",
+      "copete": "Max Verstappen se queda con la victoria en la competencia corta del Gran Premio de Singapur. La prueba comienza con demora por la lluvia y el argentino Franco Colapinto abandona en la cuarta vuelta.",
+      "cuerpo": "Max Verstappen gana la carrera Sprint del Gran Premio de Singapur, correspondiente a la decimoséptima fecha de la temporada de la Fórmula 1. La competencia arranca con media hora de demora a causa de la intensa lluvia en el circuito callejero de Marina Bay.\n\nEl piloto argentino Franco Colapinto sufre un trompo en el transcurso de la cuarta vuelta y decide retirar su vehículo sin registrar impactos contra las defensas. Trece monoplazas de los veintidós participantes logran cruzar la línea de meta, en una prueba donde Lewis Hamilton termina en el segundo puesto y Charles Leclerc ocupa el tercer lugar del podio.",
+      "guion": "Max Verstappen gana la carrera Sprint en Singapur y Colapinto abandona",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Infobae",
+        "TyC Sports",
+        "La Nueva"
+      ],
+      "enlace": "https://www.tycsports.com/automovilismo/f1-hora-y-donde-ver-la-carrera-sprint-de-colapinto-en-el-gp-de-singapur-id764748.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T10:26:51.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T10:31:25.625Z",
+      "relevancia": 87,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Max Verstappen gana la carrera Sprint en Singapur",
+        "Franco Colapinto abandona en la cuarta vuelta",
+        "Lewis Hamilton finaliza segundo y Charles Leclerc tercero",
+        "La competencia comienza con demora por la lluvia"
+      ],
+      "seSabe": [
+        "Max Verstappen gana la competencia corta en Singapur",
+        "Franco Colapinto abandona tras un trompo en la cuarta vuelta",
+        "La largada registra media hora de demora por la lluvia",
+        "Lewis Hamilton y Charles Leclerc completan el podio"
+      ],
+      "noConfirmado": [
+        "El origen exacto del fallo eléctrico en el monoplaza del argentino"
+      ],
+      "textoRedes": "Max Verstappen gana la carrera Sprint en el Gran Premio de Singapur tras una largada demorada por la lluvia. El argentino Franco Colapinto sufre un trompo y abandona la competencia en la cuarta vuelta.",
+      "etiquetas": [
+        "Formula 1",
+        "Max Verstappen",
+        "Franco Colapinto",
+        "Singapur"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/f1-hora-y-donde-ver-la-carrera-sprint-de-colapinto-en-el-gp-de-singapur-id764748.html",
+          "fecha": "2026-10-10T10:26:51.000Z",
+          "oficial": false,
+          "aporte": "Detalla el desarrollo de la carrera, el abandono de Colapinto y las posiciones de los pilotos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/10/franco-colapinto-largara-11-la-carrera-sprint-del-gran-premio-de-singapur-de-formula-1-hora-tv-y-la-grilla-de-largada/",
+          "fecha": "2026-10-10T10:27:56.000Z",
+          "oficial": false,
+          "aporte": "Informa sobre la victoria de Verstappen y la demora inicial por la lluvia."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-9-23-53-0-en-vivo-se-encuentra-demorada-por-lluvia-la-carrera-sprint-del-gp-de-singapur",
+          "fecha": "2026-10-10T10:27:00.000Z",
+          "oficial": false,
+          "aporte": "Ubica la competencia en la fecha 17 del campeonato y en el circuito de Marina Bay."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "117ewnb",
+          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
+          "fecha": "2026-10-08T11:26:30.000Z",
+          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
+        },
+        {
+          "id": "18wlubj",
+          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+          "fecha": "2026-10-07T09:01:08.000Z",
+          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
+        },
+        {
+          "id": "kg0imu",
+          "titulo": "Verstappen agradece los elogios de Colapinto tras el choque en Bakú",
+          "fecha": "2026-10-02T19:48:38.000Z",
+          "ruta": "/nota/verstappen-agradece-los-elogios-de-colapinto-tras-el-choque-en-baku-kg0imu"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "max-verstappen-gana-la-carrera-sprint-en-singapur-y-colapinto-abandona",
+      "foto": {
+        "archivo": "fotos-notas/1wob65z.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
     {
       "id": "9zwjal",
       "titulo": "Investigan la desaparición de fondos en la escuela Emilio Lamarca",
@@ -530,81 +738,6 @@
       "slug": "leandro-spinelli-analiza-la-economia-local-y-confirma-nuevas-obras"
     },
     {
-      "id": "1tf8zc1",
-      "titulo": "El Gobierno recurre al Tribunal del Mar por la explotación petrolera en Malvinas",
-      "copete": "El plazo de dos semanas otorgado a Londres para frenar el proyecto Sea Lion expira el lunes. La Cancillería solicitará medidas provisionales ante la falta de respuesta.",
-      "cuerpo": "El Gobierno nacional prepara una presentación ante el Tribunal Internacional del Derecho del Mar para frenar el proyecto hidrocarburífero Sea Lion en las Islas Malvinas. El lunes vence el plazo de dos semanas concedido a Londres para detener los trabajos en la Cuenca Malvinas Norte, cuya extracción de crudo está prevista para 2028.\n\nLa medida se enmarca en la estrategia anunciada el 28 de septiembre por la Oficina del Presidente y el canciller Pablo Quirno, que incluye un arbitraje bajo la Convención de las Naciones Unidas sobre el Derecho del Mar. La presentación judicial busca la intervención urgente de la instancia internacional mientras se constituye el tribunal arbitral definitivo.\n\nLa administración central argumenta que la Argentina no tiene la potestad de frenar las tareas por cuenta propia y requiere una resolución externa para evitar mayores perjuicios sobre los recursos naturales.",
-      "guion": "El Gobierno recurre al Tribunal del Mar por la explotación petrolera en Malvinas",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "Diario Popular",
-        "ANDigital"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/09/malvinas-el-lunes-vence-el-ultimatum-y-el-gobierno-prepara-un-pedido-al-tribunal-del-mar-para-frenar-sea-lion/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T23:22:01.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T09:31:37.886Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El lunes vence el ultimátum otorgado al Reino Unido.",
-        "La Cancillería acudirá al Tribunal Internacional del Derecho del Mar.",
-        "El proyecto Sea Lion apunta a la extracción de crudo para 2028.",
-        "La estrategia se basa en la Convención de las Naciones Unidas sobre el Derecho del Mar."
-      ],
-      "seSabe": [
-        "El plazo de dos semanas concedido al Reino Unido vence el próximo lunes, según informó Infobae.",
-        "El Gobierno recurrirá al Tribunal Internacional del Derecho del Mar si Londres no suspende las tareas, de acuerdo con la información oficial.",
-        "La extracción de crudo en la Cuenca Malvinas Norte está proyectada para 2028, según los datos difundidos.",
-        "La estrategia fue anunciada el 28 de septiembre por la Oficina del Presidente y el canciller Pablo Quirno."
-      ],
-      "noConfirmado": [
-        "Todavía no se definió la fecha exacta en la que se realizará la presentación formal ante el tribunal internacional.",
-        "No se precisó si el tribunal emitirá una resolución durante noviembre."
-      ],
-      "textoRedes": "El Gobierno prepara una presentación ante el Tribunal Internacional del Derecho del Mar tras cumplirse el plazo para que el Reino Unido detenga el proyecto petrolero Sea Lion en las Islas Malvinas.",
-      "etiquetas": [
-        "Malvinas",
-        "Petróleo",
-        "Gobierno nacional",
-        "Cancilleria",
-        "Reino Unido"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/09/malvinas-el-lunes-vence-el-ultimatum-y-el-gobierno-prepara-un-pedido-al-tribunal-del-mar-para-frenar-sea-lion/",
-          "fecha": "2026-10-09T23:22:01.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el vencimiento del ultimátum, los plazos del proyecto Sea Lion y la estrategia legal de la Cancillería."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/el-gobierno-prepara-el-reclamo-ante-el-tribunal-del-mar-por-la-explotacion-petrolera-en-malvinas.phtml",
-          "fecha": "2026-10-10T07:57:42.000Z",
-          "oficial": false,
-          "aporte": "Aportó la confirmación de la fecha del anuncio inicial realizado el 28 de septiembre."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-recurre-al-tribunal-del-mar-por-la-explotacion-petrolera",
-      "foto": {
-        "archivo": "fotos-notas/1tf8zc1.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "88fvqd",
       "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
       "copete": "Una iniciativa escolar sobre el manejo de fármacos caducados ingresó al ámbito legislativo local tras un interrogante planteado en el aula.",
@@ -689,97 +822,6 @@
       }
     },
     {
-      "id": "x8b5c1",
-      "titulo": "Ricardo Lorenzetti defiende el fallo de la Corte sobre la Ley de Tierras",
-      "copete": "El juez de la Corte Suprema analizó la medida cautelar que frenó la derogación de la norma sobre venta a extranjeros y remarcó la trayectoria ambiental del tribunal.",
-      "cuerpo": "El juez de la Corte Suprema de Justicia Ricardo Lorenzetti analizó el fallo del máximo tribunal que suspendió el artículo del decreto de necesidad y urgencia 70 que eliminaba la Ley de Tierras, y sostuvo que la institución a su cargo protege los recursos naturales.\n\nEn declaraciones periodísticas, el magistrado fundamentó la decisión en tres ejes: los hechos concretos, la protección ambiental y la participación social en el Estado de derecho. Asimismo, explicó que la medida cautelar se dictó para evitar daños irreparables y garantizar la tutela judicial de una organización ambiental ante la falta de respuestas en las instancias previas.\n\nLa resolución contó con las firmas de Lorenzetti, Horacio Rosatti y los conjueces Diego Barroetaveña y Juan Ignacio Pérez Curci. Por su parte, el juez Carlos Rosenkrantz votó en disidencia al considerar que el máximo tribunal no tenía competencia para dictar la cautelar y que el expediente debía girarse a la justicia federal de Bariloche.",
-      "guion": "Ricardo Lorenzetti defiende el fallo de la Corte sobre la Ley de Tierras",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "El Destape",
-        "Perfil"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/09/ricardo-lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-recursos-naturales/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T22:13:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 68,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ricardo Lorenzetti analizó la cautelar que frena la derogación de la Ley de Tierras.",
-        "El magistrado destacó la coherencia del máximo tribunal en materia ambiental.",
-        "Carlos Rosenkrantz votó en disidencia al cuestionar la competencia de la Corte."
-      ],
-      "textoRedes": "El juez de la Corte Suprema Ricardo Lorenzetti analizó el fallo que frenó la derogación de la Ley de Tierras y remarcó la protección de los recursos naturales.",
-      "etiquetas": [
-        "Corte Suprema",
-        "Ricardo Lorenzetti",
-        "Ley de Tierras",
-        "DNU 70",
-        "poder judicial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/09/ricardo-lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-recursos-naturales/",
-          "fecha": "2026-10-09T22:13:13.000Z",
-          "oficial": false,
-          "aporte": "Detalló los fundamentos del juez Ricardo Lorenzetti y la votación de los magistrados."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-nid09102026/",
-          "fecha": "2026-10-09T23:30:41.000Z",
-          "oficial": false,
-          "aporte": "Informó las declaraciones iniciales del magistrado sobre la protección de los recursos naturales."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/politica/lorenzetti-justifico-fallo-corte-tierras-linea-coherente-20261092050",
-          "fecha": "2026-10-09T23:05:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el motivo por el cual la Corte Suprema dictó la suspensión del artículo del DNU 70/23."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "16ufhqn",
-          "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-corte-revoca-el-fallo-sobre-la-ley-de-tierras-del-dnu-16ufhqn"
-        },
-        {
-          "id": "1k45c07",
-          "titulo": "Caról pide a Diputados rechazar el decreto sobre tierras tras el fallo",
-          "fecha": "2026-09-30T16:44:00.000Z",
-          "ruta": "/nota/carol-pide-a-diputados-rechazar-el-decreto-sobre-tierras-tras-el-fallo-1k45c07"
-        },
-        {
-          "id": "1lubi1s",
-          "titulo": "La Corte Suprema se reúne para revisar las restricciones a la compra de tierras",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-corte-suprema-se-reune-para-revisar-las-restricciones-a-la-compra-1lubi1s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "ricardo-lorenzetti-defiende-el-fallo-de-la-corte-sobre-la-ley-de",
-      "foto": {
-        "archivo": "fotos-notas/x8b5c1.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "1429pe8",
       "titulo": "Karina Milei proyecta la exportación de carne a Israel",
       "copete": "La secretaria general de la Presidencia se reunió con la embajadora Ahuva Spieler Reshef para impulsar el mercado cárnico en el exterior.",
@@ -800,7 +842,7 @@
       "fecha": "2026-10-09T21:34:58.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2213,7 +2255,6 @@
       "medios": [
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
         "Diario La Vanguardia"
       ],
@@ -3078,10 +3119,10 @@
         "La Nación",
         "Infobae",
         "Perfil",
-        "El Cronista",
         "El Destape",
         "Página/12",
         "Radio Mitre",
+        "El Cronista",
         "Crónica"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/09/el-gobierno-oficializo-la-aprobacion-en-el-rigi-de-un-proyecto-petrolero-en-vaca-muerta-por-usd-6400-millones/",
@@ -3391,14 +3432,15 @@
       "guion": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
       "seccion": "Deportes",
       "medios": [
+        "El Eco de Tandil",
         "Infobae",
         "El Destape",
         "TyC Sports",
-        "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
         "La Nueva",
         "Clarín",
         "El Gráfico",
+        "Doble Amarilla",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce"
       ],
@@ -3469,13 +3511,13 @@
         "Clarín",
         "Infobae",
         "TN (Todo Noticias)",
+        "Página/12",
         "A24",
         "TyC Sports",
         "C5N",
         "Radio Mitre",
         "ANDigital",
         "Doble Amarilla",
-        "Página/12",
         "La Brújula 24"
       ],
       "enlace": "https://www.clarin.com/deportes/seleccion-argentina-atacada-redes-mundial-2026-acusaciones-corrupcion-supuestos-favores-fifa-var_0_iyeMgUFdks.html",
@@ -3772,15 +3814,16 @@
     }
   ],
   "secciones": [
+    "Balcarce",
+    "Cultura y agenda",
+    "Automovilismo",
     "Policiales",
     "Agro",
-    "Balcarce",
     "Política",
-    "Argentina",
     "Fútbol",
     "Deportes",
+    "Argentina",
     "Economía",
-    "Cultura y agenda",
     "Tecnología"
   ],
   "temas": [
@@ -3799,7 +3842,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 93,
+      "humedad": 91,
       "viento": 13,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4263,12 +4306,6 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "5w58zn",
-      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"suscribite\""
-    },
-    {
       "id": "1he1jh5",
       "titulo": null,
       "seccion": "Política",
@@ -4323,5 +4360,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 0
 }
