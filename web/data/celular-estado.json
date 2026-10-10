@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T13:02:18.324Z",
+ "generado": "2026-10-10T13:32:03.219Z",
  "portada": 42,
  "archivo": 897,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T13:02:18.363Z",
+  "generado": "2026-10-10T13:32:03.260Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-10T13:06:06.459Z"
    },
    {
     "nombre": "noticia2",
@@ -94,8 +94,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 54,
+    "salio": "2026-10-10T13:06:06.459Z",
+    "segundos": null,
     "notas": [
      {
       "id": "190bbf8",
@@ -126,17 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 37,
     "notas": [
      {
       "id": "14imhay",
       "titulo": "El calendario conmemora la salud mental y la danza",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce"
      },
      {
       "id": "16s8yom",
@@ -152,8 +147,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 31,
+    "notas": [
+     {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1u383pj",
+      "titulo": "Luis Arabia repasa su paso por la Estación Terrena y el buceo",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -162,24 +168,16 @@
      "id": "15zr9uw",
      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
      "cuando": "2026-10-10T11:04:30.101Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "190bbf8",
      "titulo": "Agustín Conti repasa su vocación y los desafíos de la docencia",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
-     "id": "14imhay",
-     "titulo": "El calendario conmemora la salud mental y la danza",
-     "seccion": "Cultura y agenda",
-     "marcada": false
+     "cuando": "2026-10-10T13:08:21.023Z"
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-10T12:34:30.101Z",
+   "cola": [],
+   "cupo": 3,
+   "proximoDesde": "2026-10-10T14:38:21.023Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
