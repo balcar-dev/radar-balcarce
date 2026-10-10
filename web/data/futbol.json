@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-10T20:04:15.579Z",
+ "consultado": "2026-10-10T20:32:01.270Z",
  "equipos": [
   "9739",
   "3",
@@ -799,11 +799,11 @@
     "competencia": "liga",
     "inicio": "2026-10-10T18:45:00.000Z",
     "estado": "en-juego",
-    "minuto": "61'",
+    "minuto": "89'",
     "local": {
      "id": "10060",
      "nombre": "Barracas Central",
-     "goles": 1
+     "goles": 2
     },
     "visitante": {
      "id": "10",
@@ -817,6 +817,12 @@
       "jugador": "Norberto Briasco",
       "minuto": "9'",
       "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Norberto Briasco",
+      "minuto": "62'",
+      "tipo": "gol"
      }
     ],
     "estadio": "Estadio Claudio Chiqui Tapia",
@@ -829,7 +835,7 @@
     "competencia": "liga",
     "inicio": "2026-10-10T20:00:00.000Z",
     "estado": "en-juego",
-    "minuto": "4'",
+    "minuto": "32'",
     "local": {
      "id": "11989",
      "nombre": "Central Córdoba (Santiago del Estero)",
@@ -838,10 +844,17 @@
     "visitante": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Miguel Monsalve",
+      "minuto": "22'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Alfredo Terrera",
     "fase": null,
     "partidoDeLaSerie": null,
