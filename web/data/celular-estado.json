@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T14:31:56.570Z",
- "portada": 42,
- "archivo": 896,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-10T15:02:29.823Z",
+ "portada": 41,
+ "archivo": 897,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-10T14:31:56.615Z",
+  "generado": "2026-10-10T15:02:29.872Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-10T12:05:42.976Z"
    },
    {
@@ -126,19 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
-    "notas": [
-     {
-      "id": "14imhay",
-      "titulo": "El calendario conmemora la salud mental y la danza",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "16s8yom",
-      "titulo": "Sindicato municipal y el Hospital pactan protocolo de violencia laboral",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -147,8 +136,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 42,
     "notas": [
+     {
+      "id": "14imhay",
+      "titulo": "El calendario conmemora la salud mental y la danza",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "jul3dj",
       "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
