@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T05:01:33.448Z",
+  "generado": "2026-10-10T05:31:47.268Z",
   "notas": [
     {
       "id": "9zwjal",
@@ -154,11 +154,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45051-continua-este-sabado-el-operativo-documentario-en-el-concejo-deliberante/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-10T02:31:26.354Z",
       "sinFecha": true,
       "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -376,6 +376,79 @@
       }
     },
     {
+      "id": "1aizybd",
+      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
+      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
+      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:32:00.485Z",
+      "sinFecha": true,
+      "visto": "2026-10-09T23:32:00.485Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
+        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
+        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
+        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
+        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
+      ],
+      "seSabe": [
+        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
+        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
+        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
+        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
+        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
+      "etiquetas": [
+        "Giuliana Romero",
+        "Balcarce",
+        "Operación",
+        "Recuperación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+          "fecha": "2026-10-09T23:29:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pvwlvg",
+          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+          "fecha": "2026-10-07T00:30:00.000Z",
+          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
+      "foto": {
+        "archivo": "fotos-notas/1aizybd.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "1m8dnbh",
       "titulo": "Leandro Spinelli analiza la economía local y confirma nuevas obras",
       "copete": "El concejal Leandro Spinelli repasó la situación de los sectores productivos y confirmó la pavimentación de catorce cuadras con fondos provinciales en barrios locales.",
@@ -455,137 +528,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "leandro-spinelli-analiza-la-economia-local-y-confirma-nuevas-obras"
-    },
-    {
-      "id": "1aizybd",
-      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
-      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
-      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T23:29:47.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
-        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
-        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
-        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
-        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
-      ],
-      "seSabe": [
-        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
-        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
-        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
-        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
-        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
-      "etiquetas": [
-        "Giuliana Romero",
-        "Balcarce",
-        "Operación",
-        "Recuperación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-          "fecha": "2026-10-09T23:29:47.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "pvwlvg",
-          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-          "fecha": "2026-10-07T00:30:00.000Z",
-          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
-      "foto": {
-        "archivo": "fotos-notas/1aizybd.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
-      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
-      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T23:21:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
-        "La función se realiza en el teatro Roxy desde las 21.30.",
-        "El unipersonal cuenta con dirección de Martín Bontempo.",
-        "Las entradas están a la venta en Plateanet y en la boletería."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
-      "etiquetas": [
-        "Camila Peralta",
-        "Suavecita",
-        "Mar del Plata",
-        "teatro",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-          "fecha": "2026-10-09T23:21:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
-      "foto": {
-        "archivo": "fotos-notas/1360zul.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
     },
     {
       "id": "88fvqd",
@@ -669,65 +611,6 @@
       "foto": {
         "archivo": "fotos-notas/88fvqd.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
-      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
-      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T22:30:19.147Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
-        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
-        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
-      "etiquetas": [
-        "Paula Boccia",
-        "tenis",
-        "Balcarce",
-        "Tucumán",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-          "fecha": "2026-10-09T22:31:35.000Z",
-          "oficial": false,
-          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
-      "foto": {
-        "archivo": "fotos-notas/146dyw0.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1422,11 +1305,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:31:41.075Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1493,7 +1376,7 @@
       "fecha": "2026-10-09T17:03:18.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1577,11 +1460,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:01:23.701Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:01:23.701Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1872,6 +1755,87 @@
       "foto": {
         "archivo": "fotos-notas/1tcczj3.jpg",
         "credito": "Foto: 0223 (Mar del Plata)"
+      }
+    },
+    {
+      "id": "pyejmn",
+      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
+      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
+      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
+      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Agrositio"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T15:31:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T21:31:52.077Z",
+      "relevancia": 32,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cayeron 48 milímetros promedio en la región núcleo.",
+        "El trigo atraviesa las etapas clave de floración y espigazón.",
+        "Los rendimientos superarán los cuarenta quintales por hectárea."
+      ],
+      "seSabe": [
+        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
+        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
+        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
+      ],
+      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
+      "etiquetas": [
+        "trigo",
+        "clima",
+        "lluvias",
+        "agro",
+        "Bolsa de Comercio de Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
+          "fecha": "2026-10-09T15:31:40.000Z",
+          "oficial": false,
+          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
+        },
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
+          "fecha": "2026-10-09T19:32:50.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ydwxhf",
+          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+          "fecha": "2026-10-02T17:03:25.000Z",
+          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
+        },
+        {
+          "id": "gd6n9s",
+          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+          "fecha": "2026-09-30T18:42:58.000Z",
+          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
+      "foto": {
+        "archivo": "fotos-notas/pyejmn.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2350,7 +2314,6 @@
       "guion": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
@@ -2369,7 +2332,7 @@
       "fecha": "2026-10-09T13:12:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2494,7 +2457,6 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -2505,7 +2467,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 72,
+      "relevancia": 62,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -2698,8 +2660,8 @@
       "seccion": "Agro",
       "medios": [
         "La Voz del Pueblo",
-        "Agrositio",
-        "Noticias Agropecuarias"
+        "Noticias Agropecuarias",
+        "Agrositio"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/09/rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico/",
       "teniaImagenLaFuente": true,
@@ -2776,90 +2738,6 @@
       "foto": {
         "archivo": "fotos-notas/rzygx9.jpg",
         "credito": "Foto: Agrositio"
-      }
-    },
-    {
-      "id": "1gmlwhw",
-      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "copete": "Ediles cruzaron cuestionamientos en la 15á sesión por la campaña de recupero de deuda a más de 2.000 usuarios y la contratación de un estudio jurídico externo.",
-      "cuerpo": "El tramo final de la decimoquinta sesión del Concejo Deliberante concentró un intenso debate en torno a las intimaciones enviadas por Aguas de la Ciudad para recuperar deudas acumuladas por más de 2.000 usuarios. La discusión expuso objeciones de la oposición sobre la contratación de un estudio jurídico marplatense y la demora en responder pedidos de informes.\n\nEn la misma línea, Enrique Guillén y Gabriel Petruccelli reclamaron que las gestiones queden a cargo de profesionales locales y exigieron mayores facilidades de pago para los vecinos. Desde el oficialismo, Leandro Spinelli rechazó las sospechas, defendió la necesidad de recaudar fondos ante la delicada situación financiera de la firma y prometió gestionar las explicaciones requeridas.",
-      "guion": "El Concejo discute las intimaciones de Aguas de la Ciudad",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T11:36:27.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T14:31:49.247Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Intimaciones a más de 2.000 usuarios del servicio sanitario.",
-        "Cuestionamiento opositor a un estudio jurídico marplatense.",
-        "Reclamos por falta de respuestas a pedidos de informes.",
-        "Defensa oficialista de la recaudación para sostener a la empresa."
-      ],
-      "seSabe": [
-        "El debate ocurrió al cierre de la 15á sesión del Concejo Deliberante.",
-        "La campaña de cobro alcanza a más de 2.000 usuarios.",
-        "La oposición cuestionó la Ordenanza 40/26 y la falta de respuestas de Ricardo Stoppani."
-      ],
-      "noConfirmado": [
-        "No se detallaron los montos totales de la deuda reclamada a los usuarios.",
-        "No trascendieron los plazos en los que asumiría el nuevo gerente de la empresa.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Intenso debate en el Concejo Deliberante por las intimaciones y el recupero de deudas impulsado por Aguas de la Ciudad a más de 2.000 usuarios.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Aguas de la Ciudad",
-        "deudas",
-        "OSEBAL"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
-          "fecha": "2026-10-09T11:36:27.000Z",
-          "oficial": false,
-          "aporte": "Detalló los cruces en el Concejo Deliberante por las intimaciones de Aguas de la Ciudad y las posturas de los bloques."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "z7t628",
-          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
-          "fecha": "2026-10-09T02:06:53.000Z",
-          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
-        },
-        {
-          "id": "e09k96",
-          "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
-          "fecha": "2026-10-07T05:31:18.450Z",
-          "ruta": "/nota/el-concejo-debate-la-creacion-de-un-banco-municipal-de-fisiatria-e09k96"
-        },
-        {
-          "id": "1s9so2g",
-          "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
-          "fecha": "2026-09-25T23:02:57.000Z",
-          "ruta": "/nota/el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal-1s9so2g"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-discute-las-intimaciones-de-aguas-de-la-ciudad",
-      "foto": {
-        "archivo": "fotos-notas/1gmlwhw.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -3669,6 +3547,7 @@
         "Agencia DIB",
         "La Noticia 1",
         "Diputados Bonaerenses",
+        "El Día",
         "La Verdad",
         "Zona Norte Diario",
         "ANDigital"
@@ -3892,8 +3771,6 @@
         "Infobae",
         "El Destape",
         "Ámbito",
-        "Bolavip Argentina",
-        "El Economista",
         "Básquet Plus"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/08/shai-gilgeous-alexander-se-mostro-confiado-ante-la-temporada-con-el-thunder-creo-que-soy-el-mejor-jugador-de-la-nba/",
@@ -4264,9 +4141,9 @@
         "Infobae",
         "Perfil",
         "Noticias Argentinas (NA)",
-        "El Economista",
         "El Cronista",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/negocios/genneia-inauguro-el-parque-solar-mas-grande-de-san-juan-invirtio-us110-millones-y-apunta-al-negocio-nid08102026/",
       "teniaImagenLaFuente": true,
@@ -4363,9 +4240,9 @@
         "Canal 26",
         "El Marplatense",
         "La Página Millonaria",
-        "La Capital (Rosario)",
         "El Día",
-        "El Gráfico"
+        "El Gráfico",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.elgrafico.com.ar/articulo/1112/103245/la-despedida-de-messi-la-productora-a-cargo-senialo-a-river-por-las-fallas",
       "teniaImagenLaFuente": true,
@@ -4531,95 +4408,6 @@
       }
     },
     {
-      "id": "wvbi4h",
-      "titulo": "La Cámara Nacional Electoral aprueba una plataforma digital para proyectos de ley",
-      "copete": "El tribunal dispuso la creación de una herramienta gratuita para juntar firmas electrónicas destinadas a iniciativas populares en el Congreso. La modalidad convivirá con el tradicional sistema en papel.",
-      "cuerpo": "La Cámara Nacional Electoral aprobó una herramienta informática para que la ciudadanía reúna avales electrónicos para proyectos de ley presentados ante el Congreso. La disposición se oficializó el jueves mediante la acordada extraordinaria 173 y otorga la administración del servicio a la Oficina de Coordinación General de Sistemas Informáticos Electorales.\n\nEl sistema funcionará de forma gratuita para particulares, agrupaciones políticas y organizaciones sociales, y coexistirá con el clásico formato de planillas manuscritas. La nueva vía digital no modifica los porcentajes exigidos por la normativa vigente para presentar las propuestas ante la cámara baja.\n\nLa habilitación de este canal se apoya en la legislación sobre firma digital y busca facilitar el cumplimiento del artículo 39 de la Constitución Nacional. Las autoridades del tribunal todavía deben definir el cronograma de apertura del sistema y los pasos operativos para los usuarios.",
-      "guion": "La Cámara Nacional Electoral aprueba una plataforma digital para proyectos de ley",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "Perfil",
-        "Ámbito",
-        "Minuto Uno"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/08/la-camara-nacional-electoral-aprobo-una-plataforma-digital-para-iniciativas-populares/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T18:19:35.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T19:31:35.841Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Crean un sistema digital gratuito para juntar firmas en proyectos de ley",
-        "La herramienta convivirá con el soporte tradicional en papel",
-        "La gestión operativa quedará a cargo de un área informática del tribunal"
-      ],
-      "seSabe": [
-        "Se aprobó la creación de una plataforma digital para iniciativas populares según informó la Cámara Nacional Electoral",
-        "La medida se formalizó este jueves mediante la acordada extraordinaria 173",
-        "El servicio será gratuito y estará bajo la órbita de la Oficina de Coordinación General de Sistemas Informáticos Electorales"
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta de puesta en marcha del sistema digital",
-        "Faltan detallar los pasos operativos que deberá seguir cada ciudadano para emitir su adhesión"
-      ],
-      "textoRedes": "La Cámara Nacional Electoral aprobó una plataforma digital gratuita para recolectar firmas electrónicas en apoyo a proyectos de ley presentados en el Congreso. La herramienta coexistirá con el sistema tradicional en papel.",
-      "etiquetas": [
-        "Cámara Nacional Electoral",
-        "iniciativa popular",
-        "proyectos de ley",
-        "firma electrónica",
-        "Congreso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/08/la-camara-nacional-electoral-aprobo-una-plataforma-digital-para-iniciativas-populares/",
-          "fecha": "2026-10-08T18:19:35.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la acordada, los funcionarios firmantes, las leyes de respaldo y el funcionamiento de la plataforma."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-camara-electoral-habilito-una-plataforma-digital-impulsar-iniciativas-populares-n6331689",
-          "fecha": "2026-10-08T18:28:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la herramienta estará disponible sin costo para personas, agrupaciones y organizaciones."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/la-camara-nacional-electoral-habilito-plataforma-digital-impulsar-iniciativas-populares-n6331715",
-          "fecha": "2026-10-08T19:07:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la iniciativa apunta a dar cumplimiento a la Constitución Nacional."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "64m33v",
-          "titulo": "Nueva plataforma digital para optimizar la producción agropecuaria",
-          "fecha": "2026-09-21T10:56:01.238Z",
-          "ruta": "/nota/nueva-plataforma-digital-para-optimizar-la-produccion-agropecuaria-64m33v"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-camara-nacional-electoral-aprueba-una-plataforma-digital-para",
-      "foto": {
-        "archivo": "fotos-notas/wvbi4h.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "15x6yh5",
       "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
       "copete": "El ex piloto alemán criticó con dureza al británico tras una maniobra en pista y comparó la situación con un episodio previo del argentino en la categoría.",
@@ -4715,79 +4503,6 @@
         "archivo": "fotos-notas/15x6yh5.jpg",
         "credito": "Foto: TN (Todo Noticias)"
       }
-    },
-    {
-      "id": "1bh5rup",
-      "titulo": "Un exdirectivo del Balón de Oro revela un intento de soborno",
-      "copete": "Pascal Ferré contó que un agente le sugirió influir en el jurado para favorecer a un futbolista nominado y dejó un sobre misterioso en su despacho.",
-      "cuerpo": "El exresponsable del Balón de Oro Pascal Ferré reveló que un representante intentó sobornarlo para favorecer la candidatura de un futbolista nominado al galardón.\n\nDurante una entrevista con el medio Marca, el exdirector de la revista France Football detalló que el agente le consultó si podía comercializar la postulación ante el jurado. Tras ausentarse momentáneamente por una llamada, encontró un sobre sobre su escritorio y lo entregó en recepción sin abrirlo.\n\nHasta el momento no trascendieron las identidades del jugador ni del intermediario, así como tampoco el contenido exacto del paquete.",
-      "guion": "Un exdirectivo del Balón de Oro revela un intento de soborno",
-      "seccion": "Deportes",
-      "medios": [
-        "Perfil",
-        "C5N",
-        "Radio Mitre",
-        "Minuto Uno",
-        "Ecos Diarios (Necochea)"
-      ],
-      "enlace": "https://www.minutouno.com/deportes/sobornos-el-balon-oro-la-escandalosa-confesion-del-exdirector-que-hablo-sobres-n6331659",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T17:05:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T21:31:14.736Z",
-      "relevancia": 74,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Pascal Ferré denunció un intento de soborno en el Balón de Oro",
-        "Un agente le pidió influir en el jurado por un futbolista nominado",
-        "El intermediario dejó un sobre misterioso en la oficina y se marchó"
-      ],
-      "seSabe": [
-        "Pascal Ferré fue director de France Football y responsable del Balón de Oro",
-        "Un representante le ofreció negociar la candidatura de un jugador ante el jurado",
-        "El exdirectivo dejó el sobre en recepción y afirmó desconocer su contenido"
-      ],
-      "noConfirmado": [
-        "No se conocen las identidades del futbolista ni del representante",
-        "No se pudo verificar si el paquete contenía dinero o una propuesta económica"
-      ],
-      "textoRedes": "Pascal Ferré, exresponsable del Balón de Oro, reveló que un representante le sugirió influir en el jurado por un futbolista nominado y dejó un sobre misterioso en su despacho.",
-      "etiquetas": [
-        "Balón de Oro",
-        "France Football",
-        "Pascal Ferré",
-        "fútbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/sobornos-el-balon-oro-la-escandalosa-confesion-del-exdirector-que-hablo-sobres-n6331659",
-          "fecha": "2026-10-08T17:05:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el relato completo de Pascal Ferré sobre el intento de soborno y el sobre en su oficina."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/deportes/escandalo-el-balon-oro-la-confesion-un-exdirector-un-misterioso-y-un-presunto-soborno-n251135",
-          "fecha": "2026-10-08T21:12:00.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la revelación del exresponsable del galardón sobre la propuesta del agente."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "un-exdirectivo-del-balon-de-oro-revela-un-intento-de-soborno",
-      "foto": {
-        "archivo": "fotos-notas/1bh5rup.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
     }
   ],
   "secciones": [
@@ -4795,11 +4510,11 @@
     "Agro",
     "Balcarce",
     "Política",
-    "Cultura y agenda",
-    "Deportes",
     "Fútbol",
+    "Deportes",
     "Economía",
     "Argentina",
+    "Cultura y agenda",
     "Tecnología",
     "Automovilismo"
   ],
@@ -5181,24 +4896,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "11sovpd",
-      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "8u3cip",
-      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
-      "seccion": "Cultura y agenda",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "aq8ze",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
       "id": "ltv8xo",
       "titulo": null,
       "seccion": "Balcarce",
@@ -5265,10 +4962,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "vbfl3j",
-      "titulo": "El particular regalo de Benín a Messi en su despedida",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
+      "id": "11sovpd",
+      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "8u3cip",
+      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
+      "seccion": "Cultura y agenda",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "kzzd97",
@@ -5371,13 +5074,7 @@
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "17p53w7",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }
