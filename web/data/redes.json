@@ -1748,6 +1748,20 @@
         "2qmh95"
       ],
       "permalink": "https://www.instagram.com/reel/DeUJpKDAU9u/"
+    },
+    "2026-10-10/noticia2": {
+      "cuando": "2026-10-10T18:37:43.946Z",
+      "mediaId": "18166445776474162",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "4u38d4",
+      "notaIds": [
+        "4u38d4",
+        "1360zul",
+        "1qeim0",
+        "1u383pj"
+      ],
+      "permalink": "https://www.instagram.com/reel/DeUvmAhgaCc/"
     }
   },
   "facebookVideos": {
@@ -2913,6 +2927,20 @@
         "2qmh95"
       ],
       "permalink": "https://www.facebook.com/reel/1904250564082931/"
+    },
+    "2026-10-10/noticia2": {
+      "cuando": "2026-10-10T18:38:25.829Z",
+      "mediaId": "2149368369283226",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "4u38d4",
+      "notaIds": [
+        "4u38d4",
+        "1360zul",
+        "1qeim0",
+        "1u383pj"
+      ],
+      "permalink": "https://www.facebook.com/reel/2149368369283226/"
     }
   },
   "instagramFeed": {
@@ -4019,6 +4047,20 @@
       "nombre": "noticia1",
       "red": "facebook",
       "notaId": "190bbf8"
+    },
+    "instagram/2026-10-10/noticia2": {
+      "cuando": "2026-10-10T18:38:16.026Z",
+      "mediaId": "18128210996482938",
+      "nombre": "noticia2",
+      "red": "instagram",
+      "notaId": "4u38d4"
+    },
+    "facebook/2026-10-10/noticia2": {
+      "cuando": "2026-10-10T18:39:03.290Z",
+      "mediaId": "1143834767976971",
+      "nombre": "noticia2",
+      "red": "facebook",
+      "notaId": "4u38d4"
     }
   },
   "problemas": {
@@ -4028,13 +4070,6 @@
       "parte": "historia-del-reel",
       "error": "La subida del video falló (400) Request processing failed",
       "cuando": "2026-10-07T13:34:40.377Z"
-    },
-    "2026-10-10/noticia2/instagram/reel": {
-      "pieza": "noticia2",
-      "red": "instagram",
-      "parte": "reel",
-      "error": "La subida del video falló (400) Request processing failed",
-      "cuando": "2026-10-10T18:35:45.149Z"
     }
   },
   "facebookFoto": {},
