@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T15:31:42.426Z",
- "portada": 39,
- "archivo": 898,
+ "generado": "2026-10-10T15:51:14.463Z",
+ "portada": 40,
+ "archivo": 896,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-10T15:31:42.454Z",
+  "generado": "2026-10-10T15:51:14.492Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,8 +126,24 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 46,
+    "notas": [
+     {
+      "id": "4u38d4",
+      "titulo": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "p3cnfm",
+      "titulo": "Luján habilita un portal con servicios para la visita del Papa",
+      "seccion": "Argentina"
+     },
+     {
+      "id": "14imhay",
+      "titulo": "El calendario conmemora la salud mental y la danza",
+      "seccion": "Cultura y agenda"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -136,13 +152,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 42,
+    "segundos": 31,
     "notas": [
-     {
-      "id": "14imhay",
-      "titulo": "El calendario conmemora la salud mental y la danza",
-      "seccion": "Cultura y agenda"
-     },
      {
       "id": "jul3dj",
       "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
