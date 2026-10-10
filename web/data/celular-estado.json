@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T02:39:54.927Z",
+ "generado": "2026-10-10T03:01:31.516Z",
  "portada": 58,
  "archivo": 891,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T02:39:54.965Z",
+  "generado": "2026-10-10T03:01:31.538Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-09T10:04:28.344Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-09T12:06:39.045Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,18 +33,8 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-09T13:07:58.299Z"
-   },
-   {
-    "nombre": "participa-nota",
-    "tipo": "reel",
-    "hora": "12:00",
-    "que": "Tu nota",
-    "voz": "locutor",
-    "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-09T15:04:52.781Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -53,8 +43,18 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-09T18:07:31.269Z"
+    "momento": "antes",
+    "salio": null
+   },
+   {
+    "nombre": "utiles",
+    "tipo": "reel",
+    "hora": "17:00",
+    "que": "Los teléfonos útiles",
+    "voz": "locutor",
+    "ventana": 60,
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-09T22:05:26.370Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-09T23:06:04.652Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-10T00:06:07.119Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-09T13:07:58.299Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 53,
     "notas": [
      {
-      "id": "l5o975",
-      "titulo": "El Gobierno oficializa el proyecto petrolero de Tecpetrol en Vaca Muerta",
-      "seccion": "Economía"
+      "id": "xj8ent",
+      "titulo": "La Fiesta Nacional del Postre pasa a fines de octubre por las lluvias",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "xlon5q",
-      "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
-      "seccion": "Agro"
-     },
-     {
-      "id": "1v0pyz6",
-      "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "ypnvl8",
-      "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
+      "id": "vw0kpx",
+      "titulo": "La Selección Argentina lidera el ranking de equipos más atacados en redes",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "2qmh95",
+      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -124,29 +124,29 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-09T18:07:31.269Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 50,
     "notas": [
      {
-      "id": "1j94k5u",
-      "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
+      "id": "vwb5m5",
+      "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol"
      },
      {
-      "id": "14mxql1",
-      "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
+      "id": "10izr2u",
+      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
       "seccion": "Deportes"
      },
      {
-      "id": "aqy95q",
-      "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
+      "id": "16s8yom",
+      "titulo": "Sindicato municipal y el Hospital pactan protocolo de violencia laboral",
       "seccion": "Balcarce"
      },
      {
-      "id": "18jx7kk",
-      "titulo": "Virginia Aparicio brinda su testimonio este viernes en Polémica en Gabal",
-      "seccion": "Agro"
+      "id": "1p0s5l3",
+      "titulo": "Rubén Kavanagh encabeza una charla sobre la Cruz del Centenario",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -155,61 +155,14 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-10T00:06:07.119Z",
+    "momento": "antes",
+    "salio": null,
     "segundos": null,
-    "notas": [
-     {
-      "id": "1trv7re",
-      "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "17di2tc",
-      "titulo": "Cristiano Ronaldo marca en la goleada de Al Nassr y escala hacia los mil tantos",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1aizybd",
-      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "175ztwv",
-      "titulo": "UATRE Balcarce saluda al personal rural en su día",
-      "seccion": "Agro"
-     }
-    ]
+    "notas": []
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "1v0pyz6",
-     "titulo": "OSeBal llega al segundo vencimiento de la factura de agua",
-     "cuando": "2026-10-09T12:08:37.621Z"
-    },
-    {
-     "id": "xlon5q",
-     "titulo": "La Facultad de Agronomía de la UBA cuestiona el sumario a investigadora del INTA",
-     "cuando": "2026-10-09T13:45:20.333Z"
-    },
-    {
-     "id": "18jx7kk",
-     "titulo": "Virginia Aparicio habla en radio sobre su situación en el INTA",
-     "cuando": "2026-10-09T15:35:02.449Z"
-    },
-    {
-     "id": "14mxql1",
-     "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
-     "cuando": "2026-10-09T17:05:23.621Z"
-    },
-    {
-     "id": "1j94k5u",
-     "titulo": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
-     "cuando": "2026-10-09T18:45:24.033Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "xj8ent",
@@ -230,7 +183,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-09T20:15:24.033Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,

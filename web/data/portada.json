@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T02:39:54.927Z",
+  "generado": "2026-10-10T03:01:31.516Z",
   "notas": [
     {
       "id": "14oacl3",
@@ -827,7 +827,7 @@
     {
       "id": "1e8rdd4",
       "titulo": "El dólar mayorista finaliza la semana con un leve incremento",
-      "copete": "La divisa norteamericana cerró este viernes a $1.517 para la venta en el segmento mayorista. En tanto, el dólar oficial minorista operó a $1.540 en el Banco Nación.",
+      "copete": "La divisa norteamericana cerró el viernes a $1.517 para la venta en el segmento mayorista. En tanto, el dólar oficial minorista operó a $1.540 en el Banco Nación.",
       "cuerpo": "El dólar mayorista culminó las operaciones del viernes a $1.517 para la venta y $1.508 para la compra, tras registrar una suba marginal del 0,1% respecto de la jornada previa. De acuerdo con los registros de las agencias de noticias, la cotización se posicionó por debajo de los niveles anotados al iniciar la semana.\n\nEn el mercado minorista, el billete oficial se ofreció a $1.540 para la venta en las ventanillas del Banco Nación, sin modificaciones frente al cierre anterior. Por su parte, el dólar blue operó a $1.540 para la venta y $1.520 para la compra.\n\nEn cuanto a los tipos de cambio financieros, el dólar MEP operó en cercanías de los $1.540 y el contado con liquidación alcanzó los $1.608. Esta rueda cambiaria estuvo influenciada por la apreciación de la moneda brasileña tras la victoria electoral de Flávio Bolsonaro en el vecino país.",
       "guion": "El dólar mayorista finaliza la semana con un leve incremento",
       "seccion": "Economía",
@@ -1027,6 +1027,38 @@
                 "tipo": "gol"
               }
             ]
+          },
+          {
+            "dia": "Viernes 9 de octubre",
+            "hora": "21:45",
+            "estado": "final",
+            "estadio": "15 de Abril",
+            "fase": null,
+            "local": {
+              "id": "20",
+              "nombre": "Unión (Santa Fe)",
+              "goles": 0
+            },
+            "visitante": {
+              "id": "8950",
+              "nombre": "Defensa y Justicia",
+              "goles": 2
+            },
+            "penales": null,
+            "goles": [
+              {
+                "equipo": "visitante",
+                "jugador": "Juan Gutiérrez",
+                "minuto": "43'",
+                "tipo": "gol"
+              },
+              {
+                "equipo": "visitante",
+                "jugador": "César Pérez",
+                "minuto": "45'",
+                "tipo": "gol"
+              }
+            ]
           }
         ],
         "faltan": 12,
@@ -1039,9 +1071,9 @@
         }
       ],
       "lugarFoto": "José María Minella",
-      "titulo": "Liga Profesional: así va la fecha del 9 al 12 de octubre, con los resultados",
-      "copete": "3 partidos terminados de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
-      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 12 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nViernes 9 de octubre, 18:00: Gimnasia La Plata 1, Atlético Tucumán 1. Goles: Gimnasia La Plata: Marcelo Torres (90'+5', de penal). Atlético Tucumán: Lautaro Godoy (83').\n\nViernes 9 de octubre, 19:30: Instituto (Córdoba) 2, Boca Juniors 2. Goles: Instituto (Córdoba): Fernando Alarcón (14') y Jonathan Galván (48'). Boca Juniors: Enner Valencia (23') y Miguel Merentiel (56').\n\nTodavía faltan jugarse: Unión (Santa Fe) y Defensa y Justicia (Viernes 9 de octubre, 21:45), Barracas Central y Huracán (Sábado 10 de octubre, 15:45), Central Córdoba (Santiago del Estero) y Estudiantes de La Plata (Sábado 10 de octubre, 17:00), Tigre y Banfield (Sábado 10 de octubre, 19:15), River Plate y Estudiantes de Río Cuarto (Sábado 10 de octubre, 21:30), San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00) y Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
+      "titulo": "Liga Profesional: así va la fecha del 9 al 14 de octubre, con los resultados",
+      "copete": "4 partidos terminados de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
+      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 14 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nViernes 9 de octubre, 18:00: Gimnasia La Plata 1, Atlético Tucumán 1. Goles: Gimnasia La Plata: Marcelo Torres (90'+5', de penal). Atlético Tucumán: Lautaro Godoy (83').\n\nViernes 9 de octubre, 19:30: Instituto (Córdoba) 2, Boca Juniors 2. Goles: Instituto (Córdoba): Fernando Alarcón (14') y Jonathan Galván (48'). Boca Juniors: Enner Valencia (23') y Miguel Merentiel (56').\n\nViernes 9 de octubre, 21:45: Unión (Santa Fe) 0, Defensa y Justicia 2. Goles: Defensa y Justicia: Juan Gutiérrez (43') y César Pérez (45').\n\nTodavía faltan jugarse: Barracas Central y Huracán (Sábado 10 de octubre, 15:45), Central Córdoba (Santiago del Estero) y Estudiantes de La Plata (Sábado 10 de octubre, 17:00), Tigre y Banfield (Sábado 10 de octubre, 19:15), River Plate y Estudiantes de Río Cuarto (Sábado 10 de octubre, 21:30), San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00), Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30) y Sarmiento (Junín) y River Plate (Miércoles 14 de octubre, 19:00). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
       "guion": null,
       "seccion": "Fútbol",
       "local": false,
@@ -1139,7 +1171,7 @@
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: Fútbol, Campo de Pato, DNU y Virginia Aparicio",
       "copete": "Radar Balcarce publicó a las 15:07 de este viernes 9 de octubre el repaso de la tarde en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la tarde del viernes 9, en el orden en que salieron en el audio.\n\nLa Liga Balcarceña de Fútbol posterga el inicio del Clausura. La primera fecha del Torneo Oficial 2026 se suspende otra vez por el agua acumulada en las canchas. La reprogramación se define en los próximos días.\n\nCampo de Pato gana la semifinal y clasifica a las finales de paleta. El equipo local se impuso en el Torneo Provincial de cuarta categoría y jugará el título en noviembre. Regresó este año a la competencia federada tras casi dos décadas.\n\nEl Concejo aprueba pedir la derogación del artículo del DNU sobre tierras. El cuerpo deliberativo aprobó solicitar a los legisladores nacionales que anulen la medida que dejó sin efecto la Ley de Tierras Rurales. La iniciativa generó cruces entre los bloques por el rol judicial y la extranjerización.\n\nVirginia Aparicio brinda su testimonio este viernes en Polémica en Gabal. La investigadora del INTA Balcarce hablará este viernes a las 19 sobre el proceso de exoneración que enfrenta. La Facultad de Agronomía de la Universidad de Buenos Aires expresó su preocupación por el sumario administrativo.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la tarde del viernes 9, en el orden en que salieron en el audio.\n\nLa Liga Balcarceña de Fútbol posterga el inicio del Clausura. La primera fecha del Torneo Oficial 2026 se suspende otra vez por el agua acumulada en las canchas. La reprogramación se define en los próximos días.\n\nCampo de Pato gana la semifinal y clasifica a las finales de paleta. El equipo local se impuso en el Torneo Provincial de cuarta categoría y jugará el título en noviembre. Regresó este año a la competencia federada tras casi dos décadas.\n\nEl Concejo aprueba pedir la derogación del artículo del DNU sobre tierras. El cuerpo deliberativo aprobó solicitar a los legisladores nacionales que anulen la medida que dejó sin efecto la Ley de Tierras Rurales. La iniciativa generó cruces entre los bloques por el rol judicial y la extranjerización.\n\nVirginia Aparicio brinda su testimonio el viernes en Polémica en Gabal. La investigadora del INTA Balcarce hablará el viernes a las 19 sobre el proceso de exoneración que enfrenta. La Facultad de Agronomía de la Universidad de Buenos Aires expresó su preocupación por el sumario administrativo.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Balcarce",
       "local": true,
@@ -1181,7 +1213,7 @@
           "href": "/nota/el-concejo-aprueba-pedir-la-derogacion-del-articulo-del-dnu-sobre-aqy95q"
         },
         {
-          "texto": "Virginia Aparicio brinda su testimonio este viernes en Polémica en Gabal",
+          "texto": "Virginia Aparicio brinda su testimonio el viernes en Polémica en Gabal",
           "href": "/nota/virginia-aparicio-habla-en-radio-sobre-su-situacion-en-el-inta-18jx7kk"
         }
       ],
@@ -1667,6 +1699,87 @@
       }
     },
     {
+      "id": "pyejmn",
+      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
+      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
+      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
+      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Agrositio"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T15:31:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T21:31:52.077Z",
+      "relevancia": 39,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cayeron 48 milímetros promedio en la región núcleo.",
+        "El trigo atraviesa las etapas clave de floración y espigazón.",
+        "Los rendimientos superarán los cuarenta quintales por hectárea."
+      ],
+      "seSabe": [
+        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
+        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
+        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
+      ],
+      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
+      "etiquetas": [
+        "trigo",
+        "clima",
+        "lluvias",
+        "agro",
+        "Bolsa de Comercio de Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
+          "fecha": "2026-10-09T15:31:40.000Z",
+          "oficial": false,
+          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
+        },
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
+          "fecha": "2026-10-09T19:32:50.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ydwxhf",
+          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
+          "fecha": "2026-10-02T17:03:25.000Z",
+          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
+        },
+        {
+          "id": "gd6n9s",
+          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+          "fecha": "2026-09-30T18:42:58.000Z",
+          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
+      "foto": {
+        "archivo": "fotos-notas/pyejmn.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "14mxql1",
       "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
       "copete": "El equipo local se impuso en el Torneo Provincial de cuarta categoría y jugará el título en noviembre. Regresó este año a la competencia federada tras casi dos décadas.",
@@ -1725,71 +1838,6 @@
       }
     },
     {
-      "id": "1hfz3co",
-      "titulo": "La Justicia subasta la tradicional pileta de la Galería Lafayette en Mar del Plata",
-      "copete": "Rematan el histórico natatorio marplatense tras años de inactividad por un expediente judicial de expensas. La estructura mide 25 metros de largo y el lugar se puede visitar a fines de octubre.",
-      "cuerpo": "La Justicia dispuso el remate del tradicional natatorio situado en el segundo piso del paseo comercial de San Martín y San Luis, en Mar del Plata. La medida responde a un expediente por el cobro ejecutivo de expensas iniciado contra la firma Saviga S.A. en el Juzgado Civil y Comercial N 13, a cargo del juez Maximiliano Colángelo.\n\nEl inmueble comprende una superficie con una pileta de 25 metros de largo por 9 de ancho, cuya profundidad oscila entre los 1,50 y los 2,80 metros. Las instalaciones pertenecían al Centro Deportivo Lafayette, un espacio que funcionó durante más de tres décadas hasta su cierre definitivo en 2019.\n\nLos interesados en participar de la puja podrán recorrer las instalaciones el jueves 22 y el viernes 23 de octubre, en diferentes franjas horarias. El sitio acumuló un marcado deterioro edilicio tras varios años sin actividad y tras un temporal que afectó su estructura en 2010.",
-      "guion": "La Justicia subasta la tradicional pileta de la Galería Lafayette en Mar del Plata.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "0223 (Mar del Plata)",
-        "Minuto Uno",
-        "Infobrisas (Radio Brisas)"
-      ],
-      "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110853-subastaran-el-historico-piso-de-la-pileta-de-la-galeria-lafayette-en-pleno-centro-de-mar-del-plata",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T14:47:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 56,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se informó el valor base fijado para la subasta judicial.",
-        "Todavía no se conoce el destino que el futuro comprador le dará al espacio."
-      ],
-      "textoRedes": "La Justicia dispuso el remate de la histórica pileta de la Galería Lafayette en Mar del Plata. El espacio acumulaba años de inactividad y un proceso judicial por expensas. Habrá visitas previas al remate en octubre.",
-      "etiquetas": [
-        "subasta",
-        "pileta",
-        "Mar del Plata",
-        "Galeria Lafayette",
-        "Justicia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110853-subastaran-el-historico-piso-de-la-pileta-de-la-galeria-lafayette-en-pleno-centro-de-mar-del-plata",
-          "fecha": "2026-10-09T14:47:33.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles judiciales del remate, las medidas del natatorio y los días de visita."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-9-18-18-0-subastaran-la-historica-pileta-lafayette-de-mar-del-plata-como-sera-el-remate-y-cuando-se-podra-visitar-el-inmueble",
-          "fecha": "2026-10-09T21:18:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la subasta de la histórica pileta en la esquina céntrica."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/la-justicia-subasta-una-pileta-natacion-historica-mar-del-plata-ubicada-dentro-la-galeria-lafayette-n6332280",
-          "fecha": "2026-10-10T02:03:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el estado de inactividad y deterioro del natatorio marplatense."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-justicia-subasta-la-tradicional-pileta-de-la-galeria-lafayette-en"
-    },
-    {
       "id": "juyiki",
       "titulo": "El embajador de Estados Unidos advierte sobre el uso de tecnología china",
       "copete": "Peter Lamelas cuestionó la adquisición de equipos económicos y señaló que priorizar precios bajos implica riesgos en la seguridad de los datos.",
@@ -1809,7 +1857,7 @@
       "fecha": "2026-10-09T14:42:19.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T15:31:45.594Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2081,10 +2129,10 @@
     },
     {
       "id": "18jx7kk",
-      "titulo": "Virginia Aparicio brinda su testimonio este viernes en Polémica en Gabal",
-      "copete": "La investigadora del INTA Balcarce hablará este viernes a las 19 sobre el proceso de exoneración que enfrenta. La Facultad de Agronomía de la Universidad de Buenos Aires expresó su preocupación por el sumario administrativo.",
-      "cuerpo": "La investigadora Virginia Aparicio dialogará este viernes a las 19 en el programa Polémica en Gabal sobre la situación administrativa que atraviesa en el Instituto Nacional de Tecnología Agropecuaria. El caso generó repercusión por el proceso de potencial exoneración que enfrenta la científica tras ser apartada del Proyecto Sprint, que investiga la presencia de plaguicidas.\n\nLa institución destacó la trayectoria de más de 20 años de Aparicio en estudios vinculados con suelos, agua y fitosanitarios. A su vez, la investigadora confirmó que el Consejo Directivo del organismo ratificó el pedido de exoneración que implica su desvinculación.\n\nComo se había informado a principios de mes, la científica mantuvo un encuentro informal con concejales locales para detallar los alcances del estudio internacional financiado por la Unión Europea y advertir sobre el sumario.",
-      "guion": "Virginia Aparicio brinda su testimonio este viernes en Polémica en Gabal",
+      "titulo": "Virginia Aparicio brinda su testimonio el viernes en Polémica en Gabal",
+      "copete": "La investigadora del INTA Balcarce hablará el viernes a las 19 sobre el proceso de exoneración que enfrenta. La Facultad de Agronomía de la Universidad de Buenos Aires expresó su preocupación por el sumario administrativo.",
+      "cuerpo": "La investigadora Virginia Aparicio dialogará el viernes a las 19 en el programa Polémica en Gabal sobre la situación administrativa que atraviesa en el Instituto Nacional de Tecnología Agropecuaria. El caso generó repercusión por el proceso de potencial exoneración que enfrenta la científica tras ser apartada del Proyecto Sprint, que investiga la presencia de plaguicidas.\n\nLa institución destacó la trayectoria de más de 20 años de Aparicio en estudios vinculados con suelos, agua y fitosanitarios. A su vez, la investigadora confirmó que el Consejo Directivo del organismo ratificó el pedido de exoneración que implica su desvinculación.\n\nComo se había informado a principios de mes, la científica mantuvo un encuentro informal con concejales locales para detallar los alcances del estudio internacional financiado por la Unión Europea y advertir sobre el sumario.",
+      "guion": "Virginia Aparicio brinda su testimonio el viernes en Polémica en Gabal",
       "seccion": "Agro",
       "medios": [
         "Radio Gabal (FM 104.1)"
@@ -2362,7 +2410,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/09/riquelme-antonetti-se-quedo-con-la-copa-base-naval/",
       "teniaImagenLaFuente": true,
@@ -2562,8 +2611,8 @@
       "seccion": "Agro",
       "medios": [
         "La Voz del Pueblo",
-        "Agrositio",
-        "Noticias Agropecuarias"
+        "Noticias Agropecuarias",
+        "Agrositio"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/09/rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico/",
       "teniaImagenLaFuente": true,
@@ -2646,7 +2695,7 @@
       "id": "vwb5m5",
       "titulo": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "copete": "El director técnico del Atlético de Madrid elogió al capitán argentino y evitó compararlo con Diego Maradona. Además, repasó su carrera en la previa de un compromiso por el torneo español.",
-      "cuerpo": "El entrenador del Atlético de Madrid, Diego Simeone, elogió este viernes al capitán de la selección argentina y destacó el valor de su trayectoria profesional.\n\nDurante una conferencia de prensa, el técnico evitó elegir entre Diego Maradona y Lionel Messi al considerarlos los mejores futbolistas de la historia. Asimismo, señaló que las estadísticas del delantero son inalcanzables y valoró su conducta deportiva mantenida durante dos décadas.\n\nSimeone también remarcó que el atacante enseñó a sus compatriotas a insistir ante la adversidad. El capitán albiceleste disputó su último encuentro internacional el 6 de octubre en un amistoso frente a Benín.",
+      "cuerpo": "El entrenador del Atlético de Madrid, Diego Simeone, elogió el viernes al capitán de la selección argentina y destacó el valor de su trayectoria profesional.\n\nDurante una conferencia de prensa, el técnico evitó elegir entre Diego Maradona y Lionel Messi al considerarlos los mejores futbolistas de la historia. Asimismo, señaló que las estadísticas del delantero son inalcanzables y valoró su conducta deportiva mantenida durante dos décadas.\n\nSimeone también remarcó que el atacante enseñó a sus compatriotas a insistir ante la adversidad. El capitán albiceleste disputó su último encuentro internacional el 6 de octubre en un amistoso frente a Benín.",
       "guion": "Simeone destaca las enseñanzas de Messi y valora su trayectoria",
       "seccion": "Fútbol",
       "medios": [
@@ -2657,7 +2706,6 @@
         "Minuto Uno",
         "Crónica",
         "Radio Mitre",
-        "Doble Amarilla",
         "Infobae"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
@@ -2878,11 +2926,11 @@
         "Radio Mitre",
         "Diario Popular",
         "0221",
-        "Infoeme",
         "El Marplatense",
         "El Eco de Tandil",
         "Clarín",
         "Agencia DIB",
+        "Infoeme",
         "Infobae",
         "Ámbito",
         "El Cronista"
@@ -3026,8 +3074,8 @@
     {
       "id": "1onb1mo",
       "titulo": "Milei designa al nuevo embajador en Namibia y Mauricio",
-      "copete": "El Gobierno oficializó este viernes la designación de Raúl Santiago Ailan al frente de las representaciones diplomáticas en ambos estados africanos, en paralelo con sus funciones actuales.",
-      "cuerpo": "El presidente Javier Milei nombró a Raúl Santiago Ailan como nuevo embajador extraordinario y plenipotenciario en las repúblicas de Namibia y Mauricio, según se comunicó este viernes mediante el Boletín Oficial.\n\nLa decisión quedó establecida a través de los decretos 1158 y 1159, que llevan las firmas del mandatario nacional y del canciller Pablo Quirno. Los nombramientos se dispusieron sin interrumpir sus labores actuales como representante diplomático argentino en Sudáfrica.\n\nAmbas administraciones africanas concedieron el correspondiente plácet de estilo para ratificar la llegada del funcionario nacional.",
+      "copete": "El Gobierno oficializó el viernes la designación de Raúl Santiago Ailan al frente de las representaciones diplomáticas en ambos estados africanos, en paralelo con sus funciones actuales.",
+      "cuerpo": "El presidente Javier Milei nombró a Raúl Santiago Ailan como nuevo embajador extraordinario y plenipotenciario en las repúblicas de Namibia y Mauricio, según se comunicó el viernes mediante el Boletín Oficial.\n\nLa decisión quedó establecida a través de los decretos 1158 y 1159, que llevan las firmas del mandatario nacional y del canciller Pablo Quirno. Los nombramientos se dispusieron sin interrumpir sus labores actuales como representante diplomático argentino en Sudáfrica.\n\nAmbas administraciones africanas concedieron el correspondiente plácet de estilo para ratificar la llegada del funcionario nacional.",
       "guion": "Milei designa al nuevo embajador en Namibia y Mauricio",
       "seccion": "Política",
       "medios": [
@@ -3189,7 +3237,7 @@
       "id": "1nx2jwv",
       "titulo": "El Congreso declara Héroe Nacional a Estanislao López",
       "copete": "El Gobierno oficializa la normativa que reconoce al dirigente santafesino por su defensa del federalismo. La iniciativa fue promulgada de hecho tras su paso por el Senado.",
-      "cuerpo": "El Congreso nacional formaliza la declaración del brigadier Estanislao López como Héroe Nacional mediante la Ley 27.827. La medida se publica este viernes en el Boletín Oficial tras quedar promulgada de hecho el 7 de octubre.\n\nLa norma destaca su trayectoria política y militar, además de su rol histórico en la construcción del sistema federal argentino. El proyecto había sido impulsado por el exdiputado nacional Roberto Mirabella y obtuvo 58 votos afirmativos y uno negativo en la Cámara alta.",
+      "cuerpo": "El Congreso nacional formaliza la declaración del brigadier Estanislao López como Héroe Nacional mediante la Ley 27.827. La medida se publica el viernes en el Boletín Oficial tras quedar promulgada de hecho el 7 de octubre.\n\nLa norma destaca su trayectoria política y militar, además de su rol histórico en la construcción del sistema federal argentino. El proyecto había sido impulsado por el exdiputado nacional Roberto Mirabella y obtuvo 58 votos afirmativos y uno negativo en la Cámara alta.",
       "guion": "El Congreso declara Héroe Nacional a Estanislao López",
       "seccion": "Argentina",
       "medios": [
@@ -3450,9 +3498,9 @@
         "Agencia DIB",
         "La Noticia 1",
         "Diputados Bonaerenses",
-        "La Verdad",
         "Zona Norte Diario",
-        "ANDigital"
+        "ANDigital",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/politica/gabriel-katopodis-blanqueo-que-quiere-pelear-la-sucesion-kicillof-n56372",
       "teniaImagenLaFuente": true,
@@ -4306,6 +4354,95 @@
       }
     },
     {
+      "id": "wvbi4h",
+      "titulo": "La Cámara Nacional Electoral aprueba una plataforma digital para proyectos de ley",
+      "copete": "El tribunal dispuso la creación de una herramienta gratuita para juntar firmas electrónicas destinadas a iniciativas populares en el Congreso. La modalidad convivirá con el tradicional sistema en papel.",
+      "cuerpo": "La Cámara Nacional Electoral aprobó una herramienta informática para que la ciudadanía reúna avales electrónicos para proyectos de ley presentados ante el Congreso. La disposición se oficializó el jueves mediante la acordada extraordinaria 173 y otorga la administración del servicio a la Oficina de Coordinación General de Sistemas Informáticos Electorales.\n\nEl sistema funcionará de forma gratuita para particulares, agrupaciones políticas y organizaciones sociales, y coexistirá con el clásico formato de planillas manuscritas. La nueva vía digital no modifica los porcentajes exigidos por la normativa vigente para presentar las propuestas ante la cámara baja.\n\nLa habilitación de este canal se apoya en la legislación sobre firma digital y busca facilitar el cumplimiento del artículo 39 de la Constitución Nacional. Las autoridades del tribunal todavía deben definir el cronograma de apertura del sistema y los pasos operativos para los usuarios.",
+      "guion": "La Cámara Nacional Electoral aprueba una plataforma digital para proyectos de ley",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "Perfil",
+        "Ámbito",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/08/la-camara-nacional-electoral-aprobo-una-plataforma-digital-para-iniciativas-populares/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-08T18:19:35.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-08T19:31:35.841Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Crean un sistema digital gratuito para juntar firmas en proyectos de ley",
+        "La herramienta convivirá con el soporte tradicional en papel",
+        "La gestión operativa quedará a cargo de un área informática del tribunal"
+      ],
+      "seSabe": [
+        "Se aprobó la creación de una plataforma digital para iniciativas populares según informó la Cámara Nacional Electoral",
+        "La medida se formalizó este jueves mediante la acordada extraordinaria 173",
+        "El servicio será gratuito y estará bajo la órbita de la Oficina de Coordinación General de Sistemas Informáticos Electorales"
+      ],
+      "noConfirmado": [
+        "Todavía no se informó la fecha exacta de puesta en marcha del sistema digital",
+        "Faltan detallar los pasos operativos que deberá seguir cada ciudadano para emitir su adhesión"
+      ],
+      "textoRedes": "La Cámara Nacional Electoral aprobó una plataforma digital gratuita para recolectar firmas electrónicas en apoyo a proyectos de ley presentados en el Congreso. La herramienta coexistirá con el sistema tradicional en papel.",
+      "etiquetas": [
+        "Cámara Nacional Electoral",
+        "iniciativa popular",
+        "proyectos de ley",
+        "firma electrónica",
+        "Congreso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/08/la-camara-nacional-electoral-aprobo-una-plataforma-digital-para-iniciativas-populares/",
+          "fecha": "2026-10-08T18:19:35.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la acordada, los funcionarios firmantes, las leyes de respaldo y el funcionamiento de la plataforma."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/la-camara-electoral-habilito-una-plataforma-digital-impulsar-iniciativas-populares-n6331689",
+          "fecha": "2026-10-08T18:28:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la herramienta estará disponible sin costo para personas, agrupaciones y organizaciones."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/la-camara-nacional-electoral-habilito-plataforma-digital-impulsar-iniciativas-populares-n6331715",
+          "fecha": "2026-10-08T19:07:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la iniciativa apunta a dar cumplimiento a la Constitución Nacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "64m33v",
+          "titulo": "Nueva plataforma digital para optimizar la producción agropecuaria",
+          "fecha": "2026-09-21T10:56:01.238Z",
+          "ruta": "/nota/nueva-plataforma-digital-para-optimizar-la-produccion-agropecuaria-64m33v"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-camara-nacional-electoral-aprueba-una-plataforma-digital-para",
+      "foto": {
+        "archivo": "fotos-notas/wvbi4h.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "15x6yh5",
       "titulo": "Ralf Schumacher defiende a Franco Colapinto y cuestiona a Lando Norris",
       "copete": "El ex piloto alemán criticó con dureza al británico tras una maniobra en pista y comparó la situación con un episodio previo del argentino en la categoría.",
@@ -4319,11 +4456,10 @@
         "Bolavip Argentina",
         "TyC Sports",
         "0221",
-        "Radio Mitre",
         "La Nación",
+        "Radio Mitre",
         "A24",
-        "Crónica",
-        "Minuto Uno"
+        "Crónica"
       ],
       "enlace": "https://bolavip.com/ar/formula-1/ralf-schumacher-critico-a-lando-norris-y-defendio-a-franco-colapinto",
       "teniaImagenLaFuente": true,
@@ -4498,12 +4634,12 @@
         "El Marplatense",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "0223 (Mar del Plata)",
         "El Día",
         "Clarín",
         "Minuto Uno",
         "El Gráfico",
         "La Capital (Rosario)",
+        "0223 (Mar del Plata)",
         "La Nueva"
       ],
       "enlace": "https://www.0221.com.ar/deportes/escandalo-la-reserva-talleres-vs-atletico-tucuman-lautaro-acosta-y-su-hermano-las-trompadas-n135524",
@@ -4663,140 +4799,6 @@
         "archivo": "fotos-notas/vnuraj.jpg",
         "credito": "Foto: @cfcunofficial (Chelsea Debs) London from London, UK / Wikimedia Commons (CC BY-SA 2.0)"
       }
-    },
-    {
-      "id": "vr9xc5",
-      "titulo": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
-      "copete": "El festival de música reveló los artistas que se presentarán del 12 al 14 de marzo en el Hipódromo de San Isidro. Tini Stoessel debutará en el evento junto a figuras internacionales.",
-      "cuerpo": "El festival Lollapalooza Argentina confirmó la grilla de artistas para su duodécima edición, que tendrá lugar del 12 al 14 de marzo de 2027 en el Hipódromo de San Isidro. \n\nLas principales figuras que encabezan el cartel son Tini, Travis Scott, Charli XCX, The Killers y David Guetta. La cantante nacional se presentará por primera vez en el encuentro musical, mientras transcurre su gira actual. \n\nLa programación principal también incluye los regresos de Queens of the Stone Age tras nueve años y de The Neighbourhood, además de las actuaciones de Rawayana, Fontaines D.C. y el debut en el país de Sombr.",
-      "guion": "Lollapalooza anuncia su grilla con Tini y The Killers para 2027",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Ámbito",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "El Destape",
-        "Crónica",
-        "Diario Popular",
-        "QZ Noticias (Mar del Plata)",
-        "El Eco de Tandil",
-        "Infobae",
-        "La Nación",
-        "Página/12",
-        "C5N",
-        "Perfil",
-        "Clarín",
-        "Minuto Uno",
-        "Zona Norte Diario"
-      ],
-      "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T14:58:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-08T16:31:19.916Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El festival se hará del 12 al 14 de marzo de 2027.",
-        "El Hipódromo de San Isidro será la sede del evento.",
-        "Tini Stoessel participará por primera vez en el encuentro.",
-        "Travis Scott, Charli XCX, The Killers y David Guetta lideran el cartel."
-      ],
-      "seSabe": [
-        "El festival Lollapalooza Argentina se realizará del 12 al 14 de marzo de 2027, según confirmó la organización este jueves.",
-        "El Hipódromo de San Isidro volverá a ser la sede del evento musical.",
-        "Travis Scott, Charli XCX, The Killers, Tini y David Guetta encabezan la grilla oficial.",
-        "Queens of the Stone Age, The Neighbourhood, Rawayana, Fontaines D.C. y Sombr integran la primera línea."
-      ],
-      "noConfirmado": [
-        "Todavía no se informaron los precios de las entradas ni la fecha de inicio de la venta de tickets."
-      ],
-      "etiquetas": [
-        "Lollapalooza",
-        "música",
-        "festivales",
-        "Tini",
-        "The Killers"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/espectaculos/musica/lollapalooza-confirmo-su-grilla-para-2027-tini-the-killers-y-charli-xcx-encabezan-el-festival-nid08102026/",
-          "fecha": "2026-10-08T15:00:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la fecha del anuncio, las figuras principales de la grilla y los artistas que completan la primera línea."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/espectaculos/lollapalooza-argentina-2027-anuncio-lineup-travis-scott-charli-xcx-the-killers-tini-stoessel-encabezan-festival_0_Jp13a9hPsf.html",
-          "fecha": "2026-10-08T15:22:26.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las fechas de realización del festival en el Hipódromo de San Isidro."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/espectaculos/mas-alla-los-headliners-las-otras-bombas-del-lollapalooza-argentina-2027-n6331639",
-          "fecha": "2026-10-08T16:15:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la relevancia de la segunda línea de artistas en el lineup."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/espectaculos/lollapalooza-2027-argentina-line-up-confirmado-y-todo-lo-que-tenes-que-saber-n6331567",
-          "fecha": "2026-10-08T15:01:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que se trata de la duodécima edición del festival y ratificó los artistas principales."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/musica/noticias/2026/10/08/la-grilla-de-lollapalooza-2027-travis-scott-charli-xcx-the-killers-tini-david-guetta-y-queens-of-the-stone-age-entre-otros/",
-          "fecha": "2026-10-08T15:07:01.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la celebración de los doce años del festival junto al público argentino."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/clase/trendy/lollapalooza-2027-confirmaron-el-lineup-completo-que-artistas-completan-la-grilla/",
-          "fecha": "2026-10-08T15:10:12.000Z",
-          "oficial": false,
-          "aporte": "Aportó datos sobre la confirmación oficial del lineup para 2027."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/cultura/lollapalooza-argentina-2027-ya-esta-el-lineup-completo-con-travis-scott-tini-charli-xcx-y-the-killers-a42.phtml",
-          "fecha": "2026-10-08T15:28:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló la diversidad de géneros musicales que reunirá el encuentro durante las tres jornadas."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/lollapalooza-argentina-2027-se-conocio-el-lineup-completo-con-travis-scott-tini-the-killers-y-mas/",
-          "fecha": "2026-10-08T15:01:00.000Z",
-          "oficial": false,
-          "aporte": "Destacó la combinación de artistas internacionales y referentes de la escena nacional."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/teleshow/2026/10/08/lollapalooza-argentina-2027-travis-scott-charli-xcx-y-tini-stoessel-encabezan-el-line-up/",
-          "fecha": "2026-10-08T15:23:12.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lollapalooza-anuncia-su-grilla-con-tini-y-the-killers-para-2027",
-      "foto": {
-        "archivo": "fotos-notas/vr9xc5.jpg",
-        "credito": "Foto: Ámbito"
-      }
     }
   ],
   "secciones": [
@@ -4807,8 +4809,8 @@
     "Deportes",
     "Economía",
     "Argentina",
-    "Tecnología",
     "Agro",
+    "Tecnología",
     "Automovilismo"
   ],
   "temas": [
@@ -4827,7 +4829,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 90,
+      "humedad": 89,
       "viento": 12,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4835,22 +4837,11 @@
     },
     "dias": [
       {
-        "fecha": "2026-10-09",
-        "dia": "vie",
-        "max": 12,
-        "min": 9,
-        "lluvia": 35,
-        "codigo": 51,
-        "viento": 22,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
-      },
-      {
         "fecha": "2026-10-10",
         "dia": "sáb",
         "max": 13,
         "min": 9,
-        "lluvia": 78,
+        "lluvia": 70,
         "codigo": 51,
         "viento": 15,
         "milimetros": 1,
@@ -4861,7 +4852,7 @@
         "dia": "dom",
         "max": 13,
         "min": 7,
-        "lluvia": 27,
+        "lluvia": 12,
         "codigo": 51,
         "viento": 14,
         "milimetros": 0,
@@ -4872,10 +4863,21 @@
         "dia": "lun",
         "max": 14,
         "min": 6,
-        "lluvia": 35,
+        "lluvia": 25,
         "codigo": 51,
         "viento": 14,
         "milimetros": 1,
+        "cielo": "Llovizna leve"
+      },
+      {
+        "fecha": "2026-10-13",
+        "dia": "mar",
+        "max": 14,
+        "min": 9,
+        "lluvia": 53,
+        "codigo": 51,
+        "viento": 16,
+        "milimetros": 0,
         "cielo": "Llovizna leve"
       }
     ],
@@ -5173,7 +5175,7 @@
       }
     ],
     "diaDeLaSemana": "sábado",
-    "tocaHoy": false
+    "tocaHoy": true
   },
   "pendientes": [
     {
@@ -5207,12 +5209,6 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "1hc2g38",
-      "titulo": "Renunció un importante funcionario político de Azul…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1omxa4o",
       "titulo": "A los 81 años murió Piero, un referente de la canción…",
       "seccion": "Cultura y agenda",
@@ -5235,6 +5231,12 @@
       "titulo": "Sin investigar, el juez de Zárate-Campana sobreseyó a…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "1hc2g38",
+      "titulo": "Renunció un importante funcionario político de Azul…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "dc8gpu",
@@ -5261,12 +5263,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "vbfl3j",
-      "titulo": "El particular regalo de Benín a Messi en su despedida",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "dfdr7f",
       "titulo": "Alumnos de otro colegio fueron denunciados por alterar…",
       "seccion": "Argentina",
@@ -5289,12 +5285,6 @@
       "titulo": "El Gobierno denunció daños en la Secretaría de Educación…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "16ew96u",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "emxfi0",
@@ -5393,5 +5383,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 2
 }
