@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T08:02:00.218Z",
+  "generado": "2026-10-10T08:31:44.971Z",
   "notas": [
     {
       "id": "9zwjal",
@@ -700,8 +700,8 @@
       "guion": "Ricardo Lorenzetti defiende el fallo de la Corte sobre la Ley de Tierras",
       "seccion": "Política",
       "medios": [
-        "La Nación",
         "Infobae",
+        "La Nación",
         "El Destape",
         "Perfil"
       ],
@@ -2328,9 +2328,9 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "El Diario Balcarce",
         "News Balcarce (FM 91.7)",
         "Municipalidad de Balcarce",
+        "El Diario Balcarce",
         "Acción 5 (Balcarce)",
         "Ahora Balcarce",
         "Diario La Vanguardia",
@@ -3914,92 +3914,6 @@
         "archivo": "fotos-notas/16ootdv.jpg",
         "credito": "Foto: Radio Mitre"
       }
-    },
-    {
-      "id": "1trv7re",
-      "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
-      "copete": "El piloto propuso que la máxima categoría nacional corra la última fecha en el autódromo Juan Manuel Fangio. Sin embargo, diferencias institucionales enfriaron las gestiones iniciales.",
-      "cuerpo": "El excampeón de Turismo Carrera Norberto Fontana sugirió que la categoría dispute su fecha Coronación en el autódromo Juan Manuel Fangio. Según indicó en el programa El Arranque de Campeones TV, el trazado local cuenta con mejoras en seguridad, peraltes, vías de escape y guardrails, aunque señaló que la infraestructura de los boxes representa un obstáculo. Tras la exitosa reapertura del circuito al automovilismo nacional, surgieron versiones sobre el arribo de TC Pick Up y el cierre de temporada de la máxima categoría, pero desacuerdos institucionales diluyeron las posibilidades.",
-      "guion": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce",
-        "Campeones"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/si-yo-fuera-mazzacane-haria-el-coronacion-de-tc-en-balcarce-11",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-08T20:06:24.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 86,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Norberto Fontana propuso que el Turismo Carrera cierre su temporada en el autódromo local.",
-        "El piloto destacó las mejoras en seguridad y peraltes, pero advirtió limitaciones en los boxes.",
-        "Surgieron versiones sobre la llegada de la categoría tras la reapertura, pero se enfriaron por cuestiones internas."
-      ],
-      "seSabe": [
-        "Norberto Fontana opinó sobre el circuito local en el programa El Arranque de Campeones TV.",
-        "El piloto destacó las mejoras en seguridad, peraltes, vías de escape y guardrails del autódromo.",
-        "Surgieron versiones sobre gestiones para recibir al Turismo Carrera y a las TC Pick Up tras la reapertura."
-      ],
-      "noConfirmado": [
-        "La realización de la competencia Coronación del Turismo Carrera en el distrito.",
-        "El arribo de las TC Pick Up al trazado local."
-      ],
-      "textoRedes": "El piloto Norberto Fontana sugirió que el Turismo Carrera dispute su fecha Coronación en el autódromo Juan Manuel Fangio, aunque reconoció limitaciones en los boxes y diferencias institucionales que enfriaron las gestiones.",
-      "etiquetas": [
-        "Norberto Fontana",
-        "Turismo Carrera",
-        "Autodromo Juan Manuel Fangio",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/si-yo-fuera-mazzacane-haria-el-coronacion-de-tc-en-balcarce-11",
-          "fecha": "2026-10-09T22:45:51.000Z",
-          "oficial": false,
-          "aporte": "Aportó la opinión del piloto Norberto Fontana sobre el circuito y las versiones en torno al Turismo Carrera."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "f6j0rt",
-          "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
-          "fecha": "2026-10-08T16:14:22.000Z",
-          "ruta": "/nota/el-auto-club-balcarce-suspende-la-fecha-del-zonal-del-atlantico-f6j0rt"
-        },
-        {
-          "id": "16tb2vo",
-          "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo",
-          "fecha": "2026-10-08T13:03:34.000Z",
-          "ruta": "/nota/el-zonal-del-atlantico-compite-el-fin-de-semana-en-el-autodromo-16tb2vo"
-        },
-        {
-          "id": "28zqic",
-          "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
-          "fecha": "2026-10-07T20:37:35.000Z",
-          "ruta": "/nota/sol-di-geronimo-pide-nuevas-gestiones-para-concretar-el-regreso-del-tc-28zqic"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "norberto-fontana-sugiere-cerrar-el-ano-de-turismo-carrera-en-el",
-      "foto": {
-        "archivo": "fotos-notas/1trv7re.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
     }
   ],
   "secciones": [
@@ -4012,8 +3926,7 @@
     "Deportes",
     "Argentina",
     "Cultura y agenda",
-    "Tecnología",
-    "Automovilismo"
+    "Tecnología"
   ],
   "temas": [
     {
@@ -4031,8 +3944,8 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 93,
-      "viento": 12,
+      "humedad": 94,
+      "viento": 13,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": false
@@ -4042,7 +3955,7 @@
         "fecha": "2026-10-10",
         "dia": "sáb",
         "max": 13,
-        "min": 9,
+        "min": 7,
         "lluvia": 70,
         "codigo": 51,
         "viento": 15,
@@ -4064,10 +3977,10 @@
         "fecha": "2026-10-12",
         "dia": "lun",
         "max": 14,
-        "min": 6,
+        "min": 5,
         "lluvia": 25,
         "codigo": 51,
-        "viento": 14,
+        "viento": 15,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
@@ -4075,10 +3988,10 @@
         "fecha": "2026-10-13",
         "dia": "mar",
         "max": 14,
-        "min": 9,
+        "min": 7,
         "lluvia": 53,
         "codigo": 51,
-        "viento": 16,
+        "viento": 19,
         "milimetros": 2,
         "cielo": "Llovizna leve"
       }
@@ -4405,12 +4318,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1fworos",
-      "titulo": "Joaquín Levinton sufre un “severo” problema de salud y…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "6fykn0",
       "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
       "seccion": "Fútbol",
@@ -4543,12 +4450,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "6af5cy",
-      "titulo": "Empezó la reunión en Tribunales: la Corte Suprema analiza…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"sortea\""
-    },
-    {
       "id": "1s6utqr",
       "titulo": null,
       "seccion": "Argentina",
@@ -4559,6 +4460,12 @@
       "titulo": "Dispersión de precios: un mismo producto puede costar…",
       "seccion": "Economía",
       "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "6af5cy",
+      "titulo": "Empezó la reunión en Tribunales: la Corte Suprema analiza…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"sortea\""
     },
     {
       "id": "7ym2kb",
