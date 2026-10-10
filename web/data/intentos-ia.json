@@ -486,9 +486,9 @@
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"domingo\", que sale de una nota anterior, como si fuera de hoy"
  },
  "190bbf8": {
-  "intentos": 1,
-  "ultimo": "2026-10-10T12:31:49.957Z",
-  "motivo": "título o bajada: 1 problema (relleno): el copete tiene una frase de relleno sin dato: \"en el marco de\""
+  "intentos": 2,
+  "ultimo": "2026-10-10T13:01:56.475Z",
+  "motivo": "con cuerpo"
  },
  "196uqz0": {
   "intentos": 1,
@@ -899,6 +899,11 @@
   "intentos": 1,
   "ultimo": "2026-10-08T23:02:05.096Z",
   "motivo": "con cuerpo"
+ },
+ "1iwhvjd": {
+  "intentos": 1,
+  "ultimo": "2026-10-10T13:01:56.475Z",
+  "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 74 palabras"
  },
  "1iyzpcv": {
   "intentos": 5,
@@ -1450,11 +1455,6 @@
  "1vnue0q": {
   "intentos": 1,
   "ultimo": "2026-10-05T15:31:39.763Z",
-  "motivo": "con cuerpo"
- },
- "1vuvl5f": {
-  "intentos": 1,
-  "ultimo": "2026-10-03T13:01:25.217Z",
   "motivo": "con cuerpo"
  },
  "1w1okdp": {
@@ -2481,8 +2481,8 @@
   "motivo": "con cuerpo"
  },
  "oi98dx": {
-  "intentos": 2,
-  "ultimo": "2026-10-10T12:31:49.957Z",
+  "intentos": 3,
+  "ultimo": "2026-10-10T13:01:56.475Z",
   "motivo": "sin material"
  },
  "oosdsc": {

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T12:32:00.470Z",
- "portada": 43,
- "archivo": 896,
+ "generado": "2026-10-10T13:02:18.324Z",
+ "portada": 42,
+ "archivo": 897,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T12:32:00.518Z",
+  "generado": "2026-10-10T13:02:18.363Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -93,18 +93,13 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 53,
+    "segundos": 54,
     "notas": [
      {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "14imhay",
-      "titulo": "El calendario conmemora la salud mental y la danza",
+      "id": "190bbf8",
+      "titulo": "Agustín Conti repasa su vocación y los desafíos de la docencia",
       "seccion": "Cultura y agenda"
      },
      {
@@ -113,9 +108,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce"
+      "id": "15zr9uw",
+      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
+      "seccion": "Agro"
+     },
+     {
+      "id": "2qmh95",
+      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -126,22 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 53,
     "notas": [
      {
-      "id": "10izr2u",
-      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "2qmh95",
-      "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "id": "14imhay",
+      "titulo": "El calendario conmemora la salud mental y la danza",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
      },
      {
       "id": "16s8yom",
@@ -170,6 +165,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "190bbf8",
+     "titulo": "Agustín Conti repasa su vocación y los desafíos de la docencia",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
     {
      "id": "14imhay",
      "titulo": "El calendario conmemora la salud mental y la danza",
