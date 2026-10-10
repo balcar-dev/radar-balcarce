@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T16:31:59.807Z",
+ "generado": "2026-10-10T17:02:22.405Z",
  "portada": 39,
- "archivo": 894,
- "esperandoCuerpo": 1,
+ "archivo": 895,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T16:31:59.845Z",
+  "generado": "2026-10-10T17:02:22.443Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,19 +126,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
-    "notas": [
-     {
-      "id": "4u38d4",
-      "titulo": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "14imhay",
-      "titulo": "El calendario conmemora la salud mental y la danza",
-      "seccion": "Cultura y agenda"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",
@@ -147,8 +136,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 37,
     "notas": [
+     {
+      "id": "4u38d4",
+      "titulo": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "jul3dj",
       "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",

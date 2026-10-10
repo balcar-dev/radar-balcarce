@@ -1,6 +1,96 @@
 {
-  "generado": "2026-10-10T16:31:59.807Z",
+  "generado": "2026-10-10T17:02:22.405Z",
   "notas": [
+    {
+      "id": "1chw90",
+      "titulo": "La cantidad de empresas registradas baja en julio",
+      "copete": "Casi mil empleadores con trabajadores formales bajaron sus persianas en el séptimo mes del año en todo el país. Los registros oficiales marcan 18 meses consecutivos de retracción.",
+      "cuerpo": "La cantidad de empleadores con personal registrado volvió a retroceder en julio en todo el territorio nacional al registrarse 480.067 firmas con al menos un trabajador formal, según los datos de la Superintendencia de Riesgos del Trabajo (SRT).\n\nEn el séptimo mes del año se contabilizaron 948 empresas menos en comparación con junio, lo que completó 18 meses consecutivos de caídas en el sector. La diferencia acumulada desde noviembre de 2023 alcanza las 32.290 firmas menos en el territorio nacional.\n\nEl presidente Javier Milei sostuvo que gran parte de los cierres corresponde a emprendimientos unipersonales y remarcó que el empleo subió durante su mandato.",
+      "guion": "La cantidad de empresas registradas baja en julio",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/10/cerraron-casi-1000-empresas-en-julio-cuantas-bajaron-sus-persianas-desde-que-asumio-el-gobierno-de-javier-milei/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T15:41:28.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T17:01:52.685Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Casi mil empresas cerraron en julio en todo el país",
+        "El registro oficial acumula 18 meses consecutivos de caída",
+        "Hay 32.290 firmas menos desde noviembre de 2023"
+      ],
+      "seSabe": [
+        "En julio de 2026 había 480.067 empresas registradas con trabajadores formales según la SRT",
+        "La baja mensual de julio fue de 948 empresas respecto de junio",
+        "La caída acumulada llega a 32.290 firmas desde noviembre de 2023"
+      ],
+      "noConfirmado": [
+        "La SRT todavía no publica el detalle desagregado correspondiente a julio",
+        "Los motivos exactos del cierre de cada firma y su impacto sectorial pormenorizado para julio"
+      ],
+      "etiquetas": [
+        "empresas",
+        "empleo",
+        "economia",
+        "baja",
+        "nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/10/cerraron-casi-1000-empresas-en-julio-cuantas-bajaron-sus-persianas-desde-que-asumio-el-gobierno-de-javier-milei/",
+          "fecha": "2026-10-10T15:41:28.000Z",
+          "oficial": false,
+          "aporte": "Aportó las cifras de empresas en julio, la comparación con noviembre de 2023, la serie histórica de caídas y las declaraciones del economista Hernán Bergstein y del presidente Javier Milei."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/sociedad/cierre-masivo-de-empresas-se-conocio-que-casi-1000-negocios-bajaron-su-persianas-desde-que-asumio-javier-milei/",
+          "fecha": "2026-10-10T16:49:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó la confirmación de la caída de empleadores con personal registrado en julio a nivel nacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1tib4ft",
+          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
+          "fecha": "2026-10-05T18:53:21.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
+        },
+        {
+          "id": "1gp4lrt",
+          "titulo": "Javier Milei celebra el resultado electoral en Brasil",
+          "fecha": "2026-10-05T13:13:00.000Z",
+          "ruta": "/nota/javier-milei-celebra-el-resultado-electoral-en-brasil-1gp4lrt"
+        },
+        {
+          "id": "1qnkumc",
+          "titulo": "Javier Milei cierra su gira en Francia y destaca la llegada de inversiones",
+          "fecha": "2026-10-02T18:50:40.275Z",
+          "ruta": "/nota/milei-cerro-su-gira-en-francia-argentina-se-dirige-nuevamente-a-paso-1qnkumc"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-cantidad-de-empresas-registradas-baja-en-julio",
+      "foto": {
+        "archivo": "fotos-notas/1chw90.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
     {
       "id": "p3cnfm",
       "titulo": "Luján habilita un portal con servicios para la visita del Papa",
@@ -10,6 +100,7 @@
       "seccion": "Argentina",
       "medios": [
         "QZ Noticias (Mar del Plata)",
+        "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Verdad",
         "La Opinión",
@@ -198,6 +289,98 @@
       "foto": {
         "archivo": "fotos-notas/190bbf8.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "1swm03b",
+      "titulo": "Conmemoran el Día Mundial de la Salud Mental y advierten sobre el estrés laboral",
+      "copete": "Especialistas señalan que la hiperconectividad y las exigencias del trabajo continuo generan problemas de bienestar psicológico, en una fecha donde recuerdan la necesidad de prevenir el agotamiento.",
+      "cuerpo": "El mundo conmemora el Día Mundial de la Salud Mental con el foco puesto en los desafíos del bienestar psicológico y la necesidad de mejorar la atención en los espacios de trabajo.\n\nEn la Argentina, una de cada tres personas presenta algún inconveniente vinculado a la salud mental, según indicaron distintas fuentes periodísticas. La hiperconectividad, el desgaste profesional y la dificultad para desconectar al finalizar la jornada laboral mantienen al cerebro en estado de alerta constante, lo que afecta la recuperación psíquica.\n\nEspecialistas en la materia explicaron que el estrés sostenido deja de ser un mecanismo adaptativo y provoca insomnio, cefaleas, distanciamiento afectivo y pérdida de placer en actividades recreativas. Como antecedentes, el calendario local ya había reunido fechas dedicadas al bienestar emocional y organizado encuentros abiertos sobre salud en el Círculo de Educadores a principios de mes.",
+      "guion": "Conmemoran el Día Mundial de la Salud Mental y advierten sobre el estrés laboral",
+      "seccion": "Argentina",
+      "medios": [
+        "El Eco de Tandil",
+        "Ecos Diarios (Necochea)",
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/sociedad/dia-mundial-de-la-salud-mental--la-importancia-de-cuidar-el-bienestar-en-el-ambito-laboral_a6ac8f29a8e24c1a50acdb540",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T11:30:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T17:01:52.685Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El 10 de octubre se conmemora el Día Mundial de la Salud Mental.",
+        "Advierten sobre el impacto del estrés y la hiperconectividad laboral.",
+        "Especialistas detallan señales de alerta como insomnio y apatía.",
+        "En el país, un tercio de la población presenta problemas de salud mental."
+      ],
+      "textoRedes": "En el Día Mundial de la Salud Mental, especialistas advierten sobre el impacto de la hiperconectividad y el estrés laboral en el bienestar psicológico.",
+      "etiquetas": [
+        "Salud mental",
+        "Trabajo",
+        "Estrés",
+        "Universidad Hospital Italiano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/dia-mundial-de-la-salud-mental--la-importancia-de-cuidar-el-bienestar-en-el-ambito-laboral_a6ac8f29a8e24c1a50acdb540",
+          "fecha": "2026-10-10T11:30:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la palabra de las especialistas Verónica Lapelle y Fátima Barragán sobre las señales de alerta del estrés laboral."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/instruyendo-al-ciudadano/dia-mundial-de-la-salud-mental-por-que-se-conmemora-cada-10-de-octubre",
+          "fecha": "2026-10-10T15:59:21.000Z",
+          "oficial": false,
+          "aporte": "Indicó el objetivo de visibilizar los desafíos del bienestar psicológico en la conmemoración."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/dia-mundial-de-la-salud-mental-uno-de-cada-tres-argentinos-presenta-malestar-psicologico",
+          "fecha": "2026-10-10T16:34:08.000Z",
+          "oficial": false,
+          "aporte": "Informó que en la Argentina una de cada tres personas presenta algún problema de salud mental."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-10-11-53-0-dia-mundial-de-la-salud-mental-la-importancia-de-cuidar-el-bienestar-en-el-ambito-laboral",
+          "fecha": "2026-10-10T16:16:45.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el desgaste profesional y la hiperconectividad dificultan la desconexión personal."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "14imhay",
+          "titulo": "El calendario conmemora la salud mental y la danza",
+          "fecha": "2026-10-10T10:30:00.000Z",
+          "ruta": "/nota/el-calendario-conmemora-la-salud-mental-y-la-danza-14imhay"
+        },
+        {
+          "id": "c0hkeg",
+          "titulo": "Organizan una jornada abierta sobre salud y bienestar para adultos mayores",
+          "fecha": "2026-10-01T11:52:38.000Z",
+          "ruta": "/nota/el-circulo-de-educadores-recibe-un-ciclo-de-charlas-sobre-salud-en-la-c0hkeg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "conmemoran-el-dia-mundial-de-la-salud-mental-y-advierten-sobre-el",
+      "foto": {
+        "archivo": "fotos-notas/1swm03b.jpg",
+        "credito": "Foto: El Eco de Tandil"
       }
     },
     {
@@ -499,58 +682,6 @@
       }
     },
     {
-      "id": "14imhay",
-      "titulo": "El calendario conmemora la salud mental y la danza",
-      "copete": "El 10 de octubre reúne fechas dedicadas al bienestar emocional, la labor técnica y la danza nacional.",
-      "cuerpo": "El calendario marca hoy la conmemoración del Día Mundial de la Salud Mental, una jornada destinada a promover el cuidado emocional, prevenir inconvenientes psicológicos y facilitar el acceso a la atención y el acompañamiento necesario.\n\nAdemás, la fecha incluye la recordación del Día Nacional de la Danza, establecido en memoria de los bailarines del Teatro Colón fallecidos en un accidente aéreo en 1971.\n\nAsimismo, el país celebra el Día del Técnico en coincidencia con la aprobación de los planes de estudio impulsados por Otto Krause en 1898.",
-      "guion": "El calendario conmemora la salud mental y la danza",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-10-de-octubre-se-celebra-el-dia-mundial-de-la-salud-mental",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T10:30:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T10:31:25.625Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se celebra el Día Mundial de la Salud Mental.",
-        "Se conmemora el Día Nacional de la Danza.",
-        "Se recuerda el Día del Técnico en Argentina."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El calendario marca hoy la conmemoración del Día Mundial de la Salud Mental, el Día Nacional de la Danza y el Día del Técnico.",
-      "etiquetas": [
-        "salud mental",
-        "danza",
-        "dia del tecnico",
-        "efemerides"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-10-de-octubre-se-celebra-el-dia-mundial-de-la-salud-mental",
-          "fecha": "2026-10-10T10:30:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó las efemérides y los datos sobre el Día Mundial de la Salud Mental, la danza y el técnico."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-calendario-conmemora-la-salud-mental-y-la-danza"
-    },
-    {
       "id": "9zwjal",
       "titulo": "Investigan la desaparición de fondos en la escuela Emilio Lamarca",
       "copete": "Desapareció dinero de la recaudación para un evento escolar en la escuela Emilio Lamarca y las autoridades investigan las circunstancias del hecho.",
@@ -559,6 +690,7 @@
       "seccion": "Policiales",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/desaparicion-de-dinero-en-el-emilio-lamarca-760",
@@ -566,7 +698,7 @@
       "fecha": "2026-10-10T03:25:53.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T03:31:44.259Z",
-      "relevancia": 81,
+      "relevancia": 91,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -851,7 +983,8 @@
         "La Nación",
         "Ámbito",
         "Perfil",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Brújula 24"
       ],
       "enlace": "https://www.ambito.com/economia/inflacion-dolares-pese-abaratarse-julio-argentina-tiene-los-restaurantes-y-la-indumentaria-mas-caros-la-region-n6332214",
       "teniaImagenLaFuente": true,
@@ -1893,87 +2026,6 @@
       }
     },
     {
-      "id": "pyejmn",
-      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
-      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T15:31:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T21:31:52.077Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cayeron 48 milímetros promedio en la región núcleo.",
-        "El trigo atraviesa las etapas clave de floración y espigazón.",
-        "Los rendimientos superarán los cuarenta quintales por hectárea."
-      ],
-      "seSabe": [
-        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
-        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
-        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
-      ],
-      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "etiquetas": [
-        "trigo",
-        "clima",
-        "lluvias",
-        "agro",
-        "Bolsa de Comercio de Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-          "fecha": "2026-10-09T15:31:40.000Z",
-          "oficial": false,
-          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
-          "fecha": "2026-10-09T19:32:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ydwxhf",
-          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-          "fecha": "2026-10-02T17:03:25.000Z",
-          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
-        },
-        {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
-      "foto": {
-        "archivo": "fotos-notas/pyejmn.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "14mxql1",
       "titulo": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
       "copete": "El equipo local se impuso en el Torneo Provincial de cuarta categoría y jugará el título en noviembre. Regresó este año a la competencia federada tras casi dos décadas.",
@@ -2167,9 +2219,9 @@
       "medios": [
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
-        "Diario La Vanguardia",
-        "La Capital (Rosario)"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30991",
       "teniaImagenLaFuente": true,
@@ -2955,6 +3007,7 @@
     }
   ],
   "secciones": [
+    "Economía",
     "Argentina",
     "Balcarce",
     "Cultura y agenda",
@@ -2962,7 +3015,6 @@
     "Deportes",
     "Policiales",
     "Agro",
-    "Economía",
     "Fútbol",
     "Política",
     "Tecnología"
@@ -2983,7 +3035,7 @@
     "ahora": {
       "temp": 13,
       "sensacion": 10,
-      "humedad": 62,
+      "humedad": 61,
       "viento": 12,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -3357,6 +3409,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "11yxcy2",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
       "id": "6gphoh",
       "titulo": "La historia de Nico: su mamá contó cómo atraviesan el…",
       "seccion": "Balcarce",
@@ -3397,12 +3455,6 @@
       "titulo": "La defensa de Pity Álvarez solicitó la nulidad de la…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "1as68y2",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "kzzd97",
@@ -3483,5 +3535,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }
