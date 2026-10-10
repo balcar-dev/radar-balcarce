@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T22:02:09.897Z",
+  "generado": "2026-10-10T22:32:04.170Z",
   "notas": [
     {
       "id": "p4vc8j",
@@ -153,11 +153,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45052-vendi-el-auto-pero-nunca-hicimos-la-transferencia-que-problemas-puedo-tener-si-todavia-figura-a-mi-nombre/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-10T18:31:46.672Z",
       "sinFecha": true,
       "visto": "2026-10-10T18:31:46.672Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -354,8 +354,8 @@
       "medios": [
         "La Nación",
         "Minuto Uno",
-        "A24",
-        "Infobae"
+        "Infobae",
+        "A24"
       ],
       "enlace": "https://www.infobae.com/teleshow/2026/10/10/wanda-nara-conto-como-fue-filmar-las-escenas-de-sexo-en-su-debut-como-actriz-lo-mas-antierotico-del-mundo/",
       "teniaImagenLaFuente": true,
@@ -435,6 +435,7 @@
         "Perfil",
         "Ámbito",
         "Crónica",
+        "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)"
       ],
@@ -745,9 +746,9 @@
       "guion": "La Libertad Avanza realiza su congreso juvenil en Morón.",
       "seccion": "Política",
       "medios": [
-        "El Eco de Tandil",
         "La Noticia 1",
         "Ámbito",
+        "El Eco de Tandil",
         "Diputados Bonaerenses"
       ],
       "enlace": "https://diputadosbsas.com.ar/pareja-congreso-juventud-lla-moron/",
@@ -958,74 +959,6 @@
       "slug": "clima-en-balcarce-70-de-probabilidad-de-lluvia-con-minima-de-7-y"
     },
     {
-      "id": "if3bv6",
-      "titulo": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
-      "copete": "El tenista argentino cayó ante el checo Dalibor Svrcina en la segunda ronda del torneo disputado en China tras disputar tres sets.",
-      "cuerpo": "Tomás Martín Etcheverry quedó marginado del Másters 1000 de Shanghái tras ser derrotado por el checo Dalibor Svrcina. El encuentro se definió por 6-3, 3-6 y 7-5 luego de dos horas y 58 minutos de juego en la segunda instancia del certamen internacional.\n\nEl deportista europeo, situado en el puesto 126 del escalafón global, logró imponerse ante el argentino, que se encuentra en la posición 31 del ranking. El único antecedente entre ambos contendientes databa de 2023 en la ciudad de Zhuhai, con triunfo para el platense.",
-      "guion": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
-      "seccion": "Deportes",
-      "medios": [
-        "TyC Sports",
-        "El Día",
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/espana/agencias/2026/10/10/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T10:30:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T15:01:48.819Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Etcheverry perdió ante Svrcina en Shanghái",
-        "El marcador final fue 6-3, 3-6 y 7-5",
-        "El partido duró casi tres horas"
-      ],
-      "textoRedes": "Tomás Etcheverry quedó eliminado en la segunda ronda del Másters 1000 de Shanghái tras perder ante el checo Dalibor Svrcina por 6-3, 3-6 y 7-5.",
-      "etiquetas": [
-        "Tenis",
-        "Tomás Etcheverry",
-        "Shanghái"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/espana/agencias/2026/10/10/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking/",
-          "fecha": "2026-10-10T10:30:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló el resultado del partido, la duración del encuentro y los antecedentes entre los tenistas."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/tenis/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking-id765473.html",
-          "fecha": "2026-10-10T10:35:34.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/el-platense-etcheverry-perdio-y-se-despidio-del-master-1000-de-shanghai-deportes_1791644040",
-          "fecha": "2026-10-10T14:59:21.000Z",
-          "oficial": false,
-          "aporte": "Informó la eliminación del tenista argentino en el torneo."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "tomas-etcheverry-queda-eliminado-en-el-masters-1000-de-shanghai",
-      "foto": {
-        "archivo": "fotos-notas/if3bv6.jpg",
-        "credito": "Foto: El Día"
-      }
-    },
-    {
       "id": "9zwjal",
       "titulo": "Investigan la desaparición de fondos en la escuela Emilio Lamarca",
       "copete": "Desapareció dinero de la recaudación para un evento escolar en la escuela Emilio Lamarca y las autoridades investigan las circunstancias del hecho.",
@@ -1033,7 +966,6 @@
       "guion": "Investigan la desaparición de fondos en la escuela Emilio Lamarca",
       "seccion": "Policiales",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce"
       ],
@@ -1042,7 +974,7 @@
       "fecha": "2026-10-10T03:25:53.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T03:31:44.259Z",
-      "relevancia": 91,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1408,11 +1340,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T23:29:47.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:32:00.485Z",
+      "sinFecha": true,
       "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 71,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1468,64 +1400,6 @@
       "foto": {
         "archivo": "fotos-notas/1aizybd.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
-      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
-      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T23:21:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
-        "La función se realiza en el teatro Roxy desde las 21.30.",
-        "El unipersonal cuenta con dirección de Martín Bontempo.",
-        "Las entradas están a la venta en Plateanet y en la boletería."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
-      "etiquetas": [
-        "Camila Peralta",
-        "Suavecita",
-        "Mar del Plata",
-        "teatro",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-          "fecha": "2026-10-09T23:21:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
-      "foto": {
-        "archivo": "fotos-notas/1360zul.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1611,293 +1485,6 @@
       "foto": {
         "archivo": "fotos-notas/88fvqd.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
-      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
-      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T22:30:19.147Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 93,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
-        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
-        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
-      "etiquetas": [
-        "Paula Boccia",
-        "tenis",
-        "Balcarce",
-        "Tucumán",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-          "fecha": "2026-10-09T22:31:35.000Z",
-          "oficial": false,
-          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
-      "foto": {
-        "archivo": "fotos-notas/146dyw0.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
-      "id": "x8b5c1",
-      "titulo": "Ricardo Lorenzetti defiende el fallo de la Corte sobre la Ley de Tierras",
-      "copete": "El juez de la Corte Suprema analizó la medida cautelar que frenó la derogación de la norma sobre venta a extranjeros y remarcó la trayectoria ambiental del tribunal.",
-      "cuerpo": "El juez de la Corte Suprema de Justicia Ricardo Lorenzetti analizó el fallo del máximo tribunal que suspendió el artículo del decreto de necesidad y urgencia 70 que eliminaba la Ley de Tierras, y sostuvo que la institución a su cargo protege los recursos naturales.\n\nEn declaraciones periodísticas, el magistrado fundamentó la decisión en tres ejes: los hechos concretos, la protección ambiental y la participación social en el Estado de derecho. Asimismo, explicó que la medida cautelar se dictó para evitar daños irreparables y garantizar la tutela judicial de una organización ambiental ante la falta de respuestas en las instancias previas.\n\nLa resolución contó con las firmas de Lorenzetti, Horacio Rosatti y los conjueces Diego Barroetaveña y Juan Ignacio Pérez Curci. Por su parte, el juez Carlos Rosenkrantz votó en disidencia al considerar que el máximo tribunal no tenía competencia para dictar la cautelar y que el expediente debía girarse a la justicia federal de Bariloche.",
-      "guion": "Ricardo Lorenzetti defiende el fallo de la Corte sobre la Ley de Tierras",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "El Destape",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "Noticias Argentinas (NA)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "El Día",
-        "Clarín",
-        "Infórmese Primero (FM 104.9)",
-        "El Cronista",
-        "Página/12",
-        "A24",
-        "iProfesional",
-        "Ámbito",
-        "Minuto Uno",
-        "C5N",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "0221",
-        "La Tecla",
-        "Letra P",
-        "La Verdad",
-        "InfoRegión",
-        "ANDigital",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Qué Digital",
-        "Infobrisas (Radio Brisas)",
-        "Punto Noticias",
-        "El Eco de Tandil",
-        "Noticias Agropecuarias",
-        "Crónica",
-        "0223 (Mar del Plata)",
-        "Agencia DIB",
-        "La Brújula 24",
-        "Ecos Diarios (Necochea)",
-        "Bichos de Campo",
-        "La Nueva",
-        "Infoeme",
-        "Diputados Bonaerenses",
-        "Infocampo",
-        "La Voz del Pueblo"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/09/ricardo-lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-recursos-naturales/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T22:13:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 61,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ricardo Lorenzetti analizó la cautelar que frena la derogación de la Ley de Tierras.",
-        "El magistrado destacó la coherencia del máximo tribunal en materia ambiental.",
-        "Carlos Rosenkrantz votó en disidencia al cuestionar la competencia de la Corte."
-      ],
-      "textoRedes": "El juez de la Corte Suprema Ricardo Lorenzetti analizó el fallo que frenó la derogación de la Ley de Tierras y remarcó la protección de los recursos naturales.",
-      "etiquetas": [
-        "Corte Suprema",
-        "Ricardo Lorenzetti",
-        "Ley de Tierras",
-        "DNU 70",
-        "poder judicial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/09/ricardo-lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-recursos-naturales/",
-          "fecha": "2026-10-09T22:13:13.000Z",
-          "oficial": false,
-          "aporte": "Detalló los fundamentos del juez Ricardo Lorenzetti y la votación de los magistrados."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-nid09102026/",
-          "fecha": "2026-10-09T23:30:41.000Z",
-          "oficial": false,
-          "aporte": "Informó las declaraciones iniciales del magistrado sobre la protección de los recursos naturales."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/politica/lorenzetti-justifico-fallo-corte-tierras-linea-coherente-20261092050",
-          "fecha": "2026-10-09T23:05:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el motivo por el cual la Corte Suprema dictó la suspensión del artículo del DNU 70/23."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "16ufhqn",
-          "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-corte-revoca-el-fallo-sobre-la-ley-de-tierras-del-dnu-16ufhqn"
-        },
-        {
-          "id": "1k45c07",
-          "titulo": "Caról pide a Diputados rechazar el decreto sobre tierras tras el fallo",
-          "fecha": "2026-09-30T16:44:00.000Z",
-          "ruta": "/nota/carol-pide-a-diputados-rechazar-el-decreto-sobre-tierras-tras-el-fallo-1k45c07"
-        },
-        {
-          "id": "1lubi1s",
-          "titulo": "La Corte Suprema se reúne para revisar las restricciones a la compra de tierras",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-corte-suprema-se-reune-para-revisar-las-restricciones-a-la-compra-1lubi1s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "ricardo-lorenzetti-defiende-el-fallo-de-la-corte-sobre-la-ley-de",
-      "foto": {
-        "archivo": "fotos-notas/x8b5c1.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "1429pe8",
-      "titulo": "Karina Milei proyecta la exportación de carne a Israel",
-      "copete": "La secretaria general de la Presidencia se reunió con la embajadora Ahuva Spieler Reshef para impulsar el mercado cárnico en el exterior.",
-      "cuerpo": "De la reunión participó el presidente ejecutivo de PromArgentina, Diego Sucalesca.\n\nDurante el encuentro, las autoridades anunciaron el lanzamiento de la Semana de la Carne Argentina en Israel. Como parte de la iniciativa de inserción comercial, representantes de frigoríficos integrarán una misión comercial a la ciudad de Tel Aviv con respaldo técnico y logístico.\n\nA principios de mes, la funcionaria nacional había encabezado rondas de negocios en París junto a firmas pesqueras y directivos de empresas francesas para incrementar exportaciones y captar inversiones.",
-      "guion": "Karina Milei proyecta la exportación de carne a Israel",
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Ámbito",
-        "Bichos de Campo",
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "Infobae"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/con-foco-en-las-exportaciones--karina-milei-se-reunio-con-la-embajadora-de-israel_a6ac95f9a587f18d75210421a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T21:34:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Karina Milei recibió a la embajadora de Israel en la Casa Rosada.",
-        "Anunciaron el lanzamiento de la Semana de la Carne Argentina en Israel.",
-        "Representantes de frigoríficos viajarán a Tel Aviv para una misión comercial."
-      ],
-      "noConfirmado": [
-        "Todavía no se informaron las fechas exactas en las que se desarrollará la misión comercial en Tel Aviv."
-      ],
-      "textoRedes": "Karina Milei mantuvo un encuentro con la embajadora de Israel en la Casa Rosada y anunciaron el lanzamiento de la Semana de la Carne Argentina para potenciar las exportaciones.",
-      "etiquetas": [
-        "Karina Milei",
-        "Israel",
-        "exportaciones",
-        "carne",
-        "PromArgentina"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/con-foco-en-las-exportaciones--karina-milei-se-reunio-con-la-embajadora-de-israel_a6ac95f9a587f18d75210421a",
-          "fecha": "2026-10-09T22:12:35.000Z",
-          "oficial": false,
-          "aporte": "Detalló el encuentro en la Casa Rosada y los objetivos de exportación."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/semana-de-la-carne-en-israel-karina-milei-y-la-embajadora-ahuva-spieler-reshef-anunciaron-una-nid09102026/",
-          "fecha": "2026-10-09T23:01:50.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación de Diego Sucalesca y el anuncio de la feria."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/el-gobierno-organizara-la-semana-la-carne-argentina-tel-aviv-impulsar-las-exportaciones-israel-n6332246",
-          "fecha": "2026-10-09T23:22:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que representantes de frigoríficos viajarán a Tel Aviv."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pq0gh4",
-          "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "ruta": "/nota/karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca-1pq0gh4"
-        },
-        {
-          "id": "oa2ef",
-          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
-          "fecha": "2026-10-02T09:29:30.000Z",
-          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
-        },
-        {
-          "id": "wcnatb",
-          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
-          "fecha": "2026-10-01T13:40:00.000Z",
-          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "karina-milei-proyecta-la-exportacion-de-carne-a-israel",
-      "foto": {
-        "archivo": "fotos-notas/1429pe8.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -2329,7 +1916,6 @@
       "guion": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -2339,7 +1925,7 @@
       "fecha": "2026-10-09T18:21:42.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T09:01:36.782Z",
-      "relevancia": 100,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2491,11 +2077,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:31:41.075Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2743,11 +2329,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-09T17:01:23.701Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:01:23.701Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2803,18 +2389,12 @@
       "guion": "La cantidad de empresas registradas baja en julio",
       "seccion": "Economía",
       "medios": [
-        "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
         "Infobae",
-        "Ámbito",
-        "El Destape",
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Día",
         "La Nueva",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Clarín"
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/10/cerraron-casi-1000-empresas-en-julio-cuantas-bajaron-sus-persianas-desde-que-asumio-el-gobierno-de-javier-milei/",
       "teniaImagenLaFuente": true,
@@ -2893,115 +2473,6 @@
       "foto": {
         "archivo": "fotos-notas/1chw90.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "16bffnh",
-      "titulo": "Aeropuertos Argentina invierte 1500 millones de dólares en obras",
-      "copete": "La empresa destinará fondos entre 2027 y 2031 para modernizar 35 terminales aéreas en todo el país. Ezeiza, Aeroparque y los aeropuertos del interior concentrarán las principales obras de infraestructura.",
-      "cuerpo": "Aeropuertos Argentina destina 1500 millones de dólares para modernizar y ampliar la infraestructura de 35 terminales aéreas del país entre 2027 y 2031. El programa, acordado con el Organismo Regulador del Sistema Nacional de Aeropuertos, se financia con fondos propios y recursos del fideicomiso del sector.\n\nEl Aeropuerto Internacional de Ezeiza recibe 794 millones de dólares para construir una nueva terminal de arribos internacionales y otra para vuelos domésticos. El Aeroparque Jorge Newbery cuenta con una asignación de 200 millones de dólares para levantar un nuevo espigón y ampliar el sector internacional.\n\nEl resto de los fondos se distribuye en 33 terminales del interior del país, con mejoras en edificios, pistas y balizamiento en catorce ciudades que incluyen Bariloche, Mendoza y Córdoba.",
-      "guion": "Aeropuertos Argentina invierte mil quinientos millones de dólares en obras",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "iProfesional",
-        "Noticias Argentinas (NA)",
-        "Agroempresario",
-        "Clarín"
-      ],
-      "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T16:02:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T19:01:44.733Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Inversión total de 1500 millones de dólares",
-        "Obras previstas entre 2027 y 2031",
-        "Trabajos en Ezeiza, Aeroparque y el interior"
-      ],
-      "seSabe": [
-        "El plan abarca 35 aeropuertos administrados por la empresa",
-        "Ezeiza recibe 794 millones de dólares",
-        "Aeroparque cuenta con 200 millones de dólares para obras"
-      ],
-      "textoRedes": "Aeropuertos Argentina invertirá 1500 millones de dólares entre 2027 y 2031 para modernizar 35 terminales aéreas en todo el país, con obras en Ezeiza, Aeroparque y el interior.",
-      "etiquetas": [
-        "Aeropuertos Argentina",
-        "inversion",
-        "infraestructura",
-        "Ezeiza",
-        "Aeroparque"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agroempresario",
-          "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
-          "fecha": "2026-10-09T16:02:18.000Z",
-          "oficial": false,
-          "aporte": "Detalló el monto total de la inversión y el desglose por aeropuertos"
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/gigantesco-plan-de-obras-asi-sera-aterrizar-en-la-argentina-en-2030-nid09102026/",
-          "fecha": "2026-10-09T17:56:46.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/09/aeropuertos-argentina-anuncio-el-mayor-plan-de-inversion-de-su-historia-desembolsara-usd-1500-millones-en-los-proximos-5-anos/",
-          "fecha": "2026-10-09T17:25:56.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/ampliar-concesion-aeropuertos-argentina-invertira-us-1500-millones-ezeiza-aeroparque-interior-pais_0_PZtLSKCq6u.html",
-          "fecha": "2026-10-09T17:14:50.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/09/aeropuertos-argentina-anuncio-obras-por-us1500-millones-ezeiza-tendra-una-nueva-terminal-de-arribos-y-se-ampliara-el-aeroparque/",
-          "fecha": "2026-10-09T17:34:05.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/negocios/466298-aeropuertos-argentina-invertira-us1500-millones-en-el-pais",
-          "fecha": "2026-10-09T17:55:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/ezeiza-tendra-dos-nuevas-terminales-y-aeroparque-ampliara-sus-instalaciones_a6ac91158587f18d752ff8898",
-          "fecha": "2026-10-09T16:09:59.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 7 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "aeropuertos-argentina-invierte-1500-millones-de-dolares-en-obras",
-      "foto": {
-        "archivo": "fotos-notas/16bffnh.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -3291,7 +2762,6 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "Diario La Vanguardia",
@@ -3302,7 +2772,7 @@
       "fecha": "2026-10-09T13:47:33.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 100,
+      "relevancia": 95,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3440,7 +2910,6 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Acción 5 (Balcarce)",
@@ -3581,7 +3050,6 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -3591,7 +3059,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 54,
+      "relevancia": 44,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -3646,7 +3114,7 @@
       "fecha": "2026-10-09T11:43:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T19:01:44.733Z",
-      "relevancia": 38,
+      "relevancia": 34,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3727,12 +3195,12 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
+        "Infobae",
         "Ámbito",
         "TyC Sports",
         "Olé",
         "Crónica",
         "Radio Mitre",
-        "Infobae",
         "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
@@ -4106,11 +3574,11 @@
     "ahora": {
       "temp": 10,
       "sensacion": 7,
-      "humedad": 82,
+      "humedad": 84,
       "viento": 13,
       "rumbo": "SE",
-      "cielo": "Nublado",
-      "esDeDia": true
+      "cielo": "Parcialmente nublado",
+      "esDeDia": false
     },
     "dias": [
       {
@@ -4480,18 +3948,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1iq43uc",
-      "titulo": "El quirófano móvil de castraciones permanece en la Escuela…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1d4xgqi",
-      "titulo": "Sol Di Gerónimo pidió informes por una posible bajada…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "1omxa4o",
       "titulo": "A los 81 años murió Piero, un referente de la canción…",
       "seccion": "Cultura y agenda",
@@ -4546,22 +4002,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "d0u7zv",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"menores de 5 anos\""
-    },
-    {
       "id": "uvmc92",
       "titulo": "El Gobierno denunció daños en la Secretaría de Educación…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1nerhmu",
-      "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "vvpj0a",
@@ -4582,16 +4026,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "5w58zn",
-      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"suscribite\""
-    },
-    {
-      "id": "lktast",
-      "titulo": "La herramienta gratuita que permite a menores denunciar la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "1nerhmu",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "wdhpc1",

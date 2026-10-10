@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-10T22:02:07.264Z",
+ "consultado": "2026-10-10T22:32:01.605Z",
  "equipos": [
   "9739",
   "3",
@@ -882,20 +882,33 @@
     "id": "401841599",
     "competencia": "liga",
     "inicio": "2026-10-10T22:15:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "17'",
     "local": {
      "id": "7767",
      "nombre": "Tigre",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "235",
      "nombre": "Banfield",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Adrián Balboa",
+      "minuto": "6'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Jerónimo Domina",
+      "minuto": "10'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Monumental de Victoria (José Dellagiovanna)",
     "fase": null,
     "partidoDeLaSerie": null,

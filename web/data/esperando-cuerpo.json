@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-10T22:02:09.897Z",
+ "generado": "2026-10-10T22:32:04.170Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1c8h3cp",
-   "titulo": "Rufino comenzó este sábado su tratamiento con Cytotron en la India",
-   "copete": "Rufino inició este sábado el tratamiento con Cytotron en la India, luego de que su familia lograra reunir el dinero necesario para comenzar con el procedimiento. Sus padres, Jennifer y Darío, continúan trabajando para completar los fondos que les permitan afrontar los tres…",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-10T17:30:22.000Z",
-   "fuentes": [
-    {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/rufino-comenzo-este-sabado-su-tratamiento-con-cytotron-en-la-india/",
-     "fecha": "2026-10-10T17:30:22.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)",
-   "maximo": 3
-  },
   {
    "id": "1iwhvjd",
    "titulo": "Cassini habló de la sucesión de Reino: “Spinelli y Ridao son los dos candidatos naturales”",
@@ -51,6 +34,28 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
+   "maximo": 3
+  },
+  {
+   "id": "t1ajrg",
+   "titulo": "Doble golpe: cómo repercutió en el campeonato el choque de George Russell en la Sprint",
+   "copete": "El piloto de Mercedes lideraba la carrera corta de Singapur y, en unas condiciones difíciles, chocó contra la pared y abandonó. Previendo un domingo difícil, se complica la pelea por la punta con Antonelli.",
+   "seccion": "Deportes",
+   "fecha": "2026-10-10T11:09:06.000Z",
+   "fuentes": [
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/autos/golpe-george-russell-carrera-sprint-singapur-campeonato_0_eaoJiqG6qO.html",
+     "fecha": "2026-10-10T11:09:06.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/deportes/franco-colapinto-choco-george-russell-singapur-tn-si-n6332396",
+     "fecha": "2026-10-10T21:56:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 92 palabras",
    "maximo": 3
   }
  ]
