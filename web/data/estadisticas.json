@@ -1335,6 +1335,53 @@
         "vistas": 11,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-10T00:00:17.454Z",
+      "web": {
+        "u12": {
+          "visitas": 37,
+          "vistas": 120
+        },
+        "a12": {
+          "visitas": 9,
+          "vistas": 45
+        },
+        "u24": {
+          "visitas": 46,
+          "vistas": 165
+        },
+        "a24": {
+          "visitas": 79,
+          "vistas": 173
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 27
+          },
+          {
+            "camino": "/nota/virginia-aparicio-habla-en-radio-sobre-su-situacion-en-el-inta-18jx7kk",
+            "vistas": 17
+          },
+          {
+            "camino": "/nota/osebal-llega-al-segundo-vencimiento-de-la-factura-de-agua-1v0pyz6",
+            "vistas": 11
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 9,
+        "vistas": 759,
+        "interacciones": 4
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 120,
+        "alcance": 5,
+        "vistas": 63,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2024,23 +2071,23 @@
         0,
         0,
         0,
+        8,
         0,
         0,
+        6,
+        6,
         0,
         0,
+        6,
+        6,
+        12,
+        10,
         0,
+        2,
+        1,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        11,
+        6,
         0
       ],
       "paises": {
@@ -2057,8 +2104,45 @@
         "facebook.com": 60,
         "directo": 19
       },
-      "notas": {},
-      "paginas": {},
+      "notas": {
+        "1cpkl2f": 12,
+        "16tb2vo": 11,
+        "6vefne": 10,
+        "jul321": 8,
+        "1wp29m7": 8,
+        "jul3dm": 7,
+        "1rf94dp": 7,
+        "repaso20261008noche": 6,
+        "1ube6ai": 6,
+        "vnuraj": 6,
+        "41whtr": 6,
+        "f6j0rt": 5,
+        "mr88ek": 4,
+        "1f6rlk": 4,
+        "15imf6x": 4,
+        "wvbi4h": 3,
+        "siahkq": 3,
+        "1w1okdp": 3,
+        "5ffwsk": 2,
+        "l5uou9": 2,
+        "f1horarios2026r17": 2,
+        "28ui0c": 2,
+        "y4gp3v": 2,
+        "zzuoo4": 2,
+        "repaso20261007noche": 2,
+        "10cpafd": 2,
+        "131078z": 1,
+        "1ejaor8": 1
+      },
+      "paginas": {
+        "/": 42,
+        "/seccion/automovilismo": 8,
+        "/seccion/policiales": 7,
+        "/seccion/deportes": 4,
+        "/seccion/balcarce": 3,
+        "/seccion/politica": 3,
+        "/dolar": 1
+      },
       "paises": {
         "AR": 99,
         "US": 73,
@@ -2074,36 +2158,40 @@
         0,
         0,
         0,
+        7,
+        9,
+        0,
+        2,
+        11,
+        4,
+        8,
+        4,
+        13,
+        0,
+        24,
+        16,
+        55,
+        3,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        11,
+        30,
+        2
       ],
       "visitas": 79,
       "vistas": 199,
-      "dispositivos": {}
+      "dispositivos": {
+        "mobile": 142,
+        "desktop": 57
+      }
     },
     "2026-10-09": {
       "referentes": {
-        "directo": 1
+        "facebook.com": 34,
+        "directo": 4
       },
-      "visitas": 0,
-      "vistas": 0,
+      "visitas": 38,
+      "vistas": 122,
       "horas": [
         0,
         0,
@@ -2113,30 +2201,58 @@
         0,
         0,
         0,
+        2,
+        11,
+        6,
+        64,
+        16,
+        2,
+        9,
+        10,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        2,
         0,
         0,
         0,
         0
       ],
       "paises": {
-        "US": 2
+        "AR": 62,
+        "US": 52,
+        "IE": 4,
+        "SE": 4
       },
-      "dispositivos": {},
-      "notas": {},
+      "dispositivos": {
+        "mobile": 81,
+        "desktop": 41
+      },
+      "notas": {
+        "18jx7kk": 17,
+        "1v0pyz6": 11,
+        "14mxql1": 7,
+        "repaso20261009manana": 6,
+        "1j94k5u": 6,
+        "6q5i7o": 6,
+        "aqy95q": 4,
+        "601x8n": 3,
+        "16fjrrx": 3,
+        "173ttfz": 2,
+        "l5o975": 2,
+        "ypnvl8": 2,
+        "xlon5q": 2,
+        "5crmtt": 1
+      },
       "paginas": {
-        "/": 2
+        "/": 17,
+        "/seccion/agro": 10,
+        "/seccion/futbol": 7,
+        "/seccion/automovilismo": 4,
+        "/seccion/argentina": 4,
+        "/seccion/cultura-2": 4,
+        "/quienes-somos": 2,
+        "/seccion/cultura": 2
       }
     }
   }
