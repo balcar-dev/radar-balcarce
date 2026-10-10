@@ -1,67 +1,11 @@
 {
- "generado": "2026-10-10T02:02:30.599Z",
+ "generado": "2026-10-10T02:32:17.742Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "n9eggk",
-   "titulo": "Fin de semana largo: pronostican lluvias, cielo nublado y temperaturas frescas",
-   "copete": "El sábado y el lunes se esperan precipitaciones, mientras que el domingo aparece como la mejor jornada para realizar actividades al aire libre.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-09T14:09:54.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/fin-de-semana-largo-pronostican-lluvias-cielo-nublado-y-temperaturas-frescas",
-     "fecha": "2026-10-09T14:09:54.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "vmuzu3",
-   "titulo": "Preocupación por la inseguridad: vecinos piden mayor presencia policial durante la madrugada",
-   "copete": "Ante los últimos hechos delictivos registrados en Balcarce, vecinos de distintos sectores de la ciudad reclaman que se intensifiquen los recorridos de los patrulleros, especialmente durante la noche y las primeras horas de la mañana.",
-   "seccion": "Policiales",
-   "fecha": "2026-10-09T14:18:32.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/preocupacion-por-la-inseguridad-vecinos-piden-mayor-presencia-policial-durante-la-madrugada",
-     "fecha": "2026-10-09T14:18:32.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "fadug2",
-   "titulo": "La FIA admite un \"error humano\" que perjudicó a varios pilotos en la SQ1 de Singapur",
-   "copete": "La FIA emitió un comunicado pocas horas después de la clasificación al sprint del Gran Premio de Singapur para explicar uno de los incidentes que marcó la SQ1. Más allá de los problemas de cronometraje que obligaron a retrasar el inicio de la SQ2, el organismo rector reconoció…",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-09T14:19:55.000Z",
-   "fuentes": [
-    {
-     "medio": "Motorsport",
-     "enlace": "https://es.motorsport.com/f1/news/fia-admite-error-humano-sq1-singapur/10863477/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-     "fecha": "2026-10-09T14:19:55.000Z"
-    },
-    {
-     "medio": "Doble Amarilla",
-     "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/escandalo-en-la-clasificacion-sprint-de-la-formula-1--un-error-de-la-fia-perjudico-a-sainz-y-a-otros-pilotos_a6ac93a681ec8d0dc7a1afe94",
-     "fecha": "2026-10-09T19:46:34.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
-  {
    "id": "15fpn5m",
    "titulo": "Santiago Caputo cuestionó las pensiones por invalidez: “El 60% son truchas\"",
-   "copete": "",
+   "copete": "Santiago Caputo cuestionó las pensiones por invalidez y aseguró que aproximadamente el 60% de los beneficios serían irregulares. El asesor presidencial publicó sus declaraciones este viernes en la red social X, donde apuntó contra el presunto uso político de los certificados de…",
    "seccion": "Política",
    "fecha": "2026-10-09T19:31:49.486Z",
    "fuentes": [
@@ -99,6 +43,23 @@
    "intentos": 4,
    "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 69 palabras",
    "maximo": 4
+  },
+  {
+   "id": "phptd3",
+   "titulo": "Gimnasia artística Balcarceñas clasificaron a la final Regional del Centro",
+   "copete": "",
+   "seccion": "Deportes",
+   "fecha": "2026-10-10T02:31:26.354Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/deportes/14314-balcarcenas-clasificaron-a-la-final-regional-del-centro/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 4 y la fuente no lo dice",
+   "maximo": 3
   },
   {
    "id": "zdlxph",
