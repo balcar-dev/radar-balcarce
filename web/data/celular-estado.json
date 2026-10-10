@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T12:02:05.373Z",
+ "generado": "2026-10-10T12:32:00.470Z",
  "portada": 43,
  "archivo": 896,
- "esperandoCuerpo": 1,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-10T12:02:05.412Z",
+  "generado": "2026-10-10T12:32:00.518Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-10T12:05:42.976Z"
    },
    {
     "nombre": "noticia1",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 53,
     "notas": [
+     {
+      "id": "146dyw0",
+      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "seccion": "Deportes"
+     },
      {
       "id": "14imhay",
       "titulo": "El calendario conmemora la salud mental y la danza",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "10izr2u",
-      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
-      "seccion": "Deportes"
      },
      {
       "id": "vw0kpx",
@@ -113,9 +113,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "15zr9uw",
-      "titulo": "Investigadores locales reciben una distinción en congreso nacional",
-      "seccion": "Agro"
+      "id": "jul3dj",
+      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -126,17 +126,22 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "10izr2u",
+      "titulo": "Mario Ledesma y Shaun Edwards asumen en el cuerpo técnico de Los Pumas",
+      "seccion": "Deportes"
+     },
      {
       "id": "2qmh95",
       "titulo": "El maxivóley femenino de Balcarce gana un partido y pierde otro en Tandil",
       "seccion": "Deportes"
      },
      {
-      "id": "jul3dj",
-      "titulo": "El Rotary agasaja al periodismo local y recibe a jóvenes de intercambio",
-      "seccion": "Balcarce"
+      "id": "1360zul",
+      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "16s8yom",

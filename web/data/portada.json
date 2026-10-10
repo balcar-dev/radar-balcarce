@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T12:02:05.373Z",
+  "generado": "2026-10-10T12:32:00.470Z",
   "notas": [
     {
       "id": "4u38d4",
@@ -354,11 +354,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45051-continua-este-sabado-el-operativo-documentario-en-el-concejo-deliberante/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-10T02:31:26.354Z",
       "sinFecha": true,
       "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -576,79 +576,6 @@
       }
     },
     {
-      "id": "1aizybd",
-      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
-      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
-      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T23:32:00.485Z",
-      "sinFecha": true,
-      "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
-        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
-        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
-        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
-        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
-      ],
-      "seSabe": [
-        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
-        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
-        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
-        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
-        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
-      "etiquetas": [
-        "Giuliana Romero",
-        "Balcarce",
-        "Operación",
-        "Recuperación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-          "fecha": "2026-10-09T23:29:47.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "pvwlvg",
-          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
-          "fecha": "2026-10-07T00:30:00.000Z",
-          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
-      "foto": {
-        "archivo": "fotos-notas/1aizybd.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "1m8dnbh",
       "titulo": "Leandro Spinelli analiza la economía local y confirma nuevas obras",
       "copete": "El concejal Leandro Spinelli repasó la situación de los sectores productivos y confirmó la pavimentación de catorce cuadras con fondos provinciales en barrios locales.",
@@ -728,6 +655,137 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "leandro-spinelli-analiza-la-economia-local-y-confirma-nuevas-obras"
+    },
+    {
+      "id": "1aizybd",
+      "titulo": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "copete": "La joven balcarceña completó una nueva intervención quirúrgica en su pie derecho tras el grave accidente sufrido meses atrás y agradeció el apoyo de la comunidad.",
+      "cuerpo": "Giuliana Romero atravesó el miércoles su cuarta intervención quirúrgica en el pie derecho, a más de tres meses de la grave caída que sufrió desde un cuarto piso. La operación consistió en la realización de un colgajo para avanzar en el cierre de la herida bajo anestesia local.\n\nTras la práctica médica, la paciente indicó que el procedimiento tuvo un resultado favorable y ahora aguarda una semana para el control que evaluará la integración del tejido. En tanto, su proceso de kinesiología continuará pausado hasta que se complete la cicatrización.\n\nTras la última intervención, Romero valoró los mensajes y las muestras de afecto recibidas por parte de vecinos de la ciudad.",
+      "guion": "Giuliana Romero afronta con éxito su cuarta cirugía",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T23:29:47.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:32:00.485Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Giuliana Romero se sometió a su cuarta cirugía en el pie derecho.",
+        "La intervención se realizó este miércoles tras una caída sufrida hace más de tres meses.",
+        "La paciente deberá esperar una semana para el control médico y la evaluación del colgajo.",
+        "La kinesiología quedó temporalmente pausada hasta lograr la cicatrización de la zona.",
+        "La joven agradeció el acompañamiento y los mensajes recibidos por la comunidad."
+      ],
+      "seSabe": [
+        "Giuliana Romero ingresó al quirófano este miércoles para su cuarta cirugía en el pie derecho, según informó El Diario Balcarce.",
+        "La intervención incluyó la realización de un colgajo y la aplicación de anestesia local.",
+        "La paciente deberá esperar una semana para el control médico que determinará la evolución del tejido.",
+        "La kinesiología quedó momentáneamente interrumpida hasta que la zona cicatrice.",
+        "Romero expresó agradecimiento hacia sus padres y hacia la comunidad por los mensajes de apoyo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Giuliana Romero completó su cuarta cirugía en el pie derecho tras el accidente sufrido meses atrás y agradeció el acompañamiento de los vecinos durante su recuperación.",
+      "etiquetas": [
+        "Giuliana Romero",
+        "Balcarce",
+        "Operación",
+        "Recuperación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
+          "fecha": "2026-10-09T23:29:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la cuarta cirugía de Giuliana Romero, la aplicación de anestesia local, la pausa en la kinesiología y los agradecimientos a la comunidad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pvwlvg",
+          "titulo": "Giuliana Romero afronta una nueva cirugía en el pie derecho",
+          "fecha": "2026-10-07T00:30:00.000Z",
+          "ruta": "/nota/giuliana-romero-afronta-una-nueva-cirugia-en-el-pie-derecho-pvwlvg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "giuliana-romero-afronta-con-exito-su-cuarta-cirugia",
+      "foto": {
+        "archivo": "fotos-notas/1aizybd.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1360zul",
+      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
+      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
+      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:21:15.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:27:38.237Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
+        "La función se realiza en el teatro Roxy desde las 21.30.",
+        "El unipersonal cuenta con dirección de Martín Bontempo.",
+        "Las entradas están a la venta en Plateanet y en la boletería."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
+      "etiquetas": [
+        "Camila Peralta",
+        "Suavecita",
+        "Mar del Plata",
+        "teatro",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
+          "fecha": "2026-10-09T23:21:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
+      "foto": {
+        "archivo": "fotos-notas/1360zul.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
     },
     {
       "id": "88fvqd",
@@ -811,6 +869,65 @@
       "foto": {
         "archivo": "fotos-notas/88fvqd.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "146dyw0",
+      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
+      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
+      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "seccion": "Deportes",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T22:30:19.147Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:27:38.237Z",
+      "relevancia": 93,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
+        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
+        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
+      "etiquetas": [
+        "Paula Boccia",
+        "tenis",
+        "Balcarce",
+        "Tucumán",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
+          "fecha": "2026-10-09T22:31:35.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
+      "foto": {
+        "archivo": "fotos-notas/146dyw0.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1327,11 +1444,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45048-aranaga-cuestiono-la-politica-economica-de-milei-respaldo-a-kicillof-y-no-descarto-ser-candidato-a-intendente/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T17:31:41.075Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1482,11 +1599,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45047-luis-arabia-de-bucear-con-tiburones-a-vivir-los-momentos-historicos-de-la-estacion-terrena-de-balcarce/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-09T17:01:23.701Z",
       "sinFecha": true,
       "visto": "2026-10-09T17:01:23.701Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1735,87 +1852,6 @@
       "foto": {
         "archivo": "fotos-notas/17di2tc.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "pyejmn",
-      "titulo": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "copete": "Las recientes precipitaciones acumularon un promedio de 48 milímetros en el corazón pampeano y frenaron el deterioro de los cultivos. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "cuerpo": "Las precipitaciones registradas durante los primeros días de octubre en la región núcleo dejaron un acumulado promedio de 48 milímetros, según el informe de la Guía Estratégica para el Agro de la Bolsa de Comercio de Rosario. Esta recarga hídrica detuvo el deterioro provocado por la sequía y las heladas de septiembre sobre los cultivos de trigo.\n\nComo contrapartida, los cuadros evaluados en condición regular cayeron al dos por ciento de la superficie total.\n\nA principios de mes, un registro hídrico previo ya había reducido a la mitad los lotes trigueros en esa condición. Con el nuevo aporte de agua, los especialistas estiman que los rendimientos promedios volverán a ubicarse por encima de los 40 quintales por hectárea en gran parte del área.",
-      "guion": "Las lluvias en la región central fijan un piso para el rendimiento del trigo",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
-      ],
-      "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T15:31:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T21:31:52.077Z",
-      "relevancia": 32,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cayeron 48 milímetros promedio en la región núcleo.",
-        "El trigo atraviesa las etapas clave de floración y espigazón.",
-        "Los rendimientos superarán los cuarenta quintales por hectárea."
-      ],
-      "seSabe": [
-        "Las lluvias alcanzaron un promedio regional de 48 milímetros en el inicio de octubre.",
-        "El estado regular de los cultivos bajó al dos por ciento tras las precipitaciones.",
-        "La Bolsa de Comercio de Rosario proyecta rindes superiores a los 40 quintales por hectárea."
-      ],
-      "textoRedes": "Las recientes lluvias en el corazón pampeano acumularon un promedio de 48 milímetros y frenaron el deterioro de los cultivos de trigo. La Bolsa de Comercio de Rosario proyecta rindes superiores a los cuarenta quintales por hectárea.",
-      "etiquetas": [
-        "trigo",
-        "clima",
-        "lluvias",
-        "agro",
-        "Bolsa de Comercio de Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/09/lluvias-oportunas-le-ponen-un-piso-al-rendimiento-del-trigo-en-la-region-central/",
-          "fecha": "2026-10-09T15:31:40.000Z",
-          "oficial": false,
-          "aporte": "Detalló los milímetros caídos, el estado fenológico del trigo y las proyecciones de rendimiento de la Bolsa de Comercio de Rosario."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248765-comenzo-la-influencia-del-nino-en-la-region-central-con-50-mm-que-le-ponen-piso-al-trigo.html",
-          "fecha": "2026-10-09T19:32:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el inicio de una circulación con mayor humedad proveniente del norte y noreste."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ydwxhf",
-          "titulo": "Las lluvias traen alivio para el trigo y destraban la siembra de maíz",
-          "fecha": "2026-10-02T17:03:25.000Z",
-          "ruta": "/nota/las-lluvias-traen-alivio-para-el-trigo-y-destraban-la-siembra-de-maiz-ydwxhf"
-        },
-        {
-          "id": "gd6n9s",
-          "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
-          "fecha": "2026-09-30T18:42:58.000Z",
-          "ruta": "/nota/pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region-gd6n9s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-lluvias-en-la-region-central-fijan-un-piso-para-el-rendimiento",
-      "foto": {
-        "archivo": "fotos-notas/pyejmn.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2155,7 +2191,8 @@
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30991",
       "teniaImagenLaFuente": true,
@@ -2297,6 +2334,7 @@
       "guion": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
       "seccion": "Fútbol",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
@@ -2315,7 +2353,7 @@
       "fecha": "2026-10-09T13:12:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T16:31:40.451Z",
-      "relevancia": 83,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2440,6 +2478,7 @@
       "guion": "Franco Riquelme Antonetti gana la Copa Centenario de la Base Naval",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -2449,7 +2488,7 @@
       "fecha": "2026-10-09T12:47:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T13:01:50.207Z",
-      "relevancia": 52,
+      "relevancia": 62,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -2488,152 +2527,6 @@
       "slug": "franco-riquelme-antonetti-gana-la-copa-centenario-de-la-base-naval"
     },
     {
-      "id": "c9d4ip",
-      "titulo": "APTRA anuncia los nominados al Martín Fierro de Radio 2026",
-      "copete": "La entidad periodística oficializó los candidatos para las 32 categorías que distinguen a la producción radial. La ceremonia central se realizará el 21 de octubre.",
-      "cuerpo": "La Asociación de Periodistas de la Televisión y la Radiofonía Argentinas dio a conocer la lista de nominados para los premios Martín Fierro de Radio 2026, que distinguirán las producciones realizadas durante el año pasado.\n\nLa conducción del evento estará a cargo de los periodistas Luciana Rubinska y Luis Novaresio.\n\nLa premiación comprende un total de 32 rubros entre emisoras de amplitud modulada y frecuencia modulada. La organización general está a cargo de la entidad y la producción corresponde a Red Cube.",
-      "guion": "APTRA anuncia los nominados al Martín Fierro de Radio 2026",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "LU9 Mar del Plata",
-        "TN (Todo Noticias)",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "0221",
-        "El Eco de Tandil",
-        "Infobae",
-        "A24",
-        "Radio Mitre",
-        "La Nación",
-        "C5N",
-        "Ecos Diarios (Necochea)",
-        "Agencia DIB",
-        "Minuto Uno"
-      ],
-      "enlace": "https://www.infobae.com/teleshow/2026/10/09/quienes-son-los-nominados-al-martin-fierro-de-radio-2026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T12:22:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T17:31:41.075Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se dieron a conocer los nominados al Martín Fierro de Radio 2026.",
-        "La ceremonia será el 21 de octubre en el Goldencenter de Parque Norte.",
-        "Luciana Rubinska y Luis Novaresio conducirán el evento.",
-        "Se premiarán 32 categorías entre producciones de AM y FM."
-      ],
-      "seSabe": [
-        "Los premios reconocen la producción radial del año 2025.",
-        "La conducción estará a cargo de Luciana Rubinska y Luis Novaresio.",
-        "La ceremonia se realizará en el Goldencenter de Parque Norte.",
-        "La producción del evento está a cargo de Red Cube."
-      ],
-      "etiquetas": [
-        "Martín Fierro de Radio",
-        "APTRA",
-        "Premios",
-        "Radio"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/teleshow/2026/10/09/quienes-son-los-nominados-al-martin-fierro-de-radio-2026/",
-          "fecha": "2026-10-09T12:22:12.000Z",
-          "oficial": false,
-          "aporte": "Detalló las categorías, la fecha, el lugar, los conductores y los nominados."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/espectaculos/radio/martin-fierro-de-radio-2026-quienes-son-los-nominados-nid09102026/",
-          "fecha": "2026-10-09T14:29:41.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/espectaculos/premios-martin-fierro-de-radio-2026-lista-completa-de-nominados-y-detalles-de-la-ceremonia",
-          "fecha": "2026-10-09T15:19:52.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "LU9 Mar del Plata",
-          "enlace": "https://www.lu9mardelplata.com.ar/martin-fierro-de-radio-2026-aptra-confirmo-los-nominados-y-los-detalles-de-la-ceremonia",
-          "fecha": "2026-10-09T15:46:03.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha y el lugar de la ceremonia."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/luis-ventura-anuncio-los-nominados-a-los-premios-martin-fierro-de-radio-2026",
-          "fecha": "2026-10-09T15:31:22.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/estilo-vida/luis-ventura-anuncio-los-nominados-los-martin-fierro-radio-2026-n56370",
-          "fecha": "2026-10-09T16:33:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los nombres de los conductores."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/ratingcero/el-grupo-indalo-tiene-una-presencia-destacada-los-martin-fierro-radio-2026-n251193",
-          "fecha": "2026-10-09T16:14:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre las nominaciones de Radio 10, Pop 101.5 y Mega 98.3."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/ratingcero/martin-fierro-radio-2026-se-conocio-la-lista-completa-nominados-n251189",
-          "fecha": "2026-10-09T15:15:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/videos/luis-ventura-paso-por-el-pase-y-anuncio-a-los-candidatos-de-los-martin-fierro-de-radio-hay-que-preparar-la-cara/",
-          "fecha": "2026-10-09T14:13:55.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/primiciasya/martin-fierro-radio-2026-luis-ventura-anuncio-las-nominaciones-y-confirmo-los-detalles-la-gala-n1604828",
-          "fecha": "2026-10-09T12:25:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/videos/se-conocieron-los-nominados-a-los-martin-fierro-de-radio-2026-quienes-son-los-candidatos-de-radio-mitre/",
-          "fecha": "2026-10-09T12:46:55.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "16q21ih",
-          "titulo": "Los premios Martín Fierro de la Música anuncian su primera gala",
-          "fecha": "2026-10-05T11:15:00.000Z",
-          "ruta": "/nota/los-premios-martin-fierro-de-la-musica-anuncian-su-primera-gala-16q21ih"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "aptra-anuncia-los-nominados-al-martin-fierro-de-radio-2026"
-    },
-    {
       "id": "rzygx9",
       "titulo": "La Asociación Argentina de Angus triplica sus exportaciones de carne",
       "copete": "La entidad ganadera multiplica sus envíos al exterior y prepara su participación en la feria internacional de alimentación en Europa con una comitiva oficial.",
@@ -2642,8 +2535,8 @@
       "seccion": "Agro",
       "medios": [
         "La Voz del Pueblo",
-        "Noticias Agropecuarias",
-        "Agrositio"
+        "Agrositio",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.noticiasagropecuarias.com/2026/10/09/rumbo-a-la-sial-de-paris-la-carne-angus-certificada-triplica-sus-exportaciones-y-va-por-el-mercado-asiatico/",
       "teniaImagenLaFuente": true,
@@ -2720,6 +2613,90 @@
       "foto": {
         "archivo": "fotos-notas/rzygx9.jpg",
         "credito": "Foto: Agrositio"
+      }
+    },
+    {
+      "id": "1gmlwhw",
+      "titulo": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "copete": "Ediles cruzaron cuestionamientos en la 15á sesión por la campaña de recupero de deuda a más de 2.000 usuarios y la contratación de un estudio jurídico externo.",
+      "cuerpo": "El tramo final de la decimoquinta sesión del Concejo Deliberante concentró un intenso debate en torno a las intimaciones enviadas por Aguas de la Ciudad para recuperar deudas acumuladas por más de 2.000 usuarios. La discusión expuso objeciones de la oposición sobre la contratación de un estudio jurídico marplatense y la demora en responder pedidos de informes.\n\nEn la misma línea, Enrique Guillén y Gabriel Petruccelli reclamaron que las gestiones queden a cargo de profesionales locales y exigieron mayores facilidades de pago para los vecinos. Desde el oficialismo, Leandro Spinelli rechazó las sospechas, defendió la necesidad de recaudar fondos ante la delicada situación financiera de la firma y prometió gestionar las explicaciones requeridas.",
+      "guion": "El Concejo discute las intimaciones de Aguas de la Ciudad",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T11:36:27.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T14:31:49.247Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Intimaciones a más de 2.000 usuarios del servicio sanitario.",
+        "Cuestionamiento opositor a un estudio jurídico marplatense.",
+        "Reclamos por falta de respuestas a pedidos de informes.",
+        "Defensa oficialista de la recaudación para sostener a la empresa."
+      ],
+      "seSabe": [
+        "El debate ocurrió al cierre de la 15á sesión del Concejo Deliberante.",
+        "La campaña de cobro alcanza a más de 2.000 usuarios.",
+        "La oposición cuestionó la Ordenanza 40/26 y la falta de respuestas de Ricardo Stoppani."
+      ],
+      "noConfirmado": [
+        "No se detallaron los montos totales de la deuda reclamada a los usuarios.",
+        "No trascendieron los plazos en los que asumiría el nuevo gerente de la empresa.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Intenso debate en el Concejo Deliberante por las intimaciones y el recupero de deudas impulsado por Aguas de la Ciudad a más de 2.000 usuarios.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Aguas de la Ciudad",
+        "deudas",
+        "OSEBAL"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/encendido-debate-en-el-concejo-por-las-intimaciones-de-aguas-de-la-ciudad/",
+          "fecha": "2026-10-09T11:36:27.000Z",
+          "oficial": false,
+          "aporte": "Detalló los cruces en el Concejo Deliberante por las intimaciones de Aguas de la Ciudad y las posturas de los bloques."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "z7t628",
+          "titulo": "El Concejo Deliberante debate sobre la Ley de Tierras y deudas de agua",
+          "fecha": "2026-10-09T02:06:53.000Z",
+          "ruta": "/nota/el-concejo-deliberante-debate-sobre-la-ley-de-tierras-y-deudas-de-agua-z7t628"
+        },
+        {
+          "id": "e09k96",
+          "titulo": "El Concejo debate la creación de un banco municipal de fisiatría",
+          "fecha": "2026-10-07T05:31:18.450Z",
+          "ruta": "/nota/el-concejo-debate-la-creacion-de-un-banco-municipal-de-fisiatria-e09k96"
+        },
+        {
+          "id": "1s9so2g",
+          "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
+          "fecha": "2026-09-25T23:02:57.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal-1s9so2g"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-discute-las-intimaciones-de-aguas-de-la-ciudad",
+      "foto": {
+        "archivo": "fotos-notas/1gmlwhw.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -3097,11 +3074,11 @@
         "Infobae",
         "El Destape",
         "TyC Sports",
+        "Doble Amarilla",
         "UAR (Unión Argentina de Rugby)",
         "La Nueva",
         "Clarín",
         "El Gráfico",
-        "Doble Amarilla",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce"
       ],
@@ -3268,9 +3245,9 @@
         "La Noticia 1",
         "Diputados Bonaerenses",
         "El Día",
+        "La Verdad",
         "Zona Norte Diario",
-        "ANDigital",
-        "La Verdad"
+        "ANDigital"
       ],
       "enlace": "https://dib.com.ar/politica/gabriel-katopodis-blanqueo-que-quiere-pelear-la-sucesion-kicillof-n56372",
       "teniaImagenLaFuente": true,
@@ -3351,63 +3328,6 @@
         "archivo": "fotos-notas/12g9w9h.jpg",
         "credito": "Foto: Diputados Bonaerenses"
       }
-    },
-    {
-      "id": "repaso20261008noche",
-      "propia": "repaso",
-      "titulo": "El repaso de la noche en Radar Balcarce: Reserva y AACYC Balcarce",
-      "copete": "Radar Balcarce publicó a las 21:06 de este jueves 8 de octubre el repaso de la noche en Instagram y Facebook, un audio con 2 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 2 notas que se contaron en el repaso de la noche del jueves 8, en el orden en que salieron en el audio.\n\nTalleres y Atlético Tucumán protagonizan pelea en Reserva. El encuentro de la división Reserva entre Atlético Tucumán y Talleres de Córdoba culminó con incidentes generalizados y agresiones físicas. Integrantes del cuerpo técnico cordobés resultaron expulsados.\n\nAACYC Balcarce gana cinco pruebas en Mar del Plata. Cuatro representantes de la entidad local compitieron en el Torneo de la Diversidad Cultural. Benicio Caro sobresalió con tres triunfos.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Fútbol",
-      "local": false,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T00:06:44.415Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T00:06:44.415Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-09T00:06:44.415Z",
-      "temas": [],
-      "etiquetas": [
-        "Reserva",
-        "AACYC Balcarce"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "1w1okdp",
-        "5ffwsk"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "Talleres y Atlético Tucumán protagonizan pelea en Reserva",
-          "href": "/nota/talleres-y-atletico-tucuman-protagonizan-pelea-en-reserva-1w1okdp"
-        },
-        {
-          "texto": "AACYC Balcarce gana cinco pruebas en Mar del Plata",
-          "href": "/nota/aacyc-balcarce-gana-cinco-pruebas-en-mar-del-plata-5ffwsk"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DeQLqq1jHu2/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/1412799087034163/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-noche-en-radar-balcarce-campo-de-pato-expo-salud-y",
-      "foto": {
-        "archivo": "fotos-notas/1w1okdp.webp",
-        "credito": "Foto: Bolavip Argentina"
-      }
     }
   ],
   "secciones": [
@@ -3417,10 +3337,10 @@
     "Policiales",
     "Agro",
     "Política",
+    "Deportes",
     "Fútbol",
     "Argentina",
     "Economía",
-    "Deportes",
     "Tecnología"
   ],
   "temas": [
@@ -3437,10 +3357,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 10,
+      "temp": 11,
       "sensacion": 8,
-      "humedad": 82,
-      "viento": 14,
+      "humedad": 77,
+      "viento": 15,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3453,7 +3373,7 @@
         "min": 7,
         "lluvia": 41,
         "codigo": 51,
-        "viento": 15,
+        "viento": 16,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
@@ -3464,8 +3384,8 @@
         "min": 7,
         "lluvia": 18,
         "codigo": 51,
-        "viento": 14,
-        "milimetros": 1,
+        "viento": 12,
+        "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
@@ -3475,20 +3395,20 @@
         "min": 5,
         "lluvia": 17,
         "codigo": 51,
-        "viento": 15,
+        "viento": 13,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-13",
         "dia": "mar",
-        "max": 14,
-        "min": 7,
+        "max": 13,
+        "min": 10,
         "lluvia": 46,
-        "codigo": 51,
-        "viento": 19,
+        "codigo": 53,
+        "viento": 18,
         "milimetros": 2,
-        "cielo": "Llovizna leve"
+        "cielo": "Llovizna"
       }
     ],
     "fuente": "Open-Meteo"
@@ -3813,21 +3733,39 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "aq8ze",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
+    },
+    {
       "id": "10conaq",
       "titulo": null,
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"el menor de\""
     },
     {
-      "id": "b0dinz",
+      "id": "11sovpd",
+      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
+      "seccion": "Política",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "8u3cip",
+      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
+      "seccion": "Cultura y agenda",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "11yxcy2",
       "titulo": null,
-      "seccion": "Balcarce",
+      "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1wgh2q7",
+      "id": "b0dinz",
       "titulo": null,
-      "seccion": "Fútbol",
+      "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
@@ -3867,22 +3805,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1mgua6l",
-      "titulo": "Denuncian a alumnos por crear con IA imágenes falsas de…",
+      "id": "19pmnlu",
+      "titulo": "Denunciaron a alumnos de un colegio por crear imágenes de…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "11sovpd",
-      "titulo": "\"Huele mal\": fuertes cruces por el recupero de deudas de…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "8u3cip",
-      "titulo": "Tras la postergación, los pasteleros buscan recuperar los…",
-      "seccion": "Cultura y agenda",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+      "id": "vbfl3j",
+      "titulo": "El particular regalo de Benín a Messi en su despedida",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "kzzd97",
@@ -3933,6 +3865,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "5w58zn",
+      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"suscribite\""
+    },
+    {
       "id": "1c5jdmn",
       "titulo": null,
       "seccion": "Agro",
@@ -3949,6 +3887,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "lktast",
+      "titulo": "La herramienta gratuita que permite a menores denunciar la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "6af5cy",
@@ -3969,5 +3913,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }

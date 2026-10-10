@@ -1,7 +1,24 @@
 {
- "generado": "2026-10-10T12:02:05.373Z",
+ "generado": "2026-10-10T12:32:00.470Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "190bbf8",
+   "titulo": "Agustín Conti: “Muchas veces los chicos quieren ser profesores porque se sienten identificados con quienes les enseñaron”",
+   "copete": "En el Día Nacional del Profesor de Educación Física, Agustín Conti visitó los estudios de GABAL y repasó cómo nació su vocación, la importancia de los docentes en la formación de los jóvenes y los desafíos de una profesión que lo acompaña desde hace años.",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-10T12:30:24.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/agustin-conti-muchas-veces-los-chicos-quieren-ser-profesores-porque-se-sienten-identificados-con-quienes-les-ensenaron",
+     "fecha": "2026-10-10T12:30:24.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (relleno): el copete tiene una frase de relleno sin dato: \"en el marco de\"",
+   "maximo": 3
+  },
   {
    "id": "oi98dx",
    "titulo": "Pinilla, Queopomel y Fernández Daguerre competirán en el Campeonato Argentino de Pádel",
@@ -15,7 +32,7 @@
      "fecha": "2026-10-10T12:00:37.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "sin material",
    "maximo": 3
   }
