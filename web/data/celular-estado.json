@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T20:32:02.722Z",
- "portada": 46,
+ "generado": "2026-10-10T21:01:57.776Z",
+ "portada": 45,
  "archivo": 904,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-10T20:32:02.755Z",
+  "generado": "2026-10-10T21:01:57.814Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "Los teléfonos útiles",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-10T20:03:33.405Z"
    },
    {
@@ -188,18 +188,16 @@
      "id": "1vwpejn",
      "titulo": "El Concejo declara de interés el aniversario del Club Amigos Unidos",
      "cuando": "2026-10-10T18:45:22.680Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "1cj5sd",
      "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
-     "seccion": "Agro",
-     "marcada": false
+     "cuando": "2026-10-10T20:34:01.086Z"
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-10T20:15:22.680Z",
+   "cola": [],
+   "cupo": 1,
+   "proximoDesde": "2026-10-10T22:04:01.086Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

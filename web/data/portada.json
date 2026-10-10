@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T20:32:02.722Z",
+  "generado": "2026-10-10T21:01:57.776Z",
   "notas": [
     {
       "id": "1cj5sd",
@@ -381,7 +381,7 @@
       "fecha": "2026-10-10T18:00:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T18:31:46.672Z",
-      "relevancia": 73,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -440,6 +440,7 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "La Nación",
+        "Minuto Uno",
         "A24",
         "Infobae"
       ],
@@ -517,11 +518,11 @@
       "guion": "Luján habilita un portal con servicios para la visita del Papa",
       "seccion": "Argentina",
       "medios": [
-        "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Verdad",
         "La Opinión",
+        "QZ Noticias (Mar del Plata)",
         "Infoeme"
       ],
       "enlace": "https://dib.com.ar/sociedad/lujan-el-municipio-lanzo-un-portal-informacion-alojamientos-la-visita-del-papa-n56394",
@@ -1011,6 +1012,7 @@
         "Motorsport",
         "Infobae",
         "TN (Todo Noticias)",
+        "Perfil",
         "Radio Mitre",
         "Olé",
         "TyC Sports"
@@ -1151,74 +1153,6 @@
         }
       ],
       "slug": "clima-en-balcarce-70-de-probabilidad-de-lluvia-con-minima-de-7-y"
-    },
-    {
-      "id": "if3bv6",
-      "titulo": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
-      "copete": "El tenista argentino cayó ante el checo Dalibor Svrcina en la segunda ronda del torneo disputado en China tras disputar tres sets.",
-      "cuerpo": "Tomás Martín Etcheverry quedó marginado del Másters 1000 de Shanghái tras ser derrotado por el checo Dalibor Svrcina. El encuentro se definió por 6-3, 3-6 y 7-5 luego de dos horas y 58 minutos de juego en la segunda instancia del certamen internacional.\n\nEl deportista europeo, situado en el puesto 126 del escalafón global, logró imponerse ante el argentino, que se encuentra en la posición 31 del ranking. El único antecedente entre ambos contendientes databa de 2023 en la ciudad de Zhuhai, con triunfo para el platense.",
-      "guion": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
-      "seccion": "Deportes",
-      "medios": [
-        "TyC Sports",
-        "El Día",
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/espana/agencias/2026/10/10/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T10:30:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T15:01:48.819Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Etcheverry perdió ante Svrcina en Shanghái",
-        "El marcador final fue 6-3, 3-6 y 7-5",
-        "El partido duró casi tres horas"
-      ],
-      "textoRedes": "Tomás Etcheverry quedó eliminado en la segunda ronda del Másters 1000 de Shanghái tras perder ante el checo Dalibor Svrcina por 6-3, 3-6 y 7-5.",
-      "etiquetas": [
-        "Tenis",
-        "Tomás Etcheverry",
-        "Shanghái"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/espana/agencias/2026/10/10/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking/",
-          "fecha": "2026-10-10T10:30:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló el resultado del partido, la duración del encuentro y los antecedentes entre los tenistas."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/tenis/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking-id765473.html",
-          "fecha": "2026-10-10T10:35:34.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/el-platense-etcheverry-perdio-y-se-despidio-del-master-1000-de-shanghai-deportes_1791644040",
-          "fecha": "2026-10-10T14:59:21.000Z",
-          "oficial": false,
-          "aporte": "Informó la eliminación del tenista argentino en el torneo."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "tomas-etcheverry-queda-eliminado-en-el-masters-1000-de-shanghai",
-      "foto": {
-        "archivo": "fotos-notas/if3bv6.jpg",
-        "credito": "Foto: El Día"
-      }
     },
     {
       "id": "9zwjal",
@@ -1672,7 +1606,8 @@
       "guion": "El Concejo Deliberante analiza el descarte de remedios vencidos",
       "seccion": "Balcarce",
       "medios": [
-        "El Diario Balcarce"
+        "El Diario Balcarce",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-descarte-de-medicamentos-vencidos-una-problematica-que-llego-al-concejo-deliberante-283",
       "teniaImagenLaFuente": true,
@@ -1986,9 +1921,41 @@
                 "tipo": "gol"
               }
             ]
+          },
+          {
+            "dia": "Sábado 10 de octubre",
+            "hora": "15:45",
+            "estado": "final",
+            "estadio": "Estadio Claudio Chiqui Tapia",
+            "fase": null,
+            "local": {
+              "id": "10060",
+              "nombre": "Barracas Central",
+              "goles": 2
+            },
+            "visitante": {
+              "id": "10",
+              "nombre": "Huracán",
+              "goles": 0
+            },
+            "penales": null,
+            "goles": [
+              {
+                "equipo": "local",
+                "jugador": "Norberto Briasco",
+                "minuto": "9'",
+                "tipo": "gol"
+              },
+              {
+                "equipo": "local",
+                "jugador": "Norberto Briasco",
+                "minuto": "62'",
+                "tipo": "gol"
+              }
+            ]
           }
         ],
-        "faltan": 12,
+        "faltan": 11,
         "aparte": 0
       },
       "destacados": [
@@ -1999,8 +1966,8 @@
       ],
       "lugarFoto": "José María Minella",
       "titulo": "Liga Profesional: así va la fecha del 9 al 14 de octubre, con los resultados",
-      "copete": "4 partidos terminados de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
-      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 14 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nViernes 9 de octubre, 18:00: Gimnasia La Plata 1, Atlético Tucumán 1. Goles: Gimnasia La Plata: Marcelo Torres (90'+5', de penal). Atlético Tucumán: Lautaro Godoy (83').\n\nViernes 9 de octubre, 19:30: Instituto (Córdoba) 2, Boca Juniors 2. Goles: Instituto (Córdoba): Fernando Alarcón (14') y Jonathan Galván (48'). Boca Juniors: Enner Valencia (23') y Miguel Merentiel (56').\n\nViernes 9 de octubre, 21:45: Unión (Santa Fe) 0, Defensa y Justicia 2. Goles: Defensa y Justicia: Juan Gutiérrez (43') y César Pérez (45').\n\nTodavía faltan jugarse: Barracas Central y Huracán (Sábado 10 de octubre, 15:45), Central Córdoba (Santiago del Estero) y Estudiantes de La Plata (Sábado 10 de octubre, 17:00), Tigre y Banfield (Sábado 10 de octubre, 19:15), River Plate y Estudiantes de Río Cuarto (Sábado 10 de octubre, 21:30), San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00), Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30) y Sarmiento (Junín) y River Plate (Miércoles 14 de octubre, 19:00). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
+      "copete": "5 partidos terminados de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
+      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 14 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nViernes 9 de octubre, 18:00: Gimnasia La Plata 1, Atlético Tucumán 1. Goles: Gimnasia La Plata: Marcelo Torres (90'+5', de penal). Atlético Tucumán: Lautaro Godoy (83').\n\nViernes 9 de octubre, 19:30: Instituto (Córdoba) 2, Boca Juniors 2. Goles: Instituto (Córdoba): Fernando Alarcón (14') y Jonathan Galván (48'). Boca Juniors: Enner Valencia (23') y Miguel Merentiel (56').\n\nViernes 9 de octubre, 21:45: Unión (Santa Fe) 0, Defensa y Justicia 2. Goles: Defensa y Justicia: Juan Gutiérrez (43') y César Pérez (45').\n\nSábado 10 de octubre, 15:45: Barracas Central 2, Huracán 0. Goles: Barracas Central: Norberto Briasco (9') y Norberto Briasco (62').\n\nTodavía faltan jugarse: Central Córdoba (Santiago del Estero) y Estudiantes de La Plata (Sábado 10 de octubre, 17:00), Tigre y Banfield (Sábado 10 de octubre, 19:15), River Plate y Estudiantes de Río Cuarto (Sábado 10 de octubre, 21:30), San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00), Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30) y Sarmiento (Junín) y River Plate (Miércoles 14 de octubre, 19:00). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
       "guion": null,
       "seccion": "Fútbol",
       "local": false,
@@ -2488,7 +2455,7 @@
       "fecha": "2026-10-09T15:35:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T22:31:52.756Z",
-      "relevancia": 82,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3548,9 +3515,9 @@
     "Cultura y agenda",
     "Argentina",
     "Política",
-    "Deportes",
     "Policiales",
     "Fútbol",
+    "Deportes",
     "Tecnología"
   ],
   "temas": [
@@ -3569,8 +3536,8 @@
     "ahora": {
       "temp": 11,
       "sensacion": 8,
-      "humedad": 78,
-      "viento": 14,
+      "humedad": 80,
+      "viento": 15,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3973,6 +3940,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "6fykn0",
+      "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "1f0go0k",
       "titulo": "La defensa de Pity Álvarez solicitó la nulidad de la…",
       "seccion": "Argentina",
@@ -3983,6 +3956,12 @@
       "titulo": "Grabois cruzó a Pettovello por las denuncias contra…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "116fwnp",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "mhjg4",
@@ -4003,22 +3982,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "6fykn0",
-      "titulo": "Fin del fútbol gratis en el Ascenso: la AFA confirmó el…",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "1nerhmu",
       "titulo": null,
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "19pmnlu",
-      "titulo": "Denunciaron a alumnos de un colegio por crear imágenes de…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "vvpj0a",

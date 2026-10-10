@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-10T20:32:01.270Z",
+ "consultado": "2026-10-10T21:01:56.382Z",
  "equipos": [
   "9739",
   "3",
@@ -798,8 +798,8 @@
     "id": "401841611",
     "competencia": "liga",
     "inicio": "2026-10-10T18:45:00.000Z",
-    "estado": "en-juego",
-    "minuto": "89'",
+    "estado": "final",
+    "minuto": "90'+5'",
     "local": {
      "id": "10060",
      "nombre": "Barracas Central",
@@ -834,17 +834,17 @@
     "id": "401841610",
     "competencia": "liga",
     "inicio": "2026-10-10T20:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "32'",
+    "estado": "entretiempo",
+    "minuto": "45'+5'",
     "local": {
      "id": "11989",
      "nombre": "Central Córdoba (Santiago del Estero)",
-     "goles": 0
+     "goles": 2
     },
     "visitante": {
      "id": "8",
      "nombre": "Estudiantes de La Plata",
-     "goles": 1
+     "goles": 2
     },
     "penales": null,
     "goles": [
@@ -853,6 +853,24 @@
       "jugador": "Miguel Monsalve",
       "minuto": "22'",
       "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Leonardo Sequeira",
+      "minuto": "37'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Michael Santos",
+      "minuto": "38'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Edwin Cetre",
+      "minuto": "45'+5'",
+      "tipo": "de penal"
      }
     ],
     "estadio": "Alfredo Terrera",
