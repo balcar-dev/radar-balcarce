@@ -2825,6 +2825,88 @@
    "cuando": "2026-10-09T23:06:04.652Z",
    "medida": "2026-10-10T11:30:18.940Z",
    "metricas": {}
+  },
+  {
+   "clave": "instagram/reel/18373137106208054",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "efemeride",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-09T12:06:39.045Z",
+   "medida": "2026-10-10T12:30:16.743Z",
+   "metricas": {
+    "reach": 0,
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1813317310015942",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "efemeride",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-09T12:07:43.052Z",
+   "medida": "2026-10-10T12:30:16.743Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/1574516500610842",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "efemeride",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-09T12:08:17.271Z",
+   "medida": "2026-10-10T12:30:16.743Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122108173227495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1v0pyz6",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-09T12:08:37.621Z",
+   "medida": "2026-10-10T12:30:16.743Z",
+   "metricas": {
+    "post_media_view": 2,
+    "post_total_media_view_unique": 1,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18410597023088409",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1v0pyz6",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-09T12:08:46.458Z",
+   "medida": "2026-10-10T12:30:16.743Z",
+   "metricas": {
+    "reach": 1,
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
+  },
+  {
+   "clave": "instagram/historia/17946881604347968",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "podcast",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-10T00:06:40.088Z",
+   "medida": "2026-10-10T12:30:16.743Z",
+   "metricas": {}
   }
  ]
 }
