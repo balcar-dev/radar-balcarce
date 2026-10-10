@@ -1,96 +1,6 @@
 {
-  "generado": "2026-10-10T14:02:14.976Z",
+  "generado": "2026-10-10T14:31:56.570Z",
   "notas": [
-    {
-      "id": "k1kiay",
-      "titulo": "Franco Colapinto supera la primera ronda y avanza en Singapur",
-      "copete": "El piloto argentino logra el noveno puesto en la sesión inicial de clasificación en el circuito callejero de Marina Bay y continúa en competencia.",
-      "cuerpo": "Franco Colapinto completa la primera tanda clasificatoria en el noveno lugar con un registro de 1m33s261/100 y logra el pase a la siguiente ronda en el Gran Premio de Singapur. La sesión en el trazado callejero de Marina Bay comienza con retraso respecto al horario previsto debido al desarrollo de la competencia sprint, y da paso inmediato a los quince minutos de la Q2.\n\nEn la instancia inicial quedan fuera de competencia Fernando Alonso, Alex Albon, Lance Stroll, Sergio Pérez, Valtteri Bottas e Isack Hadjar, este último sin poder girar por inconvenientes eléctricos en su vehículo. Por su parte, el piloto argentino afronta el fin de semana con modificaciones en el sistema de almacenamiento de energía de su unidad provista por Alpine, tras registrar fallas en la prueba previa, aunque evita sanciones en la grilla de partida.",
-      "guion": "Franco Colapinto supera la primera ronda y avanza en Singapur",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infobae",
-        "La Nación"
-      ],
-      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid10102026-2/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T13:53:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T14:01:48.448Z",
-      "relevancia": 77,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Colapinto termina la Q1 en el noveno puesto.",
-        "El argentino marca un tiempo de 1m33s261/100.",
-        "Seis pilotos quedan eliminados en la primera tanda.",
-        "Alpine cambia piezas en el auto sin penalización."
-      ],
-      "seSabe": [
-        "Colapinto avanza a la Q2 tras finalizar noveno en la primera sesión.",
-        "El piloto registra un tiempo de 1m33s261/100.",
-        "Quedan eliminados Alonso, Albon, Stroll, Pérez, Bottas y Hadjar.",
-        "Alpine realiza un cambio en la unidad de potencia sin sanción para el argentino."
-      ],
-      "noConfirmado": [
-        "El rendimiento final en las tandas decisivas de la clasificación."
-      ],
-      "textoRedes": "Franco Colapinto termina la primera ronda clasificatoria en el noveno puesto y avanza a la siguiente tanda en el Gran Premio de Singapur.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Formula 1",
-        "Gran Premio de Singapur"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid10102026-2/",
-          "fecha": "2026-10-10T13:53:43.000Z",
-          "oficial": false,
-          "aporte": "Detalla el tiempo de Colapinto, los eliminados de la Q1 y los cambios en la unidad de potencia."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/10/tras-el-abandono-en-la-sprint-franco-colapinto-afrontara-la-clasificacion-para-el-gran-premio-de-singapur-de-formula-1-hora-y-tv/",
-          "fecha": "2026-10-10T13:56:15.000Z",
-          "oficial": false,
-          "aporte": "Informa sobre el inicio y la duración de la Q2 y los registros de los pilotos eliminados."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "18wlubj",
-          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
-          "fecha": "2026-10-07T09:01:08.000Z",
-          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
-        },
-        {
-          "id": "117ewnb",
-          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
-          "fecha": "2026-10-08T11:26:30.000Z",
-          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
-        },
-        {
-          "id": "16fjrrx",
-          "titulo": "Franco Colapinto larga desde el fondo en el Gran Premio de Malasia",
-          "fecha": "2026-10-04T03:00:14.000Z",
-          "ruta": "/nota/franco-colapinto-larga-desde-el-fondo-en-el-gran-premio-de-malasia-16fjrrx"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-supera-la-primera-ronda-y-avanza-en-singapur",
-      "foto": {
-        "archivo": "fotos-notas/k1kiay.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
     {
       "id": "repaso20261010manana",
       "propia": "repaso",
@@ -168,7 +78,8 @@
       "guion": "Agustín Conti repasa su vocación y los desafíos de la docencia",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/agustin-conti-muchas-veces-los-chicos-quieren-ser-profesores-porque-se-sienten-identificados-con-quienes-les-ensenaron",
       "teniaImagenLaFuente": true,
@@ -226,7 +137,42 @@
       "seccion": "Automovilismo",
       "medios": [
         "Infobae",
-        "TN (Todo Noticias)"
+        "TN (Todo Noticias)",
+        "QZ Noticias (Mar del Plata)",
+        "Ecos Diarios (Necochea)",
+        "La Noticia 1",
+        "Campeones",
+        "Motorsport",
+        "La Nación",
+        "Ámbito",
+        "Minuto Uno",
+        "El Destape",
+        "Perfil",
+        "Página/12",
+        "A24",
+        "TyC Sports",
+        "C5N",
+        "Crónica",
+        "Radio Mitre",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "0221",
+        "La Brújula 24",
+        "La Voz del Pueblo",
+        "El Marplatense",
+        "El Eco de Tandil",
+        "La Verdad de Ayacucho",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "Olé",
+        "El Gráfico",
+        "0223 (Mar del Plata)",
+        "La Capital (Rosario)",
+        "Córdoba Competición",
+        "Clarín"
       ],
       "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/10/video-norris-choco-a-piastri-en-singapur-tras-una-maniobra-similar-a-la-de-colapinto-que-habia-cuestionado-en-azerbaiyan/",
       "teniaImagenLaFuente": true,
@@ -425,6 +371,7 @@
       "guion": "Investigan la desaparición de fondos en la escuela Emilio Lamarca",
       "seccion": "Policiales",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/desaparicion-de-dinero-en-el-emilio-lamarca-760",
@@ -432,7 +379,7 @@
       "fecha": "2026-10-10T03:25:53.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T03:31:44.259Z",
-      "relevancia": 78,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1841,13 +1788,13 @@
       "medios": [
         "La Nación",
         "Infobae",
+        "Clarín",
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
         "iProfesional",
         "Noticias Argentinas (NA)",
-        "Agroempresario",
-        "Clarín"
+        "Agroempresario"
       ],
       "enlace": "https://agroempresario.com/publicacion/122319/aeropuertos-argentina-invertira-usd-1-500-millones-en-obras/",
       "teniaImagenLaFuente": true,
@@ -2094,75 +2041,6 @@
       }
     },
     {
-      "id": "1hfz3co",
-      "titulo": "La Justicia subasta la tradicional pileta de la Galería Lafayette en Mar del Plata",
-      "copete": "Rematan el histórico natatorio marplatense tras años de inactividad por un expediente judicial de expensas. La estructura mide 25 metros de largo y el lugar se puede visitar a fines de octubre.",
-      "cuerpo": "La Justicia dispuso el remate del tradicional natatorio situado en el segundo piso del paseo comercial de San Martín y San Luis, en Mar del Plata. La medida responde a un expediente por el cobro ejecutivo de expensas iniciado contra la firma Saviga S.A. en el Juzgado Civil y Comercial N 13, a cargo del juez Maximiliano Colángelo.\n\nEl inmueble comprende una superficie con una pileta de 25 metros de largo por 9 de ancho, cuya profundidad oscila entre los 1,50 y los 2,80 metros. Las instalaciones pertenecían al Centro Deportivo Lafayette, un espacio que funcionó durante más de tres décadas hasta su cierre definitivo en 2019.\n\nLos interesados en participar de la puja podrán recorrer las instalaciones el jueves 22 y el viernes 23 de octubre, en diferentes franjas horarias. El sitio acumuló un marcado deterioro edilicio tras varios años sin actividad y tras un temporal que afectó su estructura en 2010.",
-      "guion": "La Justicia subasta la tradicional pileta de la Galería Lafayette en Mar del Plata.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "0223 (Mar del Plata)",
-        "Minuto Uno",
-        "Infobrisas (Radio Brisas)"
-      ],
-      "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110853-subastaran-el-historico-piso-de-la-pileta-de-la-galeria-lafayette-en-pleno-centro-de-mar-del-plata",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T14:47:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 49,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se informó el valor base fijado para la subasta judicial.",
-        "Todavía no se conoce el destino que el futuro comprador le dará al espacio."
-      ],
-      "textoRedes": "La Justicia dispuso el remate de la histórica pileta de la Galería Lafayette en Mar del Plata. El espacio acumulaba años de inactividad y un proceso judicial por expensas. Habrá visitas previas al remate en octubre.",
-      "etiquetas": [
-        "subasta",
-        "pileta",
-        "Mar del Plata",
-        "Galeria Lafayette",
-        "Justicia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/10/09/110853-subastaran-el-historico-piso-de-la-pileta-de-la-galeria-lafayette-en-pleno-centro-de-mar-del-plata",
-          "fecha": "2026-10-09T14:47:33.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles judiciales del remate, las medidas del natatorio y los días de visita."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-9-18-18-0-subastaran-la-historica-pileta-lafayette-de-mar-del-plata-como-sera-el-remate-y-cuando-se-podra-visitar-el-inmueble",
-          "fecha": "2026-10-09T21:18:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la subasta de la histórica pileta en la esquina céntrica."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/la-justicia-subasta-una-pileta-natacion-historica-mar-del-plata-ubicada-dentro-la-galeria-lafayette-n6332280",
-          "fecha": "2026-10-10T02:03:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el estado de inactividad y deterioro del natatorio marplatense."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-justicia-subasta-la-tradicional-pileta-de-la-galeria-lafayette-en",
-      "foto": {
-        "archivo": "fotos-notas/1hfz3co.jpg",
-        "credito": "Foto: Infobrisas (Radio Brisas)"
-      }
-    },
-    {
       "id": "juyiki",
       "titulo": "El embajador de Estados Unidos advierte sobre el uso de tecnología china",
       "copete": "Peter Lamelas cuestionó la adquisición de equipos económicos y señaló que priorizar precios bajos implica riesgos en la seguridad de los datos.",
@@ -2309,7 +2187,7 @@
       "fecha": "2026-10-09T14:19:17.000Z",
       "sinFecha": false,
       "visto": "2026-10-09T15:31:45.594Z",
-      "relevancia": 52,
+      "relevancia": 44,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2803,12 +2681,12 @@
       "seccion": "Fútbol",
       "medios": [
         "La Nación",
-        "Infobae",
         "Ámbito",
         "TyC Sports",
         "Olé",
         "Crónica",
         "Radio Mitre",
+        "Infobae",
         "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/america/agencias/2026/10/09/simeone-messi-nos-enseno-a-pelear-y-seguir-insistiendo-ese-es-su-valor-mas-grande/",
@@ -3426,9 +3304,9 @@
     }
   ],
   "secciones": [
-    "Automovilismo",
     "Balcarce",
     "Cultura y agenda",
+    "Automovilismo",
     "Policiales",
     "Agro",
     "Economía",
@@ -3452,10 +3330,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 12,
+      "temp": 13,
       "sensacion": 9,
       "humedad": 65,
-      "viento": 16,
+      "viento": 15,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3834,18 +3712,6 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "b0dinz",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "1omxa4o",
-      "titulo": "A los 81 años murió Piero, un referente de la canción…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"murió\""
-    },
-    {
       "id": "6gphoh",
       "titulo": "La historia de Nico: su mamá contó cómo atraviesan el…",
       "seccion": "Balcarce",
@@ -3856,6 +3722,12 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "18c3rib",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"adolescente\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "6fykn0",
@@ -3874,6 +3746,12 @@
       "titulo": "Denunciaron a alumnos de un colegio por crear imágenes de…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "vbfl3j",
+      "titulo": "El particular regalo de Benín a Messi en su despedida",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "11sovpd",
@@ -3906,22 +3784,22 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "13ti6av",
+      "titulo": "Denuncian que por \"motivos operativos\" una aerolínea está…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "vvpj0a",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "11i60cy",
-      "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "1he1jh5",
-      "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"adolescente\""
+      "id": "mhjg4",
+      "titulo": "Una locomotora y tres vagones con 600 toneladas de carbón…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "dt70u0",
@@ -3930,16 +3808,28 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "5w58zn",
+      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"suscribite\""
+    },
+    {
+      "id": "1nerhmu",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
       "id": "emxfi0",
       "titulo": "La minería sigue en alza y subió más de 8% en agosto…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "1s6utqr",
+      "id": "11i60cy",
       "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "dfdr7f",
@@ -3960,12 +3850,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "6af5cy",
-      "titulo": "Empezó la reunión en Tribunales: la Corte Suprema analiza…",
-      "seccion": "Política",
-      "motivo": "parece promoción, no noticia: \"sortea\""
-    },
-    {
       "id": "5xhpo2",
       "titulo": null,
       "seccion": "Cultura y agenda",
@@ -3975,6 +3859,12 @@
       "id": "7ym2kb",
       "titulo": null,
       "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "1s6utqr",
+      "titulo": null,
+      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
