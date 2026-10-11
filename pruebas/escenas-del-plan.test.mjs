@@ -52,7 +52,7 @@ test('cada pieza de servicio del plan lleva su escena y conserva su placa de res
   const portada = leer('web/data/portada.json');
   const fecha = new Date('2026-10-10T15:00:00Z'); // sábado: toca "útiles"
   const { piezas: plan } = planDelDia({
-    clima: portada.clima, farmacias: { turnos: [portada.farmacias.hoy] }, notas: [], yaPublicadas: true,
+    clima: portada.clima, farmacias: { turnos: [portada.farmacias.hoy].filter(Boolean) }, notas: [], yaPublicadas: true,
   }, { fecha, forzar: ['clima-manana', 'clima-noche', 'farmacia', 'utiles'] });
   for (const nombre of ['clima-manana', 'clima-noche', 'utiles']) {
     const p = plan.find((x) => x.nombre === nombre);
