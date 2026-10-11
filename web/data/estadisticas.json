@@ -1476,6 +1476,53 @@
         "vistas": 73,
         "interacciones": 3
       }
+    },
+    {
+      "cuando": "2026-10-11T12:00:18.227Z",
+      "web": {
+        "u12": {
+          "visitas": 12,
+          "vistas": 23
+        },
+        "a12": {
+          "visitas": 26,
+          "vistas": 91
+        },
+        "u24": {
+          "visitas": 38,
+          "vistas": 114
+        },
+        "a24": {
+          "visitas": 53,
+          "vistas": 142
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 11
+          },
+          {
+            "camino": "/nota/lando-norris-choca-a-su-companero-oscar-piastri-en-la-sprint-de-4u38d4",
+            "vistas": 10
+          },
+          {
+            "camino": "/seccion/politica",
+            "vistas": 9
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 10,
+        "vistas": 1518,
+        "interacciones": 3
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 131,
+        "alcance": 3,
+        "vistas": 3,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2357,8 +2404,8 @@
     },
     "2026-10-10": {
       "paises": {
+        "US": 47,
         "AR": 45,
-        "US": 32,
         "SE": 8,
         "IE": 5,
         "PL": 4,
@@ -2386,42 +2433,73 @@
         0,
         8,
         0,
-        0,
+        15,
         0,
         0
       ],
       "referentes": {
-        "facebook.com": 25,
+        "facebook.com": 37,
         "directo": 3
       },
       "dispositivos": {
-        "mobile": 60,
-        "desktop": 36
+        "mobile": 69,
+        "desktop": 42
       },
-      "visitas": 28,
-      "vistas": 96,
+      "visitas": 40,
+      "vistas": 111,
       "notas": {
+        "1vwpejn": 10,
+        "1nhtdpr": 10,
+        "jul3dj": 10,
         "4u38d4": 10,
-        "u6j4ho": 8,
-        "p4vc8j": 8,
-        "1cj5sd": 7,
-        "1vwpejn": 5,
-        "15zr9uw": 5,
-        "1u383pj": 4,
-        "2qmh95": 4,
-        "1m8dnbh": 4,
-        "1360zul": 3,
-        "1qeim0": 3,
-        "9zwjal": 3,
-        "vw0kpx": 2,
-        "k1kiay": 2,
-        "190bbf8": 2
+        "2qmh95": 10
       },
       "paginas": {
-        "/": 11,
-        "/seccion/politica": 9,
-        "/seccion/automovilismo": 4,
-        "/seccion/tecnologia": 2
+        "/seccion/automovilismo": 30,
+        "/": 20
+      }
+    },
+    "2026-10-11": {
+      "visitas": 0,
+      "vistas": 8,
+      "referentes": {},
+      "paises": {
+        "AR": 8
+      },
+      "notas": {
+        "f1parrilla2026r17": 4
+      },
+      "paginas": {
+        "/seccion/automovilismo": 4
+      },
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "dispositivos": {
+        "mobile": 8
       }
     }
   }
