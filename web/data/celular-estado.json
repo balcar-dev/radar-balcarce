@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T11:33:07.144Z",
- "portada": 26,
+ "generado": "2026-10-11T12:02:00.708Z",
+ "portada": 22,
  "archivo": 909,
- "esperandoCuerpo": 0,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-11T11:33:07.171Z",
+  "generado": "2026-10-11T12:02:00.738Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -85,7 +85,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 55,
     "notas": [
      {
       "id": "1mvohwm",
@@ -93,14 +93,14 @@
       "seccion": "Argentina"
      },
      {
+      "id": "lb7md0",
+      "titulo": "Inter golea al Parma y lidera la Serie A en solitario",
+      "seccion": "Fútbol"
+     },
+     {
       "id": "1gkf7qu",
       "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1cj5sd",
-      "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
-      "seccion": "Agro"
      },
      {
       "id": "1m2za7b",
