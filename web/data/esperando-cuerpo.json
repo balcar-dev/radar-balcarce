@@ -1,5 +1,33 @@
 {
- "generado": "2026-10-11T08:01:48.859Z",
+ "generado": "2026-10-11T11:01:51.219Z",
  "intentosMaximos": 3,
- "notas": []
+ "notas": [
+  {
+   "id": "1mvohwm",
+   "titulo": "El papa León XIV anunció que se operará de un nódulo en el pulmón antes de su viaje a la Argentina",
+   "copete": "A un mes de su visita a la Argentina, el papa León XIV anunció este domingo que se operará en los próximos días para extirparse un nódulo en un pulmón . El pontífice detalló que el diagnóstico fue detectado en una etapa temprana y que estará internado alrededor de una semana…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-11T10:36:41.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/internacional/2026/10/11/el-papa-leon-xiv-anuncio-que-se-operara-en-los-proximos-dias-de-un-nodulo-en-el-pulmon/",
+     "fecha": "2026-10-11T10:36:41.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/el-mundo/el-papa-leon-xiv-anuncio-que-se-internara-para-operarse-de-un-nodulo-en-un-pulmon-a-pocos-dias-del-nid11102026/",
+     "fecha": "2026-10-11T10:58:22.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/sociedad/el-papa-leon-xiv-sera-operado-en-los-proximos-dias-para-extirpar-un-nodulo-pulmonar/",
+     "fecha": "2026-10-11T10:52:43.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (tildes): el texto está escrito sin tildes (operacion, dias): va con las tildes y la eñe donde corresponden",
+   "maximo": 3
+  }
+ ]
 }
