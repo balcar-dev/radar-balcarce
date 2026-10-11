@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-11T00:02:14.568Z",
+ "consultado": "2026-10-11T00:32:15.664Z",
  "equipos": [
   "9739",
   "3",
@@ -882,8 +882,8 @@
     "id": "401841599",
     "competencia": "liga",
     "inicio": "2026-10-10T22:15:00.000Z",
-    "estado": "en-juego",
-    "minuto": "87'",
+    "estado": "final",
+    "minuto": "90'+5'",
     "local": {
      "id": "7767",
      "nombre": "Tigre",
@@ -924,8 +924,8 @@
     "id": "401841603",
     "competencia": "liga",
     "inicio": "2026-10-11T00:30:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "3'",
     "local": {
      "id": "16",
      "nombre": "River Plate",
