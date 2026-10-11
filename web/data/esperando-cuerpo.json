@@ -1,28 +1,11 @@
 {
- "generado": "2026-10-11T23:32:33.706Z",
+ "generado": "2026-10-11T23:36:37.077Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1lact95",
-   "titulo": "Robaron una moto durante la madrugada y buscan información para recuperarla",
-   "copete": "El hecho ocurrió en calle 108 entre 17 y 19, alrededor de las 3:50. Se trata de una Mondial Max de 110 cc y su propietario solicita colaboración para poder localizarla.",
-   "seccion": "Policiales",
-   "fecha": "2026-10-11T23:12:50.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/robaron-una-moto-durante-la-madrugada-y-buscan-informacion-para-recuperarla",
-     "fecha": "2026-10-11T23:12:50.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (fecha): el copete menciona \"domingo\" y la fuente no",
-   "maximo": 3
-  },
-  {
    "id": "bqygvd",
    "titulo": "Los Pumas 7s y Las Yaguaretés se consagraron campeones sudamericanos",
-   "copete": "Una vez más el rugby argentino de Seven se hizo fuerte en la región. Tanto el seleccionado masculino, como también el femenino, se consagraron de manera invicta en el Sudamericano de Seven, esta vez disputado en el Villa Carlos Paz Rugby Club de Córdoba. Los dirigidos por…",
+   "copete": "Una vez más el rugby argentino en modalidad seven se hizo fuerte en la región. Tanto el seleccionado masculino como también el femenino, se consagraron de manera invicta en el Sudamericano de Seven, disputado en el Carlos Paz Rugby Club de Córdoba. Los dirigidos por Santiago…",
    "seccion": "Deportes",
    "fecha": "2026-10-11T21:15:00.000Z",
    "fuentes": [
@@ -42,8 +25,8 @@
      "fecha": "2026-10-11T21:56:20.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (promesa): el título nombra a \"pumas\", \"las\", \"yaguaretes\" y el cuerpo no los explica; sin esas oraciones quedan 96 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (promesa): el título dice 7 y el cuerpo no lo explica; sin esas oraciones quedan 115 palabras",
    "maximo": 3
   }
  ]
