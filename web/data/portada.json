@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-11T15:31:51.607Z",
+  "generado": "2026-10-11T15:35:22.407Z",
   "notas": [
     {
       "id": "1aoymq2",
@@ -9,16 +9,30 @@
       "guion": "Lionel Scaloni participa de una carrera de ciclismo en Buenos Aires",
       "seccion": "Argentina",
       "medios": [
+        "Minuto Uno",
         "TN (Todo Noticias)",
+        "Perfil",
         "A24",
-        "TyC Sports"
+        "TyC Sports",
+        "Olé",
+        "News Balcarce (FM 91.7)",
+        "Municipalidad de Balcarce",
+        "El Diario Balcarce",
+        "Acción 5 (Balcarce)",
+        "Ahora Balcarce",
+        "Diario La Vanguardia",
+        "Infobrisas (Radio Brisas)",
+        "Infobae",
+        "La Nación",
+        "El Destape",
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://www.a24.com/actualidad/scaloni-sorprendio-una-carrera-ciclismo-buenos-aires-y-hablo-a24-la-despedida-messi-n1605301",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-11T13:49:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-11T14:01:44.028Z",
-      "relevancia": 79,
+      "relevancia": 99,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -241,6 +255,85 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261011manana.jpg",
         "credito": "Fotos: Olé, Infórmese Primero (FM 104.9), Radio Gabal (FM 104.1) y Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "9rb0wa",
+      "titulo": "Proponen tokenizar regalías mineras para financiar a distritos",
+      "copete": "El ex juez penal y asesor legal Daniel Llermanos sostuvo que la digitalización de flujos productivos permite adelantar recursos para los Estados locales y comunales.",
+      "cuerpo": "El planteo se realiza en el marco del esquema que impulsa la firma Oroblock vinculado al proyecto minero Corina en La Rioja. Según datos de la empresa, la iniciativa abarca 24.647 hectáreas con yacimientos de oro, cobre y plata en etapa de exploración.\n\nEl asesor explicó que el mecanismo permite adelantar recursos futuros y fraccionarlos para inversores. Por su parte, el director financiero de la firma, Manuel Arias, señaló que el marco regulado actual de la Comisión Nacional de Valores ya permite tokenizar activos sin necesidad de una nueva ley.",
+      "guion": "Proponen tokenizar regalías mineras para financiar a distritos.",
+      "seccion": "Economía",
+      "medios": [
+        "Ecos Diarios (Necochea)",
+        "iProfesional",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T11:27:07.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T15:35:07.552Z",
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Daniel Llermanos plantea tokenizar regalías públicas.",
+        "La medida busca adelantar recursos para los Estados.",
+        "El esquema se vincula al proyecto minero Corina.",
+        "La Comisión Nacional de Valores regula el sistema."
+      ],
+      "seSabe": [
+        "Daniel Llermanos afirmó que la tokenización de regalías sirve como financiamiento para Estados locales.",
+        "El abogado cumple funciones como asesor de la firma Oroblock.",
+        "El proyecto minero Corina abarca 24.647 hectáreas en La Rioja.",
+        "Manuel Arias se desempeña como director financiero de la empresa."
+      ],
+      "noConfirmado": [
+        "Todavía no se aprobó el proyecto de ley presentado en el Congreso sobre tokenización soberana."
+      ],
+      "textoRedes": "El asesor legal Daniel Llermanos afirmó que la tokenización de regalías públicas puede servir como vía de financiamiento para provincias y municipios.",
+      "etiquetas": [
+        "economia",
+        "regalias",
+        "financiamiento",
+        "tecnologia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
+          "fecha": "2026-10-11T11:27:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones completas de Daniel Llermanos, Manuel Arias y Osvaldo Di Giorgio sobre el proyecto minero Corina."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/proponen-la-tokenizacion-de-regalias-mineras-para-impulsar-inversiones-en-provincias",
+          "fecha": "2026-10-11T13:16:43.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en las afirmaciones iniciales del asesor legal Daniel Llermanos."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/economia/466364-como-la-tokenizacion-de-regalias-mineras-puede-impulsar-inversiones",
+          "fecha": "2026-10-11T14:15:00.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la postura sobre la tokenización de regalías para provincias."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "proponen-tokenizar-regalias-mineras-para-financiar-a-distritos",
+      "foto": {
+        "archivo": "fotos-notas/9rb0wa.jpg",
+        "credito": "Foto: iProfesional"
       }
     },
     {
@@ -1490,6 +1583,7 @@
     "Argentina",
     "Política",
     "Balcarce",
+    "Economía",
     "Fútbol",
     "Cultura y agenda",
     "Automovilismo"
@@ -1555,147 +1649,9 @@
   },
   "avisosClima": [],
   "farmacias": {
-    "hoy": {
-      "dia": 11,
-      "diaSemana": "DOMINGO",
-      "farmacias": [
-        "BENITES",
-        "FREITAS"
-      ],
-      "detalle": [
-        {
-          "nombre": "Benites",
-          "direccion": "Av. Chaves N° 329 e/ 5 y 7",
-          "telefono": "42-0309"
-        },
-        {
-          "nombre": "Freitas",
-          "direccion": "Av. Kelly N° 840 e/ 23 y 25",
-          "telefono": "42-5942"
-        }
-      ],
-      "mes": 10,
-      "fecha": "2026-10-11"
-    },
-    "proximos": [
-      {
-        "dia": 11,
-        "diaSemana": "DOMINGO",
-        "farmacias": [
-          "BENITES",
-          "FREITAS"
-        ],
-        "detalle": [
-          {
-            "nombre": "Benites",
-            "direccion": "Av. Chaves N° 329 e/ 5 y 7",
-            "telefono": "42-0309"
-          },
-          {
-            "nombre": "Freitas",
-            "direccion": "Av. Kelly N° 840 e/ 23 y 25",
-            "telefono": "42-5942"
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-11"
-      },
-      {
-        "dia": 13,
-        "diaSemana": "MARTES",
-        "farmacias": [
-          "VUOTTO"
-        ],
-        "detalle": [
-          {
-            "nombre": "Vuotto",
-            "direccion": "Calle 17 esquina 20",
-            "telefono": "42-2106"
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-13"
-      },
-      {
-        "dia": 14,
-        "diaSemana": "MIERCOLES",
-        "farmacias": [
-          "SAN JOSE PLAZA"
-        ],
-        "detalle": [
-          {
-            "nombre": "San José de la Plaza",
-            "direccion": "Av. Chaves esquina 15",
-            "telefono": null
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-14"
-      },
-      {
-        "dia": 15,
-        "diaSemana": "JUEVES",
-        "farmacias": [
-          "NORTE"
-        ],
-        "detalle": [
-          {
-            "nombre": "Norte",
-            "direccion": "Calle 15 esquina 8",
-            "telefono": "42-4656"
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-15"
-      },
-      {
-        "dia": 16,
-        "diaSemana": "VIERNES",
-        "farmacias": [
-          "SANTA INES",
-          "DEL PATIO"
-        ],
-        "detalle": [
-          {
-            "nombre": "Santa Inés",
-            "direccion": "Calle 17 N° 537",
-            "telefono": "42-4301"
-          },
-          {
-            "nombre": "Del Patio",
-            "direccion": "Av. 39 N° 793",
-            "telefono": "42-2200"
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-16"
-      },
-      {
-        "dia": 17,
-        "diaSemana": "SABADO",
-        "farmacias": [
-          "BENITES",
-          "FREITAS"
-        ],
-        "detalle": [
-          {
-            "nombre": "Benites",
-            "direccion": "Av. Chaves N° 329 e/ 5 y 7",
-            "telefono": "42-0309"
-          },
-          {
-            "nombre": "Freitas",
-            "direccion": "Av. Kelly N° 840 e/ 23 y 25",
-            "telefono": "42-5942"
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-17"
-      }
-    ],
-    "avisos": [
-      "sólo llega hasta el día 25 de 31: hay que recargarlo"
-    ]
+    "hoy": null,
+    "proximos": [],
+    "avisos": []
   },
   "agenda": {
     "proximosAnuales": [
@@ -1909,17 +1865,11 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "5w58zn",
-      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"suscribite\""
-    },
-    {
       "id": "15k1u2x",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 1
 }
