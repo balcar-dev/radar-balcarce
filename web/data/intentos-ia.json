@@ -1496,9 +1496,9 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "1xx1460": {
-  "intentos": 2,
-  "ultimo": "2026-10-11T04:31:46.900Z",
-  "motivo": "cuerpo: 12 problemas (numero, promesa): el cuerpo dice 50 y la fuente no lo dice; sin esas oraciones quedan 37 palabras"
+  "intentos": 3,
+  "ultimo": "2026-10-11T05:01:28.911Z",
+  "motivo": "con cuerpo"
  },
  "1xzp9qx": {
   "intentos": 3,
@@ -2277,6 +2277,11 @@
   "intentos": 1,
   "ultimo": "2026-10-08T01:31:19.555Z",
   "motivo": "con cuerpo"
+ },
+ "lb7md0": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T05:01:28.911Z",
+  "motivo": "título o bajada: 3 problemas (nombre): el titulo nombra a \"italia\" y la fuente no"
  },
  "lb9m27": {
   "intentos": 1,

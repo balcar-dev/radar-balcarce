@@ -11869,16 +11869,16 @@
   "cuando": "2026-10-10T22:02:00.575Z"
  },
  "17wk7q3": {
-  "archivo": "fotos-notas/17wk7q3.jpg",
   "medio": "Olé",
-  "credito": "Foto: Olé",
   "licencia": null,
   "origen": "medio",
   "titulo": "Brasil derrota a Argentina por 3 a 1 en un amistoso internacional",
   "enlace": "https://www.ole.com.ar/seleccion/seleccion-femenina-cayo-brasil-argentina-amistoso-preparacion-copadelmundo2027_0_OEOiBbWNaw.html",
   "imagenOriginal": "https://www.ole.com.ar/images/2026/10/10/GLPDPA4nn_2000x1500__1.jpg",
   "razon": "La foto de Olé tiene excelente nitidez y encuadre, muestra una jugada clara del partido y no contiene marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-10T23:01:40.623Z"
+  "cuando": "2026-10-10T23:01:40.623Z",
+  "intentado": true,
+  "borrada": true
  },
  "f1parrilla2026r17": {
   "archivo": "fotos-notas/libre-f1parrilla2026r17.jpg",
@@ -11983,5 +11983,17 @@
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Rom%C3%A1n_Gonz%C3%A1lez_e_Damir_Tvrdi%C4%87_%28Crabs_Rimini%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Román González\" de Wikimedia Commons (CC BY-SA 3.0).",
   "cuando": "2026-10-11T04:31:54.769Z"
+ },
+ "1xx1460": {
+  "archivo": "fotos-notas/1xx1460.jpg",
+  "medio": "UAR (Unión Argentina de Rugby)",
+  "credito": "Foto: UAR (Unión Argentina de Rugby)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Los Pumas 7's y Las Yaguaretés arrancan invictos en Carlos Paz",
+  "enlace": "https://uar.com.ar/los-pumas-7s-y-las-yaguaretes-invictos-en-el-sudamericano/",
+  "imagenOriginal": "https://uar.com.ar/wp-content/uploads/20261010_SAR7_Dia1_T8-13.jpg",
+  "razon": "La foto A tiene buena calidad y no posee marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-11T05:01:37.413Z"
  }
 }
