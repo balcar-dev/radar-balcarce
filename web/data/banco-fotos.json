@@ -11985,16 +11985,16 @@
   "cuando": "2026-10-11T04:31:54.769Z"
  },
  "1xx1460": {
-  "archivo": "fotos-notas/1xx1460.jpg",
   "medio": "UAR (Unión Argentina de Rugby)",
-  "credito": "Foto: UAR (Unión Argentina de Rugby)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Los Pumas 7's y Las Yaguaretés arrancan invictos en Carlos Paz",
   "enlace": "https://uar.com.ar/los-pumas-7s-y-las-yaguaretes-invictos-en-el-sudamericano/",
   "imagenOriginal": "https://uar.com.ar/wp-content/uploads/20261010_SAR7_Dia1_T8-13.jpg",
   "razon": "La foto A tiene buena calidad y no posee marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-11T05:01:37.413Z"
+  "cuando": "2026-10-11T05:01:37.413Z",
+  "intentado": true,
+  "borrada": true
  },
  "t6i6vv": {
   "archivo": "fotos-notas/t6i6vv.jpg",
@@ -12228,5 +12228,53 @@
   "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/82/Marina_Bay_Street_Circuit_Home_straight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
   "titulo": "File:Marina Bay Street Circuit Home straight.jpg",
   "cuando": "2026-10-11T23:09:23.514Z"
+ },
+ "1hapve0": {
+  "archivo": "fotos-notas/1hapve0.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+  "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-11-17-54-3Emilia_Scioli1.jpg",
+  "razon": "Es la única foto disponible, cumple con los requisitos y no tiene marcas ni menores reconocibles.",
+  "cuando": "2026-10-11T23:32:18.484Z"
+ },
+ "1vl8rqs": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Rosario realiza la Feria Internacional del Libro hasta el 18 de octubre",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-11T23:32:18.484Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "1pi4mqa": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Diputados debate el proyecto que sanciona el vandalismo rural",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-11T23:32:18.484Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "1lmhb77": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-11T23:32:18.484Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "1pxllaz": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Cauan Barros choca con su auto y se pierde el partido ante Boca",
+  "razon": "Groq también falló: HTTP 413 (se probó una foto libre de \"Cauan Barros\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-11T23:32:18.484Z",
+  "intentos": 1,
+  "fuentes": 6
  }
 }

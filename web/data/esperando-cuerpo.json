@@ -1,49 +1,49 @@
 {
- "generado": "2026-10-11T23:09:24.405Z",
+ "generado": "2026-10-11T23:32:33.706Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "1hapve0",
-   "titulo": "Podio de Emilia Scioli en el Ironman 70.3 y clasificación al Mundial",
-   "copete": "",
-   "seccion": "Deportes",
-   "fecha": "2026-10-11T23:07:57.544Z",
+   "id": "1lact95",
+   "titulo": "Robaron una moto durante la madrugada y buscan información para recuperarla",
+   "copete": "El hecho ocurrió en calle 108 entre 17 y 19, alrededor de las 3:50. Se trata de una Mondial Max de 110 cc y su propietario solicita colaboración para poder localizarla.",
+   "seccion": "Policiales",
+   "fecha": "2026-10-11T23:12:50.000Z",
    "fuentes": [
     {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-     "fecha": null
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/policiales/robaron-una-moto-durante-la-madrugada-y-buscan-informacion-para-recuperarla",
+     "fecha": "2026-10-11T23:12:50.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 1 problema (cita): el cuerpo pone entre comillas algo que la fuente no dice: \" y aseguró su lugar en el Campeonato Mun\"; sin esas oraciones quedan 106 p",
+   "motivo": "título o bajada: 1 problema (fecha): el copete menciona \"domingo\" y la fuente no",
    "maximo": 3
   },
   {
-   "id": "153zuaz",
-   "titulo": "Asignación Universal por Hijo de Anses: de cuánto es la AUH en octubre, con el aumento confirmado",
-   "copete": "Los titulares de la AUH (Asignación Universal por Hijo) reciben en octubre un aumento del 1,66% , dado por la actualización automática que se realiza en las prestaciones sociales, con base en el más reciente índice de inflación. En el décimo mes del año, la AUH tiene un reajuste…",
-   "seccion": "Economía",
-   "fecha": "2026-10-11T13:27:22.000Z",
+   "id": "bqygvd",
+   "titulo": "Los Pumas 7s y Las Yaguaretés se consagraron campeones sudamericanos",
+   "copete": "Una vez más el rugby argentino de Seven se hizo fuerte en la región. Tanto el seleccionado masculino, como también el femenino, se consagraron de manera invicta en el Sudamericano de Seven, esta vez disputado en el Villa Carlos Paz Rugby Club de Córdoba. Los dirigidos por…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-11T21:15:00.000Z",
    "fuentes": [
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
-     "fecha": "2026-10-11T13:27:22.000Z"
+     "medio": "Doble Amarilla",
+     "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
+     "fecha": "2026-10-11T21:15:00.000Z"
     },
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
-     "fecha": "2026-10-11T13:28:52.000Z"
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-11-19-11-0-los-pumas-7-s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos",
+     "fecha": "2026-10-11T22:55:12.000Z"
     },
     {
-     "medio": "El Cronista",
-     "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
-     "fecha": "2026-10-11T16:31:00.000Z"
+     "medio": "UAR (Unión Argentina de Rugby)",
+     "enlace": "https://uar.com.ar/los-pumas-7s-y-las-yaguaretes-campeones-sudamericanos/",
+     "fecha": "2026-10-11T21:56:20.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (numero): el guion dice 60 y la fuente no lo dice",
+   "motivo": "cuerpo: 2 problemas (promesa): el título nombra a \"pumas\", \"las\", \"yaguaretes\" y el cuerpo no los explica; sin esas oraciones quedan 96 palabras",
    "maximo": 3
   }
  ]

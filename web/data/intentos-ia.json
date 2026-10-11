@@ -40,8 +40,8 @@
   "motivo": "con cuerpo"
  },
  "11k1rn": {
-  "intentos": 1,
-  "ultimo": "2026-10-11T23:08:16.877Z",
+  "intentos": 2,
+  "ultimo": "2026-10-11T23:31:49.731Z",
   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "11lqk0q": {
@@ -788,9 +788,9 @@
   "motivo": "sin material"
  },
  "1hapve0": {
-  "intentos": 1,
-  "ultimo": "2026-10-11T23:08:16.877Z",
-  "motivo": "cuerpo: 1 problema (cita): el cuerpo pone entre comillas algo que la fuente no dice: \" y aseguró su lugar en el Campeonato Mun\"; sin esas oraciones quedan 106 p"
+  "intentos": 2,
+  "ultimo": "2026-10-11T23:31:49.731Z",
+  "motivo": "con cuerpo"
  },
  "1hem9fi": {
   "intentos": 1,
@@ -820,11 +820,6 @@
  "1hw35d": {
   "intentos": 1,
   "ultimo": "2026-10-06T18:31:38.105Z",
-  "motivo": "con cuerpo"
- },
- "1i07zda": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
   "motivo": "con cuerpo"
  },
  "1i26d5h": {
@@ -979,6 +974,11 @@
   "ultimo": "2026-10-09T17:01:38.358Z",
   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 97 palabras"
  },
+ "1lact95": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T23:31:49.731Z",
+  "motivo": "título o bajada: 1 problema (fecha): el copete menciona \"domingo\" y la fuente no"
+ },
  "1lji8b6": {
   "intentos": 1,
   "ultimo": "2026-10-06T19:01:25.408Z",
@@ -987,6 +987,11 @@
  "1lm1d3r": {
   "intentos": 1,
   "ultimo": "2026-10-08T21:31:39.020Z",
+  "motivo": "con cuerpo"
+ },
+ "1lmhb77": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T23:31:49.731Z",
   "motivo": "con cuerpo"
  },
  "1lubi1s": {
@@ -1151,6 +1156,11 @@
   "ultimo": "2026-10-05T21:32:25.306Z",
   "motivo": "con cuerpo"
  },
+ "1pi4mqa": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T23:31:49.731Z",
+  "motivo": "con cuerpo"
+ },
  "1pofkpj": {
   "intentos": 1,
   "ultimo": "2026-10-05T21:32:25.306Z",
@@ -1159,6 +1169,11 @@
  "1pwavd9": {
   "intentos": 1,
   "ultimo": "2026-10-06T00:31:22.032Z",
+  "motivo": "con cuerpo"
+ },
+ "1pxllaz": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T23:31:49.731Z",
   "motivo": "con cuerpo"
  },
  "1q4j7p": {
@@ -1209,11 +1224,6 @@
  "1rf94dp": {
   "intentos": 1,
   "ultimo": "2026-10-08T15:01:40.661Z",
-  "motivo": "con cuerpo"
- },
- "1rfl2n3": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
   "motivo": "con cuerpo"
  },
  "1rghsb2": {
@@ -1403,6 +1413,11 @@
   "ultimo": "2026-10-05T15:04:56.390Z",
   "motivo": "con cuerpo"
  },
+ "1vl8rqs": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T23:31:49.731Z",
+  "motivo": "con cuerpo"
+ },
  "1vnue0q": {
   "intentos": 1,
   "ultimo": "2026-10-05T15:31:39.763Z",
@@ -1496,11 +1511,6 @@
  "1ysjgnl": {
   "intentos": 1,
   "ultimo": "2026-10-05T13:03:48.838Z",
-  "motivo": "con cuerpo"
- },
- "1yu4a7r": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
   "motivo": "con cuerpo"
  },
  "1yzgdmc": {
@@ -1648,11 +1658,6 @@
  "5ffwsk": {
   "intentos": 1,
   "ultimo": "2026-10-08T23:02:05.096Z",
-  "motivo": "con cuerpo"
- },
- "5j1h5s": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
   "motivo": "con cuerpo"
  },
  "5oqfmf": {
@@ -1887,15 +1892,15 @@
   "ultimo": "2026-10-08T21:31:39.020Z",
   "motivo": "con cuerpo"
  },
- "bd84js": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
-  "motivo": "con cuerpo"
- },
  "bmbmep": {
   "intentos": 3,
   "ultimo": "2026-10-05T15:04:56.390Z",
   "motivo": "con cuerpo"
+ },
+ "bqygvd": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T23:31:49.731Z",
+  "motivo": "cuerpo: 2 problemas (promesa): el título nombra a \"pumas\", \"las\", \"yaguaretes\" y el cuerpo no los explica; sin esas oraciones quedan 96 palabras"
  },
  "bsy3zw": {
   "intentos": 1,
@@ -2091,11 +2096,6 @@
   "ultimo": "2026-10-06T10:31:25.521Z",
   "motivo": "con cuerpo"
  },
- "i9he7u": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
-  "motivo": "con cuerpo"
- },
  "ialwkh": {
   "intentos": 1,
   "ultimo": "2026-10-05T17:01:27.550Z",
@@ -2126,19 +2126,9 @@
   "ultimo": "2026-10-10T20:00:03.924Z",
   "motivo": "con cuerpo"
  },
- "irc0sr": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
-  "motivo": "con cuerpo"
- },
  "ishs2l": {
   "intentos": 1,
   "ultimo": "2026-10-06T17:01:38.281Z",
-  "motivo": "con cuerpo"
- },
- "ivx73p": {
-  "intentos": 1,
-  "ultimo": "2026-10-04T23:31:41.471Z",
   "motivo": "con cuerpo"
  },
  "j35fwo": {
@@ -2416,11 +2406,6 @@
   "intentos": 3,
   "ultimo": "2026-10-07T19:31:32.755Z",
   "motivo": "sin material"
- },
- "oy2pg": {
-  "intentos": 2,
-  "ultimo": "2026-10-04T23:31:41.471Z",
-  "motivo": "cuerpo: 4 problemas (numero, nombre, promesa): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 48 palabras"
  },
  "ozgxah": {
   "intentos": 1,
