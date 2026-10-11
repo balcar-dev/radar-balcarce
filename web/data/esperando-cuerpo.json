@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-11T14:32:05.236Z",
+ "generado": "2026-10-11T15:02:29.686Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,14 +15,14 @@
      "fecha": "2026-10-11T11:00:19.000Z"
     },
     {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/deportes/messi-presento-grandes-promesas-futbol-mundial-joya-boca-aparece-elegidos_0_tSC6VAKMeZ.html",
-     "fecha": "2026-10-11T13:25:29.000Z"
-    },
-    {
      "medio": "Olé",
      "enlace": "https://www.ole.com.ar/messi/messi-promesas-futbol-campana-publicitaria_0_McDfiTuhNr.html",
      "fecha": "2026-10-11T14:03:30.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/deportes/messi-presento-grandes-promesas-futbol-mundial-joya-boca-aparece-elegidos_0_tSC6VAKMeZ.html",
+     "fecha": "2026-10-11T13:25:29.000Z"
     },
     {
      "medio": "0223 (Mar del Plata)",
@@ -65,6 +65,33 @@
    "maximo": 5
   },
   {
+   "id": "1bzlkfq",
+   "titulo": "Franco Colapinto habló tras abandonar el GP de Singapur y se sinceró sobre su presente en Alpine: “Tengo que hacer un reset”",
+   "copete": "El piloto argentino analizó su abandono en el Gran Premio de Singapur, reconoció las dificultades que atravesó en las últimas carreras y dejó una contundente reflexión sobre su presente en Alpine",
+   "seccion": "Automovilismo",
+   "fecha": "2026-10-11T14:04:01.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/franco-colapinto-hablo-tras-abandonar-el-gp-de-singapur-y-se-sincero-sobre-su-presente-en-alpine-tengo-que-hacer-un-reset/",
+     "fecha": "2026-10-11T14:04:01.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/automovilismo/colapinto-espera-pasar-rapido-de-pagina-tras-su-abandono-en-singapur-tengo-que-hacer-un-reset-id765678.html",
+     "fecha": "2026-10-11T14:13:24.000Z"
+    },
+    {
+     "medio": "Doble Amarilla",
+     "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/la-frustracion-de-colapinto-tras-un-nuevo-abandono-por-la-falla-en-el-alpine---tengo-que-hacer-reset-_a6acb9bdf5b0315cb4ada5d29",
+     "fecha": "2026-10-11T14:42:33.682Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 3 problemas (antecedente, nombre): el titulo usa \"formula\", que sale de una nota anterior, como si fuera de hoy",
+   "maximo": 3
+  },
+  {
    "id": "28a9he",
    "titulo": "La decepción de Franco Colapinto tras su abandono en el GP de Singapur de Fórmula 1: “Espero revertir este momento malo”",
    "copete": "*La palabra de Franco Colapinto Franco Colapinto abandonó en el Gran Premio de Singapur de Fórmula 1 disputado este domingo en el Circuito Callejero de Marina Bay , que desde 2008 alberga una carrera nocturna. En los boxes, el piloto argentino de 23 años habló sobre su…",
@@ -84,6 +111,33 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "1jn8kso",
+   "titulo": "Frigerio respaldó el rumbo económico de Milei y pidió evitar que la Argentina vuelva al pasado",
+   "copete": "Buenos Aires, 11 octubre (NA) -- El gobernador de Entre Ríos, Rogelio Frigerio, destacó el interés de los inversores internacionales por la Argentina tras participar de la comitiva oficial que viajó a París y sostuvo que la principal preocupación que recogió estuvo vinculada con…",
+   "seccion": "Política",
+   "fecha": "2026-10-11T12:28:08.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/frigerio-respaldo-el-rumbo-economico-de-milei-y-pidio-evitar-que-la-argentina-vuelva-al-pasado_a6acb8024f61ec7711f614bba",
+     "fecha": "2026-10-11T12:28:08.000Z"
+    },
+    {
+     "medio": "Ecos Diarios (Necochea)",
+     "enlace": "https://elecos.com.ar/rogelio-frigerio-respaldo-el-rumbo-economico-de-javier-milei-y-pidio-previsibilidad",
+     "fecha": "2026-10-11T13:08:39.000Z"
+    },
+    {
+     "medio": "Letra P",
+     "enlace": "https://www.letrap.com.ar//politica/el-minuto-minuto-la-era-javier-milei-n5425362",
+     "fecha": "2026-10-11T14:21:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"francia\" y la fuente no",
    "maximo": 3
   }
  ]

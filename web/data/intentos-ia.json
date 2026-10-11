@@ -525,6 +525,11 @@
   "ultimo": "2026-10-08T00:10:23.160Z",
   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
+ "1bzlkfq": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T15:01:58.999Z",
+  "motivo": "título o bajada: 3 problemas (antecedente, nombre): el titulo usa \"formula\", que sale de una nota anterior, como si fuera de hoy"
+ },
  "1c33j6a": {
   "intentos": 1,
   "ultimo": "2026-10-10T02:31:34.700Z",
@@ -893,6 +898,11 @@
   "intentos": 1,
   "ultimo": "2026-10-10T04:01:29.600Z",
   "motivo": "cuerpo: 3 problemas (numero, fecha, promesa): el cuerpo dice 12 y la fuente no lo dice; sin esas oraciones quedan 25 palabras"
+ },
+ "1jn8kso": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T15:01:58.999Z",
+  "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"francia\" y la fuente no"
  },
  "1jwkhok": {
   "intentos": 1,
@@ -1900,6 +1910,11 @@
  "ccot62": {
   "intentos": 2,
   "ultimo": "2026-10-07T16:02:37.748Z",
+  "motivo": "con cuerpo"
+ },
+ "cehe1a": {
+  "intentos": 1,
+  "ultimo": "2026-10-11T15:01:58.999Z",
   "motivo": "con cuerpo"
  },
  "cn09w9": {
