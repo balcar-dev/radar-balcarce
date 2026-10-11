@@ -11857,16 +11857,16 @@
   "cuando": "2026-10-10T20:31:54.796Z"
  },
  "p4vc8j": {
-  "archivo": "fotos-notas/p4vc8j.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
   "enlace": "https://accion5.com/aventura-balcarce-sera-sede-para-la-gran-final-bonaerense/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/BAAVENTURA.jpg",
   "razon": "Tiene excelente nitidez y encuadre, muestra claramente el evento deportivo sin marcas de agua de medios ni menores reconocibles.",
-  "cuando": "2026-10-10T22:02:00.575Z"
+  "cuando": "2026-10-10T22:02:00.575Z",
+  "intentado": true,
+  "borrada": true
  },
  "17wk7q3": {
   "medio": "Olé",
@@ -12028,5 +12028,29 @@
   "cuando": "2026-10-11T07:01:55.303Z",
   "intentos": 1,
   "fuentes": 2
+ },
+ "1m2za7b": {
+  "archivo": "fotos-notas/1m2za7b.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Radio Líder Balcarce Stream alcanza cifras récord a dos semanas de su inicio",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45056-radio-lider-balcarce-stream-un-exito-rotundo-de-audiencia-desde-el-primer-dia/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66020.png",
+  "razon": "Es la única opción disponible, tiene buena nitidez y encuadre, y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-11T10:31:51.738Z"
+ },
+ "atnmk9": {
+  "archivo": "fotos-notas/atnmk9.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45055-unimos-la-necesidad-de-las-familias-con-la-busqueda-laboral-de-los-acompanantes-terapeuticos/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66019.png",
+  "razon": "Es la única foto disponible, tiene buena nitidez, encuadre adecuado y no presenta marcas de agua ni menores.",
+  "cuando": "2026-10-11T10:31:51.738Z"
  }
 }
