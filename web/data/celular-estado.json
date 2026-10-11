@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T07:31:53.130Z",
- "portada": 26,
+ "generado": "2026-10-11T08:01:48.859Z",
+ "portada": 30,
  "archivo": 908,
- "esperandoCuerpo": 1,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-11T07:31:53.164Z",
+  "generado": "2026-10-11T08:01:48.893Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,13 +85,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "1gkf7qu",
-      "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
-     },
      {
       "id": "p4vc8j",
       "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
@@ -106,6 +101,11 @@
       "id": "1vwpejn",
       "titulo": "El Concejo declara de interés el aniversario del Club Amigos Unidos",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1c33j6a",
+      "titulo": "El torneo de la Liga Balcarceña se atrasa y terminaría en enero",
+      "seccion": "Fútbol"
      }
     ]
    },
