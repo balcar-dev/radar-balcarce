@@ -1809,6 +1809,20 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-10/podcast": {
+      "cuando": "2026-10-11T00:05:53.589Z",
+      "mediaId": "18477776317115202",
+      "nombre": "podcast",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": [
+        "1nhtdpr",
+        "17wk7q3",
+        "146dyw0",
+        "jul3dj"
+      ],
+      "permalink": "https://www.instagram.com/reel/DeVVJ4Qj3T5/"
     }
   },
   "facebookVideos": {
@@ -3012,6 +3026,20 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-10/podcast": {
+      "cuando": "2026-10-11T00:06:32.562Z",
+      "mediaId": "1106085928481737",
+      "nombre": "podcast",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": [
+        "1nhtdpr",
+        "17wk7q3",
+        "146dyw0",
+        "jul3dj"
+      ],
+      "permalink": "https://www.facebook.com/reel/1106085928481737/"
     }
   },
   "instagramFeed": {
@@ -4162,6 +4190,20 @@
       "cuando": "2026-10-10T20:04:39.543Z",
       "mediaId": "1784242009303158",
       "nombre": "utiles",
+      "red": "facebook",
+      "notaId": null
+    },
+    "instagram/2026-10-10/podcast": {
+      "cuando": "2026-10-11T00:06:25.317Z",
+      "mediaId": "17962281984209024",
+      "nombre": "podcast",
+      "red": "instagram",
+      "notaId": null
+    },
+    "facebook/2026-10-10/podcast": {
+      "cuando": "2026-10-11T00:07:06.707Z",
+      "mediaId": "1476009247762627",
+      "nombre": "podcast",
       "red": "facebook",
       "notaId": null
     }
