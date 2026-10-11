@@ -1204,7 +1204,7 @@
  },
  "clasificacion": {
   "temporada": 2026,
-  "ronda": 16,
+  "ronda": 17,
   "filas": [
    {
     "posicion": 1,
@@ -1212,7 +1212,7 @@
     "colapinto": false,
     "equipo": "Mercedes",
     "numero": "12",
-    "puntos": 302,
+    "puntos": 325,
     "victorias": 8
    },
    {
@@ -1230,35 +1230,35 @@
     "colapinto": false,
     "equipo": "Ferrari",
     "numero": "44",
-    "puntos": 199,
+    "puntos": 221,
     "victorias": 1
    },
    {
     "posicion": 4,
-    "piloto": "Lando Norris",
-    "colapinto": false,
-    "equipo": "McLaren",
-    "numero": "1",
-    "puntos": 186,
-    "victorias": 2
-   },
-   {
-    "posicion": 5,
     "piloto": "Charles Leclerc",
     "colapinto": false,
     "equipo": "Ferrari",
     "numero": "16",
-    "puntos": 179,
+    "puntos": 197,
     "victorias": 1
    },
    {
-    "posicion": 6,
+    "posicion": 5,
     "piloto": "Max Verstappen",
     "colapinto": false,
     "equipo": "Red Bull",
     "numero": "3",
-    "puntos": 163,
-    "victorias": 0
+    "puntos": 196,
+    "victorias": 1
+   },
+   {
+    "posicion": 6,
+    "piloto": "Lando Norris",
+    "colapinto": false,
+    "equipo": "McLaren",
+    "numero": "1",
+    "puntos": 189,
+    "victorias": 2
    },
    {
     "posicion": 7,
@@ -1266,7 +1266,7 @@
     "colapinto": false,
     "equipo": "McLaren",
     "numero": "81",
-    "puntos": 120,
+    "puntos": 128,
     "victorias": 0
    },
    {
@@ -1275,7 +1275,7 @@
     "colapinto": false,
     "equipo": "Red Bull",
     "numero": "6",
-    "puntos": 86,
+    "puntos": 96,
     "victorias": 0
    },
    {
@@ -1284,7 +1284,7 @@
     "colapinto": false,
     "equipo": "Red Bull",
     "numero": "30",
-    "puntos": 59,
+    "puntos": 69,
     "victorias": 0
    },
    {
@@ -1302,7 +1302,7 @@
     "colapinto": false,
     "equipo": "RB F1 Team",
     "numero": "41",
-    "puntos": 37,
+    "puntos": 38,
     "victorias": 0
    },
    {
@@ -1320,7 +1320,7 @@
     "colapinto": false,
     "equipo": "Haas F1 Team",
     "numero": "87",
-    "puntos": 20,
+    "puntos": 23,
     "victorias": 0
    },
    {
@@ -1338,7 +1338,7 @@
     "colapinto": false,
     "equipo": "Audi",
     "numero": "27",
-    "puntos": 7,
+    "puntos": 9,
     "victorias": 0
    },
    {
@@ -1352,6 +1352,15 @@
    },
    {
     "posicion": 17,
+    "piloto": "Fernando Alonso",
+    "colapinto": false,
+    "equipo": "Aston Martin",
+    "numero": "14",
+    "puntos": 7,
+    "victorias": 0
+   },
+   {
+    "posicion": 18,
     "piloto": "Carlos Sainz",
     "colapinto": false,
     "equipo": "Williams",
@@ -1360,21 +1369,12 @@
     "victorias": 0
    },
    {
-    "posicion": 18,
+    "posicion": 19,
     "piloto": "Alexander Albon",
     "colapinto": false,
     "equipo": "Williams",
     "numero": "23",
     "puntos": 5,
-    "victorias": 0
-   },
-   {
-    "posicion": 19,
-    "piloto": "Fernando Alonso",
-    "colapinto": false,
-    "equipo": "Aston Martin",
-    "numero": "14",
-    "puntos": 3,
     "victorias": 0
    },
    {
@@ -1417,36 +1417,36 @@
  },
  "constructores": {
   "temporada": 2026,
-  "ronda": 16,
+  "ronda": 17,
   "filas": [
    {
     "posicion": 1,
     "equipo": "Mercedes",
-    "puntos": 556,
+    "puntos": 561,
     "victorias": 11
    },
    {
     "posicion": 2,
     "equipo": "Ferrari",
-    "puntos": 405,
+    "puntos": 418,
     "victorias": 2
    },
    {
     "posicion": 3,
     "equipo": "McLaren",
-    "puntos": 316,
+    "puntos": 317,
     "victorias": 2
    },
    {
     "posicion": 4,
     "equipo": "Red Bull",
-    "puntos": 298,
+    "puntos": 306,
     "victorias": 1
    },
    {
     "posicion": 5,
     "equipo": "RB F1 Team",
-    "puntos": 90,
+    "puntos": 94,
     "victorias": 0
    },
    {
@@ -1458,13 +1458,13 @@
    {
     "posicion": 7,
     "equipo": "Haas F1 Team",
-    "puntos": 27,
+    "puntos": 30,
     "victorias": 0
    },
    {
     "posicion": 8,
     "equipo": "Audi",
-    "puntos": 17,
+    "puntos": 19,
     "victorias": 0
    },
    {
