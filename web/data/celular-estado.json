@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T12:31:55.317Z",
+ "generado": "2026-10-11T13:01:50.388Z",
  "portada": 23,
- "archivo": 909,
+ "archivo": 910,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-11T12:31:55.349Z",
+  "generado": "2026-10-11T13:01:50.406Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -83,15 +83,10 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 55,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "1mvohwm",
-      "titulo": "El papa León XIV anuncia una cirugía pulmonar antes de su viaje",
-      "seccion": "Argentina"
-     },
      {
       "id": "lb7md0",
       "titulo": "Inter golea al Parma y lidera la Serie A en solitario",
@@ -106,6 +101,11 @@
       "id": "1cj5sd",
       "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
       "seccion": "Agro"
+     },
+     {
+      "id": "1m2za7b",
+      "titulo": "Radio Líder Balcarce Stream alcanza cifras récord a dos semanas de su inicio",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -116,19 +116,8 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 30,
-    "notas": [
-     {
-      "id": "1m2za7b",
-      "titulo": "Radio Líder Balcarce Stream alcanza cifras récord a dos semanas de su inicio",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "14oacl3",
-      "titulo": "El operativo de documentación continúa el sábado en el Concejo",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    },
    {
     "nombre": "podcast",

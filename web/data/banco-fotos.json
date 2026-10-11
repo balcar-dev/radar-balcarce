@@ -12054,13 +12054,16 @@
   "cuando": "2026-10-11T10:31:51.738Z"
  },
  "1mvohwm": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1mvohwm.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El papa León XIV anuncia una cirugía pulmonar antes de su viaje",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-11T11:32:37.597Z",
-  "intentos": 1,
-  "fuentes": 9
+  "enlace": "https://www.lanacion.com.ar/el-mundo/el-papa-leon-xiv-anuncio-que-se-internara-para-operarse-de-un-nodulo-en-un-pulmon-a-pocos-dias-del-nid11102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-papa-leon-xiv-habla-este-domingo-en-el-RMXUCKKPGRCBZDO5XUW4FGSODM.JPG?auth=3eeb523e4b088462f386b2da5c6d7183c32be8d1fab154a077e621ff8ce1d7f2&width=1200&height=800&quality=70&smart=true",
+  "razon": "Tiene excelente nitidez y encuadre, muestra claramente al protagonista sin marcas superpuestas ni menores de edad.",
+  "cuando": "2026-10-11T13:01:39.014Z"
  },
  "jzwgk2": {
   "archivo": "fotos-notas/jzwgk2.jpg",
@@ -12073,5 +12076,17 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/10/10/mI5OQ_Iyp_2000x1500__1.jpg",
   "razon": "Es la única foto libre de marcas agregadas y menores reconocibles, con buen encuadre de la tribuna.",
   "cuando": "2026-10-11T11:32:37.597Z"
+ },
+ "18ck224": {
+  "archivo": "fotos-notas/18ck224.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Luis Martín despide a Lionel Messi con una emotiva carta en redes",
+  "enlace": "https://radiomitre.cienradios.com/deportes/la-emotiva-carta-del-preparador-fisico-de-la-seleccion-argentina-a-lionel-messi-tras-su-despedida-en-cada-uno-de-tus-abrazos-encontre-amor/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/EUVFP7ZUPRD7NEXRB6UHQQ5BDE.jpg?smart=true&auth=75d862cd1b244085bbcf793b615bbd01f6b85775593d8b6cf02d7601c26a5236&width=1200&height=630",
+  "razon": "Muestra claramente a Luis Martín junto a Lionel Messi sonriendo y sin marcas agregadas ni menores.",
+  "cuando": "2026-10-11T13:01:39.014Z"
  }
 }
