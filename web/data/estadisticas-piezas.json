@@ -3209,6 +3209,56 @@
    "cuando": "2026-10-09T23:06:43.169Z",
    "medida": "2026-10-10T23:30:16.053Z",
    "metricas": {}
+  },
+  {
+   "clave": "instagram/reel/18129058636789596",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "podcast",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-10T00:06:07.119Z",
+   "medida": "2026-10-11T00:30:18.128Z",
+   "metricas": {
+    "reach": 3,
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/2286179775571749",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "podcast",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-10T00:06:50.708Z",
+   "medida": "2026-10-11T00:30:18.128Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/1096428886430223",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "podcast",
+   "dia": "2026-10-09",
+   "cuando": "2026-10-10T00:07:41.828Z",
+   "medida": "2026-10-11T00:30:18.128Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "instagram/historia/18094815581146440",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "efemeride",
+   "dia": "2026-10-10",
+   "cuando": "2026-10-10T12:06:14.642Z",
+   "medida": "2026-10-11T00:30:18.128Z",
+   "metricas": {}
   }
  ]
 }
