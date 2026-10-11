@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-11T08:44:17.696Z",
+  "generado": "2026-10-11T09:01:49.514Z",
   "notas": [
     {
       "id": "1gkf7qu",
@@ -1064,10 +1064,10 @@
       "seccion": "Argentina",
       "medios": [
         "Agencia DIB",
-        "La Opinión",
-        "QZ Noticias (Mar del Plata)",
         "La Verdad",
+        "La Opinión",
         "Infoeme",
+        "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://dib.com.ar/sociedad/lujan-el-municipio-lanzo-un-portal-informacion-alojamientos-la-visita-del-papa-n56394",
@@ -1280,6 +1280,84 @@
       "foto": {
         "archivo": "fotos-notas/sotcms.jpg",
         "credito": "Foto: El Eco de Tandil"
+      }
+    },
+    {
+      "id": "6oh5ax",
+      "titulo": "El transporte público funciona con cronogramas especiales por el fin de semana largo",
+      "copete": "Los colectivos, subtes y trenes modifican sus frecuencias y horarios habituales debido al feriado. El servicio del tren Sarmiento registra un corte total por obras.",
+      "cuerpo": "Los colectivos circulan con frecuencias reducidas similares a los domingos, mientras que los subtes y el Premetro inician sus recorridos más tarde y cierran según el cronograma festivo.\n\nAdemás, el servicio ferroviario de la línea Sarmiento permanece suspendido desde el sábado 10 hasta el martes 13 de octubre inclusive.\n\nPara reemplazar el trayecto ferroviario afectado, los usuarios disponen de líneas alternativas de colectivos como la 136, 153, 163, 166, 182 y 242 para conectar distintas zonas.",
+      "guion": "El transporte público funciona con cronogramas especiales por el fin de semana largo",
+      "seccion": "Argentina",
+      "medios": [
+        "Minuto Uno",
+        "Crónica",
+        "Canal 26"
+      ],
+      "enlace": "https://www.cronica.com.ar/sociedad/fin-de-semana-largo-como-funcionara-el-transporte-publico-y-que-pasara-con-los-trenes-y-colectivos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T11:01:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-10T15:01:48.819Z",
+      "relevancia": 46,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Modifican frecuencias de colectivos, subtes y Premetro",
+        "El tren Sarmiento está interrumpido cuatro días por obras",
+        "Funcionan líneas alternativas de colectivos para reemplazar el tren"
+      ],
+      "seSabe": [
+        "Los colectivos circulan con cronograma de domingos y feriados",
+        "El subte y el Premetro operan con horarios reducidos",
+        "El tren Sarmiento se encuentra interrumpido hasta el martes 13"
+      ],
+      "noConfirmado": [
+        "La normalización exacta de cada frecuencia posterior al feriado"
+      ],
+      "textoRedes": "El transporte público funciona con cronogramas especiales y modificaciones en colectivos, subtes y trenes durante el fin de semana largo.",
+      "etiquetas": [
+        "transporte",
+        "feriado",
+        "colectivos",
+        "trenes",
+        "subtes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/fin-de-semana-largo-como-funcionara-el-transporte-publico-y-que-pasara-con-los-trenes-y-colectivos/",
+          "fecha": "2026-10-10T11:01:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las modificaciones en colectivos, subtes, Premetro y la interrupción del tren Sarmiento"
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/fin-semana-largo-como-funcionan-los-servicios-y-el-transporte-el-amba-n6332304",
+          "fecha": "2026-10-10T12:23:34.000Z",
+          "oficial": false,
+          "aporte": "Indicó que habrá modificaciones y una interrupción que afecta a los pasajeros"
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/general/2026/10/10/fin-de-semana-largo-como-funcionan-los-trenes-colectivos-subtes-y-servicios-en-el-amba/",
+          "fecha": "2026-10-10T14:45:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los cronogramas especiales desde el sábado 10 hasta el lunes 12 de octubre"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-transporte-publico-funciona-con-cronogramas-especiales-por-el-fin",
+      "foto": {
+        "archivo": "fotos-notas/6oh5ax.jpg",
+        "credito": "Foto: Crónica"
       }
     },
     {
@@ -1740,6 +1818,7 @@
         "Perfil",
         "Infórmese Primero (FM 104.9)",
         "El Cronista",
+        "Página/12",
         "A24",
         "iProfesional",
         "Minuto Uno",
@@ -1750,6 +1829,7 @@
         "0221",
         "La Tecla",
         "Letra P",
+        "La Verdad",
         "InfoRegión",
         "ANDigital",
         "QZ Noticias (Mar del Plata)",
@@ -2042,7 +2122,7 @@
       "temp": 8,
       "sensacion": 6,
       "humedad": 95,
-      "viento": 9,
+      "viento": 8,
       "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": false
