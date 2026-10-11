@@ -1429,6 +1429,53 @@
         "vistas": 4,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-11T00:00:20.707Z",
+      "web": {
+        "u12": {
+          "visitas": 26,
+          "vistas": 91
+        },
+        "a12": {
+          "visitas": 16,
+          "vistas": 22
+        },
+        "u24": {
+          "visitas": 42,
+          "vistas": 113
+        },
+        "a24": {
+          "visitas": 46,
+          "vistas": 165
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 13
+          },
+          {
+            "camino": "/nota/lando-norris-choca-a-su-companero-oscar-piastri-en-la-sprint-de-4u38d4",
+            "vistas": 10
+          },
+          {
+            "camino": "/seccion/politica",
+            "vistas": 9
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 9,
+        "vistas": 730,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 130,
+        "alcance": 14,
+        "vistas": 73,
+        "interacciones": 3
+      }
     }
   ],
   "dias": {
@@ -2310,7 +2357,12 @@
     },
     "2026-10-10": {
       "paises": {
-        "US": 5
+        "AR": 45,
+        "US": 32,
+        "SE": 8,
+        "IE": 5,
+        "PL": 4,
+        "DE": 2
       },
       "horas": [
         0,
@@ -2323,34 +2375,54 @@
         0,
         5,
         0,
+        6,
+        45,
         0,
+        6,
         0,
+        19,
         0,
+        7,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        8,
         0,
         0,
         0,
         0
       ],
       "referentes": {
-        "facebook.com": 2
+        "facebook.com": 25,
+        "directo": 3
       },
       "dispositivos": {
-        "mobile": 3,
-        "desktop": 2
+        "mobile": 60,
+        "desktop": 36
       },
-      "visitas": 2,
-      "vistas": 5,
+      "visitas": 28,
+      "vistas": 96,
       "notas": {
-        "15zr9uw": 5
+        "4u38d4": 10,
+        "u6j4ho": 8,
+        "p4vc8j": 8,
+        "1cj5sd": 7,
+        "1vwpejn": 5,
+        "15zr9uw": 5,
+        "1u383pj": 4,
+        "2qmh95": 4,
+        "1m8dnbh": 4,
+        "1360zul": 3,
+        "1qeim0": 3,
+        "9zwjal": 3,
+        "vw0kpx": 2,
+        "k1kiay": 2,
+        "190bbf8": 2
       },
-      "paginas": {}
+      "paginas": {
+        "/": 11,
+        "/seccion/politica": 9,
+        "/seccion/automovilismo": 4,
+        "/seccion/tecnologia": 2
+      }
     }
   }
 }
