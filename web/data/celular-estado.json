@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T01:02:00.562Z",
- "portada": 46,
+ "generado": "2026-10-11T01:31:39.748Z",
+ "portada": 43,
  "archivo": 908,
- "esperandoCuerpo": 1,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-11T01:02:00.601Z",
+  "generado": "2026-10-11T01:31:39.774Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -210,7 +210,14 @@
      "cuando": "2026-10-10T22:34:27.070Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1gkf7qu",
+     "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-11T00:04:27.070Z",
    "porDia": 5,
