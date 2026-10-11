@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T05:32:06.723Z",
- "portada": 29,
- "archivo": 908,
+ "generado": "2026-10-11T06:01:38.408Z",
+ "portada": 33,
+ "archivo": 909,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-11T05:32:06.755Z",
+  "generado": "2026-10-11T06:01:38.429Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,17 +85,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "p1wpy5",
+      "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1gkf7qu",
       "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "p1wpy5",
-      "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
+      "id": "p4vc8j",
+      "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
+      "seccion": "Deportes"
      },
      {
       "id": "1cj5sd",
