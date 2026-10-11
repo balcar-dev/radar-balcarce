@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-11T09:01:49.514Z",
+  "generado": "2026-10-11T09:31:44.624Z",
   "notas": [
     {
       "id": "1gkf7qu",
@@ -326,7 +326,7 @@
       "fecha": "2026-10-10T21:44:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-11T05:01:25.206Z",
-      "relevancia": 49,
+      "relevancia": 53,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -539,6 +539,7 @@
       "medios": [
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "Diario La Vanguardia"
@@ -697,11 +698,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45052-vendi-el-auto-pero-nunca-hicimos-la-transferencia-que-problemas-puedo-tener-si-todavia-figura-a-mi-nombre/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-10T18:31:46.672Z",
       "sinFecha": true,
       "visto": "2026-10-10T18:31:46.672Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -820,6 +821,85 @@
       "foto": {
         "archivo": "fotos-notas/1vwpejn.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "lb7md0",
+      "titulo": "Inter golea al Parma y lidera la Serie A en solitario",
+      "copete": "El conjunto milanés superó por 3-0 a su rival en el estadio Giuseppe Meazza con goles de Sucic, Calhanoglu y Thuram. El argentino Lautaro Martínez ingresó en el complemento.",
+      "cuerpo": "Petar Sucic abrió el marcador a los 13 minutos y Hakan Calhanoglu aumentó de penal poco después, mientras que Marcus Thuram selló la goleada. El delantero argentino Lautaro Martínez comenzó en el banco de suplentes e ingresó a los 60 minutos para disputar la última media hora.\n\nCon este resultado, el equipo dirigido por Cristian Chivu alcanzó los 16 puntos y se ubica como único puntero del campeonato a la espera del resto de los encuentros de la fecha. Por su parte, el Parma se encuentra en la decimoséptima posición con cuatro unidades.",
+      "guion": "Inter golea al Parma y lidera la Serie A en solitario",
+      "seccion": "Fútbol",
+      "medios": [
+        "Olé",
+        "Radio Mitre",
+        "El Día"
+      ],
+      "enlace": "https://www.ole.com.ar/futbol-internacional/italia/rato-lautaro-martinez-inter-goleo-parma-lidera-serie-solitario_0_dcAH3RklkT.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-10T18:27:14.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T06:01:27.564Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El partido se disputó en el estadio Giuseppe Meazza.",
+        "El entrenador del Inter es Cristian Chivu.",
+        "Franco Carboni y Mariano Troilo integraron el plantel del Parma.",
+        "El Parma quedó ubicado en el puesto 17 de la tabla."
+      ],
+      "noConfirmado": [
+        "No se informó si la Roma y la Lazio ganaron sus respectivos partidos para modificar la tabla."
+      ],
+      "etiquetas": [
+        "Inter",
+        "Parma",
+        "Serie A",
+        "Lautaro Martinez"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/futbol-internacional/italia/rato-lautaro-martinez-inter-goleo-parma-lidera-serie-solitario_0_dcAH3RklkT.html",
+          "fecha": "2026-10-10T18:27:14.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles del desarrollo del partido, los goleadores y la situación en la tabla de posiciones."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/el-inter-de-lautaro-martinez-goleo-3-0-al-parma-y-sigue-invicto-y-lider-de-la-serie-a-tras-seis-fechas/",
+          "fecha": "2026-10-10T19:04:17.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la victoria del Inter en el estadio Giuseppe Meazza y la participación del entrenador Cristian Chivu."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "u3bdm4",
+          "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
+          "fecha": "2026-10-10T17:03:23.000Z",
+          "ruta": "/nota/roman-gonzalez-supera-un-record-de-lautaro-martinez-en-racing-u3bdm4"
+        },
+        {
+          "id": "14fhl3o",
+          "titulo": "Lautaro Martínez alcanza a Agüero como tercer goleador histórico",
+          "fecha": "2026-09-15T03:00:00.000Z",
+          "ruta": "/nota/lautaro-martinez-alcanza-a-aguero-como-tercer-goleador-historico-14fhl3o"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "inter-golea-al-parma-y-lidera-la-serie-a-en-solitario",
+      "foto": {
+        "archivo": "fotos-notas/lb7md0.jpg",
+        "credito": "Foto: Olé"
       }
     },
     {
@@ -1741,11 +1821,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T23:32:00.485Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T23:29:47.000Z",
+      "sinFecha": false,
       "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1804,6 +1884,123 @@
       }
     },
     {
+      "id": "1360zul",
+      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
+      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
+      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:21:15.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:27:38.237Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
+        "La función se realiza en el teatro Roxy desde las 21.30.",
+        "El unipersonal cuenta con dirección de Martín Bontempo.",
+        "Las entradas están a la venta en Plateanet y en la boletería."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
+      "etiquetas": [
+        "Camila Peralta",
+        "Suavecita",
+        "Mar del Plata",
+        "teatro",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
+          "fecha": "2026-10-09T23:21:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
+      "foto": {
+        "archivo": "fotos-notas/1360zul.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
+      "id": "146dyw0",
+      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
+      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
+      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
+      "seccion": "Deportes",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-09T22:30:19.147Z",
+      "sinFecha": false,
+      "visto": "2026-10-09T23:27:38.237Z",
+      "relevancia": 85,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
+        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
+        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
+      "etiquetas": [
+        "Paula Boccia",
+        "tenis",
+        "Balcarce",
+        "Tucumán",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
+          "fecha": "2026-10-09T22:31:35.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
+      "foto": {
+        "archivo": "fotos-notas/146dyw0.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "x8b5c1",
       "titulo": "Ricardo Lorenzetti defiende el fallo de la Corte sobre la Ley de Tierras",
       "copete": "El juez de la Corte Suprema analizó la medida cautelar que frenó la derogación de la norma sobre venta a extranjeros y remarcó la trayectoria ambiental del tribunal.",
@@ -1839,8 +2036,9 @@
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "El Eco de Tandil",
-        "Radio Gabal (FM 104.1)",
-        "El Diario Balcarce"
+        "Noticias Agropecuarias",
+        "El Diario Balcarce",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/09/ricardo-lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-recursos-naturales/",
       "teniaImagenLaFuente": true,
@@ -1919,183 +2117,6 @@
         "archivo": "fotos-notas/x8b5c1.jpg",
         "credito": "Foto: Infobae"
       }
-    },
-    {
-      "id": "1429pe8",
-      "titulo": "Karina Milei proyecta la exportación de carne a Israel",
-      "copete": "La secretaria general de la Presidencia se reunió con la embajadora Ahuva Spieler Reshef para impulsar el mercado cárnico en el exterior.",
-      "cuerpo": "De la reunión participó el presidente ejecutivo de PromArgentina, Diego Sucalesca.\n\nDurante el encuentro, las autoridades anunciaron el lanzamiento de la Semana de la Carne Argentina en Israel. Como parte de la iniciativa de inserción comercial, representantes de frigoríficos integrarán una misión comercial a la ciudad de Tel Aviv con respaldo técnico y logístico.\n\nA principios de mes, la funcionaria nacional había encabezado rondas de negocios en París junto a firmas pesqueras y directivos de empresas francesas para incrementar exportaciones y captar inversiones.",
-      "guion": "Karina Milei proyecta la exportación de carne a Israel",
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Ámbito",
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "Bichos de Campo",
-        "Infobae"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/con-foco-en-las-exportaciones--karina-milei-se-reunio-con-la-embajadora-de-israel_a6ac95f9a587f18d75210421a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T21:34:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Karina Milei recibió a la embajadora de Israel en la Casa Rosada.",
-        "Anunciaron el lanzamiento de la Semana de la Carne Argentina en Israel.",
-        "Representantes de frigoríficos viajarán a Tel Aviv para una misión comercial."
-      ],
-      "noConfirmado": [
-        "Todavía no se informaron las fechas exactas en las que se desarrollará la misión comercial en Tel Aviv."
-      ],
-      "textoRedes": "Karina Milei mantuvo un encuentro con la embajadora de Israel en la Casa Rosada y anunciaron el lanzamiento de la Semana de la Carne Argentina para potenciar las exportaciones.",
-      "etiquetas": [
-        "Karina Milei",
-        "Israel",
-        "exportaciones",
-        "carne",
-        "PromArgentina"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/con-foco-en-las-exportaciones--karina-milei-se-reunio-con-la-embajadora-de-israel_a6ac95f9a587f18d75210421a",
-          "fecha": "2026-10-09T22:12:35.000Z",
-          "oficial": false,
-          "aporte": "Detalló el encuentro en la Casa Rosada y los objetivos de exportación."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/semana-de-la-carne-en-israel-karina-milei-y-la-embajadora-ahuva-spieler-reshef-anunciaron-una-nid09102026/",
-          "fecha": "2026-10-09T23:01:50.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación de Diego Sucalesca y el anuncio de la feria."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/el-gobierno-organizara-la-semana-la-carne-argentina-tel-aviv-impulsar-las-exportaciones-israel-n6332246",
-          "fecha": "2026-10-09T23:22:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que representantes de frigoríficos viajarán a Tel Aviv."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pq0gh4",
-          "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "ruta": "/nota/karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca-1pq0gh4"
-        },
-        {
-          "id": "oa2ef",
-          "titulo": "Karina Milei y gobernadores recorren un mercado mayorista en París",
-          "fecha": "2026-10-02T09:29:30.000Z",
-          "ruta": "/nota/karina-milei-y-gobernadores-recorren-un-mercado-mayorista-en-paris-oa2ef"
-        },
-        {
-          "id": "wcnatb",
-          "titulo": "Karina Milei se reóne en París con directivos de firmas francesas",
-          "fecha": "2026-10-01T13:40:00.000Z",
-          "ruta": "/nota/karina-milei-se-reone-en-paris-con-directivos-de-firmas-francesas-wcnatb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "karina-milei-proyecta-la-exportacion-de-carne-a-israel",
-      "foto": {
-        "archivo": "fotos-notas/1429pe8.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
-    {
-      "id": "1c33j6a",
-      "titulo": "El torneo de la Liga Balcarceña se atrasa y terminaría en enero",
-      "copete": "El certamen de fútbol local acumula once fechas suspendidas por el clima. La actividad podría reactivarse a fines de octubre y finalizaría a principios de enero.",
-      "cuerpo": "El torneo Oficial de fútbol de la Liga Balcarceña se atrasó tres meses debido a las malas condiciones climáticas. Según informó un medio local, el certamen acumula once fechas suspendidas y todavía no pudo dar inicio a la fase Clausura.\n\nLa competencia reúne a doce equipos locales en las categorías de primera, reserva, femenino e inferiores. La continuidad del torneo podría interrumpirse el próximo domingo por la celebración del Día de la Madre. Además, la reactivación prevista para el fin de semana del 24 y 25 de octubre dependerá de la disponibilidad de personal policial afectado a la carrera Zonal del Atlántico.\n\nEl calendario restante incluye seis fechas regulares, sumadas a las instancias eliminatorias de cuartos de final, semifinal y final. De desarrollarse sin nuevas interrupciones, la actividad culminaría tentativamente el domingo 3 de enero.",
-      "guion": "El torneo de la Liga Balcarceña se atrasa y terminaría en enero",
-      "seccion": "Fútbol",
-      "medios": [
-        "Acción 5 (Balcarce)"
-      ],
-      "enlace": "https://accion5.com/el-futbol-se-atraso-tres-meses-y-volveria-a-terminar-en-enero/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T21:11:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T02:31:26.354Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "bomberos"
-      ],
-      "como": "automatica",
-      "seSabe": [
-        "El torneo Oficial se atrasó tres meses debido a las condiciones climáticas, según informó un medio local.",
-        "El certamen acumula once fechas suspendidas y aún no inició la fase Clausura.",
-        "Doce equipos participan en primera, reserva, femenino e inferiores."
-      ],
-      "noConfirmado": [
-        "La posible suspensión de la próxima fecha por el Día de la Madre.",
-        "La disponibilidad de la Policía para el fin de semana del Zonal del Atlántico.",
-        "La fecha exacta de finalización del campeonato.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El torneo de la Liga Balcarceña acumula once fechas suspendidas por las condiciones climáticas y la actividad podría finalizar en enero.",
-      "etiquetas": [
-        "fútbol",
-        "Liga Balcarceña",
-        "clima"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Acción 5 (Balcarce)",
-          "enlace": "https://accion5.com/el-futbol-se-atraso-tres-meses-y-volveria-a-terminar-en-enero/",
-          "fecha": "2026-10-09T21:11:21.000Z",
-          "oficial": false,
-          "aporte": "Detalló el estado actual del torneo de fútbol local, los retrasos por el clima y la proyección de finalización."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "irc0sr",
-          "titulo": "Bomberos locales detallan su participación en el rescate en Venezuela",
-          "fecha": "2026-10-04T20:31:39.000Z",
-          "ruta": "/nota/bomberos-locales-detallan-su-participacion-en-el-rescate-en-venezuela-irc0sr"
-        },
-        {
-          "id": "16ml7pn",
-          "titulo": "Bomberos locales brindan una charla sobre el operativo en Venezuela",
-          "fecha": "2026-10-03T13:15:01.000Z",
-          "ruta": "/nota/bomberos-locales-brindan-una-charla-sobre-el-operativo-en-venezuela-16ml7pn"
-        },
-        {
-          "id": "76r67w",
-          "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
-          "fecha": "2026-09-30T17:35:31.000Z",
-          "ruta": "/nota/bomberos-gestiona-una-unidad-de-traslado-para-capacitaciones-76r67w"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-torneo-de-la-liga-balcarcena-se-atrasa-y-terminaria-en-enero",
-      "foto": {
-        "archivo": "fotos-notas/1c33j6a.jpg",
-        "credito": "Foto: Acción 5 (Balcarce)"
-      }
     }
   ],
   "secciones": [
@@ -2125,7 +2146,7 @@
       "viento": 8,
       "rumbo": "S",
       "cielo": "Nublado",
-      "esDeDia": false
+      "esDeDia": true
     },
     "dias": [
       {
@@ -2547,6 +2568,12 @@
       "titulo": "Denunciaron penalmente a Caputo y Bausili por la timba con…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "5w58zn",
+      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
+      "seccion": "Fútbol",
+      "motivo": "parece promoción, no noticia: \"suscribite\""
     },
     {
       "id": "1nerhmu",
