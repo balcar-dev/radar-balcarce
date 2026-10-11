@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T06:01:38.408Z",
- "portada": 33,
+ "generado": "2026-10-11T06:31:30.488Z",
+ "portada": 26,
  "archivo": 909,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-11T06:01:38.429Z",
+  "generado": "2026-10-11T06:31:30.508Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -85,13 +85,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "p1wpy5",
-      "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
-     },
      {
       "id": "1gkf7qu",
       "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
@@ -106,6 +101,11 @@
       "id": "1cj5sd",
       "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
       "seccion": "Agro"
+     },
+     {
+      "id": "1vwpejn",
+      "titulo": "El Concejo declara de interés el aniversario del Club Amigos Unidos",
+      "seccion": "Balcarce"
      }
     ]
    },

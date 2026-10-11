@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-11T06:01:38.408Z",
+  "generado": "2026-10-11T06:31:30.488Z",
   "notas": [
     {
       "id": "1gkf7qu",
@@ -473,7 +473,11 @@
       "guion": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
       "seccion": "Agro",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "News Balcarce (FM 91.7)",
+        "Infórmese Primero (FM 104.9)",
+        "El Diario Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/virginia-aparicio-hablo-en-polemica-en-gabal-sobre-sprint-y-su-situacion-en-el-inta",
       "teniaImagenLaFuente": true,
@@ -692,7 +696,7 @@
       "fecha": "2026-10-10T18:30:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-10T18:31:46.672Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -752,84 +756,6 @@
       "foto": {
         "archivo": "fotos-notas/1vwpejn.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
-      "id": "lb7md0",
-      "titulo": "Inter golea al Parma y lidera la Serie A en solitario",
-      "copete": "El conjunto milanés superó por 3-0 a su rival en el estadio Giuseppe Meazza con goles de Sucic, Calhanoglu y Thuram. El argentino Lautaro Martínez ingresó en el complemento.",
-      "cuerpo": "Petar Sucic abrió el marcador a los 13 minutos y Hakan Calhanoglu aumentó de penal poco después, mientras que Marcus Thuram selló la goleada. El delantero argentino Lautaro Martínez comenzó en el banco de suplentes e ingresó a los 60 minutos para disputar la última media hora.\n\nCon este resultado, el equipo dirigido por Cristian Chivu alcanzó los 16 puntos y se ubica como único puntero del campeonato a la espera del resto de los encuentros de la fecha. Por su parte, el Parma se encuentra en la decimoséptima posición con cuatro unidades.",
-      "guion": "Inter golea al Parma y lidera la Serie A en solitario",
-      "seccion": "Fútbol",
-      "medios": [
-        "Olé",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.ole.com.ar/futbol-internacional/italia/rato-lautaro-martinez-inter-goleo-parma-lidera-serie-solitario_0_dcAH3RklkT.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T18:27:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T06:01:27.564Z",
-      "relevancia": 59,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "El partido se disputó en el estadio Giuseppe Meazza.",
-        "El entrenador del Inter es Cristian Chivu.",
-        "Franco Carboni y Mariano Troilo integraron el plantel del Parma.",
-        "El Parma quedó ubicado en el puesto 17 de la tabla."
-      ],
-      "noConfirmado": [
-        "No se informó si la Roma y la Lazio ganaron sus respectivos partidos para modificar la tabla."
-      ],
-      "etiquetas": [
-        "Inter",
-        "Parma",
-        "Serie A",
-        "Lautaro Martinez"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/futbol-internacional/italia/rato-lautaro-martinez-inter-goleo-parma-lidera-serie-solitario_0_dcAH3RklkT.html",
-          "fecha": "2026-10-10T18:27:14.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles del desarrollo del partido, los goleadores y la situación en la tabla de posiciones."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/el-inter-de-lautaro-martinez-goleo-3-0-al-parma-y-sigue-invicto-y-lider-de-la-serie-a-tras-seis-fechas/",
-          "fecha": "2026-10-10T19:04:17.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la victoria del Inter en el estadio Giuseppe Meazza y la participación del entrenador Cristian Chivu."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "u3bdm4",
-          "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
-          "fecha": "2026-10-10T17:03:23.000Z",
-          "ruta": "/nota/roman-gonzalez-supera-un-record-de-lautaro-martinez-en-racing-u3bdm4"
-        },
-        {
-          "id": "14fhl3o",
-          "titulo": "Lautaro Martínez alcanza a Agüero como tercer goleador histórico",
-          "fecha": "2026-09-15T03:00:00.000Z",
-          "ruta": "/nota/lautaro-martinez-alcanza-a-aguero-como-tercer-goleador-historico-14fhl3o"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "inter-golea-al-parma-y-lidera-la-serie-a-en-solitario",
-      "foto": {
-        "archivo": "fotos-notas/lb7md0.jpg",
-        "credito": "Foto: Olé"
       }
     },
     {
@@ -996,6 +922,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "0221",
         "TN (Todo Noticias)",
         "Olé",
         "Doble Amarilla",
@@ -1207,100 +1134,6 @@
       }
     },
     {
-      "id": "1swm03b",
-      "titulo": "Conmemoran el Día Mundial de la Salud Mental y advierten sobre el estrés laboral",
-      "copete": "Especialistas señalan que la hiperconectividad y las exigencias del trabajo continuo generan problemas de bienestar psicológico, en una fecha donde recuerdan la necesidad de prevenir el agotamiento.",
-      "cuerpo": "El mundo conmemora el Día Mundial de la Salud Mental con el foco puesto en los desafíos del bienestar psicológico y la necesidad de mejorar la atención en los espacios de trabajo.\n\nEn la Argentina, una de cada tres personas presenta algún inconveniente vinculado a la salud mental, según indicaron distintas fuentes periodísticas. La hiperconectividad, el desgaste profesional y la dificultad para desconectar al finalizar la jornada laboral mantienen al cerebro en estado de alerta constante, lo que afecta la recuperación psíquica.\n\nEspecialistas en la materia explicaron que el estrés sostenido deja de ser un mecanismo adaptativo y provoca insomnio, cefaleas, distanciamiento afectivo y pérdida de placer en actividades recreativas. Como antecedentes, el calendario local ya había reunido fechas dedicadas al bienestar emocional y organizado encuentros abiertos sobre salud en el Círculo de Educadores a principios de mes.",
-      "guion": "Conmemoran el Día Mundial de la Salud Mental y advierten sobre el estrés laboral",
-      "seccion": "Argentina",
-      "medios": [
-        "El Eco de Tandil",
-        "Canal 26",
-        "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Ecos Diarios (Necochea)",
-        "Infoeme"
-      ],
-      "enlace": "https://noticiasargentinas.com/sociedad/dia-mundial-de-la-salud-mental--la-importancia-de-cuidar-el-bienestar-en-el-ambito-laboral_a6ac8f29a8e24c1a50acdb540",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T11:30:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T17:01:52.685Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El 10 de octubre se conmemora el Día Mundial de la Salud Mental.",
-        "Advierten sobre el impacto del estrés y la hiperconectividad laboral.",
-        "Especialistas detallan señales de alerta como insomnio y apatía.",
-        "En el país, un tercio de la población presenta problemas de salud mental."
-      ],
-      "textoRedes": "En el Día Mundial de la Salud Mental, especialistas advierten sobre el impacto de la hiperconectividad y el estrés laboral en el bienestar psicológico.",
-      "etiquetas": [
-        "Salud mental",
-        "Trabajo",
-        "Estrés",
-        "Universidad Hospital Italiano"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/sociedad/dia-mundial-de-la-salud-mental--la-importancia-de-cuidar-el-bienestar-en-el-ambito-laboral_a6ac8f29a8e24c1a50acdb540",
-          "fecha": "2026-10-10T11:30:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó la palabra de las especialistas Verónica Lapelle y Fátima Barragán sobre las señales de alerta del estrés laboral."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/instruyendo-al-ciudadano/dia-mundial-de-la-salud-mental-por-que-se-conmemora-cada-10-de-octubre",
-          "fecha": "2026-10-10T15:59:21.000Z",
-          "oficial": false,
-          "aporte": "Indicó el objetivo de visibilizar los desafíos del bienestar psicológico en la conmemoración."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/dia-mundial-de-la-salud-mental-uno-de-cada-tres-argentinos-presenta-malestar-psicologico",
-          "fecha": "2026-10-10T16:34:08.000Z",
-          "oficial": false,
-          "aporte": "Informó que en la Argentina una de cada tres personas presenta algún problema de salud mental."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-10-11-53-0-dia-mundial-de-la-salud-mental-la-importancia-de-cuidar-el-bienestar-en-el-ambito-laboral",
-          "fecha": "2026-10-10T16:16:45.000Z",
-          "oficial": false,
-          "aporte": "Detalló que el desgaste profesional y la hiperconectividad dificultan la desconexión personal."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "14imhay",
-          "titulo": "El calendario conmemora la salud mental y la danza",
-          "fecha": "2026-10-10T10:30:00.000Z",
-          "ruta": "/nota/el-calendario-conmemora-la-salud-mental-y-la-danza-14imhay"
-        },
-        {
-          "id": "c0hkeg",
-          "titulo": "Organizan una jornada abierta sobre salud y bienestar para adultos mayores",
-          "fecha": "2026-10-01T11:52:38.000Z",
-          "ruta": "/nota/el-circulo-de-educadores-recibe-un-ciclo-de-charlas-sobre-salud-en-la-c0hkeg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "conmemoran-el-dia-mundial-de-la-salud-mental-y-advierten-sobre-el",
-      "foto": {
-        "archivo": "fotos-notas/1swm03b.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
-    },
-    {
       "id": "sotcms",
       "titulo": "La Libertad Avanza realiza su congreso juvenil en Morón",
       "copete": "El sector libertario convoca a un congreso provincial en Morón con la participación de dirigentes y legisladores nacionales y bonaerenses. El encuentro debate la estrategia electoral hacia 2027.",
@@ -1386,84 +1219,6 @@
       }
     },
     {
-      "id": "6oh5ax",
-      "titulo": "El transporte público funciona con cronogramas especiales por el fin de semana largo",
-      "copete": "Los colectivos, subtes y trenes modifican sus frecuencias y horarios habituales debido al feriado. El servicio del tren Sarmiento registra un corte total por obras.",
-      "cuerpo": "Los colectivos circulan con frecuencias reducidas similares a los domingos, mientras que los subtes y el Premetro inician sus recorridos más tarde y cierran según el cronograma festivo.\n\nAdemás, el servicio ferroviario de la línea Sarmiento permanece suspendido desde el sábado 10 hasta el martes 13 de octubre inclusive.\n\nPara reemplazar el trayecto ferroviario afectado, los usuarios disponen de líneas alternativas de colectivos como la 136, 153, 163, 166, 182 y 242 para conectar distintas zonas.",
-      "guion": "El transporte público funciona con cronogramas especiales por el fin de semana largo",
-      "seccion": "Argentina",
-      "medios": [
-        "Minuto Uno",
-        "Crónica",
-        "Canal 26"
-      ],
-      "enlace": "https://www.cronica.com.ar/sociedad/fin-de-semana-largo-como-funcionara-el-transporte-publico-y-que-pasara-con-los-trenes-y-colectivos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T11:01:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T15:01:48.819Z",
-      "relevancia": 46,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Modifican frecuencias de colectivos, subtes y Premetro",
-        "El tren Sarmiento está interrumpido cuatro días por obras",
-        "Funcionan líneas alternativas de colectivos para reemplazar el tren"
-      ],
-      "seSabe": [
-        "Los colectivos circulan con cronograma de domingos y feriados",
-        "El subte y el Premetro operan con horarios reducidos",
-        "El tren Sarmiento se encuentra interrumpido hasta el martes 13"
-      ],
-      "noConfirmado": [
-        "La normalización exacta de cada frecuencia posterior al feriado"
-      ],
-      "textoRedes": "El transporte público funciona con cronogramas especiales y modificaciones en colectivos, subtes y trenes durante el fin de semana largo.",
-      "etiquetas": [
-        "transporte",
-        "feriado",
-        "colectivos",
-        "trenes",
-        "subtes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/fin-de-semana-largo-como-funcionara-el-transporte-publico-y-que-pasara-con-los-trenes-y-colectivos/",
-          "fecha": "2026-10-10T11:01:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las modificaciones en colectivos, subtes, Premetro y la interrupción del tren Sarmiento"
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/fin-semana-largo-como-funcionan-los-servicios-y-el-transporte-el-amba-n6332304",
-          "fecha": "2026-10-10T12:23:34.000Z",
-          "oficial": false,
-          "aporte": "Indicó que habrá modificaciones y una interrupción que afecta a los pasajeros"
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/general/2026/10/10/fin-de-semana-largo-como-funcionan-los-trenes-colectivos-subtes-y-servicios-en-el-amba/",
-          "fecha": "2026-10-10T14:45:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó los cronogramas especiales desde el sábado 10 hasta el lunes 12 de octubre"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-transporte-publico-funciona-con-cronogramas-especiales-por-el-fin",
-      "foto": {
-        "archivo": "fotos-notas/6oh5ax.jpg",
-        "credito": "Foto: Crónica"
-      }
-    },
-    {
       "id": "clima20261010",
       "propia": "clima",
       "titulo": "Clima en Balcarce: 70% de probabilidad de lluvia, con mínima de 7° y máxima de 13°",
@@ -1519,74 +1274,6 @@
         }
       ],
       "slug": "clima-en-balcarce-70-de-probabilidad-de-lluvia-con-minima-de-7-y"
-    },
-    {
-      "id": "if3bv6",
-      "titulo": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
-      "copete": "El tenista argentino cayó ante el checo Dalibor Svrcina en la segunda ronda del torneo disputado en China tras disputar tres sets.",
-      "cuerpo": "Tomás Martín Etcheverry quedó marginado del Másters 1000 de Shanghái tras ser derrotado por el checo Dalibor Svrcina. El encuentro se definió por 6-3, 3-6 y 7-5 luego de dos horas y 58 minutos de juego en la segunda instancia del certamen internacional.\n\nEl deportista europeo, situado en el puesto 126 del escalafón global, logró imponerse ante el argentino, que se encuentra en la posición 31 del ranking. El único antecedente entre ambos contendientes databa de 2023 en la ciudad de Zhuhai, con triunfo para el platense.",
-      "guion": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
-      "seccion": "Deportes",
-      "medios": [
-        "TyC Sports",
-        "El Día",
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/espana/agencias/2026/10/10/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T10:30:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T15:01:48.819Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Etcheverry perdió ante Svrcina en Shanghái",
-        "El marcador final fue 6-3, 3-6 y 7-5",
-        "El partido duró casi tres horas"
-      ],
-      "textoRedes": "Tomás Etcheverry quedó eliminado en la segunda ronda del Másters 1000 de Shanghái tras perder ante el checo Dalibor Svrcina por 6-3, 3-6 y 7-5.",
-      "etiquetas": [
-        "Tenis",
-        "Tomás Etcheverry",
-        "Shanghái"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/espana/agencias/2026/10/10/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking/",
-          "fecha": "2026-10-10T10:30:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló el resultado del partido, la duración del encuentro y los antecedentes entre los tenistas."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/tenis/el-argentino-etcheverry-cae-eliminado-en-segunda-ronda-ante-svrcina-el-126-del-ranking-id765473.html",
-          "fecha": "2026-10-10T10:35:34.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/el-platense-etcheverry-perdio-y-se-despidio-del-master-1000-de-shanghai-deportes_1791644040",
-          "fecha": "2026-10-10T14:59:21.000Z",
-          "oficial": false,
-          "aporte": "Informó la eliminación del tenista argentino en el torneo."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "tomas-etcheverry-queda-eliminado-en-el-masters-1000-de-shanghai",
-      "foto": {
-        "archivo": "fotos-notas/if3bv6.jpg",
-        "credito": "Foto: El Día"
-      }
     },
     {
       "id": "14oacl3",
@@ -1912,6 +1599,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "0221",
         "La Tecla",
         "Letra P",
         "InfoRegión",
@@ -2535,211 +2223,6 @@
         "archivo": "fotos-notas/libre-futbolresultadosliga20261009.jpg",
         "credito": "Foto: Unknown author Unknown author / Wikimedia Commons (Public domain)"
       }
-    },
-    {
-      "id": "npvutmbzyv",
-      "propia": "pista",
-      "pista": "pistavutmbzyv",
-      "titulo": "Fallece Margaret Hamilton, pionera de la informática en la NASA",
-      "copete": "La científica e ingeniera de software que lideró el equipo informático para las misiones Apolo murió a los 90 años. Su trabajo resultó clave para que la humanidad llegara a la Luna.",
-      "cuerpo": "Margaret Hamilton, la científica que lideró el desarrollo del software para el programa espacial Apolo de la NASA, falleció a los 90 años, según informó el Instituto Tecnológico de Massachusetts (MIT). La investigadora coordinó el equipo que escribió el código informático que guió las naves hacia la Luna.\n\nSu labor ayudó a consolidar la ingeniería de software como disciplina y recibió la Medalla Presidencial de la Libertad en 2016 de manos del presidente Barack Obama.",
-      "guion": null,
-      "seccion": "Argentina",
-      "local": false,
-      "relevancia": 95,
-      "medios": [
-        "lavozdegalicia.es",
-        "nytimes.com",
-        "es.linkedin.com",
-        "dw.com"
-      ],
-      "enlace": "https://www.lavozdegalicia.es/noticia/sociedad/2026/10/08/fallece-margaret-hamilton-pionera-programa-apolo-llegada-luna/00031791443811316536738.htm",
-      "fuentesConsultadas": [
-        {
-          "medio": "lavozdegalicia.es",
-          "enlace": "https://www.lavozdegalicia.es/noticia/sociedad/2026/10/08/fallece-margaret-hamilton-pionera-programa-apolo-llegada-luna/00031791443811316536738.htm",
-          "fecha": "Thu, 08 Oct 2026 07:46:00 GMT"
-        },
-        {
-          "medio": "nytimes.com",
-          "enlace": "https://www.nytimes.com/es/2026/10/08/espanol/muere-margaret-hamilton-nasa.html",
-          "fecha": "Thu, 08 Oct 2026 15:39:01 GMT"
-        },
-        {
-          "medio": "es.linkedin.com",
-          "enlace": "https://es.linkedin.com/posts/woomup_el-mundo-despide-a-margaret-hamilton-activity-7513964173362647040-Sd1B",
-          "fecha": "Thu, 08 Oct 2026 14:11:01 GMT"
-        },
-        {
-          "medio": "dw.com",
-          "enlace": "https://www.dw.com/es/fallece-margaret-hamilton-pionera-del-programa-apolo-y-de-la-llegada-del-hombre-a-la-luna/a-79589450",
-          "fecha": "Thu, 08 Oct 2026 08:32:54 GMT"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T18:24:32.986Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T18:24:32.986Z",
-      "publicadaPor": "Radar Balcarce (automática)",
-      "publicadaCuando": "2026-10-09T18:24:32.986Z",
-      "temas": [],
-      "etiquetas": [],
-      "como": "publicada",
-      "firma": "Nota de Radar Balcarce, escrita con IA a partir de lo que publicaron lavozdegalicia.es, nytimes.com, es.linkedin.com y dw.com y controlada contra esas fuentes",
-      "slug": "fallece-margaret-hamilton-pionera-de-la-informatica-en-la-nasa"
-    },
-    {
-      "id": "p1wpy5",
-      "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
-      "copete": "El cuerpo legislativo local avaló por unanimidad la iniciativa para organizar el sector y crear una plataforma digital. Además, avanzó con obras de pavimentación y autorizó operaciones financieras.",
-      "cuerpo": "La iniciativa fue impulsada por los concejales Gonzalo Scioli y Fara Amado Cunqueiro tras los reclamos de profesionales y estudiantes avanzados sobre las dificultades de inserción laboral.\n\nEl proyecto contempla una plataforma digital desarrollada junto al área de Modernización para que las familias e instituciones consulten la disponibilidad y formación de los prestadores. La ordenanza exige contar con título habilitante conforme a la Resolución Ministerial 1221/15.\n\nEn la misma sesión, los ediles autorizaron operaciones de leasing, aprobaron una obra de pavimentación y solicitaron informes al Ejecutivo sobre deudas de OSeBal-SAPEM y obras públicas.",
-      "guion": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "El Diario Balcarce"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/el-concejo-deliberante-aprobo-la.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T18:21:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T09:01:36.782Z",
-      "relevancia": 85,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Concejo aprobó por unanimidad la creación del registro municipal.",
-        "La plataforma digital servirá para consultar la disponibilidad de profesionales.",
-        "Será obligatorio contar con título habilitante para sumarse al padrón.",
-        "Los ediles también aprobaron obras de pavimentación y pedidos de informes."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta de lanzamiento de la plataforma digital para consultar a los profesionales."
-      ],
-      "textoRedes": "El Concejo Deliberante aprobó la creación de un registro municipal de acompañantes terapéuticos para facilitar la inserción laboral y el contacto con las familias. Además, el cuerpo legislativo avaló operaciones de leasing y solicitó informes al Ejecutivo.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "acompañantes terapéuticos",
-        "Balcarce",
-        "registro municipal",
-        "salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-concejo-deliberante-aprobo-la.html",
-          "fecha": "2026-10-09T22:51:14.511Z",
-          "oficial": false,
-          "aporte": "Detalló la aprobación por unanimidad del registro municipal de acompañantes terapéuticos, sus impulsores y los requisitos de inscripción."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45043-el-concejo-aprobo-la-creacion-de-un-registro-de-acompanantes-terapeuticos-y-nuevas-ordenanzas/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó sobre la autorización de operaciones de leasing, obras de pavimentación y pedidos de informes al Ejecutivo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pofkpj",
-          "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-          "fecha": "2026-10-05T20:25:05.000Z",
-          "ruta": "/nota/concejales-proponen-crear-un-registro-de-acompanantes-terapeuticos-1pofkpj"
-        },
-        {
-          "id": "15i90co",
-          "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
-          "fecha": "2026-10-01T15:01:12.943Z",
-          "ruta": "/nota/concejales-proponen-crear-un-registro-municipal-de-acompanantes-15i90co"
-        },
-        {
-          "id": "88fvqd",
-          "titulo": "El Concejo Deliberante analiza el descarte de remedios vencidos",
-          "fecha": "2026-10-09T22:40:56.000Z",
-          "ruta": "/nota/el-concejo-deliberante-analiza-el-descarte-de-remedios-vencidos-88fvqd"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-concejo-deliberante-aprueba-la-creacion-de-un-registro-de",
-      "foto": {
-        "archivo": "fotos-notas/p1wpy5.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "repaso20261009tarde",
-      "propia": "repaso",
-      "titulo": "El repaso de la tarde en Radar Balcarce: Fútbol, Campo de Pato y Virginia Aparicio",
-      "copete": "Radar Balcarce publicó a las 15:07 de este viernes 9 de octubre el repaso de la tarde en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la tarde del viernes 9, en el orden en que salieron en el audio.\n\nLa Liga Balcarceña de Fútbol posterga el inicio del Clausura. La primera fecha del Torneo Oficial 2026 se suspende otra vez por el agua acumulada en las canchas. La reprogramación se define en los próximos días.\n\nCampo de Pato gana la semifinal y clasifica a las finales de paleta. El equipo local se impuso en el Torneo Provincial de cuarta categoría y jugará el título en noviembre. Regresó este año a la competencia federada tras casi dos décadas.\n\nVirginia Aparicio brinda su testimonio el viernes en Polémica en Gabal. La investigadora del INTA Balcarce hablará el viernes a las 19 sobre el proceso de exoneración que enfrenta. La Facultad de Agronomía de la Universidad de Buenos Aires expresó su preocupación por el sumario administrativo.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T18:07:31.269Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T18:07:31.269Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-09T18:07:31.269Z",
-      "temas": [],
-      "etiquetas": [
-        "Fútbol",
-        "Campo de Pato",
-        "Virginia Aparicio"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "1j94k5u",
-        "14mxql1",
-        "18jx7kk"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "La Liga Balcarceña de Fútbol posterga el inicio del Clausura",
-          "href": "/nota/la-liga-balcarcena-de-futbol-posterga-el-inicio-del-clausura-1j94k5u"
-        },
-        {
-          "texto": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
-          "href": "/nota/campo-de-pato-gana-la-semifinal-y-clasifica-a-las-finales-de-paleta-14mxql1"
-        },
-        {
-          "texto": "Virginia Aparicio brinda su testimonio el viernes en Polémica en Gabal",
-          "href": "/nota/virginia-aparicio-habla-en-radio-sobre-su-situacion-en-el-inta-18jx7kk"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DeSHWHMju0Y/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/1421058686798730/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-futbol-campo-de-pato-dnu-y",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261009tarde.jpg",
-        "credito": "Fotos: Infórmese Primero (FM 104.9) y Municipalidad de Balcarce"
-      }
     }
   ],
   "secciones": [
@@ -2754,19 +2237,13 @@
     "Política",
     "Economía"
   ],
-  "temas": [
-    {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
-      "cuantas": 2
-    }
-  ],
+  "temas": [],
   "clima": {
     "ahora": {
       "temp": 7,
-      "sensacion": 4,
-      "humedad": 97,
-      "viento": 12,
+      "sensacion": 5,
+      "humedad": 96,
+      "viento": 11,
       "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": false
@@ -3185,12 +2662,6 @@
       "titulo": "Una locomotora y tres vagones con 600 toneladas de carbón…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "vvpj0a",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "1dwyzr7",
