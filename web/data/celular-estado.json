@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T12:02:00.708Z",
- "portada": 22,
+ "generado": "2026-10-11T12:31:55.317Z",
+ "portada": 23,
  "archivo": 909,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-11T12:02:00.738Z",
+  "generado": "2026-10-11T12:31:55.349Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-11T12:06:47.934Z"
    },
    {
     "nombre": "noticia1",
@@ -103,9 +103,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1m2za7b",
-      "titulo": "Radio Líder Balcarce Stream alcanza cifras récord a dos semanas de su inicio",
-      "seccion": "Balcarce"
+      "id": "1cj5sd",
+      "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
+      "seccion": "Agro"
      }
     ]
    },
@@ -116,8 +116,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 30,
+    "notas": [
+     {
+      "id": "1m2za7b",
+      "titulo": "Radio Líder Balcarce Stream alcanza cifras récord a dos semanas de su inicio",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "14oacl3",
+      "titulo": "El operativo de documentación continúa el sábado en el Concejo",
+      "seccion": "Balcarce"
+     }
+    ]
    },
    {
     "nombre": "podcast",
