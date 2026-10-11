@@ -11614,16 +11614,16 @@
   "cuando": "2026-10-10T08:01:55.544Z"
  },
  "p1wpy5": {
-  "archivo": "fotos-notas/p1wpy5.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Concejo Deliberante aprueba la creación de un registro de acompañantes terapéuticos",
   "enlace": "https://www.diariolavanguardia.com/noticias/45043-el-concejo-aprobo-la-creacion-de-un-registro-de-acompanantes-terapeuticos-y-nuevas-ordenanzas/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66006.png",
   "razon": "Es la única foto disponible, tiene buena nitidez y encuadre del Concejo Deliberante, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-10T09:02:05.525Z"
+  "cuando": "2026-10-10T09:02:05.525Z",
+  "intentado": true,
+  "borrada": true
  },
  "1tf8zc1": {
   "archivo": "fotos-notas/1tf8zc1.jpg",
@@ -12019,5 +12019,14 @@
   "imagenOriginal": "https://www.ole.com.ar/images/2026/10/10/SznwNn39P_2000x1500__1.jpg",
   "razon": "La foto A muestra una jugada clara del partido con excelente nitidez y sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-11T06:01:34.286Z"
+ },
+ "1i26d5h": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Inter golea al Parma y se mantiene en la cima de la Serie A",
+  "razon": "Ninguna de las fotos cumple con los requisitos: la foto A tiene una marca de agua del medio (Noticias Argentinas) y la foto B no es una imagen válida para ilustrar la nota (es solo un logo sobre fondo blanco).",
+  "cuando": "2026-10-11T07:01:55.303Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }
