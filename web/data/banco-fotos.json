@@ -11497,16 +11497,16 @@
   "borrada": true
  },
  "18k03tm": {
-  "archivo": "fotos-notas/18k03tm.jpg",
   "medio": "El Diario Balcarce",
-  "credito": "Foto: El Diario Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "Virginia Aparicio brinda una charla abierta sobre plaguicidas",
   "enlace": "https://eldiariobalcarce.com.ar/virginia-aparicio-brindara-una-charla-abierta-sobre-plaguicidas-y-salud-928",
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-09-22-44-16aparic.jpg",
   "razon": "Es la única opción disponible, cumple con los requisitos y no tiene marcas ni menores.",
-  "cuando": "2026-10-10T01:31:54.464Z"
+  "cuando": "2026-10-10T01:31:54.464Z",
+  "intentado": true,
+  "borrada": true
  },
  "xj8ent": {
   "medio": "Minuto Uno",
@@ -11970,5 +11970,18 @@
   "imagenOriginal": "https://media.tycsports.com/files/2026/10/10/994926/la-inolvidable-camiseta-que-se-llevo-messi-despues-de-su-despedida-de-la-seleccion_862x485.webp?v=1",
   "razon": "La imagen A tiene mejor encuadre y no presenta marcas de agua ni menores, ilustrando perfectamente la nota.",
   "cuando": "2026-10-11T02:08:25.756Z"
+ },
+ "u3bdm4": {
+  "archivo": "fotos-notas/u3bdm4.jpg",
+  "medio": "Wikimedia Commons",
+  "credito": "Foto: Sars03 / Wikimedia Commons (CC BY-SA 3.0)",
+  "licencia": "CC BY-SA 3.0",
+  "autor": "Sars03",
+  "origen": "wikimedia",
+  "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
+  "enlace": "https://commons.wikimedia.org/wiki/File:Rom%C3%A1n_Gonz%C3%A1lez_e_Damir_Tvrdi%C4%87_(Crabs_Rimini).JPG",
+  "imagenOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Rom%C3%A1n_Gonz%C3%A1lez_e_Damir_Tvrdi%C4%87_%28Crabs_Rimini%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "razon": "Ninguna fuente tenía una foto que sirviera; se usó una foto libre de \"Román González\" de Wikimedia Commons (CC BY-SA 3.0).",
+  "cuando": "2026-10-11T04:31:54.769Z"
  }
 }
