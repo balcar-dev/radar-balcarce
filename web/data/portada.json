@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-11T07:01:59.807Z",
+  "generado": "2026-10-11T07:31:53.130Z",
   "notas": [
     {
       "id": "1gkf7qu",
@@ -326,7 +326,7 @@
       "fecha": "2026-10-10T21:44:31.000Z",
       "sinFecha": false,
       "visto": "2026-10-11T05:01:25.206Z",
-      "relevancia": 53,
+      "relevancia": 49,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -536,7 +536,6 @@
       "medios": [
         "Radio Gabal (FM 104.1)",
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "Diario La Vanguardia"
@@ -695,11 +694,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45052-vendi-el-auto-pero-nunca-hicimos-la-transferencia-que-problemas-puedo-tener-si-todavia-figura-a-mi-nombre/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-10T18:31:46.672Z",
       "sinFecha": true,
       "visto": "2026-10-10T18:31:46.672Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -819,72 +818,6 @@
         "archivo": "fotos-notas/1vwpejn.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
       }
-    },
-    {
-      "id": "1v3fa4r",
-      "titulo": "Franco Colapinto busca la recuperación tras una jornada difícil",
-      "copete": "El piloto argentino quedó fuera de la carrera corta por una falla técnica y largará decimoquinto el domingo en el Gran Premio de Singapur.",
-      "cuerpo": "El piloto argentino Franco Colapinto largará el domingo en el decimoquinto puesto durante el Gran Premio de Singapur, la decimoséptima fecha del campeonato de Fórmula Uno, tras una jornada complicada en el circuito urbano de Marina Bay.\n\nEl deportista de la escudería Alpine debió abandonar la prueba sprint sabatina por una falla mecánica que provocó la pérdida total de potencia y la detención del vehículo en la calzada.\n\nDurante la sesión clasificatoria, experimentó dificultades con el rendimiento del monoplaza y un cambio imprevisto en el equilibrio que le restó adherencia en la parte trasera, además de un toque contra el muro en el tramo final.\n\nA pesar de no haber sumado puntos en la competencia corta ni en la presentación anterior en Malasia, se mantiene en el duodécimo lugar de la tabla general con 27 unidades y confía en avanzar durante la competencia principal.",
-      "guion": "Franco Colapinto busca la recuperación tras una jornada difícil",
-      "seccion": "Automovilismo",
-      "medios": [
-        "TyC Sports",
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/america/agencias/2026/10/10/colapinto-ha-sido-un-dia-algo-frustrante/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T18:00:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T18:31:46.672Z",
-      "relevancia": 56,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El piloto argentino largará decimoquinto en el Gran Premio de Singapur.",
-        "Abandonó la prueba sprint sabatina debido a una falla técnica.",
-        "Marcha duodécimo en el campeonato mundial con 27 puntos acumulados."
-      ],
-      "seSabe": [
-        "Franco Colapinto compite para la escudería Alpine.",
-        "El piloto sufrió un desperfecto mecánico que lo obligó a retirarse de la prueba sprint.",
-        "Largará desde la decimoquinta posición en la carrera de este domingo.",
-        "Ocupa el duodécimo puesto del campeonato mundial con 27 unidades."
-      ],
-      "noConfirmado": [
-        "Las causas exactas del fallo técnico que detuvo el vehículo durante la prueba sprint continúan bajo análisis técnico por parte del equipo."
-      ],
-      "textoRedes": "Franco Colapinto afrontará este domingo el Gran Premio de Singapur desde el decimoquinto lugar de la grilla, luego de quedar fuera de la prueba sprint sabatina a causa de un problema técnico en su monoplaza.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Formula Uno",
-        "Gran Premio de Singapur",
-        "Alpine"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/america/agencias/2026/10/10/colapinto-ha-sido-un-dia-algo-frustrante/",
-          "fecha": "2026-10-10T18:00:50.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones de Franco Colapinto, su posición de largada, su situación en el campeonato mundial y los inconvenientes mecánicos sufridos."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/colapinto-ha-sido-un-dia-algo-frustrante-id765563.html",
-          "fecha": "2026-10-10T18:01:33.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en su resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "franco-colapinto-busca-la-recuperacion-tras-una-jornada-dificil"
     },
     {
       "id": "r7245w",
@@ -1062,10 +995,10 @@
       "seccion": "Argentina",
       "medios": [
         "Agencia DIB",
-        "La Verdad",
         "La Opinión",
-        "Infoeme",
         "QZ Noticias (Mar del Plata)",
+        "La Verdad",
+        "Infoeme",
         "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://dib.com.ar/sociedad/lujan-el-municipio-lanzo-un-portal-informacion-alojamientos-la-visita-del-papa-n56394",
@@ -1281,84 +1214,6 @@
       }
     },
     {
-      "id": "6oh5ax",
-      "titulo": "El transporte público funciona con cronogramas especiales por el fin de semana largo",
-      "copete": "Los colectivos, subtes y trenes modifican sus frecuencias y horarios habituales debido al feriado. El servicio del tren Sarmiento registra un corte total por obras.",
-      "cuerpo": "Los colectivos circulan con frecuencias reducidas similares a los domingos, mientras que los subtes y el Premetro inician sus recorridos más tarde y cierran según el cronograma festivo.\n\nAdemás, el servicio ferroviario de la línea Sarmiento permanece suspendido desde el sábado 10 hasta el martes 13 de octubre inclusive.\n\nPara reemplazar el trayecto ferroviario afectado, los usuarios disponen de líneas alternativas de colectivos como la 136, 153, 163, 166, 182 y 242 para conectar distintas zonas.",
-      "guion": "El transporte público funciona con cronogramas especiales por el fin de semana largo",
-      "seccion": "Argentina",
-      "medios": [
-        "Minuto Uno",
-        "Crónica",
-        "Canal 26"
-      ],
-      "enlace": "https://www.cronica.com.ar/sociedad/fin-de-semana-largo-como-funcionara-el-transporte-publico-y-que-pasara-con-los-trenes-y-colectivos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T11:01:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T15:01:48.819Z",
-      "relevancia": 46,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Modifican frecuencias de colectivos, subtes y Premetro",
-        "El tren Sarmiento está interrumpido cuatro días por obras",
-        "Funcionan líneas alternativas de colectivos para reemplazar el tren"
-      ],
-      "seSabe": [
-        "Los colectivos circulan con cronograma de domingos y feriados",
-        "El subte y el Premetro operan con horarios reducidos",
-        "El tren Sarmiento se encuentra interrumpido hasta el martes 13"
-      ],
-      "noConfirmado": [
-        "La normalización exacta de cada frecuencia posterior al feriado"
-      ],
-      "textoRedes": "El transporte público funciona con cronogramas especiales y modificaciones en colectivos, subtes y trenes durante el fin de semana largo.",
-      "etiquetas": [
-        "transporte",
-        "feriado",
-        "colectivos",
-        "trenes",
-        "subtes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/fin-de-semana-largo-como-funcionara-el-transporte-publico-y-que-pasara-con-los-trenes-y-colectivos/",
-          "fecha": "2026-10-10T11:01:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las modificaciones en colectivos, subtes, Premetro y la interrupción del tren Sarmiento"
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/fin-semana-largo-como-funcionan-los-servicios-y-el-transporte-el-amba-n6332304",
-          "fecha": "2026-10-10T12:23:34.000Z",
-          "oficial": false,
-          "aporte": "Indicó que habrá modificaciones y una interrupción que afecta a los pasajeros"
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/general/2026/10/10/fin-de-semana-largo-como-funcionan-los-trenes-colectivos-subtes-y-servicios-en-el-amba/",
-          "fecha": "2026-10-10T14:45:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó los cronogramas especiales desde el sábado 10 hasta el lunes 12 de octubre"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-transporte-publico-funciona-con-cronogramas-especiales-por-el-fin",
-      "foto": {
-        "archivo": "fotos-notas/6oh5ax.jpg",
-        "credito": "Foto: Crónica"
-      }
-    },
-    {
       "id": "clima20261010",
       "propia": "clima",
       "titulo": "Clima en Balcarce: 70% de probabilidad de lluvia, con mínima de 7° y máxima de 13°",
@@ -1424,10 +1279,7 @@
       "seccion": "Agro",
       "medios": [
         "El Diario Balcarce",
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/distinguen-trabajo-de-la-unidad-integrada-en-el-quinto-congreso-argentino-de-malezas-570",
       "teniaImagenLaFuente": true,
@@ -1741,11 +1593,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/la-cirugia-salio-excelente-giuliana-romero-agradecio-el-acompanamiento-de-la-comunidad-143",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T23:29:47.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-09T23:32:00.485Z",
+      "sinFecha": true,
       "visto": "2026-10-09T23:32:00.485Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1804,123 +1656,6 @@
       }
     },
     {
-      "id": "1360zul",
-      "titulo": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "copete": "La actriz nacida en Balcarce encabeza una nueva función de la obra escrita y dirigida por Martín Bontempo. Será el sábado 17 de octubre en la sala marplatense.",
-      "cuerpo": "La actriz balcarceña Camila Peralta protagoniza una nueva función del unipersonal Suavecita en Mar del Plata.\n\nLa puesta en escena cuenta con dramaturgia y dirección de Martín Bontempo. Las localidades se pueden adquirir por medio de la plataforma Plateanet y en la boletería del establecimiento, con rebajas vigentes para estudiantes de la Escuela Municipal de Arte Dramático y del Polivalente.\n\nLa pieza teatral combina comedia dramática, misterio y ciencia ficción en la historia de una mujer con un don curativo en un hospital público. A lo largo de su trayectoria, la producción acumuló galardones nacionales que distinguieron el trabajo protagónico de la artista local.",
-      "guion": "Camila Peralta presenta su unipersonal Suavecita en Mar del Plata",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T23:21:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 59,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Camila Peralta actúa el sábado 17 de octubre en Mar del Plata.",
-        "La función se realiza en el teatro Roxy desde las 21.30.",
-        "El unipersonal cuenta con dirección de Martín Bontempo.",
-        "Las entradas están a la venta en Plateanet y en la boletería."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La actriz balcarceña Camila Peralta vuelve a Mar del Plata con su unipersonal Suavecita. La función será el sábado 17 de octubre en el teatro Roxy.",
-      "etiquetas": [
-        "Camila Peralta",
-        "Suavecita",
-        "Mar del Plata",
-        "teatro",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/la-balcarcena-camila-peralta-vuelve-a-mar-del-plata-con-el-unipersonal-suavecita/",
-          "fecha": "2026-10-09T23:21:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló la fecha, el horario, el lugar y los datos sobre la obra protagonizada por la actriz balcarceña Camila Peralta."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "camila-peralta-presenta-su-unipersonal-suavecita-en-mar-del-plata",
-      "foto": {
-        "archivo": "fotos-notas/1360zul.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
-      "id": "146dyw0",
-      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "copete": "La deportista balcarceña integra la delegación de Mar del Plata en el torneo que se disputa en San Miguel de Tucumán hasta el miércoles 14.",
-      "cuerpo": "La tenista Paula Boccia participa desde el sábado del 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán, según informó un medio local. La jugadora local es la cabeza de serie del equipo marplatense, que se completa con cuatro representantes del Club Náutico y una de Olavarría. El certamen, organizado por Veteranas Tenis Tucumán, se extiende hasta el miércoles 14 y reúne a deportistas de distintos puntos del país.\n\nLos encuentros se desarrollan en las canchas del Tucumán Lawn Tennis Club y del Jockey Club. La actividad oficial incluye un desfile inaugural, el acto de apertura y un ágape entre las participantes.",
-      "guion": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-09T22:30:19.147Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T23:27:38.237Z",
-      "relevancia": 85,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Paula Boccia integra el equipo de Mar del Plata como cabeza de serie, según un medio local.",
-        "El torneo se disputa en San Miguel de Tucumán hasta el miércoles 14, de acuerdo con la fuente consultada.",
-        "Los partidos se juegan en el Tucumán Lawn Tennis Club y el Jockey Club."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La tenista balcarceña Paula Boccia compite en el 42° Campeonato Nacional de Veteranas en San Miguel de Tucumán.",
-      "etiquetas": [
-        "Paula Boccia",
-        "tenis",
-        "Balcarce",
-        "Tucumán",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/paula-boccia-competira-en-el-42-campeonato-nacional-de-veteranas/",
-          "fecha": "2026-10-09T22:31:35.000Z",
-          "oficial": false,
-          "aporte": "Detalles sobre la participación de Paula Boccia en el torneo nacional de tenis en Tucumán."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "paula-boccia-compite-en-el-campeonato-nacional-de-veteranas",
-      "foto": {
-        "archivo": "fotos-notas/146dyw0.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "x8b5c1",
       "titulo": "Ricardo Lorenzetti defiende el fallo de la Corte sobre la Ley de Tierras",
       "copete": "El juez de la Corte Suprema analizó la medida cautelar que frenó la derogación de la norma sobre venta a extranjeros y remarcó la trayectoria ambiental del tribunal.",
@@ -1946,7 +1681,7 @@
         "0221",
         "La Tecla",
         "Letra P",
-        "La Verdad",
+        "InfoRegión",
         "ANDigital",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
@@ -1955,9 +1690,9 @@
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "El Eco de Tandil",
-        "Noticias Agropecuarias",
-        "El Diario Balcarce",
-        "Radio Gabal (FM 104.1)"
+        "La Verdad",
+        "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/09/ricardo-lorenzetti-hablo-tras-el-fallo-por-la-ley-de-tierras-la-corte-siempre-defendio-la-proteccion-de-los-recursos-naturales/",
       "teniaImagenLaFuente": true,
@@ -2213,359 +1948,6 @@
         "archivo": "fotos-notas/1c33j6a.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
       }
-    },
-    {
-      "id": "futbolresultadosliga20261009",
-      "propia": "futbol",
-      "tipoFutbol": "resultados",
-      "competenciaFutbol": "liga",
-      "datosFutbol": {
-        "partidos": [
-          {
-            "dia": "Viernes 9 de octubre",
-            "hora": "14:30",
-            "estado": "final",
-            "estadio": "José María Minella",
-            "fase": null,
-            "local": {
-              "id": "9739",
-              "nombre": "Aldosivi",
-              "goles": 1
-            },
-            "visitante": {
-              "id": "10158",
-              "nombre": "Sarmiento (Junín)",
-              "goles": 3
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "visitante",
-                "jugador": "Junior Marabel",
-                "minuto": "18'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "local",
-                "jugador": "Lucas Castro",
-                "minuto": "20'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "visitante",
-                "jugador": "Julián Mavilla",
-                "minuto": "86'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "visitante",
-                "jugador": "Jonathan Herrera",
-                "minuto": "89'",
-                "tipo": "gol"
-              }
-            ]
-          },
-          {
-            "dia": "Viernes 9 de octubre",
-            "hora": "18:00",
-            "estado": "final",
-            "estadio": "Juan Carmelo Zerillo (El Bosque)",
-            "fase": null,
-            "local": {
-              "id": "9",
-              "nombre": "Gimnasia La Plata",
-              "goles": 1
-            },
-            "visitante": {
-              "id": "9785",
-              "nombre": "Atlético Tucumán",
-              "goles": 1
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "visitante",
-                "jugador": "Lautaro Godoy",
-                "minuto": "83'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "local",
-                "jugador": "Marcelo Torres",
-                "minuto": "90'+5'",
-                "tipo": "de penal"
-              }
-            ]
-          },
-          {
-            "dia": "Viernes 9 de octubre",
-            "hora": "19:30",
-            "estado": "final",
-            "estadio": "Monumental Presidente Perón",
-            "fase": null,
-            "local": {
-              "id": "2975",
-              "nombre": "Instituto (Córdoba)",
-              "goles": 2
-            },
-            "visitante": {
-              "id": "5",
-              "nombre": "Boca Juniors",
-              "goles": 2
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "local",
-                "jugador": "Fernando Alarcón",
-                "minuto": "14'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "visitante",
-                "jugador": "Enner Valencia",
-                "minuto": "23'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "local",
-                "jugador": "Jonathan Galván",
-                "minuto": "48'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "visitante",
-                "jugador": "Miguel Merentiel",
-                "minuto": "56'",
-                "tipo": "gol"
-              }
-            ]
-          },
-          {
-            "dia": "Viernes 9 de octubre",
-            "hora": "21:45",
-            "estado": "final",
-            "estadio": "15 de Abril",
-            "fase": null,
-            "local": {
-              "id": "20",
-              "nombre": "Unión (Santa Fe)",
-              "goles": 0
-            },
-            "visitante": {
-              "id": "8950",
-              "nombre": "Defensa y Justicia",
-              "goles": 2
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "visitante",
-                "jugador": "Juan Gutiérrez",
-                "minuto": "43'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "visitante",
-                "jugador": "César Pérez",
-                "minuto": "45'",
-                "tipo": "gol"
-              }
-            ]
-          },
-          {
-            "dia": "Sábado 10 de octubre",
-            "hora": "15:45",
-            "estado": "final",
-            "estadio": "Estadio Claudio Chiqui Tapia",
-            "fase": null,
-            "local": {
-              "id": "10060",
-              "nombre": "Barracas Central",
-              "goles": 2
-            },
-            "visitante": {
-              "id": "10",
-              "nombre": "Huracán",
-              "goles": 0
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "local",
-                "jugador": "Norberto Briasco",
-                "minuto": "9'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "local",
-                "jugador": "Norberto Briasco",
-                "minuto": "62'",
-                "tipo": "gol"
-              }
-            ]
-          },
-          {
-            "dia": "Sábado 10 de octubre",
-            "hora": "17:00",
-            "estado": "final",
-            "estadio": "Alfredo Terrera",
-            "fase": null,
-            "local": {
-              "id": "11989",
-              "nombre": "Central Córdoba (Santiago del Estero)",
-              "goles": 2
-            },
-            "visitante": {
-              "id": "8",
-              "nombre": "Estudiantes de La Plata",
-              "goles": 2
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "visitante",
-                "jugador": "Miguel Monsalve",
-                "minuto": "22'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "local",
-                "jugador": "Leonardo Sequeira",
-                "minuto": "37'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "local",
-                "jugador": "Michael Santos",
-                "minuto": "38'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "visitante",
-                "jugador": "Edwin Cetre",
-                "minuto": "45'+5'",
-                "tipo": "de penal"
-              }
-            ]
-          },
-          {
-            "dia": "Sábado 10 de octubre",
-            "hora": "19:15",
-            "estado": "final",
-            "estadio": "Monumental de Victoria (José Dellagiovanna)",
-            "fase": null,
-            "local": {
-              "id": "7767",
-              "nombre": "Tigre",
-              "goles": 1
-            },
-            "visitante": {
-              "id": "235",
-              "nombre": "Banfield",
-              "goles": 2
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "visitante",
-                "jugador": "Adrián Balboa",
-                "minuto": "6'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "local",
-                "jugador": "Jerónimo Domina",
-                "minuto": "10'",
-                "tipo": "gol"
-              },
-              {
-                "equipo": "visitante",
-                "jugador": "Tomás Adoryan",
-                "minuto": "36'",
-                "tipo": "gol"
-              }
-            ]
-          },
-          {
-            "dia": "Sábado 10 de octubre",
-            "hora": "21:30",
-            "estado": "final",
-            "estadio": "Estadio Más Monumental",
-            "fase": null,
-            "local": {
-              "id": "16",
-              "nombre": "River Plate",
-              "goles": 1
-            },
-            "visitante": {
-              "id": "19685",
-              "nombre": "Estudiantes de Río Cuarto",
-              "goles": 0
-            },
-            "penales": null,
-            "goles": [
-              {
-                "equipo": "local",
-                "jugador": "Marcos Acuña",
-                "minuto": "6'",
-                "tipo": "gol"
-              }
-            ]
-          }
-        ],
-        "faltan": 9,
-        "aparte": 0
-      },
-      "destacados": [
-        {
-          "texto": "Ver la tabla de posiciones",
-          "href": "/tablas/liga-profesional"
-        }
-      ],
-      "lugarFoto": "José María Minella",
-      "titulo": "Liga Profesional: así va la fecha del 9 al 15 de octubre, con los resultados",
-      "copete": "8 partidos terminados de Liga Profesional de Fútbol y otros por jugarse: marcadores y goleadores.",
-      "cuerpo": "Estos son los resultados de Liga Profesional de Fútbol de la fecha del 9 al 15 de octubre, en el orden en que se jugaron:\n\nViernes 9 de octubre, 14:30: Aldosivi 1, Sarmiento (Junín) 3. Goles: Aldosivi: Lucas Castro (20'). Sarmiento (Junín): Junior Marabel (18'), Julián Mavilla (86') y Jonathan Herrera (89').\n\nViernes 9 de octubre, 18:00: Gimnasia La Plata 1, Atlético Tucumán 1. Goles: Gimnasia La Plata: Marcelo Torres (90'+5', de penal). Atlético Tucumán: Lautaro Godoy (83').\n\nViernes 9 de octubre, 19:30: Instituto (Córdoba) 2, Boca Juniors 2. Goles: Instituto (Córdoba): Fernando Alarcón (14') y Jonathan Galván (48'). Boca Juniors: Enner Valencia (23') y Miguel Merentiel (56').\n\nViernes 9 de octubre, 21:45: Unión (Santa Fe) 0, Defensa y Justicia 2. Goles: Defensa y Justicia: Juan Gutiérrez (43') y César Pérez (45').\n\nSábado 10 de octubre, 15:45: Barracas Central 2, Huracán 0. Goles: Barracas Central: Norberto Briasco (9') y Norberto Briasco (62').\n\nSábado 10 de octubre, 17:00: Central Córdoba (Santiago del Estero) 2, Estudiantes de La Plata 2. Goles: Central Córdoba (Santiago del Estero): Leonardo Sequeira (37') y Michael Santos (38'). Estudiantes de La Plata: Miguel Monsalve (22') y Edwin Cetre (45'+5', de penal).\n\nSábado 10 de octubre, 19:15: Tigre 1, Banfield 2. Goles: Tigre: Jerónimo Domina (10'). Banfield: Adrián Balboa (6') y Tomás Adoryan (36').\n\nSábado 10 de octubre, 21:30: River Plate 1, Estudiantes de Río Cuarto 0. Goles: River Plate: Marcos Acuña (6').\n\nTodavía faltan jugarse: San Lorenzo y Deportivo Riestra (Domingo 11 de octubre, 14:45), Platense y Argentinos Juniors (Domingo 11 de octubre, 17:00), Rosario Central y Independiente Rivadavia (Domingo 11 de octubre, 17:00), Racing Club y Belgrano (Córdoba) (Domingo 11 de octubre, 19:15), Talleres (Córdoba) y Independiente (Domingo 11 de octubre, 21:30), Lanús y Vélez Sarsfield (Lunes 12 de octubre, 16:00), Gimnasia (Mendoza) y Newell's Old Boys (Lunes 12 de octubre, 18:30), Sarmiento (Junín) y River Plate (Miércoles 14 de octubre, 19:00) y Huracán y Gimnasia La Plata (Jueves 15 de octubre, 20:00). Esta nota se completa a medida que terminan los partidos.\n\nLos datos son los resultados oficiales según ESPN.",
-      "guion": null,
-      "seccion": "Fútbol",
-      "local": false,
-      "relevancia": 56,
-      "medios": [
-        "ESPN (datos abiertos)"
-      ],
-      "enlace": "https://www.espn.com.ar/futbol/",
-      "fuentesConsultadas": [
-        {
-          "medio": "ESPN (datos abiertos)",
-          "enlace": "https://www.espn.com.ar/futbol/"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-09T19:27:23.047Z",
-      "sinFecha": false,
-      "visto": "2026-10-09T19:27:23.047Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-09T19:27:23.047Z",
-      "temas": [],
-      "etiquetas": [
-        "fútbol",
-        "Liga Profesional",
-        "resultados",
-        "Aldosivi",
-        "Sarmiento (Junín)",
-        "Gimnasia La Plata",
-        "Atlético Tucumán",
-        "Instituto (Córdoba)",
-        "Boca Juniors"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce armada con los datos de ESPN.",
-      "slug": "liga-profesional-asi-va-la-fecha-del-9-al-12-de-octubre-con-los",
-      "foto": {
-        "archivo": "fotos-notas/libre-futbolresultadosliga20261009.jpg",
-        "credito": "Foto: Unknown author Unknown author / Wikimedia Commons (Public domain)"
-      }
     }
   ],
   "secciones": [
@@ -2591,8 +1973,8 @@
     "ahora": {
       "temp": 8,
       "sensacion": 5,
-      "humedad": 91,
-      "viento": 13,
+      "humedad": 92,
+      "viento": 12,
       "rumbo": "S",
       "cielo": "Nublado",
       "esDeDia": false
@@ -2995,10 +2377,10 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "ttjo81",
-      "titulo": "Renunció el presidente del GEN Azul denunciado por…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "1f0go0k",
+      "titulo": "La defensa de Pity Álvarez solicitó la nulidad de la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "mhjg4",
@@ -3019,23 +2401,11 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "5w58zn",
-      "titulo": "EN VIVO A 5' del final lo gana Sarmiento 2 a 1",
-      "seccion": "Fútbol",
-      "motivo": "parece promoción, no noticia: \"suscribite\""
-    },
-    {
       "id": "1nerhmu",
       "titulo": null,
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "dfdr7f",
-      "titulo": "Alumnos de otro colegio fueron denunciados por alterar…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 1
 }
