@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T09:31:44.624Z",
- "portada": 29,
- "archivo": 907,
+ "generado": "2026-10-11T10:01:48.913Z",
+ "portada": 27,
+ "archivo": 906,
  "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-11T09:31:44.657Z",
+  "generado": "2026-10-11T10:01:48.943Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -85,13 +85,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 40,
     "notas": [
-     {
-      "id": "p4vc8j",
-      "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
-      "seccion": "Deportes"
-     },
      {
       "id": "1cj5sd",
       "titulo": "Virginia Aparicio debate en un programa local sobre su situación en el INTA",
