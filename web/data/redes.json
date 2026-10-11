@@ -1831,6 +1831,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-11/efemeride": {
+      "cuando": "2026-10-11T12:06:47.934Z",
+      "mediaId": "18056990840801114",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "facebookVideos": {
@@ -3056,6 +3064,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-11/efemeride": {
+      "cuando": "2026-10-11T12:07:48.569Z",
+      "mediaId": "947753614624455",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "instagramFeed": {
@@ -4222,17 +4238,23 @@
       "nombre": "podcast",
       "red": "facebook",
       "notaId": null
-    }
-  },
-  "problemas": {
-    "2026-10-11/efemeride/instagram/reel": {
-      "pieza": "efemeride",
+    },
+    "instagram/2026-10-11/efemeride": {
+      "cuando": "2026-10-11T12:07:18.339Z",
+      "mediaId": "18146098738604997",
+      "nombre": "efemeride",
       "red": "instagram",
-      "parte": "reel",
-      "error": "La subida del video falló (400) Request processing failed",
-      "cuando": "2026-10-11T12:04:45.830Z"
+      "notaId": null
+    },
+    "facebook/2026-10-11/efemeride": {
+      "cuando": "2026-10-11T12:08:22.923Z",
+      "mediaId": "29084395091251458",
+      "nombre": "efemeride",
+      "red": "facebook",
+      "notaId": null
     }
   },
+  "problemas": {},
   "facebookFoto": {},
   "reelsEnFacebook": {
     "2026-10-08/clima-noche": {
