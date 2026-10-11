@@ -11153,16 +11153,16 @@
   "cuando": "2026-10-09T17:33:08.501Z"
  },
  "aqy95q": {
-  "archivo": "fotos-notas/aqy95q.jpg",
   "medio": "Radio Gabal (FM 104.1)",
-  "credito": "Foto: Radio Gabal (FM 104.1)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Concejo aprueba pedir la derogación del artículo del DNU sobre tierras",
   "enlace": "https://www.radiogabal.com.ar/index.php/politica/soberania-y-la-propiedad-de-la-tierra-en-debate-en-el-concejo-deliberante",
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Concejo_Sesion_8_10.jpeg",
   "razon": "Es la única opción disponible, cuenta con buena nitidez y encuadre del recinto, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-09T17:33:08.501Z"
+  "cuando": "2026-10-09T17:33:08.501Z",
+  "intentado": true,
+  "borrada": true
  },
  "liqt9r": {
   "archivo": "fotos-notas/liqt9r.jpg",
@@ -11955,5 +11955,17 @@
   "cuando": "2026-10-11T02:01:49.810Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "188h2hi": {
+  "archivo": "fotos-notas/188h2hi.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Compañeros de la Selección revelan los mensajes en la última camiseta de Lionel Messi",
+  "enlace": "https://www.tycsports.com/seleccion-argentina/los-mensajes-que-los-jugadores-de-argentina-le-regalaron-a-lionel-messi-sin-vos-nada-hubiese-pasado-id765637.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/10/994926/la-inolvidable-camiseta-que-se-llevo-messi-despues-de-su-despedida-de-la-seleccion_862x485.webp?v=1",
+  "razon": "La imagen A tiene mejor encuadre y no presenta marcas de agua ni menores, ilustrando perfectamente la nota.",
+  "cuando": "2026-10-11T02:08:25.756Z"
  }
 }
