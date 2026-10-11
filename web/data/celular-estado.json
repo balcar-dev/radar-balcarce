@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-10T23:31:58.504Z",
- "portada": 44,
- "archivo": 907,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-11T00:02:17.290Z",
+ "portada": 43,
+ "archivo": 906,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-10T23:31:58.536Z",
+  "generado": "2026-10-11T00:02:17.332Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -155,9 +155,9 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 54,
+    "segundos": 49,
     "notas": [
      {
       "id": "1nhtdpr",
@@ -170,8 +170,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "p4vc8j",
-      "titulo": "Balcarce recibe la final del Circuito Buenos Aires Aventura",
+      "id": "146dyw0",
+      "titulo": "Paula Boccia compite en el Campeonato Nacional de Veteranas",
       "seccion": "Deportes"
      },
      {
