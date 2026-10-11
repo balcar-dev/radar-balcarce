@@ -37,7 +37,8 @@ test('las etiquetas chicas del clima: helada, calor y viento fuerte, y de noche 
 
 test('cada ejemplo dibuja un SVG entero y sano en todos los tiempos, con la firma y sin números rotos', () => {
   const todos = [...ejemplos(), ...ejemplosDeClima(), ...ejemplosDeServicios(), ...ejemplosDeDeportes()];
-  assert.ok(todos.length >= 50, `hay ${todos.length} ejemplos`);
+  // Los de farmacia se arman con el turno real de la portada: si ese día no hay turno cargado, faltan (hasta 3); el resto son fijos.
+  assert.ok(todos.length >= 46, `hay ${todos.length} ejemplos`);
   for (const e of todos) {
     assert.equal(e.escena.fps, FPS_ESCENA);
     for (const t of TIEMPOS) {
