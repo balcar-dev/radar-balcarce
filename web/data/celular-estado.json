@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T15:35:22.407Z",
- "portada": 21,
- "archivo": 915,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-11T23:09:24.405Z",
+ "portada": 22,
+ "archivo": 919,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-11T15:35:22.430Z",
+  "generado": "2026-10-11T23:09:24.447Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-11T13:04:33.867Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "cerrada",
     "salio": null
    },
    {
@@ -53,7 +53,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -63,7 +63,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -83,7 +83,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-11T13:04:33.867Z",
     "segundos": null,
     "notas": [
@@ -114,7 +114,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "cerrada",
     "salio": null,
     "segundos": null,
     "notas": []
@@ -126,17 +126,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 52,
     "notas": [
      {
-      "id": "1aoymq2",
-      "titulo": "Lionel Scaloni participa de una carrera de ciclismo en Buenos Aires",
-      "seccion": "Argentina"
+      "id": "jiv3ba",
+      "titulo": "El Senado provincial aprueba cambios en la prioridad de paso en esquinas",
+      "seccion": "Balcarce"
      },
      {
-      "id": "atnmk9",
-      "titulo": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
+      "id": "hp2pil",
+      "titulo": "Primero la Patria exige cumplir la prohibición vehicular en el Cerro El Triunfo",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "zavg8u",
+      "titulo": "El Ministerio de Salud bonaerense advierte sobre el riesgo de nuevos brotes de sarampión",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "jlfox6",
+      "titulo": "Natación local consigue dos podios nacionales en Buenos Aires",
+      "seccion": "Deportes"
      }
     ]
    }
