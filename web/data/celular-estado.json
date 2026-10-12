@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T12:32:43.849Z",
- "portada": 21,
- "archivo": 936,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-12T13:02:12.625Z",
+ "portada": 23,
+ "archivo": 939,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-12T12:32:43.873Z",
+  "generado": "2026-10-12T13:02:12.646Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -103,10 +103,21 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 44,
+    "notas": [
+     {
+      "id": "p21pyq",
+      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "bqnbdp",
+      "titulo": "Milei afirma tener fondos por miles de millones de dólares para frenar una corrida",
+      "seccion": "Economía"
+     }
+    ]
    },
    {
     "nombre": "noticia2",
@@ -125,19 +136,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
-    "notas": [
-     {
-      "id": "p21pyq",
-      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
