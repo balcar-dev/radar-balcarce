@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T17:32:31.447Z",
+  "generado": "2026-10-12T18:01:58.340Z",
   "notas": [
     {
       "id": "6sc6fa",
@@ -85,7 +85,8 @@
       "medios": [
         "Infobae",
         "TN (Todo Noticias)",
-        "TyC Sports"
+        "TyC Sports",
+        "Radio Mitre"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/12/un-medio-ingles-ubico-a-franco-colapinto-en-uno-de-los-peores-puestos-de-su-ranking-tras-la-carrera-de-f1-en-singapur-mejor-de-lo-que-parecia/",
       "teniaImagenLaFuente": true,
@@ -179,7 +180,8 @@
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
         "La Noticia 1",
-        "El Día"
+        "El Día",
+        "NDEN – Noticias de Necochea"
       ],
       "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
       "teniaImagenLaFuente": true,
@@ -256,6 +258,220 @@
       }
     },
     {
+      "id": "xn5jch",
+      "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
+      "copete": "La tenista local competirá en el certamen internacional que se disputará en noviembre. Integrará el equipo de la categoría Máster +40 de Mar del Plata.",
+      "cuerpo": "La tenista Natalia Carballo formará parte de la delegación de Mar del Plata que competirá en la primera Copa Sudamericana. El torneo se desarrollará del 12 al 19 de noviembre en Villa María.\n\nLa deportista balcarceña integra el sexteto femenino de la categoría Máster +40. Carballo representa habitualmente al Club Sportivo Trabajo en los torneos regionales de interclubes y posee la distinción Fangio de Plata.\n\nEl equipo cuenta con la dirección técnica de la exjugadora Julieta Calabrese. Las encuentros se jugarán en las canchas del Club Sport Social Club.",
+      "guion": "Natalia Carballo juega la Copa Sudamericana de tenis",
+      "seccion": "Deportes",
+      "medios": [
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://accion5.com/tenis-en-copa-sudamericana-competira-natalia-carballo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T14:41:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T15:01:42.079Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Natalia Carballo jugará la Copa Sudamericana.",
+        "El torneo se disputará del 12 al 19 de noviembre.",
+        "La competencia tendrá lugar en Villa María.",
+        "El equipo compite en la categoría Máster +40."
+      ],
+      "seSabe": [
+        "Natalia Carballo integra la delegación marplatense para el torneo internacional.",
+        "La competencia se jugará en Villa María entre el 12 y el 19 de noviembre.",
+        "El equipo femenino +40 es entrenado por Julieta Calabrese."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La tenista Natalia Carballo participará en la primera Copa Sudamericana que se disputará en noviembre en Villa María. La deportista local integrará el equipo de la categoría Máster +40.",
+      "etiquetas": [
+        "Natalia Carballo",
+        "tenis",
+        "Copa Sudamericana",
+        "Villa María"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Acción 5 (Balcarce)",
+          "enlace": "https://accion5.com/tenis-en-copa-sudamericana-competira-natalia-carballo/",
+          "fecha": "2026-10-12T14:41:12.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la participación de Natalia Carballo en la Copa Sudamericana y cronograma del torneo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1xwup7g",
+          "titulo": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
+          "fecha": "2026-10-11T17:08:46.000Z",
+          "ruta": "/nota/emanuel-moriatis-analiza-la-vuelta-del-turismo-nacional-a-balcarce-1xwup7g"
+        },
+        {
+          "id": "1trv7re",
+          "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
+          "fecha": "2026-10-09T22:45:51.000Z",
+          "ruta": "/nota/norberto-fontana-sugiere-cerrar-el-ano-de-turismo-carrera-en-el-1trv7re"
+        },
+        {
+          "id": "f6j0rt",
+          "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
+          "fecha": "2026-10-08T16:14:22.000Z",
+          "ruta": "/nota/el-auto-club-balcarce-suspende-la-fecha-del-zonal-del-atlantico-f6j0rt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "natalia-carballo-juega-la-copa-sudamericana-de-tenis",
+      "foto": {
+        "archivo": "fotos-notas/xn5jch.jpg",
+        "credito": "Foto: Acción 5 (Balcarce)"
+      }
+    },
+    {
+      "id": "q9kshm",
+      "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
+      "copete": "El Ministerio de Transporte bonaerense evalúa incorporar pictogramas y capacitar choferes. La medida podría alcanzar a Balcarce de extenderse en los distritos.",
+      "cuerpo": "El Ministerio de Transporte de la provincia de Buenos Aires analiza incorporar pictogramas en colectivos y capacitar a los conductores para mejorar la atención de personas con Trastorno del Espectro Autista. El titular de la cartera, Martín Marinucci, mantuvo un encuentro con familiares y referentes de organizaciones sociales para avanzar en esta agenda de accesibilidad cognitiva enmarcada en la Ley N.º 15.613.\n\nLas medidas podrían tener impacto en Balcarce en la medida en que la Provincia extienda su implementación a los diferentes distritos bonaerenses. Durante la reunión se priorizó la eliminación de barreras de comunicación mediante herramientas visuales y la formación del personal.\n\nPor otra parte, las autoridades todavía no precisaron los plazos en los que se concretará la llegada de estas herramientas a cada municipio.",
+      "guion": "La Provincia impulsa mejoras en el transporte para personas con autismo",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45059-transporte-publico-impulsan-medidas-de-accesibilidad-para-personas-con-autismo-que-podrian-llegar-a-balcarce/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T14:31:34.877Z",
+      "sinFecha": true,
+      "visto": "2026-10-12T14:31:34.877Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Provincia analiza pictogramas en colectivos y capacitación de choferes.",
+        "Las medidas se enmarcan en la Ley N.º 15.613 sobre accesibilidad cognitiva.",
+        "El ministro Martín Marinucci mantuvo un encuentro con referentes de la Red TEA.",
+        "La iniciativa podría alcanzar a Balcarce según su extensión en los distritos."
+      ],
+      "seSabe": [
+        "Según el Ministerio de Transporte, la Provincia avanza en una agenda sobre accesibilidad cognitiva en colectivos.",
+        "De acuerdo con la información oficial, las medidas se fundamentan en la Ley N.º 15.613.",
+        "Según informó la cartera provincial, el ministro Martín Marinucci se reunió con familiares y la Red Federal Familias TEA.",
+        "Según el área de Transporte, las iniciativas contemplan la incorporación de pictogramas y la formación de choferes."
+      ],
+      "noConfirmado": [
+        "Todavía no se informaron los plazos concretos para la implementación de las medidas en cada distrito bonaerense.",
+        "No se confirmó la fecha en la que las disposiciones de la normativa provincial podrían alcanzar a Balcarce.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Provincia avanza en la incorporación de pictogramas en colectivos y capacitación de choferes para personas con autismo. La medida podría alcanzar a Balcarce de extenderse en los distritos.",
+      "etiquetas": [
+        "transporte",
+        "autismo",
+        "Provincia de Buenos Aires",
+        "Martín Marinucci",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45059-transporte-publico-impulsan-medidas-de-accesibilidad-para-personas-con-autismo-que-podrian-llegar-a-balcarce/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la reunión del Ministerio de Transporte bonaerense, los ejes de accesibilidad cognitiva, la Ley N.º 15.613 y el posible alcance en los distritos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "6oh5ax",
+          "titulo": "El transporte público funciona con cronogramas especiales por el fin de semana largo",
+          "fecha": "2026-10-10T11:01:00.000Z",
+          "ruta": "/nota/el-transporte-publico-funciona-con-cronogramas-especiales-por-el-fin-6oh5ax"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-provincia-impulsa-mejoras-en-el-transporte-para-personas-con",
+      "foto": {
+        "archivo": "fotos-notas/q9kshm.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1tsobe7",
+      "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
+      "copete": "El conjunto de la Ribera igualó 2-2 en su visita a Córdoba por la duodécima fecha del Torneo Clausura. Leandro Paredes debió pedir el cambio por una molestia física a pocos días de la semifinal internacional.",
+      "cuerpo": "Fernando Alarcón abrió el marcador para el dueño de casa a los 13 minutos del primer tiempo, pero el conjunto visitante alcanzó la igualdad a los 22 a través de Enner Valencia, según informó un medio local.\n\nEn el complemento, Jonathan Galván puso en ventaja nuevamente al local a los 47 minutos de la etapa inicial. Ya en el segundo tiempo, Miguel Merentiel selló el empate definitivo a los 10 minutos. Durante ese período, Leandro Paredes ingresó al campo, permaneció 16 minutos y pidió el cambio por una molestia física.\n\nCon este resultado, el equipo cordobés se mantiene como líder de la Zona A con 26 unidades. Por su parte, la visita se prepara para recibir el martes a las 21.30 a Vasco da Gama en la Bombonera por el encuentro de ida de las semifinales de la Copa Sudamericana.",
+      "guion": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
+      "seccion": "Fútbol",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/deportes/14317-boca-empato-2-2-en-cordoba-ante-instituto/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T14:31:34.877Z",
+      "sinFecha": true,
+      "visto": "2026-10-12T14:31:34.877Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Boca e Instituto empataron 2-2 en Córdoba",
+        "Enner Valencia y Miguel Merentiel marcaron para la visita",
+        "Leandro Paredes salió lesionado tras ingresar en el complemento",
+        "El equipo enfrentará este martes a Vasco da Gama por la Copa Sudamericana"
+      ],
+      "noConfirmado": [
+        "La gravedad de la molestia física sufrida por Leandro Paredes y su disponibilidad para los próximos compromisos.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Boca Juniors empató 2-2 ante Instituto en Córdoba por el Torneo Clausura. Enner Valencia y Miguel Merentiel convirtieron los goles del visitante, mientras que Leandro Paredes debió salir con una molestia física de cara al duelo por la Copa Sudamericana.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Instituto",
+        "Torneo Clausura",
+        "Fútbol",
+        "Córdoba",
+        "Copa Sudamericana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/deportes/14317-boca-empato-2-2-en-cordoba-ante-instituto/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los goles, el desarrollo del partido, la lesión de Leandro Paredes y el calendario de partidos de Boca Juniors."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "boca-empata-con-instituto-en-cordoba-y-pierde-terreno-en-el-torneo"
+    },
+    {
       "id": "1snnbwi",
       "titulo": "La Champions League disputa nueve partidos el martes",
       "copete": "El certamen europeo de clubes continúa el martes con la segunda fecha de la competencia. Habrá dos encuentros en el primer turno y siete en el horario central.",
@@ -317,6 +533,69 @@
       "foto": {
         "archivo": "fotos-notas/1snnbwi.jpg",
         "credito": "Foto: TyC Sports"
+      }
+    },
+    {
+      "id": "r0o8z3",
+      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
+      "copete": "La deportista local se consagró en el torneo nacional desarrollado en Caseros y consiguió la clasificación para la competencia internacional en Panamá.",
+      "cuerpo": "Kiara Ponce obtuvo tres títulos argentinos de karate en el noveno Torneo Nacional de la disciplina, llevado a cabo el fin de semana en la localidad bonaerense de Caseros, según informó un medio local.\n\nLa competencia reunió a unos 250 representantes de todo el país en el Centro de Educación Física local y funcionó como selectivo para conformar la Selección Nacional que viajará al Panamerican Shoto Cup en Panamá, programado para junio del año próximo.\n\nLa deportista local, quien compitió dentro del equipo tandilense dirigido por Oscar Carabajal, logró medallas doradas en kata individual y por equipos, además de sumar otro primer puesto en kumite por equipos. También alcanzó un subcampeonato individual y obtuvo una copa especial femenina, resultados que le permitieron asegurar su pasaje al certamen internacional en el país caribeño.",
+      "guion": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
+      "seccion": "Deportes",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://accion5.com/kiara-ponce-trajo-oro-nacional-y-se-clasifico-al-panamericano/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T13:24:20.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T14:01:54.156Z",
+      "relevancia": 88,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Kiara Ponce sumó tres títulos argentinos en Caseros.",
+        "La deportista local se clasificó al torneo Panamericano en Panamá.",
+        "El certamen reunió a unos 250 karatecas de todo el país."
+      ],
+      "seSabe": [
+        "Kiara Ponce logró tres títulos argentinos en el torneo nacional de Caseros, según un medio local.",
+        "La deportista se clasificó al Panamerican Shoto Cup de Panamá.",
+        "El evento se desarrolló el fin de semana pasado con unos 250 participantes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Kiara Ponce se consagró campeona en el torneo nacional de karate en Caseros y consiguió la clasificación al campeonato Panamericano en Panamá.",
+      "etiquetas": [
+        "Kiara Ponce",
+        "karate",
+        "deportes",
+        "Caseros",
+        "Panamericano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Acción 5 (Balcarce)",
+          "enlace": "https://accion5.com/kiara-ponce-trajo-oro-nacional-y-se-clasifico-al-panamericano/",
+          "fecha": "2026-10-12T13:24:20.000Z",
+          "oficial": false,
+          "aporte": "Informó los resultados y la clasificación de Kiara Ponce en el torneo nacional de karate en Caseros."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "kiara-ponce-gana-tres-oros-nacionales-de-karate-y-va-al-panamericano",
+      "foto": {
+        "archivo": "fotos-notas/r0o8z3.jpg",
+        "credito": "Foto: Acción 5 (Balcarce)"
       }
     },
     {
@@ -534,6 +813,7 @@
         "C5N",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "La Brújula 24",
         "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)"
@@ -668,8 +948,8 @@
         "Ámbito",
         "TN (Todo Noticias)",
         "A24",
-        "Infobrisas (Radio Brisas)",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Infobrisas (Radio Brisas)"
       ],
       "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
       "teniaImagenLaFuente": true,
@@ -874,14 +1154,14 @@
         "Clarín",
         "0223 (Mar del Plata)",
         "Ecos Diarios (Necochea)",
-        "Minuto Uno",
         "El Destape",
         "Perfil",
+        "Minuto Uno",
         "El Día",
+        "La Brújula 24",
         "El Marplatense",
         "Doble Amarilla",
-        "Olé",
-        "La Brújula 24"
+        "Olé"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -1044,7 +1324,6 @@
         "Clarín",
         "Ámbito",
         "Perfil",
-        "TyC Sports",
         "Crónica",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
@@ -1170,8 +1449,8 @@
       "guion": "Lanzan un fondo de inversión hotelera desde mil dólares",
       "seccion": "Economía",
       "medios": [
-        "iProUP",
-        "Clarín"
+        "Clarín",
+        "iProUP"
       ],
       "enlace": "https://www.clarin.com/economia/lanzan-primer-vehiculo-financiero-invertir-us-1000-hoteles-lujo-argentina_0_hYzW7J5I5w.html",
       "teniaImagenLaFuente": true,
@@ -1336,7 +1615,7 @@
       "fecha": "2026-10-12T05:52:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T12:01:29.750Z",
-      "relevancia": 66,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1427,7 +1706,7 @@
       "fecha": "2026-10-12T05:48:57.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T13:01:25.827Z",
-      "relevancia": 75,
+      "relevancia": 68,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1501,117 +1780,6 @@
       }
     },
     {
-      "id": "1kra2dj",
-      "titulo": "Gastón Ávila sufre un golpe en la cara y queda internado",
-      "copete": "El defensor de Rosario Central debió ser trasladado a un sanatorio tras la goleada ante Independiente Rivadavia, luego de recibir una patada en el rostro que derivó en la expulsión de Álex Arce.",
-      "cuerpo": "Rosario Central aplastó 5 a 0 a Independiente Rivadavia por la fecha 12 del Torneo Clausura en el Gigante de Arroyito.\n\nTras el partido, el club difundió el parte médico oficial que confirmó un traumatismo craneofacial izquierdo. En el vestuario, el zaguero central presentó un cuadro de hipotensión, mareos, náuseas y cefalea intensa, por lo cual fue llevado de urgencia a la guardia del Sanatorio Mapaci para someterse a estudios por imágenes y permanecer bajo observación a la espera de su recuperación.",
-      "guion": "Gastón Ávila sufre un golpe en la cara y queda internado",
-      "seccion": "Fútbol",
-      "medios": [
-        "La Nación",
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Olé",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://bolavip.com/ar/futbolargentino/internaron-a-gaston-avila-tras-la-patada-en-la-cara-de-alex-arce-en-la-goleada-de-rosario-central-a-independiente-rivadavia",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T00:33:26.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T03:01:38.606Z",
-      "relevancia": 83,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Rosario Central le ganó 5 a 0 a Independiente Rivadavia por el Torneo Clausura.",
-        "Álex Arce recibió la tarjeta roja tras golpear a Gastón Ávila en el rostro.",
-        "El defensor central sufrió un traumatismo craneofacial izquierdo y mareos.",
-        "El jugador permanece en observación en el Sanatorio Mapaci."
-      ],
-      "noConfirmado": [
-        "No trascendió el tiempo exacto que demandará la internación del deportista.",
-        "No se informó la fecha exacta de su retorno al domicilio."
-      ],
-      "textoRedes": "Gastón Ávila debió ser internado tras recibir una patada en la cara durante la goleada de Rosario Central ante Independiente Rivadavia. El defensor sufrió un traumatismo craneofacial y permanece bajo observación médica.",
-      "etiquetas": [
-        "Rosario Central",
-        "Independiente Rivadavia",
-        "Torneo Clausura",
-        "Gastón Ávila",
-        "Álex Arce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/futbolargentino/internaron-a-gaston-avila-tras-la-patada-en-la-cara-de-alex-arce-en-la-goleada-de-rosario-central-a-independiente-rivadavia",
-          "fecha": "2026-10-12T00:33:26.000Z",
-          "oficial": false,
-          "aporte": "Detalló el resultado del partido, la jugada de la expulsión, el parte médico y el traslado al sanatorio."
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/rosario-central/gaston-avila-trasladado-sanatorio-patada-alex-arce_0_fKlgrC7hH6.html",
-          "fecha": "2026-10-12T01:52:02.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el defensor debió ser llevado a una guardia tras la tarjeta roja al jugador paraguayo."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/11/el-comunicado-de-rosario-central-tras-la-patada-que-recibio-gaston-avila-ante-independiente-rivadavia-nauseas-y-cefalea-intensa/",
-          "fecha": "2026-10-12T02:20:26.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la goleada, el parte médico oficial y el incidente en el Gigante de Arroyito."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/gaston-avila-fue-hospitalizado-tras-la-patada-de-alex-arce-el-parte-medico-de-rosario-central-id765756.html",
-          "fecha": "2026-10-12T02:40:29.000Z",
-          "oficial": false,
-          "aporte": "Aportó cobertura sobre el mismo evento deportivo sin texto adicional."
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/rosario-central/patada-alex-arce-gaston-avila-derivo-expulsion-rosario-central-independiente-rivadavia_3_2LLf3TdhuK.html",
-          "fecha": "2026-10-12T01:49:03.000Z",
-          "oficial": false,
-          "aporte": "Registró el hecho vinculado a la atención médica del futbolista tras el partido."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "repaso20260930tarde",
-          "titulo": "El repaso de la tarde en Radar Balcarce: ACTC, Rosario Central y capacitaciones",
-          "fecha": "2026-09-30T18:06:28.052Z",
-          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y-repaso20260930tarde"
-        },
-        {
-          "id": "1cbil57",
-          "titulo": "Hinchas de Newell's y Rosario Central se enfrentan en Rosario",
-          "fecha": "2026-09-30T02:21:20.000Z",
-          "ruta": "/nota/hinchas-de-newell-s-y-rosario-central-se-enfrentan-en-rosario-1cbil57"
-        },
-        {
-          "id": "1g1xj8g",
-          "titulo": "Gastón Gaudio se postula a presidente de Independiente",
-          "fecha": "2026-09-29T16:41:28.000Z",
-          "ruta": "/nota/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-1g1xj8g"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "gaston-avila-sufre-un-golpe-en-la-cara-y-queda-internado",
-      "foto": {
-        "archivo": "fotos-notas/1kra2dj.jpg",
-        "credito": "Foto: Bolavip Argentina"
-      }
-    },
-    {
       "id": "repaso20261011noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: Cerro El Triunfo, sarampión y Natación",
@@ -1677,6 +1845,77 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261011noche.jpg",
         "credito": "Fotos: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
+      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
+      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-11T23:31:31.632Z",
+      "sinFecha": true,
+      "visto": "2026-10-11T23:31:31.632Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
+        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
+        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
+        "César Rodríguez completó la prueba en 4h49'20\"."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
+      "etiquetas": [
+        "Emilia Scioli",
+        "Ironman",
+        "Deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1jfpdis",
+          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
+          "fecha": "2026-10-06T16:26:52.163Z",
+          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
+        },
+        {
+          "id": "repaso20261006noche",
+          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
+          "fecha": "2026-10-07T00:05:14.231Z",
+          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
+      "foto": {
+        "archivo": "fotos-notas/1hapve0.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -1784,6 +2023,66 @@
       }
     },
     {
+      "id": "jlfox6",
+      "titulo": "Natación local consigue dos podios nacionales en Buenos Aires",
+      "copete": "Los nadadores Justo Murías Ugalde y Gerónimo Colella alcanzaron el tercer puesto en el Campeonato Nacional de Juveniles y Juniors. La delegación de Racing Club completó su participación en el Parque Olímpico con tres deportistas.",
+      "cuerpo": "Los nadadores Justo Murías Ugalde y Gerónimo Colella obtuvieron dos terceros puestos en el Campeonato Nacional de Juveniles y Juniors de natación, según informó un medio local.\n\nMurías Ugalde consiguió la medalla de bronce en la prueba de 50 metros mariposa e intervino en otras cinco especialidades, donde se ubicó sexto en 50 metros espalda, undécimo en 100 metros mariposa, duodécimo en 100 metros espalda, decimoquinto en 50 metros libre y vigesimosexto en 200 metros combinado. Por su parte, Colella logró el tercer lugar en 50 metros espalda, además de finalizar quinto en 100 y 200 metros espalda, decimocuarto en 200 metros libre, decimoséptimo en 50 metros libre y decimoctavo en 100 metros libre.\n\nLa representación de la institución albiceleste se completó con la participación de Micaela Di Fiore, quien alcanzó el décimo puesto en 100 metros espalda, el undécimo en 200 metros espalda y el duodécimo en 50 metros espalda. Los deportistas compitieron bajo la conducción técnica de Facundo Laso.",
+      "guion": "Natación local consigue dos podios nacionales en Buenos Aires",
+      "seccion": "Deportes",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/deportes/14320-podios-balcarcenos-en-el-nacional-de-juveniles-y-juniors/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T23:07:57.544Z",
+      "sinFecha": true,
+      "visto": "2026-10-11T23:07:57.544Z",
+      "relevancia": 59,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Justo Murías Ugalde y Gerónimo Colella lograron medallas de bronce.",
+        "El torneo nacional se disputó en el Parque Olímpico.",
+        "La delegación de Racing Club compitió con tres nadadores.",
+        "Facundo Laso estuvo a cargo de la dirección técnica."
+      ],
+      "seSabe": [
+        "Justo Murías Ugalde y Gerónimo Colella consiguieron sendos terceros puestos en el certamen nacional, según informó un medio local.",
+        "El campeonato se desarrolló en el Parque Olímpico de Buenos Aires.",
+        "La delegación de Racing Club estuvo integrada por Justo Murías Ugalde, Gerónimo Colella y Micaela Di Fiore.",
+        "El equipo compitió bajo la conducción del entrenador Facundo Laso."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los nadadores Justo Murías Ugalde y Gerónimo Colella lograron dos terceros puestos para Racing Club en el Campeonato Nacional de Juveniles y Juniors disputado en el Parque Olímpico de Buenos Aires.",
+      "etiquetas": [
+        "natación",
+        "Racing Club",
+        "deportes",
+        "Buenos Aires",
+        "juveniles"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/deportes/14320-podios-balcarcenos-en-el-nacional-de-juveniles-y-juniors/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los resultados detallados de los nadadores locales en el Campeonato Nacional de Juveniles y Juniors."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "natacion-local-consigue-dos-podios-nacionales-en-buenos-aires"
+    },
+    {
       "id": "p21pyq",
       "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
       "copete": "El piloto argentino debió abandonar la competencia en el circuito de Marina Bay por problemas técnicos y generó la furia de un competidor de Red Bull.",
@@ -1801,7 +2100,7 @@
       "fecha": "2026-10-11T22:48:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T11:02:16.567Z",
-      "relevancia": 80,
+      "relevancia": 76,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2043,74 +2342,95 @@
       }
     },
     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
-      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
-      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes",
+      "id": "1pi4mqa",
+      "titulo": "Diputados debate el proyecto que sanciona el vandalismo rural",
+      "copete": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en establecimientos agropecuarios. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
+      "cuerpo": "La propuesta incorpora el artículo 150 bis al Código Penal con sanciones de un mes a un año de prisión para quien ingrese a un campo sin autorización.\n\nEl texto, impulsado por el legislador Martín Ardohaín, también crea el artículo 184 bis para castigar con penas de dos a ocho años de prisión y multas a quienes dañen cultivos, ganado, maquinaria o infraestructura productiva.\n\nEl diputado opositor Ramiro Gutiérrez objetó la iniciativa al señalar que replica figuras legales ya contempladas en la normativa actual y establece escalas punitivas inferiores para conductas equivalentes.",
+      "guion": "Diputados debate el proyecto que sanciona el vandalismo rural.",
+      "seccion": "Agro",
       "medios": [
-        "El Diario Balcarce"
+        "Infobae",
+        "La Nación"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+      "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T17:54:03.000Z",
+      "fecha": "2026-10-11T19:59:13.000Z",
       "sinFecha": false,
       "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 71,
-      "local": true,
+      "relevancia": 41,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
-        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
-        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
-        "César Rodríguez completó la prueba en 4h49'20\"."
+        "El plenario de comisiones aprobó el dictamen el 6 de octubre.",
+        "Se propone incorporar los artículos 150 bis y 184 bis al Código Penal.",
+        "Las penas por daños a la producción rural alcanzan hasta los ocho años de prisión.",
+        "La oposición cuestionó que la iniciativa duplica normas ya vigentes."
+      ],
+      "seSabe": [
+        "El proyecto obtuvo dictamen de mayoría en un plenario de comisiones de la Cámara de Diputados.",
+        "La iniciativa fue presentada por el diputado Martín Ardohaín.",
+        "El despacho cosechó 41 adhesiones.",
+        "El artículo 150 bis castiga la intrusión en establecimientos rurales con hasta un año de prisión.",
+        "El artículo 184 bis prevé penas de dos a ocho años por daños a cultivos, ganado e infraestructura."
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "La recepción del proyecto en el recinto de la Cámara Baja para la búsqueda de media sanción."
       ],
-      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
+      "textoRedes": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en campos. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
       "etiquetas": [
-        "Emilia Scioli",
-        "Ironman",
-        "Deportes",
-        "Balcarce"
+        "Diputados",
+        "vandalismo rural",
+        "Código Penal",
+        "agricultura"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-          "fecha": null,
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
+          "fecha": "2026-10-11T19:59:13.000Z",
           "oficial": false,
-          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
+          "aporte": "Detalló los detalles del dictamen, los artículos propuestos y las declaraciones del diputado Martín Ardohaín."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/vandalismo-rural-la-oposicion-advirtio-que-el-proyecto-que-obtuvo-dictamen-duplica-delitos-y-reduce-nid11102026/",
+          "fecha": "2026-10-11T23:17:31.000Z",
+          "oficial": false,
+          "aporte": "Aportó las críticas y los cuestionamientos planteados por el diputado Ramiro Gutiérrez."
         }
       ],
       "antecedentes": [
         {
-          "id": "1jfpdis",
-          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
-          "fecha": "2026-10-06T16:26:52.163Z",
-          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
+          "id": "w7o4x7",
+          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
+          "fecha": "2026-10-06T12:56:37.000Z",
+          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
         },
         {
-          "id": "repaso20261006noche",
-          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
-          "fecha": "2026-10-07T00:05:14.231Z",
-          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
+          "id": "c7em03",
+          "titulo": "La oposición negocia un dictamen común contra la morosidad antes del martes",
+          "fecha": "2026-09-27T11:10:21.000Z",
+          "ruta": "/nota/vence-el-plazo-para-dictaminar-y-la-oposicion-negocia-un-proyecto-c7em03"
+        },
+        {
+          "id": "q84c12",
+          "titulo": "Una investigadora del INTA cuestiona la suspensión de un proyecto",
+          "fecha": "2026-09-24T14:26:31.000Z",
+          "ruta": "/nota/carta-abierta-de-investigadora-del-inta-balcarce-q84c12"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
+      "slug": "diputados-debate-el-proyecto-que-sanciona-el-vandalismo-rural",
       "foto": {
-        "archivo": "fotos-notas/1hapve0.jpg",
-        "credito": "Foto: El Diario Balcarce"
+        "archivo": "fotos-notas/1pi4mqa.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -2204,6 +2524,152 @@
         "archivo": "fotos-notas/1xwup7g.jpg",
         "credito": "Foto: Campeones"
       }
+    },
+    {
+      "id": "t691yd",
+      "titulo": "La economía nacional acumula superávits gemelos entre enero y agosto",
+      "copete": "El país registra cuentas públicas positivas por 2,6 billones de pesos y un saldo comercial favorable de 18.380 millones de dólares en los primeros ocho meses del año, según un informe sectorial.",
+      "cuerpo": "La economía argentina acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, de acuerdo con un informe de la Bolsa de Comercio de Rosario.\n\nEl análisis detalla que el Estado obtuvo ingresos por 120,7 billones de pesos y gastos primarios de 107,4 billones en ese lapso. El resultado fiscal primario llegó a 13,3 billones de pesos, lo que representa una baja interanual del 15,9% pero se ubica como el tercer mejor registro desde 2009. La dinámica mensual arrojó resultados positivos en siete de los ocho meses, con la única excepción de junio debido al pago del medio aguinaldo y al traslado de vencimientos impositivos.\n\nEn el sector externo, el intercambio comercial alcanzó 33 meses consecutivos con saldo favorable y la mayor cifra para los primeros ocho meses desde 2009. Las exportaciones sumaron 67.766 millones de dólares, con subas destacadas en el rubro de combustibles y energía.",
+      "guion": "La economía nacional acumula superávits gemelos entre enero y agosto.",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T14:52:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T02:31:37.843Z",
+      "relevancia": 28,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Superávit financiero de 2,6 billones de pesos en ocho meses",
+        "Balanza comercial positiva por 18.380 millones de dólares",
+        "Tres años consecutivos de resultados gemelos para el período",
+        "Incremento de las exportaciones impulsado por combustibles y energía"
+      ],
+      "seSabe": [
+        "El superávit financiero acumulado llegó a 2,6 billones de pesos entre enero y agosto",
+        "El saldo comercial positivo alcanzó los 18.380 millones de dólares",
+        "El Estado registró ingresos por 120,7 billones de pesos",
+        "Las exportaciones totales sumaron 67.766 millones de dólares"
+      ],
+      "textoRedes": "La economía nacional acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, según un informe sectorial.",
+      "etiquetas": [
+        "economia",
+        "superavit",
+        "exportaciones",
+        "comercio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+          "fecha": "2026-10-11T14:52:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe de la Bolsa de Comercio de Rosario sobre superávit financiero, fiscal y comercial."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/11/por-tercer-ano-consecutivo-milei-reedito-los-superavits-gemelos-de-los-primeros-anos-del-kirchnerismo/",
+          "fecha": "2026-10-11T22:06:54.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en los datos generales del informe de la Bolsa de Comercio de Rosario sobre la economía nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-economia-nacional-acumula-superavits-gemelos-entre-enero-y-agosto",
+      "foto": {
+        "archivo": "fotos-notas/t691yd.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "153zuaz",
+      "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social aplica un incremento del 1,66 por ciento en la Asignación Universal por Hijo durante octubre, según informó el organismo previsional. El ajuste responde a la actualización automática mensual basada en la inflación de agosto, que se ubicó en el 1,7 por ciento.\n\nEl pago de los haberes se efectiviza entre la segunda y la tercera semana del mes, ordenado según la terminación del documento de identidad de los titulares. Del total asignado, un 20 por ciento queda retenido hasta que las familias presentan la Libreta que acredita la escolaridad y los controles de salud de los menores a cargo, un trámite que se completa de manera digital mediante la plataforma oficial.",
+      "guion": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "El Cronista"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T13:27:22.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:35:55.538Z",
+      "relevancia": 50,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Asignación Universal por Hijo sube un 1,66 por ciento en octubre.",
+        "El ajuste se calcula según el índice de inflación registrado en agosto.",
+        "El organismo previsional abona los montos entre la segunda y la tercera semana del mes por terminación de DNI."
+      ],
+      "seSabe": [
+        "La Anses oficializó un aumento del 1,66% para la AUH en octubre.",
+        "La actualización se rige por la variación inflacionaria de agosto.",
+        "El pago se distribuye entre la segunda y tercera semana del mes según el DNI."
+      ],
+      "textoRedes": "La Anses oficializó un aumento del 1,66 por ciento en la Asignación Universal por Hijo para el mes de octubre. El incremento responde a la actualización automática por inflación y los pagos se distribuyen según la terminación del documento.",
+      "etiquetas": [
+        "Anses",
+        "Asignación Universal por Hijo",
+        "octubre",
+        "aumento",
+        "prestaciones sociales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+          "fecha": "2026-10-11T13:27:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento, el índice de inflación de referencia y los detalles de la Libreta AUH."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
+          "fecha": "2026-10-11T13:28:52.000Z",
+          "oficial": false,
+          "aporte": "Informó que la Anses publicó el calendario de pagos de octubre por terminación de DNI."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
+          "fecha": "2026-10-11T16:31:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó el alcance de la cobertura en cantidad de menores y adultos a cargo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ujkaqh",
+          "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
+          "fecha": "2026-09-28T12:13:43.000Z",
+          "ruta": "/nota/anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre-ujkaqh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "anses-aplica-un-incremento-en-la-asignacion-universal-por-hijo"
     },
     {
       "id": "repaso20261011manana",
@@ -2330,6 +2796,70 @@
         }
       ],
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-8-y-maxima-de-14"
+    },
+    {
+      "id": "1m2za7b",
+      "titulo": "Radio Líder Balcarce Stream alcanza cifras récord a dos semanas de su inicio",
+      "copete": "La plataforma audiovisual de la empresa local cumple dos semanas con marcas destacadas de audiencia. Sus directores detallan la renovación tecnológica y los nuevos ciclos.",
+      "cuerpo": "Radio Líder Balcarce Stream alcanza mediciones récord a dos semanas de su puesta en marcha, según informaron sus directores, Leo Clasadonte y Emiliano Zuazquita. La plataforma audiovisual completa la segunda transformación digital de la empresa en un proceso que demandó un año de trabajo.\n\nPara concretar el proyecto, la firma demolió un estudio anterior y construyó desde cero un espacio integrado con tecnología avanzada.\n\nClasadonte y Zuazquita señalaron que la propuesta articula la trayectoria periodística de los medios locales con un formato interactivo orientado a la audiencia balcarceña, y adelantaron que próximamente sumarán nuevos programas.",
+      "guion": "Radio Líder Balcarce Stream alcanza cifras récord a dos semanas de su inicio",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45056-radio-lider-balcarce-stream-un-exito-rotundo-de-audiencia-desde-el-primer-dia/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-11T10:31:40.314Z",
+      "sinFecha": true,
+      "visto": "2026-10-11T10:31:40.314Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Radio Líder Balcarce Stream cumple dos semanas al aire.",
+        "Sus directores destacan marcas récord en las mediciones.",
+        "El proyecto demandó la construcción de un nuevo estudio.",
+        "Incluye el ciclo matutino conducido en la franja de 8 a 12:30."
+      ],
+      "seSabe": [
+        "Radio Líder Balcarce Stream lleva dos semanas de transmisiones, según sus directores.",
+        "El proyecto implicó la creación de un nuevo estudio y una plataforma interactiva, de acuerdo con Emiliano Zuazquita y Leo Clasadonte.",
+        "El programa principal se emite de 8 a 12:30 bajo la conducción de la productora local."
+      ],
+      "noConfirmado": [
+        "Los directores no detallaron el monto total de la inversión económica realizada para la renovación tecnológica.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Radio Líder Balcarce Stream alcanza cifras récord de audiencia a dos semanas de su lanzamiento y renueva su propuesta con tecnología 4K.",
+      "etiquetas": [
+        "Radio Líder",
+        "streaming",
+        "Balcarce",
+        "tecnología",
+        "medios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45056-radio-lider-balcarce-stream-un-exito-rotundo-de-audiencia-desde-el-primer-dia/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el balance a dos semanas del lanzamiento de la plataforma de streaming, las características técnicas del nuevo estudio y los proyectos futuros."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "radio-lider-balcarce-stream-alcanza-cifras-record-a-dos-semanas-de-su",
+      "foto": {
+        "archivo": "fotos-notas/1m2za7b.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
     }
   ],
   "secciones": [
@@ -2338,19 +2868,25 @@
     "Argentina",
     "Deportes",
     "Balcarce",
+    "Fútbol",
     "Agro",
     "Cultura y agenda",
     "Economía",
-    "Fútbol",
     "Policiales"
   ],
-  "temas": [],
+  "temas": [
+    {
+      "nombre": "Fangio",
+      "ranura": "fangio",
+      "cuantas": 2
+    }
+  ],
   "clima": {
     "ahora": {
       "temp": 13,
       "sensacion": 11,
-      "humedad": 68,
-      "viento": 10,
+      "humedad": 70,
+      "viento": 11,
       "rumbo": "NE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -2702,7 +3238,7 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "1eaitl9",
+      "id": "ox863",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
@@ -2712,6 +3248,12 @@
       "titulo": "Menem descartó una salida de Caputo: “No hay dudas sobre…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "t2ij37",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "xcqget",

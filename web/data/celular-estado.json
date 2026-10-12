@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T17:32:31.447Z",
- "portada": 28,
+ "generado": "2026-10-12T18:01:58.340Z",
+ "portada": 36,
  "archivo": 959,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-12T17:32:31.476Z",
+  "generado": "2026-10-12T18:01:58.370Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -63,7 +63,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,9 +124,9 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 51,
+    "segundos": 55,
     "notas": [
      {
       "id": "rzhblo",
@@ -139,14 +139,14 @@
       "seccion": "Deportes"
      },
      {
+      "id": "xn5jch",
+      "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
+      "seccion": "Deportes"
+     },
+     {
       "id": "skmago",
       "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes"
      }
     ]
    },
@@ -157,8 +157,24 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 44,
+    "notas": [
+     {
+      "id": "q9kshm",
+      "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1tsobe7",
+      "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
+     }
+    ]
    }
   ],
   "facebook": {
