@@ -196,12 +196,11 @@ export function textoDeEstado({ estado, datos, ahora }) {
   }
 
   const ultima = ultimaFecha(datos.cotizaciones);
-  const nombreFuente = FUENTES[datos.fuente]?.nombre ?? datos.fuente;
 
   if (estado === 'vivo') {
     return {
       titulo: `Actualizado ${cuando(ultima, ahora)}`,
-      detalle: `Consultamos ${nombreFuente} ${cuando(datos.consultado, ahora)}. Se vuelve a consultar cada 5 minutos mientras tengas la página abierta.`,
+      detalle: `Se renueva solo cada 5 minutos mientras tengas la página abierta.`,
     };
   }
 

@@ -1046,6 +1046,9 @@ footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1
   .fb-detalle { text-align: left; }
 }
 .fb-equipo-chico { display: block; font-size: 12.5px; font-weight: 500; color: var(--suave); }
+/* La barra con el color del equipo, en las tablas de la Fórmula 1. */
+.fb-con-color { display: flex; align-items: stretch; gap: 10px; }
+.fb-color-equipo { flex: none; width: 5px; border-radius: 3px; background: var(--borde, #d8d2c6); }
 
 /* Enlace para saltar al contenido (V2-15, 8/10/2026): invisible hasta que se llega con el teclado. */
 .saltar { position: absolute; left: -9999px; top: 0; z-index: 100; padding: 10px 16px; background: #111; color: #fff; font-weight: 600; }

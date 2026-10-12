@@ -804,6 +804,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Cupo de lo de afuera: el resto de las secciones | 15 | `CUPO_POR_DEFECTO` |
 | Facebook: notas por día, como máximo | 5 | `FACEBOOK.porDia` |
 | Facebook: relevancia mínima | 75 | `FACEBOOK.relevanciaMinima` |
+| Facebook: relevancia mínima para completar los cinco con lo de afuera | 0 | `FACEBOOK.relevanciaMinimaDeRelleno` |
 | Facebook: desde la hora | 8 | `FACEBOOK.desdeHora` |
 | Facebook: hasta la hora (en punto) | 22 | `FACEBOOK.hastaHora` |
 | Facebook: minutos entre un posteo y otro | 90 | `FACEBOOK.minutosEntrePosteos` |

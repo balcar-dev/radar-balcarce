@@ -35,7 +35,7 @@
 
 **Documentos**
 - `PENDIENTES-AL-9-10.md`, `CLAVES-DE-IA.md`, `MAPA-COMERCIAL-PLAN.md`, y este resumen.
-- Reglas 157 a 160 anotadas en `docs/10-REGLAS-Y-PRUEBAS.md`. La próxima regla es la 161.
+- Reglas 157 a 162 anotadas en `docs/10-REGLAS-Y-PRUEBAS.md`. La próxima regla es la 163.
 
 ## 3. Lo que hace Claude solo (sin ustedes)
 

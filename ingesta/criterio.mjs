@@ -226,6 +226,8 @@ export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
 export const FACEBOOK = {
   porDia: 5,
   relevanciaMinima: 75,
+  // 12/10, Hernán: tienen que salir cinco por día; si no alcanzan las de Balcarce, se sigue con lo de mayor puntaje (0 = sin piso).
+  relevanciaMinimaDeRelleno: 0,
   desdeHora: 8,
   hastaHora: 22,
   minutosEntrePosteos: 90,

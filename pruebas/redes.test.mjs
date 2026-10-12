@@ -161,8 +161,20 @@ test('lo viejo no se publica', () => {
   assert.equal(elegirParaFacebook({ notas: [vieja], ahora: AHORA }).length, 0);
 });
 
-test('lo flojo no se publica', () => {
-  assert.equal(elegirParaFacebook({ notas: [nota({ relevancia: 60 })], ahora: AHORA }).length, 0);
+test('lo flojo no sale por lo que es: sin relleno en las reglas no se publica', () => {
+  const sinRelleno = { ...REGLAS_FACEBOOK, relevanciaMinimaDeRelleno: undefined };
+  assert.equal(elegirParaFacebook({ notas: [nota({ relevancia: 60 })], ahora: AHORA, reglas: sinRelleno }).length, 0);
+});
+
+test('tienen que salir cinco por día (12/10): si no alcanza lo de Balcarce se sigue con lo de mayor puntaje, y lo de acá va primero', () => {
+  const deAfuera = nota({ id: 'afuera', local: false, seccion: 'Argentina', relevancia: 99, titulo: 'El Gobierno anunció un nuevo esquema de subsidios para el transporte' });
+  const floja = nota({ id: 'flojaDeAca', relevancia: 60, titulo: 'Abre la inscripción a la escuela de verano en el club' });
+  const buena = nota({ id: 'buenaDeAca', relevancia: 80, titulo: 'Inauguran la nueva sala de guardia en el hospital municipal' });
+  const elegidas = elegirParaFacebook({ notas: [deAfuera, floja, buena], ahora: AHORA, reglas: { ...REGLAS_FACEBOOK, porCorrida: 3 } });
+  assert.deepEqual(elegidas.map((n) => n.id), ['buenaDeAca', 'flojaDeAca', 'afuera'], 'Balcarce primero, y después lo de afuera por puntaje');
+  // Política y Policiales siguen esperando a una persona, aunque sea lo de mayor puntaje.
+  const politica = nota({ id: 'pol', local: false, seccion: 'Política', relevancia: 99, titulo: 'El Senado debate la reforma del régimen de zona fría esta semana' });
+  assert.equal(elegirParaFacebook({ notas: [politica], ahora: AHORA }).length, 0);
 });
 
 test('hay un tope diario y un respiro entre posteos', () => {

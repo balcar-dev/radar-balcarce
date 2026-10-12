@@ -81,6 +81,10 @@ de `CRITERIO-EDITORIAL.md`):
 | Tema | No repite un tema publicado en las últimas 24 horas (`temaParecido`: el 24/09 salieron tres del autódromo en cuatro horas) |
 | Repetición | Una nota sale una sola vez (el libro) |
 
+**Cinco por día (12/10, Hernán):** primero sale lo de Balcarce; si no alcanza para los cinco, se sigue con lo de afuera de mayor puntaje
+(`vaAFacebookDeRelleno`, `FACEBOOK.relevanciaMinimaDeRelleno`, hoy 0 = sin piso). Valen las mismas guardas: nada propio ni sin cuerpo, nunca Política ni
+Policiales, nada que una persona aprobó sin marcarlo para las redes. Instagram copia lo de Facebook.
+
 **Qué nota puede ir** (`vaAFacebookPorLoQueEs`, regla 78):
 
 - **Sola:** de Balcarce (`esParaLasRedes`: `local: true`, o Automovilismo con

@@ -143,7 +143,6 @@ const foto = { ...traido, consultado: '2026-09-24T20:37:00.000Z', deLaFoto: true
 test('recién traído en el navegador: "Actualizado a las" con la hora que informa la fuente', () => {
   const t = textoDeEstado({ estado: 'vivo', datos: traido, ahora: MISMO_DIA });
   assert.equal(t.titulo, 'Actualizado a las 17:56');
-  assert.match(t.detalle, /Consultamos DolarApi\.com a las 18:10/);
   assert.match(t.detalle, /cada 5 minutos/);
   // A la mañana siguiente, lo último que informó la fuente es de ayer y se dice.
   assert.equal(textoDeEstado({ estado: 'vivo', datos: traido, ahora: AL_OTRO_DIA }).titulo, 'Actualizado ayer a las 17:56');

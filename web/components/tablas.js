@@ -2,6 +2,13 @@
 // estilo que las tablas de las notas de fútbol (`.fb-tabla`, globals.css).
 
 import { rutaDelEscudo } from '@/lib/escudos';
+import { colorDelEquipo } from '@/lib/equipos-f1';
+
+/** La barra con el color del equipo que va al lado del nombre (sólo color, sin logos). */
+function MarcaDeEquipo({ equipo }) {
+  const color = colorDelEquipo(equipo);
+  return <span className="fb-color-equipo" style={color ? { background: color } : undefined} aria-hidden="true" />;
+}
 
 function Equipo({ id, nombre }) {
   const escudo = rutaDelEscudo(id);
@@ -59,8 +66,13 @@ export function TablaDePilotos({ filas }) {
             <tr key={`${f.posicion}-${f.piloto}`}>
               <td>{f.posicion}</td>
               <th scope="row">
-                {f.piloto}
-                {f.equipo && <span className="fb-equipo-chico">{f.equipo}</span>}
+                <span className="fb-con-color">
+                  <MarcaDeEquipo equipo={f.equipo} />
+                  <span>
+                    {f.piloto}
+                    {f.equipo && <span className="fb-equipo-chico">{f.equipo}</span>}
+                  </span>
+                </span>
               </th>
               <td className="fb-pts">{f.puntos}</td>
               <td>{f.victorias ?? 0}</td>
@@ -86,7 +98,7 @@ export function TablaDeConstructores({ filas }) {
           {filas.map((f) => (
             <tr key={`${f.posicion}-${f.equipo}`}>
               <td>{f.posicion}</td>
-              <th scope="row">{f.equipo}</th>
+              <th scope="row"><span className="fb-con-color"><MarcaDeEquipo equipo={f.equipo} /><span>{f.equipo}</span></span></th>
               <td className="fb-pts">{f.puntos}</td>
               <td>{f.victorias ?? 0}</td>
             </tr>

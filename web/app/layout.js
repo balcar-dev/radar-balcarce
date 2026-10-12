@@ -189,13 +189,7 @@ export default function RaizLayout({ children }) {
             <div>
               <a href="/quienes-somos">Quiénes somos</a> · <a href="/contacto">Contacto y correcciones</a>
             </div>
-            {actualizado && (
-              <div className="aclaracion">
-                Las noticias se actualizan solas cada media hora. Esta página se armó
-                a las {actualizado}.
-              </div>
-            )}
-            <div className="aclaracion">
+            <div className="aclaracion" data-armada={actualizado || undefined}>
               Los resúmenes los escribe una inteligencia artificial y se verifican
               automáticamente contra la fuente original, que queda enlazada; lo sensible lo
               revisa una persona antes de salir. Las voces de nuestros videos también son

@@ -54,6 +54,7 @@ export const REGLAS_FACEBOOK = {
   // por día, y más adelante se mezclan con las notas propias y originales.
   porDia: FACEBOOK.porDia,
   relevanciaMinima: FACEBOOK.relevanciaMinima,
+  relevanciaMinimaDeRelleno: FACEBOOK.relevanciaMinimaDeRelleno, // completa los cinco del día con lo de afuera de mayor puntaje
   porCorrida: 1,           // así no salen dos pegadas
   minutosEntrePosteos: FACEBOOK.minutosEntrePosteos,
   esperaMinutos: FACEBOOK.esperaMinutos,       // que el deploy de la web ya haya terminado
@@ -116,6 +117,18 @@ export function vaAFacebookPorLoQueEs(n, reglas = REGLAS_FACEBOOK) {
 }
 
 /**
+ * Lo que puede salir en Facebook para completar los cinco del día cuando no alcanzan las de Balcarce (12/10, Hernán): lo de afuera de mayor
+ * puntaje. Valen las mismas guardas: nada propio ni sin cuerpo, nunca Política ni Policiales ni lo que una persona aprobó sin marcarlo para
+ * las redes. Sin `relevanciaMinimaDeRelleno` en las reglas, no hay relleno.
+ */
+export function vaAFacebookDeRelleno(n, reglas = REGLAS_FACEBOOK) {
+  if (reglas.relevanciaMinimaDeRelleno == null) return false;
+  if (esNotaPropia(n) || esperaCuerpo(n)) return false;
+  return !loAproboUnaPersona(n) && !reglas.seccionesQueEsperanPersona.includes(n.seccion)
+    && (n.relevancia ?? 0) >= reglas.relevanciaMinimaDeRelleno;
+}
+
+/**
  * Las notas que corresponde publicar ahora en Facebook, en orden.
  * Puede devolver cero, y casi siempre lo hace: es lo normal.
  */
@@ -149,7 +162,7 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
 
   const candidatas = notas.filter((n) => {
     if (yaPublicada(libro, 'facebook', n.id)) return false;
-    if (!vaAFacebookPorLoQueEs(n, reglas)) return false;
+    if (!vaAFacebookPorLoQueEs(n, reglas) && !vaAFacebookDeRelleno(n, reglas)) return false;
     if (recientes.some((p) => temaParecido(n, p))) return false;
     const salio = cuandoSalio(n);
     if (!salio) return false;
@@ -159,8 +172,9 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
     return Boolean(n.foto?.archivo) || aprobadaParaLasRedes(n) || edad >= (reglas.horasEsperandoFoto ?? 0) * 60;
   });
 
-  // Lo que aprobó una persona para las redes va primero; después, por relevancia.
-  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || (Number(Boolean(b.foto?.archivo)) - Number(Boolean(a.foto?.archivo))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+  // Lo que aprobó una persona para las redes va primero; después lo de Balcarce, y sólo si no hay, lo de afuera de mayor puntaje; dentro de cada grupo, con foto y por relevancia.
+  const deAca = (n) => Number(esParaLasRedes(n));
+  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || (deAca(b) - deAca(a)) || (Number(Boolean(b.foto?.archivo)) - Number(Boolean(a.foto?.archivo))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
   return candidatas.slice(0, Math.min(cupo, reglas.porCorrida));
 }
 

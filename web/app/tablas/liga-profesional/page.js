@@ -1,7 +1,6 @@
 import { metadatosDePagina } from '@/components/metadatos';
 import { TablaDeZona } from '@/components/tablas';
 import { tablaDeLaLiga } from '@/lib/tablas';
-import { fechaLarga } from '@/lib/tiempo';
 
 export const metadata = metadatosDePagina({
   titulo: 'Tabla de posiciones de la Liga Profesional',
@@ -17,15 +16,14 @@ export default function TablaLiga() {
     <div className="envoltura" style={{ maxWidth: 760 }}>
       <h1 className="fraunces" style={{ fontSize: 32 }}>Tabla de posiciones de la Liga Profesional</h1>
       <p className="mini" style={{ marginTop: 8 }}>
-        {t?.torneo ? `${t.torneo}. ` : ''}Datos de ESPN.
-        {t?.actualizada ? ` Actualizada el ${fechaLarga(t.actualizada)}.` : ''}
+        {t?.torneo ? `${t.torneo}.` : ''}
       </p>
       {t
         ? t.zonas.map((z) => <TablaDeZona zona={z} key={z.nombre} />)
         : <div className="tarjeta" style={{ marginTop: 22 }}><strong>Todavía no tenemos la tabla.</strong> Aparece apenas la publique la fuente.</div>}
       <p className="fb-pie">PJ: jugados · G: ganados · E: empatados · P: perdidos · DG: diferencia de gol · Pts: puntos.</p>
       <p className="mini" style={{ marginTop: 18 }}>
-        Los partidos de cada fecha, con horarios y resultados, están en <a href="/seccion/futbol">Fútbol</a>. Otras tablas: <a href="/tablas/formula-1">Fórmula 1</a>.
+        Los partidos de cada fecha, con horarios y resultados, están en <a href="/seccion/futbol">Fútbol</a>. Fuente: ESPN.
       </p>
     </div>
   );

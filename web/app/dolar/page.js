@@ -43,7 +43,7 @@ export default function Dolar() {
       </details>
 
       <Cierre
-        fuente="Las cotizaciones son de DolarApi.com (y de Bluelytics si DolarApi no contesta). Son precios de referencia: en cada banco o casa de cambio pueden ser otros."
+        fuente="Fuente: DolarApi.com y Bluelytics. Son precios de referencia: en cada banco o casa de cambio pueden ser otros."
       />
     </div>
   );
