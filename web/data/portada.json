@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T03:31:39.928Z",
+  "generado": "2026-10-12T04:02:09.969Z",
   "notas": [
     {
       "id": "irpmd8",
@@ -19,7 +19,7 @@
       "fecha": "2026-10-12T00:53:36.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T03:11:10.426Z",
-      "relevancia": 73,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -419,8 +419,8 @@
         "Crónica",
         "Canal 26",
         "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día"
+        "El Día",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -591,8 +591,8 @@
       "medios": [
         "Infobae",
         "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Realpolitik"
+        "Realpolitik",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/cultura/rosario-vive-una-nueva-edicion-de-la-feria-internacional-del-libro_a6acbecc5f61ec7711f784fc2",
       "teniaImagenLaFuente": true,
@@ -664,6 +664,116 @@
       "foto": {
         "archivo": "fotos-notas/1vl8rqs.jpg",
         "credito": "Foto: Diario Popular"
+      }
+    },
+    {
+      "id": "1dnf8l0",
+      "titulo": "Racing cae ante Belgrano y llega golpeado al clásico",
+      "copete": "La Academia perdió dos a cero como local frente al Pirata con tantos de Lucas Zelarayán y Franco Vázquez. Los hinchas reprobaron al plantel a una semana del duelo frente a Independiente.",
+      "cuerpo": "Racing sufrió una derrota por dos a cero ante Belgrano en el Cilindro, con conversiones de Lucas Zelarayán y Franco Vázquez. Tras el pitazo final de Yael Falcón Pérez, los simpatizantes manifestaron su descontento desde las tribunas y cuestionaron al plantel y a Diego Milito.\n\nEl equipo quedó a siete unidades de los puestos de clasificación a los playoffs y con escasas chances de acceder a copas internacionales para el año próximo, cuando restan doce puntos por disputarse en el torneo.\n\nPese a los cuestionamientos, los seguidores exigieron un triunfo en el compromiso del próximo domingo frente a Independiente en condición de visitantes.",
+      "guion": "Racing cae ante Belgrano y llega golpeado al clásico",
+      "seccion": "Fútbol",
+      "medios": [
+        "Olé",
+        "El Destape",
+        "TyC Sports",
+        "El Día",
+        "El Gráfico"
+      ],
+      "enlace": "https://www.elgrafico.com.ar/articulo/1038/103288/belgrano-dejo-mudo-el-cilindro-y-racing-llega-con-una-derrota-al-clasico",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T20:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T04:01:43.160Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Racing perdió 2 a 0 como local ante Belgrano.",
+        "Lucas Zelarayán y Franco Vázquez anotaron los goles.",
+        "Los hinchas reprobaron al plantel al término del encuentro.",
+        "El próximo domingo se jugará el clásico ante Independiente."
+      ],
+      "seSabe": [
+        "Racing perdió dos a cero contra Belgrano.",
+        "Los tantos del conjunto visitante fueron convertidos por Lucas Zelarayán y Franco Vázquez.",
+        "El árbitro del encuentro fue Yael Falcón Pérez.",
+        "Los simpatizantes insultaron a los jugadores y a Diego Milito tras la derrota."
+      ],
+      "noConfirmado": [
+        "No se informó si habrá sanciones para el plantel tras las protestas de los hinchas.",
+        "No trascendió la formación inicial que utilizará el equipo para el clásico."
+      ],
+      "textoRedes": "Racing cayó dos a cero ante Belgrano con goles de Lucas Zelarayán y Franco Vázquez. Los hinchas reprobaron al plantel tras el encuentro y ya palpitan el clásico del próximo domingo frente a Independiente.",
+      "etiquetas": [
+        "Racing",
+        "Belgrano",
+        "Fútbol",
+        "Independiente"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Gráfico",
+          "enlace": "https://www.elgrafico.com.ar/articulo/1038/103288/belgrano-dejo-mudo-el-cilindro-y-racing-llega-con-una-derrota-al-clasico",
+          "fecha": "2026-10-11T20:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/racing/racing-reaccion-cilindro-derrota-belgrano-vayan_0_4NUjttQqu0.html",
+          "fecha": "2026-10-12T01:57:06.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/ver-vivo-racing-vs-belgrano-forma-legal-riesgos-2026101113023",
+          "fecha": "2026-10-11T21:30:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/racing-club/racing-cilindro-estallo-derrota-belgrano-id765758.html",
+          "fecha": "2026-10-12T03:49:15.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/racing/reaccion-cilindro-luego-derrota-racing-frente-belgrano_3_Kkkcaf0YD6.html",
+          "fecha": "2026-10-12T01:56:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/futbol-primera/gol-mudo-vazquez-racing_3_b7r6VQ2Cw0.html",
+          "fecha": "2026-10-12T00:24:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/racing-perdio-con-belgrano-en-el-cilindro-que-exploto-de-bronca-deportes_1791763200",
+          "fecha": "2026-10-12T00:48:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "racing-cae-ante-belgrano-y-llega-golpeado-al-clasico",
+      "foto": {
+        "archivo": "fotos-notas/1dnf8l0.jpg",
+        "credito": "Foto: El Día"
       }
     },
     {
@@ -755,6 +865,77 @@
       "slug": "diputados-debate-el-proyecto-que-sanciona-el-vandalismo-rural",
       "foto": {
         "archivo": "fotos-notas/1pi4mqa.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "1lmhb77",
+      "titulo": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
+      "copete": "Un estudio del sector detalla las diferencias de tarifas entre las distintas jurisdicciones del país. El distrito bonaerense encabeza la lista con la boleta más alta, mientras que el transporte nacional en el AMBA registra el valor más accesible.",
+      "cuerpo": "Un informe elaborado por la Asociación Argentina de Empresarios del Transporte Automotor expone las diferencias en el valor del boleto mínimo de colectivo en todo el país. Pinamar encabeza el listado nacional con una tarifa de 3.176 pesos, seguida por San Martín de los Andes con 2.900 pesos y Pergamino con 2.784 pesos.\n\nEn el otro extremo, el boleto más económico se registra en los servicios de jurisdicción nacional del AMBA con 743 pesos, valor que se ubica por debajo de los 920 pesos vigentes en la Ciudad de Buenos Aires y de los 1.215 pesos del territorio bonaerense metropolitano.\n\nEl relevamiento también advierte una retracción en la cantidad de usuarios del transporte en el AMBA. Durante septiembre de este año, el promedio diario en días hábiles alcanzó 8.232.858 pasajeros, lo que representa una baja de 10,1 por ciento en comparación con el mismo mes del año pasado.",
+      "guion": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "El Día"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T19:44:21.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:31:31.632Z",
+      "relevancia": 49,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pinamar presenta el boleto más caro del país con un valor de 3.176 pesos.",
+        "El AMBA registra la tarifa más baja con 743 pesos en jurisdicción nacional.",
+        "El relevamiento pertenece a la Asociación Argentina de Empresarios del Transporte Automotor.",
+        "Los pasajeros diarios en días hábiles en el AMBA bajaron un 10,1 por ciento en septiembre."
+      ],
+      "seSabe": [
+        "Pinamar lidera el ranking de tarifas urbanas con 3.176 pesos.",
+        "La tarifa mínima en el AMBA nacional es de 743 pesos.",
+        "El informe fue realizado por la Asociación Argentina de Empresarios del Transporte Automotor.",
+        "El uso del transporte en el AMBA registró una caída interanual en septiembre."
+      ],
+      "noConfirmado": [
+        "No se informaron detalles sobre la evolución de tarifas proyectada para los próximos meses en el resto de las jurisdicciones."
+      ],
+      "textoRedes": "Un relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor detalla las diferencias en el boleto de colectivo en el país. Pinamar registra la tarifa más alta con 3.176 pesos, mientras que el AMBA mantiene los valores más bajos.",
+      "etiquetas": [
+        "colectivos",
+        "tarifas",
+        "transporte",
+        "ranking"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
+          "fecha": "2026-10-11T19:44:21.000Z",
+          "oficial": false,
+          "aporte": "Detalló el listado completo de ciudades con las tarifas más altas y más bajas, además de las estadísticas sobre caída de pasajeros y subsidios en el AMBA."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/la-ciudad/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-micro-y-en-que-lugar-esta-la-plata-la-ciudad_1791756120",
+          "fecha": "2026-10-11T22:16:33.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la difusión del relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor respecto a las diferencias entre jurisdicciones."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pinamar-encabeza-el-ranking-nacional-con-el-boleto-de-colectivo-mas",
+      "foto": {
+        "archivo": "fotos-notas/1lmhb77.jpg",
         "credito": "Foto: Infobae"
       }
     },
@@ -1697,7 +1878,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "iProfesional",
-        "TN (Todo Noticias)"
+        "TN (Todo Noticias)",
+        "Olé",
+        "Doble Amarilla"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/10/el-gobierno-reitero-la-solicitud-a-la-fia-para-que-la-argentina-sea-sede-de-un-gran-premio-de-la-formula-1/",
       "teniaImagenLaFuente": true,
@@ -1770,7 +1953,9 @@
     "Policiales",
     "Automovilismo",
     "Cultura y agenda",
-    "Agro"
+    "Fútbol",
+    "Agro",
+    "Economía"
   ],
   "temas": [],
   "clima": {
@@ -1778,7 +1963,7 @@
       "temp": 5,
       "sensacion": 3,
       "humedad": 95,
-      "viento": 7,
+      "viento": 6,
       "rumbo": "SE",
       "cielo": "Despejado",
       "esDeDia": false

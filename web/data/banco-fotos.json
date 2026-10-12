@@ -12266,13 +12266,16 @@
   "cuando": "2026-10-12T01:01:57.758Z"
  },
  "1lmhb77": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1lmhb77.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-11T23:32:18.484Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/BB2OE5LWVJFI5BYCLFWU6YUFZM.jpg?auth=bf0e708d080fe02e8ffd7d4f5d6885b26945ba7b75c111e96f63a072fc466b49&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A ilustra adecuadamente el transporte público y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-12T04:02:01.507Z"
  },
  "1pxllaz": {
   "intentado": true,
@@ -12387,5 +12390,17 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/martin-menem-presidente-de-la-camara-de-diputados-foto-camara-de-diputadosgustavo-molfino-5MST3S4H6RGGFBH4SCH7REL62U.jpg?auth=40462e305dd296cf3321a6cf5699b3e2cf676d3e8fa4f2284753ebd3f27138b3&width=1023",
   "razon": "Es la única foto libre de marcas de agua o menores, con buena nitidez e ilustra adecuadamente el ámbito político de la nota.",
   "cuando": "2026-10-12T03:11:18.189Z"
+ },
+ "1dnf8l0": {
+  "archivo": "fotos-notas/1dnf8l0.jpg",
+  "medio": "El Día",
+  "credito": "Foto: El Día",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Racing cae ante Belgrano y llega golpeado al clásico",
+  "enlace": "https://www.eldia.com/deportes/racing-perdio-con-belgrano-en-el-cilindro-que-exploto-de-bronca-deportes_1791763200",
+  "imagenOriginal": "https://cdn1.eldia.com/102026/1791766190634.jpg?&cw=1200&ch=630",
+  "razon": "Es una foto clara de juego profesional, sin marcas de medios ni menores reconocibles.",
+  "cuando": "2026-10-12T04:02:01.507Z"
  }
 }
