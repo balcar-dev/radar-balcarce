@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T23:02:05.248Z",
+  "generado": "2026-10-12T23:32:02.694Z",
   "notas": [
     {
       "id": "1imkz6n",
@@ -145,16 +145,16 @@
       "guion": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
       "seccion": "Deportes",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "Infórmese Primero (FM 104.9)"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T19:42:06.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 82,
+      "relevancia": 96,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -256,6 +256,88 @@
       }
     },
     {
+      "id": "7p3nh4",
+      "titulo": "Cientos de personas hacen diez cuadras de fila por cinco puestos en Moreno",
+      "copete": "Una multitud se postuló para cinco vacantes en un bazar dentro de un hipermercado. Varios aspirantes llegaron durante la madrugada y algunos acamparon la noche previa.",
+      "cuerpo": "Una fila de diez cuadras se formó en el predio de un hipermercado en Moreno durante la búsqueda de personal para la apertura de un bazar. La convocatoria reunió a cientos de postulantes que compitieron por solo cinco puestos de trabajo disponibles.\n\nLa convocatoria generó tanta expectativa que algunos aspirantes decidieron acampar durante la noche previa. El comercio fijó la recepción de antecedentes hasta las 16, aunque la multitud continuó en el lugar cerca de esa hora.\n\nTestimonios recogidos en el lugar señalaron que varias personas llevan hasta un año sin conseguir empleo, mientras que otras asistieron en busca de una mejora en sus ingresos o de su primer trabajo.",
+      "guion": "Cientos de personas hacen diez cuadras de fila por cinco puestos en Moreno",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "iProfesional",
+        "Minuto Uno",
+        "Radio Mitre",
+        "A24"
+      ],
+      "enlace": "https://tn.com.ar/sociedad/2026/10/12/diez-cuadras-de-fila-por-un-trabajo-en-moreno-cientos-de-personas-esperan-desde-la-madrugada-para-dejar-su-curriculum-en-un-bazar/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T19:08:52.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T21:31:44.592Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ocurrió en la localidad bonaerense de Moreno.",
+        "Hubo una fila de diez cuadras para cinco puestos.",
+        "La convocatoria estuvo abierta hasta las 16.",
+        "Algunos postulantes acamparon desde la noche previa."
+      ],
+      "seSabe": [
+        "Una fila de diez cuadras se formó en el predio de un hipermercado en Moreno.",
+        "Había cinco puestos de trabajo disponibles para la apertura de un bazar.",
+        "Algunos aspirantes acamparon durante la noche previa para asegurar su lugar.",
+        "El comercio estableció la recepción de currículums hasta las 16."
+      ],
+      "noConfirmado": [
+        "No se informó el número exacto de personas que participaron de la fila."
+      ],
+      "textoRedes": "Una fila de diez cuadras se formó en Moreno por la búsqueda de personal para la apertura de un bazar. Cientos de personas se postularon desde la madrugada para competir por cinco puestos de trabajo disponibles.",
+      "etiquetas": [
+        "Moreno",
+        "empleo",
+        "bazar",
+        "búsqueda laboral",
+        "hipermercado"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/sociedad/2026/10/12/diez-cuadras-de-fila-por-un-trabajo-en-moreno-cientos-de-personas-esperan-desde-la-madrugada-para-dejar-su-curriculum-en-un-bazar/",
+          "fecha": "2026-10-12T19:08:52.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la fila de diez cuadras, los cinco puestos disponibles, el horario límite de recepción y los testimonios de los postulantes."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/actualidad/mas-seis-cuadras-fila-moreno-cinco-puestos-trabajo-un-bazar-n1605592",
+          "fecha": "2026-10-12T21:06:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó testimonios sobre personas que llevan hasta un año sin empleo."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/videos/cientos-de-personas-hicieron-una-fila-de-10-cuadras-en-moreno-para-conseguir-trabajo-acamparon-desde-la-madrugada-para-dejar-su-curriculum/",
+          "fecha": "2026-10-12T19:35:11.000Z",
+          "oficial": false,
+          "aporte": "Indicó que cientos de personas se acercaron desde la madrugada para dejar su currículum."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "cientos-de-personas-hacen-diez-cuadras-de-fila-por-cinco-puestos-en",
+      "foto": {
+        "archivo": "fotos-notas/7p3nh4.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "gl138z",
       "titulo": "Marcos Galperín cuestiona la norma del BCRA sobre el costo de los créditos",
       "copete": "El fundador de Mercado Libre criticó el cálculo del Costo Financiero Total exigido por el Banco Central. Sostuvo que el indicador está inflacionado y no refleja la realidad de los préstamos.",
@@ -263,6 +345,7 @@
       "guion": "Marcos Galperín cuestiona la norma del Banco Central sobre el costo de los créditos.",
       "seccion": "Economía",
       "medios": [
+        "La Nación",
         "El Eco de Tandil",
         "Infobae"
       ],
@@ -271,7 +354,7 @@
       "fecha": "2026-10-12T18:43:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T22:01:54.030Z",
-      "relevancia": 49,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -559,10 +642,10 @@
       "seccion": "Política",
       "medios": [
         "El Diario Balcarce",
-        "La Nación",
         "El Eco de Tandil",
         "Infobae",
         "Clarín",
+        "La Nación",
         "TN (Todo Noticias)",
         "Perfil",
         "Crónica",
@@ -1041,11 +1124,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45059-transporte-publico-impulsan-medidas-de-accesibilidad-para-personas-con-autismo-que-podrian-llegar-a-balcarce/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-12T14:31:34.877Z",
       "sinFecha": true,
       "visto": "2026-10-12T14:31:34.877Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1408,7 +1491,6 @@
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Noticia 1",
-        "Minuto Uno",
         "Infobae",
         "Ámbito",
         "Perfil",
@@ -1417,11 +1499,13 @@
         "El Destape",
         "Página/12",
         "iProfesional",
+        "Minuto Uno",
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Brújula 24",
         "La Tecla",
+        "La Verdad",
         "La Voz del Pueblo",
         "InfoRegión",
         "El Marplatense",
@@ -1547,81 +1631,6 @@
       "foto": {
         "archivo": "fotos-notas/36ajax.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "194wzrq",
-      "titulo": "Domingo Cavallo elogia un informe con reparos al plan económico",
-      "copete": "El exministro de Economía respaldó un trabajo tìnico que cuestiona herramientas de la gestión de Luis Caputo. El documento advierte sobre un sobreajuste en el mercado interno.",
-      "cuerpo": "El exministro de Economía Domingo Cavallo calificó de excelente un documento tìnico que cuestiona varios puntos del programa que conduce el ministro Luis Caputo. El trabajo fue elaborado por el economista jefe del Ieral de la Fundación Mediterránea, Jorge Vasconcelos, y difundido en el blog personal del exfuncionario.\n\nEl texto señala que la estrategia iniciada en diciembre de 2023 puede sostenerse, aunque advierte sobre un sobreajuste en el mercado interno y una retracción de la inversión cercana al diez por ciento anual. Asimismo, el especialista menciona dificultades para la reactivación, encarecimiento de los Préstamos y un avance desigual entre sectores exportadores y aquellos que dependen de la demanda doméstica.",
-      "guion": "Domingo Cavallo elogia un informe con reparos al plan económico",
-      "seccion": "Economía",
-      "medios": [
-        "Clarín",
-        "El Día"
-      ],
-      "enlace": "https://www.eldia.com/politica-y-economia/cavallo-elogio-un-informe-con-criticas-al-plan-economico-de-caputo-politica-y-economia_1791807720",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T12:29:08.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T21:31:44.592Z",
-      "relevancia": 45,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Domingo Cavallo calificó de excelente un informe crítico del Ieral.",
-        "El documento fue elaborado por el economista Jorge Vasconcelos.",
-        "El texto señala un sobreajuste en sectores vinculados al mercado interno."
-      ],
-      "seSabe": [
-        "Domingo Cavallo respaldó un informe del economista Jorge Vasconcelos.",
-        "El documento advierte sobre dificultades en la reactivación y el costo del crédito.",
-        "El texto señala diferencias entre los sectores exportadores y el mercado interno."
-      ],
-      "textoRedes": "Domingo Cavallo calificó de excelente un informe que cuestiona herramientas del programa económico de Luis Caputo y advierte sobre dificultades en el mercado interno.",
-      "etiquetas": [
-        "Domingo Cavallo",
-        "Luis Caputo",
-        "Ieral",
-        "Economia",
-        "Jorge Vasconcelos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/cavallo-elogio-un-informe-con-criticas-al-plan-economico-de-caputo-politica-y-economia_1791807720",
-          "fecha": "2026-10-12T12:29:08.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles centrales sobre las advertencias del informe de Vasconcelos respecto al programa económico."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/cavallo-volvio-cuestionar-modelo-economico-milei-alerto-sobreajuste-caida-inversion_0_Mb8qDoLKWR.html",
-          "fecha": "2026-10-12T20:38:43.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la autoría del economista del Ieral y el respaldo de Cavallo al documento."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ce0pxp",
-          "titulo": "Caputo descarta una devaluación y defiende el rumbo económico",
-          "fecha": "2026-10-02T16:24:51.000Z",
-          "ruta": "/nota/caputo-descarta-una-devaluacion-y-defiende-el-rumbo-economico-ce0pxp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "domingo-cavallo-elogia-un-informe-con-reparos-al-plan-economico",
-      "foto": {
-        "archivo": "fotos-notas/194wzrq.jpg",
-        "credito": "Foto: Clarín"
       }
     },
     {
@@ -1754,15 +1763,16 @@
         "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
+        "Página/12",
         "C5N",
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
-        "Letra P",
         "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
+        "Letra P",
         "La Nueva",
         "La Nación"
       ],
@@ -1771,7 +1781,7 @@
       "fecha": "2026-10-12T11:08:05.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2368,59 +2378,6 @@
       }
     },
     {
-      "id": "1lact95",
-      "titulo": "Sustraen una moto en la madrugada y piden datos",
-      "copete": "Una motocicleta Mondial Max de 110 cc fue sustraída en la zona de calle 108 entre 17 y 19. El propietario solicita colaboración para localizarla.",
-      "cuerpo": "Una motocicleta Mondial Max de 110 cc fue sustraída de la vía pública en calle 108 entre 17 y 19. Según informó el propietario, el episodio se registró alrededor de las 3:50 de la madrugada.\n\nTras advertir la faltante del rodado, el damnificado inició la búsqueda y solicitó colaboración a la comunidad para conocer su paradero. Además, indicó que cualquier dato aportado será manejado de forma confidencial y pidió precaución para evitar comunicaciones con intenciones de estafa.",
-      "guion": "Sustraen una moto en la madrugada y piden datos",
-      "seccion": "Policiales",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/robaron-una-moto-durante-la-madrugada-y-buscan-informacion-para-recuperarla",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T23:12:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:35:55.538Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Sustraen una motocicleta Mondial Max de 110 cc",
-        "El hecho ocurrió en calle 108 entre 17 y 19",
-        "El propietario pide datos para localizar el rodado"
-      ],
-      "noConfirmado": [
-        "El paradero de la motocicleta",
-        "La identidad de los autores del hecho",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Sustrajeron una motocicleta Mondial Max de 110 cc en calle 108 entre 17 y 19 durante la madrugada. El propietario solicita colaboración para localizarla.",
-      "etiquetas": [
-        "Robo",
-        "Moto",
-        "Calle 108"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/robaron-una-moto-durante-la-madrugada-y-buscan-informacion-para-recuperarla",
-          "fecha": "2026-10-11T23:12:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el robo de la motocicleta, el horario, el lugar y el pedido de colaboración del propietario."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "sustraen-una-moto-en-la-madrugada-y-piden-datos"
-    },
-    {
       "id": "f1resultado2026r17",
       "propia": "f1",
       "tipoF1": "resultado",
@@ -2721,6 +2678,108 @@
       }
     },
     {
+      "id": "162om74",
+      "titulo": "Steve Nielsen analiza el presente de Alpine tras el abandono de Colapinto",
+      "copete": "El director general de Alpine evaluó el rendimiento tras el Gran Premio de Singapur. El equipo completó tres fechas sin sumar unidades en el campeonato.",
+      "cuerpo": "El director general de Alpine, Steve Nielsen, analizó el desempeño de la escudería tras el Gran Premio de Singapur de Fórmula 1, donde Franco Colapinto abandonó por inconvenientes en la transmisión de su monoplaza en el Circuito Callejero de Marina Bay. El equipo francés acumuló su tercer fin de semana consecutivo sin cosechar unidades.\n\nDurante la competencia desarrollada el domingo, el piloto nacional de 23 años debió desertar por fallas mecánicas, sumado al problema en la energía eléctrica que sufrió el sábado en la carrera Sprint. Por su parte, Max Verstappen se quedó con la victoria con Red Bull, mientras que Charles Leclerc y Kimi Antonelli completaron el podio.\n\nEl campeonato continuará dentro de dos semanas en el Circuito de las Américas de Austin, Estados Unidos.",
+      "guion": "Steve Nielsen analiza el presente de Alpine tras el abandono de Colapinto",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Infobae",
+        "TyC Sports",
+        "Crónica",
+        "La Verdad de Ayacucho",
+        "Campeones",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.infobae.com/deportes/2026/10/11/la-sentencia-del-jefe-de-alpine-tras-el-abandono-de-colapinto-y-la-actuacion-de-pierre-gasly-en-el-gp-de-singapur-de-formula-1/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T16:42:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:07:57.544Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Alpine completó tres carreras sin sumar puntos",
+        "Franco Colapinto abandonó en Singapur por problemas mecánicos",
+        "Max Verstappen ganó la competencia en Marina Bay",
+        "La temporada seguirá en Estados Unidos dentro de dos semanas"
+      ],
+      "seSabe": [
+        "El jefe de Alpine analizó el fin de semana en Singapur según informó la escudería",
+        "Franco Colapinto abandonó la carrera principal por fallas en la transmisión",
+        "Max Verstappen se impuso en el Gran Premio con Red Bull"
+      ],
+      "noConfirmado": [
+        "Las causas exactas que provocaron las detenciones en pista del monoplaza"
+      ],
+      "textoRedes": "Steve Nielsen analizó el rendimiento de Alpine tras el Gran Premio de Singapur de Fórmula 1. El equipo completó tres fechas sin sumar unidades y Franco Colapinto debió abandonar por problemas mecánicos en su monoplaza.",
+      "etiquetas": [
+        "Formula 1",
+        "Franco Colapinto",
+        "Alpine",
+        "Steve Nielsen",
+        "Singapur"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/11/la-sentencia-del-jefe-de-alpine-tras-el-abandono-de-colapinto-y-la-actuacion-de-pierre-gasly-en-el-gp-de-singapur-de-formula-1/",
+          "fecha": "2026-10-11T16:42:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Steve Nielsen y los problemas mecánicos de Franco Colapinto en Singapur"
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/fuerte-autocritica-de-nielsen-en-alpine-tras-otra-carrera-sin-puntos-en-la-f1-id765703.html",
+          "fecha": "2026-10-11T18:12:49.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en su resumen"
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/polideportivo/fuerte-critica-del-jefe-de-alpine-tras-otra-carrera-sin-puntos-en-la-f1-el-resultado-habla-por-si-solo/",
+          "fecha": "2026-10-11T21:42:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que Alpine sumó tres fechas consecutivas sin unidades"
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "17f0jbe",
+          "titulo": "Alpine analiza el desempeño de Colapinto y Gasly tras Azerbaiyán",
+          "fecha": "2026-09-25T15:18:00.000Z",
+          "ruta": "/nota/alpine-analiza-el-desempeno-de-colapinto-y-gasly-tras-azerbaiyan-17f0jbe"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "La fría reacción de Pierre Gasly ante las disculpas de Franco Colapinto por el choque en Bakú",
+          "fecha": "2026-09-22T13:54:00.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        },
+        {
+          "id": "28a9he",
+          "titulo": "Franco Colapinto abandona en Singapur por una falla en la transmisión",
+          "fecha": "2026-10-11T13:55:09.000Z",
+          "ruta": "/nota/franco-colapinto-abandona-en-singapur-por-una-falla-en-la-transmision-28a9he"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "steve-nielsen-analiza-el-presente-de-alpine-tras-el-abandono-de",
+      "foto": {
+        "archivo": "fotos-notas/162om74.jpg",
+        "credito": "Foto: TyC Sports"
+      }
+    },
+    {
       "id": "1lk2g5p",
       "titulo": "El Servicio Meteorológico emite alertas por tormentas y vientos",
       "copete": "El Servicio Meteorológico Nacional lanzó advertencias por tormentas, nevadas y vientos fuertes. Las medidas alcanzan a ocho provincias del país para este lunes.",
@@ -2920,15 +2979,14 @@
     "Agro",
     "Argentina",
     "Balcarce",
-    "Automovilismo",
-    "Policiales"
+    "Automovilismo"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 10,
+      "temp": 9,
       "sensacion": 7,
-      "humedad": 84,
+      "humedad": 86,
       "viento": 13,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3275,6 +3333,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "xulwye",
+      "titulo": "Luis Caputo negó las versiones sobre una posible salida…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\" (en otro medio que cuenta lo mismo)"
+    },
+    {
       "id": "p582dy",
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
@@ -3287,28 +3351,16 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "xulwye",
-      "titulo": "Luis Caputo negó las versiones sobre una posible salida…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\" (en otro medio que cuenta lo mismo)"
-    },
-    {
-      "id": "nfmavy",
+      "id": "1lact95",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
+      "motivo": "necesita ojo humano: \"acusado\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "dffmvs",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"homicidio\""
-    },
-    {
-      "id": "t2ij37",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
   "esperandoCuerpo": 3
