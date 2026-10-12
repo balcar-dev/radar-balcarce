@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T11:03:33.158Z",
+  "generado": "2026-10-12T11:32:16.378Z",
   "notas": [
     {
       "id": "clima20261012",
@@ -57,6 +57,92 @@
         }
       ],
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-4-y-maxima-de-13"
+    },
+    {
+      "id": "vt9ful",
+      "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
+      "copete": "Agrupaciones indígenas se concentran este lunes en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza por parte del Gobierno nacional.",
+      "cuerpo": "Organizaciones de Pueblos Originarios se concentran este lunes a las 15 frente al domicilio de la expresidenta Cristina Kirchner, ubicado en la calle San José 1111 de la Ciudad de Buenos Aires. La movilización rechaza la restitución del Día de la Raza dispuesta por la gestión del presidente Javier Milei en contenidos oficiales.\n\nLa convocatoria incluye una ceremonia ancestral, un mural en vivo, danzas y lecturas de coplas. Las agrupaciones reivindicaron el decreto de 2010 que instituyó la fecha como el Día del Respeto a la Diversidad Cultural.\n\nPor su parte, el Poder Ejecutivo dispuso la medida mediante un decreto para conmemorar la llegada de Cristóbal Colón a América. La decisión genera controversia jurídica al contrastar con la Ley Nacional 27399, sancionada por el Congreso en 2017.",
+      "guion": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
+      "seccion": "Argentina",
+      "medios": [
+        "Perfil",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "La Verdad"
+      ],
+      "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T06:18:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T11:31:40.882Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Concentración de Pueblos Originarios frente al domicilio de Cristina Kirchner.",
+        "Rechazo a la restitución del Día de la Raza por parte del Gobierno nacional.",
+        "Convocatoria con actividades artísticas y ceremonias en la Ciudad de Buenos Aires.",
+        "Contraste normativo entre un decreto oficial y la Ley Nacional 27399."
+      ],
+      "noConfirmado": [
+        "El alcance definitivo del debate jurídico generado entre el decreto del Ejecutivo y la legislación vigente."
+      ],
+      "textoRedes": "Organizaciones de Pueblos Originarios se concentran este lunes frente a la casa de Cristina Kirchner en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza dispuesta por el Gobierno nacional.",
+      "etiquetas": [
+        "pueblos originarios",
+        "Cristina Kirchner",
+        "Javier Milei",
+        "Dia de la Raza",
+        "Ciudad de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
+          "fecha": "2026-10-12T06:18:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario, el lugar de la concentración y los reclamos de las agrupaciones frente al Gobierno."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/pueblos-originarios-rechazan-el--dia-de-la-raza--y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner_a6acc20d3f61ec7711f817da8",
+          "fecha": "2026-10-12T09:40:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-8-0-0-organizaciones-de-pueblos-originarios-llamaron-a-concentrarse-en-rechazo-al-dia-de-la-raza",
+          "fecha": "2026-10-12T11:25:34.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/pueblos-originarios-rechazan-el-dia-de-la-raza-y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner/",
+          "fecha": "2026-10-12T09:46:34.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ube6ai",
+          "titulo": "La Casación rechaza frenar el remate de bienes de los hijos de Cristina Kirchner",
+          "fecha": "2026-10-08T17:53:15.000Z",
+          "ruta": "/nota/la-casacion-rechaza-frenar-el-remate-de-bienes-de-los-hijos-de-1ube6ai"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pueblos-originarios-protestan-frente-a-la-casa-de-cristina-kirchner"
     },
     {
       "id": "p21pyq",
@@ -210,7 +296,7 @@
       "fecha": "2026-10-11T23:12:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-11T23:35:55.538Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -374,8 +460,10 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
+        "La Tecla",
         "La Verdad",
-        "El Día"
+        "InfoRegión"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -543,77 +631,6 @@
       "foto": {
         "archivo": "fotos-notas/1vl8rqs.jpg",
         "credito": "Foto: Diario Popular"
-      }
-    },
-    {
-      "id": "1lmhb77",
-      "titulo": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
-      "copete": "Un estudio del sector detalla las diferencias de tarifas entre las distintas jurisdicciones del país. El distrito bonaerense encabeza la lista con la boleta más alta, mientras que el transporte nacional en el AMBA registra el valor más accesible.",
-      "cuerpo": "Un informe elaborado por la Asociación Argentina de Empresarios del Transporte Automotor expone las diferencias en el valor del boleto mínimo de colectivo en todo el país. Pinamar encabeza el listado nacional con una tarifa de 3.176 pesos, seguida por San Martín de los Andes con 2.900 pesos y Pergamino con 2.784 pesos.\n\nEn el otro extremo, el boleto más económico se registra en los servicios de jurisdicción nacional del AMBA con 743 pesos, valor que se ubica por debajo de los 920 pesos vigentes en la Ciudad de Buenos Aires y de los 1.215 pesos del territorio bonaerense metropolitano.\n\nEl relevamiento también advierte una retracción en la cantidad de usuarios del transporte en el AMBA. Durante septiembre de este año, el promedio diario en días hábiles alcanzó 8.232.858 pasajeros, lo que representa una baja de 10,1 por ciento en comparación con el mismo mes del año pasado.",
-      "guion": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "El Día"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T19:44:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 42,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Pinamar presenta el boleto más caro del país con un valor de 3.176 pesos.",
-        "El AMBA registra la tarifa más baja con 743 pesos en jurisdicción nacional.",
-        "El relevamiento pertenece a la Asociación Argentina de Empresarios del Transporte Automotor.",
-        "Los pasajeros diarios en días hábiles en el AMBA bajaron un 10,1 por ciento en septiembre."
-      ],
-      "seSabe": [
-        "Pinamar lidera el ranking de tarifas urbanas con 3.176 pesos.",
-        "La tarifa mínima en el AMBA nacional es de 743 pesos.",
-        "El informe fue realizado por la Asociación Argentina de Empresarios del Transporte Automotor.",
-        "El uso del transporte en el AMBA registró una caída interanual en septiembre."
-      ],
-      "noConfirmado": [
-        "No se informaron detalles sobre la evolución de tarifas proyectada para los próximos meses en el resto de las jurisdicciones."
-      ],
-      "textoRedes": "Un relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor detalla las diferencias en el boleto de colectivo en el país. Pinamar registra la tarifa más alta con 3.176 pesos, mientras que el AMBA mantiene los valores más bajos.",
-      "etiquetas": [
-        "colectivos",
-        "tarifas",
-        "transporte",
-        "ranking"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
-          "fecha": "2026-10-11T19:44:21.000Z",
-          "oficial": false,
-          "aporte": "Detalló el listado completo de ciudades con las tarifas más altas y más bajas, además de las estadísticas sobre caída de pasajeros y subsidios en el AMBA."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/la-ciudad/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-micro-y-en-que-lugar-esta-la-plata-la-ciudad_1791756120",
-          "fecha": "2026-10-11T22:16:33.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la difusión del relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor respecto a las diferencias entre jurisdicciones."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pinamar-encabeza-el-ranking-nacional-con-el-boleto-de-colectivo-mas",
-      "foto": {
-        "archivo": "fotos-notas/1lmhb77.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1390,98 +1407,26 @@
         "archivo": "fotos-notas/collage-repaso20261010noche.jpg",
         "credito": "Fotos: Infobae y Puntonueve (FM 100.9)"
       }
-    },
-    {
-      "id": "1izhgu3",
-      "titulo": "Un diputado presenta un proyecto para quitar beneficios a Chile por Malvinas",
-      "copete": "El legislador nacional Guillermo Michel impulsa una iniciativa para dar de baja acuerdos fiscales con Chile. Es en rechazo a la reanudación del servicio marítimo hacia las islas.",
-      "cuerpo": "El diputado nacional Guillermo Michel presentó un proyecto de ley para dejar sin efecto dos convenios bilaterales que otorgan ventajas impositivas a firmas chilenas con inversiones en el país. La medida busca anular el Tratado sobre Promoción y Protección Recíprocas de Inversiones y el Convenio de Doble Imposición Fiscal suscriptos con la nación trasandina.\n\nLa propuesta surge como respuesta al restablecimiento de la ruta comercial marítima entre Punta Arenas y Puerto Argentino. El legislador cuestionó la habilitación de este enlace logístico y el viaje del buque Danstar, de bandera chilena, programado para noviembre con el fin de abastecer a las islas.",
-      "guion": "Un diputado presenta un proyecto para quitar beneficios a Chile por Malvinas",
-      "seccion": "Política",
-      "medios": [
-        "Agencia DIB",
-        "Infobae",
-        "El Destape",
-        "Ámbito",
-        "Crónica",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://dib.com.ar/politica/malvinas-el-acuerdo-punta-arenas-proponen-quitar-beneficios-fiscales-empresas-chilenas-n56403",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T23:08:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T00:01:54.375Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El diputado Guillermo Michel impulsa una ley contra beneficios fiscales a Chile.",
-        "La medida responde a la ruta marítima entre Punta Arenas y Puerto Argentino.",
-        "Se solicita dar de baja dos acuerdos bilaterales de inversiones y doble imposición."
-      ],
-      "textoRedes": "Un diputado nacional presentó un proyecto para eliminar beneficios fiscales a empresas chilenas. La iniciativa rechaza la reanudación de la ruta marítima entre Punta Arenas y Puerto Argentino.",
-      "etiquetas": [
-        "Malvinas",
-        "Chile",
-        "Diputados",
-        "Economia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/politica/malvinas-el-acuerdo-punta-arenas-proponen-quitar-beneficios-fiscales-empresas-chilenas-n56403",
-          "fecha": "2026-10-10T23:08:46.000Z",
-          "oficial": false,
-          "aporte": "Detalló los fundamentos del proyecto, los nombres de los tratados y la mención al buque Danstar."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/10/un-proyecto-propone-retirar-beneficios-fiscales-a-las-empresas-chilenas-tras-el-regreso-de-la-ruta-punta-arena-malvinas/",
-          "fecha": "2026-10-10T23:38:39.000Z",
-          "oficial": false,
-          "aporte": "Informó la presentación del proyecto de ley por parte del diputado."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/el-peronismo-propone-quitar-beneficios-empresas-chilenas-su-actividad-malvinas-n6332415",
-          "fecha": "2026-10-10T23:45:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la iniciativa busca dejar sin efecto acuerdos sobre inversiones y tributos."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "un-diputado-presenta-un-proyecto-para-quitar-beneficios-a-chile-por",
-      "foto": {
-        "archivo": "fotos-notas/1izhgu3.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
     "Balcarce",
+    "Argentina",
     "Automovilismo",
     "Policiales",
     "Deportes",
     "Política",
-    "Cultura y agenda",
-    "Economía"
+    "Cultura y agenda"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 8,
-      "sensacion": 6,
-      "humedad": 85,
-      "viento": 7,
+      "temp": 9,
+      "sensacion": 7,
+      "humedad": 78,
+      "viento": 8,
       "rumbo": "E",
-      "cielo": "Despejado",
+      "cielo": "Mayormente despejado",
       "esDeDia": true
     },
     "dias": [
@@ -1534,51 +1479,8 @@
   },
   "avisosClima": [],
   "farmacias": {
-    "hoy": {
-      "dia": 11,
-      "diaSemana": "DOMINGO",
-      "farmacias": [
-        "BENITES",
-        "FREITAS"
-      ],
-      "detalle": [
-        {
-          "nombre": "Benites",
-          "direccion": "Av. Chaves N° 329 e/ 5 y 7",
-          "telefono": "42-0309"
-        },
-        {
-          "nombre": "Freitas",
-          "direccion": "Av. Kelly N° 840 e/ 23 y 25",
-          "telefono": "42-5942"
-        }
-      ],
-      "mes": 10,
-      "fecha": "2026-10-11"
-    },
+    "hoy": null,
     "proximos": [
-      {
-        "dia": 11,
-        "diaSemana": "DOMINGO",
-        "farmacias": [
-          "BENITES",
-          "FREITAS"
-        ],
-        "detalle": [
-          {
-            "nombre": "Benites",
-            "direccion": "Av. Chaves N° 329 e/ 5 y 7",
-            "telefono": "42-0309"
-          },
-          {
-            "nombre": "Freitas",
-            "direccion": "Av. Kelly N° 840 e/ 23 y 25",
-            "telefono": "42-5942"
-          }
-        ],
-        "mes": 10,
-        "fecha": "2026-10-11"
-      },
       {
         "dia": 13,
         "diaSemana": "MARTES",
@@ -1670,6 +1572,28 @@
         ],
         "mes": 10,
         "fecha": "2026-10-17"
+      },
+      {
+        "dia": 18,
+        "diaSemana": "DOMINGO",
+        "farmacias": [
+          "SAN ANTONIO",
+          "MARIOLI"
+        ],
+        "detalle": [
+          {
+            "nombre": "San Antonio",
+            "direccion": "Calle 18 N° 751 esquina 21",
+            "telefono": "42-2295"
+          },
+          {
+            "nombre": "Marioli",
+            "direccion": "Av. Del Valle N° 80",
+            "telefono": "42-2050"
+          }
+        ],
+        "mes": 10,
+        "fecha": "2026-10-18"
       }
     ],
     "avisos": [
@@ -1888,5 +1812,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }
