@@ -1,32 +1,44 @@
 {
- "generado": "2026-10-11T23:36:37.077Z",
+ "generado": "2026-10-12T00:02:06.903Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "bqygvd",
-   "titulo": "Los Pumas 7s y Las Yaguaretés se consagraron campeones sudamericanos",
-   "copete": "Una vez más el rugby argentino en modalidad seven se hizo fuerte en la región. Tanto el seleccionado masculino como también el femenino, se consagraron de manera invicta en el Sudamericano de Seven, disputado en el Carlos Paz Rugby Club de Córdoba. Los dirigidos por Santiago…",
-   "seccion": "Deportes",
-   "fecha": "2026-10-11T21:15:00.000Z",
+   "id": "11k1rn",
+   "titulo": "Rufino ya comenzó su tratamiento con Cytotron en la India",
+   "copete": "Rufino inició este sábado el tratamiento con Cytotron en la India, luego de que su familia lograra reunir el dinero necesario para comenzar con el procedimiento. Sus padres, Jennifer y Darío, continúan trabajando para completar los fondos que les",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-11T18:01:42.000Z",
    "fuentes": [
     {
-     "medio": "Doble Amarilla",
-     "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
-     "fecha": "2026-10-11T21:15:00.000Z"
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/rufino-ya-comenzo-su-tratamiento-con-cytotron-en-la-india-995",
+     "fecha": "2026-10-11T18:01:42.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)",
+   "maximo": 3
+  },
+  {
+   "id": "2twi1b",
+   "titulo": "Crece la informalidad",
+   "copete": "La informalidad laboral alcanzó al 45 por ciento del universo total de trabajadores durante el segundo trimestre de 2026. La cifra confirma un deterioro continuo desde el 41,4 por ciento registrado a fines de 2023, según datos procesados por el Observatorio Económico Social de…",
+   "seccion": "Economía",
+   "fecha": "2026-10-11T21:19:54.000Z",
+   "fuentes": [
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/11/crece-la-informalidad/",
+     "fecha": "2026-10-11T21:19:54.000Z"
     },
     {
      "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-11-19-11-0-los-pumas-7-s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos",
-     "fecha": "2026-10-11T22:55:12.000Z"
-    },
-    {
-     "medio": "UAR (Unión Argentina de Rugby)",
-     "enlace": "https://uar.com.ar/los-pumas-7s-y-las-yaguaretes-campeones-sudamericanos/",
-     "fecha": "2026-10-11T21:56:20.000Z"
+     "enlace": "https://www.lanueva.com/nota/2026-10-11-14-24-0-informalidad-laboral-que-lugar-ocupa-bahia-blanca-segun-un-informe-nacional",
+     "fecha": "2026-10-11T23:39:29.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (promesa): el título dice 7 y el cuerpo no lo explica; sin esas oraciones quedan 115 palabras",
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (numero): el guion dice 40 y la fuente no lo dice",
    "maximo": 3
   }
  ]

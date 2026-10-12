@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-11T23:36:37.077Z",
- "portada": 25,
- "archivo": 924,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-12T00:02:06.903Z",
+ "portada": 26,
+ "archivo": 926,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-11T23:36:37.105Z",
+  "generado": "2026-10-12T00:02:06.925Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -124,7 +124,7 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 52,
     "notas": [
