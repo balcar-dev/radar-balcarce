@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T17:02:26.659Z",
- "portada": 34,
- "archivo": 956,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-12T17:32:31.447Z",
+ "portada": 28,
+ "archivo": 959,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-12T17:02:26.691Z",
+  "generado": "2026-10-12T17:32:31.476Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 51,
     "notas": [
      {
       "id": "rzhblo",
@@ -139,14 +139,14 @@
       "seccion": "Deportes"
      },
      {
-      "id": "xn5jch",
-      "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
-      "seccion": "Deportes"
-     },
-     {
       "id": "skmago",
       "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -157,24 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
-    "notas": [
-     {
-      "id": "q9kshm",
-      "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1tsobe7",
-      "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
@@ -193,18 +177,16 @@
      "id": "xn5jch",
      "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
      "cuando": "2026-10-12T15:33:39.881Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "r0o8z3",
      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
-     "seccion": "Deportes",
-     "marcada": false
+     "cuando": "2026-10-12T17:04:55.578Z"
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-10-12T17:03:39.881Z",
+   "cola": [],
+   "cupo": 1,
+   "proximoDesde": "2026-10-12T18:34:55.578Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

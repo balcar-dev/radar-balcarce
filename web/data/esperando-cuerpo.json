@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-12T17:02:26.659Z",
+ "generado": "2026-10-12T17:32:31.447Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -84,7 +84,7 @@
     {
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/milei-defendio-la-gestion-de-caputo-y-se-mostro-confiado-en-que-va-a-ser-reelecto-politica-y-economia_1791812640",
-     "fecha": "2026-10-12T14:08:43.000Z"
+     "fecha": "2026-10-12T13:59:00.000Z"
     },
     {
      "medio": "La Nueva",
@@ -99,7 +99,7 @@
     {
      "medio": "El Marplatense",
      "enlace": "https://www.elmarplatense.com/milei-aseguro-que-tendra-usd-125000-millones-para-enfrentar-una-corrida-cambiaria-en-2027",
-     "fecha": "2026-10-12T13:45:00.000Z"
+     "fecha": "2026-10-12T13:45:01.000Z"
     },
     {
      "medio": "Mi8 (Canal 8 Mar del Plata)",
@@ -110,33 +110,6 @@
    "intentos": 1,
    "motivo": "con cuerpo",
    "maximo": 5
-  },
-  {
-   "id": "nmxhgd",
-   "titulo": "Crecida extraordinaria del río Iguazú: restringieron el acceso a sectores del Parque Nacional",
-   "copete": "Debido a la importante creciente en el caudal del río Iguazú , donde en las últimas horas se alcanzaron niveles superiores a 12 mil metros cúbicos de agua por segundo, las autoridades del Parque Nacional decidieron restringir de manera temporal, al menos durante esta jornada, la…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-12T14:44:31.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111120-crecida-extraordinaria-del-rio-iguazu-restringieron-el-acceso-a-sectores-del-parque-nacional",
-     "fecha": "2026-10-12T14:44:31.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/sociedad/complicaciones-por-el-nino-debido-a-la-fuerte-crecida-del-rio-iguazu-restringieron-el-acceso-a-las-nid12102026/",
-     "fecha": "2026-10-12T15:01:48.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-12-9-12-0-cataratas-activan-el-protocolo-de-seguridad-debido-a-la-crecida-extraordinaria-del-rio-iguazu",
-     "fecha": "2026-10-12T16:36:10.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 3 problemas (numero): el cuerpo dice 12 y la fuente no lo dice; sin esas oraciones quedan 95 palabras",
-   "maximo": 3
   }
  ]
 }
