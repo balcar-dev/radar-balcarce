@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T22:02:24.600Z",
- "portada": 39,
+ "generado": "2026-10-12T22:32:32.215Z",
+ "portada": 36,
  "archivo": 976,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-12T22:02:24.631Z",
+  "generado": "2026-10-12T22:32:32.246Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,22 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 43,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "15o5mwn",
+      "titulo": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
+      "seccion": "Deportes"
+     },
      {
       "id": "90qy7w",
       "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
       "seccion": "Deportes"
      },
      {
+      "id": "r0o8z3",
+      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
+      "seccion": "Deportes"
+     },
+     {
       "id": "q9kshm",
       "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes"
      }
     ]
    }
