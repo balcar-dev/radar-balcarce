@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T09:44:10.825Z",
+  "generado": "2026-10-12T10:01:32.731Z",
   "notas": [
     {
       "id": "repaso20261011noche",
@@ -319,8 +319,8 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Verdad",
-        "El Día"
+        "El Día",
+        "La Verdad"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -403,82 +403,6 @@
       "foto": {
         "archivo": "fotos-notas/ay4wdh.jpg",
         "credito": "Foto: Canal 26"
-      }
-    },
-    {
-      "id": "bqygvd",
-      "titulo": "Los Pumas 7s y Las Yaguaretés ganan el Sudamericano en Córdoba",
-      "copete": "Los seleccionados argentinos masculino y femenino se consagraron campeones continentales de manera invicta en el torneo disputado en el Carlos Paz Rugby Club.",
-      "cuerpo": "Los Pumas 7s y Las Yaguaretés se consagraron campeones sudamericanos de manera invicta en el certamen disputado en el Carlos Paz Rugby Club de Córdoba. El seleccionado masculino, dirigido por Santiago Gómez Cora, logró su duodécimo título continental tras superar a Chile por 24 a 5 en el encuentro decisivo.\n\nPor su parte, el conjunto femenino comandado por Nahuel García se alzó con el trofeo por cuarta vez consecutiva luego de vencer en la final a Brasil por 19 a 10.",
-      "guion": "Los Pumas 7s y Las Yaguaretés ganan el Sudamericano en Córdoba",
-      "seccion": "Deportes",
-      "medios": [
-        "Doble Amarilla",
-        "La Nueva",
-        "UAR (Unión Argentina de Rugby)",
-        "Olé"
-      ],
-      "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T21:15:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T00:01:37.308Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Los Pumas 7s vencieron a Chile por 24 a 5 en la final.",
-        "Las Yaguaretés le ganaron a Brasil por 19 a 10 en el partido decisivo.",
-        "Ambos seleccionados argentinos se consagraron de manera invicta en Córdoba."
-      ],
-      "seSabe": [
-        "Los Pumas 7s obtuvieron su duodécimo título sudamericano, según informó La Nueva.",
-        "Las Yaguaretés lograron su cuarto campeonato continental consecutivo, de acuerdo con el mismo medio.",
-        "El torneo se disputó en las instalaciones del Carlos Paz Rugby Club."
-      ],
-      "textoRedes": "Los Pumas 7s y Las Yaguaretés se consagraron campeones sudamericanos de manera invicta en el torneo disputado en Córdoba tras vencer a Chile y Brasil en las finales.",
-      "etiquetas": [
-        "Rugby",
-        "Los Pumas 7s",
-        "Las Yaguaretés",
-        "Sudamericano",
-        "Cordoba"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
-          "fecha": "2026-10-11T21:15:00.000Z",
-          "oficial": false,
-          "aporte": "Informó la consagración invicta de los seleccionados masculino y femenino en el torneo sudamericano en Córdoba."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-11-19-11-0-los-pumas-7-s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos",
-          "fecha": "2026-10-11T22:55:12.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados de las finales, los entrenadores y el desarrollo de los encuentros."
-        },
-        {
-          "medio": "UAR (Unión Argentina de Rugby)",
-          "enlace": "https://uar.com.ar/los-pumas-7s-y-las-yaguaretes-campeones-sudamericanos/",
-          "fecha": "2026-10-11T21:56:20.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la consagración de ambos equipos argentinos en el certamen continental."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "los-pumas-7s-y-las-yaguaretes-ganan-el-sudamericano-en-cordoba",
-      "foto": {
-        "archivo": "fotos-notas/bqygvd.jpg",
-        "credito": "Foto: La Nueva"
       }
     },
     {
@@ -655,6 +579,77 @@
       "slug": "diputados-debate-el-proyecto-que-sanciona-el-vandalismo-rural",
       "foto": {
         "archivo": "fotos-notas/1pi4mqa.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "1lmhb77",
+      "titulo": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
+      "copete": "Un estudio del sector detalla las diferencias de tarifas entre las distintas jurisdicciones del país. El distrito bonaerense encabeza la lista con la boleta más alta, mientras que el transporte nacional en el AMBA registra el valor más accesible.",
+      "cuerpo": "Un informe elaborado por la Asociación Argentina de Empresarios del Transporte Automotor expone las diferencias en el valor del boleto mínimo de colectivo en todo el país. Pinamar encabeza el listado nacional con una tarifa de 3.176 pesos, seguida por San Martín de los Andes con 2.900 pesos y Pergamino con 2.784 pesos.\n\nEn el otro extremo, el boleto más económico se registra en los servicios de jurisdicción nacional del AMBA con 743 pesos, valor que se ubica por debajo de los 920 pesos vigentes en la Ciudad de Buenos Aires y de los 1.215 pesos del territorio bonaerense metropolitano.\n\nEl relevamiento también advierte una retracción en la cantidad de usuarios del transporte en el AMBA. Durante septiembre de este año, el promedio diario en días hábiles alcanzó 8.232.858 pasajeros, lo que representa una baja de 10,1 por ciento en comparación con el mismo mes del año pasado.",
+      "guion": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "El Día"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T19:44:21.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:31:31.632Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pinamar presenta el boleto más caro del país con un valor de 3.176 pesos.",
+        "El AMBA registra la tarifa más baja con 743 pesos en jurisdicción nacional.",
+        "El relevamiento pertenece a la Asociación Argentina de Empresarios del Transporte Automotor.",
+        "Los pasajeros diarios en días hábiles en el AMBA bajaron un 10,1 por ciento en septiembre."
+      ],
+      "seSabe": [
+        "Pinamar lidera el ranking de tarifas urbanas con 3.176 pesos.",
+        "La tarifa mínima en el AMBA nacional es de 743 pesos.",
+        "El informe fue realizado por la Asociación Argentina de Empresarios del Transporte Automotor.",
+        "El uso del transporte en el AMBA registró una caída interanual en septiembre."
+      ],
+      "noConfirmado": [
+        "No se informaron detalles sobre la evolución de tarifas proyectada para los próximos meses en el resto de las jurisdicciones."
+      ],
+      "textoRedes": "Un relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor detalla las diferencias en el boleto de colectivo en el país. Pinamar registra la tarifa más alta con 3.176 pesos, mientras que el AMBA mantiene los valores más bajos.",
+      "etiquetas": [
+        "colectivos",
+        "tarifas",
+        "transporte",
+        "ranking"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
+          "fecha": "2026-10-11T19:44:21.000Z",
+          "oficial": false,
+          "aporte": "Detalló el listado completo de ciudades con las tarifas más altas y más bajas, además de las estadísticas sobre caída de pasajeros y subsidios en el AMBA."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/la-ciudad/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-micro-y-en-que-lugar-esta-la-plata-la-ciudad_1791756120",
+          "fecha": "2026-10-11T22:16:33.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la difusión del relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor respecto a las diferencias entre jurisdicciones."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pinamar-encabeza-el-ranking-nacional-con-el-boleto-de-colectivo-mas",
+      "foto": {
+        "archivo": "fotos-notas/1lmhb77.jpg",
         "credito": "Foto: Infobae"
       }
     },
@@ -983,74 +978,6 @@
       "foto": {
         "archivo": "fotos-notas/162om74.jpg",
         "credito": "Foto: TyC Sports"
-      }
-    },
-    {
-      "id": "t691yd",
-      "titulo": "La economía nacional acumula superávits gemelos entre enero y agosto",
-      "copete": "El país registra cuentas públicas positivas por 2,6 billones de pesos y un saldo comercial favorable de 18.380 millones de dólares en los primeros ocho meses del año, según un informe sectorial.",
-      "cuerpo": "La economía argentina acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, de acuerdo con un informe de la Bolsa de Comercio de Rosario.\n\nEl análisis detalla que el Estado obtuvo ingresos por 120,7 billones de pesos y gastos primarios de 107,4 billones en ese lapso. El resultado fiscal primario llegó a 13,3 billones de pesos, lo que representa una baja interanual del 15,9% pero se ubica como el tercer mejor registro desde 2009. La dinámica mensual arrojó resultados positivos en siete de los ocho meses, con la única excepción de junio debido al pago del medio aguinaldo y al traslado de vencimientos impositivos.\n\nEn el sector externo, el intercambio comercial alcanzó 33 meses consecutivos con saldo favorable y la mayor cifra para los primeros ocho meses desde 2009. Las exportaciones sumaron 67.766 millones de dólares, con subas destacadas en el rubro de combustibles y energía.",
-      "guion": "La economía nacional acumula superávits gemelos entre enero y agosto.",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T14:52:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T02:31:37.843Z",
-      "relevancia": 36,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Superávit financiero de 2,6 billones de pesos en ocho meses",
-        "Balanza comercial positiva por 18.380 millones de dólares",
-        "Tres años consecutivos de resultados gemelos para el período",
-        "Incremento de las exportaciones impulsado por combustibles y energía"
-      ],
-      "seSabe": [
-        "El superávit financiero acumulado llegó a 2,6 billones de pesos entre enero y agosto",
-        "El saldo comercial positivo alcanzó los 18.380 millones de dólares",
-        "El Estado registró ingresos por 120,7 billones de pesos",
-        "Las exportaciones totales sumaron 67.766 millones de dólares"
-      ],
-      "textoRedes": "La economía nacional acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, según un informe sectorial.",
-      "etiquetas": [
-        "economia",
-        "superavit",
-        "exportaciones",
-        "comercio"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
-          "fecha": "2026-10-11T14:52:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos del informe de la Bolsa de Comercio de Rosario sobre superávit financiero, fiscal y comercial."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/11/por-tercer-ano-consecutivo-milei-reedito-los-superavits-gemelos-de-los-primeros-anos-del-kirchnerismo/",
-          "fecha": "2026-10-11T22:06:54.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en los datos generales del informe de la Bolsa de Comercio de Rosario sobre la economía nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-economia-nacional-acumula-superavits-gemelos-entre-enero-y-agosto",
-      "foto": {
-        "archivo": "fotos-notas/t691yd.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1453,6 +1380,82 @@
       "slug": "el-ministerio-de-salud-bonaerense-advierte-sobre-el-riesgo-de-nuevos"
     },
     {
+      "id": "bqygvd",
+      "titulo": "Los Pumas 7s y Las Yaguaretés ganan el Sudamericano en Córdoba",
+      "copete": "Los seleccionados argentinos masculino y femenino se consagraron campeones continentales de manera invicta en el torneo disputado en el Carlos Paz Rugby Club.",
+      "cuerpo": "Los Pumas 7s y Las Yaguaretés se consagraron campeones sudamericanos de manera invicta en el certamen disputado en el Carlos Paz Rugby Club de Córdoba. El seleccionado masculino, dirigido por Santiago Gómez Cora, logró su duodécimo título continental tras superar a Chile por 24 a 5 en el encuentro decisivo.\n\nPor su parte, el conjunto femenino comandado por Nahuel García se alzó con el trofeo por cuarta vez consecutiva luego de vencer en la final a Brasil por 19 a 10.",
+      "guion": "Los Pumas 7s y Las Yaguaretés ganan el Sudamericano en Córdoba",
+      "seccion": "Deportes",
+      "medios": [
+        "Olé",
+        "Doble Amarilla",
+        "La Nueva",
+        "UAR (Unión Argentina de Rugby)"
+      ],
+      "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T00:46:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T00:01:37.308Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los Pumas 7s vencieron a Chile por 24 a 5 en la final.",
+        "Las Yaguaretés le ganaron a Brasil por 19 a 10 en el partido decisivo.",
+        "Ambos seleccionados argentinos se consagraron de manera invicta en Córdoba."
+      ],
+      "seSabe": [
+        "Los Pumas 7s obtuvieron su duodécimo título sudamericano, según informó La Nueva.",
+        "Las Yaguaretés lograron su cuarto campeonato continental consecutivo, de acuerdo con el mismo medio.",
+        "El torneo se disputó en las instalaciones del Carlos Paz Rugby Club."
+      ],
+      "textoRedes": "Los Pumas 7s y Las Yaguaretés se consagraron campeones sudamericanos de manera invicta en el torneo disputado en Córdoba tras vencer a Chile y Brasil en las finales.",
+      "etiquetas": [
+        "Rugby",
+        "Los Pumas 7s",
+        "Las Yaguaretés",
+        "Sudamericano",
+        "Cordoba"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
+          "fecha": "2026-10-11T21:15:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la consagración invicta de los seleccionados masculino y femenino en el torneo sudamericano en Córdoba."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-11-19-11-0-los-pumas-7-s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos",
+          "fecha": "2026-10-11T22:55:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de las finales, los entrenadores y el desarrollo de los encuentros."
+        },
+        {
+          "medio": "UAR (Unión Argentina de Rugby)",
+          "enlace": "https://uar.com.ar/los-pumas-7s-y-las-yaguaretes-campeones-sudamericanos/",
+          "fecha": "2026-10-11T21:56:20.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la consagración de ambos equipos argentinos en el certamen continental."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "los-pumas-7s-y-las-yaguaretes-ganan-el-sudamericano-en-cordoba",
+      "foto": {
+        "archivo": "fotos-notas/bqygvd.jpg",
+        "credito": "Foto: La Nueva"
+      }
+    },
+    {
       "id": "1gkf7qu",
       "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
       "copete": "El comediante actúa el domingo a las 20 en la sala local. El espectáculo combina material de sus últimas propuestas con entrada libre y salida a la gorra.",
@@ -1668,11 +1671,11 @@
   "clima": {
     "ahora": {
       "temp": 5,
-      "sensacion": 2,
-      "humedad": 97,
-      "viento": 5,
+      "sensacion": 3,
+      "humedad": 95,
+      "viento": 7,
       "rumbo": "SE",
-      "cielo": "Mayormente despejado",
+      "cielo": "Despejado",
       "esDeDia": true
     },
     "dias": [
@@ -2079,5 +2082,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 1
 }
