@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T15:02:54.764Z",
- "portada": 32,
+ "generado": "2026-10-12T15:32:01.698Z",
+ "portada": 31,
  "archivo": 952,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-12T15:02:54.792Z",
+  "generado": "2026-10-12T15:32:01.717Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutora",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-12T15:05:20.712Z"
    },
    {
     "nombre": "noticia2",
@@ -126,11 +126,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 55,
     "notas": [
      {
-      "id": "s94jkn",
-      "titulo": "Zizou Bergs elimina a Carlos Alcaraz en el Masters de Shanghái",
+      "id": "rzhblo",
+      "titulo": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
       "seccion": "Deportes"
      },
      {
@@ -139,14 +139,14 @@
       "seccion": "Deportes"
      },
      {
+      "id": "36ajax",
+      "titulo": "El turismo crece en el fin de semana largo y deja millonarios ingresos",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "skmago",
       "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1xc91gb",
-      "titulo": "Milei ratifica a Caputo y asegura contar con millonarios fondos",
-      "seccion": "Economía"
      }
     ]
    },
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 44,
     "notas": [
-     {
-      "id": "1kra2dj",
-      "titulo": "Gastón Ávila sufre un golpe en la cara y queda internado",
-      "seccion": "Fútbol"
-     },
      {
       "id": "q9kshm",
       "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
