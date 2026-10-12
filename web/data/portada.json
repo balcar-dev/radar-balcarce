@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T04:02:09.969Z",
+  "generado": "2026-10-12T04:31:49.092Z",
   "notas": [
     {
       "id": "irpmd8",
@@ -419,8 +419,8 @@
         "Crónica",
         "Canal 26",
         "Diario Popular",
-        "El Día",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "El Día"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -591,8 +591,8 @@
       "medios": [
         "Infobae",
         "Diario Popular",
-        "Realpolitik",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Realpolitik"
       ],
       "enlace": "https://noticiasargentinas.com/cultura/rosario-vive-una-nueva-edicion-de-la-feria-internacional-del-libro_a6acbecc5f61ec7711f784fc2",
       "teniaImagenLaFuente": true,
@@ -1265,6 +1265,84 @@
       }
     },
     {
+      "id": "153zuaz",
+      "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social aplica un incremento del 1,66 por ciento en la Asignación Universal por Hijo durante octubre, según informó el organismo previsional. El ajuste responde a la actualización automática mensual basada en la inflación de agosto, que se ubicó en el 1,7 por ciento.\n\nEl pago de los haberes se efectiviza entre la segunda y la tercera semana del mes, ordenado según la terminación del documento de identidad de los titulares. Del total asignado, un 20 por ciento queda retenido hasta que las familias presentan la Libreta que acredita la escolaridad y los controles de salud de los menores a cargo, un trámite que se completa de manera digital mediante la plataforma oficial.",
+      "guion": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "El Cronista"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T13:27:22.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:35:55.538Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Asignación Universal por Hijo sube un 1,66 por ciento en octubre.",
+        "El ajuste se calcula según el índice de inflación registrado en agosto.",
+        "El organismo previsional abona los montos entre la segunda y la tercera semana del mes por terminación de DNI."
+      ],
+      "seSabe": [
+        "La Anses oficializó un aumento del 1,66% para la AUH en octubre.",
+        "La actualización se rige por la variación inflacionaria de agosto.",
+        "El pago se distribuye entre la segunda y tercera semana del mes según el DNI."
+      ],
+      "textoRedes": "La Anses oficializó un aumento del 1,66 por ciento en la Asignación Universal por Hijo para el mes de octubre. El incremento responde a la actualización automática por inflación y los pagos se distribuyen según la terminación del documento.",
+      "etiquetas": [
+        "Anses",
+        "Asignación Universal por Hijo",
+        "octubre",
+        "aumento",
+        "prestaciones sociales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+          "fecha": "2026-10-11T13:27:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento, el índice de inflación de referencia y los detalles de la Libreta AUH."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
+          "fecha": "2026-10-11T13:28:52.000Z",
+          "oficial": false,
+          "aporte": "Informó que la Anses publicó el calendario de pagos de octubre por terminación de DNI."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
+          "fecha": "2026-10-11T16:31:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó el alcance de la cobertura en cantidad de menores y adultos a cargo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ujkaqh",
+          "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
+          "fecha": "2026-09-28T12:13:43.000Z",
+          "ruta": "/nota/anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre-ujkaqh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "anses-aplica-un-incremento-en-la-asignacion-universal-por-hijo"
+    },
+    {
       "id": "repaso20261011manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: Inter, Adrián Stoppelman y Virginia Aparicio",
@@ -1530,6 +1608,60 @@
         "archivo": "fotos-notas/atnmk9.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
+    },
+    {
+      "id": "zavg8u",
+      "titulo": "El Ministerio de Salud bonaerense advierte sobre el riesgo de nuevos brotes de sarampión",
+      "copete": "Las autoridades sanitarias piden revisar los esquemas de vacunación antes de viajar ante la aparición de casos en el país.",
+      "cuerpo": "El Ministerio de Salud de la provincia de Buenos Aires insiste en revisar las dosis de vacunas antes de viajar al exterior debido al riesgo de nuevos brotes.\n\nLa médica infectóloga pediátrica Virginia Verdaguer explicó que la reaparición del virus se vincula con las bajas coberturas de inmunización y la llegada de viajeros no vacunados. Como antecedente internacional, la especialista indicó que Nueva York notificó 108 casos hasta el 3 de octubre.\n\nLa enfermedad se propaga por vía respiratoria y puede contagiar hasta a nueve de cada diez contactos susceptibles. Los síntomas iniciales comprenden fiebre alta, tos, secreción nasal y conjuntivitis, seguidos por una erupción cutánea que surge entre siete y 14 días después del contagio.",
+      "guion": "El Ministerio de Salud bonaerense advierte sobre el riesgo de nuevos brotes de sarampión",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45054-sarampion-el-riesgo-de-nuevos-brotes-y-la-importancia-de-completar-la-vacunacion/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T02:01:43.014Z",
+      "sinFecha": true,
+      "visto": "2026-10-11T02:01:43.014Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Ministerio de Salud bonaerense pide revisar las vacunas ante los viajes.",
+        "Se confirmaron 35 casos de sarampión en el país hasta la semana epidemiológica 37.",
+        "La provincia concentra 21 de los contagios registrados en Argentina."
+      ],
+      "noConfirmado": [
+        "No se informaron casos sospechosos ni confirmados en el partido de Balcarce.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Ministerio de Salud bonaerense insiste en revisar las dosis de vacunación antes de viajar ante la confirmación de 35 casos en el país.",
+      "etiquetas": [
+        "sarampión",
+        "vacunación",
+        "Ministerio de Salud",
+        "provincia de Buenos Aires",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45054-sarampion-el-riesgo-de-nuevos-brotes-y-la-importancia-de-completar-la-vacunacion/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló las estadísticas nacionales de sarampión y las recomendaciones sanitarias sobre vacunación."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-ministerio-de-salud-bonaerense-advierte-sobre-el-riesgo-de-nuevos"
     },
     {
       "id": "1gkf7qu",
@@ -1858,92 +1990,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-titular-registral-de-un-auto-vendido-responde-ante-choques"
-    },
-    {
-      "id": "1nhtdpr",
-      "titulo": "El Gobierno reitera el pedido a la Fórmula 1 para volver a ser sede",
-      "copete": "El canciller Pablo Quirno mantuvo un encuentro en Singapur con el máximo responsable de la categoría para insistir en el regreso de la competencia al país. Las gestiones se suman a los planteos previos realizados por el presidente Javier Milei.",
-      "cuerpo": "El canciller Pablo Quirno se reunió el sábado en Singapur con el presidente y CEO de la Fórmula 1, Stefano Domenicali, para reiterarle la solicitud de que la Argentina recupere una fecha en el calendario internacional. El funcionario nacional transmitió el interés oficial durante una visita al país asiático, invitado por ministros locales.\n\nEl presidente Javier Milei ya había realizado un planteo similar a finales de agosto durante el Congreso Americano de la Federación Internacional del Automóvil en Buenos Aires, donde destacó la trayectoria nacional en el automovilismo y el impacto de los pilotos locales.\n\nLa categoría ya publicó el cronograma para el próximo año, por lo que las posibilidades de concretar el pedido se evalúan para 2027 ante eventuales cancelaciones de otras plazas o para reemplazar desde 2028 a fechas cuyos contratos finalicen. En paralelo, continúan las obras en el Autódromo de la Ciudad de Buenos Aires con la expectativa de recibir al MotoGP en abril de 2027.",
-      "guion": "El Gobierno reitera el pedido a la Fórmula 1 para volver a ser sede",
-      "seccion": "Automovilismo",
-      "medios": [
-        "QZ Noticias (Mar del Plata)",
-        "Infobae",
-        "Perfil",
-        "Ámbito",
-        "Minuto Uno",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "iProfesional",
-        "TN (Todo Noticias)",
-        "Olé",
-        "Doble Amarilla"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/10/el-gobierno-reitero-la-solicitud-a-la-fia-para-que-la-argentina-sea-sede-de-un-gran-premio-de-la-formula-1/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-10T16:30:08.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-10T19:01:27.411Z",
-      "relevancia": 87,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reunión entre el canciller Pablo Quirno y Stefano Domenicali en Singapur.",
-        "El Gobierno insiste en recuperar una fecha para la máxima categoría del automovilismo.",
-        "Las opciones para recibir a la competencia se evalúan de cara a 2027 o 2028.",
-        "El proyecto se complementa con las tareas de remodelación en el Autódromo porteño."
-      ],
-      "seSabe": [
-        "El canciller Pablo Quirno se reunió este sábado con Stefano Domenicali en Singapur.",
-        "El funcionario renovó formalmente el pedido para que el país reciba un Gran Premio.",
-        "El presidente Javier Milei había planteado la misma solicitud a fines de agosto ante autoridades de la FIA.",
-        "La categoría ya difundió el cronograma del próximo año."
-      ],
-      "noConfirmado": [
-        "Todavía no hay fechas confirmadas para el retorno de la competencia al país.",
-        "Las posibilidades para 2027 dependen de posibles cancelaciones de otras sedes internacionales."
-      ],
-      "textoRedes": "El canciller Pablo Quirno se reunió en Singapur con el CEO de la Fórmula 1 para reiterar el pedido de que la Argentina vuelva a albergar un Gran Premio.",
-      "etiquetas": [
-        "Fórmula 1",
-        "Pablo Quirno",
-        "Stefano Domenicali",
-        "Javier Milei",
-        "Automovilismo",
-        "Gobierno nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/10/el-gobierno-reitero-la-solicitud-a-la-fia-para-que-la-argentina-sea-sede-de-un-gran-premio-de-la-formula-1/",
-          "fecha": "2026-10-10T16:30:08.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles del encuentro en Singapur entre Pablo Quirno y Stefano Domenicali, junto con los antecedentes de las gestiones oficiales."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/vuelve-la-formula-1-la-argentina-elgobierno-reitero-la-fia-su-pedido-organizar-un-gran-premio-n6332364",
-          "fecha": "2026-10-10T18:39:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la reunión en Singapur y la vinculación de la iniciativa con los proyectos en el Autódromo porteño."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-reitera-el-pedido-a-la-formula-1-para-volver-a-ser-sede",
-      "foto": {
-        "archivo": "fotos-notas/1nhtdpr.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
@@ -1961,10 +2007,10 @@
   "clima": {
     "ahora": {
       "temp": 5,
-      "sensacion": 3,
+      "sensacion": 2,
       "humedad": 95,
-      "viento": 6,
-      "rumbo": "SE",
+      "viento": 5,
+      "rumbo": "E",
       "cielo": "Despejado",
       "esDeDia": false
     },
@@ -2366,5 +2412,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 0
 }
