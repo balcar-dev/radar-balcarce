@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T14:02:38.772Z",
- "portada": 27,
- "archivo": 945,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-12T14:32:25.516Z",
+ "portada": 28,
+ "archivo": 948,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-12T14:02:38.803Z",
+  "generado": "2026-10-12T14:32:25.544Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 39,
+    "segundos": 55,
     "notas": [
      {
       "id": "s94jkn",
@@ -136,6 +136,16 @@
      {
       "id": "skmago",
       "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1xc91gb",
+      "titulo": "Milei ratifica a Caputo y asegura contar con millonarios fondos",
+      "seccion": "Economía"
+     },
+     {
+      "id": "q9kshm",
+      "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
       "seccion": "Balcarce"
      }
     ]
@@ -147,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 33,
+    "segundos": 34,
     "notas": [
+     {
+      "id": "1tsobe7",
+      "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
+      "seccion": "Fútbol"
+     },
      {
       "id": "1hapve0",
       "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
       "seccion": "Deportes"
-     },
-     {
-      "id": "atnmk9",
-      "titulo": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
-      "seccion": "Balcarce"
      }
     ]
    }

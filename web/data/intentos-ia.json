@@ -196,6 +196,11 @@
   "ultimo": "2026-10-11T23:36:12.469Z",
   "motivo": "con cuerpo"
  },
+ "1567idj": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T14:31:43.106Z",
+  "motivo": "cuerpo: 2 problemas (numero, copia): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 65 palabras"
+ },
  "158583a": {
   "intentos": 1,
   "ultimo": "2026-10-07T20:01:35.015Z",
@@ -381,11 +386,6 @@
   "ultimo": "2026-10-05T21:32:25.306Z",
   "motivo": "con cuerpo"
  },
- "18fgx6g": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:05:38.428Z",
-  "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice"
- },
  "18jx7kk": {
   "intentos": 2,
   "ultimo": "2026-10-10T01:02:01.933Z",
@@ -400,13 +400,6 @@
   "intentos": 2,
   "ultimo": "2026-10-05T23:02:40.116Z",
   "motivo": "con cuerpo"
- },
- "18wjidj": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:31:32.600Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "18wlubj": {
   "intentos": 1,
@@ -1229,6 +1222,11 @@
   "ultimo": "2026-10-09T23:02:00.329Z",
   "motivo": "con cuerpo"
  },
+ "1snnbwi": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T14:31:43.106Z",
+  "motivo": "cuerpo: 3 problemas (nombre, copia): el cuerpo nombra a \"belgica\" y la fuente no; sin esas oraciones quedan 22 palabras"
+ },
  "1stahh": {
   "intentos": 1,
   "ultimo": "2026-10-10T17:31:46.971Z",
@@ -1271,11 +1269,6 @@
   "ultimo": "2026-10-06T01:01:28.636Z",
   "motivo": "con cuerpo"
  },
- "1tivdmf": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:31:32.600Z",
-  "motivo": "con cuerpo"
- },
  "1tkwpmv": {
   "intentos": 3,
   "ultimo": "2026-10-06T23:31:45.917Z",
@@ -1297,9 +1290,9 @@
   "motivo": "con cuerpo"
  },
  "1tsobe7": {
-  "intentos": 1,
-  "ultimo": "2026-10-12T14:02:04.283Z",
-  "motivo": "semáforo: necesita ojo humano: \"lesionado\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 2,
+  "ultimo": "2026-10-12T14:31:43.106Z",
+  "motivo": "con cuerpo"
  },
  "1u383pj": {
   "intentos": 1,
@@ -1457,9 +1450,9 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "1xc91gb": {
-  "intentos": 1,
-  "ultimo": "2026-10-12T14:02:04.283Z",
-  "motivo": "cuerpo: 3 problemas (nombre): el cuerpo nombra a \"palacio\" y la fuente no; sin esas oraciones quedan 59 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-12T14:31:43.106Z",
+  "motivo": "con cuerpo"
  },
  "1xwup7g": {
   "intentos": 1,
@@ -1495,11 +1488,6 @@
   "intentos": 1,
   "ultimo": "2026-10-06T19:31:38.364Z",
   "motivo": "con cuerpo"
- },
- "26eqtx": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:05:38.428Z",
-  "motivo": "cuerpo: 2 problemas (copia, promesa): copia 16 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 124 palabras"
  },
  "27x6h7": {
   "intentos": 1,
@@ -1576,11 +1564,6 @@
   "ultimo": "2026-10-07T20:01:35.015Z",
   "motivo": "con cuerpo"
  },
- "3anv39": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:05:38.428Z",
-  "motivo": "con cuerpo"
- },
  "3exxze": {
   "intentos": 1,
   "ultimo": "2026-10-07T20:31:41.364Z",
@@ -1599,11 +1582,6 @@
  "4u38d4": {
   "intentos": 1,
   "ultimo": "2026-10-10T11:01:56.089Z",
-  "motivo": "con cuerpo"
- },
- "504ym0": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:31:32.600Z",
   "motivo": "con cuerpo"
  },
  "51b1bv": {
@@ -1707,11 +1685,6 @@
   "intentos": 1,
   "ultimo": "2026-10-06T21:31:41.860Z",
   "motivo": "cuerpo: 3 problemas (nombre): el cuerpo nombra a \"palacio\" y la fuente no; sin esas oraciones quedan 59 palabras"
- },
- "7eq77v": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:05:38.428Z",
-  "motivo": "con cuerpo"
  },
  "7gf331": {
   "intentos": 2,
@@ -2445,6 +2418,11 @@
   "ultimo": "2026-10-05T15:04:56.390Z",
   "motivo": "con cuerpo"
  },
+ "q9kshm": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T14:31:43.106Z",
+  "motivo": "con cuerpo"
+ },
  "ql89ei": {
   "intentos": 3,
   "ultimo": "2026-10-06T16:31:26.951Z",
@@ -2464,11 +2442,6 @@
   "intentos": 2,
   "ultimo": "2026-10-12T14:02:04.283Z",
   "motivo": "con cuerpo"
- },
- "r2tg83": {
-  "intentos": 3,
-  "ultimo": "2026-10-05T14:05:38.428Z",
-  "motivo": "sin material"
  },
  "r7245w": {
   "intentos": 1,
@@ -2500,22 +2473,10 @@
   "ultimo": "2026-10-07T20:07:57.579Z",
   "motivo": "con cuerpo"
  },
- "rzjt95": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:05:38.428Z",
-  "motivo": "cuerpo: 2 problemas (fecha, copia): el cuerpo menciona \"septiembre\" y la fuente no; sin esas oraciones quedan 63 palabras"
- },
  "rzygx9": {
   "intentos": 3,
   "ultimo": "2026-10-09T19:01:55.784Z",
   "motivo": "con cuerpo"
- },
- "s5alyz": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:31:32.600Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
  },
  "s67kgm": {
   "intentos": 3,
@@ -2767,11 +2728,6 @@
   "ultimo": "2026-10-08T14:02:25.867Z",
   "motivo": "con cuerpo"
  },
- "wb8pre": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:31:32.600Z",
-  "motivo": "con cuerpo"
- },
  "we9ftu": {
   "intentos": 2,
   "ultimo": "2026-10-08T19:01:48.155Z",
@@ -2780,11 +2736,6 @@
  "wo6zpw": {
   "intentos": 1,
   "ultimo": "2026-10-12T02:38:28.920Z",
-  "motivo": "con cuerpo"
- },
- "wobiyk": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T14:05:38.428Z",
   "motivo": "con cuerpo"
  },
  "woerbj": {
