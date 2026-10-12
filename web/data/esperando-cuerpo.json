@@ -1,24 +1,7 @@
 {
- "generado": "2026-10-12T21:32:18.963Z",
+ "generado": "2026-10-12T22:02:24.600Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1voo35c",
-   "titulo": "Balcarce fue testigo de un logro histórico de Buduba",
-   "copete": "",
-   "seccion": "Automovilismo",
-   "fecha": "2026-10-12T09:46:24.000Z",
-   "fuentes": [
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/deportes/balcarce-fue-testigo-de-un-logro-historico-de-buduba",
-     "fecha": "2026-10-12T09:46:24.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "sin material",
-   "maximo": 3
-  },
   {
    "id": "1nxc5o2",
    "titulo": "Choque entre un auto y una moto en la Ruta 226",
@@ -32,8 +15,8 @@
      "fecha": "2026-10-12T21:00:35.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 32 palabras",
+   "intentos": 3,
+   "motivo": "cuerpo corto (68 palabras)",
    "maximo": 3
   }
  ]

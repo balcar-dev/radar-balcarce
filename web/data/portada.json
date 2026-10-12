@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T21:32:18.963Z",
+  "generado": "2026-10-12T22:02:24.600Z",
   "notas": [
     {
       "id": "18zr7tv",
@@ -122,7 +122,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Municipalidad de Balcarce"
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/12/doble-podio-para-felipe-pereyra-en-el-nacional-master-de-marcha-atletica/",
       "teniaImagenLaFuente": true,
@@ -254,6 +255,78 @@
       "foto": {
         "archivo": "fotos-notas/7p3nh4.jpg",
         "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
+      "id": "gl138z",
+      "titulo": "Marcos Galperín cuestiona la norma del BCRA sobre el costo de los créditos",
+      "copete": "El fundador de Mercado Libre criticó el cálculo del Costo Financiero Total exigido por el Banco Central. Sostuvo que el indicador está inflacionado y no refleja la realidad de los préstamos.",
+      "cuerpo": "El empresario Marcos Galperín cuestionó la normativa del Banco Central de la República Argentina que obliga a informar el Costo Financiero Total en los créditos. Según indicó el fundador de Mercado Libre, el indicador exigido resulta incorrecto e inflacionado porque parte de supuestos de capitalización y renovación que no suceden en la práctica.\n\nEl cruce comenzó a partir de una publicación en la red social X del economista Agustín Etchebarne, quien compartió la simulación de un préstamo de Mercado Pago por diez mil pesos a devolver en doce cuotas fijas.\n\nPor su parte, el Banco Central define al indicador como la principal variable para elegir un préstamo, ya que agrupa la tasa de interés con los cargos asociados a la operación. La normativa también regula el tamaño de la tipografía con la que debe exhibirse el dato en publicidades y documentos para los usuarios.",
+      "guion": "Marcos Galperín cuestiona la norma del Banco Central sobre el costo de los créditos.",
+      "seccion": "Economía",
+      "medios": [
+        "El Eco de Tandil",
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/12/la-dura-queja-de-marcos-galperin-contra-la-norma-del-bcra-que-obliga-a-informar-el-costo-financiero-de-los-prestamos-de-su-app/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T18:43:39.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T22:01:54.030Z",
+      "relevancia": 49,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Marcos Galperín cuestionó el Costo Financiero Total que exige publicar el BCRA.",
+        "El empresario afirmó que el cálculo asume una capitalización que no ocurre en la práctica.",
+        "El debate se originó tras la publicación de una simulación de crédito de Mercado Pago.",
+        "El Banco Central define al indicador como la principal variable para elegir un préstamo."
+      ],
+      "seSabe": [
+        "Marcos Galperín cuestionó la exigencia del BCRA de publicar el Costo Financiero Total.",
+        "Agustín Etchebarne compartió una simulación de un préstamo de Mercado Pago en la red social X.",
+        "El BCRA establece los criterios y la forma en que las entidades deben informar las tasas y cargos a los usuarios."
+      ],
+      "noConfirmado": [
+        "No se registraron declaraciones oficiales del Banco Central en respuesta directa al cuestionamiento del empresario."
+      ],
+      "textoRedes": "Marcos Galperín cuestionó la exigencia del Banco Central de publicar el Costo Financiero Total en los créditos. El empresario afirmó que el indicador está inflacionado y no refleja la realidad de las operaciones.",
+      "etiquetas": [
+        "Marcos Galperin",
+        "BCRA",
+        "Mercado Pago",
+        "creditos",
+        "economia",
+        "tasas de interes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/12/la-dura-queja-de-marcos-galperin-contra-la-norma-del-bcra-que-obliga-a-informar-el-costo-financiero-de-los-prestamos-de-su-app/",
+          "fecha": "2026-10-12T18:43:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la publicación de Agustín Etchebarne, la respuesta de Marcos Galperín y la normativa del BCRA."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/marcos-galperin-cuestiono-al-banco-central-por-el-calculo-del-costo-de-los-prestamos",
+          "fecha": "2026-10-12T21:37:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó la definición sobre la variedad de indicadores en el costo de los préstamos y el marco normativo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "marcos-galperin-cuestiona-la-norma-del-bcra-sobre-el-costo-de-los",
+      "foto": {
+        "archivo": "fotos-notas/gl138z.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -890,134 +963,6 @@
       }
     },
     {
-      "id": "1tsobe7",
-      "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
-      "copete": "El conjunto de la Ribera igualó 2-2 en su visita a Córdoba por la duodécima fecha del Torneo Clausura. Leandro Paredes debió pedir el cambio por una molestia física a pocos días de la semifinal internacional.",
-      "cuerpo": "Fernando Alarcón abrió el marcador para el dueño de casa a los 13 minutos del primer tiempo, pero el conjunto visitante alcanzó la igualdad a los 22 a través de Enner Valencia, según informó un medio local.\n\nEn el complemento, Jonathan Galván puso en ventaja nuevamente al local a los 47 minutos de la etapa inicial. Ya en el segundo tiempo, Miguel Merentiel selló el empate definitivo a los 10 minutos. Durante ese período, Leandro Paredes ingresó al campo, permaneció 16 minutos y pidió el cambio por una molestia física.\n\nCon este resultado, el equipo cordobés se mantiene como líder de la Zona A con 26 unidades. Por su parte, la visita se prepara para recibir el martes a las 21.30 a Vasco da Gama en la Bombonera por el encuentro de ida de las semifinales de la Copa Sudamericana.",
-      "guion": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
-      "seccion": "Fútbol",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/deportes/14317-boca-empato-2-2-en-cordoba-ante-instituto/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T14:31:34.877Z",
-      "sinFecha": true,
-      "visto": "2026-10-12T14:31:34.877Z",
-      "relevancia": 59,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Boca e Instituto empataron 2-2 en Córdoba",
-        "Enner Valencia y Miguel Merentiel marcaron para la visita",
-        "Leandro Paredes salió lesionado tras ingresar en el complemento",
-        "El equipo enfrentará este martes a Vasco da Gama por la Copa Sudamericana"
-      ],
-      "noConfirmado": [
-        "La gravedad de la molestia física sufrida por Leandro Paredes y su disponibilidad para los próximos compromisos.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Boca Juniors empató 2-2 ante Instituto en Córdoba por el Torneo Clausura. Enner Valencia y Miguel Merentiel convirtieron los goles del visitante, mientras que Leandro Paredes debió salir con una molestia física de cara al duelo por la Copa Sudamericana.",
-      "etiquetas": [
-        "Boca Juniors",
-        "Instituto",
-        "Torneo Clausura",
-        "Fútbol",
-        "Córdoba",
-        "Copa Sudamericana"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/deportes/14317-boca-empato-2-2-en-cordoba-ante-instituto/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los goles, el desarrollo del partido, la lesión de Leandro Paredes y el calendario de partidos de Boca Juniors."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "boca-empata-con-instituto-en-cordoba-y-pierde-terreno-en-el-torneo"
-    },
-    {
-      "id": "8dy7jt",
-      "titulo": "El Banco Provincia paga el plazo fijo con la tasa más alta",
-      "copete": "Los ahorristas que colocan $2.700.000 a treinta días en el Banco Nación obtienen un interés de $42.719,18. Las entidades financieras presentan diferencias en sus rendimientos durante octubre de 2026.",
-      "cuerpo": "El Banco de la Provincia de Buenos Aires lidera el rendimiento de los plazos fijos con una tasa nominal anual del 21 por ciento, según los registros difundidos en octubre de 2026. Una colocación electrónica de $2.700.000 a treinta días en el Banco Nación genera una ganancia de $42.719,18 y devuelve un total aproximado de $2.742.719,18 al finalizar el período.\n\nLa lista de tasas nominales anuales para depósitos a treinta días continúa con Banco Macro en el 19,5 por ciento y Banco Nación en el 19,25 por ciento. Detrás se ubican BBVA con el 19 por ciento, Banco Credicoop con el 18,5 por ciento, Banco Galicia con el 18,25 por ciento e ICBC con el 18,1 por ciento. Las opciones se completan con Banco Ciudad al 17 por ciento, Santander al 16,5 por ciento y Banco Patagonia al 16 por ciento.\n\nEl Banco Central de la República Argentina ofrece una herramienta online para comparar las condiciones vigentes entre las distintas entidades financieras. Los especialistas recuerdan que el dinero permanece inmovilizado durante el plazo elegido y que los intereses obtenidos deben superar a la inflación para evitar la pérdida de poder adquisitivo.",
-      "guion": "El Banco Provincia paga el plazo fijo con la tasa más alta",
-      "seccion": "Economía",
-      "medios": [
-        "Ámbito",
-        "El Destape"
-      ],
-      "enlace": "https://www.ambito.com/economia/plazo-fijo-cuanto-se-gana-2700000-30-dias-n6332116",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T14:30:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T18:31:55.126Z",
-      "relevancia": 45,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Banco Provincia ofrece una tasa del 21 por ciento anual.",
-        "Colocar $2.700.000 a treinta días en el Banco Nación deja $42.719,18 de intereses.",
-        "El Banco Central dispone de un comparador online de rendimientos bancarios.",
-        "Los fondos quedan inmovilizados durante todo el plazo de la inversión."
-      ],
-      "seSabe": [
-        "Invertir $2.700.000 a 30 días en el Banco Nación genera $42.719,18 de intereses, según datos oficiales.",
-        "El Banco Provincia ofrece una tasa nominal anual del 21 por ciento.",
-        "El Banco Macro cuenta con una tasa del 19,5 por ciento.",
-        "El Banco Nación ofrece una tasa del 19,25 por ciento.",
-        "El BBVA registra una tasa del 19 por ciento.",
-        "El Banco Credicoop ofrece una tasa del 18,5 por ciento."
-      ],
-      "noConfirmado": [
-        "No se especificaron los rendimientos actualizados de todas las entidades financieras del sistema."
-      ],
-      "textoRedes": "El Banco Provincia lidera el rendimiento de los plazos fijos con una tasa anual del 21 por ciento en octubre de 2026. Una colocación de $2.700.000 a treinta días en el Banco Nación genera $42.719,18 de intereses.",
-      "etiquetas": [
-        "plazo fijo",
-        "bancos",
-        "ahorro"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/plazo-fijo-cuanto-se-gana-2700000-30-dias-n6332116",
-          "fecha": "2026-10-12T14:30:00.000Z",
-          "oficial": false,
-          "aporte": "Informó las tasas de interés vigentes de los principales bancos y el rendimiento para una inversión de $2.700.000."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/plazo-fijo-cual-banco-interes-paga-tercera-semana-octubre-2026-20261012151759",
-          "fecha": "2026-10-12T18:17:59.000Z",
-          "oficial": false,
-          "aporte": "Planteó la consulta sobre cuáles son las entidades bancarias que pagan mayores intereses por los depósitos."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-banco-provincia-paga-el-plazo-fijo-con-la-tasa-mas-alta",
-      "foto": {
-        "archivo": "fotos-notas/8dy7jt.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "18ht4d0",
       "titulo": "Químicos piden informes a municipios por arsénico en el agua",
       "copete": "El Consejo Profesional de Química exige detalles a las administraciones locales sobre los controles y resultados en distritos con registros elevados según un mapeo universitario.",
@@ -1034,6 +979,7 @@
         "El Día",
         "0221",
         "La Verdad",
+        "Infoeme",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "NDEN – Noticias de Necochea"
@@ -1333,6 +1279,7 @@
         "La Nueva",
         "La Brújula 24",
         "La Tecla",
+        "La Voz del Pueblo",
         "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
@@ -1585,8 +1532,8 @@
       "guion": "Domingo Cavallo elogia un informe con reparos al plan económico",
       "seccion": "Economía",
       "medios": [
-        "Clarín",
-        "El Día"
+        "El Día",
+        "Clarín"
       ],
       "enlace": "https://www.eldia.com/politica-y-economia/cavallo-elogio-un-informe-con-criticas-al-plan-economico-de-caputo-politica-y-economia_1791807720",
       "teniaImagenLaFuente": true,
@@ -1670,10 +1617,10 @@
         "Crónica",
         "Radio Mitre",
         "El Día",
-        "La Brújula 24",
         "El Marplatense",
         "Doble Amarilla",
-        "Olé"
+        "Olé",
+        "La Brújula 24"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -1789,6 +1736,7 @@
         "El Día",
         "La Nueva",
         "Letra P",
+        "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "La Nación"
@@ -1932,84 +1880,6 @@
       }
     },
     {
-      "id": "eonoyt",
-      "titulo": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
-      "copete": "La iniciativa nacional contempla dos alternativas económicas para extranjeros y comenzará a recibir postulaciones en el cuarto trimestre de 2026.",
-      "cuerpo": "El Gobierno nacional puso en marcha un programa para otorgar la ciudadanía a extranjeros que concreten inversiones en el país.\n\nLas postulaciones comenzarán a recibirse durante el cuarto trimestre de 2026. Los aspirantes deberán superar controles de identidad, antecedentes penales y origen de fondos que evaluará la Agencia de Programas de Ciudadanía por Inversión junto a Migraciones.\n\nComo antecedente, el Ejecutivo había presentado este mecanismo en Francia a principios de octubre. El esquema local difiere de los modelos de Estados Unidos y Portugal, donde la inversión otorga residencia temporal antes de una eventual naturalización.",
-      "guion": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
-      "seccion": "Economía",
-      "medios": [
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-12T10:40:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T19:01:26.092Z",
-      "relevancia": 37,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El programa nacional permite solicitar la ciudadanía a extranjeros mediante inversiones.",
-        "Se puede optar por un aporte de US$350.000 al Tesoro o un bono de US$800.000.",
-        "Las solicitudes se recibirán desde el cuarto trimestre de 2026.",
-        "El proceso incluye controles estrictos de antecedentes y origen de fondos."
-      ],
-      "seSabe": [
-        "El programa ofrece dos alternativas financieras de US$350.000 y US$800.000, según informó el Gobierno.",
-        "Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
-        "La Agencia de Programas de Ciudadanía por Inversión evaluará los antecedentes de los postulantes.",
-        "El Ejecutivo había presentado el mecanismo en Francia a principios de octubre."
-      ],
-      "noConfirmado": [
-        "Todavía no se detallaron las fechas exactas del cuarto trimestre en que abrirá la recepción de carpetas."
-      ],
-      "textoRedes": "El Gobierno nacional puso en marcha un programa que permite a extranjeros solicitar la ciudadanía mediante inversiones económicas y controles de antecedentes.",
-      "etiquetas": [
-        "ciudadania por inversion",
-        "Gobierno nacional",
-        "inversiones extranjeras"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-          "fecha": "2026-10-12T10:40:40.530Z",
-          "oficial": false,
-          "aporte": "Detalló las dos opciones de inversión, los requisitos de control y las comparaciones con programas internacionales."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-15-34-0-ciudadania-argentina-por-inversion-como-funcionara-el-sistema-y-que-ofrecen-otros-paises",
-          "fecha": "2026-10-12T18:37:47.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo el anuncio oficial sobre la puesta en marcha del programa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ig6fdw",
-          "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-          "fecha": "2026-10-01T10:55:58.335Z",
-          "ruta": "/nota/el-gobierno-lanza-un-programa-de-ciudadania-por-inversion-en-el-ig6fdw"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-nacional-lanza-el-programa-de-ciudadania-por-inversion",
-      "foto": {
-        "archivo": "fotos-notas/eonoyt.jpg",
-        "credito": "Foto: La Nueva"
-      }
-    },
-    {
       "id": "clima20261012",
       "propia": "clima",
       "titulo": "El clima de hoy en Balcarce: mínima de 4° y máxima de 13°",
@@ -2065,136 +1935,6 @@
         }
       ],
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-4-y-maxima-de-13"
-    },
-    {
-      "id": "s94jkn",
-      "titulo": "Carlos Alcaraz pierde ante Zizou Bergs en el Masters 1000 de Shanghái",
-      "copete": "El tenista español cayó por 7-5 y 7-6 ante el belga en la tercera ronda del torneo chino. Con este resultado, Alexander Zverev se aseguró terminar la temporada en lo más alto del ranking.",
-      "cuerpo": "El tenista español Carlos Alcaraz quedó eliminado este lunes del Masters 1000 de Shanghái al perder frente al belga Zizou Bergs por 7-5 y 7-6 en la tercera ronda del certamen disputado en China. El encuentro se llevó a cabo en la cancha central del complejo Qi Zhong.\n\nLa caída del murciano provocó cambios directos en el circuito internacional. Según confirmaron varios medios, el resultado le permitió al alemán Alexander Zverev asegurarse el primer puesto del ranking mundial al finalizar la temporada 2026.\n\nPara Bergs, ubicado en el puesto 39 del ranking, el triunfo representó una de las victorias más importantes de su carrera deportiva. Por su parte, Alcaraz puso fin a su participación en la gira asiática, donde venía de consagrarse campeón en el ATP 500 de Tokio.",
-      "guion": "Carlos Alcaraz pierde ante Zizou Bergs en el Masters 1000 de Shanghái",
-      "seccion": "Deportes",
-      "medios": [
-        "La Nación",
-        "Clarín",
-        "Perfil",
-        "Ámbito",
-        "TyC Sports",
-        "Crónica",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "Bolavip Argentina",
-        "La Nueva"
-      ],
-      "enlace": "https://radiomitre.cienradios.com/deportes/carlos-alcaraz-vs-zizou-bergs-en-el-masters-1000-de-shanghai-a-que-hora-juega-este-lunes-12-de-octubre/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T09:20:25.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T16:01:41.229Z",
-      "relevancia": 82,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Carlos Alcaraz cayó por 7-5 y 7-6 ante Zizou Bergs en la tercera ronda de Shanghái.",
-        "El español se despidió de la gira asiática tras haber ganado el ATP 500 de Tokio.",
-        "Alexander Zverev se aseguró terminar el año en la cima del ranking mundial."
-      ],
-      "seSabe": [
-        "Zizou Bergs derrotó a Carlos Alcaraz por 7-5 y 7-6 (7-4) en la tercera ronda.",
-        "El partido se disputó este lunes 12 de octubre en la cancha central del Qi Zhong.",
-        "Alexander Zverev se aseguró el primer puesto del ranking mundial de la temporada."
-      ],
-      "noConfirmado": [
-        "No se informaron detalles sobre posibles molestias físicas de Alcaraz durante el desarrollo del encuentro."
-      ],
-      "textoRedes": "Carlos Alcaraz quedó eliminado del Masters 1000 de Shanghái tras perder ante el belga Zizou Bergs por 7-5 y 7-6 en la tercera ronda. Con este resultado, Alexander Zverev se aseguró terminar la temporada en lo más alto del ranking mundial.",
-      "etiquetas": [
-        "Carlos Alcaraz",
-        "Zizou Bergs",
-        "Masters 1000 de Shanghái",
-        "Alexander Zverev",
-        "Tenis"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/carlos-alcaraz-vs-zizou-bergs-en-el-masters-1000-de-shanghai-a-que-hora-juega-este-lunes-12-de-octubre/",
-          "fecha": "2026-10-12T09:20:25.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/tenis/carlos-alcaraz-cayo-en-el-masters-1000-de-shanghai-y-alexander-zverev-se-aseguro-el-n-1-al-final-del-nid12102026/",
-          "fecha": "2026-10-12T14:39:57.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/derrota-alcaraz-alexander-zverev-cumplio-sueno-terminara-temporada-numero-1-ranking-atp_0_VGo4AXIe3v.html",
-          "fecha": "2026-10-12T12:49:18.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/tenis/2026/10/12/alexander-zverev-sera-el-nuevo-numero-1-del-mundo-tras-superar-a-sinner-y-alcaraz-en-el-ranking-atp/",
-          "fecha": "2026-10-12T14:35:21.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/tenis/carlos-alcaraz-fue-sorpresivamente-eliminado-de-shanghai-y-alexander-zverev-cerrara-el-ano-n1-del-mundo.phtml",
-          "fecha": "2026-10-12T13:34:30.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/tenis/carlos-alcaraz-eliminado-zizou-bergs-masters-1000-shanghai-2026/",
-          "fecha": "2026-10-12T13:30:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/masters-de-shanghai--una-sorpresiva-derrota-de-alcaraz-le-aseguro-a-zverev-terminar-el-ano-como-numero-1-del-mundo_a6accdebf32fdad2908997be4",
-          "fecha": "2026-10-12T13:57:27.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/tenis/un-irreconocible-carlos-alcaraz-quedo-eliminado-del-masters-1000-de-shanghai",
-          "fecha": "2026-10-12T13:13:20.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "if3bv6",
-          "titulo": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
-          "fecha": "2026-10-10T10:30:38.000Z",
-          "ruta": "/nota/tomas-etcheverry-queda-eliminado-en-el-masters-1000-de-shanghai-if3bv6"
-        },
-        {
-          "id": "futbolpartidosliga20261002",
-          "titulo": "Liga Profesional: lo que falta de la fecha del lunes 5 de octubre, con horarios",
-          "fecha": "2026-10-04T02:29:42.845Z",
-          "ruta": "/nota/liga-profesional-los-partidos-de-la-fecha-del-2-al-5-de-octubre-con-futbolpartidosliga20261002"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 8 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "carlos-alcaraz-pierde-ante-zizou-bergs-en-el-masters-1000-de-shanghai"
     },
     {
       "id": "rb2qmr",
@@ -2705,7 +2445,7 @@
       "fecha": "2026-10-11T22:48:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T11:02:16.567Z",
-      "relevancia": 80,
+      "relevancia": 76,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3161,6 +2901,84 @@
       }
     },
     {
+      "id": "153zuaz",
+      "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social aplica un incremento del 1,66 por ciento en la Asignación Universal por Hijo durante octubre, según informó el organismo previsional. El ajuste responde a la actualización automática mensual basada en la inflación de agosto, que se ubicó en el 1,7 por ciento.\n\nEl pago de los haberes se efectiviza entre la segunda y la tercera semana del mes, ordenado según la terminación del documento de identidad de los titulares. Del total asignado, un 20 por ciento queda retenido hasta que las familias presentan la Libreta que acredita la escolaridad y los controles de salud de los menores a cargo, un trámite que se completa de manera digital mediante la plataforma oficial.",
+      "guion": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "El Cronista"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T13:27:22.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:35:55.538Z",
+      "relevancia": 50,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Asignación Universal por Hijo sube un 1,66 por ciento en octubre.",
+        "El ajuste se calcula según el índice de inflación registrado en agosto.",
+        "El organismo previsional abona los montos entre la segunda y la tercera semana del mes por terminación de DNI."
+      ],
+      "seSabe": [
+        "La Anses oficializó un aumento del 1,66% para la AUH en octubre.",
+        "La actualización se rige por la variación inflacionaria de agosto.",
+        "El pago se distribuye entre la segunda y tercera semana del mes según el DNI."
+      ],
+      "textoRedes": "La Anses oficializó un aumento del 1,66 por ciento en la Asignación Universal por Hijo para el mes de octubre. El incremento responde a la actualización automática por inflación y los pagos se distribuyen según la terminación del documento.",
+      "etiquetas": [
+        "Anses",
+        "Asignación Universal por Hijo",
+        "octubre",
+        "aumento",
+        "prestaciones sociales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+          "fecha": "2026-10-11T13:27:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento, el índice de inflación de referencia y los detalles de la Libreta AUH."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
+          "fecha": "2026-10-11T13:28:52.000Z",
+          "oficial": false,
+          "aporte": "Informó que la Anses publicó el calendario de pagos de octubre por terminación de DNI."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
+          "fecha": "2026-10-11T16:31:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó el alcance de la cobertura en cantidad de menores y adultos a cargo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ujkaqh",
+          "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
+          "fecha": "2026-09-28T12:13:43.000Z",
+          "ruta": "/nota/anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre-ujkaqh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "anses-aplica-un-incremento-en-la-asignacion-universal-por-hijo"
+    },
+    {
       "id": "repaso20261011manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: Inter, Adrián Stoppelman y Virginia Aparicio",
@@ -3359,7 +3177,6 @@
     "Agro",
     "Argentina",
     "Balcarce",
-    "Fútbol",
     "Automovilismo",
     "Policiales"
   ],
@@ -3368,7 +3185,7 @@
     "ahora": {
       "temp": 11,
       "sensacion": 8,
-      "humedad": 72,
+      "humedad": 76,
       "viento": 14,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3715,6 +3532,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "p582dy",
+      "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "ox863",
       "titulo": null,
       "seccion": "Argentina",
@@ -3733,17 +3556,11 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "1b80tph",
-      "titulo": "Denuncian a Caputo y Bausili por las pérdidas millonarias…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "t2ij37",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 1
 }

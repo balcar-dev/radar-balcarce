@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T21:32:18.963Z",
- "portada": 41,
- "archivo": 975,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-12T22:02:24.600Z",
+ "portada": 39,
+ "archivo": 976,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-12T21:32:18.993Z",
+  "generado": "2026-10-12T22:02:24.631Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -63,7 +63,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-12T18:35:35.230Z"
    },
    {
@@ -73,7 +73,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-12T18:35:35.230Z",
     "segundos": null,
     "notas": [
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 43,
     "notas": [
      {
       "id": "90qy7w",
@@ -168,11 +168,6 @@
       "id": "q9kshm",
       "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1tsobe7",
-      "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
-      "seccion": "Fútbol"
      },
      {
       "id": "1hapve0",
