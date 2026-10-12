@@ -226,13 +226,6 @@
   "ultimo": "2026-10-08T23:02:05.096Z",
   "motivo": "con cuerpo"
  },
- "15m9ao1": {
-  "intentos": 1,
-  "ultimo": "2026-10-05T04:31:15.998Z",
-  "motivo": "verificación baja: espera a una persona",
-  "baja": true,
-  "fuentes": 1
- },
  "15ngrmw": {
   "intentos": 1,
   "ultimo": "2026-10-05T22:01:36.128Z",
@@ -1483,11 +1476,6 @@
   "ultimo": "2026-10-11T05:01:28.911Z",
   "motivo": "con cuerpo"
  },
- "1xzp9qx": {
-  "intentos": 3,
-  "ultimo": "2026-10-05T05:01:30.686Z",
-  "motivo": "con cuerpo"
- },
  "1y9462t": {
   "intentos": 1,
   "ultimo": "2026-10-09T15:31:56.968Z",
@@ -2050,6 +2038,11 @@
   "intentos": 1,
   "ultimo": "2026-10-06T18:01:44.392Z",
   "motivo": "con cuerpo"
+ },
+ "gkjfer": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T07:02:05.824Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 94 palabras"
  },
  "gmtn3r": {
   "intentos": 2,
