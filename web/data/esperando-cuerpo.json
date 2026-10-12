@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-12T19:32:14.518Z",
+ "generado": "2026-10-12T19:47:21.589Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,8 +15,8 @@
      "fecha": "2026-10-12T19:23:41.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 3 problemas (numero, copia): el cuerpo dice 40 y la fuente no lo dice; sin esas oraciones quedan 51 palabras",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (localia): el copete dice \"de nuestra ciudad\" y la fuente no dice Balcarce",
    "maximo": 3
   },
   {
@@ -111,7 +111,7 @@
     {
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/milei-defendio-la-gestion-de-caputo-y-se-mostro-confiado-en-que-va-a-ser-reelecto-politica-y-economia_1791812640",
-     "fecha": "2026-10-12T13:59:00.000Z"
+     "fecha": "2026-10-12T14:08:43.000Z"
     },
     {
      "medio": "La Nueva",
@@ -132,6 +132,58 @@
      "medio": "Mi8 (Canal 8 Mar del Plata)",
      "enlace": "https://mi8.com.ar/milei-no-espera-una-corrida-pero-dice-que-tiene-los-dolares-para-evitarla/",
      "fecha": "2026-10-12T15:39:25.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 5
+  },
+  {
+   "id": "18ht4d0",
+   "titulo": "Arsénico en el agua: químicos piden informes a municipios bonaerenses",
+   "copete": "El Consejo Profesional de Química de la Provincia de Buenos Aires solicitó a los municipios bonaerenses que informen sobre la posible presencia de concentraciones elevadas de arsénico en el agua, un elemento que se encuentra de forma natural en grandes niveles en las napas…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-12T14:17:00.000Z",
+   "fuentes": [
+    {
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
+     "fecha": "2026-10-12T14:17:00.000Z"
+    },
+    {
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/provincia/el-consejo-profesional-de-quimica-solicito-informes-a-municipios-por-la-presencia-de-arsenico-en-el-agua",
+     "fecha": "2026-10-12T18:39:12.000Z"
+    },
+    {
+     "medio": "QZ Noticias (Mar del Plata)",
+     "enlace": "https://www.qznoticias.com/la-provincia/arsenico-en-el-agua-piden-a-los-municipios-bonaerenses-que-informen-sobre-los-controles-y-los-riesgos",
+     "fecha": "2026-10-12T17:28:16.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/arsenico-el-agua-el-consejo-profesional-quimica-pidio-informes-municipios-n56420",
+     "fecha": "2026-10-12T15:06:39.000Z"
+    },
+    {
+     "medio": "La Noticia 1",
+     "enlace": "https://www.lanoticia1.com/noticia/arsenico-en-el-agua-alertan-por-niveles-elevados-en-municipios-bonaerenses-y-exigen-explicaciones",
+     "fecha": "2026-10-12T16:41:08.000Z"
+    },
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/alerta-por-arsenico-en-el-agua-exigen-controles-a-municipios-bonaerenses",
+     "fecha": "2026-10-12T18:14:57.000Z"
+    },
+    {
+     "medio": "Mi8 (Canal 8 Mar del Plata)",
+     "enlace": "https://mi8.com.ar/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pide-informes-a-municipios-por-concentraciones-elevadas/",
+     "fecha": "2026-10-12T18:08:53.000Z"
+    },
+    {
+     "medio": "NDEN – Noticias de Necochea",
+     "enlace": "https://nden.com.ar/nota/38375/arsenico-en-el-agua-solicitan-informes-a-municipios-bonaerenses-y-que-se-sabe-de-necochea",
+     "fecha": "2026-10-12T17:24:00.000Z"
     }
    ],
    "intentos": 1,
