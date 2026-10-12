@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T20:32:24.980Z",
+  "generado": "2026-10-12T21:02:01.615Z",
   "notas": [
     {
       "id": "18zr7tv",
@@ -9,6 +9,7 @@
       "guion": "Ciclistas locales consiguen podios en el MTB Series",
       "seccion": "Deportes",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
@@ -17,7 +18,7 @@
       "fecha": "2026-10-12T19:53:33.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 69,
+      "relevancia": 75,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -67,7 +68,8 @@
       "guion": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
       "seccion": "Deportes",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
       "teniaImagenLaFuente": true,
@@ -118,6 +120,7 @@
       "guion": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
       "seccion": "Deportes",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
@@ -126,7 +129,7 @@
       "fecha": "2026-10-12T19:23:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -243,6 +246,83 @@
       }
     },
     {
+      "id": "1iqxb89",
+      "titulo": "María Gainza recibe el premio literario de la Academia Argentina de Letras",
+      "copete": "La institución distinguió a la escritora por su libro Un puñado de flechas en el género Narrativa. La ceremonia de entrega de la distinción se programó para el 26 de noviembre.",
+      "cuerpo": "La Academia Argentina de Letras galardonó a la autora María Gainza con el Premio Literario en la categoría Narrativa correspondiente al período 2023-2024. La obra premiada es Un puñado de flechas, editada por Anagrama, que reúne quince perfiles sobre artistas, coleccionistas y detectives vinculados al mundo del arte.\n\nLa elección surgió a partir de una comisión asesora conformada por los escritores Pablo De Santis, Jorge Fernández Díaz y Esther Cross. Su propuesta contó con la ratificación del plenario institucional.\n\nEl volumen combina relatos artísticos con reflexiones acerca de la memoria, la enfermedad y el dinero. Desde la entidad destacaron el estilo formal del material y su aproximación a la crónica y la biografía. El evento de premiación tendrá lugar el 26 de noviembre.",
+      "guion": "Maria Gainza recibe el premio literario de la Academia Argentina de Letras",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Clarín"
+      ],
+      "enlace": "https://www.infobae.com/cultura/2026/10/12/maria-gainza-gana-el-premio-de-narrativa-de-la-academia-argentina-de-letras/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T18:26:36.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T21:01:30.197Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Academia Argentina de Letras premió a María Gainza.",
+        "La distinción corresponde al género Narrativa 2023-2024.",
+        "El libro galardonado se titula Un puñado de flechas.",
+        "La ceremonia de entrega se programó para el 26 de noviembre."
+      ],
+      "seSabe": [
+        "La Academia Argentina de Letras otorgó el premio literario a María Gainza.",
+        "El libro reconocido se llama Un puñado de flechas y fue publicado por Anagrama.",
+        "La comisión evaluadora estuvo integrada por Pablo De Santis, Jorge Fernández Díaz y Esther Cross.",
+        "La entrega del galardón se llevará a cabo el 26 de noviembre."
+      ],
+      "textoRedes": "La Academia Argentina de Letras distinguió a la escritora María Gainza con su Premio Literario en Narrativa por su libro Un puñado de flechas. La ceremonia de premiación se programó para el 26 de noviembre.",
+      "etiquetas": [
+        "Premio Literario",
+        "Academia Argentina de Letras",
+        "María Gainza",
+        "Narrativa",
+        "Un puñado de flechas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/cultura/2026/10/12/maria-gainza-gana-el-premio-de-narrativa-de-la-academia-argentina-de-letras/",
+          "fecha": "2026-10-12T18:26:36.000Z",
+          "oficial": false,
+          "aporte": "Informó la distinción a María Gainza por Un puñado de flechas y detalló la fecha de la ceremonia de premiación."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/cultura/maria-gainza-gana-el-premio-de-la-academia-argentina-de-letras-por-un-punado-de-flechas-nid12102026/",
+          "fecha": "2026-10-12T19:25:45.000Z",
+          "oficial": false,
+          "aporte": "Mencionó los integrantes de la comisión que propuso el reconocimiento y la editorial del libro."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/cultura/punado-flechas-maria-gainza-gano-premio-academia-argentina-letras_0_o8qZBooMbn.html",
+          "fecha": "2026-10-12T19:39:21.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre los temas que entrelaza la obra literaria."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "maria-gainza-recibe-el-premio-literario-de-la-academia-argentina-de",
+      "foto": {
+        "archivo": "fotos-notas/1iqxb89.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "km19m5",
       "titulo": "El Gobierno nacional restituye el nombre de Día de la Raza",
       "copete": "El Poder Ejecutivo difundió un mensaje oficial en redes sociales por el feriado del 12 de Octubre. En la publicación recuperó la antigua denominación y calificó la llegada de Cristóbal Colón como el comienzo de la expansión occidental.",
@@ -326,12 +406,14 @@
       "seccion": "Política",
       "medios": [
         "La Nación",
+        "Clarín",
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/alberto-fernandez---si-le-hubiera-hecho-caso-a-cristina--argentina-hubiera-estallado-en-mil-pedazos-_a6acd059532fdad29089ef0fc",
@@ -487,6 +569,80 @@
         "archivo": "fotos-notas/19q2x7e.jpg",
         "credito": "Foto: Infobae"
       }
+    },
+    {
+      "id": "pcks4q",
+      "titulo": "La Justicia decreta la quiebra del principal fabricante de pallets",
+      "copete": "La Justicia de Misiones ordenó la quiebra de la firma Linor SRL, un importante fabricante de pallets de madera. La medida incluye la incautación de bienes y el bloqueo de cuentas bancarias.",
+      "cuerpo": "La Justicia de Misiones decretó la quiebra de la empresa Linor SRL, uno de los mayores fabricantes de pallets de madera del país, tras el incumplimiento del acuerdo preventivo de acreedores.\n\nLa firma operaba en la localidad misionera de Azara y había cerrado su planta industrial en mayo de 2025, lo que derivó en el despido de 130 trabajadores. Con anterioridad al cese de actividades, la compañía acumulaba una deuda fiscal cercana a los 500 millones de pesos con la Agencia de Recaudación y Control Aduanero, además de obligaciones pendientes con la distribuidora eléctrica y problemas financieros derivados de la caída de la demanda y el incremento de costos operativos.",
+      "guion": "La Justicia decreta la quiebra del principal fabricante de pallets",
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Canal 26"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T16:45:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T21:01:30.197Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Justicia de Misiones decretó la quiebra de la firma Linor SRL.",
+        "La medida dispuso la incautación de bienes y el bloqueo de cuentas bancarias.",
+        "La planta industrial ubicada en Azara había cerrado en mayo de 2025 con 130 despedidos."
+      ],
+      "textoRedes": "La Justicia de Misiones decretó la quiebra de la empresa Linor SRL, uno de los principales fabricantes de pallets del país, tras el incumplimiento de su concurso de acreedores y el cierre de su planta en Azara.",
+      "etiquetas": [
+        "quiebra",
+        "Linor SRL",
+        "Misiones",
+        "pallets",
+        "Justicia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
+          "fecha": "2026-10-12T16:45:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló los motivos judiciales de la quiebra, el cierre de la planta en mayo de 2025 y la deuda con ARCA."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/quebro-uno-de-los-aserraderos-productores-de-pallets-mas-grandes-del-pais-nid12102026/",
+          "fecha": "2026-10-12T18:12:43.000Z",
+          "oficial": false,
+          "aporte": "Ubicó la planta en la localidad misionera de Azara y señaló que era el mayor productor de pallets de la provincia."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/12/quebro-una-maderera-lider-en-la-produccion-de-pallets-y-ordenaron-la-incautacion-de-sus-bienes/",
+          "fecha": "2026-10-12T18:35:32.000Z",
+          "oficial": false,
+          "aporte": "Indicó el juzgado interviniente en la causa."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/10/12/quiebra-confirmada-una-historica-empresa-maderera-de-misiones-quedo-bajo-control-judicial/",
+          "fecha": "2026-10-12T20:17:48.000Z",
+          "oficial": false,
+          "aporte": "Identificó a la jueza Adriana Fiori como la responsable de la medida."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-justicia-decreta-la-quiebra-del-principal-fabricante-de-pallets"
     },
     {
       "id": "fr6obg",
@@ -852,6 +1008,78 @@
       "slug": "boca-empata-con-instituto-en-cordoba-y-pierde-terreno-en-el-torneo"
     },
     {
+      "id": "8dy7jt",
+      "titulo": "El Banco Provincia paga el plazo fijo con la tasa más alta",
+      "copete": "Los ahorristas que colocan $2.700.000 a treinta días en el Banco Nación obtienen un interés de $42.719,18. Las entidades financieras presentan diferencias en sus rendimientos durante octubre de 2026.",
+      "cuerpo": "El Banco de la Provincia de Buenos Aires lidera el rendimiento de los plazos fijos con una tasa nominal anual del 21 por ciento, según los registros difundidos en octubre de 2026. Una colocación electrónica de $2.700.000 a treinta días en el Banco Nación genera una ganancia de $42.719,18 y devuelve un total aproximado de $2.742.719,18 al finalizar el período.\n\nLa lista de tasas nominales anuales para depósitos a treinta días continúa con Banco Macro en el 19,5 por ciento y Banco Nación en el 19,25 por ciento. Detrás se ubican BBVA con el 19 por ciento, Banco Credicoop con el 18,5 por ciento, Banco Galicia con el 18,25 por ciento e ICBC con el 18,1 por ciento. Las opciones se completan con Banco Ciudad al 17 por ciento, Santander al 16,5 por ciento y Banco Patagonia al 16 por ciento.\n\nEl Banco Central de la República Argentina ofrece una herramienta online para comparar las condiciones vigentes entre las distintas entidades financieras. Los especialistas recuerdan que el dinero permanece inmovilizado durante el plazo elegido y que los intereses obtenidos deben superar a la inflación para evitar la pérdida de poder adquisitivo.",
+      "guion": "El Banco Provincia paga el plazo fijo con la tasa más alta",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "El Destape"
+      ],
+      "enlace": "https://www.ambito.com/economia/plazo-fijo-cuanto-se-gana-2700000-30-dias-n6332116",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T14:30:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T18:31:55.126Z",
+      "relevancia": 45,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Banco Provincia ofrece una tasa del 21 por ciento anual.",
+        "Colocar $2.700.000 a treinta días en el Banco Nación deja $42.719,18 de intereses.",
+        "El Banco Central dispone de un comparador online de rendimientos bancarios.",
+        "Los fondos quedan inmovilizados durante todo el plazo de la inversión."
+      ],
+      "seSabe": [
+        "Invertir $2.700.000 a 30 días en el Banco Nación genera $42.719,18 de intereses, según datos oficiales.",
+        "El Banco Provincia ofrece una tasa nominal anual del 21 por ciento.",
+        "El Banco Macro cuenta con una tasa del 19,5 por ciento.",
+        "El Banco Nación ofrece una tasa del 19,25 por ciento.",
+        "El BBVA registra una tasa del 19 por ciento.",
+        "El Banco Credicoop ofrece una tasa del 18,5 por ciento."
+      ],
+      "noConfirmado": [
+        "No se especificaron los rendimientos actualizados de todas las entidades financieras del sistema."
+      ],
+      "textoRedes": "El Banco Provincia lidera el rendimiento de los plazos fijos con una tasa anual del 21 por ciento en octubre de 2026. Una colocación de $2.700.000 a treinta días en el Banco Nación genera $42.719,18 de intereses.",
+      "etiquetas": [
+        "plazo fijo",
+        "bancos",
+        "ahorro"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/plazo-fijo-cuanto-se-gana-2700000-30-dias-n6332116",
+          "fecha": "2026-10-12T14:30:00.000Z",
+          "oficial": false,
+          "aporte": "Informó las tasas de interés vigentes de los principales bancos y el rendimiento para una inversión de $2.700.000."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/plazo-fijo-cual-banco-interes-paga-tercera-semana-octubre-2026-20261012151759",
+          "fecha": "2026-10-12T18:17:59.000Z",
+          "oficial": false,
+          "aporte": "Planteó la consulta sobre cuáles son las entidades bancarias que pagan mayores intereses por los depósitos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-banco-provincia-paga-el-plazo-fijo-con-la-tasa-mas-alta",
+      "foto": {
+        "archivo": "fotos-notas/8dy7jt.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "18ht4d0",
       "titulo": "Químicos piden informes a municipios por arsénico en el agua",
       "copete": "El Consejo Profesional de Química exige detalles a las administraciones locales sobre los controles y resultados en distritos con registros elevados según un mapeo universitario.",
@@ -943,72 +1171,6 @@
       "foto": {
         "archivo": "fotos-notas/18ht4d0.jpg",
         "credito": "Foto: El Día"
-      }
-    },
-    {
-      "id": "1snnbwi",
-      "titulo": "La Champions League disputa nueve partidos el martes",
-      "copete": "El certamen europeo de clubes continúa el martes con la segunda fecha de la competencia. Habrá dos encuentros en el primer turno y siete en el horario central.",
-      "cuerpo": "La UEFA Champions League disputa el martes una nueva jornada correspondiente a la segunda fecha del certamen europeo. La programación está dividida en dos horarios diferentes para los nueve encuentros previstos.\n\nEl primer turno comienza a las 13.45 con dos cotejos en simultáneo. Luego, a partir de las 16, se desarrollan los siete partidos restantes con la participación de varios de los principales protagonistas del fútbol europeo y diversos cruces destacados entre equipos de distintas ligas.",
-      "guion": "La Champions League disputa nueve partidos el martes",
-      "seccion": "Deportes",
-      "medios": [
-        "Página/12",
-        "TyC Sports",
-        "Crónica",
-        "Canal 26",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://www.cronica.com.ar/depo/championsleague/champions-league-los-nueve-partidos-del-martes-con-atletico-de-madrid-manchester-united-como-plato-fuerte/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T13:47:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T15:31:24.834Z",
-      "relevancia": 89,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La segunda fecha se juega este martes",
-        "Hay dos partidos a las 13.45 y siete a las 16",
-        "Participan diversos clubes europeos"
-      ],
-      "seSabe": [
-        "La competencia continúa este martes con nueve partidos de la segunda fecha",
-        "Hay dos encuentros programados desde las 13.45 y siete a partir de las 16",
-        "El Atlético de Madrid recibe al Manchester United a las 16"
-      ],
-      "textoRedes": "La Champions League disputa este martes una jornada con nueve partidos correspondientes a la segunda fecha del certamen europeo, con dos horarios diferentes de inicio.",
-      "etiquetas": [
-        "Champions League"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/championsleague/champions-league-los-nueve-partidos-del-martes-con-atletico-de-madrid-manchester-united-como-plato-fuerte/",
-          "fecha": "2026-10-12T13:47:37.000Z",
-          "oficial": false,
-          "aporte": "Detalló el cronograma de los partidos de la Champions League para este martes."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/champions-league/uefa-champions-league-2026-2027-atletico-de-madrid-vs-manchester-united-fecha-2-id765718.html",
-          "fecha": "2026-10-12T13:56:48.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional sobre la competencia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-champions-league-disputa-nueve-partidos-el-martes",
-      "foto": {
-        "archivo": "fotos-notas/1snnbwi.jpg",
-        "credito": "Foto: TyC Sports"
       }
     },
     {
@@ -1283,6 +1445,7 @@
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
+        "La Noticia 1",
         "Minuto Uno",
         "Infobae",
         "Ámbito",
@@ -1292,12 +1455,13 @@
         "El Destape",
         "iProfesional",
         "C5N",
+        "Noticias Argentinas (NA)",
         "La Nueva",
-        "La Brújula 24",
         "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
-        "Noticias Argentinas (NA)",
+        "Punto Noticias",
+        "La Brújula 24",
         "NDEN – Noticias de Necochea"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
@@ -1429,9 +1593,9 @@
         "Ámbito",
         "La Nación",
         "TN (Todo Noticias)",
+        "Infobrisas (Radio Brisas)",
         "A24",
-        "La Brújula 24",
-        "Infobrisas (Radio Brisas)"
+        "La Brújula 24"
       ],
       "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
       "teniaImagenLaFuente": true,
@@ -1553,10 +1717,10 @@
         "Crónica",
         "Radio Mitre",
         "El Día",
-        "La Brújula 24",
         "El Marplatense",
-        "Doble Amarilla",
-        "Olé"
+        "Olé",
+        "La Brújula 24",
+        "Doble Amarilla"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -1651,6 +1815,171 @@
       }
     },
     {
+      "id": "185xawb",
+      "titulo": "Javier Milei ratifica a Luis Caputo y descarta rumores sobre su salida",
+      "copete": "El presidente Javier Milei ratificó la continuidad del ministro de Economía, Luis Caputo, y descartó versiones sobre su salida del Gabinete. Además, ratificó el respaldo a otros funcionarios y habló de las elecciones de 2027.",
+      "cuerpo": "El presidente Javier Milei ratificó este lunes la continuidad del ministro de Economía, Luis Caputo, al descartar los rumores sobre una posible salida del Gabinete y calificar esas versiones como un disparate perjudicial para los intereses del país. Durante una entrevista radial, el mandatario aseguró que mantiene una relación excelente y simbiótica con el funcionario, a quien definió como ejecutor de una política económica diseñada en conjunto.\n\nPor otro lado, manifestó su preocupación por la salud del Papa y señaló que evalúan posibles modificaciones en el cronograma de la visita papal si la situación lo requiere.",
+      "guion": "Javier Milei ratifica a Luis Caputo y descarta rumores sobre su salida",
+      "seccion": "Política",
+      "medios": [
+        "El Eco de Tandil",
+        "Agencia DIB",
+        "Diputados Bonaerenses",
+        "Infobae",
+        "Clarín",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "C5N",
+        "Crónica",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "Letra P",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "La Nación",
+        "Ámbito"
+      ],
+      "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-segui-minuto-minuto-todas-novedades-gobierno_0_OBPI6bMVtT.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T11:08:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T14:01:54.156Z",
+      "relevancia": 78,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El presidente Javier Milei confirmó este lunes la continuidad de Luis Caputo al frente del Ministerio de Economía.",
+        "El mandatario aseguró que mantiene una relación excelente con el funcionario.",
+        "Milei afirmó que su espacio político competirá y ganará las elecciones del próximo año.",
+        "El Gobierno se mostró abierto a modificar la fecha de la visita papal ante cuestiones de salud."
+      ],
+      "noConfirmado": [
+        "Todavía no se precisaron detalles sobre posibles fechas alternativas para la visita del Papa a la Argentina."
+      ],
+      "textoRedes": "El presidente Javier Milei ratificó este lunes la continuidad del ministro de Economía, Luis Caputo, descartó rumores sobre su salida y aseguró que mantiene una relación excelente con el funcionario. Además, se refirió al escenario electoral de 2027 y a la agenda papal.",
+      "etiquetas": [
+        "Javier Milei",
+        "Luis Caputo",
+        "Gobierno nacional",
+        "Economia",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-segui-minuto-minuto-todas-novedades-gobierno_0_OBPI6bMVtT.html",
+          "fecha": "2026-10-12T11:08:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-nos-unimos-en-oracion-por-su-salud-dijo-el-presidente-por-la-nid12102026/",
+          "fecha": "2026-10-12T13:16:50.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/milei-nego-la-salida-de-luis-caputo-y-se-mostro-confiado-en-que-sera-reelecto-nid12102026/",
+          "fecha": "2026-10-12T12:36:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
+          "fecha": "2026-10-12T12:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/12/milei-defendio-el-rumbo-de-la-economia-y-descarto-las-versiones-sobre-una-salida-de-luis-caputo-nadie-lo-cuestiona/",
+          "fecha": "2026-10-12T13:38:47.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/javier-milei-descarto-la-salida-del-luis-caputo-y-se-mostro-confiado-una-reeleccion-n1605484",
+          "fecha": "2026-10-12T13:22:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/milei-defendio-la-gestion-de-caputo-y-se-mostro-confiado-en-que-va-a-ser-reelecto-politica-y-economia_1791812640",
+          "fecha": "2026-10-12T13:59:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/12/milei-respaldo-a-caputo-y-descarto-cambios-en-economia-nadie-lo-cuestiona-n525068/",
+          "fecha": "2026-10-12T13:29:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/luis-caputo-nego-las-versiones-sobre-una-posible-salida-del-gabinete-quedate-tranquilo-que-no-voy-a-nid12102026/",
+          "fecha": "2026-10-12T15:19:38.000Z",
+          "oficial": false,
+          "aporte": "Detalló los cruces de Luis Caputo en redes sociales y los motivos de su ausencia previa en el gabinete."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/luis-caputo-nego-rumores-su-salida-del-gabinete-quedate-tranquilo-que-no-voy-renunciar-n6332824",
+          "fecha": "2026-10-12T18:37:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la postura del presidente Javier Milei respecto a las versiones de salida."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/luis-caputo-nego-los-rumores-su-salida-del-gobierno-quedate-tranquilo-que-no-voy-renunciar-n251394",
+          "fecha": "2026-10-12T20:06:00.000Z",
+          "oficial": false,
+          "aporte": "Agregó el contexto sobre el viaje del ministro para reunirse con la titular del Fondo Monetario Internacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ay4wdh",
+          "titulo": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
+          "fecha": "2026-10-11T21:51:00.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-para-una-nueva-gira-oficial-ay4wdh"
+        },
+        {
+          "id": "1tib4ft",
+          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
+          "fecha": "2026-10-05T18:53:21.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
+        },
+        {
+          "id": "1gp4lrt",
+          "titulo": "Javier Milei celebra el resultado electoral en Brasil",
+          "fecha": "2026-10-05T13:13:00.000Z",
+          "ruta": "/nota/javier-milei-celebra-el-resultado-electoral-en-brasil-1gp4lrt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "javier-milei-ratifica-a-luis-caputo-y-descarta-rumores-sobre-su-salida",
+      "foto": {
+        "archivo": "fotos-notas/185xawb.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "eonoyt",
       "titulo": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
       "copete": "La iniciativa nacional contempla dos alternativas económicas para extranjeros y comenzará a recibir postulaciones en el cuarto trimestre de 2026.",
@@ -1658,15 +1987,15 @@
       "guion": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
       "seccion": "Economía",
       "medios": [
-        "La Nueva",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-12T10:40:40.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T19:01:26.092Z",
-      "relevancia": 43,
+      "relevancia": 37,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1795,16 +2124,13 @@
       "medios": [
         "La Nación",
         "Clarín",
-        "TN (Todo Noticias)",
         "Perfil",
         "Ámbito",
-        "TyC Sports",
-        "Olé",
         "Crónica",
         "Radio Mitre",
+        "Noticias Argentinas (NA)",
         "La Nueva",
-        "Bolavip Argentina",
-        "Noticias Argentinas (NA)"
+        "Bolavip Argentina"
       ],
       "enlace": "https://radiomitre.cienradios.com/deportes/carlos-alcaraz-vs-zizou-bergs-en-el-masters-1000-de-shanghai-a-que-hora-juega-este-lunes-12-de-octubre/",
       "teniaImagenLaFuente": true,
@@ -1916,190 +2242,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "carlos-alcaraz-pierde-ante-zizou-bergs-en-el-masters-1000-de-shanghai"
-    },
-    {
-      "id": "1lk2g5p",
-      "titulo": "El Servicio Meteorológico emite alertas por tormentas y vientos",
-      "copete": "El Servicio Meteorológico Nacional lanzó advertencias por tormentas, nevadas y vientos fuertes. Las medidas alcanzan a ocho provincias del país para este lunes.",
-      "cuerpo": "El Servicio Meteorológico Nacional emitió este lunes alertas de nivel naranja y amarillo por tormentas, nevadas, lluvias y vientos intensos que afectan a varias provincias del país. Seg_n el organismo oficial, rige la advertencia naranja por tormentas severas en Mendoza y el este de Misiones, con ráfagas que podrían superar los 90 kilómetros por hora y posible caída de granizo.\n\nEn paralelo, hay alertas amarillas por tormentas en el oeste de Misiones, San Juan, el norte de Mendoza, Neuquén y Río Negro. Las medidas también abarcan advertencias por nevadas cordilleranas en Mendoza y San Juan, lluvias en Río Negro y Neuquén, y vientos fuertes en Jujuy, el oeste de Salta y el oeste de Catamarca. En tanto, un medio gráfico reportó que las advertencias alcanzan a un total de diez distritos.",
-      "guion": "El Servicio Meteorológico emite alertas por tormentas y vientos",
-      "seccion": "Argentina",
-      "medios": [
-        "TN (Todo Noticias)",
-        "La Nación",
-        "El Cronista",
-        "Crónica",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.cronica.com.ar/sociedad/confirmado-hay-alertas-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-en-ocho-provincias/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T09:04:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T19:46:32.720Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Servicio Meteorológico Nacional emitió alertas por tormentas y nevadas.",
-        "Rige alerta naranja en Mendoza y el este de Misiones.",
-        "Hay advertencias amarillas por vientos y lluvias en distintas provincias."
-      ],
-      "seSabe": [
-        "El Servicio Meteorológico Nacional emitió alertas naranja y amarilla para este lunes.",
-        "Las advertencias abarcan tormentas, nevadas, lluvias y vientos fuertes.",
-        "Hay alerta naranja por tormentas en Mendoza y Misiones, según el organismo oficial."
-      ],
-      "noConfirmado": [
-        "La cantidad exacta de provincias afectadas presenta diferencias entre las fuentes, ya que algunas mencionan ocho y otras diez."
-      ],
-      "textoRedes": "El Servicio Meteorológico Nacional emitió alertas naranja y amarilla por tormentas, nevadas y vientos fuertes que afectan a ocho provincias este lunes.",
-      "etiquetas": [
-        "Servicio Meteorologico Nacional",
-        "alertas",
-        "tormentas",
-        "nevadas",
-        "vientos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/confirmado-hay-alertas-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-en-ocho-provincias/",
-          "fecha": "2026-10-12T09:04:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las alertas por tormentas, lluvias, nevadas y vientos en ocho provincias."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/sociedad/2026/10/12/hay-alerta-naranja-y-amarilla-por-tormentas-nevadas-y-vientos-de-hasta-100-kmh-en-ocho-provincias/",
-          "fecha": "2026-10-12T10:58:48.000Z",
-          "oficial": false,
-          "aporte": "Indicó las provincias bajo alerta naranja y amarilla."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/10/12/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-lunes-12-de-octubre-en-neuquen-las-zonas-afectadas/",
-          "fecha": "2026-10-12T10:30:32.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/10/12/hay-alerta-naranja-por-tormentas-para-este-lunes-12-de-octubre-en-misiones-las-zonas-afectadas/",
-          "fecha": "2026-10-12T10:30:39.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-para-este-lunes-12-de-octubre-nid12102026/",
-          "fecha": "2026-10-12T10:27:13.000Z",
-          "oficial": false,
-          "aporte": "Señaló que las advertencias alcanzan a diez provincias."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/alerta-naranja-del-smn-por-tormentas-para-este-lunes-12-de-octubre-esperan-lluvias-intensas-rafagas-de-viento-y-granizo-en-mendoza-y-neuquen/",
-          "fecha": "2026-10-12T13:03:42.000Z",
-          "oficial": false,
-          "aporte": "Informó que rige alerta naranja por tormentas en Mendoza y Neuquén."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/clima/alerta-naranja-y-amarilla-en-ocho-provincias-como-estara-el-tiempo-en-el-comienzo-de-esta-semana-segun-el-smn/",
-          "fecha": "2026-10-12T12:49:33.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las alertas por tormentas, nevadas y vientos en ocho provincias."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1sj7dfp",
-          "titulo": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
-          "fecha": "2026-09-26T03:01:00.000Z",
-          "ruta": "/nota/emiten-alerta-amarilla-por-tormentas-y-lluvias-en-varias-provincias-1sj7dfp"
-        },
-        {
-          "id": "1qudzsc",
-          "titulo": "El Servicio Meteorológico Nacional mantiene alerta amarilla por lluvias",
-          "fecha": "2026-09-29T10:29:49.000Z",
-          "ruta": "/nota/el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por-1qudzsc"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-servicio-meteorologico-emite-alertas-por-tormentas-y-vientos",
-      "foto": {
-        "archivo": "fotos-notas/1lk2g5p.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "rvlfgq",
-      "titulo": "Lanzan un fondo de inversión hotelera desde mil dólares",
-      "copete": "Crean un vehículo financiero con el respaldo de la Comisión Nacional de Valores para desarrollar cuatro hoteles de lujo con un aporte inicial accesible.",
-      "cuerpo": "El mercado de capitales argentino cuenta con una nueva alternativa de inversión en la economía real denominada Invitta. La iniciativa conjunta de Allaria, Grupo Almarena, Sancor Seguros y la cadena Meliá permite participar en el negocio hotelero premium a partir de mil dólares.\n\nEl esquema legal consiste en un fideicomiso financiero cerrado con oferta pública, autorizado por la Comisión Nacional de Valores. Las cuotapartes tendrán cotización y liquidez secundaria en Bolsas y Mercados Argentinos, con un plazo operativo de diez años.",
-      "guion": "Lanzan un fondo de inversión hotelera desde mil dólares",
-      "seccion": "Economía",
-      "medios": [
-        "Clarín",
-        "iProUP"
-      ],
-      "enlace": "https://www.clarin.com/economia/lanzan-primer-vehiculo-financiero-invertir-us-1000-hoteles-lujo-argentina_0_hYzW7J5I5w.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T09:00:26.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T16:01:41.229Z",
-      "relevancia": 45,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se especificaron las ubicaciones exactas de todos los futuros desarrollos fuera de los puntos ya anunciados.",
-        "No se detallaron las fechas precisas de inicio de obra para cada uno de los establecimientos proyectados."
-      ],
-      "textoRedes": "Presentan Invitta, el primer fideicomiso financiero de oferta pública para invertir en hoteles de lujo en el país a partir de mil dólares, con el respaldo de la Comisión Nacional de Valores.",
-      "etiquetas": [
-        "inversión",
-        "hoteles",
-        "mercado de capitales",
-        "Meliá",
-        "Sancor Seguros",
-        "economía"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/lanzan-primer-vehiculo-financiero-invertir-us-1000-hoteles-lujo-argentina_0_hYzW7J5I5w.html",
-          "fecha": "2026-10-12T09:00:26.000Z",
-          "oficial": false,
-          "aporte": "Detalló los socios, el monto de inversión, el ticket mínimo y las características del fideicomiso financiero."
-        },
-        {
-          "medio": "iProUP",
-          "enlace": "https://www.iproup.com/finanzas/72258-invertir-hoteles-us1000-alternativa-ladrillo-melia-hotels",
-          "fecha": "2026-10-12T15:28:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en su resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lanzan-un-fondo-de-inversion-hotelera-desde-mil-dolares",
-      "foto": {
-        "archivo": "fotos-notas/rvlfgq.jpg",
-        "credito": "Foto: Clarín"
-      }
     },
     {
       "id": "rb2qmr",
@@ -2364,8 +2506,8 @@
         "Página/12",
         "Crónica",
         "Diario Popular",
-        "Mi8 (Canal 8 Mar del Plata)",
         "Noticias Argentinas (NA)",
+        "Mi8 (Canal 8 Mar del Plata)",
         "La Verdad",
         "La Nueva"
       ],
@@ -2682,6 +2824,76 @@
       "slug": "natacion-local-consigue-dos-podios-nacionales-en-buenos-aires"
     },
     {
+      "id": "p21pyq",
+      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "copete": "El piloto argentino debió abandonar la competencia en el circuito de Marina Bay por problemas técnicos y generó la furia de un competidor de Red Bull.",
+      "cuerpo": "Franco Colapinto debió abandonar la competencia en el circuito de Marina Bay por problemas mecánicos en su monoplaza durante el Gran Premio de Singapur.\n\nEl piloto argentino defendía la duodécima posición cuando generó la irritación de Isack Hadjar, integrante de la escudería Red Bull, quien debió extremar recursos por radio para intentar superarlo.\n\nEl competidor francés recriminó la resistencia del pilarense antes de quedar libre en la pista del trazado asiático, donde el automovilista nacional había cumplido destacadas actuaciones en el ciclo previo.",
+      "guion": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "seccion": "Automovilismo",
+      "medios": [
+        "TyC Sports",
+        "Minuto Uno",
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T22:48:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T11:02:16.567Z",
+      "relevancia": 76,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto dejó la competencia por fallas mecánicas.",
+        "El hecho ocurrió en el circuito de Marina Bay.",
+        "Isack Hadjar recriminó la defensa del piloto argentino."
+      ],
+      "seSabe": [
+        "Franco Colapinto abandonó el Gran Premio de Singapur por fallas técnicas en su monoplaza.",
+        "El piloto de Alpine defendía el puesto doce en el circuito de Marina Bay.",
+        "Isack Hadjar consultó por radio a su equipo cómo superar al argentino."
+      ],
+      "noConfirmado": [
+        "Los motivos exactos de la falla técnica en el vehículo de Colapinto."
+      ],
+      "textoRedes": "Franco Colapinto abandonó el Gran Premio de Singapur por problemas mecánicos y generó la furia de Isack Hadjar durante una disputa en pista.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Gran Premio de Singapur",
+        "Isack Hadjar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+          "fecha": "2026-10-12T01:36:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el abandono de Colapinto por fallas técnicas y el enojo del piloto Isack Hadjar."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-7-28-0-hadjar-exploto-contra-colapinto-sabia-que-este-tipo-iba-a-ser",
+          "fecha": "2026-10-12T10:36:29.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Colapinto no tuvo el desempeño esperado y generó la furia de un rival."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "hadjar-cuestiona-con-dureza-a-colapinto-tras-el-gran-premio-de",
+      "foto": {
+        "archivo": "fotos-notas/p21pyq.jpg",
+        "credito": "Foto: La Nueva"
+      }
+    },
+    {
       "id": "ay4wdh",
       "titulo": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
       "copete": "El presidente argentino emprende el martes su quinto viaje del año a Estados Unidos. Cumplirá una agenda de tres días en Washington D. C. que incluye encuentros empresarios y discursos.",
@@ -2695,10 +2907,10 @@
         "Crónica",
         "Canal 26",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
         "InfoRegión",
-        "Noticias Argentinas (NA)",
         "La Verdad",
         "La Nueva"
       ],
@@ -2963,96 +3175,125 @@
       }
     },
     {
-      "id": "1xwup7g",
-      "titulo": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
-      "copete": "El presidente de la categoría reconoció el interés de los pilotos por correr en el autódromo local tras la reapertura. La última competencia en el circuito se disputó en 2001.",
-      "cuerpo": "El presidente de la Asociación Pilotos Automóviles Turismo, Emanuel Moriatis, abrió la posibilidad de sumar al autódromo Juan Manuel Fangio al calendario de la categoría. Durante una entrevista con Campeones, el dirigente destacó el entusiasmo de los corredores por competir en el trazado emplazado en la sierra La Barrosa. La última visita del Turismo Nacional a Balcarce se concretó el 15 de abril de 2001, con triunfos de Iván Arbusti en la Clase 2 y Lucas Armellini en la Clase 3.\n\nEl titular de la entidad adelantó que el próximo campeonato se pondrá en marcha en febrero y constará de doce fechas, aunque advirtió que evaluarán los costos de traslado por cuestiones económicas.",
-      "guion": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
-      "seccion": "Automovilismo",
+      "id": "1lk2g5p",
+      "titulo": "El Servicio Meteorológico emite alertas por tormentas y vientos",
+      "copete": "El Servicio Meteorológico Nacional lanzó advertencias por tormentas, nevadas y vientos fuertes. Las medidas alcanzan a ocho provincias del país para este lunes.",
+      "cuerpo": "El Servicio Meteorológico Nacional emitió este lunes alertas de nivel naranja y amarillo por tormentas, nevadas, lluvias y vientos intensos que afectan a varias provincias del país. Seg_n el organismo oficial, rige la advertencia naranja por tormentas severas en Mendoza y el este de Misiones, con ráfagas que podrían superar los 90 kilómetros por hora y posible caída de granizo.\n\nEn paralelo, hay alertas amarillas por tormentas en el oeste de Misiones, San Juan, el norte de Mendoza, Neuquén y Río Negro. Las medidas también abarcan advertencias por nevadas cordilleranas en Mendoza y San Juan, lluvias en Río Negro y Neuquén, y vientos fuertes en Jujuy, el oeste de Salta y el oeste de Catamarca. En tanto, un medio gráfico reportó que las advertencias alcanzan a un total de diez distritos.",
+      "guion": "El Servicio Meteorológico emite alertas por tormentas y vientos",
+      "seccion": "Argentina",
       "medios": [
-        "Radio Gabal (FM 104.1)",
-        "Campeones",
-        "Diario La Vanguardia"
+        "TN (Todo Noticias)",
+        "La Nación",
+        "El Cronista",
+        "Crónica",
+        "Radio Mitre"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/moriatis-sobre-el-regreso-del-tn-a-balcarce-los-pilotos-te-dicen-tendriamos-que-ir",
+      "enlace": "https://www.cronica.com.ar/sociedad/confirmado-hay-alertas-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-en-ocho-provincias/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T17:08:46.000Z",
+      "fecha": "2026-10-11T14:19:37.000Z",
       "sinFecha": false,
-      "visto": "2026-10-11T23:07:57.544Z",
-      "relevancia": 75,
+      "visto": "2026-10-12T19:46:32.720Z",
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "Emanuel Moriatis valoró el interés de los pilotos por correr en el autódromo local.",
-        "La última visita del Turismo Nacional a Balcarce ocurrió el 15 de abril de 2001.",
-        "El calendario de la categoría para la próxima temporada contará con doce fechas."
+        "El Servicio Meteorológico Nacional emitió alertas por tormentas y nevadas.",
+        "Rige alerta naranja en Mendoza y el este de Misiones.",
+        "Hay advertencias amarillas por vientos y lluvias en distintas provincias."
       ],
       "seSabe": [
-        "Emanuel Moriatis preside la Asociación Pilotos Automóviles Turismo desde 2021.",
-        "La última carrera del Turismo Nacional en el autódromo Juan Manuel Fangio fue en abril de 2001."
+        "El Servicio Meteorológico Nacional emitió alertas naranja y amarilla para este lunes.",
+        "Las advertencias abarcan tormentas, nevadas, lluvias y vientos fuertes.",
+        "Hay alerta naranja por tormentas en Mendoza y Misiones, según el organismo oficial."
       ],
       "noConfirmado": [
-        "Todavía no se confirmó si Balcarce integrará efectivamente el calendario del Turismo Nacional para la temporada 2027."
+        "La cantidad exacta de provincias afectadas presenta diferencias entre las fuentes, ya que algunas mencionan ocho y otras diez."
       ],
-      "textoRedes": "El presidente del Turismo Nacional, Emanuel Moriatis, se refirió a la posibilidad de que la categoría regrese al autódromo Juan Manuel Fangio tras el interés manifestado por los pilotos.",
+      "textoRedes": "El Servicio Meteorológico Nacional emitió alertas naranja y amarilla por tormentas, nevadas y vientos fuertes que afectan a ocho provincias este lunes.",
       "etiquetas": [
-        "Turismo Nacional",
-        "Emanuel Moriatis",
-        "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "Automovilismo"
+        "Servicio Meteorologico Nacional",
+        "alertas",
+        "tormentas",
+        "nevadas",
+        "vientos"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/moriatis-sobre-el-regreso-del-tn-a-balcarce-los-pilotos-te-dicen-tendriamos-que-ir",
-          "fecha": "2026-10-11T22:48:34.000Z",
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/confirmado-hay-alertas-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-en-ocho-provincias/",
+          "fecha": "2026-10-12T09:04:00.000Z",
           "oficial": false,
-          "aporte": "Aportó las declaraciones de Emanuel Moriatis sobre el posible regreso del Turismo Nacional a Balcarce."
+          "aporte": "Detalló las alertas por tormentas, lluvias, nevadas y vientos en ocho provincias."
         },
         {
-          "medio": "Campeones",
-          "enlace": "https://campeones.com.ar/moriatis-y-un-anhelo-por-cumplir-con-tn-me-gusto-balcarce-los-pilotos-te-dicen-tendriamos-que-ir/",
-          "fecha": "2026-10-11T17:08:46.000Z",
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/sociedad/2026/10/12/hay-alerta-naranja-y-amarilla-por-tormentas-nevadas-y-vientos-de-hasta-100-kmh-en-ocho-provincias/",
+          "fecha": "2026-10-12T10:58:48.000Z",
           "oficial": false,
-          "aporte": "Aportó la entrevista realizada a Emanuel Moriatis en la transmisión radial."
+          "aporte": "Indicó las provincias bajo alerta naranja y amarilla."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/clima/alertas/2026/10/12/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-lunes-12-de-octubre-en-neuquen-las-zonas-afectadas/",
+          "fecha": "2026-10-12T10:30:32.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/clima/alertas/2026/10/12/hay-alerta-naranja-por-tormentas-para-este-lunes-12-de-octubre-en-misiones-las-zonas-afectadas/",
+          "fecha": "2026-10-12T10:30:39.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-para-este-lunes-12-de-octubre-nid12102026/",
+          "fecha": "2026-10-12T10:27:13.000Z",
+          "oficial": false,
+          "aporte": "Señaló que las advertencias alcanzan a diez provincias."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/alerta-naranja-del-smn-por-tormentas-para-este-lunes-12-de-octubre-esperan-lluvias-intensas-rafagas-de-viento-y-granizo-en-mendoza-y-neuquen/",
+          "fecha": "2026-10-12T13:03:42.000Z",
+          "oficial": false,
+          "aporte": "Informó que rige alerta naranja por tormentas en Mendoza y Neuquén."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/clima/alerta-naranja-y-amarilla-en-ocho-provincias-como-estara-el-tiempo-en-el-comienzo-de-esta-semana-segun-el-smn/",
+          "fecha": "2026-10-12T12:49:33.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las alertas por tormentas, nevadas y vientos en ocho provincias."
         }
       ],
       "antecedentes": [
         {
-          "id": "28zqic",
-          "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
-          "fecha": "2026-10-07T20:37:35.000Z",
-          "ruta": "/nota/sol-di-geronimo-pide-nuevas-gestiones-para-concretar-el-regreso-del-tc-28zqic"
+          "id": "1sj7dfp",
+          "titulo": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
+          "fecha": "2026-09-26T03:01:00.000Z",
+          "ruta": "/nota/emiten-alerta-amarilla-por-tormentas-y-lluvias-en-varias-provincias-1sj7dfp"
         },
         {
-          "id": "1a0ty94",
-          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
-          "fecha": "2026-09-28T19:02:49.410Z",
-          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
-        },
-        {
-          "id": "caurxr",
-          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
-          "fecha": "2026-09-28T15:35:16.000Z",
-          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
+          "id": "1qudzsc",
+          "titulo": "El Servicio Meteorológico Nacional mantiene alerta amarilla por lluvias",
+          "fecha": "2026-09-29T10:29:49.000Z",
+          "ruta": "/nota/el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por-1qudzsc"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
+        "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "emanuel-moriatis-analiza-la-vuelta-del-turismo-nacional-a-balcarce",
+      "slug": "el-servicio-meteorologico-emite-alertas-por-tormentas-y-vientos",
       "foto": {
-        "archivo": "fotos-notas/1xwup7g.jpg",
-        "credito": "Foto: Campeones"
+        "archivo": "fotos-notas/1lk2g5p.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -3336,8 +3577,7 @@
         "Perfil",
         "A24",
         "Diario Popular",
-        "InfoRegión",
-        "Noticias Argentinas (NA)"
+        "InfoRegión"
       ],
       "enlace": "https://www.cronista.com/economia-politica/comienza-el-debate-por-el-presupuesto-2027-con-funcionarios-el-capitulo-que-deberan-bajar/",
       "teniaImagenLaFuente": true,
@@ -3408,23 +3648,17 @@
   ],
   "secciones": [
     "Deportes",
+    "Cultura y agenda",
     "Argentina",
     "Política",
+    "Agro",
     "Economía",
     "Balcarce",
     "Fútbol",
-    "Agro",
     "Automovilismo",
-    "Cultura y agenda",
     "Policiales"
   ],
-  "temas": [
-    {
-      "nombre": "Fangio",
-      "ranura": "fangio",
-      "cuantas": 2
-    }
-  ],
+  "temas": [],
   "clima": {
     "ahora": {
       "temp": 12,
@@ -3800,11 +4034,11 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "hbb57e",
+      "id": "1nxc5o2",
       "titulo": null,
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"niño\""
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 1
 }

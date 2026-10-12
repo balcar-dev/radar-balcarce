@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T20:32:22.642Z",
+ "consultado": "2026-10-12T21:01:59.689Z",
  "equipos": [
   "9739",
   "3",
@@ -1133,12 +1133,12 @@
     "id": "401841606",
     "competencia": "liga",
     "inicio": "2026-10-12T19:00:00.000Z",
-    "estado": "en-juego",
-    "minuto": "72'",
+    "estado": "final",
+    "minuto": "90'+6'",
     "local": {
      "id": "12",
      "nombre": "Lanús",
-     "goles": 1
+     "goles": 2
     },
     "visitante": {
      "id": "21",
@@ -1152,6 +1152,12 @@
       "jugador": "Sasha Marcich",
       "minuto": "59'",
       "tipo": "gol"
+     },
+     {
+      "equipo": "local",
+      "jugador": "Tomás Marchiori",
+      "minuto": "90'+5'",
+      "tipo": "en contra"
      }
     ],
     "estadio": "Ciudad de Lanús",
@@ -1442,17 +1448,30 @@
       "posicion": 4,
       "id": "21",
       "equipo": "Vélez Sarsfield",
-      "pj": 11,
+      "pj": 12,
       "g": 5,
       "e": 6,
-      "p": 0,
+      "p": 1,
       "gf": 17,
-      "gc": 11,
-      "dif": 6,
+      "gc": 13,
+      "dif": 4,
       "pts": 21
      },
      {
       "posicion": 5,
+      "id": "12",
+      "equipo": "Lanús",
+      "pj": 12,
+      "g": 6,
+      "e": 2,
+      "p": 4,
+      "gf": 15,
+      "gc": 9,
+      "dif": 6,
+      "pts": 20
+     },
+     {
+      "posicion": 6,
       "id": "11",
       "equipo": "Independiente",
       "pj": 12,
@@ -1463,19 +1482,6 @@
       "gc": 12,
       "dif": -1,
       "pts": 18
-     },
-     {
-      "posicion": 6,
-      "id": "12",
-      "equipo": "Lanús",
-      "pj": 11,
-      "g": 5,
-      "e": 2,
-      "p": 4,
-      "gf": 13,
-      "gc": 9,
-      "dif": 4,
-      "pts": 17
      },
      {
       "posicion": 7,
@@ -1798,7 +1804,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-12T19:02:22.958Z",
+ "tablaCuando": "2026-10-12T21:01:59.689Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",

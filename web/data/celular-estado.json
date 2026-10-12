@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T20:32:24.980Z",
- "portada": 43,
- "archivo": 972,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-12T21:02:01.615Z",
+ "portada": 45,
+ "archivo": 974,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-12T20:32:25.013Z",
+  "generado": "2026-10-12T21:02:01.642Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 49,
     "notas": [
-     {
-      "id": "1snnbwi",
-      "titulo": "La Champions League disputa nueve partidos el martes",
-      "seccion": "Deportes"
-     },
      {
       "id": "90qy7w",
       "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
@@ -178,6 +173,11 @@
       "id": "1tsobe7",
       "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
      }
     ]
    }
