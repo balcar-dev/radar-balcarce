@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T13:02:12.625Z",
- "portada": 23,
- "archivo": 939,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-12T13:36:27.203Z",
+ "portada": 24,
+ "archivo": 944,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-12T13:02:12.646Z",
+  "generado": "2026-10-12T13:36:27.237Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-12T13:06:24.392Z"
    },
    {
     "nombre": "participa-noticias",
@@ -104,8 +104,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 44,
+    "salio": "2026-10-12T13:06:24.392Z",
+    "segundos": null,
     "notas": [
      {
       "id": "p21pyq",
@@ -126,8 +126,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 32,
+    "notas": [
+     {
+      "id": "skmago",
+      "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -148,7 +159,14 @@
      "cuando": "2026-10-12T11:45:27.345Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "skmago",
+     "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 4,
    "proximoDesde": "2026-10-12T13:15:27.345Z",
    "porDia": 5,
