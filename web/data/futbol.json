@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T20:02:28.783Z",
+ "consultado": "2026-10-12T20:32:22.642Z",
  "equipos": [
   "9739",
   "3",
@@ -1133,12 +1133,12 @@
     "id": "401841606",
     "competencia": "liga",
     "inicio": "2026-10-12T19:00:00.000Z",
-    "estado": "entretiempo",
-    "minuto": "45'+3'",
+    "estado": "en-juego",
+    "minuto": "72'",
     "local": {
      "id": "12",
      "nombre": "Lanús",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "21",
@@ -1146,7 +1146,14 @@
      "goles": 0
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Sasha Marcich",
+      "minuto": "59'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Ciudad de Lanús",
     "fase": null,
     "partidoDeLaSerie": null,

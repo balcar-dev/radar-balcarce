@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-12T20:02:30.177Z",
+ "generado": "2026-10-12T20:32:24.980Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -87,11 +87,6 @@
      "fecha": "2026-10-12T15:35:10.000Z"
     },
     {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
-     "fecha": "2026-10-12T12:33:30.924Z"
-    },
-    {
      "medio": "El Día",
      "enlace": "https://www.eldia.com/politica-y-economia/milei-defendio-la-gestion-de-caputo-y-se-mostro-confiado-en-que-va-a-ser-reelecto-politica-y-economia_1791812640",
      "fecha": "2026-10-12T14:08:43.000Z"
@@ -99,7 +94,7 @@
     {
      "medio": "La Nueva",
      "enlace": "https://www.lanueva.com/nota/2026-10-12-13-30-0-milei-ratifico-a-caputo-y-dijo-que-tiene-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria",
-     "fecha": "2026-10-12T19:53:53.000Z"
+     "fecha": "2026-10-12T20:12:48.000Z"
     },
     {
      "medio": "Letra P",
@@ -115,6 +110,11 @@
      "medio": "Mi8 (Canal 8 Mar del Plata)",
      "enlace": "https://mi8.com.ar/milei-no-espera-una-corrida-pero-dice-que-tiene-los-dolares-para-evitarla/",
      "fecha": "2026-10-12T15:39:25.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
+     "fecha": "2026-10-12T12:33:30.000Z"
     }
    ],
    "intentos": 1,
@@ -122,61 +122,31 @@
    "maximo": 5
   },
   {
-   "id": "18ht4d0",
-   "titulo": "Arsénico en el agua: químicos piden informes a municipios bonaerenses",
-   "copete": "El Consejo Profesional de Química de la Provincia de Buenos Aires solicitó a los municipios bonaerenses que informen sobre la posible presencia de concentraciones elevadas de arsénico en el agua, un elemento que se encuentra de forma natural en grandes niveles en las napas…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-12T14:17:00.000Z",
+   "id": "1iqxb89",
+   "titulo": "María Gainza gana el premio de Narrativa de la Academia Argentina de Letras",
+   "copete": "La Academia Argentina de Letras distinguió a María Gainza con su Premio Literario en el género Narrativa (2023-2024) por Un puñado de flechas , una colección de quince perfiles y relatos sobre artistas, coleccionistas y detectives que el jurado describió como “un libro único por…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-12T18:26:36.000Z",
    "fuentes": [
     {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
-     "fecha": "2026-10-12T14:17:00.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/cultura/2026/10/12/maria-gainza-gana-el-premio-de-narrativa-de-la-academia-argentina-de-letras/",
+     "fecha": "2026-10-12T18:26:36.000Z"
     },
     {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/provincia/el-consejo-profesional-de-quimica-solicito-informes-a-municipios-por-la-presencia-de-arsenico-en-el-agua",
-     "fecha": "2026-10-12T18:39:12.000Z"
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/cultura/maria-gainza-gana-el-premio-de-la-academia-argentina-de-letras-por-un-punado-de-flechas-nid12102026/",
+     "fecha": "2026-10-12T19:25:45.000Z"
     },
     {
-     "medio": "QZ Noticias (Mar del Plata)",
-     "enlace": "https://www.qznoticias.com/la-provincia/arsenico-en-el-agua-piden-a-los-municipios-bonaerenses-que-informen-sobre-los-controles-y-los-riesgos",
-     "fecha": "2026-10-12T17:28:16.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/arsenico-el-agua-el-consejo-profesional-quimica-pidio-informes-municipios-n56420",
-     "fecha": "2026-10-12T15:06:39.000Z"
-    },
-    {
-     "medio": "La Noticia 1",
-     "enlace": "https://www.lanoticia1.com/noticia/arsenico-en-el-agua-alertan-por-niveles-elevados-en-municipios-bonaerenses-y-exigen-explicaciones",
-     "fecha": "2026-10-12T16:41:08.000Z"
-    },
-    {
-     "medio": "0221",
-     "enlace": "https://www.0221.com.ar/provincia/alerta-arsenico-el-agua-piden-explicaciones-municipios-bonaerenses-los-altos-niveles-detectados-n135671",
-     "fecha": "2026-10-12T19:47:00.000Z"
-    },
-    {
-     "medio": "El Marplatense",
-     "enlace": "https://www.elmarplatense.com/alerta-por-arsenico-en-el-agua-exigen-controles-a-municipios-bonaerenses",
-     "fecha": "2026-10-12T18:14:57.000Z"
-    },
-    {
-     "medio": "Mi8 (Canal 8 Mar del Plata)",
-     "enlace": "https://mi8.com.ar/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pide-informes-a-municipios-por-concentraciones-elevadas/",
-     "fecha": "2026-10-12T18:08:53.000Z"
-    },
-    {
-     "medio": "NDEN – Noticias de Necochea",
-     "enlace": "https://nden.com.ar/nota/38375/arsenico-en-el-agua-solicitan-informes-a-municipios-bonaerenses-y-que-se-sabe-de-necochea",
-     "fecha": "2026-10-12T17:24:00.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/cultura/punado-flechas-maria-gainza-gano-premio-academia-argentina-letras_0_o8qZBooMbn.html",
+     "fecha": "2026-10-12T19:39:21.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 5
+   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 65 palabras",
+   "maximo": 3
   }
  ]
 }

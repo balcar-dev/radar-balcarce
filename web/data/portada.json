@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T20:02:30.177Z",
+  "generado": "2026-10-12T20:32:24.980Z",
   "notas": [
     {
       "id": "18zr7tv",
@@ -9,6 +9,7 @@
       "guion": "Ciclistas locales consiguen podios en el MTB Series",
       "seccion": "Deportes",
       "medios": [
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/12/balcarcenos-destacados-en-mtb-sierra-de-los-difuntos/",
@@ -16,7 +17,7 @@
       "fecha": "2026-10-12T19:53:33.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 59,
+      "relevancia": 69,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -117,6 +118,7 @@
       "guion": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
       "seccion": "Deportes",
       "medios": [
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/12/doble-podio-para-felipe-pereyra-en-el-nacional-master-de-marcha-atletica/",
@@ -124,7 +126,7 @@
       "fecha": "2026-10-12T19:23:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 84,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -326,6 +328,7 @@
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
+        "Perfil",
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -548,6 +551,93 @@
       }
     },
     {
+      "id": "1qszs3z",
+      "titulo": "Gabriel Deck pasa por el quirófano y se pierde lo que resta del año",
+      "copete": "El alero de la Selección Argentina y del Real Madrid será operado del hombro izquierdo por una lesión. Su ausencia complica al equipo nacional en la clasificación al Mundial.",
+      "cuerpo": "Gabriel Deck deberá ser intervenido quirúrgicamente por una inestabilidad en el hombro izquierdo tras sufrir una nueva luxación.\n\nLa baja representa un problema para el seleccionado dirigido por Pablo Prigioni en el camino al Mundial de Qatar 2027. Argentina ocupa el tercer puesto del Grupo F y disputará los próximos encuentros como local frente a Bahamas, el jueves 26 de noviembre, y contra Canadá, el domingo 29, en la ciudad de Zárate.",
+      "guion": "Gabriel Deck pasa por el quirófano y se pierde lo que resta del año",
+      "seccion": "Deportes",
+      "medios": [
+        "0223 (Mar del Plata)",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "Básquet Plus"
+      ],
+      "enlace": "https://basquetplus.com/real-madrid-gaby-deck-operacion-lesion",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T16:08:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T20:31:50.516Z",
+      "relevancia": 79,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Gabriel Deck será operado del hombro izquierdo.",
+        "La recuperación demandará entre cuatro y seis meses.",
+        "La baja afecta a la Selección Argentina de básquet.",
+        "El equipo nacional jugará en noviembre en Zárate."
+      ],
+      "seSabe": [
+        "Gabriel Deck padece una inestabilidad en el hombro izquierdo y será operado.",
+        "La recuperación demandará entre cuatro y seis meses según las estimaciones.",
+        "Argentina jugará la próxima ventana de clasificación al Mundial en Zárate el 26 y 29 de noviembre."
+      ],
+      "noConfirmado": [
+        "Todavía no hay una fecha oficial para el regreso a las canchas del jugador."
+      ],
+      "textoRedes": "Gabriel Deck será operado del hombro izquierdo y estará inactivo varios meses. La baja afecta a la Selección Argentina de básquet en la clasificación al Mundial.",
+      "etiquetas": [
+        "Gabriel Deck",
+        "Seleccion Argentina",
+        "basquet",
+        "Real Madrid",
+        "Mundial 2027"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Básquet Plus",
+          "enlace": "https://basquetplus.com/real-madrid-gaby-deck-operacion-lesion",
+          "fecha": "2026-10-12T16:08:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-12-17-19-0-golpe-para-la-seleccion-argentina-gabriel-deck-sera-operado-y-se-perdera-los-partidos-claves-para-clasificar-al-mundial",
+          "fecha": "2026-10-12T20:19:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/baja-importante-en-la-seleccion-argentina-de-basquetbol--gabriel-deck-sera-operado-del-hombro-izquierdo_a6acd391e32fdad2908a5c085",
+          "fecha": "2026-10-12T19:55:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-17-16-0-baja-importante-en-la-seleccion-de-basquetbol-gabriel-deck-sera-operado-del-hombro-izquierdo",
+          "fecha": "2026-10-12T20:24:26.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "gabriel-deck-pasa-por-el-quirofano-y-se-pierde-lo-que-resta-del-ano",
+      "foto": {
+        "archivo": "fotos-notas/1qszs3z.jpg",
+        "credito": "Foto: 0223 (Mar del Plata)"
+      }
+    },
+    {
       "id": "xn5jch",
       "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
       "copete": "La tenista local competirá en el certamen internacional que se disputará en noviembre. Integrará el equipo de la categoría Máster +40 de Mar del Plata.",
@@ -762,6 +852,100 @@
       "slug": "boca-empata-con-instituto-en-cordoba-y-pierde-terreno-en-el-torneo"
     },
     {
+      "id": "18ht4d0",
+      "titulo": "Químicos piden informes a municipios por arsénico en el agua",
+      "copete": "El Consejo Profesional de Química exige detalles a las administraciones locales sobre los controles y resultados en distritos con registros elevados según un mapeo universitario.",
+      "cuerpo": "El Consejo Profesional de Química de la provincia de Buenos Aires solicitó a las administraciones locales que detallen los controles, análisis y medidas preventivas sobre la potabilidad del agua. La iniciativa surge tras un mapeo del Instituto Tecnológico de Buenos Aires que detectó concentraciones elevadas del elemento en diversos distritos.\n\nEl relevamiento universitario registró mediciones que superan los parámetros recomendados en localidades como 9 de Julio, Guaminí, San Vicente, Monte, Partido de La Costa, Mercedes, Chivilcoy, Vicente López, Ezeiza, Almirante Brown y General Rodríguez. El Código Alimentario Argentino fija como referencia general un límite de 10 microgramos por litro, aunque contempla excepciones de hasta 50 microgramos por litro para zonas con suelos específicos.\n\nComo antecedente, un fallo de la Corte Suprema sobre el distrito de Bragado obligó previamente a la empresa ABSA a ejecutar obras para asegurar la calidad del servicio.",
+      "guion": "Químicos piden informes a municipios por arsénico en el agua",
+      "seccion": "Argentina",
+      "medios": [
+        "0223 (Mar del Plata)",
+        "El Eco de Tandil",
+        "QZ Noticias (Mar del Plata)",
+        "Agencia DIB",
+        "La Noticia 1",
+        "Diputados Bonaerenses",
+        "El Día",
+        "0221",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "NDEN – Noticias de Necochea"
+      ],
+      "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T14:17:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T17:31:53.555Z",
+      "relevancia": 75,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Consejo Profesional de Química exige informes a los municipios bonaerenses.",
+        "Un mapeo universitario detectó concentraciones elevadas en varios distritos.",
+        "El Código Alimentario establece un límite general de 10 microgramos por litro."
+      ],
+      "seSabe": [
+        "El Consejo Profesional de Química envió notas a los municipios bonaerenses.",
+        "El mapa del ITBA registró valores elevados de arsénico en distintos distritos.",
+        "El Código Alimentario Argentino fija un parámetro de referencia de 10 microgramos por litro."
+      ],
+      "noConfirmado": [
+        "Todavía no se informaron las respuestas específicas de cada municipio interpelado.",
+        "No se detalló si la totalidad de las redes de distribución en los distritos nombrados presenta esos niveles."
+      ],
+      "textoRedes": "El Consejo Profesional de Química solicita a los municipios bonaerenses informes sobre los controles y la presencia de arsénico en el agua de consumo tras un mapeo universitario.",
+      "etiquetas": [
+        "arsénico",
+        "agua potable",
+        "municipios bonaerenses",
+        "Consejo Profesional de Química",
+        "ITBA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
+          "fecha": "2026-10-12T14:41:54.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el mapa del ITBA, los registros por distrito y los parámetros normativos."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-provincia/arsenico-en-el-agua-piden-a-los-municipios-bonaerenses-que-informen-sobre-los-controles-y-los-riesgos",
+          "fecha": "2026-10-12T17:28:16.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el pedido institucional realizado por el Consejo Profesional de Química."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/arsenico-el-agua-el-consejo-profesional-quimica-pidio-informes-municipios-n56420",
+          "fecha": "2026-10-12T15:06:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el pedido incluye controles, resultados y medidas preventivas."
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/arsenico-en-el-agua-alertan-por-niveles-elevados-en-municipios-bonaerenses-y-exigen-explicaciones",
+          "fecha": "2026-10-12T16:41:08.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el CPQ inició una acción institucional mediante notas a los distritos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "quimicos-piden-informes-a-municipios-por-arsenico-en-el-agua",
+      "foto": {
+        "archivo": "fotos-notas/18ht4d0.jpg",
+        "credito": "Foto: El Día"
+      }
+    },
+    {
       "id": "1snnbwi",
       "titulo": "La Champions League disputa nueve partidos el martes",
       "copete": "El certamen europeo de clubes continúa el martes con la segunda fecha de la competencia. Habrá dos encuentros en el primer turno y siete en el horario central.",
@@ -836,7 +1020,6 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Acción 5 (Balcarce)"
       ],
       "enlace": "https://accion5.com/kiara-ponce-trajo-oro-nacional-y-se-clasifico-al-panamericano/",
@@ -844,7 +1027,7 @@
       "fecha": "2026-10-12T13:24:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 98,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1100,6 +1283,7 @@
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
+        "Minuto Uno",
         "Infobae",
         "Ámbito",
         "Perfil",
@@ -1108,12 +1292,12 @@
         "El Destape",
         "iProfesional",
         "C5N",
-        "Noticias Argentinas (NA)",
         "La Nueva",
+        "La Brújula 24",
         "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
-        "La Brújula 24",
+        "Noticias Argentinas (NA)",
         "NDEN – Noticias de Necochea"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
@@ -1246,8 +1430,8 @@
         "La Nación",
         "TN (Todo Noticias)",
         "A24",
-        "Infobrisas (Radio Brisas)",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Infobrisas (Radio Brisas)"
       ],
       "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
       "teniaImagenLaFuente": true,
@@ -1352,95 +1536,6 @@
       }
     },
     {
-      "id": "700xzm",
-      "titulo": "El Paraje La Alianza propone una escapada rural entre sierras",
-      "copete": "Ubicado en el partido de Lobería y a pocos kilómetros de Balcarce, este histórico pueblo rural ofrece un almacén centenario, paisajes serranos y cercanía con circuitos de trekking.",
-      "cuerpo": "El Paraje La Alianza se ubica en el partido de Lobería, a unos 128 kilómetros de Mar del Plata, en el cruce de la Ruta Provincial 227 y el acceso a San Manuel. El recorrido en vehículo demanda cerca de una hora y 45 minutos al transitar por la Ruta Nacional 226 hasta Balcarce para luego continuar por la red provincial, según informó un medio local.\n\nEl punto central del lugar es el histórico Almacén de Ramos Generales La Alianza, fundado en 1884 con muros de barro y mobiliario original. El establecimiento cobró notoriedad nacional al ser elegido como escenario para filmar la película Kamchatka en 2002. Tras la pandemia de 2021, el comercio cerró su atención regular y quedó como patrimonio cultural.",
-      "guion": "El Paraje La Alianza propone una escapada rural entre sierras",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "0223 (Mar del Plata)"
-      ],
-      "enlace": "https://www.0223.com.ar/nota/2026-10-12-9-11-0-a-menos-de-dos-horas-de-mar-del-plata-el-historico-pueblo-rural-oculto-entre-sierras",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T12:11:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T13:31:45.071Z",
-      "relevancia": 37,
-      "local": false,
-      "deLaZona": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Paraje La Alianza se encuentra en el partido de Lobería.",
-        "El almacén histórico data de 1884 y fue escenario de cine.",
-        "El trayecto desde Mar del Plata demanda menos de dos horas.",
-        "El entorno ofrece sierras, senderismo y cercanía con Balcarce."
-      ],
-      "seSabe": [
-        "El Paraje La Alianza está situado en el partido de Lobería, a unos 128 kilómetros de Mar del Plata.",
-        "El acceso se encuentra en la intersección de la Ruta Provincial 227 y el ingreso a San Manuel.",
-        "El Almacén de Ramos Generales La Alianza se fundó en 1884 y funcionó como locación de la película Kamchatka en 2002.",
-        "A tres kilómetros del paraje se ubica la localidad de San Manuel.",
-        "A unos 15 kilómetros se encuentran el Cerro Los Dos Arbolitos y la zona de Puerta del Diablo."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Paraje La Alianza, ubicado en Lobería y accesible desde Balcarce, ofrece una opción de turismo rural con un almacén histórico de 1884, paisajes serranos y cercanía con senderos de trekking.",
-      "etiquetas": [
-        "Paraje La Alianza",
-        "Lobería",
-        "turismo rural",
-        "Balcarce",
-        "sierras",
-        "escapada"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-12-9-11-0-a-menos-de-dos-horas-de-mar-del-plata-el-historico-pueblo-rural-oculto-entre-sierras",
-          "fecha": "2026-10-12T12:11:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló la ubicación, la historia del almacén y los atractivos turísticos del Paraje La Alianza y sus alrededores."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ayjy85",
-          "titulo": "Barker y Villa Cacique ofrecen turismo y sierras a dos horas",
-          "fecha": "2026-10-03T17:01:00.000Z",
-          "ruta": "/nota/barker-y-villa-cacique-ofrecen-turismo-y-sierras-a-dos-horas-ayjy85"
-        },
-        {
-          "id": "1vt533g",
-          "titulo": "El Solcito atrae visitantes con su almacén histórico y costillar a la estaca",
-          "fecha": "2026-10-01T12:45:00.000Z",
-          "ruta": "/nota/el-paraje-rural-el-solcito-atrae-visitantes-con-su-almacen-historico-1vt533g"
-        },
-        {
-          "id": "1pwavd9",
-          "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región",
-          "fecha": "2026-10-06T00:01:00.000Z",
-          "ruta": "/nota/la-empresa-esuco-retoma-tareas-viales-en-las-rutas-de-la-region-1pwavd9"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-paraje-la-alianza-propone-una-escapada-rural-entre-sierras",
-      "foto": {
-        "archivo": "fotos-notas/700xzm.jpg",
-        "credito": "Foto: 0223 (Mar del Plata)"
-      }
-    },
-    {
       "id": "rzhblo",
       "titulo": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
       "copete": "El delantero portugués fue suspendido de forma provisional tras abandonar la concentración de su seleccionado en plena Nations League y declaró sobre su legado.",
@@ -1448,20 +1543,20 @@
       "guion": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
       "seccion": "Deportes",
       "medios": [
-        "La Nación",
         "Clarín",
         "0223 (Mar del Plata)",
         "Ecos Diarios (Necochea)",
+        "La Nación",
         "El Destape",
         "Perfil",
         "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "El Día",
-        "El Marplatense",
-        "Olé",
         "La Brújula 24",
-        "Doble Amarilla"
+        "El Marplatense",
+        "Doble Amarilla",
+        "Olé"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -1563,15 +1658,15 @@
       "guion": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
       "seccion": "Economía",
       "medios": [
-        "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Nueva",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-12T10:40:40.530Z",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T10:40:40.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T19:01:26.092Z",
-      "relevancia": 37,
+      "relevancia": 43,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1700,13 +1795,16 @@
       "medios": [
         "La Nación",
         "Clarín",
+        "TN (Todo Noticias)",
         "Perfil",
         "Ámbito",
+        "TyC Sports",
+        "Olé",
         "Crónica",
         "Radio Mitre",
-        "Noticias Argentinas (NA)",
         "La Nueva",
-        "Bolavip Argentina"
+        "Bolavip Argentina",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://radiomitre.cienradios.com/deportes/carlos-alcaraz-vs-zizou-bergs-en-el-masters-1000-de-shanghai-a-que-hora-juega-este-lunes-12-de-octubre/",
       "teniaImagenLaFuente": true,
@@ -2004,209 +2102,6 @@
       }
     },
     {
-      "id": "1b3umaz",
-      "titulo": "Miguel Merentiel evalúa tatuarse si Boca gana la Copa Sudamericana",
-      "copete": "El delantero uruguayo conversó sobre sus expectativas en el certamen internacional y admitió el impacto que causó en el plantel la baja por lesión de Leandro Paredes.",
-      "cuerpo": "El delantero de Boca Miguel Merentiel admitió la posibilidad de hacerse un tatuaje si el equipo se consagra campen en la Copa Sudamericana, según expresó en una entrevista. El atacante reveló que no lleva inscripciones en la piel a pesar del nacimiento de sus hijos, aunque haría una excepción por un t\\u00tulo internacional del conjunto xeneize.\n\nEl mediocampista padeció un desgarro de grado dos en el isquiotibial de la pierna derecha y Merentiel reconoció que la baja generó profunda preocupación en el grupo.",
-      "guion": "Miguel Merentiel evalúa tatuarse si Boca gana la Copa Sudamericana",
-      "seccion": "Fútbol",
-      "medios": [
-        "TN (Todo Noticias)",
-        "TyC Sports",
-        "Olé",
-        "Minuto Uno",
-        "Radio Mitre",
-        "El Gráfico"
-      ],
-      "enlace": "https://www.elgrafico.com.ar/articulo/1121/103294/merentiel-lamento-la-lesion-de-paredes-nos-queriamos-morir-es-un-jugador-unico",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T08:30:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Miguel Merentiel admitió que evaluaría tatuarse si Boca conquista un torneo internacional.",
-        "El delantero reveló que no tiene tatuajes ni por el nacimiento de sus hijos.",
-        "El plantel xeneize afronta la semifinal de la Copa Sudamericana ante Vasco da Gama.",
-        "El atacante lamentó la lesión de Leandro Paredes, quien sufrió un desgarro."
-      ],
-      "seSabe": [
-        "Miguel Merentiel manifestó que podría hacerse un tatuaje si Boca logra un campeonato internacional.",
-        "El delantero no tiene ningún tatuaje pese al nacimiento de sus hijos.",
-        "Leandro Paredes sufrió un desgarro de grado II en el isquiotibial derecho.",
-        "Boca disputa la semifinal de la Copa Sudamericana ante Vasco da Gama."
-      ],
-      "noConfirmado": [
-        "Todavía no se determinó el tiempo exacto que Leandro Paredes permanecerá fuera de las canchas."
-      ],
-      "textoRedes": "Miguel Merentiel contó que evaluaría hacerse un tatuaje si Boca gana un t\\u00tulo internacional y se refirió al impacto que causó en el plantel la lesión de Leandro Paredes.",
-      "etiquetas": [
-        "Miguel Merentiel",
-        "Copa Sudamericana",
-        "Leandro Paredes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Gráfico",
-          "enlace": "https://www.elgrafico.com.ar/articulo/1121/103294/merentiel-lamento-la-lesion-de-paredes-nos-queriamos-morir-es-un-jugador-unico",
-          "fecha": "2026-10-12T08:30:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó el buen momento futbolístico de Miguel Merentiel en Boca."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/12/miguel-merentiel-revelo-que-estaria-dispuesto-a-hacer-si-boca-sale-campeon-de-la-copa-sudamericana-seria-algo-lindo/",
-          "fecha": "2026-10-12T16:00:12.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones del delantero sobre el posible tatuaje, su rendimiento y la lesión de Leandro Paredes."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/videos/deportes/futbol/2026/10/12/miguel-merentiel-revelo-que-estaria-dispuesto-a-hacer-si-boca-sale-campeon-de-la-copa-sudamericana-seria-algo-lindo-video-1/",
-          "fecha": "2026-10-12T16:00:15.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/boca-juniors/nos-queriamos-morir-merentiel-hablo-sobre-la-baja-de-paredes-y-prometio-un-tatuaje-si-boca-gana-la-sudamericana-id765834.html",
-          "fecha": "2026-10-12T18:28:46.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/boca-juniors/promesa-merentiel-boca-gana-sudamericana_0_nglVCKTGed.html",
-          "fecha": "2026-10-12T15:12:14.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/la-promesa-miguel-merentiel-si-boca-logra-conquistar-la-copa-sudamericana-2026-n6332783",
-          "fecha": "2026-10-12T16:24:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el atacante uruguayo jamás se hizo un tatuaje por sus hijos."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/la-tremenda-promesa-de-miguel-merentiel-si-boca-gana-la-copa-sudamericana-seria-algo-lindo/",
-          "fecha": "2026-10-12T17:43:31.000Z",
-          "oficial": false,
-          "aporte": "Aportó que la entrevista al jugador fue realizada por el medio ESPN."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "miguel-merentiel-evalua-tatuarse-si-boca-gana-la-copa-sudamericana",
-      "foto": {
-        "archivo": "fotos-notas/1b3umaz.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "vt9ful",
-      "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
-      "copete": "Agrupaciones indígenas se concentran este lunes en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza por parte del Gobierno nacional.",
-      "cuerpo": "Organizaciones de Pueblos Originarios se concentran este lunes a las 15 frente al domicilio de la expresidenta Cristina Kirchner, ubicado en la calle San José 1111 de la Ciudad de Buenos Aires. La movilización rechaza la restitución del Día de la Raza dispuesta por la gestión del presidente Javier Milei en contenidos oficiales.\n\nLa convocatoria incluye una ceremonia ancestral, un mural en vivo, danzas y lecturas de coplas. Las agrupaciones reivindicaron el decreto de 2010 que instituyó la fecha como el Día del Respeto a la Diversidad Cultural.\n\nPor su parte, el Poder Ejecutivo dispuso la medida mediante un decreto para conmemorar la llegada de Cristóbal Colón a América. La decisión genera controversia jurídica al contrastar con la Ley Nacional 27399, sancionada por el Congreso en 2017.",
-      "guion": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
-      "seccion": "Argentina",
-      "medios": [
-        "Perfil",
-        "Página/12",
-        "Crónica",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "La Verdad",
-        "La Nueva"
-      ],
-      "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T06:18:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T11:31:40.882Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Concentración de Pueblos Originarios frente al domicilio de Cristina Kirchner.",
-        "Rechazo a la restitución del Día de la Raza por parte del Gobierno nacional.",
-        "Convocatoria con actividades artísticas y ceremonias en la Ciudad de Buenos Aires.",
-        "Contraste normativo entre un decreto oficial y la Ley Nacional 27399."
-      ],
-      "noConfirmado": [
-        "El alcance definitivo del debate jurídico generado entre el decreto del Ejecutivo y la legislación vigente."
-      ],
-      "textoRedes": "Organizaciones de Pueblos Originarios se concentran este lunes frente a la casa de Cristina Kirchner en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza dispuesta por el Gobierno nacional.",
-      "etiquetas": [
-        "pueblos originarios",
-        "Cristina Kirchner",
-        "Javier Milei",
-        "Dia de la Raza",
-        "Ciudad de Buenos Aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
-          "fecha": "2026-10-12T06:18:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, el lugar de la concentración y los reclamos de las agrupaciones frente al Gobierno."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/pueblos-originarios-rechazan-el--dia-de-la-raza--y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner_a6acc20d3f61ec7711f817da8",
-          "fecha": "2026-10-12T09:40:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-8-0-0-organizaciones-de-pueblos-originarios-llamaron-a-concentrarse-en-rechazo-al-dia-de-la-raza",
-          "fecha": "2026-10-12T11:25:34.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/pueblos-originarios-rechazan-el-dia-de-la-raza-y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner/",
-          "fecha": "2026-10-12T09:46:34.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ube6ai",
-          "titulo": "La Casación rechaza frenar el remate de bienes de los hijos de Cristina Kirchner",
-          "fecha": "2026-10-08T17:53:15.000Z",
-          "ruta": "/nota/la-casacion-rechaza-frenar-el-remate-de-bienes-de-los-hijos-de-1ube6ai"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pueblos-originarios-protestan-frente-a-la-casa-de-cristina-kirchner",
-      "foto": {
-        "archivo": "fotos-notas/vt9ful.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
       "id": "rb2qmr",
       "titulo": "El Indec publica el martes la inflación oficial de septiembre",
       "copete": "El organismo estadístico dará a conocer el índice de precios tras estimaciones privadas que ubican la suba en torno al dos por ciento, impulsada por alimentos y bebidas.",
@@ -2214,6 +2109,7 @@
       "guion": "El Indec publica el martes la inflación oficial de septiembre",
       "seccion": "Economía",
       "medios": [
+        "La Nación",
         "La Noticia 1",
         "Crónica",
         "Noticias Argentinas (NA)",
@@ -2224,7 +2120,7 @@
       "fecha": "2026-10-12T05:52:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T12:01:29.750Z",
-      "relevancia": 59,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2454,6 +2350,100 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261011noche.jpg",
         "credito": "Fotos: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "vt9ful",
+      "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
+      "copete": "Agrupaciones indígenas se concentran este lunes en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza por parte del Gobierno nacional.",
+      "cuerpo": "Organizaciones de Pueblos Originarios se concentran este lunes a las 15 frente al domicilio de la expresidenta Cristina Kirchner, ubicado en la calle San José 1111 de la Ciudad de Buenos Aires. La movilización rechaza la restitución del Día de la Raza dispuesta por la gestión del presidente Javier Milei en contenidos oficiales.\n\nLa convocatoria incluye una ceremonia ancestral, un mural en vivo, danzas y lecturas de coplas. Las agrupaciones reivindicaron el decreto de 2010 que instituyó la fecha como el Día del Respeto a la Diversidad Cultural.\n\nPor su parte, el Poder Ejecutivo dispuso la medida mediante un decreto para conmemorar la llegada de Cristóbal Colón a América. La decisión genera controversia jurídica al contrastar con la Ley Nacional 27399, sancionada por el Congreso en 2017.",
+      "guion": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
+      "seccion": "Argentina",
+      "medios": [
+        "Perfil",
+        "Página/12",
+        "Crónica",
+        "Diario Popular",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Noticias Argentinas (NA)",
+        "La Verdad",
+        "La Nueva"
+      ],
+      "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T23:50:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T11:31:40.882Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Concentración de Pueblos Originarios frente al domicilio de Cristina Kirchner.",
+        "Rechazo a la restitución del Día de la Raza por parte del Gobierno nacional.",
+        "Convocatoria con actividades artísticas y ceremonias en la Ciudad de Buenos Aires.",
+        "Contraste normativo entre un decreto oficial y la Ley Nacional 27399."
+      ],
+      "noConfirmado": [
+        "El alcance definitivo del debate jurídico generado entre el decreto del Ejecutivo y la legislación vigente."
+      ],
+      "textoRedes": "Organizaciones de Pueblos Originarios se concentran este lunes frente a la casa de Cristina Kirchner en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza dispuesta por el Gobierno nacional.",
+      "etiquetas": [
+        "pueblos originarios",
+        "Cristina Kirchner",
+        "Javier Milei",
+        "Dia de la Raza",
+        "Ciudad de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
+          "fecha": "2026-10-12T06:18:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario, el lugar de la concentración y los reclamos de las agrupaciones frente al Gobierno."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/pueblos-originarios-rechazan-el--dia-de-la-raza--y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner_a6acc20d3f61ec7711f817da8",
+          "fecha": "2026-10-12T09:40:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-8-0-0-organizaciones-de-pueblos-originarios-llamaron-a-concentrarse-en-rechazo-al-dia-de-la-raza",
+          "fecha": "2026-10-12T11:25:34.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/pueblos-originarios-rechazan-el-dia-de-la-raza-y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner/",
+          "fecha": "2026-10-12T09:46:34.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ube6ai",
+          "titulo": "La Casación rechaza frenar el remate de bienes de los hijos de Cristina Kirchner",
+          "fecha": "2026-10-08T17:53:15.000Z",
+          "ruta": "/nota/la-casacion-rechaza-frenar-el-remate-de-bienes-de-los-hijos-de-1ube6ai"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pueblos-originarios-protestan-frente-a-la-casa-de-cristina-kirchner",
+      "foto": {
+        "archivo": "fotos-notas/vt9ful.jpg",
+        "credito": "Foto: Perfil"
       }
     },
     {
@@ -2692,73 +2682,107 @@
       "slug": "natacion-local-consigue-dos-podios-nacionales-en-buenos-aires"
     },
     {
-      "id": "p21pyq",
-      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "copete": "El piloto argentino debió abandonar la competencia en el circuito de Marina Bay por problemas técnicos y generó la furia de un competidor de Red Bull.",
-      "cuerpo": "Franco Colapinto debió abandonar la competencia en el circuito de Marina Bay por problemas mecánicos en su monoplaza durante el Gran Premio de Singapur.\n\nEl piloto argentino defendía la duodécima posición cuando generó la irritación de Isack Hadjar, integrante de la escudería Red Bull, quien debió extremar recursos por radio para intentar superarlo.\n\nEl competidor francés recriminó la resistencia del pilarense antes de quedar libre en la pista del trazado asiático, donde el automovilista nacional había cumplido destacadas actuaciones en el ciclo previo.",
-      "guion": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "seccion": "Automovilismo",
+      "id": "ay4wdh",
+      "titulo": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
+      "copete": "El presidente argentino emprende el martes su quinto viaje del año a Estados Unidos. Cumplirá una agenda de tres días en Washington D. C. que incluye encuentros empresarios y discursos.",
+      "cuerpo": "El presidente Javier Milei viajará el martes a las 23 hacia Estados Unidos en su quinta visita al país norteamericano en lo que va del año, según informaron los medios consultados. El mandatario llegará a Washington D. C. el miércoles a las 9:30, hora argentina, junto a su comitiva para cumplir con una agenda de tres días.\n\nDurante su estadía, el jefe de Estado se reunirá con el inversor Andy Kleinman y con el empresario petrolero Harold Hamm. Además, recibirá galardones en la Gala Oficial del Mes de la Herencia Hispana y en la Cámara de Comercio estadounidense. El regreso está previsto para el viernes a las 8:30.\n\nEn paralelo, el gabinete nacional mantendrá diversas actividades en el país y en el exterior, como la participación del ministro de Economía, Luis Caputo, en las reuniones del Fondo Monetario Internacional en Tailandia.",
+      "guion": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
+      "seccion": "Política",
       "medios": [
-        "TyC Sports",
+        "Perfil",
         "Minuto Uno",
+        "C5N",
+        "Crónica",
+        "Canal 26",
+        "Diario Popular",
+        "El Día",
+        "La Tecla",
+        "InfoRegión",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "La Nueva"
       ],
-      "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+      "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T22:48:29.000Z",
+      "fecha": "2026-10-11T21:51:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-12T11:02:16.567Z",
-      "relevancia": 76,
+      "visto": "2026-10-12T00:01:37.308Z",
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Franco Colapinto dejó la competencia por fallas mecánicas.",
-        "El hecho ocurrió en el circuito de Marina Bay.",
-        "Isack Hadjar recriminó la defensa del piloto argentino."
+        "El presidente Javier Milei viaja el martes a la noche hacia Estados Unidos.",
+        "Cumplirá una agenda de tres días en la ciudad de Washington D. C.",
+        "Recibirá reconocimientos y mantendrá encuentros con referentes empresarios.",
+        "El ministro de Economía participa de reuniones del FMI en Tailandia."
       ],
       "seSabe": [
-        "Franco Colapinto abandonó el Gran Premio de Singapur por fallas técnicas en su monoplaza.",
-        "El piloto de Alpine defendía el puesto doce en el circuito de Marina Bay.",
-        "Isack Hadjar consultó por radio a su equipo cómo superar al argentino."
+        "El viaje presidencial comienza el martes a las 23 y marca la quinta visita del mandatario a Estados Unidos en el año.",
+        "La agenda en Washington D. C. incluye exposiciones institucionales y reuniones con empresarios.",
+        "El ministro de Economía, Luis Caputo, participa en Tailandia de las reuniones anuales del FMI y del Banco Mundial."
       ],
-      "noConfirmado": [
-        "Los motivos exactos de la falla técnica en el vehículo de Colapinto."
-      ],
-      "textoRedes": "Franco Colapinto abandonó el Gran Premio de Singapur por problemas mecánicos y generó la furia de Isack Hadjar durante una disputa en pista.",
       "etiquetas": [
-        "Franco Colapinto",
-        "Gran Premio de Singapur",
-        "Isack Hadjar"
+        "Javier Milei",
+        "Estados Unidos",
+        "Washington",
+        "Gobierno Nacional",
+        "Economía"
       ],
       "fuentesConsultadas": [
         {
           "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
-          "fecha": "2026-10-12T01:36:00.000Z",
+          "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
+          "fecha": "2026-10-11T22:23:00.000Z",
           "oficial": false,
-          "aporte": "Detalló el abandono de Colapinto por fallas técnicas y el enojo del piloto Isack Hadjar."
+          "aporte": "Detalló los horarios de la gira presidencial, los encuentros con empresarios y las actividades del gabinete nacional."
         },
         {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-7-28-0-hadjar-exploto-contra-colapinto-sabia-que-este-tipo-iba-a-ser",
-          "fecha": "2026-10-12T10:36:29.000Z",
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/10/11/javier-milei-viajara-por-quinta-vez-en-el-ano-a-estados-unidos-como-sera-la-agenda-del-presidente/",
+          "fecha": "2026-10-11T23:48:23.000Z",
           "oficial": false,
-          "aporte": "Indicó que Colapinto no tuvo el desempeño esperado y generó la furia de un rival."
+          "aporte": "Confirmó el horario de salida del vuelo presidencial hacia Estados Unidos."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/javier-milei-viaja-por-quinta-vez-a-estados-unidos-para-reunirse-con-empresarios-y-recibir-dos-nuevos-premios-politica-y-economia_1791762720",
+          "fecha": "2026-10-11T23:52:48.000Z",
+          "oficial": false,
+          "aporte": "Aportó precisiones sobre la agenda de tres días en Washington D. C."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1tib4ft",
+          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
+          "fecha": "2026-10-05T18:53:21.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
+        },
+        {
+          "id": "1uw5a9s",
+          "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
+          "fecha": "2026-10-01T14:24:51.000Z",
+          "ruta": "/nota/el-vicepresidente-de-estados-unidos-visita-la-argentina-en-noviembre-1uw5a9s"
+        },
+        {
+          "id": "11nk8l",
+          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "hadjar-cuestiona-con-dureza-a-colapinto-tras-el-gran-premio-de",
+      "slug": "javier-milei-viaja-a-estados-unidos-para-una-nueva-gira-oficial",
       "foto": {
-        "archivo": "fotos-notas/p21pyq.jpg",
-        "credito": "Foto: La Nueva"
+        "archivo": "fotos-notas/ay4wdh.jpg",
+        "credito": "Foto: Canal 26"
       }
     },
     {
@@ -2779,7 +2803,7 @@
       "fecha": "2026-10-11T20:11:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 56,
+      "relevancia": 48,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3312,7 +3336,8 @@
         "Perfil",
         "A24",
         "Diario Popular",
-        "InfoRegión"
+        "InfoRegión",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.cronista.com/economia-politica/comienza-el-debate-por-el-presupuesto-2027-con-funcionarios-el-capitulo-que-deberan-bajar/",
       "teniaImagenLaFuente": true,
@@ -3402,10 +3427,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
-      "sensacion": 11,
-      "humedad": 70,
-      "viento": 10,
+      "temp": 12,
+      "sensacion": 9,
+      "humedad": 69,
+      "viento": 12,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3419,30 +3444,30 @@
         "lluvia": 22,
         "codigo": 51,
         "viento": 14,
-        "milimetros": 0,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-13",
         "dia": "mar",
-        "max": 13,
-        "min": 9,
+        "max": 14,
+        "min": 8,
         "lluvia": 43,
         "codigo": 51,
-        "viento": 14,
-        "milimetros": 0,
+        "viento": 15,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-14",
         "dia": "mié",
-        "max": 16,
+        "max": 13,
         "min": 8,
         "lluvia": 61,
-        "codigo": 51,
-        "viento": 18,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
+        "codigo": 53,
+        "viento": 20,
+        "milimetros": 4,
+        "cielo": "Llovizna"
       },
       {
         "fecha": "2026-10-15",
@@ -3451,7 +3476,7 @@
         "min": 9,
         "lluvia": 69,
         "codigo": 51,
-        "viento": 19,
+        "viento": 18,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       }
@@ -3757,22 +3782,28 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "p582dy",
-      "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "nfmavy",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
+      "id": "1b80tph",
+      "titulo": "Denuncian a Caputo y Bausili por las pérdidas millonarias…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "t2ij37",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "hbb57e",
+      "titulo": null,
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
   "esperandoCuerpo": 3
