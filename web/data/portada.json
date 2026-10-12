@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T10:31:53.789Z",
+  "generado": "2026-10-12T11:03:33.158Z",
   "notas": [
     {
       "id": "clima20261012",
@@ -57,6 +57,74 @@
         }
       ],
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-4-y-maxima-de-13"
+    },
+    {
+      "id": "p21pyq",
+      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "copete": "El piloto argentino debió abandonar la competencia en el circuito de Marina Bay por problemas técnicos y generó la furia de un competidor de Red Bull.",
+      "cuerpo": "Franco Colapinto debió abandonar la competencia en el circuito de Marina Bay por problemas mecánicos en su monoplaza durante el Gran Premio de Singapur.\n\nEl piloto argentino defendía la duodécima posición cuando generó la irritación de Isack Hadjar, integrante de la escudería Red Bull, quien debió extremar recursos por radio para intentar superarlo.\n\nEl competidor francés recriminó la resistencia del pilarense antes de quedar libre en la pista del trazado asiático, donde el automovilista nacional había cumplido destacadas actuaciones en el ciclo previo.",
+      "guion": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T01:36:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T11:02:16.567Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto dejó la competencia por fallas mecánicas.",
+        "El hecho ocurrió en el circuito de Marina Bay.",
+        "Isack Hadjar recriminó la defensa del piloto argentino."
+      ],
+      "seSabe": [
+        "Franco Colapinto abandonó el Gran Premio de Singapur por fallas técnicas en su monoplaza.",
+        "El piloto de Alpine defendía el puesto doce en el circuito de Marina Bay.",
+        "Isack Hadjar consultó por radio a su equipo cómo superar al argentino."
+      ],
+      "noConfirmado": [
+        "Los motivos exactos de la falla técnica en el vehículo de Colapinto."
+      ],
+      "textoRedes": "Franco Colapinto abandonó el Gran Premio de Singapur por problemas mecánicos y generó la furia de Isack Hadjar durante una disputa en pista.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Gran Premio de Singapur",
+        "Isack Hadjar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+          "fecha": "2026-10-12T01:36:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el abandono de Colapinto por fallas técnicas y el enojo del piloto Isack Hadjar."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-7-28-0-hadjar-exploto-contra-colapinto-sabia-que-este-tipo-iba-a-ser",
+          "fecha": "2026-10-12T10:36:29.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Colapinto no tuvo el desempeño esperado y generó la furia de un rival."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "hadjar-cuestiona-con-dureza-a-colapinto-tras-el-gran-premio-de",
+      "foto": {
+        "archivo": "fotos-notas/p21pyq.jpg",
+        "credito": "Foto: La Nueva"
+      }
     },
     {
       "id": "repaso20261011noche",
@@ -127,77 +195,6 @@
       }
     },
     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
-      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
-      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-11T23:31:31.632Z",
-      "sinFecha": true,
-      "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
-        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
-        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
-        "César Rodríguez completó la prueba en 4h49'20\"."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
-      "etiquetas": [
-        "Emilia Scioli",
-        "Ironman",
-        "Deportes",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1jfpdis",
-          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
-          "fecha": "2026-10-06T16:26:52.163Z",
-          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
-        },
-        {
-          "id": "repaso20261006noche",
-          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
-          "fecha": "2026-10-07T00:05:14.231Z",
-          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
-      "foto": {
-        "archivo": "fotos-notas/1hapve0.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "1lact95",
       "titulo": "Sustraen una moto en la madrugada y piden datos",
       "copete": "Una motocicleta Mondial Max de 110 cc fue sustraída en la zona de calle 108 entre 17 y 19. El propietario solicita colaboración para localizarla.",
@@ -205,7 +202,8 @@
       "guion": "Sustraen una moto en la madrugada y piden datos",
       "seccion": "Policiales",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/policiales/robaron-una-moto-durante-la-madrugada-y-buscan-informacion-para-recuperarla",
       "teniaImagenLaFuente": true,
@@ -376,8 +374,8 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
-        "La Verdad"
+        "La Verdad",
+        "El Día"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -548,98 +546,6 @@
       }
     },
     {
-      "id": "1pi4mqa",
-      "titulo": "Diputados debate el proyecto que sanciona el vandalismo rural",
-      "copete": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en establecimientos agropecuarios. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
-      "cuerpo": "La propuesta incorpora el artículo 150 bis al Código Penal con sanciones de un mes a un año de prisión para quien ingrese a un campo sin autorización.\n\nEl texto, impulsado por el legislador Martín Ardohaín, también crea el artículo 184 bis para castigar con penas de dos a ocho años de prisión y multas a quienes dañen cultivos, ganado, maquinaria o infraestructura productiva.\n\nEl diputado opositor Ramiro Gutiérrez objetó la iniciativa al señalar que replica figuras legales ya contempladas en la normativa actual y establece escalas punitivas inferiores para conductas equivalentes.",
-      "guion": "Diputados debate el proyecto que sanciona el vandalismo rural.",
-      "seccion": "Agro",
-      "medios": [
-        "La Nación",
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T19:59:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 41,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El plenario de comisiones aprobó el dictamen el 6 de octubre.",
-        "Se propone incorporar los artículos 150 bis y 184 bis al Código Penal.",
-        "Las penas por daños a la producción rural alcanzan hasta los ocho años de prisión.",
-        "La oposición cuestionó que la iniciativa duplica normas ya vigentes."
-      ],
-      "seSabe": [
-        "El proyecto obtuvo dictamen de mayoría en un plenario de comisiones de la Cámara de Diputados.",
-        "La iniciativa fue presentada por el diputado Martín Ardohaín.",
-        "El despacho cosechó 41 adhesiones.",
-        "El artículo 150 bis castiga la intrusión en establecimientos rurales con hasta un año de prisión.",
-        "El artículo 184 bis prevé penas de dos a ocho años por daños a cultivos, ganado e infraestructura."
-      ],
-      "noConfirmado": [
-        "La recepción del proyecto en el recinto de la Cámara Baja para la búsqueda de media sanción."
-      ],
-      "textoRedes": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en campos. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
-      "etiquetas": [
-        "Diputados",
-        "vandalismo rural",
-        "Código Penal",
-        "agricultura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
-          "fecha": "2026-10-11T19:59:13.000Z",
-          "oficial": false,
-          "aporte": "Detalló los detalles del dictamen, los artículos propuestos y las declaraciones del diputado Martín Ardohaín."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/vandalismo-rural-la-oposicion-advirtio-que-el-proyecto-que-obtuvo-dictamen-duplica-delitos-y-reduce-nid11102026/",
-          "fecha": "2026-10-11T23:17:31.000Z",
-          "oficial": false,
-          "aporte": "Aportó las críticas y los cuestionamientos planteados por el diputado Ramiro Gutiérrez."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "w7o4x7",
-          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
-          "fecha": "2026-10-06T12:56:37.000Z",
-          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
-        },
-        {
-          "id": "c7em03",
-          "titulo": "La oposición negocia un dictamen común contra la morosidad antes del martes",
-          "fecha": "2026-09-27T11:10:21.000Z",
-          "ruta": "/nota/vence-el-plazo-para-dictaminar-y-la-oposicion-negocia-un-proyecto-c7em03"
-        },
-        {
-          "id": "q84c12",
-          "titulo": "Una investigadora del INTA cuestiona la suspensión de un proyecto",
-          "fecha": "2026-09-24T14:26:31.000Z",
-          "ruta": "/nota/carta-abierta-de-investigadora-del-inta-balcarce-q84c12"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diputados-debate-el-proyecto-que-sanciona-el-vandalismo-rural",
-      "foto": {
-        "archivo": "fotos-notas/1pi4mqa.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "1lmhb77",
       "titulo": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
       "copete": "Un estudio del sector detalla las diferencias de tarifas entre las distintas jurisdicciones del país. El distrito bonaerense encabeza la lista con la boleta más alta, mientras que el transporte nacional en el AMBA registra el valor más accesible.",
@@ -771,64 +677,63 @@
       }
     },
     {
-      "id": "hp2pil",
-      "titulo": "Primero la Patria exige cumplir la prohibición vehicular en el Cerro El Triunfo",
-      "copete": "La concejal Viviana Erreguerena pidió al Ejecutivo que controle el ingreso de automóviles al predio tras registrar vehículos estacionados junto a la pista de ciclismo.",
-      "cuerpo": "La concejal de Primero la Patria, Viviana Erreguerena, solicitó al Departamento Ejecutivo que haga cumplir la prohibición de circular con automóviles en el Cerro El Triunfo. El pedido surgió tras registrarse vehículos estacionados junto a la pista de ciclismo durante el último fin de semana, un sector frecuentado por vecinos para realizar actividades recreativas. \n\nLa edil recordó que la ordenanza vigente desde hace aproximadamente un año exceptúa el tránsito únicamente en las inmediaciones de la pulpería Carlos Máximo Cabrera y el anfiteatro Saverio Bonazza. Ante esta situación, advirtió sobre los riesgos para la seguridad vial y requirió la intervención de la Dirección de Movilidad y Control Urbano para reforzar los operativos de fiscalización frente a la mayor concurrencia que traen los meses de mejor clima.",
-      "guion": "Primero la Patria exige cumplir la prohibición vehicular en el Cerro El Triunfo",
-      "seccion": "Balcarce",
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
+      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
+      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/requieren-que-se-cumpla-la-prohibicion-de-circular-con-vehiculos-en-el-cerro-el-triunfo",
+      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T18:38:49.000Z",
+      "fecha": "2026-10-11T17:54:03.000Z",
       "sinFecha": false,
-      "visto": "2026-10-11T23:07:57.544Z",
-      "relevancia": 67,
+      "visto": "2026-10-11T23:31:31.632Z",
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "cerro"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "Primero la Patria exige prohibir autos en el Cerro El Triunfo.",
-        "Detectaron vehículos estacionados cerca de la pista de ciclismo.",
-        "Piden que intervenga la Dirección de Movilidad y Control Urbano."
-      ],
-      "seSabe": [
-        "Según la concejal Viviana Erreguerena, se detectaron vehículos en zonas prohibidas del Cerro El Triunfo durante el último fin de semana.",
-        "De acuerdo con el bloque político, existe una ordenanza vigente desde hace un año que restringe el tránsito vehicular en el predio.",
-        "La normativa contempla excepciones solo en las inmediaciones de la pulpería Carlos Máximo Cabrera y el anfiteatro Saverio Bonazza."
+        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
+        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
+        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
+        "César Rodríguez completó la prueba en 4h49'20\"."
       ],
       "noConfirmado": [
-        "No se informaron las medidas concretas que adoptará el Ejecutivo tras el pedido del bloque opositor.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "La concejal Viviana Erreguerena solicitó al Ejecutivo que refuerce los controles para evitar el ingreso y estacionamiento de automóviles en sectores prohibidos del Cerro El Triunfo.",
+      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
       "etiquetas": [
-        "Cerro El Triunfo",
-        "Viviana Erreguerena",
-        "Primero la Patria",
-        "Seguridad vial"
+        "Emilia Scioli",
+        "Ironman",
+        "Deportes",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/requieren-que-se-cumpla-la-prohibicion-de-circular-con-vehiculos-en-el-cerro-el-triunfo",
-          "fecha": "2026-10-11T18:38:49.000Z",
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+          "fecha": null,
           "oficial": false,
-          "aporte": "Aportó los detalles sobre el pedido de la concejal Viviana Erreguerena respecto a los vehículos en el Cerro El Triunfo."
+          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
         }
       ],
       "antecedentes": [
         {
-          "id": "1spjzhb",
-          "titulo": "El Concejo nombra Paseo Intendente Juan José Mare a la vuelta interna del Cerro",
-          "fecha": "2026-09-25T12:46:51.000Z",
-          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
+          "id": "1jfpdis",
+          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
+          "fecha": "2026-10-06T16:26:52.163Z",
+          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
+        },
+        {
+          "id": "repaso20261006noche",
+          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
+          "fecha": "2026-10-07T00:05:14.231Z",
+          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
         }
       ],
       "verificacion": {
@@ -836,10 +741,10 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "primero-la-patria-exige-cumplir-la-prohibicion-vehicular-en-el-cerro",
+      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
       "foto": {
-        "archivo": "fotos-notas/hp2pil.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
+        "archivo": "fotos-notas/1hapve0.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -850,9 +755,10 @@
       "guion": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
       "seccion": "Automovilismo",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
-        "Campeones",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Campeones"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/moriatis-sobre-el-regreso-del-tn-a-balcarce-los-pilotos-te-dicen-tendriamos-que-ir",
       "teniaImagenLaFuente": true,
@@ -946,8 +852,8 @@
         "Infobae",
         "TyC Sports",
         "Crónica",
-        "La Verdad de Ayacucho",
         "Campeones",
+        "La Verdad de Ayacucho",
         "TN (Todo Noticias)"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/11/la-sentencia-del-jefe-de-alpine-tras-el-abandono-de-colapinto-y-la-actuacion-de-pierre-gasly-en-el-gp-de-singapur-de-formula-1/",
@@ -1038,84 +944,6 @@
       }
     },
     {
-      "id": "153zuaz",
-      "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
-      "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
-      "cuerpo": "La Administración Nacional de la Seguridad Social aplica un incremento del 1,66 por ciento en la Asignación Universal por Hijo durante octubre, según informó el organismo previsional. El ajuste responde a la actualización automática mensual basada en la inflación de agosto, que se ubicó en el 1,7 por ciento.\n\nEl pago de los haberes se efectiviza entre la segunda y la tercera semana del mes, ordenado según la terminación del documento de identidad de los titulares. Del total asignado, un 20 por ciento queda retenido hasta que las familias presentan la Libreta que acredita la escolaridad y los controles de salud de los menores a cargo, un trámite que se completa de manera digital mediante la plataforma oficial.",
-      "guion": "Anses aplica un incremento en la Asignación Universal por Hijo",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "El Cronista"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T13:27:22.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:35:55.538Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Asignación Universal por Hijo sube un 1,66 por ciento en octubre.",
-        "El ajuste se calcula según el índice de inflación registrado en agosto.",
-        "El organismo previsional abona los montos entre la segunda y la tercera semana del mes por terminación de DNI."
-      ],
-      "seSabe": [
-        "La Anses oficializó un aumento del 1,66% para la AUH en octubre.",
-        "La actualización se rige por la variación inflacionaria de agosto.",
-        "El pago se distribuye entre la segunda y tercera semana del mes según el DNI."
-      ],
-      "textoRedes": "La Anses oficializó un aumento del 1,66 por ciento en la Asignación Universal por Hijo para el mes de octubre. El incremento responde a la actualización automática por inflación y los pagos se distribuyen según la terminación del documento.",
-      "etiquetas": [
-        "Anses",
-        "Asignación Universal por Hijo",
-        "octubre",
-        "aumento",
-        "prestaciones sociales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
-          "fecha": "2026-10-11T13:27:22.000Z",
-          "oficial": false,
-          "aporte": "Detalló el porcentaje de aumento, el índice de inflación de referencia y los detalles de la Libreta AUH."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
-          "fecha": "2026-10-11T13:28:52.000Z",
-          "oficial": false,
-          "aporte": "Informó que la Anses publicó el calendario de pagos de octubre por terminación de DNI."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
-          "fecha": "2026-10-11T16:31:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó el alcance de la cobertura en cantidad de menores y adultos a cargo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ujkaqh",
-          "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
-          "fecha": "2026-09-28T12:13:43.000Z",
-          "ruta": "/nota/anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre-ujkaqh"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "anses-aplica-un-incremento-en-la-asignacion-universal-por-hijo"
-    },
-    {
       "id": "repaso20261011manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: Inter, Adrián Stoppelman y Virginia Aparicio",
@@ -1182,85 +1010,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261011manana.jpg",
         "credito": "Fotos: Olé, Infórmese Primero (FM 104.9), Radio Gabal (FM 104.1) y Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "9rb0wa",
-      "titulo": "Proponen tokenizar regalías mineras para financiar a distritos",
-      "copete": "El ex juez penal y asesor legal Daniel Llermanos sostuvo que la digitalización de flujos productivos permite adelantar recursos para los Estados locales y comunales.",
-      "cuerpo": "El planteo se realiza en el marco del esquema que impulsa la firma Oroblock vinculado al proyecto minero Corina en La Rioja. Según datos de la empresa, la iniciativa abarca 24.647 hectáreas con yacimientos de oro, cobre y plata en etapa de exploración.\n\nEl asesor explicó que el mecanismo permite adelantar recursos futuros y fraccionarlos para inversores. Por su parte, el director financiero de la firma, Manuel Arias, señaló que el marco regulado actual de la Comisión Nacional de Valores ya permite tokenizar activos sin necesidad de una nueva ley.",
-      "guion": "Proponen tokenizar regalías mineras para financiar a distritos.",
-      "seccion": "Economía",
-      "medios": [
-        "iProfesional",
-        "Noticias Argentinas (NA)",
-        "Ecos Diarios (Necochea)"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T11:27:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T15:35:07.552Z",
-      "relevancia": 42,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Daniel Llermanos plantea tokenizar regalías públicas.",
-        "La medida busca adelantar recursos para los Estados.",
-        "El esquema se vincula al proyecto minero Corina.",
-        "La Comisión Nacional de Valores regula el sistema."
-      ],
-      "seSabe": [
-        "Daniel Llermanos afirmó que la tokenización de regalías sirve como financiamiento para Estados locales.",
-        "El abogado cumple funciones como asesor de la firma Oroblock.",
-        "El proyecto minero Corina abarca 24.647 hectáreas en La Rioja.",
-        "Manuel Arias se desempeña como director financiero de la empresa."
-      ],
-      "noConfirmado": [
-        "Todavía no se aprobó el proyecto de ley presentado en el Congreso sobre tokenización soberana."
-      ],
-      "textoRedes": "El asesor legal Daniel Llermanos afirmó que la tokenización de regalías públicas puede servir como vía de financiamiento para provincias y municipios.",
-      "etiquetas": [
-        "economia",
-        "regalias",
-        "financiamiento",
-        "tecnologia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
-          "fecha": "2026-10-11T11:27:07.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones completas de Daniel Llermanos, Manuel Arias y Osvaldo Di Giorgio sobre el proyecto minero Corina."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/proponen-la-tokenizacion-de-regalias-mineras-para-impulsar-inversiones-en-provincias",
-          "fecha": "2026-10-11T13:16:43.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en las afirmaciones iniciales del asesor legal Daniel Llermanos."
-        },
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/economia/466364-como-la-tokenizacion-de-regalias-mineras-puede-impulsar-inversiones",
-          "fecha": "2026-10-11T14:15:00.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la postura sobre la tokenización de regalías para provincias."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "proponen-tokenizar-regalias-mineras-para-financiar-a-distritos",
-      "foto": {
-        "archivo": "fotos-notas/9rb0wa.jpg",
-        "credito": "Foto: iProfesional"
       }
     },
     {
@@ -1331,11 +1080,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45056-radio-lider-balcarce-stream-un-exito-rotundo-de-audiencia-desde-el-primer-dia/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-11T10:31:40.314Z",
       "sinFecha": true,
       "visto": "2026-10-11T10:31:40.314Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1381,83 +1130,6 @@
       "slug": "radio-lider-balcarce-stream-alcanza-cifras-record-a-dos-semanas-de-su",
       "foto": {
         "archivo": "fotos-notas/1m2za7b.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "atnmk9",
-      "titulo": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
-      "copete": "El cuerpo deliberativo dio luz verde a una plataforma digital municipal para conectar a familias con profesionales habilitados. La iniciativa busca ordenar la demanda creciente en salud y educación.",
-      "cuerpo": "El proyecto fue impulsado por la concejal Fara Amado Cunqueiro junto con su par Gonzalo Scioli.\n\nLa herramienta contempla el desarrollo de una sección en la página web del Municipio para consultar datos de los prestadores activos, sus áreas de incumbencia y las obras sociales con las que operan. Para formar parte, los profesionales y estudiantes avanzados deberán acreditar titulación conforme a la Resolución 1221/15.\n\nEl proyecto había sido presentado a principios de octubre por ediles del bloque Somos para ordenar una demanda creciente en familias, escuelas y centros de salud de la ciudad.",
-      "guion": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45055-unimos-la-necesidad-de-las-familias-con-la-busqueda-laboral-de-los-acompanantes-terapeuticos/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-11T10:31:40.314Z",
-      "sinFecha": true,
-      "visto": "2026-10-11T10:31:40.314Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberante aprobó el registro municipal de acompañantes terapéuticos.",
-        "Habrá una plataforma digital en la web oficial para consultar profesionales.",
-        "La iniciativa busca unir la demanda de las familias con la búsqueda laboral."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante aprobó la creación del Registro Municipal de Acompañantes Terapéuticos. Habrá una plataforma digital en la web oficial para consultar profesionales habilitados en la ciudad.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "acompañantes terapéuticos",
-        "salud",
-        "educación",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45055-unimos-la-necesidad-de-las-familias-con-la-busqueda-laboral-de-los-acompanantes-terapeuticos/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó sobre la aprobación del registro de acompañantes terapéuticos en el Concejo Deliberante y los detalles de la plataforma digital."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pofkpj",
-          "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
-          "fecha": "2026-10-05T20:25:05.000Z",
-          "ruta": "/nota/concejales-proponen-crear-un-registro-de-acompanantes-terapeuticos-1pofkpj"
-        },
-        {
-          "id": "repaso20261001tarde",
-          "titulo": "El repaso de la tarde en Radar Balcarce: Lionel Messi y acompañantes terapéuticos",
-          "fecha": "2026-10-01T18:09:10.520Z",
-          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-lionel-messi-y-acompanantes-repaso20261001tarde"
-        },
-        {
-          "id": "15i90co",
-          "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
-          "fecha": "2026-10-01T15:01:12.943Z",
-          "ruta": "/nota/concejales-proponen-crear-un-registro-municipal-de-acompanantes-15i90co"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-aprueba-la-creacion-del-registro-de-acompanantes",
-      "foto": {
-        "archivo": "fotos-notas/atnmk9.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
     },
@@ -1524,8 +1196,8 @@
       "seccion": "Deportes",
       "medios": [
         "Doble Amarilla",
-        "La Nueva",
-        "UAR (Unión Argentina de Rugby)"
+        "UAR (Unión Argentina de Rugby)",
+        "La Nueva"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
       "teniaImagenLaFuente": true,
@@ -1794,20 +1466,19 @@
   ],
   "secciones": [
     "Balcarce",
-    "Deportes",
-    "Policiales",
     "Automovilismo",
+    "Policiales",
+    "Deportes",
     "Política",
     "Cultura y agenda",
-    "Agro",
     "Economía"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 7,
-      "sensacion": 5,
-      "humedad": 90,
+      "temp": 8,
+      "sensacion": 6,
+      "humedad": 85,
       "viento": 7,
       "rumbo": "E",
       "cielo": "Despejado",
@@ -2163,22 +1834,28 @@
   },
   "pendientes": [
     {
+      "id": "5ksf4c",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
       "id": "y5v7xa",
       "titulo": null,
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"niña\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "nfmavy",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
       "id": "1hbflhh",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "vuez1j",
+      "titulo": "Menem descartó una salida de Caputo: “No hay dudas sobre…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "1uyjmrd",
@@ -2193,12 +1870,6 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "vuez1j",
-      "titulo": "Menem descartó una salida de Caputo: “No hay dudas sobre…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "s4br0k",
       "titulo": null,
       "seccion": "Argentina",
@@ -2211,10 +1882,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "a3fjij",
-      "titulo": "Santiago Caputo denunció fraude en las pensiones por…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
+      "id": "d57r1j",
+      "titulo": "Denunciaron penalmente a Caputo y Bausili por la timba con…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 1
