@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T02:01:36.470Z",
+  "generado": "2026-10-12T02:31:58.656Z",
   "notas": [
     {
       "id": "repaso20261011noche",
@@ -155,7 +155,7 @@
       "fecha": "2026-10-11T23:12:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-11T23:35:55.538Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -313,6 +313,7 @@
       "seccion": "Política",
       "medios": [
         "Minuto Uno",
+        "Perfil",
         "C5N",
         "Crónica",
         "Canal 26",
@@ -657,6 +658,81 @@
       }
     },
     {
+      "id": "2p1jr3",
+      "titulo": "Walter Benítez brilla y Crystal Palace gana en la Premier League",
+      "copete": "El arquero argentino aprovechó la titularidad por una lesión de compañero. Su equipo derrotó tres a uno a Nottingham Forest.",
+      "cuerpo": "El arquero argentino Walter Benítez fue titular este domingo en Crystal Palace debido a una lesión de Dean Henderson y cumplió una destacada labor en el triunfo por tres a uno frente a Nottingham Forest. La visita se había adelantado en el marcador a los dos minutos y medio de juego con un tanto de Dan Ndoye, pero el conjunto local dio vuelta el resultado.\n\nDaichi Kamada empató antes del descanso tras una asistencia de taco y Jefferson Lerma puso en ventaja a su equipo de cabeza. En el complemento, Yeremy Pino sentenció el marcador tras un rechace, en un encuentro donde el arquero argentino realizó una atajada clave durante la primera etapa con su equipo en desventaja.\n\nCon este resultado, el equipo se ubica duodìcimo en la tabla de posiciones de la Premier League.",
+      "guion": "Walter Benítez brilla y Crystal Palace gana en la Premier League",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Clarín",
+        "Infobae"
+      ],
+      "enlace": "https://www.clarin.com/deportes/argentino-walter-benitez-hizo-atajada-imposible-crystal-palace-remonto-partido-increible-premier-league_0_Pmh4L7lNB3.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T19:32:54.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T02:31:37.843Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Walter Benítez fue titular en Crystal Palace",
+        "El equipo derrotó tres a uno a Nottingham Forest",
+        "El arquero argentino realizó una atajada clave en la primera etapa",
+        "El conjunto local remontó el marcador tras comenzar en desventaja"
+      ],
+      "seSabe": [
+        "Crystal Palace derrotó a Nottingham Forest por tres a uno este domingo",
+        "Walter Benítez ocupó el arco por la lesión de Dean Henderson",
+        "Los goles del equipo ganador fueron marcados por Daichi Kamada, Jefferson Lerma y Yeremy Pino",
+        "Dan Ndoye convirtió para la visita"
+      ],
+      "textoRedes": "El arquero argentino Walter Benítez fue titular este domingo en la victoria de Crystal Palace por tres a uno ante Nottingham Forest en la Premier League.",
+      "etiquetas": [
+        "Walter Benítez",
+        "Crystal Palace",
+        "Premier League"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/argentino-walter-benitez-hizo-atajada-imposible-crystal-palace-remonto-partido-increible-premier-league_0_Pmh4L7lNB3.html",
+          "fecha": "2026-10-11T19:32:54.000Z",
+          "oficial": false,
+          "aporte": "Detalló la trayectoria previa del arquero, la jugada clave y el desarrollo del encuentro"
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/walter-benitez-hizo-la-atajada-mas-espectacular-de-la-fecha-de-la-premier-league-nid11102026/",
+          "fecha": "2026-10-11T20:36:39.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la lesión de Dean Henderson y la titularidad del arquero argentino"
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/11/la-atajada-de-la-temporada-la-impactante-salvada-de-un-ex-arquero-de-la-seleccion-argentina-que-hace-furor-en-la-premier/",
+          "fecha": "2026-10-11T22:44:14.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el resultado final del partido y la tapada decisiva"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "walter-benitez-brilla-y-crystal-palace-gana-en-la-premier-league",
+      "foto": {
+        "archivo": "fotos-notas/2p1jr3.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "jiv3ba",
       "titulo": "El Senado provincial aprueba cambios en la prioridad de paso en esquinas",
       "copete": "El Senado bonaerense convirtió en ley una reforma al Código de Tránsito que modifica las excepciones a la prioridad de paso por la derecha en rutas y avenidas.",
@@ -981,6 +1057,74 @@
       }
     },
     {
+      "id": "t691yd",
+      "titulo": "La economía nacional acumula superávits gemelos entre enero y agosto",
+      "copete": "El país registra cuentas públicas positivas por 2,6 billones de pesos y un saldo comercial favorable de 18.380 millones de dólares en los primeros ocho meses del año, según un informe sectorial.",
+      "cuerpo": "La economía argentina acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, de acuerdo con un informe de la Bolsa de Comercio de Rosario.\n\nEl análisis detalla que el Estado obtuvo ingresos por 120,7 billones de pesos y gastos primarios de 107,4 billones en ese lapso. El resultado fiscal primario llegó a 13,3 billones de pesos, lo que representa una baja interanual del 15,9% pero se ubica como el tercer mejor registro desde 2009. La dinámica mensual arrojó resultados positivos en siete de los ocho meses, con la única excepción de junio debido al pago del medio aguinaldo y al traslado de vencimientos impositivos.\n\nEn el sector externo, el intercambio comercial alcanzó 33 meses consecutivos con saldo favorable y la mayor cifra para los primeros ocho meses desde 2009. Las exportaciones sumaron 67.766 millones de dólares, con subas destacadas en el rubro de combustibles y energía.",
+      "guion": "La economía nacional acumula superávits gemelos entre enero y agosto.",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T14:52:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T02:31:37.843Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Superávit financiero de 2,6 billones de pesos en ocho meses",
+        "Balanza comercial positiva por 18.380 millones de dólares",
+        "Tres años consecutivos de resultados gemelos para el período",
+        "Incremento de las exportaciones impulsado por combustibles y energía"
+      ],
+      "seSabe": [
+        "El superávit financiero acumulado llegó a 2,6 billones de pesos entre enero y agosto",
+        "El saldo comercial positivo alcanzó los 18.380 millones de dólares",
+        "El Estado registró ingresos por 120,7 billones de pesos",
+        "Las exportaciones totales sumaron 67.766 millones de dólares"
+      ],
+      "textoRedes": "La economía nacional acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, según un informe sectorial.",
+      "etiquetas": [
+        "economia",
+        "superavit",
+        "exportaciones",
+        "comercio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+          "fecha": "2026-10-11T14:52:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe de la Bolsa de Comercio de Rosario sobre superávit financiero, fiscal y comercial."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/11/por-tercer-ano-consecutivo-milei-reedito-los-superavits-gemelos-de-los-primeros-anos-del-kirchnerismo/",
+          "fecha": "2026-10-11T22:06:54.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en los datos generales del informe de la Bolsa de Comercio de Rosario sobre la economía nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-economia-nacional-acumula-superavits-gemelos-entre-enero-y-agosto",
+      "foto": {
+        "archivo": "fotos-notas/t691yd.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "153zuaz",
       "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
       "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
@@ -1128,6 +1272,85 @@
       }
     },
     {
+      "id": "9rb0wa",
+      "titulo": "Proponen tokenizar regalías mineras para financiar a distritos",
+      "copete": "El ex juez penal y asesor legal Daniel Llermanos sostuvo que la digitalización de flujos productivos permite adelantar recursos para los Estados locales y comunales.",
+      "cuerpo": "El planteo se realiza en el marco del esquema que impulsa la firma Oroblock vinculado al proyecto minero Corina en La Rioja. Según datos de la empresa, la iniciativa abarca 24.647 hectáreas con yacimientos de oro, cobre y plata en etapa de exploración.\n\nEl asesor explicó que el mecanismo permite adelantar recursos futuros y fraccionarlos para inversores. Por su parte, el director financiero de la firma, Manuel Arias, señaló que el marco regulado actual de la Comisión Nacional de Valores ya permite tokenizar activos sin necesidad de una nueva ley.",
+      "guion": "Proponen tokenizar regalías mineras para financiar a distritos.",
+      "seccion": "Economía",
+      "medios": [
+        "iProfesional",
+        "Noticias Argentinas (NA)",
+        "Ecos Diarios (Necochea)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T11:27:07.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T15:35:07.552Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Daniel Llermanos plantea tokenizar regalías públicas.",
+        "La medida busca adelantar recursos para los Estados.",
+        "El esquema se vincula al proyecto minero Corina.",
+        "La Comisión Nacional de Valores regula el sistema."
+      ],
+      "seSabe": [
+        "Daniel Llermanos afirmó que la tokenización de regalías sirve como financiamiento para Estados locales.",
+        "El abogado cumple funciones como asesor de la firma Oroblock.",
+        "El proyecto minero Corina abarca 24.647 hectáreas en La Rioja.",
+        "Manuel Arias se desempeña como director financiero de la empresa."
+      ],
+      "noConfirmado": [
+        "Todavía no se aprobó el proyecto de ley presentado en el Congreso sobre tokenización soberana."
+      ],
+      "textoRedes": "El asesor legal Daniel Llermanos afirmó que la tokenización de regalías públicas puede servir como vía de financiamiento para provincias y municipios.",
+      "etiquetas": [
+        "economia",
+        "regalias",
+        "financiamiento",
+        "tecnologia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
+          "fecha": "2026-10-11T11:27:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones completas de Daniel Llermanos, Manuel Arias y Osvaldo Di Giorgio sobre el proyecto minero Corina."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/proponen-la-tokenizacion-de-regalias-mineras-para-impulsar-inversiones-en-provincias",
+          "fecha": "2026-10-11T13:16:43.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en las afirmaciones iniciales del asesor legal Daniel Llermanos."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/economia/466364-como-la-tokenizacion-de-regalias-mineras-puede-impulsar-inversiones",
+          "fecha": "2026-10-11T14:15:00.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la postura sobre la tokenización de regalías para provincias."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "proponen-tokenizar-regalias-mineras-para-financiar-a-distritos",
+      "foto": {
+        "archivo": "fotos-notas/9rb0wa.jpg",
+        "credito": "Foto: iProfesional"
+      }
+    },
+    {
       "id": "clima20261011",
       "propia": "clima",
       "titulo": "El clima de hoy en Balcarce: mínima de 8° y máxima de 14°",
@@ -1256,7 +1479,9 @@
       "guion": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45055-unimos-la-necesidad-de-las-familias-con-la-busqueda-laboral-de-los-acompanantes-terapeuticos/",
       "teniaImagenLaFuente": false,
@@ -1323,6 +1548,110 @@
       "foto": {
         "archivo": "fotos-notas/atnmk9.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "jzwgk2",
+      "titulo": "Hinchas de River insultan a Claudio Tapia en el estadio Monumental",
+      "copete": "Los simpatizantes reprobaron al presidente de la AFA en la previa del partido frente a Estudiantes de Río Cuarto. El malestar creció tras las fallas organizativas en la despedida de Lionel Messi.",
+      "cuerpo": "Los simpatizantes de River Plate entonaron cánticos de rechazo contra Claudio Tapia en la previa del encuentro frente a Estudiantes de Río Cuarto. La protesta se escuchó desde las cuatro tribunas del estadio Monumental durante la salida de los planteles al campo de juego.\n\nEl malestar generalizado se profundizó a raíz de los problemas organizativos registrados durante el homenaje a Lionel Messi. Por estos inconvenientes, la productora Marketing Sports y la institución deportiva cruzaron reproches sobre la responsabilidad de las fallas técnicas y los cortes de energía.",
+      "guion": "Hinchas de River insultan a Claudio Tapia en el estadio Monumental",
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Olé",
+        "Canal 26",
+        "Clarín"
+      ],
+      "enlace": "https://www.clarin.com/deportes/monumental-canto-chiqui-tapia-polemica-river-afa-despedida-messi_0_nTZG1v8VPi.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T00:49:54.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T11:31:38.179Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Simpatizantes de River insultaron a Claudio Tapia en el Monumental",
+        "La protesta ocurrió antes del partido frente a Estudiantes de Río Cuarto",
+        "El conflicto se potenció tras la fallida despedida de Lionel Messi",
+        "La productora y el club se culpan mutuamente por los problemas técnicos"
+      ],
+      "noConfirmado": [
+        "No se informaron sanciones disciplinarias para los simpatizantes involucrados en los cánticos.",
+        "No trascendió si habrá una resolución judicial o institucional por el cruce de comunicados entre el club y la productora."
+      ],
+      "textoRedes": "Los hinchas de River volvieron a insultar a Claudio Tapia en la previa del partido contra Estudiantes de Río Cuarto en el Monumental. El enojo creció por la fallida organización en la despedida de Lionel Messi.",
+      "etiquetas": [
+        "River Plate",
+        "Claudio Tapia",
+        "AFA",
+        "Estudiantes de Río Cuarto",
+        "Estadio Monumental",
+        "Lionel Messi"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/monumental-canto-chiqui-tapia-polemica-river-afa-despedida-messi_0_nTZG1v8VPi.html",
+          "fecha": "2026-10-11T00:49:54.000Z",
+          "oficial": false,
+          "aporte": "Detalló los insultos de los hinchas en el Monumental y el conflicto con la productora."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/river-plate/hinchada-river-insulto-chiquitapia-guerra-afa-stefanodicarlo_0_WsNMwkukq3.html",
+          "fecha": "2026-10-11T01:05:56.000Z",
+          "oficial": false,
+          "aporte": "Informó los cánticos contra el presidente de la AFA en la salida de los equipos."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/river-plate/chiqui-tapia-boton-canticos-hinchas-river-presidente-afa_3_fAfPW5j6RS.html",
+          "fecha": "2026-10-11T02:05:27.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no contener texto en su resumen."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/10/11/river-volvio-a-apuntar-contra-chiqui-tapia-insultos-en-el-monumental-tras-la-polemica-con-la-afa-por-la-despedida-de-messi/",
+          "fecha": "2026-10-11T11:07:57.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los insultos de la parcialidad de River en la previa frente a Estudiantes de Río Cuarto."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "11lqk0q",
+          "titulo": "Marketing Sports acusa a River por fallas en la despedida de Messi",
+          "fecha": "2026-10-08T19:00:00.000Z",
+          "ruta": "/nota/marketing-sports-acusa-a-river-por-fallas-en-la-despedida-de-messi-11lqk0q"
+        },
+        {
+          "id": "zqq9w8",
+          "titulo": "Hinchas insultan a Claudio Tapia en la despedida de Lionel Messi",
+          "fecha": "2026-10-06T20:18:29.000Z",
+          "ruta": "/nota/hinchas-insultan-a-claudio-tapia-en-la-despedida-de-lionel-messi-zqq9w8"
+        },
+        {
+          "id": "o99ioz",
+          "titulo": "Lionel Messi juega su partido despedida en el Monumental",
+          "fecha": "2026-10-03T13:24:05.000Z",
+          "ruta": "/nota/lionel-messi-juega-su-partido-despedida-en-el-monumental-o99ioz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "hinchas-de-river-insultan-a-claudio-tapia-en-el-estadio-monumental",
+      "foto": {
+        "archivo": "fotos-notas/jzwgk2.jpg",
+        "credito": "Foto: Clarín"
       }
     },
     {
@@ -1672,9 +2001,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "iProfesional",
-        "TN (Todo Noticias)",
-        "Olé",
-        "Doble Amarilla"
+        "TN (Todo Noticias)"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/10/el-gobierno-reitero-la-solicitud-a-la-fia-para-que-la-argentina-sea-sede-de-un-gran-premio-de-la-formula-1/",
       "teniaImagenLaFuente": true,
@@ -1748,15 +2075,16 @@
     "Política",
     "Cultura y agenda",
     "Agro",
+    "Fútbol",
     "Economía"
   ],
   "temas": [],
   "clima": {
     "ahora": {
       "temp": 6,
-      "sensacion": 4,
-      "humedad": 94,
-      "viento": 7,
+      "sensacion": 3,
+      "humedad": 95,
+      "viento": 8,
       "rumbo": "SE",
       "cielo": "Despejado",
       "esDeDia": false
@@ -2111,12 +2439,6 @@
   },
   "pendientes": [
     {
-      "id": "cehe1a",
-      "titulo": "Colapinto, tras los abandonos consecutivos: “Fue el peor…",
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
-    },
-    {
       "id": "nfmavy",
       "titulo": null,
       "seccion": "Policiales",
@@ -2141,6 +2463,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "hjfvi5",
+      "titulo": "El balance de Franco Colapinto tras su abandono: «Fueron…",
+      "seccion": "Automovilismo",
+      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
+    },
+    {
       "id": "6gphoh",
       "titulo": "La historia de Nico: su mamá contó cómo atraviesan el…",
       "seccion": "Balcarce",
@@ -2161,12 +2489,6 @@
     {
       "id": "1dwyzr7",
       "titulo": "Plus Ultra redujo sus vuelos a Madrid y los pasajeros…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "d57r1j",
-      "titulo": "Denunciaron penalmente a Caputo y Bausili por la timba con…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
     }
