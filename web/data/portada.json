@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T03:11:25.564Z",
+  "generado": "2026-10-12T03:20:10.260Z",
   "notas": [
     {
       "id": "irpmd8",
@@ -414,12 +414,12 @@
       "medios": [
         "Minuto Uno",
         "Perfil",
+        "C5N",
         "Crónica",
         "Canal 26",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
-        "C5N",
-        "Diario Popular"
+        "El Día"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -589,9 +589,9 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "Infobae",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
-        "Realpolitik",
-        "Diario Popular"
+        "Realpolitik"
       ],
       "enlace": "https://noticiasargentinas.com/cultura/rosario-vive-una-nueva-edicion-de-la-feria-internacional-del-libro_a6acbecc5f61ec7711f784fc2",
       "teniaImagenLaFuente": true,
@@ -1645,9 +1645,9 @@
         "Agencia DIB",
         "Infobae",
         "El Destape",
+        "Ámbito",
         "Crónica",
-        "Noticias Argentinas (NA)",
-        "Ámbito"
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://dib.com.ar/politica/malvinas-el-acuerdo-punta-arenas-proponen-quitar-beneficios-fiscales-empresas-chilenas-n56403",
       "teniaImagenLaFuente": true,
@@ -1844,13 +1844,13 @@
         "QZ Noticias (Mar del Plata)",
         "Infobae",
         "Perfil",
+        "Ámbito",
         "Minuto Uno",
         "Crónica",
         "Radio Mitre",
         "Canal 26",
-        "Noticias Argentinas (NA)",
-        "Ámbito",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "iProfesional",
         "TN (Todo Noticias)"
       ],
@@ -2146,7 +2146,7 @@
           "edicion": 1
         },
         "lugar": "Anfiteatro del Cerro El Triunfo",
-        "nota": "Primera edición en 2026. Si funciona, es candidata a repetirse: revisar si vuelve en 2027.",
+        "nota": "Tuvo su primera edición en 2026.",
         "confirmado": false
       },
       {
@@ -2161,7 +2161,7 @@
           "edicion": null
         },
         "lugar": "Cerro \"El Triunfo\"",
-        "nota": "Trail de montaña con distancias de 10, 21, 42, 70 y 100 km. Ya aparece en la API del municipio.",
+        "nota": "Trail de montaña con distancias de 10, 21, 42, 70 y 100 km.",
         "confirmado": false
       }
     ]
@@ -2288,12 +2288,6 @@
     "tocaHoy": false
   },
   "pendientes": [
-    {
-      "id": "kryla3",
-      "titulo": "Cómo fue el arranque de Colapinto en el GP de Singapur y…",
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
     {
       "id": "nfmavy",
       "titulo": null,
