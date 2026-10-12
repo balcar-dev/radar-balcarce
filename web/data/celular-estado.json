@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T18:32:09.843Z",
- "portada": 36,
- "archivo": 960,
+ "generado": "2026-10-12T19:02:24.207Z",
+ "portada": 39,
+ "archivo": 965,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-12T18:32:09.872Z",
+  "generado": "2026-10-12T19:02:24.227Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-12T18:35:35.230Z"
    },
    {
     "nombre": "farmacia",
@@ -125,8 +125,8 @@
     "hora": "15:00",
     "voz": "locutora",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 55,
+    "salio": "2026-10-12T18:35:35.230Z",
+    "segundos": null,
     "notas": [
      {
       "id": "rzhblo",
@@ -198,11 +198,16 @@
      "id": "r0o8z3",
      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
      "cuando": "2026-10-12T17:04:55.578Z"
+    },
+    {
+     "id": "q9kshm",
+     "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
+     "cuando": "2026-10-12T18:38:29.498Z"
     }
    ],
    "cola": [],
-   "cupo": 1,
-   "proximoDesde": "2026-10-12T18:34:55.578Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-12T20:08:29.498Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

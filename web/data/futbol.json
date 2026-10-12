@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T03:01:54.999Z",
+ "consultado": "2026-10-12T19:02:22.958Z",
  "equipos": [
   "9739",
   "3",
@@ -1133,8 +1133,8 @@
     "id": "401841606",
     "competencia": "liga",
     "inicio": "2026-10-12T19:00:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "2'",
     "local": {
      "id": "12",
      "nombre": "Lanús",
@@ -1791,7 +1791,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-12T17:02:24.772Z",
+ "tablaCuando": "2026-10-12T19:02:22.958Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
