@@ -4429,7 +4429,15 @@
       "notaId": null
     }
   },
-  "problemas": {},
+  "problemas": {
+    "2026-10-12/efemeride/instagram/reel": {
+      "pieza": "efemeride",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-12T12:08:01.007Z"
+    }
+  },
   "facebookFoto": {},
   "reelsEnFacebook": {
     "2026-10-08/clima-noche": {
