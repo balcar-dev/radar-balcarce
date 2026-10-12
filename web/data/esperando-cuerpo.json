@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-12T11:32:16.378Z",
+ "generado": "2026-10-12T12:01:47.607Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -17,28 +17,6 @@
    ],
    "intentos": 3,
    "motivo": "sin material",
-   "maximo": 3
-  },
-  {
-   "id": "rb2qmr",
-   "titulo": "El Indec da a conocer este martes la inflación oficial de septiembre",
-   "copete": "Este martes por la tarde el Indec (Instituto Nacional de Estadística y Censos) dará a conocer la inflación de septiembre, luego del 1,7% registrado en agosto. Para el pasado mes, las consultoras privadas prevén que el indicador se ubique cerca del 2%, lo que marcaría una…",
-   "seccion": "Economía",
-   "fecha": "2026-10-12T05:52:01.000Z",
-   "fuentes": [
-    {
-     "medio": "La Noticia 1",
-     "enlace": "https://www.lanoticia1.com/noticia/el-indec-da-a-conocer-este-martes-la-inflacion-oficial-de-septiembre",
-     "fecha": "2026-10-12T05:52:01.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/inflacion--el-indec-da-a-conocer-el-ipc-de-septiembre-que-se-habria-vuelto-a-acelerar_a6ac7bb855319d0dbc279c751",
-     "fecha": "2026-10-12T11:00:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 3 problemas (numero): el cuerpo dice 7 y la fuente no lo dice; sin esas oraciones quedan 67 palabras",
    "maximo": 3
   }
  ]

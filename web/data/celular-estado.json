@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T11:32:16.378Z",
- "portada": 20,
- "archivo": 935,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-12T12:01:47.607Z",
+ "portada": 25,
+ "archivo": 936,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-12T11:32:16.406Z",
+  "generado": "2026-10-12T12:01:47.628Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -125,15 +125,32 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 37,
+    "notas": [
+     {
+      "id": "p21pyq",
+      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
+     }
+    ]
    }
   ],
   "facebook": {
-   "hoy": [],
+   "hoy": [
+    {
+     "id": "vt9ful",
+     "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
+     "cuando": "2026-10-12T11:45:27.345Z"
+    }
+   ],
    "cola": [],
-   "cupo": 5,
-   "proximoDesde": "2026-10-11T00:04:27.070Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-12T13:15:27.345Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

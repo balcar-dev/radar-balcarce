@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T11:32:16.378Z",
+  "generado": "2026-10-12T12:01:47.607Z",
   "notas": [
     {
       "id": "clima20261012",
@@ -69,14 +69,15 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "La Nueva",
-        "La Verdad"
+        "La Verdad",
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T06:18:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T11:31:40.882Z",
-      "relevancia": 63,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -145,71 +146,95 @@
       "slug": "pueblos-originarios-protestan-frente-a-la-casa-de-cristina-kirchner"
     },
     {
-      "id": "p21pyq",
-      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "copete": "El piloto argentino debió abandonar la competencia en el circuito de Marina Bay por problemas técnicos y generó la furia de un competidor de Red Bull.",
-      "cuerpo": "Franco Colapinto debió abandonar la competencia en el circuito de Marina Bay por problemas mecánicos en su monoplaza durante el Gran Premio de Singapur.\n\nEl piloto argentino defendía la duodécima posición cuando generó la irritación de Isack Hadjar, integrante de la escudería Red Bull, quien debió extremar recursos por radio para intentar superarlo.\n\nEl competidor francés recriminó la resistencia del pilarense antes de quedar libre en la pista del trazado asiático, donde el automovilista nacional había cumplido destacadas actuaciones en el ciclo previo.",
-      "guion": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "seccion": "Automovilismo",
+      "id": "rb2qmr",
+      "titulo": "El Indec publica el martes la inflación oficial de septiembre",
+      "copete": "El organismo estadístico dará a conocer el índice de precios tras estimaciones privadas que ubican la suba en torno al dos por ciento, impulsada por alimentos y bebidas.",
+      "cuerpo": "El Instituto Nacional de Estadística y Censos difundirá el martes por la tarde el índice de precios al consumidor del noveno mes del año. Las consultoras privadas estiman que la suba se ubicará alrededor del dos por ciento, lo que frenaría la desaceleración registrada en los meses previos.\n\nEl secretario de Finanzas, Federico Furiase, sostuvo previamente que el indicador se ubica en un rango de entre 1,5% y 2%. Por su parte, el Relevamiento de Expectativas de Mercado elaborado por el Banco Central proyectó el incremento mensual en 1,9%, mientras que la inflación porteña alcanzó el 1,8% en septiembre, de acuerdo con el informe oficial difundido el 8 de octubre.\n\nEl repunte mensual estuvo motorizado principalmente por el rubro de alimentos y bebidas, además de los incrementos en precios estacionales como verduras y indumentaria.",
+      "guion": "El Indec publica el martes la inflación oficial de septiembre",
+      "seccion": "Economía",
       "medios": [
+        "La Noticia 1",
         "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Verdad"
       ],
-      "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+      "enlace": "https://www.lanoticia1.com/noticia/el-indec-da-a-conocer-este-martes-la-inflacion-oficial-de-septiembre",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T01:36:00.000Z",
+      "fecha": "2026-10-12T05:52:01.000Z",
       "sinFecha": false,
-      "visto": "2026-10-12T11:02:16.567Z",
-      "relevancia": 67,
+      "visto": "2026-10-12T12:01:29.750Z",
+      "relevancia": 56,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Franco Colapinto dejó la competencia por fallas mecánicas.",
-        "El hecho ocurrió en el circuito de Marina Bay.",
-        "Isack Hadjar recriminó la defensa del piloto argentino."
+        "El Indec difunde este martes el dato oficial de inflación de septiembre.",
+        "Las estimaciones privadas ubican la suba mensual en torno al dos por ciento.",
+        "El aumento responde principalmente al incremento en alimentos, bebidas y productos estacionales."
       ],
       "seSabe": [
-        "Franco Colapinto abandonó el Gran Premio de Singapur por fallas técnicas en su monoplaza.",
-        "El piloto de Alpine defendía el puesto doce en el circuito de Marina Bay.",
-        "Isack Hadjar consultó por radio a su equipo cómo superar al argentino."
+        "El Indec dará a conocer este martes por la tarde la inflación oficial de septiembre.",
+        "Las consultoras privadas prevén que el indicador se ubique cerca del dos por ciento.",
+        "El secretario de Finanzas, Federico Furiase, indicó que el índice se sitúa entre el 1,5% y el 2%."
       ],
       "noConfirmado": [
-        "Los motivos exactos de la falla técnica en el vehículo de Colapinto."
+        "El porcentaje exacto que informará el organismo estadístico nacional."
       ],
-      "textoRedes": "Franco Colapinto abandonó el Gran Premio de Singapur por problemas mecánicos y generó la furia de Isack Hadjar durante una disputa en pista.",
+      "textoRedes": "El Indec difundirá este martes el índice de inflación de septiembre tras estimaciones privadas que ubican la suba en torno al dos por ciento.",
       "etiquetas": [
-        "Franco Colapinto",
-        "Gran Premio de Singapur",
-        "Isack Hadjar"
+        "Indec",
+        "inflacion",
+        "economia",
+        "septiembre",
+        "precios"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
-          "fecha": "2026-10-12T01:36:00.000Z",
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/el-indec-da-a-conocer-este-martes-la-inflacion-oficial-de-septiembre",
+          "fecha": "2026-10-12T05:52:01.000Z",
           "oficial": false,
-          "aporte": "Detalló el abandono de Colapinto por fallas técnicas y el enojo del piloto Isack Hadjar."
+          "aporte": "Informó que el Indec dará a conocer la inflación de septiembre este martes por la tarde."
         },
         {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-7-28-0-hadjar-exploto-contra-colapinto-sabia-que-este-tipo-iba-a-ser",
-          "fecha": "2026-10-12T10:36:29.000Z",
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/inflacion--el-indec-da-a-conocer-el-ipc-de-septiembre-que-se-habria-vuelto-a-acelerar_a6ac7bb855319d0dbc279c751",
+          "fecha": "2026-10-12T11:00:00.000Z",
           "oficial": false,
-          "aporte": "Indicó que Colapinto no tuvo el desempeño esperado y generó la furia de un rival."
+          "aporte": "Aportó detalles sobre las proyecciones de las consultoras privadas y las declaraciones del secretario de Finanzas."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/inflacion-el-indec-da-a-conocer-el-ipc-de-septiembre-que-se-habria-vuelto-a-acelerar/",
+          "fecha": "2026-10-12T11:48:43.000Z",
+          "oficial": false,
+          "aporte": "Ratificó que la inflación de septiembre habría frenado su desaceleración y se ubicaría en torno al dos por ciento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "e5v4vp",
+          "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
+          "fecha": "2026-10-08T14:00:00.000Z",
+          "ruta": "/nota/la-inflacion-portena-llega-al-1-8-por-ciento-en-septiembre-e5v4vp"
+        },
+        {
+          "id": "1uh42rm",
+          "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
+          "fecha": "2026-10-06T21:24:44.000Z",
+          "ruta": "/nota/los-analistas-estiman-una-inflacion-de-1-9-por-ciento-para-septiembre-1uh42rm"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "hadjar-cuestiona-con-dureza-a-colapinto-tras-el-gran-premio-de",
+      "slug": "el-indec-publica-el-martes-la-inflacion-oficial-de-septiembre",
       "foto": {
-        "archivo": "fotos-notas/p21pyq.jpg",
-        "credito": "Foto: La Nueva"
+        "archivo": "fotos-notas/rb2qmr.jpg",
+        "credito": "Foto: La Noticia 1"
       }
     },
     {
@@ -281,6 +306,77 @@
       }
     },
     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
+      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
+      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-11T23:31:31.632Z",
+      "sinFecha": true,
+      "visto": "2026-10-11T23:31:31.632Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
+        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
+        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
+        "César Rodríguez completó la prueba en 4h49'20\"."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
+      "etiquetas": [
+        "Emilia Scioli",
+        "Ironman",
+        "Deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1jfpdis",
+          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
+          "fecha": "2026-10-06T16:26:52.163Z",
+          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
+        },
+        {
+          "id": "repaso20261006noche",
+          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
+          "fecha": "2026-10-07T00:05:14.231Z",
+          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
+      "foto": {
+        "archivo": "fotos-notas/1hapve0.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "1lact95",
       "titulo": "Sustraen una moto en la madrugada y piden datos",
       "copete": "Una motocicleta Mondial Max de 110 cc fue sustraída en la zona de calle 108 entre 17 y 19. El propietario solicita colaboración para localizarla.",
@@ -288,8 +384,7 @@
       "guion": "Sustraen una moto en la madrugada y piden datos",
       "seccion": "Policiales",
       "medios": [
-        "Radio Gabal (FM 104.1)",
-        "Puntonueve (FM 100.9)"
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/policiales/robaron-una-moto-durante-la-madrugada-y-buscan-informacion-para-recuperarla",
       "teniaImagenLaFuente": true,
@@ -444,6 +539,76 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "natacion-local-consigue-dos-podios-nacionales-en-buenos-aires"
+    },
+    {
+      "id": "p21pyq",
+      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "copete": "El piloto argentino debió abandonar la competencia en el circuito de Marina Bay por problemas técnicos y generó la furia de un competidor de Red Bull.",
+      "cuerpo": "Franco Colapinto debió abandonar la competencia en el circuito de Marina Bay por problemas mecánicos en su monoplaza durante el Gran Premio de Singapur.\n\nEl piloto argentino defendía la duodécima posición cuando generó la irritación de Isack Hadjar, integrante de la escudería Red Bull, quien debió extremar recursos por radio para intentar superarlo.\n\nEl competidor francés recriminó la resistencia del pilarense antes de quedar libre en la pista del trazado asiático, donde el automovilista nacional había cumplido destacadas actuaciones en el ciclo previo.",
+      "guion": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Minuto Uno",
+        "TyC Sports",
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T22:48:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T11:02:16.567Z",
+      "relevancia": 87,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto dejó la competencia por fallas mecánicas.",
+        "El hecho ocurrió en el circuito de Marina Bay.",
+        "Isack Hadjar recriminó la defensa del piloto argentino."
+      ],
+      "seSabe": [
+        "Franco Colapinto abandonó el Gran Premio de Singapur por fallas técnicas en su monoplaza.",
+        "El piloto de Alpine defendía el puesto doce en el circuito de Marina Bay.",
+        "Isack Hadjar consultó por radio a su equipo cómo superar al argentino."
+      ],
+      "noConfirmado": [
+        "Los motivos exactos de la falla técnica en el vehículo de Colapinto."
+      ],
+      "textoRedes": "Franco Colapinto abandonó el Gran Premio de Singapur por problemas mecánicos y generó la furia de Isack Hadjar durante una disputa en pista.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Gran Premio de Singapur",
+        "Isack Hadjar"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
+          "fecha": "2026-10-12T01:36:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el abandono de Colapinto por fallas técnicas y el enojo del piloto Isack Hadjar."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-7-28-0-hadjar-exploto-contra-colapinto-sabia-que-este-tipo-iba-a-ser",
+          "fecha": "2026-10-12T10:36:29.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Colapinto no tuvo el desempeño esperado y generó la furia de un rival."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "hadjar-cuestiona-con-dureza-a-colapinto-tras-el-gran-premio-de",
+      "foto": {
+        "archivo": "fotos-notas/p21pyq.jpg",
+        "credito": "Foto: La Nueva"
+      }
     },
     {
       "id": "ay4wdh",
@@ -634,6 +799,98 @@
       }
     },
     {
+      "id": "1pi4mqa",
+      "titulo": "Diputados debate el proyecto que sanciona el vandalismo rural",
+      "copete": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en establecimientos agropecuarios. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
+      "cuerpo": "La propuesta incorpora el artículo 150 bis al Código Penal con sanciones de un mes a un año de prisión para quien ingrese a un campo sin autorización.\n\nEl texto, impulsado por el legislador Martín Ardohaín, también crea el artículo 184 bis para castigar con penas de dos a ocho años de prisión y multas a quienes dañen cultivos, ganado, maquinaria o infraestructura productiva.\n\nEl diputado opositor Ramiro Gutiérrez objetó la iniciativa al señalar que replica figuras legales ya contempladas en la normativa actual y establece escalas punitivas inferiores para conductas equivalentes.",
+      "guion": "Diputados debate el proyecto que sanciona el vandalismo rural.",
+      "seccion": "Agro",
+      "medios": [
+        "Infobae",
+        "La Nación"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T19:59:13.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:31:31.632Z",
+      "relevancia": 41,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El plenario de comisiones aprobó el dictamen el 6 de octubre.",
+        "Se propone incorporar los artículos 150 bis y 184 bis al Código Penal.",
+        "Las penas por daños a la producción rural alcanzan hasta los ocho años de prisión.",
+        "La oposición cuestionó que la iniciativa duplica normas ya vigentes."
+      ],
+      "seSabe": [
+        "El proyecto obtuvo dictamen de mayoría en un plenario de comisiones de la Cámara de Diputados.",
+        "La iniciativa fue presentada por el diputado Martín Ardohaín.",
+        "El despacho cosechó 41 adhesiones.",
+        "El artículo 150 bis castiga la intrusión en establecimientos rurales con hasta un año de prisión.",
+        "El artículo 184 bis prevé penas de dos a ocho años por daños a cultivos, ganado e infraestructura."
+      ],
+      "noConfirmado": [
+        "La recepción del proyecto en el recinto de la Cámara Baja para la búsqueda de media sanción."
+      ],
+      "textoRedes": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en campos. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
+      "etiquetas": [
+        "Diputados",
+        "vandalismo rural",
+        "Código Penal",
+        "agricultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
+          "fecha": "2026-10-11T19:59:13.000Z",
+          "oficial": false,
+          "aporte": "Detalló los detalles del dictamen, los artículos propuestos y las declaraciones del diputado Martín Ardohaín."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/vandalismo-rural-la-oposicion-advirtio-que-el-proyecto-que-obtuvo-dictamen-duplica-delitos-y-reduce-nid11102026/",
+          "fecha": "2026-10-11T23:17:31.000Z",
+          "oficial": false,
+          "aporte": "Aportó las críticas y los cuestionamientos planteados por el diputado Ramiro Gutiérrez."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "w7o4x7",
+          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
+          "fecha": "2026-10-06T12:56:37.000Z",
+          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
+        },
+        {
+          "id": "c7em03",
+          "titulo": "La oposición negocia un dictamen común contra la morosidad antes del martes",
+          "fecha": "2026-09-27T11:10:21.000Z",
+          "ruta": "/nota/vence-el-plazo-para-dictaminar-y-la-oposicion-negocia-un-proyecto-c7em03"
+        },
+        {
+          "id": "q84c12",
+          "titulo": "Una investigadora del INTA cuestiona la suspensión de un proyecto",
+          "fecha": "2026-09-24T14:26:31.000Z",
+          "ruta": "/nota/carta-abierta-de-investigadora-del-inta-balcarce-q84c12"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "diputados-debate-el-proyecto-que-sanciona-el-vandalismo-rural",
+      "foto": {
+        "archivo": "fotos-notas/1pi4mqa.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "jiv3ba",
       "titulo": "El Senado provincial aprueba cambios en la prioridad de paso en esquinas",
       "copete": "El Senado bonaerense convirtió en ley una reforma al Código de Tránsito que modifica las excepciones a la prioridad de paso por la derecha en rutas y avenidas.",
@@ -694,77 +951,6 @@
       }
     },
     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
-      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
-      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T17:54:03.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
-        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
-        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
-        "César Rodríguez completó la prueba en 4h49'20\"."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
-      "etiquetas": [
-        "Emilia Scioli",
-        "Ironman",
-        "Deportes",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1jfpdis",
-          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
-          "fecha": "2026-10-06T16:26:52.163Z",
-          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
-        },
-        {
-          "id": "repaso20261006noche",
-          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
-          "fecha": "2026-10-07T00:05:14.231Z",
-          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
-      "foto": {
-        "archivo": "fotos-notas/1hapve0.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "1xwup7g",
       "titulo": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
       "copete": "El presidente de la categoría reconoció el interés de los pilotos por correr en el autódromo local tras la reapertura. La última competencia en el circuito se disputó en 2001.",
@@ -772,10 +958,9 @@
       "guion": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
       "seccion": "Automovilismo",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "Campeones"
+        "Campeones",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/moriatis-sobre-el-regreso-del-tn-a-balcarce-los-pilotos-te-dicen-tendriamos-que-ir",
       "teniaImagenLaFuente": true,
@@ -961,6 +1146,152 @@
       }
     },
     {
+      "id": "t691yd",
+      "titulo": "La economía nacional acumula superávits gemelos entre enero y agosto",
+      "copete": "El país registra cuentas públicas positivas por 2,6 billones de pesos y un saldo comercial favorable de 18.380 millones de dólares en los primeros ocho meses del año, según un informe sectorial.",
+      "cuerpo": "La economía argentina acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, de acuerdo con un informe de la Bolsa de Comercio de Rosario.\n\nEl análisis detalla que el Estado obtuvo ingresos por 120,7 billones de pesos y gastos primarios de 107,4 billones en ese lapso. El resultado fiscal primario llegó a 13,3 billones de pesos, lo que representa una baja interanual del 15,9% pero se ubica como el tercer mejor registro desde 2009. La dinámica mensual arrojó resultados positivos en siete de los ocho meses, con la única excepción de junio debido al pago del medio aguinaldo y al traslado de vencimientos impositivos.\n\nEn el sector externo, el intercambio comercial alcanzó 33 meses consecutivos con saldo favorable y la mayor cifra para los primeros ocho meses desde 2009. Las exportaciones sumaron 67.766 millones de dólares, con subas destacadas en el rubro de combustibles y energía.",
+      "guion": "La economía nacional acumula superávits gemelos entre enero y agosto.",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T14:52:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T02:31:37.843Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Superávit financiero de 2,6 billones de pesos en ocho meses",
+        "Balanza comercial positiva por 18.380 millones de dólares",
+        "Tres años consecutivos de resultados gemelos para el período",
+        "Incremento de las exportaciones impulsado por combustibles y energía"
+      ],
+      "seSabe": [
+        "El superávit financiero acumulado llegó a 2,6 billones de pesos entre enero y agosto",
+        "El saldo comercial positivo alcanzó los 18.380 millones de dólares",
+        "El Estado registró ingresos por 120,7 billones de pesos",
+        "Las exportaciones totales sumaron 67.766 millones de dólares"
+      ],
+      "textoRedes": "La economía nacional acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, según un informe sectorial.",
+      "etiquetas": [
+        "economia",
+        "superavit",
+        "exportaciones",
+        "comercio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+          "fecha": "2026-10-11T14:52:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe de la Bolsa de Comercio de Rosario sobre superávit financiero, fiscal y comercial."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/11/por-tercer-ano-consecutivo-milei-reedito-los-superavits-gemelos-de-los-primeros-anos-del-kirchnerismo/",
+          "fecha": "2026-10-11T22:06:54.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en los datos generales del informe de la Bolsa de Comercio de Rosario sobre la economía nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-economia-nacional-acumula-superavits-gemelos-entre-enero-y-agosto",
+      "foto": {
+        "archivo": "fotos-notas/t691yd.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
+      "id": "153zuaz",
+      "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social aplica un incremento del 1,66 por ciento en la Asignación Universal por Hijo durante octubre, según informó el organismo previsional. El ajuste responde a la actualización automática mensual basada en la inflación de agosto, que se ubicó en el 1,7 por ciento.\n\nEl pago de los haberes se efectiviza entre la segunda y la tercera semana del mes, ordenado según la terminación del documento de identidad de los titulares. Del total asignado, un 20 por ciento queda retenido hasta que las familias presentan la Libreta que acredita la escolaridad y los controles de salud de los menores a cargo, un trámite que se completa de manera digital mediante la plataforma oficial.",
+      "guion": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "El Cronista"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T13:27:22.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:35:55.538Z",
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Asignación Universal por Hijo sube un 1,66 por ciento en octubre.",
+        "El ajuste se calcula según el índice de inflación registrado en agosto.",
+        "El organismo previsional abona los montos entre la segunda y la tercera semana del mes por terminación de DNI."
+      ],
+      "seSabe": [
+        "La Anses oficializó un aumento del 1,66% para la AUH en octubre.",
+        "La actualización se rige por la variación inflacionaria de agosto.",
+        "El pago se distribuye entre la segunda y tercera semana del mes según el DNI."
+      ],
+      "textoRedes": "La Anses oficializó un aumento del 1,66 por ciento en la Asignación Universal por Hijo para el mes de octubre. El incremento responde a la actualización automática por inflación y los pagos se distribuyen según la terminación del documento.",
+      "etiquetas": [
+        "Anses",
+        "Asignación Universal por Hijo",
+        "octubre",
+        "aumento",
+        "prestaciones sociales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+          "fecha": "2026-10-11T13:27:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento, el índice de inflación de referencia y los detalles de la Libreta AUH."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
+          "fecha": "2026-10-11T13:28:52.000Z",
+          "oficial": false,
+          "aporte": "Informó que la Anses publicó el calendario de pagos de octubre por terminación de DNI."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
+          "fecha": "2026-10-11T16:31:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó el alcance de la cobertura en cantidad de menores y adultos a cargo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ujkaqh",
+          "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
+          "fecha": "2026-09-28T12:13:43.000Z",
+          "ruta": "/nota/anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre-ujkaqh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "anses-aplica-un-incremento-en-la-asignacion-universal-por-hijo"
+    },
+    {
       "id": "repaso20261011manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: Inter, Adrián Stoppelman y Virginia Aparicio",
@@ -1097,11 +1428,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45056-radio-lider-balcarce-stream-un-exito-rotundo-de-audiencia-desde-el-primer-dia/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-11T10:31:40.314Z",
       "sinFecha": true,
       "visto": "2026-10-11T10:31:40.314Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1147,6 +1478,83 @@
       "slug": "radio-lider-balcarce-stream-alcanza-cifras-record-a-dos-semanas-de-su",
       "foto": {
         "archivo": "fotos-notas/1m2za7b.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "atnmk9",
+      "titulo": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
+      "copete": "El cuerpo deliberativo dio luz verde a una plataforma digital municipal para conectar a familias con profesionales habilitados. La iniciativa busca ordenar la demanda creciente en salud y educación.",
+      "cuerpo": "El proyecto fue impulsado por la concejal Fara Amado Cunqueiro junto con su par Gonzalo Scioli.\n\nLa herramienta contempla el desarrollo de una sección en la página web del Municipio para consultar datos de los prestadores activos, sus áreas de incumbencia y las obras sociales con las que operan. Para formar parte, los profesionales y estudiantes avanzados deberán acreditar titulación conforme a la Resolución 1221/15.\n\nEl proyecto había sido presentado a principios de octubre por ediles del bloque Somos para ordenar una demanda creciente en familias, escuelas y centros de salud de la ciudad.",
+      "guion": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/45055-unimos-la-necesidad-de-las-familias-con-la-busqueda-laboral-de-los-acompanantes-terapeuticos/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-11T10:31:40.314Z",
+      "sinFecha": true,
+      "visto": "2026-10-11T10:31:40.314Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó el registro municipal de acompañantes terapéuticos.",
+        "Habrá una plataforma digital en la web oficial para consultar profesionales.",
+        "La iniciativa busca unir la demanda de las familias con la búsqueda laboral."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó la creación del Registro Municipal de Acompañantes Terapéuticos. Habrá una plataforma digital en la web oficial para consultar profesionales habilitados en la ciudad.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "acompañantes terapéuticos",
+        "salud",
+        "educación",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45055-unimos-la-necesidad-de-las-familias-con-la-busqueda-laboral-de-los-acompanantes-terapeuticos/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación del registro de acompañantes terapéuticos en el Concejo Deliberante y los detalles de la plataforma digital."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1pofkpj",
+          "titulo": "Concejales proponen crear un registro de acompañantes terapéuticos",
+          "fecha": "2026-10-05T20:25:05.000Z",
+          "ruta": "/nota/concejales-proponen-crear-un-registro-de-acompanantes-terapeuticos-1pofkpj"
+        },
+        {
+          "id": "repaso20261001tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: Lionel Messi y acompañantes terapéuticos",
+          "fecha": "2026-10-01T18:09:10.520Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-lionel-messi-y-acompanantes-repaso20261001tarde"
+        },
+        {
+          "id": "15i90co",
+          "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos",
+          "fecha": "2026-10-01T15:01:12.943Z",
+          "ruta": "/nota/concejales-proponen-crear-un-registro-municipal-de-acompanantes-15i90co"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-aprueba-la-creacion-del-registro-de-acompanantes",
+      "foto": {
+        "archivo": "fotos-notas/atnmk9.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
     },
@@ -1213,8 +1621,8 @@
       "seccion": "Deportes",
       "medios": [
         "Doble Amarilla",
-        "UAR (Unión Argentina de Rugby)",
-        "La Nueva"
+        "La Nueva",
+        "UAR (Unión Argentina de Rugby)"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/los-pumas-7s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos_a5e3ebe018bd16c639d207c26",
       "teniaImagenLaFuente": true,
@@ -1412,21 +1820,23 @@
   "secciones": [
     "Balcarce",
     "Argentina",
-    "Automovilismo",
-    "Policiales",
+    "Economía",
     "Deportes",
+    "Policiales",
+    "Automovilismo",
     "Política",
-    "Cultura y agenda"
+    "Cultura y agenda",
+    "Agro"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 9,
+      "temp": 10,
       "sensacion": 7,
-      "humedad": 78,
+      "humedad": 73,
       "viento": 8,
       "rumbo": "E",
-      "cielo": "Mayormente despejado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": true
     },
     "dias": [
@@ -1758,16 +2168,16 @@
   },
   "pendientes": [
     {
-      "id": "5ksf4c",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "y5v7xa",
       "titulo": null,
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"niña\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "nfmavy",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "1hbflhh",
@@ -1800,6 +2210,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "hbb57e",
+      "titulo": null,
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "1dwyzr7",
       "titulo": "Plus Ultra redujo sus vuelos a Madrid y los pasajeros…",
       "seccion": "Economía",
@@ -1812,5 +2228,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 1
 }
