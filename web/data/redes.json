@@ -4459,7 +4459,15 @@
       "notaId": null
     }
   },
-  "problemas": {},
+  "problemas": {
+    "2026-10-12/noticia1/instagram/reel": {
+      "pieza": "noticia1",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-12T13:04:27.569Z"
+    }
+  },
   "facebookFoto": {},
   "reelsEnFacebook": {
     "2026-10-08/clima-noche": {
