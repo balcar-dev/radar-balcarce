@@ -63,7 +63,6 @@
 9. **Reloj de Cloudflare** (cuando quieran dejar de depender de cron-job.org): cargar el secreto `RELOJ_GITHUB_TOKEN` en GitHub y correr «Reloj de Cloudflare» a mano. Está en `docs/08-INFRAESTRUCTURA.md`.
 
 **Con fecha**
-- **Antes del 19/10:** lista de finalistas de los Juegos Bonaerenses (19 al 23/10). Claude arma la nota.
 - **Antes del 25/10:** decidir Participá (las piezas fijas vencen el 31/10).
 - **20/10:** efemérides de noviembre: Claude las arma; ustedes las aprueban en la pestaña Fechas → Mes armado (antes del 31/10).
 - **21/10:** Next 15 deja de recibir parches. Decidir: quedarse o pasar a Next 16 (requiere R2).
@@ -87,3 +86,13 @@
 - No subir a GitHub la guía comercial con datos personales (`datos-recibidos/` del proyecto aparte).
 - Las claves y tokens nunca en un chat ni en el código: van a GitHub Secrets o al `.env`.
 - El cupo de voz (10 por día) es justo: no conviene sumar piezas con voz sin contar.
+
+## 6. Decisiones del 12/10 (Hernán y Andrés)
+
+- **Después de actualizar todo (la renovación de la estructura, la mudada a la cuenta propia y las fuentes) se hace lo de Search Console y todo lo de SEO.** Antes no.
+- **Las redes no se comparten todavía.** Todo lo que crece es orgánico; no se hizo ninguna publicación para difundirlas. Se difunden el mes que viene, cuando el proyecto esté en su versión 1.0 y ande como quieren.
+- **Juegos Bonaerenses: descartado.** No se pide más la lista de finalistas.
+- **Efemérides y feriados:** como siempre, se arman solas los días 20 de cada mes y ustedes las miran. Las placas se pueden armar antes y el audio se les agrega a medida que van saliendo cada día. Las de noviembre se arman después de la renovación (no el 20/10).
+- **Placas de efemérides:** el adorno (por ejemplo, las notas musicales) no se puede superponer con ningún texto; se acomoda en un lugar libre de la placa. Pasó el 11/10 con «octubre».
+- **Farmacia:** bajar la información, usarla como fuente propia y cotejarla con la página del Colegio por si esa página se cae o cambia; revisar también qué datos puntuales faltan (teléfonos, direcciones). Pendiente de hacer.
+- **Avisos y resumen diario por mail** (estadísticas de la web y de las redes, fallas y pendientes), en vez de WhatsApp (sin cupo desde el 4/10, aprox.). Pendiente de elegir el servicio de envío.

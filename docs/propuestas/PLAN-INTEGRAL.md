@@ -67,7 +67,7 @@ de esa lista. "C" = lo hace Claude, "P" = lo hace una persona, "D" = lo deciden 
 4. Search Console y la lista de buscadores con IA en Cloudflare (#5 y #6, P, 25 minutos).
 
 **Etapa 2: del 13 al 25/10.** Lo que vence.
-1. Juegos Bonaerenses del 19 al 23/10: cargar finalistas (P) y la nota (C).
+1. (Descartado el 12/10: ya no se pide la lista de los Juegos Bonaerenses.)
 2. Efemérides de noviembre el 20/10 (se aprueban en la pestaña Fechas).
 3. Next 16 antes del 21/10 y Ubuntu 26 el 19/10 (C, con calma).
 4. Piezas de Participá: decidir antes del 25/10 (D).

@@ -98,7 +98,6 @@ Sobre usar ChatGPT desde el Chrome para pedirle criterio: se puede, pero implica
 
 | Cuándo | Qué |
 |---|---|
-| **Antes del 19/10** | Juegos Bonaerenses (19 al 23/10): cargar la lista de finalistas de Balcarce; Claude arma la nota |
 | **20/10** | Efemérides de noviembre: Claude las arma, ustedes las aprueban en Fechas → Mes armado (antes del 31/10) |
 | **Antes del 25/10** | Decidir qué pasa con Participá (las piezas fijas vencen el 31/10) |
 | **21/10** | Next 15 deja de recibir parches. Decidir: quedarse (el límite de archivos de Cloudflare impide Next 16 sin R2) o hacer la etapa de R2 antes |

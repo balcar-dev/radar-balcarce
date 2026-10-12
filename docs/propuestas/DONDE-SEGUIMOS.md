@@ -71,7 +71,6 @@ variables y el token), Bing / IndexNow, aprobar que corran los pull requests de 
 |---|---|
 | Lunes 12/10 | Feriado. Es lunes: la poda de retiradas corre (ya se probó que la prueba la acepta vacía) |
 | 19/10 | Ubuntu 26 (los robots están fijos en Ubuntu 24.04; probar uno a propósito antes de pasar) |
-| 19 al 23/10 | Juegos Bonaerenses (lista de finalistas de Balcarce: la carga una persona) |
 | 20/10 | Armar las efemérides de noviembre (el mes armado se aprueba en la pestaña Fechas) |
 | 21/10 | Fin de parches de Next 15. **No se pasó a Next 16**: exporta 2,4 veces más archivos y el límite de Cloudflare Pages es 20.000 por despliegue (regla 148). Las páginas ya están listas; se pasa cuando haya menos archivos por página |
 | 25/10 | Decidir las piezas fijas de Participá (vencen el 31/10) |

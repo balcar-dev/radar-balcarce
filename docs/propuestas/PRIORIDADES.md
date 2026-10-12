@@ -108,7 +108,7 @@ afuera, aunque sea chico. El detalle de cada punto está en [`MEJORAS.md`](MEJOR
 | 18 | Parche de seguridad de Next 15 | Sin parches desde el **21/10** | C-3 | 1 h | C |
 | 19 | Efemérides: corrida del día 20 con aviso; decidir las piezas fijas antes del 25/10 | El **1/11** se acaban | C-17 | 1-2 h | D + C |
 | 20 | Subir el tope de notas y mandar al histórico lo que hoy se borra | Cerca del **2/11** se empiezan a perder notas | C-6 | 2 h | C |
-| 21 | Juegos Bonaerenses: lista de finalistas de Balcarce | Son del **19 al 23/10** | DEP-1 | 1 h + persona | P + C |
+| 21 | ~~Juegos Bonaerenses: lista de finalistas~~ (descartado el 12/10: no se pide más) | — | DEP-1 | 1 h + persona | P + C |
 | 22 | Reintentos de redes que gastan voz o duplican posteos | Una falla puede comerse los 10 audios | C-16 | 1 día | C |
 | 23 | Si la web se congela, que la farmacia y el clima de redes no salgan viejos | Manda gente a una farmacia que no está de turno | C-15 | 4-6 h | C |
 | 24 | Pistas que salen solas: mismas reglas que todo lo demás (sin borrador pendiente, medios argentinos, menos de 12 h, sección correcta) | Dos están intentando salir | C-11 | Medio día | C |
