@@ -3775,6 +3775,28 @@
    "cuando": "2026-10-11T13:06:22.584Z",
    "medida": "2026-10-12T01:30:22.097Z",
    "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/1749588762821001",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-manana",
+   "dia": "2026-10-11",
+   "cuando": "2026-10-11T10:05:26.367Z",
+   "medida": "2026-10-12T10:30:18.819Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1714304956334516",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "clima-manana",
+   "dia": "2026-10-11",
+   "cuando": "2026-10-11T10:05:50.199Z",
+   "medida": "2026-10-12T10:30:18.819Z",
+   "metricas": {}
   }
  ]
 }
