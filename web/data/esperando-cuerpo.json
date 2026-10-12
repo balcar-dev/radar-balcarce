@@ -1,7 +1,44 @@
 {
- "generado": "2026-10-12T00:02:06.903Z",
+ "generado": "2026-10-12T00:32:07.488Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "16ew98b",
+   "titulo": "Kily González, de \"Leo nos obliga a todos\" a \"lo entusiasma\" jugar la Libertadores",
+   "copete": "Cristian González, entrenador del Inter Miami , sorprendió con su respuesta al ser consultado sobre la chance de que su equipo, con el capitán Lionel Messi a la cabeza, participe de la Copa Libertadores. El DT lo dijo en conferencia de prensa, tras la goleada por 4 a 0 ante DC…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-11T18:15:52.000Z",
+   "fuentes": [
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/futbol-internacional/mls/kily-gonzalez-lionel-messi-obliga-creo-entusiasma-jugar-copa-libertadores-inter-miami_0_HNpT46is5o.html",
+     "fecha": "2026-10-11T18:15:52.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/deportes/2026/10/12/la-contundente-respuesta-del-kily-gonzalez-cuando-le-consultaron-sobre-la-chance-de-que-el-inter-miami-de-messi-juegue-la-libertadores/",
+     "fecha": "2026-10-12T00:07:17.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/copa-libertadores/kily-gonzalez-lionel-messi-copa-libertadores-id765725.html",
+     "fecha": "2026-10-11T21:05:45.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/deportes/kily-gonzalez-detallo-la-propuesta-que-lionel-messi-juegue-la-copa-libertadores-y-sorprendio-todos-n251349",
+     "fecha": "2026-10-11T23:25:00.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/deportes/el-kily-gonzalez-revelo-que-lionel-messi-esta-entusiasmado-con-jugar-la-copa-libertadores-con-inter-miami/",
+     "fecha": "2026-10-11T23:15:21.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 2 y la fuente no lo dice; sin esas oraciones quedan 48 palabras",
+   "maximo": 4
+  },
   {
    "id": "11k1rn",
    "titulo": "Rufino ya comenzó su tratamiento con Cytotron en la India",
@@ -17,28 +54,6 @@
    ],
    "intentos": 3,
    "motivo": "semáforo: necesita ojo humano: \"niño\", en lo que escribió la IA (título, bajada o texto para redes)",
-   "maximo": 3
-  },
-  {
-   "id": "2twi1b",
-   "titulo": "Crece la informalidad",
-   "copete": "La informalidad laboral alcanzó al 45 por ciento del universo total de trabajadores durante el segundo trimestre de 2026. La cifra confirma un deterioro continuo desde el 41,4 por ciento registrado a fines de 2023, según datos procesados por el Observatorio Económico Social de…",
-   "seccion": "Economía",
-   "fecha": "2026-10-11T21:19:54.000Z",
-   "fuentes": [
-    {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/11/crece-la-informalidad/",
-     "fecha": "2026-10-11T21:19:54.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-11-14-24-0-informalidad-laboral-que-lugar-ocupa-bahia-blanca-segun-un-informe-nacional",
-     "fecha": "2026-10-11T23:39:29.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (numero): el guion dice 40 y la fuente no lo dice",
    "maximo": 3
   }
  ]

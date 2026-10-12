@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T00:02:05.557Z",
+ "consultado": "2026-10-12T00:32:04.957Z",
  "equipos": [
   "9739",
   "3",
@@ -1074,8 +1074,8 @@
     "id": "401841604",
     "competencia": "liga",
     "inicio": "2026-10-11T22:15:00.000Z",
-    "estado": "en-juego",
-    "minuto": "88'",
+    "estado": "final",
+    "minuto": "90'+6'",
     "local": {
      "id": "15",
      "nombre": "Racing Club",
@@ -1084,7 +1084,7 @@
     "visitante": {
      "id": "4",
      "nombre": "Belgrano (Córdoba)",
-     "goles": 1
+     "goles": 2
     },
     "penales": null,
     "goles": [
@@ -1092,6 +1092,12 @@
       "equipo": "visitante",
       "jugador": "Lucas Zelarayán",
       "minuto": "41'",
+      "tipo": "gol"
+     },
+     {
+      "equipo": "visitante",
+      "jugador": "Franco Vázquez",
+      "minuto": "90'+5'",
       "tipo": "gol"
      }
     ],
@@ -1104,8 +1110,8 @@
     "id": "401841600",
     "competencia": "liga",
     "inicio": "2026-10-12T00:30:00.000Z",
-    "estado": "programado",
-    "minuto": "0'",
+    "estado": "en-juego",
+    "minuto": "1'",
     "local": {
      "id": "19",
      "nombre": "Talleres (Córdoba)",
@@ -1216,38 +1222,7 @@
     "torneo": "torneo-clausura"
    }
   ],
-  "copaargentina": [
-   {
-    "id": "401913078",
-    "competencia": "copaargentina",
-    "inicio": "2026-10-02T00:15:00.000Z",
-    "estado": "final",
-    "minuto": "90'+5'",
-    "local": {
-     "id": "7764",
-     "nombre": "Platense",
-     "goles": 1
-    },
-    "visitante": {
-     "id": "8",
-     "nombre": "Estudiantes de La Plata",
-     "goles": 0
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Gonzalo Lencina",
-      "minuto": "83'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Norberto Tomaghello",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "quarterfinals"
-   }
-  ],
+  "copaargentina": [],
   "libertadores": [
    {
     "id": "401912523",

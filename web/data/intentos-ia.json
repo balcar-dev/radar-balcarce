@@ -273,6 +273,11 @@
   "ultimo": "2026-10-05T13:03:48.838Z",
   "motivo": "con cuerpo"
  },
+ "16ew98b": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T00:31:59.695Z",
+  "motivo": "cuerpo: 1 problema (numero): el cuerpo dice 2 y la fuente no lo dice; sin esas oraciones quedan 48 palabras"
+ },
  "16ootdv": {
   "intentos": 2,
   "ultimo": "2026-10-08T23:02:05.096Z",
@@ -568,11 +573,6 @@
  "1c93acw": {
   "intentos": 1,
   "ultimo": "2026-10-08T12:31:59.150Z",
-  "motivo": "con cuerpo"
- },
- "1camy15": {
-  "intentos": 2,
-  "ultimo": "2026-10-05T00:02:28.857Z",
   "motivo": "con cuerpo"
  },
  "1ccb7u7": {
@@ -1617,11 +1617,6 @@
   "intentos": 1,
   "ultimo": "2026-10-07T20:31:41.364Z",
   "motivo": "con cuerpo"
- },
- "3zyzxd": {
-  "intentos": 2,
-  "ultimo": "2026-10-05T00:02:28.857Z",
-  "motivo": "semáforo: necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "41whtr": {
   "intentos": 1,
@@ -2920,11 +2915,6 @@
   "intentos": 1,
   "ultimo": "2026-10-11T02:01:46.919Z",
   "motivo": "con cuerpo"
- },
- "zdjcx4": {
-  "intentos": 3,
-  "ultimo": "2026-10-05T00:02:28.857Z",
-  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "zdlxph": {
   "intentos": 3,
