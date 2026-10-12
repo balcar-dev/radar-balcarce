@@ -3797,6 +3797,26 @@
    "cuando": "2026-10-11T10:05:50.199Z",
    "medida": "2026-10-12T10:30:18.819Z",
    "metricas": {}
+  },
+  {
+   "clave": "instagram/historia/18012959375970890",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "farmacia",
+   "dia": "2026-10-11",
+   "cuando": "2026-10-11T23:12:58.719Z",
+   "medida": "2026-10-12T11:30:22.558Z",
+   "metricas": {}
+  },
+  {
+   "clave": "instagram/historia/18219556612340545",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "clima-noche",
+   "dia": "2026-10-11",
+   "cuando": "2026-10-11T23:14:37.651Z",
+   "medida": "2026-10-12T11:30:22.558Z",
+   "metricas": {}
   }
  ]
 }
