@@ -1891,6 +1891,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-12/feriado": {
+      "cuando": "2026-10-12T11:06:08.012Z",
+      "mediaId": "17881668315534212",
+      "nombre": "feriado",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "facebookVideos": {
@@ -3176,6 +3184,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-12/feriado": {
+      "cuando": "2026-10-12T11:06:49.554Z",
+      "mediaId": "1098859406179736",
+      "nombre": "feriado",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "instagramFeed": {
@@ -4382,6 +4398,20 @@
       "cuando": "2026-10-12T00:06:58.215Z",
       "mediaId": "1827031788642565",
       "nombre": "podcast",
+      "red": "facebook",
+      "notaId": null
+    },
+    "instagram/2026-10-12/feriado": {
+      "cuando": "2026-10-12T11:06:39.694Z",
+      "mediaId": "17953815282036177",
+      "nombre": "feriado",
+      "red": "instagram",
+      "notaId": null
+    },
+    "facebook/2026-10-12/feriado": {
+      "cuando": "2026-10-12T11:07:20.997Z",
+      "mediaId": "851514264685714",
+      "nombre": "feriado",
       "red": "facebook",
       "notaId": null
     }
