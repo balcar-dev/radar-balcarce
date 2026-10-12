@@ -1,6 +1,90 @@
 {
-  "generado": "2026-10-12T14:32:25.516Z",
+  "generado": "2026-10-12T15:02:54.764Z",
   "notas": [
+    {
+      "id": "xn5jch",
+      "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
+      "copete": "La tenista local competirá en el certamen internacional que se disputará en noviembre. Integrará el equipo de la categoría Máster +40 de Mar del Plata.",
+      "cuerpo": "La tenista Natalia Carballo formará parte de la delegación de Mar del Plata que competirá en la primera Copa Sudamericana. El torneo se desarrollará del 12 al 19 de noviembre en Villa María.\n\nLa deportista balcarceña integra el sexteto femenino de la categoría Máster +40. Carballo representa habitualmente al Club Sportivo Trabajo en los torneos regionales de interclubes y posee la distinción Fangio de Plata.\n\nEl equipo cuenta con la dirección técnica de la exjugadora Julieta Calabrese. Las encuentros se jugarán en las canchas del Club Sport Social Club.",
+      "guion": "Natalia Carballo juega la Copa Sudamericana de tenis",
+      "seccion": "Deportes",
+      "medios": [
+        "Acción 5 (Balcarce)"
+      ],
+      "enlace": "https://accion5.com/tenis-en-copa-sudamericana-competira-natalia-carballo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T14:41:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T15:01:42.079Z",
+      "relevancia": 88,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Natalia Carballo jugará la Copa Sudamericana.",
+        "El torneo se disputará del 12 al 19 de noviembre.",
+        "La competencia tendrá lugar en Villa María.",
+        "El equipo compite en la categoría Máster +40."
+      ],
+      "seSabe": [
+        "Natalia Carballo integra la delegación marplatense para el torneo internacional.",
+        "La competencia se jugará en Villa María entre el 12 y el 19 de noviembre.",
+        "El equipo femenino +40 es entrenado por Julieta Calabrese."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La tenista Natalia Carballo participará en la primera Copa Sudamericana que se disputará en noviembre en Villa María. La deportista local integrará el equipo de la categoría Máster +40.",
+      "etiquetas": [
+        "Natalia Carballo",
+        "tenis",
+        "Copa Sudamericana",
+        "Villa María"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Acción 5 (Balcarce)",
+          "enlace": "https://accion5.com/tenis-en-copa-sudamericana-competira-natalia-carballo/",
+          "fecha": "2026-10-12T14:41:12.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la participación de Natalia Carballo en la Copa Sudamericana y cronograma del torneo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1xwup7g",
+          "titulo": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
+          "fecha": "2026-10-11T17:08:46.000Z",
+          "ruta": "/nota/emanuel-moriatis-analiza-la-vuelta-del-turismo-nacional-a-balcarce-1xwup7g"
+        },
+        {
+          "id": "1trv7re",
+          "titulo": "Norberto Fontana sugiere cerrar el año de Turismo Carrera en el circuito local",
+          "fecha": "2026-10-09T22:45:51.000Z",
+          "ruta": "/nota/norberto-fontana-sugiere-cerrar-el-ano-de-turismo-carrera-en-el-1trv7re"
+        },
+        {
+          "id": "f6j0rt",
+          "titulo": "El Auto Club Balcarce suspende la fecha del Zonal del Atlántico",
+          "fecha": "2026-10-08T16:14:22.000Z",
+          "ruta": "/nota/el-auto-club-balcarce-suspende-la-fecha-del-zonal-del-atlantico-f6j0rt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "natalia-carballo-juega-la-copa-sudamericana-de-tenis",
+      "foto": {
+        "archivo": "fotos-notas/xn5jch.jpg",
+        "credito": "Foto: Acción 5 (Balcarce)"
+      }
+    },
     {
       "id": "q9kshm",
       "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
@@ -87,7 +171,7 @@
       ],
       "enlace": "https://www.diariolavanguardia.com/deportes/14317-boca-empato-2-2-en-cordoba-ante-instituto/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T14:01:54.156Z",
+      "fecha": "2026-10-12T14:31:34.877Z",
       "sinFecha": true,
       "visto": "2026-10-12T14:31:34.877Z",
       "relevancia": 59,
@@ -322,10 +406,10 @@
       "guion": "Milei ratifica a Caputo y asegura contar con millonarios fondos",
       "seccion": "Economía",
       "medios": [
-        "Infobae",
-        "Clarín",
         "Agencia DIB",
         "Diputados Bonaerenses",
+        "Infobae",
+        "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
         "Crónica",
@@ -464,6 +548,102 @@
       }
     },
     {
+      "id": "1567idj",
+      "titulo": "Alpine investiga los problemas en el auto de Franco Colapinto tras Singapur",
+      "copete": "La escudería analizará las fallas mecánicas que obligaron al piloto argentino a abandonar en Singapur. Preparan mejoras para la competencia en Estados Unidos.",
+      "cuerpo": "La escudería Alpine confirmó que investigará los problemas mecánicos que afectaron al monoplaza de Franco Colapinto durante el Gran Premio de Singapur de la Fórmula 1, donde debió abandonar tanto en la prueba Sprint como en la competencia principal. Ante esta situación, el director deportivo del equipo, Steve Nielsen, indicó que buscarán recuperar los niveles habituales de fiabilidad y sumar nuevas piezas de cara a la próxima fecha.\n\nComo se había informado el 7 de octubre, el piloto argentino había afrontado el fin de semana en el circuito callejero con la inclusión del formato Sprint.",
+      "guion": "Alpine investiga los problemas en el auto de Franco Colapinto tras Singapur",
+      "seccion": "Automovilismo",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Ámbito",
+        "Radio Mitre",
+        "La Nueva"
+      ],
+      "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/12/alpine-revelo-la-decision-que-tomaron-con-el-auto-de-franco-colapinto-tras-el-caotico-gran-premio-de-singapur/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T12:32:49.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T15:01:42.079Z",
+      "relevancia": 97,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "Todavía no se detallaron las causas específicas que provocaron las fallas técnicas en el auto."
+      ],
+      "textoRedes": "Alpine confirmó que investigará los problemas mecánicos que sufrió el auto de Franco Colapinto en Singapur y prepara mejoras para la próxima fecha en Estados Unidos",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Alpine",
+        "Formula 1",
+        "Gran Premio de Singapur",
+        "Estados Unidos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/12/alpine-revelo-la-decision-que-tomaron-con-el-auto-de-franco-colapinto-tras-el-caotico-gran-premio-de-singapur/",
+          "fecha": "2026-10-12T12:32:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el rendimiento del auto, las declaraciones de Steve Nielsen y el calendario de la Fórmula 1."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/alpine-tomo-una-decision-el-auto-franco-colapinto-los-problemas-singapur-n6332746",
+          "fecha": "2026-10-12T14:38:59.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el análisis de las fallas mecánicas y la preparación de nuevas piezas para Estados Unidos."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/la-drastica-decision-de-alpine-con-el-auto-que-llevo-a-franco-colapinto-a-abandonar-el-gp-de-singapur/",
+          "fecha": "2026-10-12T14:37:50.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los abandonos de Franco Colapinto en la carrera Sprint y la principal por problemas en el monoplaza."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-11-18-0-alpine-revelo-la-decision-que-tomaron-con-el-auto-de-franco-colapinto-tras-el-caotico-gran-premio-de-singapur",
+          "fecha": "2026-10-12T14:52:23.000Z",
+          "oficial": false,
+          "aporte": "Ratificó la decisión de la escudería de investigar los inconvenientes técnicos ocurridos en Singapur."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18wlubj",
+          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+          "fecha": "2026-10-07T09:01:08.000Z",
+          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
+        },
+        {
+          "id": "1qssrv4",
+          "titulo": "Isack Hadjar cruza a Franco Colapinto por una maniobra en Singapur",
+          "fecha": "2026-10-12T05:48:57.000Z",
+          "ruta": "/nota/isack-hadjar-cruza-a-franco-colapinto-por-una-maniobra-en-singapur-1qssrv4"
+        },
+        {
+          "id": "p21pyq",
+          "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
+          "fecha": "2026-10-11T22:48:29.000Z",
+          "ruta": "/nota/hadjar-cuestiona-con-dureza-a-colapinto-tras-el-gran-premio-de-p21pyq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "alpine-investiga-los-problemas-en-el-auto-de-franco-colapinto-tras",
+      "foto": {
+        "archivo": "fotos-notas/1567idj.jpg",
+        "credito": "Foto: La Nueva"
+      }
+    },
+    {
       "id": "700xzm",
       "titulo": "El Paraje La Alianza propone una escapada rural entre sierras",
       "copete": "Ubicado en el partido de Lobería y a pocos kilómetros de Balcarce, este histórico pueblo rural ofrece un almacén centenario, paisajes serranos y cercanía con circuitos de trekking.",
@@ -553,97 +733,186 @@
       }
     },
     {
-      "id": "bqnbdp",
-      "titulo": "Milei afirma tener fondos por miles de millones de dólares para frenar una corrida",
-      "copete": "El mandatario nacional aseguró que cuenta con 125.000 millones de dólares para enfrentar una eventual tensión cambiaria durante el año próximo.",
-      "cuerpo": "El presidente Javier Milei aseguró que dispone de 125.000 millones de dólares para hacer frente a una posible corrida cambiaria el año próximo. El mandatario afirmó que no anticipa una aceleración de la tensión cambiaria para ese período, aunque aclaró que su administración se prepara para esa eventualidad.\n\nEl jefe de Estado hizo estas declaraciones durante una entrevista con Radio Mitre. En el mismo plano, señaló que el país llegará en mejores condiciones que en las elecciones anteriores.\n\nEn paralelo a sus declaraciones sobre la economía, el titular del Ejecutivo nacional tiene previsto viajar el miércoles a Estados Unidos para reunirse con la Cámara de Comercio local y participar como invitado de honor en una gala hispana.",
-      "guion": "Milei afirma tener fondos por miles de millones de dólares para frenar una corrida",
-      "seccion": "Economía",
+      "id": "1ovtxg0",
+      "titulo": "La Cámara de Diputados inicia el debate del Presupuesto 2027",
+      "copete": "El oficialismo abre la discusión en comisión con la presencia del secretario de Hacienda. Los bloques aliados exigen cambios en el capítulo de Discapacidad para acompañar la iniciativa.",
+      "cuerpo": "La Cámara de Diputados comienza el debate en comisión del proyecto de Presupuesto 2027 con la exposición del secretario de Hacienda, Carlos Guberman. La discusión en la comisión de Presupuesto y Hacienda se centra en sostener el equilibrio fiscal, mientras el oficialismo busca los acuerdos necesarios con los bloques aliados para avanzar con la iniciativa.\n\nEntre los puntos centrales de la negociación figura el capítulo dedicado a Discapacidad, cuya modificación genera reparos en los sectores dialoguistas, que reclaman precisiones sobre las partidas y el mantenimiento de las prestaciones.\n\nLas reuniones informativas continuarán durante las próximas semanas con la participación prevista de distintos funcionarios nacionales. La administración central apunta a conseguir dictamen a fines de octubre para llevar el texto al recinto en noviembre.",
+      "guion": "La Cámara de Diputados inicia el debate del Presupuesto 2027",
+      "seccion": "Política",
       "medios": [
-        "Infobae",
-        "Clarín",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Radio Mitre"
+        "Diputados Bonaerenses",
+        "El Cronista",
+        "InfoRegión"
       ],
-      "enlace": "https://www.eldestapeweb.com/politica/milei-vuelve-viajar-ee-uu-medio-discusiones-congreso-nuevo-dato-inflacion-2026101283457",
+      "enlace": "https://www.cronista.com/economia-politica/comienza-el-debate-por-el-presupuesto-2027-con-funcionarios-el-capitulo-que-deberan-bajar/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T11:34:00.000Z",
+      "fecha": "2026-10-12T12:05:22.000Z",
       "sinFecha": false,
-      "visto": "2026-10-12T13:01:25.827Z",
-      "relevancia": 83,
+      "visto": "2026-10-12T15:01:42.079Z",
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El presidente afirmó que cuenta con 125.000 millones de dólares para 2027.",
-        "Aclaró que no espera una corrida cambiaria pero su gestión se prepara.",
-        "El mandatario brindó las declaraciones en una entrevista con Radio Mitre."
+        "Comienza el debate del Presupuesto 2027 en la Cámara de Diputados.",
+        "El secretario de Hacienda expone ante la comisión.",
+        "Los aliados condicionan su apoyo a modificaciones en discapacidad."
       ],
       "seSabe": [
-        "El presidente Javier Milei afirmó que cuenta con 125.000 millones de dólares para una corrida en 2027.",
-        "El mandatario expresó que no espera esa situación pero que su Gobierno se prepara.",
-        "Las declaraciones fueron realizadas en una entrevista con Radio Mitre."
+        "El debate en comisión comienza este martes al mediodía.",
+        "El secretario de Hacienda asiste a la primera reunión.",
+        "El proyecto prevé un superávit financiero y una inflación de 18%."
       ],
       "noConfirmado": [
-        "No se detallaron los mecanismos específicos de utilización de los fondos mencionados."
+        "Todavía resta definir los plazos exactos de aprobación en el recinto.",
+        "No se detalló el acuerdo final sobre el financiamiento universitario."
       ],
-      "textoRedes": "El presidente Javier Milei aseguró que cuenta con 125.000 millones de dólares para enfrentar una eventual corrida cambiaria el año próximo, al sostener que se prepara para esa eventualidad aunque no la espera.",
+      "textoRedes": "La Cámara de Diputados comienza el debate en comisión del proyecto de Presupuesto 2027 con la presencia del secretario de Hacienda.",
       "etiquetas": [
-        "Javier Milei",
-        "corrida cambiaria",
-        "Radio Mitre",
-        "economia"
+        "Presupuesto 2027",
+        "Diputados",
+        "Gobierno nacional",
+        "Economía"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/politica/milei-vuelve-viajar-ee-uu-medio-discusiones-congreso-nuevo-dato-inflacion-2026101283457",
-          "fecha": "2026-10-12T11:34:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones completas de Milei sobre los fondos y su viaje a Estados Unidos."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/12/milei-tenemos-usd-125000-millones-para-enfrentar-una-corrida-el-ano-que-viene/",
-          "fecha": "2026-10-12T12:45:42.000Z",
-          "oficial": false,
-          "aporte": "Confirmó los dichos del mandatario sobre la disponibilidad de dólares."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/politica/milei-no-espera-una-corrida-pero-dice-que-tiene-los-dolares-evitarla-n56416",
-          "fecha": "2026-10-12T12:55:38.000Z",
-          "oficial": false,
-          "aporte": "Ratificó la cifra mencionada por el presidente para el año próximo."
-        },
-        {
           "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/milei-les-respondio-a-los-que-especulan-con-un-salto-del-dolar-tengo-us-125000-millones-para-enfrentar-una-corrida-el-ano-que-viene/",
-          "fecha": "2026-10-12T12:32:05.000Z",
+          "enlace": "https://www.cronista.com/economia-politica/comienza-el-debate-por-el-presupuesto-2027-con-funcionarios-el-capitulo-que-deberan-bajar/",
+          "fecha": "2026-10-12T12:05:22.000Z",
           "oficial": false,
-          "aporte": "Indicó que el Gobierno destinaría los fondos para una eventual corrida cambiaria."
+          "aporte": "Aportó los detalles sobre la agenda de reuniones y las proyecciones macroeconómicas del proyecto."
         },
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
-          "fecha": "2026-10-12T12:33:30.000Z",
+          "medio": "Diputados Bonaerenses",
+          "enlace": "https://diputadosbsas.com.ar/diputados-debate-presupuesto-2027/",
+          "fecha": "2026-10-12T13:58:00.000Z",
           "oficial": false,
-          "aporte": "Señaló que el presidente afirmó que se prepara ante un posible escenario electoral."
+          "aporte": "Confirmó el horario de inicio del debate en comisión para este martes al mediodía."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/10/12/comienza-el-tratamiento-del-presupuesto-2027-en-diputados/",
+          "fecha": "2026-10-12T15:01:18.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el eje central del proyecto oficialista es sostener el equilibrio fiscal."
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
+        "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "milei-afirma-tener-fondos-por-miles-de-millones-de-dolares-para",
+      "slug": "la-camara-de-diputados-inicia-el-debate-del-presupuesto-2027",
       "foto": {
-        "archivo": "fotos-notas/bqnbdp.jpg",
+        "archivo": "fotos-notas/1ovtxg0.jpg",
         "credito": "Foto: El Cronista"
+      }
+    },
+    {
+      "id": "rzhblo",
+      "titulo": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
+      "copete": "El delantero portugués fue suspendido de forma provisional tras abandonar la concentración de su seleccionado en plena Nations League y declaró sobre su legado.",
+      "cuerpo": "Cristiano Ronaldo rompió el silencio tras recibir una suspensión provisional por abandonar la concentración de Portugal durante la Nations League. El delantero alcanzó 980 goles en 1.337 partidos y se refirió a su lugar en el deporte.\n\nLa Sección No Profesional inició un procedimiento disciplinario el 9 de octubre de 2026 para evaluar los hechos denunciados el 7 de octubre, tras un comunicado del jugador contra las autoridades y diferencias con el entrenador.\n\nEl atacante afirmó que es el jugador más completo y aseguró que no piensa a largo plazo sobre la posibilidad de alcanzar la marca de los mil goles. Además, reconoció que desconoce cuándo se retirará de la actividad profesional.",
+      "guion": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
+      "seccion": "Deportes",
+      "medios": [
+        "Clarín",
+        "Minuto Uno",
+        "Olé",
+        "La Brújula 24"
+      ],
+      "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T11:34:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T15:01:42.079Z",
+      "relevancia": 75,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cristiano Ronaldo fue suspendido de forma provisional por abandonar la concentración de Portugal.",
+        "El delantero suma 980 goles en 1.337 partidos jugados en su carrera.",
+        "Un procedimiento disciplinario fue abierto el 9 de octubre de 2026."
+      ],
+      "seSabe": [
+        "Cristiano Ronaldo fue suspendido provisionalmente tras dejar la concentración de Portugal en la Nations League.",
+        "El jugador acumula 980 goles en 1.337 partidos.",
+        "La Sección No Profesional abrió un procedimiento disciplinario el 9 de octubre de 2026."
+      ],
+      "noConfirmado": [
+        "No se conoce la duración exacta que tendrá la sanción definitiva impuesta por el seleccionado portugués."
+      ],
+      "textoRedes": "Cristiano Ronaldo rompió el silencio tras ser suspendido provisionalmente por abandonar la concentración de Portugal en la Nations League y habló sobre sus estadísticas y su legado.",
+      "etiquetas": [
+        "Cristiano Ronaldo",
+        "Portugal",
+        "Nations League",
+        "Fútbol internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
+          "fecha": "2026-10-12T11:34:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones completas sobre su legado, sus estadísticas de goles y los detalles del procedimiento disciplinario."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/cristiano-ronaldo-arrogancia-realidad-mejor-historia-alguien-prefiere-messi-pele-maradona-cuestion-gustos_0_wDN9yEOCVV.html",
+          "fecha": "2026-10-12T14:07:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el caso fue replicado por The Athletic y CNN Portugal sobre declaraciones de 2025."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/polemica-declaracion-cristiano-ronaldo-messi-pele-y-maradona-es-cuestion-gustos-n6332684",
+          "fecha": "2026-10-12T12:25:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la existencia de la sanción provisional por la salida de la concentración."
+        },
+        {
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/12/si-alguien-prefiere-a-messi-pele-o-maradona-es-cuestion-de-gustos-n525074/",
+          "fecha": "2026-10-12T13:54:35.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el delantero rompió el silencio tras la sanción por dejar a su selección."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ypnvl8",
+          "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
+          "fecha": "2026-10-08T05:25:13.000Z",
+          "ruta": "/nota/carlos-tevez-proyecta-reunir-a-messi-y-cristiano-en-su-despedida-ypnvl8"
+        },
+        {
+          "id": "kp99r6",
+          "titulo": "Cristiano Ronaldo saluda a Lionel Messi tras su adiós de la Selección",
+          "fecha": "2026-10-07T18:06:07.000Z",
+          "ruta": "/nota/cristiano-ronaldo-saluda-a-lionel-messi-tras-su-adios-de-la-seleccion-kp99r6"
+        },
+        {
+          "id": "1je0ajz",
+          "titulo": "Robbie Williams vuelve al país y homenajea a Maradona y Messi",
+          "fecha": "2026-10-02T14:38:00.000Z",
+          "ruta": "/nota/robbie-williams-vuelve-al-pais-y-homenajea-a-maradona-y-messi-1je0ajz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "cristiano-ronaldo-rompe-el-silencio-tras-la-sancion-en-portugal",
+      "foto": {
+        "archivo": "fotos-notas/rzhblo.jpg",
+        "credito": "Foto: Clarín"
       }
     },
     {
@@ -845,6 +1114,7 @@
       "medios": [
         "La Nación",
         "Clarín",
+        "TN (Todo Noticias)",
         "Perfil",
         "Crónica",
         "Radio Mitre",
@@ -931,12 +1201,12 @@
       "seccion": "Argentina",
       "medios": [
         "Perfil",
+        "Página/12",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
-        "Mi8 (Canal 8 Mar del Plata)",
         "La Verdad",
-        "Página/12"
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
       "teniaImagenLaFuente": true,
@@ -1194,6 +1464,117 @@
       "foto": {
         "archivo": "fotos-notas/1qssrv4.jpg",
         "credito": "Foto: La Nación"
+      }
+    },
+    {
+      "id": "1kra2dj",
+      "titulo": "Gastón Ávila sufre un golpe en la cara y queda internado",
+      "copete": "El defensor de Rosario Central debió ser trasladado a un sanatorio tras la goleada ante Independiente Rivadavia, luego de recibir una patada en el rostro que derivó en la expulsión de Álex Arce.",
+      "cuerpo": "Rosario Central aplastó 5 a 0 a Independiente Rivadavia por la fecha 12 del Torneo Clausura en el Gigante de Arroyito.\n\nTras el partido, el club difundió el parte médico oficial que confirmó un traumatismo craneofacial izquierdo. En el vestuario, el zaguero central presentó un cuadro de hipotensión, mareos, náuseas y cefalea intensa, por lo cual fue llevado de urgencia a la guardia del Sanatorio Mapaci para someterse a estudios por imágenes y permanecer bajo observación a la espera de su recuperación.",
+      "guion": "Gastón Ávila sufre un golpe en la cara y queda internado",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Olé",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://bolavip.com/ar/futbolargentino/internaron-a-gaston-avila-tras-la-patada-en-la-cara-de-alex-arce-en-la-goleada-de-rosario-central-a-independiente-rivadavia",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T00:33:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T03:01:38.606Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Rosario Central le ganó 5 a 0 a Independiente Rivadavia por el Torneo Clausura.",
+        "Álex Arce recibió la tarjeta roja tras golpear a Gastón Ávila en el rostro.",
+        "El defensor central sufrió un traumatismo craneofacial izquierdo y mareos.",
+        "El jugador permanece en observación en el Sanatorio Mapaci."
+      ],
+      "noConfirmado": [
+        "No trascendió el tiempo exacto que demandará la internación del deportista.",
+        "No se informó la fecha exacta de su retorno al domicilio."
+      ],
+      "textoRedes": "Gastón Ávila debió ser internado tras recibir una patada en la cara durante la goleada de Rosario Central ante Independiente Rivadavia. El defensor sufrió un traumatismo craneofacial y permanece bajo observación médica.",
+      "etiquetas": [
+        "Rosario Central",
+        "Independiente Rivadavia",
+        "Torneo Clausura",
+        "Gastón Ávila",
+        "Álex Arce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/futbolargentino/internaron-a-gaston-avila-tras-la-patada-en-la-cara-de-alex-arce-en-la-goleada-de-rosario-central-a-independiente-rivadavia",
+          "fecha": "2026-10-12T00:33:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló el resultado del partido, la jugada de la expulsión, el parte médico y el traslado al sanatorio."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/rosario-central/gaston-avila-trasladado-sanatorio-patada-alex-arce_0_fKlgrC7hH6.html",
+          "fecha": "2026-10-12T01:52:02.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el defensor debió ser llevado a una guardia tras la tarjeta roja al jugador paraguayo."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/11/el-comunicado-de-rosario-central-tras-la-patada-que-recibio-gaston-avila-ante-independiente-rivadavia-nauseas-y-cefalea-intensa/",
+          "fecha": "2026-10-12T02:20:26.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la goleada, el parte médico oficial y el incidente en el Gigante de Arroyito."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/gaston-avila-fue-hospitalizado-tras-la-patada-de-alex-arce-el-parte-medico-de-rosario-central-id765756.html",
+          "fecha": "2026-10-12T02:40:29.000Z",
+          "oficial": false,
+          "aporte": "Aportó cobertura sobre el mismo evento deportivo sin texto adicional."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/rosario-central/patada-alex-arce-gaston-avila-derivo-expulsion-rosario-central-independiente-rivadavia_3_2LLf3TdhuK.html",
+          "fecha": "2026-10-12T01:49:03.000Z",
+          "oficial": false,
+          "aporte": "Registró el hecho vinculado a la atención médica del futbolista tras el partido."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "repaso20260930tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: ACTC, Rosario Central y capacitaciones",
+          "fecha": "2026-09-30T18:06:28.052Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y-repaso20260930tarde"
+        },
+        {
+          "id": "1cbil57",
+          "titulo": "Hinchas de Newell's y Rosario Central se enfrentan en Rosario",
+          "fecha": "2026-09-30T02:21:20.000Z",
+          "ruta": "/nota/hinchas-de-newell-s-y-rosario-central-se-enfrentan-en-rosario-1cbil57"
+        },
+        {
+          "id": "1g1xj8g",
+          "titulo": "Gastón Gaudio se postula a presidente de Independiente",
+          "fecha": "2026-09-29T16:41:28.000Z",
+          "ruta": "/nota/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-1g1xj8g"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "gaston-avila-sufre-un-golpe-en-la-cara-y-queda-internado",
+      "foto": {
+        "archivo": "fotos-notas/1kra2dj.jpg",
+        "credito": "Foto: Bolavip Argentina"
       }
     },
     {
@@ -1587,8 +1968,8 @@
         "El Día",
         "La Nueva",
         "La Tecla",
-        "InfoRegión",
-        "La Verdad"
+        "La Verdad",
+        "InfoRegión"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -2213,9 +2594,9 @@
     }
   ],
   "secciones": [
+    "Deportes",
     "Balcarce",
     "Fútbol",
-    "Deportes",
     "Automovilismo",
     "Economía",
     "Cultura y agenda",
@@ -2224,13 +2605,19 @@
     "Policiales",
     "Agro"
   ],
-  "temas": [],
+  "temas": [
+    {
+      "nombre": "Fangio",
+      "ranura": "fangio",
+      "cuantas": 2
+    }
+  ],
   "clima": {
     "ahora": {
-      "temp": 12,
-      "sensacion": 10,
+      "temp": 13,
+      "sensacion": 11,
       "humedad": 66,
-      "viento": 7,
+      "viento": 8,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": true
@@ -2576,12 +2963,6 @@
       "motivo": "necesita ojo humano: \"niña\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "b1vm9y",
-      "titulo": "Juan Manuel Cerúndolo enfrentará a Carlos Alcaraz en el…",
-      "seccion": "Deportes",
-      "motivo": "parece promoción, no noticia: \"sortea\""
-    },
-    {
       "id": "nfmavy",
       "titulo": null,
       "seccion": "Policiales",
@@ -2592,6 +2973,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"nene\""
+    },
+    {
+      "id": "vuez1j",
+      "titulo": "Menem descartó una salida de Caputo: “No hay dudas sobre…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "159uw7a",
@@ -2610,12 +2997,6 @@
       "titulo": null,
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "d57r1j",
-      "titulo": "Denunciaron penalmente a Caputo y Bausili por la timba con…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 3

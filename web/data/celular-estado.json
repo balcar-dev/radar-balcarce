@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T14:32:25.516Z",
- "portada": 28,
- "archivo": 948,
+ "generado": "2026-10-12T15:02:54.764Z",
+ "portada": 32,
+ "archivo": 952,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-12T14:32:25.544Z",
+  "generado": "2026-10-12T15:02:54.792Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El feriado",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-12T11:06:08.012Z"
    },
    {
@@ -33,7 +33,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-12T12:09:52.954Z"
    },
    {
@@ -53,7 +53,7 @@
     "que": "Participá: mandanos noticias",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -126,11 +126,16 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 54,
     "notas": [
      {
       "id": "s94jkn",
       "titulo": "Zizou Bergs elimina a Carlos Alcaraz en el Masters de Shanghái",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "xn5jch",
+      "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
       "seccion": "Deportes"
      },
      {
@@ -142,11 +147,6 @@
       "id": "1xc91gb",
       "titulo": "Milei ratifica a Caputo y asegura contar con millonarios fondos",
       "seccion": "Economía"
-     },
-     {
-      "id": "q9kshm",
-      "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,8 +157,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 34,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "1kra2dj",
+      "titulo": "Gastón Ávila sufre un golpe en la cara y queda internado",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "q9kshm",
+      "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1tsobe7",
       "titulo": "Boca empata con Instituto en Córdoba y pierde terreno en el torneo",
@@ -186,6 +196,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "xn5jch",
+     "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
+     "seccion": "Deportes",
+     "marcada": false
+    },
     {
      "id": "r0o8z3",
      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
