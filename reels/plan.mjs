@@ -154,7 +154,7 @@ export function eventosProximos(dias = 4, { web = F_AGENDA_WEB, pc = F_AGENDA, h
   const hoy = new Date(desde); hoy.setHours(0, 0, 0, 0);
   const tope = new Date(hoy.getTime() + dias * 86400000);
 
-  return (eventos ?? []).map((e) => {
+  return (eventos ?? []).filter((e) => !e.retirado).map((e) => {
     const m = String(e.desde ?? '').match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/);
     if (!m) return null;
     const f = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));

@@ -9,11 +9,14 @@ const leer = (nombre) => {
   try { return JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', nombre), 'utf8')); } catch { return null; }
 };
 
+/** ESPN trae el torneo en inglés ("Argentine Liga Profesional de Fútbol"): se muestra en castellano. */
+export const nombreDelTorneo = (t) => String(t ?? '').replace(/^Argentine\s+/i, '').trim() || null;
+
 /** La tabla de posiciones de la Liga Profesional por zona: { torneo, zonas, actualizada } o null. */
 export function tablaDeLaLiga() {
   const f = leer('futbol.json');
   if (!f?.tabla?.zonas?.length) return null;
-  return { torneo: f.tabla.torneo || null, zonas: f.tabla.zonas, actualizada: f.tablaCuando ?? null };
+  return { torneo: nombreDelTorneo(f.tabla.torneo), zonas: f.tabla.zonas, actualizada: f.tablaCuando ?? null };
 }
 
 /** El campeonato de F1: { temporada, ronda, carreras, pilotos, constructores, actualizado } o null si no hay ni uno. */

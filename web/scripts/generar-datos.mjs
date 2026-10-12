@@ -76,7 +76,7 @@ import {
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad, semaforoDelTexto } from '../../ingesta/ingesta.mjs';
 import { conFotosDelBanco, podarFotos } from './fotos-notas.mjs';
-import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
+import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
   cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notasDelDolar, notasDeRepasos,
@@ -998,12 +998,12 @@ if (enLaNube && fs.existsSync(FOTOS_NOTAS)) {
 // GitHub.
 const agendaAnterior = leerJson(AGENDA_WEB, { eventos: [] });
 const delPanel = leerJson(EVENTOS_PANEL, null);
-const eventosAgenda = actualizarAgenda({
+const eventosAgenda = aplicarSuspendidos(actualizarAgenda({
   anterior: agendaAnterior.eventos ?? [],
   municipio: agenda && agenda.municipioOk !== false ? (agenda.municipio ?? []) : null,
   panel: delPanel ? (delPanel.eventos ?? []) : null,
   retirar: enLaNube,
-});
+}), leerJson(path.join(AQUI, '..', 'data', 'agenda-suspendidos.json'), null));
 // Se escribe siempre que falte: el workflow lo suma con `git add` y un archivo
 // que no existe hace fallar el paso entero.
 if (!fs.existsSync(AGENDA_WEB) || JSON.stringify(eventosAgenda) !== JSON.stringify(agendaAnterior.eventos ?? [])) {

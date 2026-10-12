@@ -37,7 +37,7 @@ export default function Clima() {
         </section>
       )}
 
-      <Cierre fuente="El pronóstico es de Open-Meteo (y de met.no si Open-Meteo no contesta), para las coordenadas de la ciudad de Balcarce." />
+      <Cierre fuente="Fuente: Open-Meteo y met.no, para la ciudad de Balcarce." />
     </div>
   );
 }

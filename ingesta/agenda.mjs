@@ -94,7 +94,7 @@ export const CALENDARIO_ANUAL = [
     mesAproximado: 10,
     ultimaEdicion: { anio: 2026, desde: '2026-10-07', hasta: '2026-10-08', edicion: 1 },
     lugar: 'Anfiteatro del Cerro El Triunfo',
-    nota: 'Primera edición en 2026. Si funciona, es candidata a repetirse: revisar si vuelve en 2027.',
+    nota: 'Tuvo su primera edición en 2026.',
   },
   {
     id: 'balcarce-corre',
@@ -124,7 +124,7 @@ export const CALENDARIO_ANUAL = [
     mesAproximado: 10,
     ultimaEdicion: { anio: 2026, desde: '2026-10-11', edicion: null },
     lugar: 'Cerro "El Triunfo"',
-    nota: 'Trail de montaña con distancias de 10, 21, 42, 70 y 100 km. Ya aparece en la API del municipio.',
+    nota: 'Trail de montaña con distancias de 10, 21, 42, 70 y 100 km.',
   },
 ];
 

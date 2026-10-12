@@ -349,7 +349,7 @@ const e2 = (e) => instante(e.desde) || 0;
 const CAMPOS = [
   'id', 'origen', 'slug', 'nombre', 'desde', 'hasta', 'todoElDia', 'lugar', 'direccion', 'localidad',
   'costo', 'organizador', 'organizadorUrl', 'web', 'url', 'fuente', 'descripcion', 'categorias', 'categoria',
-  'anualId', 'publicadoCuando', 'primeraVez', 'retirado',
+  'anualId', 'publicadoCuando', 'primeraVez', 'retirado', 'suspendido',
 ];
 
 function soloCampos(e) {
@@ -370,6 +370,18 @@ function soloCampos(e) {
  *   · Pasados DIAS_DESPUES días del final, la página se va.
  *   · El nombre de la dirección (`slug`) queda fijo desde la primera vez.
  */
+/**
+ * Los eventos que una persona dio por suspendidos (web/data/agenda-suspendidos.json, 12/10/2026: la Fiesta del Postre siguió en la agenda del
+ * municipio después de suspenderse por el clima). Quedan marcados `retirado` (no salen en la agenda ni en las piezas, y sin datos para Google) y
+ * `suspendido` (la página lo dice). Cada uno lleva `id`, `motivo`, `cuando` y `por`; el que viene incompleto se ignora, para no frenar la web.
+ */
+export function aplicarSuspendidos(eventos = [], archivo = null) {
+  const lista = Array.isArray(archivo?.suspendidos) ? archivo.suspendidos : [];
+  const validos = new Map(lista.filter((s) => s?.id && s.motivo && s.cuando && s.por).map((s) => [s.id, s]));
+  if (!validos.size) return eventos;
+  return eventos.map((e) => (validos.has(e.id) ? { ...e, retirado: true, suspendido: true } : e));
+}
+
 export function actualizarAgenda({
   anterior = [], municipio = null, panel = null, ahora = Date.now(), dias = DIAS_DESPUES, retirar = true,
 } = {}) {

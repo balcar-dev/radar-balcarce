@@ -124,7 +124,7 @@ export function resumirTabla(json) {
     }).filter((f) => f.equipo && f.posicion != null && f.pts != null).sort((a, b) => a.posicion - b.posicion);
     if (filas.length) zonas.push({ nombre: String(g.name ?? '').replace(/^Group /i, 'Zona '), filas });
   }
-  return zonas.length ? { torneo: String(json?.name ?? ''), zonas } : null;
+  return zonas.length ? { torneo: String(json?.name ?? '').replace(/^Argentines+/i, ''), zonas } : null; // ESPN lo trae en inglés ("Argentine Liga Profesional de Fútbol")
 }
 
 /** Los ids de los equipos de una respuesta de /teams. */

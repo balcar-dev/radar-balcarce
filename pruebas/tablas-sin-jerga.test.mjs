@@ -27,3 +27,22 @@ test('cada equipo de la F1 de la temporada tiene su color', () => {
   for (const e of equipos) assert.ok(colorDelEquipo(e), `falta el color de ${e}`);
   assert.equal(colorDelEquipo('Equipo que no existe'), null);
 });
+
+test('el torneo de la Liga se muestra en castellano (ESPN lo trae en inglés)', async () => {
+  const { nombreDelTorneo } = await import('../web/lib/tablas.js');
+  assert.equal(nombreDelTorneo('Argentine Liga Profesional de Fútbol'), 'Liga Profesional de Fútbol');
+  assert.equal(nombreDelTorneo('Liga Profesional de Fútbol'), 'Liga Profesional de Fútbol');
+  assert.equal(nombreDelTorneo(''), null);
+  assert.equal(nombreDelTorneo(null), null);
+});
+
+test('la agenda, el clima y el dólar no cuentan cosas de la cocina', async () => {
+  const agenda = leer('web/app/agenda/page.js');
+  const clima = leer('web/app/clima/page.js');
+  const dolar = leer('web/lib/dolar.js');
+  const anuales = leer('ingesta/agenda.mjs');
+  assert.ok(!/coordenadas de la ciudad|si Open-Meteo no contesta/.test(clima));
+  assert.ok(!/al armar esta página/.test(dolar));
+  assert.ok(!/Ya aparece en la API|revisar si vuelve en 2027/.test(anuales), 'las notas de las fiestas del año son para el lector');
+  assert.ok(!/Sale de la agenda\s+oficial del municipio/.test(agenda), 'la agenda no repite de dónde sale: ya lo dice al pie');
+});

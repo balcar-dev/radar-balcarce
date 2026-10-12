@@ -91,7 +91,12 @@ export default async function PaginaEvento({ params }) {
             Este evento ya pasó: fue {cuandoEs(e)}. <a href="/agenda">Mirá lo que viene en la agenda →</a>
           </div>
         )}
-        {!paso && e.retirado && (
+        {!paso && e.suspendido && (
+          <div className="aviso-evento">
+            Este evento se suspendió. <a href="/agenda">Mirá lo que viene en la agenda →</a>
+          </div>
+        )}
+        {!paso && e.retirado && !e.suspendido && (
           <div className="aviso-evento">
             {mayuscula(fuente || 'la fuente')} lo sacó de su agenda: puede haberse suspendido o
             cambiado de fecha. Antes de ir, confirmalo con quien lo organiza.

@@ -44,10 +44,8 @@ export default function PaginaAgenda() {
     <div className="envoltura" style={{ maxWidth: 760 }}>
           <h1 className="fraunces" style={{ fontSize: 34 }}>Agenda de Balcarce</h1>
           <p className="mini" style={{ marginTop: 8, marginBottom: 26, maxWidth: 600 }}>
-            Actos, muestras, ferias, fiestas y encuentros deportivos. Sale de la agenda
-            oficial del municipio y de lo que nos acercan las instituciones. Tocá un evento
+            Actos, muestras, ferias, fiestas y encuentros deportivos. Tocá un evento
             para ver los detalles, agendarlo o pasarlo por WhatsApp.
-            ¿Organizás algo? <a href="mailto:redaccion@radarbalcarce.com?subject=Evento%20para%20la%20agenda" style={{ color: 'var(--rojo)', fontWeight: 600 }}>Mandanos los datos</a> y lo sumamos.
           </p>
 
           {porDia.length === 0 && (

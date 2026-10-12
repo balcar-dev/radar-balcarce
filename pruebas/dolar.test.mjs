@@ -151,14 +151,15 @@ test('recién traído en el navegador: "Actualizado a las" con la hora que infor
 test('la foto del build: la cotización con su hora, sin decir que está actualizada', () => {
   const t = textoDeEstado({ estado: 'guardada', datos: foto, ahora: foto.consultado });
   assert.equal(t.titulo, 'Cotización de las 17:56');
-  assert.match(t.detalle, /La guardamos a las 17:37, al armar esta página/);
+  assert.ok(!t.detalle || !/guardamos|al armar esta página/.test(t.detalle), 'no cuenta cuándo se armó la página (12/10)');
   assert.ok(!/actualizad/i.test(t.titulo));
 });
 
 test('si no se pudo actualizar, se dice: "Cotización de las …; no se pudo actualizar"', () => {
   const t = textoDeEstado({ estado: 'fallo', datos: foto, ahora: MISMO_DIA });
   assert.equal(t.titulo, 'Cotización de las 17:56; no se pudo actualizar.');
-  assert.match(t.detalle, /al armar esta página/);
+  assert.match(t.detalle, /Volvemos a probar en 5 minutos/);
+  assert.ok(!/al armar esta página/.test(t.detalle));
   assert.equal(textoDeEstado({ estado: 'fallo', datos: foto, ahora: AL_OTRO_DIA }).titulo, 'Cotización de ayer a las 17:56; no se pudo actualizar.');
   // Si lo último bueno lo había traído el navegador, no se habla de la foto.
   assert.match(textoDeEstado({ estado: 'fallo', datos: traido, ahora: MISMO_DIA }).detalle, /La última consulta que contestó fue a las 18:10/);

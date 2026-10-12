@@ -211,9 +211,8 @@ export function textoDeEstado({ estado, datos, ahora }) {
   else if (m.dia) deCuando = `del ${m.dia.replace(/^el /, '')} a las ${m.hora}`;
   let guardada = null;
   if (datos.consultado) {
-    guardada = datos.deLaFoto
-      ? `La guardamos ${cuando(datos.consultado, ahora)}, al armar esta página.`
-      : `La última consulta que contestó fue ${cuando(datos.consultado, ahora)}.`;
+    // La cotización que viene en la página armada no dice cuándo se guardó: es un dato nuestro, no del lector.
+    guardada = datos.deLaFoto ? null : `La última consulta que contestó fue ${cuando(datos.consultado, ahora)}.`;
   }
 
   if (estado === 'fallo') {
