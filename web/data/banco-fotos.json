@@ -10222,16 +10222,16 @@
   "cuando": "2026-10-08T21:01:55.309Z"
  },
  "1b0ewyh": {
-  "archivo": "fotos-notas/1b0ewyh.jpg",
   "medio": "Agrositio",
-  "credito": "Foto: Agrositio",
   "licencia": null,
   "origen": "medio",
   "titulo": "Cierra la campaña agrícola cordobesa con récord en maíz",
   "enlace": "https://www.agrositio.com.ar/noticia/248729-cordoba-un-maiz-record-corona-el-cierre-de-la-campana-202526.html",
   "imagenOriginal": "https://www.agrositio.com.ar/imagenesweb/contenidos/og_248729_61887464.jpg",
   "razon": "La foto A muestra claramente una mazorca de maíz en primer plano con buena nitidez, ideal para ilustrar la campaña agrícola sin marcas de agua ni personas.",
-  "cuando": "2026-10-08T18:33:48.525Z"
+  "cuando": "2026-10-08T18:33:48.525Z",
+  "intentado": true,
+  "borrada": true
  },
  "11yxcy2": {
   "medio": "Wikimedia Commons",
@@ -12351,5 +12351,17 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/ACFL7NTQTRFRJMSYKMOHAQB3DU.jpg?auth=dc00d672809186842ea07f218db60669eee13c6b4796e4473138ae346391b5ce&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto B ilustra adecuadamente el tema económico sin marcas de agua ni menores, a diferencia de la A que tiene marca.",
   "cuando": "2026-10-12T02:31:49.116Z"
+ },
+ "wo6zpw": {
+  "archivo": "fotos-notas/wo6zpw.jpg",
+  "medio": "TyC Sports",
+  "credito": "Foto: TyC Sports",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Cauan Barros sufre un accidente y se pierde el partido ante Boca",
+  "enlace": "https://www.tycsports.com/boca-juniors/un-jugador-de-vasco-da-gama-tuvo-un-accidente-de-transito-y-sera-baja-ante-boca-id765694.html",
+  "imagenOriginal": "https://media.tycsports.com/files/2026/10/11/995020/caucan-barros_862x485.webp?v=1",
+  "razon": "Es la foto con mejor encuadre y nitidez de Cauan Barros en solitario, sin marcas agregadas ni menores.",
+  "cuando": "2026-10-12T02:38:37.819Z"
  }
 }

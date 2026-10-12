@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T02:31:55.374Z",
+ "consultado": "2026-10-12T02:38:42.858Z",
  "equipos": [
   "9739",
   "3",
@@ -1400,6 +1400,19 @@
      },
      {
       "posicion": 5,
+      "id": "11",
+      "equipo": "Independiente",
+      "pj": 12,
+      "g": 5,
+      "e": 3,
+      "p": 4,
+      "gf": 11,
+      "gc": 12,
+      "dif": -1,
+      "pts": 18
+     },
+     {
+      "posicion": 6,
       "id": "12",
       "equipo": "Lanús",
       "pj": 11,
@@ -1412,7 +1425,7 @@
       "pts": 17
      },
      {
-      "posicion": 6,
+      "posicion": 7,
       "id": "14",
       "equipo": "Newell's Old Boys",
       "pj": 11,
@@ -1425,7 +1438,7 @@
       "pts": 17
      },
      {
-      "posicion": 7,
+      "posicion": 8,
       "id": "11972",
       "equipo": "Gimnasia (Mendoza)",
       "pj": 11,
@@ -1435,19 +1448,6 @@
       "gf": 14,
       "gc": 12,
       "dif": 2,
-      "pts": 17
-     },
-     {
-      "posicion": 8,
-      "id": "11",
-      "equipo": "Independiente",
-      "pj": 11,
-      "g": 5,
-      "e": 2,
-      "p": 4,
-      "gf": 11,
-      "gc": 12,
-      "dif": -1,
       "pts": 17
      },
      {
@@ -1532,14 +1532,14 @@
       "posicion": 15,
       "id": "19",
       "equipo": "Talleres (Córdoba)",
-      "pj": 11,
+      "pj": 12,
       "g": 2,
-      "e": 2,
+      "e": 3,
       "p": 7,
       "gf": 11,
       "gc": 18,
       "dif": -7,
-      "pts": 8
+      "pts": 9
      }
     ]
    },
@@ -1745,7 +1745,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-12T01:02:08.629Z",
+ "tablaCuando": "2026-10-12T02:38:42.858Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
