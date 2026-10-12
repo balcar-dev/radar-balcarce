@@ -12242,22 +12242,28 @@
   "cuando": "2026-10-11T23:32:18.484Z"
  },
  "1vl8rqs": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1vl8rqs.jpg",
+  "medio": "Diario Popular",
+  "credito": "Foto: Diario Popular",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Rosario realiza la Feria Internacional del Libro hasta el 18 de octubre",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-11T23:32:18.484Z",
-  "intentos": 1,
-  "fuentes": 3
+  "enlace": "https://www.diariopopular.com.ar/cultura/nueva-edicion-la-feria-internacional-del-libro-2026-rosario-n924053",
+  "imagenOriginal": "https://media.diariopopular.com.ar/p/c9e857f438839006b8bec6672e561d88/adjuntos/143/imagenes/008/259/0008259858/1200x675/smart/feria-del-libro-rosario-foto-1-m.jpg",
+  "razon": "La foto B muestra una vista general clara del evento sin marcas de agua de los medios ni menores reconocibles, siendo apta para la publicación.",
+  "cuando": "2026-10-12T01:01:57.758Z"
  },
  "1pi4mqa": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1pi4mqa.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Diputados debate el proyecto que sanciona el vandalismo rural",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-11T23:32:18.484Z",
-  "intentos": 1,
-  "fuentes": 2
+  "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/F47PNX4H6RCWFJKYDSQGWKUKHY.jpg?auth=15b2d19ed222fb4d04a11197fe51db1b759c013c83dec1ec63f719afe5fe3ec3&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A muestra silobolsas y camiones de manera clara, ilustrando perfectamente el tema agropecuario y de vandalismo rural sin personas reconocibles.",
+  "cuando": "2026-10-12T01:01:57.758Z"
  },
  "1lmhb77": {
   "intentado": true,
@@ -12309,5 +12315,17 @@
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791757748991.jpg?&cw=600&ch=365",
   "razon": "La foto B es la mejor opción disponible ya que muestra claramente el hecho sin marcas de agua agregadas por el medio.",
   "cuando": "2026-10-12T00:01:59.429Z"
+ },
+ "16ew98b": {
+  "archivo": "fotos-notas/16ew98b.jpg",
+  "medio": "C5N",
+  "credito": "Foto: C5N",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Cristian González analiza la chance del Inter Miami en la Libertadores",
+  "enlace": "https://www.c5n.com/deportes/kily-gonzalez-detallo-la-propuesta-que-lionel-messi-juegue-la-copa-libertadores-y-sorprendio-todos-n251349",
+  "imagenOriginal": "https://media.c5n.com/p/96dea54156cd33494aff0223ac64a1f4/adjuntos/326/imagenes/000/368/0000368641/1200x675/smart/lionel-messi.jpg",
+  "razon": "Es la foto más nítida, muestra claramente a Lionel Messi de frente en el campo de juego y está libre de marcas agregadas y menores.",
+  "cuando": "2026-10-12T01:01:57.758Z"
  }
 }

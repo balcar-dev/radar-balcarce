@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T00:32:04.957Z",
+ "consultado": "2026-10-12T01:02:08.629Z",
  "equipos": [
   "9739",
   "3",
@@ -1111,7 +1111,7 @@
     "competencia": "liga",
     "inicio": "2026-10-12T00:30:00.000Z",
     "estado": "en-juego",
-    "minuto": "1'",
+    "minuto": "31'",
     "local": {
      "id": "19",
      "nombre": "Talleres (Córdoba)",
@@ -1561,6 +1561,19 @@
      },
      {
       "posicion": 2,
+      "id": "4",
+      "equipo": "Belgrano (Córdoba)",
+      "pj": 12,
+      "g": 6,
+      "e": 4,
+      "p": 2,
+      "gf": 14,
+      "gc": 7,
+      "dif": 7,
+      "pts": 22
+     },
+     {
+      "posicion": 3,
       "id": "3",
       "equipo": "Argentinos Juniors",
       "pj": 12,
@@ -1571,19 +1584,6 @@
       "gc": 11,
       "dif": 5,
       "pts": 22
-     },
-     {
-      "posicion": 3,
-      "id": "4",
-      "equipo": "Belgrano (Córdoba)",
-      "pj": 11,
-      "g": 5,
-      "e": 4,
-      "p": 2,
-      "gf": 12,
-      "gc": 7,
-      "dif": 5,
-      "pts": 19
      },
      {
       "posicion": 4,
@@ -1706,13 +1706,13 @@
       "posicion": 13,
       "id": "15",
       "equipo": "Racing Club",
-      "pj": 11,
+      "pj": 12,
       "g": 3,
       "e": 2,
-      "p": 6,
+      "p": 7,
       "gf": 13,
-      "gc": 17,
-      "dif": -4,
+      "gc": 19,
+      "dif": -6,
       "pts": 11
      },
      {
@@ -1745,7 +1745,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-11T23:09:19.695Z",
+ "tablaCuando": "2026-10-12T01:02:08.629Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
