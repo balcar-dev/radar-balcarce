@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T13:36:27.203Z",
- "portada": 24,
- "archivo": 944,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-12T14:02:38.772Z",
+ "portada": 27,
+ "archivo": 945,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-12T13:36:27.237Z",
+  "generado": "2026-10-12T14:02:38.803Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-12T10:03:58.356Z"
    },
    {
@@ -126,17 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 32,
+    "segundos": 39,
     "notas": [
+     {
+      "id": "s94jkn",
+      "titulo": "Zizou Bergs elimina a Carlos Alcaraz en el Masters de Shanghái",
+      "seccion": "Deportes"
+     },
      {
       "id": "skmago",
       "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes"
      }
     ]
    },
@@ -147,8 +147,19 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 33,
+    "notas": [
+     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "atnmk9",
+      "titulo": "El Concejo aprueba la creación del registro de acompañantes terapéuticos",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -157,9 +168,20 @@
      "id": "vt9ful",
      "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
      "cuando": "2026-10-12T11:45:27.345Z"
+    },
+    {
+     "id": "bqnbdp",
+     "titulo": "Milei afirma tener fondos por miles de millones de dólares para frenar una corrida",
+     "cuando": "2026-10-12T13:35:20.266Z"
     }
    ],
    "cola": [
+    {
+     "id": "r0o8z3",
+     "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
+     "seccion": "Deportes",
+     "marcada": false
+    },
     {
      "id": "skmago",
      "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
@@ -167,8 +189,8 @@
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-12T13:15:27.345Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-12T15:05:20.266Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

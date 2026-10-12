@@ -351,6 +351,11 @@
   "ultimo": "2026-10-10T23:01:34.833Z",
   "motivo": "con cuerpo"
  },
+ "185xawb": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T14:02:04.283Z",
+  "motivo": "con cuerpo"
+ },
  "188h2hi": {
   "intentos": 1,
   "ultimo": "2026-10-11T02:08:19.883Z",
@@ -1291,6 +1296,11 @@
   "ultimo": "2026-10-09T23:27:45.328Z",
   "motivo": "con cuerpo"
  },
+ "1tsobe7": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T14:02:04.283Z",
+  "motivo": "semáforo: necesita ojo humano: \"lesionado\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
  "1u383pj": {
   "intentos": 1,
   "ultimo": "2026-10-09T17:01:38.358Z",
@@ -1445,6 +1455,11 @@
   "intentos": 3,
   "ultimo": "2026-10-07T23:01:52.452Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
+ "1xc91gb": {
+  "intentos": 1,
+  "ultimo": "2026-10-12T14:02:04.283Z",
+  "motivo": "cuerpo: 3 problemas (nombre): el cuerpo nombra a \"palacio\" y la fuente no; sin esas oraciones quedan 59 palabras"
  },
  "1xwup7g": {
   "intentos": 1,
@@ -2446,9 +2461,9 @@
   "motivo": "con cuerpo"
  },
  "r0o8z3": {
-  "intentos": 1,
-  "ultimo": "2026-10-12T13:33:06.996Z",
-  "motivo": "cuerpo: 3 problemas (numero, promesa): el cuerpo dice 50 y la fuente no lo dice; sin esas oraciones quedan 54 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-12T14:02:04.283Z",
+  "motivo": "con cuerpo"
  },
  "r2tg83": {
   "intentos": 3,
