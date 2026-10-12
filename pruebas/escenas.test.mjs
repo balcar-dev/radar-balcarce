@@ -77,3 +77,21 @@ test('el tiempo se acaba con la última pieza: una escena sin lluvia de datos de
   const svg = escenaDeClima({ momento: 'manana', clima: sinLluvia, fecha: '2026-10-09' }).cuadro(8);
   assert.ok(!/>0%</.test(svg) && !/>null%</.test(svg), 'sin dato de lluvia no se dibuja ningún porcentaje');
 });
+
+test('"Y además" de la efeméride nunca se corta con puntos suspensivos: achica el cuerpo o pasa a dos renglones', async () => {
+  const { escenaDeEfemeride } = await import('../reels/escenas/fechas.mjs');
+  const escena = escenaDeEfemeride({
+    fecha: '2026-10-11', tipo: 'cultura',
+    principal: { anio: 1904, titulo: 'Nace Tita Merello', cuerpo: 'Actriz y cantante, ícono del tango y del cine argentino.' },
+    ademas: [
+      { anio: 1830, texto: 'Chopin interpreta en Varsovia su Concierto para piano número 2' },
+      { anio: 1878, texto: 'Día Nacional de la Patagonia' },
+      { anio: 1894, texto: 'Nace el boxeador Luis Ángel Firpo' },
+    ],
+  });
+  const svg = escena.cuadro(8, 16);
+  assert.ok(!svg.includes('…'), 'no hay texto cortado con puntos suspensivos');
+  const texto = svg.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+  assert.ok(texto.includes('Chopin') && texto.includes('número 2'), 'el texto largo está entero (de la primera a la última palabra)');
+  assert.ok(partirSvg(svg), 'el SVG se puede partir');
+});

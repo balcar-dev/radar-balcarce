@@ -119,7 +119,6 @@ export const TIPOS_DE_EFEMERIDE = {
 /** Los renglones de un texto, cada uno entrando después del anterior. */
 const porRenglon = (t, desde, lineas, o) => lineas.map((l, i) => aparece(t, desde + i * 0.18, renglones([l], { ...o, y: o.y + i * o.interlinea }), { dy: 36 })).join('');
 
-const recortar = (s, max) => (s.length > max ? `${s.slice(0, max - 1).trimEnd()}…` : s);
 
 /**
  * Una efeméride. `principal`: { anio, titulo, cuerpo }; `ademas`: [{ anio, texto }] (hasta tres); `tipo`: una de TIPOS_DE_EFEMERIDE;
@@ -132,9 +131,15 @@ export function escenaDeEfemeride({ fecha, principal, ademas = [], tipo = 'histo
   const tamAnio = 250;
   const yAnio = cab.hasta + 40 + Math.round(tamAnio * 0.8);
   const yRaya = yAnio + 38;
-  const lista = ademas.slice(0, 3);
-  const altoAdemas = lista.length ? 70 + lista.length * 60 : 0;
+  // Cada "y además" entra entero: primero se achica el cuerpo y, si todavía no entra, pasa a dos renglones (nunca se corta con "…").
+  const lista = ademas.slice(0, 3).map((x) => {
+    const r = repartir(x.texto, [{ tam: 34, max: 1 }, { tam: 30, max: 1 }, { tam: 30, max: 2 }, { tam: 28, max: 3 }], W - MARGEN * 2 - 124, 'sans');
+    return { ...x, lineas: r.lineas, tam: r.tam, alto: 60 + (r.lineas.length - 1) * Math.round(r.tam * 1.2) };
+  });
+  const altoAdemas = lista.length ? 70 + lista.reduce((s, x) => s + x.alto, 0) : 0;
   const yAdemas = FIN - altoAdemas;
+  let yFila = yAdemas + 82;
+  for (const x of lista) { x.y = yFila; yFila += x.alto; }
   const titulo = repartir(principal.titulo, [{ tam: 82, max: 3 }, { tam: 70, max: 3 }, { tam: 60, max: 4 }], W - MARGEN * 2, 'serif');
   const yTitulo = yRaya + 30 + Math.round(titulo.tam * 0.95);
   const interTitulo = Math.round(titulo.tam * 1.04);
@@ -153,8 +158,8 @@ export function escenaDeEfemeride({ fecha, principal, ademas = [], tipo = 'histo
         ${porRenglon(t, 2.1, titulo.lineas, { x: MARGEN, y: yTitulo, tam: titulo.tam, interlinea: interTitulo, color: TINTA, espaciado: -1.5 })}
         ${cuerpo ? aparece(t, 2.9, renglones(cuerpo.lineas, { x: MARGEN, y: yCuerpo, tam: cuerpo.tam, interlinea: Math.round(cuerpo.tam * 1.35), familia: TEXTO, peso: 500, color: GRIS }), { dy: 24 }) : ''}
         ${lista.length ? aparece(t, 4.2, rotulo('Y además', { x: MARGEN, y: yAdemas + 22, color: GRIS, tam: 26 }), { dy: 14 }) : ''}
-        ${lista.map((x, i) => aparece(t, 4.6 + i * 0.5, `<text x="${MARGEN}" y="${yAdemas + 82 + i * 60}" font-family="${TEXTO}" font-size="34" font-weight="800" fill="${COLORES.rojo}">${esc(x.anio ?? 'Hoy')}</text>
-          <text x="${MARGEN + 124}" y="${yAdemas + 82 + i * 60}" font-family="${TEXTO}" font-size="34" font-weight="500" fill="${GRIS}">${esc(recortar(x.texto, 42))}</text>`, { dx: 60, dy: 0, dur: 0.6 })).join('')}`,
+        ${lista.map((x, i) => aparece(t, 4.6 + i * 0.5, `<text x="${MARGEN}" y="${x.y}" font-family="${TEXTO}" font-size="34" font-weight="800" fill="${COLORES.rojo}">${esc(x.anio ?? 'Hoy')}</text>
+          ${renglones(x.lineas, { x: MARGEN + 124, y: x.y, tam: x.tam, interlinea: Math.round(x.tam * 1.2), familia: TEXTO, peso: 500, color: GRIS })}`, { dx: 60, dy: 0, dur: 0.6 })).join('')}`,
     });
   };
   return crearEscena({ nombre: 'efemeride', variante: `efemeride-${tipo}`, cuadro, duracionMinima: 14 });
