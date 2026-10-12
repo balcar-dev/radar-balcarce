@@ -1523,6 +1523,53 @@
         "vistas": 3,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-12T00:00:19.187Z",
+      "web": {
+        "u12": {
+          "visitas": 5,
+          "vistas": 22
+        },
+        "a12": {
+          "visitas": 20,
+          "vistas": 40
+        },
+        "u24": {
+          "visitas": 17,
+          "vistas": 45
+        },
+        "a24": {
+          "visitas": 60,
+          "vistas": 110
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 7
+          },
+          {
+            "camino": "/nota/brasil-derrota-a-argentina-por-3-a-1-en-un-amistoso-internacional-17wk7q3",
+            "vistas": 5
+          },
+          {
+            "camino": "/nota/adrian-stoppelman-presenta-su-show-de-humor-en-la-casa-del-1gkf7qu",
+            "vistas": 5
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 22,
+        "vistas": 1518,
+        "interacciones": 3
+      },
+      "instagram": {
+        "seguidores": 5,
+        "publicaciones": 133,
+        "alcance": 17,
+        "vistas": 72,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2328,9 +2375,7 @@
     },
     "2026-10-09": {
       "referentes": {
-        "facebook.com": 46,
-        "directo": 5,
-        "dataindex.pro": 1
+        "facebook.com": 100
       },
       "visitas": 52,
       "vistas": 139,
@@ -2343,74 +2388,32 @@
         0,
         0,
         0,
-        2,
-        11,
-        6,
-        64,
-        16,
-        2,
-        9,
-        10,
         0,
         0,
         0,
-        2,
         0,
-        16,
         0,
-        1
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ],
-      "paises": {
-        "US": 63,
-        "AR": 62,
-        "IE": 9,
-        "SE": 4,
-        "RU": 1
-      },
+      "paises": {},
       "dispositivos": {
-        "mobile": 90,
-        "desktop": 49
+        "mobile": 400
       },
-      "notas": {
-        "18jx7kk": 17,
-        "1v0pyz6": 11,
-        "14mxql1": 7,
-        "6q5i7o": 6,
-        "repaso20261009manana": 6,
-        "1j94k5u": 6,
-        "17di2tc": 5,
-        "1aizybd": 4,
-        "aqy95q": 4,
-        "175ztwv": 4,
-        "16fjrrx": 3,
-        "601x8n": 3,
-        "173ttfz": 2,
-        "l5o975": 2,
-        "ypnvl8": 2,
-        "1trv7re": 2,
-        "xlon5q": 2,
-        "5crmtt": 1
-      },
-      "paginas": {
-        "/": 19,
-        "/seccion/agro": 10,
-        "/seccion/futbol": 7,
-        "/seccion/automovilismo": 4,
-        "/seccion/cultura-2": 4,
-        "/seccion/argentina": 4,
-        "/seccion/cultura": 2,
-        "/quienes-somos": 2
-      }
+      "notas": {},
+      "paginas": {}
     },
     "2026-10-10": {
-      "paises": {
-        "US": 47,
-        "AR": 45,
-        "SE": 8,
-        "IE": 5,
-        "PL": 4,
-        "DE": 2
-      },
+      "paises": {},
       "horas": [
         0,
         0,
@@ -2420,26 +2423,25 @@
         0,
         0,
         0,
-        5,
         0,
-        6,
-        45,
         0,
-        6,
         0,
-        19,
         0,
-        7,
         0,
-        8,
         0,
-        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0
       ],
       "referentes": {
-        "facebook.com": 37,
-        "directo": 3
+        "facebook.com": 50
       },
       "dispositivos": {
         "mobile": 69,
@@ -2448,28 +2450,50 @@
       "visitas": 40,
       "vistas": 111,
       "notas": {
-        "1vwpejn": 10,
-        "1nhtdpr": 10,
-        "jul3dj": 10,
         "4u38d4": 10,
-        "2qmh95": 10
+        "u6j4ho": 8,
+        "p4vc8j": 8,
+        "1cj5sd": 7,
+        "1vwpejn": 5,
+        "17wk7q3": 5,
+        "15zr9uw": 5,
+        "1nhtdpr": 4,
+        "jul3dj": 4,
+        "1u383pj": 4,
+        "2qmh95": 4,
+        "1m8dnbh": 4,
+        "1360zul": 3,
+        "1qeim0": 3,
+        "9zwjal": 3,
+        "vw0kpx": 2,
+        "k1kiay": 2,
+        "146dyw0": 2,
+        "190bbf8": 2
       },
       "paginas": {
-        "/seccion/automovilismo": 30,
-        "/": 20
+        "/": 11,
+        "/seccion/politica": 9,
+        "/seccion/automovilismo": 4,
+        "/seccion/tecnologia": 2
       }
     },
     "2026-10-11": {
-      "visitas": 0,
-      "vistas": 8,
-      "referentes": {},
-      "paises": {
-        "AR": 8
+      "visitas": 10,
+      "vistas": 40,
+      "referentes": {
+        "facebook.com": 10
       },
+      "paises": {},
       "notas": {
-        "f1parrilla2026r17": 4
+        "1gkf7qu": 5,
+        "f1parrilla2026r17": 4,
+        "lb7md0": 3,
+        "repaso20261011manana": 3,
+        "1izhgu3": 2,
+        "1m2za7b": 2
       },
       "paginas": {
+        "/": 7,
         "/seccion/automovilismo": 4
       },
       "horas": [
@@ -2481,7 +2505,7 @@
         0,
         0,
         0,
-        8,
+        0,
         0,
         0,
         0,
@@ -2498,9 +2522,7 @@
         0,
         0
       ],
-      "dispositivos": {
-        "mobile": 8
-      }
+      "dispositivos": {}
     }
   }
 }
