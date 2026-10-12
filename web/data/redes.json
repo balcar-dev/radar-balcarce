@@ -4541,7 +4541,13 @@
     }
   },
   "problemas": {},
-  "facebookFoto": {},
+  "facebookFoto": {
+    "xn5jch": {
+      "intentos": 1,
+      "ultimo": "2026-10-12T15:06:54.019Z",
+      "error": "Missing or invalid image file"
+    }
+  },
   "reelsEnFacebook": {
     "2026-10-08/clima-noche": {
       "cuando": "2026-10-08T23:06:56.514Z",
