@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T09:02:03.403Z",
+  "generado": "2026-10-12T09:31:53.420Z",
   "notas": [
     {
       "id": "repaso20261011noche",
@@ -412,8 +412,8 @@
       "guion": "Los Pumas 7s y Las Yaguaretés ganan el Sudamericano en Córdoba",
       "seccion": "Deportes",
       "medios": [
-        "La Nueva",
         "Doble Amarilla",
+        "La Nueva",
         "UAR (Unión Argentina de Rugby)",
         "Olé"
       ],
@@ -422,7 +422,7 @@
       "fecha": "2026-10-11T21:15:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T00:01:37.308Z",
-      "relevancia": 65,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -893,9 +893,9 @@
         "Infobae",
         "TyC Sports",
         "Crónica",
-        "TN (Todo Noticias)",
+        "La Verdad de Ayacucho",
         "Campeones",
-        "La Verdad de Ayacucho"
+        "TN (Todo Noticias)"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/10/11/la-sentencia-del-jefe-de-alpine-tras-el-abandono-de-colapinto-y-la-actuacion-de-pierre-gasly-en-el-gp-de-singapur-de-formula-1/",
       "teniaImagenLaFuente": true,
@@ -982,6 +982,74 @@
       "foto": {
         "archivo": "fotos-notas/162om74.jpg",
         "credito": "Foto: TyC Sports"
+      }
+    },
+    {
+      "id": "t691yd",
+      "titulo": "La economía nacional acumula superávits gemelos entre enero y agosto",
+      "copete": "El país registra cuentas públicas positivas por 2,6 billones de pesos y un saldo comercial favorable de 18.380 millones de dólares en los primeros ocho meses del año, según un informe sectorial.",
+      "cuerpo": "La economía argentina acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, de acuerdo con un informe de la Bolsa de Comercio de Rosario.\n\nEl análisis detalla que el Estado obtuvo ingresos por 120,7 billones de pesos y gastos primarios de 107,4 billones en ese lapso. El resultado fiscal primario llegó a 13,3 billones de pesos, lo que representa una baja interanual del 15,9% pero se ubica como el tercer mejor registro desde 2009. La dinámica mensual arrojó resultados positivos en siete de los ocho meses, con la única excepción de junio debido al pago del medio aguinaldo y al traslado de vencimientos impositivos.\n\nEn el sector externo, el intercambio comercial alcanzó 33 meses consecutivos con saldo favorable y la mayor cifra para los primeros ocho meses desde 2009. Las exportaciones sumaron 67.766 millones de dólares, con subas destacadas en el rubro de combustibles y energía.",
+      "guion": "La economía nacional acumula superávits gemelos entre enero y agosto.",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T14:52:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T02:31:37.843Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Superávit financiero de 2,6 billones de pesos en ocho meses",
+        "Balanza comercial positiva por 18.380 millones de dólares",
+        "Tres años consecutivos de resultados gemelos para el período",
+        "Incremento de las exportaciones impulsado por combustibles y energía"
+      ],
+      "seSabe": [
+        "El superávit financiero acumulado llegó a 2,6 billones de pesos entre enero y agosto",
+        "El saldo comercial positivo alcanzó los 18.380 millones de dólares",
+        "El Estado registró ingresos por 120,7 billones de pesos",
+        "Las exportaciones totales sumaron 67.766 millones de dólares"
+      ],
+      "textoRedes": "La economía nacional acumuló un superávit financiero de 2,6 billones de pesos y un saldo comercial positivo de 18.380 millones de dólares entre enero y agosto, según un informe sectorial.",
+      "etiquetas": [
+        "economia",
+        "superavit",
+        "exportaciones",
+        "comercio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/argentina-registro-superavits-gemelos-por-tercer-ano-consecutivo-entre-enero-y-agosto_a6acba5e3f61ec7711f69dfb3",
+          "fecha": "2026-10-11T14:52:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe de la Bolsa de Comercio de Rosario sobre superávit financiero, fiscal y comercial."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/11/por-tercer-ano-consecutivo-milei-reedito-los-superavits-gemelos-de-los-primeros-anos-del-kirchnerismo/",
+          "fecha": "2026-10-11T22:06:54.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en los datos generales del informe de la Bolsa de Comercio de Rosario sobre la economía nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-economia-nacional-acumula-superavits-gemelos-entre-enero-y-agosto",
+      "foto": {
+        "archivo": "fotos-notas/t691yd.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1598,13 +1666,13 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 4,
+      "temp": 5,
       "sensacion": 2,
       "humedad": 97,
-      "viento": 4,
+      "viento": 5,
       "rumbo": "SE",
-      "cielo": "Parcialmente nublado",
-      "esDeDia": false
+      "cielo": "Mayormente despejado",
+      "esDeDia": true
     },
     "dias": [
       {
