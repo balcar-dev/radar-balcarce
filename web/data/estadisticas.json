@@ -1570,6 +1570,40 @@
         "vistas": 72,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-12T12:00:19.958Z",
+      "web": {
+        "u12": {
+          "visitas": 16,
+          "vistas": 110
+        },
+        "a12": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "u24": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "a24": {
+          "visitas": 50,
+          "vistas": 120
+        },
+        "top": []
+      },
+      "facebook": {
+        "seguidores": 31,
+        "vistas": 1321,
+        "interacciones": 4
+      },
+      "instagram": {
+        "seguidores": 5,
+        "publicaciones": 136,
+        "alcance": 0,
+        "vistas": 0,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2413,7 +2447,11 @@
       "paginas": {}
     },
     "2026-10-10": {
-      "paises": {},
+      "paises": {
+        "AR": 50,
+        "US": 40,
+        "IE": 10
+      },
       "horas": [
         0,
         0,
@@ -2423,32 +2461,29 @@
         0,
         0,
         0,
+        5,
         0,
+        6,
+        45,
         0,
+        6,
         0,
+        19,
         0,
+        7,
         0,
+        8,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        15,
         0,
         0
       ],
       "referentes": {
         "facebook.com": 50
       },
-      "dispositivos": {
-        "mobile": 69,
-        "desktop": 42
-      },
-      "visitas": 40,
-      "vistas": 111,
+      "dispositivos": {},
+      "visitas": 0,
+      "vistas": 0,
       "notas": {
         "4u38d4": 10,
         "u6j4ho": 8,
@@ -2478,23 +2513,40 @@
       }
     },
     "2026-10-11": {
-      "visitas": 10,
-      "vistas": 40,
-      "referentes": {
-        "facebook.com": 10
+      "visitas": 0,
+      "vistas": 0,
+      "referentes": {},
+      "paises": {
+        "AR": 200
       },
-      "paises": {},
       "notas": {
+        "jiv3ba": 9,
         "1gkf7qu": 5,
         "f1parrilla2026r17": 4,
+        "hp2pil": 3,
+        "jlfox6": 3,
         "lb7md0": 3,
         "repaso20261011manana": 3,
+        "f1resultado2026r17": 2,
         "1izhgu3": 2,
-        "1m2za7b": 2
+        "zavg8u": 2,
+        "1m2za7b": 2,
+        "4p0z63": 1
       },
       "paginas": {
-        "/": 7,
-        "/seccion/automovilismo": 4
+        "/": 13,
+        "/seccion/politica": 12,
+        "/seccion/automovilismo": 6,
+        "/tablas/liga-profesional": 4,
+        "/farmacias": 4,
+        "/tablas/formula-1": 4,
+        "/agenda": 4,
+        "/politica-de-privacidad": 2,
+        "/quienes-somos": 2,
+        "/contacto": 2,
+        "/seccion/policiales": 2,
+        "/dolar": 2,
+        "/util": 2
       },
       "horas": [
         0,
@@ -2505,7 +2557,42 @@
         0,
         0,
         0,
+        8,
         0,
+        10,
+        0,
+        0,
+        0,
+        8,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        51
+      ],
+      "dispositivos": {
+        "mobile": 90,
+        "desktop": 10
+      }
+    },
+    "2026-10-12": {
+      "visitas": 0,
+      "vistas": 0,
+      "referentes": {},
+      "horas": [
+        14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        28,
         0,
         0,
         0,
@@ -2522,7 +2609,20 @@
         0,
         0
       ],
-      "dispositivos": {}
+      "notas": {
+        "vt9ful": 20
+      },
+      "paginas": {
+        "/": 20
+      },
+      "dispositivos": {
+        "mobile": 38,
+        "desktop": 4
+      },
+      "paises": {
+        "AR": 38,
+        "US": 4
+      }
     }
   }
 }
