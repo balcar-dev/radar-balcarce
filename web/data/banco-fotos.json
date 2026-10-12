@@ -12756,16 +12756,16 @@
   "cuando": "2026-10-12T19:01:51.220Z"
  },
  "pcks4q": {
-  "archivo": "fotos-notas/pcks4q.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Justicia declara la quiebra de una importante fabricante de pallets",
   "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/RZ5YEQG5TNHEZJIQKLICVSKIVA.png?auth=ca68ca00cf873a6a08f57000e583d9bd6fdafcee8975d3c8530e9b85ae84a7cf&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto A muestra claramente pallets de madera con excelente nitidez y sin marcas ni menores, ideal para ilustrar la nota sobre la fabricante de pallets.",
-  "cuando": "2026-10-12T19:01:51.220Z"
+  "cuando": "2026-10-12T19:01:51.220Z",
+  "intentado": true,
+  "borrada": true
  },
  "fr6obg": {
   "archivo": "fotos-notas/fr6obg.jpg",
@@ -12804,16 +12804,16 @@
   "cuando": "2026-10-12T19:47:00.345Z"
  },
  "2gbl30": {
-  "archivo": "fotos-notas/2gbl30.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno difunde un video por el Día de la Raza",
   "enlace": "https://www.lanueva.com/nota/2026-10-12-15-33-0-el-mensaje-de-la-casa-rosada-por-el-12-de-octubre-el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791833672360.jpg?&cw=600&ch=365",
   "razon": "Es la única imagen limpia, sin marcas de agua superpuestas ni menores, que ilustra correctamente la temática histórica de la nota con buena calidad.",
-  "cuando": "2026-10-12T19:47:00.345Z"
+  "cuando": "2026-10-12T19:47:00.345Z",
+  "intentado": true,
+  "borrada": true
  },
  "1lk2g5p": {
   "archivo": "fotos-notas/1lk2g5p.jpg",
@@ -12826,5 +12826,59 @@
   "imagenOriginal": "https://tn.com.ar/resizer/v2/el-servicio-metereologico-nacional-anuncia-alertas-por-tormentas-imagen-ilustrativa-generada-con-ia-JFODQ7CD4BCRTGP3HITGVIX5UU.jpeg?auth=a6a3332dbe3983e56b9188422881553ed030fa7e57a81bab8fb4b555edaf0cdb&width=1023",
   "razon": "Ilustra claramente tormentas y rayos sobre la ciudad, sin marcas ni menores.",
   "cuando": "2026-10-12T19:47:00.345Z"
+ },
+ "18zr7tv": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Ciclistas locales consiguen podios en el MTB Series",
+  "razon": "sin fotos para comparar",
+  "cuando": "2026-10-12T20:01:57.786Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "90qy7w": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+  "razon": "La única foto disponible incluye menores reconocibles y no cumple con las políticas de publicación del medio.",
+  "cuando": "2026-10-12T20:01:57.786Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "15o5mwn": {
+  "archivo": "fotos-notas/15o5mwn.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
+  "enlace": "https://balcarce.gob.ar/2026/10/12/doble-podio-para-felipe-pereyra-en-el-nacional-master-de-marcha-atletica/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/10/Felipe-Pereyra-1-1024x576.jpeg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y muestra claramente a los atletas en el evento.",
+  "cuando": "2026-10-12T20:01:57.786Z"
+ },
+ "km19m5": {
+  "archivo": "fotos-notas/km19m5.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno nacional restituye el nombre de Día de la Raza",
+  "enlace": "https://www.lanueva.com/nota/2026-10-12-15-33-0-el-mensaje-de-la-casa-rosada-por-el-12-de-octubre-el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo",
+  "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791833672360.jpg?&cw=600&ch=365",
+  "razon": "La foto C muestra la misma escena histórica de buena calidad y sin marcas de agua ni menores, a diferencia de A (que tiene marca) y B (que tiene zócalos de texto sobreimpresos).",
+  "cuando": "2026-10-12T20:01:57.786Z"
+ },
+ "1b3umaz": {
+  "archivo": "fotos-notas/1b3umaz.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Miguel Merentiel evalúa tatuarse si Boca gana la Copa Sudamericana",
+  "enlace": "https://tn.com.ar/deportes/futbol/2026/10/12/miguel-merentiel-revelo-que-estaria-dispuesto-a-hacer-si-boca-sale-campeon-de-la-copa-sudamericana-seria-algo-lindo/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-398-3015073f958e1791816752488-1791817693.jpg?auth=6e6b55d667edcf30122ce78c2899d73a86c05ee509f3b01459fa001a5ea2e5b3&width=1023",
+  "razon": "Es la mejor foto disponible, con excelente nitidez y encuadre, sin marcas agregadas ni menores reconocibles.",
+  "cuando": "2026-10-12T20:01:57.786Z"
  }
 }

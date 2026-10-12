@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T19:47:21.589Z",
- "portada": 35,
- "archivo": 968,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-12T20:02:30.177Z",
+ "portada": 43,
+ "archivo": 971,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-12T19:47:21.619Z",
+  "generado": "2026-10-12T20:02:30.212Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,8 +157,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 38,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "1snnbwi",
+      "titulo": "La Champions League disputa nueve partidos el martes",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "90qy7w",
+      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+      "seccion": "Deportes"
+     },
      {
       "id": "q9kshm",
       "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
@@ -200,7 +210,20 @@
      "cuando": "2026-10-12T18:38:29.498Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "15o5mwn",
+     "titulo": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "90qy7w",
+     "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-12T20:08:29.498Z",
    "porDia": 5,
