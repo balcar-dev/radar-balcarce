@@ -1,7 +1,91 @@
 {
- "generado": "2026-10-12T22:02:24.600Z",
+ "generado": "2026-10-12T23:02:05.248Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "1v320y9",
+   "titulo": "Luis Caputo contra economista: “Es un es...”",
+   "copete": "El presidente Javier Milei ratificó este lunes de manera enfática la continuidad de Luis Caputo en el Gobierno, al descartar de plano rumores que circularon sobre un posible recambio en el Ministerio de Economía. Destacó que tiene una relación “excelente” con el ministro y dijo…",
+   "seccion": "Política",
+   "fecha": "2026-10-12T12:10:31.720Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/luis-caputo-contra-economista---es-un-es----_a6accc0cf32fdad2908951a5e",
+     "fecha": "2026-10-12T12:10:31.720Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
+     "fecha": "2026-10-12T12:50:00.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/milei-nego-la-salida-de-luis-caputo-y-se-mostro-confiado-en-que-sera-reelecto-nid12102026/",
+     "fecha": "2026-10-12T15:01:31.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/videos/2026/10/12/javier-milei-respaldo-a-luis-caputo/",
+     "fecha": "2026-10-12T22:35:44.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/politica/2026/10/12/milei-defendio-el-rumbo-de-la-economia-y-descarto-las-versiones-sobre-una-salida-de-luis-caputo-nadie-lo-cuestiona-2/",
+     "fecha": "2026-10-12T17:58:43.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/politica/javier-milei-descarto-la-salida-del-luis-caputo-y-se-mostro-confiado-una-reeleccion-n1605484",
+     "fecha": "2026-10-12T13:22:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/economia/que-dijo-javier-milei-la-situacion-luis-caputo-el-ministerio-n6332821",
+     "fecha": "2026-10-12T18:25:00.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/javier-milei-respaldo-luis-caputo-y-opino-los-premios-nobel-economia-n251368",
+     "fecha": "2026-10-12T13:27:00.000Z"
+    },
+    {
+     "medio": "Infobrisas (Radio Brisas)",
+     "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111147-milei-nego-una-salida-de-toto-caputo-es-una-pelotudez-del-tamano-de-una-casa",
+     "fecha": "2026-10-12T16:40:04.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/javier-milei-hablo-de-su-relacion-con-luis-caputo-y-los-rumores-de-su-salida-del-gobierno-un-disparate-total/",
+     "fecha": "2026-10-12T12:36:05.000Z"
+    },
+    {
+     "medio": "La Brújula 24",
+     "enlace": "https://www.labrujula24.com/notas/2026/10/12/milei-respaldo-a-caputo-y-descarto-cambios-en-economia-nadie-lo-cuestiona-n525068/",
+     "fecha": "2026-10-12T13:29:03.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (nombre): el titulo nombra a \"gabinete\" y la fuente no",
+   "maximo": 5
+  },
+  {
+   "id": "5qo2o4",
+   "titulo": "Mountain bike Destacada actuación de balcarceños en Mar del Plata",
+   "copete": "",
+   "seccion": "Deportes",
+   "fecha": "2026-10-12T22:01:54.030Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/deportes/14321-destacada-actuacion-de-balcarcenos-en-mar-del-plata/",
+     "fecha": null
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 87 palabras",
+   "maximo": 3
+  },
   {
    "id": "1nxc5o2",
    "titulo": "Choque entre un auto y una moto en la Ruta 226",

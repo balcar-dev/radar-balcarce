@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T22:32:29.556Z",
+ "consultado": "2026-10-12T23:02:03.289Z",
  "equipos": [
   "9739",
   "3",
@@ -1115,12 +1115,12 @@
     "id": "401841608",
     "competencia": "liga",
     "inicio": "2026-10-12T21:30:00.000Z",
-    "estado": "entretiempo",
-    "minuto": "45'+3'",
+    "estado": "en-juego",
+    "minuto": "74'",
     "local": {
      "id": "11972",
      "nombre": "Gimnasia (Mendoza)",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "14",
@@ -1128,7 +1128,14 @@
      "goles": 0
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Agustín Módica",
+      "minuto": "58'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Estadio Víctor Antonio Legrotaglie",
     "fase": null,
     "partidoDeLaSerie": null,

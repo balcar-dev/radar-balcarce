@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-12T22:32:32.215Z",
+ "generado": "2026-10-12T23:02:05.248Z",
  "portada": 36,
- "archivo": 976,
- "esperandoCuerpo": 1,
+ "archivo": 977,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-12T22:32:32.246Z",
+  "generado": "2026-10-12T23:02:05.275Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -165,13 +165,13 @@
       "seccion": "Deportes"
      },
      {
-      "id": "90qy7w",
-      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+      "id": "r0o8z3",
+      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
       "seccion": "Deportes"
      },
      {
-      "id": "r0o8z3",
-      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
+      "id": "90qy7w",
+      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
       "seccion": "Deportes"
      },
      {
