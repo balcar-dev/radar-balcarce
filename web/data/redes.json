@@ -4417,7 +4417,13 @@
     }
   },
   "problemas": {},
-  "facebookFoto": {},
+  "facebookFoto": {
+    "vt9ful": {
+      "intentos": 1,
+      "ultimo": "2026-10-12T11:34:25.393Z",
+      "error": "Missing or invalid image file"
+    }
+  },
   "reelsEnFacebook": {
     "2026-10-08/clima-noche": {
       "cuando": "2026-10-08T23:06:56.514Z",
