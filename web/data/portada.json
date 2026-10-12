@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T01:31:43.357Z",
+  "generado": "2026-10-12T02:01:36.470Z",
   "notas": [
     {
       "id": "repaso20261011noche",
@@ -316,6 +316,7 @@
         "C5N",
         "Crónica",
         "Canal 26",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día"
       ],
@@ -980,6 +981,84 @@
       }
     },
     {
+      "id": "153zuaz",
+      "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social aplica un incremento del 1,66 por ciento en la Asignación Universal por Hijo durante octubre, según informó el organismo previsional. El ajuste responde a la actualización automática mensual basada en la inflación de agosto, que se ubicó en el 1,7 por ciento.\n\nEl pago de los haberes se efectiviza entre la segunda y la tercera semana del mes, ordenado según la terminación del documento de identidad de los titulares. Del total asignado, un 20 por ciento queda retenido hasta que las familias presentan la Libreta que acredita la escolaridad y los controles de salud de los menores a cargo, un trámite que se completa de manera digital mediante la plataforma oficial.",
+      "guion": "Anses aplica un incremento en la Asignación Universal por Hijo",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "El Cronista"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T13:27:22.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-11T23:35:55.538Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Asignación Universal por Hijo sube un 1,66 por ciento en octubre.",
+        "El ajuste se calcula según el índice de inflación registrado en agosto.",
+        "El organismo previsional abona los montos entre la segunda y la tercera semana del mes por terminación de DNI."
+      ],
+      "seSabe": [
+        "La Anses oficializó un aumento del 1,66% para la AUH en octubre.",
+        "La actualización se rige por la variación inflacionaria de agosto.",
+        "El pago se distribuye entre la segunda y tercera semana del mes según el DNI."
+      ],
+      "textoRedes": "La Anses oficializó un aumento del 1,66 por ciento en la Asignación Universal por Hijo para el mes de octubre. El incremento responde a la actualización automática por inflación y los pagos se distribuyen según la terminación del documento.",
+      "etiquetas": [
+        "Anses",
+        "Asignación Universal por Hijo",
+        "octubre",
+        "aumento",
+        "prestaciones sociales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+          "fecha": "2026-10-11T13:27:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento, el índice de inflación de referencia y los detalles de la Libreta AUH."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
+          "fecha": "2026-10-11T13:28:52.000Z",
+          "oficial": false,
+          "aporte": "Informó que la Anses publicó el calendario de pagos de octubre por terminación de DNI."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
+          "fecha": "2026-10-11T16:31:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó el alcance de la cobertura en cantidad de menores y adultos a cargo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ujkaqh",
+          "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
+          "fecha": "2026-09-28T12:13:43.000Z",
+          "ruta": "/nota/anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre-ujkaqh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "anses-aplica-un-incremento-en-la-asignacion-universal-por-hijo"
+    },
+    {
       "id": "repaso20261011manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: Inter, Adrián Stoppelman y Virginia Aparicio",
@@ -1046,85 +1125,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261011manana.jpg",
         "credito": "Fotos: Olé, Infórmese Primero (FM 104.9), Radio Gabal (FM 104.1) y Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "9rb0wa",
-      "titulo": "Proponen tokenizar regalías mineras para financiar a distritos",
-      "copete": "El ex juez penal y asesor legal Daniel Llermanos sostuvo que la digitalización de flujos productivos permite adelantar recursos para los Estados locales y comunales.",
-      "cuerpo": "El planteo se realiza en el marco del esquema que impulsa la firma Oroblock vinculado al proyecto minero Corina en La Rioja. Según datos de la empresa, la iniciativa abarca 24.647 hectáreas con yacimientos de oro, cobre y plata en etapa de exploración.\n\nEl asesor explicó que el mecanismo permite adelantar recursos futuros y fraccionarlos para inversores. Por su parte, el director financiero de la firma, Manuel Arias, señaló que el marco regulado actual de la Comisión Nacional de Valores ya permite tokenizar activos sin necesidad de una nueva ley.",
-      "guion": "Proponen tokenizar regalías mineras para financiar a distritos.",
-      "seccion": "Economía",
-      "medios": [
-        "Ecos Diarios (Necochea)",
-        "iProfesional",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T11:27:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T15:35:07.552Z",
-      "relevancia": 46,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Daniel Llermanos plantea tokenizar regalías públicas.",
-        "La medida busca adelantar recursos para los Estados.",
-        "El esquema se vincula al proyecto minero Corina.",
-        "La Comisión Nacional de Valores regula el sistema."
-      ],
-      "seSabe": [
-        "Daniel Llermanos afirmó que la tokenización de regalías sirve como financiamiento para Estados locales.",
-        "El abogado cumple funciones como asesor de la firma Oroblock.",
-        "El proyecto minero Corina abarca 24.647 hectáreas en La Rioja.",
-        "Manuel Arias se desempeña como director financiero de la empresa."
-      ],
-      "noConfirmado": [
-        "Todavía no se aprobó el proyecto de ley presentado en el Congreso sobre tokenización soberana."
-      ],
-      "textoRedes": "El asesor legal Daniel Llermanos afirmó que la tokenización de regalías públicas puede servir como vía de financiamiento para provincias y municipios.",
-      "etiquetas": [
-        "economia",
-        "regalias",
-        "financiamiento",
-        "tecnologia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/-tokenizar-parte-de-las-regalias-mineras-podria-aumentar-las-inversiones-en-las-provincias---aseguro-el-ex-juez-llermanos_a6acb7feef61ec7711f613fdb",
-          "fecha": "2026-10-11T11:27:07.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones completas de Daniel Llermanos, Manuel Arias y Osvaldo Di Giorgio sobre el proyecto minero Corina."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/proponen-la-tokenizacion-de-regalias-mineras-para-impulsar-inversiones-en-provincias",
-          "fecha": "2026-10-11T13:16:43.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en las afirmaciones iniciales del asesor legal Daniel Llermanos."
-        },
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/economia/466364-como-la-tokenizacion-de-regalias-mineras-puede-impulsar-inversiones",
-          "fecha": "2026-10-11T14:15:00.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo la postura sobre la tokenización de regalías para provincias."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "proponen-tokenizar-regalias-mineras-para-financiar-a-distritos",
-      "foto": {
-        "archivo": "fotos-notas/9rb0wa.jpg",
-        "credito": "Foto: iProfesional"
       }
     },
     {
@@ -1324,60 +1324,6 @@
         "archivo": "fotos-notas/atnmk9.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "zavg8u",
-      "titulo": "El Ministerio de Salud bonaerense advierte sobre el riesgo de nuevos brotes de sarampión",
-      "copete": "Las autoridades sanitarias piden revisar los esquemas de vacunación antes de viajar ante la aparición de casos en el país.",
-      "cuerpo": "El Ministerio de Salud de la provincia de Buenos Aires insiste en revisar las dosis de vacunas antes de viajar al exterior debido al riesgo de nuevos brotes.\n\nLa médica infectóloga pediátrica Virginia Verdaguer explicó que la reaparición del virus se vincula con las bajas coberturas de inmunización y la llegada de viajeros no vacunados. Como antecedente internacional, la especialista indicó que Nueva York notificó 108 casos hasta el 3 de octubre.\n\nLa enfermedad se propaga por vía respiratoria y puede contagiar hasta a nueve de cada diez contactos susceptibles. Los síntomas iniciales comprenden fiebre alta, tos, secreción nasal y conjuntivitis, seguidos por una erupción cutánea que surge entre siete y 14 días después del contagio.",
-      "guion": "El Ministerio de Salud bonaerense advierte sobre el riesgo de nuevos brotes de sarampión",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/45054-sarampion-el-riesgo-de-nuevos-brotes-y-la-importancia-de-completar-la-vacunacion/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T02:01:43.014Z",
-      "sinFecha": true,
-      "visto": "2026-10-11T02:01:43.014Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Ministerio de Salud bonaerense pide revisar las vacunas ante los viajes.",
-        "Se confirmaron 35 casos de sarampión en el país hasta la semana epidemiológica 37.",
-        "La provincia concentra 21 de los contagios registrados en Argentina."
-      ],
-      "noConfirmado": [
-        "No se informaron casos sospechosos ni confirmados en el partido de Balcarce.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Ministerio de Salud bonaerense insiste en revisar las dosis de vacunación antes de viajar ante la confirmación de 35 casos en el país.",
-      "etiquetas": [
-        "sarampión",
-        "vacunación",
-        "Ministerio de Salud",
-        "provincia de Buenos Aires",
-        "salud"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45054-sarampion-el-riesgo-de-nuevos-brotes-y-la-importancia-de-completar-la-vacunacion/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló las estadísticas nacionales de sarampión y las recomendaciones sanitarias sobre vacunación."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-ministerio-de-salud-bonaerense-advierte-sobre-el-riesgo-de-nuevos"
     },
     {
       "id": "1gkf7qu",
@@ -1807,12 +1753,12 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 7,
+      "temp": 6,
       "sensacion": 4,
-      "humedad": 92,
-      "viento": 6,
+      "humedad": 94,
+      "viento": 7,
       "rumbo": "SE",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Despejado",
       "esDeDia": false
     },
     "dias": [
@@ -2199,12 +2145,6 @@
       "titulo": "La historia de Nico: su mamá contó cómo atraviesan el…",
       "seccion": "Balcarce",
       "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "t2ij37",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "vuez1j",
