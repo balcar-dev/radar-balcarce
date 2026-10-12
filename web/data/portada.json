@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T15:32:01.698Z",
+  "generado": "2026-10-12T16:02:44.191Z",
   "notas": [
     {
       "id": "xn5jch",
@@ -476,6 +476,7 @@
         "Ámbito",
         "C5N",
         "Noticias Argentinas (NA)",
+        "La Nueva",
         "Infobrisas (Radio Brisas)"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
@@ -483,7 +484,7 @@
       "fecha": "2026-10-12T12:50:47.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T15:31:24.834Z",
-      "relevancia": 86,
+      "relevancia": 76,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -597,6 +598,122 @@
       }
     },
     {
+      "id": "f6htj2",
+      "titulo": "Javier Milei ratifica a Luis Caputo y habla sobre la visita del Papa",
+      "copete": "El presidente ratificó la continuidad del ministro de Economía y se mostró confiado de cara a 2027. Además, señaló que el Ejecutivo evalúa ajustar las fechas de la llegada del Sumo Pontífice por cuestiones de salud.",
+      "cuerpo": "El presidente Javier Milei respaldó este lunes al ministro de Economía, Luis Caputo, y descartó versiones sobre un posible recambio en el equipo económico durante una entrevista con Radio Mitre. El mandatario cuestionó los rumores difundidos mientras el funcionario negociaba con el Fondo Monetario Internacional y aseguró que la política económica responde a sus decisiones.\n\nEn el plano político, el jefe de Estado ratificó las aspiraciones electorales de La Libertad Avanza para 2027 y sostuvo que el oficialismo busca ampliar su representación parlamentaria. Como se informó previamente, el Ejecutivo también planifica las políticas públicas junto a las carteras de Desregulación y Capital Humano.\n\nPor otro lado, el Presidente se refirió a la salud del papa León XIV, quien será sometido el martes a una intervención quirúrgica por un nódulo pulmonar. Ante la gira prevista para noviembre, el mandatario ratificó la disposición del Gobierno para modificar el cronograma según la evolución del Sumo Pontífice.",
+      "guion": "Javier Milei ratifica a Luis Caputo y habla sobre la visita del Papa",
+      "seccion": "Política",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "A24",
+        "Ámbito",
+        "La Brújula 24"
+      ],
+      "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T12:50:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T16:01:41.229Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El presidente respaldó la continuidad de Luis Caputo en el Palacio de Hacienda.",
+        "Milei expresó confianza en conseguir la reelección presidencial en 2027.",
+        "El papa León XIV será operado este martes de un nódulo pulmonar.",
+        "El Gobierno se mostró abierto a reprogramar la visita del Pontífice a la Argentina."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei ratificó la continuidad del ministro de Economía, Luis Caputo.",
+        "El mandatario brindó una entrevista a Radio Mitre.",
+        "El papa León XIV será intervenido quirúrgicamente este martes por un nódulo pulmonar.",
+        "El Gobierno manifestó disposición para ajustar la fecha de la visita papal si fuera necesario."
+      ],
+      "noConfirmado": [
+        "No se detallaron los plazos exactos de una eventual reprogramación de la gira del Sumo Pontífice."
+      ],
+      "textoRedes": "El presidente Javier Milei respaldó al ministro de Economía, descartó cambios en el gabinete y se mostró confiado de cara a 2027. Además, señaló que el Gobierno evalúa reprogramar la visita del Papa por motivos de salud.",
+      "etiquetas": [
+        "Javier Milei",
+        "Luis Caputo",
+        "Papa León XIV",
+        "Economía",
+        "Elecciones 2027"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
+          "fecha": "2026-10-12T12:50:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó declaraciones sobre la continuidad de Caputo, las elecciones de 2027 y la salud del Papa."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/milei-nego-la-salida-de-luis-caputo-y-se-mostro-confiado-en-que-sera-reelecto-nid12102026/",
+          "fecha": "2026-10-12T15:01:31.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el respaldo presidencial a Luis Caputo."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/12/milei-defendio-el-rumbo-de-la-economia-y-descarto-las-versiones-sobre-una-salida-de-luis-caputo-nadie-lo-cuestiona/",
+          "fecha": "2026-10-12T14:16:58.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre las últimas noticias de la agenda presidencial."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/javier-milei-descarto-la-salida-del-luis-caputo-y-se-mostro-confiado-una-reeleccion-n1605484",
+          "fecha": "2026-10-12T13:22:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el rechazo oficial a las versiones de renuncia y la estrategia electoral."
+        },
+        {
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/12/milei-respaldo-a-caputo-y-descarto-cambios-en-economia-nadie-lo-cuestiona-n525068/",
+          "fecha": "2026-10-12T13:29:03.000Z",
+          "oficial": false,
+          "aporte": "Consignó el respaldo a la gestión económica y la postura de cara a 2027."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1y2q715",
+          "titulo": "Javier Milei evalúa reprogramar la visita del papa León XIV por su operación",
+          "fecha": "2026-10-12T11:52:38.000Z",
+          "ruta": "/nota/javier-milei-evalua-reprogramar-la-visita-del-papa-leon-xiv-por-su-1y2q715"
+        },
+        {
+          "id": "185xawb",
+          "titulo": "Javier Milei ratifica a Luis Caputo y descarta rumores sobre su salida",
+          "fecha": "2026-10-12T11:08:05.000Z",
+          "ruta": "/nota/javier-milei-ratifica-a-luis-caputo-y-descarta-rumores-sobre-su-salida-185xawb"
+        },
+        {
+          "id": "1xc91gb",
+          "titulo": "Milei ratifica a Caputo y asegura contar con millonarios fondos",
+          "fecha": "2026-10-12T12:33:30.000Z",
+          "ruta": "/nota/milei-ratifica-a-caputo-y-asegura-contar-con-millonarios-fondos-1xc91gb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "javier-milei-ratifica-a-luis-caputo-y-habla-sobre-la-visita-del-papa",
+      "foto": {
+        "archivo": "fotos-notas/f6htj2.jpg",
+        "credito": "Foto: La Brújula 24"
+      }
+    },
+    {
       "id": "1567idj",
       "titulo": "Alpine investiga los problemas en el auto de Franco Colapinto tras Singapur",
       "copete": "La escudería analizará las fallas mecánicas que obligaron al piloto argentino a abandonar en Singapur. Preparan mejoras para la competencia en Estados Unidos.",
@@ -614,7 +731,7 @@
       "fecha": "2026-10-12T12:32:49.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T15:01:42.079Z",
-      "relevancia": 97,
+      "relevancia": 87,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -791,11 +908,13 @@
       "medios": [
         "Clarín",
         "0223 (Mar del Plata)",
+        "Ecos Diarios (Necochea)",
         "Minuto Uno",
         "El Destape",
-        "Olé",
+        "El Día",
+        "La Brújula 24",
         "Doble Amarilla",
-        "La Brújula 24"
+        "Olé"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -890,138 +1009,6 @@
       }
     },
     {
-      "id": "185xawb",
-      "titulo": "Javier Milei ratifica a Luis Caputo y descarta rumores sobre su salida",
-      "copete": "El presidente Javier Milei ratificó la continuidad del ministro de Economía, Luis Caputo, y descartó versiones sobre su salida del Gabinete. Además, ratificó el respaldo a otros funcionarios y habló de las elecciones de 2027.",
-      "cuerpo": "El presidente Javier Milei ratificó este lunes la continuidad del ministro de Economía, Luis Caputo, al descartar los rumores sobre una posible salida del Gabinete y calificar esas versiones como un disparate perjudicial para los intereses del país. Durante una entrevista radial, el mandatario aseguró que mantiene una relación excelente y simbiótica con el funcionario, a quien definió como ejecutor de una política económica diseñada en conjunto.\n\nPor otro lado, manifestó su preocupación por la salud del Papa y señaló que evalúan posibles modificaciones en el cronograma de la visita papal si la situación lo requiere.",
-      "guion": "Javier Milei ratifica a Luis Caputo y descarta rumores sobre su salida",
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Clarín",
-        "TN (Todo Noticias)",
-        "A24",
-        "Ámbito",
-        "La Brújula 24"
-      ],
-      "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-segui-minuto-minuto-todas-novedades-gobierno_0_OBPI6bMVtT.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T11:08:05.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 78,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "El presidente Javier Milei confirmó este lunes la continuidad de Luis Caputo al frente del Ministerio de Economía.",
-        "El mandatario aseguró que mantiene una relación excelente con el funcionario.",
-        "Milei afirmó que su espacio político competirá y ganará las elecciones del próximo año.",
-        "El Gobierno se mostró abierto a modificar la fecha de la visita papal ante cuestiones de salud."
-      ],
-      "noConfirmado": [
-        "Todavía no se precisaron detalles sobre posibles fechas alternativas para la visita del Papa a la Argentina."
-      ],
-      "textoRedes": "El presidente Javier Milei ratificó este lunes la continuidad del ministro de Economía, Luis Caputo, descartó rumores sobre su salida y aseguró que mantiene una relación excelente con el funcionario. Además, se refirió al escenario electoral de 2027 y a la agenda papal.",
-      "etiquetas": [
-        "Javier Milei",
-        "Luis Caputo",
-        "Gobierno nacional",
-        "Economia",
-        "Politica"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-segui-minuto-minuto-todas-novedades-gobierno_0_OBPI6bMVtT.html",
-          "fecha": "2026-10-12T11:08:05.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-nos-unimos-en-oracion-por-su-salud-dijo-el-presidente-por-la-nid12102026/",
-          "fecha": "2026-10-12T13:16:50.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/milei-nego-la-salida-de-luis-caputo-y-se-mostro-confiado-en-que-sera-reelecto-nid12102026/",
-          "fecha": "2026-10-12T12:36:48.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/javier-milei-respaldo-caputo-se-mostro-confiado-su-reeleccion-y-hablo-la-visita-del-papa-la-argentina-n6332701",
-          "fecha": "2026-10-12T12:50:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/12/milei-defendio-el-rumbo-de-la-economia-y-descarto-las-versiones-sobre-una-salida-de-luis-caputo-nadie-lo-cuestiona/",
-          "fecha": "2026-10-12T13:38:47.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/javier-milei-descarto-la-salida-del-luis-caputo-y-se-mostro-confiado-una-reeleccion-n1605484",
-          "fecha": "2026-10-12T13:22:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/milei-defendio-la-gestion-de-caputo-y-se-mostro-confiado-en-que-va-a-ser-reelecto-politica-y-economia_1791812640",
-          "fecha": "2026-10-12T13:59:33.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Brújula 24",
-          "enlace": "https://www.labrujula24.com/notas/2026/10/12/milei-respaldo-a-caputo-y-descarto-cambios-en-economia-nadie-lo-cuestiona-n525068/",
-          "fecha": "2026-10-12T13:29:03.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ay4wdh",
-          "titulo": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
-          "fecha": "2026-10-11T21:51:00.000Z",
-          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-para-una-nueva-gira-oficial-ay4wdh"
-        },
-        {
-          "id": "1tib4ft",
-          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
-          "fecha": "2026-10-05T18:53:21.000Z",
-          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
-        },
-        {
-          "id": "1gp4lrt",
-          "titulo": "Javier Milei celebra el resultado electoral en Brasil",
-          "fecha": "2026-10-05T13:13:00.000Z",
-          "ruta": "/nota/javier-milei-celebra-el-resultado-electoral-en-brasil-1gp4lrt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 7 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "javier-milei-ratifica-a-luis-caputo-y-descarta-rumores-sobre-su-salida",
-      "foto": {
-        "archivo": "fotos-notas/185xawb.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
-    {
       "id": "clima20261012",
       "propia": "clima",
       "titulo": "El clima de hoy en Balcarce: mínima de 4° y máxima de 13°",
@@ -1079,6 +1066,196 @@
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-4-y-maxima-de-13"
     },
     {
+      "id": "s94jkn",
+      "titulo": "Carlos Alcaraz pierde ante Zizou Bergs en el Masters 1000 de Shanghái",
+      "copete": "El tenista español cayó por 7-5 y 7-6 ante el belga en la tercera ronda del torneo chino. Con este resultado, Alexander Zverev se aseguró terminar la temporada en lo más alto del ranking.",
+      "cuerpo": "El tenista español Carlos Alcaraz quedó eliminado este lunes del Masters 1000 de Shanghái al perder frente al belga Zizou Bergs por 7-5 y 7-6 en la tercera ronda del certamen disputado en China. El encuentro se llevó a cabo en la cancha central del complejo Qi Zhong.\n\nLa caída del murciano provocó cambios directos en el circuito internacional. Según confirmaron varios medios, el resultado le permitió al alemán Alexander Zverev asegurarse el primer puesto del ranking mundial al finalizar la temporada 2026.\n\nPara Bergs, ubicado en el puesto 39 del ranking, el triunfo representó una de las victorias más importantes de su carrera deportiva. Por su parte, Alcaraz puso fin a su participación en la gira asiática, donde venía de consagrarse campeón en el ATP 500 de Tokio.",
+      "guion": "Carlos Alcaraz pierde ante Zizou Bergs en el Masters 1000 de Shanghái",
+      "seccion": "Deportes",
+      "medios": [
+        "La Nación",
+        "Clarín",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "Crónica",
+        "Radio Mitre",
+        "Noticias Argentinas (NA)",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://radiomitre.cienradios.com/deportes/carlos-alcaraz-vs-zizou-bergs-en-el-masters-1000-de-shanghai-a-que-hora-juega-este-lunes-12-de-octubre/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T09:20:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T16:01:41.229Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Carlos Alcaraz cayó por 7-5 y 7-6 ante Zizou Bergs en la tercera ronda de Shanghái.",
+        "El español se despidió de la gira asiática tras haber ganado el ATP 500 de Tokio.",
+        "Alexander Zverev se aseguró terminar el año en la cima del ranking mundial."
+      ],
+      "seSabe": [
+        "Zizou Bergs derrotó a Carlos Alcaraz por 7-5 y 7-6 (7-4) en la tercera ronda.",
+        "El partido se disputó este lunes 12 de octubre en la cancha central del Qi Zhong.",
+        "Alexander Zverev se aseguró el primer puesto del ranking mundial de la temporada."
+      ],
+      "noConfirmado": [
+        "No se informaron detalles sobre posibles molestias físicas de Alcaraz durante el desarrollo del encuentro."
+      ],
+      "textoRedes": "Carlos Alcaraz quedó eliminado del Masters 1000 de Shanghái tras perder ante el belga Zizou Bergs por 7-5 y 7-6 en la tercera ronda. Con este resultado, Alexander Zverev se aseguró terminar la temporada en lo más alto del ranking mundial.",
+      "etiquetas": [
+        "Carlos Alcaraz",
+        "Zizou Bergs",
+        "Masters 1000 de Shanghái",
+        "Alexander Zverev",
+        "Tenis"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/carlos-alcaraz-vs-zizou-bergs-en-el-masters-1000-de-shanghai-a-que-hora-juega-este-lunes-12-de-octubre/",
+          "fecha": "2026-10-12T09:20:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/tenis/carlos-alcaraz-cayo-en-el-masters-1000-de-shanghai-y-alexander-zverev-se-aseguro-el-n-1-al-final-del-nid12102026/",
+          "fecha": "2026-10-12T14:39:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/derrota-alcaraz-alexander-zverev-cumplio-sueno-terminara-temporada-numero-1-ranking-atp_0_VGo4AXIe3v.html",
+          "fecha": "2026-10-12T12:49:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/tenis/2026/10/12/alexander-zverev-sera-el-nuevo-numero-1-del-mundo-tras-superar-a-sinner-y-alcaraz-en-el-ranking-atp/",
+          "fecha": "2026-10-12T14:35:21.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/tenis/carlos-alcaraz-fue-sorpresivamente-eliminado-de-shanghai-y-alexander-zverev-cerrara-el-ano-n1-del-mundo.phtml",
+          "fecha": "2026-10-12T13:34:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/tenis/carlos-alcaraz-eliminado-zizou-bergs-masters-1000-shanghai-2026/",
+          "fecha": "2026-10-12T13:30:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/masters-de-shanghai--una-sorpresiva-derrota-de-alcaraz-le-aseguro-a-zverev-terminar-el-ano-como-numero-1-del-mundo_a6accdebf32fdad2908997be4",
+          "fecha": "2026-10-12T13:57:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/tenis/un-irreconocible-carlos-alcaraz-quedo-eliminado-del-masters-1000-de-shanghai",
+          "fecha": "2026-10-12T13:13:20.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "if3bv6",
+          "titulo": "Tomás Etcheverry queda eliminado en el Másters 1000 de Shanghái",
+          "fecha": "2026-10-10T10:30:38.000Z",
+          "ruta": "/nota/tomas-etcheverry-queda-eliminado-en-el-masters-1000-de-shanghai-if3bv6"
+        },
+        {
+          "id": "futbolpartidosliga20261002",
+          "titulo": "Liga Profesional: lo que falta de la fecha del lunes 5 de octubre, con horarios",
+          "fecha": "2026-10-04T02:29:42.845Z",
+          "ruta": "/nota/liga-profesional-los-partidos-de-la-fecha-del-2-al-5-de-octubre-con-futbolpartidosliga20261002"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 8 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "carlos-alcaraz-pierde-ante-zizou-bergs-en-el-masters-1000-de-shanghai"
+    },
+    {
+      "id": "rvlfgq",
+      "titulo": "Lanzan un fondo de inversión hotelera desde mil dólares",
+      "copete": "Crean un vehículo financiero con el respaldo de la Comisión Nacional de Valores para desarrollar cuatro hoteles de lujo con un aporte inicial accesible.",
+      "cuerpo": "El mercado de capitales argentino cuenta con una nueva alternativa de inversión en la economía real denominada Invitta. La iniciativa conjunta de Allaria, Grupo Almarena, Sancor Seguros y la cadena Meliá permite participar en el negocio hotelero premium a partir de mil dólares.\n\nEl esquema legal consiste en un fideicomiso financiero cerrado con oferta pública, autorizado por la Comisión Nacional de Valores. Las cuotapartes tendrán cotización y liquidez secundaria en Bolsas y Mercados Argentinos, con un plazo operativo de diez años.",
+      "guion": "Lanzan un fondo de inversión hotelera desde mil dólares",
+      "seccion": "Economía",
+      "medios": [
+        "iProUP",
+        "Clarín"
+      ],
+      "enlace": "https://www.clarin.com/economia/lanzan-primer-vehiculo-financiero-invertir-us-1000-hoteles-lujo-argentina_0_hYzW7J5I5w.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T09:00:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T16:01:41.229Z",
+      "relevancia": 45,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No se especificaron las ubicaciones exactas de todos los futuros desarrollos fuera de los puntos ya anunciados.",
+        "No se detallaron las fechas precisas de inicio de obra para cada uno de los establecimientos proyectados."
+      ],
+      "textoRedes": "Presentan Invitta, el primer fideicomiso financiero de oferta pública para invertir en hoteles de lujo en el país a partir de mil dólares, con el respaldo de la Comisión Nacional de Valores.",
+      "etiquetas": [
+        "inversión",
+        "hoteles",
+        "mercado de capitales",
+        "Meliá",
+        "Sancor Seguros",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/lanzan-primer-vehiculo-financiero-invertir-us-1000-hoteles-lujo-argentina_0_hYzW7J5I5w.html",
+          "fecha": "2026-10-12T09:00:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló los socios, el monto de inversión, el ticket mínimo y las características del fideicomiso financiero."
+        },
+        {
+          "medio": "iProUP",
+          "enlace": "https://www.iproup.com/finanzas/72258-invertir-hoteles-us1000-alternativa-ladrillo-melia-hotels",
+          "fecha": "2026-10-12T15:28:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lanzan-un-fondo-de-inversion-hotelera-desde-mil-dolares",
+      "foto": {
+        "archivo": "fotos-notas/rvlfgq.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "vt9ful",
       "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
       "copete": "Agrupaciones indígenas se concentran este lunes en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza por parte del Gobierno nacional.",
@@ -1090,9 +1267,9 @@
         "Página/12",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Nueva",
+        "La Verdad",
         "Mi8 (Canal 8 Mar del Plata)",
-        "La Verdad"
+        "La Nueva"
       ],
       "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
       "teniaImagenLaFuente": true,
@@ -1350,6 +1527,117 @@
       "foto": {
         "archivo": "fotos-notas/1qssrv4.jpg",
         "credito": "Foto: La Nación"
+      }
+    },
+    {
+      "id": "1kra2dj",
+      "titulo": "Gastón Ávila sufre un golpe en la cara y queda internado",
+      "copete": "El defensor de Rosario Central debió ser trasladado a un sanatorio tras la goleada ante Independiente Rivadavia, luego de recibir una patada en el rostro que derivó en la expulsión de Álex Arce.",
+      "cuerpo": "Rosario Central aplastó 5 a 0 a Independiente Rivadavia por la fecha 12 del Torneo Clausura en el Gigante de Arroyito.\n\nTras el partido, el club difundió el parte médico oficial que confirmó un traumatismo craneofacial izquierdo. En el vestuario, el zaguero central presentó un cuadro de hipotensión, mareos, náuseas y cefalea intensa, por lo cual fue llevado de urgencia a la guardia del Sanatorio Mapaci para someterse a estudios por imágenes y permanecer bajo observación a la espera de su recuperación.",
+      "guion": "Gastón Ávila sufre un golpe en la cara y queda internado",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Olé",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://bolavip.com/ar/futbolargentino/internaron-a-gaston-avila-tras-la-patada-en-la-cara-de-alex-arce-en-la-goleada-de-rosario-central-a-independiente-rivadavia",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T00:33:26.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T03:01:38.606Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Rosario Central le ganó 5 a 0 a Independiente Rivadavia por el Torneo Clausura.",
+        "Álex Arce recibió la tarjeta roja tras golpear a Gastón Ávila en el rostro.",
+        "El defensor central sufrió un traumatismo craneofacial izquierdo y mareos.",
+        "El jugador permanece en observación en el Sanatorio Mapaci."
+      ],
+      "noConfirmado": [
+        "No trascendió el tiempo exacto que demandará la internación del deportista.",
+        "No se informó la fecha exacta de su retorno al domicilio."
+      ],
+      "textoRedes": "Gastón Ávila debió ser internado tras recibir una patada en la cara durante la goleada de Rosario Central ante Independiente Rivadavia. El defensor sufrió un traumatismo craneofacial y permanece bajo observación médica.",
+      "etiquetas": [
+        "Rosario Central",
+        "Independiente Rivadavia",
+        "Torneo Clausura",
+        "Gastón Ávila",
+        "Álex Arce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/futbolargentino/internaron-a-gaston-avila-tras-la-patada-en-la-cara-de-alex-arce-en-la-goleada-de-rosario-central-a-independiente-rivadavia",
+          "fecha": "2026-10-12T00:33:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló el resultado del partido, la jugada de la expulsión, el parte médico y el traslado al sanatorio."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/rosario-central/gaston-avila-trasladado-sanatorio-patada-alex-arce_0_fKlgrC7hH6.html",
+          "fecha": "2026-10-12T01:52:02.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el defensor debió ser llevado a una guardia tras la tarjeta roja al jugador paraguayo."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/11/el-comunicado-de-rosario-central-tras-la-patada-que-recibio-gaston-avila-ante-independiente-rivadavia-nauseas-y-cefalea-intensa/",
+          "fecha": "2026-10-12T02:20:26.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la goleada, el parte médico oficial y el incidente en el Gigante de Arroyito."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/gaston-avila-fue-hospitalizado-tras-la-patada-de-alex-arce-el-parte-medico-de-rosario-central-id765756.html",
+          "fecha": "2026-10-12T02:40:29.000Z",
+          "oficial": false,
+          "aporte": "Aportó cobertura sobre el mismo evento deportivo sin texto adicional."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/rosario-central/patada-alex-arce-gaston-avila-derivo-expulsion-rosario-central-independiente-rivadavia_3_2LLf3TdhuK.html",
+          "fecha": "2026-10-12T01:49:03.000Z",
+          "oficial": false,
+          "aporte": "Registró el hecho vinculado a la atención médica del futbolista tras el partido."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "repaso20260930tarde",
+          "titulo": "El repaso de la tarde en Radar Balcarce: ACTC, Rosario Central y capacitaciones",
+          "fecha": "2026-09-30T18:06:28.052Z",
+          "ruta": "/nota/el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y-repaso20260930tarde"
+        },
+        {
+          "id": "1cbil57",
+          "titulo": "Hinchas de Newell's y Rosario Central se enfrentan en Rosario",
+          "fecha": "2026-09-30T02:21:20.000Z",
+          "ruta": "/nota/hinchas-de-newell-s-y-rosario-central-se-enfrentan-en-rosario-1cbil57"
+        },
+        {
+          "id": "1g1xj8g",
+          "titulo": "Gastón Gaudio se postula a presidente de Independiente",
+          "fecha": "2026-09-29T16:41:28.000Z",
+          "ruta": "/nota/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-1g1xj8g"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "gaston-avila-sufre-un-golpe-en-la-cara-y-queda-internado",
+      "foto": {
+        "archivo": "fotos-notas/1kra2dj.jpg",
+        "credito": "Foto: Bolavip Argentina"
       }
     },
     {
@@ -1673,7 +1961,7 @@
       "fecha": "2026-10-11T22:48:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T11:02:16.567Z",
-      "relevancia": 76,
+      "relevancia": 80,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1743,8 +2031,8 @@
         "El Día",
         "La Nueva",
         "La Tecla",
-        "InfoRegión",
-        "La Verdad"
+        "La Verdad",
+        "InfoRegión"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
       "teniaImagenLaFuente": true,
@@ -2007,77 +2295,6 @@
       }
     },
     {
-      "id": "1lmhb77",
-      "titulo": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
-      "copete": "Un estudio del sector detalla las diferencias de tarifas entre las distintas jurisdicciones del país. El distrito bonaerense encabeza la lista con la boleta más alta, mientras que el transporte nacional en el AMBA registra el valor más accesible.",
-      "cuerpo": "Un informe elaborado por la Asociación Argentina de Empresarios del Transporte Automotor expone las diferencias en el valor del boleto mínimo de colectivo en todo el país. Pinamar encabeza el listado nacional con una tarifa de 3.176 pesos, seguida por San Martín de los Andes con 2.900 pesos y Pergamino con 2.784 pesos.\n\nEn el otro extremo, el boleto más económico se registra en los servicios de jurisdicción nacional del AMBA con 743 pesos, valor que se ubica por debajo de los 920 pesos vigentes en la Ciudad de Buenos Aires y de los 1.215 pesos del territorio bonaerense metropolitano.\n\nEl relevamiento también advierte una retracción en la cantidad de usuarios del transporte en el AMBA. Durante septiembre de este año, el promedio diario en días hábiles alcanzó 8.232.858 pasajeros, lo que representa una baja de 10,1 por ciento en comparación con el mismo mes del año pasado.",
-      "guion": "Pinamar encabeza el ranking nacional con el boleto de colectivo más caro",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "El Día"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T19:44:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 42,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Pinamar presenta el boleto más caro del país con un valor de 3.176 pesos.",
-        "El AMBA registra la tarifa más baja con 743 pesos en jurisdicción nacional.",
-        "El relevamiento pertenece a la Asociación Argentina de Empresarios del Transporte Automotor.",
-        "Los pasajeros diarios en días hábiles en el AMBA bajaron un 10,1 por ciento en septiembre."
-      ],
-      "seSabe": [
-        "Pinamar lidera el ranking de tarifas urbanas con 3.176 pesos.",
-        "La tarifa mínima en el AMBA nacional es de 743 pesos.",
-        "El informe fue realizado por la Asociación Argentina de Empresarios del Transporte Automotor.",
-        "El uso del transporte en el AMBA registró una caída interanual en septiembre."
-      ],
-      "noConfirmado": [
-        "No se informaron detalles sobre la evolución de tarifas proyectada para los próximos meses en el resto de las jurisdicciones."
-      ],
-      "textoRedes": "Un relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor detalla las diferencias en el boleto de colectivo en el país. Pinamar registra la tarifa más alta con 3.176 pesos, mientras que el AMBA mantiene los valores más bajos.",
-      "etiquetas": [
-        "colectivos",
-        "tarifas",
-        "transporte",
-        "ranking"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/11/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-colectivo-y-en-que-lugar-del-ranking-figura-el-amba/",
-          "fecha": "2026-10-11T19:44:21.000Z",
-          "oficial": false,
-          "aporte": "Detalló el listado completo de ciudades con las tarifas más altas y más bajas, además de las estadísticas sobre caída de pasajeros y subsidios en el AMBA."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/la-ciudad/cuales-son-las-ciudades-mas-caras-del-pais-para-viajar-en-micro-y-en-que-lugar-esta-la-plata-la-ciudad_1791756120",
-          "fecha": "2026-10-11T22:16:33.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la difusión del relevamiento de la Asociación Argentina de Empresarios del Transporte Automotor respecto a las diferencias entre jurisdicciones."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pinamar-encabeza-el-ranking-nacional-con-el-boleto-de-colectivo-mas",
-      "foto": {
-        "archivo": "fotos-notas/1lmhb77.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "1xwup7g",
       "titulo": "Emanuel Moriatis analiza la vuelta del Turismo Nacional a Balcarce",
       "copete": "El presidente de la categoría reconoció el interés de los pilotos por correr en el autódromo local tras la reapertura. La última competencia en el circuito se disputó en 2001.",
@@ -2169,84 +2386,6 @@
         "archivo": "fotos-notas/1xwup7g.jpg",
         "credito": "Foto: Campeones"
       }
-    },
-    {
-      "id": "153zuaz",
-      "titulo": "Anses aplica un incremento en la Asignación Universal por Hijo",
-      "copete": "La prestación previsional suma un aumento del 1,66 por ciento en octubre, de acuerdo con la actualización automática por inflación.",
-      "cuerpo": "La Administración Nacional de la Seguridad Social aplica un incremento del 1,66 por ciento en la Asignación Universal por Hijo durante octubre, según informó el organismo previsional. El ajuste responde a la actualización automática mensual basada en la inflación de agosto, que se ubicó en el 1,7 por ciento.\n\nEl pago de los haberes se efectiviza entre la segunda y la tercera semana del mes, ordenado según la terminación del documento de identidad de los titulares. Del total asignado, un 20 por ciento queda retenido hasta que las familias presentan la Libreta que acredita la escolaridad y los controles de salud de los menores a cargo, un trámite que se completa de manera digital mediante la plataforma oficial.",
-      "guion": "Anses aplica un incremento en la Asignación Universal por Hijo",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "El Cronista"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T13:27:22.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:35:55.538Z",
-      "relevancia": 50,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Asignación Universal por Hijo sube un 1,66 por ciento en octubre.",
-        "El ajuste se calcula según el índice de inflación registrado en agosto.",
-        "El organismo previsional abona los montos entre la segunda y la tercera semana del mes por terminación de DNI."
-      ],
-      "seSabe": [
-        "La Anses oficializó un aumento del 1,66% para la AUH en octubre.",
-        "La actualización se rige por la variación inflacionaria de agosto.",
-        "El pago se distribuye entre la segunda y tercera semana del mes según el DNI."
-      ],
-      "textoRedes": "La Anses oficializó un aumento del 1,66 por ciento en la Asignación Universal por Hijo para el mes de octubre. El incremento responde a la actualización automática por inflación y los pagos se distribuyen según la terminación del documento.",
-      "etiquetas": [
-        "Anses",
-        "Asignación Universal por Hijo",
-        "octubre",
-        "aumento",
-        "prestaciones sociales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
-          "fecha": "2026-10-11T13:27:22.000Z",
-          "oficial": false,
-          "aporte": "Detalló el porcentaje de aumento, el índice de inflación de referencia y los detalles de la Libreta AUH."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/calendario-anses-cuando-se-cobra-la-auh-en-octubre-2026-nid02102026/",
-          "fecha": "2026-10-11T13:28:52.000Z",
-          "oficial": false,
-          "aporte": "Informó que la Anses publicó el calendario de pagos de octubre por terminación de DNI."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/asignacion-universal-por-hijo-en-octubre-en-que-provincias-se-cobra-un-monto-extra-y-cuanto-reciben/",
-          "fecha": "2026-10-11T16:31:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó el alcance de la cobertura en cantidad de menores y adultos a cargo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ujkaqh",
-          "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
-          "fecha": "2026-09-28T12:13:43.000Z",
-          "ruta": "/nota/anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre-ujkaqh"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "anses-aplica-un-incremento-en-la-asignacion-universal-por-hijo"
     },
     {
       "id": "repaso20261011manana",
@@ -2446,8 +2585,8 @@
     "Automovilismo",
     "Cultura y agenda",
     "Política",
-    "Argentina",
     "Economía",
+    "Argentina",
     "Policiales",
     "Agro"
   ],
@@ -2797,12 +2936,6 @@
   },
   "pendientes": [
     {
-      "id": "s94jkn",
-      "titulo": null,
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"el menor de\", en lo que contaron otros medios (visto al reescribir)"
-    },
-    {
       "id": "1hbflhh",
       "titulo": null,
       "seccion": "Agro",
@@ -2821,22 +2954,22 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "1uyjmrd",
+      "id": "1eaitl9",
       "titulo": null,
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"nene\""
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "vuez1j",
+      "titulo": "Menem descartó una salida de Caputo: “No hay dudas sobre…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "159uw7a",
       "titulo": null,
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"menores de edad\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "1eaitl9",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "xcqget",
