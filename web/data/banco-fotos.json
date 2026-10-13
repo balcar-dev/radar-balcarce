@@ -11939,16 +11939,16 @@
   "cuando": "2026-10-11T00:32:12.700Z"
  },
  "1gkf7qu": {
-  "archivo": "fotos-notas/1gkf7qu.jpg",
   "medio": "Infórmese Primero (FM 104.9)",
-  "credito": "Foto: Infórmese Primero (FM 104.9)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
   "enlace": "http://www.informeseprimero.com.ar/2026/10/el-humorista-adrian-stoppelman.html",
   "imagenOriginal": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgl_j7nQUO6HNTrZAuShqu6eJsTk5w7v3_256a9N3oWNI6wMdLexblTQmZk9Nlb_zTNtpmRMV3Yn8FFniM8YM2YjEZ0k5doz7RRhQ7eM1rMhvT0nkj1mOgJ-LbrwuVkDnLejNl66QVWkhcH6gflVo6UnwOJ4YDwBmJelali3hYpzOHyASMbk02WwHacB88/w640-h462/adrian-stoppelman.jpeg",
   "razon": "Es la única foto disponible, tiene buena nitidez y encuadre, y no presenta marcas de agua ni menores.",
-  "cuando": "2026-10-11T02:31:48.209Z"
+  "cuando": "2026-10-11T02:31:48.209Z",
+  "intentado": true,
+  "borrada": true
  },
  "zavg8u": {
   "intentado": true,
@@ -13344,13 +13344,16 @@
   "cuando": "2026-10-13T19:03:18.296Z"
  },
  "1n32m9c": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1n32m9c.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El mundo celebra el Día Mundial de los Fertilizantes y su rol clave en la agricultura",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-13T19:03:18.296Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://tn.com.ar/campo/2026/10/13/dia-mundial-de-los-fertilizantes-cual-es-la-importancia-de-estos-insumos-para-la-produccion-de-alimentos/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/gracias-a-los-fertilizantes-hoy-es-posible-producir-alimentos-en-cantidad-suficiente-para-abastecer-a-una-poblacion-mundial-en-constante-crecimiento-foto-archivo-coninagro-6HOMOTGKMVCPLPH6JLY6X2EJZ4.jpg?auth=d82f36132ca33ee7bc2d109feb0960215c3f20cd2da1437b80566dab9de368b7&width=1023",
+  "razon": "La foto B muestra un tractor aplicando fertilizantes en el campo con excelente calidad de imagen y sin marcas ni menores.",
+  "cuando": "2026-10-13T20:32:28.373Z"
  },
  "1dvqt41": {
   "medio": "Diario La Vanguardia",
@@ -13365,25 +13368,28 @@
   "borrada": true
  },
  "1hwv5q1": {
-  "archivo": "fotos-notas/1hwv5q1.jpg",
   "medio": "A24",
-  "credito": "Foto: A24",
   "licencia": null,
   "origen": "medio",
   "titulo": "Un temporal en Neuquén causa inundaciones y arrastra vehículos",
   "enlace": "https://www.a24.com/actualidad/temporal-vaca-muerta-como-fue-la-crecida-que-arrastro-camionetas-n1605903",
   "imagenOriginal": "https://media.a24.com/p/68d9f6745b6666ff5c178d232a318263/adjuntos/296/imagenes/009/831/0009831997/1200x675/smart/temporal-ruta-5.jpg",
   "razon": "Es la única foto con buena nitidez, encuadre diurno y sin marcas ni menores.",
-  "cuando": "2026-10-13T19:03:18.296Z"
+  "cuando": "2026-10-13T19:03:18.296Z",
+  "intentado": true,
+  "borrada": true
  },
  "hxjao4": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/hxjao4.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Argentina alcanza un récord en la aprobación de estudios clínicos",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-13T19:03:18.296Z",
-  "intentos": 1,
-  "fuentes": 4
+  "enlace": "https://www.infobae.com/salud/ciencia/2026/10/13/argentina-alcanzo-un-record-de-estudios-clinicos-aprobados-en-2026/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/HZUWNRBG4ZEZFNYZVWOJJA32UY.png?auth=1baac151e4225c40c276e24ed85869aea0e53aba85a9055551f2fa30e0c816fc&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A tiene excelente calidad y encuadre, muestra claramente un laboratorio tecnológico sin marcas superpuestas ni menores.",
+  "cuando": "2026-10-13T20:32:28.373Z"
  },
  "1h6v9ne": {
   "medio": "TN (Todo Noticias)",
@@ -13507,5 +13513,17 @@
   "imagenOriginal": "https://cdnartic.ar/CTrNUMu63NYHpFq-uXW4BSpzWbQ=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2023/05/residencias_medicos_guardia_enfermeros.jpg",
   "razon": "Es la única foto sin marca de agua ni menores reconocibles, ilustrando adecuadamente el ámbito de clínicas privadas.",
   "cuando": "2026-10-13T20:02:30.987Z"
+ },
+ "um5udw": {
+  "archivo": "fotos-notas/um5udw.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
+  "enlace": "https://www.diariolavanguardia.com/noticias/45069-adrian-stoppelman-se-presento-con-su-espectaculo-total-anormalidad/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66034.png",
+  "razon": "Muestra claramente al humorista Adrián Stoppelman en su show, sin marcas de agua ni menores.",
+  "cuando": "2026-10-13T20:32:28.373Z"
  }
 }
