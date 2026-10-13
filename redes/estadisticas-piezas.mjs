@@ -29,8 +29,8 @@ export const METRICAS = {
   'instagram/reel': ['reach', 'views', 'likes', 'comments', 'shares', 'saved', 'total_interactions'],
   'instagram/historia': ['reach', 'views', 'replies', 'shares'],
   'instagram/foto': ['reach', 'views', 'likes', 'comments', 'shares', 'saved'],
-  'facebook/reel': ['total_video_views', 'total_video_views_unique', 'total_video_reactions_by_type_total'],
-  'facebook/historia': ['total_video_views', 'total_video_views_unique'],
+  'facebook/reel': ['total_video_views', 'total_video_reactions_by_type_total'],
+  'facebook/historia': ['total_video_views'],
   'facebook/posteo': ['post_media_view', 'post_total_media_view_unique', 'post_impressions_unique', 'post_clicks', 'post_reactions_by_type_total'],
 };
 
