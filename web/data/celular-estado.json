@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T12:05:42.898Z",
- "portada": 30,
- "archivo": 990,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-13T12:36:30.333Z",
+ "portada": 34,
+ "archivo": 993,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-13T12:05:42.927Z",
+  "generado": "2026-10-13T12:36:30.367Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-13T12:06:23.452Z"
    },
    {
     "nombre": "noticia1",
@@ -95,8 +95,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "19xpc0o",
+      "titulo": "La Fórmula 1 vuelve a correr en África tras un acuerdo con Ruanda",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "3xm1ge",
       "titulo": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
