@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-13T03:02:28.932Z",
+ "consultado": "2026-10-13T18:11:07.416Z",
  "equipos": [
   "9739",
   "3",
@@ -69,48 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841593",
-    "competencia": "liga",
-    "inicio": "2026-10-03T17:45:00.000Z",
-    "estado": "final",
-    "minuto": "90'+2'",
-    "local": {
-     "id": "8950",
-     "nombre": "Defensa y Justicia",
-     "goles": 3
-    },
-    "visitante": {
-     "id": "18",
-     "nombre": "San Lorenzo",
-     "goles": 0
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Jeremías Lucco",
-      "minuto": "11'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "local",
-      "jugador": "Héctor Martínez",
-      "minuto": "45'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "local",
-      "jugador": "David Barbona",
-      "minuto": "45'+3'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Norberto Tomaghello",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841596",
     "competencia": "liga",
