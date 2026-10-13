@@ -1,7 +1,29 @@
 {
- "generado": "2026-10-13T22:31:51.786Z",
+ "generado": "2026-10-13T23:03:10.566Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "o3be7t",
+   "titulo": "“Primavera en el Vagón”: una jornada recreativa para toda la familia",
+   "copete": "El próximo sábado 17 de octubre, de 14 a 18 hs, se llevará a cabo “Primavera en el Vagón”, una propuesta recreativa destinada a toda la familia, en el predio ubicado en avenida Eva Perón y calle 106. Durante la jornada, los asistentes podrán disfrutar de espectáculos de títeres…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-13T18:45:20.751Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/primavera-en-el-vagon-una-jornada.html",
+     "fecha": "2026-10-13T18:45:20.751Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45071-vagon-cultural-una-tarde-de-juegos-musica-y-talleres-para-compartir-en-familia/",
+     "fecha": null
+    }
+   ],
+   "intentos": 3,
+   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 49 palabras",
+   "maximo": 3
+  },
   {
    "id": "xjn0zk",
    "titulo": "Aumento de ANSES para noviembre: cuánto cobrarán los jubilados tras confirmarse la inflación",
@@ -55,26 +77,9 @@
      "fecha": "2026-10-13T21:04:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 9 y la fuente no lo dice",
+   "intentos": 2,
+   "motivo": "título o bajada: 1 problema (numero): el guion dice 9 y la fuente no lo dice",
    "maximo": 5
-  },
-  {
-   "id": "o3be7t",
-   "titulo": "“Primavera en el Vagón”: una jornada recreativa para toda la familia",
-   "copete": "El próximo sábado 17 de octubre, de 14 a 18 hs, se llevará a cabo “Primavera en el Vagón”, una propuesta recreativa destinada a toda la familia, en el predio ubicado en avenida Eva Perón y calle 106. Durante la jornada, los asistentes podrán disfrutar de espectáculos de títeres…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-13T18:45:20.751Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/primavera-en-el-vagon-una-jornada.html",
-     "fecha": "2026-10-13T18:45:20.751Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 49 palabras",
-   "maximo": 3
   },
   {
    "id": "zjtene",
@@ -96,23 +101,6 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "1xbibcl",
-   "titulo": "Vagón cultural: Una tarde de juegos, música y talleres para compartir en familia",
-   "copete": "",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-13T17:14:35.770Z",
-   "fuentes": [
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45071-vagon-cultural-una-tarde-de-juegos-musica-y-talleres-para-compartir-en-familia/",
-     "fecha": null
-    }
-   ],
-   "intentos": 3,
-   "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 46 palabras",
    "maximo": 3
   }
  ]

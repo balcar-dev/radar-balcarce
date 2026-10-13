@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T22:31:51.786Z",
- "portada": 50,
- "archivo": 1030,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-13T23:03:10.566Z",
+ "portada": 55,
+ "archivo": 1035,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-13T22:31:51.809Z",
+  "generado": "2026-10-13T23:03:10.592Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -73,7 +73,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
       "id": "1vcnnfl",
@@ -170,13 +170,13 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "fdr535",
-      "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
-      "seccion": "Balcarce"
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "1uwzwwj",
-      "titulo": "Organizan la segunda edición de la carrera en homenaje al profesor Luis Vildoza",
+      "id": "fdr535",
+      "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
       "seccion": "Balcarce"
      }
     ]
@@ -211,6 +211,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "11d0zcr",
+     "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
     {
      "id": "10aoo7v",
      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",

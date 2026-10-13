@@ -13458,16 +13458,16 @@
   "cuando": "2026-10-13T19:33:19.789Z"
  },
  "fsdbh5": {
-  "archivo": "fotos-notas/fsdbh5.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno designa nuevas autoridades en el área de Discapacidad",
   "enlace": "https://www.infobae.com/salud/2026/10/13/el-gobierno-designo-a-un-nuevo-secretario-nacional-de-discapacidad/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/YC4AISVM5JD2VB3QEIM7KP4DWI.jpeg?auth=d8231c6c476daf2b8af7e56890edfca4c3cee963038ea5f52aed19b90abbc4c3&smart=true&width=1200&height=630&quality=85",
   "razon": "Es la foto más nítida, con excelente encuadre del funcionario designado y sin marcas de agua ni menores.",
-  "cuando": "2026-10-13T19:33:19.789Z"
+  "cuando": "2026-10-13T19:33:19.789Z",
+  "intentado": true,
+  "borrada": true
  },
  "zrbtlm": {
   "archivo": "fotos-notas/zrbtlm.jpg",
@@ -13574,9 +13574,9 @@
  "6bm2nd": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-13T21:32:58.708Z",
+  "cuando": "2026-10-13T23:02:15.748Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 1,
+  "intentos": 2,
   "fuentes": 4
  },
  "1ntre16": {
@@ -13695,5 +13695,77 @@
   "imagenOriginal": "https://media.minutouno.com/p/15a7ab37ce92789fa48ae8d454770f34/adjuntos/150/imagenes/043/702/0043702189/1200x675/smart/ravier.jpg",
   "razon": "La foto B tiene mejor encuadre y nitidez, sin marcas de agua ni menores.",
   "cuando": "2026-10-13T22:31:47.481Z"
+ },
+ "17v35o5": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-13T23:02:15.748Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "11d0zcr": {
+  "archivo": "fotos-notas/11d0zcr.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+  "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-13-22-53-19AutoClasica__4_.jpeg",
+  "razon": "Es la única opción disponible, muestra bien los autos históricos del Museo Fangio en el evento y no presenta marcas de agua del medio ni menores de edad.",
+  "cuando": "2026-10-13T23:02:15.748Z"
+ },
+ "1k2xuxz": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Gobierno evalúa los feriados por la visita del papa León XIV",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-13T23:02:15.748Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "2ienjd": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El riesgo país registra versiones encontradas y alcanza los 697 puntos",
+  "razon": "La única foto disponible tiene una marca de agua del medio (Noticias Argentinas) superpuesta, por lo que no puede ser elegida.",
+  "cuando": "2026-10-13T23:02:15.748Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "1nlvcu5": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Comienza el armado del escenario para los recitales de BTS en La Plata",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-13T23:02:15.748Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "1c17x5e": {
+  "archivo": "fotos-notas/1c17x5e.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno nombra a Diego Masaragian al frente de Discapacidad",
+  "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-designo-a-diego-masaragian-como-nuevo-secretario-nacional-de-discapacidad-nid13102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/diego-masaragian-asume-como-secretario-nacional-PGIVQR77XFA57M6CAREA5S4B24.jpeg?auth=554fab6d592104c7d7570ff76345a70e4ccc7aef3bcd5451819db3f2e51a2ddb&width=1200&height=800&quality=70&smart=true",
+  "razon": "Es la foto con mejor nitidez, encuadre adecuado de Diego Masaragian y sin marcas de agua ni menores.",
+  "cuando": "2026-10-13T23:02:15.748Z"
+ },
+ "1h09c4f": {
+  "archivo": "fotos-notas/1h09c4f.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Karina Milei encabeza una nueva mesa política para acelerar la agenda legislativa",
+  "enlace": "https://www.minutouno.com/politica/la-mesa-del-gobierno-avanzo-la-agenda-legislativa-y-los-preparativos-la-visita-leon-xiv-n6333346",
+  "imagenOriginal": "https://media.minutouno.com/p/dba70490de9507291b6078b57c70242c/adjuntos/150/imagenes/043/701/0043701963/mesa-politica.jpg",
+  "razon": "Es la foto más nítida del grupo completo sin marcas de agua superpuestas ni menores.",
+  "cuando": "2026-10-13T23:02:15.748Z"
  }
 }
