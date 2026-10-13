@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T21:34:14.091Z",
- "portada": 49,
- "archivo": 1026,
+ "generado": "2026-10-13T21:51:07.453Z",
+ "portada": 51,
+ "archivo": 1028,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-13T21:34:14.124Z",
+  "generado": "2026-10-13T21:51:07.495Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "u043fh",
-      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
-      "seccion": "Cultura y agenda"
-     },
      {
       "id": "1iw56bi",
       "titulo": "El Indec ubica la canasta básica por debajo de la inflación en septiembre",
@@ -172,6 +167,11 @@
      {
       "id": "fdr535",
       "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1uwzwwj",
+      "titulo": "Organizan la segunda edición de la carrera en homenaje al profesor Luis Vildoza",
       "seccion": "Balcarce"
      },
      {
@@ -212,15 +212,15 @@
    ],
    "cola": [
     {
-     "id": "fdr535",
-     "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "10aoo7v",
      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
      "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "fdr535",
+     "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],

@@ -13299,13 +13299,16 @@
   "cuando": "2026-10-13T17:38:04.439Z"
  },
  "16u8bue": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/16u8bue.jpg",
+  "medio": "La Capital (Rosario)",
+  "credito": "Foto: La Capital (Rosario)",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Rosario Central postula el Gigante de Arroyito para el Mundial 2030",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-13T17:38:04.439Z",
-  "intentos": 1,
-  "fuentes": 14
+  "enlace": "https://www.lacapital.com.ar/ovacion/central-se-postulo-ser-sede-del-mundial-2030-el-gigante-arroyito-n10286364.html",
+  "imagenOriginal": "https://media.lacapital.com.ar/p/c7c3313cbb28f4f1d6e946e1f9f4e6d8/adjuntos/203/imagenes/103/426/0103426845/gigante-arroyito.jpg",
+  "razon": "Es una toma aérea nítida del estadio sin marcas de agua ni menores.",
+  "cuando": "2026-10-13T21:50:05.497Z"
  },
  "1c99k48": {
   "archivo": "fotos-notas/1c99k48.jpg",
@@ -13635,5 +13638,50 @@
   "imagenOriginal": "https://media.ambito.com/p/9b7b249f9a6f95882b75f037d3949637/adjuntos/239/imagenes/043/289/0043289095/1200x675/smart/martin-marinucci.jpg",
   "razon": "Es la única foto libre de marcas de agua de medios y sin menores de edad reconocibles, mostrando al funcionario de la provincia.",
   "cuando": "2026-10-13T21:32:58.708Z"
+ },
+ "1uwzwwj": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Organizan la segunda edición de la carrera en homenaje al profesor Luis Vildoza",
+  "razon": "La única foto disponible incluye menores de edad reconocibles.",
+  "cuando": "2026-10-13T21:50:05.497Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "1vcnnfl": {
+  "archivo": "fotos-notas/1vcnnfl.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Mastantuono se opera de la mano tras un golpe",
+  "enlace": "https://www.infobae.com/deportes/2026/10/13/franco-mastantuono-sufrio-una-fractura-y-debio-ser-operado-el-comunicado-de-la-fiorentina/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/LICZ7M6D6FELHPVUUZTY32PCM4.jpg?auth=5753619dad3de804076f264ed82fdcfc95c93131b129c937a2893b250484a246&smart=true&width=1200&height=630&quality=85",
+  "razon": "Tiene mejor encuadre completo del jugador y nitidez adecuada, sin marcas de agua ni menores.",
+  "cuando": "2026-10-13T21:50:05.497Z"
+ },
+ "pl4s36": {
+  "archivo": "fotos-notas/pl4s36.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Nicolò Tresoldi anota tres goles en el triunfo del Brujas ante el Inter",
+  "enlace": "https://www.minutouno.com/deportes/dura-derrota-del-inter-la-champions-league-doblete-lautaro-martinez-y-hat-trick-del-europibe-nicolo-tresoldi-n6333367",
+  "imagenOriginal": "https://media.minutouno.com/p/0d42be8afb2a0248a61a20653e01bef4/adjuntos/150/imagenes/043/702/0043702150/1200x675/smart/nicolo-tresoldi.jpg",
+  "razon": "Tiene excelente nitidez, muestra claramente al jugador celebrando sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-13T21:50:05.497Z"
+ },
+ "wkayyi": {
+  "archivo": "fotos-notas/wkayyi.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Messi viaja a Asturias para recibir el Premio Princesa de Asturias",
+  "enlace": "https://www.infobae.com/espana/2026/10/13/el-papel-de-leo-messi-en-los-premios-princesa-de-asturias-no-hablara-en-la-gala-y-tendra-que-marcharse-antes/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/MHMCUO4AO5AFXE5IVPK6SYDMV4.jpg?auth=e13c4b93894b11a845d85efedbbd3a1fd0f530805bceeab8c612ceefc3f43f39&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A muestra a Lionel Messi con excelente nitidez y encuadre en primer plano, sin marcas de agua ni menores.",
+  "cuando": "2026-10-13T21:50:05.497Z"
  }
 }
