@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T09:01:49.514Z",
+ "generado": "2026-10-13T09:18:16.664Z",
  "portada": 36,
  "archivo": 987,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-13T09:01:49.543Z",
+  "generado": "2026-10-13T09:18:16.692Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -115,7 +115,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 38,
+    "segundos": 44,
     "notas": [
      {
       "id": "3bom4j",
@@ -130,6 +130,11 @@
      {
       "id": "1imkz6n",
       "titulo": "Social Pato Naranja y Negro juegan la semifinal",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
       "seccion": "Deportes"
      }
     ]

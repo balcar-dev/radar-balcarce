@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T09:01:49.514Z",
+  "generado": "2026-10-13T09:18:16.664Z",
   "notas": [
     {
       "id": "1335hw8",
@@ -136,6 +136,90 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "detienen-a-un-hombre-por-desobedecer-una-restriccion-de-acercamiento"
+    },
+    {
+      "id": "1dz0qkj",
+      "titulo": "El Fondo Monetario Internacional recorta su previsión de crecimiento",
+      "copete": "El organismo proyecta una expansión del producto bruto del 2,1% para este año y ubicó la inflación anual promedio en el 32,5%. Las cifras forman parte del último informe global difundido el lunes.",
+      "cuerpo": "El Fondo Monetario Internacional redujo su pronóstico de crecimiento para la economía argentina y ahora espera que el producto bruto interno se expanda 2,1% este año, por debajo del 3,5% calculado previamente. Además, ajustó al alza la proyección para la inflación, que estimó en 32,5% anual promedio. Los datos forman parte de la actualización de las Perspectivas Económicas Globales difundida el lunes.\n\nPara el año próximo, el organismo empeoró la expectativa de crecimiento y prevé un incremento del 3,5%. Por otra parte, la subdirectora del Departamento de Investigación del organismo, Petya Koeva Brooks, aseguró en una conferencia que se van a flexibilizar las condiciones financieras y confió en un aumento de la inversión.",
+      "guion": "El Fondo Monetario Internacional recorta su previsión de crecimiento.",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "C5N"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/10/12/el-fmi-recorto-fuerte-sus-previsiones-para-la-economia-argentina-proyecto-menos-crecimiento-y-mas-inflacion/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T02:07:59.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T03:31:41.882Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El organismo redujo el pronóstico de crecimiento del producto bruto al 2,1% para este año.",
+        "La proyección para la inflación anual promedio se ubicó en el 32,5%.",
+        "Para el año próximo se espera un incremento del producto bruto del 3,5%.",
+        "El desempleo estimado alcanza al 7,6% para este año y al 7,1% para 2027."
+      ],
+      "seSabe": [
+        "El Fondo Monetario Internacional proyecta un crecimiento del producto bruto interno del 2,1% para la Argentina este año.",
+        "El organismo estimó una inflación anual promedio del 32,5% para este año.",
+        "Para el año próximo se prevé una expansión del producto bruto del 3,5%.",
+        "La subdirectora del Departamento de Investigación, Petya Koeva Brooks, aseguró que se flexibilizarán las condiciones financieras.",
+        "El Fondo Monetario Internacional proyecta un desempleo del 7,6% para este año y del 7,1% para 2027."
+      ],
+      "textoRedes": "El Fondo Monetario Internacional redujo su previsión de crecimiento económico para este año al 2,1% y ubicó la inflación anual promedio en el 32,5%. Los datos corresponden al último informe global difundido por el organismo.",
+      "etiquetas": [
+        "FMI",
+        "economia",
+        "inflacion",
+        "crecimiento",
+        "PBI"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/12/el-fmi-recorto-fuerte-sus-previsiones-para-la-economia-argentina-proyecto-menos-crecimiento-y-mas-inflacion/",
+          "fecha": "2026-10-13T02:07:59.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la reducción en las proyecciones de crecimiento del producto bruto, la inflación, el desempleo y las declaraciones de Petya Koeva Brooks."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/el-fmi-recorto-fuerza-su-pronostico-crecimiento-la-argentina-y-elevo-el-la-inflacion-n251423",
+          "fecha": "2026-10-13T03:03:00.000Z",
+          "oficial": false,
+          "aporte": "Agregó que el ajuste en las estimaciones se ubica por debajo del promedio regional y fue presentado durante la exposición sobre las Perspectivas de la Economía Mundial."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/10/13/el-fmi-recorta-las-previsiones-de-crecimiento-de-la-economia-argentina-para-2026-y-2027/",
+          "fecha": "2026-10-13T02:17:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló las nuevas proyecciones de crecimiento, inflación, desempleo y cuentas externas."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/el-fmi-recorta-la-prevision-crecimiento-argentina-n6332941",
+          "fecha": "2026-10-13T02:39:00.000Z",
+          "oficial": false,
+          "aporte": "Informó el recorte en la previsión del crecimiento global y ratificó la baja para la economía nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-fondo-monetario-internacional-recorta-su-prevision-de-crecimiento",
+      "foto": {
+        "archivo": "fotos-notas/1dz0qkj.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
     },
     {
       "id": "2mzsmm",
@@ -520,65 +604,6 @@
       "slug": "social-pato-naranja-y-negro-juegan-la-semifinal"
     },
     {
-      "id": "3bom4j",
-      "titulo": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
-      "copete": "El gimnasio La Cuna del Quíntuple albergó la octogésima novena edición de la competencia de tenis de mesa, que reunió a 127 jugadores durante el fin de semana.",
-      "cuerpo": "El polideportivo local ubicado en la calle 13 número 818 fue sede del octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa, perteneciente al circuito TmT. La competencia reunió a 127 deportistas divididos en siete categorías, quienes disputaron más de doscientos partidos entre el sábado y el domingo por la noche, según informó un medio local.\n\nEl certamen contó con la presencia de competidores de diversas localidades bonaerenses y porteñas.\n\nEn cuanto a los resultados deportivos destacados del fin de semana, Barbieri logró el bicampeonato y Álvarez se impuso en la divisional principal. Por su parte, el deportista local Pedro Rodríguez Curate, perteneciente a la entidad anfitriona, alcanzó el tercer puesto en su divisional.",
-      "guion": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
-      "seccion": "Deportes",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T20:22:53.264Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T07:01:46.499Z",
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se disputó el octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa.",
-        "Participaron 127 deportistas distribuidos en siete categorías diferentes.",
-        "El certamen tuvo lugar en el gimnasio La Cuna del Quíntuple durante el fin de semana.",
-        "Barbieri logró el bicampeonato y Álvarez se consagró en la divisional principal."
-      ],
-      "seSabe": [
-        "El torneo reunió a 127 inscriptos de distintas ciudades de la provincia y de Buenos Aires.",
-        "Se jugaron más de doscientos partidos en siete categorías a lo largo de dos jornadas.",
-        "Pedro Rodríguez Curate logró el tercer puesto para el Club Top Serrano."
-      ],
-      "noConfirmado": [
-        "No se detallaron los resultados completos de todas las categorías en juego.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El gimnasio La Cuna del Quíntuple fue sede de la octogésima novena edición del Torneo Ciudad de Balcarce de tenis de mesa, que reunió a 127 competidores y dejó destacados podios locales.",
-      "etiquetas": [
-        "tenis de mesa",
-        "Torneo Ciudad de Balcarce",
-        "deportes",
-        "Club Top Serrano"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
-          "fecha": "2026-10-12T20:22:53.264Z",
-          "oficial": false,
-          "aporte": "Informó sobre el desarrollo, las fechas, la cantidad de participantes y los ganadores del octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "barbieri-gana-el-bicampeonato-y-alvarez-se-consagra-en-el-torneo"
-    },
-    {
       "id": "18zr7tv",
       "titulo": "Ciclistas locales consiguen podios en el MTB Series",
       "copete": "Varios deportistas de la ciudad se destacaron en la cuarta edición del MTB Series disputada en Mar del Plata.",
@@ -661,48 +686,57 @@
       "slug": "ciclistas-locales-consiguen-podios-en-el-mtb-series"
     },
     {
-      "id": "90qy7w",
-      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
-      "copete": "El gimnasio La Cuna del Quíntuple albergó la octagésima novena edición del certamen de tenis de mesa. El club local consiguió tres títulos y varios podios con sus deportistas.",
-      "cuerpo": "Balcarce albergó el octagésimono noveno Torneo Ciudad de Balcarce de tenis de mesa, correspondiente al circuito nacional Tenis de Mesa para Todos. El evento se desarrolló durante el fin de semana en el gimnasio La Cuna del Quíntuple, ubicado en calle 13 número 818, con la participación de 127 jugadores distribuidos en siete categorías y más de 200 partidos disputados.\n\nLa delegación del club Top Serrano cumplió una destacada actuación y se quedó con tres primeros puestos de la mano de Joaquín Álvarez, quien se impuso en la división principal, y Cristóbal Barbieri, ganador en dos categorías. Además, la entidad sumó varios podios con las participaciones de Lautaro Roland, Santino Duarte, Pedro Rodríguez Curate, Marcos Álvarez y Nazareno Ramírez.\n\nEl certamen reunió a deportistas de Miramar, Lobería, Necochea, Tandil, Mar del Plata, Olavarría, Ayacucho, Mar Chiquita, Bolívar y distintos puntos del conurbano bonaerense.",
-      "guion": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+      "id": "3bom4j",
+      "titulo": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
+      "copete": "El gimnasio La Cuna del Quíntuple albergó la octogésima novena edición de la competencia de tenis de mesa, que reunió a 127 jugadores durante el fin de semana.",
+      "cuerpo": "El polideportivo local ubicado en la calle 13 número 818 fue sede del octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa, perteneciente al circuito TmT. La competencia reunió a 127 deportistas divididos en siete categorías, quienes disputaron más de doscientos partidos entre el sábado y el domingo por la noche, según informó un medio local.\n\nEl certamen contó con la presencia de competidores de diversas localidades bonaerenses y porteñas.\n\nEn cuanto a los resultados deportivos destacados del fin de semana, Barbieri logró el bicampeonato y Álvarez se impuso en la divisional principal. Por su parte, el deportista local Pedro Rodríguez Curate, perteneciente a la entidad anfitriona, alcanzó el tercer puesto en su divisional.",
+      "guion": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
       "seccion": "Deportes",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
+      "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T19:42:06.000Z",
       "sinFecha": false,
-      "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 75,
+      "visto": "2026-10-13T07:01:46.499Z",
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Se disputó el octagésimo noveno Torneo Ciudad de Balcarce",
-        "Participaron 127 jugadores de distintas localidades",
-        "Top Serrano obtuvo tres títulos y varios podios",
-        "La competencia tuvo más de doscientos partidos"
+        "Se disputó el octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa.",
+        "Participaron 127 deportistas distribuidos en siete categorías diferentes.",
+        "El certamen tuvo lugar en el gimnasio La Cuna del Quíntuple durante el fin de semana.",
+        "Barbieri logró el bicampeonato y Álvarez se consagró en la divisional principal."
+      ],
+      "seSabe": [
+        "El torneo reunió a 127 inscriptos de distintas ciudades de la provincia y de Buenos Aires.",
+        "Se jugaron más de doscientos partidos en siete categorías a lo largo de dos jornadas.",
+        "Pedro Rodríguez Curate logró el tercer puesto para el Club Top Serrano."
       ],
       "noConfirmado": [
+        "No se detallaron los resultados completos de todas las categorías en juego.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "El gimnasio La Cuna del Quíntuple fue sede de la octogésima novena edición del Torneo Ciudad de Balcarce de tenis de mesa, que reunió a 127 competidores y dejó destacados podios locales.",
       "etiquetas": [
         "tenis de mesa",
-        "Top Serrano",
-        "Torneo Ciudad de Balcarce"
+        "Torneo Ciudad de Balcarce",
+        "deportes",
+        "Club Top Serrano"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
-          "fecha": "2026-10-12T19:42:06.000Z",
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
+          "fecha": "2026-10-12T20:22:53.264Z",
           "oficial": false,
-          "aporte": "Detalló los resultados, los ganadores y las características del torneo de tenis de mesa."
+          "aporte": "Informó sobre el desarrollo, las fechas, la cantidad de participantes y los ganadores del octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa."
         }
       ],
       "verificacion": {
@@ -710,7 +744,82 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "top-serrano-gana-tres-titulos-en-el-torneo-de-tenis-de-mesa"
+      "slug": "barbieri-gana-el-bicampeonato-y-alvarez-se-consagra-en-el-torneo"
+    },
+    {
+      "id": "zlbsz6",
+      "titulo": "La CGT rechaza la restitución del Día de la Raza dispuesta por el Gobierno",
+      "copete": "La central obrera cuestionó la medida de la administración de Javier Milei y ratificó la vigencia del Día del Respeto a la Diversidad Cultural.",
+      "cuerpo": "La Confederación General del Trabajo cuestionó la decisión del Gobierno nacional de recuperar la denominación de Día de la Raza para este 12 de octubre y calificó la medida como una provocación burda. A través de un comunicado oficial, la central obrera ratificó la conmemoración por el Día del Respeto a la Diversidad Cultural tal como lo establece la Constitución Nacional.\n\nLa entidad sindical señaló que el discurso oficial carece de una reivindicación fundamentada.",
+      "guion": "La CGT rechaza la restitución del Día de la Raza dispuesta por el Gobierno",
+      "seccion": "Política",
+      "medios": [
+        "El Eco de Tandil",
+        "Minuto Uno",
+        "Perfil",
+        "Noticias Argentinas (NA)",
+        "La Verdad"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/la-cgt-califico-al--dia-de-la-raza--que-restituyo-el-gobierno-como-una--provocacion-burda-_a6acd35b332fdad2908a53ddf",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T19:38:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T22:31:50.433Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La CGT calificó la medida como una provocación burda.",
+        "Ratificaron la vigencia del Día del Respeto a la Diversidad Cultural.",
+        "cuestionaron la decisión del gobierno de Javier Milei."
+      ],
+      "seSabe": [
+        "La CGT emitió un comunicado para cuestionar la medida del Gobierno.",
+        "La central obrera ratificó el Día del Respeto a la Diversidad Cultural.",
+        "La entidad mencionó los antecedentes históricos de Yrigoyen y Perón."
+      ],
+      "etiquetas": [
+        "CGT",
+        "Gobierno nacional",
+        "Día de la Raza",
+        "Día del Respeto a la Diversidad Cultural"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/la-cgt-califico-al--dia-de-la-raza--que-restituyo-el-gobierno-como-una--provocacion-burda-_a6acd35b332fdad2908a53ddf",
+          "fecha": "2026-10-12T19:38:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los argumentos históricos de la CGT y las citas de Yrigoyen y Perón."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/la-cgt-califico-como-una-provocacion-burda-la-restitucion-del-dia-de-la-raza",
+          "fecha": "2026-10-12T22:12:24.000Z",
+          "oficial": false,
+          "aporte": "Informó que la medida fue impulsada por la administración de Javier Milei."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/la-cgt-califico-al-dia-de-la-raza-que-restituyo-el-gobierno-como-una-provocacion-burda/",
+          "fecha": "2026-10-12T21:45:16.000Z",
+          "oficial": false,
+          "aporte": "Señaló la postura de la central obrera sobre la Constitución Nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-cgt-rechaza-la-restitucion-del-dia-de-la-raza-dispuesta-por-el",
+      "foto": {
+        "archivo": "fotos-notas/zlbsz6.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
     },
     {
       "id": "15o5mwn",
@@ -720,7 +829,6 @@
       "guion": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -731,7 +839,7 @@
       "fecha": "2026-10-12T19:23:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 100,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1290,6 +1398,68 @@
       "slug": "gobierno-expulsa-a-ciudadano-brasileno-y-prohibe-su-ingreso-por-cinco"
     },
     {
+      "id": "fr6obg",
+      "titulo": "El personal de casas particulares define su aumento salarial hasta fin de año",
+      "copete": "La Comisión Nacional de Trabajo en Casas Particulares fijó subas consecutivas para el trimestre de octubre a diciembre de 2026, con la integración progresiva de sumas extraordinarias y nuevos mínimos por categoría.",
+      "cuerpo": "El personal de casas particulares cuenta con un esquema de aumentos salariales para el último trimestre de 2026, según el acuerdo de la Comisión Nacional de Trabajo en Casas Particulares formalizado mediante la Resolución 6/2026.\n\nLos porcentajes establecidos alcanzan el 1,7% en octubre, el 1,6% en noviembre y el 1,6% en diciembre, junto con la incorporación progresiva de una suma extraordinaria al sueldo básico. El pago contempla además un adicional por antigüedad del 1% por cada año de servicio desde septiembre de 2020 y un 31% por zona desfavorable en la región patagónica y el partido de Patagones.\n\nLos sueldos varían según la categoría y la modalidad. El personal para tareas generales con retiro cobra en octubre $4.064,08 por hora y $498.582,06 mensuales, montos que trepan en noviembre a $511.639,37 y en diciembre a $519.825,60.",
+      "guion": "El personal de casas particulares define su aumento salarial hasta fin de año",
+      "seccion": "Economía",
+      "medios": [
+        "El Cronista",
+        "Canal 26"
+      ],
+      "enlace": "https://www.canal26.com/economia/2026/10/11/empleadas-domesticas-cuanto-cobran-en-octubre-noviembre-y-diciembre-de-2026-con-los-nuevos-aumentos-salariales/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T16:40:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T19:01:26.092Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Acuerdo trimestral para empleadas domésticas",
+        "Subas del 1,7% en octubre y 1,6% en noviembre y diciembre",
+        "Incorporación de sumas no remunerativas al básico",
+        "Adicionales por antigüedad y zona desfavorable"
+      ],
+      "textoRedes": "El personal de casas particulares cuenta con un esquema de aumentos salariales para el último trimestre de 2026 fijado por la Comisión Nacional de Trabajo en Casas Particulares.",
+      "etiquetas": [
+        "empleadas domesticas",
+        "casas particulares",
+        "salarios",
+        "aumento salarial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/10/11/empleadas-domesticas-cuanto-cobran-en-octubre-noviembre-y-diciembre-de-2026-con-los-nuevos-aumentos-salariales/",
+          "fecha": "2026-10-12T16:40:18.000Z",
+          "oficial": false,
+          "aporte": "Aportó el esquema completo de aumentos trimestrales, porcentajes, cronograma de sumas extraordinarias, adicionales y valores mínimos por categoría."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/empleadas-domesticas-de-cuanto-es-el-aumento-en-octubre-noviembre-y-diciembre/",
+          "fecha": "2026-10-12T18:33:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó el porcentaje de aumento específico para octubre y el número de la resolución oficial."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-personal-de-casas-particulares-define-su-aumento-salarial-hasta",
+      "foto": {
+        "archivo": "fotos-notas/fr6obg.jpg",
+        "credito": "Foto: Canal 26"
+      }
+    },
+    {
       "id": "1qszs3z",
       "titulo": "Gabriel Deck pasa por el quirófano y se pierde lo que resta del año",
       "copete": "El alero de la Selección Argentina y del Real Madrid será operado del hombro izquierdo por una lesión. Su ausencia complica al equipo nacional en la clasificación al Mundial.",
@@ -1299,8 +1469,8 @@
       "medios": [
         "0223 (Mar del Plata)",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Básquet Plus"
+        "Básquet Plus",
+        "La Nueva"
       ],
       "enlace": "https://basquetplus.com/real-madrid-gaby-deck-operacion-lesion",
       "teniaImagenLaFuente": true,
@@ -1391,8 +1561,8 @@
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Voz del Pueblo",
-        "La Nueva",
-        "InfoRegión"
+        "InfoRegión",
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/el-mensaje-de-la-casa-rosada-por-el-12-de-octubre---el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo-_a6acd158732fdad2908a0e800",
       "teniaImagenLaFuente": true,
@@ -1720,7 +1890,6 @@
       "guion": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Acción 5 (Balcarce)"
       ],
@@ -1729,7 +1898,7 @@
       "fecha": "2026-10-12T13:24:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 91,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1774,6 +1943,81 @@
       "foto": {
         "archivo": "fotos-notas/r0o8z3.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
+      }
+    },
+    {
+      "id": "wufzrl",
+      "titulo": "El agro argentino exporta casi 89 millones de toneladas",
+      "copete": "Los envíos al exterior de granos, subproductos y aceites acumularon cerca de 88,9 millones de toneladas entre enero y septiembre de 2026. La cifra supera al récord alcanzado en 2021.",
+      "cuerpo": "Las exportaciones de granos, subproductos y aceites del país sumaron cerca de 88,9 millones de toneladas entre enero y septiembre de este año. La cifra representa un incremento de casi el 10% en comparación con el mismo período del año pasado y supera la marca máxima lograda en 2021, según informó la Bolsa de Comercio de Rosario. El volumen exportador respondió a una cosecha sin antecedentes y a una fuerte demanda internacional. Por su parte, la liquidación de divisas del sector alcanzó los USD 3.228 millones en septiembre, de acuerdo con datos de la Cámara de la Industria Aceitera de la República Argentina y el Centro de Exportadores de Cereales.",
+      "guion": "El agro argentino exporta casi 89 millones de toneladas",
+      "seccion": "Agro",
+      "medios": [
+        "Infobae",
+        "Ámbito"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/12/en-nueve-meses-el-agro-argentino-ya-exporto-casi-90-millones-de-toneladas-mas-que-el-record-anual-historico-de-2021/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T13:06:49.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T17:01:56.711Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Las exportaciones sumaron cerca de 88,9 millones de toneladas hasta septiembre.",
+        "El volumen supera en casi un 10% el registro del año previo.",
+        "La liquidación de divisas de septiembre llegó a USD 3.228 millones."
+      ],
+      "seSabe": [
+        "Las exportaciones de granos, subproductos y aceites acumularon 88,9 millones de toneladas entre enero y septiembre de 2026, según la Bolsa de Comercio de Rosario.",
+        "El volumen supera el récord previo de 2021.",
+        "La liquidación de divisas de septiembre llegó a USD 3.228 millones, según CIARA y el CEC."
+      ],
+      "textoRedes": "Las exportaciones argentinas de granos, subproductos y aceites acumularon cerca de 88,9 millones de toneladas entre enero y septiembre de 2026 y superaron el récord previo.",
+      "etiquetas": [
+        "agro",
+        "exportaciones",
+        "granos",
+        "divisas",
+        "cosecha"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/12/en-nueve-meses-el-agro-argentino-ya-exporto-casi-90-millones-de-toneladas-mas-que-el-record-anual-historico-de-2021/",
+          "fecha": "2026-10-12T13:06:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre el volumen de exportaciones, el récord superado, la liquidación de divisas y los factores productivos."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/hito-el-campo-nueve-meses-exporto-casi-90-millones-toneladas-y-ya-supera-el-record-anual-2021-n6332756",
+          "fecha": "2026-10-12T16:40:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto sobre el impulso de los embarques debido a una cosecha excepcional y la demanda internacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5ddc24",
+          "titulo": "El riesgo país llega a 642 puntos y marca un récord anual",
+          "fecha": "2026-09-25T21:00:10.000Z",
+          "ruta": "/nota/el-riesgo-pais-llega-a-642-puntos-y-marca-un-record-anual-5ddc24"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-agro-argentino-exporta-casi-89-millones-de-toneladas",
+      "foto": {
+        "archivo": "fotos-notas/wufzrl.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1834,82 +2078,6 @@
       }
     },
     {
-      "id": "1aqdhjn",
-      "titulo": "Un hombre de Lobería recibe suero antiofídico en el hospital",
-      "copete": "Un vecino de 43 años sufrió la mordedura de una serpiente yarará ñata mientras se encontraba en un campo de la vecina localidad y debió ser derivado de urgencia a Balcarce.",
-      "cuerpo": "Según relató la propia víctima, el ataque se produjo en una de sus manos al regresar de una actividad de caza, cuando no advirtió la presencia del reptil enroscado en un animal que había faenado.\n\nTras el episodio, acudió al centro de salud loberense como medida preventiva, pero los profesionales le indicaron un traslado inmediato debido a la falta de suero específico en esa localidad. El paciente llegó en un vehículo particular al Hospital Subzonal Felipe A. Fossati, donde los médicos evaluaron sus estudios y le administraron diez ampollas de suero antiofídico.\n\nEl hombre permanece internado bajo observación en la Unidad de Terapia Intensiva del nosocomio local a la espera de una evolución favorable de su cuadro de salud.",
-      "guion": "Un hombre de Lobería recibe suero antiofídico en el hospital",
-      "seccion": "Policiales",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-12T12:55:49.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T13:31:45.071Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "hospital"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Un hombre de 43 años fue atacado por una yarará ñata en Lobería.",
-        "El centro de salud de esa ciudad derivó al paciente por falta de suero.",
-        "Ingresó al Hospital Fossati en un vehículo particular para recibir tratamiento.",
-        "Le aplicaron diez ampollas de suero antiofídico y sigue en Terapia Intensiva."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un hombre de 43 años fue derivado desde Lobería a Balcarce tras ser mordido por una yarará ñata mientras cazaba en un campo. El paciente recibió diez ampollas de suero antiofídico y permanece internado en Terapia Intensiva en el Hospital Fossati.",
-      "etiquetas": [
-        "Hospital Fossati",
-        "Lobería",
-        "salud",
-        "yarará",
-        "mordedura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
-          "fecha": "2026-10-12T12:55:49.000Z",
-          "oficial": false,
-          "aporte": "Detalló el traslado desde Lobería y la internación en Terapia Intensiva del Hospital Fossati tras recibir suero antiofídico."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1v130vb",
-          "titulo": "Xoana Martínez defiende el acuerdo paritario y detalla los puntos del sector municipal",
-          "fecha": "2026-10-05T16:31:22.668Z",
-          "ruta": "/nota/xoana-martinez-defiende-el-acuerdo-paritario-y-detalla-los-puntos-del-1v130vb"
-        },
-        {
-          "id": "1ni344u",
-          "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-          "fecha": "2026-10-05T11:40:58.000Z",
-          "ruta": "/nota/el-hospital-municipal-registra-problemas-en-sus-lineas-telefonicas-1ni344u"
-        },
-        {
-          "id": "164o14u",
-          "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-          "fecha": "2026-10-02T13:18:34.000Z",
-          "ruta": "/nota/el-club-de-leones-entrega-nuevos-equipos-al-hospital-municipal-164o14u"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "un-hombre-de-loberia-recibe-suero-antiofidico-en-el-hospital"
-    },
-    {
       "id": "36ajax",
       "titulo": "El turismo crece en el fin de semana largo y deja millonarios ingresos",
       "copete": "Un millón y medio de personas recorrieron distintos puntos del país durante el fin de semana largo. La cantidad de viajeros subió un 3,5% interanual, aunque el impacto económico total retrocedió en términos reales debido a estadías más cortas.",
@@ -1936,14 +2104,14 @@
         "La Brújula 24",
         "La Verdad",
         "La Voz del Pueblo",
+        "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "NDEN – Noticias de Necochea",
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
-        "La Nueva",
-        "InfoRegión"
+        "La Nueva"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
       "teniaImagenLaFuente": true,
@@ -2408,84 +2576,6 @@
       }
     },
     {
-      "id": "eonoyt",
-      "titulo": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
-      "copete": "La iniciativa nacional contempla dos alternativas económicas para extranjeros y comenzará a recibir postulaciones en el cuarto trimestre de 2026.",
-      "cuerpo": "El Gobierno nacional puso en marcha un programa para otorgar la ciudadanía a extranjeros que concreten inversiones en el país.\n\nLas postulaciones comenzarán a recibirse durante el cuarto trimestre de 2026. Los aspirantes deberán superar controles de identidad, antecedentes penales y origen de fondos que evaluará la Agencia de Programas de Ciudadanía por Inversión junto a Migraciones.\n\nComo antecedente, el Ejecutivo había presentado este mecanismo en Francia a principios de octubre. El esquema local difiere de los modelos de Estados Unidos y Portugal, donde la inversión otorga residencia temporal antes de una eventual naturalización.",
-      "guion": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
-      "seccion": "Economía",
-      "medios": [
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-12T10:40:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T19:01:26.092Z",
-      "relevancia": 26,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El programa nacional permite solicitar la ciudadanía a extranjeros mediante inversiones.",
-        "Se puede optar por un aporte de US$350.000 al Tesoro o un bono de US$800.000.",
-        "Las solicitudes se recibirán desde el cuarto trimestre de 2026.",
-        "El proceso incluye controles estrictos de antecedentes y origen de fondos."
-      ],
-      "seSabe": [
-        "El programa ofrece dos alternativas financieras de US$350.000 y US$800.000, según informó el Gobierno.",
-        "Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
-        "La Agencia de Programas de Ciudadanía por Inversión evaluará los antecedentes de los postulantes.",
-        "El Ejecutivo había presentado el mecanismo en Francia a principios de octubre."
-      ],
-      "noConfirmado": [
-        "Todavía no se detallaron las fechas exactas del cuarto trimestre en que abrirá la recepción de carpetas."
-      ],
-      "textoRedes": "El Gobierno nacional puso en marcha un programa que permite a extranjeros solicitar la ciudadanía mediante inversiones económicas y controles de antecedentes.",
-      "etiquetas": [
-        "ciudadania por inversion",
-        "Gobierno nacional",
-        "inversiones extranjeras"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-          "fecha": "2026-10-12T10:40:40.530Z",
-          "oficial": false,
-          "aporte": "Detalló las dos opciones de inversión, los requisitos de control y las comparaciones con programas internacionales."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-15-34-0-ciudadania-argentina-por-inversion-como-funcionara-el-sistema-y-que-ofrecen-otros-paises",
-          "fecha": "2026-10-12T18:37:47.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo el anuncio oficial sobre la puesta en marcha del programa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ig6fdw",
-          "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-          "fecha": "2026-10-01T10:55:58.335Z",
-          "ruta": "/nota/el-gobierno-lanza-un-programa-de-ciudadania-por-inversion-en-el-ig6fdw"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-nacional-lanza-el-programa-de-ciudadania-por-inversion",
-      "foto": {
-        "archivo": "fotos-notas/eonoyt.jpg",
-        "credito": "Foto: La Nueva"
-      }
-    },
-    {
       "id": "clima20261012",
       "propia": "clima",
       "titulo": "El clima de hoy en Balcarce: mínima de 4° y máxima de 13°",
@@ -2541,109 +2631,6 @@
         }
       ],
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-4-y-maxima-de-13"
-    },
-    {
-      "id": "rb2qmr",
-      "titulo": "El Indec publica el martes la inflación oficial de septiembre",
-      "copete": "El organismo estadístico dará a conocer el índice de precios tras estimaciones privadas que ubican la suba en torno al dos por ciento, impulsada por alimentos y bebidas.",
-      "cuerpo": "El Instituto Nacional de Estadística y Censos difundirá el martes por la tarde el índice de precios al consumidor del noveno mes del año. Las consultoras privadas estiman que la suba se ubicará alrededor del dos por ciento, lo que frenaría la desaceleración registrada en los meses previos.\n\nEl secretario de Finanzas, Federico Furiase, sostuvo previamente que el indicador se ubica en un rango de entre 1,5% y 2%. Por su parte, el Relevamiento de Expectativas de Mercado elaborado por el Banco Central proyectó el incremento mensual en 1,9%, mientras que la inflación porteña alcanzó el 1,8% en septiembre, de acuerdo con el informe oficial difundido el 8 de octubre.\n\nEl repunte mensual estuvo motorizado principalmente por el rubro de alimentos y bebidas, además de los incrementos en precios estacionales como verduras y indumentaria.",
-      "guion": "El Indec publica el martes la inflación oficial de septiembre",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "QZ Noticias (Mar del Plata)",
-        "La Noticia 1",
-        "Minuto Uno",
-        "Infobae",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "A24",
-        "Crónica",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "La Verdad"
-      ],
-      "enlace": "https://www.lanoticia1.com/noticia/el-indec-da-a-conocer-este-martes-la-inflacion-oficial-de-septiembre",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T05:52:01.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T12:01:29.750Z",
-      "relevancia": 61,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Indec difunde este martes el dato oficial de inflación de septiembre.",
-        "Las estimaciones privadas ubican la suba mensual en torno al dos por ciento.",
-        "El aumento responde principalmente al incremento en alimentos, bebidas y productos estacionales."
-      ],
-      "seSabe": [
-        "El Indec dará a conocer este martes por la tarde la inflación oficial de septiembre.",
-        "Las consultoras privadas prevén que el indicador se ubique cerca del dos por ciento.",
-        "El secretario de Finanzas, Federico Furiase, indicó que el índice se sitúa entre el 1,5% y el 2%."
-      ],
-      "noConfirmado": [
-        "El porcentaje exacto que informará el organismo estadístico nacional."
-      ],
-      "textoRedes": "El Indec difundirá este martes el índice de inflación de septiembre tras estimaciones privadas que ubican la suba en torno al dos por ciento.",
-      "etiquetas": [
-        "Indec",
-        "inflacion",
-        "economia",
-        "septiembre",
-        "precios"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/el-indec-da-a-conocer-este-martes-la-inflacion-oficial-de-septiembre",
-          "fecha": "2026-10-12T05:52:01.000Z",
-          "oficial": false,
-          "aporte": "Informó que el Indec dará a conocer la inflación de septiembre este martes por la tarde."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/inflacion--el-indec-da-a-conocer-el-ipc-de-septiembre-que-se-habria-vuelto-a-acelerar_a6ac7bb855319d0dbc279c751",
-          "fecha": "2026-10-12T11:00:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre las proyecciones de las consultoras privadas y las declaraciones del secretario de Finanzas."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/inflacion-el-indec-da-a-conocer-el-ipc-de-septiembre-que-se-habria-vuelto-a-acelerar/",
-          "fecha": "2026-10-12T11:48:43.000Z",
-          "oficial": false,
-          "aporte": "Ratificó que la inflación de septiembre habría frenado su desaceleración y se ubicaría en torno al dos por ciento."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "e5v4vp",
-          "titulo": "La inflación porteña llega al 1,8 por ciento en septiembre",
-          "fecha": "2026-10-08T14:00:00.000Z",
-          "ruta": "/nota/la-inflacion-portena-llega-al-1-8-por-ciento-en-septiembre-e5v4vp"
-        },
-        {
-          "id": "1uh42rm",
-          "titulo": "Los analistas estiman una inflación de 1,9 por ciento para septiembre",
-          "fecha": "2026-10-06T21:24:44.000Z",
-          "ruta": "/nota/los-analistas-estiman-una-inflacion-de-1-9-por-ciento-para-septiembre-1uh42rm"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-indec-publica-el-martes-la-inflacion-oficial-de-septiembre",
-      "foto": {
-        "archivo": "fotos-notas/rb2qmr.jpg",
-        "credito": "Foto: La Noticia 1"
-      }
     },
     {
       "id": "repaso20261011noche",
@@ -2711,6 +2698,77 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261011noche.jpg",
         "credito": "Fotos: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
+      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
+      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-11T23:31:31.632Z",
+      "sinFecha": true,
+      "visto": "2026-10-11T23:31:31.632Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
+        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
+        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
+        "César Rodríguez completó la prueba en 4h49'20\"."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
+      "etiquetas": [
+        "Emilia Scioli",
+        "Ironman",
+        "Deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1jfpdis",
+          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
+          "fecha": "2026-10-06T16:26:52.163Z",
+          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
+        },
+        {
+          "id": "repaso20261006noche",
+          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
+          "fecha": "2026-10-07T00:05:14.231Z",
+          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
+      "foto": {
+        "archivo": "fotos-notas/1hapve0.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -2833,121 +2891,18 @@
         "archivo": "fotos-notas/p21pyq.jpg",
         "credito": "Foto: La Nueva"
       }
-    },
-    {
-      "id": "ay4wdh",
-      "titulo": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
-      "copete": "El presidente argentino emprende el martes su quinto viaje del año a Estados Unidos. Cumplirá una agenda de tres días en Washington D. C. que incluye encuentros empresarios y discursos.",
-      "cuerpo": "El presidente Javier Milei viajará el martes a las 23 hacia Estados Unidos en su quinta visita al país norteamericano en lo que va del año, según informaron los medios consultados. El mandatario llegará a Washington D. C. el miércoles a las 9:30, hora argentina, junto a su comitiva para cumplir con una agenda de tres días.\n\nDurante su estadía, el jefe de Estado se reunirá con el inversor Andy Kleinman y con el empresario petrolero Harold Hamm. Además, recibirá galardones en la Gala Oficial del Mes de la Herencia Hispana y en la Cámara de Comercio estadounidense. El regreso está previsto para el viernes a las 8:30.\n\nEn paralelo, el gabinete nacional mantendrá diversas actividades en el país y en el exterior, como la participación del ministro de Economía, Luis Caputo, en las reuniones del Fondo Monetario Internacional en Tailandia.",
-      "guion": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
-      "seccion": "Política",
-      "medios": [
-        "Minuto Uno",
-        "Perfil",
-        "C5N",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Tecla",
-        "La Verdad",
-        "El Día",
-        "Crónica",
-        "InfoRegión",
-        "La Nueva"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T21:51:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T00:01:37.308Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El presidente Javier Milei viaja el martes a la noche hacia Estados Unidos.",
-        "Cumplirá una agenda de tres días en la ciudad de Washington D. C.",
-        "Recibirá reconocimientos y mantendrá encuentros con referentes empresarios.",
-        "El ministro de Economía participa de reuniones del FMI en Tailandia."
-      ],
-      "seSabe": [
-        "El viaje presidencial comienza el martes a las 23 y marca la quinta visita del mandatario a Estados Unidos en el año.",
-        "La agenda en Washington D. C. incluye exposiciones institucionales y reuniones con empresarios.",
-        "El ministro de Economía, Luis Caputo, participa en Tailandia de las reuniones anuales del FMI y del Banco Mundial."
-      ],
-      "etiquetas": [
-        "Javier Milei",
-        "Estados Unidos",
-        "Washington",
-        "Gobierno Nacional",
-        "Economía"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
-          "fecha": "2026-10-11T22:23:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los horarios de la gira presidencial, los encuentros con empresarios y las actividades del gabinete nacional."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/10/11/javier-milei-viajara-por-quinta-vez-en-el-ano-a-estados-unidos-como-sera-la-agenda-del-presidente/",
-          "fecha": "2026-10-11T23:48:23.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el horario de salida del vuelo presidencial hacia Estados Unidos."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/javier-milei-viaja-por-quinta-vez-a-estados-unidos-para-reunirse-con-empresarios-y-recibir-dos-nuevos-premios-politica-y-economia_1791762720",
-          "fecha": "2026-10-11T23:52:48.000Z",
-          "oficial": false,
-          "aporte": "Aportó precisiones sobre la agenda de tres días en Washington D. C."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1tib4ft",
-          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
-          "fecha": "2026-10-05T18:53:21.000Z",
-          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
-        },
-        {
-          "id": "1uw5a9s",
-          "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
-          "fecha": "2026-10-01T14:24:51.000Z",
-          "ruta": "/nota/el-vicepresidente-de-estados-unidos-visita-la-argentina-en-noviembre-1uw5a9s"
-        },
-        {
-          "id": "11nk8l",
-          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
-          "fecha": "2026-09-24T01:04:00.000Z",
-          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "javier-milei-viaja-a-estados-unidos-para-una-nueva-gira-oficial",
-      "foto": {
-        "archivo": "fotos-notas/ay4wdh.jpg",
-        "credito": "Foto: Canal 26"
-      }
     }
   ],
   "secciones": [
     "Política",
     "Policiales",
+    "Economía",
     "Fútbol",
     "Balcarce",
     "Deportes",
     "Argentina",
-    "Economía",
     "Cultura y agenda",
+    "Agro",
     "Automovilismo"
   ],
   "temas": [],
@@ -2959,7 +2914,7 @@
       "viento": 11,
       "rumbo": "E",
       "cielo": "Nublado",
-      "esDeDia": false
+      "esDeDia": true
     },
     "dias": [
       {
@@ -3303,6 +3258,12 @@
       "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
     },
     {
+      "id": "5xmju9",
+      "titulo": "Kiara Ponce, tras consagrarse campeona nacional de karate…",
+      "seccion": "Deportes",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
       "id": "xulwye",
       "titulo": "Luis Caputo negó las versiones sobre una posible salida…",
       "seccion": "Política",
@@ -3313,18 +3274,6 @@
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1bwjwir",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "byrxyh",
-      "titulo": "Arrojaron pescados muertos en la vía pública y generaron…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"muertos\""
     },
     {
       "id": "1h6d10j",
