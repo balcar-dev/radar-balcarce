@@ -1604,6 +1604,53 @@
         "vistas": 0,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-13T00:00:21.853Z",
+      "web": {
+        "u12": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "a12": {
+          "visitas": 50,
+          "vistas": 100
+        },
+        "u24": {
+          "visitas": 44,
+          "vistas": 176
+        },
+        "a24": {
+          "visitas": 17,
+          "vistas": 45
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 43
+          },
+          {
+            "camino": "/seccion/politica",
+            "vistas": 12
+          },
+          {
+            "camino": "/nota/el-senado-provincial-aprueba-cambios-en-la-prioridad-de-paso-en-jiv3ba",
+            "vistas": 11
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 34,
+        "vistas": 1321,
+        "interacciones": 4
+      },
+      "instagram": {
+        "seguidores": 6,
+        "publicaciones": 144,
+        "alcance": 16,
+        "vistas": 31,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2448,9 +2495,12 @@
     },
     "2026-10-10": {
       "paises": {
-        "AR": 50,
-        "US": 40,
-        "IE": 10
+        "US": 47,
+        "AR": 45,
+        "SE": 8,
+        "IE": 5,
+        "PL": 4,
+        "DE": 2
       },
       "horas": [
         0,
@@ -2479,11 +2529,12 @@
         0
       ],
       "referentes": {
-        "facebook.com": 50
+        "facebook.com": 37,
+        "directo": 3
       },
       "dispositivos": {},
-      "visitas": 0,
-      "vistas": 0,
+      "visitas": 40,
+      "vistas": 111,
       "notas": {
         "4u38d4": 10,
         "u6j4ho": 8,
@@ -2513,41 +2564,19 @@
       }
     },
     "2026-10-11": {
-      "visitas": 0,
-      "vistas": 0,
-      "referentes": {},
+      "visitas": 15,
+      "vistas": 98,
+      "referentes": {
+        "facebook.com": 9,
+        "directo": 5,
+        "google.com": 1
+      },
       "paises": {
-        "AR": 200
+        "AR": 67,
+        "US": 31
       },
-      "notas": {
-        "jiv3ba": 9,
-        "1gkf7qu": 5,
-        "f1parrilla2026r17": 4,
-        "hp2pil": 3,
-        "jlfox6": 3,
-        "lb7md0": 3,
-        "repaso20261011manana": 3,
-        "f1resultado2026r17": 2,
-        "1izhgu3": 2,
-        "zavg8u": 2,
-        "1m2za7b": 2,
-        "4p0z63": 1
-      },
-      "paginas": {
-        "/": 13,
-        "/seccion/politica": 12,
-        "/seccion/automovilismo": 6,
-        "/tablas/liga-profesional": 4,
-        "/farmacias": 4,
-        "/tablas/formula-1": 4,
-        "/agenda": 4,
-        "/politica-de-privacidad": 2,
-        "/quienes-somos": 2,
-        "/contacto": 2,
-        "/seccion/policiales": 2,
-        "/dolar": 2,
-        "/util": 2
-      },
+      "notas": {},
+      "paginas": {},
       "horas": [
         0,
         0,
@@ -2575,14 +2604,18 @@
         51
       ],
       "dispositivos": {
-        "mobile": 90,
-        "desktop": 10
+        "mobile": 86,
+        "desktop": 12
       }
     },
     "2026-10-12": {
-      "visitas": 0,
-      "vistas": 0,
-      "referentes": {},
+      "visitas": 34,
+      "vistas": 108,
+      "referentes": {
+        "facebook.com": 31,
+        "directo": 2,
+        "google.com": 1
+      },
       "horas": [
         14,
         0,
@@ -2594,34 +2627,38 @@
         0,
         28,
         0,
+        3,
+        0,
+        11,
+        0,
+        8,
+        11,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        28,
+        1,
+        4,
         0,
         0,
         0
       ],
       "notas": {
-        "vt9ful": 20
+        "pvwlvg": 20,
+        "vt9ful": 20,
+        "p21pyq": 10
       },
       "paginas": {
-        "/": 20
+        "/seccion/balcarce-3": 20,
+        "/": 20,
+        "/seccion/balcarce-2": 10,
+        "/seccion/balcarce": 10
       },
       "dispositivos": {
-        "mobile": 38,
-        "desktop": 4
+        "mobile": 85,
+        "desktop": 23
       },
       "paises": {
-        "AR": 38,
-        "US": 4
+        "US": 100
       }
     }
   }
