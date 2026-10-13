@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T21:51:07.453Z",
+ "generado": "2026-10-13T22:02:02.315Z",
  "portada": 51,
- "archivo": 1028,
+ "archivo": 1029,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-13T21:51:07.495Z",
+  "generado": "2026-10-13T22:02:02.347Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-13T18:15:16.014Z"
    },
    {
@@ -63,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-13T18:15:16.014Z",
     "segundos": null,
     "notas": [
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 52,
     "notas": [
      {
-      "id": "1iw56bi",
-      "titulo": "El Indec ubica la canasta básica por debajo de la inflación en septiembre",
-      "seccion": "Economía"
+      "id": "pl4s36",
+      "titulo": "Nicolò Tresoldi anota tres goles en el triunfo del Brujas ante el Inter",
+      "seccion": "Fútbol"
      },
      {
       "id": "fdr535",
