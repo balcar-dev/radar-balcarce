@@ -1651,6 +1651,40 @@
         "vistas": 31,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-13T12:00:21.866Z",
+      "web": {
+        "u12": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "a12": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "u24": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "a24": {
+          "visitas": 0,
+          "vistas": 0
+        },
+        "top": []
+      },
+      "facebook": {
+        "seguidores": 38,
+        "vistas": 23760,
+        "interacciones": 205
+      },
+      "instagram": {
+        "seguidores": 6,
+        "publicaciones": 146,
+        "alcance": 9,
+        "vistas": 13,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2564,17 +2598,10 @@
       }
     },
     "2026-10-11": {
-      "visitas": 15,
-      "vistas": 98,
-      "referentes": {
-        "facebook.com": 9,
-        "directo": 5,
-        "google.com": 1
-      },
-      "paises": {
-        "AR": 67,
-        "US": 31
-      },
+      "visitas": 0,
+      "vistas": 0,
+      "referentes": {},
+      "paises": {},
       "notas": {},
       "paginas": {},
       "horas": [
@@ -2586,38 +2613,6 @@
         0,
         0,
         0,
-        8,
-        0,
-        10,
-        0,
-        0,
-        0,
-        8,
-        0,
-        4,
-        0,
-        0,
-        0,
-        0,
-        17,
-        0,
-        51
-      ],
-      "dispositivos": {
-        "mobile": 86,
-        "desktop": 12
-      }
-    },
-    "2026-10-12": {
-      "visitas": 34,
-      "vistas": 108,
-      "referentes": {
-        "facebook.com": 31,
-        "directo": 2,
-        "google.com": 1
-      },
-      "horas": [
-        14,
         0,
         0,
         0,
@@ -2625,41 +2620,87 @@
         0,
         0,
         0,
-        28,
-        0,
-        3,
-        0,
-        11,
-        0,
-        8,
-        11,
         0,
         0,
-        28,
-        1,
-        4,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0
       ],
-      "notas": {
-        "pvwlvg": 20,
-        "vt9ful": 20,
-        "p21pyq": 10
-      },
-      "paginas": {
-        "/seccion/balcarce-3": 20,
-        "/": 20,
-        "/seccion/balcarce-2": 10,
-        "/seccion/balcarce": 10
-      },
-      "dispositivos": {
-        "mobile": 85,
-        "desktop": 23
-      },
-      "paises": {
-        "US": 100
-      }
+      "dispositivos": {}
+    },
+    "2026-10-12": {
+      "visitas": 0,
+      "vistas": 0,
+      "referentes": {},
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "notas": {},
+      "paginas": {},
+      "dispositivos": {},
+      "paises": {}
+    },
+    "2026-10-13": {
+      "notas": {},
+      "paginas": {},
+      "referentes": {},
+      "visitas": 0,
+      "vistas": 0,
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "dispositivos": {},
+      "paises": {}
     }
   }
 }
