@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T08:31:47.288Z",
+  "generado": "2026-10-13T09:01:49.514Z",
   "notas": [
     {
       "id": "1335hw8",
@@ -869,11 +869,11 @@
       "seccion": "Economía",
       "medios": [
         "La Nación",
-        "El Eco de Tandil",
         "Infobae",
         "Ámbito",
         "iProfesional",
-        "Canal 26"
+        "Canal 26",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/12/la-dura-queja-de-marcos-galperin-contra-la-norma-del-bcra-que-obliga-a-informar-el-costo-financiero-de-los-prestamos-de-su-app/",
       "teniaImagenLaFuente": true,
@@ -1391,8 +1391,8 @@
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Voz del Pueblo",
-        "InfoRegión",
-        "La Nueva"
+        "La Nueva",
+        "InfoRegión"
       ],
       "enlace": "https://noticiasargentinas.com/politica/el-mensaje-de-la-casa-rosada-por-el-12-de-octubre---el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo-_a6acd158732fdad2908a0e800",
       "teniaImagenLaFuente": true,
@@ -1936,14 +1936,14 @@
         "La Brújula 24",
         "La Verdad",
         "La Voz del Pueblo",
-        "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "NDEN – Noticias de Necochea",
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
-        "La Nueva"
+        "La Nueva",
+        "InfoRegión"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
       "teniaImagenLaFuente": true,
@@ -2235,7 +2235,7 @@
       "fecha": "2026-10-12T12:29:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T04:01:57.624Z",
-      "relevancia": 59,
+      "relevancia": 52,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2556,6 +2556,7 @@
         "Minuto Uno",
         "Infobae",
         "Perfil",
+        "TN (Todo Noticias)",
         "A24",
         "Crónica",
         "Diario Popular",
@@ -2849,9 +2850,9 @@
         "Noticias Argentinas (NA)",
         "La Tecla",
         "La Verdad",
-        "InfoRegión",
         "El Día",
         "Crónica",
+        "InfoRegión",
         "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
@@ -2954,7 +2955,7 @@
     "ahora": {
       "temp": 8,
       "sensacion": 6,
-      "humedad": 97,
+      "humedad": 96,
       "viento": 11,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3293,19 +3294,13 @@
       "id": "oty3p1",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
+      "motivo": "necesita ojo humano: \"homicidio\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "1vtrwgo",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
-    },
-    {
-      "id": "dffmvs",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"homicidio\""
     },
     {
       "id": "xulwye",
@@ -3344,5 +3339,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 2
 }
