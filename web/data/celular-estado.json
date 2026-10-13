@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T22:02:02.315Z",
- "portada": 51,
- "archivo": 1029,
+ "generado": "2026-10-13T22:31:51.786Z",
+ "portada": 50,
+ "archivo": 1030,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-13T22:02:02.347Z",
+  "generado": "2026-10-13T22:31:51.809Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-13T22:05:12.686Z"
    },
    {
     "nombre": "clima-noche",
@@ -160,6 +160,11 @@
     "segundos": 52,
     "notas": [
      {
+      "id": "1vcnnfl",
+      "titulo": "Franco Mastantuono se opera de la mano tras un golpe",
+      "seccion": "Deportes"
+     },
+     {
       "id": "pl4s36",
       "titulo": "Nicolò Tresoldi anota tres goles en el triunfo del Brujas ante el Inter",
       "seccion": "Fútbol"
@@ -173,11 +178,6 @@
       "id": "1uwzwwj",
       "titulo": "Organizan la segunda edición de la carrera en homenaje al profesor Luis Vildoza",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "ampmp1",
-      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
-      "seccion": "Deportes"
      }
     ]
    }
