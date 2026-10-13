@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T09:18:16.664Z",
+  "generado": "2026-10-13T09:31:26.968Z",
   "notas": [
     {
       "id": "1335hw8",
@@ -686,6 +686,58 @@
       "slug": "ciclistas-locales-consiguen-podios-en-el-mtb-series"
     },
     {
+      "id": "90qy7w",
+      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+      "copete": "El gimnasio La Cuna del Quíntuple albergó la octagésima novena edición del certamen de tenis de mesa. El club local consiguió tres títulos y varios podios con sus deportistas.",
+      "cuerpo": "Balcarce albergó el octagésimono noveno Torneo Ciudad de Balcarce de tenis de mesa, correspondiente al circuito nacional Tenis de Mesa para Todos. El evento se desarrolló durante el fin de semana en el gimnasio La Cuna del Quíntuple, ubicado en calle 13 número 818, con la participación de 127 jugadores distribuidos en siete categorías y más de 200 partidos disputados.\n\nLa delegación del club Top Serrano cumplió una destacada actuación y se quedó con tres primeros puestos de la mano de Joaquín Álvarez, quien se impuso en la división principal, y Cristóbal Barbieri, ganador en dos categorías. Además, la entidad sumó varios podios con las participaciones de Lautaro Roland, Santino Duarte, Pedro Rodríguez Curate, Marcos Álvarez y Nazareno Ramírez.\n\nEl certamen reunió a deportistas de Miramar, Lobería, Necochea, Tandil, Mar del Plata, Olavarría, Ayacucho, Mar Chiquita, Bolívar y distintos puntos del conurbano bonaerense.",
+      "guion": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T19:42:06.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T20:01:29.937Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Se disputó el octagésimo noveno Torneo Ciudad de Balcarce",
+        "Participaron 127 jugadores de distintas localidades",
+        "Top Serrano obtuvo tres títulos y varios podios",
+        "La competencia tuvo más de doscientos partidos"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "tenis de mesa",
+        "Top Serrano",
+        "Torneo Ciudad de Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
+          "fecha": "2026-10-12T19:42:06.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados, los ganadores y las características del torneo de tenis de mesa."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "top-serrano-gana-tres-titulos-en-el-torneo-de-tenis-de-mesa"
+    },
+    {
       "id": "3bom4j",
       "titulo": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
       "copete": "El gimnasio La Cuna del Quíntuple albergó la octogésima novena edición de la competencia de tenis de mesa, que reunió a 127 jugadores durante el fin de semana.",
@@ -693,16 +745,14 @@
       "guion": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
       "seccion": "Deportes",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T19:42:06.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T07:01:46.499Z",
-      "relevancia": 93,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1801,12 +1851,12 @@
         "Diputados Bonaerenses",
         "0221",
         "La Verdad",
-        "Infoeme",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "NDEN – Noticias de Necochea",
         "El Día",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "Infoeme"
       ],
       "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
       "teniaImagenLaFuente": true,
@@ -2101,7 +2151,6 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "La Brújula 24",
         "La Verdad",
         "La Voz del Pueblo",
         "InfoRegión",
@@ -2111,7 +2160,8 @@
         "NDEN – Noticias de Necochea",
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
-        "La Nueva"
+        "La Nueva",
+        "La Brújula 24"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
       "teniaImagenLaFuente": true,
@@ -2468,7 +2518,6 @@
       "guion": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
       "seccion": "Deportes",
       "medios": [
-        "Clarín",
         "0223 (Mar del Plata)",
         "La Nación",
         "El Destape",
@@ -2479,6 +2528,7 @@
         "Doble Amarilla",
         "Olé",
         "Ecos Diarios (Necochea)",
+        "Clarín",
         "La Brújula 24",
         "El Día",
         "El Marplatense"
@@ -3274,6 +3324,12 @@
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1do6sdg",
+      "titulo": "All Boys vs. Godoy Cruz en vivo: cómo verlo, horario y TV",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "1h6d10j",
