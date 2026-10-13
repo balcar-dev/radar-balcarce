@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T23:03:10.566Z",
+ "generado": "2026-10-13T23:32:32.459Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -77,9 +77,41 @@
      "fecha": "2026-10-13T21:04:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el guion dice 9 y la fuente no lo dice",
    "maximo": 5
+  },
+  {
+   "id": "q5dibh",
+   "titulo": "El Madrid reinó en Milano y Campazzo venció en el duelo ante Bolmaro",
+   "copete": "Euroliga Campazzo comandó al Madrid en Milano (Getty) Facu fue clave con 13 puntos y 6 asistencias para la victoria de los españoles por 98-89 ante un equipo italiano que tuvo 21 puntos de Leandro. Real Madrid empieza a enderezar el barco de Euroliga con su segunda victoria…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-13T21:04:32.000Z",
+   "fuentes": [
+    {
+     "medio": "Básquet Plus",
+     "enlace": "https://basquetplus.com/euroliga-real-madrid-milano-resumen-facundo-campazzo-leandro-bolmaro",
+     "fecha": "2026-10-13T21:04:32.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/basquet/luka-modric-volvio-real-madrid-vio-jugar-campazzo-euroliga-basquet_0_oRUgyb4SEu.html",
+     "fecha": "2026-10-13T22:24:27.000Z"
+    },
+    {
+     "medio": "Ecos Diarios (Necochea)",
+     "enlace": "https://elecos.com.ar/euroliga-facundo-campazzo-y-leandro-bolmaro-se-destacaron-en-el-duelo-entre-real-madrid-y-olimpia-milano",
+     "fecha": "2026-10-13T22:19:27.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/basquet/euroliga-campazzo-bolmaro-real-madrid-olimpia-milano_0_jRi8XIIkt6.html",
+     "fecha": "2026-10-13T21:42:21.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (relleno): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 122 palabras",
+   "maximo": 3
   },
   {
    "id": "zjtene",
@@ -101,6 +133,33 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "ecn3bh",
+   "titulo": "Ratones Paranoicos se suma como banda invitada al show de Ronnie Wood en Buenos Aires: cómo y dónde comprar las entradas",
+   "copete": "Hay imágenes que atraviesan generaciones y quedan asociadas para siempre a la historia del rock. Una de ellas muestra a Ronnie Wood encendiéndole un cigarrillo a Juanse durante la primera visita de los Rolling Stones a la Argentina. Décadas después, aquella postal tendrá un…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-13T16:29:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
+     "fecha": "2026-10-13T16:29:00.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/ratones-paranoicos-abrira-el-show-de-ronnie-wood-en-buenos-aires/",
+     "fecha": "2026-10-13T16:55:00.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/espectaculos/los-ratones-paranoicos-abriran-el-show-ronnie-wood-argentina-n924345",
+     "fecha": "2026-10-13T22:54:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras",
    "maximo": 3
   }
  ]
