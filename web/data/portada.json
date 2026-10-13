@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T07:02:19.487Z",
+  "generado": "2026-10-13T07:31:43.065Z",
   "notas": [
     {
       "id": "1335hw8",
@@ -9,9 +9,9 @@
       "guion": "El Gobierno promulga la nueva ley sobre el régimen de zonas frías",
       "seccion": "Política",
       "medios": [
-        "Infobae",
         "La Nación",
         "Clarín",
+        "Infobae",
         "TN (Todo Noticias)",
         "Perfil"
       ],
@@ -136,6 +136,90 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "detienen-a-un-hombre-por-desobedecer-una-restriccion-de-acercamiento"
+    },
+    {
+      "id": "2mzsmm",
+      "titulo": "Nicolás Lamolina anula un penal tras chequear un celular",
+      "copete": "El árbitro revirtió su decisión en el final del encuentro entre All Boys y Godoy Cruz por la Primera Nacional, luego de observar las imágenes en el teléfono que le mostraron los futbolistas.",
+      "cuerpo": "El árbitro Nicolás Lamolina anuló un penal que había cobrado a favor de Godoy Cruz en el empate sin goles ante All Boys, disputado en Floresta por la trigésima tercera fecha del Grupo A de la Primera Nacional. Durante el tiempo adicionado, el juez marcó la pena máxima por una infracción cometida fuera del área. Ante los reclamos del plantel local y la falta de asistencia tecnológica oficial en la categoría, los jugadores le acercaron un celular con la repetición de la jugada. Tras observar las imágenes en el teléfono, el juez dio marcha atrás con su decisión.\n\nMinutos antes, el árbitro ya había sancionado otro penal a favor del conjunto mendocino que el delantero Pino desaprovechó. El encuentro finalizó igualado sin tantos.",
+      "guion": "Nicolás Lamolina anula un penal tras chequear un celular",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Minuto Uno",
+        "Diario Popular",
+        "Infobae",
+        "La Nueva",
+        "El Gráfico"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/escandalo-arbitral-la-primera-nacional-nicolas-lamolina-revirtio-un-penal-chequearlo-un-celular-n6332935",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T01:24:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T07:31:28.429Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El árbitro Nicolás Lamolina anuló un penal en el partido entre All Boys y Godoy Cruz.",
+        "El juez había sancionado la pena máxima por una falta fuera del área en el tiempo adicionado.",
+        "Los futbolistas locales le mostraron la repetición de la jugada en la pantalla de un teléfono.",
+        "Tras ver las imágenes en el celular, el árbitro dio marcha atrás y anuló el fallo."
+      ],
+      "seSabe": [
+        "El partido entre All Boys y Godoy Cruz terminó empatado sin goles por la trigésima tercera fecha del Grupo A de la Primera Nacional.",
+        "El árbitro Nicolás Lamolina cobró un penal a favor de Godoy Cruz por una falta cometida fuera del área.",
+        "Los jugadores de All Boys le mostraron la repetición de la jugada en un teléfono celular al juez.",
+        "Lamolina dio marcha atrás tras observar las imágenes y anuló la sanción.",
+        "El delantero Pino había malogrado un penal previo para el conjunto mendocino."
+      ],
+      "noConfirmado": [
+        "No se informó si el tribunal de disciplina tomará medidas respecto al uso de dispositivos móviles durante el desarrollo del encuentro."
+      ],
+      "textoRedes": "El árbitro Nicolás Lamolina anuló un penal tras observar las imágenes en un celular que le acercaron los jugadores de All Boys en el partido ante Godoy Cruz por la Primera Nacional.",
+      "etiquetas": [
+        "Fútbol",
+        "Primera Nacional",
+        "All Boys",
+        "Godoy Cruz",
+        "Nicolás Lamolina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/escandalo-arbitral-la-primera-nacional-nicolas-lamolina-revirtio-un-penal-chequearlo-un-celular-n6332935",
+          "fecha": "2026-10-13T01:24:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo del partido, el contexto del empate sin goles en Floresta y el incidente con el teléfono celular."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/en-floresta-nicolas-lamolina-cobro-un-penal-que-no-fue-los-jugadores-de-all-boys-le-mostraron-un-nid12102026/",
+          "fecha": "2026-10-13T03:04:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el episodio arbitral en la trigésima tercera fecha de la Primera Nacional."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/futbol/escandalo-el-ascenso-un-arbitro-cambio-decision-al-ver-la-jugada-un-celular-n924299",
+          "fecha": "2026-10-13T03:11:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el árbitro observó la falta a través de un aparato aportado por el club local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "nicolas-lamolina-anula-un-penal-tras-chequear-un-celular",
+      "foto": {
+        "archivo": "fotos-notas/2mzsmm.jpg",
+        "credito": "Foto: Minuto Uno"
+      }
     },
     {
       "id": "repaso20261012noche",
@@ -786,7 +870,7 @@
       "fecha": "2026-10-12T19:08:52.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T21:31:44.592Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1380,8 +1464,8 @@
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Voz del Pueblo",
-        "La Nueva",
-        "InfoRegión"
+        "InfoRegión",
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/el-mensaje-de-la-casa-rosada-por-el-12-de-octubre---el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo-_a6acd158732fdad2908a0e800",
       "teniaImagenLaFuente": true,
@@ -1925,14 +2009,14 @@
         "La Brújula 24",
         "La Verdad",
         "La Voz del Pueblo",
+        "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "NDEN – Noticias de Necochea",
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
-        "La Nueva",
-        "InfoRegión"
+        "La Nueva"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
       "teniaImagenLaFuente": true,
@@ -2063,7 +2147,6 @@
         "Agencia DIB",
         "Diputados Bonaerenses",
         "Infobae",
-        "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
         "Página/12",
@@ -2074,6 +2157,7 @@
         "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
+        "Clarín",
         "El Eco de Tandil",
         "La Nueva"
       ],
@@ -3003,6 +3087,7 @@
   "secciones": [
     "Política",
     "Policiales",
+    "Fútbol",
     "Balcarce",
     "Deportes",
     "Argentina",
@@ -3016,8 +3101,8 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 96,
-      "viento": 7,
+      "humedad": 97,
+      "viento": 10,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": false
@@ -3026,11 +3111,11 @@
       {
         "fecha": "2026-10-13",
         "dia": "mar",
-        "max": 15,
+        "max": 13,
         "min": 8,
         "lluvia": 22,
         "codigo": 51,
-        "viento": 14,
+        "viento": 15,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
@@ -3038,34 +3123,34 @@
         "fecha": "2026-10-14",
         "dia": "mié",
         "max": 15,
-        "min": 8,
+        "min": 7,
         "lluvia": 60,
         "codigo": 51,
         "viento": 18,
-        "milimetros": 0,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-15",
         "dia": "jue",
         "max": 14,
-        "min": 10,
+        "min": 9,
         "lluvia": 30,
         "codigo": 51,
-        "viento": 19,
+        "viento": 17,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-16",
         "dia": "vie",
-        "max": 13,
-        "min": 7,
+        "max": 12,
+        "min": 5,
         "lluvia": 25,
-        "codigo": 3,
+        "codigo": 51,
         "viento": 17,
-        "milimetros": 0,
-        "cielo": "Nublado"
+        "milimetros": 1,
+        "cielo": "Llovizna leve"
       }
     ],
     "fuente": "Open-Meteo"
@@ -3352,12 +3437,6 @@
   },
   "pendientes": [
     {
-      "id": "17n7nip",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"menores de 10 anos\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "oty3p1",
       "titulo": null,
       "seccion": "Policiales",
@@ -3412,5 +3491,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 4
 }
