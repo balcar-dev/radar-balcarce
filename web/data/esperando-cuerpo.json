@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T00:32:20.302Z",
+ "generado": "2026-10-13T01:02:15.562Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -49,7 +49,12 @@
     {
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/politica/2026/10/13/jorge-macri-evalua-no-separar-las-elecciones-de-caba-de-las-nacionales-es-probable-que-sea-al-mismo-tiempo/",
-     "fecha": "2026-10-13T00:27:11.000Z"
+     "fecha": "2026-10-13T00:31:30.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/politica/elecciones-2027-jorge-macri-evalua-unificar-los-comicios-portenos-la-votacion-nacional-octubre-n6332918",
+     "fecha": "2026-10-13T00:46:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -67,9 +72,68 @@
      "fecha": "2026-10-12T22:15:00.000Z"
     }
    ],
-   "intentos": 2,
+   "intentos": 3,
    "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "ji7xxc",
+   "titulo": "La Intendencia del Parque Nacional Iguazú confirmo la reapertura tras la crecida del río",
+   "copete": "El Parque Nacional Iguazú reabrirá este martes 13 de octubre luego de que el descenso paulatino del caudal del río Iguazú permitiera levantar la restricción preventiva que había interrumpido las actividades turísticas. La administración del área protegida comunicó que los…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-12T22:35:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/sociedad/la-intendencia-del-parque-nacional-iguazu-confirmo-la-reapertura-la-crecida-del-rio-n6332900",
+     "fecha": "2026-10-12T22:35:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/sociedad/2026/10/13/tras-la-impactante-crecida-anunciaron-la-reapertura-de-las-cataratas-del-iguazu/",
+     "fecha": "2026-10-13T00:47:53.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/sociedad/cataratas-confirmaron-la-reapertura-del-parque-nacional-iguazu-el-descenso-del-caudal-del-rio-n251417",
+     "fecha": "2026-10-13T00:31:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/sociedad/reabre-el-parque-nacional-iguazu-tras-la-baja-del-rio_a6acd6ba532fdad2908ac8bf0",
+     "fecha": "2026-10-12T23:27:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/la-intendencia-del-parque-nacional-iguazu-confirmo-la-reapertura-la-crecida-del-rio-n6332900",
+     "fecha": "2026-10-12T22:35:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 0 y la fuente no lo dice",
+   "maximo": 4
+  },
+  {
+   "id": "1vu4t2c",
+   "titulo": "“Estamos recontra convencidos que vamos a ser reelectos”: Javier Milei, contundente sobre las elecciones 2027",
+   "copete": "El presidente Javier Milei sostuvo de cara a las elecciones presidenciales del 2027 que están convencidos en el Gobierno que serán reelegidos. “Estamos recontra convencidos que vamos a ser reelectos”, señaló. Asimismo, el mandatario aseveró que no espera una aceleración de la…",
+   "seccion": "Política",
+   "fecha": "2026-10-12T13:24:15.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/videos/estamos-recontra-convencidos-que-vamos-a-ser-reelectos-javier-milei-contundente-sobre-las-elecciones-2027/",
+     "fecha": "2026-10-12T13:24:15.000Z"
+    },
+    {
+     "medio": "La Noticia 1",
+     "enlace": "https://www.lanoticia1.com/noticia/milei-califico-de-disparate-eventual-salida-de-luis-caputo-del-gobierno-estamos-recontra-convencidos-que-vamos-a-ser-reelectos",
+     "fecha": "2026-10-12T18:30:23.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "sin material",
+   "maximo": 3
   },
   {
    "id": "1nxc5o2",

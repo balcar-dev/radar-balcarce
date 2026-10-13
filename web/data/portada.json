@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T00:32:20.302Z",
+  "generado": "2026-10-13T01:02:15.562Z",
   "notas": [
     {
       "id": "repaso20261012noche",
@@ -284,6 +284,7 @@
         "TN (Todo Noticias)",
         "La Nación",
         "Perfil",
+        "Página/12",
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
@@ -295,7 +296,6 @@
         "Punto Noticias",
         "El Eco de Tandil",
         "Ámbito",
-        "Página/12",
         "El Día",
         "0223 (Mar del Plata)",
         "Ayacucho al Día"
@@ -554,7 +554,6 @@
       "seccion": "Economía",
       "medios": [
         "TN (Todo Noticias)",
-        "Página/12",
         "A24",
         "iProfesional",
         "Minuto Uno",
@@ -638,14 +637,16 @@
       "medios": [
         "La Nación",
         "El Eco de Tandil",
-        "Infobae"
+        "Infobae",
+        "iProfesional",
+        "Canal 26"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/12/la-dura-queja-de-marcos-galperin-contra-la-norma-del-bcra-que-obliga-a-informar-el-costo-financiero-de-los-prestamos-de-su-app/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T18:43:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T22:01:54.030Z",
-      "relevancia": 59,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1023,9 +1024,11 @@
       "seccion": "Política",
       "medios": [
         "La Nación",
+        "Clarín",
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
+        "Perfil",
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Nueva",
@@ -1129,6 +1132,80 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "gobierno-expulsa-a-ciudadano-brasileno-y-prohibe-su-ingreso-por-cinco"
+    },
+    {
+      "id": "pcks4q",
+      "titulo": "La Justicia decreta la quiebra del principal fabricante de pallets",
+      "copete": "La Justicia de Misiones ordenó la quiebra de la firma Linor SRL tras incumplir su acuerdo preventivo. La empresa había cerrado su planta de Azara en 2025 con 130 despidos.",
+      "cuerpo": "La magistrada Adriana Beatriz Fiori dispuso la incautación de las instalaciones, maquinarias y vehículos, además del bloqueo de cuentas bancarias y la entrega de libros comerciales a la sindicatura.\n\nLa firma fabricante de pallets de madera funcionaba en la localidad misionera de Azara y paralizó sus actividades en mayo de 2025, ocasión en la que dejó sin empleo a 130 operarios. Previamente, la entidad acumulaba una obligación fiscal cercana a los quinientos millones de pesos con la agencia recaudadora, además de conflictos gremiales por salarios adeudados.",
+      "guion": "La Justicia decreta la quiebra del principal fabricante de pallets.",
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Canal 26"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T16:45:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T01:01:46.532Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Justicia de Misiones decretó la quiebra de Linor SRL.",
+        "La medida incluye la incautación de bienes y el bloqueo de cuentas.",
+        "La empresa había cerrado su planta de Azara en 2025 y acumulaba millonaria deuda."
+      ],
+      "textoRedes": "La Justicia de Misiones decretó la quiebra de la empresa Linor SRL tras incumplir su acuerdo preventivo. La firma había cerrado su planta en la localidad de Azara en 2025 y acumulaba una millonaria deuda fiscal.",
+      "etiquetas": [
+        "quiebra",
+        "aserradero",
+        "justicia",
+        "misiones",
+        "azara"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
+          "fecha": "2026-10-12T16:45:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló los motivos del fallo judicial, los antecedentes de la planta de Azara y la deuda fiscal con ARCA."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/quebro-uno-de-los-aserraderos-productores-de-pallets-mas-grandes-del-pais-nid12102026/",
+          "fecha": "2026-10-12T18:12:43.000Z",
+          "oficial": false,
+          "aporte": "Indicó la ubicación geográfica del aserradero en la provincia de Misiones."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/12/quebro-una-maderera-lider-en-la-produccion-de-pallets-y-ordenaron-la-incautacion-de-sus-bienes/",
+          "fecha": "2026-10-12T18:35:32.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la firma producía pallets de pino y el juzgado interviniente."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/10/12/quiebra-confirmada-una-historica-empresa-maderera-de-misiones-quedo-bajo-control-judicial/",
+          "fecha": "2026-10-12T20:17:48.000Z",
+          "oficial": false,
+          "aporte": "Identificó a la jueza Adriana Fiori a cargo de la medida judicial."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-justicia-decreta-la-quiebra-del-principal-fabricante-de-pallets"
     },
     {
       "id": "fr6obg",
@@ -1293,9 +1370,9 @@
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "La Nueva",
         "La Voz del Pueblo",
-        "InfoRegión"
+        "InfoRegión",
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/el-mensaje-de-la-casa-rosada-por-el-12-de-octubre---el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo-_a6acd158732fdad2908a0e800",
       "teniaImagenLaFuente": true,
@@ -1534,11 +1611,11 @@
         "Diputados Bonaerenses",
         "El Día",
         "0221",
+        "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
-        "La Verdad",
         "Infoeme"
       ],
       "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
@@ -1836,7 +1913,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
+        "La Brújula 24",
         "La Tecla",
+        "La Verdad",
         "La Voz del Pueblo",
         "InfoRegión",
         "El Marplatense",
@@ -1844,16 +1923,14 @@
         "Punto Noticias",
         "El Eco de Tandil",
         "La Nueva",
-        "La Brújula 24",
-        "NDEN – Noticias de Necochea",
-        "La Verdad"
+        "NDEN – Noticias de Necochea"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T12:50:47.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T15:31:24.834Z",
-      "relevancia": 76,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1987,17 +2064,17 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
-        "La Nueva",
-        "La Verdad"
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T12:33:30.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:31:34.877Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2551,8 +2628,8 @@
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "Mi8 (Canal 8 Mar del Plata)",
         "La Verdad",
+        "Mi8 (Canal 8 Mar del Plata)",
         "La Nueva"
       ],
       "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
@@ -3371,8 +3448,8 @@
     "Política",
     "Economía",
     "Cultura y agenda",
-    "Argentina",
     "Agro",
+    "Argentina",
     "Automovilismo"
   ],
   "temas": [],
@@ -3380,7 +3457,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 89,
+      "humedad": 91,
       "viento": 13,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3728,16 +3805,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "xulwye",
+      "titulo": "Luis Caputo negó las versiones sobre una posible salida…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\" (en otro medio que cuenta lo mismo)"
+    },
+    {
       "id": "p582dy",
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "ox863",
+      "id": "3z3acd",
       "titulo": null,
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
+      "motivo": "necesita ojo humano: \"niño\", en lo que contaron otros medios (visto al reescribir)"
     },
     {
       "id": "1qs9fgc",
@@ -3746,17 +3829,11 @@
       "motivo": "necesita ojo humano: \"acusado\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "1ceppif",
-      "titulo": "El juicio por la muerte de Maradona se acerca a la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "dffmvs",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"homicidio\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 5
 }
