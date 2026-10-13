@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T16:06:02.967Z",
+  "generado": "2026-10-13T16:38:13.000Z",
   "notas": [
     {
       "id": "repaso20261013manana",
@@ -290,10 +290,10 @@
       "guion": "ARBA vence hoy el plazo para pagar la última cuota del Inmobiliario Urbano",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
         "La Noticia 1",
         "Perfil",
         "Zona Norte Diario",
+        "El Eco de Tandil",
         "iProfesional"
       ],
       "enlace": "https://www.perfil.com/noticias/economia/arba-vence-hoy-la-ultima-cuota-del-impuesto-inmobiliario-urbano-con-un-descuento-de-hasta-el-10.phtml",
@@ -813,100 +813,6 @@
       }
     },
     {
-      "id": "1o7nfps",
-      "titulo": "El Gobierno convoca a la mesa política para definir la estrategia legislativa",
-      "copete": "El Ejecutivo reúne a su mesa política este martes en el ex Ministerio del Interior, horas antes del viaje del presidente Javier Milei a los Estados Unidos. El encuentro busca frenar el avance opositor en el Congreso y negociar con los gobernadores.",
-      "cuerpo": "El Ejecutivo convoca este martes a la mesa política en las oficinas del ex Ministerio del Interior a las 13, antes de que el presidente Javier Milei parta hacia Washington a las 23. Del cónclave participan Karina Milei, Diego Santilli, Martín Menem, Patricia Bullrich, Santiago Caputo, Eduardo Menem, Ignacio Devitt y Fabián Fernández, mientras que Luis Caputo se encuentra ausente por su viaje a Tailandia.\n\nLa reunión busca definir los pasos legislativos y coordinar las negociaciones con los gobernadores. El oficialismo intenta evitar que la oposición consiga quórum el jueves para rechazar el DNU 70/23, tratar la prórroga de la emergencia en discapacidad y debatir una ley de endeudamiento familiar.",
-      "guion": "El Gobierno convoca a la mesa política para definir la estrategia legislativa",
-      "seccion": "Política",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Radio Mitre",
-        "Canal 26",
-        "La Nueva",
-        "El Marplatense"
-      ],
-      "enlace": "https://tn.com.ar/politica/2026/10/13/el-gobierno-reunira-a-la-mesa-politica-para-frenar-a-la-oposicion-en-el-congreso-y-avanzar-en-las-negociaciones-con-gobernadores/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T08:45:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T13:01:21.378Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno reúne a la mesa política este martes a las 13.",
-        "El encuentro se realiza en las oficinas del ex Ministerio del Interior.",
-        "Buscan frenar la sesión opositora prevista para este jueves en el Congreso."
-      ],
-      "seSabe": [
-        "El Gobierno reúne a la mesa política este martes a las 13 en el ex Ministerio del Interior.",
-        "Javier Milei viaja a Estados Unidos a las 23.",
-        "Luis Caputo está ausente por su agenda en Tailandia."
-      ],
-      "noConfirmado": [
-        "Todavía no hay una agenda oficial confirmada para las nuevas reuniones con los gobernadores en Balcarce 50."
-      ],
-      "textoRedes": "El Gobierno reúne este martes a su mesa política en el ex Ministerio del Interior para definir la estrategia en el Congreso y negociar con los gobernadores, antes de la partida de Javier Milei a los Estados Unidos.",
-      "etiquetas": [
-        "Gobierno",
-        "Congreso",
-        "Javier Milei",
-        "Politica",
-        "Gobernadores"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/13/el-gobierno-reunira-a-la-mesa-politica-para-frenar-a-la-oposicion-en-el-congreso-y-avanzar-en-las-negociaciones-con-gobernadores/",
-          "fecha": "2026-10-13T08:45:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los asistentes a la reunión, la ausencia de Luis Caputo, el viaje de Milei y los temas parlamentarios."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-vuelve-a-reunir-a-la-mesa-politica-para-enfrentar-la-semana-en-el-congreso-y-avanzar-con-la-negociacion-con-las-provincias/",
-          "fecha": "2026-10-13T10:21:59.000Z",
-          "oficial": false,
-          "aporte": "Precisó que el encuentro se realiza en la Casa Rosada y mencionó el Presupuesto 2027 y la reforma electoral."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/se-vuelve-a-reunir-la-mesa-politica-previo-al-viaje-de-milei-a-estados-unidos-politica-y-economia_1791893160",
-          "fecha": "2026-10-13T12:20:14.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la reunión está programada para las 13 en la Casa de Gobierno."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-13-8-30-0-el-gobierno-reunira-a-la-mesa-politica-para-frenar-a-la-oposicion-en-el-congreso",
-          "fecha": "2026-10-13T12:33:25.000Z",
-          "oficial": false,
-          "aporte": "Señaló la reunión de la mesa política horas antes de la gira presidencial a Estados Unidos."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/el-gobierno-reune-a-la-mesa-politica",
-          "fecha": "2026-10-13T12:45:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la estrategia parlamentaria frente a la ofensiva opositora y la tensión política."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-convoca-a-la-mesa-politica-para-definir-la-estrategia",
-      "foto": {
-        "archivo": "fotos-notas/1o7nfps.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "63wss3",
       "titulo": "Mónica Guido permanece internada en un hospital porteño",
       "copete": "La exvedette de 64 años transcurre tres semanas de internación en el Hospital Fernández con un cuadro clínico delicado. Atraviesa complicaciones por afecciones crónicas que padece desde hace más de una década y media.",
@@ -914,14 +820,14 @@
       "guion": "Mónica Guido permanece internada en un hospital porteño",
       "seccion": "Cultura y agenda",
       "medios": [
-        "La Nación",
         "TN (Todo Noticias)",
         "A24",
         "Crónica",
         "El Día",
         "La Tecla",
         "Radio Mitre",
-        "Infobae"
+        "Infobae",
+        "La Nación"
       ],
       "enlace": "https://radiomitre.cienradios.com/videos/preocupacion-por-la-salud-de-monica-guido-esta-internada-y-con-un-cuadro-delicado/",
       "teniaImagenLaFuente": true,
@@ -1122,6 +1028,104 @@
       "slug": "marina-montoya-gana-los-cincuenta-kilometros-del-ultra-tierras-del"
     },
     {
+      "id": "1o7nfps",
+      "titulo": "El Gobierno convoca a la mesa política para definir la estrategia legislativa",
+      "copete": "El Ejecutivo reúne a su mesa política este martes en el ex Ministerio del Interior, horas antes del viaje del presidente Javier Milei a los Estados Unidos. El encuentro busca frenar el avance opositor en el Congreso y negociar con los gobernadores.",
+      "cuerpo": "El Ejecutivo convoca este martes a la mesa política en las oficinas del ex Ministerio del Interior a las 13, antes de que el presidente Javier Milei parta hacia Washington a las 23. Del cónclave participan Karina Milei, Diego Santilli, Martín Menem, Patricia Bullrich, Santiago Caputo, Eduardo Menem, Ignacio Devitt y Fabián Fernández, mientras que Luis Caputo se encuentra ausente por su viaje a Tailandia.\n\nLa reunión busca definir los pasos legislativos y coordinar las negociaciones con los gobernadores. El oficialismo intenta evitar que la oposición consiga quórum el jueves para rechazar el DNU 70/23, tratar la prórroga de la emergencia en discapacidad y debatir una ley de endeudamiento familiar.",
+      "guion": "El Gobierno convoca a la mesa política para definir la estrategia legislativa",
+      "seccion": "Política",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Perfil",
+        "A24",
+        "Ámbito",
+        "C5N",
+        "Radio Mitre",
+        "Canal 26",
+        "El Marplatense",
+        "La Nueva"
+      ],
+      "enlace": "https://tn.com.ar/politica/2026/10/13/el-gobierno-reunira-a-la-mesa-politica-para-frenar-a-la-oposicion-en-el-congreso-y-avanzar-en-las-negociaciones-con-gobernadores/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T23:28:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T13:01:21.378Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno reúne a la mesa política este martes a las 13.",
+        "El encuentro se realiza en las oficinas del ex Ministerio del Interior.",
+        "Buscan frenar la sesión opositora prevista para este jueves en el Congreso."
+      ],
+      "seSabe": [
+        "El Gobierno reúne a la mesa política este martes a las 13 en el ex Ministerio del Interior.",
+        "Javier Milei viaja a Estados Unidos a las 23.",
+        "Luis Caputo está ausente por su agenda en Tailandia."
+      ],
+      "noConfirmado": [
+        "Todavía no hay una agenda oficial confirmada para las nuevas reuniones con los gobernadores en Balcarce 50."
+      ],
+      "textoRedes": "El Gobierno reúne este martes a su mesa política en el ex Ministerio del Interior para definir la estrategia en el Congreso y negociar con los gobernadores, antes de la partida de Javier Milei a los Estados Unidos.",
+      "etiquetas": [
+        "Gobierno",
+        "Congreso",
+        "Javier Milei",
+        "Politica",
+        "Gobernadores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/13/el-gobierno-reunira-a-la-mesa-politica-para-frenar-a-la-oposicion-en-el-congreso-y-avanzar-en-las-negociaciones-con-gobernadores/",
+          "fecha": "2026-10-13T08:45:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los asistentes a la reunión, la ausencia de Luis Caputo, el viaje de Milei y los temas parlamentarios."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-vuelve-a-reunir-a-la-mesa-politica-para-enfrentar-la-semana-en-el-congreso-y-avanzar-con-la-negociacion-con-las-provincias/",
+          "fecha": "2026-10-13T10:21:59.000Z",
+          "oficial": false,
+          "aporte": "Precisó que el encuentro se realiza en la Casa Rosada y mencionó el Presupuesto 2027 y la reforma electoral."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/se-vuelve-a-reunir-la-mesa-politica-previo-al-viaje-de-milei-a-estados-unidos-politica-y-economia_1791893160",
+          "fecha": "2026-10-13T12:20:14.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la reunión está programada para las 13 en la Casa de Gobierno."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-13-8-30-0-el-gobierno-reunira-a-la-mesa-politica-para-frenar-a-la-oposicion-en-el-congreso",
+          "fecha": "2026-10-13T12:33:25.000Z",
+          "oficial": false,
+          "aporte": "Señaló la reunión de la mesa política horas antes de la gira presidencial a Estados Unidos."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/el-gobierno-reune-a-la-mesa-politica",
+          "fecha": "2026-10-13T12:45:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la estrategia parlamentaria frente a la ofensiva opositora y la tensión política."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-convoca-a-la-mesa-politica-para-definir-la-estrategia",
+      "foto": {
+        "archivo": "fotos-notas/1o7nfps.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "ji7xxc",
       "titulo": "El Parque Nacional Iguazú reabre sus puertas el martes",
       "copete": "El predio retomará sus actividades turísticas el martes 13 de octubre gracias al descenso en el caudal del río. La medida fue anunciada de forma oficial por las autoridades.",
@@ -1133,12 +1137,12 @@
         "TN (Todo Noticias)",
         "La Nación",
         "Perfil",
-        "Minuto Uno",
         "C5N",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "QZ Noticias (Mar del Plata)",
+        "Minuto Uno",
         "Ámbito",
         "La Nueva"
       ],
@@ -1452,7 +1456,6 @@
       "guion": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -1463,7 +1466,7 @@
       "fecha": "2026-10-12T19:23:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 100,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1918,10 +1921,13 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
+        "Página/12",
+        "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
         "El Marplatense",
-        "La Nueva"
+        "La Nueva",
+        "Clarín"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/12/expulsaron-a-un-brasileno-que-insulto-a-milei-en-redes-sociales-y-le-prohibieron-ingresar-a-la-argentina-durante-5-anos/",
       "teniaImagenLaFuente": true,
@@ -2041,7 +2047,7 @@
       "fecha": "2026-10-12T16:08:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:31:50.516Z",
-      "relevancia": 82,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2199,7 +2205,6 @@
       "guion": "Natalia Carballo juega la Copa Sudamericana de tenis",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
@@ -2210,7 +2215,7 @@
       "fecha": "2026-10-12T14:41:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T15:01:42.079Z",
-      "relevancia": 100,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2361,7 +2366,6 @@
       "guion": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "Acción 5 (Balcarce)"
@@ -2371,7 +2375,7 @@
       "fecha": "2026-10-12T13:24:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2474,82 +2478,6 @@
         "archivo": "fotos-notas/collage-repaso20261012manana.jpg",
         "credito": "Fotos: La Nueva y El Cronista"
       }
-    },
-    {
-      "id": "1aqdhjn",
-      "titulo": "Un hombre de Lobería recibe suero antiofídico en el hospital",
-      "copete": "Un vecino de 43 años sufrió la mordedura de una serpiente yarará ñata mientras se encontraba en un campo de la vecina localidad y debió ser derivado de urgencia a Balcarce.",
-      "cuerpo": "Según relató la propia víctima, el ataque se produjo en una de sus manos al regresar de una actividad de caza, cuando no advirtió la presencia del reptil enroscado en un animal que había faenado.\n\nTras el episodio, acudió al centro de salud loberense como medida preventiva, pero los profesionales le indicaron un traslado inmediato debido a la falta de suero específico en esa localidad. El paciente llegó en un vehículo particular al Hospital Subzonal Felipe A. Fossati, donde los médicos evaluaron sus estudios y le administraron diez ampollas de suero antiofídico.\n\nEl hombre permanece internado bajo observación en la Unidad de Terapia Intensiva del nosocomio local a la espera de una evolución favorable de su cuadro de salud.",
-      "guion": "Un hombre de Lobería recibe suero antiofídico en el hospital",
-      "seccion": "Policiales",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-12T12:55:49.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T13:31:45.071Z",
-      "relevancia": 59,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "hospital"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Un hombre de 43 años fue atacado por una yarará ñata en Lobería.",
-        "El centro de salud de esa ciudad derivó al paciente por falta de suero.",
-        "Ingresó al Hospital Fossati en un vehículo particular para recibir tratamiento.",
-        "Le aplicaron diez ampollas de suero antiofídico y sigue en Terapia Intensiva."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un hombre de 43 años fue derivado desde Lobería a Balcarce tras ser mordido por una yarará ñata mientras cazaba en un campo. El paciente recibió diez ampollas de suero antiofídico y permanece internado en Terapia Intensiva en el Hospital Fossati.",
-      "etiquetas": [
-        "Hospital Fossati",
-        "Lobería",
-        "salud",
-        "yarará",
-        "mordedura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
-          "fecha": "2026-10-12T12:55:49.000Z",
-          "oficial": false,
-          "aporte": "Detalló el traslado desde Lobería y la internación en Terapia Intensiva del Hospital Fossati tras recibir suero antiofídico."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1v130vb",
-          "titulo": "Xoana Martínez defiende el acuerdo paritario y detalla los puntos del sector municipal",
-          "fecha": "2026-10-05T16:31:22.668Z",
-          "ruta": "/nota/xoana-martinez-defiende-el-acuerdo-paritario-y-detalla-los-puntos-del-1v130vb"
-        },
-        {
-          "id": "1ni344u",
-          "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-          "fecha": "2026-10-05T11:40:58.000Z",
-          "ruta": "/nota/el-hospital-municipal-registra-problemas-en-sus-lineas-telefonicas-1ni344u"
-        },
-        {
-          "id": "164o14u",
-          "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-          "fecha": "2026-10-02T13:18:34.000Z",
-          "ruta": "/nota/el-club-de-leones-entrega-nuevos-equipos-al-hospital-municipal-164o14u"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "un-hombre-de-loberia-recibe-suero-antiofidico-en-el-hospital"
     },
     {
       "id": "36ajax",
@@ -2792,7 +2720,6 @@
       "medios": [
         "El Destape",
         "Perfil",
-        "Crónica",
         "Radio Mitre",
         "El Marplatense",
         "Doble Amarilla",
@@ -2802,7 +2729,8 @@
         "Minuto Uno",
         "Clarín",
         "La Brújula 24",
-        "El Día"
+        "El Día",
+        "Crónica"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -2897,84 +2825,6 @@
       }
     },
     {
-      "id": "eonoyt",
-      "titulo": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
-      "copete": "La iniciativa nacional contempla dos alternativas económicas para extranjeros y comenzará a recibir postulaciones en el cuarto trimestre de 2026.",
-      "cuerpo": "El Gobierno nacional puso en marcha un programa para otorgar la ciudadanía a extranjeros que concreten inversiones en el país.\n\nLas postulaciones comenzarán a recibirse durante el cuarto trimestre de 2026. Los aspirantes deberán superar controles de identidad, antecedentes penales y origen de fondos que evaluará la Agencia de Programas de Ciudadanía por Inversión junto a Migraciones.\n\nComo antecedente, el Ejecutivo había presentado este mecanismo en Francia a principios de octubre. El esquema local difiere de los modelos de Estados Unidos y Portugal, donde la inversión otorga residencia temporal antes de una eventual naturalización.",
-      "guion": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
-      "seccion": "Economía",
-      "medios": [
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-12T10:40:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T19:01:26.092Z",
-      "relevancia": 18,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El programa nacional permite solicitar la ciudadanía a extranjeros mediante inversiones.",
-        "Se puede optar por un aporte de US$350.000 al Tesoro o un bono de US$800.000.",
-        "Las solicitudes se recibirán desde el cuarto trimestre de 2026.",
-        "El proceso incluye controles estrictos de antecedentes y origen de fondos."
-      ],
-      "seSabe": [
-        "El programa ofrece dos alternativas financieras de US$350.000 y US$800.000, según informó el Gobierno.",
-        "Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
-        "La Agencia de Programas de Ciudadanía por Inversión evaluará los antecedentes de los postulantes.",
-        "El Ejecutivo había presentado el mecanismo en Francia a principios de octubre."
-      ],
-      "noConfirmado": [
-        "Todavía no se detallaron las fechas exactas del cuarto trimestre en que abrirá la recepción de carpetas."
-      ],
-      "textoRedes": "El Gobierno nacional puso en marcha un programa que permite a extranjeros solicitar la ciudadanía mediante inversiones económicas y controles de antecedentes.",
-      "etiquetas": [
-        "ciudadania por inversion",
-        "Gobierno nacional",
-        "inversiones extranjeras"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
-          "fecha": "2026-10-12T10:40:40.530Z",
-          "oficial": false,
-          "aporte": "Detalló las dos opciones de inversión, los requisitos de control y las comparaciones con programas internacionales."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-15-34-0-ciudadania-argentina-por-inversion-como-funcionara-el-sistema-y-que-ofrecen-otros-paises",
-          "fecha": "2026-10-12T18:37:47.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo el anuncio oficial sobre la puesta en marcha del programa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "ig6fdw",
-          "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
-          "fecha": "2026-10-01T10:55:58.335Z",
-          "ruta": "/nota/el-gobierno-lanza-un-programa-de-ciudadania-por-inversion-en-el-ig6fdw"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-nacional-lanza-el-programa-de-ciudadania-por-inversion",
-      "foto": {
-        "archivo": "fotos-notas/eonoyt.jpg",
-        "credito": "Foto: La Nueva"
-      }
-    },
-    {
       "id": "clima20261012",
       "propia": "clima",
       "titulo": "El clima de hoy en Balcarce: mínima de 4° y máxima de 13°",
@@ -3039,16 +2889,16 @@
     "Economía",
     "Policiales",
     "Automovilismo",
-    "Política",
     "Deportes",
+    "Política",
     "Argentina"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 13,
+      "temp": 14,
       "sensacion": 11,
-      "humedad": 68,
+      "humedad": 66,
       "viento": 15,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3423,6 +3273,12 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
+      "id": "1dvqt41",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "171qyp7",
       "titulo": null,
       "seccion": "Policiales",
@@ -3435,28 +3291,10 @@
       "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
     },
     {
-      "id": "1bwjwir",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "byrxyh",
-      "titulo": "Arrojaron pescados muertos en la vía pública y generaron…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"muertos\""
-    },
-    {
       "id": "1eaitl9",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "knzrzl",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
       "id": "urflid",
@@ -3474,12 +3312,6 @@
       "id": "185b7te",
       "titulo": "Menem respaldó a Caputo y denunció operaciones para…",
       "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "fopfd3",
-      "titulo": "Nuevo escándalo en la FIFA: acusan a Gianni Infantino de…",
-      "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
@@ -3501,11 +3333,17 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "1sov5su",
+      "titulo": "\"Un irresponsable\": Susbielles detectó y denunció en vivo…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "foe5o3",
       "titulo": "Carlos Perciavalle predijo una aparición extraterrestre…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 9
 }
