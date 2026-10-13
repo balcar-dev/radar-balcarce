@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T15:07:36.064Z",
+  "generado": "2026-10-13T15:37:45.015Z",
   "notas": [
     {
       "id": "repaso20261013manana",
@@ -81,11 +81,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45065-martes-13-no-habra-casamientos-en-el-registro-civil-de-balcarce/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T13:01:21.378Z",
       "sinFecha": true,
       "visto": "2026-10-13T13:01:21.378Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -139,7 +139,7 @@
       "copete": "Dos colectivos de peregrinos completaron sus lugares y un tercero avanza hacia su capacidad máxima. La visita papal a la Argentina está programada para el próximo mes.",
       "cuerpo": "Los vecinos de Balcarce muestran un marcado interés por la llegada del papa León XIV al país, agendada entre el 8 y el 11 de noviembre. De acuerdo con los datos disponibles, dos unidades de transporte ya completaron sus pasajeros y una tercera está cerca de sumar a todos los interesados en participar de las ceremonias religiosas.\n\nEn paralelo a los preparativos locales, el Sumo Pontífice ingresó al Policlínico Gemelli de Roma este martes para someterse a una intervención quirúrgica debido a un nódulo pulmonar detectado en controles médicos rutinarios. Voceros del Vaticano detallaron que la operación presenta riesgos bajos y pronósticos favorables de recuperación.\n\nLa agenda oficial contempla paradas en Buenos Aires, Córdoba y Luján dentro de una gira regional que también abarca a Perú y Uruguay. Las autoridades vaticanas suspendieron los compromisos públicos hasta el 20 de octubre, mientras evalúan la evolución clínica para confirmar el traslado a territorio argentino.",
       "guion": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-      "seccion": "Balcarce",
+      "seccion": "Cultura y agenda",
       "medios": [
         "Radio Gabal (FM 104.1)"
       ],
@@ -293,7 +293,8 @@
         "El Eco de Tandil",
         "La Noticia 1",
         "Perfil",
-        "Zona Norte Diario"
+        "Zona Norte Diario",
+        "iProfesional"
       ],
       "enlace": "https://www.perfil.com/noticias/economia/arba-vence-hoy-la-ultima-cuota-del-impuesto-inmobiliario-urbano-con-un-descuento-de-hasta-el-10.phtml",
       "teniaImagenLaFuente": true,
@@ -637,11 +638,11 @@
         "0223 (Mar del Plata)",
         "Campeones",
         "Motorsport",
-        "Ámbito",
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
         "Página/12",
+        "Ámbito",
         "TyC Sports",
         "Minuto Uno",
         "C5N",
@@ -817,6 +818,7 @@
       "medios": [
         "TN (Todo Noticias)",
         "Radio Mitre",
+        "Canal 26",
         "La Nueva",
         "El Marplatense"
       ],
@@ -825,7 +827,7 @@
       "fecha": "2026-10-13T08:45:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T13:01:21.378Z",
-      "relevancia": 63,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -909,9 +911,10 @@
       "seccion": "Economía",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Infobae",
         "Ámbito",
         "TN (Todo Noticias)",
-        "El Cronista",
+        "El Destape",
         "Página/12",
         "C5N",
         "Crónica",
@@ -923,10 +926,10 @@
         "0221",
         "La Verdad",
         "InfoRegión",
-        "Infobae",
+        "El Economista",
+        "iProUP",
         "Clarín",
-        "La Nueva",
-        "El Economista"
+        "La Nueva"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/12/el-fmi-recorto-fuerte-sus-previsiones-para-la-economia-argentina-proyecto-menos-crecimiento-y-mas-inflacion/",
       "teniaImagenLaFuente": true,
@@ -1230,8 +1233,8 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Ámbito"
+        "Ámbito",
+        "La Nueva"
       ],
       "enlace": "https://www.minutouno.com/sociedad/la-intendencia-del-parque-nacional-iguazu-confirmo-la-reapertura-la-crecida-del-rio-n6332900",
       "teniaImagenLaFuente": true,
@@ -1398,7 +1401,6 @@
         "La Nación",
         "Perfil",
         "TyC Sports",
-        "Minuto Uno",
         "Noticias Argentinas (NA)",
         "Punto Noticias",
         "El Eco de Tandil",
@@ -1613,9 +1615,9 @@
         "TN (Todo Noticias)",
         "A24",
         "iProfesional",
-        "Minuto Uno",
         "Diario Popular",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/sociedad/2026/10/12/diez-cuadras-de-fila-por-un-trabajo-en-moreno-cientos-de-personas-esperan-desde-la-madrugada-para-dejar-su-curriculum-en-un-bazar/",
       "teniaImagenLaFuente": true,
@@ -2123,16 +2125,16 @@
       "medios": [
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "Básquet Plus",
         "0223 (Mar del Plata)",
-        "La Nueva"
+        "La Nueva",
+        "Básquet Plus"
       ],
       "enlace": "https://basquetplus.com/real-madrid-gaby-deck-operacion-lesion",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T16:08:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:31:50.516Z",
-      "relevancia": 78,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2293,6 +2295,7 @@
         "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce",
         "Acción 5 (Balcarce)"
       ],
       "enlace": "https://accion5.com/tenis-en-copa-sudamericana-competira-natalia-carballo/",
@@ -2300,7 +2303,7 @@
       "fecha": "2026-10-12T14:41:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T15:01:42.079Z",
-      "relevancia": 93,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2451,10 +2454,11 @@
       "guion": "Químicos piden informes a municipios por arsénico en el agua",
       "seccion": "Argentina",
       "medios": [
-        "Diputados Bonaerenses",
         "Página/12",
         "0221",
         "La Verdad",
+        "Infoeme",
+        "InfoGEI",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -2464,7 +2468,7 @@
         "Agencia DIB",
         "La Noticia 1",
         "0223 (Mar del Plata)",
-        "Infoeme"
+        "Diputados Bonaerenses"
       ],
       "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
       "teniaImagenLaFuente": true,
@@ -2550,6 +2554,7 @@
       "medios": [
         "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
+        "El Diario Balcarce",
         "Acción 5 (Balcarce)"
       ],
       "enlace": "https://accion5.com/kiara-ponce-trajo-oro-nacional-y-se-clasifico-al-panamericano/",
@@ -2557,7 +2562,7 @@
       "fecha": "2026-10-12T13:24:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 83,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2746,6 +2751,7 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "Agencia DIB",
+        "Diputados Bonaerenses",
         "La Nación",
         "Infobae",
         "Ámbito",
@@ -2895,6 +2901,271 @@
       }
     },
     {
+      "id": "8hce1y",
+      "titulo": "Domingo Cavallo cuestiona el rumbo económico y advierte por el sobreajuste",
+      "copete": "El exministro de Economía respaldó un análisis del Ieral que cuestiona el impacto de la política monetaria en el consumo y la inversión. El trabajo también señala dudas sobre las reservas y el financiamiento.",
+      "cuerpo": "El exministro de Economía Domingo Cavallo respaldó un análisis elaborado por Jorge Vasconcelos, economista jefe del Ieral de la Fundación Mediterránea, que cuestiona aspectos del programa económico de la gestión de Javier Milei.\n\nEl informe detalla que la caída del consumo equivalió al 1,6 por ciento del PBI y la de la inversión al 2,5 por ciento. Además, advierte que las reservas netas del Banco Central alcanzan los 11.500 millones de dólares frente a compromisos externos públicos por 24.900 millones.\n\nAnte planteos previos del exfuncionario sobre la falta de un horizonte monetario, el presidente Javier Milei calificó en otra oportunidad a Cavallo de chanta. El trabajo del Ieral sugiere reducir impuestos para aliviar los costos financieros de las empresas locales.",
+      "guion": "Domingo Cavallo cuestiona el rumbo económico y advierte por el sobreajuste",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "Clarín"
+      ],
+      "enlace": "https://www.clarin.com/economia/cavallo-volvio-cuestionar-modelo-economico-milei-alerto-sobreajuste-caida-inversion_0_Mb8qDoLKWR.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T12:29:08.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T04:01:57.624Z",
+      "relevancia": 32,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Domingo Cavallo elogió un informe del Ieral sobre la economía nacional",
+        "El documento advierte por el sobreajuste, el consumo y la caída de la inversión",
+        "Señalan reservas netas por 11.500 millones de dólares y compromisos externos mayores"
+      ],
+      "seSabe": [
+        "Domingo Cavallo calificó de excelente el informe del economista Jorge Vasconcelos",
+        "El trabajo del Ieral advierte una contracción del consumo del 1,6 por ciento del PBI",
+        "El informe calcula las reservas netas del Banco Central en 11.500 millones de dólares"
+      ],
+      "noConfirmado": [
+        "No hay precisiones oficiales sobre la viabilidad de emitir bonos por 11.000 millones de dólares en 2027"
+      ],
+      "textoRedes": "Domingo Cavallo volvió a cuestionar el rumbo económico y respaldó un informe del Ieral que advierte sobre el sobreajuste, la caída de la inversión y la situación de las reservas.",
+      "etiquetas": [
+        "Domingo Cavallo",
+        "Ieral",
+        "economia",
+        "Javier Milei"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/cavallo-volvio-cuestionar-modelo-economico-milei-alerto-sobreajuste-caida-inversion_0_Mb8qDoLKWR.html",
+          "fecha": "2026-10-12T20:38:43.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el informe del Ieral, las cifras de PBI, las reservas y las declaraciones previas del presidente Javier Milei."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/domingo-cavallo-volvio-cuestionar-el-modelo-economico-javier-milei-alerto-el-sobreajuste-y-la-caida-la-inversion-n6332902",
+          "fecha": "2026-10-12T23:33:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el respaldo de Domingo Cavallo al trabajo del Ieral sobre el consumo y la inversión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "194wzrq",
+          "titulo": "Domingo Cavallo elogia un informe con reparos al plan económico",
+          "fecha": "2026-10-12T12:29:08.000Z",
+          "ruta": "/nota/domingo-cavallo-elogia-un-informe-con-reparos-al-plan-economico-194wzrq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "domingo-cavallo-cuestiona-el-rumbo-economico-y-advierte-por-el"
+    },
+    {
+      "id": "rzhblo",
+      "titulo": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
+      "copete": "El delantero portugués fue suspendido de forma provisional tras abandonar la concentración de su seleccionado en plena Nations League y declaró sobre su legado.",
+      "cuerpo": "Cristiano Ronaldo rompió el silencio tras recibir una suspensión provisional por abandonar la concentración de Portugal durante la Nations League. El delantero alcanzó 980 goles en 1.337 partidos y se refirió a su lugar en el deporte.\n\nLa Sección No Profesional inició un procedimiento disciplinario el 9 de octubre de 2026 para evaluar los hechos denunciados el 7 de octubre, tras un comunicado del jugador contra las autoridades y diferencias con el entrenador.\n\nEl atacante afirmó que es el jugador más completo y aseguró que no piensa a largo plazo sobre la posibilidad de alcanzar la marca de los mil goles. Además, reconoció que desconoce cuándo se retirará de la actividad profesional.",
+      "guion": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
+      "seccion": "Deportes",
+      "medios": [
+        "El Destape",
+        "Perfil",
+        "Crónica",
+        "Radio Mitre",
+        "El Marplatense",
+        "Doble Amarilla",
+        "0223 (Mar del Plata)",
+        "Olé",
+        "Ecos Diarios (Necochea)",
+        "Minuto Uno",
+        "Clarín",
+        "La Brújula 24",
+        "El Día"
+      ],
+      "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T11:34:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T15:01:42.079Z",
+      "relevancia": 74,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cristiano Ronaldo fue suspendido de forma provisional por abandonar la concentración de Portugal.",
+        "El delantero suma 980 goles en 1.337 partidos jugados en su carrera.",
+        "Un procedimiento disciplinario fue abierto el 9 de octubre de 2026."
+      ],
+      "seSabe": [
+        "Cristiano Ronaldo fue suspendido provisionalmente tras dejar la concentración de Portugal en la Nations League.",
+        "El jugador acumula 980 goles en 1.337 partidos.",
+        "La Sección No Profesional abrió un procedimiento disciplinario el 9 de octubre de 2026."
+      ],
+      "noConfirmado": [
+        "No se conoce la duración exacta que tendrá la sanción definitiva impuesta por el seleccionado portugués."
+      ],
+      "textoRedes": "Cristiano Ronaldo rompió el silencio tras ser suspendido provisionalmente por abandonar la concentración de Portugal en la Nations League y habló sobre sus estadísticas y su legado.",
+      "etiquetas": [
+        "Cristiano Ronaldo",
+        "Portugal",
+        "Nations League",
+        "Fútbol internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
+          "fecha": "2026-10-12T11:34:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones completas sobre su legado, sus estadísticas de goles y los detalles del procedimiento disciplinario."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/cristiano-ronaldo-arrogancia-realidad-mejor-historia-alguien-prefiere-messi-pele-maradona-cuestion-gustos_0_wDN9yEOCVV.html",
+          "fecha": "2026-10-12T14:07:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el caso fue replicado por The Athletic y CNN Portugal sobre declaraciones de 2025."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/polemica-declaracion-cristiano-ronaldo-messi-pele-y-maradona-es-cuestion-gustos-n6332684",
+          "fecha": "2026-10-12T12:25:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la existencia de la sanción provisional por la salida de la concentración."
+        },
+        {
+          "medio": "La Brújula 24",
+          "enlace": "https://www.labrujula24.com/notas/2026/10/12/si-alguien-prefiere-a-messi-pele-o-maradona-es-cuestion-de-gustos-n525074/",
+          "fecha": "2026-10-12T13:54:35.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el delantero rompió el silencio tras la sanción por dejar a su selección."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ypnvl8",
+          "titulo": "Carlos Tevez proyecta reunir a Messi y Cristiano en su despedida",
+          "fecha": "2026-10-08T05:25:13.000Z",
+          "ruta": "/nota/carlos-tevez-proyecta-reunir-a-messi-y-cristiano-en-su-despedida-ypnvl8"
+        },
+        {
+          "id": "kp99r6",
+          "titulo": "Cristiano Ronaldo saluda a Lionel Messi tras su adiós de la Selección",
+          "fecha": "2026-10-07T18:06:07.000Z",
+          "ruta": "/nota/cristiano-ronaldo-saluda-a-lionel-messi-tras-su-adios-de-la-seleccion-kp99r6"
+        },
+        {
+          "id": "1je0ajz",
+          "titulo": "Robbie Williams vuelve al país y homenajea a Maradona y Messi",
+          "fecha": "2026-10-02T14:38:00.000Z",
+          "ruta": "/nota/robbie-williams-vuelve-al-pais-y-homenajea-a-maradona-y-messi-1je0ajz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "cristiano-ronaldo-rompe-el-silencio-tras-la-sancion-en-portugal",
+      "foto": {
+        "archivo": "fotos-notas/rzhblo.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
+      "id": "eonoyt",
+      "titulo": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
+      "copete": "La iniciativa nacional contempla dos alternativas económicas para extranjeros y comenzará a recibir postulaciones en el cuarto trimestre de 2026.",
+      "cuerpo": "El Gobierno nacional puso en marcha un programa para otorgar la ciudadanía a extranjeros que concreten inversiones en el país.\n\nLas postulaciones comenzarán a recibirse durante el cuarto trimestre de 2026. Los aspirantes deberán superar controles de identidad, antecedentes penales y origen de fondos que evaluará la Agencia de Programas de Ciudadanía por Inversión junto a Migraciones.\n\nComo antecedente, el Ejecutivo había presentado este mecanismo en Francia a principios de octubre. El esquema local difiere de los modelos de Estados Unidos y Portugal, donde la inversión otorga residencia temporal antes de una eventual naturalización.",
+      "guion": "El Gobierno nacional lanza el programa de ciudadanía por inversión",
+      "seccion": "Economía",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-12T10:40:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T19:01:26.092Z",
+      "relevancia": 18,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El programa nacional permite solicitar la ciudadanía a extranjeros mediante inversiones.",
+        "Se puede optar por un aporte de US$350.000 al Tesoro o un bono de US$800.000.",
+        "Las solicitudes se recibirán desde el cuarto trimestre de 2026.",
+        "El proceso incluye controles estrictos de antecedentes y origen de fondos."
+      ],
+      "seSabe": [
+        "El programa ofrece dos alternativas financieras de US$350.000 y US$800.000, según informó el Gobierno.",
+        "Las solicitudes se recibirán a partir del cuarto trimestre de 2026.",
+        "La Agencia de Programas de Ciudadanía por Inversión evaluará los antecedentes de los postulantes.",
+        "El Ejecutivo había presentado el mecanismo en Francia a principios de octubre."
+      ],
+      "noConfirmado": [
+        "Todavía no se detallaron las fechas exactas del cuarto trimestre en que abrirá la recepción de carpetas."
+      ],
+      "textoRedes": "El Gobierno nacional puso en marcha un programa que permite a extranjeros solicitar la ciudadanía mediante inversiones económicas y controles de antecedentes.",
+      "etiquetas": [
+        "ciudadania por inversion",
+        "Gobierno nacional",
+        "inversiones extranjeras"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/ciudadania-por-inversion--como-funcionara-en-argentina-y-que-ofrecen-otros-paises_a6acc4d12f61ec7711f883edc",
+          "fecha": "2026-10-12T10:40:40.530Z",
+          "oficial": false,
+          "aporte": "Detalló las dos opciones de inversión, los requisitos de control y las comparaciones con programas internacionales."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-15-34-0-ciudadania-argentina-por-inversion-como-funcionara-el-sistema-y-que-ofrecen-otros-paises",
+          "fecha": "2026-10-12T18:37:47.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo el anuncio oficial sobre la puesta en marcha del programa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ig6fdw",
+          "titulo": "El Gobierno lanza un programa de ciudadanía por inversión en el exterior",
+          "fecha": "2026-10-01T10:55:58.335Z",
+          "ruta": "/nota/el-gobierno-lanza-un-programa-de-ciudadania-por-inversion-en-el-ig6fdw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-nacional-lanza-el-programa-de-ciudadania-por-inversion",
+      "foto": {
+        "archivo": "fotos-notas/eonoyt.jpg",
+        "credito": "Foto: La Nueva"
+      }
+    },
+    {
       "id": "clima20261012",
       "propia": "clima",
       "titulo": "El clima de hoy en Balcarce: mínima de 4° y máxima de 13°",
@@ -2954,9 +3225,9 @@
   ],
   "secciones": [
     "Balcarce",
+    "Cultura y agenda",
     "Fútbol",
     "Economía",
-    "Cultura y agenda",
     "Policiales",
     "Automovilismo",
     "Política",
@@ -2966,9 +3237,9 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 12,
-      "sensacion": 9,
-      "humedad": 72,
+      "temp": 13,
+      "sensacion": 10,
+      "humedad": 70,
       "viento": 15,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3319,22 +3590,10 @@
   },
   "pendientes": [
     {
-      "id": "1jnkbul",
-      "titulo": "Gas más caro: el Gobierno promulgó la ley que modifica el…",
-      "seccion": "Balcarce",
-      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
-    },
-    {
-      "id": "1yspt1l",
-      "titulo": "¡Cuidado! Hoy es martes 13, no te cases ni te embarques…",
-      "seccion": "Balcarce",
-      "motivo": "de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA"
-    },
-    {
       "id": "oty3p1",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
+      "motivo": "necesita ojo humano: \"homicidio\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "1vtrwgo",
@@ -3361,10 +3620,10 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1lrgmry",
+      "id": "171qyp7",
       "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"homicidio\""
     },
     {
       "id": "qnh2fp",
@@ -3391,16 +3650,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "171qyp7",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"homicidio\""
-    },
-    {
       "id": "urflid",
       "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "onywij",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "fopfd3",
+      "titulo": "Nuevo escándalo en la FIFA: acusan a Gianni Infantino de…",
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "ox863",

@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T15:07:36.064Z",
- "portada": 36,
+ "generado": "2026-10-13T15:37:45.015Z",
+ "portada": 39,
  "archivo": 999,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-13T15:07:36.091Z",
+  "generado": "2026-10-13T15:37:45.055Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -44,7 +44,7 @@
     "voz": "locutor",
     "ventana": 60,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-13T15:05:51.556Z"
    },
    {
     "nombre": "noticia2",
@@ -141,7 +141,7 @@
      {
       "id": "uestws",
       "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-      "seccion": "Balcarce"
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "wj5hg5",
@@ -160,6 +160,11 @@
     "segundos": 42,
     "notas": [
      {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "1c2cg52",
       "titulo": "Marina Montoya gana los cincuenta kilómetros del Ultra Tierras del Diablo",
       "seccion": "Deportes"
@@ -168,11 +173,6 @@
       "id": "1imkz6n",
       "titulo": "Social Pato Naranja y Negro juegan la semifinal",
       "seccion": "Deportes"
-     },
-     {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -188,24 +188,23 @@
      "id": "pt4b1r",
      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
      "cuando": "2026-10-13T13:35:21.141Z"
+    },
+    {
+     "id": "1dun8ft",
+     "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
+     "cuando": "2026-10-13T15:09:14.343Z"
     }
    ],
    "cola": [
     {
-     "id": "1dun8ft",
-     "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "uestws",
      "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-     "seccion": "Balcarce",
+     "seccion": "Cultura y agenda",
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-13T15:05:21.141Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-13T16:39:14.343Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
