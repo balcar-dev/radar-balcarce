@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T02:02:31.115Z",
+ "generado": "2026-10-13T02:31:47.533Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -45,6 +45,38 @@
    "maximo": 4
   },
   {
+   "id": "1rd059l",
+   "titulo": "La interminable sequía de Julián Álvarez en Atlético de Madrid: casi medio año sin goles y el respaldo del Cholo Simeone",
+   "copete": "Julián Álvarez lleva casi medio año sin convertir con la camiseta del Atlético de Madrid . Su último tanto con el Colchonero fue el 29 de abril , un penal cruzado ante Arsenal que selló el 1-1 en la ida de las semifinales de la Champions League . El cordobés ganó protagonismo en…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-12T14:51:47.000Z",
+   "fuentes": [
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/espana/la-liga/la-interminable-sequia-de-julian-alvarez-hace-cuanto-no-marca-un-gol-en-atletico-de-madrid-id765814.html",
+     "fecha": "2026-10-12T14:51:47.000Z"
+    },
+    {
+     "medio": "A24",
+     "enlace": "https://www.a24.com/deportes/interminable-la-extensa-sequia-julian-alvarez-atletico-madrid-y-el-respaldo-simeone-n1605563",
+     "fecha": "2026-10-12T18:19:07.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/deportes/julian-alvarez-no-marca-en-el-atletico-de-madrid-desde-abril-y-diego-simeone-le-dio-su-respaldo/",
+     "fecha": "2026-10-12T17:23:20.000Z"
+    },
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/europa/simeone-rompio-el-silencio-sobre-la-sequia-goleadora-de-julian-alvarez-tiene-muchas-mas-herramientas",
+     "fecha": "2026-10-12T21:29:05.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
    "id": "mp58gw",
    "titulo": "Jorge Macri evalúa no desdoblar la elección de la Ciudad en 2027 y votar en octubre",
    "copete": "Jorge Macri evalúa que las elecciones de la Ciudad de Buenos Aires de 2027 coincidan con las nacionales y se realicen en octubre , una definición que dependerá de las conversaciones con el resto de las fuerzas políticas, según él mismo indicó. El jefe de Gobierno sostuvo que la…",
@@ -57,14 +89,14 @@
      "fecha": "2026-10-12T20:10:41.000Z"
     },
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/politica/2026/10/13/jorge-macri-evalua-no-separar-las-elecciones-de-caba-de-las-nacionales-es-probable-que-sea-al-mismo-tiempo/",
-     "fecha": "2026-10-13T00:31:30.000Z"
-    },
-    {
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/politica/elecciones-2027-jorge-macri-evalua-unificar-los-comicios-portenos-la-votacion-nacional-octubre-n6332918",
      "fecha": "2026-10-13T00:46:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/politica/2026/10/13/jorge-macri-evalua-no-separar-las-elecciones-de-caba-de-las-nacionales-es-probable-que-sea-al-mismo-tiempo/",
+     "fecha": "2026-10-13T00:31:30.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -90,6 +122,23 @@
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "4v76p8",
+   "titulo": "Recuperaron dos motos robadas durante el fin de semana",
+   "copete": "Los rodados fueron encontrados en distintos sectores de la ciudad durante la mañana y la tarde del domingo. En ambos casos, el Centro de Monitoreo Municipal alertó sobre su presencia en la vía pública y los vehículos fueron secuestrados y restituidos a sus propietarios. La…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-13T02:31:25.137Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45063-recuperaron-dos-motos-robadas-durante-el-fin-de-semana-en-balcarce/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (habian, segun, habia, investigacion): va con las tildes y la eñe d; sin esas oraciones quedan 134",
+   "maximo": 3
   },
   {
    "id": "1nxc5o2",

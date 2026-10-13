@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T02:02:31.115Z",
- "portada": 40,
+ "generado": "2026-10-13T02:31:47.533Z",
+ "portada": 38,
  "archivo": 981,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-13T02:02:31.132Z",
+  "generado": "2026-10-13T02:31:47.555Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -212,20 +212,14 @@
    ],
    "cola": [
     {
-     "id": "15o5mwn",
-     "titulo": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "90qy7w",
-     "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
      "id": "3bom4j",
      "titulo": "Barbieri y Álvarez ganan el Torneo Ciudad",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "15o5mwn",
+     "titulo": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
      "seccion": "Deportes",
      "marcada": false
     }

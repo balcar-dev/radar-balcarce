@@ -1,6 +1,61 @@
 {
-  "generado": "2026-10-13T02:02:31.115Z",
+  "generado": "2026-10-13T02:31:47.533Z",
   "notas": [
+    {
+      "id": "d1rexu",
+      "titulo": "Detienen a un hombre por desobedecer una restricción de acercamiento",
+      "copete": "La Policía aprehendió el fin de semana a un hombre en una vivienda de la ciudad tras violar una medida cautelar y amenazar a su abuela frente a los efectivos.",
+      "cuerpo": "Personal policial detuvo el sábado cerca de las 18 a un hombre en una finca ubicada en la calle 26 entre 1 y 3. El procedimiento se activó mediante un aviso del Centro de Operaciones de Monitoreo que advirtió la presencia del sujeto en el lugar, lo cual contravenía una orden dictada por el Juzgado de Paz a cargo del doctor Mónaco.\n\nDurante la intervención en el domicilio, el individuo lanzó amenazas contra su abuela en presencia de los uniformados. La Fiscalía de Delitos en Flagrancia, conducida por la doctora Ana María Caro, convalidó la actuación policial y ordenó iniciar actuaciones por desobediencia y derivar al aprehendido a la Unidad Penal 44 de Batán, según informaron las fuentes.",
+      "guion": "Detienen a un hombre por desobedecer una restricción de acercamiento",
+      "seccion": "Policiales",
+      "medios": [
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/aprehendieron-a-un-hombre-por-incumplir-una-restriccion-de-acercamiento-y-amenazar-a-su-abuela",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T02:18:57.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T02:31:25.137Z",
+      "relevancia": 98,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Aprehendieron a un hombre en un domicilio local el sábado por la tarde.",
+        "Incumplió una prohibición de acercamiento dictada por el Juzgado de Paz.",
+        "Amenazó a su abuela frente al personal policial que acudió al lugar.",
+        "La fiscal Ana María Caro avaló la causa y dispuso su traslado a Batán."
+      ],
+      "etiquetas": [
+        "policiales",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/aprehendieron-a-un-hombre-por-incumplir-una-restriccion-de-acercamiento-y-amenazar-a-su-abuela",
+          "fecha": "2026-10-13T02:18:57.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles horarios, la ubicación exacta, la intervención del COM, el juzgado interviniente y la fiscalía a cargo."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45062-incumplio-una-restriccion-de-acercamiento-y-fue-detenido-tras-amenazar-a-su-abuela/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó la confirmación sobre el procedimiento policial y el traslado a la unidad penal."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "detienen-a-un-hombre-por-desobedecer-una-restriccion-de-acercamiento"
+    },
     {
       "id": "1yc1lhn",
       "titulo": "Aprehenden a un joven tras un enfrentamiento con agentes policiales",
@@ -9,14 +64,15 @@
       "guion": "Aprehenden a un joven tras un enfrentamiento con agentes policiales",
       "seccion": "Policiales",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/policiales/aprehendieron-a-un-joven-de-18-anos-tras-un-enfrentamiento-con-policias",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T02:00:18.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T02:02:21.638Z",
-      "relevancia": 84,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -446,58 +502,6 @@
       "slug": "ciclistas-locales-consiguen-podios-en-el-mtb-series"
     },
     {
-      "id": "90qy7w",
-      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
-      "copete": "El gimnasio La Cuna del Quíntuple albergó la octagésima novena edición del certamen de tenis de mesa. El club local consiguió tres títulos y varios podios con sus deportistas.",
-      "cuerpo": "Balcarce albergó el octagésimono noveno Torneo Ciudad de Balcarce de tenis de mesa, correspondiente al circuito nacional Tenis de Mesa para Todos. El evento se desarrolló durante el fin de semana en el gimnasio La Cuna del Quíntuple, ubicado en calle 13 número 818, con la participación de 127 jugadores distribuidos en siete categorías y más de 200 partidos disputados.\n\nLa delegación del club Top Serrano cumplió una destacada actuación y se quedó con tres primeros puestos de la mano de Joaquín Álvarez, quien se impuso en la división principal, y Cristóbal Barbieri, ganador en dos categorías. Además, la entidad sumó varios podios con las participaciones de Lautaro Roland, Santino Duarte, Pedro Rodríguez Curate, Marcos Álvarez y Nazareno Ramírez.\n\nEl certamen reunió a deportistas de Miramar, Lobería, Necochea, Tandil, Mar del Plata, Olavarría, Ayacucho, Mar Chiquita, Bolívar y distintos puntos del conurbano bonaerense.",
-      "guion": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
-      "seccion": "Deportes",
-      "medios": [
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T19:42:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 82,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se disputó el octagésimo noveno Torneo Ciudad de Balcarce",
-        "Participaron 127 jugadores de distintas localidades",
-        "Top Serrano obtuvo tres títulos y varios podios",
-        "La competencia tuvo más de doscientos partidos"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "tenis de mesa",
-        "Top Serrano",
-        "Torneo Ciudad de Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
-          "fecha": "2026-10-12T19:42:06.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados, los ganadores y las características del torneo de tenis de mesa."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "top-serrano-gana-tres-titulos-en-el-torneo-de-tenis-de-mesa"
-    },
-    {
       "id": "3bom4j",
       "titulo": "Barbieri y Álvarez ganan el Torneo Ciudad",
       "copete": "El gimnasio La Cuna del Quíntuple albergó más de doscientos partidos durante dos jornadas. La competencia reunió a ciento veintisiete inscriptos de distintas ciudades.",
@@ -505,14 +509,16 @@
       "guion": "Barbieri y Alvarez ganan el Torneo Ciudad",
       "seccion": "Deportes",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T19:42:06.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T00:31:41.847Z",
-      "relevancia": 80,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1285,80 +1291,6 @@
       "slug": "gobierno-expulsa-a-ciudadano-brasileno-y-prohibe-su-ingreso-por-cinco"
     },
     {
-      "id": "pcks4q",
-      "titulo": "La Justicia decreta la quiebra del principal fabricante de pallets",
-      "copete": "La Justicia de Misiones ordenó la quiebra de la firma Linor SRL tras incumplir su acuerdo preventivo. La empresa había cerrado su planta de Azara en 2025 con 130 despidos.",
-      "cuerpo": "La magistrada Adriana Beatriz Fiori dispuso la incautación de las instalaciones, maquinarias y vehículos, además del bloqueo de cuentas bancarias y la entrega de libros comerciales a la sindicatura.\n\nLa firma fabricante de pallets de madera funcionaba en la localidad misionera de Azara y paralizó sus actividades en mayo de 2025, ocasión en la que dejó sin empleo a 130 operarios. Previamente, la entidad acumulaba una obligación fiscal cercana a los quinientos millones de pesos con la agencia recaudadora, además de conflictos gremiales por salarios adeudados.",
-      "guion": "La Justicia decreta la quiebra del principal fabricante de pallets.",
-      "seccion": "Agro",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Canal 26"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T16:45:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T01:01:46.532Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Justicia de Misiones decretó la quiebra de Linor SRL.",
-        "La medida incluye la incautación de bienes y el bloqueo de cuentas.",
-        "La empresa había cerrado su planta de Azara en 2025 y acumulaba millonaria deuda."
-      ],
-      "textoRedes": "La Justicia de Misiones decretó la quiebra de la empresa Linor SRL tras incumplir su acuerdo preventivo. La firma había cerrado su planta en la localidad de Azara en 2025 y acumulaba una millonaria deuda fiscal.",
-      "etiquetas": [
-        "quiebra",
-        "aserradero",
-        "justicia",
-        "misiones",
-        "azara"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
-          "fecha": "2026-10-12T16:45:12.000Z",
-          "oficial": false,
-          "aporte": "Detalló los motivos del fallo judicial, los antecedentes de la planta de Azara y la deuda fiscal con ARCA."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/campo/quebro-uno-de-los-aserraderos-productores-de-pallets-mas-grandes-del-pais-nid12102026/",
-          "fecha": "2026-10-12T18:12:43.000Z",
-          "oficial": false,
-          "aporte": "Indicó la ubicación geográfica del aserradero en la provincia de Misiones."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/12/quebro-una-maderera-lider-en-la-produccion-de-pallets-y-ordenaron-la-incautacion-de-sus-bienes/",
-          "fecha": "2026-10-12T18:35:32.000Z",
-          "oficial": false,
-          "aporte": "Precisó que la firma producía pallets de pino y el juzgado interviniente."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/10/12/quiebra-confirmada-una-historica-empresa-maderera-de-misiones-quedo-bajo-control-judicial/",
-          "fecha": "2026-10-12T20:17:48.000Z",
-          "oficial": false,
-          "aporte": "Identificó a la jueza Adriana Fiori a cargo de la medida judicial."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-justicia-decreta-la-quiebra-del-principal-fabricante-de-pallets"
-    },
-    {
       "id": "fr6obg",
       "titulo": "El personal de casas particulares define su aumento salarial hasta fin de año",
       "copete": "La Comisión Nacional de Trabajo en Casas Particulares fijó subas consecutivas para el trimestre de octubre a diciembre de 2026, con la integración progresiva de sumas extraordinarias y nuevos mínimos por categoría.",
@@ -1684,11 +1616,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45059-transporte-publico-impulsan-medidas-de-accesibilidad-para-personas-con-autismo-que-podrian-llegar-a-balcarce/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T14:31:34.877Z",
       "sinFecha": true,
       "visto": "2026-10-12T14:31:34.877Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1774,7 +1706,7 @@
       "fecha": "2026-10-12T14:17:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T17:31:53.555Z",
-      "relevancia": 75,
+      "relevancia": 68,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1981,7 +1913,6 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
-        "Página/12",
         "iProfesional",
         "Minuto Uno",
         "C5N",
@@ -1999,6 +1930,7 @@
         "Ecos Diarios (Necochea)",
         "La Nueva",
         "La Brújula 24",
+        "Página/12",
         "La Verdad"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
@@ -2134,7 +2066,6 @@
         "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
-        "Página/12",
         "C5N",
         "Crónica",
         "Canal 26",
@@ -2143,7 +2074,8 @@
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "La Nueva",
-        "La Verdad"
+        "La Verdad",
+        "Página/12"
       ],
       "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
       "teniaImagenLaFuente": true,
@@ -3147,128 +3079,6 @@
         "archivo": "fotos-notas/t691yd.jpg",
         "credito": "Foto: Infobae"
       }
-    },
-    {
-      "id": "1lk2g5p",
-      "titulo": "El Servicio Meteorológico emite alertas por tormentas y vientos",
-      "copete": "El Servicio Meteorológico Nacional lanzó advertencias por tormentas, nevadas y vientos fuertes. Las medidas alcanzan a ocho provincias del país para este lunes.",
-      "cuerpo": "El Servicio Meteorológico Nacional emitió este lunes alertas de nivel naranja y amarillo por tormentas, nevadas, lluvias y vientos intensos que afectan a varias provincias del país. Seg_n el organismo oficial, rige la advertencia naranja por tormentas severas en Mendoza y el este de Misiones, con ráfagas que podrían superar los 90 kilómetros por hora y posible caída de granizo.\n\nEn paralelo, hay alertas amarillas por tormentas en el oeste de Misiones, San Juan, el norte de Mendoza, Neuquén y Río Negro. Las medidas también abarcan advertencias por nevadas cordilleranas en Mendoza y San Juan, lluvias en Río Negro y Neuquén, y vientos fuertes en Jujuy, el oeste de Salta y el oeste de Catamarca. En tanto, un medio gráfico reportó que las advertencias alcanzan a un total de diez distritos.",
-      "guion": "El Servicio Meteorológico emite alertas por tormentas y vientos",
-      "seccion": "Argentina",
-      "medios": [
-        "TN (Todo Noticias)",
-        "La Nación",
-        "Crónica",
-        "Radio Mitre",
-        "El Cronista"
-      ],
-      "enlace": "https://www.cronica.com.ar/sociedad/confirmado-hay-alertas-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-en-ocho-provincias/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T14:19:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T19:46:32.720Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Servicio Meteorológico Nacional emitió alertas por tormentas y nevadas.",
-        "Rige alerta naranja en Mendoza y el este de Misiones.",
-        "Hay advertencias amarillas por vientos y lluvias en distintas provincias."
-      ],
-      "seSabe": [
-        "El Servicio Meteorológico Nacional emitió alertas naranja y amarilla para este lunes.",
-        "Las advertencias abarcan tormentas, nevadas, lluvias y vientos fuertes.",
-        "Hay alerta naranja por tormentas en Mendoza y Misiones, según el organismo oficial."
-      ],
-      "noConfirmado": [
-        "La cantidad exacta de provincias afectadas presenta diferencias entre las fuentes, ya que algunas mencionan ocho y otras diez."
-      ],
-      "textoRedes": "El Servicio Meteorológico Nacional emitió alertas naranja y amarilla por tormentas, nevadas y vientos fuertes que afectan a ocho provincias este lunes.",
-      "etiquetas": [
-        "Servicio Meteorologico Nacional",
-        "alertas",
-        "tormentas",
-        "nevadas",
-        "vientos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/confirmado-hay-alertas-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-en-ocho-provincias/",
-          "fecha": "2026-10-12T09:04:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las alertas por tormentas, lluvias, nevadas y vientos en ocho provincias."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/sociedad/2026/10/12/hay-alerta-naranja-y-amarilla-por-tormentas-nevadas-y-vientos-de-hasta-100-kmh-en-ocho-provincias/",
-          "fecha": "2026-10-12T10:58:48.000Z",
-          "oficial": false,
-          "aporte": "Indicó las provincias bajo alerta naranja y amarilla."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/10/12/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-lunes-12-de-octubre-en-neuquen-las-zonas-afectadas/",
-          "fecha": "2026-10-12T10:30:32.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/10/12/hay-alerta-naranja-por-tormentas-para-este-lunes-12-de-octubre-en-misiones-las-zonas-afectadas/",
-          "fecha": "2026-10-12T10:30:39.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-naranja-y-amarilla-por-tormentas-lluvias-nevadas-y-vientos-para-este-lunes-12-de-octubre-nid12102026/",
-          "fecha": "2026-10-12T10:27:13.000Z",
-          "oficial": false,
-          "aporte": "Señaló que las advertencias alcanzan a diez provincias."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/alerta-naranja-del-smn-por-tormentas-para-este-lunes-12-de-octubre-esperan-lluvias-intensas-rafagas-de-viento-y-granizo-en-mendoza-y-neuquen/",
-          "fecha": "2026-10-12T13:03:42.000Z",
-          "oficial": false,
-          "aporte": "Informó que rige alerta naranja por tormentas en Mendoza y Neuquén."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/clima/alerta-naranja-y-amarilla-en-ocho-provincias-como-estara-el-tiempo-en-el-comienzo-de-esta-semana-segun-el-smn/",
-          "fecha": "2026-10-12T12:49:33.000Z",
-          "oficial": false,
-          "aporte": "Confirmó las alertas por tormentas, nevadas y vientos en ocho provincias."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1sj7dfp",
-          "titulo": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
-          "fecha": "2026-09-26T03:01:00.000Z",
-          "ruta": "/nota/emiten-alerta-amarilla-por-tormentas-y-lluvias-en-varias-provincias-1sj7dfp"
-        },
-        {
-          "id": "1qudzsc",
-          "titulo": "El Servicio Meteorológico Nacional mantiene alerta amarilla por lluvias",
-          "fecha": "2026-09-29T10:29:49.000Z",
-          "ruta": "/nota/el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por-1qudzsc"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-servicio-meteorologico-emite-alertas-por-tormentas-y-vientos",
-      "foto": {
-        "archivo": "fotos-notas/1lk2g5p.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
     }
   ],
   "secciones": [
@@ -3279,8 +3089,8 @@
     "Política",
     "Economía",
     "Cultura y agenda",
-    "Agro",
-    "Automovilismo"
+    "Automovilismo",
+    "Agro"
   ],
   "temas": [],
   "clima": {
@@ -3290,7 +3100,7 @@
       "humedad": 93,
       "viento": 11,
       "rumbo": "E",
-      "cielo": "Nublado",
+      "cielo": "Llovizna leve",
       "esDeDia": false
     },
     "dias": [
@@ -3644,7 +3454,7 @@
       "id": "1qs9fgc",
       "titulo": null,
       "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\" (en otro medio que cuenta lo mismo)"
+      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "dffmvs",
@@ -3653,5 +3463,5 @@
       "motivo": "necesita ojo humano: \"homicidio\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 5
 }
