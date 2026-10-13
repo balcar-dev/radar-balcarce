@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-13T00:03:08.204Z",
+ "consultado": "2026-10-13T00:32:13.105Z",
  "equipos": [
   "9739",
   "3",
@@ -69,84 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841594",
-    "competencia": "liga",
-    "inicio": "2026-10-03T00:30:00.000Z",
-    "estado": "final",
-    "minuto": "90'+3'",
-    "local": {
-     "id": "5",
-     "nombre": "Boca Juniors",
-     "goles": 3
-    },
-    "visitante": {
-     "id": "20",
-     "nombre": "Unión (Santa Fe)",
-     "goles": 0
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Lautaro Di Lollo",
-      "minuto": "22'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "local",
-      "jugador": "Leonel Flores",
-      "minuto": "83'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "local",
-      "jugador": "Leonel Flores",
-      "minuto": "90'+2'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Alberto José Armando (La Bombonera)",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
-   {
-    "id": "401841587",
-    "competencia": "liga",
-    "inicio": "2026-10-03T00:30:00.000Z",
-    "estado": "final",
-    "minuto": "90'+7'",
-    "local": {
-     "id": "9744",
-     "nombre": "Independiente Rivadavia",
-     "goles": 1
-    },
-    "visitante": {
-     "id": "9",
-     "nombre": "Gimnasia La Plata",
-     "goles": 1
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Juan Manuel Elordi",
-      "minuto": "5'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "visitante",
-      "jugador": "Agustin Colazo",
-      "minuto": "86'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Bautista Gargantini",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841593",
     "competencia": "liga",

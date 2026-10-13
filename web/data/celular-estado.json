@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T00:03:10.455Z",
- "portada": 40,
- "archivo": 978,
+ "generado": "2026-10-13T00:32:20.302Z",
+ "portada": 41,
+ "archivo": 979,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-13T00:03:10.486Z",
+  "generado": "2026-10-13T00:32:20.327Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -94,7 +94,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-13T00:06:51.324Z"
    }
   ],
   "repasos": [
@@ -156,8 +156,8 @@
     "hora": "21:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 55,
+    "salio": "2026-10-13T00:06:51.324Z",
+    "segundos": null,
     "notas": [
      {
       "id": "15o5mwn",
@@ -220,6 +220,12 @@
     {
      "id": "90qy7w",
      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "3bom4j",
+     "titulo": "Barbieri y Álvarez ganan el Torneo Ciudad",
      "seccion": "Deportes",
      "marcada": false
     }
