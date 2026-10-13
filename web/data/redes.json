@@ -4698,7 +4698,13 @@
     }
   },
   "problemas": {},
-  "facebookFoto": {},
+  "facebookFoto": {
+    "fa17ki": {
+      "intentos": 1,
+      "ultimo": "2026-10-13T11:04:19.714Z",
+      "error": "Missing or invalid image file"
+    }
+  },
   "reelsEnFacebook": {
     "2026-10-08/clima-noche": {
       "cuando": "2026-10-08T23:06:56.514Z",
