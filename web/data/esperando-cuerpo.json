@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T04:32:15.883Z",
+ "generado": "2026-10-13T05:01:56.225Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -30,11 +30,6 @@
      "fecha": "2026-10-13T01:26:34.000Z"
     },
     {
-     "medio": "Página/12",
-     "enlace": "https://www.pagina12.com.ar/2026/10/12/jorge-macri-evalua-empalmar-la-eleccion-en-caba-con-la-nacional/",
-     "fecha": "2026-10-13T03:01:00.000Z"
-    },
-    {
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/politica/elecciones-2027-jorge-macri-evalua-unificar-los-comicios-portenos-la-votacion-nacional-octubre-n6332918",
      "fecha": "2026-10-13T00:46:00.000Z"
@@ -48,6 +43,11 @@
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/jorge-macri-analiza-no-desdoblar-las-elecciones-de-la-ciudad-en-2027--se-podria-votar-en-octubre_a6acd527132fdad2908a98c49",
      "fecha": "2026-10-12T22:15:00.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/12/jorge-macri-evalua-empalmar-la-eleccion-en-caba-con-la-nacional/",
+     "fecha": "2026-10-12T23:22:51.000Z"
     }
    ],
    "intentos": 5,
@@ -55,31 +55,21 @@
    "maximo": 5
   },
   {
-   "id": "pcks4q",
-   "titulo": "La Justicia decretó la quiebra de uno de los aserraderos más importantes del país y ordenó incautar sus bienes",
-   "copete": "La Justicia de Misiones decretó la quiebra de Linor SRL , uno de los principales fabricantes de pallets de madera del país, luego de que la empresa incumpliera el acuerdo preventivo alcanzado durante su concurso de acreedores. La decisión marca un nuevo capítulo en la crisis de…",
-   "seccion": "Agro",
-   "fecha": "2026-10-12T16:45:12.000Z",
+   "id": "1ciy7qc",
+   "titulo": "El FMI recorta las previsiones de crecimiento de la economía argentina para 2026 y 2027",
+   "copete": "Buenos Aires, 13 oct (EFECOM).- El Fondo Monetario Internacional (FMI) prevé que la economía de Argentina crezca un 2,1 % este año y un 3,5 % en 2027, por debajo de lo pronosticado por este organismo en abril y julio pasado. Según el informe de 'Perspectivas económicas…",
+   "seccion": "Economía",
+   "fecha": "2026-10-13T02:17:33.000Z",
    "fuentes": [
     {
      "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
-     "fecha": "2026-10-12T16:45:12.000Z"
+     "enlace": "https://www.infobae.com/america/agencias/2026/10/13/el-fmi-recorta-las-previsiones-de-crecimiento-de-la-economia-argentina-para-2026-y-2027/",
+     "fecha": "2026-10-13T02:17:33.000Z"
     },
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/campo/quebro-uno-de-los-aserraderos-productores-de-pallets-mas-grandes-del-pais-nid12102026/",
-     "fecha": "2026-10-13T01:54:15.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/campo/2026/10/12/quebro-una-maderera-lider-en-la-produccion-de-pallets-y-ordenaron-la-incautacion-de-sus-bienes/",
-     "fecha": "2026-10-12T18:35:32.000Z"
-    },
-    {
-     "medio": "Canal 26",
-     "enlace": "https://www.canal26.com/economia/2026/10/12/quiebra-confirmada-una-historica-empresa-maderera-de-misiones-quedo-bajo-control-judicial/",
-     "fecha": "2026-10-12T20:17:48.000Z"
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/el-fmi-recorta-la-prevision-crecimiento-argentina-n6332941",
+     "fecha": "2026-10-13T02:39:00.000Z"
     }
    ],
    "intentos": 3,
