@@ -667,6 +667,13 @@
       "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
       "enlace": "https://radarbalcarce.com/nota/fieles-de-balcarce-organizan-viajes-para-recibir-al-papa-en-noviembre-uestws",
       "temas": []
+    },
+    "95znl3": {
+      "cuando": "2026-10-13T18:13:43.987Z",
+      "postId": "1254237411116171_122111206245495512",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "enlace": "https://radarbalcarce.com/nota/el-registro-civil-suspende-casamientos-para-el-martes-13-95znl3",
+      "temas": []
     }
   },
   "instagram": {
@@ -2068,6 +2075,20 @@
       "tipo": "REELS",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-13/noticia2": {
+      "cuando": "2026-10-13T18:15:16.014Z",
+      "mediaId": "18142758091608263",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "1dun8ft",
+      "notaIds": [
+        "1dun8ft",
+        "wj5hg5",
+        "pt4b1r",
+        "uestws"
+      ],
+      "permalink": "https://www.instagram.com/reel/DecbaAnjMTN/"
     }
   },
   "facebookVideos": {
@@ -3463,6 +3484,20 @@
       "tipo": "REELS",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-13/noticia2": {
+      "cuando": "2026-10-13T18:16:51.695Z",
+      "mediaId": "2363128987821829",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "1dun8ft",
+      "notaIds": [
+        "1dun8ft",
+        "wj5hg5",
+        "pt4b1r",
+        "uestws"
+      ],
+      "permalink": "https://www.facebook.com/reel/2363128987821829/"
     }
   },
   "instagramFeed": {
@@ -3953,6 +3988,12 @@
       "mediaId": "17905427067356863",
       "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
       "enlace": "https://radarbalcarce.com/nota/fieles-de-balcarce-organizan-viajes-para-recibir-al-papa-en-noviembre-uestws"
+    },
+    "95znl3": {
+      "cuando": "2026-10-13T18:13:55.745Z",
+      "mediaId": "17910401832472677",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "enlace": "https://radarbalcarce.com/nota/el-registro-civil-suspende-casamientos-para-el-martes-13-95znl3"
     }
   },
   "historiasDeReels": {
@@ -4851,17 +4892,23 @@
       "nombre": "participa-evento",
       "red": "facebook",
       "notaId": null
-    }
-  },
-  "problemas": {
-    "2026-10-13/noticia2/instagram/reel": {
-      "pieza": "noticia2",
+    },
+    "instagram/2026-10-13/noticia2": {
+      "cuando": "2026-10-13T18:16:41.959Z",
+      "mediaId": "17954013945269253",
+      "nombre": "noticia2",
       "red": "instagram",
-      "parte": "reel",
-      "error": "La subida del video falló (400) Request processing failed",
-      "cuando": "2026-10-13T18:06:17.329Z"
+      "notaId": "1dun8ft"
+    },
+    "facebook/2026-10-13/noticia2": {
+      "cuando": "2026-10-13T18:17:29.659Z",
+      "mediaId": "2537454140099194",
+      "nombre": "noticia2",
+      "red": "facebook",
+      "notaId": "1dun8ft"
     }
   },
+  "problemas": {},
   "facebookFoto": {
     "fa17ki": {
       "intentos": 2,
