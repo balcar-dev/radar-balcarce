@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T15:37:45.015Z",
- "portada": 39,
+ "generado": "2026-10-13T16:06:02.967Z",
+ "portada": 37,
  "archivo": 999,
- "esperandoCuerpo": 6,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-10-13T15:37:45.055Z",
+  "generado": "2026-10-13T16:06:03.005Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-13T13:06:44.511Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu evento o emprendimiento",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-13T15:05:51.556Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-13T13:06:44.511Z",
     "segundos": null,
     "notas": [
@@ -126,12 +126,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 55,
     "notas": [
      {
       "id": "1dun8ft",
       "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "wj5hg5",
+      "titulo": "La Provincia otorga ochenta millones de pesos para murgas y comparsas",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "pt4b1r",
@@ -141,11 +146,6 @@
      {
       "id": "uestws",
       "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "wj5hg5",
-      "titulo": "La Provincia otorga ochenta millones de pesos para murgas y comparsas",
       "seccion": "Cultura y agenda"
      }
     ]
@@ -195,14 +195,7 @@
      "cuando": "2026-10-13T15:09:14.343Z"
     }
    ],
-   "cola": [
-    {
-     "id": "uestws",
-     "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 2,
    "proximoDesde": "2026-10-13T16:39:14.343Z",
    "porDia": 5,
