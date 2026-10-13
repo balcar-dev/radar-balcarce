@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T09:31:26.968Z",
- "portada": 37,
+ "generado": "2026-10-13T10:01:57.086Z",
+ "portada": 36,
  "archivo": 987,
- "esperandoCuerpo": 2,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-13T09:31:26.986Z",
+  "generado": "2026-10-13T10:01:57.109Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {

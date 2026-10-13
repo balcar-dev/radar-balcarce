@@ -1,7 +1,24 @@
 {
- "generado": "2026-10-13T09:31:26.968Z",
+ "generado": "2026-10-13T10:01:57.086Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "fa17ki",
+   "titulo": "Semana fresca en Balcarce: se esperan lluvias y temperaturas que no superarán los 15 grados",
+   "copete": "El pronóstico para el martes 13 al domingo 18 anticipa jornadas mayormente nubladas, posibles precipitaciones durante la primera mitad de la semana y una mejora hacia el fin de semana.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-13T09:45:39.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/semana-fresca-en-balcarce-se-esperan-lluvias-y-temperaturas-que-no-superaran-los-15-grados",
+     "fecha": "2026-10-13T09:45:39.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
+   "maximo": 3
+  },
   {
    "id": "1rd059l",
    "titulo": "La interminable sequía de Julián Álvarez en Atlético de Madrid: casi medio año sin goles y el respaldo del Cholo Simeone",
