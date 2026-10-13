@@ -232,3 +232,23 @@ test('estadisticas.json existe y tiene la forma que espera el vigilante', () => 
   const j = JSON.parse(leer('web/data/estadisticas.json'));
   assert.ok(Array.isArray(j.puntos));
 });
+
+test('Cloudflare: si hay dos sitios, manda el de la etiqueta que lleva la página (13/10: el del dominio estaba siempre en cero)', async () => {
+  const tag = '63fea16828ce46988d62382b0fbabf60';
+  const pedidos = [];
+  const fetchFn = async (url, init) => {
+    const query = JSON.parse(init.body).query;
+    pedidos.push(query);
+    if (query.includes('sitios:')) {
+      return respuesta({ data: { viewer: { accounts: [{ sitios: [
+        { count: 91, dimensions: { siteTag: tag, requestHost: 'radar-balcarce.pages.dev' } },
+        { count: 1, dimensions: { siteTag: 'AUTOMATICO-EN-CERO', requestHost: 'radarbalcarce.com' } },
+      ] }] } } });
+    }
+    const g = [{ count: 0, sum: { visits: 0 } }];
+    return respuesta({ data: { viewer: { accounts: [{ u12: g, a12: g, u24: g, a24: g, top: [] }] } } });
+  };
+  const r = await estadisticasDeCloudflare({ cuenta: 'C', token: 'T', ahora: A('21:00'), fetchFn });
+  assert.equal(r.siteTag, tag);
+  assert.match(pedidos[1], new RegExp(`siteTag: "${tag}"`));
+});

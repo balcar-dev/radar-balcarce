@@ -130,7 +130,10 @@ async function buscarSitio({ cuenta, token, ahora, fetchFn }) {
   const cuentas = r.datos.viewer?.accounts ?? [];
   if (!cuentas.length) return { sinPermiso: true, error: 'la cuenta de Cloudflare no aparece (¿ID equivocado o token sin permiso sobre esa cuenta?)' };
   const filas = cuentas[0].sitios ?? [];
-  const nuestra = filas.find((f) => String(f.dimensions?.requestHost ?? '').replace(/^www\./, '') === SITIO);
+  // Hay dos sitios de analítica en la cuenta (13/10): el de la etiqueta que lleva la página (instalada a mano, es el que cuenta) y el de
+  // "radarbalcarce.com" (configuración automática, siempre en cero). Manda la etiqueta de la página; el nombre del dominio es el respaldo.
+  const delBeacon = filas.find((f) => f.dimensions?.siteTag === TOKEN_DEL_BEACON);
+  const nuestra = delBeacon ?? filas.find((f) => String(f.dimensions?.requestHost ?? '').replace(/^www\./, '') === SITIO);
   return { siteTag: nuestra?.dimensions?.siteTag ?? null };
 }
 
