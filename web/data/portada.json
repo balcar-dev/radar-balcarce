@@ -1,6 +1,85 @@
 {
-  "generado": "2026-10-13T06:01:54.902Z",
+  "generado": "2026-10-13T06:31:38.860Z",
   "notas": [
+    {
+      "id": "1335hw8",
+      "titulo": "El Gobierno promulga la nueva ley sobre el régimen de zonas frías",
+      "copete": "El Poder Ejecutivo oficializó este martes la normativa que redefine los descuentos en las facturas de gas. La medida recorta los beneficios sumados en 2021 y fija criterios de vulnerabilidad.",
+      "cuerpo": "El Gobierno nacional oficializó la Ley 27.828, que modifica el régimen de zonas frías y limita el acceso a los descuentos en las facturas de gas.\n\nLa medida recorta el alcance del subsidio para los sectores que habían sido incorporados en 2021. Los beneficios plenos se mantienen únicamente en la Patagonia, Malargüe y la Puna, mientras que para el resto se implementan nuevos requisitos de vulnerabilidad socioeconómica y consumo razonable. Además, el Ejecutivo fijará las modalidades del beneficio y se prorrogan hasta finales de 2045 las exenciones impositivas sobre fuentes renovables de energía.\n\nDurante aquel debate, la senadora Flavia Royón explicó que la modificación busca mayor transparencia en el marco energético y la regularización de deudas del mercado eléctrico.",
+      "guion": "El Gobierno promulga la nueva ley sobre el régimen de zonas frías",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "Perfil"
+      ],
+      "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-promulgo-la-ley-que-modifica-el-regimen-de-zonas-frias-nid13102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T04:32:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T06:31:20.370Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Ejecutivo oficializó la Ley 27.828 en el Boletín Oficial.",
+        "Se limitan los descuentos en las facturas de gas para sectores ampliados en 2021.",
+        "Los beneficios completos continúan en la Patagonia, Malargüe y la Puna.",
+        "Se establecen nuevos requisitos socioeconómicos para acceder a los subsidios."
+      ],
+      "textoRedes": "El Gobierno nacional promulgó la ley que modifica el régimen de zonas frías y limita los descuentos en las tarifas de gas. La norma establece nuevos requisitos de vulnerabilidad y recorta los beneficios sumados en 2021.",
+      "etiquetas": [
+        "Gobierno nacional",
+        "zonas frías",
+        "tarifas de gas",
+        "Boletín Oficial",
+        "subsidios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-promulgo-la-ley-que-modifica-el-regimen-de-zonas-frias-nid13102026/",
+          "fecha": "2026-10-13T04:32:04.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la reducción de subsidios, los alcances por regiones y los dichos de la senadora Flavia Royón."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/13/el-gobierno-promulgo-la-nueva-ley-de-zonas-frias-que-redefine-el-alcance-del-subsidio-de-gas/",
+          "fecha": "2026-10-13T05:02:32.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el número de la ley y la fecha de publicación en el Boletín Oficial."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/13/el-gobierno-oficializo-los-cambios-en-el-subsidio-de-zona-fria-quienes-podran-mantener-el-descuento-en-el-gas/",
+          "fecha": "2026-10-13T04:34:26.000Z",
+          "oficial": false,
+          "aporte": "Informó la inclusión del Decreto 1161/2026 en la oficialización de la medida."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/sociedad/el-gobierno-oficializo-la-nueva-ley-de-zonas-frias-quienes-seguiran-recibiendo-subsidio-al-gas-y-que-pasara-con-el-resto.phtml",
+          "fecha": "2026-10-13T05:53:44.000Z",
+          "oficial": false,
+          "aporte": "Aportó precisiones sobre la redefinición del régimen y los límites a los descuentos en gas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-promulga-la-nueva-ley-sobre-el-regimen-de-zonas-frias",
+      "foto": {
+        "archivo": "fotos-notas/1335hw8.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
     {
       "id": "d1rexu",
       "titulo": "Detienen a un hombre por desobedecer una restricción de acercamiento",
@@ -461,8 +540,8 @@
         "Crónica",
         "Noticias Argentinas (NA)",
         "Punto Noticias",
-        "La Nueva",
         "El Eco de Tandil",
+        "La Nueva",
         "0223 (Mar del Plata)",
         "Ayacucho al Día"
       ],
@@ -528,16 +607,16 @@
       "guion": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
       "seccion": "Deportes",
       "medios": [
+        "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "Infórmese Primero (FM 104.9)"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T19:42:06.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 82,
+      "relevancia": 96,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -956,7 +1035,7 @@
       "fecha": "2026-10-12T18:26:36.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T21:01:30.197Z",
-      "relevancia": 58,
+      "relevancia": 51,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1308,7 +1387,7 @@
       "fecha": "2026-10-12T15:20:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1538,13 +1617,13 @@
         "Agencia DIB",
         "La Noticia 1",
         "Diputados Bonaerenses",
-        "El Día",
         "0221",
+        "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
-        "NDEN – Noticias de Necochea",
         "El Eco de Tandil",
-        "La Verdad",
+        "NDEN – Noticias de Necochea",
+        "El Día",
         "Infoeme"
       ],
       "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
@@ -1682,6 +1761,81 @@
       "foto": {
         "archivo": "fotos-notas/r0o8z3.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
+      }
+    },
+    {
+      "id": "wufzrl",
+      "titulo": "El agro argentino exporta casi 89 millones de toneladas",
+      "copete": "Los envíos al exterior de granos, subproductos y aceites acumularon cerca de 88,9 millones de toneladas entre enero y septiembre de 2026. La cifra supera al récord alcanzado en 2021.",
+      "cuerpo": "Las exportaciones de granos, subproductos y aceites del país sumaron cerca de 88,9 millones de toneladas entre enero y septiembre de este año. La cifra representa un incremento de casi el 10% en comparación con el mismo período del año pasado y supera la marca máxima lograda en 2021, según informó la Bolsa de Comercio de Rosario. El volumen exportador respondió a una cosecha sin antecedentes y a una fuerte demanda internacional. Por su parte, la liquidación de divisas del sector alcanzó los USD 3.228 millones en septiembre, de acuerdo con datos de la Cámara de la Industria Aceitera de la República Argentina y el Centro de Exportadores de Cereales.",
+      "guion": "El agro argentino exporta casi 89 millones de toneladas",
+      "seccion": "Agro",
+      "medios": [
+        "Infobae",
+        "Ámbito"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/12/en-nueve-meses-el-agro-argentino-ya-exporto-casi-90-millones-de-toneladas-mas-que-el-record-anual-historico-de-2021/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T13:06:49.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T17:01:56.711Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Las exportaciones sumaron cerca de 88,9 millones de toneladas hasta septiembre.",
+        "El volumen supera en casi un 10% el registro del año previo.",
+        "La liquidación de divisas de septiembre llegó a USD 3.228 millones."
+      ],
+      "seSabe": [
+        "Las exportaciones de granos, subproductos y aceites acumularon 88,9 millones de toneladas entre enero y septiembre de 2026, según la Bolsa de Comercio de Rosario.",
+        "El volumen supera el récord previo de 2021.",
+        "La liquidación de divisas de septiembre llegó a USD 3.228 millones, según CIARA y el CEC."
+      ],
+      "textoRedes": "Las exportaciones argentinas de granos, subproductos y aceites acumularon cerca de 88,9 millones de toneladas entre enero y septiembre de 2026 y superaron el récord previo.",
+      "etiquetas": [
+        "agro",
+        "exportaciones",
+        "granos",
+        "divisas",
+        "cosecha"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/12/en-nueve-meses-el-agro-argentino-ya-exporto-casi-90-millones-de-toneladas-mas-que-el-record-anual-historico-de-2021/",
+          "fecha": "2026-10-12T13:06:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre el volumen de exportaciones, el récord superado, la liquidación de divisas y los factores productivos."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/hito-el-campo-nueve-meses-exporto-casi-90-millones-toneladas-y-ya-supera-el-record-anual-2021-n6332756",
+          "fecha": "2026-10-12T16:40:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto sobre el impulso de los embarques debido a una cosecha excepcional y la demanda internacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5ddc24",
+          "titulo": "El riesgo país llega a 642 puntos y marca un récord anual",
+          "fecha": "2026-09-25T21:00:10.000Z",
+          "ruta": "/nota/el-riesgo-pais-llega-a-642-puntos-y-marca-un-record-anual-5ddc24"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-agro-argentino-exporta-casi-89-millones-de-toneladas",
+      "foto": {
+        "archivo": "fotos-notas/wufzrl.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1854,23 +2008,25 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
+        "Página/12",
         "iProfesional",
         "Minuto Uno",
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
+        "La Brújula 24",
+        "La Tecla",
+        "La Verdad",
         "La Voz del Pueblo",
         "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "El Eco de Tandil",
-        "Ecos Diarios (Necochea)",
-        "La Nueva",
-        "La Brújula 24",
         "NDEN – Noticias de Necochea",
-        "La Verdad"
+        "Ecos Diarios (Necochea)",
+        "La Nueva"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
       "teniaImagenLaFuente": true,
@@ -2009,12 +2165,11 @@
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Día",
+        "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
-        "La Nueva",
-        "La Verdad"
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
       "teniaImagenLaFuente": true,
@@ -2238,10 +2393,10 @@
         "Radio Mitre",
         "El Día",
         "El Marplatense",
+        "Doble Amarilla",
         "Olé",
         "Ecos Diarios (Necochea)",
-        "La Brújula 24",
-        "Doble Amarilla"
+        "La Brújula 24"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -2400,6 +2555,7 @@
       "guion": "El Indec publica el martes la inflación oficial de septiembre",
       "seccion": "Economía",
       "medios": [
+        "Infobae",
         "QZ Noticias (Mar del Plata)",
         "La Noticia 1",
         "Minuto Uno",
@@ -2559,100 +2715,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261011noche.jpg",
         "credito": "Fotos: Radio Gabal (FM 104.1)"
-      }
-    },
-    {
-      "id": "vt9ful",
-      "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
-      "copete": "Agrupaciones indígenas se concentran el lunes en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza por parte del Gobierno nacional.",
-      "cuerpo": "Organizaciones de Pueblos Originarios se concentran el lunes a las 15 frente al domicilio de la expresidenta Cristina Kirchner, ubicado en la calle San José 1111 de la Ciudad de Buenos Aires. La movilización rechaza la restitución del Día de la Raza dispuesta por la gestión del presidente Javier Milei en contenidos oficiales.\n\nLa convocatoria incluye una ceremonia ancestral, un mural en vivo, danzas y lecturas de coplas. Las agrupaciones reivindicaron el decreto de 2010 que instituyó la fecha como el Día del Respeto a la Diversidad Cultural.\n\nPor su parte, el Poder Ejecutivo dispuso la medida mediante un decreto para conmemorar la llegada de Cristóbal Colón a América. La decisión genera controversia jurídica al contrastar con la Ley Nacional 27399, sancionada por el Congreso en 2017.",
-      "guion": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
-      "seccion": "Argentina",
-      "medios": [
-        "Perfil",
-        "Página/12",
-        "Crónica",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "La Verdad",
-        "La Nueva"
-      ],
-      "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T23:50:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T11:31:40.882Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Concentración de Pueblos Originarios frente al domicilio de Cristina Kirchner.",
-        "Rechazo a la restitución del Día de la Raza por parte del Gobierno nacional.",
-        "Convocatoria con actividades artísticas y ceremonias en la Ciudad de Buenos Aires.",
-        "Contraste normativo entre un decreto oficial y la Ley Nacional 27399."
-      ],
-      "noConfirmado": [
-        "El alcance definitivo del debate jurídico generado entre el decreto del Ejecutivo y la legislación vigente."
-      ],
-      "textoRedes": "Organizaciones de Pueblos Originarios se concentran este lunes frente a la casa de Cristina Kirchner en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza dispuesta por el Gobierno nacional.",
-      "etiquetas": [
-        "pueblos originarios",
-        "Cristina Kirchner",
-        "Javier Milei",
-        "Dia de la Raza",
-        "Ciudad de Buenos Aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
-          "fecha": "2026-10-12T06:18:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, el lugar de la concentración y los reclamos de las agrupaciones frente al Gobierno."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/pueblos-originarios-rechazan-el--dia-de-la-raza--y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner_a6acc20d3f61ec7711f817da8",
-          "fecha": "2026-10-12T09:40:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-8-0-0-organizaciones-de-pueblos-originarios-llamaron-a-concentrarse-en-rechazo-al-dia-de-la-raza",
-          "fecha": "2026-10-12T11:25:34.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/pueblos-originarios-rechazan-el-dia-de-la-raza-y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner/",
-          "fecha": "2026-10-12T09:46:34.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ube6ai",
-          "titulo": "La Casación rechaza frenar el remate de bienes de los hijos de Cristina Kirchner",
-          "fecha": "2026-10-08T17:53:15.000Z",
-          "ruta": "/nota/la-casacion-rechaza-frenar-el-remate-de-bienes-de-los-hijos-de-1ube6ai"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pueblos-originarios-protestan-frente-a-la-casa-de-cristina-kirchner",
-      "foto": {
-        "archivo": "fotos-notas/vt9ful.jpg",
-        "credito": "Foto: Perfil"
       }
     },
     {
@@ -3026,16 +3088,16 @@
     }
   ],
   "secciones": [
+    "Política",
     "Policiales",
     "Economía",
     "Balcarce",
     "Deportes",
     "Argentina",
-    "Política",
     "Cultura y agenda",
+    "Agro",
     "Automovilismo",
-    "Fútbol",
-    "Agro"
+    "Fútbol"
   ],
   "temas": [],
   "clima": {
@@ -3043,7 +3105,7 @@
       "temp": 9,
       "sensacion": 7,
       "humedad": 96,
-      "viento": 8,
+      "viento": 7,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": false
@@ -3396,6 +3458,12 @@
       "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
     },
     {
+      "id": "xulwye",
+      "titulo": "Luis Caputo negó las versiones sobre una posible salida…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\" (en otro medio que cuenta lo mismo)"
+    },
+    {
       "id": "p582dy",
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
@@ -3406,12 +3474,6 @@
       "titulo": "La ANMAT prohibió la venta y el uso de una marca de…",
       "seccion": "Argentina",
       "motivo": "parece promoción, no noticia: \"publicidad\""
-    },
-    {
-      "id": "7rwq35",
-      "titulo": "All Boys, el próximo desafío de Godoy Cruz",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "dffmvs",
@@ -3432,5 +3494,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 4
 }
