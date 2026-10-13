@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-12T23:32:00.308Z",
+ "consultado": "2026-10-13T00:03:08.204Z",
  "equipos": [
   "9739",
   "3",
@@ -1425,6 +1425,19 @@
      },
      {
       "posicion": 6,
+      "id": "11972",
+      "equipo": "Gimnasia (Mendoza)",
+      "pj": 12,
+      "g": 6,
+      "e": 2,
+      "p": 4,
+      "gf": 15,
+      "gc": 12,
+      "dif": 3,
+      "pts": 20
+     },
+     {
+      "posicion": 7,
       "id": "11",
       "equipo": "Independiente",
       "pj": 12,
@@ -1437,28 +1450,15 @@
       "pts": 18
      },
      {
-      "posicion": 7,
+      "posicion": 8,
       "id": "14",
       "equipo": "Newell's Old Boys",
-      "pj": 11,
+      "pj": 12,
       "g": 4,
       "e": 5,
-      "p": 2,
+      "p": 3,
       "gf": 11,
-      "gc": 8,
-      "dif": 3,
-      "pts": 17
-     },
-     {
-      "posicion": 8,
-      "id": "11972",
-      "equipo": "Gimnasia (Mendoza)",
-      "pj": 11,
-      "g": 5,
-      "e": 2,
-      "p": 4,
-      "gf": 14,
-      "gc": 12,
+      "gc": 9,
       "dif": 2,
       "pts": 17
      },
@@ -1757,7 +1757,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-12T22:32:29.556Z",
+ "tablaCuando": "2026-10-13T00:03:08.204Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",

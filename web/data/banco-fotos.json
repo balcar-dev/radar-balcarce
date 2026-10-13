@@ -13008,15 +13008,36 @@
   "cuando": "2026-10-12T23:01:59.444Z"
  },
  "1v320y9": {
-  "archivo": "fotos-notas/1v320y9.jpg",
   "medio": "Noticias Argentinas (NA)",
-  "credito": "Foto: Noticias Argentinas (NA)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Javier Milei ratifica a Luis Caputo y descarta cambios en el gabinete",
   "enlace": "https://noticiasargentinas.com/economia/luis-caputo-contra-economista---es-un-es----_a6accc0cf32fdad2908951a5e",
   "imagenOriginal": "https://alpha-app.tadevel-cdn.com/hostname/noticiasargentinas.com/api/v1/image/article/6accc0cf32fdad2908951a5e/facebook?v=430f5e700e5aa0bec5070b156af1cbe4&s=8ef688771c98344490a4360c6d8b5e8f",
   "razon": "Tiene excelente nitidez, encuadre formal y carece de marcas o menores.",
-  "cuando": "2026-10-12T23:31:53.409Z"
+  "cuando": "2026-10-12T23:31:53.409Z",
+  "intentado": true,
+  "borrada": true
+ },
+ "1c2cg52": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Marina Montoya gana los cincuenta kilómetros del Ultra Tierras del Diablo",
+  "razon": "La única imagen provista es el logotipo del medio, no una fotografía de la competencia deportiva. (se probó una foto libre de \"Marina Montoya\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-13T00:02:58.202Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "8hce1y": {
+  "archivo": "fotos-notas/8hce1y.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Domingo Cavallo cuestiona el plan económico y advierte por el ajuste",
+  "enlace": "https://www.ambito.com/politica/domingo-cavallo-volvio-cuestionar-el-modelo-economico-javier-milei-alerto-el-sobreajuste-y-la-caida-la-inversion-n6332902",
+  "imagenOriginal": "https://media.ambito.com/p/fb613e7ea990bbc692261bb064485e97/adjuntos/239/imagenes/043/140/0043140458/1200x675/smart/domingo-cavallo-2026.jpg",
+  "razon": "La foto B muestra a Domingo Cavallo de frente con excelente nitidez y encuadre limpio, sin marcas ni menores.",
+  "cuando": "2026-10-13T00:02:58.202Z"
  }
 }
