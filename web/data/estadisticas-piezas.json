@@ -4245,6 +4245,38 @@
    "metricas": {
     "total_video_views": 0
    }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122110589841495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "bqnbdp",
+   "dia": "2026-10-12",
+   "cuando": "2026-10-12T13:35:20.266Z",
+   "medida": "2026-10-13T14:00:20.116Z",
+   "metricas": {
+    "post_media_view": 5,
+    "post_total_media_view_unique": 3,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 1
+   }
+  },
+  {
+   "clave": "instagram/foto/17984863767091091",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "bqnbdp",
+   "dia": "2026-10-12",
+   "cuando": "2026-10-12T13:35:31.536Z",
+   "medida": "2026-10-13T14:00:20.116Z",
+   "metricas": {
+    "reach": 2,
+    "views": 2,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
   }
  ]
 }
