@@ -4073,6 +4073,56 @@
    "cuando": "2026-10-12T10:04:55.190Z",
    "medida": "2026-10-13T10:30:19.821Z",
    "metricas": {}
+  },
+  {
+   "clave": "instagram/reel/17881668315534212",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "feriado",
+   "dia": "2026-10-12",
+   "cuando": "2026-10-12T11:06:08.012Z",
+   "medida": "2026-10-13T11:30:17.833Z",
+   "metricas": {
+    "reach": 1,
+    "views": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1098859406179736",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "feriado",
+   "dia": "2026-10-12",
+   "cuando": "2026-10-12T11:06:49.554Z",
+   "medida": "2026-10-13T11:30:17.833Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/851514264685714",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "feriado",
+   "dia": "2026-10-12",
+   "cuando": "2026-10-12T11:07:20.997Z",
+   "medida": "2026-10-13T11:30:17.833Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "instagram/historia/17935949211399694",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "clima-noche",
+   "dia": "2026-10-12",
+   "cuando": "2026-10-12T23:05:05.966Z",
+   "medida": "2026-10-13T11:30:17.833Z",
+   "metricas": {}
   }
  ]
 }
