@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T13:13:20.666Z",
- "portada": 38,
- "archivo": 998,
+ "generado": "2026-10-13T13:41:26.263Z",
+ "portada": 36,
+ "archivo": 999,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-13T13:13:20.694Z",
+  "generado": "2026-10-13T13:41:26.304Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-13T13:06:44.511Z"
    },
    {
     "nombre": "participa-evento",
@@ -94,8 +94,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 48,
+    "salio": "2026-10-13T13:06:44.511Z",
+    "segundos": null,
     "notas": [
      {
       "id": "19xpc0o",
@@ -108,9 +108,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "pt4b1r",
-      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
-      "seccion": "Fútbol"
+      "id": "fa17ki",
+      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+      "seccion": "Balcarce"
      },
      {
       "id": "1qszs3z",
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 35,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "pt4b1r",
+      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
+      "seccion": "Fútbol"
+     },
      {
       "id": "uestws",
       "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
