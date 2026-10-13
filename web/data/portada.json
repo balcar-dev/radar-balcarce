@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T11:01:57.618Z",
+  "generado": "2026-10-13T11:32:03.109Z",
   "notas": [
     {
       "id": "clima20261013",
@@ -181,86 +181,157 @@
       }
     },
     {
-      "id": "1335hw8",
-      "titulo": "El Gobierno promulga la nueva ley sobre el régimen de zonas frías",
-      "copete": "El Poder Ejecutivo oficializó este martes la normativa que redefine los descuentos en las facturas de gas. La medida recorta los beneficios sumados en 2021 y fija criterios de vulnerabilidad.",
-      "cuerpo": "El Gobierno nacional oficializó la Ley 27.828, que modifica el régimen de zonas frías y limita el acceso a los descuentos en las facturas de gas.\n\nLa medida recorta el alcance del subsidio para los sectores que habían sido incorporados en 2021. Los beneficios plenos se mantienen únicamente en la Patagonia, Malargüe y la Puna, mientras que para el resto se implementan nuevos requisitos de vulnerabilidad socioeconómica y consumo razonable. Además, el Ejecutivo fijará las modalidades del beneficio y se prorrogan hasta finales de 2045 las exenciones impositivas sobre fuentes renovables de energía.\n\nDurante aquel debate, la senadora Flavia Royón explicó que la modificación busca mayor transparencia en el marco energético y la regularización de deudas del mercado eléctrico.",
-      "guion": "El Gobierno promulga la nueva ley sobre el régimen de zonas frías",
-      "seccion": "Política",
+      "id": "3xm1ge",
+      "titulo": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
+      "copete": "El Gobierno nacional oficializó la normativa que limita el acceso automático a las bonificaciones en las facturas de gas. La medida alcanza a Balcarce y a otros distritos bonaerenses, donde las tarifas podrían registrar subas promedio del 55%.",
+      "cuerpo": "El Gobierno nacional oficializó la Ley 27.828 a través del Decreto 1161/2026 en el Boletín Oficial, tras su aprobación en el Congreso el 24 de septiembre. La normativa modifica el régimen de Zona Fría y elimina las bonificaciones automáticas en las facturas de servicio para Balcarce y otros 94 municipios de la provincia de Buenos Aires. \n\nPara acceder al beneficio, que se mantendrá vigente hasta el 31 de diciembre de 2031, los hogares deberán estar inscriptos en el Régimen de Subsidios Focalizados y contar con ingresos menores a tres Canastas Básicas Totales, fijadas en $4.816.491 para una familia tipo. Según estimaciones provinciales, las tarifas podrían incrementarse en promedio cerca del 55%, mientras que Patagones se mantiene como el único distrito bonaerense que conserva el esquema anterior.",
+      "guion": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
+      "seccion": "Balcarce",
       "medios": [
+        "Radio Gabal (FM 104.1)",
         "La Nación",
+        "Agencia DIB",
         "Infobae",
         "Clarín",
         "TN (Todo Noticias)",
         "Perfil",
+        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
+        "Noticias Argentinas (NA)",
+        "Qué Digital",
         "Infobrisas (Radio Brisas)"
       ],
-      "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-promulgo-la-ley-que-modifica-el-regimen-de-zonas-frias-nid13102026/",
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/balcarce-perdera-el-beneficio-de-zona-fria-y-las-facturas-de-gas-podrian-aumentar-hasta-un-55",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T04:32:04.000Z",
       "sinFecha": false,
-      "visto": "2026-10-13T06:31:20.370Z",
-      "relevancia": 73,
-      "local": false,
+      "visto": "2026-10-13T11:31:20.770Z",
+      "relevancia": 100,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Ejecutivo oficializó la Ley 27.828 en el Boletín Oficial.",
-        "Se limitan los descuentos en las facturas de gas para sectores ampliados en 2021.",
-        "Los beneficios completos continúan en la Patagonia, Malargüe y la Puna.",
-        "Se establecen nuevos requisitos socioeconómicos para acceder a los subsidios."
+        "El Gobierno promulgó la Ley 27.828 mediante el Boletín Oficial.",
+        "Balcarce pierde el acceso automático a los descuentos en el gas.",
+        "Las facturas podrían registrar un aumento promedio cercano al 55%.",
+        "La normativa exige estar inscripto en el Régimen de Subsidios Focalizados."
       ],
-      "textoRedes": "El Gobierno nacional promulgó la ley que modifica el régimen de zonas frías y limita los descuentos en las tarifas de gas. La norma establece nuevos requisitos de vulnerabilidad y recorta los beneficios sumados en 2021.",
+      "noConfirmado": [
+        "El impacto final que registrará cada vivienda en sus boletas según el consumo individual."
+      ],
+      "textoRedes": "El Gobierno nacional promulgó la nueva ley que modifica el régimen de Zona Fría y limita los descuentos automáticos en las tarifas de gas. La medida impacta en Balcarce y podría generar aumentos promedio cercanos al 55% en las facturas.",
       "etiquetas": [
-        "Gobierno nacional",
-        "zonas frías",
-        "tarifas de gas",
-        "Boletín Oficial",
-        "subsidios"
+        "Zona Fría",
+        "Tarifas",
+        "Gas",
+        "Balcarce",
+        "Gobierno nacional"
       ],
       "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/balcarce-perdera-el-beneficio-de-zona-fria-y-las-facturas-de-gas-podrian-aumentar-hasta-un-55",
+          "fecha": "2026-10-13T11:16:53.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la promulgación de la ley, el alcance en Balcarce, los requisitos de ingresos y el porcentaje estimado de aumento."
+        },
         {
           "medio": "La Nación",
           "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-promulgo-la-ley-que-modifica-el-regimen-de-zonas-frias-nid13102026/",
           "fecha": "2026-10-13T04:32:04.000Z",
           "oficial": false,
-          "aporte": "Aportó los detalles sobre la reducción de subsidios, los alcances por regiones y los dichos de la senadora Flavia Royón."
+          "aporte": null
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/gas-mas-caro-el-gobierno-promulgo-la-ley-que-modifica-el-regimen-zona-fria-n56441",
+          "fecha": "2026-10-13T11:12:30.000Z",
+          "oficial": false,
+          "aporte": null
         },
         {
           "medio": "Infobae",
           "enlace": "https://www.infobae.com/economia/2026/10/13/el-gobierno-promulgo-la-nueva-ley-de-zonas-frias-que-redefine-el-alcance-del-subsidio-de-gas/",
           "fecha": "2026-10-13T05:02:32.000Z",
           "oficial": false,
-          "aporte": "Confirmó el número de la ley y la fecha de publicación en el Boletín Oficial."
+          "aporte": "Confirmó el número de la ley promulgada y su publicación en el Boletín Oficial."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/subsidios-gobierno-promulgo-ley-modifica-regimen-zonas-frias_0_lg4sGs6yjF.html",
+          "fecha": "2026-10-13T06:32:10.000Z",
+          "oficial": false,
+          "aporte": null
         },
         {
           "medio": "TN (Todo Noticias)",
           "enlace": "https://tn.com.ar/politica/2026/10/13/el-gobierno-oficializo-los-cambios-en-el-subsidio-de-zona-fria-quienes-podran-mantener-el-descuento-en-el-gas/",
-          "fecha": "2026-10-13T04:34:26.000Z",
+          "fecha": "2026-10-13T09:04:00.000Z",
           "oficial": false,
-          "aporte": "Informó la inclusión del Decreto 1161/2026 en la oficialización de la medida."
+          "aporte": "Precisó el número del decreto que formalizó la medida nacional."
         },
         {
           "medio": "Perfil",
           "enlace": "https://www.perfil.com/noticias/sociedad/el-gobierno-oficializo-la-nueva-ley-de-zonas-frias-quienes-seguiran-recibiendo-subsidio-al-gas-y-que-pasara-con-el-resto.phtml",
           "fecha": "2026-10-13T05:53:44.000Z",
           "oficial": false,
-          "aporte": "Aportó precisiones sobre la redefinición del régimen y los límites a los descuentos en gas."
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/zona-fria-cerca-16-millones-hogares-pierden-hoy-los-subsidios-la-energia-n6332972",
+          "fecha": "2026-10-13T10:55:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/el-gobierno-reglamento-la-nueva-ley-de-zonas-frias-que-redefine-el-alcance-del-subsidio-de-gas-6732/",
+          "fecha": "2026-10-13T07:16:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/el-gobierno-promulgo-la-nueva-ley-de-zona-fria-cuales-son-los-requisitos-para-conservar-el-subsidio-al-gas/",
+          "fecha": "2026-10-13T10:43:24.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-promulgo-los-cambios-en-la-zona-fria-que-restringen-el-acceso-a-los-subsidios-en-el-gas_a6ace0f9ed617fcd176cedb8c",
+          "fecha": "2026-10-13T10:50:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que la reforma también reordena deudas del mercado eléctrico y prorroga incentivos a energías renovables."
+        },
+        {
+          "medio": "Qué Digital",
+          "enlace": "https://quedigital.com.ar/politica/tarifa-de-gas-mas-cara-milei-promulgo-el-recorte-del-regimen-de-zona-fria/",
+          "fecha": "2026-10-13T11:24:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/13/111195-el-gobierno-promulgo-la-reforma-de-zona-fria-y-modifico-las-condiciones-para-recibir-subsidios-al-gas",
+          "fecha": "2026-10-13T10:26:35.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
+        "porque": "Lo contaron 13 medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-gobierno-promulga-la-nueva-ley-sobre-el-regimen-de-zonas-frias",
+      "slug": "el-gobierno-promulga-la-ley-27-828-que-modifica-el-regimen-de-zona",
       "foto": {
-        "archivo": "fotos-notas/1335hw8.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
+        "archivo": "fotos-notas/3xm1ge.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -274,6 +345,8 @@
         "TN (Todo Noticias)",
         "Página/12",
         "C5N",
+        "Canal 26",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "La Nueva"
@@ -283,7 +356,7 @@
       "fecha": "2026-10-13T02:07:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T03:31:41.882Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -500,6 +573,7 @@
         "TN (Todo Noticias)",
         "Minuto Uno",
         "C5N",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva"
       ],
@@ -868,7 +942,6 @@
       "guion": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -879,7 +952,7 @@
       "fecha": "2026-10-12T19:23:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 100,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1448,8 +1521,8 @@
         "0223 (Mar del Plata)",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "La Nueva",
-        "Básquet Plus"
+        "Básquet Plus",
+        "La Nueva"
       ],
       "enlace": "https://basquetplus.com/real-madrid-gaby-deck-operacion-lesion",
       "teniaImagenLaFuente": true,
@@ -1775,7 +1848,6 @@
       "medios": [
         "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
         "La Noticia 1",
         "Diputados Bonaerenses",
         "0221",
@@ -1785,7 +1857,8 @@
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
-        "El Día"
+        "El Día",
+        "Agencia DIB"
       ],
       "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
       "teniaImagenLaFuente": true,
@@ -1869,7 +1942,6 @@
       "guion": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Acción 5 (Balcarce)"
       ],
@@ -1878,7 +1950,7 @@
       "fecha": "2026-10-12T13:24:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 91,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1981,82 +2053,6 @@
         "archivo": "fotos-notas/collage-repaso20261012manana.jpg",
         "credito": "Fotos: La Nueva y El Cronista"
       }
-    },
-    {
-      "id": "1aqdhjn",
-      "titulo": "Un hombre de Lobería recibe suero antiofídico en el hospital",
-      "copete": "Un vecino de 43 años sufrió la mordedura de una serpiente yarará ñata mientras se encontraba en un campo de la vecina localidad y debió ser derivado de urgencia a Balcarce.",
-      "cuerpo": "Según relató la propia víctima, el ataque se produjo en una de sus manos al regresar de una actividad de caza, cuando no advirtió la presencia del reptil enroscado en un animal que había faenado.\n\nTras el episodio, acudió al centro de salud loberense como medida preventiva, pero los profesionales le indicaron un traslado inmediato debido a la falta de suero específico en esa localidad. El paciente llegó en un vehículo particular al Hospital Subzonal Felipe A. Fossati, donde los médicos evaluaron sus estudios y le administraron diez ampollas de suero antiofídico.\n\nEl hombre permanece internado bajo observación en la Unidad de Terapia Intensiva del nosocomio local a la espera de una evolución favorable de su cuadro de salud.",
-      "guion": "Un hombre de Lobería recibe suero antiofídico en el hospital",
-      "seccion": "Policiales",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-12T12:55:49.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T13:31:45.071Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "hospital"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Un hombre de 43 años fue atacado por una yarará ñata en Lobería.",
-        "El centro de salud de esa ciudad derivó al paciente por falta de suero.",
-        "Ingresó al Hospital Fossati en un vehículo particular para recibir tratamiento.",
-        "Le aplicaron diez ampollas de suero antiofídico y sigue en Terapia Intensiva."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un hombre de 43 años fue derivado desde Lobería a Balcarce tras ser mordido por una yarará ñata mientras cazaba en un campo. El paciente recibió diez ampollas de suero antiofídico y permanece internado en Terapia Intensiva en el Hospital Fossati.",
-      "etiquetas": [
-        "Hospital Fossati",
-        "Lobería",
-        "salud",
-        "yarará",
-        "mordedura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
-          "fecha": "2026-10-12T12:55:49.000Z",
-          "oficial": false,
-          "aporte": "Detalló el traslado desde Lobería y la internación en Terapia Intensiva del Hospital Fossati tras recibir suero antiofídico."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1v130vb",
-          "titulo": "Xoana Martínez defiende el acuerdo paritario y detalla los puntos del sector municipal",
-          "fecha": "2026-10-05T16:31:22.668Z",
-          "ruta": "/nota/xoana-martinez-defiende-el-acuerdo-paritario-y-detalla-los-puntos-del-1v130vb"
-        },
-        {
-          "id": "1ni344u",
-          "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
-          "fecha": "2026-10-05T11:40:58.000Z",
-          "ruta": "/nota/el-hospital-municipal-registra-problemas-en-sus-lineas-telefonicas-1ni344u"
-        },
-        {
-          "id": "164o14u",
-          "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
-          "fecha": "2026-10-02T13:18:34.000Z",
-          "ruta": "/nota/el-club-de-leones-entrega-nuevos-equipos-al-hospital-municipal-164o14u"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "un-hombre-de-loberia-recibe-suero-antiofidico-en-el-hospital"
     },
     {
       "id": "36ajax",
@@ -2230,13 +2226,13 @@
         "Página/12",
         "C5N",
         "Crónica",
+        "Canal 26",
         "Noticias Argentinas (NA)",
         "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
         "Clarín",
-        "Canal 26",
         "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
@@ -2377,7 +2373,6 @@
       "guion": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
       "seccion": "Deportes",
       "medios": [
-        "0223 (Mar del Plata)",
         "La Nación",
         "El Destape",
         "Perfil",
@@ -2390,6 +2385,7 @@
         "Ecos Diarios (Necochea)",
         "Clarín",
         "La Brújula 24",
+        "0223 (Mar del Plata)",
         "El Día"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
@@ -2542,6 +2538,100 @@
       "slug": "el-clima-de-hoy-en-balcarce-minima-de-4-y-maxima-de-13"
     },
     {
+      "id": "2mzsmm",
+      "titulo": "Nicolás Lamolina anula un penal tras chequear un celular",
+      "copete": "El árbitro revirtió su decisión en el final del encuentro entre All Boys y Godoy Cruz por la Primera Nacional, luego de observar las imágenes en el teléfono que le mostraron los futbolistas.",
+      "cuerpo": "El árbitro Nicolás Lamolina anuló un penal que había cobrado a favor de Godoy Cruz en el empate sin goles ante All Boys, disputado en Floresta por la trigésima tercera fecha del Grupo A de la Primera Nacional. Durante el tiempo adicionado, el juez marcó la pena máxima por una infracción cometida fuera del área. Ante los reclamos del plantel local y la falta de asistencia tecnológica oficial en la categoría, los jugadores le acercaron un celular con la repetición de la jugada. Tras observar las imágenes en el teléfono, el juez dio marcha atrás con su decisión.\n\nMinutos antes, el árbitro ya había sancionado otro penal a favor del conjunto mendocino que el delantero Pino desaprovechó. El encuentro finalizó igualado sin tantos.",
+      "guion": "Nicolás Lamolina anula un penal tras chequear un celular",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Olé",
+        "Clarín",
+        "0223 (Mar del Plata)",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "TyC Sports",
+        "Minuto Uno",
+        "Canal 26",
+        "Diario Popular",
+        "La Nueva",
+        "La Brújula 24",
+        "El Marplatense",
+        "Doble Amarilla",
+        "El Gráfico"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/escandalo-arbitral-la-primera-nacional-nicolas-lamolina-revirtio-un-penal-chequearlo-un-celular-n6332935",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-12T04:00:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T07:31:28.429Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El árbitro Nicolás Lamolina anuló un penal en el partido entre All Boys y Godoy Cruz.",
+        "El juez había sancionado la pena máxima por una falta fuera del área en el tiempo adicionado.",
+        "Los futbolistas locales le mostraron la repetición de la jugada en la pantalla de un teléfono.",
+        "Tras ver las imágenes en el celular, el árbitro dio marcha atrás y anuló el fallo."
+      ],
+      "seSabe": [
+        "El partido entre All Boys y Godoy Cruz terminó empatado sin goles por la trigésima tercera fecha del Grupo A de la Primera Nacional.",
+        "El árbitro Nicolás Lamolina cobró un penal a favor de Godoy Cruz por una falta cometida fuera del área.",
+        "Los jugadores de All Boys le mostraron la repetición de la jugada en un teléfono celular al juez.",
+        "Lamolina dio marcha atrás tras observar las imágenes y anuló la sanción.",
+        "El delantero Pino había malogrado un penal previo para el conjunto mendocino."
+      ],
+      "noConfirmado": [
+        "No se informó si el tribunal de disciplina tomará medidas respecto al uso de dispositivos móviles durante el desarrollo del encuentro."
+      ],
+      "textoRedes": "El árbitro Nicolás Lamolina anuló un penal tras observar las imágenes en un celular que le acercaron los jugadores de All Boys en el partido ante Godoy Cruz por la Primera Nacional.",
+      "etiquetas": [
+        "Fútbol",
+        "Primera Nacional",
+        "All Boys",
+        "Godoy Cruz",
+        "Nicolás Lamolina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/escandalo-arbitral-la-primera-nacional-nicolas-lamolina-revirtio-un-penal-chequearlo-un-celular-n6332935",
+          "fecha": "2026-10-13T01:24:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo del partido, el contexto del empate sin goles en Floresta y el incidente con el teléfono celular."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/en-floresta-nicolas-lamolina-cobro-un-penal-que-no-fue-los-jugadores-de-all-boys-le-mostraron-un-nid12102026/",
+          "fecha": "2026-10-13T03:04:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el episodio arbitral en la trigésima tercera fecha de la Primera Nacional."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/futbol/escandalo-el-ascenso-un-arbitro-cambio-decision-al-ver-la-jugada-un-celular-n924299",
+          "fecha": "2026-10-13T03:11:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el árbitro observó la falta a través de un aparato aportado por el club local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "nicolas-lamolina-anula-un-penal-tras-chequear-un-celular",
+      "foto": {
+        "archivo": "fotos-notas/2mzsmm.jpg",
+        "credito": "Foto: Minuto Uno"
+      }
+    },
+    {
       "id": "repaso20261011noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: Cerro El Triunfo, sarampión y Natación",
@@ -2610,145 +2700,118 @@
       }
     },
     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "copete": "La deportista local finalizó tercera en su categoría en la competencia disputada en Buenos Aires y obtuvo el pasaje al certamen ecuménico en Estados Unidos. César Rodríguez también completó una destacada actuación.",
-      "cuerpo": "Emilia Scioli consiguió el tercer puesto en su divisional en el Ironman 70.3 de Buenos Aires y obtuvo la clasificación al campeonato mundial que se desarrollará en Chattanooga, Estados Unidos, los días 28 y 29 de agosto de 2027.\n\nLa representante balcarceña había participado previamente en el Hombre de Piedra como preparación y aseguró que logró salir primera del agua.\n\nPor otra parte, el triatleta local César Rodríguez también participó del certamen y finalizó la prueba en 4h49'20\". Con ese registro, ocupó el puesto vigésimo primero en la categoría M 45 - 49 años entre 119 corredores.",
-      "guion": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes",
+      "id": "vt9ful",
+      "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
+      "copete": "Agrupaciones indígenas se concentran el lunes en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza por parte del Gobierno nacional.",
+      "cuerpo": "Organizaciones de Pueblos Originarios se concentran el lunes a las 15 frente al domicilio de la expresidenta Cristina Kirchner, ubicado en la calle San José 1111 de la Ciudad de Buenos Aires. La movilización rechaza la restitución del Día de la Raza dispuesta por la gestión del presidente Javier Milei en contenidos oficiales.\n\nLa convocatoria incluye una ceremonia ancestral, un mural en vivo, danzas y lecturas de coplas. Las agrupaciones reivindicaron el decreto de 2010 que instituyó la fecha como el Día del Respeto a la Diversidad Cultural.\n\nPor su parte, el Poder Ejecutivo dispuso la medida mediante un decreto para conmemorar la llegada de Cristóbal Colón a América. La decisión genera controversia jurídica al contrastar con la Ley Nacional 27399, sancionada por el Congreso en 2017.",
+      "guion": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
+      "seccion": "Argentina",
       "medios": [
-        "El Diario Balcarce"
+        "Perfil",
+        "Página/12",
+        "Crónica",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Verdad",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "La Nueva"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-11T23:31:31.632Z",
-      "sinFecha": true,
-      "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 53,
-      "local": true,
+      "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T23:50:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T11:31:40.882Z",
+      "relevancia": 58,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Emilia Scioli terminó tercera en su categoría en Buenos Aires.",
-        "La deportista registró un tiempo de 4h57'24\" en el Ironman 70.3.",
-        "Consiguió el pasaje al Mundial que se hará en Estados Unidos en 2027.",
-        "César Rodríguez completó la prueba en 4h49'20\"."
+        "Concentración de Pueblos Originarios frente al domicilio de Cristina Kirchner.",
+        "Rechazo a la restitución del Día de la Raza por parte del Gobierno nacional.",
+        "Convocatoria con actividades artísticas y ceremonias en la Ciudad de Buenos Aires.",
+        "Contraste normativo entre un decreto oficial y la Ley Nacional 27399."
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "El alcance definitivo del debate jurídico generado entre el decreto del Ejecutivo y la legislación vigente."
       ],
-      "textoRedes": "Emilia Scioli subió al podio en el Ironman 70.3 de Buenos Aires y clasificó al Mundial en Estados Unidos. César Rodríguez también completó una destacada actuación en la competencia.",
+      "textoRedes": "Organizaciones de Pueblos Originarios se concentran este lunes frente a la casa de Cristina Kirchner en la Ciudad de Buenos Aires para repudiar la restitución del Día de la Raza dispuesta por el Gobierno nacional.",
       "etiquetas": [
-        "Emilia Scioli",
-        "Ironman",
-        "Deportes",
-        "Balcarce"
+        "pueblos originarios",
+        "Cristina Kirchner",
+        "Javier Milei",
+        "Dia de la Raza",
+        "Ciudad de Buenos Aires"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/podio-de-emilia-scioli-en-el-ironman-703-y-clasificacion-al-mundial-418",
-          "fecha": null,
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/pueblos-originarios-se-concentran-frente-a-la-casa-de-cristina-kirchner-en-rechazo-al-dia-de-la-raza.phtml",
+          "fecha": "2026-10-12T06:18:00.000Z",
           "oficial": false,
-          "aporte": "Detalló los tiempos, puestos y declaraciones de los atletas balcarceños en el Ironman 70.3 de Buenos Aires."
+          "aporte": "Detalló el horario, el lugar de la concentración y los reclamos de las agrupaciones frente al Gobierno."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/pueblos-originarios-rechazan-el--dia-de-la-raza--y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner_a6acc20d3f61ec7711f817da8",
+          "fecha": "2026-10-12T09:40:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-12-8-0-0-organizaciones-de-pueblos-originarios-llamaron-a-concentrarse-en-rechazo-al-dia-de-la-raza",
+          "fecha": "2026-10-12T11:25:34.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/pueblos-originarios-rechazan-el-dia-de-la-raza-y-se-concentraran-en-la-puerta-de-la-casa-de-cristina-kirchner/",
+          "fecha": "2026-10-12T09:46:34.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "antecedentes": [
         {
-          "id": "1jfpdis",
-          "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial",
-          "fecha": "2026-10-06T16:26:52.163Z",
-          "ruta": "/nota/emilia-scioli-hace-podio-en-el-ironman-y-clasifica-al-mundial-1jfpdis"
-        },
-        {
-          "id": "repaso20261006noche",
-          "titulo": "El repaso de la noche en Radar Balcarce: Emilia Scioli, quirófano móvil y ermita",
-          "fecha": "2026-10-07T00:05:14.231Z",
-          "ruta": "/nota/el-repaso-de-la-noche-en-radar-balcarce-afa-emilia-scioli-quirofano-repaso20261006noche"
+          "id": "1ube6ai",
+          "titulo": "La Casación rechaza frenar el remate de bienes de los hijos de Cristina Kirchner",
+          "fecha": "2026-10-08T17:53:15.000Z",
+          "ruta": "/nota/la-casacion-rechaza-frenar-el-remate-de-bienes-de-los-hijos-de-1ube6ai"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "emilia-scioli-sube-al-podio-en-el-ironman-y-clasifica-al-mundial",
+      "slug": "pueblos-originarios-protestan-frente-a-la-casa-de-cristina-kirchner",
       "foto": {
-        "archivo": "fotos-notas/1hapve0.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "f1resultado2026r17",
-      "propia": "f1",
-      "tipoF1": "resultado",
-      "destacados": [
-        {
-          "texto": "Ver el campeonato de pilotos y constructores",
-          "href": "/tablas/formula-1"
-        }
-      ],
-      "circuitoF1": "Marina Bay Street Circuit",
-      "titulo": "F1: así fue el Gran Premio de Singapur, con Max Verstappen en lo más alto del podio",
-      "copete": "Max Verstappen ganó, Charles Leclerc fue segundo y Andrea Kimi Antonelli tercero. Así le fue a Colapinto. El resultado completo y cómo está el campeonato.",
-      "cuerpo": "Max Verstappen (Red Bull) ganó el Gran Premio de Singapur de la Fórmula 1, que se corrió el domingo 11 de octubre en Marina Bay Street Circuit, Marina Bay, Singapur, con un tiempo de 1:42:00,785, tras 62 vueltas. El podio lo completaron Charles Leclerc (Ferrari), a 7,335 segundos, y Andrea Kimi Antonelli (Mercedes), a 24,573 segundos.\n\nDel cuarto al décimo puesto terminaron, en ese orden: Lando Norris, Oscar Piastri, Lewis Hamilton, Liam Lawson, Nico Hülkenberg, George Russell, Isack Hadjar.\n\nEl argentino Franco Colapinto, con Alpine F1 Team, que había largado desde el puesto 15, no terminó la carrera: según los datos oficiales abandonó tras completar 29 vueltas.\n\nMax Verstappen (Red Bull) salió desde el primer puesto de la parrilla. La vuelta rápida fue de Charles Leclerc (Ferrari), con 1:35,202 en la vuelta 41.\n\nAsí quedó el campeonato de pilotos después de la fecha 17: 1º Andrea Kimi Antonelli, 325 puntos; 2º George Russell, 236 puntos; 3º Lewis Hamilton, 221 puntos; 4º Charles Leclerc, 197 puntos; 5º Max Verstappen, 196 puntos. Franco Colapinto es 12º con 27 puntos.\n\nLos datos son los resultados oficiales según Jolpica F1 (datos abiertos). Balcarce es la ciudad natal de Juan Manuel Fangio, cinco veces campeón del mundo.",
-      "guion": null,
-      "seccion": "Automovilismo",
-      "local": false,
-      "relevancia": 58,
-      "medios": [
-        "Jolpica F1 (datos abiertos)"
-      ],
-      "enlace": "https://github.com/jolpica/jolpica-f1",
-      "fuentesConsultadas": [
-        {
-          "medio": "Jolpica F1 (datos abiertos)",
-          "enlace": "https://github.com/jolpica/jolpica-f1"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-11T23:09:19.688Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:09:19.688Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-11T23:09:19.688Z",
-      "temas": [],
-      "etiquetas": [
-        "Fórmula 1",
-        "F1",
-        "Gran Premio",
-        "Gran Premio de Singapur",
-        "resultados",
-        "Franco Colapinto"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce armada con los datos abiertos de Jolpica F1.",
-      "slug": "f1-asi-fue-el-gran-premio-de-singapur-con-max-verstappen-en-lo-mas",
-      "foto": {
-        "archivo": "fotos-notas/libre-f1resultado2026r17.jpg",
-        "credito": "Foto: Kam2y / Wikimedia Commons (CC BY 3.0)"
+        "archivo": "fotos-notas/vt9ful.jpg",
+        "credito": "Foto: Perfil"
       }
     }
   ],
   "secciones": [
     "Balcarce",
     "Policiales",
-    "Política",
     "Economía",
     "Deportes",
     "Argentina",
+    "Política",
     "Cultura y agenda",
-    "Automovilismo"
+    "Automovilismo",
+    "Fútbol"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 9,
+      "temp": 10,
       "sensacion": 7,
-      "humedad": 91,
-      "viento": 10,
+      "humedad": 88,
+      "viento": 12,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": true
@@ -2803,7 +2866,22 @@
   },
   "avisosClima": [],
   "farmacias": {
-    "hoy": null,
+    "hoy": {
+      "dia": 13,
+      "diaSemana": "MARTES",
+      "farmacias": [
+        "VUOTTO"
+      ],
+      "detalle": [
+        {
+          "nombre": "Vuotto",
+          "direccion": "Calle 17 esquina 20",
+          "telefono": "42-2106"
+        }
+      ],
+      "mes": 10,
+      "fecha": "2026-10-13"
+    },
     "proximos": [
       {
         "dia": 13,
@@ -3101,12 +3179,6 @@
       "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "11k1rn",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1h6d10j",
       "titulo": "La ANMAT prohibió la venta y el uso de una marca de…",
       "seccion": "Argentina",
@@ -3123,18 +3195,6 @@
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1bwjwir",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "byrxyh",
-      "titulo": "Arrojaron pescados muertos en la vía pública y generaron…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"muertos\""
     },
     {
       "id": "ox863",

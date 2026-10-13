@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T11:01:57.618Z",
- "portada": 34,
- "archivo": 989,
+ "generado": "2026-10-13T11:32:03.109Z",
+ "portada": 33,
+ "archivo": 990,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-13T11:01:57.652Z",
+  "generado": "2026-10-13T11:32:03.126Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -98,14 +98,14 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "fa17ki",
-      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+      "id": "3xm1ge",
+      "titulo": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
       "seccion": "Balcarce"
      },
      {
-      "id": "1dz0qkj",
-      "titulo": "El Fondo Monetario Internacional recorta su previsión de crecimiento",
-      "seccion": "Economía"
+      "id": "fa17ki",
+      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+      "seccion": "Balcarce"
      },
      {
       "id": "1qszs3z",
@@ -131,7 +131,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 38,
+    "segundos": 32,
     "notas": [
      {
       "id": "1c2cg52",
@@ -142,11 +142,6 @@
       "id": "1imkz6n",
       "titulo": "Social Pato Naranja y Negro juegan la semifinal",
       "seccion": "Deportes"
-     },
-     {
-      "id": "1hapve0",
-      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
-      "seccion": "Deportes"
      }
     ]
    }
@@ -154,6 +149,12 @@
   "facebook": {
    "hoy": [],
    "cola": [
+    {
+     "id": "3xm1ge",
+     "titulo": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "fa17ki",
      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
