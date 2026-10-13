@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T13:41:26.263Z",
- "portada": 36,
+ "generado": "2026-10-13T14:10:09.288Z",
+ "portada": 34,
  "archivo": 999,
- "esperandoCuerpo": 4,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-10-13T13:41:26.304Z",
+  "generado": "2026-10-13T14:10:09.308Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-13T10:05:05.155Z"
    },
    {
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 38,
     "notas": [
      {
       "id": "pt4b1r",
@@ -136,11 +136,6 @@
      {
       "id": "uestws",
       "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
       "seccion": "Balcarce"
      }
     ]
@@ -152,7 +147,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 32,
+    "segundos": 42,
     "notas": [
      {
       "id": "1c2cg52",
@@ -163,6 +158,11 @@
       "id": "1imkz6n",
       "titulo": "Social Pato Naranja y Negro juegan la semifinal",
       "seccion": "Deportes"
+     },
+     {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -173,15 +173,14 @@
      "id": "3xm1ge",
      "titulo": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
      "cuando": "2026-10-13T11:45:23.948Z"
-    }
-   ],
-   "cola": [
+    },
     {
      "id": "pt4b1r",
      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
-     "seccion": "Fútbol",
-     "marcada": false
-    },
+     "cuando": "2026-10-13T13:35:21.141Z"
+    }
+   ],
+   "cola": [
     {
      "id": "uestws",
      "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
@@ -189,8 +188,8 @@
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-13T13:15:23.948Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-13T15:05:21.141Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

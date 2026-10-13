@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T13:41:26.263Z",
+ "generado": "2026-10-13T14:10:09.288Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -17,6 +17,28 @@
    ],
    "intentos": 1,
    "motivo": "cuerpo corto (62 palabras)",
+   "maximo": 3
+  },
+  {
+   "id": "p1y3zm",
+   "titulo": "Aprehendieron a un hombre por incumplir una prohibición de acercamiento y amenazar a su abuela",
+   "copete": "Un hombre fue aprehendido durante la tarde del sábado, alrededor de las 18 hs, luego de incumplir una medida cautelar de prohibición de acercamiento y proferir amenazas contra su abuela en un domicilio ubicado en calle 26, entre Primera Junta (1) y 3. Según informaron fuentes…",
+   "seccion": "Policiales",
+   "fecha": "2026-10-13T02:20:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/aprehendieron-un-hombre-por-incumplir.html",
+     "fecha": "2026-10-13T02:20:00.000Z"
+    },
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45062-incumplio-una-restriccion-de-acercamiento-y-fue-detenido-tras-amenazar-a-su-abuela/",
+     "fecha": null
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
    "maximo": 3
   },
   {
@@ -74,17 +96,39 @@
    "maximo": 4
   },
   {
-   "id": "1bn5nak",
-   "titulo": "Sancionaron a más de 1.800 banquineros en diversos operativos en el AMBA",
-   "copete": "Buenos Aires, 13 octubre (NA) -- La Agencia Nacional de Seguridad Vial (ANSV) sancionó a 1.800 conductores por circular ilegalmente por banquinas, práctica que se encuentra prohibida por el artículo 48 de la Ley Nacional de Tránsito. En lo que va de los operativos en las…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-13T12:06:12.000Z",
+   "id": "1xhsarn",
+   "titulo": "ATE convocó a un paro nacional para el jueves contra el DNU 70/23: qué servicios se verán afectados",
+   "copete": "La Asociación Trabajadores del Estado (ATE) convocó a un paro nacional de 24 horas para el jueves 15 de octubre . La medida afectará el funcionamiento de organismos públicos nacionales, provinciales y municipales e incluirá movilizaciones en las principales ciudades del país. El…",
+   "seccion": "Política",
+   "fecha": "2026-10-13T12:08:59.000Z",
    "fuentes": [
     {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/sociedad/sancionaron-a-mas-de-1-800-banquineros-en-diversos-operativos-en-el-amba_a6ace1dd7d617fcd176d11ef9",
-     "fecha": "2026-10-13T12:06:12.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/politica/2026/10/13/ate-convoco-a-un-paro-nacional-para-el-jueves-contra-el-dnu-7023-que-servicios-se-veran-afectados/",
+     "fecha": "2026-10-13T12:08:59.000Z"
     },
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/economia-politica/ate-confirmo-un-nuevo-paro-nacional-este-jueves-para-exigir-la-derogacion-del-dnu-702023-ni-videla-se-animo-a-tanto/",
+     "fecha": "2026-10-13T13:55:02.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/politica/ate-convoca-a-un-paro-nacional-de-24-horas-en-todo-el-pais-para-este-jueves-_a6ace24fcd617fcd176d23944",
+     "fecha": "2026-10-13T12:40:51.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
+  },
+  {
+   "id": "1c99k48",
+   "titulo": "Más de 1.800 conductores fueron sancionados por circular ilegalmente por la banquina en el AMBA",
+   "copete": "La Agencia Nacional de Seguridad Vial (ANSV) ha desplegado un operativo de fiscalización sin precedentes en las autopistas Panamericana, Acceso Oeste y Buenos Aires – La Plata. El objetivo central de esta medida es erradicar la circulación por banquinas, una práctica considerada…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-13T12:21:48.000Z",
+   "fuentes": [
     {
      "medio": "El Eco de Tandil",
      "enlace": "https://www.eleco.com.ar/provincia/mas-de-1800-conductores-fueron-sancionados-por-circular-ilegalmente-por-la-banquina-en-el-amba",
@@ -94,10 +138,37 @@
      "medio": "La Noticia 1",
      "enlace": "https://www.lanoticia1.com/noticia/la-ansv-sanciono-a-mas-de-1800-conductores-por-circular-por-las-banquinas-en-las-autopistas-del-amba",
      "fecha": "2026-10-13T12:38:13.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/transito/orden-las-autopistas-la-ansv-sanciono-mas-1800-banquineros-autopistas-del-amba-n924315",
+     "fecha": "2026-10-13T13:26:00.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 94 caracteres, el máximo es 90",
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
+  },
+  {
+   "id": "1pgmyrr",
+   "titulo": "Luis Caputo inicia su agenda en Tailandia para negociar con el FMI un desembolso de US$ 869 millones",
+   "copete": "El ministro de Economía se reunirá con Kristalina Georgieva en busca de avanzar en la tercera revisión del acuerdo, atravesada por el incumplimiento de la meta fiscal del primer semestre.",
+   "seccion": "Economía",
+   "fecha": "2026-10-13T02:45:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/economia/luis-caputo-inicia-su-agenda-tailandia-negociar-el-fmi-un-desembolso-us-869-millones-n6332912",
+     "fecha": "2026-10-13T02:45:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/luis-caputo-llega-tailandia-y-busca-destrabar-la-tercera-revision-el-fmi-n6332903",
+     "fecha": "2026-10-13T13:34:00.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
    "maximo": 3
   }
  ]
