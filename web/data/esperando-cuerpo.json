@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T10:01:57.086Z",
+ "generado": "2026-10-13T10:32:00.135Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,62 +15,30 @@
      "fecha": "2026-10-13T09:45:39.000Z"
     }
    ],
-   "intentos": 1,
+   "intentos": 2,
    "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
    "maximo": 3
   },
   {
-   "id": "1rd059l",
-   "titulo": "La interminable sequía de Julián Álvarez en Atlético de Madrid: casi medio año sin goles y el respaldo del Cholo Simeone",
-   "copete": "Julián Álvarez lleva casi medio año sin convertir con la camiseta del Atlético de Madrid . Su último tanto con el Colchonero fue el 29 de abril , un penal cruzado ante Arsenal que selló el 1-1 en la ida de las semifinales de la Champions League . El cordobés ganó protagonismo en…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-12T14:51:47.000Z",
+   "id": "1ft6wlo",
+   "titulo": "El FMI recortó las proyecciones de crecimiento para la Argentina este año y en 2027",
+   "copete": "Buenos Aires, 12 octubre (NA) -- El Fondo Monetario Internacional (FMI) afirmó este lunes que el Producto Bruto Interno (PBI) de la Argentina crecerá este año un 2,1 por ciento, por lo que bajó 1,4 por ciento de los 3,5% anunciados en los informes de abril y julio de este año…",
+   "seccion": "Economía",
+   "fecha": "2026-10-13T02:07:12.000Z",
    "fuentes": [
     {
-     "medio": "TyC Sports",
-     "enlace": "https://www.tycsports.com/espana/la-liga/la-interminable-sequia-de-julian-alvarez-hace-cuanto-no-marca-un-gol-en-atletico-de-madrid-id765814.html",
-     "fecha": "2026-10-12T14:51:47.000Z"
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-fmi-rfecorto-las-proyecciones-de-crecimiento-para-la-argentina-en-2026-y-2027-_a6acd982e32fdad2908b2693e",
+     "fecha": "2026-10-13T02:07:12.000Z"
     },
     {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/deportes/interminable-la-extensa-sequia-julian-alvarez-atletico-madrid-y-el-respaldo-simeone-n1605563",
-     "fecha": "2026-10-12T18:19:07.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/deportes/julian-alvarez-no-marca-en-el-atletico-de-madrid-desde-abril-y-diego-simeone-le-dio-su-respaldo/",
-     "fecha": "2026-10-12T17:23:20.000Z"
-    },
-    {
-     "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/europa/simeone-rompio-el-silencio-sobre-la-sequia-goleadora-de-julian-alvarez-tiene-muchas-mas-herramientas",
-     "fecha": "2026-10-12T21:29:36.000Z"
+     "medio": "El Día",
+     "enlace": "https://www.eldia.com/politica-y-economia/el-fmi-recorto-las-proyecciones-de-crecimiento-para-la-argentina-este-ano-y-en-2027-politica-y-economia_1791884280",
+     "fecha": "2026-10-13T09:42:08.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "1ciy7qc",
-   "titulo": "El FMI recorta las previsiones de crecimiento de la economía argentina para 2026 y 2027",
-   "copete": "Buenos Aires, 13 oct (EFECOM).- El Fondo Monetario Internacional (FMI) prevé que la economía de Argentina crezca un 2,1 % este año y un 3,5 % en 2027, por debajo de lo pronosticado por este organismo en abril y julio pasado. Según el informe de 'Perspectivas económicas…",
-   "seccion": "Economía",
-   "fecha": "2026-10-13T02:17:33.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/america/agencias/2026/10/13/el-fmi-recorta-las-previsiones-de-crecimiento-de-la-economia-argentina-para-2026-y-2027/",
-     "fecha": "2026-10-13T02:17:33.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/el-fmi-recorta-la-prevision-crecimiento-argentina-n6332941",
-     "fecha": "2026-10-13T02:39:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 57 palabras",
    "maximo": 3
   }
  ]

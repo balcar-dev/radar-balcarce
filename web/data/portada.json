@@ -1,6 +1,115 @@
 {
-  "generado": "2026-10-13T10:01:57.086Z",
+  "generado": "2026-10-13T10:32:00.135Z",
   "notas": [
+    {
+      "id": "clima20261013",
+      "propia": "clima",
+      "titulo": "El clima de hoy en Balcarce: mínima de 8° y máxima de 13°",
+      "copete": "El pronóstico de este martes 13 de octubre para Balcarce marca una mínima de 8° y máxima de 13°, con llovizna leve.",
+      "cuerpo": "En Balcarce, a las 07:31 hay 9° y el cielo está nublado; la sensación térmica es de 7°; el viento sopla del E a 10 km/h; la humedad es del 93%. Son los datos de Open-Meteo de ese momento.\n\nPara todo el martes 13, el pronóstico marca una mínima de 8° y máxima de 13° y llovizna leve. La probabilidad de lluvia es del 22%. El viento llegaría a 15 km/h.\n\nPara los días que siguen, el pronóstico dice: el miércoles 14, mínima de 7° y máxima de 15°, con 60% de probabilidad de lluvia; el jueves 15, mínima de 9° y máxima de 14°, con 30% de probabilidad de lluvia; el viernes 16, mínima de 5° y máxima de 12°, con 25% de probabilidad de lluvia.\n\nEl clima se actualiza a lo largo del día: los valores de ahora, hora por hora, están en la página del clima de Radar Balcarce. El clima de la mañana también salió como video en nuestra página de Facebook.",
+      "guion": null,
+      "seccion": "Balcarce",
+      "local": true,
+      "relevancia": 58,
+      "medios": [
+        "Open-Meteo"
+      ],
+      "enlace": "https://open-meteo.com",
+      "fuentesConsultadas": [
+        {
+          "medio": "Open-Meteo",
+          "enlace": "https://open-meteo.com"
+        }
+      ],
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-13T10:31:58.186Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T10:31:58.186Z",
+      "publicadaPor": null,
+      "publicadaCuando": "2026-10-13T10:31:58.186Z",
+      "temas": [],
+      "etiquetas": [
+        "clima",
+        "pronóstico",
+        "Balcarce",
+        "tiempo"
+      ],
+      "como": "automatica",
+      "firma": "Nota de Radar Balcarce armada con los datos de Open-Meteo a las 07:31.",
+      "enlacesEnTexto": [
+        {
+          "texto": "página del clima de Radar Balcarce",
+          "href": "/clima"
+        },
+        {
+          "texto": "nuestra página de Facebook",
+          "href": "https://www.facebook.com/reel/1632482681855922/"
+        }
+      ],
+      "destacados": [
+        {
+          "texto": "Ver el clima de ahora",
+          "href": "/clima"
+        },
+        {
+          "texto": "Mirá el clima de hoy en video, en Facebook",
+          "href": "https://www.facebook.com/reel/1632482681855922/"
+        }
+      ],
+      "slug": "el-clima-de-hoy-en-balcarce-minima-de-8-y-maxima-de-13"
+    },
+    {
+      "id": "mj08wf",
+      "titulo": "Dos motociclistas circulan de forma peligrosa por la avenida 32",
+      "copete": "Un registro audiovisual muestra a dos conductores que realizan maniobras imprudentes en plena vía pública durante la tarde del lunes. Pusieron en riesgo la seguridad vial.",
+      "cuerpo": "Dos conductores de motocicletas fueron filmados mientras realizaban maniobras arriesgadas sobre la avenida Suipacha, también conocida como avenida 32, durante la tarde del lunes.\n\nEn la grabación se observa que circulan con la rueda delantera en el aire y se paran encima de los asientos mientras los rodados avanzan, lo que genera peligro para peatones, ciclistas y automovilistas.\n\nEste tipo de conductas imprudentes vuelve a evidenciar la necesidad de profundizar los controles viales y fomentar la responsabilidad al conducir para evitar siniestros viales.",
+      "guion": "Dos motociclistas circulan de forma peligrosa por la avenida 32",
+      "seccion": "Policiales",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/video-preocupacion-por-peligrosas-maniobras-de-motociclistas",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T10:10:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T10:31:34.486Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ocurrió durante la tarde del lunes en la avenida 32.",
+        "Dos motociclistas hicieron maniobras imprudentes.",
+        "Circulaban levantando la rueda y parados sobre los asientos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Dos motociclistas fueron filmados mientras realizaban maniobras peligrosas sobre la avenida 32 durante la tarde del lunes.",
+      "etiquetas": [
+        "seguridad vial",
+        "motos",
+        "avenida 32",
+        "tránsito"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/video-preocupacion-por-peligrosas-maniobras-de-motociclistas",
+          "fecha": "2026-10-13T10:10:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el registro de las maniobras peligrosas de motociclistas en la avenida 32 durante la tarde del lunes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "dos-motociclistas-circulan-de-forma-peligrosa-por-la-avenida-32"
+    },
     {
       "id": "1335hw8",
       "titulo": "El Gobierno promulga la nueva ley sobre el régimen de zonas frías",
@@ -82,62 +191,6 @@
       }
     },
     {
-      "id": "d1rexu",
-      "titulo": "Detienen a un hombre por desobedecer una restricción de acercamiento",
-      "copete": "La Policía aprehendió el fin de semana a un hombre en una vivienda de la ciudad tras violar una medida cautelar y amenazar a su abuela frente a los efectivos.",
-      "cuerpo": "Personal policial detuvo el sábado cerca de las 18 a un hombre en una finca ubicada en la calle 26 entre 1 y 3. El procedimiento se activó mediante un aviso del Centro de Operaciones de Monitoreo que advirtió la presencia del sujeto en el lugar, lo cual contravenía una orden dictada por el Juzgado de Paz a cargo del doctor Mónaco.\n\nDurante la intervención en el domicilio, el individuo lanzó amenazas contra su abuela en presencia de los uniformados. La Fiscalía de Delitos en Flagrancia, conducida por la doctora Ana María Caro, convalidó la actuación policial y ordenó iniciar actuaciones por desobediencia y derivar al aprehendido a la Unidad Penal 44 de Batán, según informaron las fuentes.",
-      "guion": "Detienen a un hombre por desobedecer una restricción de acercamiento",
-      "seccion": "Policiales",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/aprehendieron-a-un-hombre-por-incumplir-una-restriccion-de-acercamiento-y-amenazar-a-su-abuela",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T02:18:57.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T02:31:25.137Z",
-      "relevancia": 98,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Aprehendieron a un hombre en un domicilio local el sábado por la tarde.",
-        "Incumplió una prohibición de acercamiento dictada por el Juzgado de Paz.",
-        "Amenazó a su abuela frente al personal policial que acudió al lugar.",
-        "La fiscal Ana María Caro avaló la causa y dispuso su traslado a Batán."
-      ],
-      "etiquetas": [
-        "policiales",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/aprehendieron-a-un-hombre-por-incumplir-una-restriccion-de-acercamiento-y-amenazar-a-su-abuela",
-          "fecha": "2026-10-13T02:18:57.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles horarios, la ubicación exacta, la intervención del COM, el juzgado interviniente y la fiscalía a cargo."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/45062-incumplio-una-restriccion-de-acercamiento-y-fue-detenido-tras-amenazar-a-su-abuela/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó la confirmación sobre el procedimiento policial y el traslado a la unidad penal."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "detienen-a-un-hombre-por-desobedecer-una-restriccion-de-acercamiento"
-    },
-    {
       "id": "1dz0qkj",
       "titulo": "El Fondo Monetario Internacional recorta su previsión de crecimiento",
       "copete": "El organismo proyecta una expansión del producto bruto del 2,1% para este año y ubicó la inflación anual promedio en el 32,5%. Las cifras forman parte del último informe global difundido el lunes.",
@@ -147,15 +200,14 @@
       "medios": [
         "TN (Todo Noticias)",
         "C5N",
-        "Noticias Argentinas (NA)",
-        "El Día"
+        "La Nueva"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/12/el-fmi-recorto-fuerte-sus-previsiones-para-la-economia-argentina-proyecto-menos-crecimiento-y-mas-inflacion/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T02:07:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T03:31:41.882Z",
-      "relevancia": 73,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -371,14 +423,15 @@
         "Infobae",
         "Minuto Uno",
         "C5N",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
       "enlace": "https://www.minutouno.com/sociedad/la-intendencia-del-parque-nacional-iguazu-confirmo-la-reapertura-la-crecida-del-rio-n6332900",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T22:35:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T01:31:20.126Z",
-      "relevancia": 63,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -543,9 +596,8 @@
         "Crónica",
         "Noticias Argentinas (NA)",
         "Punto Noticias",
-        "La Nueva",
-        "El Marplatense",
         "El Eco de Tandil",
+        "La Nueva",
         "0223 (Mar del Plata)",
         "Ayacucho al Día"
       ],
@@ -612,7 +664,8 @@
       "seccion": "Deportes",
       "medios": [
         "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-festejo-tres-titulos-de-la-mano-de-alvarez-y-barbieri",
       "teniaImagenLaFuente": true,
@@ -656,65 +709,6 @@
       "slug": "top-serrano-gana-tres-titulos-en-el-torneo-de-tenis-de-mesa"
     },
     {
-      "id": "3bom4j",
-      "titulo": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
-      "copete": "El gimnasio La Cuna del Quíntuple albergó la octogésima novena edición de la competencia de tenis de mesa, que reunió a 127 jugadores durante el fin de semana.",
-      "cuerpo": "El polideportivo local ubicado en la calle 13 número 818 fue sede del octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa, perteneciente al circuito TmT. La competencia reunió a 127 deportistas divididos en siete categorías, quienes disputaron más de doscientos partidos entre el sábado y el domingo por la noche, según informó un medio local.\n\nEl certamen contó con la presencia de competidores de diversas localidades bonaerenses y porteñas.\n\nEn cuanto a los resultados deportivos destacados del fin de semana, Barbieri logró el bicampeonato y Álvarez se impuso en la divisional principal. Por su parte, el deportista local Pedro Rodríguez Curate, perteneciente a la entidad anfitriona, alcanzó el tercer puesto en su divisional.",
-      "guion": "Barbieri gana el bicampeonato y Álvarez se consagra en el Torneo Ciudad",
-      "seccion": "Deportes",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T19:42:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T07:01:46.499Z",
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se disputó el octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa.",
-        "Participaron 127 deportistas distribuidos en siete categorías diferentes.",
-        "El certamen tuvo lugar en el gimnasio La Cuna del Quíntuple durante el fin de semana.",
-        "Barbieri logró el bicampeonato y Álvarez se consagró en la divisional principal."
-      ],
-      "seSabe": [
-        "El torneo reunió a 127 inscriptos de distintas ciudades de la provincia y de Buenos Aires.",
-        "Se jugaron más de doscientos partidos en siete categorías a lo largo de dos jornadas.",
-        "Pedro Rodríguez Curate logró el tercer puesto para el Club Top Serrano."
-      ],
-      "noConfirmado": [
-        "No se detallaron los resultados completos de todas las categorías en juego.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El gimnasio La Cuna del Quíntuple fue sede de la octogésima novena edición del Torneo Ciudad de Balcarce de tenis de mesa, que reunió a 127 competidores y dejó destacados podios locales.",
-      "etiquetas": [
-        "tenis de mesa",
-        "Torneo Ciudad de Balcarce",
-        "deportes",
-        "Club Top Serrano"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/barbieri-fue-bicampeon-y-alvarez-se.html",
-          "fecha": "2026-10-12T20:22:53.264Z",
-          "oficial": false,
-          "aporte": "Informó sobre el desarrollo, las fechas, la cantidad de participantes y los ganadores del octogésimo noveno Torneo Ciudad de Balcarce de tenis de mesa."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "barbieri-gana-el-bicampeonato-y-alvarez-se-consagra-en-el-torneo"
-    },
-    {
       "id": "zlbsz6",
       "titulo": "La CGT rechaza la restitución del Día de la Raza dispuesta por el Gobierno",
       "copete": "La central obrera cuestionó la medida de la administración de Javier Milei y ratificó la vigencia del Día del Respeto a la Diversidad Cultural.",
@@ -722,10 +716,10 @@
       "guion": "La CGT rechaza la restitución del Día de la Raza dispuesta por el Gobierno",
       "seccion": "Política",
       "medios": [
-        "El Eco de Tandil",
         "Perfil",
         "Minuto Uno",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "La Verdad"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-cgt-califico-al--dia-de-la-raza--que-restituyo-el-gobierno-como-una--provocacion-burda-_a6acd35b332fdad2908a53ddf",
@@ -733,7 +727,7 @@
       "fecha": "2026-10-12T19:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T22:31:50.433Z",
-      "relevancia": 66,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1166,7 +1160,6 @@
       "guion": "Alberto Fernández cuestiona a Cristina Kirchner por el acuerdo con el FMI",
       "seccion": "Política",
       "medios": [
-        "El Eco de Tandil",
         "Infobae",
         "Clarín",
         "La Nación",
@@ -1175,6 +1168,7 @@
         "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "La Nueva",
         "El Día"
       ],
@@ -1522,15 +1516,15 @@
       "guion": "El Gobierno nacional restituye el nombre de Día de la Raza",
       "seccion": "Argentina",
       "medios": [
-        "El Eco de Tandil",
         "Página/12",
         "Ámbito",
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Voz del Pueblo",
-        "InfoRegión",
-        "La Nueva"
+        "El Eco de Tandil",
+        "La Nueva",
+        "InfoRegión"
       ],
       "enlace": "https://noticiasargentinas.com/politica/el-mensaje-de-la-casa-rosada-por-el-12-de-octubre---el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo-_a6acd158732fdad2908a0e800",
       "teniaImagenLaFuente": true,
@@ -1770,9 +1764,9 @@
         "0221",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
         "El Día",
-        "El Eco de Tandil",
         "La Verdad",
         "Infoeme"
       ],
@@ -2063,21 +2057,23 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
+        "Página/12",
         "iProfesional",
         "Minuto Uno",
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
+        "La Tecla",
         "La Voz del Pueblo",
-        "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
-        "NDEN – Noticias de Necochea",
         "El Eco de Tandil",
+        "NDEN – Noticias de Necochea",
         "Ecos Diarios (Necochea)",
         "La Nueva",
+        "InfoRegión",
         "La Brújula 24",
         "La Verdad"
       ],
@@ -2217,10 +2213,10 @@
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Clarín",
         "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
+        "Clarín",
         "La Nueva",
         "La Verdad"
       ],
@@ -2363,14 +2359,15 @@
       "seccion": "Economía",
       "medios": [
         "Clarín",
-        "Ámbito"
+        "Ámbito",
+        "El Día"
       ],
       "enlace": "https://www.clarin.com/economia/cavallo-volvio-cuestionar-modelo-economico-milei-alerto-sobreajuste-caida-inversion_0_Mb8qDoLKWR.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T12:29:08.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T04:01:57.624Z",
-      "relevancia": 38,
+      "relevancia": 52,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2442,13 +2439,13 @@
         "Minuto Uno",
         "Crónica",
         "Radio Mitre",
+        "El Marplatense",
+        "Doble Amarilla",
         "Olé",
         "Ecos Diarios (Necochea)",
         "Clarín",
         "La Brújula 24",
-        "Doble Amarilla",
-        "El Día",
-        "El Marplatense"
+        "El Día"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -2861,10 +2858,10 @@
     }
   ],
   "secciones": [
-    "Política",
-    "Policiales",
-    "Economía",
     "Balcarce",
+    "Policiales",
+    "Política",
+    "Economía",
     "Deportes",
     "Argentina",
     "Cultura y agenda",
@@ -2874,9 +2871,9 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 8,
-      "sensacion": 6,
-      "humedad": 94,
+      "temp": 9,
+      "sensacion": 7,
+      "humedad": 93,
       "viento": 10,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3218,28 +3215,22 @@
       "motivo": "necesita ojo humano: \"homicidio\" (en otro medio que cuenta lo mismo)"
     },
     {
+      "id": "p1y3zm",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\" (en otro medio que cuenta lo mismo)"
+    },
+    {
       "id": "1vtrwgo",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "5xmju9",
-      "titulo": "Kiara Ponce, tras consagrarse campeona nacional de karate…",
-      "seccion": "Deportes",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "p582dy",
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1do6sdg",
-      "titulo": "All Boys vs. Godoy Cruz en vivo: cómo verlo, horario y TV",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "1h6d10j",
@@ -3254,5 +3245,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 2
 }
