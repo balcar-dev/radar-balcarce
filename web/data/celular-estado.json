@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T20:32:49.705Z",
- "portada": 44,
- "archivo": 1015,
+ "generado": "2026-10-13T21:34:14.091Z",
+ "portada": 49,
+ "archivo": 1026,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-13T20:32:49.740Z",
+  "generado": "2026-10-13T21:34:14.124Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,26 +157,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "u043fh",
+      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "1iw56bi",
       "titulo": "El Indec ubica la canasta básica por debajo de la inflación en septiembre",
       "seccion": "Economía"
      },
      {
-      "id": "ampmp1",
-      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "id": "fdr535",
+      "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
       "seccion": "Balcarce"
      },
      {
-      "id": "1c2cg52",
-      "titulo": "Marina Montoya gana los cincuenta kilómetros del Ultra Tierras del Diablo",
+      "id": "ampmp1",
+      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
       "seccion": "Deportes"
      }
     ]
@@ -210,7 +210,20 @@
      "cuando": "2026-10-13T18:13:43.987Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "fdr535",
+     "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "10aoo7v",
+     "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-13T19:43:43.987Z",
    "porDia": 5,

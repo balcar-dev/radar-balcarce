@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T20:32:49.705Z",
+ "generado": "2026-10-13T21:34:14.091Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -13,6 +13,11 @@
      "medio": "Infórmese Primero (FM 104.9)",
      "enlace": "http://www.informeseprimero.com.ar/2026/10/primavera-en-el-vagon-una-jornada.html",
      "fecha": "2026-10-13T18:45:20.751Z"
+    },
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/primavera-en-el-vagon-habra-una-jornada-recreativa-para-toda-la-familia",
+     "fecha": "2026-10-13T21:07:45.000Z"
     }
    ],
    "intentos": 3,
@@ -42,6 +47,28 @@
    "maximo": 3
   },
   {
+   "id": "pl4s36",
+   "titulo": "El hat-trick de Nicolo Tresoldi al Inter de Lautaro Martínez",
+   "copete": "",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-13T20:58:59.000Z",
+   "fuentes": [
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/futbol-internacional/champions/hat-trick-nicolo-tresoldi-inter-lautaro-martinez_3_6iyszAyvGb.html",
+     "fecha": "2026-10-13T20:58:59.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/deportes/dura-derrota-del-inter-la-champions-league-doblete-lautaro-martinez-y-hat-trick-del-europibe-nicolo-tresoldi-n6333367",
+     "fecha": "2026-10-13T21:18:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 3 problemas (nombre): el titulo nombra a \"italia\" y la fuente no",
+   "maximo": 3
+  },
+  {
    "id": "1xbibcl",
    "titulo": "Vagón cultural: Una tarde de juegos, música y talleres para compartir en familia",
    "copete": "",
@@ -56,28 +83,6 @@
    ],
    "intentos": 3,
    "motivo": "cuerpo: 1 problema (copia): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 46 palabras",
-   "maximo": 3
-  },
-  {
-   "id": "1jx823a",
-   "titulo": "El Banco Central compró US$291 millones, el monto más alto desde fines de julio",
-   "copete": "El Banco Central (BCRA) compró este martes US$291 millones en el mercado cambiario , la adquisición diaria más alta desde fines de julio. La operación marcó una aceleración en el ritmo de intervención de la autoridad monetaria, que en las últimas semanas había reducido el…",
-   "seccion": "Economía",
-   "fecha": "2026-10-13T20:04:48.000Z",
-   "fuentes": [
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/economia/2026/10/13/el-banco-central-compro-us291-millones-el-monto-mas-alto-desde-fines-de-julio/",
-     "fecha": "2026-10-13T20:04:48.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/13/el-banco-central-realizo-la-mayor-compra-de-dolares-desde-julio-y-ya-acumula-mas-de-usd-15000-millones-en-2026/",
-     "fecha": "2026-10-13T20:20:04.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 2 problemas (numero): el guion dice 1.000.000 y la fuente no lo dice",
    "maximo": 3
   }
  ]
