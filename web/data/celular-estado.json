@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T16:38:13.000Z",
+ "generado": "2026-10-13T17:10:37.421Z",
  "portada": 35,
  "archivo": 999,
- "esperandoCuerpo": 9,
+ "esperandoCuerpo": 10,
  "redes": {
-  "generado": "2026-10-13T16:38:13.033Z",
+  "generado": "2026-10-13T17:10:37.463Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -193,11 +193,16 @@
      "id": "1dun8ft",
      "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
      "cuando": "2026-10-13T15:09:14.343Z"
+    },
+    {
+     "id": "uestws",
+     "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
+     "cuando": "2026-10-13T16:40:16.100Z"
     }
    ],
    "cola": [],
-   "cupo": 2,
-   "proximoDesde": "2026-10-13T16:39:14.343Z",
+   "cupo": 1,
+   "proximoDesde": "2026-10-13T18:10:16.100Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
