@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T17:10:37.421Z",
+ "generado": "2026-10-13T17:20:34.802Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -37,11 +37,6 @@
      "fecha": "2026-10-13T15:52:15.000Z"
     },
     {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/un-gremio-estatales-se-sumo-al-paro-del-jueves-donde-impactara-n56446",
-     "fecha": "2026-10-13T12:44:00.000Z"
-    },
-    {
      "medio": "Clarín",
      "enlace": "https://www.clarin.com/politica/paro-estatales-anuncio-ate-exigir-derogacion-dnu-7023_0_Fw9v15qpEX.html",
      "fecha": "2026-10-13T15:24:37.000Z"
@@ -62,6 +57,11 @@
      "fecha": "2026-10-13T13:55:00.000Z"
     },
     {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/politica/2026/10/13/paro-nacional-de-ate-confirmado-como-funcionara-anses-pami-y-el-transporte-publico-este-jueves-15-de-octubre/",
+     "fecha": "2026-10-13T17:03:36.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/ate-convoca-a-un-paro-nacional-de-24-horas-en-todo-el-pais-para-este-jueves-_a6ace24fcd617fcd176d23944",
      "fecha": "2026-10-13T12:40:51.231Z"
@@ -75,6 +75,11 @@
      "medio": "0221",
      "enlace": "https://www.0221.com.ar/nacional/ate-anuncio-que-se-suma-al-paro-docente-este-jueves-que-coincide-la-marcha-federal-universitaria-n135711",
      "fecha": "2026-10-13T14:03:00.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/un-gremio-estatales-se-sumo-al-paro-del-jueves-donde-impactara-n56446",
+     "fecha": "2026-10-13T12:44:00.000Z"
     }
    ],
    "intentos": 0,
@@ -84,7 +89,7 @@
   {
    "id": "1c99k48",
    "titulo": "Más de 1.800 conductores fueron sancionados por circular ilegalmente por la banquina en el AMBA",
-   "copete": "La Agencia Nacional de Seguridad Vial (ANSV) ha desplegado un operativo de fiscalización sin precedentes en las autopistas Panamericana, Acceso Oeste y Buenos Aires – La Plata. El objetivo central de esta medida es erradicar la circulación por banquinas, una práctica considerada…",
+   "copete": "La Agencia Nacional de Seguridad Vial (ANSV) informó la sanción a 2.200 conductores por realizar maniobras prohibidas, como circular por la banquina o adulterar la chapa patente. Estas infracciones, contempladas en la Ley Nacional de Tránsito, pueden derivar en multas de hasta 2…",
    "seccion": "Argentina",
    "fecha": "2026-10-13T12:21:48.000Z",
    "fuentes": [
@@ -104,11 +109,6 @@
      "fecha": "2026-10-13T15:21:08.000Z"
     },
     {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/la-avivada-saldra-cara-sancionan-2200-conductores-circular-la-banquina-o-tapar-la-patente-n56451",
-     "fecha": "2026-10-13T14:09:00.000Z"
-    },
-    {
      "medio": "La Noticia 1",
      "enlace": "https://www.lanoticia1.com/noticia/la-ansv-sanciono-a-mas-de-1800-conductores-por-circular-por-las-banquinas-en-las-autopistas-del-amba",
      "fecha": "2026-10-13T12:38:13.000Z"
@@ -122,6 +122,11 @@
      "medio": "Diario Popular",
      "enlace": "https://www.diariopopular.com.ar/transito/orden-las-autopistas-la-ansv-sanciono-mas-1800-banquineros-autopistas-del-amba-n924315",
      "fecha": "2026-10-13T13:26:00.000Z"
+    },
+    {
+     "medio": "Agencia DIB",
+     "enlace": "https://dib.com.ar/sociedad/la-avivada-saldra-cara-sancionan-2200-conductores-circular-la-banquina-o-tapar-la-patente-n56451",
+     "fecha": "2026-10-13T14:09:00.000Z"
     }
    ],
    "intentos": 1,
@@ -141,14 +146,14 @@
      "fecha": "2026-10-13T13:39:14.000Z"
     },
     {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/deportes/el-efecto-colapinto-revoluciono-las-redes-alpine-llego-los-5-millones-seguidores-n6333084",
-     "fecha": "2026-10-13T14:00:00.000Z"
-    },
-    {
      "medio": "Radio Mitre",
      "enlace": "https://radiomitre.cienradios.com/deportes/alpine-festejo-los-5-millones-de-seguidores-en-instagram-y-destaco-a-franco-colapinto/",
      "fecha": "2026-10-13T16:00:23.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/deportes/el-efecto-colapinto-revoluciono-las-redes-alpine-llego-los-5-millones-seguidores-n6333084",
+     "fecha": "2026-10-13T14:00:00.000Z"
     }
    ],
    "intentos": 0,
@@ -215,6 +220,88 @@
    "maximo": 4
   },
   {
+   "id": "16u8bue",
+   "titulo": "Central se postuló para ser sede del Mundial 2030 en el Gigante de Arroyito",
+   "copete": "Rosario Central puso el Gigante de Arroyito a disposición del Mundial 2030. Lo hizo a través de un video promocional de casi dos minutos y medio difundido a través de sus redes sociales. En las imágenes aparecen grandes ídolos de la institución canalla, con Ángel Di María entre…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-13T12:25:00.000Z",
+   "fuentes": [
+    {
+     "medio": "La Capital (Rosario)",
+     "enlace": "https://www.lacapital.com.ar/ovacion/central-se-postulo-ser-sede-del-mundial-2030-el-gigante-arroyito-n10286364.html",
+     "fecha": "2026-10-13T12:25:00.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/deportes/futbol/rosario-central-puso-el-gigante-de-arroyito-a-disposicion-del-mundial-2030-que-podria-tener-un-grupo-nid13102026/",
+     "fecha": "2026-10-13T15:49:47.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/deportes/rosario-central-desafia-monumental-propuso-gigante-arroyito-sede-partido-mundial-2030_0_9L5LLns8k9.html",
+     "fecha": "2026-10-13T14:39:40.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/13/mundial-2030-rosario-central-postulo-al-gigante-de-arroyito-y-abrio-la-disputa-con-el-monumental/",
+     "fecha": "2026-10-13T17:07:46.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/deportes/rosario-central-propuso-estadio-sede-mundial-2030-78-fue-gigante-2026101310518",
+     "fecha": "2026-10-13T13:51:00.000Z"
+    },
+    {
+     "medio": "TyC Sports",
+     "enlace": "https://www.tycsports.com/mundial/el-sueno-mundialista-de-rosario-central-la-propuesta-del-gigante-de-arroyito-para-2030-id765941.html",
+     "fecha": "2026-10-13T15:53:12.000Z"
+    },
+    {
+     "medio": "Olé",
+     "enlace": "https://www.ole.com.ar/rosario-central/rosario-central-postulo-gigante-arroyito-sede-estadio-mundial-2030-seleccion_0_kNgYB0AmKR.html",
+     "fecha": "2026-10-13T14:29:16.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/deportes/rosario-central-postulo-al-gigante-arroyito-como-sede-el-mundial-2030-n251446",
+     "fecha": "2026-10-13T14:05:00.000Z"
+    },
+    {
+     "medio": "Diario Popular",
+     "enlace": "https://www.diariopopular.com.ar/futbol/rosario-central-se-postulo-ser-sede-del-mundial-2030-como-quedaria-el-gigante-arroyito-n924327",
+     "fecha": "2026-10-13T16:48:00.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-10-13-11-39-0-rosario-central-postulo-al-estadio-gigante-de-arroyito-como-sede-del-mundial-2030",
+     "fecha": "2026-10-13T16:21:12.000Z"
+    },
+    {
+     "medio": "La Página Millonaria",
+     "enlace": "https://lapaginamillonaria.com/river-plate/rosario-central-le-disputa-a-river-el-partido-inaugural-del-mundial-2030-propuso-al-gigante-de-arroyito-como-sede",
+     "fecha": "2026-10-13T13:30:29.000Z"
+    },
+    {
+     "medio": "Doble Amarilla",
+     "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/rosario-central-postulo-al-gigante-de-arroyito-como-sede-para-el-mundial-2030---estamos-listos-_a6ace312c0ceb121c7a4b6e0f",
+     "fecha": "2026-10-13T13:57:33.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/deportes/rosario-central-lanzo-su-candidatura-el-mundial-2030-asi-quedara-el-gigante-arroyito-n6333101",
+     "fecha": "2026-10-13T14:27:00.000Z"
+    },
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/seleccion/rosario-central-propuso-el-gigante-de-arroyito-como-sede-para-el-mundial-2030-no-lo-decimos-nosotros-lo-dice-el-mundo",
+     "fecha": "2026-10-13T14:01:57.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 5
+  },
+  {
    "id": "138i0ao",
    "titulo": "El sorpresivo agradecimiento de Shakira a Antonio de la Rúa al cerrar su gira europea en Madrid: “Todo se transforma”",
    "copete": "Shakira eligió cerrar el final de la etapa europea de la gira Las Mujeres Ya No Lloran World Tour con un gesto especial: le agradeció públicamente a Antonio de la Rúa , su expareja. Durante el último show en el Macondo Park de Madrid, la artista de Barranquilla tomó unos minutos…",
@@ -225,11 +312,6 @@
      "medio": "Infobae",
      "enlace": "https://www.infobae.com/teleshow/2026/10/13/el-sorpresivo-agradecimiento-de-shakira-a-antonio-de-la-rua-al-cerrar-su-gira-europea-en-madrid-todo-se-transforma/",
      "fecha": "2026-10-13T13:33:28.000Z"
-    },
-    {
-     "medio": "Clarín",
-     "enlace": "https://www.clarin.com/fama/sorpresivo-mensaje-shakira-antonio-rua-final-gira-madrid-vida-transforma_0_DXtb3mXFIZ.html",
-     "fecha": "2026-10-13T16:11:04.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
@@ -250,11 +332,43 @@
      "medio": "A24",
      "enlace": "https://www.a24.com/trends/shakira-sorprendio-un-inesperado-mensaje-antonio-la-rua-confirmando-el-vinculo-ellos-n1605754",
      "fecha": "2026-10-13T13:43:00.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/fama/sorpresivo-mensaje-shakira-antonio-rua-final-gira-madrid-vida-transforma_0_DXtb3mXFIZ.html",
+     "fecha": "2026-10-13T16:11:04.000Z"
     }
    ],
    "intentos": 0,
    "motivo": "",
    "maximo": 4
+  },
+  {
+   "id": "8sclyz",
+   "titulo": "Récord de investigación clínica en Argentina: la ANMAT aprobó 291 estudios en nueve meses",
+   "copete": "La Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT) aprobó 291 estudios de farmacología clínica entre enero y septiembre de 2026, una cifra que ya supera los 290 autorizados durante todo el año anterior. El ministro de Salud, Mario Lugones, destacó…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-13T16:32:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/salud/record-de-investigacion-clinica-en-argentina-la-anmat-aprobo-291-estudios-en-nueve-meses/",
+     "fecha": "2026-10-13T16:32:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/salud/ciencia/2026/10/13/argentina-alcanzo-un-record-de-estudios-clinicos-aprobados-en-2026/",
+     "fecha": "2026-10-13T17:02:56.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/sociedad/argentina-alcanza-un-record-en-estudios-de-investigacion-clinica_a6ace5d0206650845db757a3f",
+     "fecha": "2026-10-13T16:37:39.000Z"
+    }
+   ],
+   "intentos": 0,
+   "motivo": "",
+   "maximo": 3
   },
   {
    "id": "1d7f25z",
@@ -321,26 +435,21 @@
    "maximo": 3
   },
   {
-   "id": "hxjao4",
-   "titulo": "Argentina alcanzó un récord de estudios clínicos aprobados en 2026",
-   "copete": "La Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT) aprobó 291 estudios de farmacología clínica entre enero y septiembre de 2026, una cifra que ya supera los 290 autorizados durante todo el año anterior. El ministro de Salud, Mario Lugones, destacó…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-13T14:59:11.000Z",
+   "id": "xolc6n",
+   "titulo": "Adriana Rodríguez fue reelecta decana de la FAUBA para el período 2027–2031",
+   "copete": "El Consejo Directivo de la Facultad de Agronomía de la Universidad de Buenos Aires (FAUBA) reeligió a la Dra. Adriana Rodríguez como decana y al Dr. Flavio Gutiérrez Boem como vicedecano para el período 2027–2031. La decisión se tomó durante una sesión especial y pública en la…",
+   "seccion": "Agro",
+   "fecha": "2026-10-13T10:50:52.000Z",
    "fuentes": [
     {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/salud/ciencia/2026/10/13/argentina-alcanzo-un-record-de-estudios-clinicos-aprobados-en-2026/",
-     "fecha": "2026-10-13T14:59:11.000Z"
+     "medio": "Noticias Agropecuarias",
+     "enlace": "https://www.noticiasagropecuarias.com/2026/10/13/adriana-rodriguez-fue-reelecta-decana-de-la-fauba-para-el-periodo-2027-2031/",
+     "fecha": "2026-10-13T10:50:52.000Z"
     },
     {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/salud/record-de-investigacion-clinica-en-argentina-la-anmat-aprobo-291-estudios-en-nueve-meses/",
-     "fecha": "2026-10-13T16:32:00.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/sociedad/argentina-alcanza-un-record-en-estudios-de-investigacion-clinica_a6ace5d0206650845db757a3f",
-     "fecha": "2026-10-13T16:37:39.000Z"
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/campo/2026/10/13/agronomia-definio-sus-autoridades-para-20272031-con-foco-en-la-innovacion-y-el-desarrollo-productivo/",
+     "fecha": "2026-10-13T17:13:13.000Z"
     }
    ],
    "intentos": 0,
