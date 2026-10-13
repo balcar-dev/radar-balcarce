@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T19:04:30.473Z",
- "portada": 39,
- "archivo": 1008,
+ "generado": "2026-10-13T19:33:56.770Z",
+ "portada": 42,
+ "archivo": 1014,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-13T19:04:30.514Z",
+  "generado": "2026-10-13T19:33:56.808Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "fm53cw",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1n32m9c",
+      "titulo": "El mundo celebra el Día Mundial de los Fertilizantes y su rol clave en la agricultura",
+      "seccion": "Agro"
+     },
      {
       "id": "95znl3",
       "titulo": "El Registro Civil suspende casamientos para el martes 13",
       "seccion": "Balcarce"
      },
      {
-      "id": "1c2cg52",
-      "titulo": "Marina Montoya gana los cincuenta kilómetros del Ultra Tierras del Diablo",
+      "id": "ampmp1",
+      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
       "seccion": "Deportes"
-     },
-     {
-      "id": "1imkz6n",
-      "titulo": "Social Pato Naranja y Negro juegan la semifinal",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1dvqt41",
-      "titulo": "Fara Cunqueiro analiza la violencia juvenil y el rol de los adultos",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -210,7 +210,14 @@
      "cuando": "2026-10-13T18:13:43.987Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "fm53cw",
+     "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+     "seccion": "Automovilismo",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-13T19:43:43.987Z",
    "porDia": 5,

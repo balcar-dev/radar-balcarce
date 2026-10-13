@@ -12308,16 +12308,16 @@
   "cuando": "2026-10-12T00:01:59.429Z"
  },
  "bqygvd": {
-  "archivo": "fotos-notas/bqygvd.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "Los Pumas 7s y Las Yaguaretés ganan el Sudamericano en Córdoba",
   "enlace": "https://www.lanueva.com/nota/2026-10-11-19-11-0-los-pumas-7-s-y-las-yaguaretes-se-consagraron-campeones-sudamericanos",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791757748991.jpg?&cw=600&ch=365",
   "razon": "La foto B es la mejor opción disponible ya que muestra claramente el hecho sin marcas de agua agregadas por el medio.",
-  "cuando": "2026-10-12T00:01:59.429Z"
+  "cuando": "2026-10-12T00:01:59.429Z",
+  "intentado": true,
+  "borrada": true
  },
  "16ew98b": {
   "archivo": "fotos-notas/16ew98b.jpg",
@@ -13353,16 +13353,16 @@
   "fuentes": 4
  },
  "1dvqt41": {
-  "archivo": "fotos-notas/1dvqt41.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "Fara Cunqueiro analiza la violencia juvenil y el rol de los adultos",
   "enlace": "https://www.diariolavanguardia.com/noticias/45068-fara-cunqueiro-los-chicos-estan-quedando-a-la-deriva-y-los-adultos-tenemos-que-revisar-que-estamos-transmitiendo/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66033.png",
   "razon": "Es la única opción disponible, posee buena nitidez y no tiene marcas de agua ni menores.",
-  "cuando": "2026-10-13T19:03:18.296Z"
+  "cuando": "2026-10-13T19:03:18.296Z",
+  "intentado": true,
+  "borrada": true
  },
  "1hwv5q1": {
   "archivo": "fotos-notas/1hwv5q1.jpg",
@@ -13386,15 +13386,102 @@
   "fuentes": 4
  },
  "1h6v9ne": {
-  "archivo": "fotos-notas/1h6v9ne.jpg",
   "medio": "TN (Todo Noticias)",
-  "credito": "Foto: TN (Todo Noticias)",
   "licencia": null,
   "origen": "medio",
   "titulo": "Meta presenta Muse Wonder para competir en inteligencia artificial",
   "enlace": "https://tn.com.ar/tecno/novedades/2026/10/13/que-es-muse-wonder-la-inteligencia-artificial-de-meta-para-competir-con-chatgpt-y-claude/",
   "imagenOriginal": "https://tn.com.ar/resizer/v2/la-nueva-propuesta-de-meta-tiene-dos-variantes-wonder-y-wonder-full-foto-reutersdado-ruvic-MRPLGITET5G3TN4LUI7L2CJSC4.jpeg?auth=ee1aad24d0cfb168641565e9bf6ca1a9179f779d9772bcdeb4c0c41ff773e8dc&width=1023",
   "razon": "La imagen A es una fotografía de stock genérica (sin personas) que ilustra el concepto de la nota (Meta e IA) de forma clara y profesional, mientras que la imagen B presenta un recorte deficiente que deja fuera el logo completo y parte del rostro del sujeto.",
-  "cuando": "2026-10-13T19:03:18.296Z"
+  "cuando": "2026-10-13T19:03:18.296Z",
+  "intentado": true,
+  "borrada": true
+ },
+ "ampmp1": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
+  "razon": "La imagen proporcionada no contiene la escena del torneo de tenis de mesa descrita en la nota, sino que es únicamente el logotipo del medio Diario La Vanguardia.",
+  "cuando": "2026-10-13T19:33:19.789Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "fm53cw": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+  "razon": "La única foto disponible tiene una marca de agua superpuesta del medio.",
+  "cuando": "2026-10-13T19:33:19.789Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "u043fh": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
+  "razon": "La única foto disponible incluye menores reconocibles.",
+  "cuando": "2026-10-13T19:33:19.789Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "gooxvp": {
+  "archivo": "fotos-notas/gooxvp.jpg",
+  "medio": "El Cronista",
+  "credito": "Foto: El Cronista",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Grupo Addnice trae de regreso a la Argentina la marca Pony",
+  "enlace": "https://www.cronista.com/negocios/pony-vuelve-a-la-argentina-quien-esta-detras-del-regreso-de-la-marca-de-zapatillas/",
+  "imagenOriginal": "https://www.cronista.com/resizer/v2/BZH7XJ4VXNDCJJC6N7OWOSU3XI.jpg?auth=19c674ffbedc060eff6c5e00bb3154ca6e30c625928d64b142f790c2bc82cd00&height=630&width=1200&quality=70&smart=true",
+  "razon": "La foto A muestra claramente la marca Pony en la indumentaria, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-13T19:33:19.789Z"
+ },
+ "15mql60": {
+  "archivo": "fotos-notas/15mql60.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Julián Álvarez elige un nuevo representante y apunta al Barcelona",
+  "enlace": "https://www.clarin.com/deportes/trastienda-cambio-agente-julian-alvarez-escandalo-atletico-madrid-eligio-representante-estrella-espanola_0_FIUmoLjb9D.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/13/DT5lT9bsxN_2000x1500__1.jpg",
+  "razon": "La foto de Clarín tiene mejor encuadre y nitidez, y no presenta marcas de agua ni logos superpuestos por el medio, a diferencia de la de El Destape que tiene su logo en la esquina.",
+  "cuando": "2026-10-13T19:33:19.789Z"
+ },
+ "fsdbh5": {
+  "archivo": "fotos-notas/fsdbh5.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno designa nuevas autoridades en el área de Discapacidad",
+  "enlace": "https://www.infobae.com/salud/2026/10/13/el-gobierno-designo-a-un-nuevo-secretario-nacional-de-discapacidad/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/YC4AISVM5JD2VB3QEIM7KP4DWI.jpeg?auth=d8231c6c476daf2b8af7e56890edfca4c3cee963038ea5f52aed19b90abbc4c3&smart=true&width=1200&height=630&quality=85",
+  "razon": "Es la foto más nítida, con excelente encuadre del funcionario designado y sin marcas de agua ni menores.",
+  "cuando": "2026-10-13T19:33:19.789Z"
+ },
+ "zrbtlm": {
+  "archivo": "fotos-notas/zrbtlm.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El fiscal Pollicita pide investigar transferencias a Claudio Tapia",
+  "enlace": "https://tn.com.ar/politica/2026/10/13/causa-por-presunto-enriquecimiento-ilicito-la-fiscalia-pone-la-lupa-sobre-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/claudio-chiqui-tapia-presidente-de-la-afa-foto-reuters-RNSOE6BFWVAQJE32E4OTDRDP2Q.jpg?auth=b803bd17c55addcffd84df02448e408175ba715d788ca1bad43219e4fd548df5&width=1023",
+  "razon": "Tiene excelente nitidez y encuadre, muestra claramente al protagonista sin marcas añadidas ni menores.",
+  "cuando": "2026-10-13T19:33:19.789Z"
+ },
+ "xolc6n": {
+  "archivo": "fotos-notas/xolc6n.jpg",
+  "medio": "Noticias Agropecuarias",
+  "credito": "Foto: Noticias Agropecuarias",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Adriana Rodríguez renueva su mandato al frente de la Agronomía de la UBA",
+  "enlace": "https://www.noticiasagropecuarias.com/2026/10/13/adriana-rodriguez-fue-reelecta-decana-de-la-fauba-para-el-periodo-2027-2031/",
+  "imagenOriginal": "https://www.noticiasagropecuarias.com/wp-content/uploads/2026/10/ADRINA-RODRIGUEZ-DECANA-DE-LA-FAUBA.png",
+  "razon": "Muestra claramente a Adriana Rodríguez en un primer plano nítido y sin marcas ni menores.",
+  "cuando": "2026-10-13T19:33:19.789Z"
  }
 }
