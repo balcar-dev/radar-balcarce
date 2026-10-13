@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T14:43:14.090Z",
- "portada": 35,
+ "generado": "2026-10-13T15:07:36.064Z",
+ "portada": 36,
  "archivo": 999,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-13T14:43:14.119Z",
+  "generado": "2026-10-13T15:07:36.091Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-13T12:06:23.452Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu evento o emprendimiento",
     "voz": "locutor",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -129,14 +129,14 @@
     "segundos": 54,
     "notas": [
      {
-      "id": "pt4b1r",
-      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "1dun8ft",
       "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "pt4b1r",
+      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
+      "seccion": "Fútbol"
      },
      {
       "id": "uestws",
