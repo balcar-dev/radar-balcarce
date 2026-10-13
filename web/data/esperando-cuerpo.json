@@ -1,81 +1,7 @@
 {
- "generado": "2026-10-13T02:31:47.533Z",
+ "generado": "2026-10-13T03:02:31.428Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "xulwye",
-   "titulo": "Luis Caputo negó las versiones sobre una posible salida del Gabinete: “Quedate tranquilo que no voy a renunciar”",
-   "copete": "“ Quedate tranquilo que no voy a renunciar ”, afirmó el titular del Palacio de Hacienda, Luis Caputo , luego que un usuario anónimo en redes sociales insinuara con su salida del Gobierno. El presidente Javier Milei dijo hoy en una entrevista que los trascendidos son un…",
-   "seccion": "Política",
-   "fecha": "2026-10-12T15:19:38.000Z",
-   "fuentes": [
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/luis-caputo-nego-las-versiones-sobre-una-posible-salida-del-gabinete-quedate-tranquilo-que-no-voy-a-nid12102026/",
-     "fecha": "2026-10-12T15:19:38.000Z"
-    },
-    {
-     "medio": "Ecos Diarios (Necochea)",
-     "enlace": "https://elecos.com.ar/luis-caputo-desmintio-rumores-sobre-su-renuncia-y-el-presidente-javier-milei-respaldo-su-gestion",
-     "fecha": "2026-10-12T23:39:00.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/politica/caputo-nego-su-salida-del-gobierno-un-cruce-x-quedate-tranquilo-que-no-voy-renunciar-n56439",
-     "fecha": "2026-10-12T23:16:00.000Z"
-    },
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/economia/luis-caputo-nego-rumores-su-salida-del-gabinete-quedate-tranquilo-que-no-voy-renunciar-n6332824",
-     "fecha": "2026-10-12T18:37:00.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/politica/luis-caputo-nego-los-rumores-su-salida-del-gobierno-quedate-tranquilo-que-no-voy-renunciar-n251394",
-     "fecha": "2026-10-12T20:06:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/caputo-nego-versiones-sobre-su-salida-del-gobierno-no-voy-a-renunciar/",
-     "fecha": "2026-10-12T20:53:00.000Z"
-    }
-   ],
-   "intentos": 4,
-   "motivo": "con cuerpo",
-   "maximo": 4
-  },
-  {
-   "id": "1rd059l",
-   "titulo": "La interminable sequía de Julián Álvarez en Atlético de Madrid: casi medio año sin goles y el respaldo del Cholo Simeone",
-   "copete": "Julián Álvarez lleva casi medio año sin convertir con la camiseta del Atlético de Madrid . Su último tanto con el Colchonero fue el 29 de abril , un penal cruzado ante Arsenal que selló el 1-1 en la ida de las semifinales de la Champions League . El cordobés ganó protagonismo en…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-12T14:51:47.000Z",
-   "fuentes": [
-    {
-     "medio": "TyC Sports",
-     "enlace": "https://www.tycsports.com/espana/la-liga/la-interminable-sequia-de-julian-alvarez-hace-cuanto-no-marca-un-gol-en-atletico-de-madrid-id765814.html",
-     "fecha": "2026-10-12T14:51:47.000Z"
-    },
-    {
-     "medio": "A24",
-     "enlace": "https://www.a24.com/deportes/interminable-la-extensa-sequia-julian-alvarez-atletico-madrid-y-el-respaldo-simeone-n1605563",
-     "fecha": "2026-10-12T18:19:07.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/deportes/julian-alvarez-no-marca-en-el-atletico-de-madrid-desde-abril-y-diego-simeone-le-dio-su-respaldo/",
-     "fecha": "2026-10-12T17:23:20.000Z"
-    },
-    {
-     "medio": "Bolavip Argentina",
-     "enlace": "https://bolavip.com/ar/europa/simeone-rompio-el-silencio-sobre-la-sequia-goleadora-de-julian-alvarez-tiene-muchas-mas-herramientas",
-     "fecha": "2026-10-12T21:29:05.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
   {
    "id": "mp58gw",
    "titulo": "Jorge Macri evalúa no desdoblar la elección de la Ciudad en 2027 y votar en octubre",
@@ -114,30 +40,50 @@
      "fecha": "2026-10-12T23:22:51.000Z"
     },
     {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/politica/jorge-macri-analiza-no-desdoblar-las-elecciones-la-ciudad-2027-se-podria-votar-octubre-n251422",
+     "fecha": "2026-10-13T02:35:00.000Z"
+    },
+    {
      "medio": "Noticias Argentinas (NA)",
      "enlace": "https://noticiasargentinas.com/politica/jorge-macri-analiza-no-desdoblar-las-elecciones-de-la-ciudad-en-2027--se-podria-votar-en-octubre_a6acd527132fdad2908a98c49",
      "fecha": "2026-10-12T22:15:00.000Z"
     }
    ],
-   "intentos": 4,
-   "motivo": "título o bajada: 1 problema (numero): el guion dice 2.000 y la fuente no lo dice",
-   "maximo": 4
+   "intentos": 5,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 61 palabras",
+   "maximo": 5
   },
   {
-   "id": "4v76p8",
-   "titulo": "Recuperaron dos motos robadas durante el fin de semana",
-   "copete": "Los rodados fueron encontrados en distintos sectores de la ciudad durante la mañana y la tarde del domingo. En ambos casos, el Centro de Monitoreo Municipal alertó sobre su presencia en la vía pública y los vehículos fueron secuestrados y restituidos a sus propietarios. La…",
-   "seccion": "Policiales",
-   "fecha": "2026-10-13T02:31:25.137Z",
+   "id": "pcks4q",
+   "titulo": "La Justicia decretó la quiebra de uno de los aserraderos más importantes del país y ordenó incautar sus bienes",
+   "copete": "La Justicia de Misiones decretó la quiebra de Linor SRL , uno de los principales fabricantes de pallets de madera del país, luego de que la empresa incumpliera el acuerdo preventivo alcanzado durante su concurso de acreedores. La decisión marca un nuevo capítulo en la crisis de…",
+   "seccion": "Agro",
+   "fecha": "2026-10-12T16:45:12.000Z",
    "fuentes": [
     {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45063-recuperaron-dos-motos-robadas-durante-el-fin-de-semana-en-balcarce/",
-     "fecha": null
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/economia/2026/10/12/la-justicia-decreto-la-quiebra-de-uno-de-los-aserraderos-mas-importantes-del-pais-y-ordeno-incautar-sus-bienes/",
+     "fecha": "2026-10-12T16:45:12.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/economia/campo/quebro-uno-de-los-aserraderos-productores-de-pallets-mas-grandes-del-pais-nid12102026/",
+     "fecha": "2026-10-13T01:54:15.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/campo/2026/10/12/quebro-una-maderera-lider-en-la-produccion-de-pallets-y-ordenaron-la-incautacion-de-sus-bienes/",
+     "fecha": "2026-10-12T18:35:32.000Z"
+    },
+    {
+     "medio": "Canal 26",
+     "enlace": "https://www.canal26.com/economia/2026/10/12/quiebra-confirmada-una-historica-empresa-maderera-de-misiones-quedo-bajo-control-judicial/",
+     "fecha": "2026-10-12T20:17:48.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (tildes): el texto está escrito sin tildes (habian, segun, habia, investigacion): va con las tildes y la eñe d; sin esas oraciones quedan 134",
+   "intentos": 3,
+   "motivo": "con cuerpo",
    "maximo": 3
   },
   {

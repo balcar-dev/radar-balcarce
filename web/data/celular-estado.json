@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T02:31:47.533Z",
- "portada": 38,
- "archivo": 981,
- "esperandoCuerpo": 5,
+ "generado": "2026-10-13T03:02:31.428Z",
+ "portada": 40,
+ "archivo": 984,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-13T02:31:47.555Z",
+  "generado": "2026-10-13T03:02:31.464Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,18 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-12T10:03:58.356Z"
-   },
-   {
-    "nombre": "feriado",
-    "tipo": "reel",
-    "hora": "08:00",
-    "que": "El feriado",
-    "voz": "locutora",
-    "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-12T11:06:08.012Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -33,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-12T12:09:52.954Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -43,18 +33,18 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-12T13:06:24.392Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "participa-noticias",
+    "nombre": "participa-evento",
     "tipo": "reel",
     "hora": "12:00",
-    "que": "Participá: mandanos noticias",
-    "voz": "locutora",
+    "que": "Tu evento o emprendimiento",
+    "voz": "locutor",
     "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-12T15:05:20.712Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -63,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-12T18:35:35.230Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -73,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
+    "momento": "antes",
     "salio": null
    },
    {
@@ -83,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-12T23:05:05.966Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -93,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-13T00:06:51.324Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -103,128 +93,76 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-12T13:06:24.392Z",
+    "momento": "antes",
+    "salio": null,
     "segundos": null,
-    "notas": [
-     {
-      "id": "p21pyq",
-      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "bqnbdp",
-      "titulo": "Milei afirma tener fondos por miles de millones de dólares para frenar una corrida",
-      "seccion": "Economía"
-     }
-    ]
+    "notas": []
    },
    {
     "nombre": "noticia2",
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-12T18:35:35.230Z",
+    "momento": "antes",
+    "salio": null,
     "segundos": null,
-    "notas": [
-     {
-      "id": "rzhblo",
-      "titulo": "Cristiano Ronaldo rompe el silencio tras la sanción en Portugal",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "s94jkn",
-      "titulo": "Carlos Alcaraz pierde ante Zizou Bergs en el Masters 1000 de Shanghái",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "xn5jch",
-      "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "skmago",
-      "titulo": "Las farmacias difunden el cronograma de turnos para toda la semana",
-      "seccion": "Balcarce"
-     }
-    ]
+    "notas": []
    },
    {
     "nombre": "podcast",
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-13T00:06:51.324Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 48,
     "notas": [
      {
-      "id": "15o5mwn",
-      "titulo": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
+      "id": "3bom4j",
+      "titulo": "Barbieri y Álvarez ganan el Torneo Ciudad",
       "seccion": "Deportes"
      },
      {
-      "id": "90qy7w",
-      "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+      "id": "1c2cg52",
+      "titulo": "Marina Montoya gana los cincuenta kilómetros del Ultra Tierras del Diablo",
       "seccion": "Deportes"
      },
      {
-      "id": "r0o8z3",
-      "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
+      "id": "1imkz6n",
+      "titulo": "Social Pato Naranja y Negro juegan la semifinal",
       "seccion": "Deportes"
      },
      {
-      "id": "q9kshm",
-      "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
-      "seccion": "Balcarce"
+      "id": "1hapve0",
+      "titulo": "Emilia Scioli sube al podio en el Ironman y clasifica al Mundial",
+      "seccion": "Deportes"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "vt9ful",
-     "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner",
-     "cuando": "2026-10-12T11:45:27.345Z"
-    },
-    {
-     "id": "bqnbdp",
-     "titulo": "Milei afirma tener fondos por miles de millones de dólares para frenar una corrida",
-     "cuando": "2026-10-12T13:35:20.266Z"
-    },
-    {
-     "id": "xn5jch",
-     "titulo": "Natalia Carballo juega la Copa Sudamericana de tenis",
-     "cuando": "2026-10-12T15:33:39.881Z"
-    },
-    {
-     "id": "r0o8z3",
-     "titulo": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
-     "cuando": "2026-10-12T17:04:55.578Z"
-    },
-    {
-     "id": "q9kshm",
-     "titulo": "La Provincia impulsa mejoras en el transporte para personas con autismo",
-     "cuando": "2026-10-12T18:38:29.498Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
-    {
-     "id": "3bom4j",
-     "titulo": "Barbieri y Álvarez ganan el Torneo Ciudad",
-     "seccion": "Deportes",
-     "marcada": false
-    },
     {
      "id": "15o5mwn",
      "titulo": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
      "seccion": "Deportes",
      "marcada": false
+    },
+    {
+     "id": "90qy7w",
+     "titulo": "Top Serrano gana tres títulos en el torneo de tenis de mesa",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "3bom4j",
+     "titulo": "Barbieri y Álvarez ganan el Torneo Ciudad",
+     "seccion": "Deportes",
+     "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-12T20:08:29.498Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
