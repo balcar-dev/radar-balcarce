@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T10:32:00.135Z",
- "portada": 36,
- "archivo": 988,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-13T11:01:57.618Z",
+ "portada": 34,
+ "archivo": 989,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-13T10:32:00.165Z",
+  "generado": "2026-10-13T11:01:57.652Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,8 +95,24 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 50,
+    "notas": [
+     {
+      "id": "fa17ki",
+      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1dz0qkj",
+      "titulo": "El Fondo Monetario Internacional recorta su previsión de crecimiento",
+      "seccion": "Economía"
+     },
+     {
+      "id": "1qszs3z",
+      "titulo": "Gabriel Deck pasa por el quirófano y se pierde lo que resta del año",
+      "seccion": "Deportes"
+     }
+    ]
    },
    {
     "nombre": "noticia2",
@@ -137,7 +153,14 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "fa17ki",
+     "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+     "seccion": "Balcarce",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-12T20:08:29.498Z",
    "porDia": 5,

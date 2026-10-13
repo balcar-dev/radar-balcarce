@@ -1,44 +1,27 @@
 {
- "generado": "2026-10-13T10:32:00.135Z",
+ "generado": "2026-10-13T11:01:57.618Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "fa17ki",
-   "titulo": "Semana fresca en Balcarce: se esperan lluvias y temperaturas que no superarán los 15 grados",
-   "copete": "El pronóstico para el martes 13 al domingo 18 anticipa jornadas mayormente nubladas, posibles precipitaciones durante la primera mitad de la semana y una mejora hacia el fin de semana.",
-   "seccion": "Balcarce",
-   "fecha": "2026-10-13T09:45:39.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/semana-fresca-en-balcarce-se-esperan-lluvias-y-temperaturas-que-no-superaran-los-15-grados",
-     "fecha": "2026-10-13T09:45:39.000Z"
-    }
-   ],
-   "intentos": 2,
-   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no",
-   "maximo": 3
-  },
-  {
-   "id": "1ft6wlo",
-   "titulo": "El FMI recortó las proyecciones de crecimiento para la Argentina este año y en 2027",
-   "copete": "Buenos Aires, 12 octubre (NA) -- El Fondo Monetario Internacional (FMI) afirmó este lunes que el Producto Bruto Interno (PBI) de la Argentina crecerá este año un 2,1 por ciento, por lo que bajó 1,4 por ciento de los 3,5% anunciados en los informes de abril y julio de este año…",
+   "id": "1ciy7qc",
+   "titulo": "El FMI recorta las previsiones de crecimiento de la economía argentina para 2026 y 2027",
+   "copete": "Buenos Aires, 13 oct (EFECOM).- El Fondo Monetario Internacional (FMI) prevé que la economía de Argentina crezca un 2,1 % este año y un 3,5 % en 2027, por debajo de lo pronosticado por este organismo en abril y julio pasado. Según el informe de 'Perspectivas económicas…",
    "seccion": "Economía",
-   "fecha": "2026-10-13T02:07:12.000Z",
+   "fecha": "2026-10-13T02:17:33.000Z",
    "fuentes": [
     {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/el-fmi-rfecorto-las-proyecciones-de-crecimiento-para-la-argentina-en-2026-y-2027-_a6acd982e32fdad2908b2693e",
-     "fecha": "2026-10-13T02:07:12.000Z"
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/america/agencias/2026/10/13/el-fmi-recorta-las-previsiones-de-crecimiento-de-la-economia-argentina-para-2026-y-2027/",
+     "fecha": "2026-10-13T02:17:33.000Z"
     },
     {
-     "medio": "El Día",
-     "enlace": "https://www.eldia.com/politica-y-economia/el-fmi-recorto-las-proyecciones-de-crecimiento-para-la-argentina-este-ano-y-en-2027-politica-y-economia_1791884280",
-     "fecha": "2026-10-13T09:42:08.000Z"
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/economia/el-fmi-recorta-la-prevision-crecimiento-argentina-n6332941",
+     "fecha": "2026-10-13T02:39:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 57 palabras",
+   "intentos": 3,
+   "motivo": "con cuerpo",
    "maximo": 3
   }
  ]

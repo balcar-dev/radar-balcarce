@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T10:32:00.135Z",
+  "generado": "2026-10-13T11:01:57.618Z",
   "notas": [
     {
       "id": "clima20261013",
@@ -111,6 +111,76 @@
       "slug": "dos-motociclistas-circulan-de-forma-peligrosa-por-la-avenida-32"
     },
     {
+      "id": "fa17ki",
+      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+      "copete": "El clima se mantiene frío con temperaturas que no superarán los 15 grados y probabilidad de precipitaciones durante los primeros días.",
+      "cuerpo": "El pronóstico meteorológico prevé jornadas nubladas con marcas térmicas bajas para la época y lluvias entre el martes 13 y el jueves 15. Las máximas se ubicarán entre los 13 y 15 grados, mientras que hacia el fin de semana se esperan mañanas frías con marcas que podrían descender hasta los 2 grados el sábado.\n\nPara el domingo 18, en coincidencia con el Día de la Madre, el informe anticipa nubosidad variable, algunos períodos de sol por la tarde y una temperatura máxima que alcanzará los 15 grados.",
+      "guion": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/semana-fresca-en-balcarce-se-esperan-lluvias-y-temperaturas-que-no-superaran-los-15-grados",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T09:45:39.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T11:01:42.745Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Temperaturas máximas de entre 13 y 15 grados.",
+        "Lluvias probables desde el martes hasta el jueves.",
+        "Mañanas muy frías durante el fin de semana.",
+        "Domingo templado por el Día de la Madre."
+      ],
+      "seSabe": [
+        "Las máximas semanales oscilarán entre los 13 y 15 grados, según el pronóstico.",
+        "Se esperan precipitaciones desde el martes 13 hasta el jueves 15.",
+        "El domingo 18 se celebrará el Día de la Madre con una máxima de 15 grados."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El pronóstico anticipa una semana fresca en la ciudad con temperaturas que no superarán los 15 grados, probabilidad de lluvias hasta el jueves y mejoras hacia el fin de semana por el Día de la Madre.",
+      "etiquetas": [
+        "pronóstico",
+        "temperaturas",
+        "lluvias",
+        "Día de la Madre"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/semana-fresca-en-balcarce-se-esperan-lluvias-y-temperaturas-que-no-superaran-los-15-grados",
+          "fecha": "2026-10-13T09:45:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló el pronóstico del tiempo extendido desde el martes hasta el domingo con temperaturas y probabilidades de lluvia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "i06m20",
+          "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias",
+          "fecha": "2026-10-01T21:25:00.000Z",
+          "ruta": "/nota/el-martes-llega-con-una-maxima-de-22-grados-y-posibles-lluvias-i06m20"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-pronostico-anticipa-una-semana-fresca-con-lluvias-y-minimas-bajas",
+      "foto": {
+        "archivo": "fotos-notas/fa17ki.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
       "id": "1335hw8",
       "titulo": "El Gobierno promulga la nueva ley sobre el régimen de zonas frías",
       "copete": "El Poder Ejecutivo oficializó este martes la normativa que redefine los descuentos en las facturas de gas. La medida recorta los beneficios sumados en 2021 y fija criterios de vulnerabilidad.",
@@ -121,8 +191,11 @@
         "La Nación",
         "Infobae",
         "Clarín",
+        "TN (Todo Noticias)",
         "Perfil",
-        "Crónica"
+        "Crónica",
+        "Radio Mitre",
+        "Infobrisas (Radio Brisas)"
       ],
       "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-promulgo-la-ley-que-modifica-el-regimen-de-zonas-frias-nid13102026/",
       "teniaImagenLaFuente": true,
@@ -199,7 +272,10 @@
       "seccion": "Economía",
       "medios": [
         "TN (Todo Noticias)",
+        "Página/12",
         "C5N",
+        "Noticias Argentinas (NA)",
+        "El Día",
         "La Nueva"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/12/el-fmi-recorto-fuerte-sus-previsiones-para-la-economia-argentina-proyecto-menos-crecimiento-y-mas-inflacion/",
@@ -207,7 +283,7 @@
       "fecha": "2026-10-13T02:07:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T03:31:41.882Z",
-      "relevancia": 63,
+      "relevancia": 83,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -421,6 +497,7 @@
       "seccion": "Argentina",
       "medios": [
         "Infobae",
+        "TN (Todo Noticias)",
         "Minuto Uno",
         "C5N",
         "Noticias Argentinas (NA)",
@@ -431,7 +508,7 @@
       "fecha": "2026-10-12T22:35:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T01:31:20.126Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -719,15 +796,15 @@
         "Perfil",
         "Minuto Uno",
         "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "La Verdad"
+        "La Verdad",
+        "El Eco de Tandil"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-cgt-califico-al--dia-de-la-raza--que-restituyo-el-gobierno-como-una--provocacion-burda-_a6acd35b332fdad2908a53ddf",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T19:38:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T22:31:50.433Z",
-      "relevancia": 62,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -791,6 +868,7 @@
       "guion": "Felipe Pereyra consigue un doble podio en el Nacional de Marcha Máster",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -801,7 +879,7 @@
       "fecha": "2026-10-12T19:23:41.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 97,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1360,68 +1438,6 @@
       "slug": "gobierno-expulsa-a-ciudadano-brasileno-y-prohibe-su-ingreso-por-cinco"
     },
     {
-      "id": "fr6obg",
-      "titulo": "El personal de casas particulares define su aumento salarial hasta fin de año",
-      "copete": "La Comisión Nacional de Trabajo en Casas Particulares fijó subas consecutivas para el trimestre de octubre a diciembre de 2026, con la integración progresiva de sumas extraordinarias y nuevos mínimos por categoría.",
-      "cuerpo": "El personal de casas particulares cuenta con un esquema de aumentos salariales para el último trimestre de 2026, según el acuerdo de la Comisión Nacional de Trabajo en Casas Particulares formalizado mediante la Resolución 6/2026.\n\nLos porcentajes establecidos alcanzan el 1,7% en octubre, el 1,6% en noviembre y el 1,6% en diciembre, junto con la incorporación progresiva de una suma extraordinaria al sueldo básico. El pago contempla además un adicional por antigüedad del 1% por cada año de servicio desde septiembre de 2020 y un 31% por zona desfavorable en la región patagónica y el partido de Patagones.\n\nLos sueldos varían según la categoría y la modalidad. El personal para tareas generales con retiro cobra en octubre $4.064,08 por hora y $498.582,06 mensuales, montos que trepan en noviembre a $511.639,37 y en diciembre a $519.825,60.",
-      "guion": "El personal de casas particulares define su aumento salarial hasta fin de año",
-      "seccion": "Economía",
-      "medios": [
-        "El Cronista",
-        "Canal 26"
-      ],
-      "enlace": "https://www.canal26.com/economia/2026/10/11/empleadas-domesticas-cuanto-cobran-en-octubre-noviembre-y-diciembre-de-2026-con-los-nuevos-aumentos-salariales/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T16:40:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T19:01:26.092Z",
-      "relevancia": 36,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Acuerdo trimestral para empleadas domésticas",
-        "Subas del 1,7% en octubre y 1,6% en noviembre y diciembre",
-        "Incorporación de sumas no remunerativas al básico",
-        "Adicionales por antigüedad y zona desfavorable"
-      ],
-      "textoRedes": "El personal de casas particulares cuenta con un esquema de aumentos salariales para el último trimestre de 2026 fijado por la Comisión Nacional de Trabajo en Casas Particulares.",
-      "etiquetas": [
-        "empleadas domesticas",
-        "casas particulares",
-        "salarios",
-        "aumento salarial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/10/11/empleadas-domesticas-cuanto-cobran-en-octubre-noviembre-y-diciembre-de-2026-con-los-nuevos-aumentos-salariales/",
-          "fecha": "2026-10-12T16:40:18.000Z",
-          "oficial": false,
-          "aporte": "Aportó el esquema completo de aumentos trimestrales, porcentajes, cronograma de sumas extraordinarias, adicionales y valores mínimos por categoría."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/empleadas-domesticas-de-cuanto-es-el-aumento-en-octubre-noviembre-y-diciembre/",
-          "fecha": "2026-10-12T18:33:42.000Z",
-          "oficial": false,
-          "aporte": "Aportó el porcentaje de aumento específico para octubre y el número de la resolución oficial."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-personal-de-casas-particulares-define-su-aumento-salarial-hasta",
-      "foto": {
-        "archivo": "fotos-notas/fr6obg.jpg",
-        "credito": "Foto: Canal 26"
-      }
-    },
-    {
       "id": "1qszs3z",
       "titulo": "Gabriel Deck pasa por el quirófano y se pierde lo que resta del año",
       "copete": "El alero de la Selección Argentina y del Real Madrid será operado del hombro izquierdo por una lesión. Su ausencia complica al equipo nacional en la clasificación al Mundial.",
@@ -1431,15 +1447,16 @@
       "medios": [
         "0223 (Mar del Plata)",
         "Noticias Argentinas (NA)",
-        "Básquet Plus",
-        "La Nueva"
+        "Doble Amarilla",
+        "La Nueva",
+        "Básquet Plus"
       ],
       "enlace": "https://basquetplus.com/real-madrid-gaby-deck-operacion-lesion",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-12T16:08:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:31:50.516Z",
-      "relevancia": 72,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1522,9 +1539,9 @@
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Voz del Pueblo",
+        "InfoRegión",
         "El Eco de Tandil",
-        "La Nueva",
-        "InfoRegión"
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/el-mensaje-de-la-casa-rosada-por-el-12-de-octubre---el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo-_a6acd158732fdad2908a0e800",
       "teniaImagenLaFuente": true,
@@ -1762,13 +1779,13 @@
         "La Noticia 1",
         "Diputados Bonaerenses",
         "0221",
+        "La Verdad",
+        "Infoeme",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
-        "El Día",
-        "La Verdad",
-        "Infoeme"
+        "El Día"
       ],
       "enlace": "https://www.eldia.com/la-ciudad/arsenico-en-el-agua-el-consejo-profesional-de-quimica-pidio-informes-a-municipios-bonaerenses-la-ciudad_1791811080",
       "teniaImagenLaFuente": true,
@@ -1852,6 +1869,7 @@
       "guion": "Kiara Ponce gana tres oros nacionales de karate y va al Panamericano",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Acción 5 (Balcarce)"
       ],
@@ -1860,7 +1878,7 @@
       "fecha": "2026-10-12T13:24:20.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T14:01:54.156Z",
-      "relevancia": 81,
+      "relevancia": 91,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1905,81 +1923,6 @@
       "foto": {
         "archivo": "fotos-notas/r0o8z3.jpg",
         "credito": "Foto: Acción 5 (Balcarce)"
-      }
-    },
-    {
-      "id": "wufzrl",
-      "titulo": "El agro argentino exporta casi 89 millones de toneladas",
-      "copete": "Los envíos al exterior de granos, subproductos y aceites acumularon cerca de 88,9 millones de toneladas entre enero y septiembre de 2026. La cifra supera al récord alcanzado en 2021.",
-      "cuerpo": "Las exportaciones de granos, subproductos y aceites del país sumaron cerca de 88,9 millones de toneladas entre enero y septiembre de este año. La cifra representa un incremento de casi el 10% en comparación con el mismo período del año pasado y supera la marca máxima lograda en 2021, según informó la Bolsa de Comercio de Rosario. El volumen exportador respondió a una cosecha sin antecedentes y a una fuerte demanda internacional. Por su parte, la liquidación de divisas del sector alcanzó los USD 3.228 millones en septiembre, de acuerdo con datos de la Cámara de la Industria Aceitera de la República Argentina y el Centro de Exportadores de Cereales.",
-      "guion": "El agro argentino exporta casi 89 millones de toneladas",
-      "seccion": "Agro",
-      "medios": [
-        "Infobae",
-        "Ámbito"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/12/en-nueve-meses-el-agro-argentino-ya-exporto-casi-90-millones-de-toneladas-mas-que-el-record-anual-historico-de-2021/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T13:06:49.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T17:01:56.711Z",
-      "relevancia": 42,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Las exportaciones sumaron cerca de 88,9 millones de toneladas hasta septiembre.",
-        "El volumen supera en casi un 10% el registro del año previo.",
-        "La liquidación de divisas de septiembre llegó a USD 3.228 millones."
-      ],
-      "seSabe": [
-        "Las exportaciones de granos, subproductos y aceites acumularon 88,9 millones de toneladas entre enero y septiembre de 2026, según la Bolsa de Comercio de Rosario.",
-        "El volumen supera el récord previo de 2021.",
-        "La liquidación de divisas de septiembre llegó a USD 3.228 millones, según CIARA y el CEC."
-      ],
-      "textoRedes": "Las exportaciones argentinas de granos, subproductos y aceites acumularon cerca de 88,9 millones de toneladas entre enero y septiembre de 2026 y superaron el récord previo.",
-      "etiquetas": [
-        "agro",
-        "exportaciones",
-        "granos",
-        "divisas",
-        "cosecha"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/12/en-nueve-meses-el-agro-argentino-ya-exporto-casi-90-millones-de-toneladas-mas-que-el-record-anual-historico-de-2021/",
-          "fecha": "2026-10-12T13:06:49.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos sobre el volumen de exportaciones, el récord superado, la liquidación de divisas y los factores productivos."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/hito-el-campo-nueve-meses-exporto-casi-90-millones-toneladas-y-ya-supera-el-record-anual-2021-n6332756",
-          "fecha": "2026-10-12T16:40:24.000Z",
-          "oficial": false,
-          "aporte": "Aportó el contexto sobre el impulso de los embarques debido a una cosecha excepcional y la demanda internacional."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "5ddc24",
-          "titulo": "El riesgo país llega a 642 puntos y marca un récord anual",
-          "fecha": "2026-09-25T21:00:10.000Z",
-          "ruta": "/nota/el-riesgo-pais-llega-a-642-puntos-y-marca-un-record-anual-5ddc24"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-agro-argentino-exporta-casi-89-millones-de-toneladas",
-      "foto": {
-        "archivo": "fotos-notas/wufzrl.jpg",
-        "credito": "Foto: Infobae"
       }
     },
     {
@@ -2040,6 +1983,82 @@
       }
     },
     {
+      "id": "1aqdhjn",
+      "titulo": "Un hombre de Lobería recibe suero antiofídico en el hospital",
+      "copete": "Un vecino de 43 años sufrió la mordedura de una serpiente yarará ñata mientras se encontraba en un campo de la vecina localidad y debió ser derivado de urgencia a Balcarce.",
+      "cuerpo": "Según relató la propia víctima, el ataque se produjo en una de sus manos al regresar de una actividad de caza, cuando no advirtió la presencia del reptil enroscado en un animal que había faenado.\n\nTras el episodio, acudió al centro de salud loberense como medida preventiva, pero los profesionales le indicaron un traslado inmediato debido a la falta de suero específico en esa localidad. El paciente llegó en un vehículo particular al Hospital Subzonal Felipe A. Fossati, donde los médicos evaluaron sus estudios y le administraron diez ampollas de suero antiofídico.\n\nEl hombre permanece internado bajo observación en la Unidad de Terapia Intensiva del nosocomio local a la espera de una evolución favorable de su cuadro de salud.",
+      "guion": "Un hombre de Lobería recibe suero antiofídico en el hospital",
+      "seccion": "Policiales",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-12T12:55:49.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T13:31:45.071Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "hospital"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Un hombre de 43 años fue atacado por una yarará ñata en Lobería.",
+        "El centro de salud de esa ciudad derivó al paciente por falta de suero.",
+        "Ingresó al Hospital Fossati en un vehículo particular para recibir tratamiento.",
+        "Le aplicaron diez ampollas de suero antiofídico y sigue en Terapia Intensiva."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un hombre de 43 años fue derivado desde Lobería a Balcarce tras ser mordido por una yarará ñata mientras cazaba en un campo. El paciente recibió diez ampollas de suero antiofídico y permanece internado en Terapia Intensiva en el Hospital Fossati.",
+      "etiquetas": [
+        "Hospital Fossati",
+        "Lobería",
+        "salud",
+        "yarará",
+        "mordedura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/un-hombre-fue-mordido-por-una-yarara-en-loberia-y-debio-ser-trasladado-de-urgencia-a-balcarce/",
+          "fecha": "2026-10-12T12:55:49.000Z",
+          "oficial": false,
+          "aporte": "Detalló el traslado desde Lobería y la internación en Terapia Intensiva del Hospital Fossati tras recibir suero antiofídico."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1v130vb",
+          "titulo": "Xoana Martínez defiende el acuerdo paritario y detalla los puntos del sector municipal",
+          "fecha": "2026-10-05T16:31:22.668Z",
+          "ruta": "/nota/xoana-martinez-defiende-el-acuerdo-paritario-y-detalla-los-puntos-del-1v130vb"
+        },
+        {
+          "id": "1ni344u",
+          "titulo": "El Hospital Municipal registra problemas en sus líneas telefónicas",
+          "fecha": "2026-10-05T11:40:58.000Z",
+          "ruta": "/nota/el-hospital-municipal-registra-problemas-en-sus-lineas-telefonicas-1ni344u"
+        },
+        {
+          "id": "164o14u",
+          "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal",
+          "fecha": "2026-10-02T13:18:34.000Z",
+          "ruta": "/nota/el-club-de-leones-entrega-nuevos-equipos-al-hospital-municipal-164o14u"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "un-hombre-de-loberia-recibe-suero-antiofidico-en-el-hospital"
+    },
+    {
       "id": "36ajax",
       "titulo": "El turismo crece en el fin de semana largo y deja millonarios ingresos",
       "copete": "Un millón y medio de personas recorrieron distintos puntos del país durante el fin de semana largo. La cantidad de viajeros subió un 3,5% interanual, aunque el impacto económico total retrocedió en términos reales debido a estadías más cortas.",
@@ -2065,7 +2084,9 @@
         "Noticias Argentinas (NA)",
         "0221",
         "La Tecla",
+        "La Verdad",
         "La Voz del Pueblo",
+        "InfoRegión",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
@@ -2073,9 +2094,7 @@
         "NDEN – Noticias de Necochea",
         "Ecos Diarios (Necochea)",
         "La Nueva",
-        "InfoRegión",
-        "La Brújula 24",
-        "La Verdad"
+        "La Brújula 24"
       ],
       "enlace": "https://www.infobrisas.com/noticias/2026/10/12/111090-viajaron-mas-turistas-en-el-feriado-de-octubre-pero-el-impacto-economico-cayo",
       "teniaImagenLaFuente": true,
@@ -2211,14 +2230,14 @@
         "Página/12",
         "C5N",
         "Crónica",
-        "Canal 26",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
         "Clarín",
-        "La Nueva",
-        "La Verdad"
+        "Canal 26",
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/economia/milei-aseguro-que-cuenta-con-us-125-000-millones-para-hacer-frente-a-una-corrida-cambiaria_a6accd28432fdad290897992a",
       "teniaImagenLaFuente": true,
@@ -2349,80 +2368,6 @@
         "archivo": "fotos-notas/1xc91gb.jpg",
         "credito": "Foto: Infobae"
       }
-    },
-    {
-      "id": "8hce1y",
-      "titulo": "Domingo Cavallo cuestiona el rumbo económico y advierte por el sobreajuste",
-      "copete": "El exministro de Economía respaldó un análisis del Ieral que cuestiona el impacto de la política monetaria en el consumo y la inversión. El trabajo también señala dudas sobre las reservas y el financiamiento.",
-      "cuerpo": "El exministro de Economía Domingo Cavallo respaldó un análisis elaborado por Jorge Vasconcelos, economista jefe del Ieral de la Fundación Mediterránea, que cuestiona aspectos del programa económico de la gestión de Javier Milei.\n\nEl informe detalla que la caída del consumo equivalió al 1,6 por ciento del PBI y la de la inversión al 2,5 por ciento. Además, advierte que las reservas netas del Banco Central alcanzan los 11.500 millones de dólares frente a compromisos externos públicos por 24.900 millones.\n\nAnte planteos previos del exfuncionario sobre la falta de un horizonte monetario, el presidente Javier Milei calificó en otra oportunidad a Cavallo de chanta. El trabajo del Ieral sugiere reducir impuestos para aliviar los costos financieros de las empresas locales.",
-      "guion": "Domingo Cavallo cuestiona el rumbo económico y advierte por el sobreajuste",
-      "seccion": "Economía",
-      "medios": [
-        "Clarín",
-        "Ámbito",
-        "El Día"
-      ],
-      "enlace": "https://www.clarin.com/economia/cavallo-volvio-cuestionar-modelo-economico-milei-alerto-sobreajuste-caida-inversion_0_Mb8qDoLKWR.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T12:29:08.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T04:01:57.624Z",
-      "relevancia": 52,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Domingo Cavallo elogió un informe del Ieral sobre la economía nacional",
-        "El documento advierte por el sobreajuste, el consumo y la caída de la inversión",
-        "Señalan reservas netas por 11.500 millones de dólares y compromisos externos mayores"
-      ],
-      "seSabe": [
-        "Domingo Cavallo calificó de excelente el informe del economista Jorge Vasconcelos",
-        "El trabajo del Ieral advierte una contracción del consumo del 1,6 por ciento del PBI",
-        "El informe calcula las reservas netas del Banco Central en 11.500 millones de dólares"
-      ],
-      "noConfirmado": [
-        "No hay precisiones oficiales sobre la viabilidad de emitir bonos por 11.000 millones de dólares en 2027"
-      ],
-      "textoRedes": "Domingo Cavallo volvió a cuestionar el rumbo económico y respaldó un informe del Ieral que advierte sobre el sobreajuste, la caída de la inversión y la situación de las reservas.",
-      "etiquetas": [
-        "Domingo Cavallo",
-        "Ieral",
-        "economia",
-        "Javier Milei"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/cavallo-volvio-cuestionar-modelo-economico-milei-alerto-sobreajuste-caida-inversion_0_Mb8qDoLKWR.html",
-          "fecha": "2026-10-12T20:38:43.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el informe del Ieral, las cifras de PBI, las reservas y las declaraciones previas del presidente Javier Milei."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/domingo-cavallo-volvio-cuestionar-el-modelo-economico-javier-milei-alerto-el-sobreajuste-y-la-caida-la-inversion-n6332902",
-          "fecha": "2026-10-12T23:33:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el respaldo de Domingo Cavallo al trabajo del Ieral sobre el consumo y la inversión."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "194wzrq",
-          "titulo": "Domingo Cavallo elogia un informe con reparos al plan económico",
-          "fecha": "2026-10-12T12:29:08.000Z",
-          "ruta": "/nota/domingo-cavallo-elogia-un-informe-con-reparos-al-plan-economico-194wzrq"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "domingo-cavallo-cuestiona-el-rumbo-economico-y-advierte-por-el"
     },
     {
       "id": "rzhblo",
@@ -2785,76 +2730,6 @@
         "archivo": "fotos-notas/libre-f1resultado2026r17.jpg",
         "credito": "Foto: Kam2y / Wikimedia Commons (CC BY 3.0)"
       }
-    },
-    {
-      "id": "p21pyq",
-      "titulo": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "copete": "El piloto argentino debió abandonar la competencia en el circuito de Marina Bay por problemas técnicos y generó la furia de un competidor de Red Bull.",
-      "cuerpo": "Franco Colapinto debió abandonar la competencia en el circuito de Marina Bay por problemas mecánicos en su monoplaza durante el Gran Premio de Singapur.\n\nEl piloto argentino defendía la duodécima posición cuando generó la irritación de Isack Hadjar, integrante de la escudería Red Bull, quien debió extremar recursos por radio para intentar superarlo.\n\nEl competidor francés recriminó la resistencia del pilarense antes de quedar libre en la pista del trazado asiático, donde el automovilista nacional había cumplido destacadas actuaciones en el ciclo previo.",
-      "guion": "Hadjar cuestiona con dureza a Colapinto tras el Gran Premio de Singapur",
-      "seccion": "Automovilismo",
-      "medios": [
-        "TyC Sports",
-        "Minuto Uno",
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T22:48:29.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T11:02:16.567Z",
-      "relevancia": 68,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Franco Colapinto dejó la competencia por fallas mecánicas.",
-        "El hecho ocurrió en el circuito de Marina Bay.",
-        "Isack Hadjar recriminó la defensa del piloto argentino."
-      ],
-      "seSabe": [
-        "Franco Colapinto abandonó el Gran Premio de Singapur por fallas técnicas en su monoplaza.",
-        "El piloto de Alpine defendía el puesto doce en el circuito de Marina Bay.",
-        "Isack Hadjar consultó por radio a su equipo cómo superar al argentino."
-      ],
-      "noConfirmado": [
-        "Los motivos exactos de la falla técnica en el vehículo de Colapinto."
-      ],
-      "textoRedes": "Franco Colapinto abandonó el Gran Premio de Singapur por problemas mecánicos y generó la furia de Isack Hadjar durante una disputa en pista.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Gran Premio de Singapur",
-        "Isack Hadjar"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/hadjar-exploto-contra-colapinto---sabia-que-este-tipo-iba-a-ser--_a6acc36b9f61ec7711f84c824",
-          "fecha": "2026-10-12T01:36:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el abandono de Colapinto por fallas técnicas y el enojo del piloto Isack Hadjar."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-12-7-28-0-hadjar-exploto-contra-colapinto-sabia-que-este-tipo-iba-a-ser",
-          "fecha": "2026-10-12T10:36:29.000Z",
-          "oficial": false,
-          "aporte": "Indicó que Colapinto no tuvo el desempeño esperado y generó la furia de un rival."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "hadjar-cuestiona-con-dureza-a-colapinto-tras-el-gran-premio-de",
-      "foto": {
-        "archivo": "fotos-notas/p21pyq.jpg",
-        "credito": "Foto: La Nueva"
-      }
     }
   ],
   "secciones": [
@@ -2865,7 +2740,6 @@
     "Deportes",
     "Argentina",
     "Cultura y agenda",
-    "Agro",
     "Automovilismo"
   ],
   "temas": [],
@@ -2873,7 +2747,7 @@
     "ahora": {
       "temp": 9,
       "sensacion": 7,
-      "humedad": 93,
+      "humedad": 91,
       "viento": 10,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3227,10 +3101,10 @@
       "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "p582dy",
-      "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "11k1rn",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1h6d10j",
@@ -3239,11 +3113,35 @@
       "motivo": "parece promoción, no noticia: \"publicidad\""
     },
     {
+      "id": "xulwye",
+      "titulo": "Luis Caputo negó las versiones sobre una posible salida…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\" (en otro medio que cuenta lo mismo)"
+    },
+    {
+      "id": "p582dy",
+      "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1bwjwir",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "byrxyh",
+      "titulo": "Arrojaron pescados muertos en la vía pública y generaron…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"muertos\""
+    },
+    {
       "id": "ox863",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 1
 }
