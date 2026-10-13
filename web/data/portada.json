@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T07:31:43.065Z",
+  "generado": "2026-10-13T08:01:56.858Z",
   "notas": [
     {
       "id": "1335hw8",
@@ -12,15 +12,15 @@
         "La Nación",
         "Clarín",
         "Infobae",
-        "TN (Todo Noticias)",
-        "Perfil"
+        "Perfil",
+        "Crónica"
       ],
       "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-promulgo-la-ley-que-modifica-el-regimen-de-zonas-frias-nid13102026/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T04:32:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T06:31:20.370Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -136,6 +136,94 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "detienen-a-un-hombre-por-desobedecer-una-restriccion-de-acercamiento"
+    },
+    {
+      "id": "kiypip",
+      "titulo": "El FMI baja la proyección de crecimiento del país al 2,1% para este año",
+      "copete": "El organismo internacional recortó su pronóstico desde el 3,5% previo y elevó al 32,5% la estimación de inflación anual promedio. El ministro Luis Caputo se reúne con Kristalina Georgieva en Tailandia.",
+      "cuerpo": "El Fondo Monetario Internacional redujo al 2,1% su cálculo de expansión económica para la Argentina en el corriente año, frente al 3,5% que calculaba en julio pasado. La decisión surge del informe semestral de Perspectivas Económicas Mundiales presentado en Tailandia, donde el ministro de Economía, Luis Caputo, se encuentra con Kristalina Georgieva para negociar la tercera revisión del programa vigente y un desembolso de 860 millones de dólares.\n\nEn paralelo, el organismo incrementó al 32,5% anual promedio su estimación inflacionaria, por encima del 30,4% de su reporte previo. Morgan ya había recortado al 1,5% su cálculo de actividad.",
+      "guion": "El FMI baja la proyección de crecimiento del país al 2,1% para este año",
+      "seccion": "Economía",
+      "medios": [
+        "Clarín",
+        "TN (Todo Noticias)",
+        "C5N"
+      ],
+      "enlace": "https://www.clarin.com/economia/fmi-proyeccion-crecimiento-argentina-ahora-espera-pbi-suba-21-ano_0_JcvJvwWeXq.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T02:00:34.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T03:01:45.941Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El FMI redujo del 3,5% al 2,1% la estimación de crecimiento para este año",
+        "La proyección de inflación anual promedio subió del 30,4% al 32,5%",
+        "Luis Caputo se reúne con Kristalina Georgieva en Tailandia por la revisión del programa",
+        "El organismo desmejoró los pronósticos para 2027 y anticipó una mayor tasa de desempleo"
+      ],
+      "seSabe": [
+        "El Fondo Monetario Internacional bajó del 3,5% al 2,1% la proyección de crecimiento económico para este año",
+        "La proyección de inflación anual promedio pasó del 30,4% al 32,5%",
+        "El ministro Luis Caputo se reúne con Kristalina Georgieva en Tailandia para negociar la tercera revisión de metas",
+        "El organismo proyectó una mayor tasa de desempleo y desmejoró las previsiones para 2027"
+      ],
+      "noConfirmado": [
+        "Todavía no se informó el resultado de la reunión entre el ministro Luis Caputo y la titular del FMI Kristalina Georgieva"
+      ],
+      "textoRedes": "El Fondo Monetario Internacional redujo al 2,1% la proyección de crecimiento para la Argentina este año y elevó al 32,5% la estimación de inflación anual promedio. En Tailandia, el ministro Luis Caputo negocia la tercera revisión del programa.",
+      "etiquetas": [
+        "FMI",
+        "economia",
+        "crecimiento",
+        "inflacion",
+        "Luis Caputo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/fmi-proyeccion-crecimiento-argentina-ahora-espera-pbi-suba-21-ano_0_JcvJvwWeXq.html",
+          "fecha": "2026-10-13T02:00:34.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el recorte de crecimiento, la inflación, la reunión de Caputo y el informe del FMI"
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/12/el-fmi-recorto-fuerte-sus-previsiones-para-la-economia-argentina-proyecto-menos-crecimiento-y-mas-inflacion/",
+          "fecha": "2026-10-13T02:07:59.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el recorte del crecimiento al 2,1% y la nueva proyección de inflación anual promedio de 32,5%"
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/el-fmi-recorto-fuerza-su-pronostico-crecimiento-la-argentina-y-elevo-el-la-inflacion-n251423",
+          "fecha": "2026-10-13T02:51:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el organismo empeoró las previsiones para 2027 y proyectó una mayor tasa de desempleo"
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "194nq4e",
+          "titulo": "J.P. Morgan recorta al 1,5% su proyección de crecimiento y anticipa una recesión",
+          "fecha": "2026-09-23T11:31:00.000Z",
+          "ruta": "/nota/j-p-morgan-recorto-fuerte-su-proyeccion-de-actividad-economica-para-194nq4e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-fmi-baja-la-proyeccion-de-crecimiento-del-pais-al-2-1-para-este-ano",
+      "foto": {
+        "archivo": "fotos-notas/kiypip.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
     },
     {
       "id": "2mzsmm",
@@ -601,6 +689,7 @@
         "Noticias Argentinas (NA)",
         "Punto Noticias",
         "La Nueva",
+        "El Marplatense",
         "El Eco de Tandil",
         "0223 (Mar del Plata)",
         "Ayacucho al Día"
@@ -610,7 +699,7 @@
       "fecha": "2026-10-12T19:53:33.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 69,
+      "relevancia": 62,
       "local": false,
       "oficial": true,
       "publicadaPor": null,
@@ -675,7 +764,7 @@
       "fecha": "2026-10-12T19:42:06.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T20:01:29.937Z",
-      "relevancia": 82,
+      "relevancia": 75,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -710,80 +799,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "top-serrano-gana-tres-titulos-en-el-torneo-de-tenis-de-mesa"
-    },
-    {
-      "id": "zlbsz6",
-      "titulo": "La CGT rechaza la restitución del Día de la Raza dispuesta por el Gobierno",
-      "copete": "La central obrera cuestionó la medida de la administración de Javier Milei y ratificó la vigencia del Día del Respeto a la Diversidad Cultural.",
-      "cuerpo": "La Confederación General del Trabajo cuestionó la decisión del Gobierno nacional de recuperar la denominación de Día de la Raza para este 12 de octubre y calificó la medida como una provocación burda. A través de un comunicado oficial, la central obrera ratificó la conmemoración por el Día del Respeto a la Diversidad Cultural tal como lo establece la Constitución Nacional.\n\nLa entidad sindical señaló que el discurso oficial carece de una reivindicación fundamentada.",
-      "guion": "La CGT rechaza la restitución del Día de la Raza dispuesta por el Gobierno",
-      "seccion": "Política",
-      "medios": [
-        "El Eco de Tandil",
-        "Minuto Uno",
-        "Noticias Argentinas (NA)",
-        "La Verdad"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/la-cgt-califico-al--dia-de-la-raza--que-restituyo-el-gobierno-como-una--provocacion-burda-_a6acd35b332fdad2908a53ddf",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T19:38:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T22:31:50.433Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La CGT calificó la medida como una provocación burda.",
-        "Ratificaron la vigencia del Día del Respeto a la Diversidad Cultural.",
-        "cuestionaron la decisión del gobierno de Javier Milei."
-      ],
-      "seSabe": [
-        "La CGT emitió un comunicado para cuestionar la medida del Gobierno.",
-        "La central obrera ratificó el Día del Respeto a la Diversidad Cultural.",
-        "La entidad mencionó los antecedentes históricos de Yrigoyen y Perón."
-      ],
-      "etiquetas": [
-        "CGT",
-        "Gobierno nacional",
-        "Día de la Raza",
-        "Día del Respeto a la Diversidad Cultural"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/la-cgt-califico-al--dia-de-la-raza--que-restituyo-el-gobierno-como-una--provocacion-burda-_a6acd35b332fdad2908a53ddf",
-          "fecha": "2026-10-12T19:38:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los argumentos históricos de la CGT y las citas de Yrigoyen y Perón."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/politica/la-cgt-califico-como-una-provocacion-burda-la-restitucion-del-dia-de-la-raza",
-          "fecha": "2026-10-12T22:12:24.000Z",
-          "oficial": false,
-          "aporte": "Informó que la medida fue impulsada por la administración de Javier Milei."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/la-cgt-califico-al-dia-de-la-raza-que-restituyo-el-gobierno-como-una-provocacion-burda/",
-          "fecha": "2026-10-12T21:45:16.000Z",
-          "oficial": false,
-          "aporte": "Señaló la postura de la central obrera sobre la Constitución Nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-cgt-rechaza-la-restitucion-del-dia-de-la-raza-dispuesta-por-el",
-      "foto": {
-        "archivo": "fotos-notas/zlbsz6.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
     },
     {
       "id": "15o5mwn",
@@ -2155,9 +2170,9 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "La Verdad",
-        "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Clarín",
+        "El Marplatense",
         "El Eco de Tandil",
         "La Nueva"
       ],
@@ -2381,12 +2396,12 @@
         "Minuto Uno",
         "Crónica",
         "Radio Mitre",
-        "El Marplatense",
         "Doble Amarilla",
         "Olé",
         "Ecos Diarios (Necochea)",
         "La Brújula 24",
-        "El Día"
+        "El Día",
+        "El Marplatense"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/cristiano-ronaldo-portugal-messi-pele-maradona-crisis-declaraciones_0_r7ZR23ZKji.html",
       "teniaImagenLaFuente": true,
@@ -2854,7 +2869,7 @@
       "fecha": "2026-10-11T22:48:29.000Z",
       "sinFecha": false,
       "visto": "2026-10-12T11:02:16.567Z",
-      "relevancia": 72,
+      "relevancia": 68,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2904,6 +2919,110 @@
       "foto": {
         "archivo": "fotos-notas/p21pyq.jpg",
         "credito": "Foto: La Nueva"
+      }
+    },
+    {
+      "id": "ay4wdh",
+      "titulo": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
+      "copete": "El presidente argentino emprende el martes su quinto viaje del año a Estados Unidos. Cumplirá una agenda de tres días en Washington D. C. que incluye encuentros empresarios y discursos.",
+      "cuerpo": "El presidente Javier Milei viajará el martes a las 23 hacia Estados Unidos en su quinta visita al país norteamericano en lo que va del año, según informaron los medios consultados. El mandatario llegará a Washington D. C. el miércoles a las 9:30, hora argentina, junto a su comitiva para cumplir con una agenda de tres días.\n\nDurante su estadía, el jefe de Estado se reunirá con el inversor Andy Kleinman y con el empresario petrolero Harold Hamm. Además, recibirá galardones en la Gala Oficial del Mes de la Herencia Hispana y en la Cámara de Comercio estadounidense. El regreso está previsto para el viernes a las 8:30.\n\nEn paralelo, el gabinete nacional mantendrá diversas actividades en el país y en el exterior, como la participación del ministro de Economía, Luis Caputo, en las reuniones del Fondo Monetario Internacional en Tailandia.",
+      "guion": "Javier Milei viaja a Estados Unidos para una nueva gira oficial",
+      "seccion": "Política",
+      "medios": [
+        "Minuto Uno",
+        "Perfil",
+        "C5N",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Tecla",
+        "La Verdad",
+        "InfoRegión",
+        "El Día",
+        "Crónica",
+        "La Nueva"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-11T21:51:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-12T00:01:37.308Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El presidente Javier Milei viaja el martes a la noche hacia Estados Unidos.",
+        "Cumplirá una agenda de tres días en la ciudad de Washington D. C.",
+        "Recibirá reconocimientos y mantendrá encuentros con referentes empresarios.",
+        "El ministro de Economía participa de reuniones del FMI en Tailandia."
+      ],
+      "seSabe": [
+        "El viaje presidencial comienza el martes a las 23 y marca la quinta visita del mandatario a Estados Unidos en el año.",
+        "La agenda en Washington D. C. incluye exposiciones institucionales y reuniones con empresarios.",
+        "El ministro de Economía, Luis Caputo, participa en Tailandia de las reuniones anuales del FMI y del Banco Mundial."
+      ],
+      "etiquetas": [
+        "Javier Milei",
+        "Estados Unidos",
+        "Washington",
+        "Gobierno Nacional",
+        "Economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei-visita-estados-unidos-por-quinta-vez-en-lo-que-va-del-ano_a6acc092af61ec7711f7d3ee7",
+          "fecha": "2026-10-11T22:23:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los horarios de la gira presidencial, los encuentros con empresarios y las actividades del gabinete nacional."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/10/11/javier-milei-viajara-por-quinta-vez-en-el-ano-a-estados-unidos-como-sera-la-agenda-del-presidente/",
+          "fecha": "2026-10-11T23:48:23.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el horario de salida del vuelo presidencial hacia Estados Unidos."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/javier-milei-viaja-por-quinta-vez-a-estados-unidos-para-reunirse-con-empresarios-y-recibir-dos-nuevos-premios-politica-y-economia_1791762720",
+          "fecha": "2026-10-11T23:52:48.000Z",
+          "oficial": false,
+          "aporte": "Aportó precisiones sobre la agenda de tres días en Washington D. C."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1tib4ft",
+          "titulo": "Javier Milei viaja a Estados Unidos y coincide con Eduardo Bolsonaro",
+          "fecha": "2026-10-05T18:53:21.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-estados-unidos-y-coincide-con-eduardo-bolsonaro-1tib4ft"
+        },
+        {
+          "id": "1uw5a9s",
+          "titulo": "El vicepresidente de Estados Unidos visita la Argentina en noviembre",
+          "fecha": "2026-10-01T14:24:51.000Z",
+          "ruta": "/nota/el-vicepresidente-de-estados-unidos-visita-la-argentina-en-noviembre-1uw5a9s"
+        },
+        {
+          "id": "11nk8l",
+          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "javier-milei-viaja-a-estados-unidos-para-una-nueva-gira-oficial",
+      "foto": {
+        "archivo": "fotos-notas/ay4wdh.jpg",
+        "credito": "Foto: Canal 26"
       }
     },
     {
@@ -2990,119 +3109,26 @@
         "archivo": "fotos-notas/1vl8rqs.jpg",
         "credito": "Foto: Diario Popular"
       }
-    },
-    {
-      "id": "1pi4mqa",
-      "titulo": "Diputados debate el proyecto que sanciona el vandalismo rural",
-      "copete": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en establecimientos agropecuarios. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
-      "cuerpo": "La propuesta incorpora el artículo 150 bis al Código Penal con sanciones de un mes a un año de prisión para quien ingrese a un campo sin autorización.\n\nEl texto, impulsado por el legislador Martín Ardohaín, también crea el artículo 184 bis para castigar con penas de dos a ocho años de prisión y multas a quienes dañen cultivos, ganado, maquinaria o infraestructura productiva.\n\nEl diputado opositor Ramiro Gutiérrez objetó la iniciativa al señalar que replica figuras legales ya contempladas en la normativa actual y establece escalas punitivas inferiores para conductas equivalentes.",
-      "guion": "Diputados debate el proyecto que sanciona el vandalismo rural.",
-      "seccion": "Agro",
-      "medios": [
-        "Infobae",
-        "La Nación"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-11T19:59:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-11T23:31:31.632Z",
-      "relevancia": 33,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El plenario de comisiones aprobó el dictamen el 6 de octubre.",
-        "Se propone incorporar los artículos 150 bis y 184 bis al Código Penal.",
-        "Las penas por daños a la producción rural alcanzan hasta los ocho años de prisión.",
-        "La oposición cuestionó que la iniciativa duplica normas ya vigentes."
-      ],
-      "seSabe": [
-        "El proyecto obtuvo dictamen de mayoría en un plenario de comisiones de la Cámara de Diputados.",
-        "La iniciativa fue presentada por el diputado Martín Ardohaín.",
-        "El despacho cosechó 41 adhesiones.",
-        "El artículo 150 bis castiga la intrusión en establecimientos rurales con hasta un año de prisión.",
-        "El artículo 184 bis prevé penas de dos a ocho años por daños a cultivos, ganado e infraestructura."
-      ],
-      "noConfirmado": [
-        "La recepción del proyecto en el recinto de la Cámara Baja para la búsqueda de media sanción."
-      ],
-      "textoRedes": "Un plenario de comisiones de la Cámara de Diputados emitió dictamen de mayoría para un proyecto que endurece las penas por intrusiones y daños en campos. La oposición cuestionó la iniciativa por duplicar normas vigentes.",
-      "etiquetas": [
-        "Diputados",
-        "vandalismo rural",
-        "Código Penal",
-        "agricultura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/11/vandalismo-rural-que-dice-el-proyecto-de-ley-que-obtuvo-dictamen-de-comision-y-por-que-lo-cuestiona-la-oposicion/",
-          "fecha": "2026-10-11T19:59:13.000Z",
-          "oficial": false,
-          "aporte": "Detalló los detalles del dictamen, los artículos propuestos y las declaraciones del diputado Martín Ardohaín."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/vandalismo-rural-la-oposicion-advirtio-que-el-proyecto-que-obtuvo-dictamen-duplica-delitos-y-reduce-nid11102026/",
-          "fecha": "2026-10-11T23:17:31.000Z",
-          "oficial": false,
-          "aporte": "Aportó las críticas y los cuestionamientos planteados por el diputado Ramiro Gutiérrez."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "w7o4x7",
-          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
-          "fecha": "2026-10-06T12:56:37.000Z",
-          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
-        },
-        {
-          "id": "c7em03",
-          "titulo": "La oposición negocia un dictamen común contra la morosidad antes del martes",
-          "fecha": "2026-09-27T11:10:21.000Z",
-          "ruta": "/nota/vence-el-plazo-para-dictaminar-y-la-oposicion-negocia-un-proyecto-c7em03"
-        },
-        {
-          "id": "q84c12",
-          "titulo": "Una investigadora del INTA cuestiona la suspensión de un proyecto",
-          "fecha": "2026-09-24T14:26:31.000Z",
-          "ruta": "/nota/carta-abierta-de-investigadora-del-inta-balcarce-q84c12"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diputados-debate-el-proyecto-que-sanciona-el-vandalismo-rural",
-      "foto": {
-        "archivo": "fotos-notas/1pi4mqa.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
     "Política",
     "Policiales",
+    "Economía",
     "Fútbol",
     "Balcarce",
     "Deportes",
     "Argentina",
-    "Economía",
     "Cultura y agenda",
-    "Automovilismo",
-    "Agro"
+    "Automovilismo"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 9,
-      "sensacion": 7,
+      "temp": 8,
+      "sensacion": 6,
       "humedad": 97,
-      "viento": 10,
+      "viento": 11,
       "rumbo": "E",
       "cielo": "Nublado",
       "esDeDia": false
