@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T14:10:09.288Z",
- "portada": 34,
+ "generado": "2026-10-13T14:43:14.090Z",
+ "portada": 35,
  "archivo": 999,
- "esperandoCuerpo": 7,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-13T14:10:09.308Z",
+  "generado": "2026-10-13T14:43:14.119Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 38,
+    "segundos": 54,
     "notas": [
      {
       "id": "pt4b1r",
@@ -134,9 +134,19 @@
       "seccion": "Fútbol"
      },
      {
+      "id": "1dun8ft",
+      "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
+      "seccion": "Balcarce"
+     },
+     {
       "id": "uestws",
       "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "wj5hg5",
+      "titulo": "La Provincia otorga ochenta millones de pesos para murgas y comparsas",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -181,6 +191,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "1dun8ft",
+     "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "uestws",
      "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
