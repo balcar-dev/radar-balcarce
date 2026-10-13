@@ -96,3 +96,4 @@
 - **Placas de efemérides:** el adorno (por ejemplo, las notas musicales) no se puede superponer con ningún texto; se acomoda en un lugar libre de la placa. Pasó el 11/10 con «octubre».
 - **Farmacia:** bajar la información, usarla como fuente propia y cotejarla con la página del Colegio por si esa página se cae o cambia; revisar también qué datos puntuales faltan (teléfonos, direcciones). Pendiente de hacer.
 - **Avisos y resumen diario por mail** (estadísticas de la web y de las redes, fallas y pendientes), en vez de WhatsApp (sin cupo desde el 4/10, aprox.). Pendiente de elegir el servicio de envío.
+- **Notas propias nuevas (idea del 13/10):** una nota propia por cada efeméride del día y por cada feriado, además de la placa. Hacerlas con plantilla y datos de las listas curadas, sin IA ni datos inventados, como la del clima. Pendiente, después de la renovación.
