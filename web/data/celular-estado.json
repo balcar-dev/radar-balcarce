@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T12:36:30.333Z",
- "portada": 34,
- "archivo": 993,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-13T13:13:20.666Z",
+ "portada": 38,
+ "archivo": 998,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-13T12:36:30.367Z",
+  "generado": "2026-10-13T13:13:20.694Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
     "segundos": 48,
     "notas": [
@@ -108,9 +108,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "fa17ki",
-      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
-      "seccion": "Balcarce"
+      "id": "pt4b1r",
+      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
+      "seccion": "Fútbol"
      },
      {
       "id": "1qszs3z",
@@ -126,8 +126,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 35,
+    "notas": [
+     {
+      "id": "uestws",
+      "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "seccion": "Balcarce"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -161,8 +172,14 @@
    ],
    "cola": [
     {
-     "id": "fa17ki",
-     "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
+     "id": "pt4b1r",
+     "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
+     "seccion": "Fútbol",
+     "marcada": false
+    },
+    {
+     "id": "uestws",
+     "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
      "seccion": "Balcarce",
      "marcada": false
     }
