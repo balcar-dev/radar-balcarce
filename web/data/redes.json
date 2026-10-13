@@ -4853,7 +4853,15 @@
       "notaId": null
     }
   },
-  "problemas": {},
+  "problemas": {
+    "2026-10-13/noticia2/instagram/reel": {
+      "pieza": "noticia2",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-13T18:06:17.329Z"
+    }
+  },
   "facebookFoto": {
     "fa17ki": {
       "intentos": 2,
