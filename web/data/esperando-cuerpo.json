@@ -1,29 +1,7 @@
 {
- "generado": "2026-10-13T19:33:56.770Z",
+ "generado": "2026-10-13T20:03:04.949Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "o3be7t",
-   "titulo": "“Primavera en el Vagón”: una jornada recreativa para toda la familia",
-   "copete": "El próximo sábado 17 de octubre, de 14 a 18 hs, se llevará a cabo “Primavera en el Vagón”, una propuesta recreativa destinada a toda la familia, en el predio ubicado en avenida Eva Perón y calle 106. Durante la jornada, los asistentes podrán disfrutar de espectáculos de títeres…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-10-13T18:45:20.751Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/primavera-en-el-vagon-una-jornada.html",
-     "fecha": "2026-10-13T18:45:20.751Z"
-    },
-    {
-     "medio": "Diario La Vanguardia",
-     "enlace": "https://www.diariolavanguardia.com/noticias/45071-vagon-cultural-una-tarde-de-juegos-musica-y-talleres-para-compartir-en-familia/",
-     "fecha": null
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (copia): copia 24 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 53 palabras",
-   "maximo": 3
-  },
   {
    "id": "um5udw",
    "titulo": "Adrián Stoppelman presentó su espectáculo de stand up en la Casa del Bicentenario",
@@ -42,76 +20,26 @@
      "fecha": null
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (promesa): el título nombra a \"stoppelman\", \"casa\", \"bicentenario\" y el cuerpo no los explica; sin esas oraciones quedan 92 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (copia): copia 18 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 90 palabras",
    "maximo": 3
   },
   {
-   "id": "1iw56bi",
-   "titulo": "Las canastas básicas subieron por debajo de la inflación y una familia se necesitó $1.632.505 para no ser pobre",
-   "copete": "Tanto la Canasta Básica Alimentaria (CBA) como la Canasta Básica Total (CBT) aumentaron 1,7% en el mes de septiembre , quedando 0,2 puntos porcentuales por debajo de la inflación general de ese mes, según el Indec. ¿Qué representan esas mediciones? La CBA hace referencia a lo…",
-   "seccion": "Economía",
-   "fecha": "2026-10-13T19:02:00.000Z",
+   "id": "o3be7t",
+   "titulo": "“Primavera en el Vagón”: una jornada recreativa para toda la familia",
+   "copete": "El próximo sábado 17 de octubre, de 14 a 18 hs, se llevará a cabo “Primavera en el Vagón”, una propuesta recreativa destinada a toda la familia, en el predio ubicado en avenida Eva Perón y calle 106. Durante la jornada, los asistentes podrán disfrutar de espectáculos de títeres…",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-13T18:45:20.751Z",
    "fuentes": [
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/las-canastas-aumentaron-debajo-la-inflacion-pero-la-alimentaria-ya-salto-40-lo-que-va-2026-n6333283",
-     "fecha": "2026-10-13T19:02:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/13/una-familia-necesita-mas-de-1630000-para-no-ser-pobre/",
-     "fecha": "2026-10-13T19:20:25.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/las-canastas-basicas-subieron-17-en-septiembre-y-quedaron-por-debajo-de-la-inflacion-nid13102026/",
-     "fecha": "2026-10-13T19:25:25.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/economia/una-familia-tipo-necesito-1632505-superar-el-umbral-pobreza-septiembre-n6333300",
-     "fecha": "2026-10-13T19:28:00.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/economia/2026/10/13/la-canasta-basica-aumento-un-17-en-septiembre-una-familia-necesito-mas-de-1600000-para-no-ser-pobre/",
-     "fecha": "2026-10-13T19:08:20.000Z"
-    },
-    {
-     "medio": "El Cronista",
-     "enlace": "https://www.cronista.com/economia-politica/canasta-basica-una-familia-tipo-necesito-1632505-en-septiembre-para-no-ser-pobre/",
-     "fecha": "2026-10-13T19:04:22.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/economia/familia-tipo-necesito-1-6-millones-septiembre-no-ser-pobre-20261013162155",
-     "fecha": "2026-10-13T19:21:55.000Z"
-    },
-    {
-     "medio": "C5N",
-     "enlace": "https://www.c5n.com/economia/canasta-basica-una-familia-tipo-necesito-1632505-no-ser-pobre-septiembre-n251480",
-     "fecha": "2026-10-13T19:18:00.000Z"
-    },
-    {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/en-septiembre-una-familia-tipo-necesito-mas-de-1-600-000-para-no-ser-pobre/",
-     "fecha": "2026-10-13T19:02:08.000Z"
-    },
-    {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/economia/las-canastas-aumentaron-por-debajo-de-la-inflacion--cuanto-necesito-una-familia-para-no-ser-pobre-en-septiembre_a6ace826406650845db7bdb58",
-     "fecha": "2026-10-13T19:28:27.000Z"
-    },
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/10/13/111285-una-familia-tipo-necesito-mas-de-16-millones-para-no-ser-pobre",
-     "fecha": "2026-10-13T19:20:00.000Z"
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/primavera-en-el-vagon-una-jornada.html",
+     "fecha": "2026-10-13T18:45:20.751Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 4 problemas (numero): el guion dice 1.000.000 y la fuente no lo dice",
-   "maximo": 5
+   "intentos": 2,
+   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 47 palabras",
+   "maximo": 3
   },
   {
    "id": "kpmt8y",
@@ -161,8 +89,8 @@
      "fecha": "2026-10-13T13:26:00.000Z"
     }
    ],
-   "intentos": 3,
-   "motivo": "título o bajada: 1 problema (tilde): el copete dice \"mas\" en vez de \"más\": \"El organismo penalizo a mas de 1.800 automovilistas por tran\"",
+   "intentos": 4,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2.000 y la fuente no lo dice",
    "maximo": 5
   },
   {
@@ -180,7 +108,7 @@
     {
      "medio": "QZ Noticias (Mar del Plata)",
      "enlace": "https://www.qznoticias.com/deportes/el-turismo-nacional-podria-volver-a-balcarce-y-moriatis-reconocio-el-interes-de-los-pilotos",
-     "fecha": "2026-10-13T14:07:10.000Z"
+     "fecha": "2026-10-13T14:07:20.000Z"
     }
    ],
    "intentos": 1,
@@ -188,30 +116,20 @@
    "maximo": 3
   },
   {
-   "id": "1mobb1t",
-   "titulo": "Clínicas y sanatorios privados de todo el país se declararon en crisis y pidieron una reunión urgente al Gobierno",
-   "copete": "Buenos Aires, 13 octubre (NA) -- Frente a una situación económica y financiera delicada, más de 30 cámaras y asociaciones que agrupan a clínicas, sanatorios y hospitales privados de todo el país solicitaron una audiencia de carácter urgente con las autoridades del Gobierno…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-13T18:43:12.000Z",
+   "id": "1xbibcl",
+   "titulo": "Vagón cultural: Una tarde de juegos, música y talleres para compartir en familia",
+   "copete": "",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-13T17:14:35.770Z",
    "fuentes": [
     {
-     "medio": "Noticias Argentinas (NA)",
-     "enlace": "https://noticiasargentinas.com/politica/clinicas-y-sanatorios-privados-de-todo-el-pais-se-declararon-en-crisis-y-pidieron-una-reunion-urgente-al-gobierno_a6ace7a2306650845db7a6941",
-     "fecha": "2026-10-13T18:43:12.000Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/nacionales/clinicas-y-sanatorios-privados-advierten-por-una-crisis-financiera-y-piden-una-reunion-urgente-al-gobierno",
-     "fecha": "2026-10-13T19:11:59.000Z"
-    },
-    {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-10-13-15-56-0-clinicas-y-sanatorios-privados-de-todo-el-pais-se-declararon-en-crisis-y-pidieron-una-reunion-urgente-al-gobierno",
-     "fecha": "2026-10-13T18:59:15.000Z"
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/noticias/45071-vagon-cultural-una-tarde-de-juegos-musica-y-talleres-para-compartir-en-familia/",
+     "fecha": null
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (fecha, numero): el cuerpo menciona \"martes\" y la fuente no; sin esas oraciones quedan 38 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (fecha, copia): el cuerpo menciona \"viernes\" y la fuente no; sin esas oraciones quedan 41 palabras",
    "maximo": 3
   }
  ]

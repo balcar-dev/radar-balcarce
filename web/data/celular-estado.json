@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T19:33:56.770Z",
- "portada": 42,
- "archivo": 1014,
- "esperandoCuerpo": 6,
+ "generado": "2026-10-13T20:03:04.949Z",
+ "portada": 46,
+ "archivo": 1017,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-10-13T19:33:56.808Z",
+  "generado": "2026-10-13T20:03:04.979Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,17 +157,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 51,
     "notas": [
      {
-      "id": "fm53cw",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
+      "id": "1iw56bi",
+      "titulo": "El Indec ubica la canasta básica por debajo de la inflación en septiembre",
+      "seccion": "Economía"
      },
      {
-      "id": "1n32m9c",
-      "titulo": "El mundo celebra el Día Mundial de los Fertilizantes y su rol clave en la agricultura",
-      "seccion": "Agro"
+      "id": "ampmp1",
+      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
+      "seccion": "Deportes"
      },
      {
       "id": "95znl3",
@@ -175,8 +175,8 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "ampmp1",
-      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
+      "id": "1c2cg52",
+      "titulo": "Marina Montoya gana los cincuenta kilómetros del Ultra Tierras del Diablo",
       "seccion": "Deportes"
      }
     ]
@@ -210,14 +210,7 @@
      "cuando": "2026-10-13T18:13:43.987Z"
     }
    ],
-   "cola": [
-    {
-     "id": "fm53cw",
-     "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-     "seccion": "Automovilismo",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 0,
    "proximoDesde": "2026-10-13T19:43:43.987Z",
    "porDia": 5,
