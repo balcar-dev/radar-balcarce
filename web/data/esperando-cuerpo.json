@@ -1,7 +1,49 @@
 {
- "generado": "2026-10-14T15:06:38.157Z",
+ "generado": "2026-10-14T15:32:18.574Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "11uyvlg",
+   "titulo": "Prohíben en todo el país la venta de juguetes blandos tipo squishy de la marca Pinch Family por contener ftalatos",
+   "copete": "La Subsecretaría de Defensa del Consumidor y Lealtad Comercial prohibió la venta en todo el país de los juguetes blandos tipo squishy de la marca Pinch Family tras detectar niveles de ftalatos que superan el máximo admitido para este tipo de productos. La medida quedó…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-14T11:17:56.000Z",
+   "fuentes": [
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/informacion-general/prohiben-todo-el-pais-la-venta-juguetes-blandos-tipo-squishy-la-marca-pinch-family-contener-ftalatos-n6333458",
+     "fecha": "2026-10-14T12:47:00.000Z"
+    },
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/salud/2026/10/14/prohiben-juguetes-squishy-en-todo-el-pais-por-riesgos-para-la-salud-infantil/",
+     "fecha": "2026-10-14T15:21:44.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/sociedad/el-gobierno-prohibio-la-venta-de-una-marca-del-juguete-blando-squishy-por-posibles-riesgos-para-la-nid14102026/",
+     "fecha": "2026-10-14T11:17:56.000Z"
+    },
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/informacion-gral/prohiben-un-popular-juguete-squishy-por-riesgo-quimico-cual-es-y-por-que-ordenaron-destruir-todo-el-stock/",
+     "fecha": "2026-10-14T13:29:12.000Z"
+    },
+    {
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/sociedad/prohiben-juguetes-infantiles-pinch-family-ser-toxicos-peligrosos-salud-2026101410146",
+     "fecha": "2026-10-14T13:01:00.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/14/prohiben-la-venta-de-juguetes-tipo-squishy-importados-de-china/",
+     "fecha": "2026-10-14T13:57:19.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "con cuerpo",
+   "maximo": 4
+  },
   {
    "id": "1hb8gyb",
    "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico almacenero de la ciudad",
@@ -15,40 +57,8 @@
      "fecha": "2026-10-14T03:35:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (numero): el copete dice 5 y la fuente no lo dice",
-   "maximo": 3
-  },
-  {
-   "id": "y9m1wl",
-   "titulo": "La Provincia adjudicó medicamentos para trasplantes por $ 15.760 millones",
-   "copete": "El Gobierno de la provincia de Buenos Aires adjudicó una contratación por más de 15.000 millones de pesos para abastecer con medicamentos, alcoholes y soluciones parenterales a distintos servicios del Centro Único Coordinador de Ablación e Implante de la Provincia de Buenos…",
-   "seccion": "Política",
-   "fecha": "2026-10-14T12:02:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/sociedad/la-provincia-adjudico-medicamentos-trasplantes-15760-millones-n56476",
-     "fecha": "2026-10-14T12:02:00.000Z"
-    },
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/la-provincia-adjudico-medicamentos-para.html",
-     "fecha": "2026-10-14T14:12:54.650Z"
-    },
-    {
-     "medio": "El Eco de Tandil",
-     "enlace": "https://www.eleco.com.ar/provincia/la-provincia-adjudico-medicamentos-para-trasplantes-por-15760-millones-de-pesos",
-     "fecha": "2026-10-14T12:30:24.000Z"
-    },
-    {
-     "medio": "La Verdad",
-     "enlace": "https://laverdadonline.com/provincia-adjudico-medicamentos-para-trasplantes-por-15-760-millones/",
-     "fecha": "2026-10-14T14:07:47.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 4 problemas (numero, copia): el copete dice 2 y la fuente no lo dice",
+   "intentos": 2,
+   "motivo": "título o bajada: 3 problemas (numero): el copete dice 5 y la fuente no lo dice",
    "maximo": 3
   },
   {
