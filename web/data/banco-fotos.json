@@ -13726,8 +13726,8 @@
   "origen": "ninguna",
   "titulo": "El Gobierno evalúa los feriados por la visita del papa León XIV",
   "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-14T00:31:55.505Z",
-  "intentos": 2,
+  "cuando": "2026-10-14T04:02:18.638Z",
+  "intentos": 3,
   "fuentes": 3
  },
  "2ienjd": {
@@ -13873,8 +13873,29 @@
   "origen": "ninguna",
   "titulo": "Una reflexión atribuida a Albert Einstein analiza el concepto de la madurez",
   "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-14T03:02:10.948Z",
-  "intentos": 1,
+  "cuando": "2026-10-14T04:02:18.638Z",
+  "intentos": 2,
   "fuentes": 3
+ },
+ "1ov26yg": {
+  "archivo": "fotos-notas/1ov26yg.jpg",
+  "medio": "Acción 5 (Balcarce)",
+  "credito": "Foto: Acción 5 (Balcarce)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Fiesta Nacional del Postre confirma su nueva fecha",
+  "enlace": "https://accion5.com/tufroestamos-reorganizando-la-agenda-para-su-realizacion/",
+  "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/TUFRO.jpg",
+  "razon": "Es la única imagen completa y nítida que ilustra el hecho (la conferencia de prensa de la 22° Fiesta Nacional del Postre), sin marcas de agua del medio ni menores de edad.",
+  "cuando": "2026-10-14T04:02:18.638Z"
+ },
+ "m8u8gq": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Agustín Canapino gana una serie del Turismo Nacional tras una maniobra",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-14T04:02:18.638Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }
