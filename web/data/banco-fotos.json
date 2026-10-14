@@ -13816,22 +13816,28 @@
   "cuando": "2026-10-14T00:31:55.505Z"
  },
  "17pigci": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/17pigci.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Sergio Uñac lanza su primer spot y confirma sus aspiraciones presidenciales",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-14T03:02:10.948Z",
-  "intentos": 3,
-  "fuentes": 3
+  "enlace": "https://www.clarin.com/politica/gente-pasando-mal-ano-elecciones-sergio-unac-metio-campana-saco-primer-spot_0_FGiOSnFe3S.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/13/KQ0PEJT1s_2000x1500__1.jpg",
+  "razon": "La foto A muestra claramente al protagonista de perfil con buena calidad y sin marcas añadidas ni menores.",
+  "cuando": "2026-10-14T09:32:16.039Z"
  },
  "xjn0zk": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/xjn0zk.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "ANSES aumenta un 1,9 por ciento las jubilaciones y asignaciones en noviembre",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-14T03:02:10.948Z",
-  "intentos": 3,
-  "fuentes": 9
+  "enlace": "https://www.infobae.com/economia/2026/10/13/cuanto-van-a-aumentar-las-jubilaciones-y-pensiones-de-anses-en-noviembre-tras-el-ultimo-dato-de-inflacion/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/WKE5L5LAJJGLTO375RYCNTEO4I.png?auth=0baea917d24973b4a2b8217ffc787c5dbe38e94f7c070665c7b71445a236b2e8&smart=true&width=1200&height=630&quality=85",
+  "razon": "Muestra una oficina de ANSES con jubilados siendo atendidos, sin marcas ni menores.",
+  "cuando": "2026-10-14T09:32:16.039Z"
  },
  "66so6t": {
   "archivo": "fotos-notas/66so6t.jpg",
@@ -13895,5 +13901,17 @@
   "cuando": "2026-10-14T04:02:18.638Z",
   "intentos": 1,
   "fuentes": 2
+ },
+ "5biv0y": {
+  "archivo": "fotos-notas/5biv0y.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
+  "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/GPDV2EMZV5AT5PNMTI3AGWULNE.png?auth=c351d12739f7f47c6f321e1a85511ae9d93283f0bf52ebf851368ac3ec8be81b&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A muestra claramente a una persona usando una computadora en un entorno de oficina, lo que ilustra de manera directa y profesional la temática de gestión digital y recibo de sueldo electrónico, sin marcas de agua ni menores.",
+  "cuando": "2026-10-14T09:32:16.039Z"
  }
 }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-14T07:32:03.268Z",
+ "generado": "2026-10-14T09:32:33.641Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -60,6 +60,28 @@
    "intentos": 4,
    "motivo": "título o bajada: 1 problema (numero): el copete dice 30 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "1eq948q",
+   "titulo": "Lautaro Blanco confía en la remontada de Boca contra Vasco da Gama: “Quedamos vivos”",
+   "copete": "El lateral y capitán del Xeneize aseguró que la serie quedó abierta de cara a la revancha a pesar de la derrota en La Bombonera. Boca Juniors cayó por la mínima este martes ante Vasco da Gama por el partido de ida de las semifinales de la Copa Sudamericana en La Bombonera. Adson…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-14T02:59:32.000Z",
+   "fuentes": [
+    {
+     "medio": "Bolavip Argentina",
+     "enlace": "https://bolavip.com/ar/boca/lautaro-blanco-confia-en-la-remontada-de-boca-contra-vasco-da-gama-quedamos-vivos",
+     "fecha": "2026-10-14T02:59:32.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/14/la-ilusion-de-una-de-las-figuras-de-boca-tras-la-derrota-ante-vasco-da-gama-por-la-copa-sudamericana-la-serie-esta-abierta/",
+     "fecha": "2026-10-14T03:21:23.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (nombre): el cuerpo nombra a \"alberto\" y la fuente no; sin esas oraciones quedan 96 palabras",
+   "maximo": 3
   }
  ]
 }

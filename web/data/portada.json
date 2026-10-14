@@ -1,6 +1,74 @@
 {
-  "generado": "2026-10-14T09:01:54.719Z",
+  "generado": "2026-10-14T09:32:33.641Z",
   "notas": [
+    {
+      "id": "5biv0y",
+      "titulo": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
+      "copete": "El organismo oficializa una herramienta digital para calcular sueldos del sector. La medida alcanza a todas las categorías y rige para los pagos de octubre.",
+      "cuerpo": "La medida se oficializó mediante la Resolución General N° 5912/2026, tras la aprobación del director ejecutivo Andrés Vázquez.\n\nPara generar el comprobante, los empleadores deben ingresar al sitio web del organismo con clave fiscal de nivel de seguridad 2 o superior y completar los datos del trabajador. La plataforma muestra cálculos automáticos de determinados componentes salariales que se pueden aceptar o modificar antes de emitir el documento.\n\nDe acuerdo con la normativa, la actualización alcanza a todas las categorías del sector y exige revisar la liquidación correspondiente a octubre.",
+      "guion": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T06:55:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T09:31:55.705Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La ARCA lanza un recibo de sueldo electrónico asistido para casas particulares.",
+        "El sistema calcula de manera automática conceptos salariales mediante la web oficial.",
+        "Los empleadores pueden aceptar el monto sugerido o modificar los importes antes de emitir el comprobante.",
+        "La actualización rige para todas las categorías del sector y afecta la liquidación de octubre."
+      ],
+      "seSabe": [
+        "La ARCA implementa el recibo de sueldo electrónico asistido mediante la Resolución General N° 5912/2026.",
+        "El sistema calcula de forma automática conceptos salariales a partir de los datos cargados por el empleador.",
+        "La herramienta permite aceptar o editar los montos y sumar adicionales o descuentos.",
+        "La medida rige para la liquidación de octubre en todas las categorías del sector."
+      ],
+      "etiquetas": [
+        "ARCA",
+        "casas particulares",
+        "empleadas domesticas",
+        "sueldos",
+        "recibo electronico"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
+          "fecha": "2026-10-14T06:55:37.000Z",
+          "oficial": false,
+          "aporte": "Detalló el funcionamiento técnico del recibo asistido, la normativa aplicable y los pasos para emitir el comprobante."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/empleadas-domesticas-confirmaron-los-nuevos-sueldos-hora-y-mes-adicionales-arca-n6333114",
+          "fecha": "2026-10-14T09:00:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la actualización alcanza a todas las categorías y afecta la liquidación de octubre."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "arca-habilita-el-recibo-de-sueldo-electronico-asistido-para-casas",
+      "foto": {
+        "archivo": "fotos-notas/5biv0y.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
     {
       "id": "1ov26yg",
       "titulo": "La Fiesta Nacional del Postre confirma su nueva fecha",
@@ -208,8 +276,8 @@
       "guion": "Sergio Uñac lanza su primer spot y confirma sus aspiraciones presidenciales",
       "seccion": "Política",
       "medios": [
-        "La Nación",
         "Clarín",
+        "La Nación",
         "El Cronista",
         "El Destape",
         "Zona Norte Diario"
@@ -270,7 +338,11 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "sergio-unac-lanza-su-primer-spot-y-confirma-sus-aspiraciones"
+      "slug": "sergio-unac-lanza-su-primer-spot-y-confirma-sus-aspiraciones",
+      "foto": {
+        "archivo": "fotos-notas/17pigci.jpg",
+        "credito": "Foto: Clarín"
+      }
     },
     {
       "id": "fdr535",
@@ -287,7 +359,7 @@
       "fecha": "2026-10-13T21:25:50.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T21:31:43.295Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -345,7 +417,7 @@
       "fecha": "2026-10-13T21:19:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T21:31:43.295Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -399,7 +471,7 @@
       "fecha": "2026-10-13T21:14:09.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T21:49:33.086Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -474,7 +546,7 @@
       "fecha": "2026-10-13T21:04:32.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T00:01:43.721Z",
-      "relevancia": 69,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -562,7 +634,7 @@
       "fecha": "2026-10-13T21:02:16.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T23:31:49.605Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -652,7 +724,7 @@
       "fecha": "2026-10-13T20:53:04.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T21:49:33.086Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -896,64 +968,76 @@
       }
     },
     {
-      "id": "ampmp1",
-      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
-      "copete": "Los deportistas locales se consagraron campeones en la edición número 89 del certamen Ciudad de Balcarce. La competencia reunió a más de 120 jugadores de distintos puntos del país.",
-      "cuerpo": "El Centro de Entrenamiento La Cuna del Quíntuple albergó la edición número 89 del torneo Ciudad de tenis de mesa. El certamen contó con una convocatoria superior a los 120 jugadores llegados desde diversas ciudades y una numerosa delegación local, según informó la Asociación Balcarceña Club Top Serrano como entidad organizadora.\n\nCristóbal Barbieri, deportista de Top Serrano, logró el primer puesto en las categorías quinta y cuarta división. En la divisional principal, Joaquín Álvarez se consagró campeón tras una sólida actuación que completó el podio con dominio de la institución organizadora.",
-      "guion": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
-      "seccion": "Deportes",
+      "id": "nemgm9",
+      "titulo": "Google habilita Gemini 4 Argon para usuarios de pago",
+      "copete": "La compañía tecnológica liberó su modelo de inteligencia artificial más avanzado para suscriptores de los planes superiores y desarrolladores. Ofrece tarifas promocionales de lanzamiento y un millón de tokens por tarea.",
+      "cuerpo": "Google habilitó el acceso público a Gemini 4 Argon para los usuarios de sus planes de pago Pro y Ultra en su aplicación y en el buscador, además de abrirlo a desarrolladores y empresas. El modelo llega con una tarifa promocional de USD 2 por cada millón de tokens de entrada y USD 10 por cada millón de salida, valores que se duplicarán a fines de noviembre de 2026.\n\nLa empresa había presentado el sistema el 30 de septiembre de 2026 para pruebas cerradas de seguridad. Según informó la compañía, el nuevo desarrollo superó a competidores en pruebas comparativas de programación y ciberseguridad, y amplió a un millón de tokens el límite de texto por tarea.\n\nGoogle no detalló si la herramienta estará disponible en el futuro para los usuarios de planes gratuitos.",
+      "guion": "Google habilita Gemini 4 Argon para usuarios de pago",
+      "seccion": "Tecnología",
       "medios": [
-        "Diario La Vanguardia",
-        "Infórmese Primero (FM 104.9)",
-        "La Verdad de Ayacucho"
+        "Infobae",
+        "Radio Mitre"
       ],
-      "enlace": "https://www.diariolavanguardia.com/deportes/14323-barbieri-y-alvarez-se-lucieron-en-la-cuna-del-quintuple/",
+      "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T19:31:43.997Z",
-      "sinFecha": true,
-      "visto": "2026-10-13T19:31:43.997Z",
-      "relevancia": 59,
-      "local": true,
+      "fecha": "2026-10-13T19:24:14.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T02:31:55.756Z",
+      "relevancia": 42,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Más de 120 tenismesistas compitieron en La Cuna del Quíntuple.",
-        "Cristóbal Barbieri ganó en cuarta y quinta división.",
-        "Joaquín Álvarez se consagró campeón en la categoría primera.",
-        "La organización corrió por cuenta de la Asociación Balcarceña Club Top Serrano."
+        "Google liberó el modelo Gemini 4 Argon para usuarios de sus planes de pago.",
+        "Tiene una tarifa promocional de dos dólares por millón de tokens de entrada.",
+        "El límite de generación se amplió a un millón de tokens por tarea.",
+        "La empresa no confirmó si llegará a usuarios gratuitos."
       ],
       "seSabe": [
-        "Participaron más de 120 tenismesistas de la región y otras localidades.",
-        "Cristóbal Barbieri obtuvo el primer puesto en quinta y cuarta división.",
-        "Joaquín Álvarez se quedó con el título en la categoría primera."
+        "Google activó Gemini 4 Argon para los planes Pro y Ultra.",
+        "El costo inicial es de USD 2 por millón de tokens de entrada y USD 10 de salida, según Google.",
+        "El límite de texto por tarea alcanza un millón de tokens.",
+        "Google presentó el sistema inicialmente el 30 de septiembre de 2026."
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "La llegada del modelo a los usuarios de planes gratuitos o del nivel Plus.",
+        "La verificación independiente de las pruebas comparativas difundidas por la empresa."
       ],
-      "textoRedes": "Los tenismesistas locales Cristóbal Barbieri y Joaquín Álvarez se consagraron campeones en distintas categorías durante la edición número 89 del torneo Ciudad de Balcarce disputado en el Centro de Entrenamiento La Cuna del Quíntuple.",
+      "textoRedes": "Google activó Gemini 4 Argon para los usuarios de sus planes de pago con tarifas promocionales de lanzamiento y mayor capacidad de procesamiento.",
       "etiquetas": [
-        "Tenis de mesa",
-        "Cristóbal Barbieri",
-        "Joaquín Álvarez",
-        "Top Serrano"
+        "Google",
+        "Inteligencia Artificial",
+        "Gemini 4 Argon",
+        "tecnología"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/deportes/14323-barbieri-y-alvarez-se-lucieron-en-la-cuna-del-quintuple/",
-          "fecha": null,
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
+          "fecha": "2026-10-13T19:24:14.000Z",
           "oficial": false,
-          "aporte": "Informó los resultados y detalles del torneo de tenis de mesa Ciudad de Balcarce."
+          "aporte": "Detalló los precios de lanzamiento, el límite de tokens y el historial de pruebas internas de Google."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/tecnologia/google-lanzo-gemini-4-argon-para-suscriptores-pagos-quienes-pueden-usar-el-nuevo-modelo-de-ia/",
+          "fecha": "2026-10-14T02:06:27.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la habilitación global del modelo para desarrolladores y empresas."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "barbieri-y-alvarez-brillan-en-el-torneo-de-tenis-de-mesa"
+      "slug": "google-habilita-gemini-4-argon-para-usuarios-de-pago",
+      "foto": {
+        "archivo": "fotos-notas/nemgm9.jpg",
+        "credito": "Foto: Infobae"
+      }
     },
     {
       "id": "11d0zcr",
@@ -967,11 +1051,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-13T19:19:43.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T23:01:29.650Z",
-      "relevancia": 88,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1421,16 +1505,16 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
-        "Noticias Agropecuarias",
         "Infobae",
-        "La Voz del Pueblo"
+        "La Voz del Pueblo",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T16:46:18.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T19:01:45.376Z",
-      "relevancia": 70,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2080,6 +2164,151 @@
       }
     },
     {
+      "id": "zrbtlm",
+      "titulo": "El fiscal Pollicita pide investigar transferencias a Claudio Tapia",
+      "copete": "La Justicia federal solicitó nuevas medidas de prueba para esclarecer el origen de fondos recibidos por el titular de la Asociación del Fútbol Argentino por parte de la FIFA y del gremio de Camioneros.",
+      "cuerpo": "El fiscal federal Gerardo Pollicita requirió nuevas diligencias judiciales en la causa por presunto enriquecimiento ilícito contra el presidente de la Asociación del Fútbol Argentino, Claudio Tapia. La presentación fue entregada al juez Ariel Lijo e incluye quince medidas de prueba orientadas a esclarecer acreditaciones bancarias no consignadas en sus declaraciones juradas. Entre los movimientos bajo lupa figuran tres giros enviados por la FIFA desde Suiza que totalizan casi 190 mil dólares entre 2018 y 2020, además de 37 depósitos efectuados por el Sindicato de Choferes de Camiones entre 2016 y 2019. Asimismo, el requerimiento solicita levantar el secreto fiscal y bancario de su exesposa, Paola Moyano, y exige explicaciones a la entidad futbolística sobre viáticos y transferencias hacia cuentas del dirigente deportivo.",
+      "guion": "El fiscal Pollicita pide investigar transferencias a Claudio Tapia",
+      "seccion": "Fútbol",
+      "medios": [
+        "Clarín",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "A24",
+        "Crónica",
+        "Radio Mitre",
+        "El Día",
+        "Infobae",
+        "La Voz del Pueblo"
+      ],
+      "enlace": "https://tn.com.ar/politica/2026/10/13/causa-por-presunto-enriquecimiento-ilicito-la-fiscalia-pone-la-lupa-sobre-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T13:13:17.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T19:31:43.997Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La fiscalía impulsa nuevas medidas en la causa contra Claudio Tapia",
+        "Piden informes a la FIFA por transferencias en dólares",
+        "Investigan depósitos del Sindicato de Choferes de Camiones",
+        "Requieren levantar el secreto fiscal de la exesposa del dirigente"
+      ],
+      "seSabe": [
+        "El fiscal federal Gerardo Pollicita solicitó 15 medidas de prueba en la causa contra Claudio Tapia.",
+        "Se investigan tres transferencias de la FIFA que suman 189.577,18 dólares.",
+        "El Sindicato de Choferes de Camiones debe explicar 37 depósitos realizados entre 2016 y 2019.",
+        "Se pidió levantar el secreto fiscal y bancario de Paola Moyano, exesposa del titular de la AFA."
+      ],
+      "noConfirmado": [
+        "El origen exacto de los fondos y el motivo de las acreditaciones bancarias cuestionadas",
+        "La resolución del juez Ariel Lijo sobre las medidas de prueba solicitadas por la fiscalía"
+      ],
+      "etiquetas": [
+        "Claudio Tapia",
+        "AFA",
+        "Justicia federal",
+        "Gerardo Pollicita",
+        "FIFA",
+        "Camioneros"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/13/causa-por-presunto-enriquecimiento-ilicito-la-fiscalia-pone-la-lupa-sobre-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia/",
+          "fecha": "2026-10-13T13:13:17.000Z",
+          "oficial": false,
+          "aporte": "Detalló los montos de las transferencias de la FIFA y los depósitos del gremio de Camioneros."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/justicia-detecto-giros-plata-fifa-gremio-camioneros-chiqui-tapia-pidio-informacion-suiza_0_LmvBjhOh5c.html",
+          "fecha": "2026-10-13T14:10:32.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el pedido de exhorto a Suiza y el levantamiento del secreto fiscal de Paola Moyano."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/piden-investigar-giros-de-dinero-de-la-fifa-y-el-sindicato-de-camioneros-a-chiqui-tapia-nid13102026/",
+          "fecha": "2026-10-13T14:36:22.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presentación del fiscal Pollicita ante el juez Ariel Lijo solicitando 15 medidas de prueba."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/judiciales/la-justicia-detecto-giros-de-plata-de-la-fifa-y-el-gremio-de-camioneros-a-chiqui-tapia-y-pidio-informes-a-suiza.phtml",
+          "fecha": "2026-10-13T16:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/la-fiscalia-pidio-ampliar-los-informes-los-ingresos-chiqui-tapia-la-causa-presunto-enriquecimiento-ilicito-n1605914",
+          "fecha": "2026-10-13T18:31:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/enriquecimiento-ilicito-justicia-pidio-investigar-origenes-de-acreditaciones-bancarias-recibidas-por-chiqui-tapia/",
+          "fecha": "2026-10-13T16:04:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/investigan-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia-por-la-causa-de-presunto-enriquecimiento-ilicito/",
+          "fecha": "2026-10-13T16:52:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/la-fifa-y-el-sindicato-de-camioneros-a-chiqui-tapia-en-la-mira-por-giros-de-620-mil-dolares-politica-y-economia_1791898260",
+          "fecha": "2026-10-13T15:24:13.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/causa-por-presunto-enriquecimiento-ilicito-la-fiscalia-pone-la-lupa-sobre-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia",
+          "fecha": "2026-10-13T15:10:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/judiciales/2026/10/13/enriquecimiento-ilicito-piden-enviar-un-exhorto-a-suiza-en-la-causa-que-investiga-a-claudio-chiqui-tapia/",
+          "fecha": "2026-10-13T13:22:02.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uc2dz4",
+          "titulo": "Ercolini procesa a Roberto Baratta por enriquecimiento ilícito",
+          "fecha": "2026-10-07T11:39:43.000Z",
+          "ruta": "/nota/ercolini-procesa-a-roberto-baratta-por-enriquecimiento-ilicito-uc2dz4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 10 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-fiscal-pollicita-pide-investigar-transferencias-a-claudio-tapia",
+      "foto": {
+        "archivo": "fotos-notas/zrbtlm.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "repaso20261013manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: Fórmula 1, Zona Fría, pronóstico y Gabriel Deck",
@@ -2209,6 +2438,157 @@
       "foto": {
         "archivo": "fotos-notas/95znl3.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "ynxwl1",
+      "titulo": "River y Estudiantes crean una mesa de trabajo conjunta en el Monumental",
+      "copete": "Los presidentes de ambos clubes mantuvieron un encuentro en Buenos Aires. La iniciativa busca articular una postura común frente a la conducción de la AFA.",
+      "cuerpo": "El presidente de River Plate, Stefano Di Carlo, recibió el martes al titular de Estudiantes de La Plata, Juan Sebastián Verón, en las instalaciones del Estadio Monumental. Ambas instituciones formalizaron la creación de una mesa permanente de trabajo para coordinar una agenda conjunta en el fútbol nacional.\n\nEl cónclave se da en medio de las diferencias que los dos clubes mantienen con la conducción de la Asociación del Fútbol Argentino (AFA) que encabeza Claudio Tapia. En el pasado, los dirigentes habían protagonizado cruces mediáticos a raíz del modelo de gestión de las entidades y la postura sobre las sociedades anónimas deportivas.\n\nCon este acercamiento, las dirigencias priorizaron el diálogo institucional para sumar peso político frente a las futuras decisiones del fútbol argentino.",
+      "guion": "River y Estudiantes crean una mesa de trabajo conjunta en el Monumental",
+      "seccion": "Política",
+      "medios": [
+        "Clarín",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "TyC Sports",
+        "Olé",
+        "El Día",
+        "0221",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "La Página Millonaria",
+        "La Nación",
+        "Ecos Diarios (Necochea)",
+        "El Gráfico",
+        "La Noticia 1",
+        "Infobae",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Marplatense",
+        "El Eco de Tandil",
+        "La Nueva"
+      ],
+      "enlace": "https://442.perfil.com/noticias/futbol/cumbre-clave-stefano-di-carlo-y-juan-sebastian-veron-se-reunieron-en-el-monumental.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T13:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T19:01:45.376Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No trascendieron los detalles específicos de los próximos proyectos que abordará la mesa de trabajo conjunta."
+      ],
+      "textoRedes": "Stefano Di Carlo y Juan Sebastián Verón se reunieron en el Monumental y acordaron la creación de una mesa permanente de trabajo entre River Plate y Estudiantes de La Plata.",
+      "etiquetas": [
+        "River Plate",
+        "Estudiantes de La Plata",
+        "Stefano Di Carlo",
+        "Juan Sebastián Verón",
+        "AFA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/cumbre-clave-stefano-di-carlo-y-juan-sebastian-veron-se-reunieron-en-el-monumental.phtml",
+          "fecha": "2026-10-13T17:28:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló el encuentro al mediodía en el Monumental y los antecedentes de tensión dirigencial."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/stefano-di-carlo-recibio-a-juan-sebastian-veron-en-el-monumental-la-foto-que-abre-un-frente-comun-nid13102026/",
+          "fecha": "2026-10-13T18:42:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/river-plate/river-plate-stefano-di-carlo-juan-sebastian-veron-encuentro-monumental_0_4ycc7tUdTN.html",
+          "fecha": "2026-10-13T17:53:26.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/13/la-foto-de-la-reunion-entre-stefano-di-carlo-y-juan-sebastian-veron-en-medio-de-sus-conflictos-con-el-chiqui-tapia-y-la-afa/",
+          "fecha": "2026-10-13T18:15:51.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el carácter secreto de la reunión y la relación de los presidentes con la AFA."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/presidente-river-reunio-veron-monumental-20261013154643",
+          "fecha": "2026-10-13T18:46:43.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/river-plate/reunion-river-estudiantes-monumental-comunicado-di-carlo-veron-futbol-argentino-id766002.html",
+          "fecha": "2026-10-13T18:36:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/alianza-anti-tapia-estudiantes-y-river-lanzaron-una-mesa-de-trabajo-para-debatir-el-futuro-del-futbol-argentino-deportes_1791915900",
+          "fecha": "2026-10-13T18:43:26.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la oficialización de una mesa permanente de trabajo entre ambas instituciones."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/estudiantes/bombazo-el-futbol-argentino-juan-sebastian-veron-y-stefano-di-carlo-sacuden-la-interna-la-afa-n135735",
+          "fecha": "2026-10-13T18:35:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/liga-/di-carlo-recibio-a-veron--de-calificarlo-de--desleal-y-poco-confiable--a-sumarlo-a-una-mesa-contra-la-afa_a6ace6a510ceb121c7a500321",
+          "fecha": "2026-10-13T18:44:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el objetivo fue articular una posición contraria a la conducción de Claudio Tapia en la AFA."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/futbolargentino/reunion-entre-river-y-estudiantes-en-el-monumental-desarrollo-y-la-mejora-del-futbol-argentino",
+          "fecha": "2026-10-13T18:31:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/river-plate/di-carlo-y-veron-se-reunieron-en-el-monumental-en-medio-de-la-guerra-de-river-con-afa",
+          "fecha": "2026-10-13T18:08:54.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "122dsf6",
+          "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+          "fecha": "2026-09-26T03:00:00.000Z",
+          "ruta": "/nota/rosario-central-genera-polecutemica-en-los-festejos-contra-juan-122dsf6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 11 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "river-y-estudiantes-crean-una-mesa-de-trabajo-conjunta-en-el",
+      "foto": {
+        "archivo": "fotos-notas/ynxwl1.jpg",
+        "credito": "Foto: Perfil"
       }
     },
     {
@@ -2708,21 +3088,21 @@
         "Doble Amarilla",
         "Bolavip Argentina",
         "Olé",
-        "0223 (Mar del Plata)",
-        "Córdoba Competición",
         "Clarín",
+        "0223 (Mar del Plata)",
         "Página/12",
         "Minuto Uno",
         "Crónica",
         "La Nueva",
-        "El Día"
+        "El Día",
+        "Córdoba Competición"
       ],
       "enlace": "https://es.motorsport.com/f1/news/formula1-vuelve-africa-ruanda/10864826/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T09:18:25.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T12:31:46.324Z",
-      "relevancia": 97,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3072,26 +3452,28 @@
     }
   ],
   "secciones": [
+    "Economía",
     "Cultura y agenda",
     "Deportes",
     "Balcarce",
     "Política",
-    "Economía",
+    "Tecnología",
     "Automovilismo",
     "Policiales",
     "Agro",
+    "Fútbol",
     "Argentina"
   ],
   "temas": [],
   "clima": {
     "ahora": {
       "temp": 10,
-      "sensacion": 8,
+      "sensacion": 9,
       "humedad": 95,
-      "viento": 9,
+      "viento": 10,
       "rumbo": "SE",
       "cielo": "Nublado",
-      "esDeDia": false
+      "esDeDia": true
     },
     "dias": [
       {
@@ -3438,6 +3820,12 @@
   },
   "pendientes": [
     {
+      "id": "6gwup5",
+      "titulo": "Morón: Murió el ex boxeador Jorge \"el Roña\" Castro",
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+    },
+    {
       "id": "1jq3vmm",
       "titulo": "El folclore y fútbol de duelo: falleció el “Chiqui”…",
       "seccion": "Cultura y agenda",
@@ -3468,22 +3856,10 @@
       "motivo": "necesita ojo humano: \"homicidio\""
     },
     {
-      "id": "1dvqt41",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "urflid",
       "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1pu4can",
-      "titulo": "Vialidad: un exfuncionario condenado junto a Cristina…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "1o3t7bf",
@@ -3492,11 +3868,17 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "1pu4can",
+      "titulo": "Vialidad: un exfuncionario condenado junto a Cristina…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
       "id": "115hicz",
       "titulo": "El dolor de Graciela Alfano al visitar la casa de su…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"asesinato\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 3
 }
