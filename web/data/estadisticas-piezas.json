@@ -4969,6 +4969,28 @@
    "cuando": "2026-10-14T10:05:44.762Z",
    "medida": "2026-10-14T22:30:19.357Z",
    "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/1702417828556313",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "clima-noche",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T23:06:36.626Z",
+   "medida": "2026-10-14T23:30:19.100Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1795205285020873",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "clima-noche",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T23:07:03.348Z",
+   "medida": "2026-10-14T23:30:19.100Z",
+   "metricas": {}
   }
  ]
 }
