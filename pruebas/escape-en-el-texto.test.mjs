@@ -22,3 +22,19 @@ test('tituloAutomatico (el que pasa por todos los títulos publicados) también 
   assert.equal(tituloAutomatico(`Laporte califica a la Argentina de antif${BARRA_U}00futbol`), 'Laporte califica a la Argentina de antifútbol');
   assert.equal(tituloAutomatico('Un título común'), 'Un título común');
 });
+
+test('un escape roto que la IA dejó escrito (14/10: "Mart" + barra-u00in) hace que el texto se rechace y se vuelva a pedir', async () => {
+  const { verificar } = await import('../ingesta/verificar.mjs');
+  const fuente = { titulo: 'Lisandro Martínez critica a la directiva del Manchester United', resumen: 'El defensor argentino cuestionó la falta de refuerzos.' };
+  const roto = verificar(fuente, {
+    titulo: `Lisandro Mart${BARRA_U}00in critica a la directiva del Manchester United`,
+    copete: 'El defensor argentino cuestionó la falta de refuerzos.',
+  });
+  assert.ok(roto.problemas.some((p) => p.tipo === 'forma' && /escape/.test(p.detalle)));
+  assert.equal(roto.ok, false);
+  const bien = verificar(fuente, {
+    titulo: 'Lisandro Martínez critica a la directiva del Manchester United',
+    copete: 'El defensor argentino cuestionó la falta de refuerzos.',
+  });
+  assert.ok(!bien.problemas.some((p) => p.tipo === 'forma'));
+});

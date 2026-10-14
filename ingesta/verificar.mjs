@@ -328,7 +328,7 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
   const t = String(texto ?? '');
   if (!t) return problemas;
 
-  // 1. Largo.
+  if (/\\u[0-9a-fA-F]{0,4}/.test(t)) agregar('forma', `el ${campo} trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir`); // 14/10: "Mart\u00in" salió en un título y en el repaso. // 1. Largo.
   if (limite && t.length > limite) {
     agregar('largo', `el ${campo} tiene ${t.length} caracteres, el máximo es ${limite}`);
   }
