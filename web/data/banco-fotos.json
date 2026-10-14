@@ -13927,15 +13927,66 @@
   "cuando": "2026-10-14T10:31:45.600Z"
  },
  "b23r93": {
-  "archivo": "fotos-notas/b23r93.jpg",
   "medio": "iProfesional",
-  "credito": "Foto: iProfesional",
   "licencia": null,
   "origen": "medio",
   "titulo": "ARCA implementa el recibo de sueldo electrónico para casas particulares",
   "enlace": "https://www.iprofesional.com/impuestos/466544-arca-modifica-pautas-para-la-confeccion-del-recibo-de-sueldo-para-empleadas-domesticas",
   "imagenOriginal": "https://resizer.iproimg.com/unsafe/1280x720/assets.iprofesional.com/assets/jpg/2026/10/627497_landscape.jpg",
   "razon": "La foto A ilustra adecuadamente la temática de casas particulares con buena nitidez y sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-14T11:02:03.783Z"
+  "cuando": "2026-10-14T11:02:03.783Z",
+  "intentado": true,
+  "borrada": true
+ },
+ "ks738t": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "La Liga Balcarceña reprograma el inicio del torneo Clausura",
+  "razon": "La imagen provista no corresponde a una fotografía del evento futbolístico sino a un logotipo del medio.",
+  "cuando": "2026-10-14T11:32:03.987Z",
+  "intentos": 1,
+  "fuentes": 1
+ },
+ "9n2ees": {
+  "archivo": "fotos-notas/9n2ees.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El miércoles presenta ambiente fresco y probabilidad de chaparrones",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/miercoles-fresco-y-con-probabilidad-de-lluvias-la-maxima-sera-de-14-c",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/Clima%20en%20Balcarce%202.jpeg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez, muestra claramente el ambiente fresco y húmedo de la calle sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T11:32:03.987Z"
+ },
+ "505otd": {
+  "archivo": "fotos-notas/505otd.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-14-de-octubre-se-conmemora-el-dia-mundial-de-la-donacion-de-organos",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/marzo/Efemrides.jpeg",
+  "razon": "Es la única foto disponible, tiene buena nitidez y no contiene marcas ni menores.",
+  "cuando": "2026-10-14T11:32:03.987Z"
+ },
+ "1aylfrc": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El INDEC informa que los servicios aumentan por encima de los bienes",
+  "razon": "La única foto sin marca de agua (B) contiene la mano de una persona y fragmentos de papel donde no se puede verificar con certeza si hay menores, y la otra (A) tiene marca de agua de Noticias Argentinas.",
+  "cuando": "2026-10-14T11:32:03.987Z",
+  "intentos": 1,
+  "fuentes": 2
+ },
+ "9hyghb": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "River visita a Sarmiento con la primera convocatoria de Santiago Espíndola",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-14T11:32:03.987Z",
+  "intentos": 1,
+  "fuentes": 5
  }
 }
