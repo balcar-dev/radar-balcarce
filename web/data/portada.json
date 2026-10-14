@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T21:32:57.218Z",
+  "generado": "2026-10-14T22:02:27.546Z",
   "notas": [
     {
       "id": "fav3c1",
@@ -174,8 +174,8 @@
       "guion": "Pablo Quirno firma en Washington un protocolo clave para el acuerdo comercial",
       "seccion": "Política",
       "medios": [
-        "Infobae",
         "La Nación",
+        "Infobae",
         "Clarín",
         "TN (Todo Noticias)",
         "A24",
@@ -274,14 +274,16 @@
       "medios": [
         "La Nación",
         "0223 (Mar del Plata)",
-        "Perfil",
         "Minuto Uno",
+        "Perfil",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "La Nueva",
         "La Voz del Pueblo",
+        "Bolavip Argentina",
         "Olé",
-        "Bolavip Argentina"
+        "Clarín",
+        "TyC Sports"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
       "teniaImagenLaFuente": true,
@@ -344,9 +346,9 @@
       "seccion": "Argentina",
       "medios": [
         "La Nación",
-        "Minuto Uno",
         "Infobae",
-        "TN (Todo Noticias)"
+        "TN (Todo Noticias)",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/14/salud-mental-libertarios-anunciaron-un-acuerdo-con-aliados-y-buscaran-dictaminar-manana-la-nueva-ley/",
       "teniaImagenLaFuente": true,
@@ -421,86 +423,6 @@
       "slug": "el-oficialismo-busca-dictaminar-la-reforma-de-salud-mental-en-el"
     },
     {
-      "id": "ekwu7",
-      "titulo": "Julio Cordero defiende el Presupuesto y la reforma laboral",
-      "copete": "El secretario de Trabajo participó en el debate legislativo del Presupuesto, donde respaldó la reforma laboral, valoró el monotributo y afirmó que no todas las personas buscan un empleo en relación de dependencia.",
-      "cuerpo": "El secretario de Trabajo de la Nación, Julio Cordero, disertó en la segunda jornada de debate del Presupuesto en comisiones. El funcionario respaldó la reforma laboral y sostuvo que existen nuevas formas de contratación, al señalar que no todas las personas desean trabajar bajo la orden de un empleador.\n\nDurante su exposición, Cordero cuestionó los antiguos esquemas de asistencia social por desalentar la incorporación laboral. Además, indicó que 950.000 personas ingresaron al mercado de trabajo a través del programa Volver al Trabajo.\n\nEl secretario también ponderó el monotributo y los trabajos autónomos como alternativas de formalización con acceso a seguridad social. Por último, abogó por negociaciones salariales adaptadas a cada sector para proteger los puestos.",
-      "guion": "Julio Cordero defiende el Presupuesto y la reforma laboral",
-      "seccion": "Política",
-      "medios": [
-        "Diputados Bonaerenses",
-        "Infobae",
-        "Ámbito"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/10/14/el-secretario-de-trabajo-defendio-el-presupuesto-y-dijo-que-no-todos-quieren-trabajar-en-relacion-de-dependencia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T18:38:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T21:01:59.221Z",
-      "relevancia": 68,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El secretario de Trabajo expuso en el debate del Presupuesto.",
-        "Defendió la reforma laboral y los esquemas de empleo autónomo.",
-        "Indicó que 950.000 personas ingresaron al mercado mediante un programa.",
-        "Ponderó el monotributo como una herramienta de formalización."
-      ],
-      "seSabe": [
-        "Julio Cordero se presentó en la comisión de presupuesto durante la segunda jornada de debate.",
-        "El funcionario defendió la reforma laboral y las nuevas modalidades de contratación.",
-        "Señaló que 950.000 personas se sumaron al mercado laboral a través del programa Volver al Trabajo.",
-        "Afirmó que el monotributo brinda acceso a la seguridad social y a la salud."
-      ],
-      "noConfirmado": [
-        "No se especificaron detalles sobre el alcance total de las modificaciones propuestas en las negociaciones colectivas.",
-        "No trascendió una fecha estimada para la votación definitiva del proyecto debatido en las comisiones."
-      ],
-      "textoRedes": "El secretario de Trabajo defendió el Presupuesto y la reforma laboral al asegurar que no todos buscan un empleo en relación de dependencia.",
-      "etiquetas": [
-        "Presupuesto",
-        "Trabajo",
-        "Reforma laboral",
-        "Monotributo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/10/14/el-secretario-de-trabajo-defendio-el-presupuesto-y-dijo-que-no-todos-quieren-trabajar-en-relacion-de-dependencia/",
-          "fecha": "2026-10-14T18:38:44.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Diputados Bonaerenses",
-          "enlace": "https://diputadosbsas.com.ar/presupuesto-2027-cordero-defendio/",
-          "fecha": "2026-10-14T20:20:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/julio-cordero-hay-personas-que-no-quieren-trabajar-relacion-dependencia-n6333717",
-          "fecha": "2026-10-14T18:53:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "julio-cordero-defiende-el-presupuesto-y-la-reforma-laboral",
-      "foto": {
-        "archivo": "fotos-notas/ekwu7.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "repaso20261014tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: juguetes, Pádel y peregrinación",
@@ -564,6 +486,108 @@
       }
     },
     {
+      "id": "1bnktm",
+      "titulo": "Un desprendimiento de rocas corta la Ruta 7 en Mendoza",
+      "copete": "Una caída de piedras desde un cerro destruyó una camioneta en el kilómetro 112 y dejó camiones varados este miércoles. El conductor resultó ileso y la circulación permanece interrumpida.",
+      "cuerpo": "Un desprendimiento de rocas desde un cerro provocó el corte total de la Ruta Nacional 7 este miércoles durante la mañana, a la altura del kilómetro 112 en Mendoza. El tránsito quedó interrumpido en ambos sentidos en el tramo comprendido entre Potrerillos y Uspallata, lo que generó una larga fila de camiones varados.\n\nPersonal de Gendarmería Nacional intervino tras un llamado al servicio de emergencias y dio aviso a la empresa encargada del mantenimiento vial. Las autoridades habilitaron un desvío temporal para evacuar a los vehículos que quedaron detenidos en la zona de alta montaña.\n\nLas tareas para despejar la calzada continúan y por el momento no se informó un horario estimado para la reapertura del corredor internacional que conecta con Chile.",
+      "guion": "Un desprendimiento de rocas corta la Ruta 7 en Mendoza",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "C5N",
+        "Ámbito"
+      ],
+      "enlace": "https://tn.com.ar/sociedad/2026/10/14/mendoza-cortaron-la-ruta-7-por-un-derrumbe-de-rocas-que-aplasto-una-camioneta-y-dejo-camiones-varados/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T18:00:24.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T22:01:55.574Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Corte total en la Ruta Nacional 7 en Mendoza",
+        "Una camioneta destruida y conductor ileso",
+        "Tránsito interrumpido entre Potrerillos y Uspallata",
+        "Sin horario confirmado para la reapertura"
+      ],
+      "seSabe": [
+        "El desprendimiento ocurrió este miércoles en el kilómetro 112 de la Ruta Nacional 7",
+        "Una camioneta fue alcanzada por las piedras",
+        "El conductor del vehículo está ileso",
+        "El tránsito está cortado entre Potrerillos y Uspallata",
+        "Habilitaron un desvío temporal para los vehículos varados"
+      ],
+      "noConfirmado": [
+        "No hay un horario confirmado para la reapertura de la ruta"
+      ],
+      "etiquetas": [
+        "Ruta 7",
+        "Mendoza",
+        "desprendimiento",
+        "tránsito",
+        "Gendarmería Nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/sociedad/2026/10/14/mendoza-cortaron-la-ruta-7-por-un-derrumbe-de-rocas-que-aplasto-una-camioneta-y-dejo-camiones-varados/",
+          "fecha": "2026-10-14T18:00:24.000Z",
+          "oficial": false,
+          "aporte": "Informó el corte total, el lugar del hecho en el kilómetro 112 y que el conductor es un ciudadano chileno"
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/sociedad/2026/10/14/se-desprendieron-rocas-de-un-cerro-en-mendoza-y-aplastaron-una-camioneta-el-conductor-resulto-ileso/",
+          "fecha": "2026-10-14T20:38:04.000Z",
+          "oficial": false,
+          "aporte": "Precisó que el hecho ocurrió cerca de las 10 de la mañana"
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/sociedad/2026/10/14/mendoza-cortaron-la-ruta-7-por-un-derrumbe-de-rocas-que-aplasto-una-camioneta-y-dejo-camiones-varados-video-2/",
+          "fecha": "2026-10-14T18:00:27.000Z",
+          "oficial": false,
+          "aporte": "Indicó que varios camiones quedaron varados"
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/sociedad/2026/10/14/mendoza-cortaron-la-ruta-7-por-un-derrumbe-de-rocas-que-aplasto-una-camioneta-y-dejo-camiones-varados/",
+          "fecha": "2026-10-14T18:00:27.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el corte afecta el tramo entre Potrerillos y Uspallata"
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/mendoza-un-desprendimiento-rocas-aplasto-una-camioneta-y-corto-la-ruta-nacional-7-n251620",
+          "fecha": "2026-10-14T20:59:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el conductor resultó ileso y que habilitaron un desvío temporal"
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/derrumbe-mendoza-rocas-aplastaron-una-camioneta-y-obligaron-cortar-la-ruta-7-n6333802",
+          "fecha": "2026-10-14T19:56:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que todavía no hay horario de reapertura"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "un-desprendimiento-de-rocas-corta-la-ruta-7-en-mendoza",
+      "foto": {
+        "archivo": "fotos-notas/1bnktm.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "tlvcwh",
       "titulo": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
       "copete": "El indicador financiero trepa a 602 unidades luego de siete jornadas por debajo de ese nivel. Los mercados internacionales operan en baja tras el repunte inflacionario en el norte.",
@@ -571,7 +595,6 @@
       "guion": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
       "seccion": "Economía",
       "medios": [
-        "La Nación",
         "Clarín",
         "A24",
         "Crónica",
@@ -582,7 +605,7 @@
       "fecha": "2026-10-14T17:55:18.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T20:31:55.711Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -923,16 +946,16 @@
       "guion": "Casi 59.000 empresas registran problemas para cumplir con sus deudas.",
       "seccion": "Economía",
       "medios": [
+        "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
         "Infobae",
         "Perfil",
         "TN (Todo Noticias)",
-        "Página/12",
         "Noticias Argentinas (NA)",
         "InfoRegión",
         "Mi8 (Canal 8 Mar del Plata)",
-        "El Eco de Tandil",
-        "iProUP"
+        "iProUP",
+        "Página/12"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/crece-la-morosidad-empresarial-casi-59000-companias-tienen-problemas-para-pagar-sus-deudas/",
       "teniaImagenLaFuente": true,
@@ -1077,11 +1100,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45079-jamas-imagine-que-iba-a-necesitar-un-trasplante/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T16:32:12.981Z",
       "sinFecha": true,
       "visto": "2026-10-14T16:32:12.981Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1230,6 +1253,7 @@
         "La Nueva",
         "Letra P",
         "El Marplatense",
+        "El Eco de Tandil",
         "Clarín"
       ],
       "enlace": "https://www.clarin.com/politica/gildus-increible-videojuego-hicieron-formosa-gildo-insfran-pelea-leon-motosierra_0_iEWCfkGO14.html",
@@ -1303,6 +1327,98 @@
       "foto": {
         "archivo": "fotos-notas/1cv9j22.jpg",
         "credito": "Foto: La Nueva"
+      }
+    },
+    {
+      "id": "gkl1ue",
+      "titulo": "El Gobierno lanza un plan nacional de salud vascular",
+      "copete": "El Ministerio de Salud presentó el plan para reducir la mortalidad por afecciones cardíacas y cerebrales en todo el país. La iniciativa incluye un registro obligatorio de infartos.",
+      "cuerpo": "La presentación ocurrió durante el Congreso Argentino de Cardiología con el objetivo de unificar las estrategias sanitarias entre la Nación y las jurisdicciones.\n\nEl programa busca prevenir factores de riesgo, mejorar la atención de emergencias y realizar un seguimiento a largo plazo de las patologías cardiovasculares. Como parte de las medidas, el infarto agudo de miocardio se incorporará al Sistema Nacional de Vigilancia de la Salud como evento de notificación obligatoria y se utilizará la aplicación Stroke App para coordinar la respuesta médica.\n\nLas enfermedades cardiovasculares provocan alrededor del 30 por ciento de los fallecimientos en el país. Según datos difundidos durante el congreso, entre 2015 y 2024 la mortalidad hospitalaria por los casos más graves de infarto se mantuvo en el 8,6 por ciento.",
+      "guion": "El Gobierno lanza un plan nacional de salud vascular",
+      "seccion": "Argentina",
+      "medios": [
+        "Ecos Diarios (Necochea)",
+        "Clarín",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "Infobae"
+      ],
+      "enlace": "https://www.clarin.com/sociedad/gobierno-anuncio-creacion-plan-nacional-reducir-muertes-infartos-argentina_0_iTgTkiDr11.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T15:28:43.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T22:01:55.574Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Ministerio de Salud creó el plan para el período 2026-2030.",
+        "El infarto agudo de miocardio será de notificación obligatoria.",
+        "La herramienta Stroke App coordinará la atención de las emergencias.",
+        "Las afecciones cardiovasculares causan cerca del 30% de las muertes en el país."
+      ],
+      "seSabe": [
+        "El ministro Mario Lugones presentó el plan este miércoles en el Congreso Argentino de Cardiología.",
+        "La iniciativa abarca desde la prevención hasta la rehabilitación de los pacientes.",
+        "El infarto se sumará al sistema de notificación obligatoria junto al ACV y la insuficiencia cardíaca."
+      ],
+      "textoRedes": "El Gobierno nacional anunció la creación de un plan de salud vascular para reducir la mortalidad por infartos y ACV, que incluye un registro obligatorio de casos y la unificación de la respuesta médica en todo el país.",
+      "etiquetas": [
+        "salud",
+        "gobierno nacional",
+        "cardiologia",
+        "infartos",
+        "mario lugones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/sociedad/gobierno-anuncio-creacion-plan-nacional-reducir-muertes-infartos-argentina_0_iTgTkiDr11.html",
+          "fecha": "2026-10-14T15:28:43.000Z",
+          "oficial": false,
+          "aporte": "Informó el anuncio del plan por parte del ministro de Salud y sus ejes principales."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/lanzan-el-plan-nacional-de-salud-vascular-para-reducir-la-mortalidad-por-infartos",
+          "fecha": "2026-10-14T19:20:33.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el lanzamiento del plan vascular para el período 2026-2030."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/salud/lugones-lanzo-el-plan-nacional-de-salud-vascular-para-prevenir-muertes-por-enfermedades-cardiovasculares/",
+          "fecha": "2026-10-14T18:21:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato de que las enfermedades cardiovasculares causan cerca del 30% de los decesos en el país."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/el-ministerio-de-salud-lanzo-el-plan-nacional-de-salud-vascular-para-los-argentinos_a6acff9968298ee386b3f0221",
+          "fecha": "2026-10-14T21:55:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló que la presentación se realizó en el Congreso de Cardiología para fortalecer la atención."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/salud/2026/10/14/cada-minuto-cuenta-de-que-se-trata-el-plan-de-salud-vascular-que-anuncio-el-ministro-mario-lugones/",
+          "fecha": "2026-10-14T16:09:52.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el congreso es el número 52 y está organizado por la Sociedad Argentina de Cardiología."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-lanza-un-plan-nacional-de-salud-vascular",
+      "foto": {
+        "archivo": "fotos-notas/gkl1ue.jpg",
+        "credito": "Foto: Crónica"
       }
     },
     {
@@ -1389,9 +1505,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "A24",
+        "iProUP",
         "iProfesional",
-        "iProUP"
+        "A24"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -1462,95 +1578,6 @@
       }
     },
     {
-      "id": "bpl7gu",
-      "titulo": "La Selección Argentina negocia dos amistosos con rivales sudamericanos",
-      "copete": "Tras descartar la gira por Asia, la Asociación del Fútbol Argentino gestiona partidos para la ventana de noviembre. El clásico ante Uruguay en La Plata asoma como la opción más firme.",
-      "cuerpo": "La Selección Argentina reconfigura su agenda para la última ventana internacional del año, prevista entre el 9 y el 17 de noviembre de 2026. Al cancelarse el viaje a territorio asiático, la Asociación del Fútbol Argentino encamina gestiones para disputar dos amistosos contra seleccionados del continente.\n\nEl cruce más avanzado es frente a Uruguay, con la posibilidad de concretarse en el Estadio Único de La Plata. Para el segundo compromiso, el cuerpo técnico que encabeza Lionel Scaloni analiza recibir a otro rival sudamericano en el país o jugar una revancha en Montevideo.",
-      "guion": "La Selección Argentina negocia dos amistosos con rivales sudamericanos",
-      "seccion": "Fútbol",
-      "medios": [
-        "0223 (Mar del Plata)",
-        "Minuto Uno",
-        "Doble Amarilla"
-      ],
-      "enlace": "https://www.dobleamarilla.com.ar/selecciones/caida-la-gira-por-asia--la-seleccion-argentina-comienza-a-negociar-para-jugar-con-rivales-sudamericanos-en-la-doble-fecha-fifa-de-noviembre_a6acf892c8531709378084cde",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T14:04:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T17:01:50.805Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La AFA descarta la gira por Asia para la ventana de noviembre.",
-        "El primer amistoso encaminado es frente a Uruguay.",
-        "El Estadio Único de La Plata asoma como la sede principal.",
-        "El cuerpo técnico busca rivales para el segundo partido."
-      ],
-      "seSabe": [
-        "La ventana FIFA se desarrollará del 9 al 17 de noviembre de 2026.",
-        "La AFA negocia amistosos contra seleccionados sudamericanos.",
-        "El clásico frente a Uruguay es la opción más avanzada.",
-        "El Estadio Único de La Plata aparece como la principal sede."
-      ],
-      "noConfirmado": [
-        "Todavía no existe una confirmación oficial del encuentro ante Uruguay.",
-        "El rival y la sede del segundo partido permanecen sin definir."
-      ],
-      "textoRedes": "La Selección Argentina reprograma sus compromisos de noviembre tras caer la gira por Asia y negocia amistosos frente a rivales sudamericanos, con Uruguay como principal opción para jugar en La Plata.",
-      "etiquetas": [
-        "Seleccion Argentina",
-        "Fecha FIFA",
-        "AFA",
-        "Lionel Scaloni",
-        "Uruguay"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/selecciones/caida-la-gira-por-asia--la-seleccion-argentina-comienza-a-negociar-para-jugar-con-rivales-sudamericanos-en-la-doble-fecha-fifa-de-noviembre_a6acf892c8531709378084cde",
-          "fecha": "2026-10-14T14:04:45.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la AFA comenzó a negociar con Uruguay tras caer la gira por Asia."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-14-12-4-0-se-cayo-la-gira-por-asia-y-la-seleccion-argentina-prepara-un-bombazo-para-noviembre",
-          "fecha": "2026-10-14T15:06:00.000Z",
-          "oficial": false,
-          "aporte": "Informó el período de la ventana internacional y las alternativas para el segundo partido."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/se-cayo-la-gira-asia-la-seleccion-argentina-jugaria-un-clasico-doble-noviembre-n6333647",
-          "fecha": "2026-10-14T16:31:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el Estadio Único de La Plata es la principal sede para el duelo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1nlg6jl",
-          "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
-          "fecha": "2026-09-19T03:00:00.000Z",
-          "ruta": "/nota/lionel-messi-vuelve-a-jugar-en-inter-miami-tras-su-despedida-de-la-1nlg6jl"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-argentina-negocia-dos-amistosos-con-rivales-sudamericanos",
-      "foto": {
-        "archivo": "fotos-notas/bpl7gu.jpg",
-        "credito": "Foto: 0223 (Mar del Plata)"
-      }
-    },
-    {
       "id": "oftb9a",
       "titulo": "Telecom acepta la oferta de Metrotel por US$ 450 millones",
       "copete": "Millones de usuarios de Movistar recibirán notificaciones en los próximos días por un cambio de compañía. La operación surge tras la aprobación de condiciones regulatorias.",
@@ -1562,8 +1589,8 @@
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "Ámbito",
-        "El Economista"
+        "El Economista",
+        "Ámbito"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -1723,15 +1750,18 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45075-presupuesto-2027-el-municipio-prepara-la-ley-de-leyes-y-los-funcionarios-deberan-explicar-sus-numeros/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T13:31:55.553Z",
       "sinFecha": true,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo",
+        "hospital"
+      ],
       "como": "automatica",
       "claves": [
         "El Ejecutivo municipal prevé presentar el proyecto el 31 de octubre.",
@@ -2313,7 +2343,6 @@
         "A24",
         "Minuto Uno",
         "Crónica",
-        "El Día",
         "La Brújula 24",
         "La Voz del Pueblo",
         "El Marplatense",
@@ -2407,6 +2436,7 @@
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
         "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
         "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
         "La Verdad de Ayacucho",
@@ -2419,7 +2449,6 @@
         "0223 (Mar del Plata)",
         "iProfesional",
         "La Noticia 1",
-        "Punto Noticias",
         "Clarín",
         "Ámbito",
         "El Día"
@@ -2688,6 +2717,122 @@
       }
     },
     {
+      "id": "jc61mz",
+      "titulo": "El oficialismo busca dictamen para la propiedad privada",
+      "copete": "La Cámara de Diputados debate este miércoles una versión flexible de la Ley de Tierras dentro del proyecto de Inviolabilidad de la Propiedad Privada para frenar un rechazo opositor al DNU 70/23.",
+      "cuerpo": "El plenario de las comisiones de Asuntos Constitucionales y Legislación General se reúne este miércoles a las 16 para avanzar con el dictamen del proyecto de Inviolabilidad de la Propiedad Privada que cuenta con media sanción del Senado. Según informó la Agencia Noticias Argentinas, el oficialismo incorporará una versión reducida de la Ley de Tierras que mantiene el tope del 15% de extranjerización a nivel nacional, provincial y departamental pero elimina el límite de 1.000 hectáreas en las zonas núcleo del país.\n\nEsta estrategia apunta a restarle incentivos a la oposición para revocar el decreto 70/23 en la sesión prevista para el jueves y flexibilizar los límites de compraventa mientras la Justicia define la cuestión de fondo sobre la derogación de la norma anterior del 2011. La iniciativa también contempla cambios en el régimen de desalojos con la entrega inmediata del inmueble usurpado ante un derecho verosímil y fija un tope del 30% en las indemnizaciones por lucro cesante en casos de expropiación.\n\nEl texto forma parte del temario para la sesión que el oficialismo convocó para el 21 de octubre. En un inicio, como se informó el 8 de octubre de 2026, el Gobierno había convocado al plenario para desactivar los intentos opositores de blindar el decreto, en un escenario donde el Ejecutivo debió ceder parcialmente tras haber retirado los capítulos originales de tierras en el debate del Senado hace más de dos meses.",
+      "guion": "El oficialismo busca dictamen para la propiedad privada",
+      "seccion": "Política",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "Crónica"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T23:24:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T15:01:49.740Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El plenario de comisiones se reúne este miércoles a las 16.",
+        "Se incorpora una versión flexible de la Ley de Tierras.",
+        "El proyecto se incluye en la sesión convocada para el 21 de octubre."
+      ],
+      "seSabe": [
+        "El plenario de Asuntos Constitucionales y Legislación General se reúne este miércoles a las 16 según Noticias Argentinas.",
+        "Se mantendrá el tope del 15% de extranjerización de tierras y se eliminará el límite de 1.000 hectáreas en zonas núcleo.",
+        "El proyecto de Inviolabilidad de la Propiedad Privada fue incluido en la sesión del 21 de octubre."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó el resultado definitivo de la votación en el plenario de comisiones de este miércoles."
+      ],
+      "textoRedes": "El oficialismo en Diputados busca firmar este miércoles dictamen al proyecto de Inviolabilidad de la Propiedad Privada con una versión flexible de la Ley de Tierras para frenar rechazos al DNU 70/23.",
+      "etiquetas": [
+        "Diputados",
+        "Ley de Tierras",
+        "Propiedad Privada",
+        "Gobierno"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
+          "fecha": "2026-10-14T09:24:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el plenario de comisiones, la inclusión de la Ley de Tierras light y los cambios en desalojos y expropiaciones."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-oficialismo-incluira-la-ley-de.html",
+          "fecha": "2026-10-14T14:15:59.225Z",
+          "oficial": false,
+          "aporte": "Coincidió en la convocatoria al plenario de la Cámara de Diputados para este miércoles."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/el-oficialismo-busca-avanzar-con-el-proyecto-sobre-inviolabilidad-de-la-propiedad-privada-que-pasara-con-la-ley-de-tierras/",
+          "fecha": "2026-10-14T11:46:00.000Z",
+          "oficial": false,
+          "aporte": "Agregó que La Libertad Avanza intentará emitir dictamen con restricciones de la Ley de Tierras."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/el-oficialismo-incluira-la-ley-tierras-light-su-proyecto-propiedad-privada-n924479",
+          "fecha": "2026-10-14T14:11:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la noticia sin aportar datos adicionales en su resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/---javier-milei-en-vivo--anuncios-y-medidas-del-gobierno-minuto-a-minuto-del-14-de-octubre-de-2026_a6acf49478298ee386b246dd1",
+          "fecha": "2026-10-14T14:20:08.000Z",
+          "oficial": false,
+          "aporte": "Indicó el carácter ultra exprés del trámite legislativo en Diputados."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-14-8-22-0-en-un-dictamen-expres-el-oficialismo-incluira-la-ley-de-tierras-light-en-su-proyecto-sobre-propiedad-privada",
+          "fecha": "2026-10-14T14:31:24.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la búsqueda de dictamen para el proyecto de Inviolabilidad de la Propiedad Privada este miércoles."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "gqh1ka",
+          "titulo": "El oficialismo convoca al plenario para debatir la Ley de Tierras",
+          "fecha": "2026-10-08T21:37:55.679Z",
+          "ruta": "/nota/el-oficialismo-convoca-al-plenario-para-debatir-la-ley-de-tierras-gqh1ka"
+        },
+        {
+          "id": "w7o4x7",
+          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
+          "fecha": "2026-10-06T12:56:37.000Z",
+          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-oficialismo-busca-dictamen-para-la-propiedad-privada",
+      "foto": {
+        "archivo": "fotos-notas/jc61mz.jpg",
+        "credito": "Foto: Diario Popular"
+      }
+    },
+    {
       "id": "17v35o5",
       "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
       "copete": "El Ministerio de Salud provincial y la Comisión de Investigaciones Científicas lanzaron una convocatoria para profesionales de hospitales públicos. La inscripción funcionará desde el 15 de octubre hasta el 16 de noviembre.",
@@ -2762,15 +2907,16 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-13T23:01:29.650Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T22:53:19.000Z",
+      "sinFecha": false,
       "visto": "2026-10-13T23:01:29.650Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [
+        "autodromo",
         "fangio"
       ],
       "como": "automatica",
@@ -2838,6 +2984,86 @@
       }
     },
     {
+      "id": "17pigci",
+      "titulo": "Sergio Uñac lanza su primer spot y confirma sus aspiraciones presidenciales",
+      "copete": "El senador y exgobernador sanjuanino difundió un video en redes sociales de cara a los comicios de 2027. Afirmó que la sociedad atraviesa un momento de desánimo.",
+      "cuerpo": "El material audiovisual lleva por título \"Por qué quiero ser presidente\".\n\nEn la grabación, el legislador sostiene que la sociedad atraviesa una situación de desánimo y que las personas la pasan mal. Además, el dirigente peronista ubica a Axel Kicillof como un contrincante directo dentro de su espacio político.\n\nUñac había adelantado sus intenciones de competir por la máxima magistratura nacional en marzo, durante una entrevista en un programa de streaming.",
+      "guion": "Sergio Uñac lanza su primer spot y confirma sus aspiraciones presidenciales",
+      "seccion": "Política",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "El Destape",
+        "Perfil",
+        "Zona Norte Diario",
+        "ANDigital",
+        "El Marplatense",
+        "Clarín"
+      ],
+      "enlace": "https://www.clarin.com/politica/gente-pasando-mal-ano-elecciones-sergio-unac-metio-campana-saco-primer-spot_0_FGiOSnFe3S.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T22:50:23.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T00:31:24.523Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sergio Uñac publicó un video para lanzar su campaña hacia 2027.",
+        "El senador aseguró que hay desánimo en la sociedad.",
+        "El dirigente reconoció a Axel Kicillof como un rival directo en el peronismo."
+      ],
+      "seSabe": [
+        "Sergio Uñac difundió un video este martes titulado \"Por qué quiero ser presidente\".",
+        "El senador nacional busca posicionarse como candidato para las elecciones de 2027.",
+        "El dirigente sanjuanino identificó a Axel Kicillof como un competidor directo en el espacio peronista."
+      ],
+      "textoRedes": "El senador y exgobernador sanjuanino Sergio Uñac publicó un video en redes sociales para oficializar su campaña presidencial de cara a 2027 y señaló que la sociedad atraviesa un momento de desánimo.",
+      "etiquetas": [
+        "Sergio Uñac",
+        "Elecciones 2027",
+        "Peronismo",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/gente-pasando-mal-ano-elecciones-sergio-unac-metio-campana-saco-primer-spot_0_FGiOSnFe3S.html",
+          "fecha": "2026-10-13T22:50:23.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la publicación del video en X y las declaraciones del senador respecto al desánimo social."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/unac-se-lanzo-como-precandidato-a-presidente-con-un-spot-nid13102026/",
+          "fecha": "2026-10-14T00:10:10.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la difusión del spot de campaña de Sergio Uñac en redes sociales."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/un-exgobernador-lanzo-su-primer-spot-presidencial-y-apuesta-a-competir-con-kicillof-dentro-del-peronismo/",
+          "fecha": "2026-10-13T23:52:47.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el dirigente busca un lugar en el peronismo y ve a Axel Kicillof como rival directo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "sergio-unac-lanza-su-primer-spot-y-confirma-sus-aspiraciones",
+      "foto": {
+        "archivo": "fotos-notas/17pigci.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "pdqhm3",
       "titulo": "Lisandro Martínez critica a la directiva del Manchester United y Rooney le responde",
       "copete": "El defensor argentino cuestionó la falta de refuerzos tras caer frente al Atlético de Madrid en la Champions League. El exdelantero le contestó que sus dichos resultaron desubicados.",
@@ -2851,6 +3077,7 @@
         "El Destape",
         "Perfil",
         "Página/12",
+        "A24",
         "Ámbito",
         "TyC Sports",
         "Minuto Uno",
@@ -2861,10 +3088,9 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
         "0223 (Mar del Plata)",
-        "A24",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -2952,6 +3178,13 @@
           "medio": "Página/12",
           "enlace": "https://www.pagina12.com.ar/2026/10/14/el-manchester-united-sancionara-a-lisandro-martinez/",
           "fecha": "2026-10-14T18:03:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
+          "fecha": "2026-10-14T14:11:37.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3082,6 +3315,13 @@
           "aporte": null
         },
         {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
+          "fecha": "2026-10-14T17:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
           "fecha": "2026-10-14T12:00:00.000Z",
@@ -3089,23 +3329,9 @@
           "aporte": null
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
-          "fecha": "2026-10-14T14:11:37.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Clarín",
           "enlace": "https://www.clarin.com/deportes/lisandro-martinez-destrozo-dirigencia-manchester-united-desato-infierno-inglaterra-futuro-duda_0_gwPdtushTS.html",
           "fecha": "2026-10-14T14:52:58.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
-          "fecha": "2026-10-14T17:29:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3355,78 +3581,6 @@
       }
     },
     {
-      "id": "nemgm9",
-      "titulo": "Google habilita Gemini 4 Argon para usuarios de pago",
-      "copete": "La compañía tecnológica liberó su modelo de inteligencia artificial más avanzado para suscriptores de los planes superiores y desarrolladores. Ofrece tarifas promocionales de lanzamiento y un millón de tokens por tarea.",
-      "cuerpo": "Google habilitó el acceso público a Gemini 4 Argon para los usuarios de sus planes de pago Pro y Ultra en su aplicación y en el buscador, además de abrirlo a desarrolladores y empresas. El modelo llega con una tarifa promocional de USD 2 por cada millón de tokens de entrada y USD 10 por cada millón de salida, valores que se duplicarán a fines de noviembre de 2026.\n\nLa empresa había presentado el sistema el 30 de septiembre de 2026 para pruebas cerradas de seguridad. Según informó la compañía, el nuevo desarrollo superó a competidores en pruebas comparativas de programación y ciberseguridad, y amplió a un millón de tokens el límite de texto por tarea.\n\nGoogle no detalló si la herramienta estará disponible en el futuro para los usuarios de planes gratuitos.",
-      "guion": "Google habilita Gemini 4 Argon para usuarios de pago",
-      "seccion": "Tecnología",
-      "medios": [
-        "Infobae",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T19:24:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T02:31:55.756Z",
-      "relevancia": 34,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Google liberó el modelo Gemini 4 Argon para usuarios de sus planes de pago.",
-        "Tiene una tarifa promocional de dos dólares por millón de tokens de entrada.",
-        "El límite de generación se amplió a un millón de tokens por tarea.",
-        "La empresa no confirmó si llegará a usuarios gratuitos."
-      ],
-      "seSabe": [
-        "Google activó Gemini 4 Argon para los planes Pro y Ultra.",
-        "El costo inicial es de USD 2 por millón de tokens de entrada y USD 10 de salida, según Google.",
-        "El límite de texto por tarea alcanza un millón de tokens.",
-        "Google presentó el sistema inicialmente el 30 de septiembre de 2026."
-      ],
-      "noConfirmado": [
-        "La llegada del modelo a los usuarios de planes gratuitos o del nivel Plus.",
-        "La verificación independiente de las pruebas comparativas difundidas por la empresa."
-      ],
-      "textoRedes": "Google activó Gemini 4 Argon para los usuarios de sus planes de pago con tarifas promocionales de lanzamiento y mayor capacidad de procesamiento.",
-      "etiquetas": [
-        "Google",
-        "Inteligencia Artificial",
-        "Gemini 4 Argon",
-        "tecnología"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
-          "fecha": "2026-10-13T19:24:14.000Z",
-          "oficial": false,
-          "aporte": "Detalló los precios de lanzamiento, el límite de tokens y el historial de pruebas internas de Google."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/tecnologia/google-lanzo-gemini-4-argon-para-suscriptores-pagos-quienes-pueden-usar-el-nuevo-modelo-de-ia/",
-          "fecha": "2026-10-14T02:06:27.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la habilitación global del modelo para desarrolladores y empresas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "google-habilita-gemini-4-argon-para-usuarios-de-pago",
-      "foto": {
-        "archivo": "fotos-notas/nemgm9.jpg",
-        "credito": "Foto: Infobae"
-      }
-    },
-    {
       "id": "u043fh",
       "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
       "copete": "La caminata en honor a la Virgen del Rosario de San Nicolás será el sábado 17 de octubre desde las 9. Partirá de la parroquia Santa María y finalizará con una misa.",
@@ -3584,8 +3738,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Bichos de Campo",
-        "Agrositio"
+        "Agrositio",
+        "Bichos de Campo"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -3714,10 +3868,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
+        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
         "Noticias Agropecuarias",
-        "Agroempresario",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
@@ -4365,10 +4519,9 @@
     "Economía",
     "Agro",
     "Policiales",
-    "Fútbol",
     "Deportes",
     "Cultura y agenda",
-    "Tecnología"
+    "Fútbol"
   ],
   "temas": [
     {
@@ -4380,8 +4533,8 @@
   "clima": {
     "ahora": {
       "temp": 12,
-      "sensacion": 10,
-      "humedad": 80,
+      "sensacion": 9,
+      "humedad": 83,
       "viento": 17,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4782,12 +4935,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1bnktm",
-      "titulo": "Un desprendimiento de rocas aplastó una camioneta y dejó…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "j2e39v",
       "titulo": "La ANMAT prohibió una marca de lavandina en todo el país…",
       "seccion": "Argentina",
@@ -4798,6 +4945,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "1333xd6",
+      "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "fp2pbw",
@@ -4836,5 +4989,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 1
 }

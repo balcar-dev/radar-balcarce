@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-14T21:32:57.218Z",
+ "generado": "2026-10-14T22:02:27.546Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -22,33 +22,6 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "5f1qhn",
-   "titulo": "Deuda: Economía aspiró pesos del mercado, renovó el 136% de los vencimientos y estiró plazos más allá de 2027",
-   "copete": "El Gobierno absorbió 1,75 billones de pesos en la última licitación de deuda del Tesoro: captó más fondos de los necesarios para cubrir los vencimientos y alcanzó un rollover de 136,14 por ciento. En ese contexto, tampoco ofreció el Bonar 2029 (AO29) denominado en dólares, ante…",
-   "seccion": "Economía",
-   "fecha": "2026-10-14T20:40:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/deuda-economia-aspiro-pesos-del-mercado-renovo-el-136-los-vencimientos-y-estiro-plazos-mas-alla-2027-n6333837",
-     "fecha": "2026-10-14T20:40:00.000Z"
-    },
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/14/licitacion-clave-el-gobierno-renovo-todos-los-vencimientos-de-deuda-y-absorbio-175-billones-de-pesos/",
-     "fecha": "2026-10-14T21:15:30.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/economia/2026/10/14/licitacion-de-deuda-el-gobierno-renovo-todos-los-vencimientos-y-extendio-los-plazos-mas-alla-de-2027/",
-     "fecha": "2026-10-14T21:23:30.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 92 caracteres, el máximo es 90",
    "maximo": 3
   }
  ]

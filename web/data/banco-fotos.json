@@ -14391,9 +14391,9 @@
  "eumyqk": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-14T20:33:36.416Z",
+  "cuando": "2026-10-14T22:02:09.775Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 2,
+  "intentos": 3,
   "fuentes": 5
  },
  "1ummanb": {
@@ -14514,16 +14514,16 @@
   "cuando": "2026-10-14T21:03:01.743Z"
  },
  "obdkb1": {
-  "archivo": "fotos-notas/obdkb1.jpg",
   "medio": "Clarín",
-  "credito": "Foto: Clarín",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto pide frenar los mensajes de odio en las redes sociales",
   "enlace": "https://www.clarin.com/deportes/franco-colapinto-mensajes-odio-redes-sociales-piensan-defendiendo-generan-contrario_0_mySL2wLxxK.html",
   "imagenOriginal": "https://www.clarin.com/img/2026/10/09/jgUS-lJP4_2000x1500__1.jpg",
   "razon": "La foto A muestra a Franco Colapinto de cuerpo entero, sin marcas de agua ni menores, con excelente nitidez.",
-  "cuando": "2026-10-14T21:32:34.868Z"
+  "cuando": "2026-10-14T21:32:34.868Z",
+  "intentado": true,
+  "borrada": true
  },
  "y1elhg": {
   "intentado": true,
@@ -14544,5 +14544,29 @@
   "imagenOriginal": "https://www.zonanortediario.com.ar/wp-content/uploads/2026/10/DON5711-scaled.jpg",
   "razon": "Tiene buen encuadre y nitidez, muestra claramente el hecho y no tiene marcas añadidas ni menores.",
   "cuando": "2026-10-14T21:32:34.868Z"
+ },
+ "1bnktm": {
+  "archivo": "fotos-notas/1bnktm.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Un desprendimiento de rocas corta la Ruta 7 en Mendoza",
+  "enlace": "https://tn.com.ar/videos/sociedad/2026/10/14/mendoza-cortaron-la-ruta-7-por-un-derrumbe-de-rocas-que-aplasto-una-camioneta-y-dejo-camiones-varados-video-2/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/https%3A%2F%2Fthumbs.vodgc.net%2F1-14-3e9d6860750a1792000039627_720P.jpg?auth=86bf5e9c7b2917225adfaa94ddf73040ee1956ad4f0c730956e357e9fb1ef5c7&width=1023",
+  "razon": "Muestra claramente la fila de camiones varados en la ruta sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T22:02:09.775Z"
+ },
+ "gkl1ue": {
+  "archivo": "fotos-notas/gkl1ue.jpg",
+  "medio": "Crónica",
+  "credito": "Foto: Crónica",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno lanza un plan nacional de salud vascular",
+  "enlace": "https://www.cronica.com.ar/salud/lugones-lanzo-el-plan-nacional-de-salud-vascular-para-prevenir-muertes-por-enfermedades-cardiovasculares/",
+  "imagenOriginal": "https://www.cronica.com.ar/files/image/1716/1716741/6ac1214c51ee5_600_315!.png?s=930917b654dad7838593c3cb071cd75d&d=1790996400",
+  "razon": "La foto B muestra al orador en primer plano con buena nitidez y sin marcas de agua ni menores.",
+  "cuando": "2026-10-14T22:02:09.775Z"
  }
 }
