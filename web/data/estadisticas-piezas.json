@@ -4761,6 +4761,78 @@
     "shares": 0,
     "saved": 0
    }
+  },
+  {
+   "clave": "instagram/reel/18168427897476629",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "participa-evento",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T15:05:51.556Z",
+   "medida": "2026-10-14T15:30:23.321Z",
+   "metricas": {
+    "reach": 1,
+    "views": 5,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/2725269724555781",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "participa-evento",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T15:06:49.106Z",
+   "medida": "2026-10-14T15:30:23.321Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/28714334304902813",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "participa-evento",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T15:07:13.270Z",
+   "medida": "2026-10-14T15:30:23.321Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122111150619495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "1dun8ft",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T15:09:14.343Z",
+   "medida": "2026-10-14T15:30:23.321Z",
+   "metricas": {
+    "post_media_view": 3,
+    "post_total_media_view_unique": 2,
+    "post_clicks": 0,
+    "post_reactions_by_type_total": 0
+   }
+  },
+  {
+   "clave": "instagram/foto/18338551669275483",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "1dun8ft",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T15:09:27.892Z",
+   "medida": "2026-10-14T15:30:23.321Z",
+   "metricas": {
+    "reach": 2,
+    "views": 6,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   }
   }
  ]
 }
