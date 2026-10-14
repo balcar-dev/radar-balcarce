@@ -13882,16 +13882,16 @@
   "fuentes": 3
  },
  "1ov26yg": {
-  "archivo": "fotos-notas/1ov26yg.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Fiesta Nacional del Postre confirma su nueva fecha",
   "enlace": "https://accion5.com/tufroestamos-reorganizando-la-agenda-para-su-realizacion/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/TUFRO.jpg",
   "razon": "Es la única imagen completa y nítida que ilustra el hecho (la conferencia de prensa de la 22° Fiesta Nacional del Postre), sin marcas de agua del medio ni menores de edad.",
-  "cuando": "2026-10-14T04:02:18.638Z"
+  "cuando": "2026-10-14T04:02:18.638Z",
+  "intentado": true,
+  "borrada": true
  },
  "m8u8gq": {
   "intentado": true,
@@ -13925,5 +13925,17 @@
   "imagenOriginal": "https://media.tycsports.com/files/2026/10/14/995758/rodolfo-arruabarrena-durante-el-partido-entre-boca-y-vasco-da-gama_1440x810.webp",
   "razon": "La foto A muestra a Rodolfo Arruabarrena con buena nitidez y encuadre, libre de marcas añadidas y sin menores.",
   "cuando": "2026-10-14T10:31:45.600Z"
+ },
+ "b23r93": {
+  "archivo": "fotos-notas/b23r93.jpg",
+  "medio": "iProfesional",
+  "credito": "Foto: iProfesional",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "ARCA implementa el recibo de sueldo electrónico para casas particulares",
+  "enlace": "https://www.iprofesional.com/impuestos/466544-arca-modifica-pautas-para-la-confeccion-del-recibo-de-sueldo-para-empleadas-domesticas",
+  "imagenOriginal": "https://resizer.iproimg.com/unsafe/1280x720/assets.iprofesional.com/assets/jpg/2026/10/627497_landscape.jpg",
+  "razon": "La foto A ilustra adecuadamente la temática de casas particulares con buena nitidez y sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T11:02:03.783Z"
  }
 }
