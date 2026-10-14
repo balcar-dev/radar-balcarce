@@ -786,6 +786,16 @@ export function laMuerteFrena(nota = {}, seccion = nota.seccion, medios = cuanto
  *  medio ("Denuncian al intendente…") sigue esperando: sólo se suelta si la confirma una fuente oficial o dos medios. */
 export const aflojaParaLoDeAca = (nota, seccion, corroborada) => esDeAca(nota) && (seccion !== 'Política' || corroborada);
 
+/** Una efeméride sacada de otro medio (Hernán, 14/10/2026: una nota de Radio Gabal "Efemérides 10 de octubre…"). Las efemérides son
+ *  nuestras (`ingesta/efemerides.mjs`, el reel y su nota): de afuera no se toma ninguna, de ningún medio. Se reconoce por la dirección
+ *  ("…/efemerides-10-de-octubre-…") o por un título que arranca así. "Acto por la efeméride del 12 de octubre" NO entra: es una noticia. */
+export function esEfemerideAjena(nota = {}) {
+  const enlaces = [nota.enlace, ...(Array.isArray(nota.enlaces) ? nota.enlaces : [])].filter(Boolean);
+  const porEnlace = enlaces.some((e) => { try { return new URL(String(e)).pathname.split('/').some((s) => /^efemerides?(-|$)/i.test(s)); } catch { return false; } });
+  const titulo = normalizar(String(nota.titulo ?? '')).trim();
+  return porEnlace || /^(efemerides?\b|un dia como hoy\b|hoy es\b.*\befemeride|calendario de efemerides)/.test(titulo);
+}
+
 /** El color de una nota recién leída: { color, motivo }. El puntaje no entra
  *  (desde el 27/09 lo de afuera se mide en medios, no en puntaje). */
 function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
@@ -798,6 +808,8 @@ function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
   // el título: la palabra suelta en un texto largo no alcanza. Va ANTES del
   // amarillo (28/09): una lista de sepelios dice "falleció", quedaba amarilla
   // y una persona podía aprobarla. Nunca es nunca.
+  // Las efemérides de otros medios tampoco (14/10/2026): las nuestras salen en el reel y en su nota propia.
+  if (esEfemerideAjena(nota)) return { color: 'rojo', motivo: 'efeméride de otro medio: las efemérides son propias, no se publica' };
   if ((REGLAS_SEMAFORO.nunca ?? []).some((p) => contiene(normalizar(String(nota.titulo ?? '')), p))) {
     return { color: 'rojo', motivo: 'lista de sepelios: no se publica' };
   }
