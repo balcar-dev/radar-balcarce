@@ -47,3 +47,7 @@ Fuentes: [Linearity, tipografía cinética](https://www.linearity.io/blog/kineti
 - **Lienzo "Design" de Claude**: armar los 2 a 4 diseños como pantallas lado a lado para elegir, sin tocar el sitio.
 - **PageSpeed / Lighthouse y Cloudflare Web Analytics**: para comprobar que el rediseño no hace más lento el sitio.
 - **Figma**: sólo si alguna vez los diseña una persona; para nuestro flujo no hace falta.
+
+## Decisión del 13/10 (después de la investigación)
+- El rediseño se hace **una vez pasada la 1.0**, no antes.
+- Si algo hay que cambiar para que se vea mejor, se hace, pero **sin sumar mucha complejidad**: nada que complique el sitio, el motor o el mantenimiento. Mejor pocos cambios bien hechos que una herramienta nueva.
