@@ -14224,16 +14224,16 @@
   "cuando": "2026-10-14T16:03:40.405Z"
  },
  "3i2j4g": {
-  "archivo": "fotos-notas/3i2j4g.jpg",
   "medio": "Infocampo",
-  "credito": "Foto: Infocampo",
   "licencia": null,
   "origen": "medio",
   "titulo": "Tucumán registra una jornada de lluvias ligeras y alta humedad",
   "enlace": "https://www.infocampo.com.ar/clima-en-tucuman-hoy-14-octubre-2026/",
   "imagenOriginal": "https://www.infocampo.com.ar/wp-content/uploads/2025/05/clima-en-tucuman.webp",
   "razon": "La imagen A ilustra directamente el contexto agropecuario de la nota mostrando un frente de tormenta sobre un campo, mientras que la imagen B muestra una escena urbana genérica que no se ajusta a la sección Agro.",
-  "cuando": "2026-10-14T16:03:40.405Z"
+  "cuando": "2026-10-14T16:03:40.405Z",
+  "intentado": true,
+  "borrada": true
  },
  "wzunxc": {
   "archivo": "fotos-notas/wzunxc.jpg",
@@ -14282,5 +14282,65 @@
   "imagenOriginal": "https://fotos.perfil.com/2025/03/05/trim/1140/641/mauro-gonzalez-presidente-de-pyme-argentina-1978313.jpg",
   "razon": "La foto B muestra a un hombre adulto en primer plano con buena nitidez y encuadre adecuado para ilustrar la nota sobre empresas, sin marcas de agua ni menores.",
   "cuando": "2026-10-14T18:02:25.296Z"
+ },
+ "9i1dyh": {
+  "archivo": "fotos-notas/9i1dyh.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Rosgan y Banco Nación rematan quince mil cabezas de ganado",
+  "enlace": "https://www.lanacion.com.ar/economia/campo/pagaron-hasta-6900-por-terneros-en-un-importante-remate-ganadero-nid14102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-remate-ganadero-realizado-en-rosario-reunio-IVV5NBSHA5E2ZEFDMASU3WVMOI.jpg?auth=aa9706ff0555d45b26a3bae116260cbbd4a36264a2e643a209af47ff2cc62c4a&width=1200&height=800&quality=70&smart=true",
+  "razon": "Muestra claramente el salón de remates y el público sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T18:32:22.672Z"
+ },
+ "55gw7p": {
+  "archivo": "fotos-notas/55gw7p.jpg",
+  "medio": "iProfesional",
+  "credito": "Foto: iProfesional",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Una psíquica de animales revela detalles sobre su vínculo con Javier Milei",
+  "enlace": "https://www.iprofesional.com/actualidad/466591-perros-milei-medium-conto-secretos-ineditos-genero-polemica-vinculo",
+  "imagenOriginal": "https://resizer.iproimg.com/unsafe/1280x720/assets.iprofesional.com/assets/jpg/2026/10/627539_landscape.jpg",
+  "razon": "La foto A muestra claramente a la protagonista en primer plano sin marcas de agua ni menores reconocibles, siendo adecuada para la nota.",
+  "cuando": "2026-10-14T18:32:22.672Z"
+ },
+ "12un4a6": {
+  "archivo": "fotos-notas/12un4a6.jpg",
+  "medio": "0221",
+  "credito": "Foto: 0221",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Provincia convoca a paritarias docentes para el viernes",
+  "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
+  "imagenOriginal": "https://media.0221.com.ar/p/32c758c84fe038ecb7723a629164909f/adjuntos/357/imagenes/100/269/0100269104/1200x630/2144x1994:2164x2014/paritarias-4.jpeg",
+  "razon": "Muestra claramente la reunión paritaria docente sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T18:32:22.672Z"
+ },
+ "1mgbuy8": {
+  "archivo": "fotos-notas/1mgbuy8.jpg",
+  "medio": "La Nación",
+  "credito": "Foto: La Nación",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Thiago Mendes pide disculpas por un provocador posteo contra Boca",
+  "enlace": "https://www.lanacion.com.ar/deportes/futbol/el-provocador-posteo-del-capitan-de-vasco-da-gama-tras-la-victoria-ante-boca-lo-tuvo-que-borrar-y-nid14102026/",
+  "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/el-capitan-de-vasco-da-gama-thiago-V57XXBVNMZGXRMC4IUZYJ47YXI.jpeg?auth=1b25ff6e90c29c2560a2b60c067cfdf19ff0bd5a33f13ce700a1c98663082ba4&width=1200&height=800&quality=70&smart=true",
+  "razon": "Es la mejor foto disponible sin marcas de agua ni menores, mostrando claramente al protagonista de la noticia en acción.",
+  "cuando": "2026-10-14T18:32:22.672Z"
+ },
+ "1wstvsb": {
+  "archivo": "fotos-notas/1wstvsb.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno autoriza a una aerolínea chilena a operar vuelos internos e internacionales",
+  "enlace": "https://www.ambito.com/negocios/la-chilena-jetsmart-recibio-autorizacion-operar-vuelos-internos-e-internacionales-la-argentina-n6333459",
+  "imagenOriginal": "https://media.ambito.com/p/34b6cd51c2d07daea62f14c9386c183d/adjuntos/239/imagenes/036/772/0036772307/1200x675/smart/jet-smart-avionjpg.jpg",
+  "razon": "Muestra un avión comercial completo en pista con excelente nitidez y sin marcas de agua ni personas.",
+  "cuando": "2026-10-14T18:32:22.672Z"
  }
 }
