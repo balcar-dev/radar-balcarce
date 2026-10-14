@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T08:01:52.045Z",
+  "generado": "2026-10-14T08:31:49.600Z",
   "notas": [
     {
       "id": "1ov26yg",
@@ -824,7 +824,7 @@
       "fecha": "2026-10-13T20:04:48.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T21:31:43.295Z",
-      "relevancia": 73,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2779,6 +2779,7 @@
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
+        "Perfil",
         "Ámbito",
         "TyC Sports",
         "C5N",
@@ -2792,12 +2793,12 @@
         "Bolavip Argentina",
         "Olé",
         "0223 (Mar del Plata)",
-        "La Nueva",
         "Córdoba Competición",
         "Clarín",
         "Página/12",
         "Minuto Uno",
         "Crónica",
+        "La Nueva",
         "El Día"
       ],
       "enlace": "https://es.motorsport.com/f1/news/formula1-vuelve-africa-ruanda/10864826/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
@@ -3180,7 +3181,7 @@
       {
         "fecha": "2026-10-14",
         "dia": "mié",
-        "max": 15,
+        "max": 16,
         "min": 10,
         "lluvia": 60,
         "codigo": 51,
@@ -3192,7 +3193,7 @@
         "fecha": "2026-10-15",
         "dia": "jue",
         "max": 14,
-        "min": 8,
+        "min": 7,
         "lluvia": 37,
         "codigo": 51,
         "viento": 18,
@@ -3525,12 +3526,6 @@
       "titulo": "El folclore y fútbol de duelo: falleció el “Chiqui”…",
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"falleció\""
-    },
-    {
-      "id": "1i24zu9",
-      "titulo": "Dolor en el folclore: Murió «Chiqui» Smiraglia, apasionado…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"murió\""
     },
     {
       "id": "120b8gy",
