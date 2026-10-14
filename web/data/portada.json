@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T17:06:35.606Z",
+  "generado": "2026-10-14T17:32:05.872Z",
   "notas": [
     {
       "id": "wzunxc",
@@ -193,16 +193,16 @@
       "medios": [
         "Minuto Uno",
         "Infobae",
-        "Clarín",
         "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
+        "Clarín",
         "El Cronista",
-        "A24",
         "C5N",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "A24",
         "iProfesional"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
@@ -210,7 +210,7 @@
       "fecha": "2026-10-14T14:27:21.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T15:01:49.740Z",
-      "relevancia": 89,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -271,6 +271,95 @@
       "foto": {
         "archivo": "fotos-notas/5635fb.jpg",
         "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "bpl7gu",
+      "titulo": "La Selección Argentina negocia dos amistosos con rivales sudamericanos",
+      "copete": "Tras descartar la gira por Asia, la Asociación del Fútbol Argentino gestiona partidos para la ventana de noviembre. El clásico ante Uruguay en La Plata asoma como la opción más firme.",
+      "cuerpo": "La Selección Argentina reconfigura su agenda para la última ventana internacional del año, prevista entre el 9 y el 17 de noviembre de 2026. Al cancelarse el viaje a territorio asiático, la Asociación del Fútbol Argentino encamina gestiones para disputar dos amistosos contra seleccionados del continente.\n\nEl cruce más avanzado es frente a Uruguay, con la posibilidad de concretarse en el Estadio Único de La Plata. Para el segundo compromiso, el cuerpo técnico que encabeza Lionel Scaloni analiza recibir a otro rival sudamericano en el país o jugar una revancha en Montevideo.",
+      "guion": "La Selección Argentina negocia dos amistosos con rivales sudamericanos",
+      "seccion": "Fútbol",
+      "medios": [
+        "0223 (Mar del Plata)",
+        "Minuto Uno",
+        "Doble Amarilla"
+      ],
+      "enlace": "https://www.dobleamarilla.com.ar/selecciones/caida-la-gira-por-asia--la-seleccion-argentina-comienza-a-negociar-para-jugar-con-rivales-sudamericanos-en-la-doble-fecha-fifa-de-noviembre_a6acf892c8531709378084cde",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T14:04:45.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T17:01:50.805Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La AFA descarta la gira por Asia para la ventana de noviembre.",
+        "El primer amistoso encaminado es frente a Uruguay.",
+        "El Estadio Único de La Plata asoma como la sede principal.",
+        "El cuerpo técnico busca rivales para el segundo partido."
+      ],
+      "seSabe": [
+        "La ventana FIFA se desarrollará del 9 al 17 de noviembre de 2026.",
+        "La AFA negocia amistosos contra seleccionados sudamericanos.",
+        "El clásico frente a Uruguay es la opción más avanzada.",
+        "El Estadio Único de La Plata aparece como la principal sede."
+      ],
+      "noConfirmado": [
+        "Todavía no existe una confirmación oficial del encuentro ante Uruguay.",
+        "El rival y la sede del segundo partido permanecen sin definir."
+      ],
+      "textoRedes": "La Selección Argentina reprograma sus compromisos de noviembre tras caer la gira por Asia y negocia amistosos frente a rivales sudamericanos, con Uruguay como principal opción para jugar en La Plata.",
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Fecha FIFA",
+        "AFA",
+        "Lionel Scaloni",
+        "Uruguay"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/selecciones/caida-la-gira-por-asia--la-seleccion-argentina-comienza-a-negociar-para-jugar-con-rivales-sudamericanos-en-la-doble-fecha-fifa-de-noviembre_a6acf892c8531709378084cde",
+          "fecha": "2026-10-14T14:04:45.000Z",
+          "oficial": false,
+          "aporte": "Detalló que la AFA comenzó a negociar con Uruguay tras caer la gira por Asia."
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-14-12-4-0-se-cayo-la-gira-por-asia-y-la-seleccion-argentina-prepara-un-bombazo-para-noviembre",
+          "fecha": "2026-10-14T15:06:00.000Z",
+          "oficial": false,
+          "aporte": "Informó el período de la ventana internacional y las alternativas para el segundo partido."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/se-cayo-la-gira-asia-la-seleccion-argentina-jugaria-un-clasico-doble-noviembre-n6333647",
+          "fecha": "2026-10-14T16:31:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el Estadio Único de La Plata es la principal sede para el duelo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nlg6jl",
+          "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
+          "fecha": "2026-09-19T03:00:00.000Z",
+          "ruta": "/nota/lionel-messi-vuelve-a-jugar-en-inter-miami-tras-su-despedida-de-la-1nlg6jl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-seleccion-argentina-negocia-dos-amistosos-con-rivales-sudamericanos",
+      "foto": {
+        "archivo": "fotos-notas/bpl7gu.jpg",
+        "credito": "Foto: 0223 (Mar del Plata)"
       }
     },
     {
@@ -680,8 +769,8 @@
       "guion": "La Estudiantina comienza el lunes y reúne a los secundarios",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -930,67 +1019,71 @@
       }
     },
     {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
-      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
-      "seccion": "Cultura y agenda",
+      "id": "97f98g",
+      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
+      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
+      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
+      "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
-      "enlace": "https://puntonueve.com.ar/188351-2/",
+      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:49:03.000Z",
+      "fecha": "2026-10-14T11:54:19.000Z",
       "sinFecha": false,
-      "visto": "2026-10-14T12:31:49.255Z",
-      "relevancia": 90,
+      "visto": "2026-10-14T13:01:57.018Z",
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Coro del Instituto Adventista presenta el musical Un día",
-        "La función es este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en los 40 años de trayectoria educativa"
+        "El Instituto Adventista cumple cuarenta años de trayectoria.",
+        "El coro escolar presenta el musical Un día este viernes.",
+        "La función comienza a las 20 en el polideportivo institucional."
       ],
       "seSabe": [
-        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
-        "La función se realiza este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
+        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
+        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
+        "La presentación se realiza en el polideportivo de la institución educativa."
       ],
-      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
       "etiquetas": [
-        "Coro del Instituto Adventista",
-        "musical Un día",
-        "polideportivo",
-        "40 aniversario",
-        "Balcarce"
+        "Instituto Adventista",
+        "coro",
+        "aniversario",
+        "musical",
+        "Balcarce",
+        "cultura"
       ],
       "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/188351-2/",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
-        },
         {
           "medio": "El Diario Balcarce",
           "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
           "fecha": "2026-10-14T11:54:19.000Z",
           "oficial": false,
-          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
+          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "cdnqde",
+          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
+      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
     },
     {
       "id": "1kavxj3",
@@ -1106,6 +1199,7 @@
         "Página/12",
         "A24",
         "El Día",
+        "La Nueva",
         "La Brújula 24",
         "Ámbito",
         "Infobae"
@@ -1305,7 +1399,6 @@
       "medios": [
         "La Nación",
         "Infobae",
-        "Clarín",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Cronista",
@@ -1315,7 +1408,8 @@
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "Clarín"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -1622,6 +1716,92 @@
       }
     },
     {
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "copete": "La institución balcarceña presentó vehículos emblemáticos y cascos de competición en la muestra desarrollada del 9 al 12 de octubre en el Hipódromo de San Isidro.",
+      "cuerpo": "La Fundación Museo Juan Manuel Fangio formó parte de Autoclásica 2026 con una selección de automóviles y objetos históricos expuestos del 9 al 12 de octubre en el Hipódromo de San Isidro. Según detalló el tesorero de la entidad, Juan Martín Burgués, el espacio institucional incluyó una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos de competición.\n\nEl repertorio sumó un Torino vinculado con las 84 Horas de Nürburgring de 1969, aportado por el consejero y colaborador Mariano Lozano, quien estuvo a cargo de su restauración y viajó a Detroit para recibir un reconocimiento vinculado con la industria automotriz. La propuesta también contempló un Talbot-Lago de la familia Pérez Companc como homenaje al centenario de las 500 Millas de Rafaela.\n\nComo se había informado el 13 de octubre, la participación proyectó el patrimonio automovilístico que conserva Balcarce en un evento de referencia nacional.",
+      "guion": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-13T23:01:29.650Z",
+      "sinFecha": true,
+      "visto": "2026-10-13T23:01:29.650Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Museo Fangio participó en la muestra Autoclásica 2026.",
+        "El evento se desarrolló del 9 al 12 de octubre en el Hipódromo de San Isidro.",
+        "Exhibieron vehículos emblemáticos como la Flecha de Plata y un Torino de Nürburgring."
+      ],
+      "seSabe": [
+        "Según la Fundación Museo Juan Manuel Fangio, la institución participó en Autoclásica 2026 del 9 al 12 de octubre en el Hipódromo de San Isidro.",
+        "De acuerdo con el tesorero Juan Martín Burgués, el espacio contó con una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos históricos.",
+        "Según informó la entidad, el consejero Mariano Lozano aportó un Torino de 1969 y recibió un reconocimiento en Detroit.",
+        "La muestra incluyó un Talbot-Lago de la familia Pérez Companc vinculado con las 500 Millas de Rafaela."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Museo Fangio llevó la historia y el patrimonio automovilístico de Balcarce a Autoclásica 2026, la tradicional exposición realizada en el Hipódromo de San Isidro.",
+      "etiquetas": [
+        "Museo Fangio",
+        "Autoclásica",
+        "San Isidro",
+        "autos históricos",
+        "Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
+          "fecha": "2026-10-13T22:53:19.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la participación de la Fundación Museo Juan Manuel Fangio en Autoclásica 2026, los vehículos exhibidos y las declaraciones del tesorero Juan Martín Burgués."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "fm53cw",
+          "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+          "fecha": "2026-10-13T19:19:43.000Z",
+          "ruta": "/nota/el-museo-fangio-expone-autos-historicos-en-autoclasica-fm53cw"
+        },
+        {
+          "id": "xwesjd",
+          "titulo": "El Museo Fangio registra una suba del cincuenta por ciento en visitas",
+          "fecha": "2026-09-28T15:49:37.000Z",
+          "ruta": "/nota/el-museo-fangio-registra-una-suba-del-cincuenta-por-ciento-en-visitas-xwesjd"
+        },
+        {
+          "id": "173ttfz",
+          "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
+          "fecha": "2026-10-05T12:12:09.000Z",
+          "ruta": "/nota/el-zonal-del-atlantico-compite-en-el-circuito-chico-del-fangio-173ttfz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-museo-fangio-expone-autos-historicos-en-autoclasica",
+      "foto": {
+        "archivo": "fotos-notas/11d0zcr.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "pdqhm3",
       "titulo": "Lisandro Martínez critica a la directiva del Manchester United y Rooney le responde",
       "copete": "El defensor argentino cuestionó la falta de refuerzos tras caer frente al Atlético de Madrid en la Champions League. El exdelantero le contestó que sus dichos resultaron desubicados.",
@@ -1635,7 +1815,6 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
-        "A24",
         "Ámbito",
         "TyC Sports",
         "Minuto Uno",
@@ -1644,7 +1823,8 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "Bolavip Argentina"
+        "Bolavip Argentina",
+        "A24"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -1722,13 +1902,6 @@
           "aporte": null
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
-          "fecha": "2026-10-14T14:11:37.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/deportes/lisandro-martinez-critico-la-dirigencia-del-manchester-united-y-wayne-rooney-salio-al-cruce-n6333521",
           "fecha": "2026-10-14T12:27:00.000Z",
@@ -1746,6 +1919,13 @@
           "medio": "TyC Sports",
           "enlace": "https://www.tycsports.com/champions-league/lisandro-martinez-exploto-contra-la-dirigencia-de-manchester-united-esperamos-que-traigan-mas-jugadores-id766040.html",
           "fecha": "2026-10-13T23:46:24.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/manchester-united-podria-sancionar-lisandro-martinez-sus-duras-criticas-la-dirigencia-n6333667",
+          "fecha": "2026-10-14T17:25:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1825,6 +2005,13 @@
           "fecha": "2026-10-14T02:30:41.000Z",
           "oficial": false,
           "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
+          "fecha": "2026-10-14T14:11:37.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "slug": "lisandro-mart-u00in-critica-a-la-directiva-del-manchester-united-y",
@@ -1833,93 +2020,6 @@
       "foto": {
         "archivo": "fotos-notas/pdqhm3.jpg",
         "credito": "Foto: Clarín"
-      }
-    },
-    {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "copete": "La institución balcarceña presentó vehículos emblemáticos y cascos de competición en la muestra desarrollada del 9 al 12 de octubre en el Hipódromo de San Isidro.",
-      "cuerpo": "La Fundación Museo Juan Manuel Fangio formó parte de Autoclásica 2026 con una selección de automóviles y objetos históricos expuestos del 9 al 12 de octubre en el Hipódromo de San Isidro. Según detalló el tesorero de la entidad, Juan Martín Burgués, el espacio institucional incluyó una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos de competición.\n\nEl repertorio sumó un Torino vinculado con las 84 Horas de Nürburgring de 1969, aportado por el consejero y colaborador Mariano Lozano, quien estuvo a cargo de su restauración y viajó a Detroit para recibir un reconocimiento vinculado con la industria automotriz. La propuesta también contempló un Talbot-Lago de la familia Pérez Companc como homenaje al centenario de las 500 Millas de Rafaela.\n\nComo se había informado el 13 de octubre, la participación proyectó el patrimonio automovilístico que conserva Balcarce en un evento de referencia nacional.",
-      "guion": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T22:53:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T23:01:29.650Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Museo Fangio participó en la muestra Autoclásica 2026.",
-        "El evento se desarrolló del 9 al 12 de octubre en el Hipódromo de San Isidro.",
-        "Exhibieron vehículos emblemáticos como la Flecha de Plata y un Torino de Nürburgring."
-      ],
-      "seSabe": [
-        "Según la Fundación Museo Juan Manuel Fangio, la institución participó en Autoclásica 2026 del 9 al 12 de octubre en el Hipódromo de San Isidro.",
-        "De acuerdo con el tesorero Juan Martín Burgués, el espacio contó con una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos históricos.",
-        "Según informó la entidad, el consejero Mariano Lozano aportó un Torino de 1969 y recibió un reconocimiento en Detroit.",
-        "La muestra incluyó un Talbot-Lago de la familia Pérez Companc vinculado con las 500 Millas de Rafaela."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Museo Fangio llevó la historia y el patrimonio automovilístico de Balcarce a Autoclásica 2026, la tradicional exposición realizada en el Hipódromo de San Isidro.",
-      "etiquetas": [
-        "Museo Fangio",
-        "Autoclásica",
-        "San Isidro",
-        "autos históricos",
-        "Juan Manuel Fangio",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
-          "fecha": "2026-10-13T22:53:19.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la participación de la Fundación Museo Juan Manuel Fangio en Autoclásica 2026, los vehículos exhibidos y las declaraciones del tesorero Juan Martín Burgués."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "fm53cw",
-          "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-          "fecha": "2026-10-13T19:19:43.000Z",
-          "ruta": "/nota/el-museo-fangio-expone-autos-historicos-en-autoclasica-fm53cw"
-        },
-        {
-          "id": "xwesjd",
-          "titulo": "El Museo Fangio registra una suba del cincuenta por ciento en visitas",
-          "fecha": "2026-09-28T15:49:37.000Z",
-          "ruta": "/nota/el-museo-fangio-registra-una-suba-del-cincuenta-por-ciento-en-visitas-xwesjd"
-        },
-        {
-          "id": "173ttfz",
-          "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
-          "fecha": "2026-10-05T12:12:09.000Z",
-          "ruta": "/nota/el-zonal-del-atlantico-compite-en-el-circuito-chico-del-fangio-173ttfz"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-museo-fangio-expone-autos-historicos-en-autoclasica",
-      "foto": {
-        "archivo": "fotos-notas/11d0zcr.jpg",
-        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -2239,14 +2339,14 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
-        "Minuto Uno",
         "C5N",
         "Radio Mitre",
         "Doble Amarilla",
         "Bolavip Argentina",
         "El Día",
         "Ecos Diarios (Necochea)",
-        "Clarín"
+        "Clarín",
+        "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/13/franco-mastantuono-fue-operado-luego-de-haber-recibido-un-golpe-en-el-ultimo-partido-de-la-fiorentina-el-parte-medico/",
       "teniaImagenLaFuente": true,
@@ -2321,74 +2421,75 @@
       }
     },
     {
-      "id": "66so6t",
-      "titulo": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa",
-      "copete": "La institución busca recaudar fondos para asistir a familias con necesidades económicas. La propuesta incluye sorteos de dinero en efectivo, vehículos, electrodomésticos y viviendas.",
-      "cuerpo": "El Merendero Doña Norma puso en marcha su tercera campaña solidaria para el período 2026-2027. El objetivo de la iniciativa es recaudar fondos destinados a sostener la asistencia que brinda a familias que atraviesan dificultades económicas mediante la entrega de alimentos y ropa.\n\nLa propuesta consiste en una rifa que ofrece premios como dinero en efectivo, electrodomésticos, motocicletas y viviendas prefabricadas. Los sorteos se realizan a través de la Quiniela de Santa Fe, el Loto y el Quini.\n\nEntre los principales atractivos figuran un automóvil 100 por ciento eléctrico para el sorteo final de diciembre y vehículos adicionales para quienes abonen al contado. Desde la organización indicaron que la comercialización está a cargo de vendedores autorizados.",
-      "guion": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa.",
-      "seccion": "Balcarce",
+      "id": "nemgm9",
+      "titulo": "Google habilita Gemini 4 Argon para usuarios de pago",
+      "copete": "La compañía tecnológica liberó su modelo de inteligencia artificial más avanzado para suscriptores de los planes superiores y desarrolladores. Ofrece tarifas promocionales de lanzamiento y un millón de tokens por tarea.",
+      "cuerpo": "Google habilitó el acceso público a Gemini 4 Argon para los usuarios de sus planes de pago Pro y Ultra en su aplicación y en el buscador, además de abrirlo a desarrolladores y empresas. El modelo llega con una tarifa promocional de USD 2 por cada millón de tokens de entrada y USD 10 por cada millón de salida, valores que se duplicarán a fines de noviembre de 2026.\n\nLa empresa había presentado el sistema el 30 de septiembre de 2026 para pruebas cerradas de seguridad. Según informó la compañía, el nuevo desarrollo superó a competidores en pruebas comparativas de programación y ciberseguridad, y amplió a un millón de tokens el límite de texto por tarea.\n\nGoogle no detalló si la herramienta estará disponible en el futuro para los usuarios de planes gratuitos.",
+      "guion": "Google habilita Gemini 4 Argon para usuarios de pago",
+      "seccion": "Tecnología",
       "medios": [
-        "Puntonueve (FM 100.9)"
+        "Infobae",
+        "Radio Mitre"
       ],
-      "enlace": "https://puntonueve.com.ar/el-merendero-dona-norma-lanzo-su-tercera-campana-solidaria-con-importantes-premios/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-13T19:54:37.000Z",
+      "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T19:24:14.000Z",
       "sinFecha": false,
-      "visto": "2026-10-14T01:06:27.274Z",
-      "relevancia": 67,
-      "local": true,
+      "visto": "2026-10-14T02:31:55.756Z",
+      "relevancia": 42,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Lanzaron la tercera campaña solidaria del Merendero Doña Norma.",
-        "La iniciativa incluye una rifa con premios en efectivo y vehículos.",
-        "Los sorteos se canalizan a través de la Quiniela de Santa Fe, Loto y Quini."
+        "Google liberó el modelo Gemini 4 Argon para usuarios de sus planes de pago.",
+        "Tiene una tarifa promocional de dos dólares por millón de tokens de entrada.",
+        "El límite de generación se amplió a un millón de tokens por tarea.",
+        "La empresa no confirmó si llegará a usuarios gratuitos."
       ],
       "seSabe": [
-        "El Merendero Doña Norma inició su tercera campaña solidaria para el período 2026-2027.",
-        "La rifa contempla premios en efectivo, electrodomésticos, motos y viviendas prefabricadas.",
-        "El premio principal del sorteo final de diciembre es un automóvil 100 por ciento eléctrico.",
-        "La venta de números se realiza mediante vendedores autorizados."
+        "Google activó Gemini 4 Argon para los planes Pro y Ultra.",
+        "El costo inicial es de USD 2 por millón de tokens de entrada y USD 10 de salida, según Google.",
+        "El límite de texto por tarea alcanza un millón de tokens.",
+        "Google presentó el sistema inicialmente el 30 de septiembre de 2026."
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "La llegada del modelo a los usuarios de planes gratuitos o del nivel Plus.",
+        "La verificación independiente de las pruebas comparativas difundidas por la empresa."
       ],
-      "textoRedes": "El Merendero Doña Norma puso en marcha su tercera campaña solidaria con una rifa para recaudar fondos y asistir a familias con necesidades económicas. Ofrecen premios en efectivo, vehículos, electrodomésticos y viviendas.",
+      "textoRedes": "Google activó Gemini 4 Argon para los usuarios de sus planes de pago con tarifas promocionales de lanzamiento y mayor capacidad de procesamiento.",
       "etiquetas": [
-        "Merendero Doña Norma",
-        "campaña solidaria",
-        "rifa",
-        "asistencia social",
-        "premios"
+        "Google",
+        "Inteligencia Artificial",
+        "Gemini 4 Argon",
+        "tecnología"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/el-merendero-dona-norma-lanzo-su-tercera-campana-solidaria-con-importantes-premios/",
-          "fecha": "2026-10-13T19:54:37.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
+          "fecha": "2026-10-13T19:24:14.000Z",
           "oficial": false,
-          "aporte": "Detalló el lanzamiento de la tercera campaña solidaria y el listado de premios de la rifa."
-        }
-      ],
-      "antecedentes": [
+          "aporte": "Detalló los precios de lanzamiento, el límite de tokens y el historial de pruebas internas de Google."
+        },
         {
-          "id": "1jv9qa4",
-          "titulo": "La Escuela Técnica impulsa una campaña solidaria para arreglar su gimnasio",
-          "fecha": "2026-09-23T11:52:12.000Z",
-          "ruta": "/nota/la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la-1jv9qa4"
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/tecnologia/google-lanzo-gemini-4-argon-para-suscriptores-pagos-quienes-pueden-usar-el-nuevo-modelo-de-ia/",
+          "fecha": "2026-10-14T02:06:27.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la habilitación global del modelo para desarrolladores y empresas."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-merendero-dona-norma-lanza-su-tercera-campana-solidaria-con-rifa",
+      "slug": "google-habilita-gemini-4-argon-para-usuarios-de-pago",
       "foto": {
-        "archivo": "fotos-notas/66so6t.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
+        "archivo": "fotos-notas/nemgm9.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -2399,7 +2500,6 @@
       "guion": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/caminata-de-fe-convocan-una.html",
@@ -2407,7 +2507,7 @@
       "fecha": "2026-10-13T18:39:33.772Z",
       "sinFecha": false,
       "visto": "2026-10-13T19:31:43.997Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2550,8 +2650,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Agrositio",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Agrositio"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -2680,10 +2780,11 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
-        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
-        "Noticias Agropecuarias"
+        "Noticias Agropecuarias",
+        "Agroempresario",
+        "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
       "teniaImagenLaFuente": true,
@@ -3417,6 +3518,77 @@
       "slug": "dos-motociclistas-circulan-de-forma-peligrosa-por-la-avenida-32"
     },
     {
+      "id": "wkayyi",
+      "titulo": "Lionel Messi viaja a Asturias para recibir el Premio Princesa de Asturias",
+      "copete": "El delantero argentino viajará el 23 de octubre para recibir el galardón en Oviedo. No dará discursos en la ceremonia y regresará de urgencia a Estados Unidos para jugar con su equipo.",
+      "cuerpo": "Lionel Messi viajará a Asturias el próximo 23 de octubre para recibir el Premio Princesa de Asturias de los Deportes 2026 en el Teatro Campoamor de Oviedo. Teresa Sanjurjo, directora de la Fundación Princesa de Asturias, explicó que el delantero no pronunciará discursos durante la gala debido al protocolo del evento.\n\nTras la ceremonia, volarâ de urgencia a Estados Unidos para no perderse el partido del Inter de Miami frente al New York RB programado para el sábado 24 de octubre.",
+      "guion": "Lionel Messi viaja a Asturias para recibir el Premio Princesa de Asturias",
+      "seccion": "Deportes",
+      "medios": [
+        "Olé",
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/espana/2026/10/13/el-papel-de-leo-messi-en-los-premios-princesa-de-asturias-no-hablara-en-la-gala-y-tendra-que-marcharse-antes/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T09:42:47.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T21:31:43.295Z",
+      "relevancia": 40,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Messi recibe el Premio Princesa de Asturias de los Deportes el 23 de octubre",
+        "El delantero no pronunciará discursos durante la ceremonia en Oviedo",
+        "El jugador regresarâ de urgencia para disputar el partido del Inter de Miami"
+      ],
+      "seSabe": [
+        "El futbolista viajará a Asturias el 23 de octubre para la premiación en el Teatro Campoamor",
+        "La Fundación confirmó que el argentino no dará un discurso por cuestiones de protocolo",
+        "El jugador regresarâ a Estados Unidos para disputar el partido del Inter de Miami el sábado 24"
+      ],
+      "noConfirmado": [
+        "Todavía no se informó el horario concreto de su presencia en todas las actividades institucionales",
+        "No se especificó si asistirá a la cena posterior a la ceremonia oficial"
+      ],
+      "textoRedes": "Lionel Messi viajará a Asturias para recibir el Premio Princesa de Asturias de los Deportes 2026, no dará discursos y regresará de urgencia para jugar con el Inter de Miami.",
+      "etiquetas": [
+        "Lionel Messi",
+        "Premio Princesa de Asturias",
+        "Inter de Miami",
+        "Oviedo",
+        "Deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/2026/10/13/el-papel-de-leo-messi-en-los-premios-princesa-de-asturias-no-hablara-en-la-gala-y-tendra-que-marcharse-antes/",
+          "fecha": "2026-10-13T09:42:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la agenda de Messi en Asturias, las declaraciones de la directora de la Fundación y las fechas de los compromisos."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/messi/messi-hablara-ceremonia-premios-princesa-asturias-motivos-decision_0_YgXn5n9dze.html",
+          "fecha": "2026-10-13T20:38:23.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el futbolista viajará de urgencia a Estados Unidos para disputar el partido con el Inter de Miami."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lionel-messi-viaja-a-asturias-para-recibir-el-premio-princesa-de",
+      "foto": {
+        "archivo": "fotos-notas/wkayyi.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "19xpc0o",
       "titulo": "La Fórmula 1 vuelve a correr en África tras un acuerdo con Ruanda",
       "copete": "La categoría reina del automovilismo mundial oficializó un vínculo de diez años para incorporar un Gran Premio en el continente africano a partir de la próxima década.",
@@ -3431,7 +3603,6 @@
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
-        "Perfil",
         "Ámbito",
         "TyC Sports",
         "C5N",
@@ -3444,15 +3615,15 @@
         "El Eco de Tandil",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Olé",
-        "0223 (Mar del Plata)",
-        "Córdoba Competición",
         "Clarín",
+        "0223 (Mar del Plata)",
         "Página/12",
         "Minuto Uno",
         "Crónica",
         "La Nueva",
-        "El Día"
+        "Olé",
+        "El Día",
+        "Córdoba Competición"
       ],
       "enlace": "https://es.motorsport.com/f1/news/formula1-vuelve-africa-ruanda/10864826/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
@@ -3610,12 +3781,13 @@
     "Balcarce",
     "Policiales",
     "Economía",
+    "Fútbol",
     "Deportes",
     "Política",
     "Cultura y agenda",
-    "Fútbol",
     "Argentina",
     "Automovilismo",
+    "Tecnología",
     "Agro"
   ],
   "temas": [],
@@ -3623,7 +3795,7 @@
     "ahora": {
       "temp": 15,
       "sensacion": 12,
-      "humedad": 75,
+      "humedad": 72,
       "viento": 18,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3635,7 +3807,7 @@
         "dia": "mié",
         "max": 15,
         "min": 10,
-        "lluvia": 60,
+        "lluvia": 76,
         "codigo": 55,
         "viento": 18,
         "milimetros": 3,
@@ -3646,7 +3818,7 @@
         "dia": "jue",
         "max": 14,
         "min": 9,
-        "lluvia": 37,
+        "lluvia": 41,
         "codigo": 51,
         "viento": 19,
         "milimetros": 1,
@@ -3657,7 +3829,7 @@
         "dia": "vie",
         "max": 12,
         "min": 6,
-        "lluvia": 25,
+        "lluvia": 18,
         "codigo": 51,
         "viento": 19,
         "milimetros": 0,
@@ -3668,7 +3840,7 @@
         "dia": "sáb",
         "max": 11,
         "min": 7,
-        "lluvia": 2,
+        "lluvia": 6,
         "codigo": 51,
         "viento": 17,
         "milimetros": 0,
@@ -3976,22 +4148,22 @@
   },
   "pendientes": [
     {
-      "id": "1i24zu9",
-      "titulo": "Dolor en el folclore: Murió «Chiqui» Smiraglia, apasionado…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"murió\""
-    },
-    {
       "id": "1hkr9k8",
       "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "h0a84i",
-      "titulo": null,
+      "id": "z6x12n",
+      "titulo": "Demandarán a tres administradoras de Shopping Virtual…",
       "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "r5yet4",
+      "titulo": "Adiós a “Chiqui” Smiraglia, un apasionado de las danzas…",
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "sngreo",
@@ -4042,28 +4214,22 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "115hicz",
-      "titulo": "El dolor de Graciela Alfano al visitar la casa de su…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"asesinato\""
-    },
-    {
       "id": "urflid",
       "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "115hicz",
+      "titulo": "El dolor de Graciela Alfano al visitar la casa de su…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"asesinato\""
+    },
+    {
       "id": "owe7fy",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1o51oh5",
-      "titulo": "El Reino Unido da luz verde al proyecto Sea Lion para…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
     }
   ],
   "esperandoCuerpo": 1
