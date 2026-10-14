@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T14:05:49.743Z",
- "portada": 40,
- "archivo": 1057,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-14T14:32:52.591Z",
+ "portada": 39,
+ "archivo": 1060,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-14T14:05:49.778Z",
+  "generado": "2026-10-14T14:32:52.616Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 49,
     "notas": [
      {
       "id": "1ge6irq",
@@ -139,9 +139,9 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "1iy72x8",
-      "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
-      "seccion": "Balcarce"
+      "id": "1kavxj3",
+      "titulo": "Sebastián Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
+      "seccion": "Fútbol"
      },
      {
       "id": "u043fh",
@@ -157,8 +157,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 45,
     "notas": [
+     {
+      "id": "1iy72x8",
+      "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
+      "seccion": "Balcarce"
+     },
      {
       "id": "10aoo7v",
       "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
@@ -167,11 +172,6 @@
      {
       "id": "17v35o5",
       "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
       "seccion": "Balcarce"
      },
      {
