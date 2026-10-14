@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T13:32:43.234Z",
- "portada": 39,
- "archivo": 1055,
+ "generado": "2026-10-14T14:05:49.743Z",
+ "portada": 40,
+ "archivo": 1057,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-14T13:32:43.279Z",
+  "generado": "2026-10-14T14:05:49.778Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-14T10:05:44.762Z"
    },
    {
@@ -126,8 +126,18 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 47,
     "notas": [
+     {
+      "id": "1ge6irq",
+      "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "11eff0s",
+      "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1iy72x8",
       "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
@@ -137,16 +147,6 @@
       "id": "u043fh",
       "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "10aoo7v",
-      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,8 +157,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 25,
+    "segundos": 50,
     "notas": [
+     {
+      "id": "10aoo7v",
+      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
+     },
      {
       "id": "95znl3",
       "titulo": "El Registro Civil suspende casamientos para el martes 13",
@@ -187,8 +197,20 @@
    ],
    "cola": [
     {
+     "id": "1ge6irq",
+     "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
      "id": "97f98g",
      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "11eff0s",
+     "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
      "seccion": "Balcarce",
      "marcada": false
     },
