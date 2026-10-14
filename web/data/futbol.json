@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-14T18:02:29.160Z",
+ "consultado": "2026-10-14T20:03:34.474Z",
  "equipos": [
   "9739",
   "3",
@@ -69,36 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841584",
-    "competencia": "liga",
-    "inicio": "2026-10-04T20:00:00.000Z",
-    "estado": "final",
-    "minuto": "90'+5'",
-    "local": {
-     "id": "19",
-     "nombre": "Talleres (Córdoba)",
-     "goles": 0
-    },
-    "visitante": {
-     "id": "4",
-     "nombre": "Belgrano (Córdoba)",
-     "goles": 1
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "visitante",
-      "jugador": "Ramiro Hernandes",
-      "minuto": "86'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Mario Alberto Kempes",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841597",
     "competencia": "liga",
@@ -1744,7 +1714,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-14T18:02:29.160Z",
+ "tablaCuando": "2026-10-14T20:03:34.474Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
