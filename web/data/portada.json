@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T05:31:54.758Z",
+  "generado": "2026-10-14T06:01:42.671Z",
   "notas": [
     {
       "id": "1ov26yg",
@@ -640,8 +640,8 @@
         "Perfil",
         "El Cronista",
         "Página/12",
-        "Crónica",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Crónica"
       ],
       "enlace": "https://www.cronista.com/financial-times/bcra-compro-fuerte-y-las-acciones-subieron-hasta-47-pero-el-riesgo-pais-cerro-en-596-puntos/",
       "teniaImagenLaFuente": true,
@@ -1352,7 +1352,7 @@
       "fecha": "2026-10-13T17:57:11.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T19:31:43.997Z",
-      "relevancia": 43,
+      "relevancia": 36,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1487,210 +1487,6 @@
       }
     },
     {
-      "id": "ecn3bh",
-      "titulo": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
-      "copete": "La banda liderada por Juanse acompañará al histórico guitarrista de los Rolling Stones en su primer concierto solista en el país. El recital será el 6 de noviembre en el Movistar Arena y ya se pueden conseguir las últimas localidades.",
-      "cuerpo": "Ratones Paranoicos se sumó como grupo invitado para el recital que Ronnie Wood brindará el 6 de noviembre en el Movistar Arena. La presentación marcará el debut del guitarrista de los Rolling Stones como solista en Argentina, dentro de una gira sudamericana que también pasará por Brasil y Chile, según informó la producción a cargo de DF Entertainment.\n\nLas localidades restantes se encuentran disponibles a través de la plataforma oficial del estadio, con la opción de abonar en hasta seis cuotas sin interés mediante tarjetas Visa del banco Santander. El repertorio incluirá un repaso por sus seis décadas de trayectoria musical y su paso por emblemáticas agrupaciones previas.\n\nLas visitas anteriores del músico británico al país incluyeron su llegada en 1996 para una muestra de pintura y grabados, mientras que los conciertos de los Rolling Stones reunieron a más de 900 mil espectadores en sus cuatro presentaciones históricas.",
-      "guion": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Ámbito",
-        "Crónica",
-        "Diario Popular"
-      ],
-      "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T16:29:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T00:01:43.721Z",
-      "relevancia": 50,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Ratones Paranoicos será la banda invitada del show.",
-        "El recital de Ronnie Wood será el 6 de noviembre.",
-        "El concierto se realizará en el Movistar Arena.",
-        "Las entradas se consiguen en la web oficial del estadio."
-      ],
-      "seSabe": [
-        "Ratones Paranoicos tocará en el show de Ronnie Wood, según informó la producción.",
-        "El recital será el 6 de noviembre en el Movistar Arena.",
-        "Es el primer concierto solista del músico en el país.",
-        "Las entradas están a la venta en el sitio web oficial con financiación en cuotas."
-      ],
-      "textoRedes": "Ratones Paranoicos será la banda invitada en el primer concierto solista de Ronnie Wood en el país. El show será el 6 de noviembre en el Movistar Arena y las últimas entradas están a la venta.",
-      "etiquetas": [
-        "Ratones Paranoicos",
-        "Ronnie Wood",
-        "Movistar Arena",
-        "Música",
-        "Conciertos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
-          "fecha": "2026-10-13T16:29:00.000Z",
-          "oficial": false,
-          "aporte": "Informó la participación de Ratones Paranoicos, la fecha del show, la venta de entradas y los detalles de la gira."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/ratones-paranoicos-abrira-el-show-de-ronnie-wood-en-buenos-aires/",
-          "fecha": "2026-10-13T16:55:00.000Z",
-          "oficial": false,
-          "aporte": "Publicó la misma información inicial sobre el evento y la banda invitada."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/espectaculos/los-ratones-paranoicos-abriran-el-show-ronnie-wood-argentina-n924345",
-          "fecha": "2026-10-13T22:54:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en su registro."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "saeapr",
-          "titulo": "El MotoGP en Buenos Aires anuncia los precios de sus entradas",
-          "fecha": "2026-09-30T21:24:43.000Z",
-          "ruta": "/nota/el-motogp-en-buenos-aires-anuncia-los-precios-de-sus-entradas-saeapr"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "ratones-paranoicos-toca-en-el-show-solista-de-ronnie-wood"
-    },
-    {
-      "id": "1h09c4f",
-      "titulo": "Karina Milei encabeza una nueva mesa política para acelerar la agenda legislativa",
-      "copete": "La secretaria general de la Presidencia lidera un nuevo encuentro en la Casa Rosada para coordinar las prioridades parlamentarias antes del cierre del período ordinario. Participa el ministro Federico Sturzenegger.",
-      "cuerpo": "La secretaria general de la Presidencia, Karina Milei, encabeza el martes una reunión de la mesa política en la Casa Rosada con el objetivo de acelerar los plazos legislativos y aprobar las iniciativas pendientes antes de que finalice el período ordinario de sesiones.\n\nDurante la reunión, el ministro de Desregulación y Transformación del Estado, Federico Sturzenegger, presenta los detalles del proyecto de ley de Mercado de Capitales, según informaron fuentes oficiales. Además, los funcionarios analizan la organización de negocios vinculada al RIGI en Rosario y debaten sobre la reforma electoral, un punto que incluye conversaciones con gobernadores aliados y mantiene diferencias internas sobre los plazos.\n\nA principios de mes, el Ejecutivo nacional había convocado a este espacio de discusión para coordinar la estrategia en el Congreso de la Nación.",
-      "guion": "Karina Milei encabeza una nueva mesa política para acelerar la agenda legislativa",
-      "seccion": "Política",
-      "medios": [
-        "El Eco de Tandil",
-        "Minuto Uno",
-        "Crónica",
-        "Canal 26",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabeza-una-nueva-mesa-politica-para-acelerar-la-agenda-legislativa_a6ace466506650845db718598",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T16:10:13.022Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T23:01:29.650Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Karina Milei lidera una nueva reunión de la mesa política en la Casa Rosada.",
-        "El objetivo es acelerar los proyectos pendientes antes de terminar el período ordinario.",
-        "Federico Sturzenegger presenta los detalles del proyecto de ley de Mercado de Capitales.",
-        "El oficialismo define la estrategia de cara a la sesión en Diputados prevista para este jueves."
-      ],
-      "seSabe": [
-        "Karina Milei encabeza la reunión de la mesa política en la Casa Rosada.",
-        "El ministro Federico Sturzenegger expone sobre el proyecto de ley de Mercado de Capitales, según fuentes oficiales.",
-        "La agenda incluye la estrategia parlamentaria para la sesión del jueves en Diputados."
-      ],
-      "noConfirmado": [
-        "No se difundió una foto oficial del encuentro.",
-        "No se informaron los detalles de los acuerdos con gobernadores aliados sobre la reforma electoral."
-      ],
-      "textoRedes": "El Gobierno nacional mantiene un nuevo encuentro de la mesa política en la Casa Rosada para definir la estrategia parlamentaria y acelerar la sanción de proyectos pendientes en el Congreso.",
-      "etiquetas": [
-        "Karina Milei",
-        "Mesa política",
-        "Casa Rosada",
-        "Agenda legislativa",
-        "Federico Sturzenegger"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabeza-una-nueva-mesa-politica-para-acelerar-la-agenda-legislativa_a6ace466506650845db718598",
-          "fecha": "2026-10-13T16:10:13.022Z",
-          "oficial": false,
-          "aporte": "Detalla los objetivos de la reunión de Karina Milei y menciona la presentación del proyecto de reforma electoral."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/la-mesa-politica-definio-los-principales-ejes-pretende-encarar-en-la-agenda-legislativa",
-          "fecha": "2026-10-13T22:39:58.000Z",
-          "oficial": false,
-          "aporte": "Informa sobre la exposición del ministro Federico Sturzenegger acerca de la ley de Mercado de Capitales."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/la-mesa-del-gobierno-avanzo-la-agenda-legislativa-y-los-preparativos-la-visita-leon-xiv-n6333346",
-          "fecha": "2026-10-13T21:01:00.000Z",
-          "oficial": false,
-          "aporte": "Aporta que se analizó el proyecto de Mercado de Capitales y los negocios del RIGI en Rosario."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/mesa-politica-definio-ejes-agenda-legislativa/",
-          "fecha": "2026-10-13T19:39:26.000Z",
-          "oficial": false,
-          "aporte": "Indica que el encuentro se realizó en la Casa Rosada para definir prioridades legislativas."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/10/13/karina-milei-reune-a-la-mesa-politica-para-discutir-el-dnu-702023-presupuesto-2027-y-la-reforma-electoral/",
-          "fecha": "2026-10-13T19:08:42.000Z",
-          "oficial": false,
-          "aporte": "Señala que la reunión está marcada por la sesión prevista para el jueves en Diputados ante la postura de la oposición."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/la-mesa-politica-definio-los-principales-ejes-de-la-agenda-legislativa_a6ace7d6606650845db7adc45",
-          "fecha": "2026-10-13T19:19:35.522Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ut0amy",
-          "titulo": "El Gobierno convoca a la Mesa Política para coordinar la agenda legislativa",
-          "fecha": "2026-10-05T22:56:20.000Z",
-          "ruta": "/nota/el-gobierno-convoca-a-la-mesa-politica-para-coordinar-la-agenda-1ut0amy"
-        },
-        {
-          "id": "1pq0gh4",
-          "titulo": "Karina Milei encabeza ronda de negocios en París por la pesca",
-          "fecha": "2026-10-02T16:57:20.000Z",
-          "ruta": "/nota/karina-milei-encabeza-ronda-de-negocios-en-paris-por-la-pesca-1pq0gh4"
-        },
-        {
-          "id": "1429pe8",
-          "titulo": "Karina Milei proyecta la exportación de carne a Israel",
-          "fecha": "2026-10-09T21:34:58.000Z",
-          "ruta": "/nota/karina-milei-proyecta-la-exportacion-de-carne-a-israel-1429pe8"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "karina-milei-encabeza-una-nueva-mesa-politica-para-acelerar-la-agenda",
-      "foto": {
-        "archivo": "fotos-notas/1h09c4f.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
-    },
-    {
       "id": "1c17x5e",
       "titulo": "El Gobierno nombra a Diego Masaragian al frente de Discapacidad",
       "copete": "El Ejecutivo designó a Diego Masaragian como nuevo secretario nacional de Discapacidad. Reemplaza a Pablo Di Liscia, quien permanece internado tras sufrir un siniestro vial.",
@@ -1710,7 +1506,6 @@
         "Ámbito",
         "Minuto Uno",
         "C5N",
-        "Crónica",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Día",
@@ -1718,7 +1513,8 @@
         "El Marplatense",
         "Infobae",
         "La Nueva",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Crónica"
       ],
       "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-designo-a-diego-masaragian-como-nuevo-secretario-nacional-de-discapacidad-nid13102026/",
       "teniaImagenLaFuente": true,
@@ -2203,6 +1999,157 @@
       "foto": {
         "archivo": "fotos-notas/95znl3.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "ynxwl1",
+      "titulo": "River y Estudiantes crean una mesa de trabajo conjunta en el Monumental",
+      "copete": "Los presidentes de ambos clubes mantuvieron un encuentro en Buenos Aires. La iniciativa busca articular una postura común frente a la conducción de la AFA.",
+      "cuerpo": "El presidente de River Plate, Stefano Di Carlo, recibió el martes al titular de Estudiantes de La Plata, Juan Sebastián Verón, en las instalaciones del Estadio Monumental. Ambas instituciones formalizaron la creación de una mesa permanente de trabajo para coordinar una agenda conjunta en el fútbol nacional.\n\nEl cónclave se da en medio de las diferencias que los dos clubes mantienen con la conducción de la Asociación del Fútbol Argentino (AFA) que encabeza Claudio Tapia. En el pasado, los dirigentes habían protagonizado cruces mediáticos a raíz del modelo de gestión de las entidades y la postura sobre las sociedades anónimas deportivas.\n\nCon este acercamiento, las dirigencias priorizaron el diálogo institucional para sumar peso político frente a las futuras decisiones del fútbol argentino.",
+      "guion": "River y Estudiantes crean una mesa de trabajo conjunta en el Monumental",
+      "seccion": "Política",
+      "medios": [
+        "Clarín",
+        "El Eco de Tandil",
+        "La Noticia 1",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "TyC Sports",
+        "Olé",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "0221",
+        "El Marplatense",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "La Página Millonaria",
+        "La Nación",
+        "El Día",
+        "Ecos Diarios (Necochea)",
+        "El Gráfico"
+      ],
+      "enlace": "https://442.perfil.com/noticias/futbol/cumbre-clave-stefano-di-carlo-y-juan-sebastian-veron-se-reunieron-en-el-monumental.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T13:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T19:01:45.376Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No trascendieron los detalles específicos de los próximos proyectos que abordará la mesa de trabajo conjunta."
+      ],
+      "textoRedes": "Stefano Di Carlo y Juan Sebastián Verón se reunieron en el Monumental y acordaron la creación de una mesa permanente de trabajo entre River Plate y Estudiantes de La Plata.",
+      "etiquetas": [
+        "River Plate",
+        "Estudiantes de La Plata",
+        "Stefano Di Carlo",
+        "Juan Sebastián Verón",
+        "AFA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/cumbre-clave-stefano-di-carlo-y-juan-sebastian-veron-se-reunieron-en-el-monumental.phtml",
+          "fecha": "2026-10-13T17:28:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló el encuentro al mediodía en el Monumental y los antecedentes de tensión dirigencial."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/stefano-di-carlo-recibio-a-juan-sebastian-veron-en-el-monumental-la-foto-que-abre-un-frente-comun-nid13102026/",
+          "fecha": "2026-10-13T18:42:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/river-plate/river-plate-stefano-di-carlo-juan-sebastian-veron-encuentro-monumental_0_4ycc7tUdTN.html",
+          "fecha": "2026-10-13T17:53:26.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/13/la-foto-de-la-reunion-entre-stefano-di-carlo-y-juan-sebastian-veron-en-medio-de-sus-conflictos-con-el-chiqui-tapia-y-la-afa/",
+          "fecha": "2026-10-13T18:15:51.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el carácter secreto de la reunión y la relación de los presidentes con la AFA."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/presidente-river-reunio-veron-monumental-20261013154643",
+          "fecha": "2026-10-13T18:46:43.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/river-plate/reunion-river-estudiantes-monumental-comunicado-di-carlo-veron-futbol-argentino-id766002.html",
+          "fecha": "2026-10-13T18:36:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/alianza-anti-tapia-estudiantes-y-river-lanzaron-una-mesa-de-trabajo-para-debatir-el-futuro-del-futbol-argentino-deportes_1791915900",
+          "fecha": "2026-10-13T18:43:26.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la oficialización de una mesa permanente de trabajo entre ambas instituciones."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/estudiantes/bombazo-el-futbol-argentino-juan-sebastian-veron-y-stefano-di-carlo-sacuden-la-interna-la-afa-n135735",
+          "fecha": "2026-10-13T18:35:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/liga-/di-carlo-recibio-a-veron--de-calificarlo-de--desleal-y-poco-confiable--a-sumarlo-a-una-mesa-contra-la-afa_a6ace6a510ceb121c7a500321",
+          "fecha": "2026-10-13T18:44:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el objetivo fue articular una posición contraria a la conducción de Claudio Tapia en la AFA."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/futbolargentino/reunion-entre-river-y-estudiantes-en-el-monumental-desarrollo-y-la-mejora-del-futbol-argentino",
+          "fecha": "2026-10-13T18:31:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/river-plate/di-carlo-y-veron-se-reunieron-en-el-monumental-en-medio-de-la-guerra-de-river-con-afa",
+          "fecha": "2026-10-13T18:08:54.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "122dsf6",
+          "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+          "fecha": "2026-09-26T03:00:00.000Z",
+          "ruta": "/nota/rosario-central-genera-polecutemica-en-los-festejos-contra-juan-122dsf6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 11 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "river-y-estudiantes-crean-una-mesa-de-trabajo-conjunta-en-el",
+      "foto": {
+        "archivo": "fotos-notas/ynxwl1.jpg",
+        "credito": "Foto: Perfil"
       }
     },
     {
@@ -2823,13 +2770,13 @@
         "Infobrisas (Radio Brisas)",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "Olé",
         "Clarín",
         "0223 (Mar del Plata)",
         "Página/12",
         "Minuto Uno",
         "Crónica",
         "La Nueva",
-        "Olé",
         "El Día",
         "Córdoba Competición"
       ],
@@ -3281,12 +3228,12 @@
         "TyC Sports",
         "Olé",
         "Minuto Uno",
-        "Crónica",
         "Radio Mitre",
         "Diario Popular",
         "La Nueva",
         "La Brújula 24",
         "Bolavip Argentina",
+        "Crónica",
         "El Gráfico"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/champions/hat-trick-nicolo-tresoldi-inter-lautaro-martinez_3_6iyszAyvGb.html",
@@ -3619,7 +3566,7 @@
     "ahora": {
       "temp": 10,
       "sensacion": 8,
-      "humedad": 94,
+      "humedad": 95,
       "viento": 9,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -3641,7 +3588,7 @@
         "fecha": "2026-10-15",
         "dia": "jue",
         "max": 15,
-        "min": 7,
+        "min": 8,
         "lluvia": 37,
         "codigo": 51,
         "viento": 20,
@@ -3662,7 +3609,7 @@
       {
         "fecha": "2026-10-17",
         "dia": "sáb",
-        "max": 11,
+        "max": 10,
         "min": 7,
         "lluvia": 2,
         "codigo": 51,
