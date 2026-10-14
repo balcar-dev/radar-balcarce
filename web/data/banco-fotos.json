@@ -11557,16 +11557,16 @@
   "fuentes": 2
  },
  "1c33j6a": {
-  "archivo": "fotos-notas/1c33j6a.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El torneo de la Liga Balcarceña se atrasa y terminaría en enero",
   "enlace": "https://accion5.com/el-futbol-se-atraso-tres-meses-y-volveria-a-terminar-en-enero/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/pegale.jpg",
   "razon": "Es la única imagen que muestra una acción de juego reconocible (un jugador pateando el balón), mientras que las demás son recortes sin contexto o de muy baja calidad.",
-  "cuando": "2026-10-10T04:01:40.234Z"
+  "cuando": "2026-10-10T04:01:40.234Z",
+  "intentado": true,
+  "borrada": true
  },
  "1hfz3co": {
   "archivo": "fotos-notas/1hfz3co.jpg",
@@ -13230,16 +13230,16 @@
   "cuando": "2026-10-13T13:08:52.099Z"
  },
  "pt4b1r": {
-  "archivo": "fotos-notas/pt4b1r.jpg",
   "medio": "Acción 5 (Balcarce)",
-  "credito": "Foto: Acción 5 (Balcarce)",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
   "enlace": "https://accion5.com/con-ferro-a-unidos-la-liga-intentara-iniciar-el-clausura/",
   "imagenOriginal": "https://accion5.com/wp-content/uploads/2026/10/DSC_8742.jpg",
   "razon": "Es la única imagen nítida y con buen encuadre que ilustra la acción del partido, sin marcas de agua ni menores de edad.",
-  "cuando": "2026-10-13T13:08:52.099Z"
+  "cuando": "2026-10-13T13:08:52.099Z",
+  "intentado": true,
+  "borrada": true
  },
  "wj5hg5": {
   "intentado": true,
@@ -13779,5 +13779,25 @@
   "imagenOriginal": "https://www.cronista.com/resizer/v2/HPYT6VZ2VFGNZOGI3X65M3HLR4.png?auth=79fcc650bd7b5ee4510e4f1cfe2d610ed177ba8de92e56e37564c3c36f9c35ed&height=630&width=1200&quality=70&smart=true",
   "razon": "La imagen A ilustra perfectamente el concepto económico de acciones en alza y dólares con una composición limpia y sin marcas.",
   "cuando": "2026-10-13T23:32:25.283Z"
+ },
+ "q5dibh": {
+  "archivo": "fotos-notas/q5dibh.jpg",
+  "medio": "Olé",
+  "credito": "Foto: Olé",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Campazzo supera a Bolmaro en el duelo de argentinos en Italia",
+  "enlace": "https://www.ole.com.ar/basquet/euroliga-campazzo-bolmaro-real-madrid-olimpia-milano_0_jRi8XIIkt6.html",
+  "imagenOriginal": "https://www.ole.com.ar/images/2026/10/13/NaIptzztz_2000x1500__1.jpg",
+  "razon": "La foto tiene buena calidad y nitidez, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T00:02:01.749Z"
+ },
+ "ecn3bh": {
+  "intentado": true,
+  "origen": "medio",
+  "cuando": "2026-10-14T00:02:01.749Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 1,
+  "fuentes": 3
  }
 }

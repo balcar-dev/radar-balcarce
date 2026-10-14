@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-13T23:32:32.459Z",
- "portada": 53,
+ "generado": "2026-10-14T00:02:13.570Z",
+ "portada": 54,
  "archivo": 1036,
- "esperandoCuerpo": 5,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-13T23:32:32.496Z",
+  "generado": "2026-10-14T00:02:13.598Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,7 +83,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -140,8 +140,8 @@
      },
      {
       "id": "pt4b1r",
-      "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
-      "seccion": "Fútbol"
+      "titulo": null,
+      "seccion": null
      },
      {
       "id": "uestws",
@@ -155,9 +155,9 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
      {
       "id": "1vcnnfl",
@@ -165,14 +165,14 @@
       "seccion": "Deportes"
      },
      {
+      "id": "um5udw",
+      "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "pl4s36",
       "titulo": "Nicolò Tresoldi anota tres goles en el triunfo del Brujas ante el Inter",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
      },
      {
       "id": "fdr535",
@@ -211,12 +211,6 @@
     }
    ],
    "cola": [
-    {
-     "id": "11d0zcr",
-     "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
     {
      "id": "10aoo7v",
      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
