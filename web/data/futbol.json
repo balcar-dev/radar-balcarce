@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-14T22:02:25.570Z",
+ "consultado": "2026-10-14T22:31:59.437Z",
  "equipos": [
   "9739",
   "3",
@@ -69,48 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841597",
-    "competencia": "liga",
-    "inicio": "2026-10-04T22:15:00.000Z",
-    "estado": "final",
-    "minuto": "90'+7'",
-    "local": {
-     "id": "3",
-     "nombre": "Argentinos Juniors",
-     "goles": 2
-    },
-    "visitante": {
-     "id": "7767",
-     "nombre": "Tigre",
-     "goles": 1
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Facundo Gutiérrez",
-      "minuto": "6'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "local",
-      "jugador": "Gastón Verón",
-      "minuto": "42'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "visitante",
-      "jugador": "Jerónimo Domina",
-      "minuto": "57'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Diego Armando Maradona",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841591",
     "competencia": "liga",
@@ -889,11 +847,11 @@
     "competencia": "liga",
     "inicio": "2026-10-14T22:00:00.000Z",
     "estado": "en-juego",
-    "minuto": "1'",
+    "minuto": "30'",
     "local": {
      "id": "10158",
      "nombre": "Sarmiento (Junín)",
-     "goles": 0
+     "goles": 1
     },
     "visitante": {
      "id": "16",
@@ -901,7 +859,14 @@
      "goles": 0
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "local",
+      "jugador": "Julian Contrera",
+      "minuto": "15'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Eva Perón",
     "fase": null,
     "partidoDeLaSerie": null,

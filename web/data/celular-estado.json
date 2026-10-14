@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T22:02:27.546Z",
- "portada": 55,
+ "generado": "2026-10-14T22:32:01.495Z",
+ "portada": 47,
  "archivo": 1092,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-14T22:02:27.586Z",
+  "generado": "2026-10-14T22:32:01.538Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-14T22:06:26.968Z"
    },
    {
     "nombre": "clima-noche",
@@ -157,7 +157,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 52,
     "notas": [
      {
       "id": "gy4i31",
@@ -165,19 +165,19 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "fav3c1",
-      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
+      "id": "wzunxc",
+      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1s8weuc",
-      "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
-      "seccion": "Automovilismo"
      },
      {
       "id": "10aoo7v",
       "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
       "seccion": "Deportes"
+     },
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -210,20 +210,7 @@
      "cuando": "2026-10-14T17:45:25.193Z"
     }
    ],
-   "cola": [
-    {
-     "id": "fav3c1",
-     "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1s8weuc",
-     "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
-     "seccion": "Automovilismo",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 0,
    "proximoDesde": "2026-10-14T19:15:25.193Z",
    "porDia": 5,
