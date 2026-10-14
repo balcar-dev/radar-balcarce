@@ -1685,6 +1685,53 @@
         "vistas": 13,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-14T00:00:18.971Z",
+      "web": {
+        "u12": {
+          "visitas": 33,
+          "vistas": 120
+        },
+        "a12": {
+          "visitas": 4,
+          "vistas": 17
+        },
+        "u24": {
+          "visitas": 100,
+          "vistas": 200
+        },
+        "a24": {
+          "visitas": 44,
+          "vistas": 176
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 60
+          },
+          {
+            "camino": "/seccion/cultura",
+            "vistas": 40
+          },
+          {
+            "camino": "/agenda",
+            "vistas": 20
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 43,
+        "vistas": 23787,
+        "interacciones": 0
+      },
+      "instagram": {
+        "seguidores": 7,
+        "publicaciones": 154,
+        "alcance": 37,
+        "vistas": 121,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2600,10 +2647,44 @@
     "2026-10-11": {
       "visitas": 0,
       "vistas": 0,
-      "referentes": {},
-      "paises": {},
-      "notas": {},
-      "paginas": {},
+      "referentes": {
+        "facebook.com": 9,
+        "directo": 5,
+        "google.com": 1
+      },
+      "paises": {
+        "AR": 60,
+        "US": 40
+      },
+      "notas": {
+        "jiv3ba": 9,
+        "1gkf7qu": 5,
+        "f1parrilla2026r17": 4,
+        "hp2pil": 3,
+        "jlfox6": 3,
+        "lb7md0": 3,
+        "repaso20261011manana": 3,
+        "f1resultado2026r17": 2,
+        "1izhgu3": 2,
+        "zavg8u": 2,
+        "1m2za7b": 2,
+        "4p0z63": 1
+      },
+      "paginas": {
+        "/": 13,
+        "/seccion/politica": 12,
+        "/seccion/automovilismo": 6,
+        "/tablas/liga-profesional": 4,
+        "/farmacias": 4,
+        "/tablas/formula-1": 4,
+        "/agenda": 4,
+        "/politica-de-privacidad": 2,
+        "/quienes-somos": 2,
+        "/contacto": 2,
+        "/seccion/policiales": 2,
+        "/dolar": 2,
+        "/util": 2
+      },
       "horas": [
         0,
         0,
@@ -2613,30 +2694,38 @@
         0,
         0,
         0,
+        8,
+        0,
+        10,
+        0,
+        0,
+        0,
+        8,
+        0,
+        4,
         0,
         0,
         0,
         0,
+        17,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        51
       ],
-      "dispositivos": {}
+      "dispositivos": {
+        "mobile": 86,
+        "desktop": 12
+      }
     },
     "2026-10-12": {
-      "visitas": 0,
-      "vistas": 0,
-      "referentes": {},
+      "visitas": 50,
+      "vistas": 110,
+      "referentes": {
+        "facebook.com": 33,
+        "directo": 2,
+        "google.com": 2
+      },
       "horas": [
+        14,
         0,
         0,
         0,
@@ -2644,35 +2733,94 @@
         0,
         0,
         0,
+        28,
+        0,
+        3,
+        0,
+        11,
+        0,
+        8,
+        11,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        28,
+        1,
+        4,
+        9,
         0,
         0
       ],
-      "notas": {},
-      "paginas": {},
-      "dispositivos": {},
-      "paises": {}
+      "notas": {
+        "r0o8z3": 8,
+        "q9kshm": 6,
+        "vt9ful": 4,
+        "repaso20261011manana": 4,
+        "xn5jch": 4,
+        "1m2za7b": 4,
+        "s94jkn": 3,
+        "90qy7w": 3,
+        "p21pyq": 3,
+        "rzhblo": 2,
+        "jiv3ba": 2,
+        "ay4wdh": 2,
+        "15o5mwn": 2,
+        "skmago": 2,
+        "1aqdhjn": 2,
+        "repaso20261011noche": 2,
+        "1hapve0": 2,
+        "pvwlvg": 2,
+        "vtlwe4": 2
+      },
+      "paginas": {
+        "/": 37,
+        "/seccion/balcarce-2": 6,
+        "/seccion/balcarce-5": 4,
+        "/seccion/balcarce-4": 4,
+        "/seccion/balcarce-3": 3,
+        "/farmacias": 2,
+        "/seccion/balcarce": 2
+      },
+      "dispositivos": {
+        "mobile": 90,
+        "desktop": 20
+      },
+      "paises": {
+        "AR": 80,
+        "US": 30
+      }
     },
     "2026-10-13": {
-      "notas": {},
-      "paginas": {},
-      "referentes": {},
-      "visitas": 0,
-      "vistas": 0,
+      "notas": {
+        "pt4b1r": 12,
+        "95znl3": 9,
+        "uestws": 9,
+        "3xm1ge": 7,
+        "1aqdhjn": 6,
+        "1dun8ft": 4,
+        "br4g49": 2,
+        "mj08wf": 2,
+        "1qszs3z": 2,
+        "1c2cg52": 2,
+        "19xpc0o": 2,
+        "1y2q715": 2,
+        "fa17ki": 2
+      },
+      "paginas": {
+        "/": 47,
+        "/farmacias": 8,
+        "/seccion/cultura": 4,
+        "/seccion/automovilismo": 2,
+        "/quienes-somos": 2,
+        "/seccion/balcarce": 2,
+        "/agenda": 2
+      },
+      "referentes": {
+        "facebook.com": 29,
+        "google.com": 4,
+        "directo": 1
+      },
+      "visitas": 34,
+      "vistas": 128,
       "horas": [
         0,
         0,
@@ -2682,25 +2830,34 @@
         0,
         0,
         0,
+        8,
+        3,
+        14,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        4,
+        7,
+        8,
+        72,
+        3,
+        3,
+        6,
         0,
         0,
         0,
         0,
         0
       ],
-      "dispositivos": {},
-      "paises": {}
+      "dispositivos": {
+        "desktop": 77,
+        "mobile": 51
+      },
+      "paises": {
+        "AR": 91,
+        "US": 24,
+        "IE": 8,
+        "SE": 4,
+        "PY": 1
+      }
     }
   }
 }
