@@ -13573,10 +13573,11 @@
  },
  "6bm2nd": {
   "intentado": true,
-  "origen": "medio",
-  "cuando": "2026-10-13T23:02:15.748Z",
-  "error": "no se pudo volver a bajar la elegida",
-  "intentos": 2,
+  "origen": "ninguna",
+  "titulo": "El Gobierno defiende la estrategia del Banco Central con el oro",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-14T00:31:55.505Z",
+  "intentos": 3,
   "fuentes": 4
  },
  "1ntre16": {
@@ -13697,13 +13698,16 @@
   "cuando": "2026-10-13T22:31:47.481Z"
  },
  "17v35o5": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/17v35o5.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-13T23:02:15.748Z",
-  "intentos": 1,
-  "fuentes": 1
+  "enlace": "https://www.diariolavanguardia.com/noticias/45072-abren-convocatoria-para-reconocer-a-investigadores-de-hospitales-bonaerenses/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66038.png",
+  "razon": "Es la única imagen completa y nítida que ilustra el contexto de investigación en un laboratorio, sin marcas de agua ni menores de edad.",
+  "cuando": "2026-10-14T00:31:55.505Z"
  },
  "11d0zcr": {
   "archivo": "fotos-notas/11d0zcr.jpg",
@@ -13721,9 +13725,9 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "El Gobierno evalúa los feriados por la visita del papa León XIV",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-10-13T23:02:15.748Z",
-  "intentos": 1,
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-14T00:31:55.505Z",
+  "intentos": 2,
   "fuentes": 3
  },
  "2ienjd": {
@@ -13799,5 +13803,35 @@
   "error": "no se pudo volver a bajar la elegida",
   "intentos": 1,
   "fuentes": 3
+ },
+ "1iw76m5": {
+  "archivo": "fotos-notas/1iw76m5.jpg",
+  "medio": "El Cronista",
+  "credito": "Foto: El Cronista",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El canciller Pablo Quirno defiende la estrategia por Malvinas",
+  "enlace": "https://www.cronista.com/economia-politica/pablo-quirno-hay-sectores-que-estan-tratando-de-hacernos-pelear-con-chile/",
+  "imagenOriginal": "https://www.cronista.com/resizer/v2/Q6X4DVGITJDQTLE3GG4JXUXBXQ.jpeg?auth=9c86f03b03e59da6990c34b55f065db2f27196982af310c15dd15ed07af8f179&height=630&width=1200&quality=70&smart=true",
+  "razon": "La foto A no tiene marcas sobreimpresas de televisión ni zócalos, a diferencia de la B.",
+  "cuando": "2026-10-14T00:31:55.505Z"
+ },
+ "17pigci": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Sergio Uñac lanza su primer spot y confirma sus aspiraciones presidenciales",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-14T00:31:55.505Z",
+  "intentos": 1,
+  "fuentes": 3
+ },
+ "xjn0zk": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "ANSES aumenta un 1,9 por ciento las jubilaciones y asignaciones en noviembre",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-14T00:31:55.505Z",
+  "intentos": 1,
+  "fuentes": 9
  }
 }
