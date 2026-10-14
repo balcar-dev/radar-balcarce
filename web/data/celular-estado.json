@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T15:32:18.574Z",
- "portada": 41,
- "archivo": 1066,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-14T16:04:51.102Z",
+ "portada": 44,
+ "archivo": 1068,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-14T15:32:18.609Z",
+  "generado": "2026-10-14T16:04:51.143Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-14T13:08:36.081Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu reclamo",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-14T15:05:53.344Z"
    },
    {
@@ -93,7 +93,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-14T13:08:36.081Z",
     "segundos": null,
     "notas": [
@@ -165,19 +165,19 @@
       "seccion": "Balcarce"
      },
      {
-      "id": "10aoo7v",
-      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
+      "id": "11uyvlg",
+      "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
+      "seccion": "Argentina"
      },
      {
       "id": "11d0zcr",
       "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "10aoo7v",
+      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
+      "seccion": "Deportes"
      }
     ]
    }
@@ -208,14 +208,14 @@
      "marcada": false
     },
     {
-     "id": "11eff0s",
-     "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
-     "seccion": "Balcarce",
+     "id": "cdnqde",
+     "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
-     "id": "97f98g",
-     "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+     "id": "11eff0s",
+     "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
      "seccion": "Balcarce",
      "marcada": false
     }

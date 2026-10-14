@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T15:32:18.574Z",
+  "generado": "2026-10-14T16:04:51.102Z",
   "notas": [
     {
       "id": "1nsbz",
@@ -71,14 +71,17 @@
       "guion": "La Ciudad de Buenos Aires habilita un plan para regularizar deudas de ABL y Patentes",
       "seccion": "Economía",
       "medios": [
-        "Clarín",
+        "Minuto Uno",
+        "Infobae",
         "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
         "A24",
         "C5N",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "iProfesional",
+        "Clarín"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -146,6 +149,101 @@
       "foto": {
         "archivo": "fotos-notas/5635fb.jpg",
         "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "oftb9a",
+      "titulo": "Telecom acepta la oferta de Metrotel por US$ 450 millones",
+      "copete": "Millones de usuarios de Movistar recibirán notificaciones en los próximos días por un cambio de compañía. La operación surge tras la aprobación de condiciones regulatorias.",
+      "cuerpo": "Telecom Argentina aprobó la propuesta de Metrotel para adquirir una cartera de clientes y activos por un valor de 450 millones de dólares, según informaron las fuentes oficiales. El traspaso abarca a seis millones de líneas móviles y 200.000 usuarios de internet fija, de acuerdo con los datos difundidos.\n\nEl acuerdo se realiza en cumplimiento de las condiciones regulatorias establecidas para avanzar con la compra de Telefónica Argentina por parte de Telecom. Para operar el segmento móvil, Metrotel utilizará la marca Tuenti y absorberá la infraestructura y el espectro radioeléctrico correspondiente.\n\nLos clientes alcanzados recibirán notificaciones de ambas empresas en las próximas jornadas para advertir sobre las modificaciones en el servicio. Por el momento, las fuentes indicaron que no se informaron variaciones en las tarifas ni en las condiciones vigentes de los contratos.",
+      "guion": "Telecom acepta la oferta de Metrotel por US$ 450 millones",
+      "seccion": "Economía",
+      "medios": [
+        "Ámbito",
+        "La Nación",
+        "iProfesional",
+        "El Economista"
+      ],
+      "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T13:44:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T16:02:13.254Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Telecom aceptó la propuesta de Metrotel por US$ 450 millones.",
+        "La transferencia incluye seis millones de líneas móviles y 200.000 usuarios de internet fija.",
+        "El traspaso se efectuará de forma gradual con notificaciones a los clientes.",
+        "Metrotel operará el servicio móvil bajo la marca Tuenti."
+      ],
+      "seSabe": [
+        "Telecom Argentina aceptó la oferta de Metrotel por US$ 450 millones.",
+        "La cartera incluye seis millones de clientes móviles y 200.000 de internet fija.",
+        "Metrotel utilizará la marca Tuenti para operar el servicio móvil.",
+        "Los usuarios recibirán comunicaciones en los próximos días."
+      ],
+      "noConfirmado": [
+        "Todavía no se informaron modificaciones generales en las tarifas ni en las condiciones comerciales de los planes."
+      ],
+      "textoRedes": "Telecom Argentina aceptó la oferta de Metrotel por US$ 450 millones para ceder una cartera de seis millones de líneas móviles y 200.000 clientes de internet fija. Los usuarios recibirán notificaciones en los próximos días.",
+      "etiquetas": [
+        "Telecom",
+        "Metrotel",
+        "Movistar",
+        "Tuenti",
+        "Telefonía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Economista",
+          "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
+          "fecha": "2026-10-14T13:44:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que Telecom aceptó la oferta de Metrotel por US$450 millones y los detalles de la cartera."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/negocios/telecom-aprobo-la-venta-activos-metrotel-us450-millones-y-tuenti-sera-la-marca-la-nueva-telefonica-n6333637",
+          "fecha": "2026-10-14T15:38:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló que la operación incluye 6 millones de clientes móviles, internet fija y espectro."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/metrotel-pago-us450-millones-para-quedarse-con-seis-millones-de-clientes-de-movistar-nid14102026/",
+          "fecha": "2026-10-14T13:58:45.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la aceptación de la oferta de Metrotel por parte del directorio de Telecom."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/tecnologia/466588-telecom-vendera-a-metrotel-seis-millones-de-clientes-por-us450-millones",
+          "fecha": "2026-10-14T15:15:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el traspaso será gradual y los usuarios recibirán comunicaciones de ambas marcas."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/negocios/466590-telecom-vende-a-metrotel-mas-de-seis-millones-de-clientes-por-us450-millones",
+          "fecha": "2026-10-14T15:20:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la operación fue aprobada por Defensa de la Competencia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "telecom-acepta-la-oferta-de-metrotel-por-us-450-millones",
+      "foto": {
+        "archivo": "fotos-notas/oftb9a.jpg",
+        "credito": "Foto: iProfesional"
       }
     },
     {
@@ -460,17 +558,18 @@
       "guion": "La Estudiantina comienza el lunes y reúne a los secundarios",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
-        "Diario La Vanguardia",
-        "Radio Gabal (FM 104.1)"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://balcarce.gob.ar/2026/10/14/la-19a-edicion-de-la-estudiantina-comenzara-el-proximo-lunes/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T12:16:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -709,71 +808,239 @@
       }
     },
     {
-      "id": "97f98g",
-      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
-      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
-      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
-      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
-      "seccion": "Balcarce",
+      "id": "cdnqde",
+      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
+      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
+      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
+      "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+      "enlace": "https://puntonueve.com.ar/188351-2/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:54:19.000Z",
+      "fecha": "2026-10-14T11:49:03.000Z",
       "sinFecha": false,
-      "visto": "2026-10-14T13:01:57.018Z",
-      "relevancia": 78,
+      "visto": "2026-10-14T12:31:49.255Z",
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Instituto Adventista cumple cuarenta años de trayectoria.",
-        "El coro escolar presenta el musical Un día este viernes.",
-        "La función comienza a las 20 en el polideportivo institucional."
+        "El Coro del Instituto Adventista presenta el musical Un día",
+        "La función es este viernes a las 20 en el polideportivo institucional",
+        "El evento se enmarca en los 40 años de trayectoria educativa"
       ],
       "seSabe": [
-        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
-        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
-        "La presentación se realiza en el polideportivo de la institución educativa."
+        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
+        "La función se realiza este viernes a las 20 en el polideportivo institucional",
+        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
       ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
+      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
       "etiquetas": [
-        "Instituto Adventista",
-        "coro",
-        "aniversario",
-        "musical",
-        "Balcarce",
-        "cultura"
+        "Coro del Instituto Adventista",
+        "musical Un día",
+        "polideportivo",
+        "40 aniversario",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/188351-2/",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
+        },
         {
           "medio": "El Diario Balcarce",
           "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
           "fecha": "2026-10-14T11:54:19.000Z",
           "oficial": false,
-          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "cdnqde",
-          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
+          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
+      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
+    },
+    {
+      "id": "1kavxj3",
+      "titulo": "Sebastián Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
+      "copete": "El delantero colombiano terminó con una fuerte inflamación en el tobillo derecho tras la derrota frente a Vasco da Gama. El cuerpo técnico aguarda los estudios médicos de cara a la revancha por la Copa Sudamericana.",
+      "cuerpo": "Sebastián Villa sufrió un inconveniente físico en el tobillo derecho durante la caída de Boca Juniors por 1-0 ante Vasco da Gama en La Bombonera, por el partido de ida de las semifinales de la Copa Sudamericana 2026.\n\nEl delantero ingresó a los 13 minutos del segundo tiempo y se lastimó en una de sus primeras intervenciones ofensivas al ejecutar un remate de zurda. Pese a continuar en el campo hasta el final, el atacante se retiró del estadio con dificultades para caminar.\n\nEl director técnico Rodolfo Arruabarrena confirmó en conferencia de prensa que la articulación presentaba una hinchazón importante y señaló que aguardan los resultados de las evaluaciones médicas. Su participación en el encuentro de vuelta, previsto para el próximo martes en Río de Janeiro, permanece en duda.",
+      "guion": "Sebastian Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
+      "seccion": "Fútbol",
+      "medios": [
+        "Perfil",
+        "TyC Sports",
+        "Minuto Uno",
+        "Crónica",
+        "Canal 26"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/preocupacion-boca-sebastian-villa-sufrio-una-lesion-el-tobillo-y-se-hara-estudios-n6333481",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T11:45:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T14:31:29.582Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Sebastián Villa terminó con el tobillo derecho inflamado tras el partido ante Vasco da Gama.",
+        "El delantero colombiano se someterá a estudios médicos para conocer la gravedad de la lesión.",
+        "El cuerpo técnico liderado por Rodolfo Arruabarrena aguarda su evolución de cara a la revancha.",
+        "El partido de vuelta por las semifinales de la Copa Sudamericana se jugará el próximo martes en Brasil."
+      ],
+      "noConfirmado": [
+        "El diagnóstico médico definitivo y el grado de la lesión que padece el futbolista.",
+        "La presencia del delantero colombiano en el partido de vuelta que se disputará en Río de Janeiro."
+      ],
+      "textoRedes": "Sebastián Villa sufrió una lesión en el tobillo derecho en la derrota de Boca ante Vasco da Gama y se someterá a estudios médicos. El cuerpo técnico aguarda su evolución de cara al partido de vuelta por las semifinales de la Copa Sudamericana.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Sebastián Villa",
+        "Copa Sudamericana",
+        "Fútbol",
+        "Rodolfo Arruabarrena"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/preocupacion-boca-sebastian-villa-sufrio-una-lesion-el-tobillo-y-se-hara-estudios-n6333481",
+          "fecha": "2026-10-14T11:45:00.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la lesión de Sebastián Villa, el desarrollo del partido ante Vasco da Gama y las declaraciones del entrenador Rodolfo Arruabarrena."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/preocupacion-en-boca-sebastian-villa-sufrio-un-esguince-de-tobillo-tras-la-derrota-ante-vasco-da-gama.phtml",
+          "fecha": "2026-10-14T11:58:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el atacante colombiano terminó con una severa inflamación en su articulación tras el encuentro de ida."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/sebastian-villa-lesion-se-hace-estudios-y-hay-alerta-en-boca-vasco-da-gama-id766119.html",
+          "fecha": "2026-10-14T12:48:20.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/sebastian-villa-lesion-boca-vasco-da-gama-id766101.html",
+          "fecha": "2026-10-14T13:20:38.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/boca-en-alerta-sebastian-villa-se-hace-estudios-tras-sufrir-una-lesion-en-el-tobillo/",
+          "fecha": "2026-10-14T13:39:25.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en que el delantero se someterá a estudios médicos tras la derrota frente al conjunto brasileño."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/10/14/se-pierde-la-revancha-en-brasil-la-molestia-de-sebastian-villa-en-boca-que-complica-los-planes-de-arruabarrena-ante-vasco-da-gama/",
+          "fecha": "2026-10-14T14:22:07.000Z",
+          "oficial": false,
+          "aporte": "Especificó que la lesión ocurrió en La Bombonera durante la ida de las semifinales de la Copa Sudamericana 2026."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "sebastian-villa-sufre-una-lesion-en-el-tobillo-y-enciende-la-alerta",
+      "foto": {
+        "archivo": "fotos-notas/1kavxj3.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "11uyvlg",
+      "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
+      "copete": "La prohibición nacional abarca a todos los modelos de la marca Pinch Family. Un laboratorio detectó que contienen el doble del plastificante permitido por las normas de seguridad.",
+      "cuerpo": "El Gobierno nacional prohibió la comercialización en todo el país de los juguetes blandos tipo squishy de la marca Pinch Family, procedentes de China, tras detectar niveles excesivos de una sustancia química peligrosa.\n\nUn análisis del laboratorio de la Cámara Argentina de la Industria del Juguete halló el plastificante DEHP en una concentración superior al 0,2%, cuando el límite máximo permitido es del 0,1%. Ante este dictamen, la cartera sanitaria recomendó retirar la línea completa de estos artículos importados.\n\nLos comerciantes mayoristas, minoristas, importadores y distribuidores deberán destruir y desechar el stock de inmediato. Quienes operen en plataformas web disponen de un plazo de 72 horas hábiles para publicar avisos destacados sobre la prohibición.",
+      "guion": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
+      "seccion": "Argentina",
+      "medios": [
+        "La Nación",
+        "El Cronista",
+        "El Destape",
+        "Página/12",
+        "A24",
+        "La Brújula 24",
+        "Ámbito",
+        "Infobae"
+      ],
+      "enlace": "https://www.ambito.com/informacion-general/prohiben-todo-el-pais-la-venta-juguetes-blandos-tipo-squishy-la-marca-pinch-family-contener-ftalatos-n6333458",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T11:17:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T14:31:29.582Z",
+      "relevancia": 80,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Prohíben los juguetes squishy Pinch Family en todo el país.",
+        "Detectaron ftalatos por encima del límite permitido.",
+        "Obligan a destruir el stock de inmediato."
+      ],
+      "etiquetas": [
+        "juguetes",
+        "prohibición",
+        "salud",
+        "consumidores",
+        "nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/prohiben-todo-el-pais-la-venta-juguetes-blandos-tipo-squishy-la-marca-pinch-family-contener-ftalatos-n6333458",
+          "fecha": "2026-10-14T12:47:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles de la disposición oficial, los límites de la sustancia química y las obligaciones para los comerciantes."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/sociedad/prohiben-juguetes-infantiles-pinch-family-ser-toxicos-peligrosos-salud-2026101410146",
+          "fecha": "2026-10-14T13:01:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmación de que la prohibición se extiende a todo el territorio nacional en todas sus variantes."
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/10/14/prohiben-la-venta-de-juguetes-tipo-squishy-importados-de-china/",
+          "fecha": "2026-10-14T13:57:19.000Z",
+          "oficial": false,
+          "aporte": "Identificación precisa del componente químico restringido como DEHP."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-prohibe-la-venta-de-juguetes-blandos-por-exceso-de",
+      "foto": {
+        "archivo": "fotos-notas/11uyvlg.jpg",
+        "credito": "Foto: El Destape"
+      }
     },
     {
       "id": "5m60mn",
@@ -1016,6 +1283,72 @@
       }
     },
     {
+      "id": "3i2j4g",
+      "titulo": "Tucumán registra una jornada de lluvias ligeras y alta humedad",
+      "copete": "El distrito tucumano transcurre el miêcutecoles con precipitaciones leves, cielo cubierto y una temperatura que se mantiene entre los 13 y los 14 grados.",
+      "cuerpo": "El cielo permanece cubierto en un 99 por ciento, mientras que la humedad llega al 94 por ciento y la presión atmosférica marca 1019 hectopascales.\n\nEn cuanto al viento, sopla a una velocidad de 1,79 metros por segundo con ráfagas que alcanzan los 4,65 metros por segundo desde una dirección de 236 grados. Las condiciones de humedad y precipitaciones resultan relevantes para el desarrollo de los cultivos y las tareas rurales en la región.",
+      "guion": "Tucumán registra una jornada de lluvias ligeras y alta humedad",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Infocampo"
+      ],
+      "enlace": "https://www.infocampo.com.ar/clima-en-tucuman-hoy-14-octubre-2026/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-14T09:00:13.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T16:02:13.254Z",
+      "relevancia": 37,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lluvia ligera con 5,43 milímetros previstos",
+        "Temperatura entre 13 y 14 grados",
+        "Humedad del 94 por ciento y cielo cubierto"
+      ],
+      "seSabe": [
+        "El clima en Tucumán presenta lluvias ligeras de 5,43 milímetros.",
+        "La temperatura oscila entre los 13 y 14 grados.",
+        "La humedad alcanza el 94 por ciento y el cielo está cubierto en un 99 por ciento."
+      ],
+      "textoRedes": "Tucumán transcurre la jornada con lluvias ligeras, cielo cubierto y una temperatura de entre 13 y 14 grados. Las condiciones de humedad y precipitaciones son tenidas en cuenta para las actividades agropecuarias de la región.",
+      "etiquetas": [
+        "clima",
+        "Tucumán",
+        "lluvias",
+        "temperatura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/clima-en-tucuman-hoy-14-octubre-2026/",
+          "fecha": "2026-10-14T09:00:13.000Z",
+          "oficial": false,
+          "aporte": "Detalles completos de temperatura, precipitaciones, vientos y humedad para Tucumán."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/clima/alertas/2026/10/14/clima-en-tucuman-hoy-miercoles-14-de-octubre-lluvia-ligera-y-cielo-cubierto/",
+          "fecha": "2026-10-14T15:01:37.000Z",
+          "oficial": false,
+          "aporte": "Mención de la cobertura climática sin datos adicionales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "tucuman-registra-una-jornada-de-lluvias-ligeras-y-alta-humedad",
+      "foto": {
+        "archivo": "fotos-notas/3i2j4g.jpg",
+        "credito": "Foto: Infocampo"
+      }
+    },
+    {
       "id": "5biv0y",
       "titulo": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
       "copete": "El organismo oficializa una herramienta digital para calcular sueldos del sector. La medida alcanza a todas las categorías y rige para los pagos de octubre.",
@@ -1023,9 +1356,9 @@
       "guion": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
       "seccion": "Economía",
       "medios": [
+        "Infobae",
         "La Nación",
         "El Eco de Tandil",
-        "Infobae",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Cronista",
@@ -1225,92 +1558,6 @@
       }
     },
     {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "copete": "La institución balcarceña presentó vehículos emblemáticos y cascos de competición en la muestra desarrollada del 9 al 12 de octubre en el Hipódromo de San Isidro.",
-      "cuerpo": "La Fundación Museo Juan Manuel Fangio formó parte de Autoclásica 2026 con una selección de automóviles y objetos históricos expuestos del 9 al 12 de octubre en el Hipódromo de San Isidro. Según detalló el tesorero de la entidad, Juan Martín Burgués, el espacio institucional incluyó una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos de competición.\n\nEl repertorio sumó un Torino vinculado con las 84 Horas de Nürburgring de 1969, aportado por el consejero y colaborador Mariano Lozano, quien estuvo a cargo de su restauración y viajó a Detroit para recibir un reconocimiento vinculado con la industria automotriz. La propuesta también contempló un Talbot-Lago de la familia Pérez Companc como homenaje al centenario de las 500 Millas de Rafaela.\n\nComo se había informado el 13 de octubre, la participación proyectó el patrimonio automovilístico que conserva Balcarce en un evento de referencia nacional.",
-      "guion": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-13T23:01:29.650Z",
-      "sinFecha": true,
-      "visto": "2026-10-13T23:01:29.650Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Museo Fangio participó en la muestra Autoclásica 2026.",
-        "El evento se desarrolló del 9 al 12 de octubre en el Hipódromo de San Isidro.",
-        "Exhibieron vehículos emblemáticos como la Flecha de Plata y un Torino de Nürburgring."
-      ],
-      "seSabe": [
-        "Según la Fundación Museo Juan Manuel Fangio, la institución participó en Autoclásica 2026 del 9 al 12 de octubre en el Hipódromo de San Isidro.",
-        "De acuerdo con el tesorero Juan Martín Burgués, el espacio contó con una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos históricos.",
-        "Según informó la entidad, el consejero Mariano Lozano aportó un Torino de 1969 y recibió un reconocimiento en Detroit.",
-        "La muestra incluyó un Talbot-Lago de la familia Pérez Companc vinculado con las 500 Millas de Rafaela."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Museo Fangio llevó la historia y el patrimonio automovilístico de Balcarce a Autoclásica 2026, la tradicional exposición realizada en el Hipódromo de San Isidro.",
-      "etiquetas": [
-        "Museo Fangio",
-        "Autoclásica",
-        "San Isidro",
-        "autos históricos",
-        "Juan Manuel Fangio",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
-          "fecha": "2026-10-13T22:53:19.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la participación de la Fundación Museo Juan Manuel Fangio en Autoclásica 2026, los vehículos exhibidos y las declaraciones del tesorero Juan Martín Burgués."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "fm53cw",
-          "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-          "fecha": "2026-10-13T19:19:43.000Z",
-          "ruta": "/nota/el-museo-fangio-expone-autos-historicos-en-autoclasica-fm53cw"
-        },
-        {
-          "id": "xwesjd",
-          "titulo": "El Museo Fangio registra una suba del cincuenta por ciento en visitas",
-          "fecha": "2026-09-28T15:49:37.000Z",
-          "ruta": "/nota/el-museo-fangio-registra-una-suba-del-cincuenta-por-ciento-en-visitas-xwesjd"
-        },
-        {
-          "id": "173ttfz",
-          "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
-          "fecha": "2026-10-05T12:12:09.000Z",
-          "ruta": "/nota/el-zonal-del-atlantico-compite-en-el-circuito-chico-del-fangio-173ttfz"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-museo-fangio-expone-autos-historicos-en-autoclasica",
-      "foto": {
-        "archivo": "fotos-notas/11d0zcr.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "pdqhm3",
       "titulo": "Lisandro Martínez critica a la directiva del Manchester United y Rooney le responde",
       "copete": "El defensor argentino cuestionó la falta de refuerzos tras caer frente al Atlético de Madrid en la Champions League. El exdelantero le contestó que sus dichos resultaron desubicados.",
@@ -1500,6 +1747,93 @@
       "foto": {
         "archivo": "fotos-notas/pdqhm3.jpg",
         "credito": "Foto: Clarín"
+      }
+    },
+    {
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "copete": "La institución balcarceña presentó vehículos emblemáticos y cascos de competición en la muestra desarrollada del 9 al 12 de octubre en el Hipódromo de San Isidro.",
+      "cuerpo": "La Fundación Museo Juan Manuel Fangio formó parte de Autoclásica 2026 con una selección de automóviles y objetos históricos expuestos del 9 al 12 de octubre en el Hipódromo de San Isidro. Según detalló el tesorero de la entidad, Juan Martín Burgués, el espacio institucional incluyó una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos de competición.\n\nEl repertorio sumó un Torino vinculado con las 84 Horas de Nürburgring de 1969, aportado por el consejero y colaborador Mariano Lozano, quien estuvo a cargo de su restauración y viajó a Detroit para recibir un reconocimiento vinculado con la industria automotriz. La propuesta también contempló un Talbot-Lago de la familia Pérez Companc como homenaje al centenario de las 500 Millas de Rafaela.\n\nComo se había informado el 13 de octubre, la participación proyectó el patrimonio automovilístico que conserva Balcarce en un evento de referencia nacional.",
+      "guion": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T22:53:19.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T23:01:29.650Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Museo Fangio participó en la muestra Autoclásica 2026.",
+        "El evento se desarrolló del 9 al 12 de octubre en el Hipódromo de San Isidro.",
+        "Exhibieron vehículos emblemáticos como la Flecha de Plata y un Torino de Nürburgring."
+      ],
+      "seSabe": [
+        "Según la Fundación Museo Juan Manuel Fangio, la institución participó en Autoclásica 2026 del 9 al 12 de octubre en el Hipódromo de San Isidro.",
+        "De acuerdo con el tesorero Juan Martín Burgués, el espacio contó con una Mercedes-Benz Flecha de Plata, un Ford, una baquet Ford, un Simca-Gordini y cascos históricos.",
+        "Según informó la entidad, el consejero Mariano Lozano aportó un Torino de 1969 y recibió un reconocimiento en Detroit.",
+        "La muestra incluyó un Talbot-Lago de la familia Pérez Companc vinculado con las 500 Millas de Rafaela."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Museo Fangio llevó la historia y el patrimonio automovilístico de Balcarce a Autoclásica 2026, la tradicional exposición realizada en el Hipódromo de San Isidro.",
+      "etiquetas": [
+        "Museo Fangio",
+        "Autoclásica",
+        "San Isidro",
+        "autos históricos",
+        "Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-museo-fangio-llevo-la-historia-de-balcarce-a-autoclasica-945",
+          "fecha": "2026-10-13T22:53:19.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la participación de la Fundación Museo Juan Manuel Fangio en Autoclásica 2026, los vehículos exhibidos y las declaraciones del tesorero Juan Martín Burgués."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "fm53cw",
+          "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+          "fecha": "2026-10-13T19:19:43.000Z",
+          "ruta": "/nota/el-museo-fangio-expone-autos-historicos-en-autoclasica-fm53cw"
+        },
+        {
+          "id": "xwesjd",
+          "titulo": "El Museo Fangio registra una suba del cincuenta por ciento en visitas",
+          "fecha": "2026-09-28T15:49:37.000Z",
+          "ruta": "/nota/el-museo-fangio-registra-una-suba-del-cincuenta-por-ciento-en-visitas-xwesjd"
+        },
+        {
+          "id": "173ttfz",
+          "titulo": "El Zonal del Atlántico compite en el circuito chico del Fangio",
+          "fecha": "2026-10-05T12:12:09.000Z",
+          "ruta": "/nota/el-zonal-del-atlantico-compite-en-el-circuito-chico-del-fangio-173ttfz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-museo-fangio-expone-autos-historicos-en-autoclasica",
+      "foto": {
+        "archivo": "fotos-notas/11d0zcr.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -1901,75 +2235,74 @@
       }
     },
     {
-      "id": "nemgm9",
-      "titulo": "Google habilita Gemini 4 Argon para usuarios de pago",
-      "copete": "La compañía tecnológica liberó su modelo de inteligencia artificial más avanzado para suscriptores de los planes superiores y desarrolladores. Ofrece tarifas promocionales de lanzamiento y un millón de tokens por tarea.",
-      "cuerpo": "Google habilitó el acceso público a Gemini 4 Argon para los usuarios de sus planes de pago Pro y Ultra en su aplicación y en el buscador, además de abrirlo a desarrolladores y empresas. El modelo llega con una tarifa promocional de USD 2 por cada millón de tokens de entrada y USD 10 por cada millón de salida, valores que se duplicarán a fines de noviembre de 2026.\n\nLa empresa había presentado el sistema el 30 de septiembre de 2026 para pruebas cerradas de seguridad. Según informó la compañía, el nuevo desarrollo superó a competidores en pruebas comparativas de programación y ciberseguridad, y amplió a un millón de tokens el límite de texto por tarea.\n\nGoogle no detalló si la herramienta estará disponible en el futuro para los usuarios de planes gratuitos.",
-      "guion": "Google habilita Gemini 4 Argon para usuarios de pago",
-      "seccion": "Tecnología",
+      "id": "66so6t",
+      "titulo": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa",
+      "copete": "La institución busca recaudar fondos para asistir a familias con necesidades económicas. La propuesta incluye sorteos de dinero en efectivo, vehículos, electrodomésticos y viviendas.",
+      "cuerpo": "El Merendero Doña Norma puso en marcha su tercera campaña solidaria para el período 2026-2027. El objetivo de la iniciativa es recaudar fondos destinados a sostener la asistencia que brinda a familias que atraviesan dificultades económicas mediante la entrega de alimentos y ropa.\n\nLa propuesta consiste en una rifa que ofrece premios como dinero en efectivo, electrodomésticos, motocicletas y viviendas prefabricadas. Los sorteos se realizan a través de la Quiniela de Santa Fe, el Loto y el Quini.\n\nEntre los principales atractivos figuran un automóvil 100 por ciento eléctrico para el sorteo final de diciembre y vehículos adicionales para quienes abonen al contado. Desde la organización indicaron que la comercialización está a cargo de vendedores autorizados.",
+      "guion": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa.",
+      "seccion": "Balcarce",
       "medios": [
-        "Infobae",
-        "Radio Mitre"
+        "Puntonueve (FM 100.9)"
       ],
-      "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T19:24:14.000Z",
+      "enlace": "https://puntonueve.com.ar/el-merendero-dona-norma-lanzo-su-tercera-campana-solidaria-con-importantes-premios/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-13T19:54:37.000Z",
       "sinFecha": false,
-      "visto": "2026-10-14T02:31:55.756Z",
-      "relevancia": 42,
-      "local": false,
+      "visto": "2026-10-14T01:06:27.274Z",
+      "relevancia": 67,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Google liberó el modelo Gemini 4 Argon para usuarios de sus planes de pago.",
-        "Tiene una tarifa promocional de dos dólares por millón de tokens de entrada.",
-        "El límite de generación se amplió a un millón de tokens por tarea.",
-        "La empresa no confirmó si llegará a usuarios gratuitos."
+        "Lanzaron la tercera campaña solidaria del Merendero Doña Norma.",
+        "La iniciativa incluye una rifa con premios en efectivo y vehículos.",
+        "Los sorteos se canalizan a través de la Quiniela de Santa Fe, Loto y Quini."
       ],
       "seSabe": [
-        "Google activó Gemini 4 Argon para los planes Pro y Ultra.",
-        "El costo inicial es de USD 2 por millón de tokens de entrada y USD 10 de salida, según Google.",
-        "El límite de texto por tarea alcanza un millón de tokens.",
-        "Google presentó el sistema inicialmente el 30 de septiembre de 2026."
+        "El Merendero Doña Norma inició su tercera campaña solidaria para el período 2026-2027.",
+        "La rifa contempla premios en efectivo, electrodomésticos, motos y viviendas prefabricadas.",
+        "El premio principal del sorteo final de diciembre es un automóvil 100 por ciento eléctrico.",
+        "La venta de números se realiza mediante vendedores autorizados."
       ],
       "noConfirmado": [
-        "La llegada del modelo a los usuarios de planes gratuitos o del nivel Plus.",
-        "La verificación independiente de las pruebas comparativas difundidas por la empresa."
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Google activó Gemini 4 Argon para los usuarios de sus planes de pago con tarifas promocionales de lanzamiento y mayor capacidad de procesamiento.",
+      "textoRedes": "El Merendero Doña Norma puso en marcha su tercera campaña solidaria con una rifa para recaudar fondos y asistir a familias con necesidades económicas. Ofrecen premios en efectivo, vehículos, electrodomésticos y viviendas.",
       "etiquetas": [
-        "Google",
-        "Inteligencia Artificial",
-        "Gemini 4 Argon",
-        "tecnología"
+        "Merendero Doña Norma",
+        "campaña solidaria",
+        "rifa",
+        "asistencia social",
+        "premios"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/tecno/2026/10/13/google-activo-gemini-4-argon-centrada-en-programacion-y-ciberseguridad-compite-con-chatgpt-y-claude/",
-          "fecha": "2026-10-13T19:24:14.000Z",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/el-merendero-dona-norma-lanzo-su-tercera-campana-solidaria-con-importantes-premios/",
+          "fecha": "2026-10-13T19:54:37.000Z",
           "oficial": false,
-          "aporte": "Detalló los precios de lanzamiento, el límite de tokens y el historial de pruebas internas de Google."
-        },
+          "aporte": "Detalló el lanzamiento de la tercera campaña solidaria y el listado de premios de la rifa."
+        }
+      ],
+      "antecedentes": [
         {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/tecnologia/google-lanzo-gemini-4-argon-para-suscriptores-pagos-quienes-pueden-usar-el-nuevo-modelo-de-ia/",
-          "fecha": "2026-10-14T02:06:27.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la habilitación global del modelo para desarrolladores y empresas."
+          "id": "1jv9qa4",
+          "titulo": "La Escuela Técnica impulsa una campaña solidaria para arreglar su gimnasio",
+          "fecha": "2026-09-23T11:52:12.000Z",
+          "ruta": "/nota/la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la-1jv9qa4"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "google-habilita-gemini-4-argon-para-usuarios-de-pago",
+      "slug": "el-merendero-dona-norma-lanza-su-tercera-campana-solidaria-con-rifa",
       "foto": {
-        "archivo": "fotos-notas/nemgm9.jpg",
-        "credito": "Foto: Infobae"
+        "archivo": "fotos-notas/66so6t.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1980,6 +2313,7 @@
       "guion": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/10/caminata-de-fe-convocan-una.html",
@@ -1987,7 +2321,7 @@
       "fecha": "2026-10-13T18:39:33.772Z",
       "sinFecha": false,
       "visto": "2026-10-13T19:31:43.997Z",
-      "relevancia": 73,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2121,6 +2455,72 @@
       }
     },
     {
+      "id": "1ntre16",
+      "titulo": "La papa sube de categoría en el semáforo regional de Coninagro",
+      "copete": "La producción papera ingresa al grupo verde del relevamiento de Coninagro gracias a una suba de precios. El sudeste bonaerense reduce su superficie sembrada un 12 por ciento.",
+      "cuerpo": "La papa ingresa a la categoría verde dentro del semáforo de economías regionales elaborado por Coninagro durante agosto de 2026, tras registrar una suba mensual del 19 por ciento en los precios al productor y alcanzar los 22.163 pesos por bolsa de 20 kilos. La entidad cooperativista señala que esta actividad se suma al grupo verde junto a bovinos, ovinos, miel y granos, aunque el panorama general del sector mantiene nueve producciones en rojo y cinco en amarillo.\n\nEl relevamiento detalla que la superficie implantada en el sudeste bonaerense disminuyó un 12 por ciento y se ubicó en 33.722 hectáreas frente a la campaña previa, una contracción de la oferta que permitió recomponer los valores tras un período de abundancia y excedentes sin cosechar. Con este repunte, el productor percibe el 41 por ciento del valor final abonado por el consumidor, cuatro puntos por encima de la media histórica mensual.",
+      "guion": "La papa sube de categoría en el semáforo regional de Coninagro",
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Agrositio",
+        "Bichos de Campo"
+      ],
+      "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T18:24:19.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T21:31:43.295Z",
+      "relevancia": 50,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "La papa integra la categoría verde del semáforo de Coninagro según el informe de agosto de 2026.",
+        "El precio de la bolsa de 20 kilos llegó a 22.163 pesos con un incremento interanual cercano al 330 por ciento.",
+        "El área sembrada en el sudeste bonaerense abarcó 33.722 hectáreas.",
+        "Nueve producciones continúan en rojo y cinco en amarillo."
+      ],
+      "noConfirmado": [
+        "No se especificaron detalles sobre el volumen total de exportaciones e importaciones de la cadena papera al cierre del período."
+      ],
+      "textoRedes": "La papa ingresa al grupo verde del semáforo de economías regionales de Coninagro tras una suba de precios y una reducción del 12 por ciento en la superficie sembrada en el sudeste bonaerense.",
+      "etiquetas": [
+        "papa",
+        "Coninagro",
+        "economias regionales",
+        "sudeste bonaerense"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
+          "fecha": "2026-10-13T18:24:19.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la suba de precios, la reducción de superficie en el sudeste bonaerense y el estado general de las economías regionales."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/subio-un-151-en-cuatro-meses-la-papa-paso-a-verde-en-un-semaforo-de-economias-regionales-nid13102026/",
+          "fecha": "2026-10-13T20:49:16.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la incorporación de la papa a la categoría verde junto con bovinos, ovinos, miel y granos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-papa-sube-de-categoria-en-el-semaforo-regional-de-coninagro",
+      "foto": {
+        "archivo": "fotos-notas/1ntre16.jpg",
+        "credito": "Foto: Bichos de Campo"
+      }
+    },
+    {
       "id": "repaso20261013tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: educación, murgas y cultura",
@@ -2193,10 +2593,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
+        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
-        "Noticias Agropecuarias",
-        "Agroempresario"
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
       "teniaImagenLaFuente": true,
@@ -2812,160 +3212,6 @@
       }
     },
     {
-      "id": "ynxwl1",
-      "titulo": "River y Estudiantes crean una mesa de trabajo conjunta en el Monumental",
-      "copete": "Los presidentes de ambos clubes mantuvieron un encuentro en Buenos Aires. La iniciativa busca articular una postura común frente a la conducción de la AFA.",
-      "cuerpo": "El presidente de River Plate, Stefano Di Carlo, recibió el martes al titular de Estudiantes de La Plata, Juan Sebastián Verón, en las instalaciones del Estadio Monumental. Ambas instituciones formalizaron la creación de una mesa permanente de trabajo para coordinar una agenda conjunta en el fútbol nacional.\n\nEl cónclave se da en medio de las diferencias que los dos clubes mantienen con la conducción de la Asociación del Fútbol Argentino (AFA) que encabeza Claudio Tapia. En el pasado, los dirigentes habían protagonizado cruces mediáticos a raíz del modelo de gestión de las entidades y la postura sobre las sociedades anónimas deportivas.\n\nCon este acercamiento, las dirigencias priorizaron el diálogo institucional para sumar peso político frente a las futuras decisiones del fútbol argentino.",
-      "guion": "River y Estudiantes crean una mesa de trabajo conjunta en el Monumental",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia",
-        "El Eco de Tandil",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "TyC Sports",
-        "Olé",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "0221",
-        "La Verdad",
-        "El Marplatense",
-        "Bolavip Argentina",
-        "La Página Millonaria",
-        "La Nación",
-        "Doble Amarilla",
-        "Clarín",
-        "Ecos Diarios (Necochea)",
-        "La Nueva",
-        "La Noticia 1",
-        "El Gráfico",
-        "La Capital (Rosario)",
-        "El Día"
-      ],
-      "enlace": "https://442.perfil.com/noticias/futbol/cumbre-clave-stefano-di-carlo-y-juan-sebastian-veron-se-reunieron-en-el-monumental.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T13:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T19:01:45.376Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No trascendieron los detalles específicos de los próximos proyectos que abordará la mesa de trabajo conjunta."
-      ],
-      "textoRedes": "Stefano Di Carlo y Juan Sebastián Verón se reunieron en el Monumental y acordaron la creación de una mesa permanente de trabajo entre River Plate y Estudiantes de La Plata.",
-      "etiquetas": [
-        "River Plate",
-        "Estudiantes de La Plata",
-        "Stefano Di Carlo",
-        "Juan Sebastián Verón",
-        "AFA"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/futbol/cumbre-clave-stefano-di-carlo-y-juan-sebastian-veron-se-reunieron-en-el-monumental.phtml",
-          "fecha": "2026-10-13T17:28:05.000Z",
-          "oficial": false,
-          "aporte": "Detalló el encuentro al mediodía en el Monumental y los antecedentes de tensión dirigencial."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/futbol/stefano-di-carlo-recibio-a-juan-sebastian-veron-en-el-monumental-la-foto-que-abre-un-frente-comun-nid13102026/",
-          "fecha": "2026-10-13T18:42:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/river-plate-stefano-di-carlo-juan-sebastian-veron-encuentro-monumental_0_4ycc7tUdTN.html",
-          "fecha": "2026-10-13T17:53:26.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/13/la-foto-de-la-reunion-entre-stefano-di-carlo-y-juan-sebastian-veron-en-medio-de-sus-conflictos-con-el-chiqui-tapia-y-la-afa/",
-          "fecha": "2026-10-13T18:15:51.000Z",
-          "oficial": false,
-          "aporte": "Mencionó el carácter secreto de la reunión y la relación de los presidentes con la AFA."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/presidente-river-reunio-veron-monumental-20261013154643",
-          "fecha": "2026-10-13T18:46:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/river-plate/reunion-river-estudiantes-monumental-comunicado-di-carlo-veron-futbol-argentino-id766002.html",
-          "fecha": "2026-10-13T18:36:18.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/alianza-anti-tapia-estudiantes-y-river-lanzaron-una-mesa-de-trabajo-para-debatir-el-futuro-del-futbol-argentino-deportes_1791915900",
-          "fecha": "2026-10-13T18:43:26.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la oficialización de una mesa permanente de trabajo entre ambas instituciones."
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/estudiantes/bombazo-el-futbol-argentino-juan-sebastian-veron-y-stefano-di-carlo-sacuden-la-interna-la-afa-n135735",
-          "fecha": "2026-10-13T18:35:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/liga-/di-carlo-recibio-a-veron--de-calificarlo-de--desleal-y-poco-confiable--a-sumarlo-a-una-mesa-contra-la-afa_a6ace6a510ceb121c7a500321",
-          "fecha": "2026-10-13T18:44:24.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el objetivo fue articular una posición contraria a la conducción de Claudio Tapia en la AFA."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/futbolargentino/reunion-entre-river-y-estudiantes-en-el-monumental-desarrollo-y-la-mejora-del-futbol-argentino",
-          "fecha": "2026-10-13T18:31:22.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/di-carlo-y-veron-se-reunieron-en-el-monumental-en-medio-de-la-guerra-de-river-con-afa",
-          "fecha": "2026-10-13T18:08:54.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "122dsf6",
-          "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
-          "fecha": "2026-09-26T03:00:00.000Z",
-          "ruta": "/nota/rosario-central-genera-polecutemica-en-los-festejos-contra-juan-122dsf6"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 11 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "river-y-estudiantes-crean-una-mesa-de-trabajo-conjunta-en-el",
-      "foto": {
-        "archivo": "fotos-notas/ynxwl1.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
       "id": "efemeride20261013",
       "propia": "efemeride",
       "titulo": "Un día como hoy, en 1970: Muere Alberto Prebisch",
@@ -3007,83 +3253,6 @@
       "enlacesEnTexto": [],
       "destacados": [],
       "slug": "un-dia-como-hoy-en-1970-muere-alberto-prebisch"
-    },
-    {
-      "id": "sklj66",
-      "titulo": "ARBA vence hoy el plazo para pagar la última cuota del Inmobiliario Urbano",
-      "copete": "La Agencia de Recaudación bonaerense fija para el martes 13 de octubre el vencimiento de la última cuota del Impuesto Inmobiliario Urbano Edificado. Los contribuyentes sin deudas que abonen a tiempo acceden a una bonificación de hasta el 10 por ciento.",
-      "cuerpo": "La Agencia de Recaudación de la Provincia de Buenos Aires recuerda que el martes 13 de octubre finaliza el plazo para cancelar la quinta cuota de 2026 del Impuesto Inmobiliario Urbano Edificado. El organismo provincial otorga una bonificación de hasta el 10 por ciento para los contribuyentes que no registren deudas fiscales y efectúen el pago en término, sin importar el medio elegido.\n\nPara cumplir con la obligación, el ente habilitó canales digitales e presenciales. Los usuarios pueden abonar mediante la página web oficial con tarjeta de crédito o código electrónico, utilizar Cuenta DNI para escanear el código QR del correo electrónico, o bien concurrir a entidades bancarias y bocas de Provincia Net tras descargar la boleta.",
-      "guion": "ARBA vence hoy el plazo para pagar la última cuota del Inmobiliario Urbano",
-      "seccion": "Economía",
-      "medios": [
-        "Perfil",
-        "El Eco de Tandil",
-        "Zona Norte Diario",
-        "La Noticia 1",
-        "iProfesional"
-      ],
-      "enlace": "https://www.perfil.com/noticias/economia/arba-vence-hoy-la-ultima-cuota-del-impuesto-inmobiliario-urbano-con-un-descuento-de-hasta-el-10.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T12:01:53.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T13:31:46.801Z",
-      "relevancia": 59,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Vence la quinta cuota del Impuesto Inmobiliario Urbano Edificado.",
-        "El beneficio llega hasta el 10 por ciento para contribuyentes al día.",
-        "Se puede abonar por la web, Cuenta DNI, bancos y Provincia Net."
-      ],
-      "seSabe": [
-        "El vencimiento de la última cuota es este martes 13 de octubre.",
-        "El descuento alcanza hasta el 10 por ciento para quienes no tengan deudas.",
-        "Se puede pagar mediante la web oficial, Cuenta DNI, bancos y Provincia Net Pagos."
-      ],
-      "textoRedes": "ARBA fija para este martes 13 de octubre el vencimiento de la última cuota del Impuesto Inmobiliario Urbano Edificado. Hay un descuento de hasta el 10 por ciento para los contribuyentes que estén al día y abonen a tiempo.",
-      "etiquetas": [
-        "ARBA",
-        "Impuesto Inmobiliario",
-        "Provincia de Buenos Aires",
-        "vencimiento",
-        "impuestos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/arba-vence-hoy-la-ultima-cuota-del-impuesto-inmobiliario-urbano-con-un-descuento-de-hasta-el-10.phtml",
-          "fecha": "2026-10-13T12:01:53.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre las modalidades de pago web, Cuenta DNI y presencial, además de las condiciones del beneficio."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/economia/ultimo-dia-para-obtener-el-10-de-descuento-en-el-pago-de-la-cuota-del-inmobiliario-urbano-edificado",
-          "fecha": "2026-10-13T12:02:32.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la fecha límite de vencimiento y el porcentaje de descuento informado por el organismo."
-        },
-        {
-          "medio": "Zona Norte Diario",
-          "enlace": "https://www.zonanortediario.com.ar/13/10/2026/arba-hoy-vence-la-ultima-cuota-del-impuesto-inmobiliario-2026-y-hay-un-descuento-del-10-para-quienes-esten-al-dia/",
-          "fecha": "2026-10-13T12:15:03.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que se trata de la quinta cuota del Inmobiliario Urbano Edificado y la necesidad de no registrar deudas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "arba-vence-hoy-el-plazo-para-pagar-la-ultima-cuota-del-inmobiliario",
-      "foto": {
-        "archivo": "fotos-notas/sklj66.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
     },
     {
       "id": "wj5hg5",
@@ -3293,11 +3462,13 @@
       "seccion": "Automovilismo",
       "medios": [
         "Diario La Vanguardia",
+        "Campeones",
         "Motorsport",
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
+        "Perfil",
         "Ámbito",
         "TyC Sports",
         "C5N",
@@ -3311,15 +3482,14 @@
         "El Eco de Tandil",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
+        "Olé",
         "0223 (Mar del Plata)",
+        "Córdoba Competición",
+        "Clarín",
         "Página/12",
         "Minuto Uno",
         "Crónica",
-        "Campeones",
-        "La Nueva",
-        "Olé",
-        "Córdoba Competición"
+        "La Nueva"
       ],
       "enlace": "https://es.motorsport.com/f1/news/formula1-vuelve-africa-ruanda/10864826/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
@@ -3480,17 +3650,17 @@
     "Política",
     "Balcarce",
     "Cultura y agenda",
-    "Automovilismo",
     "Fútbol",
-    "Tecnología",
-    "Agro"
+    "Argentina",
+    "Agro",
+    "Automovilismo"
   ],
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 13,
+      "temp": 14,
       "sensacion": 11,
-      "humedad": 87,
+      "humedad": 84,
       "viento": 17,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -3843,16 +4013,16 @@
   },
   "pendientes": [
     {
+      "id": "1i24zu9",
+      "titulo": "Dolor en el folclore: Murió «Chiqui» Smiraglia, apasionado…",
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"murió\""
+    },
+    {
       "id": "z6x12n",
       "titulo": "Demandarán a tres administradoras de Shopping Virtual…",
       "seccion": "Balcarce",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "r5yet4",
-      "titulo": "Adiós a “Chiqui” Smiraglia, un apasionado de las danzas…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "il1lth",
@@ -3879,7 +4049,19 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "5hnoy3",
+      "id": "1dvqt41",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "j2e39v",
+      "titulo": "La ANMAT prohibió una marca de lavandina en todo el país…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
+      "id": "1thkkxk",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
@@ -3903,17 +4085,11 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "oats8g",
-      "titulo": "Javier Milei viaja otra vez a Washington: disertaciones…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "owe7fy",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 2
 }
