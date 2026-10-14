@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T23:25:30.093Z",
+  "generado": "2026-10-14T23:32:26.516Z",
   "notas": [
     {
       "id": "biercm",
@@ -9,6 +9,7 @@
       "guion": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "seccion": "Política",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/politica/sol-di-geronimo-participo-en-necochea-del-curso-de-formacion-politica-encabezado-por-julio-alak",
@@ -16,7 +17,7 @@
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 84,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -96,6 +97,7 @@
       "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
@@ -104,11 +106,13 @@
       "fecha": "2026-10-14T22:04:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "claves": [
         "El Concejo Deliberativo Estudiantil completó su quinta edición en el distrito.",
@@ -170,6 +174,140 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "el-concejo-deliberativo-estudiantil-cierra-su-quinta-edicion-con-25"
+    },
+    {
+      "id": "zfpkeo",
+      "titulo": "Incidentes y represión policial en el ingreso de River en Junín",
+      "copete": "Se registraron corridas y uso de gas pimienta en los accesos al estadio Eva Perón en la previa del partido entre Sarmiento y River por el Torneo Clausura.",
+      "cuerpo": "Se produjeron momentos de tensión y disturbios en los accesos al estadio Eva Perón de Junín en la previa del encuentro pendiente de la fecha 11 del Torneo Clausura entre Sarmiento y River.\n\nSegún informaron distintos medios y registros audiovisuales, el operativo de seguridad colapsó minutos antes del inicio y la Policía Bonaerense dispersó con gas pimienta ante la aglomeración de simpatizantes. La organización había habilitado 4500 localidades para el público visitante con un valor de 100000 pesos cada una, tras una ampliación dispuesta por APREVIDE, que inicialmente había autorizado 3000 lugares.\n\nDurante los tumultos se registraron denuncias sobre una presunta sobreventa de entradas y fallas en el sistema de lectura de códigos QR, mientras que algunos asistentes requirieron asistencia médica tras la represión en las adyacencias.",
+      "guion": "Incidentes y represión policial en el ingreso de River en Junín",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "Olé",
+        "Clarín",
+        "TN (Todo Noticias)",
+        "TyC Sports",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "La Página Millonaria"
+      ],
+      "enlace": "https://lapaginamillonaria.com/torneo-clausura/descontrol-y-caos-en-el-ingreso-de-los-hinchas-de-river-en-junin-la-policia-reprime-con-gas-pimienta",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T21:45:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T23:31:42.572Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Disturbios en los accesos al estadio Eva Perón de Junín.",
+        "La policía dispersó con gas pimienta ante la aglomeración de hinchas.",
+        "Se autorizaron 4500 localidades para el público visitante.",
+        "Denunciaron fallas en lectores de QR y supuesta sobreventa."
+      ],
+      "noConfirmado": [
+        "No se precisó la cantidad exacta de personas heridas ni el parte oficial de los atendidos por asistencia médica.",
+        "No hay confirmación oficial sobre la presunta sobreventa de entradas denunciada por los asistentes."
+      ],
+      "textoRedes": "Incidentes y represión policial con gas pimienta en el ingreso de los hinchas de River en el estadio Eva Perón de Junín en la previa del partido ante Sarmiento.",
+      "etiquetas": [
+        "River Plate",
+        "Sarmiento",
+        "Junín",
+        "Torneo Clausura",
+        "Incidentes",
+        "APREVIDE"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/torneo-clausura/descontrol-y-caos-en-el-ingreso-de-los-hinchas-de-river-en-junin-la-policia-reprime-con-gas-pimienta",
+          "fecha": "2026-10-14T21:45:31.000Z",
+          "oficial": false,
+          "aporte": "Informó detalles del operativo, los valores de las entradas, la actuación policial y testimonios de los hinchas."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/14/caos-y-heridos-los-incidentes-en-el-ingreso-de-la-hinchada-de-river-al-estadio-eva-peron-de-sarmiento/",
+          "fecha": "2026-10-14T22:42:28.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la descripción del colapso en el ingreso y el uso de gas pimienta en la previa."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/descontrol-en-el-ingreso-de-hinchas-de-river-al-estadio-de-sarmiento-de-junin-nid14102026/",
+          "fecha": "2026-10-14T22:55:45.000Z",
+          "oficial": false,
+          "aporte": "Aportó que se registraron demoras y aglomeraciones en uno de los accesos al estadio."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/river-plate/river-plate-caotico-ingreso-hinchas-estadio-sarmiento-junin_0_yKITgj2tHo.html",
+          "fecha": "2026-10-14T22:17:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la existencia de corridas, empujones y personas que ingresaron sin ticket."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/incidentes-junin-hinchas-river-desbordes-ingresos-policia-arrojo-gas-pimienta-gente_0_e2BaeuPPoD.html",
+          "fecha": "2026-10-14T21:50:52.000Z",
+          "oficial": false,
+          "aporte": "Indicó la cifra de 4500 hinchas habilitados, la presunta sobreventa y fallas en el lector de QR."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/14/caos-en-el-ingreso-de-los-hinchas-de-river-al-estadio-de-sarmiento-de-junin-hubo-tumultos-y-la-policia-lanzo-gas-pimienta/",
+          "fecha": "2026-10-14T21:55:23.000Z",
+          "oficial": false,
+          "aporte": "Reportó momentos de tensión y presión de los fanáticos en los ingresos."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/river-plate/caos-acceso-hinchas-river-sarmiento-junin-id766258.html",
+          "fecha": "2026-10-14T22:53:05.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en su resumen."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/graves-incidentes-en-el-acceso-de-los-hinchas-de-river-en-junin-en-la-porev/",
+          "fecha": "2026-10-14T22:32:00.000Z",
+          "oficial": false,
+          "aporte": "Registró la represión policial a los simpatizantes que querían entrar al estadio."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/caos-e-incidentes-en-el-ingreso-de-los-hinchas-de-river-al-estadio-de-sarmiento-de-junin_a6ad0058b8298ee386b40ba2b",
+          "fecha": "2026-10-14T23:01:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "jzwgk2",
+          "titulo": "Hinchas de River insultan a Claudio Tapia en el estadio Monumental",
+          "fecha": "2026-10-11T00:49:54.000Z",
+          "ruta": "/nota/hinchas-de-river-insultan-a-claudio-tapia-en-el-estadio-monumental-jzwgk2"
+        },
+        {
+          "id": "zcn7od",
+          "titulo": "River y Boca llevan hinchas visitantes a Córdoba",
+          "fecha": "2026-09-29T13:20:32.000Z",
+          "ruta": "/nota/river-y-boca-llevan-hinchas-visitantes-a-cordoba-zcn7od"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "incidentes-y-represion-policial-en-el-ingreso-de-river-en-junin"
     },
     {
       "id": "fav3c1",
@@ -264,6 +402,7 @@
         "TN (Todo Noticias)",
         "Ámbito",
         "C5N",
+        "Radio Mitre",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.ambito.com/deuda-economia-aspiro-pesos-del-mercado-renovo-el-136-los-vencimientos-y-estiro-plazos-mas-alla-2027-n6333837",
@@ -620,6 +759,89 @@
       "foto": {
         "archivo": "fotos-notas/gy4i31.jpg",
         "credito": "Foto: La Nueva"
+      }
+    },
+    {
+      "id": "14mtnxg",
+      "titulo": "Valdés recorre Corrientes por la crecida del Paraná",
+      "copete": "El gobernador correntino visitó el martes Ituzaingó e Isla Apipé para supervisar la asistencia a los damnificados por la crecida del río Paraná. El Ejecutivo provincial asegura que la situación se encuentra controlada.",
+      "cuerpo": "El gobernador de Corrientes, Juan Pablo Valdés, recorrió el martes Ituzaingó e Isla Apipé para relevar el impacto de la creciente del río Paraná y coordinar la ayuda a las familias afectadas. El mandatario provincial estuvo acompañado por los ministros de Seguridad, Adán Gaya, y de Obras Públicas, Jorge Meza, además de los intendentes locales.\n\nDesde el Ejecutivo provincial indicaron que el escenario está controlado gracias a tareas preventivas previas y destacaron el despliegue de los ministerios en el terreno para la entrega de asistencia y la reubicación de animales junto a la policía rural.",
+      "guion": "Valdés recorre Corrientes por la crecida del Paraná",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "Crónica",
+        "Diario Popular",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.cronica.com.ar/politica/valdes-recorre-las-zonas-afectadas-por-las-inundaciones-y-coordina-la-asistencia-a-las-familias-8028/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T19:26:53.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T23:31:42.572Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El gobernador Juan Pablo Valdés recorrió Ituzaingó e Isla Apipé el martes.",
+        "Participaron los ministros Adán Gaya y Jorge Meza.",
+        "El intendente de Apipé, Gustavo Figueredo, entregó un informe de evacuados al mandatario provincial.",
+        "El Gobierno provincial afirma que la situación está controlada y hay monitoreo permanente."
+      ],
+      "noConfirmado": [
+        "No se detalló la cantidad exacta de familias evacuadas ni el número total de damnificados por el avance del agua."
+      ],
+      "textoRedes": "El gobernador de Corrientes, Juan Pablo Valdés, recorrió el martes las zonas de Ituzaingó e Isla Apipé afectadas por la creciente del río Paraná para coordinar la asistencia a las familias damnificadas junto a ministros y jefes comunales.",
+      "etiquetas": [
+        "Juan Pablo Valdés",
+        "Corrientes",
+        "creciente",
+        "río Paraná",
+        "Ituzaingó",
+        "Isla Apipé"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/valdes-recorre-las-zonas-afectadas-por-las-inundaciones-y-coordina-la-asistencia-a-las-familias-8028/",
+          "fecha": "2026-10-14T19:26:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló el recorrido del Gobernador, los funcionarios acompañantes, las reuniones con intendentes y las medidas de asistencia."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/14/juan-pablo-valdes-recorrio-las-zonas-inundadas-en-corrientes-y-reunio-al-comando-operativo-de-emergencias/",
+          "fecha": "2026-10-14T22:38:17.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la visita a Ituzaingó e Isla Apipé para relevar el impacto de la crecida del río Paraná."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/sociedad/corrientes-el-gobernador-recorrio-las-zonas-afectadas-la-emergencia-hidrica-n924495",
+          "fecha": "2026-10-14T21:42:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la situación está controlada y que se mantiene un monitoreo permanente desde la Provincia."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/valdes-recorrio-zonas-afectadas-por-la-creciente-del-parana_a6acfda238298ee386b39afc5",
+          "fecha": "2026-10-14T19:39:50.060Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al carecer de texto en su resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "valdes-recorre-corrientes-por-la-crecida-del-parana",
+      "foto": {
+        "archivo": "fotos-notas/14mtnxg.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1065,80 +1287,6 @@
       }
     },
     {
-      "id": "1qu6ie7",
-      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
-      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
-      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Agrositio"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T17:34:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T19:32:01.897Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Pronóstico vigente del 15 al 21 de octubre.",
-        "Lluvias escasas en la mayor parte del país.",
-        "Mínimas menores a 10 grados en el este bonaerense."
-      ],
-      "seSabe": [
-        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
-        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
-        "El este de Buenos Aires registrará mínimas menores a 10 grados."
-      ],
-      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
-      "etiquetas": [
-        "Clima",
-        "Bolsa de Cereales",
-        "Lluvias",
-        "Temperaturas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-          "fecha": "2026-10-14T17:34:56.000Z",
-          "oficial": false,
-          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
-          "fecha": "2026-10-14T19:09:51.000Z",
-          "oficial": false,
-          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "vqv317",
-          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
-          "fecha": "2026-10-05T11:23:01.000Z",
-          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
-      "foto": {
-        "archivo": "fotos-notas/1qu6ie7.jpg",
-        "credito": "Foto: Agrositio"
-      }
-    },
-    {
       "id": "eumyqk",
       "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "copete": "El intendente de San Nicolás, Santiago Passaglia, desafió al Gobierno nacional a eliminar la Tasa de Seguridad e Higiene a cambio de que la Nación deje de cobrar el IVA en obras y servicios públicos municipales.",
@@ -1147,12 +1295,12 @@
       "seccion": "Política",
       "medios": [
         "Ecos Diarios (Necochea)",
-        "Agencia DIB",
         "Ámbito",
         "Infobae",
         "TN (Todo Noticias)",
         "Noticias Argentinas (NA)",
-        "El Día"
+        "El Día",
+        "Agencia DIB"
       ],
       "enlace": "https://noticiasargentinas.com/economia/san-nicolas-propuso-eliminar-seguridad-e-higiene-si-nacion-deja-de-cobrar-iva_a6acfb3f58298ee386b33f776",
       "teniaImagenLaFuente": true,
@@ -1245,8 +1393,7 @@
         "Noticias Argentinas (NA)",
         "InfoRegión",
         "Mi8 (Canal 8 Mar del Plata)",
-        "iProUP",
-        "Página/12"
+        "iProUP"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/crece-la-morosidad-empresarial-casi-59000-companias-tienen-problemas-para-pagar-sus-deudas/",
       "teniaImagenLaFuente": true,
@@ -1972,11 +2119,11 @@
       "medios": [
         "LU9 Mar del Plata",
         "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
         "Diputados Bonaerenses",
         "0221",
         "La Verdad",
         "El Marplatense",
+        "Agencia DIB",
         "Ámbito"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
@@ -2270,6 +2417,120 @@
       }
     },
     {
+      "id": "15xxgpu",
+      "titulo": "Flavio Briatore analiza el rendimiento de Franco Colapinto tras Singapur",
+      "copete": "El jefe de la escudería Alpine compartió una imagen junto al piloto argentino tras el Gran Premio de Singapur. El equipo evaluó los inconvenientes mecánicos que derivaron en su abandono y ya apunta a la próxima fecha en Estados Unidos.",
+      "cuerpo": "El director del equipo Alpine, Flavio Briatore, publicó este miércoles una imagen en sus redes sociales junto al piloto argentino Franco Colapinto para anunciar el regreso aos entrenamientos en la base de Enstone. La escudería francesa difundió un balance sobre el reciente Gran Premio de Singapur de la Fórmula 1, donde el argentino debió abandonar el domingo pasado en el giro 29 debido a una falla en la transmisión a bordo del monoplaza.\n\nEl informe oficial del conjunto galo calificó como frustrante el cierre de la gira asiática, tras una competencia en el circuito callejero de Marina Bay donde el compañero de equipo Pierre Gasly concluyó en la undécima colocación. Como se había informado el 9 de octubre, la estructura técnica se abocó a revisar los inconvenientes mecánicos que sufrieron los bólidos en territorio asiático.\n\nLa categoría reina del automovilismo internacional transitará ahora un receso antes de encarar la próxima competencia del calendario oficial. El Gran Premio de Estados Unidos se disputará en el Circuito de las Américas, ubicado en la ciudad de Austin, entre el 23 y el 25 de octubre bajo el formato tradicional de fin de semana.",
+      "guion": "Flavio Briatore analiza el rendimiento de Franco Colapinto tras Singapur",
+      "seccion": "Automovilismo",
+      "medios": [
+        "TN (Todo Noticias)",
+        "El Destape",
+        "A24",
+        "C5N",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.eldestapeweb.com/deportes/alpine-analizo-carrera-colapinto-singapur-frustrante-2026101492038",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T12:20:38.754Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T23:31:42.572Z",
+      "relevancia": 97,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Flavio Briatore compartió una foto junto a Franco Colapinto para anunciar el retorno a los entrenamientos.",
+        "El equipo Alpine calificó como frustrante el balance tras el Gran Premio de Singapur.",
+        "El piloto argentino abandonó la competencia asiática en la vuelta 29 por un problema mecánico.",
+        "La próxima fecha de la Fórmula 1 se disputará en Estados Unidos entre el 23 y el 25 de octubre."
+      ],
+      "seSabe": [
+        "Flavio Briatore publicó una foto junto a Franco Colapinto este miércoles en sus redes sociales con la frase de vuelta al trabajo en Enstone, según informaron diversos medios.",
+        "Franco Colapinto abandonó el Gran Premio de Singapur tras completar 29 vueltas debido a una falla en la transmisión, de acuerdo con el comunicado oficial de Alpine.",
+        "El compañero de equipo Pierre Gasly finalizó en la undécima posición en la misma competencia, según el reporte de la escudería.",
+        "La próxima fecha de la Fórmula 1 será el Gran Premio de Estados Unidos en el circuito de Austin entre el 23 y el 25 de octubre.",
+        "El equipo ya había iniciado la revisión de las fallas mecánicas tras la competencia asiática, según lo informado el 9 de octubre."
+      ],
+      "textoRedes": "Flavio Briatore compartió una imagen junto a Franco Colapinto para marcar el regreso a los entrenamientos en Enstone. La escudería Alpine repasó el balance tras el Gran Premio de Singapur y ya apunta a la próxima competencia en Estados Unidos.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Alpine",
+        "Flavio Briatore",
+        "Singapur"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/alpine-analizo-carrera-colapinto-singapur-frustrante-2026101492038",
+          "fecha": "2026-10-14T12:20:38.754Z",
+          "oficial": false,
+          "aporte": "Detalló el comunicado oficial de Alpine sobre el rendimiento en Singapur y el abandono de Franco Colapinto por problemas en la transmisión."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/14/el-gesto-de-flavio-briatore-con-franco-colapinto-tras-el-gp-de-singapur/",
+          "fecha": "2026-10-14T15:47:13.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la publicación en redes sociales de Flavio Briatore junto a Franco Colapinto este miércoles."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/el-inesperado-gesto-flavio-briatore-franco-colapinto-el-caotico-gp-singapur-n1606352",
+          "fecha": "2026-10-14T17:43:37.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el jefe de la escudería reconoció errores y ya proyecta la competencia en Austin."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/el-guino-flavio-briatore-franco-colapinto-los-problemas-el-gran-premio-singapur-n251569",
+          "fecha": "2026-10-14T15:27:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la continuidad del calendario de la Fórmula 1 en territorio estadounidense tras el receso."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/el-gesto-de-flavio-briatore-con-franco-colapinto-que-llamo-la-atencion-tras-el-gp-de-singapur/",
+          "fecha": "2026-10-14T16:48:19.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la imagen compartida en redes sociales con el gesto del pulgar hacia arriba."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1567idj",
+          "titulo": "Alpine investiga los problemas en el auto de Franco Colapinto tras Singapur",
+          "fecha": "2026-10-09T11:23:00.000Z",
+          "ruta": "/nota/alpine-investiga-los-problemas-en-el-auto-de-franco-colapinto-tras-1567idj"
+        },
+        {
+          "id": "117ewnb",
+          "titulo": "Franco Colapinto apunta a superar a Racing Bulls en Singapur",
+          "fecha": "2026-10-08T11:26:30.000Z",
+          "ruta": "/nota/franco-colapinto-apunta-a-superar-a-racing-bulls-en-singapur-117ewnb"
+        },
+        {
+          "id": "18wlubj",
+          "titulo": "Franco Colapinto compite el fin de semana en el Gran Premio de Singapur",
+          "fecha": "2026-10-07T09:01:08.000Z",
+          "ruta": "/nota/franco-colapinto-compite-el-fin-de-semana-en-el-gran-premio-de-18wlubj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "flavio-briatore-analiza-el-rendimiento-de-franco-colapinto-tras",
+      "foto": {
+        "archivo": "fotos-notas/15xxgpu.jpg",
+        "credito": "Foto: A24"
+      }
+    },
+    {
       "id": "1fi9fiz",
       "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
       "copete": "Los dos conjuntos del Club Social y Campo de Pato ganaron sus respectivos encuentros del Torneo Desarrollo y se aseguraron un lugar en la instancia de playoffs.",
@@ -2469,71 +2730,67 @@
       }
     },
     {
-      "id": "97f98g",
-      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
-      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
-      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
-      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
-      "seccion": "Balcarce",
+      "id": "cdnqde",
+      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
+      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
+      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
+      "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+      "enlace": "https://puntonueve.com.ar/188351-2/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:54:19.000Z",
+      "fecha": "2026-10-14T11:49:03.000Z",
       "sinFecha": false,
-      "visto": "2026-10-14T13:01:57.018Z",
-      "relevancia": 78,
+      "visto": "2026-10-14T12:31:49.255Z",
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Instituto Adventista cumple cuarenta años de trayectoria.",
-        "El coro escolar presenta el musical Un día este viernes.",
-        "La función comienza a las 20 en el polideportivo institucional."
+        "El Coro del Instituto Adventista presenta el musical Un día",
+        "La función es este viernes a las 20 en el polideportivo institucional",
+        "El evento se enmarca en los 40 años de trayectoria educativa"
       ],
       "seSabe": [
-        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
-        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
-        "La presentación se realiza en el polideportivo de la institución educativa."
+        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
+        "La función se realiza este viernes a las 20 en el polideportivo institucional",
+        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
       ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
+      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
       "etiquetas": [
-        "Instituto Adventista",
-        "coro",
-        "aniversario",
-        "musical",
-        "Balcarce",
-        "cultura"
+        "Coro del Instituto Adventista",
+        "musical Un día",
+        "polideportivo",
+        "40 aniversario",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/188351-2/",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
+        },
         {
           "medio": "El Diario Balcarce",
           "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
           "fecha": "2026-10-14T11:54:19.000Z",
           "oficial": false,
-          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "cdnqde",
-          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
+          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
+      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
     },
     {
       "id": "11uyvlg",
@@ -2551,11 +2808,11 @@
         "Minuto Uno",
         "Crónica",
         "El Día",
-        "La Brújula 24",
         "La Voz del Pueblo",
         "El Marplatense",
         "Ámbito",
         "Infobae",
+        "La Brújula 24",
         "Agencia DIB",
         "La Nueva"
       ],
@@ -2784,7 +3041,6 @@
         "La Nación",
         "Infobae",
         "Clarín",
-        "Ámbito",
         "TN (Todo Noticias)",
         "El Cronista",
         "Perfil",
@@ -2793,8 +3049,10 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
+        "Ámbito",
         "iProfesional",
-        "Minuto Uno"
+        "Minuto Uno",
+        "El Economista"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3340,13 +3598,6 @@
         },
         {
           "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/premier-league/lisandro-martinez-aclaro-sus-explosivos-dichos-sobre-manchester-united-mis-palabras-reflejan-como-me-siento--id766267.html",
-          "fecha": "2026-10-14T23:07:22.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TyC Sports",
           "enlace": "https://www.tycsports.com/premier-league/la-sancion-a-la-que-se-expone-lisandro-martinez-tras-sus-fulminantes-criticas-en-el-united-id766177.html",
           "fecha": "2026-10-14T16:27:51.000Z",
           "oficial": false,
@@ -3426,6 +3677,13 @@
           "medio": "Doble Amarilla",
           "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez--en-la-mira-de-las-leyendas-del-manchester-united--criticas-y-una-posible-sancion_a6acfd2c9e063050a696091f1",
           "fecha": "2026-10-14T19:56:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez-explico-sus-picantes-declaraciones---hable-desde-el-enojo-y-la-frustracion-_a6ad00abde063050a6963f9b8",
+          "fecha": "2026-10-14T23:26:31.560Z",
           "oficial": false,
           "aporte": null
         },
@@ -3646,7 +3904,8 @@
         "A24",
         "iProfesional",
         "Crónica",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Canal 26"
       ],
       "enlace": "https://www.clarin.com/economia/riesgo-pais-vuelve-superar-600-puntos-medio-turbulencias-globales_0_QoQoxCdf12.html",
       "teniaImagenLaFuente": true,
@@ -4255,6 +4514,87 @@
       }
     },
     {
+      "id": "ecn3bh",
+      "titulo": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
+      "copete": "La banda liderada por Juanse acompañará al histórico guitarrista de los Rolling Stones en su primer concierto solista en el país. El recital será el 6 de noviembre en el Movistar Arena y ya se pueden conseguir las últimas localidades.",
+      "cuerpo": "Ratones Paranoicos se sumó como grupo invitado para el recital que Ronnie Wood brindará el 6 de noviembre en el Movistar Arena. La presentación marcará el debut del guitarrista de los Rolling Stones como solista en Argentina, dentro de una gira sudamericana que también pasará por Brasil y Chile, según informó la producción a cargo de DF Entertainment.\n\nLas localidades restantes se encuentran disponibles a través de la plataforma oficial del estadio, con la opción de abonar en hasta seis cuotas sin interés mediante tarjetas Visa del banco Santander. El repertorio incluirá un repaso por sus seis décadas de trayectoria musical y su paso por emblemáticas agrupaciones previas.\n\nLas visitas anteriores del músico británico al país incluyeron su llegada en 1996 para una muestra de pintura y grabados, mientras que los conciertos de los Rolling Stones reunieron a más de 900 mil espectadores en sus cuatro presentaciones históricas.",
+      "guion": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Ámbito",
+        "Diario Popular",
+        "Crónica"
+      ],
+      "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T16:29:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T00:01:43.721Z",
+      "relevancia": 38,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ratones Paranoicos será la banda invitada del show.",
+        "El recital de Ronnie Wood será el 6 de noviembre.",
+        "El concierto se realizará en el Movistar Arena.",
+        "Las entradas se consiguen en la web oficial del estadio."
+      ],
+      "seSabe": [
+        "Ratones Paranoicos tocará en el show de Ronnie Wood, según informó la producción.",
+        "El recital será el 6 de noviembre en el Movistar Arena.",
+        "Es el primer concierto solista del músico en el país.",
+        "Las entradas están a la venta en el sitio web oficial con financiación en cuotas."
+      ],
+      "textoRedes": "Ratones Paranoicos será la banda invitada en el primer concierto solista de Ronnie Wood en el país. El show será el 6 de noviembre en el Movistar Arena y las últimas entradas están a la venta.",
+      "etiquetas": [
+        "Ratones Paranoicos",
+        "Ronnie Wood",
+        "Movistar Arena",
+        "Música",
+        "Conciertos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
+          "fecha": "2026-10-13T16:29:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la participación de Ratones Paranoicos, la fecha del show, la venta de entradas y los detalles de la gira."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/ratones-paranoicos-abrira-el-show-de-ronnie-wood-en-buenos-aires/",
+          "fecha": "2026-10-13T16:55:00.000Z",
+          "oficial": false,
+          "aporte": "Publicó la misma información inicial sobre el evento y la banda invitada."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/espectaculos/los-ratones-paranoicos-abriran-el-show-ronnie-wood-argentina-n924345",
+          "fecha": "2026-10-13T22:54:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su registro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "saeapr",
+          "titulo": "El MotoGP en Buenos Aires anuncia los precios de sus entradas",
+          "fecha": "2026-09-30T21:24:43.000Z",
+          "ruta": "/nota/el-motogp-en-buenos-aires-anuncia-los-precios-de-sus-entradas-saeapr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "ratones-paranoicos-toca-en-el-show-solista-de-ronnie-wood"
+    },
+    {
       "id": "onywij",
       "titulo": "Productores de papa adaptan la siembra y enfrentan la suba de precios",
       "copete": "El sector papero ajusta las fechas de siembra debido a la variabilidad climática y depende de la tecnología de riego para sostener la producción.",
@@ -4614,17 +4954,22 @@
   "secciones": [
     "Política",
     "Balcarce",
+    "Fútbol",
     "Economía",
     "Automovilismo",
     "Argentina",
-    "Agro",
     "Policiales",
     "Deportes",
     "Cultura y agenda",
-    "Fútbol",
-    "Tecnología"
+    "Tecnología",
+    "Agro"
   ],
   "temas": [
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 2
+    },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
@@ -4988,22 +5333,28 @@
   },
   "pendientes": [
     {
-      "id": "zfpkeo",
-      "titulo": "Descontrol y caos en el ingreso de los hinchas de River en…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+      "id": "1iy72x8",
+      "titulo": "La 19ª edición de la Estudiantina comenzará el próximo lunes",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "p1f6vz",
-      "titulo": "Convocan a una marcha por Claribel Medina este sábado en…",
+      "id": "gelhhp",
+      "titulo": "Nuevo pedido de justicia por la muerte de Claribel Medina",
       "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"murió\""
+      "motivo": "necesita ojo humano: \"muerte\""
     },
     {
       "id": "1hb8gyb",
       "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
+    },
+    {
+      "id": "h0a84i",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1okotnb",
@@ -5108,5 +5459,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 1
 }
