@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T20:38:51.577Z",
- "portada": 54,
- "archivo": 1086,
+ "generado": "2026-10-14T21:03:30.137Z",
+ "portada": 55,
+ "archivo": 1089,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-14T20:38:51.621Z",
+  "generado": "2026-10-14T21:03:30.187Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,12 +157,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
      {
-      "id": "tlvcwh",
-      "titulo": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
-      "seccion": "Economía"
+      "id": "fav3c1",
+      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
+      "seccion": "Balcarce"
      },
      {
       "id": "1s8weuc",
@@ -170,9 +170,9 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "11eff0s",
-      "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
-      "seccion": "Balcarce"
+      "id": "1ummanb",
+      "titulo": "El autódromo porteño supera el sesenta por ciento de obra para recibir al MotoGP",
+      "seccion": "Automovilismo"
      },
      {
       "id": "10aoo7v",
@@ -211,6 +211,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "fav3c1",
+     "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "1s8weuc",
      "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
