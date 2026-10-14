@@ -80,7 +80,7 @@ import { actualizarAgenda, aplicarSuspendidos, comoAgendaJson } from '../lib/eve
 import { traerDolar } from '../lib/dolar.js';
 import {
   cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notasDelDolar, notasDeRepasos,
-  cuandoArmarClima, entradaDelClima, sumarClimaAlHistorial, comoClimaJson, notasDelClima,
+  cuandoArmarClima, entradaDelClima, sumarClimaAlHistorial, comoClimaJson, notasDelClima, notasDeEfemerides,
 } from '../lib/notas-propias.js';
 import {
   leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir, papeleraAlDia, paraLaPapelera,
@@ -600,6 +600,8 @@ const deLaIngesta = (ultima.notas ?? [])
 // Las fotos que sumó una persona desde la pestaña Fotos del panel (2/10, web/scripts/foto-manual.mjs) mandan sobre las del
 // banco: las anota sólo el workflow "Panel del celular" y así no chocan con esta corrida. Sólo si el archivo está en disco.
 const FOTOS_MANUALES = path.join(AQUI, '..', 'data', 'fotos-manuales.json');
+// "Un día como hoy" (14/10/2026): lo que dice el video de cada día; la nota sale cuando el video sale (lib/notas-propias.js).
+const EFEMERIDES_PIEZAS = path.join(AQUI, '..', 'data', 'efemerides-piezas.json');
 const fotosManuales = Object.fromEntries(Object.entries(leerJson(FOTOS_MANUALES, {}))
   .filter(([, f]) => f?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(f.archivo)))));
 let bancoDeFotos = { ...leerJson(BANCO_FOTOS, {}), ...fotosManuales };
@@ -768,7 +770,7 @@ const conPagina = new Map([
 const { notas: repasos, noSeArman } = notasDeRepasos(libroRedes, conPagina, { catalogo: TEMAS });
 for (const id of noSeArman) retiradas.add(id);
 // La regla de cuerpo vale también para lo propio (lib/cuerpo.js).
-const propias = [...notasDelDolar(historiaDolar), ...notasDelClima(historiaClima, libroRedes), ...notasF1, ...notasFutbol, ...notasDePistas(leerJson(NOTAS_DE_PISTAS, null)), ...repasos]
+const propias = [...notasDelDolar(historiaDolar), ...notasDelClima(historiaClima, libroRedes), ...notasDeEfemerides(leerJson(EFEMERIDES_PIEZAS, {}), libroRedes), ...notasF1, ...notasFutbol, ...notasDePistas(leerJson(NOTAS_DE_PISTAS, null)), ...repasos]
   .map((n) => fijarSlug(n, direcciones))
   .filter((n) => tieneCuerpo(n));
 if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);

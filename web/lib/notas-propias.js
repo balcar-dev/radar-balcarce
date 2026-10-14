@@ -446,6 +446,112 @@ export function notasDelClima(historia = { dias: [] }, libro = {}, { ahora = new
     .filter(Boolean);
 }
 
+// ======================================================= un día como hoy (14/10/2026)
+//
+// Una nota propia por día, cuando sale el video "Un día como hoy" en las redes (Hernán: "cuando sale el reel se haga una efeméride nota para el
+// diario"). Las efemérides son SIEMPRE nuestras: el texto sale de web/data/efemerides-piezas.json, lo mismo que dice el video, y de ningún otro
+// medio (regla 164). Es una plantilla: sin IA y sin inventar nada. Lleva siempre la misma ilustración de fondo, hecha con IA y declarada como tal,
+// hasta que haya varias para rotar.
+
+export const RELEVANCIA_EFEMERIDE = 56;
+const FIRMA_EFEMERIDE = 'Nota de Radar Balcarce armada con las efemérides de nuestro calendario, las mismas del video «Un día como hoy».';
+
+/** La ilustración de todas las notas de efemérides (web/public/fotos-notas/efemeride-fondo.jpg). Siempre con la leyenda de que es de IA. */
+export const FOTO_DE_EFEMERIDE = { archivo: 'fotos-notas/efemeride-fondo.jpg', credito: 'Ilustración generada con IA · Radar Balcarce' };
+
+/** Los días (hasta `dias` atrás, hoy incluido) en que el video de "Un día como hoy" ya salió en el libro de las redes, con la dirección de Facebook
+ *  o Instagram si Meta nos la dio: [{ dia, cuando, redes: { facebook, instagram } }]. */
+export function efemeridesDelLibro(libro = {}, { ahora = new Date(), dias = 3 } = {}) {
+  const hoy = diaAR(ahora);
+  const desde = sumarDias(hoy, -dias);
+  const salieron = new Map();
+  const anotar = (dia, red, p) => {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dia ?? '') || dia < desde || dia > hoy) return;
+    const previo = salieron.get(dia) ?? { dia, cuando: p?.cuando ?? null, redes: {} };
+    if (p?.cuando && (!previo.cuando || p.cuando < previo.cuando)) previo.cuando = p.cuando;
+    if (red && esEnlaceDe(red, p?.permalink)) previo.redes[red] = p.permalink;
+    salieron.set(dia, previo);
+  };
+  for (const [rubro, red] of [['instagram', 'instagram'], ['facebookVideos', 'facebook'], ['reelsEnFacebook', 'facebook']]) {
+    for (const [clave, p] of Object.entries(libro?.[rubro] ?? {})) {
+      const [dia, nombre] = clave.split('/');
+      if (nombre === 'efemeride') anotar(dia, red, p);
+    }
+  }
+  for (const [clave, p] of Object.entries(libro?.historiasDeReels ?? {})) {
+    const [, dia, nombre] = clave.split('/');
+    if (nombre === 'efemeride') anotar(dia, null, p);
+  }
+  return [...salieron.values()].sort((a, b) => String(a.cuando).localeCompare(String(b.cuando)));
+}
+
+const conPunto = (t) => { const s = String(t ?? '').trim(); return /[.!?…]$/.test(s) ? s : `${s}.`; };
+
+/**
+ * La nota de la efeméride de un día. `salio`: { dia, cuando, redes } (efemeridesDelLibro). `delDia`: efemerides-piezas.json → dias[dia]
+ * ({ principal, ademas }). Devuelve null si falta el título o el hecho principal.
+ */
+export function notaDeEfemeride(salio, delDia) {
+  const p = delDia?.principal;
+  if (!salio?.dia || !p?.titulo || !p?.cuerpo) return null;
+  const { dia } = salio;
+  const hora = horaAR(salio.cuando ?? new Date());
+  const cuando = salio.cuando ? new Date(salio.cuando).toISOString() : new Date(`${dia}T12:00:00Z`).toISOString();
+  const quePaso = String(p.titulo).trim().replace(/[.]+$/, '');
+
+  let titulo = p.anio ? `Un día como hoy, en ${p.anio}: ${quePaso}` : `Un día como hoy: ${quePaso}`;
+  if (titulo.length > MAXIMO_TITULO) titulo = `Un día como hoy: ${quePaso}`;
+  if (titulo.length > MAXIMO_TITULO) titulo = quePaso;
+  const copete = `Un ${diaLargo(dia)}${p.anio ? `, pero de ${p.anio}` : ''}: ${conPunto(quePaso)} ${conPunto(p.cuerpo)}`.replace(/\s+/g, ' ').trim();
+
+  const p1 = `${p.anio ? `En ${p.anio}: ` : ''}${conPunto(quePaso)} ${conPunto(p.cuerpo)}`;
+  const ademas = (delDia.ademas ?? []).filter((x) => x?.texto).map((x) => (x.anio ? `${x.anio}: ${conPunto(x.texto)}` : `Hoy: ${conPunto(x.texto)}`));
+  const partes = [p1];
+  if (ademas.length) partes.push('Y además, un día como hoy:', ...ademas);
+  const enlaces = [];
+  let cierre = '«Un día como hoy» sale todos los días a las 9 de la mañana, en video y con voz, en nuestras páginas de Instagram y Facebook: la efeméride del día y tres más, preparadas con nuestro calendario de efemérides.';
+  if (salio.redes?.facebook) { cierre += ' Mirá el video en Facebook.'; enlaces.push({ texto: 'video en Facebook', href: salio.redes.facebook }); }
+  if (salio.redes?.instagram) { cierre += ' Mirá el video en Instagram.'; enlaces.push({ texto: 'video en Instagram', href: salio.redes.instagram }); }
+  partes.push(cierre);
+
+  const fuente = { medio: 'Radar Balcarce · calendario de efemérides', enlace: 'https://radarbalcarce.com' };
+  return {
+    id: `efemeride${sinGuiones(dia)}`,
+    propia: 'efemeride',
+    titulo,
+    copete,
+    cuerpo: partes.join('\n\n'),
+    guion: null,
+    seccion: 'Cultura y agenda',
+    local: false,
+    relevancia: RELEVANCIA_EFEMERIDE,
+    medios: [fuente.medio],
+    enlace: fuente.enlace,
+    fuentesConsultadas: [fuente],
+    teniaImagenLaFuente: false,
+    foto: { ...FOTO_DE_EFEMERIDE },
+    fecha: cuando,
+    sinFecha: false,
+    visto: cuando,
+    publicadaPor: null,
+    publicadaCuando: cuando,
+    temas: [],
+    etiquetas: ['efemérides', 'un día como hoy', 'historia', 'calendario'],
+    como: 'automatica',
+    firma: `${FIRMA_EFEMERIDE.slice(0, -1)}, publicado a las ${hora}.`,
+    enlacesEnTexto: enlaces,
+    destacados: enlaces.map((e) => ({ texto: e.texto === 'video en Facebook' ? 'Mirá el video en Facebook' : 'Mirá el video en Instagram', href: e.href })),
+  };
+}
+
+/** Las notas de efemérides de los últimos días: sólo las del día en que el video salió y las que tenemos preparadas. */
+export function notasDeEfemerides(piezas = {}, libro = {}, { ahora = new Date(), dias = 3 } = {}) {
+  return efemeridesDelLibro(libro, { ahora, dias })
+    .map((s) => notaDeEfemeride(s, piezas?.dias?.[s.dia]))
+    .filter(Boolean);
+}
+
+
 // ======================================================= los repasos
 
 /** Las piezas del libro que son un podcast, y cómo se llama cada una. */
