@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T23:03:16.529Z",
+  "generado": "2026-10-14T23:25:30.093Z",
   "notas": [
     {
       "id": "biercm",
@@ -9,7 +9,6 @@
       "guion": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "seccion": "Política",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/politica/sol-di-geronimo-participo-en-necochea-del-curso-de-formacion-politica-encabezado-por-julio-alak",
@@ -17,7 +16,7 @@
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 98,
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -97,21 +96,19 @@
       "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-concejo-deliberativo-estudiantil-cerro-su-quinta-edicion-con-25-proyectos-presentados",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T22:04:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 98,
+      "relevancia": 94,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El Concejo Deliberativo Estudiantil completó su quinta edición en el distrito.",
@@ -256,6 +253,116 @@
       }
     },
     {
+      "id": "5f1qhn",
+      "titulo": "El Ministerio de Economía renueva el 136% de los vencimientos de deuda",
+      "copete": "La Secretaría de Finanzas colocó 6,61 billones de pesos en la última licitación y absorbió 1,75 billones de liquidez del mercado. La operación estiró los plazos más allá de 2027.",
+      "cuerpo": "El Ministerio de Economía adjudicó 6,61 billones de pesos en la licitación de deuda del Tesoro y alcanzó un nivel de refinanciamiento de 136,14 por ciento sobre los vencimientos de la primera mitad de octubre, según informó el Palacio de Hacienda. La Secretaría de Finanzas recibió ofertas por 9,49 billones de pesos para cubrir compromisos que rondaban los 4,85 billones, lo que permitió una absorción neta de liquidez de aproximadamente 1,75 billones de pesos.\n\nEn la operación, el Tesoro volvió a colocar instrumentos con plazos de vencimiento posteriores a 2027 y elevó el plazo promedio a 17,6 meses. Además, el llamado oficial excluyó la emisión de bonos en dólares, en una jornada donde el riesgo país volvió a superar los 600 puntos.",
+      "guion": "El Ministerio de Economía renueva el 136% de los vencimientos de deuda",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Ámbito",
+        "C5N",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.ambito.com/deuda-economia-aspiro-pesos-del-mercado-renovo-el-136-los-vencimientos-y-estiro-plazos-mas-alla-2027-n6333837",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T20:40:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T23:24:36.951Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Palacio de Hacienda colocó 6,61 billones de pesos en la licitación.",
+        "El nivel de refinanciamiento alcanzó el 136,14 por ciento.",
+        "La absorción neta de liquidez llegó a 1,75 billones de pesos.",
+        "El Tesoro estiró los plazos de pago más allá de 2027."
+      ],
+      "seSabe": [
+        "El Ministerio de Economía adjudicó 6,61 billones de pesos, según informó el Palacio de Hacienda.",
+        "El nivel de rollover llegó al 136,14 por ciento frente a vencimientos cercanos a los 4,85 billones.",
+        "La Secretaría de Finanzas recibió ofertas por 9,49 billones de pesos.",
+        "La licitación excluyó la emisión de bonos en dólares.",
+        "El plazo promedio de los instrumentos adjudicados alcanzó los 17,6 meses, de acuerdo con analistas financieros."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó el impacto definitivo que tendrá la absorción de pesos sobre las tasas cortas en las próximas jornadas."
+      ],
+      "textoRedes": "El Ministerio de Economía renovó el 136% de los vencimientos de deuda en la última licitación, colocó 6,61 billones de pesos y estiró los plazos de pago más allá de 2027.",
+      "etiquetas": [
+        "Economía",
+        "Deuda",
+        "Finanzas",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deuda-economia-aspiro-pesos-del-mercado-renovo-el-136-los-vencimientos-y-estiro-plazos-mas-alla-2027-n6333837",
+          "fecha": "2026-10-14T20:40:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los montos adjudicados, el porcentaje exacto de rollover y los plazos de los títulos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/14/licitacion-clave-el-gobierno-renovo-todos-los-vencimientos-de-deuda-y-absorbio-175-billones-de-pesos/",
+          "fecha": "2026-10-14T22:01:24.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la absorción de 1,75 billones de pesos y la exclusión de bonos en dólares."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/14/licitacion-de-deuda-el-gobierno-renovo-todos-los-vencimientos-y-extendio-los-plazos-mas-alla-de-2027/",
+          "fecha": "2026-10-14T21:23:30.000Z",
+          "oficial": false,
+          "aporte": "Precisó que los vencimientos ascendían a 4,85 billones de pesos."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/deuda-el-gobierno-absorbio-pesos-del-mercado-y-pateo-vencimientos-mas-alla-2027-n251635",
+          "fecha": "2026-10-14T22:58:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el riesgo país volvió a superar los 600 puntos."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-tesoro-renovo-todo-los-vencimientos-y-no-solto-pesos-al-mercado_a6acfe6188298ee386b3bf90d",
+          "fecha": "2026-10-14T22:07:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre el total de vencimientos que enfrentaba el Palacio de Hacienda al inicio de octubre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "84dtak",
+          "titulo": "El Gobierno nacional renueva todos los vencimientos de deuda en pesos",
+          "fecha": "2026-09-28T20:23:00.000Z",
+          "ruta": "/nota/el-gobierno-nacional-renueva-todos-los-vencimientos-de-deuda-en-pesos-84dtak"
+        },
+        {
+          "id": "5hhuva",
+          "titulo": "El Ministerio de Economía renueva la totalidad de los vencimientos de deuda",
+          "fecha": "2026-09-28T20:23:00.000Z",
+          "ruta": "/nota/el-ministerio-de-economia-renueva-la-totalidad-de-los-vencimientos-de-5hhuva"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-ministerio-de-economia-renueva-el-136-de-los-vencimientos-de-deuda",
+      "foto": {
+        "archivo": "fotos-notas/5f1qhn.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "1s8weuc",
       "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
       "copete": "La categoría nacional analiza la inclusión del autódromo local para su próxima temporada. El circuito genera interés tras su reapertura, aunque todavía no cuenta con una programación oficial.",
@@ -270,7 +377,7 @@
       "fecha": "2026-10-14T20:06:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T20:31:55.711Z",
-      "relevancia": 82,
+      "relevancia": 72,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -353,6 +460,7 @@
         "TN (Todo Noticias)",
         "A24",
         "Crónica",
+        "Radio Mitre",
         "Canal 26"
       ],
       "enlace": "https://www.clarin.com/economia/washington-quirno-firmo-protocolo-facilitar-aprobacion-acuerdo-comercial-eeuu-congreso_0_EerBxgJ0Lr.html",
@@ -360,7 +468,7 @@
       "fecha": "2026-10-14T20:05:12.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T20:38:40.052Z",
-      "relevancia": 89,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -862,99 +970,6 @@
       }
     },
     {
-      "id": "tlvcwh",
-      "titulo": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
-      "copete": "El indicador financiero trepa a 602 unidades luego de siete jornadas por debajo de ese nivel. Los mercados internacionales operan en baja tras el repunte inflacionario en el norte.",
-      "cuerpo": "El riesgo país argentino trepa este miércoles y rompe el techo de los 600 puntos básicos. El indicador del JP Morgan avanza un 0,8% hasta ubicarse en 602 unidades, tras transitar siete ruedas por debajo de esa cifra.\n\nLa suba responde a una jornada de caídas en los mercados internacionales provocada por el repunte de la inflación en Estados Unidos, que alcanzó el 3,7% interanual en septiembre. Esta situación genera presión sobre los activos locales, donde los bonos ceden hasta un 0,9% y las acciones caen hasta un 3%, mientras el dólar se mantiene estable en 1.535 pesos.",
-      "guion": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
-      "seccion": "Economía",
-      "medios": [
-        "Clarín",
-        "A24",
-        "Crónica",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://www.clarin.com/economia/riesgo-pais-vuelve-superar-600-puntos-medio-turbulencias-globales_0_QoQoxCdf12.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T17:55:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T20:31:55.711Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El indicador financiero sube a 602 puntos básicos.",
-        "El JP Morgan registra un avance del 0,8%.",
-        "El dólar se mantiene sin cambios en 1.535 pesos."
-      ],
-      "noConfirmado": [
-        "No se detallan los resultados finales de la licitación del Tesoro prevista para la tarde del miércoles."
-      ],
-      "textoRedes": "El riesgo país supera los 600 puntos básicos tras una jornada de caídas en los mercados internacionales impulsada por la inflación en Estados Unidos.",
-      "etiquetas": [
-        "riesgo pais",
-        "economia",
-        "dolar",
-        "mercados"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/riesgo-pais-vuelve-superar-600-puntos-medio-turbulencias-globales_0_QoQoxCdf12.html",
-          "fecha": "2026-10-14T17:55:18.000Z",
-          "oficial": false,
-          "aporte": "Detalla el valor del riesgo país en 602 puntos y la caída en los mercados internacionales por la inflación en Estados Unidos."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/finanzas-mercados/la-inflacion-en-eeuu-hace-subir-el-riesgo-pais-por-encima-de-lo-600-puntos-y-caen-las-acciones/",
-          "fecha": "2026-10-14T18:43:58.000Z",
-          "oficial": false,
-          "aporte": "Confirma la suba del riesgo país por encima de los 600 puntos básicos."
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/economia/el-riesgo-pais-supero-los-600-puntos-medio-la-caida-los-mercados-globales-n1606376",
-          "fecha": "2026-10-14T19:08:00.000Z",
-          "oficial": false,
-          "aporte": "Informa que el indicador avanzó un 0,8% tras siete ruedas y que el dólar cotiza a 1.535 pesos."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "2ienjd",
-          "titulo": "El riesgo país registra versiones encontradas y alcanza los 697 puntos",
-          "fecha": "2026-10-13T22:09:33.000Z",
-          "ruta": "/nota/el-riesgo-pais-registra-versiones-encontradas-y-alcanza-los-697-puntos-2ienjd"
-        },
-        {
-          "id": "1ypbdma",
-          "titulo": "El riesgo país sube y vuelve a la zona de los 600 puntos básicos",
-          "fecha": "2026-10-06T14:27:36.000Z",
-          "ruta": "/nota/el-riesgo-pais-sube-y-vuelve-a-la-zona-de-los-600-puntos-basicos-1ypbdma"
-        },
-        {
-          "id": "34t457",
-          "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
-          "fecha": "2026-10-01T16:53:08.000Z",
-          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-riesgo-pais-supera-los-seiscientos-puntos-tras-la-suba-en-estados",
-      "foto": {
-        "archivo": "fotos-notas/tlvcwh.jpg",
-        "credito": "Foto: El Cronista"
-      }
-    },
-    {
       "id": "1394wxo",
       "titulo": "Kicillof y Lanús supervisan la nueva base de la UTOI en San Isidro",
       "copete": "El gobernador bonaerense y el intendente local recorrieron las instalaciones policiales de Villa Adelina, que cuentan con un centenar de agentes y cinco patrulleros para reforzar la prevención.",
@@ -1440,9 +1455,9 @@
         "Perfil",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "Letra P",
         "El Marplatense",
-        "Clarín",
-        "Letra P"
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/politica/gildus-increible-videojuego-hicieron-formosa-gildo-insfran-pelea-leon-motosierra_0_iEWCfkGO14.html",
       "teniaImagenLaFuente": true,
@@ -1959,9 +1974,7 @@
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
         "Diputados Bonaerenses",
-        "El Día",
         "0221",
-        "La Tecla",
         "La Verdad",
         "El Marplatense",
         "Ámbito"
@@ -2456,67 +2469,71 @@
       }
     },
     {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
-      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
-      "seccion": "Cultura y agenda",
+      "id": "97f98g",
+      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
+      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
+      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
+      "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "El Diario Balcarce"
       ],
-      "enlace": "https://puntonueve.com.ar/188351-2/",
+      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:49:03.000Z",
+      "fecha": "2026-10-14T11:54:19.000Z",
       "sinFecha": false,
-      "visto": "2026-10-14T12:31:49.255Z",
-      "relevancia": 90,
+      "visto": "2026-10-14T13:01:57.018Z",
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Coro del Instituto Adventista presenta el musical Un día",
-        "La función es este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en los 40 años de trayectoria educativa"
+        "El Instituto Adventista cumple cuarenta años de trayectoria.",
+        "El coro escolar presenta el musical Un día este viernes.",
+        "La función comienza a las 20 en el polideportivo institucional."
       ],
       "seSabe": [
-        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
-        "La función se realiza este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
+        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
+        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
+        "La presentación se realiza en el polideportivo de la institución educativa."
       ],
-      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
       "etiquetas": [
-        "Coro del Instituto Adventista",
-        "musical Un día",
-        "polideportivo",
-        "40 aniversario",
-        "Balcarce"
+        "Instituto Adventista",
+        "coro",
+        "aniversario",
+        "musical",
+        "Balcarce",
+        "cultura"
       ],
       "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/188351-2/",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
-        },
         {
           "medio": "El Diario Balcarce",
           "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
           "fecha": "2026-10-14T11:54:19.000Z",
           "oficial": false,
-          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
+          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "cdnqde",
+          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
+      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
     },
     {
       "id": "11uyvlg",
@@ -2631,7 +2648,6 @@
         "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
         "La Verdad de Ayacucho",
-        "Agencia DIB",
         "La Nueva",
         "Ecos Diarios (Necochea)",
         "A24",
@@ -2640,6 +2656,7 @@
         "iProfesional",
         "La Noticia 1",
         "Clarín",
+        "Agencia DIB",
         "Ámbito",
         "El Día"
       ],
@@ -2772,13 +2789,12 @@
         "El Cronista",
         "Perfil",
         "Página/12",
-        "iProfesional",
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Minuto Uno",
-        "El Economista"
+        "iProfesional",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -2919,6 +2935,7 @@
         "Infobae",
         "TN (Todo Noticias)",
         "El Cronista",
+        "Perfil",
         "A24",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -3183,8 +3200,8 @@
       "guion": null,
       "seccion": "Fútbol",
       "medios": [
-        "La Nación",
         "Infobae",
+        "La Nación",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -3220,6 +3237,13 @@
           "medio": "Clarín",
           "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
           "fecha": "2026-10-14T09:00:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/14/el-comunicado-de-lisandro-martinez-tras-el-escandalo-por-sus-criticas-a-la-dirigencia-del-united-hable-desde-la-frustracion/",
+          "fecha": "2026-10-14T23:03:35.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3311,6 +3335,13 @@
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/deportes/lisandro-martinez-critico-la-dirigencia-del-manchester-united-y-wayne-rooney-salio-al-cruce-n6333521",
           "fecha": "2026-10-14T12:27:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/premier-league/lisandro-martinez-aclaro-sus-explosivos-dichos-sobre-manchester-united-mis-palabras-reflejan-como-me-siento--id766267.html",
+          "fecha": "2026-10-14T23:07:22.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3597,6 +3628,104 @@
       "foto": {
         "archivo": "fotos-notas/q5dibh.jpg",
         "credito": "Foto: Olé"
+      }
+    },
+    {
+      "id": "tlvcwh",
+      "titulo": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
+      "copete": "El indicador financiero trepa a 602 unidades luego de siete jornadas por debajo de ese nivel. Los mercados internacionales operan en baja tras el repunte inflacionario en el norte.",
+      "cuerpo": "El riesgo país argentino trepa este miércoles y rompe el techo de los 600 puntos básicos. El indicador del JP Morgan avanza un 0,8% hasta ubicarse en 602 unidades, tras transitar siete ruedas por debajo de esa cifra.\n\nLa suba responde a una jornada de caídas en los mercados internacionales provocada por el repunte de la inflación en Estados Unidos, que alcanzó el 3,7% interanual en septiembre. Esta situación genera presión sobre los activos locales, donde los bonos ceden hasta un 0,9% y las acciones caen hasta un 3%, mientras el dólar se mantiene estable en 1.535 pesos.",
+      "guion": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
+      "seccion": "Economía",
+      "medios": [
+        "Clarín",
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Página/12",
+        "A24",
+        "iProfesional",
+        "Crónica",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.clarin.com/economia/riesgo-pais-vuelve-superar-600-puntos-medio-turbulencias-globales_0_QoQoxCdf12.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T21:02:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T20:31:55.711Z",
+      "relevancia": 79,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El indicador financiero sube a 602 puntos básicos.",
+        "El JP Morgan registra un avance del 0,8%.",
+        "El dólar se mantiene sin cambios en 1.535 pesos."
+      ],
+      "noConfirmado": [
+        "No se detallan los resultados finales de la licitación del Tesoro prevista para la tarde del miércoles."
+      ],
+      "textoRedes": "El riesgo país supera los 600 puntos básicos tras una jornada de caídas en los mercados internacionales impulsada por la inflación en Estados Unidos.",
+      "etiquetas": [
+        "riesgo pais",
+        "economia",
+        "dolar",
+        "mercados"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/riesgo-pais-vuelve-superar-600-puntos-medio-turbulencias-globales_0_QoQoxCdf12.html",
+          "fecha": "2026-10-14T17:55:18.000Z",
+          "oficial": false,
+          "aporte": "Detalla el valor del riesgo país en 602 puntos y la caída en los mercados internacionales por la inflación en Estados Unidos."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/finanzas-mercados/la-inflacion-en-eeuu-hace-subir-el-riesgo-pais-por-encima-de-lo-600-puntos-y-caen-las-acciones/",
+          "fecha": "2026-10-14T18:43:58.000Z",
+          "oficial": false,
+          "aporte": "Confirma la suba del riesgo país por encima de los 600 puntos básicos."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/economia/el-riesgo-pais-supero-los-600-puntos-medio-la-caida-los-mercados-globales-n1606376",
+          "fecha": "2026-10-14T19:08:00.000Z",
+          "oficial": false,
+          "aporte": "Informa que el indicador avanzó un 0,8% tras siete ruedas y que el dólar cotiza a 1.535 pesos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "2ienjd",
+          "titulo": "El riesgo país registra versiones encontradas y alcanza los 697 puntos",
+          "fecha": "2026-10-13T22:09:33.000Z",
+          "ruta": "/nota/el-riesgo-pais-registra-versiones-encontradas-y-alcanza-los-697-puntos-2ienjd"
+        },
+        {
+          "id": "1ypbdma",
+          "titulo": "El riesgo país sube y vuelve a la zona de los 600 puntos básicos",
+          "fecha": "2026-10-06T14:27:36.000Z",
+          "ruta": "/nota/el-riesgo-pais-sube-y-vuelve-a-la-zona-de-los-600-puntos-basicos-1ypbdma"
+        },
+        {
+          "id": "34t457",
+          "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
+          "fecha": "2026-10-01T16:53:08.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-riesgo-pais-supera-los-seiscientos-puntos-tras-la-suba-en-estados",
+      "foto": {
+        "archivo": "fotos-notas/tlvcwh.jpg",
+        "credito": "Foto: El Cronista"
       }
     },
     {
@@ -4485,9 +4614,9 @@
   "secciones": [
     "Política",
     "Balcarce",
+    "Economía",
     "Automovilismo",
     "Argentina",
-    "Economía",
     "Agro",
     "Policiales",
     "Deportes",
@@ -4497,11 +4626,6 @@
   ],
   "temas": [
     {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
-      "cuantas": 2
-    },
-    {
       "nombre": "Fangio",
       "ranura": "fangio",
       "cuantas": 2
@@ -4509,9 +4633,9 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 11,
+      "temp": 10,
       "sensacion": 8,
-      "humedad": 89,
+      "humedad": 90,
       "viento": 15,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -4864,28 +4988,22 @@
   },
   "pendientes": [
     {
-      "id": "1iy72x8",
-      "titulo": "La 19ª edición de la Estudiantina comenzará el próximo lunes",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"imputado\" (en otro medio que cuenta lo mismo)"
+      "id": "zfpkeo",
+      "titulo": "Descontrol y caos en el ingreso de los hinchas de River en…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
-      "id": "gelhhp",
-      "titulo": "Nuevo pedido de justicia por la muerte de Claribel Medina",
+      "id": "p1f6vz",
+      "titulo": "Convocan a una marcha por Claribel Medina este sábado en…",
       "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"muerte\""
+      "motivo": "necesita ojo humano: \"murió\""
     },
     {
       "id": "1hb8gyb",
       "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
-    },
-    {
-      "id": "h0a84i",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1okotnb",
@@ -4898,6 +5016,12 @@
       "titulo": "Alarma en Puerto Madryn por ballenas muertas",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"cadáver\""
+    },
+    {
+      "id": "1o3t7bf",
+      "titulo": "Javier Milei viaja a Estados Unidos para reforzar su…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "p582dy",
@@ -4942,6 +5066,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "kcdqa8",
+      "titulo": null,
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
@@ -4978,5 +5108,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 4
+  "esperandoCuerpo": 2
 }
