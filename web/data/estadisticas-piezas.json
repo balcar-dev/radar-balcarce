@@ -4937,6 +4937,38 @@
    "metricas": {
     "total_video_views": 0
    }
+  },
+  {
+   "clave": "facebook/historia/1088160740665795",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "farmacia",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T22:05:39.712Z",
+   "medida": "2026-10-14T22:30:19.357Z",
+   "metricas": {
+    "total_video_views": 0
+   }
+  },
+  {
+   "clave": "facebook/reel/1770866697543384",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "farmacia",
+   "dia": "2026-10-13",
+   "cuando": "2026-10-13T22:06:05.088Z",
+   "medida": "2026-10-14T22:30:19.357Z",
+   "metricas": {}
+  },
+  {
+   "clave": "instagram/historia/18021283979926060",
+   "red": "instagram",
+   "parte": "historia",
+   "pieza": "clima-manana",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T10:05:44.762Z",
+   "medida": "2026-10-14T22:30:19.357Z",
+   "metricas": {}
   }
  ]
 }
