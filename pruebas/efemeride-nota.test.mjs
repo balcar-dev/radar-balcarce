@@ -75,3 +75,9 @@ test('un "día de…" sin año y un día sin datos', () => {
   assert.deepEqual(notasDeEfemerides({ dias: {} }, libro(), { ahora: AHORA }), [], 'si no hay efeméride preparada de ese día, no hay nota');
   assert.equal(notasDeEfemerides({ dias: { '2026-10-14': DIA_14 } }, libro(), { ahora: AHORA }).length, 1);
 });
+
+test('la poda de fotos nunca borra la ilustración fija (14/10: la borró la corrida de las 12:08 y la nota salió con la foto rota)', async () => {
+  const { podarFotos } = await import('../web/scripts/fotos-notas.mjs');
+  const { borrar } = podarFotos({ banco: {}, enDisco: ['efemeride-fondo.jpg', 'vieja.jpg'], quedan: new Set(), retiradas: new Set() });
+  assert.deepEqual(borrar, ['vieja.jpg']);
+});
