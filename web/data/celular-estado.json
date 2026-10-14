@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T18:32:57.498Z",
- "portada": 50,
- "archivo": 1076,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-14T19:03:07.013Z",
+ "portada": 51,
+ "archivo": 1078,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-14T18:32:57.543Z",
+  "generado": "2026-10-14T19:03:07.058Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -130,8 +130,8 @@
     "notas": [
      {
       "id": "1iy72x8",
-      "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
-      "seccion": "Balcarce"
+      "titulo": null,
+      "seccion": null
      },
      {
       "id": "11uyvlg",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "1mgbuy8",
-      "titulo": "Thiago Mendes pide disculpas por un provocador posteo contra Boca",
-      "seccion": "Fútbol"
-     },
      {
       "id": "11eff0s",
       "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
       "seccion": "Balcarce"
      },
      {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
-     },
-     {
       "id": "10aoo7v",
       "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
       "seccion": "Deportes"
+     },
+     {
+      "id": "wzunxc",
+      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo"
      }
     ]
    }
@@ -212,15 +212,9 @@
    ],
    "cola": [
     {
-     "id": "1iy72x8",
-     "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
+     "id": "97f98g",
+     "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
      "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "cdnqde",
-     "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-     "seccion": "Cultura y agenda",
      "marcada": false
     }
    ],
