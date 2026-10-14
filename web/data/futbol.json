@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-14T00:32:13.815Z",
+ "consultado": "2026-10-14T01:01:46.578Z",
  "equipos": [
   "9739",
   "3",
@@ -1184,7 +1184,7 @@
     "competencia": "sudamericana",
     "inicio": "2026-10-14T00:30:00.000Z",
     "estado": "en-juego",
-    "minuto": "2'",
+    "minuto": "32'",
     "local": {
      "id": "5",
      "nombre": "Boca Juniors",
@@ -1193,10 +1193,17 @@
     "visitante": {
      "id": "3454",
      "nombre": "Vasco da Gama",
-     "goles": 0
+     "goles": 1
     },
     "penales": null,
-    "goles": [],
+    "goles": [
+     {
+      "equipo": "visitante",
+      "jugador": "Adson",
+      "minuto": "25'",
+      "tipo": "gol"
+     }
+    ],
     "estadio": "Alberto José Armando (La Bombonera)",
     "fase": "Semifinals",
     "partidoDeLaSerie": 1,
