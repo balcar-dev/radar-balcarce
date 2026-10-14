@@ -13797,11 +13797,10 @@
  },
  "ecn3bh": {
   "intentado": true,
-  "origen": "ninguna",
-  "titulo": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-14T02:32:15.734Z",
-  "intentos": 3,
+  "origen": "medio",
+  "cuando": "2026-10-14T09:01:48.514Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 4,
   "fuentes": 3
  },
  "1iw76m5": {
