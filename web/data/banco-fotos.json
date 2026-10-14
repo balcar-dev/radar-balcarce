@@ -12638,16 +12638,16 @@
   "cuando": "2026-10-12T15:31:46.443Z"
  },
  "36ajax": {
-  "archivo": "fotos-notas/36ajax.jpg",
   "medio": "Infobae",
-  "credito": "Foto: Infobae",
   "licencia": null,
   "origen": "medio",
   "titulo": "El turismo crece en el fin de semana largo y deja millonarios ingresos",
   "enlace": "https://www.infobae.com/economia/2026/10/12/viajaron-35-mas-turistas-durante-el-fin-de-semana-largo-pero-cayo-el-impacto-economico/",
   "imagenOriginal": "https://www.infobae.com/resizer/v2/EYV7OULET5GEFM5EJJHSTHB5QA.jpg?auth=e720518d12e635267e5e13b5d50b63d9b618252546ae1930ffaa56e0c82a7484&smart=true&width=1200&height=630&quality=85",
   "razon": "Es la foto más limpia y representativa del turismo, con excelente nitidez y encuadre, libre de marcas y menores.",
-  "cuando": "2026-10-12T15:31:46.443Z"
+  "cuando": "2026-10-12T15:31:46.443Z",
+  "intentado": true,
+  "borrada": true
  },
  "f6htj2": {
   "medio": "La Brújula 24",
@@ -13721,13 +13721,16 @@
   "cuando": "2026-10-13T23:02:15.748Z"
  },
  "1k2xuxz": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1k2xuxz.jpg",
+  "medio": "iProfesional",
+  "credito": "Foto: iProfesional",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "El Gobierno evalúa los feriados por la visita del papa León XIV",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-14T04:02:18.638Z",
-  "intentos": 3,
-  "fuentes": 3
+  "enlace": "https://www.iprofesional.com/legales/466524-que-pasa-con-los-dias-feriados-si-se-cancela-la-visita-del-papa-a-argentina",
+  "imagenOriginal": "https://resizer.iproimg.com/unsafe/1280x720/assets.iprofesional.com/assets/jpg/2026/10/627478_landscape.jpg",
+  "razon": "La foto B ilustra adecuadamente el concepto de feriados con un calendario claro y sin marcas ni menores.",
+  "cuando": "2026-10-14T17:02:01.669Z"
  },
  "2ienjd": {
   "intentado": true,
@@ -14255,5 +14258,17 @@
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66045.png",
   "razon": "Es la única opción disponible, posee buena nitidez y no presenta marcas de agua ni menores.",
   "cuando": "2026-10-14T16:32:57.693Z"
+ },
+ "bpl7gu": {
+  "archivo": "fotos-notas/bpl7gu.jpg",
+  "medio": "0223 (Mar del Plata)",
+  "credito": "Foto: 0223 (Mar del Plata)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Selección Argentina negocia dos amistosos con rivales sudamericanos",
+  "enlace": "https://www.0223.com.ar/nota/2026-10-14-12-4-0-se-cayo-la-gira-por-asia-y-la-seleccion-argentina-prepara-un-bombazo-para-noviembre",
+  "imagenOriginal": "https://pxcdn.0223.com.ar/f/102026/1791990255804.jpeg?&cw=600&ch=365",
+  "razon": "La foto B muestra claramente a los jugadores de la Selección celebrando y está libre de marcas de agua y menores reconocibles.",
+  "cuando": "2026-10-14T17:02:01.669Z"
  }
 }
