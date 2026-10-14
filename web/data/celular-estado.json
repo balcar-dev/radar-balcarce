@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T03:02:26.504Z",
- "portada": 42,
+ "generado": "2026-10-14T03:32:23.134Z",
+ "portada": 44,
  "archivo": 1042,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-14T03:02:26.540Z",
+  "generado": "2026-10-14T03:32:23.165Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -136,7 +136,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 42,
+    "segundos": 46,
     "notas": [
      {
       "id": "ampmp1",
@@ -152,6 +152,11 @@
       "id": "1imkz6n",
       "titulo": "Social Pato Naranja y Negro juegan la semifinal",
       "seccion": "Deportes"
+     },
+     {
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo"
      }
     ]
    }
