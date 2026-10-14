@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T09:32:33.641Z",
- "portada": 40,
- "archivo": 1043,
+ "generado": "2026-10-14T10:02:13.672Z",
+ "portada": 35,
+ "archivo": 1042,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-14T09:32:33.673Z",
+  "generado": "2026-10-14T10:02:13.704Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,7 +13,7 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -169,14 +169,7 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [
-    {
-     "id": "1ov26yg",
-     "titulo": "La Fiesta Nacional del Postre confirma su nueva fecha",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 5,
    "proximoDesde": "2026-10-13T19:43:43.987Z",
    "porDia": 5,
