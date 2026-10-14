@@ -2134,6 +2134,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-14/efemeride": {
+      "cuando": "2026-10-14T12:05:23.923Z",
+      "mediaId": "17948389086299773",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "facebookVideos": {
@@ -3581,6 +3589,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-14/efemeride": {
+      "cuando": "2026-10-14T12:06:01.149Z",
+      "mediaId": "1089305360617839",
+      "nombre": "efemeride",
+      "tipo": "REELS",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "instagramFeed": {
@@ -5007,6 +5023,20 @@
       "cuando": "2026-10-14T00:07:21.125Z",
       "mediaId": "2203995860550331",
       "nombre": "podcast",
+      "red": "facebook",
+      "notaId": null
+    },
+    "instagram/2026-10-14/efemeride": {
+      "cuando": "2026-10-14T12:05:54.257Z",
+      "mediaId": "18170695852461176",
+      "nombre": "efemeride",
+      "red": "instagram",
+      "notaId": null
+    },
+    "facebook/2026-10-14/efemeride": {
+      "cuando": "2026-10-14T12:06:27.664Z",
+      "mediaId": "1099037396216642",
+      "nombre": "efemeride",
       "red": "facebook",
       "notaId": null
     }
