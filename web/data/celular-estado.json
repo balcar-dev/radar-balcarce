@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T13:03:14.030Z",
- "portada": 40,
+ "generado": "2026-10-14T13:32:43.234Z",
+ "portada": 39,
  "archivo": 1055,
- "esperandoCuerpo": 3,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-14T13:03:14.067Z",
+  "generado": "2026-10-14T13:32:43.279Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -34,7 +34,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-14T13:08:36.081Z"
    },
    {
     "nombre": "participa-reclamos",
@@ -94,8 +94,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 51,
+    "salio": "2026-10-14T13:08:36.081Z",
+    "segundos": null,
     "notas": [
      {
       "id": "97f98g",
@@ -126,17 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 49,
     "notas": [
      {
-      "id": "1wt6y1h",
-      "titulo": "La Estudiantina reúne a estudiantes secundarios desde el lunes",
+      "id": "1iy72x8",
+      "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "n2srv6",
-      "titulo": "La Liga Balcarceña inicia el Torneo Clausura el fin de semana",
-      "seccion": "Fútbol"
      },
      {
       "id": "u043fh",
@@ -147,6 +142,11 @@
       "id": "10aoo7v",
       "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
       "seccion": "Deportes"
+     },
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 25,
     "notas": [
-     {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
-     },
      {
       "id": "95znl3",
       "titulo": "El Registro Civil suspende casamientos para el martes 13",
@@ -198,8 +193,8 @@
      "marcada": false
     },
     {
-     "id": "1wt6y1h",
-     "titulo": "La Estudiantina reúne a estudiantes secundarios desde el lunes",
+     "id": "1iy72x8",
+     "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
      "seccion": "Balcarce",
      "marcada": false
     },
