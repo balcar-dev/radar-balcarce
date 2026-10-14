@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-14T16:04:51.102Z",
+ "generado": "2026-10-14T16:33:06.691Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -22,6 +22,23 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "1wt6y1h",
+   "titulo": "La Estudiantina 2026 comenzará el lunes con actividades deportivas, culturales y académicas",
+   "copete": "La 19ª edición se desarrollará del 19 al 29 de octubre, con competencias deportivas, actividades culturales y desafíos académicos para alumnos de escuelas secundarias y de Educación Especial.",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-14T12:56:01.000Z",
+   "fuentes": [
+    {
+     "medio": "Radio Gabal (FM 104.1)",
+     "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/la-estudiantina-2026-comenzara-el-lunes-con-actividades-deportivas-culturales-y-academicas",
+     "fecha": "2026-10-14T12:56:01.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "sin material",
    "maximo": 3
   },
   {
@@ -60,6 +77,50 @@
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice",
    "maximo": 4
+  },
+  {
+   "id": "bpl7gu",
+   "titulo": "Caída la gira por Asia, la Selección Argentina comienza a negociar para jugar con rivales sudamericanos en la doble fecha FIFA de noviembre",
+   "copete": "La Selección Argentina diagrama los últimos dos partidos del año en la última ventana FIFA, con ligeros cambios en el cronograma. La gira por Asia quedó descartada y nace la posibilidad de volver a jugar en el país con rivales sudamericanos. La AFA comenzó a negociar con Uruguay…",
+   "seccion": "Fútbol",
+   "fecha": "2026-10-14T14:04:45.000Z",
+   "fuentes": [
+    {
+     "medio": "Doble Amarilla",
+     "enlace": "https://www.dobleamarilla.com.ar/selecciones/caida-la-gira-por-asia--la-seleccion-argentina-comienza-a-negociar-para-jugar-con-rivales-sudamericanos-en-la-doble-fecha-fifa-de-noviembre_a6acf892c8531709378084cde",
+     "fecha": "2026-10-14T14:04:45.000Z"
+    },
+    {
+     "medio": "0223 (Mar del Plata)",
+     "enlace": "https://www.0223.com.ar/nota/2026-10-14-12-4-0-se-cayo-la-gira-por-asia-y-la-seleccion-argentina-prepara-un-bombazo-para-noviembre",
+     "fecha": "2026-10-14T15:06:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (largo): el titulo tiene 92 caracteres, el máximo es 90",
+   "maximo": 3
+  },
+  {
+   "id": "h6csd8",
+   "titulo": "La agenda de Caputo en Bangkok incluyó al FMI, organismos internacionales y proyectos por USD 10.000 millones",
+   "copete": "El ministro de Economía, Luis Caputo , desplegó en Bangkok una agenda de reuniones con autoridades del Fondo Monetario Internacional (FMI) , el Banco Mundial, el Banco Interamericano de Desarrollo (BID) y el Tesoro de Estados Unidos, con foco en la revisión del programa…",
+   "seccion": "Economía",
+   "fecha": "2026-10-14T13:52:47.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/economia/2026/10/14/la-agenda-de-caputo-en-bangkok-incluyo-al-fmi-organismos-internacionales-y-proyectos-por-usd-10000-millones/",
+     "fecha": "2026-10-14T13:52:47.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/economia/luis-caputo-en-bangkok-la-agenda-incluyo-la-tercera-revision-del-acuerdo-con-el-fmi-y-reuniones-con-organismos-internacionales/",
+     "fecha": "2026-10-14T15:59:55.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"tailandia\", que sale de una nota anterior, como si fuera de hoy",
+   "maximo": 3
   }
  ]
 }
