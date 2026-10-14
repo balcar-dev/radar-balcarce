@@ -13573,11 +13573,10 @@
  },
  "6bm2nd": {
   "intentado": true,
-  "origen": "ninguna",
-  "titulo": "El Gobierno defiende la estrategia del Banco Central con el oro",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-14T00:31:55.505Z",
-  "intentos": 3,
+  "origen": "medio",
+  "cuando": "2026-10-14T07:02:04.324Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 4,
   "fuentes": 4
  },
  "1ntre16": {
@@ -13629,16 +13628,16 @@
   "cuando": "2026-10-13T21:32:58.708Z"
  },
  "kh0dy": {
-  "archivo": "fotos-notas/kh0dy.jpg",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno bonaerense crea un plan de educación vial para escuelas",
   "enlace": "https://www.ambito.com/informacion-general/el-gobierno-bonaerense-creo-un-plan-provincial-educacion-vial-escuelas-todos-los-niveles-n6332965",
   "imagenOriginal": "https://media.ambito.com/p/9b7b249f9a6f95882b75f037d3949637/adjuntos/239/imagenes/043/289/0043289095/1200x675/smart/martin-marinucci.jpg",
   "razon": "Es la única foto libre de marcas de agua de medios y sin menores de edad reconocibles, mostrando al funcionario de la provincia.",
-  "cuando": "2026-10-13T21:32:58.708Z"
+  "cuando": "2026-10-13T21:32:58.708Z",
+  "intentado": true,
+  "borrada": true
  },
  "1uwzwwj": {
   "intentado": true,

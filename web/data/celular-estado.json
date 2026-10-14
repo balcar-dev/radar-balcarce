@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T06:31:50.352Z",
- "portada": 43,
- "archivo": 1044,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-14T07:02:10.082Z",
+ "portada": 38,
+ "archivo": 1043,
+ "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-14T06:31:50.381Z",
+  "generado": "2026-10-14T07:02:10.120Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
      {
       "id": "u043fh",
@@ -108,13 +108,13 @@
       "seccion": "Deportes"
      },
      {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "id": "66so6t",
+      "titulo": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa",
       "seccion": "Balcarce"
      },
      {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
       "seccion": "Balcarce"
      }
     ]
@@ -136,8 +136,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "seccion": "Balcarce"
+     },
      {
       "id": "ampmp1",
       "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
@@ -152,11 +157,6 @@
       "id": "1imkz6n",
       "titulo": "Social Pato Naranja y Negro juegan la semifinal",
       "seccion": "Deportes"
-     },
-     {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
      }
     ]
    }
