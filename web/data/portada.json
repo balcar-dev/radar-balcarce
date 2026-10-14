@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T17:32:05.872Z",
+  "generado": "2026-10-14T18:02:30.988Z",
   "notas": [
     {
       "id": "wzunxc",
@@ -70,11 +70,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45079-jamas-imagine-que-iba-a-necesitar-un-trasplante/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T16:32:12.981Z",
       "sinFecha": true,
       "visto": "2026-10-14T16:32:12.981Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -119,6 +119,77 @@
       "foto": {
         "archivo": "fotos-notas/tctot0.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "16u2f62",
+      "titulo": "La Confederación Federal PyME advierte por el cierre de empresas",
+      "copete": "La entidad advierte una reducción de unas 28.500 empresas con empleo registrado entre 2023 y 2025. Además, señala un fuerte incremento de los concursos preventivos en la Ciudad de Buenos Aires.",
+      "cuerpo": "La Confederación Federal PyME Argentina advirtió sobre un deterioro del tejido productivo nacional tras registrarse una reducción de unas 28.500 empresas privadas con empleo registrado entre el cuarto trimestre de 2023 y el mismo período de 2025. Según informó la entidad, la cantidad de firmas pasó de unos 568.700 a 540.200 en ese periodo.\n\nEl informe detalló que durante 2025 se produjeron alrededor de 76.900 cierres frente a unas 64.100 aperturas, lo que dejó un saldo negativo de unas 12.800 empresas. En paralelo, los concursos preventivos en la Ciudad de Buenos Aires pasaron de 82 en 2023 a unos 190 en 2025, un incremento superior al 130%.\n\nEl presidente de la organización, Mauro González, cuestionó la respuesta gubernamental y sostuvo que la estabilización macroeconómica no debe lograrse a costa de la destrucción de firmas y empleo. Entre las dificultades del sector, la entidad mencionó la caída del consumo, los costos de producción, la presión impositiva, las tarifas energéticas y la competencia importada.",
+      "guion": "La Confederación Federal PyME advierte por el cierre de empresas.",
+      "seccion": "Economía",
+      "medios": [
+        "Perfil",
+        "Infobrisas (Radio Brisas)"
+      ],
+      "enlace": "https://www.infobrisas.com/noticias/2026/10/14/111387-la-confederacion-federal-pyme-advirtio-sobre-senales-de-deterioro-productivo",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T15:04:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T18:02:08.918Z",
+      "relevancia": 52,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reducción de unas 28.500 empresas privadas registradas entre 2023 y 2025.",
+        "Saldo negativo de unas 12.800 empresas durante 2025.",
+        "Aumento superior al 130% en los concursos preventivos en la Ciudad de Buenos Aires.",
+        "La entidad reclama atención sobre el consumo, tarifas, impuestos y competencia importada."
+      ],
+      "seSabe": [
+        "La Confederación Federal PyME registró una baja de unas 28.500 empresas con empleo registrado entre el cuarto trimestre de 2023 y el mismo periodo de 2025.",
+        "Durante 2025 hubo unos 76.900 cierres y unas 64.100 aperturas.",
+        "Los concursos preventivos en la Ciudad de Buenos Aires pasaron de 82 en 2023 a unos 190 en 2025.",
+        "Mauro González es el presidente de la Confederación Federal PyME Argentina."
+      ],
+      "noConfirmado": [
+        "No se informaron datos específicos sobre el impacto de esta situación en la actividad comercial o industrial del partido de Balcarce."
+      ],
+      "textoRedes": "La Confederación Federal PyME advirtió una reducción de unas 28.500 empresas con empleo registrado entre 2023 y 2025 y señaló un incremento en los concursos preventivos.",
+      "etiquetas": [
+        "empresas",
+        "economia",
+        "empleo",
+        "produccion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/10/14/111387-la-confederacion-federal-pyme-advirtio-sobre-senales-de-deterioro-productivo",
+          "fecha": "2026-10-14T15:04:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la reducción de empresas con empleo registrado, los cierres y aperturas en 2025, la suba de concursos preventivos y los factores que complican al sector."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/modo-fontevecchia/hoy-el-tejido-productivo-esta-como-en-el-2001-modof.phtml",
+          "fecha": "2026-10-14T16:55:52.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de Mauro González advirtiendo sobre el cierre de empresas y cuestionando la respuesta del Gobierno."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-confederacion-federal-pyme-advierte-por-el-cierre-de-empresas",
+      "foto": {
+        "archivo": "fotos-notas/16u2f62.jpg",
+        "credito": "Foto: Perfil"
       }
     },
     {
@@ -193,16 +264,16 @@
       "medios": [
         "Minuto Uno",
         "Infobae",
+        "Clarín",
         "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
-        "Clarín",
         "El Cronista",
+        "A24",
         "C5N",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "A24",
         "iProfesional"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
@@ -533,18 +604,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45075-presupuesto-2027-el-municipio-prepara-la-ley-de-leyes-y-los-funcionarios-deberan-explicar-sus-numeros/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T13:31:55.553Z",
       "sinFecha": true,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "concejo",
-        "hospital"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El Ejecutivo municipal prevé presentar el proyecto el 31 de octubre.",
@@ -1192,17 +1260,17 @@
       "guion": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
       "seccion": "Argentina",
       "medios": [
-        "Agencia DIB",
         "TN (Todo Noticias)",
         "La Nación",
         "El Cronista",
         "Página/12",
         "A24",
-        "El Día",
+        "Crónica",
         "La Nueva",
         "La Brújula 24",
         "Ámbito",
-        "Infobae"
+        "Infobae",
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/informacion-general/prohiben-todo-el-pais-la-venta-juguetes-blandos-tipo-squishy-la-marca-pinch-family-contener-ftalatos-n6333458",
       "teniaImagenLaFuente": true,
@@ -1399,6 +1467,7 @@
       "medios": [
         "La Nación",
         "Infobae",
+        "Clarín",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Cronista",
@@ -1408,8 +1477,7 @@
         "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "Clarín"
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -1815,6 +1883,7 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
+        "A24",
         "Ámbito",
         "TyC Sports",
         "Minuto Uno",
@@ -1823,8 +1892,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
-        "Bolavip Argentina",
-        "A24"
+        "Bolavip Argentina"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -1902,6 +1970,13 @@
           "aporte": null
         },
         {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
+          "fecha": "2026-10-14T14:11:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/deportes/lisandro-martinez-critico-la-dirigencia-del-manchester-united-y-wayne-rooney-salio-al-cruce-n6333521",
           "fecha": "2026-10-14T12:27:00.000Z",
@@ -1933,13 +2008,6 @@
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
-          "fecha": "2026-10-14T12:00:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1987,13 +2055,6 @@
         },
         {
           "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/luego-de-sus-criticas-al-director-deportivo--lisandro-martinez-seria-sancionado-por-el-manchester-united_a6acf734d853170937806e959",
-          "fecha": "2026-10-14T13:05:36.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Doble Amarilla",
           "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez-apunto-contra-el-director-deportivo-del-manchester-united---esperaba-mas-de-el-_a6acead500084b16c6973c3fe",
           "fecha": "2026-10-13T22:55:44.905Z",
           "oficial": false,
@@ -2007,9 +2068,9 @@
           "aporte": null
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
-          "fecha": "2026-10-14T14:11:37.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
+          "fecha": "2026-10-14T12:00:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -2862,7 +2923,6 @@
       "seccion": "Política",
       "medios": [
         "Agencia DIB",
-        "La Noticia 1",
         "La Nación",
         "TN (Todo Noticias)",
         "El Cronista",
@@ -2873,7 +2933,6 @@
         "Ámbito",
         "Minuto Uno",
         "C5N",
-        "Crónica",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "InfoRegión",
@@ -2883,7 +2942,9 @@
         "La Nueva",
         "La Brújula 24",
         "Clarín",
-        "El Día"
+        "Crónica",
+        "El Día",
+        "La Noticia 1"
       ],
       "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-designo-a-diego-masaragian-como-nuevo-secretario-nacional-de-discapacidad-nid13102026/",
       "teniaImagenLaFuente": true,
@@ -3779,8 +3840,8 @@
   ],
   "secciones": [
     "Balcarce",
-    "Policiales",
     "Economía",
+    "Policiales",
     "Fútbol",
     "Deportes",
     "Política",
@@ -3795,7 +3856,7 @@
     "ahora": {
       "temp": 15,
       "sensacion": 12,
-      "humedad": 72,
+      "humedad": 71,
       "viento": 18,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -4148,10 +4209,10 @@
   },
   "pendientes": [
     {
-      "id": "1hkr9k8",
-      "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
+      "id": "1ydjysy",
+      "titulo": "La Justicia impuso multas diarias de $100.000 al jefe de…",
       "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
+      "motivo": "necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "z6x12n",
@@ -4190,6 +4251,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "952ggs",
+      "titulo": "Javier Milei respaldó a Luis Caputo",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "j2e39v",
       "titulo": "La ANMAT prohibió una marca de lavandina en todo el país…",
       "seccion": "Argentina",
@@ -4208,16 +4275,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1pu4can",
-      "titulo": "Vialidad: un exfuncionario condenado junto a Cristina…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
       "id": "urflid",
       "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1pu4can",
+      "titulo": "Vialidad: un exfuncionario condenado junto a Cristina…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "115hicz",

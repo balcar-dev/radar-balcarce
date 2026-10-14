@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-14T03:02:23.108Z",
+ "consultado": "2026-10-14T18:02:29.160Z",
  "equipos": [
   "9739",
   "3",
@@ -69,36 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841589",
-    "competencia": "liga",
-    "inicio": "2026-10-04T17:45:00.000Z",
-    "estado": "final",
-    "minuto": "90'+5'",
-    "local": {
-     "id": "10",
-     "nombre": "Huracán",
-     "goles": 1
-    },
-    "visitante": {
-     "id": "9739",
-     "nombre": "Aldosivi",
-     "goles": 0
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Leandro Lescano",
-      "minuto": "36'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Estadio Tomás Adolfo Ducó",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841584",
     "competencia": "liga",
@@ -1774,7 +1744,7 @@
    }
   ]
  },
- "tablaCuando": "2026-10-14T16:04:48.632Z",
+ "tablaCuando": "2026-10-14T18:02:29.160Z",
  "notas": {
   "futbolpartidosliga20261002": "2026-10-04T02:29:42.845Z",
   "futbolresultadosliga20261002": "2026-10-04T02:29:42.845Z",
