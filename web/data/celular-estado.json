@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T12:33:20.062Z",
- "portada": 38,
- "archivo": 1053,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-14T13:03:14.030Z",
+ "portada": 40,
+ "archivo": 1055,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-14T12:33:20.098Z",
+  "generado": "2026-10-14T13:03:14.067Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -93,19 +93,19 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "97f98g",
+      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+      "seccion": "Balcarce"
+     },
      {
       "id": "pdqhm3",
       "titulo": "Lisandro Mart\\u00in critica a la directiva del Manchester United y Rooney le responde",
       "seccion": "Fútbol"
-     },
-     {
-      "id": "505otd",
-      "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
-      "seccion": "Cultura y agenda"
      },
      {
       "id": "1aylfrc",
@@ -126,12 +126,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
      {
-      "id": "u043fh",
-      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
-      "seccion": "Cultura y agenda"
+      "id": "1wt6y1h",
+      "titulo": "La Estudiantina reúne a estudiantes secundarios desde el lunes",
+      "seccion": "Balcarce"
      },
      {
       "id": "n2srv6",
@@ -139,9 +139,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
+      "id": "u043fh",
+      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "10aoo7v",
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 43,
+    "segundos": 37,
     "notas": [
-     {
-      "id": "66so6t",
-      "titulo": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa",
-      "seccion": "Balcarce"
-     },
      {
       "id": "17v35o5",
       "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
@@ -173,6 +168,11 @@
       "id": "95znl3",
       "titulo": "El Registro Civil suspende casamientos para el martes 13",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo"
      }
     ]
    }
@@ -183,13 +183,24 @@
      "id": "5biv0y",
      "titulo": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
      "cuando": "2026-10-14T11:04:40.468Z"
+    },
+    {
+     "id": "505otd",
+     "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
+     "cuando": "2026-10-14T12:35:32.725Z"
     }
    ],
    "cola": [
     {
-     "id": "505otd",
-     "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
-     "seccion": "Cultura y agenda",
+     "id": "97f98g",
+     "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1wt6y1h",
+     "titulo": "La Estudiantina reúne a estudiantes secundarios desde el lunes",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
@@ -199,8 +210,8 @@
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-10-14T12:34:40.468Z",
+   "cupo": 3,
+   "proximoDesde": "2026-10-14T14:05:32.725Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

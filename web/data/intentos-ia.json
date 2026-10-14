@@ -786,9 +786,9 @@
   "motivo": "cuerpo: 1 problema (copia): copia 15 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 87 palabras"
  },
  "1iy72x8": {
-  "intentos": 1,
-  "ultimo": "2026-10-14T12:31:59.326Z",
-  "motivo": "cuerpo: 3 problemas (nombre, numero, copia): el cuerpo nombra a \"municipalidad\" y la fuente no; sin esas oraciones quedan 114 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-14T13:02:21.999Z",
+  "motivo": "cuerpo: 2 problemas (numero, promesa): el cuerpo dice 14 y la fuente no lo dice; sin esas oraciones quedan 120 palabras"
  },
  "1iyzpcv": {
   "intentos": 5,
@@ -951,9 +951,9 @@
   "motivo": "con cuerpo"
  },
  "1n50j6o": {
-  "intentos": 4,
-  "ultimo": "2026-10-14T12:31:59.326Z",
-  "motivo": "cuerpo: 2 problemas (copia, tildes): copia 13 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 132 palabras"
+  "intentos": 5,
+  "ultimo": "2026-10-14T13:02:21.999Z",
+  "motivo": "semáforo: necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1n6j2j2": {
   "intentos": 1,
@@ -1312,6 +1312,11 @@
  "1wp6u10": {
   "intentos": 1,
   "ultimo": "2026-10-07T22:01:53.969Z",
+  "motivo": "con cuerpo"
+ },
+ "1wt6y1h": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T13:02:21.999Z",
   "motivo": "con cuerpo"
  },
  "1wv2vgs": {
@@ -1681,9 +1686,9 @@
   "motivo": "con cuerpo"
  },
  "97f98g": {
-  "intentos": 1,
-  "ultimo": "2026-10-14T12:01:50.671Z",
-  "motivo": "cuerpo: 1 problema (copia): copia 18 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 66 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-14T13:02:21.999Z",
+  "motivo": "con cuerpo"
  },
  "99mpv8": {
   "intentos": 1,
@@ -2706,6 +2711,13 @@
  "z14qq8": {
   "intentos": 1,
   "ultimo": "2026-10-08T13:01:51.438Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
+ "z6x12n": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T13:02:21.999Z",
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
