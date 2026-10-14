@@ -4,11 +4,6 @@
   "ultimo": "2026-10-13T21:31:54.790Z",
   "motivo": "con cuerpo"
  },
- "10cpafd": {
-  "intentos": 3,
-  "ultimo": "2026-10-07T20:31:41.364Z",
-  "motivo": "con cuerpo"
- },
  "10izr2u": {
   "intentos": 2,
   "ultimo": "2026-10-09T13:42:30.068Z",
@@ -301,6 +296,11 @@
   "ultimo": "2026-10-09T22:32:01.209Z",
   "motivo": "con cuerpo"
  },
+ "17foa6": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T20:32:18.269Z",
+  "motivo": "cuerpo: 3 problemas (nombre, promesa): el cuerpo nombra a \"relaciones\" y la fuente no; sin esas oraciones quedan 98 palabras"
+ },
  "17l1wv1": {
   "intentos": 1,
   "ultimo": "2026-10-08T02:01:33.215Z",
@@ -405,6 +405,11 @@
   "intentos": 1,
   "ultimo": "2026-10-09T23:32:05.226Z",
   "motivo": "con cuerpo"
+ },
+ "1akjupx": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T20:32:18.269Z",
+  "motivo": "semáforo: necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1aoymq2": {
   "intentos": 1,
@@ -537,9 +542,14 @@
   "motivo": "con cuerpo"
  },
  "1cu2633": {
+  "intentos": 2,
+  "ultimo": "2026-10-14T20:32:18.269Z",
+  "motivo": "con cuerpo"
+ },
+ "1cv9j22": {
   "intentos": 1,
-  "ultimo": "2026-10-14T20:02:24.400Z",
-  "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras"
+  "ultimo": "2026-10-14T20:32:18.269Z",
+  "motivo": "con cuerpo"
  },
  "1d48tdj": {
   "intentos": 1,
@@ -850,11 +860,6 @@
   "ultimo": "2026-10-08T21:31:39.020Z",
   "motivo": "con cuerpo"
  },
- "1l0p3uh": {
-  "intentos": 3,
-  "ultimo": "2026-10-07T20:31:41.364Z",
-  "motivo": "con cuerpo"
- },
  "1l98x2s": {
   "intentos": 1,
   "ultimo": "2026-10-09T17:01:38.358Z",
@@ -909,11 +914,6 @@
   "intentos": 2,
   "ultimo": "2026-10-13T20:01:54.743Z",
   "motivo": "con cuerpo"
- },
- "1msn95k": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T20:31:41.364Z",
-  "motivo": "título o bajada: 1 problema (copia): copia 14 palabras seguidas del original: decilo con otras palabras"
  },
  "1mvohwm": {
   "intentos": 2,
@@ -1115,6 +1115,11 @@
   "ultimo": "2026-10-07T22:01:53.969Z",
   "motivo": "con cuerpo"
  },
+ "1s8weuc": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T20:32:18.269Z",
+  "motivo": "con cuerpo"
+ },
  "1s9drxk": {
   "intentos": 1,
   "ultimo": "2026-10-09T23:02:00.329Z",
@@ -1150,6 +1155,11 @@
  "1tf8zc1": {
   "intentos": 2,
   "ultimo": "2026-10-10T09:31:42.805Z",
+  "motivo": "con cuerpo"
+ },
+ "1tiy73l": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T20:32:18.269Z",
   "motivo": "con cuerpo"
  },
  "1trv7re": {
@@ -1424,15 +1434,15 @@
   "ultimo": "2026-10-13T07:01:54.494Z",
   "motivo": "con cuerpo"
  },
- "3exxze": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T20:31:41.364Z",
-  "motivo": "con cuerpo"
- },
  "3i2j4g": {
   "intentos": 1,
   "ultimo": "2026-10-14T16:03:28.502Z",
   "motivo": "con cuerpo"
+ },
+ "3l3m0n": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T20:32:18.269Z",
+  "motivo": "título o bajada: 1 problema (numero): el copete dice 5 y la fuente no lo dice"
  },
  "3xm1ge": {
   "intentos": 1,
@@ -1585,11 +1595,6 @@
   "intentos": 1,
   "ultimo": "2026-10-08T18:32:50.363Z",
   "motivo": "con cuerpo"
- },
- "6ytz79": {
-  "intentos": 3,
-  "ultimo": "2026-10-07T20:31:41.364Z",
-  "motivo": "título o bajada: 4 problemas (nombre): el copete nombra a \"administracion\" y la fuente no"
  },
  "700xzm": {
   "intentos": 1,
@@ -2276,11 +2281,6 @@
   "ultimo": "2026-10-13T13:32:54.600Z",
   "motivo": "cuerpo corto (62 palabras)"
  },
- "px37p5": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T20:31:41.364Z",
-  "motivo": "con cuerpo"
- },
  "pyejmn": {
   "intentos": 1,
   "ultimo": "2026-10-09T21:32:02.519Z",
@@ -2344,11 +2344,6 @@
  "rvlfgq": {
   "intentos": 1,
   "ultimo": "2026-10-12T16:02:23.969Z",
-  "motivo": "con cuerpo"
- },
- "rwhqdu": {
-  "intentos": 2,
-  "ultimo": "2026-10-07T20:07:57.579Z",
   "motivo": "con cuerpo"
  },
  "rzhblo": {
@@ -2445,6 +2440,11 @@
   "intentos": 4,
   "ultimo": "2026-10-08T13:57:36.416Z",
   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
+ "tlvcwh": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T20:32:18.269Z",
+  "motivo": "con cuerpo"
  },
  "tnbf7h": {
   "intentos": 1,

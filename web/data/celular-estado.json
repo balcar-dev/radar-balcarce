@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T20:03:36.163Z",
- "portada": 51,
- "archivo": 1080,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-14T20:34:19.070Z",
+ "portada": 55,
+ "archivo": 1085,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-14T20:03:36.208Z",
+  "generado": "2026-10-14T20:34:19.115Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,8 +157,18 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "1s8weuc",
+      "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1ummanb",
+      "titulo": "El autódromo porteño supera el sesenta por ciento de obra para recibir al MotoGP",
+      "seccion": "Automovilismo"
+     },
      {
       "id": "11eff0s",
       "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
@@ -168,16 +178,6 @@
       "id": "10aoo7v",
       "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
       "seccion": "Deportes"
-     },
-     {
-      "id": "wzunxc",
-      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
      }
     ]
    }
@@ -210,7 +210,14 @@
      "cuando": "2026-10-14T17:45:25.193Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1s8weuc",
+     "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
+     "seccion": "Automovilismo",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-10-14T19:15:25.193Z",
    "porDia": 5,

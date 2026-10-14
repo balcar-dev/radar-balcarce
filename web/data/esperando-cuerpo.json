@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-14T20:03:36.163Z",
+ "generado": "2026-10-14T20:34:19.070Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -25,30 +25,67 @@
    "maximo": 3
   },
   {
-   "id": "1cu2633",
-   "titulo": "Línea F: la Ciudad de Buenos Aires avanza con la licitación del subte para unir Barracas y Palermo",
-   "copete": "La Ciudad de Buenos Aires abrió la licitación para construir la Línea F del subte , un trazado de 12 estaciones entre Barracas y Palermo que demandará una inversión de USD 1.500 millones . La administración porteña prevé elegir al contratista antes de fin de año, iniciar los…",
-   "seccion": "Argentina",
-   "fecha": "2026-10-14T17:33:00.000Z",
+   "id": "17foa6",
+   "titulo": "En Washington, Quirno firmó un protocolo para facilitar la aprobación del acuerdo comercial con EE.UU. en el Congreso",
+   "copete": "(Desde Washington, Estados Unidos) - En el marco de la visita de Javier Milei a Washington, el canciller Pablo Quirno firmó con el Representante Comercial de Estados Unidos, Jamieson Greer, un protocolo adicional que fortalece los acuerdos comerciales que unen a Balcarce 50 con…",
+   "seccion": "Política",
+   "fecha": "2026-10-14T20:05:12.000Z",
    "fuentes": [
     {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/ciudad-de-buenos-aires/linea-f-la-ciudad-de-buenos-aires-avanza-con-la-licitacion-del-subte-para-unir-barracas-y-palermo.phtml",
-     "fecha": "2026-10-14T17:33:00.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/economia/washington-quirno-firmo-protocolo-facilitar-aprobacion-acuerdo-comercial-eeuu-congreso_0_EerBxgJ0Lr.html",
+     "fecha": "2026-10-14T20:05:12.000Z"
     },
     {
      "medio": "Infobae",
-     "enlace": "https://www.infobae.com/sociedad/2026/10/14/subte-linea-f-cuando-comenzaran-las-obras-que-recorrido-tendra-y-cuanto-tardara-su-construccion/",
-     "fecha": "2026-10-14T17:54:33.000Z"
+     "enlace": "https://www.infobae.com/economia/2026/10/14/argentina-firmo-con-eeuu-un-protocolo-adicional-para-fortalecer-el-acuerdo-bilateral-sobre-comercio-e-inversiones-reciprocas/",
+     "fecha": "2026-10-14T20:29:42.000Z"
     },
     {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/sociedad/subte-linea-f-inicio-obras-recorrido-construccion/",
-     "fecha": "2026-10-14T19:29:17.000Z"
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/en-washington-quirno-firmo-un-protocolo-adicional-para-acelerar-la-aprobacion-del-acuerdo-comercial-nid14102026/",
+     "fecha": "2026-10-14T20:10:07.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/economia/2026/10/14/la-argentina-y-eeuu-firmaron-un-protocolo-para-avanzar-con-el-acuerdo-comercial-y-enviarlo-al-congreso/",
+     "fecha": "2026-10-14T20:07:45.000Z"
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "motivo": "cuerpo: 3 problemas (nombre, promesa): el cuerpo nombra a \"relaciones\" y la fuente no; sin esas oraciones quedan 98 palabras",
+   "maximo": 3
+  },
+  {
+   "id": "3l3m0n",
+   "titulo": "El consumo privado cayó 1% en septiembre y suma diez meses en baja, según un informe privado",
+   "copete": "El consumo de los hogares mostró señales de recuperación durante septiembre , después de la caída registrada en el bimestre julio-agosto. El mes pasado, el índice creció 0,5% . Sin embargo, el indicador acumula diez meses consecutivos de bajas interanuales y una contracción de…",
+   "seccion": "Economía",
+   "fecha": "2026-10-14T14:33:09.000Z",
+   "fuentes": [
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/el-consumo-privado-cayo-1--en-septiembre-y-suma-diez-meses-en-baja--segun-un-informe-privado_a6acf86368298ee386b2d5d75",
+     "fecha": "2026-10-14T14:33:09.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/economia/2026/10/14/el-consumo-masivo-crecio-en-septiembre-pero-acumula-una-caida-de-13-en-lo-que-va-del-ano/",
+     "fecha": "2026-10-14T16:16:34.000Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/economia/el-consumo-privado-cayo-1-interanual-septiembre-y-acumula-10-meses-consecutivos-retroceso-n251580",
+     "fecha": "2026-10-14T17:11:00.000Z"
+    },
+    {
+     "medio": "InfoRegión",
+     "enlace": "https://www.inforegion.com.ar/2026/10/14/el-consumo-privado-cayo-1-en-septiembre-y-acumula-diez-meses-de-retroceso/",
+     "fecha": "2026-10-14T19:32:52.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 1 problema (numero): el copete dice 5 y la fuente no lo dice",
    "maximo": 3
   }
  ]
