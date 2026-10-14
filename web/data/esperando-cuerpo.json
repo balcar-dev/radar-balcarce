@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-14T01:01:48.229Z",
+ "generado": "2026-10-14T01:06:45.513Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,6 +15,11 @@
      "fecha": "2026-10-13T18:45:20.751Z"
     },
     {
+     "medio": "Puntonueve (FM 100.9)",
+     "enlace": "https://puntonueve.com.ar/organizan-una-tarde-recreativa-para-toda-la-familia-en-balcarce/",
+     "fecha": "2026-10-13T19:37:05.000Z"
+    },
+    {
      "medio": "Diario La Vanguardia",
      "enlace": "https://www.diariolavanguardia.com/noticias/45071-vagon-cultural-una-tarde-de-juegos-musica-y-talleres-para-compartir-en-familia/",
      "fecha": null
@@ -25,20 +30,25 @@
    "maximo": 3
   },
   {
-   "id": "1n2m03x",
-   "titulo": "El Turismo Nacional podría volver a Balcarce y Moriatis reconoció el interés de los pilotos",
-   "copete": "",
+   "id": "zjtene",
+   "titulo": "Moriatis: \"Los pilotos te dicen 'tendríamos que ir' a Balcarce\"",
+   "copete": "En transmisión de Campeones por AM590 Continental, Emanuel Moriatis, entre otros temas del automovilismo, abordó la reapertura del autódromo Juan Manuel Fangio, de Balcarce. El titular desde 2021 de la Asociación Pilotos Automóviles Turismo (AP",
    "seccion": "Automovilismo",
-   "fecha": "2026-10-13T14:07:20.000Z",
+   "fecha": "2026-10-13T12:13:48.000Z",
    "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/moriatis-los-pilotos-te-dicen-tendriamos-que-ir-a-balcarce-283",
+     "fecha": "2026-10-13T12:13:48.000Z"
+    },
     {
      "medio": "QZ Noticias (Mar del Plata)",
      "enlace": "https://www.qznoticias.com/deportes/el-turismo-nacional-podria-volver-a-balcarce-y-moriatis-reconocio-el-interes-de-los-pilotos",
      "fecha": "2026-10-13T14:07:20.000Z"
     }
    ],
-   "intentos": 2,
-   "motivo": "sin material",
+   "intentos": 1,
+   "motivo": "con cuerpo",
    "maximo": 3
   }
  ]

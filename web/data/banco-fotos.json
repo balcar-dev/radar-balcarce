@@ -13798,10 +13798,11 @@
  },
  "ecn3bh": {
   "intentado": true,
-  "origen": "medio",
-  "cuando": "2026-10-14T00:02:01.749Z",
-  "error": "no se pudo volver a bajar la elegida",
-  "intentos": 1,
+  "origen": "ninguna",
+  "titulo": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-10-14T01:06:37.066Z",
+  "intentos": 2,
   "fuentes": 3
  },
  "1iw76m5": {
@@ -13833,5 +13834,17 @@
   "cuando": "2026-10-14T00:31:55.505Z",
   "intentos": 1,
   "fuentes": 9
+ },
+ "66so6t": {
+  "archivo": "fotos-notas/66so6t.jpg",
+  "medio": "Puntonueve (FM 100.9)",
+  "credito": "Foto: Puntonueve (FM 100.9)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa",
+  "enlace": "https://puntonueve.com.ar/el-merendero-dona-norma-lanzo-su-tercera-campana-solidaria-con-importantes-premios/",
+  "imagenOriginal": "https://puntonueve.com.ar/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-13-at-16.52.31.jpeg",
+  "razon": "Es la única imagen disponible y muestra claramente el cartel de la campaña solidaria con los premios, ilustrando bien el tema de la nota.",
+  "cuando": "2026-10-14T01:06:37.066Z"
  }
 }
