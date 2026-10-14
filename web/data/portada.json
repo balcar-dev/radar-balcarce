@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T06:04:57.382Z",
+  "generado": "2026-10-14T06:31:50.352Z",
   "notas": [
     {
       "id": "1ov26yg",
@@ -359,6 +359,82 @@
       "slug": "sergio-unac-lanza-su-primer-spot-y-confirma-sus-aspiraciones"
     },
     {
+      "id": "1k2xuxz",
+      "titulo": "El Gobierno evalúa los feriados por la visita del papa León XIV",
+      "copete": "El Ejecutivo nacional analiza la continuidad del cronograma de feriados tras la cirugía del papa León XIV. La administración mantiene firme el esquema dispuesto por decreto y evalúa cambios según su recuperación.",
+      "cuerpo": "El Gobierno nacional analiza los pasos a seguir sobre el esquema de feriados tras la intervención quirúrgica a la que se somete el papa León XIV en Roma. El vocero presidencial, Adrián Ravier, señaló que la administración federal mantiene la vigencia de las jornadas no laborables dispuestas para recibir al Sumo Pontífice, aunque evaluará adaptaciones según las indicaciones médicas.\n\nEl cronograma establecido por el Decreto 1103/2026 contempla un feriado nacional para el lunes 9 de noviembre, un día no laborable exclusivo para la Ciudad Autónoma de Buenos Aires y Córdoba el martes 10, y un asueto para la provincia de Buenos Aires el miércoles 11. Además, continúa en funciones la Unidad Ejecutora Especial Temporaria para coordinar la seguridad y la logística del traslado.\n\nLa intervención quirúrgica genera dudas en sectores gremiales y turísticos sobre la confirmación definitiva de los días de descanso y la organización de los traslados previstos.",
+      "guion": "El Gobierno evalúa los feriados por la visita del papa León XIV",
+      "seccion": "Argentina",
+      "medios": [
+        "Minuto Uno",
+        "iProfesional",
+        "El Día"
+      ],
+      "enlace": "https://www.minutouno.com/sociedad/el-gobierno-define-que-pasa-los-feriados-el-papa-leon-xiv-la-suspension-su-agenda-n6333391",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T22:10:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T23:01:29.650Z",
+      "relevancia": 54,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno nacional mantiene vigente el esquema de feriados por la llegada del papa León XIV.",
+        "El Vaticano informó que la cirugía torácica al Pontífice en Roma resultó exitosa.",
+        "El decreto oficial establece feriados el 9, 10 y 11 de noviembre según cada distrito.",
+        "La Unidad Ejecutora coordina la seguridad y la logística para el desplazamiento de la comitiva."
+      ],
+      "seSabe": [
+        "El Vaticano confirmó el éxito de la cirugía torácica al papa León XIV en el Policlínico Gemelli de Roma.",
+        "El vocero presidencial, Adrián Ravier, indicó que el cronograma de feriados sigue vigente mediante el Decreto 1103/2026.",
+        "El esquema incluye feriado nacional el lunes 9 de noviembre, en CABA y Córdoba el martes 10, y en la provincia de Buenos Aires el miércoles 11."
+      ],
+      "noConfirmado": [
+        "Si la evolución médica del Pontífice modificará de manera definitiva las fechas de su visita a Sudamérica.",
+        "El impacto total que la reprogramación tendrá sobre los viajes y la actividad laboral en los distritos involucrados."
+      ],
+      "textoRedes": "El Gobierno nacional mantiene vigente el esquema de feriados por la visita del papa León XIV tras su cirugía en Roma. El cronograma prevé jornadas no laborables para el 9, 10 y 11 de noviembre según cada distrito del país.",
+      "etiquetas": [
+        "papa Leon XIV",
+        "feriados",
+        "Gobierno nacional",
+        "Vaticano",
+        "Decreto 1103"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/el-gobierno-define-que-pasa-los-feriados-el-papa-leon-xiv-la-suspension-su-agenda-n6333391",
+          "fecha": "2026-10-13T22:10:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles oficiales sobre la cirugía del Papa, las declaraciones del vocero presidencial y el cronograma del Decreto 1103/2026."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/legales/466524-que-pasa-con-los-dias-feriados-si-se-cancela-la-visita-del-papa-a-argentina",
+          "fecha": "2026-10-13T22:45:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el planteo sobre la incertidumbre en torno a los feriados, los viajes y los derechos laborales."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/incertidumbre-por-la-salud-del-papa-leon-xiv-que-pasa-con-los-feriados-en-argentina-politica-y-economia_1791932100",
+          "fecha": "2026-10-13T22:59:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-evalua-los-feriados-por-la-visita-del-papa-leon-xiv"
+    },
+    {
       "id": "fdr535",
       "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
       "copete": "Integrantes de una iglesia local viajan para asistir a una comunidad indígena con alimentos y ropa. Cuentan con el respaldo de comerciantes y organizan actividades para recaudar fondos.",
@@ -639,9 +715,9 @@
       "medios": [
         "Perfil",
         "El Cronista",
-        "Página/12",
         "Crónica",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Página/12"
       ],
       "enlace": "https://www.cronista.com/financial-times/bcra-compro-fuerte-y-las-acciones-subieron-hasta-47-pero-el-riesgo-pais-cerro-en-596-puntos/",
       "teniaImagenLaFuente": true,
@@ -1205,7 +1281,7 @@
       "fecha": "2026-10-13T18:28:51.909Z",
       "sinFecha": false,
       "visto": "2026-10-13T20:31:58.658Z",
-      "relevancia": 90,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1344,15 +1420,15 @@
       "guion": "Grupo Addnice trae de regreso a la Argentina la marca Pony",
       "seccion": "Economía",
       "medios": [
-        "El Cronista",
-        "iProfesional"
+        "iProfesional",
+        "El Cronista"
       ],
       "enlace": "https://www.cronista.com/negocios/pony-vuelve-a-la-argentina-quien-esta-detras-del-regreso-de-la-marca-de-zapatillas/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T17:57:11.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T19:31:43.997Z",
-      "relevancia": 36,
+      "relevancia": 32,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1590,12 +1666,12 @@
         "Crónica",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
-        "El Día",
+        "InfoRegión",
         "El Marplatense",
         "Infobae",
         "La Nueva",
         "La Brújula 24",
-        "InfoRegión"
+        "El Día"
       ],
       "enlace": "https://www.lanacion.com.ar/politica/el-gobierno-designo-a-diego-masaragian-como-nuevo-secretario-nacional-de-discapacidad-nid13102026/",
       "teniaImagenLaFuente": true,
@@ -2241,15 +2317,15 @@
       "guion": "La Fundación FIEL recorta su estimación de crecimiento para este año",
       "seccion": "Economía",
       "medios": [
-        "Página/12",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Página/12"
       ],
       "enlace": "https://noticiasargentinas.com/economia/para-fiel--el-2026-puede-cerrar-con-un-crecimiento-aun-menor-a-1-5-_a6ace1d62d617fcd176d111ca",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T12:58:28.651Z",
       "sinFecha": false,
       "visto": "2026-10-13T21:31:43.295Z",
-      "relevancia": 36,
+      "relevancia": 32,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2311,11 +2387,11 @@
         "Agencia DIB",
         "La Noticia 1",
         "Infobae",
-        "La Verdad",
         "La Opinión",
         "La Voz del Pueblo",
         "Diario Popular",
-        "Ecos Diarios (Necochea)"
+        "Ecos Diarios (Necochea)",
+        "La Verdad"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/la-ansv-sanciono-a-mas-de-1800-conductores-por-circular-por-las-banquinas-en-las-autopistas-del-amba",
       "teniaImagenLaFuente": true,
@@ -2515,12 +2591,12 @@
       "medios": [
         "QZ Noticias (Mar del Plata)",
         "0221",
-        "La Verdad",
         "La Opinión",
         "El Marplatense",
         "El Eco de Tandil",
         "Ámbito",
-        "Agencia DIB"
+        "Agencia DIB",
+        "La Verdad"
       ],
       "enlace": "https://www.ambito.com/informacion-general/el-gobierno-bonaerense-creo-un-plan-provincial-educacion-vial-escuelas-todos-los-niveles-n6332965",
       "teniaImagenLaFuente": true,
@@ -3313,8 +3389,8 @@
         "Radio Mitre",
         "Diario Popular",
         "La Nueva",
-        "La Brújula 24",
         "Bolavip Argentina",
+        "La Brújula 24",
         "El Gráfico"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/champions/hat-trick-nicolo-tresoldi-inter-lautaro-martinez_3_6iyszAyvGb.html",
@@ -3549,84 +3625,6 @@
         "archivo": "fotos-notas/collage-repaso20261012tarde.jpg",
         "credito": "Fotos: Clarín y Acción 5 (Balcarce)"
       }
-    },
-    {
-      "id": "1iqxb89",
-      "titulo": "María Gainza recibe el premio literario de la Academia Argentina de Letras",
-      "copete": "La institución distinguió a la escritora por su libro Un puñado de flechas en el género Narrativa. La ceremonia de entrega de la distinción se programó para el 26 de noviembre.",
-      "cuerpo": "La Academia Argentina de Letras galardonó a la autora María Gainza con el Premio Literario en la categoría Narrativa correspondiente al período 2023-2024. La obra premiada es Un puñado de flechas, editada por Anagrama, que reúne quince perfiles sobre artistas, coleccionistas y detectives vinculados al mundo del arte.\n\nLa elección surgió a partir de una comisión asesora conformada por los escritores Pablo De Santis, Jorge Fernández Díaz y Esther Cross. Su propuesta contó con la ratificación del plenario institucional.\n\nEl volumen combina relatos artísticos con reflexiones acerca de la memoria, la enfermedad y el dinero. Desde la entidad destacaron el estilo formal del material y su aproximación a la crónica y la biografía. El evento de premiación tendrá lugar el 26 de noviembre.",
-      "guion": "Maria Gainza recibe el premio literario de la Academia Argentina de Letras",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "Noticias Argentinas (NA)",
-        "Clarín"
-      ],
-      "enlace": "https://www.infobae.com/cultura/2026/10/12/maria-gainza-gana-el-premio-de-narrativa-de-la-academia-argentina-de-letras/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-12T18:26:36.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-12T21:01:30.197Z",
-      "relevancia": 53,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Academia Argentina de Letras premió a María Gainza.",
-        "La distinción corresponde al género Narrativa 2023-2024.",
-        "El libro galardonado se titula Un puñado de flechas.",
-        "La ceremonia de entrega se programó para el 26 de noviembre."
-      ],
-      "seSabe": [
-        "La Academia Argentina de Letras otorgó el premio literario a María Gainza.",
-        "El libro reconocido se llama Un puñado de flechas y fue publicado por Anagrama.",
-        "La comisión evaluadora estuvo integrada por Pablo De Santis, Jorge Fernández Díaz y Esther Cross.",
-        "La entrega del galardón se llevará a cabo el 26 de noviembre."
-      ],
-      "textoRedes": "La Academia Argentina de Letras distinguió a la escritora María Gainza con su Premio Literario en Narrativa por su libro Un puñado de flechas. La ceremonia de premiación se programó para el 26 de noviembre.",
-      "etiquetas": [
-        "Premio Literario",
-        "Academia Argentina de Letras",
-        "María Gainza",
-        "Narrativa",
-        "Un puñado de flechas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/cultura/2026/10/12/maria-gainza-gana-el-premio-de-narrativa-de-la-academia-argentina-de-letras/",
-          "fecha": "2026-10-12T18:26:36.000Z",
-          "oficial": false,
-          "aporte": "Informó la distinción a María Gainza por Un puñado de flechas y detalló la fecha de la ceremonia de premiación."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/cultura/maria-gainza-gana-el-premio-de-la-academia-argentina-de-letras-por-un-punado-de-flechas-nid12102026/",
-          "fecha": "2026-10-12T19:25:45.000Z",
-          "oficial": false,
-          "aporte": "Mencionó los integrantes de la comisión que propuso el reconocimiento y la editorial del libro."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/cultura/punado-flechas-maria-gainza-gano-premio-academia-argentina-letras_0_o8qZBooMbn.html",
-          "fecha": "2026-10-12T19:39:21.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre los temas que entrelaza la obra literaria."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "maria-gainza-recibe-el-premio-literario-de-la-academia-argentina-de",
-      "foto": {
-        "archivo": "fotos-notas/1iqxb89.jpg",
-        "credito": "Foto: Clarín"
-      }
     }
   ],
   "secciones": [
@@ -3635,10 +3633,10 @@
     "Balcarce",
     "Automovilismo",
     "Política",
+    "Argentina",
     "Economía",
     "Tecnología",
     "Agro",
-    "Argentina",
     "Policiales",
     "Fútbol"
   ],
