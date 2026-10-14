@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T11:42:44.009Z",
+  "generado": "2026-10-14T12:02:19.036Z",
   "notas": [
     {
       "id": "n2srv6",
@@ -9,7 +9,8 @@
       "guion": "La Liga Balcarceña inicia el Torneo Clausura el fin de semana",
       "seccion": "Fútbol",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/tras-dos-suspensiones-se-pone-en-marcha-el-torneo-clausura-de-la-liga-balcarcena",
       "teniaImagenLaFuente": true,
@@ -53,6 +54,13 @@
           "fecha": "2026-10-14T11:31:59.000Z",
           "oficial": false,
           "aporte": "Detalló la programación de la primera fecha del Torneo Clausura de la Liga Balcarceña de Fútbol tras dos suspensiones."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/deportes/14329-nueva-reprogramacion-de-la-fecha-inaugural-del-clausura-del-oficial/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la reprogramación de la fecha inaugural del torneo Clausura masculino y femenino de la Liga Balcarceña de Fútbol, con los días, horarios y sedes de los partidos."
         }
       ],
       "antecedentes": [
@@ -218,6 +226,73 @@
       }
     },
     {
+      "id": "5m60mn",
+      "titulo": "El Gobierno oficializa préstamos del BID por mil trecientos millones de dólares",
+      "copete": "El Ejecutivo nacional formalizó la llegada de fondos internacionales por US$1300 millones destinados a cubrir subsidios al gas y a un programa de modernización de la administración pública.",
+      "cuerpo": "El Gobierno nacional oficializó este miércoles dos créditos otorgados por el Banco Interamericano de Desarrollo que suman un total de US$1300 millones.\n\nEl primer financiamiento, por US$500 millones, se destinará a respaldar el programa de asistencia en los consumos de gas para hogares vulnerables y usuarios de garrafas. En tanto, el segundo acuerdo contempla hasta US$800 millones para la modernización de la administración pública, de los cuales se recibirán US$300 millones en esta primera etapa.",
+      "guion": "El Gobierno oficializa préstamos del BID por mil trecientos millones de dólares",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/10/14/el-gobierno-oficializo-prestamos-del-bid-por-us1300-millones-para-financiar-subsidios-al-gas-y-la-reforma-del-estado/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T10:47:14.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T12:01:33.900Z",
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El BID otorgó financiamiento por US$1300 millones al país.",
+        "Una parte de los fondos se destina a subsidios energéticos.",
+        "Otra fracción financia la modernización de la administración pública.",
+        "La medida se oficializó mediante decretos publicados este miércoles."
+      ],
+      "seSabe": [
+        "El Gobierno aprobó dos préstamos del BID por un total de US$1300 millones.",
+        "Los fondos se distribuyen entre subsidios energéticos y la modernización del Estado.",
+        "La medida se oficializó a través de los decretos 1177 y 1178."
+      ],
+      "textoRedes": "El Gobierno nacional oficializó la aceptación de dos créditos del BID por US$1300 millones para financiar subsidios energéticos y la modernización de la administración pública.",
+      "etiquetas": [
+        "Gobierno nacional",
+        "BID",
+        "préstamos",
+        "subsidios energéticos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/14/el-gobierno-oficializo-prestamos-del-bid-por-us1300-millones-para-financiar-subsidios-al-gas-y-la-reforma-del-estado/",
+          "fecha": "2026-10-14T10:47:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó los montos, los destinos de los créditos, los funcionarios firmantes y los detalles técnicos de los préstamos."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/aprueban-prestamos-del-bid-por-hasta-us-1-300-millones-para-financiar-subsidios-y-reforma-del-estado_a6acf6adb8298ee386b292861",
+          "fecha": "2026-10-14T11:42:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional sobre el hecho."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-oficializa-prestamos-del-bid-por-mil-trecientos-millones",
+      "foto": {
+        "archivo": "fotos-notas/5m60mn.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "clima20261014",
       "propia": "clima",
       "titulo": "Clima en Balcarce: 60% de probabilidad de lluvia, con mínima de 10° y máxima de 16°",
@@ -275,69 +350,73 @@
       "slug": "clima-en-balcarce-60-de-probabilidad-de-lluvia-con-minima-de-10-y"
     },
     {
-      "id": "pdqhm3",
-      "titulo": "Lisandro Mart\\u00in critica a la directiva del Manchester United y Rooney le responde",
-      "copete": "El defensor argentino cuestionó la falta de refuerzos tras caer frente al Atlético de Madrid en la Champions League. El exdelantero le contestó que sus dichos resultaron desubicados.",
-      "cuerpo": "El zaguero Lisandro Mart\\u00in apuntó contra la conducción del Manchester United luego de la derrota por dos goles ante el Atlético de Madrid en el certamen europeo. El defensor argentino reclamó mayor inversión en incorporaciones y cuestionó al director deportivo Jason Wilcox.\n\nTras estas declaraciones, el exdelantero Wayne Rooney cruzó al futbolista y seòuró que se excedió en sus palabras, además de criticar su rendimiento dentro del campo de juego. El máximo goleador histórico de la institución advirtió que el zaguero le faltó el respeto a sus compañeros al sugerir que el plantel no posee el nivel necesario.",
-      "guion": "Lisandro Mart\\u00in critica a la directiva del Manchester United y Rooney le responde",
-      "seccion": "Fútbol",
+      "id": "132b801",
+      "titulo": "El Banco Central actualiza el techo de la banda cambiaria para noviembre",
+      "copete": "El límite superior del dólar mayorista llegará a 1.989,12 pesos al cierre de noviembre. El cálculo responde a la inflación de septiembre informada por el Indec.",
+      "cuerpo": "El Banco Central ajustará los extremos de la banda cambiaria para noviembre tomando como referencia la inflación de septiembre, que se ubicó en el 1,93% según los datos del Indec. Con este esquema, el techo de la franja llegará a 1.989,12 pesos en la última jornada de dicho mes.\n\nEl sistema funciona de forma autónoma siempre que la cotización se mantenga dentro de los límites establecidos. El organismo monetario solo interviene si la demanda empuja el precio por encima del tope o si cae por debajo del piso.\n\nEl dólar mayorista cerró a 1.515,85 pesos el martes, lo que deja un margen amplio respecto al límite máximo proyectado. Los analistas atribuyen la estabilidad cambiaria a una oferta firme impulsada por las emisiones de deuda corporativa y el financiamiento privado.",
+      "guion": "El Banco Central actualiza el techo de la banda cambiaria para noviembre",
+      "seccion": "Economía",
       "medios": [
-        "Clarín",
-        "Radio Mitre"
+        "Infobae",
+        "iProUP"
       ],
-      "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
+      "enlace": "https://www.infobae.com/economia/2026/10/14/a-cuanto-puede-llegar-el-dolar-en-noviembre-sin-que-intervenga-el-gobierno-segun-la-nueva-banda-cambiaria/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T09:00:58.000Z",
+      "fecha": "2026-10-14T10:14:54.000Z",
       "sinFecha": false,
-      "visto": "2026-10-14T11:42:03.451Z",
-      "relevancia": 68,
+      "visto": "2026-10-14T12:01:33.900Z",
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Lisandro Mart\\u00in cuestionó a los dirigentes del club inglés.",
-        "El equipo sufrió una derrota frente al Atlético de Madrid.",
-        "Wayne Rooney cruzó al defensor por sus declaraciones públicas."
+        "El techo de la banda cambiaria llegará a 1.989,12 pesos en noviembre.",
+        "El cálculo se basa en la inflación de septiembre, que fue del 1,93%.",
+        "El dólar mayorista cerró a 1.515,85 pesos este martes.",
+        "El Banco Central interviene si la cotización supera los límites permitidos."
       ],
       "seSabe": [
-        "El Manchester United perdió dos a cero contra el Atlético de Madrid por la Champions League.",
-        "Lisandro Mart\\u00in criticó públicamente a la dirigencia y al director deportivo Jason Wilcox.",
-        "Wayne Rooney respondió que las declaraciones del argentino fueron desubicadas y criticó su rendimiento deportivo."
+        "La inflación de septiembre fue del 1,93% según el Indec.",
+        "El techo de la banda cambiaria para octubre se ubica en 1.950,97 pesos.",
+        "El techo de la banda cambiaria para noviembre llegará a 1.989,12 pesos.",
+        "El dólar mayorista cerró a 1.515,85 pesos el martes."
       ],
-      "textoRedes": "Lisandro Mart\\u00in criticó a la dirigencia del Manchester United tras la derrota en la Champions League y Wayne Rooney le contestó con dureza.",
+      "textoRedes": "El Banco Central fijó en 1.989,12 pesos el techo de la banda cambiaria para el cierre de noviembre, un cálculo basado en la inflación de septiembre que se ubicó en el 1,93% según el Indec.",
       "etiquetas": [
-        "Lisandro Mart\\u00in",
-        "Manchester United",
-        "Wayne Rooney",
-        "Champions League"
+        "dólar",
+        "Banco Central",
+        "bandas cambiarias",
+        "inflación",
+        "Indec",
+        "economía"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
-          "fecha": "2026-10-14T09:00:58.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/14/a-cuanto-puede-llegar-el-dolar-en-noviembre-sin-que-intervenga-el-gobierno-segun-la-nueva-banda-cambiaria/",
+          "fecha": "2026-10-14T10:14:54.000Z",
           "oficial": false,
-          "aporte": "Detalló los dichos de Lisandro Mart\\u00in y la respuesta de Wayne Rooney tras el partido."
+          "aporte": "Aportó todos los datos sobre el funcionamiento de las bandas cambiarias, la inflación de septiembre, los valores proyectados del dólar y la situación del mercado."
         },
         {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/el-cruce-entre-lisandro-martinez-con-un-historico-del-manchester-united-en-medio-de-la-tension-con-el-club-sus-actuaciones-no-estan-siendo-buenas/",
-          "fecha": "2026-10-14T11:31:05.000Z",
+          "medio": "iProUP",
+          "enlace": "https://www.iproup.com/economia-digital/72312-a-cuanto-puede-llegar-el-dolar-en-noviembre-sin-que-intervenga-el-bcra",
+          "fecha": "2026-10-14T11:41:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre la derrota del equipo inglés en la segunda fecha de la Champions League."
+          "aporte": "No aportó información adicional al no incluir texto en el resumen."
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "lisandro-mart-u00in-critica-a-la-directiva-del-manchester-united-y",
+      "slug": "el-banco-central-actualiza-el-techo-de-la-banda-cambiaria-para",
       "foto": {
-        "archivo": "fotos-notas/pdqhm3.jpg",
-        "credito": "Foto: Clarín"
+        "archivo": "fotos-notas/132b801.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -1033,13 +1112,13 @@
       "seccion": "Economía",
       "medios": [
         "Infobae",
-        "Clarín",
         "Perfil",
         "TN (Todo Noticias)",
         "A24",
         "C5N",
         "Noticias Argentinas (NA)",
-        "Ámbito"
+        "Ámbito",
+        "Clarín"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/13/el-banco-central-compro-us291-millones-el-monto-mas-alto-desde-fines-de-julio/",
       "teniaImagenLaFuente": true,
@@ -1650,7 +1729,6 @@
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "El Día",
         "El Eco de Tandil"
       ],
       "enlace": "https://noticiasargentinas.com/politica/karina-milei-encabeza-una-nueva-mesa-politica-para-acelerar-la-agenda-legislativa_a6ace466506650845db718598",
@@ -1786,7 +1864,6 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "InfoRegión",
-        "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
         "Infobae",
@@ -2063,6 +2140,8 @@
       "medios": [
         "TN (Todo Noticias)",
         "Radio Mitre",
+        "El Día",
+        "Página/12",
         "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/13/efecto-colapinto-alpine-festejo-los-5-millones-de-seguidores-en-instagram-y-destaco-al-piloto-argentino/",
@@ -2070,7 +2149,7 @@
       "fecha": "2026-10-13T13:39:14.000Z",
       "sinFecha": false,
       "visto": "2026-10-13T17:31:54.499Z",
-      "relevancia": 70,
+      "relevancia": 90,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2146,6 +2225,151 @@
       "foto": {
         "archivo": "fotos-notas/vdzcwk.jpg",
         "credito": "Foto: Minuto Uno"
+      }
+    },
+    {
+      "id": "zrbtlm",
+      "titulo": "El fiscal Pollicita pide investigar transferencias a Claudio Tapia",
+      "copete": "La Justicia federal solicitó nuevas medidas de prueba para esclarecer el origen de fondos recibidos por el titular de la Asociación del Fútbol Argentino por parte de la FIFA y del gremio de Camioneros.",
+      "cuerpo": "El fiscal federal Gerardo Pollicita requirió nuevas diligencias judiciales en la causa por presunto enriquecimiento ilícito contra el presidente de la Asociación del Fútbol Argentino, Claudio Tapia. La presentación fue entregada al juez Ariel Lijo e incluye quince medidas de prueba orientadas a esclarecer acreditaciones bancarias no consignadas en sus declaraciones juradas. Entre los movimientos bajo lupa figuran tres giros enviados por la FIFA desde Suiza que totalizan casi 190 mil dólares entre 2018 y 2020, además de 37 depósitos efectuados por el Sindicato de Choferes de Camiones entre 2016 y 2019. Asimismo, el requerimiento solicita levantar el secreto fiscal y bancario de su exesposa, Paola Moyano, y exige explicaciones a la entidad futbolística sobre viáticos y transferencias hacia cuentas del dirigente deportivo.",
+      "guion": "El fiscal Pollicita pide investigar transferencias a Claudio Tapia",
+      "seccion": "Fútbol",
+      "medios": [
+        "Clarín",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "A24",
+        "Crónica",
+        "Radio Mitre",
+        "El Día",
+        "Infobae",
+        "La Voz del Pueblo"
+      ],
+      "enlace": "https://tn.com.ar/politica/2026/10/13/causa-por-presunto-enriquecimiento-ilicito-la-fiscalia-pone-la-lupa-sobre-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T13:13:17.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T19:31:43.997Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La fiscalía impulsa nuevas medidas en la causa contra Claudio Tapia",
+        "Piden informes a la FIFA por transferencias en dólares",
+        "Investigan depósitos del Sindicato de Choferes de Camiones",
+        "Requieren levantar el secreto fiscal de la exesposa del dirigente"
+      ],
+      "seSabe": [
+        "El fiscal federal Gerardo Pollicita solicitó 15 medidas de prueba en la causa contra Claudio Tapia.",
+        "Se investigan tres transferencias de la FIFA que suman 189.577,18 dólares.",
+        "El Sindicato de Choferes de Camiones debe explicar 37 depósitos realizados entre 2016 y 2019.",
+        "Se pidió levantar el secreto fiscal y bancario de Paola Moyano, exesposa del titular de la AFA."
+      ],
+      "noConfirmado": [
+        "El origen exacto de los fondos y el motivo de las acreditaciones bancarias cuestionadas",
+        "La resolución del juez Ariel Lijo sobre las medidas de prueba solicitadas por la fiscalía"
+      ],
+      "etiquetas": [
+        "Claudio Tapia",
+        "AFA",
+        "Justicia federal",
+        "Gerardo Pollicita",
+        "FIFA",
+        "Camioneros"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/10/13/causa-por-presunto-enriquecimiento-ilicito-la-fiscalia-pone-la-lupa-sobre-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia/",
+          "fecha": "2026-10-13T13:13:17.000Z",
+          "oficial": false,
+          "aporte": "Detalló los montos de las transferencias de la FIFA y los depósitos del gremio de Camioneros."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/justicia-detecto-giros-plata-fifa-gremio-camioneros-chiqui-tapia-pidio-informacion-suiza_0_LmvBjhOh5c.html",
+          "fecha": "2026-10-13T14:10:32.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el pedido de exhorto a Suiza y el levantamiento del secreto fiscal de Paola Moyano."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/piden-investigar-giros-de-dinero-de-la-fifa-y-el-sindicato-de-camioneros-a-chiqui-tapia-nid13102026/",
+          "fecha": "2026-10-13T14:36:22.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presentación del fiscal Pollicita ante el juez Ariel Lijo solicitando 15 medidas de prueba."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/judiciales/la-justicia-detecto-giros-de-plata-de-la-fifa-y-el-gremio-de-camioneros-a-chiqui-tapia-y-pidio-informes-a-suiza.phtml",
+          "fecha": "2026-10-13T16:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/la-fiscalia-pidio-ampliar-los-informes-los-ingresos-chiqui-tapia-la-causa-presunto-enriquecimiento-ilicito-n1605914",
+          "fecha": "2026-10-13T18:31:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/enriquecimiento-ilicito-justicia-pidio-investigar-origenes-de-acreditaciones-bancarias-recibidas-por-chiqui-tapia/",
+          "fecha": "2026-10-13T16:04:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/investigan-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia-por-la-causa-de-presunto-enriquecimiento-ilicito/",
+          "fecha": "2026-10-13T16:52:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/la-fifa-y-el-sindicato-de-camioneros-a-chiqui-tapia-en-la-mira-por-giros-de-620-mil-dolares-politica-y-economia_1791898260",
+          "fecha": "2026-10-13T15:24:13.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/causa-por-presunto-enriquecimiento-ilicito-la-fiscalia-pone-la-lupa-sobre-transferencias-de-la-fifa-y-camioneros-a-chiqui-tapia",
+          "fecha": "2026-10-13T15:10:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/judiciales/2026/10/13/enriquecimiento-ilicito-piden-enviar-un-exhorto-a-suiza-en-la-causa-que-investiga-a-claudio-chiqui-tapia/",
+          "fecha": "2026-10-13T13:22:02.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uc2dz4",
+          "titulo": "Ercolini procesa a Roberto Baratta por enriquecimiento ilícito",
+          "fecha": "2026-10-07T11:39:43.000Z",
+          "ruta": "/nota/ercolini-procesa-a-roberto-baratta-por-enriquecimiento-ilicito-uc2dz4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 10 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-fiscal-pollicita-pide-investigar-transferencias-a-claudio-tapia",
+      "foto": {
+        "archivo": "fotos-notas/zrbtlm.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -2444,13 +2668,13 @@
         "LU9 Mar del Plata",
         "Agencia DIB",
         "Infobae",
-        "La Verdad",
         "La Opinión",
         "La Voz del Pueblo",
         "QZ Noticias (Mar del Plata)",
         "La Noticia 1",
         "Diario Popular",
-        "Ecos Diarios (Necochea)"
+        "Ecos Diarios (Necochea)",
+        "La Verdad"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/la-ansv-sanciono-a-mas-de-1800-conductores-por-circular-por-las-banquinas-en-las-autopistas-del-amba",
       "teniaImagenLaFuente": true,
@@ -2849,17 +3073,17 @@
       "medios": [
         "Diario La Vanguardia",
         "El Eco de Tandil",
-        "Campeones",
         "Motorsport",
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
-        "Ámbito",
         "TyC Sports",
+        "C5N",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
@@ -2870,10 +3094,10 @@
         "0223 (Mar del Plata)",
         "Página/12",
         "Minuto Uno",
-        "C5N",
         "Crónica",
+        "Campeones",
         "La Nueva",
-        "El Día",
+        "Ámbito",
         "Córdoba Competición"
       ],
       "enlace": "https://es.motorsport.com/f1/news/formula1-vuelve-africa-ruanda/10864826/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
@@ -3107,10 +3331,10 @@
   "temas": [],
   "clima": {
     "ahora": {
-      "temp": 11,
-      "sensacion": 9,
-      "humedad": 92,
-      "viento": 13,
+      "temp": 12,
+      "sensacion": 10,
+      "humedad": 90,
+      "viento": 14,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3471,7 +3695,7 @@
       "id": "1n50j6o",
       "titulo": "Murió Jorge ‘Locomotora’ Castro, figura del boxeo argentino",
       "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "1o3t7bf",
@@ -3492,28 +3716,22 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "urflid",
-      "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1pu4can",
       "titulo": "Vialidad: un exfuncionario condenado junto a Cristina…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "1cwgmh7",
-      "titulo": null,
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"menores de edad\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "115hicz",
       "titulo": "El dolor de Graciela Alfano al visitar la casa de su…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"asesinato\""
+    },
+    {
+      "id": "urflid",
+      "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
   "esperandoCuerpo": 2

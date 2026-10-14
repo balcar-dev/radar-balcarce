@@ -1,7 +1,24 @@
 {
- "generado": "2026-10-14T11:42:44.009Z",
+ "generado": "2026-10-14T12:02:19.036Z",
  "intentosMaximos": 3,
  "notas": [
+  {
+   "id": "97f98g",
+   "titulo": "\"Un día\": el musical con el que el Instituto Adventista celebra sus 40 años",
+   "copete": "El Coro del Instituto Adventista Balcarce presentará este viernes el musical \"Un día\", en una función prevista para las 20 en el polideportivo de la institución. La propuesta musical estará protagonizada por el coro del establecimiento educativ",
+   "seccion": "Balcarce",
+   "fecha": "2026-10-14T11:54:19.000Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+     "fecha": "2026-10-14T11:54:19.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 1 problema (copia): copia 18 palabras seguidas del original: decilo con otras palabras; sin esas oraciones quedan 66 palabras",
+   "maximo": 3
+  },
   {
    "id": "zjtene",
    "titulo": "Moriatis: \"Los pilotos te dicen 'tendríamos que ir' a Balcarce\"",
@@ -22,28 +39,6 @@
    ],
    "intentos": 1,
    "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
-   "id": "132b801",
-   "titulo": "A cuánto puede llegar el dólar en noviembre sin que intervenga el Gobierno según la nueva banda cambiaria",
-   "copete": "El mercado cambiario argentino continúa operando en un esquema de bandas, que pone un techo un piso sobre el cual el dólar puede moverse libremente. Esto significa que la cotización oficial puede moverse dentro de ciertos límites establecidos sin que el Banco Central tenga la…",
-   "seccion": "Economía",
-   "fecha": "2026-10-14T10:14:54.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobae",
-     "enlace": "https://www.infobae.com/economia/2026/10/14/a-cuanto-puede-llegar-el-dolar-en-noviembre-sin-que-intervenga-el-gobierno-segun-la-nueva-banda-cambiaria/",
-     "fecha": "2026-10-14T10:14:54.000Z"
-    },
-    {
-     "medio": "iProUP",
-     "enlace": "https://www.iproup.com/economia-digital/72312-a-cuanto-puede-llegar-el-dolar-en-noviembre-sin-que-intervenga-el-bcra",
-     "fecha": "2026-10-14T11:41:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 4 problemas (numero, repite, copia): el cuerpo dice 40 y la fuente no lo dice; sin esas oraciones quedan 45 palabras",
    "maximo": 3
   }
  ]
