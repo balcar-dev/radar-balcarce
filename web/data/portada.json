@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T20:34:19.070Z",
+  "generado": "2026-10-14T20:38:51.577Z",
   "notas": [
     {
       "id": "1s8weuc",
@@ -83,6 +83,102 @@
       "foto": {
         "archivo": "fotos-notas/1s8weuc.jpg",
         "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "17foa6",
+      "titulo": "Pablo Quirno firma en Washington un protocolo clave para el acuerdo comercial",
+      "copete": "El canciller suscribió un documento junto al representante comercial estadounidense con el objetivo de acelerar el aval parlamentario. La medida busca dar previsibilidad a las ventas nacionales al mercado norteamericano.",
+      "cuerpo": "El documento fue rubricado junto al representante comercial estadounidense, Jamieson Greer, durante la visita oficial del presidente Javier Milei.\n\nSegún informó el funcionario, el entendimiento apunta a facilitar la aprobación parlamentaria en Buenos Aires y otorgar mayor previsibilidad a las exportaciones argentinas. El paquete bilateral contempla la eliminación de aranceles para 1.675 productos nacionales y la ampliación de la cuota de carne bovina a 100.000 toneladas durante 2026.\n\nEl intercambio comercial hacia ese destino sumó 6.570 millones de dólares entre enero y agosto de este año, lo que representa un incremento interanual del 35%. A principios de mes, el propio Quirno había pedido inversiones a los empresarios durante un mensaje enviado al Coloquio de IDEA.",
+      "guion": "Pablo Quirno firma en Washington un protocolo clave para el acuerdo comercial",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "Clarín",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.clarin.com/economia/washington-quirno-firmo-protocolo-facilitar-aprobacion-acuerdo-comercial-eeuu-congreso_0_EerBxgJ0Lr.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T20:05:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T20:38:40.052Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El canciller Pablo Quirno firmó un protocolo adicional en Washington.",
+        "El documento apunta a lograr la aprobación del acuerdo en el Congreso.",
+        "Las ventas al mercado estadounidense crecieron un 35% interanual hasta agosto.",
+        "La cuota para la carne vacuna se elevó a 100.000 toneladas."
+      ],
+      "seSabe": [
+        "El canciller Pablo Quirno firmó un protocolo adicional en Washington junto al representante comercial estadounidense, Jamieson Greer, según informó el Gobierno.",
+        "El acuerdo busca acelerar la aprobación parlamentaria del entendimiento comercial bilateral, de acuerdo con los registros oficiales.",
+        "Las exportaciones hacia ese país totalizaron 6.570 millones de dólares entre enero y agosto de 2026.",
+        "La cuota de exportación para la carne argentina pasó de 20.000 a 100.000 toneladas."
+      ],
+      "noConfirmado": [
+        "El texto completo del documento firmado en Washington todavía no fue difundido oficialmente."
+      ],
+      "textoRedes": "El canciller Pablo Quirno firmó en Washington un protocolo adicional al acuerdo comercial con Estados Unidos para acelerar su tratamiento en el Congreso. Las ventas al mercado norteamericano crecieron un 35% interanual entre enero y agosto.",
+      "etiquetas": [
+        "Pablo Quirno",
+        "Estados Unidos",
+        "acuerdo comercial",
+        "exportaciones",
+        "Congreso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/washington-quirno-firmo-protocolo-facilitar-aprobacion-acuerdo-comercial-eeuu-congreso_0_EerBxgJ0Lr.html",
+          "fecha": "2026-10-14T20:05:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/10/14/argentina-firmo-con-eeuu-un-protocolo-adicional-para-fortalecer-el-acuerdo-bilateral-sobre-comercio-e-inversiones-reciprocas/",
+          "fecha": "2026-10-14T20:29:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/en-washington-quirno-firmo-un-protocolo-adicional-para-acelerar-la-aprobacion-del-acuerdo-comercial-nid14102026/",
+          "fecha": "2026-10-14T20:10:07.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/14/la-argentina-y-eeuu-firmaron-un-protocolo-para-avanzar-con-el-acuerdo-comercial-y-enviarlo-al-congreso/",
+          "fecha": "2026-10-14T20:07:45.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1b5bal2",
+          "titulo": "Pablo Quirno pide a los empresarios inversiones y destaca la apertura comercial",
+          "fecha": "2026-10-01T12:32:21.000Z",
+          "ruta": "/nota/pablo-quirno-pide-a-los-empresarios-inversiones-y-destaca-la-apertura-1b5bal2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pablo-quirno-firma-en-washington-un-protocolo-clave-para-el-acuerdo",
+      "foto": {
+        "archivo": "fotos-notas/17foa6.jpg",
+        "credito": "Foto: La Nación"
       }
     },
     {
@@ -342,16 +438,18 @@
       "guion": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
       "seccion": "Economía",
       "medios": [
+        "La Nación",
         "Clarín",
-        "El Cronista",
-        "A24"
+        "A24",
+        "Crónica",
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.clarin.com/economia/riesgo-pais-vuelve-superar-600-puntos-medio-turbulencias-globales_0_QoQoxCdf12.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T17:55:18.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T20:31:55.711Z",
-      "relevancia": 69,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -442,7 +540,7 @@
       "fecha": "2026-10-14T17:34:56.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T19:32:01.897Z",
-      "relevancia": 53,
+      "relevancia": 43,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -501,80 +599,6 @@
       }
     },
     {
-      "id": "1cu2633",
-      "titulo": "La Ciudad avanza con la licitación para construir la Línea F del subte",
-      "copete": "La administración porteña abrió las ofertas para el trazado de 12 estaciones entre Barracas y Palermo. La obra demandará una inversión millonaria y prevén adjudicarla antes de fin de año.",
-      "cuerpo": "La Ciudad de Buenos Aires avanza con la licitación para la construcción de la Línea F del subte, un proyecto que contempla un recorrido de 12 estaciones entre Barracas y Palermo. La iniciativa recibió dos ofertas de consorcios nacionales e internacionales, según informó el ministro de Infraestructura y Movilidad, Pablo Bereciartua.\n\nEl funcionario indicó que la intención es definir al contratista antes de que termine el año para comenzar los trabajos en enero de 2027. La obra demandará una inversión de 1.500 millones de dólares, de acuerdo con los datos difundidos por la administración porteña, aunque un medio consignó una cifra aproximada de 1.350 millones de dólares.\n\nEl trazado comenzará en el barrio de Barracas y prevé un plazo estimado de ejecución de seis años.",
-      "guion": "La Ciudad avanza con la licitación para construir la Linea F del subte",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "Crónica"
-      ],
-      "enlace": "https://www.perfil.com/noticias/ciudad-de-buenos-aires/linea-f-la-ciudad-de-buenos-aires-avanza-con-la-licitacion-del-subte-para-unir-barracas-y-palermo.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T17:33:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T20:31:55.711Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Ciudad de Buenos Aires licita la construcción de la Línea F.",
-        "El trazado tendrá 12 estaciones entre Barracas y Palermo.",
-        "Prevén elegir al contratista antes de fin de año y comenzar en enero.",
-        "La inversión estimada ronda los 1.500 millones de dólares."
-      ],
-      "textoRedes": "La Ciudad de Buenos Aires avanza con la licitación para construir la Línea F del subte con un recorrido de 12 estaciones entre Barracas y Palermo y una inversión millonaria.",
-      "etiquetas": [
-        "Línea F",
-        "subte",
-        "Ciudad de Buenos Aires",
-        "licitación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/ciudad-de-buenos-aires/linea-f-la-ciudad-de-buenos-aires-avanza-con-la-licitacion-del-subte-para-unir-barracas-y-palermo.phtml",
-          "fecha": "2026-10-14T17:33:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el proyecto, las declaraciones del ministro Pablo Bereciartua y el monto de la inversión de USD 1.500 millones."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/sociedad/2026/10/14/subte-linea-f-cuando-comenzaran-las-obras-que-recorrido-tendra-y-cuanto-tardara-su-construccion/",
-          "fecha": "2026-10-14T17:54:33.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la apertura de la licitación para la Línea F y el monto de la inversión."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/subte-linea-f-inicio-obras-recorrido-construccion/",
-          "fecha": "2026-10-14T19:29:17.000Z",
-          "oficial": false,
-          "aporte": "Indicó que las obras están proyectadas para los primeros meses de 2027 con un plazo de seis años y una inversión aproximada de 1.350 millones de dólares."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ctsl0u",
-          "titulo": "Dos consorcios compiten en la licitación para construir la Línea F",
-          "fecha": "2026-10-02T19:19:35.000Z",
-          "ruta": "/nota/dos-consorcios-compiten-en-la-licitacion-para-construir-la-linea-f-1ctsl0u"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-ciudad-avanza-con-la-licitacion-para-construir-la-linea-f-del-subte"
-    },
-    {
       "id": "eumyqk",
       "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "copete": "El intendente de San Nicolás, Santiago Passaglia, desafió al Gobierno nacional a eliminar la Tasa de Seguridad e Higiene a cambio de que la Nación deje de cobrar el IVA en obras y servicios públicos municipales.",
@@ -586,8 +610,8 @@
         "Agencia DIB",
         "Infobae",
         "TN (Todo Noticias)",
-        "El Día",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "El Día"
       ],
       "enlace": "https://noticiasargentinas.com/economia/san-nicolas-propuso-eliminar-seguridad-e-higiene-si-nacion-deja-de-cobrar-iva_a6acfb3f58298ee386b33f776",
       "teniaImagenLaFuente": true,
@@ -676,9 +700,9 @@
         "Infobae",
         "Perfil",
         "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
         "InfoRegión",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Noticias Argentinas (NA)",
         "iProUP"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/crece-la-morosidad-empresarial-casi-59000-companias-tienen-problemas-para-pagar-sus-deudas/",
@@ -885,11 +909,13 @@
       "medios": [
         "LU9 Mar del Plata",
         "QZ Noticias (Mar del Plata)",
+        "Agencia DIB",
         "Diputados Bonaerenses",
-        "Ámbito",
         "El Día",
         "0221",
-        "El Marplatense"
+        "La Verdad",
+        "El Marplatense",
+        "Ámbito"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
       "teniaImagenLaFuente": true,
@@ -972,8 +998,8 @@
       "medios": [
         "Clarín",
         "Perfil",
-        "La Nueva",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
       "enlace": "https://www.clarin.com/politica/gildus-increible-videojuego-hicieron-formosa-gildo-insfran-pelea-leon-motosierra_0_iEWCfkGO14.html",
       "teniaImagenLaFuente": true,
@@ -1131,8 +1157,8 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "A24",
-        "iProfesional"
+        "iProfesional",
+        "A24"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -1200,95 +1226,6 @@
       "foto": {
         "archivo": "fotos-notas/5635fb.jpg",
         "credito": "Foto: Perfil"
-      }
-    },
-    {
-      "id": "bpl7gu",
-      "titulo": "La Selección Argentina negocia dos amistosos con rivales sudamericanos",
-      "copete": "Tras descartar la gira por Asia, la Asociación del Fútbol Argentino gestiona partidos para la ventana de noviembre. El clásico ante Uruguay en La Plata asoma como la opción más firme.",
-      "cuerpo": "La Selección Argentina reconfigura su agenda para la última ventana internacional del año, prevista entre el 9 y el 17 de noviembre de 2026. Al cancelarse el viaje a territorio asiático, la Asociación del Fútbol Argentino encamina gestiones para disputar dos amistosos contra seleccionados del continente.\n\nEl cruce más avanzado es frente a Uruguay, con la posibilidad de concretarse en el Estadio Único de La Plata. Para el segundo compromiso, el cuerpo técnico que encabeza Lionel Scaloni analiza recibir a otro rival sudamericano en el país o jugar una revancha en Montevideo.",
-      "guion": "La Selección Argentina negocia dos amistosos con rivales sudamericanos",
-      "seccion": "Fútbol",
-      "medios": [
-        "0223 (Mar del Plata)",
-        "Minuto Uno",
-        "Doble Amarilla"
-      ],
-      "enlace": "https://www.dobleamarilla.com.ar/selecciones/caida-la-gira-por-asia--la-seleccion-argentina-comienza-a-negociar-para-jugar-con-rivales-sudamericanos-en-la-doble-fecha-fifa-de-noviembre_a6acf892c8531709378084cde",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T14:04:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T17:01:50.805Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La AFA descarta la gira por Asia para la ventana de noviembre.",
-        "El primer amistoso encaminado es frente a Uruguay.",
-        "El Estadio Único de La Plata asoma como la sede principal.",
-        "El cuerpo técnico busca rivales para el segundo partido."
-      ],
-      "seSabe": [
-        "La ventana FIFA se desarrollará del 9 al 17 de noviembre de 2026.",
-        "La AFA negocia amistosos contra seleccionados sudamericanos.",
-        "El clásico frente a Uruguay es la opción más avanzada.",
-        "El Estadio Único de La Plata aparece como la principal sede."
-      ],
-      "noConfirmado": [
-        "Todavía no existe una confirmación oficial del encuentro ante Uruguay.",
-        "El rival y la sede del segundo partido permanecen sin definir."
-      ],
-      "textoRedes": "La Selección Argentina reprograma sus compromisos de noviembre tras caer la gira por Asia y negocia amistosos frente a rivales sudamericanos, con Uruguay como principal opción para jugar en La Plata.",
-      "etiquetas": [
-        "Seleccion Argentina",
-        "Fecha FIFA",
-        "AFA",
-        "Lionel Scaloni",
-        "Uruguay"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/selecciones/caida-la-gira-por-asia--la-seleccion-argentina-comienza-a-negociar-para-jugar-con-rivales-sudamericanos-en-la-doble-fecha-fifa-de-noviembre_a6acf892c8531709378084cde",
-          "fecha": "2026-10-14T14:04:45.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la AFA comenzó a negociar con Uruguay tras caer la gira por Asia."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-14-12-4-0-se-cayo-la-gira-por-asia-y-la-seleccion-argentina-prepara-un-bombazo-para-noviembre",
-          "fecha": "2026-10-14T15:06:00.000Z",
-          "oficial": false,
-          "aporte": "Informó el período de la ventana internacional y las alternativas para el segundo partido."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/se-cayo-la-gira-asia-la-seleccion-argentina-jugaria-un-clasico-doble-noviembre-n6333647",
-          "fecha": "2026-10-14T16:31:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el Estadio Único de La Plata es la principal sede para el duelo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1nlg6jl",
-          "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
-          "fecha": "2026-09-19T03:00:00.000Z",
-          "ruta": "/nota/lionel-messi-vuelve-a-jugar-en-inter-miami-tras-su-despedida-de-la-1nlg6jl"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-argentina-negocia-dos-amistosos-con-rivales-sudamericanos",
-      "foto": {
-        "archivo": "fotos-notas/bpl7gu.jpg",
-        "credito": "Foto: 0223 (Mar del Plata)"
       }
     },
     {
@@ -1818,10 +1755,10 @@
       "seccion": "Política",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "La Verdad",
         "El Marplatense",
         "El Eco de Tandil",
-        "Agencia DIB",
-        "La Verdad"
+        "Agencia DIB"
       ],
       "enlace": "https://dib.com.ar/sociedad/la-provincia-adjudico-medicamentos-trasplantes-15760-millones-n56476",
       "teniaImagenLaFuente": true,
@@ -2025,107 +1962,6 @@
       }
     },
     {
-      "id": "1kavxj3",
-      "titulo": "Sebastián Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
-      "copete": "El delantero colombiano terminó con una fuerte inflamación en el tobillo derecho tras la derrota frente a Vasco da Gama. El cuerpo técnico aguarda los estudios médicos de cara a la revancha por la Copa Sudamericana.",
-      "cuerpo": "Sebastián Villa sufrió un inconveniente físico en el tobillo derecho durante la caída de Boca Juniors por 1-0 ante Vasco da Gama en La Bombonera, por el partido de ida de las semifinales de la Copa Sudamericana 2026.\n\nEl delantero ingresó a los 13 minutos del segundo tiempo y se lastimó en una de sus primeras intervenciones ofensivas al ejecutar un remate de zurda. Pese a continuar en el campo hasta el final, el atacante se retiró del estadio con dificultades para caminar.\n\nEl director técnico Rodolfo Arruabarrena confirmó en conferencia de prensa que la articulación presentaba una hinchazón importante y señaló que aguardan los resultados de las evaluaciones médicas. Su participación en el encuentro de vuelta, previsto para el próximo martes en Río de Janeiro, permanece en duda.",
-      "guion": "Sebastian Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
-      "seccion": "Fútbol",
-      "medios": [
-        "El Destape",
-        "Perfil",
-        "TyC Sports",
-        "Olé",
-        "Crónica",
-        "Canal 26",
-        "Diario Popular",
-        "Minuto Uno"
-      ],
-      "enlace": "https://www.minutouno.com/deportes/preocupacion-boca-sebastian-villa-sufrio-una-lesion-el-tobillo-y-se-hara-estudios-n6333481",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:45:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T14:31:29.582Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Sebastián Villa terminó con el tobillo derecho inflamado tras el partido ante Vasco da Gama.",
-        "El delantero colombiano se someterá a estudios médicos para conocer la gravedad de la lesión.",
-        "El cuerpo técnico liderado por Rodolfo Arruabarrena aguarda su evolución de cara a la revancha.",
-        "El partido de vuelta por las semifinales de la Copa Sudamericana se jugará el próximo martes en Brasil."
-      ],
-      "noConfirmado": [
-        "El diagnóstico médico definitivo y el grado de la lesión que padece el futbolista.",
-        "La presencia del delantero colombiano en el partido de vuelta que se disputará en Río de Janeiro."
-      ],
-      "textoRedes": "Sebastián Villa sufrió una lesión en el tobillo derecho en la derrota de Boca ante Vasco da Gama y se someterá a estudios médicos. El cuerpo técnico aguarda su evolución de cara al partido de vuelta por las semifinales de la Copa Sudamericana.",
-      "etiquetas": [
-        "Boca Juniors",
-        "Sebastián Villa",
-        "Copa Sudamericana",
-        "Fútbol",
-        "Rodolfo Arruabarrena"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/preocupacion-boca-sebastian-villa-sufrio-una-lesion-el-tobillo-y-se-hara-estudios-n6333481",
-          "fecha": "2026-10-14T11:45:00.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de la lesión de Sebastián Villa, el desarrollo del partido ante Vasco da Gama y las declaraciones del entrenador Rodolfo Arruabarrena."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/futbol/preocupacion-en-boca-sebastian-villa-sufrio-un-esguince-de-tobillo-tras-la-derrota-ante-vasco-da-gama.phtml",
-          "fecha": "2026-10-14T11:58:14.000Z",
-          "oficial": false,
-          "aporte": "Aportó que el atacante colombiano terminó con una severa inflamación en su articulación tras el encuentro de ida."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/boca-juniors/sebastian-villa-lesion-se-hace-estudios-y-hay-alerta-en-boca-vasco-da-gama-id766119.html",
-          "fecha": "2026-10-14T12:48:20.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no registrar resumen."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/boca-juniors/sebastian-villa-lesion-boca-vasco-da-gama-id766101.html",
-          "fecha": "2026-10-14T13:20:38.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no registrar resumen."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/actualidad/boca-en-alerta-sebastian-villa-se-hace-estudios-tras-sufrir-una-lesion-en-el-tobillo/",
-          "fecha": "2026-10-14T13:39:25.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en que el delantero se someterá a estudios médicos tras la derrota frente al conjunto brasileño."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/deportes/2026/10/14/se-pierde-la-revancha-en-brasil-la-molestia-de-sebastian-villa-en-boca-que-complica-los-planes-de-arruabarrena-ante-vasco-da-gama/",
-          "fecha": "2026-10-14T14:22:07.000Z",
-          "oficial": false,
-          "aporte": "Especificó que la lesión ocurrió en La Bombonera durante la ida de las semifinales de la Copa Sudamericana 2026."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "sebastian-villa-sufre-una-lesion-en-el-tobillo-y-enciende-la-alerta",
-      "foto": {
-        "archivo": "fotos-notas/1kavxj3.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
       "id": "11uyvlg",
       "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
       "copete": "La prohibición nacional abarca a todos los modelos de la marca Pinch Family. Un laboratorio detectó que contienen el doble del plastificante permitido por las normas de seguridad.",
@@ -2142,10 +1978,10 @@
         "A24",
         "Crónica",
         "La Nueva",
+        "La Brújula 24",
         "El Marplatense",
         "Ámbito",
         "Infobae",
-        "La Brújula 24",
         "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/informacion-general/prohiben-todo-el-pais-la-venta-juguetes-blandos-tipo-squishy-la-marca-pinch-family-contener-ftalatos-n6333458",
@@ -2217,10 +2053,36 @@
         "El Cronista",
         "Crónica",
         "Radio Mitre",
-        "El Marplatense",
         "Noticias Argentinas (NA)",
+        "El Marplatense",
+        "Infórmese Primero (FM 104.9)",
+        "El Diario Balcarce",
+        "Diario La Vanguardia",
+        "Infobae",
+        "Perfil",
+        "Canal 26",
+        "La Tecla",
+        "La Verdad",
+        "Infoeme",
+        "QZ Noticias (Mar del Plata)",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Qué Digital",
+        "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
+        "El Eco de Tandil",
+        "NDEN – Noticias de Necochea",
+        "La Verdad de Ayacucho",
+        "Agencia DIB",
+        "La Nueva",
+        "Ecos Diarios (Necochea)",
+        "A24",
+        "La Voz del Pueblo",
+        "0223 (Mar del Plata)",
+        "iProfesional",
+        "La Noticia 1",
+        "Clarín",
         "Ámbito",
-        "iProfesional"
+        "El Día"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/14/el-gobierno-oficializo-prestamos-del-bid-por-us1300-millones-para-financiar-subsidios-al-gas-y-la-reforma-del-estado/",
       "teniaImagenLaFuente": true,
@@ -2354,8 +2216,8 @@
         "Minuto Uno",
         "Radio Mitre",
         "Canal 26",
-        "El Eco de Tandil",
         "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
         "El Economista"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
@@ -2495,15 +2357,15 @@
         "Infórmese Primero (FM 104.9)",
         "Crónica",
         "Diario Popular",
-        "La Nueva",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-13T23:24:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T15:01:49.740Z",
-      "relevancia": 66,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2841,6 +2703,7 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
+        "Página/12",
         "Ámbito",
         "TyC Sports",
         "Minuto Uno",
@@ -2848,13 +2711,12 @@
         "Crónica",
         "Radio Mitre",
         "Diario Popular",
-        "Bolavip Argentina",
-        "Doble Amarilla",
         "Noticias Argentinas (NA)",
+        "Doble Amarilla",
+        "Bolavip Argentina",
         "0223 (Mar del Plata)",
-        "A24",
-        "Página/12",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "A24"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -2912,6 +2774,13 @@
         },
         {
           "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/14/las-repercusiones-en-la-prensa-inglesa-luego-del-mensaje-de-lisandro-martinez-contra-la-dirigencia-del-manchester-united/",
+          "fecha": "2026-10-14T20:31:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
           "enlace": "https://tn.com.ar/deportes/futbol/2026/10/14/una-leyenda-del-manchester-united-critico-a-lisandro-martinez-tras-la-derrota-en-la-champions-sus-actuaciones-no-fueron-buenas/",
           "fecha": "2026-10-14T14:01:15.000Z",
           "oficial": false,
@@ -2928,6 +2797,13 @@
           "medio": "Perfil",
           "enlace": "https://442.perfil.com/noticias/futbol/tension-en-manchester-united-lisandro-martinez-cuestiono-a-la-dirigencia-y-rooney-le-respondio.phtml",
           "fecha": "2026-10-14T12:48:32.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/10/14/el-manchester-united-sancionara-a-lisandro-martinez/",
+          "fecha": "2026-10-14T18:03:57.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3002,16 +2878,9 @@
           "aporte": null
         },
         {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/europa/lisandro-martinez-estallo-contra-la-dirigencia-de-manchester-united-esperamos-mas-de-la-gente-de-arriba",
-          "fecha": "2026-10-13T21:57:11.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez-apunto-contra-el-director-deportivo-del-manchester-united---esperaba-mas-de-el-_a6acead500084b16c6973c3fe",
-          "fecha": "2026-10-13T22:55:44.000Z",
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/wayne-rooney-sobre-las-declaraciones-explosivas-de-lisandro-martinez---le-falto-el-respeto-a-los-companeros-_a6acecd8006650845db88b53b",
+          "fecha": "2026-10-14T00:42:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3023,37 +2892,44 @@
           "aporte": null
         },
         {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-10-14-7-54-0-es-irrespetuoso-wayne-rooney-destrozo-a-lisandro-martinez-tras-su-explosivo-reclamo",
-          "fecha": "2026-10-14T10:57:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
-          "fecha": "2026-10-14T12:00:00.000Z",
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez--en-la-mira-de-las-leyendas-del-manchester-united--criticas-y-una-posible-sancion_a6acfd2c9e063050a696091f1",
+          "fecha": "2026-10-14T19:56:27.000Z",
           "oficial": false,
           "aporte": null
         },
         {
           "medio": "Doble Amarilla",
           "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/luego-de-sus-criticas-al-director-deportivo--lisandro-martinez-seria-sancionado-por-el-manchester-united_a6acf734d853170937806e959",
-          "fecha": "2026-10-14T13:05:36.000Z",
+          "fecha": "2026-10-14T13:05:36.710Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
-          "fecha": "2026-10-14T14:11:37.000Z",
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez-apunto-contra-el-director-deportivo-del-manchester-united---esperaba-mas-de-el-_a6acead500084b16c6973c3fe",
+          "fecha": "2026-10-13T22:55:44.905Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/10/14/el-manchester-united-sancionara-a-lisandro-martinez/",
-          "fecha": "2026-10-14T18:03:57.000Z",
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/premier-league/manchester-united-pone-en-duda-el-futuro-de-lisandro-martinez-y-no-descarta-sanciones-por-sus-dichos-contra-la-directiva",
+          "fecha": "2026-10-14T19:39:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/europa/lisandro-martinez-estallo-contra-la-dirigencia-de-manchester-united-esperamos-mas-de-la-gente-de-arriba",
+          "fecha": "2026-10-14T02:30:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-10-14-7-54-0-es-irrespetuoso-wayne-rooney-destrozo-a-lisandro-martinez-tras-su-explosivo-reclamo",
+          "fecha": "2026-10-14T10:57:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3065,9 +2941,16 @@
           "aporte": null
         },
         {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/lisandro-martinez--en-la-mira-de-las-leyendas-del-manchester-united--criticas-y-una-posible-sancion_a6acfd2c9e063050a696091f1",
-          "fecha": "2026-10-14T19:56:27.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
+          "fecha": "2026-10-14T12:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/escandalo-manchester-united-las-declaraciones-lisandro-martinez-contra-la-cd-la-respuesta-del-dt-y-las-criticas-las-leyendas-n1606256",
+          "fecha": "2026-10-14T14:11:37.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3224,6 +3107,91 @@
       }
     },
     {
+      "id": "1dd0fj4",
+      "titulo": "El Banco Central compra dólares y las acciones suben",
+      "copete": "Las reservas brutas rozan los 50.000 millones de dólares tras una fuerte intervención cambiaria. En tanto, la deuda soberana operó en baja y el riesgo país se ubicó en 596 unidades.",
+      "cuerpo": "El Banco Central adquirió el martes 291 millones de dólares en el mercado oficial de cambios y elevó las reservas internacionales brutas hasta los 49.839 millones. La rueda bursátil mostró resultados mixtos, con un incremento del 1,45 por ciento en el índice S&P Merval impulsado principalmente por las empresas energéticas.\n\nEn contraste, los bonos soberanos operaron con mayoría de pérdidas tanto en la plaza local como en Wall Street. Como consecuencia de este comportamiento en la deuda, el indicador de riesgo país elaborado por el JP Morgan aumentó siete unidades y cerró en 596 puntos básicos.\n\nA principios de mes, el indicador financiero había rondado esa misma zona tras registrar oscilaciones en las bolsas locales y externas.",
+      "guion": "El Banco Central compra dólares y las acciones suben",
+      "seccion": "Economía",
+      "medios": [
+        "Perfil",
+        "El Cronista",
+        "Página/12",
+        "Noticias Argentinas (NA)",
+        "Crónica"
+      ],
+      "enlace": "https://www.cronista.com/financial-times/bcra-compro-fuerte-y-las-acciones-subieron-hasta-47-pero-el-riesgo-pais-cerro-en-596-puntos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T21:02:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-13T23:31:49.605Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Banco Central compró 291 millones de dólares en el mercado oficial.",
+        "Las reservas internacionales brutas llegaron a 49.839 millones de dólares.",
+        "El S&P Merval subió un 1,45 por ciento con impulso energético.",
+        "El riesgo país aumentó a 596 puntos básicos tras cotizar a la baja en la deuda soberana."
+      ],
+      "textoRedes": "El Banco Central compró 291 millones de dólares y las reservas brutas alcanzaron los 49.839 millones. En la jornada financiera, las acciones subieron un 1,45 por ciento, mientras que el riesgo país se ubicó en 596 puntos básicos.",
+      "etiquetas": [
+        "Banco Central",
+        "reservas",
+        "acciones",
+        "riesgo pais"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/financial-times/bcra-compro-fuerte-y-las-acciones-subieron-hasta-47-pero-el-riesgo-pais-cerro-en-596-puntos/",
+          "fecha": "2026-10-13T21:02:16.000Z",
+          "oficial": false,
+          "aporte": "Informó la compra de divisas del Banco Central, el nivel de reservas, las subas del S&P Merval y el comportamiento de los bonos y el riesgo país."
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/10/13/el-riesgo-pais-se-acerco-a-los-600-puntos/",
+          "fecha": "2026-10-13T23:20:07.000Z",
+          "oficial": false,
+          "aporte": "Registró la caída de los bonos argentinos en dólares y el valor alcanzado por el riesgo país."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "34t457",
+          "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
+          "fecha": "2026-10-01T16:53:08.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
+        },
+        {
+          "id": "u3yzup",
+          "titulo": "El riesgo país sube y las acciones registran caídas en la bolsa",
+          "fecha": "2026-10-07T15:13:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-sube-y-las-acciones-registran-caidas-en-la-bolsa-u3yzup"
+        },
+        {
+          "id": "1ypbdma",
+          "titulo": "El riesgo país sube y vuelve a la zona de los 600 puntos básicos",
+          "fecha": "2026-10-06T14:27:36.000Z",
+          "ruta": "/nota/el-riesgo-pais-sube-y-vuelve-a-la-zona-de-los-600-puntos-basicos-1ypbdma"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-banco-central-compra-dolares-y-las-acciones-suben",
+      "foto": {
+        "archivo": "fotos-notas/1dd0fj4.jpg",
+        "credito": "Foto: El Cronista"
+      }
+    },
+    {
       "id": "1vcnnfl",
       "titulo": "Franco Mastantuono se opera de la mano tras un golpe",
       "copete": "El mediocampista argentino de la Fiorentina pasó por el quirófano para tratar una fractura en su mano izquierda. Podrá regresar de inmediato a los entrenamientos y jugar el próximo fin de semana.",
@@ -3237,13 +3205,12 @@
         "Perfil",
         "C5N",
         "Radio Mitre",
-        "El Día",
+        "Doble Amarilla",
         "Bolavip Argentina",
+        "El Día",
         "Ecos Diarios (Necochea)",
-        "Noticias Argentinas (NA)",
         "Clarín",
-        "Minuto Uno",
-        "Doble Amarilla"
+        "Minuto Uno"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/10/13/franco-mastantuono-fue-operado-luego-de-haber-recibido-un-golpe-en-el-ultimo-partido-de-la-fiorentina-el-parte-medico/",
       "teniaImagenLaFuente": true,
@@ -3547,8 +3514,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Bichos de Campo",
-        "Agrositio"
+        "Agrositio",
+        "Bichos de Campo"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -3677,10 +3644,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
+        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
         "Noticias Agropecuarias",
-        "Agroempresario",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
@@ -4000,7 +3967,6 @@
         "Agencia DIB",
         "Infobae",
         "QZ Noticias (Mar del Plata)",
-        "Noticias Argentinas (NA)",
         "La Noticia 1",
         "Diario Popular",
         "Ecos Diarios (Necochea)",
@@ -4130,12 +4096,12 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "0221",
+        "Infoeme",
         "El Marplatense",
         "El Eco de Tandil",
         "Ámbito",
         "Agencia DIB",
-        "Ecos Diarios (Necochea)",
-        "Infoeme"
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://www.ambito.com/informacion-general/la-provincia-buenos-aires-lanzo-una-convocatoria-80-millones-premios-murgas-y-comparsas-bonaerenses-n6332966",
       "teniaImagenLaFuente": true,
@@ -4339,21 +4305,21 @@
         "C5N",
         "Radio Mitre",
         "Diario Popular",
+        "Noticias Argentinas (NA)",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil",
-        "Clarín",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "Olé",
         "0223 (Mar del Plata)",
+        "Clarín",
         "Página/12",
         "Minuto Uno",
         "Crónica",
-        "Noticias Argentinas (NA)",
-        "Bolavip Argentina",
         "Campeones",
         "La Nueva",
-        "Doble Amarilla",
-        "Olé",
         "El Día",
         "Córdoba Competición",
         "El Gráfico"
@@ -4512,15 +4478,15 @@
   ],
   "secciones": [
     "Automovilismo",
+    "Política",
     "Balcarce",
     "Economía",
     "Agro",
     "Argentina",
-    "Política",
     "Policiales",
-    "Fútbol",
     "Deportes",
     "Cultura y agenda",
+    "Fútbol",
     "Tecnología"
   ],
   "temas": [
@@ -4911,6 +4877,12 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
+      "id": "1o3t7bf",
+      "titulo": "Javier Milei viaja a Estados Unidos para reforzar su…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "p582dy",
       "titulo": "El oro del BCRA: el abogado Gregorio Dalbón pidió la…",
       "seccion": "Economía",
@@ -4921,24 +4893,6 @@
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1lrgmry",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1akjupx",
-      "titulo": "El mejor amigo de \"Roña\" Castro sorprendió con una…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
-      "id": "952ggs",
-      "titulo": "Javier Milei respaldó a Luis Caputo",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "j2e39v",
@@ -4953,15 +4907,15 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "urflid",
-      "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "fp2pbw",
       "titulo": "Casación confirmó embargos de hasta $31 mil millones en la…",
       "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "urflid",
+      "titulo": "Tucumán: denuncian \"acuerdo espurio\" entre Jaldo y los…",
+      "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
@@ -4989,5 +4943,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 1
 }
