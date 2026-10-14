@@ -13941,11 +13941,11 @@
  "ks738t": {
   "intentado": true,
   "origen": "ninguna",
-  "titulo": "La Liga Balcarceña reprograma el inicio del torneo Clausura",
-  "razon": "La imagen provista no corresponde a una fotografía del evento futbolístico sino a un logotipo del medio.",
-  "cuando": "2026-10-14T11:32:03.987Z",
-  "intentos": 1,
-  "fuentes": 1
+  "titulo": "La Liga Balcarceña de Fútbol reprograma el inicio del torneo Clausura",
+  "razon": "Ninguna de las fotos cumple con los requisitos, ya que la imagen A es un logotipo y la imagen B contiene jugadores menores de edad reconocibles.",
+  "cuando": "2026-10-14T12:32:39.536Z",
+  "intentos": 2,
+  "fuentes": 2
  },
  "9n2ees": {
   "archivo": "fotos-notas/9n2ees.jpg",
@@ -13981,13 +13981,16 @@
   "fuentes": 2
  },
  "9hyghb": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/9hyghb.jpg",
+  "medio": "Bolavip Argentina",
+  "credito": "Foto: Bolavip Argentina",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "River visita a Sarmiento con la primera convocatoria de Santiago Espíndola",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-14T11:32:03.987Z",
-  "intentos": 1,
-  "fuentes": 5
+  "enlace": "https://bolavip.com/ar/river/river-hoy-convocados-vs-sarmiento-la-sorpresa-de-ponzio-y-la-clausula-por-gimenez",
+  "imagenOriginal": "https://media.bolavip.com/wp-content/uploads/sites/18/2026/10/13120835/Tomas-Galvan-1200x740.webp",
+  "razon": "Muestra claramente al protagonista de la nota, Santiago Espíndola, con excelente encuadre y nitidez, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T12:32:39.536Z"
  },
  "n2srv6": {
   "archivo": "fotos-notas/n2srv6.jpg",
@@ -14036,5 +14039,38 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/FIPK2F67ZZCLFNS3SWVXBBQEFQ.jpg?auth=d3b1a893b7119514a47dc155aaa1b317c67ed033428ff35155fdba819b57c95f&smart=true&width=1200&height=630&quality=85",
   "razon": "La imagen A muestra billetes de manera clara y limpia sin marcas de agua ni personas, ideal para ilustrar la nota económica.",
   "cuando": "2026-10-14T12:02:12.915Z"
+ },
+ "1fi9fiz": {
+  "archivo": "fotos-notas/1fi9fiz.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
+  "enlace": "https://www.radiogabal.com.ar/index.php/deportes/doble-festejo-para-campo-de-pato-ambos-equipos-estan-en-semifinales",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/WhatsApp%20Image%202026-10-05%20at%2007.52.16.jpeg",
+  "razon": "Es la única imagen que muestra el contexto completo del hecho (el equipo reunido en círculo) y no presenta marcas de agua ni menores de edad.",
+  "cuando": "2026-10-14T12:32:39.536Z"
+ },
+ "1uxjule": {
+  "archivo": "fotos-notas/1uxjule.jpg",
+  "medio": "El Cronista",
+  "credito": "Foto: El Cronista",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Luis Caputo negocia financiamiento con el Banco Mundial en Bangkok",
+  "enlace": "https://www.cronista.com/economia-politica/caputo-negocia-mas-financiamiento-con-el-banco-mundial-y-busca-destrabar-inversiones-privadas-por-us-10000-millones/",
+  "imagenOriginal": "https://www.cronista.com/resizer/v2/XZ4V5XJCVBDKDD3IK55QTIFI2U.jpg?auth=b06be925d4aa78e934bb1a59172d4f4afdb249f8aefe1d40effc4c26aa35b637&height=630&width=1200&quality=70&smart=true",
+  "razon": "La foto A muestra claramente al protagonista de la nota en un buen plano y sin marcas ni menores.",
+  "cuando": "2026-10-14T12:32:39.536Z"
+ },
+ "cdnqde": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+  "razon": "Ambas fotos muestran menores de edad reconocibles, por lo que ninguna puede ser publicada según la política del medio.",
+  "cuando": "2026-10-14T12:32:39.536Z",
+  "intentos": 1,
+  "fuentes": 2
  }
 }

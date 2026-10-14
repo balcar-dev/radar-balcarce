@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T12:02:19.036Z",
+ "generado": "2026-10-14T12:33:20.062Z",
  "portada": 38,
- "archivo": 1050,
- "esperandoCuerpo": 2,
+ "archivo": 1053,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-14T12:02:19.057Z",
+  "generado": "2026-10-14T12:33:20.098Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutora",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-10-14T12:05:23.923Z"
    },
    {
     "nombre": "noticia1",
@@ -95,27 +95,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "pdqhm3",
+      "titulo": "Lisandro Mart\\u00in critica a la directiva del Manchester United y Rooney le responde",
+      "seccion": "Fútbol"
+     },
      {
       "id": "505otd",
       "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "n2srv6",
-      "titulo": "La Liga Balcarceña inicia el Torneo Clausura el fin de semana",
-      "seccion": "Fútbol"
+      "id": "1aylfrc",
+      "titulo": "El INDEC informa que los servicios aumentan por encima de los bienes",
+      "seccion": "Economía"
      },
      {
-      "id": "10aoo7v",
-      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
+      "id": "1fi9fiz",
+      "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
       "seccion": "Deportes"
-     },
-     {
-      "id": "17v35o5",
-      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 36,
+    "segundos": 50,
     "notas": [
      {
       "id": "u043fh",
@@ -134,9 +134,19 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
-      "seccion": "Balcarce"
+      "id": "n2srv6",
+      "titulo": "La Liga Balcarceña inicia el Torneo Clausura el fin de semana",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "10aoo7v",
+      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -147,8 +157,24 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 43,
+    "notas": [
+     {
+      "id": "66so6t",
+      "titulo": "El Merendero Doña Norma lanza su tercera campaña solidaria con rifa",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
@@ -164,6 +190,12 @@
      "id": "505otd",
      "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1fi9fiz",
+     "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],
