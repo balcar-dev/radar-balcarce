@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T02:32:22.792Z",
- "portada": 47,
- "archivo": 1041,
- "esperandoCuerpo": 4,
+ "generado": "2026-10-14T03:02:26.504Z",
+ "portada": 42,
+ "archivo": 1042,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-14T02:32:22.828Z",
+  "generado": "2026-10-14T03:02:26.540Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-13T10:05:05.155Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-13T12:06:23.452Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,18 +33,18 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-13T13:06:44.511Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "participa-evento",
+    "nombre": "participa-reclamos",
     "tipo": "reel",
     "hora": "12:00",
-    "que": "Tu evento o emprendimiento",
-    "voz": "locutor",
+    "que": "Tu reclamo",
+    "voz": "locutora",
     "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-13T15:05:51.556Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -53,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-13T18:15:16.014Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-13T22:05:12.686Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-13T23:06:08.746Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-14T00:05:42.687Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-13T13:06:44.511Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 51,
     "notas": [
      {
-      "id": "19xpc0o",
-      "titulo": "La Fórmula 1 vuelve a correr en África tras un acuerdo con Ruanda",
-      "seccion": "Automovilismo"
+      "id": "u043fh",
+      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
+      "seccion": "Cultura y agenda"
      },
      {
-      "id": "3xm1ge",
-      "titulo": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "fa17ki",
-      "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1qszs3z",
-      "titulo": "Gabriel Deck pasa por el quirófano y se pierde lo que resta del año",
+      "id": "10aoo7v",
+      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
       "seccion": "Deportes"
+     },
+     {
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -124,92 +124,40 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-13T18:15:16.014Z",
+    "momento": "antes",
+    "salio": null,
     "segundos": null,
-    "notas": [
-     {
-      "id": "1dun8ft",
-      "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "wj5hg5",
-      "titulo": "La Provincia otorga ochenta millones de pesos para murgas y comparsas",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "pt4b1r",
-      "titulo": null,
-      "seccion": null
-     },
-     {
-      "id": "uestws",
-      "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-      "seccion": "Cultura y agenda"
-     }
-    ]
+    "notas": []
    },
    {
     "nombre": "podcast",
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-14T00:05:42.687Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 42,
     "notas": [
      {
-      "id": "1vcnnfl",
-      "titulo": "Franco Mastantuono se opera de la mano tras un golpe",
+      "id": "ampmp1",
+      "titulo": "Barbieri y Álvarez brillan en el torneo de tenis de mesa",
       "seccion": "Deportes"
      },
      {
-      "id": "um5udw",
-      "titulo": "Adrián Stoppelman presenta su show de humor en la Casa del Bicentenario",
-      "seccion": "Cultura y agenda"
+      "id": "1c2cg52",
+      "titulo": "Marina Montoya gana los cincuenta kilómetros del Ultra Tierras del Diablo",
+      "seccion": "Deportes"
      },
      {
-      "id": "pl4s36",
-      "titulo": "Nicolò Tresoldi anota tres goles en el triunfo del Brujas ante el Inter",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "fdr535",
-      "titulo": "Nueve mujeres de Balcarce realizan un viaje solidario al norte",
-      "seccion": "Balcarce"
+      "id": "1imkz6n",
+      "titulo": "Social Pato Naranja y Negro juegan la semifinal",
+      "seccion": "Deportes"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "3xm1ge",
-     "titulo": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
-     "cuando": "2026-10-13T11:45:23.948Z"
-    },
-    {
-     "id": "pt4b1r",
-     "titulo": "La Liga Balcarceña presenta el fixture para iniciar el Clausura",
-     "cuando": "2026-10-13T13:35:21.141Z"
-    },
-    {
-     "id": "1dun8ft",
-     "titulo": "Balcarce suma un plan provincial de seguridad y educación vial",
-     "cuando": "2026-10-13T15:09:14.343Z"
-    },
-    {
-     "id": "uestws",
-     "titulo": "Fieles de Balcarce organizan viajes para recibir al Papa en noviembre",
-     "cuando": "2026-10-13T16:40:16.100Z"
-    },
-    {
-     "id": "95znl3",
-     "titulo": "El Registro Civil suspende casamientos para el martes 13",
-     "cuando": "2026-10-13T18:13:43.987Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "10aoo7v",
@@ -218,7 +166,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-13T19:43:43.987Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,

@@ -13821,18 +13821,18 @@
   "intentado": true,
   "origen": "ninguna",
   "titulo": "Sergio Uñac lanza su primer spot y confirma sus aspiraciones presidenciales",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-14T01:34:04.181Z",
-  "intentos": 2,
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-14T03:02:10.948Z",
+  "intentos": 3,
   "fuentes": 3
  },
  "xjn0zk": {
   "intentado": true,
   "origen": "ninguna",
   "titulo": "ANSES aumenta un 1,9 por ciento las jubilaciones y asignaciones en noviembre",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-14T01:34:04.181Z",
-  "intentos": 2,
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-14T03:02:10.948Z",
+  "intentos": 3,
   "fuentes": 9
  },
  "66so6t": {
@@ -13867,5 +13867,14 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/PPGY6WADV5B75CWTTCPUEWTHXU.jpg?auth=1ed578a6dbe8b547abdccc1c64509640675fc18431db0a43bdd34072f630f85f&smart=true&width=1200&height=630&quality=85",
   "razon": "Ambas fotos son idénticas en contenido y calidad, por lo que se elige la primera opción.",
   "cuando": "2026-10-14T02:32:15.734Z"
+ },
+ "1j7l7ky": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Una reflexión atribuida a Albert Einstein analiza el concepto de la madurez",
+  "razon": "Groq también falló: HTTP 429",
+  "cuando": "2026-10-14T03:02:10.948Z",
+  "intentos": 1,
+  "fuentes": 3
  }
 }
