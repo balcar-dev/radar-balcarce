@@ -12858,16 +12858,16 @@
   "borrada": true
  },
  "km19m5": {
-  "archivo": "fotos-notas/km19m5.jpg",
   "medio": "La Nueva",
-  "credito": "Foto: La Nueva",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno nacional restituye el nombre de Día de la Raza",
   "enlace": "https://www.lanueva.com/nota/2026-10-12-15-33-0-el-mensaje-de-la-casa-rosada-por-el-12-de-octubre-el-inicio-de-la-expansion-de-occidente-hacia-el-nuevo-mundo",
   "imagenOriginal": "https://pxcdn.lanueva.com/102026/1791833672360.jpg?&cw=600&ch=365",
   "razon": "La foto C muestra la misma escena histórica de buena calidad y sin marcas de agua ni menores, a diferencia de A (que tiene marca) y B (que tiene zócalos de texto sobreimpresos).",
-  "cuando": "2026-10-12T20:01:57.786Z"
+  "cuando": "2026-10-12T20:01:57.786Z",
+  "intentado": true,
+  "borrada": true
  },
  "1b3umaz": {
   "archivo": "fotos-notas/1b3umaz.jpg",
@@ -13988,5 +13988,29 @@
   "cuando": "2026-10-14T11:32:03.987Z",
   "intentos": 1,
   "fuentes": 5
+ },
+ "n2srv6": {
+  "archivo": "fotos-notas/n2srv6.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Liga Balcarceña inicia el Torneo Clausura el fin de semana",
+  "enlace": "https://www.radiogabal.com.ar/index.php/deportes/tras-dos-suspensiones-se-pone-en-marcha-el-torneo-clausura-de-la-liga-balcarcena",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/octubre/_MG_19402.jpg",
+  "razon": "Es la unica foto disponible, cuenta con buena nitidez, encuadre adecuado y no posee marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-14T11:42:35.028Z"
+ },
+ "pdqhm3": {
+  "archivo": "fotos-notas/pdqhm3.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lisandro Mart\\u00in critica a la directiva del Manchester United y Rooney le responde",
+  "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/13/j2AMN_tWA_2000x1500__1.jpg",
+  "razon": "La imagen A muestra claramente a ambos protagonistas de la noticia con excelente nitidez y sin marcas de agua ni menores.",
+  "cuando": "2026-10-14T11:42:35.028Z"
  }
 }

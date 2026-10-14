@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T11:32:24.443Z",
- "portada": 37,
+ "generado": "2026-10-14T11:42:44.009Z",
+ "portada": 36,
  "archivo": 1048,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-14T11:32:24.468Z",
+  "generado": "2026-10-14T11:42:44.045Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,7 +95,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 50,
     "notas": [
      {
       "id": "505otd",
@@ -103,9 +103,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "u043fh",
-      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
-      "seccion": "Cultura y agenda"
+      "id": "n2srv6",
+      "titulo": "La Liga Balcarceña inicia el Torneo Clausura el fin de semana",
+      "seccion": "Fútbol"
      },
      {
       "id": "10aoo7v",
@@ -126,8 +126,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 36,
+    "notas": [
+     {
+      "id": "u043fh",
+      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
+      "seccion": "Balcarce"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -136,24 +147,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
-    "notas": [
-     {
-      "id": "95znl3",
-      "titulo": "El Registro Civil suspende casamientos para el martes 13",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "ks738t",
-      "titulo": "La Liga Balcarceña reprograma el inicio del torneo Clausura",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "11d0zcr",
-      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-      "seccion": "Automovilismo"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
