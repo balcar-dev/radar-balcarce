@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-14T02:03:10.503Z",
+ "consultado": "2026-10-14T02:32:20.749Z",
  "equipos": [
   "9739",
   "3",
@@ -1183,8 +1183,8 @@
     "id": "401913958",
     "competencia": "sudamericana",
     "inicio": "2026-10-14T00:30:00.000Z",
-    "estado": "en-juego",
-    "minuto": "72'",
+    "estado": "final",
+    "minuto": "90'+8'",
     "local": {
      "id": "5",
      "nombre": "Boca Juniors",
@@ -1689,6 +1689,7 @@
   "futboltablaliga20261002": "2026-10-06T02:34:43.431Z",
   "futbolpartidosliga20261009": "2026-10-08T05:31:57.920Z",
   "futbolresultadosliga20261009": "2026-10-09T19:27:23.047Z",
-  "futbolpartidossudamericana20261013": "2026-10-12T12:32:43.144Z"
+  "futbolpartidossudamericana20261013": "2026-10-12T12:32:43.144Z",
+  "futbolresultadossudamericana20261013": "2026-10-14T02:32:21.734Z"
  }
 }

@@ -242,9 +242,9 @@
   "motivo": "con cuerpo"
  },
  "163ast0": {
-  "intentos": 2,
-  "ultimo": "2026-10-14T02:01:55.908Z",
-  "motivo": "semáforo: necesita ojo humano: \"herido\", en lo que escribió la IA (título, bajada o texto para redes)"
+  "intentos": 3,
+  "ultimo": "2026-10-14T02:32:05.280Z",
+  "motivo": "título o bajada: 1 problema (numero): el guion dice 30 y la fuente no lo dice"
  },
  "16bffnh": {
   "intentos": 2,
@@ -667,11 +667,6 @@
   "intentos": 1,
   "ultimo": "2026-10-08T23:32:20.234Z",
   "motivo": "con cuerpo"
- },
- "1githwa": {
-  "intentos": 1,
-  "ultimo": "2026-10-07T02:31:40.382Z",
-  "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice"
  },
  "1gkf7qu": {
   "intentos": 1,
@@ -1378,11 +1373,6 @@
   "intentos": 1,
   "ultimo": "2026-10-07T16:02:37.748Z",
   "motivo": "con cuerpo"
- },
- "1yzgdmc": {
-  "intentos": 4,
-  "ultimo": "2026-10-07T02:31:40.382Z",
-  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 35 palabras"
  },
  "23wab5": {
   "intentos": 1,
@@ -2165,6 +2155,11 @@
   "intentos": 3,
   "ultimo": "2026-10-09T20:01:49.111Z",
   "motivo": "sin material"
+ },
+ "nemgm9": {
+  "intentos": 1,
+  "ultimo": "2026-10-14T02:32:05.280Z",
+  "motivo": "con cuerpo"
  },
  "nfrfo8": {
   "intentos": 1,
