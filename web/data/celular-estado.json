@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T19:03:07.013Z",
- "portada": 51,
- "archivo": 1078,
+ "generado": "2026-10-14T19:32:25.829Z",
+ "portada": 49,
+ "archivo": 1080,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-14T19:03:07.058Z",
+  "generado": "2026-10-14T19:32:25.875Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 54,
     "notas": [
+     {
+      "id": "1y371r4",
+      "titulo": "Casi 59.000 empresas registran problemas para cumplir con sus deudas",
+      "seccion": "Economía"
+     },
      {
       "id": "11eff0s",
       "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
       "seccion": "Balcarce"
      },
      {
-      "id": "10aoo7v",
-      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "wzunxc",
-      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "11d0zcr",
       "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "10aoo7v",
+      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
+      "seccion": "Deportes"
      }
     ]
    }
@@ -212,9 +212,9 @@
    ],
    "cola": [
     {
-     "id": "97f98g",
-     "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
-     "seccion": "Balcarce",
+     "id": "cdnqde",
+     "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+     "seccion": "Cultura y agenda",
      "marcada": false
     }
    ],
