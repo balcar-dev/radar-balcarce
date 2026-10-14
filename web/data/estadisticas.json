@@ -1732,6 +1732,53 @@
         "vistas": 121,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-14T12:00:24.124Z",
+      "web": {
+        "u12": {
+          "visitas": 13,
+          "vistas": 34
+        },
+        "a12": {
+          "visitas": 30,
+          "vistas": 180
+        },
+        "u24": {
+          "visitas": 46,
+          "vistas": 154
+        },
+        "a24": {
+          "visitas": 32,
+          "vistas": 83
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 61
+          },
+          {
+            "camino": "/nota/la-liga-balcarcena-presenta-el-fixture-para-iniciar-el-clausura-pt4b1r",
+            "vistas": 12
+          },
+          {
+            "camino": "/nota/fieles-de-balcarce-organizan-viajes-para-recibir-al-papa-en-noviembre-uestws",
+            "vistas": 9
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 49,
+        "vistas": 7906,
+        "interacciones": 81
+      },
+      "instagram": {
+        "seguidores": 7,
+        "publicaciones": 156,
+        "alcance": 23,
+        "vistas": 32,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2717,8 +2764,8 @@
       }
     },
     "2026-10-12": {
-      "visitas": 50,
-      "vistas": 110,
+      "visitas": 37,
+      "vistas": 117,
       "referentes": {
         "facebook.com": 33,
         "directo": 2,
@@ -2781,32 +2828,37 @@
         "/seccion/balcarce": 2
       },
       "dispositivos": {
-        "mobile": 90,
-        "desktop": 20
+        "mobile": 89,
+        "desktop": 28
       },
       "paises": {
-        "AR": 80,
-        "US": 30
+        "AR": 75,
+        "US": 27,
+        "SE": 15
       }
     },
     "2026-10-13": {
       "notas": {
         "pt4b1r": 12,
-        "95znl3": 9,
         "uestws": 9,
+        "95znl3": 9,
         "3xm1ge": 7,
         "1aqdhjn": 6,
         "1dun8ft": 4,
-        "br4g49": 2,
-        "mj08wf": 2,
-        "1qszs3z": 2,
+        "fdr535": 3,
+        "um5udw": 3,
         "1c2cg52": 2,
+        "pl4s36": 2,
+        "1qszs3z": 2,
+        "mj08wf": 2,
         "19xpc0o": 2,
+        "1vcnnfl": 2,
+        "br4g49": 2,
         "1y2q715": 2,
         "fa17ki": 2
       },
       "paginas": {
-        "/": 47,
+        "/": 55,
         "/farmacias": 8,
         "/seccion/cultura": 4,
         "/seccion/automovilismo": 2,
@@ -2815,12 +2867,12 @@
         "/agenda": 2
       },
       "referentes": {
-        "facebook.com": 29,
-        "google.com": 4,
-        "directo": 1
+        "facebook.com": 33,
+        "directo": 5,
+        "google.com": 4
       },
-      "visitas": 34,
-      "vistas": 128,
+      "visitas": 42,
+      "vistas": 146,
       "horas": [
         0,
         0,
@@ -2843,20 +2895,71 @@
         6,
         0,
         0,
-        0,
-        0,
+        10,
+        8,
         0
       ],
       "dispositivos": {
-        "desktop": 77,
+        "desktop": 95,
         "mobile": 51
       },
       "paises": {
         "AR": 91,
-        "US": 24,
+        "US": 32,
         "IE": 8,
-        "SE": 4,
+        "FR": 8,
+        "SE": 6,
         "PY": 1
+      }
+    },
+    "2026-10-14": {
+      "visitas": 5,
+      "vistas": 16,
+      "dispositivos": {
+        "mobile": 14,
+        "desktop": 2
+      },
+      "paises": {
+        "AR": 9,
+        "US": 4,
+        "IE": 3
+      },
+      "referentes": {
+        "facebook.com": 4,
+        "google.com": 1
+      },
+      "horas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "notas": {
+        "5biv0y": 8,
+        "u043fh": 2
+      },
+      "paginas": {
+        "/": 6
       }
     }
   }
