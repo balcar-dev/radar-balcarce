@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-14T14:32:52.591Z",
- "portada": 39,
- "archivo": 1060,
- "esperandoCuerpo": 3,
+ "generado": "2026-10-14T15:06:38.157Z",
+ "portada": 44,
+ "archivo": 1065,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-14T14:32:52.616Z",
+  "generado": "2026-10-14T15:06:38.199Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-14T12:05:23.923Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "Tu reclamo",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -126,8 +126,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 47,
     "notas": [
+     {
+      "id": "1iy72x8",
+      "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1ge6irq",
       "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
@@ -137,11 +142,6 @@
       "id": "11eff0s",
       "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "1kavxj3",
-      "titulo": "Sebastián Villa sufre una lesión en el tobillo y enciende la alerta en Boca",
-      "seccion": "Fútbol"
      },
      {
       "id": "u043fh",
@@ -157,13 +157,8 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "1iy72x8",
-      "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
-      "seccion": "Balcarce"
-     },
      {
       "id": "10aoo7v",
       "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
@@ -172,6 +167,11 @@
      {
       "id": "17v35o5",
       "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "95znl3",
+      "titulo": "El Registro Civil suspende casamientos para el martes 13",
       "seccion": "Balcarce"
      },
      {
@@ -193,18 +193,17 @@
      "id": "505otd",
      "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
      "cuando": "2026-10-14T12:35:32.725Z"
+    },
+    {
+     "id": "1ge6irq",
+     "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
+     "cuando": "2026-10-14T14:34:42.396Z"
     }
    ],
    "cola": [
     {
-     "id": "1ge6irq",
-     "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "97f98g",
-     "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+     "id": "1iy72x8",
+     "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
      "seccion": "Balcarce",
      "marcada": false
     },
@@ -215,20 +214,20 @@
      "marcada": false
     },
     {
-     "id": "1iy72x8",
-     "titulo": "La Estudiantina comienza el lunes y reúne a los secundarios",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "1fi9fiz",
      "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
      "seccion": "Deportes",
      "marcada": false
+    },
+    {
+     "id": "97f98g",
+     "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+     "seccion": "Balcarce",
+     "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-10-14T14:05:32.725Z",
+   "cupo": 2,
+   "proximoDesde": "2026-10-14T16:04:42.396Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
