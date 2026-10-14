@@ -14421,16 +14421,16 @@
   "cuando": "2026-10-14T20:33:36.416Z"
  },
  "1tiy73l": {
-  "archivo": "fotos-notas/1tiy73l.jpg",
   "medio": "TyC Sports",
-  "credito": "Foto: TyC Sports",
   "licencia": null,
   "origen": "medio",
   "titulo": "Franco Colapinto rechaza los mensajes de hostigamiento en las redes",
   "enlace": "https://www.tycsports.com/automovilismo/formula-1-franco-colapinto-alpine-mensaje-fans-criticas-redes-sociales-id766239.html",
   "imagenOriginal": "https://media.tycsports.com/files/2026/10/14/995964/franco-colapinto-gp-de-singapur_1440x810.webp",
   "razon": "La foto B muestra a Franco Colapinto en primer plano con mejor encuadre y sin marcas ni menores.",
-  "cuando": "2026-10-14T20:33:36.416Z"
+  "cuando": "2026-10-14T20:33:36.416Z",
+  "intentado": true,
+  "borrada": true
  },
  "tlvcwh": {
   "archivo": "fotos-notas/tlvcwh.jpg",
@@ -14512,5 +14512,37 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/I2GHD235QVEHBMKL7SXY23JLBM.jpg?auth=d6de2774b9ee63ff2a74af794b4f0e277257b5a5f95f75248e4e655959b1c480&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto A muestra claramente al funcionario hablando en la conferencia con buen encuadre y sin marcas de agua ni menores.",
   "cuando": "2026-10-14T21:03:01.743Z"
+ },
+ "obdkb1": {
+  "archivo": "fotos-notas/obdkb1.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Franco Colapinto pide frenar los mensajes de odio en las redes sociales",
+  "enlace": "https://www.clarin.com/deportes/franco-colapinto-mensajes-odio-redes-sociales-piensan-defendiendo-generan-contrario_0_mySL2wLxxK.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/10/09/jgUS-lJP4_2000x1500__1.jpg",
+  "razon": "La foto A muestra a Franco Colapinto de cuerpo entero, sin marcas de agua ni menores, con excelente nitidez.",
+  "cuando": "2026-10-14T21:32:34.868Z"
+ },
+ "y1elhg": {
+  "intentado": true,
+  "origen": "medio",
+  "cuando": "2026-10-14T21:32:34.868Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 1,
+  "fuentes": 4
+ },
+ "1394wxo": {
+  "archivo": "fotos-notas/1394wxo.jpg",
+  "medio": "Zona Norte Diario",
+  "credito": "Foto: Zona Norte Diario",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Kicillof y Lanús supervisan la nueva base de la UTOI en San Isidro",
+  "enlace": "https://www.zonanortediario.com.ar/14/10/2026/kicillof-y-lanus-recorrieron-la-nueva-base-de-la-utoi-en-san-isidro-que-ya-cuenta-con-100-efectivos/",
+  "imagenOriginal": "https://www.zonanortediario.com.ar/wp-content/uploads/2026/10/DON5711-scaled.jpg",
+  "razon": "Tiene buen encuadre y nitidez, muestra claramente el hecho y no tiene marcas añadidas ni menores.",
+  "cuando": "2026-10-14T21:32:34.868Z"
  }
 }
