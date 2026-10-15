@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-15T03:02:43.177Z",
+ "consultado": "2026-10-15T20:00:10.389Z",
  "equipos": [
   "9739",
   "3",
@@ -69,42 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841592",
-    "competencia": "liga",
-    "inicio": "2026-10-05T19:45:00.000Z",
-    "estado": "final",
-    "minuto": "90'+4'",
-    "local": {
-     "id": "17702",
-     "nombre": "Deportivo Riestra",
-     "goles": 1
-    },
-    "visitante": {
-     "id": "11989",
-     "nombre": "Central Córdoba (Santiago del Estero)",
-     "goles": 1
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "local",
-      "jugador": "Milton Céliz",
-      "minuto": "3'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "visitante",
-      "jugador": "Michael Santos",
-      "minuto": "38'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Guillermo Laza",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841590",
     "competencia": "liga",

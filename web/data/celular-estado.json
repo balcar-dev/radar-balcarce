@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T19:32:54.633Z",
- "portada": 54,
- "archivo": 1135,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-15T20:00:12.646Z",
+ "portada": 52,
+ "archivo": 1134,
+ "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-10-15T19:32:54.672Z",
+  "generado": "2026-10-15T20:00:12.680Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -157,27 +157,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 55,
     "notas": [
-     {
-      "id": "lf9d6b",
-      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1ylxz2o",
-      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
-      "seccion": "Balcarce"
-     },
      {
       "id": "u0hcbv",
       "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce"
      },
      {
-      "id": "11lwkfl",
-      "titulo": "Pato Naranja y Pato Negro clasifican a semifinales del Torneo Desarrollo",
+      "id": "lf9d6b",
+      "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
       "seccion": "Deportes"
+     },
+     {
+      "id": "9s0dkq",
+      "titulo": "Flavio Briatore presenta al nuevo director técnico de Alpine",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1ylxz2o",
+      "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -212,18 +212,6 @@
    ],
    "cola": [
     {
-     "id": "lf9d6b",
-     "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "1ylxz2o",
-     "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
      "id": "1f8plkr",
      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
      "seccion": "Balcarce",
@@ -232,6 +220,18 @@
     {
      "id": "u0hcbv",
      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "lf9d6b",
+     "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "1ylxz2o",
+     "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
      "seccion": "Balcarce",
      "marcada": false
     }

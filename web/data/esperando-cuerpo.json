@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T19:11:25.757Z",
+ "generado": "2026-10-15T20:00:12.646Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -30,6 +30,43 @@
    "maximo": 3
   },
   {
+   "id": "5yic3w",
+   "titulo": "La industria operó al 58,5% de su capacidad instalada en agosto y sumó una nueva caída interanual",
+   "copete": "La utilización de la capacidad instalada en la industria se ubicó en el 58,5% en agosto, por debajo del 59,6% registrado en el mismo mes de 2025, según informó este jueves el INDEC. El dato confirma que más del 40% de la capacidad productiva de las fábricas permanece ociosa, con…",
+   "seccion": "Economía",
+   "fecha": "2026-10-15T19:14:37.281Z",
+   "fuentes": [
+    {
+     "medio": "El Cronista",
+     "enlace": "https://www.cronista.com/economia-politica/la-industria-opero-al-585-de-su-capacidad-instalada-en-agosto-y-sumo-una-nueva-caida-interanual/",
+     "fecha": "2026-10-15T19:14:37.281Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/economia/2026/10/15/la-industria-uso-el-585-de-su-capacidad-instalada-en-agosto-los-rubros-que-crecieron-y-los-que-cayeron/",
+     "fecha": "2026-10-15T19:53:45.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/la-industria-cayo-en-agosto-y-uso-apenas-el-58-5-de-su-capacidad-instalada/",
+     "fecha": "2026-10-15T19:24:39.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/economia/volvio-a-caer-el-uso-de-la-capacidad-instalada-de-la-industria-en-agosto_a6ad1231788153cda2dfd46cf",
+     "fecha": "2026-10-15T19:43:50.425Z"
+    },
+    {
+     "medio": "C5N",
+     "enlace": "https://www.c5n.com/economia/la-capacidad-instalada-opero-al-588-agosto-y-registro-otra-caida-interanual-n251716",
+     "fecha": "2026-10-15T19:39:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "título o bajada: 3 problemas (numero): el guion dice 50 y la fuente no lo dice",
+   "maximo": 4
+  },
+  {
    "id": "sosoq0",
    "titulo": "Ángela Servín completó los 70 kilómetros de la Atlántica Ultra y logró subir al podio",
    "copete": "La atleta balcarceña Ángela Servín tuvo una destacada actuación en la exigente competencia Atlántica Ultra, al completar un recorrido de 70 kilómetros y alcanzar el segundo puesto en su categoría. La prueba comenzó en la costanera de Mar del Plata y continuó por veredas y…",
@@ -44,6 +81,28 @@
    ],
    "intentos": 3,
    "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
+   "id": "m2d0x8",
+   "titulo": "U2 confirmó dos shows en River con Beck como invitado especial",
+   "copete": "",
+   "seccion": "Cultura y agenda",
+   "fecha": "2026-10-15T18:55:38.000Z",
+   "fuentes": [
+    {
+     "medio": "El Marplatense",
+     "enlace": "https://www.elmarplatense.com/u2-confirmo-dos-shows-en-river-con-beck-como-invitado-especial",
+     "fecha": "2026-10-15T18:55:38.000Z"
+    },
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/musica/recitales/2026/10/15/beck-sera-el-encargado-de-abrir-los-shows-de-u2-en-river-cuando-seran-los-shows-y-que-canciones-podria-tocar/",
+     "fecha": "2026-10-15T19:38:08.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (nombre, copia): el cuerpo nombra a \"marplatense\" y la fuente no; sin esas oraciones quedan 72 palabras",
    "maximo": 3
   }
  ]
