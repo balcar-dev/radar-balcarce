@@ -14527,11 +14527,10 @@
  },
  "y1elhg": {
   "intentado": true,
-  "origen": "ninguna",
-  "titulo": "El oficialismo busca dictaminar la reforma de salud mental en el Senado",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-10-15T06:31:54.295Z",
-  "intentos": 4,
+  "origen": "medio",
+  "cuando": "2026-10-15T12:31:54.898Z",
+  "error": "no se pudo volver a bajar la elegida",
+  "intentos": 5,
   "fuentes": 4
  },
  "1394wxo": {
@@ -14782,5 +14781,29 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/PBPKFDTYBJBBVEFIXPSMW2MR74.jpg?auth=52d7938adfad04e15a2661d1117260041b92407ca88c21eec7b0a94ba2fd3a93&smart=true&width=1200&height=630&quality=85",
   "razon": "La foto B muestra una escena de negocios y acuerdos laborales adecuada para ilustrar la ronda de negocios del RIGI, sin marcas de agua ni menores.",
   "cuando": "2026-10-15T12:02:48.250Z"
+ },
+ "1b4z7qp": {
+  "archivo": "fotos-notas/1b4z7qp.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
+  "enlace": "https://www.ambito.com/informacion-general/aumenta-la-vtv-la-provincia-buenos-aires-cuanto-quedo-la-tarifa-basica-n6333970",
+  "imagenOriginal": "https://media.ambito.com/p/47e6cc0e232aec3c5bed9b9b55bda871/adjuntos/239/imagenes/043/593/0043593124/vtv-1500-x-1000.png",
+  "razon": "Tiene excelente nitidez, muestra claramente la planta de revisión técnica vehicular sin menores ni marcas añadidas por el medio.",
+  "cuando": "2026-10-15T12:31:54.898Z"
+ },
+ "7tqcv3": {
+  "archivo": "fotos-notas/7tqcv3.jpg",
+  "medio": "El Cronista",
+  "credito": "Foto: El Cronista",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno nacional actualiza los aranceles de discapacidad",
+  "enlace": "https://www.cronista.com/economia-politica/el-gobierno-aumento-las-prestaciones-por-discapacidad-de-cuanto-sera-la-suba-en-octubre/",
+  "imagenOriginal": "https://www.cronista.com/resizer/v2/ZZP4JD4AVNDGFBG6ZN3RMCLTYQ.png?auth=1d7c74625114dd32c6cf0112bc16e1721416cf58a2bc94e134bb799e16f61e53&height=630&width=1200&quality=70&focal=394%2C212",
+  "razon": "Es la única foto sin marcas de agua ni menores reconocibles que ilustra adecuadamente la temática.",
+  "cuando": "2026-10-15T12:31:54.898Z"
  }
 }
