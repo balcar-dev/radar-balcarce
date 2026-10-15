@@ -4,7 +4,7 @@
 //
 // Sin nada del DOM: se prueba con Node (pruebas/celular-app.test.mjs).
 
-export const REPO = 'balcar-dev/radar-balcarce';
+export const REPO = 'radarbalcarce/radar-balcarce';
 export const RAMA = 'main';
 const API = 'https://api.github.com';
 

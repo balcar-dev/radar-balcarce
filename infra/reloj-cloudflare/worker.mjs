@@ -4,7 +4,7 @@
 // Necesita UN secreto, GITHUB_TOKEN: un token de grano fino de la cuenta del repositorio, sólo para este repositorio, con "Actions: lectura y
 // escritura". Se carga una sola vez (docs/08-INFRAESTRUCTURA.md, "El reloj de Cloudflare"). Nunca se escribe en el código.
 
-export const REPOSITORIO = 'balcar-dev/radar-balcarce';
+export const REPOSITORIO = 'radarbalcarce/radar-balcarce';
 export const RAMA = 'main';
 
 /**
