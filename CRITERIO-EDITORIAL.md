@@ -730,7 +730,7 @@ voces de los videos también son de IA.
   medios que la cuentan la saca de las listas pero le deja la página. Si ya había salido
   en Facebook o Instagram, allá se borra a mano.
 - **El enlace no se rompe:** la dirección de una nota queda fija desde que sale aunque
-  cambie el titular, y la página dura 180 días aunque salga de la portada. Si la misma
+  cambie el titular, y la página dura 180 días aunque salga de la portada (con el tope de 3.700 notas, a unas 46 por día, son unos 80). Si la misma
   noticia tenía dos direcciones, la que se va redirige a la que queda.
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**, para que no
   vuelva a pasar (`docs/10-REGLAS-Y-PRUEBAS.md`). Y si el error es de criterio, se
@@ -787,6 +787,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Horas que puede tener un hecho para publicarse por primera vez (una nota que nunca salió y es más vieja, no sale) | 12 | `PORTADA.horasParaEstrenar` |
 | Portada: horas que una nota compite por el lugar grande | 6 | `PORTADA.horasNotaGrande` |
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
+| Notas con página como máximo (por el tope de 20.000 archivos de Cloudflare; a unas 46 por día se llena y manda antes que los 180 días) | 3700 | `PORTADA.maximoDeNotas` |
 | Nota del dólar: cuánto tiene que moverse el blue o el oficial contra el día anterior para salir (%) | 2 | `NOTA_DEL_DOLAR.movimientoMinimo` |
 | Medios que tienen que contar lo de afuera: Fútbol | 4 | `MEDIOS_DE_AFUERA.Fútbol` |
 | Medios que tienen que contar lo de afuera: Deportes | 4 | `MEDIOS_DE_AFUERA.Deportes` |

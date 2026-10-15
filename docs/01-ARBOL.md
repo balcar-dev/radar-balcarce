@@ -268,7 +268,7 @@ abajo), y lo que corre en GitHub, acá.
 | Archivo | Qué guarda | Quién lo escribe |
 |---|---|---|
 | `portada.json` | Lo que se muestra (36 h), clima, farmacia, pendientes | "Actualizar la web" |
-| `archivo.json` | Lo que tiene página (180 días, hasta 3.500), una nota por renglón | "Actualizar la web" |
+| `archivo.json` | Lo que tiene página (180 días en teoría; en la práctica el tope de 3.700 notas, unos 80 días), una nota por renglón | "Actualizar la web" |
 | `agenda.json` | Los eventos con página | "Actualizar la web" |
 | `banco-fotos.json` | El banco de fotos | "Actualizar la web" |
 | `dolar-historia.json` | La cotización de las 11 de cada día hábil (60 días) | "Actualizar la web" |

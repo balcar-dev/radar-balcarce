@@ -28,7 +28,7 @@ import {
 } from '../reels/reescritura.mjs';
 import { REGLAS_FACEBOOK, REGLAS_PIEZAS, SECCIONES_QUE_ESPERAN_PERSONA } from '../redes/elegir.mjs';
 import { PALABRAS_MINIMAS_CUERPO } from '../web/lib/cuerpo.js';
-import { HORAS_EN_PORTADA, DIAS_DE_ARCHIVO } from '../web/lib/archivo.js';
+import { HORAS_EN_PORTADA, DIAS_DE_ARCHIVO, MAXIMO_EN_ARCHIVO } from '../web/lib/archivo.js';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const leer = (r) => fs.readFileSync(path.join(RAIZ, r), 'utf8').replace(/\r\n/g, '\n');
@@ -117,6 +117,7 @@ test('los que usan los números los toman del criterio (o dicen lo mismo)', () =
   assert.equal(PALABRAS_MINIMAS_CUERPO, CUERPO.minimoParaPublicar);
   assert.equal(HORAS_EN_PORTADA, PORTADA.horas);
   assert.equal(DIAS_DE_ARCHIVO, PORTADA.diasDeArchivo);
+  assert.equal(MAXIMO_EN_ARCHIVO, PORTADA.maximoDeNotas);
   const ventana = leer('web/lib/datos.js').match(/const VENTANA_HORAS = (\d+);/);
   assert.ok(ventana, 'no encuentro VENTANA_HORAS en web/lib/datos.js');
   assert.equal(Number(ventana[1]), PORTADA.horasNotaGrande);

@@ -8,6 +8,7 @@ está en `PENDIENTES.md`; las reglas numeradas con su prueba, en `docs/10-REGLAS
 
 | Qué | Por qué | Quién |
 |---|---|---|
+| **El tope de notas con página sube de 3.500 a 3.700** (`MAXIMO_EN_ARCHIVO` y `PORTADA.maximoDeNotas`) y el aviso de archivos de Cloudflare pasa de 14.000 a 16.500 (alerta, 18.000). **El tope se alcanza hacia el 10/12/2026** (1.131 notas hoy, 46 por día; entre el 22/11 y fines de enero según el ritmo); desde ahí cada nota vive unos 80 días y su enlace da 404. Antes de eso, archivo permanente en R2: fase 5 del plan (`docs/etapa-10-operacion/ANALISIS.md`), diseño en `docs/salud-tecnica/ARCHIVO-PERMANENTE.md` | Se midió un armado real: unos 400 archivos de base más 4,2 por nota (no 3,2). 3.700 notas = unos 15.900 archivos, el 80% de los 20.000; más arriba no hay margen sin sacar las fotos del sitio. Es sólo ganar cuatro días: el arreglo de fondo es el archivo permanente | Claude, a pedido; falta que los dos elijan entre las dos variantes del diseño |
 | **El repositorio se mudó a `radarbalcarce/radar-balcarce`**, cuenta de `radarbalcarce@gmail.com`. `balcardev`, Andrés y Hernán quedan invitados como colaboradores | Que el medio tenga todo en una cuenta propia (antes el dueño era `balcar-dev`) | Andrés |
 | **El reloj ahora es un Worker de Cloudflare, `radar-balcarce-reloj`** (`infra/reloj-cloudflare/`). Los tres trabajos de cron-job.org quedan **pausados, no borrados** (si el Worker falla, se pueden volver a prender) | cron-job.org se apagaba solo cuando un trabajo fallaba varias veces y era un servicio más que mirar | Andrés |
 | **El repositorio sigue público** hasta que el robot deje de correr en GitHub Actions | Con el repositorio privado, los minutos de Actions costarían unos US$ 100 por mes, contra un tope total de US$ 25 por mes para todo el proyecto. Por eso lo que espera a una persona viaja cifrado | Andrés |
@@ -73,5 +74,5 @@ está en `PENDIENTES.md`; las reglas numeradas con su prueba, en `docs/10-REGLAS
 - Si Política y Policiales esperan a una persona también en la web.
 - Si se retira del todo el panel de la PC.
 - Cómo se publica en YouTube y TikTok, y si las piezas de deporte salen con voz (el cupo es de 10 audios por día).
-- El archivo de notas: R2 por mes o D1, **antes del 2/12** (se llega a las 3.500 notas con página).
+- El archivo de notas: R2 por mes o D1, **antes del 10/12** (se llega a las 3.700 notas con página; `docs/salud-tecnica/ARCHIVO-PERMANENTE.md`).
 - Rastreadores de IA en `robots.txt`: permitirlos o bloquearlos.

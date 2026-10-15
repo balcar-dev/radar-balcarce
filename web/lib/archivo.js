@@ -189,13 +189,17 @@ export function pierdeLaPagina(deHoy, { conserva = () => false } = {}) {
 export const DIAS_DE_ARCHIVO = 180;
 
 /** Tope de notas con página. Cada una son varios archivos en el sitio (la
- *  página y sus dos imágenes) y Cloudflare Pages acepta hasta 20.000 archivos
+ *  página, su texto, su fragmento del buscador, su foto, su parte de las secciones
+ *  y, si salió en redes, sus dos imágenes) y Cloudflare Pages acepta hasta 20.000 archivos
  *  por despliegue; además, cada nota más es tiempo de compilación. Si se pasa,
  *  se quedan primero las que salieron en las redes y después las más nuevas.
- *  8/10/2026 (C-6): subió de 2.500 a 3.500 (≈10.500 archivos, con margen bajo los 20.000) y lo que sale del archivo por edad o por tope
- *  ya no se pierde: va al histórico por mes (`bajasDelArchivo`, `web/data/historico/AAAA-MM.json`). Más allá hace falta armar las viejas
- *  en el momento (MEJORAS C-6). */
-const MAXIMO_EN_ARCHIVO = 3500;
+ *  8/10/2026 (C-6): subió de 2.500 a 3.500 y lo que sale del archivo por edad o por tope
+ *  ya no se pierde: va al histórico por mes (`bajasDelArchivo`, `web/data/historico/AAAA-MM.json`).
+ *  15/10/2026: se midió un armado real (docs/salud-tecnica/ARCHIVO-PERMANENTE.md, § 1): unos 4,2 archivos por nota sobre una base de unos
+ *  400, no los 3,2 que se creían. 3.700 notas son unos 15.900 archivos (80% de 20.000); es lo más que se puede subir sin sacar las fotos
+ *  del sitio. Lo de ingesta/criterio.mjs (`PORTADA.maximoDeNotas`) tiene que decir lo mismo; `web/scripts/contar-archivos.mjs` avisa si
+ *  el recuento real se sale de la cuenta. Más allá hace falta el archivo permanente (R2). */
+export const MAXIMO_EN_ARCHIVO = 3700;
 
 const HORA = 3600e3;
 const tiempo = (n) => new Date(n?.fecha).getTime();

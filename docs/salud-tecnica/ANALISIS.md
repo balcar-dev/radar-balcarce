@@ -110,6 +110,8 @@ Hoy: **5.109 de 20.000 (26%)**. Es dato real del log, no estimación.
 
 *(Las filas son estimaciones con 2,45 archivos por página; **SIN VERIFICAR** hasta medir. El aviso automático arranca en 14.000 y alerta en 18.000: `web/scripts/contar-archivos.mjs`. Es bueno, pero sólo escribe una anotación en el registro: nadie lo ve; ver el plan.)*
 
+> **Corrección del 15/10/2026, medida.** Se hizo un armado real (Next 15, 1.131 notas = 5.125 archivos) y otro con el archivo recortado a 566 notas (3.200 archivos, 878 fotos iguales): da **unos 400 archivos de base y 4,2 por nota** (2,0 la página y su texto; 1,0 el fragmento del buscador; 0,8 la foto; 0,2 las páginas de sección; 0,2 las dos imágenes de las notas que salieron en redes), no 3,2. Con 3.500 notas son ~15.000 archivos (no 12.700); con 3.700, ~15.900. El tope no se puede subir de forma útil sin sacar las fotos del sitio (con fotos en R2: ~3,4 por nota, 4.500 notas serían ~15.700). Detalle y el diseño del archivo permanente: `ARCHIVO-PERMANENTE.md`. Las filas de la tabla de arriba con "3.500 notas" valen ~2.300 archivos más de lo que dicen.
+
 Una pista de que el límite se puede mover: Cloudflare ofrece más archivos por despliegue en planes pagos o en "Workers con archivos estáticos" (**SIN VERIFICAR** las cifras actuales de Cloudflare: conviene leer su página de límites antes de decidir).
 
 ### 2.2 Crecimiento por día y cuándo pega cada límite (a ritmo actual)

@@ -145,6 +145,12 @@ export const PORTADA = {
   horasParaEstrenar: 12,
   horasNotaGrande: 6,
   diasDeArchivo: 180,
+  // Tope de notas con página (web/lib/archivo.js, MAXIMO_EN_ARCHIVO). Cloudflare Pages acepta 20.000 archivos por despliegue y, medido el
+  // 15/10/2026 con Next 15, cada nota suma unos 4,2 (su página, su texto, su fragmento del buscador, su foto, su parte de las secciones
+  // y, si salió en redes, sus dos imágenes) sobre una base de unos 400: 3.700 notas son unos 15.900 archivos (80% del tope).
+  // 3.700 (15/10/2026; eran 3.500: la cuenta de la auditoría, 3,2 por nota, era corta). Más allá hace falta el archivo permanente
+  // (docs/salud-tecnica/ARCHIVO-PERMANENTE.md) o sacar las fotos del sitio (R2).
+  maximoDeNotas: 3700,
 };
 
 // Cuántos medios distintos tienen que contar una nota de AFUERA para que
