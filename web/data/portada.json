@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T21:36:47.138Z",
+  "generado": "2026-10-15T21:59:36.616Z",
   "notas": [
     {
       "id": "n6v2wu",
@@ -145,7 +145,9 @@
         "El Cronista",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "C5N"
+        "El Eco de Tandil",
+        "C5N",
+        "Minuto Uno"
       ],
       "enlace": "https://www.cronista.com/economia-politica/la-industria-opero-al-585-de-su-capacidad-instalada-en-agosto-y-sumo-una-nueva-caida-interanual/",
       "teniaImagenLaFuente": true,
@@ -595,124 +597,6 @@
       }
     },
     {
-      "id": "1h7diyp",
-      "titulo": "Facundo Cambeses y Iván Marcone palpitan el Clásico de Avellaneda",
-      "copete": "Los capitanes de Racing e Independiente brindaron una conferencia de prensa conjunta de cara al partido del domingo en el Cilindro. Ambos referentes analizaron el presente de sus equipos.",
-      "cuerpo": "Facundo Cambeses e Iván Marcone brindaron una conferencia de prensa conjunta este jueves de cara al encuentro del próximo domingo a las 14:45 en el Cilindro de Avellaneda.\n\nEl arquero de la Academia remarcó que deben dejar la vida para conseguir la victoria, mientras que el volante del Rojo aseguró que el plantel se encuentra fuerte y confiado para hacer un buen partido.\n\nRacing llega al clásico decimotercero en la Zona B con once unidades y fuera de los puestos de playoffs, en tanto que Independiente se ubica séptimo en la Zona A con dieciocho puntos dentro del grupo de vanguardia.",
-      "guion": "Facundo Cambeses y Ivan Marcone palpitan el Clasico de Avellaneda",
-      "seccion": "Fútbol",
-      "medios": [
-        "Clarín",
-        "TyC Sports",
-        "Olé",
-        "Crónica",
-        "Doble Amarilla",
-        "La Gaceta (Tucumán)"
-      ],
-      "enlace": "https://www.ole.com.ar/futbol-primera/racing-vs-independiente-cambeces-marcone-conferencia-prensa-vivo-clasico-avellaneda-liga-profesional-clasura_0_TOkWemyfRr.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T15:37:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T21:01:45.847Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Racing e Independiente se enfrentan este domingo en el Cilindro.",
-        "Facundo Cambeses e Iván Marcone hablaron en conferencia conjunta.",
-        "El encuentro corresponde a la fecha 13 del Torneo Clausura."
-      ],
-      "seSabe": [
-        "El partido se jugará este domingo a las 14:45 en el estadio de Racing.",
-        "Facundo Cambeses e Iván Marcone participaron de una conferencia conjunta.",
-        "Racing marcha 13° en la Zona B e Independiente está 7° en la Zona A."
-      ],
-      "noConfirmado": [
-        "No se informaron las alineaciones titulares para el encuentro.",
-        "No trascendieron detalles sobre la identidad de la persona que pidió un mensaje de paz."
-      ],
-      "textoRedes": "Facundo Cambeses e Iván Marcone hablaron en conferencia de prensa conjunta antes del Clásico de Avellaneda que se jugará este domingo en el Cilindro.",
-      "etiquetas": [
-        "Racing",
-        "Independiente",
-        "Clasico de Avellaneda",
-        "Facundo Cambeses",
-        "Ivan Marcone",
-        "Torneo Clausura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/futbol-primera/racing-vs-independiente-cambeces-marcone-conferencia-prensa-vivo-clasico-avellaneda-liga-profesional-clasura_0_TOkWemyfRr.html",
-          "fecha": "2026-10-15T15:37:37.000Z",
-          "oficial": false,
-          "aporte": "Aportó los horarios, las declaraciones de los capitanes y las posiciones de los equipos en el torneo."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/viene-clasico-avellaneda-lleno-urgencias-capitanes-racing-independiente-mandaron-mensaje-rivalidad_0_BRKtbKh1lr.html",
-          "fecha": "2026-10-15T20:19:23.000Z",
-          "oficial": false,
-          "aporte": "Aportó el pedido final de un mensaje de paz para los hinchas."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/racing-club/tenemos-que-dejar-la-vida-cambeses-y-marcone-capitanes-de-racing-e-independiente-palpitaron-el-clasico-id766438.html",
-          "fecha": "2026-10-15T20:54:18.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/racing/ivan-marcone-facundo-cambeses-ole-previa-clasico-avellaneda-respectivos-entrenadores_3_CQVTieL2lt.html",
-          "fecha": "2026-10-15T19:15:56.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/racing/curioso-momento-conferencia-marcone-cambeses_3_BNQ3aTtERh.html",
-          "fecha": "2026-10-15T18:14:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/actualidad/cambeses-y-marcone-capitanes-de-racing-e-independiente-palpitaron-el-clasico/",
-          "fecha": "2026-10-15T20:44:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/liga-/facundo-cambeses-e-ivan-marcone-palpitaron-el-clasico-de-avellaneda_a6ad11ec20735cd39a272a100",
-          "fecha": "2026-10-15T19:15:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Gaceta (Tucumán)",
-          "enlace": "https://www.lagaceta.com.ar/nota/1158223/deportes/racingindependiente-previa-lo-dijeron-capitanes-antes-clasico-domingo-cilindro.html",
-          "fecha": "2026-10-15T17:13:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "facundo-cambeses-y-ivan-marcone-palpitan-el-clasico-de-avellaneda",
-      "foto": {
-        "archivo": "fotos-notas/1h7diyp.jpg",
-        "credito": "Foto: Olé"
-      }
-    },
-    {
       "id": "1f8plkr",
       "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
       "copete": "La necrópolis local implementará un nuevo esquema para la apertura, el cierre, la prestación de servicios y la realización de trámites administrativos.",
@@ -940,210 +824,6 @@
       "foto": {
         "archivo": "fotos-notas/11lwkfl.jpg",
         "credito": "Foto: Infórmese Primero (FM 104.9)"
-      }
-    },
-    {
-      "id": "1m9svv0",
-      "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
-      "copete": "El piloto brasileño de 21 años dejará la Fórmula 2 para sumarse a la máxima categoría con un contrato plurianual. Ocupará el lugar de Esteban Ocon en la escudería estadounidense.",
-      "cuerpo": "La escudería Haas confirmó que el brasileño Rafael Câmara competirá en la Fórmula 1 a partir de la temporada 2027. El piloto de 21 años, actual líder de la Fórmula 2 y formado en la Academia Ferrari, firmó un contrato plurianual para ocupar el lugar del francés Esteban Ocon.\n\nEl director del equipo, Ayao Komatsu, destacó el rendimiento del joven tras las pruebas realizadas en agosto en Portugal. Por su parte, el propietario Gene Haas valoró su ascenso desde las categorías inferiores y su paso por la Fórmula 3.",
-      "guion": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Clarín",
-        "Campeones",
-        "Motorsport",
-        "La Nación",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Perfil",
-        "TyC Sports",
-        "Radio Mitre",
-        "El Marplatense",
-        "Bolavip Argentina",
-        "Córdoba Competición",
-        "Ámbito",
-        "C5N",
-        "Minuto Uno",
-        "La Capital (Rosario)",
-        "La Gaceta (Tucumán)",
-        "Los Andes (Mendoza)"
-      ],
-      "enlace": "https://es.motorsport.com/f1/news/oficial-rafael-camara-ficha-haas-debut-formula1-2027/10865294/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T14:02:05.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T21:31:36.488Z",
-      "relevancia": 100,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Rafael Câmara debuta en la Fórmula 1 en 2027",
-        "El brasileño reemplaza a Esteban Ocon en Haas",
-        "El piloto de 21 años lidera actualmente el campeonato de Fórmula 2"
-      ],
-      "seSabe": [
-        "Rafael Câmara firmó un contrato plurianual con Haas",
-        "El piloto brasileño tiene 21 años y encabeza la tabla de la Fórmula 2",
-        "Ocupará la butaca que dejará vacante Esteban Ocon"
-      ],
-      "noConfirmado": [
-        "Aún no se confirmó oficialmente quién será el compañero de equipo de Câmara, aunque se prevé la continuidad de Oliver Bearman"
-      ],
-      "textoRedes": "Rafael Câmara dará el salto a la Fórmula 1 en 2027 y será piloto de la escudería Haas. El brasileño de 21 años, actual líder de la Fórmula 2, firmará un contrato plurianual en reemplazo de Esteban Ocon.",
-      "etiquetas": [
-        "Formula 1",
-        "Rafael Câmara",
-        "Haas",
-        "Esteban Ocon"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Motorsport",
-          "enlace": "https://es.motorsport.com/f1/news/oficial-rafael-camara-ficha-haas-debut-formula1-2027/10865294/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-          "fecha": "2026-10-15T14:02:05.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la llegada de Rafael Câmara a Haas para 2027 con contrato multianual."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/brasil-formula-1-rafael-camara-piloto-conquisto-ferrari-elegido-haas-2027_0_f8iciL2O0v.html",
-          "fecha": "2026-10-15T17:28:38.000Z",
-          "oficial": false,
-          "aporte": "Detalló la trayectoria del piloto, su paso por la Academia Ferrari y las declaraciones de las autoridades del equipo."
-        },
-        {
-          "medio": "Campeones",
-          "enlace": "https://campeones.com.ar/oficial-rafael-camara-se-une-a-haas-en-2027/",
-          "fecha": "2026-10-15T14:48:29.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Motorsport",
-          "enlace": "https://es.motorsport.com/f1/news/haas-decision-correcta-cambiar-ocon-camara/10865419/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-          "fecha": "2026-10-15T15:18:18.000Z",
-          "oficial": false,
-          "aporte": "Informó que el brasileño de 21 años llega como sustituto de Esteban Ocon."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/haas-anuncio-a-rafael-camara-como-piloto-para-2027-nid15102026/",
-          "fecha": "2026-10-15T15:35:33.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/10/15/haas-confirmo-a-un-rookie-sudamericano-como-reemplaante-de-esteban-ocon-y-solo-quedan-dos-butacas-sin-dueno-en-la-f1-para-2027/",
-          "fecha": "2026-10-15T15:24:15.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/15/se-confirmo-quien-sera-el-nuevo-piloto-de-la-escuderia-haas-para-la-temporada-2027-de-la-formula-1/",
-          "fecha": "2026-10-15T15:04:15.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/automovilismo/mercado-de-pases-de-la-formula-1-haas-anuncio-a-rafael-camara-para-2027.phtml",
-          "fecha": "2026-10-15T21:06:06.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la presencia de los pilotos sudamericanos en la máxima categoría."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/automovilismo/el-piloto-brasileno-que-reemplazara-a-esteban-ocon-en-haas-y-debutara-en-la-f1-en-2027-id766366.html",
-          "fecha": "2026-10-15T15:15:51.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/haas-confirmo-a-su-nuevo-piloto-para-2027-quien-reemplazara-a-esteban-ocon-en-la-formula-1/",
-          "fecha": "2026-10-15T16:56:47.000Z",
-          "oficial": false,
-          "aporte": "Indicó que compartirá garaje con Oliver Bearman."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/rafael-camara-sera-piloto-de-haas-en-la-formula-1-en-2027",
-          "fecha": "2026-10-15T17:00:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/formula-1/la-formula-1-suma-un-nuevo-sudamericano-esteban-ocon-sera-reemplazado-por-rafael-camara-en-haas",
-          "fecha": "2026-10-15T15:05:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Córdoba Competición",
-          "enlace": "https://cordobacompeticion.com/internacionales/f1/el-brasileno-camara-llega-a-f1-en-2027-en-reemplazo-de-ocon-en-haas/",
-          "fecha": "2026-10-15T20:09:44.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/ocon-ya-tiene-reemplazo-la-formula-1-2027-quien-es-rafael-camara-n6334140",
-          "fecha": "2026-10-15T15:24:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/deportes/se-acabo-el-misterio-rafael-camara-sera-nuevo-piloto-haas-la-formula-1-2027-n251678",
-          "fecha": "2026-10-15T15:05:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/haas-confirmo-al-reemplazo-ocon-la-formula-1-2027-brasil-tendra-dos-pilotos-n6334134",
-          "fecha": "2026-10-15T15:17:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/cambios-la-formula-1-haas-anuncio-quien-sera-su-nuevo-piloto-titular-la-temporada-2027-n10286859.html",
-          "fecha": "2026-10-15T19:07:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Gaceta (Tucumán)",
-          "enlace": "https://www.lagaceta.com.ar/nota/1158205/deportes/otro-sudamericano-formula-1-quien-joven-haas-eligio-para-reemplazar-ocon.html",
-          "fecha": "2026-10-15T15:21:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Los Andes (Mendoza)",
-          "enlace": "https://www.losandes.com.ar/deportes/haas-sacudio-la-formula-1-otro-sudamericano-echo-esteban-ocon-y-ficho-un-brasileno-21-anos-2027-n6010465",
-          "fecha": "2026-10-15T16:37:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 18 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "rafael-camara-llega-a-la-formula-1-y-corre-en-haas-desde-2027",
-      "foto": {
-        "archivo": "fotos-notas/1m9svv0.jpg",
-        "credito": "Foto: Motorsport"
       }
     },
     {
@@ -2484,6 +2164,211 @@
       }
     },
     {
+      "id": "1m9svv0",
+      "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
+      "copete": "El piloto brasileño de 21 años dejará la Fórmula 2 para sumarse a la máxima categoría con un contrato plurianual. Ocupará el lugar de Esteban Ocon en la escudería estadounidense.",
+      "cuerpo": "La escudería Haas confirmó que el brasileño Rafael Câmara competirá en la Fórmula 1 a partir de la temporada 2027. El piloto de 21 años, actual líder de la Fórmula 2 y formado en la Academia Ferrari, firmó un contrato plurianual para ocupar el lugar del francés Esteban Ocon.\n\nEl director del equipo, Ayao Komatsu, destacó el rendimiento del joven tras las pruebas realizadas en agosto en Portugal. Por su parte, el propietario Gene Haas valoró su ascenso desde las categorías inferiores y su paso por la Fórmula 3.",
+      "guion": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Clarín",
+        "Campeones",
+        "Motorsport",
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "TyC Sports",
+        "Radio Mitre",
+        "El Marplatense",
+        "Bolavip Argentina",
+        "El Gráfico",
+        "Córdoba Competición",
+        "Ámbito",
+        "C5N",
+        "Minuto Uno",
+        "La Capital (Rosario)",
+        "La Gaceta (Tucumán)",
+        "Los Andes (Mendoza)"
+      ],
+      "enlace": "https://es.motorsport.com/f1/news/oficial-rafael-camara-ficha-haas-debut-formula1-2027/10865294/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T05:30:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T21:31:36.488Z",
+      "relevancia": 100,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Rafael Câmara debuta en la Fórmula 1 en 2027",
+        "El brasileño reemplaza a Esteban Ocon en Haas",
+        "El piloto de 21 años lidera actualmente el campeonato de Fórmula 2"
+      ],
+      "seSabe": [
+        "Rafael Câmara firmó un contrato plurianual con Haas",
+        "El piloto brasileño tiene 21 años y encabeza la tabla de la Fórmula 2",
+        "Ocupará la butaca que dejará vacante Esteban Ocon"
+      ],
+      "noConfirmado": [
+        "Aún no se confirmó oficialmente quién será el compañero de equipo de Câmara, aunque se prevé la continuidad de Oliver Bearman"
+      ],
+      "textoRedes": "Rafael Câmara dará el salto a la Fórmula 1 en 2027 y será piloto de la escudería Haas. El brasileño de 21 años, actual líder de la Fórmula 2, firmará un contrato plurianual en reemplazo de Esteban Ocon.",
+      "etiquetas": [
+        "Formula 1",
+        "Rafael Câmara",
+        "Haas",
+        "Esteban Ocon"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/oficial-rafael-camara-ficha-haas-debut-formula1-2027/10865294/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-10-15T14:02:05.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la llegada de Rafael Câmara a Haas para 2027 con contrato multianual."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/brasil-formula-1-rafael-camara-piloto-conquisto-ferrari-elegido-haas-2027_0_f8iciL2O0v.html",
+          "fecha": "2026-10-15T17:28:38.000Z",
+          "oficial": false,
+          "aporte": "Detalló la trayectoria del piloto, su paso por la Academia Ferrari y las declaraciones de las autoridades del equipo."
+        },
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/oficial-rafael-camara-se-une-a-haas-en-2027/",
+          "fecha": "2026-10-15T14:48:29.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/haas-decision-correcta-cambiar-ocon-camara/10865419/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-10-15T15:18:18.000Z",
+          "oficial": false,
+          "aporte": "Informó que el brasileño de 21 años llega como sustituto de Esteban Ocon."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/haas-anuncio-a-rafael-camara-como-piloto-para-2027-nid15102026/",
+          "fecha": "2026-10-15T15:35:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/10/15/haas-confirmo-a-un-rookie-sudamericano-como-reemplaante-de-esteban-ocon-y-solo-quedan-dos-butacas-sin-dueno-en-la-f1-para-2027/",
+          "fecha": "2026-10-15T15:24:15.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/10/15/se-confirmo-quien-sera-el-nuevo-piloto-de-la-escuderia-haas-para-la-temporada-2027-de-la-formula-1/",
+          "fecha": "2026-10-15T15:04:15.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/automovilismo/mercado-de-pases-de-la-formula-1-haas-anuncio-a-rafael-camara-para-2027.phtml",
+          "fecha": "2026-10-15T21:06:06.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la presencia de los pilotos sudamericanos en la máxima categoría."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/el-piloto-brasileno-que-reemplazara-a-esteban-ocon-en-haas-y-debutara-en-la-f1-en-2027-id766366.html",
+          "fecha": "2026-10-15T15:15:51.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/haas-confirmo-a-su-nuevo-piloto-para-2027-quien-reemplazara-a-esteban-ocon-en-la-formula-1/",
+          "fecha": "2026-10-15T16:56:47.000Z",
+          "oficial": false,
+          "aporte": "Indicó que compartirá garaje con Oliver Bearman."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/rafael-camara-sera-piloto-de-haas-en-la-formula-1-en-2027",
+          "fecha": "2026-10-15T17:00:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/la-formula-1-suma-un-nuevo-sudamericano-esteban-ocon-sera-reemplazado-por-rafael-camara-en-haas",
+          "fecha": "2026-10-15T15:05:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Córdoba Competición",
+          "enlace": "https://cordobacompeticion.com/internacionales/f1/el-brasileno-camara-llega-a-f1-en-2027-en-reemplazo-de-ocon-en-haas/",
+          "fecha": "2026-10-15T20:09:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/ocon-ya-tiene-reemplazo-la-formula-1-2027-quien-es-rafael-camara-n6334140",
+          "fecha": "2026-10-15T15:24:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/se-acabo-el-misterio-rafael-camara-sera-nuevo-piloto-haas-la-formula-1-2027-n251678",
+          "fecha": "2026-10-15T15:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/haas-confirmo-al-reemplazo-ocon-la-formula-1-2027-brasil-tendra-dos-pilotos-n6334134",
+          "fecha": "2026-10-15T15:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/cambios-la-formula-1-haas-anuncio-quien-sera-su-nuevo-piloto-titular-la-temporada-2027-n10286859.html",
+          "fecha": "2026-10-15T19:07:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Gaceta (Tucumán)",
+          "enlace": "https://www.lagaceta.com.ar/nota/1158205/deportes/otro-sudamericano-formula-1-quien-joven-haas-eligio-para-reemplazar-ocon.html",
+          "fecha": "2026-10-15T15:21:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Los Andes (Mendoza)",
+          "enlace": "https://www.losandes.com.ar/deportes/haas-sacudio-la-formula-1-otro-sudamericano-echo-esteban-ocon-y-ficho-un-brasileno-21-anos-2027-n6010465",
+          "fecha": "2026-10-15T16:37:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 18 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "rafael-camara-llega-a-la-formula-1-y-corre-en-haas-desde-2027",
+      "foto": {
+        "archivo": "fotos-notas/1m9svv0.jpg",
+        "credito": "Foto: Motorsport"
+      }
+    },
+    {
       "id": "cq95nc",
       "titulo": "La madre de Gaspi recuerda al influencer a cuatro meses del accidente",
       "copete": "Michelle Prim compartió un mensaje en redes sociales para recordar a su hijo, a cuatro meses del trágico choque de helicópteros ocurrido en Brasil.",
@@ -3089,7 +2974,6 @@
       "guion": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
       "seccion": "Fútbol",
       "medios": [
-        "Clarín",
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
@@ -3109,6 +2993,7 @@
         "La Gaceta (Tucumán)",
         "Los Andes (Mendoza)",
         "La Nueva",
+        "Clarín",
         "La Nación"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
@@ -4507,8 +4392,8 @@
     "Agro",
     "Fútbol",
     "Deportes",
-    "Automovilismo",
     "Política",
+    "Automovilismo",
     "Cultura y agenda",
     "Argentina",
     "Policiales"
@@ -4523,11 +4408,11 @@
   "clima": {
     "ahora": {
       "temp": 11,
-      "sensacion": 8,
-      "humedad": 70,
+      "sensacion": 7,
+      "humedad": 73,
       "viento": 18,
       "rumbo": "SE",
-      "cielo": "Nublado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": true
     },
     "dias": [
@@ -4880,6 +4765,12 @@
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
+      "id": "1dnzynw",
+      "titulo": null,
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "loa4fx",
       "titulo": "VIDEOS. Lilia Lemoine fue increpada en la marcha…",
       "seccion": "Política",
@@ -4898,12 +4789,6 @@
       "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
-      "id": "1dnzynw",
-      "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "2dhhlx",
       "titulo": null,
       "seccion": "Argentina",
@@ -4920,6 +4805,12 @@
       "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "1cv9j22",
+      "titulo": "\"Gildus\", el increíble videojuego que hicieron en Formosa…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"participá del\""
     },
     {
       "id": "1npu6pr",
@@ -4976,12 +4867,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1y68acy",
-      "titulo": "El escándalo del oro suma otra denuncia: el diputado…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "j9v9ko",
       "titulo": "Rechazan cerrar una de las mayores causas de lavado de…",
       "seccion": "Argentina",
@@ -4994,5 +4879,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 6
 }
