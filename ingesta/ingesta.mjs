@@ -15,6 +15,7 @@ import { sinFenomenoClimatico, sinExencionesDelAmarillo, sinSorteosDeportivos, t
 import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { decodificar, decodificarPagina } from './articulo.mjs';
+import { enlaceNormalizado } from './repetidas-publicadas.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE];
@@ -461,10 +462,12 @@ function mencionaBalcarce(nota) {
 }
 
 /**
- * ¿Por qué no entra esta nota de un medio de afuera? Mira la sección que le
+ * ¿Por qué no entra esta nota? De un medio de Balcarce, sólo la quiniela y la
+ * lotería que no nombran a Balcarce (2/10; desde el 15/10 de verdad: antes la
+ * ingesta llamaba a esta función sólo para los de afuera y la quiniela de una
+ * radio de acá entraba). De un medio de afuera, además, mira la sección que le
  * puso el propio medio (los tramos de la dirección: infobae.com/mexico/…,
  * lanacion.com.ar/estados-unidos/…), no el texto. Devuelve el motivo o null.
- * Los medios de Balcarce nunca pasan por acá (V2.2, 27/09).
  */
 function motivoDeDescarte(nota, fuente = {}) {
   // La quiniela y la lotería no se analizan, ni de un medio de acá, salvo que la nota nombre algo de Balcarce (2/10).
@@ -1402,12 +1405,39 @@ function marcarDeAfuera(n) {
   if (tocaLaZona(n)) n.deLaZona = true;
 }
 
+/**
+ * De las notas de una historia del cruce, la que ya está publicada (su enlace da
+ * un identificador conocido), para que la historia conserve esa dirección. Se
+ * busca entre TODAS las notas del grupo, no sólo entre las candidatas a principal
+ * (regla 175, hueco 1): la VTV del 15/10 salió a las 9:31 como historia «de
+ * afuera» (principal: 0221, `1b4z7qp`); cuando a las 12:03 se sumaron los medios
+ * de Balcarce que nombran a Balcarce pasó a ser «de acá», la principal se buscó
+ * sólo entre las de acá y nació `aa5npj`, con los mismos 28 medios: una en
+ * Política y otra en Balcarce. Lo mismo con la Zona Fría (13/10).
+ *
+ * Primero las que no se unieron a otra (`idsUnidos`, fusionadas.json: su
+ * dirección redirige a la que quedó); entre ellas, una candidata a principal y,
+ * si no, la más vieja. Si sólo se conoce una unida, ésa (la unión firme la deja
+ * afuera después y queda la de antes). Sin ninguna publicada, null.
+ */
+function laYaPublicada(ns, base, { idsConocidos = null, idsUnidos = null } = {}) {
+  if (!idsConocidos?.size) return null;
+  const id = (n) => idDe(n.enlaceFeed ?? n.enlace);
+  const conocidas = ns.filter((n) => idsConocidos.has(id(n)));
+  if (!conocidas.length) return null;
+  const vivas = conocidas.filter((n) => !idsUnidos?.has(id(n)));
+  const elegir = (lista) => lista.find((n) => base.includes(n)) ?? [...lista].sort((a, b) => a.fecha - b.fecha)[0];
+  return vivas.length ? elegir(vivas) : elegir(conocidas);
+}
+
 export async function ingestar({
   fuentes = null, silencioso = false, escribirArchivos = false,
   // `memoria`: el archivo del cruce (null = sin memoria, como en las pruebas).
   // `idsConocidos`: los identificadores ya publicados, para no cambiarle la
   // dirección a una nota cuando otro medio se suma a su historia.
-  memoria = MEMORIA_DEL_CRUCE, idsConocidos = null,
+  // `idsUnidos`: los que se unieron a otra nota (web/data/fusionadas.json): si
+  // hay otra publicada en la misma historia, la dirección es la de ésa.
+  memoria = MEMORIA_DEL_CRUCE, idsConocidos = null, idsUnidos = null,
 } = {}) {
   log = silencioso ? () => {} : console.log;
   const lista = (fuentes ?? TODAS_LAS_FUENTES).filter((f) => f.activa !== false);
@@ -1436,13 +1466,13 @@ export async function ingestar({
     // a una figura, si toca la zona): qué queda se decide después de cruzar
     // con todos los medios (paso 2). Antes entraban "las 3 a 5 más nuevas" de
     // cada fuente, y así casi todo lo nacional quedaba "de un solo medio".
-    let descartadas = 0;
-    if (f.alcance !== 'local') {
-      const antes = notas.length;
-      notas = notas.filter((n) => !motivoDeDescarte(n, f));
-      descartadas = antes - notas.length;
-      notas.forEach(marcarDeAfuera);
-    }
+    // La quiniela y la lotería no entran ni de un medio de acá (motivoDeDescarte
+    // las mira para todos; lo demás, sólo para los de afuera). Hasta el 15/10 se
+    // llamaba sólo para los de afuera y la regla no hacía lo que decía.
+    const antes = notas.length;
+    notas = notas.filter((n) => !motivoDeDescarte(n, f));
+    const descartadas = antes - notas.length;
+    if (f.alcance !== 'local') notas.forEach(marcarDeAfuera);
     return { fuente: f, notas, descartadas };
   }));
 
@@ -1474,16 +1504,21 @@ export async function ingestar({
   // Lo de afuera de un solo medio no se trae: ni amarillo (Hernán, 27/09).
   // La misma nota de un medio puede llegar por dos feeds suyos (la portada y
   // la sección, o el RSS y el índice): una sola vez.
+  // También por el enlace (regla 175): la misma nota con el título cambiado
+  // entre un feed y otro (o con «?utm_…» en uno) eran dos notas del mismo
+  // medio, que el cruce nunca junta, y podían terminar en dos historias.
   const yaVistas = new Set();
   todas = todas.filter((n) => {
     const k = `${n.medio}|${normalizar(n.titulo).replace(/\s+/g, '')}`;
-    if (yaVistas.has(k)) return false;
+    const e = enlaceNormalizado(n.enlace);
+    if (yaVistas.has(k) || (e && yaVistas.has(e))) return false;
     yaVistas.add(k);
+    if (e) yaVistas.add(e);
     return true;
   });
-  const enEstaCorrida = new Set(todas.map((n) => n.enlace));
+  const enEstaCorrida = new Set(todas.flatMap((n) => [n.enlace, enlaceNormalizado(n.enlace)]).filter(Boolean));
   const memoriaAntes = memoria ? leerMemoria(memoria) : [];
-  const deAntes = memoriaAntes.filter((m) => !enEstaCorrida.has(m.enlace)).map(desdeLaMemoria);
+  const deAntes = memoriaAntes.filter((m) => !enEstaCorrida.has(m.enlace) && !enEstaCorrida.has(enlaceNormalizado(m.enlace))).map(desdeLaMemoria);
   deAntes.forEach(marcarDeAfuera);
   const conjunto = [...todas, ...deAntes];
   const grupos = [];
@@ -1508,9 +1543,10 @@ export async function ingestar({
       continue;
     }
     // La principal (de la que sale el identificador y la dirección de la
-    // nota): la que ya se publicó si hay una; si no, la primera que salió.
-    // De Balcarce si hay alguna de acá. Así, cuando otro medio se suma a la
-    // historia, la nota no cambia de dirección ni aparece otra vez.
+    // nota): la que ya se publicó si hay una, aunque no sea de las candidatas
+    // (laYaPublicada, regla 175); si no, la primera que salió. De Balcarce si
+    // hay alguna de acá. Así, cuando otro medio se suma a la historia, la nota
+    // no cambia de dirección ni aparece otra vez.
     //
     // Un medio de Balcarce que cuenta lo mismo que los nacionales sin nombrar
     // nada de acá está copiando una noticia de afuera (27/09: Malvinas y el
@@ -1523,8 +1559,7 @@ export async function ingestar({
     const nombraAca = ns.some((n) => n.nombraBalcarce) || locales.some(mencionaBalcarce);
     const historiaDeAca = locales.length > 0 && (!hayDeAfuera || nombraAca);
     const base = historiaDeAca ? locales : ns.filter((n) => n.alcance !== 'local');
-    const conocida = base.find((n) => idsConocidos?.has(idDe(n.enlaceFeed ?? n.enlace)));
-    const principal = conocida ?? [...base].sort((a, b) => a.fecha - b.fecha)[0];
+    const principal = laYaPublicada(ns, base, { idsConocidos, idsUnidos }) ?? [...base].sort((a, b) => a.fecha - b.fecha)[0];
     const tambien = ns.filter((n) => n !== principal);
     for (const nota of tambien) {
       // La portada de El Diario corta los títulos con puntos suspensivos:
@@ -1806,7 +1841,7 @@ export const paraPruebas = {
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, mediosMinimosDe,
   contiene, cruzarFarmacias, controlDelCronograma, tocaLaZona, tituloEsDeTecnologia,
-  motivoDeDescarte, esPolicialDeAfuera, marcarDeAfuera,
+  motivoDeDescarte, esPolicialDeAfuera, marcarDeAfuera, laYaPublicada,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.

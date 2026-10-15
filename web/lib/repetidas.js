@@ -22,6 +22,7 @@
 import { sinTildes } from './texto.js';
 import { tieneCuerpo } from './cuerpo.js';
 import { rutaDeNota } from './ruta.js';
+import { enlacesDeLaNota } from '../../ingesta/repetidas-publicadas.mjs';
 
 /** Palabras que no dicen de qué trata un título. */
 const VACIAS = new Set([
@@ -73,9 +74,14 @@ function laQueQueda(grupo, enRedes, conFoto = new Set()) {
  * `preferidas` son parejas [laQueYaEstaba, laNueva] (ya incluidas en `confirmadas`): en su grupo la nueva nunca
  * es la que queda, tenga o no foto (15/10/2026, M2 de la revisión: una nota no rejuvenece; si la nueva trae foto,
  * se la pasa a la que queda con `fotosParaLaQueQueda`).
+ *
+ * `firmes` (Map id → id de la que quedó, de `unionesFirmes`): las uniones de corridas anteriores, que quedan firmes (regla 175,
+ * hueco 4). La unida nunca es la que queda; si la que quedó no está en la lista (una persona la retiró, o se fue en esta
+ * corrida), la unida igual queda afuera y redirige a ella: es la misma noticia.
  */
 export function repetidasConOtraDireccion(notas = [], {
   enRedes = new Set(), umbral = REPETIDAS.umbral, horas = REPETIDAS.horas, confirmadas = [], conFoto = new Set(), preferidas = [],
+  firmes = new Map(),
 } = {}) {
   const lista = [];
   const vistas = new Set();
@@ -98,8 +104,21 @@ export function repetidasConOtraDireccion(notas = [], {
   for (const [a, b] of confirmadas) {
     if (padre.has(a) && padre.has(b)) padre.set(raiz(b), raiz(a));
   }
-  // La nueva de una pareja «preferida» no puede quedar (sólo si la que ya estaba está en la lista).
+  const fueALasRedes = new Set(lista.filter((n) => enRedes.has(n.id) || n.redes).map((n) => n.id));
+  // Las uniones firmes de antes (regla 175): la unida va al grupo de la que quedó y no puede quedar ella. Lo que fue a las
+  // redes no es una unión firme (unionesFirmes tampoco las devuelve): se queda como siempre.
+  const firmesVigentes = [...firmes].filter(([id, a]) => padre.has(id) && id !== a && !fueALasRedes.has(id));
+  const firmesSinLaQueQueda = new Map();
+  for (const [id, a] of firmesVigentes) {
+    if (padre.has(a)) padre.set(raiz(id), raiz(a));
+    else firmesSinLaQueQueda.set(id, a);
+  }
+  // La nueva de una pareja «preferida» no puede quedar (sólo si la que ya estaba está en la lista), ni la unida firme. Salvo
+  // que haya ido a las redes: ésa se queda igual (su enlace circula), así que es mejor que sea la que queda y la otra redirija
+  // a ella (la Zona Fría del 13/10: la de Balcarce fue a Facebook; la de Política, no).
   const noQuedan = new Set(preferidas.filter(([vieja, nueva]) => padre.has(vieja) && padre.has(nueva)).map(([, nueva]) => nueva));
+  for (const [id] of firmesVigentes) noQuedan.add(id);
+  for (const id of fueALasRedes) noQuedan.delete(id);
   const grupos = new Map();
   for (const n of lista) {
     const r = raiz(n.id);
@@ -116,7 +135,66 @@ export function repetidasConOtraDireccion(notas = [], {
       fusion.set(n.id, queda.id);
     }
   }
+  // Una unida firme cuya «que queda» no está en la lista (sola, o sin otra que pueda quedar en su grupo): igual afuera,
+  // redirigida a la de antes; y las que se le habían unido en esta corrida van a ésa también.
+  for (const [id, a] of firmesSinLaQueQueda) {
+    const n = lista.find((x) => x.id === id);
+    if (fusion.has(id) || !n || enRedes.has(id) || n.redes) continue;
+    fusion.set(id, a);
+    for (const [otra, queda] of fusion) if (queda === id) fusion.set(otra, a);
+  }
   return fusion;
+}
+
+/**
+ * De las parejas [x, y] que cuentan lo mismo (las que confirmó la IA), las que tienen una ya publicada y otra no, como
+ * [laPublicada, laNueva]: para pasarlas como `preferidas` (regla 175, hueco 5: queda la que ya salió, con su sección).
+ */
+export function conLaPublicadaPrimero(parejas = [], yaSalieron = new Set()) {
+  const salida = [];
+  for (const [x, y] of parejas) {
+    if (yaSalieron.has(x) && !yaSalieron.has(y)) salida.push([x, y]);
+    else if (yaSalieron.has(y) && !yaSalieron.has(x)) salida.push([y, x]);
+  }
+  return salida;
+}
+
+/**
+ * Las uniones que quedan firmes (regla 175, hueco 4: «una unión no queda firme»). Hasta el 15/10, web/data/fusionadas.json
+ * sólo armaba las redirecciones: en cada corrida la unión se recalculaba desde cero y, si las dos notas ya no «se
+ * reconocían», la unida volvía a tener página propia y se volvía a escribir con IA (de 100 unidas, 8 habían vuelto; la
+ * segunda de la VTV se escribió 4 veces el 15/10). Devuelve Map id → id de la que quedó, con las unidas que:
+ *   · no fueron a las redes (`enRedes`: su enlace circula y se queda, como siempre);
+ *   · no las aprobó una persona después de la unión (`aprobadas`: id → cuándo; una persona manda: así se deshace una unión,
+ *     o borrando su renglón de fusionadas.json);
+ *   · tienen una «que queda» de verdad: siguiendo la cadena (como las redirecciones), alguna tiene página (`conPagina`) o la
+ *     retiró una persona (`retiradasPorPersona`: la misma noticia que una persona sacó no vuelve por la otra dirección).
+ *     Si ninguna de la cadena sigue (se fue por otro motivo), la unión no se fuerza y todo queda como antes.
+ */
+export function unionesFirmes(fusionadas, {
+  conPagina = new Set(), retiradasPorPersona = new Set(), aprobadas = new Map(), enRedes = new Set(),
+} = {}) {
+  const notas = fusionadas?.notas ?? {};
+  const firmes = new Map();
+  for (const [id, f] of Object.entries(notas)) {
+    if (!f?.a || f.a === id || enRedes.has(id)) continue;
+    if (aprobadas.has(id)) {
+      const cuando = Date.parse(aprobadas.get(id) ?? '');
+      const union = Date.parse(f.cuando ?? '');
+      if (!cuando || !union || cuando >= union) continue;
+    }
+    const cadena = [];
+    let siguiente = f.a;
+    while (siguiente && siguiente !== id && !cadena.includes(siguiente) && cadena.length < 6) {
+      cadena.push(siguiente);
+      siguiente = notas[siguiente]?.a;
+    }
+    // Una cadena que vuelve a empezar (dos que se apuntan entre sí) no tiene «la que queda»: no se fuerza.
+    if (siguiente === id || cadena.includes(siguiente)) continue;
+    if (!cadena.some((x) => conPagina.has(x) || retiradasPorPersona.has(x))) continue;
+    firmes.set(id, f.a);
+  }
+  return firmes;
 }
 
 /**
@@ -183,11 +261,14 @@ export function redireccionesDeFusionadas(fusionadas, rutaDe, { rutaDeSeccion = 
 // Dos notas que cuentan el mismo hecho con títulos distintos no llegan al umbral de parecido
 // (0,8) y la IA de la lectura, que mira cien notas juntas, a veces no las junta: el 1/10 salieron
 // dos de la Cooperativa y dos del RENAPER. Acá se eligen las parejas SOSPECHOSAS (misma sección,
-// poco tiempo de diferencia, algo de parecido) para preguntarle a la IA sólo por ellas.
+// poco tiempo de diferencia, algo de parecido) para preguntarle a la IA sólo por ellas. Desde el 15/10
+// (regla 175), también en otra sección y con menos parecido si las dos citan la misma nota de otro medio.
 
 export const PAREJAS = {
   /** Desde cuánto parecido de títulos vale la pena preguntar (abajo del umbral de REPETIDAS). */
   minimo: 0.3,
+  /** …y si las dos citan la misma nota de otro medio (regla 175), aunque estén en otra sección. */
+  minimoConFuente: 0.15,
   /** Cuántas horas puede haber entre las dos. */
   horas: 72,
   /** Cuántas parejas se preguntan por corrida. */
@@ -204,6 +285,7 @@ export const clavePareja = (a, b) => [String(a), String(b)].sort().join('|');
  */
 export function parejasSospechosas(notas = [], {
   decididas = {}, minimo = PAREJAS.minimo, umbral = REPETIDAS.umbral, horas = PAREJAS.horas, tope = PAREJAS.porCorrida,
+  minimoConFuente = PAREJAS.minimoConFuente,
 } = {}) {
   const lista = [];
   const vistas = new Set();
@@ -213,15 +295,20 @@ export function parejasSospechosas(notas = [], {
     lista.push(n);
   }
   const salida = [];
+  // En otra sección también, si las dos citan la misma nota de otro medio (regla 175, hueco 5: la misma noticia cae en
+  // Política y en Balcarce, o en Balcarce y en Cultura). Igual decide la IA; y con lo ya publicado queda la publicada.
+  const enlaces = new Map(lista.map((n) => [n.id, enlacesDeLaNota(n)]));
+  const citanLoMismo = (a, b) => [...enlaces.get(a.id)].some((e) => enlaces.get(b.id).has(e));
   for (let i = 0; i < lista.length; i += 1) {
     for (let j = i + 1; j < lista.length; j += 1) {
       const [a, b] = [lista[i], lista[j]];
-      if (a.seccion !== b.seccion) continue;
       if (Math.abs(tiempo(a) - tiempo(b)) > horas * 3600e3) continue;
+      const citan = citanLoMismo(a, b);
+      if (a.seccion !== b.seccion && !citan) continue;
       const clave = clavePareja(a.id, b.id);
       if (clave in decididas) continue;
       const p = parecido(a.titulo, b.titulo);
-      if (p >= minimo && p < umbral) salida.push({ clave, a, b, p });
+      if (p >= (citan ? Math.min(minimo, minimoConFuente) : minimo) && p < umbral) salida.push({ clave, a, b, p });
     }
   }
   return salida.sort((x, y) => y.p - x.p).slice(0, tope).map(({ clave, a, b }) => ({ clave, a, b }));

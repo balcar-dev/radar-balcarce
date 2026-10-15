@@ -89,7 +89,7 @@ import { leerLlaves, cerrarCadaUno } from '../../panel/cifrado.mjs';
 import { previaDelDia } from '../../redes/previa.mjs';
 import { estaActivo } from '../../redes/elegir.mjs';
 import {
-  repetidasConOtraDireccion, fotosParaLaQueQueda, conFusionadas, parejasSospechosas, sumarFuentesDeParejas,
+  repetidasConOtraDireccion, fotosParaLaQueQueda, conFusionadas, parejasSospechosas, sumarFuentesDeParejas, unionesFirmes, conLaPublicadaPrimero,
 } from '../lib/repetidas.js';
 import { diceEnVivo } from '../../ingesta/verificar.mjs';
 import { parejasConLoPublicado, conFuentesDeLasUnidas } from '../../ingesta/repetidas-publicadas.mjs';
@@ -148,6 +148,10 @@ const DIAS_DE_VISTAS = 7;
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 // Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
 const CORRECCIONES = correccionesAMano(leerJson(path.join(AQUI, '..', 'data', 'correcciones.json'), null));
+// Las notas que se unieron a otra (lib/repetidas.js, 29/09): su dirección redirige a la que quedó. Desde el 15/10 (regla 175)
+// también se leen al empezar: la ingesta prefiere la dirección de la que quedó y la unión queda firme (UNIDAS_FIRMES).
+const FUSIONADAS = path.join(AQUI, '..', 'data', 'fusionadas.json');
+const FUSIONADAS_ANTES = leerJson(FUSIONADAS, null);
 // Lo que corrigió sola la auditoría con IA (ortografía chica y segura, 2/10): web/data/correcciones-auditoria.json, lo escribe sólo "Auditoría IA".
 const CAMBIOS_AUDITORIA = cambiosDeLaAuditoria(leerJson(path.join(AQUI, '..', 'data', 'correcciones-auditoria.json'), null));
 // El panel del celular (29/09, panel/celular-datos.mjs): lo que decidió una
@@ -190,7 +194,7 @@ if (enLaNube) {
   // historia, la nota no cambia de dirección (ingesta/cruce.mjs).
   const idsConocidos = new Set([...leerJson(SALIDA, { notas: [] }).notas ?? [], ...leerJson(ARCHIVO, { notas: [] }).notas ?? []]
     .map((n) => n.id));
-  ultima = await ingestar({ silencioso: true, idsConocidos });
+  ultima = await ingestar({ silencioso: true, idsConocidos, idsUnidos: new Set(Object.keys(FUSIONADAS_ANTES?.notas ?? {})) });
   agenda = await agendaCompleta().catch(() => null);
   const exportado = leerJson(path.join(AQUI, '..', 'data', 'decisiones.json'), { decisiones: {} });
   estado = { decisiones: exportado.decisiones ?? {} };
@@ -248,6 +252,20 @@ const fechaAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(ant
 // lib/archivo.js).
 const yaSalieron = new Set([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].map((n) => n.id));
 const ahoraISO = new Date().toISOString();
+
+// Las uniones firmes (regla 175, hueco 4): una nota que ya se unió a otra (fusionadas.json) no vuelve a tener página propia ni se
+// vuelve a escribir con IA aunque en esta corrida las dos ya no "se reconozcan" (la VTV del 15/10 volvió a la portada y se escribió
+// 4 veces). Se deshace si una persona la aprueba después de la unión, o borrando su renglón de web/data/fusionadas.json.
+const UNIDAS_FIRMES = (() => {
+  const humanasAlEmpezar = Object.entries(estado.decisiones ?? {}).filter(([, d]) => decisionHumana(d));
+  return unionesFirmes(FUSIONADAS_ANTES, {
+    conPagina: yaSalieron,
+    retiradasPorPersona: new Set([...RETIRADAS_A_MANO, ...humanasAlEmpezar.filter(([, d]) => d.estado === 'bloqueada' || d.estado === 'descartada').map(([id]) => id)]),
+    aprobadas: new Map(humanasAlEmpezar.filter(([, d]) => d.estado === 'publicada').map(([id, d]) => [id, d.cuando ?? null])),
+    enRedes: new Set([...idsEnRedes(leerJson(LIBRO_REDES, {})), ...[...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].filter((n) => n.redes).map((n) => n.id)]),
+  });
+})();
+if (UNIDAS_FIRMES.size) console.log(`  uniones firmes (fusionadas.json): ${UNIDAS_FIRMES.size}`);
 
 // La primera vez que vimos cada nota (VISTAS). Se anota antes de decidir nada.
 const vistasAntes = leerJson(VISTAS, {});
@@ -378,6 +396,8 @@ if (enLaNube) {
   // Gemini: sería gastar cupo en algo que después no se usa (27/09).
   const paraReescribir = (ultima.notas ?? [])
     .filter((n) => !CORRECCIONES.get(n.id)?.cuerpo)
+    // Lo que ya se unió a otra nota no se escribe otra vez (regla 175): no va a salir con su dirección.
+    .filter((n) => !UNIDAS_FIRMES.has(n.id))
     .filter((n) => {
       if (previas[n.id]) return true;
       const fecha = fechaReal(n);
@@ -445,6 +465,8 @@ const sigueRoja = (original, final) => original?.semaforo === 'rojo'
 // automático llega a la web.
 function notaPublicada(n) {
   if (RETIRADAS_A_MANO.has(n.id)) return null;
+  // Unida a otra en una corrida anterior (regla 175): esa noticia ya tiene su nota; ésta redirige a ella.
+  if (UNIDAS_FIRMES.has(n.id)) return null;
   const d = estado.decisiones[n.id];
   // Sólo manda lo que decidió una persona. Lo que guardó la máquina es una
   // foto de un semáforo viejo: ver decisionHumana en ingesta/utiles.mjs.
@@ -614,11 +636,18 @@ let bancoDeFotos = { ...leerJson(BANCO_FOTOS, {}), ...fotosManuales };
 const retiradasParaComparar = (ultima.notas ?? []).filter((n) => RETIRADAS_A_MANO.has(n.id)).map((n) => ({
   id: n.id, titulo: n.titulo, copete: n.resumenFuente ?? '', fecha: fechaReal(n), seccion: n.seccion, local: !!n.local, deLaZona: !!n.deLaZona,
 }));
-const { parejas: parejasSinIA, conRetirada } = parejasConLoPublicado(
-  [...deLaIngesta, ...(archivoAnterior.notas ?? []), ...retiradasParaComparar],
-  { yaPublicadas: yaSalieron, retiradas: RETIRADAS_A_MANO },
+// Desde el 15/10 (regla 175) también cuenta que dos notas citen la misma nota de otro medio (con las fuentes de hoy de la ingesta,
+// `origenes`), aunque estén en otra sección o una sea de acá y la otra de afuera; y con esa señal sola se comparan también dos
+// notas que ya salieron las dos (`entrePublicadas`: queda la que salió primero).
+const origenesDeHoy = new Map((ultima.notas ?? []).map((n) => [n.id, n.origenes]));
+const conOrigenes = (n) => (origenesDeHoy.get(n.id)?.length ? { ...n, origenes: origenesDeHoy.get(n.id) } : n);
+const repetidasSinIA = parejasConLoPublicado(
+  [...deLaIngesta.map(conOrigenes), ...(archivoAnterior.notas ?? []), ...retiradasParaComparar],
+  { yaPublicadas: yaSalieron, retiradas: RETIRADAS_A_MANO, entrePublicadas: true },
 );
-if (parejasSinIA.length) console.log(`  repetidas de lo ya publicado (sin IA): ${parejasSinIA.length}`);
+const { conRetirada } = repetidasSinIA;
+const parejasSinIA = [...repetidasSinIA.parejas, ...repetidasSinIA.entrePublicadas];
+if (parejasSinIA.length) console.log(`  repetidas de lo ya publicado (sin IA): ${parejasSinIA.length} (${repetidasSinIA.entrePublicadas.length} entre dos ya publicadas)`);
 if (conRetirada.length) {
   // No se publica sola: pasa a esperar a una persona (amarilla, como cualquier otra que espera en el celular).
   const esperan = new Map(conRetirada.map(([retirada, nueva]) => [nueva, retirada]));
@@ -881,7 +910,6 @@ if (enLaNube) {
 
 // La misma noticia con otra dirección (lib/repetidas.js, 29/09): queda una y
 // la dirección de la otra redirige a ésa (fusionadas.json, generar-redirects.mjs).
-const FUSIONADAS = path.join(AQUI, '..', 'data', 'fusionadas.json');
 // La papelera (panel/celular-datos.mjs, 29/09): lo que retiró una persona (desde
 // el celular, desde el panel de la PC o en retiradas.json) se guarda como
 // estaba; si una persona la vuelve a aprobar, vuelve con la misma dirección.
@@ -944,8 +972,12 @@ const fusion = repetidasConOtraDireccion(
     enRedes: idsEnRedes(libroRedes),
     confirmadas: [...parejasConfirmadas, ...parejasSinIA],
     // Con lo ya publicado queda SIEMPRE la que ya estaba (una nota no rejuvenece, M2 del 15/10): la nueva no queda aunque traiga foto.
-    preferidas: parejasSinIA,
+    // También en las parejas que confirmó la IA (regla 175): la que ya salió queda con su sección y su dirección, y la copia nueva
+    // (aunque sea de otra sección, o de acá contra una de afuera) no se publica.
+    preferidas: [...parejasSinIA, ...conLaPublicadaPrimero(parejasConfirmadas, yaSalieron)],
     conFoto: conFotoEnElBanco,
+    // Las uniones de corridas anteriores quedan firmes (regla 175).
+    firmes: UNIDAS_FIRMES,
   },
 );
 for (const id of fusion.keys()) retiradas.add(id);

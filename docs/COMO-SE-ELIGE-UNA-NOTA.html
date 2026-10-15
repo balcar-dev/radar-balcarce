@@ -501,13 +501,15 @@ footer { color: var(--suave); font-size: .85rem; margin-top: 50px; border-top: 1
 
 <!-- ================================================================== -->
 <h2 id="mejoras">7. Dónde se puede mejorar</h2>
-<p>Ordenado por importancia. Cada punto dice qué pasa, con qué dato real, y qué se podría hacer. No se cambió nada del código.</p>
+<p>Ordenado por importancia. Cada punto dice qué pasa, con qué dato real, y qué se podría hacer. Cuando se escribió esta página no se había cambiado nada del código.</p>
+<div class="caja ok"><p><b>Actualización del 15/10 a la noche (regla 175, <code>docs/10-REGLAS-Y-PRUEBAS.md</code>):</b> quedaron <b>cerrados</b> los puntos 1, 3, 4, 5 y 10 (marcados en verde abajo). Siguen abiertos, como propuesta, el 2 (el cruce encadena noticias), el 6 (medios del mismo dueño), el 7, el 8, el 9 y el 11. Lo que dice cada punto sobre cómo era antes se deja tal cual, para que se entienda qué se arregló.</p></div>
 
 <div class="mejoras">
 
-<div class="mejora caja">
+<div class="mejora caja ok">
 <p class="importancia" style="color:var(--rojo)">Más importante · la causa principal de las repetidas</p>
 <h3>Cuando la historia cambia de nota principal, nace otra dirección</h3>
+<p><span class="pill p-verde">Cerrado el 15/10</span> El cruce busca la nota ya publicada entre <b>todas</b> las del grupo (<code>laYaPublicada</code>, <code>ingesta/ingesta.mjs</code>); si hay dos publicadas, manda la que no se unió a otra. La VTV de las 12:03 hoy seguiría siendo <code>1b4z7qp</code>. Sigue como propuesta guardar en la memoria del cruce a qué historia pertenece cada enlace (también lo de acá).</p>
 <p>La dirección de una nota sale del enlace de su nota principal. Para que no cambie, el cruce busca si alguna nota del grupo ya está publicada (D1b), pero <b>sólo entre las candidatas a principal</b>: si la historia es "de acá", entre las de Balcarce; si no, entre las de afuera (<code>ingestar()</code>, <code>const base = historiaDeAca ? locales : …</code>). Entonces:</p>
 <ul>
 <li><b>VTV, 15/10:</b> a las 9:31 la historia era "de afuera" (principal: 0221) y se publicó como <code>1b4z7qp</code>. Cuando se sumaron los medios de Balcarce que nombran a Balcarce, pasó a ser "de acá"; la publicada no estaba entre las candidatas y a las 12:03 nació <code>aa5npj</code>, con los mismos 28 medios. <b>Hoy la sección Política del sitio muestra una y la sección Balcarce la otra</b> (comprobado en vivo).</li>
@@ -521,6 +523,7 @@ footer { color: var(--suave); font-size: .85rem; margin-top: 50px; border-top: 1
 <div class="mejora caja">
 <p class="importancia" style="color:var(--rojo)">Muy importante</p>
 <h3>El cruce encadena noticias distintas, y la nota más vieja del grupo manda</h3>
+<p><span class="pill p-amarillo">Sigue abierto</span> Es un cambio del corazón del cruce y queda como propuesta: hay que medirlo antes con lo publicado.</p>
 <p>Como los grupos se encadenan (A con B, B con C), y la memoria guarda 36 horas, se forman "mega-historias" que juntan cosas que no son el mismo hecho. En la corrida de hoy:</p>
 <ul>
 <li>La muerte de <b>Locomotora Castro</b> (unas 95 notas de unos 30 medios) quedó en un grupo cuyo título es <b>"MasterChef Celebrity Argentina 2026: qué pasó en el programa de ayer martes 13 de octubre"</b>, porque esa nota de El Destape era la más vieja del grupo (14/10, 0:14). En el mismo grupo quedó otra noticia: la muerte de una fisicoculturista. Con fecha del 14/10 a la madrugada, hoy "llega tarde" y no se puede estrenar. <b>En el sitio no hay ninguna nota sobre la muerte de Castro</b> (no se pudo confirmar qué pasó en las corridas del 14/10).</li>
@@ -533,23 +536,26 @@ footer { color: var(--suave); font-size: .85rem; margin-top: 50px; border-top: 1
 <p><b>Qué se podría hacer:</b> que una nota entre a un grupo sólo si se parece al conjunto (no a un solo miembro); poner un tope de horas entre la primera y la última nota del grupo (por ejemplo 24); elegir el título por la nota más parecida a las demás y no por la más vieja; y para "llega tarde" usar la fecha de la principal o la mediana, no la más vieja de todas.</p>
 </div>
 
-<div class="mejora caja">
+<div class="mejora caja ok">
 <p class="importancia" style="color:var(--rojo)">Muy importante</p>
 <h3>Ninguna barrera mira si dos notas citan las mismas fuentes</h3>
+<p><span class="pill p-verde">Cerrado el 15/10</span> Nueva señal sin IA (<code>mismaFuente</code>, <code>ingesta/repetidas-publicadas.mjs</code>): el mismo enlace, sin UTM ni barra final, con cuidados para no juntar las notas distintas que el cruce encadenó (títulos con algo en común, buena parte de las fuentes en común, hasta 36 horas). Con lo publicado: junta los 7 pares y otras 12 repetidas que se habían escapado, y ninguna nota distinta. También entre dos notas que ya salieron (queda la primera) y en la entrada (el mismo enlace por dos feeds del mismo medio es una nota).</p>
 <p>En 7 días salieron <b>7 pares de notas que comparten exactamente el mismo enlace de fuente</b>, y los 7 son la misma noticia (VTV, Zona Fría, Instituto Adventista, Seguridad Vial, Milei-Caputo, Cavallo, Cauan Barros). Es la señal más segura que existe y es gratis: está en <code>fuentesConsultadas</code> de cada nota. Sirve de red aunque se arregle el punto 1: el cruce puede partir una noticia en dos grupos por otros motivos.</p>
 <p><b>Qué se podría hacer:</b> una barrera nueva, sin IA, antes de D4: si una nota nueva comparte uno o más enlaces de fuente con otra publicada en las últimas 72 horas, es la misma noticia, sin importar sección ni "de acá / de afuera". Habría que medirla primero con lo publicado (con estos datos, 7 de 7 aciertos).</p>
 </div>
 
-<div class="mejora caja">
+<div class="mejora caja ok">
 <p class="importancia" style="color:var(--rojo)">Muy importante</p>
 <h3>Una unión no queda firme</h3>
+<p><span class="pill p-verde">Cerrado el 15/10</span> <code>fusionadas.json</code> se lee al empezar (<code>unionesFirmes</code>, <code>web/lib/repetidas.js</code>): la nota unida no vuelve a tener página propia ni se vuelve a escribir con IA, mientras la que quedó siga (o la haya retirado una persona). Se deshace si una persona la aprueba después de la unión o borrando su renglón del archivo. Y dos notas que ya salieron se comparan entre sí con la señal de las fuentes en común.</p>
 <p><code>fusionadas.json</code> sólo arma las redirecciones; el código no lo lee para mantener afuera a la nota que se unió. La unión se recalcula en cada corrida y puede deshacerse: hoy <b>8 de las 100 notas unidas tienen otra vez página propia</b> (2 de hoy), y su dirección corta redirige a la otra. Mientras tanto, la nota unida reaparece en cada corrida como nueva y <b>se vuelve a escribir con IA</b>: <code>aa5npj</code> (VTV) se escribió 4 veces hoy. Además, D4 sólo compara una nota <b>nueva</b> contra lo publicado: dos notas que ya salieron no se vuelven a comparar nunca (Cauan Barros, 9/10).</p>
 <p><b>Qué se podría hacer:</b> leer <code>fusionadas.json</code> al empezar y tratar a esas notas como unidas, salvo que una persona lo deshaga; y pasar D4 también entre pares ya publicados de las últimas 72 horas.</p>
 </div>
 
-<div class="mejora caja">
+<div class="mejora caja ok">
 <p class="importancia" style="color:var(--amarillo)">Importante</p>
 <h3>Las barreras de después exigen la misma sección y el mismo "de acá"</h3>
+<p><span class="pill p-verde">Cerrado el 15/10</span> Con fuentes en común, D4 junta lo de acá con lo de afuera (con dos enlaces o más) y en otra sección, y D5 le pregunta a la IA también por parejas de otra sección. En toda pareja con una ya publicada queda la publicada, con su sección: la copia nueva no sale, aunque sea la de acá.</p>
 <p>D5 sólo pregunta por parejas de la <b>misma sección</b>, y D4 nunca junta "de acá" con "de afuera". Pero la misma noticia termina seguido en dos secciones (Política y Balcarce; Balcarce y Cultura), y la marca "de acá" puede cambiar entre corridas porque depende de cuál nota quedó como principal y de la ficha de la IA. Tres de los siete pares de arriba cayeron justo ahí.</p>
 <p><b>Qué se podría hacer:</b> en D5, permitir secciones distintas cuando hay medios o fuentes en común; en D4, aflojar la regla de "acá con afuera" cuando las dos notas comparten fuentes de Balcarce.</p>
 </div>
@@ -581,9 +587,10 @@ footer { color: var(--suave); font-size: .85rem; margin-top: 50px; border-top: 1
 <p>D3 tiene 60 vueltas por día y hoy, a las 19:04, ya iban 48: a la noche, lo nuevo deja de agruparse con IA. D5 tiene 40 pedidos por día. Si se agrega la barrera de fuentes en común (punto 2), D3 y D5 pasan a ser un complemento.</p>
 </div>
 
-<div class="mejora caja">
+<div class="mejora caja ok">
 <p class="importancia" style="color:var(--suave)">Menor</p>
 <h3>La lotería de un medio de Balcarce sí entra</h3>
+<p><span class="pill p-verde">Cerrado el 15/10</span> La ingesta llama al filtro para todos los medios, y la prueba ahora pasa por el camino real.</p>
 <p>El código dice "la quiniela y la lotería no se analizan, ni de un medio de acá", y la prueba lo confirma llamando a la función directamente. Pero en la ingesta esa función sólo se llama para los medios de afuera (<code>ingesta/ingesta.mjs</code>, línea 1442 contra la 473), así que la quiniela de una radio de Balcarce sí entra. En la práctica la frena después la espera de la IA (lo de un medio de acá que no nombra nada de acá), pero la regla no hace lo que dice.</p>
 </div>
 

@@ -25,6 +25,10 @@
 //     dos partidos distintos de la misma fecha);
 //   · lo que publicó una persona (se respeta) y las notas propias (la del dólar se parece a la de ayer).
 //
+// Desde el 15/10 (regla 175) hay una segunda señal, más fuerte que las palabras: dos notas que citan EXACTAMENTE la misma
+// nota de otro medio (`mismaFuente`, con sus propios cuidados: ver MISMA_FUENTE). Con ella sí pueden juntarse lo de acá y lo
+// de afuera, y en otra sección; y queda siempre la que ya estaba publicada, con su sección y su dirección.
+//
 // Sin dependencias (regla de ingesta/): la usa web/scripts/generar-datos.mjs.
 
 export const REPETIDAS_PUBLICADAS = {
@@ -46,6 +50,61 @@ export const REPETIDAS_PUBLICADAS = {
   tituloLejos: 0.6,
   textoLejos: 0.5,
 };
+
+/**
+ * Dos notas que citan EXACTAMENTE la misma nota de otro medio (el mismo enlace, sin UTM ni fbclid ni barra final) son la misma
+ * noticia, aunque estén en otra sección o una sea de acá y la otra de afuera (15/10/2026, regla 175; docs/COMO-SE-ELIGE-UNA-NOTA.html,
+ * «huecos» 3 y 5). En los 7 días al 15/10 salieron 7 pares así y los 7 eran repetidas (VTV, Zona Fría, Instituto Adventista,
+ * Seguridad Vial, Milei-Caputo, Cavallo, Cauan Barros). Pero el cruce encadena noticias (la misma nota de TN sobre Caputo en
+ * París quedó en cuatro notas distintas del 2/10: Milei en Francia, Santilli contra Kicillof…), así que el enlace solo no alcanza:
+ *   · hasta `horas` horas entre las dos;
+ *   · los títulos con algo en común (`titulo`, las raíces de las palabras que dicen algo);
+ *   · que lo común sea buena parte de las fuentes (`cobertura`: enlaces en común sobre los de la nota que tiene menos) o, si es
+ *     una sola fuente entre muchas, títulos más parecidos y menos de `horasSinCobertura` horas;
+ *   · lo de acá con lo de afuera, sólo con `enlacesAcaAfuera` enlaces en común o más y buena cobertura;
+ *   · y nunca un anuncio y su resultado, un hecho y el contrario, ni dos notas con protagonistas distintos.
+ * Medido sobre todo lo publicado hasta el 15/10 (40 pares que comparten un enlace a menos de 72 horas): junta los 7 casos
+ * reales y otras repetidas que se habían escapado (YPF tres veces, McCain, el gallo bataraz, el tractor en Policiales y en Agro),
+ * y deja afuera las notas distintas encadenadas (Messi: las entradas y la camiseta; el riesgo país de dos días).
+ */
+export const MISMA_FUENTE = {
+  horas: 36,
+  titulo: 0.18,
+  cobertura: 0.5,
+  tituloSinCobertura: 0.25,
+  horasSinCobertura: 12,
+  enlacesAcaAfuera: 2,
+};
+
+/** Los parámetros de una dirección que no cambian la nota (las marcas de las campañas y de las redes). */
+const PARAMETROS_QUE_NO_CUENTAN = /^(utm_.*|fbclid|gclid|dclid|mc_cid|mc_eid|igshid|ref_src|ref)$/i;
+/** Las redes: el perfil de un organismo no es una nota (sólo cuenta una publicación, con su dirección larga). */
+const REDES_SOCIALES = /(^|\.)(facebook\.com|fb\.com|instagram\.com|twitter\.com|x\.com|youtube\.com|youtu\.be|tiktok\.com|whatsapp\.com|t\.me)$/;
+
+/**
+ * El enlace de una nota, para comparar: sin «https://», sin «www.», sin las marcas de campaña (UTM, fbclid…), sin «#…» y sin la
+ * barra final, en minúsculas. null si no es una dirección o si es la portada de un sitio o el perfil de una red (no es una nota).
+ */
+export function enlaceNormalizado(enlace) {
+  let u;
+  try { u = new URL(String(enlace ?? '').trim()); } catch { return null; }
+  if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+  const sitio = u.hostname.toLowerCase().replace(/^www\./, '');
+  for (const k of [...u.searchParams.keys()]) if (PARAMETROS_QUE_NO_CUENTAN.test(k)) u.searchParams.delete(k);
+  const ruta = u.pathname.replace(/\/+$/, '').toLowerCase();
+  const busqueda = u.searchParams.toString();
+  const tramos = ruta.split('/').filter(Boolean).length;
+  if (!tramos && !busqueda) return null;
+  if (REDES_SOCIALES.test(sitio) && tramos < 2 && !busqueda) return null;
+  return `${sitio}${ruta}${busqueda ? `?${busqueda}` : ''}`;
+}
+
+/** Los enlaces de las fuentes de una nota, normalizados: el suyo, «Fuentes consultadas» y lo que trae la ingesta (`origenes`). */
+export function enlacesDeLaNota(nota) {
+  const crudos = [nota?.enlace, nota?.enlaceFeed];
+  for (const f of [...(nota?.fuentesConsultadas ?? []), ...(nota?.origenes ?? [])]) crudos.push(f?.enlace, f?.enlaceFeed);
+  return new Set(crudos.map(enlaceNormalizado).filter(Boolean));
+}
 
 const sinTildes = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
@@ -113,6 +172,8 @@ export function huella(nota) {
   return {
     id: nota?.id,
     tiempo: Date.parse(nota?.fecha ?? '') || 0,
+    // La primera vez que se vio (para saber cuál de dos ya publicadas salió primero); si no está, su fecha.
+    visto: Date.parse(nota?.visto ?? '') || Date.parse(nota?.fecha ?? '') || 0,
     aca: !!(nota?.local || nota?.deLaZona),
     tituloPlano: sinTildes(titulo),
     titulo: raices(titulo),
@@ -120,6 +181,7 @@ export function huella(nota) {
     todo: raices(completo),
     numeros: numeros(titulo),
     nombres: nombresDelTitulo(titulo, minus),
+    enlaces: enlacesDeLaNota(nota),
   };
 }
 
@@ -136,6 +198,15 @@ const jaccard = (A, B) => {
 export function porQueNo(x, y) {
   if (x.aca !== y.aca) return 'una es de acá y la otra de afuera';
   if (x.numeros.size && y.numeros.size && ![...x.numeros].some((n) => y.numeros.has(n))) return 'los títulos tienen números distintos';
+  return porQueNoAunqueCitenLoMismo(x, y);
+}
+
+/**
+ * Lo que separa dos notas aunque citen la misma nota de otro medio (regla 175): un anuncio y su resultado, un hecho y el
+ * contrario, protagonistas distintos. El ámbito y los números no: «La VTV aumenta 17,6 %» y «La VTV cuesta $114.106» citan
+ * la misma nota de 0221 y son la misma noticia.
+ */
+export function porQueNoAunqueCitenLoMismo(x, y) {
   if (opuestos(x.tituloPlano, y.tituloPlano, ANUNCIO, RESULTADO)) return 'un anuncio y su resultado';
   for (const [A, B] of CONTRARIOS) if (opuestos(x.tituloPlano, y.tituloPlano, A, B)) return 'un hecho y el contrario';
   const propiosDeX = [...x.nombres].filter((n) => !y.todo.has(n));
@@ -155,16 +226,56 @@ export function compararNotas(a, b, umbrales = REPETIDAS_PUBLICADAS) {
   const horas = Math.abs(x.tiempo - y.tiempo) / 3600e3;
   const titulo = jaccard(x.titulo, y.titulo);
   const texto = jaccard(x.texto, y.texto);
-  const salida = { misma: false, titulo: +titulo.toFixed(3), texto: +texto.toFixed(3), horas: +horas.toFixed(1), motivo: null };
+  const enComun = enlacesEnComun(x, y);
+  const salida = {
+    misma: false, titulo: +titulo.toFixed(3), texto: +texto.toFixed(3), horas: +horas.toFixed(1), motivo: null,
+    enlacesEnComun: enComun.comunes, cobertura: +enComun.cobertura.toFixed(3),
+  };
   if (!x.tiempo || !y.tiempo || horas > u.horas) return { ...salida, motivo: 'lejos en el tiempo' };
   if (x.titulo.size < 3 || y.titulo.size < 3) return { ...salida, motivo: 'títulos muy cortos para decidir' };
   const parecidas = horas <= u.horasCerca
     ? ((titulo >= u.titulo && texto >= u.texto) || (x.aca && y.aca && titulo >= u.tituloDeAca && texto >= u.textoDeAca))
     : (titulo >= u.tituloLejos && texto >= u.textoLejos);
-  if (!parecidas) return { ...salida, motivo: 'no se parecen lo suficiente' };
-  const no = porQueNo(x, y);
-  if (no) return { ...salida, motivo: no };
-  return { ...salida, misma: true, motivo: 'la misma noticia' };
+  const no = parecidas ? porQueNo(x, y) : null;
+  if (parecidas && !no) return { ...salida, misma: true, motivo: 'la misma noticia' };
+  // Si no alcanzó con las palabras, la señal más segura: las dos citan la misma nota de otro medio (regla 175).
+  if (u.mismaFuente !== false) {
+    const f = mismaFuente(x, y, u.mismaFuente ?? {});
+    if (f.misma) return { ...salida, misma: true, motivo: 'citan la misma nota de otro medio', porFuente: true };
+  }
+  return { ...salida, motivo: parecidas ? no : 'no se parecen lo suficiente' };
+}
+
+/** Cuántos enlaces de fuente tienen en común dos huellas y qué parte son de las fuentes de la que tiene menos. */
+function enlacesEnComun(x, y) {
+  const A = x.enlaces ?? new Set();
+  const B = y.enlaces ?? new Set();
+  if (!A.size || !B.size) return { comunes: 0, cobertura: 0 };
+  let comunes = 0;
+  for (const e of A) if (B.has(e)) comunes += 1;
+  return { comunes, cobertura: comunes / Math.min(A.size, B.size) };
+}
+
+/**
+ * ¿Dos notas son la misma noticia porque citan la misma nota de otro medio? (regla 175, ver MISMA_FUENTE). Recibe notas o
+ * huellas. Devuelve { misma, comunes, cobertura, motivo }.
+ */
+export function mismaFuente(a, b, umbrales = MISMA_FUENTE) {
+  const x = a?.titulo instanceof Set ? a : huella(a);
+  const y = b?.titulo instanceof Set ? b : huella(b);
+  const u = { ...MISMA_FUENTE, ...umbrales };
+  const { comunes, cobertura } = enlacesEnComun(x, y);
+  const no = (motivo) => ({ misma: false, comunes, cobertura, motivo });
+  if (!comunes) return no('no citan ninguna nota en común');
+  const horas = Math.abs(x.tiempo - y.tiempo) / 3600e3;
+  if (!x.tiempo || !y.tiempo || horas > u.horas) return no('lejos en el tiempo');
+  const titulo = jaccard(x.titulo, y.titulo);
+  if (titulo < u.titulo) return no('los títulos no tienen casi nada en común');
+  if (cobertura < u.cobertura && !(titulo >= u.tituloSinCobertura && horas <= u.horasSinCobertura)) return no('comparten pocas fuentes');
+  if (x.aca !== y.aca && (comunes < u.enlacesAcaAfuera || cobertura < u.cobertura)) return no('una es de acá y la otra de afuera, con pocas fuentes en común');
+  const porQue = porQueNoAunqueCitenLoMismo(x, y);
+  if (porQue) return no(porQue);
+  return { misma: true, comunes, cobertura, motivo: 'citan la misma nota de otro medio' };
 }
 
 /** Una nota que se compara: de un medio y publicada sola (lo de una persona se respeta). */
@@ -184,7 +295,7 @@ const seComparaRetirada = (n) => n?.id && n.titulo && !n.propia;
  *     nadie: va acá, y quien llama la manda a esperar a una persona (no se publica sola).
  */
 export function parejasConLoPublicado(notas = [], {
-  yaPublicadas = new Set(), retiradas = new Set(), umbrales = REPETIDAS_PUBLICADAS, ahora = Date.now(),
+  yaPublicadas = new Set(), retiradas = new Set(), umbrales = REPETIDAS_PUBLICADAS, ahora = Date.now(), entrePublicadas = false,
 } = {}) {
   const u = { ...REPETIDAS_PUBLICADAS, ...umbrales };
   const vistas = new Set();
@@ -210,7 +321,8 @@ export function parejasConLoPublicado(notas = [], {
       if (!otra.retirada && !yaPublicadas.has(otra.n.id) && !antes) continue;
       const c = compararNotas(otra.h, nueva.h, u);
       if (!c.misma) continue;
-      const puntaje = c.titulo + c.texto;
+      // Las fuentes en común también suman: entre dos parecidas, la que cita lo mismo (regla 175).
+      const puntaje = c.titulo + c.texto + c.cobertura;
       // Ante un empate, la retirada (lo más cauto: que decida una persona).
       if (!mejor || puntaje > mejor.puntaje || (puntaje === mejor.puntaje && otra.retirada && !mejor.retirada)) {
         mejor = { id: otra.n.id, puntaje, retirada: otra.retirada };
@@ -219,7 +331,35 @@ export function parejasConLoPublicado(notas = [], {
     if (!mejor) continue;
     (mejor.retirada ? conRetirada : parejas).push([mejor.id, nueva.n.id]);
   }
-  return { parejas, conRetirada };
+  if (!entrePublicadas) return { parejas, conRetirada };
+  return { parejas, conRetirada, entrePublicadas: parejasEntrePublicadas(lista, yaPublicadas, { ahora, horas: u.horas }) };
+}
+
+/**
+ * Dos notas que YA salieron las dos y citan la misma nota de otro medio (regla 175, hueco 4): [laQueSalióPrimero, laOtra].
+ * La regla de arriba compara sólo lo nuevo contra lo publicado, y dos notas que salieron en la misma corrida, o cuando una
+ * unión se deshizo, no se volvían a comparar nunca (Cauan Barros, 10/10; la VTV del 15/10, una en Política y otra en
+ * Balcarce). Entre dos publicadas vale SÓLO la señal de las fuentes en común (mismaFuente), no el parecido de los títulos:
+ * es la más segura. Cada una se une, como mucho, a la que salió antes y más se le parece. Sólo se mira lo de las últimas
+ * `horas` (72): lo más viejo ya no está en las listas y no se toca.
+ */
+function parejasEntrePublicadas(lista, yaPublicadas, { ahora = Date.now(), horas = REPETIDAS_PUBLICADAS.horas } = {}) {
+  const publicadas = lista.filter((l) => !l.retirada && yaPublicadas.has(l.n.id) && l.h.enlaces.size);
+  const antes = (p, q) => p.h.visto < q.h.visto || (p.h.visto === q.h.visto && String(p.n.id) < String(q.n.id));
+  const salida = [];
+  for (const nueva of publicadas) {
+    if (!nueva.h.tiempo || ahora - nueva.h.tiempo > horas * 3600e3) continue;
+    let mejor = null;
+    for (const otra of publicadas) {
+      if (otra === nueva || !antes(otra, nueva)) continue;
+      const f = mismaFuente(otra.h, nueva.h);
+      if (!f.misma) continue;
+      const puntaje = f.cobertura + jaccard(otra.h.titulo, nueva.h.titulo);
+      if (!mejor || puntaje > mejor.puntaje) mejor = { id: otra.n.id, puntaje };
+    }
+    if (mejor) salida.push([mejor.id, nueva.n.id]);
+  }
+  return salida;
 }
 
 /** Las parejas [idDeLaQueYaEstaba, idDeLaNueva] con lo publicado y con las otras nuevas (sin lo retirado). */
