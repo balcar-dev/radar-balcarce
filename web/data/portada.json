@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T18:32:37.645Z",
+  "generado": "2026-10-15T18:36:47.303Z",
   "notas": [
     {
       "id": "repaso20261015tarde",
@@ -759,8 +759,8 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "El Día",
-        "A24"
+        "A24",
+        "El Día"
       ],
       "enlace": "https://tn.com.ar/videos/sociedad/2026/10/15/la-desesperacion-de-los-productores-ganaderos-por-las-inundaciones-en-el-litoral-en-15-dias-se-tapan-todos-los-campos/",
       "teniaImagenLaFuente": true,
@@ -1888,6 +1888,90 @@
       }
     },
     {
+      "id": "ny562k",
+      "titulo": "Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio",
+      "copete": "El delantero padece una dolencia en el muslo izquierdo y se perderá varios encuentros con el Inter de Milán y la selección argentina.",
+      "cuerpo": "El delantero Lautaro Martínez sufre un desgarro muscular en el flexor del muslo izquierdo y afronta una inactividad cercana al mes y medio. La información fue comunicada por el Inter de Milán tras los estudios realizados en el Instituto Humanitas de Rozzano, luego del encuentro frente a Brujas por la Champions League.\n\nLa baja afecta tanto al conjunto italiano en los próximos compromisos del campeonato local y el certamen europeo como a la selección argentina de cara a la próxima fecha FIFA.",
+      "guion": "Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/futbol/lautaro-martinez-se-desgarro-y-estara-inactivo-durante-mas-de-un-mes-problemas-para-inter-y-la-nid15102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T10:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T14:01:31.391Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lautaro Martínez padece un desgarro en el muslo izquierdo.",
+        "Estará inactivo aproximadamente un mes y medio.",
+        "La baja afecta al Inter de Milán y a la selección argentina."
+      ],
+      "seSabe": [
+        "Lautaro Martínez sufre una lesión muscular en el muslo izquierdo, según informó el Inter de Milán.",
+        "El tiempo estimado de recuperación es de un mes y medio.",
+        "La baja impacta en los compromisos del club italiano y condiciona su presencia en la fecha FIFA."
+      ],
+      "noConfirmado": [
+        "Todavía no se anunciaron los rivales ni las sedes para la próxima fecha FIFA de noviembre.",
+        "No hay confirmación oficial sobre la fecha exacta de su regreso a las canchas."
+      ],
+      "textoRedes": "El delantero Lautaro Martínez sufre un desgarro muscular en el muslo izquierdo y estará inactivo aproximadamente un mes y medio, lo que afecta los próximos compromisos del Inter de Milán y de la selección argentina.",
+      "etiquetas": [
+        "Lautaro Martínez",
+        "Inter de Milán",
+        "Selección Argentina",
+        "Lesión"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/lautaro-martinez-se-desgarro-y-estara-inactivo-durante-mas-de-un-mes-problemas-para-inter-y-la-nid15102026/",
+          "fecha": "2026-10-15T11:50:35.000Z",
+          "oficial": false,
+          "aporte": "Detalló el diagnóstico de la lesión, los partidos que se pierde y el comunicado del club."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/lautaro-martinez-se-desgarro-y-estara-cerca-de-un-mes-y-medio-fuera-de-las-canchas/",
+          "fecha": "2026-10-15T13:28:31.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el tiempo de baja y la afectación para el Inter y la selección."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "u3bdm4",
+          "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
+          "fecha": "2026-10-10T17:03:23.000Z",
+          "ruta": "/nota/roman-gonzalez-supera-un-record-de-lautaro-martinez-en-racing-u3bdm4"
+        },
+        {
+          "id": "1nlg6jl",
+          "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
+          "fecha": "2026-09-19T03:00:00.000Z",
+          "ruta": "/nota/lionel-messi-vuelve-a-jugar-en-inter-miami-tras-su-despedida-de-la-1nlg6jl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lautaro-martinez-sufre-un-desgarro-muscular-y-frena-su-actividad-por",
+      "foto": {
+        "archivo": "fotos-notas/ny562k.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "cq95nc",
       "titulo": "La madre de Gaspi recuerda al influencer a cuatro meses del accidente",
       "copete": "Michelle Prim compartió un mensaje en redes sociales para recordar a su hijo, a cuatro meses del trágico choque de helicópteros ocurrido en Brasil.",
@@ -2698,6 +2782,7 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
+        "A24",
         "TyC Sports",
         "Olé",
         "Crónica",
@@ -2711,8 +2796,7 @@
         "Ámbito",
         "Minuto Uno",
         "La Gaceta (Tucumán)",
-        "Los Andes (Mendoza)",
-        "A24"
+        "Los Andes (Mendoza)"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
       "teniaImagenLaFuente": true,
@@ -4236,7 +4320,7 @@
         "dia": "jue",
         "max": 14,
         "min": 9,
-        "lluvia": 22,
+        "lluvia": 10,
         "codigo": 3,
         "viento": 19,
         "milimetros": 0,
