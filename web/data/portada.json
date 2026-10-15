@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T07:32:04.899Z",
+  "generado": "2026-10-15T08:01:56.164Z",
   "notas": [
     {
       "id": "19xa7ho",
@@ -1323,7 +1323,6 @@
       "guion": "Casi 59.000 empresas registran problemas para cumplir con sus deudas.",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
         "Infobae",
         "Perfil",
@@ -1332,6 +1331,7 @@
         "Noticias Argentinas (NA)",
         "InfoRegión",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
         "iProUP"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/crece-la-morosidad-empresarial-casi-59000-companias-tienen-problemas-para-pagar-sus-deudas/",
@@ -1793,6 +1793,7 @@
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
+        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
@@ -1808,7 +1809,7 @@
       "fecha": "2026-10-14T13:45:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T21:01:59.221Z",
-      "relevancia": 97,
+      "relevancia": 90,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3735,7 +3736,7 @@
     "ahora": {
       "temp": 10,
       "sensacion": 8,
-      "humedad": 94,
+      "humedad": 93,
       "viento": 12,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -3783,7 +3784,7 @@
         "lluvia": 8,
         "codigo": 51,
         "viento": 12,
-        "milimetros": 1,
+        "milimetros": 0,
         "cielo": "Llovizna leve"
       }
     ],
@@ -4151,12 +4152,6 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "yj5cn4",
-      "titulo": null,
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "1thkkxk",
       "titulo": null,
       "seccion": "Argentina",
@@ -4167,6 +4162,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"adolescente\""
+    },
+    {
+      "id": "yj5cn4",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1333xd6",
