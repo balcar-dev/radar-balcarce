@@ -25,6 +25,7 @@ Dos direcciones del Worker (tiene una dirección `*.workers.dev`, que se ve en C
 
 - `GET /estado`: un JSON con la última revisión (sin ningún secreto) y los problemas abiertos.
 - `GET /probar-mail`, con el encabezado `x-token: <VIGILANTE_TOKEN>`: manda un mail de prueba. **El token va sólo en el encabezado, nunca en la dirección.** Una prueba por minuto como mucho.
+- `POST /avisar` (desde el 15/10, regla 173), con el mismo encabezado `x-token`: **la puerta de salida de los avisos de GitHub**. El vigilante de siempre (`redes/vigilar.mjs`), la auditoría semanal, la auditoría con IA y las pistas mandan por acá lo que antes iba por WhatsApp (`redes/avisar-por-mail.mjs`, secreto `VIGILANTE_TOKEN` en GitHub); si el mail no sale, recién ahí prueban WhatsApp. Cuerpo JSON `{ "asunto", "texto", "clave"?, "nivel"? }`: con `clave`, la misma clave no se repite en 6 horas; como mucho 30 mails por hora; el pedido, hasta 20 KB. **Después de subir esta versión hay que correr de nuevo el workflow «Vigilante de Cloudflare»**: sin eso el Worker viejo no conoce `/avisar` y los avisos siguen cayendo a WhatsApp.
 
 ## Qué hace una persona, una sola vez (los clics)
 

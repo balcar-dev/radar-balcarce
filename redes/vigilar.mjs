@@ -50,7 +50,8 @@ import { cronogramaDelDia, ventanaDe, claveDePieza } from './piezas.mjs';
 import { yaPublicada, estaActivo } from './elegir.mjs';
 import { horaAR, diaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
-import { enviarWhatsApp, sinSecretos } from './whatsapp.mjs';
+import { sinSecretos } from './whatsapp.mjs';
+import { avisar, hayMail, hayWhatsApp } from './avisar-por-mail.mjs';
 import { auditoriaVencida } from './auditar.mjs';
 import { contratoDelDia, CONTRATO_DESDE } from './contrato.mjs';
 import {
@@ -62,7 +63,7 @@ import { copiasRepetidas } from './espejo.mjs';
 import { VOCES } from './prompt-redes.mjs';
 import {
   importantesAAvisar, textoImportantes, anotarImportantes, pendientesAAvisar, textoPendientes,
-  anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje, textoInformeDelDia,
+  anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje, textoInformeDelDia, recortar,
 } from './avisos.mjs';
 import {
   medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos, esIncoherente,
@@ -792,10 +793,11 @@ ${c.texto}`);
   console.log(`  ${problemas.length ? `${problemas.length} problema(s):` : 'Todo en orden.'}`);
   for (const p of problemas) console.log(`   [${p.nivel}] ${p.texto}`);
 
+  // Los avisos salen por mail (Worker de Cloudflare, VIGILANTE_TOKEN) y, si el mail no sale o no hay token, por WhatsApp (regla 173).
   const telefono = process.env.WHATSAPP_TELEFONO;
   const apikey = process.env.WHATSAPP_APIKEY;
-  const puedeAvisar = !sinAvisar && telefono && apikey;
-  if (!sinAvisar && !puedeAvisar) console.log('  (no hay WHATSAPP_TELEFONO / WHATSAPP_APIKEY: no se avisa por WhatsApp)');
+  const puedeAvisar = !sinAvisar && (hayMail(process.env) || hayWhatsApp(process.env));
+  if (!sinAvisar && !puedeAvisar) console.log('  (no hay VIGILANTE_TOKEN ni WHATSAPP_TELEFONO / WHATSAPP_APIKEY: no se avisa por ningún lado)');
 
   let cambio = false;
 
@@ -872,8 +874,15 @@ ${c.texto}`);
     console.log('  Nada para avisar.');
   }
   if (texto && puedeAvisar) {
-    const r = await enviarWhatsApp({ telefono, apikey, texto });
-    console.log(r.ok ? '  Aviso enviado por WhatsApp.' : `  No se pudo avisar por WhatsApp: ${sinSecretos(r.error, apikey, telefono)}`);
+    // La clave y el nivel son para el mail: el nivel es "alta" si el mensaje lleva un problema grave. La clave no se manda: el vigilante ya
+    // decide solo cuándo repetir (estado.avisos), y una clave del Worker taparía un aviso distinto con el mismo nombre.
+    const nivel = incluidas.includes('problemas') && problemas.some((p) => p.nivel === 'alta') ? 'alta' : 'info';
+    // El asunto de un mensaje de problemas dice cuál es (si no, saldría un "hay un problema" pelado); los demás toman la primera línea del texto.
+    const primero = problemas.find((p) => p.nivel === 'alta') ?? problemas[0];
+    const asunto = incluidas[0] === 'problemas' && primero ? `${nivel === 'alta' ? 'Hay un problema' : 'Para mirar'}: ${recortar(primero.texto, 90)}` : undefined;
+    const r = await avisar({ asunto, texto, nivel }, { env: process.env });
+    if (r.ok) console.log(`  Aviso enviado por ${r.via === 'mail' ? 'mail' : 'WhatsApp (el mail no salió)'}.${r.via === 'whatsapp' ? ` Motivo del mail: ${sinSecretos(r.motivo, apikey, telefono)}` : ''}`);
+    else console.log(`  No se pudo avisar: ${sinSecretos(r.motivo, apikey, telefono)}`);
     if (r.ok && !probarResumen) { plan.anotar(estado, incluidas); cambio = true; }
   }
   // Lo que se arregló deja de estar "avisado": si vuelve a fallar, se avisa de nuevo.

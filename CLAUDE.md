@@ -39,7 +39,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 172.)
+próxima regla es la 174.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -86,7 +86,7 @@ próxima regla es la 172.)
   7 días). Siempre con `motivo`, `cuando` y `por`: sin eso la web falla y se congela.
 - **Las ventanas de tiempo**: la portada muestra **36 horas** (`HORAS_EN_PORTADA`; las secciones
   guardan todo, 10 por página); lo que nunca salió no se estrena si el hecho tiene más de **12**;
-  la página dura 180 días (hasta 3.500 notas); lo raspado de más de 72 horas no entra. Los
+  la página dura 180 días en teoría, pero el tope es de 3.700 notas (a ~46 por día, unos 80 días: medido el 15/10, 15.900 archivos de los 20.000 de Cloudflare); lo raspado de más de 72 horas no entra. Los
   números viven en `ingesta/criterio.mjs` **y** en `web/lib/archivo.js`.
 - **Una nota tiene una sola fecha**, que envejece y nunca rejuvenece (`fechaReal`,
   `fechaDeLaNota`), y **una sola dirección**, fija desde que sale. La misma noticia que

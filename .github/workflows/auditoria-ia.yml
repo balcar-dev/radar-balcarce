@@ -47,6 +47,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
           WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
 
       - name: Guardar lo leído
         if: always() && github.event.inputs.simular != 'true'

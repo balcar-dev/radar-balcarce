@@ -307,9 +307,12 @@ test('generar-datos escribe las pendientes en portada.json con la función que c
   assert.match(s, /pendientes: pendientesDeLaIngesta\(/);
 });
 
-test('el vigilante manda UN solo WhatsApp por corrida', () => {
+test('el vigilante manda UN solo aviso por corrida', () => {
+  // Desde la regla 173 (15/10/2026) el aviso sale por `avisar` (mail primero, WhatsApp de respaldo) y ya no se llama a enviarWhatsApp directo:
+  // sigue siendo uno por corrida (CallMeBot bloquea el número si se le manda de más, y el mail tampoco tiene que inundar).
   const s = leer('redes/vigilar.mjs');
-  assert.equal((s.match(/enviarWhatsApp\(/g) ?? []).length, 1);
+  assert.equal((s.match(/\bavisar\(/g) ?? []).length, 1);
+  assert.equal((s.match(/enviarWhatsApp\(/g) ?? []).length, 0, 'el WhatsApp pasa sólo por avisar (redes/avisar-por-mail.mjs)');
 });
 
 test('recortar corta en palabra entera', () => {

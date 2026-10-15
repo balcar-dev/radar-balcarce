@@ -13,7 +13,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { leerVariable } from '../reels/claves.mjs';
 import { cerrar, leerLlaves } from '../panel/cifrado.mjs';
-import { enviarWhatsApp } from './whatsapp.mjs';
+import { avisar } from './avisar-por-mail.mjs';
 import {
   notasParaAuditar, auditarNotas, guardarHallazgos, resumenParaWhatsApp, huellaDeNota, AUDITORIA, cambioMecanico, conCambiosGuardados,
 } from '../ingesta/auditoria-ia.mjs';
@@ -116,10 +116,10 @@ async function main() {
     fs.writeFileSync(ARCHIVO, `${JSON.stringify(r.estado)}\n`, 'utf8');
   }
   if (r.texto) {
-    const telefono = leerVariable('WHATSAPP_TELEFONO');
-    const apikey = leerVariable('WHATSAPP_APIKEY');
-    if (telefono && apikey) await enviarWhatsApp({ telefono, apikey, texto: r.texto }).catch((e) => console.log(`WhatsApp: ${e.message}`));
-    else console.log('Hay algo grave pero no hay WhatsApp configurado.');
+    // Por mail (Worker de Cloudflare) y, si no sale, por WhatsApp (regla 173). `avisar` nunca tira.
+    const env = Object.fromEntries(['VIGILANTE_TOKEN', 'AVISOS_URL', 'WHATSAPP_TELEFONO', 'WHATSAPP_APIKEY'].map((n) => [n, leerVariable(n)]));
+    const aviso = await avisar({ asunto: 'La auditoría de notas encontró algo grave', texto: r.texto, nivel: 'alta' }, { env });
+    if (!aviso.ok) console.log(`Hay algo grave pero no se pudo avisar (${aviso.motivo}).`);
   }
 }
 

@@ -15,7 +15,7 @@ import { spawnSync } from 'node:child_process';
 import {
   FORMATOS, VIGENCIA_DIAS, diasDesdeVerificado, hayQueVolverAVerificar, sinConfirmar, medidaDePng,
 } from './formatos.mjs';
-import { enviarWhatsApp } from './whatsapp.mjs';
+import { avisar, hayMail, hayWhatsApp } from './avisar-por-mail.mjs';
 
 /**
  * Qué está mal, dado lo observado. Pura: se prueba sin red.
@@ -93,10 +93,10 @@ async function main() {
   console.log(problemas.length ? `  ${problemas.length} problema(s):` : '  Auditoría: todo en orden.');
   for (const p of problemas) console.log(`   - ${p.texto}`);
 
-  const { WHATSAPP_TELEFONO: telefono, WHATSAPP_APIKEY: apikey } = process.env;
-  if (problemas.length && telefono && apikey && !process.argv.includes('--sin-avisar')) {
-    const r = await enviarWhatsApp({ telefono, apikey, texto: `🔎 Radar Balcarce: auditoría semanal\n\n${problemas.map((p) => `• ${p.texto}`).join('\n')}` });
-    console.log(r.ok ? '  Aviso enviado por WhatsApp.' : `  No se pudo avisar: ${r.error}`);
+  // Por mail (Worker de Cloudflare) y, si no sale, por WhatsApp (regla 173).
+  if (problemas.length && (hayMail(process.env) || hayWhatsApp(process.env)) && !process.argv.includes('--sin-avisar')) {
+    const r = await avisar({ asunto: 'Auditoría semanal', clave: 'auditoria-semanal', nivel: 'media', texto: `🔎 Radar Balcarce: auditoría semanal\n\n${problemas.map((p) => `• ${p.texto}`).join('\n')}` }, { env: process.env });
+    console.log(r.ok ? `  Aviso enviado por ${r.via === 'mail' ? 'mail' : 'WhatsApp'}.` : `  No se pudo avisar: ${r.motivo}`);
   }
 }
 

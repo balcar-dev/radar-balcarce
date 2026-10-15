@@ -109,6 +109,8 @@ Sondear búsqueda y Sondear Groq; el historial de git los guarda.)
 | **Reloj de Cloudflare** (`reloj-cloudflare.yml`) | A mano (cuando cambia el reloj) | Sube el Worker `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) con wrangler 4.139.0 y le carga el secreto | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `RELOJ_GITHUB_TOKEN` | Nada | 10 min |
 | **Vigilante de Cloudflare** (`vigilante-cloudflare.yml`) | A mano (cuando cambia el vigilante) | Sube el Worker `radar-balcarce-vigilante` (`infra/vigilante-cloudflare/`) con wrangler 4.139.0, crea su KV si falta y le carga los secretos | `CLOUDFLARE_API_TOKEN` (con «Workers KV Storage: Edit»), `CLOUDFLARE_ACCOUNT_ID`, `VIGILANTE_TOKEN`; opcional `VIGILANTE_GITHUB_TOKEN` | Nada | 10 min |
 
+**Respaldo en R2 y los 300 MB** (15/10/2026): wrangler sube hasta 300 MB por archivo y el paquete de git (unos 185 MB, +3,5 MB por día) los pasa hacia el 20/11/2026. Por eso "Respaldo" parte en pedazos de 200 MB (`<archivo>.part-000`, `.part-001`…, más `<archivo>.partes.txt` con nombres, tamaños y sha256 del archivo entero) lo que pase de 250 MB, y sube siempre un `SHA256SUMS`; lo chico sigue yendo entero. "Probar la restauración del respaldo" baja las partes, las junta y compara el sha256. Sin secretos ni herramientas nuevas; la prueba es `pruebas/respaldo-partes.test.mjs`.
+
 **Ninguno cobra**: GitHub no cobra minutos porque el repositorio es público, y
 las claves de IA son gratis. Lo que hay que cuidar es el **cupo de voz**: los
 10 audios por día los comparten Redes, Piezas, Auditar voz y Crear voces
@@ -197,6 +199,12 @@ Un segundo Worker, **`radar-balcarce-vigilante`** (`infra/vigilante-cloudflare/`
   `infra/vigilante-cloudflare/LEEME.md`.
 - No reemplaza a `redes/vigilar.mjs` (que sigue mirando redes, claves, contenido y estadísticas): lo complementa en lo que no puede ver
   si GitHub se cae.
+- **Avisos por mail desde el 15/10 (regla 173):** el Worker también recibe `POST /avisar` (encabezado `x-token`, el mismo `VIGILANTE_TOKEN`; hasta
+  30 mails por hora; con `clave`, la misma no se repite en 6 horas). Lo que antes mandaban por WhatsApp el vigilante (`redes/vigilar.mjs`, con su
+  resumen de las 21), la auditoría semanal, la auditoría con IA y las pistas ahora sale **primero por mail** (`redes/avisar-por-mail.mjs`, función
+  `avisar`) y **WhatsApp queda de respaldo**: sólo se prueba si el mail no salió o si el workflow no tiene `VIGILANTE_TOKEN`. Los workflows
+  `vigilancia.yml`, `auditoria.yml`, `auditoria-ia.yml` y `pistas.yml` pasan `VIGILANTE_TOKEN` (secreto de GitHub, el mismo del Worker). Después de
+  tocar el Worker hay que volver a correr «Vigilante de Cloudflare».
 
 ### cron-job.org: el despertador anterior (pausado)
 

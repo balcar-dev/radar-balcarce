@@ -13,7 +13,8 @@
 // Cada problema se avisa una vez y se repite cada 6 horas mientras siga; cuando se arregla, llega un mail de "recuperado" (una sola vez).
 // A las 21 (hora de Balcarce) sale un resumen del día.
 //
-// Necesita: un KV (ESTADO), el envío de mails (AVISOS) y un secreto, VIGILANTE_TOKEN (para /probar-mail). Opcional: GITHUB_TOKEN, de sólo lectura,
+// Además de vigilar, es la puerta de salida de los avisos de GitHub: POST /avisar (redes/avisar-por-mail.mjs) manda por mail lo que antes iba por
+// WhatsApp (regla 173). Necesita: un KV (ESTADO), el envío de mails (AVISOS) y un secreto, VIGILANTE_TOKEN (para /probar-mail y /avisar). Opcional: GITHUB_TOKEN, de sólo lectura,
 // por si GitHub limita las lecturas sin llave (las IP de Cloudflare se comparten). Ver LEEME.md. Nada se escribe en el código.
 
 export const SITIO = 'https://radarbalcarce.com';
@@ -572,10 +573,80 @@ export function mismoTexto(a, b) {
   return d === 0;
 }
 
-/** GET /estado y GET /probar-mail. Separada del `export default` para probarla sin el runtime. */
+// ---------------------------------------------------------------- POST /avisar (los avisos de GitHub, por mail)
+
+/** Los topes de POST /avisar. Los avisos de GitHub (redes/avisar-por-mail.mjs) son unos pocos por hora: esto sólo frena un bucle o un abuso. */
+export const TOPES_DE_AVISAR = {
+  maximoPorHora: 30,
+  horasSinRepetirClave: 6,
+  bytesDelPedido: 20000,
+  largoDelAsunto: 150,
+  largoDelTexto: 8000,
+  largoDeLaClave: 100,
+};
+
+/** El asunto de un aviso de GitHub: con el prefijo de siempre, y "URGENTE" si el nivel es alto. */
+export function asuntoDeAviso(asunto, nivel) {
+  const limpio = String(asunto ?? '').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, TOPES_DE_AVISAR.largoDelAsunto);
+  const sinPrefijo = limpio.replace(/^\[Radar Balcarce\]\s*/i, '');
+  return `[Radar Balcarce] ${nivel === 'alta' ? 'URGENTE: ' : ''}${sinPrefijo || 'Aviso'}`;
+}
+
+/**
+ * POST /avisar: manda por mail un aviso que armó GitHub. Cuerpo JSON { asunto, texto, clave?, nivel? }, encabezado x-token.
+ *   · sin VIGILANTE_TOKEN cargado: 503; token incorrecto: 401 (igual que /probar-mail);
+ *   · pedido demasiado grande: 413; JSON roto o sin asunto/texto: 400;
+ *   · con `clave`, la misma clave no se manda otra vez en 6 horas (contesta ok con `repetido: true`: no es un error);
+ *   · como mucho 30 mails por hora (429); el tope y las claves viven en el KV.
+ */
+export async function recibirAviso(request, env, deps = {}) {
+  if (!env.VIGILANTE_TOKEN) return json({ ok: false, error: 'El Worker no tiene cargado VIGILANTE_TOKEN.' }, 503);
+  if (!mismoTexto(request.headers.get('x-token'), env.VIGILANTE_TOKEN)) return json({ ok: false, error: 'No autorizado.' }, 401);
+  const enviar = deps.enviar ?? ((mail) => enviarPorCloudflare(env, mail));
+  const ahora = deps.ahora ?? new Date();
+
+  const declarado = Number(request.headers.get('content-length'));
+  if (Number.isFinite(declarado) && declarado > TOPES_DE_AVISAR.bytesDelPedido) return json({ ok: false, error: 'El pedido es demasiado grande.' }, 413);
+  let crudo = '';
+  try { crudo = await request.text(); } catch { return json({ ok: false, error: 'No se pudo leer el pedido.' }, 400); }
+  if (bytes(crudo).length > TOPES_DE_AVISAR.bytesDelPedido) return json({ ok: false, error: 'El pedido es demasiado grande.' }, 413);
+  let cuerpo = null;
+  try { cuerpo = JSON.parse(crudo); } catch { cuerpo = null; }
+  if (!cuerpo || typeof cuerpo !== 'object' || Array.isArray(cuerpo)) return json({ ok: false, error: 'El cuerpo tiene que ser un JSON.' }, 400);
+  const { asunto, texto, clave, nivel } = cuerpo;
+  if (typeof asunto !== 'string' || !asunto.trim() || typeof texto !== 'string' || !texto.trim()) {
+    return json({ ok: false, error: 'Faltan el asunto o el texto.' }, 400);
+  }
+  const claveLimpia = typeof clave === 'string' && clave.trim() ? clave.trim().slice(0, TOPES_DE_AVISAR.largoDeLaClave) : null;
+
+  if (env.ESTADO) {
+    if (claveLimpia && await env.ESTADO.get(`avisar-clave:${claveLimpia}`)) return json({ ok: true, repetido: true });
+    const llaveDeHora = `avisar-hora:${diaAR(ahora)}T${String(horaAR(ahora)).padStart(2, '0')}`;
+    const hechos = Number(await env.ESTADO.get(llaveDeHora)) || 0;
+    if (hechos >= TOPES_DE_AVISAR.maximoPorHora) return json({ ok: false, error: `Demasiados avisos en esta hora (tope: ${TOPES_DE_AVISAR.maximoPorHora}).` }, 429);
+    await env.ESTADO.put(llaveDeHora, String(hechos + 1), { expirationTtl: 7200 });
+  }
+
+  const cola = `\n\n---\nAviso mandado desde GitHub${claveLimpia ? ` (clave: ${claveLimpia})` : ''}${typeof nivel === 'string' && nivel ? `, nivel: ${nivel.slice(0, 20)}` : ''}. Lo entrega el Worker "radar-balcarce-vigilante" de Cloudflare.`;
+  try {
+    await enviar({ asunto: asuntoDeAviso(asunto, nivel), texto: `${texto.slice(0, TOPES_DE_AVISAR.largoDelTexto)}${cola}` });
+  } catch (e) {
+    return json({ ok: false, error: String(e?.message ?? e).slice(0, 200) }, 500);
+  }
+  // La clave se recuerda recién cuando el mail salió: si falló, el siguiente intento no queda tapado.
+  if (env.ESTADO && claveLimpia) await env.ESTADO.put(`avisar-clave:${claveLimpia}`, ahora.toISOString(), { expirationTtl: TOPES_DE_AVISAR.horasSinRepetirClave * 3600 });
+  return json({ ok: true, para: DESTINO });
+}
+
+/** GET /estado, GET /probar-mail y POST /avisar. Separada del `export default` para probarla sin el runtime. */
 export async function atender(request, env, deps = {}) {
   const url = new URL(request.url);
   const enviar = deps.enviar ?? ((mail) => enviarPorCloudflare(env, mail));
+
+  if (url.pathname === '/avisar') {
+    if (request.method !== 'POST') return json({ ok: false, error: 'Usá POST.' }, 405);
+    return recibirAviso(request, env, deps);
+  }
 
   if (url.pathname === '/estado') {
     const estado = env.ESTADO ? await env.ESTADO.get(CLAVE_DEL_ESTADO, 'json') : null;

@@ -37,6 +37,7 @@ jobs:
         env:
           WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
           WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
       # El contrato de Facebook e Instagram de los últimos 7 días contra lo que
       # Meta tiene publicado de verdad: porcentaje de cumplimiento por red y por
       # pieza, y qué días fallaron. Sólo se ve en el registro (no manda WhatsApp:

@@ -18,7 +18,7 @@ import { cerrar, leerLlaves } from './cifrado.mjs';
 import { conRevision, pistasParaRevisar, comoRenglones, avisoDePistas, PISTAS_ABIERTAS } from './pistas-libro.mjs';
 import { leerVariable, claveRedaccion, claveClasificacion } from '../reels/claves.mjs';
 import { sacarPistasSolas } from './pistas-solas.mjs';
-import { enviarWhatsApp } from '../redes/whatsapp.mjs';
+import { avisar } from '../redes/avisar-por-mail.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const DATOS = path.join(RAIZ, 'web', 'data');
@@ -75,9 +75,10 @@ async function main() {
   fs.writeFileSync(ARCHIVO_PISTAS, comoRenglones(libroFinal), 'utf8');
   const texto = avisoDePistas([...r.novedades, ...novedadesDeSolas]);
   if (texto) {
-    const telefono = leerVariable('WHATSAPP_TELEFONO');
-    const apikey = leerVariable('WHATSAPP_APIKEY');
-    if (telefono && apikey) await enviarWhatsApp({ telefono, apikey, texto }).catch((e) => console.log(`WhatsApp: ${e.message}`));
+    // Por mail (Worker de Cloudflare) y, si no sale, por WhatsApp (regla 173). `avisar` nunca tira.
+    const env = Object.fromEntries(['VIGILANTE_TOKEN', 'AVISOS_URL', 'WHATSAPP_TELEFONO', 'WHATSAPP_APIKEY'].map((n) => [n, leerVariable(n)]));
+    const r = await avisar({ asunto: 'Pistas: novedades', texto, nivel: 'info' }, { env });
+    if (!r.ok) console.log(`Aviso: no salió (${r.motivo})`);
   }
 }
 

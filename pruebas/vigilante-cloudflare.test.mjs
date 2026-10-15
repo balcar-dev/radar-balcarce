@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import worker, {
   ultimaActualizacion, notasDeHoy, esDeDia, limiteDeHorasSinActualizar, formatoEdad, evaluar, decidir, deshacerLosFallidos, resumenDeCorridas,
   parsearCorridas, armarMime, codificarAsunto, enviarPorCloudflare, correr, atender, resumenDebido, revisarWeb, revisarGitHub, LIMITES, DESTINO, REMITENTE,
+  asuntoDeAviso, TOPES_DE_AVISAR,
 } from '../infra/vigilante-cloudflare/worker.mjs';
 
 const leer = (r) => fs.readFileSync(new URL(`../${r}`, import.meta.url), 'utf8');
@@ -417,6 +418,136 @@ test('si el mail de prueba no sale, /probar-mail lo dice (500) en vez de decir q
   const r = await atender(new Request('https://v.example.workers.dev/probar-mail', { headers: { 'x-token': 't' } }), env, { enviar: async () => { throw new Error('rechazado'); } });
   assert.equal(r.status, 500);
   assert.equal((await r.json()).ok, false);
+});
+
+// ---------------------------------------------------------------- POST /avisar (regla 173: los avisos de GitHub salen por mail)
+
+const URL_AVISAR = 'https://v.example.workers.dev/avisar';
+const pedirAviso = (cuerpo, { token = 'tok-largo', metodo = 'POST', crudo = null } = {}) => new Request(URL_AVISAR, {
+  method: metodo,
+  ...(metodo === 'POST' ? { body: crudo ?? JSON.stringify(cuerpo) } : {}),
+  headers: { 'content-type': 'application/json', ...(token ? { 'x-token': token } : {}) },
+});
+
+test('/avisar manda el mail con el asunto prefijado, el texto y la clave y el nivel al pie', async () => {
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const enviados = [];
+  const deps = { enviar: async (m) => enviados.push(m), ahora: z('2026-10-15T15:12:00Z') };
+  const r = await atender(pedirAviso({ asunto: 'Hay un problema: la web', texto: 'Texto del aviso\nsegunda línea', clave: 'web-vieja', nivel: 'alta' }), env, deps);
+  assert.equal(r.status, 200);
+  assert.deepEqual(await r.json(), { ok: true, para: DESTINO });
+  assert.equal(enviados.length, 1);
+  assert.equal(enviados[0].asunto, '[Radar Balcarce] URGENTE: Hay un problema: la web');
+  assert.match(enviados[0].texto, /^Texto del aviso\nsegunda línea/);
+  assert.match(enviados[0].texto, /clave: web-vieja/);
+  assert.match(enviados[0].texto, /nivel: alta/);
+});
+
+test('el asunto no repite el prefijo, no deja saltos de línea y se corta; sin nivel alto no dice URGENTE', () => {
+  assert.equal(asuntoDeAviso('[Radar Balcarce] Se cayó algo', 'info'), '[Radar Balcarce] Se cayó algo');
+  assert.equal(asuntoDeAviso('uno\r\nBcc: otro@x.com', undefined), '[Radar Balcarce] uno Bcc: otro@x.com');
+  assert.equal(asuntoDeAviso('', 'media'), '[Radar Balcarce] Aviso');
+  assert.ok(asuntoDeAviso('x'.repeat(500), 'alta').length <= '[Radar Balcarce] URGENTE: '.length + TOPES_DE_AVISAR.largoDelAsunto);
+});
+
+test('/avisar pide POST y el token en el encabezado: sin VIGILANTE_TOKEN cargado 503, token ajeno o ausente 401, GET 405 (y nada se manda)', async () => {
+  const enviados = [];
+  const deps = { enviar: async (m) => enviados.push(m) };
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const cuerpo = { asunto: 'a', texto: 'b' };
+  assert.equal((await atender(pedirAviso(cuerpo, { token: 'otro' }), env, deps)).status, 401);
+  assert.equal((await atender(pedirAviso(cuerpo, { token: null }), env, deps)).status, 401);
+  assert.equal((await atender(new Request(`${URL_AVISAR}?token=tok-largo`, { method: 'POST', body: JSON.stringify(cuerpo) }), env, deps)).status, 401, 'el token en la dirección no sirve');
+  assert.equal((await atender(pedirAviso(cuerpo), { ESTADO: kvFalso() }, deps)).status, 503);
+  assert.equal((await atender(pedirAviso(cuerpo, { metodo: 'GET' }), env, deps)).status, 405);
+  assert.equal(enviados.length, 0);
+});
+
+test('/avisar: un cuerpo roto, sin asunto o sin texto es 400; uno enorme es 413; ninguno manda nada', async () => {
+  const enviados = [];
+  const deps = { enviar: async (m) => enviados.push(m) };
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  assert.equal((await atender(pedirAviso(null, { crudo: 'esto no es json' }), env, deps)).status, 400);
+  assert.equal((await atender(pedirAviso(null, { crudo: '[1,2]' }), env, deps)).status, 400);
+  assert.equal((await atender(pedirAviso({ texto: 'sólo texto' }), env, deps)).status, 400);
+  assert.equal((await atender(pedirAviso({ asunto: 'sólo asunto' }), env, deps)).status, 400);
+  assert.equal((await atender(pedirAviso({ asunto: 'a', texto: '   ' }), env, deps)).status, 400);
+  assert.equal((await atender(pedirAviso({ asunto: 'a', texto: 5 }), env, deps)).status, 400);
+  assert.equal((await atender(pedirAviso({ asunto: 'a', texto: 'x'.repeat(TOPES_DE_AVISAR.bytesDelPedido + 1) }), env, deps)).status, 413);
+  assert.equal(enviados.length, 0);
+});
+
+test('/avisar: el texto largo se corta en vez de rechazarse', async () => {
+  const enviados = [];
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const r = await atender(pedirAviso({ asunto: 'a', texto: 'y'.repeat(TOPES_DE_AVISAR.largoDelTexto + 500) }), env, { enviar: async (m) => enviados.push(m) });
+  assert.equal(r.status, 200);
+  assert.ok(enviados[0].texto.startsWith('y'.repeat(TOPES_DE_AVISAR.largoDelTexto)) && !enviados[0].texto.startsWith('y'.repeat(TOPES_DE_AVISAR.largoDelTexto + 1)));
+});
+
+test('/avisar: la misma clave no se repite en 6 horas (contesta ok, repetido, y no manda); otra clave o sin clave sí; si el mail falló, la clave no queda gastada', async () => {
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const enviados = [];
+  const deps = { enviar: async (m) => enviados.push(m), ahora: z('2026-10-15T15:12:00Z') };
+  let r = await atender(pedirAviso({ asunto: 'a', texto: 'b', clave: 'k1' }), env, deps);
+  assert.equal((await r.json()).ok, true);
+  r = await atender(pedirAviso({ asunto: 'a', texto: 'b', clave: 'k1' }), env, deps);
+  assert.equal(r.status, 200);
+  assert.deepEqual(await r.json(), { ok: true, repetido: true });
+  assert.equal(enviados.length, 1, 'la repetida no sale');
+  await atender(pedirAviso({ asunto: 'a', texto: 'b', clave: 'k2' }), env, deps);
+  await atender(pedirAviso({ asunto: 'a', texto: 'b' }), env, deps);
+  await atender(pedirAviso({ asunto: 'a', texto: 'b' }), env, deps);
+  assert.equal(enviados.length, 4, 'sin clave no hay dedupe');
+  const roto = { enviar: async () => { throw new Error('rechazado'); }, ahora: z('2026-10-15T15:12:00Z') };
+  r = await atender(pedirAviso({ asunto: 'a', texto: 'b', clave: 'k3' }), env, roto);
+  assert.equal(r.status, 500);
+  r = await atender(pedirAviso({ asunto: 'a', texto: 'b', clave: 'k3' }), env, deps);
+  assert.deepEqual(await r.json(), { ok: true, para: DESTINO }, 'el reintento sale');
+});
+
+test('/avisar: la clave se guarda con vencimiento de 6 horas y el contador de la hora (de Balcarce) con vencimiento propio', async () => {
+  const puestas = [];
+  const kv = kvFalso();
+  const put = kv.put.bind(kv);
+  kv.put = async (k, v, o) => { puestas.push([k, o]); return put(k, v, o); };
+  const env = { ESTADO: kv, VIGILANTE_TOKEN: 'tok-largo' };
+  await atender(pedirAviso({ asunto: 'a', texto: 'b', clave: 'web-vieja' }), env, { enviar: async () => {}, ahora: z('2026-10-15T15:12:00Z') });
+  const clave = puestas.find(([k]) => k === 'avisar-clave:web-vieja');
+  assert.equal(clave[1].expirationTtl, 6 * 3600);
+  const hora = puestas.find(([k]) => k.startsWith('avisar-hora:'));
+  assert.equal(hora[0], 'avisar-hora:2026-10-15T12', '15:12Z son las 12:12 en Balcarce');
+  assert.ok(hora[1].expirationTtl >= 3600);
+});
+
+test('/avisar: como mucho 30 mails por hora (429 desde el 31); a la hora siguiente se vuelve a poder', async () => {
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const enviados = [];
+  const deps = (iso) => ({ enviar: async (m) => enviados.push(m), ahora: z(iso) });
+  for (let i = 0; i < TOPES_DE_AVISAR.maximoPorHora; i++) {
+    assert.equal((await atender(pedirAviso({ asunto: `a${i}`, texto: 'b' }), env, deps('2026-10-15T15:12:00Z'))).status, 200);
+  }
+  const r = await atender(pedirAviso({ asunto: 'uno más', texto: 'b' }), env, deps('2026-10-15T15:50:00Z'));
+  assert.equal(r.status, 429);
+  assert.equal(enviados.length, TOPES_DE_AVISAR.maximoPorHora);
+  assert.equal((await atender(pedirAviso({ asunto: 'otra hora', texto: 'b' }), env, deps('2026-10-15T16:05:00Z'))).status, 200);
+});
+
+test('/avisar: si el envío falla dice 500 con el motivo y sin el token', async () => {
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const r = await atender(pedirAviso({ asunto: 'a', texto: 'b' }), env, { enviar: async () => { throw new Error('rechazado por Cloudflare'); } });
+  assert.equal(r.status, 500);
+  const c = await r.json();
+  assert.equal(c.ok, false);
+  assert.match(c.error, /rechazado/);
+  assert.ok(!JSON.stringify(c).includes('tok-largo'));
+});
+
+test('el Worker sigue sin imports estáticos con /avisar, y el LEEME lo cuenta', () => {
+  const w = leer('infra/vigilante-cloudflare/worker.mjs');
+  assert.ok(!/^import\s/m.test(w));
+  assert.match(w, /url\.pathname === '\/avisar'/);
+  assert.match(leer('infra/vigilante-cloudflare/LEEME.md'), /POST \/avisar/);
 });
 
 // ---------------------------------------------------------------- la configuración y el workflow
