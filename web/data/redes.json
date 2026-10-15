@@ -2323,6 +2323,14 @@
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
+    },
+    "2026-10-15/clima-noche": {
+      "cuando": "2026-10-15T23:05:40.639Z",
+      "mediaId": "17973207864175423",
+      "nombre": "clima-noche",
+      "tipo": "STORIES",
+      "notaId": null,
+      "notaIds": []
     }
   },
   "facebookVideos": {
@@ -3893,6 +3901,14 @@
       "cuando": "2026-10-15T22:02:53.102Z",
       "mediaId": "1461837522473384",
       "nombre": "farmacia",
+      "tipo": "STORIES",
+      "notaId": null,
+      "notaIds": []
+    },
+    "2026-10-15/clima-noche": {
+      "cuando": "2026-10-15T23:06:09.628Z",
+      "mediaId": "2883367655368657",
+      "nombre": "clima-noche",
       "tipo": "STORIES",
       "notaId": null,
       "notaIds": []
@@ -5641,6 +5657,13 @@
       "nombre": "farmacia",
       "tipo": "REELS",
       "permalink": "https://www.facebook.com/reel/959882766706012/"
+    },
+    "2026-10-15/clima-noche": {
+      "cuando": "2026-10-15T23:06:18.232Z",
+      "mediaId": "1353862179977259",
+      "nombre": "clima-noche",
+      "tipo": "REELS",
+      "permalink": "https://www.facebook.com/reel/1353862179977259/"
     }
   }
 }
