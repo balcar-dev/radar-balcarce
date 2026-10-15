@@ -89,10 +89,10 @@ import { leerLlaves, cerrarCadaUno } from '../../panel/cifrado.mjs';
 import { previaDelDia } from '../../redes/previa.mjs';
 import { estaActivo } from '../../redes/elegir.mjs';
 import {
-  repetidasConOtraDireccion, conFusionadas, parejasSospechosas, sumarFuentesDeParejas,
+  repetidasConOtraDireccion, fotosParaLaQueQueda, conFusionadas, parejasSospechosas, sumarFuentesDeParejas,
 } from '../lib/repetidas.js';
 import { diceEnVivo } from '../../ingesta/verificar.mjs';
-import { repetidasDeLoPublicado, conFuentesDeLasUnidas } from '../../ingesta/repetidas-publicadas.mjs';
+import { parejasConLoPublicado, conFuentesDeLasUnidas } from '../../ingesta/repetidas-publicadas.mjs';
 import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
 import { traerFutbol, notasDeFutbol, comoFutbolJson } from '../../ingesta/futbol.mjs';
 import { notasDePistas } from '../lib/notas-de-pistas.js';
@@ -583,7 +583,7 @@ function notaPublicada(n) {
 
 // Lo que viene de las fuentes. Las notas propias se suman más abajo, después
 // de saber qué salió del archivo.
-const deLaIngesta = (ultima.notas ?? [])
+let deLaIngesta = (ultima.notas ?? [])
   .map(notaPublicada)
   .filter(Boolean);
 
@@ -609,8 +609,27 @@ let bancoDeFotos = { ...leerJson(BANCO_FOTOS, {}), ...fotosManuales };
 // La misma noticia contra lo YA publicado, sin IA (regla 171, ingesta/repetidas-publicadas.mjs): una nota que todavía
 // no salió y cuenta lo mismo que otra de las últimas 72 horas (el Jardín 905 al día siguiente, la Liga en otra sección)
 // se une a ésa como las parejas que confirma la IA: queda una y la otra redirige (más abajo, repetidasConOtraDireccion).
-const parejasSinIA = repetidasDeLoPublicado([...deLaIngesta, ...(archivoAnterior.notas ?? [])], { yaPublicadas: yaSalieron });
+// Las retiradas (web/data/retiradas.json) también se comparan (M3, 15/10): el archivo ya no las trae, pero la ingesta sí
+// mientras las fuentes las tengan. Si la mejor pareja de una nota nueva es una retirada, no se publica sola.
+const retiradasParaComparar = (ultima.notas ?? []).filter((n) => RETIRADAS_A_MANO.has(n.id)).map((n) => ({
+  id: n.id, titulo: n.titulo, copete: n.resumenFuente ?? '', fecha: fechaReal(n), seccion: n.seccion, local: !!n.local, deLaZona: !!n.deLaZona,
+}));
+const { parejas: parejasSinIA, conRetirada } = parejasConLoPublicado(
+  [...deLaIngesta, ...(archivoAnterior.notas ?? []), ...retiradasParaComparar],
+  { yaPublicadas: yaSalieron, retiradas: RETIRADAS_A_MANO },
+);
 if (parejasSinIA.length) console.log(`  repetidas de lo ya publicado (sin IA): ${parejasSinIA.length}`);
+if (conRetirada.length) {
+  // No se publica sola: pasa a esperar a una persona (amarilla, como cualquier otra que espera en el celular).
+  const esperan = new Map(conRetirada.map(([retirada, nueva]) => [nueva, retirada]));
+  for (const n of ultima.notas ?? []) {
+    if (!esperan.has(n.id) || n.semaforo === 'rojo') continue;
+    n.semaforo = 'amarillo';
+    n.motivo = `igual a una nota retirada (${esperan.get(n.id)})`;
+  }
+  for (const n of deLaIngesta.filter((x) => esperan.has(x.id))) console.log(`  espera a una persona (igual a una nota retirada, ${esperan.get(n.id)}): ${n.id}`);
+  deLaIngesta = deLaIngesta.filter((n) => !esperan.has(n.id));
+}
 // Si dos notas son la misma noticia, la foto se busca en las fuentes de las dos (1/10).
 sumarFuentesDeParejas(deLaIngesta, [...parejasConfirmadas, ...parejasSinIA]);
 if (enLaNube) {
@@ -918,15 +937,33 @@ if (enLaNube) {
     console.log(`  parejas: falló el pedido (${e.message}); se vuelve a probar en la próxima corrida`);
   }
 }
+const conFotoEnElBanco = new Set(Object.entries(bancoDeFotos).filter(([, b]) => b?.archivo).map(([id]) => id));
 const fusion = repetidasConOtraDireccion(
   [...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id)), ...conPaginaHoy],
   {
     enRedes: idsEnRedes(libroRedes),
     confirmadas: [...parejasConfirmadas, ...parejasSinIA],
-    conFoto: new Set(Object.entries(bancoDeFotos).filter(([, b]) => b?.archivo).map(([id]) => id)),
+    // Con lo ya publicado queda SIEMPRE la que ya estaba (una nota no rejuvenece, M2 del 15/10): la nueva no queda aunque traiga foto.
+    preferidas: parejasSinIA,
+    conFoto: conFotoEnElBanco,
   },
 );
 for (const id of fusion.keys()) retiradas.add(id);
+// Si la nueva trajo la foto y la que queda no tiene, la foto pasa a la que queda (en el banco, con su crédito).
+const pasaLaFoto = fotosParaLaQueQueda(fusion, {
+  conFoto: conFotoEnElBanco,
+  yaTienen: new Set([...(archivoAnterior.notas ?? []), ...conPaginaHoy].filter((n) => n.foto).map((n) => n.id)),
+});
+if (pasaLaFoto.size) {
+  bancoDeFotos = { ...bancoDeFotos, ...Object.fromEntries([...pasaLaFoto].map(([queda, deLaFoto]) => [queda, { ...bancoDeFotos[deLaFoto] }])) };
+  conFotosDelBanco(conPaginaHoy.filter((n) => pasaLaFoto.has(n.id)), bancoDeFotos);
+  if (enLaNube) {
+    fs.mkdirSync(path.dirname(BANCO_FOTOS), { recursive: true });
+    fs.writeFileSync(BANCO_FOTOS, `${JSON.stringify(bancoDeFotos, null, 1)}\n`, 'utf8');
+  }
+  console.log(`  repetidas: ${pasaLaFoto.size} foto(s) pasan a la nota que ya estaba publicada`);
+}
+const conLaFotoPasada = (n) => (pasaLaFoto.has(n?.id) && !n.foto ? conFotosDelBanco([{ ...n }], bancoDeFotos)[0] : n);
 {
   const antes = leerJson(FUSIONADAS, null);
   const porId = new Map([...(archivoAnterior.notas ?? []), ...conPaginaHoy].map((n) => [n.id, n]));
@@ -967,7 +1004,7 @@ const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
 // Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
 const archivo = aligerarViejas(actualizarArchivo({
-  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(sinServicios),
+  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(conLaFotoPasada).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
   // `undefined` pisa lo viejo al mezclar y no se escribe.

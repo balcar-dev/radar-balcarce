@@ -69,9 +69,13 @@ function laQueQueda(grupo, enRedes, conFoto = new Set()) {
  * No toca las notas propias (la del dólar de cada día se parece a la del día
  * anterior y no es la misma) ni las que fueron a las redes (su enlace circula:
  * se quedan, aunque haya otra igual).
+ *
+ * `preferidas` son parejas [laQueYaEstaba, laNueva] (ya incluidas en `confirmadas`): en su grupo la nueva nunca
+ * es la que queda, tenga o no foto (15/10/2026, M2 de la revisión: una nota no rejuvenece; si la nueva trae foto,
+ * se la pasa a la que queda con `fotosParaLaQueQueda`).
  */
 export function repetidasConOtraDireccion(notas = [], {
-  enRedes = new Set(), umbral = REPETIDAS.umbral, horas = REPETIDAS.horas, confirmadas = [], conFoto = new Set(),
+  enRedes = new Set(), umbral = REPETIDAS.umbral, horas = REPETIDAS.horas, confirmadas = [], conFoto = new Set(), preferidas = [],
 } = {}) {
   const lista = [];
   const vistas = new Set();
@@ -94,6 +98,8 @@ export function repetidasConOtraDireccion(notas = [], {
   for (const [a, b] of confirmadas) {
     if (padre.has(a) && padre.has(b)) padre.set(raiz(b), raiz(a));
   }
+  // La nueva de una pareja «preferida» no puede quedar (sólo si la que ya estaba está en la lista).
+  const noQuedan = new Set(preferidas.filter(([vieja, nueva]) => padre.has(vieja) && padre.has(nueva)).map(([, nueva]) => nueva));
   const grupos = new Map();
   for (const n of lista) {
     const r = raiz(n.id);
@@ -103,13 +109,28 @@ export function repetidasConOtraDireccion(notas = [], {
   const fusion = new Map();
   for (const grupo of grupos.values()) {
     if (grupo.length < 2) continue;
-    const queda = laQueQueda(grupo, enRedes, conFoto);
+    const candidatas = grupo.filter((n) => !noQuedan.has(n.id));
+    const queda = laQueQueda(candidatas.length ? candidatas : grupo, enRedes, conFoto);
     for (const n of grupo) {
       if (n.id === queda.id || enRedes.has(n.id) || n.redes) continue;
       fusion.set(n.id, queda.id);
     }
   }
   return fusion;
+}
+
+/**
+ * Si la que queda no tiene foto y una de las que se le unieron sí (la nueva trajo la foto y la que ya estaba no),
+ * la foto pasa a la que queda en vez de cambiar cuál queda. Devuelve Map idDeLaQueQueda → idDeLaQueTrajoLaFoto.
+ * `conFoto` son los ids con foto en el banco (de donde sale la foto) y `yaTienen`, los que ya muestran una.
+ */
+export function fotosParaLaQueQueda(fusion = new Map(), { conFoto = new Set(), yaTienen = new Set() } = {}) {
+  const pasan = new Map();
+  for (const [id, queda] of fusion) {
+    if (id === queda || pasan.has(queda) || conFoto.has(queda) || yaTienen.has(queda) || !conFoto.has(id)) continue;
+    pasan.set(queda, id);
+  }
+  return pasan;
 }
 
 /** Cuántos días se guarda la redirección de una repetida (lo que dura la página de una nota). */

@@ -46,6 +46,13 @@ Respuesta completa en `docs/auditoria-opus/RESPUESTAS-OTRAS-IAS.md` (Grok y Meta
 - **Un documento "si mañana falta uno de nosotros"** (dominio, cuentas, pagos, recuperación) y la prueba anual de reconstruir todo si desapareciera GitHub.
 - **Dónde NO coincide con Opus:** ChatGPT no migraría a Workers + D1 todavía (50 visitas por día). Lo que sí recomienda es sacar de git los datos que hacen de base de datos y pasar la multimedia a R2. Se discute en la revisión de punta a punta; mientras tanto el rumbo acordado sigue siendo menos GitHub y más Cloudflare. Sobre las 500 compilaciones gratis de Pages: no aplican, el sitio se sube por Direct Upload sin que Cloudflare compile.
 
+## Lo que quedó armado en la ventana autónoma del 15/10 (para mirar juntos)
+
+- **Armado y sin conectar a producción**: `motor/` (esquema de la base D1 y su importador, con prueba de espejo contra `web/data`), `redes/reparar-estadisticas.mjs` (simula por defecto; 6 días a reparar; necesita el token de analíticas de Cloudflare para `--aplicar`), `docs/etapa-10-operacion/DISENO-MOTOR.md` y `docs/salud-tecnica/ARCHIVO-PERMANENTE.md` (diseños, con sus preguntas).
+- **12 decisiones del celular de tipo "publicada" no traen `motivo`** (`celular-decisiones.json`): el esquema nuevo las rechaza. Decidir qué motivo se les pone antes de armar el puente.
+- **Decisiones de ustedes** (ver `docs/DECISIONES.md`, 15/10): limpiar o no el historial público de git (M4), recorte automático cerca de los 20.000 archivos (M5) y "una menor" suelta en la lista roja.
+- **Tocar a mano**: probar `/probar-mail` del vigilante (mail de prueba), confirmar el perfil de TikTok, y el espejo en GitLab si lo quieren.
+
 ## Después de la mudanza (15/10)
 
 | Qué | Quién |

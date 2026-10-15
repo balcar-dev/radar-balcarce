@@ -8,9 +8,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  compararNotas, porQueNo, huella, repetidasDeLoPublicado, conFuentesDeLasUnidas, REPETIDAS_PUBLICADAS,
+  compararNotas, porQueNo, huella, repetidasDeLoPublicado, parejasConLoPublicado, conFuentesDeLasUnidas, REPETIDAS_PUBLICADAS,
 } from '../ingesta/repetidas-publicadas.mjs';
-import { repetidasConOtraDireccion } from '../web/lib/repetidas.js';
+import { repetidasConOtraDireccion, fotosParaLaQueQueda } from '../web/lib/repetidas.js';
+import { paraDecidir } from '../panel/celular-datos.mjs';
 
 const RAIZ = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const VANGUARDIA = 'https://www.diariolavanguardia.com/noticias/45006-robaron-canos-de-gas-del-jardin-n-905-y-suspendieron-las-clases/';
@@ -157,10 +158,90 @@ test('con la fusión de siempre: queda una, la otra redirige, y la que queda sum
 
 test('generar-datos usa las parejas sin IA en la fusión y suma las fuentes de las unidas', () => {
   const fuente = fs.readFileSync(path.join(RAIZ, 'web', 'scripts', 'generar-datos.mjs'), 'utf8');
-  assert.match(fuente, /repetidasDeLoPublicado\(\[\.\.\.deLaIngesta, \.\.\.\(archivoAnterior\.notas \?\? \[\]\)\], \{ yaPublicadas: yaSalieron \}\)/);
+  assert.match(fuente, /parejasConLoPublicado\(\s*\[\.\.\.deLaIngesta, \.\.\.\(archivoAnterior\.notas \?\? \[\]\), \.\.\.retiradasParaComparar\],\s*\{ yaPublicadas: yaSalieron, retiradas: RETIRADAS_A_MANO \}/);
+  assert.match(fuente, /preferidas: parejasSinIA/, 'M2: con lo ya publicado queda siempre la que ya estaba');
+  assert.match(fuente, /fotosParaLaQueQueda\(fusion/, 'M2: la foto de la nueva pasa a la que queda');
+  assert.match(fuente, /igual a una nota retirada \(\$\{esperan\.get\(n\.id\)\}\)/, 'M3: la que se parece a una retirada espera a una persona');
   assert.match(fuente, /confirmadas: \[\.\.\.parejasConfirmadas, \.\.\.parejasSinIA\]/);
   assert.match(fuente, /conFuentesDeLasUnidas\(/);
   // Sin dependencias de afuera (regla de ingesta/).
   const modulo = fs.readFileSync(path.join(RAIZ, 'ingesta', 'repetidas-publicadas.mjs'), 'utf8');
   assert.ok(!/^import /m.test(modulo), 'ingesta/repetidas-publicadas.mjs no importa nada');
+});
+
+// ---------------------------------------------------------------- M2 y M3 de la revisión de Opus (15/10/2026)
+
+const AHORA = Date.parse('2026-10-07T16:30:00Z');
+
+test('M2: la nueva trae la foto y la ya publicada no: queda la ya publicada (la fecha no rejuvenece) y la foto pasa a ella', () => {
+  const publicada = { ...JARDIN_6 }; // sin foto
+  const nueva = { ...JARDIN_7 }; // con foto en el banco
+  const parejas = repetidasDeLoPublicado([nueva, publicada], { yaPublicadas: new Set(['15imf6x']), ahora: AHORA });
+  assert.deepEqual(parejas, [['15imf6x', 'ccot62']]);
+  const conFoto = new Set(['ccot62']);
+  // Antes del arreglo: por la foto quedaba la nueva y la publicada redirigía (la noticia de hace dos días volvía arriba con fecha nueva).
+  assert.deepEqual([...repetidasConOtraDireccion([publicada, nueva], { confirmadas: parejas, conFoto })], [['15imf6x', 'ccot62']]);
+  // Con la pareja marcada como «preferida», queda siempre la que ya estaba.
+  const fusion = repetidasConOtraDireccion([publicada, nueva], { confirmadas: parejas, preferidas: parejas, conFoto });
+  assert.deepEqual([...fusion], [['ccot62', '15imf6x']]);
+  // La foto de la nueva pasa a la que queda; si ya tenía una, no se toca nada.
+  assert.deepEqual([...fotosParaLaQueQueda(fusion, { conFoto })], [['15imf6x', 'ccot62']]);
+  assert.equal(fotosParaLaQueQueda(fusion, { conFoto, yaTienen: new Set(['15imf6x']) }).size, 0);
+  assert.equal(fotosParaLaQueQueda(fusion, { conFoto: new Set(['15imf6x', 'ccot62']) }).size, 0);
+  assert.equal(fotosParaLaQueQueda(fusion, { conFoto: new Set() }).size, 0, 'si ninguna tiene foto, no hay nada que pasar');
+});
+
+test('M2: dos nuevas de la misma corrida y una publicada: queda la publicada; sin la publicada en la lista, la preferida no cambia nada', () => {
+  const publicada = { ...JARDIN_6 };
+  const nueva = { ...JARDIN_7 };
+  const otra = { ...JARDIN_7, id: 'otra1', fecha: '2026-10-07T16:20:00.000Z' };
+  const todas = [nueva, otra, publicada];
+  const parejas = repetidasDeLoPublicado(todas, { yaPublicadas: new Set(['15imf6x']), ahora: AHORA });
+  const fusion = repetidasConOtraDireccion(todas, { confirmadas: parejas, preferidas: parejas, conFoto: new Set(['ccot62', 'otra1']) });
+  for (const [, queda] of fusion) assert.equal(queda, '15imf6x');
+  assert.equal(fusion.size, 2);
+  // La publicada ya no está en la lista (se fue del archivo): la preferida no excluye a la nueva y queda la de siempre (la más vieja).
+  const sola = repetidasConOtraDireccion([nueva, otra], { confirmadas: [['otra1', 'ccot62']], preferidas: [['15imf6x', 'ccot62']] });
+  assert.deepEqual([...sola], [['otra1', 'ccot62']]);
+});
+
+test('M3: si la mejor pareja de una nota nueva es una nota retirada, no forma pareja: va aparte para esperar a una persona', () => {
+  const retirada = { ...JARDIN_6, id: 'd1rexu', publicadaPor: 'Hernán' };
+  const retiradas = new Set(['d1rexu']);
+  const r = parejasConLoPublicado([JARDIN_7, retirada], { yaPublicadas: new Set(['d1rexu']), retiradas, ahora: AHORA });
+  assert.deepEqual(r.parejas, []);
+  assert.deepEqual(r.conRetirada, [['d1rexu', 'ccot62']]);
+  // La retirada nunca es «nueva»: aunque no esté en yaPublicadas (ya no está en el archivo), no se compara contra nada.
+  const sola = parejasConLoPublicado([retirada, JARDIN_7], { retiradas, ahora: AHORA });
+  assert.deepEqual(sola.conRetirada, [['d1rexu', 'ccot62']]);
+  assert.deepEqual(sola.parejas, []);
+  // repetidasDeLoPublicado (sin retiradas) sigue devolviendo sólo las parejas con lo publicado.
+  assert.deepEqual(repetidasDeLoPublicado([JARDIN_7, retirada], { yaPublicadas: new Set(['d1rexu']), retiradas, ahora: AHORA }), []);
+  // Con una retirada que no se parece a nada, todo sigue como siempre.
+  assert.deepEqual(repetidasDeLoPublicado([JARDIN_7, JARDIN_6], { yaPublicadas: new Set(['15imf6x']), retiradas, ahora: AHORA }), [['15imf6x', 'ccot62']]);
+});
+
+test('M3: si hay una publicada más parecida que la retirada, la nueva se une a la publicada; con otra noticia, ni una cosa ni la otra', () => {
+  const retiradaFloja = { ...JARDIN_6, id: 'ret2', titulo: 'El Jardín 905 suspende las clases por el robo de caños de gas', copete: 'La institución educativa debió interrumpir las actividades este martes. La Policía actuó.' };
+  assert.equal(compararNotas(retiradaFloja, JARDIN_7).misma, true, 'la retirada también es la misma noticia, pero menos parecida');
+  const publicadaParecida = { ...JARDIN_6, id: 'pub1' };
+  const r = parejasConLoPublicado([JARDIN_7, retiradaFloja, publicadaParecida], {
+    yaPublicadas: new Set(['pub1', 'ret2']), retiradas: new Set(['ret2']), ahora: AHORA,
+  });
+  assert.deepEqual(r.parejas, [['pub1', 'ccot62']]);
+  assert.deepEqual(r.conRetirada, []);
+  const otraNoticia = { id: 'x1', titulo: 'La Cooperativa Eléctrica corta la luz el viernes en tres barrios', copete: 'El corte programado alcanza a varios sectores de la ciudad por tareas de mantenimiento.', fecha: '2026-10-07T10:00:00Z', local: true };
+  const sinPareja = parejasConLoPublicado([JARDIN_7, otraNoticia], { yaPublicadas: new Set(['x1']), retiradas: new Set(['x1']), ahora: AHORA });
+  assert.deepEqual(sinPareja, { parejas: [], conRetirada: [] });
+});
+
+test('M3: lo que se frena por parecerse a una retirada queda amarillo, con su motivo, en la lista del celular', () => {
+  const nota = {
+    id: 'ccot62', titulo: JARDIN_7.titulo, resumenFuente: JARDIN_7.copete, seccion: 'Balcarce', local: true, fecha: new Date().toISOString(),
+    semaforo: 'amarillo', motivo: 'igual a una nota retirada (d1rexu)', origenes: [],
+  };
+  const lista = paraDecidir([nota], {});
+  assert.equal(lista.length, 1);
+  assert.equal(lista[0].motivo, 'igual a una nota retirada (d1rexu)');
+  assert.equal(paraDecidir([{ ...nota, semaforo: 'rojo' }], {}).length, 0, 'una roja no se ofrece nunca');
 });

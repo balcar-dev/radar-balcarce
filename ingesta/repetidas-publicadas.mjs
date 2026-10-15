@@ -170,40 +170,60 @@ export function compararNotas(a, b, umbrales = REPETIDAS_PUBLICADAS) {
 /** Una nota que se compara: de un medio y publicada sola (lo de una persona se respeta). */
 const seCompara = (n) => n?.id && n.titulo && !n.propia && (!n.publicadaPor || n.publicadaPor === 'ia');
 
+/** Una retirada se compara con lo nuevo aunque la haya publicado una persona: lo que se mira es la noticia. */
+const seComparaRetirada = (n) => n?.id && n.titulo && !n.propia;
+
 /**
- * Las parejas [idDeLaQueYaEstaba, idDeLaNueva] de notas que cuentan lo mismo. Una nota es «nueva»
- * si todavía no salió (no está en `yaPublicadas`); se compara con las publicadas de las últimas
- * `horas` y con las otras nuevas de la corrida que salieron antes. Cada nueva se une a UNA sola
- * (la más parecida): no se encadenan grupos por acá.
+ * Las parejas de notas que cuentan lo mismo, con lo ya publicado y con lo retirado (M2 y M3 de la revisión del 15/10).
+ *
+ *   · `parejas`: [idDeLaQueYaEstaba, idDeLaNueva]. Una nota es «nueva» si todavía no salió (no está en
+ *     `yaPublicadas`); se compara con las publicadas de las últimas `horas` y con las otras nuevas de la
+ *     corrida que salieron antes. Cada nueva se une a UNA sola (la más parecida): no se encadenan grupos por acá.
+ *   · `conRetirada`: [idDeLaRetirada, idDeLaNueva]. Si la MEJOR pareja de una nueva es una nota retirada
+ *     (`retiradas`: ids; las notas van en `notas`, aunque ya no estén en el archivo), la nueva no forma pareja con
+ *     nadie: va acá, y quien llama la manda a esperar a una persona (no se publica sola).
  */
-export function repetidasDeLoPublicado(notas = [], { yaPublicadas = new Set(), umbrales = REPETIDAS_PUBLICADAS, ahora = Date.now() } = {}) {
+export function parejasConLoPublicado(notas = [], {
+  yaPublicadas = new Set(), retiradas = new Set(), umbrales = REPETIDAS_PUBLICADAS, ahora = Date.now(),
+} = {}) {
   const u = { ...REPETIDAS_PUBLICADAS, ...umbrales };
   const vistas = new Set();
   const lista = [];
   for (const n of notas) {
-    if (!seCompara(n) || vistas.has(n.id)) continue;
+    const laRetirada = retiradas.has(n?.id);
+    if (!(laRetirada ? seComparaRetirada(n) : seCompara(n)) || vistas.has(n.id)) continue;
     vistas.add(n.id);
     const h = huella(n);
     // Lo de más de dos ventanas atrás no puede juntarse con nada nuevo.
     if (h.tiempo && ahora - h.tiempo > 2 * u.horas * 3600e3) continue;
-    lista.push({ n, h });
+    lista.push({ n, h, retirada: laRetirada });
   }
   const parejas = [];
+  const conRetirada = [];
   for (const nueva of lista) {
-    if (yaPublicadas.has(nueva.n.id)) continue;
+    if (nueva.retirada || yaPublicadas.has(nueva.n.id)) continue;
     let mejor = null;
     for (const otra of lista) {
       if (otra === nueva) continue;
-      // La que ya estaba: publicada, o nueva pero anterior (en la misma corrida).
+      // La que ya estaba: publicada, retirada, o nueva pero anterior (en la misma corrida).
       const antes = otra.h.tiempo < nueva.h.tiempo || (otra.h.tiempo === nueva.h.tiempo && String(otra.n.id) < String(nueva.n.id));
-      if (!yaPublicadas.has(otra.n.id) && !antes) continue;
+      if (!otra.retirada && !yaPublicadas.has(otra.n.id) && !antes) continue;
       const c = compararNotas(otra.h, nueva.h, u);
-      if (c.misma && (!mejor || c.titulo + c.texto > mejor.puntaje)) mejor = { id: otra.n.id, puntaje: c.titulo + c.texto };
+      if (!c.misma) continue;
+      const puntaje = c.titulo + c.texto;
+      // Ante un empate, la retirada (lo más cauto: que decida una persona).
+      if (!mejor || puntaje > mejor.puntaje || (puntaje === mejor.puntaje && otra.retirada && !mejor.retirada)) {
+        mejor = { id: otra.n.id, puntaje, retirada: otra.retirada };
+      }
     }
-    if (mejor) parejas.push([mejor.id, nueva.n.id]);
+    if (!mejor) continue;
+    (mejor.retirada ? conRetirada : parejas).push([mejor.id, nueva.n.id]);
   }
-  return parejas;
+  return { parejas, conRetirada };
 }
+
+/** Las parejas [idDeLaQueYaEstaba, idDeLaNueva] con lo publicado y con las otras nuevas (sin lo retirado). */
+export const repetidasDeLoPublicado = (notas = [], opciones = {}) => parejasConLoPublicado(notas, opciones).parejas;
 
 /**
  * La que queda suma los medios y las fuentes de las que se unieron a ella (la «Fuentes (N)» de la nota).
