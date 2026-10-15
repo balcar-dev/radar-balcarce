@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T21:02:31.289Z",
+ "generado": "2026-10-15T21:06:51.207Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -30,6 +30,23 @@
    "maximo": 3
   },
   {
+   "id": "xla8hd",
+   "titulo": "Ferreira y Cagni se destacaron en la Correcaminata Aniversario de Tamangueyú",
+   "copete": "Los atletas de AACYC Balcarce, Ariel Ferreira y Adrián Cagni, tuvieron una destacada participación en la Correcaminata Aniversario de Tamangueyú, donde compitieron en la prueba principal de 10 kilómetros y lograron ubicarse entre los seis mejores de la clasificación general…",
+   "seccion": "Deportes",
+   "fecha": "2026-10-15T14:46:00.000Z",
+   "fuentes": [
+    {
+     "medio": "Infórmese Primero (FM 104.9)",
+     "enlace": "http://www.informeseprimero.com.ar/2026/10/ferreira-y-cagni-se-destacaron-en-la.html",
+     "fecha": "2026-10-15T14:46:00.000Z"
+    }
+   ],
+   "intentos": 3,
+   "motivo": "con cuerpo",
+   "maximo": 3
+  },
+  {
    "id": "sosoq0",
    "titulo": "Ángela Servín completó los 70 kilómetros de la Atlántica Ultra y logró subir al podio",
    "copete": "La atleta balcarceña Ángela Servín tuvo una destacada actuación en la exigente competencia Atlántica Ultra, al completar un recorrido de 70 kilómetros y alcanzar el segundo puesto en su categoría. La prueba comenzó en la costanera de Mar del Plata y continuó por veredas y…",
@@ -45,43 +62,6 @@
    "intentos": 3,
    "motivo": "con cuerpo",
    "maximo": 3
-  },
-  {
-   "id": "1uvhput",
-   "titulo": "Leonel Flores, el jugador de Boca y la Selección que visitó una olla popular en Monte Chingolo y revolucionó el barrio",
-   "copete": "",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-15T16:55:32.000Z",
-   "fuentes": [
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/leonel-flores-el-jugador-de-boca-y-la-seleccion-que-visito-una-olla-popular-en-monte-chingolo-y-revoluciono-el-barrio/",
-     "fecha": "2026-10-15T16:55:32.000Z"
-    },
-    {
-     "medio": "El Destape",
-     "enlace": "https://www.eldestapeweb.com/deportes/leonel-flores-crack-boca-seleccion-argentina-fue-olla-popular-lanus-20261015172640",
-     "fecha": "2026-10-15T20:26:40.624Z"
-    },
-    {
-     "medio": "TyC Sports",
-     "enlace": "https://www.tycsports.com/boca-juniors/el-gesto-solidario-de-leo-flores-participo-de-una-olla-popular-en-monte-chingolo-id766419.html",
-     "fecha": "2026-10-15T18:23:53.000Z"
-    },
-    {
-     "medio": "Olé",
-     "enlace": "https://www.ole.com.ar/boca-juniors/gran-gesto-leo-flores-participo-olla-popular-monte-chingolo_0_vhNaJfrcfM.html",
-     "fecha": "2026-10-15T17:27:45.000Z"
-    },
-    {
-     "medio": "Minuto Uno",
-     "enlace": "https://www.minutouno.com/deportes/el-gesto-solidario-leonel-flores-participo-una-olla-popular-monte-chingolo-n6334247",
-     "fecha": "2026-10-15T20:11:00.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 82 palabras",
-   "maximo": 4
   },
   {
    "id": "1k2r0zu",
@@ -129,28 +109,6 @@
    "intentos": 4,
    "motivo": "título o bajada: 2 problemas (forma, numero): el copete trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir",
    "maximo": 4
-  },
-  {
-   "id": "kzftcz",
-   "titulo": "Messi Cup 2026: cuándo se juega y todos los equipos que participan",
-   "copete": "La Messi Cup 2026, la segunda edición del torneo Sub 16 creado por Lionel Messi y la productora 525 Rosario, fundada por el propio futbolista, se realiza en Miami, Estados Unidos, entre el domingo 25 de octubre y el domingo 1° de noviembre. Contará con la participación del…",
-   "seccion": "Fútbol",
-   "fecha": "2026-10-15T20:15:07.000Z",
-   "fuentes": [
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/deportes/futbol/messi-cup-2026-cuando-se-juega-y-todos-los-equipos-que-participan-nid15102026/",
-     "fecha": "2026-10-15T20:15:07.000Z"
-    },
-    {
-     "medio": "Radio Mitre",
-     "enlace": "https://radiomitre.cienradios.com/deportes/messi-cup-2026-cuando-se-juega-donde-verla-en-vivo-y-que-equipos-argentinos-participan/",
-     "fecha": "2026-10-15T20:31:47.000Z"
-    }
-   ],
-   "intentos": 1,
-   "motivo": "cuerpo: 5 problemas (antecedente, numero, promesa): el cuerpo usa \"seleccion\", que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 67",
-   "maximo": 3
   },
   {
    "id": "m2d0x8",
