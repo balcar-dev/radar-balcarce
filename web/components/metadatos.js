@@ -87,18 +87,20 @@ export function autorDeNota(nota = {}, base = '') {
   const { reescrita, revisada, propia } = quienEscribio(nota);
   // El cuerpo lo escribió la redacción (web/data/correcciones.json): el
   // autor es el sitio, no el medio ni la IA.
-  if (propia || nota.cuerpoAMano) return { '@type': 'Organization', name: NOMBRE, url: base };
+  // `url`: la página donde se explica quién escribe (Google recomienda que el autor tenga una dirección propia).
+  const paginaDelAutor = `${base}/quienes-somos`;
+  if (propia || nota.cuerpoAMano) return { '@type': 'Organization', name: NOMBRE, url: paginaDelAutor };
   if (!reescrita) {
     // El resumen es el que publicó la fuente: el autor es ese medio.
     const fuente = (nota.medios ?? [])[0];
     return fuente
       ? { '@type': 'Organization', name: fuente }
-      : { '@type': 'Organization', name: NOMBRE, url: base };
+      : { '@type': 'Organization', name: NOMBRE, url: paginaDelAutor };
   }
   const como = revisada
     ? 'nota escrita con IA y revisada por una persona'
     : 'nota escrita con IA y verificada automáticamente contra las fuentes';
-  return { '@type': 'Organization', name: `${NOMBRE} (${como})`, url: base };
+  return { '@type': 'Organization', name: `${NOMBRE} (${como})`, url: paginaDelAutor };
 }
 
 /**

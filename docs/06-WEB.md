@@ -468,7 +468,8 @@ Todas se generan al compilar, como archivos.
 | `/feed.xml` | `app/feed.xml/route.js` | RSS con todas las notas vigentes |
 | `/sitemap.xml` | `app/sitemap.js` | Páginas fijas, secciones (con sus páginas), temas, notas vigentes, notas archivadas **con cuerpo** y eventos que vienen |
 | `/sitemap-news.xml` | `app/sitemap-news.xml/route.js` | Para Google Noticias: sólo notas con hora real de las últimas 48 horas |
-| `/robots.txt` | `app/robots.js` | Permite todo menos `/feed.xml` en el dominio propio; fuera de él, pide no indexar |
+| `/robots.txt` | `app/robots.txt/route.js` y `lib/robots.js` | Permite todo menos `/panel/` en el dominio propio, con la política hacia las IA (`Content-Signal`, bots nombrados); fuera de él, pide no indexar |
+| `/agentes/ultimas.json`, `/agentes/indice.json`, `/agentes/servicios.json` | `app/agentes/*/route.js` y `lib/para-agentes.js` | Datos para programas y asistentes de IA (16/10): sólo lo que Google puede ver, sin el cuerpo, con fuentes, firma y cómo citar; `noindex`. Los lee el Worker MCP (`infra/mcp-cloudflare/`, sin activar) |
 | `/llms.txt` | `app/llms.txt/route.js` | Un resumen del sitio para sistemas de IA |
 | `/opengraph-image` | `app/opengraph-image.js` | La tarjeta del sitio |
 | 404 | `app/not-found.js` | "No encontramos esa página", con el rescate de direcciones de notas |

@@ -1,5 +1,6 @@
 import { obtenerDatos } from '@/lib/datos';
 import { sitio, enlace, NOMBRE } from '@/lib/sitio';
+import { noSeOfreceAGoogle } from '@/lib/cuerpo';
 
 // El mapa para Google Noticias: un formato aparte del sitemap.xml de
 // siempre, que Google sólo mira para decidir qué mostrar en la pestaña
@@ -27,6 +28,8 @@ export async function GET() {
   // Noticias castiga una fecha de publicación que no es cierta.
   const recientes = (d.notas ?? [])
     .filter((n) => !n.sinFecha && n.fecha)
+    // Lo que lleva noindex no se ofrece a Google Noticias (misma regla que el sitemap general).
+    .filter((n) => !noSeOfreceAGoogle(n))
     .filter((n) => (ahora - new Date(n.fecha).getTime()) <= DOS_DIAS_MS);
 
   const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

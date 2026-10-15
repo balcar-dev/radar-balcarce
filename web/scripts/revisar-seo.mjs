@@ -14,6 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { parteDeNota } from '../lib/ruta.js';
+import { noSeOfreceAGoogle } from '../lib/cuerpo.js';
 
 const SALIDA = path.join(process.cwd(), '.next', 'server', 'app');
 const fallas = [];
@@ -96,14 +97,21 @@ const sitemap = leer('sitemap.xml.body');
 if (!sitemap) fallas.push('el sitemap: no se generó');
 else {
   const cuantas = (sitemap.match(/<url>/g) ?? []).length;
-  if (cuantas < datos.notas.length) {
-    fallas.push(`el sitemap: ${cuantas} direcciones para ${datos.notas.length} notas`);
+  // Las que llevan noindex no van al sitemap (16/10/2026), así que se cuentan sólo las que Google puede ver.
+  const visibles = datos.notas.filter((n) => !noSeOfreceAGoogle(n)).length;
+  if (cuantas < visibles) {
+    fallas.push(`el sitemap: ${cuantas} direcciones para ${visibles} notas`);
+  }
+  // Ninguna dirección con noindex adentro del sitemap.
+  for (const n of datos.notas.filter((x) => noSeOfreceAGoogle(x))) {
+    if (sitemap.includes(`${n.ruta}</loc>`)) fallas.push(`el sitemap: ofrece ${n.ruta}, que lleva noindex`);
   }
 }
 
 const robots = leer('robots.txt.body');
 if (!robots) fallas.push('el robots: no se generó');
 else if (!robots.includes('/sitemap.xml')) fallas.push('el robots: no apunta al sitemap');
+else if (!robots.split('\n').some((l) => l.trim() === 'Disallow: /panel/' || l.trim() === 'Disallow: /')) fallas.push('el robots: no protege /panel/');
 
 // ----------------------------------------------------------------------
 if (fallas.length) {

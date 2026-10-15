@@ -33,7 +33,7 @@ calendario.
 - **Se instala desde Chrome**: menú ⋮ → **"Instalar app"** (o "Agregar a
   pantalla principal"). Chrome lo convierte en app: ícono propio, pantalla
   completa y se actualiza solo. No hace falta un .apk.
-- No se indexa (`web/app/robots.js` y `X-Robots-Tag`) y sólo puede hablar con
+- No se indexa (`web/lib/robots.js` y `X-Robots-Tag`) y sólo puede hablar con
   GitHub (una `Content-Security-Policy` propia en `web/public/_headers`):
   guarda la llave de quien lo usa, así que no carga nada de afuera.
 

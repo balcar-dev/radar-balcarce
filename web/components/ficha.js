@@ -1,9 +1,12 @@
 import { sitio, enlace, NOMBRE } from '@/lib/sitio';
 import { autorDeNota } from '@/components/metadatos';
-import { REDES_SOCIALES } from '@/lib/datos';
+import { REDES_SOCIALES, WHATSAPP } from '@/lib/datos';
 import { fichaDeEvento } from '@/lib/eventos';
 import { enlaceParaElLector } from '@/lib/fuentes-de-la-nota';
 import { fechaDeModificacion } from '@/lib/tiempo';
+import { urlDeFoto } from '@/lib/fotos';
+import { dimensionesDeFoto } from '@/lib/dimensiones-foto';
+import { politicasDelMedio, puntosDeContacto, camposExtraDeNota } from '@/lib/datos-estructurados';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -29,8 +32,13 @@ export function FichaDelSitio() {
         '@type': 'NewsMediaOrganization',
         '@id': `${base}/#medio`,
         name: NOMBRE,
+        // Cómo se escribe de corrido el dominio: ayuda a Google a reconocer el nombre del sitio (Site names).
+        alternateName: 'radarbalcarce.com',
+        description: 'Medio digital de Balcarce, provincia de Buenos Aires: noticias de la ciudad, la región y el país, farmacia de turno, clima y agenda. Las notas las escribe una inteligencia artificial con lo que publican otros medios, siempre con la fuente enlazada, y se verifican automáticamente contra ellas.',
         url: base,
         email: 'contacto@radarbalcarce.com',
+        // WhatsApp y correo: los mismos que ya están en el pie del sitio.
+        contactPoint: puntosDeContacto({ email: 'contacto@radarbalcarce.com', whatsapp: WHATSAPP.numero }),
         // Las cuentas del medio: Google las muestra junto al nombre.
         sameAs: Object.values(REDES_SOCIALES),
         // El logo lo piden Google Noticias y los resultados enriquecidos:
@@ -53,14 +61,15 @@ export function FichaDelSitio() {
         },
         // Que lo diga acá también: parte de lo que publicamos lo redacta una
         // máquina, y no es algo para esconder en la letra chica.
-        publishingPrinciples: `${base}/quienes-somos`,
-        correctionsPolicy: `${base}/contacto`,
+        // Las políticas editoriales apuntan a las secciones de /quienes-somos y /contacto (lib/datos-estructurados.js).
+        ...politicasDelMedio(base),
       },
       {
         '@type': 'WebSite',
         '@id': `${base}/#sitio`,
         url: base,
         name: NOMBRE,
+        alternateName: 'radarbalcarce.com',
         inLanguage: 'es-AR',
         publisher: { '@id': `${base}/#medio` },
       },
@@ -91,8 +100,14 @@ export function FichaDeNota({ nota, conTarjeta = true }) {
     articleSection: nota.seccion,
     inLanguage: 'es-AR',
     url,
-    // La tarjeta propia si la nota la tiene; si no, la del sitio (la otra daba 404).
-    image: [enlace(conTarjeta ? `${nota.ruta}/opengraph-image` : '/opengraph-image')],
+    // La foto de la nota (si mide lo que Google pide, con su crédito) y la tarjeta propia; si no hay tarjeta propia, la del sitio (la otra
+    // daba 404). Qué va primero, lo decide imagenesDeNota (lib/datos-estructurados.js); el tamaño sale de la cabecera del archivo.
+    ...camposExtraDeNota({
+      nota,
+      tarjeta: enlace(conTarjeta ? `${nota.ruta}/opengraph-image` : '/opengraph-image'),
+      urlFoto: (archivo) => { const u = urlDeFoto(archivo); return /^https?:/.test(u) ? u : enlace(u); },
+      dimensiones: dimensionesDeFoto,
+    }),
     isAccessibleForFree: true,
     publisher: { '@id': `${base}/#medio` },
     // Quién la escribió: lo mismo que dice la firma al pie de la nota (IA o

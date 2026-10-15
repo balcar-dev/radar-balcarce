@@ -39,7 +39,7 @@ vigilancia y el panel del celular andan con la PC apagada.**
 ## Reglas que no se negocian
 
 (La lista numerada, con la prueba que cuida cada una: `docs/10-REGLAS-Y-PRUEBAS.md`; la
-próxima regla es la 175.)
+próxima regla es la 179.)
 
 - **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Una prueba lo
   vigila (sigue los imports en cadena).
@@ -176,6 +176,7 @@ próxima regla es la 175.)
 | Qué vigila el vigilante o qué dice el WhatsApp | `redes/vigilar.mjs` (`evaluar`, `revisarClaves`, `VENCIMIENTOS`), `redes/avisos.mjs` |
 | Los informes diarios por mail (8:15 y 21:15: qué se publicó, qué espera, redes, visitas, salud; regla 176) | `redes/informe-diario.mjs`, `.github/workflows/informe-diario.yml`, el horario en `infra/reloj-cloudflare/` (`trabajosDelMinuto`) y el `html` de `POST /avisar` en `infra/vigilante-cloudflare/worker.mjs`; el resumen de las 22 del Worker es sólo el respaldo |
 | Qué archivos guarda "Actualizar la web" | La línea `git add` de `.github/workflows/actualizar.yml` (un archivo nuevo de `web/data/` que no esté ahí se pierde) |
+| La política hacia buscadores e IA (`robots.txt`, bots), los datos estructurados, los sitemaps, `llms.txt`, los datos para agentes y el servidor MCP (escrito, sin activar) | `web/lib/robots.js`, `web/lib/datos-estructurados.js`, `web/components/ficha.js`, `web/app/sitemap.js`, `web/app/llms.txt/route.js`, `web/lib/para-agentes.js` (`/agentes/*.json`), `infra/mcp-cloudflare/`; el estado, los trámites y las decisiones: `docs/seo/AUDITORIA-SEO-LLM.md` |
 | Los avisos publicitarios, la agenda a mano | El panel de la PC (`PUBLICIDAD.md`, `panel/agenda.mjs`) |
 | Qué se decidió, por qué y quién; las preguntas abiertas | `docs/DECISIONES.md` (lo nuevo arriba) |
 

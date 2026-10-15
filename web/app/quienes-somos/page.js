@@ -22,7 +22,7 @@ const TITULO = { fontSize: 20, marginTop: 28, marginBottom: 8 };
 export default function QuienesSomos() {
   return (
     <div className="envoltura" style={{ maxWidth: 700 }}>
-      <h1 className="fraunces" style={{ fontSize: 34, marginBottom: 18 }}>Quiénes somos</h1>
+      <h1 id="quienes-somos" className="fraunces" style={{ fontSize: 34, marginBottom: 18 }}>Quiénes somos</h1>
 
       <div className="texto-pagina" style={{ fontSize: 15.5, lineHeight: 1.7 }}>
         <p>
@@ -35,7 +35,7 @@ export default function QuienesSomos() {
           depende del municipio, de un partido ni de otro medio.
         </p>
 
-        <h3 style={TITULO}>Cómo trabajamos</h3>
+        <h3 id="como-trabajamos" style={TITULO}>Cómo trabajamos</h3>
         <p>
           Radar Balcarce es un medio <strong>automático</strong>, y preferimos decirlo de entrada.
           Cada media hora un programa lee las noticias que publican los medios locales, los de la
@@ -70,7 +70,7 @@ export default function QuienesSomos() {
           </li>
         </ul>
 
-        <h3 style={TITULO}>Lo que no hacemos</h3>
+        <h3 id="lo-que-no-hacemos" style={TITULO}>Lo que no hacemos</h3>
         <ul style={{ paddingLeft: 20 }}>
           <li>
             <strong>No usamos fotos sin decir de dónde salen.</strong> Cada una lleva el crédito de
@@ -88,7 +88,7 @@ export default function QuienesSomos() {
           </li>
         </ul>
 
-        <h3 style={TITULO}>Si algo está mal</h3>
+        <h3 id="si-algo-esta-mal" style={TITULO}>Si algo está mal</h3>
         <p>
           Nos equivocamos, como cualquiera, y un medio automático también. Si ves un error, o si
           publicamos algo sobre vos que considerás erróneo, <a href="/contacto">escribinos</a> y

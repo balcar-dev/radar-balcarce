@@ -1,7 +1,10 @@
 import {
   obtenerDatos, obtenerArchivo, SECCIONES, proximosEventos, notasDeLaSeccion,
 } from '@/lib/datos';
-import { tieneCuerpo } from '@/lib/cuerpo';
+import { tieneCuerpo, noSeOfreceAGoogle } from '@/lib/cuerpo';
+import { urlDeFoto } from '@/lib/fotos';
+import { dimensionesDeFoto } from '@/lib/dimensiones-foto';
+import { fotoParaElSitemap } from '@/lib/datos-estructurados';
 import { cuantasPaginas, direccionDePagina } from '@/lib/paginas';
 import { sitio } from '@/lib/sitio';
 
@@ -59,12 +62,18 @@ export default function sitemap() {
     }));
   });
 
-  const deNotas = notas.map((n) => ({
-    url: `${base}${n.ruta}`,
-    lastModified: new Date(n.fecha),
-    changeFrequency: 'weekly',
-    priority: n.local ? 0.9 : 0.6,
-  }));
+  // Lo que lleva noindex (una nota sin cuerpo de verdad) no se ofrece: un sitemap que lista páginas que después dicen "no me indexes" es una
+  // contradicción que Search Console marca como error. Las de la portada traen además su foto (sitemap de imágenes; Google Imágenes).
+  const deNotas = notas.filter((n) => !noSeOfreceAGoogle(n)).map((n) => {
+    const foto = fotoParaElSitemap({ nota: n, urlFoto: (a) => { const u = urlDeFoto(a); return /^https?:/.test(u) ? u : `${base}${u}`; }, dimensiones: dimensionesDeFoto });
+    return {
+      url: `${base}${n.ruta}`,
+      lastModified: new Date(n.fecha),
+      changeFrequency: 'weekly',
+      priority: n.local ? 0.9 : 0.6,
+      ...(foto ? { images: [foto] } : {}),
+    };
+  });
 
   // Las notas que ya salieron de la portada siguen teniendo página (el
   // archivo, 180 días). Hasta el 26/09 no estaban acá y Google no encontraba

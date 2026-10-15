@@ -124,6 +124,7 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `FORMATOS.md` | Las medidas de imágenes y videos de cada red y su porqué (los números viven en `redes/formatos.mjs`) |
 | `PERFILES.md` | Las biografías, categorías y colores de las redes |
 | `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta |
+| `docs/seo/AUDITORIA-SEO-LLM.md` | Auditoría de SEO y de asistentes de IA (16/10/2026): estado real con evidencia, problemas por gravedad, plan, trámites, política de bots de IA, `llms.txt`, servidor MCP y decisiones pendientes |
 | `PUBLICIDAD.md` | Los tres avisos, sus reglas, AdSense y cómo se piensa vender |
 | `COMERCIAL.md` | La base de comercios de Balcarce (aparte del sitio), la vigencia, las propuestas y el plan del mapa comercial |
 | `INVESTIGACION.md` | Lo legal, con sus fuentes |

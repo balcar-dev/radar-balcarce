@@ -79,6 +79,14 @@
   Cache-Control: no-cache
   Content-Security-Policy: default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'self'
 
+# Los feeds (15/10): Cloudflare Pages los servía como application/xml, sin juego de caracteres. Un feed RSS es application/rss+xml
+# (la prueba pruebas/rss.test.mjs lo vigila).
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+
+/seccion/*/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+
 # El archivo para agendar un evento: que el celular lo abra con el calendario.
 /agenda/*/evento.ics
   Content-Type: text/calendar; charset=utf-8
@@ -87,3 +95,11 @@
 # contenido, cambia el nombre. Se puede guardar un año.
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Los datos para agentes (16/10/2026, web/app/agentes/): JSON para programas y asistentes de IA. Se pueden leer desde cualquier lado (CORS
+# abierto: es información pública) y se guardan cinco minutos, pero no se indexan: un JSON suelto no debe competir con las notas en Google.
+# En robots.txt NO están bloqueados a propósito: los bots de IA que respetan robots.txt tienen que poder leerlos.
+/agentes/*
+  X-Robots-Tag: noindex
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300

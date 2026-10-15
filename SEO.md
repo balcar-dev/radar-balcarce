@@ -1,6 +1,6 @@
 # SEO: cómo se posiciona la web
 
-*Actualizado el 29/09/2026.* Qué está hecho, cómo se audita y qué falta. Lo que
+*Actualizado el 16/10/2026 (la auditoría completa, con evidencia y plan, está en `docs/seo/AUDITORIA-SEO-LLM.md`).* Qué está hecho, cómo se audita y qué falta. Lo que
 falta, con quién y qué urgencia, vive en `PENDIENTES.md`; acá se explica el estado.
 
 ## Lo hecho
@@ -10,7 +10,7 @@ falta, con quién y qué urgencia, vive en `PENDIENTES.md`; acá se explica el e
 | **Direcciones fijas** | `/nota/titulo-de-la-nota-id`, fija desde la primera vez que sale aunque cambie el titular; la página dura 180 días (`web/data/archivo.json`). La 404 rescata direcciones viejas por el identificador (`/nota/indice.json`) | `web/lib/ruta.js`, `web/lib/archivo.js`, `pruebas/archivo.test.mjs` |
 | **Redirecciones 301** | Se escriben en cada compilación en `web/public/_redirects`: las direcciones viejas de las notas (`/nota/id`) y de las secciones y, desde el 29/09, **las notas repetidas**: la misma noticia que volvió a entrar con otro enlace se une sola y la que se retira redirige a la que queda (`web/lib/repetidas.js`, `web/data/fusionadas.json`). `www` va al dominio sin `www` (regla de Cloudflare; el vigilante avisa si deja de andar) | `web/scripts/generar-redirects.mjs`, `pruebas/redirects.test.mjs` |
 | **Sitemaps** | `sitemap.xml`: la portada, las secciones, los servicios, las páginas de confianza, las notas, las archivadas con cuerpo (180 días), los eventos que vienen y los temas. `sitemap-news.xml`: formato Google News, últimas 48 horas, sin las notas sin fecha real. Los dos, enviados a Search Console el 24/09 | `web/app/sitemap.js`, `web/app/sitemap-news.xml/` |
-| **`robots.txt`** | En el dominio propio permite todo menos `/feed.xml` y **`/panel/`** (el panel del celular, 29/09, que además manda `X-Robots-Tag: noindex`). Fuera del dominio propio (vistas previas) prohíbe indexar, para no duplicar las notas | `web/app/robots.js`, `web/lib/sitio.js` |
+| **`robots.txt`** | En el dominio propio permite todo menos **`/panel/`** (el feed ya no se bloquea) y declara la política hacia las IA (`Content-Signal`, bots nombrados; 16/10) (el panel del celular, 29/09, que además manda `X-Robots-Tag: noindex`). Fuera del dominio propio (vistas previas) prohíbe indexar, para no duplicar las notas | `web/app/robots.txt/route.js`, `web/lib/robots.js`, `web/lib/sitio.js` |
 | **Canónico** | Siempre `https` y sin `www`; cada página declara el suyo y sólo la portada es `/` | `web/lib/sitio.js`, `web/components/metadatos.js`, `pruebas/seo.test.mjs` |
 | **Título, descripción y `h1`** | Propios en la portada, cada sección, cada tema y cada nota; el título de una nota se corta en 60 caracteres y la descripción en 155 (`recortarEn`, `web/lib/texto.js`) | `pruebas/seo-paginas.test.mjs` |
 | **Datos estructurados** | `NewsArticle` en cada nota (el autor dice lo mismo que la firma), `NewsMediaOrganization` con logo, `WebSite` y `BreadcrumbList` | `web/components/ficha.js` |

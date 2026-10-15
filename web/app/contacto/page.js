@@ -34,7 +34,7 @@ export default function Contacto() {
           </li>
         </ul>
 
-        <h3 style={TITULO}>Para pedir una corrección</h3>
+        <h3 id="correcciones" style={TITULO}>Para pedir una corrección</h3>
         <p>
           Si una nota tiene un error, o si publicamos algo sobre vos que considerás erróneo,
           mandanos:

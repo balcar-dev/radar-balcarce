@@ -1,6 +1,7 @@
-import { obtenerDatos } from '@/lib/datos';
+import { obtenerDatos, MAIL } from '@/lib/datos';
 import { sitio } from '@/lib/sitio';
 import { armarRss } from '@/lib/rss';
+import { tamanoDeFotoLocal } from '@/lib/rss-disco';
 
 // RSS para quien quiera seguirnos sin redes: Google Noticias y los
 // lectores de feeds lo leen desde acá. Desde el 8/10 cada nota trae su texto
@@ -19,6 +20,7 @@ export async function GET() {
   const d = obtenerDatos();
   const xml = armarRss({
     enlace: SITIO, autoEnlace: `${SITIO}/feed.xml`, notas: d.notas, sitio: SITIO, generado: d.generado,
+    correo: MAIL, logo: `${SITIO}/icon-192.png`, tamanoDeFoto: tamanoDeFotoLocal,
   });
   return new Response(xml, { headers: { 'content-type': 'application/rss+xml; charset=utf-8' } });
 }

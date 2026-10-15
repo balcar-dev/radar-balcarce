@@ -198,7 +198,7 @@ test('la página del panel: sin nada de afuera, sin indexar, y se puede instalar
   const cabeceras = leer('web/public/_headers');
   assert.match(cabeceras, /\/panel\/\*\r?\n\s+X-Robots-Tag: noindex, nofollow/);
   assert.match(cabeceras, /connect-src 'self' https:\/\/api\.github\.com/);
-  assert.match(leer('web/app/robots.js'), /'\/panel\/'/);
+  assert.match(leer('web/lib/robots.js'), /const PRIVADO = \['\/panel\/'\]/);
 });
 
 // C-19 (8/10/2026): "Publicar" no saca solo una nota de un tema delicado: la muestra para que la lean.

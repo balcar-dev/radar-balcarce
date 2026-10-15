@@ -250,6 +250,11 @@ Un segundo Worker, **`radar-balcarce-vigilante`** (`infra/vigilante-cloudflare/`
   visitas de las estadísticas.
 - `wrangler` va con la versión fija (4.139.0), para que una nueva no rompa el
   despliegue sola. Para subirla: cambiar el número y correr "Cloudflare Pages".
+- **Servidor MCP de sólo lectura** (16/10/2026, `infra/mcp-cloudflare/`, Worker `radar-balcarce-mcp`):
+  **escrito y probado, NO activado** (sin ruta, sin dominio y sin workflow que lo suba). Cuando se
+  active, vive en `mcp.radarbalcarce.com`, lee los JSON de `/agentes/` del sitio y no necesita
+  secretos. Los pasos, el límite de pedidos en el WAF y los riesgos están en su `LEEME.md` y en
+  `docs/seo/AUDITORIA-SEO-LLM.md`.
 - **Vercel** está apagado; borrar el proyecto y su DNS está en `PENDIENTES.md`.
 
 ## GitHub: el repositorio

@@ -1,6 +1,7 @@
-import { obtenerDatos, notasDeLaSeccion, SECCIONES, paramsNoVacios } from '@/lib/datos';
+import { obtenerDatos, notasDeLaSeccion, SECCIONES, paramsNoVacios, MAIL } from '@/lib/datos';
 import { sitio } from '@/lib/sitio';
 import { armarRss } from '@/lib/rss';
+import { tamanoDeFotoLocal } from '@/lib/rss-disco';
 
 // El feed de cada sección (8/10/2026, RSS-1): las últimas notas de esa sección, con su texto completo. Sólo las secciones que
 // tienen notas; se arma al compilar, como el feed general.
@@ -24,6 +25,7 @@ export async function GET(_pedido, { params }) {
     enlace: s ? `${SITIO}/seccion/${s.ranura}` : SITIO,
     autoEnlace: `${SITIO}/seccion/${ranura}/feed.xml`,
     notas, sitio: SITIO, generado: obtenerDatos().generado,
+    correo: MAIL, logo: `${SITIO}/icon-192.png`, tamanoDeFoto: tamanoDeFotoLocal,
   });
   return new Response(xml, { headers: { 'content-type': 'application/rss+xml; charset=utf-8' } });
 }

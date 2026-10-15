@@ -9,6 +9,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { recortarEn } from '../web/lib/texto.js';
+import { textoDeRobots } from '../web/lib/robots.js';
 import {
   metadatosDePagina, autorDeNota, quienEscribio, firmaCorta, explicacionDeFirma, OG_COMUN,
 } from '../web/components/metadatos.js';
@@ -432,10 +433,10 @@ test('una nota automática sin cuerpo lleva noindex, follow; con cuerpo o public
 
 // V2-13 (8/10/2026): Google usa el feed para descubrir notas; robots.txt no lo bloquea. El panel sí sigue bloqueado.
 test('robots.txt deja pasar el feed y bloquea el panel', () => {
-  const robots = fs.readFileSync(path.join(import.meta.dirname, '..', 'web/app/robots.js'), 'utf8');
-  assert.match(robots, /disallow: \['\/panel\/'\],/);
-  assert.ok(!/disallow:[^\n]*feed\.xml/.test(robots), 'el feed no se bloquea');
-  assert.ok(!/^\s*host:/m.test(robots), 'sin la línea Host:');
+  const robots = textoDeRobots({ base: 'https://radarbalcarce.com', propio: true });
+  assert.match(robots, /^User-agent: \*\nContent-Signal: [^\n]*\nAllow: \/\nDisallow: \/panel\/$/m);
+  assert.ok(!/Disallow:[^\n]*feed\.xml/.test(robots), 'el feed no se bloquea');
+  assert.ok(!/^\s*host:/mi.test(robots), 'sin la línea Host:');
 });
 
 // SEO (8/10/2026): las secciones no dicen "Balcarce en Balcarce" ni "Argentina en Balcarce".
