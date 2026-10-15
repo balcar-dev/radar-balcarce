@@ -5340,6 +5340,13 @@
       "parte": "historia-del-reel",
       "error": "La subida del video falló (400) Request processing failed",
       "cuando": "2026-10-15T00:05:49.144Z"
+    },
+    "2026-10-15/noticia1/instagram/reel": {
+      "pieza": "noticia1",
+      "red": "instagram",
+      "parte": "reel",
+      "error": "La subida del video falló (400) Request processing failed",
+      "cuando": "2026-10-15T13:06:08.508Z"
     }
   },
   "facebookFoto": {
