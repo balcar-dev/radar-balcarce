@@ -1,0 +1,6 @@
+# Sondeo de fuentes desde Cloudflare (ver worker.mjs y LEEME.md). De prueba: sin cron y sin secretos escritos acá.
+# El secreto SONDEO_TOKEN lo carga el workflow "Sondeo de fuentes desde Cloudflare" con `wrangler secret put`.
+name = "radar-balcarce-sondeo-fuentes"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = true

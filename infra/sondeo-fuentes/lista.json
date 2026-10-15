@@ -1,0 +1,826 @@
+[
+ {
+  "id": "newsbalcarce",
+  "nombre": "News Balcarce",
+  "medio": "News Balcarce (FM 91.7)",
+  "url": "https://newsbalcarce.com.ar/?feed=rss2",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "puntonueve",
+  "nombre": "Puntonueve",
+  "medio": "Puntonueve (FM 100.9)",
+  "url": "https://puntonueve.com.ar/feed",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "informeseprimero",
+  "nombre": "Infórmese Primero",
+  "medio": "Infórmese Primero (FM 104.9)",
+  "url": "http://feeds.feedburner.com/informeseprimero",
+  "tipo": "atom",
+  "alcance": "local"
+ },
+ {
+  "id": "gabal-comunidad",
+  "nombre": "Radio Gabal · Comunidad",
+  "medio": "Radio Gabal (FM 104.1)",
+  "url": "https://www.radiogabal.com.ar/index.php/comunidad?format=feed&type=rss",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "municipio",
+  "nombre": "Municipalidad de Balcarce",
+  "medio": "Municipalidad de Balcarce",
+  "url": "https://balcarce.gob.ar/feed/",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "eldiario",
+  "nombre": "El Diario Balcarce",
+  "medio": "El Diario Balcarce",
+  "url": "https://eldiariobalcarce.com.ar/",
+  "tipo": "scrape",
+  "alcance": "local"
+ },
+ {
+  "id": "accion5",
+  "nombre": "Acción 5",
+  "medio": "Acción 5 (Balcarce)",
+  "url": "https://accion5.com/feed/",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "ahorabalcarce",
+  "nombre": "Ahora Balcarce",
+  "medio": "Ahora Balcarce",
+  "url": "http://ahorabalcarce.com.ar/feed/",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "lavanguardia",
+  "nombre": "La Vanguardia",
+  "medio": "Diario La Vanguardia",
+  "url": "https://www.diariolavanguardia.com/",
+  "tipo": "scrape",
+  "alcance": "local"
+ },
+ {
+  "id": "concejo-deliberante-balcarce",
+  "nombre": "Concejo Deliberante de Balcarce",
+  "medio": "Concejo Deliberante de Balcarce",
+  "url": "https://concejodeliberantebalcarce.gob.ar/feed/",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "fca-unmdp",
+  "nombre": "Facultad de Ciencias Agrarias (UNMdP)",
+  "medio": "Facultad de Ciencias Agrarias (UNMdP)",
+  "url": "https://fca.mdp.edu.ar/feed/",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "infobae",
+  "nombre": "Infobae",
+  "medio": "Infobae",
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "lanacion",
+  "nombre": "La Nación",
+  "medio": "La Nación",
+  "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "clarin",
+  "nombre": "Clarín · Lo último",
+  "medio": "Clarín",
+  "url": "https://www.clarin.com/rss/lo-ultimo/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "0223",
+  "nombre": "0223",
+  "medio": "0223 (Mar del Plata)",
+  "url": "https://www.0223.com.ar/rss",
+  "tipo": "rss",
+  "alcance": "region"
+ },
+ {
+  "id": "lu9",
+  "nombre": "LU9 Mar del Plata",
+  "medio": "LU9 Mar del Plata",
+  "url": "https://lu9mardelplataapiv3.eleco.com.ar/feed-notes",
+  "tipo": "atom",
+  "alcance": "region"
+ },
+ {
+  "id": "dib",
+  "nombre": "Agencia DIB",
+  "medio": "Agencia DIB",
+  "url": "https://dib.com.ar/rss/pages/home.xml",
+  "tipo": "rss",
+  "alcance": "provincia"
+ },
+ {
+  "id": "argenpapa",
+  "nombre": "Argenpapa",
+  "medio": "Argenpapa",
+  "url": "https://www.argenpapa.com.ar/noticias/argentina/",
+  "tipo": "scrape",
+  "alcance": "region"
+ },
+ {
+  "id": "campeones",
+  "nombre": "Campeones",
+  "medio": "Campeones",
+  "url": "https://www.campeones.com.ar/feed/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "motorsport-f1",
+  "nombre": "Motorsport · Fórmula 1",
+  "medio": "Motorsport",
+  "url": "https://es.motorsport.com/rss/f1/news/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "ambito-tecno",
+  "nombre": "Ámbito · Tecnología",
+  "medio": "Ámbito",
+  "url": "https://www.ambito.com/rss/pages/tecnologia.xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "agenciacyta",
+  "nombre": "Agencia CyTA",
+  "medio": "Agencia CyTA",
+  "url": "https://www.agenciacyta.org.ar/feed/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "infocampo",
+  "nombre": "Infocampo",
+  "medio": "Infocampo",
+  "url": "https://www.infocampo.com.ar/feed/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "inta",
+  "nombre": "INTA · Noticias",
+  "medio": "INTA",
+  "url": "https://www.argentina.gob.ar/inta/noticias/rss",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "perfil-economia",
+  "nombre": "Perfil · Economía",
+  "medio": "Perfil",
+  "url": "https://www.perfil.com/feed/economia",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "tn-todo-noticias-general-sitemap",
+  "nombre": "TN (Todo Noticias) · índice de noticias",
+  "medio": "TN (Todo Noticias)",
+  "url": "https://tn.com.ar/arc/outboundfeeds/news-sitemap/?outputType=xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "el-cronista-general-sitemap",
+  "nombre": "El Cronista · índice de noticias",
+  "medio": "El Cronista",
+  "url": "https://www.cronista.com/arc/outboundfeeds/sitemap-news/latest/?outputType=xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "el-destape-general-sitemap",
+  "nombre": "El Destape · índice de noticias",
+  "medio": "El Destape",
+  "url": "https://www.eldestapeweb.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "pagina-12-politica",
+  "nombre": "Página/12 · politica",
+  "medio": "Página/12",
+  "url": "https://www.pagina12.com.ar/arc/outboundfeeds/rss/secciones/el-pais/notas",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "a24-general",
+  "nombre": "A24 · general",
+  "medio": "A24",
+  "url": "https://www.a24.com/rss/pages/home.xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "iprofesional-general",
+  "nombre": "iProfesional · general",
+  "medio": "iProfesional",
+  "url": "https://www.iprofesional.com/rss/home",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "tyc-sports-general-sitemap",
+  "nombre": "TyC Sports · índice de noticias",
+  "medio": "TyC Sports",
+  "url": "https://www.tycsports.com/sitemap_news_48hs.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "ole-general-sitemap",
+  "nombre": "Olé · índice de noticias",
+  "medio": "Olé",
+  "url": "https://www.ole.com.ar/sitemaps/sitemap_google_news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "cronica-general",
+  "nombre": "Crónica · general",
+  "medio": "Crónica",
+  "url": "https://www.cronica.com.ar/files/rss/ultimas-noticias.xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "radio-mitre-general",
+  "nombre": "Radio Mitre · general",
+  "medio": "Radio Mitre",
+  "url": "https://radiomitre.cienradios.com/arc/outboundfeeds/rss/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "canal-26-general",
+  "nombre": "Canal 26 · general",
+  "medio": "Canal 26",
+  "url": "https://www.canal26.com/arc/outboundfeeds/rss/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "diario-popular-general-sitemap",
+  "nombre": "Diario Popular · índice de noticias",
+  "medio": "Diario Popular",
+  "url": "https://www.diariopopular.com.ar/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "noticias-argentinas-na-general-sitemap",
+  "nombre": "Noticias Argentinas (NA) · índice de noticias",
+  "medio": "Noticias Argentinas (NA)",
+  "url": "https://noticiasargentinas.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "el-dia-general-sitemap",
+  "nombre": "El Día · índice de noticias",
+  "medio": "El Día",
+  "url": "https://www.eldia.com/news_1.xml",
+  "tipo": "sitemap",
+  "alcance": "provincia"
+ },
+ {
+  "id": "la-nueva-general-ultimas",
+  "nombre": "La Nueva · general (últimas)",
+  "medio": "La Nueva",
+  "url": "https://www.lanueva.com/news/rss/index",
+  "tipo": "rss",
+  "alcance": "provincia"
+ },
+ {
+  "id": "0221-general-sitemap",
+  "nombre": "0221 · índice de noticias",
+  "medio": "0221",
+  "url": "https://www.0221.com.ar/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "provincia"
+ },
+ {
+  "id": "la-brujula-24-general",
+  "nombre": "La Brújula 24 · general",
+  "medio": "La Brújula 24",
+  "url": "https://www.labrujula24.com/rss",
+  "tipo": "rss",
+  "alcance": "provincia"
+ },
+ {
+  "id": "la-tecla-general-sitemap",
+  "nombre": "La Tecla · índice de noticias",
+  "medio": "La Tecla",
+  "url": "https://www.latecla.info/sitemap_google_news.xml",
+  "tipo": "sitemap",
+  "alcance": "provincia"
+ },
+ {
+  "id": "letra-p-general",
+  "nombre": "Letra P · general",
+  "medio": "Letra P",
+  "url": "https://www.letrap.com.ar/rss/pages/home.xml",
+  "tipo": "rss",
+  "alcance": "provincia"
+ },
+ {
+  "id": "la-verdad-general",
+  "nombre": "La Verdad · general",
+  "medio": "La Verdad",
+  "url": "https://www.laverdadonline.com/feed",
+  "tipo": "rss",
+  "alcance": "provincia"
+ },
+ {
+  "id": "qz-noticias-mar-del-plata-general-sitema",
+  "nombre": "QZ Noticias (Mar del Plata) · índice de noticias",
+  "medio": "QZ Noticias (Mar del Plata)",
+  "url": "https://www.qznoticias.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "region"
+ },
+ {
+  "id": "el-marplatense-general-sitemap",
+  "nombre": "El Marplatense · índice de noticias",
+  "medio": "El Marplatense",
+  "url": "https://www.elmarplatense.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "region"
+ },
+ {
+  "id": "mi8-canal-8-mar-del-plata-general-sitema",
+  "nombre": "Mi8 (Canal 8 Mar del Plata) · índice de noticias",
+  "medio": "Mi8 (Canal 8 Mar del Plata)",
+  "url": "https://mi8.com.ar/news-sitemap.xml",
+  "tipo": "sitemap",
+  "alcance": "region"
+ },
+ {
+  "id": "que-digital-general",
+  "nombre": "Qué Digital · general",
+  "medio": "Qué Digital",
+  "url": "https://quedigital.com.ar/feed/",
+  "tipo": "rss",
+  "alcance": "region"
+ },
+ {
+  "id": "infobrisas-radio-brisas-general",
+  "nombre": "Infobrisas (Radio Brisas) · general",
+  "medio": "Infobrisas (Radio Brisas)",
+  "url": "https://www.infobrisas.com/rss/noticias",
+  "tipo": "rss",
+  "alcance": "region"
+ },
+ {
+  "id": "punto-noticias-general-sitemap",
+  "nombre": "Punto Noticias · índice de noticias",
+  "medio": "Punto Noticias",
+  "url": "https://puntonoticias.com/news-sitemap.xml",
+  "tipo": "sitemap",
+  "alcance": "region"
+ },
+ {
+  "id": "el-eco-de-tandil-general-sitemap",
+  "nombre": "El Eco de Tandil · índice de noticias",
+  "medio": "El Eco de Tandil",
+  "url": "https://www.eleco.com.ar/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "region"
+ },
+ {
+  "id": "el-diario-de-tandil-general-sitemap",
+  "nombre": "El Diario de Tandil · índice de noticias",
+  "medio": "El Diario de Tandil",
+  "url": "https://www.eldiariodetandil.com/sitemap-news.php",
+  "tipo": "sitemap",
+  "alcance": "region"
+ },
+ {
+  "id": "doble-amarilla-general-sitemap",
+  "nombre": "Doble Amarilla · índice de noticias",
+  "medio": "Doble Amarilla",
+  "url": "https://www.dobleamarilla.com.ar/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "bolavip-argentina-general-sitemap",
+  "nombre": "Bolavip Argentina · índice de noticias",
+  "medio": "Bolavip Argentina",
+  "url": "https://bolavip.com/ar/sitemaps/news",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "solotc-turismo-carretera",
+  "nombre": "Solotc · turismo carretera",
+  "medio": "Solotc",
+  "url": "https://www.solotc.com.ar/feed/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "agrositio-destacadas",
+  "nombre": "Agrositio · destacadas",
+  "medio": "Agrositio",
+  "url": "https://www.agrositio.com.ar/rss/rss.php?area=destacadas",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "agroempresario-general-sitemap",
+  "nombre": "Agroempresario · índice de noticias",
+  "medio": "Agroempresario",
+  "url": "https://agroempresario.com/news-sitemap.xml/",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "iproup-general-sitemap",
+  "nombre": "iProUP · índice de noticias",
+  "medio": "iProUP",
+  "url": "https://www.iproup.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "el-grafico",
+  "nombre": "El Gráfico",
+  "medio": "El Gráfico",
+  "url": "https://www.elgrafico.com.ar/rss",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "el-economista",
+  "nombre": "El Economista",
+  "medio": "El Economista",
+  "url": "https://eleconomista.com.ar/feed/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "noticias-agropecuarias",
+  "nombre": "Noticias Agropecuarias",
+  "medio": "Noticias Agropecuarias",
+  "url": "https://www.noticiasagropecuarias.com/feed/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "cordoba-competicion",
+  "nombre": "Córdoba Competición",
+  "medio": "Córdoba Competición",
+  "url": "https://cordobacompeticion.com/feed/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "c5n-general-sitemap",
+  "nombre": "C5N · índice de noticias",
+  "medio": "C5N",
+  "url": "https://www.c5n.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "minuto-uno-general-sitemap",
+  "nombre": "Minuto Uno · índice de noticias",
+  "medio": "Minuto Uno",
+  "url": "https://www.minutouno.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "la-capital-rosario-general-sitemap",
+  "nombre": "La Capital (Rosario) · índice de noticias",
+  "medio": "La Capital (Rosario)",
+  "url": "https://www.lacapital.com.ar/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "provincia"
+ },
+ {
+  "id": "la-gaceta-tucuman-general",
+  "nombre": "La Gaceta (Tucumán) · general",
+  "medio": "La Gaceta (Tucumán)",
+  "url": "https://www.lagaceta.com.ar/rss",
+  "tipo": "rss",
+  "alcance": "provincia"
+ },
+ {
+  "id": "los-andes-mendoza-general-sitemap",
+  "nombre": "Los Andes (Mendoza) · índice de noticias",
+  "medio": "Los Andes (Mendoza)",
+  "url": "https://www.losandes.com.ar/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "provincia"
+ },
+ {
+  "id": "eldiarioar-general",
+  "nombre": "elDiarioAR · general",
+  "medio": "elDiarioAR",
+  "url": "https://www.eldiarioar.com/rss/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "gabal-policiales",
+  "nombre": "Radio Gabal · Policiales",
+  "medio": "Radio Gabal (FM 104.1)",
+  "url": "https://www.radiogabal.com.ar/index.php/policiales?format=feed&type=rss",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "infobae-tecno",
+  "nombre": "Infobae · Tecnología",
+  "medio": "Infobae",
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "lanacion-deportes",
+  "nombre": "La Nación · Deportes",
+  "medio": "La Nación",
+  "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/deportes/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "clarin-deportes",
+  "nombre": "Clarín · Deportes",
+  "medio": "Clarín",
+  "url": "https://www.clarin.com/rss/deportes/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "motorsport-motos",
+  "nombre": "Motorsport · MotoGP",
+  "medio": "Motorsport",
+  "url": "https://es.motorsport.com/rss/motogp/news/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "ambito-espectaculos",
+  "nombre": "Ámbito · Espectáculos",
+  "medio": "Ámbito",
+  "url": "https://www.ambito.com/rss/pages/espectaculos.xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "salud-nacion",
+  "nombre": "Ministerio de Salud de la Nación",
+  "medio": "Ministerio de Salud de la Nación",
+  "url": "https://www.argentina.gob.ar/salud/noticias/rss",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "perfil-general",
+  "nombre": "Perfil · general",
+  "medio": "Perfil",
+  "url": "https://www.perfil.com/feed",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "pagina-12-economia",
+  "nombre": "Página/12 · economia",
+  "medio": "Página/12",
+  "url": "https://www.pagina12.com.ar/arc/outboundfeeds/rss/secciones/economia/notas",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "a24-politica",
+  "nombre": "A24 · politica",
+  "medio": "A24",
+  "url": "https://www.a24.com/rss/pages/politica.xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "radio-mitre-deportes",
+  "nombre": "Radio Mitre · deportes",
+  "medio": "Radio Mitre",
+  "url": "https://radiomitre.cienradios.com/arc/outboundfeeds/rss/category/deportes/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "agrositio-hacienda",
+  "nombre": "Agrositio · hacienda",
+  "medio": "Agrositio",
+  "url": "https://www.agrositio.com.ar/rss/rss.php?area=hacienda",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "gabal-politica",
+  "nombre": "Radio Gabal · Política",
+  "medio": "Radio Gabal (FM 104.1)",
+  "url": "https://www.radiogabal.com.ar/index.php/politica?format=feed&type=rss",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "infobae-economia",
+  "nombre": "Infobae · Economía",
+  "medio": "Infobae",
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/economia/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "lanacion-economia",
+  "nombre": "La Nación · Economía",
+  "medio": "La Nación",
+  "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "clarin-tecno",
+  "nombre": "Clarín · Tecnología",
+  "medio": "Clarín",
+  "url": "https://www.clarin.com/rss/tecnologia/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "ambito-general-sitemap",
+  "nombre": "Ámbito · índice de noticias",
+  "medio": "Ámbito",
+  "url": "https://www.ambito.com/sitemap-news.xml",
+  "tipo": "sitemap",
+  "alcance": "pais"
+ },
+ {
+  "id": "capital-humano",
+  "nombre": "Ministerio de Capital Humano",
+  "medio": "Ministerio de Capital Humano",
+  "url": "https://www.argentina.gob.ar/capital-humano/noticias/rss",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "perfil-politica",
+  "nombre": "Perfil · politica",
+  "medio": "Perfil",
+  "url": "https://www.perfil.com/feed/politica",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "pagina-12-sociedad",
+  "nombre": "Página/12 · sociedad",
+  "medio": "Página/12",
+  "url": "https://www.pagina12.com.ar/arc/outboundfeeds/rss/secciones/sociedad/notas",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "radio-mitre-sociedad",
+  "nombre": "Radio Mitre · sociedad",
+  "medio": "Radio Mitre",
+  "url": "https://radiomitre.cienradios.com/arc/outboundfeeds/rss/category/sociedad/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "gabal-deportes",
+  "nombre": "Radio Gabal · Deportes",
+  "medio": "Radio Gabal (FM 104.1)",
+  "url": "https://www.radiogabal.com.ar/index.php/deportes?format=feed&type=rss",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "infobae-politica",
+  "nombre": "Infobae · Política",
+  "medio": "Infobae",
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/politica/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "lanacion-politica",
+  "nombre": "La Nación · Política",
+  "medio": "La Nación",
+  "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/politica/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "clarin-economia",
+  "nombre": "Clarín · Economía",
+  "medio": "Clarín",
+  "url": "https://www.clarin.com/rss/economia/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "perfil-deportes",
+  "nombre": "Perfil · deportes",
+  "medio": "Perfil",
+  "url": "https://www.perfil.com/feed/deportes",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "gabal-agro",
+  "nombre": "Radio Gabal · Agro",
+  "medio": "Radio Gabal (FM 104.1)",
+  "url": "https://www.radiogabal.com.ar/index.php/agro?format=feed&type=rss",
+  "tipo": "rss",
+  "alcance": "local"
+ },
+ {
+  "id": "infobae-cultura",
+  "nombre": "Infobae · Cultura",
+  "medio": "Infobae",
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/cultura/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "lanacion-cultura",
+  "nombre": "La Nación · Cultura",
+  "medio": "La Nación",
+  "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/cultura/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "clarin-politica",
+  "nombre": "Clarín · Política",
+  "medio": "Clarín",
+  "url": "https://www.clarin.com/rss/politica/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "perfil-tecnologia",
+  "nombre": "Perfil · tecnología",
+  "medio": "Perfil",
+  "url": "https://www.perfil.com/feed/tecnologia",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "infobae-deportes",
+  "nombre": "Infobae · deportes",
+  "medio": "Infobae",
+  "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/deportes/?outputType=xml",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "clarin-rural",
+  "nombre": "Clarín · Rural",
+  "medio": "Clarín",
+  "url": "https://www.clarin.com/rss/rural/",
+  "tipo": "rss",
+  "alcance": "pais"
+ },
+ {
+  "id": "clarin-cultura",
+  "nombre": "Clarín · cultura",
+  "medio": "Clarín",
+  "url": "https://www.clarin.com/rss/cultura/",
+  "tipo": "rss",
+  "alcance": "pais"
+ }
+]

@@ -1,0 +1,74 @@
+name: Sondeo de fuentes desde Cloudflare
+
+# Fase 2 de docs/etapa-10-operacion/ANALISIS.md: ¿los feeds que desde GitHub "no llegan a conectar" contestan si los pide Cloudflare?
+# Sube un Worker de prueba (infra/sondeo-fuentes/, sin cron), le pide el estado de los feeds activos, imprime la tabla en el registro de la
+# corrida y deja el JSON entero como archivo adjunto. NO guarda nada en el repositorio y NO toca producción. SÓLO a mano.
+# Antes hay que cargar en GitHub (Settings > Secrets and variables > Actions) el secreto SONDEO_TOKEN: cualquier texto al azar, largo.
+# Lo pega una persona (nunca en un chat). Después, el Worker se puede borrar (infra/sondeo-fuentes/LEEME.md).
+on:
+  workflow_dispatch:
+    inputs:
+      agente:
+        description: 'Con qué nombre se piden los feeds: navegador (uno común) o robot (el del robot de hoy)'
+        required: false
+        default: navegador
+        type: choice
+        options:
+          - navegador
+          - robot
+
+permissions:
+  contents: read
+
+jobs:
+  sondear:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Controlar que esté el secreto
+        run: |
+          if [ -z "$SONDEO_TOKEN" ]; then
+            echo "::error::Falta el secreto SONDEO_TOKEN (Settings > Secrets and variables > Actions). Cargar cualquier texto largo al azar."
+            exit 1
+          fi
+        env:
+          SONDEO_TOKEN: ${{ secrets.SONDEO_TOKEN }}
+      - name: Subir el Worker de sondeo
+        id: subir
+        working-directory: infra/sondeo-fuentes
+        run: |
+          npx --yes wrangler@4.139.0 deploy 2>&1 | tee subida.log
+          direccion=$(grep -o 'https://radar-balcarce-sondeo-fuentes[^ ]*workers\.dev' subida.log | head -n 1)
+          if [ -z "$direccion" ]; then
+            echo "::error::No encontré la dirección del Worker en la salida de wrangler."
+            exit 1
+          fi
+          echo "direccion=$direccion" >> "$GITHUB_OUTPUT"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Cargar el secreto del sondeo
+        working-directory: infra/sondeo-fuentes
+        run: printf '%s' "$SONDEO_TOKEN" | npx --yes wrangler@4.139.0 secret put SONDEO_TOKEN
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SONDEO_TOKEN: ${{ secrets.SONDEO_TOKEN }}
+      - name: Sondear todos los feeds
+        run: node infra/sondeo-fuentes/cliente.mjs "$DIRECCION" sondeo-cloudflare.json "--ua=$AGENTE"
+        env:
+          DIRECCION: ${{ steps.subir.outputs.direccion }}
+          AGENTE: ${{ inputs.agente }}
+          SONDEO_TOKEN: ${{ secrets.SONDEO_TOKEN }}
+      - name: Dejar el resultado como archivo adjunto
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: sondeo-cloudflare
+          path: sondeo-cloudflare.json
+          if-no-files-found: ignore
+          retention-days: 30
