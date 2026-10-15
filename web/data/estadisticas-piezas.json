@@ -5145,6 +5145,46 @@
    "cuando": "2026-10-14T23:06:25.623Z",
    "medida": "2026-10-15T11:28:30.559Z",
    "metricas": {}
+  },
+  {
+   "clave": "instagram/reel/17948389086299773",
+   "red": "instagram",
+   "parte": "reel",
+   "pieza": "efemeride",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T12:05:23.923Z",
+   "medida": "2026-10-15T12:30:21.939Z",
+   "metricas": {
+    "reach": 6,
+    "views": 10,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 1,
+    "total_interactions": 2
+   }
+  },
+  {
+   "clave": "facebook/reel/1089305360617839",
+   "red": "facebook",
+   "parte": "reel",
+   "pieza": "efemeride",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T12:06:01.149Z",
+   "medida": "2026-10-15T12:30:21.939Z",
+   "metricas": {}
+  },
+  {
+   "clave": "facebook/historia/1099037396216642",
+   "red": "facebook",
+   "parte": "historia",
+   "pieza": "efemeride",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T12:06:27.664Z",
+   "medida": "2026-10-15T12:30:21.939Z",
+   "metricas": {
+    "total_video_views": 0
+   }
   }
  ]
 }
