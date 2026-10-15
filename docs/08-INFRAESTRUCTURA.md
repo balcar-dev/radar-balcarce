@@ -107,6 +107,7 @@ Sondear búsqueda y Sondear Groq; el historial de git los guarda.)
 | **Respaldo** (`respaldo.yml`) | Domingos 6:17 UTC (3:17 en Balcarce); a mano | Arma un paquete de git con todo el historial y una copia de datos y fotos (artefacto de 90 días); si hay GitLab (`GITLAB_TOKEN`, variable `GITLAB_REPO`) sube un espejo, y si hay R2 (variable `R2_RESPALDOS`) sube el paquete | `GITLAB_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variables `GITLAB_REPO`, `R2_RESPALDOS` | Nada | 40 min |
 | **Fotos a R2** (`fotos-a-r2.yml`) | A mano | Copia `web/public/fotos-notas/` a un depósito de Cloudflare R2; no borra nada ni cambia lo que ve el lector | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable `R2_FOTOS` | Nada | 60 min |
 | **Reloj de Cloudflare** (`reloj-cloudflare.yml`) | A mano (cuando cambia el reloj) | Sube el Worker `radar-balcarce-reloj` (`infra/reloj-cloudflare/`) con wrangler 4.139.0 y le carga el secreto | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `RELOJ_GITHUB_TOKEN` | Nada | 10 min |
+| **Vigilante de Cloudflare** (`vigilante-cloudflare.yml`) | A mano (cuando cambia el vigilante) | Sube el Worker `radar-balcarce-vigilante` (`infra/vigilante-cloudflare/`) con wrangler 4.139.0, crea su KV si falta y le carga los secretos | `CLOUDFLARE_API_TOKEN` (con «Workers KV Storage: Edit»), `CLOUDFLARE_ACCOUNT_ID`, `VIGILANTE_TOKEN`; opcional `VIGILANTE_GITHUB_TOKEN` | Nada | 10 min |
 
 **Ninguno cobra**: GitHub no cobra minutos porque el repositorio es público, y
 las claves de IA son gratis. Lo que hay que cuidar es el **cupo de voz**: los
@@ -177,6 +178,25 @@ Balcarce).**
   cron-job.org (abajo), pero **no los dos juntos más de un rato**: si dos relojes
   piden lo mismo, el `concurrency` de los workflows evita que se pisen, pero se
   gastan corridas de más.
+
+### El vigilante de Cloudflare (avisos por mail, afuera de GitHub)
+
+Un segundo Worker, **`radar-balcarce-vigilante`** (`infra/vigilante-cloudflare/`), nació el 15/10/2026 de la auditoría
+(`docs/auditoria-opus/ANALISIS.md`, punto 1): los avisos por WhatsApp llevaban muertos desde el 1/10 (se acabó el cupo de CallMeBot) y
+`redes/vigilar.mjs` corre dentro del mismo GitHub que vigila. Éste corre aparte, a los **:12 y :42**, y avisa **por mail** a
+`radarbalcarce@gmail.com` (Email Workers, desde `vigilante@radarbalcarce.com`; el dominio ya tiene Email Routing):
+
+- **Qué mira:** que la portada conteste 200 en 15 segundos (aviso a la segunda revisión seguida), que la web se haya armado hace menos de
+  3 horas (6 de noche; se lee del `sitemap.xml`) y que "Actualizar la web" tenga una corrida buena de menos de 3 horas y no lleve 3 fallas
+  seguidas (API pública de GitHub).
+- **Anti-spam:** un problema se avisa una vez y se repite cada 6 horas; al arreglarse llega un solo mail de «Se arregló». A las 21 sale el
+  resumen del día. La memoria es un KV (`ESTADO`).
+- **`GET /estado`** muestra la última revisión; **`GET /probar-mail`** (encabezado `x-token`, secreto `VIGILANTE_TOKEN`) manda un mail de prueba.
+- **Lo que hace una persona la primera vez** (permiso de KV en el token de Cloudflare, mirar que `radarbalcarce@gmail.com` esté *Verified* en
+  Email Routing, cargar `VIGILANTE_TOKEN`, correr el workflow y probar el mail): paso a paso, con enlaces, en
+  `infra/vigilante-cloudflare/LEEME.md`.
+- No reemplaza a `redes/vigilar.mjs` (que sigue mirando redes, claves, contenido y estadísticas): lo complementa en lo que no puede ver
+  si GitHub se cae.
 
 ### cron-job.org: el despertador anterior (pausado)
 

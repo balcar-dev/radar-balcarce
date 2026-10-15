@@ -1,0 +1,21 @@
+# El vigilante independiente de Radar Balcarce en Cloudflare (ver worker.mjs y LEEME.md). Las horas del cron son UTC; los minutos, los mismos que en Balcarce.
+name = "radar-balcarce-vigilante"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+
+[triggers]
+# A los :12 y :42: lejos de los :00/:30 de "Actualizar la web" y de los :05/:35/:45 del reloj de Redes (infra/reloj-cloudflare/),
+# y con "Actualizar la web" (unos 8 minutos) ya terminada cuando el vigilante mira.
+crons = ["12,42 * * * *"]
+
+# Los mails de aviso. Sólo pueden ir a esta dirección, que tiene que estar verificada en Email Routing de radarbalcarce.com.
+[[send_email]]
+name = "AVISOS"
+destination_address = "radarbalcarce@gmail.com"
+
+# La memoria del vigilante (qué avisó y cuándo). El workflow "Vigilante de Cloudflare" crea el KV si no existe y reemplaza este marcador por su id.
+[[kv_namespaces]]
+binding = "ESTADO"
+id = "REEMPLAZADO_POR_EL_WORKFLOW"
+
+# Secretos (se cargan con `wrangler secret put`, nunca acá): VIGILANTE_TOKEN y, opcional, GITHUB_TOKEN (sólo lectura).

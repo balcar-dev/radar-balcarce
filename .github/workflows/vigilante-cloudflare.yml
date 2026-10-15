@@ -1,0 +1,59 @@
+name: Vigilante de Cloudflare
+
+# Sube (o actualiza) el vigilante independiente que avisa por mail cuando la web falla (infra/vigilante-cloudflare/, 15/10/2026).
+# SÓLO a mano: corre afuera de GitHub, así que sigue vigilando aunque GitHub falle. No commitea nada.
+# Antes hay que cargar en GitHub (Settings > Secrets and variables > Actions) el secreto VIGILANTE_TOKEN (cualquier texto largo y al azar,
+# lo pega una persona, nunca en un chat) y, si hace falta, VIGILANTE_GITHUB_TOKEN (opcional, ver infra/vigilante-cloudflare/LEEME.md).
+# El token de Cloudflare (CLOUDFLARE_API_TOKEN) necesita "Workers Scripts: Edit" y "Workers KV Storage: Edit".
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  subir:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Buscar (o crear) la memoria del vigilante
+        id: kv
+        working-directory: infra/vigilante-cloudflare
+        run: |
+          TITULO="vigilante-ESTADO"
+          buscar() {
+            npx --yes wrangler@4.139.0 kv namespace list | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const l=JSON.parse(s.slice(s.indexOf('[')));const x=l.find(n=>n.title.includes(process.argv[1]));process.stdout.write(x?x.id:'')})" "$TITULO"
+          }
+          ID=$(buscar)
+          if [ -z "$ID" ]; then
+            echo "No existe el KV $TITULO: se crea."
+            npx --yes wrangler@4.139.0 kv namespace create ESTADO
+            ID=$(buscar)
+          fi
+          test -n "$ID" || { echo "No se pudo encontrar ni crear el KV (¿el token de Cloudflare tiene 'Workers KV Storage: Edit'?)"; exit 1; }
+          echo "KV listo: $TITULO"
+          sed "s/REEMPLAZADO_POR_EL_WORKFLOW/$ID/" wrangler.toml > wrangler.generado.toml
+      - name: Subir el vigilante
+        working-directory: infra/vigilante-cloudflare
+        run: npx --yes wrangler@4.139.0 deploy --config wrangler.generado.toml
+      - name: Cargar el secreto de las pruebas de mail
+        working-directory: infra/vigilante-cloudflare
+        run: |
+          if [ -z "$VIGILANTE_TOKEN" ]; then echo "Falta el secreto VIGILANTE_TOKEN de GitHub: /probar-mail queda apagado."; exit 1; fi
+          printf '%s' "$VIGILANTE_TOKEN" | npx --yes wrangler@4.139.0 secret put VIGILANTE_TOKEN --config wrangler.generado.toml
+        env:
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+      - name: Cargar la llave de lectura de GitHub (opcional)
+        working-directory: infra/vigilante-cloudflare
+        run: |
+          if [ -z "$VIGILANTE_GITHUB_TOKEN" ]; then echo "Sin VIGILANTE_GITHUB_TOKEN: el vigilante lee a GitHub sin llave (alcanza)."; exit 0; fi
+          printf '%s' "$VIGILANTE_GITHUB_TOKEN" | npx --yes wrangler@4.139.0 secret put GITHUB_TOKEN --config wrangler.generado.toml
+        env:
+          VIGILANTE_GITHUB_TOKEN: ${{ secrets.VIGILANTE_GITHUB_TOKEN }}
