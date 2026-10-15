@@ -92,6 +92,7 @@ import {
   repetidasConOtraDireccion, conFusionadas, parejasSospechosas, sumarFuentesDeParejas,
 } from '../lib/repetidas.js';
 import { diceEnVivo } from '../../ingesta/verificar.mjs';
+import { repetidasDeLoPublicado, conFuentesDeLasUnidas } from '../../ingesta/repetidas-publicadas.mjs';
 import { traerF1, notasDeF1, comoF1Json } from '../../ingesta/f1.mjs';
 import { traerFutbol, notasDeFutbol, comoFutbolJson } from '../../ingesta/futbol.mjs';
 import { notasDePistas } from '../lib/notas-de-pistas.js';
@@ -605,8 +606,13 @@ const EFEMERIDES_PIEZAS = path.join(AQUI, '..', 'data', 'efemerides-piezas.json'
 const fotosManuales = Object.fromEntries(Object.entries(leerJson(FOTOS_MANUALES, {}))
   .filter(([, f]) => f?.archivo && fs.existsSync(path.join(FOTOS_NOTAS, path.basename(f.archivo)))));
 let bancoDeFotos = { ...leerJson(BANCO_FOTOS, {}), ...fotosManuales };
+// La misma noticia contra lo YA publicado, sin IA (regla 171, ingesta/repetidas-publicadas.mjs): una nota que todavía
+// no salió y cuenta lo mismo que otra de las últimas 72 horas (el Jardín 905 al día siguiente, la Liga en otra sección)
+// se une a ésa como las parejas que confirma la IA: queda una y la otra redirige (más abajo, repetidasConOtraDireccion).
+const parejasSinIA = repetidasDeLoPublicado([...deLaIngesta, ...(archivoAnterior.notas ?? [])], { yaPublicadas: yaSalieron });
+if (parejasSinIA.length) console.log(`  repetidas de lo ya publicado (sin IA): ${parejasSinIA.length}`);
 // Si dos notas son la misma noticia, la foto se busca en las fuentes de las dos (1/10).
-sumarFuentesDeParejas(deLaIngesta, parejasConfirmadas);
+sumarFuentesDeParejas(deLaIngesta, [...parejasConfirmadas, ...parejasSinIA]);
 if (enLaNube) {
   try {
     const { elegirFotosNuevas } = await import('./fotos-notas.mjs');
@@ -916,7 +922,7 @@ const fusion = repetidasConOtraDireccion(
   [...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id)), ...conPaginaHoy],
   {
     enRedes: idsEnRedes(libroRedes),
-    confirmadas: parejasConfirmadas,
+    confirmadas: [...parejasConfirmadas, ...parejasSinIA],
     conFoto: new Set(Object.entries(bancoDeFotos).filter(([, b]) => b?.archivo).map(([id]) => id)),
   },
 );
@@ -929,7 +935,10 @@ for (const id of fusion.keys()) retiradas.add(id);
   if (!antes || JSON.stringify(antes.notas) !== JSON.stringify(json.notas)) fs.writeFileSync(FUSIONADAS, comoRetiradasJson(json), 'utf8');
   if (fusion.size) console.log(`  repetidas con otra dirección: ${fusion.size}, redirigidas a la que queda`);
 }
-const publicadas = conPaginaHoy.filter((n) => !fusion.has(n.id))
+// La que queda suma los medios y las fuentes de las que se le unieron (regla 171): están en su "Fuentes (N)".
+const porIdDeLasUnidas = new Map([...(archivoAnterior.notas ?? []), ...conPaginaHoy].map((n) => [n.id, n]));
+const conLasUnidas = (lista) => conFuentesDeLasUnidas(lista, fusion, porIdDeLasUnidas);
+const publicadas = conLasUnidas(conPaginaHoy.filter((n) => !fusion.has(n.id)))
   .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
 // Lo que se MUESTRA (portada, secciones, temas, buscador, feed): sólo lo de
@@ -958,7 +967,7 @@ const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
 // Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
 const archivo = aligerarViejas(actualizarArchivo({
-  archivo: [...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))].map(sinServicios),
+  archivo: conLasUnidas([...(archivoAnterior.notas ?? []), ...restaurar.filter((n) => !(archivoAnterior.notas ?? []).some((a) => a.id === n.id))]).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
   // `undefined` pisa lo viejo al mezclar y no se escribe.

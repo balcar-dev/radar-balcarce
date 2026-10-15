@@ -151,8 +151,9 @@ test('generar-datos pregunta por las parejas sospechosas y las fusiona, sin gast
   assert.match(g, /pedidosHoy < 40/);
   // Se pregunta con los títulos ya escritos (después de armar las notas) y justo antes de fusionar.
   assert.ok(g.indexOf('parejasSospechosas(pool') > g.indexOf('const conPaginaHoy') && g.indexOf('parejasSospechosas(pool') < g.indexOf('const fusion = repetidasConOtraDireccion('));
-  assert.match(g, /confirmadas: parejasConfirmadas/);
-  assert.match(g, /sumarFuentesDeParejas\(deLaIngesta, parejasConfirmadas\)/);
+  // Desde el 15/10 (regla 171) van junto con las parejas que se deciden sin IA contra lo ya publicado.
+  assert.match(g, /confirmadas: \[\.\.\.parejasConfirmadas, \.\.\.parejasSinIA\]/);
+  assert.match(g, /sumarFuentesDeParejas\(deLaIngesta, \[\.\.\.parejasConfirmadas, \.\.\.parejasSinIA\]\)/);
 });
 
 
