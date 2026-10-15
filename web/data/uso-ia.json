@@ -3,14 +3,14 @@
   "2026-10-15": {
    "redaccion": {
     "gemini-flash-lite-latest": {
-     "llamadas": 4,
+     "llamadas": 6,
      "errores": 0,
-     "entrada": 26481,
-     "salida": 3493,
+     "entrada": 40528,
+     "salida": 4805,
      "pensamiento": 0,
-     "total": 29974,
+     "total": 45333,
      "claves": {
-      "redaccion": 4
+      "redaccion": 6
      }
     }
    }

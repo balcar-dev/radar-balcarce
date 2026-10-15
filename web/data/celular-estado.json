@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T18:36:47.303Z",
- "portada": 55,
- "archivo": 1131,
- "esperandoCuerpo": 2,
+ "generado": "2026-10-15T19:02:30.608Z",
+ "portada": 54,
+ "archivo": 1132,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-10-15T18:36:47.335Z",
+  "generado": "2026-10-15T19:02:30.645Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -203,6 +203,11 @@
      "id": "mly1kv",
      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
      "cuando": "2026-10-15T16:46:43.079Z"
+    },
+    {
+     "id": "11lwkfl",
+     "titulo": "Pato Naranja y Pato Negro clasifican a semifinales del Torneo Desarrollo",
+     "cuando": "2026-10-15T18:35:37.440Z"
     }
    ],
    "cola": [
@@ -223,16 +228,10 @@
      "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
      "seccion": "Balcarce",
      "marcada": false
-    },
-    {
-     "id": "11lwkfl",
-     "titulo": "Pato Naranja y Pato Negro clasifican a semifinales del Torneo Desarrollo",
-     "seccion": "Deportes",
-     "marcada": false
     }
    ],
-   "cupo": 1,
-   "proximoDesde": "2026-10-15T18:16:43.079Z",
+   "cupo": 0,
+   "proximoDesde": "2026-10-15T20:05:37.440Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

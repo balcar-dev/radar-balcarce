@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T18:36:47.303Z",
+  "generado": "2026-10-15T19:02:30.608Z",
   "notas": [
     {
       "id": "repaso20261015tarde",
@@ -196,6 +196,81 @@
       }
     },
     {
+      "id": "1cr7omj",
+      "titulo": "El riesgo país supera los 623 puntos por la cautela global",
+      "copete": "El indicador financiero que elabora JP Morgan trepa doce unidades en la jornada. El mercado local opera afectado por la aversión global hacia activos de riesgo.",
+      "cuerpo": "El indicador financiero elaborado por JP Morgan suma doce unidades y se ubica en los 623 puntos. La suba responde a una mayor aversión hacia activos de riesgo en el mercado global, lo que impacta en los bonos soberanos argentinos, según informaron las fuentes. El economista Fernando Marull señaló que los inversores se inclinan por activos más seguros ante el temor de que la Reserva Federal suba las tasas de referencia.",
+      "guion": "El riesgo país supera los 623 puntos por la cautela global",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "iProfesional"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-salta-hasta-los-640-puntos-y-se-acerca-a-su-valor-mas-alto-del-ano-nid15102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T16:29:27.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T19:01:49.787Z",
+      "relevancia": 60,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "textoRedes": "El riesgo país sube a 623 puntos en una jornada marcada por la cautela en los mercados internacionales y la caída de los bonos soberanos.",
+      "etiquetas": [
+        "riesgo pais",
+        "economia",
+        "bonos argentinos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-salta-hasta-los-640-puntos-y-se-acerca-a-su-valor-mas-alto-del-ano-nid15102026/",
+          "fecha": "2026-10-15T16:29:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/finanzas/466697-riesgo-pais-argentina-salto-640-puntos-genero-preocupacion-inversores-octubre-2026",
+          "fecha": "2026-10-15T18:25:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "tlvcwh",
+          "titulo": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
+          "fecha": "2026-10-13T21:02:16.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-seiscientos-puntos-tras-la-suba-en-estados-tlvcwh"
+        },
+        {
+          "id": "34t457",
+          "titulo": "El riesgo país supera los 630 puntos y las acciones caen en Wall Street",
+          "fecha": "2026-10-01T16:53:08.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-las-acciones-caen-en-wall-34t457"
+        },
+        {
+          "id": "1k34j05",
+          "titulo": "El riesgo país supera los 630 puntos y marca el récord de 2026",
+          "fecha": "2026-09-28T15:49:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-marca-el-record-de-2026-1k34j05"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-riesgo-pais-supera-los-623-puntos-por-la-cautela-global",
+      "foto": {
+        "archivo": "fotos-notas/1cr7omj.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
       "id": "183np9p",
       "titulo": "U2 regresa a la Argentina y toca en el estadio de River",
       "copete": "La banda irlandesa se presentará en marzo de 2027 con su gira mundial. El grupo contará con Beck como invitado especial y lanzará un nuevo álbum en noviembre.",
@@ -213,7 +288,7 @@
       "fecha": "2026-10-15T16:13:39.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T18:31:45.016Z",
-      "relevancia": 53,
+      "relevancia": 49,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -992,9 +1067,7 @@
       "seccion": "Agro",
       "medios": [
         "Noticias Argentinas (NA)",
-        "Ámbito",
-        "Infobae",
-        "Radio Mitre"
+        "Ámbito"
       ],
       "enlace": "https://noticiasargentinas.com/economia/buscan-optimizar-ramales-ferroviario-en-salta-pata-potenciar-produccion-minera_a6ad0c2cc88153cda2df06216",
       "teniaImagenLaFuente": false,
@@ -1407,9 +1480,9 @@
         "Crónica",
         "Radio Mitre",
         "Canal 26",
-        "La Nueva",
         "C5N",
-        "Minuto Uno"
+        "Minuto Uno",
+        "La Nueva"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/15/la-jefa-del-fmi-dijo-que-confia-en-que-la-argentina-pagara-su-deuda-con-el-organismo-antes-de-2034/",
       "teniaImagenLaFuente": true,
@@ -1885,90 +1958,6 @@
       "foto": {
         "archivo": "fotos-notas/7tqcv3.jpg",
         "credito": "Foto: El Cronista"
-      }
-    },
-    {
-      "id": "ny562k",
-      "titulo": "Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio",
-      "copete": "El delantero padece una dolencia en el muslo izquierdo y se perderá varios encuentros con el Inter de Milán y la selección argentina.",
-      "cuerpo": "El delantero Lautaro Martínez sufre un desgarro muscular en el flexor del muslo izquierdo y afronta una inactividad cercana al mes y medio. La información fue comunicada por el Inter de Milán tras los estudios realizados en el Instituto Humanitas de Rozzano, luego del encuentro frente a Brujas por la Champions League.\n\nLa baja afecta tanto al conjunto italiano en los próximos compromisos del campeonato local y el certamen europeo como a la selección argentina de cara a la próxima fecha FIFA.",
-      "guion": "Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio",
-      "seccion": "Fútbol",
-      "medios": [
-        "La Nación",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.lanacion.com.ar/deportes/futbol/lautaro-martinez-se-desgarro-y-estara-inactivo-durante-mas-de-un-mes-problemas-para-inter-y-la-nid15102026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T10:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T14:01:31.391Z",
-      "relevancia": 67,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lautaro Martínez padece un desgarro en el muslo izquierdo.",
-        "Estará inactivo aproximadamente un mes y medio.",
-        "La baja afecta al Inter de Milán y a la selección argentina."
-      ],
-      "seSabe": [
-        "Lautaro Martínez sufre una lesión muscular en el muslo izquierdo, según informó el Inter de Milán.",
-        "El tiempo estimado de recuperación es de un mes y medio.",
-        "La baja impacta en los compromisos del club italiano y condiciona su presencia en la fecha FIFA."
-      ],
-      "noConfirmado": [
-        "Todavía no se anunciaron los rivales ni las sedes para la próxima fecha FIFA de noviembre.",
-        "No hay confirmación oficial sobre la fecha exacta de su regreso a las canchas."
-      ],
-      "textoRedes": "El delantero Lautaro Martínez sufre un desgarro muscular en el muslo izquierdo y estará inactivo aproximadamente un mes y medio, lo que afecta los próximos compromisos del Inter de Milán y de la selección argentina.",
-      "etiquetas": [
-        "Lautaro Martínez",
-        "Inter de Milán",
-        "Selección Argentina",
-        "Lesión"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/futbol/lautaro-martinez-se-desgarro-y-estara-inactivo-durante-mas-de-un-mes-problemas-para-inter-y-la-nid15102026/",
-          "fecha": "2026-10-15T11:50:35.000Z",
-          "oficial": false,
-          "aporte": "Detalló el diagnóstico de la lesión, los partidos que se pierde y el comunicado del club."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/lautaro-martinez-se-desgarro-y-estara-cerca-de-un-mes-y-medio-fuera-de-las-canchas/",
-          "fecha": "2026-10-15T13:28:31.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el tiempo de baja y la afectación para el Inter y la selección."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "u3bdm4",
-          "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
-          "fecha": "2026-10-10T17:03:23.000Z",
-          "ruta": "/nota/roman-gonzalez-supera-un-record-de-lautaro-martinez-en-racing-u3bdm4"
-        },
-        {
-          "id": "1nlg6jl",
-          "titulo": "Lionel Messi vuelve a jugar en Inter Miami tras su despedida de la Selección",
-          "fecha": "2026-09-19T03:00:00.000Z",
-          "ruta": "/nota/lionel-messi-vuelve-a-jugar-en-inter-miami-tras-su-despedida-de-la-1nlg6jl"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lautaro-martinez-sufre-un-desgarro-muscular-y-frena-su-actividad-por",
-      "foto": {
-        "archivo": "fotos-notas/ny562k.jpg",
-        "credito": "Foto: La Nación"
       }
     },
     {
@@ -2582,10 +2571,10 @@
         "La Nación",
         "TN (Todo Noticias)",
         "A24",
-        "Crónica",
         "El Marplatense",
         "Clarín",
         "Canal 26",
+        "Crónica",
         "Radio Mitre"
       ],
       "enlace": "https://www.clarin.com/economia/washington-quirno-firmo-protocolo-facilitar-aprobacion-acuerdo-comercial-eeuu-congreso_0_EerBxgJ0Lr.html",
@@ -2788,7 +2777,6 @@
         "Crónica",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
-        "La Nueva",
         "El Marplatense",
         "Doble Amarilla",
         "Bolavip Argentina",
@@ -2796,7 +2784,8 @@
         "Ámbito",
         "Minuto Uno",
         "La Gaceta (Tucumán)",
-        "Los Andes (Mendoza)"
+        "Los Andes (Mendoza)",
+        "La Nueva"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
       "teniaImagenLaFuente": true,
@@ -2902,7 +2891,7 @@
       "fecha": "2026-10-14T18:37:01.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T01:31:56.486Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3544,8 +3533,8 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
+        "A24",
         "TyC Sports",
-        "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "QZ Noticias (Mar del Plata)",
@@ -3558,15 +3547,17 @@
         "0223 (Mar del Plata)",
         "Página/12",
         "La Voz del Pueblo",
-        "A24",
-        "La Brújula 24"
+        "Crónica",
+        "La Brújula 24",
+        "La Nación",
+        "Los Andes (Mendoza)"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T13:45:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T21:01:59.221Z",
-      "relevancia": 90,
+      "relevancia": 86,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3638,7 +3629,7 @@
       "fecha": "2026-10-14T13:43:25.171Z",
       "sinFecha": false,
       "visto": "2026-10-14T21:01:59.221Z",
-      "relevancia": 71,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4204,96 +4195,17 @@
         "archivo": "fotos-notas/5f1qhn.jpg",
         "credito": "Foto: Ámbito"
       }
-    },
-    {
-      "id": "5biv0y",
-      "titulo": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
-      "copete": "El organismo oficializa una herramienta digital para calcular sueldos del sector. La medida alcanza a todas las categorías y rige para los pagos de octubre.",
-      "cuerpo": "La medida se oficializó mediante la Resolución General N° 5912/2026, tras la aprobación del director ejecutivo Andrés Vázquez.\n\nPara generar el comprobante, los empleadores deben ingresar al sitio web del organismo con clave fiscal de nivel de seguridad 2 o superior y completar los datos del trabajador. La plataforma muestra cálculos automáticos de determinados componentes salariales que se pueden aceptar o modificar antes de emitir el documento.\n\nDe acuerdo con la normativa, la actualización alcanza a todas las categorías del sector y exige revisar la liquidación correspondiente a octubre.",
-      "guion": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Página/12",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
-        "Ámbito",
-        "La Capital (Rosario)",
-        "iProfesional",
-        "Perfil",
-        "El Cronista",
-        "Clarín",
-        "Canal 26"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T06:55:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T09:31:55.705Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La ARCA lanza un recibo de sueldo electrónico asistido para casas particulares.",
-        "El sistema calcula de manera automática conceptos salariales mediante la web oficial.",
-        "Los empleadores pueden aceptar el monto sugerido o modificar los importes antes de emitir el comprobante.",
-        "La actualización rige para todas las categorías del sector y afecta la liquidación de octubre."
-      ],
-      "seSabe": [
-        "La ARCA implementa el recibo de sueldo electrónico asistido mediante la Resolución General N° 5912/2026.",
-        "El sistema calcula de forma automática conceptos salariales a partir de los datos cargados por el empleador.",
-        "La herramienta permite aceptar o editar los montos y sumar adicionales o descuentos.",
-        "La medida rige para la liquidación de octubre en todas las categorías del sector."
-      ],
-      "etiquetas": [
-        "ARCA",
-        "casas particulares",
-        "empleadas domesticas",
-        "sueldos",
-        "recibo electronico"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
-          "fecha": "2026-10-14T06:55:37.000Z",
-          "oficial": false,
-          "aporte": "Detalló el funcionamiento técnico del recibo asistido, la normativa aplicable y los pasos para emitir el comprobante."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/informacion-general/empleadas-domesticas-confirmaron-los-nuevos-sueldos-hora-y-mes-adicionales-arca-n6333114",
-          "fecha": "2026-10-14T09:00:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la actualización alcanza a todas las categorías y afecta la liquidación de octubre."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "arca-habilita-el-recibo-de-sueldo-electronico-asistido-para-casas",
-      "foto": {
-        "archivo": "fotos-notas/5biv0y.jpg",
-        "credito": "Foto: Infobae"
-      }
     }
   ],
   "secciones": [
     "Balcarce",
+    "Economía",
     "Cultura y agenda",
     "Deportes",
     "Política",
     "Agro",
     "Automovilismo",
     "Argentina",
-    "Economía",
     "Fútbol",
     "Policiales"
   ],
@@ -4306,7 +4218,7 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 14,
+      "temp": 13,
       "sensacion": 10,
       "humedad": 65,
       "viento": 19,
@@ -4320,7 +4232,7 @@
         "dia": "jue",
         "max": 14,
         "min": 9,
-        "lluvia": 10,
+        "lluvia": 22,
         "codigo": 3,
         "viento": 19,
         "milimetros": 0,
@@ -4700,12 +4612,6 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "120b8gy",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
       "id": "1o3t7bf",
       "titulo": "Javier Milei viaja a Estados Unidos para reforzar su…",
       "seccion": "Política",
@@ -4716,6 +4622,12 @@
       "titulo": "Caso Diego Maradona: el abogado de Jana pidió absolver al…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"imputado\""
+    },
+    {
+      "id": "zwv5sw",
+      "titulo": "Causa Maradona: Fernando Burlando ratificó que Diego \"fue…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
       "id": "1okotnb",
@@ -4734,12 +4646,6 @@
       "titulo": "La Justicia archivó la denuncia por usura contra Marcos…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "zwv5sw",
-      "titulo": "Causa Maradona: Fernando Burlando ratificó que Diego \"fue…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"asesinado\""
     },
     {
       "id": "1cqos2o",
@@ -4790,5 +4696,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 3
 }
