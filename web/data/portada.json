@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T02:31:47.873Z",
+  "generado": "2026-10-15T03:02:45.897Z",
   "notas": [
     {
       "id": "19xa7ho",
@@ -70,11 +70,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45083-walter-ianni-lopez-participo-en-beijing-de-encuentros-sobre-cooperacion-internacional-y-relaciones-con-china/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-15T00:31:41.256Z",
       "sinFecha": true,
       "visto": "2026-10-15T00:31:41.256Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -260,6 +260,7 @@
       "guion": "Paul Aron enfrenta el riesgo de perder su licencia de conducir",
       "seccion": "Automovilismo",
       "medios": [
+        "Infobae",
         "TN (Todo Noticias)",
         "C5N"
       ],
@@ -448,7 +449,6 @@
       "guion": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "seccion": "Política",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)"
       ],
@@ -457,7 +457,7 @@
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 98,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -537,7 +537,6 @@
       "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -547,7 +546,7 @@
       "fecha": "2026-10-14T22:04:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 100,
+      "relevancia": 98,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -993,103 +992,6 @@
       }
     },
     {
-      "id": "1ummanb",
-      "titulo": "El autódromo porteño supera el sesenta por ciento de obra para recibir al MotoGP",
-      "copete": "El circuito Oscar y Juan Gálvez ejecuta pruebas de asfalto en la pista con la meta de albergar la competencia internacional en abril de 2027. Los tickets ya están a la venta.",
-      "cuerpo": "El Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance en su transformación integral con pruebas de asfalto en la pista, según informaron las fuentes oficiales. Los trabajos se desarrollan en la curva T3 bajo la supervisión de la empresa Tilke Engineers & Architects y el equipo de Autopistas Urbanas. La aplicación utiliza la mezcla AM3-AC19 de ocho centímetros de espesor con tres equipos de transferencia, tres terminadoras y seis rodillos.\n\nEl jefe de Gobierno, Jorge Macri, remarcó que las obras apuntan a posicionar al escenario porteño a la par de los circuitos internacionales para recibir al MotoGP del 9 al 11 de abril de 2027 y buscar el regreso de la Fórmula 1. Por su parte, el secretario de Deportes, Fabián Turnes, indicó que las entradas ya se encuentran disponibles en el sitio web oficial.",
-      "guion": "El autódromo porteño supera el sesenta por ciento de obra para recibir al MotoGP",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infobae",
-        "TyC Sports",
-        "Diario Popular",
-        "Olé"
-      ],
-      "enlace": "https://www.ole.com.ar/autos/ciudad-termina-probar-asfalto-pista-nuevo-autodromo-corra-motogp-quede-listo-f1-funciona-titulo-nota_0_tFmWsG35yC.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T19:16:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T20:01:54.740Z",
-      "relevancia": 71,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance en su renovación.",
-        "Las tareas incluyen pruebas de asfalto en la curva T3 con supervisión internacional.",
-        "El circuito recibirá al MotoGP del 9 al 11 de abril de 2027 y busca sumar a la Fórmula 1.",
-        "Las entradas para la competencia ya se encuentran a la venta en el sitio web oficial."
-      ],
-      "seSabe": [
-        "La transformación del Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance.",
-        "Las pruebas de asfalto se realizan en la curva T3 con la mezcla AM3-AC19 de ocho centímetros de espesor.",
-        "El circuito recibirá al MotoGP del 9 al 11 de abril de 2027.",
-        "Las entradas ya están a la venta en el sitio web oficial, según informó el secretario de Deportes, Fabián Turnes.",
-        "El jefe de Gobierno, Jorge Macri, señaló que la obra busca preparar el predio para el MotoGP y la Fórmula 1."
-      ],
-      "noConfirmado": [
-        "No se informó una fecha concreta para el eventual regreso de la Fórmula 1 al circuito porteño."
-      ],
-      "textoRedes": "El Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance en su transformación integral y ejecuta pruebas de asfalto para recibir al MotoGP en abril de 2027. Las entradas ya están a la venta.",
-      "etiquetas": [
-        "Autodromo de Buenos Aires",
-        "MotoGP",
-        "Formula 1",
-        "Jorge Macri",
-        "Fabian Turnes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/autos/ciudad-termina-probar-asfalto-pista-nuevo-autodromo-corra-motogp-quede-listo-f1-funciona-titulo-nota_0_tFmWsG35yC.html",
-          "fecha": "2026-10-14T19:16:31.000Z",
-          "oficial": false,
-          "aporte": "Detalló el porcentaje de avance de la obra, las características técnicas del asfalto y las declaraciones de las autoridades."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/el-autodromo-galvez-supero-60--de-las-obras-y-avanza-hacia-el-regreso-del-motogp_a6acfd1d88298ee386b3876a6",
-          "fecha": "2026-10-14T19:25:47.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre los avances en la pista del autódromo y los preparativos para el MotoGP."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "saeapr",
-          "titulo": "El MotoGP en Buenos Aires anuncia los precios de sus entradas",
-          "fecha": "2026-09-30T21:24:43.000Z",
-          "ruta": "/nota/el-motogp-en-buenos-aires-anuncia-los-precios-de-sus-entradas-saeapr"
-        },
-        {
-          "id": "11d0zcr",
-          "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
-          "fecha": "2026-10-13T22:53:19.000Z",
-          "ruta": "/nota/el-museo-fangio-expone-autos-historicos-en-autoclasica-11d0zcr"
-        },
-        {
-          "id": "m8u8gq",
-          "titulo": "Agustín Canapino gana una serie del Turismo Nacional tras una maniobra",
-          "fecha": "2026-10-13T16:18:37.000Z",
-          "ruta": "/nota/agustin-canapino-gana-una-serie-del-turismo-nacional-tras-una-maniobra-m8u8gq"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-autodromo-porteno-supera-el-sesenta-por-ciento-de-obra-para",
-      "foto": {
-        "archivo": "fotos-notas/1ummanb.jpg",
-        "credito": "Foto: Olé"
-      }
-    },
-    {
       "id": "y1elhg",
       "titulo": "El oficialismo busca dictaminar la reforma de salud mental en el Senado",
       "copete": "El bloque libertario y sus aliados alcanzaron un entendimiento para tratar el jueves el proyecto de reforma en un plenario de comisiones. La iniciativa contempla cambios en internaciones, prioridad profesional y financiamiento.",
@@ -1178,7 +1080,7 @@
       "id": "2m710x",
       "titulo": "La Justicia declara la quiebra de la textil Algodonera Avellaneda",
       "copete": "El magistrado Fabián Lorenzini dictó la quiebra indirecta de la firma santafesina tras fracasar las negociaciones. La compañía adeuda más de 260 millones de dólares y la medida pone en riesgo a unos 360 empleos.",
-      "cuerpo": "El Juzgado Civil y Comercial de Segunda Nominación de Reconquista decretó la quiebra de Algodonera Avellaneda, una firma textil vinculada al grupo Vicentin asentada en la provincia de Santa Fe. La medida judicial llegó este miércoles por disposición del juez Fabián Lorenzini, luego de que venciera el plazo sin postulantes inscriptos para el salvataje y fracasaran los entendimientos con los acreedores.\n\nEl proceso preventivo colapsó tras el rechazo a un planteo para excluir al Banco Nación, entidad que concentra la mayor parte de las acreencias. Según el fallo, la compañía acumula obligaciones financieras superiores a los 260 millones de dólares y más de 6000 millones de pesos en pasivos postconcursales.\n\nLa resolución contempla evaluar la continuidad transitoria de la producción en las plantas para preservar los puestos de los 360 operarios mientras se procura un comprador.",
+      "cuerpo": "El Juzgado Civil y Comercial de Segunda Nominación de Reconquista decretó la quiebra de Algodonera Avellaneda, una firma textil vinculada al grupo Vicentin asentada en la provincia de Santa Fe. La medida judicial llegó el miércoles por disposición del juez Fabián Lorenzini, luego de que venciera el plazo sin postulantes inscriptos para el salvataje y fracasaran los entendimientos con los acreedores.\n\nEl proceso preventivo colapsó tras el rechazo a un planteo para excluir al Banco Nación, entidad que concentra la mayor parte de las acreencias. Según el fallo, la compañía acumula obligaciones financieras superiores a los 260 millones de dólares y más de 6000 millones de pesos en pasivos postconcursales.\n\nLa resolución contempla evaluar la continuidad transitoria de la producción en las plantas para preservar los puestos de los 360 operarios mientras se procura un comprador.",
       "guion": "La Justicia declara la quiebra de la textil Algodonera Avellaneda",
       "seccion": "Economía",
       "medios": [
@@ -1398,8 +1300,8 @@
     {
       "id": "1bnktm",
       "titulo": "Un desprendimiento de rocas corta la Ruta 7 en Mendoza",
-      "copete": "Una caída de piedras desde un cerro destruyó una camioneta en el kilómetro 112 y dejó camiones varados este miércoles. El conductor resultó ileso y la circulación permanece interrumpida.",
-      "cuerpo": "Un desprendimiento de rocas desde un cerro provocó el corte total de la Ruta Nacional 7 este miércoles durante la mañana, a la altura del kilómetro 112 en Mendoza. El tránsito quedó interrumpido en ambos sentidos en el tramo comprendido entre Potrerillos y Uspallata, lo que generó una larga fila de camiones varados.\n\nPersonal de Gendarmería Nacional intervino tras un llamado al servicio de emergencias y dio aviso a la empresa encargada del mantenimiento vial. Las autoridades habilitaron un desvío temporal para evacuar a los vehículos que quedaron detenidos en la zona de alta montaña.\n\nLas tareas para despejar la calzada continúan y por el momento no se informó un horario estimado para la reapertura del corredor internacional que conecta con Chile.",
+      "copete": "Una caída de piedras desde un cerro destruyó una camioneta en el kilómetro 112 y dejó camiones varados el miércoles. El conductor resultó ileso y la circulación permanece interrumpida.",
+      "cuerpo": "Un desprendimiento de rocas desde un cerro provocó el corte total de la Ruta Nacional 7 el miércoles durante la mañana, a la altura del kilómetro 112 en Mendoza. El tránsito quedó interrumpido en ambos sentidos en el tramo comprendido entre Potrerillos y Uspallata, lo que generó una larga fila de camiones varados.\n\nPersonal de Gendarmería Nacional intervino tras un llamado al servicio de emergencias y dio aviso a la empresa encargada del mantenimiento vial. Las autoridades habilitaron un desvío temporal para evacuar a los vehículos que quedaron detenidos en la zona de alta montaña.\n\nLas tareas para despejar la calzada continúan y por el momento no se informó un horario estimado para la reapertura del corredor internacional que conecta con Chile.",
       "guion": "Un desprendimiento de rocas corta la Ruta 7 en Mendoza",
       "seccion": "Argentina",
       "medios": [
@@ -1593,80 +1495,6 @@
       }
     },
     {
-      "id": "1qu6ie7",
-      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
-      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
-      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
-      "seccion": "Agro",
-      "medios": [
-        "Agrositio",
-        "TN (Todo Noticias)"
-      ],
-      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T17:34:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T19:32:01.897Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Pronóstico vigente del 15 al 21 de octubre.",
-        "Lluvias escasas en la mayor parte del país.",
-        "Mínimas menores a 10 grados en el este bonaerense."
-      ],
-      "seSabe": [
-        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
-        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
-        "El este de Buenos Aires registrará mínimas menores a 10 grados."
-      ],
-      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
-      "etiquetas": [
-        "Clima",
-        "Bolsa de Cereales",
-        "Lluvias",
-        "Temperaturas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
-          "fecha": "2026-10-14T17:34:56.000Z",
-          "oficial": false,
-          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
-          "fecha": "2026-10-14T19:09:51.000Z",
-          "oficial": false,
-          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "vqv317",
-          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
-          "fecha": "2026-10-05T11:23:01.000Z",
-          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
-      "foto": {
-        "archivo": "fotos-notas/1qu6ie7.jpg",
-        "credito": "Foto: Agrositio"
-      }
-    },
-    {
       "id": "eumyqk",
       "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "copete": "El intendente de San Nicolás, Santiago Passaglia, desafió al Gobierno nacional a eliminar la Tasa de Seguridad e Higiene a cambio de que la Nación deje de cobrar el IVA en obras y servicios públicos municipales.",
@@ -1674,21 +1502,21 @@
       "guion": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "seccion": "Política",
       "medios": [
-        "Ecos Diarios (Necochea)",
         "Infobae",
         "TN (Todo Noticias)",
         "Ámbito",
         "Minuto Uno",
         "Noticias Argentinas (NA)",
         "El Día",
-        "Agencia DIB"
+        "Agencia DIB",
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/san-nicolas-propuso-eliminar-seguridad-e-higiene-si-nacion-deja-de-cobrar-iva_a6acfb3f58298ee386b33f776",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T16:55:59.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T19:32:01.897Z",
-      "relevancia": 73,
+      "relevancia": 81,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1920,11 +1748,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45079-jamas-imagine-que-iba-a-necesitar-un-trasplante/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T16:32:12.981Z",
       "sinFecha": true,
       "visto": "2026-10-14T16:32:12.981Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2144,10 +1972,10 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "iProUP",
-        "iProfesional",
         "A24",
-        "C5N"
+        "C5N",
+        "iProfesional",
+        "iProUP"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -2237,16 +2065,15 @@
         "TyC Sports",
         "Minuto Uno",
         "Crónica",
-        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Nueva",
-        "La Brújula 24",
         "La Voz del Pueblo",
         "Mi8 (Canal 8 Mar del Plata)",
         "Bolavip Argentina",
+        "El Gráfico",
         "Olé",
-        "El Gráfico"
+        "La Brújula 24"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
       "teniaImagenLaFuente": true,
@@ -2308,13 +2135,13 @@
       "guion": "Telecom acepta la oferta de Metrotel por US$ 450 millones",
       "seccion": "Economía",
       "medios": [
-        "Infobae",
         "La Nación",
+        "Infobae",
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "El Economista",
-        "Ámbito"
+        "Ámbito",
+        "El Economista"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -2495,11 +2322,9 @@
         "QZ Noticias (Mar del Plata)",
         "Diputados Bonaerenses",
         "0221",
-        "La Tecla",
-        "La Verdad",
-        "El Marplatense",
         "Agencia DIB",
-        "Ámbito"
+        "Ámbito",
+        "La Verdad"
       ],
       "enlace": "https://www.0221.com.ar/la-plata/la-provincia-convoco-los-docentes-retomar-las-paritarias-y-definir-nuevos-aumentos-salarios-n135790",
       "teniaImagenLaFuente": true,
@@ -2648,18 +2473,15 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45075-presupuesto-2027-el-municipio-prepara-la-ley-de-leyes-y-los-funcionarios-deberan-explicar-sus-numeros/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-14T13:31:55.553Z",
       "sinFecha": true,
       "visto": "2026-10-14T13:31:55.553Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "concejo",
-        "hospital"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El Ejecutivo municipal prevé presentar el proyecto el 31 de octubre.",
@@ -2795,10 +2617,77 @@
       }
     },
     {
+      "id": "97f98g",
+      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
+      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
+      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-14T13:01:57.018Z",
+      "sinFecha": true,
+      "visto": "2026-10-14T13:01:57.018Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Instituto Adventista cumple cuarenta años de trayectoria.",
+        "El coro escolar presenta el musical Un día este viernes.",
+        "La función comienza a las 20 en el polideportivo institucional."
+      ],
+      "seSabe": [
+        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
+        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
+        "La presentación se realiza en el polideportivo de la institución educativa."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
+      "etiquetas": [
+        "Instituto Adventista",
+        "coro",
+        "aniversario",
+        "musical",
+        "Balcarce",
+        "cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+          "fecha": "2026-10-14T11:54:19.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "cdnqde",
+          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
+    },
+    {
       "id": "15xxgpu",
       "titulo": "Flavio Briatore analiza el rendimiento de Franco Colapinto tras Singapur",
       "copete": "El jefe de la escudería Alpine compartió una imagen junto al piloto argentino tras el Gran Premio de Singapur. El equipo evaluó los inconvenientes mecánicos que derivaron en su abandono y ya apunta a la próxima fecha en Estados Unidos.",
-      "cuerpo": "El director del equipo Alpine, Flavio Briatore, publicó este miércoles una imagen en sus redes sociales junto al piloto argentino Franco Colapinto para anunciar el regreso aos entrenamientos en la base de Enstone. La escudería francesa difundió un balance sobre el reciente Gran Premio de Singapur de la Fórmula 1, donde el argentino debió abandonar el domingo pasado en el giro 29 debido a una falla en la transmisión a bordo del monoplaza.\n\nEl informe oficial del conjunto galo calificó como frustrante el cierre de la gira asiática, tras una competencia en el circuito callejero de Marina Bay donde el compañero de equipo Pierre Gasly concluyó en la undécima colocación. Como se había informado el 9 de octubre, la estructura técnica se abocó a revisar los inconvenientes mecánicos que sufrieron los bólidos en territorio asiático.\n\nLa categoría reina del automovilismo internacional transitará ahora un receso antes de encarar la próxima competencia del calendario oficial. El Gran Premio de Estados Unidos se disputará en el Circuito de las Américas, ubicado en la ciudad de Austin, entre el 23 y el 25 de octubre bajo el formato tradicional de fin de semana.",
+      "cuerpo": "El director del equipo Alpine, Flavio Briatore, publicó el miércoles una imagen en sus redes sociales junto al piloto argentino Franco Colapinto para anunciar el regreso aos entrenamientos en la base de Enstone. La escudería francesa difundió un balance sobre el reciente Gran Premio de Singapur de la Fórmula 1, donde el argentino debió abandonar el domingo pasado en el giro 29 debido a una falla en la transmisión a bordo del monoplaza.\n\nEl informe oficial del conjunto galo calificó como frustrante el cierre de la gira asiática, tras una competencia en el circuito callejero de Marina Bay donde el compañero de equipo Pierre Gasly concluyó en la undécima colocación. Como se había informado el 9 de octubre, la estructura técnica se abocó a revisar los inconvenientes mecánicos que sufrieron los bólidos en territorio asiático.\n\nLa categoría reina del automovilismo internacional transitará ahora un receso antes de encarar la próxima competencia del calendario oficial. El Gran Premio de Estados Unidos se disputará en el Circuito de las Américas, ubicado en la ciudad de Austin, entre el 23 y el 25 de octubre bajo el formato tradicional de fin de semana.",
       "guion": "Flavio Briatore analiza el rendimiento de Franco Colapinto tras Singapur",
       "seccion": "Automovilismo",
       "medios": [
@@ -3037,10 +2926,10 @@
       "seccion": "Política",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "La Verdad",
         "El Marplatense",
         "El Eco de Tandil",
-        "Agencia DIB"
+        "Agencia DIB",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/sociedad/la-provincia-adjudico-medicamentos-trasplantes-15760-millones-n56476",
       "teniaImagenLaFuente": true,
@@ -3106,69 +2995,6 @@
         "archivo": "fotos-notas/y9m1wl.jpg",
         "credito": "Foto: El Eco de Tandil"
       }
-    },
-    {
-      "id": "cdnqde",
-      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
-      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://puntonueve.com.ar/188351-2/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T11:49:03.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T12:31:49.255Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Coro del Instituto Adventista presenta el musical Un día",
-        "La función es este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en los 40 años de trayectoria educativa"
-      ],
-      "seSabe": [
-        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
-        "La función se realiza este viernes a las 20 en el polideportivo institucional",
-        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
-      ],
-      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
-      "etiquetas": [
-        "Coro del Instituto Adventista",
-        "musical Un día",
-        "polideportivo",
-        "40 aniversario",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/188351-2/",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
-          "fecha": "2026-10-14T11:54:19.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
     },
     {
       "id": "11uyvlg",
@@ -3257,7 +3083,7 @@
       "id": "5m60mn",
       "titulo": "El Gobierno oficializa préstamos del BID por mil trecientos millones de dólares",
       "copete": "El Ejecutivo nacional formalizó la llegada de fondos internacionales por US$1300 millones destinados a cubrir subsidios al gas y a un programa de modernización de la administración pública.",
-      "cuerpo": "El Gobierno nacional oficializó este miércoles dos créditos otorgados por el Banco Interamericano de Desarrollo que suman un total de US$1300 millones.\n\nEl primer financiamiento, por US$500 millones, se destinará a respaldar el programa de asistencia en los consumos de gas para hogares vulnerables y usuarios de garrafas. En tanto, el segundo acuerdo contempla hasta US$800 millones para la modernización de la administración pública, de los cuales se recibirán US$300 millones en esta primera etapa.",
+      "cuerpo": "El Gobierno nacional oficializó el miércoles dos créditos otorgados por el Banco Interamericano de Desarrollo que suman un total de US$1300 millones.\n\nEl primer financiamiento, por US$500 millones, se destinará a respaldar el programa de asistencia en los consumos de gas para hogares vulnerables y usuarios de garrafas. En tanto, el segundo acuerdo contempla hasta US$800 millones para la modernización de la administración pública, de los cuales se recibirán US$300 millones en esta primera etapa.",
       "guion": "El Gobierno oficializa préstamos del BID por mil trecientos millones de dólares",
       "seccion": "Economía",
       "medios": [
@@ -3275,8 +3101,6 @@
         "Perfil",
         "Canal 26",
         "La Tecla",
-        "La Verdad",
-        "Infoeme",
         "QZ Noticias (Mar del Plata)",
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
@@ -3285,12 +3109,13 @@
         "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
         "La Verdad de Ayacucho",
-        "Diputados Bonaerenses",
         "La Noticia 1",
         "Clarín",
         "0223 (Mar del Plata)",
         "La Voz del Pueblo",
         "Agencia DIB",
+        "La Verdad",
+        "Infoeme",
         "Ámbito",
         "iProfesional",
         "El Día"
@@ -3427,10 +3252,10 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "El Economista",
-        "iProfesional",
         "Ámbito",
-        "Minuto Uno"
+        "iProfesional",
+        "Minuto Uno",
+        "El Economista"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3556,127 +3381,6 @@
       "foto": {
         "archivo": "fotos-notas/collage-repaso20261013noche.jpg",
         "credito": "Fotos: Infobae, Diario La Vanguardia y Minuto Uno"
-      }
-    },
-    {
-      "id": "jc61mz",
-      "titulo": "El oficialismo busca dictamen para la propiedad privada",
-      "copete": "La Cámara de Diputados debate este miércoles una versión flexible de la Ley de Tierras dentro del proyecto de Inviolabilidad de la Propiedad Privada para frenar un rechazo opositor al DNU 70/23.",
-      "cuerpo": "El plenario de las comisiones de Asuntos Constitucionales y Legislación General se reúne este miércoles a las 16 para avanzar con el dictamen del proyecto de Inviolabilidad de la Propiedad Privada que cuenta con media sanción del Senado. Según informó la Agencia Noticias Argentinas, el oficialismo incorporará una versión reducida de la Ley de Tierras que mantiene el tope del 15% de extranjerización a nivel nacional, provincial y departamental pero elimina el límite de 1.000 hectáreas en las zonas núcleo del país.\n\nEsta estrategia apunta a restarle incentivos a la oposición para revocar el decreto 70/23 en la sesión prevista para el jueves y flexibilizar los límites de compraventa mientras la Justicia define la cuestión de fondo sobre la derogación de la norma anterior del 2011. La iniciativa también contempla cambios en el régimen de desalojos con la entrega inmediata del inmueble usurpado ante un derecho verosímil y fija un tope del 30% en las indemnizaciones por lucro cesante en casos de expropiación.\n\nEl texto forma parte del temario para la sesión que el oficialismo convocó para el 21 de octubre. En un inicio, como se informó el 8 de octubre de 2026, el Gobierno había convocado al plenario para desactivar los intentos opositores de blindar el decreto, en un escenario donde el Ejecutivo debió ceder parcialmente tras haber retirado los capítulos originales de tierras en el debate del Senado hace más de dos meses.",
-      "guion": "El oficialismo busca dictamen para la propiedad privada",
-      "seccion": "Política",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "0223 (Mar del Plata)",
-        "Infobae",
-        "Clarín",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Perfil",
-        "A24",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Crónica"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T23:24:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T15:01:49.740Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El plenario de comisiones se reúne este miércoles a las 16.",
-        "Se incorpora una versión flexible de la Ley de Tierras.",
-        "El proyecto se incluye en la sesión convocada para el 21 de octubre."
-      ],
-      "seSabe": [
-        "El plenario de Asuntos Constitucionales y Legislación General se reúne este miércoles a las 16 según Noticias Argentinas.",
-        "Se mantendrá el tope del 15% de extranjerización de tierras y se eliminará el límite de 1.000 hectáreas en zonas núcleo.",
-        "El proyecto de Inviolabilidad de la Propiedad Privada fue incluido en la sesión del 21 de octubre."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó el resultado definitivo de la votación en el plenario de comisiones de este miércoles."
-      ],
-      "textoRedes": "El oficialismo en Diputados busca firmar este miércoles dictamen al proyecto de Inviolabilidad de la Propiedad Privada con una versión flexible de la Ley de Tierras para frenar rechazos al DNU 70/23.",
-      "etiquetas": [
-        "Diputados",
-        "Ley de Tierras",
-        "Propiedad Privada",
-        "Gobierno"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/en-un-dictamen-expres--el-oficialismo-incluira-la-ley-de-tierras--light--en-su-proyecto-sobre-propiedad-privada_a6acea2c706650845db81f380",
-          "fecha": "2026-10-14T09:24:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el plenario de comisiones, la inclusión de la Ley de Tierras light y los cambios en desalojos y expropiaciones."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/10/el-oficialismo-incluira-la-ley-de.html",
-          "fecha": "2026-10-14T14:15:59.225Z",
-          "oficial": false,
-          "aporte": "Coincidió en la convocatoria al plenario de la Cámara de Diputados para este miércoles."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/el-oficialismo-busca-avanzar-con-el-proyecto-sobre-inviolabilidad-de-la-propiedad-privada-que-pasara-con-la-ley-de-tierras/",
-          "fecha": "2026-10-14T11:46:00.000Z",
-          "oficial": false,
-          "aporte": "Agregó que La Libertad Avanza intentará emitir dictamen con restricciones de la Ley de Tierras."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/el-oficialismo-incluira-la-ley-tierras-light-su-proyecto-propiedad-privada-n924479",
-          "fecha": "2026-10-14T14:11:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la noticia sin aportar datos adicionales en su resumen."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/---javier-milei-en-vivo--anuncios-y-medidas-del-gobierno-minuto-a-minuto-del-14-de-octubre-de-2026_a6acf49478298ee386b246dd1",
-          "fecha": "2026-10-14T14:20:08.000Z",
-          "oficial": false,
-          "aporte": "Indicó el carácter ultra exprés del trámite legislativo en Diputados."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-14-8-22-0-en-un-dictamen-expres-el-oficialismo-incluira-la-ley-de-tierras-light-en-su-proyecto-sobre-propiedad-privada",
-          "fecha": "2026-10-14T14:31:24.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la búsqueda de dictamen para el proyecto de Inviolabilidad de la Propiedad Privada este miércoles."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "gqh1ka",
-          "titulo": "El oficialismo convoca al plenario para debatir la Ley de Tierras",
-          "fecha": "2026-10-08T21:37:55.679Z",
-          "ruta": "/nota/el-oficialismo-convoca-al-plenario-para-debatir-la-ley-de-tierras-gqh1ka"
-        },
-        {
-          "id": "w7o4x7",
-          "titulo": "Diputados da dictamen al proyecto que castiga el vandalismo rural",
-          "fecha": "2026-10-06T12:56:37.000Z",
-          "ruta": "/nota/diputados-da-dictamen-al-proyecto-que-castiga-el-vandalismo-rural-w7o4x7"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-oficialismo-busca-dictamen-para-la-propiedad-privada",
-      "foto": {
-        "archivo": "fotos-notas/jc61mz.jpg",
-        "credito": "Foto: Diario Popular"
       }
     },
     {
@@ -3855,9 +3559,9 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "Clarín",
         "0223 (Mar del Plata)",
-        "La Capital (Rosario)",
-        "Clarín"
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -4110,13 +3814,6 @@
           "aporte": null
         },
         {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
-          "fecha": "2026-10-14T17:29:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
           "fecha": "2026-10-14T12:00:00.000Z",
@@ -4127,6 +3824,13 @@
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
+          "fecha": "2026-10-14T17:29:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4285,7 +3989,7 @@
       "id": "tlvcwh",
       "titulo": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
       "copete": "El indicador financiero trepa a 602 unidades luego de siete jornadas por debajo de ese nivel. Los mercados internacionales operan en baja tras el repunte inflacionario en el norte.",
-      "cuerpo": "El riesgo país argentino trepa este miércoles y rompe el techo de los 600 puntos básicos. El indicador del JP Morgan avanza un 0,8% hasta ubicarse en 602 unidades, tras transitar siete ruedas por debajo de esa cifra.\n\nLa suba responde a una jornada de caídas en los mercados internacionales provocada por el repunte de la inflación en Estados Unidos, que alcanzó el 3,7% interanual en septiembre. Esta situación genera presión sobre los activos locales, donde los bonos ceden hasta un 0,9% y las acciones caen hasta un 3%, mientras el dólar se mantiene estable en 1.535 pesos.",
+      "cuerpo": "El riesgo país argentino trepa el miércoles y rompe el techo de los 600 puntos básicos. El indicador del JP Morgan avanza un 0,8% hasta ubicarse en 602 unidades, tras transitar siete ruedas por debajo de esa cifra.\n\nLa suba responde a una jornada de caídas en los mercados internacionales provocada por el repunte de la inflación en Estados Unidos, que alcanzó el 3,7% interanual en septiembre. Esta situación genera presión sobre los activos locales, donde los bonos ceden hasta un 0,9% y las acciones caen hasta un 3%, mientras el dólar se mantiene estable en 1.535 pesos.",
       "guion": "El riesgo país supera los seiscientos puntos tras la suba en Estados Unidos",
       "seccion": "Economía",
       "medios": [
@@ -4706,8 +4410,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Agrositio",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Agrositio"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -4836,10 +4540,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
-        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
         "Noticias Agropecuarias",
+        "Agroempresario",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
@@ -4989,69 +4693,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "ratones-paranoicos-toca-en-el-show-solista-de-ronnie-wood"
-    },
-    {
-      "id": "onywij",
-      "titulo": "Productores de papa adaptan la siembra y enfrentan la suba de precios",
-      "copete": "El sector papero ajusta las fechas de siembra debido a la variabilidad climática y depende de la tecnología de riego para sostener la producción.",
-      "cuerpo": "Los productores ajustan las tareas de siembra para adaptarlas a la variabilidad del clima, con un período óptimo que se concentra entre el 10 y el 20 de octubre, según informó el sector. Cada unidad se corta para asegurar fragmentos con al menos un brote, un procedimiento fundamental para la sanidad del cultivo.\n\nEl productor Juan Manuel Ferreiro señaló que las estrategias deben adecuarse para reducir los riesgos asociados a las heladas tardías y las altas temperaturas. Además, la tecnología de riego se transformó en una herramienta clave para administrar el agua de manera controlada y trabajar en terrenos altos.\n\nEn la comercialización, el mercado registró una tendencia alcista durante los últimos quince días debido a las heladas ocurridas meses atrás en Córdoba y las lluvias excesivas en Tucumán. El productor Pedro Felice afirmó que el clima regula los valores y que la falta de almacenamiento a gran escala deja al sector expuesto a los contratiempos regionales.",
-      "guion": "Productores de papa adaptan la siembra y enfrentan la suba de precios",
-      "seccion": "Agro",
-      "medios": [
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.eleco.com.ar/ecotv/el-impacto-del-clima-y-el-mercado-en-la-produccion-de-papa-en-tandil",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-13T14:41:26.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T21:31:43.295Z",
-      "relevancia": 18,
-      "local": false,
-      "deLaZona": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El período óptimo de siembra se concentra entre el 10 y el 20 de octubre.",
-        "La tecnología de riego permite administrar el agua y trabajar en terrenos altos.",
-        "El mercado registra una tendencia alcista en los precios por problemas climáticos en otras provincias."
-      ],
-      "seSabe": [
-        "El período óptimo de siembra se concentra entre el 10 y el 20 de octubre, según los productores.",
-        "Juan Manuel Ferreiro y Pedro Felice señalaron que los precios subieron en los últimos quince días por las heladas en Córdoba y las lluvias en Tucumán.",
-        "La tecnología de riego permite administrar el agua de manera controlada, de acuerdo con el informe."
-      ],
-      "noConfirmado": [
-        "No se detallaron cifras exactas sobre el porcentaje de aumento en los precios de comercialización.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Los productores de papa adaptan la siembra ante la variabilidad climática y enfrentan una suba de precios en el mercado por problemas en otras provincias productoras.",
-      "etiquetas": [
-        "papa",
-        "produccion",
-        "clima",
-        "precios"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/ecotv/el-impacto-del-clima-y-el-mercado-en-la-produccion-de-papa-en-tandil",
-          "fecha": "2026-10-13T14:41:28.000Z",
-          "oficial": false,
-          "aporte": "Detalló el impacto del clima en la siembra de papa, la tecnología de riego y los factores que explican la suba de precios en el mercado."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "productores-de-papa-adaptan-la-siembra-y-enfrentan-la-suba-de-precios",
-      "foto": {
-        "archivo": "fotos-notas/onywij.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
     }
   ],
   "secciones": [
@@ -5062,20 +4703,15 @@
     "Política",
     "Economía",
     "Argentina",
-    "Agro",
     "Policiales",
     "Fútbol",
-    "Tecnología"
+    "Tecnología",
+    "Agro"
   ],
   "temas": [
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 3
-    },
-    {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
       "cuantas": 2
     },
     {
@@ -5087,31 +4723,20 @@
   "clima": {
     "ahora": {
       "temp": 10,
-      "sensacion": 8,
-      "humedad": 93,
-      "viento": 11,
+      "sensacion": 9,
+      "humedad": 94,
+      "viento": 10,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": false
     },
     "dias": [
       {
-        "fecha": "2026-10-14",
-        "dia": "mié",
-        "max": 15,
-        "min": 10,
-        "lluvia": 71,
-        "codigo": 51,
-        "viento": 21,
-        "milimetros": 1,
-        "cielo": "Llovizna leve"
-      },
-      {
         "fecha": "2026-10-15",
         "dia": "jue",
         "max": 15,
         "min": 9,
-        "lluvia": 36,
+        "lluvia": 41,
         "codigo": 51,
         "viento": 20,
         "milimetros": 0,
@@ -5122,7 +4747,7 @@
         "dia": "vie",
         "max": 12,
         "min": 6,
-        "lluvia": 16,
+        "lluvia": 18,
         "codigo": 51,
         "viento": 17,
         "milimetros": 1,
@@ -5133,10 +4758,21 @@
         "dia": "sáb",
         "max": 11,
         "min": 7,
-        "lluvia": 0,
+        "lluvia": 6,
         "codigo": 51,
         "viento": 18,
         "milimetros": 0,
+        "cielo": "Llovizna leve"
+      },
+      {
+        "fecha": "2026-10-18",
+        "dia": "dom",
+        "max": 12,
+        "min": 5,
+        "lluvia": 12,
+        "codigo": 51,
+        "viento": 12,
+        "milimetros": 1,
         "cielo": "Llovizna leve"
       }
     ],
@@ -5154,8 +4790,7 @@
         {
           "nombre": "San José de la Plaza",
           "direccion": "Av. Chaves esquina 15",
-          "telefono": null,
-          "fuente": "La Vanguardia"
+          "telefono": null
         }
       ],
       "mes": 10,
@@ -5172,8 +4807,7 @@
           {
             "nombre": "San José de la Plaza",
             "direccion": "Av. Chaves esquina 15",
-            "telefono": null,
-            "fuente": "La Vanguardia"
+            "telefono": null
           }
         ],
         "mes": 10,
@@ -5279,8 +4913,7 @@
       }
     ],
     "avisos": [
-      "sólo llega hasta el día 25 de 31: hay que recargarlo",
-      "La Vanguardia dice que hoy es San José de la Plaza, el Colegio dice san jose plaza: revisar antes de publicar"
+      "sólo llega hasta el día 25 de 31: hay que recargarlo"
     ]
   },
   "agenda": {
@@ -5441,6 +5074,12 @@
   },
   "pendientes": [
     {
+      "id": "1spqpr6",
+      "titulo": "Murió Norberto Di Próspero, secretario general de la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+    },
+    {
       "id": "1hb8gyb",
       "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
       "seccion": "Balcarce",
@@ -5457,12 +5096,6 @@
       "titulo": "Gabriel Solano denunció penalmente a Javier Milei y Luis…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "h0a84i",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "sngreo",
@@ -5495,12 +5128,6 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "7txprm",
-      "titulo": "Los mensajes de despedida tras la muerte de Roña Castro a…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "120b8gy",
       "titulo": null,
       "seccion": "Policiales",
@@ -5525,16 +5152,16 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1o3t7bf",
-      "titulo": "Javier Milei viaja a Estados Unidos para reforzar su…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "1thkkxk",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "11y8l6f",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1333xd6",
@@ -5561,12 +5188,6 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "n3o8iw",
-      "titulo": "El periodista brasileño deportado por criticar a Javier…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
       "id": "115hicz",
       "titulo": "El dolor de Graciela Alfano al visitar la casa de su…",
       "seccion": "Argentina",
@@ -5585,11 +5206,17 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "1yxi3mj",
+      "titulo": "El periodista brasileño deportado de la Argentina denunció…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "owe7fy",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }

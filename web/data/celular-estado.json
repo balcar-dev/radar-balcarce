@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T02:31:47.873Z",
- "portada": 60,
+ "generado": "2026-10-15T03:02:45.897Z",
+ "portada": 56,
  "archivo": 1105,
- "esperandoCuerpo": 1,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-15T02:31:47.912Z",
+  "generado": "2026-10-15T03:02:45.941Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -13,8 +13,8 @@
     "que": "El clima de la mañana",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-14T10:05:44.762Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "efemeride",
@@ -23,8 +23,8 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-14T12:05:23.923Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia1",
@@ -33,18 +33,18 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "cerrada",
-    "salio": "2026-10-14T13:08:36.081Z"
+    "momento": "antes",
+    "salio": null
    },
    {
-    "nombre": "participa-reclamos",
+    "nombre": "agenda",
     "tipo": "reel",
     "hora": "12:00",
-    "que": "Tu reclamo",
+    "que": "La agenda del fin de semana",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "cerrada",
-    "salio": "2026-10-14T15:05:53.344Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -53,8 +53,8 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "cerrada",
-    "salio": "2026-10-14T18:06:39.981Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "farmacia",
@@ -63,8 +63,8 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "en-hora",
-    "salio": "2026-10-14T22:06:26.968Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "clima-noche",
@@ -73,8 +73,8 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
-    "salio": "2026-10-14T23:06:25.623Z"
+    "momento": "antes",
+    "salio": null
    },
    {
     "nombre": "podcast",
@@ -83,8 +83,8 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
-    "salio": "2026-10-15T00:06:31.067Z"
+    "momento": "antes",
+    "salio": null
    }
   ],
   "repasos": [
@@ -93,29 +93,29 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "cerrada",
-    "salio": "2026-10-14T13:08:36.081Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 50,
     "notas": [
      {
-      "id": "97f98g",
-      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
+      "id": "1e22az3",
+      "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "fav3c1",
+      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
       "seccion": "Balcarce"
      },
      {
-      "id": "pdqhm3",
-      "titulo": "Lisandro Martínez critica a la directiva del Manchester United y Rooney le responde",
-      "seccion": "Fútbol"
+      "id": "1s8weuc",
+      "titulo": "El Turismo Nacional evalúa incorporar a Balcarce para su calendario",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "1aylfrc",
-      "titulo": "El INDEC informa que los servicios aumentan por encima de los bienes",
-      "seccion": "Economía"
-     },
-     {
-      "id": "1fi9fiz",
-      "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
-      "seccion": "Deportes"
+      "id": "wzunxc",
+      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -124,29 +124,19 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "cerrada",
-    "salio": "2026-10-14T18:06:39.981Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 28,
     "notas": [
      {
-      "id": "1iy72x8",
-      "titulo": null,
-      "seccion": null
+      "id": "17v35o5",
+      "titulo": "Abren convocatoria para investigadores de hospitales bonaerenses",
+      "seccion": "Balcarce"
      },
      {
-      "id": "11uyvlg",
-      "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
-      "seccion": "Argentina"
-     },
-     {
-      "id": "1ge6irq",
-      "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "u043fh",
-      "titulo": "Organizan una peregrinación a pie hacia la Ermita de Los Pinos",
-      "seccion": "Cultura y agenda"
+      "id": "11d0zcr",
+      "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -155,61 +145,25 @@
     "titulo": "El repaso del día",
     "hora": "21:00",
     "voz": "locutor",
-    "momento": "en-hora",
-    "salio": "2026-10-15T00:06:31.067Z",
-    "segundos": null,
+    "momento": "antes",
+    "salio": null,
+    "segundos": 22,
     "notas": [
      {
-      "id": "gy4i31",
-      "titulo": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula 1",
-      "seccion": "Automovilismo"
-     },
-     {
-      "id": "wm8hav",
-      "titulo": "El Concejo Deliberativo Estudiantil cierra su quinta edición con 25 iniciativas",
+      "id": "wfa595",
+      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
       "seccion": "Balcarce"
      },
      {
-      "id": "zfpkeo",
-      "titulo": "Incidentes y represión policial en el ingreso de River en Junín",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "10aoo7v",
-      "titulo": "Andrea Marinoni juega la Copa Sudamericana de tenis",
-      "seccion": "Deportes"
+      "id": "tctot0",
+      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
+      "seccion": "Balcarce"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [
-    {
-     "id": "5biv0y",
-     "titulo": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares",
-     "cuando": "2026-10-14T11:04:40.468Z"
-    },
-    {
-     "id": "505otd",
-     "titulo": "El mundo conmemora la donación de órganos y otras efemérides",
-     "cuando": "2026-10-14T12:35:32.725Z"
-    },
-    {
-     "id": "1ge6irq",
-     "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
-     "cuando": "2026-10-14T14:34:42.396Z"
-    },
-    {
-     "id": "11eff0s",
-     "titulo": "Balcarce evalúa su postura judicial ante la quita del régimen de Zona Fría",
-     "cuando": "2026-10-14T16:05:25.298Z"
-    },
-    {
-     "id": "1fi9fiz",
-     "titulo": "Campo de Pato clasifica a sus dos equipos a las semifinales",
-     "cuando": "2026-10-14T17:45:25.193Z"
-    }
-   ],
+   "hoy": [],
    "cola": [
     {
      "id": "wm8hav",
@@ -224,7 +178,7 @@
      "marcada": false
     }
    ],
-   "cupo": 0,
+   "cupo": 5,
    "proximoDesde": "2026-10-14T19:15:25.193Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
