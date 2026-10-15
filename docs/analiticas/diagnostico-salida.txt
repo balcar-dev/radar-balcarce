@@ -1,0 +1,48 @@
+=== 1. Mediciones de las 9 y las 21 (puntos) con algo raro ===
+2026-09-25T12:00  sin web (error)
+2026-09-30T12:00  TODO EN CERO (u12, u24 y hasta las 24-48 h de antes)
+2026-10-09T12:00  IMPOSIBLE: 12 h = 9/45, 24 h = 0/300
+2026-10-12T12:00  IMPOSIBLE: 12 h = 16/110, 24 h = 0/0
+2026-10-13T12:00  TODO EN CERO (u12, u24 y hasta las 24-48 h de antes)
+2026-10-15T12:00  TODO EN CERO (u12, u24 y hasta las 24-48 h de antes)
+Total de mediciones: 42; raras: 6
+
+=== 2. Días del detalle (`dias`) ===
+2026-09-29  visitas  42  vistas 325  ok
+2026-09-30  visitas  38  vistas  75  ok
+2026-10-01  visitas  39  vistas 288  ok
+2026-10-02  visitas  52  vistas 123  ok
+2026-10-03  visitas  56  vistas 116  ok
+2026-10-04  visitas  54  vistas 165  ok
+2026-10-05  visitas  31  vistas  80  <-- sin países
+2026-10-06  visitas  77  vistas  99  ok
+2026-10-07  visitas  49  vistas  74  ok
+2026-10-08  visitas  79  vistas 199  ok
+2026-10-09  visitas  52  vistas 139  <-- vistas 139 pero las horas suman 0; sin ninguna dirección; aparatos suman 400 > vistas 139; sin países
+2026-10-10  visitas  40  vistas 111  ok
+2026-10-11  visitas   0  vistas   0  <-- vistas 0 pero las horas suman 98
+2026-10-12  visitas  37  vistas 117  ok
+2026-10-13  visitas   0  vistas   0  <-- VACÍO (todo cero)
+2026-10-14  visitas   0  vistas   0  <-- VACÍO (todo cero)
+2026-10-15  visitas   0  vistas   0  <-- VACÍO (todo cero)
+
+=== 3. Con los 11 días sanos ===
+Promedio por día: 51.2 visitas y 153.8 páginas vistas
+Páginas vistas desde Argentina: 959 de 1692 (56.7 %); fuera: 43.3 %
+Países: AR 959, US 475, CN 85, SE 77, IE 76, NL 4, KR 4, DE 4, PL 4, HK 2, ES 1, JP 1
+Visitas por origen: facebook.com 388 (68.9 %), directo 169 (30.0 %), google.com 6 (1.1 %)
+Aparatos: mobile 924, desktop 650
+Páginas vistas de Argentina por día: 263, 12, 238, 61, 41, 102, 2, 21, 99, 45, 75  (promedio 87)
+
+=== 4. Hora 9 de Balcarce (12:00 UTC) en el detalle ===
+09-29:0  09-30:0  10-01:11  10-02:0  10-03:0  10-04:24  10-05:0  10-06:7  10-07:6  10-08:11  10-09:0  10-10:0  10-11:0  10-12:0  10-13:0  10-14:0  10-15:0
+
+=== 5. Estadísticas por pieza de redes ===
+facebook/historia     102 mediciones; vacías   0; todo en cero 102
+facebook/posteo        60 mediciones; vacías   1; todo en cero   9
+instagram/foto         59 mediciones; vacías   1; todo en cero   1
+instagram/reel         54 mediciones; vacías   0; todo en cero   3
+facebook/reel          70 mediciones; vacías  70; todo en cero   0
+instagram/historia     53 mediciones; vacías  53; todo en cero   0
+Sin utilidad: 240 de 398 (60.3 %)
+Posteos de Facebook medidos: 60; clics totales que informa Meta: 6
