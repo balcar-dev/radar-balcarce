@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T11:33:27.635Z",
- "portada": 33,
- "archivo": 1101,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-15T12:03:00.825Z",
+ "portada": 41,
+ "archivo": 1104,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-10-15T11:33:27.670Z",
+  "generado": "2026-10-15T12:03:00.867Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -95,21 +95,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 51,
     "notas": [
+     {
+      "id": "1v9h1ps",
+      "titulo": "La delegación local parte el lunes hacia la final provincial",
+      "seccion": "Cultura y agenda"
+     },
      {
       "id": "vt870i",
       "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
       "seccion": "Deportes"
      },
      {
-      "id": "1e22az3",
-      "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "fav3c1",
-      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
+      "id": "wzunxc",
+      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
       "seccion": "Balcarce"
      },
      {
@@ -126,7 +126,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 31,
+    "segundos": 53,
     "notas": [
      {
       "id": "8q3d25",
@@ -134,9 +134,14 @@
       "seccion": "Deportes"
      },
      {
-      "id": "405jgy",
-      "titulo": "Balcarce despide al Chiqui Smiraglia, referente de la danza local",
+      "id": "1e22az3",
+      "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "fav3c1",
+      "titulo": "Brooklyn Café vende 1200 cookies tras la suspensión de la Fiesta del Postre",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -147,17 +152,39 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 27,
+    "notas": [
+     {
+      "id": "405jgy",
+      "titulo": "Balcarce despide al Chiqui Smiraglia, referente de la danza local",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "wfa595",
+      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "tctot0",
+      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
+      "seccion": "Balcarce"
+     }
+    ]
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "vt870i",
      "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
-     "seccion": "Deportes",
+     "cuando": "2026-10-15T11:45:21.928Z"
+    }
+   ],
+   "cola": [
+    {
+     "id": "1v9h1ps",
+     "titulo": "La delegación local parte el lunes hacia la final provincial",
+     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
@@ -167,8 +194,8 @@
      "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-10-14T19:15:25.193Z",
+   "cupo": 4,
+   "proximoDesde": "2026-10-15T13:15:21.928Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
