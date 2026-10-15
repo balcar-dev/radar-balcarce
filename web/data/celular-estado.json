@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T21:59:36.616Z",
- "portada": 55,
+ "generado": "2026-10-15T22:02:42.365Z",
+ "portada": 56,
  "archivo": 1140,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-10-15T21:59:36.643Z",
+  "generado": "2026-10-15T22:02:42.394Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -53,7 +53,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-15T18:07:39.825Z"
    },
    {
@@ -63,7 +63,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -124,7 +124,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-15T18:07:39.825Z",
     "segundos": null,
     "notas": [
