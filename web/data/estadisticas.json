@@ -1779,6 +1779,53 @@
         "vistas": 32,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-10-15T00:00:19.957Z",
+      "web": {
+        "u12": {
+          "visitas": 38,
+          "vistas": 56
+        },
+        "a12": {
+          "visitas": 13,
+          "vistas": 34
+        },
+        "u24": {
+          "visitas": 51,
+          "vistas": 90
+        },
+        "a24": {
+          "visitas": 37,
+          "vistas": 137
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 20
+          },
+          {
+            "camino": "/nota/el-mundo-conmemora-la-donacion-de-organos-y-otras-efemerides-505otd",
+            "vistas": 12
+          },
+          {
+            "camino": "/nota/arca-habilita-el-recibo-de-sueldo-electronico-asistido-para-casas-5biv0y",
+            "vistas": 8
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 49,
+        "vistas": 7912,
+        "interacciones": 81
+      },
+      "instagram": {
+        "seguidores": 7,
+        "publicaciones": 163,
+        "alcance": 32,
+        "vistas": 86,
+        "interacciones": 0
+      }
     }
   ],
   "dias": {
@@ -2828,8 +2875,8 @@
         "/seccion/balcarce": 2
       },
       "dispositivos": {
-        "mobile": 89,
-        "desktop": 28
+        "mobile": 90,
+        "desktop": 20
       },
       "paises": {
         "AR": 75,
@@ -2871,8 +2918,8 @@
         "directo": 5,
         "google.com": 4
       },
-      "visitas": 42,
-      "vistas": 146,
+      "visitas": 0,
+      "vistas": 0,
       "horas": [
         0,
         0,
@@ -2903,29 +2950,24 @@
         "desktop": 95,
         "mobile": 51
       },
-      "paises": {
-        "AR": 91,
-        "US": 32,
-        "IE": 8,
-        "FR": 8,
-        "SE": 6,
-        "PY": 1
-      }
+      "paises": {}
     },
     "2026-10-14": {
-      "visitas": 5,
-      "vistas": 16,
+      "visitas": 43,
+      "vistas": 72,
       "dispositivos": {
-        "mobile": 14,
-        "desktop": 2
+        "desktop": 50,
+        "mobile": 30
       },
       "paises": {
-        "AR": 9,
-        "US": 4,
-        "IE": 3
+        "US": 33,
+        "AR": 28,
+        "IE": 9,
+        "SE": 2
       },
       "referentes": {
-        "facebook.com": 4,
+        "facebook.com": 41,
+        "directo": 1,
         "google.com": 1
       },
       "horas": [
@@ -2938,14 +2980,14 @@
         0,
         0,
         16,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        10,
+        8,
+        8,
+        7,
+        2,
+        2,
+        11,
+        8,
         0,
         0,
         0,
@@ -2954,13 +2996,8 @@
         0,
         0
       ],
-      "notas": {
-        "5biv0y": 8,
-        "u043fh": 2
-      },
-      "paginas": {
-        "/": 6
-      }
+      "notas": {},
+      "paginas": {}
     }
   }
 }
