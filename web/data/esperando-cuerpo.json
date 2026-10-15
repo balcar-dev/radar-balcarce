@@ -1,37 +1,64 @@
 {
- "generado": "2026-10-15T01:02:07.228Z",
+ "generado": "2026-10-15T01:32:48.780Z",
  "intentosMaximos": 3,
  "notas": [
   {
-   "id": "2m710x",
-   "titulo": "La Justicia declaró la quiebra de Algodonera Avellaneda, una empresa vinculada a Vicentin",
-   "copete": "La Justicia declaró la quiebra de Algodonera Avellaneda SA, la empresa textil vinculada al grupo Vicentin ubicada en la localidad santafecina de Reconquista , después de que fracasaran las negociaciones con los acreedores y no se presentaran interesados en el proceso de…",
-   "seccion": "Economía",
-   "fecha": "2026-10-14T18:37:01.000Z",
+   "id": "1spqpr6",
+   "titulo": "Murió Norberto Di Próspero, secretario general de la Asociación del Personal Legislativo",
+   "copete": "Norberto Di Próspero , titular de la Asociación del Personal Legislativo (APL), murió este miércoles a los 61 años. Su fallecimiento generó repercusiones en el ámbito sindical y político, donde se desempeñó durante más de dos décadas como representante de los trabajadores del…",
+   "seccion": "Argentina",
+   "fecha": "2026-10-15T00:11:10.000Z",
    "fuentes": [
     {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/campo/la-justicia-declaro-la-quiebra-de-algodonera-avellaneda-una-empresa-vinculada-a-vicentin-nid14102026/",
-     "fecha": "2026-10-14T18:37:01.000Z"
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/murio-norberto-di-prospero-secretario-general-asociacion-personal-legislativo_0_cy9oaurOgX.html",
+     "fecha": "2026-10-15T00:11:10.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/politica/murio-norberto-di-prospero-historico-lider-apl-el-congreso-n6333926",
+     "fecha": "2026-10-15T00:59:00.000Z"
     },
     {
      "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/campo/2026/10/14/fin-de-ciclo-para-algodonera-avellaneda-el-fuero-comercial-decreto-la-quiebra-y-ordeno-la-liquidacion-con-planta-abierta/",
-     "fecha": "2026-10-15T00:34:55.000Z"
+     "enlace": "https://tn.com.ar/politica/2026/10/14/murio-norberto-di-prospero-historico-dirigente-del-gremio-de-trabajadores-del-congreso/",
+     "fecha": "2026-10-15T00:51:20.000Z"
     },
     {
-     "medio": "El Cronista",
-     "enlace": "https://www.cronista.com/negocios/sin-salida-la-justicia-decreto-la-quiebra-de-algodonera-avellaneda/",
-     "fecha": "2026-10-14T21:11:55.000Z"
+     "medio": "El Destape",
+     "enlace": "https://www.eldestapeweb.com/politica/muerte-golpea-congreso-antes-sesion-dnu-70-23-milei-202610142243",
+     "fecha": "2026-10-15T01:04:03.000Z"
     },
     {
-     "medio": "iProfesional",
-     "enlace": "https://www.iprofesional.com/negocios/466623-algodonera-avellaneda-quiebra-deuda-millonaria-preocupa-empleados",
-     "fecha": "2026-10-14T21:58:00.000Z"
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/15/murio-norberto-di-prospero-historico-referente-del-sindicalismo-parlamentario/",
+     "fecha": "2026-10-15T01:27:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/sociedad/murio-norberto-di-prospero--historico-referente-del-sindicalismo-legislativo_a6ad016ad8298ee386b435f67",
+     "fecha": "2026-10-15T00:13:00.000Z"
+    }
+   ],
+   "intentos": 2,
+   "motivo": "título o bajada: 2 problemas (numero): el titulo dice 60 y la fuente no lo dice",
+   "maximo": 4
+  },
+  {
+   "id": "19xa7ho",
+   "titulo": "Atletismo Buena tarea de atletas balcarceños de la AACyC",
+   "copete": "",
+   "seccion": "Deportes",
+   "fecha": "2026-10-15T01:31:56.486Z",
+   "fuentes": [
+    {
+     "medio": "Diario La Vanguardia",
+     "enlace": "https://www.diariolavanguardia.com/deportes/14330-buena-tarea-de-atletas-balcarcenos-de-la-aacyc/",
+     "fecha": null
     }
    ],
    "intentos": 1,
-   "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras",
+   "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2774 (line 27 column 13)",
    "maximo": 3
   }
  ]

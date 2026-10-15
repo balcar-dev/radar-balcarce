@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T01:02:07.228Z",
+  "generado": "2026-10-15T01:32:48.780Z",
   "notas": [
     {
       "id": "wfa595",
@@ -52,7 +52,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "walter-ianni-lopez-participa-de-encuentros-diplomaticos-en-beijing"
+      "slug": "walter-ianni-lopez-participa-de-encuentros-diplomaticos-en-beijing",
+      "foto": {
+        "archivo": "fotos-notas/wfa595.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
     },
     {
       "id": "repaso20261014noche",
@@ -142,7 +146,7 @@
       "fecha": "2026-10-14T22:17:00.000Z",
       "sinFecha": false,
       "visto": "2026-10-15T00:01:52.987Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -228,6 +232,7 @@
       "guion": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "seccion": "Política",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/politica/sol-di-geronimo-participo-en-necochea-del-curso-de-formacion-politica-encabezado-por-julio-alak",
@@ -235,7 +240,7 @@
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 84,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -315,6 +320,7 @@
       "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
@@ -769,87 +775,6 @@
       }
     },
     {
-      "id": "gy4i31",
-      "titulo": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula 1",
-      "copete": "El piloto argentino reclamó detener las agresiones contra otros integrantes de la categoría para no afectar su futuro deportivo. Además, anunció que se alejará temporalmente de las redes sociales.",
-      "cuerpo": "El piloto Franco Colapinto solicitó a sus seguidores detener las críticas y agresiones dirigidas a otros protagonistas de la Fórmula 1. El deportista agradeció el respaldo constante, pero aclaró que tales reacciones generan un perjuicio en lugar de una defensa.\n\nEn este contexto, el automovilista comunicó que suspenderá su actividad en las redes sociales para enfocarse plenamente en su desempeño y en la labor junto a su equipo de trabajo, aunque mantendrá el contacto durante las competencias.",
-      "guion": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula uno",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Clarín",
-        "0223 (Mar del Plata)",
-        "La Nación",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "TyC Sports",
-        "Minuto Uno",
-        "Crónica",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Nueva",
-        "La Brújula 24",
-        "La Voz del Pueblo",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Bolavip Argentina",
-        "Olé"
-      ],
-      "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T19:46:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T21:01:59.221Z",
-      "relevancia": 97,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "textoRedes": "El piloto Franco Colapinto pidió a sus seguidores que detengan los ataques contra otros protagonistas de la Fórmula 1 para evitar perjuicios en su futuro deportivo y anunció que se alejará temporalmente de las redes sociales.",
-      "etiquetas": [
-        "Franco Colapinto",
-        "Fórmula 1",
-        "Redes sociales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
-          "fecha": "2026-10-14T19:46:23.000Z",
-          "oficial": false,
-          "aporte": "Detalló los dichos de Colapinto sobre los afectados y su alejamiento de las redes."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-14-17-43-0-colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1-no-me-ayudan",
-          "fecha": "2026-10-14T20:55:13.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el pedido del piloto se realizó a través de un video."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "zd48ar",
-          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
-          "fecha": "2026-09-27T10:48:17.000Z",
-          "ruta": "/nota/el-respaldo-de-juan-pablo-montoya-a-franco-colapinto-en-la-formula-1-zd48ar"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "franco-colapinto-pide-frenar-los-ataques-de-sus-fanaticos-en-la",
-      "foto": {
-        "archivo": "fotos-notas/gy4i31.jpg",
-        "credito": "Foto: La Nueva"
-      }
-    },
-    {
       "id": "1ummanb",
       "titulo": "El autódromo porteño supera el sesenta por ciento de obra para recibir al MotoGP",
       "copete": "El circuito Oscar y Juan Gálvez ejecuta pruebas de asfalto en la pista con la meta de albergar la competencia internacional en abril de 2027. Los tickets ya están a la venta.",
@@ -1030,6 +955,164 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "el-oficialismo-busca-dictaminar-la-reforma-de-salud-mental-en-el"
+    },
+    {
+      "id": "2m710x",
+      "titulo": "La Justicia declara la quiebra de la textil Algodonera Avellaneda",
+      "copete": "El magistrado Fabián Lorenzini dictó la quiebra indirecta de la firma santafesina tras fracasar las negociaciones. La compañía adeuda más de 260 millones de dólares y la medida pone en riesgo a unos 360 empleos.",
+      "cuerpo": "El Juzgado Civil y Comercial de Segunda Nominación de Reconquista decretó la quiebra de Algodonera Avellaneda, una firma textil vinculada al grupo Vicentin asentada en la provincia de Santa Fe. La medida judicial llegó este miércoles por disposición del juez Fabián Lorenzini, luego de que venciera el plazo sin postulantes inscriptos para el salvataje y fracasaran los entendimientos con los acreedores.\n\nEl proceso preventivo colapsó tras el rechazo a un planteo para excluir al Banco Nación, entidad que concentra la mayor parte de las acreencias. Según el fallo, la compañía acumula obligaciones financieras superiores a los 260 millones de dólares y más de 6000 millones de pesos en pasivos postconcursales.\n\nLa resolución contempla evaluar la continuidad transitoria de la producción en las plantas para preservar los puestos de los 360 operarios mientras se procura un comprador.",
+      "guion": "La Justicia declara la quiebra de la textil Algodonera Avellaneda",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "iProfesional"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/campo/la-justicia-declaro-la-quiebra-de-algodonera-avellaneda-una-empresa-vinculada-a-vicentin-nid14102026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T18:37:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T01:31:56.486Z",
+      "relevancia": 70,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El juez Fabián Lorenzini dictó la quiebra de la textil.",
+        "Fracasó el proceso de salvataje sin interesados anotados.",
+        "La empresa acumula deudas millonarias en dólares y pesos."
+      ],
+      "seSabe": [
+        "El Juzgado de Reconquista dictó la quiebra indirecta este miércoles.",
+        "El Banco Nación concentra más del 80 por ciento de la deuda votante.",
+        "La compañía emplea a unas 360 personas."
+      ],
+      "noConfirmado": [
+        "Todavía no se determinó si las plantas continuarán operando de forma transitoria durante el proceso de venta."
+      ],
+      "textoRedes": "La Justicia dictó la quiebra de la textil Algodonera Avellaneda tras fracasar el salvataje y las negociaciones con acreedores. La firma adeuda más de 260 millones de dólares y la medida afecta a unos 360 empleados en Santa Fe.",
+      "etiquetas": [
+        "Algodonera Avellaneda",
+        "Vicentin",
+        "quiebra",
+        "Santa Fe",
+        "textil",
+        "justicia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/la-justicia-declaro-la-quiebra-de-algodonera-avellaneda-una-empresa-vinculada-a-vicentin-nid14102026/",
+          "fecha": "2026-10-14T18:37:01.000Z",
+          "oficial": false,
+          "aporte": "Detalló la ubicación en Reconquista, el rechazo al planteo sobre el Banco Nación y los montos de la deuda."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/fin-de-ciclo-para-algodonera-avellaneda-el-fuero-comercial-decreto-la-quiebra-y-ordeno-la-liquidacion-con-planta-abierta/",
+          "fecha": "2026-10-15T00:34:55.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el fallo estuvo a cargo del juez Fabián Lorenzini este miércoles."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/negocios/sin-salida-la-justicia-decreto-la-quiebra-de-algodonera-avellaneda/",
+          "fecha": "2026-10-14T21:11:55.000Z",
+          "oficial": false,
+          "aporte": "Indicó que venció el plazo de salvataje sin inscriptos para rescatar a la firma de la familia Vicentin."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/negocios/466623-algodonera-avellaneda-quiebra-deuda-millonaria-preocupa-empleados",
+          "fecha": "2026-10-14T21:58:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que la compañía textil cuenta con alrededor de 360 trabajadores."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-justicia-declara-la-quiebra-de-la-textil-algodonera-avellaneda",
+      "foto": {
+        "archivo": "fotos-notas/2m710x.jpg",
+        "credito": "Foto: La Nación"
+      }
+    },
+    {
+      "id": "q7bxgi",
+      "titulo": "On City ofrece descuentos y financiación por el Día de la Madre",
+      "copete": "La firma lanza una propuesta comercial con rebajas de hasta el 50% y distintas opciones de pago para compras tecnológicas y de electrodomésticos.",
+      "cuerpo": "La cadena comercial On City dispone una serie de beneficios en tecnología, electrodomésticos y artículos para el hogar con motivo del Día de la Madre. La iniciativa se desarrolla desde el 15 hasta el 18 de octubre e incluye rebajas de hasta el 50% junto con un plan de hasta 18 cuotas sin interés mediante tarjetas de entidades bancarias participantes.\n\nLa oferta comprende rubros como teléfonos celulares, tabletas, computadoras portátiles, televisores, equipos de audio y pequeños electrodomésticos. Asimismo, quienes utilicen la financiación propia de la firma acceden a un 20% de rebaja y hasta 24 cuotas fijas, con la posibilidad de postergar el primer pago para noviembre.\n\nLos compradores disponen de la alternativa de retirar los pedidos sin costo en cualquiera de los más de 180 locales distribuidos en todo el territorio nacional o mediante su plataforma digital.",
+      "guion": "On City ofrece descuentos y financiación por el Día de la Madre",
+      "seccion": "Economía",
+      "medios": [
+        "El Cronista",
+        "Ámbito"
+      ],
+      "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T18:18:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T01:31:56.486Z",
+      "relevancia": 50,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Del 15 al 18 de octubre hay rebajas de hasta el 50%",
+        "Hasta 18 cuotas sin interés con tarjetas bancarias",
+        "Financiación propia de hasta 24 cuotas fijas con On City Crédito",
+        "Retiro gratuito en más de 180 sucursales y en la web"
+      ],
+      "seSabe": [
+        "On City presenta beneficios comerciales por el Día de la Madre",
+        "La promoción rige desde el 15 hasta el 18 de octubre",
+        "Hay rebajas de hasta el 50% y 18 cuotas sin interés con tarjetas bancarias",
+        "Con On City Crédito se puede abonar en hasta 24 cuotas fijas con inicio de pago en noviembre",
+        "La propuesta abarca celulares, notebooks, televisores y pequeños electrodomésticos"
+      ],
+      "textoRedes": "On City lanza descuentos de hasta el 50% y financiación en hasta 24 cuotas por el Día de la Madre en tecnología y electrodomésticos.",
+      "etiquetas": [
+        "On City",
+        "Día de la Madre",
+        "descuentos",
+        "financiación",
+        "electrodomésticos",
+        "tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/negocios/dia-la-madre-on-city-presenta-descuentos-50-y-financiacion-24-cuotas-n6333738",
+          "fecha": "2026-10-14T18:18:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles completos de la propuesta comercial, fechas, categorías de productos, modalidades de financiación y opciones de retiro."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/contenido-patrocinado/dia-de-la-madre-on-city-presenta-descuentos-de-hasta-40-y-financiacion-en-hasta-24-cuotas/",
+          "fecha": "2026-10-15T00:47:25.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las fechas del 15 al 18 de octubre, el porcentaje de descuento y las cuotas con tarjetas bancarias."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "on-city-ofrece-descuentos-y-financiacion-por-el-dia-de-la-madre",
+      "foto": {
+        "archivo": "fotos-notas/q7bxgi.jpg",
+        "credito": "Foto: Ámbito"
+      }
     },
     {
       "id": "repaso20261014tarde",
@@ -1292,6 +1375,80 @@
       }
     },
     {
+      "id": "1qu6ie7",
+      "titulo": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "copete": "El informe climático para la próxima semana anticipa registros pluviométricos modestos en gran parte del país y mínimas inferiores a 10 grados en el este bonaerense.",
+      "cuerpo": "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 15 al 21 de octubre, que anticipa precipitaciones escasas en la mayor parte de la región agrícola, con la excepción del extremo norte. Según el informe, la entrada de aire marítimo mantendrá las temperaturas mínimas por debajo de los valores habituales, mientras que el este de Buenos Aires registrará marcas inferiores a 10 grados con leve riesgo de heladas localizadas. Hacia el final del periodo, el regreso de vientos tropicales provocará un ascenso térmico generalizado, aunque el sur de la Región Pampeana y la Costa Atlántica se mantendrán con máximas por debajo de los 20 grados debido a la circulación marina.",
+      "guion": "Pronostican lluvias escasas y marcada amplitud térmica en el área agrícola",
+      "seccion": "Agro",
+      "medios": [
+        "Agrositio",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T17:34:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T19:32:01.897Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pronóstico vigente del 15 al 21 de octubre.",
+        "Lluvias escasas en la mayor parte del país.",
+        "Mínimas menores a 10 grados en el este bonaerense."
+      ],
+      "seSabe": [
+        "La Bolsa de Cereales de Buenos Aires informó el pronóstico para la próxima semana.",
+        "Habrá precipitaciones escasas en la mayor parte del área agrícola.",
+        "El este de Buenos Aires registrará mínimas menores a 10 grados."
+      ],
+      "textoRedes": "El informe climático para la próxima semana anticipa lluvias escasas en gran parte del país y temperaturas mínimas inferiores a 10 grados en el este de Buenos Aires.",
+      "etiquetas": [
+        "Clima",
+        "Bolsa de Cereales",
+        "Lluvias",
+        "Temperaturas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248831-precipitaciones-moderadas-a-escasas-y-grandes-contrastes-termicos.html",
+          "fecha": "2026-10-14T17:34:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló los registros de precipitaciones, temperaturas mínimas y máximas por región según el informe de la Bolsa de Cereales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/14/la-region-agricola-recibira-lluvias-escasas-durante-los-proximos-dias-excepto-en-el-extremo-norte/",
+          "fecha": "2026-10-14T19:09:51.000Z",
+          "oficial": false,
+          "aporte": "Informó que se esperan lluvias escasas en la mayor parte de la región agrícola para el período del 15 al 21 de octubre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vqv317",
+          "titulo": "El clima muestra cielo nublado y posibles lluvias débiles",
+          "fecha": "2026-10-05T11:23:01.000Z",
+          "ruta": "/nota/el-clima-muestra-cielo-nublado-y-posibles-lluvias-debiles-vqv317"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pronostican-lluvias-escasas-y-marcada-amplitud-termica-en-el-area",
+      "foto": {
+        "archivo": "fotos-notas/1qu6ie7.jpg",
+        "credito": "Foto: Agrositio"
+      }
+    },
+    {
       "id": "eumyqk",
       "titulo": "San Nicolás propone eliminar tasa local si Nación quita el IVA",
       "copete": "El intendente de San Nicolás, Santiago Passaglia, desafió al Gobierno nacional a eliminar la Tasa de Seguridad e Higiene a cambio de que la Nación deje de cobrar el IVA en obras y servicios públicos municipales.",
@@ -1300,10 +1457,10 @@
       "seccion": "Política",
       "medios": [
         "Ecos Diarios (Necochea)",
-        "Ámbito",
         "Minuto Uno",
         "Infobae",
         "TN (Todo Noticias)",
+        "Ámbito",
         "Noticias Argentinas (NA)",
         "El Día",
         "Agencia DIB"
@@ -1770,9 +1927,9 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
-        "A24",
+        "iProUP",
         "iProfesional",
-        "iProUP"
+        "A24"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -1843,6 +2000,89 @@
       }
     },
     {
+      "id": "gy4i31",
+      "titulo": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula 1",
+      "copete": "El piloto argentino reclamó detener las agresiones contra otros integrantes de la categoría para no afectar su futuro deportivo. Además, anunció que se alejará temporalmente de las redes sociales.",
+      "cuerpo": "El piloto Franco Colapinto solicitó a sus seguidores detener las críticas y agresiones dirigidas a otros protagonistas de la Fórmula 1. El deportista agradeció el respaldo constante, pero aclaró que tales reacciones generan un perjuicio en lugar de una defensa.\n\nEn este contexto, el automovilista comunicó que suspenderá su actividad en las redes sociales para enfocarse plenamente en su desempeño y en la labor junto a su equipo de trabajo, aunque mantendrá el contacto durante las competencias.",
+      "guion": "Franco Colapinto pide frenar los ataques de sus fanáticos en la Fórmula uno",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Diario La Vanguardia",
+        "Clarín",
+        "0223 (Mar del Plata)",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "Página/12",
+        "A24",
+        "TyC Sports",
+        "Minuto Uno",
+        "Crónica",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "La Brújula 24",
+        "La Voz del Pueblo",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Bolavip Argentina",
+        "Olé",
+        "El Gráfico"
+      ],
+      "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T13:45:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T21:01:59.221Z",
+      "relevancia": 97,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "textoRedes": "El piloto Franco Colapinto pidió a sus seguidores que detengan los ataques contra otros protagonistas de la Fórmula 1 para evitar perjuicios en su futuro deportivo y anunció que se alejará temporalmente de las redes sociales.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Fórmula 1",
+        "Redes sociales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1---no-me-ayudan-_a6acfdbd78298ee386b39ef1a",
+          "fecha": "2026-10-14T19:46:23.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos de Colapinto sobre los afectados y su alejamiento de las redes."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-14-17-43-0-colapinto-pidio-frenar-los-ataques-de-los-argentinos-en-la-formula-1-no-me-ayudan",
+          "fecha": "2026-10-14T20:55:13.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el pedido del piloto se realizó a través de un video."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "zd48ar",
+          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "ruta": "/nota/el-respaldo-de-juan-pablo-montoya-a-franco-colapinto-en-la-formula-1-zd48ar"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "franco-colapinto-pide-frenar-los-ataques-de-sus-fanaticos-en-la",
+      "foto": {
+        "archivo": "fotos-notas/gy4i31.jpg",
+        "credito": "Foto: La Nueva"
+      }
+    },
+    {
       "id": "oftb9a",
       "titulo": "Telecom acepta la oferta de Metrotel por US$ 450 millones",
       "copete": "Millones de usuarios de Movistar recibirán notificaciones en los próximos días por un cambio de compañía. La operación surge tras la aprobación de condiciones regulatorias.",
@@ -1850,12 +2090,13 @@
       "guion": "Telecom acepta la oferta de Metrotel por US$ 450 millones",
       "seccion": "Economía",
       "medios": [
+        "Infobae",
         "La Nación",
         "El Cronista",
         "El Destape",
         "iProfesional",
-        "Ámbito",
-        "El Economista"
+        "El Economista",
+        "Ámbito"
       ],
       "enlace": "https://eleconomista.com.ar/negocios/movistar-mensaje-recibiran-millones-clientes-proximos-dias-n98856",
       "teniaImagenLaFuente": true,
@@ -1949,12 +2190,12 @@
       "medios": [
         "Diputados Bonaerenses",
         "Infobae",
-        "Clarín",
         "TN (Todo Noticias)",
         "El Cronista",
         "Página/12",
         "Ámbito",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Clarín"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/14/el-secretario-de-trabajo-defendio-el-presupuesto-y-dijo-que-no-todos-quieren-trabajar-en-relacion-de-dependencia/",
       "teniaImagenLaFuente": true,
@@ -2333,73 +2574,6 @@
       }
     },
     {
-      "id": "97f98g",
-      "titulo": "El Instituto Adventista celebra cuarenta años con un musical",
-      "copete": "El coro del establecimiento educativo presenta el viernes el espectáculo Un día en el polideportivo propio, enmarcado en los festejos por el aniversario institucional.",
-      "cuerpo": "El coro del Instituto Adventista Balcarce presenta el musical Un día el viernes a las 20 en el polideportivo de la institución. La propuesta artística cuenta con la participación de estudiantes secundarios y se suma a las celebraciones por los cuarenta años del establecimiento educativo.\n\nLa institución abrió sus puertas oficialmente el 19 de marzo de 1986 y celebró su cuadragésimo aniversario en marzo pasado. En paralelo a su fundación, el coro escolar nació en 1986 y desarrolló una extensa trayectoria con actuaciones en distintos escenarios del país y participación en certámenes corales.",
-      "guion": "El Instituto Adventista celebra cuarenta años con un musical",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-14T13:01:57.018Z",
-      "sinFecha": true,
-      "visto": "2026-10-14T13:01:57.018Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Instituto Adventista cumple cuarenta años de trayectoria.",
-        "El coro escolar presenta el musical Un día este viernes.",
-        "La función comienza a las 20 en el polideportivo institucional."
-      ],
-      "seSabe": [
-        "El Instituto Adventista Balcarce fue inaugurado el 19 de marzo de 1986.",
-        "El coro del establecimiento está integrado por alumnos de nivel secundario.",
-        "La presentación se realiza en el polideportivo de la institución educativa."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Instituto Adventista presenta este viernes el musical Un día en su polideportivo a las 20 para celebrar sus cuarenta años de trayectoria educativa y coral en la ciudad",
-      "etiquetas": [
-        "Instituto Adventista",
-        "coro",
-        "aniversario",
-        "musical",
-        "Balcarce",
-        "cultura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
-          "fecha": "2026-10-14T11:54:19.000Z",
-          "oficial": false,
-          "aporte": "Detalló la presentación del musical Un día, la fecha, el horario, el lugar y la trayectoria institucional y coral del Instituto Adventista."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "cdnqde",
-          "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
-          "fecha": "2026-10-14T11:49:03.000Z",
-          "ruta": "/nota/el-coro-del-instituto-adventista-presenta-el-musical-un-dia-cdnqde"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
-    },
-    {
       "id": "15xxgpu",
       "titulo": "Flavio Briatore analiza el rendimiento de Franco Colapinto tras Singapur",
       "copete": "El jefe de la escudería Alpine compartió una imagen junto al piloto argentino tras el Gran Premio de Singapur. El equipo evaluó los inconvenientes mecánicos que derivaron en su abandono y ya apunta a la próxima fecha en Estados Unidos.",
@@ -2713,6 +2887,69 @@
       }
     },
     {
+      "id": "cdnqde",
+      "titulo": "El Coro del Instituto Adventista presenta el musical Un día",
+      "copete": "El Coro del Instituto Adventista presenta el viernes a las 20 el musical \"Un día\" en el polideportivo propio. La función forma parte de los festejos por el cuadragésimo aniversario del establecimiento educativo en la ciudad.",
+      "cuerpo": "El Coro del Instituto Adventista presenta el musical titulado \"Un día\" en el polideportivo de la institución educativa. La función está programada para el viernes a las 20 ante la comunidad local.\n\nLa propuesta artística forma parte de los festejos por los 40 años de trayectoria que cumple el establecimiento en la ciudad. Durante estas cuatro décadas, la institución formó a varias generaciones de estudiantes y desarrolló una marcada presencia comunitaria.\n\nEl coro institucional nació junto con el establecimiento educativo y participa habitualmente en diversos escenarios de la zona. Esta presentación se suma al programa de actividades aniversario que valoran el recorrido y el vínculo construido con los vecinos a lo largo de este período.",
+      "guion": "El Coro del Instituto Adventista presenta el musical Un día",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://puntonueve.com.ar/188351-2/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-14T11:49:03.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T12:31:49.255Z",
+      "relevancia": 77,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Coro del Instituto Adventista presenta el musical Un día",
+        "La función es este viernes a las 20 en el polideportivo institucional",
+        "El evento se enmarca en los 40 años de trayectoria educativa"
+      ],
+      "seSabe": [
+        "El Coro del Instituto Adventista presenta el musical \"Un día\"",
+        "La función se realiza este viernes a las 20 en el polideportivo institucional",
+        "El evento se enmarca en el cuadragésimo aniversario del establecimiento educativo"
+      ],
+      "textoRedes": "El Coro del Instituto Adventista presenta este viernes a las 20 el musical \"Un día\" en el polideportivo institucional. La función se realiza en el marco del cuadragésimo aniversario del establecimiento educativo en la ciudad.",
+      "etiquetas": [
+        "Coro del Instituto Adventista",
+        "musical Un día",
+        "polideportivo",
+        "40 aniversario",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/188351-2/",
+          "fecha": "2026-10-14T11:49:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario, el lugar, el nombre de la obra y el aniversario del instituto."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/un-dia-el-musical-con-el-que-el-instituto-adventista-celebra-sus-40-anos-840",
+          "fecha": "2026-10-14T11:54:19.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presentación del coro institucional y la función del viernes a las 20."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-coro-del-instituto-adventista-presenta-el-musical-un-dia"
+    },
+    {
       "id": "11uyvlg",
       "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos",
       "copete": "La prohibición nacional abarca a todos los modelos de la marca Pinch Family. Un laboratorio detectó que contienen el doble del plastificante permitido por las normas de seguridad.",
@@ -2969,10 +3206,10 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
-        "Ámbito",
+        "El Economista",
         "iProfesional",
-        "Minuto Uno",
-        "El Economista"
+        "Ámbito",
+        "Minuto Uno"
       ],
       "enlace": "https://www.infobae.com/economia/2026/10/14/el-gobierno-habilito-una-nueva-herramienta-para-liquidar-los-sueldos-de-las-empleadas-domesticas/",
       "teniaImagenLaFuente": true,
@@ -3397,9 +3634,9 @@
         "Noticias Argentinas (NA)",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
         "0223 (Mar del Plata)",
-        "La Capital (Rosario)"
+        "La Capital (Rosario)",
+        "Clarín"
       ],
       "enlace": "https://www.clarin.com/deportes/lisandro-martinez-exploto-dirigencia-manchester-united-leyenda-club-cruzo-actuaciones-buenas_0_xNVWlGPyUT.html",
       "teniaImagenLaFuente": true,
@@ -3645,6 +3882,13 @@
           "aporte": null
         },
         {
+          "medio": "La Capital (Rosario)",
+          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
+          "fecha": "2026-10-14T17:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lisandro-martinez-apunto-contra-la-dirigencia-manchester-united-esperaba-mas-inversiones-n6333494",
           "fecha": "2026-10-14T12:00:00.000Z",
@@ -3655,13 +3899,6 @@
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/rooney-ferdinand-y-carragher-destrozaron-lisandro-martinez-es-una-falta-respeto-n6333629",
           "fecha": "2026-10-14T15:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Capital (Rosario)",
-          "enlace": "https://www.lacapital.com.ar/ovacion/las-duras-declaraciones-lisandro-martinez-que-abrieron-un-escandalo-manchester-united-n10286663.html",
-          "fecha": "2026-10-14T17:29:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4240,8 +4477,8 @@
       "medios": [
         "La Nación",
         "TN (Todo Noticias)",
-        "Bichos de Campo",
-        "Agrositio"
+        "Agrositio",
+        "Bichos de Campo"
       ],
       "enlace": "https://bichosdecampo.com/esta-cara-la-papa-y-eso-les-cambio-la-cara-segun-coninagro-las-economias-regionales-no-repuntan-a-pesar-de-la-mejora-en-una-de-las-actividades/",
       "teniaImagenLaFuente": true,
@@ -4370,10 +4607,10 @@
       "medios": [
         "Clarín",
         "TN (Todo Noticias)",
+        "Agroempresario",
         "Infobae",
         "La Voz del Pueblo",
         "Noticias Agropecuarias",
-        "Agroempresario",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/rural/dia-mundial-fertilizantes-innovacion-enfrenta-desafio-alimentar-poblacion-mundial-constante-crecimiento_0_b6eMatjB3U.html",
@@ -4444,6 +4681,87 @@
       }
     },
     {
+      "id": "ecn3bh",
+      "titulo": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
+      "copete": "La banda liderada por Juanse acompañará al histórico guitarrista de los Rolling Stones en su primer concierto solista en el país. El recital será el 6 de noviembre en el Movistar Arena y ya se pueden conseguir las últimas localidades.",
+      "cuerpo": "Ratones Paranoicos se sumó como grupo invitado para el recital que Ronnie Wood brindará el 6 de noviembre en el Movistar Arena. La presentación marcará el debut del guitarrista de los Rolling Stones como solista en Argentina, dentro de una gira sudamericana que también pasará por Brasil y Chile, según informó la producción a cargo de DF Entertainment.\n\nLas localidades restantes se encuentran disponibles a través de la plataforma oficial del estadio, con la opción de abonar en hasta seis cuotas sin interés mediante tarjetas Visa del banco Santander. El repertorio incluirá un repaso por sus seis décadas de trayectoria musical y su paso por emblemáticas agrupaciones previas.\n\nLas visitas anteriores del músico británico al país incluyeron su llegada en 1996 para una muestra de pintura y grabados, mientras que los conciertos de los Rolling Stones reunieron a más de 900 mil espectadores en sus cuatro presentaciones históricas.",
+      "guion": "Ratones Paranoicos toca en el show solista de Ronnie Wood",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Diario Popular",
+        "Ámbito",
+        "Crónica"
+      ],
+      "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-13T16:29:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T00:01:43.721Z",
+      "relevancia": 41,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Ratones Paranoicos será la banda invitada del show.",
+        "El recital de Ronnie Wood será el 6 de noviembre.",
+        "El concierto se realizará en el Movistar Arena.",
+        "Las entradas se consiguen en la web oficial del estadio."
+      ],
+      "seSabe": [
+        "Ratones Paranoicos tocará en el show de Ronnie Wood, según informó la producción.",
+        "El recital será el 6 de noviembre en el Movistar Arena.",
+        "Es el primer concierto solista del músico en el país.",
+        "Las entradas están a la venta en el sitio web oficial con financiación en cuotas."
+      ],
+      "textoRedes": "Ratones Paranoicos será la banda invitada en el primer concierto solista de Ronnie Wood en el país. El show será el 6 de noviembre en el Movistar Arena y las últimas entradas están a la venta.",
+      "etiquetas": [
+        "Ratones Paranoicos",
+        "Ronnie Wood",
+        "Movistar Arena",
+        "Música",
+        "Conciertos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/espectaculos/ratones-paranoicos-se-suma-como-banda-invitada-al-show-ronnie-wood-buenos-aires-como-y-donde-comprar-las-entradas-n6333161",
+          "fecha": "2026-10-13T16:29:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la participación de Ratones Paranoicos, la fecha del show, la venta de entradas y los detalles de la gira."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/elcanaldelamusica/noticias/ratones-paranoicos-abrira-el-show-de-ronnie-wood-en-buenos-aires/",
+          "fecha": "2026-10-13T16:55:00.000Z",
+          "oficial": false,
+          "aporte": "Publicó la misma información inicial sobre el evento y la banda invitada."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/espectaculos/los-ratones-paranoicos-abriran-el-show-ronnie-wood-argentina-n924345",
+          "fecha": "2026-10-13T22:54:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su registro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "saeapr",
+          "titulo": "El MotoGP en Buenos Aires anuncia los precios de sus entradas",
+          "fecha": "2026-09-30T21:24:43.000Z",
+          "ruta": "/nota/el-motogp-en-buenos-aires-anuncia-los-precios-de-sus-entradas-saeapr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "ratones-paranoicos-toca-en-el-show-solista-de-ronnie-wood"
+    },
+    {
       "id": "onywij",
       "titulo": "Productores de papa adaptan la siembra y enfrentan la suba de precios",
       "copete": "El sector papero ajusta las fechas de siembra debido a la variabilidad climática y depende de la tecnología de riego para sostener la producción.",
@@ -4505,69 +4823,6 @@
         "archivo": "fotos-notas/onywij.jpg",
         "credito": "Foto: El Eco de Tandil"
       }
-    },
-    {
-      "id": "repaso20261013manana",
-      "propia": "repaso",
-      "titulo": "El repaso de la mañana en Radar Balcarce: Zona Fría, pronóstico y Gabriel Deck",
-      "copete": "Radar Balcarce publicó a las 10:06 de este martes 13 de octubre el repaso de la mañana en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la mañana del martes 13, en el orden en que salieron en el audio.\n\nEl Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría. El Gobierno nacional oficializó la normativa que limita el acceso automático a las bonificaciones en las facturas de gas. La medida alcanza a Balcarce y a otros distritos bonaerenses, donde las tarifas podrían registrar subas promedio del 55%.\n\nEl pronóstico anticipa una semana fresca con lluvias y mínimas bajas. El clima se mantiene frío con temperaturas que no superarán los 15 grados y probabilidad de precipitaciones durante los primeros días.\n\nGabriel Deck pasa por el quirófano y se pierde lo que resta del año. El alero de la Selección Argentina y del Real Madrid será operado del hombro izquierdo por una lesión. Su ausencia complica al equipo nacional en la clasificación al Mundial.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-13T13:06:44.511Z",
-      "sinFecha": false,
-      "visto": "2026-10-13T13:06:44.511Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-13T13:06:44.511Z",
-      "temas": [],
-      "etiquetas": [
-        "Zona Fría",
-        "pronóstico",
-        "Gabriel Deck"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "3xm1ge",
-        "fa17ki",
-        "1qszs3z"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "El Gobierno promulga la Ley 27.828 que modifica el régimen de Zona Fría",
-          "href": "/nota/el-gobierno-promulga-la-ley-27-828-que-modifica-el-regimen-de-zona-3xm1ge"
-        },
-        {
-          "texto": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas",
-          "href": "/nota/el-pronostico-anticipa-una-semana-fresca-con-lluvias-y-minimas-bajas-fa17ki"
-        },
-        {
-          "texto": "Gabriel Deck pasa por el quirófano y se pierde lo que resta del año",
-          "href": "/nota/gabriel-deck-pasa-por-el-quirofano-y-se-pierde-lo-que-resta-del-ano-1qszs3z"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/Deb4F3qAKRK/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/1659818188841772/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-manana-en-radar-balcarce-formula-1-zona-fria",
-      "foto": {
-        "archivo": "fotos-notas/collage-repaso20261013manana.jpg",
-        "credito": "Fotos: Radio Gabal (FM 104.1) y 0223 (Mar del Plata)"
-      }
     }
   ],
   "secciones": [
@@ -4576,12 +4831,12 @@
     "Política",
     "Economía",
     "Argentina",
+    "Agro",
     "Policiales",
     "Deportes",
     "Cultura y agenda",
     "Fútbol",
-    "Tecnología",
-    "Agro"
+    "Tecnología"
   ],
   "temas": [
     {
@@ -4605,7 +4860,7 @@
       "temp": 10,
       "sensacion": 8,
       "humedad": 93,
-      "viento": 13,
+      "viento": 12,
       "rumbo": "SE",
       "cielo": "Nublado",
       "esDeDia": false
@@ -4618,19 +4873,19 @@
         "min": 10,
         "lluvia": 76,
         "codigo": 51,
-        "viento": 19,
+        "viento": 21,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-10-15",
         "dia": "jue",
-        "max": 14,
+        "max": 15,
         "min": 9,
         "lluvia": 41,
         "codigo": 51,
-        "viento": 18,
-        "milimetros": 1,
+        "viento": 20,
+        "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
@@ -4640,7 +4895,7 @@
         "min": 6,
         "lluvia": 18,
         "codigo": 51,
-        "viento": 19,
+        "viento": 17,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
@@ -4650,10 +4905,10 @@
         "max": 11,
         "min": 7,
         "lluvia": 6,
-        "codigo": 3,
-        "viento": 17,
+        "codigo": 51,
+        "viento": 18,
         "milimetros": 0,
-        "cielo": "Nublado"
+        "cielo": "Llovizna leve"
       }
     ],
     "fuente": "Open-Meteo"
@@ -4957,16 +5212,22 @@
   },
   "pendientes": [
     {
-      "id": "p1f6vz",
-      "titulo": "Convocan a una marcha por Claribel Medina este sábado en…",
+      "id": "gelhhp",
+      "titulo": "Nuevo pedido de justicia por la muerte de Claribel Medina",
       "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"murió\""
+      "motivo": "necesita ojo humano: \"muerte\""
     },
     {
       "id": "1hb8gyb",
       "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
+    },
+    {
+      "id": "h0a84i",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1okotnb",
@@ -5005,16 +5266,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1spqpr6",
-      "titulo": "Murió Norberto Di Próspero, secretario general de la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"murió\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
+      "id": "7txprm",
+      "titulo": "Los mensajes de despedida tras la muerte de Roña Castro a…",
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "120b8gy",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "yj5cn4",
+      "titulo": null,
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "183hv39",
@@ -5035,28 +5302,22 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "1333xd6",
+      "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
       "id": "11y8l6f",
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "kcdqa8",
-      "titulo": null,
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "id5g36",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1333xd6",
-      "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "fp2pbw",
@@ -5083,12 +5344,6 @@
       "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
-      "id": "npkndz",
-      "titulo": "Inauguran una plataforma pública con datos diarios de…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "lwmyim",
       "titulo": "Hotesur-Los Sauces: habrá una audiencia clave para…",
       "seccion": "Política",
@@ -5101,5 +5356,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 1
+  "esperandoCuerpo": 2
 }
