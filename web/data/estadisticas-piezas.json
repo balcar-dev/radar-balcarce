@@ -5185,6 +5185,26 @@
    "metricas": {
     "total_video_views": 0
    }
+  },
+  {
+   "clave": "facebook/posteo/1254237411116171_122111572743495512",
+   "red": "facebook",
+   "parte": "posteo",
+   "pieza": "505otd",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T12:35:32.725Z",
+   "medida": "2026-10-15T13:00:23.230Z",
+   "metricas": {}
+  },
+  {
+   "clave": "instagram/foto/18102405110035413",
+   "red": "instagram",
+   "parte": "foto",
+   "pieza": "505otd",
+   "dia": "2026-10-14",
+   "cuando": "2026-10-14T12:35:55.232Z",
+   "medida": "2026-10-15T13:00:23.230Z",
+   "metricas": {}
   }
  ]
 }
