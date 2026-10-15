@@ -1,0 +1,1835 @@
+{
+ "generado": "2026-10-15T15:55:12.181Z",
+ "lecturas": {
+  "ventana": {
+   "desde": "2026-09-29",
+   "hasta": "2026-10-12",
+   "diasConDatos": 13,
+   "diasSinDatos": [
+    "2026-10-09",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15"
+   ],
+   "notasEnVentana": 716,
+   "vistasANotas": 1071,
+   "vistasEnVentana": 841
+  },
+  "porLugar": [
+   {
+    "grupo": "Balcarce",
+    "notas": 224,
+    "vistas": 558,
+    "conAlgunaVista": 109,
+    "vistasPorNota": 2.49,
+    "pctNotas": 31.3,
+    "pctVistas": 66.3,
+    "indice": 2.12
+   },
+   {
+    "grupo": "propia de Radar",
+    "notas": 58,
+    "vistas": 89,
+    "conAlgunaVista": 20,
+    "vistasPorNota": 1.53,
+    "pctNotas": 8.1,
+    "pctVistas": 10.6,
+    "indice": 1.31
+   },
+   {
+    "grupo": "la zona",
+    "notas": 8,
+    "vistas": 9,
+    "conAlgunaVista": 4,
+    "vistasPorNota": 1.13,
+    "pctNotas": 1.1,
+    "pctVistas": 1.1,
+    "indice": 0.96
+   },
+   {
+    "grupo": "de afuera",
+    "notas": 426,
+    "vistas": 185,
+    "conAlgunaVista": 56,
+    "vistasPorNota": 0.43,
+    "pctNotas": 59.5,
+    "pctVistas": 22,
+    "indice": 0.37
+   }
+  ],
+  "porSeccion": [
+   {
+    "grupo": "Balcarce",
+    "notas": 95,
+    "vistas": 255,
+    "conAlgunaVista": 46,
+    "vistasPorNota": 2.68,
+    "pctNotas": 14.4,
+    "pctVistas": 33.9,
+    "indice": 2.35
+   },
+   {
+    "grupo": "Deportes",
+    "notas": 61,
+    "vistas": 143,
+    "conAlgunaVista": 28,
+    "vistasPorNota": 2.34,
+    "pctNotas": 9.3,
+    "pctVistas": 19,
+    "indice": 2.05
+   },
+   {
+    "grupo": "Automovilismo",
+    "notas": 43,
+    "vistas": 80,
+    "conAlgunaVista": 16,
+    "vistasPorNota": 1.86,
+    "pctNotas": 6.5,
+    "pctVistas": 10.6,
+    "indice": 1.63
+   },
+   {
+    "grupo": "Cultura y agenda",
+    "notas": 48,
+    "vistas": 62,
+    "conAlgunaVista": 17,
+    "vistasPorNota": 1.29,
+    "pctNotas": 7.3,
+    "pctVistas": 8.2,
+    "indice": 1.13
+   },
+   {
+    "grupo": "Argentina",
+    "notas": 52,
+    "vistas": 41,
+    "conAlgunaVista": 8,
+    "vistasPorNota": 0.79,
+    "pctNotas": 7.9,
+    "pctVistas": 5.5,
+    "indice": 0.69
+   },
+   {
+    "grupo": "Policiales",
+    "notas": 10,
+    "vistas": 7,
+    "conAlgunaVista": 3,
+    "vistasPorNota": 0.7,
+    "pctNotas": 1.5,
+    "pctVistas": 0.9,
+    "indice": 0.61
+   },
+   {
+    "grupo": "Agro",
+    "notas": 55,
+    "vistas": 37,
+    "conAlgunaVista": 9,
+    "vistasPorNota": 0.67,
+    "pctNotas": 8.4,
+    "pctVistas": 4.9,
+    "indice": 0.59
+   },
+   {
+    "grupo": "Fútbol",
+    "notas": 87,
+    "vistas": 49,
+    "conAlgunaVista": 19,
+    "vistasPorNota": 0.56,
+    "pctNotas": 13.2,
+    "pctVistas": 6.5,
+    "indice": 0.49
+   },
+   {
+    "grupo": "Política",
+    "notas": 84,
+    "vistas": 35,
+    "conAlgunaVista": 9,
+    "vistasPorNota": 0.42,
+    "pctNotas": 12.8,
+    "pctVistas": 4.7,
+    "indice": 0.36
+   },
+   {
+    "grupo": "Tecnología",
+    "notas": 10,
+    "vistas": 4,
+    "conAlgunaVista": 1,
+    "vistasPorNota": 0.4,
+    "pctNotas": 1.5,
+    "pctVistas": 0.5,
+    "indice": 0.35
+   },
+   {
+    "grupo": "Economía",
+    "notas": 113,
+    "vistas": 39,
+    "conAlgunaVista": 13,
+    "vistasPorNota": 0.35,
+    "pctNotas": 17.2,
+    "pctVistas": 5.2,
+    "indice": 0.3
+   }
+  ],
+  "porSeccionSoloDeAca": [
+   {
+    "grupo": "Automovilismo",
+    "notas": 13,
+    "vistas": 52,
+    "conAlgunaVista": 9,
+    "vistasPorNota": 4,
+    "pctNotas": 5.6,
+    "pctVistas": 9.2,
+    "indice": 1.64
+   },
+   {
+    "grupo": "Argentina",
+    "notas": 2,
+    "vistas": 7,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 3.5,
+    "pctNotas": 0.9,
+    "pctVistas": 1.2,
+    "indice": 1.43
+   },
+   {
+    "grupo": "Deportes",
+    "notas": 44,
+    "vistas": 138,
+    "conAlgunaVista": 26,
+    "vistasPorNota": 3.14,
+    "pctNotas": 19,
+    "pctVistas": 24.3,
+    "indice": 1.28
+   },
+   {
+    "grupo": "Balcarce",
+    "notas": 95,
+    "vistas": 255,
+    "conAlgunaVista": 46,
+    "vistasPorNota": 2.68,
+    "pctNotas": 40.9,
+    "pctVistas": 45,
+    "indice": 1.1
+   },
+   {
+    "grupo": "Agro",
+    "notas": 15,
+    "vistas": 36,
+    "conAlgunaVista": 8,
+    "vistasPorNota": 2.4,
+    "pctNotas": 6.5,
+    "pctVistas": 6.3,
+    "indice": 0.98
+   },
+   {
+    "grupo": "Cultura y agenda",
+    "notas": 29,
+    "vistas": 59,
+    "conAlgunaVista": 15,
+    "vistasPorNota": 2.03,
+    "pctNotas": 12.5,
+    "pctVistas": 10.4,
+    "indice": 0.83
+   },
+   {
+    "grupo": "Policiales",
+    "notas": 10,
+    "vistas": 7,
+    "conAlgunaVista": 3,
+    "vistasPorNota": 0.7,
+    "pctNotas": 4.3,
+    "pctVistas": 1.2,
+    "indice": 0.29
+   },
+   {
+    "grupo": "Política",
+    "notas": 16,
+    "vistas": 9,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 0.56,
+    "pctNotas": 6.9,
+    "pctVistas": 1.6,
+    "indice": 0.23
+   },
+   {
+    "grupo": "Fútbol",
+    "notas": 8,
+    "vistas": 4,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 0.5,
+    "pctNotas": 3.4,
+    "pctVistas": 0.7,
+    "indice": 0.2
+   }
+  ],
+  "porSeccionSoloDeAfuera": [
+   {
+    "grupo": "Automovilismo",
+    "notas": 30,
+    "vistas": 28,
+    "conAlgunaVista": 7,
+    "vistasPorNota": 0.93,
+    "pctNotas": 7,
+    "pctVistas": 15.1,
+    "indice": 2.15
+   },
+   {
+    "grupo": "Argentina",
+    "notas": 50,
+    "vistas": 34,
+    "conAlgunaVista": 6,
+    "vistasPorNota": 0.68,
+    "pctNotas": 11.7,
+    "pctVistas": 18.4,
+    "indice": 1.57
+   },
+   {
+    "grupo": "Fútbol",
+    "notas": 79,
+    "vistas": 45,
+    "conAlgunaVista": 17,
+    "vistasPorNota": 0.57,
+    "pctNotas": 18.5,
+    "pctVistas": 24.3,
+    "indice": 1.31
+   },
+   {
+    "grupo": "Tecnología",
+    "notas": 10,
+    "vistas": 4,
+    "conAlgunaVista": 1,
+    "vistasPorNota": 0.4,
+    "pctNotas": 2.3,
+    "pctVistas": 2.2,
+    "indice": 0.92
+   },
+   {
+    "grupo": "Política",
+    "notas": 68,
+    "vistas": 26,
+    "conAlgunaVista": 7,
+    "vistasPorNota": 0.38,
+    "pctNotas": 16,
+    "pctVistas": 14.1,
+    "indice": 0.88
+   },
+   {
+    "grupo": "Economía",
+    "notas": 113,
+    "vistas": 39,
+    "conAlgunaVista": 13,
+    "vistasPorNota": 0.35,
+    "pctNotas": 26.5,
+    "pctVistas": 21.1,
+    "indice": 0.79
+   },
+   {
+    "grupo": "Deportes",
+    "notas": 17,
+    "vistas": 5,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 0.29,
+    "pctNotas": 4,
+    "pctVistas": 2.7,
+    "indice": 0.68
+   },
+   {
+    "grupo": "Cultura y agenda",
+    "notas": 19,
+    "vistas": 3,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 0.16,
+    "pctNotas": 4.5,
+    "pctVistas": 1.6,
+    "indice": 0.36
+   },
+   {
+    "grupo": "Agro",
+    "notas": 40,
+    "vistas": 1,
+    "conAlgunaVista": 1,
+    "vistasPorNota": 0.03,
+    "pctNotas": 9.4,
+    "pctVistas": 0.5,
+    "indice": 0.06
+   }
+  ],
+  "porTipoDeAca": [
+   {
+    "grupo": "resultado deportivo",
+    "notas": 30,
+    "vistas": 96,
+    "conAlgunaVista": 17,
+    "vistasPorNota": 3.2,
+    "pctNotas": 12.9,
+    "pctVistas": 16.9,
+    "indice": 1.31
+   },
+   {
+    "grupo": "servicio",
+    "notas": 53,
+    "vistas": 162,
+    "conAlgunaVista": 30,
+    "vistasPorNota": 3.06,
+    "pctNotas": 22.8,
+    "pctVistas": 28.6,
+    "indice": 1.25
+   },
+   {
+    "grupo": "hecho u otro",
+    "notas": 70,
+    "vistas": 188,
+    "conAlgunaVista": 37,
+    "vistasPorNota": 2.69,
+    "pctNotas": 30.2,
+    "pctVistas": 33.2,
+    "indice": 1.1
+   },
+   {
+    "grupo": "institucional",
+    "notas": 51,
+    "vistas": 92,
+    "conAlgunaVista": 21,
+    "vistasPorNota": 1.8,
+    "pctNotas": 22,
+    "pctVistas": 16.2,
+    "indice": 0.74
+   },
+   {
+    "grupo": "agenda",
+    "notas": 28,
+    "vistas": 29,
+    "conAlgunaVista": 8,
+    "vistasPorNota": 1.04,
+    "pctNotas": 12.1,
+    "pctVistas": 5.1,
+    "indice": 0.42
+   }
+  ],
+  "porTipoDeAfuera": [
+   {
+    "grupo": "agenda",
+    "notas": 61,
+    "vistas": 34,
+    "conAlgunaVista": 13,
+    "vistasPorNota": 0.56,
+    "pctNotas": 14.3,
+    "pctVistas": 18.4,
+    "indice": 1.28
+   },
+   {
+    "grupo": "servicio",
+    "notas": 41,
+    "vistas": 23,
+    "conAlgunaVista": 7,
+    "vistasPorNota": 0.56,
+    "pctNotas": 9.6,
+    "pctVistas": 12.4,
+    "indice": 1.29
+   },
+   {
+    "grupo": "hecho u otro",
+    "notas": 268,
+    "vistas": 121,
+    "conAlgunaVista": 33,
+    "vistasPorNota": 0.45,
+    "pctNotas": 62.9,
+    "pctVistas": 65.4,
+    "indice": 1.04
+   },
+   {
+    "grupo": "resultado deportivo",
+    "notas": 30,
+    "vistas": 4,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 0.13,
+    "pctNotas": 7,
+    "pctVistas": 2.2,
+    "indice": 0.31
+   },
+   {
+    "grupo": "institucional",
+    "notas": 26,
+    "vistas": 3,
+    "conAlgunaVista": 1,
+    "vistasPorNota": 0.12,
+    "pctNotas": 6.1,
+    "pctVistas": 1.6,
+    "indice": 0.27
+   }
+  ],
+  "porMediosDeAfuera": [
+   {
+    "grupo": "4 a 7",
+    "notas": 178,
+    "vistas": 102,
+    "conAlgunaVista": 29,
+    "vistasPorNota": 0.57,
+    "pctNotas": 41.8,
+    "pctVistas": 55.1,
+    "indice": 1.32
+   },
+   {
+    "grupo": "8 o más",
+    "notas": 132,
+    "vistas": 63,
+    "conAlgunaVista": 19,
+    "vistasPorNota": 0.48,
+    "pctNotas": 31,
+    "pctVistas": 34.1,
+    "indice": 1.1
+   },
+   {
+    "grupo": "2",
+    "notas": 72,
+    "vistas": 16,
+    "conAlgunaVista": 6,
+    "vistasPorNota": 0.22,
+    "pctNotas": 16.9,
+    "pctVistas": 8.6,
+    "indice": 0.51
+   },
+   {
+    "grupo": "3",
+    "notas": 44,
+    "vistas": 4,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 0.09,
+    "pctNotas": 10.3,
+    "pctVistas": 2.2,
+    "indice": 0.21
+   }
+  ],
+  "porPropia": [
+   {
+    "grupo": "futbol",
+    "notas": 5,
+    "vistas": 29,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 5.8,
+    "pctNotas": 8.6,
+    "pctVistas": 32.6,
+    "indice": 3.78
+   },
+   {
+    "grupo": "otra propia",
+    "notas": 3,
+    "vistas": 8,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 2.67,
+    "pctNotas": 5.2,
+    "pctVistas": 9,
+    "indice": 1.74
+   },
+   {
+    "grupo": "f1",
+    "notas": 7,
+    "vistas": 13,
+    "conAlgunaVista": 5,
+    "vistasPorNota": 1.86,
+    "pctNotas": 12.1,
+    "pctVistas": 14.6,
+    "indice": 1.21
+   },
+   {
+    "grupo": "repaso",
+    "notas": 39,
+    "vistas": 39,
+    "conAlgunaVista": 11,
+    "vistasPorNota": 1,
+    "pctNotas": 67.2,
+    "pctVistas": 43.8,
+    "indice": 0.65
+   },
+   {
+    "grupo": "clima",
+    "notas": 4,
+    "vistas": 0,
+    "conAlgunaVista": 0,
+    "vistasPorNota": 0,
+    "pctNotas": 6.9,
+    "pctVistas": 0,
+    "indice": 0
+   }
+  ],
+  "porRedes": [
+   {
+    "grupo": "de acá · fue a redes",
+    "notas": 63,
+    "vistas": 365,
+    "conAlgunaVista": 53,
+    "vistasPorNota": 5.79,
+    "pctNotas": 9.6,
+    "pctVistas": 48.5,
+    "indice": 5.07
+   },
+   {
+    "grupo": "de afuera · fue a redes",
+    "notas": 13,
+    "vistas": 46,
+    "conAlgunaVista": 10,
+    "vistasPorNota": 3.54,
+    "pctNotas": 2,
+    "pctVistas": 6.1,
+    "indice": 3.1
+   },
+   {
+    "grupo": "de acá · no fue a redes",
+    "notas": 169,
+    "vistas": 202,
+    "conAlgunaVista": 60,
+    "vistasPorNota": 1.2,
+    "pctNotas": 25.7,
+    "pctVistas": 26.9,
+    "indice": 1.05
+   },
+   {
+    "grupo": "de afuera · no fue a redes",
+    "notas": 413,
+    "vistas": 139,
+    "conAlgunaVista": 46,
+    "vistasPorNota": 0.34,
+    "pctNotas": 62.8,
+    "pctVistas": 18.5,
+    "indice": 0.29
+   }
+  ],
+  "porMediosDeAca": [
+   {
+    "grupo": "4 a 7",
+    "notas": 11,
+    "vistas": 61,
+    "conAlgunaVista": 10,
+    "vistasPorNota": 5.55,
+    "pctNotas": 4.7,
+    "pctVistas": 10.8,
+    "indice": 2.27
+   },
+   {
+    "grupo": "8 o más",
+    "notas": 4,
+    "vistas": 20,
+    "conAlgunaVista": 2,
+    "vistasPorNota": 5,
+    "pctNotas": 1.7,
+    "pctVistas": 3.5,
+    "indice": 2.05
+   },
+   {
+    "grupo": "3",
+    "notas": 21,
+    "vistas": 63,
+    "conAlgunaVista": 14,
+    "vistasPorNota": 3,
+    "pctNotas": 9.1,
+    "pctVistas": 11.1,
+    "indice": 1.23
+   },
+   {
+    "grupo": "1",
+    "notas": 159,
+    "vistas": 346,
+    "conAlgunaVista": 69,
+    "vistasPorNota": 2.18,
+    "pctNotas": 68.5,
+    "pctVistas": 61,
+    "indice": 0.89
+   },
+   {
+    "grupo": "2",
+    "notas": 37,
+    "vistas": 77,
+    "conAlgunaVista": 18,
+    "vistasPorNota": 2.08,
+    "pctNotas": 15.9,
+    "pctVistas": 13.6,
+    "indice": 0.85
+   }
+  ],
+  "porFoto": [
+   {
+    "grupo": "sin foto",
+    "notas": 93,
+    "vistas": 157,
+    "conAlgunaVista": 36,
+    "vistasPorNota": 1.69,
+    "pctNotas": 14.1,
+    "pctVistas": 20.9,
+    "indice": 1.48
+   },
+   {
+    "grupo": "con foto",
+    "notas": 565,
+    "vistas": 595,
+    "conAlgunaVista": 133,
+    "vistasPorNota": 1.05,
+    "pctNotas": 85.9,
+    "pctVistas": 79.1,
+    "indice": 0.92
+   }
+  ],
+  "porComo": [
+   {
+    "grupo": "automatica",
+    "notas": 650,
+    "vistas": 752,
+    "conAlgunaVista": 169,
+    "vistasPorNota": 1.16,
+    "pctNotas": 98.8,
+    "pctVistas": 100,
+    "indice": 1.01
+   },
+   {
+    "grupo": "publicada",
+    "notas": 8,
+    "vistas": 0,
+    "conAlgunaVista": 0,
+    "vistasPorNota": 0,
+    "pctNotas": 1.2,
+    "pctVistas": 0,
+    "indice": 0
+   }
+  ],
+  "masLeidas": [
+   {
+    "id": "futbolpartidosliga20261002",
+    "vistas": 18,
+    "lugar": "propia de Radar",
+    "seccion": "Fútbol",
+    "medios": 1,
+    "tipo": "servicio",
+    "titulo": "Liga Profesional: lo que falta de la fecha del lunes 5 de octubre, con horarios"
+   },
+   {
+    "id": "alddw5",
+    "vistas": 17,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 2,
+    "tipo": "hecho u otro",
+    "titulo": "La Cooperativa de Electricidad corta el suministro el viernes"
+   },
+   {
+    "id": "15i90co",
+    "vistas": 17,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "servicio",
+    "titulo": "Concejales proponen crear un registro municipal de acompañantes terapéuticos"
+   },
+   {
+    "id": "164o14u",
+    "vistas": 16,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 5,
+    "tipo": "institucional",
+    "titulo": "El Club de Leones entrega nuevos equipos al Hospital Municipal"
+   },
+   {
+    "id": "1nyo5j6",
+    "vistas": 16,
+    "lugar": "Balcarce",
+    "seccion": "Deportes",
+    "medios": 1,
+    "tipo": "resultado deportivo",
+    "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores"
+   },
+   {
+    "id": "1gq0pia",
+    "vistas": 13,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "servicio",
+    "titulo": "La Liga Balcarceña suspende toda la fecha del fútbol local"
+   },
+   {
+    "id": "1cpkl2f",
+    "vistas": 12,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "hecho u otro",
+    "titulo": "Una planta cae sobre la red eléctrica y daña cables en calle 20"
+   },
+   {
+    "id": "1opc9eu",
+    "vistas": 12,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "institucional",
+    "titulo": "El Concejo Deliberante distingue a la Fiscalía Descentralizada"
+   },
+   {
+    "id": "1wp29m7",
+    "vistas": 12,
+    "lugar": "Balcarce",
+    "seccion": "Deportes",
+    "medios": 3,
+    "tipo": "agenda",
+    "titulo": "Vóley Balcarce gana el Torneo Promocional Sub-21 en Mar del Plata"
+   },
+   {
+    "id": "1sko7lj",
+    "vistas": 12,
+    "lugar": "Balcarce",
+    "seccion": "Deportes",
+    "medios": 1,
+    "tipo": "resultado deportivo",
+    "titulo": "Rocío Lemmo encabeza una clínica abierta de longcasting"
+   },
+   {
+    "id": "76r67w",
+    "vistas": 12,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "hecho u otro",
+    "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones"
+   },
+   {
+    "id": "tx9q5q",
+    "vistas": 12,
+    "lugar": "de afuera",
+    "seccion": "Argentina",
+    "medios": 12,
+    "tipo": "hecho u otro",
+    "titulo": "La Provincia crea un programa para formar en oficios a secundarios"
+   },
+   {
+    "id": "jiv3ba",
+    "vistas": 11,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "hecho u otro",
+    "titulo": "El Senado provincial aprueba cambios en la prioridad de paso en esquinas"
+   },
+   {
+    "id": "16tb2vo",
+    "vistas": 11,
+    "lugar": "Balcarce",
+    "seccion": "Automovilismo",
+    "medios": 6,
+    "tipo": "hecho u otro",
+    "titulo": "El Zonal del Atlántico compite el fin de semana en el autódromo"
+   },
+   {
+    "id": "1jfpdis",
+    "vistas": 11,
+    "lugar": "Balcarce",
+    "seccion": "Deportes",
+    "medios": 20,
+    "tipo": "resultado deportivo",
+    "titulo": "Emilia Scioli hace podio en el Ironman y clasifica al Mundial"
+   },
+   {
+    "id": "futbolresultadosliga20261002",
+    "vistas": 11,
+    "lugar": "propia de Radar",
+    "seccion": "Fútbol",
+    "medios": 1,
+    "tipo": "hecho u otro",
+    "titulo": "Liga Profesional: así terminó la fecha del 2 al 5 de octubre, con los resultados"
+   },
+   {
+    "id": "1l5htn5",
+    "vistas": 11,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "hecho u otro",
+    "titulo": "Vecinas renuevan espacios públicos y plazas"
+   },
+   {
+    "id": "8ydg1",
+    "vistas": 11,
+    "lugar": "de afuera",
+    "seccion": "Economía",
+    "medios": 6,
+    "tipo": "hecho u otro",
+    "titulo": "La cuenta corriente de la balanza de pagos cierra con superávit"
+   },
+   {
+    "id": "4u38d4",
+    "vistas": 10,
+    "lugar": "de afuera",
+    "seccion": "Automovilismo",
+    "medios": 7,
+    "tipo": "hecho u otro",
+    "titulo": "Lando Norris choca a su compañero Oscar Piastri en la Sprint de Singapur"
+   },
+   {
+    "id": "6vefne",
+    "vistas": 10,
+    "lugar": "Balcarce",
+    "seccion": "Balcarce",
+    "medios": 1,
+    "tipo": "servicio",
+    "titulo": "UATRE Balcarce abre la inscripción para útiles escolares"
+   }
+  ],
+  "paginasMasVistas": [
+   [
+    "/",
+    474
+   ],
+   [
+    "/seccion/balcarce",
+    43
+   ],
+   [
+    "/seccion/automovilismo",
+    34
+   ],
+   [
+    "/seccion/politica",
+    33
+   ],
+   [
+    "/seccion/tecnologia",
+    28
+   ],
+   [
+    "/seccion/futbol",
+    25
+   ],
+   [
+    "/seccion/policiales",
+    22
+   ],
+   [
+    "/farmacias",
+    20
+   ],
+   [
+    "/util",
+    12
+   ],
+   [
+    "/seccion/cultura",
+    10
+   ],
+   [
+    "/seccion/economia",
+    10
+   ],
+   [
+    "/seccion/argentina",
+    9
+   ],
+   [
+    "/seccion/agro",
+    9
+   ],
+   [
+    "/agenda",
+    9
+   ],
+   [
+    "/seccion/deportes",
+    8
+   ]
+  ],
+  "referentes": [
+   [
+    "facebook.com",
+    523
+   ],
+   [
+    "directo",
+    179
+   ],
+   [
+    "google.com",
+    7
+   ]
+  ],
+  "concentracion": {
+   "notas": 716,
+   "sinNingunaVista": 527,
+   "pctVistasDel10PorCientoMasLeido": 69.2
+  }
+ },
+ "pesosDeLasLecturas": {
+  "explicacion": "20 × ln(vistas por nota del grupo ÷ vistas por nota de la base). +14 puntos = el doble de lecturas.",
+  "balcarceContraAfuera": 35,
+  "zonaContraAfuera": 19,
+  "deAca_servicioContraPromedio": 4,
+  "deAca_resultadoDeportivoContraPromedio": 5,
+  "deAca_institucionalContraPromedio": -6,
+  "deAca_agendaContraPromedio": -17,
+  "afuera_4oMasMediosContra2o3": 23
+ },
+ "puntaje": {
+  "portadaHoy": {
+   "notas": 48,
+   "histograma": {
+    "40-49": 1,
+    "50-59": 7,
+    "60-69": 15,
+    "70-79": 15,
+    "80-89": 4,
+    "90-99": 6
+   },
+   "deAca": {
+    "50-59": 5,
+    "60-69": 8,
+    "70-79": 3,
+    "80-89": 3,
+    "90-99": 4
+   },
+   "deAfuera": {
+    "40-49": 1,
+    "50-59": 2,
+    "60-69": 7,
+    "70-79": 12,
+    "80-89": 1,
+    "90-99": 2
+   }
+  },
+  "reconstruido": {
+   "notas": 658,
+   "histograma": {
+    "30-39": 1,
+    "40-49": 38,
+    "50-59": 54,
+    "60-69": 56,
+    "70-79": 161,
+    "80-89": 266,
+    "90-99": 46,
+    "100-109": 36
+   },
+   "spearmanConVistas": 0.277,
+   "aciertosTop20": 4,
+   "aciertosTop50": 12
+  },
+  "propuesto": {
+   "histograma": {
+    "10-19": 24,
+    "20-29": 120,
+    "30-39": 181,
+    "40-49": 155,
+    "50-59": 107,
+    "60-69": 56,
+    "70-79": 12,
+    "80-89": 3
+   },
+   "spearmanConVistas": 0.384,
+   "aciertosTop20": 3,
+   "aciertosTop50": 13
+  },
+  "soloDeAca": {
+   "notas": 232,
+   "spearmanHoy": 0.138,
+   "spearmanPropuesto": 0.279,
+   "histogramaHoy": {
+    "30-39": 1,
+    "40-49": 6,
+    "50-59": 1,
+    "60-69": 2,
+    "70-79": 8,
+    "80-89": 135,
+    "90-99": 43,
+    "100-109": 36
+   }
+  }
+ },
+ "duplicadas": {
+  "notasComparadas": 1329,
+  "etiquetado": {
+   "pares": 127,
+   "mismoHecho": 84,
+   "dudosos": 25,
+   "noSon": 18,
+   "notasEnParesConfirmados": 140,
+   "historiasDetras": 64,
+   "copiasDeMas": 76,
+   "copiasDeMasDeAca": 57,
+   "paresConfirmadosEnOtraSeccion": 21,
+   "paresConfirmadosAMasDe12Horas": 32,
+   "precisionPorBanda": [
+    {
+     "banda": "0.7 a 1",
+     "pares": 26,
+     "si": 22,
+     "dudosos": 3
+    },
+    {
+     "banda": "0.55 a 0.7",
+     "pares": 46,
+     "si": 33,
+     "dudosos": 8
+    },
+    {
+     "banda": "0.45 a 0.55",
+     "pares": 55,
+     "si": 29,
+     "dudosos": 14
+    }
+   ]
+  },
+  "paresConParecido": {
+   "0,35+": 230,
+   "0,45+": 127,
+   "0,55+": 72,
+   "0,70+": 26
+  },
+  "paresDeAcaConDeAca045": 94,
+  "paresEnOtraSeccion045": 27,
+  "unidasDespuesDePublicadas": 96,
+  "unidasPorDia": {
+   "2026-09-29": 18,
+   "2026-10-01": 8,
+   "2026-10-02": 9,
+   "2026-10-03": 10,
+   "2026-10-04": 1,
+   "2026-10-05": 7,
+   "2026-10-06": 9,
+   "2026-10-07": 5,
+   "2026-10-08": 5,
+   "2026-10-09": 4,
+   "2026-10-10": 3,
+   "2026-10-11": 2,
+   "2026-10-12": 4,
+   "2026-10-13": 4,
+   "2026-10-14": 5,
+   "2026-10-15": 2
+  }
+ },
+ "clasificacion": {
+  "notasDeMedios": 1329,
+  "deAca": 658,
+  "deAcaFueraDeLaSeccionBalcarce": 444,
+  "deAcaPorSeccion": {
+   "Balcarce": 214,
+   "Agro": 38,
+   "Automovilismo": 114,
+   "Política": 67,
+   "Policiales": 24,
+   "Cultura y agenda": 57,
+   "Deportes": 123,
+   "Economía": 8,
+   "Fútbol": 9,
+   "Argentina": 3,
+   "Tecnología": 1
+  },
+  "deLaZona": 11,
+  "correccionesDeSeccionAMano": 31,
+  "correccionesDeSeccionPorDia": {
+   "2026-09-28": 6,
+   "2026-09-27": 25
+  },
+  "publicadasConFicha": 182,
+  "fichaDiceOtraSeccion": 3,
+  "fichaDiceOtraSeccionEjemplos": [
+   {
+    "id": "1b4z7qp",
+    "ficha": "Balcarce",
+    "publicada": "Política",
+    "local": false,
+    "titulo": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV"
+   },
+   {
+    "id": "5biv0y",
+    "ficha": "Balcarce",
+    "publicada": "Economía",
+    "local": false,
+    "titulo": "ARCA habilita el recibo de sueldo electrónico asistido para casas particulares"
+   },
+   {
+    "id": "sklj66",
+    "ficha": "Balcarce",
+    "publicada": "Economía",
+    "local": false,
+    "titulo": "ARBA vence hoy el plazo para pagar la última cuota del Inmobiliario Urbano"
+   }
+  ],
+  "fichas": {
+   "total": 2220,
+   "publicadas": 182,
+   "noPublicadas": 2038,
+   "ambito": {
+    "nacional": 1307,
+    "provincia": 193,
+    "internacional": 488,
+    "balcarce": 168,
+    "region": 64
+   },
+   "impacto": {
+    "nulo": 1349,
+    "indirecto": 572,
+    "directo": 299
+   },
+   "importancia": {
+    "baja": 1403,
+    "media": 578,
+    "alta": 239
+   },
+   "razon": {
+    "ninguna": 1333,
+    "provincia": 54,
+    "actividad": 131,
+    "popular": 205,
+    "local": 150,
+    "servicio": 150,
+    "nacional": 197
+   },
+   "publicidad": 18,
+   "chimento": 137,
+   "impactoDeLasPublicadas": {
+    "directo": 74,
+    "indirecto": 55,
+    "nulo": 53
+   },
+   "importanciaDeLasPublicadas": {
+    "alta": 30,
+    "media": 91,
+    "baja": 61
+   },
+   "seccionDeLasFichas": {
+    "Política": 241,
+    "Deportes": 169,
+    "Cultura y agenda": 298,
+    "Automovilismo": 72,
+    "Fútbol": 512,
+    "Argentina": 368,
+    "Economía": 255,
+    "Agro": 62,
+    "Policiales": 61,
+    "Tecnología": 61,
+    "Balcarce": 121
+   }
+  },
+  "argentinaUltimas": [
+   {
+    "id": "14mtnxg",
+    "medios": 4,
+    "titulo": "Valdés recorre Corrientes por la crecida del Paraná"
+   },
+   {
+    "id": "y1elhg",
+    "medios": 6,
+    "titulo": "El oficialismo busca dictaminar la reforma de salud mental en el Senado"
+   },
+   {
+    "id": "1bnktm",
+    "medios": 4,
+    "titulo": "Un desprendimiento de rocas corta la Ruta 7 en Mendoza"
+   },
+   {
+    "id": "1cu2633",
+    "medios": 3,
+    "titulo": "La Ciudad avanza con la licitación para construir la Línea F del subte"
+   },
+   {
+    "id": "1cv9j22",
+    "medios": 8,
+    "titulo": "Presentan un videojuego en Formosa donde un superhéroe pelea contra un león"
+   },
+   {
+    "id": "gkl1ue",
+    "medios": 5,
+    "titulo": "El Gobierno lanza un plan nacional de salud vascular"
+   },
+   {
+    "id": "55gw7p",
+    "medios": 6,
+    "titulo": "Una psíquica de animales revela detalles sobre su vínculo con Javier Milei"
+   },
+   {
+    "id": "11uyvlg",
+    "medios": 22,
+    "titulo": "El Gobierno prohíbe la venta de juguetes blandos por exceso de ftalatos"
+   },
+   {
+    "id": "1iw76m5",
+    "medios": 3,
+    "titulo": "El canciller Pablo Quirno defiende la estrategia por Malvinas"
+   },
+   {
+    "id": "gzwkmn",
+    "medios": 4,
+    "titulo": "El Gobierno evalúa cambios en la visita del Papa por su salud"
+   },
+   {
+    "id": "hxjao4",
+    "medios": 4,
+    "titulo": "Argentina alcanza un récord en la aprobación de estudios clínicos"
+   },
+   {
+    "id": "1c99k48",
+    "medios": 6,
+    "titulo": "La Agencia Nacional de Seguridad Vial sanciona a miles de conductores"
+   },
+   {
+    "id": "kpmt8y",
+    "medios": 11,
+    "titulo": "Sancionan a conductores por circular por banquinas en autopistas del AMBA"
+   },
+   {
+    "id": "18ht4d0",
+    "medios": 17,
+    "titulo": "Químicos piden informes a municipios por arsénico en el agua"
+   },
+   {
+    "id": "1y2q715",
+    "medios": 3,
+    "titulo": "Javier Milei evalúa reprogramar la visita del papa León XIV por su operación"
+   },
+   {
+    "id": "vt9ful",
+    "medios": 8,
+    "titulo": "Pueblos originarios protestan frente a la casa de Cristina Kirchner"
+   },
+   {
+    "id": "1lk2g5p",
+    "medios": 5,
+    "titulo": "El Servicio Meteorológico emite alertas por tormentas y vientos"
+   },
+   {
+    "id": "1mobb1t",
+    "medios": 5,
+    "titulo": "Clínicas privadas piden una reunión urgente al Gobierno"
+   },
+   {
+    "id": "1k2xuxz",
+    "medios": 30,
+    "titulo": "El Gobierno evalúa los feriados por la visita del papa León XIV"
+   },
+   {
+    "id": "p3cnfm",
+    "medios": 9,
+    "titulo": "Luján habilita un portal con servicios para la visita del Papa"
+   },
+   {
+    "id": "6oh5ax",
+    "medios": 3,
+    "titulo": "El transporte público funciona con cronogramas especiales por el fin de semana largo"
+   },
+   {
+    "id": "sq9o10",
+    "medios": 4,
+    "titulo": "Investigadores registran fuerte baja de algas en el dique Paso de las Piedras"
+   },
+   {
+    "id": "1nx2jwv",
+    "medios": 6,
+    "titulo": "El Congreso declara Héroe Nacional a Estanislao López"
+   },
+   {
+    "id": "r09m78",
+    "medios": 5,
+    "titulo": "ARBA habilita el pago con descuento de la patente hasta el viernes"
+   },
+   {
+    "id": "d3o2d6",
+    "medios": 5,
+    "titulo": "Rafael Grossi trepa al segundo lugar en la carrera para liderar la ONU"
+   },
+   {
+    "id": "1eed4ho",
+    "medios": 8,
+    "titulo": "Horacio Guevara asume la conducción de Servicios de Salud"
+   },
+   {
+    "id": "18ck224",
+    "medios": 8,
+    "titulo": "Luis Martín despide a Lionel Messi con una emotiva carta en redes"
+   },
+   {
+    "id": "1hw35d",
+    "medios": 5,
+    "titulo": "Hijos de Alfonsín donan la casa familiar para un espacio cultural"
+   },
+   {
+    "id": "tqz98z",
+    "medios": 5,
+    "titulo": "La chocotorta obtiene el segundo puesto en un ranking mundial"
+   },
+   {
+    "id": "7h598e",
+    "medios": 5,
+    "titulo": "Peter Lamelas pide al Senado la adhesión al tratado de patentes"
+   },
+   {
+    "id": "1uo836n",
+    "medios": 5,
+    "titulo": "La desocupación desplaza a la inflación como principal preocupación"
+   },
+   {
+    "id": "1cr7egi",
+    "medios": 11,
+    "titulo": "La Provincia autoriza a sus hospitales a descartar insumos de laboratorios investigados"
+   },
+   {
+    "id": "1pwavd9",
+    "medios": 1,
+    "titulo": "La empresa ESUCO retoma tareas viales en las rutas de la región"
+   },
+   {
+    "id": "1qwqrm2",
+    "medios": 6,
+    "titulo": "El Gobierno restituye el nombre histórico al feriado de octubre"
+   },
+   {
+    "id": "1kzgvll",
+    "medios": 2,
+    "titulo": "Cabo Verde afronta una crisis deportiva tras sumar dos caídas"
+   },
+   {
+    "id": "1gp4lrt",
+    "medios": 6,
+    "titulo": "Javier Milei celebra el resultado electoral en Brasil"
+   },
+   {
+    "id": "bmbmep",
+    "medios": 6,
+    "titulo": "Rockhopper cae cerca de 20% en Londres por el proyecto Sea Lion"
+   },
+   {
+    "id": "1k1mxar",
+    "medios": 13,
+    "titulo": "El Gobierno se reúne con la Iglesia para debatir políticas sobre discapacidad"
+   },
+   {
+    "id": "1yu4a7r",
+    "medios": 5,
+    "titulo": "El arzobispo de Luján advierte que la mayor división nacional es la exclusión"
+   },
+   {
+    "id": "1dujf07",
+    "medios": 3,
+    "titulo": "Jorge García Cuerva pide terminar con la violencia verbal en Luján"
+   }
+  ]
+ },
+ "ruido": {
+  "total": 16,
+  "porTipo": {
+   "cotización": 3,
+   "promoción": 5,
+   "consejo o curiosidad": 2,
+   "videojuego o tecnología de consumo": 2,
+   "farándula": 3,
+   "pronóstico de otro medio": 1
+  },
+  "aMano": [
+   {
+    "id": "levilm",
+    "tipo": "cotización",
+    "enElArchivo": true,
+    "seccion": "Economía",
+    "lugar": "de afuera",
+    "medios": 2,
+    "fecha": "2026-09-25",
+    "vistas": 0,
+    "titulo": "El dólar minorista y el dólar blue cotizan este viernes"
+   },
+   {
+    "id": "n5lm6f",
+    "tipo": "cotización",
+    "enElArchivo": true,
+    "seccion": "Economía",
+    "lugar": "de afuera",
+    "medios": 2,
+    "fecha": "2026-09-25",
+    "vistas": 0,
+    "titulo": "Dólar blue hoy: a cuánto cotiza este viernes 25 de septiembre"
+   },
+   {
+    "id": "1qyg9eg",
+    "tipo": "cotización",
+    "enElArchivo": true,
+    "seccion": "Economía",
+    "lugar": "de afuera",
+    "medios": 3,
+    "fecha": "2026-09-24",
+    "vistas": 0,
+    "titulo": "Dólar hoy: a cuánto cerró este jueves 24 de septiembre"
+   },
+   {
+    "id": "1e8rdd4",
+    "tipo": "cotización",
+    "enElArchivo": true,
+    "seccion": "Economía",
+    "lugar": "de afuera",
+    "medios": 4,
+    "fecha": "2026-10-09",
+    "vistas": 0,
+    "titulo": "El dólar mayorista finaliza la semana con un leve incremento"
+   },
+   {
+    "id": "q7bxgi",
+    "tipo": "publicidad",
+    "enElArchivo": true,
+    "seccion": "Economía",
+    "lugar": "de afuera",
+    "medios": 2,
+    "fecha": "2026-10-14",
+    "vistas": 0,
+    "titulo": "On City ofrece descuentos y financiación por el Día de la Madre"
+   },
+   {
+    "id": "1saujqk",
+    "tipo": "publicidad",
+    "enElArchivo": true,
+    "seccion": "Balcarce",
+    "lugar": "Balcarce",
+    "medios": 1,
+    "fecha": "2026-09-23",
+    "vistas": 0,
+    "titulo": "Fava cumple 35 años: cómo participar de la ruleta virtual y acceder a descuentos de hasta el 40%"
+   },
+   {
+    "id": "r7245w",
+    "tipo": "chimento",
+    "enElArchivo": true,
+    "seccion": "Cultura y agenda",
+    "lugar": "de afuera",
+    "medios": 5,
+    "fecha": "2026-10-10",
+    "vistas": 0,
+    "titulo": "Wanda Nara debuta en el cine con una comedia romántica"
+   },
+   {
+    "id": "u1zabu",
+    "tipo": "chimento",
+    "enElArchivo": true,
+    "seccion": "Cultura y agenda",
+    "lugar": "de afuera",
+    "medios": 4,
+    "fecha": "2026-10-08",
+    "vistas": 0,
+    "titulo": "Mario Pergolini cuestiona el bajo rating de su programa"
+   },
+   {
+    "id": "uknghh",
+    "tipo": "chimento",
+    "enElArchivo": true,
+    "seccion": "Cultura y agenda",
+    "lugar": "de afuera",
+    "medios": 38,
+    "fecha": "2026-10-07",
+    "vistas": 0,
+    "titulo": "Famosos despiden con emotivos mensajes al cantautor Piero tras su fallecimiento"
+   },
+   {
+    "id": "18ck224",
+    "tipo": "chimento",
+    "enElArchivo": true,
+    "seccion": "Argentina",
+    "lugar": "de afuera",
+    "medios": 8,
+    "fecha": "2026-10-06",
+    "vistas": 0,
+    "titulo": "Luis Martín despide a Lionel Messi con una emotiva carta en redes"
+   },
+   {
+    "id": "1cv9j22",
+    "tipo": "curiosidad",
+    "enElArchivo": true,
+    "seccion": "Argentina",
+    "lugar": "de afuera",
+    "medios": 8,
+    "fecha": "2026-10-14",
+    "vistas": 0,
+    "titulo": "Presentan un videojuego en Formosa donde un superhéroe pelea contra un león"
+   },
+   {
+    "id": "55gw7p",
+    "tipo": "curiosidad",
+    "enElArchivo": true,
+    "seccion": "Argentina",
+    "lugar": "de afuera",
+    "medios": 6,
+    "fecha": "2026-10-14",
+    "vistas": 0,
+    "titulo": "Una psíquica de animales revela detalles sobre su vínculo con Javier Milei"
+   },
+   {
+    "id": "5exxou",
+    "tipo": "curiosidad",
+    "enElArchivo": true,
+    "seccion": "Agro",
+    "lugar": "de afuera",
+    "medios": 4,
+    "fecha": "2026-09-26",
+    "vistas": 0,
+    "titulo": "Un gallo bataraz se vende por más de tres millones de pesos"
+   },
+   {
+    "id": "1ijfhpo",
+    "tipo": "curiosidad",
+    "enElArchivo": true,
+    "seccion": "Agro",
+    "lugar": "de afuera",
+    "medios": 5,
+    "fecha": "2026-09-26",
+    "vistas": 0,
+    "titulo": "Un gallo bataraz se vende a $3.020.000 en Bolívar, un récord en el país"
+   },
+   {
+    "id": "tqz98z",
+    "tipo": "curiosidad",
+    "enElArchivo": true,
+    "seccion": "Argentina",
+    "lugar": "de afuera",
+    "medios": 5,
+    "fecha": "2026-10-06",
+    "vistas": 0,
+    "titulo": "La chocotorta obtiene el segundo puesto en un ranking mundial"
+   },
+   {
+    "id": "qxi2f0",
+    "tipo": "curiosidad",
+    "enElArchivo": true,
+    "seccion": "Argentina",
+    "lugar": "de afuera",
+    "medios": 4,
+    "fecha": "2026-09-29",
+    "vistas": 0,
+    "titulo": "Artista deja la ciudad y levanta una casa con doce parabrisas"
+   },
+   {
+    "id": "1q4j7p",
+    "tipo": "consejo",
+    "enElArchivo": true,
+    "seccion": "Agro",
+    "lugar": "de afuera",
+    "medios": 2,
+    "fecha": "2026-10-08",
+    "vistas": 0,
+    "titulo": "Aconsejan usar una mezcla casera de ajo y ají para combatir los pulgones"
+   },
+   {
+    "id": "qsc6ig",
+    "tipo": "consejo",
+    "enElArchivo": true,
+    "seccion": "Agro",
+    "lugar": "de afuera",
+    "medios": 2,
+    "fecha": "2026-09-30",
+    "vistas": 0,
+    "titulo": "El caldo de ceniza protege al limonero de las plagas en primavera"
+   },
+   {
+    "id": "fa17ki",
+    "tipo": "pronóstico de otro medio",
+    "enElArchivo": true,
+    "seccion": "Balcarce",
+    "lugar": "Balcarce",
+    "medios": 1,
+    "fecha": "2026-10-13",
+    "vistas": 0,
+    "titulo": "El pronóstico anticipa una semana fresca con lluvias y mínimas bajas"
+   },
+   {
+    "id": "i06m20",
+    "tipo": "pronóstico de otro medio",
+    "enElArchivo": true,
+    "seccion": "Balcarce",
+    "lugar": "Balcarce",
+    "medios": 16,
+    "fecha": "2026-10-01",
+    "vistas": 0,
+    "titulo": "El martes llega con una máxima de 22 grados y posibles lluvias"
+   },
+   {
+    "id": "vqv317",
+    "tipo": "pronóstico de otro medio",
+    "enElArchivo": true,
+    "seccion": "Balcarce",
+    "lugar": "Balcarce",
+    "medios": 1,
+    "fecha": "2026-10-05",
+    "vistas": 0,
+    "titulo": "El clima muestra cielo nublado y posibles lluvias débiles"
+   }
+  ]
+ },
+ "volumen": {
+  "porDia": [
+   {
+    "dia": "2026-09-27",
+    "publicadas": 45,
+    "deBalcarce": 18,
+    "deAfuera": 27,
+    "porPersona": 0,
+    "propias": 3,
+    "esperandoPersona": 15
+   },
+   {
+    "dia": "2026-09-28",
+    "publicadas": 48,
+    "deBalcarce": 23,
+    "deAfuera": 25,
+    "porPersona": 0,
+    "propias": 0,
+    "esperandoPersona": 19
+   },
+   {
+    "dia": "2026-09-29",
+    "publicadas": 49,
+    "deBalcarce": 19,
+    "deAfuera": 30,
+    "porPersona": 0,
+    "propias": 2,
+    "esperandoPersona": 23
+   },
+   {
+    "dia": "2026-09-30",
+    "publicadas": 46,
+    "deBalcarce": 19,
+    "deAfuera": 27,
+    "porPersona": 0,
+    "propias": 3,
+    "esperandoPersona": 27
+   },
+   {
+    "dia": "2026-10-01",
+    "publicadas": 51,
+    "deBalcarce": 16,
+    "deAfuera": 35,
+    "porPersona": 3,
+    "propias": 3,
+    "esperandoPersona": 15
+   },
+   {
+    "dia": "2026-10-02",
+    "publicadas": 45,
+    "deBalcarce": 18,
+    "deAfuera": 27,
+    "porPersona": 4,
+    "propias": 3,
+    "esperandoPersona": 16
+   },
+   {
+    "dia": "2026-10-03",
+    "publicadas": 21,
+    "deBalcarce": 10,
+    "deAfuera": 11,
+    "porPersona": 1,
+    "propias": 8,
+    "esperandoPersona": 11
+   },
+   {
+    "dia": "2026-10-04",
+    "publicadas": 20,
+    "deBalcarce": 6,
+    "deAfuera": 14,
+    "porPersona": 0,
+    "propias": 4,
+    "esperandoPersona": 17
+   },
+   {
+    "dia": "2026-10-05",
+    "publicadas": 44,
+    "deBalcarce": 16,
+    "deAfuera": 28,
+    "porPersona": 0,
+    "propias": 5,
+    "esperandoPersona": 12
+   },
+   {
+    "dia": "2026-10-06",
+    "publicadas": 28,
+    "deBalcarce": 11,
+    "deAfuera": 17,
+    "porPersona": 0,
+    "propias": 3,
+    "esperandoPersona": 24
+   },
+   {
+    "dia": "2026-10-07",
+    "publicadas": 44,
+    "deBalcarce": 21,
+    "deAfuera": 23,
+    "porPersona": 0,
+    "propias": 3,
+    "esperandoPersona": 30
+   },
+   {
+    "dia": "2026-10-08",
+    "publicadas": 42,
+    "deBalcarce": 15,
+    "deAfuera": 27,
+    "porPersona": 1,
+    "propias": 5,
+    "esperandoPersona": 37
+   },
+   {
+    "dia": "2026-10-09",
+    "publicadas": 40,
+    "deBalcarce": 17,
+    "deAfuera": 23,
+    "porPersona": 0,
+    "propias": 6,
+    "esperandoPersona": 36
+   },
+   {
+    "dia": "2026-10-10",
+    "publicadas": 18,
+    "deBalcarce": 5,
+    "deAfuera": 13,
+    "porPersona": 0,
+    "propias": 6,
+    "esperandoPersona": 13
+   },
+   {
+    "dia": "2026-10-11",
+    "publicadas": 12,
+    "deBalcarce": 6,
+    "deAfuera": 6,
+    "porPersona": 0,
+    "propias": 4,
+    "esperandoPersona": 9
+   },
+   {
+    "dia": "2026-10-12",
+    "publicadas": 28,
+    "deBalcarce": 9,
+    "deAfuera": 19,
+    "porPersona": 0,
+    "propias": 4,
+    "esperandoPersona": 5
+   },
+   {
+    "dia": "2026-10-13",
+    "publicadas": 33,
+    "deBalcarce": 10,
+    "deAfuera": 23,
+    "porPersona": 0,
+    "propias": 4,
+    "esperandoPersona": 10
+   },
+   {
+    "dia": "2026-10-14",
+    "publicadas": 41,
+    "deBalcarce": 14,
+    "deAfuera": 27,
+    "porPersona": 0,
+    "propias": 5,
+    "esperandoPersona": 25
+   },
+   {
+    "dia": "2026-10-15",
+    "publicadas": 15,
+    "deBalcarce": 8,
+    "deAfuera": 7,
+    "porPersona": 0,
+    "propias": 4,
+    "esperandoPersona": 20
+   }
+  ],
+  "promedio": {
+   "publicadas": 35.3,
+   "deBalcarce": 13.7,
+   "deAfuera": 21.5,
+   "porPersona": 0.5,
+   "esperandoPersona": 19.2
+  }
+ }
+}

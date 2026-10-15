@@ -1,0 +1,1021 @@
+{
+ "quien": "Claude (Opus), leyendo cada par el 15/10/2026. Criterio: B6 del criterio unico (mismo suceso, dia y protagonista; un anuncio y su resultado son dos notas). Son etiquetas de una IA: conviene que Andres y Hernan revisen una muestra.",
+ "pares": [
+  {
+   "idA": "1l8bz9z",
+   "idB": "5axoor",
+   "parecido": 0.925,
+   "mismoHecho": "si",
+   "tituloA": "Se prepara la segunda edición de la carrera homenaje a Luis Vildoza",
+   "tituloB": "Carrera homenaje a Luis Vildoza: preparan la segunda edición"
+  },
+  {
+   "idA": "vdi5vm",
+   "idB": "1tqxkgi",
+   "parecido": 0.907,
+   "mismoHecho": "si",
+   "tituloA": "Ariel Bilbao formó parte del equipo arbitral de los Juegos Suramericanos",
+   "tituloB": "Ariel Bilbao integró el equipo arbitral de tiro en los Juegos Suramericanos Santa Fe 2026"
+  },
+  {
+   "idA": "1ozoykm",
+   "idB": "648mh3",
+   "parecido": 0.869,
+   "mismoHecho": "si",
+   "tituloA": "Zoonosis traslada el quirófano móvil a la Plaza Colón",
+   "tituloB": "Zoonosis atiende con el quirófano móvil en plaza Colón"
+  },
+  {
+   "idA": "hf1e85",
+   "idB": "x9lsqs",
+   "parecido": 0.863,
+   "mismoHecho": "si",
+   "tituloA": "Destacada participación de nadadores de EMDAB en un torneo nacional en Necochea",
+   "tituloB": "Destacada actuación de nadadores de EMDAB en un torneo nacional"
+  },
+  {
+   "idA": "1ibi15p",
+   "idB": "qq816k",
+   "parecido": 0.834,
+   "mismoHecho": "si",
+   "tituloA": "Kevin Gómez se consagró campeón nacional de boxeo",
+   "tituloB": "Kevin Gómez se consagró campeón argentino de boxeo"
+  },
+  {
+   "idA": "ccot62",
+   "idB": "15imf6x",
+   "parecido": 0.829,
+   "mismoHecho": "si",
+   "tituloA": "El Jardín 905 suspende las clases tras el robo de caños de gas",
+   "tituloB": "Suspenden clases en el Jardín 905 por el robo de caños de gas"
+  },
+  {
+   "idA": "1joauko",
+   "idB": "1ifyi35",
+   "parecido": 0.812,
+   "mismoHecho": "si",
+   "tituloA": "Dos nuevas victorias para Balcarce Básquet",
+   "tituloB": "Balcarce Básquet sumó dos victorias en una nueva fecha de la Asociación de Mar del Plata"
+  },
+  {
+   "idA": "wyb8m0",
+   "idB": "1w7nnsk",
+   "parecido": 0.799,
+   "mismoHecho": "dudoso",
+   "tituloA": "Despedida de Messi: colapsó la venta de entradas",
+   "tituloB": "A qué hora arranca hoy la venta de entradas para la despedida de Lionel Messi"
+  },
+  {
+   "idA": "1gk282j",
+   "idB": "1o4iueo",
+   "parecido": 0.788,
+   "mismoHecho": "si",
+   "tituloA": "Ferroviarios ganó la final del Apertura por penales",
+   "tituloB": "Ferroviarios ganó por penales y jugará la final anual"
+  },
+  {
+   "idA": "1e7tfvc",
+   "idB": "1jo1k5q",
+   "parecido": 0.784,
+   "mismoHecho": "si",
+   "tituloA": "Ocho equipos participaron de un nuevo Grand Prix de Vóley",
+   "tituloB": "Nuevo gran Prix de Vóley"
+  },
+  {
+   "idA": "oafvfp",
+   "idB": "12yvmdv",
+   "parecido": 0.779,
+   "mismoHecho": "si",
+   "tituloA": "Restricciones para el uso de drones en el TC Pick Up",
+   "tituloB": "Regulan el uso de drones durante las competencias en el autódromo Fangio"
+  },
+  {
+   "idA": "in20o1",
+   "idB": "4aj9uy",
+   "parecido": 0.762,
+   "mismoHecho": "si",
+   "tituloA": "Hernán Palazzo gana la final del TC Pick Up en el autódromo Fangio",
+   "tituloB": "Hernán Palazzo gana en el regreso del TC Pick Up"
+  },
+  {
+   "idA": "hf1e85",
+   "idB": "yt2niw",
+   "parecido": 0.742,
+   "mismoHecho": "si",
+   "tituloA": "Destacada participación de nadadores de EMDAB en un torneo nacional en Necochea",
+   "tituloB": "Nadadores de la EMDAB cosecharon podios en Necochea"
+  },
+  {
+   "idA": "i031u3",
+   "idB": "xzompk",
+   "parecido": 0.741,
+   "mismoHecho": "si",
+   "tituloA": "La “Caravana de la Alegría” tendrá una nueva sede en su edición N° 52",
+   "tituloB": "El Colegio “Emilio Lamarca” prepara la edición N° 52 de la “Caravana de la Alegría”"
+  },
+  {
+   "idA": "wyb8m0",
+   "idB": "1nud4zm",
+   "parecido": 0.738,
+   "mismoHecho": "dudoso",
+   "tituloA": "Despedida de Messi: colapsó la venta de entradas",
+   "tituloB": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas"
+  },
+  {
+   "idA": "4v2vga",
+   "idB": "xtlwre",
+   "parecido": 0.735,
+   "mismoHecho": "si",
+   "tituloA": "Largas filas en Balcarce por el regreso del automovilismo",
+   "tituloB": "Largas filas para ingresar al autódromo Juan Manuel Fangio"
+  },
+  {
+   "idA": "1dys4t6",
+   "idB": "wmdo1p",
+   "parecido": 0.727,
+   "mismoHecho": "si",
+   "tituloA": "El PJ de Balcarce dijo presente en el Plenario Federal del Movimiento Derecho al Futuro",
+   "tituloB": "El PJ de Balcarce participó del Plenario Federal del Movimiento Derecho al Futuro"
+  },
+  {
+   "idA": "97f98g",
+   "idB": "cdnqde",
+   "parecido": 0.726,
+   "mismoHecho": "si",
+   "tituloA": "El Instituto Adventista celebra cuarenta años con un musical",
+   "tituloB": "El Coro del Instituto Adventista presenta el musical Un día"
+  },
+  {
+   "idA": "5ibpo3",
+   "idB": "tq5bez",
+   "parecido": 0.725,
+   "mismoHecho": "no",
+   "tituloA": "Entradas para la Selección Argentina: se confirmó cuándo salen a la venta los tickets para la despedida de Messi",
+   "tituloB": "Ángel Di María confirmó que acompañará a Lionel Messi en la despedida con la selección argentina"
+  },
+  {
+   "idA": "jul3w9",
+   "idB": "4p0z63",
+   "parecido": 0.722,
+   "mismoHecho": "si",
+   "tituloA": "Infraccionan a un tractor en caminos rurales tras las lluvias",
+   "tituloB": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta"
+  },
+  {
+   "idA": "1iyhhh6",
+   "idB": "1825h24",
+   "parecido": 0.718,
+   "mismoHecho": "si",
+   "tituloA": "Campo de Pato afronta una intensa doble fecha de hockey",
+   "tituloB": "Campo de Pato disputa una doble fecha de hockey"
+  },
+  {
+   "idA": "yt2niw",
+   "idB": "x9lsqs",
+   "parecido": 0.717,
+   "mismoHecho": "si",
+   "tituloA": "Nadadores de la EMDAB cosecharon podios en Necochea",
+   "tituloB": "Destacada actuación de nadadores de EMDAB en un torneo nacional"
+  },
+  {
+   "idA": "19i5zse",
+   "idB": "834bwh",
+   "parecido": 0.712,
+   "mismoHecho": "si",
+   "tituloA": "Día del Estudiante: habrá una jornada recreativa y musical en el Cerro El Triunfo",
+   "tituloB": "Festejos por el Día del Estudiante en el cerro El Triunfo"
+  },
+  {
+   "idA": "1w7nnsk",
+   "idB": "1nud4zm",
+   "parecido": 0.705,
+   "mismoHecho": "dudoso",
+   "tituloA": "A qué hora arranca hoy la venta de entradas para la despedida de Lionel Messi",
+   "tituloB": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas"
+  },
+  {
+   "idA": "dph8p3",
+   "idB": "146qu7q",
+   "parecido": 0.702,
+   "mismoHecho": "si",
+   "tituloA": "Petruccelli pidió informes sobre el programa para celíacos y las acciones de prevención de ITS",
+   "tituloB": "Petruccelli presentó pedidos de informes sobre asistencia alimentaria para celíacos y prevención de ITS"
+  },
+  {
+   "idA": "12rp30w",
+   "idB": "1nzl1bf",
+   "parecido": 0.702,
+   "mismoHecho": "si",
+   "tituloA": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+   "tituloB": "Edgardo Ríos participa en la Fiesta Nacional del Postre"
+  },
+  {
+   "idA": "6txjlx",
+   "idB": "a00g5p",
+   "parecido": 0.686,
+   "mismoHecho": "si",
+   "tituloA": "La Técnica N° 1 prepara dos autos para el Desafío ECO",
+   "tituloB": "La Técnica 1 compite en el Desafío ECO con dos autos eléctricos"
+  },
+  {
+   "idA": "mvz4ty",
+   "idB": "19a10ju",
+   "parecido": 0.682,
+   "mismoHecho": "si",
+   "tituloA": "Reconocieron a Kevin Gómez en el Museo Fangio",
+   "tituloB": "Reconocieron al boxeador Kevin Gómez"
+  },
+  {
+   "idA": "10f4z20",
+   "idB": "1m9oza2",
+   "parecido": 0.68,
+   "mismoHecho": "si",
+   "tituloA": "Acreditación para socios fundadores del Autódromo",
+   "tituloB": "Los socios fundadores deben acreditarse para el TC Pick Up"
+  },
+  {
+   "idA": "158gkt0",
+   "idB": "1gq0pia",
+   "parecido": 0.675,
+   "mismoHecho": "si",
+   "tituloA": "La Liga Balcarceña de Fútbol suspende la fecha por el estado de las canchas",
+   "tituloB": "La Liga Balcarceña suspende toda la fecha del fútbol local"
+  },
+  {
+   "idA": "p5a6md",
+   "idB": "riobys",
+   "parecido": 0.668,
+   "mismoHecho": "no",
+   "tituloA": "Social Pato compite en el Torneo Regional Sub-16 de hóckey en Bahía Blanca",
+   "tituloB": "Campo de Pato disputa el Torneo Regional de Clubes F en Bahía Blanca"
+  },
+  {
+   "idA": "wo6zpw",
+   "idB": "1pxllaz",
+   "parecido": 0.661,
+   "mismoHecho": "si",
+   "tituloA": "Cauan Barros sufre un accidente y se pierde el partido ante Boca",
+   "tituloB": "Cauan Barros choca con su auto y se pierde el partido ante Boca"
+  },
+  {
+   "idA": "5exxou",
+   "idB": "1ijfhpo",
+   "parecido": 0.659,
+   "mismoHecho": "si",
+   "tituloA": "Un gallo bataraz se vende por más de tres millones de pesos",
+   "tituloB": "Un gallo bataraz se vende a $3.020.000 en Bolívar, un récord en el país"
+  },
+  {
+   "idA": "15l69b7",
+   "idB": "131078z",
+   "parecido": 0.658,
+   "mismoHecho": "si",
+   "tituloA": "La Cámara de Diputados provincial premia al balcarceño Agustín Molpeceres",
+   "tituloB": "Agustín Molpeceres recibe una distinción de la Legislatura bonaerense"
+  },
+  {
+   "idA": "158583a",
+   "idB": "yhgmbn",
+   "parecido": 0.647,
+   "mismoHecho": "si",
+   "tituloA": "La industria y la construcción suben en agosto según el INDEC",
+   "tituloB": "La industria y la construcción suben contra julio pero caen en el año"
+  },
+  {
+   "idA": "3b4lyp",
+   "idB": "1rpzsy3",
+   "parecido": 0.636,
+   "mismoHecho": "dudoso",
+   "tituloA": "Tres balcarceños participan del Campeonato Argentino de Pádel en Rosario",
+   "tituloB": "Tres jugadores locales integran la selección provincial de pádel"
+  },
+  {
+   "idA": "c3xuey",
+   "idB": "lej1o7",
+   "parecido": 0.635,
+   "mismoHecho": "si",
+   "tituloA": "Balcarce Newcom jugó un torneo en Necochea",
+   "tituloB": "Buen desempeño del Newcom balcarceño en Necochea"
+  },
+  {
+   "idA": "1b8n8ol",
+   "idB": "1ozoykm",
+   "parecido": 0.63,
+   "mismoHecho": "dudoso",
+   "tituloA": "Zoonosis traslada el quirófano móvil",
+   "tituloB": "Zoonosis traslada el quirófano móvil a la Plaza Colón"
+  },
+  {
+   "idA": "ntjgh8",
+   "idB": "2olgpl",
+   "parecido": 0.63,
+   "mismoHecho": "si",
+   "tituloA": "El Concejo pide bajar las tasas a taxis y remises",
+   "tituloB": "El Concejo pide analizar una baja de tasas para taxis y remises"
+  },
+  {
+   "idA": "14uc9gg",
+   "idB": "1e2jbrs",
+   "parecido": 0.625,
+   "mismoHecho": "no",
+   "tituloA": "Franco Colapinto encara la tercera práctica libre y la clasificación en Bakú",
+   "tituloB": "Franco Colapinto finaliza décimo en la práctica libre en Bakú"
+  },
+  {
+   "idA": "e3ci1b",
+   "idB": "qq816k",
+   "parecido": 0.625,
+   "mismoHecho": "si",
+   "tituloA": "Kevin Gómez ganó por nocaut el título nacional supermediano",
+   "tituloB": "Kevin Gómez se consagró campeón argentino de boxeo"
+  },
+  {
+   "idA": "1fbewyl",
+   "idB": "jul3w9",
+   "parecido": 0.624,
+   "mismoHecho": "si",
+   "tituloA": "Infraccionan a un tractor por circular en un camino rural reparado",
+   "tituloB": "Infraccionan a un tractor en caminos rurales tras las lluvias"
+  },
+  {
+   "idA": "1l8bz9z",
+   "idB": "pktre7",
+   "parecido": 0.623,
+   "mismoHecho": "si",
+   "tituloA": "Se prepara la segunda edición de la carrera homenaje a Luis Vildoza",
+   "tituloB": "Organizan la segunda edición de la carrera homenaje a Luis Vildoza"
+  },
+  {
+   "idA": "jul48u",
+   "idB": "q8aat8",
+   "parecido": 0.62,
+   "mismoHecho": "si",
+   "tituloA": "Pampa Dúo toca el 17 de octubre en el Teatro Municipal",
+   "tituloB": "Pampa Dúo presenta su espectáculo en el Teatro Municipal"
+  },
+  {
+   "idA": "1ls3nd7",
+   "idB": "1i5fhax",
+   "parecido": 0.617,
+   "mismoHecho": "si",
+   "tituloA": "Podio para Shalom Lescano",
+   "tituloB": "Shalom Lescano volvió a subir al podio en los 10K de Comandante Nicanor Otamendi"
+  },
+  {
+   "idA": "1fbewyl",
+   "idB": "4p0z63",
+   "parecido": 0.613,
+   "mismoHecho": "si",
+   "tituloA": "Infraccionan a un tractor por circular en un camino rural reparado",
+   "tituloB": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta"
+  },
+  {
+   "idA": "rilva6",
+   "idB": "1cnlvgi",
+   "parecido": 0.612,
+   "mismoHecho": "si",
+   "tituloA": "Lionel Messi se despide de la selección argentina con un triunfo",
+   "tituloB": "Lionel Messi despide a la selección argentina tras su último partido"
+  },
+  {
+   "idA": "5axoor",
+   "idB": "pktre7",
+   "parecido": 0.611,
+   "mismoHecho": "si",
+   "tituloA": "Carrera homenaje a Luis Vildoza: preparan la segunda edición",
+   "tituloB": "Organizan la segunda edición de la carrera homenaje a Luis Vildoza"
+  },
+  {
+   "idA": "hf1e85",
+   "idB": "m4p2h",
+   "parecido": 0.61,
+   "mismoHecho": "dudoso",
+   "tituloA": "Destacada participación de nadadores de EMDAB en un torneo nacional en Necochea",
+   "tituloB": "Nadadores de la EMDAB compiten en un torneo nacional"
+  },
+  {
+   "idA": "zd48ar",
+   "idB": "9hkq7t",
+   "parecido": 0.607,
+   "mismoHecho": "si",
+   "tituloA": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+   "tituloB": "Juan Pablo Montoya respalda a Franco Colapinto en la F1"
+  },
+  {
+   "idA": "vp5l7j",
+   "idB": "1ugpk62",
+   "parecido": 0.606,
+   "mismoHecho": "si",
+   "tituloA": "Toyota consigue el primer RIGI automotriz para fabricar autos eléctricos",
+   "tituloB": "Toyota obtiene el primer RIGI automotriz y proyecta fabricar autos eléctricos"
+  },
+  {
+   "idA": "ovito2",
+   "idB": "1vrqpb6",
+   "parecido": 0.604,
+   "mismoHecho": "si",
+   "tituloA": "YPF aumenta un 1 % sus combustibles",
+   "tituloB": "YPF aumenta uno por ciento el precio de los combustibles"
+  },
+  {
+   "idA": "1ibi15p",
+   "idB": "e3ci1b",
+   "parecido": 0.599,
+   "mismoHecho": "si",
+   "tituloA": "Kevin Gómez se consagró campeón nacional de boxeo",
+   "tituloB": "Kevin Gómez ganó por nocaut el título nacional supermediano"
+  },
+  {
+   "idA": "1aizybd",
+   "idB": "pvwlvg",
+   "parecido": 0.598,
+   "mismoHecho": "dudoso",
+   "tituloA": "Giuliana Romero afronta con éxito su cuarta cirugía",
+   "tituloB": "Giuliana Romero afronta una nueva cirugía en el pie derecho"
+  },
+  {
+   "idA": "x9lsqs",
+   "idB": "m4p2h",
+   "parecido": 0.597,
+   "mismoHecho": "dudoso",
+   "tituloA": "Destacada actuación de nadadores de EMDAB en un torneo nacional",
+   "tituloB": "Nadadores de la EMDAB compiten en un torneo nacional"
+  },
+  {
+   "idA": "pjnmc",
+   "idB": "16zvbdl",
+   "parecido": 0.596,
+   "mismoHecho": "si",
+   "tituloA": "Reinauguran el Autódromo Fangio",
+   "tituloB": "Reinauguran este viernes el Autódromo Fangio"
+  },
+  {
+   "idA": "swyxjn",
+   "idB": "m212r6",
+   "parecido": 0.594,
+   "mismoHecho": "dudoso",
+   "tituloA": "La Casa del Bicentenario recibe un concierto benéfico",
+   "tituloB": "Bajo Fondo y Nahuel González Salvo se presentan el domingo en la Casa del Bicentenario"
+  },
+  {
+   "idA": "1xf2418",
+   "idB": "rax2jh",
+   "parecido": 0.59,
+   "mismoHecho": "no",
+   "tituloA": "Campo de Pato volvió a tener una destacada jornada de hockey",
+   "tituloB": "Nueva fecha destacada para el hockey del Campo de Pato"
+  },
+  {
+   "idA": "19oirfx",
+   "idB": "1ifyi35",
+   "parecido": 0.589,
+   "mismoHecho": "dudoso",
+   "tituloA": "La Escuela Municipal de Básquet disputó una nueva fecha",
+   "tituloB": "Balcarce Básquet sumó dos victorias en una nueva fecha de la Asociación de Mar del Plata"
+  },
+  {
+   "idA": "1tqxkgi",
+   "idB": "1skw0dm",
+   "parecido": 0.584,
+   "mismoHecho": "si",
+   "tituloA": "Ariel Bilbao integró el equipo arbitral de tiro en los Juegos Suramericanos Santa Fe 2026",
+   "tituloB": "Destacada labor arbitral de Ariel Bilbao en los Juegos odesur 2026"
+  },
+  {
+   "idA": "ui3rqv",
+   "idB": "cs4hof",
+   "parecido": 0.583,
+   "mismoHecho": "si",
+   "tituloA": "Nicolás Girotti ganó en Rauch y amplió su ventaja al frente del Play Off",
+   "tituloB": "Nicolás Girotti gana y se afirma en la punta"
+  },
+  {
+   "idA": "8qlok6",
+   "idB": "1i5fhax",
+   "parecido": 0.581,
+   "mismoHecho": "si",
+   "tituloA": "Shalom Lescano fue segunda en los diezK de Otamendi",
+   "tituloB": "Shalom Lescano volvió a subir al podio en los 10K de Comandante Nicanor Otamendi"
+  },
+  {
+   "idA": "6r39xx",
+   "idB": "1lp9xo1",
+   "parecido": 0.58,
+   "mismoHecho": "si",
+   "tituloA": "Taller abierto para emprendedores y personas con ideas de negocio",
+   "tituloB": "Taller abierto para quienes tienen una idea o un emprendimiento en marcha"
+  },
+  {
+   "idA": "13n5c55",
+   "idB": "1bglcef",
+   "parecido": 0.563,
+   "mismoHecho": "no",
+   "tituloA": "Franco Peidón fue séptimo en los Suramericanos",
+   "tituloB": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos"
+  },
+  {
+   "idA": "an3qj5",
+   "idB": "1tg5rro",
+   "parecido": 0.563,
+   "mismoHecho": "si",
+   "tituloA": "Omar Arreguito integró una nueva concentración de la Selección Argentina de Fútbol 7",
+   "tituloB": "Nuevo entrenamiento de Los Tigres con presencia balcarceña"
+  },
+  {
+   "idA": "84dtak",
+   "idB": "5hhuva",
+   "parecido": 0.561,
+   "mismoHecho": "si",
+   "tituloA": "El Gobierno nacional renueva todos los vencimientos de deuda en pesos",
+   "tituloB": "El Ministerio de Economía renueva la totalidad de los vencimientos de deuda"
+  },
+  {
+   "idA": "8qlok6",
+   "idB": "1ls3nd7",
+   "parecido": 0.558,
+   "mismoHecho": "si",
+   "tituloA": "Shalom Lescano fue segunda en los diezK de Otamendi",
+   "tituloB": "Podio para Shalom Lescano"
+  },
+  {
+   "idA": "yt2niw",
+   "idB": "m4p2h",
+   "parecido": 0.557,
+   "mismoHecho": "dudoso",
+   "tituloA": "Nadadores de la EMDAB cosecharon podios en Necochea",
+   "tituloB": "Nadadores de la EMDAB compiten en un torneo nacional"
+  },
+  {
+   "idA": "smbukf",
+   "idB": "648mh3",
+   "parecido": 0.557,
+   "mismoHecho": "no",
+   "tituloA": "Zoonosis atiende cerca de la Escuela de Arte",
+   "tituloB": "Zoonosis atiende con el quirófano móvil en plaza Colón"
+  },
+  {
+   "idA": "1ch74gj",
+   "idB": "1tqxkgi",
+   "parecido": 0.555,
+   "mismoHecho": "si",
+   "tituloA": "Un balcarceño integró el equipo arbitral de los Juegos Suramericanos Santa Fe 2026",
+   "tituloB": "Ariel Bilbao integró el equipo arbitral de tiro en los Juegos Suramericanos Santa Fe 2026"
+  },
+  {
+   "idA": "e09k96",
+   "idB": "uzokxq",
+   "parecido": 0.554,
+   "mismoHecho": "si",
+   "tituloA": "El Concejo debate la creación de un banco municipal de fisiatría",
+   "tituloB": "Impulsan un banco municipal de elementos de fisiatría"
+  },
+  {
+   "idA": "12jm31p",
+   "idB": "1hfsu27",
+   "parecido": 0.551,
+   "mismoHecho": "si",
+   "tituloA": "Mariano Werner lidera la clasificación del TC Pick Up",
+   "tituloB": "Mariano Werner logra la pole de las TC Pick Up"
+  },
+  {
+   "idA": "13n5c55",
+   "idB": "12xkda6",
+   "parecido": 0.549,
+   "mismoHecho": "si",
+   "tituloA": "Franco Peidón fue séptimo en los Suramericanos",
+   "tituloB": "Franco Peidón finaliza séptimo en los Juegos ODESUR"
+  },
+  {
+   "idA": "83u2vt",
+   "idB": "1hm23zx",
+   "parecido": 0.548,
+   "mismoHecho": "dudoso",
+   "tituloA": "El autódromo Juan Manuel Fangio reabre tras quince años",
+   "tituloB": "El autódromo Juan Manuel Fangio reabre sus puertas"
+  },
+  {
+   "idA": "5mxbmz",
+   "idB": "yya7lo",
+   "parecido": 0.544,
+   "mismoHecho": "no",
+   "tituloA": "YPF aumenta 1% sus combustibles, por debajo de Shell, Axion y Puma",
+   "tituloB": "Shell, Axion y Puma suben sus combustibles hasta un 5 %"
+  },
+  {
+   "idA": "vdi5vm",
+   "idB": "1skw0dm",
+   "parecido": 0.543,
+   "mismoHecho": "si",
+   "tituloA": "Ariel Bilbao formó parte del equipo arbitral de los Juegos Suramericanos",
+   "tituloB": "Destacada labor arbitral de Ariel Bilbao en los Juegos odesur 2026"
+  },
+  {
+   "idA": "e3ci1b",
+   "idB": "19cfh7v",
+   "parecido": 0.542,
+   "mismoHecho": "no",
+   "tituloA": "Kevin Gómez ganó por nocaut el título nacional supermediano",
+   "tituloB": "Kevin Gómez busca el título argentino supermediano"
+  },
+  {
+   "idA": "inwwi9",
+   "idB": "46zq6i",
+   "parecido": 0.542,
+   "mismoHecho": "si",
+   "tituloA": "La Provincia y las distribuidoras apelan el fallo que frenó las tarifas",
+   "tituloB": "El gobierno bonaerense y las distribuidoras apelan el freno judicial al aumento de la luz"
+  },
+  {
+   "idA": "wcnatb",
+   "idB": "3i24zc",
+   "parecido": 0.542,
+   "mismoHecho": "dudoso",
+   "tituloA": "Karina Milei se reóne en París con directivos de firmas francesas",
+   "tituloB": "Empresas francesas anuncian millonarias inversiones en el país"
+  },
+  {
+   "idA": "1hm23zx",
+   "idB": "epzsa5",
+   "parecido": 0.54,
+   "mismoHecho": "dudoso",
+   "tituloA": "El autódromo Juan Manuel Fangio reabre sus puertas",
+   "tituloB": "Reinauguran el autódromo Juan Manuel Fangio"
+  },
+  {
+   "idA": "n5lm6f",
+   "idB": "1qyg9eg",
+   "parecido": 0.537,
+   "mismoHecho": "no",
+   "tituloA": "Dólar blue hoy: a cuánto cotiza este viernes 25 de septiembre",
+   "tituloB": "Dólar hoy: a cuánto cerró este jueves 24 de septiembre"
+  },
+  {
+   "idA": "1if2xbk",
+   "idB": "1s5n48z",
+   "parecido": 0.537,
+   "mismoHecho": "si",
+   "tituloA": "Se agotaron las entradas para la despedida de Messi de la selección argentina",
+   "tituloB": "Se agotan las entradas para el partido de despedida de Lionel Messi"
+  },
+  {
+   "idA": "o3v7lv",
+   "idB": "c1nalz",
+   "parecido": 0.536,
+   "mismoHecho": "si",
+   "tituloA": "Balcarce conmemora el Día del Periodista en recuerdo de Héctor Vuotto",
+   "tituloB": "Balcarce recuerda a Héctor Beto Vuotto en el Día del Periodista"
+  },
+  {
+   "idA": "4m9m4a",
+   "idB": "6r39xx",
+   "parecido": 0.535,
+   "mismoHecho": "si",
+   "tituloA": "Invitan a participar del taller “Mi punto de partida emprendedor”",
+   "tituloB": "Taller abierto para emprendedores y personas con ideas de negocio"
+  },
+  {
+   "idA": "10cpafd",
+   "idB": "gj403a",
+   "parecido": 0.533,
+   "mismoHecho": "dudoso",
+   "tituloA": "La Casa del Bicentenario reúne música y un homenaje a Ricardo Soulé",
+   "tituloB": "La Casa del Bicentenario recibe un festival de música y homenajes"
+  },
+  {
+   "idA": "4m9m4a",
+   "idB": "1lp9xo1",
+   "parecido": 0.531,
+   "mismoHecho": "si",
+   "tituloA": "Invitan a participar del taller “Mi punto de partida emprendedor”",
+   "tituloB": "Taller abierto para quienes tienen una idea o un emprendimiento en marcha"
+  },
+  {
+   "idA": "ntjgh8",
+   "idB": "7c7bdz",
+   "parecido": 0.531,
+   "mismoHecho": "dudoso",
+   "tituloA": "El Concejo pide bajar las tasas a taxis y remises",
+   "tituloB": "El Concejo debate eliminar tasas a taxis y remises"
+  },
+  {
+   "idA": "16zvbdl",
+   "idB": "epzsa5",
+   "parecido": 0.531,
+   "mismoHecho": "si",
+   "tituloA": "Reinauguran este viernes el Autódromo Fangio",
+   "tituloB": "Reinauguran el autódromo Juan Manuel Fangio"
+  },
+  {
+   "idA": "kqa7ux",
+   "idB": "18us8rn",
+   "parecido": 0.53,
+   "mismoHecho": "si",
+   "tituloA": "Racing confirmó la llegada de Inter Miami a Balcarce",
+   "tituloB": "Inter Miami jugará el torneo infantil"
+  },
+  {
+   "idA": "2olgpl",
+   "idB": "7c7bdz",
+   "parecido": 0.527,
+   "mismoHecho": "dudoso",
+   "tituloA": "El Concejo pide analizar una baja de tasas para taxis y remises",
+   "tituloB": "El Concejo debate eliminar tasas a taxis y remises"
+  },
+  {
+   "idA": "1c99k48",
+   "idB": "kpmt8y",
+   "parecido": 0.525,
+   "mismoHecho": "si",
+   "tituloA": "La Agencia Nacional de Seguridad Vial sanciona a miles de conductores",
+   "tituloB": "Sancionan a conductores por circular por banquinas en autopistas del AMBA"
+  },
+  {
+   "idA": "jiv3ba",
+   "idB": "hx00ak",
+   "parecido": 0.525,
+   "mismoHecho": "si",
+   "tituloA": "El Senado provincial aprueba cambios en la prioridad de paso en esquinas",
+   "tituloB": "La Legislatura aprueba cambios en la ley de tránsito bonaerense"
+  },
+  {
+   "idA": "1h348rv",
+   "idB": "18bbdzh",
+   "parecido": 0.523,
+   "mismoHecho": "si",
+   "tituloA": "Caputo anticipa una reforma impositiva para 2031 en el Coloquio de IDEA",
+   "tituloB": "Caputo promete una reforma tributaria para 2031 y proyecta crecimiento"
+  },
+  {
+   "idA": "1w7nnsk",
+   "idB": "2gmz6t",
+   "parecido": 0.519,
+   "mismoHecho": "dudoso",
+   "tituloA": "A qué hora arranca hoy la venta de entradas para la despedida de Lionel Messi",
+   "tituloB": "A qué hora arranca este martes la venta de entradas para la despedida de Lionel Messi en la Seleción Argentina"
+  },
+  {
+   "idA": "1tcfagn",
+   "idB": "165tzq5",
+   "parecido": 0.509,
+   "mismoHecho": "dudoso",
+   "tituloA": "Avanza en la Provincia un proyecto contra los escapes libres: en Balcarce ya rige una normativa",
+   "tituloB": "El Senado bonaerense evalúa multas millonarias por escapes libres"
+  },
+  {
+   "idA": "zh5e4x",
+   "idB": "ff9n91",
+   "parecido": 0.509,
+   "mismoHecho": "si",
+   "tituloA": "El Hospital Municipal suma una nueva mesa quirúrgica",
+   "tituloB": "El Hospital Municipal incorpora una nueva mesa de cirugía"
+  },
+  {
+   "idA": "o4cy3m",
+   "idB": "g333ki",
+   "parecido": 0.508,
+   "mismoHecho": "no",
+   "tituloA": "La moda y el arte se unieron a beneficio del Hogar Pinto",
+   "tituloB": "Desfile solidario este domingo a beneficio del Hogar Pinto"
+  },
+  {
+   "idA": "p036u7",
+   "idB": "dph8p3",
+   "parecido": 0.507,
+   "mismoHecho": "si",
+   "tituloA": "Petruccelli puso el foco en la asistencia a personas celíacas y la prevención de ITS",
+   "tituloB": "Petruccelli pidió informes sobre el programa para celíacos y las acciones de prevención de ITS"
+  },
+  {
+   "idA": "1tftag2",
+   "idB": "1jtty0p",
+   "parecido": 0.499,
+   "mismoHecho": "si",
+   "tituloA": "Nuevo mural de Fangio en el autódromo local",
+   "tituloB": "Fangio siempre presente: \"Nico\" Lahitte artífice de un nuevo mural del Quíntuple en el autódromo"
+  },
+  {
+   "idA": "14mxql1",
+   "idB": "17l1wv1",
+   "parecido": 0.496,
+   "mismoHecho": "si",
+   "tituloA": "Campo de Pato gana la semifinal y clasifica a las finales de paleta",
+   "tituloB": "Social Pato gana la semifinal provincial de pelota paleta"
+  },
+  {
+   "idA": "ovito2",
+   "idB": "5mxbmz",
+   "parecido": 0.495,
+   "mismoHecho": "si",
+   "tituloA": "YPF aumenta un 1 % sus combustibles",
+   "tituloB": "YPF aumenta 1% sus combustibles, por debajo de Shell, Axion y Puma"
+  },
+  {
+   "idA": "vm4nnt",
+   "idB": "mxjwi9",
+   "parecido": 0.493,
+   "mismoHecho": "si",
+   "tituloA": "Científicos protestan en Mar del Plata por el sumario a investigadora del INTA",
+   "tituloB": "Científicos y organizaciones protestan contra la sanción a Virginia Aparicio"
+  },
+  {
+   "idA": "w1jydl",
+   "idB": "1p4kwds",
+   "parecido": 0.487,
+   "mismoHecho": "si",
+   "tituloA": "Atletas de Balcarce compitieron en el Medio Maratón",
+   "tituloB": "Atletas balcarceños se destacaron en el Medio Maratón de Quequén"
+  },
+  {
+   "idA": "1b8n8ol",
+   "idB": "smbukf",
+   "parecido": 0.486,
+   "mismoHecho": "no",
+   "tituloA": "Zoonosis traslada el quirófano móvil",
+   "tituloB": "Zoonosis atiende cerca de la Escuela de Arte"
+  },
+  {
+   "idA": "p036u7",
+   "idB": "146qu7q",
+   "parecido": 0.486,
+   "mismoHecho": "si",
+   "tituloA": "Petruccelli puso el foco en la asistencia a personas celíacas y la prevención de ITS",
+   "tituloB": "Petruccelli presentó pedidos de informes sobre asistencia alimentaria para celíacos y prevención de ITS"
+  },
+  {
+   "idA": "1sjses1",
+   "idB": "p7nd3j",
+   "parecido": 0.485,
+   "mismoHecho": "no",
+   "tituloA": "Mangoni palpita el regreso del automovilismo a Balcarce",
+   "tituloB": "Balcarce palpita el regreso del automovilismo nacional"
+  },
+  {
+   "idA": "1vzdxxe",
+   "idB": "9ul7an",
+   "parecido": 0.485,
+   "mismoHecho": "si",
+   "tituloA": "El Banco Central compra dólares pero las reservas caen",
+   "tituloB": "El Banco Central compra setenta millones pero bajan las reservas"
+  },
+  {
+   "idA": "1ofousc",
+   "idB": "1b3p6ze",
+   "parecido": 0.482,
+   "mismoHecho": "no",
+   "tituloA": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up",
+   "tituloB": "Juan José Suárez corre en el Autódromo Juan Manuel Fangio"
+  },
+  {
+   "idA": "5bq6e6",
+   "idB": "1hm23zx",
+   "parecido": 0.481,
+   "mismoHecho": "dudoso",
+   "tituloA": "Reabre el autódromo Juan Manuel Fangio de Balcarce: ‘Jamás vi el autódromo como está hoy’, dijo Esteban Reino",
+   "tituloB": "El autódromo Juan Manuel Fangio reabre sus puertas"
+  },
+  {
+   "idA": "1k3fdlf",
+   "idB": "15imf6x",
+   "parecido": 0.48,
+   "mismoHecho": "no",
+   "tituloA": "El Jardín 905 reanuda las clases por la tarde tras revisar las instalaciones de gas",
+   "tituloB": "Suspenden clases en el Jardín 905 por el robo de caños de gas"
+  },
+  {
+   "idA": "ny562k",
+   "idB": "9y985f",
+   "parecido": 0.478,
+   "mismoHecho": "si",
+   "tituloA": "Lautaro Martínez sufre un desgarro muscular y frena su actividad por un mes y medio",
+   "tituloB": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección"
+  },
+  {
+   "idA": "1od3ckv",
+   "idB": "jul4wq",
+   "parecido": 0.477,
+   "mismoHecho": "dudoso",
+   "tituloA": "Limpieza de desagües en Balcarce por lluvias",
+   "tituloB": "Avanza la limpieza de desagües pluviales en la ciudad"
+  },
+  {
+   "idA": "10x98wn",
+   "idB": "19a10ju",
+   "parecido": 0.476,
+   "mismoHecho": "no",
+   "tituloA": "Caravana y recibimiento para el boxeador Kevin Gómez",
+   "tituloB": "Reconocieron al boxeador Kevin Gómez"
+  },
+  {
+   "idA": "19oirfx",
+   "idB": "1joauko",
+   "parecido": 0.475,
+   "mismoHecho": "dudoso",
+   "tituloA": "La Escuela Municipal de Básquet disputó una nueva fecha",
+   "tituloB": "Dos nuevas victorias para Balcarce Básquet"
+  },
+  {
+   "idA": "32591i",
+   "idB": "164efaj",
+   "parecido": 0.47,
+   "mismoHecho": "si",
+   "tituloA": "Piden un punto TelePASE",
+   "tituloB": "Solicitan una oficina presencial de TelePASE"
+  },
+  {
+   "idA": "qq816k",
+   "idB": "19cfh7v",
+   "parecido": 0.47,
+   "mismoHecho": "no",
+   "tituloA": "Kevin Gómez se consagró campeón argentino de boxeo",
+   "tituloB": "Kevin Gómez busca el título argentino supermediano"
+  },
+  {
+   "idA": "1pbhcrn",
+   "idB": "1hfsu27",
+   "parecido": 0.47,
+   "mismoHecho": "si",
+   "tituloA": "Werner hizo la pole del TC Pick Up en el regreso del Autódromo",
+   "tituloB": "Mariano Werner logra la pole de las TC Pick Up"
+  },
+  {
+   "idA": "5ibpo3",
+   "idB": "xthv2q",
+   "parecido": 0.469,
+   "mismoHecho": "dudoso",
+   "tituloA": "Entradas para la Selección Argentina: se confirmó cuándo salen a la venta los tickets para la despedida de Messi",
+   "tituloB": "Entradas para la despedida de Lionel Messi"
+  },
+  {
+   "idA": "1as5wmy",
+   "idB": "jgkb1p",
+   "parecido": 0.469,
+   "mismoHecho": "si",
+   "tituloA": "El autódromo Fangio completa su capacidad de estacionamiento para autos",
+   "tituloB": "El estacionamiento del autódromo Fangio llega a su capacidad máxima"
+  },
+  {
+   "idA": "levilm",
+   "idB": "n5lm6f",
+   "parecido": 0.468,
+   "mismoHecho": "si",
+   "tituloA": "El dólar minorista y el dólar blue cotizan este viernes",
+   "tituloB": "Dólar blue hoy: a cuánto cotiza este viernes 25 de septiembre"
+  },
+  {
+   "idA": "1k34j05",
+   "idB": "5ddc24",
+   "parecido": 0.466,
+   "mismoHecho": "no",
+   "tituloA": "El riesgo país supera los 630 puntos y marca el récord de 2026",
+   "tituloB": "El riesgo país llega a 642 puntos y marca un récord anual"
+  },
+  {
+   "idA": "3exxze",
+   "idB": "1ihpcqe",
+   "parecido": 0.462,
+   "mismoHecho": "si",
+   "tituloA": "El CPR multa a maquinaria agrícola por circular en caminos de El Verano",
+   "tituloB": "El Comando de Prevención Rural intercepta maquinaria agrícola en El Verano"
+  },
+  {
+   "idA": "r7ox1t",
+   "idB": "116x391",
+   "parecido": 0.46,
+   "mismoHecho": "si",
+   "tituloA": "Aumentan 8,8 por ciento los peajes a la costa atlántica",
+   "tituloB": "AUBASA aumenta los peajes del Sistema Vial del Atlántico"
+  },
+  {
+   "idA": "8hce1y",
+   "idB": "194wzrq",
+   "parecido": 0.459,
+   "mismoHecho": "dudoso",
+   "tituloA": "Domingo Cavallo cuestiona el rumbo económico y advierte por el sobreajuste",
+   "tituloB": "Domingo Cavallo elogia un informe con reparos al plan económico"
+  },
+  {
+   "idA": "swbc0d",
+   "idB": "yqqsx9",
+   "parecido": 0.459,
+   "mismoHecho": "dudoso",
+   "tituloA": "Las acciones argentinas suben en Wall Street por las elecciones en Brasil",
+   "tituloB": "Los bonos y acciones argentinas suben y el riesgo país cae"
+  },
+  {
+   "idA": "1if2xbk",
+   "idB": "e7ym9v",
+   "parecido": 0.455,
+   "mismoHecho": "no",
+   "tituloA": "Se agotaron las entradas para la despedida de Messi de la selección argentina",
+   "tituloB": "La Selección presenta la camiseta especial para la despedida de Messi"
+  },
+  {
+   "idA": "aiqaq9",
+   "idB": "189jmfz",
+   "parecido": 0.454,
+   "mismoHecho": "si",
+   "tituloA": "El Turismo Special de la Costa vuelve a Balcarce",
+   "tituloB": "El Turismo Special de la Costa también será protagonista en la reapertura del Fangio"
+  }
+ ]
+}

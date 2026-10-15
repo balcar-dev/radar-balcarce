@@ -86,15 +86,21 @@ test('la poda de fotos nunca borra la ilustración fija (14/10: la borró la cor
 // ------------------------------------------------- el año y la fecha sobre la hoja del centro (15/10/2026)
 
 test('la hoja lleva el año en grande y la fecha; un "día de…" sin año lleva el día', async () => {
-  const { textosDeLaHoja, caminoParaElFiltro, filtroDeLaHoja, archivoDeLaFoto } = await import('../web/scripts/foto-efemeride.mjs');
+  const { textosDeLaHoja, svgDeLaHoja, argumentosDeLaFoto, archivoDeLaFoto } = await import('../web/scripts/foto-efemeride.mjs');
   assert.deepEqual(textosDeLaHoja({ dia: '2026-10-14', anio: 1959 }), { grande: '1959', fecha: '14 de octubre' });
   assert.deepEqual(textosDeLaHoja({ dia: '2026-10-13', anio: null }), { grande: '13 oct', fecha: '13 de octubre' });
   assert.equal(textosDeLaHoja({ dia: 'x' }), null);
-  const B = String.fromCharCode(92);
-  assert.equal(caminoParaElFiltro(`D:${B}a${B}b.ttf`), `D${B}:/a/b.ttf`, 'los dos puntos de una ruta de Windows se escapan');
-  const f = filtroDeLaHoja({ rotulo: '/t/r.txt', grande: '/t/g.txt', fecha: '/t/f.txt' }, '/fuentes');
-  assert.equal(f.split('drawtext=').length - 1, 3, 'tres renglones: rótulo, año y fecha');
-  assert.match(f, /SourceSerif4-900\.ttf/);
+  const svg = svgDeLaHoja({ grande: '1959', fecha: '14 de octubre' });
+  assert.equal(svg.split('<text ').length - 1, 3, 'tres renglones: rótulo, año y fecha');
+  assert.match(svg, /UN DÍA COMO HOY/);
+  assert.match(svg, />1959</);
+  assert.match(svg, />14 de octubre</);
+  assert.match(svg, /Source Serif 4/);
+  assert.equal(svgDeLaHoja({ grande: 'A & B', fecha: '<x>' }).includes('A &amp; B'), true, 'el texto se escapa');
+  const args = argumentosDeLaFoto('/b.jpg', '/t.png', '/d.jpg');
+  assert.ok(args.includes('[0:v][1:v]overlay=0:0'), 'se superpone con overlay, que el ffmpeg de Linux sí trae (drawtext no: 15/10)');
+  assert.ok(!args.join(' ').includes('drawtext'));
+  assert.equal(args[args.length - 1], '/d.jpg');
   assert.equal(archivoDeLaFoto('2026-10-14'), 'efemeride-2026-10-14.jpg');
 });
 
@@ -110,13 +116,14 @@ test('la foto de cada día se arma una vez, sin ffmpeg no rompe y la nota se que
     assert.equal(nota.anioDeLaFoto, 1959);
     const base = fileURLToPath(new URL('../web/public/fotos-notas/efemeride-fondo.jpg', import.meta.url));
     let llamadas = 0;
+    const dibujar = async (svg, destino) => { fs.writeFileSync(destino, 'png'); };
     const ejecutar = async (exe, args) => { llamadas += 1; fs.writeFileSync(args[args.length - 1], Buffer.alloc(30000, 1)); };
-    assert.equal(await fotoDeEfemeride(nota, { carpeta, base, ejecutar, ffmpeg: 'ffmpeg', soloLasQueEstan: true }), null, 'en la PC no se arma una nueva');
+    assert.equal(await fotoDeEfemeride(nota, { carpeta, base, ejecutar, dibujar, ffmpeg: 'ffmpeg', soloLasQueEstan: true }), null, 'en la PC no se arma una nueva');
     assert.equal(llamadas, 0);
-    const foto = await fotoDeEfemeride(nota, { carpeta, base, ejecutar, ffmpeg: 'ffmpeg' });
+    const foto = await fotoDeEfemeride(nota, { carpeta, base, ejecutar, dibujar, ffmpeg: 'ffmpeg' });
     assert.deepEqual(foto, { archivo: 'fotos-notas/efemeride-2026-10-14.jpg', credito: nota.foto.credito });
     assert.equal(llamadas, 1);
-    await fotoDeEfemeride(nota, { carpeta, base, ejecutar, ffmpeg: 'ffmpeg' });
+    await fotoDeEfemeride(nota, { carpeta, base, ejecutar, dibujar, ffmpeg: 'ffmpeg' });
     assert.equal(llamadas, 1, 'si ya está, no se vuelve a armar');
     assert.deepEqual(await fotoDeEfemeride(nota, { carpeta: path.join(carpeta, 'otra'), base, ejecutar: async () => { throw new Error('sin ffmpeg'); }, ffmpeg: 'ffmpeg' }), null);
     const { podarFotos } = await import('../web/scripts/fotos-notas.mjs');

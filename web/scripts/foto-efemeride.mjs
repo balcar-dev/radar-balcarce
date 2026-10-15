@@ -4,7 +4,7 @@
 // hoja de almanaque en blanco en el centro. Acá se escribe sobre esa hoja el año (en grande) y la fecha de cada día, y queda una imagen
 // por nota (efemeride-<día>.jpg). Cuando haya varias ilustraciones para rotar, se cambia la base y el resto sigue igual.
 //
-// Usa el ffmpeg que ya trae el proyecto (ffmpeg-static), igual que collage.mjs. Si algo falla, la nota se queda con la ilustración sin
+// Dibuja el texto con resvg (el de las placas) y lo superpone con el ffmpeg del proyecto (ffmpeg-static), igual que collage.mjs. Si algo falla, la nota se queda con la ilustración sin
 // texto: nunca lanza.
 
 import fs from 'node:fs';
@@ -17,7 +17,6 @@ import { CALIDAD_JPEG } from './achicar-foto.mjs';
 const correr = promisify(execFile);
 
 const AQUI = import.meta.dirname;
-const FUENTES = path.join(AQUI, '..', '..', 'reels', 'marca', 'fuentes');
 export const BASE_DE_EFEMERIDE = path.join(AQUI, '..', 'public', 'fotos-notas', 'efemeride-fondo.jpg');
 
 /** Dónde está la hoja en blanco de la ilustración (1200 × 800): el centro y los renglones. */
@@ -36,24 +35,31 @@ export function textosDeLaHoja({ dia, anio }) {
   };
 }
 
-/** Un camino adentro del filtro de ffmpeg: barras normales y los dos puntos de "D:" escapados. */
-export const caminoParaElFiltro = (ruta) => String(ruta).replace(/\\/g, '/').replace(/:/g, '\\:');
+/** El escape de un texto para ponerlo adentro de un SVG. */
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-/** El filtro de ffmpeg que escribe los tres renglones sobre la hoja. `archivos`: los .txt de cada renglón. */
-export function filtroDeLaHoja(archivos, fuentes = FUENTES) {
-  const f = (nombre) => caminoParaElFiltro(path.join(fuentes, nombre));
-  const t = (ruta) => caminoParaElFiltro(ruta);
-  const x = `${HOJA.centroX}-text_w/2`;
-  return [
-    `drawtext=fontfile='${f('Inter-700.ttf')}':textfile='${t(archivos.rotulo)}':fontsize=30:fontcolor=0x1F4FD8:x=${x}:y=${HOJA.rotuloY}`,
-    `drawtext=fontfile='${f('SourceSerif4-900.ttf')}':textfile='${t(archivos.grande)}':fontsize=170:fontcolor=0x1d1a16:x=${x}:y=${HOJA.anioY}`,
-    `drawtext=fontfile='${f('Inter-600.ttf')}':textfile='${t(archivos.fecha)}':fontsize=40:fontcolor=0x4a4338:x=${x}:y=${HOJA.fechaY}`,
-  ].join(',');
+/**
+ * Los tres renglones sobre la hoja, como un SVG transparente de 1200 × 800 (el mismo tamaño de la ilustración). Se dibuja con el conversor de las
+ * placas (resvg) y no con el filtro `drawtext` de ffmpeg: el ffmpeg de Linux que usa GitHub no lo trae (15/10: "No such filter: 'drawtext'").
+ * Las posiciones son las de la hoja (HOJA); en SVG la y es la línea de base del texto.
+ */
+export function svgDeLaHoja({ grande, fecha }) {
+  const x = HOJA.centroX;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <text x="${x}" y="${HOJA.rotuloY + 24}" text-anchor="middle" font-family="Inter" font-size="30" font-weight="700" letter-spacing="4" fill="#1F4FD8">UN DÍA COMO HOY</text>
+  <text x="${x}" y="${HOJA.anioY + 150}" text-anchor="middle" font-family="Source Serif 4 60pt" font-size="170" font-weight="900" fill="#1D1A16">${esc(grande)}</text>
+  <text x="${x}" y="${HOJA.fechaY + 32}" text-anchor="middle" font-family="Inter" font-size="40" font-weight="600" fill="#4A4338">${esc(fecha)}</text>
+</svg>`;
 }
 
-/** Los argumentos de ffmpeg para escribir la hoja sobre `base` y guardar en `destino`. */
-export function argumentosDeLaFoto(base, destino, archivos, fuentes = FUENTES) {
-  return ['-y', '-i', base, '-vf', filtroDeLaHoja(archivos, fuentes), '-frames:v', '1', '-q:v', String(CALIDAD_JPEG), destino];
+/** Los argumentos de ffmpeg para poner el dibujo del texto (PNG transparente) sobre `base` y guardar el resultado en `destino`. */
+export function argumentosDeLaFoto(base, textoPng, destino) {
+  return ['-y', '-i', base, '-i', textoPng, '-filter_complex', '[0:v][1:v]overlay=0:0', '-frames:v', '1', '-q:v', String(CALIDAD_JPEG), destino];
+}
+
+async function dibujarSvg(svg, destino, ancho) {
+  const { aPng } = await import('../../reels/placa.mjs');
+  return aPng(svg, destino, ancho);
 }
 
 async function ffmpegDelProyecto() {
@@ -67,7 +73,7 @@ export const archivoDeLaFoto = (dia) => `efemeride-${dia}.jpg`;
  * Arma la foto de la nota de efemérides de un día (si no está ya en `carpeta`) y devuelve `{ archivo, credito }` para la nota, o null si no se
  * pudo (la nota se queda con la ilustración sin texto).
  */
-export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE, ejecutar = correr, ffmpeg = null, soloLasQueEstan = false } = {}) {
+export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE, ejecutar = correr, ffmpeg = null, soloLasQueEstan = false, dibujar = dibujarSvg } = {}) {
   try {
     const textos = textosDeLaHoja({ dia: nota?.diaDeLaFoto, anio: nota?.anioDeLaFoto });
     if (!textos || !fs.existsSync(base)) return null;
@@ -80,13 +86,10 @@ export async function fotoDeEfemeride(nota, { carpeta, base = BASE_DE_EFEMERIDE,
     if (!exe) { console.warn('  efeméride: no hay ffmpeg para armar la foto'); return null; }
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'efemeride-'));
     try {
-      const archivos = {};
-      for (const [clave, texto] of Object.entries({ rotulo: 'UN DÍA COMO HOY', grande: textos.grande, fecha: textos.fecha })) {
-        archivos[clave] = path.join(tmp, `${clave}.txt`);
-        fs.writeFileSync(archivos[clave], texto, 'utf8');
-      }
+      const textoPng = path.join(tmp, 'texto.png');
+      await dibujar(svgDeLaHoja(textos), textoPng, 1200);
       fs.mkdirSync(carpeta, { recursive: true });
-      await ejecutar(exe, argumentosDeLaFoto(base, destino, archivos), { timeout: 60000 });
+      await ejecutar(exe, argumentosDeLaFoto(base, textoPng, destino), { timeout: 60000 });
     } finally {
       fs.rmSync(tmp, { recursive: true, force: true });
     }
