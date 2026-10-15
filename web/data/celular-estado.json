@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T14:04:06.542Z",
- "portada": 45,
- "archivo": 1117,
- "esperandoCuerpo": 1,
+ "generado": "2026-10-15T15:04:54.806Z",
+ "portada": 44,
+ "archivo": 1116,
+ "esperandoCuerpo": 0,
  "redes": {
-  "generado": "2026-10-15T14:04:06.574Z",
+  "generado": "2026-10-15T15:04:54.852Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "efemeride",
     "voz": "locutora",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-10-15T12:06:37.040Z"
    },
    {
@@ -43,7 +43,7 @@
     "que": "La agenda del fin de semana",
     "voz": "locutora",
     "ventana": 60,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -129,14 +129,14 @@
     "segundos": 50,
     "notas": [
      {
-      "id": "9y985f",
-      "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
-      "seccion": "Fútbol"
-     },
-     {
       "id": "lf9d6b",
       "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
       "seccion": "Deportes"
+     },
+     {
+      "id": "9y985f",
+      "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
+      "seccion": "Fútbol"
      },
      {
       "id": "pel8ok",
@@ -157,16 +157,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 28,
+    "segundos": 37,
     "notas": [
+     {
+      "id": "mly1kv",
+      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
+      "seccion": "Deportes"
+     },
      {
       "id": "u0hcbv",
       "titulo": "Ariel Bilbao asume como juez en las finales de los Juegos Bonaerenses",
       "seccion": "Balcarce"
      },
      {
-      "id": "tctot0",
-      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
+      "id": "1ao5ic",
+      "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
       "seccion": "Balcarce"
      },
      {
@@ -201,6 +206,12 @@
      "id": "1v9h1ps",
      "titulo": "La delegación local parte el lunes hacia la final provincial",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "mly1kv",
+     "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
+     "seccion": "Deportes",
      "marcada": false
     },
     {
