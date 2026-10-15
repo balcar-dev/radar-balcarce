@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T22:29:30.291Z",
+  "generado": "2026-10-15T22:32:04.678Z",
   "notas": [
     {
       "id": "n6v2wu",
@@ -4572,63 +4572,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-instituto-adventista-celebra-cuarenta-anos-con-un-musical"
-    },
-    {
-      "id": "clima20261014",
-      "propia": "clima",
-      "titulo": "Clima en Balcarce: 60% de probabilidad de lluvia, con mínima de 10° y máxima de 16°",
-      "copete": "El pronóstico de este miércoles 14 de octubre para Balcarce marca una mínima de 10° y máxima de 16°, con llovizna leve.",
-      "cuerpo": "En Balcarce, a las 07:31 hay 11° y el cielo está nublado; la sensación térmica es de 9°; el viento sopla del SE a 11 km/h; la humedad es del 94%. Son los datos de Open-Meteo de ese momento.\n\nPara todo el miércoles 14, el pronóstico marca una mínima de 10° y máxima de 16° y llovizna leve. La probabilidad de lluvia es del 60%. El viento llegaría a 19 km/h.\n\nPara los días que siguen, el pronóstico dice: el jueves 15, mínima de 7° y máxima de 14°, con 37% de probabilidad de lluvia; el viernes 16, mínima de 5° y máxima de 11°, con 25% de probabilidad de lluvia; el sábado 17, mínima de 6° y máxima de 11°.\n\nEl clima se actualiza a lo largo del día: los valores de ahora, hora por hora, están en la página del clima de Radar Balcarce. El clima de la mañana también salió como video en nuestra página de Facebook.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 58,
-      "medios": [
-        "Open-Meteo"
-      ],
-      "enlace": "https://open-meteo.com",
-      "fuentesConsultadas": [
-        {
-          "medio": "Open-Meteo",
-          "enlace": "https://open-meteo.com"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-14T10:31:49.607Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T10:31:49.607Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-10-14T10:31:49.607Z",
-      "temas": [],
-      "etiquetas": [
-        "clima",
-        "pronóstico",
-        "Balcarce",
-        "tiempo"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce armada con los datos de Open-Meteo a las 07:31.",
-      "enlacesEnTexto": [
-        {
-          "texto": "página del clima de Radar Balcarce",
-          "href": "/clima"
-        },
-        {
-          "texto": "nuestra página de Facebook",
-          "href": "https://www.facebook.com/reel/4123247081139224/"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Ver el clima de ahora",
-          "href": "/clima"
-        },
-        {
-          "texto": "Mirá el clima de hoy en video, en Facebook",
-          "href": "https://www.facebook.com/reel/4123247081139224/"
-        }
-      ],
-      "slug": "clima-en-balcarce-60-de-probabilidad-de-lluvia-con-minima-de-10-y"
     }
   ],
   "secciones": [
@@ -4654,8 +4597,8 @@
     "ahora": {
       "temp": 10,
       "sensacion": 7,
-      "humedad": 79,
-      "viento": 16,
+      "humedad": 84,
+      "viento": 15,
       "rumbo": "SE",
       "cielo": "Parcialmente nublado",
       "esDeDia": false
@@ -5108,6 +5051,12 @@
     {
       "id": "scnqab",
       "titulo": "Escándalo en Azul: denuncian por estafas a un funcionario…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1y68acy",
+      "titulo": "El escándalo del oro suma otra denuncia: el diputado…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
