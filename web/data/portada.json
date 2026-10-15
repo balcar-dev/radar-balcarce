@@ -1,6 +1,73 @@
 {
-  "generado": "2026-10-15T15:04:54.806Z",
+  "generado": "2026-10-15T15:35:07.985Z",
   "notas": [
+    {
+      "id": "1f8plkr",
+      "titulo": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
+      "copete": "La necrópolis local implementará un nuevo esquema para la apertura, el cierre, la prestación de servicios y la realización de trámites administrativos.",
+      "cuerpo": "El Cementerio Municipal modificará sus horarios de apertura y cierre a partir del lunes 26 de octubre, según informó la Secretaría de Planeamiento, Obras y Servicios Públicos. De acuerdo con el cronograma establecido, el ingreso al público estará habilitado desde las 7 de lunes a viernes y a partir de las 8 los sábados, domingos y feriados, mientras que el cierre se concretará todos los días a las 19.\n\nEn cuanto a la prestación de servicios, funcionarán de lunes a sábados en doble turno, de 8 a 11.45 y de 16.30 a 18.30, y los domingos y feriados solo por la mañana, en el mismo horario matutino. Por otro lado, la atención administrativa al público se mantendrá de lunes a viernes entre las 7 y las 18.30.",
+      "guion": "El Cementerio Municipal actualiza sus horarios desde el lunes 26 de octubre",
+      "seccion": "Balcarce",
+      "medios": [
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://balcarce.gob.ar/2026/10/15/el-cementerio-municipal-modificara-sus-horarios-a-partir-del-26-de-octubre/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-10-15T15:16:45.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T15:33:58.707Z",
+      "relevancia": 78,
+      "local": true,
+      "oficial": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Nuevos horarios en el Cementerio Municipal desde el 26 de octubre",
+        "Apertura desde las 7 los días hábiles y a las 8 los fines de semana",
+        "Cierre general de las instalaciones fijado a las 19 todos los días",
+        "Atención administrativa de lunes a viernes de 7 a 18.30"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Cementerio Municipal actualizará sus horarios de apertura, cierre y atención administrativa a partir del lunes 26 de octubre, según informó el municipio.",
+      "etiquetas": [
+        "Cementerio Municipal",
+        "Balcarce",
+        "horarios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/10/15/el-cementerio-municipal-modificara-sus-horarios-a-partir-del-26-de-octubre/",
+          "fecha": "2026-10-15T15:16:45.000Z",
+          "oficial": true,
+          "aporte": "Detalló el nuevo cronograma de horarios para el ingreso, los servicios y la administración del Cementerio Municipal."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "futbolpartidosliga20261009",
+          "titulo": "Liga Profesional: lo que falta de la fecha del 15 al 19 de octubre, con horarios",
+          "fecha": "2026-10-08T05:31:57.920Z",
+          "ruta": "/nota/liga-profesional-los-partidos-de-la-fecha-del-9-al-12-de-octubre-con-futbolpartidosliga20261009"
+        },
+        {
+          "id": "futbolpartidosliga20261002",
+          "titulo": "Liga Profesional: lo que falta de la fecha del lunes 5 de octubre, con horarios",
+          "fecha": "2026-10-04T02:29:42.845Z",
+          "ruta": "/nota/liga-profesional-los-partidos-de-la-fecha-del-2-al-5-de-octubre-con-futbolpartidosliga20261002"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-cementerio-municipal-actualiza-sus-horarios-desde-el-lunes-26-de"
+    },
     {
       "id": "1ao5ic",
       "titulo": "El Sindicato Municipal exige informes contables y operativos a OSEBAL",
@@ -12,11 +79,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45087-osebal-bajo-la-lupa-el-sindicato-municipal-exige-datos-sobre-medidores-cobrabilidad-y-balances/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-15T15:03:41.624Z",
       "sinFecha": true,
       "visto": "2026-10-15T15:03:41.624Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -63,6 +130,85 @@
       "foto": {
         "archivo": "fotos-notas/1ao5ic.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1kppi96",
+      "titulo": "Caputo destaca el optimismo por la economía nacional ante el FMI",
+      "copete": "El ministro de Economía participó de las Reuniones Anuales del organismo internacional y aseguró que el electorado rechaza un retorno a la inestabilidad pasada. Además, resaltó el atractivo para las inversiones.",
+      "cuerpo": "El ministro de Economía, Luis Caputo, aseguró el jueves 15 de octubre que la ciudadanía valora las estadísticas actuales y descartó un regreso a los periodos de alta inflación y multiplicidad cambiaria. Las declaraciones se produjeron durante su intervención en las Reuniones Anuales del Fondo Monetario Internacional y del Banco Mundial, en una charla enfocada en la resiliencia y el dinamismo económico.\n\nDurante el encuentro, el funcionario nacional sostuvo que el país se posicionará entre las economías con mejor desempeño y desestimó riesgos para los capitales externos.",
+      "guion": "Caputo destaca el optimismo por la economía nacional ante el FMI",
+      "seccion": "Economía",
+      "medios": [
+        "El Eco de Tandil",
+        "Ámbito",
+        "Crónica",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/caputo--con-vision-optimista-en-el-fmi---la-gente-esta-valorando-los-datos-reales-_a6ad0d1a988153cda2df261e0",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T13:53:23.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T15:33:58.707Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Luis Caputo intervino en las Reuniones Anuales del Fondo Monetario Internacional y del Banco Mundial el jueves 15 de octubre de 2026.",
+        "El ministro aseguró que el electorado no votará para retornar a esquemas de hiperinflación.",
+        "El funcionario proyectó montos por 200.000 millones de dólares en el marco del RIGI."
+      ],
+      "textoRedes": "El ministro de Economía, Luis Caputo, participó en las Reuniones Anuales del FMI y destacó la confianza de los inversores en la economía nacional.",
+      "etiquetas": [
+        "Luis Caputo",
+        "FMI",
+        "Banco Mundial",
+        "Economia",
+        "Inversiones",
+        "RIGI"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/caputo--con-vision-optimista-en-el-fmi---la-gente-esta-valorando-los-datos-reales-_a6ad0d1a988153cda2df261e0",
+          "fecha": "2026-10-15T13:53:23.000Z",
+          "oficial": false,
+          "aporte": "Aportó declaraciones completas sobre las inversiones, el RIGI y la visión general del ministro."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/luis-caputo-destaco-la-confianza-de-los-inversores-la-gente-esta-valorando-los-datos-reales",
+          "fecha": "2026-10-15T15:15:20.000Z",
+          "oficial": false,
+          "aporte": "Detalló el nombre de la charla en la que participó el titular del Palacio de Hacienda."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/luis-caputo-cumbre-del-fmi-argentina-sera-una-las-s-mejor-desempeno-los-proximos-anos-n6334061",
+          "fecha": "2026-10-15T13:59:00.000Z",
+          "oficial": false,
+          "aporte": "Informó el tono optimista del funcionario respecto al futuro próximo durante las jornadas del organismo."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/luis-caputo-en-el-fmi-la-gente-nunca-va-a-votar-para-volver-a-un-pasado-de-casi-hiperinflacion/",
+          "fecha": "2026-10-15T15:23:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las fechas de las declaraciones y la perspectiva sobre el rendimiento económico argentino."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "caputo-destaca-el-optimismo-por-la-economia-nacional-ante-el-fmi",
+      "foto": {
+        "archivo": "fotos-notas/1kppi96.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -148,11 +294,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/45086-reino-busca-recuperar-la-centralidad-de-su-gestion-con-una-nueva-apuesta-por-la-obra-publica/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-10-15T13:31:35.699Z",
       "sinFecha": true,
       "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -333,6 +479,149 @@
       "slug": "ariel-bilbao-asume-como-juez-en-las-finales-de-los-juegos-bonaerenses"
     },
     {
+      "id": "1fb5jbq",
+      "titulo": "Productores ganaderos trasladan vacas ante la crecida de los ríos",
+      "copete": "Ganaderos del Litoral mueven animales a tierras altas por el avance del agua. Estiman que unas 200.000 cabezas sufren el impacto directo.",
+      "cuerpo": "Productores agropecuarios del Litoral comenzaron a mover sus animales desde las zonas bajas hacia terrenos elevados para protegerlos de las inundaciones provocadas por la crecida de los ríos Paraná y Uruguay. Las estimaciones señalan que unas 200.000 cabezas sufren el impacto directo, mientras que el perjuicio indirecto podría alcanzar a 700.000 animales.\n\nLa situación se origina por las precipitaciones de entre 500 y 600 milímetros registradas en el sur de Brasil durante las últimas dos semanas. El volumen de agua complica el cauce principal y amenaza con extender las consecuencias hacia los Bajos Submeridionales, en el norte de Santa Fe, debido al comportamiento de los afluentes.\n\nFrente al avance del agua, los ganaderos realizan tareas de arreo para salvar al ganado y evitar que quede atrapado en campos anegados. La magnitud final del fenómeno y la cantidad total de animales afectados dependerán de la evolución del caudal durante las próximas semanas.",
+      "guion": "Productores ganaderos trasladan vacas ante la crecida de los ríos",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "A24",
+        "El Día"
+      ],
+      "enlace": "https://tn.com.ar/videos/sociedad/2026/10/15/la-desesperacion-de-los-productores-ganaderos-por-las-inundaciones-en-el-litoral-en-15-dias-se-tapan-todos-los-campos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T13:08:36.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T15:33:58.707Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Productores mueven animales a zonas altas por la crecida en el Litoral.",
+        "Calculan unas 200.000 cabezas afectadas de forma directa.",
+        "Lluvias intensas en Brasil explican el aumento del caudal de los ríos."
+      ],
+      "seSabe": [
+        "Los productores ganaderos trasladan animales a terrenos elevados.",
+        "Unas 200.000 cabezas sufren el impacto directo.",
+        "Las precipitaciones en el sur de Brasil alcanzaron entre 500 y 600 milímetros.",
+        "El problema podría extenderse a los Bajos Submeridionales."
+      ],
+      "noConfirmado": [
+        "El alcance definitivo del impacto y la cantidad total de animales afectados.",
+        "La evolución exacta del nivel del agua en las próximas semanas."
+      ],
+      "textoRedes": "Productores ganaderos del Litoral trasladan animales a terrenos elevados debido a la crecida de los ríos Paraná y Uruguay. Estiman que unas 200.000 cabezas sufren el impacto directo del agua.",
+      "etiquetas": [
+        "produccion agropecuaria",
+        "inundaciones",
+        "rio parana",
+        "litoral"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/sociedad/2026/10/15/la-desesperacion-de-los-productores-ganaderos-por-las-inundaciones-en-el-litoral-en-15-dias-se-tapan-todos-los-campos/",
+          "fecha": "2026-10-15T13:08:36.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la crecida de los ríos Paraná y Uruguay y el traslado de vacas a terrenos elevados."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/actualidad/alerta-el-rio-parana-la-desesperacion-los-ganaderos-las-inundaciones-el-litoral-n1606696",
+          "fecha": "2026-10-15T14:56:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las estimaciones de ganado afectado, las lluvias en Brasil y la posible extensión a los Bajos Submeridionales."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/informacion-general/desesperacion-en-el-litoral-asi-sufren-los-animales-afectados-por-las-inundaciones-informacion-general_1792075980",
+          "fecha": "2026-10-15T15:12:29.000Z",
+          "oficial": false,
+          "aporte": "Indicó el impacto sobre los animales en el Litoral con imágenes de la situación."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "productores-ganaderos-trasladan-vacas-ante-la-crecida-de-los-rios",
+      "foto": {
+        "archivo": "fotos-notas/1fb5jbq.jpg",
+        "credito": "Foto: A24"
+      }
+    },
+    {
+      "id": "17p6j6l",
+      "titulo": "El Centro de Tenis de Mesa suma mesas de nivel internacional",
+      "copete": "El espacio local incorporó dos unidades fabricadas en China y homologadas para competencias mundiales. Las actividades se desarrollan de lunes a domingo con propuestas para todas las edades.",
+      "cuerpo": "El material llegó al gimnasio La Cuna del Quíntuple, situado en la calle 13 entre 24 y 26, tras una gestión de la Federación Argentina de Tenis de Mesa.\n\nEstas adquisiciones complementan el piso de goma colocado en las instalaciones durante 2025. Las prácticas se llevan a cabo de lunes a domingo, entre las 18 y las 21.30, con doble turno para principiantes, deportistas avanzados y personas con discapacidad.\n\nEl plantel de entrenadores está conformado por Nicolás y Fabián Bianchini.",
+      "guion": "El Centro de Tenis de Mesa suma mesas de nivel internacional",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/el-centro-de-entrenamiento-de-tenis-de-mesa-incorporo-mesas-de-nivel-internacional",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T13:04:56.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T15:33:58.707Z",
+      "relevancia": 82,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El centro sumó dos mesas Double Fish 266 importadas de China.",
+        "Cuentan con homologación de la Federación Internacional.",
+        "Las prácticas se realizan de lunes a domingo de 18 a 21.30."
+      ],
+      "seSabe": [
+        "Las mesas llegaron al gimnasio La Cuna del Quíntuple, según informó un medio local.",
+        "El equipamiento fue adquirido mediante gestiones de la federación nacional."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Centro de Entrenamiento de Tenis de Mesa sumó dos mesas profesionales fabricadas en China y homologadas a nivel internacional para mejorar las prácticas en el gimnasio local.",
+      "etiquetas": [
+        "Tenis de mesa",
+        "La Cuna del Quíntuple",
+        "Deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/el-centro-de-entrenamiento-de-tenis-de-mesa-incorporo-mesas-de-nivel-internacional",
+          "fecha": "2026-10-15T13:04:56.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la llegada de las mesas internacionales y los horarios de entrenamiento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "mly1kv",
+          "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
+          "fecha": "2026-10-15T11:57:21.000Z",
+          "ruta": "/nota/la-cuna-del-quintuple-incorpora-mesas-profesionales-de-tenis-de-mesa-mly1kv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-centro-de-tenis-de-mesa-suma-mesas-de-nivel-internacional"
+    },
+    {
       "id": "lf9d6b",
       "titulo": "La Escuela Municipal de Básquet juega una nueva fecha",
       "copete": "Las divisiones de la Escuela Municipal de Básquet disputan el sábado una nueva jornada por la Liga Marplatense de este deporte. El cronograma incluye encuentros de Mini, Pre Mini y playoffs.",
@@ -436,174 +725,6 @@
       "slug": "un-dia-como-hoy-en-1984-nobel-de-medicina-para-milstein"
     },
     {
-      "id": "mly1kv",
-      "titulo": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-      "copete": "El centro de entrenamiento local sumó dos unidades importadas de China. Las mesas cuentan con homologación internacional y mejoran la infraestructura para la práctica y la formación deportiva en la ciudad.",
-      "cuerpo": "El Centro de Entrenamiento de Tenis de Mesa La Cuna del Quíntuple sumó dos mesas profesionales importadas de China, según informó un medio local. El equipamiento corresponde a la marca Double Fish y cuenta con homologación de la Federación Internacional de Tenis de Mesa.\n\nLas mesas se instalaron en la sede ubicada en calle 13 entre 24 y 26, número 818, para acompañar el piso de goma colocado el año pasado.\n\nEl espacio funciona todos los días de 18 a 21.30 y ofrece clases para niños desde los seis años, adultos mayores y personas con discapacidad. Las prácticas están a cargo del entrenador internacional Nicolás Bianchini y el entrenador nacional Fabián Bianchini.",
-      "guion": "La Cuna del Quíntuple incorpora mesas profesionales de tenis de mesa",
-      "seccion": "Deportes",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://puntonueve.com.ar/el-centro-de-entrenamiento-la-cuna-del-quintuple-incorporo-nuevas-mesas-de-tenis-de-mesa-importadas-de-china/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T11:57:21.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 90,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El centro sumó dos mesas profesionales importadas de China.",
-        "El equipamiento cuenta con homologación internacional.",
-        "La compra se concretó mediante gestiones de la federación nacional.",
-        "El espacio funciona todos los días con clases para todas las edades."
-      ],
-      "seSabe": [
-        "El Centro de Entrenamiento La Cuna del Quíntuple incorporó dos mesas profesionales de la marca Double Fish.",
-        "Las mesas fueron importadas desde China y cuentan con homologación de la Federación Internacional de Tenis de Mesa.",
-        "La compra se realizó a través de gestiones de la Federación Argentina de Tenis de Mesa.",
-        "El centro funciona en calle 13 número 818 y ofrece actividades todos los días de 18 a 21.30.",
-        "Las clases están a cargo de Nicolás Bianchini y Fabián Bianchini."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El centro de entrenamiento La Cuna del Quíntuple sumó dos mesas profesionales de tenis de mesa importadas de China para mejorar la infraestructura y la formación deportiva en Balcarce.",
-      "etiquetas": [
-        "tenis de mesa",
-        "La Cuna del Quíntuple",
-        "deportes",
-        "Balcarce",
-        "entrenamiento"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/el-centro-de-entrenamiento-la-cuna-del-quintuple-incorporo-nuevas-mesas-de-tenis-de-mesa-importadas-de-china/",
-          "fecha": "2026-10-15T11:57:21.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la incorporación de las mesas profesionales, las características del equipamiento, la ubicación del centro y los horarios de entrenamiento."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-cuna-del-quintuple-incorpora-mesas-profesionales-de-tenis-de-mesa",
-      "foto": {
-        "archivo": "fotos-notas/mly1kv.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
-      "id": "9y985f",
-      "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
-      "copete": "El delantero argentino presenta una distensión en el muslo izquierdo, según confirmó el Inter de Milán. Estaría inactivo alrededor de un mes.",
-      "cuerpo": "El delantero Lautaro Martínez padece una distensión muscular en los flexores del muslo izquierdo, de acuerdo con el parte oficial difundido este jueves por el Inter de Milán tras los estudios médicos realizados en el Instituto Humanitas de Rozzano. Debido a esta dolencia física, el atacante de 29 años se perdería la próxima fecha FIFA de noviembre con la Selección Argentina.\n\nAunque el club italiano no especificó un plazo de recuperación, publicaciones periodísticas estiman una indisponibilidad cercana a un mes, lo que lo marginaría de unos siete encuentros entre la Serie A y la Champions League.",
-      "guion": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
-      "seccion": "Fútbol",
-      "medios": [
-        "Clarín",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "TyC Sports",
-        "Olé",
-        "Minuto Uno",
-        "Radio Mitre",
-        "La Nueva",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T11:52:09.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T14:01:31.391Z",
-      "relevancia": 89,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Inter de Milán confirmó una distensión en el muslo izquierdo.",
-        "El delantero argentino estaría inactivo alrededor de un mes.",
-        "Se perdería los próximos partidos de su club y la fecha FIFA de noviembre."
-      ],
-      "noConfirmado": [
-        "El tiempo exacto de baja oficial por parte del club.",
-        "La confirmación de los amistosos de la Selección Argentina ante Uruguay entre el 9 y el 17 de noviembre."
-      ],
-      "textoRedes": "Lautaro Martínez sufrió una distensión muscular en el muslo izquierdo, según informó el Inter de Milán. El delantero estaría un mes inactivo y peligra su participación en la próxima fecha FIFA con la Selección Argentina.",
-      "etiquetas": [
-        "Lautaro Martínez",
-        "Inter de Milán",
-        "Selección Argentina",
-        "Fútbol",
-        "Lesión"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
-          "fecha": "2026-10-15T11:52:09.000Z",
-          "oficial": false,
-          "aporte": "Detalló el diagnóstico, el instituto médico, los partidos que se perdería y los medios que estiman un mes de baja."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/lautaro-martinez-sufrio-una-lesion-muscular-y-preocupa-en-la-seleccion-argentina-a-un-mes-de-la-proxima-fecha-fifa/",
-          "fecha": "2026-10-15T12:59:21.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la distensión muscular en el isquiotibial izquierdo comunicada por el Inter."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/seleccion-argentina/se-confirmo-la-lesion-de-lautaro-martinez-y-preocupa-a-la-seleccion-argentina-antes-de-una-nueva-fecha-fifa-id766329.html",
-          "fecha": "2026-10-15T13:53:23.000Z",
-          "oficial": false,
-          "aporte": "No aportó información en su resumen."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/lautaro-martinez-sufrio-una-distension-muscular-y-podria-perderse-la-fecha-fifa-de-noviembre-con-argentina/",
-          "fecha": "2026-10-15T12:06:54.000Z",
-          "oficial": false,
-          "aporte": "Aportar el dato de la posible ausencia en la fecha FIFA y los flexores del muslo izquierdo."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-10-15-10-39-0-inter-confirmo-la-lesion-de-lautaro-martinez-el-comunicado",
-          "fecha": "2026-10-15T13:51:06.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la lesión muscular y los estudios en el Instituto Humanitas."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "u3bdm4",
-          "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
-          "fecha": "2026-10-10T17:03:23.000Z",
-          "ruta": "/nota/roman-gonzalez-supera-un-record-de-lautaro-martinez-en-racing-u3bdm4"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lautaro-martinez-padece-una-lesion-muscular-y-peligra-su-presencia-en",
-      "foto": {
-        "archivo": "fotos-notas/9y985f.jpg",
-        "credito": "Foto: Olé"
-      }
-    },
-    {
       "id": "1v9h1ps",
       "titulo": "La delegación local parte el lunes hacia la final provincial",
       "copete": "Los representantes locales recibieron la indumentaria oficial y los detalles del viaje. El contingente partirá rumbo a Mar del Plata para participar en las distintas disciplinas.",
@@ -611,7 +732,7 @@
       "guion": "La delegación local parte el lunes hacia la final provincial",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
+        "News Balcarce (FM 91.7)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
@@ -717,65 +838,122 @@
       "slug": "lionel-messi-despide-a-la-seleccion-argentina-con-victoria-ante-benin"
     },
     {
-      "id": "2g6pf5",
-      "titulo": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
-      "copete": "Representantes de AACYC Balcarce cumplieron una destacada actuación en pruebas de calle y trail running durante el fin de semana, con podios en distintas categorías.",
-      "cuerpo": "Los atletas Ariel Ferreira y Adrián Cagni compitieron en la prueba principal de diez kilómetros de la Correcaminata Aniversario de Tamangueyú. Ferreira completó el recorrido en 43 minutos y 14 segundos para quedar quinto en la general y primero en la categoría de 45 a 49 años. Cagni cruzó la meta en 43 minutos y 38 segundos, ubicándose sexto en la general y segundo en la misma divisional.\n\nEn paralelo, Débora Pucheta y Lara Blanco participaron de la UTTD 2026 en los circuitos serranos locales. Pucheta afrontó los 25 kilómetros en 4 horas, 21 minutos y 7 segundos, y se ubicó en el puesto 49 de la general femenina y 15 en su categoría. En tanto, Blanco corrió los 11 kilómetros en 1 hora, 34 minutos y 6 segundos, alcanzando el puesto 41 general y el sexto lugar en la divisional hasta 29 años.",
-      "guion": "Atletas locales logran buenos puestos en Tamangueyú y Balcarce",
-      "seccion": "Deportes",
+      "id": "1b4z7qp",
+      "titulo": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
+      "copete": "La Verificación Técnica Vehicular aumenta a 114.105,99 pesos en todo el territorio provincial tras finalizar el congelamiento de noventa días acordado con las empresas.",
+      "cuerpo": "El Ministerio de Transporte bonaerense estableció que la tarifa básica de la Verificación Técnica Vehicular se eleva a 114.105,99 pesos desde el jueves 15 de octubre. La medida quedó formalizada mediante la resolución oficial tras expirar el plazo de suspensión de noventa días acordado previamente entre la cartera y las firmas concesionarias del servicio.\n\nEl incremento representa un porcentaje cercano al 18 por ciento para los automóviles de hasta 2.500 kilos, cuyo valor anterior era de 97.057,65 pesos. El monto surgió de aplicar la fórmula del régimen tarifario basada en el convenio salarial del sector mecánico.",
+      "guion": "El Ministerio de Transporte bonaerense actualiza la tarifa básica de la VTV",
+      "seccion": "Política",
       "medios": [
-        "Puntonueve (FM 100.9)"
+        "El Diario Balcarce",
+        "Diario La Vanguardia",
+        "Infobae",
+        "0223 (Mar del Plata)",
+        "El Eco de Tandil",
+        "QZ Noticias (Mar del Plata)",
+        "Ecos Diarios (Necochea)",
+        "Agencia DIB",
+        "Clarín",
+        "0221",
+        "La Tecla",
+        "La Verdad",
+        "Infoeme",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Ámbito"
       ],
-      "enlace": "https://puntonueve.com.ar/destacada-actuacion-de-los-atletas-de-aacyc-balcarce-en-tamangueyu-y-la-uttd-2026/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-10-15T11:19:17.000Z",
+      "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T11:15:00.000Z",
       "sinFecha": false,
-      "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 74,
-      "local": true,
+      "visto": "2026-10-15T12:31:36.164Z",
+      "relevancia": 75,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Ferreira y Cagni corrieron en Tamangueyú",
-        "Pucheta y Blanco participaron en la UTTD 2026",
-        "Ambos eventos se desarrollaron durante el fin de semana",
-        "Los deportistas representan a AACYC Balcarce"
+        "La tarifa básica de la VTV sube a 114.105,99 pesos.",
+        "El incremento alcanza el 17,6 por ciento.",
+        "Rige desde este jueves tras finalizar una suspensión de noventa días.",
+        "La medida se oficializó mediante una resolución en el Boletín Oficial."
       ],
       "seSabe": [
-        "Ariel Ferreira ganó su categoría en Tamangueyú con un tiempo de 43 minutos y 14 segundos",
-        "Adrián Cagni fue segundo en la misma categoría con 43 minutos y 38 segundos",
-        "Débora Pucheta completó los 25 kilómetros de trail en 4 horas, 21 minutos y 7 segundos",
-        "Lara Blanco corrió 11 kilómetros en 1 hora, 34 minutos y 6 segundos"
+        "La tarifa básica de la VTV aumenta a 114.105,99 pesos desde este jueves 15 de octubre, según informó el Ministerio de Transporte bonaerense.",
+        "La suba representa un incremento del 17,6 por ciento para vehículos de hasta 2.500 kilos.",
+        "La actualización se aplica tras cumplirse el plazo de noventa días de postergación acordado entre la cartera y las empresas."
       ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "Los valores específicos para el resto de las categorías del servicio todavía no fueron difundidos."
       ],
-      "textoRedes": "Atletas de AACYC Balcarce obtuvieron destacados resultados en la Correcaminata Aniversario de Tamangueyú y en la competencia de trail UTTD 2026.",
+      "textoRedes": "El Ministerio de Transporte bonaerense oficializó un aumento del 17,6 por ciento en la tarifa básica de la Verificación Técnica Vehicular, que desde este jueves pasa a costar 114.105,99 pesos para vehículos de hasta 2.500 kilos tras finalizar el periodo de congelamiento.",
       "etiquetas": [
-        "AACYC Balcarce",
-        "Tamangueyú",
-        "UTTD 2026"
+        "VTV",
+        "Ministerio de Transporte",
+        "Provincia de Buenos Aires",
+        "tarifas",
+        "vehículos"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/destacada-actuacion-de-los-atletas-de-aacyc-balcarce-en-tamangueyu-y-la-uttd-2026/",
-          "fecha": "2026-10-15T11:19:17.000Z",
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/provincia/la-provincia-oficializo-un-nuevo-aumento-la-vtv-y-ya-es-un-176-mas-cara-n135838",
+          "fecha": "2026-10-15T11:15:00.000Z",
           "oficial": false,
-          "aporte": "Informó los resultados y tiempos de los atletas de AACYC Balcarce en las competencias de Tamangueyú y la UTTD 2026."
+          "aporte": "Informó el monto exacto de la nueva tarifa, la fecha de inicio y los detalles de la resolución ministerial."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114106-831",
+          "fecha": "2026-10-15T12:01:28.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el valor de la tarifa básica y la fecha de aplicación desde este jueves."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/45084-ya-es-oficial-y-la-vtv-aumenta-un-17-6-cuanto-cuesta-desde-hoy/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-114106-n56517",
+          "fecha": "2026-10-15T11:52:41.000Z",
+          "oficial": false,
+          "aporte": "Precisó que el incremento impacta en vehículos de hasta 2.500 kilos."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/aumenta-la-vtv-la-provincia-buenos-aires-cuanto-quedo-la-tarifa-basica-n6333970",
+          "fecha": "2026-10-15T12:02:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto sobre la postergación de noventa días acordada con las concesionarias."
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170400-la-vtv-aumenta-en-la-provincia-desde-este-jueves-cuesta-mas-de-114-mil",
+          "fecha": "2026-10-15T11:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/aumenta-la-vtv-bonaerense-y-la-tarifa-basica-pasa-a-114-106/",
+          "fecha": "2026-10-15T12:15:04.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la publicación de la medida en el Boletín Oficial."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "atletas-locales-logran-buenos-puestos-en-tamangueyu-y-balcarce",
+      "slug": "el-ministerio-de-transporte-bonaerense-actualiza-la-tarifa-basica-de",
       "foto": {
-        "archivo": "fotos-notas/2g6pf5.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
+        "archivo": "fotos-notas/1b4z7qp.jpg",
+        "credito": "Foto: Ámbito"
       }
     },
     {
@@ -878,9 +1056,7 @@
         "A24",
         "Crónica",
         "Radio Mitre",
-        "La Nueva",
-        "El Cronista",
-        "C5N"
+        "La Nueva"
       ],
       "enlace": "https://tn.com.ar/economia/2026/10/15/la-jefa-del-fmi-dijo-que-confia-en-que-la-argentina-pagara-su-deuda-con-el-organismo-antes-de-2034/",
       "teniaImagenLaFuente": true,
@@ -1086,6 +1262,108 @@
       "foto": {
         "archivo": "fotos-notas/7tqcv3.jpg",
         "credito": "Foto: El Cronista"
+      }
+    },
+    {
+      "id": "9y985f",
+      "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
+      "copete": "El delantero argentino presenta una distensión en el muslo izquierdo, según confirmó el Inter de Milán. Estaría inactivo alrededor de un mes.",
+      "cuerpo": "El delantero Lautaro Martínez padece una distensión muscular en los flexores del muslo izquierdo, de acuerdo con el parte oficial difundido este jueves por el Inter de Milán tras los estudios médicos realizados en el Instituto Humanitas de Rozzano. Debido a esta dolencia física, el atacante de 29 años se perdería la próxima fecha FIFA de noviembre con la Selección Argentina.\n\nAunque el club italiano no especificó un plazo de recuperación, publicaciones periodísticas estiman una indisponibilidad cercana a un mes, lo que lo marginaría de unos siete encuentros entre la Serie A y la Champions League.",
+      "guion": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "El Destape",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno",
+        "Radio Mitre",
+        "La Nueva",
+        "Doble Amarilla",
+        "El Gráfico"
+      ],
+      "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T10:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T14:01:31.391Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Inter de Milán confirmó una distensión en el muslo izquierdo.",
+        "El delantero argentino estaría inactivo alrededor de un mes.",
+        "Se perdería los próximos partidos de su club y la fecha FIFA de noviembre."
+      ],
+      "noConfirmado": [
+        "El tiempo exacto de baja oficial por parte del club.",
+        "La confirmación de los amistosos de la Selección Argentina ante Uruguay entre el 9 y el 17 de noviembre."
+      ],
+      "textoRedes": "Lautaro Martínez sufrió una distensión muscular en el muslo izquierdo, según informó el Inter de Milán. El delantero estaría un mes inactivo y peligra su participación en la próxima fecha FIFA con la Selección Argentina.",
+      "etiquetas": [
+        "Lautaro Martínez",
+        "Inter de Milán",
+        "Selección Argentina",
+        "Fútbol",
+        "Lesión"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/futbol-internacional/italia/lautaro-martinez-lesionado-jugaria-fecha-fifa-noviembre-seleccion_0_c2p0yRIuvY.html",
+          "fecha": "2026-10-15T11:52:09.000Z",
+          "oficial": false,
+          "aporte": "Detalló el diagnóstico, el instituto médico, los partidos que se perdería y los medios que estiman un mes de baja."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/10/15/lautaro-martinez-sufrio-una-lesion-muscular-y-preocupa-en-la-seleccion-argentina-a-un-mes-de-la-proxima-fecha-fifa/",
+          "fecha": "2026-10-15T12:59:21.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la distensión muscular en el isquiotibial izquierdo comunicada por el Inter."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/seleccion-argentina/se-confirmo-la-lesion-de-lautaro-martinez-y-preocupa-a-la-seleccion-argentina-antes-de-una-nueva-fecha-fifa-id766329.html",
+          "fecha": "2026-10-15T13:53:23.000Z",
+          "oficial": false,
+          "aporte": "No aportó información en su resumen."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/lautaro-martinez-sufrio-una-distension-muscular-y-podria-perderse-la-fecha-fifa-de-noviembre-con-argentina/",
+          "fecha": "2026-10-15T12:06:54.000Z",
+          "oficial": false,
+          "aporte": "Aportar el dato de la posible ausencia en la fecha FIFA y los flexores del muslo izquierdo."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-10-15-10-39-0-inter-confirmo-la-lesion-de-lautaro-martinez-el-comunicado",
+          "fecha": "2026-10-15T13:51:06.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la lesión muscular y los estudios en el Instituto Humanitas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "u3bdm4",
+          "titulo": "Román González supera un récord de Lautaro Martínez en Racing",
+          "fecha": "2026-10-10T17:03:23.000Z",
+          "ruta": "/nota/roman-gonzalez-supera-un-record-de-lautaro-martinez-en-racing-u3bdm4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lautaro-martinez-padece-una-lesion-muscular-y-peligra-su-presencia-en",
+      "foto": {
+        "archivo": "fotos-notas/9y985f.jpg",
+        "credito": "Foto: Olé"
       }
     },
     {
@@ -1334,76 +1612,90 @@
       "slug": "cristian-mendez-regresa-a-balcarce-tras-una-exitosa-gira-por-espana"
     },
     {
-      "id": "ficrmp",
-      "titulo": "Sergio Aranaga participa de un encuentro de formación política del PJ",
-      "copete": "El titular del Partido Justicialista local asistió a una jornada en Necochea. La actividad contó con una clase magistral del senador nacional Jorge Capitanich.",
-      "cuerpo": "El presidente del Partido Justicialista de Balcarce, Sergio Aranaga, participó el miércoles 14 de octubre de una jornada de capacitación política en el Centro Cultural Andrés Ferreyra de Necochea. El intendente de La Plata y secretario de Formación Política partidario, Julio Alak, junto a la consejera provincial Andrea Cáceres, presentaron el encuentro organizado por el PJ bonaerense.\n\nDurante la actividad, los expositores señalaron la importancia de impulsar el desarrollo industrial, la creación de empleo y la justicia social.\n\nPor su parte, Aranaga destacó la relevancia de la participación militante para fortalecer el vínculo territorial.",
-      "guion": "Sergio Aranaga participa de un encuentro de formación política del PJ",
+      "id": "biercm",
+      "titulo": "Sol Di Gerónimo participa de una capacitación política en Necochea",
+      "copete": "La concejal local asistió al ciclo dictado por el Partido Justicialista bonaerense. El intendente platense Julio Alak encabezó el encuentro en la vecina ciudad.",
+      "cuerpo": "La concejal Sol Di Gerónimo, integrante del bloque Fuerza Patria, formó parte este miéércoles del Curso de Formación Política en la vecina ciudad de Necochea.\n\nLa actividad se realizó en el Centro Cultural Andrés Ferreyra y estuvo encabezada por el intendente de La Plata, Julio Alak, en su rol de titular del área de formación del Partido Justicialista de la provincia de Buenos Aires. El ciclo está destinado a legisladores y dirigentes de la quinta sección electoral.\n\nDurante el evento, Alak remarcó que la instrucción teórica resulta central para fortalecer las estructuras partidarias y mejorar el vínculo con la comunidad.",
+      "guion": "Sol Di Gerónimo participa de una capacitación política en Necochea",
       "seccion": "Política",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)"
       ],
-      "enlace": "https://puntonueve.com.ar/sergio-aranaga-participo-de-una-jornada-de-formacion-politica-del-pj-bonaerense-en-necochea/",
+      "enlace": "https://www.radiogabal.com.ar/index.php/politica/sol-di-geronimo-participo-en-necochea-del-curso-de-formacion-politica-encabezado-por-julio-alak",
       "teniaImagenLaFuente": true,
       "fecha": "2026-10-14T22:05:15.000Z",
       "sinFecha": false,
-      "visto": "2026-10-15T13:31:35.699Z",
-      "relevancia": 100,
+      "visto": "2026-10-14T23:01:59.982Z",
+      "relevancia": 91,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Sergio Aranaga asistió a una jornada de formación en Necochea.",
-        "La actividad estuvo encabezada por dirigentes provinciales del Partido Justicialista.",
-        "El senador Jorge Capitanich dictó una clase magistral sobre el peronismo."
+        "Sol Di Gerónimo participó de una jornada de formación en Necochea.",
+        "El intendente Julio Alak encabezó la actividad partidaria.",
+        "La propuesta está dirigida a dirigentes de la quinta sección electoral."
       ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      "seSabe": [
+        "Sol Di Gerónimo asistió al encuentro en Necochea este miéércoles.",
+        "Julio Alak lideró la capacitación del Partido Justicialista bonaerense."
       ],
+      "textoRedes": "La concejal Sol Di Gerónimo participó este miéércoles de un curso de formación política en Necochea encabezado por Julio Alak.",
       "etiquetas": [
-        "Sergio Aranaga",
-        "Partido Justicialista",
+        "Sol Di Gerónimo",
+        "Fuerza Patria",
         "Necochea",
-        "Jorge Capitanich",
-        "Política"
+        "Julio Alak",
+        "Partido Justicialista"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/sergio-aranaga-participo-de-una-jornada-de-formacion-politica-del-pj-bonaerense-en-necochea/",
-          "fecha": "2026-10-15T11:32:49.000Z",
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/sol-di-geronimo-participo-en-necochea-del-curso-de-formacion-politica-encabezado-por-julio-alak",
+          "fecha": "2026-10-14T22:05:15.000Z",
           "oficial": false,
-          "aporte": "Detalló la participación de Sergio Aranaga en la jornada de formación política del PJ en Necochea."
+          "aporte": "Informó la participación de Sol Di Gerónimo en la capacitación de Necochea y los detalles del encuentro."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/sol-di-geronimo-participo-en-necochea-del-curso-de-formacion-politica-encabezado-por-julio-alak/",
+          "fecha": "2026-10-14T22:53:54.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la información sobre la presencia de la concejal en el curso político."
         }
       ],
       "antecedentes": [
         {
-          "id": "biercm",
-          "titulo": "Sol Di Gerónimo participa de una capacitación política en Necochea",
-          "fecha": "2026-10-14T22:05:15.000Z",
-          "ruta": "/nota/sol-di-geronimo-participa-de-una-capacitacion-politica-en-necochea-biercm"
+          "id": "28zqic",
+          "titulo": "Sol Di Geronimo pide nuevas gestiones para concretar el regreso del TC",
+          "fecha": "2026-10-07T20:37:35.000Z",
+          "ruta": "/nota/sol-di-geronimo-pide-nuevas-gestiones-para-concretar-el-regreso-del-tc-28zqic"
         },
         {
-          "id": "u6j4ho",
-          "titulo": "Sergio Aranaga analiza el empleo local y no descarta postularse",
-          "fecha": "2026-10-09T17:31:41.075Z",
-          "ruta": "/nota/sergio-aranaga-analiza-el-empleo-local-y-no-descarta-postularse-u6j4ho"
+          "id": "1qsixdr",
+          "titulo": "Sotelo defiende las cuentas de la Cooperativa y rechaza la intromisión de la política",
+          "fecha": "2026-10-07T17:31:11.484Z",
+          "ruta": "/nota/sotelo-defiende-las-cuentas-de-la-cooperativa-y-rechaza-la-1qsixdr"
+        },
+        {
+          "id": "nolg4g",
+          "titulo": "Agustín Cassini defiende las intimaciones por deudas de agua",
+          "fecha": "2026-10-11T13:29:12.000Z",
+          "ruta": "/nota/agustin-cassini-defiende-las-intimaciones-por-deudas-de-agua-nolg4g"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "sergio-aranaga-participa-de-un-encuentro-de-formacion-politica-del-pj",
+      "slug": "sol-di-geronimo-participa-de-una-capacitacion-politica-en-necochea",
       "foto": {
-        "archivo": "fotos-notas/ficrmp.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
+        "archivo": "fotos-notas/biercm.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -1414,7 +1706,6 @@
       "guion": "El Concejo Deliberativo Estudiantil cierra su quinta edición con veinticinco iniciativas",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
@@ -1424,7 +1715,7 @@
       "fecha": "2026-10-14T22:04:03.000Z",
       "sinFecha": false,
       "visto": "2026-10-14T23:01:59.982Z",
-      "relevancia": 100,
+      "relevancia": 91,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1601,6 +1892,106 @@
       "foto": {
         "archivo": "fotos-notas/5f1qhn.jpg",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "1ummanb",
+      "titulo": "El autódromo porteño supera el sesenta por ciento de obra para recibir al MotoGP",
+      "copete": "El circuito Oscar y Juan Gálvez ejecuta pruebas de asfalto en la pista con la meta de albergar la competencia internacional en abril de 2027. Los tickets ya están a la venta.",
+      "cuerpo": "El Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance en su transformación integral con pruebas de asfalto en la pista, según informaron las fuentes oficiales. Los trabajos se desarrollan en la curva T3 bajo la supervisión de la empresa Tilke Engineers & Architects y el equipo de Autopistas Urbanas. La aplicación utiliza la mezcla AM3-AC19 de ocho centímetros de espesor con tres equipos de transferencia, tres terminadoras y seis rodillos.\n\nEl jefe de Gobierno, Jorge Macri, remarcó que las obras apuntan a posicionar al escenario porteño a la par de los circuitos internacionales para recibir al MotoGP del 9 al 11 de abril de 2027 y buscar el regreso de la Fórmula 1. Por su parte, el secretario de Deportes, Fabián Turnes, indicó que las entradas ya se encuentran disponibles en el sitio web oficial.",
+      "guion": "El autódromo porteño supera el sesenta por ciento de obra para recibir al MotoGP",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Infobae",
+        "El Destape",
+        "TyC Sports",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "Doble Amarilla",
+        "Olé"
+      ],
+      "enlace": "https://www.ole.com.ar/autos/ciudad-termina-probar-asfalto-pista-nuevo-autodromo-corra-motogp-quede-listo-f1-funciona-titulo-nota_0_tFmWsG35yC.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T19:16:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T20:01:54.740Z",
+      "relevancia": 74,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance en su renovación.",
+        "Las tareas incluyen pruebas de asfalto en la curva T3 con supervisión internacional.",
+        "El circuito recibirá al MotoGP del 9 al 11 de abril de 2027 y busca sumar a la Fórmula 1.",
+        "Las entradas para la competencia ya se encuentran a la venta en el sitio web oficial."
+      ],
+      "seSabe": [
+        "La transformación del Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance.",
+        "Las pruebas de asfalto se realizan en la curva T3 con la mezcla AM3-AC19 de ocho centímetros de espesor.",
+        "El circuito recibirá al MotoGP del 9 al 11 de abril de 2027.",
+        "Las entradas ya están a la venta en el sitio web oficial, según informó el secretario de Deportes, Fabián Turnes.",
+        "El jefe de Gobierno, Jorge Macri, señaló que la obra busca preparar el predio para el MotoGP y la Fórmula 1."
+      ],
+      "noConfirmado": [
+        "No se informó una fecha concreta para el eventual regreso de la Fórmula 1 al circuito porteño."
+      ],
+      "textoRedes": "El Autódromo Oscar y Juan Gálvez supera el 60 por ciento de avance en su transformación integral y ejecuta pruebas de asfalto para recibir al MotoGP en abril de 2027. Las entradas ya están a la venta.",
+      "etiquetas": [
+        "Autodromo de Buenos Aires",
+        "MotoGP",
+        "Formula 1",
+        "Jorge Macri",
+        "Fabian Turnes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/ciudad-termina-probar-asfalto-pista-nuevo-autodromo-corra-motogp-quede-listo-f1-funciona-titulo-nota_0_tFmWsG35yC.html",
+          "fecha": "2026-10-14T19:16:31.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de avance de la obra, las características técnicas del asfalto y las declaraciones de las autoridades."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/el-autodromo-galvez-supero-60--de-las-obras-y-avanza-hacia-el-regreso-del-motogp_a6acfd1d88298ee386b3876a6",
+          "fecha": "2026-10-14T19:25:47.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los avances en la pista del autódromo y los preparativos para el MotoGP."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "saeapr",
+          "titulo": "El MotoGP en Buenos Aires anuncia los precios de sus entradas",
+          "fecha": "2026-09-30T21:24:43.000Z",
+          "ruta": "/nota/el-motogp-en-buenos-aires-anuncia-los-precios-de-sus-entradas-saeapr"
+        },
+        {
+          "id": "11d0zcr",
+          "titulo": "El Museo Fangio expone autos históricos en Autoclásica",
+          "fecha": "2026-10-13T22:53:19.000Z",
+          "ruta": "/nota/el-museo-fangio-expone-autos-historicos-en-autoclasica-11d0zcr"
+        },
+        {
+          "id": "m8u8gq",
+          "titulo": "Agustín Canapino gana una serie del Turismo Nacional tras una maniobra",
+          "fecha": "2026-10-13T16:18:37.000Z",
+          "ruta": "/nota/agustin-canapino-gana-una-serie-del-turismo-nacional-tras-una-maniobra-m8u8gq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-autodromo-porteno-supera-el-sesenta-por-ciento-de-obra-para",
+      "foto": {
+        "archivo": "fotos-notas/1ummanb.jpg",
+        "credito": "Foto: Olé"
       }
     },
     {
@@ -2389,18 +2780,18 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "Minuto Uno",
-        "Crónica",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "0221",
         "iProUP",
-        "El Economista",
         "iProfesional",
         "Ámbito",
         "Clarín",
         "A24",
-        "C5N"
+        "C5N",
+        "Crónica",
+        "El Economista"
       ],
       "enlace": "https://www.ambito.com/economia/caba-lanzo-un-plan-pagar-deudas-abl-y-patentes-100-descuento-intereses-como-acceder-n6333599",
       "teniaImagenLaFuente": true,
@@ -2561,14 +2952,14 @@
       "guion": "Julio Cordero defiende el Presupuesto y la reforma laboral",
       "seccion": "Política",
       "medios": [
-        "Diputados Bonaerenses",
         "Infobae",
         "TN (Todo Noticias)",
         "El Cronista",
         "Página/12",
         "Ámbito",
         "Noticias Argentinas (NA)",
-        "Clarín"
+        "Clarín",
+        "Diputados Bonaerenses"
       ],
       "enlace": "https://www.infobae.com/politica/2026/10/14/el-secretario-de-trabajo-defendio-el-presupuesto-y-dijo-que-no-todos-quieren-trabajar-en-relacion-de-dependencia/",
       "teniaImagenLaFuente": true,
@@ -2984,7 +3375,6 @@
         "La Nación",
         "Página/12",
         "A24",
-        "Crónica",
         "La Voz del Pueblo",
         "El Marplatense",
         "Punto Noticias",
@@ -2995,15 +3385,14 @@
         "Agencia DIB",
         "El Día",
         "La Nueva",
+        "Crónica",
         "Minuto Uno",
         "Ecos Diarios (Necochea)",
         "TyC Sports",
         "C5N",
         "Radio Mitre",
         "Diario Popular",
-        "El Destape",
-        "Noticias Argentinas (NA)",
-        "Infobrisas (Radio Brisas)"
+        "El Destape"
       ],
       "enlace": "https://www.ambito.com/informacion-general/prohiben-todo-el-pais-la-venta-juguetes-blandos-tipo-squishy-la-marca-pinch-family-contener-ftalatos-n6333458",
       "teniaImagenLaFuente": true,
@@ -3203,14 +3592,14 @@
   ],
   "secciones": [
     "Balcarce",
+    "Economía",
     "Política",
+    "Agro",
     "Deportes",
     "Cultura y agenda",
-    "Fútbol",
     "Argentina",
-    "Economía",
+    "Fútbol",
     "Automovilismo",
-    "Agro",
     "Policiales"
   ],
   "temas": [
@@ -3223,8 +3612,8 @@
   "clima": {
     "ahora": {
       "temp": 14,
-      "sensacion": 10,
-      "humedad": 62,
+      "sensacion": 11,
+      "humedad": 59,
       "viento": 16,
       "rumbo": "SE",
       "cielo": "Nublado",
@@ -3574,22 +3963,10 @@
   },
   "pendientes": [
     {
-      "id": "1h8d7s8",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "yj5cn4",
       "titulo": null,
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "405jgy",
-      "titulo": "Balcarce despide al “Chiqui”, un referente de la danza y…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "2dhhlx",
@@ -3608,6 +3985,12 @@
       "titulo": "Caso Loan: detuvieron por falso testimonio al chofer que…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"asesinado\""
+    },
+    {
+      "id": "1hb8gyb",
+      "titulo": "Pesar por el fallecimiento de Pascualito Cerone, histórico…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"falleció\" (en otro medio que cuenta lo mismo)"
     },
     {
       "id": "dffmvs",
@@ -3670,27 +4053,21 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "lwmyim",
-      "titulo": "Hotesur-Los Sauces: habrá una audiencia clave para…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "1333xd6",
       "titulo": "Apyme denunció que en lo que va del año crecieron un 52%…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
+      "id": "lwmyim",
+      "titulo": "Hotesur-Los Sauces: habrá una audiencia clave para…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "id5g36",
       "titulo": null,
       "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "zcbb3f",
-      "titulo": null,
-      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
@@ -3706,5 +4083,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 0
+  "esperandoCuerpo": 1
 }
