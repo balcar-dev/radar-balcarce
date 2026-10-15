@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T21:06:51.207Z",
+ "generado": "2026-10-15T21:32:23.927Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -30,23 +30,6 @@
    "maximo": 3
   },
   {
-   "id": "xla8hd",
-   "titulo": "Ferreira y Cagni se destacaron en la Correcaminata Aniversario de Tamangueyú",
-   "copete": "Los atletas de AACYC Balcarce, Ariel Ferreira y Adrián Cagni, tuvieron una destacada participación en la Correcaminata Aniversario de Tamangueyú, donde compitieron en la prueba principal de 10 kilómetros y lograron ubicarse entre los seis mejores de la clasificación general…",
-   "seccion": "Deportes",
-   "fecha": "2026-10-15T14:46:00.000Z",
-   "fuentes": [
-    {
-     "medio": "Infórmese Primero (FM 104.9)",
-     "enlace": "http://www.informeseprimero.com.ar/2026/10/ferreira-y-cagni-se-destacaron-en-la.html",
-     "fecha": "2026-10-15T14:46:00.000Z"
-    }
-   ],
-   "intentos": 3,
-   "motivo": "con cuerpo",
-   "maximo": 3
-  },
-  {
    "id": "sosoq0",
    "titulo": "Ángela Servín completó los 70 kilómetros de la Atlántica Ultra y logró subir al podio",
    "copete": "La atleta balcarceña Ángela Servín tuvo una destacada actuación en la exigente competencia Atlántica Ultra, al completar un recorrido de 70 kilómetros y alcanzar el segundo puesto en su categoría. La prueba comenzó en la costanera de Mar del Plata y continuó por veredas y…",
@@ -62,6 +45,43 @@
    "intentos": 3,
    "motivo": "con cuerpo",
    "maximo": 3
+  },
+  {
+   "id": "1ghztio",
+   "titulo": "Procesaron a dos exfuncionarios de ARSAT por una presunta trama de corrupción y los embargaron por $3.000 millones",
+   "copete": "El juez federal de San Isidro Lino Mirabelli procesó por corrupción a Facundo Leal , extitular de la Empresa Argentina de Soluciones Satelitales (Arsat) durante las gestiones de Alberto Fernández y Javier Milei, tras el cobro de sobornos por el alquiler de galpones con…",
+   "seccion": "Política",
+   "fecha": "2026-10-15T15:20:36.000Z",
+   "fuentes": [
+    {
+     "medio": "Infobae",
+     "enlace": "https://www.infobae.com/judiciales/2026/10/15/procesaron-a-dos-exfuncionarios-de-arsat-por-una-presunta-trama-de-corrupcion-y-los-embargaron-por-3000-millones/",
+     "fecha": "2026-10-15T15:20:36.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/procesaron-coimas-ex-titular-arsat-encontraron-24-millones-dolares_0_z14zu5sPMY.html",
+     "fecha": "2026-10-15T16:43:13.000Z"
+    },
+    {
+     "medio": "La Nación",
+     "enlace": "https://www.lanacion.com.ar/politica/procesaron-por-coimas-y-sobreprecios-a-facundo-leal-extitular-de-arsat-nid15102026/",
+     "fecha": "2026-10-15T17:22:16.000Z"
+    },
+    {
+     "medio": "Página/12",
+     "enlace": "https://www.pagina12.com.ar/2026/10/15/otro-procesamiento-para-facundo-leal-el-extitular-de-arsat/",
+     "fecha": "2026-10-15T17:18:45.000Z"
+    },
+    {
+     "medio": "Los Andes (Mendoza)",
+     "enlace": "https://www.losandes.com.ar/politica/arsat-procesaron-facundo-leal-corrupcion-y-ordenaron-un-embargo-3000-millones-n6010512",
+     "fecha": "2026-10-15T21:13:00.000Z"
+    }
+   ],
+   "intentos": 1,
+   "motivo": "cuerpo: 2 problemas (relleno, promesa): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 116 palabras",
+   "maximo": 4
   },
   {
    "id": "1k2r0zu",

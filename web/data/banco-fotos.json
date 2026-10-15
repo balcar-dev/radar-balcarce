@@ -15242,16 +15242,16 @@
   "cuando": "2026-10-15T19:32:32.961Z"
  },
  "fpal84": {
-  "archivo": "fotos-notas/fpal84.jpg",
   "medio": "La Nación",
-  "credito": "Foto: La Nación",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno repudia los incidentes en la marcha universitaria",
   "enlace": "https://www.lanacion.com.ar/sociedad/marcha-federal-universitaria-en-vivo-cortes-horarios-y-ultimas-noticias-del-reclamo-nid15102026/",
   "imagenOriginal": "https://www.lanacion.com.ar/resizer/v2/se-llevara-a-cabo-en-toda-la-argentina-con-T7A7ERU7ORFTHAOTHTOJIS4PMY.jpg?auth=03c3ead244cd390bf50c73bab1721533e7254bbf004b39245132cf67eb98b627&width=1200&height=675&quality=70&smart=true",
   "razon": "Muestra claramente la marcha universitaria en la calle, sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-15T20:03:36.627Z"
+  "cuando": "2026-10-15T20:03:36.627Z",
+  "intentado": true,
+  "borrada": true
  },
  "5yic3w": {
   "archivo": "fotos-notas/5yic3w.jpg",
@@ -15315,16 +15315,16 @@
   "cuando": "2026-10-15T21:06:23.271Z"
  },
  "vdepn2": {
-  "archivo": "fotos-notas/vdepn2.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Cementerio Municipal actualiza sus horarios desde el 26 de octubre",
   "enlace": "https://www.diariolavanguardia.com/noticias/45092-el-cementerio-de-balcarce-tendra-nuevos-horarios-desde-el-26-de-octubre/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-66059.png",
   "razon": "Es la única foto disponible, tiene buen encuadre del Cementerio Municipal, sin marcas ni menores.",
-  "cuando": "2026-10-15T21:06:23.271Z"
+  "cuando": "2026-10-15T21:06:23.271Z",
+  "intentado": true,
+  "borrada": true
  },
  "1uvhput": {
   "archivo": "fotos-notas/1uvhput.jpg",
@@ -15346,5 +15346,17 @@
   "cuando": "2026-10-15T21:06:23.271Z",
   "intentos": 1,
   "fuentes": 1
+ },
+ "1m9svv0": {
+  "archivo": "fotos-notas/1m9svv0.jpg",
+  "medio": "Motorsport",
+  "credito": "Foto: Motorsport",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Rafael Câmara llega a la Fórmula 1 y corre en Haas desde 2027",
+  "enlace": "https://es.motorsport.com/f1/news/oficial-rafael-camara-ficha-haas-debut-formula1-2027/10865294/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+  "imagenOriginal": "https://cdn-4.motorsport.com/images/amp/YBVjp4zY/s6/rafael-camara-haas-f1-team-2.jpg",
+  "razon": "Es una foto nítida, con excelente encuadre del protagonista, sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-10-15T21:32:00.960Z"
  }
 }
