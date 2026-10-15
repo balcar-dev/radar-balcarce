@@ -1,0 +1,8 @@
+Redes: cortas(<60s) 1539 min reales 456 min facturables 1539
+Redes: largas(>=60s) 191 min reales 595 min facturables 689
+Redes por reloj (dispatch) 965 min fact 1199  / tras actualizar (workflow_run) 765 min fact 1029
+Fallas Actualizar por dia {"2026-10-03":1,"2026-10-04":24,"2026-10-05":8,"2026-10-08":1,"2026-10-11":17,"2026-10-13":1}
+Corridas Actualizar por dia {"2026-10-01":61,"2026-10-02":55,"2026-10-03":60,"2026-10-04":60,"2026-10-05":53,"2026-10-06":52,"2026-10-07":51,"2026-10-08":53,"2026-10-09":53,"2026-10-10":53,"2026-10-11":55,"2026-10-12":53,"2026-10-13":52,"2026-10-14":54}
+Pages exitosas 707 media s 139
+Actualizar exitosas 711 media s 254
+huecos >60min entre corridas de Actualizar 0 max hueco min 60

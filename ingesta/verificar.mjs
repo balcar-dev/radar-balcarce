@@ -33,6 +33,12 @@
 //     → { claves: { ok, problemas }, …, etiquetas: { ok, problemas, validas } }
 //   depurarCuerpo(fuente, { copete, cuerpo })
 //     → { cuerpo, sacadas }: el cuerpo sin las oraciones que no pasan (25/09)
+//   letrasRotas(texto, { conocidas? })
+//     → [frases]: letras o signos que no son castellano (15/10, regla 167)
+//
+// `fuente.fechas` (15/10): las fechas que la IA también recibe (la de hoy y la de
+// publicación de cada fuente). Su día de la semana, su mes y su día cuentan como
+// dato de la fuente: "el viernes 9 de octubre" no es inventado.
 //
 // Los ANTECEDENTES (desde el 25/09) son notas que el sitio ya publicó sobre el
 // mismo tema, que la IA recibe para dar contexto. Cuentan como material
@@ -49,7 +55,7 @@ import { sinTildes } from '../web/lib/texto.js';
 import {
   etiquetaAdelante, terminaColgado, sinEtiqueta, sinCierreColgado,
 } from '../web/lib/titulos.js';
-import { diaSemanaAR } from './zona.mjs';
+import { diaSemanaAR, ZONA } from './zona.mjs';
 
 const palabras = (s) => sinTildes(s).match(/[a-zñ0-9]+/g) ?? [];
 
@@ -232,26 +238,113 @@ function citasDe(texto) {
 }
 
 // ----------------------------------------------------------------- la copia
+//
+// Copia flexible (15/10): la regla es no copiar FRASES, no no repetir datos.
+// De las pruebas de redacción, la copia casi siempre era una fórmula o un dato
+// ("se llevará a cabo los días 30 y 31 de octubre y 1 de noviembre", "declaró
+// de interés legislativo…", "la concejal de Fuerza Patria Sol Di Gerónimo…"):
+// lo que no se puede decir de otra manera. Un tramo copiado sigue siendo una
+// sola cadena de palabras seguidas, pero NO CUENTAN para el tope (sin cortar la
+// cadena) los números, los días y los meses, las horas, los nombres propios
+// (con mayúscula en el medio de una oración, las siglas, o un nombre que el
+// original escribe con mayúscula) ni las fórmulas oficiales de FORMULAS. Las
+// palabras comunes seguidas siguen teniendo el tope de COPIA_MAXIMA (12).
 
-/** El tramo más largo copiado del original: { largo, frase } (la frase, en las palabras normalizadas). */
-function copiaMasLarga(original, nuevo) {
+const HORARIOS = new Set(['hs', 'horas']);
+// Artículos y preposiciones: con mayúscula a principio de oración no son un nombre.
+const FUNCIONALES = new Set([
+  'el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'de', 'del', 'en', 'y', 'e', 'o', 'u', 'a', 'al', 'con', 'por',
+  'para', 'se', 'que', 'lo', 'su', 'sus', 'es', 'no', 'si', 'como', 'ante', 'tras', 'sin', 'sobre', 'entre', 'desde', 'hasta',
+]);
+const ADJETIVOS_DE_INTERES = '(?:municipal|legislativo|provincial|nacional|cultural|social|comunitario|educativo|deportivo|turistico|ambiental|sanitario|historico|economico|publico|general|regional|local|parlamentario)';
+const DIAS_DE_FORMULA = '(?:lunes|martes|miercoles|jueves|viernes|sabados?|domingos?)';
+// Fórmulas oficiales: sin tildes y en minúscula, contra las palabras normalizadas unidas por un espacio.
+const FORMULAS = [
+  /\bse (?:llevara|llevaran|llevo|llevaron) a cabo\b/g,
+  /\b(?:tendra|tendran|tuvo|tuvieron|tiene|tienen) lugar\b/g,
+  new RegExp(`\\b(?:declaro|declaron|declarar|declarado|declarada|declara|declaran) de interes(?: (?:y |e )?${ADJETIVOS_DE_INTERES})*`, 'g'),
+  new RegExp(`\\bde interes ${ADJETIVOS_DE_INTERES}(?: (?:y |e )?${ADJETIVOS_DE_INTERES})*`, 'g'),
+  /\b(?:sesion|reunion) (?:ordinaria|extraordinaria|especial)\b/g,
+  /\bproyecto de (?:ordenanza|resolucion|comunicacion|decreto|declaracion)\b/g,
+  /\bpedidos? de informes?\b/g,
+  /\b(?:entrada|ingreso) (?:libre|gratuit[oa])(?: y (?:libre|gratuit[oa]))?\b/g,
+  /\blibre y gratuit[oa]\b/g,
+  new RegExp(`\\bde ${DIAS_DE_FORMULA} a ${DIAS_DE_FORMULA}\\b`, 'g'),
+  /\bpara (?:mas|mayor) informacion\b/g,
+  /\ba partir de(?:l| las| los| la)?\b/g,
+  /\bpor unanimidad\b/g,
+];
+
+/** Los nombres que el original escribe con mayúscula en el medio de una oración (los títulos con todas las palabras en mayúscula no cuentan). */
+function nombresSeguros(texto) {
+  const salida = new Set();
+  for (const oracion of oraciones(texto)) {
+    const ws = oracion.match(/\p{L}{3,}/gu) ?? [];
+    const conMayuscula = ws.filter((w) => /^\p{Lu}/u.test(w)).length;
+    if (ws.length >= 4 && conMayuscula / ws.length >= 0.6) continue;
+    for (const n of nombresDe(oracion)) if (!FUNCIONALES.has(n)) salida.add(n);
+  }
+  return salida;
+}
+
+/** Las palabras del texto nuevo (normalizadas, como palabras()), cada una con `cuenta`: si pesa para el tope de copia. */
+function fichasDeCopia(texto, nombres) {
+  const t = String(texto ?? '');
+  const fichas = [];
+  for (const m of t.matchAll(/[\p{L}\p{N}]+/gu)) {
+    const crudo = m[0];
+    const previo = t.slice(0, m.index);
+    const inicio = !previo.trim() || /[.!?¿¡:;"“«(…]\s*$/u.test(previo) || /\n\s*$/.test(previo);
+    const mayuscula = /^\p{Lu}/u.test(crudo);
+    const sigla = crudo.length >= 2 && crudo.length <= 6 && crudo === crudo.toUpperCase() && !/\d/.test(crudo);
+    for (const w of sinTildes(crudo).match(/[a-zñ0-9]+/g) ?? []) {
+      const nombre = mayuscula && ((!inicio && !FUNCIONALES.has(w)) || sigla || (nombres.has(w) && !FUNCIONALES.has(w)));
+      const dato = /\d/.test(w) || CALENDARIO.has(w) || HORARIOS.has(w);
+      fichas.push({ w, cuenta: !(nombre || dato) });
+    }
+  }
+  // Las fórmulas oficiales: sus palabras siguen en la cadena pero no pesan.
+  const unido = ` ${fichas.map((f) => f.w).join(' ')} `;
+  const comienzos = [];
+  let pos = 1;
+  for (const f of fichas) { comienzos.push(pos); pos += f.w.length + 1; }
+  for (const formula of FORMULAS) {
+    for (const m of unido.matchAll(formula)) {
+      const desde = m.index;
+      const hasta = m.index + m[0].length;
+      comienzos.forEach((c, i) => { if (c >= desde && c < hasta) fichas[i].cuenta = false; });
+    }
+  }
+  return fichas;
+}
+
+/**
+ * El tramo más largo copiado del original: { largo, comunes, frase }. `largo` son
+ * todas las palabras seguidas; `comunes` las que pesan para el tope (sin datos,
+ * nombres ni fórmulas); la frase, en las palabras normalizadas. Se elige el
+ * tramo con más palabras comunes.
+ */
+function copiaMasLarga(original, nuevo, nombres = nombresSeguros(original)) {
   const a = palabras(original);
-  const b = palabras(nuevo);
-  let mejor = 0;
-  let desde = 0;
+  const fichas = fichasDeCopia(nuevo, nombres);
+  const b = fichas.map((f) => f.w);
+  const acumulado = [0];
+  fichas.forEach((f, i) => acumulado.push(acumulado[i] + (f.cuenta ? 1 : 0)));
+  let mejor = { largo: 0, comunes: 0, desde: 0 };
   for (let i = 0; i < b.length; i += 1) {
     for (let j = 0; j < a.length; j += 1) {
       let k = 0;
       while (i + k < b.length && j + k < a.length && b[i + k] === a[j + k]) k += 1;
-      if (k > mejor) { mejor = k; desde = i; }
+      const comunes = acumulado[i + k] - acumulado[i];
+      if (comunes > mejor.comunes || (comunes === mejor.comunes && k > mejor.largo)) mejor = { largo: k, comunes, desde: i };
     }
   }
-  return { largo: mejor, frase: b.slice(desde, desde + mejor).join(' ') };
+  return { largo: mejor.largo, comunes: mejor.comunes, frase: b.slice(mejor.desde, mejor.desde + mejor.largo).join(' ') };
 }
 
-/** ¿Cuántas palabras seguidas copió del original? */
-function tramoCopiado(original, nuevo) {
-  return copiaMasLarga(original, nuevo).largo;
+/** ¿Cuántas palabras comunes seguidas copió del original? (las que pesan para COPIA_MAXIMA) */
+function tramoCopiado(original, nuevo, nombres) {
+  return copiaMasLarga(original, nuevo, nombres).comunes;
 }
 
 // ------------------------------------------------------------------ el juicio
@@ -291,15 +384,45 @@ function oraciones(texto) {
   return String(texto).split(/(?<=[.!?])\s+|\n+/).map((o) => o.trim()).filter(Boolean);
 }
 
+/**
+ * Lo que dice una fecha que la IA recibe (15/10): el día de la semana y el mes en
+ * palabras, y el día, el mes y el año en números. La IA recibe "Fecha de hoy:
+ * viernes 09/10/2026" y "publicada el jueves 08/10/2026", y escribe "el viernes 9
+ * de octubre": el verificador, que sólo miraba el texto de la fuente, lo marcaba
+ * como inventado. Devuelve null si no es una fecha.
+ */
+export function datosDeFecha(valor) {
+  const t = valor instanceof Date ? valor.getTime() : Date.parse(valor ?? '');
+  if (!Number.isFinite(t)) return null;
+  const partes = new Intl.DateTimeFormat('es-AR', {
+    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: ZONA,
+  }).formatToParts(new Date(t));
+  const de = (tipo) => partes.find((p) => p.type === tipo)?.value ?? '';
+  const mes = new Intl.DateTimeFormat('en-US', { month: 'numeric', timeZone: ZONA }).format(new Date(t));
+  return {
+    palabras: [sinTildes(de('weekday')), sinTildes(de('month'))].filter(Boolean),
+    numeros: [Number(de('day')), Number(mes), Number(de('year'))].filter(Number.isFinite),
+  };
+}
+
+/** ¿La oración habla de una fecha? (un día o un mes en palabras, o "9/10") */
+const hablaDeUnaFecha = (oracion) => palabras(oracion).some((w) => CALENDARIO.has(w)) || /\d{1,2}\s*[/-]\s*\d{1,2}/.test(oracion);
+
 /** Lo que se le dio a la IA, preparado una vez para todas las comparaciones. */
 function contexto(fuente = {}) {
   const origen = `${fuente.titulo ?? ''}. ${fuente.resumen ?? ''}`;
   const previo = String(fuente.antecedentes ?? '');
+  const fechas = (Array.isArray(fuente.fechas) ? fuente.fechas : []).map(datosDeFecha).filter(Boolean);
   return {
     origen,
     origenNorm: sinTildes(origen),
-    palabrasOrigen: new Set(palabras(origen)),
+    palabrasOrigen: new Set([...palabras(origen), ...fechas.flatMap((f) => f.palabras)]),
     numerosOrigen: numerosDe(origen),
+    // Los números de las fechas de publicación valen sólo en una oración que habla de una fecha.
+    numerosDeFecha: fechas.flatMap((f) => f.numeros),
+    nombresCopia: nombresSeguros(origen),
+    // Las palabras como vienen escritas (con sus letras raras): las de un nombre extranjero que ya estaba en la fuente no se rechazan.
+    conocidas: new Set(`${origen}\n${previo}`.normalize('NFC').match(/[\p{L}\p{M}]+/gu) ?? []),
     nombresOrigen: nombresDe(origen),
     previoNorm: sinTildes(previo),
     palabrasPrevio: new Set(palabras(previo)),
@@ -328,7 +451,11 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
   const t = String(texto ?? '');
   if (!t) return problemas;
 
-  if (/\\u[0-9a-fA-F]{0,4}/.test(t)) agregar('forma', `el ${campo} trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir`); // 14/10: "Mart\u00in" salió en un título y en el repaso. // 1. Largo.
+  if (/\\u[0-9a-fA-F]{0,4}/.test(t)) agregar('forma', `el ${campo} trae un escape sin decodificar (barra-u…): texto mal escrito, se vuelve a pedir`); // 14/10: "Mart\u00in" salió en un título y en el repaso.
+  // 15/10 (regla 167): letras que no son del castellano ("polêcutemica", "miéércoles", "recibiõ"), entidades y signos sueltos.
+  const rotas = letrasRotas(t, { conocidas: ctx.conocidas });
+  if (rotas.length) agregar('forma', `el ${campo} trae letras rotas (${rotas.slice(0, 3).join('; ')}): texto mal escrito, se vuelve a pedir`);
+  // 1. Largo.
   if (limite && t.length > limite) {
     agregar('largo', `el ${campo} tiene ${t.length} caracteres, el máximo es ${limite}`);
   }
@@ -346,6 +473,7 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
       // 2. Números. Cualquier cifra o número en palabras que la fuente no traiga.
       for (const v of numerosDe(oracion)) {
         if (estaEnLaFuente(v, ctx.numerosOrigen)) continue;
+        if (ctx.numerosDeFecha.includes(v) && hablaDeUnaFecha(oracion)) continue;
         if (estaEnLaFuente(v, ctx.numerosPrevio)) {
           if (!marcada) agregar('antecedente', comoActual(v.toLocaleString('es-AR')));
           continue;
@@ -450,6 +578,87 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
   }
 
   return problemas;
+}
+
+// ------------------------------------------------------------ las letras rotas
+//
+// 15/10 (regla 167, auditoría de las etapas 6 a 9): 17 notas publicadas con
+// "polêcutemica", "neerlandêcutez", "miéércoles", "recibiõ", "tìnico",
+// "volarâ", "seòuró", "antiofȉdico". El verificador mira datos, no escritura, y
+// la regla 166 sólo agarraba el escape "barra-u". Esto mira la forma de cada
+// palabra, sin diccionario ni IA:
+//
+//   · restos de una entidad o de una codificación rota ("&eacute;", "Ã©",
+//     "êcute", el rombo de reemplazo, caracteres de control o invisibles);
+//   · un signo combinado que quedó suelto;
+//   · una palabra con dos tildes ("miéércoles"): en castellano una palabra
+//     escrita lleva una;
+//   · una letra que no es del castellano (ê, õ, ò, â, ì, ȉ…) en una palabra
+//     en minúscula.
+//
+// Un nombre propio extranjero puede tener letras de afuera ("Nicolò Tresoldi",
+// "São Januário", "Jérémy Doku"): se acepta si la palabra empieza con
+// mayúscula y está en la fuente, o tiene al lado otra palabra con mayúscula (un
+// nombre con apellido). Una palabra suelta con mayúscula al comenzar una
+// oración ("Permaneciõ internado…") no es un nombre y se rechaza.
+
+// Con los indicadores ordinales: "1º", "3ª", "Nº".
+const LETRA_CASTELLANA = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑºª]$/;
+const LETRA_LATINA_DE_AFUERA = /^[\u00C0-\u024F]$/u;
+const ENTIDAD = /&(?:[a-zA-Z]{2,8}|#x?[0-9a-fA-F]{2,6});/;
+const CODIFICACION_ROTA = /[ÃÂ][\u0080-\u00BF]|â€|ï¿½|\uFFFD/u;
+// Sin la bandera "i" en la primera: con ella, la "s" y la "ſ" (s larga) se confunden y "scute" dispara.
+const TILDE_PEGADA = /[\u00C0-\u024F]cute|(?:acute|ntilde|uuml)(?![a-zA-Z])/;
+// Entre dos palabras de un mismo nombre puede haber un conector ("Arcos Saneamento e Participações", "Jean-Pierre", "Juan de la Cruz").
+const CONECTOR_DE_NOMBRE = /^(?:e|y|de|del|da|do|dos|das|di|du|von|van|la|el|los|las)$/;
+const ENTRE_PALABRAS_DE_UN_NOMBRE = /^[\s-]+(?:(?:e|y|de|del|da|do|dos|das|di|du|von|van|la|el|los|las)\s+)*$/i;
+const CARACTER_INVISIBLE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F\u00AD\u200B-\u200F\u2028-\u202E\uFEFF\uE000-\uF8FF]/u;
+
+/**
+ * Las letras rotas de un texto, como frases cortas para el pedido de corrección
+ * (vacío si no hay). `conocidas` son las palabras de la fuente tal como están
+ * escritas: un nombre extranjero que ya estaba ahí no se rechaza.
+ *
+ * @param {string} texto
+ * @param {{ conocidas?: Set<string> | null }} [o]
+ * @returns {string[]}
+ */
+export function letrasRotas(texto, { conocidas = null } = {}) {
+  const t = String(texto ?? '').normalize('NFC');
+  const salida = [];
+  const sospecha = (re, que) => {
+    const m = t.match(re);
+    if (m) salida.push(`${que} "${m[0].slice(0, 20)}"`);
+  };
+  sospecha(ENTIDAD, 'una entidad sin decodificar');
+  sospecha(CODIFICACION_ROTA, 'una codificación rota');
+  sospecha(TILDE_PEGADA, 'una tilde mal escrita');
+  sospecha(CARACTER_INVISIBLE, 'un carácter de control');
+
+  const encontradas = [...t.matchAll(/[\p{L}\p{M}]+/gu)];
+  const palabrasCrudas = encontradas.map((m) => m[0]);
+  const conMayuscula = (w) => /^\p{Lu}/u.test(w);
+  // La palabra de al lado, en el mismo nombre (sin un punto ni una coma de por medio), empieza con mayúscula.
+  const vecinaConMayuscula = (i, lado) => {
+    let j = i + lado;
+    while (encontradas[j] && CONECTOR_DE_NOMBRE.test(encontradas[j][0])) j += lado;
+    const otra = encontradas[j];
+    if (!otra || !conMayuscula(otra[0])) return false;
+    const [primera, segunda] = lado < 0 ? [otra, encontradas[i]] : [encontradas[i], otra];
+    return ENTRE_PALABRAS_DE_UN_NOMBRE.test(t.slice(primera.index + primera[0].length, segunda.index));
+  };
+  palabrasCrudas.forEach((w, i) => {
+    const suelto = w.match(/\p{M}/u);
+    const tildes = (w.match(/[áéíóúÁÉÍÓÚ]/g) ?? []).length;
+    const ajenas = [...w].filter((c) => !LETRA_CASTELLANA.test(c));
+    if (!suelto && tildes < 2 && !ajenas.length) return;
+    if (suelto) { salida.push(`un signo suelto en "${w}"`); return; }
+    const esNombre = conMayuscula(w) && (conocidas?.has(w) || vecinaConMayuscula(i, -1) || vecinaConMayuscula(i, 1));
+    if (esNombre && ajenas.every((c) => LETRA_LATINA_DE_AFUERA.test(c))) return; // Nicolò Tresoldi, São Januário, Jérémy Doku
+    if (!ajenas.length && conocidas?.has(w)) return;
+    salida.push(ajenas.length ? `letras que no son del castellano en "${w}"` : `dos tildes en "${w}"`);
+  });
+  return [...new Set(salida)];
 }
 
 // ------------------------------------------------------- la forma del título
@@ -742,9 +951,9 @@ export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null,
   // pedido de corrección del segundo intento, y sin la frase la IA no sabía
   // cuál rehacer (siete notas por día se quedaban sin cuerpo así).
   const copia = [nuevo?.titulo, nuevo?.copete, nuevo?.cuerpo]
-    .map((t) => copiaMasLarga(origen, t ?? ''))
-    .reduce((a, b) => (b.largo > a.largo ? b : a), { largo: 0, frase: '' });
-  if (copia.largo > LIMITES.copiaMaxima) {
+    .map((t) => copiaMasLarga(origen, t ?? '', ctx.nombresCopia))
+    .reduce((a, b) => (b.comunes > a.comunes ? b : a), { largo: 0, comunes: 0, frase: '' });
+  if (copia.comunes > LIMITES.copiaMaxima) {
     const muestra = copia.frase.split(' ').slice(0, 14).join(' ');
     agregar('copia', `copia ${copia.largo} palabras seguidas del original ("${muestra}${copia.largo > 14 ? '…' : ''}"): decilo con otras palabras`);
   }
@@ -847,7 +1056,7 @@ export function verificarExtras(fuente, extras = {}, { soloForma = false, medios
     const problemas = [];
     for (const t of textos) {
       problemas.push(...problemasDelTexto(ctx, campo, t, { soloForma, limite }));
-      const copiado = soloForma ? 0 : tramoCopiado(ctx.origen, t);
+      const copiado = soloForma ? 0 : tramoCopiado(ctx.origen, t, ctx.nombresCopia);
       if (copiado > LIMITES.copiaMaxima) problemas.push({ tipo: 'copia', detalle: `el ${campo} copia ${copiado} palabras seguidas del original` });
     }
     return { ok: problemas.length === 0, problemas };
@@ -927,7 +1136,7 @@ export function depurarCuerpo(fuente, nuevo = {}) {
   const parrafos = String(nuevo.cuerpo ?? '').split(/\n+/).map((p) => p.trim()).filter(Boolean)
     .map((p) => oraciones(p).filter((o) => {
       const problemas = problemasDelTexto(ctx, 'cuerpo', o);
-      const copiado = tramoCopiado(ctx.origen, o);
+      const copiado = tramoCopiado(ctx.origen, o, ctx.nombresCopia);
       if (copiado > LIMITES.copiaMaxima) problemas.push({ tipo: 'copia', detalle: `copia ${copiado} palabras seguidas del original` });
       if (problemas.length) sacadas.push({ oracion: o, problemas });
       return !problemas.length;

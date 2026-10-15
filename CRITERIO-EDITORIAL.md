@@ -498,7 +498,11 @@ publicar una mentira.
 - un dato que sólo está en un antecedente usado **como si fuera de hoy**;
 - un **delito afirmado** sin atribuir a nadie;
 - una **negación** que la fuente no tiene, o una que desapareció;
-- **copiar** más de 12 palabras seguidas del original;
+- **copiar** más de 12 palabras seguidas del original (no cuentan los números,
+  las fechas, los nombres propios ni las fórmulas oficiales como "se llevará a
+  cabo" o "declaró de interés legislativo"; sí cuentan las palabras comunes);
+- **letras rotas** ("polêcutemica", "miéércoles", "recibiõ"): el texto vuelve a
+  la IA (regla 167);
 - el cuerpo que **repite la bajada**;
 - "mas" o "ms" en vez de **"más"** (cambia el sentido);
 - **"en vivo"** en lo que se ve primero;

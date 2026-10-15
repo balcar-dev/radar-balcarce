@@ -1,0 +1,53 @@
+# Las pruebas (15/10/2026). Corren cuando alguien cambia el código y una vez por semana, NO en cada vuelta de 30 minutos de
+# "Actualizar la web": allá una prueba de diseño que fallaba dejó la web 7 horas sin actualizarse (11/10).
+#
+# No corren por los commits del robot (los que sólo tocan web/data, las fotos y los escudos): esos no cambian código.
+# Si fallan, GitHub avisa por mail a quien hizo el cambio; el sitio sigue andando con lo que ya estaba publicado.
+
+name: Pruebas
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'web/data/**'
+      - 'web/public/fotos-notas/**'
+      - 'web/public/escudos/**'
+  pull_request:
+  schedule:
+    # Los lunes a las 6:17 UTC (3:17 en Balcarce): una vuelta de control aunque nadie haya tocado nada.
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: pruebas-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  probar:
+    runs-on: ubuntu-24.04
+    # Hoy tardan unos dos minutos. Quince es de sobra y corta una corrida colgada.
+    timeout-minutes: 15
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Hacen falta las dependencias: hay pruebas que tocan reels/ (placas con resvg, ffmpeg) y web/lib (react).
+      - name: Instalar
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
+      - name: Instalar (web)
+        working-directory: web
+        run: |
+          n=0; until npm ci --no-audit --no-fund; do n=$((n+1)); [ $n -ge 3 ] && exit 1; echo "npm ci falló (intento $n), se reintenta"; sleep 20; done
+
+      - name: Probar que nada se rompió
+        run: npm test

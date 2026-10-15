@@ -265,6 +265,8 @@ export function materialParaVerificar(nota) {
   return {
     titulo: nota.titulo,
     resumen: fuenteParaVerificar(nota),
+    // Las fechas que la IA también recibe (la de hoy y la de publicación de cada fuente): cuentan como dato (15/10).
+    fechas: [new Date().toISOString(), ...origenesDe(nota).map((o) => o.fecha).filter(Boolean)],
     antecedentes: textoDeAntecedentes(nota.antecedentes ?? []),
   };
 }
