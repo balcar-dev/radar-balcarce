@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T21:32:23.927Z",
+ "generado": "2026-10-15T21:36:47.138Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -79,8 +79,8 @@
      "fecha": "2026-10-15T21:13:00.000Z"
     }
    ],
-   "intentos": 1,
-   "motivo": "cuerpo: 2 problemas (relleno, promesa): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 116 palabras",
+   "intentos": 2,
+   "motivo": "cuerpo: 2 problemas (numero, promesa): el cuerpo dice 3.000 y la fuente no lo dice; sin esas oraciones quedan 118 palabras",
    "maximo": 4
   },
   {

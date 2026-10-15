@@ -15089,16 +15089,16 @@
   "borrada": true
  },
  "zkgilr": {
-  "archivo": "fotos-notas/zkgilr.jpg",
   "medio": "Clarín",
-  "credito": "Foto: Clarín",
   "licencia": null,
   "origen": "medio",
   "titulo": "La oposición busca quórum en Diputados para rechazar el DNU 70",
   "enlace": "https://www.clarin.com/politica/diputados-hoy-vivo-oposicion-busca-derribar-dnu-7023-todavia-dudas-quorum-abrir-sesion_0_Fm3GbMMPOX.html",
   "imagenOriginal": "https://www.clarin.com/img/2026/10/15/8A1Oy_RKm_2000x1500__1.jpg",
   "razon": "La foto B muestra claramente el recinto y el resultado en la pantalla sin marcas de agua ni menores reconocibles.",
-  "cuando": "2026-10-15T16:34:41.849Z"
+  "cuando": "2026-10-15T16:34:41.849Z",
+  "intentado": true,
+  "borrada": true
  },
  "a7iw6m": {
   "archivo": "fotos-notas/a7iw6m.jpg",
@@ -15358,5 +15358,17 @@
   "imagenOriginal": "https://cdn-4.motorsport.com/images/amp/YBVjp4zY/s6/rafael-camara-haas-f1-team-2.jpg",
   "razon": "Es una foto nítida, con excelente encuadre del protagonista, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-15T21:32:00.960Z"
+ },
+ "n6v2wu": {
+  "archivo": "fotos-notas/n6v2wu.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "UDOCBA concreta paro docente con alto acatamiento y reclama mejoras",
+  "enlace": "https://eldiariobalcarce.com.ar/udocba-reclama-mejoras-salariales-frenar-la-sobrecarga-laboral-y-combatir-la-violencia-en-las-escuelas-45",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-10-15-21-32-31Udocba.JPG",
+  "razon": "Es la única foto disponible, tiene buena nitidez, muestra a una adulta sin marcas de agua ni menores.",
+  "cuando": "2026-10-15T21:36:41.069Z"
  }
 }

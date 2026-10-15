@@ -629,9 +629,9 @@
   "motivo": "con cuerpo"
  },
  "1ghztio": {
-  "intentos": 1,
-  "ultimo": "2026-10-15T21:31:44.120Z",
-  "motivo": "cuerpo: 2 problemas (relleno, promesa): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 116 palabras"
+  "intentos": 2,
+  "ultimo": "2026-10-15T21:36:21.050Z",
+  "motivo": "cuerpo: 2 problemas (numero, promesa): el cuerpo dice 3.000 y la fuente no lo dice; sin esas oraciones quedan 118 palabras"
  },
  "1gkf7qu": {
   "intentos": 1,
@@ -2088,6 +2088,11 @@
  "n2srv6": {
   "intentos": 1,
   "ultimo": "2026-10-14T11:42:08.124Z",
+  "motivo": "con cuerpo"
+ },
+ "n6v2wu": {
+  "intentos": 1,
+  "ultimo": "2026-10-15T21:36:21.050Z",
   "motivo": "con cuerpo"
  },
  "n9eggk": {
