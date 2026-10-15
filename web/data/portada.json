@@ -1,85 +1,6 @@
 {
-  "generado": "2026-10-15T20:03:43.484Z",
+  "generado": "2026-10-15T20:28:04.283Z",
   "notas": [
-    {
-      "id": "fpal84",
-      "titulo": "El Gobierno repudia los incidentes en la marcha universitaria",
-      "copete": "La ministra de Seguridad, Alejandra Monteoliva, cuestionó los enfrentamientos frente al Congreso durante la Quinta Marcha Federal Universitaria. Aseguró que un sector buscó generar caos y desafiar a las fuerzas provinciales y federales.",
-      "cuerpo": "La ministra de Seguridad, Alejandra Monteoliva, sostuvo que un sector minoritario intentó generar caos y desafiar el operativo policial.\n\nLos cruces comenzaron antes de las 16 con destrozos en la vía pública y lanzamiento de piedras contra el personal policial. Ante esta situación, las fuerzas de seguridad respondieron con gases lacrimógenos y camiones hidrantes para disuadir la protesta.\n\nPor su parte, un participante de la movilización aseguró que los agentes reprimieron a quienes se manifestaban pacíficamente. El operativo incluyó la participación de estudiantes, sindicatos y agrupaciones sociales en las inmediaciones del palacio legislativo.",
-      "guion": "El Gobierno repudia los incidentes en la marcha universitaria",
-      "seccion": "Argentina",
-      "medios": [
-        "La Nación",
-        "TN (Todo Noticias)",
-        "Crónica"
-      ],
-      "enlace": "https://tn.com.ar/politica/2026/10/15/el-gobierno-condeno-los-incidentes-en-la-marcha-universitaria-los-mismos-violentos-de-siempre-quieren-imponer-el-caos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-15T19:40:48.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-15T20:03:07.860Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno criticó los disturbios en el Congreso durante la protesta universitaria.",
-        "La ministra Alejandra Monteoliva afirmó que hubo agresiones contra los efectivos.",
-        "La policía utilizo gases y camiones hidrantes para dispersar a los manifestantes.",
-        "Participaron estudiantes, gremios y organizaciones sociales."
-      ],
-      "seSabe": [
-        "La ministra de Seguridad, Alejandra Monteoliva, repudió los incidentes ocurridos el jueves 15 de octubre de 2026.",
-        "Los disturbios comenzaron minutos antes de las 16 en los alrededores del Congreso.",
-        "Las fuerzas de seguridad utilizaron gas lacrimógeno y camión hidrante."
-      ],
-      "noConfirmado": [
-        "No se informó la cantidad exacta de detenidos ni de heridos tras los enfrentamientos."
-      ],
-      "textoRedes": "El Gobierno nacional repudió los incidentes registrados durante la marcha universitaria frente al Congreso. La ministra Alejandra Monteoliva aseguró que buscaron generar caos y la policía dispersó la protesta con gases y camión hidrante.",
-      "etiquetas": [
-        "marcha universitaria",
-        "Gobierno nacional",
-        "Congreso",
-        "Alejandra Monteoliva",
-        "incidentes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/10/15/el-gobierno-condeno-los-incidentes-en-la-marcha-universitaria-los-mismos-violentos-de-siempre-quieren-imponer-el-caos/",
-          "fecha": "2026-10-15T19:40:48.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles de los horarios, el uso de elementos antidisturbios y testimonios de los manifestantes."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/marcha-federal-universitaria-en-vivo-cortes-horarios-y-ultimas-noticias-del-reclamo-nid15102026/",
-          "fecha": "2026-10-15T19:44:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones de la ministra Monteoliva sobre los incidentes."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/el-gobierno-apunto-contra-los-manifestantes-en-la-marcha-universitaria-los-violentos-de-siempre-quieren-imponer-el-caos/",
-          "fecha": "2026-10-15T19:43:22.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la condena oficial de la funcionaria hacia los hechos de violencia en las inmediaciones del Congreso."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-repudia-los-incidentes-en-la-marcha-universitaria",
-      "foto": {
-        "archivo": "fotos-notas/fpal84.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
     {
       "id": "1ylxz2o",
       "titulo": "Suteba Balcarce adhiere al paro nacional con una acatamiento del 90 por ciento",
@@ -142,6 +63,185 @@
       "foto": {
         "archivo": "fotos-notas/1ylxz2o.jpg",
         "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
+      "id": "5yic3w",
+      "titulo": "La industria utiliza el 58,5% de su capacidad instalada en agosto",
+      "copete": "Las fábricas operaron por debajo del nivel registrado en el mismo mes del año pasado según el INDEC. La refinación de petróleo encabezó los sectores con mayor uso.",
+      "cuerpo": "Las fábricas argentinas operaron al 58,5% de su potencial productivo durante agosto, lo que representó un retroceso frente al 59,6% registrado en el mismo mes de 2025, según informó el INDEC.\n\nLos rubros con mayor nivel de utilización fueron la refinación del petróleo con el 88,8% y las industrias metálicas básicas con el 70,1%. En el extremo opuesto se ubicaron la metalmecánica con el 35,9% y el sector automotriz con el 46,2%.\n\nComo antecedente, el organismo oficial había comunicado a principios de octubre que la actividad manufacturera avanzó un 1,9% en comparación con julio.",
+      "guion": "La industria utiliza el 58,5% de su capacidad instalada en agosto",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "C5N"
+      ],
+      "enlace": "https://www.cronista.com/economia-politica/la-industria-opero-al-585-de-su-capacidad-instalada-en-agosto-y-sumo-una-nueva-caida-interanual/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T19:14:37.281Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T20:27:17.316Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El INDEC informó que la industria operó al 58,5% en agosto",
+        "El uso de la capacidad productiva cayó frente al 59,6% de 2025",
+        "La refinación de petróleo alcanzó el nivel más alto con el 88,8%",
+        "La metalmecánica registró la menor utilización con el 35,9%"
+      ],
+      "seSabe": [
+        "Las fábricas operaron al 58,5% de su capacidad instalada en agosto según el INDEC",
+        "El nivel se ubicó por debajo del 59,6% registrado en agosto de 2025",
+        "La refinación de petróleo y las industrias metálicas básicas superaron el promedio general",
+        "La metalmecánica y la industria automotriz se ubicaron entre los sectores con menor uso"
+      ],
+      "etiquetas": [
+        "industria",
+        "capacidad instalada",
+        "INDEC",
+        "agosto"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/la-industria-opero-al-585-de-su-capacidad-instalada-en-agosto-y-sumo-una-nueva-caida-interanual/",
+          "fecha": "2026-10-15T19:14:37.281Z",
+          "oficial": false,
+          "aporte": "Aportó los porcentajes de utilización de la capacidad instalada por sectores y los datos del INDEC."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-uso-de-la-capacidad-instalada-de-la-industria-tuvo-una-leve-suba-en-agosto-pero-cayo-frente-a-nid15102026/",
+          "fecha": "2026-10-15T20:17:36.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la cifra general del 58,5% informada por el INDEC."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/10/15/la-industria-uso-el-585-de-su-capacidad-instalada-en-agosto-los-rubros-que-crecieron-y-los-que-cayeron/",
+          "fecha": "2026-10-15T19:53:45.000Z",
+          "oficial": false,
+          "aporte": "No aportó texto adicional en su resumen."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/la-industria-cayo-en-agosto-y-uso-apenas-el-58-5-de-su-capacidad-instalada/",
+          "fecha": "2026-10-15T19:24:39.000Z",
+          "oficial": false,
+          "aporte": "Precisó que el registro de agosto de 2025 fue del 59,6% y que el informe se difundió el jueves."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/volvio-a-caer-el-uso-de-la-capacidad-instalada-de-la-industria-en-agosto_a6ad1231788153cda2dfd46cf",
+          "fecha": "2026-10-15T19:43:50.425Z",
+          "oficial": false,
+          "aporte": "No aportó texto adicional en su resumen."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/la-capacidad-instalada-opero-al-588-agosto-y-registro-otra-caida-interanual-n251716",
+          "fecha": "2026-10-15T19:39:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó texto adicional en su resumen."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "158583a",
+          "titulo": "La industria y la construcción suben en agosto según el INDEC",
+          "fecha": "2026-10-07T19:12:00.000Z",
+          "ruta": "/nota/la-industria-y-la-construccion-suben-en-agosto-segun-el-indec-158583a"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-industria-utiliza-el-58-5-de-su-capacidad-instalada-en-agosto",
+      "foto": {
+        "archivo": "fotos-notas/5yic3w.jpg",
+        "credito": "Foto: El Cronista"
+      }
+    },
+    {
+      "id": "1caxs1v",
+      "titulo": "La siembra y cosecha agrícola registran demoras por lluvias y bajas temperaturas",
+      "copete": "Las precipitaciones recientes y los registros térmicos reducidos retrasan las tareas de implantación y recolección en distintas zonas productivas del país, según un informe de la Bolsa de Cereales.",
+      "cuerpo": "Las lluvias recientes ralentizaron la incorporación de lotes en el centro y sur del área agrícola, mientras que en Córdoba algunos sectores pasarán a esquemas tardíos.\n\nSin embargo, los colaboradores zonales advierten que la continuidad de precipitaciones y frío genera incertidumbre sobre el cumplimiento de los planes de trabajo, sumado a la presencia de isocas cortadoras y aves.\n\nPor otro lado, la cosecha de trigo muestra retrasos en el norte por exceso de humedad, al tiempo que el centro registra expectativas de mermas de entre 10 % y 30 % frente al ciclo previo a causa de heladas. En cebada, las reservas hídricas mejoraron, aunque persisten daños por heladas en el oeste bonaerense con rindes estimados en 40 quintales por hectárea.",
+      "guion": "La siembra y cosecha agrícola registran demoras por lluvias y bajas temperaturas",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Agrositio"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248848-pese-a-la-mejora-en-las-reservas-hidricas-se-demora-la-siembra-y-se-condiciona-la-evolucion-de-los-cultivos.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T18:59:35.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T20:27:17.316Z",
+      "relevancia": 49,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La siembra de maíz cubre el 34,8 % de la superficie proyectada.",
+        "El girasol alcanza un 41,9 % de implantación a nivel nacional.",
+        "Lluvias y bajas temperaturas ralentizan el ritmo de las labores.",
+        "Trigo y cebada reportan mermas productivas por heladas en distintas zonas."
+      ],
+      "noConfirmado": [
+        "No se precisó el impacto final de los pronósticos de lluvias continuas sobre la totalidad de los planes de siembra."
+      ],
+      "textoRedes": "Las precipitaciones y las bajas temperaturas generan demoras en las tareas de siembra y cosecha de maíz, girasol, trigo y cebada en las principales regiones productivas, según el último informe de la Bolsa de Cereales de Buenos Aires.",
+      "etiquetas": [
+        "siembra",
+        "cosecha",
+        "Bolsa de Cereales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248848-pese-a-la-mejora-en-las-reservas-hidricas-se-demora-la-siembra-y-se-condiciona-la-evolucion-de-los-cultivos.html",
+          "fecha": "2026-10-15T18:59:35.000Z",
+          "oficial": false,
+          "aporte": "Detalló los porcentajes de avance en la siembra de maíz y girasol, el estado de los cultivos y el impacto climatico según la Bolsa de Cereales."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/10/15/la-siembra-de-los-cultivos-se-demora-por-las-lluvias-que-mejora-las-reservas-de-agua/",
+          "fecha": "2026-10-15T20:09:09.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su publicación."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1gdr2jb",
+          "titulo": "La chicharrita del maíz retrocede y mejora el escenario para la siembra",
+          "fecha": "2026-10-05T14:21:07.000Z",
+          "ruta": "/nota/la-chicharrita-del-maiz-retrocede-y-mejora-el-escenario-para-la-1gdr2jb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-siembra-y-cosecha-agricola-registran-demoras-por-lluvias-y-bajas",
+      "foto": {
+        "archivo": "fotos-notas/1caxs1v.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
       }
     },
     {
@@ -272,6 +372,83 @@
       "foto": {
         "archivo": "fotos-notas/1vrfi9w.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1xexo2f",
+      "titulo": "Nadie dice nada estrena su serie Somos así en Disney+",
+      "copete": "El ciclo de streaming llega a la ficción con una comedia de ocho episodios. Estará disponible el 18 de noviembre en la sección Hulu de Disney+ para toda América Latina.",
+      "cuerpo": "El programa de streaming Nadie dice nada estrenará su propia ficción titulada Somos así el 18 de noviembre en la sección Hulu de Disney+ en simultáneo para América Latina. La producción consta de ocho episodios de veinte minutos y refleja las complicaciones de la adultez a través de un grupo de amigos.\n\nEl elenco principal está integrado por Nico Occhiato como Matías, Flor Jazmín Peña como Chía, Momi Giardina como Guillermina, Santi Talledo como Lucas y Martín Garabal como Leo. La realización corre por cuenta de Pampa Films, con dirección de Nick Silbert y Lalo Mark, mientras que la idea original pertenece a Talledo y Diego Vago.\n\nLa plataforma presentó el miércoles el adelanto oficial de la comedia, que también cuenta con las participaciones especiales de Oscar Martínez y Graciela Stefani como los padres del personaje de Occhiato, además de un amplio reparto con actores como Maite Lanata, Juli Poggio y Marixa Balli.",
+      "guion": "Nadie dice nada estrena su serie Somos así en Disney+",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "La Nación",
+        "A24",
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/que-puedo-ver/2026/10/15/nadie-dice-nada-da-el-salto-a-la-ficcion-con-somos-asi-en-hulu-en-disney/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-15T17:30:13.000Z",
+      "sinFecha": false,
+      "visto": "2026-10-15T20:27:17.316Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El ciclo Nadie dice nada lanza su primera serie de ficción",
+        "La comedia se titula Somos así y consta de ocho episodios",
+        "El estreno será el 18 de noviembre en Hulu en Disney+",
+        "El elenco principal incluye a los conductores del programa y a reconocidos actores"
+      ],
+      "seSabe": [
+        "La serie Somos así se estrena el 18 de noviembre en Hulu en Disney+ para toda América Latina",
+        "La producción cuenta con ocho episodios de veinte minutos",
+        "El elenco principal está formado por Nico Occhiato, Flor Jazmín Peña, Momi Giardina, Santi Talledo y Martín Garabal",
+        "La realización pertenece a Pampa Films bajo la dirección de Nick Silbert y Lalo Mark"
+      ],
+      "textoRedes": "El ciclo de streaming Nadie dice nada lanza su propia serie de ficción titulada Somos así. La comedia llegará el 18 de noviembre a la sección Hulu en Disney+ con ocho episodios disponibles para América Latina.",
+      "etiquetas": [
+        "Nadie dice nada",
+        "Disney+",
+        "Hulu",
+        "Nico Occhiato",
+        "series"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/que-puedo-ver/2026/10/15/nadie-dice-nada-da-el-salto-a-la-ficcion-con-somos-asi-en-hulu-en-disney/",
+          "fecha": "2026-10-15T17:30:13.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha de estreno, la cantidad y duración de los episodios, el argumento, los nombres de los personajes, el equipo de realización y el reparto completo."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/espectaculos/se-conocio-el-primer-avance-de-somos-asi-la-serie-de-nadie-dice-nada-protagonizada-por-nico-occhiato-nid15102026/",
+          "fecha": "2026-10-15T20:04:52.000Z",
+          "oficial": false,
+          "aporte": "Informó el salto del ciclo de streaming hacia la ficción en la plataforma Disney+."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/trends/somos-asi-la-serie-nadie-dice-nada-se-estrena-exclusivamente-hulu-disney-n1606799",
+          "fecha": "2026-10-15T18:52:23.000Z",
+          "oficial": false,
+          "aporte": "Indicó la presentación del tráiler oficial con los cinco protagonistas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "nadie-dice-nada-estrena-su-serie-somos-asi-en-disney",
+      "foto": {
+        "archivo": "fotos-notas/1xexo2f.jpg",
+        "credito": "Foto: La Nación"
       }
     },
     {
@@ -2576,107 +2753,6 @@
       "slug": "el-concejo-deliberativo-estudiantil-cierra-su-quinta-edicion-con-25"
     },
     {
-      "id": "17foa6",
-      "titulo": "Pablo Quirno firma en Washington un protocolo clave para el acuerdo comercial",
-      "copete": "El canciller suscribió un documento junto al representante comercial estadounidense con el objetivo de acelerar el aval parlamentario. La medida busca dar previsibilidad a las ventas nacionales al mercado norteamericano.",
-      "cuerpo": "El documento fue rubricado junto al representante comercial estadounidense, Jamieson Greer, durante la visita oficial del presidente Javier Milei.\n\nSegún informó el funcionario, el entendimiento apunta a facilitar la aprobación parlamentaria en Buenos Aires y otorgar mayor previsibilidad a las exportaciones argentinas. El paquete bilateral contempla la eliminación de aranceles para 1.675 productos nacionales y la ampliación de la cuota de carne bovina a 100.000 toneladas durante 2026.\n\nEl intercambio comercial hacia ese destino sumó 6.570 millones de dólares entre enero y agosto de este año, lo que representa un incremento interanual del 35%. A principios de mes, el propio Quirno había pedido inversiones a los empresarios durante un mensaje enviado al Coloquio de IDEA.",
-      "guion": "Pablo Quirno firma en Washington un protocolo clave para el acuerdo comercial",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "TN (Todo Noticias)",
-        "A24",
-        "El Marplatense",
-        "Clarín",
-        "Canal 26",
-        "Crónica",
-        "Radio Mitre"
-      ],
-      "enlace": "https://www.clarin.com/economia/washington-quirno-firmo-protocolo-facilitar-aprobacion-acuerdo-comercial-eeuu-congreso_0_EerBxgJ0Lr.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-10-14T20:05:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-10-14T20:38:40.052Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El canciller Pablo Quirno firmó un protocolo adicional en Washington.",
-        "El documento apunta a lograr la aprobación del acuerdo en el Congreso.",
-        "Las ventas al mercado estadounidense crecieron un 35% interanual hasta agosto.",
-        "La cuota para la carne vacuna se elevó a 100.000 toneladas."
-      ],
-      "seSabe": [
-        "El canciller Pablo Quirno firmó un protocolo adicional en Washington junto al representante comercial estadounidense, Jamieson Greer, según informó el Gobierno.",
-        "El acuerdo busca acelerar la aprobación parlamentaria del entendimiento comercial bilateral, de acuerdo con los registros oficiales.",
-        "Las exportaciones hacia ese país totalizaron 6.570 millones de dólares entre enero y agosto de 2026.",
-        "La cuota de exportación para la carne argentina pasó de 20.000 a 100.000 toneladas."
-      ],
-      "noConfirmado": [
-        "El texto completo del documento firmado en Washington todavía no fue difundido oficialmente."
-      ],
-      "textoRedes": "El canciller Pablo Quirno firmó en Washington un protocolo adicional al acuerdo comercial con Estados Unidos para acelerar su tratamiento en el Congreso. Las ventas al mercado norteamericano crecieron un 35% interanual entre enero y agosto.",
-      "etiquetas": [
-        "Pablo Quirno",
-        "Estados Unidos",
-        "acuerdo comercial",
-        "exportaciones",
-        "Congreso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/washington-quirno-firmo-protocolo-facilitar-aprobacion-acuerdo-comercial-eeuu-congreso_0_EerBxgJ0Lr.html",
-          "fecha": "2026-10-14T20:05:12.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/10/14/argentina-firmo-con-eeuu-un-protocolo-adicional-para-fortalecer-el-acuerdo-bilateral-sobre-comercio-e-inversiones-reciprocas/",
-          "fecha": "2026-10-14T20:29:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/en-washington-quirno-firmo-un-protocolo-adicional-para-acelerar-la-aprobacion-del-acuerdo-comercial-nid14102026/",
-          "fecha": "2026-10-14T20:10:07.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/10/14/la-argentina-y-eeuu-firmaron-un-protocolo-para-avanzar-con-el-acuerdo-comercial-y-enviarlo-al-congreso/",
-          "fecha": "2026-10-14T20:07:45.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1b5bal2",
-          "titulo": "Pablo Quirno pide a los empresarios inversiones y destaca la apertura comercial",
-          "fecha": "2026-10-01T12:32:21.000Z",
-          "ruta": "/nota/pablo-quirno-pide-a-los-empresarios-inversiones-y-destaca-la-apertura-1b5bal2"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "pablo-quirno-firma-en-washington-un-protocolo-clave-para-el-acuerdo",
-      "foto": {
-        "archivo": "fotos-notas/17foa6.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
-    {
       "id": "9y985f",
       "titulo": "Lautaro Martínez padece una lesión muscular y peligra su presencia en la Selección",
       "copete": "El delantero argentino presenta una distensión en el muslo izquierdo, según confirmó el Inter de Milán. Estaría inactivo alrededor de un mes.",
@@ -3616,6 +3692,94 @@
       }
     },
     {
+      "id": "ekwu7",
+      "titulo": "Julio Cordero defiende el Presupuesto y la reforma laboral",
+      "copete": "El secretario de Trabajo participó en el debate legislativo del Presupuesto, donde respaldó la reforma laboral, valoró el monotributo y afirmó que no todas las personas buscan un empleo en relación de dependencia.",
+      "cuerpo": "El secretario de Trabajo de la Nación, Julio Cordero, disertó en la segunda jornada de debate del Presupuesto en comisiones. El funcionario respaldó la reforma laboral y sostuvo que existen nuevas formas de contratación, al señalar que no todas las personas desean trabajar bajo la orden de un empleador.\n\nDurante su exposición, Cordero cuestionó los antiguos esquemas de asistencia social por desalentar la incorporación laboral. Además, indicó que 950.000 personas ingresaron al mercado de trabajo a través del programa Volver al Trabajo.\n\nEl secretario también ponderó el monotributo y los trabajos autónomos como alternativas de formalización con acceso a seguridad social. Por último, abogó por negociaciones salariales adaptadas a cada sector para proteger los puestos.",
+      "guion": "Julio Cordero defiende el Presupuesto y la reforma laboral",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "Página/12",
+        "Noticias Argentinas (NA)",
+        "Ámbito",
+        "C5N",
+        "Los Andes (Mendoza)",
+        "El Cronista",
+        "Clarín",
+        "Diputados Bonaerenses",
+        "Radio Mitre"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/10/14/el-secretario-de-trabajo-defendio-el-presupuesto-y-dijo-que-no-todos-quieren-trabajar-en-relacion-de-dependencia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-10-14T13:43:25.171Z",
+      "sinFecha": false,
+      "visto": "2026-10-14T21:01:59.221Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El secretario de Trabajo expuso en el debate del Presupuesto.",
+        "Defendió la reforma laboral y los esquemas de empleo autónomo.",
+        "Indicó que 950.000 personas ingresaron al mercado mediante un programa.",
+        "Ponderó el monotributo como una herramienta de formalización."
+      ],
+      "seSabe": [
+        "Julio Cordero se presentó en la comisión de presupuesto durante la segunda jornada de debate.",
+        "El funcionario defendió la reforma laboral y las nuevas modalidades de contratación.",
+        "Señaló que 950.000 personas se sumaron al mercado laboral a través del programa Volver al Trabajo.",
+        "Afirmó que el monotributo brinda acceso a la seguridad social y a la salud."
+      ],
+      "noConfirmado": [
+        "No se especificaron detalles sobre el alcance total de las modificaciones propuestas en las negociaciones colectivas.",
+        "No trascendió una fecha estimada para la votación definitiva del proyecto debatido en las comisiones."
+      ],
+      "textoRedes": "El secretario de Trabajo defendió el Presupuesto y la reforma laboral al asegurar que no todos buscan un empleo en relación de dependencia.",
+      "etiquetas": [
+        "Presupuesto",
+        "Trabajo",
+        "Reforma laboral",
+        "Monotributo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/10/14/el-secretario-de-trabajo-defendio-el-presupuesto-y-dijo-que-no-todos-quieren-trabajar-en-relacion-de-dependencia/",
+          "fecha": "2026-10-14T18:38:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diputados Bonaerenses",
+          "enlace": "https://diputadosbsas.com.ar/presupuesto-2027-cordero-defendio/",
+          "fecha": "2026-10-14T20:20:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/julio-cordero-hay-personas-que-no-quieren-trabajar-relacion-dependencia-n6333717",
+          "fecha": "2026-10-14T18:53:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "julio-cordero-defiende-el-presupuesto-y-la-reforma-laboral",
+      "foto": {
+        "archivo": "fotos-notas/ekwu7.jpg",
+        "credito": "Foto: Infobae"
+      }
+    },
+    {
       "id": "1ge6irq",
       "titulo": "Deportistas locales participan del Torneo Argentino de Pádel",
       "copete": "Tres jugadores de Balcarce integraron la delegación bonaerense en el Torneo Argentino Federal de Pádel, desarrollado el fin de semana pasado en Rosario con más de 700 inscriptos.",
@@ -4121,14 +4285,14 @@
     }
   ],
   "secciones": [
-    "Argentina",
     "Balcarce",
+    "Economía",
+    "Agro",
+    "Cultura y agenda",
     "Deportes",
     "Política",
-    "Agro",
     "Automovilismo",
-    "Cultura y agenda",
-    "Economía",
+    "Argentina",
     "Fútbol",
     "Policiales"
   ],
@@ -4141,7 +4305,7 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
+      "temp": 12,
       "sensacion": 9,
       "humedad": 65,
       "viento": 18,
@@ -4607,5 +4771,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 4
 }
