@@ -39,17 +39,19 @@ export const hayWhatsApp = (env = process.env) => Boolean(String(env?.WHATSAPP_T
 /**
  * Manda un aviso por mail a través del Worker.
  *
- * @param {{ asunto?: string, texto: string, clave?: string, nivel?: string }} aviso
+ * @param {{ asunto?: string, texto: string, html?: string, clave?: string, nivel?: string }} aviso
+ *   `html`: la versión con formato (opcional; el Worker manda las dos y descarta la que no entre en su tope).
  *   `clave`: si se da, el Worker no repite esa misma clave en 6 horas. `nivel`: 'alta' | 'media' | 'info' (alta lleva "URGENTE" en el asunto).
  * @returns {Promise<{ ok: boolean, motivo?: string, repetido?: boolean }>}  `repetido`: el Worker ya había mandado esa clave hace poco (cuenta como ok).
  */
-export async function avisarPorMail({ asunto, texto, clave, nivel } = {}, { fetchFn = fetch, env = process.env } = {}) {
+export async function avisarPorMail({ asunto, texto, html, clave, nivel } = {}, { fetchFn = fetch, env = process.env } = {}) {
   const token = String(env?.VIGILANTE_TOKEN ?? '').trim();
   if (!token) return { ok: false, motivo: 'no hay VIGILANTE_TOKEN' };
   if (!String(texto ?? '').trim()) return { ok: false, motivo: 'mensaje vacío' };
   const url = String(env?.AVISOS_URL ?? '').trim() || AVISOS_URL;
   if (!/^https:\/\//i.test(url)) return { ok: false, motivo: 'AVISOS_URL tiene que ser https' };
   const cuerpo = { asunto: asunto || asuntoDe(texto), texto: String(texto) };
+  if (html && String(html).trim()) cuerpo.html = String(html); // los informes diarios (redes/informe-diario.mjs): el mail sale con texto y html
   if (clave) cuerpo.clave = String(clave);
   if (nivel) cuerpo.nivel = String(nivel);
   try {

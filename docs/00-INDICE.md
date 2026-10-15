@@ -105,6 +105,7 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/propuestas/PASOS-PARA-USTEDES.md` | Lo que sólo una persona puede hacer (respaldo en GitLab y R2, fotos a R2). Lo nombra el workflow "Fotos a R2": no moverlo |
 | `docs/propuestas/PLANTILLAS-DE-PIEZAS.md` | Las reglas y variantes de las escenas animadas (aprobadas y conectadas, regla 157) |
 | `docs/propuestas/CRONOGRAMA-REDES.md` | Qué sale en las redes y a qué hora (generado con `node redes/cronograma-semana.mjs`) |
+| `docs/redes/ARCHIVO-DE-PIEZAS.md` | Dónde se guardan para siempre los videos, audios y placas de las redes (R2), cuánto pesan y cuestan, y cómo bajar una pieza |
 | `docs/propuestas/CLAVES-DE-IA.md` | Las claves y servicios de IA del 9/10 |
 | `docs/propuestas/DISENOS-A-ARMAR.md` | Diseños de reels y web para elegir después del rediseño |
 | `docs/propuestas/material/` | Páginas y videos de ejemplo de la auditoría del 8/10 |

@@ -12,7 +12,7 @@ import {
   importantesAAvisar, textoImportantes, anotarImportantes, IMPORTANTE,
   novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje, recortar,
 } from '../redes/avisos.mjs';
-import { planDeAvisos, mensajeDelResumen } from '../redes/vigilar.mjs';
+import { planDeAvisos, mensajeDelResumen, problemasAbiertos } from '../redes/vigilar.mjs';
 import { LARGO_MAXIMO } from '../redes/whatsapp.mjs';
 
 /** Una hora de Balcarce del 25/09/2026. */
@@ -373,4 +373,39 @@ test('el resumen de las 21 dice cuántos posteos de hoy salieron con la foto de 
   assert.equal(datos.facebook, 2);
   assert.equal(datos.facebookConFoto, 1);
   assert.match(textoResumen({ datos }), /Posteos de hoy con foto de la nota: 1 de 2/);
+});
+
+// Regla 176 (15/10/2026): el resumen de las 21, las estadísticas y el informe de notas del vigilante los trae ahora el informe diario por mail
+// (redes/informe-diario.mjs): el vigilante (main pasa `resumenDelDia: false`) no los manda, para no repetir lo mismo tres veces a la misma hora.
+test('plan con resumenDelDia apagado: a las 21 y a las 9 no sale ni el resumen, ni las estadísticas, ni el informe del día', () => {
+  for (const hora of ['21:05', '09:05']) {
+    const plan = planDeAvisos({ ahora: A(hora), estado: {}, portada: PORTADA, libro: LIBRO, estadisticas: '📊 Estadísticas', resumenDelDia: false });
+    const claves = plan.secciones.map((s) => s.clave);
+    assert.ok(!claves.includes('resumen') && !claves.includes('estadisticas') && !claves.includes('informe'), `${hora}: ${claves.join(',')}`);
+  }
+  // y con la opción por defecto sigue saliendo como siempre
+  const igual = planDeAvisos({ ahora: A('21:05'), estado: {}, portada: PORTADA, libro: LIBRO, estadisticas: '📊 Estadísticas' });
+  assert.ok(igual.secciones.some((s) => s.clave === 'resumen'));
+  // lo que NO es resumen sigue avisándose: los problemas
+  const conProblema = planDeAvisos({ ahora: A('21:05'), estado: {}, portada: PORTADA, libro: LIBRO, problemas: [{ clave: 'x', nivel: 'alta', texto: 'algo' }], resumenDelDia: false });
+  assert.deepEqual(conProblema.secciones.map((s) => s.clave).filter((c) => c === 'problemas'), ['problemas']);
+});
+
+test('problemasAbiertos: lo que queda anotado en vigilancia.json para el informe; conserva desde cuándo sigue abierto cada uno', () => {
+  const ahora = A('12:00');
+  const primero = problemasAbiertos([{ clave: 'a', nivel: 'alta', texto: 'La web no responde' }, { clave: 'b', nivel: 'media', texto: 'x'.repeat(900) }], [], ahora);
+  assert.equal(primero.length, 2);
+  assert.deepEqual(primero[0], { clave: 'a', nivel: 'alta', texto: 'La web no responde', desde: ahora.toISOString() });
+  assert.ok(primero[1].texto.length <= 400, 'el texto se recorta');
+  const despues = problemasAbiertos([{ clave: 'a', nivel: 'alta', texto: 'La web no responde hace 3 h' }, { clave: 'c', nivel: 'media', texto: 'nuevo' }], primero, A('13:00'));
+  assert.equal(despues[0].desde, ahora.toISOString(), 'el que sigue conserva su "desde"');
+  assert.equal(despues[1].desde, A('13:00').toISOString(), 'el nuevo empieza ahora');
+  assert.deepEqual(problemasAbiertos([], primero, ahora), [], 'lo que se arregló se va');
+});
+
+test('main del vigilante le pasa resumenDelDia: false a planDeAvisos (el informe diario es quien cuenta el día) y deja anotado lo abierto', () => {
+  const codigo = fs.readFileSync(new URL('../redes/vigilar.mjs', import.meta.url), 'utf8');
+  assert.match(codigo, /resumenDelDia: false,/);
+  assert.match(codigo, /estado\.abiertos = abiertos/);
+  assert.match(codigo, /'informe-diario\.yml': 'Informe diario'/);
 });

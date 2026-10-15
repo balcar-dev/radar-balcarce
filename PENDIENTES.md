@@ -17,6 +17,7 @@ frenan alguna etapa están en `docs/DECISIONES.md` → "Preguntas abiertas".
 
 | Qué | Quién |
 |---|---|
+| **Poner en marcha los informes diarios por mail** (regla 176; ya está el código, sin subir): después de subir los cambios, correr en Actions «Vigilante de Cloudflare» y «Reloj de Cloudflare», probar «Informe diario» a mano (primero con «enviar» apagado, después prendido) y confirmar que llegan a las 8:15 y a las 21:15 (`docs/11-OPERACION.md`, 12 bis) | Hernán o Andrés (los clics); Claude mira el primero |
 | **Etapa 1, fuentes**: reactivar las que se apagaron por bloqueo si andan (2261 Lobería, El Diario de Tandil, El Argentino Digital, Sendero Regional), sumar las verificadas, el motivo de cada fuente apagada en `FUENTES.md` y probar desde Cloudflare las que bloquean a GitHub | Claude; los dos aprueban |
 | **Elegir los modelos** de cada paso (con pruebas; `pruebas-modelos/`) y, con eso, crear las claves nuevas en cuentas de `radarbalcarce` | Claude prueba; los dos eligen; una persona pega las claves |
 | **Segunda tanda de limpieza**: revisar `prueba-whatsapp.yml`, `pruebas-otra-hora.yml`, `armado-vacio.yml`, los scripts que nadie llama y el panel de la PC; de a un grupo, con `npm test` y una corrida de "Actualizar la web" | Claude; los dos aprueban |

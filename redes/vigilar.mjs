@@ -26,7 +26,13 @@
 //     la mayoría de las notas tengan cuerpo. Ver docs/10-REGLAS-Y-PRUEBAS.md.
 //
 // Los problemas se avisan una vez cada seis horas (no un mensaje cada media
-// hora por lo mismo), y a las 21 sale el resumen del día.
+// hora por lo mismo). El resumen de las 21 (y las estadísticas, y el informe de
+// notas del día) YA NO salen de acá: desde el 15/10 (regla 176) los trae el
+// informe diario por mail (redes/informe-diario.mjs, 8:15 y 21:15); `main` le
+// pasa `resumenDelDia: false` a `planDeAvisos`. Lo que sigue avisando es lo que
+// no espera: problemas, noticias muy importantes, notas que esperan y lo que
+// salió en redes. Cada vuelta deja anotado lo que tiene abierto en
+// vigilancia.json (`abiertos`) para que el informe lo cuente.
 //
 // Desde el 25/09 también avisa lo que conviene saber aunque todo ande
 // (redes/avisos.mjs): notas que esperan a una persona, una noticia de
@@ -110,6 +116,7 @@ export const WORKFLOWS_VIGILADOS = {
   'pruebas-otra-hora.yml': 'Pruebas con otra hora',
   'auditoria-ia.yml': 'Auditoría IA',
   'pistas.yml': 'Pistas',
+  'informe-diario.yml': 'Informe diario',
 };
 
 export const LIMITES = {
@@ -466,6 +473,15 @@ export function problemasDelContrato(contrato, { redesActivas = true } = {}) {
   return lista;
 }
 
+/**
+ * Los problemas de ahora en la forma que se guarda en vigilancia.json (`abiertos`) para que el informe diario los lea: clave, nivel, texto y desde cuándo siguen.
+ * `desde` se conserva mientras el problema siga abierto (por su clave); el texto puede cambiar entre vueltas ("hace 2,5 horas"), la clave no.
+ */
+export function problemasAbiertos(problemas = [], previos = [], ahora = new Date()) {
+  const antes = new Map((previos ?? []).map((p) => [p.clave, p]));
+  return problemas.map((p) => ({ clave: p.clave, nivel: p.nivel, texto: recortar(p.texto, 400), desde: antes.get(p.clave)?.desde ?? ahora.toISOString() }));
+}
+
 /** Cuáles de los problemas hay que avisar ahora (no repetir lo ya avisado). */
 export function aAvisar(problemas, estado = {}, ahora = new Date()) {
   const previos = estado.avisos ?? {};
@@ -558,7 +574,7 @@ export function tocaResumen(ahora, estado = {}) {
 export function planDeAvisos({
   ahora, problemas = [], estado = {}, portada = {}, libro = {}, web = null,
   estadisticas = '', soloResumen = false, sitio = 'https://radarbalcarce.com', cierre = null, redesActivas = true,
-  historia = {},
+  historia = {}, resumenDelDia = true,
 }) {
   const secciones = [];
   const hechos = {};
@@ -587,7 +603,9 @@ export function planDeAvisos({
     hechos.pendientes = (e) => { e.pendientes = anotarPendientes(portada.pendientes, ahora); };
   }
 
-  if (soloResumen || tocaResumen(ahora, estado)) {
+  // Desde el 15/10 (regla 176) el resumen de las 21, las estadísticas y el informe de notas del día los trae el informe diario por mail
+  // (redes/informe-diario.mjs, 8:15 y 21:15): con `resumenDelDia: false` (lo que pasa main) no salen de acá, para no mandar lo mismo tres veces.
+  if (soloResumen || (resumenDelDia && tocaResumen(ahora, estado))) {
     secciones.push({
       clave: 'resumen',
       texto: mensajeDelResumen({
@@ -597,14 +615,14 @@ export function planDeAvisos({
     // El informe del día va detrás; si no entra en este mensaje, queda
     // pendiente para la corrida siguiente.
     hechos.resumen = (e) => { e.ultimoResumen = diaAR(ahora); e.informePendiente = diaAR(ahora); };
-  } else if (estadisticas) {
+  } else if (estadisticas && resumenDelDia) {
     secciones.push({ clave: 'estadisticas', texto: estadisticas });
   }
 
   // El informe del día en notas (27/09): detrás del resumen, una vez por día.
   // Si no entró junto al resumen, sale en la corrida siguiente.
   const hoy = diaAR(ahora);
-  const informeDeHoy = soloResumen || tocaResumen(ahora, estado) || estado.informePendiente === hoy;
+  const informeDeHoy = soloResumen || (resumenDelDia && (tocaResumen(ahora, estado) || estado.informePendiente === hoy));
   if (informeDeHoy) {
     const texto = textoInformeDelDia({ ahora, portada, libro, historia });
     if (texto) {
@@ -863,6 +881,7 @@ ${c.texto}`);
   const plan = planDeAvisos({
     ahora, problemas, estado, portada, libro, web: obs.web, estadisticas: textoStats, soloResumen: probarResumen, sitio, cierre,
     redesActivas, historia: leer(path.join(RAIZ, 'web', 'data', 'notas-por-dia.json'), { dias: {} }),
+    resumenDelDia: false,
   });
   const { texto, incluidas } = armarMensaje(plan.secciones);
   const afuera = plan.secciones.map((s) => s.clave).filter((c) => !incluidas.includes(c));
@@ -884,6 +903,11 @@ ${c.texto}`);
     if (r.ok) console.log(`  Aviso enviado por ${r.via === 'mail' ? 'mail' : 'WhatsApp (el mail no salió)'}.${r.via === 'whatsapp' ? ` Motivo del mail: ${sinSecretos(r.motivo, apikey, telefono)}` : ''}`);
     else console.log(`  No se pudo avisar: ${sinSecretos(r.motivo, apikey, telefono)}`);
     if (r.ok && !probarResumen) { plan.anotar(estado, incluidas); cambio = true; }
+  }
+  // Lo que está abierto ahora, para que el informe diario (redes/informe-diario.mjs) lo cuente sin volver a mirar todo. Sólo se reescribe si cambia.
+  if (!probarResumen && !sinAvisar) {
+    const abiertos = problemasAbiertos(problemas, estado.abiertos, ahora);
+    if (estado.abiertos === undefined || JSON.stringify(abiertos) !== JSON.stringify(estado.abiertos)) { estado.abiertos = abiertos; cambio = true; }
   }
   // Lo que se arregló deja de estar "avisado": si vuelve a fallar, se avisa de nuevo.
   if (!probarResumen) {

@@ -11,7 +11,8 @@
 //   · actualizar-falla   las últimas 3 corridas de "Actualizar la web" fallaron;
 //   · github-sin-lectura GitHub no deja leer sus corridas cuatro revisiones seguidas (media hora cada una).
 // Cada problema se avisa una vez y se repite cada 6 horas mientras siga; cuando se arregla, llega un mail de "recuperado" (una sola vez).
-// A las 21 (hora de Balcarce) sale un resumen del día.
+// A las 22 (hora de Balcarce) sale un resumen del día, pero SÓLO si el informe de la noche (redes/informe-diario.mjs, 21:15) no llegó: es su
+// respaldo, y vive afuera de GitHub (regla 176).
 //
 // Además de vigilar, es la puerta de salida de los avisos de GitHub: POST /avisar (redes/avisar-por-mail.mjs) manda por mail lo que antes iba por
 // WhatsApp (regla 173). Necesita: un KV (ESTADO), el envío de mails (AVISOS) y un secreto, VIGILANTE_TOKEN (para /probar-mail y /avisar). Opcional: GITHUB_TOKEN, de sólo lectura,
@@ -45,7 +46,7 @@ export const LIMITES = {
   fallasSeguidasEnGitHub: 3,   // corridas seguidas fallidas de "Actualizar la web"
   lecturasFallidasDeGitHub: 4, // revisiones seguidas sin poder leer a GitHub
   horasEntreAvisos: 6,
-  horaDelResumen: 21,
+  horaDelResumen: 22,          // el resumen de respaldo (el informe de la noche lo manda GitHub a las 21:15, redes/informe-diario.mjs)
   corridasQuePide: 10,
 };
 
@@ -411,8 +412,9 @@ export function armarRecuperado({ recuperadas, ahora }) {
   return { asunto, texto };
 }
 
-export function armarResumen({ ahora, web, github, problemasAbiertos = [], notas = null }) {
+export function armarResumen({ ahora, web, github, problemasAbiertos = [], notas = null, respaldo = false }) {
   const lineas = [`Resumen del ${diaLargoAR(ahora)} (hora de Balcarce)`, ''];
+  if (respaldo) lineas.push('El informe completo de la noche no llegó hoy (lo arma GitHub): este es el resumen de respaldo del vigilante, que mira desde afuera.', '');
   if (!web?.home?.ok) lineas.push(`La web: NO responde bien (${web?.home?.motivo ?? 'sin datos'}).`);
   else {
     const min = web.actualizado ? minutosDesde(web.actualizado, ahora) : null;
@@ -444,10 +446,16 @@ export function armarResumen({ ahora, web, github, problemasAbiertos = [], notas
   return { asunto, texto: lineas.join('\n') };
 }
 
-/** ¿Toca el resumen? A partir de las 21 (Balcarce), una vez por día. */
-export function resumenDebido(previo = {}, ahora) {
-  return horaAR(ahora) >= LIMITES.horaDelResumen && previo.resumenDia !== diaAR(ahora);
+/**
+ * ¿Toca el resumen de respaldo? A partir de las 22 (Balcarce), una vez por día, y sólo si el informe de la noche no llegó (`informeLlego`:
+ * el KV recuerda 6 horas la clave `informe-noche-AAAA-MM-DD` con la que GitHub lo manda por /avisar).
+ */
+export function resumenDebido(previo = {}, ahora, { informeLlego = false } = {}) {
+  return !informeLlego && horaAR(ahora) >= LIMITES.horaDelResumen && previo.resumenDia !== diaAR(ahora);
 }
+
+/** La clave con la que redes/informe-diario.mjs manda el informe de un momento ("manana" o "noche") de un día; el Worker la recuerda 6 horas. */
+export const claveDelInforme = (momento, dia) => `informe-${momento}-${dia}`;
 
 // ---------------------------------------------------------------- el mail
 
@@ -473,9 +481,37 @@ export function codificarAsunto(asunto) {
 }
 
 /** El mail completo en texto (lo que pide `new EmailMessage(de, para, crudo)`): encabezados, línea en blanco y cuerpo en base64. Líneas separadas con CRLF. */
-export function armarMime({ de = REMITENTE, nombre = NOMBRE_DEL_REMITENTE, para = DESTINO, asunto, texto, fecha = new Date(), id = crypto.randomUUID() }) {
+export function armarMime({ de = REMITENTE, nombre = NOMBRE_DEL_REMITENTE, para = DESTINO, asunto, texto, html = null, fecha = new Date(), id = crypto.randomUUID() }) {
   const dominio = de.split('@')[1];
-  const cuerpo = base64(bytes(String(texto).replace(/\r?\n/g, '\r\n'))).match(/.{1,76}/g)?.join('\r\n') ?? '';
+  const enBase64 = (s) => base64(bytes(String(s).replace(/\r?\n/g, '\r\n'))).match(/.{1,76}/g)?.join('\r\n') ?? '';
+  const cuerpo = enBase64(texto);
+  if (typeof html === 'string' && html.trim()) {
+    // Con html: multipart/alternative (el texto primero, el html después; el lector de mail muestra el último que sepa).
+    const limite = `rb_${String(id).replace(/[^A-Za-z0-9]/g, '')}`;
+    return [
+      `From: ${nombre} <${de}>`,
+      `To: ${para}`,
+      `Subject: ${codificarAsunto(asunto)}`,
+      `Date: ${fecha.toUTCString().replace('GMT', '+0000')}`,
+      `Message-ID: <${id}@${dominio}>`,
+      'MIME-Version: 1.0',
+      'Auto-Submitted: auto-generated',
+      `Content-Type: multipart/alternative; boundary="${limite}"`,
+      '',
+      `--${limite}`,
+      'Content-Type: text/plain; charset=UTF-8',
+      'Content-Transfer-Encoding: base64',
+      '',
+      cuerpo,
+      `--${limite}`,
+      'Content-Type: text/html; charset=UTF-8',
+      'Content-Transfer-Encoding: base64',
+      '',
+      enBase64(html),
+      `--${limite}--`,
+      '',
+    ].join('\r\n');
+  }
   return [
     `From: ${nombre} <${de}>`,
     `To: ${para}`,
@@ -493,10 +529,10 @@ export function armarMime({ de = REMITENTE, nombre = NOMBRE_DEL_REMITENTE, para 
 }
 
 /** El envío de verdad, por Email Workers. Se importa recién acá porque `cloudflare:email` sólo existe adentro de Cloudflare. */
-export async function enviarPorCloudflare(env, { asunto, texto, ahora = new Date() }) {
+export async function enviarPorCloudflare(env, { asunto, texto, html = null, ahora = new Date() }) {
   if (!env?.AVISOS) throw new Error('Falta el envío de mails (binding AVISOS, [[send_email]] en wrangler.toml).');
   const { EmailMessage } = await import('cloudflare:email');
-  await env.AVISOS.send(new EmailMessage(REMITENTE, DESTINO, armarMime({ asunto, texto, fecha: ahora })));
+  await env.AVISOS.send(new EmailMessage(REMITENTE, DESTINO, armarMime({ asunto, texto, html, fecha: ahora })));
 }
 
 // ---------------------------------------------------------------- una vuelta entera
@@ -517,14 +553,15 @@ export async function correr(env, ahora, deps = {}) {
   const { problemas, contadores } = evaluar({ ahora, web, github, contadores: previo.contadores });
   const { alertas, envios } = decidir({ previo, problemas, ahora });
 
-  // El resumen del día (a las 21): lleva las notas de hoy, que salen del feed.
+  // El resumen de respaldo (a las 22, sólo si el informe de la noche no llegó): lleva las notas de hoy, que salen del feed.
   let resumenDia = previo.resumenDia ?? null;
   let envioResumen = null;
-  if (resumenDebido(previo, ahora)) {
+  const informeLlego = Boolean(await env.ESTADO.get(`avisar-clave:${claveDelInforme('noche', diaAR(ahora))}`));
+  if (resumenDebido(previo, ahora, { informeLlego })) {
     let notas = null;
     const feed = await pedir(`${SITIO}/feed.xml`, { fetchFn });
     if (feed.r?.ok) { try { notas = notasDeHoy(await feed.r.text(), ahora); } catch { notas = null; } }
-    envioResumen = { tipo: 'resumen', claves: [], ...armarResumen({ ahora, web, github, problemasAbiertos: problemas, notas }) };
+    envioResumen = { tipo: 'resumen', claves: [], ...armarResumen({ ahora, web, github, problemasAbiertos: problemas, notas, respaldo: true }) };
     envios.push(envioResumen);
     resumenDia = diaAR(ahora);
   }
@@ -579,9 +616,10 @@ export function mismoTexto(a, b) {
 export const TOPES_DE_AVISAR = {
   maximoPorHora: 30,
   horasSinRepetirClave: 6,
-  bytesDelPedido: 20000,
+  bytesDelPedido: 100000,
   largoDelAsunto: 150,
   largoDelTexto: 8000,
+  largoDelHtml: 60000,       // un html más largo no se manda: el mail sale sólo con el texto
   largoDeLaClave: 100,
 };
 
@@ -593,7 +631,9 @@ export function asuntoDeAviso(asunto, nivel) {
 }
 
 /**
- * POST /avisar: manda por mail un aviso que armó GitHub. Cuerpo JSON { asunto, texto, clave?, nivel? }, encabezado x-token.
+ * POST /avisar: manda por mail un aviso que armó GitHub. Cuerpo JSON { asunto, texto, html?, clave?, nivel? }, encabezado x-token.
+ *   · `html` (opcional, desde el 15/10, informes diarios): si viene, el mail sale con las dos versiones (texto y html); si es más largo que
+ *     `largoDelHtml` se descarta y sale sólo el texto (la respuesta lo avisa con `sinHtml: true`); sin `html` todo es como siempre;
  *   · sin VIGILANTE_TOKEN cargado: 503; token incorrecto: 401 (igual que /probar-mail);
  *   · pedido demasiado grande: 413; JSON roto o sin asunto/texto: 400;
  *   · con `clave`, la misma clave no se manda otra vez en 6 horas (contesta ok con `repetido: true`: no es un error);
@@ -613,10 +653,11 @@ export async function recibirAviso(request, env, deps = {}) {
   let cuerpo = null;
   try { cuerpo = JSON.parse(crudo); } catch { cuerpo = null; }
   if (!cuerpo || typeof cuerpo !== 'object' || Array.isArray(cuerpo)) return json({ ok: false, error: 'El cuerpo tiene que ser un JSON.' }, 400);
-  const { asunto, texto, clave, nivel } = cuerpo;
+  const { asunto, texto, clave, nivel, html } = cuerpo;
   if (typeof asunto !== 'string' || !asunto.trim() || typeof texto !== 'string' || !texto.trim()) {
     return json({ ok: false, error: 'Faltan el asunto o el texto.' }, 400);
   }
+  if (html !== undefined && html !== null && typeof html !== 'string') return json({ ok: false, error: 'El html tiene que ser texto.' }, 400);
   const claveLimpia = typeof clave === 'string' && clave.trim() ? clave.trim().slice(0, TOPES_DE_AVISAR.largoDeLaClave) : null;
 
   if (env.ESTADO) {
@@ -628,14 +669,20 @@ export async function recibirAviso(request, env, deps = {}) {
   }
 
   const cola = `\n\n---\nAviso mandado desde GitHub${claveLimpia ? ` (clave: ${claveLimpia})` : ''}${typeof nivel === 'string' && nivel ? `, nivel: ${nivel.slice(0, 20)}` : ''}. Lo entrega el Worker "radar-balcarce-vigilante" de Cloudflare.`;
+  const hayHtml = typeof html === 'string' && html.trim() !== '';
+  const htmlDemasiadoLargo = hayHtml && html.length > TOPES_DE_AVISAR.largoDelHtml;
+  const htmlLimpio = hayHtml && !htmlDemasiadoLargo ? html.replace(/<script[\s\S]*?<\/script>/gi, '') : null;
+  const colaHtml = `<p style="font:12px Arial,sans-serif;color:#777;border-top:1px solid #ddd;padding-top:8px;margin-top:24px">${cola.replace(/^\n+---\n/, '').replace(/&/g, '&amp;').replace(/</g, '&lt;')}</p>`;
+  const mail = { asunto: asuntoDeAviso(asunto, nivel), texto: `${texto.slice(0, TOPES_DE_AVISAR.largoDelTexto)}${cola}` };
+  if (htmlLimpio) mail.html = /<\/body>/i.test(htmlLimpio) ? htmlLimpio.replace(/<\/body>/i, () => colaHtml + '</body>') : htmlLimpio + colaHtml;
   try {
-    await enviar({ asunto: asuntoDeAviso(asunto, nivel), texto: `${texto.slice(0, TOPES_DE_AVISAR.largoDelTexto)}${cola}` });
+    await enviar(mail);
   } catch (e) {
     return json({ ok: false, error: String(e?.message ?? e).slice(0, 200) }, 500);
   }
   // La clave se recuerda recién cuando el mail salió: si falló, el siguiente intento no queda tapado.
   if (env.ESTADO && claveLimpia) await env.ESTADO.put(`avisar-clave:${claveLimpia}`, ahora.toISOString(), { expirationTtl: TOPES_DE_AVISAR.horasSinRepetirClave * 3600 });
-  return json({ ok: true, para: DESTINO });
+  return json({ ok: true, para: DESTINO, ...(htmlDemasiadoLargo ? { sinHtml: true } : {}) });
 }
 
 /** GET /estado, GET /probar-mail y POST /avisar. Separada del `export default` para probarla sin el runtime. */

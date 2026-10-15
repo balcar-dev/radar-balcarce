@@ -88,10 +88,11 @@ Sondear búsqueda y Sondear Groq; el historial de git los guarda.)
 |---|---|---|---|---|---|
 | **Actualizar la web** (`actualizar.yml`) | El reloj de Cloudflare a los :00 y :30; respaldo `schedule` a los :07 y :37; a mano; "Actualizar la web ahora" del celular | `npm ci` (raíz y `web/`), `npm test`, la caché `.cache` (la memoria de 36 horas del cruce y las notas enteras para el celular), `node web/scripts/generar-datos.mjs`, `npm run build` con `SITIO`, `node web/scripts/revisar-seo.mjs` | Las cuatro claves de IA | En `web/data/`: `portada`, `archivo`, `agenda`, `intentos-ia`, `dolar-historia`, `f1`, `fichas`, `notas-por-dia`, `banco-fotos`, `esperando-cuerpo`, `vistas`, `retiradas`, `celular-pendientes` y `fusionadas` (`.json`); y `web/public/fotos-notas/`. Mensaje "Datos de la portada · dd/mm hh:mm" | 20 min |
 | **Cloudflare Pages** (`cloudflare-deploy.yml`) | Al terminar **bien** "Actualizar la web"; a mano | `npm ci` y `npm run build` en `web/`, después `npx wrangler@4.139.0 pages deploy out --branch=main` | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable opcional `CLOUDFLARE_PROJECT` (si falta, `radar-balcarce`) | Nada | 15 min |
-| **Redes** (`redes.yml`) | El reloj de Cloudflare (acción `reloj`, a los :05, :35 y :45); al terminar "Actualizar la web"; a mano: `reloj`, `verificar` o `facebook` | `redes/publicar.mjs --facebook`; `redes/reloj.mjs`; si toca: `npm ci`, `reels/plan.mjs --generar --solo=…`, `redes/publicar.mjs --piezas`; `redes/publicar.mjs --enlaces` | `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | `web/data/redes.json` ("Redes: libro de publicaciones · …"); los videos quedan 3 días como artefacto | 25 min |
-| **Piezas** (`piezas.yml`) | Sólo a mano: `solo` (nombres separados por coma; **vacío no arma nada**), `todas` (armar todas las del día, a propósito), `publicar` (sí/no), `destino` (ambas, instagram, facebook) | `npm ci`, `reels/plan.mjs --generar [--solo=…]`; si `publicar`: `redes/publicar.mjs --piezas --sin-horario --destino=…` | `GEMINI_API_KEY_REDES`, `META_TOKEN`; `REDES_ACTIVAS` | `web/data/redes.json` si publicó; artefacto "piezas" 7 días (mp4, mp3, png, manifiesto) | 30 min |
+| **Redes** (`redes.yml`) | El reloj de Cloudflare (acción `reloj`, a los :05, :35 y :45); al terminar "Actualizar la web"; a mano: `reloj`, `verificar` o `facebook` | `redes/publicar.mjs --facebook`; `redes/reloj.mjs`; si toca: `npm ci`, `reels/plan.mjs --generar --solo=…`, `redes/publicar.mjs --piezas`; `redes/publicar.mjs --enlaces` | `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | `web/data/redes.json` ("Redes: libro de publicaciones · …"); los videos quedan 3 días como artefacto; si hay `R2_PIEZAS`, al final (con `continue-on-error`) `redes/archivar-piezas.mjs` los copia a R2 para siempre | 25 min |
+| **Piezas** (`piezas.yml`) | Sólo a mano: `solo` (nombres separados por coma; **vacío no arma nada**), `todas` (armar todas las del día, a propósito), `publicar` (sí/no), `destino` (ambas, instagram, facebook) | `npm ci`, `reels/plan.mjs --generar [--solo=…]`; si `publicar`: `redes/publicar.mjs --piezas --sin-horario --destino=…` | `GEMINI_API_KEY_REDES`, `META_TOKEN`; `REDES_ACTIVAS` | `web/data/redes.json` si publicó; artefacto "piezas" 7 días (mp4, mp3, png, manifiesto); si hay `R2_PIEZAS`, al final los copia a R2 (`continue-on-error`) | 30 min |
 | **Panel del celular** (`panel.yml`) | Lo dispara el panel del celular con la llave de quien lo usa ("Escribir con IA", "Reescribir con IA"): `accion` (`escribir`), `id`, `pedido` (opcional; queda a la vista), `marca` (para que el celular encuentre su corrida) | Trae la caché `.cache` (`celular-notas.json`) y corre `node panel/celular.mjs escribir --id=… --pedido=…` | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_REDES`, `GEMINI_API_KEY_CLASIFICACION` | `web/data/celular-borradores.json`, cifrado ("Panel del celular: borrador · …") | 8 min |
 | **Vigilancia** (`vigilancia.yml`) | El reloj de Cloudflare a los :00 y :30; respaldo `schedule` cada 3 horas (a los :17 UTC); a mano: `vigilar`, `probar-resumen`, `probar-cierre` | `node redes/vigilar.mjs` | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN`, las cuatro claves de IA (sólo para preguntar si andan), `GITHUB_TOKEN` (automático); variable `REDES_ACTIVAS` | `web/data/vigilancia.json` y `web/data/estadisticas.json` (no en los modos de prueba) | 10 min |
+| **Informe diario** (`informe-diario.yml`) | El reloj de Cloudflare a las 8:15 y 21:15 de Balcarce (`momento`: `manana` o `noche`); respaldo `schedule` a las 8:45 y 21:45; a mano: `momento` y `enviar` (apagado = simulacro en el registro) | `node redes/informe-diario.mjs --momento=… --enviar` | `VIGILANTE_TOKEN`, `GITHUB_TOKEN` (automático, sólo lectura), variable `REDES_ACTIVAS` | Nada | 10 min |
 | **Auditoría** (`auditoria.yml`) | Lunes 12:00 UTC (9:00 en Balcarce); a mano | `redes/auditar.mjs`; `redes/auditar-redes.mjs --semana` (si falla, sigue) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `META_TOKEN` | `web/data/auditoria.json` | El de GitHub (6 h) |
 | **Auditar redes** (`auditar-redes.yml`) | A mano (opcional: `desde`, AAAA-MM-DD) | `redes/auditar-redes.mjs` cuatro veces: hoy, ayer, la semana y "crudo" | `META_TOKEN` | Nada | 10 min |
 | **Crear voces** (`crear-voces.yml`) | A mano, con un `modo` | `npm ci`, `reels/crear-voces.mjs`. **`crear`**: seis candidatos nuevos, cada uno con un audio de prueba; **`recrear`**: dos versiones nuevas de la locutora y del locutor aprobados (por ejemplo, para una clave de otro proyecto de Google), cada una con su audio; **`listar`**: la biblioteca de voces de Google; **`borrar`**: quita una voz propia. Los modos `dialogo` fueron pruebas de una charla entre las dos voces, descartadas porque sonaban falsas | `GEMINI_API_KEY_REDES` | Nada (los audios quedan 7 días como artefacto) | 30 min |
@@ -101,7 +102,7 @@ Sondear búsqueda y Sondear Groq; el historial de git los guarda.)
 | **Prueba de WhatsApp** (`prueba-whatsapp.yml`) | A mano | `redes/probar-whatsapp.mjs` (manda un mensaje y muestra la respuesta de CallMeBot, sin la clave ni el teléfono) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | Nada | 5 min |
 | **Auditoría IA** (`auditoria-ia.yml`) | Cada hora, a los :41 (`schedule`); a mano (`simular`) | `redes/auditar-notas.mjs` (lee las notas nuevas con Groq y avisa lo que esté mal; corrige sola sólo la ortografía chica y segura) | `GROQ_API_KEY`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/auditoria-ia.json` (cifrado) y `web/data/correcciones-auditoria.json` | 12 min |
 | **Pistas** (`pistas.yml`) | Cada 3 horas, a los :23 (`schedule`); el botón "Volver a mirar" del panel del celular; a mano (`id`, `marca`, `simular`) | `panel/revisar-pistas.mjs` (vuelve a mirar las pistas abiertas y avisa si un medio las cubrió) | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_CLASIFICACION`, `TAVILY_API_KEY`, `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | `web/data/pistas.json` y `web/data/notas-de-pistas.json` | 10 min |
-| **Fijar piezas** (`fijar-piezas.yml`) | A mano (`piezas`, `desde`, `dias`) | `reels/plan.mjs --generar`, `reels/fijas.mjs`: arma de antemano piezas con voz y las guarda para reutilizarlas unos días | `GEMINI_API_KEY_REDES` | `reels/fijas/` | 30 min |
+| **Fijar piezas** (`fijar-piezas.yml`) | A mano (`piezas`, `desde`, `dias`) | `reels/plan.mjs --generar`, `reels/fijas.mjs`: arma de antemano piezas con voz y las guarda para reutilizarlas unos días | `GEMINI_API_KEY_REDES` | `reels/fijas/` (y, si hay `R2_PIEZAS`, una copia a R2 de lo armado, con `continue-on-error`) | 30 min |
 | **Armado con datos vacíos** (`armado-vacio.yml`) | Al subir cambios al código de la web; lunes 9:17 UTC | `web/scripts/armado-vacio.mjs`: arma el sitio con datos vacíos o a medias, para descubrir un código que rompe esos casos antes de que congele la web | Ninguno | Nada | 25 min |
 | **Pruebas con otra hora** (`pruebas-otra-hora.yml`) | Lunes 8:43 UTC; a mano | Corre las pruebas como si fuera otra hora y otra fecha (`pruebas/hora-falsa.mjs`) | Ninguno | Nada | 40 min |
 | **Respaldo** (`respaldo.yml`) | Domingos 6:17 UTC (3:17 en Balcarce); a mano | Arma un paquete de git con todo el historial y una copia de datos y fotos (artefacto de 90 días); si hay GitLab (`GITLAB_TOKEN`, variable `GITLAB_REPO`) sube un espejo, y si hay R2 (variable `R2_RESPALDOS`) sube el paquete | `GITLAB_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variables `GITLAB_REPO`, `R2_RESPALDOS` | Nada | 40 min |
@@ -159,8 +160,12 @@ Balcarce).**
 
 - **Qué pide y cuándo** (las horas del Worker son UTC, pero los minutos son los
   mismos que en Balcarce): a los **:00 y :30**, "Actualizar la web" y
-  "Vigilancia"; a los **:05, :35 y :45**, "Redes" con la acción `reloj`. Lo
-  dicen `worker.mjs` (`trabajosDelMinuto`) y `wrangler.toml`.
+  "Vigilancia"; a los **:05, :35 y :45**, "Redes" con la acción `reloj`; y desde
+  el 15/10, a las **8:15 y 21:15 de Balcarce** (11:15 y 0:15 UTC, una sola
+  expresión `15 0,11 * * *`), "Informe diario" con `momento` = `manana` o `noche`.
+  Lo dicen `worker.mjs` (`trabajosDelMinuto(minuto, horaUtc)`) y `wrangler.toml`.
+  Después de tocarlo hay que correr «Reloj de Cloudflare»; mientras no se corra,
+  el informe sale igual por el `schedule` de respaldo (con media hora de atraso).
 - **La llave:** un token de GitHub de grano fino, **sólo para este
   repositorio**, con «Actions: lectura y escritura». Está guardado en el
   secreto de GitHub **`RELOJ_GITHUB_TOKEN`**; el workflow «Reloj de Cloudflare»
@@ -191,8 +196,8 @@ Un segundo Worker, **`radar-balcarce-vigilante`** (`infra/vigilante-cloudflare/`
 - **Qué mira:** que la portada conteste 200 en 15 segundos (aviso a la segunda revisión seguida), que la web se haya armado hace menos de
   3 horas (6 de noche; se lee del `sitemap.xml`) y que "Actualizar la web" tenga una corrida buena de menos de 3 horas y no lleve 3 fallas
   seguidas (API pública de GitHub).
-- **Anti-spam:** un problema se avisa una vez y se repite cada 6 horas; al arreglarse llega un solo mail de «Se arregló». A las 21 sale el
-  resumen del día. La memoria es un KV (`ESTADO`).
+- **Anti-spam:** un problema se avisa una vez y se repite cada 6 horas; al arreglarse llega un solo mail de «Se arregló». A las **22** sale un
+  resumen mínimo del día, **sólo si el informe de la noche (21:15, abajo) no llegó**: es su respaldo y vive afuera de GitHub. La memoria es un KV (`ESTADO`).
 - **`GET /estado`** muestra la última revisión; **`GET /probar-mail`** (encabezado `x-token`, secreto `VIGILANTE_TOKEN`) manda un mail de prueba.
 - **Lo que hace una persona la primera vez** (permiso de KV en el token de Cloudflare, mirar que `radarbalcarce@gmail.com` esté *Verified* en
   Email Routing, cargar `VIGILANTE_TOKEN`, correr el workflow y probar el mail): paso a paso, con enlaces, en
@@ -205,6 +210,10 @@ Un segundo Worker, **`radar-balcarce-vigilante`** (`infra/vigilante-cloudflare/`
   `avisar`) y **WhatsApp queda de respaldo**: sólo se prueba si el mail no salió o si el workflow no tiene `VIGILANTE_TOKEN`. Los workflows
   `vigilancia.yml`, `auditoria.yml`, `auditoria-ia.yml` y `pistas.yml` pasan `VIGILANTE_TOKEN` (secreto de GitHub, el mismo del Worker). Después de
   tocar el Worker hay que volver a correr «Vigilante de Cloudflare».
+- **Informes diarios (regla 176):** `POST /avisar` acepta además un `html` opcional (el mail sale con texto y formato; si pasa de 60.000 caracteres
+  se descarta y sale el texto). El informe de las 8:15 y el de las 21:15 (`redes/informe-diario.mjs`, workflow «Informe diario») usan la clave
+  `informe-<momento>-<día>`: el Worker la recuerda 6 horas, así que si llegan dos disparos (el reloj y el respaldo) sale un solo mail. Esa misma clave
+  es la que mira el resumen de las 22 para saber si el informe de la noche llegó.
 
 ### cron-job.org: el despertador anterior (pausado)
 
@@ -365,6 +374,7 @@ Qué workflow usa cada uno está en la tabla de los workflows.
 | `REDES_ACTIVAS` | Variable | El interruptor de las redes (`07-REDES`) |
 | `RELOJ_GITHUB_TOKEN` | Secreto | El token de GitHub (de grano fino, sólo este repositorio, Actions de lectura y escritura) con el que el reloj de Cloudflare despierta a los workflows; lo carga en el Worker el workflow «Reloj de Cloudflare» |
 | `TAVILY_API_KEY` | Secreto | La búsqueda con texto de las Pistas (`ingesta/busqueda.mjs`; workflow «Pistas») |
+| `R2_PIEZAS` | Variable opcional | El depósito de Cloudflare R2 donde "Redes", "Piezas" y "Fijar piezas" archivan los videos, audios, subtítulos y placas que arman (`redes/archivar-piezas.mjs`; recomendado `radar-piezas`, o `si` para ese nombre; el script lo crea si falta; usa `CLOUDFLARE_API_TOKEN` con *Workers R2 Storage: Edit* y `CLOUDFLARE_ACCOUNT_ID`). Sin ella, cada corrida dice «sin archivo de piezas» y sigue. Qué guarda, cuánto pesa y cuesta, cómo bajar una pieza: `docs/redes/ARCHIVO-DE-PIEZAS.md` |
 | `CLOUDFLARE_PROJECT` | Variable opcional | Sin ella se usa `radar-balcarce`, el nombre real del proyecto de Pages |
 
 **El panel del celular no necesita ningún secreto**: usa la llave de GitHub de

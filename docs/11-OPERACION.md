@@ -68,7 +68,7 @@ el reloj de Cloudflare, GitHub Actions y el interruptor de las redes.
 
 | Cuándo | Qué | Tiempo |
 |---|---|---|
-| **Todos los días, a las 21** | Leer el WhatsApp del resumen. "✅ todo bien" = nada que hacer. Si no llegó, ver "El WhatsApp no llega" | 1 minuto |
+| **Todos los días, a las 8:15 y a las 21:15** | Leer el **informe por mail** (asunto: «Informe de la mañana…» / «Informe de la noche…»). Si abajo de «Lo que requiere tu atención» dice «Nada», no hay nada que hacer. Si no llegó, ver "12 bis" | 2 minutos |
 | **Cuando llega un WhatsApp de notas esperando** (cada 3 horas como mucho) | Decidirlas en el panel del celular, pestaña **Esperan** (ver "0. El panel del celular") | Unos minutos |
 | **Cuando llega un WhatsApp de problema** | Seguir lo que dice; si no se entiende, "Si algo dejó de salir" | — |
 | **Los lunes** | Mirar que la **Auditoría** haya corrido (Actions → Auditoría). Corrió por primera vez el 28/09; si un lunes no corre, correrla a mano (Run workflow) | 1 minuto |
@@ -412,6 +412,21 @@ paga".
    corriendo (Actions) y que el reloj de Cloudflare la esté despertando. El
    registro de cada corrida de Vigilancia dice qué encontró y si mandó el
    mensaje.
+
+## 12 bis. Los informes por mail (8:15 y 21:15)
+
+Desde el 15/10/2026 (regla 176) llegan **dos mails por día** a `radarbalcarce@gmail.com`, del «Vigilante de Radar Balcarce»:
+
+- **Informe de la mañana (8:15):** cómo cerró ayer (notas, visitas, redes) y lo que quedó esperando.
+- **Informe de la noche (21:15):** cómo viene hoy, hasta ese momento.
+
+El asunto trae el día, cuántas notas y cuántas visitas, y si hay algo para mirar («todo en orden», «2 cosas para mirar», «1 problema para atender»). Adentro, **arriba de todo** está «Lo que requiere tu atención» (🔴 urgente, 🟡 para mirar, ℹ️ para saber) y después: qué se publicó (con las tres notas principales), qué espera a una persona y por qué, lo que salió en redes (con enlaces) y lo que falló, las visitas y de dónde llegaron, y la salud del sistema (web, fuentes caídas, vencimientos, tope de notas, IA y su costo, cupo de voz).
+
+- **Dice cuando no sabe.** Si Cloudflare no dio una lectura confiable de las visitas, el informe escribe «sin lectura confiable» (no «0 visitas»); un día que no terminó dice «hasta las 21:00».
+- **Probarlo sin mandarlo:** `node redes/informe-diario.mjs --momento=noche` en la PC (o Actions → **Informe diario** → Run workflow con «enviar» apagado: se ve en el registro). `--html=informe.html` guarda la versión con formato para abrirla en el navegador; `--sin-red` no consulta GitHub.
+- **Mandarlo a mano:** Actions → **Informe diario** → Run workflow → elegir «manana» o «noche» (con «enviar» prendido). Si ya salió ese mismo informe hace menos de 6 horas, el Worker no lo repite.
+- **Si no llegó:** (1) mirar Spam; (2) Actions → Informe diario: ¿corrió? Si no, mirar el Worker `radar-balcarce-reloj` (¿se subió con el horario nuevo? correr «Reloj de Cloudflare»); el `schedule` de respaldo lo manda a las 8:45 / 21:45; (3) si corrió y quedó en rojo, el registro dice por qué (casi siempre `VIGILANTE_TOKEN`); (4) a las 22 el Worker del vigilante manda un resumen que dice «el informe completo de la noche no llegó».
+- **Después de subir los cambios** (primera vez): correr «Vigilante de Cloudflare» (para que acepte el formato y mande el resumen de las 22) y «Reloj de Cloudflare» (para el horario nuevo).
 
 ## 13. Cargar un aviso publicitario
 

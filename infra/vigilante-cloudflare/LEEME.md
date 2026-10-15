@@ -15,7 +15,7 @@ Cada media hora (a los **:12 y :42**, para no pisarse con el reloj, que despiert
 | Las corridas de «Actualizar la web» (API pública de GitHub, sin llave) | la última corrida buena tiene más de 3 horas (`actualizar-vieja`) o las últimas 3 fallaron (`actualizar-falla`); no se puede leer a GitHub cuatro veces seguidas (`github-sin-lectura`) |
 
 - Un problema **se avisa una vez y se repite cada 6 horas** mientras siga. Cuando se arregla llega **un mail de «Se arregló»**, una sola vez.
-- A las **21** (Balcarce) llega un **resumen del día**: si la web responde, última actualización, notas de hoy (se cuentan en el feed), la última corrida buena y los problemas abiertos.
+- A las **22** (Balcarce) llega un **resumen mínimo del día** (si la web responde, última actualización, notas de hoy —se cuentan en el feed—, la última corrida buena y los problemas abiertos), **pero sólo si el informe de la noche no llegó**: desde el 15/10 (regla 176) el informe de las 21:15 (`redes/informe-diario.mjs`, lo arma GitHub) es el resumen de verdad, y éste es su respaldo, que vive afuera de GitHub. Dice «El informe completo de la noche no llegó hoy».
 - Si un mail no sale (por ejemplo, Cloudflare lo rechaza), ese aviso **no se da por hecho**: se reintenta en la vuelta siguiente y la ejecución figura como fallida en el panel del Worker.
 - Los mails salen de `vigilante@radarbalcarce.com` y llegan a `radarbalcarce@gmail.com`. Es **texto simple**, en castellano, con los enlaces de dónde mirar.
 
@@ -25,7 +25,7 @@ Dos direcciones del Worker (tiene una dirección `*.workers.dev`, que se ve en C
 
 - `GET /estado`: un JSON con la última revisión (sin ningún secreto) y los problemas abiertos.
 - `GET /probar-mail`, con el encabezado `x-token: <VIGILANTE_TOKEN>`: manda un mail de prueba. **El token va sólo en el encabezado, nunca en la dirección.** Una prueba por minuto como mucho.
-- `POST /avisar` (desde el 15/10, regla 173), con el mismo encabezado `x-token`: **la puerta de salida de los avisos de GitHub**. El vigilante de siempre (`redes/vigilar.mjs`), la auditoría semanal, la auditoría con IA y las pistas mandan por acá lo que antes iba por WhatsApp (`redes/avisar-por-mail.mjs`, secreto `VIGILANTE_TOKEN` en GitHub); si el mail no sale, recién ahí prueban WhatsApp. Cuerpo JSON `{ "asunto", "texto", "clave"?, "nivel"? }`: con `clave`, la misma clave no se repite en 6 horas; como mucho 30 mails por hora; el pedido, hasta 20 KB. **Después de subir esta versión hay que correr de nuevo el workflow «Vigilante de Cloudflare»**: sin eso el Worker viejo no conoce `/avisar` y los avisos siguen cayendo a WhatsApp.
+- `POST /avisar` (desde el 15/10, regla 173), con el mismo encabezado `x-token`: **la puerta de salida de los avisos de GitHub**. El vigilante de siempre (`redes/vigilar.mjs`), la auditoría semanal, la auditoría con IA y las pistas mandan por acá lo que antes iba por WhatsApp (`redes/avisar-por-mail.mjs`, secreto `VIGILANTE_TOKEN` en GitHub); si el mail no sale, recién ahí prueban WhatsApp. Cuerpo JSON `{ "asunto", "texto", "html"?, "clave"?, "nivel"? }`: con `clave`, la misma clave no se repite en 6 horas; como mucho 30 mails por hora; el pedido, hasta 100 KB. El `html` es opcional (desde el 15/10, lo usan los informes diarios): si viene, el mail sale con las dos versiones (texto y formato) y con el pie de siempre; si pasa de 60.000 caracteres se descarta, sale sólo el texto y la respuesta trae `"sinHtml": true`; si no es texto, 400. **Después de subir esta versión hay que correr de nuevo el workflow «Vigilante de Cloudflare»**: sin eso el Worker viejo no conoce `/avisar` y los avisos siguen cayendo a WhatsApp.
 
 ## Qué hace una persona, una sola vez (los clics)
 
@@ -49,7 +49,7 @@ Después de esto, **CallMeBot ya no hace falta para los avisos de que la web fal
 - **El workflow falla en «Buscar (o crear) la memoria»**: al token de Cloudflare le falta *Workers KV Storage: Edit* (paso 1).
 - **`/probar-mail` devuelve un error de envío**: casi siempre es que `radarbalcarce@gmail.com` no figura como *Verified* en Email Routing, o que Email Routing no está activado en el dominio (paso 2).
 - **No llegan mails pero `/estado` muestra problemas**: mirar Cloudflare → Workers → radar-balcarce-vigilante → ejecuciones fallidas; el error dice por qué no salió el mail.
-- **Quién vigila al vigilante**: la ejecución fallida figura en el panel de Cloudflare y el resumen de las 21 tiene que llegar todos los días; si un día no llega, mirar el Worker.
+- **Quién vigila al vigilante**: la ejecución fallida figura en el panel de Cloudflare y el informe de las 21:15 tiene que llegar todos los días (o, si no, el resumen de las 22 que dice «no llegó»); si un día no llega ninguno, mirar el Worker.
 - Para cambiar cuándo corre o los umbrales: `wrangler.toml` (`crons`) y `LIMITES` en `worker.mjs`, y volver a correr el workflow «Vigilante de Cloudflare».
 
 Sin dependencias; probado en `pruebas/vigilante-cloudflare.test.mjs`, sin red. Lo que no se puede probar sin Cloudflare: el envío real del mail (`enviarPorCloudflare`) y el KV real; por eso existe `/probar-mail`.

@@ -11,10 +11,17 @@ export const RAMA = 'main';
  * Qué workflows pedir según el minuto de la hora (Balcarce y UTC tienen los mismos minutos):
  *  - :00 y :30      → Actualizar la web y Vigilancia
  *  - :05, :35 y :45 → el reloj de Redes (acción "reloj")
+ *  - :15 de las 11 UTC (8:15 en Balcarce) y de las 0 UTC (21:15) → el informe diario por mail (redes/informe-diario.mjs): el de la mañana y el de la noche.
+ *    Sólo si se pasa la hora UTC (el segundo parámetro): sin ella, el minuto 15 no despierta nada, como siempre.
  */
-export function trabajosDelMinuto(minuto) {
+export function trabajosDelMinuto(minuto, horaUtc = null) {
   const m = Number(minuto);
   const lista = [];
+  if (m === 15 && horaUtc !== null && horaUtc !== undefined) {
+    const h = Number(horaUtc);
+    if (h === 11) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'manana' } });
+    if (h === 0) lista.push({ archivo: 'informe-diario.yml', inputs: { momento: 'noche' } });
+  }
   if (m === 0 || m === 30) {
     lista.push({ archivo: 'actualizar.yml' }, { archivo: 'vigilancia.yml' });
   }
@@ -41,9 +48,10 @@ export async function despertar({ archivo, inputs }, { token, fetchFn = fetch })
 export default {
   async scheduled(evento, env) {
     if (!env.GITHUB_TOKEN) throw new Error('Falta el secreto GITHUB_TOKEN del reloj.');
-    const minuto = new Date(evento.scheduledTime).getUTCMinutes();
+    const cuando = new Date(evento.scheduledTime);
+    const minuto = cuando.getUTCMinutes();
     const resultados = [];
-    for (const t of trabajosDelMinuto(minuto)) resultados.push(await despertar(t, { token: env.GITHUB_TOKEN }));
+    for (const t of trabajosDelMinuto(minuto, cuando.getUTCHours())) resultados.push(await despertar(t, { token: env.GITHUB_TOKEN }));
     const fallas = resultados.filter((x) => !x.ok);
     console.log(JSON.stringify({ minuto, resultados }));
     // Un error hace que Cloudflare marque la ejecución como fallida (se ve en el panel del Worker).

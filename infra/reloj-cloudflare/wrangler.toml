@@ -4,4 +4,5 @@ main = "worker.mjs"
 compatibility_date = "2026-10-01"
 
 [triggers]
-crons = ["0,30 * * * *", "5,35,45 * * * *"]
+# "15 0,11 * * *": el informe diario por mail, a las 8:15 y a las 21:15 de Balcarce (11:15 y 0:15 UTC). Es UNA sola expresión para no gastar triggers de la cuenta.
+crons = ["0,30 * * * *", "5,35,45 * * * *", "15 0,11 * * *"]

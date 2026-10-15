@@ -211,3 +211,17 @@ test('el módulo no importa nada de afuera de Node (sólo whatsapp.mjs) y el có
   assert.deepEqual([...s.matchAll(/^import .* from '([^']+)'/gm)].map((m) => m[1]), ['./whatsapp.mjs']);
   assert.ok(fs.existsSync(new URL('../redes/whatsapp.mjs', import.meta.url)));
 });
+
+// Regla 176 (15/10/2026): los informes diarios mandan también una versión con formato (html) por el mismo camino.
+test('avisarPorMail: el html va en el cuerpo si se da (y sólo entonces); el token sigue sólo en el encabezado', async () => {
+  const f = fetchQue(200, { ok: true });
+  const r = await avisarPorMail({ asunto: 'Informe de la noche', texto: 'plano', html: '<p>con formato</p>', clave: 'informe-noche-2026-10-15', nivel: 'info' }, { fetchFn: f, env: ENV });
+  assert.deepEqual(r, { ok: true });
+  assert.deepEqual(f.pedidos[0].json, { asunto: 'Informe de la noche', texto: 'plano', html: '<p>con formato</p>', clave: 'informe-noche-2026-10-15', nivel: 'info' });
+  assert.ok(!f.pedidos[0].body.includes(TOKEN));
+  const g = fetchQue(200, { ok: true });
+  await avisarPorMail({ asunto: 'a', texto: 'b', html: '   ' }, { fetchFn: g, env: ENV });
+  assert.ok(!('html' in g.pedidos[0].json), 'un html vacío no se manda');
+  const h = fetchQue(200, { ok: true, repetido: true });
+  assert.deepEqual(await avisarPorMail({ asunto: 'a', texto: 'b', clave: 'k' }, { fetchFn: h, env: ENV }), { ok: true, repetido: true });
+});

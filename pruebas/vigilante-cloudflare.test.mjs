@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import worker, {
   ultimaActualizacion, notasDeHoy, esDeDia, limiteDeHorasSinActualizar, formatoEdad, evaluar, decidir, deshacerLosFallidos, resumenDeCorridas,
   parsearCorridas, armarMime, codificarAsunto, enviarPorCloudflare, correr, atender, resumenDebido, revisarWeb, revisarGitHub, LIMITES, DESTINO, REMITENTE,
-  asuntoDeAviso, TOPES_DE_AVISAR,
+  asuntoDeAviso, TOPES_DE_AVISAR, claveDelInforme,
 } from '../infra/vigilante-cloudflare/worker.mjs';
 
 const leer = (r) => fs.readFileSync(new URL(`../${r}`, import.meta.url), 'utf8');
@@ -213,11 +213,14 @@ test('si el mail no salió, el problema sigue "sin avisar" y se reintenta; el de
   assert.deepEqual(Object.keys(deshacerLosFallidos({ previo, alertas: rec.alertas, envios: rec.envios, fallidos: rec.envios })), ['a']);
 });
 
-test('el resumen toca desde las 21 de Balcarce, una vez por día', () => {
-  assert.equal(resumenDebido({}, z('2026-10-16T00:12:00Z')), true); // 21:12
+test('el resumen (ahora, de respaldo del informe de la noche) toca desde las 22 de Balcarce, una vez por día, y sólo si el informe no llegó', () => {
+  assert.equal(resumenDebido({}, z('2026-10-16T01:12:00Z')), true); // 22:12
+  assert.equal(resumenDebido({}, z('2026-10-16T00:12:00Z')), false); // 21:12: el informe de la noche sale a las 21:15
   assert.equal(resumenDebido({}, z('2026-10-15T23:42:00Z')), false); // 20:42
-  assert.equal(resumenDebido({ resumenDia: '2026-10-15' }, z('2026-10-16T00:42:00Z')), false);
-  assert.equal(resumenDebido({ resumenDia: '2026-10-14' }, z('2026-10-16T00:42:00Z')), true);
+  assert.equal(resumenDebido({ resumenDia: '2026-10-15' }, z('2026-10-16T01:42:00Z')), false);
+  assert.equal(resumenDebido({ resumenDia: '2026-10-14' }, z('2026-10-16T01:42:00Z')), true);
+  assert.equal(resumenDebido({}, z('2026-10-16T01:12:00Z'), { informeLlego: true }), false, 'si llegó el informe de la noche, el resumen sobra');
+  assert.equal(claveDelInforme('noche', '2026-10-15'), 'informe-noche-2026-10-15');
 });
 
 // ---------------------------------------------------------------- una vuelta entera con un KV y un fetch de mentira
@@ -294,20 +297,93 @@ test('si el mail falla, la vuelta no se pierde: queda guardado que NO se avisó 
   assert.equal(enviados.length, 1);
 });
 
-test('el resumen de las 21 sale una sola vez por día, con las notas de hoy y la última corrida buena', async () => {
+test('el resumen de respaldo sale a las 22, una sola vez por día, con las notas de hoy y la última corrida buena, y dice que es el respaldo', async () => {
   const env = { ESTADO: kvFalso() };
   const enviados = [];
-  const fn = fetchFalso({ runs: [run('success', '2026-10-16T00:05:00Z')], sitemap: '<lastmod>2026-10-16T00:00:00.000Z</lastmod>', feed: '<lastBuildDate>Fri, 16 Oct 2026 00:00:00 GMT</lastBuildDate><pubDate>Thu, 15 Oct 2026 21:00:00 GMT</pubDate><pubDate>Thu, 15 Oct 2026 14:00:00 GMT</pubDate><pubDate>Thu, 15 Oct 2026 02:00:00 GMT</pubDate>' });
+  const fn = fetchFalso({ runs: [run('success', '2026-10-16T01:05:00Z')], sitemap: '<lastmod>2026-10-16T01:00:00.000Z</lastmod>', feed: '<lastBuildDate>Fri, 16 Oct 2026 01:00:00 GMT</lastBuildDate><pubDate>Thu, 15 Oct 2026 21:00:00 GMT</pubDate><pubDate>Thu, 15 Oct 2026 14:00:00 GMT</pubDate><pubDate>Thu, 15 Oct 2026 02:00:00 GMT</pubDate>' });
   const enviar = async (m) => enviados.push(m);
-  await correr(env, z('2026-10-15T23:42:00Z'), { fetchFn: fn, enviar }); // 20:42: todavía no
+  await correr(env, z('2026-10-16T00:12:00Z'), { fetchFn: fn, enviar }); // 21:12: todavía no (a las 21:15 sale el informe de la noche)
   assert.equal(enviados.length, 0);
-  await correr(env, z('2026-10-16T00:12:00Z'), { fetchFn: fn, enviar }); // 21:12
+  await correr(env, z('2026-10-16T01:12:00Z'), { fetchFn: fn, enviar }); // 22:12
   assert.equal(enviados.length, 1);
   assert.match(enviados[0].asunto, /^\[Radar Balcarce\] Resumen del jueves 15\/10: todo en orden, 2 notas hoy$/);
   assert.match(enviados[0].texto, /Problemas abiertos: ninguno/);
   assert.match(enviados[0].texto, /última corrida buena/);
-  await correr(env, z('2026-10-16T00:42:00Z'), { fetchFn: fn, enviar });
+  assert.match(enviados[0].texto, /El informe completo de la noche no llegó hoy/);
+  await correr(env, z('2026-10-16T01:42:00Z'), { fetchFn: fn, enviar });
   assert.equal(enviados.length, 1);
+});
+
+test('si el informe de la noche llegó (la clave que recuerda /avisar), el resumen de respaldo no se manda', async () => {
+  const env = { ESTADO: kvFalso() };
+  await env.ESTADO.put('avisar-clave:informe-noche-2026-10-15', '2026-10-16T00:15:00.000Z');
+  const enviados = [];
+  const fn = fetchFalso({ runs: [run('success', '2026-10-16T01:05:00Z')], sitemap: '<lastmod>2026-10-16T01:00:00.000Z</lastmod>' });
+  await correr(env, z('2026-10-16T01:12:00Z'), { fetchFn: fn, enviar: async (m) => enviados.push(m) });
+  assert.equal(enviados.filter((m) => /Resumen del/.test(m.asunto)).length, 0);
+  // y al día siguiente, sin informe, vuelve a tocar
+  await correr(env, z('2026-10-17T01:12:00Z'), { fetchFn: fn, enviar: async (m) => enviados.push(m) });
+  assert.equal(enviados.filter((m) => /Resumen del viernes 16\/10/.test(m.asunto)).length, 1);
+});
+
+test('armarMime con html: multipart/alternative con el texto y el html en base64 y tildes intactas; sin html sale igual que siempre', () => {
+  const texto = 'Informe: ñandú\nsegunda línea';
+  const html = '<html><body><p>Informe: <b>ñandú</b></p></body></html>';
+  const crudo = armarMime({ asunto: '[Radar Balcarce] Informe de la noche', texto, html, fecha: z('2026-10-16T00:15:00Z'), id: 'abc-123' });
+  assert.ok(!/(^|[^\r])\n/.test(crudo), 'ningún salto de línea suelto');
+  const { cabeceras, cuerpo } = leerMime(crudo);
+  assert.match(cabeceras['content-type'], /^multipart\/alternative; boundary="rb_abc123"$/);
+  assert.equal(cabeceras['mime-version'], '1.0');
+  const partes = cuerpo.split('--rb_abc123').map((p) => p.trim()).filter((p) => p && p !== '--');
+  assert.equal(partes.length, 2);
+  const [plana, conFormato] = partes.map((p) => leerMime(p));
+  assert.equal(plana.cabeceras['content-type'], 'text/plain; charset=UTF-8');
+  assert.equal(conFormato.cabeceras['content-type'], 'text/html; charset=UTF-8');
+  assert.equal(deBase64(plana.cuerpo), 'Informe: ñandú\r\nsegunda línea');
+  assert.equal(deBase64(conFormato.cuerpo), html);
+  assert.ok(crudo.trimEnd().endsWith('--rb_abc123--'));
+  for (const linea of crudo.split('\r\n')) assert.ok(linea.length <= 120, 'ninguna línea desmedida');
+  // sin html: el mismo mail de antes
+  assert.equal(armarMime({ asunto: 'a', texto: 'b', html: null, fecha: z('2026-10-16T00:15:00Z'), id: 'x' }), armarMime({ asunto: 'a', texto: 'b', fecha: z('2026-10-16T00:15:00Z'), id: 'x' }));
+  assert.match(leerMime(armarMime({ asunto: 'a', texto: 'b', html: '   ', id: 'x' })).cabeceras['content-type'], /^text\/plain/);
+});
+
+test('/avisar acepta un html opcional: sale con las dos versiones, le suma el pie, le saca los <script> y sigue andando sin él', async () => {
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const enviados = [];
+  const deps = { enviar: async (m) => enviados.push(m), ahora: z('2026-10-16T00:15:00Z') };
+  const r = await atender(pedirAviso({ asunto: 'Informe de la noche', texto: 'texto', html: '<html><body><p>Hola</p><script>alert(1)</script></body></html>', clave: 'informe-noche-2026-10-15', nivel: 'info' }), env, deps);
+  assert.equal(r.status, 200);
+  assert.deepEqual(await r.json(), { ok: true, para: DESTINO });
+  assert.equal(enviados[0].asunto, '[Radar Balcarce] Informe de la noche');
+  assert.match(enviados[0].html, /<p>Hola<\/p>/);
+  assert.ok(!/<script/i.test(enviados[0].html));
+  assert.match(enviados[0].html, /Aviso mandado desde GitHub \(clave: informe-noche-2026-10-15\)[\s\S]*<\/body>/, 'el pie va adentro del cuerpo');
+  assert.match(enviados[0].texto, /clave: informe-noche-2026-10-15/);
+  // la misma clave no se manda otra vez (el reloj y el respaldo de GitHub no mandan dos informes)
+  const otra = await atender(pedirAviso({ asunto: 'Informe de la noche', texto: 'texto', html: '<p>x</p>', clave: 'informe-noche-2026-10-15' }), env, deps);
+  assert.deepEqual(await otra.json(), { ok: true, repetido: true });
+  assert.equal(enviados.length, 1);
+  // sin html: como siempre, sin la propiedad
+  await atender(pedirAviso({ asunto: 'a', texto: 'b' }), env, deps);
+  assert.equal('html' in enviados[1], false);
+  // html sin </body>: el pie va al final
+  await atender(pedirAviso({ asunto: 'c', texto: 'd', html: '<p>suelto</p>' }), env, deps);
+  assert.match(enviados[2].html, /^<p>suelto<\/p><p style=/);
+});
+
+test('/avisar: un html que no es texto es 400; uno demasiado largo se descarta y el mail sale sólo con el texto (y la respuesta lo avisa)', async () => {
+  const env = { ESTADO: kvFalso(), VIGILANTE_TOKEN: 'tok-largo' };
+  const enviados = [];
+  const deps = { enviar: async (m) => enviados.push(m) };
+  assert.equal((await atender(pedirAviso({ asunto: 'a', texto: 'b', html: { raro: 1 } }), env, deps)).status, 400);
+  assert.equal(enviados.length, 0);
+  const largo = await atender(pedirAviso({ asunto: 'a', texto: 'b', html: `<p>${'x'.repeat(TOPES_DE_AVISAR.largoDelHtml)}</p>` }), env, deps);
+  assert.equal(largo.status, 200);
+  assert.deepEqual(await largo.json(), { ok: true, para: DESTINO, sinHtml: true });
+  assert.equal(enviados.length, 1);
+  assert.equal('html' in enviados[0], false);
+  assert.ok(TOPES_DE_AVISAR.bytesDelPedido > TOPES_DE_AVISAR.largoDelHtml + TOPES_DE_AVISAR.largoDelTexto, 'el tope del pedido deja pasar un html del largo máximo');
 });
 
 test('sin el KV o sin el binding de mail, falla a la vista en vez de callar', async () => {

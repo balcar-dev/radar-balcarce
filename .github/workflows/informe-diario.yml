@@ -1,0 +1,66 @@
+name: Informe diario
+
+# El informe diario por mail (15/10/2026, regla 176; redes/informe-diario.mjs): uno a las 8:15 (cómo cerró ayer) y otro a las 21:15 (cómo viene hoy)
+# para radarbalcarce@gmail.com, con lo que se publicó, lo que espera a una persona, lo que salió en redes, las visitas y la salud del sistema.
+#
+# EL DISPARADOR ES el reloj de Cloudflare (infra/reloj-cloudflare/, cron "15 0,11 * * *" UTC): pide este workflow con `momento` = manana o noche.
+# El `schedule:` de abajo es un respaldo (8:45 y 21:45 de Balcarce): si el reloj ya lo disparó, el Worker ve la misma clave
+# (`informe-<momento>-<día>`) y NO manda un segundo mail; si el reloj falló, el respaldo lo manda con media hora de atraso. GitHub puede
+# demorar sus `schedule` bastante: por eso es sólo el respaldo.
+# Si el informe de la noche no llega, el Worker del vigilante manda a las 22 un resumen mínimo de respaldo (infra/vigilante-cloudflare/).
+#
+# A mano (Actions → Informe diario → Run workflow): se elige el momento y, con «enviar» apagado, sólo se ve el informe en el registro (simulacro).
+#
+# SECRETOS: VIGILANTE_TOKEN (el mismo de los avisos: sin él el informe no sale y la corrida queda en rojo, que el vigilante nota).
+# No guarda nada en el repositorio.
+
+on:
+  workflow_dispatch:
+    inputs:
+      momento:
+        description: 'Cuál informe'
+        type: choice
+        options: [manana, noche]
+        default: noche
+      enviar:
+        description: 'Mandarlo por mail (apagado: sólo se ve en el registro)'
+        type: boolean
+        default: true
+  schedule:
+    - cron: '45 11 * * *'
+    - cron: '45 0 * * *'
+
+permissions:
+  contents: read
+  actions: read
+  checks: read
+
+concurrency:
+  group: informe-diario
+  cancel-in-progress: false
+
+jobs:
+  informe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      # Que «hoy» y las horas sean las de Balcarce.
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      # Siempre la última versión de main: el informe lee web/data/ tal como la dejó la última corrida.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Armar y mandar el informe
+        run: node redes/informe-diario.mjs --momento=${{ github.event.inputs.momento || (github.event.schedule == '45 11 * * *' && 'manana' || 'noche') }} ${{ github.event.inputs.enviar != 'false' && '--enviar' || '' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          VIGILANTE_TOKEN: ${{ secrets.VIGILANTE_TOKEN }}
+          # Si las redes están apagadas, el informe lo dice en vez de contar piezas que faltan.
+          REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}

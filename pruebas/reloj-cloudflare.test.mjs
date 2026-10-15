@@ -12,6 +12,33 @@ test('a los :00 y :30 pide la web y la vigilancia; a los :05, :35 y :45, el relo
   for (const m of [1, 4, 15, 29, 59]) assert.deepEqual(trabajosDelMinuto(m), []);
 });
 
+// 15/10/2026: el informe diario por mail (redes/informe-diario.mjs, regla 176). El minuto :15 de las 11 y de las 0 UTC; el resto de los :15, nada.
+test('a las 8:15 y a las 21:15 de Balcarce (11:15 y 0:15 UTC) pide el informe diario con su momento; a ninguna otra hora, y lo demás no cambia', () => {
+  assert.deepEqual(trabajosDelMinuto(15, 11), [{ archivo: 'informe-diario.yml', inputs: { momento: 'manana' } }]);
+  assert.deepEqual(trabajosDelMinuto(15, 0), [{ archivo: 'informe-diario.yml', inputs: { momento: 'noche' } }]);
+  for (let h = 1; h < 24; h++) if (h !== 11) assert.deepEqual(trabajosDelMinuto(15, h), [], `a las ${h} UTC no hay informe`);
+  for (const m of [0, 1, 5, 14, 16, 30, 35, 45]) assert.deepEqual(trabajosDelMinuto(m, 11).filter((t) => t.archivo === 'informe-diario.yml'), [], `el minuto ${m} no es el del informe`);
+  // lo de siempre, a cualquier hora, sigue igual
+  for (const h of [0, 11, 13]) {
+    for (const m of [0, 30]) assert.deepEqual(trabajosDelMinuto(m, h).map((t) => t.archivo), ['actualizar.yml', 'vigilancia.yml']);
+    for (const m of [5, 35, 45]) assert.deepEqual(trabajosDelMinuto(m, h), [{ archivo: 'redes.yml', inputs: { accion: 'reloj' } }]);
+  }
+});
+
+test('el Worker le pasa la hora UTC: a las 0:15 UTC despierta el informe de la noche y a las 11:15 el de la mañana, con el token en el encabezado', async () => {
+  const antes = globalThis.fetch;
+  const pedidos = [];
+  globalThis.fetch = async (url, o) => { pedidos.push({ url: String(url), body: JSON.parse(o.body), auth: o.headers.Authorization }); return { status: 204 }; };
+  try {
+    await worker.scheduled({ scheduledTime: Date.UTC(2026, 9, 16, 0, 15) }, { GITHUB_TOKEN: 'T0K3N' });
+    await worker.scheduled({ scheduledTime: Date.UTC(2026, 9, 16, 11, 15) }, { GITHUB_TOKEN: 'T0K3N' });
+    await worker.scheduled({ scheduledTime: Date.UTC(2026, 9, 16, 13, 15) }, { GITHUB_TOKEN: 'T0K3N' });
+  } finally { globalThis.fetch = antes; }
+  assert.equal(pedidos.length, 2, 'a las 13:15 UTC no despierta nada');
+  assert.ok(pedidos.every((p) => p.url.endsWith('/actions/workflows/informe-diario.yml/dispatches') && p.auth === 'Bearer T0K3N'));
+  assert.deepEqual(pedidos.map((p) => p.body.inputs), [{ momento: 'noche' }, { momento: 'manana' }]);
+});
+
 test('pide a la API de GitHub con el token en el encabezado, nunca en la dirección', async () => {
   let visto = null;
   const r = await despertar({ archivo: 'redes.yml', inputs: { accion: 'reloj' } }, { token: 'T0K3N', fetchFn: async (url, o) => { visto = { url, o }; return { status: 204 }; } });
@@ -32,7 +59,9 @@ test('si GitHub no acepta, el reloj falla a la vista; sin token, también', asyn
 });
 
 test('el reloj está definido (crons), el workflow que lo sube es sólo a mano y no hay ninguna clave escrita', () => {
-  assert.match(leer('infra/reloj-cloudflare/wrangler.toml'), /crons = \["0,30 \* \* \* \*", "5,35,45 \* \* \* \*"\]/);
+  const toml = leer('infra/reloj-cloudflare/wrangler.toml');
+  assert.match(toml, /crons = \["0,30 \* \* \* \*", "5,35,45 \* \* \* \*", "15 0,11 \* \* \*"\]/);
+  assert.equal(toml.match(/crons = \[([^\]]+)\]/)[1].match(/"[^"]+"/g).length, 3, 'tres expresiones: el informe suma UNA sola, para no gastar triggers de la cuenta');
   const w = leer('.github/workflows/reloj-cloudflare.yml');
   assert.match(w, /on:\s+workflow_dispatch:/);
   assert.ok(!/schedule:|push:/.test(w), 'el reloj nuevo no se sube solo');
