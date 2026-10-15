@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-15T11:01:59.335Z",
- "portada": 40,
- "archivo": 1098,
+ "generado": "2026-10-15T11:33:27.635Z",
+ "portada": 33,
+ "archivo": 1101,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-10-15T11:01:59.374Z",
+  "generado": "2026-10-15T11:33:27.670Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -95,17 +95,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 48,
     "notas": [
+     {
+      "id": "vt870i",
+      "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
+      "seccion": "Deportes"
+     },
      {
       "id": "1e22az3",
       "titulo": "Cristian Méndez regresa a Balcarce tras una exitosa gira por España",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "wzunxc",
-      "titulo": "Emprendedora local crea accesorios únicos con cámaras de neumáticos",
-      "seccion": "Balcarce"
      },
      {
       "id": "fav3c1",
@@ -126,8 +126,19 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": null,
-    "notas": []
+    "segundos": 31,
+    "notas": [
+     {
+      "id": "8q3d25",
+      "titulo": "Ariel Ferreira y Adrián Cagni se destacan en Tamangueyú",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "405jgy",
+      "titulo": "Balcarce despide al Chiqui Smiraglia, referente de la danza local",
+      "seccion": "Cultura y agenda"
+     }
+    ]
    },
    {
     "nombre": "podcast",
@@ -136,24 +147,26 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 22,
-    "notas": [
-     {
-      "id": "wfa595",
-      "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "tctot0",
-      "titulo": "Valeria Ares comparte su experiencia a dieciseis años de su doble trasplante",
-      "seccion": "Balcarce"
-     }
-    ]
+    "segundos": null,
+    "notas": []
    }
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "vt870i",
+     "titulo": "Ángela Servín sube al podio en la Atlántica Ultra",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "8q3d25",
+     "titulo": "Ariel Ferreira y Adrián Cagni se destacan en Tamangueyú",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-10-14T19:15:25.193Z",
    "porDia": 5,
