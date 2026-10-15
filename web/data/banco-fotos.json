@@ -14528,9 +14528,9 @@
  "y1elhg": {
   "intentado": true,
   "origen": "medio",
-  "cuando": "2026-10-14T23:02:43.555Z",
+  "cuando": "2026-10-15T00:31:52.167Z",
   "error": "no se pudo volver a bajar la elegida",
-  "intentos": 2,
+  "intentos": 3,
   "fuentes": 4
  },
  "1394wxo": {
@@ -14646,5 +14646,14 @@
   "imagenOriginal": "https://media.a24.com/p/d0b33414687d3991529ca9b6940b6eea/adjuntos/296/imagenes/009/832/0009832766/1200x675/smart/tecnopolis.jpg",
   "razon": "La foto C muestra claramente el predio de Tecnópolis desde el aire sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-10-15T00:02:14.696Z"
+ },
+ "wfa595": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Walter Ianni López participa de encuentros diplomáticos en Beijing",
+  "razon": "sin fotos para comparar (se probó una foto libre de \"Walter Ianni López\" en Wikimedia Commons, sin resultado)",
+  "cuando": "2026-10-15T00:31:52.167Z",
+  "intentos": 1,
+  "fuentes": 1
  }
 }

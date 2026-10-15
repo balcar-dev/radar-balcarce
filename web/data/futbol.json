@@ -1,5 +1,5 @@
 {
- "consultado": "2026-10-15T00:02:20.635Z",
+ "consultado": "2026-10-15T00:31:56.861Z",
  "equipos": [
   "9739",
   "3",
@@ -69,48 +69,6 @@
  "equiposCuando": "2026-10-04T02:29:40.686Z",
  "partidos": {
   "liga": [
-   {
-    "id": "401841591",
-    "competencia": "liga",
-    "inicio": "2026-10-05T00:30:00.000Z",
-    "estado": "final",
-    "minuto": "90'+6'",
-    "local": {
-     "id": "19685",
-     "nombre": "Estudiantes de Río Cuarto",
-     "goles": 1
-    },
-    "visitante": {
-     "id": "15",
-     "nombre": "Racing Club",
-     "goles": 2
-    },
-    "penales": null,
-    "goles": [
-     {
-      "equipo": "visitante",
-      "jugador": "Tomás Conechny",
-      "minuto": "10'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "visitante",
-      "jugador": "Adrián Martínez",
-      "minuto": "38'",
-      "tipo": "gol"
-     },
-     {
-      "equipo": "local",
-      "jugador": "Mauro Valiente",
-      "minuto": "88'",
-      "tipo": "gol"
-     }
-    ],
-    "estadio": "Ciudad de Río Cuarto Antonio Candini",
-    "fase": null,
-    "partidoDeLaSerie": null,
-    "torneo": "torneo-clausura"
-   },
    {
     "id": "401841592",
     "competencia": "liga",
